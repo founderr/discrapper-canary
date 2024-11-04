@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(32750),
-    s = n(323597),
+    s = n(32750),
+    a = n(323597),
     o = n(438536),
     c = n(193987),
     u = n(933793),
@@ -28,9 +28,9 @@ var i = n(200651),
     S = n(388032);
 function Z(e) {
     let { channel: t } = e,
-        [n, a] = l.useState(!1);
-    function s() {
-        a((e) => !e);
+        [n, s] = l.useState(!1);
+    function a() {
+        s((e) => !e);
     }
     let o = S.intl.string(S.t.UKOtz8);
     return (0, i.jsx)(r.Popout, {
@@ -39,7 +39,7 @@ function Z(e) {
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => a(!1),
+        onRequestClose: () => s(!1),
         renderPopout: function (e) {
             return (0, i.jsx)(T, {
                 ...e,
@@ -50,7 +50,7 @@ function Z(e) {
             let { isShown: n } = t;
             return (0, i.jsx)(x.ZP.Icon, {
                 ...e,
-                onClick: s,
+                onClick: a,
                 tooltip: n ? null : o,
                 icon: r.MoreHorizontalIcon,
                 'aria-label': o,
@@ -65,11 +65,11 @@ function T(e) {
         x = (0, u.Z)(t),
         I = (0, m.Z)(t),
         E = (0, p.Z)(t),
-        Z = (0, a.Z)(t),
+        Z = (0, s.Z)(t),
         T = (0, c.Z)(t),
         N = (0, h.Z)(t.id),
         j = (0, d.Z)(t),
-        A = (0, s.Z)(t),
+        A = (0, a.Z)(t),
         y = (0, g.Z)({
             id: t.id,
             label: S.intl.string(S.t.DQ797u)

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(481060),
+    s = n.n(r),
+    a = n(481060),
     o = n(367907),
     c = n(626135),
     u = n(152376),
@@ -25,19 +25,19 @@ function p(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: a()(m.chatHeaderBar, { [m.narrow]: n }),
+            className: s()(m.chatHeaderBar, { [m.narrow]: n }),
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(a.Text, {
                     className: m.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'text-normal',
                     children: h.intl.string(h.t.iOWmmJ)
                 }),
-                (0, i.jsxs)(s.Button, {
-                    size: s.Button.Sizes.TINY,
+                (0, i.jsxs)(a.Button, {
+                    size: a.Button.Sizes.TINY,
                     className: m.chatHeaderBarButton,
                     innerClassName: m.chatHeaderBarButtonInner,
-                    color: s.Button.Colors.BRAND,
+                    color: a.Button.Colors.BRAND,
                     onClick: () => {
                         c.default.track(d.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                             ...(0, o.hH)(t.getGuildId()),
@@ -48,7 +48,7 @@ function p(e) {
                             (0, u.XQ)(t.guild_id, t.id, !0, { section: d.jXE.CHANNEL });
                     },
                     children: [
-                        (0, i.jsx)(s.PlusSmallIcon, {
+                        (0, i.jsx)(a.PlusSmallIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 14,

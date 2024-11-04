@@ -1,10 +1,10 @@
-n.d(t, {
+e.d(n, {
     O: function () {
-        return r;
+        return a;
     }
 });
-var i = n(544891),
-    l = n(981631);
-function r(e) {
-    return i.tn.post({ url: l.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e) });
+var i = e(544891),
+    r = e(981631);
+function a(t) {
+    return i.tn.post({ url: r.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(t) });
 }

@@ -11,8 +11,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(570140),
-    a = n(439170),
-    s = n(592125),
+    s = n(439170),
+    a = n(592125),
     o = n(430824),
     c = n(451478),
     u = n(626135),
@@ -37,7 +37,7 @@ function E(e) {
         { requestId: T, entries: N, impressionCappedEntryIds: j, hasLeaderboardEntry: A } = (0, f.Z)(E),
         y = (0, l.e7)([h.Z], () => h.Z.hidden),
         P = (0, l.e7)([c.Z], () => c.Z.isFocused()),
-        M = (0, l.e7)([s.Z], () => s.Z.getChannel(E)),
+        M = (0, l.e7)([a.Z], () => a.Z.getChannel(E)),
         R = (0, l.e7)([o.Z], () => o.Z.getGuild(b), [b]),
         L = (0, m.E)(R),
         k = null != L && L && (null == M ? void 0 : M.isForumChannel()) === !1,
@@ -47,15 +47,15 @@ function E(e) {
             let i = S ? N.length : A ? 4 : 3,
                 l = N.slice(0, i);
             e = y
-                ? [{ type: a.so.HIDDEN_CONTENT_INVENTORY }]
+                ? [{ type: s.so.HIDDEN_CONTENT_INVENTORY }]
                 : l.map((e) => ({
-                      type: a.so.CONTENT_INVENTORY,
+                      type: s.so.CONTENT_INVENTORY,
                       entry: e,
                       requestId: T
                   }));
             let r = {
                 id: x.G,
-                type: a.so.CONTENT_INVENTORY_GROUP,
+                type: s.so.CONTENT_INVENTORY_GROUP,
                 key: x.G,
                 count: e.length,
                 index: n.length,

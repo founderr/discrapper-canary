@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(873546),
     r = n(481060),
-    a = n(373662),
-    s = n(388032);
+    s = n(373662),
+    a = n(388032);
 function o(e) {
     let { channel: t, message: n, togglePopout: o, renderEmojiPicker: c, shouldShow: u } = e;
     return (0, i.jsx)(r.Popout, {
@@ -23,9 +23,9 @@ function o(e) {
         align: l.tq ? 'center' : 'top',
         children: () =>
             (0, i.jsx)(
-                a.sF,
+                s.sF,
                 {
-                    label: s.intl.string(s.t.lfIHs7),
+                    label: a.intl.string(a.t.lfIHs7),
                     icon: r.ReactionIcon,
                     onClick: o
                 },

@@ -3,7 +3,7 @@ r.d(t, {
         return h;
     },
     Iw: function () {
-        return P;
+        return U;
     },
     V0: function () {
         return S;
@@ -50,7 +50,7 @@ function h(e, t) {
                 o =
                     e.onlyIfParent && !_
                         ? new d.b()
-                        : U({
+                        : P({
                               parentSpan: _,
                               spanArguments: n,
                               forceTransaction: a,
@@ -87,7 +87,7 @@ function S(e, t) {
                 o =
                     e.onlyIfParent && !_
                         ? new d.b()
-                        : U({
+                        : P({
                               parentSpan: _,
                               spanArguments: n,
                               forceTransaction: a,
@@ -124,7 +124,7 @@ function D(e) {
             a = y(t);
         return e.onlyIfParent && !a
             ? new d.b()
-            : U({
+            : P({
                   parentSpan: a,
                   spanArguments: r,
                   forceTransaction: n,
@@ -141,10 +141,10 @@ function g(e, t) {
     let r = G();
     return r.withActiveSpan ? r.withActiveSpan(e, t) : (0, i.$e)((r) => ((0, I.D)(r, e || void 0), t(r)));
 }
-function P(e) {
+function U(e) {
     return (0, i.$e)((t) => (t.setPropagationContext((0, a.Q)()), c.X && _.kg.info(`Starting a new trace with id ${t.getPropagationContext().traceId}`), g(null, e)));
 }
-function U({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
+function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
     let a;
     if (!(0, u.z)()) return new d.b();
     let _ = (0, i.aF)();

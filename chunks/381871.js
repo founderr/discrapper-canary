@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n(442837),
-    s = n(704215),
+    s = n(442837),
+    a = n(704215),
     o = n(481060),
     c = n(570140),
     u = n(230711),
@@ -46,10 +46,10 @@ let O = P.Hz.CHAT,
 function U(e) {
     var t;
     let { channel: n, closePopout: f, onFocus: v } = e,
-        P = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        U = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
+        P = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        U = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         B = _.ZP.canUseFancyVoiceChannelReactions(U),
-        H = (0, a.e7)([E.Z], () => E.Z.getState().animationType),
+        H = (0, s.e7)([E.Z], () => E.Z.getState().animationType),
         F = l.useRef(!1),
         G = (0, p.wC)(n.guild_id),
         V = (0, r.uniqBy)([...G, ...D], 'name')
@@ -103,13 +103,13 @@ function U(e) {
             guild_id: J
         });
     }, [X, J]);
-    let Q = P ? [s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+    let Q = P ? [a.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
         $ = H === j.q.PREMIUM;
     return (0, i.jsx)(m.ZP, {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
-                r = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                r = P && t === a.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
                 'aria-label': L.intl.string(L.t.RLHsHx),

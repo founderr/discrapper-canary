@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    a = n(704215),
-    s = n(952265),
+    s = n(704215),
+    a = n(952265),
     o = n(481060),
     c = n(243778),
     u = n(38618),
@@ -17,7 +17,7 @@ t.Z = l.memo(function () {
         !(function () {
             let e = (0, r.e7)([u.Z], () => u.Z.isConnected()) ? [] : [],
                 [t, p] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
-                f = (0, s.f9)(),
+                f = (0, a.f9)(),
                 g = l.useRef(null);
             l.useEffect(() => {
                 if (null == t) {
@@ -31,15 +31,15 @@ t.Z = l.memo(function () {
                                 onCloseCallback: (e) => l(null != e ? e : h.L.UNKNOWN),
                                 modalKey: m(t)
                             },
-                            s = d.Z.getGuildId();
-                        if (t === a.z.SERVER_SHOP_UPSELL)
-                            null != s &&
+                            a = d.Z.getGuildId();
+                        if (t === s.z.SERVER_SHOP_UPSELL)
+                            null != a &&
                                 (0, o.openModalLazy)(async () => {
                                     let { default: e } = await n.e('7302').then(n.bind(n, 756779));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
-                                            guildId: s,
+                                            guildId: a,
                                             markAsDismissed: l
                                         });
                                 }, r);
@@ -51,7 +51,7 @@ t.Z = l.memo(function () {
             }, [t, f, p]),
                 l.useEffect(
                     () => () => {
-                        null != t && (0, s.Mr)(m(t));
+                        null != t && (0, a.Mr)(m(t));
                     },
                     [t]
                 );

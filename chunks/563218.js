@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(570140),
-    s = n(519938),
+    s = n(570140),
+    a = n(519938),
     o = n(928518),
     c = n(585483),
     u = n(317381),
@@ -16,13 +16,13 @@ var i = n(200651),
     m = n(918559),
     p = n(981631);
 let f = (e, t) => {
-    a.Z.wait(() => {
-        (0, s.Cz)(e, t);
+    s.Z.wait(() => {
+        (0, a.Cz)(e, t);
     });
 };
 function g(e) {
     let t,
-        { embedId: n, className: a, style: s } = e,
+        { embedId: n, className: s, style: a } = e,
         g = (0, r.e7)([o.Z], () => o.Z.getWindow(p.KJ3.CHANNEL_CALL_POPOUT)),
         C = (0, h.Z)(),
         x = (0, r.e7)([u.ZP], () => u.ZP.getActivityPanelMode());
@@ -69,8 +69,8 @@ function g(e) {
         }, [n, I]),
         (0, i.jsx)('div', {
             ref: _,
-            style: s,
-            className: a
+            style: a,
+            className: s
         })
     );
 }

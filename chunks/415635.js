@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(772848),
-    a = n(442837),
-    s = n(570140),
+    s = n(442837),
+    a = n(570140),
     o = n(607070),
     c = n(367907),
     u = n(37091),
@@ -19,25 +19,25 @@ var i = n(200651),
     f = n(776042);
 function g(e) {
     let { channelId: t, guildId: n, userId: g, containerDimensions: C } = e,
-        x = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
+        x = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
         [v, _] = l.useState([]),
         I = v.length < 50;
     l.useEffect(() => {
         function e(e) {
             var i;
-            let { channelId: l, userId: a, emoji: s, animationType: o, animationId: m } = e;
-            if ((null != g && g !== a) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == s ? void 0 : s.name) && void 0 !== i ? i : ''))) return;
-            let f = null != s && null != o && null != m;
+            let { channelId: l, userId: s, emoji: a, animationType: o, animationId: m } = e;
+            if ((null != g && g !== s) || (u.Z.getEnabled() && (0, d.Z)(null !== (i = null == a ? void 0 : a.name) && void 0 !== i ? i : ''))) return;
+            let f = null != a && null != o && null != m;
             if (l === t && !x && I && f) {
-                let e = (0, h._r)(s),
-                    i = null != s.id && !s.animated,
+                let e = (0, h._r)(a),
+                    i = null != a.id && !a.animated,
                     l = {
                         id: (0, r.Z)(),
                         animationType: o,
                         animationId: m,
                         shouldResize: i,
                         url: e,
-                        userId: a
+                        userId: s
                     };
                 _((e) => [...e, l]),
                     c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
@@ -47,9 +47,9 @@ function g(e) {
             }
         }
         return (
-            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            a.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
             () => {
-                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                a.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
     }, [t, n, g, x, I]);

@@ -3,11 +3,11 @@ var t = '\uD800-\uDFFF',
     i = '\uD83C[\uDFFB-\uDFFF]',
     r = '[^' + t + ']',
     s = '(?:\uD83C[\uDDE6-\uDDFF]){2}',
-    o = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
+    l = '[\uD800-\uDBFF][\uDC00-\uDFFF]',
     a = '(?:' + n + '|' + i + ')?',
-    l = '[\\ufe0e\\ufe0f]?',
-    c = '(?:\\u200d(?:' + [r, s, o].join('|') + ')' + l + a + ')*',
-    d = RegExp(i + '(?=' + i + ')|' + ('(?:' + [r + n + '?', n, s, o, '[' + t + ']'].join('|') + ')') + (l + a + c), 'g');
+    o = '[\\ufe0e\\ufe0f]?',
+    c = '(?:\\u200d(?:' + [r, s, l].join('|') + ')' + o + a + ')*',
+    d = RegExp(i + '(?=' + i + ')|' + ('(?:' + [r + n + '?', n, s, l, '[' + t + ']'].join('|') + ')') + (o + a + c), 'g');
 e.exports = function (e) {
     return e.match(d) || [];
 };

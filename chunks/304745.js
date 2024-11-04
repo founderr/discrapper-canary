@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(704215),
-    s = n(481060),
+    s = n(704215),
+    a = n(481060),
     o = n(2052),
     c = n(40851),
     u = n(317381),
@@ -60,19 +60,19 @@ function N(e) {
             });
         }, [U.location, H, t, B]),
         V = [];
-    !y && V.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, p.Z)(t.id) && !y && V.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE);
+    !y && V.push(s.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, p.Z)(t.id) && !y && V.push(s.z.ACTIVITY_GDM_ROCKET_SPARKLE);
     let { enabled: z } = v.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
-    z && !y && V.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    z && !y && V.push(s.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let W = l.useRef(!1);
     return (0, i.jsx)(_.ZP, {
         contentTypes: V,
         children: (e) => {
             let { visibleContent: l, markAsDismissed: r } = e,
-                o = l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !P;
+                o = l === s.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !P;
             return (
                 !0 === W.current && !1 === o && r(S.L.AUTO_DISMISS),
                 W.current !== o && (W.current = o),
-                (0, i.jsx)(s.Popout, {
+                (0, i.jsx)(a.Popout, {
                     fixed: !0,
                     shouldShow: P,
                     animationPosition: 'bottom',
@@ -99,9 +99,9 @@ function N(e) {
                     children: () =>
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(s.Tooltip, {
+                                (0, i.jsx)(a.Tooltip, {
                                     text: Z.intl.string(Z.t.P8vmUl),
-                                    color: s.TooltipColors.BRAND,
+                                    color: a.TooltipColors.BRAND,
                                     forceOpen: !0,
                                     shouldShow: o,
                                     children: (e) =>
@@ -114,7 +114,7 @@ function N(e) {
                                                 isActivityActive: O || P,
                                                 className: T.controlButton,
                                                 onClick: () => {
-                                                    G(), (l === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(S.L.TAKE_ACTION);
+                                                    G(), (l === s.z.ACTIVITIES_MINI_SHELF_SPARKLES || l === s.z.ACTIVITY_GDM_ROCKET_SPARKLE || l === s.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || l === s.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || l === s.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && r(S.L.TAKE_ACTION);
                                                 },
                                                 onMouseEnter: D,
                                                 onMouseLeave: L

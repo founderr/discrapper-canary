@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(442837),
     r = n(481060),
-    a = n(384275),
-    s = n(468026),
+    s = n(384275),
+    a = n(468026),
     o = n(317381),
     c = n(513202),
     u = n(626135),
@@ -18,7 +18,7 @@ let m = (e) => {
         g = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
     if (!m.bot || null == p) return null;
     function C() {
-        a.Z.delete(f.id);
+        s.Z.delete(f.id);
         let e = g.get(p.id);
         null != e &&
             c.Z.leaveActivity({
@@ -34,7 +34,7 @@ let m = (e) => {
             (function (e, t, n) {
                 let l = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
                 (0, r.openModal)((e) =>
-                    (0, i.jsx)(s.default, {
+                    (0, i.jsx)(a.default, {
                         title: h.intl.string(h.t.DT39Aw),
                         body: l,
                         confirmText: h.intl.string(h.t.xUqheH),

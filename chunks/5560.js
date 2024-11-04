@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(512722),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(512722),
+    o = n.n(a),
     c = n(995295),
     u = n(374470),
     d = n(442837),
@@ -45,10 +45,10 @@ class E extends l.PureComponent {
             origin: { x: n, y: i },
             targetWidth: l,
             targetHeight: r,
-            position: a,
-            offset: s
+            position: s,
+            offset: a
         } = e;
-        (this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== i || this.props.targetWidth !== l || this.props.targetHeight !== r || this.props.position !== a || this.props.offset.x !== s.x || this.props.offset.y !== s.y) && this.updateCache();
+        (this.props.tutorialId !== t || this.props.origin.x !== n || this.props.origin.y !== i || this.props.targetWidth !== l || this.props.targetHeight !== r || this.props.position !== s || this.props.offset.x !== a.x || this.props.offset.y !== a.y) && this.updateCache();
     }
     updateCache() {
         var e, t;
@@ -85,7 +85,7 @@ class E extends l.PureComponent {
         let { tutorialId: e, autoInvert: t, focused: n, origin: l } = this.props,
             r = (0, C.S)(e);
         if (null == r) return null;
-        let { media: s, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: m = p.cy.TOP, popoutPosition: f } = r,
+        let { media: a, textAlign: o, isLongText: c, highPriority: u, spacing: d, arrowAlignment: m = p.cy.TOP, popoutPosition: f } = r,
             { offsetX: g, offsetY: x } = this.state,
             v = {
                 left: null != g ? l.x + g : void 0,
@@ -98,13 +98,13 @@ class E extends l.PureComponent {
                     : (0, i.jsxs)('div', {
                           children: [
                               (0, i.jsx)('div', {
-                                  className: a()(_.top, {
+                                  className: s()(_.top, {
                                       [_.animating]: t,
                                       [_.notAnimating]: !t
                                   })
                               }),
                               (0, i.jsx)('div', {
-                                  className: a()(_.bottom, {
+                                  className: s()(_.bottom, {
                                       [_.animating]: t,
                                       [_.notAnimating]: !t
                                   })
@@ -123,7 +123,7 @@ class E extends l.PureComponent {
             b = this.getTutorialPopoutText();
         return (0, i.jsx)(p.ZP, {
             position: f,
-            renderMedia: s,
+            renderMedia: a,
             textAlign: o,
             spacing: d,
             isLongText: c,
@@ -140,8 +140,8 @@ class E extends l.PureComponent {
                     className: _.indicator,
                     style: v,
                     children: (0, i.jsxs)('div', {
-                        className: a()(_.animationContainer, E(n)),
-                        children: [I(n), (0, i.jsx)('div', { className: a()(_.innerCircle, E(n)) }), (0, i.jsx)('div', { className: a()(_.outerCircle, E(n)) })]
+                        className: s()(_.animationContainer, E(n)),
+                        children: [I(n), (0, i.jsx)('div', { className: s()(_.innerCircle, E(n)) }), (0, i.jsx)('div', { className: s()(_.outerCircle, E(n)) })]
                     })
                 });
             }
@@ -176,14 +176,14 @@ t.Z =
                   ? (0, i.jsx)(i.Fragment, {
                         children: Object.entries(e).map((e) => {
                             let [l, r] = e,
-                                a = t[l];
+                                s = t[l];
                             return (
-                                o()(null != a, 'Missing tutorial definition for '.concat(l)),
+                                o()(null != s, 'Missing tutorial definition for '.concat(l)),
                                 (0, i.jsx)(
                                     E,
                                     {
                                         tutorialId: l,
-                                        tutorialDefinition: a,
+                                        tutorialDefinition: s,
                                         focused: n,
                                         ...r
                                     },

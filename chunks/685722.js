@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 });
 var i = n(200651),
     l = n(120356),
     r = n.n(l),
-    a = n(251303);
-function s() {
+    s = n(251303);
+function a() {
     return (0, i.jsxs)('div', {
-        className: a.container,
-        children: [(0, i.jsx)('div', { className: r()(a.placeholderItem, a.chatTextAreaPlaceholder) }), (0, i.jsx)('div', { className: r()(a.placeholderItem, a.appLauncherPlaceholder) }), (0, i.jsx)('div', { className: r()(a.placeholderItem, a.entryPointAppCommandPlaceholder) })]
+        className: s.container,
+        children: [(0, i.jsx)('div', { className: r()(s.placeholderItem, s.chatTextAreaPlaceholder) }), (0, i.jsx)('div', { className: r()(s.placeholderItem, s.appLauncherPlaceholder) }), (0, i.jsx)('div', { className: r()(s.placeholderItem, s.entryPointAppCommandPlaceholder) })]
     });
 }

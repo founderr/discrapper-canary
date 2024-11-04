@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(100621),
+    s = n.n(r),
+    a = n(100621),
     o = n(442837),
     c = n(481060),
     u = n(596454),
@@ -30,7 +30,7 @@ function v(e) {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
-            config: s.config.default,
+            config: a.config.default,
             onRest: (e, t) => {
                 let { phase: n } = t;
                 'leave' === n && r();
@@ -59,11 +59,11 @@ function v(e) {
               let { rotate: l } = e;
               return (
                   t &&
-                  (0, i.jsx)(s.animated.div, {
+                  (0, i.jsx)(a.animated.div, {
                       className: p.voiceChannelEffectEmojiContainer,
                       style: { transform: l.to(x) },
                       children: (0, i.jsx)(u.Z, {
-                          className: a()(p.voiceChannelEffectEmoji),
+                          className: s()(p.voiceChannelEffectEmoji),
                           emojiId: h.id,
                           emojiName: h.name,
                           animated: null !== (n = h.animated) && void 0 !== n && n

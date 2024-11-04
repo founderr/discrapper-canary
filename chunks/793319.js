@@ -10,9 +10,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(512722),
     u = n.n(c),
     d = n(100621),
@@ -64,8 +64,8 @@ var i,
     ei = n(523746),
     el = n(131951),
     er = n(944486),
-    ea = n(594174),
-    es = n(78839),
+    es = n(594174),
+    ea = n(78839),
     eo = n(626135),
     ec = n(700785),
     eu = n(923973),
@@ -91,16 +91,16 @@ function eN(e, t) {
     e ? (0, e_.Z)(n, t) : n();
 }
 function ej(e) {
-    let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: l, hasPermission: s, disabled: o } = e,
+    let { channel: t, currentUser: n, exitFullScreen: i, canGoLive: l, hasPermission: a, disabled: o } = e,
         c = (0, m.e7)([el.Z], () => el.Z.getGoLiveSource()),
         u = (0, m.e7)([en.Z], () => en.Z.getCurrentUserActiveStream()),
-        [d, C] = a.useState(!1),
+        [d, C] = s.useState(!1),
         x = (0, m.e7)([P.Z], () => P.Z.getPlayedAnimation());
-    a.useEffect(() => {
+    s.useEffect(() => {
         x && C(!0);
     }, [x]);
     let v = t.hdStreamingUntil;
-    a.useEffect(() => {
+    s.useEffect(() => {
         if (null != v && new Date(v) > new Date() && null != u && u.channelId === t.id) {
             let e = {
                 qualityOptions: {
@@ -130,13 +130,13 @@ function ej(e) {
         b = E.find((e) => e.ownerId === n.id),
         { activated: S, hqStreamingState: Z } = (0, F.k)(h.q.STREAM_HIGH_QUALITY),
         T = null != b && S,
-        N = a.useRef(null),
+        N = s.useRef(null),
         j = t.getGuildId(),
-        A = a.useCallback(() => {
+        A = s.useCallback(() => {
             if ((null == i || i(), !l)) return (0, ex.Z)();
             (0, ev.Z)(j, t.id, eI.ZY5.GUILD_CHANNEL);
         }, [j, t.id, l, i]),
-        L = (0, m.e7)([es.ZP], () => es.ZP.inReverseTrial()),
+        L = (0, m.e7)([ea.ZP], () => ea.ZP.inReverseTrial()),
         k = () => {
             if (l) {
                 A();
@@ -148,7 +148,7 @@ function ej(e) {
             (0, D.Z)(b);
         },
         w = G.pM,
-        U = a.useCallback(() => {
+        U = s.useCallback(() => {
             eo.default.track(eI.rMx.PERK_DEMO_OFFER_DISMISSED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
@@ -162,9 +162,9 @@ function ej(e) {
             return (0, r.jsx)(ee.O, {
                 ...i,
                 centerButton: !0,
-                disabled: o || !s,
+                disabled: o || !a,
                 className: eT.controlButton,
-                hasPermission: s,
+                hasPermission: a,
                 streamActive: null != b,
                 isSelfStream: !0,
                 onPopoutClick: l
@@ -258,14 +258,14 @@ function eA(e) {
         : null;
 }
 ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'), (l.STREAM = 'STREAM'), (l.CALL = 'CALL'), (l.EVENT = 'EVENT');
-let ey = a.memo(function (e) {
+let ey = s.memo(function (e) {
     let { connectedActivityApplicationId: t, currentUser: n, onDisconnectCall: i, channel: l } = e,
-        s = (0, m.e7)([Z.Z], () => Z.Z.getSelectedParticipant(l.id)),
-        { reducedMotion: o } = a.useContext(f.AccessibilityPreferencesContext),
-        [c, u] = a.useState(!1),
-        h = null == s ? void 0 : s.id,
+        a = (0, m.e7)([Z.Z], () => Z.Z.getSelectedParticipant(l.id)),
+        { reducedMotion: o } = s.useContext(f.AccessibilityPreferencesContext),
+        [c, u] = s.useState(!1),
+        h = null == a ? void 0 : a.id,
         p = (0, m.e7)([en.Z], () => (null != h ? en.Z.getActiveStreamForStreamKey(h) : null), [h]),
-        g = (null == s ? void 0 : s.type) === eE.fO.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id),
+        g = (null == a ? void 0 : a.type) === eE.fO.STREAM && null != p && p.ownerId !== (null == n ? void 0 : n.id),
         v = (0, m.Wu)([en.Z], () =>
             en.Z.getAllActiveStreamsForChannel(l.id).filter((e) => {
                 let { ownerId: t } = e;
@@ -273,13 +273,13 @@ let ey = a.memo(function (e) {
             })
         ),
         _ = (0, U.qY)(l.id),
-        I = a.useCallback(() => {
-            if ((null == s ? void 0 : s.type) === eE.fO.ACTIVITY && s.id === t) return 'ACTIVITY';
+        I = s.useCallback(() => {
+            if ((null == a ? void 0 : a.type) === eE.fO.ACTIVITY && a.id === t) return 'ACTIVITY';
             if (g) return 'STREAM';
             if (null != _) return 'EVENT';
             return 'CALL';
-        }, [s, t, g, _]),
-        [E, b] = a.useState(I()),
+        }, [a, t, g, _]),
+        [E, b] = s.useState(I()),
         S = (0, f.useSpring)(
             {
                 opacity: c ? 0.2 : 1,
@@ -297,32 +297,32 @@ let ey = a.memo(function (e) {
             },
             'animate-always'
         );
-    a.useEffect(() => {
+    s.useEffect(() => {
         I() !== E && u(!0);
     }, [E, I]);
-    let T = a.useCallback(() => {
+    let T = s.useCallback(() => {
             if (null != p) (0, x.g)((0, O.V9)(p));
             else for (let e of v) (0, x.g)((0, O.V9)(e));
         }, [v, p]),
         N = (e, t) => {
-            let a = {
+            let s = {
                 centerButton: !0,
                 className: eT.controlButton,
                 popoutOpen: e
             };
             switch (E) {
                 case 'ACTIVITY':
-                    if (null == s || null == n) return;
+                    if (null == a || null == n) return;
                     return (0, r.jsx)(J.Z, {
-                        ...a,
-                        applicationId: s.id,
+                        ...s,
+                        applicationId: a.id,
                         color: 'red',
                         channelId: l.id,
                         onPopoutClick: v.length > 0 ? t : null
                     });
                 case 'STREAM':
                     return (0, r.jsx)(ee.O, {
-                        ...a,
+                        ...s,
                         hasPermission: !0,
                         streamActive: !0,
                         color: 'red',
@@ -332,7 +332,7 @@ let ey = a.memo(function (e) {
                     });
                 case 'CALL':
                     return (0, r.jsx)(Q.Z, {
-                        ...a,
+                        ...s,
                         color: 'red',
                         onClick: () => (null == i ? void 0 : i()),
                         onPopoutClick: v.length > 0 ? t : null
@@ -373,12 +373,12 @@ let ey = a.memo(function (e) {
 });
 function eP(e) {
     let { channel: t, cameraUnavailable: n, hasCameraPermission: i, currentUser: l } = e,
-        s = (0, _.bp)(),
+        a = (0, _.bp)(),
         { reachedLimit: c, limit: u } = (0, ed.Z)(t),
-        d = a.useCallback(() => {
-            (0, e_.Z)(() => C.default.selectVoiceChannel(t.id, !0), s);
-        }, [t.id, s]),
-        h = a.useCallback(() => {
+        d = s.useCallback(() => {
+            (0, e_.Z)(() => C.default.selectVoiceChannel(t.id, !0), a);
+        }, [t.id, a]),
+        h = s.useCallback(() => {
             n ? (0, eC.Z)() : d();
         }, [n, d]),
         p = (0, m.e7)([ei.Z], () => {
@@ -420,9 +420,9 @@ function eP(e) {
 }
 t.ZP = function (e) {
     var t;
-    let { channel: n, className: i, onDisconnectCall: l, exitFullScreen: a, idleProps: s } = e,
-        c = (0, m.e7)([ea.default], () => {
-            let e = ea.default.getCurrentUser();
+    let { channel: n, className: i, onDisconnectCall: l, exitFullScreen: s, idleProps: a } = e,
+        c = (0, m.e7)([es.default], () => {
+            let e = es.default.getCurrentUser();
             return u()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
         { cameraUnavailable: d, enabled: h } = (0, eu.Z)(),
@@ -503,13 +503,13 @@ t.ZP = function (e) {
                         !y &&
                             (0, r.jsx)(eA, {
                                 channel: n,
-                                idle: null === (t = null == s ? void 0 : s.idle) || void 0 === t || t
+                                idle: null === (t = null == a ? void 0 : a.idle) || void 0 === t || t
                             }),
                         !y &&
                             (0, r.jsx)(ej, {
                                 channel: n,
                                 currentUser: c,
-                                exitFullScreen: a,
+                                exitFullScreen: s,
                                 canGoLive: _,
                                 hasPermission: p
                             }),

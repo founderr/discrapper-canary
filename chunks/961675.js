@@ -2,7 +2,7 @@ n(47120);
 var i,
     l = n(442837),
     r = n(570140);
-function a(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,23 +15,23 @@ function a(e, t, n) {
         e
     );
 }
-let s = new Set();
+let a = new Set();
 class o extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (s = new Set(e));
+        null != e && (a = new Set(e));
     }
     hasHidden(e) {
-        return s.has(e);
+        return a.has(e);
     }
     getState() {
-        return s;
+        return a;
     }
 }
-a(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
-    a(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
+s(o, 'displayName', 'ForumChannelAdminOnboardingGuideStore'),
+    s(o, 'persistKey', 'ForumChannelAdminOnboardingGuideStore'),
     (t.Z = new o(r.Z, {
         ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
             let { channelId: t, hide: n } = e;
-            n ? s.add(t) : s.delete(t);
+            n ? a.add(t) : a.delete(t);
         }
     }));

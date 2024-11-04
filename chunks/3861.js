@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(112724),
+    s = n.n(r),
+    a = n(112724),
     o = n(613611),
     c = n(351248),
     u = n(600164),
@@ -15,12 +15,12 @@ var i = n(200651),
     C = n(981631),
     x = n(354459),
     v = n(396602);
-t.Z = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: S, hasConnectPermission: Z, className: T, inCall: N, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+t.Z = (0, a.Z)((e) => {
+    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: a, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: S, hasConnectPermission: Z, className: T, inCall: N, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
     l.useEffect(() => {
         d.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [y, P, O.width, O.height]);
-    let w = l.useMemo(() => n.filter((e) => e.type !== x.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, s]);
+    let w = l.useMemo(() => n.filter((e) => e.type !== x.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, a]);
     if ((null == k ? void 0 : k.channelId) === S.id) return (0, i.jsx)(m.Z, { height: P });
     if ((null == S ? void 0 : S.isGuildVocal()) && !N)
         return (0, i.jsx)(h.Z, {
@@ -39,7 +39,7 @@ t.Z = (0, s.Z)((e) => {
     if (((n = N ? n : t), null == r))
         return 0 === n.length
             ? (0, i.jsx)(g.Z, {
-                  className: a()(v.videoGrid, v.hiddenParticipants),
+                  className: s()(v.videoGrid, v.hiddenParticipants),
                   channelId: S.id,
                   width: y
               })

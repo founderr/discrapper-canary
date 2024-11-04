@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(192379),
     l = n(149765),
     r = n(442837),
-    a = n(902704),
-    s = n(592125),
+    s = n(902704),
+    a = n(592125),
     o = n(720202),
     c = n(271383),
     u = n(700785),
@@ -18,12 +18,12 @@ let h = [],
     m = new Set();
 function p(e) {
     let { entries: t, channelId: n } = e,
-        p = (0, r.e7)([s.Z], () => s.Z.getChannel(n)),
+        p = (0, r.e7)([a.Z], () => a.Z.getChannel(n)),
         f = null == p ? void 0 : p.guild_id,
         g = i.useRef(new Set()),
         C = i.useMemo(() => {
             let e = new Set(null == t ? void 0 : t.map((e) => e.author_id));
-            return !(0, a.E)([...g.current], [...e]) && (g.current = e), g.current;
+            return !(0, s.E)([...g.current], [...e]) && (g.current = e), g.current;
         }, [t]);
     i.useEffect(() => {
         if (null != f)

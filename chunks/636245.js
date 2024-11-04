@@ -2,15 +2,15 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(922482),
-    a = n(979651),
-    s = n(915863),
+    s = n(979651),
+    a = n(915863),
     o = n(388032),
     c = n(91772);
 t.Z = (e) => {
     let { guildId: t, channelId: n, color: u, look: d, onAction: h } = e,
-        m = (0, l.e7)([a.Z], () => a.Z.isInChannel(n), [n]);
+        m = (0, l.e7)([s.Z], () => s.Z.isInChannel(n), [n]);
     return (0, i.jsx)(
-        s.Z,
+        a.Z,
         {
             className: c.button,
             color: u,

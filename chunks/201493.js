@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(570140),
+    s = n(481060),
+    a = n(570140),
     o = n(45114),
     c = n(147754),
     u = n(306680),
@@ -46,7 +46,7 @@ t.Z = (e) => {
         () => () => {
             let e = u.ZP.lastMessageId(S.id);
             if (null != e)
-                s.Z.wait(() => {
+                a.Z.wait(() => {
                     (0, o.In)(S.id, !0, !0, e);
                 });
         },
@@ -86,7 +86,7 @@ t.Z = (e) => {
         }, [S.id, Z.id, T]);
     let U = (0, g.G)(S)
             ? () => {
-                  (0, a.openModalLazy)(async () => {
+                  (0, s.openModalLazy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
                       return (t) =>
                           (0, i.jsx)(e, {
@@ -125,7 +125,7 @@ t.Z = (e) => {
         : null == P && null == T
           ? (0, i.jsx)('div', {
                 className: b.pageContainer,
-                children: (0, i.jsx)(a.Spinner, { className: b.spinner })
+                children: (0, i.jsx)(s.Spinner, { className: b.spinner })
             })
           : (null == P ? void 0 : P.length) === 0 && null == T
             ? (0, i.jsx)('div', {

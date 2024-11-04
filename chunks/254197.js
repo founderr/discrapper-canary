@@ -22,8 +22,8 @@ var o = n(200651),
     b = n(585500),
     N = n(475595),
     S = n(720293),
-    B = n(644646),
-    T = n(78826),
+    T = n(644646),
+    B = n(78826),
     A = n(670638),
     y = n(341907),
     R = n(693900),
@@ -99,9 +99,9 @@ function D(e) {
         ]
     });
 }
-function U(e) {
+function H(e) {
     let { quest: t, isHighlightedReward: n } = e;
-    return (0, o.jsx)(B.Z, {
+    return (0, o.jsx)(T.Z, {
         className: a()(Z.rewardTile, { [Z.hiddenRewardTile]: n }),
         learnMoreStyle: 'text',
         quest: t,
@@ -109,19 +109,19 @@ function U(e) {
         location: W.dr.QUESTS_BAR
     });
 }
-function H(e) {
+function U(e) {
     let { quest: t, taskDetails: n, expansionSpring: s, isInteractable: a, reducedMotion: l, containerRef: d, isExpanded: m, onAcceptQuest: x } = e,
         g = (0, c.e7)([f.Z], () => f.Z.isEnrolling(t.id), [t]),
         v = r.useMemo(() => (0, N.fh)(t, N.eC.QUEST_BAR_HERO), [t]),
         E = (0, _.vI)(t, W.dr.QUESTS_BAR, !0),
         S = r.useRef(null),
-        { primaryVariant: B } = j.u.useExperiment({ location: W.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
+        { primaryVariant: T } = j.u.useExperiment({ location: W.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
         A = (0, b.D)({
             quest: t,
             location: W.dr.QUESTS_BAR,
             questContent: h.jn.QUEST_BAR_V2,
             taskDetails: n,
-            useV2Variants: B === j.P.V2 || (0, M.a)(t)
+            useV2Variants: T === j.P.V2 || (0, M.a)(t)
         });
     r.useEffect(() => {
         null != S.current && (l && m ? (S.current.pause(), (S.current.currentTime = 0)) : !l && m && S.current.play());
@@ -137,7 +137,7 @@ function H(e) {
                         (0, o.jsxs)('div', {
                             className: Z.details,
                             children: [
-                                (0, o.jsx)(U, {
+                                (0, o.jsx)(H, {
                                     quest: t,
                                     isHighlightedReward: E
                                 }),
@@ -187,7 +187,7 @@ function H(e) {
                         }
                     }),
                     v.isAnimated
-                        ? (0, o.jsx)(T.Fl, {
+                        ? (0, o.jsx)(B.Fl, {
                               id: 'QuestBarV2ContentExpanded_heroAnimated',
                               children: (e) => {
                                   var t;
@@ -209,7 +209,7 @@ function H(e) {
                                   );
                               }
                           })
-                        : (0, o.jsx)(T.Fl, {
+                        : (0, o.jsx)(B.Fl, {
                               id: 'QuestBarV2ContentExpanded_heroStatic',
                               children: (e) =>
                                   (0, o.jsx)('img', {
@@ -239,10 +239,10 @@ function V(e) {
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         b = s.percentComplete > 0,
         N = (0, g.z)(n),
-        [S, B, T] = (0, g.me)(n, s),
+        [S, T, B] = (0, g.me)(n, s),
         M = (0, E.pF)({ location: W.dr.QUESTS_BAR }),
-        U = r.useRef(null),
-        H = (0, g.B6)(n.config.expiresAt),
+        H = r.useRef(null),
+        U = (0, g.B6)(n.config.expiresAt),
         V = (0, g._s)({ quest: n }),
         z = (0, C.cr)(n),
         F = r.useCallback(() => {
@@ -270,7 +270,7 @@ function V(e) {
                             (0, o.jsx)(u.Text, {
                                 variant: 'text-xxs/medium',
                                 className: a()(Z.flex, Z.headerText),
-                                children: Q.intl.format(Q.t['pX+fmp'], { expirationDate: H })
+                                children: Q.intl.format(Q.t['pX+fmp'], { expirationDate: U })
                             }),
                             (0, o.jsx)(A.r, {
                                 onOpen: f,
@@ -298,14 +298,14 @@ function V(e) {
                     (0, o.jsx)(I.Z, {
                         expansionSpring: c,
                         overlayRef: d,
-                        progressBarRef: U,
+                        progressBarRef: H,
                         quest: n,
                         isExpanded: p
                     }),
                     (0, o.jsx)(P.Z, {
                         contentLocation: 'expanded',
                         quest: n,
-                        progressBarRef: U,
+                        progressBarRef: H,
                         isExpanded: !0,
                         taskDetails: s,
                         activeScreen: S
@@ -317,8 +317,8 @@ function V(e) {
                             (0, l.EQ)(S)
                                 .with(h.LI.SELECT, () =>
                                     (0, o.jsx)(O.Z, {
-                                        onConsole: () => T(W.cd.CONSOLE),
-                                        onDesktop: () => T(W.cd.DESKTOP)
+                                        onConsole: () => B(W.cd.CONSOLE),
+                                        onDesktop: () => B(W.cd.DESKTOP)
                                     })
                                 )
                                 .with(h.LI.DESKTOP, () => (0, o.jsx)(q.Z, { quest: n }))
@@ -348,8 +348,8 @@ function V(e) {
                                 hasMadeProgress: b,
                                 isProgressing: N,
                                 activeScreen: S,
-                                showBackButton: S !== h.LI.SELECT && B.length > 1 && !b && !N && M,
-                                onBack: () => T(null),
+                                showBackButton: S !== h.LI.SELECT && T.length > 1 && !b && !N && M,
+                                onBack: () => B(null),
                                 taskDetails: s
                             })
                         ]
@@ -374,13 +374,13 @@ let z = r.forwardRef(function (e, t) {
             }),
                 N && (0, y.openVideoQuestModal)(_);
         }, [_, N]),
-        B = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-        T = d && u;
+        T = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        B = d && u;
     return (0, o.jsxs)(i.animated.div, {
-        'aria-hidden': !T,
+        'aria-hidden': !B,
         className: a()(l, Z.contentExpanded, {
-            [Z.contentInteractable]: T,
-            [Z.contentExpandedAccepted]: B
+            [Z.contentInteractable]: B,
+            [Z.contentExpandedAccepted]: T
         }),
         style: {
             transform: (0, i.to)(
@@ -401,7 +401,7 @@ let z = r.forwardRef(function (e, t) {
             s,
             (0, o.jsx)(i.animated.div, {
                 style: { opacity: 1 },
-                children: B
+                children: T
                     ? (0, o.jsx)(V, {
                           quest: _,
                           taskDetails: b,
@@ -414,11 +414,11 @@ let z = r.forwardRef(function (e, t) {
                           onCtxMenuSelect: v,
                           containerRef: t
                       })
-                    : (0, o.jsx)(H, {
+                    : (0, o.jsx)(U, {
                           quest: _,
                           taskDetails: b,
                           expansionSpring: p,
-                          isInteractable: T,
+                          isInteractable: B,
                           reducedMotion: E,
                           containerRef: t,
                           isExpanded: d,

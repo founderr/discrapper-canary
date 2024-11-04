@@ -2,8 +2,8 @@ n(47120), n(724458);
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(46973),
     c = n(570140),
     u = n(642047),
@@ -69,7 +69,7 @@ function Z() {
 function T() {
     _.clear(), I.clear(), E.clear();
 }
-class N extends (i = s.ZP.Store) {
+class N extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.default, m.Z, p.Z), this.syncWith([f.default], Z);
     }
@@ -86,15 +86,15 @@ class N extends (i = s.ZP.Store) {
         return I.values();
     }
 }
-(a = 'RTCConnectionDesyncStore'),
+(s = 'RTCConnectionDesyncStore'),
     (r = 'displayName') in (l = N)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new N(c.Z, {
         CONNECTION_OPEN: function () {
             T();

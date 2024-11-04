@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(40851),
-    s = n(357156),
+    s = n(40851),
+    a = n(357156),
     o = n(390322),
     c = n(871499),
     u = n(592125),
@@ -20,10 +20,10 @@ var l = n(442837),
     g = n(249786);
 function C(e) {
     let { channelId: t, onClick: n } = e,
-        C = (0, a.bp)(),
+        C = (0, s.bp)(),
         x = (0, p.qY)(t),
         v = (0, l.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        { canManageGuildEvent: _ } = (0, s.XJ)(v),
+        { canManageGuildEvent: _ } = (0, a.XJ)(v),
         I = _(x);
     if (null == x) return null;
     let E = () => {

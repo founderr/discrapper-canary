@@ -2,9 +2,9 @@ var i = n(200651);
 n(192379);
 var r = n(120356),
     s = n.n(r),
-    o = n(481060),
+    l = n(481060),
     a = n(518084),
-    l = n(981631),
+    o = n(981631),
     c = n(388032),
     d = n(230519);
 t.Z = function (e) {
@@ -23,14 +23,14 @@ t.Z = function (e) {
                               children: n
                           }),
                           (0, i.jsx)(a.ZP.Content, {
-                              children: (0, i.jsx)(o.Popout, {
+                              children: (0, i.jsx)(l.Popout, {
                                   position: 'right',
-                                  renderPopout: null != h ? h : l.dG4,
+                                  renderPopout: null != h ? h : o.dG4,
                                   autoInvert: !1,
                                   children: (e) =>
                                       (0, i.jsx)(a.ZP.Icon, {
                                           ...e,
-                                          icon: o.SettingsIcon,
+                                          icon: l.SettingsIcon,
                                           label: c.intl.string(c.t['3D5yo6'])
                                       })
                               })

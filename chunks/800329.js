@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(218867),
+    s = n.n(r),
+    a = n(218867),
     o = n(155701);
 let c = 16 / 9;
 function u(e, t) {
@@ -68,11 +68,11 @@ function h(e) {
                                       return l * r >= e;
                                   }) - 1;
                         let r = u(i, t),
-                            a = Math.ceil(e / r);
+                            s = Math.ceil(e / r);
                         return {
                             tileWidth: i,
                             columns: Math.max(1, r),
-                            rows: a
+                            rows: s
                         };
                     })(e, t, n);
                     return {
@@ -88,7 +88,7 @@ function h(e) {
         N = T * b + (T - 1) * 8 <= C,
         j = Math.floor(b / c) + 8,
         A = Math.max(0, I - j * S) / 2;
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(a.Z, {
         fade: !0,
         className: n,
         listPadding: [m + A, 0, p + A - 8, 8],
@@ -111,7 +111,7 @@ function h(e) {
                                         'div',
                                         {
                                             style: E,
-                                            className: a()(o.tile, {
+                                            className: s()(o.tile, {
                                                 [o.padColumn]: N,
                                                 [o.noVerticalMargin]: r >= (S - 1) * Z,
                                                 [o.noHorizontalMargin]: (r + 1) % Z == 0 || r === v - 1

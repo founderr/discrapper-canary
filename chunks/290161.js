@@ -2,17 +2,17 @@ n.r(t);
 var i = n(200651),
     r = n(192379),
     s = n(442837),
-    o = n(481060),
+    l = n(481060),
     a = n(490173),
-    l = n(735246),
+    o = n(735246),
     c = n(40851),
     d = n(503737),
     u = n(823453),
     h = n(436774),
     p = n(686546),
     f = n(314910),
-    g = n(367207),
-    m = n(241890),
+    m = n(367207),
+    g = n(241890),
     v = n(649561),
     _ = n(631553),
     E = n(981631);
@@ -21,11 +21,11 @@ t.default = function () {
     return (
         r.useEffect(
             () => (
-                g.Z.initialize(),
+                m.Z.initialize(),
                 d.Z.initialize(),
-                m.Z.init(),
+                g.Z.init(),
                 () => {
-                    g.Z.terminate(), d.Z.terminate();
+                    m.Z.terminate(), d.Z.terminate();
                 }
             ),
             []
@@ -33,7 +33,7 @@ t.default = function () {
         (0, i.jsxs)(r.Fragment, {
             children: [
                 (0, i.jsx)(u.Z, {}),
-                (0, i.jsx)(l.T, {
+                (0, i.jsx)(o.T, {
                     children: (0, i.jsxs)(v.Z, {
                         children: [
                             (0, i.jsx)(p.Co, {}),
@@ -42,7 +42,7 @@ t.default = function () {
                                 appContext: E.IlC.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(f.yP, {
-                                    children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(o.Modals, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f.Un, {})]
+                                    children: [(0, i.jsx)(_.Z, {}), (0, i.jsx)(l.Modals, {}), (0, i.jsx)(a.Z, {}), (0, i.jsx)(f.Un, {})]
                                 })
                             })
                         ]

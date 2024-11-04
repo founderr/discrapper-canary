@@ -1,31 +1,31 @@
 n.d(e, {
     T: function () {
-        return a;
+        return o;
     },
     s: function () {
-        return c;
+        return s;
     }
 });
-var r = n(536285),
+var l = n(536285),
     i = n(703656),
-    l = n(314897),
-    u = n(358085),
-    o = n(981631);
-let a = u.isPlatformEmbedded
-        ? o.dG4
+    r = n(314897),
+    a = n(358085),
+    u = n(981631);
+let o = a.isPlatformEmbedded
+        ? u.dG4
         : (t, e) => {
               if (!(0, i.DB)())
-                  return r.default.request(o.Etm.DEEP_LINK, {
+                  return l.default.request(u.Etm.DEEP_LINK, {
                       type: t,
                       params: e
                   });
           },
-    c = u.isPlatformEmbedded
-        ? o.dG4
+    s = a.isPlatformEmbedded
+        ? u.dG4
         : (t, e) => {
-              if (!l.default.isAuthenticated())
-                  return a(t, {
+              if (!r.default.isAuthenticated())
+                  return o(t, {
                       ...(e || {}),
-                      fingerprint: l.default.getFingerprint()
+                      fingerprint: r.default.getFingerprint()
                   });
           };

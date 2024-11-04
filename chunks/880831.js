@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
+    s = n.n(r),
+    a = n(392711),
     o = n(100621),
     c = n(442837),
     u = n(481060),
@@ -38,7 +38,7 @@ function y(e) {
     var t;
     let { message: n } = e,
         r = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
-        s = (0, C.Uj)(n),
+        a = (0, C.Uj)(n),
         o = l.useContext(p.Z),
         [d, I] = l.useState(!1),
         S = (0, f.p)(),
@@ -98,17 +98,17 @@ function y(e) {
         onClick: Z,
         children: [
             (0, i.jsxs)('div', {
-                className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
+                className: s()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
                 children: [null != L ? null : M, null !== (t = null != y ? y : L) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != L ? null : P]
             }),
             (0, i.jsx)('img', {
                 alt: '',
                 src:
-                    (null == s ? void 0 : s.guildMemberAvatar) != null && null != o
+                    (null == a ? void 0 : a.guildMemberAvatar) != null && null != o
                         ? (0, b.JM)({
                               guildId: o,
                               userId: n.author.id,
-                              avatar: s.guildMemberAvatar
+                              avatar: a.guildMemberAvatar
                           })
                         : n.author.getAvatarURL(o, 32),
                 className: j.avatar
@@ -121,8 +121,8 @@ function P(e) {
         [r, h] = l.useState(!1),
         { toastsHidden: m, toastMessages: p } = (function (e) {
             var t;
-            let { channelId: n, isFrozen: i, count: r, lingerMs: a } = e,
-                [s, o] = l.useState([]),
+            let { channelId: n, isFrozen: i, count: r, lingerMs: s } = e,
+                [a, o] = l.useState([]),
                 [u, h] = l.useState(!1),
                 m = l.useRef(null),
                 p = l.useRef(),
@@ -132,7 +132,7 @@ function P(e) {
             l.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== T.uaV.STAGE_START && i.type !== T.uaV.STAGE_END && i.type !== T.uaV.STAGE_TOPIC && i.type !== T.uaV.STAGE_SPEAKER && i.type !== T.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(f, a)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== T.uaV.STAGE_START && i.type !== T.uaV.STAGE_END && i.type !== T.uaV.STAGE_TOPIC && i.type !== T.uaV.STAGE_SPEAKER && i.type !== T.uaV.STAGE_RAISE_HAND) clearTimeout(p.current), (p.current = setTimeout(f, s)), o((e) => [...e, i.id]);
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -140,7 +140,7 @@ function P(e) {
                         d.Z.unsubscribe('MESSAGE_CREATE', e);
                     }
                 );
-            }, [n, f, r, a]),
+            }, [n, f, r, s]),
                 l.useEffect(
                     () => () => {
                         clearTimeout(p.current);
@@ -148,14 +148,14 @@ function P(e) {
                     []
                 ),
                 l.useEffect(() => {
-                    s.length > 3 &&
+                    a.length > 3 &&
                         o((e) => {
                             let t = e.length - 3;
                             return [...e.slice(t)];
                         });
-                }, [s]),
-                i && null == m.current ? (m.current = s) : !i && null != m.current && (m.current = null);
-            let g = null !== (t = m.current) && void 0 !== t ? t : s;
+                }, [a]),
+                i && null == m.current ? (m.current = a) : !i && null != m.current && (m.current = null);
+            let g = null !== (t = m.current) && void 0 !== t ? t : a;
             return {
                 toastsHidden: u,
                 toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(Z.lm)
@@ -179,7 +179,7 @@ function P(e) {
             let l = null !== (n = f.current[i.id]) && void 0 !== n ? n : 0;
             (e[i.id] = t), (t += l + 8);
         }
-        !(0, s.isEqual)(e, g) && C(e);
+        !(0, a.isEqual)(e, g) && C(e);
     }, [p]);
     let v = p.map((e) => ({
             message: e,
@@ -213,7 +213,7 @@ function P(e) {
         theme: T.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: a()(n, e),
+                className: s()(n, e),
                 onMouseEnter: () => {
                     h(!0);
                 },

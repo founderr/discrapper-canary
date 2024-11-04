@@ -10,8 +10,8 @@ n.d(t, {
 var i = n(392711),
     l = n.n(i),
     r = n(772848),
-    a = n(903797),
-    s = n(731965),
+    s = n(903797),
+    a = n(731965),
     o = n(125268),
     c = n(673125),
     u = n(292793),
@@ -30,7 +30,7 @@ let p = {
         SIZE_MIN: m.qh / 2,
         SIZE_MAX: m.qh
     },
-    f = (0, a.Z)(() => ({
+    f = (0, s.Z)(() => ({
         particles: {},
         lastSpawned: {}
     }));
@@ -39,7 +39,7 @@ function g(e, t) {
     l()(null !== (n = f.getState().particles[e.id]) && void 0 !== n ? n : {}).forEach(t);
 }
 function C(e) {
-    var t, n, i, a;
+    var t, n, i, s;
     let { emojiHose: C, context: x, canvasWidth: v, canvasHeight: _, fallbackColor: I, outlineColorDark: E, outlineColorLight: b, streamerId: S, deadDrawables: Z } = e;
     x.save();
     let T = c.Z.getEmojiImage(null !== (n = null !== (t = C.emojiId) && void 0 !== t ? t : C.emojiName) && void 0 !== n ? n : ''),
@@ -56,28 +56,28 @@ function C(e) {
                 (n.y += n.ySpeed * window.devicePixelRatio),
                 (n.opacity -= n.opacitySpeed),
                 n.opacity <= 0 &&
-                    (0, s.j)(() => {
+                    (0, a.j)(() => {
                         f.setState((e) => (delete e.particles[t.id][n.id], 0 === Object.keys(e.particles[t.id]).length && delete e.particles[t.id], e));
                     }))
             );
         }),
         !(function (e, t, n) {
             var i;
-            let a = null !== (i = f.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
+            let s = null !== (i = f.getState().lastSpawned[e.id]) && void 0 !== i ? i : 0,
                 o = Date.now();
-            if (!(a + 100 > o) && e.state !== u.f.STOP && !!(0.8 >= Math.random() || a + 300 < o))
-                (0, s.j)(() => {
+            if (!(s + 100 > o) && e.state !== u.f.STOP && !!(0.8 >= Math.random() || s + 300 < o))
+                (0, a.j)(() => {
                     f.setState((i) => {
-                        var a, s, o;
-                        let c = null !== (a = i.particles[e.id]) && void 0 !== a ? a : {},
+                        var s, a, o;
+                        let c = null !== (s = i.particles[e.id]) && void 0 !== s ? s : {},
                             u = l().random(1, 2);
                         for (let e = 0; e < u; e++) {
                             let e =
-                                ((s = t),
+                                ((a = t),
                                 (o = n),
                                 {
                                     id: (0, r.Z)(),
-                                    x: s + l().random(-p.X_OFFSET, p.X_OFFSET),
+                                    x: a + l().random(-p.X_OFFSET, p.X_OFFSET),
                                     y: o + l().random(-p.Y_OFFSET, p.Y_OFFSET),
                                     xSpeed: l().random(-p.X_SPEED, p.X_SPEED),
                                     ySpeed: l().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
@@ -103,7 +103,7 @@ function C(e) {
             })(x, T, e)
         ),
         C.lastUpdatedAt + m.FO < Date.now() && (0, o.ZZ)(S, C),
-        C.state === u.f.STOP && ((i = C), !(Object.keys(null !== (a = f.getState().particles[i.id]) && void 0 !== a ? a : {}).length > 0)))
+        C.state === u.f.STOP && ((i = C), !(Object.keys(null !== (s = f.getState().particles[i.id]) && void 0 !== s ? s : {}).length > 0)))
     )
         Z.push(C);
     x.restore();

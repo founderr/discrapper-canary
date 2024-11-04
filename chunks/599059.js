@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(981631),
+    s = n.n(r),
+    a = n(981631),
     o = n(89448);
 function c(e, t, n) {
     return (
@@ -34,7 +34,7 @@ class u extends l.Component {
     render() {
         let e;
         let { className: t, name: n, autoComplete: l, maxLen: r } = this.props,
-            s = {
+            a = {
                 position: 'absolute',
                 left: 0,
                 width: '100%',
@@ -46,9 +46,9 @@ class u extends l.Component {
                       visibility: 'hidden',
                       pointerEvents: 'none'
                   })
-                : (s.opacity = 0),
+                : (a.opacity = 0),
             (0, i.jsx)('div', {
-                className: a()(o.outer, t),
+                className: s()(o.outer, t),
                 children: (0, i.jsxs)('div', {
                     className: o.container,
                     children: [
@@ -56,7 +56,7 @@ class u extends l.Component {
                             type: 'text',
                             className: o.input,
                             ref: this.inputRef,
-                            style: s,
+                            style: a,
                             value: this.state.value,
                             name: n,
                             maxLength: r,
@@ -108,7 +108,7 @@ class u extends l.Component {
                     });
             }),
             c(this, 'handleKeyPress', (e) => {
-                if (e.which === s.yXg.ENTER) {
+                if (e.which === a.yXg.ENTER) {
                     var t;
                     null === (t = this.inputRef.current) || void 0 === t || t.blur();
                 }

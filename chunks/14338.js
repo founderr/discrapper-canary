@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(481060),
+    s = n.n(r),
+    a = n(481060),
     o = n(239091),
     c = n(586902),
     u = n(40851),
@@ -19,7 +19,7 @@ var i = n(200651),
 function g(e) {
     let { channel: t, speaker: r, className: m } = e,
         g = (0, u.bp)(),
-        { reducedMotion: C } = l.useContext(s.AccessibilityPreferencesContext),
+        { reducedMotion: C } = l.useContext(a.AccessibilityPreferencesContext),
         x = (0, c.Z)({ userId: r.id }),
         v = null != r.member ? (0, p.CA)(r.member) : null,
         _ = (e) => {
@@ -41,7 +41,7 @@ function g(e) {
                 { context: g }
             );
         };
-    return (0, i.jsx)(s.Popout, {
+    return (0, i.jsx)(a.Popout, {
         preload: () =>
             (0, d.Z)(r.user, {
                 guildId: t.guild_id,
@@ -57,21 +57,21 @@ function g(e) {
         position: 'right',
         spacing: 8,
         children: (e) =>
-            (0, i.jsx)(s.Tooltip, {
+            (0, i.jsx)(a.Tooltip, {
                 text: r.userNick,
                 position: 'bottom',
                 children: (n) =>
-                    (0, i.jsx)(s.Clickable, {
+                    (0, i.jsx)(a.Clickable, {
                         ...n,
                         ...e,
                         onClick: (t) => {
                             t.stopPropagation(), e.onClick(t);
                         },
                         onContextMenu: _,
-                        children: (0, i.jsx)(s.Avatar, {
+                        children: (0, i.jsx)(a.Avatar, {
                             src: null != v ? v : r.user.getAvatarURL(t.guild_id, 24),
-                            size: s.AvatarSizes.SIZE_24,
-                            className: a()(f.avatar, m),
+                            size: a.AvatarSizes.SIZE_24,
+                            className: s()(f.avatar, m),
                             'aria-label': r.userNick,
                             isSpeaking: x && !C.enabled
                         })
@@ -100,7 +100,7 @@ function C(e) {
             (0, i.jsx)(
                 'div',
                 {
-                    className: a()(f.speakers, t),
+                    className: s()(f.speakers, t),
                     children: e
                 },
                 n

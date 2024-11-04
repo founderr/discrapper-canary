@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(287734),
+    s = n(481060),
+    a = n(287734),
     o = n(358221),
     c = n(305325),
     u = n(281956),
@@ -18,7 +18,7 @@ t.Z = function (e) {
     let { participants: m, channel: x, hasConnectPermission: v } = e,
         _ = (0, u.J)(x.guild_id),
         I = l.useCallback(() => {
-            _ ? (0, c.hk)(x.guild_id, () => s.default.selectVoiceChannel(x.id)) : s.default.selectVoiceChannel(x.id);
+            _ ? (0, c.hk)(x.guild_id, () => a.default.selectVoiceChannel(x.id)) : a.default.selectVoiceChannel(x.id);
         }, [x.id, x.guild_id, _]),
         E = m.filter((e) => e.type === p.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
@@ -46,14 +46,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(s.Heading, {
                 className: g.channelName,
                 variant: 'heading-xxl/semibold',
                 children: x.name
             }),
             (0, i.jsx)('div', {
                 className: g.participantsRow,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(s.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -76,12 +76,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(s.Button, {
                 disabled: !v,
                 className: g.joinButton,
-                color: v ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
+                color: v ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
                 onClick: I,
-                size: a.Button.Sizes.MEDIUM,
+                size: s.Button.Sizes.MEDIUM,
                 children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(286379),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(797614),
     c = n(699516),
     u = n(378298),
@@ -22,7 +22,7 @@ function g(e) {
         x = l.useCallback(() => {
             (0, u.T)(t, [g]);
         }, [t, g]),
-        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
+        v = (0, s.e7)([c.Z], () => c.Z.isBlocked(C)),
         _ = l.useMemo(
             () => ({
                 channelId: t,
@@ -49,7 +49,7 @@ function g(e) {
             [_]
         ),
         E = l.useCallback(() => {
-            (0, s.openModalLazy)(
+            (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
@@ -75,7 +75,7 @@ function g(e) {
             x(), I(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [x, I]),
         Z = l.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
                     let { transitionState: l, onClose: r } = n;
@@ -104,7 +104,7 @@ function g(e) {
         buttons: [
             {
                 text: f.intl.string(f.t.Qyu4UF),
-                color: s.Button.Colors.BRAND,
+                color: a.Button.Colors.BRAND,
                 onclick: E
             },
             ...(v
@@ -112,7 +112,7 @@ function g(e) {
                 : [
                       {
                           text: f.intl.string(f.t['7q0bNT']),
-                          color: s.Button.Colors.PRIMARY,
+                          color: a.Button.Colors.PRIMARY,
                           onclick: Z
                       }
                   ])

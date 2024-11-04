@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(50493),
-    a = n(388032),
-    s = n(659367),
+    s = n(388032),
+    a = n(659367),
     o = n(194898);
 function c(e) {
     let { onNavigate: t, backPanel: n = r.k.INFO } = e;
@@ -18,7 +18,7 @@ function c(e) {
             (0, i.jsx)('div', {
                 className: o.headerTitle,
                 children: (0, i.jsxs)(l.Clickable, {
-                    className: s.backButton,
+                    className: a.backButton,
                     onClick: () => (null == t ? void 0 : t(n)),
                     children: [
                         (0, i.jsx)(l.ArrowSmallLeftIcon, {
@@ -28,15 +28,15 @@ function c(e) {
                         }),
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-md/semibold',
-                            children: a.intl.string(a.t['13/7kZ'])
+                            children: s.intl.string(s.t['13/7kZ'])
                         })
                     ]
                 })
             }),
             (0, i.jsx)(l.KeyCombo, {
                 shortcut: 'esc',
-                keyClassName: s.keyComboInner,
-                className: s.keyComboContainer
+                keyClassName: a.keyComboInner,
+                className: a.keyComboContainer
             })
         ]
     });

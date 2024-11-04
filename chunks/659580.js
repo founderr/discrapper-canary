@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(990547),
     r = n(481060),
-    a = n(410575),
-    s = n(906732),
+    s = n(410575),
+    a = n(906732),
     o = n(213609),
     c = n(821564),
     u = n(453925),
@@ -22,7 +22,7 @@ var l = n(990547),
     C = n(678199);
 function x(e) {
     let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: x = !1, renderInputModes: v = !1, renderInputVolume: _ = !1, renderOutputVolume: I = !1, onSelect: E } = e,
-        { analyticsLocations: b } = (0, s.ZP)();
+        { analyticsLocations: b } = (0, a.ZP)();
     (0, o.Z)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
@@ -34,7 +34,7 @@ function x(e) {
         N = (0, c.Z)(b),
         j = (0, u.Z)(b),
         A = (0, d.Z)(b);
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         object: f.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(r.Menu, {
             onSelect: E,

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(780384),
-    s = n(481060),
+    s = n(780384),
+    a = n(481060),
     o = n(332148),
     c = n(198620),
     u = n(624453),
@@ -34,7 +34,7 @@ function g(e) {
         l.useEffect(() => {
             v && o.Z.ackPins(t.id);
         }, [v, t.id]),
-        (0, i.jsx)(s.Dialog, {
+        (0, i.jsx)(a.Dialog, {
             'aria-label': p.intl.string(p.t['mp1N//']),
             children: (0, i.jsx)(h.ZP, {
                 onFetch: function () {
@@ -53,13 +53,13 @@ function g(e) {
                 },
                 renderHeader: () =>
                     (0, i.jsx)(h.h4, {
-                        icon: s.PinIcon,
+                        icon: a.PinIcon,
                         title: p.intl.string(p.t['mp1N//'])
                     }),
                 renderEmptyState: function (e) {
                     let l = p.intl.string(p.t.fmyaWF);
                     t.isPrivate() && (l = p.intl.string(p.t.rhqcbG));
-                    let r = (0, a.ap)(e) ? n(306059) : n(281485);
+                    let r = (0, s.ap)(e) ? n(306059) : n(281485);
                     return (0, i.jsx)(
                         h.nH,
                         {

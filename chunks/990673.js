@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return o;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(382790),
     s = n(430036),
-    o = n(518084),
+    l = n(518084),
     a = n(240038);
-function l(e) {
-    let { dragStart: t, dragging: n, pinned: l, locked: c } = e;
-    return (0, i.jsxs)(o.ZP, {
+function o(e) {
+    let { dragStart: t, dragging: n, pinned: o, locked: c } = e;
+    return (0, i.jsxs)(l.ZP, {
         className: a.wrapper,
         children: [
             (0, i.jsx)(r.Z, {
@@ -22,7 +22,7 @@ function l(e) {
             (0, i.jsx)(s.Z, {
                 dragStart: t,
                 locked: c,
-                pinned: l,
+                pinned: o,
                 dragging: n,
                 contained: !0
             })

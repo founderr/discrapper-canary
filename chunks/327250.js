@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(399606),
-    s = n(481060),
+    s = n(399606),
+    a = n(481060),
     o = n(493683),
     c = n(906732),
     u = n(979264),
@@ -33,7 +33,7 @@ var l = n(120356),
 function A(e) {
     let { user: t, guildId: n, onClose: l } = e,
         r = t.id,
-        o = (0, a.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
+        o = (0, s.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
     return (0, i.jsxs)('div', {
         className: j.topRow,
         children: [
@@ -42,10 +42,10 @@ function A(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: j.memberAvatar,
-                        children: (0, i.jsx)(s.Avatar, {
+                        children: (0, i.jsx)(a.Avatar, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
-                            size: s.AvatarSizes.SIZE_48,
+                            size: a.AvatarSizes.SIZE_48,
                             status: o
                         })
                     }),
@@ -55,11 +55,11 @@ function A(e) {
                             (0, i.jsxs)('div', {
                                 className: j.memberNameTextContainer,
                                 children: [
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-lg/medium',
-                                        children: (0, i.jsx)(s.NameWithRole, {
+                                        children: (0, i.jsx)(a.NameWithRole, {
                                             name: b.ZP.getName(n, null, t),
-                                            color: s.tokens.colors.HEADER_PRIMARY.css
+                                            color: a.tokens.colors.HEADER_PRIMARY.css
                                         })
                                     }),
                                     (0, i.jsx)(u.ZP, {
@@ -73,7 +73,7 @@ function A(e) {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
                                 children: S.ZP.getUserTag(t)
@@ -82,13 +82,13 @@ function A(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/medium',
                 color: 'text-normal',
-                children: (0, i.jsx)(s.Clickable, {
+                children: (0, i.jsx)(a.Clickable, {
                     className: j.closeAction,
                     onClick: l,
-                    children: (0, i.jsx)(s.XSmallIcon, {
+                    children: (0, i.jsx)(a.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -98,12 +98,12 @@ function A(e) {
     });
 }
 function y(e) {
-    let { tag: t = 'div', disabled: n, children: l, onClick: a, ...o } = e;
-    return (0, i.jsx)(s.Clickable, {
+    let { tag: t = 'div', disabled: n, children: l, onClick: s, ...o } = e;
+    return (0, i.jsx)(a.Clickable, {
         ...o,
         tag: t,
         className: r()(j.bottomRowAction, { [j.bottomRowActionDisabled]: n }),
-        onClick: n ? void 0 : a,
+        onClick: n ? void 0 : s,
         children: (0, i.jsx)('div', {
             className: j.innerBottomRowAction,
             children: l
@@ -112,12 +112,12 @@ function y(e) {
 }
 function P(e) {
     let { user: t, member: l, guildId: r } = e,
-        u = (0, a.e7)([C.Z], () => C.Z.getGuild(r)),
+        u = (0, s.e7)([C.Z], () => C.Z.getGuild(r)),
         {
             canKickUser: g,
             canBanUser: v,
             canModerateMembers: _
-        } = (0, a.cj)(
+        } = (0, s.cj)(
             [x.Z, I.default, C.Z],
             () => ({
                 canKickUser: null != u && x.Z.canManageUser(Z.Plq.KICK_MEMBERS, t, u),
@@ -133,7 +133,7 @@ function P(e) {
             location: T,
             locations: S
         }),
-        P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
+        P = (0, s.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
         className: j.bottomRow,
         children: [
@@ -144,13 +144,13 @@ function P(e) {
                     o.Z.openPrivateChannel(t.id);
                 },
                 children: [
-                    (0, i.jsx)(s.ChatIcon, {
+                    (0, i.jsx)(a.ChatIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 22,
                         height: 22
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         children: N.intl.string(N.t['g33r/P'])
@@ -161,7 +161,7 @@ function P(e) {
                 disabled: !g,
                 'aria-label': N.intl.string(N.t['3glT6e']),
                 onClick: () => {
-                    (0, s.openModalLazy)(async () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -173,13 +173,13 @@ function P(e) {
                     });
                 },
                 children: [
-                    (0, i.jsx)(s.UserMinusIcon, {
+                    (0, i.jsx)(a.UserMinusIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
+                        color: a.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         children: N.intl.string(N.t['3glT6e'])
@@ -190,7 +190,7 @@ function P(e) {
                 disabled: !v,
                 'aria-label': N.intl.string(N.t['5MBJ5O']),
                 onClick: () => {
-                    (0, s.openModalLazy)(async () => {
+                    (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
@@ -202,13 +202,13 @@ function P(e) {
                     });
                 },
                 children: [
-                    (0, i.jsx)(s.HammerIcon, {
+                    (0, i.jsx)(a.HammerIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
+                        color: a.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         children: N.intl.string(N.t['5MBJ5O'])
@@ -222,13 +222,13 @@ function P(e) {
                     b ? (0, h.q)(l.guildId, l.userId, S) : (0, h.z)(l.guildId, l.userId, S);
                 },
                 children: [
-                    (0, i.jsx)(s.ClockWarningIcon, {
+                    (0, i.jsx)(a.ClockWarningIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
+                        color: a.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         children: b ? N.intl.string(N.t.N86XcH) : N.intl.string(N.t.kTlLr6)
@@ -242,13 +242,13 @@ function P(e) {
                 },
                 disabled: !E.wS,
                 children: [
-                    (0, i.jsx)(s.IdIcon, {
+                    (0, i.jsx)(a.IdIcon, {
                         size: 'custom',
                         width: 22,
                         height: 22,
-                        color: s.tokens.colors.TEXT_NORMAL.css
+                        color: a.tokens.colors.TEXT_NORMAL.css
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
                         children: N.intl.string(N.t.IHTjzM)
@@ -260,9 +260,9 @@ function P(e) {
 }
 function M(e) {
     let { userId: t, guildId: n, onClose: l } = e,
-        r = (0, a.e7)([I.default], () => I.default.getUser(t), [t]),
-        s = (0, a.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
-    return null == r || null == s
+        r = (0, s.e7)([I.default], () => I.default.getUser(t), [t]),
+        a = (0, s.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
+    return null == r || null == a
         ? null
         : (0, i.jsxs)('div', {
               className: j.container,
@@ -274,7 +274,7 @@ function M(e) {
                   }),
                   (0, i.jsx)(P, {
                       user: r,
-                      member: s,
+                      member: a,
                       guildId: n
                   })
               ]

@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(98357),
     v = n(432877),
     j = n(246992),
-    C = n(128374),
-    _ = n(219299);
+    _ = n(128374),
+    C = n(219299);
 function T() {
     var e;
     let t = (0, c.Wu)([p.Z], () => p.Z.getSortedChannels()[1]),
@@ -44,7 +44,7 @@ function T() {
             let t = (0, g.x9)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             h.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        _ = null != i && !!i.isPrivate() && (0, g.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        C = null != i && !!i.isPrivate() && (0, g.yE)(null !== (e = i.recipientFlags) && void 0 !== e ? e : 0, o.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Text, {
@@ -52,10 +52,10 @@ function T() {
                 children: 'In-Game NUX Message for DMs'
             }),
             (0, r.jsxs)('div', {
-                className: C.inGameNuxContainer,
+                className: _.inGameNuxContainer,
                 children: [
                     (0, r.jsx)(s.SearchableSelect, {
-                        wrapperClassName: C.search,
+                        wrapperClassName: _.search,
                         options: b,
                         placeholder: 'Select DM',
                         value: n,
@@ -77,7 +77,7 @@ function T() {
                         size: s.Button.Sizes.SMALL,
                         onClick: v,
                         disabled: null == n,
-                        children: _ ? 'Clear NUX Flag' : 'Set NUX Flag'
+                        children: C ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
                 ]
             })
@@ -93,14 +93,14 @@ function S() {
                 value: n,
                 onChange: (e) => (0, b.Z)(t, e),
                 hideBorder: !0,
-                className: C.switch,
+                className: _.switch,
                 children: a
             },
             t
         );
     });
     return (0, r.jsxs)('div', {
-        className: i()(_.panel, C.panel),
-        children: [e, (0, r.jsx)('div', { className: C.divider }), (0, r.jsx)(T, {})]
+        className: i()(C.panel, _.panel),
+        children: [e, (0, r.jsx)('div', { className: _.divider }), (0, r.jsx)(T, {})]
     });
 }

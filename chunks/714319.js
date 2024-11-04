@@ -3,15 +3,15 @@ n.d(t, {
         return l;
     },
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i,
     l,
     r = n(536895);
 ((i = l || (l = {})).UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (i.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX');
-function a(e, t) {
-    var n, i, l, a, s, o, c;
+function s(e, t) {
+    var n, i, l, s, a, o, c;
     switch (t.type) {
         case r.Us.NAVIGATE_UP:
             return (
@@ -23,7 +23,7 @@ function a(e, t) {
             );
         case r.Us.NAVIGATE_DOWN:
             return (
-                (a = 0),
+                (s = 0),
                 {
                     ...(l = e),
                     focusedIndex: Math.min(l.focusedIndex + 1, l.itemCount - 1)
@@ -31,7 +31,7 @@ function a(e, t) {
             );
         case r.Us.NAVIGATE_START:
             return (
-                (s = 0),
+                (a = 0),
                 {
                     ...e,
                     focusedIndex: 0

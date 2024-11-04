@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(481060),
+    s = n.n(r),
+    a = n(481060),
     o = n(826298),
     c = n(579060);
 t.Z = l.memo(function (e) {
@@ -10,12 +10,12 @@ t.Z = l.memo(function (e) {
     let { className: n, channel: l, section: r } = e,
         u = null != r ? (0, o.ky)(r) : null;
     return (0, i.jsx)('div', {
-        className: a()(n, c.wrapper),
+        className: s()(n, c.wrapper),
         children: (0, i.jsx)('div', {
             className: c.icon,
             children:
                 null != u
-                    ? (0, i.jsx)(s.Tooltip, {
+                    ? (0, i.jsx)(a.Tooltip, {
                           text: null !== (t = null == r ? void 0 : r.name) && void 0 !== t ? t : '',
                           position: 'top',
                           children: (e) =>

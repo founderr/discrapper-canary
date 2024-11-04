@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(399606),
-    s = n(481060),
+    s = n(399606),
+    a = n(481060),
     o = n(271383),
     c = n(594174),
     u = n(777288),
@@ -31,14 +31,14 @@ function v() {
                         width: 16,
                         height: 16
                     }),
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-md/semibold',
                         children: C.intl.string(C.t.kj3tz8)
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(s.KeyCombo, {
+                children: (0, i.jsx)(a.KeyCombo, {
                     shortcut: 'esc',
                     keyClassName: x.keyComboInner,
                     className: x.keyComboContainer
@@ -49,15 +49,15 @@ function v() {
 }
 function _(e) {
     let { userId: t, guildId: n, location: l, className: u, onNavigate: C } = e,
-        _ = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
-        I = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+        _ = (0, s.e7)([c.default], () => c.default.getUser(t), [t]),
+        I = (0, s.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
     return null == _ || null == I
         ? null
         : (0, i.jsxs)('div', {
               className: r()(x.container, u),
               children: [
                   (0, i.jsx)(v, {}),
-                  (0, i.jsxs)(s.Scroller, {
+                  (0, i.jsxs)(a.Scroller, {
                       className: x.innerContainer,
                       children: [
                           (0, i.jsx)(f.Z, { member: I }),

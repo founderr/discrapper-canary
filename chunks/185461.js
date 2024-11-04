@@ -57,8 +57,8 @@ let c = _.n,
                 a = r.on('afterSendEvent', (r, o) => (r.event_id !== _ ? void 0 : (clearTimeout(n), a(), o && 'number' == typeof o.statusCode && o.statusCode >= 200 && o.statusCode < 300 && e(_), o && 'number' == typeof o.statusCode && 0 === o.statusCode) ? t('Unable to send Feedback. This is because of network issues, or because you are using an ad-blocker.') : t('Unable to send Feedback. This could be because of network issues, or because you are using an ad-blocker')));
         });
     },
-    P = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function U(e, t) {
+    U = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+function P(e, t) {
     return {
         ...e,
         ...t,
@@ -156,8 +156,8 @@ let v =
         tags: Y,
         colorScheme: x = 'system',
         themeLight: K = {},
-        themeDark: k = {},
-        addScreenshotButtonLabel: V = D,
+        themeDark: V = {},
+        addScreenshotButtonLabel: k = D,
         cancelButtonLabel: F = I,
         confirmButtonLabel: X = N,
         emailLabel: j = d,
@@ -191,7 +191,7 @@ let v =
                 useSentryUser: H,
                 tags: Y,
                 colorScheme: x,
-                themeDark: k,
+                themeDark: V,
                 themeLight: K,
                 triggerLabel: ea,
                 triggerAriaLabel: e_,
@@ -207,7 +207,7 @@ let v =
                 namePlaceholder: ee,
                 successMessageText: en,
                 isRequiredLabel: J,
-                addScreenshotButtonLabel: V,
+                addScreenshotButtonLabel: k,
                 removeScreenshotButtonLabel: et,
                 onFormClose: ei,
                 onFormOpen: eo,
@@ -286,9 +286,9 @@ ${
             eA = async (e) => {
                 let n = e.enableScreenshot && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(l.userAgent) || (/Macintosh/i.test(l.userAgent) && l.maxTouchPoints && l.maxTouchPoints > 1)) && !!isSecureContext && !0,
                     [a, _] = await Promise.all([eN('FeedbackModal', t, 'feedbackModalIntegration'), n ? eN('FeedbackScreenshot', r, 'feedbackScreenshotIntegration') : void 0]);
-                if (!a) throw (P && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
+                if (!a) throw (U && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
                 return (
-                    n && !_ && P && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
+                    n && !_ && U && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
                     a.createDialog({
                         options: e,
                         screenshotIntegration: n ? _ : void 0,
@@ -298,9 +298,9 @@ ${
                 );
             },
             eT = (e, t = {}) => {
-                let r = U(el, t),
+                let r = P(el, t),
                     n = 'string' == typeof e ? s.querySelector(e) : 'function' == typeof e.addEventListener ? e : null;
-                if (!n) throw (P && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
+                if (!n) throw (U && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let a = null,
                     _ = async () => {
                         !a &&
@@ -323,7 +323,7 @@ ${
                 return eI.push(o), o;
             },
             ed = (e = {}) => {
-                let t = U(el, e),
+                let t = P(el, e),
                     r = eR(t),
                     n = (function ({ triggerLabel: e, triggerAriaLabel: t, shadow: r }) {
                         let n = s.createElement('button');
@@ -464,10 +464,10 @@ ${
             },
             attachTo: eT,
             createWidget(e = {}) {
-                let t = ed(U(el, e));
+                let t = ed(P(el, e));
                 return t.appendToDom(), t;
             },
-            createForm: async (e = {}) => eA(U(el, e)),
+            createForm: async (e = {}) => eA(P(el, e)),
             remove() {
                 eu && (eu.parentElement && eu.parentElement.remove(), (eu = null)), eI.forEach((e) => e()), (eI = []);
             }
@@ -483,8 +483,8 @@ var B,
     Y,
     x,
     K,
-    k,
-    V = {},
+    V,
+    k = {},
     F = [],
     X = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,
     j = Array.isArray;
@@ -544,7 +544,7 @@ function er() {
         r,
         n = [],
         a = [];
-    for (Y.sort(k); (e = Y.shift()); )
+    for (Y.sort(V); (e = Y.shift()); )
         e.__d &&
             ((r = Y.length),
             (t =
@@ -575,7 +575,7 @@ function er() {
                             n
                         );
                 })(e, n, a) || t),
-            0 === r || Y.length > r ? (ec(n, t, a), (a.length = n.length = 0), (t = void 0), Y.sort(k)) : t && W.__c && W.__c(t, F));
+            0 === r || Y.length > r ? (ec(n, t, a), (a.length = n.length = 0), (t = void 0), Y.sort(V)) : t && W.__c && W.__c(t, F));
     t && ec(n, t, a), (er.__r = 0);
 }
 function en(e, t, r, n, a, _, o, i, E, c, s) {
@@ -637,7 +637,7 @@ function en(e, t, r, n, a, _, o, i, E, c, s) {
         null != (I = r.__k[l]) &&
             'boolean' != typeof I &&
             'function' != typeof I &&
-            ((u = -1 === I.__i ? V : A[I.__i] || V),
+            ((u = -1 === I.__i ? k : A[I.__i] || k),
             (I.__i = l),
             eE(e, I, u, a, _, o, i, E, c, s),
             (R = I.__e),
@@ -778,7 +778,7 @@ function eE(e, t, r, n, a, _, o, i, E, c) {
                   }
                   if (null === d) A === T || (i && e.data === T) || (e.data = T);
                   else {
-                      if (((_ = _ && B.call(e.childNodes)), (A = r.props || V), !i && null != _)) for (A = {}, c = 0; c < e.attributes.length; c++) A[(I = e.attributes[c]).name] = I.value;
+                      if (((_ = _ && B.call(e.childNodes)), (A = r.props || k), !i && null != _)) for (A = {}, c = 0; c < e.attributes.length; c++) A[(I = e.attributes[c]).name] = I.value;
                       for (c in A) (I = A[c]), 'children' == c || ('dangerouslySetInnerHTML' == c ? (l = I) : 'key' === c || c in T || e_(e, c, null, I, a));
                       for (c in T) (I = T[c]), 'children' == c ? (u = I) : 'dangerouslySetInnerHTML' == c ? (s = I) : 'value' == c ? (R = I) : 'checked' == c ? (N = I) : 'key' === c || (i && 'function' != typeof I) || A[c] === I || e_(e, c, I, A[c], a);
                       if (s) i || (l && (s.__html === l.__html || s.__html === e.innerHTML)) || (e.innerHTML = s.__html), (t.__k = []);
@@ -852,7 +852,7 @@ function eu(e, t, r) {
     (Z.prototype.render = Q),
     (Y = []),
     (K = 'function' == typeof Promise ? Promise.prototype.then.bind(Promise.resolve()) : setTimeout),
-    (k = function (e, t) {
+    (V = function (e, t) {
         return e.__v.__b - t.__v.__b;
     }),
     (er.__r = 0);
@@ -880,10 +880,10 @@ function eg(e, t) {
         });
     return e >= r.__.length && r.__.push({ __V: ef }), r.__[e];
 }
-function eP(e) {
-    return (eT = 1), eU(eW, e);
+function eU(e) {
+    return (eT = 1), eP(eW, e);
 }
-function eU(e, t, r) {
+function eP(e, t, r) {
     var n = eg(eI++, 2);
     if (
         ((n.t = e),
@@ -1074,7 +1074,7 @@ let eH = {
         },
         useErrorBoundary: function (e) {
             var t = eg(eI++, 10),
-                r = eP();
+                r = eU();
             return (
                 (t.__ = e),
                 eR.componentDidCatch ||
@@ -1119,7 +1119,7 @@ let eH = {
         },
         useLayoutEffect: eM,
         useMemo: eG,
-        useReducer: eU,
+        useReducer: eP,
         useRef: function (e) {
             return (
                 (eT = 5),
@@ -1128,7 +1128,7 @@ let eH = {
                 }, [])
             );
         },
-        useState: eP
+        useState: eU
     },
     eY = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
 function ex({ options: e }) {
@@ -1180,18 +1180,18 @@ function ex({ options: e }) {
     );
 }
 let eK = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/Form.tsx';
-function ek(e, t) {
+function eV(e, t) {
     let r = e.get(t);
     return 'string' == typeof r ? r.trim() : '';
 }
-function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
+function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
     let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: N, emailPlaceholder: A, isEmailRequired: T, isNameRequired: d, messageLabel: f, messagePlaceholder: L, nameLabel: O, namePlaceholder: p, submitButtonLabel: h, isRequiredLabel: S } = e,
-        [D, C] = eP(null),
-        [g, U] = eP(!1),
+        [D, C] = eU(null),
+        [g, P] = eU(!1),
         M = s && s.input,
-        [G, m] = eP(null),
+        [G, m] = eU(null),
         y = em((e) => {
-            m(e), U(!1);
+            m(e), P(!1);
         }, []),
         b = em(
             (e) => {
@@ -1220,9 +1220,9 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                         let t = new FormData(e.target),
                             r = await (s && g ? s.value() : void 0),
                             n = {
-                                name: ek(t, 'name'),
-                                email: ek(t, 'email'),
-                                message: ek(t, 'message'),
+                                name: eV(t, 'name'),
+                                email: eV(t, 'email'),
+                                message: eV(t, 'message'),
                                 attachments: r ? [r] : void 0
                             };
                         if (!b(n)) return;
@@ -1239,7 +1239,7 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             ),
                                 _(n);
                         } catch (e) {
-                            P && i.kg.error(e), C(e), o(e);
+                            U && i.kg.error(e), C(e), o(e);
                         }
                     } catch (e) {}
                 },
@@ -1446,7 +1446,7 @@ function eV({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      m(null), U((e) => !e);
+                                      m(null), P((e) => !e);
                                   },
                                   __self: this,
                                   __source: {
@@ -1575,7 +1575,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
             }),
             []
         ),
-        [_, o] = eP(null),
+        [_, o] = eU(null),
         i = em(() => {
             _ && (clearTimeout(_), o(null)), t();
         }, [_]),
@@ -1676,7 +1676,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
                                   lineNumber: 66
                               }
                           }),
-                          J(eV, {
+                          J(ek, {
                               ...r,
                               onSubmitSuccess: E,
                               __self: this,
@@ -2044,7 +2044,7 @@ ${eQ}
                         (s = ((c = false), (E && E.__k) || a.__k)),
                         (l = []),
                         (R = []),
-                        eE(a, (n = ((!c && E) || a).__k = J(Q, null, [n])), s || V, V, void 0 !== a.ownerSVGElement, !c && E ? [E] : s ? null : a.firstChild ? B.call(a.childNodes) : null, l, !c && E ? E : s ? s.__e : a.firstChild, c, R),
+                        eE(a, (n = ((!c && E) || a).__k = J(Q, null, [n])), s || k, k, void 0 !== a.ownerSVGElement, !c && E ? [E] : s ? null : a.firstChild ? B.call(a.childNodes) : null, l, !c && E ? E : s ? s.__e : a.firstChild, c, R),
                         (n.__d = void 0),
                         ec(l, n, R);
                 };

@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(275726),
     l = n(135938),
     r = n(55935),
-    a = n(709054),
-    s = n(554838),
+    s = n(709054),
+    a = n(554838),
     o = n(493892),
     c = n(356647),
     u = n(981631);
@@ -20,17 +20,17 @@ function d(e) {
         { channel: h, messages: m, oldestUnreadMessageId: p, treatSpam: f, summaries: g, selectedSummary: C } = e,
         x = [],
         v = !1,
-        _ = null != p ? a.default.extractTimestamp(p) : null,
+        _ = null != p ? s.default.extractTimestamp(p) : null,
         I = null;
     return (
         m.forEach((e) => {
             var l, E, b, S, Z, T, N, j;
             if (null != g && g.length > 0) {
-                let t = a.default.extractTimestamp(e.id);
+                let t = s.default.extractTimestamp(e.id);
                 for (let e = 0; (l = e < (null == g ? void 0 : g.length)), l; e++) {
                     if (null == g[e]) continue;
-                    let n = a.default.extractTimestamp(g[e].startId),
-                        i = a.default.extractTimestamp(g[e].endId);
+                    let n = s.default.extractTimestamp(g[e].startId),
+                        i = s.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
                         if (I === g[e].id) break;
                         x.push({
@@ -100,7 +100,7 @@ function d(e) {
                         (_ = null);
             } else
                 null != _ &&
-                    a.default.extractTimestamp(e.id) > _ &&
+                    s.default.extractTimestamp(e.id) > _ &&
                     (!e.isFirstMessageInForumPost(h) &&
                         x.push({
                             type: u.ys_.DIVIDER,
@@ -115,7 +115,7 @@ function d(e) {
                     groupId: L.id
                 });
             let k = (null == y ? void 0 : y.type) === u.ys_.MESSAGE ? d : y;
-            (0, s.J)(h, k, e) && (n = e.id);
+            (0, a.J)(h, k, e) && (n = e.id);
             let O = {
                 type: e.type === u.uaV.THREAD_STARTER_MESSAGE ? u.ys_.THREAD_STARTER_MESSAGE : u.ys_.MESSAGE,
                 content: e,

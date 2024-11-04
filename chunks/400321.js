@@ -1,16 +1,16 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 }),
     n(653041);
 var i = n(88315),
     l = n(199766),
     r = n(813900);
-function a(e) {
-    let { line: t, context: n, canvasWidth: a, canvasHeight: s, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: h } = e;
+function s(e) {
+    let { line: t, context: n, canvasWidth: s, canvasHeight: a, fallbackColor: o, outlineColorDark: c, outlineColorLight: u, linesDrawnAt: d, deadDrawables: h } = e;
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
-    let m = t.points.map((e) => (0, i.RR)(e, a, s)),
+    let m = t.points.map((e) => (0, i.RR)(e, s, a)),
         p = d.current[t.id],
         f = (e) => p + e.deltaTime,
         g = (e) => f(e) + 1500 >= Date.now(),

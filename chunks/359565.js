@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(481060),
+    s = n.n(r),
+    a = n(481060),
     o = n(367907),
     c = n(626135),
     u = n(346479),
@@ -30,19 +30,19 @@ function f(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: a()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: s()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(a.Text, {
                     className: p.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: t.isForumPost() ? m.intl.string(m.t['833FDg']) : m.intl.string(m.t.rEeodH)
                 }),
                 r
-                    ? (0, i.jsx)(s.Button, {
-                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
+                    ? (0, i.jsx)(a.Button, {
+                          size: n ? a.Button.Sizes.SMALL : a.Button.Sizes.TINY,
                           className: p.chatHeaderBarButton,
-                          color: s.Button.Colors.PRIMARY,
+                          color: a.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),
@@ -71,19 +71,19 @@ function g(e) {
             });
         }, [t]),
         (0, i.jsxs)('div', {
-            className: a()(p.chatHeaderBar, { [p.narrow]: n }),
+            className: s()(p.chatHeaderBar, { [p.narrow]: n }),
             children: [
-                (0, i.jsx)(s.Text, {
+                (0, i.jsx)(a.Text, {
                     className: p.chatHeaderBarText,
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: t.isForumPost() ? m.intl.string(m.t.E7oO8v) : m.intl.string(m.t['V/JF2N'])
                 }),
                 r
-                    ? (0, i.jsx)(s.Button, {
-                          size: n ? s.Button.Sizes.SMALL : s.Button.Sizes.TINY,
+                    ? (0, i.jsx)(a.Button, {
+                          size: n ? a.Button.Sizes.SMALL : a.Button.Sizes.TINY,
                           className: p.chatHeaderBarButton,
-                          color: s.Button.Colors.PRIMARY,
+                          color: a.Button.Colors.PRIMARY,
                           onClick: () => {
                               c.default.track(h.rMx.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, o.hH)(t.getGuildId()),

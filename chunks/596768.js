@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(257785),
     v = n(484036),
     j = n(681619),
-    C = n(621060),
-    _ = n(388032),
+    _ = n(621060),
+    C = n(388032),
     T = n(574001),
     S = n(219299);
 let N = [
@@ -131,9 +131,9 @@ function I() {
         o = a.useMemo(() => l.filter((t) => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [s, d] = a.useState(void 0),
         x = o.find((e) => e.key === s),
-        { TabBar: f, renderSelectedTab: b } = (0, C.Z)({ tabs: y }, []),
+        { TabBar: f, renderSelectedTab: b } = (0, _.Z)({ tabs: y }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
-        w = a.useCallback((e) => {
+        k = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -151,7 +151,7 @@ function I() {
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
                             checked: I,
-                            onChange: w,
+                            onChange: k,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),
@@ -161,11 +161,11 @@ function I() {
                         size: h.Button.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: _.intl.string(_.t.VkKicX),
+                            title: C.intl.string(C.t.VkKicX),
                             children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': _.intl.string(_.t.VkKicX)
+                                'aria-label': C.intl.string(C.t.VkKicX)
                             })
                         })
                     }),

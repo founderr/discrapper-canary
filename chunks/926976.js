@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(31336),
     v = n(257785),
     j = n(484036),
-    C = n(681619),
-    _ = n(621060),
+    _ = n(681619),
+    C = n(621060),
     T = n(388032),
     S = n(574001),
     N = n(219299);
@@ -52,7 +52,7 @@ function I(e) {
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function w(e) {
+function k(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -67,7 +67,7 @@ function w(e) {
         ]
     });
 }
-let k = [
+let w = [
         {
             id: 'details',
             name: 'Details',
@@ -124,7 +124,7 @@ let k = [
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    w,
+                                    k,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -214,9 +214,9 @@ function Z() {
     a.useEffect(() => {
         p(t, l);
     }, [t, p, l]);
-    let [I, w] = a.useState(void 0),
+    let [I, k] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: k }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, C.Z)({ tabs: w }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(N.panel, S.panel),
@@ -269,11 +269,11 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(_.Z, {
                 columns: y,
                 data: v,
                 selectedRowKey: I,
-                onClickRow: (e) => w(e.key)
+                onClickRow: (e) => k(e.key)
             }),
             null != Z &&
                 (0, r.jsxs)(j.Z, {
@@ -284,7 +284,7 @@ function Z() {
                         (0, r.jsx)(R, {}),
                         O({
                             loggedEvent: Z,
-                            onClose: () => w(void 0)
+                            onClose: () => k(void 0)
                         })
                     ]
                 })

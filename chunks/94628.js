@@ -7,13 +7,13 @@ var a = n(200651),
     r = n(192379),
     o = n(481060),
     i = n(69580),
-    s = n(787025),
-    l = n(944844);
+    l = n(787025),
+    s = n(944844);
 function c(t) {
     let { data: e, onDenied: n, onError: c, onSuccess: u } = t,
-        d = (0, l.t)(n, c, u),
+        d = (0, s.t)(n, c, u),
         f = r.useCallback((t) => d(e, t), [e, d]);
-    return (0, a.jsx)(s.G, {
+    return (0, a.jsx)(l.G, {
         removeChildWrapper: !0,
         children: (0, a.jsx)(i.OAuth2AuthorizeModal, {
             transitionState: o.ModalTransitionState.ENTERED,

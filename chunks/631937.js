@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(661111),
-    a = n(706454),
-    s = n(306680),
+    s = n(706454),
+    a = n(306680),
     o = n(626135),
     c = n(802098),
     u = n(193701),
@@ -15,11 +15,11 @@ var i = n(192379),
     h = n(981631);
 function m(e) {
     let t = (0, u.Z)(e),
-        n = (0, l.e7)([a.default], () => a.default.locale),
+        n = (0, l.e7)([s.default], () => s.default.locale),
         m = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
         p = (0, d.Z)(e),
         f = i.useRef(p ? Date.now() : null),
-        g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]);
+        g = (0, l.e7)([a.ZP], () => a.ZP.getUnreadCount(e), [e]);
     i.useEffect(() => {
         f.current = Date.now();
     }, [p]),

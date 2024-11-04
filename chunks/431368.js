@@ -8,14 +8,14 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(740492),
-    s = n(984014),
+    s = n(740492),
+    a = n(984014),
     o = n(295510),
     c = n(394059),
     u = n(388032);
 function d(e, t) {
-    let [n, d, h] = (0, s.Z)(e, t),
-        m = (0, l.e7)([a.ZP], () => a.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+    let [n, d, h] = (0, a.Z)(e, t),
+        m = (0, l.e7)([s.ZP], () => s.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
         ? (0, i.jsx)(r.MenuCheckboxItem, {
               id: 'self-stream-hide',

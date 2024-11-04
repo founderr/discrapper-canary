@@ -2,8 +2,8 @@ n(653041), n(47120);
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(633302),
     u = n(594174),
@@ -25,7 +25,7 @@ function _(e) {
         (i.src = n), (g[e] = i);
     }
 }
-class I extends (i = s.ZP.Store) {
+class I extends (i = a.ZP.Store) {
     get visibleOverlayCanvas() {
         return x;
     }
@@ -42,15 +42,15 @@ class I extends (i = s.ZP.Store) {
         return v;
     }
 }
-(a = 'SharedCanvasStore'),
+(s = 'SharedCanvasStore'),
     (r = 'displayName') in (l = I)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a);
+        : (l[r] = s);
 let E = new I(o.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: i, streamerId: l } = e,
@@ -79,20 +79,20 @@ let E = new I(o.Z, {
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, i;
-        let { emojiHose: l, streamerId: r, userId: a } = e,
-            s = {
+        let { emojiHose: l, streamerId: r, userId: s } = e,
+            a = {
                 ...l,
                 type: h.W.EMOJI_HOSE
             };
-        if (null == f[r]) f[r] = [s];
+        if (null == f[r]) f[r] = [a];
         else {
             let e = f[r].findIndex((e) => e.id === l.id);
             e >= 0
                 ? (f[r][e] = {
                       ...f[r][e],
-                      ...s
+                      ...a
                   })
-                : f[r].push(s);
+                : f[r].push(a);
         }
         let o = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : '';
         if (null == C[o]) {
@@ -107,7 +107,7 @@ let E = new I(o.Z, {
                     p.qh
                 ));
         }
-        _(a);
+        _(s);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;

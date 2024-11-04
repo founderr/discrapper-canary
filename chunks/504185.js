@@ -1,14 +1,14 @@
 n.d(t, {
     Z: function () {
-        return ea;
+        return es;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
+    s = n.n(r),
+    a = n(392711),
     o = n(442837),
     c = n(433517),
     u = n(481060),
@@ -66,7 +66,7 @@ let $ = 'HasBeenInStageChannel',
         _.hY(q.KJ3.CHANNEL_CALL_POPOUT, e);
     };
 function ei(e) {
-    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: a, popoutWindowAlwaysOnTop: s, selectedParticipant: c } = e,
+    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: s, popoutWindowAlwaysOnTop: a, selectedParticipant: c } = e,
         u = t.getGuildId(),
         d = (0, o.e7)([R.Z], () => R.Z.getMostRecentSelectedTextChannelId(u), [u]),
         h = A.default.getId(),
@@ -74,13 +74,13 @@ function ei(e) {
         p = null != c && c.type !== X.fO.ACTIVITY && c.user.id !== h,
         f = l.useMemo(() => {
             var e;
-            return null !== (e = null == a ? void 0 : a.window) && void 0 !== e ? e : window;
-        }, [a]),
+            return null !== (e = null == s ? void 0 : s.window) && void 0 !== e ? e : window;
+        }, [s]),
         x = (0, Y.Z)({
             channel: t,
             appContext: n,
             popoutOpen: r,
-            popoutWindow: a,
+            popoutWindow: s,
             currentWindow: f
         }),
         v = n === q.IlC.POPOUT && L.isPlatformEmbedded && k.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS);
@@ -97,7 +97,7 @@ function ei(e) {
             v
                 ? (0, i.jsx)(N.Z, {
                       className: Q.rightTrayIcon,
-                      popoutWindowAlwaysOnTop: s,
+                      popoutWindowAlwaysOnTop: a,
                       onToggleStayOnTop: en
                   })
                 : null,
@@ -118,9 +118,9 @@ function el(e) {
         n = (0, m.bp)(),
         l = (0, o.e7)([M.Z], () => M.Z.can(q.Plq.CREATE_INSTANT_INVITE, t)),
         r = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id)),
-        a = (0, o.e7)([U.Z], () => U.Z.getStageInstanceByChannel(t.id)),
-        s = l || (null == a ? void 0 : a.invite_code) != null;
-    return null != r && s
+        s = (0, o.e7)([U.Z], () => U.Z.getStageInstanceByChannel(t.id)),
+        a = l || (null == s ? void 0 : s.invite_code) != null;
+    return null != r && a
         ? (0, i.jsx)(b.Z, {
               channel: t,
               appContext: n,
@@ -156,7 +156,7 @@ function er(e) {
                     channel: n,
                     onScroll: (e) => {
                         let { scrollTop: t } = e.target;
-                        (0, s.debounce)(() => T(t), 1000, { leading: !0 })();
+                        (0, a.debounce)(() => T(t), 1000, { leading: !0 })();
                     }
                 })
               : (0, i.jsx)(F.Z, {
@@ -201,7 +201,7 @@ function er(e) {
                     ? null
                     : (0, i.jsx)(x.ZP, {
                           children: (0, i.jsx)(S.Z, {
-                              className: a()(Q.chatToasts, { [Q.rtsSidebarOpen]: c }),
+                              className: s()(Q.chatToasts, { [Q.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
                       }),
@@ -215,12 +215,12 @@ function er(e) {
         })
     );
 }
-function ea(e) {
+function es(e) {
     let { channel: t } = e,
-        [r, s] = l.useState(!1),
+        [r, a] = l.useState(!1),
         d = l.useCallback(() => {
-            s(!r);
-        }, [r, s]),
+            a(!r);
+        }, [r, a]),
         { popoutWindow: C, popoutWindowAlwaysOnTop: _ } = (0, o.cj)([I.Z], () => ({
             popoutWindow: I.Z.getWindow(q.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: I.Z.getIsAlwaysOnTop(q.KJ3.CHANNEL_CALL_POPOUT)
@@ -251,7 +251,7 @@ function ea(e) {
                             theme: q.BRd.DARK,
                             children: (e) =>
                                 (0, i.jsx)('div', {
-                                    className: a()(Q.callContainer, e, {
+                                    className: s()(Q.callContainer, e, {
                                         [Q.sidebarVisible]: r,
                                         [Q.sidebarOrChatVisible]: r || Z
                                     }),

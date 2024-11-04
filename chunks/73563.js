@@ -10,13 +10,13 @@ var i,
     l,
     r = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
+var s = n(120356),
+    a = n.n(s),
     o = n(600164),
     c = n(507675),
     u = n(304002);
 function d(e) {
-    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: l, renderBottomRight: a, renderCenter: s } = e;
+    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: l, renderBottomRight: s, renderCenter: a } = e;
     return (0, r.jsxs)('div', {
         className: u.videoControls,
         children: [
@@ -26,7 +26,7 @@ function d(e) {
                 className: u.topControls,
                 children: null == n ? void 0 : n()
             }),
-            null == s ? void 0 : s(),
+            null == a ? void 0 : a(),
             (0, r.jsxs)('div', {
                 className: u.bottomControls,
                 children: [
@@ -47,7 +47,7 @@ function d(e) {
                         shrink: 1,
                         justify: o.Z.Justify.END,
                         align: o.Z.Align.CENTER,
-                        children: null == a ? void 0 : a()
+                        children: null == s ? void 0 : s()
                     })
                 ]
             })
@@ -55,9 +55,9 @@ function d(e) {
     });
 }
 function h(e) {
-    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: l, idle: a, children: o, renderChatButton: h, renderChatToasts: m, renderVoiceChannelEffects: p, style: f, ...g } = e;
+    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: l, idle: s, children: o, renderChatButton: h, renderChatToasts: m, renderVoiceChannelEffects: p, style: f, ...g } = e;
     return (0, r.jsxs)('div', {
-        className: s()(u.root, { [u.idle]: a }),
+        className: a()(u.root, { [u.idle]: s }),
         style: f,
         onMouseMove: i,
         onMouseDown: i,

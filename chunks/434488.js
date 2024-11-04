@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(704215),
+    s = n.n(r),
+    a = n(704215),
     o = n(692547),
     c = n(481060),
     u = n(2052),
@@ -26,24 +26,24 @@ var i = n(200651),
     b = n(896659),
     S = n(334732);
 function Z(e) {
-    let { channel: t, guild: n, width: l, inPopout: r, handleClose: a, userParticipantCount: s } = e;
+    let { channel: t, guild: n, width: l, inPopout: r, handleClose: s, userParticipantCount: a } = e;
     return l < 250
         ? (0, i.jsx)(T, {
               channel: t,
               guild: n,
               width: l,
               inPopout: r,
-              handleClose: a,
-              userParticipantCount: s
+              handleClose: s,
+              userParticipantCount: a
           })
-        : s > 1
+        : a > 1
           ? (0, i.jsx)(j, {
                 channel: t,
                 guild: n,
                 width: l,
                 inPopout: r,
-                handleClose: a,
-                userParticipantCount: s
+                handleClose: s,
+                userParticipantCount: a
             })
           : (0, i.jsx)(N, {
                 channel: t,
@@ -55,12 +55,12 @@ function Z(e) {
 function T(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
         { analyticsLocations: r } = (0, f.ZP)(p.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
-        s = (0, u.O)(),
+        a = (0, u.O)(),
         d = () => {
             (0, m.Z)({
                 channel: t,
                 guildId: t.guild_id,
-                locationObject: s.location,
+                locationObject: a.location,
                 openInPopout: n,
                 analyticsLocations: r,
                 opensAppLauncherModal: !0
@@ -98,7 +98,7 @@ function T(e) {
                     children: (e) =>
                         (0, i.jsx)(c.Clickable, {
                             onClick: l,
-                            className: a()(e, b.shelfButtonCloseButton),
+                            className: s()(e, b.shelfButtonCloseButton),
                             children: (0, i.jsx)(c.CircleXIcon, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -112,7 +112,7 @@ function T(e) {
     });
 }
 function N(e) {
-    let { channel: t, guild: r, inPopout: a, width: s } = e;
+    let { channel: t, guild: r, inPopout: s, width: a } = e;
     l.useEffect(() => {
         v.default.track(I.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity invite',
@@ -126,7 +126,7 @@ function N(e) {
         children: (0, i.jsxs)(_.Z, {
             className: b.root,
             children: [
-                s > 400
+                a > 400
                     ? (0, i.jsx)('img', {
                           src: S,
                           className: b.art,
@@ -159,7 +159,7 @@ function N(e) {
                                                 source: I.t4x.ACTIVITY_ENTRY_POINT_TILE
                                             });
                                     },
-                                    { contextKey: a ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT }
+                                    { contextKey: s ? c.POPOUT_MODAL_CONTEXT : c.DEFAULT_MODAL_CONTEXT }
                                 );
                             },
                             children: [
@@ -179,7 +179,7 @@ function N(e) {
                                     channel: t,
                                     guildId: t.guild_id,
                                     locationObject: o.location,
-                                    openInPopout: a,
+                                    openInPopout: s,
                                     analyticsLocations: d,
                                     opensAppLauncherModal: !0
                                 });
@@ -228,7 +228,7 @@ function j(e) {
                       })
                     : null,
                 (0, i.jsx)('div', {
-                    className: a()(b.activitiesContainer, { [b.activitiesContainerSmol]: o <= 300 }),
+                    className: s()(b.activitiesContainer, { [b.activitiesContainerSmol]: o <= 300 }),
                     children: m.map((e) =>
                         (0, i.jsx)(
                             h.Y,
@@ -251,7 +251,7 @@ function j(e) {
                             close_type: 'permanent',
                             n_participants: u
                         }),
-                            (0, C.EW)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, C.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(x.Z, {}),

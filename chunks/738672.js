@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(909820),
+    s = n(481060),
+    a = n(909820),
     o = n(740492),
     c = n(937995),
     u = n(618158);
@@ -27,8 +27,8 @@ function d(e) {
     let { preventIdle: I, allowIdle: E } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null
-        : (0, i.jsx)(s.ZP, {
-              children: (0, i.jsx)(a.ReferencePositionLayer, {
+        : (0, i.jsx)(a.ZP, {
+              children: (0, i.jsx)(s.ReferencePositionLayer, {
                   targetRef: t,
                   position: 'top',
                   align: 'center',

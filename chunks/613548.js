@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(392711),
+    o = n.n(a),
     c = n(848246),
     u = n(442837),
     d = n(481060),
@@ -71,7 +71,7 @@ function W(e) {
                           children: (r) =>
                               (0, i.jsx)(k.Z, {
                                   ...r,
-                                  className: a()(z.speaker, { [z.last]: t === l.length - 1 }),
+                                  className: s()(z.speaker, { [z.last]: t === l.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -84,7 +84,7 @@ function W(e) {
           });
 }
 function Y(e) {
-    let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
+    let { inPopout: t, channel: n, appContext: r, inCall: s, isChatOpen: a, exitFullScreen: o } = e,
         Z = n.id,
         {
             voiceParticipantsHidden: k,
@@ -193,7 +193,7 @@ function Y(e) {
                     'call-members-popout'
                 )
             ),
-        a &&
+        s &&
             ei.push(
                 null != O
                     ? (0, i.jsx)(
@@ -257,7 +257,7 @@ function Y(e) {
                 'more-options-popout'
             )
         ),
-        !s &&
+        !a &&
             (ei.push((0, i.jsx)(x.ZP.Divider, { className: z.divider }, 'divider')),
             ei.push(
                 (0, i.jsx)(

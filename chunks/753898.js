@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(607070),
-    s = n(43267),
+    s = n(607070),
+    a = n(43267),
     o = n(933557),
     c = n(266076),
     u = n(518950),
@@ -16,7 +16,7 @@ var l = n(442837),
 function h(e) {
     var t;
     let { channel: n, children: h, user: m } = e,
-        p = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+        p = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         f = null !== (t = (0, o.ZP)(n)) && void 0 !== t ? t : '',
         {
             avatarDecorationSrc: g,
@@ -44,7 +44,7 @@ function h(e) {
                     : (0, i.jsx)(r.Avatar, {
                           'aria-label': f,
                           size: r.AvatarSizes.SIZE_80,
-                          src: (0, s.x)(n, 80, e),
+                          src: (0, a.x)(n, 80, e),
                           avatarDecoration: g
                       });
             })(),

@@ -3,9 +3,9 @@ n(192379);
 var l = n(481060),
     r = n(643560);
 t.Z = (e) => {
-    let { entry: t, hideEditButton: n, children: a, onRequestOpen: s, onRequestClose: o } = e;
+    let { entry: t, hideEditButton: n, children: s, onRequestOpen: a, onRequestClose: o } = e;
     return (0, i.jsx)(l.Popout, {
-        onRequestOpen: s,
+        onRequestOpen: a,
         onRequestClose: o,
         animation: l.Popout.Animation.NONE,
         position: 'bottom',
@@ -19,6 +19,6 @@ t.Z = (e) => {
                 hideEditButton: n
             });
         },
-        children: a
+        children: s
     });
 };

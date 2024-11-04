@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(782690),
-    a = n(481060),
-    s = n(570140),
+    s = n(481060),
+    a = n(570140),
     o = n(668781),
     c = n(966390),
     u = n(680287),
@@ -23,7 +23,7 @@ var i = n(200651),
     C = n(981631),
     x = n(388032);
 function v(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, location: a, onThreadCreated: s, useDefaultThreadName: o } = e,
+    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: r, location: s, onThreadCreated: a, useDefaultThreadName: o } = e,
         u = l.useCallback((e, t, n, i) => {
             c.Z.uploadFiles({
                 channelId: e.id,
@@ -38,8 +38,8 @@ function v(e) {
         parentMessageId: n,
         threadSettings: i,
         privateThreadMode: r,
-        location: a,
-        onThreadCreated: s,
+        location: s,
+        onThreadCreated: a,
         useDefaultThreadName: o,
         uploadHandler: u
     });
@@ -66,13 +66,13 @@ function _(e) {
                         null != r &&
                             null != r.attachments &&
                             r.attachments.length > 0 &&
-                            (s.Z.dispatch({
+                            (a.Z.dispatch({
                                 type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
                                 messageId: e,
                                 channelId: t.id,
                                 attachments: r.attachments
                             }),
-                            (0, a.openModalLazy)(async () => {
+                            (0, s.openModalLazy)(async () => {
                                 let { default: l } = await n.e('57539').then(n.bind(n, 924188));
                                 return (n) =>
                                     (0, i.jsx)(l, {

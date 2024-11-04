@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(239091),
-    s = n(129861),
+    s = n(239091),
+    a = n(129861),
     o = n(906732),
     c = n(158776),
     u = n(785717),
@@ -29,7 +29,7 @@ function C(e) {
         className: f.listRow,
         onClick: u,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -47,7 +47,7 @@ function C(e) {
                 isMobile: d,
                 className: f.listAvatar
             }),
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(a.Z, {
                 user: t,
                 className: f.listName,
                 discriminatorClass: f.listDiscriminator
@@ -58,14 +58,14 @@ function C(e) {
 function x(e) {
     let { user: t, onClose: n } = e,
         { mutualFriends: l } = (0, d.Z)(t.id),
-        { analyticsLocations: a } = (0, o.ZP)(),
-        { context: s, trackUserProfileAction: c } = (0, u.KZ)(),
+        { analyticsLocations: s } = (0, o.ZP)(),
+        { context: a, trackUserProfileAction: c } = (0, u.KZ)(),
         g = (e) => {
             n(),
                 (0, h.openUserProfileModal)({
-                    ...s,
+                    ...a,
                     userId: e,
-                    sourceAnalyticsLocations: a,
+                    sourceAnalyticsLocations: s,
                     analyticsLocation: { section: m.jXE.USER_PROFILE_MUTUAL_FRIENDS }
                 });
         };

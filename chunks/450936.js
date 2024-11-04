@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(570140),
-    a = n(911969),
-    s = n(110924),
+    s = n(911969),
+    a = n(110924),
     o = n(213459),
     c = n(404295),
     u = n(812206),
@@ -30,7 +30,7 @@ function C(e) {
             var e;
             return h.Z.isFetchingProfile(null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : g.lds);
         }),
-        I = (0, s.Z)(_),
+        I = (0, a.Z)(_),
         E = (0, l.e7)([u.Z], () => u.Z.getAppIdForBotUserId(null == v ? void 0 : v.id)),
         b = (0, l.e7)([h.Z], () => {
             var e;
@@ -53,7 +53,7 @@ function C(e) {
     let Z = (0, o.v1)(
             C,
             {
-                commandTypes: [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER]
+                commandTypes: [s.yU.PRIMARY_ENTRY_POINT, s.yU.CHAT, s.yU.MESSAGE, s.yU.USER]
             },
             {
                 applicationId: S,
@@ -61,7 +61,7 @@ function C(e) {
                 allowApplicationState: !0
             }
         ),
-        T = Z.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
+        T = Z.commands.filter((e) => e.type === s.yU.PRIMARY_ENTRY_POINT && e.applicationId === S)[0],
         N = Z.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         j = Z.loading,
         A =

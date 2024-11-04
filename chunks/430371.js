@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(100621),
+    s = n.n(r),
+    a = n(100621),
     o = n(481060),
     c = n(110924),
     u = n(988980),
@@ -47,13 +47,13 @@ function T(e) {
         ei = !$ && (!en || X),
         el = (0, f.Z)(ei, 100),
         er = (null !== (t = (0, c.Z)(R.id)) && void 0 !== t ? t : R.id) !== R.id,
-        ea = 0;
-    (X || ee) && (ea += 72), X && !ee && (ei ? (ea += 48) : (ea += 8)), ee && (ea += 0.5 * Z + 8);
-    let es = l.useMemo(() => (X && J ? w / (D - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : S), [Q, V, X, w, D, ea, J]),
-        eo = D - 2 * ea,
-        ec = X && J ? w : eo * es,
-        eu = Math.floor(Math.min(w, ec) / es),
-        ed = D > w / es + 72 + Z + 8;
+        es = 0;
+    (X || ee) && (es += 72), X && !ee && (ei ? (es += 48) : (es += 8)), ee && (es += 0.5 * Z + 8);
+    let ea = l.useMemo(() => (X && J ? w / (D - 2 * es) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : S), [Q, V, X, w, D, es, J]),
+        eo = D - 2 * es,
+        ec = X && J ? w : eo * ea,
+        eu = Math.floor(Math.min(w, ec) / ea),
+        ed = D > w / ea + 72 + Z + 8;
     (n = ee || X ? (ee ? -16 : -8) : 40 + Math.max(0, 72 - (D - eu) / 2)),
         l.useEffect(() => {
             let e = setTimeout(() => {
@@ -68,7 +68,7 @@ function T(e) {
                 value: ee ? 1 : 0,
                 delay: ed || !ee ? 0 : 100,
                 config: {
-                    ...s.config.stiff,
+                    ...a.config.stiff,
                     clamp: !0
                 },
                 onStart: () => q(!0),
@@ -83,7 +83,7 @@ function T(e) {
             {
                 value: ee ? 1 : 0,
                 config: {
-                    ...s.config.stiff,
+                    ...a.config.stiff,
                     clamp: !0
                 }
             },
@@ -93,7 +93,7 @@ function T(e) {
             {
                 value: ec,
                 config: {
-                    ...s.config.stiff,
+                    ...a.config.stiff,
                     clamp: !0
                 }
             },
@@ -103,7 +103,7 @@ function T(e) {
             {
                 value: n,
                 config: {
-                    ...s.config.stiff,
+                    ...a.config.stiff,
                     clamp: !0
                 }
             },
@@ -114,7 +114,7 @@ function T(e) {
             {
                 keys: (e) => (null == e ? void 0 : e.id),
                 config: {
-                    ...s.config.stiff,
+                    ...a.config.stiff,
                     clamp: !0
                 },
                 initial: null,
@@ -130,27 +130,27 @@ function T(e) {
         ex = ee || O ? [] : (0, x.n3)(j, R, G),
         { visibleParticipants: ev, participantTileWidth: e_ } = (0, v.ZB)(w, A);
     return (0, i.jsxs)('div', {
-        className: a()(b.root, E.flexCenter, k),
+        className: s()(b.root, E.flexCenter, k),
         children: [
             (0, i.jsxs)('div', {
                 className: b.tileWrapper,
                 style: { opacity: Q && W ? 0 : 1 },
                 children: [
-                    (0, i.jsxs)(s.animated.div, {
+                    (0, i.jsxs)(a.animated.div, {
                         className: b.videoFrame,
                         style: { top: em.value.to((e) => (-e * Z) / 2) },
                         children: [
-                            (0, i.jsx)(s.animated.div, {
+                            (0, i.jsx)(a.animated.div, {
                                 style: { width: ep.value },
                                 className: b.videoWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: a()(E.videoSizer),
-                                    style: { aspectRatio: es },
+                                    className: s()(E.videoSizer),
+                                    style: { aspectRatio: ea },
                                     children: eg((e, t, n) => {
                                         let { key: l } = n;
                                         return null != t
                                             ? (0, i.jsx)(
-                                                  s.animated.div,
+                                                  a.animated.div,
                                                   {
                                                       className: E.videoWrapperAnimated,
                                                       style: e,
@@ -178,8 +178,8 @@ function T(e) {
                                 })
                             }),
                             ei
-                                ? (0, i.jsx)(s.animated.div, {
-                                      className: a()(b.actionRow, { [b.idle]: B }),
+                                ? (0, i.jsx)(a.animated.div, {
+                                      className: s()(b.actionRow, { [b.idle]: B }),
                                       style: { bottom: ef.value },
                                       children: (0, i.jsx)(d.Z, {
                                           channelId: M.id,
@@ -190,7 +190,7 @@ function T(e) {
                                 : null
                         ]
                     }),
-                    (0, i.jsx)(s.animated.div, {
+                    (0, i.jsx)(a.animated.div, {
                         className: b.participantsWrapperAnimated,
                         style: {
                             translateY: eh.value.to((e) => (e * Z) / 2),

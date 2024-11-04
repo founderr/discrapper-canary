@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(570140),
     c = n(239091),
     u = n(561472),
@@ -31,11 +31,11 @@ var i = n(200651),
     j = n(972270);
 function A(e) {
     let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
-        y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
-        P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
+        y = (0, a.e7)([_.Z], () => _.Z.getChannel(t)),
+        P = (0, a.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, p.ZP)(y);
     (function (e) {
-        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, a.e7)([b.Z], () => null != e && !s().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
         l.useEffect(() => {
             t &&
                 null != e &&

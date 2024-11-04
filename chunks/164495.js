@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     yD: function () {
-        return b;
+        return _;
     }
 });
 var r = n(200651);
@@ -102,7 +102,7 @@ let x = (e) => {
         else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };
-function b(e) {
+function _(e) {
     return (0, r.jsxs)('div', {
         className: C.ctaButtons,
         children: [

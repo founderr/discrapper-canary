@@ -8,8 +8,8 @@ var a = n(200651),
     r = n(192379),
     o = n(120356),
     i = n.n(o),
-    s = n(593473),
-    l = n(512969),
+    l = n(593473),
+    s = n(512969),
     c = n(481060),
     u = n(489863),
     d = n(511540),
@@ -19,14 +19,14 @@ var a = n(200651),
 function x(t) {
     let { onUserCodeAccepted: e, usePrefilledCode: n } = t,
         [o, x] = r.useState(() => {
-            let { user_code: t } = s.parse(window.location.search);
+            let { user_code: t } = l.parse(window.location.search);
             return n && null != t ? t : '';
         }),
-        C = (0, l.TH)(),
+        C = (0, s.TH)(),
         _ = r.useCallback(() => {
             (0, u.c$)(C);
         }, [C]),
-        { manualSubmit: m, error: v, submitting: I } = (0, d.c)(o, e, _);
+        { manualSubmit: m, error: I, submitting: v } = (0, d.c)(o, e, _);
     return (0, a.jsxs)('div', {
         className: h.content,
         children: [
@@ -48,12 +48,12 @@ function x(t) {
                         placeholder: p.intl.formatToPlainString(p.t['0tbz6+'], { number: f.A.USER_CODE_LENGTH }),
                         maxLength: f.A.USER_CODE_LENGTH,
                         className: h.textInputContainer,
-                        inputClassName: i()(h.textInput, { [h.textInputError]: null != v }),
+                        inputClassName: i()(h.textInput, { [h.textInputError]: null != I }),
                         autoComplete: 'off',
                         autoFocus: !0,
                         value: o,
                         onChange: x,
-                        error: v
+                        error: I
                     })
                 ]
             }),
@@ -61,7 +61,7 @@ function x(t) {
                 fullWidth: !0,
                 color: c.Button.Colors.BRAND,
                 onClick: m,
-                submitting: I,
+                submitting: v,
                 disabled: o.length !== f.A.USER_CODE_LENGTH,
                 children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/medium',

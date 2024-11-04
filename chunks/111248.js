@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(433517),
     c = n(519938),
     u = n(241915),
@@ -36,7 +36,7 @@ function v(e) {
         })(),
         b = l.useRef(null),
         S = null == v.getGuildId() ? 70 : 50,
-        Z = (0, s.e7)([d.Z], () => d.Z.pipWidth(p.cL.CAMERA_PREVIEW)),
+        Z = (0, a.e7)([d.Z], () => d.Z.pipWidth(p.cL.CAMERA_PREVIEW)),
         T = _.length;
     let N = Z * (t = T) + 8 * (t - 1),
         j = l.useMemo(() => {
@@ -89,7 +89,7 @@ function v(e) {
                             participant: e,
                             channel: v,
                             onContextMenu: r,
-                            className: a()(f.tile, g.elevationHigh),
+                            className: s()(f.tile, g.elevationHigh),
                             fit: h.BP.COVER,
                             inCall: !0,
                             inPopout: !1,

@@ -6,8 +6,8 @@ n.d(t, {
 var i,
     l,
     r,
-    a,
-    s = n(200651),
+    s,
+    a = n(200651),
     o = n(192379),
     c = n(995295),
     u = n(374470),
@@ -16,7 +16,7 @@ var i,
     m = n(451478),
     p = n(5560),
     f = n(10401);
-class g extends (a = o.Component) {
+class g extends (s = o.Component) {
     componentDidMount() {
         let { visible: e, inlineSpecs: t } = this.props;
         null == t && this.show(e);
@@ -26,22 +26,22 @@ class g extends (a = o.Component) {
         null == e && this.show(!1);
     }
     componentDidUpdate(e) {
-        let { position: t, offsetX: n, offsetY: i, tutorialId: l, visible: r, windowSize: a } = e;
-        l !== this.props.tutorialId ? h.Z.hide(l) : (r !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || a !== this.props.windowSize) && this.show(this.props.visible);
+        let { position: t, offsetX: n, offsetY: i, tutorialId: l, visible: r, windowSize: s } = e;
+        l !== this.props.tutorialId ? h.Z.hide(l) : (r !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || i !== this.props.offsetY || s !== this.props.windowSize) && this.show(this.props.visible);
     }
     show(e) {
-        let { tutorialId: t, position: n, offsetX: i, offsetY: l, visible: r, inlineSpecs: a, autoInvert: s } = this.props;
-        if (e && null == a) {
+        let { tutorialId: t, position: n, offsetX: i, offsetY: l, visible: r, inlineSpecs: s, autoInvert: a } = this.props;
+        if (e && null == s) {
             let e = (0, c.findDOMNode)(this);
             if (!(0, u.k)(e)) return;
-            let { top: r, left: a, right: o, bottom: d } = e.getBoundingClientRect();
+            let { top: r, left: s, right: o, bottom: d } = e.getBoundingClientRect();
             h.Z.show(t, {
                 position: n,
-                targetWidth: o - a,
+                targetWidth: o - s,
                 targetHeight: d - r,
-                autoInvert: s,
+                autoInvert: a,
                 origin: {
-                    x: a,
+                    x: s,
                     y: r
                 },
                 offset: {
@@ -52,15 +52,15 @@ class g extends (a = o.Component) {
         } else r && h.Z.hide(t);
     }
     render() {
-        let { inlineSpecs: e, tutorialId: t, children: n, visible: i, windowFocused: l, position: r, autoInvert: a } = this.props,
+        let { inlineSpecs: e, tutorialId: t, children: n, visible: i, windowFocused: l, position: r, autoInvert: s } = this.props,
             c = f.Z.getData()[t];
         return null != e && null != c
-            ? (0, s.jsxs)(s.Fragment, {
+            ? (0, a.jsxs)(a.Fragment, {
                   children: [
                       n,
                       i &&
-                          (0, s.jsx)(p.V, {
-                              autoInvert: a,
+                          (0, a.jsx)(p.V, {
+                              autoInvert: s,
                               position: r,
                               tutorialId: t,
                               tutorialDefinition: c,
@@ -77,7 +77,7 @@ function C(e) {
         n = (0, d.e7)([f.Z], () => f.Z.shouldShow(t), [t]),
         i = (0, d.e7)([m.Z], () => m.Z.isFocused()),
         l = (0, d.e7)([m.Z], () => m.Z.windowSize(), []);
-    return (0, s.jsx)(g, {
+    return (0, a.jsx)(g, {
         ...e,
         visible: n,
         windowFocused: i,

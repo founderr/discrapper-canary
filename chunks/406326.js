@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(63063),
-    a = n(981631),
-    s = n(388032),
+    s = n(981631),
+    a = n(388032),
     o = n(187281);
 function c(e) {
     let { searchMode: t, searchByMode: n } = e;
@@ -23,16 +23,16 @@ function c(e) {
                 onItemSelect: n,
                 children: [
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.NEWEST,
-                        children: s.intl.string(s.t.rLjqbW)
+                        id: s.QIO.NEWEST,
+                        children: a.intl.string(a.t.rLjqbW)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.OLDEST,
-                        children: s.intl.string(s.t.a1BaUl)
+                        id: s.QIO.OLDEST,
+                        children: a.intl.string(a.t.a1BaUl)
                     }),
                     (0, i.jsx)(l.TabBar.Item, {
-                        id: a.QIO.MOST_RELEVANT,
-                        children: s.intl.string(s.t.FtR97u)
+                        id: s.QIO.MOST_RELEVANT,
+                        children: a.intl.string(a.t.FtR97u)
                     })
                 ]
             })
@@ -41,7 +41,7 @@ function c(e) {
 }
 function u(e) {
     let t;
-    let { isSearching: n, isIndexing: r, documentsIndexed: a } = e;
+    let { isSearching: n, isIndexing: r, documentsIndexed: s } = e;
     (r || n) &&
         (t = (0, i.jsx)('div', {
             className: o.spinnerWrapper,
@@ -58,7 +58,7 @@ function u(e) {
         children: [
             c
                 ? (0, i.jsx)(l.Tooltip, {
-                      text: s.intl.formatToPlainString(s.t['4Y3O+P'], { count: a }),
+                      text: a.intl.formatToPlainString(a.t['4Y3O+P'], { count: s }),
                       children: (n) =>
                           (0, i.jsxs)('div', {
                               className: o.totalResultsWrapper,
@@ -77,15 +77,15 @@ function d(e) {
         return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
             color: 'header-primary',
-            children: s.intl.string(s.t.uixzLS)
+            children: a.intl.string(a.t.uixzLS)
         });
     if (n)
         return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
             children: (0, i.jsx)(l.Anchor, {
                 className: o.helpdeskLink,
-                href: r.Z.getArticleURL(a.BhN.SEARCH_INDEXING),
-                children: s.intl.string(s.t['G3EA+/'])
+                href: r.Z.getArticleURL(s.BhN.SEARCH_INDEXING),
+                children: a.intl.string(a.t['G3EA+/'])
             })
         });
     {
@@ -93,7 +93,7 @@ function d(e) {
         return (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
             color: 'header-primary',
-            children: s.intl.format(s.t.ZGVL3t, { count: e })
+            children: a.intl.format(a.t.ZGVL3t, { count: e })
         });
     }
 }

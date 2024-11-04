@@ -2,8 +2,8 @@ n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(46973),
     c = n(570140),
     u = n(569545),
@@ -49,8 +49,8 @@ function S(e) {
                 i = g.Z.isKeyVerified(e, n) || f.Z.isKeyVerified(e, n),
                 l = (0, p.UB)(e, [h.Z, m.Z]),
                 r = i && !l,
-                a = r !== x.get(e);
-            return x.set(e, r), a;
+                s = r !== x.get(e);
+            return x.set(e, r), s;
         })(t),
         i = E(),
         l = b();
@@ -59,7 +59,7 @@ function S(e) {
 function Z() {
     x.clear(), v.clear(), (_ = !1);
 }
-class T extends (i = s.ZP.Store) {
+class T extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, g.Z, h.Z, m.Z);
     }
@@ -73,15 +73,15 @@ class T extends (i = s.ZP.Store) {
         return x.get(e);
     }
 }
-(a = 'SecureFramesVerifiedStore'),
+(s = 'SecureFramesVerifiedStore'),
     (r = 'displayName') in (l = T)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new T(c.Z, {
         CONNECTION_OPEN: Z,
         VOICE_CHANNEL_SELECT: function (e) {

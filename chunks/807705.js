@@ -15,6 +15,6 @@ function l(e, t) {
             return () => clearTimeout(e);
         }, [e, t]);
     let r = e !== l.current,
-        a = n.current;
-    return r || a;
+        s = n.current;
+    return r || s;
 }

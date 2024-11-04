@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 }),
     n(47120);
@@ -8,9 +8,9 @@ var i = n(200651);
 n(192379);
 var l = n(479099),
     r = n(854586);
-function a(e) {
+function s(e) {
     let { appliedTags: t, setAppliedTags: n } = e,
-        a =
+        s =
             null != n
                 ? (e) => {
                       t.has(e) && (t.delete(e), n(new Set(t)));
@@ -23,8 +23,8 @@ function a(e) {
                 l.Z,
                 {
                     tag: e,
-                    onRemove: a,
-                    size: null == a ? l.Z.Sizes.SMALL : l.Z.Sizes.MEDIUM
+                    onRemove: s,
+                    size: null == s ? l.Z.Sizes.SMALL : l.Z.Sizes.MEDIUM
                 },
                 e.id
             )

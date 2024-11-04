@@ -10,9 +10,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(2052),
@@ -43,10 +43,10 @@ var i,
 let k = ['embedded_background'];
 function O(e) {
     let { avatarSize: t, guildId: n, channelId: i, users: l } = e,
-        a = null != t ? t : u.AvatarSizes.SIZE_32,
-        s = (0, u.getAvatarSize)(a);
+        s = null != t ? t : u.AvatarSizes.SIZE_32,
+        a = (0, u.getAvatarSize)(s);
     return (0, r.jsx)(_.Z, {
-        size: s,
+        size: a,
         guildId: n,
         users: l,
         max: 4,
@@ -61,7 +61,7 @@ function O(e) {
                     children: (0, r.jsx)(
                         'img',
                         {
-                            src: e.getAvatarURL(n, s),
+                            src: e.getAvatarURL(n, a),
                             alt: t,
                             className: L.avatar
                         },
@@ -75,11 +75,11 @@ function O(e) {
 }
 function w(e) {
     var t, n, i, l;
-    let { participants: s, application: g, channel: C, width: x } = e;
+    let { participants: a, application: g, channel: C, width: x } = e;
     let v = (i = x) > 400 ? 2 : i > 300 ? 1 : 0;
     let [_] = (l = x) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
         I = (0, c.Wu)([y.default, j.default], () =>
-            Array.from(s)
+            Array.from(a)
                 .map((e) => ((0, p.J)(e, j.default) ? null : y.default.getUser(e.userId)))
                 .filter(P.lm)
         ),
@@ -94,7 +94,7 @@ function w(e) {
                 application: g
             }) === f.Fw.CAN_JOIN,
         k = null !== (n = C.getGuildId()) && void 0 !== n ? n : void 0,
-        w = a.useId(),
+        w = s.useId(),
         D = C.id,
         U = g.id,
         { submitting: B } = (0, Z.Z)({
@@ -168,11 +168,11 @@ function w(e) {
     });
 }
 function D(e) {
-    let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
+    let { participant: t, width: n, selected: i, interactible: l, channel: a } = e,
         { analyticsLocations: o } = (0, S.ZP)(b.Z.ACTIVITY_TILE),
         { id: u } = t,
         d = (0, g.Z)(),
-        h = (null == d ? void 0 : d.channelId) === s.id && d.applicationId === u,
+        h = (null == d ? void 0 : d.channelId) === a.id && d.applicationId === u,
         [m] = (0, T.Z)([u]),
         { url: p } = (0, C.Z)({
             applicationId: u,
@@ -189,7 +189,7 @@ function D(e) {
             })
         );
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             if (f && null != d && !j) {
                 let e = (0, I.Z)(d.channelId, d.applicationId);
                 (0, v.jy)(e);
@@ -204,7 +204,7 @@ function D(e) {
                         f &&
                             (0, r.jsx)(x.Z, {
                                 className: L.iframe,
-                                embedId: (0, I.Z)(s.id, u)
+                                embedId: (0, I.Z)(a.id, u)
                             }),
                         _ && null != m && null != p && '' !== p
                             ? (0, r.jsx)('img', {
@@ -217,7 +217,7 @@ function D(e) {
                             null != m &&
                             (0, r.jsx)(w, {
                                 width: n,
-                                channel: s,
+                                channel: a,
                                 participants: t.participants,
                                 application: m
                             }),

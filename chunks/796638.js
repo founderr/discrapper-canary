@@ -14,8 +14,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n(933546),
-    s = n(314897),
+    s = n(933546),
+    a = n(314897),
     o = n(70956),
     c = n(823379),
     u = n(27457),
@@ -26,7 +26,7 @@ let m = 112,
     f = 10 * o.Z.Millis.SECOND;
 function g(e) {
     var t;
-    let n = s.default.getId();
+    let n = a.default.getId();
     return e.type === d.fO.USER && e.user.id === n && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo);
 }
 function C(e, t) {
@@ -39,7 +39,7 @@ function C(e, t) {
             clearTimeout(e);
         };
     }, [t]);
-    let s = l.useRef({}),
+    let a = l.useRef({}),
         { visibleParticipants: o, participantTileWidth: u } = l.useMemo(() => {
             let n = Date.now(),
                 i = (0, r.sortBy)(t, (e) =>
@@ -50,7 +50,7 @@ function C(e, t) {
                                 return '\0'.concat(e.sortKey);
                             case d.fO.HIDDEN_STREAM:
                             case d.fO.STREAM:
-                                return '\x01'.concat((0, a.Z)(e.userNick, e.user));
+                                return '\x01'.concat((0, s.Z)(e.userNick, e.user));
                             case d.fO.USER:
                                 var n;
                                 let i = '\x05';
@@ -64,7 +64,7 @@ function C(e, t) {
                                                 return String(8640000000000000 - e).padStart(t, '0');
                                             })(e.lastSpoke)
                                         )
-                                        .concat((0, a.Z)(e.userNick, e.user))
+                                        .concat((0, s.Z)(e.userNick, e.user))
                                 );
                         }
                     })(e, n)
@@ -83,7 +83,7 @@ function C(e, t) {
             if (v > 0) {
                 let e = [];
                 for (let t of I) {
-                    let n = s.current[t.id];
+                    let n = a.current[t.id];
                     null != n && n < v ? (E[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < E.length; t++) {
@@ -95,7 +95,7 @@ function C(e, t) {
             }
             let b = E.filter(c.lm),
                 S = (0, r.keyBy)((0, r.range)(b.length), (e) => b[e].id);
-            s.current = S;
+            a.current = S;
             let Z = [..._, ...b];
             return (
                 null != h && Z.push(h),
@@ -111,7 +111,7 @@ function C(e, t) {
     };
 }
 function x(e) {
-    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: r, onContextMenu: a, onClick: s, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
+    let { participants: t, participantTileWidth: n, selectedParticipantId: l, onDoubleClick: r, onContextMenu: s, onClick: a, channel: o, inCall: c, popoutWindow: d, paused: m = !1 } = e,
         f = null != d;
     return (0, i.jsx)('div', {
         className: h.root,
@@ -129,9 +129,9 @@ function x(e) {
                         channel: o,
                         className: h.tile,
                         fit: u.BP.COVER,
-                        onClick: s,
+                        onClick: a,
                         onDoubleClick: r,
-                        onContextMenu: a,
+                        onContextMenu: s,
                         width: t ? p : n,
                         inCall: c,
                         paused: m,

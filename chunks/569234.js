@@ -6,17 +6,17 @@ n.d(t, {
 var a = n(200651),
     r = n(192379),
     i = n(873546),
-    s = n(481060),
-    o = n(231467),
-    l = n(17845),
-    c = n(703656),
-    d = n(981631),
+    c = n(481060),
+    s = n(231467),
+    o = n(17845),
+    d = n(703656),
+    l = n(981631),
     u = n(559469),
     m = n(388032),
-    p = n(970047);
-let x = n(575703),
-    b = n(2984),
-    g = i.tq || i.Em;
+    g = n(970047);
+let p = n(575703),
+    E = n(2984),
+    _ = i.tq || i.Em;
 function f(e) {
     let { gameId: t } = e,
         n = (0, u.n)(),
@@ -24,32 +24,32 @@ function f(e) {
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)('img', {
-                className: p.backgroundImage,
-                src: x,
+                className: g.backgroundImage,
+                src: p,
                 alt: ''
             }),
-            (0, a.jsxs)(s.Scroller, {
-                className: p.pageContainer,
+            (0, a.jsxs)(c.Scroller, {
+                className: g.pageContainer,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: p.headerBar,
+                        className: g.headerBar,
                         children: [
                             (0, a.jsx)('img', {
-                                className: p.logoWithText,
-                                src: b,
+                                className: g.logoWithText,
+                                src: E,
                                 alt: ''
                             }),
-                            (0, a.jsx)(s.Button, {
-                                className: p.headerButton,
-                                look: s.ButtonLooks.FILLED,
-                                size: s.ButtonSizes.MEDIUM,
-                                color: s.ButtonColors.WHITE,
+                            (0, a.jsx)(c.Button, {
+                                className: g.headerButton,
+                                look: c.ButtonLooks.FILLED,
+                                size: c.ButtonSizes.MEDIUM,
+                                color: c.ButtonColors.WHITE,
                                 onClick: () =>
-                                    (0, c.dL)({
-                                        pathname: d.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                                    (0, d.dL)({
+                                        pathname: l.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                         search: '?game='.concat(t)
                                     }),
-                                children: (0, a.jsx)(s.Text, {
+                                children: (0, a.jsx)(c.Text, {
                                     variant: 'text-md/medium',
                                     color: 'none',
                                     children: m.intl.string(m.t.HAkXzs)
@@ -57,27 +57,27 @@ function f(e) {
                             })
                         ]
                     }),
-                    (0, a.jsx)(l.Z, {
-                        className: p.banner,
+                    (0, a.jsx)(o.Z, {
+                        className: g.banner,
                         title: m.intl.string(m.t.a2lbLi),
                         description: m.intl.string(m.t['/B+X5e']),
-                        button: g
-                            ? (0, a.jsx)(s.Text, {
+                        button: _
+                            ? (0, a.jsx)(c.Text, {
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
                                   children: m.intl.string(m.t.PrDDkp)
                               })
-                            : (0, a.jsx)(s.Button, {
-                                  className: p.cta,
-                                  look: s.ButtonLooks.FILLED,
-                                  size: s.ButtonSizes.LARGE,
-                                  color: s.ButtonColors.WHITE,
+                            : (0, a.jsx)(c.Button, {
+                                  className: g.cta,
+                                  look: c.ButtonLooks.FILLED,
+                                  size: c.ButtonSizes.LARGE,
+                                  color: c.ButtonColors.WHITE,
                                   onClick: () =>
-                                      (0, c.dL)({
-                                          pathname: d.Z5c.GLOBAL_DISCOVERY_SERVERS,
+                                      (0, d.dL)({
+                                          pathname: l.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                           search: '?game='.concat(t)
                                       }),
-                                  children: (0, a.jsx)(s.Text, {
+                                  children: (0, a.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'none',
                                       children: m.intl.string(m.t.gbOKxs)
@@ -85,23 +85,23 @@ function f(e) {
                               })
                     }),
                     (0, a.jsx)('div', {
-                        className: p.content,
+                        className: g.content,
                         children: (0, a.jsxs)('div', {
-                            className: p.sampleGuildsSection,
+                            className: g.sampleGuildsSection,
                             children: [
-                                (0, a.jsx)(s.Text, {
-                                    className: p.sectionTitle,
+                                (0, a.jsx)(c.Text, {
+                                    className: g.sectionTitle,
                                     variant: 'text-md/medium',
                                     color: 'header-primary',
                                     children: m.intl.string(m.t.x0rBe3)
                                 }),
                                 (0, a.jsx)('div', {
-                                    className: p.cardsWrapper,
+                                    className: g.cardsWrapper,
                                     children: i.map((e) =>
                                         (0, a.jsx)(
-                                            o.xV,
+                                            s.xV,
                                             {
-                                                className: p.card,
+                                                className: g.card,
                                                 clan: e
                                             },
                                             e.id

@@ -13,8 +13,8 @@ n.d(t, {
 var i,
     l,
     r,
-    a,
     s,
+    a,
     o = n(200651),
     c = n(192379),
     u = n(120356),
@@ -39,7 +39,7 @@ function v(e, t, n) {
         e
     );
 }
-((a = i || (i = {})).CENTER = 'center'), (a.LEFT = 'left'), ((s = l || (l = {})).TOP = 'top'), (s.MIDDLE = 'middle');
+((s = i || (i = {})).CENTER = 'center'), (s.LEFT = 'left'), ((a = l || (l = {})).TOP = 'top'), (a.MIDDLE = 'middle');
 class _ extends c.PureComponent {
     componentDidMount() {
         let { uniqueId: e } = this.props;
@@ -52,7 +52,7 @@ class _ extends c.PureComponent {
         });
     }
     render() {
-        let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: l, className: r, forceTheme: a, onClickSkipAll: s } = this.props,
+        let { renderMedia: e, textAlign: t, isLongText: n, title: i, body: l, className: r, forceTheme: s, onClickSkipAll: a } = this.props,
             c = 'left' === t || n,
             u = 'center' === t || !c;
         return (0, o.jsxs)(m.Dialog, {
@@ -90,8 +90,8 @@ class _ extends c.PureComponent {
                         (0, o.jsx)(m.Button, {
                             size: m.ButtonSizes.SMALL,
                             look: m.Button.Looks.BLANK,
-                            onClick: s,
-                            color: (0, h.ap)(a) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
+                            onClick: a,
+                            color: (0, h.ap)(s) ? m.Button.Colors.PRIMARY : m.Button.Colors.WHITE,
                             className: c ? x.buttonSkipLeftAlign : x.buttonSkipCenterAlign,
                             children: C.intl.string(C.t['33wtxs'])
                         })
@@ -111,7 +111,7 @@ class _ extends c.PureComponent {
 }
 class I extends (r = c.PureComponent) {
     render() {
-        let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: l, title: r, body: a, children: s, spacing: c, forceTheme: u, ...d } = this.props,
+        let { renderMedia: e, textAlign: t, onComplete: n, onSkipAll: i, isLongText: l, title: r, body: s, children: a, spacing: c, forceTheme: u, ...d } = this.props,
             h = 'top' === d.position || 'bottom' === d.position ? 'center' : 'top';
         return (0, o.jsx)(m.Popout, {
             ...d,
@@ -119,7 +119,7 @@ class I extends (r = c.PureComponent) {
             spacing: null != c ? c : 0,
             renderPopout: this.renderPopoutContent,
             nudgeAlignIntoViewport: !0,
-            children: s
+            children: a
         });
     }
     constructor(...e) {
@@ -133,8 +133,8 @@ class I extends (r = c.PureComponent) {
             }),
             v(this, 'renderPopoutContent', (e) => {
                 let { closePopout: t, position: n } = e,
-                    { forceTheme: i, isLongText: l, arrowAlignment: r, renderMedia: a } = this.props,
-                    s = null != a;
+                    { forceTheme: i, isLongText: l, arrowAlignment: r, renderMedia: s } = this.props,
+                    a = null != s;
                 return (0, o.jsx)(m.ThemeProvider, {
                     theme: i,
                     children: (e) =>
@@ -143,10 +143,10 @@ class I extends (r = c.PureComponent) {
                             className: d()(
                                 {
                                     [x.bottom]: 'bottom' === n,
-                                    [x.contentNarrowNoMedia]: !l && !s,
-                                    [x.contentNarrowWithMedia]: !l && s,
-                                    [x.contentWideNoMedia]: l && !s,
-                                    [x.contentWideWithMedia]: l && s,
+                                    [x.contentNarrowNoMedia]: !l && !a,
+                                    [x.contentNarrowWithMedia]: !l && a,
+                                    [x.contentWideNoMedia]: l && !a,
+                                    [x.contentWideWithMedia]: l && a,
                                     [x.right]: 'right' === n,
                                     [x.top]: 'top' === n,
                                     [x.left]: 'left' === n,

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(665149),
-    s = n(853856),
+    s = n(665149),
+    a = n(853856),
     o = n(117984),
     c = n(593214),
     u = n(362658),
@@ -19,11 +19,11 @@ function m(e) {
         { isFavoritesPerk: n } = (0, u.z)('ChannelFavoritesHeaderButton'),
         m = (0, d.Z)(),
         { notifyFavoriteAdded: p } = (0, c.up)(),
-        f = (0, l.e7)([s.Z], () => s.Z.isFavorite(t.id));
+        f = (0, l.e7)([a.Z], () => a.Z.isFavorite(t.id));
     if (!n || m) return null;
     let g = f ? r.StarIcon : r.StarOutlineIcon,
         C = f ? h.intl.string(h.t.Bou7lZ) : h.intl.string(h.t['4wcdEx']);
-    return (0, i.jsx)(a.ZP.Icon, {
+    return (0, i.jsx)(s.ZP.Icon, {
         icon: g,
         tooltip: C,
         'aria-label': C,

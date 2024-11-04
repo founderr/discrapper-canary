@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(512722),
     r = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     o = n(970731),
     c = n(981631),
     u = n(388032),
@@ -17,8 +17,8 @@ var l = n(512722),
     m = n(699352);
 let p = null;
 function f(e) {
-    let { onDismiss: t, onAccept: n, popoutPosition: l, gameConsoleAccounts: a } = e;
-    r()(a.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == a.find((e) => e.type === p)) && (p = s().shuffle(a)[0].type);
+    let { onDismiss: t, onAccept: n, popoutPosition: l, gameConsoleAccounts: s } = e;
+    r()(s.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == p || null == s.find((e) => e.type === p)) && (p = a().shuffle(s)[0].type);
     let f = null,
         g = null;
     switch (p) {

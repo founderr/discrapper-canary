@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(399606),
     r = n(481060),
-    a = n(125268),
-    s = n(673125),
+    s = n(125268),
+    a = n(673125),
     o = n(292793),
     c = n(390322),
     u = n(871499),
@@ -17,16 +17,16 @@ var l = n(399606),
     m = n(388032);
 function p(e) {
     let { channel: t } = e,
-        n = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
+        n = (0, l.e7)([a.Z], () => a.Z.getDrawMode()),
         p = (null == n ? void 0 : n.type) === o.W.EMOJI_HOSE,
         f = (e, t) => {
             null != e
-                ? (0, a.Bo)({
+                ? (0, s.Bo)({
                       type: o.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : p && (0, a.Bo)(null),
+                : p && (0, s.Bo)(null),
                 null == t || t();
         };
     return (0, i.jsx)(h.Z, {

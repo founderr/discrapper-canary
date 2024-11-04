@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(374470),
+    s = n.n(r),
+    a = n(374470),
     o = n(481060),
     c = n(239091),
     u = n(822951),
@@ -31,12 +31,12 @@ function _(e, t, n) {
 }
 function I(e) {
     var t;
-    let { channel: n, onClose: l, guild: r, transitionState: a } = e,
-        s = (0, m.KS)(n, r),
+    let { channel: n, onClose: l, guild: r, transitionState: s } = e,
+        a = (0, m.KS)(n, r),
         c = (0, h.ZP)(n, !1),
         g = (0, d.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
-        transitionState: a,
+        transitionState: s,
         'aria-label': x.intl.string(x.t.X8jMDg),
         children: (0, i.jsx)(o.ModalContent, {
             children: (0, i.jsxs)(u.Z, {
@@ -46,8 +46,8 @@ function I(e) {
                     (0, i.jsxs)('div', {
                         className: v.header,
                         children: [
-                            null != s &&
-                                (0, i.jsx)(s, {
+                            null != a &&
+                                (0, i.jsx)(a, {
                                     size: 'md',
                                     color: 'currentColor',
                                     className: v.channelIcon
@@ -108,7 +108,7 @@ class b extends l.Component {
                   children: [
                       (0, i.jsx)(g.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: a()(v.topic, v.expandable),
+                          className: s()(v.topic, v.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -135,10 +135,10 @@ class b extends l.Component {
             _(this, '_mouseUp', !1),
             _(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, s.k)(t)) {
+                if ((0, a.k)(t)) {
                     if (E(t)) return;
                     let e = t.parentNode;
-                    if ((0, s.k)(e) && E(e)) return;
+                    if ((0, a.k)(e) && E(e)) return;
                 }
                 (0, o.openModal)((e) =>
                     (0, i.jsx)(I, {

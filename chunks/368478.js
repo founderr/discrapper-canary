@@ -11,8 +11,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(317381),
-    a = n(122613),
-    s = n(574952),
+    s = n(122613),
+    a = n(574952),
     o = n(100527),
     c = n(906732),
     u = n(783097),
@@ -22,21 +22,21 @@ var i = n(192379),
     p = n(981631),
     f = n(388032);
 function g(e) {
-    let { channel: t, primaryEntryPointCommand: n, application: a } = e,
-        [s, d] = i.useState(!1),
+    let { channel: t, primaryEntryPointCommand: n, application: s } = e,
+        [a, d] = i.useState(!1),
         g = (0, l.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
         C = i.useMemo(() => (null != n ? (0, u.XZ)(n.displayName) : f.intl.string(f.t['3xjX0d'])), [n]),
-        x = void 0 !== a.flags && (0, m.yE)(a.flags, p.udG.EMBEDDED),
-        v = null != g && g.applicationId === a.id && g.channelId === t.id,
+        x = void 0 !== s.flags && (0, m.yE)(s.flags, p.udG.EMBEDDED),
+        v = null != g && g.applicationId === s.id && g.channelId === t.id,
         { analyticsLocations: _ } = (0, c.ZP)(o.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         I = null != t.recipients ? t.recipients[0] : void 0,
         E = (0, h.ms)({
             channel: t,
-            applicationId: a.id,
+            applicationId: s.id,
             botUserId: I
         });
     return {
-        isExecutingLaunchInteraction: s,
+        isExecutingLaunchInteraction: a,
         buttonText: E && x ? (v ? f.intl.string(f.t['Hi1/aW']) : null != C ? C : f.intl.string(f.t.zKX8Nj)) : f.intl.string(f.t['3xjX0d']),
         hasActiveMatchingEmbeddedActivity: v,
         isEmbeddedApp: x,
@@ -55,12 +55,12 @@ function C(e) {
         }),
         g = i.useCallback(() => {
             r && null != o
-                ? (0, s.Z)().leaveActivity({
+                ? (0, a.Z)().leaveActivity({
                       channelId: t.id,
                       applicationId: o.applicationId
                   })
                 : (m(!0),
-                  (0, a.Z)({
+                  (0, s.Z)({
                       targetApplicationId: n.id,
                       channelId: t.id,
                       analyticsLocations: p,

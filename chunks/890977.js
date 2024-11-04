@@ -6,9 +6,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(500923),
     u = n.n(c),
     d = n(442837),
@@ -18,9 +18,9 @@ var i,
     f = n(958050);
 function g(e) {
     let t = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        n = a.useRef(null);
+        n = s.useRef(null);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             let i;
             return (
                 null != n.current &&
@@ -54,11 +54,11 @@ function x(e) {
     });
 }
 let v = (e) => {
-    let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: l, onMount: s } = e;
+    let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: l, onMount: a } = e;
     return (
-        a.useEffect(() => {
-            s();
-        }, [s]),
+        s.useEffect(() => {
+            a();
+        }, [a]),
         (0, r.jsxs)('div', {
             className: n,
             children: [

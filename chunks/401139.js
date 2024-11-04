@@ -1,13 +1,13 @@
 var i = n(200651),
     l = n(192379),
     r = n(450369),
-    a = n(962824);
+    s = n(962824);
 t.Z = l.memo(function (e) {
-    let { channel: t, participants: n, tileWidth: l, selectedParticipant: s } = e;
+    let { channel: t, participants: n, tileWidth: l, selectedParticipant: a } = e;
     return (0, i.jsx)('div', {
-        className: a.rowContainer,
+        className: s.rowContainer,
         children: n.map((e) =>
-            e.id === (null == s ? void 0 : s.id)
+            e.id === (null == a ? void 0 : a.id)
                 ? null
                 : (0, i.jsx)(
                       r.Z,

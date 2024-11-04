@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(665149),
-    s = n(585483),
+    s = n(665149),
+    a = n(585483),
     o = n(723170),
     c = n(64247),
     u = n(124368),
@@ -23,9 +23,9 @@ function p(e) {
     l.useEffect(() => {
         let e = () => f(!0);
         return (
-            s.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
+            a.S.subscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
-                s.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
+                a.S.unsubscribe(d.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e);
             }
         );
     }, []);
@@ -46,7 +46,7 @@ function p(e) {
             }),
         children: (e, t) => {
             let { isShown: l } = t;
-            return (0, i.jsx)(a.ZP.Icon, {
+            return (0, i.jsx)(s.ZP.Icon, {
                 ...e,
                 onClick: () => f((e) => !e),
                 tooltip: l ? null : C,

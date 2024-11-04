@@ -6,13 +6,13 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(864094),
-    a = n(871499),
-    s = n(388032);
+    s = n(871499),
+    a = n(388032);
 function o(e) {
     let t,
         { hasPermission: n, streamActive: o, isSelfStream: c, centerButton: u, onMouseEnter: d, onMouseLeave: h, premiumGlow: m, buttonRef: p, ...f } = e,
-        g = u ? a.d : a.Z;
-    t = o ? (c ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy)) : n ? s.intl.string(s.t.fjBNo6) : s.intl.string(s.t.uQn9Bw);
+        g = u ? s.d : s.Z;
+    t = o ? (c ? a.intl.string(a.t.S5anIS) : a.intl.string(a.t.q3O3Jy)) : n ? a.intl.string(a.t.fjBNo6) : a.intl.string(a.t.uQn9Bw);
     let { Component: C, events: x, play: v } = (0, r.P)(o ? 'disable' : 'enable');
     return (
         l.useEffect(() => () => v(), [o, v]),

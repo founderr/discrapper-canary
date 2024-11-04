@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return a;
+        return s;
     },
     z: function () {
         return r;
@@ -21,7 +21,7 @@ function r(e, t, r) {
             });
     });
 }
-function a(e, t, r) {
+function s(e, t, r) {
     (0, l.openModalLazy)(async () => {
         let { default: l } = await n.e('76233').then(n.bind(n, 171494));
         return (n) =>

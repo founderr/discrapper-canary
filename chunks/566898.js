@@ -25,8 +25,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     o = n(481060),
     c = n(668327);
 function u(e) {
@@ -44,14 +44,14 @@ function h(e) {
         className: r()(l, { [c.blob]: !0 }),
         style: {
             width: u(t),
-            opacity: null != n ? n : s().random(0.02, 0.08)
+            opacity: null != n ? n : a().random(0.02, 0.08)
         }
     });
 }
 function m(e) {
     let t,
-        { groupStart: n = !1, compact: l = !1, attachmentSpecs: a, usernameWidth: u, usernameOpacity: m, className: p, style: f } = e,
-        g = l ? 50 : s().random(40, 50);
+        { groupStart: n = !1, compact: l = !1, attachmentSpecs: s, usernameWidth: u, usernameOpacity: m, className: p, style: f } = e,
+        g = l ? 50 : a().random(40, 50);
     return (
         !l && n
             ? (t = (0, i.jsxs)(i.Fragment, {
@@ -102,9 +102,9 @@ function m(e) {
                         t,
                         (0, i.jsx)('div', {
                             className: c.content,
-                            children: Array(s().random(3, 8))
+                            children: Array(a().random(3, 8))
                                 .fill(null)
-                                .map(() => s().random(30, 80))
+                                .map(() => a().random(30, 80))
                                 .map((e, t) =>
                                     (0, i.jsx)(
                                         h,
@@ -118,14 +118,14 @@ function m(e) {
                         })
                     ]
                 }),
-                null != a &&
+                null != s &&
                     (0, i.jsx)('div', {
                         className: c.attachmentContainer,
                         children: (0, i.jsx)('div', {
                             className: c.attachment,
                             style: {
                                 opacity: 0.03,
-                                ...a
+                                ...s
                             }
                         })
                     })
@@ -139,10 +139,10 @@ let p = 44,
     C = 26,
     x = 6;
 function v(e) {
-    let { messages: t, groupSpacing: n = 0, compact: l = !1, attachmentSpecs: r, className: a } = e,
-        o = null != r ? (r.last ? t - 1 : s().random(0, t - 1)) : -1,
-        c = s().random(80, 120),
-        d = s().random(0.1, 0.2);
+    let { messages: t, groupSpacing: n = 0, compact: l = !1, attachmentSpecs: r, className: s } = e,
+        o = null != r ? (r.last ? t - 1 : a().random(0, t - 1)) : -1,
+        c = a().random(80, 120),
+        d = a().random(0.1, 0.2);
     return (0, i.jsx)(i.Fragment, {
         children: Array(t)
             .fill(null)
@@ -151,7 +151,7 @@ function v(e) {
                     m,
                     {
                         compact: l,
-                        className: a,
+                        className: s,
                         usernameWidth: c,
                         usernameOpacity: d,
                         groupStart: 0 === t,

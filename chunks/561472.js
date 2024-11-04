@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(998698),
-    s = n(933557),
+    s = n(998698),
+    a = n(933557),
     o = n(703558),
     c = n(731290),
     u = n(607744),
@@ -22,7 +22,7 @@ t.Z = function (e) {
         [b, S] = l.useState(!0),
         Z = (0, r.e7)([d.Z], () => d.Z.hasLayers()),
         T = (0, r.e7)([h.Z], () => null != I && h.Z.can(v.Plq.ATTACH_FILES, I), [I]),
-        N = null != (0, r.e7)([a.Z], () => a.Z.getActiveCommand(I.id)),
+        N = null != (0, r.e7)([s.Z], () => s.Z.getActiveCommand(I.id)),
         j = I.getGuildId(),
         A = E === o.d.FirstThreadMessage,
         y = (0, r.e7)([p.default], () => {
@@ -31,7 +31,7 @@ t.Z = function (e) {
         }),
         P = (0, r.e7)([c.Z], () => c.Z.didAgree(j)) && !y,
         M = l.useMemo(() => !Z && ((I.isPrivate() && !I.isManaged()) || (null != j && (!I.isNSFW() || P) && T && u.Z.canChatInGuild(j))), [T, P, I, j, Z]),
-        R = A ? (v.TPd.GUILD_THREADS_ONLY.has(I.type) ? _.intl.string(_.t.RBBLhI) : _.intl.string(_.t.gUx4en)) : b ? _.intl.format(_.t.dYP2FR, { destination: (0, s.F6)(I, p.default, m.Z, !0) }) : _.intl.string(_.t.h76ulJ);
+        R = A ? (v.TPd.GUILD_THREADS_ONLY.has(I.type) ? _.intl.string(_.t.RBBLhI) : _.intl.string(_.t.gUx4en)) : b ? _.intl.format(_.t.dYP2FR, { destination: (0, a.F6)(I, p.default, m.Z, !0) }) : _.intl.string(_.t.h76ulJ);
     return N || !M
         ? null
         : (0, i.jsx)(C.Z, {

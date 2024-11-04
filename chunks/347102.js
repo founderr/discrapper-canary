@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(693789),
     r = n(493683),
-    a = n(596739),
-    s = n(699516),
+    s = n(596739),
+    a = n(699516),
     o = n(626135),
     c = n(280006),
     u = n(799352),
@@ -18,7 +18,7 @@ var l = n(693789),
 function p(e) {
     let { channel: t } = e;
     if (!(0, c.f)({ location: 'blocked_user_banner' }) || null == t || !t.isGroupDM() || t.blockedUserWarningDismissed) return null;
-    let n = t.recipients.filter((e) => s.Z.isBlocked(e));
+    let n = t.recipients.filter((e) => a.Z.isBlocked(e));
     if (0 === n.length) return null;
     let p = n.length > 1 ? m.intl.string(m.t.RswDbW) : m.intl.string(m.t.k19YPz),
         f = [
@@ -52,7 +52,7 @@ function p(e) {
                 size: l.zx.Sizes.MEDIUM
             }
         ];
-    return (0, i.jsx)(a.W, {
+    return (0, i.jsx)(s.W, {
         header: p,
         description: m.intl.string(m.t.BadOYm),
         buttons: f,

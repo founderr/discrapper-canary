@@ -10,19 +10,19 @@ var i = n(200651),
     d = n(353926),
     h = n(185625),
     g = n(551549),
-    m = n(108427),
-    f = n(314897),
+    f = n(108427),
+    m = n(314897),
     p = n(981631),
     _ = n(388032),
     x = n(113207);
 s.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
-        n = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
+        n = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
         E = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         v = (0, g.oK)('RSL - Landing Page'),
-        [I, b] = r.useState(!1),
-        [N, C] = r.useState(_.intl.string(_.t['9exy+f'])),
+        [I, N] = r.useState(!1),
+        [b, C] = r.useState(_.intl.string(_.t['9exy+f'])),
         [S, T] = r.useState(!0),
         A = (e) => {
             switch (e) {
@@ -65,10 +65,10 @@ t.Z = (e) => {
                 } catch (e) {
                     A(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
-                    b(!1);
+                    N(!1);
                 }
             };
-            b(!0), e((0, c.Z)(t)), (0, m.e)('report_second_look');
+            N(!0), e((0, c.Z)(t)), (0, f.e)('report_second_look');
         }, [t]),
         v &&
             !S &&
@@ -76,7 +76,7 @@ t.Z = (e) => {
                 children: [
                     (0, i.jsx)(u.Dx, {
                         className: x.marginBottom8,
-                        children: N
+                        children: b
                     }),
                     I && (0, i.jsx)(a.Spinner, {})
                 ]

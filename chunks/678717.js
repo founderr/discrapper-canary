@@ -25,25 +25,25 @@ var r = n(200651),
 n(381996);
 var v = n(392750),
     j = n(926976),
-    C = n(592197),
-    _ = n(860337),
+    _ = n(592197),
+    C = n(860337),
     T = n(789654),
     S = n(691867),
     N = n(916790),
     y = n(645973),
     I = n(903502),
-    w = n(912072),
-    k = n(272193),
+    k = n(912072),
+    w = n(272193),
     E = n(735959),
     Z = n(246992),
     R = n(496025),
     O = n(442954),
     B = n(702904),
     L = n(178821),
-    A = n(248526),
-    P = n(958328),
-    D = n(514866),
-    M = n(678639),
+    P = n(248526),
+    A = n(958328),
+    M = n(514866),
+    D = n(678639),
     F = n(351930),
     H = n(771751),
     U = n(596768),
@@ -82,7 +82,7 @@ function K() {
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, r.jsx)(M.Z, {})
+                    render: () => (0, r.jsx)(D.Z, {})
                 },
                 {
                     id: 'dispatcher',
@@ -95,12 +95,12 @@ function K() {
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, r.jsx)(D.Z, {})
+                        render: () => (0, r.jsx)(M.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, r.jsx)(A.Z, {})
+                        render: () => (0, r.jsx)(P.Z, {})
                     })),
                 x.Z.isDeveloper &&
                     (e.push({
@@ -111,7 +111,7 @@ function K() {
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, r.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(C.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -141,7 +141,7 @@ function K() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(k.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -151,12 +151,12 @@ function K() {
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(k.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, r.jsx)(P.Z, {})
+                    render: () => (0, r.jsx)(A.Z, {})
                 }),
                 e.push({
                     id: 'modals',
@@ -193,12 +193,12 @@ function K() {
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, r.jsx)(C.Z, {})
+                        render: () => (0, r.jsx)(_.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    render: () => (0, r.jsx)(k.Z, {})
+                    render: () => (0, r.jsx)(w.Z, {})
                 }),
                 e
             );

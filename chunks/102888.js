@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(128557),
-    s = n(981631),
+    s = n(128557),
+    a = n(981631),
     o = n(388032),
     c = n(339828);
 t.Z = (e) => {
@@ -14,8 +14,8 @@ t.Z = (e) => {
                     (0, i.jsx)(e, {
                         ...n,
                         guild: t,
-                        source: s.t4x.HUB_DIRECTORY,
-                        analyticsLocation: { section: s.jXE.HUB_WELCOME_CTA }
+                        source: a.t4x.HUB_DIRECTORY,
+                        analyticsLocation: { section: a.jXE.HUB_WELCOME_CTA }
                     });
             });
         }, [t]);
@@ -38,7 +38,7 @@ t.Z = (e) => {
                 children: o.intl.string(o.t.WypE0t)
             }),
             null != u
-                ? (0, i.jsx)(a.i, {
+                ? (0, i.jsx)(s.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
                       header: o.intl.string(o.t.hyK15u),
@@ -46,7 +46,7 @@ t.Z = (e) => {
                       onClick: u
                   })
                 : null,
-            (0, i.jsx)(a.i, {
+            (0, i.jsx)(s.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
                 header: o.intl.string(o.t.L4bwJy),

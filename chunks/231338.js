@@ -30,7 +30,7 @@ r.d(t, {
         return g;
     },
     ET: function () {
-        return U;
+        return P;
     },
     Et: function () {
         return T;
@@ -63,7 +63,7 @@ r.d(t, {
         return eF;
     },
     Pl: function () {
-        return eP;
+        return eU;
     },
     Py: function () {
         return l;
@@ -75,7 +75,7 @@ r.d(t, {
         return eL;
     },
     RG: function () {
-        return P;
+        return U;
     },
     RK: function () {
         return eK;
@@ -126,10 +126,10 @@ r.d(t, {
         return G;
     },
     dG: function () {
-        return eU;
+        return eP;
     },
     fK: function () {
-        return eV;
+        return ek;
     },
     fr: function () {
         return ew;
@@ -203,8 +203,8 @@ var n,
     D,
     C,
     g,
-    P,
     U,
+    P,
     M,
     G,
     m,
@@ -218,8 +218,8 @@ var n,
     Y,
     x,
     K,
-    k,
     V,
+    k,
     F,
     X,
     j,
@@ -363,16 +363,16 @@ let eL = new Map([
         CONSTANT: 1,
         APPLE_STICKER: 2
     }),
-    ((k = R || (R = {}))[(k.DISCOVERY = 0)] = 'DISCOVERY'),
-    (k[(k.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((V = N || (N = {}))[(V.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
-    (V[(V.ONE_TIME = 1)] = 'ONE_TIME');
+    ((V = R || (R = {}))[(V.DISCOVERY = 0)] = 'DISCOVERY'),
+    (V[(V.CHECKOUT = 1)] = 'CHECKOUT'),
+    ((k = N || (N = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
+    (k[(k.ONE_TIME = 1)] = 'ONE_TIME');
 let eg = Object.freeze({
     0: 'subscription',
     1: 'sku'
 });
 ((F = A || (A = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
-let eP = Object.freeze({
+let eU = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
         BAN_MEMBERS: ei.r0(2),
@@ -425,12 +425,12 @@ let eP = Object.freeze({
         MANAGE_EVENTS: ei.r0(33),
         CREATE_EVENTS: ei.r0(44)
     }),
-    eU = function () {
+    eP = function () {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     },
     eM = () => null,
     eG = () => Promise.resolve(),
-    em = [eP.KICK_MEMBERS, eP.BAN_MEMBERS, eP.ADMINISTRATOR, eP.MANAGE_CHANNELS, eP.MANAGE_GUILD, eP.MANAGE_ROLES, eP.MANAGE_MESSAGES, eP.MANAGE_THREADS, eP.MODERATE_MEMBERS],
+    em = [eU.KICK_MEMBERS, eU.BAN_MEMBERS, eU.ADMINISTRATOR, eU.MANAGE_CHANNELS, eU.MANAGE_GUILD, eU.MANAGE_ROLES, eU.MANAGE_MESSAGES, eU.MANAGE_THREADS, eU.MODERATE_MEMBERS],
     ey = ei.$e(...em),
     eb = 1,
     ev = 6463,
@@ -637,7 +637,7 @@ let eW = 'token',
             ja: 'https://twitter.com/discord_jp'
         })
     }),
-    ek = Object.freeze({
+    eV = Object.freeze({
         WELCOME: ''.concat(el, '/welcome/'),
         ME: ''.concat(el, '/channels/@me'),
         SETTINGS: (e, t) =>
@@ -664,8 +664,8 @@ let eW = 'token',
         CHANNEL: (e, t) => '/channels/'.concat(e, '/').concat(t),
         REPORT: ''.concat(el, '/report')
     });
-((J = O || (O = {})).INDEX = '/'), (J.INDEX_WORD = '/index'), (J.INDEX_BUCKET = '/index/:bucketId'), (J.CHANGELOGS = '/changelogs/:date'), (J.COMMUNITY = '/community'), (J.COMPANY = '/company'), (J.COMPANY_INFORMATION = '/company-information'), (J.CREATORS = '/creators'), (J.DOWNLOADS = '/downloads'), (J.DOWNLOAD = '/download'), (J.GAMING = '/gaming'), (J.PRIVACY = '/privacy'), (J.TOS = '/tos'), (J.TERMS = '/terms'), (J.STORE_TERMS = '/store-terms'), (J.ACKNOWLEDGEMENTS = '/acknowledgements'), (J.LICENSES = '/licenses'), (J.PARTNERS = '/partners'), (J.HYPESQUAD = '/hypesquad'), (J.HYPESQUAD_RIOT = '/hypesquad-riot'), (J.BRANDING = '/branding'), (J.ERROR_404 = '/404'), (J.JOBS = '/jobs'), (J.JOB = '/jobs/:jobId'), (J.STREAMKIT = '/streamkit'), (J.SECURITY = '/security'), (J.NITRO = '/nitro'), (J.DISCOVER = '/servers'), (J.QUESTS = '/ads/quests'), (J.GUIDELINES = '/guidelines'), (J.RICH_PRESENCE = '/rich-presence'), (J.VERIFICATION = '/verification'), (J.OPEN_SOURCE = '/open-source'), (J.WARFRAME = '/warframe'), (J.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (J.SAFETY_LANDING = '/safetycenter'), (J.SAFETY_ARTICLE_ROOT = '/safety'), (J.SAFETY_ARTICLE = '/safety/:article'), (J.NEWSROOM = '/newsroom'), (J.INSPIRATION = '/inspiration'), (J.MOD_ACADEMY_LANDING = '/moderation'), (J.MOD_ACADEMY_EXAM = '/moderation/exam'), (J.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (J.BLOG = '/blog'), (J.APP_DIRECTORY = '/application-directory'), (J.REFRESH_INDEX = '/new'), (J.REFRESH_INDEX_WORD = '/new/index'), (J.REFRESH_COMPANY = '/new/company'), (J.REFRESH_DOWNLOAD = '/new/download'), (J.REFRESH_PRIVACY = '/new/privacy'), (J.REFRESH_TERMS = '/new/terms'), (J.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (J.REFRESH_LICENSES = '/new/licenses'), (J.REFRESH_BRANDING = '/new/branding'), (J.REFRESH_JOBS = '/new/jobs'), (J.REFRESH_JOB = '/new/jobs/:jobId'), (J.REFRESH_STREAMKIT = '/new/streamkit'), (J.REFRESH_NITRO = '/new/nitro'), (J.REFRESH_GUIDELINES = '/new/guidelines'), (J.REFRESH_SAFETY_LANDING = '/new/safety'), (J.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (J.COLLEGE = '/college'), (J.LEAGUE_CLUBS = '/league-communities'), (J.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (J.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (J.LEGACY_DEV_NEWSLETTER = '/newsletter'), (J.LEGAL_ARCHIVE = '/archive/'), (J.TERMS_MAY_2020 = '/archive/terms/may-2020'), (J.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (J.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (J.FALL_RELEASE_2023 = '/fallrelease'), (J.MOBILE_REDESIGN_2023 = '/mobile'), (J.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (J.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (J.WHY_DISCORD = '/why-discord'), (J.XBOX_OFFER = '/discord-xbox-offer-2020'), (J.COLLEGE_BRUINS = '/bruins'), (J.COLLEGE_ANTEATERS = '/anteaters'), (J.COLLEGE_GAUCHOS = '/gauchos'), (J.COLLEGE_BEARS = '/bears'), (J.COLLEGE_SLUGS = '/slugs'), (J.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (J.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (J.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (J.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(ek), (0, eE.Ft)(O);
-let eV = Object.freeze({
+((J = O || (O = {})).INDEX = '/'), (J.INDEX_WORD = '/index'), (J.INDEX_BUCKET = '/index/:bucketId'), (J.CHANGELOGS = '/changelogs/:date'), (J.COMMUNITY = '/community'), (J.COMPANY = '/company'), (J.COMPANY_INFORMATION = '/company-information'), (J.CREATORS = '/creators'), (J.DOWNLOADS = '/downloads'), (J.DOWNLOAD = '/download'), (J.GAMING = '/gaming'), (J.PRIVACY = '/privacy'), (J.TOS = '/tos'), (J.TERMS = '/terms'), (J.STORE_TERMS = '/store-terms'), (J.ACKNOWLEDGEMENTS = '/acknowledgements'), (J.LICENSES = '/licenses'), (J.PARTNERS = '/partners'), (J.HYPESQUAD = '/hypesquad'), (J.HYPESQUAD_RIOT = '/hypesquad-riot'), (J.BRANDING = '/branding'), (J.ERROR_404 = '/404'), (J.JOBS = '/jobs'), (J.JOB = '/jobs/:jobId'), (J.STREAMKIT = '/streamkit'), (J.SECURITY = '/security'), (J.NITRO = '/nitro'), (J.DISCOVER = '/servers'), (J.QUESTS = '/ads/quests'), (J.GUIDELINES = '/guidelines'), (J.RICH_PRESENCE = '/rich-presence'), (J.VERIFICATION = '/verification'), (J.OPEN_SOURCE = '/open-source'), (J.WARFRAME = '/warframe'), (J.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (J.SAFETY_LANDING = '/safetycenter'), (J.SAFETY_ARTICLE_ROOT = '/safety'), (J.SAFETY_ARTICLE = '/safety/:article'), (J.NEWSROOM = '/newsroom'), (J.INSPIRATION = '/inspiration'), (J.MOD_ACADEMY_LANDING = '/moderation'), (J.MOD_ACADEMY_EXAM = '/moderation/exam'), (J.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (J.BLOG = '/blog'), (J.APP_DIRECTORY = '/application-directory'), (J.REFRESH_INDEX = '/new'), (J.REFRESH_INDEX_WORD = '/new/index'), (J.REFRESH_COMPANY = '/new/company'), (J.REFRESH_DOWNLOAD = '/new/download'), (J.REFRESH_PRIVACY = '/new/privacy'), (J.REFRESH_TERMS = '/new/terms'), (J.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (J.REFRESH_LICENSES = '/new/licenses'), (J.REFRESH_BRANDING = '/new/branding'), (J.REFRESH_JOBS = '/new/jobs'), (J.REFRESH_JOB = '/new/jobs/:jobId'), (J.REFRESH_STREAMKIT = '/new/streamkit'), (J.REFRESH_NITRO = '/new/nitro'), (J.REFRESH_GUIDELINES = '/new/guidelines'), (J.REFRESH_SAFETY_LANDING = '/new/safety'), (J.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (J.COLLEGE = '/college'), (J.LEAGUE_CLUBS = '/league-communities'), (J.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (J.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (J.LEGACY_DEV_NEWSLETTER = '/newsletter'), (J.LEGAL_ARCHIVE = '/archive/'), (J.TERMS_MAY_2020 = '/archive/terms/may-2020'), (J.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (J.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (J.FALL_RELEASE_2023 = '/fallrelease'), (J.MOBILE_REDESIGN_2023 = '/mobile'), (J.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (J.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (J.WHY_DISCORD = '/why-discord'), (J.XBOX_OFFER = '/discord-xbox-offer-2020'), (J.COLLEGE_BRUINS = '/bruins'), (J.COLLEGE_ANTEATERS = '/anteaters'), (J.COLLEGE_GAUCHOS = '/gauchos'), (J.COLLEGE_BEARS = '/bears'), (J.COLLEGE_SLUGS = '/slugs'), (J.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (J.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (J.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (J.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, eE.Ft)(eV), (0, eE.Ft)(O);
+let ek = Object.freeze({
     FACEBOOK_URL: 'https://www.facebook.com/discord/',
     INSTAGRAM_URL: 'https://www.instagram.com/discord/',
     YOUTUBE_URL: 'https://www.youtube.com/discord/',
@@ -962,9 +962,9 @@ let eF = 'US';
     (et[(et.INDIE = 67)] = 'INDIE'),
     (et[(et.ARCADE = 68)] = 'ARCADE'),
     (et[(et.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((er = P || (P = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
+    ((er = U || (U = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
     (er[(er.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
-    ((en = U || (U = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
+    ((en = P || (P = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
     (en.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
     (en.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
     ((ea = M || (M = {})).SWIPE = 'SWIPE'),

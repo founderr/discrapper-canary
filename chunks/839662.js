@@ -7,8 +7,8 @@ var i = n(44136),
     l = n(354459);
 function r(e, t) {
     var n, r;
-    let a = null,
-        s = null,
+    let s = null,
+        a = null,
         o = null,
         c = !1,
         u = !1;
@@ -16,14 +16,14 @@ function r(e, t) {
         case l.fO.ACTIVITY:
             break;
         case l.fO.USER:
-            (a = e.streamId), (o = e.voiceState), (c = e.speaking), (u = e.ringing);
+            (s = e.streamId), (o = e.voiceState), (c = e.speaking), (u = e.ringing);
             break;
         case l.fO.STREAM:
-            (a = e.streamId), (s = e.stream);
+            (s = e.streamId), (a = e.stream);
     }
     return {
-        streamId: a,
-        stream: s,
+        streamId: s,
+        stream: a,
         speaking: c,
         ringing: u,
         muted: null !== (n = null == o ? void 0 : o.isVoiceMuted()) && void 0 !== n && n,

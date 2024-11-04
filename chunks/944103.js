@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(131704),
-    a = n(9156),
-    s = n(423589),
+    s = n(9156),
+    a = n(423589),
     o = n(674190),
     c = n(624617),
     u = n(490897);
@@ -23,17 +23,17 @@ let d = Object.freeze({
 });
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, s.Mn)('useShouldRenderBanner'),
+        n = (0, a.Mn)('useShouldRenderBanner'),
         h = (0, l.e7)(
-            [c.Z, a.ZP],
+            [c.Z, s.ZP],
             () => {
                 let { guild_id: t, id: n } = e;
                 if (!r.$N.has(e.type)) return !1;
-                let i = a.ZP.resolveUnreadSetting(e),
-                    l = a.ZP.getChannelUnreadSetting(t, n),
-                    s = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
+                let i = s.ZP.resolveUnreadSetting(e),
+                    l = s.ZP.getChannelUnreadSetting(t, n),
+                    a = c.Z.getNumberOfRendersSince(d.NOTICE_RENDER.PER_SECONDS),
                     o = c.Z.getNumberOfChannelVisitsSince(t, n, d.CHANNEL_VISTS.PER_SECONDS);
-                return l === u.i.UNSET && i !== u.i.ALL_MESSAGES && s <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
+                return l === u.i.UNSET && i !== u.i.ALL_MESSAGES && a <= d.NOTICE_RENDER.MAX && o >= d.CHANNEL_VISTS.MIN;
             },
             [e]
         );

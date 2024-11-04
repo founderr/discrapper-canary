@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(475179),
     u = n(763520),
@@ -52,14 +52,14 @@ function y(e) {
 function P(e) {
     let { participant: t, channel: n, inCall: r, width: o, paused: C, selected: y, fit: P, onVideoResize: M, blocked: R, noVideoRender: L = !1, pulseSpeakingIndicator: k = !1 } = e,
         O = _.Z.getVideoComponent(),
-        w = (0, s.e7)([x.default], () => x.default.getId()),
+        w = (0, a.e7)([x.default], () => x.default.getId()),
         { user: D, streamId: U, speaking: B } = t,
         H = D.id === w,
         F = (0, b.ZP)(t),
-        G = (0, s.e7)([I.Z], () => I.Z.isFocused()),
-        V = (0, s.e7)([f.Z], () => f.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
-        z = (0, s.e7)([_.Z], () => null != D.id && _.Z.isLocalVideoDisabled(D.id, (0, h.Z)(t.type)), [D.id, t.type]),
-        W = (0, s.e7)([v.ZP], () => v.ZP.isGuestOrLurker(n.guild_id, D.id)),
+        G = (0, a.e7)([I.Z], () => I.Z.isFocused()),
+        V = (0, a.e7)([f.Z], () => f.Z.getWindowFocused(S.KJ3.CHANNEL_CALL_POPOUT)),
+        z = (0, a.e7)([_.Z], () => null != D.id && _.Z.isLocalVideoDisabled(D.id, (0, h.Z)(t.type)), [D.id, t.type]),
+        W = (0, a.e7)([v.ZP], () => v.ZP.isGuestOrLurker(n.guild_id, D.id)),
         Y = E.ZP.getName(n.getGuildId(), n.id, D) + (W ? ' '.concat(T.intl.string(T.t['pFO/Pj'])) : ''),
         K = B && (V || G),
         q = o < 124 ? A : j,
@@ -69,7 +69,7 @@ function P(e) {
             size: q,
             animateOnHover: !K
         }),
-        Q = (0, s.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
+        Q = (0, a.e7)([d.Z], () => d.Z.getSelectedParticipant(n.id));
     return (l.useEffect(() => {
         n.isGuildStageVoice() && !F && (null == Q ? void 0 : Q.id) === D.id && c.Z.selectParticipant(n.id, null);
     }, [F]),
@@ -91,7 +91,7 @@ function P(e) {
               U
           )
         : (0, i.jsx)('div', {
-              className: a()(N.content, { [N.blockedAvatar]: R }),
+              className: s()(N.content, { [N.blockedAvatar]: R }),
               children: (0, i.jsx)(m.Z, {
                   'aria-label': Y,
                   src: X,

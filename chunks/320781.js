@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(471445),
-    s = n(456269),
+    s = n(471445),
+    a = n(456269),
     o = n(660189),
     c = n(257511),
     u = n(967128),
@@ -18,10 +18,10 @@ var l = n(442837),
 function m(e) {
     var t;
     let { channel: n } = e,
-        m = (0, s.eV)(n),
+        m = (0, a.eV)(n),
         { firstMessage: p } = (0, l.cj)([o.Z], () => o.Z.getMessage(n.id)),
-        f = new Set((0, s.kn)(n, m)),
-        g = null !== (t = (0, a.KS)(n)) && void 0 !== t ? t : r.ChatIcon;
+        f = new Set((0, a.kn)(n, m)),
+        g = null !== (t = (0, s.KS)(n)) && void 0 !== t ? t : r.ChatIcon;
     return (0, i.jsxs)(u.ZP, {
         channelId: n.id,
         className: h.container,

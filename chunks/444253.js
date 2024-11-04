@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(358221),
-    s = n(441061),
+    s = n(358221),
+    a = n(441061),
     o = n(431368),
     c = n(167675),
     u = n(418469),
@@ -17,9 +17,9 @@ var l = n(442837),
     m = n(388032);
 function p(e) {
     let { channelId: t, onClose: n, appContext: p, exitFullScreen: f, onSelect: g } = e,
-        C = (0, l.e7)([a.Z], () => a.Z.getSelectedParticipant(t)),
+        C = (0, l.e7)([s.Z], () => s.Z.getSelectedParticipant(t)),
         x = (null == C ? void 0 : C.type) === h.fO.STREAM ? C.stream : null,
-        v = (0, s.Z)(t),
+        v = (0, a.Z)(t),
         _ = (0, c.Z)(),
         I = (0, o.Z)(t),
         E = (0, d.Z)(t);

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(816782),
-    s = n(221292),
+    s = n(816782),
+    a = n(221292),
     o = n(687158),
     c = n(646915),
     u = n(433355),
@@ -26,11 +26,11 @@ function p(e) {
         tooltip: g || n ? m.intl.string(m.t.YneDgI) : C ? m.intl.string(m.t.niD64e) : m.intl.string(m.t['+FAsHh']),
         icon: r.UserCircleStatusIcon,
         onClick: () => {
-            (0, s.TY)({
+            (0, a.TY)({
                 displayProfile: f,
                 isProfileOpen: !C
             }),
-                a.Z.toggleProfilePanelSection();
+                s.Z.toggleProfilePanelSection();
         },
         selected: C && !g && !n
     });

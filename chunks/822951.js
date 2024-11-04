@@ -2,8 +2,8 @@ n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(481060),
     c = n(600164),
     u = n(210080);
@@ -23,7 +23,7 @@ function d(e, t, n) {
 class h extends (i = r.PureComponent) {
     render() {
         let e;
-        let { renderFooter: t, selectable: n, renderHeader: i, className: r, onClose: a, children: d } = this.props;
+        let { renderFooter: t, selectable: n, renderHeader: i, className: r, onClose: s, children: d } = this.props;
         return (
             null != t &&
                 (e = (0, l.jsx)(o.ModalFooter, {
@@ -31,7 +31,7 @@ class h extends (i = r.PureComponent) {
                     children: t()
                 })),
             (0, l.jsx)(o.Modal, {
-                onCloseRequest: a,
+                onCloseRequest: s,
                 renderModal: (t) => {
                     let { onClose: h, ...m } = t;
                     return (0, l.jsxs)(o.ModalRoot, {
@@ -47,14 +47,14 @@ class h extends (i = r.PureComponent) {
                                         grow: 0,
                                         children: (0, l.jsx)(o.ModalCloseButton, {
                                             onClick: () => {
-                                                null != a && a(), h();
+                                                null != s && s(), h();
                                             }
                                         })
                                     })
                                 ]
                             }),
                             (0, l.jsx)(o.ModalContent, {
-                                className: s()(r, u.content, { selectable: n }),
+                                className: a()(r, u.content, { selectable: n }),
                                 scrollerRef: this.scrollerRef,
                                 onScroll: this.handleScroll,
                                 children: d

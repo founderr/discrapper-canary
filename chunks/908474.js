@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    a = n(481060),
-    s = n(346486),
+    s = n(481060),
+    a = n(346486),
     o = n(69882),
     c = n(815790),
     u = n(893966),
@@ -29,25 +29,25 @@ function p(e) {
         v = l.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
         _ = l.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
     return null != g || v
-        ? (0, i.jsx)(a.FormItem, {
+        ? (0, i.jsx)(s.FormItem, {
               title: h.intl.string(h.t['7V375+']),
               titleClassName: m.infoTitle,
               children: (0, i.jsxs)(d.WM, {
                   children: [
                       null != g &&
                           (0, i.jsx)(d._2, {
-                              icon: (0, i.jsx)(a.ChatWarningIcon, {
+                              icon: (0, i.jsx)(s.ChatWarningIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: d.Mn,
                                   height: d.Mn
                               }),
-                              name: (0, i.jsx)(a.Text, {
+                              name: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
                                   children: h.intl.string(h.t.ZRnONz)
                               }),
-                              description: (0, i.jsx)(a.Text, {
+                              description: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
                                   children: x
@@ -56,21 +56,21 @@ function p(e) {
                       v &&
                           null != _ &&
                           (0, i.jsx)(d._2, {
-                              icon: (0, i.jsx)(a.ClockWarningIcon, {
+                              icon: (0, i.jsx)(s.ClockWarningIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: d.Mn,
                                   height: d.Mn
                               }),
-                              name: (0, i.jsx)(a.Text, {
+                              name: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
                                   children: h.intl.string(h.t['TJ8/tL'])
                               }),
-                              description: (0, i.jsx)(a.Text, {
+                              description: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: (0, i.jsx)(s.Z, {
+                                  children: (0, i.jsx)(a.Z, {
                                       deadline: _,
                                       showUnits: !0,
                                       stopAtOneSec: !0

@@ -1,9 +1,9 @@
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(653603),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(653603),
+    o = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(904245),
@@ -24,7 +24,7 @@ let S = l.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: a()(I.blockedNoticeContainer, { [I.compact]: l }),
+                className: s()(I.blockedNoticeContainer, { [I.compact]: l }),
                 children: [
                     (0, i.jsx)('div', {
                         className: I.blockedNoticeIcon,
@@ -45,7 +45,7 @@ let S = l.memo(function (e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: a()(I.ephemeralAccessories, { [I.compact]: l }),
+                className: s()(I.ephemeralAccessories, { [I.compact]: l }),
                 children: (0, i.jsx)(f.Z, {
                     message: t,
                     onDeleteMessage: r,
@@ -63,7 +63,7 @@ let S = l.memo(function (e) {
 });
 t.Z = l.memo(function (e) {
     var t, n;
-    let { className: r, compact: s, message: u, children: p, content: f, onUpdate: v } = e,
+    let { className: r, compact: a, message: u, children: p, content: f, onUpdate: v } = e,
         Z = null === (t = u.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         T = l.useRef(!1),
         N = (0, c.e7)([m.Z], () => m.Z.getMessage(u.id), [u.id]),
@@ -76,7 +76,7 @@ t.Z = l.memo(function (e) {
         }, [v, u.content, f, Z, p]),
         (0, i.jsxs)('div', {
             id: (0, g.ut)(u),
-            className: a()(r, b.markup, {
+            className: s()(r, b.markup, {
                 [E.messageContent]: !0,
                 [E.markupRtl]: 'rtl' === o()(u.content),
                 [I.blockedEdit]: null == N ? void 0 : N.isBlockedEdit,
@@ -103,7 +103,7 @@ t.Z = l.memo(function (e) {
                 (0, i.jsx)(S, {
                     notice: null !== (n = null == N ? void 0 : N.errorMessage) && void 0 !== n ? n : _.intl.string(_.t.zQ69pq),
                     message: u,
-                    compact: s,
+                    compact: a,
                     onDismiss: j
                 })
             ]

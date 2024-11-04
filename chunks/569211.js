@@ -7,15 +7,15 @@ n.d(t, {
 var i = n(192379),
     l = n(585483),
     r = n(424602),
-    a = n(783097),
-    s = n(981631);
+    s = n(783097),
+    a = n(981631);
 function o(e) {
     let { obstructedFromView: t, disabled: n } = e,
         o = r._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
         [c, u] = i.useState(null),
         d = i.useRef(c);
     d.current = c;
-    let h = i.useMemo(() => (null != c ? (0, a.sl)(c) : null), [c]);
+    let h = i.useMemo(() => (null != c ? (0, s.sl)(c) : null), [c]);
     i.useEffect(() => {
         n && u(null);
     }, [n]);
@@ -42,10 +42,10 @@ function o(e) {
                     (null === (t = d.current) || void 0 === t ? void 0 : t.id) === n && (u(null), (d.current = null));
                 };
             return (
-                l.S.subscribe(s.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e),
-                l.S.subscribe(s.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n),
+                l.S.subscribe(a.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e),
+                l.S.subscribe(a.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n),
                 () => {
-                    l.S.unsubscribe(s.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e), l.S.unsubscribe(s.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n);
+                    l.S.unsubscribe(a.CkL.SHOW_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, e), l.S.unsubscribe(a.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, n);
                 }
             );
         }, [t]),

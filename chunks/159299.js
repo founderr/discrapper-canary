@@ -2,8 +2,8 @@ n(47120), n(653041), n(724458);
 var i,
     l = n(392711),
     r = n.n(l),
-    a = n(442837),
-    s = n(570140),
+    s = n(442837),
+    a = n(570140),
     o = n(592125),
     c = n(271383),
     u = n(797316),
@@ -55,8 +55,8 @@ class I {
     updateUserId(e) {
         if (!this.allUserIds.has(e)) return !1;
         let [t, n, i] = this.findOldState(e),
-            [l, r, a] = this.calculateNewState(e, o.Z.getChannel(this.parentId));
-        return (t !== l || n !== r || i !== a) && (this.removeUserId(e, t), this.addUser(e, l, r, a), !0);
+            [l, r, s] = this.calculateNewState(e, o.Z.getChannel(this.parentId));
+        return (t !== l || n !== r || i !== s) && (this.removeUserId(e, t), this.addUser(e, l, r, s), !0);
     }
     addUserId(e) {
         let [t, n, i] = this.calculateNewState(e, o.Z.getChannel(this.parentId));
@@ -77,19 +77,19 @@ class I {
                 usersById: {},
                 userIds: []
             });
-        let a = this.sections[t];
+        let s = this.sections[t];
         if (
-            ((a.usersById[e] = {
+            ((s.usersById[e] = {
                 userId: e,
                 displayName: n,
                 canViewChannel: i
             }),
             l)
         )
-            a.userIds.push(e);
+            s.userIds.push(e);
         else {
-            let t = this.findUserIdSortedPosition(a, e, n);
-            a.userIds.splice(t, 0, e);
+            let t = this.findUserIdSortedPosition(s, e, n);
+            s.userIds.splice(t, 0, e);
         }
         this.version++;
     }
@@ -97,12 +97,12 @@ class I {
         let { userIds: i, usersById: l } = e;
         for (let e = 0; e < i.length; e++) {
             let r = i[e],
-                a = l[r].displayName;
-            if (a === n) {
+                s = l[r].displayName;
+            if (s === n) {
                 if (t < r) return e;
-            } else if (null == a) {
+            } else if (null == s) {
                 if (null != n) return e;
-            } else if (null != n && n < a) return e;
+            } else if (null != n && n < s) return e;
         }
         return i.length;
     }
@@ -124,8 +124,8 @@ class I {
         var n, i;
         let l = c.ZP.getMember(this.guildId, e),
             r = m.default.getUser(e),
-            a = m.default.getCurrentUser(),
-            s = (null == r ? void 0 : r.id) === (null == a ? void 0 : a.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
+            s = m.default.getCurrentUser(),
+            a = (null == r ? void 0 : r.id) === (null == s ? void 0 : s.id) ? h.Z.getStatus() : d.Z.getStatus(e, this.guildId),
             o =
                 null != r &&
                 null != t &&
@@ -134,7 +134,7 @@ class I {
                     user: r,
                     context: t
                 }),
-            u = s !== x.Skl.OFFLINE && s !== x.Skl.INVISIBLE && s !== x.Skl.UNKNOWN ? (null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
+            u = a !== x.Skl.OFFLINE && a !== x.Skl.INVISIBLE && a !== x.Skl.UNKNOWN ? (null !== (n = null == l ? void 0 : l.hoistRoleId) && void 0 !== n ? n : 'online') : 'offline',
             p = null !== (i = null == l ? void 0 : l.nick) && void 0 !== i ? i : C.ZP.getName(r);
         return [u, null == p ? void 0 : p.toLowerCase(), o];
     }
@@ -157,7 +157,7 @@ function S(e) {
     for (let e in _) _[e].guildId === t && (_[e].rebuild(), (n = !0));
     return n;
 }
-class Z extends (i = a.ZP.Store) {
+class Z extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(o.Z, c.ZP, u.Z, d.Z, h.Z, m.default),
             this.syncWith([u.Z], () => {
@@ -183,12 +183,12 @@ class Z extends (i = a.ZP.Store) {
         var i, l;
         let r = _[e];
         if (null == r) return !1;
-        let a = null === (i = r.sections[t]) || void 0 === i ? void 0 : i.usersById[n];
-        return null !== (l = null == a ? void 0 : a.canViewChannel) && void 0 !== l && l;
+        let s = null === (i = r.sections[t]) || void 0 === i ? void 0 : i.usersById[n];
+        return null !== (l = null == s ? void 0 : s.canViewChannel) && void 0 !== l && l;
     }
 }
 v(Z, 'displayName', 'ThreadMemberListStore'),
-    (t.Z = new Z(s.Z, {
+    (t.Z = new Z(a.Z, {
         CONNECTION_OPEN: function () {
             _ = {};
         },

@@ -6,11 +6,11 @@ n.d(t, {
 var i = n(200651),
     l = n(442837),
     r = n(481060),
-    a = n(9156),
-    s = n(388032);
+    s = n(9156),
+    a = n(388032);
 let o = (e) => {
     let { className: t, channel: o, user: c } = e,
-        u = (0, l.e7)([a.ZP], () => a.ZP.isChannelMuted(null, o.id));
+        u = (0, l.e7)([s.ZP], () => s.ZP.isChannelMuted(null, o.id));
     return c.bot
         ? (0, i.jsx)(r.Button, {
               className: t,
@@ -26,7 +26,7 @@ let o = (e) => {
                           });
                   });
               },
-              children: u ? s.intl.string(s.t.YqAjX1) : s.intl.string(s.t['w4m94+'])
+              children: u ? a.intl.string(a.t.YqAjX1) : a.intl.string(a.t['w4m94+'])
           })
         : null;
 };

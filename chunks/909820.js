@@ -1,12 +1,12 @@
 n.d(t, {
     B2: function () {
-        return s;
+        return a;
     },
     H_: function () {
-        return a;
+        return s;
     }
 });
 let { Layer: i, LayerContainer: l, LayerProvider: r } = (0, n(481060).createLayer)('ChannelCallChat'),
-    a = l,
-    s = r;
+    s = l,
+    a = r;
 t.ZP = i;

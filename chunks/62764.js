@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(852229),
+    s = n.n(r),
+    a = n(852229),
     o = n(442837),
     c = n(52826),
     u = n(481060),
@@ -87,10 +87,10 @@ function L(e) {
                 postId: G.id,
                 location: { section: y.jXE.CHANNEL_HEADER }
             }),
-                (0, s.J)((0, T.EO)(G, J)),
+                (0, a.J)((0, T.EO)(G, J)),
                 F(!0);
         },
-        ea = () => {
+        es = () => {
             d.Z.jumpToMessage({
                 channelId: G.id,
                 messageId: G.id,
@@ -98,15 +98,15 @@ function L(e) {
                 jumpType: h.SR.INSTANT
             });
         },
-        es = z ? u.CheckmarkLargeIcon : u.BellIcon;
+        ea = z ? u.CheckmarkLargeIcon : u.BellIcon;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: a()(M.container, { [M.header]: U }),
+                className: s()(M.container, { [M.header]: U }),
                 ref: k,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(M.reactButtons, { [M.loading]: et }),
+                        className: s()(M.reactButtons, { [M.loading]: et }),
                         children: [
                             !ei &&
                                 !Y &&
@@ -167,9 +167,9 @@ function L(e) {
                                         size: u.Button.Sizes.SMALL,
                                         onClick: el,
                                         className: M.button,
-                                        innerClassName: a()(M.buttonInner, { [M.active]: z }),
+                                        innerClassName: s()(M.buttonInner, { [M.active]: z }),
                                         children: [
-                                            (0, i.jsx)(es, {
+                                            (0, i.jsx)(ea, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
@@ -213,7 +213,7 @@ function L(e) {
                                             ...e,
                                             look: u.Button.Looks.BLANK,
                                             size: u.Button.Sizes.SMALL,
-                                            onClick: ea,
+                                            onClick: es,
                                             className: M.button,
                                             innerClassName: M.buttonInner,
                                             children: (0, i.jsx)(c.Z, {

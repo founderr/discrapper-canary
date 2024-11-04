@@ -109,7 +109,7 @@ c({
         })
     }),
     o(g, (e) => e.getClientExtensionResults());
-var m = {
+var f = {
         mediation: u(s),
         publicKey: c({
             challenge: c(a),
@@ -121,7 +121,7 @@ var m = {
         }),
         signal: u(s)
     },
-    f = {
+    m = {
         type: c(s),
         id: c(s),
         rawId: c(a),
@@ -135,9 +135,9 @@ var m = {
         clientExtensionResults: o(g, (e) => e.getClientExtensionResults())
     };
 function p(e) {
-    return l(i, m, e);
+    return l(i, f, e);
 }
 async function _(e) {
     let t = await navigator.credentials.get(e);
-    return (t.toJSON = () => l(r, f, t)), t;
+    return (t.toJSON = () => l(r, m, t)), t;
 }

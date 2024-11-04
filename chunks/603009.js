@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(100621),
+    s = n.n(r),
+    a = n(100621),
     o = n(704215),
     c = n(481060),
     u = n(442837),
@@ -111,10 +111,10 @@ function A(e) {
         var l, r;
         return (
             t &&
-            (0, i.jsx)(s.animated.div, {
+            (0, i.jsx)(a.animated.div, {
                 onMouseEnter: () => f(!0),
                 onMouseLeave: () => f(!1),
-                className: a()(j.wrapper),
+                className: s()(j.wrapper),
                 style: {
                     ...e,
                     ...y
@@ -124,7 +124,7 @@ function A(e) {
                     'aria-label': D,
                     onClick: R,
                     children: (0, i.jsxs)('div', {
-                        className: a()(j.toastContainerInner, p ? j.hovered : null),
+                        className: s()(j.toastContainerInner, p ? j.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: j.guildIconContainer,
@@ -185,13 +185,13 @@ function y(e) {
         t = (0, u.e7)([f.Z], () => f.Z.getGuildId()),
         n = (0, E.h)(t, 'clan_tag_upsell_toast'),
         r = (0, u.e7)([p.Z], () => p.Z.getGuild(t), [t]),
-        [a, s] = l.useState(!1),
+        [s, a] = l.useState(!1),
         c = l.useRef(null);
     l.useEffect(
         () => (
             n &&
                 (c.current = window.setTimeout(() => {
-                    s(!0),
+                    a(!0),
                         C.default.track(Z.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
                             guild_id: null != t ? t : Z.lds
@@ -204,17 +204,17 @@ function y(e) {
         []
     );
     let d = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, v.SJ)(t);
+            if ((a(!1), null != t)) (0, v.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, T.L.DISMISS);
+            if ((a(!1), null != t)) (0, m.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, T.L.DISMISS);
         }, [t]);
     return n && null != t && null != r
         ? (0, i.jsx)(A, {
               guild: r,
               onConfirm: d,
               onDismiss: h,
-              showToast: a
+              showToast: s
           })
         : null;
 }

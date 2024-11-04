@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(100527),
-    s = n(367907),
+    s = n(100527),
+    a = n(367907),
     o = n(450936),
     c = n(368478),
     u = n(499254),
@@ -22,9 +22,9 @@ function g(e) {
         g = null == m ? void 0 : m.id,
         x = l.useCallback(() => {
             u.__(d._b.TEXT, h.I.NORMAL, { applicationId: g }),
-                (0, s.yw)(p.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
+                (0, a.yw)(p.rMx.APPLICATION_COMMAND_SECTION_SELECTED, {
                     application_id: g,
-                    location: a.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
+                    location: s.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON,
                     source: d._b.TEXT
                 });
         }, [g]);
@@ -40,7 +40,7 @@ function g(e) {
           });
 }
 function C(e) {
-    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: a, entryPointCommandButtonRef: s, type: o } = e,
+    let { channel: t, application: n, primaryEntryPointCommand: l, onOpenButtonPress: s, entryPointCommandButtonRef: a, type: o } = e,
         {
             isExecutingLaunchInteraction: u,
             buttonText: d,
@@ -61,7 +61,7 @@ function C(e) {
             isEmbeddedApp: p,
             hasActiveMatchingEmbeddedActivity: h,
             currentEmbeddedActivity: g,
-            onOpenButtonPress: a,
+            onOpenButtonPress: s,
             channelRecipientUserId: C,
             setIsExecutingLaunchInteraction: x,
             analyticsLocations: v
@@ -74,7 +74,7 @@ function C(e) {
         color: I,
         submitting: u,
         onClick: _,
-        buttonRef: s,
+        buttonRef: a,
         disabled: E,
         children: d
     });

@@ -6,14 +6,14 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(569545),
-    a = n(959457),
-    s = n(626135),
+    s = n(959457),
+    a = n(626135),
     o = n(981631),
     c = n(474936);
 function u(e, t) {
     let { handleMouseDown: n, handleMouseMove: u, handleMouseUp: d, handleMouseEnter: h } = e,
         m = i.useRef(null),
-        p = (0, l.e7)([a.Z], () => a.Z.getRTCConnection((0, r.V9)(t))),
+        p = (0, l.e7)([s.Z], () => s.Z.getRTCConnection((0, r.V9)(t))),
         f = i.useCallback(
             (e, t, i) => {
                 (m.current = Date.now()), n(e, t, i);
@@ -29,7 +29,7 @@ function u(e, t) {
                         (i = e),
                             (l = p),
                             (r = Date.now() - m.current),
-                            s.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
+                            a.default.track(o.rMx.PREMIUM_FEATURE_USAGE, {
                                 feature_name: ''.concat(c.QP.SHARED_CANVAS, '_').concat(i.type),
                                 feature_tier: c.h1.FREE,
                                 media_session_id: l.getMediaSessionId(),

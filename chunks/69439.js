@@ -57,7 +57,7 @@ function E(e) {
 }
 function b(e) {
     var t, n, s, b;
-    let { quest: N, location: S, onReceiveErrorHints: B, contentPosition: T, rowIndex: A } = e,
+    let { quest: N, location: S, onReceiveErrorHints: T, contentPosition: B, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
         R = (0, g.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
@@ -77,8 +77,8 @@ function b(e) {
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
         D = (0, x.zK)(N, C.S7.IN_HOUSE_CONSOLE_QUEST),
-        U = (0, x.Xv)(N.config),
-        H = (0, x.cr)(N),
+        H = (0, x.Xv)(N.config),
+        U = (0, x.cr)(N),
         V = (0, u.Rf)(N),
         [z, F, G] = (0, u.me)(N, V),
         K = Q && Z === u.OH.ACCEPTED,
@@ -86,20 +86,20 @@ function b(e) {
         X = K && !Y && F.length > 1,
         J = r.useCallback(
             (e) => {
-                G(e), e === C.cd.DESKTOP && B([]);
+                G(e), e === C.cd.DESKTOP && T([]);
             },
-            [G, B]
+            [G, T]
         ),
         { text: $, onClick: ee } = (0, g.Ks)({
             progressState: Z,
             quest: N,
             isInHouseQuest: D,
             location: S,
-            isCollectibleQuest: U,
-            questContentPosition: T,
+            isCollectibleQuest: H,
+            questContentPosition: B,
             questContentRowIndex: A,
             inGiftInventory: !0,
-            isVideoQuest: H
+            isVideoQuest: U
         }),
         { startingConsoleQuest: et, startConsoleQuest: en } = (0, u.GI)({
             questId: N.id,
@@ -109,12 +109,12 @@ function b(e) {
                         questId: N.id,
                         questContent: S,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: T,
+                        questContentPosition: B,
                         questContentRowIndex: A
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), B(e);
+                R.stopAnimation(), T(e);
             }
         }),
         eo = (null === (b = N.userStatus) || void 0 === b ? void 0 : b.claimedAt) != null,
@@ -128,7 +128,7 @@ function b(e) {
               children: $
           }))
         : M
-          ? (er = H
+          ? (er = U
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(l.Button, {
@@ -208,7 +208,7 @@ function b(e) {
                                         children: [R.render(), v.intl.string(v.t.nPThNT)]
                                     })
                                 })
-                          : H
+                          : U
                             ? (0, o.jsx)(l.Button, {
                                   color: l.ButtonColors.BRAND,
                                   onClick: null != ee ? ee : void 0,

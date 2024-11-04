@@ -2,15 +2,15 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(493683),
-    a = n(599059),
-    s = n(933557),
+    s = n(599059),
+    a = n(933557),
     o = n(210975),
     c = n(981631),
     u = n(388032),
     d = n(116875);
 t.Z = (e) => {
     let { channel: t } = e,
-        n = (0, s.ZP)(t),
+        n = (0, a.ZP)(t),
         h = (0, o.m$)({
             channelId: t.id,
             location: 'ChannelName'
@@ -19,7 +19,7 @@ t.Z = (e) => {
         className: d.container,
         onDoubleClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(s.Z, {
                 minLen: 1,
                 maxLen: c.HN8,
                 className: d.channelName,

@@ -80,7 +80,7 @@ function A(e, t) {
                 return (
                     N.ZP.focus(),
                     (0, s.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e('10778'), n.e('64391')]).then(n.bind(n, 766775));
+                        let { default: e } = await Promise.all([n.e('10778'), n.e('27815')]).then(n.bind(n, 766775));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 ...t,

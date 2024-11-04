@@ -212,7 +212,7 @@ let w = m()('2015-05-15').local(),
                                 (0, i.jsx)(
                                     'span',
                                     {
-                                        className: a()({
+                                        className: a()(D.searchHistoryRow, {
                                             [D.filter]: n,
                                             [D.answer]: r,
                                             [D.nonText]: !n && !r
@@ -224,7 +224,7 @@ let w = m()('2015-05-15').local(),
                             );
                         });
                 return (0, i.jsxs)(p.Clickable, {
-                    className: a()(D.option, D.__invalid_history),
+                    className: a()(D.option),
                     onClick: t,
                     onFocus: n,
                     ...d,

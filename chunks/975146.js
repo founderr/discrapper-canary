@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    s = n(871499),
+    s = n(481060),
+    a = n(871499),
     o = n(388032),
     c = n(723134);
 function u(e) {
@@ -16,12 +16,12 @@ function u(e) {
     return (0, i.jsxs)('div', {
         className: r()(c.root, c.comboIcon, t),
         children: [
-            (0, i.jsx)(a.GroupIcon, {
+            (0, i.jsx)(s.GroupIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: c.icon
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(s.Text, {
                 color: 'none',
                 className: c.count,
                 variant: 'text-md/normal',
@@ -32,7 +32,7 @@ function u(e) {
 }
 function d(e) {
     let { count: t, ...n } = e;
-    return (0, i.jsx)(s.Z, {
+    return (0, i.jsx)(a.Z, {
         label: o.intl.string(o.t.jNqDh4),
         iconComponent: (e) => {
             let { className: n } = e;

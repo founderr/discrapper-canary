@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(592125),
+    s = n(481060),
+    a = n(592125),
     o = n(430824),
     c = n(584825),
     u = n(406074),
@@ -28,7 +28,7 @@ function C(e) {
         v = (0, c.YB)(t),
         _ = (0, r.e7)([o.Z], () => o.Z.getGuild(t), [t]),
         I = null == _ ? void 0 : _.name,
-        E = (0, r.e7)([s.Z], () => s.Z.getChannel(n)),
+        E = (0, r.e7)([a.Z], () => a.Z.getChannel(n)),
         b = l.useMemo(() => {
             let e = {};
             for (let t of x) for (let n of t.subscription_listings_ids) e[n] = t.id;
@@ -42,12 +42,12 @@ function C(e) {
     null == _)
         ? (0, i.jsx)('div', {
               className: g.__invalid_spinnerContainer,
-              children: (0, i.jsx)(a.Spinner, { className: g.__invalid_spinner })
+              children: (0, i.jsx)(s.Spinner, { className: g.__invalid_spinner })
           })
-        : (0, i.jsxs)(a.ScrollerAuto, {
+        : (0, i.jsxs)(s.ScrollerAuto, {
               className: g.pageContainer,
               children: [
-                  (0, i.jsx)(a.Heading, {
+                  (0, i.jsx)(s.Heading, {
                       variant: 'heading-xl/semibold',
                       className: g.joinCtaTitle,
                       children: f.intl.format(f.t.xHMpys, {
@@ -55,7 +55,7 @@ function C(e) {
                           channelName: null == E ? void 0 : E.name
                       })
                   }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(s.Text, {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(434404),
-    a = n(962086),
-    s = n(303737),
+    s = n(962086),
+    a = n(303737),
     o = n(981631),
     c = n(388032),
     u = n(206293),
@@ -39,7 +39,7 @@ function h(e) {
                         (0, i.jsx)(l.Button, {
                             size: l.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                (0, a.mL)(t), r.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, s.GN)(t);
+                                (0, s.mL)(t), r.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, a.GN)(t);
                             },
                             className: u.__invalid_button,
                             children: c.intl.string(c.t['I/XhUl'])

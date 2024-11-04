@@ -1,37 +1,37 @@
 n.d(t, {
     i: function () {
-        return s;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(244119);
-function s(e) {
-    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
+    s = n(244119);
+function a(e) {
+    let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: a, headerStyles: o, children: c } = e;
     return (0, i.jsxs)('div', {
-        className: a.spamBanner,
+        className: s.spamBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(a.bannerTextContainer, s),
+                className: r()(s.bannerTextContainer, a),
                 children: [
                     'string' == typeof t
                         ? (0, i.jsx)('img', {
                               src: t,
                               alt: '',
-                              className: a.bannerIcon
+                              className: s.bannerIcon
                           })
                         : t,
                     (0, i.jsxs)('div', {
-                        className: a.bannerText,
+                        className: s.bannerText,
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(a.bannerHeader, o),
+                                className: r()(s.bannerHeader, o),
                                 children: n
                             }),
                             (0, i.jsx)('div', {
-                                className: a.bannerSubtext,
+                                className: s.bannerSubtext,
                                 children: l
                             })
                         ]
@@ -39,7 +39,7 @@ function s(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: a.actionButtons,
+                className: s.actionButtons,
                 children: c
             })
         ]

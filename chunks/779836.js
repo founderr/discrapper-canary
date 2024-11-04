@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(100621),
-    s = n(399606),
+    s = n(100621),
+    a = n(399606),
     o = n(481060),
     c = n(511010),
     u = n(446183),
@@ -21,7 +21,7 @@ var l = n(120356),
     C = n(413664);
 function x(e) {
     let { summary: t, channel: n } = e,
-        l = (0, s.e7)([h.Z], () => h.Z.summaryFeedback(t)),
+        l = (0, a.e7)([h.Z], () => h.Z.summaryFeedback(t)),
         r = (e, i) => {
             e.stopPropagation(),
                 (0, m.Z)({
@@ -52,7 +52,7 @@ function x(e) {
             t
                 ? (0, i.jsx)('div', {
                       className: C.summaryFeedbackWrapper,
-                      children: (0, i.jsxs)(a.animated.div, {
+                      children: (0, i.jsxs)(s.animated.div, {
                           style: e,
                           className: C.summaryFeedback,
                           children: [
@@ -87,11 +87,11 @@ function x(e) {
 function v(e) {
     var t, n;
     let l,
-        { item: a, channel: u, index: d } = e,
-        m = (0, s.e7)([h.Z], () => h.Z.selectedSummary(u.id));
+        { item: s, channel: u, index: d } = e,
+        m = (0, a.e7)([h.Z], () => h.Z.selectedSummary(u.id));
     if (null == m) return null;
-    let p = null != a.unreadId,
-        g = null != a.content;
+    let p = null != s.unreadId,
+        g = null != s.content;
     return (
         (l = g
             ? (0, i.jsxs)(i.Fragment, {
@@ -101,7 +101,7 @@ function v(e) {
                           color: 'currentColor',
                           className: C.summaryStartIcon
                       }),
-                      a.content
+                      s.content
                   ]
               })
             : (0, i.jsxs)(i.Fragment, {
@@ -126,7 +126,7 @@ function v(e) {
                 id: p ? f.j1 : void 0,
                 children: l
             },
-            'divider-'.concat(null !== (n = null !== (t = a.contentKey) && void 0 !== t ? t : a.unreadId) && void 0 !== n ? n : d)
+            'divider-'.concat(null !== (n = null !== (t = s.contentKey) && void 0 !== t ? t : s.unreadId) && void 0 !== n ? n : d)
         )
     );
 }

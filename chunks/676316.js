@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(192379),
     l = n(661869),
     r = n(876215),
-    a = n(442837),
-    s = n(592125),
+    s = n(442837),
+    a = n(592125),
     o = n(994752);
 let c = '1221458499993600000',
     u = {
@@ -22,9 +22,9 @@ let c = '1221458499993600000',
     };
 function d(e) {
     let { entries: t, channelId: n } = e,
-        l = (0, a.e7)([s.Z], () => s.Z.getChannel(n)),
+        l = (0, s.e7)([a.Z], () => a.Z.getChannel(n)),
         r = null == l ? void 0 : l.guild_id,
-        c = (0, a.e7)([o.Z], () => null != r && null != o.Z.getLeaderboards(r), [r]);
+        c = (0, s.e7)([o.Z], () => null != r && null != o.Z.getLeaderboards(r), [r]);
     return {
         entriesWithLeaderboard: i.useMemo(() => (c ? [u, ...(null != t ? t : [])] : t), [c, t]),
         hasLeaderboardEntry: c

@@ -8,8 +8,8 @@ var a,
     r = n(200651),
     o = n(192379),
     i = n(120356),
-    s = n.n(i),
-    l = n(748780),
+    l = n.n(i),
+    s = n(748780),
     c = n(481060),
     u = n(981631),
     d = n(559737);
@@ -52,19 +52,19 @@ class p extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(l.Z.a, {
+        return (0, r.jsx)(s.Z.a, {
             href: u.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
-            className: s()(d.logo, this.props.className),
+            className: l()(d.logo, this.props.className),
             style: this.getAnimatedStyle()
         });
     }
     constructor(...t) {
         super(...t),
-            f(this, 'anim', new l.Z.Value(0)),
+            f(this, 'anim', new s.Z.Value(0)),
             f(this, 'animate', (t) => {
-                l.Z.spring(this.anim, {
+                s.Z.spring(this.anim, {
                     toValue: t,
                     friction: 10,
                     tension: 100

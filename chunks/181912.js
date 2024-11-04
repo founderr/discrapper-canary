@@ -6,19 +6,19 @@ n.d(t, {
 var i = n(26151),
     r = n(13245),
     s = n(43267),
-    o = n(933557),
+    l = n(933557),
     a = n(593481),
-    l = n(699516),
+    o = n(699516),
     c = n(594174),
     d = n(312839),
     u = n(981631),
     h = n(987650),
     p = n(388032);
 function f(e) {
-    let t = (0, o.F6)(e, c.default, l.Z),
+    let t = (0, l.F6)(e, c.default, o.Z),
         n = p.intl.string(p.t.ssrVzM),
         f = (0, s.x)(e),
-        { trackView: g, trackClick: m } = (0, d.R)(h.n0.IncomingCall, {
+        { trackView: m, trackClick: g } = (0, d.R)(h.n0.IncomingCall, {
             notif_type: h.n0.IncomingCall,
             notif_user_id: 1 === e.recipients.length ? e.recipients[0] : null,
             guild_id: e.guild_id,
@@ -34,11 +34,11 @@ function f(e) {
         confirmText: p.intl.string(p.t['0D/6R0']),
         cancelText: p.intl.string(p.t.BVN4pK),
         onNotificationShow: () => {
-            g();
+            m();
         },
         onConfirmClick: () => {
             r.Z.callPrivateChannel(e.id),
-                m('join'),
+                g('join'),
                 r.Z.track(u.rMx.VOICE_CHANNEL_SELECTED, {
                     location: 'Overlay Notificaiton',
                     guild_id: null,
@@ -47,10 +47,10 @@ function f(e) {
                 });
         },
         onCancelClick: () => {
-            i.Z.stopRinging(e.id), m('decline');
+            i.Z.stopRinging(e.id), g('decline');
         },
         onDismissClick: () => {
-            m('dismiss');
+            g('dismiss');
         }
     };
 }

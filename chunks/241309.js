@@ -15,24 +15,24 @@ n.d(t, {
 var i,
     l,
     r = n(539573),
-    a = n(388032);
-function s(e, t) {
+    s = n(388032);
+function a(e, t) {
     return {
         type: e,
         message: null != t ? t : null
     };
 }
 function o(e) {
-    return s(0, e);
+    return a(0, e);
 }
 function c() {
-    return s(0, a.intl.string(a.t['uXA57+']));
+    return a(0, s.intl.string(s.t['uXA57+']));
 }
 function u() {
-    return s(0, a.intl.string(a.t.kesTVV));
+    return a(0, s.intl.string(s.t.kesTVV));
 }
 function d(e, t) {
-    return s(1, (0, r.$q)(e, null == t ? void 0 : t.id));
+    return a(1, (0, r.$q)(e, null == t ? void 0 : t.id));
 }
 function h(e, t) {
     var n;

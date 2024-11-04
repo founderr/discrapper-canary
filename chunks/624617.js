@@ -2,8 +2,8 @@ n(733860);
 var i,
     l = n(31775),
     r = n.n(l),
-    a = n(442837),
-    s = n(570140);
+    s = n(442837),
+    a = n(570140);
 function o(e, t, n) {
     return (
         t in e
@@ -24,7 +24,7 @@ let c = {
 function u(e, t) {
     return e + t;
 }
-class d extends (i = a.ZP.PersistedStore) {
+class d extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) Array.isArray(e.bannerRenders) && (c.bannerRenders = e.bannerRenders), null != e.channelVisitsDump && c.channelVisits.load(e.channelVisitsDump);
     }
@@ -49,7 +49,7 @@ class d extends (i = a.ZP.PersistedStore) {
 }
 o(d, 'displayName', 'UnreadSettingNoticeStore'),
     o(d, 'persistKey', 'UnreadSettingNoticeStore'),
-    (t.Z = new d(s.Z, {
+    (t.Z = new d(a.Z, {
         UNREAD_SETTING_NOTICE_RENDERED: function () {
             c.bannerRenders.length > 100 && c.bannerRenders.pop(), c.bannerRenders.unshift(Date.now());
         },

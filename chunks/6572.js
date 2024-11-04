@@ -8,21 +8,21 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(442837),
-    s = n(963838),
+    s = n(442837),
+    a = n(963838),
     o = n(37091),
     c = n(388032),
     u = n(282827);
 function d(e) {
     let t,
         { channelId: n, userId: l } = e,
-        [d, h] = (0, a.Wu)([o.Z], () => [o.Z.getWaitingHighFive(n, l), o.Z.getCompletedHighFive(n, l)]);
+        [d, h] = (0, s.Wu)([o.Z], () => [o.Z.getWaitingHighFive(n, l), o.Z.getCompletedHighFive(n, l)]);
     if (null != h)
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
                     alt: c.intl.string(c.t.W6HwU1),
-                    src: (0, s._r)({
+                    src: (0, a._r)({
                         name: h[0],
                         id: null,
                         animated: !1
@@ -31,7 +31,7 @@ function d(e) {
                 }),
                 (0, i.jsx)('img', {
                     alt: c.intl.string(c.t.W6HwU1),
-                    src: (0, s._r)({
+                    src: (0, a._r)({
                         name: h[1],
                         id: null,
                         animated: !1
@@ -44,7 +44,7 @@ function d(e) {
         if (null == d) return null;
         t = (0, i.jsx)('img', {
             alt: c.intl.string(c.t.W6HwU1),
-            src: (0, s._r)({
+            src: (0, a._r)({
                 name: d,
                 id: null,
                 animated: !1

@@ -1,8 +1,8 @@
 var i = n(192379),
     l = n(904245),
     r = n(346610),
-    a = n(868643),
-    s = n(912332),
+    s = n(868643),
+    a = n(912332),
     o = n(41776),
     c = n(280845),
     u = n(665906),
@@ -85,9 +85,9 @@ t.Z = function (e, t, n) {
                     case 'f':
                         (k || U) &&
                             (0, r.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
-                            (0, a.h)(B) &&
+                            (0, s.h)(B) &&
                             (n.preventDefault(),
-                            (0, s.l8)({
+                            (0, a.l8)({
                                 messageId: B.id,
                                 channelId: H.id,
                                 source: 'keyboard-shortcut'

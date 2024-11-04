@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(786761),
     u = n(594174),
@@ -24,7 +24,7 @@ function g(e, t) {
         message: i
     };
 }
-class C extends (i = s.ZP.Store) {
+class C extends (i = a.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, h.Z, u.default);
     }
@@ -43,15 +43,15 @@ class C extends (i = s.ZP.Store) {
         );
     }
 }
-(a = 'MessageRequestPreviewStore'),
+(s = 'MessageRequestPreviewStore'),
     (r = 'displayName') in (l = C)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new C(o.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), p.clear();

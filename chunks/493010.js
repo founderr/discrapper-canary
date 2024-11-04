@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(704215),
-    a = n(481060),
-    s = n(475179),
+    s = n(481060),
+    a = n(475179),
     o = n(561472),
     c = n(287746),
     u = n(325708),
@@ -22,10 +22,10 @@ t.Z = function (e) {
         (0, h.EW)(r.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
     }, []);
     let E = l.useCallback(() => {
-            s.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
+            a.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         b = (0, i.jsx)(m.ZP.Icon, {
-            icon: a.XSmallIcon,
+            icon: s.XSmallIcon,
             tooltip: v.intl.string(v.t.cpT0Cg),
             onClick: E
         });
@@ -43,7 +43,7 @@ t.Z = function (e) {
                 'aria-label': v.intl.string(v.t.BIYAqa),
                 children: [
                     (0, i.jsx)(m.ZP.Icon, {
-                        icon: a.ChatIcon,
+                        icon: s.ChatIcon,
                         disabled: !0,
                         'aria-label': v.intl.string(v.t.Kx5kCA)
                     }),

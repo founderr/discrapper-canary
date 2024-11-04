@@ -13,8 +13,8 @@ n.d(t, {
 var i = n(866442),
     l = n(503438),
     r = n(420660),
-    a = n(168631),
-    s = n(621853),
+    s = n(168631),
+    a = n(621853),
     o = n(981631),
     c = n(388032);
 let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
@@ -46,9 +46,9 @@ let u = (e) => (''.concat(e).length < 13 ? 1000 * e : e),
     },
     p = (e, t) => {
         var n;
-        let l = s.Z.getUserProfile(e.id),
+        let l = a.Z.getUserProfile(e.id),
             [r, o] = null !== (n = null == l ? void 0 : l.themeColors) && void 0 !== n ? n : [],
-            c = (0, a.V3)(r),
+            c = (0, s.V3)(r),
             u = null != o ? (0, i.Rf)(o) : t;
         return {
             color: u,

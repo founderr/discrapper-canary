@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(388032),
-    s = n(649763),
+    s = n(388032),
+    a = n(649763),
     o = n(560580);
 function c(e) {
     let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
@@ -15,13 +15,13 @@ function c(e) {
             null == c || c();
         }, [c]);
     return (0, i.jsxs)('div', {
-        className: s.safetyBanner,
+        className: a.safetyBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: s.shieldAndHeading,
+                className: a.shieldAndHeading,
                 children: [
                     (0, i.jsx)('img', {
-                        className: s.safetyShieldIcon,
+                        className: a.safetyShieldIcon,
                         src: o,
                         alt: ''
                     }),
@@ -42,7 +42,7 @@ function c(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: s.buttons,
+                className: a.buttons,
                 children:
                     null == u
                         ? void 0
@@ -55,7 +55,7 @@ function c(e) {
                                       color: e.color,
                                       'aria-label': e.text,
                                       onClick: e.onclick,
-                                      className: s.ctaButton,
+                                      className: a.ctaButton,
                                       children: e.text
                                   },
                                   t
@@ -64,14 +64,14 @@ function c(e) {
             }),
             d
                 ? (0, i.jsx)(r.Clickable, {
-                      className: s.closeButton,
+                      className: a.closeButton,
                       onClick: h,
                       role: 'button',
-                      'aria-label': a.intl.string(a.t.WAI6xs),
+                      'aria-label': s.intl.string(s.t.WAI6xs),
                       children: (0, i.jsx)(r.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: s.closeButton
+                          className: a.closeButton
                       })
                   })
                 : null

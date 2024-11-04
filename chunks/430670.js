@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(512722),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(911367),
     c = n(699516),
     u = n(594174),
@@ -23,10 +23,10 @@ function C(e) {
         r = (0, h.Z)();
     (0, o.t)();
     let [C] = t.recipients,
-        x = (0, s.e7)([u.default], () => u.default.getUser(C));
-    a()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
-    let v = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-    a()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
+        x = (0, a.e7)([u.default], () => u.default.getUser(C));
+    s()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
+    let v = (0, a.e7)([u.default], () => u.default.getCurrentUser());
+    s()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         l.useEffect(() => {
             (0, m.Z)(x, {
                 withMutualFriends: !x.bot,
@@ -34,7 +34,7 @@ function C(e) {
                 channelId: t.id
             });
         }, [x, t.id]);
-    let _ = (0, s.e7)([c.Z], () => c.Z.isBlocked(x.id)),
+    let _ = (0, a.e7)([c.Z], () => c.Z.isBlocked(x.id)),
         [I, E] = l.useState(_),
         b = (0, d.sS)({ location: 'UserProfilePanelWrapper' });
     return (l.useEffect(() => {

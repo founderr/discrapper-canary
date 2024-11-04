@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(597312),
-    a = n(481060),
-    s = n(410030),
+    s = n(481060),
+    a = n(410030),
     o = n(100527),
     c = n(906732),
     u = n(785717),
@@ -23,7 +23,7 @@ var i = n(200651),
 function _(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: _ } = e,
         I = (0, h.ZP)(t.id),
-        E = (0, s.ZP)(),
+        E = (0, a.ZP)(),
         { analyticsLocations: b } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
         S = (0, u.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
@@ -59,16 +59,16 @@ function _(e) {
                                         user: t,
                                         guildId: null
                                     }),
-                                    (0, i.jsx)(a.Heading, {
+                                    (0, i.jsx)(s.Heading, {
                                         variant: 'heading-lg/bold',
                                         className: x.header,
                                         children: C.intl.string(C.t.VNJ7UF)
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.format(C.t.LXbngo, { username: t.username })
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/medium',
                                         children: C.intl.string(C.t['20WzZ2'])
                                     }),

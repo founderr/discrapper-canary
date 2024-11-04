@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(692547),
     c = n(481060),
     u = n(475179),
@@ -42,7 +42,7 @@ var i = n(200651),
 function U(e) {
     let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: r, showRequestToSpeakSidebar: o } = e,
         m = (0, d.bp)(),
-        g = (0, s.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
+        g = (0, a.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         C = (0, A.B)(n.id),
         x = (0, N.Rk)(n.id, j.pV.REQUESTED_TO_SPEAK_ONLY),
         { preventIdle: S, allowIdle: Z } = (0, _.Y)('popup');
@@ -101,7 +101,7 @@ function U(e) {
                 : null,
             !g &&
                 (0, i.jsx)('div', {
-                    className: a()(D.button, { [D.sidebarOpen]: o }),
+                    className: s()(D.button, { [D.sidebarOpen]: o }),
                     children: (0, i.jsx)(E.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: o,
@@ -116,14 +116,14 @@ function B(e) {
     var t;
     let { inPopout: n, channel: r, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: h } = e,
         p = (0, m.ZP)(r),
-        f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(r.id)),
+        f = (0, a.e7)([P.Z], () => P.Z.getStageInstanceByChannel(r.id)),
         v = (0, N.Io)(r.id),
         _ = (0, N.Rk)(r.id, j.pV.AUDIENCE),
-        I = (0, s.e7)([S.Z], () => S.Z.getGuild(r.guild_id), [r.guild_id]),
+        I = (0, a.e7)([S.Z], () => S.Z.getGuild(r.guild_id), [r.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
         A = (0, L.Z)(r),
-        M = (0, s.e7)([Z.Z], () => Z.Z.can(y.yP, r)),
+        M = (0, a.e7)([Z.Z], () => Z.Z.can(y.yP, r)),
         R = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(r.id, !0),
                 T.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
@@ -155,7 +155,7 @@ function B(e) {
                 }),
                 onDoubleClick: x.O,
                 transparent: !0,
-                className: a()(e, D.participants),
+                className: s()(e, D.participants),
                 children: [
                     (0, i.jsx)(C.ZP.Icon, {
                         icon: c.StageIcon,

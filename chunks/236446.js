@@ -15,16 +15,16 @@ var i = n(200651),
     d = n(362762),
     h = n(409059),
     g = n(659900),
-    m = n(962220),
-    f = n(473855),
+    f = n(962220),
+    m = n(473855),
     p = n(306453),
     _ = n(929809),
     x = n(108427),
     E = n(390885),
     v = n(314897),
     I = n(896797),
-    b = n(954824),
-    N = n(781428),
+    N = n(954824),
+    b = n(781428),
     C = n(163671),
     S = n(423527),
     T = n(981631),
@@ -38,10 +38,10 @@ var i = n(200651),
 c.ZP.initialize();
 class P extends r.PureComponent {
     componentDidMount() {
-        (0, x.e)('guildTemplate'), !R.KO && b.Z.launch('discord://' + T.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, x.e)('guildTemplate'), !R.KO && N.Z.launch('discord://' + T.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && m.Z.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && f.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
         return R.KO
@@ -110,7 +110,7 @@ class P extends r.PureComponent {
             case A.Rj.RESOLVED:
                 if (n || !R.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
-                    return (0, i.jsx)(N.Z, {
+                    return (0, i.jsx)(b.Z, {
                         guildTemplate: e,
                         transitionTo: r,
                         location: s
@@ -182,7 +182,7 @@ function k(e) {
     return (0, i.jsx)(C.Z, {
         className: L.authBox,
         children: () => [
-            (0, i.jsx)(f.Z, { guildTemplate: t }, 'template'),
+            (0, i.jsx)(m.Z, { guildTemplate: t }, 'template'),
             (0, i.jsx)(
                 'div',
                 {

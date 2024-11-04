@@ -1,8 +1,8 @@
 var i,
     l = n(442837),
     r = n(570140),
-    a = n(592125),
-    s = n(176505);
+    s = n(592125),
+    a = n(176505);
 function o(e, t, n) {
     return (
         t in e
@@ -39,8 +39,8 @@ o(d, 'displayName', 'GuildOnboardingHomeNavigationStore'),
     (t.Z = new d(r.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
-            if (null == n || t === s.oC.GUILD_HOME) return;
-            let i = a.Z.getChannel(t),
+            if (null == n || t === a.oC.GUILD_HOME) return;
+            let i = s.Z.getChannel(t),
                 l = c[n],
                 r = u[n];
             if (!((null == i ? void 0 : i.isThread()) && (null == i ? void 0 : i.parent_id) != null && [r, l].includes(null == i ? void 0 : i.parent_id))) t !== l && delete c[n], t !== r && delete u[n];

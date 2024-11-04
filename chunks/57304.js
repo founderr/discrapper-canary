@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(23536),
+    s = n(481060),
+    a = n(23536),
     o = n(40851),
     c = n(731290),
     u = n(306680),
@@ -41,16 +41,16 @@ t.Z = function (e) {
             ),
             [_]
         ),
-        (0, i.jsx)(a.Popout, {
+        (0, i.jsx)(s.Popout, {
             shouldShow: g,
-            animation: a.Popout.Animation.NONE,
+            animation: s.Popout.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
             onRequestClose: () => C(!1),
             renderPopout: function (e) {
-                return (0, i.jsx)(s.Z, {
+                return (0, i.jsx)(a.Z, {
                     ...e,
                     onJump: I,
                     channel: t
@@ -62,7 +62,7 @@ t.Z = function (e) {
                     ...e,
                     onClick: _,
                     tooltip: l ? null : f.intl.string(f.t['mp1N//']),
-                    icon: a.PinIcon,
+                    icon: s.PinIcon,
                     'aria-label': f.intl.string(f.t['mp1N//']),
                     disabled: n,
                     showBadge: x,

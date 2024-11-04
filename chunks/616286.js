@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
+    s = n.n(r),
+    a = n(392711),
     o = n(442837),
     c = n(475179),
     u = n(358221),
@@ -23,7 +23,7 @@ var i = n(200651),
     x = n(981631),
     v = n(388032);
 function _(e) {
-    let t = (0, o.e7)([m.Z], () => !(0, s.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+    let t = (0, o.e7)([m.Z], () => !(0, a.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: i, mentionCount: l } = (0, o.cj)(
             [d.ZP],
@@ -42,18 +42,18 @@ function _(e) {
 }
 function I(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: l, mentionCount: r, isTyping: a, voiceChannelIsSelected: s } = _(n);
+        { unreadCount: l, mentionCount: r, isTyping: s, voiceChannelIsSelected: a } = _(n);
     return (0, i.jsx)(g.Z, {
         className: t,
         unreadCount: l,
         mentionCount: r,
-        isTyping: a,
-        canBadge: s
+        isTyping: s,
+        canBadge: a
     });
 }
 function E(e) {
     let t,
-        { channelId: n, className: r, showingClassName: s, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: g, ...E } = e,
+        { channelId: n, className: r, showingClassName: a, onClick: d, inPopout: h, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: g, ...E } = e,
         { disabled: b } = E,
         S = l.useRef(null),
         Z = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
@@ -63,15 +63,15 @@ function E(e) {
             mentionCount: j
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: i } = _(e),
-                [r, a] = l.useState(!1);
+                [r, s] = l.useState(!1);
             return (
                 l.useEffect(() => {
-                    a(t > 0);
+                    s(t > 0);
                     let e = setTimeout(() => {
-                        a(!1);
+                        s(!1);
                     }, f.z);
                     return () => {
-                        clearTimeout(e), a(!1);
+                        clearTimeout(e), s(!1);
                     };
                 }, [t]),
                 {
@@ -133,7 +133,7 @@ function E(e) {
             'aria-label': k.join(', '),
             iconComponent: y,
             tooltipPosition: 'bottom',
-            wrapperClassName: a()(r, null != s && { [s]: T }),
+            wrapperClassName: s()(r, null != a && { [a]: T }),
             forceTooltipOpen: M,
             ...E
         })

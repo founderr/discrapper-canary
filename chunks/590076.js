@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(512722),
-    a = n.n(r),
-    s = n(399606),
+    s = n.n(r),
+    a = n(399606),
     o = n(618158),
     c = n(594174),
     u = n(822183),
@@ -17,8 +17,8 @@ var i = n(200651),
 function p(e) {
     let { focused: t, channelId: n, streamerId: r, stream: u } = e,
         p = l.useRef(null),
-        f = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    a()(null != f, 'user cannot be null'), (0, h.Z)(p, f, r, n);
+        f = (0, a.e7)([c.default], () => c.default.getCurrentUser());
+    s()(null != f, 'user cannot be null'), (0, h.Z)(p, f, r, n);
     let {
         handleClick: g,
         handleMouseDown: C,

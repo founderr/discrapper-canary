@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(43267),
-    a = n(933557),
-    s = n(297700),
+    s = n(933557),
+    a = n(297700),
     o = n(534091),
     c = n(967128),
     u = n(388032),
@@ -26,7 +26,7 @@ let m = () =>
 function p(e) {
     var t;
     let { channel: n } = e,
-        p = null !== (t = (0, a.ZP)(n)) && void 0 !== t ? t : '';
+        p = null !== (t = (0, s.ZP)(n)) && void 0 !== t ? t : '';
     return (0, i.jsxs)('div', {
         id: (0, o.p)(n.id, n.id),
         className: d.headerContainer,
@@ -52,7 +52,7 @@ function p(e) {
                                 className: d.emptyMessageHeader,
                                 children: [
                                     p,
-                                    (0, i.jsx)(s.Z, {
+                                    (0, i.jsx)(a.Z, {
                                         className: d.flowerStar,
                                         size: 24,
                                         children: (0, i.jsx)(l.CheckmarkSmallIcon, {

@@ -21,8 +21,8 @@ n.d(t, {
 var i = n(979590),
     l = n.n(i),
     r = n(866442),
-    a = n(220082),
-    s = n(594174),
+    s = n(220082),
+    a = n(594174),
     o = n(292793),
     c = n(813900);
 function u(e) {
@@ -32,9 +32,9 @@ function u(e) {
 }
 function d(e, t) {
     let { width: n, height: i, left: l, top: r } = e.getBoundingClientRect(),
-        a = (t.clientX - l) / n;
+        s = (t.clientX - l) / n;
     return {
-        x: a,
+        x: s,
         y: (t.clientY - r) / i
     };
 }
@@ -53,9 +53,9 @@ function p(e) {
 }
 function f(e, t, n, i) {
     var o;
-    let u = s.default.getUser(e),
+    let u = a.default.getUser(e),
         d = null == u ? void 0 : u.getAvatarURL(null, c.Ks),
-        h = null != d ? (null === (o = a.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
+        h = null != d ? (null === (o = s.SR.getState().palette[d]) || void 0 === o ? void 0 : o[0]) : null,
         m =
             null != h
                 ? '#'.concat(

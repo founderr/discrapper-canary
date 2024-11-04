@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(434650),
+    s = n.n(r),
+    a = n(434650),
     o = n(393903),
     c = n(353093),
     u = n(979264),
@@ -25,21 +25,21 @@ t.Z = l.memo(function (e) {
                 return;
             }
             let r = l.right - i.right,
-                a = l.width - r;
-            if (a > l.width) {
+                s = l.width - r;
+            if (s > l.width) {
                 f({ maskImage: 'none' });
                 return;
             }
-            f({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(a, 'px)') });
+            f({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(s, 'px)') });
         }, []),
         C = (0, o.y)(g),
         x = (0, c.p0)(h.userId, r);
     l.useEffect(() => {
         if (null != C.current) g();
     }, [x]);
-    let v = (0, s.O)(g);
+    let v = (0, a.O)(g);
     return (0, i.jsxs)('div', {
-        className: a()(d.container, n && d.isOverlayContainer),
+        className: s()(d.container, n && d.isOverlayContainer),
         ref: C,
         children: [
             (0, i.jsx)('div', {
@@ -50,13 +50,13 @@ t.Z = l.memo(function (e) {
                 className: d.chipletParent,
                 ref: v,
                 children: (0, i.jsx)('span', {
-                    className: a()(d.chipletContainer, !x && n && d.noPadding),
+                    className: s()(d.chipletContainer, !x && n && d.noPadding),
                     ref: m,
                     style: p,
                     children: (0, i.jsx)(u.ZP, {
                         ...h,
                         contextGuildId: r,
-                        className: a()(h.className, n && d.isOverlayTag)
+                        className: s()(h.className, n && d.isOverlayTag)
                     })
                 })
             })

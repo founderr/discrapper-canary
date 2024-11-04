@@ -2,8 +2,8 @@ n(757143), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(771340),
     u = n(600164),
@@ -40,7 +40,7 @@ class C extends l.PureComponent {
         let { region: e, selected: t } = this.props;
         return (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: a()({ selected: t }),
+            className: s()({ selected: t }),
             children: [
                 (0, i.jsx)(g, {
                     region: e,
@@ -121,4 +121,4 @@ class x extends l.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(x);
+t.Z = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(x);

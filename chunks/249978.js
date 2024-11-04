@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return a;
+        return s;
     },
     v: function () {
         return r;
@@ -22,7 +22,7 @@ let r = (0, i.B)({
             }
         ]
     }),
-    a = (e) => {
+    s = (e) => {
         let { location: t } = e;
         return r.useExperiment({ location: t });
     };

@@ -11,8 +11,8 @@ n.d(t, {
 var i,
     l,
     r = n(192379),
-    a = n(392711),
-    s = n(442837),
+    s = n(392711),
+    a = n(442837),
     o = n(638730),
     c = n(358221),
     u = n(136015),
@@ -32,11 +32,11 @@ function p(e) {
 function f(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         l = (function (e, t, n) {
-            let i = (0, s.e7)([d.Z], () => [e, d.Z.getParticipantsVersion(e)], [e], u.Q),
-                l = (0, s.e7)([c.Z], () => c.Z.getSelectedParticipantId(e), [e]);
+            let i = (0, a.e7)([d.Z], () => [e, d.Z.getParticipantsVersion(e)], [e], u.Q),
+                l = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipantId(e), [e]);
             return r.useMemo(() => {
                 let r = [],
-                    s = [],
+                    a = [],
                     o = -1,
                     c = [];
                 if (n)
@@ -45,8 +45,8 @@ function f(e, t, n) {
                         else break;
                 let u = (e, t, n) => {
                         let i = n ? e.filter((e, t) => e.id !== l && t > o) : e,
-                            c = (0, a.chunk)(i, t);
-                        s.push(c), r.push(c.length);
+                            c = (0, s.chunk)(i, t);
+                        a.push(c), r.push(c.length);
                     },
                     h = null != l ? d.Z.getParticipant(e, l) : null;
                 return (
@@ -55,7 +55,7 @@ function f(e, t, n) {
                         u(d.Z.getMutableParticipants(i[0], e), t[e], e === m.pV.SPEAKER);
                     }),
                     u(c, 1, !1),
-                    [r, s]
+                    [r, a]
                 );
             }, [i, t, l, n, e]);
         })(e, t, i),

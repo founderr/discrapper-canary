@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(475179),
     u = n(872810),
@@ -45,9 +45,9 @@ var i = n(200651),
     U = n(810190);
 let B = new m.Z('StreamTile');
 function H(e) {
-    let { participant: t, selected: n, focused: l, idle: r, width: a, premiumIndicator: o } = e,
-        c = (0, s.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
-        u = (0, L.K)(a);
+    let { participant: t, selected: n, focused: l, idle: r, width: s, premiumIndicator: o } = e,
+        c = (0, a.e7)([I.Z], () => I.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
+        u = (0, L.K)(s);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             n ? null : (0, i.jsx)(R.Z, { participant: t }),
@@ -67,13 +67,13 @@ function H(e) {
 function F(e) {
     let { participant: t, selected: n, onVideoResize: r, paused: h, fit: m, inPopout: C, width: R, focused: L } = e,
         H = S.Z.getVideoComponent(),
-        F = (0, s.e7)([E.default], () => E.default.getId()),
+        F = (0, a.e7)([E.default], () => E.default.getId()),
         G = (0, p.Z)(),
         { stream: V, user: z, streamId: W } = t,
-        Y = (0, s.e7)([b.Z], () => b.Z.getChannel(V.channelId)),
-        K = (0, s.e7)([I.Z], () => I.Z.getActiveStreamForUser(z.id, V.guildId), [z.id, V.guildId]),
-        q = (0, s.e7)([I.Z], () => I.Z.getAllActiveStreams().length > 0),
-        X = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
+        Y = (0, a.e7)([b.Z], () => b.Z.getChannel(V.channelId)),
+        K = (0, a.e7)([I.Z], () => I.Z.getActiveStreamForUser(z.id, V.guildId), [z.id, V.guildId]),
+        q = (0, a.e7)([I.Z], () => I.Z.getAllActiveStreams().length > 0),
+        X = (0, a.e7)([Z.Z], () => Z.Z.isFocused()),
         J = (null == K ? void 0 : K.ownerId) === F,
         Q = J && !X && !C,
         $ = null != K ? (0, f.Z)(K, z, z.id === F, Q) : null,
@@ -159,11 +159,11 @@ function F(e) {
         });
     else
         return (0, i.jsxs)('div', {
-            className: a()(U.content, U.streamPreview, { [U.small]: ee }),
+            className: s()(U.content, U.streamPreview, { [U.small]: ee }),
             children: [
                 (0, i.jsx)(g.Z, {
                     noText: !0,
-                    className: a()(U.absoluteFill, { [U.streamPreviewOpacity]: null == K }),
+                    className: s()(U.absoluteFill, { [U.streamPreviewOpacity]: null == K }),
                     stream: t.stream
                 }),
                 n

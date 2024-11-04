@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(787014),
-    s = n(933557),
+    s = n(787014),
+    a = n(933557),
     o = n(454585),
     c = n(131704),
     u = n(496675),
@@ -19,7 +19,7 @@ var l = n(442837),
     f = n(281484);
 function g(e) {
     let { channel: t } = e,
-        n = (0, s.ZP)(t, !0),
+        n = (0, a.ZP)(t, !0),
         g = (0, l.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_CHANNELS, t) && c.dF.has(t.type));
     return (0, i.jsxs)(h.ZP, {
         channelId: t.id,
@@ -38,7 +38,7 @@ function g(e) {
                       children: (0, i.jsx)(d.Z, {
                           label: p.intl.string(p.t['3gUsJS']),
                           onClick: () => {
-                              a.ZP.open(t.id);
+                              s.ZP.open(t.id);
                           },
                           icon: (0, i.jsx)(r.PencilIcon, {
                               size: 'xs',

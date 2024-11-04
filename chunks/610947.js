@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(192379),
     l = n(846519),
     r = n(692547),
-    a = n(481060),
-    s = n(220082),
+    s = n(481060),
+    a = n(220082),
     o = n(979651),
     c = n(125268),
     u = n(673125),
@@ -19,9 +19,9 @@ var i = n(192379),
     f = n(813900);
 let g = 1000 / 60;
 function C(e, t, n, C) {
-    let x = (0, a.useToken)(r.Z.unsafe_rawColors.BRAND_500).hex(),
-        v = (0, a.useToken)(r.Z.unsafe_rawColors.BLACK_500).hex(),
-        _ = (0, a.useToken)(r.Z.unsafe_rawColors.WHITE_500).hex(),
+    let x = (0, s.useToken)(r.Z.unsafe_rawColors.BRAND_500).hex(),
+        v = (0, s.useToken)(r.Z.unsafe_rawColors.BLACK_500).hex(),
+        _ = (0, s.useToken)(r.Z.unsafe_rawColors.WHITE_500).hex(),
         I = i.useRef({}),
         E = i.useRef(new l.Xp()),
         b = i.useCallback(
@@ -29,7 +29,7 @@ function C(e, t, n, C) {
                 let n = u.Z.getDrawables(t);
                 (0, h.UN)(e),
                     !(function (e) {
-                        let { canvasRef: t, drawables: n, fallbackColor: i, linesDrawnAt: l, streamerId: r, channelId: a, outlineColorDark: s, outlineColorLight: u } = e;
+                        let { canvasRef: t, drawables: n, fallbackColor: i, linesDrawnAt: l, streamerId: r, channelId: s, outlineColorDark: a, outlineColorLight: u } = e;
                         if (0 === n.length) return;
                         let h = t.current;
                         if (null == h) return;
@@ -38,12 +38,12 @@ function C(e, t, n, C) {
                         let { width: g, height: C } = h.getBoundingClientRect(),
                             x = [];
                         n.forEach((e) => {
-                            if (!(null != o.Z.getVoiceStateForChannel(a, e.userId))) {
+                            if (!(null != o.Z.getVoiceStateForChannel(s, e.userId))) {
                                 x.push(e);
                                 return;
                             }
                             !(function (e) {
-                                let { drawable: t, context: n, canvasWidth: i, canvasHeight: l, fallbackColor: r, outlineColorDark: a, outlineColorLight: s, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
+                                let { drawable: t, context: n, canvasWidth: i, canvasHeight: l, fallbackColor: r, outlineColorDark: s, outlineColorLight: a, linesDrawnAt: o, streamerId: c, deadDrawables: u } = e;
                                 switch (t.type) {
                                     case d.W.LINE:
                                         return (0, p.Z)({
@@ -52,8 +52,8 @@ function C(e, t, n, C) {
                                             canvasWidth: i,
                                             canvasHeight: l,
                                             fallbackColor: r,
-                                            outlineColorDark: a,
-                                            outlineColorLight: s,
+                                            outlineColorDark: s,
+                                            outlineColorLight: a,
                                             linesDrawnAt: o,
                                             deadDrawables: u
                                         });
@@ -64,8 +64,8 @@ function C(e, t, n, C) {
                                             canvasWidth: i,
                                             canvasHeight: l,
                                             fallbackColor: r,
-                                            outlineColorDark: a,
-                                            outlineColorLight: s,
+                                            outlineColorDark: s,
+                                            outlineColorLight: a,
                                             streamerId: c,
                                             deadDrawables: u
                                         });
@@ -76,7 +76,7 @@ function C(e, t, n, C) {
                                 canvasWidth: g,
                                 canvasHeight: C,
                                 fallbackColor: i,
-                                outlineColorDark: s,
+                                outlineColorDark: a,
                                 outlineColorLight: u,
                                 linesDrawnAt: l,
                                 deadDrawables: x,
@@ -117,7 +117,7 @@ function C(e, t, n, C) {
         return (
             u.Z.addChangeListener(S),
             S(),
-            (0, s.vM)(t.getAvatarURL(null, f.Ks)),
+            (0, a.vM)(t.getAvatarURL(null, f.Ks)),
             () => {
                 u.Z.removeChangeListener(S), e.stop();
             }

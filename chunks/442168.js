@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(100621),
-    a = n(442837),
-    s = n(780384),
+    s = n(442837),
+    a = n(780384),
     o = n(481060),
     c = n(435064),
     u = n(39604),
@@ -29,12 +29,12 @@ let f = { visibility: 'hidden' },
     x = { duration: 1000 };
 function v(e) {
     let { stream: t, inPopout: n } = e,
-        { reducedMotion: v } = l.useContext(s.Sf),
+        { reducedMotion: v } = l.useContext(a.Sf),
         _ = (0, l.useRef)(null),
         I = d.n.getState().clipsButtonRef,
         E = (0, h.V9)(t),
-        b = (0, a.e7)([c.Z], () => c.Z.getActiveAnimation()),
-        S = (0, a.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
+        b = (0, s.e7)([c.Z], () => c.Z.getActiveAnimation()),
+        S = (0, s.Wu)([c.Z], () => c.Z.getStreamClipAnimations(E)),
         Z = (0, l.useRef)();
     l.useEffect(
         () => () => {

@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(704215),
-    s = n(481060),
+    s = n(704215),
+    a = n(481060),
     o = n(358221),
     c = n(243778),
     u = n(390322),
@@ -29,7 +29,7 @@ var i = n(200651),
 function S(e) {
     let { onClose: t, channel: n } = e,
         l = (0, x.Z)(n);
-    return (0, i.jsx)(s.Menu, {
+    return (0, i.jsx)(a.Menu, {
         onClose: t,
         onSelect: () => null,
         navId: 'transfer-menu',
@@ -46,7 +46,7 @@ function Z(e) {
         }),
         N = (0, r.e7)([h.Z], () => h.Z.hasLayers()),
         [j, A] = (0, r.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
-        y = (0, s.useModalsStore)(s.hasAnyModalOpenSelector),
+        y = (0, a.useModalsStore)(a.hasAnyModalOpenSelector),
         P = (0, f.Z)(),
         M = P.filter((e) => e.twoWayLink),
         [R, L] = l.useState(!1);
@@ -54,16 +54,16 @@ function Z(e) {
     let k = _.WtW.VOICE !== j && [_.AEg.NO_CHAT, _.AEg.FULL_SCREEN].includes(A) ? 'top' : 'bottom',
         O = [];
     return (
-        M.length > 0 && O.push(a.z.DONUT_DESKTOP_NUX),
+        M.length > 0 && O.push(s.z.DONUT_DESKTOP_NUX),
         (0, i.jsx)(c.ZP, {
             contentTypes: O,
             children: (e) => {
                 let { visibleContent: l, markAsDismissed: r } = e,
-                    o = l === a.z.DONUT_DESKTOP_NUX;
+                    o = l === s.z.DONUT_DESKTOP_NUX;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         n ? (0, i.jsx)('div', { className: b.leftDivider }) : null,
-                        (0, i.jsx)(s.Popout, {
+                        (0, i.jsx)(a.Popout, {
                             position: k,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(j, ':').concat(A),

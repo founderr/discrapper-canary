@@ -87,25 +87,25 @@ var r,
     b = n(857702),
     v = n(20450),
     j = n(312976),
-    C = n(147591),
-    _ = n(135164),
+    _ = n(147591),
+    C = n(135164),
     T = n(940172),
     S = n(81011),
     N = n(981613),
     y = n(762399),
     I = n(232112),
-    w = n(53796),
-    k = n(723757),
+    k = n(53796),
+    w = n(723757),
     E = n(375924),
     Z = n(596136),
     R = n(341901),
     O = n(856308),
     B = n(665352),
     L = n(394900),
-    A = n(661105),
-    P = n(525169),
-    D = n(433517),
-    M = n(190558),
+    P = n(661105),
+    A = n(525169),
+    M = n(433517),
+    D = n(190558),
     F = n(231338);
 let H = {
         sRGB: c.Z,
@@ -121,15 +121,15 @@ let H = {
         JzCzHz: b.Z,
         Jzazbz: v.Z,
         LCH: j.Z,
-        LCHuv: C.Z,
-        Lab: _.Z,
+        LCHuv: _.Z,
+        Lab: C.Z,
         Lab_D65: T.Z,
         Luv: S.Z,
         OKLCH: N.Z,
         OKLab: y.Z,
         P3: I.Z,
-        ProPhoto: w.Z,
-        REC_2020: k.Z,
+        ProPhoto: k.Z,
+        REC_2020: w.Z,
         REC_2100_HLG: E.Z,
         REC_2100_PQ: Z.Z,
         XYZ_D50: R.Z,
@@ -137,17 +137,17 @@ let H = {
     },
     U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
 Object.values(H).forEach((e) => B.Z.register(e));
-let { SemanticColors: G } = M.V,
+let { SemanticColors: G } = D.V,
     z = G,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {
-        let n = D.K.get(e);
+        let n = M.K.get(e);
         return null != n ? n : t;
     });
     return (
         o.useEffect(() => {
-            D.K.set(e, n);
+            M.K.set(e, n);
         }, [e, n]),
         [n, r]
     );
@@ -188,7 +188,7 @@ function X(e) {
     };
 }
 function q(e) {
-    return (0, L.Z)((0, A.Z)(e, c.Z), { format: 'hex' });
+    return (0, L.Z)((0, P.Z)(e, c.Z), { format: 'hex' });
 }
 function $() {
     return (function (e, t) {
@@ -239,24 +239,24 @@ function et(e, t) {
 function en(e) {
     let { name: t, base: n, steps: r = 26, darkness: a, lightness: l, easingStrength: i = 1 } = e,
         o = H[e.colorSpace],
-        s = (0, A.Z)(n, o),
-        d = (0, P.CD)(s, 'white', 1 - a, {
+        s = (0, P.Z)(n, o),
+        d = (0, A.CD)(s, 'white', 1 - a, {
             space: o,
             outputSpace: c.Z
         }),
-        u = (0, P.CD)(s, 'black', 1 - l, {
+        u = (0, A.CD)(s, 'black', 1 - l, {
             space: o,
             outputSpace: c.Z
         }),
         h = Math.floor(r / 2),
         m = r - h,
-        x = (0, P.w6)(d, s, {
+        x = (0, A.w6)(d, s, {
             steps: h,
             outputSpace: o,
             space: o,
             progression: (e) => e ** i
         }),
-        f = (0, P.w6)(u, s, {
+        f = (0, A.w6)(u, s, {
             steps: m,
             outputSpace: o,
             space: o,

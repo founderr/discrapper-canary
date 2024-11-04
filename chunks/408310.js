@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(671533),
-    a = n(400251),
-    s = n(388032),
+    s = n(400251),
+    a = n(388032),
     o = n(904151),
     c = n(249684),
     u = n(176480);
@@ -18,7 +18,7 @@ t.Z = (e) => {
     else if (0 === g.length) {
         let e =
             null != f
-                ? s.intl.format(s.t.qWFupq, {
+                ? a.intl.format(a.t.qWFupq, {
                       addServerHook: function (e, t) {
                           return (0, i.jsx)(
                               l.Anchor,
@@ -30,7 +30,7 @@ t.Z = (e) => {
                           );
                       }
                   })
-                : s.intl.string(s.t.vYyEnp);
+                : a.intl.string(a.t.vYyEnp);
         t = (0, i.jsxs)('div', {
             className: c.emptySearchWrapper,
             children: [
@@ -43,7 +43,7 @@ t.Z = (e) => {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     className: c.emptySearchTitle,
-                    children: s.intl.string(s.t['6HXiuL'])
+                    children: a.intl.string(a.t['6HXiuL'])
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
@@ -56,7 +56,7 @@ t.Z = (e) => {
     } else
         t = (0, i.jsx)('div', {
             className: o.cardsContainer,
-            children: g.map((e) => (0, i.jsx)(a.Z, { entry: e }, e.guildId))
+            children: g.map((e) => (0, i.jsx)(s.Z, { entry: e }, e.guildId))
         });
     return (0, i.jsx)('div', {
         className: o.pageContainer,
@@ -77,7 +77,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'heading-xl/semibold',
                                     className: c.searchPageTitle,
-                                    children: s.intl.format(s.t.UkOHRU, {
+                                    children: a.intl.format(a.t.UkOHRU, {
                                         numResults: g.length,
                                         query: h
                                     })
@@ -88,12 +88,12 @@ t.Z = (e) => {
                             searchTerm: n,
                             className: c.searchPageBox,
                             inputClassName: c.searchPageInput,
-                            label: s.intl.string(s.t.nL2wKC),
-                            placeholder: s.intl.string(s.t.nL2wKC),
+                            label: a.intl.string(a.t.nL2wKC),
+                            placeholder: a.intl.string(a.t.nL2wKC),
                             onChange: d,
                             onClear: m,
                             onKeyPress: p,
-                            cta: null != n && n.length > 0 ? s.intl.string(s.t['CU+6oK']) : null
+                            cta: null != n && n.length > 0 ? a.intl.string(a.t['CU+6oK']) : null
                         })
                     ]
                 }),

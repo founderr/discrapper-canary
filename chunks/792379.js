@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(597312),
-    a = n(481060),
-    s = n(727637),
+    s = n(481060),
+    a = n(727637),
     o = n(410030),
     c = n(100527),
     u = n(906732),
@@ -45,7 +45,7 @@ function R(e) {
             channelId: n.id
         }),
         D = l.useRef(null),
-        U = (0, s.Z)(D),
+        U = (0, a.Z)(D),
         B = (e) => {
             (0, j.openUserProfileModal)({
                 sourceAnalyticsLocations: O,
@@ -131,10 +131,10 @@ function R(e) {
                     !R &&
                         (0, i.jsx)('footer', {
                             className: P.footer,
-                            children: (0, i.jsx)(a.Button, {
+                            children: (0, i.jsx)(s.Button, {
                                 fullWidth: !0,
-                                size: a.Button.Sizes.LARGE,
-                                look: a.Button.Looks.BLANK,
+                                size: s.Button.Sizes.LARGE,
+                                look: s.Button.Looks.BLANK,
                                 color: P.footerButtonColor,
                                 onClick: () => {
                                     B(),

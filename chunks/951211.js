@@ -10,8 +10,8 @@ n.d(t, {
 var i,
     l,
     r = n(481060),
-    a = n(620662),
-    s = n(933557),
+    s = n(620662),
+    a = n(933557),
     o = n(377171),
     c = n(699516),
     u = n(594174),
@@ -68,36 +68,36 @@ function m(e) {
                 display: h.intl.string(h.t['16Lfra'])
             }),
         f.forEach((e) => {
-            if (!(0, a.Z)(e, d.xjy.EMBEDDED))
+            if (!(0, s.Z)(e, d.xjy.EMBEDDED))
                 e.type === d.IIU.PLAYING &&
-                    (0, a.Z)(e, d.xjy.JOIN) &&
+                    (0, s.Z)(e, d.xjy.JOIN) &&
                     _.push({
                         type: 'INVITE_TO_GAME',
                         icon: r.DpadIcon,
                         display: h.intl.formatToPlainString(h.t['KHLo+P'], {
-                            channel: (0, s.F6)(p, u.default, c.Z, !0),
+                            channel: (0, a.F6)(p, u.default, c.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
                     }),
                     e.type === d.IIU.LISTENING &&
-                        (0, a.Z)(e, d.xjy.SYNC) &&
+                        (0, s.Z)(e, d.xjy.SYNC) &&
                         _.push({
                             type: 'INVITE_TO_LISTEN',
                             icon: r.UserPlayIcon,
                             display: h.intl.formatToPlainString(h.t.I479p6, {
-                                channel: (0, s.F6)(p, u.default, c.Z, !0),
+                                channel: (0, a.F6)(p, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e
                         }),
                     e.type === d.IIU.WATCHING &&
-                        (0, a.Z)(e, d.xjy.SYNC) &&
+                        (0, s.Z)(e, d.xjy.SYNC) &&
                         _.push({
                             type: 'INVITE_TO_WATCH',
                             icon: r.EyeIcon,
                             display: h.intl.formatToPlainString(h.t['EvCP/v'], {
-                                channel: (0, s.F6)(p, u.default, c.Z, !0),
+                                channel: (0, a.F6)(p, u.default, c.Z, !0),
                                 name: null != e ? e.name : ''
                             }),
                             activity: e

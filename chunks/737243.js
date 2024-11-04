@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(911969),
-    s = n(581364),
+    s = n(911969),
+    a = n(581364),
     o = n(869765),
     c = n(699516),
     u = n(697451),
@@ -21,8 +21,8 @@ let m = l.memo(function (e) {
         S = (0, d.wq)(null === (t = m.interaction) || void 0 === t ? void 0 : t.user.id, p.id),
         Z = (0, d.Nk)(m.interaction, p, g, I),
         T = (0, d.NU)(C, I),
-        N = (0, s.t0)(m),
-        j = (null == N ? void 0 : N.type) === a.B8.APPLICATION_COMMAND ? (null === (n = N.target_user) || void 0 === n ? void 0 : n.id) : void 0,
+        N = (0, a.t0)(m),
+        j = (null == N ? void 0 : N.type) === s.B8.APPLICATION_COMMAND ? (null === (n = N.target_user) || void 0 === n ? void 0 : n.id) : void 0,
         A = (0, d.wq)(j, p.id),
         y = (0, d.JC)(j, p, v, I),
         P = (0, d.rY)(_, I),
@@ -76,12 +76,12 @@ let m = l.memo(function (e) {
     });
 });
 function p(e, t, n) {
-    let { message: l, channel: r, compact: a } = e;
+    let { message: l, channel: r, compact: s } = e;
     return null != l.interaction && '' !== l.interaction.displayName
         ? (0, i.jsx)(m, {
               message: l,
               channel: r,
-              compact: a,
+              compact: s,
               setPopout: t,
               ...n
           })

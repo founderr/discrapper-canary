@@ -1,8 +1,8 @@
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(41776);
 let u = null,
@@ -11,7 +11,7 @@ function h() {
     let e = c.Z.mostRecentLurkedGuildId();
     null != e ? ((u = e), (d = null)) : (null != u ? (d = u) : (d = null), (u = null));
 }
-class m extends (a = s.ZP.Store) {
+class m extends (s = a.ZP.Store) {
     initialize() {
         this.syncWith([c.Z], h);
     }

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n.n(r),
-    s = n(374470),
+    s = n.n(r),
+    a = n(374470),
     o = n(481060),
     c = n(239091),
     u = n(294218),
@@ -31,11 +31,11 @@ function p(e, t, n) {
 class f extends l.PureComponent {
     render() {
         let { result: e, listItemProps: t, searchOffset: n, index: l, totalResults: r } = this.props,
-            s = a().find(e, (e) => e.isSearchHit);
-        if (null == s) return null;
-        let c = d.Z.getChannel(s.channel_id);
+            a = s().find(e, (e) => e.isSearchHit);
+        if (null == a) return null;
+        let c = d.Z.getChannel(a.channel_id);
         if (null == c) return null;
-        let p = 'search-result-'.concat(s.id);
+        let p = 'search-result-'.concat(a.id);
         return (0, i.jsx)(o.FocusRing, {
             ringTarget: this.hitRef,
             ringClassName: m.__invalid_searchResultFocusRing,
@@ -60,16 +60,16 @@ class f extends l.PureComponent {
                                 className: m.message,
                                 children: (0, i.jsx)(u.Z, {
                                     id: p,
-                                    message: s,
+                                    message: a,
                                     channel: c,
-                                    onContextMenu: (e) => this.handleContextMenu(e, s),
+                                    onContextMenu: (e) => this.handleContextMenu(e, a),
                                     animateAvatar: !1,
                                     subscribeToComponentDispatch: !1,
                                     trackAnnouncementViews: !0,
                                     isSearchResult: !0
                                 })
                             },
-                            s.id
+                            a.id
                         )
                     }),
                     (0, i.jsx)('div', {
@@ -116,7 +116,7 @@ class f extends l.PureComponent {
                         let i = null === (n = window) || void 0 === n ? void 0 : n.getSelection();
                         if (null != i && !i.isCollapsed) return !0;
                         if (null == e || null == t) return !1;
-                        for (; (0, s.k)(e) && e !== t; ) {
+                        for (; (0, a.k)(e) && e !== t; ) {
                             let { tagName: t } = e;
                             if ('A' === t || 'IMG' === t || 'BUTTON' === t) return !0;
                             e = e.parentNode;

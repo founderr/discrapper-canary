@@ -21,8 +21,8 @@ var o = n(200651),
     b = n(475595),
     N = n(566078),
     S = n(340100),
-    B = n(611855),
-    T = n(644646),
+    T = n(611855),
+    B = n(644646),
     A = n(78826),
     y = n(670638),
     R = n(667105),
@@ -33,7 +33,7 @@ var o = n(200651),
     P = n(609706);
 let O = r.forwardRef(function (e, t) {
     var n, s;
-    let { children: _, className: O, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: U, onCtxMenuSelect: H, quest: V, useReducedMotion: z } = e,
+    let { children: _, className: O, collapsedHeight: W, expansionSpring: L, isExpanded: Q, isExpansionAnimationComplete: Z, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: U, quest: V, useReducedMotion: z } = e,
         F = (0, l.e7)([C.Z], () => C.Z.isEnrolling(V.id), [V]),
         G = (0, h.B6)(V.config.expiresAt),
         K = N.r.build(V.config),
@@ -121,7 +121,7 @@ let O = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.questAcceptedContentHeading,
                                           children: [
-                                              (0, o.jsx)(T.Z, {
+                                              (0, o.jsx)(B.Z, {
                                                   className: P.questProgressRewardTile,
                                                   learnMoreStyle: 'icon',
                                                   quest: V,
@@ -151,8 +151,8 @@ let O = r.forwardRef(function (e, t) {
                                       }),
                                       (0, o.jsx)(y.r, {
                                           onOpen: D,
-                                          onClose: U,
-                                          onSelect: H,
+                                          onClose: H,
+                                          onSelect: U,
                                           questContent: v.jn.QUEST_BAR,
                                           quest: V,
                                           shouldShowDisclosure: !1,
@@ -200,11 +200,11 @@ let O = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.utils,
                                           children: [
-                                              (0, o.jsx)(B.Z, { color: 'always-white' }),
+                                              (0, o.jsx)(T.Z, { color: 'always-white' }),
                                               (0, o.jsx)(y.r, {
                                                   onOpen: D,
-                                                  onClose: U,
-                                                  onSelect: H,
+                                                  onClose: H,
+                                                  onSelect: U,
                                                   questContent: v.jn.QUEST_BAR,
                                                   quest: V,
                                                   shouldShowDisclosure: !0,
@@ -226,7 +226,7 @@ let O = r.forwardRef(function (e, t) {
                                       (0, o.jsxs)('div', {
                                           className: P.details,
                                           children: [
-                                              (0, o.jsx)(T.Z, {
+                                              (0, o.jsx)(B.Z, {
                                                   className: P.rewardTile,
                                                   learnMoreStyle: 'text',
                                                   quest: V,

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(512722),
     r = n.n(l),
-    a = n(442837),
-    s = n(779618),
+    s = n(442837),
+    a = n(779618),
     o = n(215339),
     c = n(446226),
     u = n(441167),
@@ -28,7 +28,7 @@ var l = n(512722),
     S = n(307410);
 function Z(e) {
     let { channel: t, hasActiveStream: n, themeable: l = !1 } = e,
-        Z = (0, a.e7)([p.default], () => {
+        Z = (0, s.e7)([p.default], () => {
             let e = p.default.getCurrentUser();
             return r()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
@@ -39,7 +39,7 @@ function Z(e) {
             location: 'b7309a_1'
         }),
         { enableViewerClipping: A } = u.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        y = (0, s.Z)(m.Z);
+        y = (0, a.Z)(m.Z);
     if (null == t || null != N) return null;
     let P = (0, h.Z)(t),
         M = f.BT({

@@ -16,8 +16,8 @@ var i = n(200651),
     d = n(893607),
     h = n(703656),
     g = n(314897),
-    m = n(781428),
-    f = n(981631),
+    f = n(781428),
+    m = n(981631),
     p = n(176505);
 function _(e) {
     let t = r.useCallback(
@@ -25,7 +25,7 @@ function _(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, a.LX)(e, { path: f.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId()) });
+                        let n = (0, a.LX)(e, { path: m.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId()) });
                         return (null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.channelId) === p.oC.ROLE_SUBSCRIPTIONS || !1;
                     })(t)
                 )
@@ -43,7 +43,7 @@ function _(e) {
         })),
         { location: x, redirectTo: E } = e,
         [v, I] = r.useState(n);
-    function b(e) {
+    function N(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
         (0, c.Yz)({
             handoffKey: t,
@@ -59,13 +59,13 @@ function _(e) {
                 let n = null != E ? (0, u.L)(E) : void 0;
                 v
                     ? o.Z.logout(null).finally(() => {
-                          b({
+                          N({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n
                           });
                       })
-                    : b({
+                    : N({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n
@@ -73,9 +73,9 @@ function _(e) {
             }
         }
     }, []),
-    v || _ === f.u34.LOGGING_IN)
-        ? (0, i.jsx)(m.q, {})
-        : (0, i.jsx)(m.Z, {
+    v || _ === m.u34.LOGGING_IN)
+        ? (0, i.jsx)(f.q, {})
+        : (0, i.jsx)(f.Z, {
               ...e,
               transitionTo: t
           });

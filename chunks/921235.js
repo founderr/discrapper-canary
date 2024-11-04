@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(904245),
     u = n(268350),
@@ -31,16 +31,16 @@ function b(e) {
     l.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let S = (0, s.e7)(
+    let S = (0, a.e7)(
             [p.Z, m.default],
             () =>
-                !!a()(p.Z.getMessages(n.id).toArray())
+                !!s()(p.Z.getMessages(n.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== m.default.getId() && e.state === v.yb.SENT && !(0, x.Z)(e))
         ),
-        Z = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        Z = (0, a.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
         T = null !== (t = C.ZP.useName(Z)) && void 0 !== t ? t : _.intl.string(_.t.y1Wu2d),
-        N = (0, s.e7)([d.Z], () => d.Z.getStickerById(E)),
+        N = (0, a.e7)([d.Z], () => d.Z.getStickerById(E)),
         j = l.useCallback(async () => {
             if (null == r || '' === r)
                 try {

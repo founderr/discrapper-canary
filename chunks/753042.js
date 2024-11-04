@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    a = n(481060),
-    s = n(388905),
+    s = n(481060),
+    a = n(388905),
     o = n(527379),
     c = n(376923),
     u = n(16829),
@@ -30,111 +30,111 @@ function x(e) {
     }, [t.guildId]),
     null == n)
         ? null
-        : (0, i.jsx)(a.FormItem, {
+        : (0, i.jsx)(s.FormItem, {
               title: g.intl.string(g.t['ldCE/v']),
               titleClassName: C.infoTitle,
               children: (0, i.jsxs)(p.WM, {
                   children: [
                       (0, i.jsx)(p._2, {
-                          icon: (0, i.jsx)(a.ShieldUserIcon, {
+                          icon: (0, i.jsx)(s.ShieldUserIcon, {
                               size: 'custom',
                               width: p.Mn,
                               height: p.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.nzGai4)
                           }),
                           description: x
-                              ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
+                              ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
                                     size: 'custom',
                                     width: p.Mn,
                                     height: p.Mn,
-                                    color: a.tokens.colors.INFO_POSITIVE_FOREGROUND
+                                    color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
                                 })
-                              : (0, i.jsx)(a.XLargeBoldIcon, {
+                              : (0, i.jsx)(s.XLargeBoldIcon, {
                                     size: 'custom',
                                     width: p.Mn,
                                     height: p.Mn,
-                                    color: a.tokens.colors.INFO_DANGER_FOREGROUND
+                                    color: s.tokens.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
                       v !== c.qc.NO_GATE &&
                           (0, i.jsx)(p._2, {
-                              icon: (0, i.jsx)(a.BookCheckIcon, {
+                              icon: (0, i.jsx)(s.BookCheckIcon, {
                                   size: 'custom',
                                   width: p.Mn,
                                   height: p.Mn
                               }),
-                              name: (0, i.jsx)(a.Text, {
+                              name: (0, i.jsx)(s.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-normal',
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
                                   v === c.qc.AGREED
-                                      ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
+                                      ? (0, i.jsx)(s.CheckmarkLargeBoldIcon, {
                                             size: 'custom',
                                             width: p.Mn,
                                             height: p.Mn,
-                                            color: a.tokens.colors.INFO_POSITIVE_FOREGROUND
+                                            color: s.tokens.colors.INFO_POSITIVE_FOREGROUND
                                         })
-                                      : (0, i.jsx)(a.XLargeBoldIcon, {
+                                      : (0, i.jsx)(s.XLargeBoldIcon, {
                                             size: 'custom',
                                             width: p.Mn,
                                             height: p.Mn,
-                                            color: a.tokens.colors.INFO_DANGER_FOREGROUND
+                                            color: s.tokens.colors.INFO_DANGER_FOREGROUND
                                         })
                           }),
                       (0, i.jsx)(p._2, {
-                          icon: (0, i.jsx)(a.ClydeIcon, {
+                          icon: (0, i.jsx)(s.ClydeIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               width: p.Mn,
                               height: p.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.SaDIpK)
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: _
                           })
                       }),
                       (0, i.jsx)(p._2, {
-                          icon: (0, i.jsx)(s.Vj, {
+                          icon: (0, i.jsx)(a.Vj, {
                               guild: n,
-                              size: s.Vj.Sizes.SMOL,
+                              size: a.Vj.Sizes.SMOL,
                               animate: !1,
                               className: C.guildIcon
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t['NQJ+WF'])
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: I
                           })
                       }),
                       (0, i.jsx)(p._2, {
-                          icon: (0, i.jsx)(a.GroupPlusIcon, {
+                          icon: (0, i.jsx)(s.GroupPlusIcon, {
                               size: 'custom',
                               width: p.Mn,
                               height: p.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t['eJOq+f'])
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: (0, i.jsx)(u.ZP, {

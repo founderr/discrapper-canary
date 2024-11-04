@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(399606),
     r = n(481060),
-    a = n(275759),
-    s = n(565138),
+    s = n(275759),
+    a = n(565138),
     o = n(706454),
     c = n(271383),
     u = n(430824),
@@ -20,8 +20,8 @@ function p(e) {
         g = (0, l.e7)([o.default], () => o.default.locale),
         C = (0, l.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         x = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        v = (0, a.FI)(d.default.extractTimestamp(t), g),
-        _ = (0, a.FI)(null == x ? void 0 : x.joinedAt, g);
+        v = (0, s.FI)(d.default.extractTimestamp(t), g),
+        _ = (0, s.FI)(null == x ? void 0 : x.joinedAt, g);
     return null == C || null == x
         ? (0, i.jsx)(r.Text, {
               variant: 'text-sm/normal',
@@ -62,10 +62,10 @@ function p(e) {
                               text: C.name,
                               delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(s.Z, {
+                                  (0, i.jsx)(a.Z, {
                                       ...e,
                                       guild: C,
-                                      size: s.Z.Sizes.SMOL
+                                      size: a.Z.Sizes.SMOL
                                   })
                           }),
                           (0, i.jsx)(r.Text, {

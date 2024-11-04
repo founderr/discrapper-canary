@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(313201),
-    a = n(388032),
-    s = n(780735);
+    s = n(388032),
+    a = n(780735);
 let o = () =>
     n
         .e('39248')
@@ -20,33 +20,33 @@ t.Z = (e) => {
         'aria-labelledby': t,
         children: [
             (0, i.jsx)('div', {
-                className: s.animationContainer,
+                className: a.animationContainer,
                 children: (0, i.jsx)(l.LottieAnimation, {
                     importData: o,
-                    className: s.animationMiddle
+                    className: a.animationMiddle
                 })
             }),
             (0, i.jsx)(l.ModalContent, {
                 children: (0, i.jsxs)('div', {
-                    className: s.container,
+                    className: a.container,
                     children: [
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: s.header,
+                            className: a.header,
                             id: t,
-                            children: a.intl.format(a.t.z9qozM, { guildName: e.guildName })
+                            children: s.intl.format(s.t.z9qozM, { guildName: e.guildName })
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: a.intl.string(a.t.nwpqyc)
+                            children: s.intl.string(s.t.nwpqyc)
                         }),
                         (0, i.jsx)(l.Button, {
-                            className: s.button,
+                            className: a.button,
                             onClick: () => {
                                 e.onAccept(), e.onClose();
                             },
-                            children: a.intl.string(a.t.NuzmOD)
+                            children: s.intl.string(s.t.NuzmOD)
                         })
                     ]
                 })

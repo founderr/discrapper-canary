@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    s = n(170671),
+    s = n(481060),
+    a = n(170671),
     o = n(738672),
     c = n(388032),
     u = n(684365),
@@ -22,20 +22,20 @@ function h(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: u.wumpusContainer,
-                        children: (0, i.jsx)(a.Image, {
+                        children: (0, i.jsx)(s.Image, {
                             src: d,
                             width: 72,
                             height: 52,
                             zoomable: !1
                         })
                     }),
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(s.Button, {
                         'aria-label': c.intl.string(c.t.cpT0Cg),
-                        look: a.Button.Looks.BLANK,
-                        size: a.Button.Sizes.NONE,
+                        look: s.Button.Looks.BLANK,
+                        size: s.Button.Sizes.NONE,
                         onClick: () => n(),
                         className: u.closeButton,
-                        children: (0, i.jsx)(a.XSmallIcon, {
+                        children: (0, i.jsx)(s.XSmallIcon, {
                             size: 'md',
                             className: u.closeIcon,
                             color: 'white'
@@ -45,7 +45,7 @@ function h(e) {
             }),
             (0, i.jsx)('div', {
                 className: u.textContainer,
-                children: (0, i.jsx)(a.Text, {
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/semibold',
                     color: 'always-white',
                     children: c.intl.string(c.t.TguaU1)
@@ -54,8 +54,8 @@ function h(e) {
             (0, i.jsxs)('div', {
                 className: u.nitroTextAndBadge,
                 children: [
-                    (0, i.jsx)(s.Z, { isSelected: !0 }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(a.Z, { isSelected: !0 }),
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'always-white',
                         children: c.intl.string(c.t['BMw+7O'])

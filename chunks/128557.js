@@ -11,8 +11,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(75124),
+    s = n.n(r),
+    a = n(75124),
     o = n(748780),
     c = n(442837),
     u = n(704215),
@@ -37,7 +37,7 @@ var i = n(200651),
     A = n(388032),
     y = n(776187);
 function P(e) {
-    let { className: t, iconUrl: n, icon: r, header: s, completed: o, onClick: c } = e,
+    let { className: t, iconUrl: n, icon: r, header: a, completed: o, onClick: c } = e,
         [u, m] = l.useState(!1),
         p = (0, h.Z)(o);
     return (
@@ -45,7 +45,7 @@ function P(e) {
             null != p && o !== p && (m(!0), setTimeout(() => m(!1), 1000));
         }, [o, p]),
         (0, i.jsxs)(d.Clickable, {
-            className: a()(t, y.card, { [y.completed]: o }),
+            className: s()(t, y.card, { [y.completed]: o }),
             onClick: c,
             children: [
                 null != r
@@ -56,15 +56,15 @@ function P(e) {
                       }),
                 (0, i.jsx)(d.Text, {
                     color: 'header-primary',
-                    className: a()(y.cardTextContainer, y.cardHeader),
+                    className: s()(y.cardTextContainer, y.cardHeader),
                     variant: 'text-sm/normal',
-                    children: s
+                    children: a
                 }),
                 o
                     ? (0, i.jsx)(d.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: a()(y.checkmark, { [y.animate]: u })
+                          className: s()(y.checkmark, { [y.animate]: u })
                       })
                     : (0, i.jsx)(I.Z, {
                           className: y.arrow,
@@ -119,14 +119,14 @@ function M(e) {
                             channelId: N.lds
                         });
                 }, []),
-                a = l.useCallback(() => {
+                s = l.useCallback(() => {
                     m.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.PERSONALIZE_SERVER
                     }),
                         null != e && g.Z.open(e.id, N.pNK.OVERVIEW, { section: N.jXE.CHANNEL_WELCOME_CTA });
                 }, [e]),
-                s = l.useCallback(() => {
+                a = l.useCallback(() => {
                     m.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.DOWNLOAD
@@ -143,8 +143,8 @@ function M(e) {
             return {
                 handleInvite: t,
                 handleMessage: r,
-                handlePersonalize: a,
-                handleDownload: s,
+                handlePersonalize: s,
+                handleDownload: a,
                 handleAddApplication: l.useCallback(() => {
                     null != e &&
                         (m.ZP.trackWithMetadata(N.rMx.SERVER_SETUP_CTA_CLICKED, {
@@ -167,14 +167,14 @@ function M(e) {
         })(r),
         V = !(k || O || w || D),
         { titleAnimatedStyle: z, opacities: W } = (function (e) {
-            let t = (0, s.Z)(() => new o.Z.Value(0)),
-                n = (0, s.Z)(() => new o.Z.Value(0)),
+            let t = (0, a.Z)(() => new o.Z.Value(0)),
+                n = (0, a.Z)(() => new o.Z.Value(0)),
                 i = [];
             return (
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
-                i.push((0, s.Z)(() => new o.Z.Value(0))),
+                i.push((0, a.Z)(() => new o.Z.Value(0))),
+                i.push((0, a.Z)(() => new o.Z.Value(0))),
+                i.push((0, a.Z)(() => new o.Z.Value(0))),
+                i.push((0, a.Z)(() => new o.Z.Value(0))),
                 l.useEffect(() => {
                     o.Z.stagger(300, [
                         o.Z.parallel([
@@ -340,7 +340,7 @@ function M(e) {
                             }),
                             (0, i.jsxs)(d.Text, {
                                 color: 'header-secondary',
-                                className: a()({
+                                className: s()({
                                     [y.subtitle]: !0,
                                     [y.noChildren]: 0 === K.length
                                 }),

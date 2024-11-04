@@ -1,6 +1,6 @@
 n.d(e, {
     c: function () {
-        return l;
+        return s;
     }
 });
 var a = n(200651);
@@ -8,14 +8,14 @@ n(192379);
 var r = n(481060),
     o = n(388032),
     i = n(715802),
-    s = n(387852);
-let l = (t) => {
+    l = n(387852);
+let s = (t) => {
     let { onTryAgain: e } = t;
     return (0, a.jsxs)('div', {
         className: i.content,
         children: [
             (0, a.jsx)('img', {
-                src: s,
+                src: l,
                 width: '254',
                 height: '127',
                 alt: ''

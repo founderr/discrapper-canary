@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140),
     c = n(430198),
     u = n(314897),
@@ -11,20 +11,20 @@ var i,
     h = n(709054),
     m = n(522579);
 let p = new Set();
-class f extends (i = s.ZP.Store) {
+class f extends (i = a.ZP.Store) {
     shouldDisplayPrompt(e) {
         return p.has(e);
     }
 }
-(a = 'MediaPostSharePromptStore'),
+(s = 'MediaPostSharePromptStore'),
     (r = 'displayName') in (l = f)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new f(o.Z, {
         CONNECTION_OPEN: function () {
             p = new Set();

@@ -46,7 +46,7 @@ function f(e) {
         : (0, i.jsx)(a.Z.Button, {
               onClick: () => {
                   (0, l.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('10778'), n.e('93474')]).then(n.bind(n, 766775));
+                      let { default: e } = await Promise.all([n.e('10778'), n.e('27815')]).then(n.bind(n, 766775));
                       return (t) =>
                           (0, i.jsx)(e, {
                               ...t,

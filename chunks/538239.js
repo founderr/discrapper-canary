@@ -8,8 +8,8 @@ n.r(t),
 var i = n(200651),
     l = n(192379),
     r = n(512722),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(904245),
     u = n(654030),
@@ -66,7 +66,7 @@ class N extends l.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: l } = this.state,
-            { activity: r, analyticsLocations: s, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: g, onClose: x } = this.props,
+            { activity: r, analyticsLocations: a, channel: c, activityActionType: h, cooldown: m, application: p, transitionState: g, onClose: x } = this.props,
             v = m > 0,
             _ = v ? b.intl.formatToPlainString(b.t['4rMiHx'], { seconds: Math.round((m + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
@@ -94,7 +94,7 @@ class N extends l.PureComponent {
                             application: p,
                             partyId: null != r.party ? r.party.id : null,
                             isPreview: !0,
-                            analyticsLocations: s
+                            analyticsLocations: a
                         }),
                         (0, i.jsx)('div', {
                             className: S.subHeader,
@@ -110,7 +110,7 @@ class N extends l.PureComponent {
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (
-                                    a()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
+                                    s()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
                                     (0, i.jsx)(d.Z, {
                                         onClose: t,
                                         ...l
@@ -200,20 +200,20 @@ class N extends l.PureComponent {
             }),
             Z(this, 'handleShare', () => {
                 let { channel: e, activity: t, activityActionType: n, cooldown: i, onClose: l } = this.props,
-                    { textValue: r, contentWarningProps: a } = this.state;
+                    { textValue: r, contentWarningProps: s } = this.state;
                 if (i > 0)
                     return Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
                     });
-                let s = x.ZP.parse(e, r),
+                let a = x.ZP.parse(e, r),
                     o = {
                         activity: t,
                         type: n
                     };
-                return null != a
+                return null != s
                     ? (this.setState({ contentWarningProps: null }),
-                      c.Z.sendMessage(e.id, s, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
+                      c.Z.sendMessage(e.id, a, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
                       l(),
                       Promise.resolve({
                           shouldClear: !0,
@@ -227,7 +227,7 @@ class N extends l.PureComponent {
                       }).then((t) => {
                           let { valid: n } = t;
                           return n
-                              ? (c.Z.sendMessage(e.id, s, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
+                              ? (c.Z.sendMessage(e.id, a, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
                                 l(),
                                 {
                                     shouldClear: !1,
@@ -241,7 +241,7 @@ class N extends l.PureComponent {
             });
     }
 }
-t.default = s.ZP.connectStores([_.Z, p.Z], (e) => {
+t.default = a.ZP.connectStores([_.Z, p.Z], (e) => {
     let { channel: t, activity: n } = e;
     return {
         cooldown: _.Z.getSlowmodeCooldownGuess(t.id),

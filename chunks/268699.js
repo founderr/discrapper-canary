@@ -10,12 +10,12 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(626135),
-    a = n(687683),
-    s = n(981631);
+    s = n(687683),
+    a = n(981631);
 function o(e) {
     let { channelId: t, onConfirm: o, onCancel: c } = e;
-    r.default.track(s.rMx.OPEN_MODAL, {
-        type: a.t9,
+    r.default.track(a.rMx.OPEN_MODAL, {
+        type: s.t9,
         channel_id: t
     }),
         (0, l.openModalLazy)(async () => {

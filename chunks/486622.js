@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(192379),
     l = n(707019),
     r = n.n(l),
-    a = n(881052),
-    s = n(726521),
+    s = n(881052),
+    a = n(726521),
     o = n(621853),
     c = n(484459),
     u = n(695346),
@@ -34,7 +34,7 @@ function C(e) {
                     try {
                         await (0, h.e4)(e), T(!0), null == n || n();
                     } catch (t) {
-                        let e = new a.Hx(t);
+                        let e = new s.Hx(t);
                         null == C || C(e);
                     } finally {
                         _(!1);
@@ -50,7 +50,7 @@ function C(e) {
                     try {
                         await (0, h.gN)(e), j(!0), null == l || l();
                     } catch (t) {
-                        let e = new a.Hx(t);
+                        let e = new s.Hx(t);
                         null == C || C(e);
                     } finally {
                         E(!1);
@@ -68,7 +68,7 @@ function C(e) {
                     for (let e of t) await (0, h.r_)(e);
                     j(!0), null == l || l();
                 } catch (t) {
-                    let e = new a.Hx(t);
+                    let e = new s.Hx(t);
                     null == C || C(e);
                 } finally {
                     E(!1);
@@ -123,7 +123,7 @@ function C(e) {
             (e, t, n) => {
                 let i = (i, l) => {
                         l && u.kJ.updateSetting(i),
-                            i && null != t && (0, s.zd)(t),
+                            i && null != t && (0, a.zd)(t),
                             y(e.id),
                             d.default.track(g.rMx.MESSAGE_REQUEST_ACTION, {
                                 action: f.cl.ACCEPT_HAM_CONFIRMATION_PROMPT,

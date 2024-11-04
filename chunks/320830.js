@@ -22,8 +22,8 @@ function g(e, t, n) {
         e
     );
 }
-let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    f = {
+let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    m = {
         START: 0,
         END: 1
     },
@@ -40,13 +40,13 @@ t.Z = function (e) {
             clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
         }
         componentWillAppear(e) {
-            this.state.shouldAnimate ? this.animateTo(f.END, e) : e();
+            this.state.shouldAnimate ? this.animateTo(m.END, e) : e();
         }
         componentWillEnter(e) {
-            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(f.END, e), 40))) : e();
+            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(m.END, e), 40))) : e();
         }
         componentWillLeave(e) {
-            this.state.shouldAnimate ? this.animateTo(f.START, e) : e();
+            this.state.shouldAnimate ? this.animateTo(m.START, e) : e();
         }
         animateTo(e, t) {
             l.Z.spring(this.anim, {
@@ -95,11 +95,11 @@ t.Z = function (e) {
         constructor(...e) {
             super(...e),
                 g(this, 'timeout', void 0),
-                g(this, 'anim', new l.Z.Value(f.START)),
+                g(this, 'anim', new l.Z.Value(m.START)),
                 g(this, 'state', { shouldAnimate: !o.tq }),
                 g(this, 'handleResize', () => {
-                    let e = window.innerWidth > m;
-                    !this.state.shouldAnimate && e && this.anim.setValue(f.END), this.setState({ shouldAnimate: e });
+                    let e = window.innerWidth > f;
+                    !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
                 }),
                 g(this, 'handleResizeDebounced', a()(this.handleResize, 60));
         }

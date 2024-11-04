@@ -9,8 +9,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(392711),
     c = n.n(o),
     u = n(913527),
@@ -75,21 +75,21 @@ function ei(e, t, n) {
 }
 let el = (0, A.hQ)(),
     er = (0, A.hQ)();
-function ea(e) {
+function es(e) {
     let { className: t, children: n } = e;
     return (0, l.jsxs)(j.Z, {
         align: j.Z.Align.CENTER,
         justify: j.Z.Justify.CENTER,
         direction: j.Z.Direction.VERTICAL,
-        className: s()(ee.errorState, t),
-        children: [(0, l.jsx)('div', { className: s()(ee.errorStateIcon, en.marginBottom20) }), n]
+        className: a()(ee.errorState, t),
+        children: [(0, l.jsx)('div', { className: a()(ee.errorStateIcon, en.marginBottom20) }), n]
     });
 }
-let es = (e) => {
+let ea = (e) => {
         var t;
         let { channel: n, onClose: i } = e,
             r = null !== (t = (0, N.ZP)(n)) && void 0 !== t ? t : '',
-            a = (0, m.e7)([U.ZP], () => {
+            s = (0, m.e7)([U.ZP], () => {
                 var e;
                 return null !== (e = U.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
             });
@@ -111,7 +111,7 @@ let es = (e) => {
                     }),
                     (0, l.jsx)('span', {
                         className: ee.lastActiveTimestamp,
-                        children: d()(Y.default.extractTimestamp(a)).fromNow()
+                        children: d()(Y.default.extractTimestamp(s)).fromNow()
                     })
                 ]
             })
@@ -148,7 +148,7 @@ let es = (e) => {
                         })
                         .map((e) =>
                             (0, l.jsx)(
-                                es,
+                                ea,
                                 {
                                     onClose: i.onClose,
                                     channel: e
@@ -249,28 +249,28 @@ class ec extends (i = r.PureComponent) {
             t = e <= 0 ? $.intl.formatToPlainString($.t.xYr009, { number: this.getMaxParticipants() }) : $.intl.formatToPlainString($.t.HrSDPD, { number: e });
         return (0, l.jsx)(p.Text, {
             variant: 'text-xs/normal',
-            className: s()(ee.subtitle, { [ee.subtitleWarning]: e < 0 }, en.marginTop4),
+            className: a()(ee.subtitle, { [ee.subtitleWarning]: e < 0 }, en.marginTop4),
             children: t
         });
     }
     renderSearchBar() {
         var e;
-        let { query: t, hasFriends: n, results: i, selectedRow: r, selectedUsers: a } = this.props;
+        let { query: t, hasFriends: n, results: i, selectedRow: r, selectedUsers: s } = this.props;
         if (!n || this.isNotFriends()) return null;
         let o = [];
         return (
-            a.forEach((e) => {
+            s.forEach((e) => {
                 let t = F.default.getUser(e);
                 null != t && o.push(K.ZP.getName(t));
             }),
             (0, l.jsxs)(j.Z, {
-                className: s()(ee.searchBar, en.marginTop20),
+                className: a()(ee.searchBar, en.marginTop20),
                 children: [
                     (0, l.jsx)(b.ZP, {
                         ref: this.searchBarRef,
                         className: ee.searchBarComponent,
                         autoFocus: !0,
-                        placeholder: 0 === a.size ? $.intl.string($.t.Wxnb6u) : void 0,
+                        placeholder: 0 === s.size ? $.intl.string($.t.Wxnb6u) : void 0,
                         disabled: this.isPartyFull(),
                         size: b.ZP.Sizes.MEDIUM,
                         query: t,
@@ -321,7 +321,7 @@ class ec extends (i = r.PureComponent) {
             let n = F.default.getUser(t),
                 i = null != n ? n.username : '',
                 r = null != n && B.Z.getRelationshipType(n.id) === Q.OGo.PENDING_OUTGOING;
-            return (0, l.jsxs)(ea, {
+            return (0, l.jsxs)(es, {
                 className: ee.notFriends,
                 children: [
                     (0, l.jsx)('div', { children: $.intl.format($.t['eg+R9/'], { username: i }) }),
@@ -337,13 +337,13 @@ class ec extends (i = r.PureComponent) {
         }
         return t
             ? this.isPartyFull()
-                ? (0, l.jsxs)(ea, {
+                ? (0, l.jsxs)(es, {
                       className: ee.partyFull,
                       children: [(0, l.jsx)('div', { children: $.intl.string($.t.OtTQDw) }), (0, l.jsx)('div', { children: $.intl.format($.t.xYr009, { number: this.getMaxParticipants() }) })]
                   })
                 : 0 === n.length
-                  ? (0, l.jsx)(ea, {
-                        className: s()(ee.noResults, en.marginBottom20),
+                  ? (0, l.jsx)(es, {
+                        className: a()(ee.noResults, en.marginBottom20),
                         children: (0, l.jsx)('div', { children: $.intl.string($.t.SV4DJy) })
                     })
                   : (0, l.jsx)(p.List, {
@@ -364,7 +364,7 @@ class ec extends (i = r.PureComponent) {
                         innerAriaMultiselectable: !0,
                         innerAriaOrientation: 'vertical'
                     })
-            : (0, l.jsxs)(ea, {
+            : (0, l.jsxs)(es, {
                   className: ee.noFriends,
                   children: [
                       (0, l.jsx)('div', { children: $.intl.string($.t['7orY6O']) }),
@@ -387,7 +387,7 @@ class ec extends (i = r.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: i } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let a = null != t ? (0, y.Z)(t.code) : '';
+        let s = null != t ? (0, y.Z)(t.code) : '';
         return (0, l.jsxs)(r.Fragment, {
             children: [
                 (0, l.jsx)(p.FormTitle, {
@@ -396,15 +396,15 @@ class ec extends (i = r.PureComponent) {
                     children: $.intl.string($.t.t3O2BQ)
                 }),
                 (0, l.jsxs)(j.Z, {
-                    className: s()(et.input, { [et.success]: i }),
+                    className: a()(et.input, { [et.success]: i }),
                     justify: j.Z.Justify.BETWEEN,
                     align: j.Z.Align.CENTER,
                     children: [
-                        a.length > 0
+                        s.length > 0
                             ? (0, l.jsx)(p.TextInput, {
                                   className: ee.copyInput,
                                   name: 'invite',
-                                  value: n ? $.intl.string($.t['6HzNgY']) : a,
+                                  value: n ? $.intl.string($.t['6HzNgY']) : s,
                                   editable: !1,
                                   inputClassName: ee.input,
                                   spellCheck: 'false',
@@ -413,23 +413,23 @@ class ec extends (i = r.PureComponent) {
                             : (0, l.jsx)(p.TextInput, {
                                   className: ee.copyInput,
                                   name: 'invite',
-                                  value: a,
+                                  value: s,
                                   placeholder: (0, y.Z)($.intl.string($.t.lPVBqK)),
                                   editable: !1,
                                   inputClassName: ee.input,
                                   spellCheck: 'false',
                                   onClick: () => this.createInvite()
                               }),
-                        V.wS && a.length > 0
+                        V.wS && s.length > 0
                             ? (0, l.jsx)(p.Button, {
                                   size: p.Button.Sizes.SMALL,
                                   color: i ? p.Button.Colors.GREEN : p.Button.Colors.BRAND,
                                   className: ee.copyButton,
-                                  onClick: () => this.handleCopyInvite(a),
+                                  onClick: () => this.handleCopyInvite(s),
                                   children: i ? $.intl.string($.t.q30c5u) : $.intl.string($.t.OpuAlJ)
                               })
                             : null,
-                        0 === a.length
+                        0 === s.length
                             ? (0, l.jsx)(p.Button, {
                                   size: p.Button.Sizes.SMALL,
                                   color: p.Button.Colors.BRAND,
@@ -440,10 +440,10 @@ class ec extends (i = r.PureComponent) {
                             : null
                     ]
                 }),
-                a.length > 0
+                s.length > 0
                     ? (0, l.jsx)(p.Text, {
                           variant: 'text-xs/normal',
-                          className: s()(en.marginTop8, ee.footerText),
+                          className: a()(en.marginTop8, ee.footerText),
                           children: $.intl.format($.t.ZVdJMz, { numHours: ''.concat(24) })
                       })
                     : null
@@ -512,7 +512,7 @@ class ec extends (i = r.PureComponent) {
             }),
             ei(this, 'renderMobileCloseButton', () =>
                 (0, l.jsx)('div', {
-                    className: s()(ee.mobileToolsContainer),
+                    className: a()(ee.mobileToolsContainer),
                     ref: this._mobileCloseRef,
                     children: (0, l.jsx)(p.FocusRingScope, {
                         containerRef: this._mobileCloseRef,
@@ -534,7 +534,7 @@ class ec extends (i = r.PureComponent) {
             ei(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e;
                 if (t > 0) return null;
-                let { results: i, selectedUsers: r, selectedRow: a, hideDiscriminator: s } = this.props,
+                let { results: i, selectedUsers: r, selectedRow: s, hideDiscriminator: a } = this.props,
                     o = i[n];
                 if (null == o) return null;
                 let { user: c, comparator: u } = o,
@@ -544,10 +544,10 @@ class ec extends (i = r.PureComponent) {
                     {
                         row: n,
                         user: c,
-                        hideDiscriminator: s,
+                        hideDiscriminator: a,
                         comparator: u,
                         checked: d,
-                        selected: n === a,
+                        selected: n === s,
                         onClick: this.handleClick,
                         onMouseEnter: this.focusResult,
                         'aria-posinset': n + 1,
@@ -721,7 +721,7 @@ function eu(e) {
 }
 function ed(e) {
     var t, n;
-    let { channel: i, iconClassName: a, icon: s, tooltip: o, tooltipPosition: c = 'bottom', popoutPosition: u = 'bottom', popoutAlign: d = 'right', subscribeToGlobalHotkey: h = !1 } = e,
+    let { channel: i, iconClassName: s, icon: a, tooltip: o, tooltipPosition: c = 'bottom', popoutPosition: u = 'bottom', popoutAlign: d = 'right', subscribeToGlobalHotkey: h = !1 } = e,
         [f, g] = r.useState(null != i && i.isGroupDM() && 0 === i.recipients.length),
         C = r.useCallback(() => g((e) => !e), []);
     r.useEffect(
@@ -755,9 +755,9 @@ function ed(e) {
                   (0, l.jsx)(X.ZP.Icon, {
                       ...e,
                       onClick: C,
-                      icon: null != s ? s : null == i ? p.ChatPlusIcon : p.GroupPlusIcon,
-                      className: a,
-                      iconClassName: a,
+                      icon: null != a ? a : null == i ? p.ChatPlusIcon : p.GroupPlusIcon,
+                      className: s,
+                      iconClassName: s,
                       tooltip: o,
                       tooltipPosition: c
                   })

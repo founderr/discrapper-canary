@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(442837),
     l = n(621853),
     r = n(981631);
-function a(e) {
+function s(e) {
     let t = (0, i.e7)([l.Z], () => {
         var t;
         return null !== e ? (null === (t = l.Z.getUserProfile(null != e ? e : r.lds)) || void 0 === t ? void 0 : t.application) : void 0;

@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(442837),
-    s = n(692547),
+    s = n(442837),
+    a = n(692547),
     o = n(481060),
     c = n(358221),
     u = n(594190),
@@ -17,7 +17,7 @@ t.Z = (e) => {
     let { className: t, channelId: n } = e,
         l = (0, h.Go)(),
         C = m.Z.isDecoupledGameClippingEnabled();
-    return (0, a.e7)([d.Z, c.Z, m.Z, u.ZP], () => {
+    return (0, s.e7)([d.Z, c.Z, m.Z, u.ZP], () => {
         var e;
         if (null == n) return !1;
         let t = d.Z.getCurrentUserActiveStream(),
@@ -32,13 +32,13 @@ t.Z = (e) => {
                   (0, i.jsx)(o.IconBadge, {
                       icon: o.ClipsIcon,
                       shape: o.BadgeShapes.ROUND_LEFT,
-                      color: s.Z.unsafe_rawColors.PRIMARY_500.css,
+                      color: a.Z.unsafe_rawColors.PRIMARY_500.css,
                       className: g.clipBadgeIcon
                   }),
                   (0, i.jsx)(o.TextBadge, {
                       text: f.intl.string(f.t.pCMkDQ),
                       shape: o.BadgeShapes.ROUND_RIGHT,
-                      color: s.Z.unsafe_rawColors.PRIMARY_500.css,
+                      color: a.Z.unsafe_rawColors.PRIMARY_500.css,
                       className: g.clipBadgeText
                   })
               ]

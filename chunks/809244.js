@@ -1,20 +1,20 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(687516),
     l = n(5192),
     r = n(388032);
-function a(e, t, n) {
-    let a = (0, i.Cf)(n),
-        s = l.ZP.getName(e.getGuildId(), e.id, t);
+function s(e, t, n) {
+    let s = (0, i.Cf)(n),
+        a = l.ZP.getName(e.getGuildId(), e.id, t);
     return null == n
-        ? s
-        : (null == a ? void 0 : a.name) != null
+        ? a
+        : (null == s ? void 0 : s.name) != null
           ? r.intl.formatToPlainString(r.t['9jpVOT'], {
-                applicationName: null == a ? void 0 : a.name,
-                username: s
+                applicationName: null == s ? void 0 : s.name,
+                username: a
             })
-          : r.intl.formatToPlainString(r.t['+h0Z5+'], { username: s });
+          : r.intl.formatToPlainString(r.t['+h0Z5+'], { username: a });
 }

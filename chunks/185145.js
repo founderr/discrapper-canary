@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(346486),
-    s = n(545594),
+    s = n(346486),
+    a = n(545594),
     o = n(314897),
     c = n(271383),
     u = n(322937),
@@ -32,7 +32,7 @@ function g(e) {
                           guildName: t.name
                       })
                     : null,
-                (0, i.jsx)(s.i, {
+                (0, i.jsx)(a.i, {
                     bannerIcon: (0, i.jsx)(r.ClockWarningIcon, {
                         size: 'md',
                         color: 'currentColor',
@@ -44,7 +44,7 @@ function g(e) {
                     headerStyles: f.bannerHeader,
                     children: (0, i.jsx)(r.Text, {
                         variant: 'text-sm/semibold',
-                        children: (0, i.jsx)(a.Z, {
+                        children: (0, i.jsx)(s.Z, {
                             deadline: new Date(n),
                             showUnits: !0,
                             stopAtOneSec: !0

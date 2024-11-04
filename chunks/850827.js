@@ -2,8 +2,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    s = n(512722),
+    a = n.n(s),
     o = n(442837),
     c = n(481060),
     u = n(730749),
@@ -31,12 +31,12 @@ var l = n(120356),
     M = n(981631),
     R = n(193710);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: a, className: u, guildId: L, channelId: k, source: O, color: w = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: B, isEmbedded: H = !1 } = e,
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: s, className: u, guildId: L, channelId: k, source: O, color: w = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: B, isEmbedded: H = !1 } = e,
         F = (0, o.e7)([f.default], () => {
             let e = f.default.getCurrentUser();
-            return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
+            return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        G = U === I.Y.STREAM_PREVIEW || null != a,
+        G = U === I.Y.STREAM_PREVIEW || null != s,
         V = (0, v.Z)(t),
         z = V || G ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL,
         W = (null == t ? void 0 : t.type) === M.IIU.HANG_STATUS,
@@ -130,7 +130,7 @@ t.Z = (0, u.Z)((e) => {
                           isCurrentUser: F.id === l.id,
                           color: w,
                           look: D,
-                          applicationStream: a,
+                          applicationStream: s,
                           onAction: B
                       },
                       'watch-button'

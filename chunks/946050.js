@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(670044),
-    s = n(28391),
+    s = n(670044),
+    a = n(28391),
     o = n(526761),
     c = n(388032),
     u = n(915383);
@@ -17,7 +17,7 @@ function d(e) {
         (0, i.jsxs)('div', {
             className: u.notice,
             children: [
-                (0, i.jsx)(a.Z, { id: e.channel.id }),
+                (0, i.jsx)(s.Z, { id: e.channel.id }),
                 (0, i.jsx)('div', {
                     className: u.info,
                     children: (0, i.jsx)(r.Text, {
@@ -34,7 +34,7 @@ function d(e) {
                             color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.buttonInner,
-                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ALL_MESSAGES),
+                            onClick: () => (0, a.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ALL_MESSAGES),
                             children: [
                                 (0, i.jsx)(r.CheckmarkLargeIcon, {
                                     size: 'xs',
@@ -51,7 +51,7 @@ function d(e) {
                             color: r.Button.Colors.PRIMARY,
                             className: u.button,
                             innerClassName: u.buttonInner,
-                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
+                            onClick: () => (0, a.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
                             children: (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)(r.XSmallIcon, {

@@ -2,8 +2,8 @@ n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(512722),
     c = n.n(o),
     u = n(568611),
@@ -113,9 +113,9 @@ class V extends (i = r.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: r, windowKey: a, mouseModeEnabled: o, reducedMotionEnabled: c, fontScaleClass: d, withTitleBar: h, guestWindow: g, clientThemesClassName: x, contentClassName: v, appWrapperClassName: _ } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: r, windowKey: s, mouseModeEnabled: o, reducedMotionEnabled: c, fontScaleClass: d, withTitleBar: h, guestWindow: g, clientThemesClassName: x, contentClassName: v, appWrapperClassName: _ } = this.props,
             I = (0, O.getPlatform)(),
-            E = s()(d, {
+            E = a()(d, {
                 'mouse-mode': o,
                 'reduce-motion': c,
                 'full-motion': !c,
@@ -132,7 +132,7 @@ class V extends (i = r.Component) {
                                 children: (0, l.jsx)('div', {
                                     'data-popout-root': !0,
                                     ref: this.rootRef,
-                                    className: s()(e, (0, b.Z)(), E, x, _),
+                                    className: a()(e, (0, b.Z)(), E, x, _),
                                     children: (0, l.jsx)(m.FocusRingScope, {
                                         containerRef: this.rootRef,
                                         children: (0, l.jsx)(C.Z, {
@@ -151,12 +151,12 @@ class V extends (i = r.Component) {
                                                                             ? (0, l.jsx)(N.Z, {
                                                                                   focused: n,
                                                                                   type: I,
-                                                                                  windowKey: a,
+                                                                                  windowKey: s,
                                                                                   macOSFrame: !0
                                                                               })
                                                                             : null,
                                                                         (0, l.jsx)('div', {
-                                                                            className: s()(F.content, v),
+                                                                            className: a()(F.content, v),
                                                                             children: r
                                                                         })
                                                                     ]
@@ -208,7 +208,7 @@ let z = r.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let r = (0, h.e7)([k.Z], () => k.Z.isFocused()),
-        { locale: a, theme: s } = (0, h.cj)([R.Z, M.default], () => ({
+        { locale: s, theme: a } = (0, h.cj)([R.Z, M.default], () => ({
             locale: M.default.locale,
             theme: R.Z.theme
         })),
@@ -230,8 +230,8 @@ let z = r.forwardRef(function (e, t) {
                       guestWindow: n,
                       focused: i,
                       appFocused: r,
-                      locale: a,
-                      theme: s,
+                      locale: s,
+                      theme: a,
                       forcedColors: o,
                       useForcedColors: u.useForcedColors,
                       systemForcedColors: u.systemForcedColors,

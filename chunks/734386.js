@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(392711),
+    o = n.n(a),
     c = n(149765),
     u = n(866442),
     d = n(442837),
@@ -37,7 +37,7 @@ var i = n(200651),
 function R(e) {
     let { channel: t } = e,
         [n, r] = l.useState(!1),
-        s = (0, f.ZP)(t, !0),
+        a = (0, f.ZP)(t, !0),
         R = t.guild_id,
         L = (0, d.e7)([E.Z], () => (null != R ? E.Z.getRoles(R) : void 0)),
         k = (0, d.e7)([S.default, E.Z], () => {
@@ -105,10 +105,10 @@ function R(e) {
                 locked: !0,
                 channelType: t.type
             }),
-            (0, i.jsx)(j.Ot, { children: P.intl.format(P.t.I3R7Vl, { channelName: s }) }),
+            (0, i.jsx)(j.Ot, { children: P.intl.format(P.t.I3R7Vl, { channelName: a }) }),
             (0, i.jsx)(j.jz, {
                 children: P.intl.format(P.t.QuwqjI, {
-                    channelName: s,
+                    channelName: a,
                     topicHook: () => I.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
@@ -174,15 +174,15 @@ function R(e) {
                     })(),
                     w.map((e, n) => {
                         var l, r;
-                        let s = null !== (r = e.colorString) && void 0 !== r ? r : (0, u.Rf)(y.p6O),
+                        let a = null !== (r = e.colorString) && void 0 !== r ? r : (0, u.Rf)(y.p6O),
                             o = (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) !== void 0;
                         return U
                             ? (0, i.jsx)(
                                   x.Z,
                                   {
-                                      className: a()(M.role, { [M.last]: n === w.length - 1 }),
+                                      className: s()(M.role, { [M.last]: n === w.length - 1 }),
                                       roleName: e.name,
-                                      roleColor: s,
+                                      roleColor: a,
                                       disabled: !U,
                                       verified: o,
                                       onClick: () => {
@@ -194,9 +194,9 @@ function R(e) {
                             : (0, i.jsx)(
                                   v.Z,
                                   {
-                                      className: a()(M.role, { [M.last]: n === w.length - 1 }),
+                                      className: s()(M.role, { [M.last]: n === w.length - 1 }),
                                       roleName: e.name,
-                                      roleColor: s,
+                                      roleColor: a,
                                       verified: o
                                   },
                                   e.id

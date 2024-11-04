@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(481369),
-    a = n(944103),
-    s = n(946050),
+    s = n(944103),
+    a = n(946050),
     o = n(256413),
     c = n(292853),
     u = n(359565),
@@ -11,7 +11,7 @@ t.Z = l.memo(function (e) {
     let { channel: t, narrow: n } = e,
         l = (0, o.Z)(t),
         h = (0, r.Z)(),
-        { canRenderNotice: m, recordNoticeRender: p } = (0, a.Z)(t);
+        { canRenderNotice: m, recordNoticeRender: p } = (0, s.Z)(t);
     return t.isArchivedLockedThread()
         ? (0, i.jsx)(u.s, {
               channel: t,
@@ -28,7 +28,7 @@ t.Z = l.memo(function (e) {
                   narrow: n
               })
             : m
-              ? (0, i.jsx)(s.Z, {
+              ? (0, i.jsx)(a.Z, {
                     channel: t,
                     onChannelChange: p
                 })

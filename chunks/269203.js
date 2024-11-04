@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(805519),
-    s = n(565138),
+    s = n(805519),
+    a = n(565138),
     o = n(246364),
     c = n(705563),
     u = n(594174),
@@ -17,7 +17,7 @@ var l = n(442837),
     m = n(527094);
 function p(e) {
     var t;
-    let { joinRequest: n, guild: a } = e,
+    let { joinRequest: n, guild: s } = e,
         c = (0, l.e7)([u.default], () => u.default.getUser(n.userId));
     return (0, i.jsxs)('div', {
         className: m.summaryContainer,
@@ -25,20 +25,20 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: m.summaryHeader,
                 children: [
-                    null != a &&
+                    null != s &&
                         (0, i.jsxs)('div', {
                             className: m.summaryHeaderClanInfo,
                             children: [
-                                (0, i.jsx)(s.Z, {
-                                    guild: a,
+                                (0, i.jsx)(a.Z, {
+                                    guild: s,
                                     active: !0,
-                                    size: s.Z.Sizes.SMOL,
+                                    size: a.Z.Sizes.SMOL,
                                     className: m.guildIcon
                                 }),
                                 (0, i.jsx)(r.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
-                                    children: a.name
+                                    children: s.name
                                 })
                             ]
                         }),
@@ -82,7 +82,7 @@ function p(e) {
 }
 function f(e) {
     let { channel: t } = e,
-        { loading: n, joinRequest: l, joinRequestGuild: s } = (0, a.Z)(t.id);
+        { loading: n, joinRequest: l, joinRequestGuild: a } = (0, s.Z)(t.id);
     return (0, i.jsx)(d.ZP, {
         channelId: t.id,
         className: m.container,
@@ -94,7 +94,7 @@ function f(e) {
                           children: [
                               (0, i.jsx)('div', {
                                   children: (0, i.jsx)(p, {
-                                      guild: s,
+                                      guild: a,
                                       joinRequest: l
                                   })
                               }),

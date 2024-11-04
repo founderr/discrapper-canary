@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(692547),
-    a = n(481060),
-    s = n(357156),
+    s = n(481060),
+    a = n(357156),
     o = n(592125),
     c = n(15274),
     u = n(924301),
@@ -23,7 +23,7 @@ function g(e) {
         g = (0, l.e7)([o.Z], () => o.Z.getChannel(t), [t]),
         C = (0, d.sz)(t),
         x = null != (0, d.qY)(t),
-        { canManageGuildEvent: v } = (0, s.XJ)(g),
+        { canManageGuildEvent: v } = (0, a.XJ)(g),
         _ = (0, l.cj)([u.ZP], () => C.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
     return C.length < 1 || x
         ? null
@@ -32,7 +32,7 @@ function g(e) {
                   (0, i.jsx)(
                       m.Z,
                       {
-                          icon: (0, i.jsx)(a.CalendarIcon, {
+                          icon: (0, i.jsx)(s.CalendarIcon, {
                               size: 'custom',
                               color: 'currentColor',
                               height: 20,
@@ -44,7 +44,7 @@ function g(e) {
                           onClick: () => {
                               var t;
                               v((t = e))
-                                  ? (0, a.openModalLazy)(async () => {
+                                  ? (0, s.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([n.e('22347'), n.e('84722'), n.e('44001')]).then(n.bind(n, 296864));
                                         return (n) =>
                                             (0, i.jsx)(e, {

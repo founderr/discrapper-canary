@@ -2,8 +2,8 @@ n(47120);
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(846519),
     c = n(600164),
     u = n(486296);
@@ -23,7 +23,7 @@ function d(e, t, n) {
 function h(e) {
     let { percentage: t, isSingleLine: n } = e;
     return (0, l.jsx)('div', {
-        className: s()({
+        className: a()({
             [u.bar]: n,
             [u.barInMultiLine]: !n
         }),
@@ -54,12 +54,12 @@ class f extends (i = r.PureComponent) {
     }
     render() {
         let { start: e, end: t, className: n, themed: i, singleLine: r = !1 } = this.props,
-            { now: a } = this.state,
+            { now: s } = this.state,
             o = (t - e) / 1000,
-            d = Math.max(Math.min((a - e) / 1000, o), 0);
+            d = Math.max(Math.min((s - e) / 1000, o), 0);
         return r
             ? (0, l.jsxs)('div', {
-                  className: s()(n, { [u.themed]: i }, u.singleLineContainer),
+                  className: a()(n, { [u.themed]: i }, u.singleLineContainer),
                   children: [
                       (0, l.jsx)('div', {
                           className: u.textLeftInSingleLine,
@@ -85,7 +85,7 @@ class f extends (i = r.PureComponent) {
                   ]
               })
             : (0, l.jsxs)('div', {
-                  className: s()(n, { [u.themed]: i }),
+                  className: a()(n, { [u.themed]: i }),
                   children: [
                       (0, l.jsx)(h, {
                           percentage: d / o,

@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(287734),
-    s = n(305325),
+    s = n(287734),
+    a = n(305325),
     o = n(281956),
     c = n(584729),
     u = n(27457),
@@ -15,7 +15,7 @@ t.Z = function (e) {
         C = p.filter(d.Io),
         x = (0, o.J)(f.guild_id),
         v = l.useCallback(() => {
-            x ? (0, s.hk)(f.guild_id, () => a.default.selectVoiceChannel(f.id)) : a.default.selectVoiceChannel(f.id);
+            x ? (0, a.hk)(f.guild_id, () => s.default.selectVoiceChannel(f.id)) : s.default.selectVoiceChannel(f.id);
         }, [f.id, f.guild_id, x]),
         _ = 4 === C.length ? 2 : 3;
     return (0, i.jsxs)('div', {

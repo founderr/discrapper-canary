@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(91192),
+    s = n.n(r),
+    a = n(91192),
     o = n(442837),
     c = n(481060),
     u = n(904245),
@@ -134,23 +134,23 @@ let U = l.memo(
                 });
         })(H.ref);
         let q = (0, c.useFocusJumpSection)(),
-            { ref: X, ...J } = (0, s.l2)(F),
+            { ref: X, ...J } = (0, a.l2)(F),
             Q = l.useCallback((e) => {
                 var t;
                 (H.ref.current = e), (X.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
             }, []);
-        return (0, i.jsxs)(s.bG, {
+        return (0, i.jsxs)(a.bG, {
             navigator: F,
             children: [
                 null != K && K,
                 (0, i.jsxs)('div', {
-                    className: a()(D.messagesWrapper, r, 'group-spacing-'.concat(d)),
+                    className: s()(D.messagesWrapper, r, 'group-spacing-'.concat(d)),
                     children: [
                         null == K && z,
                         (0, i.jsxs)(c.PinToBottomScrollerAuto, {
                             ref: Q,
                             customTheme: !0,
-                            className: a()(m, D.scroller),
+                            className: s()(m, D.scroller),
                             contentClassName: D.scrollerContent,
                             onResize: H.handleResize,
                             onScroll: H.handleScroll,
@@ -174,7 +174,7 @@ let U = l.memo(
                                         }),
                                         V,
                                         (0, i.jsx)('div', {
-                                            className: a()({
+                                            className: s()({
                                                 [D.scrollerSpacer]: !A,
                                                 [D.empty]: 0 === f.length && !f.loadingMore,
                                                 [D.emptyForum]: 1 === f.length && !f.loadingMore && p.isForumPost() && (null === (t = f.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(p))
@@ -193,7 +193,7 @@ let U = l.memo(
     (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden
 );
 t.Z = l.memo(function (e) {
-    let { channel: t, showingQuarantineBanner: n, hideSummaries: r = !1, forceCompact: a = !1, forceCozy: s = !1, ...c } = e,
+    let { channel: t, showingQuarantineBanner: n, hideSummaries: r = !1, forceCompact: s = !1, forceCozy: a = !1, ...c } = e,
         {
             canManageMessages: u,
             permissionVersion: C,
@@ -260,8 +260,8 @@ t.Z = l.memo(function (e) {
                     },
                     [e.id]
                 ),
-                { enabled: a } = g.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-                s = null !== (n = null === (t = N.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
+                { enabled: s } = g.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
+                a = null !== (n = null === (t = N.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && void 0 !== n && n,
                 c = (0, d.ts)(e),
                 u = (0, f.Z)('use_topic_dividers_in_chat'),
                 h = (0, o.Wu)(
@@ -291,11 +291,11 @@ t.Z = l.memo(function (e) {
                             channel: e,
                             messages: i,
                             oldestUnreadMessageId: r,
-                            treatSpam: a && !s,
+                            treatSpam: s && !a,
                             summaries: h,
                             selectedSummary: p
                         }),
-                    [i, e, r, a, h, p, C]
+                    [i, e, r, s, h, p, C]
                 );
             return {
                 messages: i,
@@ -315,7 +315,7 @@ t.Z = l.memo(function (e) {
                 messageGroupSpacing: P,
                 showNewMessagesBar: !0,
                 channel: t,
-                messageDisplayCompact: !s && (a || L),
+                messageDisplayCompact: !a && (s || L),
                 messages: D,
                 channelStream: B,
                 permissionVersion: C,

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(665149),
-    s = n(171368),
+    s = n(665149),
+    a = n(171368),
     o = n(650774),
     c = n(430824),
     u = n(496675),
@@ -69,7 +69,7 @@ function x(e) {
                       (0, i.jsx)(r.Button, {
                           color: r.Button.Colors.TRANSPARENT,
                           onClick: () => {
-                              (0, s.openUserProfileModal)({
+                              (0, a.openUserProfileModal)({
                                   userId: _.userId,
                                   guildId: _.guildId,
                                   analyticsLocation: {
@@ -81,7 +81,7 @@ function x(e) {
                           size: r.ButtonSizes.SMALL,
                           children: g.intl.string(g.t.iXAna2)
                       }),
-                  x && (0, i.jsx)(a.ZP.Divider, {})
+                  x && (0, i.jsx)(s.ZP.Divider, {})
               ]
           })
         : null;

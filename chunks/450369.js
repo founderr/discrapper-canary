@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(512722),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(475179),
     u = n(239091),
@@ -32,7 +32,7 @@ var i = n(200651),
     A = n(527938);
 let y = 16 / 9,
     P = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: r, guildId: a, user: s, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
+        let { stageParticipant: t, rtcParticipant: n, channel: r, guildId: s, user: a, width: c, isModerator: u, onContextMenu: d, inPopout: h } = e,
             { reducedMotion: m } = l.useContext(o.AccessibilityPreferencesContext),
             { blocked: p, id: f } = t;
         return (0, i.jsx)(o.Popout, {
@@ -47,9 +47,9 @@ let y = 16 / 9,
             renderPopout: (e) =>
                 (0, i.jsx)(v.Z, {
                     ...e,
-                    guildId: a,
+                    guildId: s,
                     channelId: r.id,
-                    userId: s.id
+                    userId: a.id
                 }),
             position: 'right',
             spacing: 8,
@@ -78,11 +78,11 @@ let y = 16 / 9,
         });
     },
     M = (e) => {
-        let { stageParticipant: t, rtcParticipant: n, channel: r, width: a, isModerator: u, onContextMenu: h, inPopout: x } = e,
+        let { stageParticipant: t, rtcParticipant: n, channel: r, width: s, isModerator: u, onContextMenu: h, inPopout: x } = e,
             { reducedMotion: v } = l.useContext(o.AccessibilityPreferencesContext),
             { id: S, blocked: P } = t,
-            M = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
-            { selectedParticipant: R, largeStream: L } = (0, s.cj)([m.Z], () => ({
+            M = (0, a.Wu)([_.Z], () => _.Z.getAllActiveStreams(), []),
+            { selectedParticipant: R, largeStream: L } = (0, a.cj)([m.Z], () => ({
                 selectedParticipant: null != r ? m.Z.getSelectedParticipant(r.id) : null,
                 largeStream: null != r && m.Z.getStageStreamSize(r.id)
             })),
@@ -111,7 +111,7 @@ let y = 16 / 9,
                 onContextMenu: h,
                 paused: !1,
                 pulseSpeakingIndicator: !v.enabled,
-                width: a,
+                width: s,
                 children: u && n.type === j.fO.USER && (0, i.jsx)(T.Z, {})
             },
             S
@@ -122,10 +122,10 @@ t.Z = l.memo(function (e) {
     let { participant: l, channel: r, width: o } = e,
         c = (0, h.bp)(),
         d = r.getGuildId();
-    a()(null != d, 'Channel cannot be guildless');
+    s()(null != d, 'Channel cannot be guildless');
     let { user: p } = l,
-        f = (0, s.e7)([m.Z], () => m.Z.getParticipant(r.id, l.id), [r.id, l.id]),
-        g = (0, s.e7)([S.ZP], () => S.ZP.isModerator(p.id, r.id), [r.id, p.id]);
+        f = (0, a.e7)([m.Z], () => m.Z.getParticipant(r.id, l.id), [r.id, l.id]),
+        g = (0, a.e7)([S.ZP], () => S.ZP.isModerator(p.id, r.id), [r.id, p.id]);
     if (null == f || f.type === j.fO.ACTIVITY) return null;
     let C = (e, t) => {
             switch (e.type) {

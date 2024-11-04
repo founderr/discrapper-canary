@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(884338),
     u = n(100527),
@@ -50,23 +50,23 @@ class T {
     renderNicknamePairs() {
         return this.getNicknameGuildPairs().map((e, t) => {
             let [n, r] = e,
-                a = (0, i.jsx)(o.Clickable, {
+                s = (0, i.jsx)(o.Clickable, {
                     tag: 'span',
                     onClick: this.handleClick,
                     children: n
                 });
             return (
                 r.length > 0 &&
-                    (a = (0, i.jsx)(o.TooltipContainer, {
+                    (s = (0, i.jsx)(o.TooltipContainer, {
                         className: S.tooltip,
                         text: r.join(', '),
                         position: 'bottom',
-                        children: a
+                        children: s
                     })),
                 (0, i.jsxs)(
                     l.Fragment,
                     {
-                        children: [0 !== t ? ', ' : null, a]
+                        children: [0 !== t ? ', ' : null, s]
                     },
                     t
                 )
@@ -83,7 +83,7 @@ class T {
                 'generateNicknameGuildPairs',
                 (0, x.oH)((e) => {
                     var t;
-                    return a()(f.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
+                    return s()(f.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
                         .toPairs()
                         .map((e) => {
                             let [t, n] = e;
@@ -138,12 +138,12 @@ function N(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
         r = (0, m.gc)(n),
-        a = Array(r.length).fill(null),
+        s = Array(r.length).fill(null),
         { analyticsLocations: p } = (0, d.ZP)(u.Z.AKA),
         f = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
-                r = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
-                [a] = l.useState(
+                r = (0, a.e7)([C.default], () => C.default.getUser(t), [t]),
+                [s] = l.useState(
                     () =>
                         new T({
                             user: r,
@@ -153,13 +153,13 @@ function N(e) {
                         })
                 );
             return (
-                a.updateData({
+                s.updateData({
                     userId: t,
                     user: r,
                     channelId: n,
                     analyticsLocations: i
                 }),
-                a
+                s
             );
         })({
             userId: n,
@@ -180,28 +180,28 @@ function N(e) {
                   r.length > 0
                       ? (0, i.jsx)(c.Z, {
                             size: 16,
-                            users: a,
+                            users: s,
                             showUserPopout: !1,
                             renderUser: (e, t, n) => {
                                 var l;
-                                let a = f.user,
-                                    s = r[n];
-                                return null == s || null == a
+                                let s = f.user,
+                                    a = r[n];
+                                return null == a || null == s
                                     ? null
                                     : (0, i.jsx)(
                                           o.TooltipContainer,
                                           {
-                                              text: null === (l = g.Z.getGuild(s)) || void 0 === l ? void 0 : l.name,
+                                              text: null === (l = g.Z.getGuild(a)) || void 0 === l ? void 0 : l.name,
                                               position: 'bottom',
                                               children: (0, i.jsx)('img', {
                                                   alt: '',
                                                   className: S.avatar,
                                                   onClick: f.handleClick,
-                                                  src: a.getAvatarURL(s, 16),
+                                                  src: s.getAvatarURL(a, 16),
                                                   'aria-hidden': !0
                                               })
                                           },
-                                          s[1]
+                                          a[1]
                                       );
                             },
                             renderMoreUsers: f.renderMoreAvatars,

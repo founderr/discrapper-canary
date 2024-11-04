@@ -10,9 +10,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(392711),
     u = n(692547),
     d = n(153867),
@@ -23,7 +23,7 @@ var i,
 ((l = i || (i = {}))[(l.PostSidebar = 0)] = 'PostSidebar'), (l[(l.ThreadSidebar = 1)] = 'ThreadSidebar'), (l[(l.CallChatSidebar = 2)] = 'CallChatSidebar'), (l[(l.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (l[(l.HomeSidebar = 4)] = 'HomeSidebar');
 function g(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: i, maxWidth: l } = e,
-        a = (0, h.Z)({
+        s = (0, h.Z)({
             minDimension: p.C,
             maxDimension: l,
             resizableDomNodeRef: t,
@@ -32,13 +32,13 @@ function g(e) {
             orientation: h.y.HORIZONTAL_LEFT
         });
     return (0, r.jsx)('div', {
-        onMouseDown: a,
+        onMouseDown: s,
         className: f.resizeHandle
     });
 }
 function C(e) {
-    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: l, floatingLayer: s } = e,
-        h = a.useRef(null),
+    let { sidebarType: t, maxWidth: n, onWidthChange: i, children: l, floatingLayer: a } = e,
+        h = s.useRef(null),
         C = (function (e) {
             switch (e) {
                 case 0:
@@ -53,8 +53,8 @@ function C(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [x, v] = a.useState(m.ZP[C]),
-        _ = a.useCallback(
+        [x, v] = s.useState(m.ZP[C]),
+        _ = s.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [C]: e });
             },
@@ -63,10 +63,10 @@ function C(e) {
         I = (0, p.W)({ maxWidth: n }),
         E = (0, c.clamp)(x, p.C, n),
         b = I ? E : E + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
-    a.useEffect(() => {
+    s.useEffect(() => {
         null == i || i(E, I);
     }, [E, i, I]);
-    let S = null != s ? s : a.Fragment;
+    let S = null != a ? a : s.Fragment;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             !I && (0, r.jsx)('div', { style: { minWidth: b } }),

@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(392711),
+    o = n.n(a),
     c = n(442837),
     u = n(481060),
     d = n(447543),
@@ -126,7 +126,7 @@ class A extends l.PureComponent {
     }
     render() {
         let { searchAnalyticsId: e, searchType: t, searchResults: n } = this.props,
-            { offset: l, hasError: r, totalResults: a, isHistoricalIndexing: s } = this.props.search;
+            { offset: l, hasError: r, totalResults: s, isHistoricalIndexing: a } = this.props.search;
         return (0, i.jsxs)('section', {
             className: Z.searchResultsWrap,
             'aria-label': S.intl.string(S.t.zkoeq6),
@@ -144,8 +144,8 @@ class A extends l.PureComponent {
                     searchOffset: l,
                     searchLimit: b.vpv,
                     searchHasError: r,
-                    searchTotalResults: a,
-                    searchIsIndexing: s
+                    searchTotalResults: s,
+                    searchIsIndexing: a
                 })
             ]
         });
@@ -239,9 +239,9 @@ class A extends l.PureComponent {
                     t = e ? S.intl.string(S.t['VrK/2d']) : S.intl.string(S.t.V6nAfH);
                 return (0, i.jsxs)(j, {
                     children: [
-                        (0, i.jsx)('div', { className: a()(Z.noResultsImage, { [Z.alt]: e }) }),
+                        (0, i.jsx)('div', { className: s()(Z.noResultsImage, { [Z.alt]: e }) }),
                         (0, i.jsx)('div', {
-                            className: a()(Z.emptyResultsText, Z.noResults, { [Z.alt]: e }),
+                            className: s()(Z.emptyResultsText, Z.noResults, { [Z.alt]: e }),
                             children: t
                         })
                     ]
@@ -252,7 +252,7 @@ class A extends l.PureComponent {
                     children: [
                         (0, i.jsx)('div', { className: Z.errorImage }),
                         (0, i.jsx)('div', {
-                            className: a()(Z.emptyResultsText, Z.errorMessage),
+                            className: s()(Z.emptyResultsText, Z.errorMessage),
                             children: S.intl.string(S.t.uvDZBQ)
                         })
                     ]
@@ -260,8 +260,8 @@ class A extends l.PureComponent {
             ),
             T(this, 'renderContent', () => {
                 let { searchResults: e, blockCount: t } = this.props,
-                    { totalResults: n, isSearching: l, isIndexing: r, hasError: a } = this.props.search;
-                return a
+                    { totalResults: n, isSearching: l, isIndexing: r, hasError: s } = this.props.search;
+                return s
                     ? this.renderError()
                     : r
                       ? this.renderIndexing()

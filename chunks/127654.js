@@ -12,8 +12,8 @@ n.d(t, {
 var i = n(475179),
     l = n(166459),
     r = n(966390),
-    a = n(531643),
-    s = n(476326),
+    s = n(531643),
+    a = n(476326),
     o = n(367907),
     c = n(358221),
     u = n(117530),
@@ -31,23 +31,23 @@ function _(e, t) {
         i = e.getGuildId(),
         l = m.dg(i),
         r = [],
-        s = 0,
+        a = 0,
         c = 0,
         u = 0,
         h = [];
-    for (let e of t) (u += 1), (s += e.size), r.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
+    for (let e of t) (u += 1), (a += e.size), r.push(e.size), e.size > c && (c = e.size), null != e.type ? h.push(e.type) : h.push('unknown');
     if (c > l) {
         (0, o.yw)(g.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
             guild_id: i,
             user_individual_file_size_limit: l,
             pre_compression_file_sizes: r,
-            pre_compression_aggregate_file_size: s,
+            pre_compression_aggregate_file_size: a,
             num_attachments: u,
             error_type: C.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: h
         }),
-            (0, a.openUploadError)({
+            (0, s.openUploadError)({
                 title: v.intl.string(v.t['/tGlcn']),
                 help: (0, f.BK)(n, i),
                 showPremiumUpsell: !(0, p.M5)(n, x.p9.TIER_2),
@@ -55,7 +55,7 @@ function _(e, t) {
             });
         return;
     }
-    (0, a.openUploadError)({
+    (0, s.openUploadError)({
         title: v.intl.string(v.t['/tGlcn']),
         help: v.intl.formatToPlainString(v.t.tUOJdH, { maxSize: m.Ng(m.OC()) })
     });
@@ -70,7 +70,7 @@ function I(e, t, n) {
         return;
     }
     if (u.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
-        (0, a.openUploadError)({
+        (0, s.openUploadError)({
             title: v.intl.string(v.t.wOr6hI),
             help: v.intl.formatToPlainString(v.t['qqyp/f'], { limit: g.dN1 })
         }),
@@ -83,7 +83,7 @@ function I(e, t, n) {
     if (((t.type === g.d4z.GUILD_VOICE || t.type === g.d4z.GUILD_STAGE_VOICE) && !c.Z.getChatOpen(t.id) && i.Z.updateChatOpen(t.id, !0), d)) {
         let i = Array.from(e).map((e, t) => ({
             file: e,
-            platform: s.ow.WEB,
+            platform: a.ow.WEB,
             isThumbnail: p,
             ...(null == o ? void 0 : o[t])
         }));

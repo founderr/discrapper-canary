@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return B;
     },
     n: function () {
         return T;
@@ -30,7 +30,7 @@ var r = n(200651),
     E = n(462972),
     I = n(275001);
 let T = (0, h.IC)(96),
-    N = (e) => {
+    S = (e) => {
         let { category: t } = e,
             { analyticsLocations: n } = (0, d.ZP)(),
             s = a.useRef(null),
@@ -61,7 +61,7 @@ let T = (0, h.IC)(96),
                   })
               });
     };
-function S(e) {
+function B(e) {
     var t, n, a, s;
     let { category: o, className: d, hideLimitedTimeBadge: u = !1 } = e,
         { backgroundColors: m } = (0, g.Z)(o.styles),
@@ -111,7 +111,7 @@ function S(e) {
                   (0, r.jsx)(c.Text, {
                       className: i()(E.summary, { [E.blackSummary]: p }),
                       variant: 'text-md/normal',
-                      children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(N, { category: o }) : o.summary
+                      children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(S, { category: o }) : o.summary
                   }),
                   !u &&
                       (0, r.jsx)(b.Z, {

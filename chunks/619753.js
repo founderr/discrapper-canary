@@ -9,8 +9,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(837969),
+    s = n.n(r),
+    a = n(837969),
     o = n(481060),
     c = n(668781),
     u = n(904245),
@@ -41,7 +41,7 @@ var i = n(200651),
     k = n(652553);
 function O(e) {
     var t;
-    let { search: n, searchId: r, renderEmbeds: a, scrollTo: p, searchResults: f, blockCount: g, onChangePage: C } = e,
+    let { search: n, searchId: r, renderEmbeds: s, scrollTo: p, searchResults: f, blockCount: g, onChangePage: C } = e,
         { offset: x, totalResults: v, isSearching: I, showBlockedResults: E } = n,
         b = l.useCallback(
             (e) => {
@@ -109,7 +109,7 @@ function O(e) {
             let t = A.current[e];
             null == t || t.jumpTo();
         }, []),
-        w = (0, s.ZP)({
+        w = (0, a.ZP)({
             navId: 'search-results',
             itemCount: y,
             focusedIndex: 0,
@@ -132,7 +132,7 @@ function O(e) {
                     totalResults: v,
                     scrollTo: p,
                     searchId: r,
-                    renderEmbeds: a,
+                    renderEmbeds: s,
                     offset: x,
                     jumpToMessage: Z,
                     listNavigator: w,
@@ -204,7 +204,7 @@ function w(e) {
     });
     return (0, b.Em)(t.type)
         ? (0, i.jsx)(o.Clickable, {
-              className: a()(k.parentChannelName, k.parentChannelNameClickable),
+              className: s()(k.parentChannelName, k.parentChannelNameClickable),
               onClick: (e) => {
                   e.stopPropagation(), n(t.id);
               },
@@ -217,7 +217,7 @@ function w(e) {
 }
 function D(e) {
     var t, n, r;
-    let { channel: a, results: s, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: _, renderEmbeds: b, offset: j, jumpToMessage: P, listNavigator: L, favoriteSearch: O } = e,
+    let { channel: s, results: a, highlighter: c, startIndex: u, resultRefs: d, totalResults: h, scrollTo: m, searchId: _, renderEmbeds: b, offset: j, jumpToMessage: P, listNavigator: L, favoriteSearch: O } = e,
         D = E.cC.useSetting(),
         U = (0, C.p)(),
         B = l.useCallback((e) => {
@@ -225,12 +225,12 @@ function D(e) {
             let t = S.Z.getChannel(e);
             if (null != t && !!T.Z.can(R.Plq.VIEW_CHANNEL, t)) (0, I.Kh)(t.id);
         }, []),
-        H = null != a ? (0, p.F6)(a, y.default, N.Z, !1) : '???',
-        F = O && null != a.guild_id ? (null === (t = Z.Z.getGuild(a.guild_id)) || void 0 === t ? void 0 : t.name) : null,
-        G = (null == a ? void 0 : a.parent_id) != null ? S.Z.getChannel(a.parent_id) : null,
+        H = null != s ? (0, p.F6)(s, y.default, N.Z, !1) : '???',
+        F = O && null != s.guild_id ? (null === (t = Z.Z.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name) : null,
+        G = (null == s ? void 0 : s.parent_id) != null ? S.Z.getChannel(s.parent_id) : null,
         V = null !== (n = null == G ? void 0 : G.name) && void 0 !== n ? n : null,
-        z = null !== (r = (0, f.KS)(a)) && void 0 !== r ? r : o.TextIcon,
-        W = T.Z.can(R.Plq.MANAGE_MESSAGES, a),
+        z = null !== (r = (0, f.KS)(s)) && void 0 !== r ? r : o.TextIcon,
+        W = T.Z.can(R.Plq.MANAGE_MESSAGES, s),
         { content: Y } = (0, v.ZP)(
             {
                 content: H,
@@ -256,7 +256,7 @@ function D(e) {
             'aria-label': J,
             children: [
                 (0, i.jsx)(o.Clickable, {
-                    onClick: () => B(a.id),
+                    onClick: () => B(s.id),
                     children: (0, i.jsxs)('div', {
                         className: k.channelNameContainer,
                         children: [
@@ -283,7 +283,7 @@ function D(e) {
                         ]
                     })
                 }),
-                s.map((e, t) => {
+                a.map((e, t) => {
                     let n = u + t;
                     return (0, i.jsx)(
                         M.Z,
@@ -294,7 +294,7 @@ function D(e) {
                             searchId: _,
                             renderEmbeds: b,
                             searchOffset: j,
-                            pageResultsLength: s.length,
+                            pageResultsLength: a.length,
                             result: e,
                             index: n,
                             onJump: P,

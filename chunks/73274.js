@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     l = n(924826),
     r = n(459273),
-    a = n(585483),
-    s = n(534091),
+    s = n(585483),
+    a = n(534091),
     o = n(959517),
     c = n(981631);
 function u(e) {
@@ -32,24 +32,24 @@ function u(e) {
             (e) => {
                 var i, l, r;
                 if (!n.keyboardModeEnabled) return;
-                let a = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
-                    s = null == a ? void 0 : a.querySelector(e);
-                null != s &&
+                let s = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
+                    a = null == s ? void 0 : s.querySelector(e);
+                null != a &&
                     (null === (r = t.current) ||
                         void 0 === r ||
                         r.scrollIntoViewNode({
-                            node: s,
+                            node: a,
                             padding: 4 * o.kQ,
-                            callback: () => (null == s ? void 0 : s.focus())
+                            callback: () => (null == a ? void 0 : a.focus())
                         }));
             },
             [n.keyboardModeEnabled]
         ),
         m = i.useCallback(() => {
-            !n.hasMoreAfter && a.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
+            !n.hasMoreAfter && s.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
         p = (0, l.ZP)({
-            id: s.W,
+            id: a.W,
             preserveFocusPosition: !1,
             setFocus: h,
             isEnabled: n.keyboardModeEnabled && !n.isEditing,

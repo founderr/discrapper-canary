@@ -74,7 +74,7 @@ function S(e) {
             },
             afterRequest: d.stopAnimation
         }),
-        { header: B, renderBody: T } = r.useMemo(() => {
+        { header: T, renderBody: B } = r.useMemo(() => {
             let e = v.length > 0,
                 n = () =>
                     (0, o.jsx)(o.Fragment, {
@@ -150,7 +150,7 @@ function S(e) {
                     }),
                     (0, o.jsx)(c.Text, {
                         variant: 'text-xs/medium',
-                        children: B
+                        children: T
                     }),
                     (0, o.jsx)(c.Clickable, {
                         className: a()(E.microphoneUnitRefreshIconWrapper, { [E.disabled]: b }),
@@ -161,12 +161,12 @@ function S(e) {
             }),
             (0, o.jsxs)('div', {
                 className: a()({ [E.opacity_50]: b }),
-                children: [T(), 0 === v.length ? null : (0, o.jsx)(N, { children: l })]
+                children: [B(), 0 === v.length ? null : (0, o.jsx)(N, { children: l })]
             })
         ]
     });
 }
-function B(e) {
+function T(e) {
     let { text: t } = e;
     return (0, o.jsx)(c.Text, {
         color: 'text-muted',
@@ -201,11 +201,11 @@ t.Z = function (e) {
                         isComplete: r || s || c
                     },
                     {
-                        renderContent: () => (0, o.jsx)(B, { text: i ? _.intl.string(_.t['9rQPys']) : _.intl.formatToPlainString(_.t['+8JB6e'], { gameTitle: l }) }),
+                        renderContent: () => (0, o.jsx)(T, { text: i ? _.intl.string(_.t['9rQPys']) : _.intl.formatToPlainString(_.t['+8JB6e'], { gameTitle: l }) }),
                         isComplete: s || c
                     },
                     {
-                        renderContent: () => (0, o.jsx)(B, { text: _.intl.formatToPlainString(_.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
+                        renderContent: () => (0, o.jsx)(T, { text: _.intl.formatToPlainString(_.t.HhfrYW, { numMinutes: n.targetMinutes }) }),
                         isComplete: c
                     }
                 ],

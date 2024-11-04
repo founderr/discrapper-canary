@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(192379),
     l = n(714319),
     r = n(536895),
-    a = n(260866);
-let s = [r.R8.TAB, r.R8.UP, r.R8.DOWN];
+    s = n(260866);
+let a = [r.R8.TAB, r.R8.UP, r.R8.DOWN];
 function o(e, t, n) {
     return null != n ? '#'.concat(e(t, n)) : '#'.concat(t);
 }
@@ -33,7 +33,7 @@ function d(e) {
             itemCount: n
         }),
         { itemCount: b, focusedIndex: S } = I,
-        [Z] = i.useState(() => (0, a.P2)(E, 16));
+        [Z] = i.useState(() => (0, s.P2)(E, 16));
     return (
         i.useEffect(() => {
             E({
@@ -42,7 +42,7 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: f, maintainFocusPosition: g, includeSetSizes: C, focusOnMount: x, enabled: v, makeId: _ = a.qR, getIndexFromId: I } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: m = u, getNewFocusIndex: p, dispatch: f, maintainFocusPosition: g, includeSetSizes: C, focusOnMount: x, enabled: v, makeId: _ = s.qR, getIndexFromId: I } = e,
                 E = i.useRef(n),
                 b = i.useRef(I);
             (b.current = I), (E.current = n);
@@ -53,7 +53,7 @@ function d(e) {
             let [Z, T] = i.useState(!1),
                 [N] = i.useState(
                     () =>
-                        new a.$o((e) => () => {
+                        new s.$o((e) => () => {
                             let t = null != b.current && 'string' == typeof e ? b.current(e) : e;
                             'number' == typeof t &&
                                 !(t < 0) &&
@@ -94,7 +94,7 @@ function d(e) {
                 M = i.useCallback(
                     (e) => {
                         if (!S.current) return;
-                        if (s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
+                        if (a.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), P();
                             return;
                         }

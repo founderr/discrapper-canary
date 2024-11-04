@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(570140),
+    s = n(481060),
+    a = n(570140),
     o = n(384275),
     c = n(763762),
     u = n(933557),
@@ -43,11 +43,11 @@ var i = n(200651),
 function B(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, d.Yk)(n),
-        a = (0, r.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
+        s = (0, r.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(Z.Z, { channel: n });
     if (C.Ec.has(n.type)) return (0, i.jsx)(R.Z, { channel: n });
-    else if (a) return (0, i.jsx)(L.Z, { channel: n });
+    else if (s) return (0, i.jsx)(L.Z, { channel: n });
     else if (l) return (0, i.jsx)(y.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
@@ -74,7 +74,7 @@ function H(e) {
         });
     if (
         (l.useEffect(() => {
-            v === k.d4z.DM && null == L && null != Z && s.Z.wait(() => (0, g.Z)(d.getRecipientId(), Z.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
+            v === k.d4z.DM && null == L && null != Z && a.Z.wait(() => (0, g.Z)(d.getRecipientId(), Z.getAvatarURL(null, 80), { withMutualGuilds: !0 }));
         }, [L, v, d, Z]),
         l.useEffect(() => {
             (null == Z ? void 0 : Z.bot) && V === x.M.NOT_FETCHED && o.Z.fetch();
@@ -118,7 +118,7 @@ function H(e) {
                 user: Z,
                 children: [
                     null != Z &&
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(s.Heading, {
                             variant: 'heading-xl/medium',
                             className: U.marginBottom20,
                             children: y

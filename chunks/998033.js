@@ -1,27 +1,27 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return m;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(13245),
     s = n(593481),
-    o = n(703656),
+    l = n(703656),
     a = n(974180),
-    l = n(237997),
+    o = n(237997),
     c = n(150097),
     d = n(557177),
     u = n(312839),
     h = n(981631),
     p = n(987650),
     f = n(388032);
-function g(e, t, n, g) {
-    var m;
+function m(e, t, n, m) {
+    var g;
     let { icon: v, title: _, body: E } = (0, c.Xi)(e, t, n),
-        { trackView: Z, trackClick: x } = (0, u.R)(p.n0.TextChat, {
+        { trackView: x, trackClick: I } = (0, u.R)(p.n0.TextChat, {
             notif_type: p.n0.TextChat,
-            notif_user_id: null === (m = t.author) || void 0 === m ? void 0 : m.id,
+            notif_user_id: null === (g = t.author) || void 0 === g ? void 0 : g.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -42,13 +42,13 @@ function g(e, t, n, g) {
                 : null,
         maxBodyLines: 2,
         onNotificationShow: () => {
-            g && (0, d.GN)(a.Ay, a.yk), Z();
+            m && (0, d.GN)(a.Ay, a.yk), x();
         },
         onNotificationClick: () => {
-            (0, o.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), x('jump'), l.Z.isInstanceUILocked() && r.Z.setInstanceLocked(!1);
+            (0, l.uL)(h.Z5c.CHANNEL(e.guild_id, e.id)), I('jump'), o.Z.isInstanceUILocked() && r.Z.setInstanceLocked(!1);
         },
         onDismissClick: () => {
-            x('dismiss');
+            I('dismiss');
         }
     };
 }

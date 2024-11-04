@@ -2,11 +2,11 @@ n(47120), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480
 var i,
     l,
     r,
-    a,
-    s = n(442837),
+    s,
+    a = n(442837),
     o = n(570140);
 let c = new Map();
-class u extends (i = s.ZP.Store) {
+class u extends (i = a.ZP.Store) {
     getUsers() {
         return c;
     }
@@ -17,15 +17,15 @@ class u extends (i = s.ZP.Store) {
         return !0;
     }
 }
-(a = 'TransientKeyStore'),
+(s = 'TransientKeyStore'),
     (r = 'displayName') in (l = u)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new u(o.Z, {
         CONNECTION_OPEN: function () {
             c.clear();

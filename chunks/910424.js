@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(572691),
-    s = n(287734),
+    s = n(572691),
+    a = n(287734),
     o = n(872810),
     c = n(40851),
     u = n(382182),
@@ -36,7 +36,7 @@ function x(e) {
         T = (0, c.Aq)(),
         N = null != I && null != v && I.state !== f.jm8.ENDED && I.ownerId === v.ownerId,
         j = (e) => {
-            if (null != v) null == _ || _(), s.default.selectVoiceChannel(v.channelId), !N && (0, o.iV)(v, { forceMultiple: e }), T.dispatch(f.CkL.POPOUT_CLOSE), m.S.dispatch(f.CkL.MODAL_CLOSE), a.Z.popAll();
+            if (null != v) null == _ || _(), a.default.selectVoiceChannel(v.channelId), !N && (0, o.iV)(v, { forceMultiple: e }), T.dispatch(f.CkL.POPOUT_CLOSE), m.S.dispatch(f.CkL.MODAL_CLOSE), s.Z.popAll();
         };
     if (null == v) return null;
     let A = (0, u.P9)(Z);

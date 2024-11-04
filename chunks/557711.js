@@ -7,21 +7,21 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    s = n(5192),
+    s = n(481060),
+    a = n(5192),
     o = n(829820),
     c = n(26118);
 function u(e) {
     let { activity: t, user: n, channelId: l, guildId: u, source: d, size: h, look: m, color: p, className: f, onAction: g } = e,
-        { tooltip: C, loading: x, disabled: v, onClick: _ } = (0, o.Fe)(t, n, d, s.ZP.getNickname(u, l, n)),
+        { tooltip: C, loading: x, disabled: v, onClick: _ } = (0, o.Fe)(t, n, d, a.ZP.getNickname(u, l, n)),
         I = () => {
             null == g || g(), _();
         };
-    return (0, i.jsx)(a.Tooltip, {
+    return (0, i.jsx)(s.Tooltip, {
         text: C,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: l } = e;
-            return (0, i.jsx)(a.Button, {
+            return (0, i.jsx)(s.Button, {
                 size: h,
                 className: r()(c.syncButton, f),
                 innerClassName: c.syncButtonInner,
@@ -33,7 +33,7 @@ function u(e) {
                 disabled: v,
                 submitting: x,
                 'aria-label': null != C ? C : t.name,
-                children: (0, i.jsx)(a.UserPlayIcon, {
+                children: (0, i.jsx)(s.UserPlayIcon, {
                     size: 'xs',
                     color: 'currentColor'
                 })

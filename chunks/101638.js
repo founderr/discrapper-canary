@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(259443),
-    a = n(81897),
-    s = n(911284),
+    s = n(81897),
+    a = n(911284),
     o = n(369566),
     c = n(502762),
     u = n(527790),
@@ -17,11 +17,11 @@ let m = new r.Y('UserProfilePanelRecentActivity');
 function p(e) {
     let { user: t } = e,
         { recent: n } = (0, o.Z)(t.id),
-        r = (0, a.Z)();
+        r = (0, s.Z)();
     return (l.useEffect(() => {
         (async () => {
             try {
-                await (0, s.Z)(t.id, r);
+                await (0, a.Z)(t.id, r);
             } catch (e) {
                 m.log('Failed to fetch content inventory outbox for '.concat(t.id, ':'), e);
             }

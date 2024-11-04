@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(873546),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(239091),
     c = n(144144),
     u = n(100527),
@@ -35,10 +35,10 @@ let A = [],
     y = S.ZP.getEnableHardwareAcceleration();
 function P(e) {
     let { user: t, channel: l, status: u, activities: d } = e,
-        h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
-        m = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
-        _ = (0, a.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
-        E = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        h = (0, s.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
+        m = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        _ = (0, s.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        E = (0, s.e7)([C.Z], () => C.Z.getNickname(t.id)),
         S = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('18283')]).then(n.bind(n, 354589));
@@ -50,7 +50,7 @@ function P(e) {
                     });
             });
         };
-    return (0, i.jsx)(s.Popout, {
+    return (0, i.jsx)(a.Popout, {
         preload: () => (0, p.Z)(t, { channelId: l.id }),
         renderPopout: (e) =>
             (0, i.jsx)(f.Z, {
@@ -108,7 +108,7 @@ function R(e) {
         { analyticsLocations: c } = (0, d.ZP)(u.Z.MEMBER_LIST);
     let { listItems: p } =
         ((t = n),
-        (0, a.e7)(
+        (0, s.e7)(
             [C.Z, v.default, g.Z],
             () => {
                 let e = (0, E.T)(t.recipients, v.default),
@@ -125,16 +125,16 @@ function R(e) {
                               activities: A
                           });
                 }
-                let a = [];
+                let s = [];
                 for (let t of e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
                         activities: n[t.id].activities
                     };
-                    a.push(e);
+                    s.push(e);
                 }
-                return { listItems: a };
+                return { listItems: s };
             },
             [t],
             M
@@ -151,7 +151,7 @@ function R(e) {
         value: c,
         children: (0, i.jsx)('div', {
             className: j.membersWrap,
-            children: (0, i.jsxs)(s.Scroller, {
+            children: (0, i.jsxs)(a.Scroller, {
                 className: j.members,
                 fade: !0,
                 children: [

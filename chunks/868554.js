@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(909820),
     u = n(518950),
@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(454120);
 function C(e) {
     let { buttonRef: t, userId: r, streaming: C, onClose: x } = e,
-        v = (0, s.e7)([d.default], () => d.default.getUser(r)),
-        _ = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        v = (0, a.e7)([d.default], () => d.default.getUser(r)),
+        _ = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         { avatarSrc: I, eventHandlers: E } = (0, u.Z)({
             user: v,
             size: o.AvatarSizes.SIZE_48,
@@ -89,7 +89,7 @@ function C(e) {
                             children: [
                                 (0, i.jsx)(o.Button, {
                                     onClick: S,
-                                    className: a()({ [f.actionButton]: !0 !== C }),
+                                    className: s()({ [f.actionButton]: !0 !== C }),
                                     children: !0 === C && _.id === v.id ? p.intl.string(p.t.r6xhBw) : p.intl.string(p.t.yKw8Dg)
                                 }),
                                 !0 !== C &&

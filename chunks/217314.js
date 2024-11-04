@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(399606),
     r = n(481060),
-    a = n(210975),
-    s = n(158776),
+    s = n(210975),
+    a = n(158776),
     o = n(699516),
     c = n(594174),
     u = n(51144),
@@ -19,11 +19,11 @@ function p(e) {
     let t = e.channel.getRecipientId(),
         n = e.channel.isSystemDM(),
         p = (0, l.e7)([c.default], () => c.default.getUser(t)),
-        f = (0, l.e7)([s.Z], () => s.Z.getStatus(t)),
-        g = (0, l.e7)([s.Z], () => s.Z.isMobileOnline(t)),
+        f = (0, l.e7)([a.Z], () => a.Z.getStatus(t)),
+        g = (0, l.e7)([a.Z], () => a.Z.isMobileOnline(t)),
         C = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
         x = u.ZP.useUserTag(p),
-        v = (0, a.m$)({
+        v = (0, s.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });

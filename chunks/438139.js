@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(846519),
-    a = n(388032);
-function s(e) {
+    s = n(388032);
+function a(e) {
     return ''.concat(e).length < 13 ? 1000 * e : e;
 }
 function o(e) {
@@ -25,9 +25,9 @@ function o(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1000;
             return null != e.end
-                ? this.getDiff(t, s(e.end) / 1000)
+                ? this.getDiff(t, a(e.end) / 1000)
                 : null != e.start
-                  ? this.getDiff(s(e.start) / 1000, t)
+                  ? this.getDiff(a(e.start) / 1000, t)
                   : {
                         hours: 0,
                         minutes: 0,
@@ -50,21 +50,21 @@ function o(e) {
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                { hours: l, minutes: r, seconds: s } = this.state,
+                { hours: l, minutes: r, seconds: a } = this.state,
                 o = {
                     hours: this.renderTime(l, !0),
                     minutes: this.renderTime(r),
-                    seconds: this.renderTime(s)
+                    seconds: this.renderTime(a)
                 };
             return null != t.end
                 ? (0, i.jsx)(e, {
                       ...n,
-                      message: a.intl.formatToPlainString(a.t['I/J7vL'], o)
+                      message: s.intl.formatToPlainString(s.t['I/J7vL'], o)
                   })
                 : null != t.start
                   ? (0, i.jsx)(e, {
                         ...n,
-                        message: a.intl.formatToPlainString(a.t.M9Fexc, o)
+                        message: s.intl.formatToPlainString(s.t.M9Fexc, o)
                     })
                   : null;
         }

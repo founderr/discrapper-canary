@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return m;
     }
 });
 var i = n(200651);
@@ -15,7 +15,7 @@ var r = n(481060),
     d = n(981631),
     h = n(388032),
     g = n(39578);
-let m = (e) => {
+let f = (e) => {
     let { state: t } = e;
     switch (t) {
         case d.r2o.ACCEPTING:
@@ -25,16 +25,16 @@ let m = (e) => {
             return !1;
     }
 };
-function f(e) {
-    let { invite: t, onAcceptInvite: n, disableUser: f = !1 } = e;
+function m(e) {
+    let { invite: t, onAcceptInvite: n, disableUser: m = !1 } = e;
     if (null == t) return null;
     let p = null != t.guild ? new l.ZP(t.guild) : null,
         _ = null != t.channel ? (0, a.jD)(t.channel) : null,
         x = null != t.target_application ? new s.Z(t.target_application) : null,
-        E = f || null == t.inviter ? null : new o.Z(t.inviter),
+        E = m || null == t.inviter ? null : new o.Z(t.inviter),
         v = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != p && p.hasFeature(d.oNc.COMMUNITY))) && null != E && (0, c.WT)(t),
-        I = m(t),
-        b = {
+        I = f(t),
+        N = {
             invite: t,
             user: E,
             guild: p,
@@ -59,14 +59,14 @@ function f(e) {
                   (0, c.X7)(t)
                       ? null
                       : (0, i.jsx)(c.jq, {
-                            ...b,
+                            ...N,
                             showBigUserIcon: v
                         }),
                   (0, i.jsx)(c.UM, {
-                      ...b,
+                      ...N,
                       showBigUserIcon: v
                   }),
-                  (0, i.jsx)(c.V6, { ...b }),
+                  (0, i.jsx)(c.V6, { ...N }),
                   (0, i.jsx)(r.Button, {
                       onClick: n,
                       submitting: I,

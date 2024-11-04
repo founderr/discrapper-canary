@@ -6,19 +6,19 @@ n.d(t, {
 var i = n(192379),
     l = n(399606),
     r = n(570140),
-    a = n(607070),
-    s = n(222677),
+    s = n(607070),
+    a = n(222677),
     o = n(695346),
     c = n(960020),
     u = n(566006);
 function d() {
     let e = o.Yk.useSetting(),
-        t = (0, l.e7)([a.Z], () => a.Z.useReducedMotion);
+        t = (0, l.e7)([s.Z], () => s.Z.useReducedMotion);
     i.useEffect(() => {
         function n(n) {
-            let { messageId: i, channelId: l, emoji: r, optimistic: a, reactionType: o } = n;
-            if (!a && o === u.O.BURST && !!e && !t)
-                (0, s.T6)({
+            let { messageId: i, channelId: l, emoji: r, optimistic: s, reactionType: o } = n;
+            if (!s && o === u.O.BURST && !!e && !t)
+                (0, a.T6)({
                     channelId: l,
                     messageId: i,
                     emoji: r,

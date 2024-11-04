@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(192379),
     l = n(442837),
     r = n(367907),
-    a = n(906732),
-    s = n(703656),
+    s = n(906732),
+    a = n(703656),
     o = n(626135),
     c = n(730647),
     u = n(289393),
@@ -28,7 +28,7 @@ function m(e) {
                 }),
             [f]
         ),
-        { analyticsLocations: _ } = (0, a.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
+        { analyticsLocations: _ } = (0, s.ZP)(null !== (t = (0, a.DR)()) && void 0 !== t ? t : []),
         I = i.useRef(!1);
     i.useEffect(() => {
         g &&

@@ -9,9 +9,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(512722),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(512722),
+    o = n.n(a),
     c = n(91192),
     u = n(442837),
     d = n(481060),
@@ -60,7 +60,7 @@ function q(e) {
         id: n,
         message: l,
         message: { messageReference: r },
-        compact: s = !1,
+        compact: a = !1,
         className: d
     } = e;
     o()(l.type === z.uaV.THREAD_STARTER_MESSAGE, 'Message must be a thread starter message');
@@ -80,10 +80,10 @@ function q(e) {
         : (0, i.jsx)(A.Z, {
               ...h,
               id: n,
-              compact: s,
-              className: a()(d, {
+              compact: a,
+              className: s()(d, {
                   [Y.message]: !0,
-                  [Y.cozyMessage]: !s,
+                  [Y.cozyMessage]: !a,
                   [Y.systemMessage]: !0,
                   [Y.groupStart]: !0
               }),
@@ -105,7 +105,7 @@ function X(e) {
     var t, n;
     let {
             id: r,
-            message: s,
+            message: a,
             message: { id: o, channel_id: m },
             channel: { guild_id: g },
             compact: _ = !1,
@@ -113,21 +113,21 @@ function X(e) {
             groupId: E,
             viewingChannelId: b
         } = e,
-        Z = s.type === z.uaV.REPLY ? s.messageReference : void 0,
+        Z = a.type === z.uaV.REPLY ? a.messageReference : void 0,
         { onFocus: j, ...k } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         { isFocused: w, handleFocus: D, handleBlur: H } = (0, P.bb)(j),
-        { popouts: K, selected: q, setPopout: X } = (0, R.Z)(s.id, V.d$),
+        { popouts: K, selected: q, setPopout: X } = (0, R.Z)(a.id, V.d$),
         J = v.RS.useSetting(),
         Q = v.NA.useSetting(),
         $ = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(Z)),
-        ee = (0, f.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
-        { handleMouseEnter: et, handleMouseLeave: en, isHovered: ei } = (0, P.tn)(E, s.author.id, q),
+        ee = (0, f.A)((null !== (n = a.editedTimestamp) && void 0 !== n ? n : a.timestamp).valueOf()),
+        { handleMouseEnter: et, handleMouseLeave: en, isHovered: ei } = (0, P.tn)(E, a.author.id, q),
         el = (0, u.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         er = q || (el && w),
-        ea = er || ei,
-        { content: es, hasSpoilerEmbeds: eo } = (0, L.Z)(s, {
+        es = er || ei,
+        { content: ea, hasSpoilerEmbeds: eo } = (0, L.Z)(a, {
             hideSimpleEmbedContent: J && Q,
-            isInteracting: ea,
+            isInteracting: es,
             formatInline: !1,
             allowList: ee,
             allowHeading: ee,
@@ -136,10 +136,10 @@ function X(e) {
             viewingChannelId: b
         }),
         ec = (0, M.Z)(o, m, el),
-        eu = (0, N.ZP)(s),
-        ed = (0, y.iG)(s, E),
-        eh = (0, y.Gx)(s),
-        em = (0, B.Z)(e, es, !1),
+        eu = (0, N.ZP)(a),
+        ed = (0, y.iG)(a, E),
+        eh = (0, y.Gx)(a),
+        em = (0, B.Z)(e, ea, !1),
         ep = l.useCallback(() => (0, x.XU)(g, m, o), [g, m, o]),
         ef = (0, p.p9)({
             guildId: g,
@@ -158,13 +158,13 @@ function X(e) {
                 ...k,
                 id: r,
                 compact: _,
-                className: a()(I, {
+                className: s()(I, {
                     [Y.message]: !0,
                     [Y.cozyMessage]: !_,
-                    [Y.mentioned]: s.mentioned,
-                    [Y.ephemeral]: (0, S.Pv)(s),
-                    [Y.systemMessage]: (0, T.Z)(s),
-                    [Y.groupStart]: s.id === E || s.type === z.uaV.REPLY,
+                    [Y.mentioned]: a.mentioned,
+                    [Y.ephemeral]: (0, S.Pv)(a),
+                    [Y.systemMessage]: (0, T.Z)(a),
+                    [Y.groupStart]: a.id === E || a.type === z.uaV.REPLY,
                     [Y.selected]: er
                 }),
                 zalgo: !0,
@@ -172,7 +172,7 @@ function X(e) {
                 onFocus: D,
                 onBlur: H,
                 childrenRepliedMessage:
-                    s.type === z.uaV.REPLY &&
+                    a.type === z.uaV.REPLY &&
                     (0, F.Z)({
                         ...e,
                         setPopout: X,
@@ -194,7 +194,7 @@ function X(e) {
                 childrenAccessories: (0, O.Z)({
                     channelMessageProps: e,
                     hasSpoilerEmbeds: eo,
-                    isInteracting: ea,
+                    isInteracting: es,
                     renderThreadAccessory: !1,
                     renderComponentAccessory: !1,
                     renderSuppressEmbeds: !1
@@ -214,7 +214,7 @@ t.ZP = l.memo(function (e) {
     var t, n;
     let r;
     let {
-        id: s,
+        id: a,
         message: x,
         message: { id: Z },
         channel: K,
@@ -230,8 +230,8 @@ t.ZP = l.memo(function (e) {
         { onFocus: en, ...ei } = (0, c.JA)(null !== (t = e.id) && void 0 !== t ? t : ''),
         el = v.RS.useSetting(),
         er = v.NA.useSetting(),
-        ea = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(et)),
-        { popouts: es, selected: eo, setPopout: ec } = (0, R.Z)(x.id, V.d$),
+        es = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(et)),
+        { popouts: ea, selected: eo, setPopout: ec } = (0, R.Z)(x.id, V.d$),
         eu = (0, P.qo)(x, K, ec),
         ed = (0, P.Go)(x, K),
         { handleMouseEnter: eh, handleMouseLeave: em, hasHovered: ep, isHovered: ef } = (0, P.tn)($, x.author.id, eo),
@@ -281,7 +281,7 @@ t.ZP = l.memo(function (e) {
                 right: 4
             },
             children: (0, i.jsx)('li', {
-                id: s,
+                id: a,
                 className: Y.messageListItem,
                 'aria-setsize': -1,
                 children: (0, i.jsx)(A.Z, {
@@ -297,7 +297,7 @@ t.ZP = l.memo(function (e) {
                     onClick: ed,
                     compact: X,
                     contentOnly: ee,
-                    className: a()(J, {
+                    className: s()(J, {
                         [Y.message]: !0,
                         [Y.cozyMessage]: !X,
                         [Y.mentioned]: x.mentioned,
@@ -317,22 +317,22 @@ t.ZP = l.memo(function (e) {
                             : (0, F.Z)({
                                   ...e,
                                   setPopout: ec,
-                                  referencedUsernameProfile: es.referencedUsernameProfile,
-                                  referencedAvatarProfile: es.referencedAvatarProfile,
+                                  referencedUsernameProfile: ea.referencedUsernameProfile,
+                                  referencedAvatarProfile: ea.referencedAvatarProfile,
                                   replyReference: et,
-                                  replyMessage: ea,
+                                  replyMessage: es,
                                   isReplySpineClickable: !0
                               }),
-                    childrenExecutedCommand: (0, H.Z)(e, ec, es),
+                    childrenExecutedCommand: (0, H.Z)(e, ec, ea),
                     childrenHeader: ee
                         ? void 0
                         : (0, U.Z)({
                               messageProps: e,
                               setPopout: ec,
-                              messagePopouts: es,
+                              messagePopouts: ea,
                               replyReference: et,
                               author: eP,
-                              repliedMessage: ea,
+                              repliedMessage: es,
                               roleIcon: eL
                           }),
                     childrenAccessories: (0, O.Z)({
@@ -347,7 +347,7 @@ t.ZP = l.memo(function (e) {
                             ? (0, D.Z)({
                                   buttonProps: e,
                                   setPopout: ec,
-                                  messagePopouts: es,
+                                  messagePopouts: ea,
                                   isFocused: ef || eg
                               })
                             : void 0,
@@ -367,13 +367,13 @@ t.ZP = l.memo(function (e) {
               j.Z,
               {
                   flashKey: eR,
-                  className: a()({
+                  className: s()({
                       [Y.backgroundFlash]: !0,
                       [Y.groupStart]: !X && x.id === $
                   }),
                   children: eH
               },
-              'bg-flash-'.concat(s)
+              'bg-flash-'.concat(a)
           )
         : eH;
 });

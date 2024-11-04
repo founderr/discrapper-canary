@@ -1,34 +1,34 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(388032),
-    a = n(541584);
-function s(e) {
+    s = n(541584);
+function a(e) {
     let { onClose: t, guildName: n } = e;
     return (0, i.jsxs)('div', {
-        className: a.container,
+        className: s.container,
         children: [
             (0, i.jsx)('div', {
-                className: a.iconContainer,
+                className: s.iconContainer,
                 children: (0, i.jsx)(l.ClockWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: a.icon,
+                    className: s.icon,
                     width: 20,
                     height: 20
                 })
             }),
             (0, i.jsxs)('div', {
-                className: a.header,
+                className: s.header,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        className: a.headerText,
+                        className: s.headerText,
                         children: r.intl.string(r.t.LIIyeH)
                     }),
                     (0, i.jsx)(l.Text, {
@@ -37,7 +37,7 @@ function s(e) {
                     }),
                     (0, i.jsx)(l.Button, {
                         onClick: t,
-                        className: a.button,
+                        className: s.button,
                         children: r.intl.string(r.t.BddRzc)
                     })
                 ]

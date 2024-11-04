@@ -10,8 +10,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(149765),
     c = n(846519),
     u = n(481060),
@@ -68,7 +68,7 @@ function D(e) {
     let { numAudience: t, collapsed: n } = e,
         i = n ? t : L.intl.formatToPlainString(L.t['+v2pNz'], { count: t });
     return (0, l.jsxs)('div', {
-        className: s()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
+        className: a()(k.audienceContainer, { [k.audienceContainerCollapsed]: n }),
         children: [
             (0, l.jsx)('div', {
                 className: k.audienceIconContainer,
@@ -93,17 +93,17 @@ class U extends (i = r.PureComponent) {
     }
     render() {
         let { userPopoutOpen: e } = this.state,
-            { connectUserDragSource: t, canDrag: n, isSelfOnOtherClient: i, user: r, channel: a } = this.props,
-            s = (0, l.jsx)('div', {
+            { connectUserDragSource: t, canDrag: n, isSelfOnOtherClient: i, user: r, channel: s } = this.props,
+            a = (0, l.jsx)('div', {
                 className: k.draggable,
-                'data-dnd-name': a.name,
+                'data-dnd-name': s.name,
                 onMouseEnter: i ? void 0 : this.handleMouseEnter,
                 onMouseLeave: i ? void 0 : this.handleHidePreview,
                 children: (0, l.jsx)(u.Popout, {
                     preload: () =>
-                        (0, S.Z)(r.id, r.getAvatarURL(a.guild_id, 80), {
-                            guildId: a.guild_id,
-                            channelId: a.id
+                        (0, S.Z)(r.id, r.getAvatarURL(s.guild_id, 80), {
+                            guildId: s.guild_id,
+                            channelId: s.id
                         }),
                     position: 'right',
                     renderPopout: this.renderUserPopout,
@@ -112,7 +112,7 @@ class U extends (i = r.PureComponent) {
                     children: (e) => this.renderUser(e)
                 })
             });
-        return n ? t(s) : s;
+        return n ? t(a) : a;
     }
     constructor(...e) {
         super(...e),
@@ -210,14 +210,14 @@ class U extends (i = r.PureComponent) {
                 });
             }),
             O(this, 'renderUser', (e) => {
-                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: a, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: S, embeddedApplication: Z, channel: N, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
+                let { isSelfOnOtherClient: t, otherClientSessionType: n, voicePlatform: i, shouldShowPreview: r, mute: s, localMute: o, localVideoDisabled: c, speaking: d, disconnected: h, user: m, deaf: p, priority: f, collapsed: g, isStreaming: C, isGuest: v, nick: _, video: I, serverMute: E, serverDeaf: b, tabIndex: S, embeddedApplication: Z, channel: N, hangStatusActivity: j, showHangStatus: A, isSelf: y, application: P } = this.props,
                     { userPopoutOpen: R, isHoveringHangStatus: O } = this.state,
                     w = M.al.has(null != n ? n : ''),
                     D = {
                         user: m,
                         speaking: d,
                         disconnected: h,
-                        mute: a,
+                        mute: s,
                         localMute: o,
                         localVideoDisabled: c,
                         isStreaming: C,
@@ -234,7 +234,7 @@ class U extends (i = r.PureComponent) {
                         otherClientSessionType: n,
                         voicePlatform: i,
                         embeddedApplication: Z,
-                        avatarContainerClass: s()({ [k.userAvatar]: !0 }),
+                        avatarContainerClass: a()({ [k.userAvatar]: !0 }),
                         disabled: t && !w,
                         selected: R,
                         onClick: w ? void 0 : this.handleClickUser,

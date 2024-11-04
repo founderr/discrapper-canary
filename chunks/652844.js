@@ -1,12 +1,12 @@
 n.d(t, {
     O: function () {
-        return s;
+        return a;
     }
 });
 var i = n(200651),
     l = n(192379),
     r = n(709014);
-let a = {
+let s = {
         mute: {
             name: 'mute',
             start: 0,
@@ -28,10 +28,10 @@ let a = {
             duration: 40
         }
     },
-    s = (e) => {
+    a = (e) => {
         let t = l.useRef(null),
-            s = l.useRef(e);
-        s.current = e;
+            a = l.useRef(e);
+        a.current = e;
         let o = l.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
@@ -61,8 +61,8 @@ let a = {
                         ...e,
                         src: () => n.e('410').then(n.t.bind(n, 992285, 19)),
                         ref: t,
-                        initialAnimation: s.current,
-                        markers: a
+                        initialAnimation: a.current,
+                        markers: s
                     }),
                 []
             )

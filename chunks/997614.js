@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(399606),
-    a = n(704215),
-    s = n(481060),
+    s = n(704215),
+    a = n(481060),
     o = n(239091),
     c = n(706140),
     u = n(242291),
@@ -63,7 +63,7 @@ function I(e) {
                               channel: t,
                               onClose: n,
                               gridNotice:
-                                  j === a.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  j === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                   (0, i.jsx)(d.o, {
                                       onClose: n,
                                       markAsDismissed: A
@@ -80,7 +80,7 @@ function I(e) {
                         if (S) return _.intl.string(_.t['+YBKYG']);
                         if (Z) return _.intl.string(_.t.X1lQlp);
                     })(),
-                    iconComponent: s.SoundboardIcon,
+                    iconComponent: a.SoundboardIcon,
                     disabled: T,
                     onContextMenu: y,
                     ...e

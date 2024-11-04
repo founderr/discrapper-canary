@@ -24,7 +24,7 @@ var o = n(200651),
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function E(e) {
     var t, n, s;
-    let { quest: E, questContent: b, isHovering: N, contentPosition: S, rowIndex: B, onReceiveErrorHints: T } = e,
+    let { quest: E, questContent: b, isHovering: N, contentPosition: S, rowIndex: T, onReceiveErrorHints: B } = e,
         A = m.r.build(E.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
@@ -54,7 +54,7 @@ function E(e) {
             []
         ),
         D = r.useMemo(() => (M ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, M, Z]),
-        U = r.useMemo(() => {
+        H = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -63,7 +63,7 @@ function E(e) {
                     children: Q
                 });
         }, [Q]),
-        H = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        U = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
@@ -87,7 +87,7 @@ function E(e) {
                                                   className: j.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !H
+                                                  shouldAnimate: !U
                                               }),
                                           (0, o.jsx)(x.Z, {
                                               quest: E,
@@ -131,7 +131,7 @@ function E(e) {
                                 className: j.header,
                                 children: D
                             }),
-                            U
+                            H
                         ]
                     }),
                     q &&
@@ -147,8 +147,8 @@ function E(e) {
                 quest: E,
                 location: b,
                 contentPosition: S,
-                rowIndex: B,
-                onReceiveErrorHints: T
+                rowIndex: T,
+                onReceiveErrorHints: B
             })
         ]
     });

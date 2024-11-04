@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(692547),
-    a = n(780384),
-    s = n(481060),
+    s = n(780384),
+    a = n(481060),
     o = n(367907),
     c = n(210887),
     u = n(626135),
@@ -39,7 +39,7 @@ function f(e) {
             return (
                 null != _ &&
                     (async () => {
-                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? _.dark() : _.light()]);
+                        let [{ default: l }, r] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, s.wj)(t) ? _.dark() : _.light()]);
                         !i &&
                             null != b.current &&
                             (e = l.loadAnimation({
@@ -55,7 +55,7 @@ function f(e) {
                 }
             );
         }, [_]),
-        (0, i.jsx)(s.Dialog, {
+        (0, i.jsx)(a.Dialog, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, i.jsxs)('form', {
                 className: m.contentWarningPopout,
@@ -76,7 +76,7 @@ function f(e) {
                                         className: m.header,
                                         children: h.intl.string(h.t.mY3Y39)
                                     }),
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         id: 'content-warning-popout-label',
                                         className: p.markup,
                                         variant: 'text-sm/normal',
@@ -88,13 +88,13 @@ function f(e) {
                                             (0, i.jsxs)('div', {
                                                 className: m.buttonContainer,
                                                 children: [
-                                                    (0, i.jsx)(s.Button, {
+                                                    (0, i.jsx)(a.Button, {
                                                         className: m.button,
-                                                        color: s.Button.Colors.PRIMARY,
+                                                        color: a.Button.Colors.PRIMARY,
                                                         onClick: E,
                                                         children: h.intl.string(h.t.fsBWmZ)
                                                     }),
-                                                    (0, i.jsx)(s.Text, {
+                                                    (0, i.jsx)(a.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: m.buttonHint,
                                                         children: h.intl.format(h.t['0LzVPT'], {})
@@ -104,14 +104,14 @@ function f(e) {
                                             (0, i.jsxs)('div', {
                                                 className: m.buttonContainer,
                                                 children: [
-                                                    (0, i.jsx)(s.Button, {
+                                                    (0, i.jsx)(a.Button, {
                                                         className: m.button,
                                                         onClick: I,
                                                         type: 'submit',
                                                         autoFocus: !0,
                                                         children: h.intl.string(h.t.KJnHq6)
                                                     }),
-                                                    (0, i.jsx)(s.Text, {
+                                                    (0, i.jsx)(a.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: m.buttonHint,
                                                         children: h.intl.format(h.t.khjqdH, {})
@@ -128,12 +128,12 @@ function f(e) {
                         ? (0, i.jsxs)('div', {
                               className: m.footer,
                               children: [
-                                  (0, i.jsx)(s.CircleInformationIcon, {
+                                  (0, i.jsx)(a.CircleInformationIcon, {
                                       size: 'xs',
                                       color: r.Z.unsafe_rawColors.PRIMARY_400.css,
                                       className: m.icon
                                   }),
-                                  (0, i.jsx)(s.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-sm/normal',
                                       children: v.footer
                                   })

@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(772848),
+    s = n.n(r),
+    a = n(772848),
     o = n(442837),
     c = n(481060),
     u = n(2052),
@@ -27,9 +27,9 @@ var i = n(200651),
     b = n(981631),
     S = n(388032),
     Z = n(735338);
-let T = 'vc-activities-'.concat((0, s.Z)()),
+let T = 'vc-activities-'.concat((0, a.Z)()),
     N = l.forwardRef(function (e, t) {
-        let { channel: n, isHovered: r, closePopout: s, onMouseEnter: N, onMouseLeave: j, onClick: A, className: y } = e,
+        let { channel: n, isHovered: r, closePopout: a, onMouseEnter: N, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: M, guild_id: R } = n;
         l.useEffect(() => {
@@ -39,8 +39,8 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
             });
         }, [M, R]),
             l.useEffect(() => {
-                !r && s();
-            }, [s, r]);
+                !r && a();
+            }, [a, r]);
         let L = (0, d.bp)(),
             { analyticsLocations: k } = (0, p.ZP)(m.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: O } = (0, p.ZP)([...k, m.Z.ACTIVITIES_MINI_SHELF_BANNER]),
@@ -148,7 +148,7 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
-                                                        s(), A();
+                                                        a(), A();
                                                     },
                                                     aspectRatio: _.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: Z.activitySuggestion,
@@ -158,7 +158,7 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: a()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
+                                            className: s()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
                                                 className: Z.wumpusRocketInnerContainer,
                                                 children: (0, i.jsx)(I.Z, { className: Z.wumpusRocket })

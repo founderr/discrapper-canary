@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(392711),
     l = n.n(i),
     r = n(442837),
-    a = n(544891),
-    s = n(570140),
+    s = n(544891),
+    a = n(570140),
     o = n(375954),
     c = n(306680),
     u = n(748902),
@@ -39,11 +39,11 @@ function p(e) {
             },
             [t]
         ),
-        a = (0, r.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
+        s = (0, r.e7)([u.Z], () => u.Z.shouldLoadMessageRequestPreview(t), [t]);
     return (
         !n &&
             null == i &&
-            a &&
+            s &&
             (function (e) {
                 h.add(e), null == m && (m = setTimeout(f, 0));
             })(t),
@@ -64,17 +64,17 @@ async function f() {
 async function g() {
     let e = Array.from(h).slice(0, 25);
     try {
-        let t = await a.tn.get({
+        let t = await s.tn.get({
             url: d.ANM.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
             query: { channel_ids: e }
         });
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS',
             requestedChannelIds: e,
             supplementalData: t.body
         });
     } catch (t) {
-        s.Z.dispatch({
+        a.Z.dispatch({
             type: 'LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR',
             requestedChannelIds: e
         });

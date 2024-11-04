@@ -8,8 +8,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(430824),
-    s = n(914010),
+    s = n(430824),
+    a = n(914010),
     o = n(388032),
     c = n(60719);
 let u = () =>
@@ -20,7 +20,7 @@ let u = () =>
             })
         }),
     d = () => {
-        let e = (0, l.e7)([a.Z, s.Z], () => a.Z.getGuild(s.Z.getGuildId()), []),
+        let e = (0, l.e7)([s.Z, a.Z], () => s.Z.getGuild(a.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
         return (0, i.jsx)(i.Fragment, { children: o.intl.format(o.t.oQuG3N, { serverName: t }) });
     },

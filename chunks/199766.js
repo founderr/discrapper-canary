@@ -14,6 +14,6 @@ function r(e, t, n, l) {
     e.save();
     let r = i.Z.getAvatarImage(l);
     if (null == r) return;
-    let a = 20 * window.devicePixelRatio;
-    e.beginPath(), e.arc(t, n, a / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(r, t - a / 2, n - a / 2, a, a), e.restore();
+    let s = 20 * window.devicePixelRatio;
+    e.beginPath(), e.arc(t, n, s / 2, 0, 2 * Math.PI), e.clip(), e.drawImage(r, t - s / 2, n - s / 2, s, s), e.restore();
 }

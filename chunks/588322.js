@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(239091),
-    s = n(561472),
+    s = n(239091),
+    a = n(561472),
     o = n(933557),
     c = n(287746),
     u = n(541716),
@@ -38,7 +38,7 @@ function I(e) {
     let T = (0, i.jsx)(p.Z, { channel: I });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(s.Z, {
+            (0, i.jsx)(a.Z, {
                 channel: I,
                 draftType: g.d.ChannelMessage
             }),
@@ -52,7 +52,7 @@ function I(e) {
                     guild: b,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, a.jW)(e, async () => {
+                        (0, s.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) =>
                                 (0, i.jsx)(e, {

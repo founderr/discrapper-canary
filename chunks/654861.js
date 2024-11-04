@@ -361,11 +361,11 @@ var n = (function (e) {
         for (var r = e.length - 1; r >= 0; r--) if (e[r] !== t[r]) return e[r] > t[r] ? 1 : -1;
         return 0;
     }
-    function P(e) {
+    function U(e) {
         var t = e.abs();
         return !t.isUnit() && (!!(t.equals(2) || t.equals(3) || t.equals(5)) || (!(t.isEven() || t.isDivisibleBy(3) || t.isDivisibleBy(5)) && (!!t.lesser(49) || void 0)));
     }
-    function U(e, t) {
+    function P(e, t) {
         for (var r, a, _, o = e.prev(), i = o, E = 0; i.isEven(); ) (i = i.divide(2)), E++;
         e: for (a = 0; a < t.length; a++) {
             if (!e.lesser(t[a])) {
@@ -574,20 +574,20 @@ var n = (function (e) {
         }),
         (E.prototype.isDivisibleBy = i.prototype.isDivisibleBy = o.prototype.isDivisibleBy),
         (o.prototype.isPrime = function (e) {
-            var t = P(this);
+            var t = U(this);
             if (void 0 !== t) return t;
             var r = this.abs(),
                 a = r.bitLength();
-            if (a <= 64) return U(r, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+            if (a <= 64) return P(r, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
             for (var _ = Math.log(2) * a.toJSNumber(), o = Math.ceil(!0 === e ? 2 * Math.pow(_, 2) : _), i = [], E = 0; E < o; E++) i.push(n(E + 2));
-            return U(r, i);
+            return P(r, i);
         }),
         (E.prototype.isPrime = i.prototype.isPrime = o.prototype.isPrime),
         (o.prototype.isProbablePrime = function (t, r) {
-            var a = P(this);
+            var a = U(this);
             if (e !== a) return a;
             for (var _ = this.abs(), o = e === t ? 5 : t, i = [], E = 0; E < o; E++) i.push(n.randBetween(2, _.minus(2), r));
-            return U(_, i);
+            return P(_, i);
         }),
         (E.prototype.isProbablePrime = i.prototype.isProbablePrime = o.prototype.isProbablePrime),
         (o.prototype.modInv = function (e) {
@@ -816,7 +816,7 @@ var n = (function (e) {
             }
         );
     }
-    function k(e, t, n) {
+    function V(e, t, n) {
         var a = K(e, t);
         return (
             (a.isNegative ? '-' : '') +
@@ -828,7 +828,7 @@ var n = (function (e) {
                 .join('')
         );
     }
-    function V(e) {
+    function k(e) {
         if (c(+e)) {
             var t = +e;
             if (t === R(t)) return a ? new E(BigInt(t)) : new i(t);
@@ -861,12 +861,12 @@ var n = (function (e) {
             return K(this, e);
         }),
         (o.prototype.toString = function (t, r) {
-            if ((e === t && (t = 10), 10 !== t)) return k(this, t, r);
+            if ((e === t && (t = 10), 10 !== t)) return V(this, t, r);
             for (var n, a = this.value, _ = a.length, o = String(a[--_]); --_ >= 0; ) (n = String(a[_])), (o += '0000000'.slice(n.length) + n);
             return (this.sign ? '-' : '') + o;
         }),
         (i.prototype.toString = function (t, r) {
-            return (e === t && (t = 10), 10 != t) ? k(this, t, r) : String(this.value);
+            return (e === t && (t = 10), 10 != t) ? V(this, t, r) : String(this.value);
         }),
         (E.prototype.toString = i.prototype.toString),
         (E.prototype.toJSON =
@@ -895,10 +895,10 @@ var n = (function (e) {
                       if (e !== R(e)) throw Error(e + ' is not an integer.');
                       return new i(e);
                   }
-                  return V(e.toString());
+                  return k(e.toString());
               })(e)
             : 'string' == typeof e
-              ? V(e)
+              ? k(e)
               : 'bigint' == typeof e
                 ? new E(e)
                 : e;

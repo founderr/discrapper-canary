@@ -19,8 +19,8 @@ n.d(t, {
 var i,
     l,
     r = n(192379),
-    a = n(903797),
-    s = n(782690),
+    s = n(903797),
+    a = n(782690),
     o = n(731965),
     c = n(570140),
     u = n(110924),
@@ -42,7 +42,7 @@ let g = {
         messageCount: p,
         lastMessage: null
     },
-    C = (0, a.Z)(() => new Map()),
+    C = (0, s.Z)(() => new Map()),
     x = (e, t) => {
         (0, o.j)(() => {
             C.setState((n) => {
@@ -62,7 +62,7 @@ let g = {
             });
         });
     },
-    v = (e) => C((t) => t.get(e), s.Z);
+    v = (e) => C((t) => t.get(e), a.Z);
 function _(e, t, n) {
     let i = null != n ? n : {};
     switch (t) {
@@ -94,17 +94,17 @@ function _(e, t, n) {
 }
 function I(e, t, n) {
     return (function (e, t, n, i) {
-        let { addtionalQuery: l, shouldDispatch: a = !1 } = i,
-            s = r.useMemo(() => f(e, t, n, l), [e, t, n, l]),
-            o = v(s),
-            C = (0, u.Z)(s),
+        let { addtionalQuery: l, shouldDispatch: s = !1 } = i,
+            a = r.useMemo(() => f(e, t, n, l), [e, t, n, l]),
+            o = v(a),
+            C = (0, u.Z)(a),
             [I, E] = r.useState({});
         return (
             r.useEffect(() => {
-                if (C !== s) {
+                if (C !== a) {
                     let i = _(e, n, l),
                         r = new d.ZP(t, m.aib.GUILD, i);
-                    x(s, {
+                    x(a, {
                         searchFetcher: r,
                         messageCount: p,
                         lastMessage: null
@@ -115,14 +115,14 @@ function I(e, t, n) {
                                     let n = e.body,
                                         i = n.messages[0];
                                     if (
-                                        (x(s, {
+                                        (x(a, {
                                             searchFetcher: r,
                                             result: n,
                                             messageCount: n.total_results,
                                             lastMessage: i
                                         }),
                                         E({}),
-                                        a)
+                                        s)
                                     ) {
                                         var l, o;
                                         c.Z.dispatch({
@@ -143,7 +143,7 @@ function I(e, t, n) {
                                 },
                                 (e) => {},
                                 (e) => {
-                                    x(s, {
+                                    x(a, {
                                         messageCount: 0,
                                         lastMessage: null
                                     }),
@@ -153,24 +153,24 @@ function I(e, t, n) {
                         });
                 }
                 return () => {};
-            }, [e, t, o, s, n, l]),
+            }, [e, t, o, a, n, l]),
             null != o ? o : g
         );
     })(e, t, 'messages', n);
 }
 function E(e, t, n, i) {
     let l = r.useMemo(() => f(e, t, n, i, !0), [e, t, n, i]),
-        a = v(l),
-        s = (0, u.Z)(l);
+        s = v(l),
+        a = (0, u.Z)(l);
     return {
         key: l,
-        previousKey: s,
-        state: a
+        previousKey: a,
+        state: s
     };
 }
 function b(e, t, n) {
-    var i, l, a;
-    let { key: s, state: o } = E(e, t, 'messages', n),
+    var i, l, s;
+    let { key: a, state: o } = E(e, t, 'messages', n),
         { key: c, state: u } = E(e, t, 'links', n),
         { key: h, state: f } = E(e, t, 'media', n),
         g = r.useMemo(() => _(e, 'all_counts', n), [e, n]),
@@ -190,9 +190,9 @@ function b(e, t, n) {
                 let t = e.messages,
                     n = e.links,
                     i = e.media;
-                x(s, t), x(c, n), x(h, i);
+                x(a, t), x(c, n), x(h, i);
             },
-            [c, h, s]
+            [c, h, a]
         ),
         I = r.useCallback(
             (e) => {
@@ -225,7 +225,7 @@ function b(e, t, n) {
                     lastMessage: null
                 });
             else {
-                var n, i, l, r, a, s;
+                var n, i, l, r, s, a;
                 let e = t.tabs.messages,
                     o = t.tabs.links,
                     c = t.tabs.media;
@@ -239,8 +239,8 @@ function b(e, t, n) {
                         lastMessage: null !== (r = null == o ? void 0 : o.messages[0]) && void 0 !== r ? r : null
                     },
                     media: {
-                        messageCount: null !== (a = null == c ? void 0 : c.total_results) && void 0 !== a ? a : 0,
-                        lastMessage: null !== (s = null == c ? void 0 : c.messages[0]) && void 0 !== s ? s : null
+                        messageCount: null !== (s = null == c ? void 0 : c.total_results) && void 0 !== s ? s : 0,
+                        lastMessage: null !== (a = null == c ? void 0 : c.messages[0]) && void 0 !== a ? a : null
                     }
                 });
             }
@@ -254,6 +254,6 @@ function b(e, t, n) {
     return {
         messagesCount: null !== (i = null == o ? void 0 : o.messageCount) && void 0 !== i ? i : p,
         linksCount: null !== (l = null == u ? void 0 : u.messageCount) && void 0 !== l ? l : p,
-        mediaCount: null !== (a = null == f ? void 0 : f.messageCount) && void 0 !== a ? a : p
+        mediaCount: null !== (s = null == f ? void 0 : f.messageCount) && void 0 !== s ? s : p
     };
 }

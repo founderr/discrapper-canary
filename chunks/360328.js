@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(693546),
-    s = n(246364),
+    s = n(693546),
+    a = n(246364),
     o = n(388032);
 function c(e, t, c) {
     let [u, d] = l.useState(!1),
@@ -19,7 +19,7 @@ function c(e, t, c) {
             if (!u && null != e && null != t && null != c) {
                 d(!0);
                 try {
-                    await a.Z.updateGuildJoinRequest(e, t, c, s.wB.APPROVED);
+                    await s.Z.updateGuildJoinRequest(e, t, c, a.wB.APPROVED);
                 } catch {
                     h();
                 } finally {

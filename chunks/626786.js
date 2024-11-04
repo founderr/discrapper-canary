@@ -7,24 +7,24 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(134433),
-    s = n(139513);
+    s = n(134433),
+    a = n(139513);
 function o(e) {
     let t,
         { className: n, children: l, verified: o, roleColor: c, roleName: u } = e;
     return (
         (t = o
-            ? (0, i.jsx)(a.Z, {
+            ? (0, i.jsx)(s.Z, {
                   size: 12,
                   color: c,
-                  className: s.linkedRoleColor
+                  className: a.linkedRoleColor
               })
             : (0, i.jsx)('div', {
-                  className: s.roleColor,
+                  className: a.roleColor,
                   style: { backgroundColor: c }
               })),
         (0, i.jsxs)('div', {
-            className: r()(n, s.role),
+            className: r()(n, a.role),
             children: [t, u, l]
         })
     );

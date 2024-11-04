@@ -6,9 +6,9 @@ n.d(t, {
 var i = n(278323),
     r = n(13245),
     s = n(45114),
-    o = n(593481),
+    l = n(593481),
     a = n(237997),
-    l = n(312839),
+    o = n(312839),
     c = n(981631),
     d = n(987650),
     u = n(388032);
@@ -18,23 +18,23 @@ function h(e, t, n, h) {
             username: '',
             game: n.name
         }),
-        g = t.getAvatarURL(e.guild_id, 80),
-        { trackView: m, trackClick: v } = (0, l.R)(d.n0.ActivityInvite, {
+        m = t.getAvatarURL(e.guild_id, 80),
+        { trackView: g, trackClick: v } = (0, o.R)(d.n0.ActivityInvite, {
             notif_type: d.n0.ActivityInvite,
             notif_user_id: t.id,
             activity_type: c.mFx.JOIN_REQUEST,
             activity_name: n.name
         });
     return {
-        colorScheme: o.ZP.ColorSchemes.PRIMARY,
-        icon: g,
+        colorScheme: l.ZP.ColorSchemes.PRIMARY,
+        icon: m,
         title: p,
         body: f,
-        hint: (e) => (0, o.QR)(e, (0, l.P)(), u.t['Odi54+']),
+        hint: (e) => (0, l.QR)(e, (0, o.P)(), u.t['Odi54+']),
         confirmText: u.intl.string(u.t['fgP/wc']),
         cancelText: u.intl.string(u.t.tpXzJy),
         onNotificationShow: () => {
-            m();
+            g();
         },
         onConfirmClick: (t, n) => {
             i.Z.sendActivityInvite({

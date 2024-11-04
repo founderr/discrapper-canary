@@ -1,6 +1,6 @@
 n.d(t, {
     v: function () {
-        return a;
+        return s;
     }
 }),
     n(47120),
@@ -8,7 +8,7 @@ n.d(t, {
 var i = n(975984),
     l = n(486527),
     r = n(388032);
-function a(e, t) {
+function s(e, t) {
     if (t !== l.AR.ALL)
         return [
             {
@@ -17,15 +17,15 @@ function a(e, t) {
             }
         ];
     let n = [],
-        a = (0, i.Lz)(e),
-        s = new Set(a.map((e) => e.guildId));
-    a.length > 0 &&
+        s = (0, i.Lz)(e),
+        a = new Set(s.map((e) => e.guildId));
+    s.length > 0 &&
         n.push({
             header: r.intl.string(r.t.CbaapK),
-            entries: a,
+            entries: s,
             appendEndCard: !1
         });
-    let o = e.filter((e) => !s.has(e.guildId));
+    let o = e.filter((e) => !a.has(e.guildId));
     return (
         (o = (0, i.Th)(o)).length > 0 &&
             n.push({

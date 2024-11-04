@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(286379),
-    a = n(481060),
-    s = n(194359),
+    s = n(481060),
+    a = n(194359),
     o = n(797614),
     c = n(378298),
     u = n(359119),
@@ -23,13 +23,13 @@ function g(e) {
         }, [t, g]),
         v = l.useCallback(
             (e) => () => {
-                s.Z.addRelationship({
+                a.Z.addRelationship({
                     userId: C,
                     context: { location: m.zr },
                     type: p.OGo.BLOCKED
                 }),
                     x(),
-                    (0, a.showToast)((0, a.createToast)(f.intl.string(f.t.YVFRoK), a.ToastType.SUCCESS)),
+                    (0, s.showToast)((0, s.createToast)(f.intl.string(f.t.YVFRoK), s.ToastType.SUCCESS)),
                     (0, d.qc)({
                         channelId: t,
                         warningId: g,
@@ -50,7 +50,7 @@ function g(e) {
             o.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
     }, [t, g, C]);
     let _ = () => {
-            (0, a.openModalLazy)(async () => {
+            (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('95226').then(n.bind(n, 816960));
                 return (n) => {
                     let { transitionState: l, onClose: r } = n;
@@ -68,10 +68,10 @@ function g(e) {
             });
         },
         I = (e, l, r) => {
-            (0, a.openModalLazy)(async () => {
-                let { default: a } = await n.e('68747').then(n.bind(n, 744373));
+            (0, s.openModalLazy)(async () => {
+                let { default: s } = await n.e('68747').then(n.bind(n, 744373));
                 return (n) =>
-                    (0, i.jsx)(a, {
+                    (0, i.jsx)(s, {
                         ...n,
                         userId: C,
                         confirmBlock: v(e),
@@ -99,7 +99,7 @@ function g(e) {
         buttons: [
             {
                 text: f.intl.string(f.t['Qk/c4+']),
-                color: a.Button.Colors.BRAND,
+                color: s.Button.Colors.BRAND,
                 onclick: () => {
                     _(),
                         (0, d.qc)({
@@ -113,7 +113,7 @@ function g(e) {
             },
             {
                 text: f.intl.string(f.t.ie0QdH),
-                color: a.Button.Colors.RED,
+                color: s.Button.Colors.RED,
                 onclick: () => I(d.NM.USER_BANNER_BLOCK_CONFIRM, d.NM.USER_BANNER_BLOCK_CANCEL)
             }
         ]

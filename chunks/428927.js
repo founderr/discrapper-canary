@@ -10,8 +10,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(780384),
-    s = n(481060),
+    s = n(780384),
+    a = n(481060),
     o = n(239091),
     c = n(37234),
     u = n(410030),
@@ -26,11 +26,11 @@ var l = n(120356),
     v = n(388032),
     _ = n(519294),
     I = n(581958);
-let E = (0, s.getAvatarSize)(s.AvatarSizes.SIZE_16);
+let E = (0, a.getAvatarSize)(a.AvatarSizes.SIZE_16);
 function b(e) {
     let { user: t, guild: l, nick: c, theme: u, onSelect: m } = e,
         f = t.hasAvatarForGuild(l.id);
-    return (0, i.jsxs)(s.Clickable, {
+    return (0, i.jsxs)(a.Clickable, {
         focusProps: { offset: { right: 8 } },
         className: _.listRow,
         onClick: m,
@@ -50,8 +50,8 @@ function b(e) {
                 guild: l,
                 showBadge: !0,
                 className: r()(_.listAvatar, null == l.icon ? I.guildAvatarWithoutIcon : null),
-                badgeStrokeColor: (0, d.Lq)((0, a.wj)(u) ? x.Ilk.PRIMARY_600 : x.Ilk.WHITE_500),
-                badgeTooltipColor: s.TooltipColors.PRIMARY,
+                badgeStrokeColor: (0, d.Lq)((0, s.wj)(u) ? x.Ilk.PRIMARY_600 : x.Ilk.WHITE_500),
+                badgeTooltipColor: a.TooltipColors.PRIMARY,
                 badgeTooltipDelay: C.vB,
                 size: h.Z.Sizes.MEDIUM,
                 active: !0
@@ -68,9 +68,9 @@ function b(e) {
                               className: I.guildNick,
                               children: [
                                   f &&
-                                      (0, i.jsx)(s.Avatar, {
+                                      (0, i.jsx)(a.Avatar, {
                                           src: t.getAvatarURL(l.id, E),
-                                          size: s.AvatarSizes.SIZE_16,
+                                          size: a.AvatarSizes.SIZE_16,
                                           className: I.guildAvatar,
                                           'aria-hidden': !0
                                       }),
@@ -87,18 +87,18 @@ function S(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: l } = (0, f.KZ)(),
         { mutualGuilds: r } = (0, g.Z)(t.id),
-        a = (0, u.ZP)(),
+        s = (0, u.ZP)(),
         o = (e) => {
             (0, m.X)(e), n(), (0, c.xf)();
         };
-    return (0, i.jsx)(s.ScrollerThin, {
+    return (0, i.jsx)(a.ScrollerThin, {
         className: _.listScroller,
         fade: !0,
         children:
             null == r
                 ? (0, i.jsx)('div', {
                       className: _.empty,
-                      children: (0, i.jsx)(s.Spinner, {})
+                      children: (0, i.jsx)(a.Spinner, {})
                   })
                 : 0 === r.length
                   ? (0, i.jsxs)('div', {
@@ -119,7 +119,7 @@ function S(e) {
                                 user: t,
                                 guild: n,
                                 nick: r,
-                                theme: a,
+                                theme: s,
                                 onSelect: () => {
                                     l({ action: 'PRESS_MUTUAL_GUILD' }), o(n.id);
                                 }

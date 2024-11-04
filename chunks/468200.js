@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(481060),
     r = n(688465),
-    a = n(690221),
-    s = n(447564),
+    s = n(690221),
+    a = n(447564),
     o = n(388032),
     c = n(188090),
     u = n(495841);
@@ -41,7 +41,7 @@ function d(e) {
                                     ...n
                                 });
                         },
-                        { modalKey: s.HD_STREAMING_POTION_MODAL_KEY }
+                        { modalKey: a.HD_STREAMING_POTION_MODAL_KEY }
                     );
                 },
                 children: (0, i.jsxs)('div', {
@@ -59,7 +59,7 @@ function d(e) {
                 })
             }),
             (0, i.jsx)('div', { className: c.divider }),
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(s.Z, {
                 onClick: () => {},
                 children: (0, i.jsx)(l.Text, {
                     color: 'text-link',

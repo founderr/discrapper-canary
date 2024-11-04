@@ -8,13 +8,13 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(485267),
-    s = n(71585),
+    s = n(485267),
+    a = n(71585),
     o = n(981631),
     c = n(388032);
 let u = (e) => {
     let { closePopout: t } = e,
-        u = (0, l.e7)([s.Z], () => s.Z.hidden);
+        u = (0, l.e7)([a.Z], () => a.Z.hidden);
     return (0, i.jsx)(r.Menu, {
         onSelect: () => {},
         navId: 'member-list-settings-menu',
@@ -39,7 +39,7 @@ let u = (e) => {
                     label: c.intl.string(c.t.AhNYub),
                     checked: u,
                     action: () => {
-                        (0, a.lY)(), null == t || t();
+                        (0, s.lY)(), null == t || t();
                     }
                 })
             ]

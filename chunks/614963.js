@@ -6,8 +6,8 @@ n.d(t, {
 var i,
     l,
     r = n(251625),
-    a = n(823379),
-    s = n(981631),
+    s = n(823379),
+    a = n(981631),
     o = n(388032);
 function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
@@ -22,7 +22,7 @@ function u(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        i = e.slice(-1 * t).filter(a.lm);
+        i = e.slice(-1 * t).filter(s.lm);
     if (0 === i.length)
         return {
             type: 'streamer',
@@ -68,5 +68,5 @@ function m(e, t, n, i) {
             return null !== (l = h(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== l ? l : h(n, null == i ? void 0 : i.maxFrameRate);
         }
     }
-    return e === s.IE4.BAD ? d(o.intl.string(o.t.Ic588P), 'Bad Connection') : null;
+    return e === a.IE4.BAD ? d(o.intl.string(o.t.Ic588P), 'Bad Connection') : null;
 }

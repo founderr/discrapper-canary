@@ -7,9 +7,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(512722),
     u = n.n(c),
     d = n(442837),
@@ -32,7 +32,7 @@ var i,
     j = n(231338),
     A = n(388032),
     y = n(425205);
-let P = a.memo(function (e) {
+let P = s.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
             i = (0, r.jsx)(g.ZP.Icon, {
                 icon: h.XSmallIcon,
@@ -52,11 +52,11 @@ let P = a.memo(function (e) {
             ]
         });
     }),
-    M = a.memo(function (e) {
+    M = s.memo(function (e) {
         let { channel: t, participant: i, tempDisableOnInit: l = !1 } = e,
-            [s, c] = a.useState(l);
-        a.useEffect(() => {
-            if (!s) return;
+            [a, c] = s.useState(l);
+        s.useEffect(() => {
+            if (!a) return;
             let e = setTimeout(() => c(!1), 1000);
             return () => clearTimeout(e);
         }, []);
@@ -67,7 +67,7 @@ let P = a.memo(function (e) {
                 status: I.Z.getStatus(i.user.id, g)
             })),
             T = (0, d.e7)([v.ZP], () => v.ZP.getMember(g, i.user.id)),
-            N = a.useMemo(() => ({ [g]: [i.user.id] }), [g, i.user.id]);
+            N = s.useMemo(() => ({ [g]: [i.user.id] }), [g, i.user.id]);
         (0, f.$)(N);
         let j = i.rtsState === Z.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function P() {
@@ -149,7 +149,7 @@ let P = a.memo(function (e) {
                             look: h.Button.Looks.BLANK,
                             size: h.Button.Sizes.NONE,
                             onClick: P,
-                            disabled: j || s,
+                            disabled: j || a,
                             children: (0, r.jsx)(h.MicrophoneArrowRightIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -174,7 +174,7 @@ let P = a.memo(function (e) {
             ]
         });
     }),
-    R = a.memo(function (e) {
+    R = s.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, T.h)(t.id);
         return (0, r.jsx)(h.FormSwitch, {
@@ -184,7 +184,7 @@ let P = a.memo(function (e) {
             children: A.intl.string(A.t.GYCh0d)
         });
     }),
-    L = a.memo(function () {
+    L = s.memo(function () {
         return (0, r.jsxs)('div', {
             className: y.emptyStateContainer,
             children: [
@@ -207,7 +207,7 @@ let P = a.memo(function (e) {
 function k(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, chatOpen: i } = e,
         l = (0, b.Fd)(t.id),
-        a = [(0, d.e7)([_.Z], () => _.Z.can(j.Pl.MANAGE_CHANNELS, t) || _.Z.can(j.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
+        s = [(0, d.e7)([_.Z], () => _.Z.can(j.Pl.MANAGE_CHANNELS, t) || _.Z.can(j.Pl.MANAGE_ROLES, t)) ? 1 : 0, Math.max(1, l.length)];
     return (0, r.jsxs)('div', {
         className: o()(y.container, { [y.chatOpen]: i }),
         children: [
@@ -217,7 +217,7 @@ function k(e) {
             }),
             (0, r.jsx)(h.List, {
                 className: y.contentContainer,
-                sections: a,
+                sections: s,
                 sectionHeight: function (e) {
                     if (1 === e) return 40;
                     return 0;

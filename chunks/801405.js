@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(570140),
-    s = n(475179),
+    s = n(570140),
+    a = n(475179),
     o = n(367907),
     c = n(358221),
     u = n(788983),
@@ -20,10 +20,10 @@ var i = n(200651),
     C = n(981631),
     x = n(336496);
 let v = () => {
-    a.Z.wait(() => u.xv(C.KJ3.CHANNEL_CALL_POPOUT));
+    s.Z.wait(() => u.xv(C.KJ3.CHANNEL_CALL_POPOUT));
 };
 function _(e) {
-    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: u, currentWindow: _ } = e,
+    let { channel: t, appContext: n, popoutOpen: s, popoutWindow: u, currentWindow: _ } = e,
         I = n === C.IlC.POPOUT,
         E = l.useRef(null),
         { currentLayout: b, mode: S } = (0, r.cj)(
@@ -57,11 +57,11 @@ function _(e) {
                 rootNode: t
             };
         }, [u, I, _]),
-        A = a && !I,
+        A = s && !I,
         y = S === C.WtW.VIDEO && Z && !A,
         P = l.useCallback(
             (e, i) => {
-                i !== e && (s.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(C.CkL.TEXTAREA_BLUR));
+                i !== e && (a.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && p.S.dispatch(C.CkL.TEXTAREA_BLUR));
             },
             [n, t]
         ),

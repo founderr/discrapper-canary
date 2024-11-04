@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(392711),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(32750),
     u = n(109764),
@@ -29,10 +29,10 @@ var i = n(200651),
 function Z(e) {
     let { channel: t } = e,
         [n, r] = l.useState(!1);
-    function a() {
+    function s() {
         r((e) => !e);
     }
-    let s = S.intl.string(S.t.UKOtz8);
+    let a = S.intl.string(S.t.UKOtz8);
     return (0, i.jsx)(o.Popout, {
         shouldShow: n,
         animation: o.Popout.Animation.NONE,
@@ -50,10 +50,10 @@ function Z(e) {
             let { isShown: n } = t;
             return (0, i.jsx)(_.ZP.Icon, {
                 ...e,
-                onClick: a,
-                tooltip: n ? null : s,
+                onClick: s,
+                tooltip: n ? null : a,
                 icon: o.MoreHorizontalIcon,
-                'aria-label': s,
+                'aria-label': a,
                 selected: n
             });
         }
@@ -76,7 +76,7 @@ function T(e) {
         M = (0, m.Z)(t),
         R = (0, x.Z)(t),
         L = I.vF.useSetting(),
-        k = (0, s.e7)([E.Z], () => !a().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
+        k = (0, a.e7)([E.Z], () => !s().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,

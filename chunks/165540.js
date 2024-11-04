@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(704215),
     c = n(749280),
     u = n(481060),
@@ -28,7 +28,7 @@ var i = n(200651),
     y = n(795361);
 let P = l.forwardRef(function (e, t) {
     let { type: n, animateRef: r } = e,
-        m = (0, s.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
+        m = (0, a.e7)([p.Z], () => p.Z.shouldShowPopup() && p.Z.activeViewType() === n),
         { Component: g, events: C, play: x } = (0, c.w)();
     l.useImperativeHandle(
         r,
@@ -43,13 +43,13 @@ let P = l.forwardRef(function (e, t) {
         (0, d.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), m ? h.yT(f.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h.__(f._b.TEXT, n)), x();
     }, [m, n, x]);
     return (0, i.jsx)('div', {
-        className: a()(A.buttonContainer, T.t4),
+        className: s()(A.buttonContainer, T.t4),
         ref: t,
         children: (0, i.jsx)(u.Button, {
             look: u.Button.Looks.BLANK,
             size: u.Button.Sizes.NONE,
             tabIndex: 0,
-            className: a()(A.button, { [A.buttonActive]: m }),
+            className: s()(A.button, { [A.buttonActive]: m }),
             onClick: v,
             'aria-label': j.intl.string(j.t.erHFxM),
             focusProps: {
@@ -68,7 +68,7 @@ let P = l.forwardRef(function (e, t) {
 });
 function M(e) {
     let { showAppLauncherPopup: t, children: n } = e,
-        l = (0, s.e7)([E.Z], () => E.Z.hasLayers()),
+        l = (0, a.e7)([E.Z], () => E.Z.hasLayers()),
         {
             enabled: r,
             shouldShow: o,
@@ -85,7 +85,7 @@ function M(e) {
                   className: A.channelAppLauncherButtonPopoutIconContainer,
                   children: [
                       (0, i.jsx)('img', {
-                          className: a()(A.buttonContainer, A.button, A.channelAppLauncherButtonPopoutIcon),
+                          className: s()(A.buttonContainer, A.button, A.channelAppLauncherButtonPopoutIcon),
                           alt: j.intl.string(j.t.X4IxWF),
                           src: null == c ? void 0 : c.iconURL,
                           'aria-hidden': !0,
@@ -94,7 +94,7 @@ function M(e) {
                       (0, i.jsx)('div', {
                           className: A.channelAppLauncherButtonPopoutIconShimmerContainer,
                           children: (0, i.jsx)('img', {
-                              className: a()(A.channelAppLauncherButtonPopoutIconShimmer),
+                              className: s()(A.channelAppLauncherButtonPopoutIconShimmer),
                               alt: j.intl.string(j.t.X4IxWF),
                               src: y,
                               'aria-hidden': !0,
@@ -119,17 +119,17 @@ function M(e) {
           });
 }
 t.Z = l.memo(function (e) {
-    let { channel: t, type: n, animateRef: r, entryPointCommandButtonRef: a } = e,
+    let { channel: t, type: n, animateRef: r, entryPointCommandButtonRef: s } = e,
         o = l.useRef(null),
         c = (0, v.g)(t),
-        { activeCommand: u } = (0, s.cj)([x.Z], () => {
+        { activeCommand: u } = (0, a.cj)([x.Z], () => {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? x.Z.getActiveCommand(t.id) : null };
         }),
         d = m.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
         h = (0, S.Z)({ type: n }),
         f = (0, _.h9)(t.id, 'ChannelAppLauncher'),
-        g = (0, s.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id));
+        g = (0, a.e7)([p.Z], () => p.Z.appDMChannelsWithFailedLoads().has(t.id));
     return d && null == u && c
         ? (0, i.jsxs)('div', {
               className: A.channelAppLauncher,
@@ -150,7 +150,7 @@ t.Z = l.memo(function (e) {
                   }),
                   h
                       ? (0, i.jsx)(C.Z, {
-                            positionTargetRef: f && !g ? a : o,
+                            positionTargetRef: f && !g ? s : o,
                             channel: t
                         })
                       : null

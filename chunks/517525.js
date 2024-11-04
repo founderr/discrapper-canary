@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(100621),
+    s = n.n(r),
+    a = n(100621),
     o = n(468194),
     c = n(442837),
     u = n(692547),
@@ -44,10 +44,10 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     L = (e) => {
         let t,
             r,
-            { participant: s, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: T, setDidTrackUpsellViewed: N, className: j, premiumIndicator: A } = e,
-            y = (0, _.Wc)(s),
+            { participant: a, isUpsellEnabled: o, shape: d, size: g, didTrackUpsellViewed: T, setDidTrackUpsellViewed: N, className: j, premiumIndicator: A } = e,
+            y = (0, _.Wc)(a),
             { analyticsLocations: P } = (0, p.ZP)(),
-            M = null != (0, I.Z)(s);
+            M = null != (0, I.Z)(a);
         try {
             t = (0, _.nG)(y);
         } catch (e) {
@@ -97,7 +97,7 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                 (0, i.jsxs)(h.Clickable, {
                     ...e,
                     onClick: w,
-                    className: a()(Z.qualityIndicator, g, f.eE[d], M ? Z.qualityIndicatorLowQuality : Z.qualityIndicatorFullQuality, { [Z.clickable]: O && R }),
+                    className: s()(Z.qualityIndicator, g, f.eE[d], M ? Z.qualityIndicatorLowQuality : Z.qualityIndicatorFullQuality, { [Z.clickable]: O && R }),
                     children: [
                         R
                             ? (0, i.jsx)(h.NitroWheelIcon, {
@@ -116,7 +116,7 @@ let T = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         });
         return (0, i.jsx)(h.TextBadge, {
             text: D,
-            className: a()(j, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && A }),
+            className: s()(j, Z.qualityIndicatorBadge, { [Z.qualityIndicatorBadgePremium]: R && A }),
             color: u.Z.unsafe_rawColors.PRIMARY_500.css,
             shape: d
         });
@@ -152,12 +152,12 @@ t.Z = (e) => {
     return ((e) => {
         let { className: n, popoutProps: l } = e;
         return (0, i.jsxs)('div', {
-            className: a()(Z.streamQualityIndicator, n),
+            className: s()(Z.streamQualityIndicator, n),
             ...l,
             children: [
                 v((e, n) =>
                     n
-                        ? (0, i.jsx)(s.animated.div, {
+                        ? (0, i.jsx)(a.animated.div, {
                               style: e,
                               children: (0, i.jsx)(L, {
                                   className: Z.liveQualityIndicator,
@@ -172,7 +172,7 @@ t.Z = (e) => {
                           })
                         : null
                 ),
-                (0, i.jsx)(s.animated.div, {
+                (0, i.jsx)(a.animated.div, {
                     style: I,
                     className: Z.liveIndicator,
                     children: (0, i.jsx)(f.ZP, {

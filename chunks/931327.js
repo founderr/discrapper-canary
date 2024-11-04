@@ -43,7 +43,7 @@ r.r(t),
             return N.t;
         },
         browserProfilingIntegration: function () {
-            return U.x;
+            return P.x;
         },
         browserTracingIntegration: function () {
             return g.E8;
@@ -205,7 +205,7 @@ r.r(t),
             return R.O;
         },
         makeBrowserOfflineTransport: function () {
-            return P.O1;
+            return U.O1;
         },
         makeFetchTransport: function () {
             return o.f;
@@ -356,5 +356,5 @@ var n = r(148503),
     D = r(166800),
     C = r(799033),
     g = r(325124),
-    P = r(281894),
-    U = r(130260);
+    U = r(281894),
+    P = r(130260);

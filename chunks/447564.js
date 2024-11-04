@@ -11,8 +11,8 @@ n.r(t),
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(100527),
+    s = n(481060),
+    a = n(100527),
     o = n(906732),
     c = n(335131),
     u = n(120619),
@@ -28,8 +28,8 @@ var i = n(200651),
     _ = n(99713);
 function I(e) {
     let { transitionState: t, channel: n } = e;
-    return (0, i.jsx)(a.ModalRoot, {
-        size: a.ModalSize.DYNAMIC,
+    return (0, i.jsx)(s.ModalRoot, {
+        size: s.ModalSize.DYNAMIC,
         transitionState: t,
         children: (0, i.jsx)(b, { channel: n })
     });
@@ -39,7 +39,7 @@ function b(e) {
     let { channel: t } = e,
         n = p.ZP.getVoiceStatesForChannel(t).slice(0, 6),
         [I, b, S, Z, T, N] = (0, r.Wu)([u.Z], () => [u.Z.isFetchingPrice(C.FX), u.Z.isEntitlementFetched(C.FX), u.Z.isEntitlementFetching(C.FX), u.Z.getPrice(C.FX), u.Z.getErrored(C.FX), u.Z.getEntitlement(C.FX)]),
-        { analyticsLocations: j } = (0, o.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
+        { analyticsLocations: j } = (0, o.ZP)([a.Z.HD_STREAMING_POTION_MODAL]),
         A = null != N && !N.consumed && N.type === g.qc2.DEVELOPER_GIFT;
     l.useEffect(() => {
         null != N && !1 === N.consumed && N.type !== g.qc2.DEVELOPER_GIFT && (0, c.Zu)(t.id);
@@ -57,7 +57,7 @@ function b(e) {
             !b && !S && (0, c.gA)(C.FX);
         }, [b, S]);
     let y = () => {
-            (0, a.closeModal)(E);
+            (0, s.closeModal)(E);
         },
         P = n.map((e, t) => {
             let { user: l } = e;
@@ -66,7 +66,7 @@ function b(e) {
                 {
                     affinity: l,
                     applyMask: t !== n.length - 1,
-                    size: a.AvatarSizes.SIZE_20
+                    size: s.AvatarSizes.SIZE_20
                 },
                 l.id
             );
@@ -77,12 +77,12 @@ function b(e) {
               children: (0, i.jsxs)('div', {
                   className: v.error,
                   children: [
-                      (0, i.jsx)(a.Image, {
+                      (0, i.jsx)(s.Image, {
                           src: _,
                           width: 178,
                           height: 190
                       }),
-                      (0, i.jsx)(a.Text, {
+                      (0, i.jsx)(s.Text, {
                           variant: 'text-md/normal',
                           children: x.intl.string(x.t.sIA0OD)
                       })
@@ -94,7 +94,7 @@ function b(e) {
                 className: v.anomaly,
                 children: (0, i.jsx)('div', {
                     className: v.spinner,
-                    children: (0, i.jsx)(a.Spinner, {})
+                    children: (0, i.jsx)(s.Spinner, {})
                 })
             })
           : (0, i.jsxs)(i.Fragment, {
@@ -110,17 +110,17 @@ function b(e) {
                             (0, i.jsxs)('div', {
                                 className: v.body,
                                 children: [
-                                    (0, i.jsx)(a.Heading, {
+                                    (0, i.jsx)(s.Heading, {
                                         variant: 'heading-lg/bold',
                                         children: x.intl.string(x.t.K04rOD)
                                     }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         children: x.intl.string(x.t.xwRQWl)
                                     }),
                                     (0, i.jsx)(d.Z, {
                                         onClick: () => {},
-                                        children: (0, i.jsx)(a.Text, {
+                                        children: (0, i.jsx)(s.Text, {
                                             color: 'text-link',
                                             variant: 'text-xs/medium',
                                             children: x.intl.string(x.t.sxVfiY)
@@ -132,7 +132,7 @@ function b(e) {
                             (0, i.jsxs)('div', {
                                 className: v.applyingTo,
                                 children: [
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'eyebrow',
                                         children: x.intl.string(x.t.tZyXg4)
                                     }),
@@ -142,8 +142,8 @@ function b(e) {
                                             (0, i.jsxs)('div', {
                                                 className: v.channelLeft,
                                                 children: [
-                                                    (0, i.jsx)(a.VoiceNormalIcon, {}),
-                                                    (0, i.jsx)(a.Text, {
+                                                    (0, i.jsx)(s.VoiceNormalIcon, {}),
+                                                    (0, i.jsx)(s.Text, {
                                                         variant: 'text-md/normal',
                                                         children: t.name
                                                     })
@@ -162,14 +162,14 @@ function b(e) {
                     (0, i.jsxs)('div', {
                         className: v.footer,
                         children: [
-                            (0, i.jsx)(a.Button, {
-                                color: a.Button.Colors.PRIMARY,
+                            (0, i.jsx)(s.Button, {
+                                color: s.Button.Colors.PRIMARY,
                                 children: x.intl.string(x.t.Avt5KS)
                             }),
-                            (0, i.jsx)(a.Button, {
+                            (0, i.jsx)(s.Button, {
                                 onClick: () => {
                                     if (A) {
-                                        (0, c.Zu)(t.id), (0, a.closeModal)(E);
+                                        (0, c.Zu)(t.id), (0, s.closeModal)(E);
                                         return;
                                     }
                                     (0, h.Z)({

@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(410030),
     r = n(906732),
-    a = n(769654),
-    s = n(785717),
+    s = n(769654),
+    a = n(785717),
     o = n(697927),
     c = n(200634),
     u = n(483517),
@@ -22,7 +22,7 @@ var l = n(410030),
 function x(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, r.ZP)(),
-        { context: x } = (0, s.KZ)(),
+        { context: x } = (0, a.KZ)(),
         v = (0, l.ZP)(),
         { mutualFriends: _, isFetching: I } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: E, isFetching: b } = (0, c.Z)(t.id, !0),
@@ -47,7 +47,7 @@ function x(e) {
                                       guild: n,
                                       nick: l,
                                       theme: v,
-                                      onSelect: () => (0, a.X)(n.id)
+                                      onSelect: () => (0, s.X)(n.id)
                                   },
                                   n.id
                               );

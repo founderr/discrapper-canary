@@ -52,7 +52,7 @@ class r extends a.Component {
                 let { onClose: e } = this.props;
                 null == e || e(),
                     (0, i.openModalLazy)(async () => {
-                        let { default: e } = await n.e('1677').then(n.bind(n, 324239));
+                        let { default: e } = await n.e('60827').then(n.bind(n, 324239));
                         return (t) => (0, s.jsx)(e, { ...t });
                     });
             });

@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r,
-    a,
-    s = n(873546),
+    s,
+    a = n(873546),
     o = n(442837),
     c = n(570140),
     u = n(38618),
@@ -30,7 +30,7 @@ class _ extends (i = o.ZP.Store) {
     }
     shouldShow(e) {
         var t;
-        return !(!C || f || h.a || ((t = e), s.tq && ['writing-messages', 'organize-by-topic'].includes(t))) && (g[e] || !1);
+        return !(!C || f || h.a || ((t = e), a.tq && ['writing-messages', 'organize-by-topic'].includes(t))) && (g[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !f;
@@ -46,15 +46,15 @@ class _ extends (i = o.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-(a = 'TutorialIndicatorStore'),
+(s = 'TutorialIndicatorStore'),
     (r = 'displayName') in (l = _)
         ? Object.defineProperty(l, r, {
-              value: a,
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[r] = s),
     (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function (e) {
             let { tutorial: t } = e;

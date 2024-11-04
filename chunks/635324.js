@@ -2,18 +2,18 @@ n(47120);
 var i = n(200651),
     r = n(149765),
     s = n(481060),
-    o = n(570140),
+    l = n(570140),
     a = n(700785);
 __OVERLAY__ &&
-    o.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
+    l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', function (e) {
         let {
                 clientId: t,
-                authorizeProps: { authorizations: l, permissions: c, ...d }
+                authorizeProps: { authorizations: o, permissions: c, ...d }
             } = e,
             u = 'OAuth2Authorize_'.concat(t, '_').concat(d.guildId, '_').concat(d.channelId);
         function h(e) {
             let { location: n } = e;
-            o.Z.dispatch({
+            l.Z.dispatch({
                 type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE',
                 clientId: t,
                 location: n
@@ -30,7 +30,7 @@ __OVERLAY__ &&
                     (0, i.jsx)(e, {
                         ...t,
                         ...d,
-                        authorizations: new Map(l),
+                        authorizations: new Map(o),
                         permissions: p,
                         callback: h
                     });

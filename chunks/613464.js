@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(749210),
     u = n(110924),
@@ -29,8 +29,8 @@ var i = n(200651),
 function Z(e) {
     let { userId: t, guildId: n, onClose: r, className: Z, infoPanelClassName: T, style: N } = e,
         j = (0, I.ms)(n),
-        A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
-        y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
+        A = (0, a.e7)([_.default], () => _.default.getUser(t), [t]),
+        y = (0, a.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
         [P, M] = l.useState(null == A || null == y),
         R = (0, u.Z)(y),
         L = l.useRef(null),
@@ -72,7 +72,7 @@ function Z(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: a()(S.sidebarContainer, S.loadingContainer, Z),
+                  className: s()(S.sidebarContainer, S.loadingContainer, Z),
                   style: N,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function Z(e) {
             : (0, i.jsx)(p.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: a()(S.sidebarContainer, Z),
+                      className: s()(S.sidebarContainer, Z),
                       style: N,
                       children: (0, i.jsx)(x.Z, {
                           user: A,

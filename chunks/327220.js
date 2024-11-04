@@ -4,30 +4,30 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(192379),
-    l = n(442837),
-    a = n(592125),
-    r = n(9156);
+var r = n(192379),
+    a = n(442837),
+    l = n(592125),
+    i = n(9156);
 function o(e) {
-    let t = (0, l.e7)([a.Z], () => a.Z.getPrivateChannelsVersion()),
-        n = (0, l.e7)([a.Z], () => a.Z.getMutableDMsByUserIds(), [t]),
-        o = (0, l.e7)([r.ZP], () => r.ZP.getMutedChannels(null)),
-        s = i.useMemo(() => {
+    let t = (0, a.e7)([l.Z], () => l.Z.getPrivateChannelsVersion()),
+        n = (0, a.e7)([l.Z], () => l.Z.getMutableDMsByUserIds(), [t]),
+        o = (0, a.e7)([i.ZP], () => i.ZP.getMutedChannels(null)),
+        c = r.useMemo(() => {
             let e = new Set();
             for (let t in n) {
-                let i = n[t];
-                null != i && o.has(i) && e.add(t);
+                let r = n[t];
+                null != r && o.has(r) && e.add(t);
             }
             return e;
         }, [n, o]);
-    return i.useMemo(
+    return r.useMemo(
         () =>
             null == e
                 ? void 0
                 : e.filter((e) => {
-                      for (let t of e.participants) if (s.has(t)) return !1;
+                      for (let t of e.participants) if (c.has(t)) return !1;
                       return !0;
                   }),
-        [e, s]
+        [e, c]
     );
 }

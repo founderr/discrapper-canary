@@ -2,25 +2,25 @@ n(47120), n(653041);
 var i,
     r,
     s,
-    o,
-    a,
     l,
+    a,
+    o,
     c,
     d,
     u = n(512722),
     h = n.n(u),
     p = n(772848),
     f = n(442837),
-    g = n(570140),
-    m = n(13245),
+    m = n(570140),
+    g = n(13245),
     v = n(836932),
     _ = n(175553),
     E = n(158979),
-    Z = n(181912),
-    x = n(791288),
-    I = n(194295),
-    C = n(998033),
-    S = n(181364),
+    x = n(181912),
+    I = n(791288),
+    Z = n(194295),
+    S = n(998033),
+    C = n(181364),
     y = n(435064),
     N = n(668761),
     T = n(86071),
@@ -29,24 +29,24 @@ var i,
     R = n(314897),
     A = n(592125),
     P = n(292959),
-    w = n(158776),
-    j = n(944486),
-    M = n(885110),
-    L = n(246946),
+    j = n(158776),
+    L = n(944486),
+    w = n(885110),
+    M = n(246946),
     D = n(594174),
     k = n(974180),
     z = n(237997),
-    B = n(70956),
-    U = n(150097),
+    U = n(70956),
+    B = n(150097),
     V = n(129724),
     G = n(449224),
     W = n(981631),
     F = n(987650),
     H = n(388032);
-((o = i || (i = {}))[(o.GENERIC = 0)] = 'GENERIC'), (o[(o.TEXT = 1)] = 'TEXT'), (o[(o.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((a = r || (r = {}))[(a.NORMAL = 0)] = 'NORMAL'), (a[(a.HIGH = 1)] = 'HIGH'), (a[(a.URGENT = 2)] = 'URGENT');
-let Y = 5 * B.Z.Millis.SECOND,
-    K = 8 * B.Z.Millis.SECOND,
-    X = 30 * B.Z.Millis.SECOND,
+((l = i || (i = {}))[(l.GENERIC = 0)] = 'GENERIC'), (l[(l.TEXT = 1)] = 'TEXT'), (l[(l.INCOMING_CALL = 2)] = 'INCOMING_CALL'), ((a = r || (r = {}))[(a.NORMAL = 0)] = 'NORMAL'), (a[(a.HIGH = 1)] = 'HIGH'), (a[(a.URGENT = 2)] = 'URGENT');
+let Y = 5 * U.Z.Millis.SECOND,
+    K = 8 * U.Z.Millis.SECOND,
+    X = 30 * U.Z.Millis.SECOND,
     Q = Object.freeze({
         priority: 0,
         duration: Y,
@@ -56,7 +56,7 @@ let Y = 5 * B.Z.Millis.SECOND,
     q = [],
     J = (e, t, n) => {
         let i = t ? W._1z.TIMED_OUT : W._1z.DISMISSED;
-        return setTimeout(() => m.Z.updateNotificationStatus(e, i), null != n ? n : Y);
+        return setTimeout(() => g.Z.updateNotificationStatus(e, i), null != n ? n : Y);
     };
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : W._1z.DISMISSED;
@@ -104,10 +104,10 @@ function ei(e) {
     if (!n.includes(R.default.getId())) return $(i);
     if (null != i) return !1;
     let r = A.Z.getChannel(t);
-    if (null == r || !r.isPrivate() || M.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
+    if (null == r || !r.isPrivate() || w.Z.getStatus() === W.Skl.DND || O.QZ.getSetting()) return !1;
     let s = q.find((e) => 1 === e.type && e.channelId === t && e.messageType === W.uaV.CALL);
     null != s && $(s.id),
-        en((0, Z.Z)(r), {
+        en((0, x.Z)(r), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -123,16 +123,16 @@ class er extends (s = f.ZP.Store) {
     }
 }
 (d = 'OverlayNotificationsStore'),
-    (c = 'displayName') in (l = er)
-        ? Object.defineProperty(l, c, {
+    (c = 'displayName') in (o = er)
+        ? Object.defineProperty(o, c, {
               value: d,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[c] = d),
+        : (o[c] = d),
     (t.Z = new er(
-        g.Z,
+        m.Z,
         __OVERLAY__
             ? {
                   OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
@@ -150,7 +150,7 @@ class er extends (s = f.ZP.Store) {
                                       return (0, b.Z)(e);
                                   case F.nc.NEWS:
                                   default:
-                                      return (0, S.Z)(e);
+                                      return (0, C.Z)(e);
                               }
                           })(t);
                       null != n &&
@@ -175,11 +175,11 @@ class er extends (s = f.ZP.Store) {
                   MESSAGE_CREATE: function (e) {
                       var t, n, i;
                       let { channelId: r, message: s } = e,
-                          o = A.Z.getChannel(r),
+                          l = A.Z.getChannel(r),
                           a = D.default.getUser(null === (t = s.author) || void 0 === t ? void 0 : t.id);
-                      if (null == o || null == a) return !1;
+                      if (null == l || null == a) return !1;
                       if ((null === (n = s.activity) || void 0 === n ? void 0 : n.type) === W.mFx.JOIN || (null === (i = s.activity) || void 0 === i ? void 0 : i.type) === W.mFx.JOIN_REQUEST) {
-                          if (!(0, U.eF)(s, r, !0, !0)) return !1;
+                          if (!(0, B.eF)(s, r, !0, !0)) return !1;
                           let e = (function (e, t, n) {
                               let i, r;
                               if ((h()(null != t.activity, 'received null message activity'), n.id === R.default.getId())) return !1;
@@ -187,28 +187,28 @@ class er extends (s = f.ZP.Store) {
                               if (null == s) return !1;
                               switch (t.activity.type) {
                                   case W.mFx.JOIN:
-                                      if (null == (i = w.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      if (null == (i = j.Z.getApplicationActivity(n.id, s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                                       r = (0, v.Z)(e, t, n, s, i);
                                       break;
                                   case W.mFx.JOIN_REQUEST:
-                                      if (null == (i = M.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                                      r = (0, I.Z)(e, n, s, i);
+                                      if (null == (i = w.Z.getApplicationActivity(s.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                      r = (0, Z.Z)(e, n, s, i);
                               }
                               if (null == r) return !1;
-                              let o = en(r, {
+                              let l = en(r, {
                                   priority: 2,
                                   expirationExternallyManaged: !0,
                                   channelId: e.id
                               });
-                              return null != o && J(o, !1, X), !0;
-                          })(o, s, a);
+                              return null != l && J(l, !1, X), !0;
+                          })(l, s, a);
                           if (!1 !== e) return e;
                       }
-                      if (((!z.Z.isInstanceUILocked() || z.Z.isPinned(W.Odu.TEXT)) && r === j.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || L.Z.disableNotifications || !(0, U.eF)(s, r)) return !1;
-                      let l = !P.Z.isSoundDisabled(k.Ay);
-                      en((0, C.Z)(o, s, a, l), {
+                      if (((!z.Z.isInstanceUILocked() || z.Z.isPinned(W.Odu.TEXT)) && r === L.Z.getChannelId()) || z.Z.getTextChatNotificationMode() === W.Ypu.DISABLED || M.Z.disableNotifications || !(0, B.eF)(s, r)) return !1;
+                      let o = !P.Z.isSoundDisabled(k.Ay);
+                      en((0, S.Z)(l, s, a, o), {
                           type: 1,
-                          channelId: o.id,
+                          channelId: l.id,
                           messageType: s.type
                       });
                   },
@@ -258,11 +258,11 @@ class er extends (s = f.ZP.Store) {
                       if (null == n) return;
                       let { enabled: i } = T.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
                       i &&
-                          en((0, x.Z)(n, t), {
+                          en((0, I.Z)(n, t), {
                               priority: 2,
                               type: 0,
                               expirationExternallyManaged: !0,
-                              duration: 30 * B.Z.Millis.SECOND
+                              duration: 30 * U.Z.Millis.SECOND
                           });
                   }
               }

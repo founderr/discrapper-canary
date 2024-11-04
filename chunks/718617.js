@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(100621),
-    a = n(442837),
-    s = n(186325),
+    s = n(442837),
+    a = n(186325),
     o = n(481060),
     c = n(110924),
     u = n(714338),
@@ -31,12 +31,12 @@ function v(e, t) {
 function _(e) {
     var t, n;
     let { userId: _, guildId: I, onClose: E, analyticsLocation: b, className: S } = e,
-        Z = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+        Z = (0, s.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
         T = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
         N = (0, c.Z)(_);
     let j = null == (n = T) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
         A = (0, d.Z)(j),
-        { reducedMotion: y } = l.useContext(s.S),
+        { reducedMotion: y } = l.useContext(a.S),
         P = l.useCallback(
             (e) => {
                 null != Z && (0, m.r)(I, _, Z.baseChannelId, { modViewPanel: e });
@@ -75,7 +75,7 @@ function _(e) {
             overflow: 'hidden'
         },
         children: R((e, t, n) => {
-            var l, a, s;
+            var l, s, a;
             let { key: o } = n;
             return (0, i.jsx)(
                 r.animated.div,
@@ -90,8 +90,8 @@ function _(e) {
                         ...(y.enabled
                             ? { opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (a = e.value) || void 0 === a ? void 0 : a.to(v('left', A)),
-                                  right: null === (s = e.value) || void 0 === s ? void 0 : s.to(v('right', A))
+                                  left: null === (s = e.value) || void 0 === s ? void 0 : s.to(v('left', A)),
+                                  right: null === (a = e.value) || void 0 === a ? void 0 : a.to(v('right', A))
                               })
                     },
                     children: (function (e) {

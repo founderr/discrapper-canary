@@ -8,8 +8,8 @@ var a = n(192379),
     r = n(512722),
     o = n.n(r),
     i = n(478677),
-    s = n(457330),
-    l = n(275759),
+    l = n(457330),
+    s = n(275759),
     c = n(489863),
     u = n(497350);
 async function d(t, e, n) {
@@ -18,7 +18,7 @@ async function d(t, e, n) {
     if (null == p) throw (await f(n, 1, 'authorize'), Error('Unsupported client_id for two way link'));
     let h = null;
     try {
-        let { body: t } = await s.Z.authorize(p, {
+        let { body: t } = await l.Z.authorize(p, {
             twoWayLinkType: i.g.DEVICE_CODE,
             userCode: n
         });
@@ -29,13 +29,13 @@ async function d(t, e, n) {
     let x = null;
     try {
         o()(null != h, 'No URL in authorize response');
-        let { state: t } = (0, l.xp)(h);
+        let { state: t } = (0, s.xp)(h);
         o()(null != t, 'Authorize URL state query parameter must be present'), (x = t);
     } catch (t) {
         throw (await f(n, 2, 'authorize'), Error('error parsing callback params'));
     }
     try {
-        await s.Z.callback(p, {
+        await l.Z.callback(p, {
             code: e,
             state: x
         });

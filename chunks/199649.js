@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(442837),
     r = n(481060),
-    a = n(194359),
-    s = n(631937),
+    s = n(194359),
+    a = n(631937),
     o = n(702321),
     c = n(377171),
     u = n(699516),
@@ -21,7 +21,7 @@ var l = n(442837),
 function C(e) {
     let { channel: t, children: C } = e,
         x = (0, l.e7)([u.Z], () => u.Z.isBlocked(t.getRecipientId()));
-    (0, s.Z)(t.id);
+    (0, a.Z)(t.id);
     let v = (0, o.Z)(t.id),
         _ = t.isSystemDM(),
         I = x && !_ && !t.isMultiUserDM(),
@@ -58,7 +58,7 @@ function C(e) {
             ((E.message = g.intl.string(g.t['9T6N5+'])),
             (E.buttonText = g.intl.string(g.t.XyHpKC)),
             (E.onButtonClick = () => {
-                a.Z.unblockUser(t.getRecipientId());
+                s.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(m.Z, {
         ...E,

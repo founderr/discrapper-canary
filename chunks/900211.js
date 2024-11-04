@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return a;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(347469),
-    a = n(136824);
-function s(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: s, minHeight: o, maxHeight: c } = e,
+    s = n(136824);
+function a(e) {
+    let { resizableNode: t, onResize: n, onResizeEnd: a, minHeight: o, maxHeight: c } = e,
         [u, d] = l.useState(null);
     l.useEffect(() => {
         var e, n;
@@ -21,11 +21,11 @@ function s(e) {
         maxDimension: c,
         resizableDomNodeRef: t,
         onElementResize: n,
-        onElementResizeEnd: s,
+        onElementResizeEnd: a,
         orientation: r.y.VERTICAL_BOTTOM
     });
     return (0, i.jsx)('div', {
         onMouseDown: h,
-        className: a.resizeHandle
+        className: s.resizeHandle
     });
 }

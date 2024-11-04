@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(873546),
-    s = n(481060),
+    s = n(873546),
+    a = n(481060),
     o = n(470134),
     c = n(678064);
 function u(e) {
@@ -22,11 +22,11 @@ function u(e) {
             })
         });
     return (
-        !a.tq &&
+        !s.tq &&
             (p = (0, i.jsxs)(i.Fragment, {
                 children: [
                     u,
-                    (0, i.jsx)(s.AdvancedScroller, {
+                    (0, i.jsx)(a.AdvancedScroller, {
                         className: c.scroller,
                         orientation: 'horizontal',
                         ref: h,

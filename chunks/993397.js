@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(481060),
+    s = n.n(r),
+    a = n(481060),
     o = n(492593),
     c = n(534469),
     u = n(511010),
@@ -13,14 +13,14 @@ var i = n(200651),
     p = n(590008),
     f = n(916315);
 function g(e) {
-    let { expanded: t, onClick: n, count: l, compact: r, collapsedReason: a } = e;
+    let { expanded: t, onClick: n, count: l, compact: r, collapsedReason: s } = e;
     return (0, i.jsx)(o.Z, {
         compact: r,
         role: 'group',
         childrenMessageContent: (0, i.jsx)(d.Z, {
             compact: r,
             className: p.blockedSystemMessage,
-            iconNode: (0, i.jsx)(s.XSmallIcon, {
+            iconNode: (0, i.jsx)(a.XSmallIcon, {
                 size: 'md',
                 color: 'currentColor',
                 className: p.blockedIcon
@@ -28,10 +28,10 @@ function g(e) {
             children: (0, i.jsxs)('div', {
                 className: p.blockedMessageText,
                 children: [
-                    m.intl.format(a, { count: l }),
+                    m.intl.format(s, { count: l }),
                     ' \u2014',
                     ' ',
-                    (0, i.jsx)(s.Clickable, {
+                    (0, i.jsx)(a.Clickable, {
                         tag: 'span',
                         onClick: n,
                         className: p.blockedAction,
@@ -44,13 +44,13 @@ function g(e) {
 }
 t.Z = l.memo(function (e) {
     var t;
-    let { messages: n, channel: r, compact: s = !1, unreadId: o, collapsedReason: d } = e,
+    let { messages: n, channel: r, compact: a = !1, unreadId: o, collapsedReason: d } = e,
         { hasJumpTarget: m = !1 } = n,
         [C, x] = l.useState(m),
         v = l.useCallback(() => x((e) => !e), []),
         _ = n.hasUnread ? n.content.length - 1 : n.content.length;
     return (0, i.jsxs)('div', {
-        className: a()({
+        className: s()({
             [f.groupStart]: !0,
             [p.expanded]: C
         }),
@@ -69,7 +69,7 @@ t.Z = l.memo(function (e) {
                 g,
                 {
                     count: _,
-                    compact: s,
+                    compact: a,
                     expanded: C,
                     onClick: v,
                     collapsedReason: d
@@ -79,8 +79,8 @@ t.Z = l.memo(function (e) {
             C
                 ? n.content.map((e, t) => {
                       if (e.type === h.ys_.DIVIDER && t > 0) {
-                          var l, a;
-                          let e = null !== (a = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== a && a;
+                          var l, s;
+                          let e = null !== (s = null === (l = n.content[t + 1]) || void 0 === l ? void 0 : l.isGroupStart) && void 0 !== s && s;
                           return (0, i.jsx)(
                               u.Z,
                               {
@@ -97,7 +97,7 @@ t.Z = l.memo(function (e) {
                               t,
                               {
                                   className: p.__invalid_blocked,
-                                  compact: s,
+                                  compact: a,
                                   channel: r,
                                   message: e.content,
                                   groupId: e.groupId,

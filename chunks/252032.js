@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(904245),
-    s = n(257559),
+    s = n(904245),
+    a = n(257559),
     o = n(541716),
     c = n(893718),
     u = n(314897),
@@ -61,7 +61,7 @@ function E(e) {
                 let { content: l } = i,
                     r = m.Z.can(v.Plq.MANAGE_MESSAGES, t),
                     o = null != Z && null != Z.author ? Z.author.id : null;
-                return S && (o === j || r) && null != Z && (0, f.yE)(Z.flags, v.iLy.CROSSPOSTED) ? s.Z.confirmEdit(e, n, l) : a.Z.editMessage(e, n, { content: l }), Promise.resolve();
+                return S && (o === j || r) && null != Z && (0, f.yE)(Z.flags, v.iLy.CROSSPOSTED) ? a.Z.confirmEdit(e, n, l) : s.Z.editMessage(e, n, { content: l }), Promise.resolve();
             },
             [Z, S, j, t]
         ),
@@ -81,9 +81,9 @@ function E(e) {
               message: n,
               textValue: T,
               richValue: N,
-              onCancel: a.Z.endEditMessage,
-              onChange: a.Z.updateEditMessage,
-              onConfirmDelete: s.Z.confirmDelete,
+              onCancel: s.Z.endEditMessage,
+              onChange: s.Z.updateEditMessage,
+              onConfirmDelete: a.Z.confirmDelete,
               saveMessage: A,
               validateEdit: I,
               children: y
@@ -91,7 +91,7 @@ function E(e) {
         : null;
 }
 function b(e) {
-    let { textValue: t, richValue: n, message: r, channel: a, onChange: s, onSubmit: u, onKeyDown: d } = e,
+    let { textValue: t, richValue: n, message: r, channel: s, onChange: a, onSubmit: u, onKeyDown: d } = e,
         [h, m] = l.useState(!0),
         f = l.useCallback(() => m(!0), []),
         g = l.useCallback(() => m(!1), []);
@@ -112,9 +112,9 @@ function b(e) {
                 className: _.channelTextArea,
                 textValue: t,
                 richValue: n,
-                channel: a,
+                channel: s,
                 type: o.I.EDIT,
-                onChange: s,
+                onChange: a,
                 onSubmit: (e) => {
                     let { value: t } = e;
                     return u(t);

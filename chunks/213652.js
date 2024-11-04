@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(435064),
+    s = n(481060),
+    a = n(435064),
     o = n(39604),
     c = n(441167),
     u = n(871499),
@@ -23,16 +23,16 @@ function C(e) {
         C = (null == n ? void 0 : n.type) === p.fO.STREAM,
         x = (0, r.e7)([d.Z], () => (C ? d.Z.getActiveStreamForStreamKey(n.id) : null)),
         { ignoreSenderPreference: v } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
-        { viewerClippingAllowed: _, isAtMaxSavingClipOperations: I } = (0, r.cj)([s.Z], () => ({
-            viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
-            isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
+        { viewerClippingAllowed: _, isAtMaxSavingClipOperations: I } = (0, r.cj)([a.Z], () => ({
+            viewerClippingAllowed: null != x && (a.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
+            isAtMaxSavingClipOperations: a.Z.getIsAtMaxSaveClipOperations()
         })),
-        E = s.Z.getSettings().clipsEnabled,
+        E = a.Z.getSettings().clipsEnabled,
         b = (null == x ? void 0 : x.ownerId) === h.default.getId(),
         S = !E || !(b || _) || I || null == n,
         Z = l.useCallback(
             (e) =>
-                (0, i.jsx)(a.CameraIcon, {
+                (0, i.jsx)(s.CameraIcon, {
                     ...e,
                     color: 'currentColor'
                 }),

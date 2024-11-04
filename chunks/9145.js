@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(993365),
     c = n(481060),
     u = n(153867),
@@ -46,15 +46,15 @@ function D(e) {
     var t, n;
     let { maxHeight: r, connectedChannelId: D, renderExternalHeader: U } = e,
         B = (0, N.Z)(),
-        H = (0, s.Wu)([S.ZP], () => (null != D ? S.ZP.getEmbeddedActivitiesForChannel(D) : []), [D]),
-        F = (0, s.e7)([C.Z], () => C.Z.getChannel(D)),
+        H = (0, a.Wu)([S.ZP], () => (null != D ? S.ZP.getEmbeddedActivitiesForChannel(D) : []), [D]),
+        F = (0, a.e7)([C.Z], () => C.Z.getChannel(D)),
         G = (0, Z.gb)(H),
         V = (0, Z.uF)(G),
         z = l.useCallback(() => {
             (0, b.tg)(M.Ez.PIP);
         }, []),
         W = l.useRef(null),
-        Y = (0, s.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
+        Y = (0, a.e7)([S.ZP], () => S.ZP.getFocusedLayout()),
         K = Y !== M.MI.NO_CHAT,
         [q, X] = l.useState(null !== (t = p.ZP.activityPanelHeight) && void 0 !== t ? t : r),
         J = l.useCallback((e) => {
@@ -86,8 +86,8 @@ function D(e) {
         et ? ((t = $.width / M.I0) > $.height && (e = (t = $.height) * M.I0), (ei = ($.height - t) / 2)) : ((e = Math.min($.height * M.I0)) > $.width && (t = (e = $.width) / M.I0), (en = ($.width - e) / 2));
     }
     let er = V.get(null !== (n = null == B ? void 0 : B.id) && void 0 !== n ? n : ''),
-        ea = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
-        es = (0, s.Wu)(
+        es = (0, a.e7)([v.Z], () => v.Z.getChannelId()),
+        ea = (0, a.Wu)(
             [x.ZP],
             () => {
                 var e;
@@ -98,22 +98,22 @@ function D(e) {
         eo = l.useMemo(() => {
             let e = new Map();
             return (
-                es.forEach((t) => {
+                ea.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [es]),
+        }, [ea]),
         ec = (function (e, t, n) {
             let i = (0, d.Z)(e),
                 r = e !== i,
-                [a, s] = l.useState(!1);
+                [s, a] = l.useState(!1);
             l.useEffect(() => {
-                s(!0);
-                let e = setTimeout(() => s(!1), 50);
+                a(!0);
+                let e = setTimeout(() => a(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !h.Z.useReducedMotion && (r || a);
+            let o = !h.Z.useReducedMotion && (r || s);
             return l.useMemo(() => {
                 let i = o
                     ? {
@@ -165,7 +165,7 @@ function D(e) {
         theme: R.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: a()(k.wrapper, w[Y], e),
+                className: s()(k.wrapper, w[Y], e),
                 ref: W,
                 style: ec,
                 children: [
@@ -185,7 +185,7 @@ function D(e) {
                                       })
                                   }),
                             (0, i.jsx)('div', {
-                                className: a()(k.activityContainer, { [k.activityContainerNoMargin]: el }),
+                                className: s()(k.activityContainer, { [k.activityContainerNoMargin]: el }),
                                 style: {
                                     paddingLeft: en,
                                     paddingRight: en,
@@ -198,7 +198,7 @@ function D(e) {
                                     embedId: (0, y.Z)(D, B.id)
                                 })
                             }),
-                            null != ea
+                            null != es
                                 ? (0, i.jsxs)('div', {
                                       className: k.footer,
                                       children: [
@@ -214,7 +214,7 @@ function D(e) {
                                               className: k.footerButtons,
                                               children: [
                                                   (0, i.jsx)(P.Z, {
-                                                      channelId: ea,
+                                                      channelId: es,
                                                       className: k.circularButton
                                                   }),
                                                   (0, i.jsx)('div', {

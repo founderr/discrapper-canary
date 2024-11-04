@@ -28,8 +28,8 @@ var o,
     b = n(720293),
     N = n(623249),
     S = n(78826),
-    B = n(670638),
-    T = n(341907),
+    T = n(670638),
+    B = n(341907),
     A = n(642145),
     y = n(981631),
     R = n(388032),
@@ -146,8 +146,8 @@ function q(e) {
         Q = (0, _.Mi)(r, j.jn.GIFT_INVENTORY_FOR_YOU),
         Z = (0, v.tP)(r),
         D = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        U = a.useRef(i),
-        H = a.useRef(null),
+        H = a.useRef(i),
+        U = a.useRef(null),
         V = (0, v.B6)(r.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
@@ -160,16 +160,16 @@ function q(e) {
                     questContent: j.jn.QUEST_HOME_DESKTOP,
                     questContentCTA: h.jZ.ACCEPT_QUEST
                 }),
-                    (0, T.openVideoQuestModal)(r);
+                    (0, B.openVideoQuestModal)(r);
         }, [q, r]);
     a.useEffect(() => {
-        if (P.isAnimated && null != H.current)
+        if (P.isAnimated && null != U.current)
             return (
-                U.current !== i && (i && !L ? H.current.play() : (H.current.pause(), (H.current.currentTime = 0))),
-                (U.current = i),
+                H.current !== i && (i && !L ? U.current.play() : (U.current.pause(), (U.current.currentTime = 0))),
+                (H.current = i),
                 () => {
                     var e;
-                    null === (e = H.current) || void 0 === e || e.pause();
+                    null === (e = U.current) || void 0 === e || e.pause();
                 }
             );
     }, [i, P, L]);
@@ -186,7 +186,7 @@ function q(e) {
                               children: (e) => {
                                   var t;
                                   return (
-                                      null != e.current && (H.current = e.current),
+                                      null != e.current && (U.current = e.current),
                                       (0, s.jsx)(f.Z, {
                                           ref: e,
                                           autoPlay: !L && i,
@@ -262,7 +262,7 @@ function q(e) {
                                                     children: (0, s.jsx)(p.PlayIcon, { className: w.utilButtonIcon })
                                                 })
                                         }),
-                                    (0, s.jsx)(B.r, {
+                                    (0, s.jsx)(T.r, {
                                         onOpen: N,
                                         onClose: g,
                                         onSelect: A,

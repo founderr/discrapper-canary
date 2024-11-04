@@ -12,8 +12,8 @@ if (
     var i = n(155281);
 var l = n(222146),
     r = n(749210),
-    a = n(430824),
-    s = n(496675),
+    s = n(430824),
+    a = n(496675),
     o = n(979651),
     c = n(938475),
     u = n(981631);
@@ -26,10 +26,10 @@ function h(e) {
                 var t, n;
                 let { channel: i } = e,
                     l = i.getGuildId(),
-                    r = null !== (n = null === (t = a.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
+                    r = null !== (n = null === (t = s.Z.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1,
                     d = c.ZP.countVoiceStatesForChannel(i.id),
                     h = null != l && o.Z.hasVideo(i.id) && r > 0 && d >= r + 1;
-                return s.Z.can(u.Plq.MOVE_MEMBERS, i) && s.Z.can(u.Plq.CONNECT, i) && !h;
+                return a.Z.can(u.Plq.MOVE_MEMBERS, i) && a.Z.can(u.Plq.CONNECT, i) && !h;
             },
             drop(e, t) {
                 let { channel: n } = e,

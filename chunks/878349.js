@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(780384),
     c = n(481060),
     u = n(393238),
@@ -20,7 +20,7 @@ var i = n(200651),
     g = n(952009);
 function C(e) {
     let { checked: t, labelText: n, tooltipText: r, canToggle: C, iconAltText: x, onChange: v, tooltipColor: _, className: I, id: E = 'fancybutton-toggle', collapseWhenChecked: b = !0, onClick: S, disabled: Z } = e,
-        T = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
+        T = (0, a.e7)([h.Z], () => h.Z.useReducedMotion),
         [N, j] = l.useState(!1),
         A = (0, d.ZP)(),
         y = (0, o.wj)(A) || t ? g : f,
@@ -53,7 +53,7 @@ function C(e) {
             }),
             (0, i.jsxs)('label', {
                 htmlFor: E,
-                className: a()(p.label, I, {
+                className: s()(p.label, I, {
                     [p.transition]: N,
                     [p.labelChecked]: t,
                     [p.labelUnchecked]: !t && !C
@@ -74,7 +74,7 @@ function C(e) {
                     (0, i.jsx)('span', {
                         ref: L,
                         children: (0, i.jsx)(c.Text, {
-                            className: a()(p.burstText, {
+                            className: s()(p.burstText, {
                                 [p.visuallyHidden]: t && b,
                                 [p.burstTextChecked]: t
                             }),

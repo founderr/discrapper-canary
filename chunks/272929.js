@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var l = n(100621),
     r = n(481060),
-    a = n(871499),
-    s = n(388032),
+    s = n(871499),
+    a = n(388032),
     o = n(305705);
 let c = (0, l.animated)((e) => {
     let { percentComplete: t } = e,
@@ -43,8 +43,8 @@ function u(e) {
             },
             'animate-always'
         ),
-        v = C ? s.intl.formatToPlainString(s.t.D8Drx8, { seconds: n }) : void 0,
-        _ = f ? a.d : a.Z;
+        v = C ? a.intl.formatToPlainString(a.t.D8Drx8, { seconds: n }) : void 0,
+        _ = f ? s.d : s.Z;
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [

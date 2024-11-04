@@ -9,8 +9,8 @@ n.d(t, {
 var i,
     l = n(200651),
     r = n(192379),
-    a = n(120356),
-    s = n.n(a),
+    s = n(120356),
+    a = n.n(s),
     o = n(481060),
     c = n(434650),
     u = n(657305),
@@ -45,7 +45,7 @@ function T(e, t, n) {
 let N = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, l.jsx)('div', {
-            className: s()(i, Z.list, n ? Z.listCollapse : Z.listDefault),
+            className: a()(i, Z.list, n ? Z.listCollapse : Z.listDefault),
             role: 'group',
             children: t
         });
@@ -58,7 +58,7 @@ let N = (e) => {
                   {
                       className: Z.iconSpacing,
                       text: S.intl.string(S.t.qstQub),
-                      children: (0, l.jsx)(o.PlusLargeIcon, { className: s()(Z.icon, n) })
+                      children: (0, l.jsx)(o.PlusLargeIcon, { className: a()(Z.icon, n) })
                   },
                   'add-status'
               )
@@ -69,7 +69,7 @@ let N = (e) => {
                       text: (0, f.O8)(t),
                       children: (0, l.jsx)(g.Z, {
                           hangStatusActivity: t,
-                          className: s()(Z.hangStatusIcon, n)
+                          className: a()(Z.hangStatusIcon, n)
                       })
                   },
                   'hang-status'
@@ -83,7 +83,7 @@ class A extends (i = r.Component) {
                   text: S.intl.string(S.t.BVK71t),
                   children: (t) =>
                       (0, l.jsx)('div', {
-                          className: s()(Z.iconPriortySpeaker, { [Z.iconPriortySpeakerSpeaking]: !i && !r && e }),
+                          className: a()(Z.iconPriortySpeaker, { [Z.iconPriortySpeakerSpeaking]: !i && !r && e }),
                           ...t
                       })
               })
@@ -92,7 +92,7 @@ class A extends (i = r.Component) {
     renderAvatar() {
         let { speaking: e, user: t, size: n, avatarContainerClass: i, guildId: r } = this.props;
         return (0, l.jsx)('div', {
-            className: s()(i, Z.avatar, {
+            className: a()(i, Z.avatar, {
                 [Z.avatarLarge]: n === I.ipw.LARGE,
                 [Z.avatarSmall]: n === I.ipw.SMALL,
                 [Z.avatarSpeaking]: e
@@ -101,11 +101,11 @@ class A extends (i = r.Component) {
         });
     }
     renderName() {
-        let { nick: e, user: t, collapsed: n, speaking: i, userNameClassName: r, mute: a, serverMute: o, isGuest: c, isOverlay: u, guildId: d } = this.props,
+        let { nick: e, user: t, collapsed: n, speaking: i, userNameClassName: r, mute: s, serverMute: o, isGuest: c, isOverlay: u, guildId: d } = this.props,
             h = (0, l.jsxs)('div', {
-                className: s()(r, {
+                className: a()(r, {
                     [Z.username]: !0,
-                    [Z.usernameSpeaking]: !a && !o && i
+                    [Z.usernameSpeaking]: !s && !o && i
                 }),
                 children: [
                     null != e ? e : _.ZP.getName(t),
@@ -123,7 +123,7 @@ class A extends (i = r.Component) {
                 contextGuildId: d,
                 isOverlay: u,
                 disableTooltip: !0,
-                className: s()(Z.clanTag, u && Z.isOverlay),
+                className: a()(Z.clanTag, u && Z.isOverlay),
                 profileViewedAnalytics: {
                     source: u ? I.jXE.OVERLAY : I.Sbl.VOICE_PANEL,
                     tagUserId: t.id
@@ -139,7 +139,7 @@ class A extends (i = r.Component) {
             : null;
     }
     renderIcons() {
-        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: r, serverDeaf: a, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: f, iconClassName: g, embeddedApplication: _, otherClientSessionType: T, voicePlatform: N, hangStatusActivity: A, showHangStatus: M, isSelf: R, application: L, guildId: k, channelId: O, user: w, handleHoverHangStatus: D, handleHoverIcons: U, disconnected: B } = this.props;
+        let { mute: e, localMute: t, localVideoDisabled: n, serverMute: i, deaf: r, serverDeaf: s, collapsed: c, video: d, isStreaming: m, disabled: p, isWatching: f, iconClassName: g, embeddedApplication: _, otherClientSessionType: T, voicePlatform: N, hangStatusActivity: A, showHangStatus: M, isSelf: R, application: L, guildId: k, channelId: O, user: w, handleHoverHangStatus: D, handleHoverIcons: U, disconnected: B } = this.props;
         if (c || p) return null;
         let H = [],
             F = (0, l.jsx)(P, {
@@ -148,7 +148,7 @@ class A extends (i = r.Component) {
                 localMute: t,
                 serverMute: i,
                 deaf: r,
-                serverDeaf: a
+                serverDeaf: s
             });
         d &&
             (n
@@ -161,7 +161,7 @@ class A extends (i = r.Component) {
                               children: (0, l.jsx)(o.VideoSlashIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: s()(Z.icon, g),
+                                  className: a()(Z.icon, g),
                                   colorClass: Z.strikethrough
                               })
                           },
@@ -177,7 +177,7 @@ class A extends (i = r.Component) {
                               children: (0, l.jsx)(o.VideoIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: s()(Z.icon, g)
+                                  className: a()(Z.icon, g)
                               })
                           },
                           'video'
@@ -191,7 +191,7 @@ class A extends (i = r.Component) {
                             className: Z.iconSpacing,
                             text: S.intl.string(S.t.HFwRpq),
                             children: (0, l.jsx)(o.CircleWarningIcon, {
-                                className: s()(Z.icon, g),
+                                className: a()(Z.icon, g),
                                 color: o.tokens.colors.STATUS_WARNING_BACKGROUND
                             })
                         },
@@ -208,7 +208,7 @@ class A extends (i = r.Component) {
                             children: (0, l.jsx)(o.ActivitiesIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: s()(Z.icon, g)
+                                className: a()(Z.icon, g)
                             })
                         },
                         'activity'
@@ -219,8 +219,8 @@ class A extends (i = r.Component) {
                       (0, l.jsx)(
                           'div',
                           {
-                              className: s()(Z.iconSpacing),
-                              children: (0, l.jsx)(x.Z, { className: s()(Z.icon, g) })
+                              className: a()(Z.iconSpacing),
+                              children: (0, l.jsx)(x.Z, { className: a()(Z.icon, g) })
                           },
                           'xbox'
                       )
@@ -230,8 +230,8 @@ class A extends (i = r.Component) {
                       (0, l.jsx)(
                           'div',
                           {
-                              className: s()(Z.iconSpacing),
-                              children: (0, l.jsx)(C.Z, { className: s()(Z.icon, g) })
+                              className: a()(Z.iconSpacing),
+                              children: (0, l.jsx)(C.Z, { className: a()(Z.icon, g) })
                           },
                           'playstation'
                       )
@@ -241,7 +241,7 @@ class A extends (i = r.Component) {
                       (0, l.jsx)(
                           'div',
                           {
-                              className: s()(Z.iconSpacing, Z.liveIconSpacing),
+                              className: a()(Z.iconSpacing, Z.liveIconSpacing),
                               children: (0, l.jsx)(h.ZP, { size: h.ZP.Sizes.SMALL })
                           },
                           'stream'
@@ -257,7 +257,7 @@ class A extends (i = r.Component) {
                               children: (0, l.jsx)(o.EyeIcon, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: s()(Z.icon, g)
+                                  className: a()(Z.icon, g)
                               })
                           },
                           'watch'
@@ -304,16 +304,16 @@ class A extends (i = r.Component) {
             : null;
     }
     render() {
-        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: r, selected: a, disabled: c, overlap: u, 'aria-label': d, tabIndex: h } = this.props;
+        let { onClick: e, onKeyDown: t, flipped: n, size: i, className: r, selected: s, disabled: c, overlap: u, 'aria-label': d, tabIndex: h } = this.props;
         return (0, l.jsx)(o.Clickable, {
-            className: s()(r, {
+            className: a()(r, {
                 [Z.voiceUser]: !0,
                 [Z.overlap]: u,
-                [Z.selected]: a,
+                [Z.selected]: s,
                 [Z.clickable]: null != e,
                 [Z.userSmall]: i === I.ipw.SMALL,
                 [Z.userLarge]: i === I.ipw.LARGE,
-                [Z.disabled]: !a && c
+                [Z.disabled]: !s && c
             }),
             onClick: this.handleClick,
             onDoubleClick: this.handleDoubleClick,
@@ -325,7 +325,7 @@ class A extends (i = r.Component) {
             'aria-label': d,
             tabIndex: h,
             children: (0, l.jsxs)('div', {
-                className: s()(Z.content, { [Z.flipped]: n }),
+                className: a()(Z.content, { [Z.flipped]: n }),
                 children: [this.renderPrioritySpeaker(), this.renderAvatar(), this.renderName(), this.renderIcons()]
             })
         });
@@ -359,18 +359,18 @@ class A extends (i = r.Component) {
     }
 }
 function y(e) {
-    let { application: t, iconClassName: n, guildId: i, channelId: a, userId: u } = e,
+    let { application: t, iconClassName: n, guildId: i, channelId: s, userId: u } = e,
         [h, m] = r.useState(!1),
         f = (0, c.O)((e) => m(e));
     return (
         r.useEffect(() => {
             h &&
                 d.ZP.trackWithMetadata(I.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED, {
-                    channel_id: a,
+                    channel_id: s,
                     guild_id: i,
                     user_id: u
                 });
-        }, [t.id, a, i, u, h]),
+        }, [t.id, s, i, u, h]),
         (0, l.jsx)(o.TooltipContainer, {
             text: S.intl.formatToPlainString(S.t.Sq9xJy, { game: t.name }),
             'aria-label': S.intl.formatToPlainString(S.t.Sq9xJy, { game: t.name }),
@@ -378,12 +378,12 @@ function y(e) {
             children: (0, l.jsx)('div', {
                 ref: f,
                 children: (0, l.jsx)(p.Z, {
-                    className: s()(Z.icon, n),
+                    className: a()(Z.icon, n),
                     game: t,
                     size: p.Z.Sizes.XSMALL,
                     onMouseEnter: () => {
                         d.ZP.trackWithMetadata(I.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_HOVERED, {
-                            channel_id: a,
+                            channel_id: s,
                             guild_id: i,
                             game_name: t.name,
                             user_id: u
@@ -395,7 +395,7 @@ function y(e) {
     );
 }
 function P(e) {
-    let { iconClassName: t, mute: n, localMute: i, serverMute: r, deaf: a, serverDeaf: c } = e,
+    let { iconClassName: t, mute: n, localMute: i, serverMute: r, deaf: s, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];
     if (n) {
@@ -404,14 +404,14 @@ function P(e) {
             let n;
             (n = r ? o.MicrophoneDenyIcon : i ? o.MicrophoneDenyIcon : o.MicrophoneSlashIcon),
                 (e = (0, l.jsx)(n, {
-                    className: s()(Z.icon, t, { [Z.iconServer]: r }),
+                    className: a()(Z.icon, t, { [Z.iconServer]: r }),
                     color: 'currentColor'
                 }));
         } else
             e = (0, l.jsx)(o.MicrophoneSlashIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(Z.icon, t, { [Z.iconServer]: r }),
+                className: a()(Z.icon, t, { [Z.iconServer]: r }),
                 colorClass: i ? Z.strikethrough : void 0
             });
         d.push(
@@ -426,19 +426,19 @@ function P(e) {
             )
         );
     }
-    if (c || a) {
+    if (c || s) {
         let e;
         if (u) {
             let n = c ? o.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
             e = (0, l.jsx)(n, {
-                className: s()(Z.icon, t, { [Z.iconServer]: c }),
+                className: a()(Z.icon, t, { [Z.iconServer]: c }),
                 color: 'currentColor'
             });
         } else
             e = (0, l.jsx)(o.HeadphonesSlashIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: s()(Z.icon, t, { [Z.iconServer]: c })
+                className: a()(Z.icon, t, { [Z.iconServer]: c })
             });
         d.push(
             (0, l.jsx)(

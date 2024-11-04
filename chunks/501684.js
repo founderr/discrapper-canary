@@ -37,13 +37,13 @@ function f(e, t = !1) {
     return G('cls', e, C, n, t);
 }
 function L(e, t = !1) {
-    return G('lcp', e, P, _, t);
+    return G('lcp', e, U, _, t);
 }
 function O(e) {
     return G('fid', e, g, a);
 }
 function p(e) {
-    return G('ttfb', e, U, o);
+    return G('ttfb', e, P, o);
 }
 function h(e) {
     return G('inp', e, M, i);
@@ -97,7 +97,7 @@ function g() {
         D('fid', { metric: e }), (a = e);
     });
 }
-function P() {
+function U() {
     return (0, R.N)(
         (e) => {
             D('lcp', { metric: e }), (_ = e);
@@ -105,7 +105,7 @@ function P() {
         { reportAllChanges: !0 }
     );
 }
-function U() {
+function P() {
     return (0, A.m)((e) => {
         D('ttfb', { metric: e }), (o = e);
     });

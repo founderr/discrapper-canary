@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(442837),
-    a = n(481060),
-    s = n(665149),
+    s = n(481060),
+    a = n(665149),
     o = n(731290),
     c = n(594174),
     u = n(91159),
@@ -32,15 +32,15 @@ function p(e) {
         C = l.useCallback(() => {
             !n && (0, u.U4)('Popout'), p(!n);
         }, [n]);
-    return (0, i.jsx)(a.Popout, {
-        animation: a.Popout.Animation.NONE,
+    return (0, i.jsx)(s.Popout, {
+        animation: s.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
         onRequestClose: g,
         renderPopout: function () {
-            return (0, i.jsx)(a.Dialog, {
+            return (0, i.jsx)(s.Dialog, {
                 children: (0, i.jsx)(d.Z, {
                     className: m.browser,
                     channel: t,
@@ -50,11 +50,11 @@ function p(e) {
         },
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(s.JO, {
+            return (0, i.jsx)(a.JO, {
                 ...e,
                 className: m.icon,
                 onClick: C,
-                icon: a.ThreadIcon,
+                icon: s.ThreadIcon,
                 'aria-label': h.intl.string(h.t.B2panJ),
                 tooltip: n ? null : h.intl.string(h.t.B2panJ),
                 disabled: f,

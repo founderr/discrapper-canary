@@ -2,8 +2,8 @@ n(47120);
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(442837),
+    s = n(192379),
+    a = n(442837),
     o = n(112724),
     c = n(358221),
     u = n(565799),
@@ -41,7 +41,7 @@ t.Z = (0, o.Z)((e) => {
             selectedParticipantId: I,
             largeStream: E,
             chatOpen: b
-        } = (0, s.cj)(
+        } = (0, a.cj)(
             [c.Z],
             () => ({
                 selectedParticipantId: c.Z.getSelectedParticipantId(i.id),
@@ -52,7 +52,7 @@ t.Z = (0, o.Z)((e) => {
         ),
         j = (0, d.Io)(i.id),
         A = (0, d.Rk)(i.id, h.pV.AUDIENCE),
-        y = (0, s.e7)([u.Z], () => (null != I ? u.Z.getParticipant(i.id, I) : null)),
+        y = (0, a.e7)([u.Z], () => (null != I ? u.Z.getParticipant(i.id, I) : null)),
         P = (0, d.w8)(i.id, h.pV.SPEAKER),
         M = P.filter(N),
         R = null != P.find((e) => e.type === h.Ui.STREAM),
@@ -69,8 +69,8 @@ t.Z = (0, o.Z)((e) => {
         { speakerTileWidth: H, speakerTileHeight: F } = S(l, k),
         G = E ? l - 32 : Math.min(l - 64, 3 * H + 8),
         V = (e) => e === D.length - 1 || (0 === A && 1 === e),
-        [z, W] = a.useState(!1),
-        [Y, K] = a.useState(!1);
+        [z, W] = s.useState(!1),
+        [Y, K] = s.useState(!1);
     return (0, r.jsx)(f.Z, {
         sections: B,
         renderSection: (e) => {
@@ -132,7 +132,7 @@ t.Z = (0, o.Z)((e) => {
                 case 1:
                     if (z) return null;
                     return (0, r.jsx)(
-                        a.Fragment,
+                        s.Fragment,
                         {
                             children: (0, r.jsx)(g.Z, {
                                 tileWidth: H,

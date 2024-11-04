@@ -13,27 +13,27 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     r = n.n(l),
-    a = n(481060),
-    s = n(534091),
+    s = n(481060),
+    a = n(534091),
     o = n(981631),
     c = n(83700);
 function u(e) {
     let { locked: t = !1, channelType: n } = e,
-        l = (0, a.useRedesignIconContext)().enabled,
-        s = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
+        l = (0, s.useRedesignIconContext)().enabled,
+        a = n === o.d4z.GUILD_VOICE || n === o.d4z.GUILD_STAGE_VOICE;
     if (!l)
         return (0, i.jsx)('div', {
             className: r()(c.emptyChannelIcon, c.emptyChannelIconSvg, {
                 [c.locked]: t,
-                [c.voiceChat]: s
+                [c.voiceChat]: a
             })
         });
     {
-        let e = s ? a.ChatIcon : t ? a.TextLockIcon : a.TextIcon;
+        let e = a ? s.ChatIcon : t ? s.TextLockIcon : s.TextIcon;
         return (0, i.jsx)('div', {
             className: r()(c.emptyChannelIcon, c.emptyChannelIconComponent),
             children: (0, i.jsx)(e, {
-                color: a.tokens.colors.WHITE,
+                color: s.tokens.colors.WHITE,
                 size: 'custom',
                 width: 42,
                 height: 42
@@ -43,7 +43,7 @@ function u(e) {
 }
 function d(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(a.Heading, {
+    return (0, i.jsx)(s.Heading, {
         'aria-hidden': 'true',
         className: r()(n, c.header),
         variant: 'heading-xxl/extrabold',
@@ -52,7 +52,7 @@ function d(e) {
 }
 function h(e) {
     let { children: t } = e;
-    return (0, i.jsx)(a.Text, {
+    return (0, i.jsx)(s.Text, {
         variant: 'text-md/normal',
         color: 'none',
         className: c.description,
@@ -60,11 +60,11 @@ function h(e) {
     });
 }
 t.ZP = function (e) {
-    let { className: t, channelId: n, children: l, ...a } = e;
+    let { className: t, channelId: n, children: l, ...s } = e;
     return (0, i.jsx)('div', {
         className: r()(t, c.container),
-        id: (0, s.p)(n, n),
-        ...a,
+        id: (0, a.p)(n, n),
+        ...s,
         children: l
     });
 };

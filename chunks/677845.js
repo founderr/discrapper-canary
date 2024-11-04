@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(990547),
-    a = n(731965),
-    s = n(442837),
+    s = n(731965),
+    a = n(442837),
     o = n(704215),
     c = n(40851),
     u = n(317381),
@@ -30,26 +30,26 @@ var i = n(200651),
 function T(e) {
     let { participants: t, onClick: n, onDoubleClick: T, onContextMenu: N, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
         R = (0, c.bp)() === S.IlC.POPOUT,
-        L = (0, s.e7)([x.Z], () => x.Z.getGuild(j.guild_id), [j.guild_id]),
+        L = (0, a.e7)([x.Z], () => x.Z.getGuild(j.guild_id), [j.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, E.d)(),
-        O = (0, s.e7)([m.Z], () => m.Z.getUserParticipantCount(j.id), [j]),
+        O = (0, a.e7)([m.Z], () => m.Z.getUserParticipantCount(j.id), [j]),
         w = (0, C.bt)(j.id, t),
         D = l.useCallback(() => {
-            (0, a.j)(() => {
+            (0, s.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: j.id });
             });
         }, [j.id]);
     l.useEffect(() => {
         null != k &&
             j.id !== k &&
-            (0, a.j)(() => {
+            (0, s.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [j.id, k]);
-    let U = (0, s.e7)([v.Z], () => j.isPrivate() || (0, f.b)(v.Z, L, j), [L, j]),
+    let U = (0, a.e7)([v.Z], () => j.isPrivate() || (0, f.b)(v.Z, L, j), [L, j]),
         B = (null == L ? void 0 : L.afkChannelId) === j.id,
         H = j.userLimit <= 0 || j.userLimit > 1,
-        F = (0, s.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(j.id).length <= 0),
+        F = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(j.id).length <= 0),
         G = (0, p.N)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         V = (0, d.KF)(j.id) !== d.jy.CAN_LAUNCH,
         z = null != k && k === j.id,

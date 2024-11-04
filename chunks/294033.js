@@ -1,26 +1,26 @@
 var i = n(200651),
     r = n(192379),
     s = n(120356),
-    o = n.n(s),
+    l = n.n(s),
     a = n(846337);
-let l = (e) => {
+let o = (e) => {
     let { keybind: t, separator: n, className: s } = e;
     return (0, i.jsx)(i.Fragment, {
-        children: t.map((e, l) =>
+        children: t.map((e, o) =>
             (0, i.jsxs)(
                 r.Fragment,
                 {
                     children: [
                         (0, i.jsx)('span', {
-                            className: o()(a.key, s),
+                            className: l()(a.key, s),
                             children: e
                         }),
-                        l === t.length - 1 ? void 0 : n
+                        o === t.length - 1 ? void 0 : n
                     ]
                 },
-                l
+                o
             )
         )
     });
 };
-(l.defaultProps = { separator: '+' }), (t.Z = l);
+(o.defaultProps = { separator: '+' }), (t.Z = o);

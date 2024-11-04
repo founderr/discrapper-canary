@@ -1,74 +1,74 @@
-t.r(n),
-    t.d(n, {
+o.r(n),
+    o.d(n, {
         default: function () {
             return m;
         }
     });
-var a = t(200651);
-t(192379);
-var i = t(120356),
-    r = t.n(i),
-    l = t(481060),
-    o = t(388905),
-    s = t(313201),
-    c = t(659900),
-    d = t(473855),
-    u = t(388032),
-    p = t(881549);
+var i = o(200651);
+o(192379);
+var a = o(120356),
+    t = o.n(a),
+    r = o(481060),
+    l = o(388905),
+    c = o(313201),
+    d = o(659900),
+    s = o(473855),
+    _ = o(388032),
+    f = o(881549);
 function m(e) {
-    let { transitionState: n, onClose: t, guildTemplate: i } = e,
-        { form: m, preview: x, handleSubmit: b } = (0, c.Z)(i, !1),
-        h = (0, s.Dt)();
-    return (0, a.jsx)('div', {
-        children: (0, a.jsxs)(l.ModalRoot, {
-            size: l.ModalSize.DYNAMIC,
+    let { transitionState: n, onClose: o, guildTemplate: a } = e,
+        { form: m, preview: h, handleSubmit: u } = (0, d.Z)(a, !1),
+        p = (0, c.Dt)();
+    return (0, i.jsx)('div', {
+        children: (0, i.jsxs)(r.ModalRoot, {
+            size: r.ModalSize.DYNAMIC,
             transitionState: n,
-            className: r()(p.modalRoot),
-            'aria-labelledby': h,
+            className: t()(f.modalRoot),
+            'aria-labelledby': p,
             children: [
-                (0, a.jsxs)('div', {
-                    className: p.modalContainer,
+                (0, i.jsxs)('div', {
+                    className: f.modalContainer,
                     children: [
-                        (0, a.jsx)('div', {
-                            className: r()(p.modalSection, p.ctaSection),
-                            children: (0, a.jsx)('div', {
-                                className: p.ctaContainer,
-                                children: (0, a.jsx)(d.Z, {
-                                    guildTemplate: i,
-                                    headerId: h
+                        (0, i.jsx)('div', {
+                            className: t()(f.modalSection, f.ctaSection),
+                            children: (0, i.jsx)('div', {
+                                className: f.ctaContainer,
+                                children: (0, i.jsx)(s.Z, {
+                                    guildTemplate: a,
+                                    headerId: p
                                 })
                             })
                         }),
-                        (0, a.jsx)('div', {
-                            className: r()(p.modalSection, p.formSection),
-                            children: (0, a.jsxs)(l.Scroller, {
-                                className: p.formContainer,
+                        (0, i.jsx)('div', {
+                            className: t()(f.modalSection, f.formSection),
+                            children: (0, i.jsxs)(r.Scroller, {
+                                className: f.formContainer,
                                 children: [
-                                    (0, a.jsx)(o.Dx, {
-                                        className: p.header,
-                                        children: u.intl.string(u.t.UNFvtL)
+                                    (0, i.jsx)(l.Dx, {
+                                        className: f.header,
+                                        children: _.intl.string(_.t.UNFvtL)
                                     }),
                                     m,
-                                    x
+                                    h
                                 ]
                             })
                         })
                     ]
                 }),
-                (0, a.jsxs)(l.ModalFooter, {
-                    className: p.modalFooter,
+                (0, i.jsxs)(r.ModalFooter, {
+                    className: f.modalFooter,
                     children: [
-                        (0, a.jsx)(l.Button, {
-                            color: l.Button.Colors.PRIMARY,
-                            onClick: t,
-                            children: u.intl.string(u.t.cpT0Cg)
+                        (0, i.jsx)(r.Button, {
+                            color: r.Button.Colors.PRIMARY,
+                            onClick: o,
+                            children: _.intl.string(_.t.cpT0Cg)
                         }),
-                        (0, a.jsx)(l.Button, {
-                            color: l.Button.Colors.GREEN,
+                        (0, i.jsx)(r.Button, {
+                            color: r.Button.Colors.GREEN,
                             onClick: async () => {
-                                null != (await b()) && t();
+                                null != (await u()) && o();
                             },
-                            children: u.intl.string(u.t.CumH4u)
+                            children: _.intl.string(_.t.CumH4u)
                         })
                     ]
                 })

@@ -7,9 +7,9 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
-    o = n.n(s),
+    s = n.n(r),
+    a = n(392711),
+    o = n.n(a),
     c = n(91192),
     u = n(924826),
     d = n(873546),
@@ -49,9 +49,9 @@ var i = n(200651),
 let z = U.ZP.getEnableHardwareAcceleration(),
     W = 44 + B.x,
     Y = l.memo(function (e) {
-        let { channel: t, sectionId: r, userId: a, guildOwnerId: s } = e,
-            o = (0, h.e7)([M.Z], () => M.Z.isTyping(t.id, a)),
-            u = (0, h.e7)([j.ZP], () => j.ZP.getMember(t.guild_id, a)),
+        let { channel: t, sectionId: r, userId: s, guildOwnerId: a } = e,
+            o = (0, h.e7)([M.Z], () => M.Z.isTyping(t.id, s)),
+            u = (0, h.e7)([j.ZP], () => j.ZP.getMember(t.guild_id, s)),
             g = (0, h.e7)(
                 [A.Z],
                 () => {
@@ -60,16 +60,16 @@ let z = U.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id, u]
             ),
-            C = (0, h.e7)([R.default], () => R.default.getUser(a)),
+            C = (0, h.e7)([R.default], () => R.default.getUser(s)),
             x = (0, h.e7)([R.default], () => R.default.getCurrentUser()),
             v = (null == C ? void 0 : C.id) === (null == x ? void 0 : x.id),
-            _ = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getStatus() : y.Z.getStatus(a, t.guild_id))),
-            E = (0, h.e7)([y.Z], () => y.Z.isMobileOnline(a)),
-            b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(a, t.guild_id))),
-            L = (0, h.e7)([N.Z], () => N.Z.getAnyStreamForUser(a)),
-            k = (0, c.JA)(a),
-            w = (0, h.e7)([S.Z], () => S.Z.canUserViewChannel(t.id, r, a)),
-            U = (null == C ? void 0 : C.id) != null && C.id === s,
+            _ = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getStatus() : y.Z.getStatus(s, t.guild_id))),
+            E = (0, h.e7)([y.Z], () => y.Z.isMobileOnline(s)),
+            b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(s, t.guild_id))),
+            L = (0, h.e7)([N.Z], () => N.Z.getAnyStreamForUser(s)),
+            k = (0, c.JA)(s),
+            w = (0, h.e7)([S.Z], () => S.Z.canUserViewChannel(t.id, r, s)),
+            U = (null == C ? void 0 : C.id) != null && C.id === a,
             G = l.useCallback(
                 (e) => {
                     null != C &&
@@ -157,7 +157,7 @@ let z = U.ZP.getEnableHardwareAcceleration(),
     }),
     K = l.memo(function (e) {
         let { id: t, label: n, count: l, guildId: r } = e,
-            a = (0, E.p9)({
+            s = (0, E.p9)({
                 roleId: t,
                 guildId: r,
                 size: 16
@@ -174,10 +174,10 @@ let z = U.ZP.getEnableHardwareAcceleration(),
                       count: l
                   }),
                   children: [
-                      null != a
+                      null != s
                           ? (0, i.jsx)(_.Z, {
                                 className: V.roleIcon,
-                                ...a
+                                ...s
                             })
                           : null,
                       (0, i.jsxs)('span', {
@@ -219,7 +219,7 @@ let z = U.ZP.getEnableHardwareAcceleration(),
 function X(e) {
     let { channel: t, guild: n } = e,
         r = 'members-'.concat(t.id),
-        { analyticsLocations: s } = (0, x.ZP)(C.Z.MEMBER_LIST),
+        { analyticsLocations: a } = (0, x.ZP)(C.Z.MEMBER_LIST),
         d = (0, b.D)(t.id, n),
         p = d.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: f, listRef: v } = (function (e, t) {
@@ -230,11 +230,11 @@ function X(e) {
                         let l = i.current;
                         if (null == l) return;
                         let r = parseInt(n, 10),
-                            [a, s] = l.getSectionRowFromIndex(r),
-                            o = 0 === a && 0 === s ? t : 0;
+                            [s, a] = l.getSectionRowFromIndex(r),
+                            o = 0 === s && 0 === a ? t : 0;
                         l.scrollToIndex({
-                            section: a,
-                            row: s,
+                            section: s,
+                            row: a,
                             padding: o,
                             callback: () => {
                                 requestAnimationFrame(() => {
@@ -246,7 +246,7 @@ function X(e) {
                     },
                     [t]
                 ),
-                a = l.useCallback(
+                s = l.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = i.current;
@@ -255,7 +255,7 @@ function X(e) {
                         }),
                     []
                 ),
-                s = l.useCallback(
+                a = l.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = i.current;
@@ -273,8 +273,8 @@ function X(e) {
                     id: e,
                     setFocus: r,
                     isEnabled: n,
-                    scrollToStart: a,
-                    scrollToEnd: s
+                    scrollToStart: s,
+                    scrollToEnd: a
                 }),
                 listRef: i
             };
@@ -294,13 +294,13 @@ function X(e) {
     let I = o().omit(f.containerProps, ['ref']),
         E = w.iJ(n);
     return (0, i.jsx)(x.Gt, {
-        value: s,
+        value: a,
         children: (0, i.jsx)(c.bG, {
             navigator: f,
             children: (0, i.jsx)(m.FocusJumpSection, {
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        className: a()(V.membersWrap, V.hiddenMembers),
+                        className: s()(V.membersWrap, V.hiddenMembers),
                         children: (0, i.jsx)(
                             m.List,
                             {
@@ -325,12 +325,12 @@ function X(e) {
                                 rowHeight: W,
                                 renderRow: (e) => {
                                     let { section: n, row: l } = e,
-                                        { userIds: r, id: a } = d[n];
+                                        { userIds: r, id: s } = d[n];
                                     return (0, i.jsx)(
                                         Y,
                                         {
                                             channel: t,
-                                            sectionId: a,
+                                            sectionId: s,
                                             userId: r[l],
                                             guildOwnerId: E
                                         },
@@ -356,7 +356,7 @@ function X(e) {
 function J(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
-        className: a()(V.membersWrap, V.hiddenMembers, V.members, G.emptyState),
+        className: s()(V.membersWrap, V.hiddenMembers, V.members, G.emptyState),
         children: [
             (0, i.jsx)(m.Text, {
                 className: G.emptyStateHeader,

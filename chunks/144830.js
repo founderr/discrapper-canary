@@ -8,8 +8,8 @@ n.d(t, {
 var i,
     l,
     r,
-    a,
-    s = n(200651),
+    s,
+    a = n(200651),
     o = n(192379),
     c = n(379649),
     u = n(846519),
@@ -27,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-((r = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((a = l || (l = {})).START = 'START'), (a.END = 'END'), (a.TIME = 'TIME');
+((r = i || (i = {})).ACTIVITY_FEED = 'ACTIVITY_FEED'), (r.ACTIVITY_FEED_NEW = 'ACTIVITY_FEED_NEW'), (r.USER_ACTIVITY = 'USER_ACTIVITY'), (r.GAME_LIBRARY_TIME_PLAYED = 'GAME_LIBRARY_TIME_PLAYED'), (r.GAME_LIBRARY_LAST_PLAYED = 'GAME_LIBRARY_LAST_PLAYED'), ((s = l || (l = {})).START = 'START'), (s.END = 'END'), (s.TIME = 'TIME');
 let m = (e) => (t, n) =>
         null == n
             ? ''
@@ -150,14 +150,14 @@ function f(e) {
             render() {
                 let { location: t, messageProps: n, isApplicationStreaming: i, ...l } = this.props,
                     { time: r } = this.state,
-                    a = this.getType();
-                if (null == a) return null;
-                let o = this.getTimeUnit(r, t, a),
-                    u = p[t][a];
+                    s = this.getType();
+                if (null == s) return null;
+                let o = this.getTimeUnit(r, t, s),
+                    u = p[t][s];
                 if (null == u) return null;
                 let d = u[o],
                     h = Math.floor((0, c.A3)(r, o));
-                return (0, s.jsx)(e, {
+                return (0, a.jsx)(e, {
                     ...l,
                     children: null == d ? void 0 : d(h, n, i)
                 });

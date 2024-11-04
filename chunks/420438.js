@@ -2,7 +2,7 @@ n(47120);
 var i,
     l = n(442837),
     r = n(570140);
-function a(e, t, n) {
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,32 +15,32 @@ function a(e, t, n) {
         e
     );
 }
-let s = {};
+let a = {};
 class o extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         for (let t in e) {
             let n = e[t];
-            s[t] = new Set(n);
+            a[t] = new Set(n);
         }
     }
     hasViewedPrompt(e, t) {
-        let n = s[t];
+        let n = a[t];
         return null != n && (!!n.has(e) || !1);
     }
     getState() {
-        return s;
+        return a;
     }
 }
-a(o, 'displayName', 'GuildPromptsStore'),
-    a(o, 'persistKey', 'GuildPromptsStore'),
+s(o, 'displayName', 'GuildPromptsStore'),
+    s(o, 'persistKey', 'GuildPromptsStore'),
     (t.Z = new o(r.Z, {
         GUILD_PROMPT_VIEWED: function (e) {
             let { prompt: t, guildId: n } = e,
-                i = s[n];
-            return null == i ? ((s[n] = new Set()), s[n].add(t), !0) : !i.has(t) && (i.add(t), !0);
+                i = a[n];
+            return null == i ? ((a[n] = new Set()), a[n].add(t), !0) : !i.has(t) && (i.add(t), !0);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            return null != s[t.id] && !t.unavailable && (delete s[t.id], !0);
+            return null != a[t.id] && !t.unavailable && (delete a[t.id], !0);
         }
     }));

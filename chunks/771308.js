@@ -1,28 +1,28 @@
 n.d(t, {
     Av: function () {
-        return c;
+        return s;
     },
     hp: function () {
         return d;
     },
     wE: function () {
-        return u;
+        return c;
     }
 });
-var i = n(544891),
-    r = n(570140),
-    s = n(959776),
-    a = n(626135),
-    l = n(723359),
+var l = n(544891),
+    a = n(570140),
+    r = n(959776),
+    i = n(626135),
+    u = n(723359),
     o = n(981631);
-function c(e, t) {
+function s(e, t) {
     return (
-        (0, s.Z)(e, t),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+        (0, r.Z)(e, t),
+        i.default.track(o.rMx.AGE_GATE_ACTION, {
             source: t,
-            action: l.Al.AGE_GATE_SUBMITTED
+            action: u.Al.AGE_GATE_SUBMITTED
         }),
-        i.tn
+        l.tn
             .patch({
                 url: o.ANM.ME,
                 oldFormErrors: !0,
@@ -30,28 +30,28 @@ function c(e, t) {
             })
             .then((e) => {
                 let n = e.body;
-                r.Z.dispatch({
+                a.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
                     user: n
                 }),
-                    a.default.track(o.rMx.AGE_GATE_ACTION, {
+                    i.default.track(o.rMx.AGE_GATE_ACTION, {
                         source: t,
-                        action: l.Al.AGE_GATE_SUCCESS
+                        action: u.Al.AGE_GATE_SUCCESS
                     });
             })
     );
 }
-function u(e) {
-    r.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+function c(e) {
+    a.Z.dispatch({ type: 'AGE_GATE_PREVENT_UNDERAGE_REGISTRATION' }),
+        i.default.track(o.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
+            action: u.Al.AGE_GATE_PREVENT_UNDERAGE_REGISTRATION
         });
 }
 function d(e) {
-    r.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
-        a.default.track(o.rMx.AGE_GATE_ACTION, {
+    a.Z.dispatch({ type: 'AGE_GATE_LOGOUT_UNDERAGE_NEW_USER' }),
+        i.default.track(o.rMx.AGE_GATE_ACTION, {
             source: e,
-            action: l.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
+            action: u.Al.AGE_GATE_LOGOUT_UNDERAGE_NEW_USER
         });
 }

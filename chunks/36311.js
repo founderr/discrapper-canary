@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(442837),
+    s = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(749210),
     u = n(986035),
@@ -56,7 +56,7 @@ class C extends l.PureComponent {
             ref: this.scroller,
             className: f.scroller,
             children: (0, i.jsx)('div', {
-                className: a()(this.props.className, f.wrapper),
+                className: s()(this.props.className, f.wrapper),
                 children: n
             })
         });
@@ -74,7 +74,7 @@ class C extends l.PureComponent {
             });
     }
 }
-t.Z = s.ZP.connectStores([d.default], () => {
+t.Z = a.ZP.connectStores([d.default], () => {
     var e;
     return { nsfwDisallowed: (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1 };
 })(C);

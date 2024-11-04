@@ -7,9 +7,9 @@ n.d(t, {
 var i,
     l,
     r = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
+    s = n(192379),
+    a = n(120356),
+    o = n.n(a),
     c = n(100621),
     u = n(481060),
     d = n(542094),
@@ -26,7 +26,7 @@ let x = ['embedded_cover'],
     };
 function _(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: l, aspectRatio: s = 0, animatedDivClass: _, commandOrigin: I } = e,
+    let { channel: n, activityItem: i, onClick: l, aspectRatio: a = 0, animatedDivClass: _, commandOrigin: I } = e,
         {
             onActivityItemSelected: E,
             imageBackground: b,
@@ -42,14 +42,14 @@ function _(e) {
             assetNames: x,
             commandOrigin: I
         }),
-        [T, N] = a.useState(!1),
-        j = a.useCallback(() => {
+        [T, N] = s.useState(!1),
+        j = s.useCallback(() => {
             N(!0);
         }, [N]),
-        A = a.useCallback(() => {
+        A = s.useCallback(() => {
             N(!1);
         }, [N]),
-        y = a.useMemo(
+        y = s.useMemo(
             () =>
                 (0, r.jsx)('div', {
                     className: C.overlayBadge,
@@ -63,7 +63,7 @@ function _(e) {
                 }),
             [i.application.name, Z]
         ),
-        P = a.useMemo(() => {
+        P = s.useMemo(() => {
             switch (S) {
                 case d.JS.JOIN:
                     return (0, r.jsx)('div', {
@@ -115,8 +115,8 @@ function _(e) {
                     children: (e) =>
                         (0, r.jsx)(c.animated.div, {
                             className: o()(e, C.activityItem, _, {
-                                [C.activityItem_13_11]: 0 === s,
-                                [C.activityItem_16_9]: 1 === s
+                                [C.activityItem_13_11]: 0 === a,
+                                [C.activityItem_16_9]: 1 === a
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))

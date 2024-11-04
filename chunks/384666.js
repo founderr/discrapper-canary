@@ -9,8 +9,8 @@ var i = n(200651),
     r = n(593473),
     l = n(512969),
     o = n(489863),
-    a = n(787025),
-    c = n(397394),
+    c = n(787025),
+    a = n(397394),
     d = n(388032);
 function u() {
     let e;
@@ -30,19 +30,19 @@ function u() {
             })();
         }, [t.search]),
         (e = n
-            ? (0, i.jsx)(c.c7, {
+            ? (0, i.jsx)(a.c7, {
                   message: d.intl.string(d.t.Tqu3OT),
                   showsCloseWindowText: !0
               })
             : h
-              ? (0, i.jsx)(c.Lk, {
+              ? (0, i.jsx)(a.Lk, {
                     message: d.intl.string(d.t.J8LsCg),
                     showsCloseWindowText: !0
                 })
-              : (0, i.jsx)(c.ZP, {
+              : (0, i.jsx)(a.ZP, {
                     message: d.intl.string(d.t.BAcf6e),
                     spinner: !0
                 })),
-        (0, i.jsx)(a.G, { children: e })
+        (0, i.jsx)(c.G, { children: e })
     );
 }

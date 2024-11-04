@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(392711),
+    s = n.n(r),
+    a = n(392711),
     o = n(772848),
     c = n(442837),
     u = n(570140),
@@ -19,12 +19,12 @@ let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
     f = l.memo(function (e) {
         var t;
         let { emoji: n, onAnimationEnd: r } = e,
-            o = (0, s.sample)(p),
+            o = (0, a.sample)(p),
             c = l.useCallback(() => {
                 r(n.key);
             }, [n.key, r]);
         return (0, i.jsx)('div', {
-            className: a()(m.emoji, o),
+            className: s()(m.emoji, o),
             onAnimationEnd: c,
             children: (0, i.jsx)(d.Z, {
                 emojiId: n.id,
@@ -36,12 +36,12 @@ let p = [m.emoji1, m.emoji2, m.emoji3, m.emoji4],
 function g(e) {
     let { channelId: t, callHeight: n } = e,
         r = (0, c.e7)([h.Z], () => h.Z.useReducedMotion),
-        [a, s] = l.useState([]);
+        [s, a] = l.useState([]);
     l.useEffect(() => {
         function e(e) {
             let { channelId: n, emoji: i } = e;
             if (n === t && !r && null != i)
-                s((e) => [
+                a((e) => [
                     ...e,
                     {
                         key: (0, o.Z)(),
@@ -57,7 +57,7 @@ function g(e) {
         );
     }, [t, r]);
     let d = l.useCallback((e) => {
-        s((t) => t.filter((t) => t.key !== e));
+        a((t) => t.filter((t) => t.key !== e));
     }, []);
     return r
         ? null
@@ -65,7 +65,7 @@ function g(e) {
               className: m.container,
               style: { top: n - 16 },
               'aria-hidden': !0,
-              children: a.map((e) =>
+              children: s.map((e) =>
                   (0, i.jsx)(
                       f,
                       {

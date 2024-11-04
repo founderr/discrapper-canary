@@ -7,9 +7,9 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     s = n(13245),
-    o = n(593481),
+    l = n(593481),
     a = n(312839),
-    l = n(981631),
+    o = n(981631),
     c = n(987650),
     d = n(388032),
     u = n(57266);
@@ -30,7 +30,7 @@ function p(e) {
             let { game: t, voiceGuild: u } = e,
                 { trackView: p, trackClick: f } = (0, a.R)(c.n0.GoLiveNudge, { notif_type: c.n0.GoLiveNudge });
             return {
-                colorScheme: o.IC.PRIMARY,
+                colorScheme: l.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.intl.formatToPlainString(d.t.z9znpa, {
@@ -53,7 +53,7 @@ function p(e) {
                                     ...t,
                                     selectSource: !1,
                                     guildId: u.id,
-                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },
@@ -66,7 +66,7 @@ function p(e) {
             let { game: t } = e,
                 { trackView: u, trackClick: p } = (0, a.R)(c.n0.GoLiveNonVoiceNudge, { notif_type: c.n0.GoLiveNonVoiceNudge });
             return {
-                colorScheme: o.IC.PRIMARY,
+                colorScheme: l.IC.PRIMARY,
                 icon: n(847881),
                 title: null,
                 body: d.intl.formatToPlainString(d.t['0SVWgI'], { game: t.name }),
@@ -86,7 +86,7 @@ function p(e) {
                                     ...t,
                                     selectSource: !1,
                                     selectGuild: !0,
-                                    analyticsLocation: l.Sbl.OVERLAY_NUDGE
+                                    analyticsLocation: o.Sbl.OVERLAY_NUDGE
                                 });
                         });
                 },

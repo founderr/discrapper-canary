@@ -8,8 +8,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(120356),
-    a = n.n(r),
-    s = n(848246),
+    s = n.n(r),
+    a = n(848246),
     o = n(793030),
     c = n(442837),
     u = n(46973),
@@ -49,12 +49,12 @@ let j = S.LY.RESOLUTION_1440,
 function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
-        [r, a] = l.useState(!1),
+        [r, s] = l.useState(!1),
         { preset: o } = (0, c.cj)([p.Z], () => p.Z.getState()),
         x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
         I = l.useCallback(() => {
-            a(!0),
-                (0, C.S)(s.q.STREAM_HIGH_QUALITY)
+            s(!0),
+                (0, C.S)(a.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
@@ -62,7 +62,7 @@ function y(e) {
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
-                                    perk_type: s.q.STREAM_HIGH_QUALITY,
+                                    perk_type: a.q.STREAM_HIGH_QUALITY,
                                     resolution: j,
                                     max_fps: A
                                 }),
@@ -93,7 +93,7 @@ function y(e) {
                     })
                     .catch(() => {})
                     .finally(() => {
-                        a(!1);
+                        s(!1);
                     });
         }, [o, t, x]);
     return (0, i.jsx)(d.ShinyButton, {
@@ -111,7 +111,7 @@ function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
         r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: a()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
+        className: s()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
                 className: T.image,
@@ -141,8 +141,8 @@ function P(e) {
 }
 function M(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: r } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
-        { enabled: a } = I.Z.useExperiment(
+        { shouldShowOptInPopout: r } = (0, x.k)(a.q.STREAM_HIGH_QUALITY),
+        { enabled: s } = I.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
@@ -152,16 +152,16 @@ function M(e) {
         o = l.useRef(!1);
     return (l.useEffect(() => {
         r &&
-            a &&
+            s &&
             !o.current &&
             ((o.current = !0),
             g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
                 guild_id: t.guild_id,
                 channel_id: t.id,
-                perk_type: s.q.STREAM_HIGH_QUALITY
+                perk_type: a.q.STREAM_HIGH_QUALITY
             }));
-    }, [r, a, t]),
-    r && a)
+    }, [r, s, t]),
+    r && s)
         ? (0, i.jsx)(E.h, {
               ...n,
               renderComponent: (e) =>

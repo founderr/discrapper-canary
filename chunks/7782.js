@@ -1,8 +1,8 @@
 var i = n(200651),
     l = n(192379),
     r = n(873546),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     o = n(194359),
     c = n(686546),
     u = n(333984),
@@ -24,7 +24,7 @@ var i = n(200651),
     T = n(995593);
 let N = (e) => {
         let { userId: t, channelId: n } = e,
-            r = (0, a.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
+            r = (0, s.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
             o = l.useMemo(
                 () =>
                     null != r
@@ -41,8 +41,8 @@ let N = (e) => {
                                                 })
                                               : null;
                                   if (null == l) return null;
-                                  let a = t === (r.length > 3 ? 3 : r.length) - 1,
-                                      s = (0, i.jsx)(
+                                  let s = t === (r.length > 3 ? 3 : r.length) - 1,
+                                      a = (0, i.jsx)(
                                           'img',
                                           {
                                               src: l,
@@ -51,8 +51,8 @@ let N = (e) => {
                                           },
                                           t
                                       );
-                                  return a
-                                      ? s
+                                  return s
+                                      ? a
                                       : (0, i.jsx)(
                                             c.ZP,
                                             {
@@ -60,7 +60,7 @@ let N = (e) => {
                                                 mask: c.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                 width: 24,
                                                 height: 24,
-                                                children: s
+                                                children: a
                                             },
                                             t
                                         );
@@ -70,7 +70,7 @@ let N = (e) => {
                 [r]
             );
         return null == r || 0 === r.length
-            ? (0, i.jsx)(s.Text, {
+            ? (0, i.jsx)(a.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
                   children: Z.intl.string(Z.t.zjVh8v)
@@ -81,7 +81,7 @@ let N = (e) => {
                           className: T.avatarContainer,
                           children: o
                       }),
-                      (0, i.jsx)(s.Clickable, {
+                      (0, i.jsx)(a.Clickable, {
                           onClick: () => {
                               (0, g.openUserProfileModal)({
                                   userId: t,
@@ -90,7 +90,7 @@ let N = (e) => {
                                   analyticsLocation: { section: E.jXE.DIRECT_MESSAGE }
                               });
                           },
-                          children: (0, i.jsx)(s.Text, {
+                          children: (0, i.jsx)(a.Text, {
                               className: T.mutualGuilds,
                               variant: 'text-sm/normal',
                               children: Z.intl.format(Z.t.eE3oen, { count: r.length })
@@ -102,17 +102,17 @@ let N = (e) => {
     j = (e) => {
         var t;
         let { relationshipType: n, userId: l, showingBanner: r } = e,
-            a = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
+            s = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: l,
                     context: { location: E.ZY5.DM_CHANNEL }
                 });
             },
-            u = (0, i.jsx)(s.Button, {
+            u = (0, i.jsx)(a.Button, {
                 className: T.action,
-                size: s.Button.Sizes.TINY,
-                color: s.Button.Colors.PRIMARY,
+                size: a.Button.Sizes.TINY,
+                color: a.Button.Colors.PRIMARY,
                 onClick: () => {
                     o.Z.addRelationship({
                         userId: l,
@@ -126,11 +126,11 @@ let N = (e) => {
             case E.OGo.NONE:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !a &&
+                        !s &&
                             !r &&
-                            (0, i.jsx)(s.Button, {
+                            (0, i.jsx)(a.Button, {
                                 className: T.action,
-                                size: s.Button.Sizes.TINY,
+                                size: a.Button.Sizes.TINY,
                                 onClick: c,
                                 children: Z.intl.string(Z.t.w5uwoK)
                             }),
@@ -140,47 +140,47 @@ let N = (e) => {
             case E.OGo.FRIEND:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(a.Button, {
                             className: T.action,
-                            size: s.Button.Sizes.TINY,
+                            size: a.Button.Sizes.TINY,
                             onClick: () => {
                                 o.Z.removeFriend(l, { location: E.ZY5.DM_CHANNEL });
                             },
-                            color: s.Button.Colors.PRIMARY,
+                            color: a.Button.Colors.PRIMARY,
                             children: Z.intl.string(Z.t.cvSt1N)
                         }),
                         u
                     ]
                 });
             case E.OGo.BLOCKED:
-                return (0, i.jsx)(s.Button, {
+                return (0, i.jsx)(a.Button, {
                     className: T.action,
-                    size: s.Button.Sizes.TINY,
+                    size: a.Button.Sizes.TINY,
                     onClick: () => {
                         o.Z.unblockUser(l, { location: E.ZY5.DM_CHANNEL });
                     },
-                    color: s.Button.Colors.PRIMARY,
+                    color: a.Button.Colors.PRIMARY,
                     children: Z.intl.string(Z.t.XyHpKC)
                 });
             case E.OGo.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             className: T.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
                             children: Z.intl.string(Z.t.c2v5nJ)
                         }),
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(a.Button, {
                             className: T.action,
-                            size: s.Button.Sizes.TINY,
+                            size: a.Button.Sizes.TINY,
                             onClick: c,
                             children: Z.intl.string(Z.t.ZcibdX)
                         }),
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(a.Button, {
                             className: T.action,
-                            size: s.Button.Sizes.TINY,
-                            color: s.Button.Colors.PRIMARY,
+                            size: a.Button.Sizes.TINY,
+                            color: a.Button.Colors.PRIMARY,
                             onClick: () => {
                                 o.Z.cancelFriendRequest(l, { location: E.ZY5.DM_CHANNEL });
                             },
@@ -192,9 +192,9 @@ let N = (e) => {
             case E.OGo.PENDING_OUTGOING:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(a.Button, {
                             className: T.action,
-                            size: s.Button.Sizes.TINY,
+                            size: a.Button.Sizes.TINY,
                             disabled: !0,
                             children: Z.intl.string(Z.t.xMH6vL)
                         }),
@@ -208,9 +208,9 @@ let N = (e) => {
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
             r = l.useCallback(() => {
-                (0, s.showToast)((0, s.createToast)(Z.intl.string(Z.t.a2j0ho), s.ToastType.FAILURE));
+                (0, a.showToast)((0, a.createToast)(Z.intl.string(Z.t.a2j0ho), a.ToastType.FAILURE));
             }, []),
-            a = l.useCallback(() => {
+            s = l.useCallback(() => {
                 p.Z.closeChannelSidebar(C.uZ);
             }, []),
             o = l.useCallback(() => {
@@ -227,24 +227,24 @@ let N = (e) => {
                 user: v.default.getUser(n),
                 onError: r,
                 onAcceptSuccess: o,
-                onRejectSuccess: a
+                onRejectSuccess: s
             }),
             x = h || m || f || g;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(a.Button, {
                     className: T.action,
-                    size: s.Button.Sizes.TINY,
+                    size: a.Button.Sizes.TINY,
                     onClick: () => c(t),
                     disabled: x,
                     submitting: h,
                     children: Z.intl.string(Z.t.Kz8Pws)
                 }),
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(a.Button, {
                     className: T.action,
-                    size: s.Button.Sizes.TINY,
+                    size: a.Button.Sizes.TINY,
                     onClick: () => u(t),
-                    color: s.Button.Colors.PRIMARY,
+                    color: a.Button.Colors.PRIMARY,
                     disabled: x,
                     submitting: m,
                     children: Z.intl.string(Z.t.B2nygY)
@@ -254,10 +254,10 @@ let N = (e) => {
     };
 t.Z = (e) => {
     let { userId: t, channel: n, showingBanner: l } = e,
-        { channelId: s } = (0, h._)(),
-        o = (0, a.e7)([u.Z], () => null != s && u.Z.isSpam(s), [s]),
-        c = (0, a.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
-        d = n.id === s;
+        { channelId: a } = (0, h._)(),
+        o = (0, s.e7)([u.Z], () => null != a && u.Z.isSpam(a), [a]),
+        c = (0, s.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+        d = n.id === a;
     return t === b.fL
         ? null
         : o || d

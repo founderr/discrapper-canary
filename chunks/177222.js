@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651),
     l = n(192379),
     r = n(100621),
-    a = n(597312),
-    s = n(481060),
+    s = n(597312),
+    a = n(481060),
     o = n(727637),
     c = n(410030),
     u = n(100527),
@@ -54,7 +54,7 @@ function k(e) {
         F = l.useRef(null),
         G = (0, o.Z)(F),
         V = (0, x.$m)(),
-        z = (0, s.useSpring)({
+        z = (0, a.useSpring)({
             opacity: null != V.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
@@ -84,7 +84,7 @@ function k(e) {
                                 style: z,
                                 className: L.backdrop
                             }),
-                        (0, i.jsxs)(a.u2, {
+                        (0, i.jsxs)(s.u2, {
                             children: [
                                 (0, i.jsxs)(Z.Z, {
                                     profileType: P.y0.PANEL,
@@ -141,10 +141,10 @@ function k(e) {
                         !O &&
                             (0, i.jsx)('footer', {
                                 className: L.footer,
-                                children: (0, i.jsx)(s.Button, {
+                                children: (0, i.jsx)(a.Button, {
                                     fullWidth: !0,
-                                    size: s.Button.Sizes.LARGE,
-                                    look: s.Button.Looks.BLANK,
+                                    size: a.Button.Sizes.LARGE,
+                                    look: a.Button.Looks.BLANK,
                                     color: L.footerButtonColor,
                                     onClick: () => {
                                         W(),

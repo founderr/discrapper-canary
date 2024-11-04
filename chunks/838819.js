@@ -23,14 +23,14 @@ var r = n(200651),
     E = n(819640),
     I = n(594174),
     T = n(626135),
-    N = n(74538),
-    S = n(335131),
-    B = n(381585),
+    S = n(74538),
+    B = n(335131),
+    N = n(381585),
     y = n(597688),
     L = n(328347),
     Z = n(307043),
-    P = n(223143),
-    w = n(298228),
+    w = n(223143),
+    P = n(298228),
     O = n(937510),
     A = n(309956),
     H = n(853748),
@@ -73,7 +73,7 @@ function ea(e) {
                       className: er.cardsContainer,
                       children: t.map((e, t) =>
                           (0, r.jsxs)(
-                              B.k0,
+                              N.k0,
                               {
                                   newValue: { tilePosition: t },
                                   children: [
@@ -182,13 +182,13 @@ t.default = function (e) {
         ef = (0, u.f9)(),
         { onClose: ep } = (0, V.Db)(),
         eh = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
-        eg = N.ZP.canUseCollectibles(eh),
-        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
+        eg = S.ZP.canUseCollectibles(eh),
+        { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, w.Z)(),
         ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
     (0, j.P)();
-    let eE = (0, w.O)(eC),
+    let eE = (0, P.O)(eC),
         eI = a.useRef(null),
-        [eT, eN] = a.useState(!1);
+        [eT, eS] = a.useState(!1);
     (0, R.Kp)({
         categories: eC,
         isFetchingCategories: eb,
@@ -214,20 +214,20 @@ t.default = function (e) {
                     location_stack: _
                 });
         }, [s, eg, _, l, k, F, U, eo, ec, ed]);
-    let { dismissCollectiblesShopTabNewBadge: eS } = (0, $.Z)();
+    let { dismissCollectiblesShopTabNewBadge: eB } = (0, $.Z)();
     a.useEffect(() => {
-        if ((eS(), !(0, b.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
+        if ((eB(), !(0, b.un)(d.z.COLLECTIBLES_GIFTING_COACHMARK)))
             (0, b.EW)(d.z.COLLECTIBLES_GIFTING_COACHMARK, {
                 dismissAction: ee.L.AUTO_DISMISS,
                 forceTrack: !0
             });
-    }, [eS]),
+    }, [eB]),
         a.useEffect(() => {
             !n && (0, f.Y)(X.Z5c.COLLECTIBLES_SHOP);
         }, [n]),
         a.useEffect(
             () => () => {
-                (0, S.K$)({
+                (0, B.K$)({
                     categories: [...eC.values()],
                     itemTypes: [o.Z.AVATAR_DECORATION, o.Z.PROFILE_EFFECT]
                 });
@@ -241,18 +241,18 @@ t.default = function (e) {
             };
             return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
         }, [n, em, ef, ep]);
-    let eB = a.useCallback(() => {
+    let eN = a.useCallback(() => {
             ek();
         }, [ek]),
         { setCategoryRef: ey, handleScrollToCategory: eL } = (0, R.xV)(O.current),
         { reducedMotion: eZ } = a.useContext(m.AccessibilityPreferencesContext),
-        eP = a.useRef(null),
-        ew = a.useRef(null);
-    (0, m.useFocusLock)(eP),
+        ew = a.useRef(null),
+        eP = a.useRef(null);
+    (0, m.useFocusLock)(ew),
         a.useEffect(() => {
             if (!n) {
                 var e;
-                null === (e = ew.current) || void 0 === e || e.focus();
+                null === (e = eP.current) || void 0 === e || e.focus();
             }
         }, [n]);
     let eO = a.useCallback(
@@ -268,7 +268,7 @@ t.default = function (e) {
         });
     return (0, r.jsx)(g.Gt, {
         value: _,
-        children: (0, r.jsxs)(B.k0, {
+        children: (0, r.jsxs)(N.k0, {
             newValue: {
                 sessionId: k,
                 pageCategory: eA
@@ -276,7 +276,7 @@ t.default = function (e) {
             children: [
                 (0, r.jsx)('div', {
                     className: er.shop,
-                    ref: n ? eP : ew,
+                    ref: n ? ew : eP,
                     tabIndex: -1,
                     children: (0, r.jsxs)(m.AdvancedScroller, {
                         className: er.shopScroll,
@@ -332,7 +332,7 @@ t.default = function (e) {
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
                                                     : null != ej
-                                                      ? (0, r.jsx)(D.Z, { onRetry: eB })
+                                                      ? (0, r.jsx)(D.Z, { onRetry: eN })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
                                                             children: eE
@@ -346,13 +346,13 @@ t.default = function (e) {
                                                                         'div',
                                                                         {
                                                                             ref: (t) => ey(e.skuId, t),
-                                                                            children: (0, r.jsx)(B.k0, {
+                                                                            children: (0, r.jsx)(N.k0, {
                                                                                 newValue: { categoryPosition: t },
                                                                                 children: (0, r.jsx)(ei, {
                                                                                     isPremiumUser: eg,
                                                                                     category: e,
                                                                                     initialItemCardRef: eI,
-                                                                                    setIsGiftEasterEggEnabled: eN,
+                                                                                    setIsGiftEasterEggEnabled: eS,
                                                                                     isGiftEasterEggEnabled: eT,
                                                                                     isFullScreen: n
                                                                                 })
