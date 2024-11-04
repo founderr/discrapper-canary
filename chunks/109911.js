@@ -5,8 +5,7 @@ n.d(t, {
     QX: function () {
         return o;
     }
-}),
-    n(873546);
+});
 var r = n(818083);
 let i = (0, r.B)({
         kind: 'user',

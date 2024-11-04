@@ -40,8 +40,8 @@ function L(e, t, n) {
     );
 }
 let R = 1 * N.Z.Millis.DAY,
-    P = 3 * N.Z.Millis.DAY,
-    O = [],
+    O = 3 * N.Z.Millis.DAY,
+    P = [],
     j = null,
     D = 0,
     M = [],
@@ -65,11 +65,12 @@ let R = 1 * N.Z.Millis.DAY,
     ee = [],
     et = 0,
     en = [],
-    ei = 0;
-function er(e) {
+    ei = 0,
+    er = !0;
+function el(e) {
     return Date.now() - D > 6 * N.Z.Millis.HOUR && [...e, ...k, ...w].slice(0, 3).reduce((e, t) => e + t.score, 0) >= x.jp;
 }
-function el(e, t, n, i) {
+function ea(e, t, n, i) {
     let r = e.filter((e) => e.type !== n);
     return (
         t.forEach((e, t) => {
@@ -78,7 +79,7 @@ function el(e, t, n, i) {
         r
     );
 }
-function ea() {
+function es() {
     (function () {
         let e = _.Z.getGuildIds(),
             t = [];
@@ -126,8 +127,8 @@ function ea() {
             (B[e.id] = e), null != b.Z.getReadTimestamp(e.id) ? r.push(e) : i.push(e);
         }),
             (w = i),
-            ($ = el($, i, x.Rr.GUILD_EVENT, 7)),
-            (ee = el(ee, r, x.Rr.GUILD_EVENT, 7));
+            ($ = ea($, i, x.Rr.GUILD_EVENT, 7)),
+            (ee = ea(ee, r, x.Rr.GUILD_EVENT, 7));
     })(),
         (function () {
             var e, t;
@@ -162,17 +163,17 @@ function ea() {
                     n.add(e.content.id), (B[t.id] = t), null != b.Z.getReadTimestamp(t.id) ? a.push(t) : l.push(t);
                 }),
                 (k = l),
-                ($ = el($, l, x.Rr.ACTIVITY, 5)),
-                (ee = el(ee, a, x.Rr.ACTIVITY, 5));
+                ($ = ea($, l, x.Rr.ACTIVITY, 5)),
+                (ee = ea(ee, a, x.Rr.ACTIVITY, 5));
         })(),
-        es();
+        eo();
 }
-function es() {
+function eo() {
     if ((($ = $.filter((e) => e.type !== x.Rr.RECOMMENDED_GUILDS)), (ee = ee.filter((e) => e.type !== x.Rr.RECOMMENDED_GUILDS)), 0 === en.length)) return;
     let e = 'recommendedGuilds',
         t = Object.values(_.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
         n = b.Z.getReadTimestamp(e);
-    if (t && null != n && Date.now() - ei > R && Date.now() - n < P) return;
+    if (t && null != n && Date.now() - ei > R && Date.now() - n < O) return;
     let i = {
         id: e,
         type: x.Rr.RECOMMENDED_GUILDS,
@@ -185,13 +186,13 @@ function es() {
         $.splice(e, 0, i);
     } else $.splice(5, 0, i);
 }
-function eo(e) {
-    if ((M.length > 0 && ((O = M), (M = []), (U = [])), Y++, null != e)) ($ = e.newUnread), (ee = e.newRead);
+function ec(e) {
+    if ((M.length > 0 && ((P = M), (M = []), (U = [])), Y++, null != e)) ($ = e.newUnread), (ee = e.newRead);
     else {
-        let [e, t] = ec(O);
+        let [e, t] = ed(P);
         ($ = e), (ee = t);
     }
-    if ((ea(), null != G.load_id && j !== G.load_id)) {
+    if ((es(), null != G.load_id && j !== G.load_id)) {
         var t;
         S.default.track(Z.rMx.FEED_LOADED, {
             ...G,
@@ -206,7 +207,7 @@ function eo(e) {
     }
     (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
 }
-function ec(e) {
+function ed(e) {
     let t = [],
         n = [],
         i = [];
@@ -218,34 +219,34 @@ function ec(e) {
         [[...i, ...n], t.sort((e, t) => (0, A.Rm)(e.id, t.id))]
     );
 }
-function ed(e, t) {
+function eu(e, t) {
     let n = [],
-        i = new Set(O.map((e) => e.id));
+        i = new Set(P.map((e) => e.id));
     for (let r of e) {
         if (!(r.type === x.Rr.RECOMMENDED_GUILDS || i.has(r.id)) && null == b.Z.getReadTimestamp(r.id) && (r.type !== x.Rr.MESSAGE || (!!(0, A.$U)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) && (r.type !== x.Rr.SUMMARY || (!!(0, A.$U)(r.data.channel_id, r.data.summary_id) && r.data.channel_id !== t))) n.push(r);
     }
     return n;
 }
-function eu(e, t) {
+function eh(e, t) {
     return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.channel_id !== t);
 }
-function eh(e, t) {
-    if ((0, A.jv)(t) === A.aL.MUTED) (O = eu(O, e)), ($ = eu($, e)), (ee = eu(ee, e)), (M = eu(M, e)), (U = eu(U, e));
-}
 function em(e, t) {
-    return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.guild_id !== t);
+    if ((0, A.jv)(t) === A.aL.MUTED) (P = eh(P, e)), ($ = eh($, e)), (ee = eh(ee, e)), (M = eh(M, e)), (U = eh(U, e));
 }
 function ep(e, t) {
-    if ((0, A.jv)(t) === A.aL.MUTED) (O = em(O, e)), ($ = em($, e)), (ee = em(ee, e)), (M = em(M, e)), (U = em(U, e));
+    return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.guild_id !== t);
 }
-function eg(e) {
+function eg(e, t) {
+    if ((0, A.jv)(t) === A.aL.MUTED) (P = ep(P, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
+}
+function ef(e) {
     let { type: t, messageId: n, userId: i, emoji: r, reactionType: l } = e,
         a = H[n];
     if (null == a || a.type !== x.Rr.MESSAGE) return !1;
     let s = p.default.getId() === i;
     'MESSAGE_REACTION_ADD' === t ? (a.message = a.message.addReaction(r, s, e.colors, l)) : (a.message = a.message.removeReaction(r, s, l));
 }
-function ef(e) {
+function e_(e) {
     let { channelId: t } = e,
         n = [],
         i = [];
@@ -253,15 +254,15 @@ function ef(e) {
         (r > et || !q) && (e.type === x.Rr.MESSAGE || e.type === x.Rr.SUMMARY) && e.data.channel_id === t ? n.push(e) : i.push(e);
     });
     let r = K,
-        [l, a] = ec(M);
-    if (((U = ed(l, t)), (K = q ? r && U.length >= x.Lb : r && er(i)), 0 === n.length && r === K)) return !1;
+        [l, a] = ed(M);
+    if (((U = eu(l, t)), (K = q ? r && U.length >= x.Lb : r && el(i)), 0 === n.length && r === K)) return !1;
     if (0 !== n.length) ($ = i), (ee = [...ee, ...n]);
 }
-class e_ extends (i = l.ZP.PersistedStore) {
+class eE extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(E.Z, g.Z, I.ZP, d.Z, v.ZP, p.default, b.Z, s.Z), null != e)) {
             var t, n, i, r, l, a;
-            (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
+            (P = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
             }),
                 (F = null !== (n = e.customGuildScores) && void 0 !== n ? n : {}),
@@ -275,7 +276,7 @@ class e_ extends (i = l.ZP.PersistedStore) {
         return Y;
     }
     getDehydratedItems() {
-        return O;
+        return P;
     }
     getNewDehydratedItems() {
         return M;
@@ -341,9 +342,12 @@ class e_ extends (i = l.ZP.PersistedStore) {
     getDiscoverableGuilds() {
         return en;
     }
+    videosMuted() {
+        return er;
+    }
     getState() {
         return {
-            dehydratedItems: O,
+            dehydratedItems: P,
             numOpens: J,
             customGuildScores: F,
             customChannelScoresByGuild: z,
@@ -352,13 +356,13 @@ class e_ extends (i = l.ZP.PersistedStore) {
         };
     }
 }
-L(e_, 'displayName', 'GravityStore'),
-    L(e_, 'persistKey', 'GravityStore'),
-    (t.Z = new e_(a.Z, {
+L(eE, 'displayName', 'GravityStore'),
+    L(eE, 'persistKey', 'GravityStore'),
+    (t.Z = new eE(a.Z, {
         POST_CONNECTION_OPEN: function () {
-            if (O.length > 0 && (!q || 0 === Y)) {
-                let [e, t] = ec(O);
-                ($ = e), (ee = t), ea(), (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
+            if (P.length > 0 && (!q || 0 === Y)) {
+                let [e, t] = ed(P);
+                ($ = e), (ee = t), es(), (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
             }
         },
         LOGOUT: function () {
@@ -386,9 +390,9 @@ L(e_, 'displayName', 'GravityStore'),
                 }),
                 null == j && null == G)
             ) {
-                let [e, t] = ec((O = [n, ...O]));
+                let [e, t] = ed((P = [n, ...P]));
                 ($ = e), (ee = t);
-            } else (M = [n, ...M]), eo();
+            } else (M = [n, ...M]), ec();
         },
         LOAD_GRAVITY_DEHYDRATED: function (e) {
             let { items: t, loadId: n, startTime: i, isReloading: r } = e;
@@ -407,14 +411,14 @@ L(e_, 'displayName', 'GravityStore'),
                     load_time_millis: Date.now() - i,
                     feed_item_ids: M.map((e) => e.id)
                 });
-            let [l, a] = ec(M);
-            if (((U = ed(l)), q && 0 !== Y)) {
+            let [l, a] = ed(M);
+            if (((U = eu(l)), q && 0 !== Y)) {
                 let e = U.length > x.Lb;
                 !r && (K = e), e && (0, A.em)([...l, ...a], 0, x.xy);
             } else
                 (Y = 0),
-                    !q && er(l) && ((K = !0), (W = !0)),
-                    eo({
+                    !q && el(l) && ((K = !0), (W = !0)),
+                    ec({
                         newUnread: l,
                         newRead: a
                     });
@@ -491,25 +495,25 @@ L(e_, 'displayName', 'GravityStore'),
         },
         LOAD_GRAVITY_CUSTOM_SCORES: function (e) {
             let { scores: t } = e;
-            for (let e of t) for (let t of ((F[e.guild_id] = e.guild_score), ep(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores))) null == z[e.guild_id] && (z[e.guild_id] = {}), (z[e.guild_id][t] = e.custom_channel_scores[t]), eh(t, e.custom_channel_scores[t]);
+            for (let e of t) for (let t of ((F[e.guild_id] = e.guild_score), eg(e.guild_id, e.guild_score), Object.keys(e.custom_channel_scores))) null == z[e.guild_id] && (z[e.guild_id] = {}), (z[e.guild_id][t] = e.custom_channel_scores[t]), em(t, e.custom_channel_scores[t]);
             (F = { ...F }), (z = { ...z });
         },
         LOAD_GRAVITY_RECOMMENDED_GUILDS: function (e) {
             let { guilds: t } = e;
-            (en = t.map((e) => new m.ZP((0, T.PP)(e.guild)))), es();
+            (en = t.map((e) => new m.ZP((0, T.PP)(e.guild)))), eo();
         },
         GRAVITY_CUSTOM_SCORES_UPDATED: function (e) {
             let { channelScores: t, guildId: n, guildScore: i } = e;
-            null != i && ((F[n] = i), ep(n, i), (F = { ...F })),
+            null != i && ((F[n] = i), eg(n, i), (F = { ...F })),
                 null == t ||
                     t.forEach((e) => {
                         let { channelId: t, score: i } = e;
-                        null == z[n] && (z[n] = {}), (z[n][t] = i), eh(t, i), (z = { ...z });
+                        null == z[n] && (z[n] = {}), (z[n][t] = i), em(t, i), (z = { ...z });
                     });
         },
         RELOAD_GRAVITY: function () {
             if (0 === M.length) return !1;
-            eo(), (K = !1);
+            ec(), (K = !1);
         },
         GRAVITY_TAB_OPENED: function () {
             (q = !0), (D = Date.now()), W && ((W = !1), (K = !1)), J < 5 && J++;
@@ -532,7 +536,7 @@ L(e_, 'displayName', 'GravityStore'),
         SET_GRAVITY_SELECTED_CHANNEL: function (e) {
             Q = e.channelId;
         },
-        MESSAGE_REACTION_ADD: eg,
+        MESSAGE_REACTION_ADD: ef,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { messageId: t, reactions: n } = e,
                 i = H[t];
@@ -540,7 +544,7 @@ L(e_, 'displayName', 'GravityStore'),
             let r = p.default.getId();
             i.message = i.message.addReactionBatch(n, r);
         },
-        MESSAGE_REACTION_REMOVE: eg,
+        MESSAGE_REACTION_REMOVE: ef,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { messageId: t } = e,
                 n = H[t];
@@ -553,17 +557,21 @@ L(e_, 'displayName', 'GravityStore'),
             if (null == i || i.type !== x.Rr.MESSAGE) return !1;
             i.message = i.message.removeReactionsForEmoji(n);
         },
-        CHANNEL_ACK: ef,
-        MESSAGE_ACK: ef,
+        CHANNEL_ACK: e_,
+        MESSAGE_ACK: e_,
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t } = e;
             if (t !== y.YN.GLOBAL_FEED) return !1;
             if (!q) {
-                let [e, t] = ec(O);
-                ($ = e), (ee = t), ea(), (K = er(e));
+                let [e, t] = ed(P);
+                ($ = e), (ee = t), es(), (K = el(e));
             }
         },
         GRAVITY_JOINED_RECOMMENDED_GUILD: function () {
             ei = Date.now();
+        },
+        GRAVITY_SET_VIDEOS_MUTED: function (e) {
+            let { muted: t } = e;
+            er = t;
         }
     }));

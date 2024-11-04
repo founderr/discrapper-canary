@@ -184,5 +184,11 @@ t.Z = {
         }),
     giveFeedback: () => r.Z.dispatch({ type: 'GRAVITY_FEEDBACK_GIVEN' }),
     clearReadStates: () => r.Z.dispatch({ type: 'CLEAR_GRAVITY_READ_STATES' }),
-    addedRecommendedGuild: () => r.Z.dispatch({ type: 'GRAVITY_JOINED_RECOMMENDED_GUILD' })
+    addedRecommendedGuild: () => r.Z.dispatch({ type: 'GRAVITY_JOINED_RECOMMENDED_GUILD' }),
+    setVideosMuted(e) {
+        r.Z.dispatch({
+            type: 'GRAVITY_SET_VIDEOS_MUTED',
+            muted: e
+        });
+    }
 };
