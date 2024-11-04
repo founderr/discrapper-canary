@@ -45,7 +45,8 @@ function f(e) {
             data: t,
             theme: 'light' === n ? m : h,
             invertTheme: !1,
-            valueRenderer: x
+            valueRenderer: x,
+            shouldExpandNode: () => !0
         })
     });
 }
