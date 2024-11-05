@@ -129,16 +129,6 @@ class A extends o.Z {
     setPipOpen(e) {
         return ((this.pipOpen = e), null != this.selectedParticipantId) ? this.update([this.selectedParticipantId]) : this.latestWants;
     }
-    setAppBackgrounded(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        for (let [r, i] of m.default.entries(this.streamIds))
-            if (((this.offscreenDisabledUsers[r] = e), null != i)) {
-                var n;
-                let r = !e || t;
-                null === (n = this.connection) || void 0 === n || n.setHasActiveVideoOutputSink(i, r);
-            }
-        return this.update();
-    }
     getOffscreenDisabledUsers() {
         return this.offscreenDisabledUsers;
     }

@@ -240,10 +240,6 @@ class es extends _.Z {
             t = this._socket;
         null != t && t.resetBackoff(e) && this._backoff.cancel();
     }
-    setAppBackgrounded(e, t) {
-        var n;
-        null === (n = this._localMediaSinkWantsManager) || void 0 === n || n.setAppBackgrounded(e, t);
-    }
     setSelectedParticipant(e) {
         var t;
         null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.setSelectedParticipant(e);
