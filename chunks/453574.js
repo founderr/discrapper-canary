@@ -36,7 +36,7 @@ let R = (0, a._I)((e = {}) => {
                                     let E = (function (e, t) {
                                         return (!t && e instanceof Request) || (e instanceof Request && e.bodyUsed) ? e : new Request(e, t);
                                     })(t, n);
-                                    f() && (([e, o] = N('Cookie', E)), ([a, i] = N('Set-Cookie', r)));
+                                    f() && (([e, o] = A('Cookie', E)), ([a, i] = A('Set-Cookie', r)));
                                     let c = d({
                                         url: E.url,
                                         method: E.method,
@@ -66,7 +66,7 @@ let R = (0, a._I)((e = {}) => {
                                         if (f()) {
                                             try {
                                                 let e = t.getResponseHeader('Set-Cookie') || t.getResponseHeader('set-cookie') || void 0;
-                                                e && (a = A(e));
+                                                e && (a = N(e));
                                             } catch (e) {
                                                 I.X && E.kg.log('Could not extract cookies from response headers');
                                             }
@@ -104,7 +104,7 @@ let R = (0, a._I)((e = {}) => {
         }
     };
 });
-function N(e, t) {
+function A(e, t) {
     let r;
     let n = (function (e) {
         let t = {};
@@ -117,13 +117,13 @@ function N(e, t) {
     })(t.headers);
     try {
         let t = n[e] || n[e.toLowerCase()] || void 0;
-        t && (r = A(t));
+        t && (r = N(t));
     } catch (t) {
         I.X && E.kg.log(`Could not extract cookies from header ${e}`);
     }
     return [n, r];
 }
-function A(e) {
+function N(e) {
     return e.split('; ').reduce((e, t) => {
         let [r, n] = t.split('=');
         return r && n && (e[r] = n), e;

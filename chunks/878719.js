@@ -3,7 +3,7 @@ r.d(t, {
         return c;
     },
     ME: function () {
-        return N;
+        return A;
     },
     aB: function () {
         return R;
@@ -47,14 +47,14 @@ function l(e, t) {
 }
 let u = /Minified React error #\d+;/i;
 function I(e, t, r, n) {
-    let a = N(e, t, (r && r.syntheticException) || void 0, n);
+    let a = A(e, t, (r && r.syntheticException) || void 0, n);
     return (0, o.EG)(a), (a.level = 'error'), r && r.event_id && (a.event_id = r.event_id), (0, i.WD)(a);
 }
 function R(e, t, r = 'info', n, a) {
-    let _ = A(e, t, (n && n.syntheticException) || void 0, a);
+    let _ = N(e, t, (n && n.syntheticException) || void 0, a);
     return (_.level = r), n && n.event_id && (_.event_id = n.event_id), (0, i.WD)(_);
 }
-function N(e, t, r, i, u) {
+function A(e, t, r, i, u) {
     let I;
     if ((0, _.VW)(t) && t.error) return s(e, t.error);
     if ((0, _.TX)(t) || (0, _.fm)(t)) {
@@ -62,7 +62,7 @@ function N(e, t, r, i, u) {
         else {
             let n = t.name || ((0, _.TX)(t) ? 'DOMError' : 'DOMException'),
                 a = t.message ? `${n}: ${t.message}` : n;
-            (I = A(e, a, r, i)), (0, o.Db)(I, a);
+            (I = N(e, a, r, i)), (0, o.Db)(I, a);
         }
         return (
             'code' in t &&
@@ -125,9 +125,9 @@ function N(e, t, r, i, u) {
             })(e, t, r, u)),
             (0, o.EG)(I, { synthetic: !0 }),
             I)
-          : ((I = A(e, t, r, i)), (0, o.Db)(I, `${t}`, void 0), (0, o.EG)(I, { synthetic: !0 }), I);
+          : ((I = N(e, t, r, i)), (0, o.Db)(I, `${t}`, void 0), (0, o.EG)(I, { synthetic: !0 }), I);
 }
-function A(e, t, r, n) {
+function N(e, t, r, n) {
     let a = {};
     if (n && r) {
         let n = l(e, r);

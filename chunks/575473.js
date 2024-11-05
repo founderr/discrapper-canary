@@ -28,11 +28,11 @@ e.exports = function (e, t, r, n, c, l, u) {
         case '[object Set]':
             var R = 1 & n;
             if ((I || (I = E), e.size != t.size && !R)) break;
-            var N = u.get(e);
-            if (N) return N == t;
+            var A = u.get(e);
+            if (A) return A == t;
             (n |= 2), u.set(e, t);
-            var A = o(I(e), I(t), n, c, l, u);
-            return u.delete(e), A;
+            var N = o(I(e), I(t), n, c, l, u);
+            return u.delete(e), N;
         case '[object Symbol]':
             if (s) return s.call(e) == s.call(t);
     }

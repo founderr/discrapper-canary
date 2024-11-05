@@ -30,7 +30,7 @@ r.d(t, {
         return T;
     },
     zQ: function () {
-        return N;
+        return A;
     }
 });
 var n = r(967752),
@@ -114,7 +114,7 @@ function I(e) {
 function R(e) {
     return [{ type: 'span' }, e];
 }
-function N(e) {
+function A(e) {
     let t = 'string' == typeof e.data ? l(e.data) : e.data;
     return [
         (0, _.Jr)({
@@ -127,7 +127,7 @@ function N(e) {
         t
     ];
 }
-let A = {
+let N = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -145,7 +145,7 @@ let A = {
     statsd: 'metric_bucket'
 };
 function T(e) {
-    return A[e];
+    return N[e];
 }
 function d(e) {
     if (!e || !e.sdk) return;

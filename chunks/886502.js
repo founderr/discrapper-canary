@@ -10,7 +10,7 @@ var n = r(620014),
     u = '[object Array]',
     I = '[object Object]',
     R = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, r, N, A, T) {
+e.exports = function (e, t, r, A, N, T) {
     var d = E(e),
         f = E(t),
         L = d ? u : i(e),
@@ -23,15 +23,15 @@ e.exports = function (e, t, r, N, A, T) {
         if (!c(t)) return !1;
         (d = !0), (p = !1);
     }
-    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, N, A, T) : _(e, t, L, r, N, A, T);
+    if (S && !p) return T || (T = new n()), d || s(e) ? a(e, t, r, A, N, T) : _(e, t, L, r, A, N, T);
     if (!(1 & r)) {
         var D = p && R.call(e, '__wrapped__'),
             C = h && R.call(t, '__wrapped__');
         if (D || C) {
             var g = D ? e.value() : e,
                 U = C ? t.value() : t;
-            return T || (T = new n()), A(g, U, r, N, T);
+            return T || (T = new n()), N(g, U, r, A, T);
         }
     }
-    return !!S && (T || (T = new n()), o(e, t, r, N, A, T));
+    return !!S && (T || (T = new n()), o(e, t, r, A, N, T));
 };

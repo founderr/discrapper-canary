@@ -3,7 +3,7 @@ r.d(t, {
         return T;
     },
     N: function () {
-        return N;
+        return A;
     }
 });
 var n = r(263449),
@@ -18,17 +18,17 @@ var n = r(263449),
     u = r(108185);
 let I = [],
     R = new Map();
-function N() {
+function A() {
     if ((0, u.QV)() && i.Z1) {
         let e = (function () {
             return (0, l.YF)(({ metric: e }) => {
                 let t,
                     r = (0, n.s3)();
                 if (!r || void 0 == e.value) return;
-                let l = e.entries.find((t) => t.duration === e.value && A[t.name]);
+                let l = e.entries.find((t) => t.duration === e.value && N[t.name]);
                 if (!l) return;
                 let { interactionId: I } = l,
-                    N = A[l.name],
+                    A = N[l.name],
                     T = r.getOptions(),
                     d = (0, u.XL)(i.Z1 + l.startTime),
                     f = (0, u.XL)(e.value),
@@ -58,7 +58,7 @@ function N() {
                     }),
                     G = (0, o.qp)({
                         name: P,
-                        op: `ui.interaction.${N}`,
+                        op: `ui.interaction.${A}`,
                         attributes: M,
                         startTime: d,
                         experimental: { standalone: !0 }
@@ -76,7 +76,7 @@ function N() {
     }
     return () => void 0;
 }
-let A = {
+let N = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',

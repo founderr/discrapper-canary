@@ -48,7 +48,7 @@ var n = (function (e) {
     function R(e) {
         return e > 0 ? Math.floor(e) : Math.ceil(e);
     }
-    function N(e, t) {
+    function A(e, t) {
         var r,
             n,
             a = e.length,
@@ -59,8 +59,8 @@ var n = (function (e) {
         for (; n < a; ) (i = 10000000 === (r = e[n] + i) ? 1 : 0), (o[n++] = r - 10000000 * i);
         return i > 0 && o.push(i), o;
     }
-    function A(e, t) {
-        return e.length >= t.length ? N(e, t) : N(t, e);
+    function N(e, t) {
+        return e.length >= t.length ? A(e, t) : A(t, e);
     }
     function T(e, t) {
         var r,
@@ -98,7 +98,7 @@ var n = (function (e) {
             if (this.sign !== t.sign) return this.subtract(t.negate());
             var r = this.value,
                 n = t.value;
-            return t.isSmall ? new o(T(r, Math.abs(n)), this.sign) : new o(A(r, n), this.sign);
+            return t.isSmall ? new o(T(r, Math.abs(n)), this.sign) : new o(N(r, n), this.sign);
         }),
         (o.prototype.plus = o.prototype.add),
         (i.prototype.add = function (e) {
@@ -243,8 +243,8 @@ var n = (function (e) {
                           i = r.slice(0, n),
                           E = e(_, i),
                           c = e(a, o),
-                          s = e(A(_, a), A(i, o)),
-                          l = A(A(E, p(d(d(s, E), c), n)), p(c, 2 * n));
+                          s = e(N(_, a), N(i, o)),
+                          l = N(N(E, p(d(d(s, E), c), n)), p(c, 2 * n));
                       return u(l), l;
                   })(i, E),
                   c
@@ -291,26 +291,26 @@ var n = (function (e) {
             n,
             c = F(t);
         if (a) return [new E(e.value / c.value), new E(e.value % c.value)];
-        var N = e.value,
-            A = c.value;
-        if (0 === A) throw Error('Cannot divide by zero');
-        if (e.isSmall) return c.isSmall ? [new i(R(N / A)), new i(N % A)] : [_[0], e];
+        var A = e.value,
+            N = c.value;
+        if (0 === N) throw Error('Cannot divide by zero');
+        if (e.isSmall) return c.isSmall ? [new i(R(A / N)), new i(A % N)] : [_[0], e];
         if (c.isSmall) {
-            if (1 === A) return [e, _[0]];
-            if (-1 == A) return [e.negate(), _[0]];
-            var T = Math.abs(A);
+            if (1 === N) return [e, _[0]];
+            if (-1 == N) return [e.negate(), _[0]];
+            var T = Math.abs(N);
             if (T < 10000000) {
-                r = l((n = D(N, T))[0]);
+                r = l((n = D(A, T))[0]);
                 var f = n[1];
                 return (e.sign && (f = -f), 'number' == typeof r) ? (e.sign !== c.sign && (r = -r), [new i(r), new i(f)]) : [new o(r, e.sign !== c.sign), new i(f)];
             }
-            A = s(T);
+            N = s(T);
         }
-        var L = g(N, A);
+        var L = g(A, N);
         if (-1 === L) return [_[0], e];
         if (0 === L) return [_[e.sign === c.sign ? 1 : -1], _[0]];
         r = (n =
-            N.length + A.length <= 200
+            A.length + N.length <= 200
                 ? (function (e, t) {
                       var r,
                           n,
@@ -323,19 +323,19 @@ var n = (function (e) {
                           s = t.length,
                           u = I(t.length),
                           R = t[s - 1],
-                          N = Math.ceil(10000000 / (2 * R)),
-                          A = O(e, N),
-                          T = O(t, N);
-                      for (A.length <= c && A.push(0), T.push(0), R = T[s - 1], n = c - s; n >= 0; n--) {
-                          for (r = 10000000 - 1, A[n + s] !== R && (r = Math.floor((10000000 * A[n + s] + A[n + s - 1]) / R)), a = 0, _ = 0, i = T.length, o = 0; o < i; o++) (a += r * T[o]), (E = Math.floor(a / 10000000)), (_ += A[n + o] - (a - 10000000 * E)), (a = E), _ < 0 ? ((A[n + o] = _ + 10000000), (_ = -1)) : ((A[n + o] = _), (_ = 0));
+                          A = Math.ceil(10000000 / (2 * R)),
+                          N = O(e, A),
+                          T = O(t, A);
+                      for (N.length <= c && N.push(0), T.push(0), R = T[s - 1], n = c - s; n >= 0; n--) {
+                          for (r = 10000000 - 1, N[n + s] !== R && (r = Math.floor((10000000 * N[n + s] + N[n + s - 1]) / R)), a = 0, _ = 0, i = T.length, o = 0; o < i; o++) (a += r * T[o]), (E = Math.floor(a / 10000000)), (_ += N[n + o] - (a - 10000000 * E)), (a = E), _ < 0 ? ((N[n + o] = _ + 10000000), (_ = -1)) : ((N[n + o] = _), (_ = 0));
                           for (; 0 !== _; ) {
-                              for (r -= 1, a = 0, o = 0; o < i; o++) (a += A[n + o] - 10000000 + T[o]) < 0 ? ((A[n + o] = a + 10000000), (a = 0)) : ((A[n + o] = a), (a = 1));
+                              for (r -= 1, a = 0, o = 0; o < i; o++) (a += N[n + o] - 10000000 + T[o]) < 0 ? ((N[n + o] = a + 10000000), (a = 0)) : ((N[n + o] = a), (a = 1));
                               _ += a;
                           }
                           u[n] = r;
                       }
-                      return (A = D(A, N)[0]), [l(u), l(A)];
-                  })(N, A)
+                      return (N = D(N, A)[0]), [l(u), l(N)];
+                  })(A, N)
                 : (function (e, t) {
                       for (var r, n, a, _, o, i = e.length, E = t.length, c = [], s = []; i; ) {
                           if ((s.unshift(e[--i]), u(s), 0 > g(s, t))) {
@@ -350,7 +350,7 @@ var n = (function (e) {
                           c.push(r), (s = d(s, o));
                       }
                       return c.reverse(), [l(c), l(s)];
-                  })(N, A))[0];
+                  })(A, N))[0];
         var p = e.sign !== c.sign,
             h = n[1],
             S = e.sign;
@@ -848,7 +848,7 @@ var n = (function (e) {
         }
         if (!/^([0-9][0-9]*)$/.test(e)) throw Error('Invalid integer: ' + e);
         if (a) return new E(BigInt(r ? '-' + e : e));
-        for (var I = [], N = e.length, A = N - 7; N > 0; ) I.push(+e.slice(A, N)), (A -= 7) < 0 && (A = 0), (N -= 7);
+        for (var I = [], A = e.length, N = A - 7; A > 0; ) I.push(+e.slice(N, A)), (N -= 7) < 0 && (N = 0), (A -= 7);
         return u(I), new o(I, r);
     }
     (o.prototype.toArray = function (e) {

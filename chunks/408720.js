@@ -15,8 +15,8 @@ var n = r(469359),
     u = r(622916),
     I = r(467510),
     R = r(954211),
-    N = r(886115),
-    A = r(873567),
+    A = r(886115),
+    N = r(873567),
     T = r(454463),
     d = r(163162);
 let f = (0, o._I)((e = {}) => {
@@ -44,11 +44,11 @@ let f = (0, o._I)((e = {}) => {
                                     logger: 'console'
                                 },
                                 level: (0, R.V)(t.level),
-                                message: (0, N.nK)(t.args, ' ')
+                                message: (0, A.nK)(t.args, ' ')
                             };
                             if ('assert' === t.level) {
                                 if (!1 !== t.args[0]) return;
-                                (r.message = `Assertion failed: ${(0, N.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
+                                (r.message = `Assertion failed: ${(0, A.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (r.data.arguments = t.args.slice(1));
                             }
                             (0, E.n)(r, {
                                 input: t.args,
@@ -180,9 +180,9 @@ let f = (0, o._I)((e = {}) => {
                                 if ((0, i.s3)() !== e) return;
                                 let r = t.from,
                                     n = t.to,
-                                    a = (0, A.en)(d.m9.location.href),
-                                    _ = r ? (0, A.en)(r) : void 0,
-                                    o = (0, A.en)(n);
+                                    a = (0, N.en)(d.m9.location.href),
+                                    _ = r ? (0, N.en)(r) : void 0,
+                                    o = (0, N.en)(n);
                                 (!_ || !_.path) && (_ = a),
                                     a.protocol === o.protocol && a.host === o.host && (n = o.relative),
                                     a.protocol === _.protocol && a.host === _.host && (r = _.relative),

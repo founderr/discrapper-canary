@@ -42,8 +42,8 @@ var n,
     u = r(454463),
     I = r(163162);
 let R = String(0),
-    N = '',
     A = '',
+    N = '',
     T = '',
     d = (I.m9.navigator && I.m9.navigator.userAgent) || '',
     f = '',
@@ -52,7 +52,7 @@ let R = String(0),
 if ('object' == typeof (n = O) && null !== n && 'getHighEntropyValues' in n)
     O.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((e) => {
-            if (((N = e.platform || ''), (T = e.architecture || ''), (f = e.model || ''), (A = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
+            if (((A = e.platform || ''), (T = e.architecture || ''), (f = e.model || ''), (N = e.platformVersion || ''), e.fullVersionList && e.fullVersionList.length > 0)) {
                 let t = e.fullVersionList[e.fullVersionList.length - 1];
                 d = `${t.brand} ${t.version}`;
             }
@@ -186,8 +186,8 @@ function M(e, t, r, n) {
                       version: I.m9.navigator.userAgent
                   },
                   os: {
-                      name: N,
-                      version: A,
+                      name: A,
+                      version: N,
                       build_number: d
                   },
                   device: {

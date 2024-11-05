@@ -30,8 +30,8 @@ var n = r(370541),
     u = r(73453),
     I = r(99342),
     R = r(696486),
-    N = r(305625),
-    A = r(966497),
+    A = r(305625),
+    N = r(966497),
     T = r(787659),
     d = r(789112),
     f = r(275689),
@@ -166,7 +166,7 @@ function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
         })(e, n, t)),
             (0, R.j5)(e, a);
     else if (e) {
-        let r = (0, N.jC)(e),
+        let r = (0, A.jC)(e),
             { traceId: _, spanId: o } = e.spanContext(),
             i = (0, R.Tt)(e);
         (a = m(
@@ -178,7 +178,7 @@ function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
             n,
             i
         )),
-            (0, N.Lh)(a, r);
+            (0, A.Lh)(a, r);
     } else {
         let {
             traceId: e,
@@ -198,9 +198,9 @@ function P({ parentSpan: e, spanArguments: t, forceTransaction: r, scope: n }) {
             n,
             i
         )),
-            r && (0, N.Lh)(a, r);
+            r && (0, A.Lh)(a, r);
     }
-    return (0, A.Z)(a), (0, O.YJ)(a, n, _), a;
+    return (0, N.Z)(a), (0, O.YJ)(a, n, _), a;
 }
 function M(e) {
     let t = {

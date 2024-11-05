@@ -3,7 +3,7 @@ r.d(t, {
         return R;
     },
     R: function () {
-        return N;
+        return A;
     }
 });
 var n = r(101284),
@@ -22,10 +22,10 @@ let R = {
     finalTimeout: 30000,
     childSpanTimeout: 15000
 };
-function N(e, t = {}) {
+function A(e, t = {}) {
     let r;
-    let N = new Map(),
-        A = !1,
+    let A = new Map(),
+        N = !1,
         T = 'externalFinish',
         d = !t.disableAutoFinish,
         f = [],
@@ -44,12 +44,12 @@ function N(e, t = {}) {
     function P(e) {
         U(),
             (r = setTimeout(() => {
-                !A && 0 === N.size && d && ((T = 'idleTimeout'), g.end(e));
+                !N && 0 === A.size && d && ((T = 'idleTimeout'), g.end(e));
             }, L));
     }
     function M(e) {
         r = setTimeout(() => {
-            !A && d && ((T = 'heartbeatFailed'), g.end(e));
+            !N && d && ((T = 'heartbeatFailed'), g.end(e));
         }, p);
     }
     g.end = new Proxy(g.end, {
@@ -68,7 +68,7 @@ function N(e, t = {}) {
         }
     });
     function G(e) {
-        (A = !0), N.clear(), f.forEach((e) => e()), (0, c.D)(D, C);
+        (N = !0), A.clear(), f.forEach((e) => e()), (0, c.D)(D, C);
         let t = (0, s.XU)(g),
             { start_timestamp: r } = t;
         if (!r) return;
@@ -97,10 +97,10 @@ function N(e, t = {}) {
     return (
         f.push(
             S.on('spanStart', (e) => {
-                if (!A && e !== g && !(0, s.XU)(e).timestamp) {
+                if (!N && e !== g && !(0, s.XU)(e).timestamp) {
                     if ((0, s.Dp)(g).includes(e)) {
                         var t;
-                        (t = e.spanContext().spanId), U(), N.set(t, !0), M((0, n.ph)() + p / 1000);
+                        (t = e.spanContext().spanId), U(), A.set(t, !0), M((0, n.ph)() + p / 1000);
                     }
                 }
             })
@@ -108,17 +108,17 @@ function N(e, t = {}) {
         f.push(
             S.on('spanEnd', (e) => {
                 var t;
-                if (!A) (t = e.spanContext().spanId), N.has(t) && N.delete(t), 0 === N.size && P((0, n.ph)() + L / 1000);
+                if (!N) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && P((0, n.ph)() + L / 1000);
             })
         ),
         f.push(
             S.on('idleSpanEnableAutoFinish', (e) => {
-                e === g && ((d = !0), P(), N.size && M());
+                e === g && ((d = !0), P(), A.size && M());
             })
         ),
         !t.disableAutoFinish && P(),
         setTimeout(() => {
-            !A &&
+            !N &&
                 (g.setStatus({
                     code: u.jt,
                     message: 'deadline_exceeded'

@@ -1,73 +1,73 @@
-e.r(n),
-    e.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return m;
         }
     });
-var i = e(200651),
-    r = e(192379),
-    a = e(481060),
-    s = e(493683),
-    o = e(594174),
-    l = e(626135),
-    c = e(799352),
-    d = e(343544),
-    u = e(110223),
-    _ = e(981631),
-    x = e(388032);
-function m(t) {
-    var n;
-    let { channelId: e, blockedUserIds: m, transitionState: h, onClose: f } = t,
-        g = m.map((t) => o.default.getUser(t));
-    r.useEffect(() => {
-        l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-            channel_id: e,
+var a = n(200651),
+    i = n(192379),
+    s = n(481060),
+    r = n(493683),
+    o = n(594174),
+    l = n(626135),
+    d = n(799352),
+    c = n(343544),
+    u = n(110223),
+    x = n(981631),
+    _ = n(388032);
+function m(e) {
+    var t;
+    let { channelId: n, blockedUserIds: m, transitionState: h, onClose: f } = e,
+        g = m.map((e) => o.default.getUser(e));
+    i.useEffect(() => {
+        l.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
+            channel_id: n,
             warning_medium: u.WR.MODAL,
             blocked_user_ids: m
         });
-    }, [e, m]);
-    let N = g.length > 1,
+    }, [n, m]);
+    let j = g.length > 1,
         p = [
             {
-                icon: N ? (0, i.jsx)(a.GroupIcon, {}) : (0, i.jsx)(a.UserIcon, {}),
-                text: N ? x.intl.formatToPlainString(x.t.Zqlt5e, { blockedUserCount: g.length }) : x.intl.formatToPlainString(x.t.V0aCFx, { userName: null === (n = g[0]) || void 0 === n ? void 0 : n.username })
+                icon: j ? (0, a.jsx)(s.GroupIcon, {}) : (0, a.jsx)(s.UserIcon, {}),
+                text: j ? _.intl.formatToPlainString(_.t.Zqlt5e, { blockedUserCount: g.length }) : _.intl.formatToPlainString(_.t.V0aCFx, { userName: null === (t = g[0]) || void 0 === t ? void 0 : t.username })
             },
             {
-                icon: (0, i.jsx)(a.BellSlashIcon, {}),
-                text: x.intl.string(x.t['RIMw5+'])
+                icon: (0, a.jsx)(s.BellSlashIcon, {}),
+                text: _.intl.string(_.t['RIMw5+'])
             },
             {
-                icon: (0, i.jsx)(a.EnvelopeIcon, {}),
-                text: x.intl.string(x.t.bejNWF)
+                icon: (0, a.jsx)(s.EnvelopeIcon, {}),
+                text: _.intl.string(_.t.bejNWF)
             }
         ];
-    return (0, i.jsx)(d.Z, {
-        headerText: N ? x.intl.string(x.t.aJRlSU) : x.intl.string(x.t.rlBMub),
-        secondaryHeaderText: x.intl.string(x.t['mwJJ+f']),
+    return (0, a.jsx)(c.Z, {
+        headerText: j ? _.intl.string(_.t.aJRlSU) : _.intl.string(_.t.rlBMub),
+        secondaryHeaderText: _.intl.string(_.t['mwJJ+f']),
         infoRows: p,
         onDismissAndStay: () => {
             f(),
-                (0, c.O)(e),
-                l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                (0, d.O)(n),
+                l.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: u.q.CLICK_TO_STAY,
-                    channel_id: e,
+                    channel_id: n,
                     warning_medium: u.WR.MODAL,
                     blocked_user_ids: m
                 });
         },
         onDismissAndLeave: () => {
             f(),
-                (0, c.O)(e),
-                s.Z.closePrivateChannel(e, !0, !0),
-                l.default.track(_.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                (0, d.O)(n),
+                r.Z.closePrivateChannel(n, !0, !0),
+                l.default.track(x.rMx.GDM_BLOCKED_USER_WARNING_ENGAGEMENT, {
                     action: u.q.CLICK_TO_LEAVE,
-                    channel_id: e,
+                    channel_id: n,
                     warning_medium: u.WR.MODAL,
                     blocked_user_ids: m
                 });
         },
-        leaveButtonText: x.intl.string(x.t.I4q1kJ),
-        stayButtonText: x.intl.string(x.t.DRJhmZ),
+        leaveButtonText: _.intl.string(_.t.I4q1kJ),
+        stayButtonText: _.intl.string(_.t.DRJhmZ),
         transitionState: h,
         onClose: f
     });

@@ -40,7 +40,7 @@ r.r(t),
             return l.f;
         },
         browserApiErrorsIntegration: function () {
-            return N.t;
+            return A.t;
         },
         browserProfilingIntegration: function () {
             return P.x;
@@ -199,7 +199,7 @@ r.r(t),
             return n.eW;
         },
         lazyLoadIntegration: function () {
-            return A.R;
+            return N.R;
         },
         linkedErrorsIntegration: function () {
             return R.O;
@@ -343,8 +343,8 @@ var n = r(148503),
     u = r(804410),
     I = r(376457),
     R = r(42367),
-    N = r(515737),
-    A = r(27269),
+    A = r(515737),
+    N = r(27269),
     T = r(17411),
     d = r(453574),
     f = r(386797),

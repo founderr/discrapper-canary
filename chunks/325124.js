@@ -21,8 +21,8 @@ var n = r(650665),
     u = r(622916),
     I = r(370541),
     R = r(101284),
-    N = r(731889),
-    A = r(467510),
+    A = r(731889),
+    N = r(467510),
     T = r(454463),
     d = r(163162),
     f = r(119128),
@@ -43,8 +43,8 @@ let O = {
         let {
                 enableInp: t,
                 enableLongTask: r,
-                enableLongAnimationFrame: N,
-                _experiments: { enableInteractions: A },
+                enableLongAnimationFrame: A,
+                _experiments: { enableInteractions: N },
                 beforeStartSpan: p,
                 idleTimeout: C,
                 finalTimeout: g,
@@ -61,7 +61,7 @@ let O = {
                 ...e
             },
             w = (0, n.PR)();
-        t && (0, a.N)(), N && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(), A && (0, n.sn)();
+        t && (0, a.N)(), A && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, n.Jk)() : r && (0, n.Fv)(), N && (0, n.sn)();
         let B = {
             name: void 0,
             source: void 0
@@ -156,7 +156,7 @@ let O = {
                                     }));
                             })),
                     P && (0, f.j)(),
-                    A &&
+                    N &&
                         (function (e, t, r, n) {
                             let a;
                             d.m9.document &&
@@ -210,11 +210,11 @@ function h(e, t, r) {
     return 'pageload' === (n && (0, s.XU)(n).op) ? n : void 0;
 }
 function S(e, t) {
-    (0, c.aF)().setPropagationContext((0, N.Q)()), (0, c.nZ)().setPropagationContext((0, N.Q)()), e.emit('startNavigationSpan', t), (0, c.nZ)().setTransactionName(t.name);
+    (0, c.aF)().setPropagationContext((0, A.Q)()), (0, c.nZ)().setPropagationContext((0, A.Q)()), e.emit('startNavigationSpan', t), (0, c.nZ)().setTransactionName(t.name);
     let r = (0, s.HN)();
     return 'navigation' === (r && (0, s.XU)(r).op) ? r : void 0;
 }
 function D(e) {
-    let t = (0, A.qT)(`meta[name=${e}]`);
+    let t = (0, N.qT)(`meta[name=${e}]`);
     return t ? t.getAttribute('content') : void 0;
 }

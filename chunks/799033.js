@@ -18,8 +18,8 @@ var n = r(157079),
     u = r(263449),
     I = r(305625),
     R = r(64685),
-    N = r(873567),
-    A = r(101284),
+    A = r(873567),
+    N = r(101284),
     T = r(886115),
     d = r(370541),
     f = r(285883),
@@ -35,7 +35,7 @@ function S(e, t) {
     let {
             traceFetch: r,
             traceXHR: a,
-            shouldCreateSpanForRequest: A,
+            shouldCreateSpanForRequest: N,
             enableHTTPTimings: S,
             tracePropagationTargets: C
         } = {
@@ -43,7 +43,7 @@ function S(e, t) {
             traceXHR: h.traceXHR,
             ...t
         },
-        U = 'function' == typeof A ? A : (e) => !0,
+        U = 'function' == typeof N ? N : (e) => !0,
         P = (e) =>
             (function (e, t) {
                 let r = L.m9.location && L.m9.location.href;
@@ -87,7 +87,7 @@ function S(e, t) {
             let t = (0, _.m)(e, U, P, M);
             if ((e.response && e.fetchData.__span && O.set(e.response, e.fetchData.__span), t)) {
                 let r = g(e.fetchData.url),
-                    n = r ? (0, N.en)(r).host : void 0;
+                    n = r ? (0, A.en)(r).host : void 0;
                 t.setAttributes({
                     'http.url': r,
                     'server.address': n
@@ -101,8 +101,8 @@ function S(e, t) {
                     let _ = e.xhr,
                         R = _ && _[n.xU];
                     if (!_ || _.__sentry_own_request__ || !R) return;
-                    let A = (0, i.z)() && t(R.url);
-                    if (e.endTimestamp && A) {
+                    let N = (0, i.z)() && t(R.url);
+                    if (e.endTimestamp && N) {
                         let e = _.__sentry_xhr_span_id__;
                         if (!e) return;
                         let t = a[e];
@@ -110,10 +110,10 @@ function S(e, t) {
                         return;
                     }
                     let T = g(R.url),
-                        L = T ? (0, N.en)(T).host : void 0,
+                        L = T ? (0, A.en)(T).host : void 0,
                         O = !!(0, o.HN)(),
                         p =
-                            A && O
+                            N && O
                                 ? (0, c.qp)({
                                       name: `${R.method} ${R.url}`,
                                       attributes: {
@@ -189,14 +189,14 @@ function D(e) {
                             );
                         })(e.nextHopProtocol),
                         n = [];
-                    return (n.push(['network.protocol.version', r], ['network.protocol.name', t]), A.Z1) ? [...n, ['http.request.redirect_start', C(e.redirectStart)], ['http.request.fetch_start', C(e.fetchStart)], ['http.request.domain_lookup_start', C(e.domainLookupStart)], ['http.request.domain_lookup_end', C(e.domainLookupEnd)], ['http.request.connect_start', C(e.connectStart)], ['http.request.secure_connection_start', C(e.secureConnectionStart)], ['http.request.connection_end', C(e.connectEnd)], ['http.request.request_start', C(e.requestStart)], ['http.request.response_start', C(e.responseStart)], ['http.request.response_end', C(e.responseEnd)]] : n;
+                    return (n.push(['network.protocol.version', r], ['network.protocol.name', t]), N.Z1) ? [...n, ['http.request.redirect_start', C(e.redirectStart)], ['http.request.fetch_start', C(e.fetchStart)], ['http.request.domain_lookup_start', C(e.domainLookupStart)], ['http.request.domain_lookup_end', C(e.domainLookupEnd)], ['http.request.connect_start', C(e.connectStart)], ['http.request.secure_connection_start', C(e.secureConnectionStart)], ['http.request.connection_end', C(e.connectEnd)], ['http.request.request_start', C(e.requestStart)], ['http.request.response_start', C(e.responseStart)], ['http.request.response_end', C(e.responseEnd)]] : n;
                 })(n).forEach((t) => e.setAttribute(...t)),
                     setTimeout(r);
         });
     });
 }
 function C(e = 0) {
-    return ((A.Z1 || performance.timeOrigin) + e) / 1000;
+    return ((N.Z1 || performance.timeOrigin) + e) / 1000;
 }
 function g(e) {
     try {

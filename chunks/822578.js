@@ -3,7 +3,7 @@ r.d(t, {
         return I;
     },
     U0: function () {
-        return N;
+        return A;
     }
 });
 var n = r(394798),
@@ -16,7 +16,7 @@ var n = r(394798),
     s = r(574054),
     l = r(307854),
     u = r(396234);
-function I(e, t, r, I, N, A) {
+function I(e, t, r, I, A, N) {
     let { normalizeDepth: T = 3, normalizeMaxBreadth: d = 1000 } = e,
         f = {
             ...t,
@@ -35,7 +35,7 @@ function I(e, t, r, I, N, A) {
         (function (e, t) {
             t.length > 0 && ((e.sdk = e.sdk || {}), (e.sdk.integrations = [...(e.sdk.integrations || []), ...t]));
         })(f, L),
-        N && N.emit('applyFrameMetadata', t),
+        A && A.emit('applyFrameMetadata', t),
         void 0 === t.type &&
             (function (e, t) {
                 let r;
@@ -70,10 +70,10 @@ function I(e, t, r, I, N, A) {
         return r.update(t), r;
     })(I, r.captureContext);
     r.mechanism && (0, n.EG)(f, r.mechanism);
-    let p = N ? N.getEventProcessors() : [],
+    let p = A ? A.getEventProcessors() : [],
         h = (0, c.lW)().getScopeData();
-    if (A) {
-        let e = A.getScopeData();
+    if (N) {
+        let e = N.getScopeData();
         (0, u.yo)(h, e);
     }
     if (O) {
@@ -134,16 +134,16 @@ function I(e, t, r, I, N, A) {
     );
 }
 let R = new WeakMap();
-function N(e) {
+function A(e) {
     return e
         ? (function (e) {
               return e instanceof l.s || 'function' == typeof e;
           })(e) ||
           (function (e) {
-              return Object.keys(e).some((e) => A.includes(e));
+              return Object.keys(e).some((e) => N.includes(e));
           })(e)
             ? { captureContext: e }
             : e
         : void 0;
 }
-let A = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let N = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

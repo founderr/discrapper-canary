@@ -113,7 +113,7 @@ class R extends (r = u.ZP.Store) {
                 (E = {}),
                 (v = {}),
                 e.relationships.forEach((e) => {
-                    (g[e.id] = e.type), null != e.nickname && (E[e.id] = e.nickname), null != e.since && (v[e.id] = e.since), e.is_spam_request && (0, d.A)({ location: 'friend_request_spam_inbox' }) && I.add(e.id), (0, f.J)({ location: 'relationship_store' }) && e.user_ignored && S.add(e.id);
+                    (g[e.id] = e.type), null != e.nickname && (E[e.id] = e.nickname), null != e.since && (v[e.id] = e.since), e.is_spam_request && (0, d.A)({ location: 'friend_request_spam_inbox' }) && I.add(e.id), (0, f.JX)({ location: 'relationship_store' }) && e.user_ignored && S.add(e.id);
                 }),
                 C();
         },

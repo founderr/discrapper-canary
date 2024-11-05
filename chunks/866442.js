@@ -3,7 +3,7 @@ r.d(t, {
         return R;
     },
     FX: function () {
-        return N;
+        return A;
     },
     O: function () {
         return c;
@@ -24,7 +24,7 @@ r.d(t, {
         return s;
     },
     px: function () {
-        return A;
+        return N;
     },
     wK: function () {
         return l;
@@ -121,9 +121,9 @@ function I(e) {
 function R(e) {
     return 1 - (0.299 * ((e >> 16) & 255) + 0.587 * ((e >> 8) & 255) + 0.114 * (255 & e)) / 255;
 }
-function N(e) {
+function A(e) {
     return a().valid(e);
 }
-function A(e) {
+function N(e) {
     return [(e >> 16) & 255, (e >> 8) & 255, 255 & e];
 }

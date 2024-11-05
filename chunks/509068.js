@@ -30,8 +30,8 @@ var n = r(636361),
     u = r(694043),
     I = r(688838),
     R = r(393523),
-    N = r(833772),
-    A = r(454463),
+    A = r(833772),
+    N = r(454463),
     T = r(163162),
     d = r(408720),
     f = r(515737),
@@ -70,19 +70,19 @@ function C(e = {}) {
         });
         return;
     }
-    A.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
+    N.X && !(0, u.Ak)() && l.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
     let r = {
             ...t,
             stackParser: (0, I.Sq)(t.stackParser || h.Dt),
             integrations: (0, o.m8)(t),
             transport: t.transport || S.f
         },
-        n = (0, i.M)(N.R, r);
+        n = (0, i.M)(A.R, r);
     return (
         t.autoSessionTracking &&
             (function () {
                 if (void 0 === T.m9.document) {
-                    A.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
+                    N.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
                 (0, c.yj)({ ignoreDuration: !0 }),
@@ -96,14 +96,14 @@ function C(e = {}) {
 }
 function g(e = {}) {
     if (!T.m9.document) {
-        A.X && l.kg.error('Global document not defined in showReportDialog call');
+        N.X && l.kg.error('Global document not defined in showReportDialog call');
         return;
     }
     let t = (0, E.nZ)(),
         r = t.getClient(),
         n = r && r.getDsn();
     if (!n) {
-        A.X && l.kg.error('DSN not configured for showReportDialog call');
+        N.X && l.kg.error('DSN not configured for showReportDialog call');
         return;
     }
     if (
@@ -132,7 +132,7 @@ function g(e = {}) {
         T.m9.addEventListener('message', e);
     }
     let o = T.m9.document.head || T.m9.document.body;
-    o ? o.appendChild(a) : A.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
+    o ? o.appendChild(a) : N.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
 function U() {}
 function P(e) {

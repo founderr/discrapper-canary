@@ -19,5 +19,5 @@ var i = n(424602),
     f = n(91641),
     _ = n(598984),
     E = n(987338);
-let I = [_.NR, _.ZI, _.Ob, _.uc, _.m1, s.J$, i.zQ, i.Kv, c.bb, m.g, h.O, u.w, i._f, r.Z, a.I, a.E, p.l, o.gh, l.w, g.S, d.m],
+let I = [_.NR, _.ZI, _.Ob, _.uc, _.m1, s.J$, i.zQ, i.Kv, c.bb, m.g, h.O, u.w, i._f, r.Z, a.I, a.E, p.l, o.gh, l.w, g.S2, d.m],
     C = new f.E(I, E.$P.CONNECTION_OPEN, { location: 'app open' });

@@ -12,7 +12,7 @@ e.exports = function (e, t) {
         u = !r && !s && !l && E(e),
         I = r || s || l || u,
         R = I ? n(e.length, String) : [],
-        N = R.length;
-    for (var A in e) (t || c.call(e, A)) && !(I && ('length' == A || (l && ('offset' == A || 'parent' == A)) || (u && ('buffer' == A || 'byteLength' == A || 'byteOffset' == A)) || i(A, N))) && R.push(A);
+        A = R.length;
+    for (var N in e) (t || c.call(e, N)) && !(I && ('length' == N || (l && ('offset' == N || 'parent' == N)) || (u && ('buffer' == N || 'byteLength' == N || 'byteOffset' == N)) || i(N, A))) && R.push(N);
     return R;
 };

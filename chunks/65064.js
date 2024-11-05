@@ -10,8 +10,8 @@ var n = r(135839),
     u = '[object Set]',
     I = '[object WeakMap]',
     R = '[object DataView]',
-    N = c(n),
-    A = c(a),
+    A = c(n),
+    N = c(a),
     T = c(_),
     d = c(o),
     f = c(i),
@@ -23,9 +23,9 @@ var n = r(135839),
             n = r ? c(r) : '';
         if (n)
             switch (n) {
-                case N:
-                    return R;
                 case A:
+                    return R;
+                case N:
                     return s;
                 case T:
                     return l;

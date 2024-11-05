@@ -56,16 +56,16 @@ function i(e, t = 100, r = Infinity) {
                     return e('', t, I - 1, E, c);
                 } catch (e) {}
             let R = Array.isArray(r) ? [] : {},
-                N = 0,
-                A = (0, _.Sh)(r);
-            for (let t in A) {
-                if (!Object.prototype.hasOwnProperty.call(A, t)) continue;
-                if (N >= E) {
+                A = 0,
+                N = (0, _.Sh)(r);
+            for (let t in N) {
+                if (!Object.prototype.hasOwnProperty.call(N, t)) continue;
+                if (A >= E) {
                     R[t] = '[MaxProperties ~]';
                     break;
                 }
-                let r = A[t];
-                (R[t] = e(t, r, I - 1, E, c)), N++;
+                let r = N[t];
+                (R[t] = e(t, r, I - 1, E, c)), A++;
             }
             return l(r), R;
         })('', e, t, r);

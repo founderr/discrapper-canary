@@ -95,7 +95,7 @@ function R(e, t, r) {
     }
 }
 'undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (e, t, r) => ('map' === t && console.error(l), Reflect.get(e, t, r)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
-function N(e, t, r, n, a) {
+function A(e, t, r, n, a) {
     var _;
     if (!e) return !1;
     let o = (_ = e) ? (_.nodeType === _.ELEMENT_NODE ? _ : _.parentElement) : null;
@@ -109,9 +109,9 @@ function N(e, t, r, n, a) {
         l = -1;
     return !(E < 0) && (n && (l = c(o, s(null, n))), (!!(E > -1) && !!(l < 0)) || E < l);
 }
-let A = {};
+let N = {};
 function T(e) {
-    let t = A[e];
+    let t = N[e];
     if (t) return t;
     let r = window.document,
         n = window[e];
@@ -122,7 +122,7 @@ function T(e) {
             let a = t.contentWindow;
             a && a[e] && (n = a[e]), r.head.removeChild(t);
         } catch (e) {}
-    return (A[e] = n.bind(window));
+    return (N[e] = n.bind(window));
 }
 function d(...e) {
     return T('requestAnimationFrame')(...e);
@@ -215,7 +215,7 @@ function M(e, t, r, n, a) {
     try {
         let o = R(e.HTMLCanvasElement.prototype, 'getContext', function (e) {
             return function (_, ...o) {
-                if (!N(this, t, r, n, !0)) {
+                if (!A(this, t, r, n, !0)) {
                     var i;
                     let e = ((i = _), 'experimental-webgl' === i ? 'webgl' : i);
                     if ((!('__context' in this) && (this.__context = e), a && ['webgl', 'webgl2'].includes(e))) {
@@ -245,7 +245,7 @@ function G(e, t, r, n, a, _, o, i) {
                 let c = R(e, o, function (e) {
                     return function (...E) {
                         let c = e.apply(this, E);
-                        if ((g(c, i, this), 'tagName' in this.canvas && !N(this.canvas, n, a, _, !0))) {
+                        if ((g(c, i, this), 'tagName' in this.canvas && !A(this.canvas, n, a, _, !0))) {
                             let e = U(E, i, this),
                                 n = {
                                     type: t,
@@ -419,7 +419,7 @@ class m {
                         let i = R(t.CanvasRenderingContext2D.prototype, o, function (_) {
                             return function (...i) {
                                 return (
-                                    !N(this.canvas, r, n, a, !0) &&
+                                    !A(this.canvas, r, n, a, !0) &&
                                         f(() => {
                                             let r = U(i, t, this);
                                             e(this.canvas, {
@@ -480,7 +480,7 @@ class m {
                 let t = [],
                     _ = (e) => {
                         e.querySelectorAll('canvas').forEach((e) => {
-                            !N(e, r, n, a, !0) && t.push(e);
+                            !A(e, r, n, a, !0) && t.push(e);
                         });
                     };
                 for (let e of this.windows) {

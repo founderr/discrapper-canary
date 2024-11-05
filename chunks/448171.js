@@ -15,8 +15,8 @@ var n = r(967752),
     u = r(510529),
     I = r(263449),
     R = r(255768),
-    N = r(380132),
-    A = r(151122),
+    A = r(380132),
+    N = r(151122),
     T = r(112797),
     d = r(305625),
     f = r(820754),
@@ -98,17 +98,17 @@ class p {
     }
     addIntegration(e) {
         let t = this._integrations[e.name];
-        (0, A.m7)(this, e, this._integrations), !t && (0, A.uf)(this, [e]);
+        (0, N.m7)(this, e, this._integrations), !t && (0, N.uf)(this, [e]);
     }
     sendEvent(e, t = {}) {
         this.emit('beforeSendEvent', e, t);
-        let r = (0, N.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
+        let r = (0, A.Mq)(e, this._dsn, this._options._metadata, this._options.tunnel);
         for (let e of t.attachments || []) r = (0, E.BO)(r, (0, E.zQ)(e));
         let n = this.sendEnvelope(r);
         n && n.then((t) => this.emit('afterSendEvent', e, t), null);
     }
     sendSession(e) {
-        let t = (0, N.Q3)(e, this._dsn, this._options._metadata, this._options.tunnel);
+        let t = (0, A.Q3)(e, this._dsn, this._options._metadata, this._options.tunnel);
         this.sendEnvelope(t);
     }
     recordDroppedEvent(e, t, r) {
@@ -137,7 +137,7 @@ class p {
     }
     _setupIntegrations() {
         let { integrations: e } = this._options;
-        (this._integrations = (0, A.q4)(this, e)), (0, A.uf)(this, e);
+        (this._integrations = (0, N.q4)(this, e)), (0, N.uf)(this, e);
     }
     _updateSessionFromEvent(e, t) {
         let r = !1,

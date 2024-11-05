@@ -29,8 +29,8 @@ var E = r(622916),
     u = r(661129),
     I = r(231550),
     R = r(428983),
-    N = r(622574),
-    A = r(288570);
+    A = r(622574),
+    N = r(288570);
 let T = {},
     d = {};
 function f(e, t = !1) {
@@ -55,7 +55,7 @@ function S(e, t) {
             ((function (e) {
                 let t = {};
                 'event' === e && (t.durationThreshold = 0),
-                    (0, N.N)(
+                    (0, A.N)(
                         e,
                         (t) => {
                             D(e, { entries: t });
@@ -106,7 +106,7 @@ function U() {
     );
 }
 function P() {
-    return (0, A.m)((e) => {
+    return (0, N.m)((e) => {
         D('ttfb', { metric: e }), (o = e);
     });
 }

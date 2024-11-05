@@ -24,7 +24,7 @@ t.Z = {
             C = h.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === h.Z.getCurrentClientVoiceChannelId(t.guild_id),
             O = u.Z.getBlockedUsersForVoiceChannel(t.id);
-        return ((0, l.M)(t.id) && (y = !0), y || S || v || !(O.size > 0))
+        return ((0, l.B)(t.id) && (y = !0), y || S || v || !(O.size > 0))
             ? !b && !S && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.openModalLazy)(async () => {

@@ -36,7 +36,7 @@ r.d(t, {
         return T;
     },
     GZ: function () {
-        return N;
+        return A;
     },
     H0: function () {
         return ep;
@@ -81,7 +81,7 @@ r.d(t, {
         return eK;
     },
     S7: function () {
-        return A;
+        return N;
     },
     Sk: function () {
         return a;
@@ -93,7 +93,7 @@ r.d(t, {
         return I;
     },
     U9: function () {
-        return eA;
+        return eN;
     },
     Uk: function () {
         return eh;
@@ -153,7 +153,7 @@ r.d(t, {
         return S;
     },
     rx: function () {
-        return eN;
+        return eA;
     },
     tN: function () {
         return _;
@@ -190,8 +190,8 @@ var n,
     u,
     I,
     R,
-    N,
     A,
+    N,
     T,
     d,
     f,
@@ -246,8 +246,8 @@ let el = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
     eu = location.protocol + '//discord.gg',
     eI = 'discord.com',
     eR = 'support.discord.com',
-    eN = 'support-dev.discord.com',
-    eA = 'discord.com';
+    eA = 'support-dev.discord.com',
+    eN = 'discord.com';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
     DARK_PURPLE: '#697ec4',
@@ -365,13 +365,13 @@ let eL = new Map([
     }),
     ((V = R || (R = {}))[(V.DISCOVERY = 0)] = 'DISCOVERY'),
     (V[(V.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((k = N || (N = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
+    ((k = A || (A = {}))[(k.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
     (k[(k.ONE_TIME = 1)] = 'ONE_TIME');
 let eg = Object.freeze({
     0: 'subscription',
     1: 'sku'
 });
-((F = A || (A = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
+((F = N || (N = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
 let eU = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
@@ -608,14 +608,14 @@ let eW = 'token',
         STATUS: 'https://discordstatus.com',
         HELP_AND_SUPPORT: '//'.concat(eR, '/hc/en-us'),
         FEEDBACK: '//'.concat('feedback.discord.com'),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(eA),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eA),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eA),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(eA),
+        EMAIL_SUPPORT: 'mailto:support@'.concat(eN),
+        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(eN),
+        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(eN),
+        EMAIL_JOBS: 'mailto:jobs@'.concat(eN),
         DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
         VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
         BASE_URL: 'https://'.concat(eI),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(eA),
+        PRESS_INQUIRIES: 'mailto:press@'.concat(eN),
         CONTACT_US: 'https://dis.gd/contact',
         DEV_LANDING: '/build',
         DEV_PORTAL: '/developers',

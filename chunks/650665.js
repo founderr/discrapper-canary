@@ -26,22 +26,22 @@ var _ = r(696486),
     u = r(873567),
     I = r(665909),
     R = r(395848),
-    N = r(501684),
-    A = r(108185),
+    A = r(501684),
+    N = r(108185),
     T = r(896247),
     d = r(416987);
 let f = 0,
     L = {};
 function O() {
-    let e = (0, A.QV)();
+    let e = (0, N.QV)();
     if (e && c.Z1) {
         e.mark && R.m.performance.mark('sentry-tracing-init');
         let t = (function () {
-                return (0, N.to)(({ metric: e }) => {
+                return (0, A.to)(({ metric: e }) => {
                     let t = e.entries[e.entries.length - 1];
                     if (!t) return;
-                    let r = (0, A.XL)(c.Z1),
-                        n = (0, A.XL)(t.startTime);
+                    let r = (0, N.XL)(c.Z1),
+                        n = (0, N.XL)(t.startTime);
                     I.X && l.kg.log('[Measurements] Adding FID'),
                         (L.fid = {
                             value: e.value,
@@ -54,7 +54,7 @@ function O() {
                 });
             })(),
             r = (function () {
-                return (0, N.PR)(({ metric: e }) => {
+                return (0, A.PR)(({ metric: e }) => {
                     let t = e.entries[e.entries.length - 1];
                     if (!!t)
                         I.X && l.kg.log('[Measurements] Adding CLS'),
@@ -66,7 +66,7 @@ function O() {
                 }, !0);
             })(),
             _ = (function () {
-                return (0, N.$A)(({ metric: e }) => {
+                return (0, A.$A)(({ metric: e }) => {
                     let t = e.entries[e.entries.length - 1];
                     if (!!t)
                         I.X && l.kg.log('[Measurements] Adding LCP'),
@@ -78,7 +78,7 @@ function O() {
                 }, !0);
             })(),
             o = (function () {
-                return (0, N._4)(({ metric: e }) => {
+                return (0, A._4)(({ metric: e }) => {
                     if (!!e.entries[e.entries.length - 1])
                         I.X && l.kg.log('[Measurements] Adding TTFB'),
                             (L.ttfb = {
@@ -94,11 +94,11 @@ function O() {
     return () => void 0;
 }
 function p() {
-    (0, N._j)('longtask', ({ entries: e }) => {
+    (0, A._j)('longtask', ({ entries: e }) => {
         for (let t of e) {
             if (!(0, _.HN)()) return;
-            let e = (0, A.XL)(c.Z1 + t.startTime),
-                r = (0, A.XL)(t.duration),
+            let e = (0, N.XL)(c.Z1 + t.startTime),
+                r = (0, N.XL)(t.duration),
                 n = (0, o.qp)({
                     name: 'Main UI thread blocked',
                     op: 'ui.long-task',
@@ -113,8 +113,8 @@ function h() {
     new PerformanceObserver((e) => {
         for (let t of e.getEntries()) {
             if (!(0, _.HN)() || !t.scripts[0]) return;
-            let e = (0, A.XL)(c.Z1 + t.startTime),
-                r = (0, A.XL)(t.duration),
+            let e = (0, N.XL)(c.Z1 + t.startTime),
+                r = (0, N.XL)(t.duration),
                 n = { [i.S3]: 'auto.ui.browser.metrics' },
                 a = t.scripts[0];
             if (a) {
@@ -135,12 +135,12 @@ function h() {
     });
 }
 function S() {
-    (0, N._j)('event', ({ entries: e }) => {
+    (0, A._j)('event', ({ entries: e }) => {
         for (let t of e) {
             if (!(0, _.HN)()) return;
             if ('click' === t.name) {
-                let e = (0, A.XL)(c.Z1 + t.startTime),
-                    r = (0, A.XL)(t.duration),
+                let e = (0, N.XL)(c.Z1 + t.startTime),
+                    r = (0, N.XL)(t.duration),
                     n = {
                         name: (0, s.Rt)(t.target),
                         op: `ui.interaction.${t.name}`,
@@ -156,17 +156,17 @@ function S() {
     });
 }
 function D(e) {
-    let t = (0, A.QV)();
+    let t = (0, N.QV)();
     if (!t || !R.m.performance.getEntries || !c.Z1) return;
     I.X && l.kg.log('[Tracing] Adding & adjusting spans using Performance API');
-    let r = (0, A.XL)(c.Z1),
+    let r = (0, N.XL)(c.Z1),
         o = t.getEntries(),
-        { op: N, start_timestamp: O } = (0, _.XU)(e);
+        { op: A, start_timestamp: O } = (0, _.XU)(e);
     if (
         (o.slice(f).forEach((t) => {
-            let n = (0, A.XL)(t.startTime),
-                a = (0, A.XL)(Math.max(0, t.duration));
-            if ('navigation' !== N || !O || !(r + n < O))
+            let n = (0, N.XL)(t.startTime),
+                a = (0, N.XL)(Math.max(0, t.duration));
+            if ('navigation' !== A || !O || !(r + n < O))
                 switch (t.entryType) {
                     case 'navigation':
                         (function (e, t, r) {
@@ -177,16 +177,16 @@ function D(e) {
                                 C(e, t, 'fetch', r, 'cache', 'domainLookupStart'),
                                 C(e, t, 'domainLookup', r, 'DNS'),
                                 (function (e, t, r) {
-                                    let n = r + (0, A.XL)(t.requestStart),
-                                        a = r + (0, A.XL)(t.responseEnd),
-                                        _ = r + (0, A.XL)(t.responseStart);
+                                    let n = r + (0, N.XL)(t.requestStart),
+                                        a = r + (0, N.XL)(t.responseEnd),
+                                        _ = r + (0, N.XL)(t.responseStart);
                                     t.responseEnd &&
-                                        ((0, A.Y)(e, n, a, {
+                                        ((0, N.Y)(e, n, a, {
                                             op: 'browser',
                                             name: 'request',
                                             attributes: { [i.S3]: 'auto.ui.browser.metrics' }
                                         }),
-                                        (0, A.Y)(e, _, a, {
+                                        (0, N.Y)(e, _, a, {
                                             op: 'browser',
                                             name: 'response',
                                             attributes: { [i.S3]: 'auto.ui.browser.metrics' }
@@ -199,11 +199,11 @@ function D(e) {
                     case 'measure': {
                         (function (e, t, r, n, a) {
                             let _ = (0, T.W)(),
-                                o = a + Math.max(r, (0, A.XL)(_ ? _.requestStart : 0)),
+                                o = a + Math.max(r, (0, N.XL)(_ ? _.requestStart : 0)),
                                 E = a + r,
                                 c = { [i.S3]: 'auto.resource.browser.metrics' };
                             o !== E && ((c['sentry.browser.measure_happened_before_request'] = !0), (c['sentry.browser.measure_start_time'] = o)),
-                                (0, A.Y)(e, o, E + n, {
+                                (0, N.Y)(e, o, E + n, {
                                     name: t.name,
                                     op: t.entryType,
                                     attributes: c
@@ -234,7 +234,7 @@ function D(e) {
                                 E = { [i.S3]: 'auto.resource.browser.metrics' };
                             g(E, t, 'transferSize', 'http.response_transfer_size'), g(E, t, 'encodedBodySize', 'http.response_content_length'), g(E, t, 'decodedBodySize', 'http.decoded_response_content_length'), 'renderBlockingStatus' in t && (E['resource.render_blocking_status'] = t.renderBlockingStatus), o.protocol && (E['url.scheme'] = o.protocol.split(':').pop()), o.host && (E['server.address'] = o.host), (E['url.same_origin'] = r.includes(R.m.location.origin));
                             let c = _ + n;
-                            (0, A.Y)(e, c, c + a, {
+                            (0, N.Y)(e, c, c + a, {
                                 name: r.replace(R.m.location.origin, ''),
                                 op: t.initiatorType ? `resource.${t.initiatorType}` : 'resource.other',
                                 attributes: E
@@ -250,15 +250,15 @@ function D(e) {
             r &&
                 (r.effectiveType && e.setAttribute('effectiveConnectionType', r.effectiveType),
                 r.type && e.setAttribute('connectionType', r.type),
-                (0, A.nl)(r.rtt) &&
+                (0, N.nl)(r.rtt) &&
                     (L['connection.rtt'] = {
                         value: r.rtt,
                         unit: 'millisecond'
                     })),
-                (0, A.nl)(t.deviceMemory) && e.setAttribute('deviceMemory', `${t.deviceMemory} GB`),
-                (0, A.nl)(t.hardwareConcurrency) && e.setAttribute('hardwareConcurrency', String(t.hardwareConcurrency));
+                (0, N.nl)(t.deviceMemory) && e.setAttribute('deviceMemory', `${t.deviceMemory} GB`),
+                (0, N.nl)(t.hardwareConcurrency) && e.setAttribute('hardwareConcurrency', String(t.hardwareConcurrency));
         })(e),
-        'pageload' === N)
+        'pageload' === A)
     ) {
         (function (e) {
             let t = (0, T.W)();
@@ -275,14 +275,14 @@ function D(e) {
                 let t = L[e];
                 if (!t || !O || r >= O) return;
                 let n = t.value,
-                    a = Math.abs((r + (0, A.XL)(n) - O) * 1000),
+                    a = Math.abs((r + (0, N.XL)(n) - O) * 1000),
                     _ = a - n;
                 I.X && l.kg.log(`[Measurements] Normalized ${e} from ${n} to ${a} (${_})`), (t.value = a);
             });
         let t = L['mark.fid'];
         t &&
             L.fid &&
-            ((0, A.Y)(e, t.value, t.value + (0, A.XL)(L.fid.value), {
+            ((0, N.Y)(e, t.value, t.value + (0, N.XL)(L.fid.value), {
                 name: 'first input delay',
                 op: 'ui.action',
                 attributes: { [i.S3]: 'auto.ui.browser.metrics' }
@@ -302,7 +302,7 @@ function C(e, t, r, n, a, _) {
     let o = _ ? t[_] : t[`${r}End`],
         E = t[`${r}Start`];
     if (!!E && !!o)
-        (0, A.Y)(e, n + (0, A.XL)(E), n + (0, A.XL)(o), {
+        (0, N.Y)(e, n + (0, N.XL)(E), n + (0, N.XL)(o), {
             op: 'browser',
             name: a || r,
             attributes: { [i.S3]: 'auto.ui.browser.metrics' }

@@ -12,7 +12,7 @@ r.d(t, {
         return P;
     },
     HR: function () {
-        return N;
+        return A;
     },
     Hb: function () {
         return T;
@@ -39,7 +39,7 @@ r.d(t, {
         return I;
     },
     wy: function () {
-        return A;
+        return N;
     },
     yc: function () {
         return M;
@@ -57,7 +57,7 @@ var n = r(370336),
     u = r(99342);
 let I = 0,
     R = 1;
-function N(e) {
+function A(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
         { data: a, op: _, parent_span_id: o, status: i, origin: E } = L(e);
     return (0, n.Jr)({
@@ -70,7 +70,7 @@ function N(e) {
         origin: E
     });
 }
-function A(e) {
+function N(e) {
     let { spanId: t, traceId: r } = e.spanContext(),
         { parent_span_id: a } = L(e);
     return (0, n.Jr)({

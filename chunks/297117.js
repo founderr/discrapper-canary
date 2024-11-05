@@ -12,7 +12,7 @@ r.d(t, {
         return T;
     },
     NP: function () {
-        return N;
+        return A;
     },
     R2: function () {
         return I;
@@ -78,18 +78,18 @@ let _ = /^\s*at (\S+?)(?::(\d+))(?::(\d+))\s*$/i,
         }
     ],
     R = / line (\d+).*script (?:in )?(\S+)(?:: in function (\S+))?$/i,
-    N = [
+    A = [
         10,
         (e) => {
             let t = R.exec(e);
             return t ? a(t[2], t[3] || n.Fi, +t[1]) : void 0;
         }
     ],
-    A = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
+    N = / line (\d+), column (\d+)\s*(?:in (?:<anonymous function: ([^>]+)>|([^)]+))\(.*\))? in (.*):\s*$/i,
     T = [
         20,
         (e) => {
-            let t = A.exec(e);
+            let t = N.exec(e);
             return t ? a(t[5], t[3] || t[4] || n.Fi, +t[1], +t[2]) : void 0;
         }
     ],
