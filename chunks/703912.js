@@ -4,7 +4,12 @@ n.d(t, {
     }
 }),
     n(789020),
-    n(47120);
+    n(47120),
+    n(315314),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648);
 var i = n(664751),
     r = n(373793),
     a = n(243814),
@@ -232,54 +237,56 @@ function b(e, t) {
         }),
         [S.Etm.AUTHORIZE]: {
             handler(n) {
-                let { socket: r, signal: a, args: l } = n,
-                    o = l.client_id;
-                if (!o) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, 'No client id provided');
-                if (null != r.authorization.accessToken) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authenticated');
-                if (r.authorization.authing) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authing');
-                return (
-                    (r.authorization.authing = !0),
-                    s.tn
-                        .get({
-                            url: S.ANM.APPLICATION_RPC(o),
-                            oldFormErrors: !0,
-                            signal: a
-                        })
-                        .then(
-                            (n) => {
-                                let i = n.body;
-                                if (r.application.id !== i.id) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, "Application does not match the connection's");
-                                let s = l.scopes || l.scope;
-                                return (
-                                    delete l.scopes,
-                                    T(
-                                        {
-                                            ...l,
-                                            scope: s,
-                                            signal: a
-                                        },
-                                        e,
-                                        t
-                                    )
-                                );
-                            },
-                            () => {
-                                throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, 'Invalid client id: '.concat(o));
-                            }
-                        )
-                        .then((e) => {
-                            if (((r.authorization.authing = !1), null == e)) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Unknown error occurred');
-                            let t = i.parse(e.split('?')[1].split('#')[0]);
-                            if (null != t.error) {
-                                var n;
-                                throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Error: '.concat(t.error, ': ').concat(null !== (n = t.error_description) && void 0 !== n ? n : 'unknown error'));
-                            }
-                            return { code: t.code };
-                        })
-                        .catch((e) => {
-                            throw ((r.authorization.authing = !1), e);
-                        })
-                );
+                let { socket: i, signal: r, args: a } = n,
+                    l = a.client_id;
+                if (!l) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, 'No client id provided');
+                if (null != i.authorization.accessToken) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authenticated');
+                if (i.authorization.authing) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Already authing');
+                if (((i.authorization.authing = !0), 'token' === a.response_type)) throw new C.Z({ errorCode: S.lTL.INVALID_COMMAND }, 'Authorization response_type "token" is not supported');
+                return s.tn
+                    .get({
+                        url: S.ANM.APPLICATION_RPC(l),
+                        oldFormErrors: !0,
+                        signal: r
+                    })
+                    .then(
+                        (n) => {
+                            let l = n.body;
+                            if (i.application.id !== l.id) throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, "Application does not match the connection's");
+                            let s = a.scopes || a.scope;
+                            return (
+                                delete a.scopes,
+                                T(
+                                    {
+                                        ...a,
+                                        scope: s,
+                                        signal: r
+                                    },
+                                    e,
+                                    t
+                                )
+                            );
+                        },
+                        () => {
+                            throw new C.Z({ errorCode: S.lTL.INVALID_CLIENTID }, 'Invalid client id: '.concat(l));
+                        }
+                    )
+                    .then((e) => {
+                        if (((i.authorization.authing = !1), null == e)) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Unknown error occurred');
+                        let t = new URL(e),
+                            n = t.searchParams.get('error');
+                        if (null != n && '' !== n) {
+                            var r;
+                            let e = null !== (r = t.searchParams.get('error_description')) && void 0 !== r ? r : 'unknown error';
+                            throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Error: '.concat(n, ': ').concat(e));
+                        }
+                        let a = t.searchParams.get('code');
+                        if (null == a) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Error: Unable to find auth code');
+                        return { code: a };
+                    })
+                    .catch((e) => {
+                        throw ((i.authorization.authing = !1), e);
+                    });
             }
         }
     };
