@@ -213,6 +213,7 @@ let b = () =>
                 i && !c && (0, d.EW)(s.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE, { dismissAction: C.L.TAKE_ACTION });
             }, [i, c]),
             (0, a.jsx)(g._y, {
+                ackedClassName: S.trialAckedBadge,
                 className: S.trialBadgeBackground,
                 isTabSelected: i,
                 badgeCopy: o ? v.intl.string(v.t.OS9KPj) : u,

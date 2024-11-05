@@ -22,13 +22,13 @@ var n = t(200651),
     p = t(388032),
     g = t(742774);
 function x(e) {
-    let { isTabSelected: s, expiresAt: t, trialDuration: o } = e,
-        u = r.useMemo(() => Date.parse(t), [t]),
-        d = (0, c.Z)(u, 60000);
-    return Object.values(d).every((e) => 0 === e)
+    let { isTabSelected: s, expiresAt: t, trialDuration: o, className: u } = e,
+        d = r.useMemo(() => Date.parse(t), [t]),
+        f = (0, c.Z)(d, 60000);
+    return Object.values(f).every((e) => 0 === e)
         ? null
         : (0, n.jsx)(i.Tooltip, {
-              text: (0, l.QX)(d, {
+              text: (0, l.QX)(f, {
                   days: p.t.qVGNkZ,
                   hours: p.t.wyg9a2,
                   minutes: p.t.IzmIlZ
@@ -36,7 +36,7 @@ function x(e) {
               children: (e) =>
                   (0, n.jsxs)('div', {
                       ...e,
-                      className: a()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, { [g.premiumTrialBadgeSelected]: s }),
+                      className: a()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, u, { [g.premiumTrialBadgeSelected]: s }),
                       children: [
                           (0, n.jsx)(i.ClockIcon, {
                               size: 'custom',
@@ -79,9 +79,10 @@ function v(e) {
     });
 }
 function C(e) {
-    let { isTabSelected: s, badgeCopy: t, offerExpiresAt: r, className: o } = e;
+    let { isTabSelected: s, badgeCopy: t, offerExpiresAt: r, className: o, ackedClassName: c } = e;
     return null != r
         ? (0, n.jsx)(x, {
+              className: c,
               expiresAt: r,
               isTabSelected: s,
               trialDuration: t
