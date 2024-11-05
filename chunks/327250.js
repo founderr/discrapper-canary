@@ -219,7 +219,17 @@ function P(e) {
                 disabled: !_,
                 'aria-label': S.intl.string(S.t.kTlLr6),
                 onClick: () => {
-                    b ? (0, h.q)(l.guildId, l.userId, N) : (0, h.z)(l.guildId, l.userId, N);
+                    b
+                        ? (0, h.q)({
+                              guildId: l.guildId,
+                              userId: l.userId,
+                              anaylticsLocations: N
+                          })
+                        : (0, h.z)({
+                              guildId: l.guildId,
+                              userId: l.userId,
+                              anaylticsLocations: N
+                          });
                 },
                 children: [
                     (0, i.jsx)(s.ClockWarningIcon, {

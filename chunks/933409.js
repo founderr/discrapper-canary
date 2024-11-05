@@ -9,8 +9,8 @@ var t = n(200651),
     i = n(192379),
     a = n(442837),
     r = n(481060),
-    o = n(91176),
-    u = n(749210),
+    u = n(91176),
+    o = n(749210),
     d = n(616780),
     s = n(251794),
     c = n(386696),
@@ -85,7 +85,7 @@ function x(e, l, x, j) {
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
-                                        !1 === B && F(g.jQ.MUTE), u.Z.setServerMute(l, e.id, !B);
+                                        !1 === B && F(g.jQ.MUTE), o.Z.setServerMute(l, e.id, !B);
                                     }
                                 },
                                 'voice-mute'
@@ -99,7 +99,7 @@ function x(e, l, x, j) {
                                     label: R.intl.string(R.t.hMA2GB),
                                     checked: k,
                                     color: 'danger',
-                                    action: () => u.Z.setServerDeaf(l, e.id, !k)
+                                    action: () => o.Z.setServerDeaf(l, e.id, !k)
                                 },
                                 'voice-deafen'
                             )
@@ -111,7 +111,7 @@ function x(e, l, x, j) {
                                     id: 'voice-disconnect',
                                     label: A ? R.intl.string(R.t['6vrfgo']) : R.intl.string(R.t['/jERiI']),
                                     color: 'danger',
-                                    action: () => u.Z.setChannel(l, e.id, null)
+                                    action: () => o.Z.setChannel(l, e.id, null)
                                 },
                                 'voice-disconnect'
                             )
@@ -122,7 +122,7 @@ function x(e, l, x, j) {
             if (l.ctrlKey || l.metaKey)
                 try {
                     var i;
-                    await o.Z.setCommunicationDisabledDuration(n, t, b.UK.DURATION_60_SEC, null, j), F(g.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(R.intl.formatToPlainString(R.t.O9C3Nj, { user: null !== (i = P.ZP.getName(n, null, e)) && void 0 !== i ? i : '' }), r.ToastType.SUCCESS));
+                    await u.Z.setCommunicationDisabledDuration(n, t, b.UK.DURATION_60_SEC, null, j), F(g.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(R.intl.formatToPlainString(R.t.O9C3Nj, { user: null !== (i = P.ZP.getName(n, null, e)) && void 0 !== i ? i : '' }), r.ToastType.SUCCESS));
                 } catch (e) {
                     (0, r.showToast)((0, r.createToast)(R.intl.string(R.t.epyCur), r.ToastType.FAILURE));
                 }
@@ -140,7 +140,7 @@ function x(e, l, x, j) {
                       label: R.intl.string(R.t.NbhSIy),
                       action: () => {
                           var l;
-                          return u.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !1));
+                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
@@ -152,7 +152,7 @@ function x(e, l, x, j) {
                       label: R.intl.string(R.t['6QlTeH']),
                       action: () => {
                           var l;
-                          return u.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !0));
+                          return o.Z.setMemberFlags(_.id, e.id, (0, C.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, O.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
@@ -174,7 +174,11 @@ function x(e, l, x, j) {
                                     label: R.intl.formatToPlainString(R.t.csKetb, { user: e.username }),
                                     color: 'danger',
                                     action: () => {
-                                        (0, s.q)(l, e.id, T);
+                                        (0, s.q)({
+                                            guildId: l,
+                                            userId: e.id,
+                                            anaylticsLocations: T
+                                        });
                                     }
                                 },
                                 'removetimeout'
@@ -187,7 +191,11 @@ function x(e, l, x, j) {
                                     color: 'danger',
                                     action: (n) => {
                                         if (n.ctrlKey || n.metaKey) return Y(n, l, e.id);
-                                        (0, s.z)(l, e.id, T);
+                                        (0, s.z)({
+                                            guildId: l,
+                                            userId: e.id,
+                                            anaylticsLocations: T
+                                        });
                                     }
                                 },
                                 'timeout'
