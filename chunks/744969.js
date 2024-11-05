@@ -1,6 +1,6 @@
 t.d(n, {
     s: function () {
-        return g;
+        return b;
     }
 }),
     t(789020);
@@ -19,9 +19,8 @@ var l = t(200651),
     h = t(147496),
     _ = t(519896),
     x = t(981631),
-    C = t(231338),
-    v = t(388032);
-let b = (0, r.Kb)([d.Z, u.Z, m.Z], {
+    C = t(388032);
+let v = (0, r.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -62,8 +61,8 @@ let b = (0, r.Kb)([d.Z, u.Z, m.Z], {
     },
     useStateHook: r.cj
 });
-function g(e) {
-    let { data: n } = b(e),
+function b(e) {
+    let { data: n } = v(e),
         t = null == n ? void 0 : n.parentSku,
         r = null == n ? void 0 : n.sku,
         a = null == n ? void 0 : n.storeListing,
@@ -98,19 +97,19 @@ function g(e) {
         if (null == e || (null != r && !r.available))
             return {
                 disabled: !0,
-                label: v.intl.string(v.t.CHa0vL)
+                label: C.intl.string(C.t.CHa0vL)
             };
         if (r.type === x.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: v.intl.string(v.t.CHa0vL)
+                    label: C.intl.string(C.t.CHa0vL)
                 };
             let e = s[0],
                 n = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: v.intl.formatToPlainString(v.t['c6Q+Bw'], {
+                label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
                     skuName: r.name,
                     price: (0, p.T4)(n.amount, n.currency)
                 }),
@@ -120,13 +119,13 @@ function g(e) {
         return null == r.price
             ? {
                   disabled: !0,
-                  label: v.intl.string(v.t.CHa0vL)
+                  label: C.intl.string(C.t.CHa0vL)
               }
             : {
                   disabled: !1,
-                  label: v.intl.formatToPlainString(v.t['c6Q+Bw'], {
+                  label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
                       skuName: r.name,
-                      price: (0, p.T4)(r.price.amount, C.pK.USD)
+                      price: (0, p.T4)(r.price.amount, r.price.currency)
                   }),
                   onClick: d
               };
