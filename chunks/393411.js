@@ -163,7 +163,7 @@ t.Z = function (e) {
         { fractionalState: G } = (0, h.Z)({ forceFetch: !1 }),
         Y = G === P.a$.FP_SUB,
         { enabled: H } = (0, b.ZP)({ location: 'subscription_header' });
-    (!P.pj.has(s.planId) || !D.JwP.ALL_PAUSEABLE.has(s.status)) && (H = !1);
+    (!P.pj.has(s.planId) || !D.JwP.ALL_PAUSEABLE.has(s.status) || Y) && (H = !1);
     let z = (0, v.Ng)(),
         W = null == z ? void 0 : null === (t = z.discount) || void 0 === t ? void 0 : t.amount,
         K = (0, A.t7)(),
@@ -173,7 +173,7 @@ t.Z = function (e) {
             if (s.status === D.O0b.ACTIVE || s.status === D.O0b.PAST_DUE || s.status === D.O0b.PAUSED) ee(O.Steps.PAUSE_SELECT);
         },
         J = () => {
-            if (s.status === D.O0b.ACTIVE || s.status === D.O0b.PAST_DUE || s.status === D.O0b.PAUSE_PENDING) ee();
+            if (s.status === D.O0b.ACTIVE || s.status === D.O0b.PAST_DUE || s.status === D.O0b.PAUSE_PENDING || !!Y) ee();
         },
         $ = () => {
             if (s.status === D.O0b.BILLING_RETRY) ee(O.Steps.CONFIRM);
@@ -292,7 +292,8 @@ t.Z = function (e) {
                           subscription: s,
                           renewalInvoicePreview: l,
                           hasDiscountApplied: K,
-                          activeDiscountInfo: q
+                          activeDiscountInfo: q,
+                          hasFractionalPremiumWithSub: Y
                       })
             });
         })(er),
