@@ -39,14 +39,15 @@ function b(e) {
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        a = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO));
+        a = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
+        l = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
         'aria-label': N.intl.string(N.t.liqwPD),
         onClose: d.Zy,
         onSelect: n,
         children: [
-            a
+            !l && a
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
                       label: N.intl.string(N.t.oCqlGB),
@@ -55,13 +56,14 @@ function b(e) {
                       }
                   })
                 : null,
-            (0, i.jsx)(o.MenuItem, {
-                id: 'start-voice-call',
-                label: N.intl.string(N.t.focH1t),
-                action: () => {
-                    c.Z.openPrivateChannel(t.id, !0);
-                }
-            }),
+            !l &&
+                (0, i.jsx)(o.MenuItem, {
+                    id: 'start-voice-call',
+                    label: N.intl.string(N.t.focH1t),
+                    action: () => {
+                        c.Z.openPrivateChannel(t.id, !0);
+                    }
+                }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
                 label: N.intl.string(N.t.cvSt1N),
