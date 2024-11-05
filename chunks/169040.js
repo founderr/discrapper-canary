@@ -6,7 +6,7 @@ n.d(t, {
         return x;
     },
     I8: function () {
-        return L;
+        return T;
     },
     Iq: function () {
         return f;
@@ -15,7 +15,7 @@ n.d(t, {
         return s;
     },
     NC: function () {
-        return y;
+        return L;
     },
     NM: function () {
         return l;
@@ -30,7 +30,7 @@ n.d(t, {
         return v;
     },
     Ue: function () {
-        return T;
+        return y;
     },
     Z: function () {
         return u;
@@ -42,7 +42,7 @@ n.d(t, {
         return c;
     },
     f0: function () {
-        return I;
+        return j;
     },
     fO: function () {
         return a;
@@ -54,7 +54,7 @@ n.d(t, {
         return i;
     },
     kC: function () {
-        return j;
+        return I;
     },
     m2: function () {
         return Z;
@@ -89,10 +89,10 @@ let l = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     v = 96,
     g = 32,
     f = 120,
-    j = 260,
-    I = 88,
+    I = 260,
+    j = 88,
     Z = 99,
     P = 12,
-    y = 18,
-    L = ['gg sans', 'sans-serif'],
-    T = 500;
+    L = 18,
+    T = ['gg sans', 'sans-serif'],
+    y = 500;

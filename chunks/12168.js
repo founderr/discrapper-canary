@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     u: function () {
-        return T;
+        return y;
     }
 }),
     n(47120);
@@ -24,13 +24,13 @@ var l = n(200651),
     v = n(806966),
     g = n(176354),
     f = n(823379),
-    j = n(354459),
-    I = n(185923),
+    I = n(354459),
+    j = n(185923),
     Z = n(420212),
     P = n(264699);
-let y = I.Hz.CHAT,
-    L = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
-function T(e) {
+let L = j.Hz.CHAT,
+    T = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
+function y(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
         x = (0, d.Z)(m);
@@ -84,19 +84,19 @@ function N(e) {
 }
 function _(e) {
     let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
-        S = (0, m.Dt)(),
-        [E, A] = a.useState(!1),
+        E = (0, m.Dt)(),
+        [S, A] = a.useState(!1),
         M = (0, x.wC)(t.guild_id),
-        k = (0, o.uniqBy)([...M, ...L], 'name')
+        k = (0, o.uniqBy)([...M, ...T], 'name')
             .filter(
                 (e) =>
                     !g.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: t,
-                        intention: y
+                        intention: L
                     })
             )
-            .slice(0, j.e5);
+            .slice(0, I.e5);
     null != f && f.length > 0 && k.splice(k.length - 1, 1, f[0]);
     let w = (e) => {
             A(e), null == h || h(e);
@@ -110,13 +110,13 @@ function _(e) {
             w(!t), t && v.kJ.setSearchPlaceholder(null);
         };
     return (0, l.jsxs)(c.Dialog, {
-        'aria-labelledby': S,
+        'aria-labelledby': E,
         children: [
             (0, l.jsx)(c.HeadingLevel, {
                 forceLevel: 2,
                 children: (0, l.jsx)(c.HiddenVisually, {
                     children: (0, l.jsx)(c.H, {
-                        id: S,
+                        id: E,
                         children: n
                     })
                 })
@@ -127,23 +127,23 @@ function _(e) {
                     (0, l.jsx)(p.Z, {
                         analyticsOverride: _,
                         channel: t,
-                        className: r()(P.animatedPicker, { [P.animatedPickerTall]: E }),
-                        headerClassName: r()(P.emojiPickerHeader, { [P.emojiPickerHeaderExpanded]: E }),
+                        className: r()(P.animatedPicker, { [P.animatedPickerTall]: S }),
+                        headerClassName: r()(P.emojiPickerHeader, { [P.emojiPickerHeaderExpanded]: S }),
                         closePopout: i,
-                        onSelectEmoji: E ? R : () => {},
-                        shouldHidePickerActions: !E,
+                        onSelectEmoji: S ? R : () => {},
+                        shouldHidePickerActions: !S,
                         wrapper: 'div',
-                        pickerIntention: y,
+                        pickerIntention: L,
                         searchProps: {
                             ...C,
                             accessory: (0, l.jsx)(N, {
                                 otherAccessories: null == C ? void 0 : C.accessory,
-                                isEmojiPickerExpanded: E,
+                                isEmojiPickerExpanded: S,
                                 onSetExpanded: w,
                                 onFocus: s
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== Z.vn.TAB && (e.key !== Z.vn.ENTER || e.shiftKey ? w(!0) : w(!E));
+                                null != e && e.key !== Z.vn.TAB && (e.key !== Z.vn.ENTER || e.shiftKey ? w(!0) : w(!S));
                             }
                         }
                     }),
@@ -155,7 +155,7 @@ function _(e) {
                                 let n = g.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
-                                    intention: I.Hz.CHAT
+                                    intention: j.Hz.CHAT
                                 });
                                 return (0, l.jsx)(
                                     'div',
@@ -167,7 +167,7 @@ function _(e) {
                                             'aria-label': e.name,
                                             tooltipClassName: P.tooltipContainer,
                                             color: c.Tooltip.Colors.BRAND,
-                                            children: (0, l.jsx)(T, {
+                                            children: (0, l.jsx)(y, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

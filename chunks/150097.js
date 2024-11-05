@@ -208,7 +208,7 @@ function M(t, e, n) {
                         i = 'title' in e ? e.title : e.rawTitle;
                     if (null != n) return null != i ? ''.concat(i, ' ').concat(n) : n;
                     if (null != i) return i;
-                    if (null != e.fields) {
+                    if (null != e.fields && e.fields.length > 0) {
                         let t = e.fields[0],
                             n = 'name' in t ? t.name : t.rawName,
                             i = 'value' in t ? t.value : t.rawValue;

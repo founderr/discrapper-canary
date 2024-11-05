@@ -26,10 +26,10 @@ function x(e) {
             id: n.id,
             label: d.intl.string(d.t['/AXYnJ'])
         }),
-        j = (0, u.dX)(p),
-        I = (0, s.Z)({
+        I = (0, u.dX)(p),
+        j = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: j && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: I && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: p.author_id
@@ -52,11 +52,11 @@ function x(e) {
                         (0, l.jsxs)(a.MenuGroup, {
                             children: [
                                 g,
-                                null != I &&
+                                null != j &&
                                     (0, l.jsx)(a.MenuItem, {
                                         id: 'game-profile',
                                         label: d.intl.string(d.t.f7aVGh),
-                                        action: I
+                                        action: j
                                     })
                             ]
                         }),
