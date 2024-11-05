@@ -1,61 +1,84 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return p;
     }
-});
+}),
+    n(627341);
 var r = n(200651);
 n(192379);
-var i = n(442837),
-    a = n(481060),
-    s = n(194359),
-    o = n(843931),
-    l = n(1596),
-    u = n(699516),
-    c = n(594174),
-    d = n(981631),
-    f = n(388032);
-function _(e) {
-    let { user: t, color: n, onBlock: _, onUnblock: h, location: p = 'ContextMenu' } = e,
-        { id: m } = t,
-        g = (0, i.e7)(
-            [c.default],
+var i = n(278074),
+    a = n(442837),
+    s = n(481060),
+    o = n(194359),
+    l = n(843931),
+    u = n(1596),
+    c = n(922611),
+    d = n(699516),
+    f = n(594174),
+    _ = n(981631),
+    h = n(388032);
+function p(e) {
+    let { user: t, color: n, onBlock: p, onUnblock: m, location: g = 'ContextMenu' } = e,
+        { id: E } = t,
+        v = (0, a.e7)(
+            [f.default],
             () => {
                 var e;
-                return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === m;
+                return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === E;
             },
-            [m]
+            [E]
         ),
-        E = (0, i.e7)([u.Z], () => u.Z.isBlocked(m), [m]);
-    return g
+        I = (0, a.e7)([d.Z], () => d.Z.isBlocked(E), [E]),
+        S = (0, c.Do)({ location: 'use-block-user-item-web' }),
+        T = (0, i.EQ)({
+            isStealthRemediationEnabled: S,
+            isBlocked: I
+        })
+            .with(
+                {
+                    isStealthRemediationEnabled: !0,
+                    isBlocked: !0
+                },
+                () => 'default'
+            )
+            .with(
+                {
+                    isStealthRemediationEnabled: !0,
+                    isBlocked: !1
+                },
+                () => 'danger'
+            )
+            .otherwise(() => n);
+    return v
         ? null
-        : (0, r.jsx)(a.MenuItem, {
+        : (0, r.jsx)(s.MenuItem, {
               id: 'block',
-              color: n,
-              label: E ? f.intl.string(f.t.XyHpKC) : f.intl.string(f.t.l4EmaW),
-              action: E
+              color: null != T ? T : 'default',
+              label: I ? h.intl.string(h.t.XyHpKC) : h.intl.string(h.t.l4EmaW),
+              action: I
                   ? () => {
-                        null == h || h(), s.Z.unblockUser(m, { location: p });
+                        null == m || m(), o.Z.unblockUser(E, { location: g });
                     }
                   : () => {
-                        (0, a.openModal)((e) =>
-                            (0, r.jsx)(a.ConfirmModal, {
-                                header: f.intl.formatToPlainString(f.t.x5pOn5, { name: t.username }),
-                                confirmText: f.intl.string(f.t.l4EmaW),
-                                cancelText: f.intl.string(f.t['ETE/oK']),
+                        (0, s.openModal)((e) =>
+                            (0, r.jsx)(s.ConfirmModal, {
+                                header: h.intl.formatToPlainString(h.t.x5pOn5, { name: t.username }),
+                                confirmText: h.intl.string(h.t.l4EmaW),
+                                cancelText: h.intl.string(h.t['ETE/oK']),
                                 onConfirm: () => {
-                                    null == _ || _(),
-                                        s.Z.addRelationship({
-                                            userId: m,
-                                            context: { location: p },
-                                            type: d.OGo.BLOCKED
+                                    null == p || p(),
+                                        o.Z.addRelationship({
+                                            userId: E,
+                                            context: { location: g },
+                                            type: _.OGo.BLOCKED
                                         });
                                 },
                                 ...e,
-                                children: (0, o.c)({ location: 'confirm_block_modal' })
-                                    ? (0, r.jsx)(l.Z, {})
-                                    : (0, r.jsx)(a.Text, {
+                                children: (0, l.c)({ location: 'confirm_block_modal' })
+                                    ? (0, r.jsx)(u.Z, {})
+                                    : (0, r.jsx)(s.Text, {
                                           variant: 'text-md/normal',
-                                          children: f.intl.format(f.t.pegItL, { name: t.username })
+                                          children: h.intl.format(h.t.pegItL, { name: t.username })
                                       })
                             })
                         );
