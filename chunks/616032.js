@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var i = n(200651),
@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(481060),
     s = n(724757),
     c = n(213609),
-    u = n(441358),
-    d = n(426521),
+    d = n(441358),
+    u = n(426521),
     m = n(783891);
-function f(e) {
-    let { initialized: t, items: n, loading: f, loadMore: h } = e,
+function h(e) {
+    let { initialized: t, items: n, loading: h, loadMore: f } = e,
         p = r.useRef(null),
         g = (0, s.Z)('for-you', p);
     (0, c.Z)(
@@ -29,11 +29,11 @@ function f(e) {
     let _ = () => {
         var e;
         let t = null === (e = p.current) || void 0 === e ? void 0 : e.getScrollerState();
-        if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && h();
+        if (null != t) t.scrollHeight - t.scrollTop - t.offsetHeight < 1500 && f();
     };
     return t
         ? 0 === n.length
-            ? (0, i.jsx)(u.v, {})
+            ? (0, i.jsx)(d.v, {})
             : (0, i.jsx)(i.Fragment, {
                   children: (0, i.jsx)(a.bG, {
                       navigator: g,
@@ -48,7 +48,7 @@ function f(e) {
                                   },
                                   ...r,
                                   onScroll: _,
-                                  children: [(0, i.jsx)(d.U, { items: n }), f ? (0, i.jsx)(o.Spinner, { className: m.spinner }) : null]
+                                  children: [(0, i.jsx)(u.U, { items: n }), h ? (0, i.jsx)(o.Spinner, { className: m.spinner }) : null]
                               });
                           }
                       })

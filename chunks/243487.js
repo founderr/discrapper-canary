@@ -32,8 +32,8 @@ var i = n(200651),
     O = n(938475),
     T = n(237997),
     L = n(136015),
-    A = n(51144),
-    k = n(145597),
+    k = n(51144),
+    A = n(145597),
     w = n(658785),
     R = n(388627),
     j = n(981631),
@@ -65,7 +65,7 @@ function D(e) {
 function P(e) {
     let { channel: t, flipped: n = !1, locked: r = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = j.ipw.LARGE, onClick: v, onContextMenu: E, context: _, guildId: C, voiceState: I, showStreamPreview: y, onShowStreamPreview: N, onWatchStream: O } = e,
         T = (0, s.e7)([Z.default], () => Z.default.getId() === u.id, [u.id]),
-        [L, A, k] = (0, s.Wu)([b.Z], () => (T ? [!b.Z.isSupported() || b.Z.isSelfMute() || b.Z.isSelfMutedTemporarily(), b.Z.isSelfDeaf(), !1] : [!b.Z.isSupported() || b.Z.isLocalMute(u.id), !1, b.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
+        [L, k, A] = (0, s.Wu)([b.Z], () => (T ? [!b.Z.isSupported() || b.Z.isSelfMute() || b.Z.isSelfMutedTemporarily(), b.Z.isSelfDeaf(), !1] : [!b.Z.isSupported() || b.Z.isLocalMute(u.id), !1, b.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
         w = (0, s.e7)([x.Z], () => x.Z.getCurrentUserActiveStream()),
         R = (0, s.Wu)([x.Z], () => (null != w ? x.Z.getViewerIds(w) : [])),
         M = (0, f.Z)({
@@ -147,9 +147,9 @@ function P(e) {
                                       iconClassName: z.voiceIcon,
                                       isWatching: V,
                                       localMute: L && !T,
-                                      localVideoDisabled: k,
+                                      localVideoDisabled: A,
                                       mute: F || L,
-                                      deaf: G || A,
+                                      deaf: G || k,
                                       serverMute: F || H,
                                       serverDeaf: G,
                                       disabled: !1
@@ -203,7 +203,7 @@ function U(e) {
                             {
                                 guildId: null == l ? void 0 : l.guild_id,
                                 user: n,
-                                nick: null !== (t = null == s ? void 0 : s.nick) && void 0 !== t ? t : A.ZP.getName(n),
+                                nick: null !== (t = null == s ? void 0 : s.nick) && void 0 !== t ? t : k.ZP.getName(n),
                                 flipped: !v,
                                 voiceState: o,
                                 displayNameMode: a,
@@ -251,7 +251,7 @@ function V(e) {
                 displayUserMode: T.Z.getDisplayUserMode(),
                 displayNameMode: T.Z.getDisplayNameMode(),
                 avatarSizeMode: T.Z.getAvatarSizeMode(),
-                streamApplication: (null == a ? void 0 : a.pid) === (0, k.QF)() ? (0, E.Z)(u) : null,
+                streamApplication: (null == a ? void 0 : a.pid) === (0, A.QF)() ? (0, E.Z)(u) : null,
                 stream: e
             };
         });

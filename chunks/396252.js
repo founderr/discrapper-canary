@@ -11,18 +11,18 @@ var r = n(120356),
     o = n(481060),
     s = n(385499),
     c = n(430824),
-    u = n(739566),
-    d = n(464891),
+    d = n(739566),
+    u = n(464891),
     m = n(83561),
-    f = n(834129),
-    h = n(674563),
+    h = n(834129),
+    f = n(674563),
     p = n(388032),
     g = n(38814);
 function _(e) {
     var t;
     let { message: n, compact: r, usernameHook: _, channel: C } = e,
         E = (0, a.e7)([c.Z], () => c.Z.getGuild(C.guild_id)),
-        I = (0, u.ZP)(n),
+        I = (0, d.ZP)(n),
         x = _(I),
         {
             avatarSrc: v,
@@ -31,7 +31,7 @@ function _(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: N,
         onMouseLeave: T,
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(h.Z, {
             className: l()(g.mainContainer, { [g.compact]: r }),
             iconNode: r ? null : (0, i.jsx)(m.S, { src: v }),
             iconContainerClassName: g.iconContainer,
@@ -39,7 +39,7 @@ function _(e) {
             children: (0, i.jsxs)('div', {
                 className: l()(g.content, { [g.compact]: r }),
                 children: [
-                    (0, i.jsx)(d.nD, {
+                    (0, i.jsx)(u.nD, {
                         message: n,
                         messageClassname: g.spanCorrection,
                         className: l()(g.usernameContainer, g.spanCorrection, { [g.compact]: r }),
@@ -54,7 +54,7 @@ function _(e) {
                                     children: p.intl.string(p.t.hG1StL)
                                 }),
                                 (0, i.jsx)(s.Z, {
-                                    type: h.Hb.SYSTEM_DM,
+                                    type: f.Hb.SYSTEM_DM,
                                     className: g.systemTag
                                 })
                             ]

@@ -33,7 +33,7 @@ function E(e) {
         N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId()),
         O = (0, r.e7)([d.Z], () => d.Z.getChannel(N)),
         T = (0, r.e7)([c.default], () => c.default.getId()),
-        { participantsVersion: L, streamParticipants: A } = (0, r.e7)(
+        { participantsVersion: L, streamParticipants: k } = (0, r.e7)(
             [u.Z, s.Z],
             () => {
                 if (null == N)
@@ -54,8 +54,8 @@ function E(e) {
             [N, T],
             p.yp
         ),
-        k = A.length,
-        w = null == O || 0 === k,
+        A = k.length,
+        w = null == O || 0 === A,
         R = Z ? f.C.HORIZONTAL : f.C.VERTICAL,
         { tileWidth: j } = (function (e, t, n, i, r) {
             let l = (function (e, t, n, i) {
@@ -82,7 +82,7 @@ function E(e) {
                     tileWidth: u
                 }
             );
-        })(!1, k, y - I, b - I, R),
+        })(!1, A, y - I, b - I, R),
         M = {
             id: n,
             width: y,
@@ -90,13 +90,13 @@ function E(e) {
             sizeOffset: I,
             layout: R,
             padding: C,
-            participants: A.length
+            participants: k.length
         },
         z = o.useRef(M);
     return (o.useEffect(() => void (z.current = M)),
     o.useEffect(() => {
         let { id: e, width: t, height: n, sizeOffset: i, layout: o, padding: r } = z.current;
-        if (0 === A.length) {
+        if (0 === k.length) {
             (256 !== t || 144 !== n) &&
                 (0, l.nv)({
                     widgetId: e,
@@ -115,7 +115,7 @@ function E(e) {
                 size: {
                     fixed: !0,
                     height: n,
-                    width: t * A.length + r * (A.length - 1) + i
+                    width: t * k.length + r * (k.length - 1) + i
                 }
             });
         } else {
@@ -125,11 +125,11 @@ function E(e) {
                 size: {
                     fixed: !0,
                     width: t,
-                    height: n * A.length + r * (A.length - 1) + i
+                    height: n * k.length + r * (k.length - 1) + i
                 }
             });
         }
-    }, [A.length]),
+    }, [k.length]),
     o.useEffect(() => {
         if (z.current.participants <= 1) return;
         let { id: e, width: t, height: n, sizeOffset: i, padding: o, participants: r } = z.current;
@@ -177,7 +177,7 @@ function E(e) {
                   tileWidth: j,
                   locked: _,
                   layout: R,
-                  streamParticipants: A,
+                  streamParticipants: k,
                   participantsVersion: L
               })
           });

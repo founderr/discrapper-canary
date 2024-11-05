@@ -11,22 +11,22 @@ var i = n(200651),
     o = n(866442),
     s = n(596454),
     c = n(434650),
-    u = n(446489),
-    d = n(56314),
+    d = n(446489),
+    u = n(56314),
     m = n(566006),
-    f = n(287151),
-    h = n(96042),
+    h = n(287151),
+    f = n(96042),
     p = n(688236);
 let g = r.memo(function (e) {
         let t,
             n,
             { useChatFontScaling: r, hideEmoji: l, emoji: c, className: g, count: _, me: C, me_burst: E, burst_count: I, burst_colors: x, readOnly: v, isLurking: N, isGuest: T, isPendingMember: S, type: b, emojiSize: A } = e,
             j = b === m.O.BURST,
-            Z = (0, f.y4)(C, E, b),
-            R = (0, d.v)(j && null != x ? x : []),
-            P = r ? p : h,
+            Z = (0, h.y4)(C, E, b),
+            R = (0, u.v)(j && null != x ? x : []),
+            P = r ? p : f,
             y = j ? I : _,
-            L = (0, u.y)(y, f.aO),
+            L = (0, d.y)(y, h.aO),
             O = {};
         if (j && null != R) {
             var M;
@@ -64,20 +64,20 @@ let g = r.memo(function (e) {
     _ = r.memo(function (e) {
         let { showImmediate: t, reactions: n, emojiSize: l, ...a } = e,
             [o, s] = r.useState(!1),
-            [u, d] = r.useTransition(),
-            h = r.useCallback(
+            [d, u] = r.useTransition(),
+            f = r.useCallback(
                 (e) => {
                     e &&
                         !o &&
-                        !u &&
-                        d(() => {
+                        !d &&
+                        u(() => {
                             s(!0);
                         });
                 },
-                [o, u]
+                [o, d]
             ),
-            p = (0, c.O)(h),
-            _ = (o && !u) || t ? f.le : g;
+            p = (0, c.O)(f),
+            _ = (o && !d) || t ? h.le : g;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('div', { ref: p }),

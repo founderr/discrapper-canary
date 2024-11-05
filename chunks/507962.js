@@ -10,28 +10,28 @@ var r = n(739566),
     a = n(388032);
 function o(e) {
     let t,
-        { message: o, usernameHook: s, otherUser: c, otherUsernameHook: u, compact: d, channel: m } = e,
-        f = (0, r.ZP)(o),
-        h = f.nick,
-        p = s(f),
+        { message: o, usernameHook: s, otherUser: c, otherUsernameHook: d, compact: u, channel: m } = e,
+        h = (0, r.ZP)(o),
+        f = h.nick,
+        p = s(h),
         g = (0, r.Sw)(c, m);
-    if (null != g && null != u) {
-        let e = u(g);
+    if (null != g && null != d) {
+        let e = d(g);
         t = a.intl.format(a.t.L2FyVl, {
-            username: h,
+            username: f,
             usernameHook: p,
             otherUsername: g.nick,
             otherUsernameHook: e
         });
     } else
         t = a.intl.format(a.t['5v2xa2'], {
-            username: h,
+            username: f,
             usernameHook: p
         });
     return (0, i.jsx)(l.Z, {
         icon: n(474019),
         timestamp: o.timestamp,
-        compact: d,
+        compact: u,
         children: t
     });
 }

@@ -22,11 +22,11 @@ var i,
     o = n(692547),
     s = n(497089),
     c = n(650473),
-    u = n(389765),
-    d = n(137492),
+    d = n(389765),
+    u = n(137492),
     m = n(387661),
-    f = n(659953),
-    h = n(319707),
+    h = n(659953),
+    f = n(319707),
     p = n(584914),
     g = n(334702),
     _ = n(333722),
@@ -37,7 +37,7 @@ var i,
 ((i = l || (l = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
 let v = {
     CHECKED: m,
-    FRIENDS: h,
+    FRIENDS: f,
     SHARE_SCREEN: I,
     NEW_MESSAGE: C
 };
@@ -45,12 +45,12 @@ let v = {
 let N = {
         MISSED_MESSAGES: _,
         FRIEND_REQUEST_REMINDER: p,
-        SCHEDULED_GUILD_EVENT: f,
+        SCHEDULED_GUILD_EVENT: h,
         TOP_MESSAGES: g,
-        NOTIFICATION_CENTER: d,
+        NOTIFICATION_CENTER: u,
         UPDATE_PROFILE: x,
-        FIND_FRIENDS: u,
-        ADD_FRIEND: u,
+        FIND_FRIENDS: d,
+        ADD_FRIEND: d,
         FIRST_MESSAGE: E
     },
     T = (e) => {

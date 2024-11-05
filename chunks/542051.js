@@ -11,11 +11,11 @@ var i,
     o = n(200651),
     s = n(192379),
     c = n(120356),
-    u = n.n(c),
-    d = n(481060),
+    d = n.n(c),
+    u = n(481060),
     m = n(388032),
-    f = n(463659);
-function h(e) {
+    h = n(463659);
+function f(e) {
     e.stopPropagation(), e.preventDefault();
 }
 function p(e, t, n) {
@@ -30,48 +30,48 @@ class g extends (i = s.PureComponent) {
     renderQuery(e) {
         let { query: t, navId: n, focusedIndex: i, onSelectQuery: r, onSelectSearchEverywhere: l, onHighlightQuery: a, hideQuery: s, searchFavorites: c } = this.props;
         if (e || s) return null;
-        let h = -1 === i;
+        let f = -1 === i;
         return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsxs)(d.Clickable, {
-                    className: u()(f.queryContainer, { [f.focused]: h }),
-                    ...p(n, -1, h),
+                (0, o.jsxs)(u.Clickable, {
+                    className: d()(h.queryContainer, { [h.focused]: f }),
+                    ...p(n, -1, f),
                     onMouseEnter: a,
                     onClick: r,
                     children: [
                         (0, o.jsx)('div', {
-                            className: f.queryText,
+                            className: h.queryText,
                             children: c ? m.intl.string(m.t['6RVtLC']) : m.intl.format(m.t.ub226e, { value: t })
                         }),
                         (0, o.jsx)('div', {
-                            className: f.queryShortcut,
+                            className: h.queryShortcut,
                             'aria-hidden': !0,
-                            children: (0, o.jsx)(d.KeyCombo, {
+                            children: (0, o.jsx)(u.KeyCombo, {
                                 shortcut: 'return',
                                 dim: !0,
-                                className: f.keyCombo
+                                className: h.keyCombo
                             })
                         })
                     ]
                 }),
                 c &&
-                    (0, o.jsxs)(d.Clickable, {
-                        className: u()(f.queryContainer, { [f.focused]: h }),
-                        ...p(n, -1, h),
+                    (0, o.jsxs)(u.Clickable, {
+                        className: d()(h.queryContainer, { [h.focused]: f }),
+                        ...p(n, -1, f),
                         onMouseEnter: a,
                         onClick: l,
                         children: [
                             (0, o.jsx)('div', {
-                                className: f.queryText,
+                                className: h.queryText,
                                 children: m.intl.string(m.t.FtSUxc)
                             }),
                             (0, o.jsx)('div', {
-                                className: f.queryShortcut,
+                                className: h.queryShortcut,
                                 'aria-hidden': !0,
-                                children: (0, o.jsx)(d.KeyCombo, {
+                                children: (0, o.jsx)(u.KeyCombo, {
                                     shortcut: 'shift+return',
                                     dim: !0,
-                                    className: f.keyCombo
+                                    className: h.keyCombo
                                 })
                             })
                         ]
@@ -91,9 +91,9 @@ class g extends (i = s.PureComponent) {
         let { query: e, focusedIndex: t, navId: n, width: i } = this.props,
             r = '' === e.trim();
         return (0, o.jsxs)('div', {
-            className: f.container,
+            className: h.container,
             style: { width: i },
-            onMouseDown: h,
+            onMouseDown: f,
             role: 'listbox',
             id: n,
             tabIndex: -1,

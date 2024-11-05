@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(481060),
     s = n(434650),
     c = n(778569),
-    u = n(182906),
-    d = n(367907),
+    d = n(182906),
+    u = n(367907),
     m = n(213609),
-    f = n(783097),
-    h = n(220082),
+    h = n(783097),
+    f = n(220082),
     p = n(240991),
     g = n(914010),
     _ = n(768581),
@@ -50,17 +50,17 @@ function A(e) {
         }),
         {
             iconURL: c,
-            name: u,
-            description: h
+            name: d,
+            description: f
         } = r.useMemo(
             () =>
-                (0, f.sl)(t, {
+                (0, h.sl)(t, {
                     fakeAppIconURL: T,
                     size: 56
                 }),
             [t]
         ),
-        _ = r.useMemo(() => (null != h ? (0, p.parseBioReact)(h) : null), [h]),
+        _ = r.useMemo(() => (null != f ? (0, p.parseBioReact)(f) : null), [f]),
         [E, I] = r.useState(!1),
         b = r.useCallback((e) => {
             e && I(!0);
@@ -99,7 +99,7 @@ function A(e) {
                                 (0, i.jsx)(o.Heading, {
                                     variant: 'heading-lg/bold',
                                     color: 'interactive-active',
-                                    children: u
+                                    children: d
                                 }),
                                 null != _ &&
                                     (0, i.jsx)(o.Text, {
@@ -115,7 +115,7 @@ function A(e) {
                             type: 'button',
                             size: o.Button.Sizes.MEDIUM,
                             onClick: () => {
-                                d.ZP.trackWithMetadata(x.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
+                                u.ZP.trackWithMetadata(x.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: t.id }),
                                     (0, C.LO)({
                                         applicationId: t.id,
                                         customInstallUrl: t.customInstallUrl,
@@ -140,12 +140,12 @@ function j(e) {
             size: 280,
             names: ['embedded_cover']
         }),
-        l = (0, h.ZP)(n, ''),
+        l = (0, f.ZP)(n, ''),
         a = t.bot,
         o = null,
         s = {};
-    if ((0, f.ye)(t))
-        o = (0, i.jsx)(u.Z, {
+    if ((0, h.ye)(t))
+        o = (0, i.jsx)(d.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: N.bannerImage,

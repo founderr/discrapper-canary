@@ -6,11 +6,11 @@ var i,
     o = n(442837),
     s = n(570140),
     c = n(823379),
-    u = n(981631);
-let d = [],
+    d = n(981631);
+let u = [],
     m = {},
-    f = null,
-    h = 0;
+    h = null,
+    f = 0;
 function p(e) {
     let t = null;
     try {
@@ -18,7 +18,7 @@ function p(e) {
     } catch {
         return null;
     }
-    if (e.platform_type === u.ABu.XBOX) {
+    if (e.platform_type === d.ABu.XBOX) {
         let n = null == t ? void 0 : t.titleId,
             i = null == t ? void 0 : t.inviteToken;
         return null == n || null == i
@@ -35,7 +35,7 @@ function p(e) {
 }
 class g extends (i = o.ZP.Store) {
     getInvites() {
-        return d;
+        return u;
     }
     getInviteStatuses() {
         return m;
@@ -49,10 +49,10 @@ class g extends (i = o.ZP.Store) {
         return null === (t = m[e.invite_id]) || void 0 === t ? void 0 : t.joinable;
     }
     getLastUnseenInvite() {
-        return f;
+        return h;
     }
     getUnseenInviteCount() {
-        return h;
+        return f;
     }
 }
 (a = 'GameInviteStore'),
@@ -67,20 +67,20 @@ class g extends (i = o.ZP.Store) {
     (t.Z = new g(s.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { gameInvites: t } = e;
-            d = t.map(p).filter(c.lm);
+            u = t.map(p).filter(c.lm);
         },
         GAME_INVITE_CREATE: function (e) {
             let { gameInvite: t } = e,
                 n = p(t);
-            null != n && ((d = [n, ...d]), (f = t), (h += 1));
+            null != n && ((u = [n, ...u]), (h = t), (f += 1));
         },
         GAME_INVITE_DELETE: function (e) {
             let { inviteId: t } = e;
-            d = d.filter((e) => e.invite_id !== t);
+            u = u.filter((e) => e.invite_id !== t);
         },
         GAME_INVITE_DELETE_MANY: function (e) {
             let { inviteIds: t } = e;
-            d = d.filter((e) => !t.includes(e.invite_id));
+            u = u.filter((e) => !t.includes(e.invite_id));
         },
         GAME_INVITE_UPDATE_STATUS: function (e) {
             (m = { ...m })[e.inviteId] = {
@@ -89,6 +89,6 @@ class g extends (i = o.ZP.Store) {
             };
         },
         GAME_INVITE_CLEAR_UNSEEN: function (e) {
-            (f = null), (h = 0);
+            (h = null), (f = 0);
         }
     }));

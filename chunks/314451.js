@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -11,18 +11,18 @@ var i = n(200651),
     o = n(782568),
     s = n(31336),
     c = n(906467),
-    u = n(63063),
-    d = n(665149),
+    d = n(63063),
+    u = n(665149),
     m = n(388032);
-function f() {
+function h() {
     let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
-        [t, f] = r.useState(!1),
-        [h, p] = r.useState(0),
+        [t, h] = r.useState(!1),
+        [f, p] = r.useState(0),
         g = (e) => {
-            clearTimeout(h),
+            clearTimeout(f),
                 p(
                     setTimeout(() => {
-                        f(e);
+                        h(e);
                     }, 100)
                 );
         };
@@ -35,8 +35,8 @@ function f() {
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
-            onRequestOpen: () => f(!0),
-            onRequestClose: () => f(!1),
+            onRequestOpen: () => h(!0),
+            onRequestClose: () => h(!1),
             renderPopout: () =>
                 (function (e) {
                     let { onClose: t, isDiscordDeveloper: r } = e;
@@ -69,18 +69,18 @@ function f() {
                                     id: 'staff-help-center',
                                     label: 'Go to Help Center',
                                     icon: a.WindowLaunchIcon,
-                                    action: () => (0, o.Z)(u.w)
+                                    action: () => (0, o.Z)(d.w)
                                 })
                             ]
                         })
                     });
                 })({
-                    onClose: () => f(!1),
+                    onClose: () => h(!1),
                     isDiscordDeveloper: e
                 }),
             children: (e, t) => {
                 let { isShown: n } = t;
-                return (0, i.jsx)(d.JO, {
+                return (0, i.jsx)(u.JO, {
                     ...e,
                     icon: a.BugIcon,
                     'aria-label': m.intl.string(m.t.cqEoj4),

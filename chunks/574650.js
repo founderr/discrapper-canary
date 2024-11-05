@@ -7,11 +7,11 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(430824),
-    u = n(914010),
-    d = n(693546),
+    d = n(914010),
+    u = n(693546),
     m = n(305325),
-    f = n(246364),
-    h = n(937111),
+    h = n(246364),
+    f = n(937111),
     p = n(981631),
     g = n(176505),
     _ = n(388032),
@@ -19,19 +19,19 @@ var r = n(120356),
     E = n(250812);
 t.Z = () => {
     var e, t;
-    let r = (0, o.e7)([u.Z], () => u.Z.getGuildId(), []),
+    let r = (0, o.e7)([d.Z], () => d.Z.getGuildId(), []),
         I = (0, o.e7)([c.Z], () => c.Z.getGuild(r), [r]),
-        x = (0, o.e7)([h.Z], () => (null != r ? h.Z.getRequest(r) : null), [r]),
+        x = (0, o.e7)([f.Z], () => (null != r ? f.Z.getRequest(r) : null), [r]),
         v = (0, a.TH)(),
         N = (null === (e = (0, a.LX)(v.pathname, p.Z5c.CHANNEL(null == I ? void 0 : I.id, g.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
     if (null == I || !I.hasVerificationGate() || N) return null;
-    let T = null !== (t = null == x ? void 0 : x.applicationStatus) && void 0 !== t ? t : f.wB.STARTED,
+    let T = null !== (t = null == x ? void 0 : x.applicationStatus) && void 0 !== t ? t : h.wB.STARTED,
         S = null,
         b = null,
         A = null,
         j = [C.notice, E.notice];
     switch (T) {
-        case f.wB.SUBMITTED:
+        case h.wB.SUBMITTED:
             (S = _.intl.string(_.t['5iLvS0'])),
                 (b = _.intl.string(_.t.mqtdmZ)),
                 (A = () => {
@@ -40,7 +40,7 @@ t.Z = () => {
                             header: _.intl.string(_.t.aIz1oa),
                             confirmText: _.intl.string(_.t['cY+Ooa']),
                             cancelText: _.intl.string(_.t['ETE/oK']),
-                            onConfirm: () => d.Z.removeGuildJoinRequest(I.id),
+                            onConfirm: () => u.Z.removeGuildJoinRequest(I.id),
                             confirmButtonColor: s.Button.Colors.BRAND,
                             ...e,
                             children: (0, i.jsx)(s.Text, {
@@ -51,7 +51,7 @@ t.Z = () => {
                     );
                 });
             break;
-        case f.wB.REJECTED:
+        case h.wB.REJECTED:
             (S = _.intl.string(_.t.lk30cX)),
                 (b = _.intl.string(_.t['8RrsHh'])),
                 (A = () => {

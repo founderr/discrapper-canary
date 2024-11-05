@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,15 +11,15 @@ var r = n(481060),
     o = n(750143),
     s = n(264499),
     c = n(60314);
-function u(e) {
+function d(e) {
     let { step: t, onClose: n } = e,
-        u = (0, l.Z)(o.X);
+        d = (0, l.Z)(o.X);
     return t === a.h8.BENEFITS || t === a.h8.CONFIRM
         ? null
         : (0, i.jsxs)('div', {
               className: s.headerContainer,
               children: [
-                  !u &&
+                  !d &&
                       (0, i.jsx)('div', {
                           className: s.headerImageContainer,
                           'aria-hidden': 'true',

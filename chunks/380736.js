@@ -39,13 +39,13 @@ let _ = o.memo(function (e) {
     o.useEffect(() => {
         null == r || r();
     }, [r]);
-    let A = o.useCallback(
+    let k = o.useCallback(
             (e) => {
                 e.stopPropagation(), null == u || u(e);
             },
             [u]
         ),
-        k = o.useCallback(
+        A = o.useCallback(
             (e) => {
                 e.stopPropagation(), null == d || d(e);
             },
@@ -134,7 +134,7 @@ let _ = o.memo(function (e) {
                                                                         className: v.button,
                                                                         size: a.Button.Sizes.SMALL,
                                                                         color: a.Button.Colors.GREEN,
-                                                                        onClick: k,
+                                                                        onClick: A,
                                                                         children: null != C ? C : m.intl.string(m.t.BddRzc)
                                                                     })
                                                                   : null,
@@ -168,7 +168,7 @@ let _ = o.memo(function (e) {
             }),
             (0, i.jsx)(c.Z, {
                 className: v.dismissButton,
-                onDismiss: A,
+                onDismiss: k,
                 'aria-label': m.intl.string(m.t.LnEgqa)
             })
         ]
@@ -229,7 +229,7 @@ function S(e) {
         ),
         b = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
-            props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: L, onConfirmClick: A, onCancelClick: k, ...w },
+            props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: L, onConfirmClick: k, onCancelClick: A, ...w },
             status: R
         } = t,
         { ref: j, springs: M } = (0, f.X4)(t.id, l, s);

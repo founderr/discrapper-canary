@@ -31,8 +31,8 @@ var i = n(200651),
     O = n(451478),
     T = n(585483),
     L = n(358085),
-    A = n(13140),
-    k = n(145597),
+    k = n(13140),
+    A = n(145597),
     w = n(830917),
     R = n(681603),
     j = n(358446),
@@ -98,7 +98,7 @@ let J = o.memo(function (e) {
         return t && n
             ? (0, i.jsx)(M.Z, {
                   className: H.closeContainer,
-                  onClick: () => d.Z.setInputLocked(!1, (0, k.QF)()),
+                  onClick: () => d.Z.setInputLocked(!1, (0, A.QF)()),
                   IconComponent: u.LockUnlockedIcon
               })
             : null;
@@ -120,16 +120,16 @@ function ee() {
         (0, c.Zy)();
         return;
     }
-    d.Z.setInputLocked(!0, (0, k.QF)());
+    d.Z.setInputLocked(!0, (0, A.QF)());
 }
 function et() {
-    d.Z.setFocusedPID(k.Js);
+    d.Z.setFocusedPID(A.Js);
 }
 function en() {
     d.Z.setFocusedPID(null);
 }
 function ei(e) {
-    let t = N.Z.isLocked((0, k.QF)());
+    let t = N.Z.isLocked((0, A.QF)());
     'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? T.S.dispatch(W.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && T.S.dispatch(W.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function eo() {
@@ -146,12 +146,12 @@ function eo() {
             let e = O.Z.windowSize((0, w.ZY)(n)),
                 t = b.Z.getOverlayKeybind();
             return {
-                locked: N.Z.isLocked((0, k.QF)()),
-                focused: N.Z.isFocused((0, k.QF)()),
+                locked: N.Z.isLocked((0, A.QF)()),
+                focused: N.Z.isFocused((0, A.QF)()),
                 incompatibleApp: N.Z.incompatibleApp,
-                hasValidResolution: (0, k.Te)(e),
+                hasValidResolution: (0, A.Te)(e),
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
-                keybind: null != t ? (0, A.BB)(t.shortcut, !0) : '???'
+                keybind: null != t ? (0, k.BB)(t.shortcut, !0) : '???'
             };
         }),
         { analyticsLocations: T } = (0, m.ZP)(p.Z.OVERLAY),
@@ -224,7 +224,7 @@ function eo() {
                 }),
                     n.addEventListener('keydown', ei),
                     n.addEventListener('keyup', ei),
-                    G && (n.document.hasFocus() && d.Z.setFocusedPID(k.Js), n.addEventListener('focus', et), n.addEventListener('blur', en));
+                    G && (n.document.hasFocus() && d.Z.setFocusedPID(A.Js), n.addEventListener('focus', et), n.addEventListener('blur', en));
             },
             () => {
                 n.removeEventListener('keydown', ei), n.removeEventListener('keyup', ei), G && (n.removeEventListener('focus', et), n.removeEventListener('blur', en));
@@ -251,7 +251,7 @@ function eo() {
                     E || v
                         ? null
                         : (0, i.jsxs)('div', {
-                              className: H.overlay,
+                              className: l()(H.overlay, (0, u.getThemeClass)('dark')),
                               children: [
                                   Y,
                                   (0, i.jsx)(J, {
@@ -272,7 +272,7 @@ function eo() {
                                               className: H.invalidContainer,
                                               children: (0, i.jsx)('div', {
                                                   className: H.inactiveContainer,
-                                                  children: F.intl.format(F.t.ketnW1, k.FW)
+                                                  children: F.intl.format(F.t.ketnW1, A.FW)
                                               })
                                           }),
                                   G &&

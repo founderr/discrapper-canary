@@ -6,11 +6,11 @@ var i = n(200651),
     o = n(748780),
     s = n(873546),
     c = n(846519),
-    u = n(215569),
-    d = n(481060),
+    d = n(215569),
+    u = n(481060),
     m = n(679056),
-    f = n(70097),
-    h = n(10963);
+    h = n(70097),
+    f = n(10963);
 function p(e, t, n) {
     return (
         t in e
@@ -29,7 +29,7 @@ class g extends r.Component {
         let { src: e, className: t, title: n } = this.props,
             { imageLoading: r } = this.state;
         return (0, i.jsx)(o.Z.img, {
-            className: a()({ [h.imageLoading]: r }, t),
+            className: a()({ [f.imageLoading]: r }, t),
             src: e,
             alt: n,
             style: this.getImageStyle(),
@@ -42,19 +42,19 @@ class g extends r.Component {
             { imageLoadError: r, imageLoading: l } = this.state;
         return null == n || r
             ? (0, i.jsx)(o.Z.div, {
-                  className: a()(h.titleContainer, e),
+                  className: a()(f.titleContainer, e),
                   style: this.getImageStyle(),
                   children: t
               })
             : (0, i.jsxs)(o.Z.div, {
-                  className: a()(l ? h.loadingContainer : null, e),
+                  className: a()(l ? f.loadingContainer : null, e),
                   style: this.getImageStyle(),
                   children: [
                       l
-                          ? (0, i.jsx)(d.Spinner, {
-                                className: h.spinner,
-                                itemClassName: h.spinnerItem,
-                                type: d.Spinner.Type.PULSING_ELLIPSIS,
+                          ? (0, i.jsx)(u.Spinner, {
+                                className: f.spinner,
+                                itemClassName: f.spinnerItem,
+                                type: u.Spinner.Type.PULSING_ELLIPSIS,
                                 animated: !0
                             })
                           : null,
@@ -123,7 +123,7 @@ class _ extends r.Component {
             ? (0, i.jsx)(
                   g,
                   {
-                      className: a()(h.splash, l),
+                      className: a()(f.splash, l),
                       src: n,
                       title: r
                   },
@@ -132,9 +132,9 @@ class _ extends r.Component {
             : (0, i.jsx)(m.Z, {
                   onInterval: this.nextItem,
                   interval: 2000,
-                  className: h.slideshowWrapper,
+                  className: f.slideshowWrapper,
                   disable: !e,
-                  children: (0, i.jsx)(u.W, { children: this.renderSlideItem(t) })
+                  children: (0, i.jsx)(d.W, { children: this.renderSlideItem(t) })
               });
     }
     render() {
@@ -143,7 +143,7 @@ class _ extends r.Component {
         return n
             ? (0, i.jsx)('div', { className: t })
             : (0, i.jsxs)('figure', {
-                  className: a()(h.__invalid_tileMedia, t),
+                  className: a()(f.__invalid_tileMedia, t),
                   children: [null == e || o ? this.renderTypeImage() : this.renderTypeVideo(), null != r && r(l && s)]
               });
     }
@@ -171,13 +171,13 @@ class _ extends r.Component {
             p(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
                     { video: t, image: n, title: l, playing: o, muted: c, splashClassName: m, splashPlaceholderClassName: p, renderMediaOverlay: _ } = this.props,
-                    C = c ? d.VoiceXIcon : d.VoiceNormalIcon;
+                    C = c ? u.VoiceXIcon : u.VoiceNormalIcon;
                 return (0, i.jsxs)(r.Fragment, {
                     children: [
                         s.tq
                             ? null
-                            : (0, i.jsx)(f.Z, {
-                                  className: a()(h.splash, m),
+                            : (0, i.jsx)(h.Z, {
+                                  className: a()(f.splash, m),
                                   muted: c,
                                   loop: !0,
                                   preload: 'none',
@@ -189,27 +189,27 @@ class _ extends r.Component {
                                       type: 'video/mp4'
                                   })
                               }),
-                        (0, i.jsx)(u.W, {
+                        (0, i.jsx)(d.W, {
                             children:
                                 o && e
                                     ? null
                                     : (0, i.jsx)(
                                           g,
                                           {
-                                              className: a()(h.splashPlaceholder, p),
+                                              className: a()(f.splashPlaceholder, p),
                                               src: n,
                                               title: l
                                           },
                                           0
                                       )
                         }),
-                        (0, i.jsx)(d.Clickable, {
-                            className: a()(h.muteContainer, {
-                                [h.muteContainerPlaying]: o && e,
-                                [h.muteContainerMediaOverlay]: null != _
+                        (0, i.jsx)(u.Clickable, {
+                            className: a()(f.muteContainer, {
+                                [f.muteContainerPlaying]: o && e,
+                                [f.muteContainerMediaOverlay]: null != _
                             }),
                             onClick: this.handleToggleMute,
-                            children: o && e ? (0, i.jsx)(C, { className: h.mute }) : null
+                            children: o && e ? (0, i.jsx)(C, { className: f.mute }) : null
                         })
                     ]
                 });
@@ -225,7 +225,7 @@ class _ extends r.Component {
                     ? (0, i.jsx)(
                           g,
                           {
-                              className: a()(h.splash, l),
+                              className: a()(f.splash, l),
                               src: e[o],
                               title: n
                           },
@@ -234,7 +234,7 @@ class _ extends r.Component {
                     : (0, i.jsx)(
                           g,
                           {
-                              className: a()(h.splash, l),
+                              className: a()(f.splash, l),
                               src: t,
                               title: n
                           },

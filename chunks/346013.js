@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(772848),
-    u = n(831209),
-    d = n(399606),
+    d = n(831209),
+    u = n(399606),
     m = n(481060),
-    f = n(607070),
-    h = n(100527),
+    h = n(607070),
+    f = n(100527),
     p = n(367907),
     g = n(676742),
     _ = n(1585),
@@ -49,8 +49,8 @@ function B(e) {
         H = (0, R.n)(),
         [z, W] = r.useState(!1),
         [K, Y] = r.useState((null == U ? void 0 : U.coverImage) == null),
-        X = (0, d.e7)([f.Z], () => f.Z.useReducedMotion),
-        Q = (0, d.e7)(
+        X = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+        Q = (0, u.e7)(
             [b.ZP, A.default],
             () => {
                 var e;
@@ -58,7 +58,7 @@ function B(e) {
             },
             [U]
         ),
-        q = (0, d.e7)([b.ZP], () => ((null == U ? void 0 : U.authorId) != null ? b.ZP.getMember(U.guildId, U.authorId) : null)),
+        q = (0, u.e7)([b.ZP], () => ((null == U ? void 0 : U.authorId) != null ? b.ZP.getMember(U.guildId, U.authorId) : null)),
         J = (0, g.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == U ? void 0 : null === (t = U.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = r.useMemo(() => {
             var e;
@@ -110,12 +110,12 @@ function B(e) {
             size: (0, _.y9)(m.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
-        eu = null === (n = U.user) || void 0 === n ? void 0 : n.getAvatarURL(U.guildId, 40, en),
-        ed = () => {
+        ed = null === (n = U.user) || void 0 === n ? void 0 : n.getAvatarURL(U.guildId, 40, en),
+        eu = () => {
             if (!et.enabled) ei((e) => !e);
         },
         em = U.coverImage,
-        ef = null != em && (0, I.d$)(em);
+        eh = null != em && (0, I.d$)(em);
     return (0, i.jsxs)('div', {
         className: k.postPreviewContainer,
         children: [
@@ -134,7 +134,7 @@ function B(e) {
                                   onError: () => Y(!0)
                               })
                             : (0, i.jsx)(C.Z, {
-                                  src: !(H && (V || z)) && ef ? ''.concat(em, '?format=png') : em,
+                                  src: !(H && (V || z)) && eh ? ''.concat(em, '?format=png') : em,
                                   backgroundSrc: ''.concat(em, '?format=png'),
                                   alt: M.intl.string(M.t.rIbh8P),
                                   aspectRatio: 16 / 9,
@@ -151,7 +151,7 @@ function B(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: k.thumbnailOverlayCta,
                                     children: [
-                                        (0, i.jsx)(P.Z, { color: u.Z.WHITE }),
+                                        (0, i.jsx)(P.Z, { color: d.Z.WHITE }),
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',
@@ -186,20 +186,20 @@ function B(e) {
                     (0, i.jsxs)('div', {
                         className: k.descriptionFooter,
                         children: [
-                            null != eu &&
+                            null != ed &&
                                 (0, i.jsx)(m.Popout, {
-                                    renderPopout: (e) => es(e, [h.Z.AVATAR]),
+                                    renderPopout: (e) => es(e, [f.Z.AVATAR]),
                                     position: 'right',
                                     spacing: 12,
                                     preload: null == U.authorId ? void 0 : eo,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
-                                            onMouseEnter: ed,
-                                            onMouseLeave: ed,
+                                            onMouseEnter: eu,
+                                            onMouseLeave: eu,
                                             children: (0, i.jsx)(m.Avatar, {
                                                 ...e,
                                                 size: m.AvatarSizes.SIZE_40,
-                                                src: eu,
+                                                src: ed,
                                                 'aria-label': M.intl.string(M.t.KXz3XF),
                                                 avatarDecoration: ec
                                             })
@@ -239,7 +239,7 @@ function B(e) {
                                                     (0, i.jsx)(
                                                         m.Popout,
                                                         {
-                                                            renderPopout: (e) => es(e, [h.Z.USERNAME]),
+                                                            renderPopout: (e) => es(e, [f.Z.USERNAME]),
                                                             position: 'right',
                                                             preload: null == U.authorId ? void 0 : eo,
                                                             children: (e) =>

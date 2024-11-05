@@ -6,11 +6,11 @@ var i = n(200651),
     o = n(668781),
     s = n(431583),
     c = n(91372),
-    u = n(19780),
-    d = n(35818),
+    d = n(19780),
+    u = n(35818),
     m = n(665149),
-    f = n(388032),
-    h = n(228856);
+    h = n(388032),
+    f = n(228856);
 function p(e, t, n) {
     return (
         t in e
@@ -46,16 +46,16 @@ class g extends r.PureComponent {
             case 'UPDATE_AVAILABLE':
                 return (0, i.jsx)(m.JO, {
                     hideOnClick: !1,
-                    tooltip: f.intl.string(f.t['zp9d//']),
-                    foreground: h.downloadArrow,
-                    background: h.cloud,
+                    tooltip: h.intl.string(h.t['zp9d//']),
+                    foreground: f.downloadArrow,
+                    background: f.cloud,
                     icon: a.DownloadIcon
                 });
             case 'UPDATE_MANUALLY':
             case 'UPDATE_DOWNLOADED':
                 return (0, i.jsx)(m.JO, {
-                    tooltip: f.intl.string(f.t.u18OXF),
-                    foreground: h.updateIconForeground,
+                    tooltip: h.intl.string(h.t.u18OXF),
+                    foreground: f.updateIconForeground,
                     onClick: this.handleInstallDownload,
                     icon: a.DownloadIcon
                 });
@@ -70,18 +70,18 @@ class g extends r.PureComponent {
                 clicked: !1
             }),
             p(this, 'handleInstallDownload', () => {
-                u.Z.isConnected()
+                d.Z.isConnected()
                     ? o.Z.show({
-                          title: f.intl.string(f.t.tiu1l5),
-                          body: f.intl.string(f.t['zK+lqa']),
+                          title: h.intl.string(h.t.tiu1l5),
+                          body: h.intl.string(h.t['zK+lqa']),
                           onConfirm: this.doUpdate,
-                          cancelText: f.intl.string(f.t['ETE/oK']),
-                          confirmText: f.intl.string(f.t['QDX/qq'])
+                          cancelText: h.intl.string(h.t['ETE/oK']),
+                          confirmText: h.intl.string(h.t['QDX/qq'])
                       })
                     : this.doUpdate();
             }),
             p(this, 'doUpdate', () => {
-                !this.state.clicked && (this.setState({ clicked: !0 }), (0, d.Q)());
+                !this.state.clicked && (this.setState({ clicked: !0 }), (0, u.Q)());
             });
     }
 }

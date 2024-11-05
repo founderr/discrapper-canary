@@ -6,11 +6,11 @@ var i = n(200651),
     o = n(215569),
     s = n(481060),
     c = n(140710),
-    u = n(833803),
-    d = n(566006),
+    d = n(833803),
+    u = n(566006),
     m = n(60174),
-    f = n(453687),
-    h = n(434624),
+    h = n(453687),
+    f = n(434624),
     p = n(287151),
     g = n(388032),
     _ = n(96042),
@@ -41,7 +41,7 @@ class v extends r.PureComponent {
             y = Z > 0;
         if (!y && !N) return null;
         let { enabled: L } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            { canShowImprovedReactionButton: O } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             M = L && y,
             k = (N && !y) || M,
             D = O && !I;
@@ -51,11 +51,11 @@ class v extends r.PureComponent {
             transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
-            id: (0, f.bY)(e),
+            id: (0, h.bY)(e),
             onMouseEnter: () => this.setState({ isHovered: !0 }),
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
-                (0, i.jsx)(h.l, {
+                (0, i.jsx)(f.l, {
                     reactions: j,
                     message: e,
                     readOnly: n,
@@ -84,7 +84,7 @@ class v extends r.PureComponent {
                     !b &&
                     (0, i.jsx)(m.X, {
                         tabIndex: k || this.state.isHovered ? 0 : -1,
-                        type: d.O.NORMAL,
+                        type: u.O.NORMAL,
                         message: e,
                         channel: x,
                         useChatFontScaling: S,
@@ -134,12 +134,12 @@ t.Z = (e) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: d.O.BURST
+                            type: u.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: d.O.NORMAL
+                                type: u.O.NORMAL
                             }),
                         null != t.me_vote && --o;
                 }),

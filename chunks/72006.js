@@ -60,12 +60,12 @@ var i = n(5148),
     o = n.n(a),
     s = n(283852),
     c = n.n(s),
-    u = n(115129),
-    d = n.n(u),
+    d = n(115129),
+    u = n.n(d),
     m = n(357062),
-    f = n.n(m),
-    h = n(34399),
-    p = n.n(h),
+    h = n.n(m),
+    f = n(34399),
+    p = n.n(f),
     g = n(157202),
     _ = n.n(g),
     C = n(473552),
@@ -91,10 +91,10 @@ function S(e, t, n, r) {
     let l, a;
     let s = t.getCurrentContent(),
         c = s.getFirstBlock(),
-        u = c.getText();
+        d = c.getText();
     'number' == typeof n
-        ? (n > u.length && (n = u.length),
-          null != r && r > u.length && (r = u.length),
+        ? (n > d.length && (n = d.length),
+          null != r && r > d.length && (r = d.length),
           (l = new i.SelectionState({
               anchorKey: c.getKey(),
               anchorOffset: n,
@@ -102,20 +102,20 @@ function S(e, t, n, r) {
               focusOffset: null != r && 0 !== r ? r : n
           })))
         : (l = t.getSelection());
-    let d = t.getCurrentInlineStyle(),
+    let u = t.getCurrentInlineStyle(),
         m = o()(s, l);
-    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, d, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, d, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
+    return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, u, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, u, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
 }
 function b(e, t) {
     switch (e) {
         case 'delete':
             return x()(t);
         case 'delete-word':
-            return f()(t);
+            return h()(t);
         case 'backspace':
             return E()(t);
         case 'backspace-word':
-            return d()(t);
+            return u()(t);
         case 'backspace-to-start-of-line':
             return c()(t);
         default:

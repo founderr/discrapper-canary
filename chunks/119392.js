@@ -11,11 +11,11 @@ var r = n(481060),
     o = n(570938),
     s = n(951394),
     c = n(749681),
-    u = n(572004),
-    d = n(63063),
+    d = n(572004),
+    u = n(63063),
     m = n(931515),
-    f = n(981631),
-    h = n(49898),
+    h = n(981631),
+    f = n(49898),
     p = n(128449),
     g = n(388032),
     _ = n(818768),
@@ -29,13 +29,13 @@ function E(e) {
         onClose: l.Zy,
         children: (0, i.jsxs)(r.MenuGroup, {
             children: [
-                u.wS &&
+                d.wS &&
                     (0, i.jsx)(r.MenuItem, {
                         id: 'copy',
                         label: g.intl.string(g.t.WqhZsr),
                         icon: r.CopyIcon,
                         action: () => {
-                            (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(f.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
+                            (0, d.JG)(''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
                         }
                     }),
                 (0, i.jsx)(r.MenuItem, {
@@ -43,7 +43,7 @@ function E(e) {
                     label: g.intl.string(g.t.hvVgAQ),
                     icon: r.LinkExternalMediumIcon,
                     action: () => {
-                        (0, a.Z)(d.Z.getArticleURL(f.BhN.CLANS_FAQ));
+                        (0, a.Z)(u.Z.getArticleURL(h.BhN.CLANS_FAQ));
                     }
                 })
             ]
@@ -142,7 +142,7 @@ function x(e) {
                                 color: r.Button.Colors.BRAND,
                                 onClick: () => {
                                     (0, c.transitionToGlobalDiscovery)({
-                                        tab: h.F$.SERVERS,
+                                        tab: f.F$.SERVERS,
                                         selectedServersTab: p.vf.GUILDS,
                                         entrypoint: p.Qq.EMBED
                                     });
@@ -201,7 +201,7 @@ function x(e) {
                                 color: r.Button.Colors.BRAND,
                                 onClick: () => {
                                     (0, c.transitionToGlobalDiscovery)({
-                                        tab: h.F$.SERVERS,
+                                        tab: f.F$.SERVERS,
                                         selectedServersTab: p.vf.GUILDS,
                                         entrypoint: p.Qq.EMBED,
                                         extra: { search: '?game='.concat(t) }

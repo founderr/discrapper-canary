@@ -1,9 +1,9 @@
 n.d(t, {
     ZP: function () {
-        return h;
+        return f;
     },
     fO: function () {
-        return f;
+        return h;
     },
     sF: function () {
         return m;
@@ -16,10 +16,10 @@ var i = n(200651),
     o = n(377171),
     s = n(951394),
     c = n(407477),
-    u = n(388032),
-    d = n(189265);
+    d = n(388032),
+    u = n(189265);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: f, iconProps: h, onClick: p, onTooltipShow: g, onTooltipHide: _, disabled: C, dangerous: E, separator: I, sparkle: x, showNewBadge: v, buttonClassName: N, children: T, ...S } = e,
+    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: g, onTooltipHide: _, disabled: C, dangerous: E, separator: I, sparkle: x, showNewBadge: v, buttonClassName: N, children: T, ...S } = e,
         { canShowReactionsOnMessageHover: b } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
@@ -30,13 +30,13 @@ function m(e) {
             onTooltipShow: g,
             onTooltipHide: _,
             hideOnClick: !0,
-            tooltipClassName: d.tooltip,
+            tooltipClassName: u.tooltip,
             children: (e) => {
                 let { onMouseEnter: r, onMouseLeave: c, onClick: m } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(s.zx, {
-                            className: l()(N, { [d.hoverBarButton]: b }),
+                            className: l()(N, { [u.hoverBarButton]: b }),
                             onMouseEnter: r,
                             onMouseLeave: c,
                             onClick: (e) => {
@@ -47,25 +47,25 @@ function m(e) {
                             dangerous: E,
                             ...S,
                             children: [
-                                null != f
-                                    ? (0, i.jsx)(f, {
-                                          className: d.icon,
+                                null != h
+                                    ? (0, i.jsx)(h, {
+                                          className: u.icon,
                                           color: 'currentColor',
-                                          ...h
+                                          ...f
                                       })
                                     : null,
                                 null != T
                                     ? (0, i.jsx)('div', {
-                                          className: l()(d.icon, d.buttonContent),
+                                          className: l()(u.icon, u.buttonContent),
                                           children: T
                                       })
                                     : null,
                                 x && (0, i.jsx)(a.LottieSparkle, {}),
                                 v &&
                                     (0, i.jsx)(a.TextBadge, {
-                                        text: u.intl.string(u.t.y2b7CA),
+                                        text: d.intl.string(d.t.y2b7CA),
                                         color: o.Z.BG_BRAND,
-                                        className: d.newBadge
+                                        className: u.newBadge
                                     })
                             ]
                         }),
@@ -76,17 +76,17 @@ function m(e) {
         })
     );
 }
-function f(e) {
-    let { className: t } = e;
-    return (0, i.jsx)('div', { className: l()(d.separator, t) });
-}
 function h(e) {
+    let { className: t } = e;
+    return (0, i.jsx)('div', { className: l()(u.separator, t) });
+}
+function f(e) {
     let { children: t, ...n } = e,
         { canShowReactionsOnMessageHover: r } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
         (0, i.jsx)(s.ZP, {
-            className: l()(n.className, d.popover, { [d.popoverReactionHoverBar]: r }),
+            className: l()(n.className, u.popover, { [u.popoverReactionHoverBar]: r }),
             children: t
         })
     );

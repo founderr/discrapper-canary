@@ -13,26 +13,26 @@ var r = n(481060),
 function c(e) {
     var t;
     let n,
-        { message: c, onDeleteMessage: u, children: d } = e,
+        { message: c, onDeleteMessage: d, children: u } = e,
         m = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        f = () => u(c, !0);
+        h = () => d(c, !0);
     if (null != m) {
         let e = (0, l.in)(m);
         n = (0, i.jsx)('div', {
             className: s.userAppsBetaContent,
             children: o.intl.format(o.t.wx1tLS, {
-                handleDelete: f,
+                handleDelete: h,
                 reason: e
             })
         });
     } else
         n =
             c.type === a.uaV.STAGE_RAISE_HAND
-                ? o.intl.format(o.t['qDAX+/'], { handleDelete: f })
+                ? o.intl.format(o.t['qDAX+/'], { handleDelete: h })
                 : o.intl.format(o.t.uX3ecH, {
                       count: 1,
                       countMessages: 1,
-                      handleDelete: f
+                      handleDelete: h
                   });
     return (0, i.jsxs)('div', {
         className: s.ephemeralMessage,
@@ -44,7 +44,7 @@ function c(e) {
                 className: s.icon
             }),
             n,
-            d
+            u
         ]
     });
 }

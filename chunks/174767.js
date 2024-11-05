@@ -6,16 +6,16 @@ n.d(t, {
         return c;
     },
     Ol: function () {
-        return u;
+        return d;
     },
     TG: function () {
-        return f;
+        return h;
     },
     UF: function () {
         return m;
     },
     sJ: function () {
-        return d;
+        return u;
     }
 }),
     n(411104);
@@ -29,7 +29,7 @@ async function s(e) {
         let t = e.parsed_launch_parameters.titleId,
             n = e.parsed_launch_parameters.inviteToken;
         if (!(0, a.isWindows)() || null == t || null == n) return;
-        let i = await h(t, !1),
+        let i = await f(t, !1),
             l = await g(n);
         r.Z.dispatch({
             type: 'GAME_INVITE_UPDATE_STATUS',
@@ -46,23 +46,23 @@ async function c(e) {
     }
     throw Error('Unsupported invite platform ' + e.platform_type);
 }
-async function u(e) {
+async function d(e) {
     if (e.platform_type === o.ABu.XBOX) {
         let t = e.parsed_launch_parameters.inviteToken;
         return !!(0, a.isWindows)() && null != t && (await _(t));
     }
     throw Error('Unsupported invite platform ' + e.platform_type);
 }
-function d() {
+function u() {
     r.Z.dispatch({ type: 'GAME_INVITE_CLEAR_UNSEEN' });
 }
 async function m(e) {
     await i.tn.del({ url: o.ANM.GAME_INVITE(e.invite_id) });
 }
-async function f() {
+async function h() {
     await i.tn.del({ url: o.ANM.GAME_INVITES });
 }
-async function h(e, t) {
+async function f(e, t) {
     if (!(0, a.isWindows)()) return !1;
     let n = await (0, l.Z)();
     return new Promise((i, r) => {

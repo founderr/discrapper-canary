@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(442837),
     s = n(570140),
     c = n(45114),
-    u = n(404616),
-    d = n(470623),
+    d = n(404616),
+    u = n(470623),
     m = n(344185),
-    f = n(488131),
-    h = n(592125),
+    h = n(488131),
+    f = n(592125),
     p = n(823379),
     g = n(709054),
     _ = n(124368),
@@ -23,7 +23,7 @@ var i = n(200651),
 function E(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
         E = (0, o.Wu)(
-            [m.Z, h.Z],
+            [m.Z, f.Z],
             () =>
                 a()(m.Z.getThreadsForParent(n.guild_id, n.id))
                     .values()
@@ -33,7 +33,7 @@ function E(e) {
                     })
                     .map((e) => {
                         let { id: t } = e;
-                        return h.Z.getChannel(t);
+                        return f.Z.getChannel(t);
                     })
                     .filter(p.lm)
                     .sort((e, t) => g.default.compare(e.id, t.id))
@@ -41,7 +41,7 @@ function E(e) {
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
         I = r.useCallback((e, t) => {
-            (0, f.ok)(e, t, _.on.INBOX);
+            (0, h.ok)(e, t, _.on.INBOX);
         }, []);
     return (
         r.useEffect(() => {
@@ -58,10 +58,10 @@ function E(e) {
             className: C.container,
             children: E.map((e) =>
                 (0, i.jsx)(
-                    d.oL,
+                    u.oL,
                     {
-                        createStore: () => (0, d.NU)(n),
-                        children: (0, i.jsx)(u.ZP, {
+                        createStore: () => (0, u.NU)(n),
+                        children: (0, i.jsx)(d.ZP, {
                             className: C.forumPost,
                             threadId: e.id,
                             goToThread: I

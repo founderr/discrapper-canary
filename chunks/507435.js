@@ -10,11 +10,11 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(468194),
-    u = n(481060),
-    d = n(904245),
+    d = n(481060),
+    u = n(904245),
     m = n(596454),
-    f = n(377171),
-    h = n(739566),
+    h = n(377171),
+    f = n(739566),
     p = n(942951),
     g = n(834129),
     _ = n(809026),
@@ -27,7 +27,7 @@ function v() {
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',
-        fill: f.Z.INTERACTIVE_NORMAL,
+        fill: h.Z.INTERACTIVE_NORMAL,
         'aria-hidden': !0,
         children: (0, l.jsx)('path', {
             'fill-rule': 'evenodd',
@@ -62,7 +62,7 @@ function T(e) {
         { type: n, ...i } = e;
     switch (n) {
         case 'NO_VOTES':
-            t = (0, l.jsx)(u.Text, {
+            t = (0, l.jsx)(d.Text, {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
@@ -76,7 +76,7 @@ function T(e) {
                     (0, l.jsxs)('div', {
                         className: x.victorAnswer,
                         children: [
-                            (0, l.jsx)(u.Text, {
+                            (0, l.jsx)(d.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-normal',
                                 className: x.victorAnswerText,
@@ -91,7 +91,7 @@ function T(e) {
                             })
                         ]
                     }),
-                    (0, l.jsxs)(u.Text, {
+                    (0, l.jsxs)(d.Text, {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
@@ -104,13 +104,13 @@ function T(e) {
             let { tiedVotePercentage: o } = i;
             t = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(u.Text, {
+                    (0, l.jsx)(d.Text, {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
                         children: I.intl.string(I.t.kPN9sr)
                     }),
-                    (0, l.jsxs)(u.Text, {
+                    (0, l.jsxs)(d.Text, {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
@@ -155,12 +155,12 @@ function S(e) {
             }),
             (0, l.jsx)(T, { ...r }),
             null != i &&
-                (0, l.jsx)(u.Button, {
+                (0, l.jsx)(d.Button, {
                     className: x.button,
-                    size: u.Button.Sizes.TINY,
+                    size: d.Button.Sizes.TINY,
                     onClick: i,
-                    color: u.Button.Colors.PRIMARY,
-                    children: (0, l.jsx)(u.Text, {
+                    color: d.Button.Colors.PRIMARY,
+                    children: (0, l.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
@@ -175,8 +175,8 @@ function b(e) {
     let { message: n, channel: i, compact: r, disableInteraction: o = !1 } = e,
         s = n.embeds[0],
         m = a.useMemo(() => (0, _.Z)(s), [s]),
-        f = (0, c.aF)(null !== (t = null == m ? void 0 : m.questionText) && void 0 !== t ? t : '', E.Dv),
-        C = (0, h.ZP)(n),
+        h = (0, c.aF)(null !== (t = null == m ? void 0 : m.questionText) && void 0 !== t ? t : '', E.Dv),
+        C = (0, f.ZP)(n),
         v = (0, p.l)({
             user: n.author,
             channelId: i.id,
@@ -186,7 +186,7 @@ function b(e) {
         N = n.messageReference,
         T = a.useCallback(() => {
             null != N &&
-                d.Z.jumpToMessage({
+                u.Z.jumpToMessage({
                     channelId: N.channel_id,
                     messageId: N.message_id,
                     flash: !0,
@@ -198,13 +198,13 @@ function b(e) {
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(g.Z, {
-                      iconNode: (0, l.jsx)(u.PollsIcon, { size: 'xs' }),
+                      iconNode: (0, l.jsx)(d.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: r,
                       children: I.intl.format(I.t['VJcK4+'], {
                           username: C.nick,
                           usernameHook: v(C),
-                          title: f,
+                          title: h,
                           titleOnClick: T
                       })
                   }),

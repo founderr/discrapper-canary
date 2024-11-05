@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(410575),
     s = n(906732),
     c = n(924301),
-    u = n(11868),
-    d = n(413605),
+    d = n(11868),
+    u = n(413605),
     m = n(451603),
-    f = n(885714),
-    h = n(314897),
+    h = n(885714),
+    f = n(314897),
     p = n(430824),
     g = n(701190),
     _ = n(610699),
@@ -49,7 +49,7 @@ function A(e) {
                   },
         { analyticsLocations: P } = (0, s.ZP)(),
         y = (0, l.e7)([p.Z], () => ((null == j ? void 0 : j.guild) != null ? p.Z.getGuild(j.guild.id) : null), [j]),
-        L = (0, l.e7)([h.default], () => h.default.getId()),
+        L = (0, l.e7)([f.default], () => f.default.getId()),
         O = (0, l.e7)(
             [c.ZP],
             () => {
@@ -63,7 +63,7 @@ function A(e) {
         },
         k = () => {
             (0, m.yU)()
-                ? (0, f.Z)({
+                ? (0, h.Z)({
                       analyticsSource: { page: b.ZY5.INVITE_EMBED },
                       analyticsLocation: {
                           page: b.ZY5.INVITE_EMBED,
@@ -102,8 +102,8 @@ function A(e) {
             });
             break;
         default:
-            switch ((0, d.VR)(R)) {
-                case d.wx.GROUP_DM:
+            switch ((0, u.VR)(R)) {
+                case u.wx.GROUP_DM:
                     D = (0, i.jsx)(I.Z, {
                         onTransitionToInviteChannel: M,
                         onAcceptInstantInvite: k,
@@ -112,7 +112,7 @@ function A(e) {
                         author: n
                     });
                     break;
-                case d.wx.FRIEND:
+                case u.wx.FRIEND:
                     D = (0, i.jsx)(E.Z, {
                         invite: R,
                         author: n,
@@ -120,7 +120,7 @@ function A(e) {
                     });
                     break;
                 default:
-                    if ((0, d.TY)(R)) {
+                    if ((0, u.TY)(R)) {
                         D = (0, i.jsx)(S.Z, {
                             onTransitionToInviteChannel: M,
                             onAcceptInstantInvite: k,
@@ -130,8 +130,8 @@ function A(e) {
                         });
                         break;
                     }
-                    if ((0, d.Tx)(R)) {
-                        D = (0, i.jsx)(u.ZP, {
+                    if ((0, u.Tx)(R)) {
+                        D = (0, i.jsx)(d.ZP, {
                             guildScheduledEvent: O,
                             guild: R.guild,
                             channel: R.channel,
@@ -141,7 +141,7 @@ function A(e) {
                         });
                         break;
                     }
-                    if ((0, d.$P)(R)) {
+                    if ((0, u.$P)(R)) {
                         D = (0, i.jsx)(T.Z, {
                             stageInstance: R.stage_instance,
                             guild: R.guild,
@@ -151,7 +151,7 @@ function A(e) {
                         });
                         break;
                     }
-                    (0, d.P1)(R) &&
+                    (0, u.P1)(R) &&
                         (D = (0, i.jsx)(_.Z, {
                             invite: R,
                             getAcceptInviteContext: A

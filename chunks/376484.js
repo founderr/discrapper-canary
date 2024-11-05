@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 }),
     n(47120);
@@ -12,37 +12,37 @@ var r = n(120356),
     o = n(446411),
     s = n(454585),
     c = n(834129),
-    u = n(553385),
-    d = n(981631),
+    d = n(553385),
+    u = n(981631),
     m = n(388032),
-    f = n(677436);
-function h(e) {
+    h = n(677436);
+function f(e) {
     let { message: t, channel: r, compact: o } = e,
         s = null != t.embeds && t.embeds.length > 0;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(c.Z, {
-                className: l()(f.mainContainer, { [f.compact]: o }),
+                className: l()(h.mainContainer, { [h.compact]: o }),
                 icon: n(570111),
                 compact: o,
                 children: (0, i.jsx)('div', {
-                    className: l()(f.__invalid_content, { [f.compact]: o }),
+                    className: l()(h.__invalid_content, { [h.compact]: o }),
                     children: (0, i.jsx)('div', {
-                        className: l()(f.__invalid_messageContent, { [f.compact]: o }),
+                        className: l()(h.__invalid_messageContent, { [h.compact]: o }),
                         children: t.content
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: l()(f.__invalid_embedContent, { [f.compact]: o }),
+                className: l()(h.__invalid_embedContent, { [h.compact]: o }),
                 children: (0, i.jsx)(p, { message: t })
             }),
             (0, i.jsx)('div', {
-                className: f.actions,
+                className: h.actions,
                 children: (0, i.jsx)(a.Button, {
                     color: a.Button.Colors.PRIMARY,
                     onClick: () => {
-                        s ? (0, u.z$)(t) : (0, u.XP)(r.guild_id, r.id, t.id);
+                        s ? (0, d.z$)(t) : (0, d.XP)(r.guild_id, r.id, t.id);
                     },
                     children: m.intl.string(m.t.zdBCIi)
                 })
@@ -57,13 +57,13 @@ function p(e) {
     return null == r
         ? null
         : (0, i.jsx)(o.ZP, {
-              className: f.embed,
+              className: h.embed,
               embed: r,
               renderTitle: (e, t) => s.Z.parseEmbedTitle(t, !0, { channelId: n.channel_id }),
               renderDescription: (e, t, i) => s.Z.parse(t, !0, { channelId: n.channel_id }),
               autoPlayGif: !1,
-              renderImageComponent: d.VqG,
-              renderVideoComponent: d.VqG,
-              renderLinkComponent: d.VqG
+              renderImageComponent: u.VqG,
+              renderVideoComponent: u.VqG,
+              renderLinkComponent: u.VqG
           });
 }

@@ -12,11 +12,11 @@ var i,
     o = n(442837),
     s = n(481060),
     c = n(558381),
-    u = n(410575),
-    d = n(498179),
+    d = n(410575),
+    u = n(498179),
     m = n(86357),
-    f = n(914602),
-    h = n(568836),
+    h = n(914602),
+    f = n(568836),
     p = n(730749),
     g = n(112724),
     _ = n(812206),
@@ -68,14 +68,14 @@ class A extends (i = l.Component) {
     }
     render() {
         let { sku: e, storeListing: t, width: n, fetchFailed: i, renderFallback: l } = this.props,
-            o = n > h.aL;
-        if (null == e || null == t) return i ? l() : (0, r.jsx)(h.OR, { isHorizontal: o });
+            o = n > f.aL;
+        if (null == e || null == t) return i ? l() : (0, r.jsx)(f.OR, { isHorizontal: o });
         return e.productLine === N.POd.COLLECTIBLES
-            ? (0, r.jsx)(u.Z, {
+            ? (0, r.jsx)(d.Z, {
                   section: N.jXE.APPLICATION_EMBED,
                   children: this.renderApplicationTile(e, t)
               })
-            : (0, r.jsx)(u.Z, {
+            : (0, r.jsx)(d.Z, {
                   section: N.jXE.APPLICATION_EMBED,
                   children: (0, r.jsx)(a.rU, {
                       onClick: this.handleLinkClick,
@@ -118,8 +118,8 @@ class A extends (i = l.Component) {
             b(this, 'renderApplicationTile', (e, t) => {
                 let { inLibrary: n, width: i, renderCustomTitle: l, renderCustomTagline: a, renderCustomMedia: o } = this.props,
                     { playing: s, muted: c } = this.state,
-                    u = i > h.aL;
-                return (0, r.jsx)(f.Z, {
+                    d = i > f.aL;
+                return (0, r.jsx)(h.Z, {
                     sku: e,
                     storeListing: t,
                     playing: s,
@@ -130,7 +130,7 @@ class A extends (i = l.Component) {
                     renderCustomTitle: l,
                     renderCustomTagline: a,
                     renderCustomMedia: o,
-                    isHorizontal: u,
+                    isHorizontal: d,
                     isEmbed: !0
                 });
             }),
@@ -149,7 +149,7 @@ class A extends (i = l.Component) {
                     children: [
                         !o || c
                             ? this.renderViewInStoreButton()
-                            : (0, r.jsx)(d.Z, {
+                            : (0, r.jsx)(u.Z, {
                                   application: n,
                                   customDisabledColor: s.Button.Colors.PRIMARY,
                                   size: s.Button.Sizes.SMALL,

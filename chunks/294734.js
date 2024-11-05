@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(902704),
     s = n(692547),
     c = n(481060),
-    u = n(356264),
-    d = n(628238),
+    d = n(356264),
+    u = n(628238),
     m = n(930282),
-    f = n(25015),
-    h = n(438075),
+    h = n(25015),
+    f = n(438075),
     p = n(695346),
     g = n(592125),
     _ = n(906467),
@@ -47,22 +47,22 @@ function j() {
     });
 }
 function Z(e) {
-    let { message: t, snapshot: n, index: d } = e,
-        m = r.useMemo(() => new v.r(t, n, d), [t, n, d]),
-        f = (0, a.e7)([g.Z, x.default, I.Z, E.Z, C.Z, u.Z], () => m.getForwardInfo(g.Z, x.default, I.Z, E.Z, C.Z, u.Z).footerInfo, [m], o.Z),
-        h = r.useCallback(() => {
+    let { message: t, snapshot: n, index: u } = e,
+        m = r.useMemo(() => new v.r(t, n, u), [t, n, u]),
+        h = (0, a.e7)([g.Z, x.default, I.Z, E.Z, C.Z, d.Z], () => m.getForwardInfo(g.Z, x.default, I.Z, E.Z, C.Z, d.Z).footerInfo, [m], o.Z),
+        f = r.useCallback(() => {
             (0, N.Z)(t);
         }, [t]);
-    return null == f
+    return null == h
         ? null
         : (0, i.jsxs)(c.Clickable, {
               className: A.footerContainer,
-              onClick: h,
+              onClick: f,
               children: [
-                  null != f.originIconUrl
+                  null != h.originIconUrl
                       ? (0, i.jsx)('img', {
                             className: A.originIcon,
-                            src: f.originIconUrl,
+                            src: h.originIconUrl,
                             alt: ''
                         })
                       : null,
@@ -70,7 +70,7 @@ function Z(e) {
                       className: A.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
-                      children: ''.concat(f.originLabel, '  \u2022  ').concat(f.timestampLabel)
+                      children: ''.concat(h.originLabel, '  \u2022  ').concat(h.timestampLabel)
                   }),
                   (0, i.jsx)(c.ChevronSmallRightIcon, {
                       size: 'xxs',
@@ -84,11 +84,11 @@ function R(e) {
     let { message: n, snapshot: l, index: o } = e,
         s = r.useMemo(() => (0, T.Z)(n, l), [n, l]),
         c = p.RS.useSetting(),
-        u = p.NA.useSetting(),
+        d = p.NA.useSetting(),
         C = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
-        E = (0, d.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
-        { content: I, hasSpoilerEmbeds: x } = (0, f.Z)(s, {
-            hideSimpleEmbedContent: c && u,
+        E = (0, u.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
+        { content: I, hasSpoilerEmbeds: x } = (0, h.Z)(s, {
+            hideSimpleEmbedContent: c && d,
             isInteracting: !1,
             formatInline: !1,
             allowList: E,
@@ -115,7 +115,7 @@ function R(e) {
                                   message: s,
                                   content: I
                               }),
-                              (0, h.Z)({
+                              (0, f.Z)({
                                   channelMessageProps: {
                                       message: s,
                                       channel: v,

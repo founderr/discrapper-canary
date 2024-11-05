@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,12 +11,12 @@ var r = n(692547),
     o = n(834129),
     s = n(388032),
     c = n(437814);
-function u(e) {
-    let { message: t, compact: n, usernameHook: u } = e,
-        d = (0, a.ZP)(t),
-        m = u(d),
-        f = s.intl.format(s.t['Rv+TSE'], {
-            username: d.nick,
+function d(e) {
+    let { message: t, compact: n, usernameHook: d } = e,
+        u = (0, a.ZP)(t),
+        m = d(u),
+        h = s.intl.format(s.t['Rv+TSE'], {
+            username: u.nick,
             usernameHook: m,
             topic: t.content
         });
@@ -29,6 +29,6 @@ function u(e) {
         iconContainerClassName: c.iconContainer,
         timestamp: t.timestamp,
         compact: n,
-        children: f
+        children: h
     });
 }

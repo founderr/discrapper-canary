@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var i = n(200651),
@@ -10,43 +10,43 @@ var i = n(200651),
     o = n(869765),
     s = n(699516),
     c = n(937889),
-    u = n(739566),
-    d = n(267128),
+    d = n(739566),
+    u = n(267128),
     m = n(981631);
-let f = r.memo(function (e) {
-    let { baseMessage: t, channel: n, referencedMessage: m, compact: f = !1 } = e,
-        h = m.state === o.Y.LOADED ? m.message : void 0,
+let h = r.memo(function (e) {
+    let { baseMessage: t, channel: n, referencedMessage: m, compact: h = !1 } = e,
+        f = m.state === o.Y.LOADED ? m.message : void 0,
         p = (0, a.p)(),
         g = r.useMemo(
             () =>
-                (null == h ? void 0 : h.content) != null && '' !== h.content
-                    ? (0, c.ZP)(h, {
+                (null == f ? void 0 : f.content) != null && '' !== f.content
+                    ? (0, c.ZP)(f, {
                           formatInline: !0,
                           shouldFilterKeywords: p
                       }).content
                     : null,
-            [h, p]
+            [f, p]
         ),
-        _ = (0, l.e7)([s.Z], () => null != h && s.Z.isBlockedForMessage(h), [h]),
-        C = (0, u.Uj)(h),
-        E = (0, u.Uj)(t);
-    return (0, i.jsx)(d.Z, {
+        _ = (0, l.e7)([s.Z], () => null != f && s.Z.isBlockedForMessage(f), [f]),
+        C = (0, d.Uj)(f),
+        E = (0, d.Uj)(t);
+    return (0, i.jsx)(u.Z, {
         repliedAuthor: C,
         baseAuthor: E,
         baseMessage: t,
         channel: n,
         referencedMessage: m,
         content: g,
-        compact: f,
+        compact: h,
         isReplyAuthorBlocked: _,
         isReplySpineClickable: !1,
         showReplySpine: !0
     });
 });
-function h(e, t, n, r, l) {
+function f(e, t, n, r, l) {
     return e.type !== m.uaV.REPLY || null == n
         ? null
-        : (0, i.jsx)(f, {
+        : (0, i.jsx)(h, {
               baseMessage: e,
               channel: t,
               referencedMessage: r,

@@ -6,11 +6,11 @@ var i,
     o = n(392711),
     s = n.n(o),
     c = n(442837),
-    u = n(433517),
-    d = n(570140),
+    d = n(433517),
+    u = n(570140),
     m = n(496929),
-    f = n(16084),
-    h = n(728345),
+    h = n(16084),
+    f = n(728345),
     p = n(812206),
     g = n(594190),
     _ = n(594174),
@@ -27,12 +27,12 @@ function S() {
         if (T.includes(t)) continue;
         let i = p.Z.getApplication(n);
         if (null == i) {
-            !p.Z.isFetchingApplication(n) && !p.Z.didFetchingApplicationFail(n) && h.ZP.fetchApplication(n);
+            !p.Z.isFetchingApplication(n) && !p.Z.didFetchingApplicationFail(n) && f.ZP.fetchApplication(n);
             continue;
         }
         let r = E.Z.get(t);
         if (null == r) {
-            !E.Z.isFetching(t) && !E.Z.didFetchingSkuFail(t) && f.$N(i.id, t);
+            !E.Z.isFetching(t) && !E.Z.didFetchingSkuFail(t) && h.$N(i.id, t);
             continue;
         }
         C.Z.applicationIdsFetching.has(i.id) || C.Z.isEntitledToSku(_.default.getCurrentUser(), t, i.id, i.id) || !r.available
@@ -48,7 +48,7 @@ function S() {
 class b extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(g.ZP, E.Z, C.Z), (T = null !== (e = u.K.get(x)) && void 0 !== e ? e : T);
+        this.waitFor(g.ZP, E.Z, C.Z), (T = null !== (e = d.K.get(x)) && void 0 !== e ? e : T);
     }
     getDetectedOffPlatformPremiumPerks() {
         return s().values(v);
@@ -63,7 +63,7 @@ class b extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new b(d.Z, {
+    (t.Z = new b(u.Z, {
         LOGOUT: function () {
             (v = {}), (N = {});
         },
@@ -74,7 +74,7 @@ class b extends (i = c.ZP.Store) {
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
             if ((delete v[t], T.includes(t))) return !1;
-            T.push(t), u.K.set(x, T);
+            T.push(t), d.K.set(x, T);
         },
         RUNNING_GAMES_CHANGE: function () {
             let e = !1;

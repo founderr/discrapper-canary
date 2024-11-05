@@ -12,11 +12,11 @@ var r = n(533800),
     o = n(955415),
     s = n(131704),
     c = n(630388),
-    u = n(267642),
-    d = n(411198),
+    d = n(267642),
+    u = n(411198),
     m = n(277707),
-    f = n(358595),
-    h = n(981631),
+    h = n(358595),
+    f = n(981631),
     p = n(388032),
     g = n(691784);
 function _(e) {
@@ -27,18 +27,18 @@ function _(e) {
         { onTransitionToInviteChannel: x, onAcceptInstantInvite: v, guild: N, invite: T, author: S, currentUserId: b } = e,
         A = b === S.id,
         { channel: j, approximate_member_count: Z, approximate_presence_count: R } = T,
-        P = T.state === h.r2o.ACCEPTING,
+        P = T.state === f.r2o.ACCEPTING,
         y = null != j ? (0, s.jD)(j) : null,
         L = null != N,
         O = null != y,
         M = null != y && y.isGuildVocal(),
         k = null != y && y.isGuildStageVoice(),
         D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
-        B = null !== (_ = null == N ? void 0 : N.hasFeature(h.oNc.HUB)) && void 0 !== _ && _;
+        B = null !== (_ = null == N ? void 0 : N.hasFeature(f.oNc.HUB)) && void 0 !== _ && _;
     if (null == N) {
-        if (null == T.guild) return (0, i.jsx)(f.Z, {});
-        N = d.Qs(T.guild);
-        let e = (0, u.rF)(T.guild.premium_subscription_count, T.guild.id);
+        if (null == T.guild) return (0, i.jsx)(h.Z, {});
+        N = u.Qs(T.guild);
+        let e = (0, d.rF)(T.guild.premium_subscription_count, T.guild.id);
         N.premiumTier = e;
     }
     let w = L ? x : v,
@@ -128,7 +128,7 @@ function _(e) {
                         })
                     ]
                 }),
-                N.hasFeature(h.oNc.HUB) &&
+                N.hasFeature(f.oNc.HUB) &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: g.separator }),

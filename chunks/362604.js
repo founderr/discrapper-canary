@@ -12,18 +12,18 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(834129),
-    u = n(623292),
-    d = n(926491),
+    d = n(623292),
+    u = n(926491),
     m = n(419922),
-    f = n(626135),
-    h = n(585483),
+    h = n(626135),
+    f = n(585483),
     p = n(115610),
     g = n(981631),
     _ = n(388032),
     C = n(809858);
 function E(e) {
     let { message: t, channel: l, compact: E } = e,
-        I = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        I = (0, o.Wu)([u.Z], () => Array.from(u.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [x, v] = r.useState(null);
     return (r.useEffect(() => {
         let e = setInterval(() => {
@@ -55,14 +55,14 @@ function E(e) {
                               children: (0, i.jsx)(s.Button, {
                                   color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      f.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          h.S.dispatch(g.CkL.UPLOAD_FILE),
-                                          (0, u.fE)({
+                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
+                                          (0, d.fE)({
                                               message: t,
                                               channel: l,
                                               shouldMention: !0
@@ -79,7 +79,7 @@ function E(e) {
                               children: (0, i.jsx)(s.Button, {
                                   color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      f.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,

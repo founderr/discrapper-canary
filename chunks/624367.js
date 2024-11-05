@@ -13,11 +13,11 @@ var r = n(568611),
     o = n(481060),
     s = n(668781),
     c = n(2052),
-    u = n(100527),
-    d = n(906732),
+    d = n(100527),
+    u = n(906732),
     m = n(895924),
-    f = n(835473),
-    h = n(522474),
+    h = n(835473),
+    f = n(522474),
     p = n(523746),
     g = n(592125),
     _ = n(594174),
@@ -39,7 +39,7 @@ let y = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function L(e) {
     var t, n, a, I;
     let { applicationId: L, message: O } = e,
-        { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
+        { analyticsLocations: M } = (0, u.ZP)(d.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
         B = (0, l.e7)([g.Z], () => g.Z.getChannel(D), [D]),
@@ -47,7 +47,7 @@ function L(e) {
         U = null != B && (B.isGuildVoice() || B.isPrivate()),
         F = (0, l.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivityForChannel(D)),
         G = (null == F ? void 0 : F.applicationId) === L,
-        [V] = (0, f.Z)([L, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        [V] = (0, h.Z)([L, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
         [z] = (0, l.Wu)([x.ZP], () => (U ? x.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === L) : []), [L, D, U]),
         W = Array.from(null !== (I = null == z ? void 0 : z.userIds) && void 0 !== I ? I : []),
@@ -57,7 +57,7 @@ function L(e) {
             size: y,
             names: ['embedded_cover']
         }),
-        X = h.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
+        X = f.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
         Q = K.length > 0 ? R.intl.string(R.t.VJlc0d) : R.intl.string(R.t.I0v0Qk),
         q = async () => {
             if (U) {
@@ -98,7 +98,7 @@ function L(e) {
                 });
         };
     return null != V && (0, C.yE)(V.flags, Z.udG.EMBEDDED)
-        ? (0, i.jsx)(d.Gt, {
+        ? (0, i.jsx)(u.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
                   className: P.container,

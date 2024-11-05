@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(481060),
     s = n(230711),
     c = n(2052),
-    u = n(906732),
-    d = n(963249),
+    d = n(906732),
+    u = n(963249),
     m = n(594174),
-    f = n(626135),
-    h = n(74538),
+    h = n(626135),
+    f = n(74538),
     p = n(163684),
     g = n(748770),
     _ = n(474936),
@@ -22,7 +22,7 @@ var i = n(200651),
     E = n(388032),
     I = n(464780);
 function x() {
-    let e = (0, a.e7)([m.default], () => h.ZP.isPremiumExactly(m.default.getCurrentUser(), _.p9.TIER_2)),
+    let e = (0, a.e7)([m.default], () => f.ZP.isPremiumExactly(m.default.getCurrentUser(), _.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = p.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
@@ -31,10 +31,10 @@ function x() {
             }
         ),
         { location: x } = (0, c.O)(),
-        { analyticsLocations: v } = (0, u.ZP)(),
+        { analyticsLocations: v } = (0, d.ZP)(),
         N = r.useCallback(() => {
-            (0, d.Z)({
-                subscriptionTier: h.ZP.getSkuIdForPremiumType(_.p9.TIER_2),
+            (0, u.Z)({
+                subscriptionTier: f.ZP.getSkuIdForPremiumType(_.p9.TIER_2),
                 analyticsLocations: v,
                 analyticsObject: {
                     ...x,
@@ -47,7 +47,7 @@ function x() {
             s.Z.open(C.oAB.INVENTORY), g.ZP.dismissOutboundPromotionNotice();
         }, []),
         S = r.useCallback(() => {
-            f.default.track(C.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? N() : T();
+            h.default.track(C.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? N() : T();
         }, [n, N, T]);
     return (0, i.jsxs)(o.Notice, {
         color: o.NoticeColors.PREMIUM_TIER_2,

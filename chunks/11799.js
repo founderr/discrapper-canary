@@ -1,6 +1,6 @@
 n.d(t, {
     y6: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -11,11 +11,11 @@ var i = n(192379),
     o = n(455199),
     s = n(833592),
     c = n(140155),
-    u = n(774807),
-    d = n(490897);
+    d = n(774807),
+    u = n(490897);
 let m = (e) => {
-        let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: f = !1, initialPageSize: h } = e,
-            p = (0, r.e7)([u.Z], () => u.Z.shouldReload()),
+        let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: f } = e,
+            p = (0, r.e7)([d.Z], () => d.Z.shouldReload()),
             g = i.useRef(!1),
             [_, C] = i.useState(!1),
             {
@@ -39,7 +39,7 @@ let m = (e) => {
             }));
         i.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             i.useEffect(() => {
-                E && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+                E && t && (0, l.FT)(u.W.NOTIFICATION_CENTER);
             }, [t, E]);
         let A = (0, a.Z)();
         i.useEffect(
@@ -52,12 +52,12 @@ let m = (e) => {
                 let e = p && t;
                 (!E || e) &&
                     (0, s.jk)({
-                        limit: null != h ? h : f ? 8 : 20,
-                        with_mentions: f,
+                        limit: null != f ? f : h ? 8 : 20,
+                        with_mentions: h,
                         roles_filter: S,
                         everyone_filter: b
                     });
-            }, [E, p, t, f, S, b, h]);
+            }, [E, p, t, h, S, b, f]);
         let j = i.useCallback(
             async (e) => {
                 !g.current &&
@@ -70,10 +70,10 @@ let m = (e) => {
                     await (0, s.jk)(
                         {
                             after: N,
-                            with_mentions: f,
+                            with_mentions: h,
                             roles_filter: S,
                             everyone_filter: b,
-                            limit: f ? 8 : 20
+                            limit: h ? 8 : 20
                         },
                         () => {
                             g.current = !1;
@@ -81,7 +81,7 @@ let m = (e) => {
                     ),
                     C(!1));
             },
-            [E, v, N, T, f, S, b]
+            [E, v, N, T, h, S, b]
         );
         return {
             initialized: E,
@@ -96,7 +96,7 @@ let m = (e) => {
             errored: T
         };
     },
-    f = () => {
+    h = () => {
         let {
             initialized: e,
             loading: t,

@@ -5,11 +5,11 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(25610),
-    u = n(703751),
-    d = n(628238),
+    d = n(703751),
+    u = n(628238),
     m = n(976853),
-    f = n(977683),
-    h = n(869765),
+    h = n(977683),
+    f = n(869765),
     p = n(695346),
     g = n(592125),
     _ = n(699516),
@@ -59,13 +59,13 @@ t.Z = r.memo(function e(t) {
     let r;
     let { channel: l, message: s, compact: L = !1, className: k, onContextMenu: w, onClick: U, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
         H = O.OBS.has(s.type) ? s.messageReference : void 0,
-        z = (0, o.e7)([h.Z], () => h.Z.getMessageByReference(H)),
-        W = (0, o.e7)([g.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === h.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
+        z = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(H)),
+        W = (0, o.e7)([g.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
         K = p.x4.useSetting(),
         Y = p.RS.useSetting(),
         X = p.NA.useSetting(),
         Q = p.QK.useSetting(),
-        q = (0, d.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
+        q = (0, u.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         J = (0, m.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: $ } = (0, N.Z)(l),
         { content: ee, hasSpoilerEmbeds: et } = (0, b.Z)(s, {
@@ -77,7 +77,7 @@ t.Z = r.memo(function e(t) {
         }),
         en = (0, v.ZP)(s),
         ei = (0, o.e7)([g.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && g.Z.getChannel(C.default.castMessageIdAsChannelId(s.id))),
-        er = s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === h.Y.LOADED && null != W,
+        er = s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED && null != W,
         el = !er && void 0 === r,
         ea = (0, A.Z)({
             message: s,
@@ -85,8 +85,8 @@ t.Z = r.memo(function e(t) {
             enabled: el
         }),
         eo = (0, c.V)(l.id, s.author.id),
-        es = (0, u.r)(s.id),
-        ec = (0, f.Z)(s);
+        es = (0, d.r)(s.id),
+        ec = (0, h.Z)(s);
     return er
         ? (0, i.jsx)(e, {
               ...t,

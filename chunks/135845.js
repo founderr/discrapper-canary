@@ -11,11 +11,11 @@ var r = n(512722),
     o = n(955415),
     s = n(131704),
     c = n(601964),
-    u = n(199902),
-    d = n(914010),
+    d = n(199902),
+    u = n(914010),
     m = n(358595),
-    f = n(981631),
-    h = n(245335),
+    h = n(981631),
+    f = n(245335),
     p = n(388032),
     g = n(691784);
 function _(e) {
@@ -24,16 +24,16 @@ function _(e) {
         r,
         { invite: _, currentUserId: C, guild: E, onTransitionToInviteChannel: I, onAcceptInstantInvite: x } = e,
         v = null == E ? void 0 : E.id,
-        N = (0, a.e7)([d.Z], () => d.Z.getGuildId()),
-        T = (0, a.e7)([u.Z], () => (null != _ && null != _.target_user ? u.Z.getActiveStreamForUser(_.target_user.id, v) : null), [_, v]),
-        S = (0, a.e7)([u.Z], () => (null != _ && null != _.target_user ? u.Z.getStreamForUser(_.target_user.id, v) : null), [_, v]),
-        b = null != _ && _.target_type === h.Iq.STREAM && null != _.target_user && null != T,
+        N = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
+        T = (0, a.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getActiveStreamForUser(_.target_user.id, v) : null), [_, v]),
+        S = (0, a.e7)([d.Z], () => (null != _ && null != _.target_user ? d.Z.getStreamForUser(_.target_user.id, v) : null), [_, v]),
+        b = null != _ && _.target_type === f.Iq.STREAM && null != _.target_user && null != T,
         A = null != _ && null != S && null != _.channel && null != _.guild && S.channelId === _.channel.id && S.guildId === _.guild.id;
     l()(null != _, 'Invite cannot be null');
     let { target_type: j, target_user: Z } = _;
-    l()(j === h.Iq.STREAM && null != Z, 'invalid streaming invite');
+    l()(j === f.Iq.STREAM && null != Z, 'invalid streaming invite');
     let R = C === Z.id,
-        P = _.state === f.r2o.ACCEPTING,
+        P = _.state === h.r2o.ACCEPTING,
         y = null != E;
     if (null == E) {
         if (null == _.guild) return (0, i.jsx)(m.Z, {});

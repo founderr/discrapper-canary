@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,15 +11,15 @@ var r = n(481060),
     o = n(834129),
     s = n(388032),
     c = n(116264);
-function u(e) {
-    let { compact: t, message: n, channel: u } = e,
-        d = (0, l.ZP)(n),
+function d(e) {
+    let { compact: t, message: n, channel: d } = e,
+        u = (0, l.ZP)(n),
         m = (0, a.l)({
             user: n.author,
             channelId: n.channel_id,
-            guildId: u.guild_id,
+            guildId: d.guild_id,
             messageId: n.id
-        })(d);
+        })(u);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Z, {
@@ -33,7 +33,7 @@ function u(e) {
                 children: (0, i.jsx)('div', {
                     className: c.parentContainer,
                     children: s.intl.format(s.t['5bYXjo'], {
-                        actorName: d.nick,
+                        actorName: u.nick,
                         actorHook: m
                     })
                 })

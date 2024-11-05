@@ -10,11 +10,11 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(512722),
-    u = n.n(c),
-    d = n(913527),
-    m = n.n(d),
-    f = n(481060),
-    h = n(911969),
+    d = n.n(c),
+    u = n(913527),
+    m = n.n(u),
+    h = n(481060),
+    f = n(911969),
     p = n(595519),
     g = n(566620),
     _ = n(403404),
@@ -54,9 +54,9 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function k(e, t, n, i, r) {
     var a, o, c;
-    let { message: u, compact: d, channel: m, isInteractionUserBlocked: h, showAvatarPopout: p, showTargetAvatarPopout: g, onClickAvatar: _, onUserContextMenu: C, onClickTargetAvatar: E, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
-    if (d && 1 === n) return null;
-    if ((d && null == u.activityInstance) || h)
+    let { message: d, compact: u, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: g, onClickAvatar: _, onUserContextMenu: C, onClickTargetAvatar: E, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
+    if (u && 1 === n) return null;
+    if ((u && null == d.activityInstance) || f)
         return (0, l.jsx)('div', {
             className: O.replyBadge,
             children: (0, l.jsx)(M, { className: O.commandIcon })
@@ -93,7 +93,7 @@ function k(e, t, n, i, r) {
             }),
         T = 1 === n ? g : p;
     return null != r && null != T
-        ? (0, l.jsx)(f.Popout, {
+        ? (0, l.jsx)(h.Popout, {
               renderPopout: r,
               shouldShow: T,
               position: 'right',
@@ -103,7 +103,7 @@ function k(e, t, n, i, r) {
         : N();
 }
 function D(e, t, n, i, r) {
-    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: u, onUserContextMenu: d, onClickTargetUsername: m, onTargetUserContextMenu: f, onPopoutRequestClose: h } = e;
+    let { message: a, channel: o, showUsernamePopout: s, showTargetUsernamePopout: c, onClickUsername: d, onUserContextMenu: u, onClickTargetUsername: m, onTargetUserContextMenu: h, onPopoutRequestClose: f } = e;
     return (0, l.jsx)(Z.Z, {
         className: 1 === n ? O.targetUsername : '',
         compact: !0,
@@ -113,13 +113,13 @@ function D(e, t, n, i, r) {
         userOverride: t,
         showPopout: 1 === n ? c : s,
         renderPopout: r,
-        onClick: 1 === n ? m : u,
-        onContextMenu: 1 === n ? f : d,
-        onPopoutRequestClose: h
+        onClick: 1 === n ? m : d,
+        onContextMenu: 1 === n ? h : u,
+        onPopoutRequestClose: f
     });
 }
 let B = () =>
-    (0, l.jsx)(f.ChevronSmallRightIcon, {
+    (0, l.jsx)(h.ChevronSmallRightIcon, {
         size: 'xxs',
         color: 'currentColor',
         className: O.executedCommandSeparator
@@ -131,7 +131,7 @@ function w(e) {
         { analyticsLocations: o } = (0, E.ZP)(C.Z.EXECUTED_COMMAND),
         c = a.useMemo(
             () => (e, t, n) => (
-                u()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
+                d()(null != r && null != t, 'ExecuteCommand: user and channel cannot be undefined'),
                 (0, l.jsx)(N.Z, {
                     ...e,
                     channelId: r.id,
@@ -143,9 +143,9 @@ function w(e) {
             ),
             [r, i.id]
         ),
-        d = a.useMemo(
+        u = a.useMemo(
             () => (e) => (
-                u()(null != r, 'ExecutedCommand: channel cannot be null'),
+                d()(null != r, 'ExecutedCommand: channel cannot be null'),
                 (0, l.jsx)(R.Z, {
                     ...e,
                     channel: r,
@@ -156,8 +156,8 @@ function w(e) {
             [r, i.id, i.interactionData]
         ),
         S = (0, x.t0)(i),
-        Z = (null == S ? void 0 : S.type) === h.B8.APPLICATION_COMMAND && null != S.target_user ? new T.Z(S.target_user) : null,
-        M = (null == S ? void 0 : S.type) === h.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
+        Z = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != S.target_user ? new T.Z(S.target_user) : null,
+        M = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
         w = (0, j.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, r),
         U = (0, j.Sw)(Z, r),
         F = a.useMemo(() => (e.compact ? (0, P.Z)((0, A.vc)(m()(), 'LT')) : null), [e.compact]),
@@ -182,25 +182,25 @@ function w(e) {
                 let t = (function (e, t) {
                     let { showDataPopout: n, message: i, onClickCommand: r, onPopoutRequestClose: a } = e,
                         o = i.interaction.displayName;
-                    return (0, l.jsx)(f.Popout, {
+                    return (0, l.jsx)(h.Popout, {
                         renderPopout: t,
                         shouldShow: n,
                         position: 'top',
                         align: 'center',
                         onRequestClose: a,
-                        animation: f.Popout.Animation.FADE,
+                        animation: h.Popout.Animation.FADE,
                         positionKey: null != i.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
                             if (i.type === y.uaV.CHAT_INPUT_COMMAND || i.type === y.uaV.INTERACTION_PREMIUM_UPSELL)
-                                return (0, l.jsx)(f.Clickable, {
+                                return (0, l.jsx)(h.Clickable, {
                                     ...n,
                                     tag: 'span',
                                     onClick: r,
                                     children: (0, l.jsxs)('div', {
                                         className: s()(O.appLauncherOnboardingCommandName, O.clickable),
                                         children: [
-                                            (0, l.jsx)(f.AppsIcon, {
+                                            (0, l.jsx)(h.AppsIcon, {
                                                 size: 'custom',
                                                 color: 'currentColor',
                                                 height: 10,
@@ -218,7 +218,7 @@ function w(e) {
                                 });
                             {
                                 let e = (0, I.XZ)(o);
-                                return (0, l.jsx)(f.Clickable, {
+                                return (0, l.jsx)(h.Clickable, {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
@@ -227,7 +227,7 @@ function w(e) {
                                     children: (0, l.jsxs)('div', {
                                         className: s()(O.appLauncherOnboardingCommandName, O.clickable),
                                         children: [
-                                            (0, l.jsx)(f.AppsIcon, {
+                                            (0, l.jsx)(h.AppsIcon, {
                                                 size: 'custom',
                                                 color: 'currentColor',
                                                 height: 10,
@@ -241,7 +241,7 @@ function w(e) {
                             }
                         }
                     });
-                })(e, d);
+                })(e, u);
                 return (0, l.jsx)(a.Fragment, { children: t }, 'command');
             }
         })),
@@ -289,7 +289,7 @@ function w(e) {
             ? L.intl.format(L.t.kfV8WF, {
                   userHook: H,
                   activityHook: () =>
-                      (0, l.jsx)(f.Clickable, {
+                      (0, l.jsx)(h.Clickable, {
                           tag: 'span',
                           onClick: e,
                           children: (0, l.jsx)('div', {

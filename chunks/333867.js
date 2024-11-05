@@ -12,14 +12,14 @@ var r = n(772848),
     o = n(667),
     s = n(335131),
     c = n(626135),
-    u = n(409813),
-    d = n(608579),
+    d = n(409813),
+    u = n(608579),
     m = n(981631);
-let f = 'payment-modal',
-    h = new Set([u.h8.REVIEW, u.h8.CONFIRM]);
+let h = 'payment-modal',
+    f = new Set([d.h8.REVIEW, d.h8.CONFIRM]);
 function p(e) {
     let t;
-    let { skuId: n, isGift: u = !1, giftMessage: p, giftingOrigin: g, onClose: _, onComplete: C, analyticsLocations: E, analyticsObject: I } = e,
+    let { skuId: n, isGift: d = !1, giftMessage: p, giftingOrigin: g, onClose: _, onComplete: C, analyticsLocations: E, analyticsObject: I } = e,
         x = !1,
         v = (0, r.Z)(),
         N = (e) => {
@@ -28,11 +28,11 @@ function p(e) {
     (0, l.openModalLazy)(
         async () => (e) => {
             let { onClose: t, returnRef: r, ...l } = e;
-            return (0, i.jsx)(d.Z, {
+            return (0, i.jsx)(u.Z, {
                 ...l,
                 loadId: v,
                 skuId: n,
-                isGift: u,
+                isGift: d,
                 giftMessage: p,
                 giftingOrigin: g,
                 analyticsLocations: E,
@@ -47,14 +47,14 @@ function p(e) {
             });
         },
         {
-            modalKey: f,
+            modalKey: h,
             onCloseCallback: () => {
                 !x &&
                     c.default.track(m.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: v,
                         payment_type: m.Zuq[m.GZQ.ONE_TIME],
                         location: I,
-                        is_gift: u,
+                        is_gift: d,
                         location_stack: E
                     }),
                     (0, a.fw)(),
@@ -63,7 +63,7 @@ function p(e) {
                     x && (0, s.qg)();
             },
             onCloseRequest: () => {
-                null != t && h.has(t) && (0, l.closeModal)(f);
+                null != t && f.has(t) && (0, l.closeModal)(h);
             }
         }
     );

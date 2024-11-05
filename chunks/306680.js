@@ -113,7 +113,7 @@ function eA(e) {
 function eN(e, t) {
     let n = Y.Z.getChannel(e.channel_id);
     return (
-        !(null == n || J.Z.isBlockedForMessage(e)) &&
+        !(null == n || J.Z.isBlockedOrIgnoredForMessage(e)) &&
         (!!(
             (0, R.ZP)({
                 message: e,
@@ -1126,7 +1126,7 @@ let e0 = new e$(m.Z, {
         if ((_ && eD(o) && !s) || (null != r && r.isInstanceFocused() && _ && r.isInstanceLocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
         (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = a.id),
             !l && o.unreadCount++,
-            !(J.Z.isBlockedForMessage(a) || (a.type === er.uaV.RECIPIENT_REMOVE && (null == c ? void 0 : c.type) === er.d4z.GROUP_DM)) &&
+            !(J.Z.isBlockedOrIgnoredForMessage(a) || (a.type === er.uaV.RECIPIENT_REMOVE && (null == c ? void 0 : c.type) === er.d4z.GROUP_DM)) &&
                 (function (e, t, n) {
                     if (
                         null != t &&

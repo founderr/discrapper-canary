@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(481060),
     s = n(100527),
     c = n(436774),
-    u = n(197115),
-    d = n(74538),
+    d = n(197115),
+    u = n(74538),
     m = n(175006),
-    f = n(981631),
-    h = n(474936),
+    h = n(981631),
+    f = n(474936),
     p = n(388032),
     g = n(169458),
     _ = n(492764),
@@ -74,7 +74,7 @@ function E() {
           });
 }
 function I() {
-    let e = (0, d.Px)(h.p9.TIER_2),
+    let e = (0, u.Px)(f.p9.TIER_2),
         t = r.useCallback(
             () =>
                 (0, o.openModalLazy)(async () => {
@@ -104,12 +104,12 @@ function I() {
                 className: g.upsellText,
                 children: m
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(d.Z, {
                 className: g.upsellButton,
                 size: o.ButtonSizes.TINY,
                 shinyButtonClassName: g.upsellButton,
-                subscriptionTier: h.Si.TIER_2,
-                premiumModalAnalyticsLocation: { section: f.jXE.FOR_LATER_POPOUT_UPSELL }
+                subscriptionTier: f.Si.TIER_2,
+                premiumModalAnalyticsLocation: { section: h.jXE.FOR_LATER_POPOUT_UPSELL }
             })
         ]
     });

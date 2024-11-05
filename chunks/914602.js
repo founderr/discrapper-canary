@@ -6,11 +6,11 @@ var i,
     o = n.n(a),
     s = n(86357),
     c = n(54936),
-    u = n(491598),
-    d = n(351465),
+    d = n(491598),
+    u = n(351465),
     m = n(669021),
-    f = n(73346),
-    h = n(568836),
+    h = n(73346),
+    f = n(568836),
     p = n(345898),
     g = n(981631),
     _ = n(262203);
@@ -30,7 +30,7 @@ function C(e, t, n) {
 class E extends (i = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
-            c = s ? h.$G : p.Z;
+            c = s ? f.$G : p.Z;
         return (0, r.jsx)(c, {
             className: i,
             renderMedia: null != o ? o : this.renderMedia,
@@ -70,8 +70,8 @@ class E extends (i = l.PureComponent) {
                     children: [
                         (0, r.jsx)(m.Z, {
                             className: o()(_.splashContainer, { [_.splashContainerHorizontal]: s }),
-                            video: null != c.previewVideo ? (0, f._W)(a.applicationId, c.previewVideo) : void 0,
-                            image: null != c.thumbnail ? (0, f._W)(a.applicationId, c.thumbnail, 600) : null,
+                            video: null != c.previewVideo ? (0, h._W)(a.applicationId, c.previewVideo) : void 0,
+                            image: null != c.thumbnail ? (0, h._W)(a.applicationId, c.thumbnail, 600) : null,
                             title: a.name,
                             playing: e,
                             muted: t,
@@ -80,7 +80,7 @@ class E extends (i = l.PureComponent) {
                             splashClassName: _.splashVideo,
                             splashPlaceholderClassName: _.splashPlaceholder
                         }),
-                        a.exclusive ? (0, r.jsx)(d.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(u.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : null
+                        a.exclusive ? (0, r.jsx)(u.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : a.isTheGameAwardsWinner ? (0, r.jsx)(d.Z, { className: o()(_.exclusiveRegular, { [_.exclusivePlaying]: e }) }) : null
                     ]
                 });
             });

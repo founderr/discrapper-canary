@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,10 +11,10 @@ var r = n(442837),
     o = n(739566),
     s = n(834129),
     c = n(388032),
-    u = n(563480);
-function d(e) {
+    d = n(563480);
+function u(e) {
     var t;
-    let { message: n, compact: d, usernameHook: m, onClickThread: f, onClickViewThreads: h, onContextMenuThread: p } = e,
+    let { message: n, compact: u, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
         g = (0, o.ZP)(n),
         _ = m(g),
         C = (0, r.e7)([a.Z], () => {
@@ -26,19 +26,19 @@ function d(e) {
             actorHook: _,
             threadName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
-                onClick: f,
+                onClick: h,
                 onContextMenu: p
             },
-            viewThreadsOnClick: h
+            viewThreadsOnClick: f
         });
     return (0, i.jsx)(s.Z, {
         iconNode: (0, i.jsx)(l.ThreadIcon, {
             size: 'md',
             color: 'currentColor',
-            className: u.icon
+            className: d.icon
         }),
         timestamp: n.timestamp,
-        compact: d,
+        compact: u,
         children: E
     });
 }

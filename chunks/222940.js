@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(47120);
@@ -11,34 +11,34 @@ var i = n(200651),
     o = n(481060),
     s = n(317632),
     c = n(174767),
-    u = n(594174),
-    d = n(388032),
+    d = n(594174),
+    u = n(388032),
     m = n(695987);
-function f(e) {
+function h(e) {
     let { inboxIconRef: t, recentsPopoutShown: n } = e,
-        [f, h] = r.useState(!1),
+        [h, f] = r.useState(!1),
         p = (0, l.e7)([s.Z], () => s.Z.getLastUnseenInvite()),
-        g = (0, l.e7)([u.default], () => (null != p ? u.default.getUser(p.inviter_id) : null));
+        g = (0, l.e7)([d.default], () => (null != p ? d.default.getUser(p.inviter_id) : null));
     return (r.useEffect(() => {
-        n && h(!1);
+        n && f(!1);
     }, [n]),
     r.useEffect(() => {
         if (null == p) {
-            h(!1);
+            f(!1);
             return;
         }
-        (0, c.Br)(p), h(!0);
+        (0, c.Br)(p), f(!0);
         let e = new a.V7();
         return (
             e.start(5000, () => {
-                h(!1);
+                f(!1);
             }),
             () => {
                 e.stop();
             }
         );
     }, [p]),
-    f && null != p && null != g)
+    h && null != p && null != g)
         ? (0, i.jsxs)(o.TooltipLayer, {
               tooltipClassName: m.tooltip,
               tooltipContentClassName: m.tooltipContent,
@@ -71,7 +71,7 @@ function f(e) {
                           (0, i.jsx)(o.Text, {
                               className: m.__invalid_title,
                               variant: 'text-xs/semibold',
-                              children: d.intl.format(d.t['8gTZ8v'], { username: g.username })
+                              children: u.intl.format(u.t['8gTZ8v'], { username: g.username })
                           }),
                           (0, i.jsx)(o.Text, {
                               className: m.__invalid_subtitle,

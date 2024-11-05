@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(288552),
     s = n(981631),
     c = n(388032),
-    u = n(811304);
-function d(e) {
+    d = n(811304);
+function u(e) {
     let { type: t, onClick: n } = e,
-        [d, f] = r.useState(!1),
-        h = () => {
+        [u, h] = r.useState(!1),
+        f = () => {
             n(),
                 a.default.track(s.rMx.INBOX_CHANNEL_ACKED, {
                     marked_all_channels_as_read: !0,
@@ -23,14 +23,14 @@ function d(e) {
                 });
         },
         p = (e) => {
-            e.shiftKey ? h() : f(!0);
+            e.shiftKey ? f() : h(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            d
+            u
                 ? (0, i.jsx)(m, {
-                      confirm: h,
-                      cancel: () => f(!1)
+                      confirm: f,
+                      cancel: () => h(!1)
                   })
                 : null,
             'bottom-floating' === t
@@ -46,7 +46,7 @@ function d(e) {
                           size: 'xs',
                           color: 'currentColor'
                       }),
-                      className: u.controlButton,
+                      className: d.controlButton,
                       onClick: p
                   })
         ]

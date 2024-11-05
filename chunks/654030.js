@@ -6,11 +6,11 @@ var i,
     o = n(481060),
     s = n(278323),
     c = n(224706),
-    u = n(763472),
-    d = n(498179),
+    d = n(763472),
+    u = n(498179),
     m = n(276852),
-    f = n(994339),
-    h = n(275920),
+    h = n(994339),
+    f = n(275920),
     p = n(917621),
     g = n(431583),
     _ = n(592745),
@@ -51,7 +51,7 @@ let w = { spotify: 'Spotify' };
 class U extends (i = l.PureComponent) {
     getCoverImage() {
         let { activity: e, connectedApplication: t, application: n, isPreview: i, message: r } = this.props;
-        if (null != n && (i || (null != r && (0, f.Z)(e, r, n.id)))) {
+        if (null != n && (i || (null != r && (0, h.Z)(e, r, n.id)))) {
             let t = (0, m.Z)(e, n.id);
             if (null != t) return t;
         }
@@ -99,7 +99,7 @@ class U extends (i = l.PureComponent) {
                         analyticsLocations: t,
                         partyId: null === (a = e.party) || void 0 === a ? void 0 : a.id
                     }),
-                        (0, h.Z)({
+                        (0, f.Z)({
                             type: k.q5t.JOIN,
                             source: k.Sbl.MESSAGE_EMBED,
                             userId: n,
@@ -129,7 +129,7 @@ class U extends (i = l.PureComponent) {
             }),
             B(this, 'handleSync', () => {
                 let { activity: e, userId: t } = this.props;
-                null != e && null != t && u.Z_(e, t);
+                null != e && null != t && d.Z_(e, t);
             }),
             B(this, 'handleDownloadApp', () => {
                 (0, o.openModal)((e) =>
@@ -163,7 +163,7 @@ class U extends (i = l.PureComponent) {
             }),
             B(this, 'renderCustomButton', (e) => {
                 let { application: t } = this.props;
-                return (0, r.jsx)(d.Z, {
+                return (0, r.jsx)(u.Z, {
                     ...e,
                     source: k.Sbl.MESSAGE_EMBED,
                     application: t
@@ -171,7 +171,7 @@ class U extends (i = l.PureComponent) {
             }),
             B(this, 'renderEmbed', () => {
                 let e;
-                let { activity: t, partyId: n, myPartyId: i, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: u, className: d, channelId: m, message: f, hideParty: h, isSyncable: g, isLaunchable: _, guildId: C } = this.props;
+                let { activity: t, partyId: n, myPartyId: i, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: d, className: u, channelId: m, message: h, hideParty: f, isSyncable: g, isLaunchable: _, guildId: C } = this.props;
                 if (null != l) e = l.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -184,19 +184,19 @@ class U extends (i = l.PureComponent) {
                     applicationId: null != l ? l.id : null,
                     name: e,
                     partyMembers: a,
-                    className: d,
+                    className: u,
                     coverImage: this.getCoverImage(),
                     isPreview: o,
                     isGameLaunchable: _,
                     isLoading: s || this.state.sending,
-                    activityActionType: u,
+                    activityActionType: d,
                     isInBrowser: !L.isPlatformEmbedded,
                     isSyncable: g,
                     isSender: c,
                     channelId: m,
                     guildId: null != C ? C : void 0,
-                    message: f,
-                    hideParty: h,
+                    message: h,
+                    hideParty: f,
                     onJoin: this.handleJoin,
                     onInvite: this.handleInvite,
                     onSync: this.handleSync,
@@ -217,9 +217,9 @@ B(U, 'defaultProps', { isPreview: !1 }),
             { id: o } = null != i ? i : {},
             s = null != t && null != t.party && t.party.id === r ? S.Z.getParty(t.party.id) : null,
             c = null != o ? j.Z.getApplicationActivity(o) : j.Z.findActivity((e) => e.type === k.IIU.LISTENING),
-            u = !1;
-        null != o && (u = R.Z.getState(o, k.mFx.JOIN) === k.OcF.LOADING);
-        let d = Array.from(null != s ? s : []).map((e) => {
+            d = !1;
+        null != o && (d = R.Z.getState(o, k.mFx.JOIN) === k.OcF.LOADING);
+        let u = Array.from(null != s ? s : []).map((e) => {
                 let t = null != a ? b.ZP.getMember(a, e) : null,
                     n = null != t ? t.nick : null,
                     i = Z.default.getUser(e),
@@ -234,15 +234,15 @@ B(U, 'defaultProps', { isPreview: !1 }),
                 );
             }),
             m = null != t && E.Z.canPlay(t),
-            f = E.Z.getSyncingWith(),
-            h = null != f && null != l && f.userId === l;
+            h = E.Z.getSyncingWith(),
+            f = null != h && null != l && h.userId === l;
         return {
             analyticsLocations: n,
-            partyMembers: d,
+            partyMembers: u,
             connectedApplication: null != o ? T.Z.getApplication(o) : null,
             myPartyId: null != c && null != c.party ? c.party.id : null,
-            isLaunching: u,
-            isSyncable: m && !h,
+            isLaunching: d,
+            isSyncable: m && !f,
             isLaunchable:
                 null != o &&
                 (0, O.t)({

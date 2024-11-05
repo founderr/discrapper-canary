@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,14 +11,14 @@ var r = n(442837),
     o = n(55563),
     s = n(780570),
     c = n(701560),
-    u = n(785547);
-function d(e) {
-    let { application: t, fullWidth: n = !1, size: d = l.Button.Sizes.LARGE, color: m, customDisabledColor: f, hideNotLaunchable: h, tooltipPosition: p, onClick: g, className: _, source: C, hover: E, innerClassName: I } = e,
+    d = n(785547);
+function u(e) {
+    let { application: t, fullWidth: n = !1, size: u = l.Button.Sizes.LARGE, color: m, customDisabledColor: h, hideNotLaunchable: f, tooltipPosition: p, onClick: g, className: _, source: C, hover: E, innerClassName: I } = e,
         x = {
             fullWidth: n,
-            size: d,
+            size: u,
             color: m,
-            customDisabledColor: f,
+            customDisabledColor: h,
             tooltipPosition: p,
             onClick: g,
             className: _,
@@ -30,7 +30,7 @@ function d(e) {
         T = null != N ? N : t.primarySkuId,
         S = (0, r.e7)([o.Z], () => null != T && !o.Z.didFetchingSkuFail(T));
     return null != v && (0, s.Je)(v)
-        ? (0, i.jsx)(u.Z, {
+        ? (0, i.jsx)(d.Z, {
               ...x,
               libraryApplication: v,
               source: C
@@ -39,7 +39,7 @@ function d(e) {
           ? (0, i.jsx)('div', { children: 'deprecated!' })
           : (0, i.jsx)(c.Z, {
                 ...x,
-                hideNotLaunchable: h,
+                hideNotLaunchable: f,
                 applicationId: t.id
             });
 }

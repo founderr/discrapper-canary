@@ -9,10 +9,10 @@ var r = n(739566),
     l = n(834129),
     a = n(388032);
 function o(e) {
-    let { message: t, compact: o, missed: s, joinable: c, usernameHook: u, onClickJoinCall: d } = e,
+    let { message: t, compact: o, missed: s, joinable: c, usernameHook: d, onClickJoinCall: u } = e,
         m = (0, r.ZP)(t),
-        f = m.nick,
-        h = u(m),
+        h = m.nick,
+        f = d(m),
         p = (function (e) {
             let t = null != e.call ? e.call.duration : null;
             return null != t ? t.humanize() : null;
@@ -25,13 +25,13 @@ function o(e) {
               children:
                   null != p
                       ? a.intl.format(a.t.AcqBmJ, {
-                            username: f,
-                            usernameHook: h,
+                            username: h,
+                            usernameHook: f,
                             callDuration: p
                         })
                       : a.intl.format(a.t['43phHx'], {
-                            username: f,
-                            usernameHook: h
+                            username: h,
+                            usernameHook: f
                         })
           })
         : (0, i.jsxs)(l.Z, {
@@ -41,17 +41,17 @@ function o(e) {
               children: [
                   null != p
                       ? a.intl.format(a.t['7TeC1N'], {
-                            username: f,
-                            usernameHook: h,
+                            username: h,
+                            usernameHook: f,
                             callDuration: p
                         })
                       : a.intl.format(a.t.LuB5RE, {
-                            username: f,
-                            usernameHook: h
+                            username: h,
+                            usernameHook: f
                         }),
                   c
                       ? (0, i.jsx)(l.Z.Action, {
-                            onClick: d,
+                            onClick: u,
                             children: a.intl.string(a.t.oa9mvb)
                         })
                       : null

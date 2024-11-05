@@ -9,21 +9,21 @@ var r = n(739566),
     l = n(834129),
     a = n(388032);
 function o(e) {
-    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
+    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: d, compact: u } = e,
         m = (0, r.ZP)(t),
-        f = (0, r.Sw)(s, o),
-        h = c(m),
-        p = u(null != f ? f : void 0),
+        h = (0, r.Sw)(s, o),
+        f = c(m),
+        p = d(null != h ? h : void 0),
         g = a.intl.format(a.t.tusv2t, {
             actorName: m.nick,
-            actorHook: h,
-            targetName: null == f ? void 0 : f.nick,
+            actorHook: f,
+            targetName: null == h ? void 0 : h.nick,
             targetHook: p
         });
     return (0, i.jsx)(l.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
-        compact: d,
+        compact: u,
         children: g
     });
 }

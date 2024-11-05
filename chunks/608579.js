@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(703533),
     s = n(442837),
     c = n(100527),
-    u = n(906732),
-    d = n(597688),
+    d = n(906732),
+    u = n(597688),
     m = n(987209),
-    f = n(563132),
-    h = n(409813),
+    h = n(563132),
+    f = n(409813),
     p = n(791785),
     g = n(961830),
     _ = n(742956),
@@ -31,12 +31,12 @@ var i = n(200651),
 function A(e) {
     var t;
     let { onClose: n, onComplete: l, onStepChange: A, transitionState: j, loadId: Z, skuId: R, isGift: P = !1, giftRecipient: y, giftMessage: L, giftingOrigin: O, analyticsLocations: M, returnRef: k } = e,
-        { analyticsLocations: D } = (0, u.ZP)([...M, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        { analyticsLocations: D } = (0, d.ZP)([...M, c.Z.COLLECTIBLES_PAYMENT_MODAL]),
         B = r.useRef(new o.qA()),
         [w, U] = r.useState(null),
         [F, G] = r.useState(!1),
         V = r.useMemo(() => (0, N.UY)(R), [R]),
-        H = (0, s.Wu)([d.Z], () => d.Z.recommendedGiftSkuIds, []),
+        H = (0, s.Wu)([u.Z], () => u.Z.recommendedGiftSkuIds, []),
         z = null != R ? [R] : H,
         W = null !== (t = z[0]) && void 0 !== t ? t : null,
         K = null != R && T.Rm.has(R),
@@ -57,7 +57,7 @@ function A(e) {
                 ...g.yp,
                 g.wo,
                 {
-                    key: h.h8.CONFIRM,
+                    key: f.h8.CONFIRM,
                     renderStep: (e) =>
                         (0, i.jsx)(E.x, {
                             ...e,
@@ -73,7 +73,7 @@ function A(e) {
             ],
             [D, w, V]
         );
-    return (0, i.jsxs)(u.Gt, {
+    return (0, i.jsxs)(d.Gt, {
         value: D,
         children: [
             (0, i.jsx)(o.O_, {
@@ -89,7 +89,7 @@ function A(e) {
                     alt: '',
                     'aria-hidden': !0
                 }),
-            (0, i.jsx)(f.PaymentContextProvider, {
+            (0, i.jsx)(h.PaymentContextProvider, {
                 loadId: Z,
                 stepConfigs: Q,
                 applicationId: v.XAJ,

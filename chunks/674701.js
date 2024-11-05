@@ -13,11 +13,11 @@ var i,
     o = n(120356),
     s = n.n(o),
     c = n(990547),
-    u = n(442837),
-    d = n(692547),
+    d = n(442837),
+    u = n(692547),
     m = n(481060),
-    f = n(493683),
-    h = n(529103),
+    h = n(493683),
+    f = n(529103),
     p = n(700582),
     g = n(906732),
     _ = n(213609),
@@ -40,9 +40,9 @@ var i,
     O = n(17500);
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: B, giftIntentSecondaryAction: w } = e,
-        U = (0, u.e7)([v.default], () => v.default.getCurrentUser()),
+        U = (0, d.e7)([v.default], () => v.default.getCurrentUser()),
         { analyticsLocations: F } = (0, g.ZP)(),
-        G = (0, u.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
+        G = (0, d.e7)([A.Z], () => A.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
         (0, _.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
@@ -64,7 +64,7 @@ function M(e) {
         K = H ? O.currentUserAvatarCoachmark : O.currentUserAvatar,
         Y = H ? O.subHeaderTextCoachmark : O.subHeaderText,
         X = H ? m.Button.Colors.BRAND : m.Button.Colors.WHITE,
-        Q = H ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
+        Q = H ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
         q = H ? O.buttonTextPrimaryCoachmark : O.buttonTextPrimary;
     return (0, l.jsx)('div', {
         className: s()(O.content, {
@@ -134,10 +134,10 @@ function M(e) {
                                             cta_type: w
                                         }),
                                         w === Z.X2.VIEW_ALL
-                                            ? ((0, x.uL)(R.Z5c.FRIENDS), h.Z.setSection(R.pJs.ALL))
+                                            ? ((0, x.uL)(R.Z5c.FRIENDS), f.Z.setSection(R.pJs.ALL))
                                             : w === Z.X2.SEND_MESSAGE &&
                                               ((0, b.PV)(i.id),
-                                              f.Z.openPrivateChannel(i.id).then(() => {
+                                              h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
                                                       (0, E.PG)(y.X1.GIF, C.I.NORMAL),
                                                           setTimeout(() => {

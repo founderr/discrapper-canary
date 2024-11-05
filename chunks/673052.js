@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var i = n(200651);
@@ -11,22 +11,22 @@ var r = n(481060),
     o = n(942951),
     s = n(834129),
     c = n(388032),
-    u = n(828972);
-function d(e) {
-    let { message: t, channel: n, compact: d } = e,
+    d = n(828972);
+function u(e) {
+    let { message: t, channel: n, compact: u } = e,
         m = (0, a.ZP)(t),
-        f = (0, o.l)({
+        h = (0, o.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         })(m),
-        h = (0, l.q)(t.applicationId);
-    if (null == h) return null;
+        f = (0, l.q)(t.applicationId);
+    if (null == f) return null;
     let p = c.intl.format(c.t.fwn2Mz, {
         username: t.author.username,
-        usernameHook: f,
-        applicationName: h.name,
+        usernameHook: h,
+        applicationName: f.name,
         helpdeskArticle: '#'
     });
     return (0, i.jsx)(s.Z, {
@@ -35,8 +35,8 @@ function d(e) {
             color: r.tokens.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
-        compact: d,
-        contentClassName: u.systemMessage,
+        compact: u,
+        contentClassName: d.systemMessage,
         children: p
     });
 }

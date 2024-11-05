@@ -1,6 +1,6 @@
 n.d(t, {
     z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,11 +11,11 @@ var r = n(772848),
     o = n(667),
     s = n(626135),
     c = n(981631);
-function u(e) {
-    let { guildProductListing: t, guildId: u, sourceAnalyticsLocations: d } = e,
+function d(e) {
+    let { guildProductListing: t, guildId: d, sourceAnalyticsLocations: u } = e,
         m = !1,
-        f = (0, r.Z)(),
-        h = () => {
+        h = (0, r.Z)(),
+        f = () => {
             m = !0;
         };
     (0, l.openModalLazy)(
@@ -26,23 +26,23 @@ function u(e) {
                     ...n,
                     applicationId: t.application_id,
                     skuId: t.id,
-                    sourceAnalyticsLocations: d,
+                    sourceAnalyticsLocations: u,
                     guildProductContext: {
                         guildProductListingId: t.id,
-                        guildId: u
+                        guildId: d
                     },
-                    loadId: f,
-                    onComplete: h
+                    loadId: h,
+                    onComplete: f
                 });
         },
         {
             onCloseCallback: () => {
                 !m &&
                     s.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: f,
+                        load_id: h,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
                         is_gift: !1,
-                        location_stack: Array.isArray(d) ? d : [d]
+                        location_stack: Array.isArray(u) ? u : [u]
                     }),
                     (0, a.fw)(),
                     (0, o.p)();

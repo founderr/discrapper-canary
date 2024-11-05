@@ -11,18 +11,18 @@ var r = n(399606),
     o = n(494404),
     s = n(377171),
     c = n(317632),
-    u = n(602478),
-    d = n(2818),
+    d = n(602478),
+    u = n(2818),
     m = n(768943),
-    f = n(742989),
-    h = n(818186),
+    h = n(742989),
+    f = n(818186),
     p = n(388032),
     g = n(811304);
 function _(e) {
     let { tab: t, setTab: n, children: _, badgeState: C, closePopout: E } = e,
-        { showReminders: I } = f.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: x, inInbox: v } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: N } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        { showReminders: I } = h.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
+        { enabled: x, inInbox: v } = u.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: N } = d.Z.useExperiment({ location: 'RecentsHeader' }),
         T = (0, r.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
         S = (0, r.e7)([m.Z], () => m.Z.getOverdueMessageReminderCount());
     return (0, i.jsxs)(o.h4, {
@@ -44,7 +44,7 @@ function _(e) {
                     }),
                     (0, i.jsxs)('div', {
                         className: g.controls,
-                        children: [_, (0, i.jsx)(h.Z, { closePopout: E })]
+                        children: [_, (0, i.jsx)(f.Z, { closePopout: E })]
                     })
                 ]
             }),

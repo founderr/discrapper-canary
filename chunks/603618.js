@@ -35,8 +35,8 @@ var i = n(200651),
     O = n(388627),
     T = n(981631),
     L = n(388032),
-    A = n(250145);
-function k(e) {
+    k = n(250145);
+function A(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         c = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
         [f, m] = o.useState('unsent'),
@@ -108,8 +108,8 @@ function k(e) {
                 ...e,
                 submitting: 'sending' === f,
                 onClick: v ? Z : S,
-                className: A.inviteButton,
-                innerClassName: A.inviteButtonInner,
+                className: k.inviteButton,
+                innerClassName: k.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: 'sent' === f ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -160,8 +160,8 @@ function w(e) {
                 ...e,
                 submitting: 'sending' === l,
                 onClick: d,
-                className: A.inviteButton,
-                innerClassName: A.inviteButtonInner,
+                className: k.inviteButton,
+                innerClassName: k.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: 'sent' === l ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -199,22 +199,22 @@ function R(e) {
     return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: A.row,
+              className: k.row,
               children: [
                   (0, i.jsx)(f.Z, {
-                      className: A.avatar,
+                      className: k.avatar,
                       user: r,
                       isMobile: u,
                       status: c
                   }),
                   (0, i.jsxs)('div', {
-                      className: A.details,
+                      className: k.details,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: A.usernameWrapper,
+                              className: k.usernameWrapper,
                               children: [
                                   (0, i.jsx)(a.Text, {
-                                      className: A.username,
+                                      className: k.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
                                       children: y.ZP.getName(void 0, void 0, r)
@@ -233,7 +233,7 @@ function R(e) {
                       currentUserActivity: n,
                       idx: o
                   }),
-                  (0, i.jsx)(k, {
+                  (0, i.jsx)(A, {
                       entry: t,
                       currentUserActivity: n,
                       idx: o
@@ -268,11 +268,11 @@ function M() {
     return 0 === n.length && null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: A.container,
+              className: k.container,
               children: [
                   null != r && null != o
                       ? (0, i.jsx)(C.Z, {
-                            className: A.activityCard,
+                            className: k.activityCard,
                             activity: r,
                             user: o,
                             currentUser: o
@@ -280,7 +280,7 @@ function M() {
                       : null,
                   l
                       ? (0, i.jsx)(a.Button, {
-                            className: A.inviteFriendsButton,
+                            className: k.inviteFriendsButton,
                             onClick: () => (0, c.h7)(r, !1, T.IlC.POPOUT),
                             size: a.ButtonSizes.SMALL,
                             color: a.ButtonColors.PRIMARY,

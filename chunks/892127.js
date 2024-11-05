@@ -47,9 +47,9 @@ t.Z = o.memo(function (e) {
         N = o.useCallback((e) => {
             (0, l.Os)(e);
         }, []),
-        { id: O, pinned: T, zIndex: L, size: A, anchor: k } = t,
-        w = (0, d.w_)(A, I),
-        R = (0, d.KR)(k, I),
+        { id: O, pinned: T, zIndex: L, size: k, anchor: A } = t,
+        w = (0, d.w_)(k, I),
+        R = (0, d.KR)(A, I),
         { minSize: j, resizeX: M, resizeY: z, dragAnywhere: D } = S,
         P = T || !x,
         U = o.useMemo(

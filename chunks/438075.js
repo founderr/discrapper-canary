@@ -16,15 +16,15 @@ function a(e) {
         hasSpoilerEmbeds: o,
         handleContextMenu: s,
         isInteracting: c,
-        isAutomodBlockedMessage: u,
-        isMessageSnapshot: d,
+        isAutomodBlockedMessage: d,
+        isMessageSnapshot: u,
         renderThreadAccessory: m,
-        renderComponentAccessory: f,
-        renderSuppressEmbeds: h,
+        renderComponentAccessory: h,
+        renderSuppressEmbeds: f,
         forceAddReactions: p,
         className: g
     } = e;
-    return u
+    return d
         ? null
         : (0, i.jsx)(r.Z, {
               message: t,
@@ -35,17 +35,17 @@ function a(e) {
                   channel: n,
                   compact: a,
                   hasSpoilerEmbeds: o,
-                  isMessageSnapshot: d,
+                  isMessageSnapshot: u,
                   onMediaItemContextMenu: s,
                   renderThreadAccessory: m,
-                  renderComponentAccessory: f,
-                  renderSuppressEmbeds: h,
+                  renderComponentAccessory: h,
+                  renderSuppressEmbeds: f,
                   forceAddReactions: p
               })
           });
 }
 function o(e, t) {
-    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: u } = e;
+    let { message: n, channel: r, compact: a = !1, renderThreadAccessory: o, disableReactionCreates: s, disableReactionUpdates: c, isSearchResult: d } = e;
     return (0, i.jsx)(l.$p, {
         message: n,
         channel: r,
@@ -54,6 +54,6 @@ function o(e, t) {
         renderThreadAccessory: o,
         disableReactionCreates: s,
         disableReactionUpdates: c,
-        isSearchResult: u
+        isSearchResult: d
     });
 }

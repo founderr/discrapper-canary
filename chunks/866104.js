@@ -14,11 +14,11 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(131388),
-    u = n(357352),
-    d = n(70097),
+    d = n(357352),
+    u = n(70097),
     m = n(565138),
-    f = n(353254),
-    h = n(695346),
+    h = n(353254),
+    f = n(695346),
     p = n(271383),
     g = n(594174),
     _ = n(671533),
@@ -54,20 +54,20 @@ function b(e) {
 }
 function A(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
-        r = h.QK.useSetting(),
+        r = f.QK.useSetting(),
         l = (0, E.n)() && r,
-        [a, o] = (0, f.Z)(t, l),
+        [a, o] = (0, h.Z)(t, l),
         s = l
-            ? (0, i.jsx)(d.Z, {
+            ? (0, i.jsx)(u.Z, {
                   autoPlay: !0,
                   loop: !0,
                   className: S.coverImage,
                   width: 655,
-                  poster: (0, u.b)('server_products/storefront/default-header.png'),
-                  src: (0, u.b)('server_products/storefront/default-header.mov')
+                  poster: (0, d.b)('server_products/storefront/default-header.png'),
+                  src: (0, d.b)('server_products/storefront/default-header.mov')
               })
             : (0, i.jsx)('img', {
-                  src: (0, u.b)('server_products/storefront/default-header.png'),
+                  src: (0, d.b)('server_products/storefront/default-header.png'),
                   alt: '',
                   className: S.coverImage
               });
@@ -86,10 +86,10 @@ function A(e) {
 }
 function j(e) {
     var t, n, l;
-    let { guild: d, subscriptionsSettings: f } = e,
-        h = d.id;
+    let { guild: u, subscriptionsSettings: h } = e,
+        f = u.id;
     let { nickname: _, nickcolor: E } =
-            ((l = h),
+            ((l = f),
             (0, o.cj)(
                 [p.ZP, g.default],
                 () => {
@@ -105,7 +105,7 @@ function j(e) {
                 [l]
             )),
         { isTruncated: j, ExpandableTextContainer: Z } = (0, I.s)(),
-        R = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
+        R = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [P, y] = r.useState(1),
         L = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
@@ -118,12 +118,12 @@ function j(e) {
                           children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
-                              children: null == f ? void 0 : f.description
+                              children: null == h ? void 0 : h.description
                           })
                       }),
                       j &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(b, { onClick: () => (0, N.Z)({ guildId: h }) })]
+                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(b, { onClick: () => (0, N.Z)({ guildId: f }) })]
                           })
                   ]
               })
@@ -140,9 +140,9 @@ function j(e) {
                 children: [
                     (0, i.jsx)('div', {
                         children: (0, i.jsx)(m.Z, {
-                            guild: d,
+                            guild: u,
                             size: m.Z.Sizes.LARGER,
-                            iconSrc: null == d.icon || M ? (0, u.b)('server_products/storefront/default-guild-icon.jpg') : void 0
+                            iconSrc: null == u.icon || M ? (0, d.b)('server_products/storefront/default-guild-icon.jpg') : void 0
                         })
                     }),
                     (0, i.jsx)(s.Spacer, {
@@ -159,7 +159,7 @@ function j(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: M ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: d.name })
+                                    children: M ? T.intl.string(T.t.rtgp7u) : T.intl.formatToPlainString(T.t.NZeik5, { guildName: u.name })
                                 })
                             }),
                             (0, i.jsxs)(i.Fragment, {
@@ -191,7 +191,7 @@ function j(e) {
                 ]
             }),
             (0, i.jsx)(A, {
-                coverImageAsset: null == f ? void 0 : f.cover_image_asset,
+                coverImageAsset: null == h ? void 0 : h.cover_image_asset,
                 isPreview: M
             })
         ]

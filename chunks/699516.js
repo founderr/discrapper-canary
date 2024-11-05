@@ -53,7 +53,7 @@ class R extends (r = u.ZP.Store) {
         return !1;
     }
     isIgnored(e) {
-        return null != e && S.has(e);
+        return !!(0, f.JX)({ location: 'relationship-store' }) && null != e && S.has(e);
     }
     isIgnoredForMessage(e) {
         var t, n, r, i;

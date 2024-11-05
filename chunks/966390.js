@@ -29,7 +29,7 @@ var i = n(481060),
 async function L(e) {
     var t, n, i;
     let d,
-        { channelId: h, uploads: L, draftType: A, parsedMessage: k, options: w = {}, raiseEndpointErrors: R = !1 } = e,
+        { channelId: h, uploads: L, draftType: k, parsedMessage: A, options: w = {}, raiseEndpointErrors: R = !1 } = e,
         j = new f.Z(O.ANM.MESSAGES(h)),
         M = new N.o(),
         z = {
@@ -40,14 +40,14 @@ async function L(e) {
             sticker_ids: null == w ? void 0 : w.stickerIds,
             poll: null == w ? void 0 : w.poll
         };
-    null != k && (z.content = null == k ? void 0 : k.content), null != x.Z.getPendingReply(h) && ((z.type = O.uaV.REPLY), (z.message_reference = w.messageReference), (z.allowed_mentions = w.allowedMentions), (0, S.A6)(h));
+    null != A && (z.content = null == A ? void 0 : A.content), null != x.Z.getPendingReply(h) && ((z.type = O.uaV.REPLY), (z.message_reference = w.messageReference), (z.allowed_mentions = w.allowedMentions), (0, S.A6)(h));
     let [D, P] = (0, Z.Z)(z.content);
     D && ((z.content = P), (z.flags = (0, b.pj)(null !== (t = z.flags) && void 0 !== t ? t : 0, O.iLy.SUPPRESS_NOTIFICATIONS)));
     let U = null !== (n = w.nonce) && void 0 !== n ? n : (0, E.r)(),
         V = (0, g.ZP)({
             channelId: h,
             content: z.content,
-            tts: null !== (i = null == k ? void 0 : k.tts) && void 0 !== i && i,
+            tts: null !== (i = null == A ? void 0 : A.tts) && void 0 !== i && i,
             type: z.type,
             messageReference: z.message_reference,
             flags: z.flags,
@@ -133,12 +133,12 @@ async function L(e) {
                         help: null !== (f = null == n ? void 0 : n.message) && void 0 !== f ? f : T.intl.string(T.t.zMEjJi)
                     });
                 }
-                '' !== z.content && '' === I.Z.getDraft(h, A) && r.Z.saveDraft(h, z.content, A),
-                    0 === y.Z.getUploadCount(h, A) &&
+                '' !== z.content && '' === I.Z.getDraft(h, k) && r.Z.saveDraft(h, z.content, k),
+                    0 === y.Z.getUploadCount(h, k) &&
                         s.Z.setUploads({
                             channelId: h,
                             uploads: L,
-                            draftType: A
+                            draftType: k
                         });
             }
         }),

@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return h;
+        return f;
     }
 }),
     n(47120);
@@ -11,10 +11,10 @@ var i = n(200651),
     o = n(239091),
     s = n(585237),
     c = n(812206),
-    u = n(55563),
-    d = n(73346),
+    d = n(55563),
+    u = n(73346),
     m = n(388032);
-function f(e, t, n) {
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function f(e, t, n) {
         e
     );
 }
-let h = {
+let f = {
     DropdownSizes: s.Z.DropdownSizes,
     Sizes: s.Z.Sizes,
     Colors: s.Z.Colors,
@@ -46,7 +46,7 @@ class p extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'renderContextMenu', () => {
+            h(this, 'renderContextMenu', () => {
                 let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
                 return (0, i.jsx)(a.Menu, {
                     onSelect: n,
@@ -68,21 +68,21 @@ class p extends r.PureComponent {
                     )
                 });
             }),
-            f(this, 'handleContextMenu', (e) => {
+            h(this, 'handleContextMenu', (e) => {
                 e.stopPropagation(), o.vq(e, this.renderContextMenu);
             }),
-            f(this, 'handleClick', () => {
+            h(this, 'handleClick', () => {
                 let { onSKUSelect: e, primarySKU: t } = this.props;
                 null != t && (null == e || e(t));
             });
     }
 }
-t.Z = l.ZP.connectStores([u.Z, c.Z], (e) => {
+t.Z = l.ZP.connectStores([d.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
-        i = (0, d.uF)(n, c.Z, u.Z);
+        i = (0, u.uF)(n, c.Z, d.Z);
     return {
-        skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => (null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1)),
+        skus: (null !== (t = d.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => (null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: i
     };
 })(p);

@@ -6,11 +6,11 @@ var i = n(200651),
     o = n(100621),
     s = n(442837),
     c = n(481060),
-    u = n(570140),
-    d = n(45114),
+    d = n(570140),
+    u = n(45114),
     m = n(367907),
-    f = n(717680),
-    h = n(703656),
+    h = n(717680),
+    f = n(703656),
     p = n(592125),
     g = n(259580),
     _ = n(617379),
@@ -23,34 +23,34 @@ var i = n(200651),
 let T = r.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         l = r.useRef(null),
-        [[a, s], u] = r.useState([0, 0]),
-        d = t.deleted && a > 0;
+        [[a, s], d] = r.useState([0, 0]),
+        u = t.deleted && a > 0;
     if (t.deleted && 0 === a && null != l.current) {
         let e = l.current.offsetHeight,
             t = l.current.offsetTop,
             n = l.current.parentElement.scrollTop,
             i = n > t ? e - (n - t) : e;
-        u([e, e - i]);
+        d([e, e - i]);
     }
-    let { opacity: m, size: f } = (0, c.useSpring)(
+    let { opacity: m, size: h } = (0, c.useSpring)(
             {
                 config: {
                     clamp: !0,
                     friction: 18,
                     tension: 200
                 },
-                opacity: d ? 0 : 1,
-                size: d ? 0 : 1,
+                opacity: u ? 0 : 1,
+                size: u ? 0 : 1,
                 onRest: () => {
                     n(t.channelId);
                 }
             },
             'animate-always'
         ),
-        h = {
+        f = {
             opacity: m,
-            height: f.to((e) =>
-                d
+            height: h.to((e) =>
+                u
                     ? (function (e, t, n) {
                           return t + (e - t) * n;
                       })(a, s, e)
@@ -59,7 +59,7 @@ let T = r.memo(function (e) {
         };
     return (0, i.jsx)(o.animated.div, {
         ref: l,
-        style: h,
+        style: f,
         children: (0, i.jsx)(S, { ...e })
     });
 });
@@ -75,27 +75,27 @@ let S = r.memo(function (e) {
                 !t.collapsed &&
                 'messages' === t.type &&
                 0 === t.messages.length &&
-                u.Z.wait(() => {
-                    (0, d.In)(t.channelId, !0), l(t.channelId);
+                d.Z.wait(() => {
+                    (0, u.In)(t.channelId, !0), l(t.channelId);
                 });
         }),
         null == o || !t.hasLoadedAnything)
     )
         return null;
-    let f = (e, i) => {
+    let h = (e, i) => {
         (0, m.yw)(x.rMx.INBOX_CHANNEL_CLICKED, {
             channel_id: t.channelId,
             guild_id: t.guildId
         });
         let r = null != i ? i : t.oldestUnreadMessageId;
-        (0, h.uL)(x.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : r)), n(e);
+        (0, f.uL)(x.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : r)), n(e);
     };
     return (0, i.jsx)('div', {
         className: N.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
             component: (0, i.jsxs)(C.Z, {
                 channel: o,
-                gotoChannel: f,
+                gotoChannel: h,
                 mentionCount: t.mentionCount,
                 toggleCollapsed: a,
                 channelState: t,
@@ -107,7 +107,7 @@ let S = r.memo(function (e) {
                   ? (0, i.jsx)(I.Z, {
                         channel: t,
                         channelRecord: o,
-                        gotoChannel: f
+                        gotoChannel: h
                     })
                   : 'forum' === t.type
                     ? (0, i.jsx)(E.Z, {
@@ -121,7 +121,7 @@ let S = r.memo(function (e) {
 });
 function b(e) {
     let { channel: t, markChannelRead: n, markGuildRead: r, getNumUnreadChannels: l } = e,
-        a = (0, f.Z)() && null != t.guildId;
+        a = (0, h.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
         className: N.markReadButton,
         tooltip: a ? v.intl.string(v.t['5lLMhI']) : v.intl.string(v.t.e6RscX),

@@ -10,11 +10,11 @@ var i = n(200651),
     o = n(906732),
     s = n(739566),
     c = n(942951),
-    u = n(834129),
-    d = n(703656),
+    d = n(834129),
+    u = n(703656),
     m = n(35125),
-    f = n(626751),
-    h = n(891614),
+    h = n(626751),
+    f = n(891614),
     p = n(981631),
     g = n(176505),
     _ = n(388032),
@@ -53,7 +53,7 @@ function I(e) {
         role: 'img',
         'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: r }),
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(f.Z, {
                 guildId: t,
                 user: n,
                 className: C.welcomeCardBadge
@@ -64,7 +64,7 @@ function I(e) {
 }
 function x(e) {
     var t, l;
-    let { channel: h, message: _, compact: C } = e,
+    let { channel: f, message: _, compact: C } = e,
         E = (0, s.ZP)(_),
         x = (function (e) {
             let { author: t, channel: n, message: i } = e,
@@ -75,22 +75,22 @@ function x(e) {
                     guildId: l,
                     messageId: i.id
                 })(t),
-                { analyticsLocations: u } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
-                f = i.roleSubscriptionData,
-                h = r.useCallback(() => {
-                    (0, d.uL)(p.Z5c.CHANNEL(l, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: u }), (null == f ? void 0 : f.role_subscription_listing_id) != null && (0, m.y8)(l, n.id, i.id, f.role_subscription_listing_id);
-                }, [l, n, i, f, u]);
-            return null == f
+                { analyticsLocations: d } = (0, o.ZP)(a.Z.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE),
+                h = i.roleSubscriptionData,
+                f = r.useCallback(() => {
+                    (0, u.uL)(p.Z5c.CHANNEL(l, g.oC.ROLE_SUBSCRIPTIONS), { sourceLocationStack: d }), (null == h ? void 0 : h.role_subscription_listing_id) != null && (0, m.y8)(l, n.id, i.id, h.role_subscription_listing_id);
+                }, [l, n, i, h, d]);
+            return null == h
                 ? null
                 : (0, m.Tn)({
                       username: t.nick,
                       usernameOnClickHandler: s,
-                      roleSubscriptionOnClickHandler: h,
+                      roleSubscriptionOnClickHandler: f,
                       guildId: l,
                       roleSubscriptionData: i.roleSubscriptionData
                   });
         })({
-            channel: h,
+            channel: f,
             message: _,
             author: E
         }),
@@ -99,7 +99,7 @@ function x(e) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(u.Z, {
+                  (0, i.jsx)(d.Z, {
                       icon: n(570111),
                       timestamp: _.timestamp,
                       compact: C,
@@ -107,12 +107,12 @@ function x(e) {
                   }),
                   v &&
                       (0, i.jsx)(I, {
-                          guildId: h.guild_id,
+                          guildId: f.guild_id,
                           user: _.author,
                           username: E.nick
                       }),
-                  (0, i.jsx)(f.Z, {
-                      channel: h,
+                  (0, i.jsx)(h.Z, {
+                      channel: f,
                       message: _
                   })
               ]

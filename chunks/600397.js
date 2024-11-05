@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var i = n(200651);
@@ -11,21 +11,21 @@ var r = n(657707),
     o = n(739566),
     s = n(543388),
     c = n(942951),
-    u = n(834129),
-    d = n(388032),
+    d = n(834129),
+    u = n(388032),
     m = n(646768);
-function f(e) {
-    let { message: t, channel: n, author: f, compact: h } = e,
-        { nick: p } = (0, o.Sw)(f, n),
+function h(e) {
+    let { message: t, channel: n, author: h, compact: f } = e,
+        { nick: p } = (0, o.Sw)(h, n),
         g = (0, c.l)({
-            user: f,
+            user: h,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0
         })(),
         _ = (0, l.q)(t.applicationId);
     if (null == _) return null;
-    let C = d.intl.format(d.t.m7Lwam, {
+    let C = u.intl.format(u.t.m7Lwam, {
         username: p,
         usernameHook: g,
         gameName: _.name,
@@ -48,9 +48,9 @@ function f(e) {
             }),
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(u.Z, {
+    return (0, i.jsx)(d.Z, {
         iconNode: (0, i.jsx)(r.iWm, { size: 'sm' }),
-        compact: h,
+        compact: f,
         contentClassName: m.content,
         children: (0, i.jsx)('div', { children: C })
     });

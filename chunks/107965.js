@@ -11,8 +11,8 @@ var i = n(544891),
     o = n(710845),
     s = n(70956),
     c = n(358085),
-    u = n(960048),
-    d = n(998502);
+    d = n(960048),
+    u = n(998502);
 function m(e, t, n) {
     return (
         t in e
@@ -26,8 +26,8 @@ function m(e, t, n) {
         e
     );
 }
-let f = 1 * s.Z.Millis.HOUR,
-    h = 7 * s.Z.Millis.DAY,
+let h = 1 * s.Z.Millis.HOUR,
+    f = 7 * s.Z.Millis.DAY,
     p = 1 * s.Z.Millis.DAY,
     g = r.K.get('lastNonRequiredUpdateShown', Date.now()),
     _ = new o.Z('AutoUpdateManager');
@@ -36,27 +36,27 @@ class C {
         clearInterval(this._checkInterval);
     }
     quitAndInstall() {
-        this.updateAvailable && (this.hasNativeUpdate ? (null != this._bootstrapper ? this._bootstrapper.finishBootstrap() : d.ZP.send('QUIT_AND_INSTALL')) : location.reload(!0));
+        this.updateAvailable && (this.hasNativeUpdate ? (null != this._bootstrapper ? this._bootstrapper.finishBootstrap() : u.ZP.send('QUIT_AND_INSTALL')) : location.reload(!0));
     }
     async _requestNewUpdaterBootstrap() {
         let e;
         _.log('Bootstrapping new updater host...');
         try {
-            await d.ZP.ensureModule('discord_updater_bootstrap'), (e = d.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e);
+            await u.ZP.ensureModule('discord_updater_bootstrap'), (e = u.ZP.requireModule('discord_updater_bootstrap')), (this._bootstrapper = e);
         } catch (e) {
             this._handleNativeUpdateNotAvailable();
             return;
         }
         try {
-            this._handleCheckingForUpdates(), await e.bootstrap(d.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.hasNativeUpdate = !0), this._handleUpdateDownloaded(!0);
+            this._handleCheckingForUpdates(), await e.bootstrap(u.ZP.releaseChannel, 'win'), (this.updateAvailable = !0), (this.hasNativeUpdate = !0), this._handleUpdateDownloaded(!0);
         } catch (e) {
-            _.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), u.Z.captureException(e);
+            _.log('Failed to bootstrap new updater:', e), this._handleNativeUpdateNotAvailable(), d.Z.captureException(e);
         }
     }
     _emitCallbacks() {
         this._callbacks.forEach((e) => e(this.updateAvailable)), (this._callbacks = []);
     }
-    constructor(e = f) {
+    constructor(e = h) {
         var t = this;
         m(this, 'updateAvailable', !1),
             m(this, 'hasNativeUpdate', !1),
@@ -66,7 +66,7 @@ class C {
             m(this, 'checkForUpdates', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                 return (
-                    (e || !t.hasNativeUpdate) && (c.isPlatformEmbedded ? ('win32' === (0, c.getPlatformName)() && d.ZP.canBootstrapNewUpdater ? t._requestNewUpdaterBootstrap() : d.ZP.send('CHECK_FOR_UPDATES')) : t._handleNativeUpdateNotAvailable()),
+                    (e || !t.hasNativeUpdate) && (c.isPlatformEmbedded ? ('win32' === (0, c.getPlatformName)() && u.ZP.canBootstrapNewUpdater ? t._requestNewUpdaterBootstrap() : u.ZP.send('CHECK_FOR_UPDATES')) : t._handleNativeUpdateNotAvailable()),
                     new Promise((e) => {
                         t.updateAvailable ? e(!0) : t._callbacks.push(e);
                     })
@@ -85,9 +85,9 @@ class C {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || 'fd167e29a801770545fb5ff0ff22d4e52739189f' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || 'b80ca292b316c200484c8414ccb9491620e9dce0' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
-                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : p;
+                                let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - g > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);
                             },
                             () => this._handleUpdateError()
@@ -120,7 +120,7 @@ class C {
                     }),
                     this._emitCallbacks();
             }),
-            c.isPlatformEmbedded && (d.ZP.on('CHECKING_FOR_UPDATES', this._handleCheckingForUpdates), d.ZP.on('UPDATE_NOT_AVAILABLE', this._handleNativeUpdateNotAvailable), d.ZP.on('UPDATE_AVAILABLE', () => this._handleUpdateAvailable(!0)), d.ZP.on('UPDATE_ERROR', this._handleUpdateError), d.ZP.on('UPDATE_DOWNLOADED', () => this._handleUpdateDownloaded(!0)), d.ZP.on('UPDATE_MANUALLY', this._handleUpdateManually)),
+            c.isPlatformEmbedded && (u.ZP.on('CHECKING_FOR_UPDATES', this._handleCheckingForUpdates), u.ZP.on('UPDATE_NOT_AVAILABLE', this._handleNativeUpdateNotAvailable), u.ZP.on('UPDATE_AVAILABLE', () => this._handleUpdateAvailable(!0)), u.ZP.on('UPDATE_ERROR', this._handleUpdateError), u.ZP.on('UPDATE_DOWNLOADED', () => this._handleUpdateDownloaded(!0)), u.ZP.on('UPDATE_MANUALLY', this._handleUpdateManually)),
             l.Z.wait(() => {
                 this.checkForUpdates();
             }),

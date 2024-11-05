@@ -11,10 +11,10 @@ var r = n(481060),
     o = n(834129),
     s = n(388032);
 function c(e) {
-    let { message: t, usernameHook: c, onClickPins: u, compact: d } = e,
+    let { message: t, usernameHook: c, onClickPins: d, compact: u } = e,
         m = (0, a.ZP)(t),
-        f = m.nick,
-        h = c(m),
+        h = m.nick,
+        f = c(m),
         p = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
@@ -35,30 +35,30 @@ function c(e) {
     return (0, i.jsx)(o.Z, {
         ...g,
         timestamp: t.timestamp,
-        compact: d,
+        compact: u,
         children:
             null != t.messageReference
-                ? null == u
+                ? null == d
                     ? s.intl.format(s.t.lD5tur, {
-                          usernameHook: h,
-                          username: f,
+                          usernameHook: f,
+                          username: h,
                           messageOnClick: p
                       })
                     : s.intl.format(s.t.yIDvPD, {
-                          usernameHook: h,
-                          username: f,
-                          pinsActionOnClick: u,
+                          usernameHook: f,
+                          username: h,
+                          pinsActionOnClick: d,
                           messageOnClick: p
                       })
-                : null == u
+                : null == d
                   ? s.intl.format(s.t.vfkjq6, {
-                        usernameHook: h,
-                        username: f
+                        usernameHook: f,
+                        username: h
                     })
                   : s.intl.format(s.t.R7vZGR, {
-                        usernameHook: h,
-                        username: f,
-                        pinsActionOnClick: u
+                        usernameHook: f,
+                        username: h,
+                        pinsActionOnClick: d
                     })
     });
 }

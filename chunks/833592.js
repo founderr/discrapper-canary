@@ -6,10 +6,10 @@ n.d(t, {
         return _;
     },
     jF: function () {
-        return f;
+        return h;
     },
     jk: function () {
-        return h;
+        return f;
     },
     wt: function () {
         return p;
@@ -22,24 +22,24 @@ var i = n(990547),
     o = n(695346),
     s = n(573261),
     c = n(140155),
-    u = n(178480),
-    d = n(981631);
+    d = n(178480),
+    u = n(981631);
 function m(e) {
     a.Z.dispatch({
         type: 'NOTIFICATION_CENTER_SET_ACTIVE',
         active: e
     });
 }
-function f() {
+function h() {
     a.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
-async function h(e, t) {
+async function f(e, t) {
     if (c.Z.loading) return;
     await a.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
         let r = await s.Z.get({
-            url: d.ANM.NOTIF_CENTER_ITEMS(),
+            url: u.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
@@ -73,7 +73,7 @@ function p(e) {
                   localIds: e
               });
           })([e.local_id])
-        : (0, u.RB)(e)
+        : (0, d.RB)(e)
           ? (function (e) {
                 a.Z.dispatch({
                     type: 'NOTIFICATION_CENTER_ITEMS_ACK',
@@ -90,7 +90,7 @@ async function g(e) {
             optimistic: !0,
             ids: [e]
         }),
-            await r.tn.post({ url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
+            await r.tn.post({ url: u.ANM.NOTIF_CENTER_ITEMS_ACK(e) });
     } catch (t) {
         a.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
@@ -106,13 +106,13 @@ async function _(e) {
             id: e.id
         }),
             await s.Z.delete({
-                url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
-                body: { item_type: (0, u.RB)(e) ? 'mention' : 'regular' },
+                url: u.ANM.NOTIF_CENTER_ITEMS(e.id),
+                body: { item_type: (0, d.RB)(e) ? 'mention' : 'regular' },
                 trackedActionData: {
                     event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
                     properties: {
                         notification_center_id: e.id,
-                        acked: (0, u.r)(e, t),
+                        acked: (0, d.r)(e, t),
                         item_type: e.type
                     }
                 }

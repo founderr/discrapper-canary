@@ -49,8 +49,8 @@ var i = n(200651),
     O = n(471445),
     T = n(74299),
     L = n(803647),
-    A = n(565138),
-    k = n(917405),
+    k = n(565138),
+    A = n(917405),
     w = n(603074),
     R = n(879815),
     j = n(189771),
@@ -508,9 +508,9 @@ function eu(e) {
                     (0, i.jsxs)('div', {
                         className: ee.guildIconContainer,
                         children: [
-                            (0, i.jsx)(A.Z, {
+                            (0, i.jsx)(k.Z, {
                                 guild: n,
-                                size: A.Z.Sizes.SMOL,
+                                size: k.Z.Sizes.SMOL,
                                 className: ee.guildIcon
                             }),
                             (0, i.jsx)(p.Text, {
@@ -570,7 +570,7 @@ function ed(e) {
         null != t &&
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(k.Z, {
+                (0, i.jsx)(A.Z, {
                     ...o,
                     hasVideo: l
                 }),

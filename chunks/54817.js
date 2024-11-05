@@ -11,11 +11,11 @@ var r = n(120356),
     o = n(385499),
     s = n(739566),
     c = n(464891),
-    u = n(83561),
-    d = n(834129),
+    d = n(83561),
+    u = n(834129),
     m = n(981631),
-    f = n(674563),
-    h = n(388032),
+    h = n(674563),
+    f = n(388032),
     p = n(38814);
 function g(e) {
     let { message: t, compact: n, usernameHook: r } = e,
@@ -24,10 +24,10 @@ function g(e) {
         {
             avatarSrc: C,
             eventHandlers: { onMouseEnter: E, onMouseLeave: I }
-        } = (0, u.m)(!0),
+        } = (0, d.m)(!0),
         x =
             '' !== t.content
-                ? new Date(t.content).toLocaleString(h.intl.currentLocale, {
+                ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
                       hour: 'numeric',
                       minute: '2-digit',
                       month: '2-digit',
@@ -38,9 +38,9 @@ function g(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: E,
         onMouseLeave: I,
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(u.Z, {
             className: l()(p.mainContainer, { [p.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: C }),
+            iconNode: n ? null : (0, i.jsx)(d.S, { src: C }),
             iconContainerClassName: p.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
@@ -58,10 +58,10 @@ function g(e) {
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: p.username,
-                                    children: h.intl.string(h.t.hG1StL)
+                                    children: f.intl.string(f.t.hG1StL)
                                 }),
                                 (0, i.jsx)(o.Z, {
-                                    type: f.Hb.SYSTEM_DM,
+                                    type: h.Hb.SYSTEM_DM,
                                     className: p.systemTag
                                 })
                             ]
@@ -73,12 +73,12 @@ function g(e) {
                         className: l()(p.__invalid_messageContent, { [p.compact]: n }),
                         children:
                             t.type === m.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? h.intl.format(h.t['+m8eDw'], {
+                                ? f.intl.format(f.t['+m8eDw'], {
                                       username: g.nick,
                                       usernameHook: _,
                                       time: x
                                   })
-                                : h.intl.format(h.t.BHeke3, {
+                                : f.intl.format(f.t.BHeke3, {
                                       username: g.nick,
                                       usernameHook: _
                                   })

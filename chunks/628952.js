@@ -7,11 +7,11 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(1585),
-    u = n(125988),
-    d = n(987209),
+    d = n(125988),
+    u = n(987209),
     m = n(921813),
-    f = n(731896),
-    h = n(484459),
+    h = n(731896),
+    f = n(484459),
     p = n(594174),
     g = n(937615),
     _ = n(583434),
@@ -21,7 +21,7 @@ var r = n(120356),
 let x = (e) => {
         let { avatarDecoration: t } = e,
             n = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-            { avatarDecorationSrc: r } = (0, u.Z)({
+            { avatarDecorationSrc: r } = (0, d.Z)({
                 user: n,
                 avatarDecorationOverride: t,
                 size: (0, c.y9)(s.AvatarSizes.SIZE_40)
@@ -35,7 +35,7 @@ let x = (e) => {
     v = (e) => {
         var t;
         let { profileEffect: n } = e,
-            r = (0, f.V)(n.id),
+            r = (0, h.V)(n.id),
             { accessibilityLabel: l, thumbnailPreviewSrc: a, title: o } = null !== (t = null == r ? void 0 : r.config) && void 0 !== t ? t : {};
         return (0, i.jsxs)('div', {
             className: E.profileEffectContainer,
@@ -54,17 +54,17 @@ let x = (e) => {
         });
     };
 t.Z = (e) => {
-    let { skuId: t, skuPricePreview: n, isSelected: r, onSelect: c, shouldDisplayHeader: u = !1, className: f } = e,
+    let { skuId: t, skuPricePreview: n, isSelected: r, onSelect: c, shouldDisplayHeader: d = !1, className: h } = e,
         { product: I } = (0, _.T)(t),
-        { giftRecipient: N, giftRecipientError: T } = (0, d.wD)(),
+        { giftRecipient: N, giftRecipientError: T } = (0, u.wD)(),
         S = (0, o.e7)([p.default], () => p.default.getCurrentUser());
     if (null == I || null == n) return null;
     let [b] = I.items,
         A = null != N && N.id !== (null == S ? void 0 : S.id);
     return (0, i.jsxs)('div', {
-        className: f,
+        className: h,
         children: [
-            u &&
+            d &&
                 (0, i.jsxs)('div', {
                     className: E.previewTitleContainer,
                     children: [
@@ -76,7 +76,7 @@ t.Z = (e) => {
                             (0, i.jsx)(
                                 s.Popout,
                                 {
-                                    preload: () => (0, h.Z)(N.id, N.getAvatarURL(null, 80)),
+                                    preload: () => (0, f.Z)(N.id, N.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, i.jsx)(m.Z, {
                                             ...e,

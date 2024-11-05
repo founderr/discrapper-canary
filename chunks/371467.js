@@ -27,8 +27,8 @@ var i,
     O = n(974180),
     T = n(237997),
     L = n(70956),
-    A = n(150097),
-    k = n(129724),
+    k = n(150097),
+    A = n(129724),
     w = n(86071),
     R = n(388627),
     j = n(996050),
@@ -205,7 +205,7 @@ let es = new el(m.Z, {
             a = N.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == a) return !1;
         if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === H.mFx.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === H.mFx.JOIN_REQUEST) {
-            if (!(0, A.eF)(l, r, !0, !0)) return !1;
+            if (!(0, k.eF)(l, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, o;
                 if ((h()(null != t.activity, 'received null message activity'), n.id === C.default.getId())) return !1;
@@ -233,7 +233,7 @@ let es = new el(m.Z, {
             })(s, l, a);
             if (!1 !== e) return e;
         }
-        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, A.eF)(l, r)) return !1;
+        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, k.eF)(l, r)) return !1;
         let u = !Z.Z.isSoundDisabled(O.Ay),
             c = null !== (o = x.Z.getMessage(r, l.id)) && void 0 !== o ? o : (0, E.e5)(l);
         eo((0, W.Z)(s, c, a, u), {
@@ -281,7 +281,7 @@ let es = new el(m.Z, {
         eo((0, z.f)(G.intl.string(G.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eo((0, z.f)(G.intl.format(G.t.KLhk6u, { duration: (0, k.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
+        eo((0, z.f)(G.intl.format(G.t.KLhk6u, { duration: (0, A.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         eo((0, z.f)(G.intl.string(G.t['1ZbZur'])));

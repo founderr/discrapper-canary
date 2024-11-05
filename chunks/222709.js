@@ -5,13 +5,13 @@ var i = n(200651),
     o = n(528963),
     s = n(143740),
     c = n(528144),
-    u = n(212342),
-    d = n(388032),
+    d = n(212342),
+    u = n(388032),
     m = n(196273);
 t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
-        f = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        h = r.useCallback(() => {
+        h = (0, l.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
+        f = r.useCallback(() => {
             o.Z.dismissPublishBump(n), (0, s.Z)(t, n);
         }, [t, n]),
         p = r.useCallback(() => {
@@ -20,7 +20,7 @@ t.Z = (e) => {
         g = r.useCallback(() => {
             o.Z.permanentlyHidePublishBump(t);
         }, [t]);
-    return f
+    return h
         ? (0, i.jsxs)('div', {
               className: m.container,
               children: [
@@ -35,15 +35,15 @@ t.Z = (e) => {
                           (0, i.jsx)(c.Z, {
                               className: m.tagline,
                               size: c.Z.Sizes.SIZE_14,
-                              children: d.intl.string(d.t.hasZoa)
+                              children: u.intl.string(u.t.hasZoa)
                           }),
                           (0, i.jsx)(a.Button, {
                               color: a.Button.Colors.LINK,
                               look: a.Button.Looks.LINK,
                               size: a.Button.Sizes.MIN,
                               className: m.publish,
-                              onClick: h,
-                              children: d.intl.string(d.t['MFGE5+'])
+                              onClick: f,
+                              children: u.intl.string(u.t['MFGE5+'])
                           }),
                           (0, i.jsx)(a.Clickable, {
                               onClick: p,
@@ -61,7 +61,7 @@ t.Z = (e) => {
                       variant: 'text-sm/normal',
                       children: (0, i.jsx)(a.Clickable, {
                           onClick: g,
-                          children: d.intl.string(d.t.efSkDg)
+                          children: u.intl.string(u.t.efSkDg)
                       })
                   })
               ]

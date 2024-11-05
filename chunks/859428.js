@@ -6,25 +6,25 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(749210),
-    u = n(703656),
-    d = n(430824),
+    d = n(703656),
+    u = n(430824),
     m = n(914010),
-    f = n(900849),
-    h = n(41776),
+    h = n(900849),
+    f = n(41776),
     p = n(981631),
     g = n(388032),
     _ = n(331781),
     C = n(250812);
 t.Z = () => {
     let e = (0, o.e7)([m.Z], () => m.Z.getGuildId(), []),
-        t = (0, o.e7)([d.Z], () => d.Z.getGuild(e), [e]),
-        n = (0, o.e7)([h.Z], () => h.Z.getHistorySnapshot(), []),
+        t = (0, o.e7)([u.Z], () => u.Z.getGuild(e), [e]),
+        n = (0, o.e7)([f.Z], () => f.Z.getHistorySnapshot(), []),
         [l, E] = r.useState(!1);
     if (null == t) return null;
     let I = async () => {
         E(!0);
         try {
-            f.mT(t.id), await c.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR });
+            h.mT(t.id), await c.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR });
         } catch {
             E(!1);
         }
@@ -39,8 +39,8 @@ t.Z = () => {
                 className: a()(_.button, _.back),
                 innerClassName: _.iconButton,
                 onClick: () => {
-                    let e = (0, u.s1)();
-                    null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
+                    let e = (0, d.s1)();
+                    null != n && null != n.location ? (0, d.dL)({ ...n.location }) : e.goBack();
                 },
                 children: [
                     (0, i.jsx)(s.ArrowSmallLeftIcon, {

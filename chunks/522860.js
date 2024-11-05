@@ -12,20 +12,20 @@ var r = n(481060),
     s = n(388032);
 function c(e) {
     var t;
-    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: m, compact: f } = e,
-        h = (0, a.ZP)(n),
+    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: m, compact: h } = e,
+        f = (0, a.ZP)(n),
         p = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
-        g = m(h),
+        g = m(f),
         _ = s.intl.format(s.t.FKXvaG, {
-            username: h.nick,
-            activityName: null != u ? u.name : 'unknown',
-            onJoinStream: d,
+            username: f.nick,
+            activityName: null != d ? d.name : 'unknown',
+            onJoinStream: u,
             usernameHook: g
         });
     return (
         null != p &&
             (_ = s.intl.format(s.t.NEFxtb, {
-                username: h.nick,
+                username: f.nick,
                 duration: p.humanize(),
                 channelName: c.name,
                 usernameHook: g
@@ -41,7 +41,7 @@ function c(e) {
                       })
                     : (0, i.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
-            compact: f,
+            compact: h,
             children: _
         })
     );

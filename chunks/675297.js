@@ -11,11 +11,11 @@ var r = n(399606),
     o = n(674180),
     s = n(430824),
     c = n(572004),
-    u = n(267101),
-    d = n(863663),
+    d = n(267101),
+    u = n(863663),
     m = n(676651),
-    f = n(623488),
-    h = n(942833),
+    h = n(623488),
+    f = n(942833),
     p = n(391181),
     g = n(964793),
     _ = n(226060),
@@ -28,10 +28,10 @@ function E(e) {
             return s.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : C.lds);
         }),
         R = (0, l.U)(t, 600),
-        P = (0, h.C)(t),
-        y = (0, u.SO)(j),
+        P = (0, f.C)(t),
+        y = (0, d.SO)(j),
         { shouldHideGuildPurchaseEntryPoints: L } = (0, o.uP)(n),
-        O = (0, h.k)(t);
+        O = (0, f.k)(t);
     if (null == j || L) return null;
     let M = () =>
             (0, g.e)({
@@ -59,12 +59,12 @@ function E(e) {
                 (0, a.x)({ listing: t });
             },
             onCopyProductLink: () => {
-                (0, c.JG)((0, d.ar)(n, t.id));
+                (0, c.JG)((0, u.ar)(n, t.id));
             },
             onTestDownload: () => {}
         });
     return (0, i.jsx)(
-        f.Z,
+        h.Z,
         {
             imageUrl: R,
             name: t.name,

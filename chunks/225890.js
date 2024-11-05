@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(281956),
     s = n(922482),
     c = n(592125),
-    u = n(271383),
-    d = n(430824),
+    d = n(271383),
+    u = n(430824),
     m = n(594174),
-    f = n(897285),
-    h = n(924301),
+    h = n(897285),
+    f = n(924301),
     p = n(482241),
     g = n(11868),
     _ = n(231338);
@@ -28,24 +28,24 @@ function C(e) {
             channel: v,
             isMember: N
         } = (0, l.cj)(
-            [h.ZP, d.Z, c.Z, u.ZP, m.default],
+            [f.ZP, u.Z, c.Z, d.ZP, m.default],
             () => {
                 var e, t;
-                let i = null !== (t = h.ZP.getGuildScheduledEvent(C)) && void 0 !== t ? t : void 0,
-                    r = d.Z.getGuild(n),
+                let i = null !== (t = f.ZP.getGuildScheduledEvent(C)) && void 0 !== t ? t : void 0,
+                    r = u.Z.getGuild(n),
                     l = c.Z.getChannel(null == i ? void 0 : i.channel_id);
                 return {
                     guildScheduledEvent: i,
                     guild: r,
                     channel: l,
-                    isMember: u.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+                    isMember: d.ZP.isMember(n, null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
                 };
             },
             [n, C]
         );
     return (
         r.useEffect(() => {
-            (null == I ? void 0 : I.id) == null && p.Z.fetchGuildEvent(n, C), f.Z.getGuildEventUserCounts(n, C, null != E ? [E] : []), f.Z.getGuildEventsForCurrentUser(n);
+            (null == I ? void 0 : I.id) == null && p.Z.fetchGuildEvent(n, C), h.Z.getGuildEventUserCounts(n, C, null != E ? [E] : []), h.Z.getGuildEventsForCurrentUser(n);
         }, [C, n, null == I ? void 0 : I.id, E]),
         (0, i.jsx)(g.ZP, {
             guild: x,

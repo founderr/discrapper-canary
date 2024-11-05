@@ -7,7 +7,7 @@ var a = n(455199),
     o = n(70956),
     s = n(709054),
     c = n(497089);
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-let d = 90 * o.Z.Millis.DAY,
+let u = 90 * o.Z.Millis.DAY,
     m = {
         tab: null,
         localItemAcks: {},
@@ -28,13 +28,13 @@ let d = 90 * o.Z.Millis.DAY,
         isDataStale: !1,
         isRefreshing: !1
     };
-class f extends (i = r.ZP.PersistedStore) {
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(a.Z), null != e)) {
             var t;
             ((m = e).localItemAcks = (function (e) {
                 let t = {};
-                for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
+                for (let [n, i] of Object.entries(e)) Date.now() - i < u && (t[n] = i);
                 return t;
             })(null !== (t = m.localItemAcks) && void 0 !== t ? t : {})),
                 (m.isDataStale = !0);
@@ -48,7 +48,7 @@ class f extends (i = r.ZP.PersistedStore) {
         return null !== (e = m.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > d);
+        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > u);
     }
     hasNewMentions() {
         return m.hasNewMentions;
@@ -63,11 +63,11 @@ class f extends (i = r.ZP.PersistedStore) {
         return m.hasNewMentions || m.isDataStale || m.isRefreshing;
     }
 }
-u(f, 'displayName', 'NotificationCenterStore'), u(f, 'persistKey', 'NotificationCenterStore');
-function h() {
+d(h, 'displayName', 'NotificationCenterStore'), d(h, 'persistKey', 'NotificationCenterStore');
+function f() {
     (m.hasNewMentions = !1), (m.isDataStale = !1), (m.isRefreshing = !1);
 }
-t.Z = new f(l.Z, {
+t.Z = new h(l.Z, {
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
     },
@@ -92,6 +92,6 @@ t.Z = new f(l.Z, {
     NOTIFICATION_CENTER_REFRESH: function () {
         m.isRefreshing = !0;
     },
-    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: h,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: h
+    LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: f,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: f
 });

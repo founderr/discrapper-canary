@@ -10,28 +10,28 @@ var i = n(200651),
     o = n(399606),
     s = n(607070),
     c = n(597688),
-    u = n(624377),
-    d = n(530618),
+    d = n(624377),
+    u = n(530618),
     m = n(331042),
-    f = n(372654),
-    h = n(987209),
+    h = n(372654),
+    f = n(987209),
     p = n(563132),
     g = n(179118),
     _ = n(614277),
     C = n(698708);
 function E(e) {
     let { handleClose: t, confettiCanvas: n, hideConfetti: r = !1, analyticsLocations: l } = e,
-        { skusById: s, selectedSkuId: u, application: d } = (0, p.usePaymentContext)(),
-        f = (0, o.e7)([c.Z], () => c.Z.getProduct(u));
-    a()(null != u, 'Expected selectedSkuId'), a()(null != d, 'Expected application');
-    let h = s[u];
-    return (a()(null != h, 'Expected sku'), null == f)
+        { skusById: s, selectedSkuId: d, application: u } = (0, p.usePaymentContext)(),
+        h = (0, o.e7)([c.Z], () => c.Z.getProduct(d));
+    a()(null != d, 'Expected selectedSkuId'), a()(null != u, 'Expected application');
+    let f = s[d];
+    return (a()(null != f, 'Expected sku'), null == h)
         ? null
         : (0, i.jsxs)(_.C3, {
               children: [
                   (0, i.jsx)(C.Z, {}),
                   (0, i.jsx)(m.CollectiblesCollectedModalInner, {
-                      product: f,
+                      product: h,
                       onClose: t,
                       confettiCanvas: n,
                       analyticsLocations: l,
@@ -41,12 +41,12 @@ function E(e) {
           });
 }
 function I(e) {
-    let { isGift: t, giftCode: n, selectedGiftStyle: l, hasSentMessage: a, giftRecipient: m, giftMessageError: _, isSendingMessage: C } = (0, h.wD)(),
+    let { isGift: t, giftCode: n, selectedGiftStyle: l, hasSentMessage: a, giftRecipient: m, giftMessageError: _, isSendingMessage: C } = (0, f.wD)(),
         I = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         x = r.useRef(null),
         { selectedSkuId: v } = (0, p.usePaymentContext)(),
         N = (0, o.e7)([c.Z], () => c.Z.getProduct(v)),
-        { confettiColors: T } = (0, u.Z)(null == N ? void 0 : N.styles);
+        { confettiColors: T } = (0, d.Z)(null == N ? void 0 : N.styles);
     return t
         ? (0, i.jsxs)('div', {
               ref: x,
@@ -62,10 +62,10 @@ function I(e) {
                   }),
                   !e.hideConfetti &&
                       !I &&
-                      (0, i.jsx)(d.Z, {
+                      (0, i.jsx)(u.Z, {
                           confettiTarget: x.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, f.vK)(null == N ? void 0 : N.categorySkuId),
+                          sprites: (0, h.vK)(null == N ? void 0 : N.categorySkuId),
                           colors: null == T ? void 0 : T.map((e) => e.toHexString())
                       })
               ]

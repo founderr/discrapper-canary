@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     n(627341);
@@ -12,20 +12,20 @@ var r = n(120356),
     o = n(481060),
     s = n(109213),
     c = n(409813),
-    u = n(474936),
-    d = n(388032),
+    d = n(474936),
+    u = n(388032),
     m = n(73913);
-function f(e) {
+function h(e) {
     let { step: t, onClose: n, giftingOrigin: r } = e,
-        { enabled: f } = s.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
-        h = (0, a.EQ)(t)
-            .with(c.h8.REVIEW, () => d.intl.string(d.t.JbRd5u))
-            .with(c.h8.ADD_PAYMENT_STEPS, () => d.intl.string(d.t.QiGOam))
-            .with(c.h8.GIFT_CUSTOMIZATION, () => (f && r === u.Wt.DM_CHANNEL ? d.intl.string(d.t['xU+d9P']) : d.intl.string(d.t['JCFN//'])))
-            .with(c.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => d.intl.string(d.t.lDbi6O))
+        { enabled: h } = s.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
+        f = (0, a.EQ)(t)
+            .with(c.h8.REVIEW, () => u.intl.string(u.t.JbRd5u))
+            .with(c.h8.ADD_PAYMENT_STEPS, () => u.intl.string(u.t.QiGOam))
+            .with(c.h8.GIFT_CUSTOMIZATION, () => (h && r === d.Wt.DM_CHANNEL ? u.intl.string(u.t['xU+d9P']) : u.intl.string(u.t['JCFN//'])))
+            .with(c.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => u.intl.string(u.t.lDbi6O))
             .with(c.h8.CONFIRM, () => '')
             .otherwise(() => null);
-    return null == h
+    return null == f
         ? null
         : (0, i.jsxs)(o.ModalHeader, {
               className: l()(m.headerContainerGift),
@@ -33,7 +33,7 @@ function f(e) {
               children: [
                   (0, i.jsx)(o.Heading, {
                       variant: 'heading-lg/semibold',
-                      children: h
+                      children: f
                   }),
                   (0, i.jsx)(o.ModalCloseButton, {
                       onClick: n,

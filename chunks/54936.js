@@ -12,26 +12,26 @@ var r = n(120356),
     o = n(910111),
     s = n(732559),
     c = n(723851),
-    u = n(981631),
-    d = n(388032),
+    d = n(981631),
+    u = n(388032),
     m = n(500792);
-let f = {
-    [u.TaA.WINDOWS]: {
+let h = {
+    [d.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => d.intl.string(d.t['0/xHFB'])
+        getLabel: () => u.intl.string(u.t['0/xHFB'])
     },
-    [u.TaA.MACOS]: {
+    [d.TaA.MACOS]: {
         icon: s.Z,
-        getLabel: () => d.intl.string(d.t.E4u4n5)
+        getLabel: () => u.intl.string(u.t.E4u4n5)
     },
-    [u.TaA.LINUX]: {
+    [d.TaA.LINUX]: {
         icon: o.Z,
-        getLabel: () => d.intl.string(d.t.tcawo6)
+        getLabel: () => u.intl.string(u.t.tcawo6)
     }
 };
-function h(e) {
+function f(e) {
     let { operatingSystem: t, className: n } = e,
-        r = f[t];
+        r = h[t];
     if (null == r) throw Error('Unexpected operating system: '.concat(t));
     let l = r.icon;
     return (0, i.jsx)(a.Tooltip, {
@@ -49,7 +49,7 @@ let p = (e) => {
         className: l()(m.OSSection, n),
         children: t.map((e) =>
             (0, i.jsx)(
-                h,
+                f,
                 {
                     operatingSystem: e,
                     className: l()(m.purchaseUnitOperatingSystem, r)

@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(524437),
     s = n(481060),
     c = n(100527),
-    u = n(906732),
-    d = n(602478),
+    d = n(906732),
+    u = n(602478),
     m = n(2818),
-    f = n(768943),
-    h = n(742989),
+    h = n(768943),
+    f = n(742989),
     p = n(675478),
     g = n(581883),
     _ = n(585483),
@@ -29,7 +29,7 @@ var i = n(200651),
     S = n(388032);
 function b(e) {
     let { onOpen: t, onClose: n, children: b, badgeState: A, popoutPosition: j, popoutAlign: Z } = e,
-        { analyticsLocations: R } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
+        { analyticsLocations: R } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
         [P, y] = r.useState(!1),
         [L, O] = (function () {
             let e = (0, a.e7)([g.Z], () => {
@@ -76,10 +76,10 @@ function b(e) {
             y(!P), P ? null == n || n() : null == t || t();
         }, [n, t, P]);
     r.useEffect(() => (_.S.subscribe(T.CkL.TOGGLE_INBOX, B), () => void _.S.unsubscribe(T.CkL.TOGGLE_INBOX, B)), [B]);
-    let { showReminders: w } = h.Z.useExperiment({ location: 'RecentsPopout' }),
+    let { showReminders: w } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: U, inInbox: F } = m.Z.useExperiment({ location: 'RecentsPopout' }),
-        G = (0, a.e7)([f.Z], () => f.Z.hasOverdueReminder(), []) && U && F,
-        { enabled: V } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        G = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && U && F,
+        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
     r.useEffect(() => {
         (((!w || (U && F)) && L === o.X.TODOS) || (L === o.X.BOOKMARKS && !(U || F))) && O(o.X.MENTIONS);
     });
@@ -89,7 +89,7 @@ function b(e) {
         },
         [D]
     );
-    return (0, i.jsx)(u.Gt, {
+    return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsx)(s.Popout, {
             animation: s.Popout.Animation.NONE,

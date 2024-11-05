@@ -11,15 +11,15 @@ var r = n(913527),
     o = n(481060),
     s = n(800530),
     c = n(388032),
-    u = n(375675);
-let d = (e) => l()().diff(l().unix(e), 'days');
+    d = n(375675);
+let u = (e) => l()().diff(l().unix(e), 'days');
 function m(e) {
-    var t, r, l, m, f;
+    var t, r, l, m, h;
     if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
-    let h = e.message.embeds[0],
-        p = null !== (l = null === (t = h.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
+    let f = e.message.embeds[0],
+        p = null !== (l = null === (t = f.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
         g = null !== (m = null == p ? void 0 : p.rawValue) && void 0 !== m ? m : void 0,
-        _ = null !== (f = null === (r = h.fields) || void 0 === r ? void 0 : r.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) && void 0 !== f ? f : void 0,
+        _ = null !== (h = null === (r = f.fields) || void 0 === r ? void 0 : r.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) && void 0 !== h ? h : void 0,
         C = null == _ || null == _.rawValue ? void 0 : parseFloat(_.rawValue);
     return null == g || null == C
         ? null
@@ -36,16 +36,16 @@ function m(e) {
                           });
                   });
               },
-              className: u.safetyPolicyNoticeContainer,
+              className: d.safetyPolicyNoticeContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: u.noticeContent,
+                      className: d.noticeContent,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: u.headerRow,
+                              className: d.headerRow,
                               children: [
                                   (0, i.jsx)(o.WarningIcon, {
-                                      className: u.warningIcon,
+                                      className: d.warningIcon,
                                       color: a.Z.colors.STATUS_DANGER
                                   }),
                                   (0, i.jsx)(o.Text, {
@@ -55,14 +55,14 @@ function m(e) {
                               ]
                           }),
                           (0, i.jsx)('div', {
-                              className: u.incidentTiming,
+                              className: d.incidentTiming,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
-                                  children: c.intl.format(c.t.eevFb2, { daysAgo: d(C) })
+                                  children: c.intl.format(c.t.eevFb2, { daysAgo: u(C) })
                               })
                           }),
                           (0, i.jsx)('div', {
-                              className: u.noticeBody,
+                              className: d.noticeBody,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
@@ -72,10 +72,10 @@ function m(e) {
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: u.footerContainer,
+                      className: d.footerContainer,
                       children: (0, i.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
-                          className: u.detailsButton,
+                          className: d.detailsButton,
                           color: o.Button.Colors.WHITE,
                           children: c.intl.string(c.t.zKnzws)
                       })

@@ -12,28 +12,28 @@ var r = n(990547),
     o = n(213609),
     s = n(914010),
     c = n(267101),
-    u = n(675297),
-    d = n(20281);
+    d = n(675297),
+    u = n(20281);
 function m(e) {
     let { code: t } = e,
         [n, m] = t.split('-'),
-        f = (0, c.hO)(n, m),
-        h = (0, l.e7)([s.Z], () => s.Z.getGuildId());
+        h = (0, c.hO)(n, m),
+        f = (0, l.e7)([s.Z], () => s.Z.getGuildId());
     return ((0, o.Z)(
         {
-            type: d.n.VIEW,
+            type: u.n.VIEW,
             name: r.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
             properties: {
                 guild_product_listing_id: m,
-                has_entitlement: (null == f ? void 0 : f.has_entitlement) === !0
+                has_entitlement: (null == h ? void 0 : h.has_entitlement) === !0
             }
         },
-        { disableTrack: null == f }
+        { disableTrack: null == h }
     ),
-    null == f || h !== n)
+    null == h || f !== n)
         ? null
-        : (0, i.jsx)(u.H, {
-              guildProductListing: f,
+        : (0, i.jsx)(d.H, {
+              guildProductListing: h,
               guildId: n,
               location: a.Z.GUILD_PRODUCT_EMBED_CARD,
               cardWidth: 390,

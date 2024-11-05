@@ -25,21 +25,21 @@ function N(t, e, n) {
         t
     );
 }
-let h = f.isPlatformEmbedded && (0, f.isWindows)(),
-    I = h && 10 > parseFloat(r.Z.os.release),
+let I = f.isPlatformEmbedded && (0, f.isWindows)(),
+    h = I && 10 > parseFloat(r.Z.os.release),
     p = !0;
-if (h && !I) {
+if (I && !h) {
     let [t, , e] = r.Z.os.release.split('.');
     p = parseInt(t) > 10 || parseInt(e) >= 15063;
 }
-let T = (h && p) || ('Chrome' === u().name && 47 > parseFloat(u().version)) || ('Firefox' === u().name && 52 > parseFloat(u().version)),
+let T = (I && p) || ('Chrome' === u().name && 47 > parseFloat(u().version)) || ('Firefox' === u().name && 52 > parseFloat(u().version)),
     S = o().throttle(g.GN, 1000, { leading: !0 });
 function C() {
     E.ZP.flashFrame(!1);
 }
-h && (window.addEventListener('focus', C), E.ZP.on('MAIN_WINDOW_FOCUS', C));
+I && (window.addEventListener('focus', C), E.ZP.on('MAIN_WINDOW_FOCUS', C));
 let m = window.Notification;
-I &&
+h &&
     (E.ZP.on('NOTIFICATION_CLICK', (t, e) => {
         let n = null[e];
         null != n && (n.onclick(), n.close());
@@ -105,15 +105,15 @@ e.Z = {
         null != l.sound && Z(l.sound, null !== (r = l.volume) && void 0 !== r ? r : 1, l.soundpack);
         let N = null !== (d = null == l ? void 0 : l.tag) && void 0 !== d ? d : null;
         (0, f.isLinux)() && (n = o().escape(n));
-        let I = {
+        let h = {
             icon: t,
             body: n,
             tag: N,
             silent: !0
         };
-        h && s.Z.taskbarFlash && E.ZP.flashFrame(!0);
+        I && s.Z.taskbarFlash && E.ZP.flashFrame(!0);
         try {
-            g = new m(e, I);
+            g = new m(e, h);
         } catch (t) {
             return null;
         }

@@ -11,11 +11,11 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(788307),
-    u = n(43267),
-    d = n(933557),
+    d = n(43267),
+    u = n(933557),
     m = n(471445),
-    f = n(790145),
-    h = n(313201),
+    h = n(790145),
+    f = n(313201),
     p = n(565138),
     g = n(199902),
     _ = n(592125),
@@ -32,12 +32,12 @@ let N = {
 };
 function T(e) {
     let { channel: t, children: n, gotoChannel: r, mentionCount: l, channelState: o, toggleCollapsed: c } = e,
-        u = (0, a.JA)('recents-header-'.concat(t.id, '-').concat((0, h.Dt)()));
+        d = (0, a.JA)('recents-header-'.concat(t.id, '-').concat((0, f.Dt)()));
     return (0, i.jsx)(s.FocusRing, {
         offset: N,
         children: (0, i.jsxs)('div', {
             className: v.channelHeader,
-            ...u,
+            ...d,
             tabIndex: 0,
             'data-recents-channel': t.id,
             onKeyDown: function (e) {
@@ -73,7 +73,7 @@ function S(e) {
 function b(e) {
     let { channel: t, gotoChannel: n } = e,
         r = (0, o.e7)([I.default], () => (t.isDM() ? I.default.getUser(t.getRecipientId()) : null)),
-        l = null == r ? (0, u.x)(t) : r.getAvatarURL(void 0, 40);
+        l = null == r ? (0, d.x)(t) : r.getAvatarURL(void 0, 40);
     return (0, i.jsx)(s.Clickable, {
         onClick: n,
         tabIndex: -1,
@@ -104,8 +104,8 @@ function j(e) {
     let { channel: t, gotoChannel: n, mentionCount: r } = e,
         a = (0, o.e7)([C.Z], () => C.Z.getGuild(t.guild_id)),
         c = (0, o.e7)([_.Z], () => _.Z.getChannel(t.parent_id)),
-        u = (0, m.KS)(t, a),
-        h = (0, d.ZP)(t, !1),
+        d = (0, m.KS)(t, a),
+        f = (0, u.ZP)(t, !1),
         p = null == c ? (null == a ? void 0 : a.name) : ''.concat(null == a ? void 0 : a.name, ' \u203A ').concat(c.name),
         g = t.isMultiUserDM()
             ? x.intl.formatToPlainString(x.t.CxSA5O, { members: t.recipients.length + 1 })
@@ -126,9 +126,9 @@ function j(e) {
                     className: v.channelName,
                     onClick: n,
                     children: [
-                        t.isThread() || t.isGroupDM() || null == u
+                        t.isThread() || t.isGroupDM() || null == d
                             ? null
-                            : (0, i.jsx)(u, {
+                            : (0, i.jsx)(d, {
                                   className: t.isForumLikeChannel() ? v.forumIcon : void 0,
                                   width: 18,
                                   height: 18,
@@ -137,10 +137,10 @@ function j(e) {
                               }),
                         (0, i.jsx)('span', {
                             className: v.channelNameSpan,
-                            children: h
+                            children: f
                         }),
                         null != r && r > 0
-                            ? (0, i.jsx)(f.Z, {
+                            ? (0, i.jsx)(h.Z, {
                                   value: r,
                                   className: v.badge
                               })

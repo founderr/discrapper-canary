@@ -9,20 +9,20 @@ var r = n(739566),
     l = n(834129),
     a = n(388032);
 function o(e) {
-    let { message: t, otherUsername: o, usernameHook: s, otherUsernameHook: c, compact: u } = e,
-        { nick: d } = (0, r.ZP)(t),
+    let { message: t, otherUsername: o, usernameHook: s, otherUsernameHook: c, compact: d } = e,
+        { nick: u } = (0, r.ZP)(t),
         m = s(),
-        f = c(),
-        h = a.intl.format(a.t.MMN2Ji, {
-            username: d,
+        h = c(),
+        f = a.intl.format(a.t.MMN2Ji, {
+            username: u,
             usernameHook: m,
             otherUsername: o,
-            otherUsernameHook: f
+            otherUsernameHook: h
         });
     return (0, i.jsx)(l.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
-        compact: u,
-        children: h
+        compact: d,
+        children: f
     });
 }

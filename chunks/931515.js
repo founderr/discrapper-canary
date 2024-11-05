@@ -29,11 +29,11 @@ var i = n(192379),
 if (12633 == n.j) var o = n(512969);
 if (12633 == n.j) var s = n(782690);
 var c = n(731965),
-    u = n(442837),
-    d = n(224706),
+    d = n(442837),
+    u = n(224706),
     m = n(110924),
-    f = n(410030),
-    h = n(728345),
+    h = n(410030),
+    f = n(728345),
     p = n(812206),
     g = n(963202),
     _ = n(564990),
@@ -75,7 +75,7 @@ function w() {
         c = null != l ? l : o,
         m = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                t = (0, u.e7)([R.Z], () => R.Z.hasLoadedStaticClanDiscovery());
+                t = (0, d.e7)([R.Z], () => R.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
                     e && !t && (0, P.XB)();
@@ -83,7 +83,7 @@ function w() {
                 t
             );
         })(!a),
-        f = (0, u.e7)([R.Z], () => R.Z.isLoading());
+        h = (0, d.e7)([R.Z], () => R.Z.isLoading());
     return (
         i.useEffect(() => {
             !(n.length > 0) && !a && (c === k.nJ ? (e(L.hz.VALORANT), t([c])) : c === k.xn ? (e(L.hz.GENSHIN), t([c])) : null == c && (e(L.hz.NONE), t([])));
@@ -96,22 +96,22 @@ function w() {
             }
         }, [r, m, a]),
         i.useEffect(() => {
-            d.Z.getDetectableGames();
+            u.Z.getDetectableGames();
         }, []),
-        { loading: f }
+        { loading: h }
     );
 }
 function U() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = B(),
-        { savedGuildIds: r, loaded: l } = (0, u.cj)([R.Z], () => ({
+        { savedGuildIds: r, loaded: l } = (0, d.cj)([R.Z], () => ({
             savedGuildIds: R.Z.getSavedGuildIds(),
             loaded: R.Z.hasLoadedStaticClanDiscovery()
         })),
         a = (0, g.iN)('clan_discovery'),
-        o = (0, u.e7)([R.Z], () => R.Z.getSearchResult(n), [n]),
-        s = (0, u.Wu)([R.Z], () => (t && null != r ? r.map((e) => R.Z.getGuildProfile(e)).filter(j.lm) : []), [t, r]),
+        o = (0, d.e7)([R.Z], () => R.Z.getSearchResult(n), [n]),
+        s = (0, d.Wu)([R.Z], () => (t && null != r ? r.map((e) => R.Z.getGuildProfile(e)).filter(j.lm) : []), [t, r]),
         c = i.useMemo(() => {
             if ((0, O.Pw)(o)) {
                 let t = o.items;
@@ -140,12 +140,12 @@ function U() {
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, y.a)(),
-        f = c - 1,
-        h = (0, L.GN)((e) => e.loadingGameApplication, s.Z),
-        p = (0, u.e7)([R.Z], () => R.Z.getSavedGuildIds()),
+        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: u } = (0, y.a)(),
+        h = c - 1,
+        f = (0, L.GN)((e) => e.loadingGameApplication, s.Z),
+        p = (0, d.e7)([R.Z], () => R.Z.getSavedGuildIds()),
         g = B(),
-        { searchResult: _, hasError: C } = (0, u.cj)(
+        { searchResult: _, hasError: C } = (0, d.cj)(
             [R.Z],
             () => ({
                 searchResult: R.Z.getSearchResult(g),
@@ -159,7 +159,7 @@ function F(e) {
         !(function (e) {
             let [t, n] = i.useState(!1),
                 r = i.useRef(),
-                a = (0, u.Wu)([R.Z], () => e.filter((e) => R.Z.shouldFetchGuild(e)), [e]),
+                a = (0, d.Wu)([R.Z], () => e.filter((e) => R.Z.shouldFetchGuild(e)), [e]),
                 o = (0, m.Z)(a),
                 s = i.useRef(new AbortController()),
                 c = i.useCallback(async (e) => {
@@ -175,20 +175,20 @@ function F(e) {
                     []
                 ),
                 t && a.length;
-        })(d),
+        })(u),
         i.useEffect(() => {
             (0, P.IS)();
         }, []);
     let E = i.useMemo(() => {
             var e;
-            return null !== (e = t ? p : o[f]) && void 0 !== e ? e : [];
-        }, [p, o, f, t]),
-        I = (0, u.Wu)([R.Z], () => E.map((e) => R.Z.getGuildProfile(e)).filter(j.lm), [E]),
+            return null !== (e = t ? p : o[h]) && void 0 !== e ? e : [];
+        }, [p, o, h, t]),
+        I = (0, d.Wu)([R.Z], () => E.map((e) => R.Z.getGuildProfile(e)).filter(j.lm), [E]),
         x = E.length === I.length || t,
         v = I.length === a || x,
         N = (0, O.Pw)(_);
     return {
-        loaded: e === r && N && v && !h,
+        loaded: e === r && N && v && !f,
         clans: I,
         searchCriteria: g,
         searchResult: _,
@@ -199,7 +199,7 @@ function G() {
     let { search: e } = (0, o.TH)(),
         t = (0, g.iN)('GlobalDiscovery'),
         { game: n } = t ? a.parse(e.slice(1)) : {},
-        r = (0, u.e7)([p.Z], () => (null != n ? p.Z.getApplication(n) : null));
+        r = (0, d.e7)([p.Z], () => (null != n ? p.Z.getApplication(n) : null));
     i.useEffect(() => {
         null != n && (0, x.$X)({ gameId: n });
     }, [n]),
@@ -215,7 +215,7 @@ function G() {
                     ? ((0, c.j)(() => {
                           L.GN.setState({ loadingGameApplication: !0 });
                       }),
-                      h.ZP.fetchApplication(n)
+                      f.ZP.fetchApplication(n)
                           .then(() => {
                               (0, c.j)(() => {
                                   L.GN.setState({ entrypointGameId: n });
@@ -231,8 +231,8 @@ function G() {
 }
 function V(e, t) {
     var n;
-    let { data: r, isLoading: l } = (0, h.IX)(e),
-        a = (0, u.e7)([E.Z], () => (null != e ? E.Z.getGame(e) : null)),
+    let { data: r, isLoading: l } = (0, f.IX)(e),
+        a = (0, d.e7)([E.Z], () => (null != e ? E.Z.getGame(e) : null)),
         { isFetching: o } = (0, I.$)(e, t),
         s = i.useMemo(() => {
             if (null == a) return '';
@@ -257,14 +257,14 @@ let H = b.Z.parseString('#E93446');
 function z() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, u.e7)([T.default], () => T.default.getId()),
-        r = (0, f.ZP)(),
+        n = (0, d.e7)([T.default], () => T.default.getId()),
+        r = (0, h.ZP)(),
         { recent: l, outbox: a } = (0, N.Z)(n),
-        o = (0, u.e7)([C.Z], () => C.Z.hasInitialized),
-        s = (0, u.e7)([S.Z], () => S.Z.hasConsented(M.pjP.PERSONALIZATION)),
+        o = (0, d.e7)([C.Z], () => C.Z.hasInitialized),
+        s = (0, d.e7)([S.Z], () => S.Z.hasConsented(M.pjP.PERSONALIZATION)),
         c = null == a && o,
         m = i.useMemo(() => (s ? l.reduce((t, n) => (t.length >= e || 'played_game_extra' !== n.extra.type || null == k.gQ.get(n.extra.application_id) ? t : t.concat(n.extra.application_id)), []) : []), [s, l, e]),
-        h = i.useMemo(() => {
+        f = i.useMemo(() => {
             let n = m.length > 0 ? m : k.Id;
             return t && n.length < e && n.push(...k.Id, ...k.J6.slice(0, e)), Array.from(new Set(n)).slice(0, e);
         }, [m, t, e]);
@@ -272,10 +272,10 @@ function z() {
         c && s && (0, _.JX)(n);
     }, [n, c, s]),
         i.useEffect(() => {
-            d.Z.getDetectableGamesSupplemental(h);
-        }, [h]);
-    let p = (0, u.Wu)([E.Z], () => E.Z.getGames(h), [h]),
-        g = (0, u.e7)([E.Z], () => h.some((e) => E.Z.isFetching(e)), [h]),
+            u.Z.getDetectableGamesSupplemental(f);
+        }, [f]);
+    let p = (0, d.Wu)([E.Z], () => E.Z.getGames(f), [f]),
+        g = (0, d.e7)([E.Z], () => f.some((e) => E.Z.isFetching(e)), [f]),
         I = i.useMemo(() => {
             let e = {};
             for (let t of p) {
@@ -343,7 +343,7 @@ function z() {
         {
             games: i.useMemo(
                 () =>
-                    h.map((e) => {
+                    f.map((e) => {
                         var t, n, i;
                         let r = I[e],
                             l = null !== (n = x[e]) && void 0 !== n ? n : H,
@@ -355,7 +355,7 @@ function z() {
                             primaryColor: l
                         };
                     }),
-                [h, p, I, x]
+                [f, p, I, x]
             ),
             treatment: m.length > 0 && s ? k.O7.GAME_SPECIFIC : k.O7.GENERIC,
             hasFetchedGames: !c && !g

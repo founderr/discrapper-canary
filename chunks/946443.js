@@ -14,11 +14,11 @@ var i = n(200651),
     o = n(525654),
     s = n.n(o),
     c = n(91192),
-    u = n(442837),
-    d = n(524437),
+    d = n(442837),
+    u = n(524437),
     m = n(481060),
-    f = n(570140),
-    h = n(607070),
+    h = n(570140),
+    f = n(607070),
     p = n(724757),
     g = n(626135),
     _ = n(585483),
@@ -84,14 +84,14 @@ function A(e) {
         }, []),
         r.useEffect(
             () => (
-                f.Z.subscribe('CONNECTION_OPEN', A),
+                h.Z.subscribe('CONNECTION_OPEN', A),
                 () => {
-                    f.Z.unsubscribe('CONNECTION_OPEN', A);
+                    h.Z.unsubscribe('CONNECTION_OPEN', A);
                 }
             ),
             [A]
         );
-    let D = (0, u.e7)([h.Z], () => h.Z.messageGroupSpacing),
+    let D = (0, d.e7)([f.Z], () => f.Z.messageGroupSpacing),
         B = (0, p.Z)('unreads', R);
     if (0 === O.length) {
         var w;
@@ -99,7 +99,7 @@ function A(e) {
             className: b.container,
             children: [
                 (0, i.jsx)(x.Z, {
-                    tab: d.X.UNREADS,
+                    tab: u.X.UNREADS,
                     setTab: t,
                     badgeState: Z,
                     closePopout: A
@@ -117,7 +117,7 @@ function A(e) {
         'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, i.jsx)(x.Z, {
-                tab: d.X.UNREADS,
+                tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: Z,
                 closePopout: A,
@@ -188,7 +188,7 @@ function Z(e) {
         className: b.container,
         children: [
             (0, i.jsx)(x.Z, {
-                tab: d.X.UNREADS,
+                tab: u.X.UNREADS,
                 setTab: t,
                 badgeState: n,
                 closePopout: r

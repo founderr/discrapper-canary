@@ -11,11 +11,11 @@ var i = n(200651),
     o = n(904245),
     s = n(541716),
     c = n(419922),
-    u = n(665906),
-    d = n(271383),
+    d = n(665906),
+    u = n(271383),
     m = n(496675),
-    f = n(594174),
-    h = n(626135),
+    h = n(594174),
+    f = n(626135),
     p = n(709054),
     g = n(838440),
     _ = n(981631),
@@ -26,18 +26,9 @@ function E(e) {
     return t[r];
 }
 function I(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: m, eventProperties: f } = e,
+    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: u, event: m, eventProperties: h } = e,
         [p, _] = r.useState(!1),
         I = r.useMemo(
-            () =>
-                E({
-                    assets: d,
-                    currentUser: t,
-                    message: l
-                }),
-            [d, t, l]
-        ),
-        x = r.useMemo(
             () =>
                 E({
                     assets: u,
@@ -45,6 +36,15 @@ function I(e) {
                     message: l
                 }),
             [u, t, l]
+        ),
+        x = r.useMemo(
+            () =>
+                E({
+                    assets: d,
+                    currentUser: t,
+                    message: l
+                }),
+            [d, t, l]
         ),
         v = r.useCallback(async () => {
             let { valid: e } = await (0, g.v)({
@@ -73,16 +73,16 @@ function I(e) {
                 !(function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
                     null != n &&
-                        h.default.track(n, {
+                        f.default.track(n, {
                             ...i,
                             sticker_id: t.id
                         });
                 })({
                     sticker: I,
                     event: m,
-                    eventProperties: f
+                    eventProperties: h
                 }));
-        }, [n, l, I, m, f]);
+        }, [n, l, I, m, h]);
     return (0, i.jsxs)(a.Button, {
         className: C.CTAMessageButtonOuter,
         innerClassName: C.CTAMessageButton,
@@ -103,16 +103,16 @@ function I(e) {
 }
 function x(e) {
     let { channel: t, message: n, buttonLabels: r, stickers: a, event: o, eventProperties: s } = e,
-        c = f.default.getCurrentUser(),
-        h = (function (e) {
+        c = h.default.getCurrentUser(),
+        f = (function (e) {
             let { channel: t, message: n, currentUser: i } = e;
-            return (0, l.e7)([m.Z, d.ZP], () => {
+            return (0, l.e7)([m.Z, u.ZP], () => {
                 var e;
                 let r = t.guild_id;
                 if (null == i || null == r) return !1;
-                let l = (0, u.xl)(t),
+                let l = (0, d.xl)(t),
                     a = m.Z.can(_.Plq.SEND_MESSAGES, t),
-                    o = null === (e = d.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
+                    o = null === (e = u.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
                     s = n.author.bot;
                 return a && !l && !o && !s;
             });
@@ -121,7 +121,7 @@ function x(e) {
             message: n,
             currentUser: c
         });
-    return null != c && h
+    return null != c && f
         ? (0, i.jsx)('div', {
               className: C.CTAMessage,
               children: (0, i.jsx)(I, {

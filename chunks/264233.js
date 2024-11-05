@@ -11,17 +11,17 @@ var i = n(200651),
     o = n(442837),
     s = n(524437),
     c = n(481060),
-    u = n(317632),
-    d = n(174767),
+    d = n(317632),
+    u = n(174767),
     m = n(240126),
-    f = n(791914),
-    h = n(326838),
+    h = n(791914),
+    f = n(326838),
     p = n(388032),
     g = n(706897);
 function _(e) {
     let { setTab: t, badgeState: l, closePopout: _ } = e,
-        E = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
-        I = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        E = (0, o.Wu)([d.Z], () => d.Z.getInvites()),
+        I = (0, o.e7)([d.Z], () => d.Z.getInviteStatuses()),
         [x, v] = r.useMemo(
             () =>
                 a().partition(E, (e) => {
@@ -31,13 +31,13 @@ function _(e) {
             [E, I]
         );
     return (r.useEffect(() => {
-        (0, d.sJ)();
+        (0, u.sJ)();
     }),
     0 === E.length)
         ? (0, i.jsxs)('div', {
               className: g.container,
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
@@ -56,7 +56,7 @@ function _(e) {
         : (0, i.jsxs)('div', {
               className: g.container,
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(h.Z, {
                       tab: s.X.GAME_INVITES,
                       setTab: t,
                       badgeState: l,
@@ -91,7 +91,7 @@ function _(e) {
                                           (0, i.jsx)(i.Fragment, {
                                               children: x.map((e) =>
                                                   (0, i.jsx)(
-                                                      h.Z,
+                                                      f.Z,
                                                       {
                                                           invite: e,
                                                           expired: !1
@@ -109,7 +109,7 @@ function _(e) {
                                           (0, i.jsx)(i.Fragment, {
                                               children: v.map((e) =>
                                                   (0, i.jsx)(
-                                                      h.Z,
+                                                      f.Z,
                                                       {
                                                           invite: e,
                                                           expired: !0

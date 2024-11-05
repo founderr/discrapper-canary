@@ -10,16 +10,16 @@ var i = n(200651),
     o = n(375954),
     s = n(876338),
     c = n(912332),
-    u = n(245216),
-    d = n(388032);
+    d = n(245216),
+    u = n(388032);
 function m(e) {
-    let { className: t, channelId: n, messageId: m, targetKind: f, embedIndex: h } = e,
+    let { className: t, channelId: n, messageId: m, targetKind: h, embedIndex: f } = e,
         p = r.useCallback(() => {
             let e = o.Z.getMessage(n, m);
             if (null == e) return;
             let t = (0, s.j)(e, {
-                targetKind: f,
-                embedIndex: h
+                targetKind: h,
+                embedIndex: f
             });
             (0, c.l8)({
                 channelId: n,
@@ -27,12 +27,12 @@ function m(e) {
                 source: 'message-actions',
                 forwardOptions: t
             });
-        }, [n, h, m, f]);
+        }, [n, f, m, h]);
     return (0, i.jsx)(a.CircleIconButton, {
         className: t,
-        tooltip: d.intl.string(d.t.I3ltXF),
+        tooltip: u.intl.string(u.t.I3ltXF),
         color: a.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(u.Z, {
+        icon: (0, i.jsx)(d.Z, {
             size: 'xs',
             color: l.Z.colors.INTERACTIVE_NORMAL
         }),

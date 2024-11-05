@@ -13,17 +13,17 @@ var r = n(512722),
     o = n(955415),
     s = n(131704),
     c = n(592125),
-    u = n(594174),
-    d = n(823379),
+    d = n(594174),
+    u = n(823379),
     m = n(358595),
-    f = n(981631),
-    h = n(388032),
+    h = n(981631),
+    f = n(388032),
     p = n(691784);
 function g(e) {
     let t,
         { invite: n, author: r, currentUserId: g, onTransitionToInviteChannel: _, onAcceptInstantInvite: C } = e,
         E = g === r.id,
-        I = n.state === f.r2o.ACCEPTING,
+        I = n.state === h.r2o.ACCEPTING,
         x = (0, a.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
     l()(null == x || x.isPrivate(), 'must be a private channel');
     let v = null != x;
@@ -32,10 +32,10 @@ function g(e) {
         (x = (0, s.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
     } else {
         t = x.recipients.reduce((e, t) => {
-            let n = u.default.getUser(t);
+            let n = d.default.getUser(t);
             return null != n && e.push(n), e;
         }, []);
-        let e = u.default.getCurrentUser();
+        let e = d.default.getCurrentUser();
         v && null != e && t.push(e);
     }
     let N = x.name;
@@ -43,17 +43,17 @@ function g(e) {
         (N =
             t.length > 0
                 ? t
-                      .filter(d.lm)
+                      .filter(u.lm)
                       .map((e) => e.username)
                       .join(', ')
-                : h.intl.string(h.t.LJpTRE));
+                : f.intl.string(f.t.LJpTRE));
     let T = v ? _ : C,
-        S = h.intl.string(h.t.XpeFYm),
+        S = f.intl.string(f.t.XpeFYm),
         b = o.Z.Button.Colors.GREEN;
-    v && ((S = h.intl.string(h.t.cEnaW1)), (b = o.Z.Button.Colors.PRIMARY));
-    let A = h.intl.string(h.t['3p3/BA']);
+    v && ((S = f.intl.string(f.t.cEnaW1)), (b = o.Z.Button.Colors.PRIMARY));
+    let A = f.intl.string(f.t['3p3/BA']);
     return (
-        E && (A = h.intl.string(h.t.qmtuXF)),
+        E && (A = f.intl.string(f.t.qmtuXF)),
         (0, i.jsxs)(o.Z, {
             children: [
                 (0, i.jsx)(o.Z.Header, { text: A }),

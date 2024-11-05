@@ -6,11 +6,11 @@ var i = n(200651),
     o = n(5148),
     s = n(299608),
     c = n.n(s),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(603263),
-    f = n(461745),
-    h = n(349033),
+    h = n(461745),
+    f = n(349033),
     p = n(999650),
     g = n(857595),
     _ = n(607070),
@@ -62,7 +62,7 @@ class k extends r.PureComponent {
         T.S.unsubscribe(R.CkL.PERFORM_SEARCH, this.search), T.S.unsubscribe(R.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), T.S.unsubscribe(R.CkL.FOCUS_SEARCH, this.handleFocusSearch);
     }
     tokenize(e) {
-        let t = b.kG(S.Sq(e)).filter((e) => e.type !== h.ZP.NON_TOKEN_TYPE);
+        let t = b.kG(S.Sq(e)).filter((e) => e.type !== f.ZP.NON_TOKEN_TYPE);
         return S.lv(t, e, p.ZP);
     }
     clearSearch() {
@@ -109,15 +109,15 @@ class k extends r.PureComponent {
             o = S.Sq(t).length > 0;
         return null == e
             ? null
-            : (0, i.jsx)(d.Popout, {
+            : (0, i.jsx)(u.Popout, {
                   renderPopout: this.renderPopout,
                   position: 'bottom',
-                  animation: d.Popout.Animation.NONE,
+                  animation: u.Popout.Animation.NONE,
                   shouldShow: l,
                   autoInvert: !1,
                   children: (t, s) => {
                       var c;
-                      let { isShown: u } = s;
+                      let { isShown: d } = s;
                       return (0, i.jsx)('div', {
                           className: r,
                           children: (0, i.jsx)('div', {
@@ -125,7 +125,7 @@ class k extends r.PureComponent {
                                   [y.open]: o || l,
                                   [y.focused]: l
                               }),
-                              children: (0, i.jsx)(d.FocusRing, {
+                              children: (0, i.jsx)(u.FocusRing, {
                                   focusTarget: { current: null === (c = this._editorRef) || void 0 === c ? void 0 : c.editor },
                                   ringTarget: this._searchBarRef,
                                   children: (0, i.jsxs)(
@@ -134,8 +134,8 @@ class k extends r.PureComponent {
                                           className: y.searchBar,
                                           ref: this._searchBarRef,
                                           children: [
-                                              this.renderInput(u),
-                                              (0, i.jsx)(f.BK, {
+                                              this.renderInput(d),
+                                              (0, i.jsx)(h.BK, {
                                                   onClear: this.handleClearSearch,
                                                   hasContent: o || n,
                                                   className: y.icon
@@ -190,7 +190,7 @@ class k extends r.PureComponent {
                         n = b.$G(e);
                     for (let t = 0; t < e.length; t++) !b.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(n).length) return !1;
-                    M(t, n, i, !!r), d.AccessibilityAnnouncer.announce(P.intl.string(P.t.pKCxWF)), this.onBlur();
+                    M(t, n, i, !!r), u.AccessibilityAnnouncer.announce(P.intl.string(P.t.pKCxWF)), this.onBlur();
                 }
                 return !0;
             }),
@@ -323,7 +323,7 @@ class k extends r.PureComponent {
             b.WU();
     }
 }
-t.Z = u.ZP.connectStores([_.Z, v.Z], () => {
+t.Z = d.ZP.connectStores([_.Z, v.Z], () => {
     var e;
     let t = v.Z.getCurrentSearchId(),
         n = v.Z.getSearchType(),

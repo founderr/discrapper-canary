@@ -22,8 +22,8 @@ var i,
     E = n(933557),
     _ = n(456269),
     N = n(15274),
-    h = n(754688),
-    I = n(336197),
+    I = n(754688),
+    h = n(336197),
     p = n(355298),
     T = n(601992),
     S = n(11352),
@@ -36,8 +36,8 @@ var i,
     P = n(488131),
     R = n(695346),
     b = n(592125),
-    D = n(430824),
-    O = n(292959),
+    O = n(430824),
+    D = n(292959),
     U = n(496675),
     G = n(699516),
     L = n(944486),
@@ -92,14 +92,14 @@ let j = 'message1',
         }
     })();
 function to() {
-    return !!(O.Z.getDesktopType() === B.qrD.NEVER || k.Z.getStatus() === B.Skl.DND || R.QZ.getSetting()) || !1;
+    return !!(D.Z.getDesktopType() === B.qrD.NEVER || k.Z.getStatus() === B.Skl.DND || R.QZ.getSetting()) || !1;
 }
 function ta(t) {
     return null != F.Z.getVoiceStateForChannel(t);
 }
 class tu extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(M.default, b.Z, O.Z, D.Z, y.Z, G.Z, U.Z, F.Z, p.Z);
+        this.waitFor(M.default, b.Z, D.Z, O.Z, y.Z, G.Z, U.Z, F.Z, p.Z);
     }
 }
 K(tu, 'displayName', 'NotificationStore'),
@@ -147,17 +147,17 @@ K(tu, 'displayName', 'NotificationStore'),
                           _ = M.default.getCurrentUser();
                       if (null == f || null == E) return !1;
                       let N = (0, W.eF)(r, a, !tt),
-                          h = O.Z.getNotifyMessagesInSelectedChannel() && (0, W.N_)(r, a);
-                      if ((!N && !h) || (r.type === B.uaV.CHANGELOG && (null == r.changelog_id || g.Z.latestChangelogId() !== r.changelog_id))) return !1;
-                      let I = !O.Z.isSoundDisabled(j),
+                          I = D.Z.getNotifyMessagesInSelectedChannel() && (0, W.N_)(r, a);
+                      if ((!N && !I) || (r.type === B.uaV.CHANGELOG && (null == r.changelog_id || g.Z.latestChangelogId() !== r.changelog_id))) return !1;
+                      let h = !D.Z.isSoundDisabled(j),
                           p = x.ZP.canUseCustomNotificationSounds(_),
                           m = S.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
-                          v = p && m && I ? (null !== (o = (0, C.bb)(null !== (l = f.guild_id) && void 0 !== l ? l : B.aIL, a)) && void 0 !== o ? o : (0, C.iD)(f.guild_id)) : void 0;
-                      if ((h && (I && z.GN('message3', 0.4, void 0, v), !tt)) || !N) return !1;
+                          v = p && m && h ? (null !== (o = (0, C.bb)(null !== (l = f.guild_id) && void 0 !== l ? l : B.aIL, a)) && void 0 !== o ? o : (0, C.iD)(f.guild_id)) : void 0;
+                      if ((I && (h && z.GN('message3', 0.4, void 0, v), !tt)) || !N) return !1;
                       let A = n(808506).Z,
                           y = n(237997).Z;
                       if (null != A.getFocusedPID() && y.getTextChatNotificationMode() === B.Ypu.ENABLED && !w.Z.disableNotifications) return !1;
-                      let { icon: P, title: R, body: D } = (0, W.Xi)(f, r, E);
+                      let { icon: P, title: R, body: O } = (0, W.Xi)(f, r, E);
                       if (
                           (u.Z.dispatch({
                               type: 'RPC_NOTIFICATION_CREATE',
@@ -165,16 +165,16 @@ K(tu, 'displayName', 'NotificationStore'),
                               message: r,
                               icon: P,
                               title: R,
-                              body: D
+                              body: O
                           }),
                           (0, T.R)(r, f.guild_id),
-                          O.Z.getDesktopType() === B.qrD.NEVER)
+                          D.Z.getDesktopType() === B.qrD.NEVER)
                       )
-                          return I && z.GN(j, Q, void 0, v), !1;
+                          return h && z.GN(j, Q, void 0, v), !1;
                       let U = H.Z.showNotification(
                           P,
                           R,
-                          D,
+                          O,
                           {
                               notif_type: 'MESSAGE_CREATE',
                               notif_user_id: null === (i = r.author) || void 0 === i ? void 0 : i.id,
@@ -187,7 +187,7 @@ K(tu, 'displayName', 'NotificationStore'),
                           {
                               omitViewTracking: !0,
                               tag: r.id,
-                              sound: I ? j : void 0,
+                              sound: h ? j : void 0,
                               soundpack: v,
                               volume: Q,
                               onClick() {
@@ -253,7 +253,7 @@ K(tu, 'displayName', 'NotificationStore'),
                       if (null == i) return;
                       let { channelId: l, guildId: o, suppress: a, requestToSpeakTimestamp: u } = i;
                       if (null == l || null == o || !(!a && null != u)) return;
-                      let r = D.Z.getGuild(o),
+                      let r = O.Z.getGuild(o),
                           s = b.Z.getChannel(l),
                           d = y.Z.getStageInstanceByChannel(l);
                       null != r &&
@@ -274,7 +274,7 @@ K(tu, 'displayName', 'NotificationStore'),
                       let { instance: e } = t;
                       if (to() || !e.send_start_notification || ta(e.channel_id)) return !1;
                       let n = M.default.getCurrentUser(),
-                          i = D.Z.getGuild(e.guild_id),
+                          i = O.Z.getGuild(e.guild_id),
                           o = b.Z.getChannel(e.channel_id),
                           a = M.default.getUser(e.host_id);
                       if (null == n || null == o || null == i || null == a || !(0, W.LL)(n, a, o) || !U.Z.can(l.$e(B.Plq.CONNECT, B.Plq.VIEW_CHANNEL), o) || tn.has(e.id)) return !1;
@@ -312,7 +312,7 @@ K(tu, 'displayName', 'NotificationStore'),
                                     let e = t.channel_id;
                                     if (null == e || ta(e)) return !1;
                                     let n = M.default.getCurrentUser(),
-                                        i = D.Z.getGuild(t.guild_id),
+                                        i = O.Z.getGuild(t.guild_id),
                                         o = b.Z.getChannel(t.channel_id),
                                         a = M.default.getUser(t.host_id);
                                     if (null == n || null == o || null == i || null == a || !U.Z.can(l.$e(B.Plq.CONNECT, B.Plq.VIEW_CHANNEL), o)) return !1;
@@ -339,7 +339,7 @@ K(tu, 'displayName', 'NotificationStore'),
                                 !(function (t) {
                                     if (to()) return !1;
                                     let e = M.default.getCurrentUser(),
-                                        n = D.Z.getGuild(t.guild_id);
+                                        n = O.Z.getGuild(t.guild_id);
                                     if (null == e || null == n) return !1;
                                     H.Z.showNotification(
                                         n.getIconURL(128),
@@ -365,7 +365,7 @@ K(tu, 'displayName', 'NotificationStore'),
                       if (null == l || !B.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, W.FI)(n, l, !tt)) return !1;
                       let { author: o, user: a } = (0, _.MC)(n);
                       if (null == a) return !1;
-                      let u = D.Z.getGuild(l.guild_id);
+                      let u = O.Z.getGuild(l.guild_id);
                       if (null == u) return !1;
                       let r = J.intl.formatToPlainString(J.t['2IGVl5'], {
                               channelName: l.name,
@@ -400,7 +400,7 @@ K(tu, 'displayName', 'NotificationStore'),
                           let { enableInAppNotifications: t } = m.Z.getCurrentConfig({ location: 'desktopNotification' }, { autoTrackExposure: !0 });
                           if (!t) return !1;
                           let n =
-                              null !== (r = (0, h.Qj)(o)) && void 0 !== r
+                              null !== (r = (0, I.Qj)(o)) && void 0 !== r
                                   ? r
                                   : {
                                         channelId: null,
@@ -415,7 +415,7 @@ K(tu, 'displayName', 'NotificationStore'),
                           { notif_type: a },
                           {
                               onClick() {
-                                  null != o && ((0, I.Z)(o), c.default.clickedNotification());
+                                  null != o && ((0, h.Z)(o), c.default.clickedNotification());
                               },
                               tag: u
                           }
@@ -470,7 +470,7 @@ K(tu, 'displayName', 'NotificationStore'),
                           { notif_type: 'MESSAGE_REMINDER_DUE' },
                           {
                               onClick() {
-                                  (0, I.Z)(B.Z5c.CHANNEL(null == i ? void 0 : i.getGuildId(), i.id, n.id));
+                                  (0, h.Z)(B.Z5c.CHANNEL(null == i ? void 0 : i.getGuildId(), i.id, n.id));
                               }
                           }
                       );
