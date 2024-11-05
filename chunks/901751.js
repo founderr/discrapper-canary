@@ -159,6 +159,19 @@ class x extends s.Z {
                             });
                 }
             }),
+            b(this, 'terminateHeartbeatForQuestId', (e) => {
+                let { previewQuestUserStatus: t } = e,
+                    { questId: n, enrolledAt: r, completedAt: i } = t;
+                (null === r || null === i) &&
+                    this.streamKeyToHeartbeatState.forEach((e, t) => {
+                        e.questId === n &&
+                            (N.log('terminateHeartbeatForQuestId - terminating heartbeat for quest ID '.concat(n)),
+                            this.terminateHeartbeat({
+                                streamKey: t,
+                                sendTerminalHeartbeat: !0
+                            }));
+                    });
+            }),
             b(this, 'handleEnrollmentSuccess', (e) => {
                 let {
                         enrolledQuestUserStatus: { questId: t }
@@ -381,6 +394,7 @@ class x extends s.Z {
                 QUESTS_ENROLL_SUCCESS: this.handleEnrollmentSuccess,
                 QUESTS_SEND_HEARTBEAT_SUCCESS: this.handleSendHeartbeatSuccess,
                 QUESTS_SEND_HEARTBEAT_FAILURE: this.handleSendHeartbeatFailure,
+                QUESTS_PREVIEW_UPDATE_SUCCESS: this.terminateHeartbeatForQuestId,
                 RUNNING_GAMES_CHANGE: this.handleRunningGamesChange,
                 STREAM_START: this.handleStreamStart,
                 STREAM_CREATE: this.handleStreamCreate,

@@ -41,7 +41,8 @@ function T(e) {
                 ctaContent: d.jZ.CONTEXT_MENU_COPY_LINK
             });
         }, [e.quest, e.questContent, e.questContentPosition]),
-        I = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE));
+        I = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
+        M = () => (0, c.is)(e.quest.id).catch(I);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
         onSelect: () => {
@@ -145,7 +146,9 @@ function T(e) {
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
-                                action: _
+                                action: () => {
+                                    _(), M();
+                                }
                             }),
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'progress',
@@ -177,7 +180,7 @@ function T(e) {
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: () => (0, c.is)(e.quest.id).catch(I)
+                                            action: M
                                         })
                                     ]
                                 })
