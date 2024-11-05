@@ -12,26 +12,22 @@ var i = n(200651),
     c = n(981631);
 function d(e) {
     return (
-        r.useEffect(
-            () => (
-                o.I.loadRecaptchaScript(e.sitekey, () => {
-                    var t, n, i;
-                    return null === (i = window) || void 0 === i
+        r.useEffect(() => {
+            o.I.loadRecaptchaScript(e.sitekey, () => {
+                var t, n, i;
+                return null === (i = window) || void 0 === i
+                    ? void 0
+                    : null === (n = i.grecaptcha) || void 0 === n
+                      ? void 0
+                      : null === (t = n.enterprise) || void 0 === t
                         ? void 0
-                        : null === (n = i.grecaptcha) || void 0 === n
-                          ? void 0
-                          : null === (t = n.enterprise) || void 0 === t
-                            ? void 0
-                            : t.ready(async () => {
-                                  var t;
-                                  let n = await (null === (t = window) || void 0 === t ? void 0 : t.grecaptcha).enterprise.execute(e.sitekey, null != e.action ? { action: e.action } : void 0);
-                                  e.onVerify(n);
-                              });
-                }),
-                () => o.I.cleanup(e.sitekey)
-            ),
-            [e]
-        ),
+                        : t.ready(async () => {
+                              var t;
+                              let n = await (null === (t = window) || void 0 === t ? void 0 : t.grecaptcha).enterprise.execute(e.sitekey, null != e.action ? { action: e.action } : void 0);
+                              e.onVerify(n);
+                          });
+            });
+        }, [e]),
         (0, i.jsx)(s.Spinner, {})
     );
 }
