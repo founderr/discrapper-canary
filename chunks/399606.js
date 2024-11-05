@@ -43,13 +43,11 @@ function l(e, t, n) {
     let [, c] = (0, r.useState)(null);
     return (
         (0, r.useInsertionEffect)(() => {
-            let t = () => {
+            let t = new a.F(e, () => {
                 let e = l.getStateFromStores();
                 !o(l.state, e) && ((l.state = e), c({}));
-            };
-            t();
-            let n = new a.F(e, t);
-            return n.attach('useStateFromStores'), () => n.detach();
+            });
+            return t.attach('useStateFromStores'), () => t.detach();
         }, []),
         u
     );
