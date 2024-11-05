@@ -14,8 +14,8 @@ var l = t(120356),
     d = t(995774),
     c = t(665906),
     g = t(695346),
-    m = t(496675),
-    f = t(768581),
+    f = t(496675),
+    m = t(768581),
     h = t(176354),
     v = t(981631),
     I = t(185923),
@@ -28,7 +28,7 @@ function Z(e) {
         { animated: a, src: s, surrogates: u } = t;
     return (
         null == s && null != t.id
-            ? (s = f.ZP.getEmojiURL({
+            ? (s = m.ZP.getEmojiURL({
                   id: t.id,
                   animated: !!a,
                   size: 20
@@ -79,11 +79,11 @@ function x(e, n) {
     t.length > 4 && (t.length = 4);
     let l = g.nc.useSetting(),
         r = (0, c.$R)(n),
-        f = (0, a.e7)([m.Z], () => l && r && (n.isPrivate() || m.Z.can(v.Plq.ADD_REACTIONS, n)), [n, r, l]),
+        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(v.Plq.ADD_REACTIONS, n)), [n, r, l]),
         E = (t) => {
             (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
         };
-    return f && t.length > 0
+    return m && t.length > 0
         ? (0, i.jsx)(o.MenuGroup, {
               className: p.wrapper,
               children: t.map((e, n) => {

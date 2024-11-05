@@ -1,74 +1,74 @@
-t.r(e),
-    t.d(e, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return h;
+            return f;
         }
     }),
     t(47120);
 var r = t(200651),
     i = t(192379),
     l = t(481060),
-    o = t(585483),
-    a = t(212459),
+    a = t(585483),
+    o = t(212459),
     s = t(73249),
     u = t(730606),
     c = t(860153),
     d = t(981631),
     m = t(388032),
-    f = t(619377);
-function h(n) {
-    let { onClose: e, items: t, startingIndex: h, onIndexChange: _, shouldRedactExplicitContent: x, shouldHideMediaOptions: p = !1, className: C, ...g } = n,
-        [S, E] = i.useState(null != h ? h : 0),
-        [L, v] = i.useState(!1);
+    h = t(619377);
+function f(e) {
+    let { onClose: n, items: t, startingIndex: f, onIndexChange: p, shouldRedactExplicitContent: g, shouldHideMediaOptions: _ = !1, className: x, ...C } = e,
+        [S, v] = i.useState(null != f ? f : 0),
+        [E, L] = i.useState(!1);
     i.useEffect(() => {
-        if (null != e)
+        if (null != n)
             return (
-                o.S.subscribe(d.CkL.MEDIA_MODAL_CLOSE, e),
+                a.S.subscribe(d.CkL.MEDIA_MODAL_CLOSE, n),
                 () => {
-                    o.S.unsubscribe(d.CkL.MEDIA_MODAL_CLOSE, e);
+                    a.S.unsubscribe(d.CkL.MEDIA_MODAL_CLOSE, n);
                 }
             );
-    }, [e]);
-    let A = i.useCallback(
-            (n) => {
-                E(n), null == _ || _(n);
+    }, [n]);
+    let y = i.useCallback(
+            (e) => {
+                v(e), null == p || p(e);
             },
-            [_]
+            [p]
         ),
         I = i.useMemo(
             () => ({
-                zoomed: L,
-                setZoomed: v
+                zoomed: E,
+                setZoomed: L
             }),
-            [L]
+            [E]
         ),
-        O = t[S];
+        A = t[S];
     return (0, r.jsx)(l.ModalRoot, {
         hideShadow: !0,
-        className: f.carouselModal,
-        ...g,
+        className: h.carouselModal,
+        ...C,
         size: l.ModalSize.DYNAMIC,
         fullscreenOnMobile: !1,
         'aria-label': m.intl.string(m.t.AMTX3t),
-        children: (0, r.jsxs)(a.z.Provider, {
+        children: (0, r.jsxs)(o.z.Provider, {
             value: I,
             children: [
                 (0, r.jsx)(c.Z, {
-                    item: O,
-                    onClose: e
+                    item: A,
+                    onClose: n
                 }),
                 (0, r.jsx)(u.Z, {
                     items: t,
                     startIndex: S,
-                    onIndexChange: A,
-                    shouldRedactExplicitContent: x,
-                    shouldHideMediaOptions: p
+                    onIndexChange: y,
+                    shouldRedactExplicitContent: g,
+                    shouldHideMediaOptions: _
                 }),
                 (0, r.jsx)('div', {
-                    className: f.actionButtonContainer,
+                    className: h.actionButtonContainer,
                     children: (0, r.jsx)(s.Z, {
-                        item: O,
-                        hideMediaOptions: ('IMAGE' === O.type && null == O.original) || p
+                        item: A,
+                        hideMediaOptions: ('IMAGE' === A.type && null == A.original) || _
                     })
                 })
             ]

@@ -15,10 +15,10 @@ var l = t(481060),
     d = t(160877),
     c = t(388032);
 function g(e) {
-    let { channelId: n, messageId: t, mediaItemUrl: g, embedId: m, transitionState: f, onClose: h } = e,
+    let { channelId: n, messageId: t, mediaItemUrl: g, embedId: f, transitionState: m, onClose: h } = e,
         v = (0, a.yh)(),
         I = (0, u.K)(n, t, g),
-        E = (0, u.b)(n, t, m),
+        E = (0, u.b)(n, t, f),
         { reportFalsePositive: p, isReportFalsePositiveLoading: M } = (0, s.$)({
             onSuccess: () => (0, d.s)(h),
             onError: () => {
@@ -43,7 +43,7 @@ function g(e) {
             onConfirmPress: p,
             attachmentPreview: 1 === I.length && 0 === E.length ? I[0] : void 0,
             embedPreview: 1 === E.length && 0 === I.length ? E[0] : void 0,
-            transitionState: f,
+            transitionState: m,
             onClose: h
         })
     );

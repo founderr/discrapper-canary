@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = t(200651);
@@ -14,14 +14,14 @@ var l = t(373793),
     d = t(594174),
     c = t(388032),
     g = t(461404);
-function m(e) {
-    var n, t, m;
+function f(e) {
+    var n, t, f;
     if (!(0, o.a)(e)) return null;
-    let f = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.USER_INSTALL],
+    let m = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.USER_INSTALL],
         h = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        v = d.default.getUser(f),
+        v = d.default.getUser(m),
         I = u.Z.getGuild(h),
-        E = d.default.getUser(null === (m = e.interactionMetadata) || void 0 === m ? void 0 : m.user.id),
+        E = d.default.getUser(null === (f = e.interactionMetadata) || void 0 === f ? void 0 : f.user.id),
         p = null;
     return (
         null != I

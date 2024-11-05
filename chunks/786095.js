@@ -15,8 +15,8 @@ var i = t(200651),
     d = t(676317),
     c = t(65912),
     g = t(556012),
-    m = t(572456),
-    f = t(434404),
+    f = t(572456),
+    m = t(434404),
     h = t(981631),
     v = t(273504),
     I = t(388032),
@@ -46,7 +46,7 @@ function M(e, n) {
     let O = () => {
             if (null != n)
                 (0, a.Zy)(),
-                    f.Z.open(n, h.pNK.GUILD_AUTOMOD),
+                    m.Z.open(n, h.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
                         S(n, p, {
                             triggerMetadata: {
@@ -59,7 +59,7 @@ function M(e, n) {
         },
         G = async (n) => {
             var t, i;
-            if (((0, a.Zy)(), !(await (0, m.XN)(n.name, e)))) return;
+            if (((0, a.Zy)(), !(await (0, f.XN)(n.name, e)))) return;
             let l = {
                 ...n,
                 triggerMetadata: {

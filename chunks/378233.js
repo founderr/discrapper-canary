@@ -138,7 +138,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => e.match('development' !== m ? S : T),
+    O = (e) => null != e.match('development' !== m ? S : T),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;

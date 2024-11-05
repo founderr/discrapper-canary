@@ -18,8 +18,8 @@ var l = t(374470),
     d = t(29264),
     c = t(905041),
     g = t(89013),
-    m = t(988500),
-    f = t(570870),
+    f = t(988500),
+    m = t(570870),
     h = t(786095),
     v = t(268623),
     I = t(667922),
@@ -50,7 +50,7 @@ function U(e) {
         r,
         o,
         s,
-        { channel: u, message: d, target: c, mediaItem: g, shouldHideMediaOptions: m, onSelect: f, onHeightUpdate: h } = e,
+        { channel: u, message: d, target: c, mediaItem: g, shouldHideMediaOptions: f, onSelect: m, onHeightUpdate: h } = e,
         v = c,
         I = c.getAttribute('data-type'),
         E = c.getAttribute('data-id'),
@@ -71,11 +71,11 @@ function U(e) {
         itemTextContent: s,
         canReport: !0,
         onHeightUpdate: h,
-        onSelect: f,
+        onSelect: m,
         onClose: a.Zy,
         navId: 'message',
         ariaLabel: w.intl.string(w.t.ChPNkJ),
-        shouldHideMediaOptions: m
+        shouldHideMediaOptions: f
     });
 }
 function k(e) {
@@ -98,8 +98,8 @@ function k(e) {
         ed = (0, p.Z)(n, t),
         ec = (0, N.Z)(n, t),
         eg = (0, T.Z)(n, t),
-        em = (0, Z.Z)(n, t),
-        ef = (0, C.Z)(n),
+        ef = (0, Z.Z)(n, t),
+        em = (0, C.Z)(n),
         eh = (0, C.e)(n),
         ev = (0, D.Z)(n, t),
         eI = (0, c.Z)(null != F ? F : K, B, n, { shouldHideMediaOptions: $ }),
@@ -116,7 +116,7 @@ function k(e) {
         ej = (0, h.Z)(a, t.getGuildId()),
         eb = (0, v.Z)(n),
         eA = (0, M.Z)(n),
-        e_ = (0, f.Z)({
+        e_ = (0, m.Z)({
             commandType: o.yU.MESSAGE,
             commandTargetId: n.id,
             channel: t,
@@ -124,7 +124,7 @@ function k(e) {
             onHeightUpdate: q
         }),
         eP = (0, G.Z)(n),
-        eN = (0, m.Z)(n);
+        eN = (0, f.Z)(n);
     return (0, i.jsxs)(r.Menu, {
         navId: W,
         onClose: J,
@@ -143,7 +143,7 @@ function k(e) {
                 children: [eA, el, eb, e_, ea, eo, eu, ed, ev, eN, eP]
             }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [eg, ec, em, X && ef, X && eh]
+                children: [eg, ec, ef, X && em, X && eh]
             }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [er, ej, eE, ep]

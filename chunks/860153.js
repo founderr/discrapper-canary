@@ -1,65 +1,65 @@
-t.d(e, {
+t.d(n, {
     Z: function () {
-        return p;
+        return _;
     }
 });
 var r = t(200651),
     i = t(192379),
     l = t(120356),
-    o = t.n(l),
-    a = t(442837),
+    a = t.n(l),
+    o = t(442837),
     s = t(481060),
     u = t(700582),
     c = t(372900),
     d = t(318713),
     m = t(123145),
-    f = t(592125),
-    h = t(231338),
-    _ = t(182763);
-let x = i.memo(function (n) {
-    let { message: e } = n,
-        t = (0, a.e7)([f.Z], () => f.Z.getChannel(e.channel_id));
+    h = t(592125),
+    f = t(231338),
+    p = t(182763);
+let g = i.memo(function (e) {
+    let { message: n } = e,
+        t = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, r.jsx)('div', {
-              className: _.messageContents,
+              className: p.messageContents,
               children: (0, r.jsxs)(c.Z.Provider, {
                   value: t.guild_id,
                   children: [
-                      (0, r.jsx)(u.Z, { user: e.author }),
+                      (0, r.jsx)(u.Z, { user: n.author }),
                       (0, r.jsx)('div', {
                           children: (0, r.jsx)(m.Z, {
-                              message: e,
+                              message: n,
                               channel: t
                           })
                       }),
                       (0, r.jsx)(d.Z, {
-                          timestamp: e.timestamp,
-                          className: _.timestamp
+                          timestamp: n.timestamp,
+                          className: p.timestamp
                       })
                   ]
               })
           });
 });
-function p(n) {
-    var e;
-    let { item: t, onClose: i } = n,
-        l = null === (e = t.sourceMetadata) || void 0 === e ? void 0 : e.message;
+function _(e) {
+    var n;
+    let { item: t, onClose: i } = e,
+        l = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
     return (0, r.jsx)(s.ThemeProvider, {
-        theme: h.BR.DARK,
-        children: (n) =>
+        theme: f.BR.DARK,
+        children: (e) =>
             (0, r.jsxs)('div', {
-                className: o()(_.topBar, n),
+                className: a()(p.topBar, e),
                 children: [
                     (0, r.jsx)(s.Button, {
                         look: s.ButtonLooks.BLANK,
                         color: s.ButtonColors.CUSTOM,
                         size: s.ButtonSizes.ICON,
-                        className: _.closeButton,
+                        className: p.closeButton,
                         onClick: i,
                         children: (0, r.jsx)(s.XLargeIcon, {})
                     }),
-                    null != l && (0, r.jsx)(x, { message: l })
+                    null != l && (0, r.jsx)(g, { message: l })
                 ]
             })
     });

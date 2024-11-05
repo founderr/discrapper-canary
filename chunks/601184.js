@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return f;
     }
 });
 var i = t(200651);
@@ -14,12 +14,12 @@ var l = t(442837),
     d = t(594174),
     c = t(981631),
     g = t(388032);
-function m(e, n) {
+function f(e, n) {
     let t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
-        m = (0, s.$R)(n),
-        f = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]),
-        h = f || (null != t && e.canDeleteOwnMessage(t.id));
-    return e.state === c.yb.SENDING || !h || c.V$x.UNDELETABLE.has(e.type) || !m
+        f = (0, s.$R)(n),
+        m = (0, l.e7)([u.Z], () => u.Z.can(c.Plq.MANAGE_MESSAGES, n), [n]),
+        h = m || (null != t && e.canDeleteOwnMessage(t.id));
+    return e.state === c.yb.SENDING || !h || c.V$x.UNDELETABLE.has(e.type) || !f
         ? null
         : (0, i.jsx)(r.MenuItem, {
               id: 'delete',

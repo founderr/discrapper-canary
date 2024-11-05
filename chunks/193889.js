@@ -1,4 +1,4 @@
-n.exports = {
+e.exports = {
     wrapper: 'wrapper_a24281',
     mediaContainer: 'mediaContainer_a24281',
     mediaWrapper: 'mediaWrapper_a24281',

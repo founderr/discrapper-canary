@@ -13,16 +13,16 @@ var i = t(200651),
     d = t(665906),
     c = t(695346),
     g = t(496675),
-    m = t(768581),
-    f = t(585483),
+    f = t(768581),
+    m = t(585483),
     h = t(176354),
     v = t(981631),
     I = t(185923),
     E = t(388032);
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        m = (0, d.$R)(n),
-        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(v.Plq.ADD_REACTIONS, n)) && m, [n, m]),
+        f = (0, d.$R)(n),
+        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(v.Plq.ADD_REACTIONS, n)) && f, [n, f]),
         Z = (0, o.MZ)(n.getGuildId());
     if (!c.nc.getSetting() || !p || e.type === v.uaV.GUILD_INVITE_REMINDER) return null;
     let x = Z.filter(
@@ -60,7 +60,7 @@ function p(e, n) {
         id: 'add-reaction',
         label: E.intl.string(E.t.lfIHs7),
         action: () => {
-            f.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
@@ -73,7 +73,7 @@ function p(e, n) {
                     label: E.intl.string(E.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
-                        f.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]
@@ -87,7 +87,7 @@ function M(e) {
         className: r,
         src:
             null != t.id
-                ? m.ZP.getEmojiURL({
+                ? f.ZP.getEmojiURL({
                       id: t.id,
                       animated: t.animated && (!l || a),
                       size: 18

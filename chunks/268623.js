@@ -14,13 +14,13 @@ var i = t(200651),
     d = t(575016),
     c = t(768943),
     g = t(175006),
-    m = t(742989),
-    f = t(898150),
+    f = t(742989),
+    m = t(898150),
     h = t(70956),
     v = t(388032);
 function I(e) {
     let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        { showReminders: t } = m.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
+        { showReminders: t } = f.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
         E = (function (e) {
             let { message: n, savedMessage: t } = e,
@@ -41,7 +41,7 @@ function I(e) {
                         }),
                     [n.channel_id, n.id]
                 ),
-                c = (0, f.useMessageReminderDurationSuggestions)({ createReminder: s }),
+                c = (0, m.useMessageReminderDurationSuggestions)({ createReminder: s }),
                 { dueInText: g } = (0, d.AT)({
                     dueAt: null == t ? void 0 : t.saveData.dueAt,
                     now: r,

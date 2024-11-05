@@ -59,8 +59,8 @@ var u = t(623292),
     d = t(324701),
     c = t(488131),
     g = t(314897),
-    m = t(592125),
-    f = t(626135),
+    f = t(592125),
+    m = t(626135),
     h = t(934415),
     v = t(572004),
     I = t(585483),
@@ -77,7 +77,7 @@ function j(e, n, t) {
     (0, v.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
 }
 function b(e, n) {
-    f.default.track(x.rMx.MESSAGE_LINK_COPIED, {
+    m.default.track(x.rMx.MESSAGE_LINK_COPIED, {
         message_id: n.id,
         channel: n.channel_id
     }),
@@ -120,7 +120,7 @@ function L(e, n) {
     (0, c.R6)(e, n, 'Message');
 }
 function D(e, n) {
-    let t = m.Z.getChannel(E.default.castMessageIdAsChannelId(n.id));
+    let t = f.Z.getChannel(E.default.castMessageIdAsChannelId(n.id));
     null != t && (0, c.ok)(t);
 }
 function O(e, n) {

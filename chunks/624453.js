@@ -9,8 +9,8 @@ var i,
     d = t(570140),
     c = t(247206),
     g = t(786761),
-    m = t(706454),
-    f = t(592125),
+    f = t(706454),
+    m = t(592125),
     h = t(271383),
     v = t(430824),
     I = t(375954),
@@ -21,7 +21,7 @@ function Z(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = f.Z.getChannel(e),
+        l = m.Z.getChannel(e),
         r = null != l ? l.getGuildId() : null;
     return {
         id: e,
@@ -42,7 +42,7 @@ function S() {
 }
 class j extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, v.Z, h.ZP, I.Z, p.default, m.default);
+        this.waitFor(m.Z, v.Z, h.ZP, I.Z, p.default, f.default);
     }
     getPinnedMessages(e) {
         var n;

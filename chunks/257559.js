@@ -9,8 +9,8 @@ var i = t(200651),
     d = t(933557),
     c = t(576855),
     g = t(372900),
-    m = t(726521),
-    f = t(294218),
+    f = t(726521),
+    m = t(294218),
     h = t(699516),
     v = t(594174),
     I = t(630388),
@@ -67,7 +67,7 @@ class S extends l.PureComponent {
                         }),
                         (0, i.jsx)('div', {
                             className: Z.message,
-                            children: (0, i.jsx)(f.Z, {
+                            children: (0, i.jsx)(m.Z, {
                                 channel: l,
                                 message: r,
                                 disableInteraction: !0
@@ -86,7 +86,7 @@ class S extends l.PureComponent {
             x(this, 'handleDelete', () => {
                 let { report: e } = this.state,
                     { channel: n, message: t } = this.props;
-                e ? (0, m.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
+                e ? (0, f.ak)(t, 'message_delete_alert', () => u.Z.deleteMessage(n.id, t.id)) : u.Z.deleteMessage(n.id, t.id);
             }),
             x(this, 'handleToggleReport', (e) => {
                 this.setState({ report: e });
@@ -117,7 +117,7 @@ n.Z = {
                             }),
                             (0, i.jsx)('div', {
                                 className: Z.message,
-                                children: (0, i.jsx)(f.Z, {
+                                children: (0, i.jsx)(m.Z, {
                                     channel: e,
                                     message: n,
                                     animateAvatar: !1,
@@ -148,7 +148,7 @@ n.Z = {
                         }),
                         (0, i.jsx)('div', {
                             className: a()(Z.message, Z.spacing),
-                            children: (0, i.jsx)(f.Z, {
+                            children: (0, i.jsx)(m.Z, {
                                 channel: e,
                                 message: n,
                                 disableInteraction: !0
