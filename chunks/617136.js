@@ -43,6 +43,7 @@ function p(e) {
     let t = c.r.build(e.config);
     return {
         quest_id: e.id,
+        quest_type: t.questType,
         game_id: t.application.id,
         game_name: t.application.name
     };

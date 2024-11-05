@@ -1,14 +1,16 @@
 n.d(t, {
     r: function () {
-        return r;
+        return a;
     }
 }),
     n(411104),
     n(47120);
-class r {
+var r = n(319245),
+    i = n(918701);
+class a {
     static build(e) {
         if (2 !== e.configVersion) throw Error('Cannot build SharedQuestFields when [configVersion !== 2]');
-        return new r(e);
+        return new a(e);
     }
     get features() {
         return new Set(this.quest.features);
@@ -36,6 +38,9 @@ class r {
     }
     get rewardPlatforms() {
         return this.quest.rewardsConfig.platforms;
+    }
+    get questType() {
+        return (0, i.cr)({ config: this.quest }) ? r.W.VIDEO : r.W.GAMEPLAY;
     }
     constructor(e) {
         var t, n, r;
