@@ -1,28 +1,35 @@
 n.d(t, {
     O: function () {
-        return l;
+        return c;
     }
 });
 var r = n(442837),
     i = n(675478),
     a = n(581883),
-    s = n(434382);
-async function o(e, t) {
+    s = n(626135),
+    o = n(434382),
+    l = n(981631);
+async function u(e, t) {
     await (0, i.PS)(
         e,
-        (e) => {
-            e.leaderboardsDisabled = !e.leaderboardsDisabled;
+        (n) => {
+            (n.leaderboardsDisabled = !n.leaderboardsDisabled),
+                s.default.track(l.rMx.LEADERBOARD_USER_OPT_OUT_UPDATED, {
+                    leaderboard_id: t,
+                    guild_id: e,
+                    leaderboards_disabled: n.leaderboardsDisabled
+                });
         },
         i.fy.INFREQUENT_USER_ACTION
     ),
         await new Promise((e) => setTimeout(e, 300)),
-        await s.Z.fetchLeaderboard({
+        await o.Z.fetchLeaderboard({
             guildId: e,
             leaderboardId: t,
             force: !0
         });
 }
-function l(e, t) {
+function c(e, t) {
     let n = (0, r.e7)(
         [a.Z],
         () => {
@@ -33,6 +40,6 @@ function l(e, t) {
     );
     return {
         leaderboardsDisabled: (null == n ? void 0 : n.leaderboardsDisabled) === !0,
-        toggleGuildLeaderboardsDisabled: () => o(e, t)
+        toggleGuildLeaderboardsDisabled: () => u(e, t)
     };
 }

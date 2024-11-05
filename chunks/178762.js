@@ -1,12 +1,12 @@
 n.d(t, {
     J: function () {
-        return b;
+        return H;
     },
     YN: function () {
-        return M;
+        return k;
     },
     iZ: function () {
-        return k;
+        return w;
     }
 }),
     n(47120);
@@ -20,30 +20,31 @@ var l = n(200651),
     u = n(481060),
     d = n(239091),
     m = n(607070),
-    x = n(704041),
-    h = n(475676),
-    p = n(439170),
-    C = n(594174),
-    v = n(69259),
-    g = n(370370),
-    f = n(107062),
+    x = n(100527),
+    h = n(704041),
+    p = n(475676),
+    C = n(439170),
+    v = n(594174),
+    g = n(69259),
+    f = n(370370),
+    I = n(107062),
     j = n(91140),
-    I = n(227172),
-    Z = n(551228),
-    P = n(678869),
-    y = n(278399),
-    L = n(886217),
-    T = n(555672),
-    N = n(644548),
-    _ = n(335326),
+    Z = n(227172),
+    P = n(551228),
+    L = n(678869),
+    T = n(278399),
+    y = n(886217),
+    N = n(555672),
+    _ = n(644548),
+    E = n(335326),
     S = n(268010),
-    E = n(797342),
-    A = n(206583);
-let M = 72;
-function k(e) {
-    return (null == e ? void 0 : e.type) === p.so.CONTENT_INVENTORY ? M : 0;
+    A = n(797342),
+    M = n(206583);
+let k = 72;
+function w(e) {
+    return (null == e ? void 0 : e.type) === C.so.CONTENT_INVENTORY ? k : 0;
 }
-let w = (e) => {
+let R = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
@@ -52,32 +53,32 @@ let w = (e) => {
                     entry: t
                 });
             case s.s.WATCHED_MEDIA:
-                return (0, l.jsx)(_.Z, {
+                return (0, l.jsx)(E.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.TOP_GAME:
-                return (0, l.jsx)(T.ZP, {
+                return (0, l.jsx)(N.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(y.ZP, {
+                return (0, l.jsx)(T.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(Z.ZP, {
+                return (0, l.jsx)(P.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(g.Z, {
+                return (0, l.jsx)(f.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.LEADERBOARD:
-                return (0, l.jsx)(h.Z, {
+                return (0, l.jsx)(p.Z, {
                     ...n,
                     entry: t
                 });
@@ -85,9 +86,9 @@ let w = (e) => {
                 return null;
         }
     },
-    R = (e) => {
+    b = (e) => {
         let { closePopout: t, ...n } = e;
-        return (0, l.jsx)(b, {
+        return (0, l.jsx)(H, {
             onReaction: (e, l) => {
                 n.trackRankingItemInteraction(e, {
                     destinationChannelId: l.id,
@@ -97,7 +98,7 @@ let w = (e) => {
             },
             closePopout: t,
             onVoiceChannelPreview: (e) => {
-                n.trackRankingItemInteraction(A.xP.VOICE_CHANNEL_PREVIEWED, {
+                n.trackRankingItemInteraction(M.xP.VOICE_CHANNEL_PREVIEWED, {
                     destinationChannelId: e.id,
                     destinationGuildId: e.guild_id
                 });
@@ -105,11 +106,11 @@ let w = (e) => {
             ...n
         });
     },
-    b = (e) => {
+    H = (e) => {
         let { entry: t, ...n } = e;
         switch (t.content_type) {
             case s.s.PLAYED_GAME:
-                return (0, l.jsx)(I.Z, {
+                return (0, l.jsx)(Z.Z, {
                     ...n,
                     entry: t
                 });
@@ -119,28 +120,33 @@ let w = (e) => {
                     entry: t
                 });
             case s.s.TOP_GAME:
-                return (0, l.jsx)(N.Z, {
+                return (0, l.jsx)(_.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.TOP_ARTIST:
-                return (0, l.jsx)(L.Z, {
+                return (0, l.jsx)(y.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.LISTENED_SESSION:
-                return (0, l.jsx)(P.Z, {
+                return (0, l.jsx)(L.Z, {
                     ...n,
                     entry: t
                 });
             case s.s.LAUNCHED_ACTIVITY:
-                return (0, l.jsx)(f.ZP, {
+                return (0, l.jsx)(I.ZP, {
                     ...n,
                     entry: t
                 });
             case s.s.LEADERBOARD:
                 var a;
-                return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null ? (0, l.jsx)(x.Z, { guildId: n.channel.guild_id }) : null;
+                return (null === (a = n.channel) || void 0 === a ? void 0 : a.guild_id) != null
+                    ? (0, l.jsx)(h.Z, {
+                          guildId: n.channel.guild_id,
+                          source: x.Z.MEMBER_LIST
+                      })
+                    : null;
             default:
                 return null;
         }
@@ -150,28 +156,28 @@ t.ZP = a.memo((e) => {
     let { index: i, ...s } = e,
         [x, h] = a.useState('default'),
         p = (0, o.JA)(''.concat(i)),
-        g = null === (t = C.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
-        { isRich: f, appName: j } = (0, E.n)(s.entry),
-        I = a.useMemo(
+        C = null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff(),
+        { isRich: f, appName: I } = (0, A.n)(s.entry),
+        j = a.useMemo(
             () => ({
                 entry: s.entry,
                 channelId: s.channel.id,
                 guildId: s.channel.guild_id,
                 requestId: s.requestId,
-                richPresenceName: f ? j : void 0
+                richPresenceName: f ? I : void 0
             }),
-            [j, s.channel.guild_id, s.channel.id, s.entry, s.requestId, f]
+            [I, s.channel.guild_id, s.channel.id, s.entry, s.requestId, f]
         ),
         Z = a.useRef(!1),
-        [P, y] = a.useState(!1),
-        [L, T] = a.useState(!1),
+        [P, L] = a.useState(!1),
+        [T, y] = a.useState(!1),
         N = (0, c.e7)([m.Z], () => m.Z.keyboardModeEnabled);
     a.useEffect(() => {
-        P && N && T(!0);
+        P && N && y(!0);
     }, [P, N]);
     let _ = a.useCallback(
             (e) => {
-                if (!!g)
+                if (!!C)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await n.e('153').then(n.bind(n, 330150));
                         return () =>
@@ -181,25 +187,25 @@ t.ZP = a.memo((e) => {
                             });
                     });
             },
-            [s, g]
+            [s, C]
         ),
-        S = a.useCallback(() => {
+        E = a.useCallback(() => {
             h(String(Date.now()));
         }, []),
-        M = a.useCallback(
+        S = a.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                (0, v.L)(e, {
-                    ...I,
+                (0, g.L)(e, {
+                    ...j,
                     ...t
                 });
             },
-            [I]
+            [j]
         ),
         k = a.useCallback(
             r().throttle(
                 (e) => {
-                    (0, v.L)(A.xP.CARD_POPOUT_OPEN, e);
+                    (0, g.L)(M.xP.CARD_POPOUT_OPEN, e);
                 },
                 2000,
                 {
@@ -209,36 +215,36 @@ t.ZP = a.memo((e) => {
             ),
             []
         ),
-        b = () => {
+        w = () => {
             (Z.current = !1),
                 setTimeout(() => {
-                    !Z.current && (y(!1), T(N));
+                    !Z.current && (L(!1), y(N));
                 }, 100);
         };
     return (0, l.jsx)('div', {
         onMouseEnter: () => {
             (Z.current = !0),
                 setTimeout(() => {
-                    Z.current && y(!0), k(I);
+                    Z.current && L(!0), k(j);
                 }, 100);
         },
-        onMouseLeave: b,
+        onMouseLeave: w,
         children: (0, l.jsx)(u.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(R, {
+                return (0, l.jsx)(b, {
                     closePopout: t,
-                    updatePopoutPosition: S,
-                    trackRankingItemInteraction: M,
+                    updatePopoutPosition: E,
+                    trackRankingItemInteraction: S,
                     ...s
                 });
             },
             position: 'left',
             shouldShow: P,
             positionKey: x,
-            onRequestOpen: () => k(I),
+            onRequestOpen: () => k(j),
             onRequestClose: () => {
-                L && b();
+                T && w();
             },
             spacing: 8,
             children: (e, t) => {
@@ -255,10 +261,10 @@ t.ZP = a.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !P && y(!0);
+                        !P && L(!0);
                     },
                     onContextMenu: _,
-                    children: (0, l.jsx)(w, {
+                    children: (0, l.jsx)(R, {
                         ...s,
                         selected: n,
                         hovered: Z.current

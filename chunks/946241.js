@@ -1,40 +1,41 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return d;
     }
 }),
     n(47120);
 var r = n(200651),
     i = n(192379),
     a = n(481060),
-    s = n(873128),
-    o = n(704041),
-    l = n(463031),
-    u = n(383177);
-function c(e) {
+    s = n(100527),
+    o = n(873128),
+    l = n(704041),
+    u = n(463031),
+    c = n(383177);
+function d(e) {
     let { guild: t, message: n } = e,
-        [c, d] = i.useState(!1),
-        f = i.useRef(!1),
-        _ = (0, s.Z)({
+        [d, f] = i.useState(!1),
+        _ = i.useRef(!1),
+        h = (0, o.Z)({
             guildId: t.id,
-            leaderboardId: l._,
+            leaderboardId: u._,
             intervalOffset: 0
         });
     return i.useMemo(() => {
         var e;
-        if ((null == _ ? void 0 : null === (e = _.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
-        let t = _.users[0];
+        if ((null == h ? void 0 : null === (e = h.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
+        let t = h.users[0];
         return n.author.id === (null == t ? void 0 : t.user_id);
-    }, [_, n])
+    }, [h, n])
         ? (0, r.jsx)('div', {
-              className: u.badge,
+              className: c.badge,
               onMouseEnter: () => {
-                  (f.current = !0), d(!0);
+                  (_.current = !0), f(!0);
               },
               onMouseLeave: () => {
-                  (f.current = !1),
+                  (_.current = !1),
                       setTimeout(() => {
-                          !f.current && d(!1);
+                          !_.current && f(!1);
                       }, 100);
               },
               children: (0, r.jsx)(a.Popout, {
@@ -43,11 +44,12 @@ function c(e) {
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
                   position: 'top',
-                  shouldShow: c,
+                  shouldShow: d,
                   renderPopout: () =>
-                      (0, r.jsx)(o.Z, {
+                      (0, r.jsx)(l.Z, {
                           guildId: t.id,
-                          previewMode: !0
+                          previewMode: !0,
+                          source: s.Z.MEMBER_LIST
                       }),
                   children: () =>
                       (0, r.jsx)(a.LeagueOfLegendsBrandIcon, {
