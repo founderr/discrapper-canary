@@ -35,6 +35,12 @@ class R extends (r = u.ZP.Store) {
     isFriend(e) {
         return null != e && g[e] === m.OGo.FRIEND;
     }
+    isBlockedOrIgnored(e) {
+        return this.isBlocked(e) || this.isIgnored(e);
+    }
+    isBlockedOrIgnoredForMessage(e) {
+        return this.isBlockedForMessage(e) || this.isIgnoredForMessage(e);
+    }
     isBlocked(e) {
         return null != e && g[e] === m.OGo.BLOCKED;
     }
