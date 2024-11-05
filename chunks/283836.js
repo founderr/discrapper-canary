@@ -16,21 +16,24 @@ var r = n(192379),
     c = n(238),
     d = n(55563);
 function f(e) {
-    return (
-        r.useEffect(() => {
-            _(e);
-        }, [e]),
-        (0, i.cj)(
+    r.useEffect(() => {
+        _(e);
+    }, [e]);
+    let t = (0, i.Wu)(
             [c.Z, d.Z, u.Z],
             () => {
                 let t = c.Z.getStoreLayout(e);
-                return {
-                    subscriptions: (0, l.Ej)(t.subscriptions, d.Z, u.Z),
-                    otps: t.otps
-                };
+                return (0, l.Ej)(t.subscriptions, d.Z, u.Z);
             },
             [e]
-        )
+        ),
+        n = (0, i.Wu)([c.Z], () => c.Z.getStoreLayout(e).otps, [e]);
+    return r.useMemo(
+        () => ({
+            subscriptions: t,
+            otps: n
+        }),
+        [t, n]
     );
 }
 function _(e) {

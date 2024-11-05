@@ -11,17 +11,8 @@ var l = t(192379),
     o = t(509545);
 function a(n) {
     let [e, t] = l.useState(!1),
-        { plans: a, isFetching: s } = (0, i.cj)(
-            [o.Z],
-            () => {
-                let e = o.Z.getForSKU(n);
-                return {
-                    plans: e,
-                    isFetching: o.Z.isFetchingForSKU(n)
-                };
-            },
-            [n]
-        );
+        a = (0, i.Wu)([o.Z], () => o.Z.getForSKU(n), [n]),
+        s = (0, i.e7)([o.Z], () => o.Z.isFetchingForSKU(n), [n]);
     return (
         l.useEffect(() => {
             !s &&
