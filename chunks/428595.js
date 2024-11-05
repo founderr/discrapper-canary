@@ -5,7 +5,7 @@ var r = n(392711),
     s = n.n(a),
     o = n(797610),
     l = n(633302),
-    u = n(763296),
+    u = n(11637),
     c = n(592125),
     d = n(430824),
     f = n(594174),
@@ -303,20 +303,8 @@ let P = (e) => {
         soundboard: {
             order: S.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => /^<sound:(\d+)>/.exec(e),
-            parse(e, t, n) {
-                var r;
-                let i = e[1],
-                    a = u.Z.getSoundById(i),
-                    s = null !== (r = null == a ? void 0 : a.name) && void 0 !== r ? r : i;
-                return {
-                    type: 'soundboard',
-                    id: i,
-                    soundId: i,
-                    channelId: n.channelId,
-                    content: s
-                };
-            }
+            match: (e) => u.hf.exec(e),
+            parse: (e, t, n) => (0, u.ZP)(e, n)
         },
         customEmoji: {
             order: S.ZP.order,

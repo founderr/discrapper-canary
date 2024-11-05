@@ -59,6 +59,7 @@ function o(e) {
         case 'soundboard':
             return {
                 type: 'soundboard',
+                guildId: e.guildId,
                 soundId: e.soundId
             };
         case 'roleMention':

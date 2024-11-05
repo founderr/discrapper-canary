@@ -303,12 +303,23 @@ function x(e, t, n, r, a) {
                 });
             throw Error('Slate: Unable to find emoji: '.concat(l[0], ' in ').concat(t, ' at ').concat(r));
         }
+        case 'soundboard':
+            return P({
+                result: e,
+                sourceText: t,
+                text: l[0],
+                originalStart: r,
+                attributes: [o],
+                data: {
+                    guildId: n.guildId,
+                    soundId: n.soundId
+                }
+            });
         case 'mention':
         case 'roleMention':
         case 'channelMention':
         case 'commandMention':
         case 'silentPrefix':
-        case 'soundboard':
         case 'channel': {
             let { text: a, id: s } = n;
             if (null != a)

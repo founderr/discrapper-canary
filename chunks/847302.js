@@ -247,7 +247,8 @@ function S(e, t, n, r) {
             case 'soundboard':
                 l = {
                     type: 'soundboard',
-                    soundId: c.data.id,
+                    guildId: c.data.guildId,
+                    soundId: c.data.soundId,
                     children: [{ text: '' }]
                 };
                 break;

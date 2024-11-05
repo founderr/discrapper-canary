@@ -157,6 +157,7 @@ let U = {
         react: (e) =>
             (0, r.jsx)(v.ZP, {
                 channelId: e.channelId,
+                messageId: e.messageId,
                 soundId: e.soundId,
                 jumbo: e.jumboable
             })
