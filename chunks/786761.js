@@ -78,6 +78,7 @@ function T(e) {
             author: w,
             webhookId: e.webhook_id,
             blocked: _.Z.isBlockedForMessage(e) || (null != U && _.Z.isBlocked(U)),
+            ignored: _.Z.isIgnoredForMessage(e) || (null != U && _.Z.isIgnored(U)),
             mentionEveryone: e.mention_everyone,
             mentions: C,
             mentionRoles: D,
