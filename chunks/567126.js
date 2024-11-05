@@ -70,7 +70,18 @@ async function O() {
         n = U(),
         l = await n,
         i = await t,
-        r = i.filter((e) => e.id.startsWith(d.vA.SCREEN)),
+        r = i
+            .filter((e) => e.id.startsWith(d.vA.SCREEN))
+            .map((e) => {
+                let t = e.name;
+                return (
+                    'Entire screen' === t ? (t = G.intl.string(G.t.R4wpLC)) : /^Screen \d+$/.test(t) && (t = G.intl.formatToPlainString(G.t['y/R7n5'], { index: parseInt(t.split(' ')[1]) })),
+                    {
+                        ...e,
+                        name: t
+                    }
+                );
+            }),
         s = (function (e, t) {
             let n = {};
             return (
