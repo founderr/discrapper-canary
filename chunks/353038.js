@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Z: function () {
-        return b;
+        return y;
     }
 }),
     n(47120),
@@ -116,7 +116,7 @@ function I(e) {
     let { computedSize: t } = e;
     return t;
 }
-class b extends (o = s.Component) {
+class y extends (o = s.Component) {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
     }
@@ -522,4 +522,4 @@ class b extends (o = s.Component) {
             (this.size = _(e.size, e.minSize.width, e.minSize.height));
     }
 }
-v(b, 'Operations', i);
+v(y, 'Operations', i);

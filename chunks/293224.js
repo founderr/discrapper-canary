@@ -43,8 +43,8 @@ var i = n(200651),
     x = n(628581),
     Z = n(659580),
     I = n(793865),
-    b = n(55311),
-    y = n(575175),
+    y = n(55311),
+    b = n(575175),
     N = n(933557),
     O = n(471445),
     T = n(74299),
@@ -152,7 +152,7 @@ function ei(e) {
                 }),
                 tooltip: u,
                 isToggled: !a,
-                onClick: () => (0, y.Z)(s, r, q.jXE.OVERLAY),
+                onClick: () => (0, b.Z)(s, r, q.jXE.OVERLAY),
                 onCutoutClick: n,
                 onContextMenu: n,
                 onMouseEnter: () => {
@@ -195,7 +195,7 @@ function eo(e) {
             tooltip: (0, S.Z)(r, l, !1),
             isToggled: s,
             onClick: () => {
-                (0, b.Z)(l, q.jXE.OVERLAY);
+                (0, y.Z)(l, q.jXE.OVERLAY);
             },
             onCutoutClick: (e) => {
                 (0, v.jW)(e, async () => {
@@ -247,7 +247,7 @@ function er(e) {
                 : void 0;
     o.useEffect(() => () => _(), [l, _]);
     let Z = et(r),
-        b = null == n || !d;
+        y = null == n || !d;
     return (0, i.jsx)(p.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -271,7 +271,7 @@ function er(e) {
                 onContextMenu: n,
                 onMouseEnter: C,
                 onMouseLeave: S,
-                cutoutIcon: b
+                cutoutIcon: y
                     ? null
                     : o
                       ? (0, i.jsx)(p.ChevronSmallUpIcon, {
@@ -282,7 +282,7 @@ function er(e) {
                             color: 'currentColor',
                             size: 'sm'
                         }),
-                disabled: b
+                disabled: y
             });
         }
     });
@@ -327,7 +327,7 @@ function el(e) {
             play: I
         } = (0, d.P)(_ ? 'disable' : 'enable');
     o.useEffect(() => () => I(), [_, I]);
-    let b = et(l);
+    let y = et(l);
     return (0, i.jsx)(p.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
@@ -337,7 +337,7 @@ function el(e) {
                       currentUser: u,
                       activeStreams: null != f ? [f] : [],
                       handleGoLive: g,
-                      onClose: b(t),
+                      onClose: y(t),
                       appContext: m
                   })
                 : (0, i.jsx)(i.Fragment, {});

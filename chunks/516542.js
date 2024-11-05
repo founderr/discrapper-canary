@@ -23,9 +23,9 @@ function v(e) {
         { placeholder: E, accessibilityLabel: _ } = (0, s.Z)(n),
         [C, S] = o.useState(() => (0, u.H2)()),
         { textValue: x, richValue: Z } = C,
-        [I, b] = o.useState(!1),
-        y = o.useCallback(() => b(!0), []),
-        N = o.useCallback(() => b(!1), []),
+        [I, y] = o.useState(!1),
+        b = o.useCallback(() => y(!0), []),
+        N = o.useCallback(() => y(!1), []),
         O = o.useCallback((e, t, n) => {
             S({
                 textValue: t,
@@ -59,7 +59,7 @@ function v(e) {
         richValue: Z,
         type: a.I.OVERLAY_INLINE_REPLY,
         onBlur: N,
-        onFocus: y,
+        onFocus: b,
         focused: I,
         onSubmit: T,
         autoCompletePosition: 'bottom',

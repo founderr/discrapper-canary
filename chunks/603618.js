@@ -29,8 +29,8 @@ var i = n(200651),
     x = n(592125),
     Z = n(158776),
     I = n(594174),
-    b = n(5192),
-    y = n(358085),
+    y = n(5192),
+    b = n(358085),
     N = n(998502),
     O = n(388627),
     T = n(981631),
@@ -88,9 +88,9 @@ function k(e) {
             if (null == c) return;
             let t = await d.Z.getOrEnsurePrivateChannel(c.id),
                 n = null !== (e = x.Z.getChannel(t)) && void 0 !== e ? e : null;
-            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), y.isPlatformEmbedded ? N.ZP.focus() : window.focus();
+            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), b.isPlatformEmbedded ? N.ZP.focus() : window.focus();
         },
-        b = C ? L.intl.string(L.t['3fRyS0']) : L.intl.string(L.t.y9eo7e),
+        y = C ? L.intl.string(L.t['3fRyS0']) : L.intl.string(L.t.y9eo7e),
         O = C
             ? (0, i.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
@@ -101,8 +101,8 @@ function k(e) {
                   size: 'sm'
               });
     return (0, i.jsx)(a.Tooltip, {
-        text: b,
-        'aria-label': b,
+        text: y,
+        'aria-label': y,
         children: (e) =>
             (0, i.jsx)(a.Button, {
                 ...e,
@@ -217,7 +217,7 @@ function R(e) {
                                       className: A.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: b.ZP.getName(void 0, void 0, r)
+                                      children: y.ZP.getName(void 0, void 0, r)
                                   }),
                                   null != l && (0, i.jsx)(m.ZP, {})
                               ]

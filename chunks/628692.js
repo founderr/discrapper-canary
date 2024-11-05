@@ -19,7 +19,7 @@ var r = n(200651),
     p = n(747071),
     m = n(409673),
     g = n(592125),
-    E = n(689938),
+    E = n(388032),
     v = n(42693);
 function I(e) {
     let { playSound: t } = e;
@@ -42,7 +42,7 @@ function S(e) {
     let { soundId: t, playSound: n } = e,
         i = (0, o.e7)([_.Z], () => _.Z.getSoundById(t)),
         a = (null == i ? void 0 : i.emojiId) != null || (null == i ? void 0 : i.emojiName) != null,
-        c = E.Z.Messages.SOUNDBOARD_PLAY_SOUND.format({
+        c = E.intl.formatToPlainString(E.t.tuMUJy, {
             emojiName: null == i ? void 0 : i.emojiName,
             soundName: null == i ? void 0 : i.name
         });

@@ -1,6 +1,6 @@
 n.d(t, {
     i0: function () {
-        return S;
+        return h;
     },
     yD: function () {
         return _;
@@ -47,7 +47,7 @@ let x = (e) => {
             children: v.intl.string(v.t.lwQdjI)
         });
     },
-    h = (e) => {
+    S = (e) => {
         let { quest: t } = e;
         return (0, r.jsx)(l.Button, {
             fullWidth: !0,
@@ -64,7 +64,7 @@ let x = (e) => {
             children: v.intl.string(v.t.csptqa)
         });
     },
-    S = (e) => {
+    h = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: o, className: a, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
                 quest: t,
@@ -88,7 +88,7 @@ let x = (e) => {
             C = (0, u.P)({ location: f.dr.QUESTS_BAR }),
             E = (0, c.cr)(n);
         if (v)
-            return (0, r.jsx)(S, {
+            return (0, r.jsx)(h, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: i
@@ -98,7 +98,7 @@ let x = (e) => {
                 quest: n,
                 taskDetails: p
             });
-        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(h, { quest: n });
+        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(S, { quest: n });
         else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };

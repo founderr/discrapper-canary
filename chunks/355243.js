@@ -20,13 +20,13 @@ function p(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function f(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: h, onScrubForward: S } = e,
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: S, onScrubForward: h } = e,
         [E, _] = o.useState(null),
         [T, b] = o.useState(null),
-        [j, N] = o.useState(null),
+        [N, j] = o.useState(null),
         [I, y] = o.useState(!1);
     o.useEffect(() => {
-        if (null != E) null == g ? N(null) : N(p(g, C, E));
+        if (null != E) null == g ? j(null) : j(p(g, C, E));
     }, [E, g, C]);
     let k = (0, s.y)(() => {
             if (null != k.current) _(k.current.getBoundingClientRect());
@@ -37,15 +37,15 @@ function f(e) {
         D = o.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === u.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === u.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
+                t === u.mR.ArrowLeft && null != S ? (e.preventDefault(), e.stopPropagation(), S()) : t === u.mR.ArrowRight && null != h && (e.preventDefault(), e.stopPropagation(), h());
             },
-            [h, S]
+            [S, h]
         ),
         A = null != T && null != E ? m(T, E, C) : 0,
         L = (0, c.yv)(A),
         P = null != E ? E.right - p((t / 100) * C, C, E) : null,
         M = null != T && null != E ? E.right - T : null,
-        R = null != j && null != E ? E.right - j : null;
+        R = null != N && null != E ? E.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: k,

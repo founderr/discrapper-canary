@@ -19,8 +19,8 @@ t.Z = o.memo(function (e) {
         x = (0, r.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
         Z = (0, m.Z)(),
         I = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(Z))),
-        b = (0, m.Z)(),
-        y = o.useCallback((e, t, n, i, o) => {
+        y = (0, m.Z)(),
+        b = o.useCallback((e, t, n, i, o) => {
             let r = c.Z.windowSize((0, f.ZY)((0, m.i)())),
                 u = (0, d.jL)(n, r),
                 h = (0, d.Ox)(i, r);
@@ -100,9 +100,9 @@ t.Z = o.memo(function (e) {
         style: { zIndex: L },
         dragAnywhere: D,
         active: !x,
-        onUpdate: y,
+        onUpdate: b,
         onClick: N,
-        targetWindow: b,
+        targetWindow: y,
         renderExtras: W,
         resizeValidation: B,
         children: V

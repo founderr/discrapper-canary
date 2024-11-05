@@ -25,8 +25,8 @@ var i = n(200651),
     x = n(430824),
     Z = n(131951),
     I = n(944486),
-    b = n(574254),
-    y = n(556296),
+    y = n(574254),
+    b = n(556296),
     N = n(237997),
     O = n(451478),
     T = n(585483),
@@ -116,7 +116,7 @@ let J = o.memo(function (e) {
         );
     });
 function ee() {
-    if (null != b.Z.getContextMenu()) {
+    if (null != y.Z.getContextMenu()) {
         (0, c.Zy)();
         return;
     }
@@ -141,10 +141,10 @@ function eo() {
             incompatibleApp: v,
             hasValidResolution: g,
             hasZeroSizeDimension: E,
-            keybind: b
-        } = (0, s.cj)([N.Z, O.Z, y.Z], () => {
+            keybind: y
+        } = (0, s.cj)([N.Z, O.Z, b.Z], () => {
             let e = O.Z.windowSize((0, w.ZY)(n)),
-                t = y.Z.getOverlayKeybind();
+                t = b.Z.getOverlayKeybind();
             return {
                 locked: N.Z.isLocked((0, k.QF)()),
                 focused: N.Z.isFocused((0, k.QF)()),
@@ -256,7 +256,7 @@ function eo() {
                                   Y,
                                   (0, i.jsx)(J, {
                                       locked: r,
-                                      keybind: b,
+                                      keybind: y,
                                       onClick: ee
                                   }),
                                   g

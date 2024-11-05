@@ -21,8 +21,8 @@ var i = n(481060),
     x = n(807092),
     Z = n(467798),
     I = n(703558),
-    b = n(117530),
-    y = n(630388),
+    y = n(117530),
+    b = n(630388),
     N = n(226351),
     O = n(981631),
     T = n(388032);
@@ -42,7 +42,7 @@ async function L(e) {
         };
     null != k && (z.content = null == k ? void 0 : k.content), null != x.Z.getPendingReply(h) && ((z.type = O.uaV.REPLY), (z.message_reference = w.messageReference), (z.allowed_mentions = w.allowedMentions), (0, S.A6)(h));
     let [D, P] = (0, Z.Z)(z.content);
-    D && ((z.content = P), (z.flags = (0, y.pj)(null !== (t = z.flags) && void 0 !== t ? t : 0, O.iLy.SUPPRESS_NOTIFICATIONS)));
+    D && ((z.content = P), (z.flags = (0, b.pj)(null !== (t = z.flags) && void 0 !== t ? t : 0, O.iLy.SUPPRESS_NOTIFICATIONS)));
     let U = null !== (n = w.nonce) && void 0 !== n ? n : (0, E.r)(),
         V = (0, g.ZP)({
             channelId: h,
@@ -134,7 +134,7 @@ async function L(e) {
                     });
                 }
                 '' !== z.content && '' === I.Z.getDraft(h, A) && r.Z.saveDraft(h, z.content, A),
-                    0 === b.Z.getUploadCount(h, A) &&
+                    0 === y.Z.getUploadCount(h, A) &&
                         s.Z.setUploads({
                             channelId: h,
                             uploads: L,

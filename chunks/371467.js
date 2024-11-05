@@ -21,8 +21,8 @@ var i,
     x = n(375954),
     Z = n(292959),
     I = n(158776),
-    b = n(885110),
-    y = n(246946),
+    y = n(885110),
+    b = n(246946),
     N = n(594174),
     O = n(974180),
     T = n(237997),
@@ -135,7 +135,7 @@ function er(e) {
     if (!n.includes(C.default.getId())) return et(i);
     if (null != i) return !1;
     let o = S.Z.getChannel(t);
-    if (null == o || !o.isPrivate() || b.Z.getStatus() === H.Skl.DND || _.QZ.getSetting()) return !1;
+    if (null == o || !o.isPrivate() || y.Z.getStatus() === H.Skl.DND || _.QZ.getSetting()) return !1;
     let r = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === H.uaV.CALL);
     null != r && et(r.id),
         eo((0, P.Z)(o), {
@@ -217,7 +217,7 @@ let es = new el(m.Z, {
                         o = (0, j.Z)(e, t, n, r, i);
                         break;
                     case H.mFx.JOIN_REQUEST:
-                        if (null == (i = b.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        if (null == (i = y.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                         o = (0, V.Z)(e, n, r, i);
                 }
                 return (
@@ -233,7 +233,7 @@ let es = new el(m.Z, {
             })(s, l, a);
             if (!1 !== e) return e;
         }
-        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || y.Z.disableNotifications || !(0, A.eF)(l, r)) return !1;
+        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, A.eF)(l, r)) return !1;
         let u = !Z.Z.isSoundDisabled(O.Ay),
             c = null !== (o = x.Z.getMessage(r, l.id)) && void 0 !== o ? o : (0, E.e5)(l);
         eo((0, W.Z)(s, c, a, u), {

@@ -26,8 +26,8 @@ var i = n(200651),
     x = n(199902),
     Z = n(314897),
     I = n(592125),
-    b = n(355863),
-    y = n(131951),
+    y = n(355863),
+    b = n(131951),
     N = n(944486),
     O = n(938475),
     T = n(237997),
@@ -63,9 +63,9 @@ function D(e) {
     });
 }
 function P(e) {
-    let { channel: t, flipped: n = !1, locked: r = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = j.ipw.LARGE, onClick: v, onContextMenu: E, context: _, guildId: C, voiceState: I, showStreamPreview: b, onShowStreamPreview: N, onWatchStream: O } = e,
+    let { channel: t, flipped: n = !1, locked: r = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = j.ipw.LARGE, onClick: v, onContextMenu: E, context: _, guildId: C, voiceState: I, showStreamPreview: y, onShowStreamPreview: N, onWatchStream: O } = e,
         T = (0, s.e7)([Z.default], () => Z.default.getId() === u.id, [u.id]),
-        [L, A, k] = (0, s.Wu)([y.Z], () => (T ? [!y.Z.isSupported() || y.Z.isSelfMute() || y.Z.isSelfMutedTemporarily(), y.Z.isSelfDeaf(), !1] : [!y.Z.isSupported() || y.Z.isLocalMute(u.id), !1, y.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
+        [L, A, k] = (0, s.Wu)([b.Z], () => (T ? [!b.Z.isSupported() || b.Z.isSelfMute() || b.Z.isSelfMutedTemporarily(), b.Z.isSelfDeaf(), !1] : [!b.Z.isSupported() || b.Z.isLocalMute(u.id), !1, b.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
         w = (0, s.e7)([x.Z], () => x.Z.getCurrentUserActiveStream()),
         R = (0, s.Wu)([x.Z], () => (null != w ? x.Z.getViewerIds(w) : [])),
         M = (0, f.Z)({
@@ -90,10 +90,10 @@ function P(e) {
                             O();
                     },
                     onAction: O,
-                    previewIsOpen: b,
+                    previewIsOpen: y,
                     location: j.Sbl.UNLOCKED_OVERLAY
                 }),
-            [u, t, P, b, W, O]
+            [u, t, P, y, W, O]
         );
     if (p === j.OYC.ONLY_WHILE_SPEAKING && r && !M) return null;
     let { mute: F, suppress: H, deaf: G } = I,
@@ -126,7 +126,7 @@ function P(e) {
                 : (0, i.jsx)(a.Popout, {
                       position: 'right',
                       renderPopout: B,
-                      shouldShow: b,
+                      shouldShow: y,
                       onRequestClose: W,
                       spacing: 0,
                       children: () =>
@@ -178,8 +178,8 @@ function U(e) {
         S = s.length > 0 && null != r && null != l && (!f || p),
         x = o.useCallback(() => {
             var e, n;
-            let i = null === (e = b.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
-                o = null != i ? (null === (n = b.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === j.Odu.GO_LIVE)) : null;
+            let i = null === (e = y.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
+                o = null != i ? (null === (n = y.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === j.Odu.GO_LIVE)) : null;
             null != o &&
                 !o.pinned &&
                 ((0, c.xh)(o.id),

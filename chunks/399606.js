@@ -37,12 +37,12 @@ function l(e, t, n) {
         let e = t();
         (null == u || !o(u, e)) && (u = e);
     }
-    (0, r.useLayoutEffect)(() => {
+    (0, r.useInsertionEffect)(() => {
         (l.getStateFromStores = t), (l.prevDeps = n), (l.state = u);
     });
     let [, c] = (0, r.useState)(null);
     return (
-        (0, r.useLayoutEffect)(() => {
+        (0, r.useInsertionEffect)(() => {
             let t = () => {
                 let e = l.getStateFromStores();
                 !o(l.state, e) && ((l.state = e), c({}));

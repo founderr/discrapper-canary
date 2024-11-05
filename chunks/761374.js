@@ -26,7 +26,7 @@ function E(e) {
     var t;
     let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: x, horizontal: Z } = e,
         I = 2 * C + 2 * S;
-    let { width: b, height: y } = {
+    let { width: y, height: b } = {
             width: 'number' == typeof (t = E).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
@@ -82,11 +82,11 @@ function E(e) {
                     tileWidth: u
                 }
             );
-        })(!1, k, b - I, y - I, R),
+        })(!1, k, y - I, b - I, R),
         M = {
             id: n,
-            width: b,
-            height: y,
+            width: y,
+            height: b,
             sizeOffset: I,
             layout: R,
             padding: C,

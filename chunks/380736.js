@@ -33,9 +33,9 @@ function E(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let _ = o.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: g, cancelText: _, confirmText: C, icon: S, body: x, title: Z, renderFooter: I, contentOpacity: b, status: y, containerRef: N } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: g, cancelText: _, confirmText: C, icon: S, body: x, title: Z, renderFooter: I, contentOpacity: y, status: b, containerRef: N } = e,
         [O, T] = o.useState(!1),
-        L = n || O || y === p._1z.FOCUSED;
+        L = n || O || b === p._1z.FOCUSED;
     o.useEffect(() => {
         null == r || r();
     }, [r]);
@@ -81,7 +81,7 @@ let _ = o.memo(function (e) {
                             children: [
                                 (0, i.jsxs)(s.animated.div, {
                                     className: v.iconAndDetails,
-                                    style: { opacity: b },
+                                    style: { opacity: y },
                                     children: [
                                         null == S
                                             ? null
@@ -221,13 +221,13 @@ function S(e) {
             },
             [m, a]
         ),
-        b = o.useCallback(
+        y = o.useCallback(
             (e) => {
                 null == g || g(e, a);
             },
             [g, a]
         ),
-        y = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
+        b = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
             props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: L, onConfirmClick: A, onCancelClick: k, ...w },
             status: R
@@ -249,8 +249,8 @@ function S(e) {
                 onDismissClick: x,
                 onNotificationClick: null != p ? Z : void 0,
                 onConfirmClick: null != m ? I : void 0,
-                onCancelClick: null != g ? b : void 0,
-                renderFooter: y,
+                onCancelClick: null != g ? y : void 0,
+                renderFooter: b,
                 expand: !1,
                 index: n,
                 locked: r,

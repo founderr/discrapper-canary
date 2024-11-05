@@ -106,8 +106,8 @@ function Z(e) {
         },
         I = o.useRef(Z);
     return (
-        o.useEffect(() => void (I.current = Z)),
-        o.useEffect(() => {
+        o.useLayoutEffect(() => void (I.current = Z)),
+        o.useLayoutEffect(() => {
             let { size: e, id: t, containerWidth: n, containerHeight: i } = I.current;
             ((a && e.height > e.width) || (!a && e.width > e.height)) &&
                 (0, u.nv)({
