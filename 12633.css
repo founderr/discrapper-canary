@@ -33519,7 +33519,7 @@ div.popoutCloseButton_d523a2:hover {
     position: absolute;
     height: 9px;
     width: 50%;
-    background: hsl(NaN calc(1 * 0%) 100.0%);
+    background: #fff;
     opacity: 1;
     transform: rotate(0);
     transition: .25s ease-in-out
@@ -33527,7 +33527,7 @@ div.popoutCloseButton_d523a2:hover {
 
 @supports(color:rgba(0, 0, 0, 0))and (top:var(--f)) {
     .btnHamburger_a3ca40 span {
-        background: hsl(NaN calc(var(--saturation-factor, 1) * 0%) 100.0%)
+        background: hsl(0 calc(0%*var(--saturation-factor, 1))100%)
     }
 }
 
@@ -33557,22 +33557,22 @@ div.popoutCloseButton_d523a2:hover {
 }
 
 .theme-dark .btnHamburger_a3ca40 span {
-    background: hsl(NaN calc(1 * 0%) 100.0%)
+    background: #fff
 }
 
 @supports(color:rgba(0, 0, 0, 0))and (top:var(--f)) {
     .theme-dark .btnHamburger_a3ca40 span {
-        background: hsl(NaN calc(var(--saturation-factor, 1) * 0%) 100.0%)
+        background: hsl(0 calc(0%*var(--saturation-factor, 1))100%)
     }
 }
 
 .theme-light .btnHamburger_a3ca40 span {
-    background: hsl(NaN calc(1 * 0%) 0.0%)
+    background: #000
 }
 
 @supports(color:rgba(0, 0, 0, 0))and (top:var(--f)) {
     .theme-light .btnHamburger_a3ca40 span {
-        background: hsl(NaN calc(var(--saturation-factor, 1) * 0%) 0.0%)
+        background: hsl(0 calc(0%*var(--saturation-factor, 1))0%)
     }
 }
 
