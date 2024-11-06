@@ -21,18 +21,18 @@ var i,
     S = n(850258);
 ((r = i || (i = {})).ABOUT = 'about'), (r.STORE = 'store');
 t.Z = function (e) {
-    let { applicationId: t, onScroll: n } = e,
-        i = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
-        r = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
+    let { applicationId: t, onScroll: n, onOpenCategorySearch: i, onCloseAppDetails: r } = e,
+        N = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
+        T = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
     a.useEffect(() => {
-        null != t && null == i && o.i6(t);
-    }, [t, i]);
-    let N = null == i ? void 0 : i.storefront_available,
-        [T, x] = a.useState('about');
+        null != t && null == N && o.i6(t);
+    }, [t, N]);
+    let x = null == N ? void 0 : N.storefront_available,
+        [A, b] = a.useState('about');
     a.useEffect(() => {
-        (null == i ? void 0 : i.storefront_available) && null != t && (0, u.Z)(t);
-    }, [null == i ? void 0 : i.storefront_available, t]);
-    let A = a.useMemo(
+        (null == N ? void 0 : N.storefront_available) && null != t && (0, u.Z)(t);
+    }, [null == N ? void 0 : N.storefront_available, t]);
+    let Z = a.useMemo(
             () => [
                 {
                     id: 'about',
@@ -45,17 +45,23 @@ t.Z = function (e) {
             ],
             []
         ),
-        b = a.useMemo(() => {
-            if (null == i) return null;
-            switch (T) {
+        y = a.useMemo(() => {
+            if (null == N) return null;
+            switch (A) {
                 case 'about':
-                    return (0, l.jsx)(f.Z, { application: i });
+                    return (0, l.jsx)(f.Z, { application: N });
                 case 'store':
-                    return (0, l.jsx)(C.Z, { application: i });
+                    return (0, l.jsx)(C.Z, { application: N });
             }
-        }, [T, i]);
-    if (null == i)
-        return r === c.M.FETCHING
+        }, [A, N]),
+        L = a.useCallback(
+            (e) => {
+                r(), null == i || i('', e);
+            },
+            [r, i]
+        );
+    if (null == N)
+        return T === c.M.FETCHING
             ? (0, l.jsx)('div', {
                   className: S.centerContainer,
                   children: (0, l.jsx)(d.Z, { loading: !0 })
@@ -64,37 +70,38 @@ t.Z = function (e) {
                   className: S.centerContainer,
                   children: (0, l.jsx)(g.Z, { className: S.error })
               });
-    let Z = 'about' === T;
+    let R = 'about' === A;
     return (0, l.jsx)(p.Z, {
         onScroll: n,
         children: (0, l.jsx)(h.Z, {
             children: (0, l.jsxs)('div', {
                 className: S.detailContainer,
                 children: [
-                    (0, l.jsx)(_.Z, { application: i }),
+                    (0, l.jsx)(_.Z, { application: N }),
                     (0, l.jsxs)('div', {
                         className: S.contentContainer,
                         children: [
                             (0, l.jsxs)('div', {
                                 className: S.contentTabsContainer,
                                 children: [
-                                    N &&
+                                    x &&
                                         (0, l.jsx)('div', {
                                             className: S.contentTabs,
                                             children: (0, l.jsx)(m.Z, {
-                                                tabs: A,
-                                                onTabSelect: x,
-                                                selectedTab: T
+                                                tabs: Z,
+                                                onTabSelect: b,
+                                                selectedTab: A
                                             })
                                         }),
-                                    b,
-                                    (0, l.jsx)(I.Z, { application: i })
+                                    y,
+                                    (0, l.jsx)(I.Z, { application: N })
                                 ]
                             }),
-                            Z &&
+                            R &&
                                 (0, l.jsx)(E.Z, {
                                     className: S.sidebar,
-                                    application: i
+                                    application: N,
+                                    onSelectCategory: L
                                 })
                         ]
                     })

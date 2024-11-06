@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(209173),
-    l = n(288385),
+    l = n(209173),
+    a = n(288385),
     s = n(442837),
     o = n(481060),
     c = n(110924),
@@ -25,35 +25,35 @@ var i = n(200651),
     v = n(463051);
 function S(e) {
     var t;
-    let { query: n, onSelectApplication: S } = e,
-        [N, T] = r.useState(void 0),
-        [x, b] = r.useState(1),
-        [A, Z] = r.useState(!0),
-        y = r.useRef(A),
-        [L, R] = r.useState(0),
-        P = r.useRef(null),
-        { fetchState: O, searchResults: j } = (0, s.cj)([m.Z], () => ({
+    let { query: n, initialCategoryId: S, onSelectApplication: N } = e,
+        [T, x] = r.useState(S),
+        [A, b] = r.useState(1),
+        [Z, y] = r.useState(!0),
+        L = r.useRef(Z),
+        [R, j] = r.useState(0),
+        O = r.useRef(null),
+        { fetchState: P, searchResults: D } = (0, s.cj)([m.Z], () => ({
             fetchState: m.Z.getFetchState({
                 query: n,
-                categoryId: N,
-                page: x,
+                categoryId: T,
+                page: A,
                 pageSize: C.IV,
-                source: l.F.APP_DIRECTORY
+                source: a.F.APP_DIRECTORY
             }),
             searchResults: m.Z.getSearchResults({
                 query: n,
-                categoryId: N,
-                page: x,
+                categoryId: T,
+                page: A,
                 pageSize: C.IV,
-                source: l.F.APP_DIRECTORY
+                source: a.F.APP_DIRECTORY
             })
         })),
-        D = (0, s.cj)([m.Z], () => {
+        M = (0, s.cj)([m.Z], () => {
             let e = m.Z.getSearchResults({
                 query: n,
                 page: 1,
                 pageSize: C.IV,
-                source: l.F.APP_DIRECTORY
+                source: a.F.APP_DIRECTORY
             });
             return null != e
                 ? {
@@ -62,45 +62,46 @@ function S(e) {
                   }
                 : {};
         }),
-        M = (0, c.Z)(j),
-        w = r.useMemo(() => (O === h.M.FETCHING ? M : j), [O, M, j]);
+        w = (0, c.Z)(D),
+        k = r.useMemo(() => (P === h.M.FETCHING ? w : D), [P, w, D]);
     r.useEffect(() => {
-        T(void 0), b(1);
+        b(1);
     }, [n]);
-    let k = r.useCallback(
+    let U = r.useCallback(
             (e) => {
                 u.yC({
                     query: n,
                     options: {
                         page: e,
                         pageSize: C.IV,
-                        source: l.F.APP_DIRECTORY,
-                        categoryId: N
+                        source: a.F.APP_DIRECTORY,
+                        categoryId: T
                     }
                 }),
                     b(e);
             },
-            [n, N]
+            [n, T]
         ),
-        U = (0, d.y)((e) => {
+        G = (0, d.y)((e) => {
             var t;
             let n = null == e ? void 0 : e.getBoundingClientRect();
             if (null == n) return;
             let i = n.width;
-            i < 1024 && y.current ? ((y.current = !1), Z(!1)) : i > 1024 && !y.current && ((y.current = !0), Z(!0));
-            let r = null === (t = P.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
-            null != r && R(r.width);
+            i < 1024 && L.current ? ((L.current = !1), y(!1)) : i > 1024 && !L.current && ((L.current = !0), y(!0));
+            let r = null === (t = O.current) || void 0 === t ? void 0 : t.getBoundingClientRect();
+            null != r && j(r.width);
         }),
-        G = r.useCallback(
+        B = r.useCallback(
             (e) => {
                 b(1),
-                    T(e),
+                    x(e),
                     u.yC({
                         query: n,
                         options: {
                             page: 1,
-                            source: l.F.APP_DIRECTORY,
-                            categoryId: e
+                            source: a.F.APP_DIRECTORY,
+                            categoryId: e,
+                            pageSize: C.IV
                         }
                     });
             },
@@ -112,23 +113,23 @@ function S(e) {
                 children: (0, i.jsxs)(f.Z, {
                     children: [
                         (0, i.jsx)(g.Z, {
-                            loading: O === h.M.FETCHING,
+                            loading: P === h.M.FETCHING,
                             children: (0, i.jsx)('div', {
-                                ref: U,
+                                ref: G,
                                 children: (0, i.jsx)('div', {
                                     className: v.content,
-                                    style: { paddingRight: A ? L + 32 : void 0 },
+                                    style: { paddingRight: Z ? R + 32 : void 0 },
                                     children:
-                                        null == w
+                                        null == k
                                             ? void 0
-                                            : w.results.map((e) => {
-                                                  if (e.type === a.s.APPLICATION) {
+                                            : k.results.map((e) => {
+                                                  if (e.type === l.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
                                                           E.Z,
                                                           {
                                                               application: t,
-                                                              onSelectApplication: S,
+                                                              onSelectApplication: N,
                                                               showCategory: !0
                                                           },
                                                           t.id
@@ -141,26 +142,26 @@ function S(e) {
                         }),
                         (0, i.jsx)(o.Paginator, {
                             className: v.paginationInput,
-                            totalCount: Math.min((null !== (t = null == w ? void 0 : w.totalPages) && void 0 !== t ? t : 0) * C.IV, C.Et * C.IV),
+                            totalCount: Math.min((null !== (t = null == k ? void 0 : k.totalPages) && void 0 !== t ? t : 0) * C.IV, C.Et * C.IV),
                             pageSize: C.IV,
                             disablePaginationGap: !0,
                             hideMaxPage: !0,
-                            currentPage: x,
-                            onPageChange: k
+                            currentPage: A,
+                            onPageChange: U
                         })
                     ]
                 })
             }),
-            A &&
+            Z &&
                 (0, i.jsx)('div', {
                     className: v.sidebar,
-                    ref: P,
+                    ref: O,
                     children: (0, i.jsx)('div', {
                         className: v.sidebarContent,
                         children: (0, i.jsx)(I.Z, {
-                            countsByCategory: D,
-                            selectedCategoryId: null != N ? N : p.MU,
-                            onSelectCategory: G
+                            countsByCategory: M,
+                            selectedCategoryId: null != T ? T : p.MU,
+                            onSelectCategory: B
                         })
                     })
                 })
