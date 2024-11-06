@@ -72,14 +72,14 @@ t.Z = s.memo(function (e) {
         [B, Z] = s.useState(null),
         F = (0, v.Iu)((e) => null != e.activeView),
         V = s.useRef(null),
-        [j, H] = s.useState(''),
+        [H, j] = s.useState(''),
         [Y, W] = s.useState(''),
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
-        X = (0, O.Z)(j, M, r),
+        X = (0, O.Z)(H, M, r),
         { analyticsLocations: J } = (0, m.ZP)(p.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, O.m)({
-            setTextInputValue: H,
+            setTextInputValue: j,
             setHasDismissed: P,
             setHasSelection: Q,
             setFocusedSuggestionType: A
@@ -163,7 +163,7 @@ t.Z = s.memo(function (e) {
             setFocusedSuggestionType: A,
             setHasDismissed: P,
             setFocusedStickerListItem: Z,
-            setTextInputValue: H
+            setTextInputValue: j
         }),
         es = (e, t) => {
             if (ei) {
@@ -174,7 +174,7 @@ t.Z = s.memo(function (e) {
                     }),
                     t === I.eb.SENDABLE)
                 )
-                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
+                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), j('');
                 else if ((0, b.jl)(e)) {
                     let t = S.Z.getStickerPack(e.pack_id);
                     null != t &&
@@ -189,8 +189,8 @@ t.Z = s.memo(function (e) {
         eo = s.useRef([]),
         el = s.useRef(!1);
     s.useEffect(() => {
-        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(j), W(j))), (el.current = ei);
-    }, [E, ei, X, j]);
+        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(H), W(H))), (el.current = ei);
+    }, [E, ei, X, H]);
     let eu = !ei,
         ec = ei ? X : eo.current;
     return (0, a.jsx)(m.Gt, {

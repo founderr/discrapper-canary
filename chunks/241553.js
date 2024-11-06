@@ -183,7 +183,7 @@ t.Z = i.memo(function (e) {
                 }
             });
         },
-        j = (0, r.jsxs)('div', {
+        H = (0, r.jsxs)('div', {
             className: D.container,
             onMouseEnter: () => {
                 !l && d(!0);
@@ -217,10 +217,10 @@ t.Z = i.memo(function (e) {
             ]
         });
     return G
-        ? j
+        ? H
         : (0, r.jsx)(u.TooltipContainer, {
               className: D.container,
               text: (0, c.i)(F),
-              children: j
+              children: H
           });
 });

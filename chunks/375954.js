@@ -58,14 +58,14 @@ function V() {
         f.Z.commit(e.reset(e.map((e) => e.set('blocked', x.Z.isBlockedForMessage(e)))));
     });
 }
-function j(e) {
+function H(e) {
     let { type: t, channelId: n, messageId: r, userId: i, emoji: a, reactionType: s } = e,
         o = f.Z.get(n);
     if (null == o || !(0, S.sm)(e)) return !1;
     let l = A.default.getId() === i;
     (o = o.update(r, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), f.Z.commit(o);
 }
-function H(e) {
+function j(e) {
     let { type: t, messageData: n } = e,
         { message: r } = n,
         i = (0, _.hc)(n),
@@ -249,8 +249,8 @@ class Y extends (r = u.ZP.Store) {
             let a = i.get(n, !0);
             (i = (null == a ? void 0 : a.isPoll()) === !0 ? i.remove(n) : i.update(n, (e) => ((e = e.set('state', k.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != r ? r : '')).set('flags', (0, b.pj)(e.flags, k.iLy.EPHEMERAL))) : null != r && (e = e.set('interactionError', null != r ? r : '')), e))), f.Z.commit(i);
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: H,
-        MESSAGE_EDIT_FAILED_AUTOMOD: H,
+        MESSAGE_SEND_FAILED_AUTOMOD: j,
+        MESSAGE_EDIT_FAILED_AUTOMOD: j,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,
@@ -311,7 +311,7 @@ class Y extends (r = u.ZP.Store) {
         RELATIONSHIP_REMOVE: V,
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {},
         THREAD_MEMBER_LIST_UPDATE: function (e) {},
-        MESSAGE_REACTION_ADD: j,
+        MESSAGE_REACTION_ADD: H,
         MESSAGE_REACTION_ADD_MANY: function (e) {
             let { channelId: t, messageId: n, reactions: r } = e,
                 i = f.Z.get(t);
@@ -322,7 +322,7 @@ class Y extends (r = u.ZP.Store) {
             })),
                 f.Z.commit(i);
         },
-        MESSAGE_REACTION_REMOVE: j,
+        MESSAGE_REACTION_REMOVE: H,
         MESSAGE_REACTION_REMOVE_ALL: function (e) {
             let { channelId: t, messageId: n } = e,
                 r = f.Z.get(t);

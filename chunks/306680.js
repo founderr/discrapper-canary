@@ -47,8 +47,8 @@ var i,
     Z = n(823379),
     F = n(931619),
     V = n(709054),
-    j = n(314897),
-    H = n(433355),
+    H = n(314897),
+    j = n(433355),
     Y = n(592125),
     W = n(796974),
     K = n(486472),
@@ -146,12 +146,12 @@ async function eR(e) {
         eR(e);
 }
 async function eO(e) {
-    let t = j.default.getId();
+    let t = H.default.getId();
     for (let n = 0; n < 3; n++)
         try {
             return await e();
         } catch (e) {
-            if ((eu.error('', e), n + 1 < 3 && (await (0, h.GR)((n + 1) * 2000), await F.Z.awaitOnline(), t !== j.default.getId()))) return Promise.reject(Error('User changed.'));
+            if ((eu.error('', e), n + 1 < 3 && (await (0, h.GR)((n + 1) * 2000), await F.Z.awaitOnline(), t !== H.default.getId()))) return Promise.reject(Error('User changed.'));
         }
 }
 function eD(e) {
@@ -505,7 +505,7 @@ class eL {
     _ack(e, t) {
         let { outgoingAck: r } = this;
         if (null == r) return;
-        let i = j.default.getId(),
+        let i = H.default.getId(),
             a = e_;
         this._persisted = !0;
         let s = this.recalculateFlags(),
@@ -522,7 +522,7 @@ class eL {
             })
         ).then((e) => {
             null != e &&
-                (e_ === a && i === j.default.getId() && (e_ = e.body.token),
+                (e_ === a && i === H.default.getId() && (e_ = e.body.token),
                 m.Z.dispatch({ type: 'MESSAGE_ACKED' }),
                 t &&
                     n
@@ -780,11 +780,11 @@ function eV(e) {
     let { channelId: t } = e;
     eL.get(t).rebuildChannelState();
 }
-function ej(e) {
+function eH(e) {
     let { threads: t } = e;
     ew(t);
 }
-function eH(e) {
+function ej(e) {
     let { messages: t, threads: n } = e;
     for (let e of t)
         ew(
@@ -806,7 +806,7 @@ function eW(e) {
     return eL.clear(t.id);
 }
 function eK() {
-    let e = H.ZP.getCurrentSidebarChannelId(ed),
+    let e = j.ZP.getCurrentSidebarChannelId(ed),
         t = !1;
     return ef !== e ? ((t = eq(ef)), (ef = e)) : (t = eG(e) || t), t;
 }
@@ -849,8 +849,8 @@ function eJ(e, t, n, r) {
 }
 class e$ extends (a = f.ZP.Store) {
     initialize() {
-        let e = [W.Z, et.default, z.Z, K.Z, Y.Z, $.Z, Q.Z, X.Z, E.Z, x.Z, w.Z, H.ZP, b.ZP, T.Z, I.Z, ee.ZP, en.Z, O.Z, A.Z, P.Z, C.Z];
-        this.waitFor(...e), this.syncWith([H.ZP], eK);
+        let e = [W.Z, et.default, z.Z, K.Z, Y.Z, $.Z, Q.Z, X.Z, E.Z, x.Z, w.Z, j.ZP, b.ZP, T.Z, I.Z, ee.ZP, en.Z, O.Z, A.Z, P.Z, C.Z];
+        this.waitFor(...e), this.syncWith([j.ZP], eK);
     }
     getReadStatesByChannel() {
         var e;
@@ -1059,7 +1059,7 @@ let e0 = new e$(m.Z, {
         ey(),
             (e_ = null),
             (ed = n),
-            (ef = H.ZP.getCurrentSidebarChannelId(ed)),
+            (ef = j.ZP.getCurrentSidebarChannelId(ed)),
             eL.clearAll(),
             t.forEach((e) => {
                 let t = eL.get(e.channelId);
@@ -1121,7 +1121,7 @@ let e0 = new e$(m.Z, {
                 var f;
                 t = null === (f = e.params) || void 0 === f ? void 0 : f.channelId;
             }
-        } else null == d && ((t = $.Z.getChannelId()), (n = H.ZP.getCurrentSidebarChannelId(t)));
+        } else null == d && ((t = $.Z.getChannelId()), (n = j.ZP.getCurrentSidebarChannelId(t)));
         let _ = t === i || n === i;
         if ((_ && eD(o) && !s) || (null != r && r.isInstanceFocused() && _ && r.isInstanceLocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
         (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = a.id),
@@ -1181,7 +1181,7 @@ let e0 = new e$(m.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
-            n = H.ZP.getCurrentSidebarChannelId(t),
+            n = j.ZP.getCurrentSidebarChannelId(t),
             r = Y.Z.getChannel(t);
         if (null != r) {
             var i;
@@ -1209,7 +1209,7 @@ let e0 = new e$(m.Z, {
         (function (e) {
             if (!k.AW.has(e.type)) return 0;
             let t = eL.get(e.id);
-            (t.lastMessageId = e.lastMessageId), (t.lastPinTimestamp = eA(e.lastPinTimestamp)), t.syncThreadSettings(), e.ownerId === j.default.getId() && (t.loadedMessages = !0);
+            (t.lastMessageId = e.lastMessageId), (t.lastPinTimestamp = eA(e.lastPinTimestamp)), t.syncThreadSettings(), e.ownerId === H.default.getId() && (t.loadedMessages = !0);
         })(t),
             (function (e) {
                 let t = e.parent_id;
@@ -1239,10 +1239,10 @@ let e0 = new e$(m.Z, {
             }
         });
     },
-    LOAD_THREADS_SUCCESS: ej,
-    LOAD_ARCHIVED_THREADS_SUCCESS: ej,
-    SEARCH_FINISH: eH,
-    MOD_VIEW_SEARCH_FINISH: eH,
+    LOAD_THREADS_SUCCESS: eH,
+    LOAD_ARCHIVED_THREADS_SUCCESS: eH,
+    SEARCH_FINISH: ej,
+    MOD_VIEW_SEARCH_FINISH: ej,
     THREAD_MEMBER_UPDATE: function (e) {
         let { id: t } = e;
         return eL.get(t).syncThreadSettings();

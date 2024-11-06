@@ -299,8 +299,8 @@ let w = c.Z.RULES,
     });
 });
 let V = s().parserFor(Z),
-    j = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
-function H(e, t, n, r) {
+    H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
+function j(e, t, n, r) {
     let i = '';
     return (
         e.forEach((e) => {
@@ -310,7 +310,7 @@ function H(e, t, n, r) {
                         if (('customEmoticon' === t.type && n(t.emoji, !1), 'emoticon' === t.type || 'text' === t.type)) {
                             let r;
                             let i = u.ZP.translateSurrogatesToInlineEmoji(t.content);
-                            for (; null !== (r = j.exec(i)); ) {
+                            for (; null !== (r = H.exec(i)); ) {
                                 let i;
                                 null != r[1] && '' !== r[1] ? e.emojiContext && (i = e.emojiContext.getById(r[1])) : (i = u.ZP.getByName(r[2])), i && n(i, t.isShortcut || !1);
                             }
@@ -331,7 +331,7 @@ function H(e, t, n, r) {
                     default:
                         i += n(e.content);
                 }
-            else e.content.constructor === Array ? (i += H(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
+            else e.content.constructor === Array ? (i += j(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
         }),
         i
     );
@@ -448,7 +448,7 @@ t.ZP = {
                         ? o.invalidEmojis.push(t)
                         : !n && o.validNonShortcutEmojis.push(t);
                 }),
-                H(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i))),
+                j(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i))),
             o
         );
     },
@@ -465,6 +465,6 @@ t.ZP = {
                 guild: o,
                 isNotification: n
             };
-        return H(d(e, f), f, c);
+        return j(d(e, f), f, c);
     }
 };

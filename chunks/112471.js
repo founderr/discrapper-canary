@@ -13,9 +13,9 @@ var i = n(192379),
     s = n(164991),
     o = n(731455);
 function c() {
-    let e = (0, s.NL)(),
-        t = (0, s.D1)(),
-        n = (0, s.Dm)(),
+    let e = s.Z.useField('fetchedQuery'),
+        t = s.Z.useField('resultsInitialCategoryId'),
+        n = s.Z.useField('languageCode'),
         c = (0, r.e7)([a.Z], () => {
             if (null == t) return 0;
             let i = a.Z.getTotal({

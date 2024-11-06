@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     },
     _Y: function () {
-        return j;
+        return H;
     },
     cG: function () {
         return P;
@@ -301,7 +301,7 @@ async function V() {
             await c.Z.setAccountFlag(R.c.USE_NEW_NOTIFICATIONS, !1);
     } else await c.Z.setAccountFlag(R.c.USE_NEW_NOTIFICATIONS, !1);
 }
-function j(e) {
+function H(e) {
     var t, n, r;
     if (null == e) return [];
     let i = a().keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], 'channel_id'),

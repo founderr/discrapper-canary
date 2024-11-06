@@ -22,8 +22,8 @@ var r = n(200651),
     d = n(179118),
     f = n(912788),
     m = n(509545),
-    _ = n(55563),
-    C = n(74538),
+    C = n(55563),
+    _ = n(74538),
     p = n(741245),
     h = n(474936),
     I = n(981631),
@@ -84,7 +84,7 @@ function g(t) {
         n,
         { planId: i, enableNoPaymentTrial: c, startingPremiumSubscriptionPlanId: d, onClose: f, followupSKUInfo: g, isDowngrade: E, hideClose: x, postSuccessGuild: M, paymentSourceType: y } = t,
         { theme: P } = (0, s.useThemeContext)(),
-        v = (0, l.e7)([_.Z], () => (null != g ? _.Z.get(g.id) : null));
+        v = (0, l.e7)([C.Z], () => (null != g ? C.Z.get(g.id) : null));
     o.useEffect(() => {
         if (null == g || null != v) return;
         let { applicationId: t, id: e } = g;
@@ -128,7 +128,7 @@ function g(t) {
                 children: S(t)
             }));
     }
-    let R = C.ZP.getPremiumType(i);
+    let R = _.ZP.getPremiumType(i);
     return (
         a()(null != R, 'premium type should not be null in purchase confirmation'),
         (n = null != v ? T.intl.formatToPlainString(T.t['1qGgm5'], { skuName: v.name }) : E ? T.intl.string(T.t.QJ9EyM) : null != M ? T.intl.string(T.t.ta3cXV) : T.intl.string(T.t.TkTvBw)),
@@ -154,7 +154,7 @@ function g(t) {
 }
 function E(t) {
     let { planId: e, onClose: n, halloweenDecoPurchase: o } = t,
-        { giftRecipient: i, selectedGiftStyle: s, hasSentMessage: u, giftMessageError: _, isSendingMessage: C } = (0, c.wD)(),
+        { giftRecipient: i, selectedGiftStyle: s, hasSentMessage: u, giftMessageError: C, isSendingMessage: _ } = (0, c.wD)(),
         p = (0, l.e7)([m.Z], () => m.Z.get(e));
     a()(null != p, 'Missing plan');
     let h = (0, l.e7)([f.Z], () => f.Z.getGiftCode(p.skuId));
@@ -165,8 +165,8 @@ function E(t) {
         selectedGiftStyle: s,
         hasSentMessage: u,
         giftRecipient: i,
-        giftMessageError: _,
-        isSendingMessage: C,
+        giftMessageError: C,
+        isSendingMessage: _,
         halloweenDecoPurchase: o
     });
 }

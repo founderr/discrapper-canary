@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     C1: function () {
-        return j;
+        return H;
     },
     DV: function () {
         return B;
@@ -18,7 +18,7 @@ n.d(t, {
         return k;
     },
     MZ: function () {
-        return H;
+        return j;
     },
     NJ: function () {
         return V;
@@ -419,7 +419,7 @@ function V(e) {
         (0, s.Wu)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
     );
 }
-function j(e, t) {
+function H(e, t) {
     return (
         r.useEffect(() => {
             f.DZ.loadIfNecessary();
@@ -427,7 +427,7 @@ function j(e, t) {
         (0, s.e7)([l.ZP], () => null != t && l.ZP.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))
     );
 }
-function H(e) {
+function j(e) {
     return (
         r.useEffect(() => {
             f.DZ.loadIfNecessary();

@@ -61,8 +61,8 @@ let B = {},
     Z = new Map(),
     F = !1,
     V = new Set(),
-    j = !1,
     H = !1,
+    j = !1,
     Y = !1,
     W = null,
     K = null,
@@ -138,7 +138,7 @@ async function ei(e) {
             let t = await eu();
             (ee = 'reconcile.createHostProcess'), e.createHostProcess(t, eI, eg);
         } else (ee = 'reconcile.destroyHostProcess'), e.destroyHostProcess();
-    } else if (j) {
+    } else if (H) {
         let t = await eu();
         e.createHostProcess(t, eI, eg);
     } else e.destroyHostProcess();
@@ -191,7 +191,7 @@ async function eo(e) {
             $.error('Failed to deconstruct tracked game '.concat(t), e);
         }
     }
-    if (null == e || !j || N.Z.isOverlayV3Enabled()) {
+    if (null == e || !H || N.Z.isOverlayV3Enabled()) {
         for (let t of ($.verbose('updateIntendedOverlayPIDs: Removing all.', B, e), Object.keys(B))) await n(Number(t));
         return;
     }
@@ -294,9 +294,9 @@ function ep() {
     });
 }
 let em = en('setOverlayEnabled', async (e, t, n) => {
-    if (!G.iP || N.Z.isOverlayV3Enabled() || (j === e && H === t)) return;
-    (j = e),
-        (H = t),
+    if (!G.iP || N.Z.isOverlayV3Enabled() || (H === e && j === t)) return;
+    (H = e),
+        (j = t),
         y.v.update({
             enabled: e,
             legacyEnabled: t,
@@ -305,7 +305,7 @@ let em = en('setOverlayEnabled', async (e, t, n) => {
         ex.emitChange();
     let r = await ec(),
         { OutOfProcess: i } = r;
-    (0, k.vR)(null != i), await eo(void 0), await ei(r), j && ep();
+    (0, k.vR)(null != i), await eo(void 0), await ei(r), H && ep();
 });
 function eg(e) {
     if (0 === e) {
@@ -474,10 +474,10 @@ class eL extends (s = f.ZP.Store) {
         return !!N.Z.isOverlayV3Enabled() || G.iP;
     }
     get enabled() {
-        return N.Z.isOverlayV3Enabled() ? N.Z.enabled : j;
+        return N.Z.isOverlayV3Enabled() ? N.Z.enabled : H;
     }
     get legacyEnabled() {
-        return !N.Z.isOverlayV3Enabled() && H;
+        return !N.Z.isOverlayV3Enabled() && j;
     }
     getFocusedPID() {
         return N.Z.isOverlayV3Enabled() ? N.Z.getFocusedPID() : W;
@@ -574,7 +574,7 @@ let ex = new eL(
                   let { port: t } = e;
                   z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '608876d15450de5357844547ca4717fa0d9acf23'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '3fdae72233507fad8567ea2d5b7510e59a004a5b'), n.append('rpc', String(t)), n.append('rpc_auth_token', z), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;

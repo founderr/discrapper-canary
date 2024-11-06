@@ -11,15 +11,15 @@ var i = n(200651),
     m = n(882008);
 t.Z = function (e) {
     let { loadId: t } = e,
-        n = (0, o.lZ)(),
+        n = o.Z.useField('categoryId'),
         p = (0, l.e7)([s.Z], () => s.Z.getCategoryName(n)),
         g = r.useCallback(() => {
-            (0, o.LD)({ categoryId: d.Hk }),
+            o.Z.setState({ categoryId: d.Hk }),
                 (0, c.oT)({
                     loadId: t,
                     categoryId: d.Hk,
-                    query: (0, o.Zq)(),
-                    languageCode: (0, o.a7)()
+                    query: o.Z.getField('fetchedQuery'),
+                    languageCode: o.Z.getField('languageCode')
                 });
         }, [t]),
         f = n === d.Hk ? u.intl.string(u.t.Ivw1Ii) : u.intl.formatToPlainString(u.t['+1WAFR'], { categoryName: p }),

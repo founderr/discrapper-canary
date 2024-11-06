@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return H;
     }
 }),
     n(47120);
@@ -135,7 +135,7 @@ function V(e) {
         ]
     });
 }
-function j(e) {
+function H(e) {
     let { animatedStyle: t, y: n, x: a, channel: f } = e,
         [m, g] = i.useState(!1),
         E = (0, h.x)(f),
@@ -191,8 +191,8 @@ function j(e) {
                 })
             ]
         }),
-        j = C ? U : G,
-        H = (0, l.e7)([R.Z], () => R.Z.windowSize());
+        H = C ? U : G,
+        j = (0, l.e7)([R.Z], () => R.Z.windowSize());
     return (0, r.jsx)(_.Z, {
         className: P.wrapper,
         selector: '.'.concat(P.root),
@@ -200,8 +200,8 @@ function j(e) {
             left: a,
             top: n
         },
-        maxX: H.width,
-        maxY: H.height,
+        maxX: j.width,
+        maxY: j.height,
         onDragEnd: y,
         dragAnywhere: !0,
         children: (0, r.jsx)(u.ThemeProvider, {
@@ -211,9 +211,9 @@ function j(e) {
                     className: s()(P.root, k.elevationHigh, { [P.previewCamera]: m }, e),
                     style: {
                         ...t,
-                        width: A.value.interpolate([0, 1], [j.width, B]),
-                        minHeight: A.value.interpolate([0, 1], [j.height, Z]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - j.width)) / 2])
+                        width: A.value.interpolate([0, 1], [H.width, B]),
+                        minHeight: A.value.interpolate([0, 1], [H.height, Z]),
+                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - H.width)) / 2])
                     },
                     children: [
                         m

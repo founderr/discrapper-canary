@@ -38,8 +38,8 @@ var r = n(200651),
     M = n(388032),
     P = n(451563);
 function k(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
-        { analyticsLocations: H } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
+        { analyticsLocations: j } = (0, d.ZP)([...H, c.Z.BITE_SIZE_PROFILE_POPOUT]),
         Y = (0, E.Z)({
             user: t,
             currentUser: n,
@@ -71,13 +71,13 @@ function k(e) {
     let et = (e) => {
         null == Z || Z(),
             (0, O.openUserProfileModal)({
-                sourceAnalyticsLocations: H,
+                sourceAnalyticsLocations: j,
                 ...W,
                 ...e
             });
     };
     return (0, r.jsx)(d.Gt, {
-        value: H,
+        value: j,
         children: (0, r.jsx)(p.Mt, {
             value: W,
             shouldTrackViewOnMount: null == z || null != z.fullProfileLoadedTimestamp,
@@ -125,7 +125,7 @@ function k(e) {
                                                               et(),
                                                                   (0, m.pQ)({
                                                                       action: 'PRESS_VIEW_PROFILE',
-                                                                      analyticsLocations: H,
+                                                                      analyticsLocations: j,
                                                                       ...W
                                                                   });
                                                           }

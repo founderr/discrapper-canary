@@ -68,7 +68,7 @@ t.Z = i.forwardRef(function (e, t) {
         !M.isVisible || null == M.query || void 0 === Z)
     )
         return null;
-    let j =
+    let H =
         null !==
             (a = M.query.typeInfo.renderResults({
                 results: M.query.results,
@@ -82,8 +82,8 @@ t.Z = i.forwardRef(function (e, t) {
             })) && void 0 !== a
             ? a
             : null;
-    if (null == j) return null;
-    let H = {
+    if (null == H) return null;
+    let j = {
             [b.autocompleteAttached]: null == Z,
             [b.autocompletePopout]: null != Z,
             [b.bottom]: null == Z && 'bottom' === e.position,
@@ -93,7 +93,7 @@ t.Z = i.forwardRef(function (e, t) {
     null != Z && (Y = (null === (y = R.autocomplete) || void 0 === y ? void 0 : y.small) ? 200 : (null === (A = M.query) || void 0 === A ? void 0 : A.type) === v.eq.EMOJIS_AND_STICKERS ? 490 : 245), (Y = Math.min(window.innerHeight - 175, Y));
     let W = (0, r.jsx)(f.ZP, {
         id: L,
-        className: s()(b.autocomplete, H),
+        className: s()(b.autocomplete, j),
         innerClassName: b.autocompleteInner,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, r.jsx)(o.bG, {
@@ -112,7 +112,7 @@ t.Z = i.forwardRef(function (e, t) {
                         style: { maxHeight: Y },
                         role: 'listbox',
                         'aria-labelledby': (0, f.rp)(L),
-                        children: j
+                        children: H
                     });
                 }
             })

@@ -42,7 +42,7 @@ function V(e) {
     let t = x[e];
     return null == t && ((t = new N.ZP(e)), (x[e] = t)), t;
 }
-function j(e) {
+function H(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
     return t.reduce(
         (t, n) =>
@@ -84,9 +84,9 @@ function j(e) {
         !1
     );
 }
-function H(e) {
+function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
-    return j((t) => t.updateParticipant(e), t);
+    return H((t) => t.updateParticipant(e), t);
 }
 function Y(e) {
     var t;
@@ -128,7 +128,7 @@ function Q(e) {
     delete x[e], delete w[e], delete P[e], delete k[e];
 }
 function X() {
-    return j(
+    return H(
         (e) => e.rebuild(),
         (function () {
             let e = [],
@@ -145,19 +145,19 @@ function X() {
     );
 }
 function J() {
-    return j((e) => e.updateEmbeddedActivities());
+    return H((e) => e.updateEmbeddedActivities());
 }
 function $(e) {
     let { userId: t } = e;
-    return j((e) => e.updateParticipantSpeaking(t));
+    return H((e) => e.updateParticipantSpeaking(t));
 }
 function ee(e) {
     let { user: t } = e;
-    return H(t.id);
+    return j(t.id);
 }
 function et(e) {
     let { channelId: t } = e;
-    return j((e) => e.rebuild(), [t]);
+    return H((e) => e.rebuild(), [t]);
 }
 function en(e) {
     let {
@@ -168,7 +168,7 @@ function en(e) {
 function er(e) {
     let { streamKey: t } = e,
         { channelId: n, ownerId: r } = (0, m.my)(t);
-    return H(r, [n]);
+    return j(r, [n]);
 }
 function ei(e) {
     var t;
@@ -298,7 +298,7 @@ class ea extends (r = d.ZP.Store) {
             let { voiceStates: t, initial: n } = e;
             return t.reduce((e, t) => {
                 let { userId: r, channelId: i } = t;
-                return n && null != i && !L.includes(i) ? e : H(r) || e;
+                return n && null != i && !L.includes(i) ? e : j(r) || e;
             }, !1);
         },
         CHANNEL_CREATE: function (e) {
@@ -331,7 +331,7 @@ class ea extends (r = d.ZP.Store) {
             if ((z(t, [null != n ? n : C.dF.NONE, i]), (0, m.DB)(n))) {
                 try {
                     let { ownerId: e } = (0, m.my)(n);
-                    e === E.default.getId() && H(e, [t]);
+                    e === E.default.getId() && j(e, [t]);
                 } catch (e) {
                     O.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
@@ -368,7 +368,7 @@ class ea extends (r = d.ZP.Store) {
                 let [e] = Y(t);
                 (0, m.DB)(e) && e.includes(r) && z(t, null);
             }
-            H(r, [t]);
+            j(r, [t]);
         },
         CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
             let { channelId: t, chatOpen: n } = e;
@@ -376,26 +376,26 @@ class ea extends (r = d.ZP.Store) {
         },
         RTC_CONNECTION_VIDEO: function (e) {
             let { channelId: t, userId: n } = e;
-            return H(n, [t]);
+            return j(n, [t]);
         },
         RTC_CONNECTION_PLATFORM: function (e) {
             let { channelId: t, userId: n } = e;
-            return H(n, [t]);
+            return j(n, [t]);
         },
         AUDIO_SET_LOCAL_VIDEO_DISABLED: function (e) {
             let { userId: t } = e;
-            return H(t);
+            return j(t);
         },
         MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: function (e) {
             let { channelId: t, senderUserId: n, maxResolution: r, maxFrameRate: i } = e;
-            return j((e) => e.updateParticipantQuality(n, r, i), [t]);
+            return H((e) => e.updateParticipantQuality(n, r, i), [t]);
         },
         STREAM_CLOSE: er,
         STREAM_DELETE: er,
         STREAM_WATCH: function (e) {
             let { streamKey: t } = e,
                 { channelId: n, ownerId: r } = (0, m.my)(t);
-            return H(r, [n]);
+            return j(r, [n]);
         },
         SPEAKING: $,
         GUILD_SOUNDBOARD_SOUND_PLAY_START: $,

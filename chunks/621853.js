@@ -98,7 +98,7 @@ function P(e) {
     I.delete(e.userId), A.set(e.userId, M(e.mutualFriends)), N.set(e.userId, e.mutualFriends.length);
 }
 function k(e) {
-    var t, n, r, i, o, l, u, d, f, p, g, I, R, L, x, w, P, k, U, G, B, Z, F, V, j, H, Y;
+    var t, n, r, i, o, l, u, d, f, p, g, I, R, L, x, w, P, k, U, G, B, Z, F, V, H, j, Y;
     let W = null !== (x = null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id) && void 0 !== x ? x : E;
     if ((null === (n = v.get(e.user.id)) || void 0 === n || n.delete(W), null != e.mutual_guilds)) {
         let t = {};
@@ -198,7 +198,7 @@ function k(e) {
                 themeColors: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.theme_colors,
                 popoutAnimationParticleType: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : B.popout_animation_particle_type,
                 profileEffectId: null === (F = e.guild_member_profile) || void 0 === F ? void 0 : null === (Z = F.profile_effect) || void 0 === Z ? void 0 : Z.id,
-                profileEffectExpiresAt: null === (j = e.guild_member_profile) || void 0 === j ? void 0 : null === (V = j.profile_effect) || void 0 === V ? void 0 : V.expires_at,
+                profileEffectExpiresAt: null === (H = e.guild_member_profile) || void 0 === H ? void 0 : null === (V = H.profile_effect) || void 0 === V ? void 0 : V.expires_at,
                 bio: e.guild_member_profile.bio,
                 pronouns: e.guild_member_profile.pronouns,
                 badges: e.guild_badges
@@ -209,7 +209,7 @@ function k(e) {
             let n = new Map();
             n.set(e.guild_member_profile.guild_id, t), T.set(e.user.id, n);
         }
-        if ((null === (Y = e.guild_member_profile) || void 0 === Y ? void 0 : null === (H = Y.profile_effect) || void 0 === H ? void 0 : H.expires_at) != null) {
+        if ((null === (Y = e.guild_member_profile) || void 0 === Y ? void 0 : null === (j = Y.profile_effect) || void 0 === j ? void 0 : j.expires_at) != null) {
             let t = new a.V7(),
                 n = y.get(e.user.id);
             if (null != n) n.set(e.guild_member_profile.guild_id, t);
@@ -325,11 +325,11 @@ function V(e) {
     if (null == i || (null !== (n = null === (t = v.get(r)) || void 0 === t ? void 0 : t.size) && void 0 !== n ? n : 0) > 0) return !1;
     K(i);
 }
-function j(e) {
+function H(e) {
     if (C.size < 1 && S.size < 1) return !1;
     for (let e of (C.clear(), S.values())) K(e);
 }
-function H(e) {
+function j(e) {
     let t = e.user.id,
         n = S.get(t);
     if (null == C.get(t) && null == n) return !1;
@@ -409,10 +409,10 @@ class z extends f.Z {
             MUTUAL_FRIENDS_FETCH_FAILURE: w,
             USER_UPDATE: V,
             GUILD_MEMBER_UPDATE: V,
-            GUILD_JOIN: j,
-            GUILD_DELETE: j,
-            GUILD_MEMBER_ADD: H,
-            GUILD_MEMBER_REMOVE: H,
+            GUILD_JOIN: H,
+            GUILD_DELETE: H,
+            GUILD_MEMBER_ADD: j,
+            GUILD_MEMBER_REMOVE: j,
             RELATIONSHIP_ADD: Y,
             RELATIONSHIP_REMOVE: Y,
             RELATIONSHIP_UPDATE: Y,

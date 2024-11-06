@@ -145,8 +145,8 @@ t.Z = (e) => {
             [I]
         ),
         {
-            nonUnicodeCategoryCount: j,
-            firstUnicodeCategoryIndex: H,
+            nonUnicodeCategoryCount: H,
+            firstUnicodeCategoryIndex: j,
             firstUnicodeCategoryOffsetTop: Y,
             rowCountBySection: W
         } = i.useMemo(() => {
@@ -167,8 +167,8 @@ t.Z = (e) => {
         }, [I]),
         [K, z] = i.useState(!0);
     i.useLayoutEffect(() => {
-        z(j >= 7);
-    }, [j]);
+        z(H >= 7);
+    }, [H]);
     let q = i.useCallback(
             (e) => {
                 var t;
@@ -180,9 +180,9 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(H), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
+                e(j), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
             },
-            [Y, H]
+            [Y, j]
         ),
         X = i.useCallback(
             (e, t) => {
@@ -221,7 +221,7 @@ t.Z = (e) => {
         getScrollOffsetForIndex: X,
         rowCountBySection: W,
         children: (e) =>
-            j >= 7 &&
+            H >= 7 &&
             (0, r.jsx)(
                 f.Clickable,
                 {

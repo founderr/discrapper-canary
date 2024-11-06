@@ -204,14 +204,14 @@ function y(e) {
                 }
             );
         }, [R, k, x, O, a, d, E, y, U, G, B, Z, F, V]);
-    let [, j] = (0, c.Z)({
+    let [, H] = (0, c.Z)({
         ref: R,
         onDrag: A,
         onDragStart: N,
         onDragEnd: C
     });
     return (0, r.jsx)('canvas', {
-        onMouseDown: j,
+        onMouseDown: H,
         className: s()(p.canvas, t),
         style: { width: D },
         ref: R,

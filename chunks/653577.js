@@ -22,7 +22,7 @@ function _(e) {
     let { channel: t, connected: n, hovered: r, subtitle: _, onClick: x, enableHangStatus: v, allowChannelTopic: I } = e,
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         S = null != b && b.length > 0,
-        Z = (0, c.Z)(t, !0),
+        Z = (0, c.ZP)(t, !0),
         N = (!v || !!I) && Z,
         E = null != _ && _.length > 0;
     l.useEffect(() => {

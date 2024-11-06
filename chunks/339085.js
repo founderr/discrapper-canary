@@ -39,8 +39,8 @@ var r,
     Z = n(396352),
     F = n(856985),
     V = n(185923),
-    j = n(981631),
-    H = n(149203),
+    H = n(981631),
+    j = n(149203),
     Y = n(526761);
 function W(e, t, n) {
     return (
@@ -56,7 +56,7 @@ function W(e, t, n) {
     );
 }
 let K = 'original',
-    z = [H.UX.TOP_GUILD_EMOJI.toString(), H.UX.FAVORITES.toString(), H.UX.RECENT.toString(), H.UX.CUSTOM.toString()].concat(G.ZP.getCategories()),
+    z = [j.UX.TOP_GUILD_EMOJI.toString(), j.UX.FAVORITES.toString(), j.UX.RECENT.toString(), j.UX.CUSTOM.toString()].concat(G.ZP.getCategories()),
     q = {
         pendingUsages: [],
         emojiReactionPendingUsages: [],
@@ -145,7 +145,7 @@ function el(e) {
             return null !== (t = G.ZP.getByName(e)) && void 0 !== t ? t : ea(e);
         },
         afterCompute: () => {
-            e(), (ee = z.slice(0)), !o().some(et, (e) => e.usableEmojis.length > 0) && ee.splice(z.indexOf(H.UX.CUSTOM), 1);
+            e(), (ee = z.slice(0)), !o().some(et, (e) => e.usableEmojis.length > 0) && ee.splice(z.indexOf(j.UX.CUSTOM), 1);
         },
         numFrequentlyItems: 42
     });
@@ -311,7 +311,7 @@ class eu {
             };
         G.ZP.forEach(n);
         let i = (e) => {
-            let t = et[null == e ? j.kod : e];
+            let t = et[null == e ? H.kod : e];
             null != t && (o().each(t.usableEmojis, n), o().each(t.emoticons, r));
         };
         for (let e in (i(this.guildId), this.newlyAddedEmoji)) null != this.newlyAddedEmoji[e] ? (this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => M.default.compare(t.id, e.id)).slice(0, 3)) : (this.newlyAddedEmoji[e] = []);

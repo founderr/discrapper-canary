@@ -47,8 +47,8 @@ var r = n(200651),
     Z = n(650743),
     F = n(394740),
     V = n(343747),
-    j = n(981631),
-    H = n(474936),
+    H = n(981631),
+    j = n(474936),
     Y = n(388032),
     W = n(185426);
 let K = [8, 0, 8, 0],
@@ -200,16 +200,16 @@ function $(e) {
         eu = i.useMemo(
             () => ({
                 ...el,
-                section: j.jXE.SOUNDBOARD_SOUND_PICKER
+                section: H.jXE.SOUNDBOARD_SOUND_PICKER
             }),
             [el]
         ),
         [ec, ed] = i.useState(null),
         ef = (0, o.e7)([y.default], () => y.default.getCurrentUser()),
-        e_ = (0, R.I5)(ef, H.p9.TIER_2),
+        e_ = (0, R.I5)(ef, j.p9.TIER_2),
         eh = (0, o.e7)([A.Z], () => {
             var e;
-            return A.Z.getVoiceState(t, null !== (e = null == ef ? void 0 : ef.id) && void 0 !== e ? e : j.lds);
+            return A.Z.getVoiceState(t, null !== (e = null == ef ? void 0 : ef.id) && void 0 !== e ? e : H.lds);
         }),
         ep = (null == eh ? void 0 : eh.selfDeaf) || (null == eh ? void 0 : eh.mute) || (null == eh ? void 0 : eh.suppress),
         em = (0, g.Iu)((e) => e.searchQuery),
@@ -240,10 +240,10 @@ function $(e) {
                 if (null != p && I && n) p(e);
                 else if (!N && n) {
                     var r;
-                    (0, x.GN)(e, null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : j.lds, t),
+                    (0, x.GN)(e, null !== (r = null == a ? void 0 : a.id) && void 0 !== r ? r : H.lds, t),
                         eg &&
-                            C.default.track(j.rMx.SEARCH_RESULT_SELECTED, {
-                                search_type: j.aib.SOUNDBOARD,
+                            C.default.track(H.rMx.SEARCH_RESULT_SELECTED, {
+                                search_type: H.aib.SOUNDBOARD,
                                 channel_id: null == a ? void 0 : a.id,
                                 query: em,
                                 location_stack: t
@@ -338,14 +338,14 @@ function $(e) {
             },
             [ex, eP, t, eB, U, e_, eD]
         ),
-        ej = i.useCallback(
+        eH = i.useCallback(
             (e, t) => {
                 let n = t === ey.length - 1;
                 return eD && n ? (0, r.jsx)('div', { className: W.sectionFooter }) : null;
             },
             [ey, eD]
         ),
-        eH = i.useCallback((e) => eS((0, P.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
+        ej = i.useCallback((e) => eS((0, P.ZP)(e, ev, ef, a, es)), [a, ef, ev, es]),
         eY = i.useCallback((e) => {
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -384,7 +384,7 @@ function $(e) {
             null != e && ed(e);
         },
         eq = i.useCallback(() => {
-            let e = (0, R.Px)(H.p9.TIER_2);
+            let e = (0, R.Px)(j.p9.TIER_2);
             return Y.intl.format(Y.t['tw/SSk'], {
                 nitroTierName: e,
                 onClick: ez
@@ -397,7 +397,7 @@ function $(e) {
                           showUpsell: eT,
                           text: eq(),
                           button: Y.intl.string(Y.t.pj0XBA),
-                          buttonAnalyticsObject: { section: j.jXE.SOUND_PICKER_FLOATING_UPSELL }
+                          buttonAnalyticsObject: { section: H.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
             [eq, eT, eD]
@@ -435,16 +435,16 @@ function $(e) {
                           title: Y.intl.string(Y.t.jGDYFx),
                           description: Y.intl.string(Y.t['grL/ho']),
                           enableSocialProof: eO,
-                          analyticsLocationSection: j.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL,
+                          analyticsLocationSection: H.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {
-                              type: H.cd.SOUND_PICKER_SOUND_CLICKED,
+                              type: j.cd.SOUND_PICKER_SOUND_CLICKED,
                               is_external: !0,
                               location: {
                                   ...eu,
-                                  object: j.qAy.SOUNDBOARD_SOUND
+                                  object: H.qAy.SOUNDBOARD_SOUND
                               },
                               location_stack: eo,
-                              sku_id: R.ZP.getSkuIdForPremiumType(H.p9.TIER_2)
+                              sku_id: R.ZP.getSkuIdForPremiumType(j.p9.TIER_2)
                           },
                           onClose: () => ed(null),
                           onDisplay: eJ
@@ -462,12 +462,12 @@ function $(e) {
                 containerWidth: s,
                 store: m.Wq,
                 onSelectItem: eU,
-                onSearchExpressions: eH,
+                onSearchExpressions: ej,
                 hasSearchResults: eI.length > 0,
                 defaultSearchPlaceholder: Y.intl.string(Y.t.sKt3xc),
                 renderRow: eG,
                 renderSectionHeader: eV,
-                renderSectionFooter: ej,
+                renderSectionFooter: eH,
                 renderCategoryList: eK,
                 renderHeaderAccessories: eW,
                 rowHeight: ei ? 80 : 48,

@@ -128,10 +128,10 @@ function O(e, t) {
         null == t || t.preventDefault(), d.Z.show(w);
         return;
     }
-    let j = 'function' == typeof b ? b() : b,
-        H = (0, S.E)(w),
-        Y = !('http:' === H || 'https:' === H);
-    if ((!Y && (j || I.Z.isTrustedDomain(w))) || (Y && I.Z.isTrustedProtocol(w))) {
+    let H = 'function' == typeof b ? b() : b,
+        j = (0, S.E)(w),
+        Y = !('http:' === j || 'https:' === j);
+    if ((!Y && (H || I.Z.isTrustedDomain(w))) || (Y && I.Z.isTrustedProtocol(w))) {
         null == t || (null != O && O)
             ? V()
             : P &&

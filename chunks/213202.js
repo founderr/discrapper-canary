@@ -25,9 +25,9 @@ var l = t(442837),
     N = t(323597),
     _ = t(852245),
     L = t(493802),
-    T = t(367722),
-    I = t(461535),
-    P = t(776568),
+    P = t(367722),
+    T = t(461535),
+    I = t(776568),
     b = t(218035),
     S = t(775666),
     A = t(442754),
@@ -48,9 +48,9 @@ function D(n) {
         m = (0, v.Z)(null == p ? void 0 : p.id, t, e),
         E = (0, y.Z)(e, d),
         N = (0, h.l)(e),
-        T = (0, h.P)(e),
-        I = (0, x.Z)(e),
-        P = (0, f.Z)(e),
+        P = (0, h.P)(e),
+        T = (0, x.Z)(e),
+        I = (0, f.Z)(e),
         A = (0, g.Z)(e),
         U = (0, L.Z)(e),
         q = (0, b.Z)(e),
@@ -73,13 +73,13 @@ function D(n) {
         children: [
             (0, i.jsx)(r.MenuGroup, { children: null != p ? m : E }),
             (0, i.jsxs)(r.MenuGroup, {
-                children: [P, A, I, N]
+                children: [I, A, T, N]
             }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [U, w ? F : q, Y]
             }),
             (0, i.jsx)(r.MenuGroup, { children: z }),
-            (0, i.jsx)(r.MenuGroup, { children: T }),
+            (0, i.jsx)(r.MenuGroup, { children: P }),
             (0, i.jsxs)(r.MenuGroup, {
                 children: [D, Z]
             }),
@@ -94,7 +94,7 @@ function H(n) {
     let { channel: e, guild: t, onSelect: o } = n,
         a = e.isGuildStageVoice(),
         d = (0, l.e7)([j.Z], () => (a ? j.Z.getStageInstanceByChannel(e.id) : void 0), [a, e.id]),
-        Z = (0, I.Z)(e),
+        Z = (0, T.Z)(e),
         x = (0, G.Z)(e),
         f = (0, M.qY)(e.id),
         g = (0, v.Z)(null == f ? void 0 : f.id, t, e),
@@ -104,7 +104,7 @@ function H(n) {
         W = (0, L.Z)(e),
         z = (0, b.Z)(e),
         w = (0, _.Z)(e),
-        F = (0, T.Z)(e, t, d),
+        F = (0, P.Z)(e, t, d),
         K = (0, X.Z)(e, t),
         R = (0, U.Z)(e, t),
         B = (0, q.Z)(e, t.id),
@@ -119,7 +119,7 @@ function H(n) {
         nt = (0, c.Z)(e),
         ni = (0, A.Z)(e),
         nl = (0, p.Z)(e),
-        nr = (0, P.ZP)(e),
+        nr = (0, I.ZP)(e),
         nu = (0, C.Mn)('ChannelListVoiceContextMenuNormal'),
         no = (0, S.ZP)(e),
         na = (0, O.Z)();

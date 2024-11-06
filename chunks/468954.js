@@ -17,8 +17,8 @@ function c(e) {
         Z = i.useRef(null),
         F = 0 === t.length,
         V = (0, a.Iu)((e) => e.searchQuery),
-        j = d.useStore((e) => e.inspectedExpressionPosition),
-        H = (0, s.ep)({
+        H = d.useStore((e) => e.inspectedExpressionPosition),
+        j = (0, s.ep)({
             gridWrapperRef: G,
             containerWidth: c,
             showingEmptyState: F
@@ -32,7 +32,7 @@ function c(e) {
         } = (0, s.yi)({
             categories: t,
             collapsedCategories: n,
-            gridWidth: H,
+            gridWidth: j,
             listPaddingRight: D,
             itemNodeWidth: O,
             itemNodeMargin: L
@@ -73,8 +73,8 @@ function c(e) {
         ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
         ea = i.useCallback(() => {
             var e;
-            return null == T ? void 0 : T(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
-        }, [Y, j.columnIndex, j.rowIndex, T]);
+            return null == T ? void 0 : T(null == Y ? void 0 : null === (e = Y[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex]);
+        }, [Y, H.columnIndex, H.rowIndex, T]);
     i.useEffect(() => {
         _(V);
     }, [_, V]),
@@ -126,7 +126,7 @@ function c(e) {
                               id: w,
                               ...J,
                               children:
-                                  null != H
+                                  null != j
                                       ? (0, r.jsx)(o.Z, {
                                             categories: t,
                                             ref: B,

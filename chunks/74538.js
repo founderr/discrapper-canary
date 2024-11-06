@@ -18,10 +18,10 @@ n.d(t, {
         return ey;
     },
     JP: function () {
-        return j;
+        return H;
     },
     L7: function () {
-        return H;
+        return j;
     },
     M5: function () {
         return R.M5;
@@ -329,7 +329,7 @@ function V(e) {
     }
     return r.countryPrices.prices;
 }
-function j(e) {
+function H(e) {
     switch (e) {
         case x.EA.MONTH:
             return M.intl.string(M.t.FPybU1);
@@ -341,7 +341,7 @@ function j(e) {
             throw Error('Unexpected interval');
     }
 }
-function H(e, t, n) {
+function j(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         a = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : x.p9.TIER_2;
@@ -594,11 +594,11 @@ function J(e) {
                 case D.O0b.UNPAID:
                     return M.intl.format(M.t['0HopYW'], { num: k });
                 case D.O0b.PAUSE_PENDING:
-                    let j = null != m.pauseEndsAt ? c()(m.pauseEndsAt).diff(m.currentPeriodEnd, 'days') : null;
-                    return null != j
+                    let H = null != m.pauseEndsAt ? c()(m.pauseEndsAt).diff(m.currentPeriodEnd, 'days') : null;
+                    return null != H
                         ? M.intl.format(M.t.WUfODw, {
                               pauseDate: m.currentPeriodEnd,
-                              pauseDuration: j
+                              pauseDuration: H
                           })
                         : M.intl.format(M.t.VlWufn, { pauseDate: m.currentPeriodEnd });
                 case D.O0b.PAUSED:
@@ -1171,7 +1171,7 @@ t.ZP = Object.freeze({
         let n = Error('Unsupported plan');
         throw ((0, b.q2)(n, { tags: { planId: e } }), n);
     },
-    getIntervalString: H,
+    getIntervalString: j,
     getIntervalStringAsNoun: Y,
     getPremiumType: W,
     getDisplayName: K,

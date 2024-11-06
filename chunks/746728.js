@@ -17,12 +17,12 @@ var i = n(200651),
     m = n(249379);
 function p(e) {
     let { categoryId: t, loadId: n } = e;
-    (0, c.LD)({ categoryId: t }),
+    c.Z.setState({ categoryId: t }),
         (0, d.oT)({
             loadId: n,
             categoryId: t,
-            query: (0, c.Zq)(),
-            languageCode: (0, c.a7)()
+            query: c.Z.getField('fetchedQuery'),
+            languageCode: c.Z.getField('languageCode')
         });
 }
 function g(e) {
@@ -33,7 +33,7 @@ function g(e) {
                 loadId: t
             });
         }, [n, t]),
-        h = (0, c.lZ)() === n,
+        h = c.Z.useField('categoryId') === n,
         g = l.toLocaleString(o.default.locale),
         f = (0, u.E)({ categoryId: n });
     return (0, i.jsxs)(s.Clickable, {

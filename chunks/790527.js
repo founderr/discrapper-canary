@@ -29,7 +29,7 @@ var r = n(200651),
     N = n(769860);
 function C(e) {
     var t, n, a;
-    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: j, onSecondaryClick: H, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
+    let { title: C, type: R, guildBoostProps: O, analyticsSource: D, analyticsLocation: L, body: x, context: w, glowUp: M, modalClassName: P, modalContentClassName: k, artContainerClassName: U, headerClassName: G, bodyClassName: B, transitionState: Z, onClose: F, onSubscribeClick: V, onSubscribeFinish: H, onSecondaryClick: j, secondaryCTA: Y, subscribeButtonText: W, showNewBadge: K = !1, enableArtBoxShadow: z = !0, subscriptionTier: q = T.Si.TIER_2, isLoading: Q = !1, hideBackButton: X, backButtonText: J, showEnhancedUpsell: $, useSubscribeButtonGradient: ee, subscribeButtonClassname: et, hidePremiumOfferUpsell: en, children: er, LeadingComponent: ei, ...ea } = e,
         es = null != O,
         eo = (0, g.N)(),
         el = (0, m.Ng)(),
@@ -142,7 +142,7 @@ function C(e) {
                                 null != Y
                                     ? (0, r.jsx)(l.Button, {
                                           className: s()(A.secondaryAction, { [A.enhancedSecondaryAction]: $ }),
-                                          onClick: H,
+                                          onClick: j,
                                           size: l.Button.Sizes.SMALL,
                                           color: $ ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
                                           look: l.Button.Looks.LINK,
@@ -176,7 +176,7 @@ function C(e) {
                                         onClick: () => {
                                             null == V || V(), F();
                                         },
-                                        onSubscribeModalClose: j,
+                                        onSubscribeModalClose: H,
                                         buttonText: null != W ? W : e
                                     });
                                 })()

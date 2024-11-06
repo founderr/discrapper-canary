@@ -41,8 +41,8 @@ function L(e) {
         [B, Z] = i.useState(!0),
         F = i.useRef(null),
         V = i.useRef(null),
-        j = i.useRef(null),
         H = i.useRef(null),
+        j = i.useRef(null),
         { emoji: Y, state: W } = null != t ? t : {},
         K = null != W && '' !== W ? W : null,
         z = null != K && K.length > 0,
@@ -69,8 +69,8 @@ function L(e) {
         if ((ed(Q || e <= J), L)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = F.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : $,
-                a = null !== (i = null === (n = j.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ee;
-            e_(!Q && e > a), (V.current = e), (H.current = a);
+                a = null !== (i = null === (n = H.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ee;
+            e_(!Q && e > a), (V.current = e), (j.current = a);
         }
     }, [L, Q, J, $, ee]);
     let [eg, eE] = (0, c.useSpring)(() => ({
@@ -103,7 +103,7 @@ function L(e) {
                         }
                     });
                 } else {
-                    let e = Math.min(null !== (n = H.current) && void 0 !== n ? n : ee, ee);
+                    let e = Math.min(null !== (n = j.current) && void 0 !== n ? n : ee, ee);
                     eE({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
@@ -151,7 +151,7 @@ function L(e) {
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
-                ref: j,
+                ref: H,
                 children: [eS(), eT()]
             }),
         eA = () =>

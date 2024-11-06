@@ -16,16 +16,16 @@ var i = n(200651),
 function m(e) {
     let { loadId: t } = e,
         n = (0, l.e7)([s.default], () => (0, d.Xp)([s.default])),
-        m = (0, c.Dm)(),
+        m = c.Z.useField('languageCode'),
         p = null != m ? m : n,
         g = r.useCallback(
             (e) => {
-                (0, c.LD)({ languageCode: e });
-                let n = (0, c.Zq)();
+                c.Z.setState({ languageCode: e });
+                let n = c.Z.getField('fetchedQuery');
                 o.Z.clearAlgoliaSearchResults({ ignoreQueries: [n] }),
                     (0, d.oT)({
                         loadId: t,
-                        categoryId: (0, c.lx)(),
+                        categoryId: c.Z.getField('categoryId'),
                         query: n,
                         languageCode: e
                     });

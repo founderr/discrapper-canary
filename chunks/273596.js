@@ -168,7 +168,7 @@ function L(e) {
                 var r, a;
                 await l(e, t, n, i);
                 let s = null === (a = V.current) || void 0 === a ? void 0 : null === (r = a.getScrollerState()) || void 0 === r ? void 0 : r.scrollTop;
-                null != s && (0, _.LD)({ scrollPosition: s });
+                null != s && _.Z.setState({ scrollPosition: s });
             },
             [l]
         ),
@@ -198,11 +198,11 @@ function L(e) {
         return () => {
             var t;
             let n = null == e ? void 0 : null === (t = e.getScrollerState()) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && (0, _.LD)({ scrollPosition: n });
+            null != n && _.Z.setState({ scrollPosition: n });
         };
     }, []),
         r.useLayoutEffect(() => {
-            let e = (0, _.BK)();
+            let e = _.Z.getField('scrollPosition');
             null != e &&
                 setTimeout(() => {
                     var t;
@@ -212,7 +212,7 @@ function L(e) {
                             to: e,
                             animate: !1,
                             callback: () => {
-                                (0, _.LD)({ scrollPosition: null });
+                                _.Z.setState({ scrollPosition: null });
                             }
                         });
                 });

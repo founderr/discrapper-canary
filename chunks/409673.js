@@ -67,7 +67,7 @@ function R(e) {
 }
 t.ZP = i.forwardRef(function (e, t) {
     var n, a, O, D, L, x, w, M, P, k;
-    let { sound: U, channel: G, containerClassName: B, className: Z, focused: F, forceSecondaryActions: V = !1, interactive: j = !0, enableSecondaryActions: H = !1, suppressPlaySound: Y, onMouseEnter: W, onSelectItem: K, analyticsLocations: z, buttonOverlay: q = I.Pb.PLAY, showLockForDisabledSound: Q = !0, inNitroLockedSection: X = !1, refreshEnabled: J = !1, isAnimated: $ = !0, isPlayingSoundOverride: ee, isSoundmoji: et, ...en } = e,
+    let { sound: U, channel: G, containerClassName: B, className: Z, focused: F, forceSecondaryActions: V = !1, interactive: H = !0, enableSecondaryActions: j = !1, suppressPlaySound: Y, onMouseEnter: W, onSelectItem: K, analyticsLocations: z, buttonOverlay: q = I.Pb.PLAY, showLockForDisabledSound: Q = !0, inNitroLockedSection: X = !1, refreshEnabled: J = !1, isAnimated: $ = !0, isPlayingSoundOverride: ee, isSoundmoji: et, ...en } = e,
         { soundId: er, name: ei, emojiId: ea, emojiName: es } = U,
         eo = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         el = (0, b.z)(U, null == G ? void 0 : G.guild_id),
@@ -98,7 +98,7 @@ t.ZP = i.forwardRef(function (e, t) {
         eT = (0, o.JA)(eS),
         eb = null != ea || null != es,
         ey = !(0, S.Nq)(eo, U, G) && !et,
-        eA = V || (H && !ey),
+        eA = V || (j && !ey),
         eN = i.useRef(null),
         eC = (null !== (L = null === (n = eN.current) || void 0 === n ? void 0 : n.scrollHeight) && void 0 !== L ? L : 0) > (null !== (x = null === (a = eN.current) || void 0 === a ? void 0 : a.offsetHeight) && void 0 !== x ? x : 0),
         eR = null !== (w = p.Wq.useStore().bottomPosition) && void 0 !== w ? w : 0,
@@ -110,7 +110,7 @@ t.ZP = i.forwardRef(function (e, t) {
     }
     function ew() {
         return (0, r.jsx)(C, {
-            disabled: !j && !V,
+            disabled: !H && !V,
             onClick: ex,
             text: A.intl.formatToPlainString(eI ? A.t.lQLsjY : A.t.Y5DOs7, {
                 emojiName: U.emojiName,
@@ -220,19 +220,19 @@ t.ZP = i.forwardRef(function (e, t) {
                                     [N.playing]: null != ee ? ee : ed,
                                     [N.previewing]: ef,
                                     [N.hoverActiveBackground]: Y && !J,
-                                    [N.soundButtonInteractive]: j && !J,
-                                    [N.soundButtonInteractiveRefresh]: j && J,
-                                    [N.buttonDisabled]: !j && !V,
+                                    [N.soundButtonInteractive]: H && !J,
+                                    [N.soundButtonInteractiveRefresh]: H && J,
+                                    [N.buttonDisabled]: !H && !V,
                                     [N.premiumDisabled]: ey && !V,
                                     [N.premiumDisabledRefresh]: ey && J,
-                                    [N.buttonDisabledSecondaryActionsEnabled]: !j && V,
-                                    [N.focused]: j && F
+                                    [N.buttonDisabledSecondaryActionsEnabled]: !H && V,
+                                    [N.focused]: H && F
                                 },
                                 Z
                             ),
                             ...e,
                             onClick: eM,
-                            onContextMenu: H && !ey ? el : void 0,
+                            onContextMenu: j && !ey ? el : void 0,
                             onMouseOver: () => {
                                 var t;
                                 return eC && J ? (null === (t = e.onMouseEnter) || void 0 === t ? void 0 : t.call(e)) : null;
@@ -260,7 +260,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                                   })),
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-xs/medium',
-                                            color: j ? void 0 : 'text-muted',
+                                            color: H ? void 0 : 'text-muted',
                                             className: s()(J ? N.soundNameRefresh : N.soundName, { [N.hasEmoji]: eb }),
                                             ref: eN,
                                             children: ei

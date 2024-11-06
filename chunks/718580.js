@@ -98,7 +98,7 @@ function E(e) {
         { width: B, centered: Z = !0 } = T,
         F = o.tq ? '100%' : k.width.to((e) => Math.round(e)),
         V = o.tq ? '100%' : k.height.to((e) => Math.round(e)),
-        j = o.tq
+        H = o.tq
             ? {}
             : Z
               ? {
@@ -106,13 +106,13 @@ function E(e) {
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
-        H = o.tq ? {} : { overflow: null !== (g = T.overflow) && void 0 !== g ? g : 'hidden' };
+        j = o.tq ? {} : { overflow: null !== (g = T.overflow) && void 0 !== g ? g : 'hidden' };
     return (0, r.jsx)(a.animated.div, {
         style: {
             position: 'relative',
             width: F,
             height: V,
-            ...H
+            ...j
         },
         children: U((e, t, n) => {
             let { key: i } = n,
@@ -127,7 +127,7 @@ function E(e) {
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
                         width: o.tq ? '100%' : B,
-                        ...j,
+                        ...H,
                         ...(R.enabled
                             ? s
                             : {

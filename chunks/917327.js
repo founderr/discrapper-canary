@@ -17,7 +17,7 @@ var l = t(442837),
     h = t(388032);
 function x(n, e) {
     let x = (0, l.e7)([d.Z], () => d.Z.can(Z.Plq.MANAGE_CHANNELS, e)),
-        f = (0, o.Z)(n),
+        f = (0, o.ZP)(n),
         g = (0, c.W)(n),
         p = (0, l.e7)([s.Z], () => s.Z.getChannelStatus(n)),
         M = null != p && p.length > 0;

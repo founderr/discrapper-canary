@@ -44,14 +44,14 @@ var i = n(120356),
     Z = n(228168),
     F = n(981631),
     V = n(701488),
-    j = n(388032),
-    H = n(676411);
+    H = n(388032),
+    j = n(676411);
 function Y(e) {
     var t;
     let { user: n, currentUser: i, activity: Y, application: W, guild: K, channel: z, className: q, onClose: Q, profileGuildId: X } = e,
         { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: $ } = (0, O.z)(),
-        ee = { [H.fullSize]: $ === Z.y0.FULL_SIZE },
+        ee = { [j.fullSize]: $ === Z.y0.FULL_SIZE },
         { interactionSource: et, interactionSourceId: en } = (0, A.Xo)(),
         er = (0, m.Bq)({
             activity: Y,
@@ -120,12 +120,12 @@ function Y(e) {
                   })
                 : (0, d.Z)(Y) && null != z
                   ? (0, r.jsxs)('div', {
-                        className: H.voiceChannelText,
+                        className: j.voiceChannelText,
                         children: [
                             (0, r.jsx)(o.VoiceNormalIcon, {
                                 size: 'xxs',
                                 color: o.tokens.colors.TEXT_NORMAL,
-                                className: H.voiceIcon
+                                className: j.voiceIcon
                             }),
                             (0, r.jsx)(w.Z, {
                                 variant: 'heading-sm/semibold',
@@ -149,7 +149,7 @@ function Y(e) {
                 : (0, d.Z)(Y) && null != K
                   ? (0, r.jsx)(w.Z, {
                         variant: 'text-xs/normal',
-                        text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: K.name }),
+                        text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: K.name }),
                         onClick: () => {
                             (0, I.X)(K.id), ea({ action: 'OPEN_VOICE_GUILD' }), null == Q || Q();
                         }
@@ -178,7 +178,7 @@ function Y(e) {
             var e, t, n, i;
             return (null === (e = Y.party) || void 0 === e ? void 0 : e.size) == null && Y.application_id === V.Zc
                 ? (0, r.jsxs)('div', {
-                      className: H.gameState,
+                      className: j.gameState,
                       children: [
                           (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
@@ -186,7 +186,7 @@ function Y(e) {
                           }),
                           (0, r.jsx)(w.Z, {
                               variant: 'text-xs/normal',
-                              text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                              text: H.intl.formatToPlainString(H.t['u//9Bw'], {
                                   count: '0',
                                   max: null !== (i = null == W ? void 0 : W.getMaxParticipants()) && void 0 !== i ? i : 0
                               })
@@ -195,7 +195,7 @@ function Y(e) {
                   })
                 : (0, u.Z)(Y) && (null === (t = Y.party) || void 0 === t ? void 0 : t.size) != null && (null === (n = Y.party) || void 0 === n ? void 0 : n.size.length) >= 2
                   ? (0, r.jsxs)('div', {
-                        className: H.gameState,
+                        className: j.gameState,
                         children: [
                             (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
@@ -203,7 +203,7 @@ function Y(e) {
                             }),
                             (0, r.jsx)(w.Z, {
                                 variant: 'text-xs/normal',
-                                text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                                text: H.intl.formatToPlainString(H.t['u//9Bw'], {
                                     count: Y.party.size[0],
                                     max: Y.party.size[1]
                                 })
@@ -231,7 +231,7 @@ function Y(e) {
                       children: [ef(), e_(), eh()]
                   })
                 : (0, r.jsxs)(o.Clickable, {
-                      className: H.clickable,
+                      className: j.clickable,
                       onClick: (e) => {
                           ea({ action: 'PRESS_TEXT' }), ec(e);
                       },
@@ -242,7 +242,7 @@ function Y(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: H.voiceChannelDivider }),
+                          (0, r.jsx)('div', { className: j.voiceChannelDivider }),
                           (0, r.jsx)(M.Z, {
                               user: n,
                               guild: K,
@@ -256,7 +256,7 @@ function Y(e) {
             n.id === i.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: a()(H.actions, ee),
+                      className: a()(j.actions, ee),
                       children: (0, r.jsx)(D.Z, {
                           activity: Y,
                           user: n,
@@ -283,11 +283,11 @@ function Y(e) {
                     sourceType: Z.n_.ACTIVITY,
                     children: () =>
                         (0, r.jsx)(R.Z.Overlay, {
-                            className: a()(H.card, q, { [H.hoisted]: eS }),
+                            className: a()(j.card, q, { [j.hoisted]: eS }),
                             ref: es,
                             children: (0, r.jsxs)(C.Z, {
                                 user: n,
-                                className: H.body,
+                                className: j.body,
                                 interactionSourceId: eI,
                                 sourceType: Z.n_.ACTIVITY,
                                 children: [
@@ -303,21 +303,21 @@ function Y(e) {
                                         })
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: H.body,
+                                        className: j.body,
                                         children: [
                                             (0, r.jsxs)('div', {
-                                                className: a()(H.content, ee),
+                                                className: a()(j.content, ee),
                                                 children: [
                                                     !n.bot && ed(),
                                                     (0, r.jsxs)('div', {
-                                                        className: H.details,
+                                                        className: j.details,
                                                         children: [
                                                             eg(),
                                                             !n.bot &&
                                                                 (0, r.jsx)(L.Z, {
                                                                     user: n,
                                                                     activity: Y,
-                                                                    className: H.badges
+                                                                    className: j.badges
                                                                 }),
                                                             em()
                                                         ]

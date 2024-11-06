@@ -51,7 +51,7 @@ class h extends r.Z {
                 if (!r || t === this.previousVoiceChannelId) return;
                 if (((this.previousVoiceChannelId = t), null == n || null == t)) return;
                 let o = s.Z.getChannel(t);
-                if (null == o || o.type !== f.d4z.GUILD_VOICE || !(0, i.w)(o, !0) || null != c.Z.getCurrentHangStatus()) return;
+                if (null == o || o.type !== f.d4z.GUILD_VOICE || !(0, i.wQ)(o, !0) || null != c.Z.getCurrentHangStatus()) return;
                 let _ = c.Z.getCurrentDefaultStatus();
                 if ((null == _ ? void 0 : _.expiresAt) != null && (null == _ ? void 0 : _.expiresAt) >= Date.now()) {
                     if (_.status === f.tNA.CUSTOM && null != _.customHangStatus) {
@@ -74,7 +74,7 @@ class h extends r.Z {
                 let r = o.Z.getCurrentClientVoiceChannelId(n);
                 if (null == r || null == c.Z.getCurrentHangStatus()) return;
                 let u = s.Z.getChannel(r);
-                !(0, i.w)(u, !0) && (0, l.Sc)();
+                !(0, i.wQ)(u, !0) && (0, l.Sc)();
             }),
             _(this, 'handleDisconnectFromVoiceChannel', () => {
                 (0, l.Sc)();

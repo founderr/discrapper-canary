@@ -39,8 +39,8 @@ var r = n(200651),
     Z = n(813744),
     F = n(311476),
     V = n(892254),
-    j = n(210887),
-    H = n(978781),
+    H = n(210887),
+    j = n(978781),
     Y = n(819640),
     W = n(594174),
     K = n(451478),
@@ -86,7 +86,7 @@ t.Z = function (e) {
         { pathname: a } = (0, l.TH)(),
         f = (0, z.getPlatform)(),
         v = u.tq || u.Em,
-        K = (0, c.e7)([j.Z], () => (j.Z.darkSidebar ? en.BRd.DARK : void 0)),
+        K = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
         Q = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
         [et, eo, el] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
         [eu, ec] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
@@ -203,8 +203,8 @@ t.Z = function (e) {
                                                                 }),
                                                             (eI || eS) &&
                                                                 eb &&
-                                                                (0, r.jsx)(H.Z, {
-                                                                    initialTab: eS ? H._.APP_ICONS : H._.CLIENT_THEMES,
+                                                                (0, r.jsx)(j.Z, {
+                                                                    initialTab: eS ? j._.APP_ICONS : j._.CLIENT_THEMES,
                                                                     markAsDismissed: em
                                                                 }),
                                                             (0, r.jsx)(P.Z, { mobile: v })

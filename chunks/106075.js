@@ -41,7 +41,7 @@ function T() {
             isSearchBarVisible: y,
             isSearchBarEmpty: '' === L.trim()
         }),
-        G = (0, h.NL)(),
+        G = h.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
                 b(e), P && j();
@@ -71,7 +71,7 @@ function T() {
             T();
         }, [A, T]),
         r.useEffect(() => {
-            !P && (0, h.LD)({ scrollPosition: null });
+            !P && h.Z.setState({ scrollPosition: null });
         }, [P]),
         (0, i.jsxs)('div', {
             className: N.container,

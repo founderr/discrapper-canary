@@ -154,7 +154,7 @@ function G(e) {
     t.isDM() ? (T = O.intl.string(O.t.jN2DfX)) : t.isGroupDM() && (T = O.intl.string(O.t['e5y+go']));
     let A = (0, r.e7)([h.Z], () => h.Z.getChannelStatus(t)),
         P = t.isGuildVoice() && c && null != A && A.length > 0,
-        B = (0, j.Z)(t),
+        B = (0, j.ZP)(t),
         U = P
             ? (0, i.jsx)(s.Tooltip, {
                   text: O.intl.string(O.t.Mgpxi4),

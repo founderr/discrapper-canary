@@ -1,6 +1,6 @@
 n.d(t, {
     CF: function () {
-        return H;
+        return j;
     },
     ZP: function () {
         return z;
@@ -52,7 +52,7 @@ var r = n(200651),
     Z = n(388032),
     F = n(825193),
     V = n(255963);
-function j(e) {
+function H(e) {
     let { avatarSrc: t, avatarDecorationSrc: n, compact: i, onClick: a, onContextMenu: o, onMouseDown: l, onMouseEnter: u, onMouseLeave: c, onKeyDown: d, showCommunicationDisabledStyles: f = !1, className: _ } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -83,7 +83,7 @@ function j(e) {
         ]
     });
 }
-function H(e, t, n) {
+function j(e, t, n) {
     let { message: i, channel: a, author: s, compact: o = !1, onContextMenu: l, showUsernamePopout: u, roleIcon: c, onClickUsername: d, onPopoutRequestClose: f } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -272,7 +272,7 @@ function z(e) {
                             position: o.tq ? 'window_center' : 'right',
                             onRequestClose: b,
                             children: (e) =>
-                                j({
+                                H({
                                     ...Z,
                                     avatarSrc: V,
                                     avatarDecorationSrc: G,
@@ -288,7 +288,7 @@ function z(e) {
                     })
                   : (0, r.jsx)(d.Gt, {
                         value: L,
-                        children: j({
+                        children: H({
                             ...Z,
                             avatarSrc: V,
                             avatarDecorationSrc: G,
@@ -413,7 +413,7 @@ function z(e) {
     (0, L.yE)(t.flags, B.iLy.SUPPRESS_NOTIFICATIONS) && el.push((0, r.jsx)(I.Z, {}, 'suppress-notifications'));
     let eu = {};
     (eu[M.a.SYSTEM_TAG] = en), (eu[M.a.BADGES] = er);
-    let ec = H(e, z, eu),
+    let ec = j(e, z, eu),
         ed = (0, P.XX)(t, b),
         ef = (0, P.Dv)(t),
         e_ = k ? ''.concat(ed) : ''.concat(ed, ' ').concat(ef),

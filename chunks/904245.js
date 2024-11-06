@@ -40,8 +40,8 @@ n(807092);
 var Z = n(869765),
     F = n(926491),
     V = n(467798),
-    j = n(346479),
-    H = n(218543),
+    H = n(346479),
+    j = n(218543),
     Y = n(199902),
     W = n(314897),
     K = n(592125);
@@ -390,7 +390,7 @@ let eg = {
                 }))
             )
                 return;
-            H.Z.fetchMessages.recordStart();
+            j.Z.fetchMessages.recordStart();
             let m = null != l ? l : void 0;
             null == m && null != u && (m = { ...u });
             let g = o.Z.getOrCreate(t).loadStart(m);
@@ -414,8 +414,8 @@ let eg = {
                     })
                     .then(
                         (e) => (
-                            H.Z.fetchMessages.recordEnd(),
-                            H.Z.dispatchMessages.measure(() => {
+                            j.Z.fetchMessages.recordEnd(),
+                            j.Z.dispatchMessages.measure(() => {
                                 let i = e.body,
                                     o = null != n,
                                     u = null != r,
@@ -473,19 +473,19 @@ let eg = {
                 l = o.Z.getOrCreate(e),
                 u = c.Z.database();
             if (null == u || null == a || null != t || null != n) {
-                H.Z.addLocalMessages(e, -1);
+                j.Z.addLocalMessages(e, -1);
                 return;
             }
             if (l.ready && !l.cached) {
-                H.Z.addLocalMessages(e, -2);
+                j.Z.addLocalMessages(e, -2);
                 return;
             }
             let _ = await (0, d.dI)(() => f.ZP.load(u, e, r));
             if (null == _) {
-                H.Z.addLocalMessages(e, -3);
+                j.Z.addLocalMessages(e, -3);
                 return;
             }
-            if ((ef.log('fetched '.concat(_.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(i.completed, ')')), H.Z.addLocalMessages(e, _.messages.length), !i.completed && _.messages.length > 0)) {
+            if ((ef.log('fetched '.concat(_.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(i.completed, ')')), j.Z.addLocalMessages(e, _.messages.length), !i.completed && _.messages.length > 0)) {
                 let t = _.messages.length >= r && _.connectionId === I.Z.lastTimeConnectedChanged();
                 s.Z.dispatch({
                     type: 'LOCAL_MESSAGES_LOADED',
@@ -744,8 +744,8 @@ let eg = {
                 { invalidEmojis: d, validNonShortcutEmojis: f, tts: E = !1 } = t,
                 { activityAction: v, location: I, suggestedInvite: S, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
                 Z = null !== (i = n.flags) && void 0 !== i ? i : 0,
-                [j, H] = (0, V.Z)(c);
-            j && ((c = H), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
+                [H, j] = (0, V.Z)(c);
+            H && ((c = j), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
             let Y = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
             if ('' === c && null == v && null == A && null == R && !Y) return Promise.resolve();
             let z = null != N ? el.uaV.REPLY : el.uaV.DEFAULT,
@@ -1007,7 +1007,7 @@ let eg = {
         },
         async editMessage(e, t, n) {
             let { content: r } = n;
-            await j.Z.unarchiveThreadIfNecessary(e);
+            await H.Z.unarchiveThreadIfNecessary(e);
             let i = (function (e, t) {
                     let n = q.Z.getMessage(e, t);
                     if (null == n || n.type !== el.uaV.REPLY) return;
@@ -1055,7 +1055,7 @@ let eg = {
             );
         },
         async suppressEmbeds(e, t) {
-            await j.Z.unarchiveThreadIfNecessary(e),
+            await H.Z.unarchiveThreadIfNecessary(e),
                 i.tn.patch({
                     url: el.ANM.MESSAGE(e, t),
                     body: { flags: el.iLy.SUPPRESS_EMBEDS },
@@ -1063,7 +1063,7 @@ let eg = {
                 });
         },
         async patchMessageAttachments(e, t, n) {
-            await j.Z.unarchiveThreadIfNecessary(e),
+            await H.Z.unarchiveThreadIfNecessary(e),
                 i.tn.patch({
                     url: el.ANM.MESSAGE(e, t),
                     body: { attachments: n },
@@ -1083,7 +1083,7 @@ let eg = {
                 };
             n
                 ? r()
-                : (await j.Z.unarchiveThreadIfNecessary(e),
+                : (await H.Z.unarchiveThreadIfNecessary(e),
                   i.tn
                       .del({
                           url: el.ANM.MESSAGE(e, t),

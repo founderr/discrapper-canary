@@ -39,18 +39,18 @@ function w(e) {
         { profileType: B } = (0, T.z)(),
         Z = { [x.fullSize]: B === L.y0.FULL_SIZE },
         { interactionSource: F, interactionSourceId: V } = (0, E.Xo)(),
-        j = (0, _.Bq)({
+        H = (0, _.Bq)({
             activity: w,
             user: n
         }),
-        H = (0, g.Z)(w),
+        j = (0, g.Z)(w),
         { largeImage: Y } = (0, d.FO)(w),
         { analyticsLocations: W } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         K = (0, p.Z)({
             display: 'live',
             user: n,
             activity: w,
-            entry: j,
+            entry: H,
             analyticsLocations: W
         }),
         z = (0, m.Z)({
@@ -154,12 +154,12 @@ function w(e) {
                                 interactionSourceId: $,
                                 children: [
                                     (0, r.jsx)(y.Z, {
-                                        ...H,
+                                        ...j,
                                         contextMenu: (0, r.jsx)(D.Z, {
                                             display: 'live',
                                             user: n,
                                             activity: w,
-                                            entry: j,
+                                            entry: H,
                                             onClose: U,
                                             onRequestOpen: t
                                         })

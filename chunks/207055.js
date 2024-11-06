@@ -65,7 +65,7 @@ let k = l.memo((e) => {
             guildId: r.guild_id,
             location: 'VoiceUsers'
         }),
-        Q = (0, p.Z)(r, !0, a),
+        Q = (0, p.ZP)(r, !0, a),
         $ = (0, s.e7)([f.Z], () => (L ? f.Z.getHangStatusActivity() : null), [L]),
         ee = (0, s.e7)([N.Z], () => N.Z.findActivity(b, (e) => e.type === M.IIU.HANG_STATUS), [b]),
         et = (0, C.Eu)(r.id, b);

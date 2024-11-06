@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return H;
+        return j;
     }
 }),
     n(47120);
@@ -99,12 +99,12 @@ let D = (0, p.Un)({
         webpackId: 549652,
         name: 'BrowserHandoff'
     }),
-    j = (0, p.Un)({
+    H = (0, p.Un)({
         createPromise: () => n.e('76888').then(n.bind(n, 573276)),
         webpackId: 573276,
         name: 'MobileWebHandoffFallback'
     }),
-    H = (0, p.Un)({
+    j = (0, p.Un)({
         createPromise: () => Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('50506'), n.e('23755'), n.e('79189'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('29549'), n.e('6380'), n.e('12013'), n.e('52249'), n.e('18543'), n.e('99783'), n.e('65840'), n.e('31605'), n.e('72181'), n.e('13351'), n.e('26182'), n.e('95900'), n.e('13513'), n.e('32776'), n.e('41309'), n.e('90508'), n.e('95393'), n.e('38902'), n.e('56602'), n.e('25788'), n.e('46097'), n.e('8739'), n.e('18101'), n.e('58059'), n.e('70348'), n.e('18895'), n.e('87624'), n.e('43678'), n.e('99393'), n.e('99008'), n.e('7590'), n.e('24648'), n.e('50104'), n.e('70205'), n.e('1187'), n.e('89943'), n.e('43053'), n.e('92557'), n.e('64679'), n.e('67588'), n.e('24582'), n.e('77564'), n.e('62880'), n.e('31915'), n.e('69650'), n.e('47321'), n.e('84804'), n.e('37220'), n.e('9238'), n.e('82158'), n.e('91315'), n.e('99697'), n.e('54814'), n.e('25126'), n.e('93197')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
@@ -241,7 +241,7 @@ class $ extends i.Component {
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         path: C.Z5c.MOBILE_WEB_HANDOFF,
-                                        component: j
+                                        component: H
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         path: C.Z5c.CONNECTION_LINK(':type'),

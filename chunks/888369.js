@@ -177,7 +177,7 @@ function V(e) {
         null != n && F(n.id);
     }
 }
-function j(e) {
+function H(e) {
     let { guilds: t, readState: n } = e;
     (A = {}), (C = 0), (N = new Set());
     let r = n.entries.length < 500,
@@ -195,7 +195,7 @@ function j(e) {
     t))
         F(e.id, r ? i.has(e.id) : void 0);
 }
-function H() {
+function j() {
     for (let e of ((A = {}), (N = new Set()), F(null), Object.values(_.Z.getGuildIds()))) F(e);
 }
 function Y(e) {
@@ -428,7 +428,7 @@ class ep extends g.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: j,
+            CONNECTION_OPEN: H,
             OVERLAY_INITIALIZE: V,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             GUILD_CREATE: Y,
@@ -467,8 +467,8 @@ class ep extends g.Z {
             LOAD_MESSAGES_SUCCESS: Q,
             CHANNEL_ACK: Q,
             CHANNEL_LOCAL_ACK: Q,
-            NOTIFICATION_SETTINGS_UPDATE: H,
-            RECOMPUTE_READ_STATES: H,
+            NOTIFICATION_SETTINGS_UPDATE: j,
+            RECOMPUTE_READ_STATES: j,
             VOICE_CHANNEL_SELECT: Q,
             ENABLE_AUTOMATIC_ACK: Q,
             RESORT_THREADS: Q,

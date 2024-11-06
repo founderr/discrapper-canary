@@ -255,7 +255,7 @@ async function y(e) {
         a = d.Z.getIsFetchingCounts(i);
     if (!l && !a) {
         if (
-            ((0, h.LD)({
+            (h.Z.setState({
                 fetchedQuery: i,
                 resultsQuery: ''
             }),
@@ -268,7 +268,7 @@ async function y(e) {
             query: i,
             algoliaFilters: { approximate_member_count: o.sq },
             onComplete: () => {
-                (0, h.LD)({ resultsQuery: i });
+                h.Z.setState({ resultsQuery: i });
             }
         }),
             b({

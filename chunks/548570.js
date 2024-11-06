@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return H;
+        return j;
     }
 }),
     n(315314),
@@ -65,8 +65,8 @@ let B = 30 * T.Z.Millis.SECOND,
 function V(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
-let j = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class H extends L.Z {
+let H = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class j extends L.Z {
     get connectionState() {
         return this.connectionState_;
     }
@@ -252,7 +252,7 @@ class H extends L.Z {
         (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : j;
+        return null != this.resumeUrl ? this.resumeUrl : H;
     }
     _handleHeartbeatReceive() {
         this._sendHeartbeat(), null != this.heartbeater && null != this.heartbeatInterval && (clearInterval(this.heartbeater), (this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval)));

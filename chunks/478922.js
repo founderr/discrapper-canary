@@ -28,10 +28,10 @@ function d(e, t, n) {
             B = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
-            [V, j] = i.useState(!1),
-            { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
+            [V, H] = i.useState(!1),
+            { scrollerRef: j, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
         (0, u.tT)({
-            scrollerRef: H,
+            scrollerRef: j,
             className: w,
             specs: a,
             orientation: 'vertical',
@@ -72,12 +72,12 @@ function d(e, t, n) {
                 },
                 [K, Y, J]
             ),
-            et = (0, u.t2)(H),
+            et = (0, u.t2)(j),
             en = (0, i.useCallback)(() => $.itemGrid, [$]),
             er = (0, i.useCallback)(() => $.coordsMap, [$]),
             ei = i.useCallback(() => ee(), [ee]);
         (0, u.zn)({
-            ref: H,
+            ref: j,
             key: 'container',
             onUpdate: ei,
             resizeObserver: f,
@@ -86,20 +86,20 @@ function d(e, t, n) {
             (0, i.useImperativeHandle)(
                 _,
                 () => ({
-                    getScrollerNode: () => H.current,
+                    getScrollerNode: () => j.current,
                     getItemGrid: en,
                     getCoordsMap: er,
                     getScrollerState: W,
-                    ...(0, u.Ue)(H, W, et)
+                    ...(0, u.Ue)(j, W, et)
                 }),
-                [H, W, en, et, er]
+                [j, W, en, et, er]
             );
         let ea = (0, i.useCallback)(
             (e) => {
                 ee(1),
-                    null == B.current ? j(!0) : clearTimeout(B.current),
+                    null == B.current ? H(!0) : clearTimeout(B.current),
                     (B.current = setTimeout(() => {
-                        (B.current = null), j(!1);
+                        (B.current = null), H(!1);
                     }, 200)),
                     null != p && p(e);
             },
@@ -110,7 +110,7 @@ function d(e, t, n) {
                 2 !== Y.current.dirty && (Y.current.dirty = 2);
             }, [X, Y]),
             (0, r.jsxs)('div', {
-                ref: H,
+                ref: j,
                 onScroll: ea,
                 className: s()(w, {
                     [e]: !0,

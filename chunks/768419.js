@@ -49,9 +49,9 @@ let P = g.Z.get(w.ABu.SPOTIFY),
     Z = 5 * O.Z.Millis.SECOND,
     F = 1.5 * O.Z.Millis.SECOND,
     V = 1 * O.Z.Millis.MINUTE,
-    j = 3 * O.Z.Millis.SECOND;
+    H = 3 * O.Z.Millis.SECOND;
 ((l = s || (s = {})).PLAYER_STATE_CHANGED = 'PLAYER_STATE_CHANGED'), (l.DEVICE_STATE_CHANGED = 'DEVICE_STATE_CHANGED');
-let H = {
+let j = {
         MESSAGE: 'message',
         PING: 'ping',
         PONG: 'pong'
@@ -123,7 +123,7 @@ class eo {
     }
     ping() {
         var e;
-        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: H.PING })));
+        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: j.PING })));
     }
     handleOpen() {
         W.info('WS Connected'), this.backoff.succeed(), this.pingInterval.start(U, () => this.ping()), (0, L.Ai)(this.accountId, this.accessToken), (0, L.PW)(this.accountId, this.accessToken);
@@ -133,12 +133,12 @@ class eo {
         if ('string' != typeof t) return;
         let { type: n, uri: r, payloads: i } = JSON.parse(t);
         switch (n) {
-            case H.MESSAGE:
+            case j.MESSAGE:
                 if ('string' == typeof r && r.startsWith(k)) (this.connectionId = decodeURIComponent(r.split(k)[1])), (0, L.am)(this.accountId, this.accessToken, this.connectionId);
                 else if (Array.isArray(i)) {
                     for (let { events: e } of i) if (null != e) for (let t of e) this.handleEvent(t);
                 }
-            case H.PONG:
+            case j.PONG:
         }
     }
     handleClose() {
@@ -175,7 +175,7 @@ class eo {
                 'handleDeviceStateChange',
                 c().throttle(() => {
                     (0, L.PW)(this.accountId, this.accessToken), eg(this.accountId, this.accessToken);
-                }, j)
+                }, H)
             ),
             (this.accountId = e),
             (this.accessToken = t),

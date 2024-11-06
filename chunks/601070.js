@@ -40,7 +40,7 @@ function L(e) {
     let t = g.Z.getThreadsForGuild(e);
     for (let e in t)
         for (let n in t[e]) {
-            j(n);
+            H(n);
             let e = f.Z.getChannel(n);
             if (null == e) continue;
             let t = E.Z.joinTimestamp(n);
@@ -50,11 +50,11 @@ function L(e) {
                         joinTimestamp: t.getTime()
                     },
                     { isUnread: r, isRelevant: i, isTimedRelevant: a } = F(e);
-                H(S, e, n, !1), H(A, e, i ? n : null, !1), H(T, e, r ? n : null, !1), a && V(e, !0);
+                j(S, e, n, !1), j(A, e, i ? n : null, !1), j(T, e, r ? n : null, !1), a && V(e, !0);
             } else {
-                H(b, e, e, !1);
+                j(b, e, e, !1);
                 let t = h.ZP.isForumPostUnread(e.id);
-                H(y, e, t ? e : null, !1);
+                j(y, e, t ? e : null, !1);
             }
         }
 }
@@ -89,13 +89,13 @@ function P(e, t, n) {
                     joinTimestamp: i.getTime()
                 },
                 { isUnread: t, isRelevant: n, isTimedRelevant: a } = F(r);
-            H(S, r, e, !0), H(A, r, n ? e : null, !0), H(T, r, t ? e : null, !0), H(b, r, null, !0), H(y, r, null, !0), V(r, a);
+            j(S, r, e, !0), j(A, r, n ? e : null, !0), j(T, r, t ? e : null, !0), j(b, r, null, !0), j(y, r, null, !0), V(r, a);
         } else {
             let e = h.ZP.isForumPostUnread(r.id);
-            H(S, r, null, !0), H(T, r, null, !0), H(A, r, null, !0), H(b, r, r, !0), H(y, r, e ? r : null, !0), j(r.id);
+            j(S, r, null, !0), j(T, r, null, !0), j(A, r, null, !0), j(b, r, r, !0), j(y, r, e ? r : null, !0), H(r.id);
         }
         M(e, t);
-    } else Y(S, e, t, n), Y(A, e, t, n), Y(T, e, t, n), Y(b, e, t, n), Y(y, e, t, n), j(n), M(e, t);
+    } else Y(S, e, t, n), Y(A, e, t, n), Y(T, e, t, n), Y(b, e, t, n), Y(y, e, t, n), H(n), M(e, t);
 }
 function k(e) {
     return P(e.channel.guild_id, e.channel.parent_id, e.channel.id);
@@ -123,12 +123,12 @@ function G(e) {
             let l = S[e][r][t.id],
                 u = n ? l : null,
                 c = i ? l : null;
-            H(T, t, u, !0), H(A, t, c, !0), M(e, r);
+            j(T, t, u, !0), j(A, t, c, !0), M(e, r);
         } else {
             let e = W(y, t),
                 n = h.ZP.isForumPostUnread(t.id);
             if (n === e) return !1;
-            H(y, t, n ? t : null, !0);
+            j(y, t, n ? t : null, !0);
         }
     }
 }
@@ -138,13 +138,13 @@ function B() {
             for (let n in S[e][t]) {
                 let r = S[e][t][n],
                     { isUnread: i, isRelevant: a, isTimedRelevant: s } = F(r.channel);
-                i && H(T, r.channel, r, !1), a && H(A, r.channel, r, !1), V(r.channel, s);
+                i && j(T, r.channel, r, !1), a && j(A, r.channel, r, !1), V(r.channel, s);
             }
     for (let e in ((y = {}), b))
         for (let t in b[e])
             for (let n in b[e][t]) {
                 let r = b[e][t][n];
-                h.ZP.isForumPostUnread(n) && H(y, r, r, !1);
+                h.ZP.isForumPostUnread(n) && j(y, r, r, !1);
             }
     x();
 }
@@ -166,7 +166,7 @@ function F(e) {
     };
 }
 function V(e, t) {
-    j(e.id),
+    H(e.id),
         t &&
             (function (e) {
                 R[e.id] = setTimeout(
@@ -182,10 +182,10 @@ function V(e, t) {
                 );
             })(e);
 }
-function j(e) {
+function H(e) {
     e in R && (clearTimeout(R[e]), delete R[e]);
 }
-function H(e, t, n, r) {
+function j(e, t, n, r) {
     let { guild_id: i, parent_id: a, id: s } = t;
     null != i &&
         null != a &&
@@ -343,7 +343,7 @@ class $ extends (r = u.ZP.Store) {
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
                 n = !1;
-            return null != t.guild_id && null != t.parent_id && (t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (m.default.keys(A[t.guild_id][t.parent_id]).forEach(j), delete A[t.guild_id][t.parent_id], (n = !0)), t.guild_id in b && t.parent_id in b[t.guild_id] && (delete b[t.guild_id][t.parent_id], (n = !0)), t.guild_id in y && t.parent_id in y[t.guild_id] && (delete y[t.guild_id][t.parent_id], (n = !0)), n && M(t.guild_id, t.parent_id)), n;
+            return null != t.guild_id && null != t.parent_id && (t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (m.default.keys(A[t.guild_id][t.parent_id]).forEach(H), delete A[t.guild_id][t.parent_id], (n = !0)), t.guild_id in b && t.parent_id in b[t.guild_id] && (delete b[t.guild_id][t.parent_id], (n = !0)), t.guild_id in y && t.parent_id in y[t.guild_id] && (delete y[t.guild_id][t.parent_id], (n = !0)), n && M(t.guild_id, t.parent_id)), n;
         },
         THREAD_MEMBER_UPDATE: U,
         THREAD_MEMBERS_UPDATE: U,

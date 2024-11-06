@@ -97,15 +97,15 @@ var v = new WeakMap(),
     Z = Symbol('placeholder'),
     F = Symbol('mark-placeholder'),
     V = globalThis.Text,
-    j = (e) => (e && e.ownerDocument && e.ownerDocument.defaultView) || null,
-    H = (e) => W(e) && 8 === e.nodeType,
+    H = (e) => (e && e.ownerDocument && e.ownerDocument.defaultView) || null,
+    j = (e) => W(e) && 8 === e.nodeType,
     Y = (e) => W(e) && 1 === e.nodeType,
     W = (e) => {
-        var t = j(e);
+        var t = H(e);
         return !!t && e instanceof t.Node;
     },
     K = (e) => {
-        var t = e && e.anchorNode && j(e.anchorNode);
+        var t = e && e.anchorNode && H(e.anchorNode);
         return !!t && e instanceof t.Selection;
     },
     z = (e) => W(e) && 3 === e.nodeType,
@@ -131,7 +131,7 @@ var v = new WeakMap(),
         return !1;
     },
     J = (e, t, n) => {
-        for (var { childNodes: r } = e, i = r[t], a = t, s = !1, o = !1; (H(i) || (Y(i) && 0 === i.childNodes.length) || (Y(i) && 'false' === i.getAttribute('contenteditable'))) && (!s || !o); ) {
+        for (var { childNodes: r } = e, i = r[t], a = t, s = !1, o = !1; (j(i) || (Y(i) && 0 === i.childNodes.length) || (Y(i) && 'false' === i.getAttribute('contenteditable'))) && (!s || !o); ) {
             if (a >= r.length) {
                 (s = !0), (a = t - 1), (n = 'backward');
                 continue;
@@ -673,7 +673,7 @@ var v = new WeakMap(),
         (e) => {
             var { decorations: t, element: n, renderElement: r = (e) => u.createElement(eU, Object.assign({}, e)), renderPlaceholder: a, renderLeaf: s, selection: o } = e,
                 l = ex(),
-                c = eH(),
+                c = ej(),
                 f = l.isInline(n),
                 _ = ev.findKey(l, n),
                 h = (0, u.useCallback)(
@@ -790,8 +790,8 @@ var v = new WeakMap(),
         }
         return f;
     },
-    ej = (0, u.createContext)(!1),
-    eH = () => (0, u.useContext)(ej),
+    eH = (0, u.createContext)(!1),
+    ej = () => (0, u.useContext)(eH),
     eY = (0, u.createContext)(null),
     eW = () => {
         var e = (0, u.useContext)(eY);
@@ -1148,7 +1148,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
             o,
             c,
             f = (0, u.useCallback)((e) => u.createElement(td, Object.assign({}, e)), []),
-            { autoFocus: _, decorate: h = tf, onDOMBeforeInput: g, placeholder: E, readOnly: v = !1, renderElement: I, renderLeaf: N, renderPlaceholder: C = f, scrollSelectionIntoView: x = t_, style: V = {}, as: H = 'div', disableDefaultStyles: z = !1 } = e,
+            { autoFocus: _, decorate: h = tf, onDOMBeforeInput: g, placeholder: E, readOnly: v = !1, renderElement: I, renderLeaf: N, renderPlaceholder: C = f, scrollSelectionIntoView: x = t_, style: V = {}, as: j = 'div', disableDefaultStyles: z = !1 } = e,
             Q = m(e, ta),
             X = eW(),
             [J, $] = (0, u.useState)(!1),
@@ -1641,7 +1641,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                 scheduleOnDOMSelectionChange: e_
             });
         eN(() => {
-            ee.current && (e = j(ee.current)) ? (S.set(X, e), T.set(X, ee.current), A.set(X, ee.current), y.set(ee.current, X)) : A.delete(X);
+            ee.current && (e = H(ee.current)) ? (S.set(X, e), T.set(X, ee.current), A.set(X, ee.current), y.set(ee.current, X)) : A.delete(X);
             var e,
                 { selection: t } = X,
                 n = ev.findDocumentOrShadowRoot(X).getSelection();
@@ -1871,7 +1871,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
         });
         var eL = null === (o = b.get(X)) || void 0 === o ? void 0 : null === (c = o.getBoundingClientRect()) || void 0 === c ? void 0 : c.height;
         return u.createElement(
-            ej.Provider,
+            eH.Provider,
             { value: v },
             u.createElement(
                 eG.Provider,
@@ -1883,7 +1883,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eV(e)),
                         receivedUserInput: ei
                     },
                     u.createElement(
-                        H,
+                        j,
                         Object.assign(
                             {
                                 role: v ? void 0 : 'textbox',

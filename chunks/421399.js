@@ -45,8 +45,8 @@ function A(e) {
         { nick: G, colorString: B, colorRoleName: Z } = r,
         F = null != i.messageReference && null != i.webhookId && i.hasFlag(T.iLy.IS_CROSSPOST),
         V = (0, c.e7)([f.Z], () => f.Z.roleStyle),
-        j = (0, E.X$)(),
-        H = s.useMemo(
+        H = (0, E.X$)(),
+        j = s.useMemo(
             () => ({
                 source: T.jXE.CHANNEL,
                 messageId: i.id,
@@ -69,10 +69,10 @@ function A(e) {
                           userId: i.author.id,
                           contextGuildId: k,
                           className: b.clanTagChiplet,
-                          profileViewedAnalytics: H
+                          profileViewedAnalytics: j
                       })
                     : null,
-            [A, H, r.clan, k, i.author.id]
+            [A, j, r.clan, k, i.author.id]
         );
     n =
         null != x && null != C
@@ -150,12 +150,12 @@ function A(e) {
                         userId: i.author.id,
                         contextGuildId: k,
                         className: b.clanTagChiplet,
-                        profileViewedAnalytics: H
+                        profileViewedAnalytics: j
                     })
                 }),
             null != z ? (0, a.jsx)(a.Fragment, { children: z }) : null,
             null == K || A ? null : K,
-            null != i && (0, S.f)(i) && j && w ? (0, a.jsx)(y, {}) : null
+            null != i && (0, S.f)(i) && H && w ? (0, a.jsx)(y, {}) : null
         ]
     });
 }

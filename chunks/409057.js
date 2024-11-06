@@ -44,7 +44,7 @@ var i = n(120356),
     Z = n(388032),
     F = n(676411);
 function V(e) {
-    let { user: t, currentUser: n, activity: i, application: V, guild: j, channel: H, className: Y, onClose: W } = e,
+    let { user: t, currentUser: n, activity: i, application: V, guild: H, channel: j, className: Y, onClose: W } = e,
         { analyticsLocations: K } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: z } = (0, N.z)(),
         q = { [F.fullSize]: z === U.y0.FULL_SIZE },
@@ -113,7 +113,7 @@ function V(e) {
                       variant: 'heading-sm/semibold',
                       text: (0, v.O8)(i)
                   })
-                : (0, d.Z)(i) && null != H
+                : (0, d.Z)(i) && null != j
                   ? (0, r.jsxs)('div', {
                         className: F.voiceChannelText,
                         children: [
@@ -124,7 +124,7 @@ function V(e) {
                             }),
                             (0, r.jsx)(D.Z, {
                                 variant: 'heading-sm/semibold',
-                                text: H.name
+                                text: j.name
                             })
                         ]
                     })
@@ -141,12 +141,12 @@ function V(e) {
         es = () =>
             i.type === G.IIU.HANG_STATUS
                 ? null
-                : (0, d.Z)(i) && null != j
+                : (0, d.Z)(i) && null != H
                   ? (0, r.jsx)(D.Z, {
                         variant: 'text-xs/normal',
-                        text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: j.name }),
+                        text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: H.name }),
                         onClick: () => {
-                            (0, I.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
+                            (0, I.X)(H.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
                         }
                     })
                   : (0, c.Z)(i)
@@ -233,15 +233,15 @@ function V(e) {
                       children: [ea(), es(), eo()]
                   }),
         ed = () =>
-            null == j || null == H
+            null == H || null == j
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: F.voiceChannelDivider }),
                           (0, r.jsx)(L.Z, {
                               user: t,
-                              guild: j,
-                              channel: H,
+                              guild: H,
+                              channel: j,
                               onAction: J,
                               onClose: W
                           })

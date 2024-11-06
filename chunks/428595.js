@@ -399,8 +399,8 @@ let P = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    j = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-    H = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
+    H = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
+    j = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
     Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
     W = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
 function K(e, t) {
@@ -451,9 +451,9 @@ t.Z = {
     VOICE_CHANNEL_STATUS_RULES: Z,
     EMBED_TITLE_RULES: F,
     INLINE_REPLY_RULES: V,
-    GUILD_VERIFICATION_FORM_RULES: j,
+    GUILD_VERIFICATION_FORM_RULES: H,
     GUILD_EVENT_RULES: Y,
-    PROFILE_BIO_RULES: H,
+    PROFILE_BIO_RULES: j,
     AUTO_MODERATION_SYSTEM_MESSAGE_RULES: z,
     NATIVE_SEARCH_RESULT_LINK_RULES: W
 };

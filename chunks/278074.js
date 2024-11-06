@@ -234,17 +234,17 @@ let T = d(
     Z = (e) => g((t) => S(t) && t >= e),
     F = () => g((e) => S(e) && e > 0),
     V = () => g((e) => S(e) && e < 0),
-    j = (e) =>
+    H = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => j(p(e, k(t, n))),
-            lt: (t) => j(p(e, U(t))),
-            gt: (t) => j(p(e, G(t))),
-            lte: (t) => j(p(e, B(t))),
-            gte: (t) => j(p(e, Z(t))),
-            positive: () => j(p(e, F())),
-            negative: () => j(p(e, V()))
+            between: (t, n) => H(p(e, k(t, n))),
+            lt: (t) => H(p(e, U(t))),
+            gt: (t) => H(p(e, G(t))),
+            lte: (t) => H(p(e, B(t))),
+            gte: (t) => H(p(e, Z(t))),
+            positive: () => H(p(e, F())),
+            negative: () => H(p(e, V()))
         }),
-    H = j(g(S)),
+    j = H(g(S)),
     Y = d(
         g(function (e) {
             return 'boolean' == typeof e;
@@ -398,7 +398,7 @@ var z = {
     gteBigInt: Z,
     positiveBigInt: F,
     negativeBigInt: V,
-    bigint: H,
+    bigint: j,
     boolean: Y,
     symbol: W,
     nullish: K,

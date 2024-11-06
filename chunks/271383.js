@@ -72,7 +72,7 @@ function F(e) {
 function V(e) {
     return e.split('-')[0];
 }
-function j(e, t) {
+function H(e, t) {
     let n, r, i, a, s;
     if (0 === t.length)
         return {
@@ -98,9 +98,9 @@ function j(e, t) {
         highestRoleId: null == s ? void 0 : s.id
     };
 }
-function H(e) {
+function j(e) {
     let { userId: t, nick: n, guildId: r, avatar: i, avatarDecoration: a, guildRoles: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: d, unusualDMActivityUntil: f, fullProfileLoadedTimestamp: _, flags: h } = e,
-        { colorString: p, colorRoleId: m, iconRoleId: E, hoistRoleId: v, highestRoleId: T } = j(s, o),
+        { colorString: p, colorRoleId: m, iconRoleId: E, hoistRoleId: v, highestRoleId: T } = H(s, o),
         b = {
             userId: t,
             nick: n,
@@ -164,7 +164,7 @@ function W(e) {
     if (null == h) return !1;
     let p = b.Z.getGuild(n);
     if (null == p) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-    (h[r.id] = H({
+    (h[r.id] = j({
         userId: r.id,
         nick: i,
         guildId: n,
@@ -197,7 +197,7 @@ function K(e, t) {
         : (t.forEach((t) => {
               var i;
               let a = n[t.user.id];
-              (n[t.user.id] = H({
+              (n[t.user.id] = j({
                   userId: t.user.id,
                   nick: t.nick,
                   guildId: e,
@@ -242,7 +242,7 @@ function Q(e) {
         var i;
         let s = a.user.id,
             o = r[s],
-            l = H({
+            l = j({
                 userId: s,
                 nick: a.nick,
                 guildId: e.id,
@@ -272,7 +272,7 @@ function X(e) {
         let a = t[i];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = i === r && 'GUILD_ROLE_DELETE' === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
-            (t[i] = H({
+            (t[i] = j({
                 userId: i,
                 nick: a.nick,
                 guildId: e.guildId,
@@ -298,7 +298,7 @@ function J(e) {
     if (null == r) return A.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
     let i = S.default.getId(),
         a = n[i];
-    n[i] = H({
+    n[i] = j({
         userId: i,
         nick: a.nick,
         guildId: t,
@@ -540,7 +540,7 @@ class en extends (i = f.ZP.Store) {
                 added: c().difference(c().union(null !== (n = h.added) && void 0 !== n ? n : [], s), null != o ? o : []),
                 removed: c().difference(c().union(null !== (r = h.removed) && void 0 !== r ? r : [], o), null != s ? s : [])
             }),
-                (d[u] = H({
+                (d[u] = j({
                     userId: u,
                     guildId: i,
                     nick: f.nick,
@@ -598,7 +598,7 @@ class en extends (i = f.ZP.Store) {
             let s = i[n];
             if (null == s || !s.roles.includes(r)) return !1;
             s.roles = s.roles.filter((e) => e !== r);
-            let o = j(b.Z.getRoles(a.id), s.roles);
+            let o = H(b.Z.getRoles(a.id), s.roles);
             return (
                 (i[n] = {
                     ...s,
@@ -616,7 +616,7 @@ class en extends (i = f.ZP.Store) {
             let s = i[n];
             if (null == s || s.roles.includes(r)) return !1;
             s.roles = [...s.roles, r];
-            let o = j(b.Z.getRoles(a.id), s.roles);
+            let o = H(b.Z.getRoles(a.id), s.roles);
             return (
                 (i[n] = {
                     ...s,
@@ -631,7 +631,7 @@ class en extends (i = f.ZP.Store) {
             if (null == r) return !1;
             let i = b.Z.getGuild(n);
             if (null == i) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
-            (r[t.user.id] = H({
+            (r[t.user.id] = j({
                 userId: t.user.id,
                 nick: t.nick,
                 guildId: n,

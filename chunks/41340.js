@@ -68,41 +68,41 @@ let g = {
         }
     ];
 function v(e) {
-    var t, n;
-    let { subscription: l, onUpdated: v } = e,
-        [j, _] = a.useState(!1),
-        [C, T] = a.useState(!1),
-        S = (e) => ((null == e && (e = l.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
-        N = (e) => {
+    var t, n, l;
+    let { subscription: v, onUpdated: j } = e,
+        [_, C] = a.useState(!1),
+        [T, S] = a.useState(!1),
+        N = (e) => ((null == e && (e = v.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
+        y = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
-        y = async (e) => {
-            let { status: t = l.status, premiumStreakStart: n, endedAt: r } = e,
+        I = async (e) => {
+            let { status: t = v.status, premiumStreakStart: n, endedAt: r } = e,
                 a = {
                     subscription_status: t,
-                    ...(null != n ? { premium_streak_started_at: N(n) } : null),
-                    ...(null != r ? { ended_at: N(r) } : null)
+                    ...(null != n ? { premium_streak_started_at: y(n) } : null),
+                    ...(null != r ? { ended_at: y(r) } : null)
                 };
             await o.tn.patch({
-                url: '/debug/subscriptions/'.concat(l.id),
+                url: '/debug/subscriptions/'.concat(v.id),
                 body: a
             }),
-                v();
+                j();
         },
-        I = x.GP[l.planIdFromItems].premiumType === x.p9.TIER_0,
-        k = null === (t = l.metadata) || void 0 === t ? void 0 : t.ended_at,
-        w = null != k ? new Date(k).toISOString().substring(0, 10) : '';
+        k = (null === (t = x.GP[v.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
+        w = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
+        E = null != w ? new Date(w).toISOString().substring(0, 10) : '';
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)('div', {
-            className: i()(p.card, I ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
+            className: i()(p.card, k ? p.gradientWrapperTier0 : p.gradientWrapperTier2),
             children: [
                 (0, r.jsxs)(s.Text, {
                     variant: 'text-md/normal',
                     children: [
                         'Type: ',
                         (() => {
-                            let e = l.planIdFromItems;
+                            let e = v.planIdFromItems;
                             return null == e ? 'No plan id' : e in x.GP ? x.GP[e].name : 'Unknown plan id '.concat(e);
                         })(),
                         ' '
@@ -110,25 +110,25 @@ function v(e) {
                 }),
                 (0, r.jsxs)(s.Text, {
                     variant: 'text-md/normal',
-                    children: ['ID: ', l.id, ' ']
+                    children: ['ID: ', v.id, ' ']
                 }),
-                l.status !== m.O0b.ACTIVE &&
+                v.status !== m.O0b.ACTIVE &&
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-md/normal',
-                        children: ['Dates: ', (0, d.vc)(l.createdAt, 'LL'), ' - ', (0, d.vc)(l.currentPeriodEnd, 'LL')]
+                        children: ['Dates: ', (0, d.vc)(v.createdAt, 'LL'), ' - ', (0, d.vc)(v.currentPeriodEnd, 'LL')]
                     }),
                 (0, r.jsxs)(s.Text, {
                     style: { marginBottom: '15px' },
                     variant: 'text-md/normal',
-                    children: ['Status: ', S()]
+                    children: ['Status: ', N()]
                 }),
-                null != l.metadata &&
+                null != v.metadata &&
                     (0, r.jsxs)('div', {
                         className: f.collapsablePane,
                         children: [
                             (0, r.jsxs)(s.Clickable, {
                                 onClick: () => {
-                                    _(!j);
+                                    C(!_);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -138,13 +138,13 @@ function v(e) {
                                             children: 'Metadata'
                                         })
                                     }),
-                                    (0, r.jsx)(c.Z, { direction: j ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                    (0, r.jsx)(c.Z, { direction: _ ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                                 ]
                             }),
-                            j &&
+                            _ &&
                                 (0, r.jsx)('ul', {
                                     style: { marginBottom: '15px' },
-                                    children: Object.entries(l.metadata).map((e) => {
+                                    children: Object.entries(v.metadata).map((e) => {
                                         let [t, n] = e;
                                         return (0, r.jsxs)(
                                             'li',
@@ -172,7 +172,7 @@ function v(e) {
                     children: [
                         (0, r.jsxs)(s.Clickable, {
                             onClick: () => {
-                                T(!C);
+                                S(!T);
                             },
                             className: f.collapsablePaneHeader,
                             children: [
@@ -182,10 +182,10 @@ function v(e) {
                                         children: 'Modifications'
                                     })
                                 }),
-                                (0, r.jsx)(c.Z, { direction: C ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, r.jsx)(c.Z, { direction: T ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        C &&
+                        T &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(s.FormSection, {
@@ -193,10 +193,10 @@ function v(e) {
                                         tag: s.FormTitleTags.H3,
                                         className: f.formSection,
                                         children: (0, r.jsx)(s.Select, {
-                                            serialize: (e) => S(e),
-                                            isSelected: (e) => e === l.status,
+                                            serialize: (e) => N(e),
+                                            isSelected: (e) => e === v.status,
                                             options: b,
-                                            select: (e) => y({ status: e }),
+                                            select: (e) => I({ status: e }),
                                             popoutLayerContext: h.O$
                                         })
                                     }),
@@ -206,8 +206,8 @@ function v(e) {
                                         className: f.formSection,
                                         children: (0, r.jsx)('input', {
                                             type: 'date',
-                                            value: null === (n = l.premiumSince) || void 0 === n ? void 0 : n.toISOString().substring(0, 10),
-                                            onChange: (e) => y({ premiumStreakStart: e.target.value })
+                                            value: null === (l = v.premiumSince) || void 0 === l ? void 0 : l.toISOString().substring(0, 10),
+                                            onChange: (e) => I({ premiumStreakStart: e.target.value })
                                         })
                                     }),
                                     (0, r.jsx)(s.FormSection, {
@@ -216,8 +216,8 @@ function v(e) {
                                         className: f.formSection,
                                         children: (0, r.jsx)('input', {
                                             type: 'date',
-                                            value: w,
-                                            onChange: (e) => y({ endedAt: e.target.value })
+                                            value: E,
+                                            onChange: (e) => I({ endedAt: e.target.value })
                                         })
                                     })
                                 ]

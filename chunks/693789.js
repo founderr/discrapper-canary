@@ -80,11 +80,11 @@ function g(e) {
                 left: (null !== (a = s.left) && void 0 !== a ? a : 0) - 2
             };
         })(P, t),
-        j = i.useRef(!1);
+        H = i.useRef(!1);
     i.useEffect(() => {
-        !0 === v && ((j.current = !0), l.u.announce(null != U ? U : d.intl.string(d.t.pfChQk))), !1 === v && !0 === j.current && l.u.announce(null != G ? G : d.intl.string(d.t.SVPara));
+        !0 === v && ((H.current = !0), l.u.announce(null != U ? U : d.intl.string(d.t.pfChQk))), !1 === v && !0 === H.current && l.u.announce(null != G ? G : d.intl.string(d.t.SVPara));
     }, [v, U, G]);
-    let H = (0, r.jsx)(u.t, {
+    let j = (0, r.jsx)(u.t, {
         ...P,
         offset: V,
         children: (0, r.jsxs)('button', {
@@ -138,7 +138,7 @@ function g(e) {
                   [f.fullWidth]: o
               }),
               children: [
-                  H,
+                  j,
                   (0, r.jsx)('span', {
                       onMouseEnter: O,
                       onMouseLeave: D,
@@ -146,7 +146,7 @@ function g(e) {
                   })
               ]
           })
-        : H;
+        : j;
 }
 function E(e) {
     let { look: t = _.FILLED, color: n = h.BRAND, size: i = p.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: I, rel: S, ...T } = e;

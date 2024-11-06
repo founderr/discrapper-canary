@@ -43,28 +43,28 @@ function N(e) {
         Z = null != B && '' !== B ? B : null,
         F = null != Z && Z.length > 0,
         V = null != G,
-        j = V && !F,
-        H = V ? 1.25 : 0,
-        Y = 18 + H,
-        W = A + H,
-        K = y + H,
+        H = V && !F,
+        j = V ? 1.25 : 0,
+        Y = 18 + j,
+        W = A + j,
+        K = y + j,
         z = V || F,
         q = m && !z,
         Q = m && z,
-        [X, J] = i.useState(j),
-        [$, ee] = i.useState(!j),
+        [X, J] = i.useState(H),
+        [$, ee] = i.useState(!H),
         [et, en] = i.useState(!1),
         er = i.useRef(null);
     i.useLayoutEffect(() => {
-        if (null == M.current || j) return;
+        if (null == M.current || H) return;
         let e = M.current.getBoundingClientRect().height;
-        if ((J(j || e <= Y), E)) {
+        if ((J(H || e <= Y), E)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = M.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
                 a = null !== (i = null === (n = k.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
-            ee(!j && e > a), (P.current = e), (U.current = a);
+            ee(!H && e > a), (P.current = e), (U.current = a);
         }
-    }, [E, j, Y, W, K]);
+    }, [E, H, Y, W, K]);
     let [ei, ea] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(K, 'px'),
         config: {
@@ -168,7 +168,7 @@ function N(e) {
         }),
         em = s()(T.statusBubbleOuter, e_, ep, { [T.statusBubbleOuterAddStatusCursor]: q }),
         eg = s()(T.statusBubble, ep, {
-            [T.statusBubbleEmojiOnlyPadding]: j,
+            [T.statusBubbleEmojiOnlyPadding]: H,
             [T.statusBubbleWithTextPadding]: F || q,
             [T.statusBubbleWithTextMinWidth]: F,
             [T.statusBubbleCopyStatusCursor]: z

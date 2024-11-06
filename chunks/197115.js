@@ -23,8 +23,8 @@ var i = n(120356),
 t.Z = function (e) {
     let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
         V = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        j = (0, s.e7)([g.Z], () => g.Z.isFocused()),
-        H = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
+        H = (0, s.e7)([g.Z], () => g.Z.isFocused()),
+        j = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
         { fractionalState: Y } = (0, c.Z)(),
         { analyticsLocations: W } = (0, u.ZP)(),
         K = (0, v.N)(),
@@ -35,7 +35,7 @@ t.Z = function (e) {
                 (0, _.uL)(S.Z5c.LOGIN);
                 return;
             }
-            if ((null == y || y(e), (null == H ? void 0 : H.status) === S.O0b.ACCOUNT_HOLD)) {
+            if ((null == y || y(e), (null == j ? void 0 : j.status) === S.O0b.ACCOUNT_HOLD)) {
                 (0, d.A3)(), l.Z.open(S.oAB.PREMIUM), null == x || x(!1);
                 return;
             }
@@ -141,12 +141,12 @@ t.Z = function (e) {
             ]
         });
     let Q = T.intl.string(T.t['2pG5GR']),
-        X = null != H ? (0, E.Af)(H) : null,
+        X = null != j ? (0, E.Af)(j) : null,
         J = null != X ? E.ZP.getPremiumType(X.planId) : null == V ? void 0 : V.premiumType,
         $ = i === I.Si.TIER_2 && null != J && [I.p9.TIER_0, I.p9.TIER_1].includes(J);
     $ && (Q = T.intl.string(T.t.IJI7ys));
-    let ee = null != H && E.ZP.isSwitchingPlansDisabled(H, Y),
-        et = (null != H && H.status !== S.O0b.ACCOUNT_HOLD && !(0, h.Q0)(H.planId) && !$) || ee,
+    let ee = null != j && E.ZP.isSwitchingPlansDisabled(j, Y),
+        et = (null != j && j.status !== S.O0b.ACCOUNT_HOLD && !(0, h.Q0)(j.planId) && !$) || ee,
         en = et
             ? null != G
                 ? G
@@ -173,7 +173,7 @@ t.Z = function (e) {
                       ctaSubscriptionSkuId: i,
                       currentPremiumType: J,
                       isSwitchingDisabled: ee,
-                      subscription: H
+                      subscription: j
                   })
             : null;
     function er(e) {
@@ -192,7 +192,7 @@ t.Z = function (e) {
                 },
                 N
             ),
-            pauseAnimation: !j || P,
+            pauseAnimation: !H || P,
             ...F,
             ...e,
             children: [

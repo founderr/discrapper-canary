@@ -61,8 +61,8 @@ t.Z = i.memo(function (e) {
             activeCommand: u.Z.getActiveCommand(w.id),
             activeCommandOption: u.Z.getActiveOption(w.id)
         })),
-        { paymentsBlocked: j } = c.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
-        H = [],
+        { paymentsBlocked: H } = c.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
+        j = [],
         { enabled: Y } = p.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
         W = E.default.getCurrentUser(),
         K = null !== (_ = (0, s.e7)([f.Z], () => (Y && v.ZP.isPremiumExactly(W, R.p9.TIER_2) ? f.Z.getReferralsRemaining() : 0))) && void 0 !== _ ? _ : 0,
@@ -86,7 +86,7 @@ t.Z = i.memo(function (e) {
             null == F &&
             (v.ZP.isPremiumExactly(W, R.p9.TIER_2) && X && p.Z.trackExposure({ location: 'dc120b_5' }),
             Q &&
-                H.push(
+                j.push(
                     (0, r.jsx)(
                         y.Z,
                         {
@@ -100,9 +100,9 @@ t.Z = i.memo(function (e) {
                 )),
         (null === (T = L.gifts) || void 0 === T ? void 0 : T.button) != null &&
             null == F &&
-            !j &&
+            !H &&
             (null == q || v.ZP.isPremiumEligible(q)) &&
-            H.push(
+            j.push(
                 (0, r.jsx)(
                     D,
                     {
@@ -115,7 +115,7 @@ t.Z = i.memo(function (e) {
         (null === (b = L.gifs) || void 0 === b ? void 0 : b.button) != null &&
             null == F &&
             k &&
-            H.push(
+            j.push(
                 (0, r.jsx)(
                     S.Z,
                     {
@@ -128,7 +128,7 @@ t.Z = i.memo(function (e) {
         (null === (A = L.stickers) || void 0 === A ? void 0 : A.button) != null &&
             null == F &&
             k &&
-            H.push(
+            j.push(
                 (0, r.jsx)(
                     C.Z,
                     {
@@ -140,7 +140,7 @@ t.Z = i.memo(function (e) {
             )),
     (null === (t = L.emojis) || void 0 === t ? void 0 : t.button) != null &&
         (null == F || (null != V && V.type !== o.jw.ATTACHMENT)) &&
-        H.push(
+        j.push(
             (0, r.jsx)(
                 I.Z,
                 {
@@ -152,7 +152,7 @@ t.Z = i.memo(function (e) {
         ),
     (null === (n = L.submit) || void 0 === n ? void 0 : n.button) != null &&
         ((null === (i = L.submit) || void 0 === i ? void 0 : i.ignorePreference) || U) &&
-        H.push(
+        j.push(
             (0, r.jsx)(
                 N.Z,
                 {
@@ -162,11 +162,11 @@ t.Z = i.memo(function (e) {
                 'submit'
             )
         ),
-    0 === H.length)
+    0 === j.length)
         ? null
-        : (J && H.push((0, r.jsx)('div', { id: 'visual-refresh-app-launcher-portal' }, 'app')),
+        : (J && j.push((0, r.jsx)('div', { id: 'visual-refresh-app-launcher-portal' }, 'app')),
           (0, r.jsx)('div', {
               className: O.buttons,
-              children: H
+              children: j
           }));
 });

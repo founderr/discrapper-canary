@@ -35,14 +35,14 @@ t.Z = i.memo(function (e) {
         [U, G] = i.useState(0),
         [B, Z] = i.useState(D),
         [F, V] = i.useState(!1),
-        [j, H] = i.useState(!1),
+        [H, j] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, Q] = i.useState('none'),
         [X, J] = i.useState(() => ('function' == typeof N ? N() : N)),
         $ = i.useRef(void 0),
         ee = i.useCallback(() => {
-            H((e) => !e);
+            j((e) => !e);
         }, []),
         et = i.useCallback(() => {
             Q('metadata');
@@ -52,7 +52,7 @@ t.Z = i.memo(function (e) {
             if (!isNaN(t)) Z(t);
         }, []),
         er = i.useCallback(() => {
-            if ((H(!1), null == $.current))
+            if ((j(!1), null == $.current))
                 $.current = setTimeout(() => {
                     z(!1), ($.current = void 0);
                 }, 500);
@@ -92,12 +92,12 @@ t.Z = i.memo(function (e) {
             [B]
         );
     i.useEffect(() => {
-        !K && j && z(!0);
-    }, [j, K]);
+        !K && H && z(!0);
+    }, [H, K]);
     let ed = i.useRef(null);
     i.useEffect(() => {
-        if (K || j) {
-            if (j) {
+        if (K || H) {
+            if (H) {
                 var e, t;
                 (ed.current = performance.now()), null == w || w(!1, U, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * h.Z.Millis.SECOND);
             } else {
@@ -106,9 +106,9 @@ t.Z = i.memo(function (e) {
                 null == M || M(U, null != t ? (e - t) / 1000 : 0), (ed.current = null);
             }
         }
-    }, [j]),
+    }, [H]),
         (t = k),
-        (n = j),
+        (n = H),
         (a = G),
         i.useEffect(() => {
             let e;
@@ -124,8 +124,8 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (T = j),
-        (b = H),
+        (T = H),
+        (b = j),
         i.useEffect(() => {
             if (!!T)
                 return (
@@ -140,8 +140,8 @@ t.Z = i.memo(function (e) {
                 if (d !== t) b(!1);
             }
         }, [d, T, b]);
-    let ef = j ? l.PauseIcon : l.PlayIcon,
-        e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
+    let ef = H ? l.PauseIcon : l.PlayIcon,
+        e_ = H ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
         ? (y = (0, r.jsx)(i.Suspense, {
               children: (0, r.jsx)(I, {
@@ -149,7 +149,7 @@ t.Z = i.memo(function (e) {
                   className: v.audioElement,
                   src: A,
                   preload: q,
-                  playing: j && !Y,
+                  playing: H && !Y,
                   onEnded: ei,
                   onLoadedMetadata: en,
                   onError: ea,
@@ -167,13 +167,13 @@ t.Z = i.memo(function (e) {
               onError: ea,
               muted: F,
               volume: X,
-              playing: j && !Y,
+              playing: H && !Y,
               children: (0, r.jsx)('source', { src: A })
           }));
     let eh = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { enabled: ep } = (0, l.useRedesignIconContext)();
     return (0, r.jsxs)('div', {
-        className: s()(v.container, { [v.playing]: j }),
+        className: s()(v.container, { [v.playing]: H }),
         onMouseEnter: et,
         children: [
             (0, r.jsx)('div', {
@@ -185,7 +185,7 @@ t.Z = i.memo(function (e) {
                 onClick: ee,
                 'aria-label': e_,
                 children: (0, r.jsx)(ef, {
-                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ep && !j }),
+                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ep && !H }),
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
@@ -197,7 +197,7 @@ t.Z = i.memo(function (e) {
                 waveform: O,
                 currentTime: U,
                 duration: null != B ? B : 1,
-                playing: j,
+                playing: H,
                 played: K,
                 onDrag: ec,
                 onDragStart: el,

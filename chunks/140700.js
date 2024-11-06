@@ -37,7 +37,7 @@ function p(e) {
 }
 function g(e) {
     let { loadId: t } = e,
-        n = (0, o.lZ)(),
+        n = o.Z.useField('categoryId'),
         s = (0, d.q)(),
         g = (0, c.E)({ categoryId: n }),
         f = r.useCallback(

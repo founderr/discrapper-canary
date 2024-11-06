@@ -166,7 +166,7 @@ let G = Object.freeze({
                   children: c
               });
     },
-    j = (e) => {
+    H = (e) => {
         var t, n;
         let { renderCTAButtons: r } = e,
             { type: i } = s.useContext(B),
@@ -203,7 +203,7 @@ let G = Object.freeze({
                       })
         });
     },
-    H = (e) => {
+    j = (e) => {
         let { disabled: t } = e,
             { type: r, delay: i } = s.useContext(B),
             { analyticsLocations: o } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
@@ -405,10 +405,10 @@ let G = Object.freeze({
         return (0, a.jsxs)('section', {
             className: t,
             children: [
-                (0, a.jsx)(j, { renderCTAButtons: n }),
+                (0, a.jsx)(H, { renderCTAButtons: n }),
                 (0, a.jsx)('div', {
                     className: U.presets,
-                    children: (0, a.jsx)(H, { disabled: r })
+                    children: (0, a.jsx)(j, { disabled: r })
                 })
             ]
         });
@@ -419,7 +419,7 @@ let G = Object.freeze({
         return (0, a.jsxs)('section', {
             className: n,
             children: [
-                !t && (0, a.jsx)(j, { renderCTAButtons: r }),
+                !t && (0, a.jsx)(H, { renderCTAButtons: r }),
                 t &&
                     i &&
                     (0, a.jsx)(f.Heading, {
@@ -429,7 +429,7 @@ let G = Object.freeze({
                     }),
                 (0, a.jsxs)('div', {
                     className: l()(U.presets, { [U.presetsJustify]: t }),
-                    children: [(0, a.jsx)(Y, { systemSelectorFirst: !0 }), (0, a.jsx)(H, { disabled: !1 })]
+                    children: [(0, a.jsx)(Y, { systemSelectorFirst: !0 }), (0, a.jsx)(j, { disabled: !1 })]
                 })
             ]
         });

@@ -1,6 +1,6 @@
 n.d(t, {
     $7: function () {
-        return H;
+        return j;
     },
     $e: function () {
         return B;
@@ -54,7 +54,7 @@ n.d(t, {
         return R;
     },
     nT: function () {
-        return j;
+        return H;
     },
     pM: function () {
         return b;
@@ -291,10 +291,10 @@ function V(e, t) {
     let n = Object.keys(t);
     return 0 !== n.length && (1 !== n.length || n[0] !== e.id);
 }
-function j(e, t, n) {
+function H(e, t, n) {
     return e === m.d4z.GUILD_TEXT || e === m.d4z.GUILD_ANNOUNCEMENT ? t : (!(0, o.bw)(e) && e !== m.d4z.GUILD_CATEGORY) || (t && n);
 }
-function H(e) {
+function j(e) {
     switch (e) {
         case m.d4z.GUILD_TEXT:
         case m.d4z.GUILD_ANNOUNCEMENT:

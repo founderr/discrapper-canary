@@ -81,7 +81,7 @@ n.d(t, {
         return ed;
     },
     z: function () {
-        return H;
+        return j;
     },
     z6: function () {
         return $;
@@ -264,13 +264,13 @@ function F(e) {
 function V(e) {
     return (0, h.e7)([y.Z], () => y.Z.isProgressingOnDesktop(e.id));
 }
-function j(e) {
+function H(e) {
     return u.useMemo(() => (0, N.Bz)(e), [e]);
 }
 ((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
-function H(e) {
+function j(e) {
     let t = V(e),
-        n = j(e),
+        n = H(e),
         r = (function (e) {
             let t = (0, h.e7)([y.Z], () => y.Z.getOptimisticProgress(e.id, d.X.WATCH_VIDEO));
             return u.useMemo(() => (0, N.BM)(e), [e, t]);
@@ -281,7 +281,7 @@ let Y = (e) => {
     let t = u.useCallback(() => (0, N.il)(e), [e]),
         [n, r] = u.useState(t()),
         i = u.useCallback(() => r(t()), [t]),
-        a = H(e);
+        a = j(e);
     return (
         u.useEffect(() => {
             var t, n, r;
@@ -468,7 +468,7 @@ let ee = (e) => {
     et = (e) => {
         let { quest: t } = e,
             { xboxAndPlaystationAccounts: n } = $(),
-            r = H(t),
+            r = j(t),
             i = 0 === n.length;
         return (0, N.$J)(t) && i && !r;
     },
@@ -542,7 +542,7 @@ function es(e, t) {
         a = i.includes(x.cd.DESKTOP),
         s = i.includes(x.cd.CONSOLE),
         o = V(e),
-        l = j(e),
+        l = H(e),
         f = (0, R.pF)({ location: x.dr.QUESTS_BAR }),
         _ = u.useMemo(
             () =>
@@ -677,7 +677,7 @@ function ed(e, t, n) {
     let i = F(u.useMemo(() => L.r.build(e.config).rewardsExpireAt, [e.config])),
         a = Y(e),
         s = (null === (r = e.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
-        o = H(e),
+        o = j(e),
         l = (0, D.D)({
             quest: e,
             location: x.dr.QUESTS_BAR,

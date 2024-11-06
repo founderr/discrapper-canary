@@ -36,8 +36,8 @@ var o,
     Z = n(111672),
     F = n(441167),
     V = n(338336),
-    j = n(751571),
-    H = n(725380),
+    H = n(751571),
+    j = n(725380),
     Y = n(581883),
     W = n(626135),
     K = n(12647),
@@ -160,8 +160,8 @@ let eT = (0, E.Mt)((0, E.jj)()),
     eZ = new I.V7(),
     eF = !1,
     eV = !1,
-    ej = null,
-    eH = !1,
+    eH = null,
+    ej = !1,
     eY = !1,
     eW = !1,
     eK = !1,
@@ -170,7 +170,7 @@ let eT = (0, E.Mt)((0, E.jj)()),
     eQ = !1,
     eX = !1,
     eJ = !1;
-j.Z.hasPermission(ed.Eu.AUDIO, { showAuthorizationError: !1 }), j.Z.hasPermission(ed.Eu.CAMERA, { showAuthorizationError: !1 });
+H.Z.hasPermission(ed.Eu.AUDIO, { showAuthorizationError: !1 }), H.Z.hasPermission(ed.Eu.CAMERA, { showAuthorizationError: !1 });
 let e$ = new Set(),
     e0 = !1,
     e1 = !1,
@@ -210,7 +210,7 @@ function te(e) {
 function tt(e) {
     let t = e8(e.context),
         n = !eA || t.mute || t.deaf;
-    e.context === e_.Yn.DEFAULT ? (n = n || eL || ex || ew || !j.Z.didHavePermission(ed.Eu.AUDIO)) : e.context === e_.Yn.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === e_.Yn.DEFAULT && y.Z.updateNativeMute();
+    e.context === e_.Yn.DEFAULT ? (n = n || eL || ex || ew || !H.Z.didHavePermission(ed.Eu.AUDIO)) : e.context === e_.Yn.STREAM && (n = !0), e.setSelfMute(n), e.setSelfDeaf(t.deaf), e.context === e_.Yn.DEFAULT && y.Z.updateNativeMute();
 }
 function tn() {
     var e, t, n;
@@ -301,7 +301,7 @@ let to = new (class {
     }
     update() {
         let e = e8();
-        !eH && ea.Z.getState() === eu.hes.RTC_CONNECTED && e.mode === eu.pM4.VOICE_ACTIVITY && e.silenceWarning ? this.start() : this.stop();
+        !ej && ea.Z.getState() === eu.hes.RTC_CONNECTED && e.mode === eu.pM4.VOICE_ACTIVITY && e.silenceWarning ? this.start() : this.stop();
     }
     reset() {
         this.stop(), this.update();
@@ -389,7 +389,7 @@ function t_() {
             s = null !== (t = r[e]) && void 0 !== t ? t : {},
             { localMutes: o, localVolumes: l } = e8(i);
         for (let [e, t] of Object.entries(s))
-            null == (0, H.Ky)(i, e) &&
+            null == (0, j.Ky)(i, e) &&
                 (t.muted ? (o[e] = !0) : delete o[e],
                 t.volume !== a ? (l[e] = t.volume) : delete l[e],
                 eT.eachConnection((n) => {
@@ -823,7 +823,7 @@ class tA extends (l = g.ZP.Store) {
                 [e_.AN.DESKTOP_CAPTURE]: eT.supports(e_.AN.DESKTOP_CAPTURE),
                 [e_.AN.HYBRID_VIDEO]: eT.supports(e_.AN.HYBRID_VIDEO)
             }),
-            this.waitFor(ee.default, en.Z, er.Z, ei.Z, ea.Z, L.ZP, j.Z.storage, Y.Z, O.Z, A.Z);
+            this.waitFor(ee.default, en.Z, er.Z, ei.Z, ea.Z, L.ZP, H.Z.storage, Y.Z, O.Z, A.Z);
     }
     supports(e) {
         return eT.supports(e);
@@ -888,7 +888,7 @@ class tA extends (l = g.ZP.Store) {
     }
     isSelfMute() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : e_.Yn.DEFAULT;
-        return !this.isEnabled() || e8(e).mute || !j.Z.didHavePermission(ed.Eu.AUDIO) || this.isSelfDeaf(e) || (e === e_.Yn.DEFAULT && ew);
+        return !this.isEnabled() || e8(e).mute || !H.Z.didHavePermission(ed.Eu.AUDIO) || this.isSelfDeaf(e) || (e === e_.Yn.DEFAULT && ew);
     }
     shouldSkipMuteUnmuteSound() {
         return eU;
@@ -1092,7 +1092,7 @@ class tA extends (l = g.ZP.Store) {
         };
     }
     getInputDetected() {
-        return ej;
+        return eH;
     }
     getNoInputDetectedNotice() {
         return eY;
@@ -1245,7 +1245,7 @@ ep(tA, 'displayName', 'MediaEngineStore'),
                     tu();
                     break;
                 case eu.hes.RTC_CONNECTING:
-                    (eH = !1), (eY = !1);
+                    (ej = !1), (eY = !1);
                     break;
                 case eu.hes.RTC_CONNECTED:
                     tn();
@@ -1272,7 +1272,7 @@ ep(tA, 'displayName', 'MediaEngineStore'),
         AUDIO_TOGGLE_SELF_MUTE: function (e) {
             let { context: t, skipMuteUnmuteSoundEffect: n } = e,
                 { mute: r, deaf: i } = e8(t);
-            if (t === e_.Yn.DEFAULT && (j.Z.requestPermission(ed.Eu.AUDIO), ew)) return !1;
+            if (t === e_.Yn.DEFAULT && (H.Z.requestPermission(ed.Eu.AUDIO), ew)) return !1;
             !(r = !i && !r) && (i = !1),
                 n && (eU = !0),
                 tl(
@@ -1468,7 +1468,7 @@ ep(tA, 'displayName', 'MediaEngineStore'),
         },
         AUDIO_INPUT_DETECTED: function (e) {
             let { inputDetected: t } = e;
-            (ej = t), !eH && ej && ((eH = !0), to.update());
+            (eH = t), !ej && eH && ((ej = !0), to.update());
         },
         AUDIO_SET_SUBSYSTEM: function (e) {
             tT(e.subsystem);
@@ -1484,7 +1484,7 @@ ep(tA, 'displayName', 'MediaEngineStore'),
         },
         MEDIA_ENGINE_SET_VIDEO_ENABLED: function (e) {
             let { enabled: t } = e;
-            j.Z.requestPermission(ed.Eu.CAMERA), tn(t);
+            H.Z.requestPermission(ed.Eu.CAMERA), tn(t);
         },
         MEDIA_ENGINE_PERMISSION: function (e) {
             let { kind: t, granted: n } = e;
