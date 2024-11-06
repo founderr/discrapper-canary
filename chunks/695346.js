@@ -137,6 +137,9 @@ n.d(t, {
     h2: function () {
         return F;
     },
+    hg: function () {
+        return eR;
+    },
     iG: function () {
         return Z;
     },
@@ -153,7 +156,7 @@ n.d(t, {
         return W;
     },
     l4: function () {
-        return eR;
+        return eO;
     },
     mX: function () {
         return G;
@@ -886,8 +889,14 @@ let eh = (0, o.KM)(
     (e) => a.D5.create({ value: e })
 );
 let eR = (0, o.Zc)(
-    'userContent',
-    'lastReceivedChangelogId',
-    (e) => (null != e ? e : '0'),
-    (e) => e
-);
+        'appearance',
+        'timestampHourCycle',
+        (e) => (null != e ? e : i.hg.AUTO),
+        (e) => e
+    ),
+    eO = (0, o.Zc)(
+        'userContent',
+        'lastReceivedChangelogId',
+        (e) => (null != e ? e : '0'),
+        (e) => e
+    );

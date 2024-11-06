@@ -742,6 +742,11 @@ let eF = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eL.intl.string(eL.t.qPOqoK)],
                 parent: eP.s6.APPEARANCE
             },
+            [eP.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE]: {
+                section: eD.oAB.APPEARANCE,
+                searchableTitles: [eL.intl.string(eL.t.dyamEB), eL.intl.string(eL.t.p8NOws), eL.intl.string(eL.t['+o/sOj'])],
+                parent: eP.s6.APPEARANCE
+            },
             [eP.s6.ACCESSIBILITY]: {
                 section: eD.oAB.ACCESSIBILITY,
                 searchableTitles: [eL.intl.string(eL.t.G0neg4)],
