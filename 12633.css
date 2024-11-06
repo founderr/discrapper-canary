@@ -15090,7 +15090,9 @@ span.clanTag_a31c43 {
 
 :where(.outer_c69a7b).panel_c69a7b {
     width: 340px;
-    height: 100%
+    height: 100%;
+    overflow: visible;
+    overflow: initial
 }
 
 :where(.outer_c69a7b).custom-profile-theme {
