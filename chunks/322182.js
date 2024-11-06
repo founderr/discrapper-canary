@@ -32,9 +32,6 @@ n.d(t, {
     uf: function () {
         return s.uf;
     },
-    wD: function () {
-        return s.wD;
-    },
     yx: function () {
         return s.yx;
     }
