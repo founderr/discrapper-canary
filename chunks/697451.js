@@ -31,8 +31,8 @@ var i,
     j = n(739566),
     Z = n(421399),
     R = n(310423),
-    P = n(223021),
-    L = n(981631),
+    L = n(223021),
+    P = n(981631),
     y = n(388032),
     O = n(825193);
 function M(e) {
@@ -160,7 +160,7 @@ function U(e) {
         M = (null == S ? void 0 : S.type) === f.B8.APPLICATION_COMMAND && null != i.messageReference && null != e.renderTargetMessage,
         U = (0, j.Sw)(null === (t = i.interaction) || void 0 === t ? void 0 : t.user, r),
         w = (0, j.Sw)(Z, r),
-        F = a.useMemo(() => (e.compact ? (0, P.Z)((0, b.vc)(m()(), 'LT')) : null), [e.compact]),
+        F = a.useMemo(() => (e.compact ? (0, L.Z)((0, b.vc)(m()(), 'LT')) : null), [e.compact]),
         G = (0, p.NX)(r.id),
         V = i.interaction;
     if (null == V || null == U) return null;
@@ -192,7 +192,7 @@ function U(e) {
                         positionKey: null != i.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
-                            if (i.type === L.uaV.CHAT_INPUT_COMMAND || i.type === L.uaV.INTERACTION_PREMIUM_UPSELL)
+                            if (i.type === P.uaV.CHAT_INPUT_COMMAND || i.type === P.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, l.jsx)(h.Clickable, {
                                     ...n,
                                     tag: 'span',
@@ -222,7 +222,7 @@ function U(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        A.S.dispatchToLastSubscribed(L.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
+                                        A.S.dispatchToLastSubscribed(P.CkL.OPEN_APP_LAUNCHER, { applicationId: i.applicationId });
                                     },
                                     children: (0, l.jsxs)('div', {
                                         className: s()(O.appLauncherOnboardingCommandName, O.clickable),
@@ -274,10 +274,10 @@ function U(e) {
                 channel: r,
                 guildId: r.guild_id,
                 locationObject: {
-                    page: r.isPrivate() ? L.ZY5.DM_CHANNEL : L.ZY5.GUILD_CHANNEL,
-                    section: L.jXE.CHANNEL_TEXT_AREA,
-                    object: L.qAy.APP_COMMAND,
-                    objectType: L.Qqv.ACTIVITY
+                    page: r.isPrivate() ? P.ZY5.DM_CHANNEL : P.ZY5.GUILD_CHANNEL,
+                    section: P.jXE.CHANNEL_TEXT_AREA,
+                    object: P.qAy.APP_COMMAND,
+                    objectType: P.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,

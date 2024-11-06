@@ -27,8 +27,8 @@ var i = n(200651),
     j = n(55563),
     Z = n(199480),
     R = n(626135),
-    P = n(669079),
-    L = n(74538),
+    L = n(669079),
+    P = n(74538),
     y = n(296848),
     O = n(51144),
     M = n(626799),
@@ -150,7 +150,7 @@ class V extends r.Component {
                 onClick: this.handleAccept,
                 color: u.Button.Colors.BRAND
             },
-            a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && r) || (e.isExistingPremiumSubscriptionDisallowed && (0, L.I5)(n));
+            a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && r) || (e.isExistingPremiumSubscriptionDisallowed && (0, P.I5)(n));
         return (
             (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.Button.Colors.BRAND), (l.disabled = !0)),
             (0, i.jsx)(u.Button, {
@@ -366,7 +366,7 @@ t.Z = c.ZP.connectStores([T.Z, j.Z, A.default, S.Z, b.Z, v.default, p.Z], (e) =>
         subscriptionPlan: null != r && null != r.subscriptionPlanId ? (0, y.oE)(r.subscriptionPlanId) : null,
         isSelfGift: null != r ? v.default.getId() === r.userId : v.default.getId() === n.id,
         resolved: T.Z.getIsResolved(t),
-        libraryApplication: null != l && (null == r ? void 0 : r.entitlementBranches) != null ? P.z2(r.entitlementBranches, l, S.Z) : null,
+        libraryApplication: null != l && (null == r ? void 0 : r.entitlementBranches) != null ? L.z2(r.entitlementBranches, l, S.Z) : null,
         useReducedMotion: o
     };
 })(H);

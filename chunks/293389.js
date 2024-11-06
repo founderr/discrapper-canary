@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(981631),
     I = n(388032),
     N = n(545217),
-    A = n(852401),
-    b = n(739017),
+    b = n(852401),
+    A = n(739017),
     v = n(869042),
     j = n(113207);
 let O = a.ZP.connectStores([E.Z], () => ({ theme: E.Z.theme }))(c.EmptyState),
@@ -37,7 +37,7 @@ function P(e) {
             label: null != e.name ? e.name : ''
         }));
     return (0, i.jsxs)(c.Dialog, {
-        className: l()(N.addGamePopout, A.elevationBorderHigh),
+        className: l()(N.addGamePopout, b.elevationBorderHigh),
         'aria-label': I.intl.string(I.t.GTCx0t),
         children: [
             (0, i.jsx)(c.SearchableSelect, {
@@ -57,7 +57,7 @@ function P(e) {
             }),
             (0, i.jsx)(c.FormDivider, { className: l()(j.marginTop8, j.marginBottom8) }),
             (0, i.jsxs)('div', {
-                className: l()(N.actions, b.horizontal),
+                className: l()(N.actions, A.horizontal),
                 children: [
                     (0, i.jsx)(c.Button, {
                         className: N.cancelButton,
@@ -83,8 +83,8 @@ function D(e) {
     let { rawGame: n, nowPlaying: r = !1, isOverride: g } = e,
         C = (0, a.cj)([x.Z, h.ZP, S.Z], () => (0, h.FZ)(n)),
         [_, E] = s.useState(!1),
-        [A, j] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
-        O = l()(b.flexCenter, {
+        [b, j] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
+        O = l()(A.flexCenter, {
             [N.game]: !r,
             [N.activeGame]: r,
             [v.card]: !r,
@@ -94,7 +94,7 @@ function D(e) {
         d.Z.deleteEntry(C);
     }
     function D() {
-        C.name !== A && d.Z.editName(C, A);
+        C.name !== b && d.Z.editName(C, b);
     }
     function y(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
@@ -116,7 +116,7 @@ function D(e) {
         className: O,
         children: [
             (0, i.jsxs)('div', {
-                className: l()(N.gameNameLastPlayed, b.vertical),
+                className: l()(N.gameNameLastPlayed, A.vertical),
                 children: [
                     C.verified && !g
                         ? (0, i.jsxs)('div', {
@@ -148,7 +148,7 @@ function D(e) {
                               className: l()(N.gameName, N.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: A,
+                              value: b,
                               onBlur: D,
                               onKeyDown: y,
                               onChange: (e) => j(e.target.value)
@@ -174,7 +174,7 @@ function D(e) {
                 : _
                   ? null
                   : (0, i.jsx)('div', {
-                        className: l()(b.flexCenter, b.noWrap, b.justifyBetween, N.toggleContainer),
+                        className: l()(A.flexCenter, A.noWrap, A.justifyBetween, N.toggleContainer),
                         children: (0, i.jsx)(c.Tooltip, {
                             text: I.intl.string(I.t['y0B+lp']),
                             children: (e) => {
@@ -211,7 +211,7 @@ function D(e) {
                               colorClass: N.fill
                           });
                 return (0, i.jsx)('div', {
-                    className: l()(b.flexCenter, b.noWrap, b.justifyBetween, N.toggleContainer),
+                    className: l()(A.flexCenter, A.noWrap, A.justifyBetween, N.toggleContainer),
                     children: (0, i.jsx)(c.Tooltip, {
                         text: I.intl.string(I.t.QmitzM),
                         children: (e) => {
@@ -255,7 +255,7 @@ function D(e) {
                           })
                         : null;
                 return (0, i.jsxs)('div', {
-                    className: l()(b.flexCenter, b.noWrap, b.justifyBetween, N.toggleContainer),
+                    className: l()(A.flexCenter, A.noWrap, A.justifyBetween, N.toggleContainer),
                     children: [
                         s,
                         (0, i.jsx)(c.Tooltip, {
@@ -289,9 +289,9 @@ function D(e) {
 }
 function y() {
     return (0, i.jsx)('div', {
-        className: l()(b.flexCenter, N.notDetected, N.activeGame),
+        className: l()(A.flexCenter, N.notDetected, N.activeGame),
         children: (0, i.jsxs)('div', {
-            className: l()(N.gameNameLastPlayed, b.vertical),
+            className: l()(N.gameNameLastPlayed, A.vertical),
             children: [
                 (0, i.jsx)('div', {
                     className: N.gameName,

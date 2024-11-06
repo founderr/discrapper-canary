@@ -1,12 +1,12 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return l;
     }
 }),
-    t(47120);
-var i = t(192379);
-function l(e, n) {
-    let [t, l] = i.useState(null),
+    n(47120);
+var i = n(192379);
+function l(e, t) {
+    let [n, l] = i.useState(null),
         r = i.useCallback((e) => {
             l(e);
         }, []),
@@ -17,24 +17,24 @@ function l(e, n) {
             (i) => {
                 a();
                 let l = e.find((e) => {
-                        let { id: n } = e;
-                        return t === n;
+                        let { id: t } = e;
+                        return n === t;
                     }),
                     r = e.find((e) => {
-                        let { id: n } = e;
-                        return i === n;
+                        let { id: t } = e;
+                        return i === t;
                     });
                 if (null == l || null == r || l === r) return;
                 let o = [...e],
                     s = o.indexOf(l),
-                    d = o.indexOf(r),
-                    c = d - s > 0 ? 1 : 0;
-                o.splice(s, 1), (d = o.indexOf(r)), o.splice(d + c, 0, l), n(o);
+                    c = o.indexOf(r),
+                    d = c - s > 0 ? 1 : 0;
+                o.splice(s, 1), (c = o.indexOf(r)), o.splice(c + d, 0, l), t(o);
             },
-            [e, t, a, n]
+            [e, n, a, t]
         );
     return {
-        draggingId: t,
+        draggingId: n,
         handleDragStart: r,
         handleDragReset: a,
         handleDragComplete: o

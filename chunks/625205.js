@@ -37,8 +37,8 @@ function _() {
             inputDeviceId: h.Z.getInputDeviceId(),
             outputDeviceId: h.Z.getOutputDeviceId()
         })),
-        A = (0, l.e7)([h.Z], () => h.Z.getInputDevices()),
-        b = (0, l.e7)([h.Z], () => h.Z.getOutputDevices());
+        b = (0, l.e7)([h.Z], () => h.Z.getInputDevices()),
+        A = (0, l.e7)([h.Z], () => h.Z.getOutputDevices());
     !E &&
         (e = (0, i.jsx)(o.FormText, {
             type: o.FormText.Types.DESCRIPTION,
@@ -51,9 +51,9 @@ function _() {
                 className: C.marginTop8,
                 children: S.intl.format(S.t.Ow0dbG, { onDownloadClick: () => (0, p.y)('Help Text Output Devices') })
             }));
-    let v = r()(A).values().first(),
+    let v = r()(b).values().first(),
         j = null != v ? v.disabled : null != e,
-        O = r()(b).values().first(),
+        O = r()(A).values().first(),
         R = null != O ? O.disabled : null != t;
     function P(e) {
         let t,
@@ -102,7 +102,7 @@ function _() {
                                 location: 'Settings',
                                 analyticsLocations: s
                             }),
-                        options: r().map(A, (e) => {
+                        options: r().map(b, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,
@@ -131,7 +131,7 @@ function _() {
                                 location: 'Settings',
                                 analyticsLocations: s
                             }),
-                        options: r().map(b, (e) => {
+                        options: r().map(A, (e) => {
                             let { id: t, name: n } = e;
                             return {
                                 value: t,

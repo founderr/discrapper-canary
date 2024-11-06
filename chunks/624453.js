@@ -12,9 +12,9 @@ var i,
     f = t(706454),
     m = t(592125),
     h = t(271383),
-    v = t(430824),
-    I = t(375954),
-    E = t(699516),
+    I = t(430824),
+    E = t(375954),
+    v = t(699516),
     p = t(594174);
 let M = {};
 function Z(e) {
@@ -37,12 +37,12 @@ function x(e) {
 }
 function S() {
     s().forEach(M, (e) => {
-        e.messages = e.messages.map((e) => e.set('blocked', E.Z.isBlockedForMessage(e)));
+        e.messages = e.messages.map((e) => e.set('blocked', v.Z.isBlockedForMessage(e)));
     });
 }
 class j extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, v.Z, h.ZP, I.Z, p.default, f.default);
+        this.waitFor(m.Z, I.Z, h.ZP, E.Z, p.default, f.default);
     }
     getPinnedMessages(e) {
         var n;

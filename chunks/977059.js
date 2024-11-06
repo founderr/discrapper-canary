@@ -1,9 +1,9 @@
 n.d(t, {
     R: function () {
-        return u;
+        return l;
     },
     S: function () {
-        return i;
+        return a;
     }
 });
 let r = (0, n(987170).Z)({
@@ -19,11 +19,11 @@ let r = (0, n(987170).Z)({
         }
     ]
 });
-function i(e) {
+function a(e) {
     let { location: t } = e;
     return r.useExperiment({ location: t }, { autoTrackExposure: !0 });
 }
-function u(e) {
+function l(e) {
     let { location: t } = e;
     return r.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
 }

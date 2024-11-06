@@ -37,15 +37,15 @@ function S(e) {
 t.Z = r.memo(function (e) {
     var t, n, l, a, A, b;
     let j,
-        { channel: Z, messageId: R, interactionData: P } = e,
-        { analyticsLocations: L } = (0, u.ZP)(),
-        { onCopy: y, copyRef: O } = (0, d.Z)(Z, null == P ? void 0 : null === (t = P.application_command) || void 0 === t ? void 0 : t.id),
+        { channel: Z, messageId: R, interactionData: L } = e,
+        { analyticsLocations: P } = (0, u.ZP)(),
+        { onCopy: y, copyRef: O } = (0, d.Z)(Z, null == L ? void 0 : null === (t = L.application_command) || void 0 === t ? void 0 : t.id),
         M = (0, o.e7)([g.Z], () => g.Z.getGuild(Z.guild_id), [Z.guild_id]);
     if (
         (r.useEffect(() => {
-            (null == P || (P.type === c.yU.CHAT && void 0 === P.application_command)) && m.OG(Z.id, R);
-        }, [Z.id, R, P]),
-        null == P)
+            (null == L || (L.type === c.yU.CHAT && void 0 === L.application_command)) && m.OG(Z.id, R);
+        }, [Z.id, R, L]),
+        null == L)
     )
         j = (0, i.jsx)(s.Spinner, {
             type: s.Spinner.Type.SPINNING_CIRCLE,
@@ -53,13 +53,13 @@ t.Z = r.memo(function (e) {
         });
     else {
         let e = [],
-            t = Object.fromEntries((null !== (a = null === (n = P.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== a ? a : []).map((e) => [e.name, e]));
-        for (let n of null !== (A = P.options) && void 0 !== A ? A : [])
+            t = Object.fromEntries((null !== (a = null === (n = L.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== a ? a : []).map((e) => [e.name, e]));
+        for (let n of null !== (A = L.options) && void 0 !== A ? A : [])
             e = e.concat(
                 (function e(t) {
                     var n, l, a, o, u, d, m;
                     let N,
-                        { option: A, channel: b, guild: j, messageId: Z, parentOptionKey: R, commandOptionSpec: P, sourceAnalyticsLocations: L } = t,
+                        { option: A, channel: b, guild: j, messageId: Z, parentOptionKey: R, commandOptionSpec: L, sourceAnalyticsLocations: P } = t,
                         y = null != R ? R + ' ' + A.name : A.name;
                     if (A.type === c.jw.SUB_COMMAND || A.type === c.jw.SUB_COMMAND_GROUP) {
                         let t = [
@@ -70,14 +70,14 @@ t.Z = r.memo(function (e) {
                                             ' ',
                                             (0, i.jsx)(s.Text, {
                                                 ...v,
-                                                children: null !== (l = null == P ? void 0 : P.name_localized) && void 0 !== l ? l : A.name
+                                                children: null !== (l = null == L ? void 0 : L.name_localized) && void 0 !== l ? l : A.name
                                             })
                                         ]
                                     },
                                     y
                                 )
                             ],
-                            c = Object.fromEntries(null === (n = null !== (a = null == P ? void 0 : P.options) && void 0 !== a ? a : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
+                            c = Object.fromEntries(null === (n = null !== (a = null == L ? void 0 : L.options) && void 0 !== a ? a : []) || void 0 === n ? void 0 : n.map((e) => [e.name, e]));
                         for (let n of null !== (o = A.options) && void 0 !== o ? o : [])
                             t = t.concat(
                                 e({
@@ -87,7 +87,7 @@ t.Z = r.memo(function (e) {
                                     messageId: Z,
                                     parentOptionKey: y,
                                     commandOptionSpec: c[n.name],
-                                    sourceAnalyticsLocations: L
+                                    sourceAnalyticsLocations: P
                                 })
                             );
                         return t;
@@ -108,7 +108,7 @@ t.Z = r.memo(function (e) {
                                                 guildId: b.guild_id,
                                                 channelId: b.id,
                                                 messageId: Z,
-                                                sourceAnalyticsLocations: L,
+                                                sourceAnalyticsLocations: P,
                                                 analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
                                         children: [I.ME, e.nick]
@@ -165,7 +165,7 @@ t.Z = r.memo(function (e) {
                                 N = S(x.intl.string(x.t.nONJVV));
                                 break;
                             default: {
-                                let e = null == P ? void 0 : null === (u = P.choices) || void 0 === u ? void 0 : u.find((e) => e.value === A.value);
+                                let e = null == L ? void 0 : null === (u = L.choices) || void 0 === u ? void 0 : u.find((e) => e.value === A.value);
                                 null != e && (O = null !== (d = e.name_localized) && void 0 !== d ? d : e.name);
                             }
                         }
@@ -178,7 +178,7 @@ t.Z = r.memo(function (e) {
                                     children: [
                                         (0, i.jsxs)(s.Text, {
                                             ...v,
-                                            children: [' ', null !== (m = null == P ? void 0 : P.name_localized) && void 0 !== m ? m : A.name, ': ']
+                                            children: [' ', null !== (m = null == L ? void 0 : L.name_localized) && void 0 !== m ? m : A.name, ': ']
                                         }),
                                         N
                                     ]
@@ -194,14 +194,14 @@ t.Z = r.memo(function (e) {
                     messageId: R,
                     parentOptionKey: null,
                     commandOptionSpec: t[n.name],
-                    sourceAnalyticsLocations: L
+                    sourceAnalyticsLocations: P
                 })
             );
         j = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(s.Text, {
                     ...v,
-                    children: ['/', null !== (b = null === (l = P.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== b ? b : P.name]
+                    children: ['/', null !== (b = null === (l = L.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== b ? b : L.name]
                 }),
                 e
             ]
@@ -212,7 +212,7 @@ t.Z = r.memo(function (e) {
         onCopy: (e) => {
             var t, n, i;
             let r = null !== (i = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== i ? i : '';
-            r.startsWith('/') && r.endsWith('\n') && y(e, P);
+            r.startsWith('/') && r.endsWith('\n') && y(e, L);
         },
         children: [
             (0, i.jsx)('div', {

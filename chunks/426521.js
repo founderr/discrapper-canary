@@ -53,7 +53,7 @@ function R(e) {
         ]
     });
 }
-function P(e) {
+function L(e) {
     let {
         item: { callout: t }
     } = e;
@@ -68,7 +68,7 @@ function P(e) {
         })
     });
 }
-function L(e) {
+function P(e) {
     let { item: t } = e,
         n = Z,
         r = A.intl.string(A.t.SJTHJS);
@@ -153,14 +153,14 @@ let y = r.memo(function (e) {
                         (0, i.jsxs)('div', {
                             className: b.body,
                             children: [
-                                'lifecycle_item' === a.type && null != a.item_enum && (0, i.jsx)(L, { item: a }),
+                                'lifecycle_item' === a.type && null != a.item_enum && (0, i.jsx)(P, { item: a }),
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-md/normal',
                                     color: h ? 'text-muted' : 'text-normal',
                                     children: 'string' != typeof y ? y : c.Z.parse(y)
                                 }),
                                 (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(R, { item: a }) : null,
-                                null != a.callout ? (0, i.jsx)(P, { item: a }) : null,
+                                null != a.callout ? (0, i.jsx)(L, { item: a }) : null,
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
                                     color: h ? 'text-muted' : 'header-secondary',

@@ -55,14 +55,14 @@ let j = {
 ((a = r || (r = {})).TOP_LEFT = 'TOP_LEFT'), (a.TOP_RIGHT = 'TOP_RIGHT'), (a.BOTTOM_LEFT = 'BOTTOM_LEFT'), (a.BOTTOM_RIGHT = 'BOTTOM_RIGHT');
 let Z = ['TOP_LEFT', 'TOP_RIGHT'],
     R = (0, h.Mg)(f.Z.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-    P = {
+    L = {
         leafPosition: {
             x: 85,
             y: 125
         },
         leafRotationDirection: 1
     },
-    L = Object.freeze({
+    P = Object.freeze({
         TOP_LEFT: {
             getConfettiPosition: (e) => ({
                 x: e - 11,
@@ -94,7 +94,7 @@ let Z = ['TOP_LEFT', 'TOP_RIGHT'],
             leafRotationDirection: -1
         },
         BOTTOM_LEFT: {
-            ...P,
+            ...L,
             getConfettiPosition: (e) => ({
                 x: e - 11,
                 y: 125
@@ -105,7 +105,7 @@ let Z = ['TOP_LEFT', 'TOP_RIGHT'],
             }
         },
         BOTTOM_RIGHT: {
-            ...P,
+            ...L,
             getConfettiPosition: (e) => ({
                 x: 11,
                 y: 125
@@ -177,13 +177,13 @@ function U(e) {
         A = s.useCallback(() => {
             'exit' === c && (null == t || t());
         }, [t, c]),
-        P = s.useCallback((e) => {
+        L = s.useCallback((e) => {
             a.current = e;
         }, []);
     return (
         s.useEffect(() => {
             if ('confetti' === c) {
-                let { confettiVelocityDirection: e } = L[f],
+                let { confettiVelocityDirection: e } = P[f],
                     t = (function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : R,
                             i = null == e ? void 0 : e.getBoundingClientRect();
@@ -192,7 +192,7 @@ function U(e) {
                                 x: 0,
                                 y: 0
                             };
-                        let r = L[t].getConfettiPosition(n);
+                        let r = P[t].getConfettiPosition(n);
                         return {
                             x: i.left + r.x,
                             y: i.top + r.y
@@ -215,7 +215,7 @@ function U(e) {
         }, [g, f, c, l]),
         s.useEffect(() => {
             if (v && 'leaf_fall' === c) {
-                let e = L[f].leafRotationDirection;
+                let e = P[f].leafRotationDirection;
                 x.createConfetti(
                     {
                         id: ''.concat(y, '-').concat((0, m.Z)()),
@@ -228,7 +228,7 @@ function U(e) {
                                         x: 0,
                                         y: 0
                                     };
-                                let i = L[t];
+                                let i = P[t];
                                 return {
                                     x: n.left + i.leafPosition.x,
                                     y: n.top + i.leafPosition.y
@@ -285,7 +285,7 @@ function U(e) {
                         [b.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === f
                     }),
                     children: (0, o.jsx)(p.SequencedLottieAnimation, {
-                        animationRef: P,
+                        animationRef: L,
                         className: u()(b.easterEggAnimation, { [b.easterEggAnimationHideLeaf]: T }),
                         nextScene: N,
                         sceneSegments: j,
@@ -319,31 +319,31 @@ function w(e) {
         j = s.useRef(null),
         { reducedMotion: Z } = s.useContext(p.AccessibilityPreferencesContext),
         R = (0, v.ZH)(n),
-        P = R.nick,
-        L = l(R);
+        L = R.nick,
+        P = l(R);
     t =
         null == c || null == r
             ? u > 1
                 ? A.intl.format(A.t.yfC9dn, {
-                      username: P,
-                      usernameHook: L,
+                      username: L,
+                      usernameHook: P,
                       numSubscriptions: u
                   })
                 : A.intl.format(A.t['57St//'], {
-                      username: P,
-                      usernameHook: L
+                      username: L,
+                      usernameHook: P
                   })
             : u > 1
               ? A.intl.format(A.t.PO9uJC, {
-                    username: P,
-                    usernameHook: L,
+                    username: L,
+                    usernameHook: P,
                     numSubscriptions: u,
                     guildName: r.name,
                     newTierName: (0, N.nW)(c)
                 })
               : A.intl.format(A.t.cUfTTE, {
-                    username: P,
-                    usernameHook: L,
+                    username: L,
+                    usernameHook: P,
                     guildName: r.name,
                     newTierName: (0, N.nW)(c)
                 });

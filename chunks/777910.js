@@ -15,11 +15,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#fff',
+                        shadowColor: '#ffffff',
                         shadowOpacity: 0.08,
                         shadowRadius: 1,
                         elevation: 0,
-                        shadowColorAndroid: '#fff'
+                        shadowColorAndroid: '#ffffff'
                     }
                 },
                 [n.LIGHT]: {
@@ -30,11 +30,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 1,
                         elevation: 0,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.MIDNIGHT]: {
@@ -45,11 +45,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#fff',
+                        shadowColor: '#ffffff',
                         shadowOpacity: 0.08,
                         shadowRadius: 1,
                         elevation: 0,
-                        shadowColorAndroid: '#fff'
+                        shadowColorAndroid: '#ffffff'
                     }
                 },
                 [n.DARKER]: {
@@ -60,11 +60,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#fff',
+                        shadowColor: '#ffffff',
                         shadowOpacity: 0.08,
                         shadowRadius: 1,
                         elevation: 0,
-                        shadowColorAndroid: '#fff'
+                        shadowColorAndroid: '#ffffff'
                     }
                 }
             },
@@ -77,11 +77,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -92,11 +92,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.MIDNIGHT]: {
@@ -107,11 +107,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -122,11 +122,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -139,11 +139,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -154,7 +154,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.12,
                         shadowRadius: 36,
                         elevation: 20,
@@ -169,11 +169,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -184,11 +184,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 24,
                         elevation: 20,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -201,11 +201,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 2,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -216,7 +216,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.12,
                         shadowRadius: 0,
                         elevation: 2,
@@ -231,11 +231,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 2,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -246,11 +246,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 2,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -263,11 +263,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -278,7 +278,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 4,
                         elevation: 3,
@@ -293,11 +293,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -308,11 +308,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -325,11 +325,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -340,7 +340,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 4,
                         elevation: 1,
@@ -355,11 +355,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -370,11 +370,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -387,11 +387,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 10,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -402,7 +402,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 8,
                         elevation: 3,
@@ -417,11 +417,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 10,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -432,11 +432,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 10,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -449,11 +449,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.16,
                         shadowRadius: 8,
                         elevation: 5,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -464,7 +464,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 8,
                         elevation: 5,
@@ -479,11 +479,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.16,
                         shadowRadius: 8,
                         elevation: 5,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -494,11 +494,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 4
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.16,
                         shadowRadius: 8,
                         elevation: 5,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -511,11 +511,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.22,
                         shadowRadius: 10,
                         elevation: 0,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -526,11 +526,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.13,
                         shadowRadius: 9,
                         elevation: 0,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.MIDNIGHT]: {
@@ -541,11 +541,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.22,
                         shadowRadius: 10,
                         elevation: 0,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -556,11 +556,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: 0
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.22,
                         shadowRadius: 10,
                         elevation: 0,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -573,11 +573,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 32,
                         elevation: 18,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -588,7 +588,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.12,
                         shadowRadius: 36,
                         elevation: 18,
@@ -603,11 +603,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 32,
                         elevation: 18,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -618,11 +618,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -12
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 32,
                         elevation: 18,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -635,11 +635,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -650,7 +650,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.12,
                         shadowRadius: 0,
                         elevation: 1,
@@ -665,11 +665,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -680,11 +680,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1.5
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.24,
                         shadowRadius: 0,
                         elevation: 1,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             },
@@ -697,11 +697,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.LIGHT]: {
@@ -712,7 +712,7 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.08,
                         shadowRadius: 4,
                         elevation: 3,
@@ -727,11 +727,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 },
                 [n.DARKER]: {
@@ -742,11 +742,11 @@ let { Themes: n } = r(15202).V,
                             width: 0,
                             height: -1
                         },
-                        shadowColor: '#000',
+                        shadowColor: '#000000',
                         shadowOpacity: 0.14,
                         shadowRadius: 4,
                         elevation: 3,
-                        shadowColorAndroid: '#000'
+                        shadowColorAndroid: '#000000'
                     }
                 }
             }

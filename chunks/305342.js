@@ -32,8 +32,8 @@ var i = n(200651),
     j = n(293810),
     Z = n(981631),
     R = n(388032),
-    P = n(367993);
-let L = (e) => {
+    L = n(367993);
+let P = (e) => {
         let { benefits: t, header: n, guildId: l } = e,
             [a, o] = r.useState(!1),
             c = a ? t : t.slice(0, 5),
@@ -44,18 +44,18 @@ let L = (e) => {
         return 0 === t.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: P.benefitsSection,
+                  className: L.benefitsSection,
                   children: [
                       (0, i.jsx)(s.Heading, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
-                          className: P.sectionHeader,
+                          className: L.sectionHeader,
                           id: p,
                           children: n
                       }),
                       (0, i.jsx)(s.Spacer, { size: 12 }),
                       (0, i.jsx)('ul', {
-                          className: P.benefitsList,
+                          className: L.benefitsList,
                           'aria-labelledby': p,
                           children: c.map((e, t) =>
                               (0, i.jsx)(
@@ -91,17 +91,17 @@ let L = (e) => {
         return 0 === a.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: P.benefitsSection,
+                  className: L.benefitsSection,
                   children: [
                       (0, i.jsx)(s.Heading, {
                           variant: 'text-xs/bold',
                           color: 'header-secondary',
-                          className: P.sectionHeader,
+                          className: L.sectionHeader,
                           children: R.intl.format(R.t.NAnXEh, { count: a.length })
                       }),
                       (0, i.jsx)(s.Spacer, { size: 12 }),
                       (0, i.jsx)('div', {
-                          className: P.emojiList,
+                          className: L.emojiList,
                           children: a.map((e, t) => {
                               var n;
                               return (0, i.jsx)(
@@ -113,7 +113,7 @@ let L = (e) => {
                                           var n;
                                           return (0, i.jsx)('img', {
                                               ...t,
-                                              className: P.emojiListEmoji,
+                                              className: L.emojiListEmoji,
                                               src:
                                                   ((n = e),
                                                   h.ZP.getEmojiURL({
@@ -145,14 +145,14 @@ let L = (e) => {
         return null == l && 0 === c.length && 0 === u.length && 0 === m.size
             ? null
             : (0, i.jsxs)('div', {
-                  className: a()(P.subscriptionPerks, r),
+                  className: a()(L.subscriptionPerks, r),
                   children: [
                       null != l &&
                           (0, i.jsxs)(s.HeadingLevel, {
                               component: (0, i.jsx)(s.Heading, {
                                   variant: 'text-xs/bold',
                                   color: 'header-secondary',
-                                  className: P.sectionHeader,
+                                  className: L.sectionHeader,
                                   children: R.intl.string(R.t.FJZmY2)
                               }),
                               children: [
@@ -160,16 +160,16 @@ let L = (e) => {
                                   (0, i.jsx)(v.Z, {
                                       role: d,
                                       guildId: n,
-                                      className: P.roleMessagePreview
+                                      className: L.roleMessagePreview
                                   })
                               ]
                           }),
-                      (0, i.jsx)(L, {
+                      (0, i.jsx)(P, {
                           header: R.intl.string(R.t.LtfhAg),
                           benefits: c,
                           guildId: n
                       }),
-                      (0, i.jsx)(L, {
+                      (0, i.jsx)(P, {
                           header: R.intl.string(R.t['8oxWpK']),
                           benefits: u,
                           guildId: n
@@ -192,7 +192,7 @@ let L = (e) => {
                           (0, i.jsx)(s.ChevronSmallUpIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: P.toggleTruncationButtonIcon
+                              className: L.toggleTruncationButtonIcon
                           })
                       ]
                   })
@@ -202,15 +202,15 @@ let L = (e) => {
                           (0, i.jsx)(s.ChevronSmallDownIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: P.toggleTruncationButtonIcon
+                              className: L.toggleTruncationButtonIcon
                           })
                       ]
                   })),
             (0, i.jsx)(s.Button, {
                 look: s.Button.Looks.BLANK,
                 size: s.Button.Sizes.NONE,
-                className: P.toggleTruncationButton,
-                innerClassName: P.toggleTruncationButtonInner,
+                className: L.toggleTruncationButton,
+                innerClassName: L.toggleTruncationButtonInner,
                 onClick: n,
                 children: t
             })
@@ -221,7 +221,7 @@ t.Z = (e) => {
     let { listingId: n, guildId: l, groupListingId: u, analyticsLocation: h } = e,
         C = (0, p.jO)(n),
         { openModal: I, canOpenModal: x, cannotOpenReason: v, isCheckingTrialEligibility: T } = (0, b.Z)(C, l, u, h),
-        L = (0, o.e7)([m.Z], () => m.Z.isSyncing),
+        P = (0, o.e7)([m.Z], () => m.Z.isSyncing),
         { activeSubscription: y, activeSubscriptionListing: k } = (0, _.Z)(u),
         D = (null == k ? void 0 : k.id) === n,
         B = (null == y ? void 0 : y.status) === Z.O0b.CANCELED,
@@ -246,12 +246,12 @@ t.Z = (e) => {
         ei = R.intl.string(R.t.KzmEAw);
     return (et || ee) && !en
         ? (0, i.jsxs)('article', {
-              className: P.container,
+              className: L.container,
               'aria-label': H,
               children: [
                   X &&
                       (0, i.jsxs)('div', {
-                          className: a()(P.tierTrialIndicator, P.tierTopIndicator),
+                          className: a()(L.tierTrialIndicator, L.tierTopIndicator),
                           children: [
                               R.intl.format(R.t.L2ouio, {
                                   trialPeriodDuration: (0, f.iG)({
@@ -266,17 +266,17 @@ t.Z = (e) => {
                                       (0, i.jsx)(s.CircleInformationIcon, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: P.tierTrialIndicatorIcon,
+                                          className: L.tierTrialIndicatorIcon,
                                           ...e
                                       })
                               })
                           ]
                       }),
                   (0, i.jsxs)('div', {
-                      className: X ? void 0 : P.cardContainerWithoutTopIndicator,
+                      className: X ? void 0 : L.cardContainerWithoutTopIndicator,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: P.tierInfoContainer,
+                              className: L.tierInfoContainer,
                               children: [
                                   Q
                                       ? (0, i.jsx)(A.e, {
@@ -292,7 +292,7 @@ t.Z = (e) => {
                                   $ &&
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
-                                              Q && (0, i.jsx)('div', { className: P.divider }),
+                                              Q && (0, i.jsx)('div', { className: L.divider }),
                                               D
                                                   ? (0, i.jsx)(s.Button, {
                                                         fullWidth: !0,
@@ -308,7 +308,7 @@ t.Z = (e) => {
                                                             (0, i.jsx)(N.Z, {
                                                                 ...e,
                                                                 fullWidth: !0,
-                                                                disabled: !x || L,
+                                                                disabled: !x || P,
                                                                 submitting: T,
                                                                 onClick: I,
                                                                 onlyShineOnHover: !0,
@@ -319,7 +319,7 @@ t.Z = (e) => {
                                               (0, i.jsx)(s.Text, {
                                                   variant: 'text-sm/normal',
                                                   color: 'text-normal',
-                                                  className: a()((!F || !U) && P.tierDescriptionTruncate),
+                                                  className: a()((!F || !U) && L.tierDescriptionTruncate),
                                                   children: (0, i.jsx)('div', {
                                                       ref: V,
                                                       children: z

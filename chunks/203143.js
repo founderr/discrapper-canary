@@ -35,8 +35,8 @@ var i = n(512722),
     j = n(798628),
     Z = n(918088),
     R = n(981631),
-    P = n(388032);
-function L(e, t) {
+    L = n(388032);
+function P(e, t) {
     let n = [...t],
         i = 0,
         r = 0;
@@ -56,8 +56,8 @@ function y(e) {
     u.Z.show({
         title: n,
         body: i,
-        confirmText: P.intl.string(P.t['9VLmlZ']),
-        cancelText: P.intl.string(P.t['2m+Sqq']),
+        confirmText: L.intl.string(L.t['9VLmlZ']),
+        cancelText: L.intl.string(L.t['2m+Sqq']),
         onConfirm: () => {
             d.Z.joinGuild(t, { source: R.vtS.POLL_ALERT });
         }
@@ -70,8 +70,8 @@ function O(e) {
     if (p.Z.isLurking(r.guild_id)) {
         y({
             guildId: r.guild_id,
-            title: P.intl.string(P.t['7LpysL']),
-            body: P.intl.string(P.t['5sHHo6'])
+            title: L.intl.string(L.t['7LpysL']),
+            body: L.intl.string(L.t['5sHHo6'])
         });
         return;
     }
@@ -146,15 +146,15 @@ async function B(e) {
     if (p.Z.isLurking(i.guild_id)) {
         y({
             guildId: i.guild_id,
-            title: P.intl.string(P.t.Qic1FB),
-            body: P.intl.string(P.t['5sHHo6'])
+            title: L.intl.string(L.t.Qic1FB),
+            body: L.intl.string(L.t['5sHHo6'])
         });
         return;
     }
     if (!N.Z.canChatInGuild(i.guild_id)) {
         u.Z.show({
-            title: P.intl.string(P.t.p245ws),
-            body: P.intl.string(P.t['U/uodn'])
+            title: L.intl.string(L.t.p245ws),
+            body: L.intl.string(L.t['U/uodn'])
         });
         return;
     }
@@ -192,8 +192,8 @@ async function B(e) {
     } catch (e) {
         var o, s, c;
         u.Z.show({
-            title: P.intl.string(P.t.iufib2),
-            body: null !== (c = null !== (s = null === (o = e.getAnyErrorMessage) || void 0 === o ? void 0 : o.call(e)) && void 0 !== s ? s : e.message) && void 0 !== c ? c : P.intl.string(P.t.eAn6z8)
+            title: L.intl.string(L.t.iufib2),
+            body: null !== (c = null !== (s = null === (o = e.getAnyErrorMessage) || void 0 === o ? void 0 : o.call(e)) && void 0 !== s ? s : e.message) && void 0 !== c ? c : L.intl.string(L.t.eAn6z8)
         }),
             await D({
                 channelId: t,
@@ -217,8 +217,8 @@ async function U(e) {
         if (p.Z.isLurking(i.guild_id)) {
             y({
                 guildId: i.guild_id,
-                title: P.intl.string(P.t.B9QnBg),
-                body: P.intl.string(P.t.BVZCTk)
+                title: L.intl.string(L.t.B9QnBg),
+                body: L.intl.string(L.t.BVZCTk)
             });
             return;
         }
@@ -360,8 +360,8 @@ async function F(e) {
 async function G(e) {
     let { channelId: t, messageId: n } = e;
     (await u.Z.confirm({
-        title: P.intl.string(P.t['+rfkTE']),
-        body: P.intl.string(P.t.H2I1gI)
+        title: L.intl.string(L.t['+rfkTE']),
+        body: L.intl.string(L.t.H2I1gI)
     })) &&
         (await b.W({
             channelId: t,
@@ -408,7 +408,7 @@ t.Z = {
             var t, n;
             if (null == e) {
                 let e = new Set([i]),
-                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: r, selectedEmojiAnswersCount: l } = L(null === (n = s.poll) || void 0 === n ? void 0 : n.answers, e);
+                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: r, selectedEmojiAnswersCount: l } = P(null === (n = s.poll) || void 0 === n ? void 0 : n.answers, e);
                 return (
                     f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
                         channel_id: a,
@@ -433,7 +433,7 @@ t.Z = {
                 if (!u) for (let e of l) l.delete(e);
                 l.add(i);
             }
-            let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: d, selectedEmojiAnswersCount: m } = L(null === (t = s.poll) || void 0 === t ? void 0 : t.answers, l);
+            let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: d, selectedEmojiAnswersCount: m } = P(null === (t = s.poll) || void 0 === t ? void 0 : t.answers, l);
             return (
                 f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
                     channel_id: a,

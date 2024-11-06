@@ -1,97 +1,97 @@
-var r = n(570140),
-    i = n(434404),
-    l = n(821864),
-    u = n(308063);
-e.Z = {
+var i = n(570140),
+    l = n(434404),
+    r = n(821864),
+    T = n(308063);
+t.Z = {
     init() {
-        r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_INIT' });
+        i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_INIT' });
     },
-    setSection(t) {
-        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        r.Z.dispatch({
+    setSection(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_SET_SECTION',
-            section: t,
-            sectionId: e
+            section: e,
+            sectionId: t
         });
     },
-    startEditingCommandPermissions(t) {
-        r.Z.dispatch({
+    startEditingCommandPermissions(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_COMMAND',
-            commandId: t
+            commandId: e
         });
     },
-    stopEditingCommandPermissions(t) {
-        r.Z.dispatch({
+    stopEditingCommandPermissions(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_STOP_EDITING_COMMAND',
-            commandId: t
+            commandId: e
         });
     },
-    startEditingIntegration(t) {
-        r.Z.dispatch({
+    startEditingIntegration(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_INTEGRATION',
-            integrationId: t
+            integrationId: e
         });
     },
     stopEditingIntegration() {
-        r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION' });
+        i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION' });
     },
-    updateIntegration(t) {
-        r.Z.dispatch({
+    updateIntegration(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_UPDATE_INTEGRATION',
-            settings: t
+            settings: e
         });
     },
-    startEditingWebhook(t) {
-        r.Z.dispatch({
+    startEditingWebhook(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_START_EDITING_WEBHOOK',
-            webhookId: t
+            webhookId: e
         });
     },
     stopEditingWebhook() {
-        r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK' });
+        i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK' });
     },
-    updateWebhook(t) {
-        r.Z.dispatch({
+    updateWebhook(e) {
+        i.Z.dispatch({
             type: 'INTEGRATION_SETTINGS_UPDATE_WEBHOOK',
-            settings: t
+            settings: e
         });
     },
-    async saveApplicationPermissions(t, e, n) {
+    async saveApplicationPermissions(e, t, n) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
-                await l.U3({
-                    applicationId: t,
-                    commandId: t,
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
+                await r.U3({
+                    applicationId: e,
+                    commandId: e,
                     defaultEveryoneValue: !0,
                     defaultEverywhereValue: !0,
-                    guildId: e,
+                    guildId: t,
                     permissions: n
                 }),
-                r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (t) {
-            r.Z.dispatch({
+                i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+        } catch (e) {
+            i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: t.body
+                errors: e.body
             });
         }
     },
-    async saveIntegration(t, e) {
+    async saveIntegration(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await i.Z.updateIntegration(t, e.id, e.expire_behavior, e.expire_grace_period, e.enable_emoticons), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (t) {
-            r.Z.dispatch({
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await l.Z.updateIntegration(e, t.id, t.expire_behavior, t.expire_grace_period, t.enable_emoticons), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+        } catch (e) {
+            i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: t.body
+                errors: e.body
             });
         }
     },
-    async saveWebhook(t, e) {
+    async saveWebhook(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await u.Z.update(t, e.id, e), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
-        } catch (t) {
-            r.Z.dispatch({
+            i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await T.Z.update(e, t.id, t), i.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+        } catch (e) {
+            i.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',
-                errors: t.body
+                errors: e.body
             });
         }
     }

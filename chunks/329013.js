@@ -28,8 +28,8 @@ var i = n(200651),
     f = n(981631),
     I = n(921944),
     N = n(474936),
-    A = n(388032),
-    b = n(394246),
+    b = n(388032),
+    A = n(394246),
     v = n(113207);
 let j = () => {
         (0, g.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
@@ -58,18 +58,18 @@ let j = () => {
                 !l || o
                     ? null
                     : (0, i.jsxs)('div', {
-                          className: b.tryItOutButtons,
+                          className: A.tryItOutButtons,
                           children: [
                               (0, i.jsx)(a.Button, {
                                   color: O ? a.Button.Colors.BRAND : a.Button.Colors.PRIMARY,
                                   onClick: () => j(),
-                                  children: O ? A.intl.string(A.t.SKNnqq) : A.intl.string(A.t['E+COuL'])
+                                  children: O ? b.intl.string(b.t.SKNnqq) : b.intl.string(b.t['E+COuL'])
                               }),
                               (0, i.jsx)(C.Z, {
                                   showGradient: O,
                                   subscriptionTier: N.Si.TIER_2,
-                                  buttonText: O ? A.intl.string(A.t.pj0XBA) : g ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : A.intl.string(A.t.mr4K7O),
-                                  className: b.premiumCta
+                                  buttonText: O ? b.intl.string(b.t.pj0XBA) : g ? b.intl.formatToPlainString(b.t.bkQ4bG, { percent: null == u ? void 0 : u.discount.amount }) : b.intl.string(b.t.mr4K7O),
+                                  className: A.premiumCta
                               })
                           ]
                       });
@@ -87,14 +87,14 @@ let j = () => {
                         type: h.yH.SETTINGS,
                         children: O
                             ? (0, i.jsx)(h.ZP.BasicAndGradient, {
-                                  className: b.basicThemeSelectors,
+                                  className: A.basicThemeSelectors,
                                   renderCTAButtons: R
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(h.ZP.Basic, { className: b.basicThemeSelectors }),
+                                      (0, i.jsx)(h.ZP.Basic, { className: A.basicThemeSelectors }),
                                       (0, i.jsxs)(_.Z, {
-                                          className: b.featureBorder,
+                                          className: A.featureBorder,
                                           isShown: l,
                                           type: _.Y.PREMIUM,
                                           children: [
@@ -107,12 +107,12 @@ let j = () => {
                                                   (0, i.jsxs)('div', {
                                                       children: [
                                                           (0, i.jsx)(a.Button, {
-                                                              className: b.previewThemeButtonWide,
+                                                              className: A.previewThemeButtonWide,
                                                               color: a.Button.Colors.PRIMARY,
                                                               onClick: () => j(),
-                                                              children: A.intl.string(A.t['E+COuL'])
+                                                              children: b.intl.string(b.t['E+COuL'])
                                                           }),
-                                                          (0, i.jsx)('div', { className: b.premiumTier2Divider }),
+                                                          (0, i.jsx)('div', { className: A.premiumTier2Divider }),
                                                           (0, i.jsx)(T.ZP, {
                                                               type: N.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: N.Si.TIER_2
@@ -135,5 +135,5 @@ let j = () => {
             : (0, i.jsx)(a.Button, {
                   size: a.ButtonSizes.SMALL,
                   onClick: () => j(),
-                  children: A.intl.string(A.t.qYXrkZ)
+                  children: b.intl.string(b.t.qYXrkZ)
               });

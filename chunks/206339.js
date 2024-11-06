@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(197115),
     I = n(504983),
     N = n(703656),
-    A = n(594174),
-    b = n(580130),
+    b = n(594174),
+    A = n(580130),
     v = n(669079),
     j = n(74538),
     O = n(317941),
@@ -62,8 +62,8 @@ function B(e) {
                   onClickDetails: g
               }));
     let N = f ? D.intl.string(D.t['2cHUtr']) : D.intl.string(D.t.O13yh4),
-        A = s.useCallback(() => h(!1), []),
-        { outboundTitle: b, outboundTermsAndConditions: v } = n;
+        b = s.useCallback(() => h(!1), []),
+        { outboundTitle: A, outboundTermsAndConditions: v } = n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -87,7 +87,7 @@ function B(e) {
                                         children: [
                                             (0, i.jsx)(d.Heading, {
                                                 variant: 'heading-md/semibold',
-                                                children: b
+                                                children: A
                                             }),
                                             (0, i.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
@@ -123,23 +123,23 @@ function B(e) {
                     renderModal: (e) =>
                         (0, i.jsx)(E.Z, {
                             ...e,
-                            onClose: A,
+                            onClose: b,
                             onClaim: a,
                             code: r,
                             outboundPromotion: n
                         }),
-                    onCloseRequest: A
+                    onCloseRequest: b
                 })
         ]
     });
 }
 t.Z = function () {
-    let e = (0, c.Wu)([b.Z], () => b.Z.getGiftable()),
+    let e = (0, c.Wu)([A.Z], () => A.Z.getGiftable()),
         [t, n] = o().partition(e, (e) => {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
-        r = (0, c.e7)([A.default], () => j.ZP.isPremiumExactly(A.default.getCurrentUser(), P.p9.TIER_2)),
+        r = (0, c.e7)([b.default], () => j.ZP.isPremiumExactly(b.default.getCurrentUser(), P.p9.TIER_2)),
         a = o().groupBy(t, (e) => (0, v.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [p, x] = s.useState(!1);
     s.useEffect(() => {

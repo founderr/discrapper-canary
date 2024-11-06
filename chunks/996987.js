@@ -1,23 +1,23 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return u;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(600164),
-    a = t(313201),
-    o = t(63063),
-    s = t(453628),
-    d = t(388032),
-    c = t(113207);
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    r = n(600164),
+    a = n(313201),
+    o = n(63063),
+    s = n(453628),
+    c = n(388032),
+    d = n(113207);
 function u(e) {
-    let { value: n, onChange: t, children: u, note: m, helpdeskArticleId: h, style: p, disabled: g = !1, hideBorder: f = !1, className: x = c.marginBottom20 } = e,
+    let { value: t, onChange: n, children: u, note: m, helpdeskArticleId: h, style: p, disabled: g = !1, hideBorder: x = !1, className: f = d.marginBottom20 } = e,
         b = (0, a.Dt)();
     return (0, i.jsxs)(r.Z, {
         style: p,
-        className: x,
+        className: f,
         direction: r.Z.Direction.VERTICAL,
         children: [
             (0, i.jsxs)(r.Z, {
@@ -25,7 +25,7 @@ function u(e) {
                     (0, i.jsx)(r.Z.Child, {
                         children: (0, i.jsx)(l.FormTitle, {
                             id: b,
-                            className: c.marginReset,
+                            className: d.marginReset,
                             tag: l.FormTitleTags.H3,
                             disabled: g,
                             children: u
@@ -35,8 +35,8 @@ function u(e) {
                         grow: 0,
                         shrink: 0,
                         children: (0, i.jsx)(s.Z, {
-                            value: n,
-                            onChange: t,
+                            value: t,
+                            onChange: n,
                             disabled: g,
                             labelledBy: b
                         })
@@ -45,7 +45,7 @@ function u(e) {
             }),
             null != m &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: c.marginTop4,
+                    className: d.marginTop4,
                     children: (0, i.jsx)(l.FormText, {
                         type: l.FormTextTypes.DESCRIPTION,
                         children: m
@@ -53,19 +53,19 @@ function u(e) {
                 }),
             null != h &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: c.marginTop4,
+                    className: d.marginTop4,
                     children: (0, i.jsx)(l.FormText, {
                         disabled: g,
                         type: l.FormTextTypes.DESCRIPTION,
                         children: (0, i.jsx)(l.Anchor, {
                             href: o.Z.getArticleURL(h),
-                            children: d.intl.string(d.t.hvVgAQ)
+                            children: c.intl.string(c.t.hvVgAQ)
                         })
                     })
                 }),
-            !f &&
+            !x &&
                 (0, i.jsx)(r.Z.Child, {
-                    className: c.marginTop20,
+                    className: d.marginTop20,
                     children: (0, i.jsx)(l.FormDivider, {})
                 })
         ]

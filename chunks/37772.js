@@ -26,8 +26,8 @@ var i = n(200651),
     j = n(963550),
     Z = n(845080),
     R = n(295790),
-    P = n(145807),
-    L = n(56744),
+    L = n(145807),
+    P = n(56744),
     y = n(834129),
     O = n(981631),
     M = n(388032),
@@ -108,7 +108,7 @@ t.Z = r.memo(function e(t) {
                     [D.disableInteraction]: F,
                     [D.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, L.Z)(s, l, H, z, y),
+                childrenRepliedMessage: (0, P.Z)(s, l, H, z, y),
                 childrenHeader: (0, Z.Z)({
                     ...t,
                     author: en,
@@ -138,7 +138,7 @@ t.Z = r.memo(function e(t) {
                     shouldRenderCtaButton: es,
                     hasInlineForwardButton: !1
                 }),
-                childrenExecutedCommand: (0, P.Z)(s, l, y),
+                childrenExecutedCommand: (0, L.Z)(s, l, y),
                 childrenMessageContent: (0, j.Z)(t, ee),
                 childrenSystemMessage: (0, R.Z)(t),
                 onContextMenu: U,

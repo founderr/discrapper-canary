@@ -33,8 +33,8 @@ var r = n(442837),
     Z = n(569252);
 let R = (e) => {
     let { dismissibleContent: t, noticeType: R } = e,
-        P = (0, r.e7)([I.Z], () => I.Z.getNotice()),
-        L = (0, r.e7)([C.default], () => C.default.locale);
+        L = (0, r.e7)([I.Z], () => I.Z.getNotice()),
+        P = (0, r.e7)([C.default], () => C.default.locale);
     return (0, i.jsx)(v.ZP, {
         contentTypes: [t],
         groupName: T.R.NOTICE_BAR,
@@ -187,7 +187,7 @@ let R = (e) => {
                     });
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, i.jsx)(g.Z, {
-                        notice: P,
+                        notice: L,
                         noticeType: R,
                         dismissCurrentNotice: () => r(T.L.UNKNOWN)
                     });
@@ -252,7 +252,7 @@ let R = (e) => {
                                 onClick: () => r(T.L.UNKNOWN),
                                 noticeType: R
                             }),
-                            j.intl.format(j.t.zT1hgo, { date: (0, f.IE)(L) }),
+                            j.intl.format(j.t.zT1hgo, { date: (0, f.IE)(P) }),
                             (0, i.jsx)(a.PrimaryCTANoticeButton, {
                                 onClick: () => (0, p.Z)(A.Kq.NOTICE),
                                 noticeType: R,

@@ -25,8 +25,8 @@ var i = n(200651),
     f = n(706454),
     I = n(726985),
     N = n(981631),
-    A = n(388032),
-    b = n(467174);
+    b = n(388032),
+    A = n(467174);
 class v extends s.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
@@ -41,11 +41,11 @@ class v extends s.PureComponent {
         return t
             ? (0, i.jsx)(m.Z, {})
             : (0, i.jsxs)('div', {
-                  className: b.__invalid_userSettingsBilling,
+                  className: A.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(n).length
                           ? (0, i.jsx)('div', {
-                                className: b.syncing,
+                                className: A.syncing,
                                 children: (0, i.jsx)(o.Spinner, {})
                             })
                           : (0, i.jsx)(x.F, {
@@ -62,20 +62,20 @@ class v extends s.PureComponent {
                       (0, i.jsx)(x.F, {
                           setting: I.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
-                              className: b.paymentHistory,
+                              className: A.paymentHistory,
                               children: (0, i.jsxs)(o.HeadingLevel, {
                                   component: (0, i.jsx)(o.FormTitle, {
                                       tag: 'h1',
-                                      children: A.intl.string(A.t.obLrcH)
+                                      children: b.intl.string(b.t.obLrcH)
                                   }),
                                   children: [(0, i.jsx)(p.oQ, {}), (0, i.jsx)(h.Z, { locale: r })]
                               })
                           })
                       }),
                       (0, i.jsx)(o.Card, {
-                          className: b.codeRedemptionRedirect,
+                          className: A.codeRedemptionRedirect,
                           type: o.Card.Types.CUSTOM,
-                          children: A.intl.format(A.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
+                          children: b.intl.format(b.t['8b+FXF'], { onClick: this.handleRedemptionRedirect })
                       })
                   ]
               });

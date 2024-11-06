@@ -1,12 +1,12 @@
 n.d(t, {
     QN: function () {
-        return s;
+        return f;
     },
     ZP: function () {
         return d;
     },
     gb: function () {
-        return f;
+        return s;
     },
     uF: function () {
         return p;
@@ -22,13 +22,13 @@ var i = n(192379),
     a = n(823379),
     c = n(317381);
 function d(e, t) {
-    return f(
+    return s(
         (0, l.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
         t
     );
 }
-function s(e) {
-    let t = f((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
+function f(e) {
+    let t = s((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
     return i.useMemo(() => {
         let e = new Map();
         return (
@@ -42,7 +42,7 @@ function s(e) {
         );
     }, [t]);
 }
-function f(e, t) {
+function s(e, t) {
     let n = e.map((e) => e.applicationId),
         o = (0, r.Z)(n),
         c = new Set([]);

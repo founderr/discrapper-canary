@@ -140,7 +140,7 @@ function U(e) {
                 }),
             !0
         );
-    let { path: y, hostname: C = '', host: M, query: U, hash: G } = r.parse(e),
+    let { pathname: y, hostname: C = '', host: M, query: U, hash: G } = r.parse(e),
         B = O.Z.isDiscordHostname(C) || O.Z.isDiscordLocalhost(M, C);
     if (B && (null == y ? void 0 : y.startsWith('/application-directory'))) {
         let e;

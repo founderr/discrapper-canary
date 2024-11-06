@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return H;
+        return D;
     }
 }),
     t(47120);
@@ -243,7 +243,7 @@ function w(e) {
               ]
           });
 }
-function H(e) {
+function D(e) {
     var n;
     let { channel: t, application: a, sectionName: o, installOnDemand: r, setHasCommands: s } = e,
         {

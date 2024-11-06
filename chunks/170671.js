@@ -1,17 +1,17 @@
-e.d(n, {
+n.d(t, {
     Z: function () {
         return o;
     }
 });
-var i = e(200651);
-e(192379);
-var r = e(692547),
-    l = e(313201);
-function o(t) {
-    let { isSelected: n, ...e } = t,
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    l = n(313201);
+function o(e) {
+    let { isSelected: t, ...n } = e,
         o = (0, l.Dt)();
     return (0, i.jsxs)('svg', {
-        ...e,
+        ...n,
         width: '16',
         height: '16',
         viewBox: '0 0 16 16',
@@ -41,14 +41,14 @@ function o(t) {
                     y2: '0.127441',
                     gradientUnits: 'userSpaceOnUse',
                     children: [
-                        (0, i.jsx)('stop', { stopColor: n ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
+                        (0, i.jsx)('stop', { stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
                         (0, i.jsx)('stop', {
                             offset: '0.502368',
-                            stopColor: n ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
+                            stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS_2.css
                         }),
                         (0, i.jsx)('stop', {
                             offset: '1',
-                            stopColor: n ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
+                            stopColor: t ? r.Z.unsafe_rawColors.WHITE_500.css : r.Z.unsafe_rawColors.PREMIUM_TIER_2_PINK_FOR_GRADIENTS.css
                         })
                     ]
                 })

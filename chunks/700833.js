@@ -22,10 +22,10 @@ function f(e) {
         T = async () => {
             await C(h);
         },
-        I = async (e) => {
+        j = async (e) => {
             await b(h, e);
         },
-        j = async (e, n, t) => {
+        I = async (e, n, t) => {
             await v(e, n, t);
         },
         N = (0, a.uniqueId)(),
@@ -37,7 +37,7 @@ function f(e) {
             isDropHovered: S,
             onEdit: () => {
                 0 === g
-                    ? x(u, I, f)
+                    ? x(u, j, f)
                     : (0, i.openModalLazy)(async () => {
                           let { default: e } = await t.e('74673').then(t.bind(t, 394045));
                           return (n) =>
@@ -45,12 +45,12 @@ function f(e) {
                                   ...n,
                                   guildId: f.id,
                                   submittedGuildJoinRequestsCount: g,
-                                  onConfirm: () => x(u, I, f)
+                                  onConfirm: () => x(u, j, f)
                               });
                       });
             },
             onRemove: T,
-            onDrop: j,
+            onDrop: I,
             canRemove: _,
             actionsLocation: y
         };

@@ -29,8 +29,8 @@ function f() {
         { threshold: f, autoThreshold: I } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: N,
-            automaticVADSupported: A,
-            isEnabled: b
+            automaticVADSupported: b,
+            isEnabled: A
         } = (0, a.cj)([g.Z], () => ({
             inputMode: g.Z.getMode(),
             automaticVADSupported: g.Z.supports(p.AN.AUTOMATIC_VAD),
@@ -104,7 +104,7 @@ function f() {
                 }),
                 (0, i.jsxs)('div', {
                     children: [
-                        A &&
+                        b &&
                             (0, i.jsx)(h.FG, {
                                 children: (e) =>
                                     (0, i.jsxs)('div', {
@@ -129,7 +129,7 @@ function f() {
                         O
                     ]
                 }),
-                !b &&
+                !A &&
                     (0, i.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
                         className: l()(S.inputDisabledWarning, _.marginBottom8),

@@ -1,38 +1,38 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return p;
     }
 }),
-    t(653041);
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(749210),
-    o = t(240872),
-    s = t(605436),
-    d = t(228643),
-    c = t(299206),
-    u = t(496675),
-    m = t(867108),
-    h = t(388032);
-function p(e, n) {
-    var t;
+    n(653041);
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(749210),
+    o = n(240872),
+    s = n(605436),
+    c = n(228643),
+    d = n(299206),
+    u = n(496675),
+    m = n(867108),
+    h = n(388032);
+function p(e, t) {
+    var n;
     let p = (0, l.e7)([u.Z], () => {
-            let t = u.Z.getHighestRole(e);
-            return !u.Z.isRoleHigher(e, t, n);
+            let n = u.Z.getHighestRole(e);
+            return !u.Z.isRoleHigher(e, n, t);
         }),
         g = [],
-        f = (0, m.Z)(e, n);
-    null != f && g.push(f);
-    let x = (0, c.Z)({
-        id: n.id,
+        x = (0, m.Z)(e, t);
+    null != x && g.push(x);
+    let f = (0, d.Z)({
+        id: t.id,
         label: h.intl.string(h.t.sMsaLi)
     });
-    null != x && g.push(x);
-    let b = (null === (t = n.tags) || void 0 === t ? void 0 : t.guild_connections) === null,
-        v = n.managed && !b,
-        C = null != n && (0, s.pM)(e.id, n.id);
+    null != f && g.push(f);
+    let b = (null === (n = t.tags) || void 0 === n ? void 0 : n.guild_connections) === null,
+        v = t.managed && !b,
+        C = null != t && (0, s.pM)(e.id, t.id);
     return (
         !p &&
             !v &&
@@ -49,10 +49,10 @@ function p(e, n) {
                             action: () => {
                                 o.Z.show({
                                     title: h.intl.string(h.t.YWISbW),
-                                    body: h.intl.format(h.t['9+nrUV'], { name: n.name }),
+                                    body: h.intl.format(h.t['9+nrUV'], { name: t.name }),
                                     cancelText: h.intl.string(h.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        b && (await (0, d.L_)(e.id, n.id, [])), a.Z.deleteRole(e.id, n.id);
+                                        b && (await (0, c.L_)(e.id, t.id, [])), a.Z.deleteRole(e.id, t.id);
                                     }
                                 });
                             }

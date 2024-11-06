@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(325808),
     I = n(823087),
     N = n(546997),
-    A = n(520384),
-    b = n(167540),
+    b = n(520384),
+    A = n(167540),
     v = n(803567),
     j = n(269876),
     O = n(976758),
@@ -136,7 +136,7 @@ function k() {
             }),
             (0, i.jsx)(h.F, {
                 setting: P.s6.VOICE_AND_VIDEO_VIDEO,
-                children: (0, i.jsx)(b.Z, {})
+                children: (0, i.jsx)(A.Z, {})
             }),
             (0, i.jsx)(h.F, {
                 setting: P.s6.VOICE_AND_VIDEO_ADVANCED,
@@ -152,7 +152,7 @@ function k() {
                             setting: P.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, i.jsx)(v.Z, {})
                         }),
-                        (0, i.jsx)(A.Z, {}),
+                        (0, i.jsx)(b.Z, {}),
                         (0, i.jsx)(h.F, {
                             setting: P.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
                             children: (0, i.jsx)(o.FormSection, {

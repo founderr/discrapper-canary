@@ -27,8 +27,8 @@ var i,
     j = n(293273),
     Z = n(594174),
     R = n(181106),
-    P = n(417363),
-    L = n(768581),
+    L = n(417363),
+    P = n(768581),
     y = n(358085),
     O = n(804739),
     M = n(410575),
@@ -57,7 +57,7 @@ class w extends (i = l.PureComponent) {
         }
         return null == n || n instanceof N.ZP
             ? null
-            : L.ZP.getApplicationIconURL({
+            : P.ZP.getApplicationIconURL({
                   id: n.id,
                   icon: null != t ? t.coverImage : n.coverImage,
                   size: D.cc
@@ -212,7 +212,7 @@ class w extends (i = l.PureComponent) {
     }
 }
 B(w, 'defaultProps', { isPreview: !1 }),
-    (t.Z = a.ZP.connectStores([C.Z, S.Z, j.Z, b.Z, _.Z, P.Z, T.Z, R.Z, Z.default, A.ZP], (e) => {
+    (t.Z = a.ZP.connectStores([C.Z, S.Z, j.Z, b.Z, _.Z, L.Z, T.Z, R.Z, Z.default, A.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: r, userId: l, guildId: a } = e,
             { id: o } = null != i ? i : {},
             s = null != t && null != t.party && t.party.id === r ? S.Z.getParty(t.party.id) : null,
@@ -248,7 +248,7 @@ B(w, 'defaultProps', { isPreview: !1 }),
                 (0, O.t)({
                     LibraryApplicationStore: b.Z,
                     LaunchableGameStore: _.Z,
-                    DispatchApplicationStore: P.Z,
+                    DispatchApplicationStore: L.Z,
                     ConnectedAppsStore: T.Z,
                     applicationId: o
                 })

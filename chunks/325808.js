@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 });
 var i = n(200651),
@@ -27,7 +27,7 @@ let f = !x.isPlatformEmbedded,
 function N(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
-function A(e) {
+function b(e) {
     let t,
         { inputMode: n } = e,
         { shortcut: s, delay: r } = (0, a.cj)([p.Z], () => p.Z.getModeOptions());
@@ -86,7 +86,7 @@ function A(e) {
         })
     );
 }
-function b() {
+function A() {
     let { analyticsLocations: e } = (0, m.ZP)(),
         t = (0, a.e7)([p.Z], () => p.Z.getMode()),
         r = [
@@ -131,7 +131,7 @@ function b() {
                     value: t
                 })
             }),
-            t === T.pM4.PUSH_TO_TALK && (0, i.jsx)(A, { inputMode: t })
+            t === T.pM4.PUSH_TO_TALK && (0, i.jsx)(b, { inputMode: t })
         ]
     });
 }

@@ -41,8 +41,8 @@ var i,
     j = n(25610),
     Z = n(703751),
     R = n(761538),
-    P = n(674611),
-    L = n(346610),
+    L = n(674611),
+    P = n(346610),
     y = n(868643),
     O = n(294734),
     M = n(426275),
@@ -95,8 +95,8 @@ var i,
     ej = n(901461),
     eZ = n(432376),
     eR = n(384203),
-    eP = n(633957),
-    eL = n(530472),
+    eL = n(633957),
+    eP = n(530472),
     ey = n(29909),
     eO = n(782658),
     eM = n(219797),
@@ -209,7 +209,7 @@ class e3 extends (i = l.Component) {
         return n
             ? (0, r.jsx)('div', {
                   className: eX.ctaButtonContainer,
-                  children: (0, r.jsx)(P.Z, {
+                  children: (0, r.jsx)(L.Z, {
                       messageId: e.id,
                       channelId: t.id
                   })
@@ -511,7 +511,7 @@ class e3 extends (i = l.Component) {
     }
     renderEphemeralAccessories(e) {
         return (0, eS.Pv)(e)
-            ? (0, r.jsx)(eL.Z, {
+            ? (0, r.jsx)(eP.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       h.Z.dismissAutomatedMessage(e);
@@ -624,7 +624,7 @@ class e3 extends (i = l.Component) {
         let { application: t, activityInstance: n } = e;
         return null == t || null == n
             ? null
-            : (0, r.jsx)(eP.Z, {
+            : (0, r.jsx)(eL.Z, {
                   application: t,
                   channelId: this.props.channel.id,
                   guildId: this.props.channel.guild_id
@@ -700,13 +700,13 @@ class e3 extends (i = l.Component) {
             j = this.renderVoiceChannelInvite(t, n),
             Z = this.renderMediaObscureNotice(t),
             R = this.renderPoll(t, i),
-            P = this.renderForwardedMessage(t);
-        return null == s && null == d && null == f && null == p && null == g && null == c && null == u && null == _ && null == E && null == C && null == I && null == x && null == v && null == N && null == S && null == A && null != T && null == R && null == j && null == P
+            L = this.renderForwardedMessage(t);
+        return null == s && null == d && null == f && null == p && null == g && null == c && null == u && null == _ && null == E && null == C && null == I && null == x && null == v && null == N && null == S && null == A && null != T && null == R && null == j && null == L
             ? null
             : (0, r.jsxs)('div', {
                   id: (0, ek.bX)(t),
                   className: o()(e, eX.container),
-                  children: [P, N, R, s, c, u, S, d, m, f, Z, p, C, x, v, T, h, g, _, E, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, A, b, j]
+                  children: [L, N, R, s, c, u, S, d, m, f, Z, p, C, x, v, T, h, g, _, E, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, A, b, j]
               });
     }
     constructor(...e) {
@@ -840,11 +840,11 @@ function e9(e) {
             isAutomodQuarantined: I
         }),
         R = (0, K.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
-        P = (0, q.Z)(null == n ? void 0 : n.id),
+        L = (0, q.Z)(null == n ? void 0 : n.id),
         O = (0, ee.Z)(i),
         M = (0, j.V)(n.id, i.author.id),
         k = (0, Z.r)(i.id),
-        { hasInlineForwardButton: U } = (0, L.yk)({ location: 'MessageAccessories' }),
+        { hasInlineForwardButton: U } = (0, P.yk)({ location: 'MessageAccessories' }),
         w = (0, y.a)(i) && U;
     return (0, r.jsx)(e3, {
         canSuppressEmbeds: v,
@@ -864,7 +864,7 @@ function e9(e) {
         poll: O,
         showListsAndHeaders: R,
         showMaskedLinks: R,
-        shouldHideMediaOptions: P,
+        shouldHideMediaOptions: L,
         shouldRedactExplicitContent: M,
         shouldRenderCtaButton: k,
         hasInlineForwardButton: w

@@ -42,8 +42,8 @@ var i,
     j = n(984933),
     Z = n(731290),
     R = n(430824),
-    P = n(375954),
-    L = n(496675),
+    L = n(375954),
+    P = n(496675),
     y = n(306680),
     O = n(771845),
     M = n(9156),
@@ -311,7 +311,7 @@ class V extends s.EventEmitter {
 function H(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = P.Z.getMessages(e.channelId),
+        r = L.Z.getMessages(e.channelId),
         l = r.toArray().filter((t) => B.default.compare(t.id, e.oldestReadMessageId) > 0 && 0 >= B.default.compare(t.id, e.newestUnreadMessageId));
     if (l.length === e.messages.length && l.every((t, n) => e.messages[n] === t) && i) return e;
     let a = null != r.getAfter(e.oldestReadMessageId) || (null === (n = l[0]) || void 0 === n ? void 0 : n.id) === e.oldestUnreadMessageId,
@@ -378,7 +378,7 @@ function W(e, t, n, i) {
     if (r.isPrivate()) {
         if (0 === y.ZP.getMentionCount(i)) return;
     } else if (!(0, C.d)(r) && 0 === y.ZP.getMentionCount(i)) return;
-    if (!r.isPrivate() && !L.Z.can(U.Plq.READ_MESSAGE_HISTORY, r)) return;
+    if (!r.isPrivate() && !P.Z.can(U.Plq.READ_MESSAGE_HISTORY, r)) return;
     let l = y.ZP.ackMessageId(i);
     if (null == l) {
         let e = R.Z.getGuild(r.guild_id);
@@ -466,7 +466,7 @@ function X(e) {
             0 === o.channels.length || t - l.current < 10 * k.Z.Millis.SECOND ? r(!0) : ((l.current = Date.now()), n(new V(o, e)));
         }, [a, i, e]),
         o.useLayoutEffect(t.maybeLoadMore, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]),
-        o.useEffect(() => (P.Z.addChangeListener(t.reloadMessages), () => P.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
+        o.useEffect(() => (L.Z.addChangeListener(t.reloadMessages), () => L.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         o.useEffect(() => (M.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => M.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
         o.useEffect(() => (N.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => N.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
         o.useEffect(() => (x.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => x.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),

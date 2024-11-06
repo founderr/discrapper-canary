@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(303172),
     I = n(518560),
     N = n(921801),
-    A = n(484459),
-    b = n(430824),
+    b = n(484459),
+    A = n(430824),
     v = n(325067),
     j = n(246946),
     O = n(663389),
@@ -48,7 +48,7 @@ var i = n(200651),
 class q extends s.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, A.Z)(e.id, e.getAvatarURL(void 0, 80));
+        (0, b.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
         m.Z.clearBackupCodes(), (0, h.Zy)();
@@ -352,7 +352,7 @@ class q extends s.PureComponent {
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             { currentUser: t } = this.props,
-            n = b.Z.getGuilds();
+            n = A.Z.getGuilds();
         if (D.default.keys(n).filter((e) => n[e].ownerId === t.id).length > 0) {
             this.setState({ shouldRenderOwnedGuildsModal: !0 });
             return;

@@ -21,8 +21,8 @@ var i = n(200651),
     T = n(492004);
 function C(e) {
     let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: _ = !1, withTutorial: E = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
-        A = (0, m.Kg)(t, n),
-        b = u.ZP.canUsePremiumProfileCustomization(t),
+        b = (0, m.Kg)(t, n),
+        A = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: v } = (0, o.ZP)(),
         { pendingProfileEffectId: j, errors: O } = (0, m.bd)(n),
         R = s.useCallback(
@@ -35,14 +35,14 @@ function C(e) {
             [v, N, n]
         );
     s.useEffect(() => {
-        b &&
+        A &&
             d.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: x.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
                 location_stack: v
             });
-    }, [b, v]);
+    }, [A, v]);
     let P = null != n,
-        D = I || void 0 !== j ? null != j : null != A,
+        D = I || void 0 !== j ? null != j : null != b,
         y = E ? a.ShinyButton : a.Button;
     return (0, i.jsx)(h.Z, {
         forcedDivider: _,
@@ -68,7 +68,7 @@ function C(e) {
                         look: a.Button.Looks.LINK,
                         size: a.Button.Sizes.SMALL,
                         onClick: function () {
-                            (0, m.s6)(null, A, null == n ? void 0 : n.id);
+                            (0, m.s6)(null, b, null == n ? void 0 : n.id);
                         },
                         children: P ? S.intl.string(S.t.GJ3Fcn) : S.intl.string(S.t['Ld+f5e'])
                     })

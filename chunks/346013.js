@@ -32,8 +32,8 @@ var i = n(200651),
     j = n(768581),
     Z = n(900849),
     R = n(506071),
-    P = n(495114),
-    L = n(170140),
+    L = n(495114),
+    P = n(170140),
     y = n(981631),
     O = n(959517),
     M = n(388032),
@@ -42,7 +42,7 @@ var i = n(200651),
 function B(e) {
     var t, n, l;
     let { embedUrl: o, message: B, channel: U } = e,
-        w = (0, L.J)(o, B),
+        w = (0, P.J)(o, B),
         { setPopout: F } = (0, N.Z)(B.id, O.d$),
         G = (0, x.qo)(B, U, F, !0),
         V = S.QK.useSetting(),
@@ -151,7 +151,7 @@ function B(e) {
                                 children: (0, i.jsxs)('div', {
                                     className: k.thumbnailOverlayCta,
                                     children: [
-                                        (0, i.jsx)(P.Z, { color: u.Z.WHITE }),
+                                        (0, i.jsx)(L.Z, { color: u.Z.WHITE }),
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',

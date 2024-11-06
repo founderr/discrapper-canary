@@ -31,8 +31,8 @@ var i = n(200651),
     j = n(464891),
     Z = n(348238),
     R = n(83561),
-    P = n(834129),
-    L = n(981631),
+    L = n(834129),
+    P = n(981631),
     y = n(674563),
     O = n(388032),
     M = n(38814);
@@ -387,7 +387,7 @@ function G(e) {
                 (0, i.jsx)(k, {}),
                 (0, i.jsx)(f.Button, {
                     onClick: function () {
-                        null != a && N.Z.open(a, L.pNK.GUILD_AUTOMOD, void 0, L.KsC.AUTOMOD_MENTION_SPAM);
+                        null != a && N.Z.open(a, P.pNK.GUILD_AUTOMOD, void 0, P.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: f.Button.Colors.LINK,
                     look: f.Button.Looks.LINK,
@@ -452,7 +452,7 @@ function H(e) {
     return (0, i.jsx)('div', {
         onMouseEnter: s,
         onMouseLeave: c,
-        children: (0, i.jsx)(P.Z, {
+        children: (0, i.jsx)(L.Z, {
             className: a()(M.mainContainer, { [M.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(R.S, { src: o }),
             iconContainerClassName: M.iconContainer,

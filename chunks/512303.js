@@ -19,35 +19,35 @@ function f(e) {
     if (!(0, o.a)(e)) return null;
     let m = null === (n = e.interactionMetadata) || void 0 === n ? void 0 : n.authorizing_integration_owners[l.Y.USER_INSTALL],
         h = null === (t = e.interactionMetadata) || void 0 === t ? void 0 : t.authorizing_integration_owners[l.Y.GUILD_INSTALL],
-        v = d.default.getUser(m),
-        I = u.Z.getGuild(h),
-        E = d.default.getUser(null === (f = e.interactionMetadata) || void 0 === f ? void 0 : f.user.id),
+        I = d.default.getUser(m),
+        E = u.Z.getGuild(h),
+        v = d.default.getUser(null === (f = e.interactionMetadata) || void 0 === f ? void 0 : f.user.id),
         p = null;
     return (
-        null != I
+        null != E
             ? (p = (0, i.jsx)(r.MenuItem, {
                   className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(s.Z, {
-                          guild: I,
+                          guild: E,
                           size: s.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
-                  label: I.name,
+                  label: E.name,
                   subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               }))
-            : null != v &&
+            : null != I &&
               (p = (0, i.jsx)(r.MenuItem, {
                   className: g.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(a.Z, {
-                          user: v,
+                          user: I,
                           size: r.AvatarSizes.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: v.username,
+                  label: I.username,
                   subtext: c.intl.formatToPlainString(c.t.ShLXXF, { application: e.author.username })
               })),
         (0, i.jsxs)(r.MenuItem, {
@@ -55,17 +55,17 @@ function f(e) {
             label: c.intl.string(c.t.Rjezb2),
             children: [
                 p,
-                null != E
+                null != v
                     ? (0, i.jsx)(r.MenuItem, {
                           className: g.interactionInfoMenuItem,
                           disabled: !0,
                           iconLeft: () =>
                               (0, i.jsx)(a.Z, {
-                                  user: E,
+                                  user: v,
                                   size: r.AvatarSizes.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: E.username,
+                          label: v.username,
                           subtext: c.intl.string(c.t['04gxNj'])
                       })
                     : null

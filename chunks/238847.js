@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(255078),
     I = n(853872),
     N = n(171246),
-    A = n(41959),
-    b = n(650919),
+    b = n(41959),
+    A = n(650919),
     v = n(981631),
     j = n(388032),
     O = n(465553);
@@ -108,7 +108,7 @@ let R = (e) => {
     };
 t.Z = (e) => {
     let { subscription: t } = e,
-        { storeListing: r, groupListing: a, guild: d, expanded: h, handleToggleExpanded: p, subscriptionInfo: _, application: E } = (0, b.Z)(t),
+        { storeListing: r, groupListing: a, guild: d, expanded: h, handleToggleExpanded: p, subscriptionInfo: _, application: E } = (0, A.Z)(t),
         I = (0, x.Dt)(),
         [y, B] = s.useState(!1),
         { analyticsLocations: L } = (0, g.ZP)();
@@ -200,8 +200,8 @@ t.Z = (e) => {
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != E &&
-                                (0, i.jsx)(A.Z, {
-                                    size: A.H.SMALL,
+                                (0, i.jsx)(b.Z, {
+                                    size: b.H.SMALL,
                                     className: O.applicationIcon,
                                     application: E,
                                     asset: r.thumbnail

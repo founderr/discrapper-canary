@@ -40,8 +40,8 @@ function p(e) {
     var n;
     let { guildId: t, progress: i, traitsToHighlight: u, maskDescription: p, maskTraits: g, onTraitClick: C } = e,
         b = (0, o.e7)([d.Z], () => d.Z.getGuild(t)),
-        { interests: v, description: _, playstyle: y, wildcardDescriptors: T, brandPrimaryColor: I } = i,
-        j = (0, l.useToken)(l.tokens.colors.TEXT_BRAND),
+        { interests: v, description: _, playstyle: y, wildcardDescriptors: T, brandPrimaryColor: j } = i,
+        I = (0, l.useToken)(l.tokens.colors.TEXT_BRAND),
         N = Array.from(v),
         S = a.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
     return (0, r.jsxs)('div', {
@@ -77,7 +77,7 @@ function p(e) {
                             null != b &&
                                 (0, r.jsx)(c.cS, {
                                     wildcardDescriptors: T,
-                                    primaryColor: null != I ? I : j.hex()
+                                    primaryColor: null != j ? j : I.hex()
                                 })
                         ]
                     }),

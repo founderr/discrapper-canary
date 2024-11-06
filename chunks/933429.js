@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return eL;
+        return eP;
     }
 }),
     n(47120);
@@ -32,8 +32,8 @@ var i,
     j = n(223606),
     Z = n(160404),
     R = n(41776),
-    P = n(347649),
-    L = n(332473),
+    L = n(347649),
+    P = n(332473),
     y = n(30684),
     O = n(616106),
     M = n(995598),
@@ -86,8 +86,8 @@ var i,
     ej = n(474936),
     eZ = n(46140),
     eR = n(231338),
-    eP = n(65154);
-let eL = {
+    eL = n(65154);
+let eP = {
         [eA.kVF.LOCALIZED_PRICING]: d.z.NAGBAR_NOTICE_LOCALIZED_PRICING,
         [eA.kVF.DOWNLOAD_NAG]: d.z.NAGBAR_NOTICE_DOWNLOAD,
         [eA.kVF.CONNECT_SPOTIFY]: d.z.NAGBAR_NOTICE_CONNECT_SPOTIFY,
@@ -151,7 +151,7 @@ function ew(e) {
                 disable: e !== eA.kVF.PREMIUM_TIER_2_TRIAL_ENDING
             }
         );
-        return t ? null : eL[e];
+        return t ? null : eP[e];
     })(e);
     if (null != t) return (0, C.un)(t);
     let n = ey[e];
@@ -262,7 +262,7 @@ let eF = [eA.kVF.QUARANTINED, eA.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eA.kVF.VI
         [eA.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e;
-                return null != t && ef.Z.hasVideo(t) && !en.Z.supports(eP.AN.VIDEO) && !ew(eA.kVF.VIDEO_UNSUPPORTED_BROWSER);
+                return null != t && ef.Z.hasVideo(t) && !en.Z.supports(eL.AN.VIDEO) && !ew(eA.kVF.VIDEO_UNSUPPORTED_BROWSER);
             }
         },
         [eA.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -479,8 +479,8 @@ let eF = [eA.kVF.QUARANTINED, eA.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eA.kVF.VI
                 }
             }
         },
-        [eA.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, L.e)() && !ew(eA.kVF.POMELO_ELIGIBLE) && !(0, P.ov)() },
-        [eA.kVF.UU_MIGRATION]: { predicate: () => (0, L.e)() && !ew(eA.kVF.UU_MIGRATION) && (0, P.ov)() },
+        [eA.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, P.e)() && !ew(eA.kVF.POMELO_ELIGIBLE) && !(0, L.ov)() },
+        [eA.kVF.UU_MIGRATION]: { predicate: () => (0, P.e)() && !ew(eA.kVF.UU_MIGRATION) && (0, L.ov)() },
         [eA.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e,

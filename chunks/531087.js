@@ -1,21 +1,21 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return s;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    a = t(325767),
-    o = t(373963);
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    r = n.n(l),
+    a = n(325767),
+    o = n(373963);
 function s(e) {
-    let { width: n = 16, height: t = 16, color: l = 'currentColor', foreground: s, className: d, ...c } = e;
+    let { width: t = 16, height: n = 16, color: l = 'currentColor', foreground: s, className: c, ...d } = e;
     return (0, i.jsx)('svg', {
-        className: r()(o.updateAvailable, d),
-        ...(0, a.Z)(c),
-        width: n,
-        height: t,
+        className: r()(o.updateAvailable, c),
+        ...(0, a.Z)(d),
+        width: t,
+        height: n,
         viewBox: '0 0 24 24',
         children: (0, i.jsxs)('g', {
             fill: 'none',

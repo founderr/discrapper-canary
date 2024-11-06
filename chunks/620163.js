@@ -26,8 +26,8 @@ var s = n(990547),
     f = n(18438),
     I = n(778825),
     N = n(665166),
-    A = n(351780),
-    b = n(231765),
+    b = n(351780),
+    A = n(231765),
     v = n(813732),
     j = n(398140),
     O = n(564344),
@@ -80,8 +80,8 @@ var s = n(990547),
     ef = n(889029),
     eI = n(400287),
     eN = n(554042),
-    eA = n(200645),
-    eb = n(287490),
+    eb = n(200645),
+    eA = n(287490),
     ev = n(706060),
     ej = n(168308),
     eO = n(277329),
@@ -93,7 +93,7 @@ var s = n(990547),
     eL = n(388032),
     eZ = n(208637);
 let eF = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
-    eM = eA.Z,
+    eM = eb.Z,
     ek = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: ek, impressionSource: ew, numOfPendingFamilyRequests: eU, isOverlaySupported: eV, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: eH, isKeywordFilteringEnabled: ez, isStaff: eW, isInappropriateConversationWarningEnabled: eK, paymentsBlocked: eq, isEligibleForQuests: eQ, showGiftNitro: eX, isStricterMessageRequestsEnabled: eJ, hasLibraryApplication: e$, hasTOTPEnabled: e0, developerMode: e1, isSafetySettingsV2Enabled: e2, isAdultUser: e6, hasSecureFramesVerifiedUserIds: e3, hypeSquadRemoved: e8 } = e;
         return Object.freeze({
@@ -1056,8 +1056,8 @@ let eF = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eL.intl.string(eL.t.AtCukJ)],
                 label: eL.intl.string(eL.t.AtCukJ),
                 ariaLabel: eL.intl.string(eL.t.AtCukJ),
-                element: b.Z,
-                predicate: () => A.Z.settingsVisible,
+                element: A.Z,
+                predicate: () => b.Z.settingsVisible,
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(348621),
@@ -1299,7 +1299,7 @@ let eF = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.WINDOWS,
                 searchableTitles: [eL.intl.string(eL.t.ZkDZoq)],
                 label: eL.intl.string(eL.t.ZkDZoq),
-                element: eA.Z,
+                element: eb.Z,
                 predicate: () => w.isPlatformEmbedded && (0, w.isWindows)()
             },
             [eP.s6.LINUX_SETTINGS]: {
@@ -1466,7 +1466,7 @@ let eF = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.EXPERIMENTS,
                 searchableTitles: ['Experiments'],
                 label: 'Experiments',
-                element: eb.Z,
+                element: eA.Z,
                 predicate: () => y.Z.isDeveloper
             },
             [eP.s6.DEVELOPER_OPTIONS]: {

@@ -1,32 +1,32 @@
-e.d(t, {
+t.d(e, {
     Z: function () {
         return c;
     }
 }),
-    e(47120);
-var i = e(200651);
-e(192379);
-var r = e(442837),
-    l = e(481060),
-    a = e(26151),
-    o = e(358221),
-    u = e(985588),
-    d = e(354459),
-    s = e(388032);
-function c(n, t) {
-    let [e, c] = (0, r.Wu)([o.Z], () => [o.Z.getParticipants(t), o.Z.getParticipant(t, n.id)], [t, n.id]);
-    return (0, u.s)(n) && 0 !== e.length
+    t(47120);
+var i = t(200651);
+t(192379);
+var l = t(442837),
+    r = t(481060),
+    u = t(26151),
+    a = t(358221),
+    o = t(985588),
+    d = t(354459),
+    s = t(388032);
+function c(n, e) {
+    let [t, c] = (0, l.Wu)([a.Z], () => [a.Z.getParticipants(e), a.Z.getParticipant(e, n.id)], [e, n.id]);
+    return (0, o.s)(n) && 0 !== t.length
         ? null == c
-            ? (0, i.jsx)(l.MenuItem, {
+            ? (0, i.jsx)(r.MenuItem, {
                   id: 'ring',
                   label: s.intl.string(s.t.bHa9kJ),
-                  action: () => a.Z.ring(t, [n.id])
+                  action: () => u.Z.ring(e, [n.id])
               })
             : c.type === d.fO.USER && c.ringing
-              ? (0, i.jsx)(l.MenuItem, {
+              ? (0, i.jsx)(r.MenuItem, {
                     id: 'stop-ringing',
                     label: s.intl.string(s.t.ygslb2),
-                    action: () => a.Z.stopRinging(t, [n.id])
+                    action: () => u.Z.stopRinging(e, [n.id])
                 })
               : null
         : null;

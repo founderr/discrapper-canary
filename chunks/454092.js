@@ -1,6 +1,6 @@
-t.d(n, {
+n.d(t, {
     _: function () {
-        return d;
+        return c;
     },
     s: function () {
         return l;
@@ -8,16 +8,16 @@ t.d(n, {
 });
 var i,
     l,
-    r = t(668781),
-    a = t(63063),
-    o = t(981631),
-    s = t(388032);
-function d(e, n) {
-    let t;
-    0 === e ? (t = s.intl.format(s.t['/S6f5+'], {})) : 1 === e ? (t = s.intl.format(s.t.EBhv4e, { name: n })) : 2 === e && (t = s.intl.format(s.t['59Dbw8'], { name: n })),
+    r = n(668781),
+    a = n(63063),
+    o = n(981631),
+    s = n(388032);
+function c(e, t) {
+    let n;
+    0 === e ? (n = s.intl.format(s.t['/S6f5+'], {})) : 1 === e ? (n = s.intl.format(s.t.EBhv4e, { name: t })) : 2 === e && (n = s.intl.format(s.t['59Dbw8'], { name: t })),
         r.Z.show({
             title: s.intl.string(s.t.vElC9f),
-            body: t,
+            body: n,
             cancelText: s.intl.string(s.t.psXQHB),
             onCancel() {
                 window.open(a.Z.getArticleURL(o.BhN.APPLICATION_COMMAND_PERMISSIONS_LOCKOUT));

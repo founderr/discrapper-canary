@@ -34,8 +34,8 @@ var i,
     j = n(317271),
     Z = n(474936),
     R = n(981631),
-    P = n(182294),
-    L = n(957825),
+    L = n(182294),
+    P = n(957825),
     y = n(388032),
     O = n(17500);
 function M(e) {
@@ -86,14 +86,14 @@ function M(e) {
                                     className: W,
                                     user: i,
                                     'aria-label': i.username,
-                                    size: P.EF.SIZE_56
+                                    size: L.EF.SIZE_56
                                 }),
                                 null != w &&
                                     (0, l.jsx)(p.Z, {
                                         className: K,
                                         user: w,
                                         'aria-label': i.username,
-                                        size: P.EF.SIZE_24
+                                        size: L.EF.SIZE_24
                                     })
                             ]
                         }),
@@ -139,7 +139,7 @@ function M(e) {
                                               ((0, A.PV)(i.id),
                                               h.Z.openPrivateChannel(i.id).then(() => {
                                                   setTimeout(() => {
-                                                      (0, C.PG)(L.X1.GIF, E.I.NORMAL),
+                                                      (0, C.PG)(P.X1.GIF, E.I.NORMAL),
                                                           setTimeout(() => {
                                                               (0, C.ql)(y.intl.string(y.t.jrtJi4), !0);
                                                           }, 50);

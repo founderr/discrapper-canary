@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return L;
     }
 }),
     n(47120);
@@ -32,7 +32,7 @@ var i = n(200651),
     j = n(166272),
     Z = n(413097),
     R = n(970952);
-function P(e) {
+function L(e) {
     let { applicationId: t } = e,
         [n, l, a] = (0, o.Wu)([S.Z], () => [S.Z.getApplication(t), S.Z.isFetchingApplication(t), S.Z.didFetchingApplicationFail(t)], [t]);
     return (r.useEffect(() => {
@@ -44,10 +44,10 @@ function P(e) {
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }))
-        ? (0, i.jsx)(L, { application: n })
+        ? (0, i.jsx)(P, { application: n })
         : null;
 }
-function L(e) {
+function P(e) {
     var t, n, u, d;
     let { application: E } = e,
         x = (0, o.e7)([I.Z], () => {
@@ -57,7 +57,7 @@ function L(e) {
         {
             iconURL: T,
             name: S,
-            description: P
+            description: L
         } = r.useMemo(
             () =>
                 (0, f.sl)(E, {
@@ -66,7 +66,7 @@ function L(e) {
                 }),
             [E]
         ),
-        L = r.useMemo(() => (null != P ? (0, C.parseBioReact)(P) : null), [P]),
+        P = r.useMemo(() => (null != L ? (0, C.parseBioReact)(L) : null), [L]),
         [O, M] = r.useState(!1),
         k = r.useCallback((e) => {
             e && M(!0);
@@ -110,11 +110,11 @@ function L(e) {
                                 color: 'interactive-active',
                                 children: S
                             }),
-                            null != L &&
+                            null != P &&
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: L
+                                    children: P
                                 })
                         ]
                     }),

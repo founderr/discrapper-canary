@@ -17,8 +17,8 @@ var i = n(200651),
     m = n(122613),
     x = n(678173),
     h = n(636508),
-    C = n(696068),
-    g = n(361213),
+    g = n(696068),
+    C = n(361213),
     p = n(778569),
     T = n(182906),
     _ = n(412019),
@@ -37,9 +37,9 @@ function b(e) {
             applicationId: null != n ? n : '',
             size: 2048
         }),
-        C = (0, x.T)(null != a ? a : null, n);
-    if (null == C) return null;
-    let T = null != C.activity.activity_preview_video_asset_id ? (0, g.Z)(n, C.activity.activity_preview_video_asset_id) : null,
+        g = (0, x.T)(null != a ? a : null, n);
+    if (null == g) return null;
+    let T = null != g.activity.activity_preview_video_asset_id ? (0, C.Z)(n, g.activity.activity_preview_video_asset_id) : null,
         _ = f.o[n],
         I = (null == _ ? void 0 : _.playersSuggestionMin) != null && (null == _ ? void 0 : _.playersSuggestionMax) != null ? ''.concat(_.playersSuggestionMin, ' - ').concat(_.playersSuggestionMax) : void 0;
     return (0, i.jsx)(s.Gt, {
@@ -52,7 +52,7 @@ function b(e) {
                     (0, i.jsx)('div', {
                         className: j.launcherOuterContainer,
                         children: (0, i.jsx)(S, {
-                            activityItem: C,
+                            activityItem: g,
                             onLaunch: u,
                             channelId: c
                         })
@@ -79,7 +79,7 @@ function b(e) {
                                         className: j.detailsTitle,
                                         children: (0, i.jsx)(r.Heading, {
                                             variant: 'heading-xxl/bold',
-                                            children: C.application.name
+                                            children: g.application.name
                                         })
                                     }),
                                     (0, i.jsxs)('div', {
@@ -127,7 +127,7 @@ function b(e) {
                                                     (0, i.jsx)(r.Text, {
                                                         variant: 'text-xs/semibold',
                                                         className: j.detailItemText,
-                                                        children: C.application.tags.slice(0, 3).join(', ')
+                                                        children: g.application.tags.slice(0, 3).join(', ')
                                                     })
                                                 ]
                                             })
@@ -138,7 +138,7 @@ function b(e) {
                             (0, i.jsx)(r.Heading, {
                                 variant: 'heading-lg/medium',
                                 className: j.detailsDescription,
-                                children: C.application.description
+                                children: g.application.description
                             }),
                             (0, i.jsx)('div', { className: j.divider }),
                             (0, i.jsx)('div', {
@@ -148,7 +148,7 @@ function b(e) {
                                         'img',
                                         {
                                             src: e,
-                                            alt: N.intl.formatToPlainString(N.t.YOslsL, { activityName: C.application.name }),
+                                            alt: N.intl.formatToPlainString(N.t.YOslsL, { activityName: g.application.name }),
                                             className: j.activityImage
                                         },
                                         e
@@ -165,7 +165,7 @@ function b(e) {
 function S(e) {
     var t, o;
     let { activityItem: d, onLaunch: v, channelId: x } = e,
-        g = (0, p.Z)({
+        C = (0, p.Z)({
             applicationId: d.application.id,
             size: 2048
         }),
@@ -173,7 +173,7 @@ function S(e) {
         [b, S] = l.useState(null !== (t = (0, h.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
         [E, y] = l.useState(
             null !==
-                (o = (0, C.d)({
+                (o = (0, g.d)({
                     guildId: b,
                     allowGdmActivityChannelSuggestion: !0
                 })) && void 0 !== o
@@ -182,7 +182,7 @@ function S(e) {
         ),
         A = (0, a.e7)([u.Z], () => u.Z.getChannel(E), [E]),
         Z = (0, h.W)(),
-        O = (0, C.F)(b),
+        O = (0, g.F)(b),
         L = l.useCallback(async () => {
             var e;
             if (null != E)
@@ -210,7 +210,7 @@ function S(e) {
         children: [
             (0, i.jsx)(T.Z, {
                 applicationName: d.application.name,
-                imageBackground: g,
+                imageBackground: C,
                 imageClassName: j.launchImage,
                 imageNotFoundClassName: j.brokenLaunchImage
             }),
@@ -236,7 +236,7 @@ function S(e) {
                               isSelected: (e) => e === b,
                               select: (e) => {
                                   var t;
-                                  S(e), y(null !== (t = (0, C.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  S(e), y(null !== (t = (0, g.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),

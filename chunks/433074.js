@@ -30,11 +30,11 @@ function T(e) {
     let { code: S, message: A } = e,
         [b, j, Z] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
         R = (0, o.e7)([d.default], () => d.default.locale),
-        P = (0, o.e7)([h.Z], () => {
+        L = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        L = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        P = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         [y, O] = r.useState(!1),
         M = r.useCallback((e) => {
             e && O(!0);
@@ -50,31 +50,31 @@ function T(e) {
                     application_id: S,
                     device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
-                    guild_id: P,
+                    guild_id: L,
                     channel_id: A.channel_id
                 });
-        }, [y, S, null == L ? void 0 : L.id, A.channel_id, P, A.author.id, Z]),
+        }, [y, S, null == P ? void 0 : P.id, A.channel_id, L, A.author.id, Z]),
         r.useEffect(() => {
             y &&
                 j &&
                 p.default.track(x.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
-                    guild_id: P,
+                    guild_id: L,
                     channel_id: A.channel_id
                 });
-        }, [y, P, j, A.author.id, A.channel_id]);
+        }, [y, L, j, A.author.id, A.channel_id]);
     let D = (e) => {
         p.default.track(x.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
             device_platform: l.tq ? 'mobile_web' : 'desktop_web',
             clicked_section: e,
-            guild_id: P,
+            guild_id: L,
             channel_id: A.channel_id
         }),
             (0, I.goToAppDirectory)({
                 view: C.ApplicationDirectoryViews.APPLICATION,
-                guildId: P,
+                guildId: L,
                 applicationId: S,
                 entrypoint: { name: C.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
@@ -163,7 +163,7 @@ function T(e) {
                                         customInstallUrl: b.custom_install_url,
                                         installParams: b.install_params,
                                         integrationTypesConfig: b.integration_types_config,
-                                        guildId: P,
+                                        guildId: L,
                                         source: 'app_directory_profile_embed'
                                     });
                             },

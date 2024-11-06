@@ -50,8 +50,8 @@ var c = n(731965),
     j = n(823379),
     Z = n(956664),
     R = n(229893),
-    P = n(229765),
-    L = n(286083),
+    L = n(229765),
+    P = n(286083),
     y = n(207796),
     O = n(976757),
     M = n(981631),
@@ -78,7 +78,7 @@ function U() {
                 t = (0, u.e7)([R.Z], () => R.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
-                    e && !t && (0, P.XB)();
+                    e && !t && (0, L.XB)();
                 }, [t, e]),
                 t
             );
@@ -89,10 +89,10 @@ function U() {
             !(n.length > 0) && !a && (c === k.nJ ? (e(y.hz.VALORANT), t([c])) : c === k.xn ? (e(y.hz.GENSHIN), t([c])) : null == c && (e(y.hz.NONE), t([])));
         }, [e, t, c, n, a]),
         i.useEffect(() => {
-            if (a) (0, P.Cg)(r);
+            if (a) (0, L.Cg)(r);
             else {
                 if (!m) return;
-                (0, P.jc)(r);
+                (0, L.jc)(r);
             }
         }, [r, m, a]),
         i.useEffect(() => {
@@ -140,7 +140,7 @@ function w() {
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, L.a)(),
+        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, P.a)(),
         h = c - 1,
         f = (0, y.GN)((e) => e.loadingGameApplication, s.Z),
         p = (0, u.e7)([R.Z], () => R.Z.getSavedGuildIds()),
@@ -154,7 +154,7 @@ function F(e) {
             [g]
         );
     i.useEffect(() => {
-        n(e, L.$, { pageMemoryEnabled: !0 });
+        n(e, P.$, { pageMemoryEnabled: !0 });
     }, [e, n, _]),
         !(function (e) {
             let [t, n] = i.useState(!1),
@@ -163,7 +163,7 @@ function F(e) {
                 o = (0, m.Z)(a),
                 s = i.useRef(new AbortController()),
                 c = i.useCallback(async (e) => {
-                    n(!0), null != r.current && (s.current.abort(), (s.current = new AbortController())), (r.current = (0, P.$s)(e, s.current.signal)), await r.current, null !== r.current && (n(!1), (r.current = null));
+                    n(!0), null != r.current && (s.current.abort(), (s.current = new AbortController())), (r.current = (0, L.$s)(e, s.current.signal)), await r.current, null !== r.current && (n(!1), (r.current = null));
                 }, []);
             i.useEffect(() => {
                 if (!(0 === a.length || l()(a, o))) c(a);
@@ -177,7 +177,7 @@ function F(e) {
                 t && a.length;
         })(d),
         i.useEffect(() => {
-            (0, P.IS)();
+            (0, L.IS)();
         }, []);
     let C = i.useMemo(() => {
             var e;

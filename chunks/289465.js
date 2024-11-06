@@ -1,16 +1,16 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return s;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    a = t(481060),
-    o = t(483337);
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
+    o = n(483337);
 function s(e) {
-    let { bar: n, children: t, className: l, inModal: s, title: d } = e;
+    let { bar: t, children: n, className: l, inModal: s, title: c } = e;
     return (0, i.jsxs)(a.Card, {
         editable: !0,
         className: r()(o.card, l, { [o.inModal]: s }),
@@ -21,13 +21,13 @@ function s(e) {
                     (0, i.jsx)(a.Text, {
                         variant: 'text-xs/semibold',
                         className: o.title,
-                        children: d
+                        children: c
                     }),
-                    (0, i.jsx)('div', { children: n })
+                    (0, i.jsx)('div', { children: t })
                 ]
             }),
             s ? (0, i.jsx)(a.FormDivider, {}) : null,
-            t
+            n
         ]
     });
 }

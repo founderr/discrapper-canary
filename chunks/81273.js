@@ -26,10 +26,10 @@ var i = n(200651),
     j = n(265985),
     Z = n(293810),
     R = n(981631),
-    P = n(388032);
+    L = n(388032);
 t.Z = (e, t, n, l) => {
     let o;
-    let L = (0, c.e7)([E.Z], () => E.Z.isLurking(t)),
+    let P = (0, c.e7)([E.Z], () => E.Z.isLurking(t)),
         y = (0, _.J)(t),
         O = (0, c.e7)([g.Z], () => (null != t ? g.Z.getRequest(t) : null)),
         M = (null == O ? void 0 : O.applicationStatus) === p.wB.SUBMITTED,
@@ -48,7 +48,7 @@ t.Z = (e, t, n, l) => {
         Q = (0, v.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: q } = (0, h.ZP)(),
         J = (null == F ? void 0 : F.paymentGateway) === R.gg$.APPLE_PARTNER;
-    M ? (o = P.intl.string(P.t.pQK5ho)) : L && !y ? (o = P.intl.string(P.t.pQK5ho)) : z === D ? (o = P.intl.formatToPlainString(P.t.UlBRTk, { changeDate: null != F ? s()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (o = P.intl.string(P.t.ePFYOT)) : K ? (o = P.intl.string(P.t['0lPoT0'])) : J && (o = P.intl.string(P.t.cEMaCg));
+    M ? (o = L.intl.string(L.t.pQK5ho)) : P && !y ? (o = L.intl.string(L.t.pQK5ho)) : z === D ? (o = L.intl.formatToPlainString(L.t.UlBRTk, { changeDate: null != F ? s()(F.currentPeriodEnd).format('MMM DD, YYYY') : '' })) : W ? (o = L.intl.string(L.t.ePFYOT)) : K ? (o = L.intl.string(L.t['0lPoT0'])) : J && (o = L.intl.string(L.t.cEMaCg));
     let $ = (0, m.Z)(Z.iP);
     r.useEffect(() => {
         B &&
@@ -64,7 +64,7 @@ t.Z = (e, t, n, l) => {
                 if ((null == i ? void 0 : i.is_eligible) === !0) {
                     var o;
                     n = null == Q ? void 0 : null === (o = Q.active_trial) || void 0 === o ? void 0 : o.id;
-                } else r = P.intl.string(P.t.vuvsKy);
+                } else r = L.intl.string(L.t.vuvsKy);
             }
             (0, C.Z)({
                 activeSubscription: F,
@@ -72,8 +72,8 @@ t.Z = (e, t, n, l) => {
                 trialId: n,
                 trialFooterMessageOverride:
                     (null == Q ? void 0 : Q.active_trial) != null
-                        ? P.intl.format(P.t.zyGyNj, {
-                              buttonText: P.intl.string(P.t.BEeXiY),
+                        ? L.intl.format(L.t.zyGyNj, {
+                              buttonText: L.intl.string(L.t.BEeXiY),
                               interval: (0, N.iG)(k),
                               days: 1,
                               contactLink: R.EYA.CONTACT,
@@ -115,7 +115,7 @@ t.Z = (e, t, n, l) => {
         }, [t]);
     return {
         openModal: y ? et : ee,
-        canOpenModal: !L && null != w && V && !M && !W && !K && !J,
+        canOpenModal: !P && null != w && V && !M && !W && !K && !J,
         cannotOpenReason: o,
         isCheckingTrialEligibility: Y
     };

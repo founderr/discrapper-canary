@@ -28,8 +28,8 @@ var i,
     f = n(267101),
     I = n(240864),
     N = n(942833),
-    A = n(400916),
-    b = n(916001),
+    b = n(400916),
+    A = n(916001),
     v = n(539290),
     j = n(336197),
     O = n(690221),
@@ -177,7 +177,7 @@ function eo(e) {
                                     className: J.guildProductBenefitLabel,
                                     children: X.intl.string(X.t.hxawo6)
                                 }),
-                                (0, l.jsx)(A.Z, {
+                                (0, l.jsx)(b.Z, {
                                     guildId: i,
                                     productId: r.id
                                 })
@@ -193,7 +193,7 @@ function eo(e) {
                                     className: J.guildProductBenefitLabel,
                                     children: X.intl.string(X.t.gWBNen)
                                 }),
-                                (0, l.jsx)(b.Z, { role: c })
+                                (0, l.jsx)(A.Z, { role: c })
                             ]
                         })
                 ]

@@ -31,8 +31,8 @@ var i = n(200651),
     j = n(739566),
     Z = n(779125),
     R = n(890410),
-    P = n(464891),
-    L = n(507418),
+    L = n(464891),
+    P = n(507418),
     y = n(348238),
     O = n(38267),
     M = n(83561),
@@ -65,7 +65,7 @@ function V(e, t) {
                 }),
             [l]
         ),
-        renderPopout: L.Z,
+        renderPopout: P.Z,
         showAvatarPopout: o,
         showUsernamePopout: a
     };
@@ -190,7 +190,7 @@ let Q = r.memo(function (e) {
         s = V(n, r),
         c = H(r, n.author),
         u = (0, j.ZP)(n),
-        d = (0, P.CF)(
+        d = (0, L.CF)(
             {
                 message: n,
                 channel: r,
@@ -206,7 +206,7 @@ let Q = r.memo(function (e) {
         p = H(r, h);
     if (null != h) {
         let e = (0, j.ij)(h, r),
-            i = (0, P.CF)(
+            i = (0, L.CF)(
                 {
                     message: n,
                     channel: r,
@@ -249,7 +249,7 @@ function q(e) {
             eventHandlers: { onMouseEnter: T, onMouseLeave: S }
         } = (0, M.m)(!0),
         { onFocus: A, ...j } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: Z, handleFocus: L, handleBlur: O } = (0, y.bb)(A),
+        { isFocused: Z, handleFocus: P, handleBlur: O } = (0, y.bb)(A),
         D = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         H = (0, d.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, _.ZP)(o),
@@ -295,7 +295,7 @@ function q(e) {
             children: (0, i.jsxs)('div', {
                 className: a()(G.content, { [G.compact]: l }),
                 children: [
-                    (0, i.jsx)(P.nD, {
+                    (0, i.jsx)(L.nD, {
                         message: o,
                         messageClassname: G.spanCorrection,
                         className: a()(G.usernameContainer, G.spanCorrection, { [G.compact]: l }),
@@ -406,7 +406,7 @@ function q(e) {
                             }),
                             popoutProps: ec,
                             zalgo: !0,
-                            onFocus: L,
+                            onFocus: P,
                             onBlur: O,
                             onClick: ed
                         })

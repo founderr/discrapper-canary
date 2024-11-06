@@ -33,11 +33,11 @@ function m(e) {
             let R = null !== (I = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== I ? I : 'unknown';
             return 'Update to build '.concat(R, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            let P = l.Z.getRelationshipType(S) === u.OGo.PENDING_OUTGOING;
+            let L = l.Z.getRelationshipType(S) === u.OGo.PENDING_OUTGOING;
             return null !== (x = e.body) && void 0 !== x ? x : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let L = e.guild_scheduled_event_id,
-                y = null != L ? i.ZP.getGuildScheduledEvent(L) : null,
+            let P = e.guild_scheduled_event_id,
+                y = null != P ? i.ZP.getGuildScheduledEvent(P) : null,
                 O = null == y ? void 0 : y.name,
                 M = null === (N = r.Z.getGuild(null == y ? void 0 : y.guild_id)) || void 0 === N ? void 0 : N.name,
                 k = (0, i.Z2)(null != y ? y : void 0);

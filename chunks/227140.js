@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return l;
+        return u;
     }
 });
 var n = t(200651);
@@ -10,7 +10,7 @@ var r = t(120356),
     a = t(481060),
     i = t(679768),
     c = t(704448);
-function l(e) {
+function u(e) {
     let { copy: s, showStars: t = !0, className: r } = e;
     return (0, n.jsxs)('div', {
         className: o()(c.badgeContainer, r),

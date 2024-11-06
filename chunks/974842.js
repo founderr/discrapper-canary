@@ -18,7 +18,7 @@ var r = t(200651),
 let b = [h.ZD.SWORD, h.ZD.WATER_DROP, h.ZD.SKULL, h.ZD.TOADSTOOL, h.ZD.MOON, h.ZD.LIGHTNING, h.ZD.LEAF, h.ZD.HEART, h.ZD.FIRE, h.ZD.COMPASS, h.ZD.CROSSHAIRS, h.ZD.FLOWER, h.ZD.FORCE, h.ZD.GEM, h.ZD.LAVA, h.ZD.PSYCHIC, h.ZD.SMOKE, h.ZD.SNOW, h.ZD.SOUND, h.ZD.SUN, h.ZD.WIND];
 n.Z = (e) => {
     let { handleUpdate: n, badge: t, primaryColor: i, secondaryColor: o, tag: v, error: _, furthestStep: y, inSettings: T } = e,
-        I = a.useMemo(() => {
+        j = a.useMemo(() => {
             let e = (0, h.yf)();
             return {
                 primary: null != i ? i : e.primary,
@@ -28,14 +28,14 @@ n.Z = (e) => {
     a.useEffect(() => {
         (null == i || null == o) &&
             n({
-                badgePrimaryColor: I.primary,
-                badgeSecondaryColor: I.secondary
+                badgePrimaryColor: j.primary,
+                badgeSecondaryColor: j.secondary
             });
-    }, [I.primary, I.secondary, n, i, o]);
-    let j = a.useMemo(() => {
-            for (let e = 0; e < h.sg.length; e++) if (h.sg[e].primary === I.primary && h.sg[e].secondary === I.secondary) return 1 + e;
+    }, [j.primary, j.secondary, n, i, o]);
+    let I = a.useMemo(() => {
+            for (let e = 0; e < h.sg.length; e++) if (h.sg[e].primary === j.primary && h.sg[e].secondary === j.secondary) return 1 + e;
             return 0;
-        }, [I.primary, I.secondary]),
+        }, [j.primary, j.secondary]),
         [N, S] = a.useState(!1),
         E = a.useCallback(() => {
             let e = b[Math.floor(Math.random() * b.length)],
@@ -51,10 +51,10 @@ n.Z = (e) => {
             y === x.Wy.CUSTOMIZE_TAG_BADGE &&
                 !T &&
                 n({
-                    brandPrimaryColor: I.primary,
-                    brandSecondaryColor: I.secondary
+                    brandPrimaryColor: j.primary,
+                    brandSecondaryColor: j.secondary
                 });
-        }, [n, I.primary, I.secondary, y, i, o, T]),
+        }, [n, j.primary, j.secondary, y, i, o, T]),
         (0, r.jsxs)('div', {
             className: C.slideContent,
             children: [
@@ -117,7 +117,7 @@ n.Z = (e) => {
                                             children: [
                                                 (0, r.jsx)(m.Z, {
                                                     showSecondaryColor: h.ME[t] >= 2,
-                                                    palette: I,
+                                                    palette: j,
                                                     onPrimaryColorChange: (e) => {
                                                         n({ badgePrimaryColor: (0, c.Rf)(e) });
                                                     },
@@ -132,7 +132,7 @@ n.Z = (e) => {
                                                             onClick: () => {
                                                                 S((e) => !e);
                                                             },
-                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: 0 === j }),
+                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: 0 === I }),
                                                             children: (0, r.jsx)(d.PaintPaletteIcon, {
                                                                 size: 'custom',
                                                                 width: 20,
@@ -150,7 +150,7 @@ n.Z = (e) => {
                                                                     badgeSecondaryColor: h.sg[a].secondary
                                                                 });
                                                             },
-                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: a + 1 === j }),
+                                                            className: l()(g.badgeAssetContainer, { [g.badgeAssetContainerSelected]: a + 1 === I }),
                                                             children: (0, r.jsx)(u.A, {
                                                                 badge: t,
                                                                 width: 32,
@@ -195,8 +195,8 @@ n.Z = (e) => {
                                         badge: t,
                                         width: 40,
                                         height: 40,
-                                        primaryTintColor: I.primary,
-                                        secondaryTintColor: I.secondary
+                                        primaryTintColor: j.primary,
+                                        secondaryTintColor: j.secondary
                                     })
                                 }),
                                 (0, r.jsx)(d.Text, {

@@ -115,31 +115,31 @@ function E(e) {
         { analyticsLocations: E } = (0, m.ZP)(),
         [f, I] = s.useState(!1),
         N = (0, u.ZP)(),
-        A = null,
         b = null,
+        A = null,
         v = [x.O0b.PAST_DUE, x.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         j = l()(v).add(a, 'days').toDate();
     switch (t.status) {
         case x.O0b.PAST_DUE:
-            b = S.intl.format(S.t['xaS18/'], {
+            A = S.intl.format(S.t['xaS18/'], {
                 pauseDuration: a,
                 resumeDate: j
             });
             break;
         case x.O0b.PAUSED:
-            b = S.intl.format(S.t.Vur3FR, { resumeDate: j });
+            A = S.intl.format(S.t.Vur3FR, { resumeDate: j });
             break;
         default:
-            b = S.intl.format(S.t.W85vFB, {
+            A = S.intl.format(S.t.W85vFB, {
                 pauseDate: v,
                 resumeDate: j,
                 pauseDuration: a
             });
     }
     return (
-        (A = (0, i.jsx)('div', {
+        (b = (0, i.jsx)('div', {
             className: T.body,
-            children: b
+            children: A
         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -167,7 +167,7 @@ function E(e) {
                                   children: S.intl.string(S.t['5mlOCQ'])
                               })
                             : null,
-                        A
+                        b
                     ]
                 }),
                 (0, i.jsx)(c.ModalFooter, {

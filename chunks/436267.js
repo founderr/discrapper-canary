@@ -1,15 +1,15 @@
-n.d(t, {
+t.d(n, {
     O: function () {
-        return r;
+        return l;
     },
     Z: function () {
-        return s;
+        return i;
     }
 });
-var i = n(159277);
-function s(e) {
-    return i.t.XBOX_APPLICATION_ID === e || i.M.PLAYSTATION_APPLICATION_IDS.has(e);
+var r = t(159277);
+function i(e) {
+    return r.t.XBOX_APPLICATION_ID === e || r.M.PLAYSTATION_APPLICATION_IDS.has(e);
 }
-function r(e) {
-    return s(e);
+function l(e) {
+    return i(e);
 }

@@ -100,7 +100,7 @@ function Z(e) {
         I = E.length > 0,
         j = p && !I && !A;
     return u
-        ? (0, i.jsx)(H, {})
+        ? (0, i.jsx)(D, {})
         : j
           ? (0, i.jsx)(b.A, {
                 type: v.LG.SEARCH_EMPTY,
@@ -290,7 +290,7 @@ function w(e) {
         searchResultsPosition: e.resultsPosition
     });
 }
-function H() {
+function D() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, { title: P.intl.string(P.t['0hKkS0']) }),

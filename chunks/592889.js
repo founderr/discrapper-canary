@@ -31,13 +31,13 @@ function I(e) {
     async function N() {
         await (0, m.dP)(t, t.planId, I, l), r();
     }
-    let A = T.Z.get(t.planId);
-    o()(null != A, 'Missing subscriptionPlan');
-    let b = (0, C.aS)(t.planId, !1, !1, {
+    let b = T.Z.get(t.planId);
+    o()(null != b, 'Missing subscriptionPlan');
+    let A = (0, C.aS)(t.planId, !1, !1, {
             paymentSourceId: t.paymentSourceId,
             currency: t.currency
         }),
-        v = (0, _.og)((0, _.T4)(b.amount, b.currency), A.interval, A.intervalCount);
+        v = (0, _.og)((0, _.T4)(A.amount, A.currency), b.interval, b.intervalCount);
     return (0, i.jsxs)(u.ModalRoot, {
         transitionState: s,
         'aria-label': E.intl.string(E.t['E9kB4+']),

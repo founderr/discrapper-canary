@@ -1,4 +1,4 @@
-n.d(e, {
+n.d(t, {
     H: function () {
         return i;
     },
@@ -7,21 +7,21 @@ n.d(e, {
     }
 });
 var r = n(460083);
-function i(t) {
-    let { enabled: e } = r.d.getCurrentConfig({
-        guildId: t,
+function i(e) {
+    let { enabled: t } = r.d.getCurrentConfig({
+        guildId: e,
         location: '988d4e_3'
     });
-    return e;
+    return t;
 }
-function l(t) {
-    let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+function l(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { enabled: n } = r.d.useExperiment(
             {
-                guildId: t,
+                guildId: e,
                 location: '988d4e_4'
             },
-            { autoTrackExposure: e }
+            { autoTrackExposure: t }
         );
     return n;
 }

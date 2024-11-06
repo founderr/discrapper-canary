@@ -1,27 +1,27 @@
-t(411104);
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(149765),
-    s = t(481060),
-    d = t(208884),
-    c = t(453628),
-    u = t(996987),
-    m = t(332014),
-    h = t(113207);
+n(411104);
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    o = n(149765),
+    s = n(481060),
+    c = n(208884),
+    d = n(453628),
+    u = n(996987),
+    m = n(332014),
+    h = n(113207);
 class p extends l.PureComponent {
     getOverwriteValue(e) {
-        let { allow: n, deny: t } = this.props;
-        if (null == n || null == t) throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
-        return o.e$(n, e) ? c.y.ALLOW : o.e$(t, e) ? c.y.DENY : c.y.PASSTHROUGH;
+        let { allow: t, deny: n } = this.props;
+        if (null == t || null == n) throw Error('PermissionsForm.getOverwriteValue: Invalid allow or deny props');
+        return o.e$(t, e) ? d.y.ALLOW : o.e$(n, e) ? d.y.DENY : d.y.PASSTHROUGH;
     }
-    getPermissionValue(e, n) {
-        return o.e$(n, e);
+    getPermissionValue(e, t) {
+        return o.e$(t, e);
     }
-    handleChange(e, n) {
-        let { onChange: t } = this.props;
-        t(e, n);
+    handleChange(e, t) {
+        let { onChange: n } = this.props;
+        n(e, t);
     }
     renderDisabledIndicator(e) {
         return (0, i.jsx)(s.Tooltip, {
@@ -40,12 +40,12 @@ class p extends l.PureComponent {
         });
     }
     renderComponent(e) {
-        let { title: n, description: t, helpdeskArticleId: l, flag: r } = e,
-            { permissions: o, locked: c, permissionRender: h } = this.props,
+        let { title: t, description: n, helpdeskArticleId: l, flag: r } = e,
+            { permissions: o, locked: d, permissionRender: h } = this.props,
             p = null == h ? void 0 : h(r),
-            g = !!(c || p),
-            f = 'string' == typeof p ? this.renderDisabledIndicator(p) : null,
-            x = a()({ [m.title]: null != f });
+            g = !!(d || p),
+            x = 'string' == typeof p ? this.renderDisabledIndicator(p) : null,
+            f = a()({ [m.title]: null != x });
         return null == o
             ? (0, i.jsxs)(
                   u.Z,
@@ -53,13 +53,13 @@ class p extends l.PureComponent {
                       disabled: g,
                       value: this.getOverwriteValue(r),
                       onChange: (e) => this.handleChange(r, e),
-                      note: (0, d._u)(t),
+                      note: (0, c._u)(n),
                       helpdeskArticleId: l,
                       children: [
-                          f,
+                          x,
                           (0, i.jsx)('span', {
-                              className: x,
-                              children: n
+                              className: f,
+                              children: t
                           })
                       ]
                   },
@@ -71,12 +71,12 @@ class p extends l.PureComponent {
                       disabled: g,
                       value: this.getPermissionValue(r, o),
                       onChange: (e) => this.handleChange(r, e),
-                      note: (0, d._u)(t),
+                      note: (0, c._u)(n),
                       children: [
-                          f,
+                          x,
                           (0, i.jsx)('span', {
-                              className: x,
-                              children: n
+                              className: f,
+                              children: t
                           })
                       ]
                   },
@@ -84,9 +84,9 @@ class p extends l.PureComponent {
               );
     }
     render() {
-        let { spec: e, className: n } = this.props;
+        let { spec: e, className: t } = this.props;
         return (0, i.jsx)(s.FormSection, {
-            className: n,
+            className: t,
             children: (0, i.jsxs)(s.HeadingLevel, {
                 component: (0, i.jsx)(s.FormTitle, {
                     tag: s.FormTitleTags.H5,
@@ -107,4 +107,4 @@ class p extends l.PureComponent {
         });
     }
 }
-n.Z = p;
+t.Z = p;

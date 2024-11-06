@@ -37,17 +37,17 @@ class N extends r.PureComponent {
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
             { disableTransitionAppear: R } = this.state,
-            P = S ? E : _,
-            L = Z > 0;
-        if (!L && !v) return null;
+            L = S ? E : _,
+            P = Z > 0;
+        if (!P && !v) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             { canShowImprovedReactionButton: O } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            M = y && L,
-            k = (v && !L) || M,
+            M = y && P,
+            k = (v && !P) || M,
             D = O && !I;
         return (0, i.jsxs)(o.W, {
             component: 'div',
-            className: a()(P.reactions, N, { [P.largeReactions]: D }),
+            className: a()(L.reactions, N, { [L.largeReactions]: D }),
             transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
@@ -72,10 +72,10 @@ class N extends r.PureComponent {
                         onClick: (t) => {
                             t.stopPropagation(), (0, p.op)(x, e);
                         },
-                        className: a()(P.reaction, T, P.remainingReactions),
+                        className: a()(L.reaction, T, L.remainingReactions),
                         'aria-label': g.intl.string(g.t.lfIHs7),
                         children: (0, i.jsxs)(s.Text, {
-                            className: P.reactionInner,
+                            className: L.reactionInner,
                             variant: 'text-sm/normal',
                             children: ['+', b]
                         })
@@ -90,8 +90,8 @@ class N extends r.PureComponent {
                         useChatFontScaling: S,
                         isHovered: this.state.isHovered,
                         className: a()({
-                            [P.forceShow]: k,
-                            [P.forceShowLook]: v || M
+                            [L.forceShow]: k,
+                            [L.forceShowLook]: v || M
                         })
                     })
             ]

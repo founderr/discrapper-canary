@@ -1,46 +1,46 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 }),
-    t(653041);
-var i = t(200651),
-    l = t(192379),
-    r = t(481060),
-    a = t(668781),
-    o = t(139387),
-    s = t(308063),
-    d = t(600164),
-    c = t(259580),
-    u = t(768581),
-    m = t(486199),
-    h = t(981631),
-    p = t(388032),
-    g = t(176662);
-function f(e) {
-    let { webhook: n, editedWebhook: t, channelOptions: f, isExpanded: x, errors: b, onToggleExpand: v } = e,
+    n(653041);
+var i = n(200651),
+    l = n(192379),
+    r = n(481060),
+    a = n(668781),
+    o = n(139387),
+    s = n(308063),
+    c = n(600164),
+    d = n(259580),
+    u = n(768581),
+    m = n(486199),
+    h = n(981631),
+    p = n(388032),
+    g = n(176662);
+function x(e) {
+    let { webhook: t, editedWebhook: n, channelOptions: x, isExpanded: f, errors: b, onToggleExpand: v } = e,
         C = l.useMemo(() => {
-            var e, t;
+            var e, n;
             return (
-                (e = n),
-                null != (t = n.avatar) && /^data:/.test(t)
-                    ? t
+                (e = t),
+                null != (n = t.avatar) && /^data:/.test(n)
+                    ? n
                     : (0, u.ov)({
                           id: e.id,
-                          avatar: t,
+                          avatar: n,
                           discriminator: h.fo$
                       })
             );
-        }, [n]),
-        I = l.useCallback(() => {
+        }, [t]),
+        N = l.useCallback(() => {
             (0, r.openModal)((e) =>
                 (0, i.jsx)(r.ConfirmModal, {
                     ...e,
-                    header: p.intl.formatToPlainString(p.t.gBKqZ2, { name: n.name }),
+                    header: p.intl.formatToPlainString(p.t.gBKqZ2, { name: t.name }),
                     confirmText: p.intl.string(p.t.CMy0Cg),
                     cancelText: p.intl.string(p.t['ETE/oK']),
                     onConfirm: () => {
-                        s.Z.delete(n.guild_id, n.id).catch(() => {
+                        s.Z.delete(t.guild_id, t.id).catch(() => {
                             a.Z.show({
                                 title: p.intl.string(p.t.LpbaFR),
                                 body: p.intl.string(p.t['/4TwKS'])
@@ -53,15 +53,15 @@ function f(e) {
                     })
                 })
             );
-        }, [n.guild_id, n.id, n.name]),
-        N = [];
-    null != n.source_channel &&
-        null != n.source_guild &&
-        (N.push({
+        }, [t.guild_id, t.id, t.name]),
+        I = [];
+    null != t.source_channel &&
+        null != t.source_guild &&
+        (I.push({
             icon: r.AnnouncementsIcon,
-            text: n.source_channel.name
+            text: t.source_channel.name
         }),
-        N.push({
+        I.push({
             text: (0, i.jsx)(
                 'span',
                 {
@@ -72,35 +72,35 @@ function f(e) {
                                 'span',
                                 {
                                     className: g.sourceName,
-                                    children: n.source_guild.name
+                                    children: t.source_guild.name
                                 },
-                                n.id
+                                t.id
                             )
                     })
                 },
                 'guild-source'
             )
         }));
-    let T = null;
+    let j = null;
     return (
-        x &&
-            null != t &&
-            (T = (0, i.jsxs)('div', {
+        f &&
+            null != n &&
+            (j = (0, i.jsxs)('div', {
                 className: g.body,
                 children: [
                     (0, i.jsx)(r.FormDivider, { className: g.topDivider }),
-                    (0, i.jsx)(d.Z, {
-                        children: (0, i.jsxs)(d.Z, {
-                            direction: d.Z.Direction.VERTICAL,
+                    (0, i.jsx)(c.Z, {
+                        children: (0, i.jsxs)(c.Z, {
+                            direction: c.Z.Direction.VERTICAL,
                             children: [
-                                (0, i.jsxs)(d.Z, {
+                                (0, i.jsxs)(c.Z, {
                                     children: [
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, i.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(r.FormItem, {
                                                 title: p.intl.string(p.t.I1o5gY),
                                                 children: (0, i.jsx)(r.TextInput, {
-                                                    value: t.name,
+                                                    value: n.name,
                                                     onChange: (e) => {
                                                         o.Z.updateWebhook({ name: e });
                                                     },
@@ -109,13 +109,13 @@ function f(e) {
                                                 })
                                             })
                                         }),
-                                        (0, i.jsx)(d.Z.Child, {
+                                        (0, i.jsx)(c.Z.Child, {
                                             basis: '50%',
                                             children: (0, i.jsx)(r.FormItem, {
                                                 title: p.intl.string(p.t['4TuWfX']),
                                                 children: (0, i.jsx)(r.SingleSelect, {
-                                                    value: t.channel_id,
-                                                    options: f,
+                                                    value: n.channel_id,
+                                                    options: x,
                                                     onChange: (e) => {
                                                         o.Z.updateWebhook({ channelId: e });
                                                     }
@@ -125,9 +125,9 @@ function f(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(r.FormDivider, { className: g.bottomDivider }),
-                                (0, i.jsx)(d.Z, {
+                                (0, i.jsx)(c.Z, {
                                     children: (0, i.jsx)(r.Button, {
-                                        onClick: I,
+                                        onClick: N,
                                         size: r.Button.Sizes.SMALL,
                                         color: r.Button.Colors.RED,
                                         look: r.Button.Looks.LINK,
@@ -143,31 +143,31 @@ function f(e) {
         (0, i.jsx)(r.Card, {
             editable: !0,
             className: g.card,
-            children: (0, i.jsxs)(d.Z, {
-                direction: d.Z.Direction.VERTICAL,
+            children: (0, i.jsxs)(c.Z, {
+                direction: c.Z.Direction.VERTICAL,
                 children: [
                     (0, i.jsx)(r.Clickable, {
                         className: g.header,
-                        'aria-expanded': x,
+                        'aria-expanded': f,
                         onClick: v,
-                        children: (0, i.jsxs)(d.Z, {
-                            align: d.Z.Align.CENTER,
+                        children: (0, i.jsxs)(c.Z, {
+                            align: c.Z.Align.CENTER,
                             children: [
                                 (0, i.jsx)(m.Z, {
-                                    name: n.name,
+                                    name: t.name,
                                     imageSrc: C,
                                     detailsClassName: g.__invalid_description,
-                                    details: N
+                                    details: I
                                 }),
-                                (0, i.jsx)(c.Z, {
+                                (0, i.jsx)(d.Z, {
                                     className: g.expandIcon,
-                                    expanded: x,
+                                    expanded: f,
                                     'aria-hidden': !0
                                 })
                             ]
                         })
                     }),
-                    T
+                    j
                 ]
             })
         })

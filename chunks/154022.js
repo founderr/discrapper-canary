@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(440849),
     I = n(921801),
     N = n(196051),
-    A = n(441729),
-    b = n(626135),
+    b = n(441729),
+    A = n(626135),
     v = n(63063),
     j = n(695346),
     O = n(263937),
@@ -484,7 +484,7 @@ function et() {
                         value: t,
                         note: Z.intl.string(Z.t.Q7wgHR),
                         onChange: (e) => {
-                            b.default.track(y.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            A.default.track(y.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
                                 location: { section: y.jXE.SETTINGS_ACCESSIBILITY }
                             }),
@@ -499,7 +499,7 @@ function et() {
 }
 function en() {
     let e = j.OW.useSetting(),
-        t = (0, c.e7)([A.Z], () => A.Z.speechRate),
+        t = (0, c.e7)([b.Z], () => b.Z.speechRate),
         [n, r] = s.useState(!1);
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {

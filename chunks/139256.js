@@ -1,6 +1,6 @@
 n.d(t, {
     $e: function () {
-        return L;
+        return P;
     },
     $w: function () {
         return D;
@@ -82,7 +82,7 @@ function R(e) {
         children: a
     });
 }
-function P(e) {
+function L(e) {
     let t,
         { className: n, children: i, onClick: r, isSelected: a, hasSelectedAnyAnswer: o, isFirstAnswer: c } = e;
     t = o ? (a ? 0 : -1) : c ? 0 : -1;
@@ -97,7 +97,7 @@ function P(e) {
         children: i
     });
 }
-function L(e) {
+function P(e) {
     let { answers: t, answersInteraction: n, answerTapAccessibilityLabel: i, canTapAnswers: r, hasSelectedAnyAnswer: a, className: o, answerClassName: u, renderAnswerContent: d } = e,
         { ContainerComponent: m, answerElementType: h } = (0, c.EQ)({
             canTapAnswers: r,
@@ -164,7 +164,7 @@ function y(e) {
                 children: i
             });
         case 1:
-            return (0, l.jsx)(P, {
+            return (0, l.jsx)(L, {
                 className: s()(t, m),
                 onClick: f,
                 isSelected: h,

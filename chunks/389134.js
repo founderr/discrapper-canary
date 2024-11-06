@@ -36,7 +36,7 @@ let C = () => ({
     _ = !1,
     y = !1,
     T = {};
-class I extends (r = u.ZP.Store) {
+class j extends (r = u.ZP.Store) {
     getState() {
         return {
             initialSettings: b,
@@ -48,7 +48,7 @@ class I extends (r = u.ZP.Store) {
     }
 }
 (s = 'ClanSettingsStore'),
-    (i = 'displayName') in (a = I)
+    (i = 'displayName') in (a = j)
         ? Object.defineProperty(a, i, {
               value: s,
               enumerable: !0,
@@ -56,7 +56,7 @@ class I extends (r = u.ZP.Store) {
               writable: !0
           })
         : (a[i] = s),
-    (n.Z = new I(m.Z, {
+    (n.Z = new j(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
             (y = !1), (b = C()), (v = d()(b)), (_ = !1), (T = {});
         },

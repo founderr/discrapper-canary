@@ -117,14 +117,14 @@ function Z(e, t) {
         b = x.some((e) => !0 === e.me_vote),
         Z = !C && b,
         R = Z || p || I,
-        P = h && T && (!b || C || R),
-        L = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
-        y = null != L ? d.ZP.getSelfMember(L) : null,
+        L = h && T && (!b || C || R),
+        P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
+        y = null != P ? d.ZP.getSelfMember(P) : null,
         O = (0, s.EY)(y),
         M = (0, c.b)(y);
     return {
         poll: o,
-        canTapAnswers: P,
+        canTapAnswers: L,
         canRemoveVote: Z && h && !p,
         canShowVoteCounts: R,
         canSubmitVote: !E && A && !Z && h && !O && !M,
@@ -154,10 +154,10 @@ function R(e, t) {
         S = null === (s = u.Z.getChannel(e.getChannelId())) || void 0 === s ? void 0 : null === (n = s.getGuildId) || void 0 === n ? void 0 : n.call(s),
         j = (0, I.E)(N, S),
         R = _.answers,
-        P = _.layout_type,
-        L = Z(e, t, { formattedExpirationLabel: m });
-    if (null == L) return;
-    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: k, expirationLabel: D = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: B, hasVoted: U, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = L,
+        L = _.layout_type,
+        P = Z(e, t, { formattedExpirationLabel: m });
+    if (null == P) return;
+    let { canTapAnswers: y, canRemoveVote: O, canShowVoteCounts: M, canSubmitVote: k, expirationLabel: D = T.intl.string(T.t['e+J3JS']), hasSelectedAnswer: B, hasVoted: U, isEditingVote: w, isExpired: F, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = P,
         Y = (0, E.cZ)(V),
         X = T.intl.formatToPlainString(T.t.XRkuoa, { count: Y.toLocaleString() }),
         Q = Math.max(
@@ -221,7 +221,7 @@ function R(e, t) {
                 style: E,
                 shouldAnimateTransition: z && !v,
                 votesPercentage: Math.round(100 * m),
-                votes: (0, i.EQ)(P)
+                votes: (0, i.EQ)(L)
                     .with(r.C.IMAGE_ONLY_ANSWERS, () => '('.concat(d.toLocaleString(), ')'))
                     .otherwise(() => T.intl.formatToPlainString(T.t.XRkuoa, { count: d.toLocaleString() }))
             };
@@ -332,10 +332,10 @@ function R(e, t) {
             .with({ canSelectMultipleAnswers: !0 }, () => C.Y7.CHECKBOXES)
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
-        layoutType: P,
+        layoutType: L,
         resources: (0, x.Z)({
             theme: d,
-            layoutType: P
+            layoutType: L
         }),
         containerStyle: 'normal',
         primaryAction: J,

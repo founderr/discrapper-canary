@@ -638,7 +638,7 @@ var t, r;
                     }
                 });
             });
-        var e5 = {
+        var e6 = {
                 aliceblue: '#f0f8ff',
                 antiquewhite: '#faebd7',
                 aqua: '#00ffff',
@@ -795,23 +795,23 @@ var t, r;
                 yellow: '#ffff00',
                 yellowgreen: '#9acd32'
             },
-            e6 = i.type;
+            e5 = i.type;
         (u.prototype.name = function () {
-            for (var e = Q(this._rgb, 'rgb'), t = 0, r = Object.keys(e5); t < r.length; t += 1) {
+            for (var e = Q(this._rgb, 'rgb'), t = 0, r = Object.keys(e6); t < r.length; t += 1) {
                 var n = r[t];
-                if (e5[n] === e) return n.toLowerCase();
+                if (e6[n] === e) return n.toLowerCase();
             }
             return e;
         }),
             (E.format.named = function (e) {
-                if (e5[(e = e.toLowerCase())]) return et(e5[e]);
+                if (e6[(e = e.toLowerCase())]) return et(e6[e]);
                 throw Error('unknown color name: ' + e);
             }),
             E.autodetect.push({
                 p: 5,
                 test: function (e) {
                     for (var t = [], r = arguments.length - 1; r-- > 0; ) t[r] = arguments[r + 1];
-                    if (!t.length && 'string' === e6(e) && e5[e.toLowerCase()]) return 'named';
+                    if (!t.length && 'string' === e5(e) && e6[e.toLowerCase()]) return 'named';
                 }
             });
         var e4 = i.unpack,
@@ -1501,8 +1501,8 @@ var t, r;
             var t1 = i.type,
                 t2 = i.clip_rgb,
                 t3 = i.TWOPI,
-                t5 = Math.pow,
-                t6 = Math.sin,
+                t6 = Math.pow,
+                t5 = Math.sin,
                 t4 = Math.cos,
                 t8 = Math.floor,
                 t7 = Math.random,
@@ -1729,10 +1729,10 @@ var t, r;
                 'array' === t1(a) ? (_ = a[1] - a[0]) : ((_ = 0), (a = [a, a]));
                 var i = function (i) {
                     var E = t3 * ((e + 120) / 360 + t * i),
-                        c = t5(a[0] + _ * i, n),
+                        c = t6(a[0] + _ * i, n),
                         s = ((0 !== o ? r[0] + i * o : r) * c * (1 - c)) / 2,
                         l = t4(E),
-                        u = t6(E);
+                        u = t5(E);
                     return I(t2([255 * (c + s * (-0.14861 * l + 1.78277 * u)), 255 * (c + s * (-0.29227 * l - 0.90649 * u)), 255 * (c + 1.97294 * l * s), 1]));
                 };
                 return (
@@ -1840,7 +1840,7 @@ var t, r;
                     return tq(['#000', '#f00', '#ff0', '#fff']).mode('rgb');
                 }
             }),
-            (I.colors = e5),
+            (I.colors = e6),
             (I.brewer = rT),
             I
         );

@@ -82,7 +82,7 @@ function T(e, t) {
             cursorScope: d,
             autocompletes: m
         })),
-        L.emitChange();
+        P.emitChange();
 }
 function S(e, t, n) {
     let i,
@@ -224,7 +224,7 @@ function R() {
         autocompletes: b(e, n)
     });
 }
-class P extends (i = o.ZP.Store) {
+class L extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(g.ZP, E.Z);
     }
@@ -234,7 +234,7 @@ class P extends (i = o.ZP.Store) {
     }
 }
 (a = 'SearchAutocompleteStore'),
-    (l = 'displayName') in (r = P)
+    (l = 'displayName') in (r = L)
         ? Object.defineProperty(r, l, {
               value: a,
               enumerable: !0,
@@ -242,7 +242,7 @@ class P extends (i = o.ZP.Store) {
               writable: !0
           })
         : (r[l] = a);
-let L = new P(s.Z, {
+let P = new L(s.Z, {
     SEARCH_AUTOCOMPLETE_QUERY_UPDATE: function (e) {
         var t;
         let n,
@@ -287,4 +287,4 @@ let L = new P(s.Z, {
         Object.keys(x).forEach(Z);
     }
 });
-t.Z = L;
+t.Z = P;

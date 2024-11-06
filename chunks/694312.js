@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return f;
+        return s;
     }
 }),
     n(47120);
@@ -12,18 +12,18 @@ var i = n(192379),
     a = n(823379),
     c = n(358085),
     d = n(317381),
-    s = n(761122);
-function f(e) {
+    f = n(761122);
+function s(e) {
     let t = (0, l.e7)([o.default], o.default.getCurrentUser),
         n = (0, l.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
-        f = (0, l.e7)([u.Z], () => u.Z.testModeEmbeddedApplicationId),
+        s = (0, l.e7)([u.Z], () => u.Z.testModeEmbeddedApplicationId),
         p = n.map((e) => e.application_id),
-        v = null != f ? [f, ...p] : p,
+        v = null != s ? [s, ...p] : p,
         h = (0, r.Z)(v),
         g = i.useMemo(() => h.filter(a.lm), [h]),
         Z = i.useMemo(
             () =>
-                null != f && g.length > 0 && g[0].id === f && null != g[0].embeddedActivityConfig
+                null != s && g.length > 0 && g[0].id === s && null != g[0].embeddedActivityConfig
                     ? [
                           {
                               activity: g[0].embeddedActivityConfig,
@@ -31,7 +31,7 @@ function f(e) {
                           }
                       ]
                     : [],
-            [g, f]
+            [g, s]
         ),
         m = i.useMemo(
             () =>
@@ -54,7 +54,7 @@ function f(e) {
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
-                    return (null !== (t = n.supported_platforms) && void 0 !== t ? t : []).includes((0, s.Z)((0, c.getOS)()));
+                    return (null !== (t = n.supported_platforms) && void 0 !== t ? t : []).includes((0, f.Z)((0, c.getOS)()));
                 })
                 .filter((e) => {
                     let { activity: n } = e;

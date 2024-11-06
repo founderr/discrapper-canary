@@ -15,15 +15,15 @@ function c(e) {
     let { guildId: t, enableFilter: n = !1 } = e,
         { filter: c } = (0, l.cj)([r.Z], () => ({ filter: r.Z.getFilter() })),
         d = (0, o.E)(t),
-        s = (0, u.Z)(d),
-        f = (0, a.o)();
+        f = (0, u.Z)(d),
+        s = (0, a.o)();
     return i.useMemo(() => {
         function e(e) {
             return !!(!n || '' === c || e.application.name.toLowerCase().includes(c.toLowerCase())) || !1;
         }
-        let t = [...f].filter(e),
+        let t = [...s].filter(e),
             i = new Set(t.map((e) => e.application.id));
-        for (let n of s) !i.has(n.application.id) && e(n) && t.push(n);
+        for (let n of f) !i.has(n.application.id) && e(n) && t.push(n);
         return t;
-    }, [f, n, c, s]);
+    }, [s, n, c, f]);
 }

@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(572004),
     I = n(669079),
     N = n(296848),
-    A = n(474936),
-    b = n(388032),
+    b = n(474936),
+    A = n(388032),
     v = n(243680);
 function j(e, t, n) {
     return (
@@ -44,11 +44,11 @@ class O extends s.PureComponent {
     get copyButtonText() {
         switch (this.state.copyMode) {
             case c.CopyInputModes.SUCCESS:
-                return b.intl.string(b.t.XVvPjY);
+                return A.intl.string(A.t.XVvPjY);
             case c.CopyInputModes.ERROR:
-                return b.intl.string(b.t.i4GM3N);
+                return A.intl.string(A.t.i4GM3N);
             default:
-                return b.intl.string(b.t.OpuAlJ);
+                return A.intl.string(A.t.OpuAlJ);
         }
     }
     handleRevoke(e) {
@@ -67,7 +67,7 @@ class O extends s.PureComponent {
                     text: this.copyButtonText,
                     mode: n,
                     supportsCopy: f.wS,
-                    hideMessage: e ? b.intl.string(b.t['0RLn4+']) : null,
+                    hideMessage: e ? A.intl.string(A.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.ButtonColors.BRAND,
                     buttonLook: c.ButtonLooks.FILLED
@@ -77,13 +77,13 @@ class O extends s.PureComponent {
                     children: [
                         null != t.expiresAt
                             ? (0, i.jsxs)(s.Fragment, {
-                                  children: [b.intl.format(b.t.ltVZcH, { hours: t.expiresAt.diff(l()(), 'h') }), ' \u2014\xA0']
+                                  children: [A.intl.format(A.t.ltVZcH, { hours: t.expiresAt.diff(l()(), 'h') }), ' \u2014\xA0']
                               })
                             : null,
                         (0, i.jsx)(c.Clickable, {
                             tag: 'a',
                             onClick: () => this.handleRevoke(t.code),
-                            children: b.intl.string(b.t.v6Yaz8)
+                            children: A.intl.string(A.t.v6Yaz8)
                         })
                     ]
                 })
@@ -117,16 +117,16 @@ class R extends s.PureComponent {
         let { sku: t, subscriptionPlan: n, giftCodeBatchId: s } = this.props;
         return (
             (e =
-                s === A.m8
-                    ? b.intl.string(b.t.odsU6e)
-                    : s === A.rX && null != n
-                      ? b.intl.formatToPlainString(n.interval === A.rV.MONTH ? b.t.uZjpiI : b.t.bJW1EB, {
+                s === b.m8
+                    ? A.intl.string(A.t.odsU6e)
+                    : s === b.rX && null != n
+                      ? A.intl.formatToPlainString(n.interval === b.rV.MONTH ? A.t.uZjpiI : A.t.bJW1EB, {
                             skuName: t.name,
                             intervalCount: n.intervalCount
                         })
                       : null == n
                         ? t.name
-                        : b.intl.formatToPlainString(n.interval === A.rV.MONTH ? b.t.rCJvqq : b.t.Vd3Iu7, {
+                        : A.intl.formatToPlainString(n.interval === b.rV.MONTH ? A.t.rCJvqq : A.t.Vd3Iu7, {
                               skuName: t.name,
                               intervalCount: n.intervalCount
                           })),
@@ -144,14 +144,14 @@ class R extends s.PureComponent {
             children: [
                 (0, i.jsx)('div', {
                     className: v.codeText,
-                    children: b.intl.string(b.t.lELyPj)
+                    children: A.intl.string(A.t.lELyPj)
                 }),
                 (0, i.jsx)(c.Button, {
                     submitting: this.state.isCreating,
                     size: c.Button.Sizes.SMALL,
                     color: c.Button.Colors.BRAND,
                     onClick: this.handleGenerateGiftCode,
-                    children: b.intl.string(b.t.Q3Qgur)
+                    children: A.intl.string(A.t.Q3Qgur)
                 })
             ]
         });
@@ -195,7 +195,7 @@ class R extends s.PureComponent {
                                                 this.renderTitle(),
                                                 (0, i.jsx)('div', {
                                                     className: v.subTextHeader,
-                                                    children: b.intl.format(b.t.zMcvcH, { copies: e.length })
+                                                    children: A.intl.format(A.t.zMcvcH, { copies: e.length })
                                                 })
                                             ]
                                         })

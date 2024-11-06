@@ -19,8 +19,8 @@ var i = n(200651),
     m = n(367907),
     x = n(565384),
     h = n(906732),
-    C = n(835473),
-    g = n(600164),
+    g = n(835473),
+    C = n(600164),
     p = n(592125),
     T = n(451478),
     _ = n(626135),
@@ -50,7 +50,7 @@ function P(e) {
         [W, G] = l.useState(null),
         [U, q] = l.useState(v),
         [z, J] = l.useState(void 0),
-        [X] = (0, C.Z)(null == U ? [] : [U]),
+        [X] = (0, g.Z)(null == U ? [] : [U]),
         Q = l.useRef(null),
         $ = l.useMemo(
             () => ({
@@ -165,7 +165,7 @@ function P(e) {
                     }),
                     (0, i.jsxs)(d.ModalHeader, {
                         separator: !1,
-                        justify: g.Z.Justify.BETWEEN,
+                        justify: C.Z.Justify.BETWEEN,
                         className: r()(L.modalHeader),
                         children: [
                             (0, i.jsxs)('div', {

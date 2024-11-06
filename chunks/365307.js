@@ -29,15 +29,15 @@ function h(e) {
             editedWebhook: h,
             isFetching: g,
             errors: x
-        } = (0, r.cj)([c.Z], () => ({
-            editedIntegration: c.Z.editedIntegration,
-            editedWebhook: c.Z.editedWebhook,
-            errors: c.Z.getErrors(),
-            integrations: c.Z.integrations,
-            isFetching: c.Z.isFetching(),
-            section: c.Z.getSection(),
-            sectionId: c.Z.getSectionId(),
-            webhooks: c.Z.webhooks
+        } = (0, r.cj)([c.default], () => ({
+            editedIntegration: c.default.editedIntegration,
+            editedWebhook: c.default.editedWebhook,
+            errors: c.default.getErrors(),
+            integrations: c.default.integrations,
+            isFetching: c.default.isFetching(),
+            section: c.default.getSection(),
+            sectionId: c.default.getSectionId(),
+            webhooks: c.default.webhooks
         }));
     return null == n
         ? null
@@ -50,7 +50,7 @@ function h(e) {
               editedIntegration: u,
               editedWebhook: h,
               isFetching: g,
-              hasChanges: c.Z.hasChanges,
+              hasChanges: c.default.hasChanges,
               errors: x,
               refToScroller: t
           });
@@ -67,10 +67,10 @@ function g() {
         },
         onSave: () => {
             if (null != e) {
-                if (null != c.Z.editedIntegration) l.Z.saveIntegration(e.id, c.Z.editedIntegration);
-                else if (null != c.Z.editedWebhook) l.Z.saveWebhook(e.id, c.Z.editedWebhook);
-                else if (null != c.Z.editedCommandId) {
-                    let t = c.Z.getSectionId(),
+                if (null != c.default.editedIntegration) l.Z.saveIntegration(e.id, c.default.editedIntegration);
+                else if (null != c.default.editedWebhook) l.Z.saveWebhook(e.id, c.default.editedWebhook);
+                else if (null != c.default.editedCommandId) {
+                    let t = c.default.getSectionId(),
                         n = m.Z.getEditedApplication();
                     if (null == t || null == n) return;
                     l.Z.saveApplicationPermissions(t, e.id, Object.values(n));

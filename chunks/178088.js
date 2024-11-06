@@ -30,7 +30,7 @@ var i = n(200651),
 function A(e) {
     let { onOpen: t, onClose: n, children: A, badgeState: b, popoutPosition: j, popoutAlign: Z } = e,
         { analyticsLocations: R } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [P, L] = r.useState(!1),
+        [L, P] = r.useState(!1),
         [y, O] = (function () {
             let e = (0, a.e7)([g.Z], () => {
                 var e, t;
@@ -70,11 +70,11 @@ function A(e) {
             };
         })(y),
         D = r.useCallback(() => {
-            L(!1), P && (null == n || n());
-        }, [n, P]),
+            P(!1), L && (null == n || n());
+        }, [n, L]),
         B = r.useCallback(() => {
-            L(!P), P ? null == n || n() : null == t || t();
-        }, [n, t, P]);
+            P(!L), L ? null == n || n() : null == t || t();
+        }, [n, t, L]);
     r.useEffect(() => (_.S.subscribe(T.CkL.TOGGLE_INBOX, B), () => void _.S.unsubscribe(T.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: w, inInbox: F } = m.Z.useExperiment({ location: 'RecentsPopout' }),
@@ -96,7 +96,7 @@ function A(e) {
             position: j,
             align: Z,
             autoInvert: !1,
-            shouldShow: P,
+            shouldShow: L,
             onRequestClose: D,
             renderPopout: function () {
                 return (0, i.jsx)(s.Dialog, {

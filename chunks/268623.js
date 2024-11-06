@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return I;
+        return E;
     }
 }),
     t(47120);
@@ -17,12 +17,12 @@ var i = t(200651),
     f = t(742989),
     m = t(898150),
     h = t(70956),
-    v = t(388032);
-function I(e) {
+    I = t(388032);
+function E(e) {
     let { enabled: n } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: t } = f.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        I = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
-        E = (function (e) {
+        E = (0, r.e7)([c.Z], () => c.Z.getSavedMessage(e.channel_id, e.id)),
+        v = (function (e) {
             let { message: n, savedMessage: t } = e,
                 [r, o] = l.useState(new Date());
             l.useEffect(() => {
@@ -49,7 +49,7 @@ function I(e) {
                 });
             return (null == t ? void 0 : t.saveData.dueAt) == null
                 ? (0, i.jsx)(a.MenuGroup, {
-                      label: v.intl.string(v.t.roMu1N),
+                      label: I.intl.string(I.t.roMu1N),
                       children: c
                   })
                 : (0, i.jsxs)(a.MenuGroup, {
@@ -57,7 +57,7 @@ function I(e) {
                       children: [
                           (0, i.jsx)(a.MenuItem, {
                               id: 'mark-complete',
-                              label: v.intl.string(v.t.yjGtdH),
+                              label: I.intl.string(I.t.yjGtdH),
                               icon: a.CheckmarkSmallIcon,
                               action: () =>
                                   (0, u.z)({
@@ -68,22 +68,22 @@ function I(e) {
                           }),
                           (0, i.jsx)(a.MenuItem, {
                               id: 'edit-reminder',
-                              label: v.intl.string(v.t.vrbqs7),
+                              label: I.intl.string(I.t.vrbqs7),
                               children: c
                           })
                       ]
                   });
         })({
             message: e,
-            savedMessage: I
+            savedMessage: E
         });
     return n || t
-        ? null != I || (0, g.Z)()
+        ? null != E || (0, g.Z)()
             ? (0, i.jsxs)(a.MenuItem, {
                   id: 'save-for-later',
-                  label: v.intl.string(v.t.tpxJtr),
+                  label: I.intl.string(I.t.tpxJtr),
                   action: () =>
-                      null == I
+                      null == E
                           ? (0, u.z)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
@@ -92,26 +92,26 @@ function I(e) {
                           : (0, u.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
-                                dueAt: I.saveData.dueAt,
+                                dueAt: E.saveData.dueAt,
                                 displayToast: !0
                             }),
                   children: [
-                      null != I
+                      null != E
                           ? (0, i.jsx)(a.MenuItem, {
                                 id: 'remove-from-for-later',
-                                label: v.intl.string(v.t.SvXS1d),
+                                label: I.intl.string(I.t.SvXS1d),
                                 icon: a.BookmarkIcon,
                                 action: () =>
                                     (0, u.x)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
-                                        dueAt: I.saveData.dueAt,
+                                        dueAt: E.saveData.dueAt,
                                         displayToast: !0
                                     })
                             })
                           : (0, i.jsx)(a.MenuItem, {
                                 id: 'create-bookmark',
-                                label: v.intl.string(v.t['9p3D9v']),
+                                label: I.intl.string(I.t['9p3D9v']),
                                 icon: a.BookmarkOutlineIcon,
                                 action: () =>
                                     (0, u.z)({
@@ -121,12 +121,12 @@ function I(e) {
                                     })
                             }),
                       (0, i.jsx)(a.MenuSeparator, {}),
-                      E
+                      v
                   ]
               })
             : (0, i.jsx)(a.MenuItem, {
                   id: 'save-for-later-upsell',
-                  label: v.intl.string(v.t.tpxJtr),
+                  label: I.intl.string(I.t.tpxJtr),
                   icon: a.NitroWheelIcon,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>

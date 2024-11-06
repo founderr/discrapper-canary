@@ -106,7 +106,7 @@ function j(e) {
             )),
         { isTruncated: j, ExpandableTextContainer: Z } = (0, I.s)(),
         R = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [P, L] = r.useState(1),
+        [L, P] = r.useState(1),
         y = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
         k = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
@@ -114,7 +114,7 @@ function j(e) {
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(Z, {
-                          lineClamp: y || 2 === P ? 2 : 3,
+                          lineClamp: y || 2 === L ? 2 : 3,
                           children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -153,7 +153,7 @@ function j(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && L(2);
+                                    null != e && e.clientHeight > 30 && P(2);
                                 },
                                 children: (0, i.jsx)(s.Heading, {
                                     variant: 'heading-xl/semibold',

@@ -1,9 +1,9 @@
-n.d(e, {
+n.d(t, {
     Nb: function () {
-        return E;
+        return c;
     },
     oA: function () {
-        return c;
+        return f;
     },
     pr: function () {
         return s;
@@ -16,28 +16,28 @@ var r = n(442837),
     i = n(430824),
     l = n(496675),
     u = n(981631);
-let a = function (t) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z,
+let a = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.Z,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.Z,
-        r = e.getGuild(t);
+        r = t.getGuild(e);
     return null != r && n.can(u.Plq.MANAGE_GUILD, r);
 };
-function o(t) {
-    return null != t && a(t);
+function o(e) {
+    return null != e && a(e);
 }
-function E(t) {
-    return a(t);
+function c(e) {
+    return a(e);
 }
-function s(t) {
-    return (0, r.e7)([i.Z, l.Z], () => a(t, i.Z, l.Z), [t]);
+function s(e) {
+    return (0, r.e7)([i.Z, l.Z], () => a(e, i.Z, l.Z), [e]);
 }
-function c(t) {
+function f(e) {
     return (0, r.e7)(
         [i.Z],
         () => {
-            let e = i.Z.getGuild(t);
-            return (null == e ? void 0 : e.hasFeature(u.oNc.COMMUNITY)) || !1;
+            let t = i.Z.getGuild(e);
+            return (null == t ? void 0 : t.hasFeature(u.oNc.COMMUNITY)) || !1;
         },
-        [t]
+        [e]
     );
 }

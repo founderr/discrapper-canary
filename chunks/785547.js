@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
     n(411104),
@@ -53,7 +53,7 @@ let Z = Object.freeze({
         [S.apO.RESUME]: 'paused'
     }),
     R = () => [A.intl.string(A.t.r9wmKi), A.intl.string(A.t['6CpimZ']), A.intl.string(A.t.ysbNDQ), A.intl.string(A.t.TLnXx8), A.intl.string(A.t.Qi8mnZ), A.intl.string(A.t.yvMu3d), A.intl.string(A.t.PnNUZ2), A.intl.string(A.t.hU2TEB), A.intl.string(A.t.YyY519), A.intl.string(A.t.PbHJb2)];
-class P extends (r = o.Component) {
+class L extends (r = o.Component) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
@@ -207,13 +207,13 @@ class P extends (r = o.Component) {
             });
     }
 }
-function L(e) {
+function P(e) {
     let { libraryApplication: t } = e,
         n = (0, m.O)(),
         [i, r] = (0, s.Wu)([E.Z, C.Z], () => [(0, g.i)(t, E.Z, C.Z), E.Z.getState(t.id, t.branchId)], [t]),
         l = (0, s.e7)([_.Z], () => _.Z.isSyncing(t.id, t.branchId), [t]),
         o = (0, s.e7)([p.Z], () => p.Z.hasNoBuild(t.id, t.branchId), [t]);
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(L, {
         ...e,
         analyticsContext: n,
         actionState: i,
@@ -222,11 +222,11 @@ function L(e) {
         hasNoBuild: o
     });
 }
-j(P, 'defaultProps', {
+j(L, 'defaultProps', {
     fullWidth: !1,
     size: u.Button.Sizes.LARGE,
     hideProgress: !1,
     isPlayShiny: !1,
     tooltipPosition: 'top'
 }),
-    j(P, 'ButtonStates', i);
+    j(L, 'ButtonStates', i);

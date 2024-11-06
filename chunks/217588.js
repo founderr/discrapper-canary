@@ -27,8 +27,8 @@ var i = n(200651),
     j = n(981631),
     Z = n(474936),
     R = n(388032),
-    P = n(174461),
-    L = n(507444);
+    L = n(174461),
+    P = n(507444);
 let y = (e, t) => (t ? R.intl.format(R.t.auckX1, { stickerPackName: e.name }) : R.intl.format(R.t.OzB6e3, { stickerPackName: e.name })),
     O = (e) => {
         let { sticker: t, stickerPack: n } = e;
@@ -53,10 +53,10 @@ function k(e) {
             (0, i.jsxs)(d.Z, {
                 direction: d.Z.Direction.VERTICAL,
                 justify: d.Z.Justify.CENTER,
-                className: L.truncatingText,
+                className: P.truncatingText,
                 children: [
                     (0, i.jsx)(s.Text, {
-                        className: L.__invalid_emojiName,
+                        className: P.__invalid_emojiName,
                         variant: 'text-md/semibold',
                         children: (0, i.jsx)(m.Z, { children: t.name })
                     }),
@@ -91,9 +91,9 @@ let D = (e) => {
             });
         }, [n.pack_id]),
         d || null == c)
-            ? (0, i.jsx)(g.SE, { className: P.popoutLoader })
+            ? (0, i.jsx)(g.SE, { className: L.popoutLoader })
             : (0, i.jsxs)(g.W_, {
-                  className: P.popoutContent,
+                  className: L.popoutContent,
                   children: [
                       (0, i.jsx)(s.Heading, {
                           variant: 'heading-md/semibold',
@@ -104,7 +104,7 @@ let D = (e) => {
                           children: y(c, m)
                       }),
                       (0, i.jsx)('ul', {
-                          className: P.stickersList,
+                          className: L.stickersList,
                           children: h.map((e) =>
                               (0, i.jsx)(
                                   A.ZP,
@@ -119,7 +119,7 @@ let D = (e) => {
                       }),
                       m &&
                           (0, i.jsx)('div', {
-                              className: P.packActions,
+                              className: L.packActions,
                               children: (0, i.jsx)(
                                   s.Button,
                                   {
@@ -196,7 +196,7 @@ let D = (e) => {
         }, []),
         S)
             ? (0, i.jsxs)(g.W_, {
-                  className: L.popoutContent,
+                  className: P.popoutContent,
                   children: [
                       (() => {
                           let e = async () => {
@@ -208,7 +208,7 @@ let D = (e) => {
                               } catch {}
                           };
                           return (0, i.jsxs)('div', {
-                              className: L.emojiSection,
+                              className: P.emojiSection,
                               children: [
                                   (0, i.jsx)(k, {
                                       description: t,
@@ -216,7 +216,7 @@ let D = (e) => {
                                   }),
                                   K &&
                                       (0, i.jsx)(E.Z, {
-                                          className: L.ctaButton,
+                                          className: P.ctaButton,
                                           subscriptionTier: Z.Si.TIER_2,
                                           size: s.Button.Sizes.SMALL,
                                           fullWidth: !0,
@@ -228,7 +228,7 @@ let D = (e) => {
                                   X &&
                                       (0, i.jsx)(s.Button, {
                                           size: s.Button.Sizes.SMALL,
-                                          className: L.ctaButton,
+                                          className: P.ctaButton,
                                           fullWidth: !0,
                                           onClick: e,
                                           children: R.intl.string(R.t.riu2R0)
@@ -246,10 +246,10 @@ let D = (e) => {
                                       .slice(0, 12),
                                   r = null != v ? h.JO.createFromDiscoverableGuild(v) : h.JO.createFromGuildRecord(D);
                               return (0, i.jsxs)('div', {
-                                  className: L.guildSection,
+                                  className: P.guildSection,
                                   children: [
                                       (0, i.jsx)(s.FormTitle, {
-                                          className: L.guildTitle,
+                                          className: P.guildTitle,
                                           children: B ? R.intl.string(R.t.kx6pEB) : R.intl.string(R.t.pDE7GR)
                                       }),
                                       (0, i.jsx)(p.Oe, {
@@ -264,11 +264,11 @@ let D = (e) => {
                                                       onClick: () => {
                                                           _(), w(!U);
                                                       },
-                                                      className: L.showMoreEmojis,
+                                                      className: P.showMoreEmojis,
                                                       children: (0, i.jsxs)(d.Z, {
                                                           children: [
                                                               (0, i.jsx)(s.Text, {
-                                                                  className: L.__invalid_showMoreEmojisLabel,
+                                                                  className: P.__invalid_showMoreEmojisLabel,
                                                                   variant: 'text-xs/normal',
                                                                   color: 'none',
                                                                   children: R.intl.string(R.t.vtH5ho)
@@ -276,7 +276,7 @@ let D = (e) => {
                                                               (0, i.jsx)(s.ChevronSmallDownIcon, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: a()(L.showMoreEmojisArrow, { [L.showMoreEmojisArrowCollapsed]: !U })
+                                                                  className: a()(P.showMoreEmojisArrow, { [P.showMoreEmojisArrowCollapsed]: !U })
                                                               })
                                                           ]
                                                       })
@@ -286,7 +286,7 @@ let D = (e) => {
                                                           wrap: d.Z.Wrap.WRAP,
                                                           align: d.Z.Align.START,
                                                           justify: d.Z.Justify.START,
-                                                          className: L.otherEmojisContainer,
+                                                          className: P.otherEmojisContainer,
                                                           children: t.map((e) =>
                                                               (0, i.jsx)(
                                                                   s.Tooltip,
@@ -298,7 +298,7 @@ let D = (e) => {
                                                                           return (0, i.jsx)(
                                                                               'div',
                                                                               {
-                                                                                  className: a()(L.otherEmoji, { [P.nonInteractingSticker]: null != F && F !== e.id }),
+                                                                                  className: a()(P.otherEmoji, { [L.nonInteractingSticker]: null != F && F !== e.id }),
                                                                                   onMouseEnter: () => {
                                                                                       null == n || n(), G(e.id);
                                                                                   },
@@ -330,12 +330,12 @@ let D = (e) => {
                           })()
                   ]
               })
-            : (0, i.jsx)(g.SE, { className: P.popoutLoader });
+            : (0, i.jsx)(g.SE, { className: L.popoutLoader });
     };
 function U(e) {
     let { channel: t, closePopout: n, sticker: r } = e;
     return (0, i.jsx)(g.W_, {
-        className: P.popoutContent,
+        className: L.popoutContent,
         children: (0, i.jsx)(k, {
             sticker: r,
             description: R.intl.format(R.t.hGWuxc, {

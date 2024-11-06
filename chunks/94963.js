@@ -20,7 +20,7 @@ var r = t(200651),
     _ = t(388032),
     y = t(861246),
     T = t(602075);
-let I = [
+let j = [
         {
             name: 'Night Sky',
             bannerKind: v.qC.NIGHT_SKY,
@@ -67,7 +67,7 @@ let I = [
             icon: m.PaintbrushThickIcon
         }
     ],
-    j = (e) => {
+    I = (e) => {
         let { name: n, primaryColor: t, secondaryColor: a, isCustom: i } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -105,11 +105,11 @@ n.Z = (e) => {
             return 0;
         }, [S, E, k, A, i.brandPrimaryColor, i.brandSecondaryColor]),
         [Z, L] = a.useState(!1),
-        O = 0 === D,
-        P = 1 === D,
+        P = 0 === D,
+        O = 1 === D,
         F = a.useMemo(() => {
-            if (O) return R;
-            if (P)
+            if (P) return R;
+            if (O)
                 return {
                     primary: null != k ? k : b.Nh,
                     secondary: null != A ? A : b.vY
@@ -121,9 +121,9 @@ n.Z = (e) => {
                     secondary: e.secondary
                 };
             }
-        }, [R, P, O, k, A, D]),
+        }, [R, O, P, k, A, D]),
         G = a.useCallback(() => {
-            let e = I[Math.floor(Math.random() * I.length)].bannerKind,
+            let e = j[Math.floor(Math.random() * j.length)].bannerKind,
                 n = s().random().hex();
             t({
                 banner: e,
@@ -222,7 +222,7 @@ n.Z = (e) => {
                                                                 L((e) => !e);
                                                             },
                                                             className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 0 === D }),
-                                                            children: (0, r.jsx)(j, {
+                                                            children: (0, r.jsx)(I, {
                                                                 name: _.intl.string(_.t.AemVoa),
                                                                 isCustom: !0
                                                             })
@@ -236,7 +236,7 @@ n.Z = (e) => {
                                                         });
                                                     },
                                                     className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 1 === D }),
-                                                    children: (0, r.jsx)(j, {
+                                                    children: (0, r.jsx)(I, {
                                                         name: _.intl.string(_.t['1Pvr/v']),
                                                         primaryColor: k,
                                                         secondaryColor: A
@@ -254,7 +254,7 @@ n.Z = (e) => {
                                                                 });
                                                             },
                                                             className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: D === n + 2 }),
-                                                            children: (0, r.jsx)(j, {
+                                                            children: (0, r.jsx)(I, {
                                                                 name: e.name,
                                                                 primaryColor: e.primary,
                                                                 secondaryColor: e.secondary
@@ -277,7 +277,7 @@ n.Z = (e) => {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: y.bannerPickerGrid,
-                                            children: I.map((e, n) =>
+                                            children: j.map((e, n) =>
                                                 (0, r.jsxs)(
                                                     m.Clickable,
                                                     {

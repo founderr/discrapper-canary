@@ -20,8 +20,8 @@ var i = n(200651),
     m = n(430824),
     x = n(594174),
     h = n(115130),
-    C = n(566620),
-    g = n(127255),
+    g = n(566620),
+    C = n(127255),
     p = n(880308),
     T = n(451576),
     _ = n(439934),
@@ -34,7 +34,7 @@ let j = (0, o.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
 function E(e) {
     let { channel: t, guildId: n, locationObject: a, onClose: o, onActivityItemVisible: c, scrollerRef: I } = e,
         [E, y] = l.useState(0),
-        A = (0, g.Z)({
+        A = (0, C.Z)({
             guildId: n,
             enableFilter: !0
         }),
@@ -63,7 +63,7 @@ function E(e) {
         }, [I]),
         l.useEffect(() => {
             (k || null != n) &&
-                (0, C.w1)({
+                (0, g.w1)({
                     guildId: n,
                     force: !0
                 });

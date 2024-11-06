@@ -28,8 +28,8 @@ function C(e) {
             return s.Z.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : E.lds);
         }),
         R = (0, l.U)(t, 600),
-        P = (0, f.C)(t),
-        L = (0, u.SO)(j),
+        L = (0, f.C)(t),
+        P = (0, u.SO)(j),
         { shouldHideGuildPurchaseEntryPoints: y } = (0, o.uP)(n),
         O = (0, f.k)(t);
     if (null == j || y) return null;
@@ -42,13 +42,13 @@ function C(e) {
         k = (0, i.jsx)(p.m, {
             product: t,
             guildId: n,
-            showEditProduct: L,
+            showEditProduct: P,
             showUnpublishProduct: !1,
             showCopyLink: !0,
             showTestDownload: !1,
             showDeleteProduct: !1,
             showReportProduct: !0,
-            onEditProduct: L
+            onEditProduct: P
                 ? () => {
                       m.h(j.id, t.id);
                   }
@@ -76,7 +76,7 @@ function C(e) {
                 guildProductListingId: t.id,
                 sourceAnalyticsLocations: C
             }),
-            productType: P,
+            productType: L,
             shouldShowFullDescriptionButton: I,
             onShowFullDescription: M,
             onTapCard: M,

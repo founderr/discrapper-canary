@@ -58,15 +58,15 @@ function j(e) {
             everyoneFilter: _.Z.everyoneFilter
         })),
         Z = (0, u.Z)(x),
-        P = (0, u.Z)(A),
+        L = (0, u.Z)(A),
         y = (0, u.Z)(j);
     r.useEffect(() => {
         if (!_.Z.hasLoadedEver) {
             b(h, !0);
             return;
         }
-        ((null != Z && x !== Z) || (null != P && A !== P) || (null != y && j !== y)) && b(h, !0);
-    }, [Z, x, P, A, y, j, h, !0]);
+        ((null != Z && x !== Z) || (null != L && A !== L) || (null != y && j !== y)) && b(h, !0);
+    }, [Z, x, L, A, y, j, h, !0]);
     r.useEffect(() => {
         (null == p ? void 0 : p.some(d.k5)) && (s.Z.clearMentions(), b(h, !0));
     }, []),
@@ -106,7 +106,7 @@ function j(e) {
             },
             canCloseAllMessages: !0,
             renderHeader: O,
-            renderEmptyState: L,
+            renderEmptyState: P,
             renderMessage: R,
             'aria-label': T.intl.string(T.t.jbV6MD),
             listName: 'recents'
@@ -116,7 +116,7 @@ function j(e) {
 function Z(e, t) {
     return [
         (0, i.jsx)(
-            P,
+            L,
             {
                 message: e,
                 gotoMessage: t
@@ -128,7 +128,7 @@ function Z(e, t) {
 function R(e, t) {
     return [
         (0, i.jsx)(
-            P,
+            L,
             {
                 message: e,
                 gotoMessage: t,
@@ -138,7 +138,7 @@ function R(e, t) {
         )
     ];
 }
-function P(e) {
+function L(e) {
     let { message: t, gotoMessage: n, dismissible: r } = e;
     if (null == t) return null;
     let l = f.Z.getChannel(t.channel_id);
@@ -191,7 +191,7 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function P(e) {
     return (0, i.jsx)(x.Z, {
         Icon: o.AtIcon,
         header: T.intl.string(T.t['bgDz7+']),

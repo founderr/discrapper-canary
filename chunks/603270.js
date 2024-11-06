@@ -34,7 +34,7 @@ var i = n(200651),
     A = n(272242),
     b = n(388032),
     j = n(738571);
-let Z = L(function (e) {
+let Z = P(function (e) {
         let { appId: t, message: s } = e,
             d = (0, v.R)(t),
             [m, f, g, _, C, N, T] = (0, l.Wu)(
@@ -53,7 +53,7 @@ let Z = L(function (e) {
         }, [m, t, g, f, C]);
         let Z = _.subscriptions.length,
             R = _.otps.length,
-            L = r.useMemo(
+            P = r.useMemo(
                 () =>
                     Z > 0 && R > 0
                         ? b.intl.formatToPlainString(b.t['jA648/'], {
@@ -80,10 +80,10 @@ let Z = L(function (e) {
                     });
             });
         };
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(L, {
             appName: m.name,
             title: b.intl.formatToPlainString(b.t.XDRjs7, { appName: m.name }),
-            description: L,
+            description: P,
             link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, A.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, x.X)(t, x.B.STORE_EMBED);
@@ -109,10 +109,10 @@ let Z = L(function (e) {
             })
         });
     }),
-    R = L(function (e) {
+    R = P(function (e) {
         var t, o;
         let { skuId: u, message: p } = e,
-            [C, N, Z, R, L, y, O, M] = (0, l.Wu)(
+            [C, N, Z, R, P, y, O, M] = (0, l.Wu)(
                 [g.Z, _.Z, f.Z, h.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -128,8 +128,8 @@ let Z = L(function (e) {
             ),
             k = (0, v.R)(null !== (o = null == N ? void 0 : N.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
-            null == C && !R && !L && (0, s.km)(u);
-        }, [L, R, C, u]),
+            null == C && !R && !P && (0, s.km)(u);
+        }, [P, R, C, u]),
             r.useEffect(() => {
                 if ((null == N ? void 0 : N.id) != null) (0, s.oJ)(null == N ? void 0 : N.id);
             }, [null == N ? void 0 : N.id]);
@@ -220,7 +220,7 @@ let Z = L(function (e) {
                 area: 'purchase_button'
             });
         };
-        return (0, i.jsx)(P, {
+        return (0, i.jsx)(L, {
             appName: N.name,
             title: C.name,
             description: H,
@@ -285,7 +285,7 @@ let Z = L(function (e) {
             })
         });
     });
-function P(e) {
+function L(e) {
     let { appName: t, title: n, description: r, link: l, iconSrc: o, onIconClick: s, onLinkCopy: c, children: u } = e;
     return (0, i.jsxs)('div', {
         className: j.wrapper,
@@ -360,7 +360,7 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function P(e) {
     return (t) => {
         let { enabled: n } = N.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;

@@ -1,14 +1,14 @@
-e.d(n, {
+n.d(t, {
     Z: function () {
         return a;
     }
 });
-var i = e(192379),
-    r = e(442837),
-    l = e(339085),
-    o = e(889564);
+var i = n(192379),
+    r = n(442837),
+    l = n(339085),
+    o = n(889564);
 let u = [];
-function a(t) {
-    let n = (0, r.e7)([l.ZP], () => l.ZP.getGuildEmoji(t), [t]);
-    return i.useMemo(() => (null == n ? u : n.filter((n) => (0, o.Kt)(n, t))), [n, t]);
+function a(e) {
+    let t = (0, r.e7)([l.ZP], () => l.ZP.getGuildEmoji(e), [e]);
+    return i.useMemo(() => (null == t ? u : t.filter((t) => (0, o.Kt)(t, e))), [t, e]);
 }

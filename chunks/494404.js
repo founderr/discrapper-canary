@@ -3,10 +3,10 @@ n.d(t, {
         return k;
     },
     h4: function () {
-        return P;
+        return L;
     },
     nH: function () {
-        return L;
+        return P;
     }
 }),
     n(47120),
@@ -53,7 +53,7 @@ function Z(e, t, n) {
 function R(e) {
     e.stopPropagation();
 }
-let P = (e) => {
+let L = (e) => {
         let { title: t, icon: n, children: r, className: l } = e;
         return (0, i.jsxs)('div', {
             className: a()(l, j.header),
@@ -75,7 +75,7 @@ let P = (e) => {
             ]
         });
     },
-    L = (e) => {
+    P = (e) => {
         let { msg: t, image: n } = e;
         return (0, i.jsxs)('div', {
             className: j.emptyPlaceholder,
@@ -148,8 +148,8 @@ let O = u.ZP.connectStores([x.Z], (e) => {
 })(y);
 function M(e) {
     let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: m, renderHeader: h, renderEmptyState: g, renderItem: _, getProTip: C, scrollerClassName: I, className: x, listName: Z } = e,
-        P = r.useRef(null),
-        L = (0, f.Z)(Z, P),
+        L = r.useRef(null),
+        P = (0, f.Z)(Z, L),
         y = (0, u.e7)([N.Z], () => N.Z.hasNotice()),
         O = (0, u.e7)([v.Z], () => v.Z.windowSize());
     r.useEffect(() => {
@@ -158,11 +158,11 @@ function M(e) {
         r.useEffect(() => {
             function e() {
                 var e;
-                null === (e = P.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
+                null === (e = L.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
             }
             function t() {
                 var e;
-                null === (e = P.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
+                null === (e = L.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
                 S.S.subscribe(A.CkL.SCROLL_PAGE_DOWN, t),
@@ -174,7 +174,7 @@ function M(e) {
         }, []);
     let M = r.useCallback(() => {
             var e;
-            let t = null === (e = P.current) || void 0 === e ? void 0 : e.getScrollerState();
+            let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerState();
             null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !o && (null == m || m());
         }, [l, m, o]),
         k = [],
@@ -255,10 +255,10 @@ function M(e) {
                 (0, i.jsxs)(d.AdvancedScroller, {
                     className: a()(j.messagesPopout, I),
                     onScroll: G ? M : void 0,
-                    ref: P,
+                    ref: L,
                     children: [
                         (0, i.jsx)(c.bG, {
-                            navigator: L,
+                            navigator: P,
                             children: (0, i.jsx)(c.SJ, {
                                 children: (e) => {
                                     let { ref: t, ...n } = e;
@@ -284,7 +284,7 @@ function k(e) {
             let e = null != l ? I.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function P(e, n) {
+    function L(e, n) {
         let { id: i, blocked: r, author: l, channel_id: a } = e;
         if (r)
             m.Z.show({
@@ -300,7 +300,7 @@ function k(e) {
     r.useEffect(() => {
         n(l);
     }, [l, n]);
-    let L = r.useMemo(
+    let P = r.useMemo(
         () =>
             null == a
                 ? void 0
@@ -313,7 +313,7 @@ function k(e) {
     return (0, i.jsx)(M, {
         className: T,
         scrollerClassName: v,
-        items: L,
+        items: P,
         loading: s,
         analyticsName: t,
         renderEmptyState: E,
@@ -324,7 +324,7 @@ function k(e) {
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != x) return x(t, (e) => P(t, e));
+            if (null != x) return x(t, (e) => L(t, e));
             let r = [];
             return null == n
                 ? []
@@ -344,7 +344,7 @@ function k(e) {
                                       message: t,
                                       jumping: R,
                                       canCloseAllMessages: f,
-                                      jumpTo: P,
+                                      jumpTo: L,
                                       onCloseMessage: S
                                   })
                               ]

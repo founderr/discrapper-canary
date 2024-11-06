@@ -17,8 +17,8 @@ var i = n(200651),
     m = n(695346),
     x = n(594174),
     h = n(695103),
-    C = n(880448),
-    g = n(823379),
+    g = n(880448),
+    C = n(823379),
     p = n(5192),
     T = n(624138),
     _ = n(115130),
@@ -39,7 +39,7 @@ function L(e) {
         className: Z.activityTag,
         color: 'interactive-normal',
         variant: 'text-xs/semibold',
-        children: [(0, g.lm)(n) ? (0, i.jsx)(n, { className: Z.icon }) : null, t]
+        children: [(0, C.lm)(n) ? (0, i.jsx)(n, { className: Z.icon }) : null, t]
     });
 }
 function k(e) {
@@ -51,7 +51,7 @@ function k(e) {
                     let [t] = e;
                     return x.default.getUser(t);
                 })
-                .filter(g.lm);
+                .filter(C.lm);
         }),
         d = p.ZP.getName(a, null == l ? void 0 : l.id, null == c ? void 0 : c[0]);
     if (((d = (0, T.aF)(d, 15)), null == t || 0 === c.length)) {
@@ -92,7 +92,7 @@ function k(e) {
 }
 function B(e) {
     var t;
-    let { activityItem: n, channel: a, guildId: x, locationObject: g, onActivityItemVisible: p, onActivityItemSelected: T, large: E = !1 } = e,
+    let { activityItem: n, channel: a, guildId: x, locationObject: C, onActivityItemVisible: p, onActivityItemSelected: T, large: E = !1 } = e,
         {
             imageBackground: B,
             videoUrl: M,
@@ -105,7 +105,7 @@ function B(e) {
             activityItem: n,
             channel: a,
             guildId: x,
-            locationObject: g,
+            locationObject: C,
             onActivityItemVisible: p,
             onActivityItemSelected: T,
             embeddedActivitiesManager: S.Z,
@@ -193,7 +193,7 @@ function B(e) {
                                   (0, i.jsx)('div', {
                                       className: Z.devShelfBadge,
                                       ...e,
-                                      children: (0, i.jsx)(C.Z, { className: Z.devShelfIcon })
+                                      children: (0, i.jsx)(g.Z, { className: Z.devShelfIcon })
                                   })
                           })
                         : null

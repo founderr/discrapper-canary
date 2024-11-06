@@ -9,8 +9,8 @@ var n = t(200651),
     a = t(927359),
     i = t(325767),
     c = t(823188),
-    l = t(860553);
-let u = 'premium_tier_gradient',
+    u = t(860553);
+let l = 'premium_tier_gradient',
     d = 'smaller_sparkle_gradient';
 function f(e) {
     let { width: s = 14, height: t = 15, color: r = 'white', foreground: o, ...a } = e;
@@ -25,7 +25,7 @@ function f(e) {
         children: [
             (0, n.jsx)('defs', {
                 children: (0, n.jsxs)('linearGradient', {
-                    id: u,
+                    id: l,
                     x1: '0%',
                     y1: '0%',
                     x2: '100%',
@@ -78,18 +78,18 @@ function p(e) {
     return (
         i && g.toUpperCase(),
         (0, n.jsxs)('div', {
-            className: o()(s, l.countDown),
+            className: o()(s, u.countDown),
             children: [
                 p
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(f, {
-                                  foreground: l.sparkleStar1,
+                                  foreground: u.sparkleStar1,
                                   color: 'url(#'.concat(d, ')')
                               }),
                               (0, n.jsx)(f, {
-                                  foreground: l.sparkleStar2,
-                                  color: 'url(#'.concat(u, ')')
+                                  foreground: u.sparkleStar2,
+                                  color: 'url(#'.concat(l, ')')
                               })
                           ]
                       })

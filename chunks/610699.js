@@ -34,8 +34,8 @@ var i = n(200651),
     j = n(624138),
     Z = n(358595),
     R = n(981631),
-    P = n(245335),
-    L = n(388032),
+    L = n(245335),
+    P = n(388032),
     y = n(610935);
 let O = (0, j.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
     M = (0, j.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
@@ -56,7 +56,7 @@ function D(e) {
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: y.count,
-                                children: L.intl.format(L.t['LC+S+v'], { membersOnline: n })
+                                children: P.intl.format(P.t['LC+S+v'], { membersOnline: n })
                             })
                         ]
                     },
@@ -74,7 +74,7 @@ function D(e) {
                             (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: y.count,
-                                children: L.intl.format(L.t.zRl6XV, { count: t })
+                                children: P.intl.format(P.t.zRl6XV, { count: t })
                             })
                         ]
                     },
@@ -110,7 +110,7 @@ function B(e) {
                 (0, i.jsx)(x.Z, {
                     children: (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
-                        children: L.intl.format(L.t['dc+LW1'], {
+                        children: P.intl.format(P.t['dc+LW1'], {
                             channelName: t.name,
                             serverName: n.name
                         })
@@ -128,7 +128,7 @@ function B(e) {
               children: (0, i.jsx)(x.Z, {
                   children: (0, i.jsx)(d.Text, {
                       variant: 'text-xs/normal',
-                      children: L.intl.format(L.t.u0vaDA, { guildName: n.name })
+                      children: P.intl.format(P.t.u0vaDA, { guildName: n.name })
                   })
               })
           })
@@ -140,7 +140,7 @@ function U(e) {
         o,
         { invite: u, getAcceptInviteContext: I } = e,
         { approximate_member_count: x, approximate_presence_count: j, target_type: U, target_application: w } = u;
-    s()(U === P.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
+    s()(U === L.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
     let F = r.useRef(null),
         [G, V] = r.useState(!1),
         [H, z] = r.useState(!1);
@@ -206,7 +206,7 @@ function U(e) {
                 analyticsLocations: J
             });
         };
-    return (ei && Y && (l = L.intl.string(L.t.wJNK8P)), !q && (l = L.intl.string(L.t.hHGrW1)), (o = Y ? L.intl.string(L.t.KC26NT) : X || !ei ? L.intl.string(L.t.VJlc0d) : L.intl.string(L.t.I0v0Qk)), null == u.code || '' === u.code)
+    return (ei && Y && (l = P.intl.string(P.t.wJNK8P)), !q && (l = P.intl.string(P.t.hHGrW1)), (o = Y ? P.intl.string(P.t.KC26NT) : X || !ei ? P.intl.string(P.t.VJlc0d) : P.intl.string(P.t.I0v0Qk)), null == u.code || '' === u.code)
         ? null
         : (0, i.jsxs)('div', {
               className: y.container,
@@ -239,7 +239,7 @@ function U(e) {
                           (0, i.jsxs)('div', {
                               className: y.info,
                               children: [
-                                  (0, i.jsx)(d.FormTitle, { children: ei ? L.intl.string(L.t['1ckx+P']) : L.intl.string(L.t.BoQUFR) }),
+                                  (0, i.jsx)(d.FormTitle, { children: ei ? P.intl.string(P.t['1ckx+P']) : P.intl.string(P.t.BoQUFR) }),
                                   (0, i.jsx)(d.Heading, {
                                       className: y.heading,
                                       variant: 'heading-xl/semibold',
@@ -265,11 +265,11 @@ function U(e) {
                                             children: [
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: L.intl.string(L.t.JBnc7O)
+                                                    children: P.intl.string(P.t.JBnc7O)
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
-                                                    children: L.intl.string(L.t.lEvDDQ)
+                                                    children: P.intl.string(P.t.lEvDDQ)
                                                 })
                                             ]
                                         })

@@ -83,8 +83,8 @@ function j(e) {
         j = (0, h.P1)(l),
         Z = !1,
         R = 0 === r.messages.length || a()(r.messages[0].timestamp).isSame(a()(), 'day'),
-        P = null !== (n = null === (t = C.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && void 0 !== n && n,
-        L = [];
+        L = null !== (n = null === (t = C.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && void 0 !== n && n,
+        P = [];
     if (!r.collapsed) {
         let e = null,
             t = null,
@@ -93,7 +93,7 @@ function j(e) {
             if (!(0, d.Z)(n, A)) {
                 if (!R && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, I.vc)(n.timestamp, 'LL');
-                    L.push(
+                    P.push(
                         (0, i.jsx)(
                             f.Z,
                             {
@@ -108,7 +108,7 @@ function j(e) {
                 let r = null == t || (0, m.Z)(l, t, n);
                 (t = n),
                     (Z = Z || (0, h.DQ)(n)),
-                    L.push(
+                    P.push(
                         (0, i.jsx)(
                             b,
                             {
@@ -116,7 +116,7 @@ function j(e) {
                                 message: n,
                                 compact: x,
                                 isGroupStart: r,
-                                treatSpam: !P && p && (0, h.DQ)(n) && j,
+                                treatSpam: !L && p && (0, h.DQ)(n) && j,
                                 gotoChannel: o
                             },
                             n.id
@@ -125,7 +125,7 @@ function j(e) {
             }
         }),
             r.messages.length >= N.hC &&
-                L.push(
+                P.push(
                     (0, i.jsxs)(
                         c.Button,
                         {
@@ -137,13 +137,13 @@ function j(e) {
                         'view-all'
                     )
                 ),
-            0 === L.length && (L = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
+            0 === P.length && (P = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
         Z && j && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: S.messages,
-            children: L
+            children: P
         })
     );
 }

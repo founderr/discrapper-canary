@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
 var i = n(200651),
@@ -25,19 +25,19 @@ var i = n(200651),
     f = n(615603),
     I = n(474936),
     N = n(20154);
-function A(e) {
+function b(e) {
     let { premiumSubscription: t } = e,
         n = (0, r.e7)([p.Z], () => p.Z.boostSlots),
-        A = s.useMemo(() => Object.values(n), [n]),
-        b = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
-        v = x.ZP.isPremium(b, I.p9.TIER_2),
+        b = s.useMemo(() => Object.values(n), [n]),
+        A = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
+        v = x.ZP.isPremium(A, I.p9.TIER_2),
         j = (0, r.e7)([m.Z], () => m.Z.affinities),
         O = (0, r.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
         R = j.length > 0 || O.length > 0,
-        P = A.length > 0,
-        D = s.useMemo(() => A.filter((e) => null != e.premiumGuildSubscription), [A]),
+        P = b.length > 0,
+        D = s.useMemo(() => b.filter((e) => null != e.premiumGuildSubscription), [b]),
         y = D.length > 0,
-        B = A.length > D.length,
+        B = b.length > D.length,
         L = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: Z } = (0, l.Z)(),
         F = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && Z === I.a$.NONE,
@@ -69,7 +69,7 @@ function A(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(f.Z, { guildBoostSlots: A }),
+            (0, i.jsx)(f.Z, { guildBoostSlots: b }),
             (0, i.jsx)(_.Z, {
                 canAddBoosts: y && M,
                 canApplyBoosts: B

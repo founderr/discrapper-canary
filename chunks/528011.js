@@ -1,4 +1,4 @@
-e.d(n, {
+n.d(t, {
     g: function () {
         return g;
     },
@@ -6,52 +6,52 @@ e.d(n, {
         return E;
     }
 }),
-    e(47120);
-var i = e(149765),
-    r = e(399606),
-    l = e(581883),
-    o = e(430824),
-    u = e(496675),
-    a = e(914010),
-    s = e(594174),
-    c = e(700785),
-    d = e(709054),
-    f = e(533244),
-    _ = e(487419),
-    p = e(676770);
-e(981631);
-function E(t) {
-    let n = (0, r.e7)([o.Z, u.Z], () => {
-            let n = o.Z.getGuild(t);
-            if (null == n) return !1;
-            let e = u.Z.getGuildPermissions(n);
-            return null != e && i.Db(e, p.cv);
+    n(47120);
+var i = n(149765),
+    r = n(399606),
+    l = n(581883),
+    o = n(430824),
+    u = n(496675),
+    a = n(914010),
+    s = n(594174),
+    c = n(700785),
+    d = n(709054),
+    f = n(533244),
+    p = n(487419),
+    _ = n(676770);
+n(981631);
+function E(e) {
+    let t = (0, r.e7)([o.Z, u.Z], () => {
+            let t = o.Z.getGuild(e);
+            if (null == t) return !1;
+            let n = u.Z.getGuildPermissions(t);
+            return null != n && i.Db(n, _.cv);
         }),
-        e = (0, r.e7)([_.Z], () => (null != t ? _.Z.getGuildIncident(t) : null)),
-        l = null != e && (0, f.ur)(e);
+        n = (0, r.e7)([p.Z], () => (null != e ? p.Z.getGuildIncident(e) : null)),
+        l = null != n && (0, f.ur)(n);
     return {
-        shouldShowIncidentActions: n,
-        incidentData: e,
+        shouldShowIncidentActions: t,
+        incidentData: n,
         isUnderLockdown: l
     };
 }
 function g() {
-    var t;
-    let n = (function (t) {
-            let n = s.default.getCurrentUser(),
-                e = _.Z.getIncidentsByGuild();
-            for (let r of d.default.keys(e).map((t) => o.Z.getGuild(t))) {
+    var e;
+    let t = (function (e) {
+            let t = s.default.getCurrentUser(),
+                n = p.Z.getIncidentsByGuild();
+            for (let r of d.default.keys(n).map((e) => o.Z.getGuild(e))) {
                 if (null == r) continue;
-                let l = e[r.id];
-                if (!(null == l || (!(0, f.i9)(l) && !(0, f.ur)(l)) || ((0, f.ur)(l) && r.id !== t))) {
+                let l = n[r.id];
+                if (!(null == l || (!(0, f.i9)(l) && !(0, f.ur)(l)) || ((0, f.ur)(l) && r.id !== e))) {
                     if (
                         i.Db(
                             c.uB({
-                                user: n,
+                                user: t,
                                 context: r,
                                 checkElevated: !1
                             }),
-                            p.cv
+                            _.cv
                         )
                     )
                         return r.id;
@@ -59,11 +59,11 @@ function g() {
             }
             return null;
         })(a.Z.getGuildId()),
-        e = null !== (t = l.Z.getGuildsProto()) && void 0 !== t ? t : {},
-        r = null != n ? e[n] : null,
+        n = null !== (e = l.Z.getGuildsProto()) && void 0 !== e ? e : {},
+        r = null != t ? n[t] : null,
         u = null != r && r.disableRaidAlertNag;
     return {
-        show: null != n && !u,
-        guildId: n
+        show: null != t && !u,
+        guildId: t
     };
 }

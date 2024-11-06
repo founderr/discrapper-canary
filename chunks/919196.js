@@ -1,178 +1,178 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return _;
     }
 }),
-    t(47120),
-    t(653041);
-var i = t(200651),
-    l = t(192379),
-    r = t(442837),
-    a = t(481060),
-    o = t(668781),
-    s = t(600164),
-    d = t(434404),
-    c = t(590157),
-    u = t(280885),
-    m = t(496675),
-    h = t(768581),
-    p = t(709054),
-    g = t(51144),
-    f = t(486199),
-    x = t(366598),
-    b = t(125657),
-    v = t(725875),
-    C = t(981631),
-    I = t(388032),
-    N = t(695768);
-function T(e) {
-    let { application: n, guild: t, integration: l, ...r } = e;
+    n(47120),
+    n(653041);
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    o = n(668781),
+    s = n(600164),
+    c = n(434404),
+    d = n(590157),
+    u = n(280885),
+    m = n(496675),
+    h = n(768581),
+    p = n(709054),
+    g = n(51144),
+    x = n(486199),
+    f = n(366598),
+    b = n(125657),
+    v = n(725875),
+    C = n(981631),
+    N = n(388032),
+    I = n(695768);
+function j(e) {
+    let { application: t, guild: n, integration: l, ...r } = e;
     return (0, i.jsx)(a.ConfirmModal, {
         ...r,
-        header: I.intl.formatToPlainString(I.t['rL9d//'], { applicationName: n.name }),
-        confirmText: I.intl.string(I.t.ebGf4u),
-        cancelText: I.intl.string(I.t['ETE/oK']),
+        header: N.intl.formatToPlainString(N.t['rL9d//'], { applicationName: t.name }),
+        confirmText: N.intl.string(N.t.ebGf4u),
+        cancelText: N.intl.string(N.t['ETE/oK']),
         onConfirm: () => {
-            d.Z.disableIntegration(t.id, l.id).catch(() => {
+            c.Z.disableIntegration(n.id, l.id).catch(() => {
                 o.Z.show({
-                    title: I.intl.string(I.t.wYqMmJ),
-                    body: I.intl.string(I.t.A4Mnsr)
+                    title: N.intl.string(N.t.wYqMmJ),
+                    body: N.intl.string(N.t.A4Mnsr)
                 });
             });
         },
         children: (0, i.jsx)(a.Text, {
             variant: 'text-md/normal',
-            children: I.intl.format(I.t.FGE8yc, { applicationName: n.name })
+            children: N.intl.format(N.t.FGE8yc, { applicationName: t.name })
         })
     });
 }
 function _(e) {
-    var n;
-    let { guild: t, applicationIntegration: o, selectableWebhookChannels: d, editedWebhook: _, errors: j, canNavigate: S } = e,
-        { application: E, integration: Z, webhooks: A } = o,
-        [y, R] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, t), null == E.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, E.bot.id, t)], [E.bot, t]),
-        O = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, t), [t]),
+    var t;
+    let { guild: n, applicationIntegration: o, selectableWebhookChannels: c, editedWebhook: _, errors: T, canNavigate: S } = e,
+        { application: Z, integration: E, webhooks: y } = o,
+        [A, R] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, n), null == Z.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, Z.bot.id, n)], [Z.bot, n]),
+        k = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
         L = l.useCallback(() => {
             S() &&
                 (0, a.openModal)((e) =>
-                    (0, i.jsx)(T, {
-                        guild: t,
-                        application: E,
-                        integration: Z,
+                    (0, i.jsx)(j, {
+                        guild: n,
+                        application: Z,
+                        integration: E,
                         ...e
                     })
                 );
-        }, [E, S, t, Z]),
-        k = l.useMemo(() => {
+        }, [Z, S, n, E]),
+        O = l.useMemo(() => {
             let e = [
                 {
                     icon: a.ClockIcon,
-                    text: I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: p.default.extractTimestamp(Z.id) })
+                    text: N.intl.formatToPlainString(N.t.gcdJ8P, { timestamp: p.default.extractTimestamp(E.id) })
                 }
             ];
             return (
-                null != Z.user &&
+                null != E.user &&
                     e.push({
                         icon: a.UserIcon,
-                        text: I.intl.formatToPlainString(I.t.qE7oqq, { user: g.ZP.getUserTag(Z.user) })
+                        text: N.intl.formatToPlainString(N.t.qE7oqq, { user: g.ZP.getUserTag(E.user) })
                     }),
                 e
             );
-        }, [Z.id, Z.user]),
+        }, [E.id, E.user]),
         w = l.useMemo(
             () =>
-                null != E.bot
+                null != Z.bot
                     ? (0, i.jsx)(b.Z, {
-                          guild: t,
+                          guild: n,
                           applicationIntegration: o
                       })
                     : (0, i.jsx)(a.Card, {
-                          className: N.emptyCard,
+                          className: I.emptyCard,
                           editable: !0,
                           children: (0, i.jsx)(a.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: I.intl.string(I.t.pfLnzc)
+                              children: N.intl.string(N.t.pfLnzc)
                           })
                       }),
-            [E.bot, o, t]
+            [Z.bot, o, n]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.Z, {
-                name: E.name,
-                imageSrc: null !== (n = E.getIconURL(32)) && void 0 !== n ? n : h.pK['0'],
-                details: k,
+            (0, i.jsx)(x.Z, {
+                name: Z.name,
+                imageSrc: null !== (t = Z.getIconURL(32)) && void 0 !== t ? t : h.pK['0'],
+                details: O,
                 isHeader: !0
             }),
-            (null == E ? void 0 : E.description) != null
+            (null == Z ? void 0 : Z.description) != null
                 ? (0, i.jsx)(u.Z, {
-                      userBio: E.description,
-                      className: N.headerDescription
+                      userBio: Z.description,
+                      className: I.headerDescription
                   })
                 : null,
-            y
-                ? (0, i.jsx)(c.Z, {
-                      application: E,
+            A
+                ? (0, i.jsx)(d.Z, {
+                      application: Z,
                       canNavigate: S,
-                      guildId: t.id
+                      guildId: n.id
                   })
                 : null,
-            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
-            null != E.bot
+            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
+            null != Z.bot
                 ? (0, i.jsxs)('div', {
-                      className: N.section,
+                      className: I.section,
                       children: [
-                          (0, i.jsx)(x.Z, {
+                          (0, i.jsx)(f.Z, {
                               icon: (0, i.jsx)(a.RobotIcon, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              title: I.intl.string(I.t.AOdOYm)
+                              title: N.intl.string(N.t.AOdOYm)
                           }),
                           w
                       ]
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: N.section,
+                className: I.section,
                 children: [
-                    (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(f.Z, {
                         icon: (0, i.jsx)(a.WebhookIcon, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        title: I.intl.string(I.t['t9ZX/P'])
+                        title: N.intl.string(N.t['t9ZX/P'])
                     }),
-                    A.length > 0
+                    y.length > 0
                         ? (0, i.jsx)(v.Z, {
-                              webhooks: A,
+                              webhooks: y,
                               editedWebhook: _,
-                              selectableWebhookChannels: d,
-                              errors: j,
+                              selectableWebhookChannels: c,
+                              errors: T,
                               canNavigate: S
                           })
                         : (0, i.jsx)(a.Card, {
-                              className: N.emptyCard,
+                              className: I.emptyCard,
                               editable: !0,
                               children: (0, i.jsx)(a.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: O ? I.intl.string(I.t.ahPd2d) : I.intl.string(I.t.axqYMj)
+                                  children: k ? N.intl.string(N.t.ahPd2d) : N.intl.string(N.t.axqYMj)
                               })
                           })
                 ]
             }),
-            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
+            (0, i.jsx)(a.FormDivider, { className: I.headerDivider }),
             (0, i.jsxs)(s.Z, {
-                className: N.section,
+                className: I.section,
                 justify: s.Z.Justify.BETWEEN,
                 align: s.Z.Align.CENTER,
                 children: [
                     (0, i.jsx)(a.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: R ? I.intl.string(I.t.hdneLy) : I.intl.string(I.t.xRCMq6)
+                        children: R ? N.intl.string(N.t.hdneLy) : N.intl.string(N.t.xRCMq6)
                     }),
                     (0, i.jsx)(s.Z.Child, {
                         grow: 0,
@@ -183,7 +183,7 @@ function _(e) {
                             look: a.Button.Looks.FILLED,
                             disabled: !R,
                             onClick: L,
-                            children: I.intl.string(I.t.ebGf4u)
+                            children: N.intl.string(N.t.ebGf4u)
                         })
                     })
                 ]

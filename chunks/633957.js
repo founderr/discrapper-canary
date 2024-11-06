@@ -33,16 +33,16 @@ function A(e) {
         { analyticsLocations: j } = (0, f.ZP)(h.Z.ACTIVITY_INSTANCE_EMBED),
         Z = (0, o.O)(),
         R = (0, l.e7)([E.Z], () => E.Z.getChannel(A)),
-        P = (null == R ? void 0 : null === (t = R.isThread) || void 0 === t ? void 0 : t.call(R)) ? (null == R ? void 0 : R.parent_id) : A,
-        L = (0, l.e7)([_.default], () => _.default.getId()),
+        L = (null == R ? void 0 : null === (t = R.isThread) || void 0 === t ? void 0 : t.call(R)) ? (null == R ? void 0 : R.parent_id) : A,
+        P = (0, l.e7)([_.default], () => _.default.getId()),
         {
             embeddedActivity: y,
             currentEmbeddedActivity: O,
             activityLaunchState: M
         } = (0, l.cj)([s.ZP], () => ({
-            embeddedActivity: s.ZP.getEmbeddedActivitiesForChannel(null != P ? P : '').find((e) => e.applicationId === n.id),
+            embeddedActivity: s.ZP.getEmbeddedActivitiesForChannel(null != L ? L : '').find((e) => e.applicationId === n.id),
             currentEmbeddedActivity: s.ZP.getCurrentEmbeddedActivity(),
-            activityLaunchState: s.ZP.getLaunchState(n.id, null != P ? P : void 0)
+            activityLaunchState: s.ZP.getLaunchState(n.id, null != L ? L : void 0)
         })),
         k = (0, l.Wu)([I.default], () => {
             var e;
@@ -60,7 +60,7 @@ function A(e) {
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
         }, [n]),
         U = (0, d.s5)({
-            userId: L,
+            userId: P,
             channelId: A,
             application: B
         }),

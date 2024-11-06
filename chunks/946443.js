@@ -34,9 +34,9 @@ var i = n(200651),
 function b(e) {
     let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: b, badgeState: Z } = e,
         R = r.useRef(null),
-        [P, L] = (0, v.ZP)(R),
-        { loadState: y, channels: O } = P,
-        { maybeLoadMore: M, markAllRead: k } = L;
+        [L, P] = (0, v.ZP)(R),
+        { loadState: y, channels: O } = L,
+        { maybeLoadMore: M, markAllRead: k } = P;
     (function (e, t, n) {
         r.useLayoutEffect(() => {
             var i;
@@ -51,7 +51,7 @@ function b(e) {
             let { scrollTop: s, offsetHeight: c } = l.getScrollerState();
             (o.offsetTop < s || o.offsetTop > s + c) && l.scrollTo({ to: o.offsetTop });
         });
-    })(R, P, L),
+    })(R, L, P),
         (function (e, t) {
             r.useEffect(() => {
                 let n = () => {
@@ -65,7 +65,7 @@ function b(e) {
                     }
                 );
             }, [t, e.channels]);
-        })(P, L),
+        })(L, P),
         (function (e) {
             r.useEffect(() => {
                 let t = (t) => {
@@ -78,7 +78,7 @@ function b(e) {
                     }
                 );
             }, [e]);
-        })(L),
+        })(P),
         r.useEffect(() => {
             g.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
@@ -139,7 +139,7 @@ function b(e) {
                             ...r,
                             onScroll: y === v.jd.Done ? void 0 : M,
                             className: A.scroller,
-                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, N.Z)(O, L, n), y === v.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: A.spinner })]
+                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, N.Z)(O, P, n), y === v.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: A.spinner })]
                         });
                     }
                 })

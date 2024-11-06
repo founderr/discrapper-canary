@@ -1,21 +1,21 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return m;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(434404),
-    o = t(962086),
-    s = t(225675),
-    d = t(496675),
-    c = t(981631),
-    u = t(388032);
-function m(e, n) {
-    let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.pNK.ROLES;
-    return (0, l.e7)([d.Z], () => d.Z.canImpersonateRole(e, n))
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    r = n(481060),
+    a = n(434404),
+    o = n(962086),
+    s = n(225675),
+    c = n(496675),
+    d = n(981631),
+    u = n(388032);
+function m(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
+    return (0, l.e7)([c.Z], () => c.Z.canImpersonateRole(e, t))
         ? (0, i.jsx)(
               r.MenuItem,
               {
@@ -26,8 +26,8 @@ function m(e, n) {
                       a.Z.close(),
                           (0, o.iD)(e.id, {
                               type: s.z.ROLES,
-                              roles: { [n.id]: n },
-                              returnToSection: t
+                              roles: { [t.id]: t },
+                              returnToSection: n
                           });
                   }
               },

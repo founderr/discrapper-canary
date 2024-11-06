@@ -270,7 +270,7 @@ function eY(e) {
                     ariaLabel: eH.intl.string(eH.t.CIsNZ2),
                     element: eS.Z,
                     notice: {
-                        stores: [ea.Z, ec.Z],
+                        stores: [ea.default, ec.Z],
                         element: eS.j
                     },
                     predicate: () => d || v || E
@@ -701,7 +701,7 @@ function eY(e) {
             ariaLabel: eH.intl.string(eH.t.CIsNZ2),
             element: eS.Z,
             notice: {
-                stores: [ea.Z, ec.Z],
+                stores: [ea.default, ec.Z],
                 element: eS.j
             },
             predicate: () => d || v

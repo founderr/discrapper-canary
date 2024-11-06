@@ -27,8 +27,8 @@ var i = n(200651),
     j = n(565799),
     Z = n(590415),
     R = n(911560),
-    P = n(488131),
-    L = n(814820),
+    L = n(488131),
+    P = n(814820),
     y = n(314897),
     O = n(523746),
     M = n(592125),
@@ -124,7 +124,7 @@ function eR(e) {
         usernameHook: l
     });
 }
-let eP = Object.freeze({
+let eL = Object.freeze({
     [eS.uaV.DEFAULT]: void 0,
     [eS.uaV.REPLY]: void 0,
     [eS.uaV.CHAT_INPUT_COMMAND]: void 0,
@@ -305,7 +305,7 @@ let eP = Object.freeze({
                     compact: n,
                     usernameHook: o
                 }),
-                (0, i.jsx)(L.f, {
+                (0, i.jsx)(P.f, {
                     channel: r,
                     message: t
                 })
@@ -400,7 +400,7 @@ let eP = Object.freeze({
                     if (null != i) {
                         await R.Z.loadThread(i);
                         let t = M.Z.getChannel(i);
-                        null != t && (0, P.ok)(t, e.shiftKey);
+                        null != t && (0, L.ok)(t, e.shiftKey);
                     }
                 },
                 [t]
@@ -691,7 +691,7 @@ let eP = Object.freeze({
 t.Z = r.memo(function (e) {
     let { message: t, channel: n, compact: r, disableInteraction: l } = e,
         { type: a } = t,
-        o = eP[a];
+        o = eL[a];
     if (null == o) {
         var s;
         return (s = Error('unknown message type '.concat(t.type))), H.Z.captureException(s), new p.Z('SystemMessage').error('', s), null;

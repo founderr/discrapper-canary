@@ -60,7 +60,7 @@ function f() {
         })),
         [f, I] = s.useState('upright'),
         N = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
-        A = new Map([
+        b = new Map([
             ['normal', 400],
             ['medium', 500],
             ['semibold', 600],
@@ -73,7 +73,7 @@ function f() {
                 t(Math.round((window.outerWidth / window.innerWidth) * 100));
             });
     }, []);
-    let b = x.isPlatformEmbedded ? n : e,
+    let A = x.isPlatformEmbedded ? n : e,
         v = (0, a.e7)([g.C], () => {
             var e, t;
             return (0, p.fD)() ? (null === (t = g.C.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
@@ -108,7 +108,7 @@ function f() {
                                     tag: 'div',
                                     variant: 'heading-lg/bold',
                                     style: { display: 'inline-block' },
-                                    children: ['Zoom: ', b, '%']
+                                    children: ['Zoom: ', A, '%']
                                 }),
                                 null != v
                                     ? (0, i.jsxs)(o.Text, {
@@ -225,11 +225,11 @@ function f() {
                                                         variant: 'eyebrow',
                                                         children: [e, 'px']
                                                     }),
-                                                    100 !== b
+                                                    100 !== A
                                                         ? (0, i.jsxs)(o.Heading, {
                                                               variant: 'eyebrow',
                                                               color: 'text-muted',
-                                                              children: ['(', (e * b) / 100, ')']
+                                                              children: ['(', (e * A) / 100, ')']
                                                           })
                                                         : null
                                                 ]
@@ -248,7 +248,7 @@ function f() {
                                                         className: l()(_.text, { [_.breakAnywhere]: !s.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
-                                                            fontWeight: A.get(t)
+                                                            fontWeight: b.get(t)
                                                         },
                                                         children: [
                                                             (0, i.jsx)('p', { children: s }),

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return P;
+        return L;
     }
 });
 var i = n(200651),
@@ -138,7 +138,7 @@ function R(e) {
               o
           );
 }
-function P(e) {
+function L(e) {
     let { message: t } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

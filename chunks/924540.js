@@ -1,9 +1,9 @@
 t.d(s, {
     $H: function () {
-        return b;
+        return v;
     },
     GN: function () {
-        return v;
+        return b;
     },
     _y: function () {
         return C;
@@ -15,20 +15,20 @@ var n = t(200651),
     a = t.n(o),
     i = t(481060),
     c = t(774078),
-    l = t(55935),
-    u = t(74538),
+    u = t(55935),
+    l = t(74538),
     d = t(639119),
     f = t(474936),
     p = t(388032),
     g = t(742774);
 function x(e) {
-    let { isTabSelected: s, expiresAt: t, trialDuration: o, className: u } = e,
+    let { isTabSelected: s, expiresAt: t, trialDuration: o, className: l } = e,
         d = r.useMemo(() => Date.parse(t), [t]),
         f = (0, c.Z)(d, 60000);
     return Object.values(f).every((e) => 0 === e)
         ? null
         : (0, n.jsx)(i.Tooltip, {
-              text: (0, l.QX)(f, {
+              text: (0, u.QX)(f, {
                   days: p.t.qVGNkZ,
                   hours: p.t.wyg9a2,
                   minutes: p.t.IzmIlZ
@@ -36,7 +36,7 @@ function x(e) {
               children: (e) =>
                   (0, n.jsxs)('div', {
                       ...e,
-                      className: a()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, u, { [g.premiumTrialBadgeSelected]: s }),
+                      className: a()(g.premiumTrialBadge, g.premiumTrialAcknowledgedBadge, l, { [g.premiumTrialBadgeSelected]: s }),
                       children: [
                           (0, n.jsx)(i.ClockIcon, {
                               size: 'custom',
@@ -53,11 +53,11 @@ function x(e) {
                   })
           });
 }
-function b(e) {
+function v(e) {
     var s;
     let { isTabSelected: t, trialOffer: r } = e,
         o = null === (s = (0, d.N)()) || void 0 === s ? void 0 : s.subscription_trial,
-        a = (0, u.a5)({
+        a = (0, l.a5)({
             intervalType: null == o ? void 0 : o.interval,
             intervalCount: null == o ? void 0 : o.interval_count
         });
@@ -68,7 +68,7 @@ function b(e) {
         className: (null == o ? void 0 : o.sku_id) === f.Si.TIER_2 ? g.premiumTrialTier2UnacknowledgedBadge : g.premiumTrialTier0UnacknowledgedBadge
     });
 }
-function v(e) {
+function b(e) {
     let { isTabSelected: s, userDiscount: t, includesAmountOff: r } = e,
         o = p.intl.formatToPlainString(p.t.iiLbvr, { percent: t.discount.amount });
     return (0, n.jsx)(C, {

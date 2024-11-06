@@ -14,10 +14,10 @@ n.Z = a.memo(function (e) {
         [C, b] = a.useState(!1),
         { ref: v, height: _ = 0 } = (0, c.Z)(),
         { ref: y, height: T = 0 } = (0, c.Z)(),
-        [I, j] = a.useState(i),
+        [j, I] = a.useState(i),
         N = (0, l.useSpring)(
             {
-                height: I ? T + _ : _,
+                height: j ? T + _ : _,
                 config: {
                     ...o.config.stiff,
                     clamp: !0
@@ -33,7 +33,7 @@ n.Z = a.memo(function (e) {
         );
     return (
         a.useLayoutEffect(() => {
-            b(!1), j(i);
+            b(!1), I(i);
         }, [i]),
         a.useLayoutEffect(() => {
             let e = setTimeout(() => {

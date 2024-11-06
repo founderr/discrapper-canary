@@ -16,8 +16,8 @@ var r = t(200651),
     g = t(981631),
     C = t(388032);
 n.Z = function (e) {
-    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: b, hideVerificationLevelField: v, isClanContext: _, formDescription: y, onFieldsSave: T, onDescriptionSave: I } = e,
-        j = a.useRef(!1),
+    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: b, hideVerificationLevelField: v, isClanContext: _, formDescription: y, onFieldsSave: T, onDescriptionSave: j } = e,
+        I = a.useRef(!1),
         [N, S] = a.useState(null),
         [E, k] = a.useState(e.formFields);
     a.useEffect(() => k(e.formFields), [e.formFields]);
@@ -28,22 +28,22 @@ n.Z = function (e) {
         D = a.useMemo(() => E.length === p.nx, [E]),
         Z = a.useMemo(() => E.some(l.J), [E]),
         L = a.useMemo(() => E.some((e) => !(0, l.J)(e)), [E]),
-        O = R > 0,
-        P = n.hasFeature(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || _,
+        P = R > 0,
+        O = n.hasFeature(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || _,
         F = a.useCallback(() => {
             (0, s.showToast)((0, s.createToast)(C.intl.string(C.t.R0RpRU), s.ToastType.FAILURE));
         }, []),
         G = (0, i.e7)([o.Z], () => o.Z.can(g.Plq.MANAGE_GUILD, n)),
         B = a.useCallback(
             async (e) => {
-                if (!j.current) {
-                    (j.current = !0), _ && (e = e.filter((e) => e.field_type !== l.QJ.TERMS));
+                if (!I.current) {
+                    (I.current = !0), _ && (e = e.filter((e) => e.field_type !== l.QJ.TERMS));
                     try {
                         await T(n.id, e), b(), k(e), (A.current = e);
                     } catch (e) {
                         throw (k(A.current), e);
                     } finally {
-                        null != N && S(null), (j.current = !1);
+                        null != N && S(null), (I.current = !1);
                     }
                 }
             },
@@ -89,13 +89,13 @@ n.Z = function (e) {
             [E, B, F]
         ),
         z = G ? (_ ? 'side' : 'footer') : 'none',
-        K = (0, r.jsxs)(r.Fragment, {
+        V = (0, r.jsxs)(r.Fragment, {
             children: [
                 !v && (0, r.jsx)(f.ZP, { guild: n }),
                 (0, r.jsx)(u.Z, {
                     formDescription: y,
                     guildId: n.id,
-                    onSave: I,
+                    onSave: j,
                     disable: !G
                 }),
                 G &&
@@ -122,14 +122,14 @@ n.Z = function (e) {
                 )
             ]
         });
-    return P
+    return O
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  !_ && K,
+                  !_ && V,
                   !L &&
                       (0, r.jsx)(d.Z, {
                           addFormField: H,
-                          showManualApprovalWarning: !_ && !O,
+                          showManualApprovalWarning: !_ && !P,
                           guild: n,
                           showHeader: !_
                       }),
@@ -139,7 +139,7 @@ n.Z = function (e) {
                           formField: e,
                           guild: n,
                           index: E.indexOf(e),
-                          isDragEnabled: O && G,
+                          isDragEnabled: P && G,
                           submittedGuildJoinRequestsCount: t,
                           removeFormField: q,
                           updateFormField: U,
@@ -157,5 +157,5 @@ n.Z = function (e) {
                       })
               ]
           })
-        : K;
+        : V;
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     FZ: function () {
-        return P;
+        return L;
     },
     Hl: function () {
         return B;
@@ -21,7 +21,7 @@ n.d(t, {
         return b;
     },
     c2: function () {
-        return L;
+        return P;
     },
     eE: function () {
         return M;
@@ -181,12 +181,12 @@ function Z(e, t) {
 function R(e) {
     return i.EditorState.createEmpty(new i.CompositeDecorator(e));
 }
-function P(e) {
+function L(e) {
     let t = i.EditorState.push(e, i.ContentState.createFromText('')),
         n = e.getSelection();
     return null != n && n.hasFocus && (t = i.EditorState.moveFocusToEnd(t)), t;
 }
-function L(e, t) {
+function P(e, t) {
     let n = j(t);
     return S(e, t, 0, n.length);
 }

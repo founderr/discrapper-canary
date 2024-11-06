@@ -28,11 +28,11 @@ function d(e) {
                 }
                 return n.findIndex((t) => t === e) < n.findIndex((e) => e === i) ? -1 : 1;
             }),
-            s(e, i)
+            f(e, i)
         );
     }, [e, t]);
 }
-let s = (e, t) => {
+let f = (e, t) => {
     let n = [...e],
         i = 0;
     return (

@@ -16,21 +16,21 @@ var i = t(200651),
     f = t(768581),
     m = t(585483),
     h = t(176354),
-    v = t(981631),
-    I = t(185923),
-    E = t(388032);
+    I = t(981631),
+    E = t(185923),
+    v = t(388032);
 function p(e, n) {
     let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
         f = (0, d.$R)(n),
-        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(v.Plq.ADD_REACTIONS, n)) && f, [n, f]),
+        p = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(I.Plq.ADD_REACTIONS, n)) && f, [n, f]),
         Z = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !p || e.type === v.uaV.GUILD_INVITE_REMINDER) return null;
+    if (!c.nc.getSetting() || !p || e.type === I.uaV.GUILD_INVITE_REMINDER) return null;
     let x = Z.filter(
         (e) =>
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
                 channel: n,
-                intention: I.Hz.REACTION
+                intention: E.Hz.REACTION
             })
     )
         .slice(0, 12)
@@ -58,9 +58,9 @@ function p(e, n) {
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'add-reaction',
-        label: E.intl.string(E.t.lfIHs7),
+        label: v.intl.string(v.t.lfIHs7),
         action: () => {
-            m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+            m.S.dispatchKeyed(I.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
@@ -70,10 +70,10 @@ function p(e, n) {
                 (0, i.jsx)(a.MenuItem, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: E.intl.string(E.t['OBCR+v']),
+                    label: v.intl.string(v.t['OBCR+v']),
                     icon: a.ReactionIcon,
                     action: () => {
-                        m.S.dispatchKeyed(v.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
+                        m.S.dispatchKeyed(I.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
                 })
             ]

@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return f;
+        return s;
     }
 });
 var i = n(200651);
@@ -12,12 +12,12 @@ var l = n(120356),
     a = n(337682),
     c = n(115130),
     d = n(388032),
-    s = n(828018);
-function f(e) {
+    f = n(828018);
+function s(e) {
     let { hideSearch: t, className: n } = e,
         {
             activityUrlOverride: l,
-            useActivityUrlOverride: f,
+            useActivityUrlOverride: s,
             filter: p
         } = (0, o.cj)(
             [c.Z],
@@ -29,22 +29,22 @@ function f(e) {
             []
         );
     return (0, i.jsxs)('div', {
-        className: r()(s.container, n),
+        className: r()(f.container, n),
         children: [
             (0, i.jsx)(u.Checkbox, {
                 type: u.Checkbox.Types.INVERTED,
-                value: f,
+                value: s,
                 onClick: a.Y$,
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/semibold',
                     children: d.intl.string(d.t['3TSGuL'])
                 })
             }),
-            f
+            s
                 ? (0, i.jsx)(u.FormItem, {
                       title: d.intl.string(d.t['9rnmen']),
                       children: (0, i.jsx)(u.TextInput, {
-                          disabled: !f,
+                          disabled: !s,
                           value: null != l ? l : void 0,
                           onChange: a.jS,
                           placeholder: 'https://localhost:3000'
@@ -55,7 +55,7 @@ function f(e) {
                 ? null
                 : (0, i.jsx)('div', {
                       children: (0, i.jsx)(u.SearchBar, {
-                          className: s.searchBar,
+                          className: f.searchBar,
                           query: p,
                           onChange: a.a8,
                           onClear: function () {

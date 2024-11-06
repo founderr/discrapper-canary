@@ -39,8 +39,8 @@ function E(e) {
         b = (0, f.n)((e) => e.clipsButtonRef),
         j = (0, f.n)((e) => e.setClipsButtonRef),
         Z = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: R, allowIdle: P } = (0, s.Y)('animation');
-    function L() {
+        { preventIdle: R, allowIdle: L } = (0, s.Y)('animation');
+    function P() {
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
@@ -49,7 +49,7 @@ function E(e) {
             { modalKey: g.Qr }
         );
     }
-    return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
+    return (r.useEffect(() => (S ? R() : L(), () => L()), [S, R, L]), I && C && x)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   null != b &&
@@ -61,7 +61,7 @@ function E(e) {
                       (0, i.jsx)(p.Z, {
                           clipIconRef: b,
                           lastClipsSession: v,
-                          onOpenClipsGallery: L
+                          onOpenClipsGallery: P
                       }),
                   (0, i.jsx)('div', {
                       ref: j,
@@ -70,7 +70,7 @@ function E(e) {
                           icon: a.ClipsIcon,
                           showBadge: N,
                           tooltip: _.intl.string(_.t.MXaLEB),
-                          onClick: L
+                          onClick: P
                       })
                   })
               ]

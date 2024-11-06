@@ -35,8 +35,8 @@ var i = n(200651),
     j = n(768943),
     Z = n(686478),
     R = n(664559),
-    P = n(767893),
-    L = n(206697),
+    L = n(767893),
+    P = n(206697),
     y = n(74551),
     O = n(981631),
     M = n(388032),
@@ -79,7 +79,7 @@ function U(e) {
         [n.length]
     ),
     0 === n.length)
-        ? (0, i.jsx)(L.w, {})
+        ? (0, i.jsx)(P.w, {})
         : (0, i.jsx)(F, {
               savedMessageKeys: n,
               closePopout: t
@@ -188,7 +188,7 @@ function G(e) {
                             throttledNow: l
                         })
                       : null,
-                  (0, i.jsx)(P.Z, { channel: o }),
+                  (0, i.jsx)(L.Z, { channel: o }),
                   (0, i.jsx)(
                       C.Z,
                       {

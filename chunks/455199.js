@@ -27,8 +27,8 @@ let b = 'recentMentionFilterSettings',
     j = [],
     Z = {},
     R = !1,
-    P = !0,
-    L = u.K.get(b, {
+    L = !0,
+    P = u.K.get(b, {
         guildFilter: A.NgX.ALL_SERVERS,
         everyoneFilter: !0,
         roleFilter: !0
@@ -47,12 +47,12 @@ function B(e) {
     if ((0, p.Z)(e) && !A.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
     let n = C.Z.getChannel(t);
-    if (null == n || n.type === A.d4z.DM || (L.guildFilter === A.NgX.THIS_SERVER && n.getGuildId() !== v.Z.getGuildId())) return null;
+    if (null == n || n.type === A.d4z.DM || (P.guildFilter === A.NgX.THIS_SERVER && n.getGuildId() !== v.Z.getGuildId())) return null;
     let i = E.default.getId();
     if (N.Z.isBlockedOrIgnoredForMessage(e) || (0, g.Z)(e, i)) return null;
     e = D(e);
-    let r = !L.everyoneFilter,
-        l = !L.roleFilter;
+    let r = !P.everyoneFilter,
+        l = !P.roleFilter;
     return (0, f.ZP)({
         message: e,
         userId: i,
@@ -84,9 +84,9 @@ function w(e) {
     return U(t);
 }
 function F(e) {
-    let t = { ...L };
-    (L = s().defaults(s().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), L)), u.K.set(b, L);
-    let n = (e, n) => t[e] !== L[e] && L[e] === n,
+    let t = { ...P };
+    (P = s().defaults(s().pick(e, ['guildFilter', 'roleFilter', 'everyoneFilter']), P)), u.K.set(b, P);
+    let n = (e, n) => t[e] !== P[e] && P[e] === n,
         i = n('guildFilter', A.NgX.THIS_SERVER) || n('everyoneFilter', !1) || n('roleFilter', !1);
     Z = {};
     let r = [];
@@ -130,16 +130,16 @@ class z extends (i = c.ZP.Store) {
         return R;
     }
     get hasMore() {
-        return P;
+        return L;
     }
     get guildFilter() {
-        return L.guildFilter;
+        return P.guildFilter;
     }
     get everyoneFilter() {
-        return L.everyoneFilter;
+        return P.everyoneFilter;
     }
     get roleFilter() {
-        return L.roleFilter;
+        return P.roleFilter;
     }
     get mentionsAreStale() {
         return k;
@@ -157,7 +157,7 @@ class z extends (i = c.ZP.Store) {
     (t.Z = new z(m.Z, {
         LOAD_RECENT_MENTIONS: function (e) {
             let { guildId: t } = e;
-            (R = !0), null == t && L.guildFilter === A.NgX.THIS_SERVER && F({ guildFilter: A.NgX.ALL_SERVERS });
+            (R = !0), null == t && P.guildFilter === A.NgX.THIS_SERVER && F({ guildFilter: A.NgX.ALL_SERVERS });
         },
         LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
             let { hasMoreAfter: t, messages: n, isAfter: i } = e,
@@ -167,7 +167,7 @@ class z extends (i = c.ZP.Store) {
                     Z[e.id] = !0;
                 }),
                 (R = !1),
-                (P = t),
+                (L = t),
                 (O = (0, d.zO)()),
                 (y = !0);
         },
@@ -182,10 +182,10 @@ class z extends (i = c.ZP.Store) {
             let { size: t } = e;
             for (let e = t; e < j.length; ++e) delete Z[j[e].id];
             let n = j.length;
-            n > (j = j.slice(0, t)).length && (P = !0);
+            n > (j = j.slice(0, t)).length && (L = !0);
         },
         CHANNEL_SELECT: function () {
-            if (L.guildFilter !== A.NgX.THIS_SERVER) return !1;
+            if (P.guildFilter !== A.NgX.THIS_SERVER) return !1;
             y = !1;
         },
         CONNECTION_OPEN: G,

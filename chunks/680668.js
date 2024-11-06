@@ -27,12 +27,12 @@ function _(e) {
         { onTransitionToInviteChannel: x, onAcceptInstantInvite: N, guild: v, invite: T, author: S, currentUserId: A } = e,
         b = A === S.id,
         { channel: j, approximate_member_count: Z, approximate_presence_count: R } = T,
-        P = T.state === f.r2o.ACCEPTING,
-        L = null != j ? (0, s.jD)(j) : null,
+        L = T.state === f.r2o.ACCEPTING,
+        P = null != j ? (0, s.jD)(j) : null,
         y = null != v,
-        O = null != L,
-        M = null != L && L.isGuildVocal(),
-        k = null != L && L.isGuildStageVoice(),
+        O = null != P,
+        M = null != P && P.isGuildVocal(),
+        k = null != P && P.isGuildStageVoice(),
         D = (0, c.yE)(null !== (t = T.flags) && void 0 !== t ? t : 0, r.$.IS_GUEST_INVITE),
         B = null !== (_ = null == v ? void 0 : v.hasFeature(f.oNc.HUB)) && void 0 !== _ && _;
     if (null == v) {
@@ -76,7 +76,7 @@ function _(e) {
                 })
             })),
         M
-            ? ((C = (0, i.jsx)(o.Z.Channel, { channel: L })),
+            ? ((C = (0, i.jsx)(o.Z.Channel, { channel: P })),
               (E = (0, i.jsxs)('span', {
                   className: g.infoTitle,
                   children: [
@@ -97,7 +97,7 @@ function _(e) {
                 }))
               : O &&
                 (E = (0, i.jsx)(o.Z.Channel, {
-                    channel: L,
+                    channel: P,
                     guild: v
                 })),
         (0, i.jsxs)(o.Z, {
@@ -122,7 +122,7 @@ function _(e) {
                         }),
                         (0, i.jsx)(o.Z.Button, {
                             onClick: U,
-                            submitting: P,
+                            submitting: L,
                             color: o.Z.Button.Colors.GREEN,
                             children: M ? (k ? p.intl.string(p.t['7vb2cX']) : p.intl.string(p.t.gpqgam)) : y ? p.intl.string(p.t.cEnaW1) : p.intl.string(p.t.XpeFYm)
                         })

@@ -26,8 +26,8 @@ var s = n(512722),
     f = n(451392),
     I = n(906364),
     N = n(350327),
-    A = n(621853),
-    b = n(687158),
+    b = n(621853),
+    A = n(687158),
     v = n(25990),
     j = n(594174),
     O = n(74538),
@@ -39,7 +39,7 @@ function D() {
             let e = j.default.getCurrentUser();
             return r()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        F = (0, l.e7)([A.Z], () => A.Z.getUserProfile(Z.id)),
+        F = (0, l.e7)([b.Z], () => b.Z.getUserProfile(Z.id)),
         {
             pendingAvatar: M,
             pendingGlobalName: k,
@@ -70,7 +70,7 @@ function D() {
             location: Q + ' auto off',
             autoTrackExposure: !1
         });
-    let X = (0, b.ZP)(Z.id),
+    let X = (0, A.ZP)(Z.id),
         J = null == X ? void 0 : X.getLegacyUsername(),
         $ = (null !== (n = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== n ? n : 0) > 0 ? H.global_name : null !== (s = null == z ? void 0 : z.nick) && void 0 !== s ? s : [],
         ee = (null !== (D = null === (t = H.bio) || void 0 === t ? void 0 : t.length) && void 0 !== D ? D : 0) > 0 ? H.bio : null !== (y = null == z ? void 0 : z.bio) && void 0 !== y ? y : [],

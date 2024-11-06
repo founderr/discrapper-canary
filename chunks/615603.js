@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(357956),
     I = n(275909),
     N = n(981631),
-    A = n(474936),
-    b = n(735825),
+    b = n(474936),
+    A = n(735825),
     v = n(388032),
     j = n(601709);
 function O(e) {
@@ -115,7 +115,7 @@ t.Z = function (e) {
         I = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         D = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         y = (0, x.Vp)(),
-        B = f === A.a$.FP_SUB,
+        B = f === b.a$.FP_SUB,
         L = g && !B,
         {
             appliedGuildBoostSlots: Z,
@@ -167,7 +167,7 @@ t.Z = function (e) {
     if (0 === F.length) return null;
     let q = F.length;
     if (((t = Y ? (1 === q && W ? v.intl.string(v.t['65r43N']) : v.intl.formatToPlainString(w ? v.t['3DW6DQ'] : v.t['/u15QU'], { numUnappliedGuildBoostSlots: q })) : v.intl.formatToPlainString(w ? v.t['3DW6DQ'] : v.t.BPadnJ, { numUnappliedGuildBoostSlots: q })), _.ZP.isPremium(D))) {
-        if (Y && 1 === q && W) n = y.skuId === b.Ft.FREE_GUILD_BOOST_1_MONTH ? v.intl.string(v.t.dm8r0t) : v.intl.string(v.t.VGJ9IC);
+        if (Y && 1 === q && W) n = y.skuId === A.Ft.FREE_GUILD_BOOST_1_MONTH ? v.intl.string(v.t.dm8r0t) : v.intl.string(v.t.VGJ9IC);
         else {
             let e = (e, t) =>
                 (0, i.jsx)(

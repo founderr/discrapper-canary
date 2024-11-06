@@ -26,8 +26,8 @@ var r = n(120356),
     N = n(64182);
 function v(e) {
     var t, n, r, v, T, S, A, b, j, Z;
-    let { message: R, channel: P } = e,
-        L =
+    let { message: R, channel: L } = e,
+        P =
             null === (r = R.embeds[0]) || void 0 === r
                 ? void 0
                 : null === (n = r.fields) || void 0 === n
@@ -51,14 +51,14 @@ function v(e) {
                           })) || void 0 === v
                     ? void 0
                     : v.rawValue,
-        O = (0, a.e7)([g.Z], () => g.Z.getGuild(L)),
+        O = (0, a.e7)([g.Z], () => g.Z.getGuild(P)),
         M = (0, a.e7)([p.Z], () => p.Z.getChannel(y)),
         k = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         D = (0, a.e7)([], () => R.author.id === (null == k ? void 0 : k.id)),
-        B = null === (A = P.recipients) || void 0 === A ? void 0 : A.find((e) => e !== R.author.id),
+        B = null === (A = L.recipients) || void 0 === A ? void 0 : A.find((e) => e !== R.author.id),
         U = (0, a.e7)([_.default], () => (null != B ? _.default.getUser(B) : null)),
         w = (0, d.ZP)(R),
-        F = (0, C._T)(P.getGuildId(), P.id, U),
+        F = (0, C._T)(L.getGuildId(), L.id, U),
         G = (0, a.Wu)([E.ZP], () => (null != M ? E.ZP.getVoiceStatesForChannel(M) : []), [M]),
         V = G.some((e) => e.user.id === (null == k ? void 0 : k.id)),
         H =
@@ -99,7 +99,7 @@ function v(e) {
                         ? (0, i.jsx)('div', {
                               className: N.participants,
                               children: (0, i.jsx)(h.Z, {
-                                  guildId: L,
+                                  guildId: P,
                                   partySize: {
                                       knownSize: G.length,
                                       unknownSize: 0,
@@ -112,7 +112,7 @@ function v(e) {
                         : (0, i.jsx)('div', {
                               className: l()(N.participants, N.disabled),
                               children: (0, i.jsx)(h.Z, {
-                                  guildId: L,
+                                  guildId: P,
                                   partySize: {
                                       knownSize: W.length,
                                       unknownSize: z.length - W.length,
@@ -130,7 +130,7 @@ function v(e) {
                     (0, i.jsxs)(o.Button, {
                         color: o.Button.Colors.BRAND,
                         onClick: () => {
-                            null != y && null != L && ((0, f.uL)(I.Z5c.CHANNEL(L, y)), c.default.selectVoiceChannel(y));
+                            null != y && null != P && ((0, f.uL)(I.Z5c.CHANNEL(P, y)), c.default.selectVoiceChannel(y));
                         },
                         className: N.button,
                         innerClassName: N.buttonInner,
@@ -146,7 +146,7 @@ function v(e) {
                     (0, i.jsx)(o.Button, {
                         color: o.Button.Colors.PRIMARY,
                         onClick: () => {
-                            s.Z.sendMessage(P.id, u.ZP.parse(P, '\uD83D\uDC4B'));
+                            s.Z.sendMessage(L.id, u.ZP.parse(L, '\uD83D\uDC4B'));
                         },
                         className: N.button,
                         children: Q

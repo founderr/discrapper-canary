@@ -47,8 +47,8 @@ function b(e) {
                       state: A.r2o.RESOLVING,
                       code: ''
                   },
-        { analyticsLocations: P } = (0, s.ZP)(),
-        L = (0, l.e7)([p.Z], () => ((null == j ? void 0 : j.guild) != null ? p.Z.getGuild(j.guild.id) : null), [j]),
+        { analyticsLocations: L } = (0, s.ZP)(),
+        P = (0, l.e7)([p.Z], () => ((null == j ? void 0 : j.guild) != null ? p.Z.getGuild(j.guild.id) : null), [j]),
         y = (0, l.e7)([f.default], () => f.default.getId()),
         O = (0, l.e7)(
             [c.ZP],
@@ -69,7 +69,7 @@ function b(e) {
                           page: A.ZY5.INVITE_EMBED,
                           section: A.jXE.GUILD_CAP_UPSELL_MODAL
                       },
-                      analyticsLocations: P
+                      analyticsLocations: L
                   })
                 : a.Z.acceptInviteAndTransitionToInviteChannel({
                       inviteKey: t,
@@ -80,7 +80,7 @@ function b(e) {
             onTransitionToInviteChannel: M,
             onAcceptInstantInvite: k,
             currentUserId: y,
-            guild: L,
+            guild: P,
             invite: R,
             author: n
         });
@@ -125,7 +125,7 @@ function b(e) {
                             onTransitionToInviteChannel: M,
                             onAcceptInstantInvite: k,
                             currentUserId: y,
-                            guild: L,
+                            guild: P,
                             invite: R
                         });
                         break;
@@ -135,7 +135,7 @@ function b(e) {
                             guildScheduledEvent: O,
                             guild: R.guild,
                             channel: R.channel,
-                            isMember: null != L,
+                            isMember: null != P,
                             onAcceptInstantInvite: k,
                             onTransitionToInviteChannel: M
                         });
@@ -145,7 +145,7 @@ function b(e) {
                         D = (0, i.jsx)(T.Z, {
                             stageInstance: R.stage_instance,
                             guild: R.guild,
-                            isMember: null != L,
+                            isMember: null != P,
                             onTransitionToInviteChannel: M,
                             onAcceptInstantInvite: k
                         });

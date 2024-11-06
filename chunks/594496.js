@@ -26,8 +26,8 @@ var s = n(512722),
     f = n(18438),
     I = n(778825),
     N = n(52597),
-    A = n(430131),
-    b = n(133484),
+    b = n(430131),
+    A = n(133484),
     v = n(388032),
     j = n(944167);
 function O(e) {
@@ -77,7 +77,7 @@ function O(e) {
         className: j.sectionsContainer,
         children: [
             (0, i.jsx)(
-                A.Z,
+                b.Z,
                 {
                     errors: null !== (s = null == M ? void 0 : M.nick) && void 0 !== s ? s : null == U ? void 0 : U.nick,
                     username: E.ZP.getName(P),
@@ -100,7 +100,7 @@ function O(e) {
                 },
                 'pronouns'
             ),
-            (0, i.jsxs)(b.Z, {
+            (0, i.jsxs)(A.Z, {
                 user: P,
                 showOverlay: !Y,
                 children: [

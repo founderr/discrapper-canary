@@ -20,19 +20,19 @@ var i = n(200651),
     E = n(299156);
 t.Z = function (e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: f, userDiscountOffer: I } = e,
-        [N, A] = s.useState(!1),
-        [b, v] = s.useState(!1),
+        [N, b] = s.useState(!1),
+        [A, v] = s.useState(!1),
         j = async (e) => {
             try {
                 v(!0),
-                    A(!1),
+                    b(!1),
                     await a.tn.post({
                         url: S.ANM.USER_OFFER_REDEEM,
                         body: { user_discount_offer_id: e }
                     }),
                     f();
             } catch (e) {
-                A(!0);
+                b(!0);
             }
             v(!1);
         },
@@ -115,7 +115,7 @@ t.Z = function (e) {
                                       }),
                                       (0, i.jsx)(c.Button, {
                                           size: c.ButtonSizes.SMALL,
-                                          submitting: b,
+                                          submitting: A,
                                           onClick: () => j(I.id),
                                           children: T.intl.string(T.t.CKSuZG)
                                       })

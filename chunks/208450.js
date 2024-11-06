@@ -27,8 +27,8 @@ var i = n(200651),
     j = n(854709),
     Z = n(778177),
     R = n(981631),
-    P = n(388032),
-    L = n(948488);
+    L = n(388032),
+    P = n(948488);
 function y(e, t, n) {
     return (
         t in e
@@ -93,13 +93,13 @@ class k extends r.PureComponent {
             handleDroppedFiles: this.handleDroppedFiles,
             handleDrop: this.handleDrop,
             keyBindingFn: this.handleKeyBind,
-            placeholder: P.intl.string(P.t['5h0QOD']),
+            placeholder: L.intl.string(L.t['5h0QOD']),
             editorState: t,
             onChange: this.setEditorState,
             role: 'combobox',
             ariaExpanded: e,
             ariaControls: e ? O : void 0,
-            ariaLabel: P.intl.string(P.t['5h0QOD']),
+            ariaLabel: L.intl.string(L.t['5h0QOD']),
             ariaAutocomplete: 'list'
         });
     }
@@ -121,9 +121,9 @@ class k extends r.PureComponent {
                       return (0, i.jsx)('div', {
                           className: r,
                           children: (0, i.jsx)('div', {
-                              className: a()(L.search, {
-                                  [L.open]: o || l,
-                                  [L.focused]: l
+                              className: a()(P.search, {
+                                  [P.open]: o || l,
+                                  [P.focused]: l
                               }),
                               children: (0, i.jsx)(d.FocusRing, {
                                   focusTarget: { current: null === (c = this._editorRef) || void 0 === c ? void 0 : c.editor },
@@ -131,14 +131,14 @@ class k extends r.PureComponent {
                                   children: (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: L.searchBar,
+                                          className: P.searchBar,
                                           ref: this._searchBarRef,
                                           children: [
                                               this.renderInput(u),
                                               (0, i.jsx)(h.BK, {
                                                   onClear: this.handleClearSearch,
                                                   hasContent: o || n,
-                                                  className: L.icon
+                                                  className: P.icon
                                               })
                                           ]
                                       },
@@ -190,7 +190,7 @@ class k extends r.PureComponent {
                         n = A.$G(e);
                     for (let t = 0; t < e.length; t++) !A.Fr(e[t], e[t + 1]) && (i = i.substring(0, e[t].start) + i.substring(e[t].end));
                     if (0 === e.length || 0 === Object.keys(n).length) return !1;
-                    M(t, n, i, !!r), d.AccessibilityAnnouncer.announce(P.intl.string(P.t.pKCxWF)), this.onBlur();
+                    M(t, n, i, !!r), d.AccessibilityAnnouncer.announce(L.intl.string(L.t.pKCxWF)), this.onBlur();
                 }
                 return !0;
             }),

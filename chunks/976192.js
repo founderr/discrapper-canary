@@ -1,68 +1,68 @@
-l.d(n, {
+i.d(n, {
     Z: function () {
-        return N;
+        return I;
     }
 });
-var i = l(200651),
-    t = l(192379),
-    r = l(442837),
-    a = l(481060),
-    d = l(616780),
-    u = l(40851),
-    s = l(300284),
-    c = l(484459),
-    o = l(314897),
-    Z = l(271383),
-    M = l(430824),
-    h = l(496675),
-    p = l(594174),
-    g = l(981631),
-    C = l(388032),
-    E = l(745974);
-function N(e) {
-    let { guildId: n, userId: N, analyticsLocation: x, analyticsLocations: _, context: f, icon: I } = e,
-        U = M.Z.getGuild(n),
-        G = o.default.getId(),
-        P = (0, r.e7)([p.default], () => p.default.getUser(N)),
-        b = (0, r.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, N), [n, N]);
-    (0, r.e7)([h.Z], () => h.Z.getGuildVersion(n), [n]);
-    let j = t.useMemo(() => ({ [n]: [N] }), [n, N]);
-    (0, d.$)(j);
-    let A = f === g.IlC.POPOUT,
-        v = (0, s.Z)({
-            guild: U,
+var t = i(200651),
+    a = i(192379),
+    l = i(442837),
+    r = i(481060),
+    o = i(616780),
+    d = i(40851),
+    u = i(300284),
+    s = i(484459),
+    c = i(314897),
+    p = i(271383),
+    f = i(430824),
+    v = i(496675),
+    _ = i(594174),
+    g = i(981631),
+    h = i(388032),
+    A = i(745974);
+function I(e) {
+    let { guildId: n, userId: I, analyticsLocation: x, analyticsLocations: b, context: P, icon: m } = e,
+        C = f.Z.getGuild(n),
+        Z = c.default.getId(),
+        y = (0, l.e7)([_.default], () => _.default.getUser(I)),
+        k = (0, l.e7)([p.ZP], () => p.ZP.isGuestOrLurker(n, I), [n, I]);
+    (0, l.e7)([v.Z], () => v.Z.getGuildVersion(n), [n]);
+    let M = a.useMemo(() => ({ [n]: [I] }), [n, I]);
+    (0, o.$)(M);
+    let N = P === g.IlC.POPOUT,
+        L = (0, u.Z)({
+            guild: C,
             analyticsLocation: x
         }),
-        T = (0, u.Aq)();
-    if (null == U || A) return null;
-    let m = G === N && (h.Z.can(g.Plq.CHANGE_NICKNAME, U) || h.Z.can(g.Plq.MANAGE_NICKNAMES, U)),
-        y = G === N,
-        L = h.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, N, U);
-    if (!(m || L || y) || null == P || b) return null;
-    let O = U.hasFeature(g.oNc.HUB) ? C.intl.string(C.t['+MWrWl']) : C.intl.string(C.t['PKQB/P']),
-        S = y ? O : C.intl.string(C.t.dilOFx);
-    return (0, i.jsx)(a.MenuItem, {
+        w = (0, d.Aq)();
+    if (null == C || N) return null;
+    let O = Z === I && (v.Z.can(g.Plq.CHANGE_NICKNAME, C) || v.Z.can(g.Plq.MANAGE_NICKNAMES, C)),
+        W = Z === I,
+        G = v.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, I, C);
+    if (!(O || G || W) || null == y || k) return null;
+    let T = C.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
+        E = W ? T : h.intl.string(h.t.dilOFx);
+    return (0, t.jsx)(r.MenuItem, {
         id: 'change-nickname',
-        label: (0, i.jsx)('div', {
-            className: E.labelWrapper,
-            children: (0, i.jsx)('span', {
-                className: E.label,
-                children: S
+        label: (0, t.jsx)('div', {
+            className: A.labelWrapper,
+            children: (0, t.jsx)('span', {
+                className: A.label,
+                children: E
             })
         }),
-        icon: I,
+        icon: m,
         action: () => {
-            y
-                ? ((0, c.Z)(P.id, P.getAvatarURL(n, 80), { guildId: n }), v(), T.dispatch(g.CkL.POPOUT_CLOSE), (0, a.closeAllModals)())
-                : (0, a.openModalLazy)(async () => {
-                      let { default: e } = await l.e('17712').then(l.bind(l, 620021));
-                      return (l) =>
-                          (0, i.jsx)(e, {
-                              ...l,
+            W
+                ? ((0, s.Z)(y.id, y.getAvatarURL(n, 80), { guildId: n }), L(), w.dispatch(g.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
+                : (0, r.openModalLazy)(async () => {
+                      let { default: e } = await i.e('17712').then(i.bind(i, 620021));
+                      return (i) =>
+                          (0, t.jsx)(e, {
+                              ...i,
                               guildId: n,
-                              user: P,
+                              user: y,
                               analyticsSource: x,
-                              analyticsLocations: _
+                              analyticsLocations: b
                           });
                   });
         }

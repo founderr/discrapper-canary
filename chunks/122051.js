@@ -150,7 +150,7 @@ async function _(e, n) {
 function y(e) {
     var n, t, i;
     let { guild: l, isClanContext: x = !1, onFieldsSave: p, onDescriptionSave: y, verificationForm: T } = e,
-        [I, j] = a.useState(x),
+        [j, I] = a.useState(x),
         N = a.useRef(!1),
         S = a.useCallback(() => {
             N.current = !0;
@@ -167,13 +167,13 @@ function y(e) {
         renderHeader: M
             ? (0, r.jsx)(b, {
                   guild: l,
-                  isExpanded: I,
+                  isExpanded: j,
                   emptyFormFields: (null == A ? void 0 : A.length) == null || (null == A ? void 0 : A.length) === 0,
                   hasTermsField: null == A ? void 0 : A.some((e) => e.field_type === m.QJ.TERMS)
               })
             : null,
-        isExpanded: I,
-        onExpand: () => j(!I),
+        isExpanded: j,
+        onExpand: () => I(!j),
         disableAnimation: x,
         disableBackground: !M,
         children: (0, r.jsx)('div', {

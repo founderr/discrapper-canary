@@ -34,8 +34,8 @@ var r = n(568611),
     j = n(701488),
     Z = n(981631),
     R = n(388032),
-    P = n(896219);
-let L = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+    L = n(896219);
+let P = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
     var t, n, a, I;
     let { applicationId: y, message: O } = e,
@@ -54,7 +54,7 @@ function y(e) {
         K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(C.lm), [W]),
         Y = (0, S.Z)({
             applicationId: y,
-            size: L,
+            size: P,
             names: ['embedded_cover']
         }),
         X = f.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
@@ -101,31 +101,31 @@ function y(e) {
         ? (0, i.jsx)(d.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
-                  className: P.container,
+                  className: L.container,
                   children: [
                       (0, i.jsx)('div', {
-                          className: P.imgContainer,
+                          className: L.imgContainer,
                           children: (0, i.jsx)('img', {
-                              className: P.img,
+                              className: L.img,
                               alt: V.name,
                               src: Y.url
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: P.content,
+                          className: L.content,
                           children: [
                               (0, i.jsx)(o.Heading, {
-                                  className: P.heading,
+                                  className: L.heading,
                                   variant: 'heading-xl/semibold',
                                   children: V.name
                               }),
                               (0, i.jsx)(o.Heading, {
-                                  className: P.description,
+                                  className: L.description,
                                   variant: 'heading-sm/medium',
                                   children: null === (t = V.description) || void 0 === t ? void 0 : t.trim()
                               }),
                               (0, i.jsx)(o.Heading, {
-                                  className: P.learnMore,
+                                  className: L.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(r.rU, {
                                       to: Z.Z5c.ACTIVITY_DETAILS(y),
@@ -133,11 +133,11 @@ function y(e) {
                                   })
                               }),
                               (0, i.jsxs)('div', {
-                                  className: P.cta,
+                                  className: L.cta,
                                   children: [
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
-                                                className: P.avatars,
+                                                className: L.avatars,
                                                 children: (0, i.jsx)(A.Z, {
                                                     guildId: U,
                                                     users: K,
@@ -145,12 +145,12 @@ function y(e) {
                                                 })
                                             })
                                           : (0, i.jsxs)('div', {
-                                                className: P.maxParticipants,
+                                                className: L.maxParticipants,
                                                 children: [
                                                     (0, i.jsx)(o.GroupIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
-                                                        className: P.peopleIcon
+                                                        className: L.peopleIcon
                                                     }),
                                                     (0, i.jsx)(o.Text, {
                                                         variant: 'text-xs/semibold',
@@ -159,10 +159,10 @@ function y(e) {
                                                 ]
                                             }),
                                       (0, i.jsx)('div', {
-                                          className: P.buttonWrapper,
+                                          className: L.buttonWrapper,
                                           children: (0, i.jsx)(o.Button, {
                                               onClick: q,
-                                              className: P.button,
+                                              className: L.button,
                                               color: o.ButtonColors.GREEN,
                                               disabled: G,
                                               children: Q

@@ -1,26 +1,26 @@
-e.d(n, {
+n.d(t, {
     Z: function () {
         return d;
     }
 });
-var i = e(200651);
-e(192379);
-var r = e(120356),
-    l = e.n(r),
-    o = e(596454),
-    u = e(377171),
-    a = e(403910),
-    s = e(549631),
-    c = e(873198);
-function d(t) {
-    var n;
-    let { guildId: e, emojiId: r, emojiName: d, className: f } = t,
-        _ = (0, a.Z)(e, r);
-    return null != _ || null != d
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    l = n.n(r),
+    o = n(596454),
+    u = n(377171),
+    a = n(403910),
+    s = n(549631),
+    c = n(873198);
+function d(e) {
+    var t;
+    let { guildId: n, emojiId: r, emojiName: d, className: f } = e,
+        p = (0, a.Z)(n, r);
+    return null != p || null != d
         ? (0, i.jsx)(o.Z, {
-              emojiId: null == _ ? void 0 : _.id,
-              emojiName: null != d ? d : null == _ ? void 0 : _.name,
-              animated: null !== (n = null == _ ? void 0 : _.animated) && void 0 !== n && n,
+              emojiId: null == p ? void 0 : p.id,
+              emojiName: null != d ? d : null == p ? void 0 : p.name,
+              animated: null !== (t = null == p ? void 0 : p.animated) && void 0 !== t && t,
               className: l()(c.emojiIcon, f)
           })
         : (0, i.jsx)(s.Z, {

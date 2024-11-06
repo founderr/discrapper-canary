@@ -19,9 +19,9 @@ n.Z = (e) => {
     let { guildId: n, handleUpdate: t, progress: i, error: b } = e,
         { interests: v } = i,
         [_, y] = a.useState(''),
-        [T, I] = a.useState(0),
-        j = (0, c.e7)([u.default], () => u.default.getId()),
-        N = a.useMemo(() => (0, o.chunk)((0, m.XV)(x.i6, j), 9), [j]),
+        [T, j] = a.useState(0),
+        I = (0, c.e7)([u.default], () => u.default.getId()),
+        N = a.useMemo(() => (0, o.chunk)((0, m.XV)(x.i6, I), 9), [I]),
         S = [...N[T], ...N[(T + 1) % N.length]],
         E = a.useMemo(() => Array.from(v), [v]),
         k = a.useMemo(() => E.filter((e) => !x.WZ.has(e) && !x.gh.has(e)), [E]),
@@ -50,8 +50,8 @@ n.Z = (e) => {
             [w]
         ),
         R = a.useCallback(() => {
-            I((e) => (e + 1) % N.length);
-        }, [I, N]);
+            j((e) => (e + 1) % N.length);
+        }, [j, N]);
     return (0, r.jsxs)('div', {
         className: C.slideContent,
         children: [

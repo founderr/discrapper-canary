@@ -1,49 +1,49 @@
-t.d(n, {
+n.d(t, {
     O: function () {
-        return d;
+        return c;
     }
 }),
-    t(47120);
-var i = t(192379),
-    l = t(373793),
-    r = t(442837),
-    a = t(911969),
-    o = t(282923),
-    s = t(905753);
-function d() {
+    n(47120);
+var i = n(192379),
+    l = n(373793),
+    r = n(442837),
+    a = n(911969),
+    o = n(282923),
+    s = n(905753);
+function c() {
     let e = (0, r.cj)([s.Z], () => {
             var e;
             return Object.values(null !== (e = s.Z.getCommands()) && void 0 !== e ? e : {});
         }),
-        [n, t] = i.useState(''),
-        d = i.useMemo(
+        [t, n] = i.useState(''),
+        c = i.useMemo(
             () =>
                 e.filter((e) => {
-                    var n;
-                    return (null == e.integration_types || e.integration_types.includes(l.Y.GUILD_INSTALL)) && (null == e.contexts || (null === (n = e.contexts) || void 0 === n ? void 0 : n.includes(a.D.GUILD)));
+                    var t;
+                    return (null == e.integration_types || e.integration_types.includes(l.Y.GUILD_INSTALL)) && (null == e.contexts || (null === (t = e.contexts) || void 0 === t ? void 0 : t.includes(a.D.GUILD)));
                 }),
             [e]
         ),
         u = i.useMemo(
             () =>
-                [...d].sort((e, n) => {
-                    let t = a.yU.CHAT + 1,
-                        i = n.type > t ? t : n.type,
-                        l = i - (e.type > t ? t : e.type);
-                    return 0 !== l ? l : e.untranslatedName.localeCompare(n.untranslatedName);
+                [...c].sort((e, t) => {
+                    let n = a.yU.CHAT + 1,
+                        i = t.type > n ? n : t.type,
+                        l = i - (e.type > n ? n : e.type);
+                    return 0 !== l ? l : e.untranslatedName.localeCompare(t.untranslatedName);
                 }),
-            [d]
+            [c]
         ),
-        m = i.useMemo(() => (n.startsWith('/') ? u.filter((e) => e.type === a.yU.CHAT) : u), [n, u]),
-        h = i.useMemo(() => (n.startsWith('/') ? n.substring(1) : n), [n]);
+        m = i.useMemo(() => (t.startsWith('/') ? u.filter((e) => e.type === a.yU.CHAT) : u), [t, u]),
+        h = i.useMemo(() => (t.startsWith('/') ? t.substring(1) : t), [t]);
     return {
-        query: n,
-        results: i.useMemo(() => (0, o.B)(m, c, h), [m, h]),
-        setQuery: t,
+        query: t,
+        results: i.useMemo(() => (0, o.B)(m, d, h), [m, h]),
+        setQuery: n,
         unfilteredCount: e.length
     };
 }
-function c(e) {
+function d(e) {
     return {
         id: e.id,
         names: [e.displayName]

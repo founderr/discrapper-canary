@@ -1,27 +1,27 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
         return g;
     }
 });
-var i = t(200651),
-    l = t(192379),
-    r = t(442837),
-    a = t(481060),
-    o = t(366598),
-    s = t(821864),
-    d = t(905753),
-    c = t(995390),
-    u = t(469880),
-    m = t(665578),
-    h = t(388032),
-    p = t(121080);
+var i = n(200651),
+    l = n(192379),
+    r = n(442837),
+    a = n(481060),
+    o = n(366598),
+    s = n(821864),
+    c = n(905753),
+    d = n(995390),
+    u = n(469880),
+    m = n(665578),
+    h = n(388032),
+    p = n(121080);
 function g(e) {
-    let { application: n, canNavigate: t, guildId: c } = e,
-        m = (0, r.e7)([d.Z], () => d.Z.isUnavailable());
-    return (l.useEffect(() => (s.I4(n.id), s.kZ), [n.id]),
+    let { application: t, canNavigate: n, guildId: d } = e,
+        m = (0, r.e7)([c.Z], () => c.Z.isUnavailable());
+    return (l.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
     l.useEffect(() => {
-        s.gq(n.id, c, n.id), s.Sn(c, n.id);
-    }, [n.id, c]),
+        s.gq(t.id, d, t.id), s.Sn(d, t.id);
+    }, [t.id, d]),
     m)
         ? null
         : (0, i.jsxs)(l.Fragment, {
@@ -38,27 +38,27 @@ function g(e) {
                       variant: 'text-sm/normal',
                       children: h.intl.string(h.t.sCkD3d)
                   }),
-                  (0, i.jsx)(f, {
-                      guildId: c,
-                      applicationId: n.id
+                  (0, i.jsx)(x, {
+                      guildId: d,
+                      applicationId: t.id
                   }),
                   (0, i.jsx)(u.Z, {
-                      applicationIcon: n.icon,
-                      applicationName: n.name,
-                      canNavigate: t,
-                      guildId: c
+                      applicationIcon: t.icon,
+                      applicationName: t.name,
+                      canNavigate: n,
+                      guildId: d
                   })
               ]
           });
 }
-function f(e) {
-    let { applicationId: n, guildId: t } = e,
-        { originalApplicationPermissions: l, editedTargetPermissions: r, selectedPermissionCount: a } = (0, c.Z)(t, n);
+function x(e) {
+    let { applicationId: t, guildId: n } = e,
+        { originalApplicationPermissions: l, editedTargetPermissions: r, selectedPermissionCount: a } = (0, d.Z)(n, t);
     return (0, i.jsx)('div', {
         className: p.applicationPermissions,
         children: (0, i.jsx)(m.Z, {
-            applicationId: n,
-            guildId: t,
+            applicationId: t,
+            guildId: n,
             inModal: !1,
             editedTargetPermissions: r,
             originalApplicationPermissions: l,

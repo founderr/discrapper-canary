@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(710111),
     I = n(388032),
     N = n(919929),
-    A = n(113207);
-function b(e) {
+    b = n(113207);
+function A(e) {
     return (0, r.e7)([h.Z], () => {
         if (null == e) return null;
         let { guildId: t, soundId: n } = e;
@@ -38,7 +38,7 @@ function v() {
     let { analyticsLocations: e } = (0, o.ZP)(),
         [t, n] = s.useState(f.hY),
         a = (0, p.tT)(t),
-        T = b(a),
+        T = A(a),
         v = (0, r.e7)([h.Z], () => h.Z.hasFetchedAllSounds()),
         O = (null == a ? void 0 : a.type) === p.zx.GLOBAL,
         R = v && null != a && null == T;
@@ -55,7 +55,7 @@ function v() {
     return (0, i.jsxs)(l.FormSection, {
         className: N.container,
         tag: l.FormTitleTags.H1,
-        titleClassName: A.__invalid_marginBottom16,
+        titleClassName: b.__invalid_marginBottom16,
         title: I.intl.string(I.t.ABjMWF),
         children: [
             (0, i.jsx)(u.F, {
@@ -89,7 +89,7 @@ function v() {
                         hideDivider: !0
                     }),
                     (0, i.jsxs)(d.Z, {
-                        className: A.marginTop20,
+                        className: b.marginTop20,
                         title: I.intl.format(I.t.I2TsYG, {
                             nitroWheelHook: () =>
                                 (0, i.jsx)(l.NitroWheelIcon, {
@@ -126,7 +126,7 @@ function j(e) {
             var e, n, i;
             return null === (i = T.Z.settings.guilds) || void 0 === i ? void 0 : null === (n = i.guilds) || void 0 === n ? void 0 : null === (e = n[t]) || void 0 === e ? void 0 : e.joinSound;
         }),
-        s = b(n);
+        s = A(n);
     if (null == n || null == s) return null;
     let { emojiId: o, emojiName: c } = s,
         d = null != o || null != c;

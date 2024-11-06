@@ -1,11 +1,11 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return r;
+        return l;
     }
 }),
-    n(789020);
-var i = n(630388),
-    s = n(981631);
-function r(e) {
-    return null != e.flags && (0, i.yE)(e.flags, s.udG.SOCIAL_LAYER_INTEGRATION);
+    t(789020);
+var r = t(630388),
+    i = t(981631);
+function l(e) {
+    return null != e.flags && (0, r.yE)(e.flags, i.udG.SOCIAL_LAYER_INTEGRATION);
 }

@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(81245),
     I = n(629654),
     N = n(53691),
-    A = n(165583),
-    b = n(197115),
+    b = n(165583),
+    A = n(197115),
     v = n(267717),
     j = n(350327),
     O = n(996073),
@@ -207,7 +207,7 @@ function z(e) {
                                                   children: Y.intl.string(Y.t['smo74+'])
                                               }),
                                               !eh &&
-                                                  (0, i.jsx)(b.Z, {
+                                                  (0, i.jsx)(A.Z, {
                                                       onSubscribeModalClose: eo,
                                                       subscriptionTier: V.Si.TIER_2,
                                                       className: H.premiumSubscribeButton,
@@ -233,7 +233,7 @@ function z(e) {
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: H.premiumTier2Divider }),
-                                  (0, i.jsx)(A.ZP, {
+                                  (0, i.jsx)(b.ZP, {
                                       type: V.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: V.Si.TIER_2
                                   })

@@ -1,4 +1,4 @@
-e.d(n, {
+n.d(t, {
     b: function () {
         return f;
     },
@@ -6,25 +6,25 @@ e.d(n, {
         return d;
     }
 });
-var i = e(200651);
-e(192379);
-var r = e(481060),
-    l = e(44315),
-    o = e(377171),
-    u = e(981631),
-    a = e(388032),
-    s = e(405013);
-function c(t) {
-    let { label: n, backgroundColor: e = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = t;
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    l = n(44315),
+    o = n(377171),
+    u = n(981631),
+    a = n(388032),
+    s = n(405013);
+function c(e) {
+    let { label: t, backgroundColor: n = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = e;
     return (0, i.jsxs)('div', {
         className: s.badge,
-        style: { backgroundColor: e },
+        style: { backgroundColor: n },
         children: [
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
                 className: s.__invalid_badgeText,
-                children: n
+                children: t
             }),
             (0, i.jsx)(l, {
                 className: s.badgeIcon,

@@ -27,7 +27,7 @@ var i = n(200651),
     Z = n(916315);
 t.Z = r.memo(function (e) {
     var t, n;
-    let { message: r, compact: l = !1, className: R, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
+    let { message: r, compact: l = !1, className: R, onContextMenu: L, onClick: P, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
         F = r.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         G = r.isFirstMessageInForumPost(O),
         V = (0, u.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
@@ -77,8 +77,8 @@ t.Z = r.memo(function (e) {
             ...e,
             disableInteraction: F
         }),
-        onContextMenu: P,
-        onClick: L,
+        onContextMenu: L,
+        onClick: P,
         hasThread: B && null != Q && r.hasFlag(j.iLy.HAS_THREAD),
         hasReply: r.type === j.uaV.REPLY,
         'aria-labelledby': ee,
