@@ -201,34 +201,33 @@ function ei(e) {
             let { event: t } = e;
             return t.channel_id;
         }),
-        p = (0, l.e7)([k.Z], () => k.Z.getRelationships()),
-        m = a.useMemo(() => Object.keys(p).filter((e) => p[e] === W.OGo.BLOCKED), [p]),
-        g = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
-        E = a.useMemo(() => {
-            let t = Object.keys(g);
+        p = (0, l.Wu)([k.Z], () => k.Z.getBlockedOrIgnoredIDs()),
+        m = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
+        g = a.useMemo(() => {
+            let t = Object.keys(m);
             return 0 === t.length
                 ? []
                 : t.filter((t) => {
-                      let n = g[t].filter(F.lm);
+                      let n = m[t].filter(F.lm);
                       return (
                           !(0 === n.length || h.includes(t)) &&
                           null ==
                               n.find((e) => {
                                   let { user: t } = e;
-                                  return m.includes(t.id);
+                                  return p.includes(t.id);
                               }) &&
                           t !== e.afkChannelId &&
                           c.includes(t)
                       );
                   });
-        }, [g, h, c, m, e.afkChannelId]),
-        v = (0, l.e7)(
+        }, [m, h, c, p, e.afkChannelId]),
+        E = (0, l.e7)(
             [d.ZP, G.Z, O.Z, P.Z, D.Z],
             () =>
-                E.map((e) => {
+                g.map((e) => {
                     var t;
                     let n = O.Z.getAllApplicationStreamsForChannel(e).map((e) => e.ownerId),
-                        r = g[e].filter(F.lm),
+                        r = m[e].filter(F.lm),
                         i = d.ZP.getEmbeddedActivitiesForChannel(e),
                         a = Y.L.HANGOUT,
                         s = [],
@@ -269,16 +268,16 @@ function ei(e) {
                         isStage: !!(null === (t = D.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildStageVoice())
                     };
                 }),
-            [g, E],
+            [m, g],
             s.isEqual
         ),
-        S = (0, l.e7)([L.Z], () => L.Z.hasConsented(W.pjP.PERSONALIZATION)),
-        T = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
-        b = S && T.length > 0,
-        y = [...v, ..._];
+        v = (0, l.e7)([L.Z], () => L.Z.hasConsented(W.pjP.PERSONALIZATION)),
+        S = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
+        T = v && S.length > 0,
+        b = [...E, ..._];
     return (
-        i !== y.length &&
-            y.length > 0 &&
+        i !== b.length &&
+            b.length > 0 &&
             (r(
                 (function (e) {
                     let t = [...e],
@@ -375,10 +374,10 @@ function ei(e) {
                             ],
                             ['desc']
                         );
-                    })(y, b)
+                    })(b, T)
                 ).slice(0, 3)
             ),
-            u(y.length)),
+            u(b.length)),
         n
     );
 }
