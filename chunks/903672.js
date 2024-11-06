@@ -18,36 +18,36 @@ var i = n(200651),
     p = n(731290),
     g = n(944486),
     _ = n(455199),
-    C = n(655354),
-    E = n(999671),
+    E = n(655354),
+    C = n(999671),
     I = n(324081),
     x = n(240126),
-    v = n(791914),
-    N = n(981631),
+    N = n(791914),
+    v = n(981631),
     T = n(388032),
     S = n(42967);
-let b = {
+let A = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function A(e, t, n) {
+function b(e, t, n) {
     let i = t ? _.Z.guildFilter : null,
         r = t ? _.Z.roleFilter : null,
         l = t ? _.Z.everyoneFilter : null,
         a = null;
-    null != e && null != i && (a = i === N.NgX.ALL_SERVERS ? null : e.getGuildId()), s.Z.fetchRecentMentions(n, N.DJj, a, r, l);
+    null != e && null != i && (a = i === v.NgX.ALL_SERVERS ? null : e.getGuildId()), s.Z.fetchRecentMentions(n, v.DJj, a, r, l);
 }
 function j(e) {
     let { setTab: t, onJump: n, badgeState: o, closePopout: m } = e,
         h = (0, l.e7)([f.Z, g.Z], () => f.Z.getChannel(g.Z.getChannelId())),
         {
             messages: p,
-            hasMore: C,
+            hasMore: E,
             loading: I,
             guildFilter: x,
-            roleFilter: b,
+            roleFilter: A,
             everyoneFilter: j
         } = (0, l.cj)([_.Z], () => ({
             messages: _.Z.getMentions(),
@@ -58,32 +58,32 @@ function j(e) {
             everyoneFilter: _.Z.everyoneFilter
         })),
         Z = (0, u.Z)(x),
-        P = (0, u.Z)(b),
-        L = (0, u.Z)(j);
+        P = (0, u.Z)(A),
+        y = (0, u.Z)(j);
     r.useEffect(() => {
         if (!_.Z.hasLoadedEver) {
-            A(h, !0);
+            b(h, !0);
             return;
         }
-        ((null != Z && x !== Z) || (null != P && b !== P) || (null != L && j !== L)) && A(h, !0);
-    }, [Z, x, P, b, L, j, h, !0]);
+        ((null != Z && x !== Z) || (null != P && A !== P) || (null != y && j !== y)) && b(h, !0);
+    }, [Z, x, P, A, y, j, h, !0]);
     r.useEffect(() => {
-        (null == p ? void 0 : p.some(d.k5)) && (s.Z.clearMentions(), A(h, !0));
+        (null == p ? void 0 : p.some(d.k5)) && (s.Z.clearMentions(), b(h, !0));
     }, []),
         r.useEffect(
             () => () => {
-                s.Z.truncateMentions(N.DJj);
+                s.Z.truncateMentions(v.DJj);
             },
             []
         );
     let O = r.useCallback(
         () =>
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(N.Z, {
                 tab: a.X.MENTIONS,
                 setTab: t,
                 badgeState: o,
                 closePopout: m,
-                children: (0, i.jsx)(E.Z, {})
+                children: (0, i.jsx)(C.Z, {})
             }),
         [!0, t, o, m]
     );
@@ -99,14 +99,14 @@ function j(e) {
             channel: h,
             messages: p,
             loading: I,
-            hasMore: C,
+            hasMore: E,
             analyticsName: 'Recent Mentions',
             loadMore: function () {
-                A(h, !0, null != p && p.length > 0 ? p[p.length - 1].id : null);
+                b(h, !0, null != p && p.length > 0 ? p[p.length - 1].id : null);
             },
             canCloseAllMessages: !0,
             renderHeader: O,
-            renderEmptyState: y,
+            renderEmptyState: L,
             renderMessage: R,
             'aria-label': T.intl.string(T.t.jbV6MD),
             listName: 'recents'
@@ -168,7 +168,7 @@ function P(e) {
             (0, i.jsxs)('div', {
                 className: S.messageContainer,
                 children: [
-                    (0, i.jsx)(C.Z, {
+                    (0, i.jsx)(E.Z, {
                         className: S.jumpMessageButton,
                         onJump: n
                     }),
@@ -181,7 +181,7 @@ function P(e) {
                             hideAccessories: c,
                             compact: h.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: b,
+                            focusProps: A,
                             trackAnnouncementViews: !0
                         },
                         t.id
@@ -191,7 +191,7 @@ function P(e) {
         ]
     });
 }
-function y(e) {
+function L(e) {
     return (0, i.jsx)(x.Z, {
         Icon: o.AtIcon,
         header: T.intl.string(T.t['bgDz7+']),

@@ -13,22 +13,22 @@ var i = n(200651),
     p = n(695346),
     g = n(592125),
     _ = n(699516),
-    C = n(709054),
-    E = n(786761),
+    E = n(709054),
+    C = n(786761),
     I = n(493892),
     x = n(901461),
-    v = n(739566),
-    N = n(443877),
+    N = n(739566),
+    v = n(443877),
     T = n(492593),
     S = n(938353),
-    b = n(25015),
-    A = n(689674),
+    A = n(25015),
+    b = n(689674),
     j = n(963550),
     Z = n(845080),
     R = n(295790),
     P = n(145807),
-    y = n(56744),
-    L = n(834129),
+    L = n(56744),
+    y = n(834129),
     O = n(981631),
     M = n(388032),
     k = n(590008),
@@ -39,7 +39,7 @@ function B(e) {
         className: t,
         compact: r,
         role: 'group',
-        childrenMessageContent: (0, i.jsx)(L.Z, {
+        childrenMessageContent: (0, i.jsx)(y.Z, {
             compact: r,
             className: k.blockedSystemMessage,
             iconNode: (0, i.jsx)(s.XSmallIcon, {
@@ -57,7 +57,7 @@ function B(e) {
 t.Z = r.memo(function e(t) {
     var n;
     let r;
-    let { channel: l, message: s, compact: L = !1, className: k, onContextMenu: w, onClick: U, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
+    let { channel: l, message: s, compact: y = !1, className: k, onContextMenu: U, onClick: w, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
         H = O.OBS.has(s.type) ? s.messageReference : void 0,
         z = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(H)),
         W = (0, o.e7)([g.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
@@ -67,19 +67,19 @@ t.Z = r.memo(function e(t) {
         Q = p.QK.useSetting(),
         q = (0, d.A)((null !== (n = s.editedTimestamp) && void 0 !== n ? n : s.timestamp).valueOf()),
         J = (0, m.Z)(null == l ? void 0 : l.id),
-        { disableReactionCreates: $ } = (0, N.Z)(l),
-        { content: ee, hasSpoilerEmbeds: et } = (0, b.Z)(s, {
+        { disableReactionCreates: $ } = (0, v.Z)(l),
+        { content: ee, hasSpoilerEmbeds: et } = (0, A.Z)(s, {
             hideSimpleEmbedContent: Y && X,
             allowList: q,
             allowHeading: q,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        en = (0, v.ZP)(s),
-        ei = (0, o.e7)([g.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && g.Z.getChannel(C.default.castMessageIdAsChannelId(s.id))),
+        en = (0, N.ZP)(s),
+        ei = (0, o.e7)([g.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && g.Z.getChannel(E.default.castMessageIdAsChannelId(s.id))),
         er = s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED && null != W,
         el = !er && void 0 === r,
-        ea = (0, A.Z)({
+        ea = (0, b.Z)({
             message: s,
             channel: l,
             enabled: el
@@ -97,18 +97,18 @@ t.Z = r.memo(function e(t) {
         : (_.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
           ? (0, i.jsx)(B, {
                 className: k,
-                compact: L,
+                compact: y,
                 count: 1,
                 collapsedReason: r
             })
           : (0, i.jsx)(T.Z, {
-                compact: L,
+                compact: y,
                 className: a()(k, {
-                    [D.ephemeral]: (0, E.Pv)(s),
+                    [D.ephemeral]: (0, C.Pv)(s),
                     [D.disableInteraction]: F,
                     [D.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, y.Z)(s, l, H, z, L),
+                childrenRepliedMessage: (0, L.Z)(s, l, H, z, y),
                 childrenHeader: (0, Z.Z)({
                     ...t,
                     author: en,
@@ -118,7 +118,7 @@ t.Z = r.memo(function e(t) {
                     channel: l,
                     message: s,
                     hasSpoilerEmbeds: et,
-                    compact: L,
+                    compact: y,
                     canSuppressEmbeds: !1,
                     canDeleteAttachments: !1,
                     disableReactionReads: !1,
@@ -138,11 +138,11 @@ t.Z = r.memo(function e(t) {
                     shouldRenderCtaButton: es,
                     hasInlineForwardButton: !1
                 }),
-                childrenExecutedCommand: (0, P.Z)(s, l, L),
+                childrenExecutedCommand: (0, P.Z)(s, l, y),
                 childrenMessageContent: (0, j.Z)(t, ee),
                 childrenSystemMessage: (0, R.Z)(t),
-                onContextMenu: w,
-                onClick: U,
+                onContextMenu: U,
+                onClick: w,
                 hasThread: !1 !== G && null != ei && s.hasFlag(O.iLy.HAS_THREAD),
                 hasReply: s.type === O.uaV.REPLY,
                 isSystemMessage: (0, x.Z)(s),

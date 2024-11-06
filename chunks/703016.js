@@ -116,7 +116,7 @@ function H(e) {
         x = h.OW.getSetting() && o.tts && N,
         A = I.Z.getTTSType(),
         y = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === Z.PrB.ALL_CHANNELS || (A === Z.PrB.SELECTED_CHANNEL && N));
-    if ((x || y) && !C.Z.isBlockedForMessage(o)) {
+    if ((x || y) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (L.indexOf(o.id) >= 0) return !1;
         L.unshift(o.id) > 10 && L.pop();
         let e = d.getGuildId();

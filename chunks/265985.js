@@ -3,7 +3,7 @@ n.d(t, {
         return x;
     },
     x: function () {
-        return v;
+        return N;
     }
 });
 var i = n(200651);
@@ -22,13 +22,13 @@ var r = n(120356),
     p = n(570533),
     g = n(629262),
     _ = n(575460),
-    C = n(293810),
-    E = n(388032),
+    E = n(293810),
+    C = n(388032),
     I = n(265746);
 let x = (e) => {
         let { onClose: t, listing: n, step: r, guildId: a } = e,
             s = (0, f.YB)(a),
-            d = (0, c.Z)(C.Xy),
+            d = (0, c.Z)(E.Xy),
             h = (() => {
                 var e;
                 if (d) return null;
@@ -62,7 +62,7 @@ let x = (e) => {
                 (0, i.jsx)(o.Clickable, {
                     className: I.closeContainer,
                     onClick: () => t(!1),
-                    'aria-label': E.intl.string(E.t.cpT0Cg),
+                    'aria-label': C.intl.string(C.t.cpT0Cg),
                     children: (0, i.jsx)(o.XSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
@@ -72,7 +72,7 @@ let x = (e) => {
             ]
         });
     },
-    v = (e) => {
+    N = (e) => {
         let { onClose: t, listing: n, guildId: r } = e,
             l = (0, a.e7)([d.Z], () => d.Z.getGuild(r), [r]),
             c = (0, p.Z)(r).filter((e) => e.roles.includes(n.role_id)),
@@ -85,13 +85,13 @@ let x = (e) => {
                     className: I.confirmationHeader,
                     variant: 'heading-xl/semibold',
                     color: 'header-secondary',
-                    children: E.intl.format(E.t['1HIsTk'], { serverName: null == l ? void 0 : l.toString() })
+                    children: C.intl.format(C.t['1HIsTk'], { serverName: null == l ? void 0 : l.toString() })
                 }),
                 (0, i.jsx)(o.Text, {
                     className: I.confirmationSubtitle,
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    children: E.intl.format(E.t.oi3gio, { tier: n.name })
+                    children: C.intl.format(C.t.oi3gio, { tier: n.name })
                 }),
                 m.length > 0 &&
                     (0, i.jsxs)(i.Fragment, {
@@ -100,7 +100,7 @@ let x = (e) => {
                                 variant: 'text-xs/normal',
                                 color: 'header-secondary',
                                 className: I.confirmationSectionLabel,
-                                children: E.intl.string(E.t.w0CQ09)
+                                children: C.intl.string(C.t.w0CQ09)
                             }),
                             (0, i.jsx)('div', {
                                 className: I.confirmationBenefits,
@@ -128,7 +128,7 @@ let x = (e) => {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
                                 className: I.confirmationSectionLabel,
-                                children: E.intl.string(E.t['6Y1FLi'])
+                                children: C.intl.string(C.t['6Y1FLi'])
                             }),
                             (0, i.jsxs)('div', {
                                 className: I.emojiBenefitsRow,
@@ -145,12 +145,12 @@ let x = (e) => {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
                                                 className: I.emojiName,
-                                                children: E.intl.string(E.t.PrKk4u)
+                                                children: C.intl.string(C.t.PrKk4u)
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 color: 'interactive-normal',
                                                 variant: 'text-sm/normal',
-                                                children: E.intl.format(E.t['2ICUkJ'], { count: c.length })
+                                                children: C.intl.format(C.t['2ICUkJ'], { count: c.length })
                                             })
                                         ]
                                     })
@@ -162,7 +162,7 @@ let x = (e) => {
                 (0, i.jsx)(o.Button, {
                     className: I.confirmationButton,
                     onClick: () => t(!0),
-                    children: E.intl.string(E.t['Ph+ecH'])
+                    children: C.intl.string(C.t['Ph+ecH'])
                 })
             ]
         });

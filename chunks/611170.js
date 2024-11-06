@@ -1,4 +1,4 @@
-t.d(n, {
+l.d(n, {
     a: function () {
         return r;
     },
@@ -6,8 +6,8 @@ t.d(n, {
         return a;
     }
 });
-var l = t(591759),
-    i = t(524444);
+var t = l(591759),
+    i = l(524444);
 function r(e) {
     let n = e.item.originalItem.media;
     return (0, i.Yi)({
@@ -22,13 +22,13 @@ function r(e) {
 }
 function a(e) {
     let n = e.item.originalItem.media,
-        t = l.Z.toURLSafe(n.proxyUrl);
-    return null == t
+        l = t.Z.toURLSafe(n.proxyUrl);
+    return null == l
         ? null
-        : (t.searchParams.append('format', 'webp'),
+        : (l.searchParams.append('format', 'webp'),
           (0, i.lV)({
               ...e,
-              poster: t.toString(),
+              poster: l.toString(),
               alt: e.item.originalItem.description,
               src: n.proxyUrl,
               placeholder: n.placeholder,

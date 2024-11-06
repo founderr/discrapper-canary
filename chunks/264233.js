@@ -20,20 +20,20 @@ var i = n(200651),
     g = n(706897);
 function _(e) {
     let { setTab: t, badgeState: l, closePopout: _ } = e,
-        E = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
+        C = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
         I = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [x, v] = r.useMemo(
+        [x, N] = r.useMemo(
             () =>
-                a().partition(E, (e) => {
+                a().partition(C, (e) => {
                     var t;
                     return (null === (t = I[e.invite_id]) || void 0 === t ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [E, I]
+            [C, I]
         );
     return (r.useEffect(() => {
         (0, d.sJ)();
     }),
-    0 === E.length)
+    0 === C.length)
         ? (0, i.jsxs)('div', {
               className: g.container,
               children: [
@@ -87,7 +87,7 @@ function _(e) {
                               x.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(C, { title: p.intl.string(p.t.yflAJS) }),
+                                          (0, i.jsx)(E, { title: p.intl.string(p.t.yflAJS) }),
                                           (0, i.jsx)(i.Fragment, {
                                               children: x.map((e) =>
                                                   (0, i.jsx)(
@@ -102,12 +102,12 @@ function _(e) {
                                           })
                                       ]
                                   }),
-                              v.length > 0 &&
+                              N.length > 0 &&
                                   (0, i.jsxs)(i.Fragment, {
                                       children: [
-                                          (0, i.jsx)(C, { title: p.intl.string(p.t.f0Ia4e) }),
+                                          (0, i.jsx)(E, { title: p.intl.string(p.t.f0Ia4e) }),
                                           (0, i.jsx)(i.Fragment, {
-                                              children: v.map((e) =>
+                                              children: N.map((e) =>
                                                   (0, i.jsx)(
                                                       f.Z,
                                                       {
@@ -126,7 +126,7 @@ function _(e) {
               ]
           });
 }
-function C(e) {
+function E(e) {
     let { title: t } = e;
     return (0, i.jsxs)('div', {
         className: g.headerContainer,

@@ -19,23 +19,23 @@ var i = n(200651),
     p = n(626135),
     g = n(135431),
     _ = n(674588),
-    C = n(264043),
-    E = n(132871),
+    E = n(264043),
+    C = n(132871),
     I = n(147890),
     x = n(981631),
-    v = n(388032),
-    N = n(708262);
+    N = n(388032),
+    v = n(708262);
 function T(e) {
     var t, n, T;
-    let { code: S, message: b } = e,
-        [A, j, Z] = (0, o.Wu)([C.Z], () => [C.Z.getApplication(S), C.Z.isInvalidApplication(S), C.Z.getApplicationFetchState(S)], [S]),
+    let { code: S, message: A } = e,
+        [b, j, Z] = (0, o.Wu)([E.Z], () => [E.Z.getApplication(S), E.Z.isInvalidApplication(S), E.Z.getApplicationFetchState(S)], [S]),
         R = (0, o.e7)([d.default], () => d.default.locale),
         P = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        y = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
-        [L, O] = r.useState(!1),
+        L = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        [y, O] = r.useState(!1),
         M = r.useCallback((e) => {
             e && O(!0);
         }, []),
@@ -44,101 +44,101 @@ function T(e) {
         (0, _.gZ)(S);
     }, [S]),
         r.useEffect(() => {
-            L &&
-                Z === C.M.FETCHED &&
+            y &&
+                Z === E.M.FETCHED &&
                 p.default.track(x.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
                     device_platform: l.tq ? 'mobile_web' : 'desktop_web',
-                    sender_user_id: b.author.id,
+                    sender_user_id: A.author.id,
                     guild_id: P,
-                    channel_id: b.channel_id
+                    channel_id: A.channel_id
                 });
-        }, [L, S, null == y ? void 0 : y.id, b.channel_id, P, b.author.id, Z]),
+        }, [y, S, null == L ? void 0 : L.id, A.channel_id, P, A.author.id, Z]),
         r.useEffect(() => {
-            L &&
+            y &&
                 j &&
                 p.default.track(x.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: l.tq ? 'mobile_web' : 'desktop_web',
-                    sender_user_id: b.author.id,
+                    sender_user_id: A.author.id,
                     guild_id: P,
-                    channel_id: b.channel_id
+                    channel_id: A.channel_id
                 });
-        }, [L, P, j, b.author.id, b.channel_id]);
+        }, [y, P, j, A.author.id, A.channel_id]);
     let D = (e) => {
         p.default.track(x.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
             device_platform: l.tq ? 'mobile_web' : 'desktop_web',
             clicked_section: e,
             guild_id: P,
-            channel_id: b.channel_id
+            channel_id: A.channel_id
         }),
             (0, I.goToAppDirectory)({
-                view: E.ApplicationDirectoryViews.APPLICATION,
+                view: C.ApplicationDirectoryViews.APPLICATION,
                 guildId: P,
                 applicationId: S,
-                entrypoint: { name: E.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: C.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
     if (j)
         return (0, i.jsxs)(u.Z, {
             containerRef: k,
             children: [
-                (0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.j4KtLS) }),
+                (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.j4KtLS) }),
                 (0, i.jsx)(u.Z.Body, {
                     children: (0, i.jsxs)('div', {
-                        className: N.invalidBody,
+                        className: v.invalidBody,
                         children: [
                             (0, i.jsx)(u.Z.Icon, { expired: !0 }),
                             (0, i.jsx)(u.Z.Info, {
                                 expired: !0,
-                                title: v.intl.string(v.t.NaQLEx),
-                                children: v.intl.string(v.t['0H5OT0'])
+                                title: N.intl.string(N.t.NaQLEx),
+                                children: N.intl.string(N.t['0H5OT0'])
                             })
                         ]
                     })
                 })
             ]
         });
-    if (null == A || Z === C.M.FETCHING)
+    if (null == b || Z === E.M.FETCHING)
         return (0, i.jsxs)(u.Z, {
             containerRef: k,
-            children: [(0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.m9hXGR) }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
+            children: [(0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.m9hXGR) }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
         });
     let B = new Intl.NumberFormat(R, {
             notation: 'compact',
             compactDisplay: 'short'
         }),
-        w = null !== (n = null === (t = A.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
-        U = (0, g.Eb)({
-            customInstallUrl: A.custom_install_url,
-            installParams: A.install_params,
-            integrationTypesConfig: A.integration_types_config
+        U = null !== (n = null === (t = b.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== n ? n : 0,
+        w = (0, g.Eb)({
+            customInstallUrl: b.custom_install_url,
+            installParams: b.install_params,
+            integrationTypesConfig: b.integration_types_config
         }),
-        F = a.Y.GUILD_INSTALL in (null !== (T = A.integration_types_config) && void 0 !== T ? T : {}) && U;
+        F = a.Y.GUILD_INSTALL in (null !== (T = b.integration_types_config) && void 0 !== T ? T : {}) && w;
     return (0, i.jsxs)(u.Z, {
         containerRef: k,
         children: [
-            (0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.KC1oZ2) }),
+            (0, i.jsx)(u.Z.Header, { text: N.intl.string(N.t.KC1oZ2) }),
             (0, i.jsxs)(u.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: N.applicationInfoContainer,
+                        className: v.applicationInfoContainer,
                         children: [
                             (0, i.jsx)(u.Z.Icon, {
-                                application: m.Z.createFromServer(A),
-                                className: N.applicationIcon,
+                                application: m.Z.createFromServer(b),
+                                className: v.applicationIcon,
                                 onClick: () => D('application_icon')
                             }),
                             (0, i.jsx)(u.Z.Info, {
                                 title: (0, i.jsx)(s.Clickable, {
                                     onClick: () => D('application_name'),
-                                    children: A.name
+                                    children: b.name
                                 }),
                                 children:
-                                    w > 0 &&
+                                    U > 0 &&
                                     F &&
                                     (0, i.jsxs)(s.Clickable, {
-                                        className: N.guildCountContainer,
+                                        className: v.guildCountContainer,
                                         onClick: () => D('application_guild_count'),
                                         children: [
                                             (0, i.jsx)(s.CompassIcon, {
@@ -146,29 +146,29 @@ function T(e) {
                                                 color: 'currentColor',
                                                 width: 16,
                                                 height: 16,
-                                                className: N.guildCountIcon
+                                                className: v.guildCountIcon
                                             }),
-                                            v.intl.format(v.t['6IW6Wl'], { guildCount: B.format(w) })
+                                            N.intl.format(N.t['6IW6Wl'], { guildCount: B.format(U) })
                                         ]
                                     })
                             })
                         ]
                     }),
-                    U &&
+                    w &&
                         (0, i.jsx)(u.Z.Button, {
                             onClick: () => {
-                                if (null != A)
+                                if (null != b)
                                     (0, g.LO)({
                                         applicationId: S,
-                                        customInstallUrl: A.custom_install_url,
-                                        installParams: A.install_params,
-                                        integrationTypesConfig: A.integration_types_config,
+                                        customInstallUrl: b.custom_install_url,
+                                        installParams: b.install_params,
+                                        integrationTypesConfig: b.integration_types_config,
                                         guildId: P,
                                         source: 'app_directory_profile_embed'
                                     });
                             },
                             color: u.Z.Button.Colors.GREEN,
-                            children: v.intl.string(v.t.NgXl3N)
+                            children: N.intl.string(N.t.NgXl3N)
                         })
                 ]
             })

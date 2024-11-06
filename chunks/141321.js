@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 });
 var i = n(200651),
@@ -18,13 +18,13 @@ var i = n(200651),
     p = n(490897),
     g = n(388032),
     _ = n(233194);
-function C(e) {
-    let { onOpen: t, onClose: n, className: C } = e,
-        E = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+function E(e) {
+    let { onOpen: t, onClose: n, className: E } = e,
+        C = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         I = r.useRef(null),
-        x = (0, l.e7)([d.ZP], () => (null == E ? void 0 : E.id) != null && d.ZP.getMentionCount(E.id, p.W.NOTIFICATION_CENTER) > 0),
-        { enabled: v } = s.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
-        N = (0, l.e7)([o.Z], () => v && o.Z.getUnseenInviteCount() > 0);
+        x = (0, l.e7)([d.ZP], () => (null == C ? void 0 : C.id) != null && d.ZP.getMentionCount(C.id, p.W.NOTIFICATION_CENTER) > 0),
+        { enabled: N } = s.Z.useExperiment({ location: 'RecentsButton' }, { autoTrackExposure: !1 }),
+        v = (0, l.e7)([o.Z], () => N && o.Z.getUnseenInviteCount() > 0);
     return (0, i.jsx)(h.k, {
         onOpen: t,
         onClose: n,
@@ -36,7 +36,7 @@ function C(e) {
                 ref: I,
                 className: _.recentsIcon,
                 children: [
-                    v &&
+                    N &&
                         (0, i.jsx)(f.Z, {
                             inboxIconRef: I,
                             recentsPopoutShown: t
@@ -45,13 +45,13 @@ function C(e) {
                         location: 'inbox-button',
                         children: (0, i.jsx)(c.JO, {
                             ...n,
-                            className: C,
+                            className: E,
                             onClick: e,
                             icon: a.InboxIcon,
                             'aria-label': g.intl.string(g.t.GSmTKC),
                             tooltip: t ? null : g.intl.string(g.t.GSmTKC),
                             selected: t,
-                            showBadge: x || N || r
+                            showBadge: x || v || r
                         })
                     })
                 ]

@@ -14,7 +14,7 @@ var i,
     p = n(345898),
     g = n(981631),
     _ = n(262203);
-function C(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function C(e, t, n) {
         e
     );
 }
-class E extends (i = l.PureComponent) {
+class C extends (i = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
             c = s ? f.$G : p.Z;
@@ -42,7 +42,7 @@ class E extends (i = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            C(this, 'renderActions', () => {
+            E(this, 'renderActions', () => {
                 let { inLibrary: e, sku: t, renderCustomActions: n, isMouseOver: i, showBuyInline: l } = this.props,
                     a = (l || !t.requiresPayment) && !e;
                 return null != n
@@ -64,7 +64,7 @@ class E extends (i = l.PureComponent) {
                           ]
                       });
             }),
-            C(this, 'renderMedia', () => {
+            E(this, 'renderMedia', () => {
                 let { playing: e, muted: t, showMediaPlaceholder: n, onToggleMute: i, sku: a, isHorizontal: s, storeListing: c } = this.props;
                 return (0, r.jsxs)(l.Fragment, {
                     children: [
@@ -86,11 +86,11 @@ class E extends (i = l.PureComponent) {
             });
     }
 }
-C(E, 'defaultProps', {
+E(C, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 }),
-    (t.Z = E);
+    (t.Z = C);

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return y;
     }
 }),
     n(47120),
@@ -21,48 +21,48 @@ var r = n(568611),
     p = n(523746),
     g = n(592125),
     _ = n(594174),
-    C = n(630388),
-    E = n(823379),
+    E = n(630388),
+    C = n(823379),
     I = n(624138),
     x = n(317381),
-    v = n(638880),
-    N = n(122613),
+    N = n(638880),
+    v = n(122613),
     T = n(147865),
     S = n(778569),
-    b = n(884338),
-    A = n(403404),
+    A = n(884338),
+    b = n(403404),
     j = n(701488),
     Z = n(981631),
     R = n(388032),
     P = n(896219);
-let y = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
-function L(e) {
+let L = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+function y(e) {
     var t, n, a, I;
-    let { applicationId: L, message: O } = e,
+    let { applicationId: y, message: O } = e,
         { analyticsLocations: M } = (0, d.ZP)(u.Z.ACTIVITY_BOOKMARK),
         k = (0, c.O)(),
         D = O.channel_id,
         B = (0, l.e7)([g.Z], () => g.Z.getChannel(D), [D]),
-        w = null == B ? void 0 : B.guild_id,
-        U = null != B && (B.isGuildVoice() || B.isPrivate()),
+        U = null == B ? void 0 : B.guild_id,
+        w = null != B && (B.isGuildVoice() || B.isPrivate()),
         F = (0, l.e7)([x.ZP], () => x.ZP.getSelfEmbeddedActivityForChannel(D)),
-        G = (null == F ? void 0 : F.applicationId) === L,
-        [V] = (0, h.Z)([L, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
+        G = (null == F ? void 0 : F.applicationId) === y,
+        [V] = (0, h.Z)([y, null !== (n = null == F ? void 0 : F.applicationId) && void 0 !== n ? n : '']),
         H = (0, T.ZP)(null !== (a = null == V ? void 0 : V.maxParticipants) && void 0 !== a ? a : 0),
-        [z] = (0, l.Wu)([x.ZP], () => (U ? x.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === L) : []), [L, D, U]),
+        [z] = (0, l.Wu)([x.ZP], () => (w ? x.ZP.getEmbeddedActivitiesForChannel(D).filter((e) => e.applicationId === y) : []), [y, D, w]),
         W = Array.from(null !== (I = null == z ? void 0 : z.userIds) && void 0 !== I ? I : []),
-        K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(E.lm), [W]),
+        K = (0, l.Wu)([_.default], () => W.map((e) => _.default.getUser(e)).filter(C.lm), [W]),
         Y = (0, S.Z)({
-            applicationId: L,
-            size: y,
+            applicationId: y,
+            size: L,
             names: ['embedded_cover']
         }),
         X = f.Z.getWindowOpen(Z.KJ3.CHANNEL_CALL_POPOUT),
         Q = K.length > 0 ? R.intl.string(R.t.VJlc0d) : R.intl.string(R.t.I0v0Qk),
         q = async () => {
-            if (U) {
+            if (w) {
                 if (null != z && K.length > 0)
-                    await (0, v.Z)({
+                    await (0, N.Z)({
                         applicationId: z.applicationId,
                         activityChannelId: D,
                         locationObject: k.location,
@@ -71,8 +71,8 @@ function L(e) {
                 else {
                     let e = B.isPrivate() && !p.Z.isCallActive(D),
                         t = async () =>
-                            await (0, N.Z)({
-                                targetApplicationId: L,
+                            await (0, v.Z)({
+                                targetApplicationId: y,
                                 channelId: D,
                                 analyticsLocations: M,
                                 commandOrigin: m.bB.ACTIVITY_BOOKMARK_EMBED
@@ -88,16 +88,16 @@ function L(e) {
                         : t();
                 }
             } else
-                (0, A.Z)({
-                    guildId: w,
+                (0, b.Z)({
+                    guildId: U,
                     locationObject: k.location,
                     openInPopout: X,
-                    initialSelectedApplicationId: L,
+                    initialSelectedApplicationId: y,
                     initialSlide: j.ag.SELECT_CHANNEL,
                     analyticsLocations: M
                 });
         };
-    return null != V && (0, C.yE)(V.flags, Z.udG.EMBEDDED)
+    return null != V && (0, E.yE)(V.flags, Z.udG.EMBEDDED)
         ? (0, i.jsx)(d.Gt, {
               value: M,
               children: (0, i.jsxs)('div', {
@@ -128,7 +128,7 @@ function L(e) {
                                   className: P.learnMore,
                                   variant: 'heading-sm/medium',
                                   children: (0, i.jsx)(r.rU, {
-                                      to: Z.Z5c.ACTIVITY_DETAILS(L),
+                                      to: Z.Z5c.ACTIVITY_DETAILS(y),
                                       children: R.intl.string(R.t.hvVgAQ)
                                   })
                               }),
@@ -138,8 +138,8 @@ function L(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: P.avatars,
-                                                children: (0, i.jsx)(b.Z, {
-                                                    guildId: w,
+                                                children: (0, i.jsx)(A.Z, {
+                                                    guildId: U,
                                                     users: K,
                                                     max: 4
                                                 })

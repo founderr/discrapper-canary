@@ -19,19 +19,19 @@ var i = n(200651),
     p = n(37772),
     g = n(695346),
     _ = n(314897),
-    C = n(496675),
-    E = n(594174),
+    E = n(496675),
+    C = n(594174),
     I = n(55935),
     x = n(655354),
-    v = n(809780),
-    N = n(981631),
+    N = n(809780),
+    v = n(981631),
     T = n(388032),
     S = n(896845);
-let b = {
+let A = {
     left: 4,
     right: -12
 };
-function A(e) {
+function b(e) {
     var t;
     let { channel: n, message: l, compact: a, isGroupStart: s, treatSpam: u, gotoChannel: d } = e,
         m = (0, o.JA)(null !== (t = l.id) && void 0 !== t ? t : ''),
@@ -45,7 +45,7 @@ function A(e) {
             [n.id]
         );
     return (0, i.jsx)(c.FocusRing, {
-        offset: b,
+        offset: A,
         children: (0, i.jsxs)(
             'div',
             {
@@ -79,21 +79,21 @@ function j(e) {
     let { channel: r, channelRecord: l, gotoChannel: o } = e,
         { enabled: p } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         x = g.jU.useSetting(),
-        b = (0, s.e7)([C.Z], () => C.Z.can(N.Plq.CREATE_INSTANT_INVITE, l)),
+        A = (0, s.e7)([E.Z], () => E.Z.can(v.Plq.CREATE_INSTANT_INVITE, l)),
         j = (0, h.P1)(l),
         Z = !1,
         R = 0 === r.messages.length || a()(r.messages[0].timestamp).isSame(a()(), 'day'),
-        P = null !== (n = null === (t = E.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(N.xW$.SPAMMER)) && void 0 !== n && n,
-        y = [];
+        P = null !== (n = null === (t = C.default.getUser(_.default.getId())) || void 0 === t ? void 0 : t.hasFlag(v.xW$.SPAMMER)) && void 0 !== n && n,
+        L = [];
     if (!r.collapsed) {
         let e = null,
             t = null,
-            n = r.messages.slice(0, v.hC);
+            n = r.messages.slice(0, N.hC);
         n.forEach((n) => {
-            if (!(0, d.Z)(n, b)) {
+            if (!(0, d.Z)(n, A)) {
                 if (!R && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, I.vc)(n.timestamp, 'LL');
-                    y.push(
+                    L.push(
                         (0, i.jsx)(
                             f.Z,
                             {
@@ -108,9 +108,9 @@ function j(e) {
                 let r = null == t || (0, m.Z)(l, t, n);
                 (t = n),
                     (Z = Z || (0, h.DQ)(n)),
-                    y.push(
+                    L.push(
                         (0, i.jsx)(
-                            A,
+                            b,
                             {
                                 channel: l,
                                 message: n,
@@ -124,8 +124,8 @@ function j(e) {
                     );
             }
         }),
-            r.messages.length >= v.hC &&
-                y.push(
+            r.messages.length >= N.hC &&
+                L.push(
                     (0, i.jsxs)(
                         c.Button,
                         {
@@ -137,13 +137,13 @@ function j(e) {
                         'view-all'
                     )
                 ),
-            0 === y.length && (y = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
+            0 === L.length && (L = [(0, i.jsx)(c.Spinner, {}, 'spinner')]);
     }
     return (
         Z && j && u.Z.trackExposure({ location: '20e3b0_2' }),
         (0, i.jsx)('div', {
             className: S.messages,
-            children: y
+            children: L
         })
     );
 }

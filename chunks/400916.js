@@ -19,9 +19,9 @@ function f(e) {
     var t, n, r, f;
     let { guildId: p, productId: g } = e,
         _ = (0, a.e7)([c.Z], () => c.Z.getGuildProduct(g)),
-        C = (null !== (f = null == _ ? void 0 : null === (t = _.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== f ? f : 0) > 1,
-        E = null == _ ? void 0 : null === (r = _.attachments) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.id;
-    return C
+        E = (null !== (f = null == _ ? void 0 : null === (t = _.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== f ? f : 0) > 1,
+        C = null == _ ? void 0 : null === (r = _.attachments) || void 0 === r ? void 0 : null === (n = r[0]) || void 0 === n ? void 0 : n.id;
+    return E
         ? (0, i.jsxs)(o.Button, {
               onClick: function () {
                   u.Z.open({
@@ -43,11 +43,11 @@ function f(e) {
                   })
               ]
           })
-        : (l()(null != E, 'No attachment'),
+        : (l()(null != C, 'No attachment'),
           (0, i.jsxs)(d.Z, {
               guildId: p,
               productId: g,
-              attachmentId: E,
+              attachmentId: C,
               innerClassName: h.textWithIcon,
               children: [
                   (0, i.jsx)('div', { children: m.intl.string(m.t.t9bE9f) }),

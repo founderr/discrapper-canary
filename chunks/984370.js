@@ -19,12 +19,12 @@ var r = n(120356),
     p = n(208450),
     g = n(358085),
     _ = n(998502),
-    C = n(665149),
-    E = n(300986),
+    E = n(665149),
+    C = n(300986),
     I = n(314451),
     x = n(35583),
-    v = n(981631),
-    N = n(176505),
+    N = n(981631),
+    v = n(176505),
     T = n(228856);
 async function S() {
     if ((0, g.isMac)() && g.isPlatformEmbedded) {
@@ -33,12 +33,12 @@ async function S() {
         'Minimize' === i ? _.ZP.minimize() : 'Maximize' === i && _.ZP.maximize();
     }
 }
-function b(e) {
-    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: g, mobileToolbar: _, 'aria-label': v, 'aria-labelledby': N, scrollable: b, role: A, hideSearch: j, showDivider: Z } = e,
+function A(e) {
+    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: g, mobileToolbar: _, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
         { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
-        { enabled: P, inInbox: y } = h.Z.useExperiment({ location: 'HeaderBar' }),
-        L = (0, d.Q)('HeaderBar');
-    return (0, i.jsx)(C.ZP, {
+        { enabled: P, inInbox: L } = h.Z.useExperiment({ location: 'HeaderBar' }),
+        y = (0, d.Q)('HeaderBar');
+    return (0, i.jsx)(E.ZP, {
         className: n,
         innerClassName: o,
         toolbar: (function () {
@@ -47,21 +47,21 @@ function b(e) {
             return a.tq
                 ? _
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [g, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(C.ZP.Divider, {}), !L && (0, i.jsx)(x.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !L && (0, i.jsx)(m.Z, {}), P && !y ? (0, i.jsx)(f.Z, {}) : null, !L && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(E.Z, {}))]
+                      children: [g, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), P && !L ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
                   });
         })(),
         transparent: s,
         onDoubleClick: S,
-        'aria-label': v,
-        'aria-labelledby': N,
-        role: A,
-        scrollable: b,
+        'aria-label': N,
+        'aria-labelledby': v,
+        role: b,
+        scrollable: A,
         children: t
     });
 }
-function A(e) {
+function b(e) {
     let { children: t, className: n, 'aria-label': r, 'aria-labelledby': l, role: a } = e;
-    return (0, i.jsx)(C.ZP, {
+    return (0, i.jsx)(E.ZP, {
         className: n,
         onDoubleClick: S,
         'aria-label': r,
@@ -73,18 +73,18 @@ function A(e) {
 function j(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: r } = (0, s.ZP)(o.Z.HEADER_BAR),
-        a = l()(n.className, { [T.forumOrHome]: (null != n.channelType && v.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === N.oC.GUILD_HOME });
+        a = l()(n.className, { [T.forumOrHome]: (null != n.channelType && N.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === v.oC.GUILD_HOME });
     return (0, i.jsx)(s.Gt, {
         value: r,
         children: t
-            ? (0, i.jsx)(b, {
+            ? (0, i.jsx)(A, {
                   ...n,
                   className: a
               })
-            : (0, i.jsx)(A, {
+            : (0, i.jsx)(b, {
                   ...n,
                   className: a
               })
     });
 }
-(j.Title = C.ZP.Title), (j.Icon = C.ZP.Icon), (j.Divider = C.ZP.Divider), (j.Caret = C.ZP.Caret), (t.Z = j);
+(j.Title = E.ZP.Title), (j.Icon = E.ZP.Icon), (j.Divider = E.ZP.Divider), (j.Caret = E.ZP.Caret), (t.Z = j);

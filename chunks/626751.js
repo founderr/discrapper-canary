@@ -26,7 +26,7 @@ function m(e) {
             [p]
         ),
         _ = null != g && (0, s.yE)(g, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
-        C = r.useMemo(() => (0, c._i)(m, h), [m, h]);
+        E = r.useMemo(() => (0, c._i)(m, h), [m, h]);
     return _
         ? null
         : (0, i.jsx)(a.Z, {
@@ -35,6 +35,6 @@ function m(e) {
               buttonLabels: f,
               stickers: u.HG,
               event: d.rMx.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CTA_CLICKED,
-              eventProperties: C
+              eventProperties: E
           });
 }

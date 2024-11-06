@@ -14,29 +14,29 @@ var i = n(200651),
     p = n(607070),
     g = n(884697),
     _ = n(600164),
-    C = n(479446),
-    E = n(930114),
+    E = n(479446),
+    C = n(930114),
     I = n(981632),
     x = n(108989),
-    v = n(703656),
-    N = n(314897),
+    N = n(703656),
+    v = n(314897),
     T = n(82142),
     S = n(283595),
-    b = n(594174),
-    A = n(509545),
+    A = n(594174),
+    b = n(509545),
     j = n(55563),
     Z = n(199480),
     R = n(626135),
     P = n(669079),
-    y = n(74538),
-    L = n(296848),
+    L = n(74538),
+    y = n(296848),
     O = n(51144),
     M = n(626799),
     k = n(981631),
     D = n(474936),
     B = n(388032),
-    w = n(216981);
-function U(e, t, n) {
+    U = n(216981);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,13 +52,13 @@ function U(e, t, n) {
 function F(e) {
     let { onClick: t, libraryApplication: n } = e;
     return (0, i.jsxs)(u.Clickable, {
-        className: w.libraryLink,
+        className: U.libraryLink,
         onClick: t,
         children: [
             (0, i.jsx)(u.InventoryIcon, {
                 size: 'md',
                 color: 'currentColor',
-                className: w.libraryIcon
+                className: U.libraryIcon
             }),
             (0, i.jsx)('div', { children: n.isHidden() ? B.intl.string(B.t.Wi99Rk) : B.intl.string(B.t['+tXad3']) })
         ]
@@ -83,9 +83,9 @@ class G extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            U(this, 'renderMedia', () => (0, i.jsx)('div', { className: a()(w.invalidPoop, { [w.invalidPoopHorizontal]: this.isHorizontal }) })),
-            U(this, 'renderTitle', () => (this.props.isSelfGift ? B.intl.string(B.t['mT9B4+']) : B.intl.string(B.t.Vo5yHx))),
-            U(this, 'renderActions', () =>
+            w(this, 'renderMedia', () => (0, i.jsx)('div', { className: a()(U.invalidPoop, { [U.invalidPoopHorizontal]: this.isHorizontal }) })),
+            w(this, 'renderTitle', () => (this.props.isSelfGift ? B.intl.string(B.t['mT9B4+']) : B.intl.string(B.t.Vo5yHx))),
+            w(this, 'renderActions', () =>
                 this.props.isSelfGift
                     ? (0, i.jsx)(u.Button, {
                           size: u.Button.Sizes.SMALL,
@@ -98,7 +98,7 @@ class G extends r.PureComponent {
                           children: B.intl.string(B.t.bUvv1d)
                       })
             ),
-            U(this, 'renderTagline', () => (this.props.isSelfGift ? B.intl.string(B.t.aUqE6e) : B.intl.string(B.t['2mWvHB'])));
+            w(this, 'renderTagline', () => (this.props.isSelfGift ? B.intl.string(B.t.aUqE6e) : B.intl.string(B.t['2mWvHB'])));
     }
 }
 class V extends r.Component {
@@ -130,7 +130,7 @@ class V extends r.Component {
                 (0, i.jsxs)(_.Z, {
                     align: _.Z.Align.END,
                     justify: _.Z.Justify.END,
-                    className: w.metadata,
+                    className: U.metadata,
                     direction: _.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.intl.format(B.t.nZBvUV, { hours: e.expiresAt.diff(s()(), 'h') }) })]
                 })
@@ -150,12 +150,12 @@ class V extends r.Component {
                 onClick: this.handleAccept,
                 color: u.Button.Colors.BRAND
             },
-            a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && r) || (e.isExistingPremiumSubscriptionDisallowed && (0, y.I5)(n));
+            a = (!e.isSubscription && null != t) || (!e.isSelfRedeemable && r) || (e.isExistingPremiumSubscriptionDisallowed && (0, L.I5)(n));
         return (
             (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.Button.Colors.BRAND), (l.disabled = !0)),
             (0, i.jsx)(u.Button, {
                 ...l,
-                className: (0, g.mO)(e) ? w.collectiblesAcceptButton : null,
+                className: (0, g.mO)(e) ? U.collectiblesAcceptButton : null,
                 size: u.Button.Sizes.SMALL,
                 children: e.redeemed ? B.intl.string(B.t.BTihoq) : null != e.giftStyle ? B.intl.string(B.t.TiZFqa) : B.intl.string(B.t.bUvv1d)
             })
@@ -273,21 +273,21 @@ class V extends r.Component {
                 : (0, i.jsx)(m.OR, { isHorizontal: n >= m.aL });
         return (0, g.mO)(e)
             ? (0, i.jsx)('div', {
-                  className: w.collectiblesEmbedWrapper,
+                  className: U.collectiblesEmbedWrapper,
                   children: this.renderEmbed()
               })
             : this.renderEmbed();
     }
     constructor(...e) {
         super(...e),
-            U(this, 'handleViewLibrary', (e) => {
+            w(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, N.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, N.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
-            U(this, 'handleVerificationClick', (e) => {
+            w(this, 'handleVerificationClick', (e) => {
                 e.stopPropagation(), e.preventDefault(), d.Z.open(k.oAB.ACCOUNT);
             }),
-            U(this, 'handleAccept', (e) => {
+            w(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: i, type: r, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
@@ -299,36 +299,36 @@ class V extends r.Component {
                         }
                     });
                 let a = r !== k.uaV.CUSTOM_GIFT ? void 0 : i;
-                (0, E.V)({
+                (0, C.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: a,
                     giftInfo: l
                 });
             }),
-            U(this, 'handleEmbedClick', (e) => {
+            w(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
                 null != t && t.isSubscription && (e.preventDefault(), d.Z.open(k.oAB.PREMIUM));
             }),
-            U(this, 'handleClaimPromotion', (e) => {
+            w(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null === (t = this.props.giftCode) || void 0 === t ? void 0 : t.code;
                 if (null != n) window.open(k.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
-            U(this, 'renderCustomGiftBox', (e) => {
+            w(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
                 let r = D.jy.includes(e.giftStyle),
-                    l = a()(w.customGiftEmbedWrapper, {
-                        [w.legacySeasonalGiftEmbedWrapper]: r,
-                        [w.giftEmbedWrapperHorizontal]: n >= m.aL
+                    l = a()(U.customGiftEmbedWrapper, {
+                        [U.legacySeasonalGiftEmbedWrapper]: r,
+                        [U.giftEmbedWrapperHorizontal]: n >= m.aL
                     }),
                     o = a()({
-                        [w.legacySeasonalGiftEmbedBox]: r,
-                        [w.legacySeasonalGiftEmbedBoxHorizontal]: r && n >= m.aL,
-                        [w.customGiftEmbedBox]: !r,
-                        [w.customGiftEmbedBoxHorizontal]: !r && n >= m.aL
+                        [U.legacySeasonalGiftEmbedBox]: r,
+                        [U.legacySeasonalGiftEmbedBoxHorizontal]: r && n >= m.aL,
+                        [U.customGiftEmbedBox]: !r,
+                        [U.customGiftEmbedBoxHorizontal]: !r && n >= m.aL
                     });
                 return (0, i.jsxs)('div', {
                     className: l,
@@ -336,13 +336,13 @@ class V extends r.Component {
                         !t &&
                             D.eZ.includes(e.giftStyle) &&
                             (0, i.jsx)(x.Z, {
-                                className: w.snow,
+                                className: U.snow,
                                 wind: 5
                             }),
-                        r && (0, i.jsx)(Z.Z, { className: w.headerIcon }),
+                        r && (0, i.jsx)(Z.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
                             (0, i.jsx)(I.Z, {
-                                defaultAnimationState: e.redeemed ? C.SR.LOOP : C.SR.IDLE,
+                                defaultAnimationState: e.redeemed ? E.SR.LOOP : E.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: o
                             })
@@ -352,19 +352,19 @@ class V extends r.Component {
     }
 }
 let H = (0, f.Z)((0, h.Z)(V));
-t.Z = c.ZP.connectStores([T.Z, j.Z, b.default, S.Z, A.Z, N.default, p.Z], (e) => {
+t.Z = c.ZP.connectStores([T.Z, j.Z, A.default, S.Z, b.Z, v.default, p.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
         r = T.Z.get(t),
         l = null != r ? j.Z.get(r.skuId) : null,
-        a = null != r && null != r.userId ? b.default.getUser(r.userId) : null,
+        a = null != r && null != r.userId ? A.default.getUser(r.userId) : null,
         o = p.Z.useReducedMotion;
     return {
         sku: l,
         giftCode: r,
         gifter: a,
         currentUser: i,
-        subscriptionPlan: null != r && null != r.subscriptionPlanId ? (0, L.oE)(r.subscriptionPlanId) : null,
-        isSelfGift: null != r ? N.default.getId() === r.userId : N.default.getId() === n.id,
+        subscriptionPlan: null != r && null != r.subscriptionPlanId ? (0, y.oE)(r.subscriptionPlanId) : null,
+        isSelfGift: null != r ? v.default.getId() === r.userId : v.default.getId() === n.id,
         resolved: T.Z.getIsResolved(t),
         libraryApplication: null != l && (null == r ? void 0 : r.entitlementBranches) != null ? P.z2(r.entitlementBranches, l, S.Z) : null,
         useReducedMotion: o

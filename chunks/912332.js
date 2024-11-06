@@ -22,7 +22,7 @@ function o(e) {
     (0, i.Lb)(o, n, u),
         (0, r.openModalLazy)(
             async () => {
-                let { ForwardModal: e } = await Promise.all([t.e('6380'), t.e('99452')]).then(t.bind(t, 930864));
+                let { ForwardModal: e } = await Promise.all([t.e('6380'), t.e('16918')]).then(t.bind(t, 930864));
                 return (t) =>
                     (0, a.jsx)(e, {
                         ...t,

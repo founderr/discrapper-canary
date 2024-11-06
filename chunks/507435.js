@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 });
 var i,
@@ -18,11 +18,11 @@ var i,
     p = n(942951),
     g = n(834129),
     _ = n(809026),
-    C = n(139256),
-    E = n(489887),
+    E = n(139256),
+    C = n(489887),
     I = n(388032),
     x = n(167919);
-function v() {
+function N() {
     return (0, l.jsx)('svg', {
         width: '24',
         height: '24',
@@ -37,10 +37,10 @@ function v() {
         })
     });
 }
-function N(e) {
+function v(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
-    if (n) t = (0, l.jsx)(v, {});
+    if (n) t = (0, l.jsx)(N, {});
     else if (null != i) {
         let e = '' !== i.name ? i.name : i.displayName;
         t = (0, l.jsx)(m.Z, {
@@ -83,7 +83,7 @@ function T(e) {
                                 scaleFontToUserSetting: !0,
                                 children: r
                             }),
-                            (0, l.jsx)(C.ZY, {
+                            (0, l.jsx)(E.ZY, {
                                 size: 16,
                                 className: x.victorIcon,
                                 isVictor: !0,
@@ -149,7 +149,7 @@ function S(e) {
     return (0, l.jsxs)('div', {
         className: s()(x.container, { [x.containerWithImage]: o }, t),
         children: [
-            (0, l.jsx)(N, {
+            (0, l.jsx)(v, {
                 hasNoVotes: 'NO_VOTES' === r.type,
                 victorEmoji: n.victorEmoji
             }),
@@ -170,29 +170,29 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function A(e) {
     var t;
     let { message: n, channel: i, compact: r, disableInteraction: o = !1 } = e,
         s = n.embeds[0],
         m = a.useMemo(() => (0, _.Z)(s), [s]),
-        h = (0, c.aF)(null !== (t = null == m ? void 0 : m.questionText) && void 0 !== t ? t : '', E.Dv),
-        C = (0, f.ZP)(n),
-        v = (0, p.l)({
+        h = (0, c.aF)(null !== (t = null == m ? void 0 : m.questionText) && void 0 !== t ? t : '', C.Dv),
+        E = (0, f.ZP)(n),
+        N = (0, p.l)({
             user: n.author,
             channelId: i.id,
             guildId: i.guild_id,
             messageId: n.id
         }),
-        N = n.messageReference,
+        v = n.messageReference,
         T = a.useCallback(() => {
-            null != N &&
+            null != v &&
                 d.Z.jumpToMessage({
-                    channelId: N.channel_id,
-                    messageId: N.message_id,
+                    channelId: v.channel_id,
+                    messageId: v.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, N]);
+        }, [n.id, v]);
     return null == m
         ? null
         : (0, l.jsxs)(l.Fragment, {
@@ -202,8 +202,8 @@ function b(e) {
                       timestamp: n.timestamp,
                       compact: r,
                       children: I.intl.format(I.t['VJcK4+'], {
-                          username: C.nick,
-                          usernameHook: v(C),
+                          username: E.nick,
+                          usernameHook: N(E),
                           title: h,
                           titleOnClick: T
                       })

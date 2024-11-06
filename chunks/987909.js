@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(709054),
     g = n(838440),
     _ = n(981631),
-    C = n(385920);
-function E(e) {
+    E = n(385920);
+function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
         r = (p.default.extractTimestamp(n.id) + p.default.extractTimestamp(i.id)) % t.length;
     return t[r];
@@ -30,7 +30,7 @@ function I(e) {
         [p, _] = r.useState(!1),
         I = r.useMemo(
             () =>
-                E({
+                C({
                     assets: d,
                     currentUser: t,
                     message: l
@@ -39,14 +39,14 @@ function I(e) {
         ),
         x = r.useMemo(
             () =>
-                E({
+                C({
                     assets: u,
                     currentUser: t,
                     message: l
                 }),
             [u, t, l]
         ),
-        v = r.useCallback(async () => {
+        N = r.useCallback(async () => {
             let { valid: e } = await (0, g.v)({
                 type: s.I.FORM,
                 content: '',
@@ -84,15 +84,15 @@ function I(e) {
                 }));
         }, [n, l, I, m, h]);
     return (0, i.jsxs)(a.Button, {
-        className: C.CTAMessageButtonOuter,
-        innerClassName: C.CTAMessageButton,
+        className: E.CTAMessageButtonOuter,
+        innerClassName: E.CTAMessageButton,
         color: a.ButtonColors.PRIMARY,
         onMouseEnter: () => _(!0),
         onMouseLeave: () => _(!1),
-        onClick: v,
+        onClick: N,
         children: [
             (0, i.jsx)(c.ZP, {
-                className: C.CTAMessageSticker,
+                className: E.CTAMessageSticker,
                 isInteracting: p,
                 sticker: I,
                 size: 28
@@ -123,7 +123,7 @@ function x(e) {
         });
     return null != c && f
         ? (0, i.jsx)('div', {
-              className: C.CTAMessage,
+              className: E.CTAMessage,
               children: (0, i.jsx)(I, {
                   currentUser: c,
                   channel: t,

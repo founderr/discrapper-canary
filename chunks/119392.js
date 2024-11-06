@@ -19,8 +19,8 @@ var r = n(481060),
     p = n(128449),
     g = n(388032),
     _ = n(818768),
-    C = n(761604);
-function E(e) {
+    E = n(761604);
+function C(e) {
     let { gameId: t, onSelect: n } = e;
     return (0, i.jsx)(r.Menu, {
         onSelect: n,
@@ -61,7 +61,7 @@ function I(e) {
             align: 'right',
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, i.jsx)(E, {
+                return (0, i.jsx)(C, {
                     gameId: t,
                     onSelect: n
                 });
@@ -122,7 +122,7 @@ function x(e) {
                             }),
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: C,
+                                src: E,
                                 className: _.errorImage
                             })
                         ]

@@ -18,22 +18,22 @@ var i = n(200651),
     p = n(256638),
     g = n(385499),
     _ = n(528011),
-    C = n(533244),
-    E = n(825829),
+    E = n(533244),
+    C = n(825829),
     I = n(226192),
     x = n(36459),
-    v = n(434404),
-    N = n(518950),
+    N = n(434404),
+    v = n(518950),
     T = n(347475),
     S = n(592125),
-    b = n(271383),
-    A = n(594174),
+    A = n(271383),
+    b = n(594174),
     j = n(464891),
     Z = n(348238),
     R = n(83561),
     P = n(834129),
-    y = n(981631),
-    L = n(674563),
+    L = n(981631),
+    y = n(674563),
     O = n(388032),
     M = n(38814);
 function k() {
@@ -41,9 +41,9 @@ function k() {
 }
 function D(e) {
     let { message: t, compact: n } = e,
-        { notificationType: r } = (0, E.FL)(t);
+        { notificationType: r } = (0, C.FL)(t);
     switch (r) {
-        case E.nj:
+        case C.nj:
         case u.p.RAID:
             return (0, i.jsx)(F, {
                 message: t,
@@ -55,12 +55,12 @@ function D(e) {
                 compact: n
             });
         case u.p.ACTIVITY_ALERTS_ENABLED:
-            return (0, i.jsx)(U, {
+            return (0, i.jsx)(w, {
                 message: t,
                 compact: n
             });
         case u.p.INTERACTION_BLOCKED:
-            return (0, i.jsx)(w, { compact: n });
+            return (0, i.jsx)(U, { compact: n });
         default:
             return (0, i.jsx)(B, { compact: n });
     }
@@ -89,7 +89,7 @@ function B(e) {
         })
     });
 }
-function w(e) {
+function U(e) {
     let { compact: t } = e;
     return (0, i.jsx)(V, {
         compact: t,
@@ -113,17 +113,17 @@ function w(e) {
         })
     });
 }
-function U(e) {
+function w(e) {
     var t;
     let { message: n, compact: l } = e,
-        a = A.default.getUser((0, E.Sw)(n)),
+        a = b.default.getUser((0, C.Sw)(n)),
         o = null === (t = S.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
-        c = null != o && null != a ? b.ZP.getMember(o, a.id) : null,
+        c = null != o && null != a ? A.ZP.getMember(o, a.id) : null,
         {
             avatarSrc: u,
             avatarDecorationSrc: d,
             eventHandlers: m
-        } = (0, N.Z)({
+        } = (0, v.Z)({
             user: a,
             guildId: o,
             size: 12
@@ -214,17 +214,17 @@ function U(e) {
 function F(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: p, resolvedReason: g } = (0, E.FL)(n),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: p, resolvedReason: g } = (0, C.FL)(n),
         x = (0, m.e7)([S.Z], () => S.Z.getChannel(n.channel_id), [n.channel_id]),
-        v = null !== (t = null == x ? void 0 : x.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: N } = (0, _.mI)(v),
+        N = null !== (t = null == x ? void 0 : x.guild_id) && void 0 !== t ? t : null,
+        { shouldShowIncidentActions: v } = (0, _.mI)(N),
         T = (0, Z.sR)(n.author.id, n.channel_id),
-        b = r.useCallback(() => {
+        A = r.useCallback(() => {
             let e = null == x ? void 0 : x.guild_id;
             null != e && (0, I.kW)(n.id, e);
         }, [n.id, x]),
-        A = p === d.$.DM_RAID,
-        j = A ? f.CircleWarningIcon : f.ChatWarningIcon;
+        b = p === d.$.DM_RAID,
+        j = b ? f.CircleWarningIcon : f.ChatWarningIcon;
     return (0, i.jsx)(V, {
         compact: l,
         header: (0, i.jsxs)(r.Fragment, {
@@ -236,7 +236,7 @@ function F(e) {
                 (0, i.jsx)(f.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: A ? O.intl.string(O.t['8+lHUV']) : O.intl.string(O.t.xMwcwc)
+                    children: b ? O.intl.string(O.t['8+lHUV']) : O.intl.string(O.t.xMwcwc)
                 })
             ]
         }),
@@ -273,10 +273,10 @@ function F(e) {
                 ? (0, i.jsx)(f.Text, {
                       variant: 'text-md/normal',
                       color: 'text-muted',
-                      children: O.intl.format(O.t['4QIIZm'], { dateTime: o.toLocaleString(O.intl.currentLocale, C.pQ) })
+                      children: O.intl.format(O.t['4QIIZm'], { dateTime: o.toLocaleString(O.intl.currentLocale, E.pQ) })
                   })
                 : null,
-        footerButtons: N
+        footerButtons: v
             ? (0, i.jsxs)('div', {
                   className: M.dotSeparatedRow,
                   children: [
@@ -306,7 +306,7 @@ function F(e) {
                       }),
                       (0, i.jsx)(k, {}),
                       (0, i.jsx)(f.Button, {
-                          onClick: b,
+                          onClick: A,
                           color: f.Button.Colors.LINK,
                           look: f.Button.Looks.LINK,
                           size: f.Button.Sizes.SMALL,
@@ -316,7 +316,7 @@ function F(e) {
                               children: (0, i.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, E.ge)(g)
+                                  children: (0, C.ge)(g)
                               })
                           })
                       })
@@ -329,7 +329,7 @@ function G(e) {
     var t;
     let { message: n, compact: l } = e,
         a = null === (t = S.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
-        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, E.FL)(n);
+        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, C.FL)(n);
     return (0, i.jsx)(V, {
         compact: l,
         header: (0, i.jsxs)(r.Fragment, {
@@ -387,7 +387,7 @@ function G(e) {
                 (0, i.jsx)(k, {}),
                 (0, i.jsx)(f.Button, {
                     onClick: function () {
-                        null != a && v.Z.open(a, y.pNK.GUILD_AUTOMOD, void 0, y.KsC.AUTOMOD_MENTION_SPAM);
+                        null != a && N.Z.open(a, L.pNK.GUILD_AUTOMOD, void 0, L.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: f.Button.Colors.LINK,
                     look: f.Button.Looks.LINK,
@@ -447,7 +447,7 @@ function H(e) {
             avatarSrc: o,
             eventHandlers: { onMouseEnter: s, onMouseLeave: c }
         } = (0, R.m)(!0),
-        { notificationType: d } = (0, E.FL)(r),
+        { notificationType: d } = (0, C.FL)(r),
         m = null == d || d === u.p.RAID;
     return (0, i.jsx)('div', {
         onMouseEnter: s,
@@ -475,7 +475,7 @@ function H(e) {
                                     children: O.intl.string(O.t.hG1StL)
                                 }),
                                 (0, i.jsx)(g.Z, {
-                                    type: L.Hb.SYSTEM_DM,
+                                    type: y.Hb.SYSTEM_DM,
                                     className: M.systemTag
                                 }),
                                 m &&

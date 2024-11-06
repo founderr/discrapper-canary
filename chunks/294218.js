@@ -13,26 +13,26 @@ var i = n(200651),
     p = n(786761),
     g = n(900164),
     _ = n(739566),
-    C = n(492593),
-    E = n(453687),
+    E = n(492593),
+    C = n(453687),
     I = n(25015),
     x = n(689674),
-    v = n(438075),
-    N = n(963550),
+    N = n(438075),
+    v = n(963550),
     T = n(845080),
     S = n(295790),
-    b = n(145807),
-    A = n(56744),
+    A = n(145807),
+    b = n(56744),
     j = n(981631),
     Z = n(916315);
 t.Z = r.memo(function (e) {
     var t, n;
-    let { message: r, compact: l = !1, className: R, onContextMenu: P, onClick: y, hideSimpleEmbedContent: L = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: w = !1, ...U } = e,
+    let { message: r, compact: l = !1, className: R, onContextMenu: P, onClick: L, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,
         F = r.type === j.uaV.POLL_RESULT || (null !== (t = e.disableInteraction) && void 0 !== t && t),
         G = r.isFirstMessageInForumPost(O),
         V = (0, u.A)((null !== (n = r.editedTimestamp) && void 0 !== n ? n : r.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: z } = (0, I.Z)(r, {
-            hideSimpleEmbedContent: L,
+            hideSimpleEmbedContent: y,
             allowList: G || V,
             allowHeading: G || V,
             allowLinks: !0,
@@ -51,40 +51,40 @@ t.Z = r.memo(function (e) {
         $ = (0, x.Z)({
             message: r,
             channel: O,
-            enabled: w
+            enabled: U
         });
     if ((0, g.Z)(r, J)) return null;
-    let ee = (0, E.iG)(r),
-        et = (0, E.Gx)(r);
-    return (0, i.jsx)(C.Z, {
+    let ee = (0, C.iG)(r),
+        et = (0, C.Gx)(r);
+    return (0, i.jsx)(E.Z, {
         compact: l,
         className: a()(R, {
             [Z.ephemeral]: (0, p.Pv)(r),
             [Z.disableInteraction]: F
         }),
         disableInteraction: F,
-        childrenRepliedMessage: (0, A.Z)(r, O, W, K, l),
-        childrenExecutedCommand: (0, b.Z)(r, O, l),
+        childrenRepliedMessage: (0, b.Z)(r, O, W, K, l),
+        childrenExecutedCommand: (0, A.Z)(r, O, l),
         childrenHeader: (0, T.Z)({
             ...e,
             guildId: O.guild_id,
             author: X,
             roleIcon: q
         }),
-        childrenAccessories: e.hideAccessories ? void 0 : (0, v.Q)(e, z),
-        childrenMessageContent: (0, N.Z)(e, H),
+        childrenAccessories: e.hideAccessories ? void 0 : (0, N.Q)(e, z),
+        childrenMessageContent: (0, v.Z)(e, H),
         childrenSystemMessage: (0, S.Z)({
             ...e,
             disableInteraction: F
         }),
         onContextMenu: P,
-        onClick: y,
+        onClick: L,
         hasThread: B && null != Q && r.hasFlag(j.iLy.HAS_THREAD),
         hasReply: r.type === j.uaV.REPLY,
         'aria-labelledby': ee,
         'aria-describedby': et,
         messageRef: $,
         ...Y,
-        ...U
+        ...w
     });
 });

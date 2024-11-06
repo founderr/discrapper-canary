@@ -7,12 +7,12 @@ var s = n(120356),
     a = n(644646),
     u = n(489066);
 t.Z = function (e) {
-    let { className: t, autoplay: n, quest: s, questContent: d, taskDetails: c, location: m } = e,
+    let { className: t, autoplay: n, quest: s, questContent: c, taskDetails: d, location: m } = e,
         x = (0, o.D)({
             quest: s,
-            taskDetails: c,
+            taskDetails: d,
             location: m,
-            questContent: d
+            questContent: c
         });
     return (0, i.jsxs)('div', {
         className: l()(u.wrapper, t),
@@ -22,7 +22,7 @@ t.Z = function (e) {
                 autoplay: n,
                 className: u.rewardTile,
                 quest: s,
-                questContent: d,
+                questContent: c,
                 location: m
             }),
             (0, i.jsx)(r.Text, {

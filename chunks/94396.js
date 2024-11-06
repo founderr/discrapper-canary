@@ -1,50 +1,50 @@
-t.d(l, {
+t.d(n, {
     _: function () {
-        return u;
+        return s;
     }
 }),
     t(47120),
     t(192379);
-var n = t(374470),
+var o = t(374470),
     i = t(254109),
-    r = t(312097),
-    a = t(52824),
-    s = t(626135),
-    o = t(981631),
-    d = t(268108);
-function u(e, l, t) {
-    let u = {};
-    for (let [m, h] of e.entries())
-        u[
-            (0, a.q)({
-                proxyURL: h.proxyUrl,
-                url: h.url
+    a = t(312097),
+    r = t(52824),
+    c = t(626135),
+    d = t(981631),
+    l = t(268108);
+function s(e, n, t) {
+    let s = {};
+    for (let [u, _] of e.entries())
+        s[
+            (0, r.q)({
+                proxyURL: _.proxyUrl,
+                url: _.url
             })
-        ] = (a) =>
-            (function (e, l, t) {
-                let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-                    u = arguments.length > 4 ? arguments[4] : void 0;
+        ] = (r) =>
+            (function (e, n, t) {
+                let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+                    s = arguments.length > 4 ? arguments[4] : void 0;
                 e.preventDefault(),
-                    (0, n.k)(e.currentTarget) && e.currentTarget.blur(),
-                    null != u &&
-                        (s.default.track(
-                            o.rMx.OPEN_MODAL,
+                    (0, o.k)(e.currentTarget) && e.currentTarget.blur(),
+                    null != s &&
+                        (c.default.track(
+                            d.rMx.OPEN_MODAL,
                             {
-                                type: o.jXE.MEDIA_VIEWER,
-                                ...u
+                                type: d.jXE.MEDIA_VIEWER,
+                                ...s
                             },
                             { throttlePercent: 0.01 }
                         ),
-                        (0, i.fS)(u.guild_id, u.channel_id, u.channel_type, l.length)),
-                    (0, r.K)({
-                        ...a,
-                        className: d.forcedTransparency,
-                        onIndexChange: null != u ? i.f0 : void 0,
-                        items: l,
+                        (0, i.fS)(s.guild_id, s.channel_id, s.channel_type, n.length)),
+                    (0, a.K)({
+                        ...r,
+                        className: l.forcedTransparency,
+                        onIndexChange: null != s ? i.f0 : void 0,
+                        items: n,
                         startingIndex: t,
                         location: 'zoomedMediaModalHelper',
-                        onCloseCallback: null != u ? i.VO : void 0
+                        onCloseCallback: null != s ? i.VO : void 0
                     });
-            })(a, e, m, l, t);
-    return u;
+            })(r, e, u, n, t);
+    return s;
 }

@@ -22,21 +22,21 @@ var i = n(512722),
     p = n(41776),
     g = n(566006),
     _ = n(48854),
-    C = n(869765),
-    E = n(314897),
+    E = n(869765),
+    C = n(314897),
     I = n(592125),
     x = n(703558),
-    v = n(607744),
-    N = n(375954),
+    N = n(607744),
+    v = n(375954),
     T = n(117530),
     S = n(553803),
-    b = n(316758),
-    A = n(467531),
+    A = n(316758),
+    b = n(467531),
     j = n(798628),
     Z = n(918088),
     R = n(981631),
     P = n(388032);
-function y(e, t) {
+function L(e, t) {
     let n = [...t],
         i = 0,
         r = 0;
@@ -51,7 +51,7 @@ function y(e, t) {
         selectedEmojiAnswersCount: r
     };
 }
-function L(e) {
+function y(e) {
     let { guildId: t, title: n, body: i } = e;
     u.Z.show({
         title: n,
@@ -68,14 +68,14 @@ function O(e) {
         r = I.Z.getChannel(t);
     if (null == r) return;
     if (p.Z.isLurking(r.guild_id)) {
-        L({
+        y({
             guildId: r.guild_id,
             title: P.intl.string(P.t['7LpysL']),
             body: P.intl.string(P.t['5sHHo6'])
         });
         return;
     }
-    let l = N.Z.getMessage(t, n);
+    let l = v.Z.getMessage(t, n);
     if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
     let a = null != i ? i : String(l.poll.answers[0].answer_id);
     S.A({
@@ -98,7 +98,7 @@ function M(e) {
 }
 function k(e) {
     let { channelId: t, messageId: n } = e,
-        i = N.Z.getMessage(t, n);
+        i = v.Z.getMessage(t, n);
     return null == i ? [] : i.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function D(e) {
@@ -109,7 +109,7 @@ async function D(e) {
         }),
         l = a().difference(r, i),
         o = a().difference(i, r),
-        u = E.default.getId(),
+        u = C.default.getId(),
         d = [
             ...l.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -144,14 +144,14 @@ async function B(e) {
         i = I.Z.getChannel(t);
     if (null == i) return;
     if (p.Z.isLurking(i.guild_id)) {
-        L({
+        y({
             guildId: i.guild_id,
             title: P.intl.string(P.t.Qic1FB),
             body: P.intl.string(P.t['5sHHo6'])
         });
         return;
     }
-    if (!v.Z.canChatInGuild(i.guild_id)) {
+    if (!N.Z.canChatInGuild(i.guild_id)) {
         u.Z.show({
             title: P.intl.string(P.t.p245ws),
             body: P.intl.string(P.t['U/uodn'])
@@ -183,7 +183,7 @@ async function B(e) {
                 messageId: n,
                 answerIds: e
             }),
-            await A.B({
+            await b.B({
                 channelId: t,
                 messageId: n,
                 answerIds: e
@@ -210,12 +210,12 @@ async function B(e) {
             });
     }
 }
-async function w(e) {
+async function U(e) {
     let { channelId: t, messageId: n } = e,
         i = I.Z.getChannel(t);
     if (null != i) {
         if (p.Z.isLurking(i.guild_id)) {
-            L({
+            y({
                 guildId: i.guild_id,
                 title: P.intl.string(P.t.B9QnBg),
                 body: P.intl.string(P.t.BVZCTk)
@@ -240,7 +240,7 @@ async function w(e) {
         );
     }
 }
-async function U(e) {
+async function w(e) {
     let { channelId: t, messageId: n, type: i } = e;
     switch (i) {
         case 'submit':
@@ -250,7 +250,7 @@ async function U(e) {
             });
             break;
         case 'remove':
-            await w({
+            await U({
                 channelId: t,
                 messageId: n
             });
@@ -268,7 +268,7 @@ async function U(e) {
                 (0, j.eu)(t, n, (e) => {
                     var i, r;
                     let l = null == e || !e.showResults,
-                        a = N.Z.getMessage(t, n),
+                        a = v.Z.getMessage(t, n),
                         o =
                             null != a
                                 ? a.reactions.reduce((e, t) => {
@@ -337,8 +337,8 @@ async function F(e) {
     try {
         if (null != c && c.length > 0) {
             var f;
-            let e = null !== (f = E.default.getToken()) && void 0 !== f ? f : '';
-            await b.sk({
+            let e = null !== (f = C.default.getToken()) && void 0 !== f ? f : '';
+            await A.sk({
                 channel: t,
                 items: c,
                 token: e,
@@ -363,7 +363,7 @@ async function G(e) {
         title: P.intl.string(P.t['+rfkTE']),
         body: P.intl.string(P.t.H2I1gI)
     })) &&
-        (await A.W({
+        (await b.W({
             channelId: t,
             messageId: n
         }));
@@ -378,14 +378,14 @@ t.Z = {
                 message: s
             } = (function (e) {
                 let { channelId: t, messageId: n } = e,
-                    i = N.Z.getMessage(t, n);
+                    i = v.Z.getMessage(t, n);
                 if (null != i)
                     return {
                         message: i,
                         channelId: t,
                         messageId: n
                     };
-                let l = C.Z.getMessage(t, n);
+                let l = E.Z.getMessage(t, n);
                 if (null != l.message)
                     return {
                         channelId: t,
@@ -408,7 +408,7 @@ t.Z = {
             var t, n;
             if (null == e) {
                 let e = new Set([i]),
-                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: r, selectedEmojiAnswersCount: l } = y(null === (n = s.poll) || void 0 === n ? void 0 : n.answers, e);
+                    { analyticsSelectedAnswerIds: t, selectedTextAnswersCount: r, selectedEmojiAnswersCount: l } = L(null === (n = s.poll) || void 0 === n ? void 0 : n.answers, e);
                 return (
                     f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
                         channel_id: a,
@@ -433,7 +433,7 @@ t.Z = {
                 if (!u) for (let e of l) l.delete(e);
                 l.add(i);
             }
-            let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: d, selectedEmojiAnswersCount: m } = y(null === (t = s.poll) || void 0 === t ? void 0 : t.answers, l);
+            let { analyticsSelectedAnswerIds: c, selectedTextAnswersCount: d, selectedEmojiAnswersCount: m } = L(null === (t = s.poll) || void 0 === t ? void 0 : t.answers, l);
             return (
                 f.ZP.trackWithMetadata(R.rMx.POLL_VOTE_SELECTED, {
                     channel_id: a,
@@ -448,7 +448,7 @@ t.Z = {
     },
     handlePollSubmitVote: B,
     handleUpdateVoteEditingState: M,
-    handlePollActionTapped: U,
+    handlePollActionTapped: w,
     createPoll: F,
     endPollEarly: G
 };

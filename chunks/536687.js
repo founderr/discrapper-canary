@@ -41,7 +41,7 @@ function k(e) {
         [R, O] = o.useState(A.progressSeconds),
         [U, F] = o.useState(!1),
         { completedRatio: w, completedRatioDisplay: Z } = (0, p.I)(B),
-        [G, V] = (0, _.G6)(I.intl.string(I.t.WqhZsr), I.intl.string(I.t['+5kSoa']), 1700),
+        [G, V] = (0, _.G6)(I.intl.string(I.t.RDE0SU), I.intl.string(I.t['+5kSoa']), 1700),
         H = (null === (t = B.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? I.intl.string(I.t.vTgCW1) : I.intl.string(I.t.cfY4PD),
         z = o.useCallback(() => {
             (0, C.f2)(B.id, {

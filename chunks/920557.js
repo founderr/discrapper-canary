@@ -20,26 +20,26 @@ var i = n(200651),
     p = n(79390),
     g = n(839963),
     _ = n(139256),
-    C = n(294608),
-    E = n(388032),
+    E = n(294608),
+    C = n(388032),
     I = n(490351);
 function x(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, m.Dt)(),
-        { channelId: c, messageId: u } = (0, C.pE)(),
+        { channelId: c, messageId: u } = (0, E.pE)(),
         [g, _] = r.useState(''),
-        [E, x] = r.useState(!1),
-        v = '' !== g && E,
-        N = r.useCallback(() => {
+        [C, x] = r.useState(!1),
+        N = '' !== g && C,
+        v = r.useCallback(() => {
             _((0, p.e1)(u, c, a));
         }, [u, c, a]),
         T = r.useCallback(() => {
-            N(), x(!0);
-        }, [N]),
+            v(), x(!0);
+        }, [v]),
         S = r.useCallback(() => {
             x(!1);
         }, []),
-        b = r.useCallback(() => {
+        A = r.useCallback(() => {
             (0, f.n)({
                 channelId: c,
                 messageId: u,
@@ -47,15 +47,15 @@ function x(e) {
             });
         }, [c, u, a]);
     r.useEffect(() => {
-        if (!!E)
+        if (!!C)
             return (
-                h.Z.addReactChangeListener(N),
+                h.Z.addReactChangeListener(v),
                 () => {
-                    h.Z.removeReactChangeListener(N);
+                    h.Z.removeReactChangeListener(v);
                 }
             );
-    }, [E, N]);
-    let A = (0, i.jsx)(d.Text, {
+    }, [C, v]);
+    let b = (0, i.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: I.voteCount,
@@ -75,7 +75,7 @@ function x(e) {
                                   scaleFontToUserSetting: !0,
                                   children: g
                               }),
-                              forceOpen: v,
+                              forceOpen: N,
                               'aria-label': !1,
                               children: (e) =>
                                   (0, i.jsx)(d.Button, {
@@ -84,22 +84,22 @@ function x(e) {
                                       onMouseLeave: S,
                                       onFocus: T,
                                       onBlur: S,
-                                      onClick: b,
+                                      onClick: A,
                                       className: I.voteCountButton,
-                                      'aria-describedby': v ? s : void 0,
+                                      'aria-describedby': N ? s : void 0,
                                       look: d.Button.Looks.BLANK,
                                       size: d.Button.Sizes.NONE,
-                                      children: A
+                                      children: b
                                   })
                           }),
-                          v &&
+                          N &&
                               (0, i.jsx)(o.T, {
                                   id: s,
                                   children: g
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: A }),
+                : (0, i.jsx)(i.Fragment, { children: b }),
             (0, i.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',
@@ -109,7 +109,7 @@ function x(e) {
         ]
     });
 }
-function v(e) {
+function N(e) {
     let { percentage: t, shouldAnimate: n } = e,
         r = (0, d.useSpring)(
             {
@@ -128,7 +128,7 @@ function v(e) {
         'aria-hidden': !0
     });
 }
-function N(e) {
+function v(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: r, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -177,7 +177,7 @@ function T(e) {
             }),
             children: [
                 l
-                    ? (0, i.jsx)(v, {
+                    ? (0, i.jsx)(N, {
                           percentage: t.votesPercentage,
                           shouldAnimate: h
                       })
@@ -194,7 +194,7 @@ function T(e) {
                     scaleFontToUserSetting: !0,
                     children: t.pollMedia.text
                 }),
-                t.didSelfVote && (0, i.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
+                t.didSelfVote && (0, i.jsx)(o.T, { children: C.intl.string(C.t['8DAM+/']) }),
                 l &&
                     (0, i.jsx)(x, {
                         percentage: t.votesPercentage,
@@ -202,7 +202,7 @@ function T(e) {
                         canShowVoterDetails: s,
                         answerId: t.answerId
                     }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(v, {
                     answersInteraction: r,
                     isSelected: c,
                     didSelfVote: u,

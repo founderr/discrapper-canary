@@ -1,43 +1,43 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
-    n(627341);
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(278074),
-    o = n(481060),
-    s = n(109213),
-    c = n(409813),
-    u = n(474936),
-    d = n(388032),
-    m = n(73913);
-function h(e) {
-    let { step: t, onClose: n, giftingOrigin: r } = e,
-        { enabled: h } = s.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
-        f = (0, a.EQ)(t)
-            .with(c.h8.REVIEW, () => d.intl.string(d.t.JbRd5u))
-            .with(c.h8.ADD_PAYMENT_STEPS, () => d.intl.string(d.t.QiGOam))
-            .with(c.h8.GIFT_CUSTOMIZATION, () => (h && r === u.Wt.DM_CHANNEL ? d.intl.string(d.t['xU+d9P']) : d.intl.string(d.t['JCFN//'])))
-            .with(c.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => d.intl.string(d.t.lDbi6O))
+    t(627341);
+var i = t(200651);
+t(192379);
+var a = t(120356),
+    r = t.n(a),
+    o = t(278074),
+    l = t(481060),
+    s = t(109213),
+    c = t(409813),
+    d = t(474936),
+    u = t(388032),
+    f = t(73913);
+function p(e) {
+    let { step: n, onClose: t, giftingOrigin: a } = e,
+        { enabled: p } = s.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
+        m = (0, o.EQ)(n)
+            .with(c.h8.REVIEW, () => u.intl.string(u.t.JbRd5u))
+            .with(c.h8.ADD_PAYMENT_STEPS, () => u.intl.string(u.t.QiGOam))
+            .with(c.h8.GIFT_CUSTOMIZATION, () => (p && a === d.Wt.DM_CHANNEL ? u.intl.string(u.t['xU+d9P']) : u.intl.string(u.t['JCFN//'])))
+            .with(c.h8.AWAITING_PURCHASE_TOKEN_AUTH, () => u.intl.string(u.t.lDbi6O))
             .with(c.h8.CONFIRM, () => '')
             .otherwise(() => null);
-    return null == f
+    return null == m
         ? null
-        : (0, i.jsxs)(o.ModalHeader, {
-              className: l()(m.headerContainerGift),
-              separator: t !== c.h8.CONFIRM,
+        : (0, i.jsxs)(l.ModalHeader, {
+              className: r()(f.headerContainerGift),
+              separator: n !== c.h8.CONFIRM,
               children: [
-                  (0, i.jsx)(o.Heading, {
+                  (0, i.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
-                      children: f
+                      children: m
                   }),
-                  (0, i.jsx)(o.ModalCloseButton, {
-                      onClick: n,
-                      className: m.closeButtonGift
+                  (0, i.jsx)(l.ModalCloseButton, {
+                      onClick: t,
+                      className: f.closeButtonGift
                   })
               ]
           });

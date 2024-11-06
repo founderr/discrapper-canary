@@ -20,17 +20,17 @@ var i = n(200651),
 function _(e) {
     var t;
     let { invite: n, getAcceptInviteContext: _ } = e,
-        C = (0, l.e7)([u.default], () => u.default.getId()),
-        E = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === C,
+        E = (0, l.e7)([u.default], () => u.default.getId()),
+        C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === E,
         I = n.state === f.r2o.ACCEPTING,
         x = (0, l.e7)([m.Z], () => {
             var e;
             return null != n.inviter && m.Z.isFriend(null === (e = n.inviter) || void 0 === e ? void 0 : e.id);
         }),
-        v = r.useCallback(() => {
+        N = r.useCallback(() => {
             null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && a.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
-        N = r.useCallback(() => {
+        v = r.useCallback(() => {
             let e = _('Invite Button Embed');
             o.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
@@ -38,16 +38,16 @@ function _(e) {
             });
         }, [n.code, _]);
     if (null == n.inviter) return null;
-    let T = x ? v : N,
+    let T = x ? N : v,
         S = p.intl.string(p.t.ib7Ng4),
-        b = s.Z.Button.Colors.GREEN;
-    x ? ((S = p.intl.string(p.t.xhxnPj)), (b = s.Z.Button.Colors.PRIMARY)) : E && ((S = p.intl.string(p.t.ib7Ng4)), (b = s.Z.Button.Colors.PRIMARY));
-    let A = E ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
+        A = s.Z.Button.Colors.GREEN;
+    x ? ((S = p.intl.string(p.t.xhxnPj)), (A = s.Z.Button.Colors.PRIMARY)) : C && ((S = p.intl.string(p.t.ib7Ng4)), (A = s.Z.Button.Colors.PRIMARY));
+    let b = C ? p.intl.string(p.t.eQyu1N) : p.intl.string(p.t.PYJHW1),
         j = null != n.inviter ? ''.concat(n.inviter.username) : '',
         Z = null != n.inviter ? h.ZP.getUserTag(n.inviter) : '';
     return (0, i.jsxs)(s.Z, {
         children: [
-            (0, i.jsx)(s.Z.Header, { text: A }),
+            (0, i.jsx)(s.Z.Header, { text: b }),
             (0, i.jsxs)(s.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
@@ -67,8 +67,8 @@ function _(e) {
                     (0, i.jsx)(s.Z.Button, {
                         onClick: T,
                         submitting: I,
-                        isDisabled: E,
-                        color: b,
+                        isDisabled: C,
+                        color: A,
                         children: S
                     })
                 ]

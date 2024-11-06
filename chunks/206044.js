@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(100621),
     a = n(722770),
     u = n(442837),
-    d = n(846519),
-    c = n(481060),
+    c = n(846519),
+    d = n(481060),
     m = n(393238),
     x = n(607070),
     C = n(70097),
@@ -27,12 +27,12 @@ var i = n(200651),
     R = n(46140),
     b = n(388032),
     I = n(128175);
-let M = (0, o.animated)(c.ChevronSmallDownIcon),
+let M = (0, o.animated)(d.ChevronSmallDownIcon),
     L = (0, o.animated)(C.Z),
     Z = (e) => {
         let { quest: t, location: n, questContentPosition: l, ...r } = e,
             [o, a] = s.useState(!1),
-            u = s.useRef(new d.V7());
+            u = s.useRef(new c.V7());
         s.useEffect(() => {
             let e = u.current;
             return function () {
@@ -50,17 +50,17 @@ let M = (0, o.animated)(c.ChevronSmallDownIcon),
                 a(!0),
                 u.current.start(1000, () => a(!1));
         };
-        return (0, i.jsx)(c.Tooltip, {
+        return (0, i.jsx)(d.Tooltip, {
             forceOpen: o,
             shouldShow: o,
-            color: c.Tooltip.Colors.GREEN,
+            color: d.Tooltip.Colors.GREEN,
             text: b.intl.string(b.t.MSaeTU),
             children: () =>
-                (0, i.jsx)(c.Button, {
+                (0, i.jsx)(d.Button, {
                     ...r,
                     className: I.shareButton,
-                    color: c.Button.Colors.PRIMARY,
-                    size: c.Button.Sizes.SMALL,
+                    color: d.Button.Colors.PRIMARY,
+                    size: d.Button.Sizes.SMALL,
                     onClick: m,
                     children: b.intl.string(b.t['5Z6rz8'])
                 })
@@ -68,11 +68,11 @@ let M = (0, o.animated)(c.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: l, isQuestExpired: d, quest: C, location: g, size: T, expansionSpring: y, isAnimating: P, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: O } = e,
-        { ref: w, height: Q } = (0, m.Z)(),
+    let { isFocused: l, isQuestExpired: c, quest: C, location: g, size: T, expansionSpring: y, isAnimating: P, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
+        { ref: O, height: Q } = (0, m.Z)(),
         { ref: k, width: H, scrollWidth: z } = (0, m.Z)(),
-        W = (0, u.e7)([h.Z], () => h.Z.getState().theme),
-        G = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
+        G = (0, u.e7)([h.Z], () => h.Z.getState().theme),
+        W = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
         F = s.useMemo(() => (0, f.fh)(C, f.eC.HERO), [C]),
         V = s.useRef(null),
         X = (0, A.uq)(g),
@@ -92,7 +92,7 @@ t.Z = (e) => {
         et = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
-                O(),
+                w(),
                 (0, p._3)({
                     questId: C.id,
                     questContent: g,
@@ -129,7 +129,7 @@ t.Z = (e) => {
                     poster: F.url,
                     ref: V,
                     children:
-                        !G &&
+                        !W &&
                         F.isAnimated &&
                         (0, i.jsx)('source', {
                             src: F.url,
@@ -162,7 +162,7 @@ t.Z = (e) => {
                                             visibility: P || !B ? 'inherit' : 'hidden'
                                         },
                                         'aria-hidden': !P && B,
-                                        children: (0, i.jsxs)(c.ClickableContainer, {
+                                        children: (0, i.jsxs)(d.ClickableContainer, {
                                             'aria-label': b.intl.string(b.t.dcl9MT),
                                             onClick: et,
                                             className: I.headerCollapsedClickableContainer,
@@ -186,12 +186,12 @@ t.Z = (e) => {
                                                                     className: I.partnerBranding,
                                                                     gameTileSize: S.f.MEDIUM,
                                                                     quest: C,
-                                                                    theme: W
+                                                                    theme: G
                                                                 }),
                                                                 (0, i.jsx)(N.Z, { color: 'always-white' })
                                                             ]
                                                         }),
-                                                        (0, i.jsx)(c.Text, {
+                                                        (0, i.jsx)(d.Text, {
                                                             variant: 'text-xs/medium',
                                                             children: K
                                                         })
@@ -202,7 +202,7 @@ t.Z = (e) => {
                                     }),
                                 (0, i.jsxs)(o.animated.div, {
                                     ref: (e) => {
-                                        w.current = e;
+                                        O.current = e;
                                     },
                                     className: r()(I.headerExpandedContent, {
                                         [I.outerContainerGiftInventory]: X,
@@ -227,7 +227,7 @@ t.Z = (e) => {
                                                             className: I.partnerBranding,
                                                             gameTileSize: S.f.MEDIUM,
                                                             quest: C,
-                                                            theme: W
+                                                            theme: G
                                                         }),
                                                         Y ? null : (0, i.jsx)(N.Z, { color: 'always-white' })
                                                     ]
@@ -235,11 +235,11 @@ t.Z = (e) => {
                                                 (0, i.jsxs)('div', {
                                                     className: I.questInfo,
                                                     children: [
-                                                        (0, i.jsx)(c.Tooltip, {
+                                                        (0, i.jsx)(d.Tooltip, {
                                                             text: C.config.messages.questName,
                                                             shouldShow: null != H && null != z && H < z,
                                                             children: (e) =>
-                                                                (0, i.jsx)(c.Heading, {
+                                                                (0, i.jsx)(d.Heading, {
                                                                     ref: k,
                                                                     variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                                                                     className: I.heading,
@@ -247,15 +247,15 @@ t.Z = (e) => {
                                                                     children: b.intl.format(b.t.EAYZAg, { questName: C.config.messages.questName })
                                                                 })
                                                         }),
-                                                        (0, i.jsx)(c.Text, {
+                                                        (0, i.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
-                                                            children: J ? b.intl.formatToPlainString(b.t.APddvL, { expirationDate: ee }) : d ? b.intl.formatToPlainString(b.t.v7xMw8, { expirationDate: $ }) : b.intl.formatToPlainString(b.t['pX+fmp'], { expirationDate: $ })
+                                                            children: J ? b.intl.formatToPlainString(b.t.APddvL, { expirationDate: ee }) : c ? b.intl.formatToPlainString(b.t.v7xMw8, { expirationDate: $ }) : b.intl.formatToPlainString(b.t['pX+fmp'], { expirationDate: $ })
                                                         })
                                                     ]
                                                 })
                                             ]
                                         }),
-                                        !d &&
+                                        !c &&
                                             X &&
                                             (0, i.jsx)(Z, {
                                                 quest: C,
@@ -283,7 +283,7 @@ t.Z = (e) => {
                                     questContentPosition: D,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: X,
-                                    showShareLink: !d && Y,
+                                    showShareLink: !c && Y,
                                     children: (e) =>
                                         (0, i.jsx)(o.animated.div, {
                                             style: {
@@ -291,11 +291,11 @@ t.Z = (e) => {
                                                 visibility: P || B ? 'inherit' : 'hidden'
                                             },
                                             'aria-hidden': !P && !B,
-                                            children: (0, i.jsx)(c.Clickable, {
+                                            children: (0, i.jsx)(d.Clickable, {
                                                 ...e,
                                                 className: I.iconWrapper,
                                                 'aria-label': b.intl.string(b.t.DEoVWV),
-                                                children: (0, i.jsx)(c.MoreHorizontalIcon, {
+                                                children: (0, i.jsx)(d.MoreHorizontalIcon, {
                                                     size: 'md',
                                                     color: a.Z.WHITE
                                                 })
@@ -304,7 +304,7 @@ t.Z = (e) => {
                                 }),
                                 U &&
                                     !(0, A.W_)(g) &&
-                                    (0, i.jsx)(c.Clickable, {
+                                    (0, i.jsx)(d.Clickable, {
                                         onClick: et,
                                         className: I.iconWrapper,
                                         'aria-label': B ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),

@@ -9,7 +9,7 @@ var r = n(481060),
     l = n(987209),
     a = n(981631);
 function o(e) {
-    let { initialPlanId: t, activeSubscription: o, trialId: s, trialFooterMessageOverride: c, onClose: u, analyticsObject: d, analyticsLocation: m, analyticsLocations: h, analyticsSubscriptionType: f, renderHeader: p, renderPurchaseConfirmation: g, planGroup: _, reviewWarningMessage: C, skuId: E } = e;
+    let { initialPlanId: t, activeSubscription: o, trialId: s, trialFooterMessageOverride: c, onClose: u, analyticsObject: d, analyticsLocation: m, analyticsLocations: h, analyticsSubscriptionType: f, renderHeader: p, renderPurchaseConfirmation: g, planGroup: _, reviewWarningMessage: E, skuId: C } = e;
     (0, r.openModalLazy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
@@ -20,7 +20,7 @@ function o(e) {
                 return (0, i.jsx)(e, {
                     activeSubscription: o,
                     stepConfigs: a,
-                    skuIDs: [E],
+                    skuIDs: [C],
                     children: (0, i.jsx)(l.KB, {
                         children: (0, i.jsx)(r, {
                             ...x,
@@ -32,13 +32,13 @@ function o(e) {
                             analyticsObject: d,
                             analyticsLocation: m,
                             analyticsSubscriptionType: f,
-                            skuId: E,
+                            skuId: C,
                             renderHeader: p,
                             renderPurchaseConfirmation: g,
                             planGroup: _,
                             trialId: s,
                             trialFooterMessageOverride: c,
-                            reviewWarningMessage: C
+                            reviewWarningMessage: E
                         })
                     })
                 });

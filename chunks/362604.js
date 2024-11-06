@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(47120),
@@ -20,14 +20,14 @@ var i = n(200651),
     p = n(115610),
     g = n(981631),
     _ = n(388032),
-    C = n(809858);
-function E(e) {
-    let { message: t, channel: l, compact: E } = e,
+    E = n(809858);
+function C(e) {
+    let { message: t, channel: l, compact: C } = e,
         I = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [x, v] = r.useState(null);
+        [x, N] = r.useState(null);
     return (r.useEffect(() => {
         let e = setInterval(() => {
-            I.length > 0 && v(I[Math.floor(Math.random() * I.length)]);
+            I.length > 0 && N(I[Math.floor(Math.random() * I.length)]);
         }, 500);
         return () => clearInterval(e);
     }, [I]),
@@ -36,19 +36,19 @@ function E(e) {
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: a()(C.mainContainer, { [C.compact]: E }),
+                      className: a()(E.mainContainer, { [E.compact]: C }),
                       icon: n(570111),
-                      compact: E,
+                      compact: C,
                       children: (0, i.jsx)('div', {
-                          className: a()(C.__invalid_content, { [C.compact]: E }),
+                          className: a()(E.__invalid_content, { [E.compact]: C }),
                           children: (0, i.jsx)('div', {
-                              className: a()(C.__invalid_messageContent, { [C.compact]: E }),
+                              className: a()(E.__invalid_messageContent, { [E.compact]: C }),
                               children: '' !== t.content ? t.content : _.intl.string(_.t.wnn1DQ)
                           })
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: C.actions,
+                      className: E.actions,
                       children: [
                           (0, i.jsx)(s.TooltipContainer, {
                               text: _.intl.string(_.t.ASZTf3),

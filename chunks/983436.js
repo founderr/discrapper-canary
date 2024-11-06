@@ -19,8 +19,8 @@ function p(e) {
     var t;
     let { guild: n, channel: p, messageData: g } = e,
         _ = u.Z.getGuildId(),
-        C = c.Z.getChannelId(_),
-        E = r.useCallback(() => {
+        E = c.Z.getChannelId(_),
+        C = r.useCallback(() => {
             var e;
             d.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
@@ -28,11 +28,11 @@ function p(e) {
                 link_channel_id: p.id,
                 link_channel_type: p.type,
                 guild_id: _,
-                channel_id: C
+                channel_id: E
             }),
                 (0, a.K)(n.id, p.id),
                 l.default.selectVoiceChannel(p.id);
-        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, _, C]),
+        }, [null === (t = g.author) || void 0 === t ? void 0 : t.id, n.id, p.id, p.type, _, E]),
         I = (0, i.jsx)(s.Z.Channel, { channel: p });
     return (0, i.jsx)(s.Z, {
         children: (0, i.jsxs)(s.Z.Body, {
@@ -43,7 +43,7 @@ function p(e) {
                         (0, i.jsx)(s.Z.Icon, { guild: n }),
                         (0, i.jsx)(s.Z.Info, {
                             title: I,
-                            onClick: E,
+                            onClick: C,
                             children: (0, i.jsxs)('span', {
                                 className: f.infoTitle,
                                 children: [
@@ -61,7 +61,7 @@ function p(e) {
                     ]
                 }),
                 (0, i.jsx)(s.Z.Button, {
-                    onClick: E,
+                    onClick: C,
                     color: s.Z.Button.Colors.GREEN,
                     children: p.isGuildStageVoice() ? h.intl.string(h.t['7vb2cX']) : h.intl.string(h.t['96ANUF'])
                 })

@@ -34,9 +34,9 @@ var i = n(200651),
     N = n(998502),
     O = n(388627),
     T = n(981631),
-    L = n(388032),
-    k = n(250145);
-function A(e) {
+    A = n(388032),
+    L = n(250145);
+function R(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         c = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
         [f, m] = o.useState('unsent'),
@@ -67,7 +67,7 @@ function A(e) {
                             (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)),
                             await (0, g.p)({
                                 channel: n,
-                                content: L.intl.string(L.t.DwAcMz),
+                                content: A.intl.string(A.t.DwAcMz),
                                 entry: t,
                                 whenReady: !0
                             });
@@ -90,7 +90,7 @@ function A(e) {
                 n = null !== (e = x.Z.getChannel(t)) && void 0 !== e ? e : null;
             l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), b.isPlatformEmbedded ? N.ZP.focus() : window.focus();
         },
-        y = C ? L.intl.string(L.t['3fRyS0']) : L.intl.string(L.t.y9eo7e),
+        y = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
         O = C
             ? (0, i.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
@@ -108,8 +108,8 @@ function A(e) {
                 ...e,
                 submitting: 'sending' === f,
                 onClick: v ? Z : S,
-                className: k.inviteButton,
-                innerClassName: k.inviteButtonInner,
+                className: L.inviteButton,
+                innerClassName: L.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: 'sent' === f ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -128,7 +128,7 @@ function A(e) {
             })
     });
 }
-function w(e) {
+function k(e) {
     let { entry: t } = e,
         n = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
         r = (0, s.e7)([Z.Z], () => (null != n ? Z.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
@@ -151,7 +151,7 @@ function w(e) {
                 }
             }
         },
-        h = L.intl.string(L.t.OKsSCQ);
+        h = A.intl.string(A.t.OKsSCQ);
     return (0, i.jsx)(a.Tooltip, {
         text: h,
         'aria-label': h,
@@ -160,8 +160,8 @@ function w(e) {
                 ...e,
                 submitting: 'sending' === l,
                 onClick: d,
-                className: k.inviteButton,
-                innerClassName: k.inviteButtonInner,
+                className: L.inviteButton,
+                innerClassName: L.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: 'sent' === l ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
@@ -178,7 +178,7 @@ function w(e) {
             })
     });
 }
-function R(e) {
+function w(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
         r = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
         l = (0, s.e7)([S.Z], () => (null != r ? S.Z.getAnyStreamForUser(r.id) : null), [r]),
@@ -199,22 +199,22 @@ function R(e) {
     return null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: k.row,
+              className: L.row,
               children: [
                   (0, i.jsx)(f.Z, {
-                      className: k.avatar,
+                      className: L.avatar,
                       user: r,
                       isMobile: u,
                       status: c
                   }),
                   (0, i.jsxs)('div', {
-                      className: k.details,
+                      className: L.details,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: k.usernameWrapper,
+                              className: L.usernameWrapper,
                               children: [
                                   (0, i.jsx)(a.Text, {
-                                      className: k.username,
+                                      className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
                                       children: y.ZP.getName(void 0, void 0, r)
@@ -228,12 +228,12 @@ function R(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(w, {
+                  (0, i.jsx)(k, {
                       entry: t,
                       currentUserActivity: n,
                       idx: o
                   }),
-                  (0, i.jsx)(A, {
+                  (0, i.jsx)(R, {
                       entry: t,
                       currentUserActivity: n,
                       idx: o
@@ -247,7 +247,7 @@ function j(e) {
     return (0, i.jsx)(i.Fragment, {
         children: o.map((e, t) =>
             (0, i.jsx)(
-                R,
+                w,
                 {
                     idx: t,
                     entry: e,
@@ -268,11 +268,11 @@ function M() {
     return 0 === n.length && null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: k.container,
+              className: L.container,
               children: [
                   null != r && null != o
                       ? (0, i.jsx)(C.Z, {
-                            className: k.activityCard,
+                            className: L.activityCard,
                             activity: r,
                             user: o,
                             currentUser: o
@@ -280,11 +280,11 @@ function M() {
                       : null,
                   l
                       ? (0, i.jsx)(a.Button, {
-                            className: k.inviteFriendsButton,
+                            className: L.inviteFriendsButton,
                             onClick: () => (0, c.h7)(r, !1, T.IlC.POPOUT),
                             size: a.ButtonSizes.SMALL,
                             color: a.ButtonColors.PRIMARY,
-                            children: L.intl.string(L.t['6Qgren'])
+                            children: A.intl.string(A.t['6Qgren'])
                         })
                       : null,
                   (0, i.jsx)(j, {

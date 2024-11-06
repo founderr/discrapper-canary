@@ -3,7 +3,7 @@ n.d(t, {
         return G;
     },
     Go: function () {
-        return w;
+        return U;
     },
     JC: function () {
         return R;
@@ -15,7 +15,7 @@ n.d(t, {
         return Z;
     },
     R9: function () {
-        return y;
+        return L;
     },
     RN: function () {
         return D;
@@ -24,7 +24,7 @@ n.d(t, {
         return j;
     },
     XO: function () {
-        return A;
+        return b;
     },
     Xn: function () {
         return V;
@@ -36,13 +36,13 @@ n.d(t, {
         return M;
     },
     rY: function () {
-        return L;
+        return y;
     },
     sR: function () {
         return B;
     },
     tn: function () {
-        return U;
+        return w;
     },
     wq: function () {
         return k;
@@ -65,19 +65,19 @@ var i = n(200651),
     p = n(594174),
     g = n(585483),
     _ = n(5967),
-    C = n(630388),
-    E = n(358085),
+    E = n(630388),
+    C = n(358085),
     I = n(51144),
     x = n(91047),
-    v = n(50284),
-    N = n(981631),
+    N = n(50284),
+    v = n(981631),
     T = n(388032);
 function S(e, t, n) {
     return r.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function b(e, t, n) {
+function A(e, t, n) {
     return r.useCallback(
         (i) => {
             let r = p.default.getUser(e);
@@ -88,7 +88,7 @@ function b(e, t, n) {
             }
             let l = '@'.concat(I.ZP.getUserTag(r, { decoration: 'never' })),
                 a = '<@'.concat(e, '>');
-            g.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, {
+            g.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, {
                 plainText: l,
                 rawText: a
             }),
@@ -97,21 +97,21 @@ function b(e, t, n) {
         [e, t, n]
     );
 }
-function A(e, t, n, i) {
+function b(e, t, n, i) {
     let r = S('usernameProfile', n, i);
-    return b(e.author.id, t.id, r);
+    return A(e.author.id, t.id, r);
 }
 function j(e, t, n, i) {
     let r = S('referencedUsernameProfile', n, i);
-    return b(null == e ? void 0 : e.author.id, t.id, r);
+    return A(null == e ? void 0 : e.author.id, t.id, r);
 }
 function Z(e, t, n, i) {
     let r = S('interactionUsernameProfile', n, i);
-    return b(null == e ? void 0 : e.user.id, t.id, r);
+    return A(null == e ? void 0 : e.user.id, t.id, r);
 }
 function R(e, t, n, i) {
     let r = S('referencedUsernameProfile', n, i);
-    return b(e, t.id, r);
+    return A(e, t.id, r);
 }
 function P(e) {
     return r.useCallback(
@@ -121,10 +121,10 @@ function P(e) {
         [e]
     );
 }
-function y(e, t) {
+function L(e, t) {
     return P(S('avatarProfile', e, t));
 }
-function L(e, t) {
+function y(e, t) {
     return P(S('referencedAvatarProfile', e, t));
 }
 function O(e, t) {
@@ -133,12 +133,12 @@ function O(e, t) {
 function M(e, t, l, o) {
     let { id: s } = t,
         { id: u, flags: d } = e,
-        p = (0, C.yE)(d, N.iLy.EPHEMERAL),
+        p = (0, E.yE)(d, v.iLy.EPHEMERAL),
         g = (0, c.bp)();
     return r.useCallback(
         (e, t) => {
             if (p) return;
-            if (!E.isPlatformEmbedded) {
+            if (!C.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -208,27 +208,27 @@ function B(e, t) {
         [e, t]
     );
 }
-function w(e, t) {
+function U(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return r.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, v.Z)(i, n));
+            e.altKey && (e.preventDefault(), (0, N.Z)(i, n));
         },
         [i, n]
     );
 }
-function U(e, t, n) {
+function w(e, t, n) {
     let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         l = ''.concat(e, ':').concat(t),
         a = r.useRef(n),
         [o, s] = r.useState(n);
     a.current = o || a.current;
     let c = r.useCallback(() => {
-            i && (0, d.T6)(), !o && (g.S.dispatchKeyed(N.LPv.ANIMATE_CHAT_AVATAR, l, !0), s(!0));
+            i && (0, d.T6)(), !o && (g.S.dispatchKeyed(v.LPv.ANIMATE_CHAT_AVATAR, l, !0), s(!0));
         }, [o, l, i]),
         m = r.useCallback(() => {
-            g.S.dispatchKeyed(N.LPv.ANIMATE_CHAT_AVATAR, l, !1), s(!1);
+            g.S.dispatchKeyed(v.LPv.ANIMATE_CHAT_AVATAR, l, !1), s(!1);
         }, [l]);
     return {
         hasHovered: a.current,

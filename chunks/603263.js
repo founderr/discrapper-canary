@@ -24,10 +24,10 @@ n.d(t, {
         return h;
     },
     qt: function () {
-        return C;
+        return E;
     },
     u$: function () {
-        return E;
+        return C;
     },
     yC: function () {
         return s;
@@ -128,7 +128,7 @@ function _(e, t) {
             editorState: t
         });
 }
-function C(e) {
+function E(e) {
     r.ZP.trackWithMetadata(o.rMx.SEARCH_CLOSED, { search_id: l.Z.getAnalyticsId(e) }),
         i.Z.wait(() =>
             i.Z.dispatch({
@@ -137,7 +137,7 @@ function C(e) {
             })
         );
 }
-function E(e, t, n) {
+function C(e, t, n) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',

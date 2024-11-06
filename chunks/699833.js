@@ -20,8 +20,8 @@ function m(e) {
         p = null !== (l = null === (t = f.fields) || void 0 === t ? void 0 : t.find((e) => e.rawName === s.Cg.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
         g = null !== (m = null == p ? void 0 : p.rawValue) && void 0 !== m ? m : void 0,
         _ = null !== (h = null === (r = f.fields) || void 0 === r ? void 0 : r.find((e) => e.rawName === s.Cg.INCIDENT_TIMESTAMP)) && void 0 !== h ? h : void 0,
-        C = null == _ || null == _.rawValue ? void 0 : parseFloat(_.rawValue);
-    return null == g || null == C
+        E = null == _ || null == _.rawValue ? void 0 : parseFloat(_.rawValue);
+    return null == g || null == E
         ? null
         : (0, i.jsxs)(o.Clickable, {
               onClick: () => {
@@ -58,7 +58,7 @@ function m(e) {
                               className: u.incidentTiming,
                               children: (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
-                                  children: c.intl.format(c.t.eevFb2, { daysAgo: d(C) })
+                                  children: c.intl.format(c.t.eevFb2, { daysAgo: d(E) })
                               })
                           }),
                           (0, i.jsx)('div', {

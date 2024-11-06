@@ -171,7 +171,7 @@ class _ extends r.Component {
             p(this, 'renderTypeVideo', () => {
                 let { videoLoaded: e } = this.state,
                     { video: t, image: n, title: l, playing: o, muted: c, splashClassName: m, splashPlaceholderClassName: p, renderMediaOverlay: _ } = this.props,
-                    C = c ? d.VoiceXIcon : d.VoiceNormalIcon;
+                    E = c ? d.VoiceXIcon : d.VoiceNormalIcon;
                 return (0, i.jsxs)(r.Fragment, {
                     children: [
                         s.tq
@@ -209,7 +209,7 @@ class _ extends r.Component {
                                 [f.muteContainerMediaOverlay]: null != _
                             }),
                             onClick: this.handleToggleMute,
-                            children: o && e ? (0, i.jsx)(C, { className: f.mute }) : null
+                            children: o && e ? (0, i.jsx)(E, { className: f.mute }) : null
                         })
                     ]
                 });

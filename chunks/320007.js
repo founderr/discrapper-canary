@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 });
 var i = n(200651),
@@ -18,14 +18,14 @@ var i = n(200651),
     p = n(203259),
     g = n(356659),
     _ = n(388032);
-function C(e) {
-    let { canShowReminder: t = !1, className: C } = e,
-        E = (0, h.Z)(u.Z),
+function E(e) {
+    let { canShowReminder: t = !1, className: E } = e,
+        C = (0, h.Z)(u.Z),
         { showClipsHeaderEntrypoint: I } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
             hasClips: x,
-            hasNewClips: v,
-            lastClipsSession: N,
+            hasNewClips: N,
+            lastClipsSession: v,
             remindersEnabled: T,
             hasAnyClipAnimations: S
         } = (0, l.cj)([m.Z], () => ({
@@ -35,12 +35,12 @@ function C(e) {
             remindersEnabled: m.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: m.Z.hasAnyClipAnimations()
         })),
-        b = null != N && N.newClipIds.length > 0,
-        A = (0, f.n)((e) => e.clipsButtonRef),
+        A = null != v && v.newClipIds.length > 0,
+        b = (0, f.n)((e) => e.clipsButtonRef),
         j = (0, f.n)((e) => e.setClipsButtonRef),
         Z = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: R, allowIdle: P } = (0, s.Y)('animation');
-    function y() {
+    function L() {
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('32304')]).then(n.bind(n, 542055));
@@ -49,28 +49,28 @@ function C(e) {
             { modalKey: g.Qr }
         );
     }
-    return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && E && x)
+    return (r.useEffect(() => (S ? R() : P(), () => P()), [S, R, P]), I && C && x)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != A &&
+                  null != b &&
                       t &&
                       T &&
-                      b &&
+                      A &&
                       !(0, a.hasAnyModalOpen)() &&
                       !Z &&
                       (0, i.jsx)(p.Z, {
-                          clipIconRef: A,
-                          lastClipsSession: N,
-                          onOpenClipsGallery: y
+                          clipIconRef: b,
+                          lastClipsSession: v,
+                          onOpenClipsGallery: L
                       }),
                   (0, i.jsx)('div', {
                       ref: j,
                       children: (0, i.jsx)(o.JO, {
-                          className: C,
+                          className: E,
                           icon: a.ClipsIcon,
-                          showBadge: v,
+                          showBadge: N,
                           tooltip: _.intl.string(_.t.MXaLEB),
-                          onClick: y
+                          onClick: L
                       })
                   })
               ]

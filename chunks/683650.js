@@ -11,8 +11,8 @@ var s = n(120356),
     o = n(497505),
     a = n(266843),
     u = n(341907),
-    d = n(46140),
-    c = n(388032),
+    c = n(46140),
+    d = n(388032),
     m = n(424621),
     x = n(87181);
 function C() {
@@ -22,9 +22,9 @@ function C() {
             className: m.button,
             color: r.ButtonColors.BRAND,
             onClick: () => {
-                (0, u.navigateToQuestHome)(d.dr.EMBED_DESKTOP, o.jn.QUESTS_EMBED);
+                (0, u.navigateToQuestHome)(c.dr.EMBED_DESKTOP, o.jn.QUESTS_EMBED);
             },
-            children: c.intl.string(c.t.GURBQk)
+            children: d.intl.string(d.t.GURBQk)
         })
     });
 }
@@ -43,13 +43,13 @@ function h() {
                     (0, i.jsx)(r.Heading, {
                         variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
                         color: 'header-primary',
-                        children: c.intl.string(c.t.vnP31d)
+                        children: d.intl.string(d.t.vnP31d)
                     }),
                     (0, i.jsx)(r.Text, {
                         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
                         color: 'text-normal',
                         className: m.__invalid_mobileWebCopy,
-                        children: c.intl.string(c.t.CTn0yc)
+                        children: d.intl.string(d.t.CTn0yc)
                     }),
                     (0, i.jsx)(C, {})
                 ]

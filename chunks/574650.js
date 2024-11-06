@@ -15,26 +15,26 @@ var r = n(120356),
     p = n(981631),
     g = n(176505),
     _ = n(388032),
-    C = n(373359),
-    E = n(250812);
+    E = n(373359),
+    C = n(250812);
 t.Z = () => {
     var e, t;
     let r = (0, o.e7)([u.Z], () => u.Z.getGuildId(), []),
         I = (0, o.e7)([c.Z], () => c.Z.getGuild(r), [r]),
         x = (0, o.e7)([f.Z], () => (null != r ? f.Z.getRequest(r) : null), [r]),
-        v = (0, a.TH)(),
-        N = (null === (e = (0, a.LX)(v.pathname, p.Z5c.CHANNEL(null == I ? void 0 : I.id, g.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == I || !I.hasVerificationGate() || N) return null;
+        N = (0, a.TH)(),
+        v = (null === (e = (0, a.LX)(N.pathname, p.Z5c.CHANNEL(null == I ? void 0 : I.id, g.oC.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == I || !I.hasVerificationGate() || v) return null;
     let T = null !== (t = null == x ? void 0 : x.applicationStatus) && void 0 !== t ? t : h.wB.STARTED,
         S = null,
-        b = null,
         A = null,
-        j = [C.notice, E.notice];
+        b = null,
+        j = [E.notice, C.notice];
     switch (T) {
         case h.wB.SUBMITTED:
             (S = _.intl.string(_.t['5iLvS0'])),
-                (b = _.intl.string(_.t.mqtdmZ)),
-                (A = () => {
+                (A = _.intl.string(_.t.mqtdmZ)),
+                (b = () => {
                     (0, s.openModal)((e) =>
                         (0, i.jsx)(s.ConfirmModal, {
                             header: _.intl.string(_.t.aIz1oa),
@@ -53,8 +53,8 @@ t.Z = () => {
             break;
         case h.wB.REJECTED:
             (S = _.intl.string(_.t.lk30cX)),
-                (b = _.intl.string(_.t['8RrsHh'])),
-                (A = () => {
+                (A = _.intl.string(_.t['8RrsHh'])),
+                (b = () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                         return (t) =>
@@ -64,12 +64,12 @@ t.Z = () => {
                             });
                     });
                 }),
-                j.push(C.error);
+                j.push(E.error);
             break;
         default:
             (S = _.intl.string(_.t.G5YKXF)),
-                (b = _.intl.string(_.t['r8/DT0'])),
-                (A = () => {
+                (A = _.intl.string(_.t['r8/DT0'])),
+                (b = () => {
                     (0, m.hk)(I.id);
                 });
     }
@@ -77,17 +77,17 @@ t.Z = () => {
         className: l()(...j),
         children: [
             (0, i.jsx)(s.Text, {
-                className: C.header,
+                className: E.header,
                 variant: 'text-sm/normal',
                 children: S
             }),
             (0, i.jsx)(s.Button, {
-                className: C.button,
+                className: E.button,
                 look: s.Button.Looks.OUTLINED,
                 color: s.Button.Colors.WHITE,
                 size: s.Button.Sizes.NONE,
-                onClick: A,
-                children: b
+                onClick: b,
+                children: A
             })
         ]
     });

@@ -29,12 +29,12 @@ var l,
     C = n(987509),
     v = n(592125),
     b = n(430824),
-    x = n(158776),
+    L = n(158776),
     N = n(306680),
-    L = n(699516),
+    x = n(699516),
     T = n(594174),
-    y = n(626135),
-    P = n(55935),
+    P = n(626135),
+    y = n(55935),
     Z = n(823379),
     w = n(51144),
     R = n(784384),
@@ -55,7 +55,7 @@ function k(e) {
             null == _ || _(n);
         }, [l, _, n]),
         v = r.useCallback(() => {
-            y.default.track(O.rMx.FORWARD_ONE_TAP_VIEW, {
+            P.default.track(O.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: t.channel_id,
                 message_id: t.id
             }),
@@ -69,7 +69,7 @@ function k(e) {
         b = r.useCallback(() => {
             S(!1),
                 (A.current = !1),
-                y.default.track(O.rMx.FORWARD_ONE_TAP_UNDO, {
+                P.default.track(O.rMx.FORWARD_ONE_TAP_UNDO, {
                     channel_id: t.channel_id,
                     message_id: t.id
                 });
@@ -169,8 +169,8 @@ function F(e) {
     let { user: t, subLabel: n, ...l } = e,
         i = w.ZP.useName(t),
         r = w.ZP.useUserTag(t, { decoration: 'never' }),
-        s = (0, h.e7)([L.Z], () => L.Z.getNickname(t.id)),
-        o = (0, h.e7)([x.Z], () => x.Z.getStatus(t.id));
+        s = (0, h.e7)([x.Z], () => x.Z.getNickname(t.id)),
+        o = (0, h.e7)([L.Z], () => L.Z.getStatus(t.id));
     return (0, a.jsx)(k, {
         ...l,
         icon: (0, a.jsx)(_.Z, {
@@ -203,9 +203,9 @@ function U(e) {
     let { channel: t, subLabel: n, ...l } = e,
         i = (0, h.e7)([b.Z], () => b.Z.getGuild(null == t ? void 0 : t.guild_id)),
         r = (0, E.ZP)(t),
-        s = (0, h.e7)([v.Z, T.default, L.Z], () => {
+        s = (0, h.e7)([v.Z, T.default, x.Z], () => {
             let e = v.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, E.F6)(e, T.default, L.Z, !1);
+            return null == e ? null : (0, E.F6)(e, T.default, x.Z, !1);
         }),
         o = (0, h.e7)([N.ZP], () => N.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
         c = null == i ? void 0 : i.name;
@@ -236,7 +236,7 @@ function U(e) {
                               (0, a.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
-                                  children: (0, P.Xf)(u()(o))
+                                  children: (0, y.Xf)(u()(o))
                               })
                           ]
                       })

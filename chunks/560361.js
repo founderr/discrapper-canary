@@ -3,11 +3,11 @@ n.d(t, {
         return i;
     }
 });
-var l = n(192379);
+var r = n(192379);
 function i(e) {
-    let t = l.useRef();
+    let t = r.useRef();
     (t.current = e),
-        l.useEffect(
+        r.useEffect(
             () => () => {
                 var e;
                 return null === (e = t.current) || void 0 === e ? void 0 : e.call(t);

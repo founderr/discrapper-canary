@@ -1,89 +1,89 @@
-n.r(e),
-    n.d(e, {
+t.r(n),
+    t.d(n, {
         default: function () {
-            return p;
+            return _;
         },
         openInteractionModal: function () {
-            return S;
+            return f;
         }
     });
-var i = n(200651);
-n(192379);
-var o = n(481060),
-    r = n(118012),
-    l = n(970184),
-    s = n(471073),
-    a = n(293979),
-    c = n(954654),
-    u = n(388032),
-    d = n(251686);
-function p(t) {
-    let { title: e, onClose: n, transitionState: p } = t,
-        { components: S, applicationIconURL: _, applicationName: I, submissionState: T, error: f, validators: C, onSubmit: E } = (0, a.X9)(t, n);
-    return (0, i.jsx)('form', {
-        onSubmit: (t) => {
-            t.preventDefault(), E();
+var o = t(200651);
+t(192379);
+var i = t(481060),
+    a = t(118012),
+    r = t(970184),
+    c = t(471073),
+    d = t(293979),
+    l = t(954654),
+    s = t(388032),
+    u = t(251686);
+function _(e) {
+    let { title: n, onClose: t, transitionState: _ } = e,
+        { components: f, applicationIconURL: p, applicationName: I, submissionState: m, error: S, validators: C, onSubmit: b } = (0, d.X9)(e, t);
+    return (0, o.jsx)('form', {
+        onSubmit: (e) => {
+            e.preventDefault(), b();
         },
-        children: (0, i.jsxs)(o.ModalRoot, {
-            transitionState: p,
+        children: (0, o.jsxs)(i.ModalRoot, {
+            transitionState: _,
             children: [
-                (0, i.jsxs)(o.ModalHeader, {
+                (0, o.jsxs)(i.ModalHeader, {
                     separator: !1,
                     children: [
-                        (0, i.jsx)(o.Avatar, {
-                            src: _,
-                            size: o.AvatarSizes.SIZE_24,
+                        (0, o.jsx)(i.Avatar, {
+                            src: p,
+                            size: i.AvatarSizes.SIZE_24,
                             'aria-label': I,
-                            className: d.applicationIcon
+                            className: u.applicationIcon
                         }),
-                        (0, i.jsx)(r.Z, {
-                            color: r.Z.Colors.HEADER_PRIMARY,
-                            size: r.Z.Sizes.SIZE_24,
-                            children: e
+                        (0, o.jsx)(a.Z, {
+                            color: a.Z.Colors.HEADER_PRIMARY,
+                            size: a.Z.Sizes.SIZE_24,
+                            children: n
                         }),
-                        (0, i.jsx)(o.ModalCloseButton, {
-                            onClick: n,
-                            className: d.closeButton
+                        (0, o.jsx)(i.ModalCloseButton, {
+                            onClick: t,
+                            className: u.closeButton
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.ModalContent, {
+                (0, o.jsxs)(i.ModalContent, {
                     children: [
-                        null != f && '' !== f
-                            ? (0, i.jsx)(o.HelpMessage, {
-                                  messageType: o.HelpMessageTypes.ERROR,
-                                  className: d.submissionWarning,
-                                  children: f
+                        null != S && '' !== S
+                            ? (0, o.jsx)(i.HelpMessage, {
+                                  messageType: i.HelpMessageTypes.ERROR,
+                                  className: u.submissionWarning,
+                                  children: S
                               })
                             : null,
-                        (0, i.jsx)(o.HelpMessage, {
-                            messageType: o.HelpMessageTypes.WARNING,
-                            className: d.submissionWarning,
-                            children: u.intl.format(u.t['dSTy//'], { applicationName: I })
+                        (0, o.jsx)(i.HelpMessage, {
+                            messageType: i.HelpMessageTypes.WARNING,
+                            className: u.submissionWarning,
+                            children: s.intl.format(s.t['dSTy//'], { applicationName: I })
                         }),
-                        (0, i.jsx)(o.FormSection, {
-                            children: (0, i.jsx)(l.Il, {
-                                modal: t,
+                        (0, o.jsx)(i.FormSection, {
+                            children: (0, o.jsx)(r.Il, {
+                                modal: e,
                                 validators: C,
-                                children: (0, c.xX)(S)
+                                children: (0, l.xX)(f)
                             })
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.ModalFooter, {
+                (0, o.jsxs)(i.ModalFooter, {
                     children: [
-                        (0, i.jsx)(o.Button, {
+                        (0, o.jsx)(i.Button, {
                             type: 'submit',
-                            color: o.Button.Colors.BRAND,
-                            size: o.Button.Sizes.MEDIUM,
-                            submitting: T === s.i.IN_FLIGHT,
-                            children: u.intl.string(u.t.geKm7u)
+                            color: i.Button.Colors.BRAND,
+                            size: i.Button.Sizes.MEDIUM,
+                            submitting: m === c.i.IN_FLIGHT,
+                            children: s.intl.string(s.t.geKm7u)
                         }),
-                        (0, i.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
-                            onClick: n,
-                            children: u.intl.string(u.t['ETE/oK'])
+                        (0, o.jsx)(i.Button, {
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
+                            onClick: t,
+                            children: s.intl.string(s.t['ETE/oK'])
                         })
                     ]
                 })
@@ -91,11 +91,11 @@ function p(t) {
         })
     });
 }
-function S(t) {
-    (0, o.openModal)((e) =>
-        (0, i.jsx)(p, {
-            ...e,
-            ...t
+function f(e) {
+    (0, i.openModal)((n) =>
+        (0, o.jsx)(_, {
+            ...n,
+            ...e
         })
     );
 }

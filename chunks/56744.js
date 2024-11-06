@@ -28,11 +28,11 @@ let h = r.memo(function (e) {
             [f, p]
         ),
         _ = (0, l.e7)([s.Z], () => null != f && s.Z.isBlockedForMessage(f), [f]),
-        C = (0, u.Uj)(f),
-        E = (0, u.Uj)(t);
+        E = (0, u.Uj)(f),
+        C = (0, u.Uj)(t);
     return (0, i.jsx)(d.Z, {
-        repliedAuthor: C,
-        baseAuthor: E,
+        repliedAuthor: E,
+        baseAuthor: C,
         baseMessage: t,
         channel: n,
         referencedMessage: m,

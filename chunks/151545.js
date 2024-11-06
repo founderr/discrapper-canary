@@ -37,7 +37,7 @@ function T(e) {
         ),
         R = C && _.Z.can(S.Plq.CONNECT, N),
         O = (null == T ? void 0 : T.type) === S.IIU.HANG_STATUS && R ? N : null,
-        D = (0, m.F)({ location: 'UserProfileActivityCardWrapper' }),
+        { activityReactReplyEnabled: D } = (0, m.F)({ location: 'UserProfileActivityCardWrapper' }),
         L = t.id === n.id,
         x = (0, a.e7)([f.Z, h.Z, d.Z], () => {
             if ((0, s.Z)(T)) {

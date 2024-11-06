@@ -747,7 +747,7 @@ let eg = {
                 [H, j] = (0, V.Z)(c);
             H && ((c = j), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
             let Y = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === el.Uvt.FORWARD;
-            if ('' === c && null == v && null == A && null == R && !Y) return Promise.resolve();
+            if ('' === c && null == v && null == A && null == R && null == M && !Y) return Promise.resolve();
             let z = null != N ? el.uaV.REPLY : el.uaV.DEFAULT,
                 q = null !== (a = n.nonce) && void 0 !== a ? a : (0, x.r)();
             if (!1 !== n.eagerDispatch) {
@@ -951,7 +951,7 @@ let eg = {
                                                   })
                                                 : o.body.code === el.evJ.POGGERMODE_TEMPORARILY_DISABLED
                                                   ? s.Z.dispatch({ type: 'POGGERMODE_TEMPORARILY_DISABLED' })
-                                                  : null != R || Y || eE.sendClydeError(e, o.body.code);
+                                                  : null != R || Y || null != M || eE.sendClydeError(e, o.body.code);
                                     }
                                     t
                                         ? eE.deleteMessage(e, q, !0)
@@ -959,7 +959,7 @@ let eg = {
                                               type: 'MESSAGE_SEND_FAILED',
                                               messageId: q,
                                               channelId: e,
-                                              shouldNotify: !0
+                                              shouldNotify: !n.doNotNotifyOnError
                                           }),
                                           (0, w.x)({
                                               failureCode: o.hasErr ? void 0 : o.status,

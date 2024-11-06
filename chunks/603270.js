@@ -23,21 +23,21 @@ var i = n(200651),
     p = n(238),
     g = n(55563),
     _ = n(551428),
-    C = n(626135),
-    E = n(572004),
+    E = n(626135),
+    C = n(572004),
     I = n(601911),
     x = n(504211),
-    v = n(381961),
-    N = n(970321),
+    N = n(381961),
+    v = n(970321),
     T = n(680005),
     S = n(981631),
-    b = n(272242),
-    A = n(388032),
+    A = n(272242),
+    b = n(388032),
     j = n(738571);
-let Z = y(function (e) {
+let Z = L(function (e) {
         let { appId: t, message: s } = e,
-            d = (0, N.R)(t),
-            [m, f, g, _, E, v, T] = (0, l.Wu)(
+            d = (0, v.R)(t),
+            [m, f, g, _, C, N, T] = (0, l.Wu)(
                 [c.Z, p.Z, h.Z],
                 () => {
                     var e;
@@ -49,26 +49,26 @@ let Z = y(function (e) {
                 [t, s.channel_id]
             );
         r.useEffect(() => {
-            E === p.N.NONE && (0, o.k)(t), null == m && !f && !g && (0, u.UM)(t);
-        }, [m, t, g, f, E]);
+            C === p.N.NONE && (0, o.k)(t), null == m && !f && !g && (0, u.UM)(t);
+        }, [m, t, g, f, C]);
         let Z = _.subscriptions.length,
             R = _.otps.length,
-            y = r.useMemo(
+            L = r.useMemo(
                 () =>
                     Z > 0 && R > 0
-                        ? A.intl.formatToPlainString(A.t['jA648/'], {
+                        ? b.intl.formatToPlainString(b.t['jA648/'], {
                               subCount: Z,
                               itemCount: R
                           })
                         : Z > 0
-                          ? A.intl.formatToPlainString(A.t.GSfibG, { count: Z })
+                          ? b.intl.formatToPlainString(b.t.GSfibG, { count: Z })
                           : R > 0
-                            ? A.intl.formatToPlainString(A.t.j7Go5O, { count: R })
-                            : A.intl.string(A.t.rMA98v),
+                            ? b.intl.formatToPlainString(b.t.j7Go5O, { count: R })
+                            : b.intl.string(b.t.rMA98v),
                 [R, Z]
             );
         if (!d || null == m) return null;
-        let L = () => {
+        let y = () => {
             (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('77803'), n.e('65355')]).then(n.bind(n, 7225));
                 return (n) =>
@@ -76,43 +76,43 @@ let Z = y(function (e) {
                         transitionState: n.transitionState,
                         onClose: n.onClose,
                         appId: t,
-                        guildId: v
+                        guildId: N
                     });
             });
         };
         return (0, i.jsx)(P, {
             appName: m.name,
-            title: A.intl.formatToPlainString(A.t.XDRjs7, { appName: m.name }),
-            description: y,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, b.ApplicationDirectoryProfileSections.STORE)),
+            title: b.intl.formatToPlainString(b.t.XDRjs7, { appName: m.name }),
+            description: L,
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, A.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, x.X)(t, x.B.STORE_EMBED);
             },
             iconSrc: T,
             onIconClick: () => {
-                L(),
-                    C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                y(),
+                    E.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
                     });
             },
             children: (0, i.jsx)(a.Button, {
                 onClick: () => {
-                    L(),
-                        C.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    y(),
+                        E.default.track(S.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
                 },
                 className: j.openStoreButton,
-                children: A.intl.string(A.t.kRvlKC)
+                children: b.intl.string(b.t.kRvlKC)
             })
         });
     }),
-    R = y(function (e) {
+    R = L(function (e) {
         var t, o;
         let { skuId: u, message: p } = e,
-            [E, v, Z, R, y, L, O, M] = (0, l.Wu)(
+            [C, N, Z, R, L, y, O, M] = (0, l.Wu)(
                 [g.Z, _.Z, f.Z, h.Z, c.Z],
                 () => {
                     var e, t, n, i;
@@ -126,21 +126,21 @@ let Z = y(function (e) {
                 },
                 [p.channel_id, u]
             ),
-            k = (0, N.R)(null !== (o = null == v ? void 0 : v.id) && void 0 !== o ? o : '');
+            k = (0, v.R)(null !== (o = null == N ? void 0 : N.id) && void 0 !== o ? o : '');
         r.useEffect(() => {
-            null == E && !R && !y && (0, s.km)(u);
-        }, [y, R, E, u]),
+            null == C && !R && !L && (0, s.km)(u);
+        }, [L, R, C, u]),
             r.useEffect(() => {
-                if ((null == v ? void 0 : v.id) != null) (0, s.oJ)(null == v ? void 0 : v.id);
-            }, [null == v ? void 0 : v.id]);
+                if ((null == N ? void 0 : N.id) != null) (0, s.oJ)(null == N ? void 0 : N.id);
+            }, [null == N ? void 0 : N.id]);
         let D = (0, l.e7)([g.Z], () => (null != u ? g.Z.getParentSKU(u) : void 0), [u]),
-            { openModal: B, cannotOpenReason: w } = (0, m.ZP)({
+            { openModal: B, cannotOpenReason: U } = (0, m.ZP)({
                 skuId: u,
                 subscribeForGuild: O
             });
-        if (!k || null == v || null == E) return null;
-        let U = E.type === S.epS.SUBSCRIPTION,
-            F = !!U && (0, d.KW)(E.flags),
+        if (!k || null == N || null == C) return null;
+        let w = C.type === S.epS.SUBSCRIPTION,
+            F = !!w && (0, d.KW)(C.flags),
             G = () => {
                 (0, a.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('77803'), n.e('65355')]).then(n.bind(n, 7225));
@@ -148,15 +148,15 @@ let Z = y(function (e) {
                         (0, i.jsx)(e, {
                             transitionState: t.transitionState,
                             onClose: t.onClose,
-                            appId: v.id,
+                            appId: N.id,
                             guildId: O
                         });
                 });
             },
             V = () => {
                 (0, a.openModalLazy)(async () => {
-                    let e = U ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
-                        t = U ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
+                    let e = w ? (await Promise.resolve().then(n.bind(n, 519896))).SubscriptionDetailsModal : null,
+                        t = w ? null : (await Promise.resolve().then(n.bind(n, 147496))).ItemDetailsModal;
                     return (n) => {
                         let r = () => {
                             n.onClose(), G();
@@ -164,8 +164,8 @@ let Z = y(function (e) {
                         return null != e && null != D
                             ? (0, i.jsx)(e, {
                                   transitionState: n.transitionState,
-                                  appId: v.id,
-                                  skuId: E.id,
+                                  appId: N.id,
+                                  skuId: C.id,
                                   guildId: O,
                                   subscriptionType: F ? 'user' : 'guild',
                                   onClose: n.onClose,
@@ -174,7 +174,7 @@ let Z = y(function (e) {
                             : null != t
                               ? (0, i.jsx)(t, {
                                     transitionState: n.transitionState,
-                                    appId: v.id,
+                                    appId: N.id,
                                     skuId: u,
                                     onClose: n.onClose,
                                     onHeaderTitleClick: r
@@ -183,7 +183,7 @@ let Z = y(function (e) {
                     };
                 });
             },
-            H = U
+            H = w
                 ? F
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
@@ -193,7 +193,7 @@ let Z = y(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              A.intl.string(A.t.wnifjI)
+                              b.intl.string(b.t.wnifjI)
                           ]
                       })
                     : (0, i.jsxs)(i.Fragment, {
@@ -204,7 +204,7 @@ let Z = y(function (e) {
                                   height: 12
                               }),
                               ' ',
-                              A.intl.string(A.t.NRC3am)
+                              b.intl.string(b.t.NRC3am)
                           ]
                       })
                 : null == Z
@@ -214,26 +214,26 @@ let Z = y(function (e) {
                     : t.trim();
         '' === H && (H = void 0);
         let z = () => {
-            C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                application_id: v.id,
-                sku_id: E.id,
+            E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                application_id: N.id,
+                sku_id: C.id,
                 area: 'purchase_button'
             });
         };
         return (0, i.jsx)(P, {
-            appName: v.name,
-            title: E.name,
+            appName: N.name,
+            title: C.name,
             description: H,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(v.id, b.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(S.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(N.id, A.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
-                (0, x.X)(v.id, x.B.SKU_EMBED, u);
+                (0, x.X)(N.id, x.B.SKU_EMBED, u);
             },
             iconSrc: M,
             onIconClick: () => {
                 G(),
-                    C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                        application_id: v.id,
-                        sku_id: E.id,
+                    E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                        application_id: N.id,
+                        sku_id: C.id,
                         area: 'app_icon'
                     });
             },
@@ -244,37 +244,37 @@ let Z = y(function (e) {
                         color: a.ButtonColors.CUSTOM,
                         onClick: () => {
                             V(),
-                                C.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                                    application_id: v.id,
-                                    sku_id: E.id,
+                                E.default.track(S.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                                    application_id: N.id,
+                                    sku_id: C.id,
                                     area: 'view_details'
                                 });
                         },
                         className: j.viewDetailsButton,
-                        children: A.intl.string(A.t.DXYfjI)
+                        children: b.intl.string(b.t.DXYfjI)
                     }),
-                    U
-                        ? null != L
+                    w
+                        ? null != y
                             ? (0, i.jsx)(T.p, {
                                   onClick: B,
-                                  appId: v.id,
+                                  appId: N.id,
                                   subscriptionType: F ? 'user' : 'guild',
-                                  skuId: E.id,
+                                  skuId: C.id,
                                   icon: (0, i.jsx)(a.ShopIcon, {
                                       size: 'xs',
                                       color: 'currentcolor'
                                   }),
                                   onHasClicked: z,
-                                  subscriptionPlan: L,
-                                  cannotOpenReason: w
+                                  subscriptionPlan: y,
+                                  cannotOpenReason: U
                               })
                             : (0, i.jsx)(a.Button, {
                                   onClick: V,
-                                  children: A.intl.string(A.t.uuzaAA)
+                                  children: b.intl.string(b.t.uuzaAA)
                               })
                         : (0, i.jsx)(T.Y, {
-                              appId: v.id,
-                              sku: E,
+                              appId: N.id,
+                              sku: C,
                               icon: (0, i.jsx)(a.ShopIcon, {
                                   size: 'xs',
                                   color: 'currentcolor'
@@ -304,13 +304,13 @@ function P(e) {
                             })
                         ]
                     }),
-                    E.wS &&
+                    C.wS &&
                         (0, i.jsx)(a.Button, {
                             look: a.ButtonLooks.BLANK,
                             size: a.ButtonSizes.ICON,
-                            'aria-label': A.intl.string(A.t.WqhZsr),
+                            'aria-label': b.intl.string(b.t.WqhZsr),
                             onClick: () => {
-                                (0, E.JG)(l), (0, a.showToast)((0, a.createToast)(A.intl.string(A.t['L/PwZW']), a.ToastType.SUCCESS)), c();
+                                (0, C.JG)(l), (0, a.showToast)((0, a.createToast)(b.intl.string(b.t['L/PwZW']), a.ToastType.SUCCESS)), c();
                             },
                             children: (0, i.jsx)(a.LinkIcon, { size: 'xs' })
                         })
@@ -360,9 +360,9 @@ function P(e) {
         ]
     });
 }
-function y(e) {
+function L(e) {
     return (t) => {
-        let { enabled: n } = v.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
+        let { enabled: n } = N.u.useExperiment({ location: 'AppStorefrontMessageEmbed' });
         return n ? (0, i.jsx)(e, { ...t }) : null;
     };
 }

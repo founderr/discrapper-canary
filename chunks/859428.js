@@ -14,23 +14,23 @@ var i = n(200651),
     p = n(981631),
     g = n(388032),
     _ = n(331781),
-    C = n(250812);
+    E = n(250812);
 t.Z = () => {
     let e = (0, o.e7)([m.Z], () => m.Z.getGuildId(), []),
         t = (0, o.e7)([d.Z], () => d.Z.getGuild(e), [e]),
         n = (0, o.e7)([f.Z], () => f.Z.getHistorySnapshot(), []),
-        [l, E] = r.useState(!1);
+        [l, C] = r.useState(!1);
     if (null == t) return null;
     let I = async () => {
-        E(!0);
+        C(!0);
         try {
             h.mT(t.id), await c.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR });
         } catch {
-            E(!1);
+            C(!1);
         }
     };
     return (0, i.jsxs)('div', {
-        className: a()(_.notice, C.notice),
+        className: a()(_.notice, E.notice),
         children: [
             (0, i.jsxs)(s.Button, {
                 look: s.Button.Looks.OUTLINED,

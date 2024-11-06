@@ -15,7 +15,7 @@ t.Z = (e) => {
     let { channel: n, message: f, hideParty: p } = e,
         { analyticsLocations: g } = (0, a.ZP)(),
         _ = (0, r.e7)([c.default], () => c.default.getId()),
-        C = (0, r.e7)(
+        E = (0, r.e7)(
             [u.Z],
             () => {
                 if (null == f.application) return u.Z.findActivity(f.author.id, (e) => e.type === d.IIU.LISTENING);
@@ -29,7 +29,7 @@ t.Z = (e) => {
         );
     return (0, i.jsx)(l.Z, {
         className: h.container,
-        activity: C,
+        activity: E,
         activityActionType: null != f.activity ? f.activity.type : null,
         partyId: null != f.activity ? f.activity.party_id : null,
         userId: f.author.id,

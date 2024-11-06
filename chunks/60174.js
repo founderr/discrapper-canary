@@ -20,16 +20,16 @@ var i = n(200651),
     p = n(995774),
     g = n(931651),
     _ = n(594174),
-    C = n(630388),
-    E = n(74538),
+    E = n(630388),
+    C = n(74538),
     I = n(833803),
     x = n(566006),
-    v = n(981631),
-    N = n(185923),
+    N = n(981631),
+    v = n(185923),
     T = n(474936),
     S = n(388032),
-    b = n(96042),
-    A = n(688236);
+    A = n(96042),
+    b = n(688236);
 function j(e, t, n) {
     return (
         t in e
@@ -47,14 +47,14 @@ class Z extends r.Component {
     render() {
         let { type: e, message: t, className: n, children: r, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === v.yb.SENDING,
+            c = t.state === N.yb.SENDING,
             h = e === x.O.BURST;
-        if (c || (0, C.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
+        if (c || (0, E.yE)(t.flags, N.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
-            p = (0, E.I5)(f),
+            p = (0, C.I5)(f),
             g = h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
         !p && h && (g = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
-        let T = l ? A : b,
+        let T = l ? b : A,
             { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             Z = j && !this.props.isForumToolbar,
             R = {
@@ -80,8 +80,8 @@ class Z extends r.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, d.x)(N.qR.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, d.x)(N.qR.AddReactionPopoutFocused),
+                        onMouseEnter: () => (0, d.x)(v.qR.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, d.x)(v.qR.AddReactionPopoutFocused),
                         className: a()(
                             T.reactionBtn,
                             {
@@ -112,13 +112,13 @@ class Z extends r.Component {
                 e.stopPropagation();
                 let i = _.default.getCurrentUser();
                 t === x.O.BURST &&
-                    !(0, E.I5)(i) &&
+                    !(0, C.I5)(i) &&
                     (0, h.openBurstReactionsUpsellModal)({
                         analytics: {
                             type: T.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? N.ZY5.GUILD_CHANNEL : N.ZY5.DM_CHANNEL,
                             section: (0, p.s4)(n),
-                            object: v.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: N.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle();
@@ -130,9 +130,9 @@ class Z extends r.Component {
                         openPopoutType: 'message_reaction_emoji_picker',
                         ...(n === x.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != r.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            page: null != r.getGuildId() ? N.ZY5.GUILD_CHANNEL : N.ZY5.DM_CHANNEL,
                             section: (0, p.s4)(r),
-                            object: v.qAy.REACTION_RAIL
+                            object: N.qAy.REACTION_RAIL
                         })
                     },
                     o = (0, i.jsx)(g.$, {

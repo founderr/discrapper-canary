@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ev;
+        return eN;
     },
     c: function () {
         return eI;
@@ -21,29 +21,29 @@ var i = n(200651),
     p = n(254854),
     g = n(195500),
     _ = n(287734),
-    C = n(205355),
-    E = n(558381),
+    E = n(205355),
+    C = n(558381),
     I = n(223245),
     x = n(491428),
-    v = n(401430),
-    N = n(230711),
+    N = n(401430),
+    v = n(230711),
     T = n(726542),
     S = n(100527),
-    b = n(906732),
-    A = n(812206),
+    A = n(906732),
+    b = n(812206),
     j = n(391650),
     Z = n(600164),
     R = n(605236),
     P = n(749277),
-    y = n(492435),
-    L = n(353926),
+    L = n(492435),
+    y = n(353926),
     O = n(506357),
     M = n(36459),
     k = n(236069),
     D = n(305325),
     B = n(281956),
-    w = n(574650),
-    U = n(665302),
+    U = n(574650),
+    w = n(665302),
     F = n(434404),
     G = n(918658),
     V = n(859428),
@@ -75,7 +75,7 @@ var i = n(200651),
     ep = n(65154),
     eg = n(388032),
     e_ = n(569252);
-let eC = () =>
+let eE = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -91,7 +91,7 @@ let eC = () =>
                 })
             ]
         }),
-    eE = () =>
+    eC = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
             children: [
@@ -103,7 +103,7 @@ let eC = () =>
                 eg.intl.string(eg.t.dNAJ19),
                 (0, i.jsx)(c.NoticeButton, {
                     onClick: () => {
-                        (0, f.jN)(em.S9g.USER_SETTINGS), N.Z.setSection(em.oAB.VOICE);
+                        (0, f.jN)(em.S9g.USER_SETTINGS), v.Z.setSection(em.oAB.VOICE);
                     },
                     children: eg.intl.string(eg.t.I6YlBw)
                 })
@@ -120,21 +120,21 @@ let ex =
                   S = (0, s.e7)([en.Z], () => en.Z.getGuildId()),
                   ed = (0, s.e7)([ea.Z], () => ea.Z.getNotice()),
                   ex = (0, s.e7)([$.Z], () => $.Z.getGuild(S)),
-                  { analyticsLocations: ev } = (0, b.ZP)(),
-                  eN = null == ed ? void 0 : ed.type,
+                  { analyticsLocations: eN } = (0, A.ZP)(),
+                  ev = null == ed ? void 0 : ed.type,
                   eT = (0, B.J)(S);
               r.useEffect(() => {
-                  null != eN &&
+                  null != ev &&
                       !(function (e, t) {
                           let n = { notice_type: e };
                           null != t && (n.guild_id = t), eo.default.track(em.rMx.APP_NOTICE_VIEWED, n);
-                      })(eN, S);
-              }, [eN, S]),
+                      })(ev, S);
+              }, [ev, S]),
                   r.useEffect(() => {
                       if (null != ed && ed.type === em.kVF.SURVEY && null != ed.metadata) {
                           let { metadata: e } = ed,
-                              t = L.Z.getUserExperimentDescriptor(e.id);
-                          null != t && (0, y.W9)(e.id, t),
+                              t = y.Z.getUserExperimentDescriptor(e.id);
+                          null != t && (0, L.W9)(e.id, t),
                               (async () => {
                                   var e, t;
                                   (null === (e = ed.metadata) || void 0 === e ? void 0 : e.id) != null && (await (0, x.g8)(null === (t = ed.metadata) || void 0 === t ? void 0 : t.id));
@@ -144,24 +144,24 @@ let ex =
               let eS = (function (e) {
                   let { enabled: t } = (0, z.ZP)(!0, e !== em.kVF.PREMIUM_TIER_2_TRIAL_ENDING);
                   return t || null == e ? null : ea.m[e];
-              })(eN);
+              })(ev);
               if (null == ed) return null;
               if (null != eS)
                   return (0, i.jsx)(P.A, {
                       dismissibleContent: eS,
                       noticeType: ed.type
                   });
-              let eb = null === (e = ed.metadata) || void 0 === e ? void 0 : e.premiumType;
+              let eA = null === (e = ed.metadata) || void 0 === e ? void 0 : e.premiumType;
               switch (ed.type) {
                   case em.kVF.LURKING_GUILD:
                       return (0, i.jsx)(V.Z, {});
                   case em.kVF.PENDING_MEMBER:
-                      return (0, i.jsx)(w.Z, {});
+                      return (0, i.jsx)(U.Z, {});
                   case em.kVF.INVITED_TO_SPEAK:
                       return (0, i.jsx)(q.Z, {});
                   case em.kVF.GUILD_RAID_NOTIFICATION:
-                      let { dismissUntil: eA } = ed.metadata;
-                      return (0, i.jsx)(O.Z, { onDismiss: () => eI(eA) });
+                      let { dismissUntil: eb } = ed.metadata;
+                      return (0, i.jsx)(O.Z, { onDismiss: () => eI(eb) });
                   case em.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: ej } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
@@ -292,7 +292,7 @@ let ex =
                               }),
                               eg.intl.string(eg.t['D8Cp7+']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
-                                  onClick: () => N.Z.open(em.oAB.VOICE),
+                                  onClick: () => v.Z.open(em.oAB.VOICE),
                                   noticeType: em.kVF.SPOTIFY_AUTO_PAUSED,
                                   children: eg.intl.string(eg.t.NiTd0d)
                               }),
@@ -342,7 +342,7 @@ let ex =
                           color: c.NoticeColors.DEFAULT,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => C.Z.ackScheduledMaintenance(),
+                                  onClick: () => E.Z.ackScheduledMaintenance(),
                                   noticeType: em.kVF.SCHEDULED_MAINTENANCE
                               }),
                               eg.intl.format(eg.t.yb96S0, ed.metadata),
@@ -353,17 +353,17 @@ let ex =
                           ]
                       });
                   case em.kVF.NO_INPUT_DETECTED:
-                      if (!ee.Z.supports(ep.AN.LOOPBACK)) return (0, i.jsx)(eC, {});
-                      return (0, i.jsx)(eE, {});
+                      if (!ee.Z.supports(ep.AN.LOOPBACK)) return (0, i.jsx)(eE, {});
+                      return (0, i.jsx)(eC, {});
                   case em.kVF.HARDWARE_MUTE:
                       if (null == ed.metadata) return null;
-                      let { vendor: ey, model: eL } = ed.metadata;
+                      let { vendor: eL, model: ey } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
                               eg.intl.format(eg.t.qoDex8, {
-                                  vendorName: ey.name,
-                                  modelName: eL.name
+                                  vendorName: eL.name,
+                                  modelName: ey.name
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
@@ -371,7 +371,7 @@ let ex =
                                   }
                               }),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
-                                  href: eL.url,
+                                  href: ey.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
                                   children: eg.intl.string(eg.t['Yl/Rio'])
@@ -406,7 +406,7 @@ let ex =
                               eg.intl.string(eg.t.HcErZW),
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
-                                      (0, f.jN)(em.S9g.USER_SETTINGS), N.Z.setSection(em.oAB.VOICE);
+                                      (0, f.jN)(em.S9g.USER_SETTINGS), v.Z.setSection(em.oAB.VOICE);
                                   },
                                   children: eg.intl.string(eg.t['51hI/v'])
                               })
@@ -416,7 +416,7 @@ let ex =
                       if (null == ed.metadata) return null;
                       let { skuId: eO, applicationId: eM } = ed.metadata,
                           ek = er.Z.get(eO),
-                          eD = A.Z.getApplication(eM);
+                          eD = b.Z.getApplication(eM);
                       if (null == ek || null == eD) return null;
                       let eB = { page: em.ZY5.IN_APP };
                       return (0, i.jsxs)(c.Notice, {
@@ -445,11 +445,11 @@ let ex =
                                               (0, H.Z)({
                                                   initialPlanId: null,
                                                   subscriptionTier: eh.Si.TIER_2,
-                                                  analyticsLocations: ev,
+                                                  analyticsLocations: eN,
                                                   analyticsObject: eB
                                               });
                                           },
-                                          analyticsLocations: ev,
+                                          analyticsLocations: eN,
                                           analyticsLocationObject: eB,
                                           context: __OVERLAY__ ? em.IlC.OVERLAY : em.IlC.APP
                                       }).then(() => h.Z(ek.id)),
@@ -461,7 +461,7 @@ let ex =
                       if (null == ed.metadata) return null;
                       let { skuId: e, applicationId: t } = ed.metadata,
                           n = er.Z.get(e),
-                          r = A.Z.getApplication(t);
+                          r = b.Z.getApplication(t);
                       if (null == n || null == r) return null;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.PREMIUM_TIER_1,
@@ -576,7 +576,7 @@ let ex =
                       });
                   case em.kVF.DISPATCH_ERROR:
                       if (null == ed.metadata) return null;
-                      let { error: ew } = ed.metadata;
+                      let { error: eU } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
@@ -584,7 +584,7 @@ let ex =
                                   onClick: () => eI(),
                                   noticeType: em.kVF.DISPATCH_ERROR
                               }),
-                              null == ew ? void 0 : ew.displayMessage,
+                              null == eU ? void 0 : eU.displayMessage,
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.DISPATCH_ERROR,
                                   onClick: () =>
@@ -598,7 +598,7 @@ let ex =
                       });
                   case em.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS:
                       if (null == ed.metadata) return null;
-                      let { progress: eU, total: eF, name: eG } = ed.metadata;
+                      let { progress: ew, total: eF, name: eG } = ed.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
@@ -612,11 +612,11 @@ let ex =
                                       null != eG
                                           ? eg.intl.formatToPlainString(eg.t['pHj+z8'], {
                                                 name: ''.concat(eG),
-                                                progress: eU,
+                                                progress: ew,
                                                 total: eF
                                             })
                                           : eg.intl.formatToPlainString(eg.t['lHZn+P'], {
-                                                progress: eU,
+                                                progress: ew,
                                                 total: eF
                                             }),
                                       (0, i.jsx)(c.Spinner, {
@@ -638,7 +638,7 @@ let ex =
                                   children: [
                                       (0, i.jsx)('div', { children: eg.intl.format(eg.t['1qxVe3'], { applicationName: ed.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
-                                          onClick: v.mc,
+                                          onClick: N.mc,
                                           noticeType: em.kVF.APPLICATION_TEST_MODE
                                       })
                                   ]
@@ -658,7 +658,7 @@ let ex =
                                       look: eu.E.Looks.OUTLINED,
                                       size: eu.E.Sizes.MIN,
                                       onSKUSelect: (e) =>
-                                          E.yt(e.id, {
+                                          C.yt(e.id, {
                                               analyticsSource: {
                                                   page: null,
                                                   section: em.jXE.NOTIFICATION_BAR,
@@ -669,7 +669,7 @@ let ex =
                                       children: eg.intl.string(eg.t.Q5ZgpK)
                                   }),
                                   (0, i.jsx)(c.NoticeCloseButton, {
-                                      onClick: v.mc,
+                                      onClick: N.mc,
                                       noticeType: em.kVF.APPLICATION_TEST_MODE
                                   })
                               ]
@@ -681,7 +681,7 @@ let ex =
                       return (0, i.jsx)(G.Z, {});
                   case em.kVF.PREMIUM_UNCANCEL:
                       return (0, i.jsxs)(c.Notice, {
-                          color: eb === eh.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eb === eh.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
+                          color: eA === eh.p9.TIER_1 ? c.NoticeColors.PREMIUM_TIER_1 : eA === eh.p9.TIER_0 ? c.NoticeColors.PREMIUM_TIER_0 : c.NoticeColors.PREMIUM_TIER_2,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   noticeType: em.kVF.PREMIUM_UNCANCEL,
@@ -695,7 +695,7 @@ let ex =
                                   color: 'currentColor',
                                   className: e_.premiumIcon
                               }),
-                              eb === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.fXv4ws, { daysLeft: ed.metadata.daysLeft }) : eb === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t.ZOHZMj, { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.outyHh, { daysLeft: ed.metadata.daysLeft }),
+                              eA === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.fXv4ws, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t.ZOHZMj, { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.outyHh, { daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
@@ -707,13 +707,13 @@ let ex =
                                                   (0, i.jsx)(e, {
                                                       ...t,
                                                       daysLeft: ed.metadata.daysLeft,
-                                                      premiumType: eb,
+                                                      premiumType: eA,
                                                       analyticsSource: 'Nag Bar',
                                                       premiumSubscription: ed.metadata.premiumSubscription
                                                   });
                                           });
                                   },
-                                  children: eb === eh.p9.TIER_1 ? eg.intl.string(eg.t.BkbUPD) : eb === eh.p9.TIER_0 ? eg.intl.string(eg.t.Px978f) : eg.intl.string(eg.t.LW5tCA)
+                                  children: eA === eh.p9.TIER_1 ? eg.intl.string(eg.t.BkbUPD) : eA === eh.p9.TIER_0 ? eg.intl.string(eg.t.Px978f) : eg.intl.string(eg.t.LW5tCA)
                               })
                           ]
                       });
@@ -723,7 +723,7 @@ let ex =
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  noticeType: eN,
+                                  noticeType: ev,
                                   onClick: () => {
                                       eI(eH);
                                   }
@@ -732,7 +732,7 @@ let ex =
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   onClick: () => {
-                                      eI(eH), N.Z.open(em.oAB.SUBSCRIPTIONS);
+                                      eI(eH), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t.q8rxeX)
                               })
@@ -754,7 +754,7 @@ let ex =
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), N.Z.open(em.oAB.SUBSCRIPTIONS);
+                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t['Zpd+Ym'])
                               })
@@ -776,7 +776,7 @@ let ex =
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), N.Z.open(em.oAB.SUBSCRIPTIONS);
+                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
                                   children: eg.intl.string(eg.t.U5pKWF)
                               })
@@ -793,19 +793,19 @@ let ex =
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              eb === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.b6QUvb, { daysLeft: ed.metadata.daysLeft }) : eb === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t['tURZ/P'], { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.AyC74O, { daysLeft: ed.metadata.daysLeft }),
+                              eA === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.b6QUvb, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t['tURZ/P'], { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.AyC74O, { daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
-                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), N.Z.open(em.oAB.SUBSCRIPTIONS);
+                                      eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eb === eh.p9.TIER_1 ? eg.intl.string(eg.t.lboF5O) : eb === eh.p9.TIER_0 ? eg.intl.string(eg.t['4UPwOj']) : eg.intl.string(eg.t['P/VvGR'])
+                                  children: eA === eh.p9.TIER_1 ? eg.intl.string(eg.t.lboF5O) : eA === eh.p9.TIER_0 ? eg.intl.string(eg.t['4UPwOj']) : eg.intl.string(eg.t['P/VvGR'])
                               })
                           ]
                       });
                   case em.kVF.BACK_TO_PREVIOUS_SCREEN:
-                      return (0, i.jsx)(U.h, {
+                      return (0, i.jsx)(w.h, {
                           buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : eg.intl.string(eg.t['/g10LC']),
                           onGoBack: ed.callback,
                           onDismiss: () => eI(),
@@ -815,7 +815,7 @@ let ex =
                       let e = { page: em.ZY5.IN_APP };
                       return (0, i.jsx)(k.Z, {
                           guildId: S,
-                          analyticsLocations: ev,
+                          analyticsLocations: eN,
                           analyticsLocation: e
                       });
                   }
@@ -956,9 +956,9 @@ let ex =
               }
           })
         : null;
-function ev() {
-    let { analyticsLocations: e } = (0, b.ZP)(S.Z.NOTICE);
-    return (0, i.jsx)(b.Gt, {
+function eN() {
+    let { analyticsLocations: e } = (0, A.ZP)(S.Z.NOTICE);
+    return (0, i.jsx)(A.Gt, {
         value: e,
         children: (0, i.jsx)(ex, {})
     });

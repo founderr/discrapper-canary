@@ -45,7 +45,7 @@ let o = (0, a.B)({
             label: 'Gift Collectibles in DM, select Nitro SKU from category, showing popular items',
             config: {
                 enabled: !0,
-                showBothNitroSkusInCategorySelect: !1,
+                showBothNitroSkusInCategorySelect: !0,
                 giftRecommendationAlgorithm: 1
             }
         },

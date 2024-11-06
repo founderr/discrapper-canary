@@ -13,14 +13,14 @@ var r = n(481060),
     c = n(981631);
 function u(e) {
     let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: _ = !1 } = e,
-        C = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
-        { enabled: E } = l.m1.getCurrentConfig({ location: C }, { autoTrackExposure: !1 });
-    if (_ && E) {
+        E = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
+        { enabled: C } = l.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
+    if (_ && C) {
         null != t &&
             (0, a.Z)({
                 openInPopout: m,
                 channel: t,
-                analyticsLocation: C
+                analyticsLocation: E
             });
         return;
     }

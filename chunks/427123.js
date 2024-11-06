@@ -14,30 +14,30 @@ var i,
     p = n(812206),
     g = n(594190),
     _ = n(594174),
-    C = n(580130),
-    E = n(55563),
+    E = n(580130),
+    C = n(55563),
     I = n(981631);
 let x = 'DetectedOffPlatformPremiumPerksStore',
-    v = {},
     N = {},
+    v = {},
     T = [];
 function S() {
     let e = !1;
-    for (let { skuId: t, applicationId: n } of s().values(N)) {
+    for (let { skuId: t, applicationId: n } of s().values(v)) {
         if (T.includes(t)) continue;
         let i = p.Z.getApplication(n);
         if (null == i) {
             !p.Z.isFetchingApplication(n) && !p.Z.didFetchingApplicationFail(n) && f.ZP.fetchApplication(n);
             continue;
         }
-        let r = E.Z.get(t);
+        let r = C.Z.get(t);
         if (null == r) {
-            !E.Z.isFetching(t) && !E.Z.didFetchingSkuFail(t) && h.$N(i.id, t);
+            !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && h.$N(i.id, t);
             continue;
         }
-        C.Z.applicationIdsFetching.has(i.id) || C.Z.isEntitledToSku(_.default.getCurrentUser(), t, i.id, i.id) || !r.available
-            ? null != v[t] && (delete v[t], (e = !0))
-            : ((v[t] = {
+        E.Z.applicationIdsFetching.has(i.id) || E.Z.isEntitledToSku(_.default.getCurrentUser(), t, i.id, i.id) || !r.available
+            ? null != N[t] && (delete N[t], (e = !0))
+            : ((N[t] = {
                   skuId: t,
                   applicationId: n
               }),
@@ -45,17 +45,17 @@ function S() {
     }
     return e;
 }
-class b extends (i = c.ZP.Store) {
+class A extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(g.ZP, E.Z, C.Z), (T = null !== (e = u.K.get(x)) && void 0 !== e ? e : T);
+        this.waitFor(g.ZP, C.Z, E.Z), (T = null !== (e = u.K.get(x)) && void 0 !== e ? e : T);
     }
     getDetectedOffPlatformPremiumPerks() {
-        return s().values(v);
+        return s().values(N);
     }
 }
 (a = 'DetectedOffPlatformPremiumPerksStore'),
-    (l = 'displayName') in (r = b)
+    (l = 'displayName') in (r = A)
         ? Object.defineProperty(r, l, {
               value: a,
               enumerable: !0,
@@ -63,9 +63,9 @@ class b extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new b(d.Z, {
+    (t.Z = new A(d.Z, {
         LOGOUT: function () {
-            (v = {}), (N = {});
+            (N = {}), (v = {});
         },
         SKU_FETCH_SUCCESS: S,
         ENTITLEMENT_FETCH_APPLICATION_SUCCESS: S,
@@ -73,7 +73,7 @@ class b extends (i = c.ZP.Store) {
         APPLICATION_FETCH_SUCCESS: S,
         DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
             let { skuId: t } = e;
-            if ((delete v[t], T.includes(t))) return !1;
+            if ((delete N[t], T.includes(t))) return !1;
             T.push(t), u.K.set(x, T);
         },
         RUNNING_GAMES_CHANGE: function () {
@@ -82,9 +82,9 @@ class b extends (i = c.ZP.Store) {
                 if (null != t && n !== I.GQo.DISCORD)
                     for (let { skuId: n, applicationId: i } of I.Lg6) {
                         if (!(i !== t || T.includes(n)))
-                            null == N[n] &&
-                                (!C.Z.applicationIdsFetched.has(i) && !C.Z.applicationIdsFetching.has(i) && null == C.Z.getForSku(n) && m.yD(i),
-                                (N[n] = {
+                            null == v[n] &&
+                                (!E.Z.applicationIdsFetched.has(i) && !E.Z.applicationIdsFetching.has(i) && null == E.Z.getForSku(n) && m.yD(i),
+                                (v[n] = {
                                     skuId: n,
                                     applicationId: i
                                 }),

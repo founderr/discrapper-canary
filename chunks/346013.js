@@ -19,47 +19,47 @@ var i = n(200651),
     p = n(367907),
     g = n(676742),
     _ = n(1585),
-    C = n(841762),
-    E = n(336197),
+    E = n(841762),
+    C = n(336197),
     I = n(406432),
     x = n(348238),
-    v = n(38267),
-    N = n(184301),
+    N = n(38267),
+    v = n(184301),
     T = n(347475),
     S = n(695346),
-    b = n(271383),
-    A = n(594174),
+    A = n(271383),
+    b = n(594174),
     j = n(768581),
     Z = n(900849),
     R = n(506071),
     P = n(495114),
-    y = n(170140),
-    L = n(981631),
+    L = n(170140),
+    y = n(981631),
     O = n(959517),
     M = n(388032),
     k = n(519644),
     D = n(527455);
 function B(e) {
     var t, n, l;
-    let { embedUrl: o, message: B, channel: w } = e,
-        U = (0, y.J)(o, B),
-        { setPopout: F } = (0, v.Z)(B.id, O.d$),
-        G = (0, x.qo)(B, w, F, !0),
+    let { embedUrl: o, message: B, channel: U } = e,
+        w = (0, L.J)(o, B),
+        { setPopout: F } = (0, N.Z)(B.id, O.d$),
+        G = (0, x.qo)(B, U, F, !0),
         V = S.QK.useSetting(),
         H = (0, R.n)(),
         [z, W] = r.useState(!1),
-        [K, Y] = r.useState((null == U ? void 0 : U.coverImage) == null),
+        [K, Y] = r.useState((null == w ? void 0 : w.coverImage) == null),
         X = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         Q = (0, d.e7)(
-            [b.ZP, A.default],
+            [A.ZP, b.default],
             () => {
                 var e;
-                return b.ZP.isMember(null == U ? void 0 : U.guildId, null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
+                return A.ZP.isMember(null == w ? void 0 : w.guildId, null === (e = b.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
             },
-            [U]
+            [w]
         ),
-        q = (0, d.e7)([b.ZP], () => ((null == U ? void 0 : U.authorId) != null ? b.ZP.getMember(U.guildId, U.authorId) : null)),
-        J = (0, g.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == U ? void 0 : null === (t = U.user) || void 0 === t ? void 0 : t.avatarDecoration),
+        q = (0, d.e7)([A.ZP], () => ((null == w ? void 0 : w.authorId) != null ? A.ZP.getMember(w.guildId, w.authorId) : null)),
+        J = (0, g.Z)((null == q ? void 0 : q.avatarDecoration) != null ? (null == q ? void 0 : q.avatarDecoration) : null == w ? void 0 : null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration),
         [$, ee] = r.useMemo(() => {
             var e;
             return [null !== (e = null == q ? void 0 : q.colorString) && void 0 !== e ? e : 'inherit', null == q ? void 0 : q.colorRoleId];
@@ -73,33 +73,33 @@ function B(e) {
             W(!1);
         }, [W]),
         ea = r.useCallback(async () => {
-            null != U &&
-                ((0, p.yw)(L.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
-                    media_post_id: U.threadId,
-                    channel_id: w.id,
-                    can_access: U.canAccess,
+            null != w &&
+                ((0, p.yw)(y.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+                    media_post_id: w.threadId,
+                    channel_id: U.id,
+                    can_access: w.canAccess,
                     is_member: Q
                 }),
-                U.canAccess ? (0, E.Z)(L.Z5c.CHANNEL(U.guildId, U.threadId, U.messageId)) : Q ? (0, E.Z)(L.Z5c.CHANNEL(U.guildId, U.parentChannelId)) : await Z.Ub(U.guildId, {}, { channelId: U.parentChannelId }));
-        }, [U, w, Q]),
+                w.canAccess ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.threadId, w.messageId)) : Q ? (0, C.Z)(y.Z5c.CHANNEL(w.guildId, w.parentChannelId)) : await Z.Ub(w.guildId, {}, { channelId: w.parentChannelId }));
+        }, [w, U, Q]),
         eo = r.useCallback(
             () => (
-                s()((null == U ? void 0 : U.authorId) != null, 'Author Id cannot be null when loading user profile'),
-                (0, N.Z)(U.authorId, U.avatarUrl, {
-                    guildId: U.guildId,
-                    channelId: w.id
+                s()((null == w ? void 0 : w.authorId) != null, 'Author Id cannot be null when loading user profile'),
+                (0, v.Z)(w.authorId, w.avatarUrl, {
+                    guildId: w.guildId,
+                    channelId: U.id
                 })
             ),
-            [U, w]
+            [w, U]
         );
-    if (null == U) return null;
+    if (null == w) return null;
     let es = (e, t) => (
-            s()(null != U.authorId, 'Author Id cannot be null when rendering user popout'),
+            s()(null != w.authorId, 'Author Id cannot be null when rendering user popout'),
             (0, i.jsx)(T.Z, {
                 ...e,
-                userId: U.authorId,
-                guildId: U.guildId,
-                channelId: w.id,
+                userId: w.authorId,
+                guildId: w.guildId,
+                channelId: U.id,
                 messageId: B.id,
                 roleId: ee,
                 newAnalyticsLocations: t
@@ -110,11 +110,11 @@ function B(e) {
             size: (0, _.y9)(m.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
-        eu = null === (n = U.user) || void 0 === n ? void 0 : n.getAvatarURL(U.guildId, 40, en),
+        eu = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, en),
         ed = () => {
             if (!et.enabled) ei((e) => !e);
         },
-        em = U.coverImage,
+        em = w.coverImage,
         eh = null != em && (0, I.d$)(em);
     return (0, i.jsxs)('div', {
         className: k.postPreviewContainer,
@@ -125,25 +125,25 @@ function B(e) {
                 onMouseLeave: el,
                 children: [
                     !K &&
-                        (!0 === U.shouldShowBlurredThumbnailImage
+                        (!0 === w.shouldShowBlurredThumbnailImage
                             ? (0, i.jsx)('img', {
                                   src: D,
                                   alt: M.intl.string(M.t.rIbh8P),
-                                  className: a()(k.thumbnail, { [k.spoiler]: U.shouldSpoiler }),
+                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })
-                            : (0, i.jsx)(C.Z, {
+                            : (0, i.jsx)(E.Z, {
                                   src: !(H && (V || z)) && eh ? ''.concat(em, '?format=png') : em,
                                   backgroundSrc: ''.concat(em, '?format=png'),
                                   alt: M.intl.string(M.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: a()(k.thumbnail, { [k.spoiler]: U.shouldSpoiler }),
+                                  className: a()(k.thumbnail, { [k.spoiler]: w.shouldSpoiler }),
                                   imageChildClassName: k.thumbnailImage,
                                   onContextMenu: G,
                                   onError: () => Y(!0)
                               })),
-                    null != U.coverImageOverlayText &&
+                    null != w.coverImageOverlayText &&
                         (0, i.jsx)(m.Clickable, {
                             onClick: ea,
                             children: (0, i.jsx)('div', {
@@ -155,7 +155,7 @@ function B(e) {
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',
-                                            children: U.coverImageOverlayText
+                                            children: w.coverImageOverlayText
                                         })
                                     ]
                                 })
@@ -173,13 +173,13 @@ function B(e) {
                                 variant: 'text-md/semibold',
                                 color: 'text-normal',
                                 className: k.descriptionHeaderText,
-                                children: U.title
+                                children: w.title
                             }),
                             (0, i.jsx)(m.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 className: a()(k.descriptionHeaderText, k.descriptionSubtitle),
-                                children: U.subtitle
+                                children: w.subtitle
                             })
                         ]
                     }),
@@ -191,7 +191,7 @@ function B(e) {
                                     renderPopout: (e) => es(e, [f.Z.AVATAR]),
                                     position: 'right',
                                     spacing: 12,
-                                    preload: null == U.authorId ? void 0 : eo,
+                                    preload: null == w.authorId ? void 0 : eo,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
                                             onMouseEnter: ed,
@@ -211,7 +211,7 @@ function B(e) {
                                     (0, i.jsxs)('div', {
                                         className: k.descriptionFooterChannelName,
                                         children: [
-                                            null != U.channelName &&
+                                            null != w.channelName &&
                                                 (0, i.jsx)(m.ImageSparkleIcon, {
                                                     size: 'md',
                                                     color: 'currentColor',
@@ -223,29 +223,29 @@ function B(e) {
                                                 children: (0, i.jsx)(m.Heading, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
-                                                    children: null !== (l = U.channelName) && void 0 !== l ? l : U.guildName
+                                                    children: null !== (l = w.channelName) && void 0 !== l ? l : w.guildName
                                                 })
                                             })
                                         ]
                                     }),
-                                    null != U.authorName &&
+                                    null != w.authorName &&
                                         (0, i.jsx)(m.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
                                             className: k.descriptionFooterAuthorContainer,
                                             children: M.intl.format(M.t.voIDKS, {
-                                                authorName: U.authorName,
+                                                authorName: w.authorName,
                                                 authorNameHook: () =>
                                                     (0, i.jsx)(
                                                         m.Popout,
                                                         {
                                                             renderPopout: (e) => es(e, [f.Z.USERNAME]),
                                                             position: 'right',
-                                                            preload: null == U.authorId ? void 0 : eo,
+                                                            preload: null == w.authorId ? void 0 : eo,
                                                             children: (e) =>
                                                                 (0, i.jsx)(m.NameWithRoleAnchor, {
                                                                     ...e,
-                                                                    name: U.authorName,
+                                                                    name: w.authorName,
                                                                     color: $,
                                                                     className: k.authorName
                                                                 })
@@ -256,14 +256,14 @@ function B(e) {
                                         })
                                 ]
                             }),
-                            U.canAccess
+                            w.canAccess
                                 ? (0, i.jsx)(m.Button, {
                                       color: m.ButtonColors.BRAND,
                                       onClick: ea,
                                       children: (0, i.jsx)(m.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: U.ctaText
+                                          children: w.ctaText
                                       })
                                   })
                                 : (0, i.jsx)(m.ShinyButton, {
@@ -274,7 +274,7 @@ function B(e) {
                                       children: (0, i.jsx)(m.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: U.ctaText
+                                          children: w.ctaText
                                       })
                                   })
                         ]

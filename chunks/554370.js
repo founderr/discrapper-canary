@@ -30,23 +30,23 @@ var i = n(200651),
     N = n(237997),
     O = n(451478),
     T = n(585483),
-    L = n(358085),
-    k = n(13140),
-    A = n(145597),
-    w = n(830917),
-    R = n(681603),
+    A = n(358085),
+    L = n(13140),
+    R = n(145597),
+    k = n(830917),
+    w = n(681603),
     j = n(358446),
     M = n(915614),
-    z = n(690336),
-    D = n(388627),
-    P = n(561064),
+    P = n(690336),
+    z = n(388627),
+    D = n(561064),
     U = n(987650),
     V = n(501787),
     W = n(981631),
     B = n(206583),
     F = n(388032),
     H = n(668674);
-let G = !L.isPlatformEmbedded && !1,
+let G = !A.isPlatformEmbedded && !1,
     Y = G
         ? (0, i.jsx)(g.Z, {
               src: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzdpcnRrYXdrNzVuNjZ3NXpmeTJvNGl4Z2N4OXBsamx5aXphdHhxaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/OPg2B0FPBL94H12uM0/giphy480p.mp4',
@@ -98,13 +98,13 @@ let J = o.memo(function (e) {
         return t && n
             ? (0, i.jsx)(M.Z, {
                   className: H.closeContainer,
-                  onClick: () => d.Z.setInputLocked(!1, (0, A.QF)()),
+                  onClick: () => d.Z.setInputLocked(!1, (0, R.QF)()),
                   IconComponent: u.LockUnlockedIcon
               })
             : null;
     }),
     $ = o.memo(function () {
-        let e = (0, D.pL)(),
+        let e = (0, z.pL)(),
             t = (0, E.Ns)(null == e ? void 0 : e.id),
             n = o.useRef(!1),
             i = (0, s.e7)([v.Z], () => null != v.Z.getLastFeedFetchDate(B.YN.GAME_PROFILE_FEED));
@@ -120,21 +120,21 @@ function ee() {
         (0, c.Zy)();
         return;
     }
-    d.Z.setInputLocked(!0, (0, A.QF)());
+    d.Z.setInputLocked(!0, (0, R.QF)());
 }
 function et() {
-    d.Z.setFocusedPID(A.Js);
+    d.Z.setFocusedPID(R.Js);
 }
 function en() {
     d.Z.setFocusedPID(null);
 }
 function ei(e) {
-    let t = N.Z.isLocked((0, A.QF)());
+    let t = N.Z.isLocked((0, R.QF)());
     'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? T.S.dispatch(W.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && T.S.dispatch(W.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function eo() {
     var e, t;
-    let n = (0, P.Z)(),
+    let n = (0, D.Z)(),
         {
             locked: r,
             focused: c,
@@ -143,19 +143,19 @@ function eo() {
             hasZeroSizeDimension: E,
             keybind: y
         } = (0, s.cj)([N.Z, O.Z, b.Z], () => {
-            let e = O.Z.windowSize((0, w.ZY)(n)),
+            let e = O.Z.windowSize((0, k.ZY)(n)),
                 t = b.Z.getOverlayKeybind();
             return {
-                locked: N.Z.isLocked((0, A.QF)()),
-                focused: N.Z.isFocused((0, A.QF)()),
+                locked: N.Z.isLocked((0, R.QF)()),
+                focused: N.Z.isFocused((0, R.QF)()),
                 incompatibleApp: N.Z.incompatibleApp,
-                hasValidResolution: (0, A.Te)(e),
+                hasValidResolution: (0, R.Te)(e),
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
-                keybind: null != t ? (0, k.BB)(t.shortcut, !0) : '???'
+                keybind: null != t ? (0, L.BB)(t.shortcut, !0) : '???'
             };
         }),
         { analyticsLocations: T } = (0, m.ZP)(p.Z.OVERLAY),
-        { showKeybindIndicators: L, dismissKeybindNotification: M } = (0, j.K)();
+        { showKeybindIndicators: A, dismissKeybindNotification: M } = (0, j.K)();
     return (
         !(function (e, t) {
             let n = o.useRef({
@@ -186,7 +186,7 @@ function eo() {
                         r = S.Z.getChannel(o),
                         l = null != r ? x.Z.getGuild(r.guild_id) : null,
                         s = null != C.Z.getCurrentUserActiveStream(),
-                        a = (0, D.pL)(),
+                        a = (0, z.pL)(),
                         u = (0, _.Z)(Z.Z),
                         c = null != o;
                     d.Z.track(W.rMx.OVERLAY_INITIALIZED, {
@@ -218,13 +218,13 @@ function eo() {
                     f.Z.setLayout(g ? h.Xq : h.Sr), g && f.Z.enable();
                 })({
                     locked: r,
-                    showKeybindNotification: L,
+                    showKeybindNotification: A,
                     dismissKeybindNotification: M,
                     targetWindow: n
                 }),
                     n.addEventListener('keydown', ei),
                     n.addEventListener('keyup', ei),
-                    G && (n.document.hasFocus() && d.Z.setFocusedPID(A.Js), n.addEventListener('focus', et), n.addEventListener('blur', en));
+                    G && (n.document.hasFocus() && d.Z.setFocusedPID(R.Js), n.addEventListener('focus', et), n.addEventListener('blur', en));
             },
             () => {
                 n.removeEventListener('keydown', ei), n.removeEventListener('keyup', ei), G && (n.removeEventListener('focus', et), n.removeEventListener('blur', en));
@@ -260,7 +260,7 @@ function eo() {
                                       onClick: ee
                                   }),
                                   g
-                                      ? (0, i.jsx)(z.Z, {
+                                      ? (0, i.jsx)(P.Z, {
                                             className: l()({
                                                 [H.layoutLocked]: r,
                                                 [H.layoutUnlocked]: !r
@@ -272,7 +272,7 @@ function eo() {
                                               className: H.invalidContainer,
                                               children: (0, i.jsx)('div', {
                                                   className: H.inactiveContainer,
-                                                  children: F.intl.format(F.t.ketnW1, A.FW)
+                                                  children: F.intl.format(F.t.ketnW1, R.FW)
                                               })
                                           }),
                                   G &&
@@ -280,7 +280,7 @@ function eo() {
                                           locked: r,
                                           focused: c
                                       }),
-                                  (0, i.jsx)(R.Z, {})
+                                  (0, i.jsx)(w.Z, {})
                               ]
                           }),
                     (0, i.jsx)($, {})

@@ -20,13 +20,13 @@ var i = n(200651),
 let g = r.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: r, hideEmoji: l, emoji: c, className: g, count: _, me: C, me_burst: E, burst_count: I, burst_colors: x, readOnly: v, isLurking: N, isGuest: T, isPendingMember: S, type: b, emojiSize: A } = e,
-            j = b === m.O.BURST,
-            Z = (0, h.y4)(C, E, b),
+            { useChatFontScaling: r, hideEmoji: l, emoji: c, className: g, count: _, me: E, me_burst: C, burst_count: I, burst_colors: x, readOnly: N, isLurking: v, isGuest: T, isPendingMember: S, type: A, emojiSize: b } = e,
+            j = A === m.O.BURST,
+            Z = (0, h.y4)(E, C, A),
             R = (0, d.v)(j && null != x ? x : []),
             P = r ? p : f,
-            y = j ? I : _,
-            L = (0, u.y)(y, h.aO),
+            L = j ? I : _,
+            y = (0, u.y)(L, h.aO),
             O = {};
         if (j && null != R) {
             var M;
@@ -35,14 +35,14 @@ let g = r.memo(function (e) {
             Z && (O.borderColor = i), (O.background = l), (t = e), (n = e);
         }
         let k = {
-            minWidth: L,
+            minWidth: y,
             color: t,
             borderColor: n
         };
         return (0, i.jsxs)('div', {
             className: a()(P.reaction, P.reactionInner, g, {
                 [P.reactionMe]: Z,
-                [P.reactionReadOnly]: v && !N && !S && !T
+                [P.reactionReadOnly]: N && !v && !S && !T
             }),
             style: O,
             children: [
@@ -50,13 +50,13 @@ let g = r.memo(function (e) {
                     className: a()({ [P.hideEmoji]: l }),
                     emojiId: c.id,
                     emojiName: c.name,
-                    size: A,
+                    size: b,
                     animated: j && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: P.reactionCount,
                     style: k,
-                    children: y
+                    children: L
                 })
             ]
         });

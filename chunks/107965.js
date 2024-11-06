@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 }),
     n(653041);
@@ -31,7 +31,7 @@ let h = 1 * s.Z.Millis.HOUR,
     p = 1 * s.Z.Millis.DAY,
     g = r.K.get('lastNonRequiredUpdateShown', Date.now()),
     _ = new o.Z('AutoUpdateManager');
-class C {
+class E {
     destroy() {
         clearInterval(this._checkInterval);
     }
@@ -85,7 +85,7 @@ class C {
                         })
                         .then(
                             (e) => {
-                                if (null == e.body || '3fdae72233507fad8567ea2d5b7510e59a004a5b' === e.body.hash) return this._handleUpdateNotAvailable();
+                                if (null == e.body || 'ca791900d6f9174609e879863c3c1d3b7bc0dcaa' === e.body.hash) return this._handleUpdateNotAvailable();
                                 if (e.body.required || (0, a.fD)()) return this._handleUpdateDownloaded(!1);
                                 let t = 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL ? f : p;
                                 if (Date.now() - g > t) return r.K.set('lastNonRequiredUpdateShown', Date.now()), this._handleUpdateDownloaded(!1);

@@ -21,8 +21,8 @@ function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
         g = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
         _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        C = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = (0, u.n)();
+        E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
+        C = (0, u.n)();
     if ((l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_)))
         return (0, i.jsx)(o.Tooltip, {
             text: p.intl.string(p.t.sAJr9f),
@@ -37,7 +37,7 @@ function g(e) {
     if (!g.has_entitlement)
         return (0, i.jsx)(o.ShinyButton, {
             shineSize: o.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: C || !E,
+            pauseAnimation: E || !C,
             onClick: () =>
                 (0, h.z)({
                     guildProductListing: g,

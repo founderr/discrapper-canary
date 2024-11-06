@@ -19,22 +19,22 @@ var i = n(200651),
     p = n(336197),
     g = n(661824),
     _ = n(430824),
-    C = n(626135),
-    E = n(76535),
+    E = n(626135),
+    C = n(76535),
     I = n(866104),
     x = n(886176),
-    v = n(981631),
-    N = n(388032),
+    N = n(981631),
+    v = n(388032),
     T = n(140171);
 function S(e) {
     var t;
     let { guildId: n } = e,
         l = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
-        { loading: S, subscriptionsSettings: b } = (0, E.H)(n),
-        { listingsLoaded: A } = (0, f.eD)(n),
+        { loading: S, subscriptionsSettings: A } = (0, C.H)(n),
+        { listingsLoaded: b } = (0, f.eD)(n),
         j = (0, f.ue)(n, { publishedOnly: !0 }),
         Z = r.useCallback(async () => {
-            C.default.track(v.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, p.Z)(v.Z5c.SERVER_SHOP(n));
+            E.default.track(N.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, p.Z)(N.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, m.Z)(
         {
@@ -44,17 +44,17 @@ function S(e) {
         { disableTrack: null == l }
     );
     let R = j.length > 0 ? new Date(Math.min(...j.map((e) => Date.parse(e.published_at)))) : void 0;
-    return S || !A
+    return S || !b
         ? (0, i.jsx)('div', {
               className: a()(T.guildShopEmbed, T.spinnerContainer),
               children: (0, i.jsx)(u.Spinner, {})
           })
-        : null == l || null == b
+        : null == l || null == A
           ? null
           : (0, i.jsxs)('div', {
                 className: T.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(I.Z, { coverImageAsset: null !== (t = b.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(I.Z, { coverImageAsset: null !== (t = A.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: T.serverShopLabel,
@@ -68,7 +68,7 @@ function S(e) {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
                                 className: T.serverShopLabelText,
-                                children: N.intl.string(N.t.al5EXF)
+                                children: v.intl.string(v.t.al5EXF)
                             })
                         ]
                     }),
@@ -76,14 +76,14 @@ function S(e) {
                     (0, i.jsx)(u.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: N.intl.format(N.t.NZeik5, { guildName: l.name })
+                        children: v.intl.format(v.t.NZeik5, { guildName: l.name })
                     }),
                     (0, i.jsx)(u.Spacer, { size: 4 }),
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         lineClamp: 2,
-                        children: b.description
+                        children: A.description
                     }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsx)(g.Z, {}),
@@ -99,7 +99,7 @@ function S(e) {
                                         children: (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: N.intl.format(N.t.tKZNlZ, { listingCount: j.length })
+                                            children: v.intl.format(v.t.tKZNlZ, { listingCount: j.length })
                                         })
                                     }),
                                     null != R &&
@@ -107,7 +107,7 @@ function S(e) {
                                             children: (0, i.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: N.intl.format(N.t['kXr8+f'], { createdYear: R.getFullYear() })
+                                                children: v.intl.format(v.t['kXr8+f'], { createdYear: R.getFullYear() })
                                             })
                                         })
                                 ]
@@ -125,7 +125,7 @@ function S(e) {
                                         (0, i.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: N.intl.string(N.t.jXx1CA)
+                                            children: v.intl.string(v.t.jXx1CA)
                                         })
                                     ]
                                 })

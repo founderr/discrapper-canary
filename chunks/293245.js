@@ -1,32 +1,32 @@
-let i, l, r;
-n(47120);
-var o,
+let i, l, o;
+e(47120);
+var r,
     a,
     s,
     c,
-    d = n(442837),
-    u = n(570140),
-    p = n(372123),
-    h = n(594190),
-    f = n(283595),
-    C = n(780570),
-    A = n(358085),
-    T = n(209492),
-    y = n(981631);
-class m extends (o = d.ZP.Store) {
+    d = e(442837),
+    u = e(570140),
+    p = e(372123),
+    h = e(594190),
+    f = e(283595),
+    C = e(780570),
+    y = e(358085),
+    N = e(209492),
+    m = e(981631);
+class g extends (r = d.ZP.Store) {
     initialize() {
-        A.isPlatformEmbedded && T.S(), (i = {}), (l = new Set()), (r = []);
+        y.isPlatformEmbedded && N.S(), (i = {}), (l = new Set()), (o = []);
     }
-    getState(t, e) {
-        return i[(0, C.Tu)(t, e)];
+    getState(t, n) {
+        return i[(0, C.Tu)(t, n)];
     }
-    isSyncing(t, e) {
-        let n = (0, C.Tu)(t, e);
-        return l.has(n);
+    isSyncing(t, n) {
+        let e = (0, C.Tu)(t, n);
+        return l.has(e);
     }
 }
 (c = 'CloudSyncStore'),
-    (s = 'displayName') in (a = m)
+    (s = 'displayName') in (a = g)
         ? Object.defineProperty(a, s, {
               value: c,
               enumerable: !0,
@@ -34,47 +34,47 @@ class m extends (o = d.ZP.Store) {
               writable: !0
           })
         : (a[s] = c),
-    (e.Z = new m(u.Z, {
+    (n.Z = new g(u.Z, {
         GAME_CLOUD_SYNC_START: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                i = (0, C.Tu)(e, n);
+            let { applicationId: n, branchId: e } = t,
+                i = (0, C.Tu)(n, e);
             l.add(i);
         },
         GAME_CLOUD_SYNC_UPDATE: function (t) {
-            let { state: e } = t;
-            for (let t of Object.keys(e)) i[t] = e[t];
+            let { state: n } = t;
+            for (let t of Object.keys(n)) i[t] = n[t];
         },
         GAME_CLOUD_SYNC_COMPLETE: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                r = (0, C.Tu)(e, n);
+            let { applicationId: n, branchId: e } = t,
+                o = (0, C.Tu)(n, e);
             return (
-                l.delete(r),
-                (i[r] = {
-                    type: y.TzF.DONE,
+                l.delete(o),
+                (i[o] = {
+                    type: m.TzF.DONE,
                     timestamp: Date.now()
                 }),
                 !0
             );
         },
         GAME_CLOUD_SYNC_CONFLICT: function (t) {
-            let { applicationId: e, branchId: n, next: r, remote: o } = t,
-                a = (0, C.Tu)(e, n);
+            let { applicationId: n, branchId: e, next: o, remote: r } = t,
+                a = (0, C.Tu)(n, e);
             (i[a] = {
-                type: y.TzF.CONFLICT,
-                next: r,
-                remote: o
+                type: m.TzF.CONFLICT,
+                next: o,
+                remote: r
             }),
                 l.delete(a);
         },
         GAME_CLOUD_SYNC_ERROR: function (t) {
-            let { applicationId: e, branchId: n } = t,
-                r = (0, C.Tu)(e, n);
-            (i[r] = { type: y.TzF.ERROR }), l.delete(r);
+            let { applicationId: n, branchId: e } = t,
+                o = (0, C.Tu)(n, e);
+            (i[o] = { type: m.TzF.ERROR }), l.delete(o);
         },
         RUNNING_GAMES_CHANGE: function () {
             let t = h.ZP.getRunningDiscordApplicationIds();
-            for (let e of r.filter((e) => !t.includes(e))) {
-                let t = f.Z.getActiveLibraryApplication(e);
+            for (let n of o.filter((n) => !t.includes(n))) {
+                let t = f.Z.getActiveLibraryApplication(n);
                 if (null != t)
                     u.Z.wait(() => {
                         try {
@@ -82,6 +82,6 @@ class m extends (o = d.ZP.Store) {
                         } catch (t) {}
                     });
             }
-            return (r = t), !1;
+            return (o = t), !1;
         }
     }));

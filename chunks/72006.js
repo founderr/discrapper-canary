@@ -18,19 +18,19 @@ n.d(t, {
         return D;
     },
     Zn: function () {
-        return A;
+        return b;
     },
     c2: function () {
-        return y;
+        return L;
     },
     eE: function () {
         return M;
     },
     iE: function () {
-        return w;
+        return U;
     },
     iK: function () {
-        return L;
+        return y;
     },
     lv: function () {
         return Z;
@@ -45,10 +45,10 @@ n.d(t, {
         return S;
     },
     xb: function () {
-        return U;
+        return w;
     },
     yd: function () {
-        return b;
+        return A;
     }
 }),
     n(47120),
@@ -68,12 +68,12 @@ var i = n(5148),
     p = n.n(f),
     g = n(157202),
     _ = n.n(g),
-    C = n(473552),
-    E = n.n(C),
+    E = n(473552),
+    C = n.n(E),
     I = n(634523),
     x = n.n(I),
-    v = n(302648),
-    N = n.n(v);
+    N = n(302648),
+    v = n.n(N);
 function T(e, t, n, r) {
     let l = r.getCurrentContent(),
         a = null;
@@ -106,14 +106,14 @@ function S(e, t, n, r) {
         m = o()(s, l);
     return l.isCollapsed() ? ((s = i.Modifier.insertText(s, l, e, d, m)), (a = 'insert-characters')) : ((s = i.Modifier.replaceText(s, l, e, d, m)), (a = 'replace-characters')), i.EditorState.push(t, s, a);
 }
-function b(e, t) {
+function A(e, t) {
     switch (e) {
         case 'delete':
             return x()(t);
         case 'delete-word':
             return h()(t);
         case 'backspace':
-            return E()(t);
+            return C()(t);
         case 'backspace-word':
             return d()(t);
         case 'backspace-to-start-of-line':
@@ -122,10 +122,10 @@ function b(e, t) {
             return t;
     }
 }
-function A(e, t) {
+function b(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return N()(t);
+            return v()(t);
         case 'move-selection-to-start-of-block':
             return _()(t);
         case 'move-selection-to-end-of-block':
@@ -186,19 +186,19 @@ function P(e) {
         n = e.getSelection();
     return null != n && n.hasFocus && (t = i.EditorState.moveFocusToEnd(t)), t;
 }
-function y(e, t) {
+function L(e, t) {
     let n = j(t);
     return S(e, t, 0, n.length);
 }
-function L(e, t) {
+function y(e, t) {
     let n = t.getSelection();
     return (n = (n = n.set('focusOffset', e)).set('anchorOffset', e)), i.EditorState.forceSelection(t, n);
 }
 function O(e) {
-    return L(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return y(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function M(e) {
-    return L(0, e);
+    return y(0, e);
 }
 function k(e) {
     let t = e.getSelection();
@@ -218,7 +218,7 @@ function B(e) {
     }
     return e;
 }
-function w(e) {
+function U(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
     let n = t.getRangeAt(0);
@@ -238,6 +238,6 @@ function w(e) {
     let l = i.left - r.left + e.scrollLeft;
     l < e.scrollLeft ? (e.scrollLeft = l - 10) : l > e.scrollLeft + e.offsetWidth && (e.scrollLeft = l - e.offsetWidth + 3);
 }
-function U(e) {
+function w(e) {
     return 0 === j(e).length;
 }

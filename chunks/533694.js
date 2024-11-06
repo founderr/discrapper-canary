@@ -65,7 +65,7 @@ function g(e) {
             guildId: a.guild_id,
             messageId: d.id
         })(g),
-        C = h.intl.format(h.t.TQs67u, {
+        E = h.intl.format(h.t.TQs67u, {
             username: g.nick,
             usernameHook: _,
             productName: null !== (l = null === (r = d.purchaseNotification) || void 0 === r ? void 0 : null === (t = r.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : '',
@@ -80,7 +80,7 @@ function g(e) {
                 icon: n(570111),
                 timestamp: d.timestamp,
                 compact: f,
-                children: C
+                children: E
             }),
             (0, i.jsx)(p, {
                 username: g.nick,

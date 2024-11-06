@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651);
@@ -19,38 +19,38 @@ var r = n(442837),
     p = n(474936),
     g = n(526761),
     _ = n(388032),
-    C = n(568492);
-function E(e) {
+    E = n(568492);
+function C(e) {
     var t;
-    let { onClose: n, markAsDismissed: E } = e,
+    let { onClose: n, markAsDismissed: C } = e,
         I = (0, r.e7)([d.default], () => d.default.getCurrentUser());
     let x = (t = null == I ? void 0 : I.premiumType) === p.p9.TIER_2 ? _.intl.string(_.t.jqO5Qk) : null == t ? _.intl.string(_.t.f2qjw8) : _.intl.string(_.t.SblICQ),
-        v = m.ZP.canUseCustomCallSounds(I);
+        N = m.ZP.canUseCustomCallSounds(I);
     return (0, i.jsxs)(u.Z, {
         isShown: !0,
         type: u.Y.PREMIUM,
-        className: C.upsellOuter,
-        backgroundClassName: C.upsellInner,
+        className: E.upsellOuter,
+        backgroundClassName: E.upsellInner,
         children: [
-            null != E
+            null != C
                 ? (0, i.jsx)(o.Clickable, {
-                      className: C.close,
-                      onClick: () => (null == E ? void 0 : E(f.L.DISMISS)),
+                      className: E.close,
+                      onClick: () => (null == C ? void 0 : C(f.L.DISMISS)),
                       'aria-label': _.intl.string(_.t.cpT0Cg),
                       children: (0, i.jsx)(o.XSmallIcon, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: C.closeIcon
+                          className: E.closeIcon
                       })
                   })
                 : null,
             (0, i.jsxs)('div', {
-                className: C.upsellTitle,
+                className: E.upsellTitle,
                 children: [
                     (0, i.jsx)(o.NitroWheelIcon, {
                         size: 'sm',
                         color: 'currentColor',
-                        className: C.nitroWheel
+                        className: E.nitroWheel
                     }),
                     (0, i.jsx)(o.Heading, {
                         variant: 'heading-sm/bold',
@@ -62,10 +62,10 @@ function E(e) {
                 variant: 'text-sm/normal',
                 children: x
             }),
-            v
+            N
                 ? (0, i.jsx)(l.zx, {
                       onClick: function () {
-                          s.Z.open(h.oAB.VOICE, g.GA), null == n || n(), null == E || E(f.L.PRIMARY);
+                          s.Z.open(h.oAB.VOICE, g.GA), null == n || n(), null == C || C(f.L.PRIMARY);
                       },
                       children: _.intl.string(_.t.RzWDqa)
                   })
@@ -77,7 +77,7 @@ function E(e) {
                           object: h.qAy.BUTTON_CTA
                       },
                       color: l.zx.Colors.GREEN,
-                      onSubscribeModalClose: () => (null == E ? void 0 : E(f.L.PRIMARY))
+                      onSubscribeModalClose: () => (null == C ? void 0 : C(f.L.PRIMARY))
                   })
         ]
     });

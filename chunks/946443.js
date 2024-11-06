@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     },
     h: function () {
         return Z;
@@ -22,21 +22,21 @@ var i = n(200651),
     p = n(724757),
     g = n(626135),
     _ = n(585483),
-    C = n(358085),
-    E = n(143316),
+    E = n(358085),
+    C = n(143316),
     I = n(240126),
     x = n(791914),
-    v = n(147522),
-    N = n(809780),
+    N = n(147522),
+    v = n(809780),
     T = n(981631),
     S = n(388032),
-    b = n(129640);
-function A(e) {
-    let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: A, badgeState: Z } = e,
+    A = n(129640);
+function b(e) {
+    let { setTab: t, onJump: n, showTutorial: l, setSeenTutorial: o, closePopout: b, badgeState: Z } = e,
         R = r.useRef(null),
-        [P, y] = (0, N.ZP)(R),
-        { loadState: L, channels: O } = P,
-        { maybeLoadMore: M, markAllRead: k } = y;
+        [P, L] = (0, v.ZP)(R),
+        { loadState: y, channels: O } = P,
+        { maybeLoadMore: M, markAllRead: k } = L;
     (function (e, t, n) {
         r.useLayoutEffect(() => {
             var i;
@@ -51,7 +51,7 @@ function A(e) {
             let { scrollTop: s, offsetHeight: c } = l.getScrollerState();
             (o.offsetTop < s || o.offsetTop > s + c) && l.scrollTo({ to: o.offsetTop });
         });
-    })(R, P, y),
+    })(R, P, L),
         (function (e, t) {
             r.useEffect(() => {
                 let n = () => {
@@ -65,11 +65,11 @@ function A(e) {
                     }
                 );
             }, [t, e.channels]);
-        })(P, y),
+        })(P, L),
         (function (e) {
             r.useEffect(() => {
                 let t = (t) => {
-                    ((0, C.isMac)() || (0, C.isMacWeb)() ? t.metaKey : t.ctrlKey) && !t.shiftKey && !t.altKey && 'z' === t.key && e.undoMarkChannelRead();
+                    ((0, E.isMac)() || (0, E.isMacWeb)() ? t.metaKey : t.ctrlKey) && !t.shiftKey && !t.altKey && 'z' === t.key && e.undoMarkChannelRead();
                 };
                 return (
                     document.addEventListener('keydown', t),
@@ -78,50 +78,50 @@ function A(e) {
                     }
                 );
             }, [e]);
-        })(y),
+        })(L),
         r.useEffect(() => {
             g.default.track(T.rMx.OPEN_POPOUT, { type: 'Inbox' });
         }, []),
         r.useEffect(
             () => (
-                h.Z.subscribe('CONNECTION_OPEN', A),
+                h.Z.subscribe('CONNECTION_OPEN', b),
                 () => {
-                    h.Z.unsubscribe('CONNECTION_OPEN', A);
+                    h.Z.unsubscribe('CONNECTION_OPEN', b);
                 }
             ),
-            [A]
+            [b]
         );
     let D = (0, u.e7)([f.Z], () => f.Z.messageGroupSpacing),
         B = (0, p.Z)('unreads', R);
     if (0 === O.length) {
-        var w;
+        var U;
         return (0, i.jsxs)('div', {
-            className: b.container,
+            className: A.container,
             children: [
                 (0, i.jsx)(x.Z, {
                     tab: d.X.UNREADS,
                     setTab: t,
                     badgeState: Z,
-                    closePopout: A
+                    closePopout: b
                 }),
                 (0, i.jsx)(I.Z, {
                     Icon: m.InboxIcon,
                     header: S.intl.string(S.t['6XMM+P']),
-                    tip: (null === (w = s().os) || void 0 === w ? void 0 : w.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
+                    tip: (null === (U = s().os) || void 0 === U ? void 0 : U.family) === 'OS X' ? S.intl.string(S.t.w9uDOT) : S.intl.string(S.t.BiUJCw)
                 })
             ]
         });
     }
     return (0, i.jsxs)('div', {
-        className: a()(b.container, 'group-spacing-'.concat(D)),
+        className: a()(A.container, 'group-spacing-'.concat(D)),
         'aria-label': S.intl.string(S.t.sRUdBw),
         children: [
             (0, i.jsx)(x.Z, {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: Z,
-                closePopout: A,
-                children: (0, i.jsx)(E.Z, {
+                closePopout: b,
+                children: (0, i.jsx)(C.Z, {
                     type: 'top-header',
                     onClick: k
                 })
@@ -137,9 +137,9 @@ function A(e) {
                                 (R.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             ...r,
-                            onScroll: L === N.jd.Done ? void 0 : M,
-                            className: b.scroller,
-                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, v.Z)(O, y, n), L === N.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: b.spinner })]
+                            onScroll: y === v.jd.Done ? void 0 : M,
+                            className: A.scroller,
+                            children: [l ? (0, i.jsx)(j, { setSeenTutorial: o }) : null, (0, N.Z)(O, L, n), y === v.jd.Done ? null : (0, i.jsx)(m.Spinner, { className: A.spinner })]
                         });
                     }
                 })
@@ -150,10 +150,10 @@ function A(e) {
 function j(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)('div', {
-        className: b.tutorial,
+        className: A.tutorial,
         children: [
             (0, i.jsx)('div', {
-                className: b.tutorialIcon,
+                className: A.tutorialIcon,
                 children: (0, i.jsx)(m.InboxIcon, {
                     size: 'md',
                     color: 'currentColor'
@@ -162,7 +162,7 @@ function j(e) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(m.Heading, {
-                        className: b.__invalid_tutorialHeader,
+                        className: A.__invalid_tutorialHeader,
                         variant: 'heading-md/semibold',
                         children: S.intl.string(S.t.vZPktL)
                     }),
@@ -172,7 +172,7 @@ function j(e) {
                         children: S.intl.string(S.t.vWkIIC)
                     }),
                     (0, i.jsx)(m.Button, {
-                        className: b.tutorialButton,
+                        className: A.tutorialButton,
                         onClick: t,
                         size: m.Button.Sizes.SMALL,
                         children: S.intl.string(S.t['+IrDzM'])
@@ -185,7 +185,7 @@ function j(e) {
 function Z(e) {
     let { setTab: t, badgeState: n, closePopout: r } = e;
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: A.container,
         children: [
             (0, i.jsx)(x.Z, {
                 tab: d.X.UNREADS,

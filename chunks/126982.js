@@ -1,25 +1,25 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(131388),
-    a = n(409813),
-    o = n(750143),
-    s = n(264499),
-    c = n(60314);
-function u(e) {
-    let { step: t, onClose: n } = e,
-        u = (0, l.Z)(o.X);
-    return t === a.h8.BENEFITS || t === a.h8.CONFIRM
+var i = t(200651);
+t(192379);
+var a = t(481060),
+    r = t(131388),
+    o = t(409813),
+    l = t(750143),
+    s = t(264499),
+    c = t(60314);
+function d(e) {
+    let { step: n, onClose: t } = e,
+        d = (0, r.Z)(l.X);
+    return n === o.h8.BENEFITS || n === o.h8.CONFIRM
         ? null
         : (0, i.jsxs)('div', {
               className: s.headerContainer,
               children: [
-                  !u &&
+                  !d &&
                       (0, i.jsx)('div', {
                           className: s.headerImageContainer,
                           'aria-hidden': 'true',
@@ -30,10 +30,10 @@ function u(e) {
                               className: s.headerImage
                           })
                       }),
-                  (0, i.jsx)(r.ModalCloseButton, {
+                  (0, i.jsx)(a.ModalCloseButton, {
                       withCircleBackground: !0,
                       className: s.closeButton,
-                      onClick: n
+                      onClick: t
                   })
               ]
           });

@@ -14,12 +14,12 @@ var i = n(200651),
     p = n(592125),
     g = n(259580),
     _ = n(617379),
-    C = n(324081),
-    E = n(305248),
+    E = n(324081),
+    C = n(305248),
     I = n(520116),
     x = n(981631),
-    v = n(388032),
-    N = n(619933);
+    N = n(388032),
+    v = n(619933);
 let T = r.memo(function (e) {
     let { channel: t, deleteChannel: n } = e,
         l = r.useRef(null),
@@ -91,15 +91,15 @@ let S = r.memo(function (e) {
         (0, f.uL)(x.Z5c.CHANNEL(t.guildId, t.channelId, 'forum' === t.type ? null : r)), n(e);
     };
     return (0, i.jsx)('div', {
-        className: N.channel,
+        className: v.channel,
         children: (0, i.jsx)(c.HeadingLevel, {
-            component: (0, i.jsxs)(C.Z, {
+            component: (0, i.jsxs)(E.Z, {
                 channel: o,
                 gotoChannel: h,
                 mentionCount: t.mentionCount,
                 toggleCollapsed: a,
                 channelState: t,
-                children: [(0, i.jsx)(_.Z, { channel: o }), (0, i.jsx)(b, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(A, { ...e })]
+                children: [(0, i.jsx)(_.Z, { channel: o }), (0, i.jsx)(A, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(b, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -110,7 +110,7 @@ let S = r.memo(function (e) {
                         gotoChannel: h
                     })
                   : 'forum' === t.type
-                    ? (0, i.jsx)(E.Z, {
+                    ? (0, i.jsx)(C.Z, {
                           channel: t,
                           channelRecord: o,
                           deleteChannel: l
@@ -119,12 +119,12 @@ let S = r.memo(function (e) {
         })
     });
 });
-function b(e) {
+function A(e) {
     let { channel: t, markChannelRead: n, markGuildRead: r, getNumUnreadChannels: l } = e,
         a = (0, h.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
-        className: N.markReadButton,
-        tooltip: a ? v.intl.string(v.t['5lLMhI']) : v.intl.string(v.t.e6RscX),
+        className: v.markReadButton,
+        tooltip: a ? N.intl.string(N.t['5lLMhI']) : N.intl.string(N.t.e6RscX),
         color: c.CircleIconButtonColors.TERTIARY,
         icon: a
             ? (0, i.jsx)(c.DoubleCheckmarkIcon, {
@@ -146,7 +146,7 @@ function b(e) {
         }
     });
 }
-function A(e) {
+function b(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: r } = e;
     function l() {
         n(t),
@@ -158,11 +158,11 @@ function A(e) {
             });
     }
     return (0, i.jsx)(c.Tooltip, {
-        text: v.intl.string(v.t.iTcumZ),
+        text: N.intl.string(N.t.iTcumZ),
         children: (e) =>
             (0, i.jsx)(c.Clickable, {
                 ...e,
-                className: a()(N.collapseButton, { [N.collapsed]: t.collapsed }),
+                className: a()(v.collapseButton, { [v.collapsed]: t.collapsed }),
                 onClick: l,
                 children: (0, i.jsx)(g.Z, {
                     width: 16,

@@ -33,7 +33,7 @@ function E(e) {
         N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId()),
         O = (0, r.e7)([d.Z], () => d.Z.getChannel(N)),
         T = (0, r.e7)([c.default], () => c.default.getId()),
-        { participantsVersion: L, streamParticipants: k } = (0, r.e7)(
+        { participantsVersion: A, streamParticipants: L } = (0, r.e7)(
             [u.Z, s.Z],
             () => {
                 if (null == N)
@@ -54,9 +54,9 @@ function E(e) {
             [N, T],
             p.yp
         ),
-        A = k.length,
-        w = null == O || 0 === A,
-        R = Z ? f.C.HORIZONTAL : f.C.VERTICAL,
+        R = L.length,
+        k = null == O || 0 === R,
+        w = Z ? f.C.HORIZONTAL : f.C.VERTICAL,
         { tileWidth: j } = (function (e, t, n, i, r) {
             let l = (function (e, t, n, i) {
                     let o = g(f.C.HORIZONTAL, e, t, n),
@@ -82,21 +82,21 @@ function E(e) {
                     tileWidth: u
                 }
             );
-        })(!1, A, y - I, b - I, R),
+        })(!1, R, y - I, b - I, w),
         M = {
             id: n,
             width: y,
             height: b,
             sizeOffset: I,
-            layout: R,
+            layout: w,
             padding: C,
-            participants: k.length
+            participants: L.length
         },
-        z = o.useRef(M);
-    return (o.useEffect(() => void (z.current = M)),
+        P = o.useRef(M);
+    return (o.useEffect(() => void (P.current = M)),
     o.useEffect(() => {
-        let { id: e, width: t, height: n, sizeOffset: i, layout: o, padding: r } = z.current;
-        if (0 === k.length) {
+        let { id: e, width: t, height: n, sizeOffset: i, layout: o, padding: r } = P.current;
+        if (0 === L.length) {
             (256 !== t || 144 !== n) &&
                 (0, l.nv)({
                     widgetId: e,
@@ -115,7 +115,7 @@ function E(e) {
                 size: {
                     fixed: !0,
                     height: n,
-                    width: t * k.length + r * (k.length - 1) + i
+                    width: t * L.length + r * (L.length - 1) + i
                 }
             });
         } else {
@@ -125,15 +125,15 @@ function E(e) {
                 size: {
                     fixed: !0,
                     width: t,
-                    height: n * k.length + r * (k.length - 1) + i
+                    height: n * L.length + r * (L.length - 1) + i
                 }
             });
         }
-    }, [k.length]),
+    }, [L.length]),
     o.useEffect(() => {
-        if (z.current.participants <= 1) return;
-        let { id: e, width: t, height: n, sizeOffset: i, padding: o, participants: r } = z.current;
-        if (R === f.C.HORIZONTAL) {
+        if (P.current.participants <= 1) return;
+        let { id: e, width: t, height: n, sizeOffset: i, padding: o, participants: r } = P.current;
+        if (w === f.C.HORIZONTAL) {
             let n = t - i;
             (0, l.nv)({
                 widgetId: e,
@@ -154,7 +154,7 @@ function E(e) {
                 }
             });
         }
-    }, [R]),
+    }, [w]),
     o.useEffect(
         () => () => {
             (0, l.nv)({
@@ -168,7 +168,7 @@ function E(e) {
         },
         [n]
     ),
-    w && _)
+    k && _)
         ? null
         : (0, i.jsx)('div', {
               className: m.goLiveGridContainer,
@@ -176,9 +176,9 @@ function E(e) {
               children: (0, i.jsx)(f.Z, {
                   tileWidth: j,
                   locked: _,
-                  layout: R,
-                  streamParticipants: k,
-                  participantsVersion: L
+                  layout: w,
+                  streamParticipants: L,
+                  participantsVersion: A
               })
           });
 }

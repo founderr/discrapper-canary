@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return v;
+        return N;
     },
     s: function () {
         return x;
@@ -21,7 +21,7 @@ var i = n(200651),
     p = n(719548),
     g = n(388032),
     _ = n(614092);
-let C = (e) => {
+let E = (e) => {
         let { attachment: t } = e,
             { url: n, description: r } = t;
         return null == n
@@ -31,7 +31,7 @@ let C = (e) => {
                   description: r
               });
     },
-    E = (e) => {
+    C = (e) => {
         var t, n, r;
         let { embed: l } = e;
         if (!p.n2.has(l.type)) return null;
@@ -64,7 +64,7 @@ function x(e) {
         }),
         e();
 }
-function v(e) {
+function N(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: d, transitionState: m, onClose: h } = e,
         p = (0, u.Dt)(),
         I = r.useCallback(() => {
@@ -118,8 +118,8 @@ function v(e) {
                             className: _.subheader,
                             children: g.intl.string(g.t.gg5Dp6)
                         }),
-                        null != o && (0, i.jsx)(C, { attachment: o }),
-                        null != c && (0, i.jsx)(E, { embed: c })
+                        null != o && (0, i.jsx)(E, { attachment: o }),
+                        null != c && (0, i.jsx)(C, { embed: c })
                     ]
                 }),
                 (0, i.jsxs)(s.ModalFooter, {

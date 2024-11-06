@@ -22,8 +22,8 @@ function g(e) {
         g = (0, s.ZP)(t),
         _ = r(g),
         {
-            avatarSrc: C,
-            eventHandlers: { onMouseEnter: E, onMouseLeave: I }
+            avatarSrc: E,
+            eventHandlers: { onMouseEnter: C, onMouseLeave: I }
         } = (0, u.m)(!0),
         x =
             '' !== t.content
@@ -36,11 +36,11 @@ function g(e) {
                   })
                 : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: E,
+        onMouseEnter: C,
         onMouseLeave: I,
         children: (0, i.jsx)(d.Z, {
             className: l()(p.mainContainer, { [p.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: C }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: E }),
             iconContainerClassName: p.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {

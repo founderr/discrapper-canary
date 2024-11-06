@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -19,21 +19,21 @@ var i = n(200651),
     p = n(324701),
     g = n(768943),
     _ = n(695346),
-    C = n(592125),
-    E = n(655354),
+    E = n(592125),
+    C = n(655354),
     I = n(324081),
     x = n(791914),
-    v = n(981631),
-    N = n(388032),
+    N = n(981631),
+    v = n(388032),
     T = n(816396),
     S = n(42967);
-let b = {
+let A = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function A(e) {
+function b(e) {
     let { setTab: t, closePopout: n } = e,
         l = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
         [a, o] = r.useState(!1),
@@ -52,14 +52,14 @@ function A(e) {
                 children: [
                     (0, i.jsx)(d.Heading, {
                         variant: 'heading-lg/bold',
-                        children: a ? N.intl.string(N.t['0KeMAw']) : N.intl.string(N.t.j5ZHEB)
+                        children: a ? v.intl.string(v.t['0KeMAw']) : v.intl.string(v.t.j5ZHEB)
                     }),
                     (0, i.jsx)(d.Anchor, {
                         onClick: () => o(!a),
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: a ? N.intl.formatToPlainString(N.t['/VlKx8'], { count: s.length }) : N.intl.formatToPlainString(N.t.QEO4Ii, { count: l.length })
+                            children: a ? v.intl.formatToPlainString(v.t['/VlKx8'], { count: s.length }) : v.intl.formatToPlainString(v.t.QEO4Ii, { count: l.length })
                         })
                     })
                 ]
@@ -73,21 +73,21 @@ function j(e) {
         { messageReminder: r } = e,
         l = r.saveData,
         o = r.message,
-        u = (0, c.e7)([C.Z], () => C.Z.getChannel(l.channelId)),
+        u = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
         g = () => {
-            (0, f.uL)(v.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
+            (0, f.uL)(N.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
         x = null;
     return (null != l.dueAt &&
         (l.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (x = N.intl.formatToPlainString(N.t.H4gnX1, {
+              (x = v.intl.formatToPlainString(v.t.H4gnX1, {
                   duration: s()
                       .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (x = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
+              (x = v.intl.formatToPlainString(v.t['Uq7Y+/'], {
                   duration: s()
                       .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -126,7 +126,7 @@ function j(e) {
                                     })
                                   : null,
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: N.intl.string(N.t.GtBCn5),
+                                  text: v.intl.string(v.t.GtBCn5),
                                   children: (0, i.jsx)(d.Clickable, {
                                       onClick: (e) =>
                                           (0, m.jW)(e, async () => {
@@ -147,7 +147,7 @@ function j(e) {
                                   })
                               }),
                               (0, i.jsx)(d.TooltipContainer, {
-                                  text: N.intl.string(N.t['1GzslZ']),
+                                  text: v.intl.string(v.t['1GzslZ']),
                                   children: (0, i.jsx)(d.Clickable, {
                                       onClick: () => (0, p.x)(l),
                                       className: T.delete,
@@ -165,7 +165,7 @@ function j(e) {
                   (0, i.jsxs)('div', {
                       className: a()(S.messageContainer, T.unloadedMessage),
                       children: [
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(C.Z, {
                               className: S.jumpMessageButton,
                               onJump: g
                           }),
@@ -177,7 +177,7 @@ function j(e) {
                                   className: S.message,
                                   compact: _.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: b,
+                                  focusProps: A,
                                   trackAnnouncementViews: !0
                               },
                               o.id

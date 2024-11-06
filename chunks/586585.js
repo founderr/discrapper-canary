@@ -1,10 +1,10 @@
 t.d(n, {
     g: function () {
-        return o;
+        return r;
     }
 });
-var r,
-    o,
+var o,
+    r,
     i = t(200651);
 t(192379);
 var l = t(481060),
@@ -12,22 +12,22 @@ var l = t(481060),
     s = t(612853),
     c = t(388032),
     u = t(297908);
-((r = o || (o = {}))[(r.CONTINUE = 0)] = 'CONTINUE'), (r[(r.UPGRADE = 1)] = 'UPGRADE'), (r[(r.PURCHASE = 2)] = 'PURCHASE');
+((o = r || (r = {}))[(o.CONTINUE = 0)] = 'CONTINUE'), (o[(o.UPGRADE = 1)] = 'UPGRADE'), (o[(o.PURCHASE = 2)] = 'PURCHASE');
 let d = (e) => {
-    let { onBack: n, backText: t, primaryIcon: r, primaryCTA: o, primaryType: d, primaryText: p, primaryTooltip: f, primaryDisabled: m, primarySubmitting: h, onPrimary: _, secondaryText: g, onSecondary: S } = e;
+    let { onBack: n, backText: t, primaryIcon: o, primaryCTA: r, primaryType: d, primaryText: p, primaryTooltip: f, primaryDisabled: m, primarySubmitting: h, onPrimary: _, secondaryText: g, onSecondary: S } = e;
     return (0, i.jsxs)(l.ModalFooter, {
         justify: a.Z.Justify.BETWEEN,
         align: a.Z.Align.CENTER,
         children: [
             (() => {
-                if (null == o || null == p) return null;
-                let e = 2 === o ? l.ShinyButton : l.Button,
+                if (null == r || null == p) return null;
+                let e = 2 === r ? l.ShinyButton : l.Button,
                     n = {
                         innerClassName: u.button,
                         type: d,
                         disabled: m,
                         submitting: h,
-                        color: 0 === o ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
+                        color: 0 === r ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
                         onClick: _
                     };
                 return null != f
@@ -38,9 +38,9 @@ let d = (e) => {
                                   ...t,
                                   ...n,
                                   children: [
-                                      null == r
+                                      null == o
                                           ? null
-                                          : (0, i.jsx)(r, {
+                                          : (0, i.jsx)(o, {
                                                 color: 'currentColor',
                                                 className: u.primaryIcon
                                             }),
@@ -51,9 +51,9 @@ let d = (e) => {
                     : (0, i.jsxs)(e, {
                           ...n,
                           children: [
-                              null == r
+                              null == o
                                   ? null
-                                  : (0, i.jsx)(r, {
+                                  : (0, i.jsx)(o, {
                                         color: 'currentColor',
                                         className: u.primaryIcon
                                     }),
@@ -82,4 +82,4 @@ let d = (e) => {
         ]
     });
 };
-(d.CTAType = o), (n.Z = d);
+(d.CTAType = r), (n.Z = d);

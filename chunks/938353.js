@@ -28,29 +28,29 @@ var i,
     p = n(626799),
     g = n(624367),
     _ = n(433074),
-    C = n(421474),
-    E = n(603270),
+    E = n(421474),
+    C = n(603270),
     I = n(171364),
     x = n(162297),
-    v = n(222709),
-    N = n(446411),
+    N = n(222709),
+    v = n(446411),
     T = n(960904),
     S = n(161314),
-    b = n(119392),
-    A = n(247206),
+    A = n(119392),
+    b = n(247206),
     j = n(25610),
     Z = n(703751),
     R = n(761538),
     P = n(674611),
-    y = n(346610),
-    L = n(868643),
+    L = n(346610),
+    y = n(868643),
     O = n(294734),
     M = n(426275),
     k = n(947849),
     D = n(715903),
     B = n(71619),
-    w = n(637618),
-    U = n(225890),
+    U = n(637618),
+    w = n(225890),
     F = n(364097),
     G = n(495129),
     V = n(939170),
@@ -82,29 +82,29 @@ var i,
     ep = n(496675),
     eg = n(594174),
     e_ = n(52824),
-    eC = n(626135),
-    eE = n(70956),
+    eE = n(626135),
+    eC = n(70956),
     eI = n(408433),
     ex = n(630388),
-    ev = n(709054),
-    eN = n(591759),
+    eN = n(709054),
+    ev = n(591759),
     eT = n(169525),
     eS = n(786761),
-    eb = n(161010),
-    eA = n(461157),
+    eA = n(161010),
+    eb = n(461157),
     ej = n(901461),
     eZ = n(432376),
     eR = n(384203),
     eP = n(633957),
-    ey = n(530472),
-    eL = n(29909),
+    eL = n(530472),
+    ey = n(29909),
     eO = n(782658),
     eM = n(219797),
     ek = n(453687),
     eD = n(128854),
     eB = n(101578),
-    ew = n(524444),
-    eU = n(319323),
+    eU = n(524444),
+    ew = n(319323),
     eF = n(884182),
     eG = n(546432),
     eV = n(920888),
@@ -145,13 +145,13 @@ function eJ() {
         ]
     });
 }
-let e$ = 15 * eE.Z.Millis.MINUTE,
+let e$ = 15 * eC.Z.Millis.MINUTE,
     e0 = new Set(['discord-developers', 'discord-testers', 'discord-townhall', 'discordgameslab']),
     e1 = (e, t, n) => () => {
         let i = null != t ? t : n;
         if (null == i) return null;
         let { url: l, proxyURL: a, width: o, height: s } = i;
-        return (0, r.jsx)(eL.Z, {
+        return (0, r.jsx)(ey.Z, {
             width: o,
             height: s,
             src: null != a && '' !== a ? a : l,
@@ -163,7 +163,7 @@ let e$ = 15 * eE.Z.Millis.MINUTE,
     e2 = (e) => () => {
         let { url: t, proxyUrl: n, width: i, height: l } = e;
         return null != i && null != l && Q.uo.test(n)
-            ? (0, r.jsx)(eL.Z, {
+            ? (0, r.jsx)(ey.Z, {
                   width: i,
                   height: l,
                   src: n,
@@ -218,7 +218,7 @@ class e3 extends (i = l.Component) {
     }
     renderSocialProofingFileSizeNitroUpsell(e) {
         let t = e.attachments.some((e) => e.size > eW.Lw);
-        return (0, eb.M)('attachment') && t ? (0, r.jsx)(eJ, {}) : null;
+        return (0, eA.M)('attachment') && t ? (0, r.jsx)(eJ, {}) : null;
     }
     renderCodedLinks(e) {
         return 0 === e.codedLinks.length
@@ -238,7 +238,7 @@ class e3 extends (i = l.Component) {
                             )
                           : null;
                   if (n === T.g.TEMPLATE) return (0, r.jsx)(F.Z, { code: i }, i);
-                  if (n === T.g.EVENT) return (0, r.jsx)(U.Z, { code: i }, i);
+                  if (n === T.g.EVENT) return (0, r.jsx)(w.Z, { code: i }, i);
                   else if (n === T.g.CHANNEL_LINK)
                       return (0, r.jsx)(
                           eR.Z,
@@ -266,12 +266,12 @@ class e3 extends (i = l.Component) {
                           },
                           i
                       );
-                  else if (n === T.g.GUILD_PRODUCT) return (0, r.jsx)(w.Z, { code: i }, i);
+                  else if (n === T.g.GUILD_PRODUCT) return (0, r.jsx)(U.Z, { code: i }, i);
                   else if (n === T.g.SERVER_SHOP) return (0, r.jsx)(S.Z, { guildId: i }, i);
                   else if (n === T.g.QUESTS_EMBED) return (0, r.jsx)(er.Z, { questId: i }, i);
                   else if (n === T.g.APP_DIRECTORY_STOREFRONT)
                       return (0, r.jsx)(
-                          E.P,
+                          C.P,
                           {
                               appId: i,
                               message: e
@@ -279,18 +279,18 @@ class e3 extends (i = l.Component) {
                           i
                       );
                   else if (n === T.g.APP_DIRECTORY_STOREFRONT_SKU) {
-                      let t = (0, C.Q)(i);
+                      let t = (0, E.Q)(i);
                       return null == t
                           ? null
                           : (0, r.jsx)(
-                                E.F,
+                                C.F,
                                 {
                                     skuId: t.skuId,
                                     message: e
                                 },
                                 i
                             );
-                  } else if (n === T.g.DISCOVERY_GAME) return (0, r.jsx)(b.Z, { gameId: i }, i);
+                  } else if (n === T.g.DISCOVERY_GAME) return (0, r.jsx)(A.Z, { gameId: i }, i);
                   else if (n === T.g.APP_OAUTH2_LINK) {
                       let { enabled: e } = I.I.getCurrentConfig({ location: 'MessageAccessories' }, { autoTrackExposure: !1 });
                       return e ? (0, r.jsx)(x.Z, { applicationId: i }, i) : null;
@@ -391,7 +391,7 @@ class e3 extends (i = l.Component) {
         function _(e, t) {
             return (0, eT.dn)(e.originalItem, t);
         }
-        let C = m.map((n) => {
+        let E = m.map((n) => {
                 let r = (0, X.VY)(n),
                     s = {
                         message: e,
@@ -414,7 +414,7 @@ class e3 extends (i = l.Component) {
                         renderGenericFileComponent: eM.ZK,
                         renderMosaicItemFooter: eM.L9,
                         onPlay: (e, i, r) => {
-                            eC.default.track(ez.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
+                            eE.default.track(ez.rMx.MEDIA_ATTACHMENT_PLAYBACK_STARTED, {
                                 guild_id: t.guild_id,
                                 channel_id: t.id,
                                 channel_type: t.type,
@@ -433,7 +433,7 @@ class e3 extends (i = l.Component) {
                     });
                 return c in p && (s.onClick = p[c]), s;
             }),
-            E = n
+            C = n
                 ? (0, r.jsx)(M.Z, {
                       className: eY.hideIfMessageNotFocused,
                       messageId: e.id,
@@ -442,8 +442,8 @@ class e3 extends (i = l.Component) {
                   })
                 : void 0;
         return (0, r.jsx)(eF.Z, {
-            items: C,
-            inlineForwardButton: E
+            items: E,
+            inlineForwardButton: C
         });
     }
     renderEmbeds(e) {
@@ -452,12 +452,12 @@ class e3 extends (i = l.Component) {
             ? e.embeds.map((t, n) => {
                   if (eH.b.has(t.type) || (0, eI.l3)(t) || ((0, V.b)(t) && !(0, H.M)(e))) return null;
                   let i = {
-                      renderImageComponent: ew.Yi,
-                      renderVideoComponent: ew.lV,
-                      renderLinkComponent: ew.iT
+                      renderImageComponent: eU.Yi,
+                      renderVideoComponent: eU.lV,
+                      renderLinkComponent: eU.iT
                   };
                   if (t.type === ez.hBH.ARTICLE && null != t.url && /^https?:\/\/(?:canary|ptb|www)?\.discord(?:app)?\.com\/store\/skus\/(?:[0-9]+)/.test(t.url) && null != t.provider && 'Discord' === t.provider.name) {
-                      let l = eN.Z.safeParseWithQuery(t.url);
+                      let l = ev.Z.safeParseWithQuery(t.url);
                       if (null != l && null != l.pathname) {
                           let a = l.pathname.split('/')[3];
                           if (null != a)
@@ -504,14 +504,14 @@ class e3 extends (i = l.Component) {
     renderPublishBump(e) {
         return this.props.channel.type !== ez.d4z.GUILD_ANNOUNCEMENT || this.props.isMessageSnapshot
             ? null
-            : (0, r.jsx)(v.Z, {
+            : (0, r.jsx)(N.Z, {
                   channelId: e.channel_id,
                   messageId: e.id
               });
     }
     renderEphemeralAccessories(e) {
         return (0, eS.Pv)(e)
-            ? (0, r.jsx)(ey.Z, {
+            ? (0, r.jsx)(eL.Z, {
                   message: e,
                   onDeleteMessage: () => {
                       h.Z.dismissAutomatedMessage(e);
@@ -545,7 +545,7 @@ class e3 extends (i = l.Component) {
     }
     renderThreadRoleMentionWarning(e) {
         if (!!e.hasFlag(ez.iLy.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD) && !!this.props.isCurrentUser) {
-            if (!(Date.now() - ev.default.extractTimestamp(e.id) >= e$))
+            if (!(Date.now() - eN.default.extractTimestamp(e.id) >= e$))
                 return (0, r.jsx)('div', {
                     className: eX.threadRoleMentionFailure,
                     children: eK.intl.string(eK.t.ma8Rs7)
@@ -615,7 +615,7 @@ class e3 extends (i = l.Component) {
         let t = e.applicationId;
         return e.type !== s.u.INTERACTION_PREMIUM_UPSELL || null == t
             ? null
-            : (0, r.jsx)(eU.Z, {
+            : (0, r.jsx)(ew.Z, {
                   applicationId: t,
                   guildId: this.props.channel.guild_id
               });
@@ -660,7 +660,7 @@ class e3 extends (i = l.Component) {
     }
     renderMediaObscureNotice(e) {
         if (0 === e.attachments.length && 0 === e.embeds.length) return null;
-        let { obscuredAttachments: t, obscuredEmbeds: n } = (0, A.Tw)(e);
+        let { obscuredAttachments: t, obscuredEmbeds: n } = (0, b.Tw)(e);
         return 0 === t.length && 0 === n.length ? null : (0, r.jsx)(R.Z, { message: e });
     }
     renderPoll(e, t) {
@@ -687,26 +687,26 @@ class e3 extends (i = l.Component) {
             p = this.renderActivityInvite(t),
             g = this.renderReactions(t),
             _ = this.renderPublishBump(t),
-            C = this.renderEphemeralAccessories(t),
-            E = this.renderStickersAccessories(t),
+            E = this.renderEphemeralAccessories(t),
+            C = this.renderStickersAccessories(t),
             I = this.renderThreadAccessories(t),
             x = this.renderComponentAccessories(t),
-            v = this.renderThreadRoleMentionWarning(t),
-            N = this.renderEmbeddedApplicationInstanceEmbed(t),
+            N = this.renderThreadRoleMentionWarning(t),
+            v = this.renderEmbeddedApplicationInstanceEmbed(t),
             T = this.renderInteractionPremiumUpsell(t),
             S = this.renderMediaPostEmbeds(t),
-            b = this.renderSafetyPolicyNotice(t),
-            A = this.renderSafetySystemNotification(t),
+            A = this.renderSafetyPolicyNotice(t),
+            b = this.renderSafetySystemNotification(t),
             j = this.renderVoiceChannelInvite(t, n),
             Z = this.renderMediaObscureNotice(t),
             R = this.renderPoll(t, i),
             P = this.renderForwardedMessage(t);
-        return null == s && null == d && null == f && null == p && null == g && null == c && null == u && null == _ && null == C && null == E && null == I && null == x && null == N && null == v && null == S && null == b && null != T && null == R && null == j && null == P
+        return null == s && null == d && null == f && null == p && null == g && null == c && null == u && null == _ && null == E && null == C && null == I && null == x && null == v && null == N && null == S && null == A && null != T && null == R && null == j && null == P
             ? null
             : (0, r.jsxs)('div', {
                   id: (0, ek.bX)(t),
                   className: o()(e, eX.container),
-                  children: [P, v, R, s, c, u, S, d, m, f, Z, p, E, x, N, T, h, g, _, C, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, b, A, j]
+                  children: [P, N, R, s, c, u, S, d, m, f, Z, p, C, x, v, T, h, g, _, E, l && this.renderSuppressConfirmModal(), a && this.renderRemoveAttachmentConfirmModal(), I, A, b, j]
               });
     }
     constructor(...e) {
@@ -736,7 +736,7 @@ class e3 extends (i = l.Component) {
                     k.h.Provider,
                     {
                         value: e1(e.url, e.image, e.video),
-                        children: (0, r.jsx)(N.ZP, {
+                        children: (0, r.jsx)(v.ZP, {
                             className: eX.embedWrapper,
                             embed: e,
                             obscureReason: null != f ? f : void 0,
@@ -813,7 +813,7 @@ function e9(e) {
             let i = eg.default.getCurrentUser();
             return null !== (t = null != n.guild_id && null != i ? (null === (e = eh.ZP.getMember(n.guild_id, i.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
-        { canAddNewReactions: C, canManageMessages: E } = (0, c.cj)(
+        { canAddNewReactions: E, canManageMessages: C } = (0, c.cj)(
             [ep.Z],
             () => ({
                 canAddNewReactions: f && ep.Z.can(ez.Plq.ADD_REACTIONS, n),
@@ -823,20 +823,20 @@ function e9(e) {
         ),
         I = (0, D.ux)(n.guild_id),
         [, x] = (0, B.AB)(n.guild_id),
-        v = (0, ec.$R)(n),
-        N = (o === i.author.id || E) && i.author.id !== ez.LAt && !1 !== l && !(0, ex.yE)(i.flags, ez.iLy.EPHEMERAL) && v && 1 === (0, eA.Z)(i),
-        T = o === i.author.id && v && !a,
+        N = (0, ec.$R)(n),
+        v = (o === i.author.id || C) && i.author.id !== ez.LAt && !1 !== l && !(0, ex.yE)(i.flags, ez.iLy.EPHEMERAL) && N && 1 === (0, eb.Z)(i),
+        T = o === i.author.id && N && !a,
         S = i.author.id === o,
-        b = i.isFirstMessageInForumPost(n),
-        A = (0, eZ.Z)({
+        A = i.isFirstMessageInForumPost(n),
+        b = (0, eZ.Z)({
             channel: n,
             canChat: f,
             renderReactions: m,
-            canAddNewReactions: C,
+            canAddNewReactions: E,
             isLurking: p,
             isGuest: g,
             communicationDisabled: x,
-            isActiveChannelOrUnarchivableThread: v,
+            isActiveChannelOrUnarchivableThread: N,
             isAutomodQuarantined: I
         }),
         R = (0, K.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
@@ -844,13 +844,13 @@ function e9(e) {
         O = (0, ee.Z)(i),
         M = (0, j.V)(n.id, i.author.id),
         k = (0, Z.r)(i.id),
-        { hasInlineForwardButton: w } = (0, y.yk)({ location: 'MessageAccessories' }),
-        U = (0, L.a)(i) && w;
+        { hasInlineForwardButton: U } = (0, L.yk)({ location: 'MessageAccessories' }),
+        w = (0, y.a)(i) && U;
     return (0, r.jsx)(e3, {
-        canSuppressEmbeds: N,
+        canSuppressEmbeds: v,
         canDeleteAttachments: T,
-        ...A,
-        disableReactionReads: !!b || A.disableReactionReads,
+        ...b,
+        disableReactionReads: !!A || b.disableReactionReads,
         ...e,
         isLurking: p && f,
         isGuest: g && f,
@@ -867,7 +867,7 @@ function e9(e) {
         shouldHideMediaOptions: P,
         shouldRedactExplicitContent: M,
         shouldRenderCtaButton: k,
-        hasInlineForwardButton: U
+        hasInlineForwardButton: w
     });
 }
 eq(e3, 'defaultProps', {
@@ -883,8 +883,8 @@ let e6 = (e) => {
         p = ed.QK.useSetting(),
         g = (0, K.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         _ = (0, q.Z)(null == i ? void 0 : i.id),
-        C = (0, j.V)(i.id, n.author.id),
-        E = (0, Z.r)(n.id),
+        E = (0, j.V)(i.id, n.author.id),
+        C = (0, Z.r)(n.id),
         I = (0, ee.Z)(n);
     return (0, r.jsx)(e3, {
         ...d,
@@ -905,8 +905,8 @@ let e6 = (e) => {
         showListsAndHeaders: g,
         showMaskedLinks: g,
         shouldHideMediaOptions: _,
-        shouldRedactExplicitContent: C,
-        shouldRenderCtaButton: E,
+        shouldRedactExplicitContent: E,
+        shouldRenderCtaButton: C,
         hasInlineForwardButton: !1,
         isSearchResult: u
     });

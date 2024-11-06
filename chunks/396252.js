@@ -20,20 +20,20 @@ var r = n(120356),
     g = n(38814);
 function _(e) {
     var t;
-    let { message: n, compact: r, usernameHook: _, channel: C } = e,
-        E = (0, a.e7)([c.Z], () => c.Z.getGuild(C.guild_id)),
+    let { message: n, compact: r, usernameHook: _, channel: E } = e,
+        C = (0, a.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
         I = (0, u.ZP)(n),
         x = _(I),
         {
-            avatarSrc: v,
-            eventHandlers: { onMouseEnter: N, onMouseLeave: T }
+            avatarSrc: N,
+            eventHandlers: { onMouseEnter: v, onMouseLeave: T }
         } = (0, m.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: N,
+        onMouseEnter: v,
         onMouseLeave: T,
         children: (0, i.jsx)(h.Z, {
             className: l()(g.mainContainer, { [g.compact]: r }),
-            iconNode: r ? null : (0, i.jsx)(m.S, { src: v }),
+            iconNode: r ? null : (0, i.jsx)(m.S, { src: N }),
             iconContainerClassName: g.iconContainer,
             compact: r,
             children: (0, i.jsxs)('div', {
@@ -67,7 +67,7 @@ function _(e) {
                         children: p.intl.format(p.t.W0UBIy, {
                             username: I.nick,
                             usernameHook: x,
-                            guildName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : ''
+                            guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

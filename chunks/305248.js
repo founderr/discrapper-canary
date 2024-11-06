@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return C;
     }
 }),
     n(47120);
@@ -19,10 +19,10 @@ var i = n(200651),
     p = n(823379),
     g = n(709054),
     _ = n(124368),
-    C = n(302762);
-function E(e) {
+    E = n(302762);
+function C(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        E = (0, o.Wu)(
+        C = (0, o.Wu)(
             [m.Z, f.Z],
             () =>
                 a()(m.Z.getThreadsForParent(n.guild_id, n.id))
@@ -49,20 +49,20 @@ function E(e) {
                 t.isFullyLoaded &&
                 !t.hasError &&
                 !t.collapsed &&
-                0 === E.length &&
+                0 === C.length &&
                 s.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), l(t.channelId);
                 });
         }),
         (0, i.jsx)('div', {
-            className: C.container,
-            children: E.map((e) =>
+            className: E.container,
+            children: C.map((e) =>
                 (0, i.jsx)(
                     d.oL,
                     {
                         createStore: () => (0, d.NU)(n),
                         children: (0, i.jsx)(u.ZP, {
-                            className: C.forumPost,
+                            className: E.forumPost,
                             threadId: e.id,
                             goToThread: I
                         })

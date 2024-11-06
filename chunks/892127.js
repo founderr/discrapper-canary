@@ -47,11 +47,11 @@ t.Z = o.memo(function (e) {
         N = o.useCallback((e) => {
             (0, l.Os)(e);
         }, []),
-        { id: O, pinned: T, zIndex: L, size: k, anchor: A } = t,
-        w = (0, d.w_)(k, I),
-        R = (0, d.KR)(A, I),
-        { minSize: j, resizeX: M, resizeY: z, dragAnywhere: D } = S,
-        P = T || !x,
+        { id: O, pinned: T, zIndex: A, size: L, anchor: R } = t,
+        k = (0, d.w_)(L, I),
+        w = (0, d.KR)(R, I),
+        { minSize: j, resizeX: M, resizeY: P, dragAnywhere: z } = S,
+        D = T || !x,
         U = o.useMemo(
             () => ({
                 minX: 0,
@@ -89,16 +89,16 @@ t.Z = o.memo(function (e) {
         }, [C, t]);
     return (0, i.jsx)(p.Z, {
         id: O,
-        size: w,
-        anchor: R,
+        size: k,
+        anchor: w,
         container: U,
         minSize: j,
-        hidden: !P,
+        hidden: !D,
         locked: x,
         resizeX: M,
-        resizeY: z,
-        style: { zIndex: L },
-        dragAnywhere: D,
+        resizeY: P,
+        style: { zIndex: A },
+        dragAnywhere: z,
         active: !x,
         onUpdate: b,
         onClick: N,

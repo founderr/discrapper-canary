@@ -19,8 +19,8 @@ var r = n(120356),
     p = n(576799),
     g = n(488131),
     _ = n(981631),
-    C = n(388032),
-    E = n(119487);
+    E = n(388032),
+    C = n(119487);
 function I(e) {
     let { message: t, compact: n } = e,
         r = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
@@ -41,15 +41,15 @@ function x(e) {
                 r = (0, a.e7)([h.Z], () => h.Z.getCount(e.id)),
                 l = (0, f.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
-                ? C.intl.string(C.t.ZTo4HR)
+                ? E.intl.string(E.t.ZTo4HR)
                 : null == r || 0 === r
-                  ? C.intl.string(C.t.HYtNyM)
+                  ? E.intl.string(E.t.HYtNyM)
                   : null == n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('span', { children: C.intl.string(C.t.ZTo4HR) }),
+                              (0, i.jsx)('span', { children: E.intl.string(E.t.ZTo4HR) }),
                               (0, i.jsx)('span', {
-                                  className: E.timestamp,
+                                  className: C.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
@@ -61,7 +61,7 @@ function x(e) {
                                   channel: e
                               }),
                               (0, i.jsx)('span', {
-                                  className: E.timestamp,
+                                  className: C.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
@@ -71,9 +71,9 @@ function x(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: l()(E.spine, {
-                    [E.cozy]: !r,
-                    [E.systemMessageSpine]: c
+                className: l()(C.spine, {
+                    [C.cozy]: !r,
+                    [C.systemMessageSpine]: c
                 })
             }),
             (0, i.jsx)(o.Clickable, {
@@ -96,20 +96,20 @@ function x(e) {
                             });
                     });
                 },
-                'aria-roledescription': C.intl.string(C.t['8ipxiY']),
-                className: l()(E.container, { [E.systemMessageContainer]: c }),
+                'aria-roledescription': E.intl.string(E.t['8ipxiY']),
+                className: l()(C.container, { [C.systemMessageContainer]: c }),
                 children: (0, i.jsxs)(o.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: E.topLine,
+                            className: C.topLine,
                             children: [
-                                (0, i.jsx)(o.HiddenVisually, { children: C.intl.string(C.t['7Xm5QE']) }),
+                                (0, i.jsx)(o.HiddenVisually, { children: E.intl.string(E.t['7Xm5QE']) }),
                                 (0, i.jsx)('span', {
-                                    className: E.name,
+                                    className: C.name,
                                     children: t.name
                                 }),
                                 (0, i.jsx)('span', {
-                                    className: E.cta,
+                                    className: C.cta,
                                     'aria-hidden': !I,
                                     children: (0, m.WE)(u, t.id)
                                 })
@@ -117,7 +117,7 @@ function x(e) {
                         }),
                         (0, i.jsx)('span', {
                             'aria-hidden': !0,
-                            className: l()(E.bottomLine),
+                            className: l()(C.bottomLine),
                             children: d
                         })
                     ]

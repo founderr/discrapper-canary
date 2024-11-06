@@ -17,14 +17,14 @@ function d(e) {
     let { message: n, compact: d, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
         g = (0, o.ZP)(n),
         _ = m(g),
-        C = (0, r.e7)([a.Z], () => {
+        E = (0, r.e7)([a.Z], () => {
             var e;
             return a.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        E = c.intl.format(c.t.cZ9Uf3, {
+        C = c.intl.format(c.t.cZ9Uf3, {
             actorName: g.nick,
             actorHook: _,
-            threadName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : n.content,
+            threadName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: h,
                 onContextMenu: p
@@ -39,6 +39,6 @@ function d(e) {
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: E
+        children: C
     });
 }

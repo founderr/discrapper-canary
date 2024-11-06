@@ -35,29 +35,29 @@ function E(e) {
 let _ = o.memo(function (e) {
     let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: g, cancelText: _, confirmText: C, icon: S, body: x, title: Z, renderFooter: I, contentOpacity: y, status: b, containerRef: N } = e,
         [O, T] = o.useState(!1),
-        L = n || O || b === p._1z.FOCUSED;
+        A = n || O || b === p._1z.FOCUSED;
     o.useEffect(() => {
         null == r || r();
     }, [r]);
-    let k = o.useCallback(
+    let L = o.useCallback(
             (e) => {
                 e.stopPropagation(), null == u || u(e);
             },
             [u]
         ),
-        A = o.useCallback(
+        R = o.useCallback(
             (e) => {
                 e.stopPropagation(), null == d || d(e);
             },
             [d]
         ),
-        w = o.useCallback(
+        k = o.useCallback(
             (e) => {
                 e.stopPropagation(), null == h || h(e);
             },
             [h]
         ),
-        R = o.useCallback(() => {
+        w = o.useCallback(() => {
             T(!0);
         }, []),
         j = o.useCallback(() => {
@@ -71,12 +71,12 @@ let _ = o.memo(function (e) {
                 children: (0, i.jsx)(a.Clickable, {
                     innerRef: N,
                     ignoreKeyPress: !0,
-                    onMouseOver: R,
+                    onMouseOver: w,
                     onMouseLeave: j,
                     onClick: f,
                     className: l()(v.container, { [v.clickable]: null != f }),
                     children: (function () {
-                        let e = null == I ? void 0 : I(L);
+                        let e = null == I ? void 0 : I(A);
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(s.animated.div, {
@@ -109,12 +109,12 @@ let _ = o.memo(function (e) {
                                                     ? (0, i.jsx)(a.Text, {
                                                           color: 'interactive-normal',
                                                           variant: 'text-sm/normal',
-                                                          lineClamp: null != t ? t * (L ? 2 : 1) : void 0,
+                                                          lineClamp: null != t ? t * (A ? 2 : 1) : void 0,
                                                           children: x
                                                       })
                                                     : null,
                                                 (function () {
-                                                    let e = 'function' == typeof g ? g(L) : g;
+                                                    let e = 'function' == typeof g ? g(A) : g;
                                                     return null != g
                                                         ? (0, i.jsx)(a.Text, {
                                                               className: v.hint,
@@ -134,7 +134,7 @@ let _ = o.memo(function (e) {
                                                                         className: v.button,
                                                                         size: a.Button.Sizes.SMALL,
                                                                         color: a.Button.Colors.GREEN,
-                                                                        onClick: A,
+                                                                        onClick: R,
                                                                         children: null != C ? C : m.intl.string(m.t.BddRzc)
                                                                     })
                                                                   : null,
@@ -144,7 +144,7 @@ let _ = o.memo(function (e) {
                                                                         size: a.Button.Sizes.SMALL,
                                                                         look: a.Button.Looks.OUTLINED,
                                                                         color: a.Button.Colors.PRIMARY,
-                                                                        onClick: w,
+                                                                        onClick: k,
                                                                         children: null != _ ? _ : m.intl.string(m.t['ETE/oK'])
                                                                     })
                                                                   : null
@@ -168,7 +168,7 @@ let _ = o.memo(function (e) {
             }),
             (0, i.jsx)(c.Z, {
                 className: v.dismissButton,
-                onDismiss: k,
+                onDismiss: L,
                 'aria-label': m.intl.string(m.t.LnEgqa)
             })
         ]
@@ -229,8 +229,8 @@ function S(e) {
         ),
         b = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
-            props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: L, onConfirmClick: k, onCancelClick: A, ...w },
-            status: R
+            props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: A, onConfirmClick: L, onCancelClick: R, ...k },
+            status: w
         } = t,
         { ref: j, springs: M } = (0, f.X4)(t.id, l, s);
     return (0, i.jsx)(C, {
@@ -242,7 +242,7 @@ function S(e) {
             observe: 0 === n,
             className: v.clickZone,
             children: (0, i.jsx)(_, {
-                ...w,
+                ...k,
                 containerRef: j,
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? S : void 0,
@@ -254,7 +254,7 @@ function S(e) {
                 expand: !1,
                 index: n,
                 locked: r,
-                status: R,
+                status: w,
                 contentOpacity: M.contentOpacity
             })
         })

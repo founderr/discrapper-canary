@@ -18,14 +18,14 @@ var i = n(200651),
     p = n(981631),
     g = n(176505),
     _ = n(388032),
-    C = n(341738);
-function E(e) {
+    E = n(341738);
+function C(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {
-        className: C.welcomeCardText,
+        className: E.welcomeCardText,
         children: (0, i.jsx)(l.Text, {
             tag: 'p',
-            className: C.welcomeCardText,
+            className: E.welcomeCardText,
             color: 'status-positive-text',
             variant: 'heading-xl/medium',
             children: _.intl.format(_.t.MLKSlp, {
@@ -49,23 +49,23 @@ function E(e) {
 function I(e) {
     let { guildId: t, user: n, username: r } = e;
     return (0, i.jsxs)('div', {
-        className: C.welcomeCard,
+        className: E.welcomeCard,
         role: 'img',
         'aria-label': _.intl.formatToPlainString(_.t['utf8+f'], { username: r }),
         children: [
             (0, i.jsx)(f.Z, {
                 guildId: t,
                 user: n,
-                className: C.welcomeCardBadge
+                className: E.welcomeCardBadge
             }),
-            (0, i.jsx)(E, { username: r })
+            (0, i.jsx)(C, { username: r })
         ]
     });
 }
 function x(e) {
     var t, l;
-    let { channel: f, message: _, compact: C } = e,
-        E = (0, s.ZP)(_),
+    let { channel: f, message: _, compact: E } = e,
+        C = (0, s.ZP)(_),
         x = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 l = n.guild_id,
@@ -92,9 +92,9 @@ function x(e) {
         })({
             channel: f,
             message: _,
-            author: E
+            author: C
         }),
-        v = (null === (t = _.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = _.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
+        N = (null === (t = _.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = _.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
     return null == x
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -102,14 +102,14 @@ function x(e) {
                   (0, i.jsx)(u.Z, {
                       icon: n(570111),
                       timestamp: _.timestamp,
-                      compact: C,
+                      compact: E,
                       children: x
                   }),
-                  v &&
+                  N &&
                       (0, i.jsx)(I, {
                           guildId: f.guild_id,
                           user: _.author,
-                          username: E.nick
+                          username: C.nick
                       }),
                   (0, i.jsx)(h.Z, {
                       channel: f,

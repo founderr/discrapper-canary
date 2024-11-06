@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return E;
+        return C;
     }
 });
 var i = n(200651),
@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(388032),
     g = n(169458),
     _ = n(492764),
-    C = n(235810);
-function E() {
+    E = n(235810);
+function C() {
     return (0, m.Z)()
         ? (0, i.jsx)('div', {
               className: g.emptyContainer,
@@ -52,7 +52,7 @@ function E() {
                       className: g.emptyInner,
                       children: [
                           (0, i.jsx)('img', {
-                              src: C,
+                              src: E,
                               className: g.image,
                               alt: ''
                           }),

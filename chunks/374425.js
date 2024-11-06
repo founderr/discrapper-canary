@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(217588),
     g = n(981631),
     _ = n(474936),
-    C = n(231206);
-let E = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    E = n(231206);
+let C = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     I = (e) => {
         if (null != e)
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -32,13 +32,13 @@ t.Z = (e) => {
         [h, g] = r.useState(String(Date.now())),
         [_] = (0, m.XW)(t, l),
         { analyticsLocations: x } = (0, c.ZP)(o.Z.STICKER_MESSAGE),
-        v = (0, i.jsxs)('span', {
-            className: C.stickerName,
+        N = (0, i.jsxs)('span', {
+            className: E.stickerName,
             children: [
                 (0, i.jsx)(a.StickerSmallIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: C.stickerIcon
+                    className: E.stickerIcon
                 }),
                 (null != _ ? _ : t).name
             ]
@@ -64,7 +64,7 @@ t.Z = (e) => {
                 return (0, i.jsx)(a.Tooltip, {
                     ...u.b_,
                     shouldShow: s,
-                    text: (0, u.Y)(v),
+                    text: (0, u.Y)(N),
                     'aria-label': !1,
                     onTooltipShow: () => {
                         I(_);
@@ -72,14 +72,14 @@ t.Z = (e) => {
                     children: (e) =>
                         (0, i.jsx)(a.Clickable, {
                             ...e,
-                            className: C.clickableSticker,
+                            className: E.clickableSticker,
                             onClick: (e) => {
                                 d(!s), n(e);
                             },
                             tag: 'span',
                             children: (0, i.jsx)(f.ZP, {
                                 isInteracting: l,
-                                size: E,
+                                size: C,
                                 sticker: null != _ ? _ : t
                             })
                         })

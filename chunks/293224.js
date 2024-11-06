@@ -48,16 +48,16 @@ var i = n(200651),
     N = n(933557),
     O = n(471445),
     T = n(74299),
-    L = n(803647),
-    k = n(565138),
-    A = n(917405),
-    w = n(603074),
-    R = n(879815),
+    A = n(803647),
+    L = n(565138),
+    R = n(917405),
+    k = n(603074),
+    w = n(879815),
     j = n(189771),
     M = n(294629),
-    z = n(67844),
-    D = n(544384),
-    P = n(892807),
+    P = n(67844),
+    z = n(544384),
+    D = n(892807),
     U = n(560688),
     V = n(199902),
     W = n(592125),
@@ -176,7 +176,7 @@ function ei(e) {
 }
 function eo(e) {
     let { voiceChannel: t } = e,
-        { selfDeaf: r, deaf: l } = (0, R.Z)(t),
+        { selfDeaf: r, deaf: l } = (0, w.Z)(t),
         s = r || l,
         {
             Component: a,
@@ -238,7 +238,7 @@ function er(e) {
         } = (0, f.o)(l ? 'disable' : 'enable'),
         x =
             null != n
-                ? (0, z.X)({
+                ? (0, P.X)({
                       enabled: l,
                       cameraUnavailable: u,
                       hasPermission: d,
@@ -318,7 +318,7 @@ function el(e) {
         t = c ? (null != e ? $.intl.format($.t.AB5gT0, { game: e.name }) : $.intl.string($.t.FeUKeH)) : $.intl.string($.t.uQn9Bw);
     }
     let C = () => {
-            if (_) return (0, L.Z)(f, !1);
+            if (_) return (0, A.Z)(f, !1);
             g();
         },
         {
@@ -332,7 +332,7 @@ function el(e) {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return null != r
-                ? (0, i.jsx)(D.Z, {
+                ? (0, i.jsx)(z.Z, {
                       channel: r,
                       currentUser: u,
                       activeStreams: null != f ? [f] : [],
@@ -405,7 +405,7 @@ function es(e) {
             let { closePopout: t } = e;
             return d || null == o
                 ? (0, i.jsx)(i.Fragment, {})
-                : (0, i.jsx)(w.Z, {
+                : (0, i.jsx)(k.Z, {
                       guildId: l,
                       channel: o,
                       onClose: C(t),
@@ -464,7 +464,7 @@ function ea(e) {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return r.length > 0
-                ? (0, i.jsx)(P.Z, {
+                ? (0, i.jsx)(D.Z, {
                       recentVoiceChannels: r,
                       currentVoiceChannel: t,
                       onClose: f(n),
@@ -508,9 +508,9 @@ function eu(e) {
                     (0, i.jsxs)('div', {
                         className: ee.guildIconContainer,
                         children: [
-                            (0, i.jsx)(k.Z, {
+                            (0, i.jsx)(L.Z, {
                                 guild: n,
-                                size: k.Z.Sizes.SMOL,
+                                size: L.Z.Sizes.SMOL,
                                 className: ee.guildIcon
                             }),
                             (0, i.jsx)(p.Text, {
@@ -570,7 +570,7 @@ function ed(e) {
         null != t &&
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(A.Z, {
+                (0, i.jsx)(R.Z, {
                     ...o,
                     hasVideo: l
                 }),

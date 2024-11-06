@@ -16,16 +16,16 @@ var r = n(442837),
     m = n(430824);
 function h(e) {
     let { channel: t, closePopout: n, onSelect: h, navId: f, label: p, location: g, includeGuildMute: _ } = e,
-        C = (0, o.c)(t),
-        E = (0, s.EQ)(t),
+        E = (0, o.c)(t),
+        C = (0, s.EQ)(t),
         I = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
         x = (0, c.Z)(I),
-        v = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
+        N = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
     return (0, i.jsxs)(l.Menu, {
         navId: f,
         onClose: n,
         'aria-label': p,
         onSelect: h,
-        children: [(0, i.jsx)(l.MenuGroup, { children: (0, a.ZP)(t, g) }), _ ? (0, i.jsx)(l.MenuGroup, { children: x }) : null, v ? E : (0, i.jsx)(l.MenuGroup, { children: C })]
+        children: [(0, i.jsx)(l.MenuGroup, { children: (0, a.ZP)(t, g) }), _ ? (0, i.jsx)(l.MenuGroup, { children: x }) : null, N ? C : (0, i.jsx)(l.MenuGroup, { children: E })]
     });
 }

@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(442837),
     a = n(780384),
     u = n(481060),
-    d = n(358221),
-    c = n(594190),
+    c = n(358221),
+    d = n(594190),
     m = n(687516),
     x = n(210887),
     C = n(937995),
@@ -37,22 +37,22 @@ var i = n(200651),
     D = n(869630);
 t.Z = function (e) {
     var t, n, l;
-    let { channelId: O, previewQuest: w, isParticipatingOverride: Q } = e,
+    let { channelId: w, previewQuest: O, isParticipatingOverride: Q } = e,
         [k, H] = s.useState(!1),
         z = s.useCallback(() => H(!0), []),
-        W = s.useCallback(() => H(!1), []),
-        G = s.useContext(C.h9),
+        G = s.useCallback(() => H(!1), []),
+        W = s.useContext(C.h9),
         F = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         V = (0, o.e7)([x.Z], () => x.Z.getState().theme),
         X = (0, a.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Y, quest: K } = (0, o.cj)(
-            [h.Z, d.Z, T.Z],
+            [h.Z, c.Z, T.Z],
             () => {
                 var e, t, n, i;
-                let s = d.Z.getParticipants(O),
+                let s = c.Z.getParticipants(w),
                     l =
-                        null != w
-                            ? w
+                        null != O
+                            ? O
                             : (function (e, t, n) {
                                   for (let r of e) {
                                       var i, s, l;
@@ -87,15 +87,15 @@ t.Z = function (e) {
                     quest: l
                 };
             },
-            [O, F, w]
+            [w, F, O]
         ),
         J = null != K ? q.r.build(K.config) : null,
         $ = null == J ? void 0 : J.application.id,
         ee = (0, o.e7)(
-            [c.ZP, h.Z],
+            [d.ZP, h.Z],
             () => {
                 if (null == K) return !1;
-                let e = c.ZP.getRunningGames().map((e) => e.id);
+                let e = d.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(K) && e.includes($)) return !0;
                 let t = null != F ? h.Z.findActivity(F.id, (e) => e.type !== P.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(K) && (0, v._D)(t, K)) || !1;
@@ -104,7 +104,7 @@ t.Z = function (e) {
         ),
         et = !0 === Q || Y || ee,
         en = (0, o.e7)([T.Z], () => null != K && T.Z.isEnrolling(K.id), [K]),
-        ei = (0, o.e7)([d.Z], () => ((null == F ? void 0 : F.id) == null ? null : d.Z.getParticipant(O, F.id)) != null, [O, F]),
+        ei = (0, o.e7)([c.Z], () => ((null == F ? void 0 : F.id) == null ? null : c.Z.getParticipant(w, F.id)) != null, [w, F]),
         es = (0, j.B6)(null == K ? void 0 : K.config.expiresAt),
         el = (0, j.B6)(null == J ? void 0 : J.rewardsExpireAt),
         er = s.useCallback(() => {
@@ -136,7 +136,7 @@ t.Z = function (e) {
             quest: K,
             location: f.jn.QUEST_LIVE_STREAM
         }),
-        ed = s.useMemo(
+        ec = s.useMemo(
             () =>
                 (0, S.T)({
                     quest: K,
@@ -144,21 +144,21 @@ t.Z = function (e) {
                 }),
             [K]
         ),
-        ec = (0, j.tP)(K);
+        ed = (0, j.tP)(K);
     if (null == K || !(0, v.dl)(K)) return null;
     let em = (null === (t = K.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         ex = (null === (n = K.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         eC = null != K.userStatus && (0, v.zE)(K.userStatus, f.jn.QUEST_LIVE_STREAM),
         eh = null != K.userStatus && (0, v.zE)(K.userStatus, f.jn.QUEST_BAR),
         eg = (0, v.Mi)(K, f.jn.QUEST_BAR) && !eh;
-    ed.info({
+    ec.info({
         isQuestCallHeaderDismissed: eC,
-        isQuestExpired: ec,
+        isQuestExpired: ed,
         isQuestBarShowing: eg,
         isCurrentUserCallParticipant: ei
     });
-    let ep = null != w && (null === (l = K.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null;
-    if ((!ep && (eC || ec || eg)) || (!ep && !ei)) return null;
+    let ep = null != O && (null === (l = K.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null;
+    if ((!ep && (eC || ed || eg)) || (!ep && !ei)) return null;
     let eE = (0, v.il)(K),
         ej = (0, i.jsx)(b.Z, {
             className: D.rewardTile,
@@ -169,7 +169,7 @@ t.Z = function (e) {
         });
     return (0, i.jsx)(_.A, {
         questOrQuests: K,
-        overrideVisibility: !G,
+        overrideVisibility: !W,
         questContent: f.jn.QUEST_LIVE_STREAM,
         children: () => {
             var e;
@@ -177,8 +177,8 @@ t.Z = function (e) {
                 className: r()(D.wrapper, { [D.wrapperAccepted]: em }),
                 onFocus: z,
                 onMouseEnter: z,
-                onBlur: W,
-                onMouseLeave: W,
+                onBlur: G,
+                onMouseLeave: G,
                 children: [
                     !em &&
                         (0, i.jsxs)('div', {

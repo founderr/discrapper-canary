@@ -3,13 +3,13 @@ n.d(t, {
         return z;
     },
     LE: function () {
-        return w;
+        return U;
     },
     ML: function () {
         return F;
     },
     Qc: function () {
-        return U;
+        return w;
     },
     c2: function () {
         return G;
@@ -37,22 +37,22 @@ var c = n(731965),
     p = n(812206),
     g = n(963202),
     _ = n(564990),
-    C = n(353647),
-    E = n(669764),
+    E = n(353647),
+    C = n(669764),
     I = n(210753),
     x = n(571457),
-    v = n(859921),
-    N = n(369566),
+    N = n(859921),
+    v = n(369566),
     T = n(314897),
     S = n(480294),
-    b = n(564334),
-    A = n(302221),
+    A = n(564334),
+    b = n(302221),
     j = n(823379),
     Z = n(956664),
     R = n(229893),
     P = n(229765),
-    y = n(286083),
-    L = n(207796),
+    L = n(286083),
+    y = n(207796),
     O = n(976757),
     M = n(981631),
     k = n(308083),
@@ -61,13 +61,13 @@ function B() {
     var e;
     let { search: t } = (0, o.TH)(),
         { game: n } = a.parse(t.slice(1)),
-        i = (0, L.GN)(L.t1, l());
+        i = (0, y.GN)(y.t1, l());
     return null != n && (null === (e = i.games) || void 0 === e ? void 0 : e.length) === 0 && (i.games = [n]), i;
 }
-function w() {
-    let e = (0, L.GN)((e) => e.setGame, s.Z),
-        t = (0, L.GN)((e) => e.setSelectedGames, s.Z),
-        n = (0, L.GN)((e) => e.selectedGames, s.Z),
+function U() {
+    let e = (0, y.GN)((e) => e.setGame, s.Z),
+        t = (0, y.GN)((e) => e.setSelectedGames, s.Z),
+        n = (0, y.GN)((e) => e.selectedGames, s.Z),
         r = B(),
         l = (0, g.An)({ location: 'clan_discovery' }),
         a = (0, g.iN)('clan_discovery'),
@@ -86,7 +86,7 @@ function w() {
         h = (0, u.e7)([R.Z], () => R.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !a && (c === k.nJ ? (e(L.hz.VALORANT), t([c])) : c === k.xn ? (e(L.hz.GENSHIN), t([c])) : null == c && (e(L.hz.NONE), t([])));
+            !(n.length > 0) && !a && (c === k.nJ ? (e(y.hz.VALORANT), t([c])) : c === k.xn ? (e(y.hz.GENSHIN), t([c])) : null == c && (e(y.hz.NONE), t([])));
         }, [e, t, c, n, a]),
         i.useEffect(() => {
             if (a) (0, P.Cg)(r);
@@ -101,7 +101,7 @@ function w() {
         { loading: h }
     );
 }
-function U() {
+function w() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = B(),
@@ -140,12 +140,12 @@ function U() {
 }
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, y.a)(),
+        { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: d } = (0, L.a)(),
         h = c - 1,
-        f = (0, L.GN)((e) => e.loadingGameApplication, s.Z),
+        f = (0, y.GN)((e) => e.loadingGameApplication, s.Z),
         p = (0, u.e7)([R.Z], () => R.Z.getSavedGuildIds()),
         g = B(),
-        { searchResult: _, hasError: C } = (0, u.cj)(
+        { searchResult: _, hasError: E } = (0, u.cj)(
             [R.Z],
             () => ({
                 searchResult: R.Z.getSearchResult(g),
@@ -154,7 +154,7 @@ function F(e) {
             [g]
         );
     i.useEffect(() => {
-        n(e, y.$, { pageMemoryEnabled: !0 });
+        n(e, L.$, { pageMemoryEnabled: !0 });
     }, [e, n, _]),
         !(function (e) {
             let [t, n] = i.useState(!1),
@@ -179,20 +179,20 @@ function F(e) {
         i.useEffect(() => {
             (0, P.IS)();
         }, []);
-    let E = i.useMemo(() => {
+    let C = i.useMemo(() => {
             var e;
             return null !== (e = t ? p : o[h]) && void 0 !== e ? e : [];
         }, [p, o, h, t]),
-        I = (0, u.Wu)([R.Z], () => E.map((e) => R.Z.getGuildProfile(e)).filter(j.lm), [E]),
-        x = E.length === I.length || t,
-        v = I.length === a || x,
-        N = (0, O.Pw)(_);
+        I = (0, u.Wu)([R.Z], () => C.map((e) => R.Z.getGuildProfile(e)).filter(j.lm), [C]),
+        x = C.length === I.length || t,
+        N = I.length === a || x,
+        v = (0, O.Pw)(_);
     return {
-        loaded: e === r && N && v && !f,
+        loaded: e === r && v && N && !f,
         clans: I,
         searchCriteria: g,
         searchResult: _,
-        hasError: C
+        hasError: E
     };
 }
 function G() {
@@ -205,34 +205,34 @@ function G() {
     }, [n]),
         i.useEffect(() => {
             if (null == n || !t) {
-                L.GN.setState({ entrypointGameId: null });
+                y.GN.setState({ entrypointGameId: null });
                 return;
             }
             (0, c.j)(() => {
-                v.Z.setState({ selectedTab: D.vf.GUILDS }), L.GN.setState({ mode: L.v0.DISCOVERY });
+                N.Z.setState({ selectedTab: D.vf.GUILDS }), y.GN.setState({ mode: y.v0.DISCOVERY });
             }),
                 null == r
                     ? ((0, c.j)(() => {
-                          L.GN.setState({ loadingGameApplication: !0 });
+                          y.GN.setState({ loadingGameApplication: !0 });
                       }),
                       f.ZP.fetchApplication(n)
                           .then(() => {
                               (0, c.j)(() => {
-                                  L.GN.setState({ entrypointGameId: n });
+                                  y.GN.setState({ entrypointGameId: n });
                               });
                           })
                           .finally(() => {
                               (0, c.j)(() => {
-                                  L.GN.setState({ loadingGameApplication: !1 });
+                                  y.GN.setState({ loadingGameApplication: !1 });
                               });
                           }))
-                    : (L.GN.getState().setSelectedGames([n]), L.GN.setState({ entrypointGameId: n }));
+                    : (y.GN.getState().setSelectedGames([n]), y.GN.setState({ entrypointGameId: n }));
         }, [r, n, t]);
 }
 function V(e, t) {
     var n;
     let { data: r, isLoading: l } = (0, f.IX)(e),
-        a = (0, u.e7)([E.Z], () => (null != e ? E.Z.getGame(e) : null)),
+        a = (0, u.e7)([C.Z], () => (null != e ? C.Z.getGame(e) : null)),
         { isFetching: o } = (0, I.$)(e, t),
         s = i.useMemo(() => {
             if (null == a) return '';
@@ -253,14 +253,14 @@ function V(e, t) {
         gameName: null !== (n = null == a ? void 0 : a.name) && void 0 !== n ? n : null == r ? void 0 : r.name
     };
 }
-let H = b.Z.parseString('#E93446');
+let H = A.Z.parseString('#E93446');
 function z() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 5,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, u.e7)([T.default], () => T.default.getId()),
         r = (0, h.ZP)(),
-        { recent: l, outbox: a } = (0, N.Z)(n),
-        o = (0, u.e7)([C.Z], () => C.Z.hasInitialized),
+        { recent: l, outbox: a } = (0, v.Z)(n),
+        o = (0, u.e7)([E.Z], () => E.Z.hasInitialized),
         s = (0, u.e7)([S.Z], () => S.Z.hasConsented(M.pjP.PERSONALIZATION)),
         c = null == a && o,
         m = i.useMemo(() => (s ? l.reduce((t, n) => (t.length >= e || 'played_game_extra' !== n.extra.type || null == k.gQ.get(n.extra.application_id) ? t : t.concat(n.extra.application_id)), []) : []), [s, l, e]),
@@ -274,8 +274,8 @@ function z() {
         i.useEffect(() => {
             d.Z.getDetectableGamesSupplemental(f);
         }, [f]);
-    let p = (0, u.Wu)([E.Z], () => E.Z.getGames(f), [f]),
-        g = (0, u.e7)([E.Z], () => f.some((e) => E.Z.isFetching(e)), [f]),
+    let p = (0, u.Wu)([C.Z], () => C.Z.getGames(f), [f]),
+        g = (0, u.e7)([C.Z], () => f.some((e) => C.Z.isFetching(e)), [f]),
         I = i.useMemo(() => {
             let e = {};
             for (let t of p) {
@@ -298,7 +298,7 @@ function z() {
             }
             return e;
         }, [p]),
-        [x, v] = i.useState({});
+        [x, N] = i.useState({});
     return (
         i.useEffect(() => {
             Promise.all(
@@ -306,21 +306,21 @@ function z() {
                     let [t, n] = e;
                     return null == n
                         ? Promise.resolve({
-                              color: new b.Z(0, 255, 0, 1),
+                              color: new A.Z(0, 255, 0, 1),
                               gameId: t
                           })
                         : (0, Z.OF)(n)
                               .then((e) => {
                                   let [n, i, l] = e[0],
-                                      a = new b.Z(n, i, l, 1),
-                                      o = 'light' === r ? new b.Z(255, 255, 255, 1) : new b.Z(0, 0, 0, 1),
-                                      s = (0, A.k8)({
+                                      a = new A.Z(n, i, l, 1),
+                                      o = 'light' === r ? new A.Z(255, 255, 255, 1) : new A.Z(0, 0, 0, 1),
+                                      s = (0, b.k8)({
                                           colors: [a, o],
                                           ratio: 5,
                                           saturationFactor: 1
                                       });
                                   return Promise.resolve({
-                                      color: null != s ? s : new b.Z(0, 0, 255, 1),
+                                      color: null != s ? s : new A.Z(0, 0, 255, 1),
                                       gameId: t
                                   });
                               })
@@ -332,14 +332,14 @@ function z() {
                               );
                 })
             ).then((e) =>
-                v(
+                N(
                     e.reduce((e, t) => {
                         let { color: n, gameId: i } = t;
                         return (e[i] = n), e;
                     }, {})
                 )
             );
-        }, [I, v, r]),
+        }, [I, N, r]),
         {
             games: i.useMemo(
                 () =>

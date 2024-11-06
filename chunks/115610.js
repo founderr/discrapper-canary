@@ -23,14 +23,14 @@ function g(e) {
 }
 async function _(e, t) {
     var n, f, _;
-    let C = t.getGuildId();
-    if (null == C || null == u.Z.getGuild(C)) return;
-    let E = d.default.getCurrentUser();
-    if (null == E) return;
+    let E = t.getGuildId();
+    if (null == E || null == u.Z.getGuild(E)) return;
+    let C = d.default.getCurrentUser();
+    if (null == C) return;
     await (0, o.$p)();
     let I = Array.from(s.Z.getAllStickersIterator()),
         x = I.filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => g(e.guild_id) && (0, a.kl)(e, E, t))
+            .filter((e) => g(e.guild_id) && (0, a.kl)(e, C, t))
             .sort((e, t) => -h.default.compare(e.id, t.id));
     if (x.length > 5) {
         let r = [x[Math.floor(Math.pow(Math.random(), 2) * x.length)].id];
@@ -43,7 +43,7 @@ async function _(e, t) {
         });
         return;
     }
-    let v = u.Z.getGuildIds()
+    let N = u.Z.getGuildIds()
         .filter(g)
         .map((e) => r.ZP.getUsableGuildEmoji(e))
         .flat()
@@ -53,13 +53,13 @@ async function _(e, t) {
                 m.ZP.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: C,
+                    guildId: E,
                     intention: p.Hz.CHAT
                 })
         )
         .sort((e, t) => -h.default.compare(e.id, t.id));
-    if (v.length > 10) {
-        let n = v[Math.floor(Math.pow(Math.random(), 2) * v.length)];
+    if (N.length > 10) {
+        let n = N[Math.floor(Math.pow(Math.random(), 2) * N.length)];
         i.Z.sendMessage(t.id, l.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
                 guild_id: null !== (f = t.getGuildId()) && void 0 !== f ? f : void 0,
@@ -69,8 +69,8 @@ async function _(e, t) {
         });
         return;
     }
-    let N = I.filter((e) => e.type === c.n0.STANDARD),
-        T = [N[Math.floor(Math.random() * N.length)].id];
+    let v = I.filter((e) => e.type === c.n0.STANDARD),
+        T = [v[Math.floor(Math.random() * v.length)].id];
     i.Z.sendStickers(t.id, T, '', {
         messageReference: {
             guild_id: null !== (_ = t.getGuildId()) && void 0 !== _ ? _ : void 0,

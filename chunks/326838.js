@@ -52,7 +52,7 @@ function _(e) {
                         (0, i.jsxs)('div', {
                             className: g.buttonContainer,
                             children: [
-                                (0, i.jsx)(C, {
+                                (0, i.jsx)(E, {
                                     expired: n,
                                     invite: t,
                                     isHoveringInvite: _
@@ -96,7 +96,7 @@ function _(e) {
         })
     );
 }
-function C(e) {
+function E(e) {
     let { expired: t, invite: n, isHoveringInvite: l } = e,
         a = (0, o.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
         c = (0, o.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
@@ -108,7 +108,7 @@ function C(e) {
             } catch {}
             f(!1);
         }, [n]),
-        C = r.useCallback(async () => {
+        E = r.useCallback(async () => {
             f(!0);
             try {
                 await (0, m.Ol)(n);
@@ -132,7 +132,7 @@ function C(e) {
               color: s.ButtonColors.GREEN,
               disabled: h,
               size: s.ButtonSizes.SMALL,
-              onClick: C,
+              onClick: E,
               children: p.intl.string(p.t['/loN9/'])
           })
         : null != n.fallback_url

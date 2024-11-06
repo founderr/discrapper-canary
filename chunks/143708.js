@@ -21,8 +21,8 @@ function f(e) {
         f,
         { author: p, banned: g } = e,
         _ = (0, r.e7)([o.default], () => o.default.getId()),
-        C = (0, r.e7)([s.Z], () => s.Z.getChannelId()),
-        E = u.ZP.useName(p),
+        E = (0, r.e7)([s.Z], () => s.Z.getChannelId()),
+        C = u.ZP.useName(p),
         I = _ === p.id;
     return (
         I
@@ -30,8 +30,8 @@ function f(e) {
             : ((f = m.intl.string(m.t['YVub5+'])),
               g
                   ? (t = m.intl.string(m.t['57nBt7']))
-                  : null != E
-                    ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: E })),
+                  : null != C
+                    ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: C })),
                       (n = (0, i.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = p,
@@ -40,7 +40,7 @@ function f(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != C && l.Z.startTyping(C);
+                                  null != E && l.Z.startTyping(E);
                           },
                           children: m.intl.string(m.t.P8tvKC)
                       })))

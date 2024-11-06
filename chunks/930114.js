@@ -18,7 +18,7 @@ function m(e) {
         p = !1,
         g = null,
         _ = l.default.getCurrentUser(),
-        C = (0, s.yd)(null == _ ? void 0 : _.premiumType, u.p9.TIER_0);
+        E = (0, s.yd)(null == _ ? void 0 : _.premiumType, u.p9.TIER_0);
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('63264')]).then(n.bind(n, 409858));
@@ -40,7 +40,7 @@ function m(e) {
         {
             onCloseCallback: () => {
                 var e;
-                p && null != g && !C && g.isSubscription && (null == g ? void 0 : null === (e = g.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                p && null != g && !E && g.isSubscription && (null == g ? void 0 : null === (e = g.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

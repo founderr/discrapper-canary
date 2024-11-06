@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return E;
     }
 });
 var i = n(200651),
@@ -23,18 +23,18 @@ let _ = {
     left: -4,
     right: -4
 };
-function C(e) {
+function E(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(a.tE, {
         offset: _,
         children: (0, i.jsxs)('div', {
             className: g.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, i.jsx)(E, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(o.Fbu, { size: 'xxs' }), (0, i.jsx)(I, { channel: t }), n]
+            children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(o.Fbu, { size: 'xxs' }), (0, i.jsx)(I, { channel: t }), n]
         })
     });
 }
-function E(e) {
+function C(e) {
     let { channel: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null != n

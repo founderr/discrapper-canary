@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ForwardModal: function () {
-            return y;
+            return P;
         }
     }),
     n(47120);
@@ -27,12 +27,12 @@ var l = n(200651),
     C = n(388275),
     v = n(912332),
     b = n(646746),
-    x = n(819727),
+    L = n(819727),
     N = n(388032),
-    L = n(463061),
+    x = n(463061),
     T = n(621054);
-function y(e) {
-    let { channelId: t, messageId: y, message: P, initialSelectedDestinations: Z, forwardOptions: w, onClose: R, onRequestSent: O, ...D } = e,
+function P(e) {
+    let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: w, onClose: R, onRequestSent: O, ...D } = e,
         { hasOneTapSendButton: j, hasMessageInput: M, hasPreview: k } = (0, I.yk)({ location: 'ForwardModal' }),
         F = i.useMemo(() => (0, u.dL)(t), [t]),
         [G, U] = i.useState(!1),
@@ -40,9 +40,9 @@ function y(e) {
             [f.Z],
             () => {
                 var e;
-                return null !== (e = f.Z.getMessage(t, y)) && void 0 !== e ? e : P;
+                return null !== (e = f.Z.getMessage(t, P)) && void 0 !== e ? e : y;
             },
-            [t, y, P]
+            [t, P, y]
         ),
         Q = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
         B = (0, E.ZF)(),
@@ -51,13 +51,13 @@ function y(e) {
         V = i.useRef(0),
         [q, K] = i.useState(Z),
         Y = q.length,
-        X = Y >= x.G,
+        X = Y >= L.G,
         [J, $] = i.useState(''),
         ee = i.useCallback(
             (e) => {
-                $(e), (V.current += 1), '' !== e && H(t, y);
+                $(e), (V.current += 1), '' !== e && H(t, P);
             },
-            [t, y, H]
+            [t, P, H]
         ),
         et = (0, d.s)({
             searchText: J,
@@ -68,18 +68,18 @@ function y(e) {
         en = i.useCallback(() => {
             (0, E.sF)({
                 channelId: t,
-                messageId: y,
+                messageId: P,
                 numDestinationChanges: z.current,
                 numQueryChanges: V.current
             }),
                 R();
-        }, [t, y, R]),
+        }, [t, P, R]),
         el = i.useCallback(() => {
             var e;
             let n = null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
-                l = (0, _.wR)(n, t, y);
-            (0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, y);
-        }, [t, y]),
+                l = (0, _.wR)(n, t, P);
+            (0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, P);
+        }, [t, P]),
         ei = i.useCallback(() => {
             $('');
         }, [$]),
@@ -106,7 +106,7 @@ function y(e) {
         ),
         es = i.useCallback(
             (e) => {
-                B(t, y, '' !== J),
+                B(t, P, '' !== J),
                     K((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
@@ -117,13 +117,13 @@ function y(e) {
                         return l.splice(n, 1), (z.current += 1), l;
                     });
             },
-            [t, X, y, J, B]
+            [t, X, P, J, B]
         ),
         eo = i.useCallback(
             async function (e) {
                 var i;
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    _ = null !== (i = f.Z.getMessage(t, y)) && void 0 !== i ? i : P;
+                    _ = null !== (i = f.Z.getMessage(t, P)) && void 0 !== i ? i : y;
                 if (null == _) {
                     (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.R0RpRU), s.ToastType.FAILURE));
                     return;
@@ -164,7 +164,7 @@ function y(e) {
                 ) {
                     (0, E.gP)({
                         channelId: t,
-                        messageId: y,
+                        messageId: P,
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: g.length,
@@ -177,7 +177,7 @@ function y(e) {
                 }
                 (0, E.gP)({
                     channelId: t,
-                    messageId: y,
+                    messageId: P,
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: g.length,
@@ -187,14 +187,14 @@ function y(e) {
                 });
                 let C = e.filter((e, t) => 'rejected' === I[t].status);
                 (0, v.Np)({
-                    messageId: y,
+                    messageId: P,
                     channelId: t,
                     message: _,
                     failedDestinations: C,
                     forwardOptions: w
                 });
             },
-            [t, w, y, P, O, er]
+            [t, w, P, y, O, er]
         ),
         ec = i.useCallback(
             (e) => {
@@ -232,10 +232,10 @@ function y(e) {
                       disableSelection: X
                   })
                 : (0, l.jsxs)(s.ModalContent, {
-                      className: L.noResults,
+                      className: x.noResults,
                       children: [
                           (0, l.jsx)('img', {
-                              className: L.noResultsImg,
+                              className: x.noResultsImg,
                               src: T,
                               alt: ''
                           }),
@@ -248,18 +248,18 @@ function y(e) {
                   }),
         ef = Y <= 1 ? N.intl.string(N.t.TXNS7e) : N.intl.formatToPlainString(N.t.jWtYUl, { count: Y });
     return (0, l.jsxs)(s.ModalRoot, {
-        className: L.modal,
+        className: x.modal,
         'aria-label': N.intl.string(N.t['+SkRRk']),
         ...D,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
-                className: L.header,
+                className: x.header,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: L.titleLine,
+                        className: x.titleLine,
                         children: [
                             (0, l.jsx)('div', {
-                                className: L.title,
+                                className: x.title,
                                 children: (0, l.jsx)(s.HeadingLevel, {
                                     component: (0, l.jsx)(s.Heading, {
                                         variant: 'heading-lg/semibold',
@@ -269,7 +269,7 @@ function y(e) {
                                         ? (0, l.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: N.intl.format(N.t['3Fbkio'], { count: x.G })
+                                              children: N.intl.format(N.t['3Fbkio'], { count: L.G })
                                           })
                                         : (j || M) &&
                                           (0, l.jsx)(s.Heading, {
@@ -280,7 +280,7 @@ function y(e) {
                                 })
                             }),
                             (0, l.jsx)(s.ModalCloseButton, {
-                                className: L.closeButton,
+                                className: x.closeButton,
                                 onClick: en
                             })
                         ]
@@ -288,7 +288,7 @@ function y(e) {
                     j &&
                         k &&
                         (0, l.jsx)('div', {
-                            className: L.forwardPreviewWrapperInset,
+                            className: x.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(b.O, {
                                 message: W,
                                 forwardOptions: w
@@ -320,7 +320,7 @@ function y(e) {
                           showPreview: k
                       })
                     : (0, l.jsxs)(s.ModalFooter, {
-                          className: L.footer,
+                          className: x.footer,
                           children: [
                               (0, l.jsx)(s.Button, {
                                   submitting: G,

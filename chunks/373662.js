@@ -19,8 +19,8 @@ var i = n(200651),
     u = n(388032),
     d = n(189265);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: g, onTooltipHide: _, disabled: C, dangerous: E, separator: I, sparkle: x, showNewBadge: v, buttonClassName: N, children: T, ...S } = e,
-        { canShowReactionsOnMessageHover: b } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: g, onTooltipHide: _, disabled: E, dangerous: C, separator: I, sparkle: x, showNewBadge: N, buttonClassName: v, children: T, ...S } = e,
+        { canShowReactionsOnMessageHover: A } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
         (0, i.jsx)(a.Tooltip, {
@@ -36,15 +36,15 @@ function m(e) {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)(s.zx, {
-                            className: l()(N, { [d.hoverBarButton]: b }),
+                            className: l()(v, { [d.hoverBarButton]: A }),
                             onMouseEnter: r,
                             onMouseLeave: c,
                             onClick: (e) => {
                                 null == m || m(), p(e);
                             },
                             'aria-label': null != n ? n : t,
-                            disabled: C,
-                            dangerous: E,
+                            disabled: E,
+                            dangerous: C,
                             ...S,
                             children: [
                                 null != h
@@ -61,7 +61,7 @@ function m(e) {
                                       })
                                     : null,
                                 x && (0, i.jsx)(a.LottieSparkle, {}),
-                                v &&
+                                N &&
                                     (0, i.jsx)(a.TextBadge, {
                                         text: u.intl.string(u.t.y2b7CA),
                                         color: o.Z.BG_BRAND,

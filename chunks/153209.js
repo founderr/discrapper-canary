@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return N;
     }
 }),
     n(47120);
@@ -19,13 +19,13 @@ var i = n(200651),
     p = n(709054),
     g = n(791914),
     _ = n(981631),
-    C = n(388032),
-    E = n(802840),
+    E = n(388032),
+    C = n(802840),
     I = n(811304);
 function x(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.CircleIconButton, {
-        tooltip: C.intl.string(C.t['8k+6QU']),
+        tooltip: E.intl.string(E.t['8k+6QU']),
         color: o.CircleIconButtonColors.TERTIARY,
         icon: (0, i.jsx)(o.DoubleCheckmarkIcon, {
             size: 'xs',
@@ -35,23 +35,23 @@ function x(e) {
         onClick: t
     });
 }
-function v(e) {
+function N(e) {
     let { setTab: t, badgeState: n, closePopout: o } = e,
-        { initialized: C, items: I, loading: v, loadMore: N } = (0, d.y6)(),
+        { initialized: E, items: I, loading: N, loadMore: v } = (0, d.y6)(),
         T = (0, l.e7)([s.Z], () => s.Z.localItems),
         S = r.useMemo(() => [...[...I, ...T].sort((e, t) => -1 * p.default.compare(e.id, t.id))], [I, T]),
-        b = I.length > 0 ? I[0] : null,
-        A = h.d$.useSetting(),
+        A = I.length > 0 ? I[0] : null,
+        b = h.d$.useSetting(),
         j = r.useMemo(() => {
-            if (null != b && 0 >= p.default.compare(b.id, A)) return !1;
+            if (null != A && 0 >= p.default.compare(A.id, b)) return !1;
             for (let e of S) {
-                if (0 >= p.default.compare(e.id, A)) break;
-                if (!(0, u.r)(e, A)) return !0;
+                if (0 >= p.default.compare(e.id, b)) break;
+                if (!(0, u.r)(e, b)) return !0;
             }
             return !1;
-        }, [b, A, S]);
+        }, [A, b, S]);
     return (0, i.jsxs)('div', {
-        className: E.container,
+        className: C.container,
         children: [
             (0, i.jsx)(g.Z, {
                 tab: a.X.FOR_YOU,
@@ -61,16 +61,16 @@ function v(e) {
                 children: j
                     ? (0, i.jsx)(x, {
                           onClick: () => {
-                              null != b && (h.d$.updateSetting(b.id), f.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != A && (h.d$.updateSetting(A.id), f.default.track(_.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }
                       })
                     : null
             }),
             (0, i.jsx)(m.Z, {
-                initialized: C,
+                initialized: E,
                 items: S,
-                loading: v,
-                loadMore: N
+                loading: N,
+                loadMore: v
             })
         ]
     });

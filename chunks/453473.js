@@ -1,9 +1,9 @@
 n.d(t, {
     K: function () {
-        return w;
+        return U;
     },
     P: function () {
-        return U;
+        return w;
     }
 }),
     n(47120);
@@ -22,22 +22,22 @@ var i = n(200651),
     p = n(239091),
     g = n(494404),
     _ = n(724757),
-    C = n(213609),
-    E = n(294218),
+    E = n(213609),
+    C = n(294218),
     I = n(373662),
     x = n(695346),
-    v = n(496675),
-    N = n(626135),
+    N = n(496675),
+    v = n(626135),
     T = n(585483),
     S = n(70956),
-    b = n(324701),
-    A = n(575016),
+    A = n(324701),
+    b = n(575016),
     j = n(768943),
     Z = n(686478),
     R = n(664559),
     P = n(767893),
-    y = n(206697),
-    L = n(74551),
+    L = n(206697),
+    y = n(74551),
     O = n(981631),
     M = n(388032),
     k = n(982138);
@@ -58,15 +58,15 @@ function B(e) {
                     icon: f.BookmarkIcon,
                     title: M.intl.string(M.t['2pAkDA'])
                 }),
-                (0, i.jsx)(w, { closePopout: t })
+                (0, i.jsx)(U, { closePopout: t })
             ]
         })
     });
 }
-function w(e) {
+function U(e) {
     let { closePopout: t } = e,
         n = (0, R.Z)();
-    return ((0, C.Z)(
+    return ((0, E.Z)(
         {
             type: d.ImpressionTypes.POPOUT,
             name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
@@ -79,13 +79,13 @@ function w(e) {
         [n.length]
     ),
     0 === n.length)
-        ? (0, i.jsx)(y.w, {})
+        ? (0, i.jsx)(L.w, {})
         : (0, i.jsx)(F, {
               savedMessageKeys: n,
               closePopout: t
           });
 }
-function U(e) {
+function w(e) {
     let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
         [s, c] = r.useState(!1),
         u = r.useCallback(() => {
@@ -156,13 +156,13 @@ function F(e) {
 }
 function G(e) {
     let { savedMessage: t, closePopout: n, throttledNow: l } = e,
-        o = (0, A.gr)(t),
+        o = (0, b.gr)(t),
         s = r.useCallback(
             async (e) => {
                 var i;
-                await (0, A.fC)(t, o),
+                await (0, b.fC)(t, o),
                     !e.shiftKey && n(),
-                    N.default.track(O.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    v.default.track(O.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null === (i = t.message) || void 0 === i ? void 0 : i.author.id,
@@ -172,7 +172,7 @@ function G(e) {
             },
             [n, t, o]
         ),
-        c = (0, h.e7)([v.Z], () => !!((null == o ? void 0 : o.type) === O.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || v.Z.can(O.Plq.VIEW_CHANNEL, o));
+        c = (0, h.e7)([N.Z], () => !!((null == o ? void 0 : o.type) === O.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || N.Z.can(O.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, i.jsxs)('div', {
               className: k.messageContainer,
@@ -183,14 +183,14 @@ function G(e) {
                       'aria-label': M.intl.string(M.t['+TSRGB'])
                   }),
                   null != t.saveData.dueAt
-                      ? (0, i.jsx)(L.Z, {
+                      ? (0, i.jsx)(y.Z, {
                             reminder: t,
                             throttledNow: l
                         })
                       : null,
                   (0, i.jsx)(P.Z, { channel: o }),
                   (0, i.jsx)(
-                      E.Z,
+                      C.Z,
                       {
                           message: t.message,
                           channel: o,
@@ -234,7 +234,7 @@ function G(e) {
                               label: M.intl.string(M.t.SvXS1d),
                               icon: f.TrashIcon,
                               dangerous: !0,
-                              onClick: () => (0, b.x)(t.saveData)
+                              onClick: () => (0, A.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -264,7 +264,7 @@ function H(e) {
                           label: M.intl.string(M.t.yjGtdH),
                           icon: f.CheckmarkLargeIcon,
                           onClick: () =>
-                              (0, b.z)({
+                              (0, A.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0
@@ -305,7 +305,7 @@ function H(e) {
                       {
                           label: M.intl.string(M.t.SvXS1d),
                           icon: f.BookmarkIcon,
-                          onClick: () => (0, b.x)(t.saveData)
+                          onClick: () => (0, A.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -345,7 +345,7 @@ function H(e) {
                       {
                           label: M.intl.string(M.t.SvXS1d),
                           icon: f.BookmarkIcon,
-                          onClick: () => (0, b.x)(t.saveData)
+                          onClick: () => (0, A.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )

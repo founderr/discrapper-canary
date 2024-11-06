@@ -26,16 +26,16 @@ var i,
     N = n(594174),
     O = n(974180),
     T = n(237997),
-    L = n(70956),
-    k = n(150097),
-    A = n(129724),
-    w = n(86071),
-    R = n(388627),
+    A = n(70956),
+    L = n(150097),
+    R = n(129724),
+    k = n(86071),
+    w = n(388627),
     j = n(996050),
     M = n(609626),
-    z = n(421824),
-    D = n(647271),
-    P = n(777036),
+    P = n(421824),
+    z = n(647271),
+    D = n(777036),
     U = n(90525),
     V = n(333727),
     W = n(585708),
@@ -44,9 +44,9 @@ var i,
     H = n(981631),
     G = n(388032);
 ((l = i || (i = {}))[(l.GENERIC = 0)] = 'GENERIC'), (l[(l.TEXT = 1)] = 'TEXT'), (l[(l.INCOMING_CALL = 2)] = 'INCOMING_CALL'), (l[(l.NUDGE = 3)] = 'NUDGE'), ((s = o || (o = {}))[(s.NORMAL = 0)] = 'NORMAL'), (s[(s.HIGH = 1)] = 'HIGH'), (s[(s.URGENT = 2)] = 'URGENT');
-let Y = 5 * L.Z.Millis.SECOND,
-    K = 8 * L.Z.Millis.SECOND,
-    Q = 30 * L.Z.Millis.SECOND,
+let Y = 5 * A.Z.Millis.SECOND,
+    K = 8 * A.Z.Millis.SECOND,
+    Q = 30 * A.Z.Millis.SECOND,
     X = Object.freeze({
         timestamp: 0,
         priority: 0,
@@ -138,7 +138,7 @@ function er(e) {
     if (null == o || !o.isPrivate() || y.Z.getStatus() === H.Skl.DND || _.QZ.getSetting()) return !1;
     let r = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === H.uaV.CALL);
     null != r && et(r.id),
-        eo((0, P.Z)(o), {
+        eo((0, D.Z)(o), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -173,7 +173,7 @@ let es = new el(m.Z, {
                 switch (e.type) {
                     case F.nc.GO_LIVE_VOICE:
                     case F.nc.GO_LIVE_NON_VOICE:
-                        return (0, D.Z)(e);
+                        return (0, z.Z)(e);
                     case F.nc.NEWS:
                     default:
                         return (0, B.Z)(e);
@@ -205,11 +205,11 @@ let es = new el(m.Z, {
             a = N.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
         if (null == s || null == a) return !1;
         if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === H.mFx.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === H.mFx.JOIN_REQUEST) {
-            if (!(0, k.eF)(l, r, !0, !0)) return !1;
+            if (!(0, L.eF)(l, r, !0, !0)) return !1;
             let e = (function (e, t, n) {
                 let i, o;
                 if ((h()(null != t.activity, 'received null message activity'), n.id === C.default.getId())) return !1;
-                let r = (0, R.t6)();
+                let r = (0, w.t6)();
                 if (null == r) return !1;
                 switch (t.activity.type) {
                     case H.mFx.JOIN:
@@ -233,7 +233,7 @@ let es = new el(m.Z, {
             })(s, l, a);
             if (!1 !== e) return e;
         }
-        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, k.eF)(l, r)) return !1;
+        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, L.eF)(l, r)) return !1;
         let u = !Z.Z.isSoundDisabled(O.Ay),
             c = null !== (o = x.Z.getMessage(r, l.id)) && void 0 !== o ? o : (0, E.e5)(l);
         eo((0, W.Z)(s, c, a, u), {
@@ -268,7 +268,7 @@ let es = new el(m.Z, {
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: o } = e,
-            r = (0, R.t6)();
+            r = (0, w.t6)();
         if (null == r || r.id !== o) return !1;
         if (n === H.mFx.JOIN) t = (0, M.Z)(i, r);
         if (null == t) return !1;
@@ -278,24 +278,24 @@ let es = new el(m.Z, {
         });
     },
     CLIPS_SAVE_CLIP_START: function () {
-        eo((0, z.f)(G.intl.string(G.t.NBMK9v)));
+        eo((0, P.f)(G.intl.string(G.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        eo((0, z.f)(G.intl.format(G.t.KLhk6u, { duration: (0, A.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
+        eo((0, P.f)(G.intl.format(G.t.KLhk6u, { duration: (0, R.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        eo((0, z.f)(G.intl.string(G.t['1ZbZur'])));
+        eo((0, P.f)(G.intl.string(G.t['1ZbZur'])));
     },
     STREAM_START: function (e) {
-        let t = (0, z.y)();
+        let t = (0, P.y)();
         null != t && eo(t);
     },
     OVERLAY_CONTENT_INVENTORY_READY: function (e) {
         let { contentInventoryEntries: t } = e;
         if (0 === t.length) return;
-        let n = (0, R.t6)();
+        let n = (0, w.t6)();
         if (null == n) return;
-        let { enabled: i } = w.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
+        let { enabled: i } = k.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' }, { autoTrackExposure: !0 });
         i &&
             eo((0, U.Z)(n, t), {
                 priority: 2,

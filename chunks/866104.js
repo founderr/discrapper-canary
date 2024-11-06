@@ -3,7 +3,7 @@ n.d(t, {
         return j;
     },
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -22,15 +22,15 @@ var i = n(200651),
     p = n(271383),
     g = n(594174),
     _ = n(671533),
-    C = n(51144),
-    E = n(506071),
+    E = n(51144),
+    C = n(506071),
     I = n(696014),
     x = n(847033),
-    v = n(544978),
-    N = n(893182),
+    N = n(544978),
+    v = n(893182),
     T = n(388032),
     S = n(687006);
-function b(e) {
+function A(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(s.Clickable, {
         onClick: t,
@@ -52,10 +52,10 @@ function b(e) {
         ]
     });
 }
-function A(e) {
+function b(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         r = f.QK.useSetting(),
-        l = (0, E.n)() && r,
+        l = (0, C.n)() && r,
         [a, o] = (0, h.Z)(t, l),
         s = l
             ? (0, i.jsx)(d.Z, {
@@ -88,7 +88,7 @@ function j(e) {
     var t, n, l;
     let { guild: d, subscriptionsSettings: h } = e,
         f = d.id;
-    let { nickname: _, nickcolor: E } =
+    let { nickname: _, nickcolor: C } =
             ((l = f),
             (0, o.cj)(
                 [p.ZP, g.default],
@@ -98,7 +98,7 @@ function j(e) {
                     a()(null != n, 'user cannot be null');
                     let i = p.ZP.getMember(l, n.id);
                     return {
-                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : C.ZP.getName(n),
+                        nickname: null !== (e = null == i ? void 0 : i.nick) && void 0 !== e ? e : E.ZP.getName(n),
                         nickcolor: null !== (t = null == i ? void 0 : i.colorString) && void 0 !== t ? t : void 0
                     };
                 },
@@ -106,15 +106,15 @@ function j(e) {
             )),
         { isTruncated: j, ExpandableTextContainer: Z } = (0, I.s)(),
         R = (null !== (n = null == h ? void 0 : null === (t = h.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
-        [P, y] = r.useState(1),
-        L = (0, c.Z)('(max-width: 1439px)'),
+        [P, L] = r.useState(1),
+        y = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: O, isPhantomPreview: M } = (0, x.m)(),
-        k = O === v.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
+        k = O === N.y.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t['LvXy/P']) : T.intl.string(T.t.XyqKh4),
         D = R
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(Z, {
-                          lineClamp: L || 2 === P ? 2 : 3,
+                          lineClamp: y || 2 === P ? 2 : 3,
                           children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'text-normal',
@@ -123,7 +123,7 @@ function j(e) {
                       }),
                       j &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(b, { onClick: () => (0, N.Z)({ guildId: f }) })]
+                              children: [(0, i.jsx)(s.Spacer, { size: 4 }), (0, i.jsx)(A, { onClick: () => (0, v.Z)({ guildId: f }) })]
                           })
                   ]
               })
@@ -153,7 +153,7 @@ function j(e) {
                         children: [
                             (0, i.jsx)('div', {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && y(2);
+                                    null != e && e.clientHeight > 30 && L(2);
                                 },
                                 children: (0, i.jsx)(s.Heading, {
                                     variant: 'heading-xl/semibold',
@@ -174,7 +174,7 @@ function j(e) {
                                                 return (0, i.jsx)(
                                                     'span',
                                                     {
-                                                        style: { color: E },
+                                                        style: { color: C },
                                                         children: e
                                                     },
                                                     t
@@ -190,7 +190,7 @@ function j(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(A, {
+            (0, i.jsx)(b, {
                 coverImageAsset: null == h ? void 0 : h.cover_image_asset,
                 isPreview: M
             })

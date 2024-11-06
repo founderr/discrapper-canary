@@ -18,8 +18,8 @@ var i = n(200651),
     p = n(163684),
     g = n(748770),
     _ = n(474936),
-    C = n(981631),
-    E = n(388032),
+    E = n(981631),
+    C = n(388032),
     I = n(464780);
 function x() {
     let e = (0, a.e7)([m.default], () => f.ZP.isPremiumExactly(m.default.getCurrentUser(), _.p9.TIER_2)),
@@ -31,29 +31,29 @@ function x() {
             }
         ),
         { location: x } = (0, c.O)(),
-        { analyticsLocations: v } = (0, u.ZP)(),
-        N = r.useCallback(() => {
+        { analyticsLocations: N } = (0, u.ZP)(),
+        v = r.useCallback(() => {
             (0, d.Z)({
                 subscriptionTier: f.ZP.getSkuIdForPremiumType(_.p9.TIER_2),
-                analyticsLocations: v,
+                analyticsLocations: N,
                 analyticsObject: {
                     ...x,
-                    object: C.qAy.BUTTON_CTA,
-                    objectType: C.Qqv.TIER_2
+                    object: E.qAy.BUTTON_CTA,
+                    objectType: E.Qqv.TIER_2
                 }
             });
-        }, [v, x]),
+        }, [N, x]),
         T = r.useCallback(() => {
-            s.Z.open(C.oAB.INVENTORY), g.ZP.dismissOutboundPromotionNotice();
+            s.Z.open(E.oAB.INVENTORY), g.ZP.dismissOutboundPromotionNotice();
         }, []),
         S = r.useCallback(() => {
-            h.default.track(C.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? N() : T();
-        }, [n, N, T]);
+            h.default.track(E.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), n ? v() : T();
+        }, [n, v, T]);
     return (0, i.jsxs)(o.Notice, {
         color: o.NoticeColors.PREMIUM_TIER_2,
         children: [
             (0, i.jsx)(o.NoticeCloseButton, {
-                noticeType: C.kVF.OUTBOUND_PROMOTION,
+                noticeType: E.kVF.OUTBOUND_PROMOTION,
                 onClick: () => {
                     g.ZP.dismissOutboundPromotionNotice();
                 }
@@ -68,14 +68,14 @@ function x() {
                     ? (0, i.jsxs)(l.xv, {
                           variant: 'text-sm/normal',
                           className: I.text,
-                          children: [E.intl.string(E.t['5JMiOj']), ' ', E.intl.format(E.t.fjSvsL, { onClick: T })]
+                          children: [C.intl.string(C.t['5JMiOj']), ' ', C.intl.format(C.t.fjSvsL, { onClick: T })]
                       })
-                    : E.intl.string(E.t['B3a/cH'])
-                : E.intl.string(E.t['Pzh+Gx']),
+                    : C.intl.string(C.t['B3a/cH'])
+                : C.intl.string(C.t['Pzh+Gx']),
             (0, i.jsx)(o.PrimaryCTANoticeButton, {
-                noticeType: C.kVF.OUTBOUND_PROMOTION,
+                noticeType: E.kVF.OUTBOUND_PROMOTION,
                 onClick: S,
-                children: n ? E.intl.string(E.t.pj0XBA) : E.intl.string(E.t.jVcuVV)
+                children: n ? C.intl.string(C.t.pj0XBA) : C.intl.string(C.t.jVcuVV)
             })
         ]
     });

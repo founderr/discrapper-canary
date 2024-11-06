@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return C;
+        return E;
     }
 });
 var i = n(200651);
@@ -81,7 +81,7 @@ function _(e) {
         children: t
     });
 }
-function C(e) {
+function E(e) {
     var t, n;
     if (null == e.embed || null == e.embed.fields) return null;
     let r = (0, s.fr)(e.embed);
