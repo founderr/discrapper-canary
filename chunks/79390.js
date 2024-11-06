@@ -173,7 +173,7 @@ function x(e, t, n) {
                 a = d.Z.getChannel(n),
                 s = null == a || a.isPrivate() ? null : a.getGuildId();
             return i()(r)
-                .reject((e) => p.Z.isBlocked(e.id))
+                .reject((e) => p.Z.isBlockedOrIgnored(e.id))
                 .take(E.$J)
                 .map((e) => g.ZP.getName(s, null == a ? void 0 : a.id, e))
                 .value();

@@ -107,7 +107,7 @@ function b(e) {
         n = { location: p.dr.QUESTS_BAR };
     if (!(0, c.j)(n)) return;
     let r = (0, u.il)(e),
-        i = (0, f.Z)({ gameName: e.config.messages.gameTitle });
+        i = (0, f.Z)({ entityName: e.config.messages.gameTitle });
     if (i.taskType === r.taskType && !!i.experiment.getCurrentConfig(n).enabled)
         t.log('Showing survey '.concat(i.id)),
             (0, _.openQuestSurveyModal)({

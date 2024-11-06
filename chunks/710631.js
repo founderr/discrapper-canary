@@ -46,7 +46,7 @@ function S(e) {
             [n]
         ),
         [S, T] = i.useState({});
-    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || p.Z.isBlocked(t.id)
+    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || p.Z.isBlockedOrIgnored(t.id)
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'invite-to-server',

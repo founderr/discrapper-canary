@@ -143,7 +143,7 @@ class W extends o.PureComponent {
                 : r()(c)
                       .keys()
                       .filter((e) => e !== (null == I ? void 0 : I.id))
-                      .reject((e) => R.Z.isBlocked(e))
+                      .reject((e) => R.Z.isBlockedOrIgnored(e))
                       .map((e) => A.default.getUser(e))
                       .filter(L.lm)
                       .map((e) => k.ZP.getName(n, this.props.channel.id, e))

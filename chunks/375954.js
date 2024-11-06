@@ -55,7 +55,7 @@ function F() {
 }
 function V() {
     f.Z.forEach((e) => {
-        f.Z.commit(e.reset(e.map((e) => e.set('blocked', x.Z.isBlockedForMessage(e)))));
+        f.Z.commit(e.reset(e.map((e) => e.set('blocked', x.Z.isBlockedForMessage(e)).set('ignored', x.Z.isIgnoredForMessage(e)))));
     });
 }
 function H(e) {

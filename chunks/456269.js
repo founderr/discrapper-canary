@@ -309,7 +309,7 @@ function en(e) {
         return r()(N.Z.getTypingUsers(e.id))
             .keys()
             .filter((e) => e !== (null == n ? void 0 : n.id))
-            .reject((e) => C.Z.isBlocked(e))
+            .reject((e) => C.Z.isBlockedOrIgnored(e))
             .map((e) => P.default.getUser(e))
             .filter(O.lm)
             .map((e) => e.id)
