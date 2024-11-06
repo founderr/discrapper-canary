@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(626135),
     _ = n(915296),
     h = n(103433),
-    x = n(166021),
-    E = n(32173),
+    E = n(166021),
+    x = n(32173),
     b = n(391110),
     C = n(75077),
     v = n(981631),
@@ -27,7 +27,7 @@ t.Z = (e) => {
         n,
         { isAllPerksVisible: a, setIsAllPerksVisible: S, previousComponent: R, isFullScreen: A } = e,
         j = r.useRef(null),
-        P = Object.entries((0, E.Z)()).reduce((e, t) => {
+        P = Object.entries((0, x.Z)()).reduce((e, t) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
@@ -36,8 +36,8 @@ t.Z = (e) => {
         [M, w] = r.useState(!1),
         B = (0, f.ZP)('perks-discoverability'),
         y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        k = (0, C.mN)(),
-        { fractionalState: L } = (0, m.Z)();
+        L = (0, C.mN)(),
+        { fractionalState: k } = (0, m.Z)();
     return (
         O === _.mJ.DEFAULT ? ((t = T.intl.string(T.t['+vt7w8'])), (n = T.intl.string(T.t.LgHbnJ))) : ((t = T.intl.string(T.t.LgHbnJ)), (n = T.intl.string(T.t['+vt7w8']))),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
@@ -71,16 +71,16 @@ t.Z = (e) => {
                                     className: N.heading,
                                     children: t
                                 }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(E.Z, {
                                     className: N.cardCarousel,
                                     cards: (0, C.sP)({
                                         perksCards: P,
                                         variant: b.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: B,
                                         tileOrderVariant: O,
-                                        isPremiumSubscriber: k,
+                                        isPremiumSubscriber: L,
                                         isFullScreen: A,
-                                        fractionalState: L
+                                        fractionalState: k
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
@@ -90,16 +90,16 @@ t.Z = (e) => {
                                     className: N.heading,
                                     children: n
                                 }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(E.Z, {
                                     className: N.cardCarousel,
                                     cards: (0, C.sP)({
                                         perksCards: P,
                                         variant: b.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: B,
                                         tileOrderVariant: O,
-                                        isPremiumSubscriber: k,
+                                        isPremiumSubscriber: L,
                                         isFullScreen: A,
-                                        fractionalState: L
+                                        fractionalState: k
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
@@ -109,16 +109,16 @@ t.Z = (e) => {
                                     className: N.heading,
                                     children: T.intl.string(T.t.LTaxu7)
                                 }),
-                                (0, i.jsx)(x.Z, {
+                                (0, i.jsx)(E.Z, {
                                     className: N.cardCarousel,
                                     cards: (0, C.sP)({
                                         perksCards: P,
                                         variant: b.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: B,
                                         tileOrderVariant: O,
-                                        isPremiumSubscriber: k,
+                                        isPremiumSubscriber: L,
                                         isFullScreen: A,
-                                        fractionalState: L
+                                        fractionalState: k
                                     }),
                                     cardType: b.R0.CARD_CAROUSEL_THIRD_ROW
                                 })

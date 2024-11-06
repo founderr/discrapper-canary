@@ -24,13 +24,13 @@ n.d(t, {
         return _;
     },
     pn: function () {
-        return x;
+        return E;
     },
     uv: function () {
         return C;
     },
     vx: function () {
-        return E;
+        return x;
     },
     wG: function () {
         return T;
@@ -72,7 +72,7 @@ let g = '40%',
         let t = C(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    x = (e) => {
+    E = (e) => {
         let t = h(e),
             n = _('PremiumManagementSettings'),
             r = (0, i.e7)([s.Z], () => s.Z.getRecipientStatus());
@@ -80,7 +80,7 @@ let g = '40%',
         if (!n) return !!(r.size > 0) || !1;
         return !0;
     },
-    E = (e) => {
+    x = (e) => {
         let t = b(e),
             n = (0, a.wE)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
         return t && !n;

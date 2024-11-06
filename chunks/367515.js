@@ -21,43 +21,43 @@ function h(e) {
     let { user: t } = e,
         a = (0, d.Z)(),
         h = (0, u.VM)(),
-        x = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        E = r.useCallback(() => {
-            s()(void 0 !== x, 'User must be logged in to accept a link request'),
+        E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        x = r.useCallback(() => {
+            s()(void 0 !== E, 'User must be logged in to accept a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            currentUser: x,
+                            currentUser: E,
                             otherUser: t
                         });
                 });
-        }, [x, t]),
+        }, [E, t]),
         b = r.useCallback(() => {
-            s()(void 0 !== x, 'User must be logged in to decline a link request'),
+            s()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            currentUser: x,
+                            currentUser: E,
                             otherUser: t
                         });
                 });
-        }, [x, t]),
+        }, [E, t]),
         C = r.useCallback(() => {
-            s()(void 0 !== x, 'User must be logged in to decline a link request'),
+            s()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            currentUser: x,
+                            currentUser: E,
                             otherUser: t
                         });
                 });
-        }, [x, t]);
+        }, [E, t]);
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
@@ -85,7 +85,7 @@ function h(e) {
                                         icon: o.CheckmarkLargeIcon,
                                         className: _.__invalid_actionAccept,
                                         tooltip: p.intl.string(p.t.krWQZG),
-                                        onClick: E
+                                        onClick: x
                                     }),
                               (0, i.jsx)(g.Z, {
                                   icon: o.XSmallIcon,

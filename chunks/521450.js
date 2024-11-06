@@ -13,8 +13,8 @@ var i = n(200651),
     p = n(981631),
     _ = n(930441),
     h = n(388032),
-    x = n(35411),
-    E = n(113207);
+    E = n(35411),
+    x = n(113207);
 t.Z = () => {
     let e = f.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([m.Z], () => m.Z.getEmailSettings());
@@ -23,7 +23,7 @@ t.Z = () => {
             null == n && (0, g.Y7)();
         }, [n]),
         (0, i.jsxs)('div', {
-            className: x.container,
+            className: E.container,
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'eyebrow',
@@ -31,7 +31,7 @@ t.Z = () => {
                     children: h.intl.string(h.t.USIXU1)
                 }),
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(E.marginTop8, E.marginBottom20),
+                    className: s()(x.marginTop8, x.marginBottom20),
                     value: e,
                     note: h.intl.string(h.t['5MdB3t']),
                     hideBorder: !0,
@@ -40,7 +40,7 @@ t.Z = () => {
                 }),
                 e
                     ? (0, i.jsx)(d.Card, {
-                          className: x.enableCard,
+                          className: E.enableCard,
                           type: d.Card.Types.CUSTOM,
                           outline: !0,
                           children: (0, i.jsxs)(o.k, {
@@ -65,7 +65,7 @@ t.Z = () => {
                                   }),
                                   (0, i.jsx)(d.IconBadge, {
                                       icon: d.ArrowSmallRightIcon,
-                                      className: x.arrow,
+                                      className: E.arrow,
                                       disableColor: !0
                                   })
                               ]
@@ -73,7 +73,7 @@ t.Z = () => {
                       })
                     : null,
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(E.marginTop20, E.marginBottom20),
+                    className: s()(x.marginTop20, x.marginBottom20),
                     value: !!t[_.$Z.FAMILY_CENTER_DIGEST],
                     note: h.intl.string(h.t['y34S4+']),
                     hideBorder: !0,

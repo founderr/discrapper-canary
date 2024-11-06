@@ -9,21 +9,21 @@ var r = n(200651),
     d = n(808326);
 t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: p = 0.4, percentCompleteText: f, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
-        g = (0, c.E)(n, o > 0),
-        x = i / 2,
-        S = i / 2 - m / 2,
-        E = 2 * Math.PI * S,
-        h = E - o * E,
+        x = (0, c.E)(n, o > 0),
+        g = i / 2,
+        h = i / 2 - m / 2,
+        S = 2 * Math.PI * h,
+        E = S - o * S,
         _ = {
-            strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: h
+            strokeDasharray: ''.concat(S, ' ').concat(S),
+            strokeDashoffset: E
         },
-        T = {
-            strokeDasharray: ''.concat(E, ' ').concat(E),
-            strokeDashoffset: -o * E
+        j = {
+            strokeDasharray: ''.concat(S, ' ').concat(S),
+            strokeDashoffset: -o * S
         },
-        I = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
-        { progressTextAnimation: j } = (0, s.useSpring)({
+        T = { boxShadow: '0 0 30px 0px '.concat(x.glow) },
+        { progressTextAnimation: N } = (0, s.useSpring)({
             progressTextAnimation: null != f && 1 !== o ? 1 : 0,
             config: u.Y
         });
@@ -33,11 +33,11 @@ t.Z = o.forwardRef((e, t) => {
         children: [
             (0, r.jsxs)('div', {
                 className: d.inner,
-                style: I,
+                style: T,
                 children: [
                     C,
                     (0, r.jsxs)(a.animated.div, {
-                        style: { opacity: j },
+                        style: { opacity: N },
                         className: l()(d.coverContent, d.progressTextWrapper),
                         children: [
                             (0, r.jsx)('div', { className: l()(d.coverContent, d.progressTextOverlay) }),
@@ -79,11 +79,11 @@ t.Z = o.forwardRef((e, t) => {
                                 children: [
                                     (0, r.jsx)('stop', {
                                         offset: '0%',
-                                        stopColor: g.backgroundTop
+                                        stopColor: x.backgroundTop
                                     }),
                                     (0, r.jsx)('stop', {
                                         offset: '100%',
-                                        stopColor: g.backgroundBottom
+                                        stopColor: x.backgroundBottom
                                     })
                                 ]
                             })
@@ -93,20 +93,20 @@ t.Z = o.forwardRef((e, t) => {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: S,
-                        cx: x,
-                        cy: x,
+                        r: h,
+                        cx: g,
+                        cy: g,
                         stroke: 'url(#linear)',
-                        style: T
+                        style: j
                     }),
                     (0, r.jsx)('circle', {
                         className: d.progress,
                         strokeWidth: m,
                         fill: 'transparent',
-                        r: S,
-                        cx: x,
-                        cy: x,
-                        stroke: g.foreground,
+                        r: h,
+                        cx: g,
+                        cy: g,
+                        stroke: x.foreground,
                         style: _
                     })
                 ]

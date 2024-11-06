@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(794484),
     _ = n(536844),
     h = n(342414),
-    x = n(938736),
-    E = n(391110),
+    E = n(938736),
+    x = n(391110),
     b = n(71363),
     C = n(781800),
     v = n(981631),
@@ -30,8 +30,8 @@ t.Z = () => {
         { analyticsLocations: a } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [R, A] = r.useState(!1);
     (0, f.FM)();
-    let j = (0, x.bD)(S),
-        P = (0, x.TW)(S);
+    let j = (0, E.bD)(S),
+        P = (0, E.TW)(S);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.AdvancedScrollerAuto, {
@@ -44,10 +44,10 @@ t.Z = () => {
                         children: [
                             (0, i.jsx)(h.Z, {
                                 className: N.heroHeading,
-                                location: E.MQ.HOME
+                                location: x.MQ.HOME
                             }),
                             (0, i.jsx)(p.Z, {
-                                variant: E.R0.WHATS_NEW,
+                                variant: x.R0.WHATS_NEW,
                                 className: s()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(j || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
@@ -58,7 +58,7 @@ t.Z = () => {
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, i.jsx)(C.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: E.MQ.HOME
+                                    previousComponent: x.MQ.HOME
                                 })
                             }),
                             (0, i.jsx)(_.Z, {
@@ -90,7 +90,7 @@ t.Z = () => {
             (0, i.jsx)(b.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: E.MQ.HOME
+                previousComponent: x.MQ.HOME
             })
         ]
     });

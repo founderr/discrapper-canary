@@ -14,14 +14,14 @@ t.Z = (e) => {
     let { userId: t, children: n, isLast: a, className: f } = e,
         [p, _] = r.useState(!1),
         { analyticsLocations: h } = (0, d.ZP)(),
-        x = r.useCallback(() => {
+        E = r.useCallback(() => {
             (0, u.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: h,
                 analyticsLocation: { section: g.jXE.FAMILY_CENTER }
             });
         }, [t, h]),
-        E = () => {
+        x = () => {
             _(!0);
         },
         b = () => {
@@ -41,9 +41,9 @@ t.Z = (e) => {
                         [m.last]: a,
                         [m.active]: p
                     }),
-                    onMouseEnter: E,
+                    onMouseEnter: x,
                     onMouseLeave: b,
-                    onClick: x,
+                    onClick: E,
                     ...e,
                     children: n(p)
                 })

@@ -1,6 +1,6 @@
 n.d(t, {
     i0: function () {
-        return E;
+        return S;
     },
     yD: function () {
         return _;
@@ -21,7 +21,7 @@ var o = n(120356),
     f = n(46140),
     v = n(388032),
     C = n(128220);
-function g(e) {
+function x(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(l.Button, {
         className: C.cta,
@@ -34,7 +34,7 @@ function g(e) {
         children: (0, p.F9)(n)
     });
 }
-let x = (e) => {
+let g = (e) => {
         let { quest: t } = e;
         return (0, r.jsx)(l.Button, {
             className: C.cta,
@@ -47,7 +47,7 @@ let x = (e) => {
             children: v.intl.string(v.t.lwQdjI)
         });
     },
-    S = (e) => {
+    h = (e) => {
         let { quest: t } = e;
         return (0, r.jsx)(l.Button, {
             fullWidth: !0,
@@ -64,7 +64,7 @@ let x = (e) => {
             children: v.intl.string(v.t.csptqa)
         });
     },
-    E = (e) => {
+    S = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: o, className: a, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
                 quest: t,
@@ -81,25 +81,25 @@ let x = (e) => {
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
         });
     },
-    h = (e) => {
+    E = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: p } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: f.dr.QUESTS_BAR }),
-            h = (0, c.cr)(n);
+            E = (0, c.cr)(n);
         if (v)
-            return (0, r.jsx)(E, {
+            return (0, r.jsx)(S, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: i
             });
-        if (h)
-            return (0, r.jsx)(g, {
+        if (E)
+            return (0, r.jsx)(x, {
                 quest: n,
                 taskDetails: p
             });
-        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(S, { quest: n });
-        else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
+        if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(h, { quest: n });
+        else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(g, { quest: n });
         return null;
     };
 function _(e) {
@@ -117,7 +117,7 @@ function _(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(l.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
-            (0, r.jsx)(h, { ...e })
+            (0, r.jsx)(E, { ...e })
         ]
     });
 }

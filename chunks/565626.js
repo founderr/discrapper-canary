@@ -27,7 +27,7 @@ let m = [
                     { flipped: r } = n.getCurrentConfig({ location: 'useShouldShowNewBadge' });
                 return !!r && !(0, l.un)(t);
             }),
-            n = (0, u.v)(e);
+            n = (0, u.vi)(e);
         return t || !0 === n;
     },
     p = () => {

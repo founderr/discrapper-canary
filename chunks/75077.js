@@ -9,7 +9,7 @@ n.d(t, {
         return v;
     },
     k3: function () {
-        return x;
+        return E;
     },
     mN: function () {
         return R;
@@ -21,7 +21,7 @@ n.d(t, {
         return C;
     },
     vZ: function () {
-        return E;
+        return x;
     }
 }),
     n(653041),
@@ -41,7 +41,7 @@ var i = n(278074),
     p = n(474936),
     _ = n(735825),
     h = n(388032);
-let x = (e) => {
+let E = (e) => {
         switch (e) {
             case _.EB.PENDING:
                 return h.intl.string(h.t.fhK8ho);
@@ -53,7 +53,7 @@ let x = (e) => {
                 return '';
         }
     },
-    E = (e, t, n) => {
+    x = (e, t, n) => {
         switch (e) {
             case _.EB.PENDING:
                 return t === _.Ft.FREE_GUILD_BOOST_1_MONTH ? h.intl.string(h.t.hnbagI) : h.intl.string(h.t['73+DnJ']);
@@ -107,7 +107,7 @@ let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
             { enabled: p } = d.C.getCurrentConfig({ location: T }, { autoTrackExposure: !1 }),
             _ = g && !f && !p,
             h = A();
-        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
+        return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     I = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, tileOrderVariant: l, isPremiumSubscriber: o, fractionalState: c } = e,

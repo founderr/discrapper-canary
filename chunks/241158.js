@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(869783),
     _ = n(388032),
     h = n(916548);
-let x = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: b, isCompact: C, onClick: v, index: T } = e,
+let E = (e) => {
+    let { name: t, title: n, description: a, descriptionCta: _, previewImage: E, videoUrl: x, shouldLoadVideo: b, isCompact: C, onClick: v, index: T } = e,
         N = (0, u.rO)(),
         I = r.useRef(null),
         [S, R] = r.useState(0),
@@ -106,7 +106,7 @@ let x = (e) => {
                     playsInline: !0,
                     preload: b ? 'auto' : 'none',
                     muted: !0,
-                    poster: x,
+                    poster: E,
                     loop: !0,
                     className: s()({
                         [h.perkBoxVideo]: !C,
@@ -115,7 +115,7 @@ let x = (e) => {
                     }),
                     ref: I,
                     children: (0, i.jsx)('source', {
-                        src: E,
+                        src: x,
                         type: N ? p.m.MP4 : p.m.WEBM
                     })
                 })
@@ -161,7 +161,7 @@ t.Z = r.memo(function (e) {
                 }),
                 a.map((e, t) =>
                     (0, i.jsx)(
-                        x,
+                        E,
                         {
                             shouldLoadVideo: n,
                             ...e,
@@ -175,7 +175,7 @@ t.Z = r.memo(function (e) {
                         className: h.compactBoxOuterContainer,
                         children: l.map((e, t) =>
                             (0, i.jsx)(
-                                x,
+                                E,
                                 {
                                     shouldLoadVideo: n,
                                     ...e,

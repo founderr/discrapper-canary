@@ -181,7 +181,7 @@ function H(e, t) {
     return n
         .filter((e) => {
             let { record: t } = e;
-            return !_.Z.isBlocked(t.id);
+            return !_.Z.isBlockedOrIgnored(t.id);
         })
         .map((e) => {
             let { record: t } = e;

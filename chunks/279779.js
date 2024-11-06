@@ -31,7 +31,7 @@ function S(e, t, n) {
     );
 }
 function T(e) {
-    if (null == e || _.Z.isBlocked(e.id)) return null;
+    if (null == e || _.Z.isBlockedOrIgnored(e.id)) return null;
     let t = {
         id: e.id,
         username: '0' !== e.discriminator ? ''.concat(e.username, '#').concat(e.discriminator) : e.username

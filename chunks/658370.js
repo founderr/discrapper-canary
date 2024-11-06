@@ -16,7 +16,7 @@ var r = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: r, titleClassName: h = '', buttonClassName: x = '', subtitle: E = '', description: b = '', descriptionCta: C = '', isPremiumGetCta: v, onCtaClick: T, cardVariant: N } = e,
+    let { title: r, titleClassName: h = '', buttonClassName: E = '', subtitle: x = '', description: b = '', descriptionCta: C = '', isPremiumGetCta: v, onCtaClick: T, cardVariant: N } = e,
         I = (0, d.N)(),
         S = null == I ? void 0 : I.subscription_trial,
         R = (0, c.Ng)(),
@@ -39,12 +39,12 @@ t.Z = (e) => {
                 title: r,
                 cardVariantStyleInfo: P,
                 titleClassName: h,
-                subtitle: E,
+                subtitle: x,
                 description: b
             }),
             v &&
                 (0, i.jsx)(m.Z, {
-                    className: x,
+                    className: E,
                     subscriptionTier: f.Si.TIER_2,
                     buttonText: j,
                     color: s.Button.Colors.GREEN,
@@ -54,7 +54,7 @@ t.Z = (e) => {
                 (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != T &&
                 (0, i.jsx)(s.Button, {
-                    className: x,
+                    className: E,
                     onClick: T,
                     children: C
                 })

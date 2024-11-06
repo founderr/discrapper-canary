@@ -14,8 +14,8 @@ let f = (0, d.uk)('poggermode_applause', a.Z.getSoundpack()),
     p = !1,
     _ = !1,
     h = [],
-    x = null,
-    E = () => {
+    E = null,
+    x = () => {
         if (!p) f.loop(), (p = !0);
     },
     b = () => {
@@ -30,7 +30,7 @@ let f = (0, d.uk)('poggermode_applause', a.Z.getSoundpack()),
         if (0 === h.length || !C() || _) return;
         _ = !0;
         let [e, t] = h[h.length - 1];
-        (0, d.GN)(e, t), (x = setTimeout(T, 1000));
+        (0, d.GN)(e, t), (E = setTimeout(T, 1000));
     },
     T = () => {
         h.pop(), (_ = !1), v();
@@ -45,7 +45,7 @@ class I extends r.Z {
         g.ZP.addChangeListener(this.startAudio), i.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), i.Z.subscribe('TYPING_STOP', this.stopAudio), i.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), i.Z.subscribe('CHANNEL_SELECT', this.stopAudio), i.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
     _terminate() {
-        g.ZP.removeChangeListener(this.startAudio), i.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), i.Z.unsubscribe('TYPING_STOP', this.stopAudio), i.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), i.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), i.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(x);
+        g.ZP.removeChangeListener(this.startAudio), i.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), i.Z.unsubscribe('TYPING_STOP', this.stopAudio), i.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), i.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), i.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(E);
     }
     setVolume(e) {
         let { state: t } = e;
@@ -67,7 +67,7 @@ class I extends r.Z {
             i = c.Z.isTyping(t, n),
             r = g.ZP.getUserCombo(n, t),
             a = null !== (e = null == r ? void 0 : r.multiplier) && void 0 !== e ? e : 1;
-        i && a >= 7 ? E() : b();
+        i && a >= 7 ? x() : b();
     }
     playAchievementUnlockSound() {
         if (!!C()) N('poggermode_achievement_unlock');

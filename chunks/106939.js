@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(906732),
     _ = n(252618),
     h = n(313201),
-    x = n(605236),
-    E = n(984370),
+    E = n(605236),
+    x = n(984370),
     b = n(797614),
     C = n(108427),
     v = n(210887),
@@ -40,8 +40,8 @@ var i = n(200651),
     w = n(521450),
     B = n(292352),
     y = n(981631),
-    k = n(723359),
-    L = n(921944),
+    L = n(723359),
+    k = n(921944),
     U = n(388032),
     D = n(379493);
 let G = {
@@ -101,22 +101,22 @@ function F(e) {
     return (0, i.jsx)(u.ThemeProvider, {
         theme: t,
         children: (e) =>
-            (0, i.jsxs)(E.Z, {
+            (0, i.jsxs)(x.Z, {
                 className: s()(e, D.sidebarTabBar),
                 scrollable: l.tq,
                 role: 'navigation',
                 'aria-labelledby': a,
                 toolbar: !0,
                 children: [
-                    (0, i.jsx)(E.Z.Icon, {
+                    (0, i.jsx)(x.Z.Icon, {
                         icon: u.GroupIcon,
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(E.Z.Title, {
+                    (0, i.jsx)(x.Z.Title, {
                         id: a,
                         children: U.intl.string(U.t.RZqaJi)
                     }),
-                    (0, i.jsx)(E.Z.Divider, {}),
+                    (0, i.jsx)(x.Z.Divider, {}),
                     (0, i.jsxs)(u.TabBar, {
                         'aria-label': U.intl.string(U.t.RZqaJi),
                         selectedItem: n,
@@ -152,20 +152,20 @@ function F(e) {
 function W() {
     let e = (0, P.Z)(),
         t = (0, O.M8)(),
-        n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        n = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         a = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         l = (0, j.M)(),
         { selectedTab: g, handleTabChange: f } = (0, A.Z)(),
         p = (0, h.Dt)(),
-        E = N.default.getCurrentUser(),
+        x = N.default.getCurrentUser(),
         v = null != e,
-        T = a && null != E && !v;
+        T = a && null != x && !v;
     return (r.useEffect(() => {
         (0, C.e)('family-center'),
             S.ZP.initialPageLoad(),
             !n &&
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: L.L.AUTO,
+                (0, E.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    dismissAction: k.L.AUTO,
                     forceTrack: !0
                 });
     }, []),
@@ -182,7 +182,7 @@ function W() {
             b.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [a, v]),
     r.useEffect(() => {
-        T && (0, m.mN)(k.L0.FAMILY_CENTER);
+        T && (0, m.mN)(L.L0.FAMILY_CENTER);
     }, [T]),
     T)
         ? null
@@ -210,9 +210,9 @@ function z() {
     let { analyticsLocations: e } = (0, p.ZP)(f.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, O.M8)(),
-        a = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
+        a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
-        E = (0, j.M)(),
+        x = (0, j.M)(),
         Z = (0, c.e7)([v.Z], () => v.Z.theme),
         { selectedTab: M, handleTabChange: w } = (0, A.Z)(),
         G = (0, h.Dt)(),
@@ -224,8 +224,8 @@ function z() {
             (0, C.e)('family-center'),
             !R.Z.isLoading() && R.Z.canRefetch() && S.ZP.initialPageLoad(),
             !a &&
-                (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: L.L.AUTO,
+                (0, E.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
+                    dismissAction: k.L.AUTO,
                     forceTrack: !0
                 });
     }, []),
@@ -235,7 +235,7 @@ function z() {
                 (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
-                    selected_teen_id: E,
+                    selected_teen_id: x,
                     initial_page: B.QH[M],
                     source: B._6[B.Mu.SIDENAV]
                 }),
@@ -246,11 +246,11 @@ function z() {
             l && t && void 0 === e && T.Ex.updateSetting(!0);
         }, [l, t]),
         r.useEffect(() => {
-            z && (0, m.mN)(k.L0.FAMILY_CENTER);
+            z && (0, m.mN)(L.L0.FAMILY_CENTER);
         }, [z]);
     if (z) return null;
     let Y = M !== B.dG.SETTINGS ? M : B.dG.ACTIVITY,
-        K = H[Y];
+        Q = H[Y];
     return (0, i.jsx)(p.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
@@ -272,7 +272,7 @@ function z() {
                     children: (0, i.jsx)(u.Scroller, {
                         children: (0, i.jsx)('div', {
                             className: D.sideNavContent,
-                            children: K()
+                            children: Q()
                         })
                     })
                 })
