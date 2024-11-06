@@ -21,8 +21,8 @@ var i = n(200651),
     v = n(168179),
     T = n(348986),
     j = n(930065),
-    E = n(345669);
-let S = () => [
+    S = n(345669);
+let b = () => [
         {
             icon: c.AnalyticsIcon,
             color: o.Z.unsafe_rawColors.GREEN_360.css,
@@ -74,7 +74,7 @@ let S = () => [
             body: p.intl.string(p.t.hyNkHx)
         }
     ],
-    b = [
+    E = [
         {
             iconSrc: T,
             name: 'Pokemon GO Paris',
@@ -100,7 +100,7 @@ let S = () => [
             rightAlign: !0
         },
         {
-            iconSrc: E,
+            iconSrc: S,
             name: 'Sneaker Fans',
             position: [-250, 40]
         },
@@ -179,7 +179,7 @@ t.Z = (e) => {
         r.useEffect(() => {
             (0, d.Kw)(x.v.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL);
         }, []);
-    let E = () => {
+    let S = () => {
         u.Z.open();
     };
     return (0, i.jsxs)('div', {
@@ -189,7 +189,7 @@ t.Z = (e) => {
                 className: f.banner,
                 ref: (e) => N(e),
                 children: [
-                    b.map((e) =>
+                    E.map((e) =>
                         (0, i.jsx)(
                             Z,
                             {
@@ -227,7 +227,7 @@ t.Z = (e) => {
                 'aria-label': v ? void 0 : p.intl.string(p.t['pjG+T0']),
                 children: (e) =>
                     (0, i.jsx)(c.Button, {
-                        onClick: E,
+                        onClick: S,
                         className: f.button,
                         disabled: !v,
                         ...e,
@@ -248,7 +248,7 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('div', {
                 className: f.features,
-                children: S().map((e, t) => (0, i.jsx)(R, { ...e }, t))
+                children: b().map((e, t) => (0, i.jsx)(R, { ...e }, t))
             })
         ]
     });

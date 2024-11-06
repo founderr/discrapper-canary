@@ -1,25 +1,25 @@
 var l = n(200651),
     i = n(192379),
     r = n(461745),
-    s = n(631155);
-let a = i.forwardRef(function (e, t) {
-    let { query: n, onQueryChange: i, onRemoveTag: a, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: h, placeholder: x = '', focusAfterReady: g, isReady: b, 'aria-labelledby': T, 'aria-controls': E } = e;
+    a = n(631155);
+let s = i.forwardRef(function (e, t) {
+    let { query: n, onQueryChange: i, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: g, isReady: b, 'aria-labelledby': T, 'aria-controls': E } = e;
     return (0, l.jsx)(r.ZP, {
         autoFocus: !0,
-        className: s.searchBar,
+        className: a.searchBar,
         maxHeight: 100,
         onQueryChange: i,
-        onRemoveTag: a,
+        onRemoveTag: s,
         selectedSection: d,
         selectedRow: u,
         onSelect: o,
         onSelectionChange: c,
-        placeholder: 0 === m.length ? x : '',
+        placeholder: 0 === m.length ? h : '',
         query: n,
         ref: t,
         size: r.ZP.Sizes.MEDIUM,
         tags: m,
-        sections: h,
+        sections: x,
         focusAfterReady: g,
         isReady: b,
         inputProps: {
@@ -30,4 +30,4 @@ let a = i.forwardRef(function (e, t) {
         }
     });
 });
-t.Z = a;
+t.Z = s;

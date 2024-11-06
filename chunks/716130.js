@@ -116,8 +116,8 @@ function _(e) {
         ],
         {
             handleDragStart: j,
-            handleDragReset: E,
-            handleDragComplete: S
+            handleDragReset: S,
+            handleDragComplete: b
         } = (0, u.Z)(T, (e) => {
             let t = e.findIndex((e) => 'separator' === e.id),
                 n = e.slice(0, t).map((e) => ({
@@ -174,8 +174,8 @@ function _(e) {
                                             promptIndex: t,
                                             dragIndex: t,
                                             onPromptDragStart: j,
-                                            onPromptDragReset: E,
-                                            onPromptDragComplete: S
+                                            onPromptDragReset: S,
+                                            onPromptDragComplete: b
                                         },
                                         e.id
                                     )
@@ -200,8 +200,8 @@ function _(e) {
                                             promptIndex: t + N.length,
                                             dragIndex: t + N.length + 1,
                                             onPromptDragStart: j,
-                                            onPromptDragReset: E,
-                                            onPromptDragComplete: S
+                                            onPromptDragReset: S,
+                                            onPromptDragComplete: b
                                         },
                                         e.id
                                     )

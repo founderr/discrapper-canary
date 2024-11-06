@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(771212),
     T = n(434404),
     j = n(146596),
-    E = n(559368),
-    S = n(999382),
-    b = n(981631),
+    S = n(559368),
+    b = n(999382),
+    E = n(981631),
     R = n(921944),
     Z = n(190378),
     A = n(388032),
@@ -52,7 +52,7 @@ let G = function (e, t, n) {
     },
     F = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return t || e === b.evJ.NOT_ENOUGH_GUILD_MEMBERS
+        return t || e === E.evJ.NOT_ENOUGH_GUILD_MEMBERS
             ? (0, i.jsx)(u.FormErrorBlock, {
                   icon: u.CircleInformationIcon,
                   className: L.notEnoughMembersError,
@@ -67,19 +67,19 @@ let G = function (e, t, n) {
                 });
     };
 function H(e) {
-    N.default.track(b.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
-    let t = null == e ? b.E07.DEVELOPER_PORTAL : b.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+    N.default.track(E.rMx.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, { guild_id: e });
+    let t = null == e ? E.E07.DEVELOPER_PORTAL : E.E07.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
         n = (0, l.Z)();
     return o.tn
         .post({
-            url: b.ANM.HANDOFF,
+            url: E.ANM.HANDOFF,
             body: { key: n },
             oldFormErrors: !0
         })
         .then(
             (e) => {
                 let i = e.body.handoff_token;
-                window.open(b.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
+                window.open(E.EYA.DEVELOPER_PORTAL_LOGIN_HANDOFF(n, i, t));
             },
             () => {
                 window.open(t);
@@ -88,7 +88,7 @@ function H(e) {
 }
 let z = () => {
     let [e, t] = r.useState(!1),
-        n = (0, a.e7)([S.Z], () => S.Z.getGuildId());
+        n = (0, a.e7)([b.Z], () => b.Z.getGuildId());
     return (0, i.jsx)(u.Button, {
         className: L.developerPortalCta,
         onClick: () => {
@@ -103,7 +103,7 @@ let z = () => {
 };
 function V(e) {
     let { guildId: t } = e,
-        { hasAccessRate: n, accessRate: l } = (0, a.cj)([E.Z], () => E.Z.getMemberInsights(t)),
+        { hasAccessRate: n, accessRate: l } = (0, a.cj)([S.Z], () => S.Z.getMemberInsights(t)),
         s = (0, a.e7)([C.Z], () => {
             var e;
             return null !== (e = C.Z.getMemberCount()) && void 0 !== e ? e : 0;
@@ -288,7 +288,7 @@ function V(e) {
                                                                   (0, i.jsx)(
                                                                       p.Z,
                                                                       {
-                                                                          onClick: () => T.Z.setSection(b.pNK.INTEGRATIONS),
+                                                                          onClick: () => T.Z.setSection(E.pNK.INTEGRATIONS),
                                                                           className: L.link,
                                                                           children: e
                                                                       },
@@ -360,16 +360,16 @@ function V(e) {
     );
 }
 t.Z = () => {
-    let e = (0, a.e7)([S.Z], () => S.Z.getGuildId()),
+    let e = (0, a.e7)([b.Z], () => b.Z.getGuildId()),
         t = (0, a.e7)([C.Z], () => C.Z.getMemberCount(e)),
         n = (0, a.e7)([I.Z], () => I.Z.getGuild(e)),
         l = (0, a.e7)([f.default], () => f.default.locale),
-        { analytics: s, errorCode: o } = (0, a.cj)([E.Z], () => ({
-            analytics: null != e ? E.Z.getOverviewAnalytics(e) : null,
-            errorCode: E.Z.getError()
+        { analytics: s, errorCode: o } = (0, a.cj)([S.Z], () => ({
+            analytics: null != e ? S.Z.getOverviewAnalytics(e) : null,
+            errorCode: S.Z.getError()
         })),
         c = (0, a.e7)([_.Z], () => _.Z.getSettings().enabled),
-        d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(b.oNc.PARTNERED) && !n.hasFeature(b.oNc.VERIFIED));
+        d = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(E.oNc.PARTNERED) && !n.hasFeature(E.oNc.VERIFIED));
     r.useEffect(() => {
         null != e && !d && ((0, j.Vk)(e), (0, j.SR)(e), (0, j.xl)(e));
     }, [e, d]),

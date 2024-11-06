@@ -27,8 +27,8 @@ var i = n(200651),
     v = n(981631),
     T = n(388032),
     j = n(366468),
-    E = n(571621);
-function S(e) {
+    S = n(571621);
+function b(e) {
     let { guild: t, role: n, locked: l } = e,
         s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = r.useMemo(
@@ -81,7 +81,7 @@ function S(e) {
         })
     });
 }
-function b(e) {
+function E(e) {
     let { guild: t, role: n, specs: r, locked: l } = e;
     if (0 === r.length)
         return (0, i.jsxs)('div', {
@@ -107,7 +107,7 @@ function b(e) {
     return (0, i.jsxs)('div', {
         className: j.permissionsWrapper,
         children: [
-            (0, i.jsx)(S, {
+            (0, i.jsx)(b, {
                 guild: t,
                 role: n,
                 locked: l
@@ -146,7 +146,7 @@ function R(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: x, headerRef: p } = (0, C.Z)(0),
-        { scrolledToTop: f, handleScroll: S } = (0, I.V)(),
+        { scrolledToTop: f, handleScroll: b } = (0, I.V)(),
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
@@ -155,12 +155,12 @@ function R(e) {
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: j.scroller,
             style: { scrollPaddingTop: x },
-            onScroll: S,
+            onScroll: b,
             children: (0, i.jsxs)('div', {
-                className: E.contentWidth,
+                className: S.contentWidth,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: s()(E.header, E.stickyHeader, { [E.stickyHeaderElevated]: !f }),
+                        className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !f }),
                         ref: p,
                         children: [
                             (0, i.jsx)(I.Z, {
@@ -186,7 +186,7 @@ function R(e) {
                             })
                         ]
                     }),
-                    (0, i.jsx)(b, {
+                    (0, i.jsx)(E, {
                         guild: t,
                         role: n,
                         specs: m,

@@ -13,8 +13,8 @@ var a = n(200651),
     h = n(351402),
     A = n(37592),
     E = n(981631),
-    N = n(388032),
-    f = n(196684),
+    f = n(388032),
+    N = n(196684),
     b = n(739017);
 let _ = {
         [E.HeQ.CARD]: m.ZP.Types.UNKNOWN,
@@ -91,19 +91,19 @@ class S extends r.PureComponent {
                 o.Button,
                 {
                     onClick: () => this.props.onChooseType(e),
-                    className: f.button,
+                    className: N.button,
                     children: (0, a.jsxs)('div', {
                         className: i()(b.flex, b.alignCenter),
                         children: [
                             (0, a.jsx)(m.ZP, {
-                                className: f.buttonIcon,
+                                className: N.buttonIcon,
                                 type: n
                             }),
                             r,
                             l &&
                                 (0, a.jsx)(o.TextBadge, {
-                                    text: N.intl.string(N.t.y2b7CA),
-                                    className: f.newPaymentBadge,
+                                    text: f.intl.string(f.t.y2b7CA),
+                                    className: N.newPaymentBadge,
                                     disableColor: !0
                                 })
                         ]
@@ -118,9 +118,9 @@ class S extends r.PureComponent {
             { onChooseType: t, className: n, onStripePaymentMethodReceived: r, allowStripeRequestPayments: l, ipCountryCode: s, ipCountryCodeHasError: c, isEligibleForTrial: d = !1 } = this.props,
             m = l
                 ? (0, a.jsx)(A.Z, {
-                      className: f.button,
-                      iconClassName: f.buttonIcon,
-                      paymentLabel: N.intl.string(N.t.ZURqX1),
+                      className: N.button,
+                      iconClassName: N.buttonIcon,
+                      paymentLabel: f.intl.string(f.t.ZURqX1),
                       onStripePaymentMethodReceived: r,
                       onChooseType: t
                   })
@@ -140,16 +140,16 @@ class S extends r.PureComponent {
                     children: [p, m]
                 }),
                 (0, a.jsx)('div', {
-                    className: h.length > 0 ? b.flex : f.hidden,
+                    className: h.length > 0 ? b.flex : N.hidden,
                     children: (0, a.jsxs)(o.Clickable, {
                         onClick: () => this.toggleAllPayments(),
-                        className: i()(b.flex, f.allPaymentsToggleButton),
-                        children: [N.intl.string(N.t['4uiQm5']), (0, a.jsx)(u.Z, { open: e })]
+                        className: i()(b.flex, N.allPaymentsToggleButton),
+                        children: [f.intl.string(f.t['4uiQm5']), (0, a.jsx)(u.Z, { open: e })]
                     })
                 }),
                 (0, a.jsx)('div', {
-                    className: i()(b.wrap, b.horizontal, f.allPaymentsSection, {
-                        [f.hidden]: !e,
+                    className: i()(b.wrap, b.horizontal, N.allPaymentsSection, {
+                        [N.hidden]: !e,
                         [b.flex]: e
                     }),
                     children: h
@@ -160,13 +160,13 @@ class S extends r.PureComponent {
             E && !c && (_ = (0, a.jsx)(o.Spinner, { type: o.Spinner.Type.SPINNING_CIRCLE })),
             (0, a.jsxs)('div', {
                 children: [
-                    d && (0, a.jsx)('hr', { className: f.SeparatorUpper }),
+                    d && (0, a.jsx)('hr', { className: N.SeparatorUpper }),
                     (0, a.jsx)(o.FormSection, {
-                        title: d ? N.intl.string(N.t.tywMsb) : N.intl.string(N.t['8lqkf3']),
+                        title: d ? f.intl.string(f.t.tywMsb) : f.intl.string(f.t['8lqkf3']),
                         className: n,
                         children: _
                     }),
-                    d && (0, a.jsx)('hr', { className: f.SeparatorLower })
+                    d && (0, a.jsx)('hr', { className: N.SeparatorLower })
                 ]
             })
         );

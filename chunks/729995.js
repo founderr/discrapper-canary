@@ -114,15 +114,15 @@ function j(e) {
     return n
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(E, {
+                  (0, i.jsx)(S, {
                       guildId: t,
                       handlePreview: I
                   }),
-                  (0, i.jsx)(S, {}),
+                  (0, i.jsx)(b, {}),
                   (0, i.jsxs)('div', {
                       className: T.content,
                       children: [
-                          (0, i.jsx)(b, {
+                          (0, i.jsx)(E, {
                               guildId: t,
                               handleOnboardingToggle: p
                           }),
@@ -148,7 +148,7 @@ function j(e) {
               ]
           });
 }
-function E(e) {
+function S(e) {
     let { guildId: t, handlePreview: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -192,7 +192,7 @@ function E(e) {
         ]
     });
 }
-function S() {
+function b() {
     let e = '\u2022 ';
     return (0, i.jsxs)('div', {
         className: T.notice,
@@ -225,7 +225,7 @@ function S() {
         ]
     });
 }
-function b(e) {
+function E(e) {
     let { guildId: t, handleOnboardingToggle: n } = e,
         s = (0, _.$$)(t),
         a = (0, r.e7)([o.Z], () => o.Z.getEnabled(t));

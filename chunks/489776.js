@@ -32,7 +32,7 @@ function g(e) {
                 clamp: !0
             }
         }),
-        E = (0, a.useSpring)({
+        S = (0, a.useSpring)({
             opacity: N ? 1 : 0,
             pointerEvents: N ? 'all' : 'none',
             config: {
@@ -53,7 +53,7 @@ function g(e) {
               children: [
                   (0, i.jsx)(l.animated.div, {
                       className: h.animatedRuleCardContainer,
-                      style: E,
+                      style: S,
                       children: (0, i.jsx)(u.Z, {
                           rule: v,
                           persistEdit: p

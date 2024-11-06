@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(513532),
     T = n(741595),
     j = n(974842),
-    E = n(359380),
-    S = n(308083),
-    b = n(981631),
+    S = n(359380),
+    b = n(308083),
+    E = n(981631),
     R = n(231338),
     Z = n(388032),
     A = n(766064);
@@ -33,12 +33,12 @@ let L = (e) => [
             label: Z.intl.string(Z.t['7r0U+/'])
         },
         {
-            section: S.Wy.GAMES,
+            section: b.Wy.GAMES,
             label: Z.intl.string(Z.t['6umL+/']),
             hasError: (null == e ? void 0 : e.gameApplicationIds) != null
         },
         {
-            section: S.Wy.PLAYSTYLE,
+            section: b.Wy.PLAYSTYLE,
             label: Z.intl.string(Z.t.SWXqQE),
             hasError: (null == e ? void 0 : e.playstyle) != null
         },
@@ -48,16 +48,16 @@ let L = (e) => [
             label: Z.intl.string(Z.t['eNC+OT'])
         },
         {
-            section: S.Wy.UTILITY_TRAITS,
+            section: b.Wy.UTILITY_TRAITS,
             label: Z.intl.string(Z.t.oBixMj)
         },
         {
-            section: S.Wy.INTERESTS,
+            section: b.Wy.INTERESTS,
             label: Z.intl.string(Z.t.WqEH5O),
             hasError: (null == e ? void 0 : e.interests) != null
         },
         {
-            section: S.Wy.DESCRIPTION,
+            section: b.Wy.DESCRIPTION,
             label: Z.intl.string(Z.t.SnIjAQ),
             hasError: (null == e ? void 0 : e.description) != null || (null == e ? void 0 : e.wildcardDescriptors) != null
         },
@@ -67,18 +67,18 @@ let L = (e) => [
             label: Z.intl.string(Z.t.qEgjwM)
         },
         {
-            section: S.Wy.CUSTOMIZE_TAG_BADGE,
+            section: b.Wy.CUSTOMIZE_TAG_BADGE,
             label: Z.intl.string(Z.t.MuFv4e),
             hasError: (null == e ? void 0 : e.tag) != null || (null == e ? void 0 : e.badgeKind) != null || (null == e ? void 0 : e.badgePrimaryColor) != null || (null == e ? void 0 : e.badgeSecondaryColor) != null
         },
         {
-            section: S.Wy.CUSTOMIZE_BANNER,
+            section: b.Wy.CUSTOMIZE_BANNER,
             label: Z.intl.string(Z.t['/A+uVF']),
             hasError: (null == e ? void 0 : e.banner) != null || (null == e ? void 0 : e.brandPrimaryColor) != null || (null == e ? void 0 : e.brandSecondaryColor) != null
         },
         { section: m.ID.DIVIDER },
         {
-            section: S.Wy.MEMBER_APPLICATION,
+            section: b.Wy.MEMBER_APPLICATION,
             label: Z.intl.string(Z.t.aOQWKi),
             hasError: (null == e ? void 0 : e.verificationForm) != null
         },
@@ -106,7 +106,7 @@ let L = (e) => [
             'aria-label': Z.intl.string(Z.t.vc5h39),
             onClick: () => {
                 if (s) {
-                    h.S.dispatch(b.CkL.EMPHASIZE_NOTICE);
+                    h.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
                     return;
                 }
                 (0, o.openModalLazy)(async () => {
@@ -173,7 +173,7 @@ let L = (e) => [
     };
 t.Z = (e) => {
     let { guildId: t, onClose: n } = e,
-        [R, y] = r.useState(S.Wy.GAMES),
+        [R, y] = r.useState(b.Wy.GAMES),
         {
             initialSettings: O,
             settings: M,
@@ -193,7 +193,7 @@ t.Z = (e) => {
         }),
         B = r.useCallback(
             (e) => {
-                w ? h.S.dispatch(b.CkL.EMPHASIZE_NOTICE) : y(e);
+                w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : y(e);
             },
             [w]
         ),
@@ -227,7 +227,7 @@ t.Z = (e) => {
         z = r.useCallback((e) => (0, g.mf)(t, { interests: e }), [t]),
         V = r.useCallback((e) => (0, g.mf)(t, e), [t]),
         W = r.useCallback(() => {
-            w ? h.S.dispatch(b.CkL.EMPHASIZE_NOTICE) : n();
+            w ? h.S.dispatch(E.CkL.EMPHASIZE_NOTICE) : n();
         }, [w, n]),
         Y = async () => {
             await (0, g.Ii)(t, M), (0, x.Af)(t);
@@ -320,7 +320,7 @@ t.Z = (e) => {
                             (0, i.jsx)(o.ScrollerThin, {
                                 children: (() => {
                                     switch (R) {
-                                        case S.Wy.GAMES:
+                                        case b.Wy.GAMES:
                                             var e;
                                             return (0, i.jsx)(_.Z, {
                                                 title: Z.intl.string(Z.t.t6Mbq6),
@@ -331,7 +331,7 @@ t.Z = (e) => {
                                                 guildId: t,
                                                 includeSuggestedGames: !0
                                             });
-                                        case S.Wy.PLAYSTYLE:
+                                        case b.Wy.PLAYSTYLE:
                                             return (0, i.jsx)(T.Z, {
                                                 title: Z.intl.string(Z.t.W0h7pa),
                                                 description: Z.intl.string(Z.t.JHYekZ),
@@ -339,29 +339,29 @@ t.Z = (e) => {
                                                 playstyle: M.playstyle,
                                                 error: P.playstyle
                                             });
-                                        case S.Wy.UTILITY_TRAITS:
-                                            return (0, i.jsx)(E.Z, {
+                                        case b.Wy.UTILITY_TRAITS:
+                                            return (0, i.jsx)(S.Z, {
                                                 guildId: t,
                                                 title: Z.intl.string(Z.t.G4tP09),
                                                 description: Z.intl.string(Z.t['6Eos19']),
                                                 onUpdateTraits: z,
                                                 progress: M
                                             });
-                                        case S.Wy.INTERESTS:
+                                        case b.Wy.INTERESTS:
                                             return (0, i.jsx)(N.Z, {
                                                 guildId: t,
                                                 handleUpdate: V,
                                                 progress: M,
                                                 error: P.interests
                                             });
-                                        case S.Wy.DESCRIPTION:
+                                        case b.Wy.DESCRIPTION:
                                             return (0, i.jsx)(I.Z, {
                                                 guildId: t,
                                                 handleUpdate: V,
                                                 progress: M,
                                                 errors: P
                                             });
-                                        case S.Wy.CUSTOMIZE_TAG_BADGE:
+                                        case b.Wy.CUSTOMIZE_TAG_BADGE:
                                             return (0, i.jsx)(j.Z, {
                                                 handleUpdate: V,
                                                 tag: M.tag,
@@ -369,16 +369,16 @@ t.Z = (e) => {
                                                 badge: M.badgeKind,
                                                 primaryColor: M.badgePrimaryColor,
                                                 secondaryColor: M.badgeSecondaryColor,
-                                                furthestStep: S.Wy.CUSTOMIZE_TAG_BADGE,
+                                                furthestStep: b.Wy.CUSTOMIZE_TAG_BADGE,
                                                 inSettings: !0
                                             });
-                                        case S.Wy.MEMBER_APPLICATION:
+                                        case b.Wy.MEMBER_APPLICATION:
                                             return (0, i.jsx)(v.Z, {
                                                 guildId: t,
                                                 inSettings: !0,
                                                 error: P.verificationForm
                                             });
-                                        case S.Wy.CUSTOMIZE_BANNER:
+                                        case b.Wy.CUSTOMIZE_BANNER:
                                             return (0, i.jsx)(C.Z, {
                                                 guildId: t,
                                                 handleUpdate: V,

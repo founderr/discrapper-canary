@@ -22,11 +22,11 @@ let v = ['322850917248663552', '172018499005317120', '414234792121597953', '2284
     T = ['620723483965653003', '662246299369734154', '181970867549503489', '102860784329052160'];
 t.Z = (e) => {
     let { guild: t, onEnableDiscovery: n, isGuildAdmin: l } = e,
-        [j, E] = (0, a.Z)(() => [s().sample(v), s().sample(T)], []);
+        [j, S] = (0, a.Z)(() => [s().sample(v), s().sample(T)], []);
     r.useEffect(() => {
-        m.z([j, E]);
-    }, [j, E]);
-    let [S, b] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(E)], [j, E]),
+        m.z([j, S]);
+    }, [j, S]);
+    let [b, E] = (0, o.Wu)([h.Z], () => [h.Z.getGuild(j), h.Z.getGuild(S)], [j, S]),
         { canEnableDiscovery: R, isPendingSuccess: Z } = (0, o.cj)(
             [d.ZP],
             () => ({
@@ -57,8 +57,8 @@ t.Z = (e) => {
                             className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == S,
-                            guild: S
+                            loading: null == b,
+                            guild: b
                         }),
                         (0, i.jsx)(g.Z, {
                             className: _.previewCard,
@@ -71,8 +71,8 @@ t.Z = (e) => {
                             className: _.placeholderCard,
                             disabled: !0,
                             small: !0,
-                            loading: null == b,
-                            guild: b
+                            loading: null == E,
+                            guild: E
                         })
                     ]
                 }),

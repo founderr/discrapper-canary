@@ -48,47 +48,47 @@ let u = new Set([o.pK.ARS, o.pK.CLP, o.pK.COP]),
     },
     A = (e) => {
         let { localizedPricingPromo: t, subscription: n, forceSingleLine: a = !1, userLocale: h } = e,
-            { countryCode: A, amount: N, currency: f, paymentSourceTypes: b } = t,
+            { countryCode: A, amount: f, currency: N, paymentSourceTypes: b } = t,
             _ = 0 !== b.length,
             y = E(A),
-            P = (0, i.T4)(N, f, {
+            P = (0, i.T4)(f, N, {
                 style: 'currency',
-                currency: f,
+                currency: N,
                 currencyDisplay: 'symbol',
                 localeOverride: y
             }),
             g = c.intl.format(c.t['4cHbQ0'], {
                 helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
-                currencyISOCode: f.toUpperCase(),
+                currencyISOCode: N.toUpperCase(),
                 localizedPriceWithCurrencySymbol: P
             });
         if (
-            (d.has(f) &&
+            (d.has(N) &&
                 (g = c.intl.format(c.t['5kvQMz'], {
                     helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
                     localizedPriceWithCurrencySymbol: P
                 })),
-            u.has(f) &&
+            u.has(N) &&
                 (g = c.intl.format(c.t.BrYPGh, {
                     helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: f.toUpperCase(),
+                    currencyISOCode: N.toUpperCase(),
                     localizedPriceWithCurrencySymbol: P
                 })),
             null != n &&
                 !n.hasPremiumNitroMonthly &&
                 (g = c.intl.format(c.t.xnD0NT, {
                     helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: f.toUpperCase()
+                    currencyISOCode: N.toUpperCase()
                 })),
-            f === o.pK.EUR &&
+            N === o.pK.EUR &&
                 (g = a
                     ? c.intl.format(c.t.o60rUF, {
                           country: (0, r.q9)(A),
-                          currencyISOCode: f.toUpperCase(),
+                          currencyISOCode: N.toUpperCase(),
                           helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING)
                       })
                     : c.intl.format(c.t['N1xw/f'], {
-                          currencyISOCode: f.toUpperCase(),
+                          currencyISOCode: N.toUpperCase(),
                           helpCenterLink: l.Z.getArticleURL(s.BhN.LOCALIZED_PRICING)
                       })),
             _)

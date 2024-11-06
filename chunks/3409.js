@@ -3,10 +3,10 @@ n.d(t, {
         return eb;
     },
     kx: function () {
-        return eN;
+        return ef;
     },
     vP: function () {
-        return ef;
+        return eN;
     }
 }),
     n(47120),
@@ -25,8 +25,8 @@ var a = n(200651),
     h = n(801937),
     A = n(282164),
     E = n(738342),
-    N = n(915271),
-    f = n(228666),
+    f = n(915271),
+    N = n(228666),
     b = n(723484),
     _ = n(122192),
     y = n(581813),
@@ -126,7 +126,7 @@ function ec() {
 function eu() {
     return (0, a.jsx)('div', {
         className: V.body,
-        children: (0, a.jsx)(N.Z, {})
+        children: (0, a.jsx)(f.Z, {})
     });
 }
 function ed() {
@@ -149,7 +149,7 @@ function ep(e) {
         l = (0, o.e7)([M.Z], () => M.Z.error);
     return (0, a.jsx)('div', {
         className: V.body,
-        children: (0, a.jsx)(f.P, {
+        children: (0, a.jsx)(N.P, {
             billingAddressInfo: t,
             billingError: l,
             onBillingAddressChange: n,
@@ -177,7 +177,7 @@ function eE(e) {
         })
     );
 }
-function eN(e) {
+function ef(e) {
     let { breadcrumbSteps: t } = e,
         { step: n, setStep: a, paymentSources: r, paymentSourceId: l, setPaymentSourceId: i, purchaseError: o, setPurchaseError: c, purchaseErrorBlockRef: u, paymentAuthenticationState: d } = (0, C.usePaymentContext)(),
         m = {
@@ -192,7 +192,7 @@ function eN(e) {
         };
     return (
         s()(n, 'Step should be set here'),
-        ef({
+        eN({
             paymentModalArgs: m,
             initialStep: T.h8.PAYMENT_TYPE,
             prependSteps: [T.h8.PROMOTION_INFO],
@@ -205,49 +205,49 @@ function eN(e) {
         })
     );
 }
-function ef(e) {
+function eN(e) {
     let t,
         n,
         i,
         u,
-        { paymentModalArgs: h, initialStep: A, prependSteps: N, appendSteps: f, onReturn: b, onComplete: _, onStepChange: y, breadcrumpSteps: g, currentBreadcrumpStep: O, header: w, analyticsLocation: Z, hideBreadcrumbs: j = !1, usePaymentModalStep: k = !1, isEligibleForTrial: H = !1, allowDesktopRedirectPurchase: U = !1, toastContent: el, overwriteSubscriptionPaymentSource: ei = !1 } = e,
+        { paymentModalArgs: h, initialStep: A, prependSteps: f, appendSteps: N, onReturn: b, onComplete: _, onStepChange: y, breadcrumpSteps: g, currentBreadcrumpStep: O, header: w, analyticsLocation: Z, hideBreadcrumbs: j = !1, usePaymentModalStep: k = !1, isEligibleForTrial: H = !1, allowDesktopRedirectPurchase: U = !1, toastContent: el, overwriteSubscriptionPaymentSource: ei = !1 } = e,
         eA = {
-            steps: [...N, ...q, ...f],
+            steps: [...f, ...q, ...N],
             methodType: W.He.CARD
         },
-        eN = {
-            steps: [...N, ...z, ...f],
+        ef = {
+            steps: [...f, ...z, ...N],
             methodType: W.He.PAYMENT_REQUEST
         },
-        ef = {
-            steps: [...N, ...J, ...f],
+        eN = {
+            steps: [...f, ...J, ...N],
             methodType: W.He.PAYPAL
         },
         eb = {
-            steps: [...N, ...X, ...f],
+            steps: [...f, ...X, ...N],
             methodType: W.He.VENMO
         },
         e_ = {
-            steps: [...N, ...z, ...f]
+            steps: [...f, ...z, ...N]
         },
         ey = {
-            steps: [...N, ...$, ...f],
+            steps: [...f, ...$, ...N],
             methodType: W.He.SOFORT
         },
         eP = {
-            steps: [...N, ...ee, ...f],
+            steps: [...f, ...ee, ...N],
             methodType: W.He.PRZELEWY24
         },
         eg = {
-            steps: [...N, ...et, ...f],
+            steps: [...f, ...et, ...N],
             methodType: W.He.EPS
         },
         eC = {
-            steps: [...N, ...en, ...f],
+            steps: [...f, ...en, ...N],
             methodType: W.He.IDEAL
         },
         eT = {
-            steps: [...N, ...ea, ...f],
+            steps: [...f, ...ea, ...N],
             methodType: W.He.CASH_APP
         },
         [eI, eS] = r.useState(A),
@@ -287,7 +287,7 @@ function ef(e) {
         var t;
         ew(e.id), (t = e), (0, c.showToast)((0, c.createToast)(void 0 !== el ? el : Q.intl.string(Q.t['VJPg+v']), c.ToastType.SUCCESS, { position: c.ToastPosition.BOTTOM })), _(eI, t), eM(A, !1);
     }
-    let e8 = (0, x.q1)().enabled && U;
+    let e8 = (0, x.q)().enabled && U;
     switch (eI) {
         case T.h8.PAYMENT_TYPE:
             (t = (0, a.jsx)(es, {
@@ -297,13 +297,13 @@ function ef(e) {
                             e8 ? eM(T.h8.AWAITING_BROWSER_CHECKOUT) : (ex(eA), eM(T.h8.CREDIT_CARD_INFORMATION));
                             break;
                         case W.He.PAYPAL:
-                            ex(ef), eM(T.h8.PAYPAL_INFORMATION);
+                            ex(eN), eM(T.h8.PAYPAL_INFORMATION);
                             break;
                         case W.He.VENMO:
                             ex(eb), eM(T.h8.VENMO_INFORMATION);
                             break;
                         case W.He.PAYMENT_REQUEST:
-                            ex(eN), eM(T.h8.PAYMENT_REQUEST_INFORMATION);
+                            ex(ef), eM(T.h8.PAYMENT_REQUEST_INFORMATION);
                             break;
                         case W.He.SOFORT:
                             ex(ey), eM(T.h8.SOFORT_INFORMATION);
@@ -329,7 +329,7 @@ function ef(e) {
                         case W.He.GOPAY_WALLET:
                         case W.He.BANCONTACT:
                             ex({
-                                steps: [...N, ...er, ...f],
+                                steps: [...f, ...er, ...N],
                                 methodType: e
                             }),
                                 eM(T.h8.ADDRESS);
@@ -341,7 +341,7 @@ function ef(e) {
                         ...e,
                         info: t
                     })),
-                        ex(eN),
+                        ex(ef),
                         e2(e);
                 },
                 onPaymentRequestSourceFailed: () => {
@@ -714,7 +714,7 @@ function ef(e) {
             sideMargin: 20,
             children: t
         }),
-        tt = eI === T.h8.PAYMENT_TYPE && 0 === N.length ? null : n;
+        tt = eI === T.h8.PAYMENT_TYPE && 0 === f.length ? null : n;
     return k
         ? (0, a.jsxs)(a.Fragment, {
               children: [
@@ -761,8 +761,8 @@ function eb(e) {
             info: ei,
             isValid: !1
         })),
-        [E, N] = r.useState(''),
-        [f, b] = r.useState(''),
+        [E, f] = r.useState(''),
+        [N, b] = r.useState(''),
         [_, y] = r.useState(''),
         [P, g] = r.useState(() => ({ token: null })),
         [C, T, I, S, v] = (0, o.Wu)([M.Z], () => [M.Z.braintreeEmail, M.Z.braintreeNonce, M.Z.error, M.Z.venmoUsername, M.Z.adyenPaymentData]),
@@ -819,12 +819,12 @@ function eb(e) {
             isAuthenticating: Q,
             purchaseTokenAuthState: V,
             purchaseTokenHash: G,
-            epsBankState: f,
+            epsBankState: N,
             setEpsBankState: b,
             idealBankState: _,
             setIdealBankState: y,
             p24BankState: E,
-            setP24BankState: N
+            setP24BankState: f
         }
     );
 }

@@ -111,7 +111,7 @@ n.Z = (e) => {
                 },
                 className: r()(x.previewContainer, {
                     [x.previewContainerSelected]: a && null == T,
-                    [x.previewContainerError]: null != T
+                    [x.previewContainerError]: a && null != T
                 }),
                 children: [
                     (0, i.jsxs)('div', {

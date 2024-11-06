@@ -21,31 +21,31 @@ function x(e) {
     let { changeTitle: x, value: p, options: f, className: C, onChange: I } = e,
         [_, N] = r.useState(p),
         [v, T] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        S = r.useRef(null);
+        [j, S] = r.useState(!1),
+        b = r.useRef(null);
     r.useEffect(() => {
         N(p);
     }, [p]),
         r.useEffect(
             () => () => {
-                clearTimeout(S.current);
+                clearTimeout(b.current);
             },
             []
         );
-    let b = f.find((e) => e.value === _),
+    let E = f.find((e) => e.value === _),
         R = (e) => {
             if (!e.disabled && e.value !== _)
-                E(!0),
+                S(!0),
                     null == I || I(e),
                     N(e.value),
-                    (S.current = setTimeout(() => {
-                        E(!1), T(!1);
+                    (b.current = setTimeout(() => {
+                        S(!1), T(!1);
                     }, 1000));
         };
     return (0, i.jsx)(u.Z, {
-        title: v ? x : null !== (t = null == b ? void 0 : b.title) && void 0 !== t ? t : x,
-        description: v ? '('.concat(null !== (n = null == b ? void 0 : b.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == b ? void 0 : b.description) && void 0 !== l ? l : '',
-        highlightColor: v ? d.q.NONE : null == b ? void 0 : b.highlightColor,
+        title: v ? x : null !== (t = null == E ? void 0 : E.title) && void 0 !== t ? t : x,
+        description: v ? '('.concat(null !== (n = null == E ? void 0 : E.title) && void 0 !== n ? n : h.intl.string(h.t.PoWNfX), ')') : null !== (l = null == E ? void 0 : E.description) && void 0 !== l ? l : '',
+        highlightColor: v ? d.q.NONE : null == E ? void 0 : E.highlightColor,
         action: (0, i.jsx)(a.Button, {
             look: a.Button.Looks.LINK,
             size: a.Button.Sizes.MIN,

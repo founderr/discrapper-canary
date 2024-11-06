@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 });
 var i,
@@ -128,7 +128,7 @@ let j = (0, f.i$)({
         },
         getAmount: (e) => e.amount
     }),
-    E = (0, C.rM)(
+    S = (0, C.rM)(
         [
             (0, C.Fd)({
                 key: 'PERIOD',
@@ -173,7 +173,7 @@ let j = (0, f.i$)({
         ],
         { expandableToggleColumnKey: 'DROPDOWN' }
     );
-function S(e) {
+function b(e) {
     let { ListingIdLabel: t, payoutsByPeriod: n } = e,
         { cellProps: i, data: r } = (0, C.GN)(n, {
             generateExpandedRows: (e) =>
@@ -194,7 +194,7 @@ function S(e) {
             [i, t]
         );
     return (0, l.jsx)(f.ZP, {
-        columns: E,
+        columns: S,
         data: r,
         cellProps: a
     });

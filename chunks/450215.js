@@ -27,7 +27,7 @@ var i = n(200651),
     T = n(517194);
 function j(e) {
     var t, n;
-    let { guildId: l, initialEditStateId: a, allSubscriptionListings: j, priceTiers: E, onDeleteEditState: S, groupListingId: b, onBeforeDispatchNewListing: R, onAfterDispatchNewListing: Z } = e,
+    let { guildId: l, initialEditStateId: a, allSubscriptionListings: j, priceTiers: S, onDeleteEditState: b, groupListingId: E, onBeforeDispatchNewListing: R, onAfterDispatchNewListing: Z } = e,
         [A, L] = r.useState(a),
         y = (0, c.e7)([x.Z], () => x.Z.getSubscriptionListing(A)),
         D = null == y,
@@ -115,7 +115,7 @@ function j(e) {
                                       look: d.Button.Looks.BLANK,
                                       className: T.cancel,
                                       onClick: () => {
-                                          C.GM(A), D ? null == S || S() : M(!1);
+                                          C.GM(A), D ? null == b || b() : M(!1);
                                       },
                                       children: v.intl.string(v.t['ETE/oK'])
                                   }),
@@ -124,7 +124,7 @@ function j(e) {
                                           Q({
                                               guildId: l,
                                               editStateId: A,
-                                              groupListingId: b,
+                                              groupListingId: E,
                                               onBeforeDispatchNewListing: R,
                                               onAfterDispatchNewListing: (e) => {
                                                   L(e.id), null == Z || Z(e);
@@ -152,22 +152,22 @@ function j(e) {
                 (0, i.jsx)(f.I, {
                     editStateId: A,
                     guildId: l,
-                    groupListingId: b,
+                    groupListingId: E,
                     children: (0, i.jsx)(_.Z, {
                         allSubscriptionListings: j,
-                        priceTiers: E,
+                        priceTiers: S,
                         loading: et,
                         error: null != X ? X : $,
                         handlePublishTier: () => {
-                            o()(null != b, 'group listing doesnt exist'),
+                            o()(null != E, 'group listing doesnt exist'),
                                 o()(null != y, 'subscription listing doesnt exist'),
                                 ee({
                                     guildId: l,
-                                    groupListingId: b,
+                                    groupListingId: E,
                                     listingId: y.id
                                 });
                         },
-                        onDeleteEditState: S
+                        onDeleteEditState: b
                     })
                 })
         ]

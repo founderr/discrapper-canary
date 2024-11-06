@@ -373,7 +373,7 @@ function j(e) {
         ]
     });
 }
-function E(e) {
+function S(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.PAYPAL);
     return (0, i.jsxs)(i.Fragment, {
@@ -399,7 +399,7 @@ function E(e) {
         ]
     });
 }
-function S(e) {
+function b(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.EBAY);
     return (0, i.jsxs)(i.Fragment, {
@@ -453,7 +453,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function E(e) {
     let { configMetadataMap: t, onConfigurationChange: n, locked: r } = e,
         l = h.Z.get(g.ABu.TIKTOK);
     return (0, i.jsxs)(i.Fragment, {
@@ -607,13 +607,13 @@ function Z(e) {
             p = (0, i.jsx)(j, { ...x });
             break;
         case g.ABu.PAYPAL:
-            p = (0, i.jsx)(E, { ...x });
-            break;
-        case g.ABu.EBAY:
             p = (0, i.jsx)(S, { ...x });
             break;
-        case g.ABu.TIKTOK:
+        case g.ABu.EBAY:
             p = (0, i.jsx)(b, { ...x });
+            break;
+        case g.ABu.TIKTOK:
+            p = (0, i.jsx)(E, { ...x });
             break;
         default:
             p = (0, i.jsx)(R, {

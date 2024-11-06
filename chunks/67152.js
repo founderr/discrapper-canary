@@ -3,10 +3,10 @@ n.d(t, {
         return L;
     },
     bL: function () {
-        return S;
+        return b;
     },
     kA: function () {
-        return b;
+        return E;
     }
 }),
     n(653041),
@@ -34,7 +34,7 @@ var i,
     T = n(388032),
     j = n(539918);
 ((r = i || (i = {})).DROPDOWN = 'dropdown'), (r.PERIOD = 'period'), (r.SUBSCRIBERS = 'subscribers'), (r.AMOUNT = 'amount'), (r.STATUS = 'status');
-let E = (e, t, n, i) => {
+let S = (e, t, n, i) => {
         let r = null != i ? d()(i).add(15, 'days').toISOString() : void 0,
             s = (0, f.Zo)(r, 'MMM D');
         switch (e) {
@@ -109,14 +109,14 @@ let E = (e, t, n, i) => {
         }
         return null;
     },
-    S = (e) => {
+    b = (e) => {
         let { children: t, className: n } = e;
         return (0, l.jsx)('div', {
             className: o()(j.cell, n),
             children: t
         });
     },
-    b = (e) => {
+    E = (e) => {
         let { children: t } = e;
         return (0, l.jsx)('div', {
             className: j.cell,
@@ -125,14 +125,14 @@ let E = (e, t, n, i) => {
     },
     R = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(S, {
+        return (0, l.jsx)(b, {
             className: j.statusCell,
             children: null != t ? t : '-'
         });
     },
     Z = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(S, {
+        return (0, l.jsx)(b, {
             className: j.periodCell,
             children: d()(t).utc().format('MMMM YYYY')
         });
@@ -142,11 +142,11 @@ let E = (e, t, n, i) => {
         let { listingId: n } = e,
             i = (0, u.e7)([p.Z], () => p.Z.getSubscriptionListing(n)),
             r = null !== (t = null == i ? void 0 : i.name) && void 0 !== t ? t : '['.concat(T.intl.string(T.t['4tEmXV']), ']');
-        return (0, l.jsx)(S, { children: r });
+        return (0, l.jsx)(b, { children: r });
     },
     L = (e) => {
         let { children: t } = e;
-        return (0, l.jsxs)(S, {
+        return (0, l.jsxs)(b, {
             className: j.subscribersCell,
             children: [
                 null != t ? t : '-',
@@ -226,11 +226,11 @@ let E = (e, t, n, i) => {
             renderHeader: () => (0, l.jsx)(y, {}),
             render(e, t) {
                 let { expandedRows: n } = t,
-                    i = [(0, l.jsx)(b, { children: e.amount }, e.key)];
+                    i = [(0, l.jsx)(E, { children: e.amount }, e.key)];
                 if (n.has(e.key))
                     for (let t in e.ppgs) {
                         let n = e.ppgs[t];
-                        i.push((0, l.jsx)(b, { children: null == n ? void 0 : n.amount }, t));
+                        i.push((0, l.jsx)(E, { children: null == n ? void 0 : n.amount }, t));
                     }
                 return i;
             }
@@ -241,7 +241,7 @@ let E = (e, t, n, i) => {
             renderHeader: () => (0, l.jsx)(D, {}),
             render(e) {
                 let { ppgStatus: t, payoutStatus: n, ppgDeferralReasons: i, periodEndDate: r } = (0, g.j0)(e);
-                return (0, l.jsx)(R, { children: E(t, n, i, r) });
+                return (0, l.jsx)(R, { children: S(t, n, i, r) });
             }
         }
     ];

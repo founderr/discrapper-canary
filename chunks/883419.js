@@ -16,11 +16,11 @@ var i = t(200651),
     u = t(664891),
     p = t(171246),
     f = t(430824),
-    b = t(563132),
-    m = t(409813),
+    m = t(563132),
+    b = t(409813),
     h = t(45572),
-    x = t(51499),
-    g = t(678334),
+    g = t(51499),
+    x = t(678334),
     _ = t(456251),
     v = t(614277),
     C = t(698708),
@@ -28,9 +28,9 @@ var i = t(200651),
     k = t(748605);
 function y(e) {
     var n, t;
-    let { backButtonEligible: o, prevStep: y, handleStepChange: j, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: E, analyticsData: N, analyticsLocation: O, handleClose: I } = e,
-        { activeSubscription: w, application: A, setUpdatedSubscription: M, contextMetadata: R, currencies: Z, paymentSources: H, priceOptions: F, purchaseError: L, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: V, setPaymentSourceId: K, setPurchaseState: Y, setPurchaseError: z, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, b.usePaymentContext)();
-    a()(null != W, 'Expected plan to be selected'), a()(null != A, 'Expected application');
+    let { backButtonEligible: o, prevStep: y, handleStepChange: j, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: O, openInvoiceId: B, analyticsData: E, analyticsLocation: N, handleClose: I } = e,
+        { activeSubscription: A, application: w, setUpdatedSubscription: M, contextMetadata: R, currencies: Z, paymentSources: H, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: V, setPaymentSourceId: K, setPurchaseState: Y, setPurchaseError: z, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != W, 'Expected plan to be selected'), a()(null != w, 'Expected application');
     let X = r.useRef(null),
         [J, $] = (0, s.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
@@ -38,11 +38,11 @@ function y(e) {
         [et, ei] = r.useState(null),
         er = (0, p.KW)(null !== (n = null == G ? void 0 : G.flags) && void 0 !== n ? n : 0);
     r.useEffect(() => {
-        null != L && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
-    }, [L]);
+        null != F && null != X.current && X.current.scrollIntoView({ behavior: 'smooth' });
+    }, [F]);
     let eo = r.useCallback(
             (e) => {
-                M(e), j(m.h8.CONFIRM);
+                M(e), j(b.h8.CONFIRM);
             },
             [j, M]
         ),
@@ -51,7 +51,7 @@ function y(e) {
         ? (0, i.jsx)(_.Z, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(x.Z, { className: k.breadcrumbs }),
+                  (0, i.jsx)(g.Z, { className: k.breadcrumbs }),
                   (0, i.jsxs)(v.C3, {
                       children: [
                           (0, i.jsx)(C.Z, {}),
@@ -67,7 +67,7 @@ function y(e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: S.intl.format(S.t.y4n0GR, { applicationName: A.name })
+                                          children: S.intl.format(S.t.y4n0GR, { applicationName: w.name })
                                       })
                                   ]
                               }),
@@ -95,15 +95,15 @@ function y(e) {
                                       })
                                   ]
                               }),
-                          null == w
+                          null == A
                               ? (0, i.jsx)(d.Z, {
                                     selectedPlanId: W.id,
                                     paymentSources: H,
                                     onPaymentSourceChange: (e) => K(null != e ? e.id : null),
-                                    priceOptions: F,
+                                    priceOptions: L,
                                     currencies: Z,
                                     onCurrencyChange: (e) => V(e),
-                                    handlePaymentSourceAdd: () => j(m.h8.ADD_PAYMENT_STEPS),
+                                    handlePaymentSourceAdd: () => j(b.h8.ADD_PAYMENT_STEPS),
                                     setHasAcceptedTerms: q,
                                     legalTermsNodeRef: ea,
                                     hasLegalTermsFlash: J,
@@ -115,12 +115,12 @@ function y(e) {
                                     handleClose: I
                                 })
                               : (0, i.jsx)(u.Z, {
-                                    premiumSubscription: w,
+                                    premiumSubscription: A,
                                     paymentSources: H,
-                                    priceOptions: F,
+                                    priceOptions: L,
                                     onPaymentSourceChange: (e) => K(null != e ? e.id : null),
                                     onPaymentSourceAdd: () => {
-                                        j(m.h8.ADD_PAYMENT_STEPS);
+                                        j(b.h8.ADD_PAYMENT_STEPS);
                                     },
                                     planId: W.id,
                                     setHasAcceptedTerms: q,
@@ -129,30 +129,30 @@ function y(e) {
                                     onInvoiceError: (e) => {
                                         ei(e);
                                     },
-                                    planGroup: B,
+                                    planGroup: O,
                                     currencies: Z,
                                     onCurrencyChange: (e) => V(e),
-                                    hasOpenInvoice: null != E,
+                                    hasOpenInvoice: null != B,
                                     purchaseState: U,
                                     handleClose: I
                                 })
                       ]
                   }),
                   (0, i.jsx)(v.O3, {
-                      children: (0, i.jsx)(g.Z, {
-                          premiumSubscription: null != w ? w : null,
+                      children: (0, i.jsx)(x.Z, {
+                          premiumSubscription: null != A ? A : null,
                           setPurchaseState: Y,
                           onBack: () => null != y && j(y),
                           onNext: eo,
                           onPurchaseError: (e) => z(e),
                           legalTermsNodeRef: ea,
                           flashLegalTerms: () => $(!0),
-                          analyticsLocation: O,
-                          baseAnalyticsData: N,
+                          analyticsLocation: N,
+                          baseAnalyticsData: E,
                           flowStartTime: R.startTime,
-                          planGroup: B,
+                          planGroup: O,
                           purchaseTokenAuthState: D,
-                          openInvoiceId: E,
+                          openInvoiceId: B,
                           metadata: er ? void 0 : Q,
                           backButtonEligible: o,
                           invoiceError: et,

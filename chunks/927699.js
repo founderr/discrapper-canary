@@ -23,7 +23,7 @@ let v = (0, m.kt)({
     type: x.d4z.DM
 });
 function g(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: j, disabled: E = !1, disableThemedBackground: I = !1 } = e,
+    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: E, disabled: j = !1, disableThemedBackground: I = !1 } = e,
         [y, P] = l.useState(null != m ? m : g),
         [T, N] = l.useState((0, o.JM)(y)),
         b = l.useRef(!1);
@@ -42,10 +42,10 @@ function g(e) {
             children: (0, i.jsxs)(d.Z, {
                 title: n,
                 errors: t,
-                disabled: E,
+                disabled: j,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, j),
+                        innerClassName: s()(f.textArea, E),
                         editorClassName: f.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: function (e, n, t) {

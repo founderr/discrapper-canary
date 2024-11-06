@@ -29,9 +29,9 @@ var i = n(200651),
     v = n(889564),
     T = n(372129),
     j = n(357156),
-    E = n(210887),
-    S = n(626135),
-    b = n(768581),
+    S = n(210887),
+    b = n(626135),
+    E = n(768581),
     R = n(176354),
     Z = n(267642),
     A = n(51144),
@@ -51,7 +51,7 @@ let B = d().throttle(x.OQ, 1000),
     G = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1 } = e,
             [o, c] = r.useState(n.name),
-            d = b.ZP.getEmojiURL({
+            d = E.ZP.getEmojiURL({
                 id: n.id,
                 animated: n.animated,
                 size: 32
@@ -282,7 +282,7 @@ t.ZP = () => {
     let e = (0, m.e7)([D.Z], () => D.Z.getGuild()),
         [t, l] = r.useState('');
     o()(null != e, 'ConnectedGuildSettingsEmoji must be rendered within a guild context');
-    let s = (0, m.e7)([E.Z], () => E.Z.theme),
+    let s = (0, m.e7)([S.Z], () => S.Z.theme),
         { canCreateExpressions: a } = (0, j.XJ)(e),
         { revision: c, emojis: g } = (0, m.cj)([y.Z], () => ({
             revision: y.Z.getEmojiRevision(e.id),
@@ -290,7 +290,7 @@ t.ZP = () => {
         })),
         x = (0, C.Z)(c),
         [p, N] = r.useState(!1),
-        [b, R] = r.useState(!1),
+        [E, R] = r.useState(!1),
         Z = r.useRef(null);
     r.useEffect(() => {
         p && W();
@@ -319,7 +319,7 @@ t.ZP = () => {
             }),
         z = async (n) => {
             l((0, u.Z)()),
-                S.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
+                b.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
                     guild_id: e.id,
                     upload_id: t
                 }),
@@ -414,19 +414,19 @@ t.ZP = () => {
                                 onClick: () => {
                                     let t = (0, u.Z)();
                                     l(t),
-                                        S.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
+                                        b.default.track(O.rMx.EMOJI_UPLOAD_STARTED, {
                                             guild_id: e.id,
                                             upload_id: t
                                         });
                                 },
-                                disabled: b || 0 === G || !a,
-                                submitting: b,
+                                disabled: E || 0 === G || !a,
+                                submitting: E,
                                 focusProps: { within: !0 },
                                 children: [
                                     P.intl.string(P.t.DU0dy8),
                                     G > 0
                                         ? (0, i.jsx)(T.Z, {
-                                              disabled: b || 0 === G || !a,
+                                              disabled: E || 0 === G || !a,
                                               tabIndex: 0,
                                               onChange: H,
                                               setLoading: R,

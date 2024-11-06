@@ -132,10 +132,10 @@ function j(e) {
         ]
     });
 }
-function E(e) {
+function S(e) {
     return (0, m.r5)(e, m.vT.ALPHA) ? (0, i.jsx)(o.Z, { className: I.alphaBetaTag }) : (0, m.r5)(e, m.vT.BETA) ? (0, i.jsx)(c.Z, { className: I.alphaBetaTag }) : null;
 }
-function S(e) {
+function b(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: a } = e,
         o = (0, g.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, h.w)(),
@@ -156,7 +156,7 @@ function S(e) {
             v(e), a(e);
         };
     if (null == o) return null;
-    let { headerText: S, headerSubtext: b, descriptionText: R, icon: Z } = o,
+    let { headerText: b, headerSubtext: E, descriptionText: R, icon: Z } = o,
         A = !(0, d.Vb)(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -178,12 +178,12 @@ function S(e) {
                         children: [
                             (0, i.jsxs)('div', {
                                 className: I.ruleTextHeader,
-                                children: [S, E(t.triggerType)]
+                                children: [b, S(t.triggerType)]
                             }),
                             (0, i.jsx)(s.Text, {
                                 className: I.ruleSubtextHeader,
                                 variant: 'text-sm/normal',
-                                children: b
+                                children: E
                             })
                         ]
                     }),
@@ -229,7 +229,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function E(e) {
     let { triggerType: t, onSetupRule: n } = e,
         l = r.useMemo(() => (0, g.w)(t), [t]);
     if (null == l) return null;
@@ -253,7 +253,7 @@ function b(e) {
                         color: 'header-primary',
                         children: (0, i.jsxs)('div', {
                             className: I.ruleTextHeader,
-                            children: [a, E(t)]
+                            children: [a, S(t)]
                         })
                     }),
                     (0, i.jsx)(s.Text, {
@@ -290,7 +290,7 @@ function R(e) {
                             });
                     });
         },
-        h = (0, i.jsx)(b, {
+        h = (0, i.jsx)(E, {
             triggerType: r,
             onSetupRule: d
         });
@@ -303,7 +303,7 @@ function R(e) {
                       onChangeRule: u,
                       onContextMenu: m
                   })
-                : (0, i.jsx)(S, {
+                : (0, i.jsx)(b, {
                       rule: t,
                       isDefaultRule: o,
                       onContextMenu: m

@@ -24,13 +24,13 @@ function g(e) {
         N = null != _ ? (0, u.L9)(_) : null,
         v = (0, r.e7)([a.Z, s.Z], () => a.Z.can(d.Plq.MODERATE_MEMBERS, s.Z.getGuild(x)), [x]);
     if (null == I) return null;
-    let { headerText: T, descriptionText: j, icon: E } = I;
+    let { headerText: T, descriptionText: j, icon: S } = I;
     return (0, i.jsxs)('div', {
         className: h.actionContainer,
         children: [
             (0, i.jsx)('div', {
                 className: h.actionIconContainer,
-                children: (0, i.jsx)(E, {
+                children: (0, i.jsx)(S, {
                     size: 'md',
                     color: 'currentColor',
                     className: h.actionIcon

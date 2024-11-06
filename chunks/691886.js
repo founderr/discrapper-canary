@@ -87,7 +87,7 @@ function j(e) {
         N = f.intl.string(f.t.d7YJMD),
         v = (0, a.e7)([m.Z], () => m.Z.getCategories(t), [t]),
         j = (0, x.m7)(null != l ? l : p.lds),
-        E = r.useMemo(() => {
+        S = r.useMemo(() => {
             let e = [
                     {
                         value: null,
@@ -118,7 +118,7 @@ function j(e) {
         }, [N, l, j, v, d, s]);
     return (0, i.jsx)(o.Select, {
         placeholder: f.intl.string(f.t.r2pts7),
-        options: E,
+        options: S,
         select: function (e) {
             null == e
                 ? (0, o.openModalLazy)(async () => {

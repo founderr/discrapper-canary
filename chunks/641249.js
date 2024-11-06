@@ -33,15 +33,15 @@ function p() {
         let t = new Set(p);
         t.delete(e), f(t);
     }
-    let E = (0, a.mY)();
+    let S = (0, a.mY)();
     return (0, i.jsxs)(l.FormSection, {
         title: g.intl.string(g.t.D0qeOz),
-        disabled: E,
+        disabled: S,
         children: [
             (0, i.jsxs)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: x.formDescription,
-                disabled: E,
+                disabled: S,
                 children: [g.intl.format(g.t.zuwel5, { premiumEmojiMaximum: v }), (0, i.jsx)('br', {}), g.intl.format(g.t.sEkgBg, { handleTransitionToManageEmoji: _ })]
             }),
             (0, i.jsx)(m.E, {
@@ -79,7 +79,7 @@ function p() {
                             });
                     });
                 },
-                disabled: E,
+                disabled: S,
                 children: g.intl.string(g.t.ouOOV1)
             })
         ]

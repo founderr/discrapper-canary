@@ -26,9 +26,9 @@ function _(e) {
         { editStateId: n, guildId: _ } = (0, o.N)(),
         [N, v] = c.UE(n),
         [T, j] = c.R7(n),
-        E = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
-        { isFullServerGating: S } = (0, d.Z)(_),
-        b = (0, s.Dt)(),
+        S = r.useMemo(() => t.filter((e) => e.id !== n), [t, n]),
+        { isFullServerGating: b } = (0, d.Z)(_),
+        E = (0, s.Dt)(),
         R = (0, a.mY)();
     return (0, i.jsxs)(u.Z, {
         title: C.intl.string(C.t.YNw2Sk),
@@ -47,7 +47,7 @@ function _(e) {
                     (0, i.jsx)(m.Z, {
                         channelBenefits: N,
                         intangibleBenefits: T,
-                        subscriptionListings: E,
+                        subscriptionListings: S,
                         onImport: function (e, t) {
                             v((t) => t.concat(e)), j((e) => e.concat(t));
                         }
@@ -81,7 +81,7 @@ function _(e) {
             (0, i.jsx)(l.Spacer, { size: 24 }),
             (0, i.jsxs)(l.FormSection, {
                 title: C.intl.string(C.t.S2kKzM),
-                titleId: b,
+                titleId: E,
                 disabled: R,
                 children: [
                     (0, i.jsx)(l.FormText, {
@@ -90,11 +90,11 @@ function _(e) {
                         disabled: R,
                         children: C.intl.string(C.t['5a4Axc'])
                     }),
-                    S &&
+                    b &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(h.Z, {
-                                    'aria-labelledby': b,
+                                    'aria-labelledby': E,
                                     disabled: R
                                 }),
                                 (0, i.jsx)(l.Spacer, { size: 8 })

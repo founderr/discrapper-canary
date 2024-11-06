@@ -34,7 +34,7 @@ let A = {
         large: p.large,
         none: null
     };
-class N extends (s = c.PureComponent) {
+class f extends (s = c.PureComponent) {
     render() {
         let { icon: e, color: t, children: n, iconSize: a, className: r, iconClassName: l } = this.props;
         return (0, o.jsxs)(m.Z, {
@@ -50,4 +50,4 @@ class N extends (s = c.PureComponent) {
         });
     }
 }
-h(N, 'Colors', l), h(N, 'Sizes', i), (t.Z = N);
+h(f, 'Colors', l), h(f, 'Sizes', i), (t.Z = f);

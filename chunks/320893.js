@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     }
 });
 var i = n(200651);
@@ -194,7 +194,7 @@ function j() {
         ]
     });
 }
-function E() {
+function S() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {

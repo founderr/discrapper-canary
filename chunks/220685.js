@@ -26,11 +26,11 @@ var i = n(200651),
     v = n(730647),
     T = n(584825),
     j = n(981631),
-    E = n(388032),
-    S = n(842976);
-let b = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
+    S = n(388032),
+    b = n(842976);
+let E = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 2196594, 4752414, 13064760, 13058360, 12401000, 12933021, 5659039, 4092591, 5868359, 6586142, 8876063, 8484432, 9979976, 5269106, 3421236],
     R = /^(https?:\/\/)?(?:m\.|www\.)?(youtu\.be|youtube\.com)\/(embed\/|v\/|watch\?v=|watch\?.+&v=)?((\w|-){11})(?:\S+)?$/,
-    Z = b[4],
+    Z = E[4],
     A = (e) => {
         var t, n;
         let { guild: l, canEnable: a } = e,
@@ -66,94 +66,94 @@ let b = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
             children: [
                 (0, i.jsx)(g.FormTitle, {
                     tag: 'h1',
-                    children: E.intl.string(E.t.N6Tg9P)
+                    children: S.intl.string(S.t.N6Tg9P)
                 }),
                 (0, i.jsx)(g.FormText, {
                     type: g.FormText.Types.DESCRIPTION,
-                    children: E.intl.string(E.t['uU/69/'])
+                    children: S.intl.string(S.t['uU/69/'])
                 }),
                 (0, i.jsx)(g.FormSwitch, {
-                    className: S.enableSwitch,
+                    className: b.enableSwitch,
                     value: v,
                     disabled: H || (!v && !a),
-                    tooltipNote: v || a ? void 0 : E.intl.string(E.t.mIgfEh),
+                    tooltipNote: v || a ? void 0 : S.intl.string(S.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => A(e),
                     children: (0, i.jsx)(g.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: E.intl.string(E.t.lwvl1t)
+                        children: S.intl.string(S.t.lwvl1t)
                     })
                 }),
                 (0, i.jsxs)(g.FormItem, {
-                    title: E.intl.string(E.t.N46WOj),
+                    title: S.intl.string(S.t.N46WOj),
                     disabled: H,
                     children: [
                         (0, i.jsx)(x.Z, {
                             value: G,
-                            className: s()({ [S.disabled]: H })
+                            className: s()({ [b.disabled]: H })
                         }),
                         (0, i.jsx)(g.Button, {
                             onClick: () => (0, f.Z)(G),
-                            className: S.openPageButton,
+                            className: b.openPageButton,
                             disabled: H,
-                            children: E.intl.string(E.t.CaOYqa)
+                            children: S.intl.string(S.t.CaOYqa)
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: b.divider }),
                 (0, i.jsxs)(g.FormItem, {
-                    title: E.intl.string(E.t.W39uIC),
+                    title: S.intl.string(S.t.W39uIC),
                     disabled: H,
                     children: [
                         (0, i.jsx)(g.FormText, {
                             disabled: H,
-                            children: E.intl.string(E.t.B6XtEx)
+                            children: S.intl.string(S.t.B6XtEx)
                         }),
                         (0, i.jsxs)('div', {
-                            className: S.accentColorContainer,
+                            className: b.accentColorContainer,
                             children: [
                                 (0, i.jsx)(g.Button, {
                                     onClick: () => null,
                                     color: g.Button.Colors.CUSTOM,
                                     style: { backgroundColor: '#'.concat(L.toString(16).padStart(6, '0')) },
-                                    className: S.buttonPreview,
+                                    className: b.buttonPreview,
                                     disabled: H,
-                                    children: E.intl.string(E.t.l6iM39)
+                                    children: S.intl.string(S.t.l6iM39)
                                 }),
                                 (0, i.jsx)(g.ColorPicker, {
-                                    colors: b,
+                                    colors: E,
                                     customColor: null,
                                     defaultColor: Z,
                                     value: L,
                                     onChange: (e) => y(e),
                                     renderDefaultButton: () => null,
                                     renderCustomButton: () => null,
-                                    colorContainerClassName: S.hideColorButtons,
+                                    colorContainerClassName: b.hideColorButtons,
                                     disabled: H
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: b.divider }),
                 (0, i.jsxs)(g.FormItem, {
-                    title: E.intl.string(E.t.k2yRvb),
+                    title: S.intl.string(S.t.k2yRvb),
                     disabled: H,
                     children: [
                         (0, i.jsx)(g.FormText, {
                             disabled: H,
-                            children: E.intl.string(E.t['amd99/'])
+                            children: S.intl.string(S.t['amd99/'])
                         }),
                         (0, i.jsx)(g.TextInput, {
                             value: null != D ? D : void 0,
                             onChange: (e) => O('' === e ? null : e),
-                            error: M ? null : E.intl.string(E.t['1kL79f']),
-                            placeholder: E.intl.string(E.t['+I4gdX']),
-                            className: S.trailerInputWrapper,
-                            inputClassName: s()(S.trailerInput, {
-                                [S.error]: !M,
-                                [S.trailerInputWithCheckmark]: F || !M
+                            error: M ? null : S.intl.string(S.t['1kL79f']),
+                            placeholder: S.intl.string(S.t['+I4gdX']),
+                            className: b.trailerInputWrapper,
+                            inputClassName: s()(b.trailerInput, {
+                                [b.error]: !M,
+                                [b.trailerInputWithCheckmark]: F || !M
                             }),
                             prefixElement:
                                 M &&
@@ -162,38 +162,38 @@ let b = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                     size: 'md',
                                     color: m.Z.unsafe_rawColors.BRAND_500.css,
                                     secondaryColor: m.Z.unsafe_rawColors.WHITE_500.css,
-                                    className: S.inputCheckmark
+                                    className: b.inputCheckmark
                                 }),
                             disabled: H
                         })
                     ]
                 }),
-                (0, i.jsx)(g.FormDivider, { className: S.divider }),
+                (0, i.jsx)(g.FormDivider, { className: b.divider }),
                 (0, i.jsxs)(g.FormItem, {
-                    title: E.intl.string(E.t.AU2HU1),
+                    title: S.intl.string(S.t.AU2HU1),
                     disabled: H,
                     children: [
                         (0, i.jsx)(g.FormText, {
                             disabled: H,
-                            children: E.intl.string(E.t.iWBt3d)
+                            children: S.intl.string(S.t.iWBt3d)
                         }),
                         (0, i.jsx)(g.FormSwitch, {
-                            className: S.premiumMemberCountSwitchContainer,
+                            className: b.premiumMemberCountSwitchContainer,
                             value: P,
                             hideBorder: !0,
                             onChange: (e) => k(e),
                             disabled: H,
                             children: (0, i.jsxs)('div', {
-                                className: S.iconSwitchLabel,
+                                className: b.iconSwitchLabel,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: S.iconContainer,
+                                        className: b.iconContainer,
                                         children: (0, i.jsx)(g.UserIcon, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 28,
                                             height: 28,
-                                            className: S.premiumMemberCountIcon
+                                            className: b.premiumMemberCountIcon
                                         })
                                     }),
                                     (0, i.jsxs)('div', {
@@ -201,12 +201,12 @@ let b = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                                             (0, i.jsx)(g.Text, {
                                                 variant: 'text-md/medium',
                                                 color: 'header-primary',
-                                                children: E.intl.string(E.t.hJsAPj)
+                                                children: S.intl.string(S.t.hJsAPj)
                                             }),
                                             (0, i.jsx)(g.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'header-secondary',
-                                                children: E.intl.string(E.t.hn65ER)
+                                                children: S.intl.string(S.t.hn65ER)
                                             })
                                         ]
                                     })
@@ -217,7 +217,7 @@ let b = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 }),
                 (0, i.jsx)(h.W, {
                     component: 'div',
-                    className: S.contentRegion,
+                    className: b.contentRegion,
                     children:
                         B &&
                         (0, i.jsx)(g.SlideIn, {

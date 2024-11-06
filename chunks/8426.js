@@ -27,13 +27,13 @@ n.d(t, {
         return _;
     },
     lq: function () {
-        return E;
-    },
-    mM: function () {
         return S;
     },
-    oo: function () {
+    mM: function () {
         return b;
+    },
+    oo: function () {
+        return E;
     },
     q6: function () {
         return A;
@@ -139,13 +139,13 @@ function j(e) {
         resourceChannelId: e
     });
 }
-function E(e) {
+function S(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
     });
 }
-async function S(e, t, n) {
+async function b(e, t, n) {
     try {
         let i = await l.tn.put({
                 url: g.ANM.RESOURCE_CHANNEL(e, t),
@@ -170,7 +170,7 @@ async function S(e, t, n) {
         });
     }
 }
-function b(e, t) {
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (!n && !h.Z.hasChanges()) return Promise.resolve();
     let { serverGuideOptional: i } = (0, d.FJ)(e);

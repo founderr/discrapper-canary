@@ -20,16 +20,16 @@ var a = n(200651),
 n(51499), n(614277);
 var A = n(122289),
     E = n(70956),
-    N = n(981631),
-    f = n(388032),
+    f = n(981631),
+    N = n(388032),
     b = n(896769);
 let _ = new Set([h.h8.SKU_SELECT, h.h8.AWAITING_AUTHENTICATION, h.h8.AWAITING_PURCHASE_TOKEN_AUTH, h.h8.CONFIRM]);
 function y(e) {
-    let { steps: t, currentStep: n, body: i, paymentError: y, header: P, footer: g, isGift: C = !1, giftMessage: T = f.intl.string(f.t.DrgnS0), hideBreadcrumbs: I = !1, isLoading: S = !1, purchaseError: v, purchaseErrorBlockRef: x, planError: L, onScroll: R, scrollerClassName: O, hasCurrencies: M = !1 } = e,
+    let { steps: t, currentStep: n, body: i, paymentError: y, header: P, footer: g, isGift: C = !1, giftMessage: T = N.intl.string(N.t.DrgnS0), hideBreadcrumbs: I = !1, isLoading: S = !1, purchaseError: v, purchaseErrorBlockRef: x, planError: L, onScroll: R, scrollerClassName: O, hasCurrencies: M = !1 } = e,
         w = null;
     null != y && null == (0, h.ly)(y) ? (w = y) : null != v ? (w = v) : null != L && (w = L);
     let D = null != w ? w.message : '';
-    null != w && w instanceof d.HF && (w.code === m.SM.CARD_DECLINED && M && (D += ' '.concat(f.intl.string(f.t.iWvwQU))), w.code === m.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = f.intl.string(f.t.ypuSd3)), w.code === N.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = f.intl.string(f.t.mXMmWF)));
+    null != w && w instanceof d.HF && (w.code === m.SM.CARD_DECLINED && M && (D += ' '.concat(N.intl.string(N.t.iWvwQU))), w.code === m.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = N.intl.string(N.t.ypuSd3)), w.code === f.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = N.intl.string(N.t.mXMmWF)));
     let { stripe: Z } = (0, p.usePaymentContext)();
     S = S || null == Z;
     let j = r.useRef(new o.V7());
@@ -49,7 +49,7 @@ function y(e) {
     }, [Z]);
     let k = t.includes(h.h8.PAYMENT_TYPE) ? h.h8.PAYMENT_TYPE : h.h8.ADD_PAYMENT_STEPS;
     return (0, a.jsxs)(l.Elements, {
-        options: N.OBo,
+        options: f.OBo,
         stripe: Z,
         children: [
             P,

@@ -26,9 +26,9 @@ var i = n(200651),
     v = n(420966),
     T = n(337344),
     j = n(275296),
-    E = n(203377),
-    S = n(981631),
-    b = n(388032),
+    S = n(203377),
+    b = n(981631),
+    E = n(388032),
     R = n(281654),
     Z = n(571621),
     A = n(179517),
@@ -46,12 +46,12 @@ function O(e) {
             s(t.name);
         }, [t.name]),
         (0, i.jsx)(d.FormItem, {
-            title: b.intl.string(b.t.dLbkBg),
+            title: E.intl.string(E.t.dLbkBg),
             required: !0,
             children: (0, i.jsx)(d.TextInput, {
                 type: 'text',
                 value: l,
-                maxLength: S.VKK,
+                maxLength: b.VKK,
                 onChange: function (e) {
                     s(e), D(t.id, e);
                 },
@@ -64,23 +64,23 @@ function M(e) {
     let { role: t, disabled: n } = e;
     return (0, i.jsxs)(d.FormItem, {
         className: R.colorPicker,
-        title: b.intl.string(b.t['1F6FzM']),
+        title: E.intl.string(E.t['1F6FzM']),
         required: !0,
         children: [
             (0, i.jsx)(d.FormText, {
                 className: R.colorDescription,
-                children: b.intl.string(b.t['9UCxlZ'])
+                children: E.intl.string(E.t['9UCxlZ'])
             }),
             (0, i.jsx)(
                 y,
                 {
-                    defaultColor: S.p6O,
-                    colors: S.pmI,
+                    defaultColor: b.p6O,
+                    colors: b.pmI,
                     value: t.color,
                     disabled: n,
                     onChange: (e) =>
                         (function (e, t) {
-                            if (e.color !== t && (t !== S.p6O || 0 !== e.color)) t === S.p6O && (t = 0), (0, I.OW)(e.id, t);
+                            if (e.color !== t && (t !== b.p6O || 0 !== e.color)) t === b.p6O && (t = 0), (0, I.OW)(e.id, t);
                         })(t, e),
                     customPickerPosition: 'right'
                 },
@@ -93,20 +93,20 @@ function P(e) {
     var t, l;
     let { role: s, guildId: a } = e;
     let o =
-            ((l = b.intl.string(b.t.Mi9KbW)),
+            ((l = E.intl.string(E.t.Mi9KbW)),
             r.useMemo(() => {
                 let e = (0, g.e5)({
                     ...(0, x.ZP)({
                         channelId: '1337',
                         content: l
                     }),
-                    state: S.yb.SENT,
+                    state: b.yb.SENT,
                     id: '31337'
                 });
                 return (
                     (e.author = new f.Z({
                         id: '313337',
-                        username: b.intl.string(b.t.cqpybG),
+                        username: E.intl.string(E.t.cqpybG),
                         discriminator: '0000',
                         bot: !1
                     })),
@@ -134,7 +134,7 @@ function P(e) {
             'data-disable-adaptive-theme': !0,
             children: [
                 (0, i.jsx)(d.ThemeProvider, {
-                    theme: S.BRd.LIGHT,
+                    theme: b.BRd.LIGHT,
                     children: (e) =>
                         (0, i.jsx)('div', {
                             className: e,
@@ -150,7 +150,7 @@ function P(e) {
                         })
                 }),
                 (0, i.jsx)(d.ThemeProvider, {
-                    theme: S.BRd.DARK,
+                    theme: b.BRd.DARK,
                     children: (e) =>
                         (0, i.jsx)('div', {
                             className: e,
@@ -178,16 +178,16 @@ function k(e) {
                 value: t.hoist,
                 onChange: (e) => (0, I.we)(t.id, e, t.mentionable),
                 hideBorder: !0,
-                children: b.intl.string(b.t.vceJPj)
+                children: E.intl.string(E.t.vceJPj)
             }),
             (0, i.jsx)(d.FormDivider, { className: R.divider }),
             (0, i.jsx)(d.FormSwitch, {
                 disabled: n,
                 value: t.mentionable,
                 onChange: (e) => (0, I.we)(t.id, t.hoist, e),
-                note: b.intl.string(b.t.kRg5W1),
+                note: E.intl.string(E.t.kRg5W1),
                 hideBorder: !0,
-                children: b.intl.format(b.t.DTXoJS, {})
+                children: E.intl.format(E.t.DTXoJS, {})
             })
         ]
     });
@@ -212,7 +212,7 @@ function w(e) {
                     children: (0, i.jsx)(v.Z, {
                         guild: t,
                         role: n,
-                        selectedSection: E.ZI.DISPLAY,
+                        selectedSection: S.ZI.DISPLAY,
                         setSelectedSection: l
                     })
                 }),

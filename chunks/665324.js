@@ -27,9 +27,9 @@ var i = n(200651),
     v = n(171368),
     T = n(430824),
     j = n(594174),
-    E = n(15385),
-    S = n(768581),
-    b = n(267642),
+    S = n(15385),
+    b = n(768581),
+    E = n(267642),
     R = n(358085),
     Z = n(51144),
     A = n(999382),
@@ -61,7 +61,7 @@ function w(e) {
 function B(e) {
     let { currentTier: t, availableSounds: n, guildId: r } = e,
         l = T.Z.getGuild(r),
-        s = (0, b.U2)(t, l);
+        s = (0, E.U2)(t, l);
     return 0 === t
         ? (0, i.jsx)(i.Fragment, {
               children: O.intl.format(O.t['7E9Hd3'], {
@@ -90,7 +90,7 @@ function B(e) {
                                   );
                               },
                               tabIndex: -1,
-                              children: (0, i.jsx)(E.Z, { ...e })
+                              children: (0, i.jsx)(S.Z, { ...e })
                           })
                   }),
                   O.intl.format(O.t.HHCdvb, {
@@ -149,7 +149,7 @@ function F(e) {
         o = r.useRef(null),
         d = (0, g.ZP)(),
         m = t.premiumTier,
-        h = (0, b.yw)(t, l, m);
+        h = (0, E.yw)(t, l, m);
     r.useEffect(() => {
         (0, f.w)();
     }, []);
@@ -268,8 +268,8 @@ function H(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
         { soundId: d, name: g, user: x, userId: C, emojiId: I, emojiName: _ } = t,
         T = (0, c.e7)([j.default], () => (null != x ? x : j.default.getUser(C)), [C, x]),
-        { canManageGuildExpression: E } = (0, p.XJ)(o),
-        b = r.useMemo(() => E(t), [t, E]),
+        { canManageGuildExpression: S } = (0, p.XJ)(o),
+        E = r.useMemo(() => S(t), [t, S]),
         R = null != I || null != _,
         [A, L] = r.useState(!1),
         D = (0, N.z)(t, o.id);
@@ -341,7 +341,7 @@ function H(e) {
                             'aria-label': w,
                             size: u.AvatarSizes.SIZE_24,
                             className: M.uploaderAvatar,
-                            src: (0, S.ov)(T, !1, 24)
+                            src: (0, b.ov)(T, !1, 24)
                         }),
                         (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
@@ -350,7 +350,7 @@ function H(e) {
                         })
                     ]
                 }),
-            b
+            E
                 ? (0, i.jsxs)('div', {
                       className: M.soundEditContainer,
                       children: [

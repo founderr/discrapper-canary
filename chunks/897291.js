@@ -27,7 +27,7 @@ t.Z = i.memo(function (e) {
                       e({
                           analyticsLocations: m,
                           analyticsObject: {
-                              page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+                              page: _.ZY5.DM_CHANNEL,
                               section: _.jXE.CHANNEL_TEXT_AREA,
                               object: _.qAy.BUTTON_ICON,
                               objectType: _.Qqv.GIFT

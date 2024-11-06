@@ -30,9 +30,9 @@ var i = n(200651),
     v = n(296386),
     T = n(605236),
     j = n(688465),
-    E = n(676317),
-    S = n(874993),
-    b = n(745752),
+    S = n(676317),
+    b = n(874993),
+    E = n(745752),
     R = n(45966),
     Z = n(637853),
     A = n(526120),
@@ -84,9 +84,9 @@ var i = n(200651),
     ev = n(511480),
     eT = n(460461),
     ej = n(29605),
-    eE = n(365307),
-    eS = n(497666),
-    eb = n(324330),
+    eS = n(365307),
+    eb = n(497666),
+    eE = n(324330),
     eR = n(495300),
     eZ = n(312397),
     eA = n(651780),
@@ -121,7 +121,7 @@ function eW(e, t) {
 }
 function eY(e) {
     var t;
-    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: v, canUnlinkChannels: b, canManageBans: R, canAccessMembersPage: A, canViewGuildAnalytics: L, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: V, onboardingStep: W, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
+    let { guild: r, isGuildAdmin: s, canManageGuild: d, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: v, canUnlinkChannels: E, canManageBans: R, canAccessMembersPage: A, canViewGuildAnalytics: L, isOwner: B, isOwnerWithRequiredMfaLevel: U, showDirtyGuildTemplateIndicator: F, memberCount: z, showAccessRate: V, onboardingStep: W, onboardingEnabled: K, welcomeScreenEmpty: X, guildMetadata: Q, section: J, canAccessClanSettings: et } = e,
         er = es.$.getCurrentConfig({
             guildId: r.id,
             location: 'generateSections'
@@ -268,12 +268,12 @@ function eY(e) {
                     impressionName: l.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
                     label: eH.intl.string(eH.t.CIsNZ2),
                     ariaLabel: eH.intl.string(eH.t.CIsNZ2),
-                    element: eE.Z,
+                    element: eS.Z,
                     notice: {
                         stores: [ea.Z, ec.Z],
-                        element: eE.j
+                        element: eS.j
                     },
-                    predicate: () => d || v || b
+                    predicate: () => d || v || E
                 }
             ],
             t =
@@ -300,9 +300,9 @@ function eY(e) {
                           {
                               section: eB.pNK.MEMBERS,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-                              label: (0, i.jsx)(eb.$, {}),
+                              label: (0, i.jsx)(eE.$, {}),
                               ariaLabel: eH.intl.string(eH.t['9Oq93t']),
-                              element: eb.Z,
+                              element: eE.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => A
                           },
@@ -310,7 +310,7 @@ function eY(e) {
                               section: eB.pNK.INSTANT_INVITES,
                               impressionName: l.ImpressionNames.GUILD_SETTINGS_INVITES,
                               label: eH.intl.string(eH.t['9F90iY']),
-                              element: eS.Z,
+                              element: eb.Z,
                               type: u.bT.CUSTOM,
                               predicate: () => d
                           }
@@ -319,7 +319,7 @@ function eY(e) {
             n = r.hasFeature(eB.oNc.COMMUNITY),
             s = d && n,
             o = d && !n,
-            f = !n && ((0, E.Nb)(r.id) || (0, E.ze)(r.id)),
+            f = !n && ((0, S.Nb)(r.id) || (0, S.ze)(r.id)),
             _ =
                 s || o || f || m || R
                     ? [
@@ -351,7 +351,7 @@ function eY(e) {
                                   children: eH.intl.string(eH.t.uRelg4)
                               }),
                               ariaLabel: eH.intl.string(eH.t.uRelg4),
-                              element: S.Z,
+                              element: b.Z,
                               newIndicatorDismissibleContentTypes: null,
                               predicate: () => f
                           },
@@ -699,10 +699,10 @@ function eY(e) {
             impressionName: l.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
             label: eH.intl.string(eH.t.CIsNZ2),
             ariaLabel: eH.intl.string(eH.t.CIsNZ2),
-            element: eE.Z,
+            element: eS.Z,
             notice: {
                 stores: [ea.Z, ec.Z],
-                element: eE.j
+                element: eS.j
             },
             predicate: () => d || v
         },
@@ -753,9 +753,9 @@ function eY(e) {
                 children: eH.intl.string(eH.t.uRelg4)
             }),
             ariaLabel: eH.intl.string(eH.t.uRelg4),
-            element: S.Z,
+            element: b.Z,
             newIndicatorDismissibleContentTypes: null,
-            predicate: () => !r.hasFeature(eB.oNc.COMMUNITY) && ((0, E.Nb)(r.id) || (0, E.ze)(r.id))
+            predicate: () => !r.hasFeature(eB.oNc.COMMUNITY) && ((0, S.Nb)(r.id) || (0, S.ze)(r.id))
         },
         {
             section: eB.pNK.AUDIT_LOG,
@@ -928,9 +928,9 @@ function eY(e) {
         {
             section: eB.pNK.MEMBERS,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_MEMBERS,
-            label: (0, i.jsx)(eb.$, {}),
+            label: (0, i.jsx)(eE.$, {}),
             ariaLabel: eH.intl.string(eH.t['9Oq93t']),
-            element: eb.Z,
+            element: eE.Z,
             type: u.bT.CUSTOM,
             predicate: () => A
         },
@@ -938,7 +938,7 @@ function eY(e) {
             section: eB.pNK.INSTANT_INVITES,
             impressionName: l.ImpressionNames.GUILD_SETTINGS_INVITES,
             label: eH.intl.string(eH.t['9F90iY']),
-            element: eS.Z,
+            element: eb.Z,
             type: u.bT.CUSTOM,
             predicate: () => d
         },
@@ -1006,7 +1006,7 @@ class eQ extends r.PureComponent {
     }
     render() {
         var e, t;
-        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: I, isOwner: _, isOwnerWithRequiredMfaLevel: N, showDirtyGuildTemplateIndicator: v, memberCount: T, showAccessRate: j, onboardingStep: E, onboardingEnabled: S, welcomeScreenEmpty: b, guildMetadata: R, canAccessClanSettings: Z } = this.props;
+        let { theme: n, sidebarTheme: r, section: l, guild: s, channels: a, isGuildAdmin: o, canManageGuild: u, canViewAuditLog: m, canManageRoles: h, canManageGuildExpressions: g, canManageWebhooks: x, canUnlinkChannels: p, canManageBans: f, canAccessMembersPage: C, canViewGuildAnalytics: I, isOwner: _, isOwnerWithRequiredMfaLevel: N, showDirtyGuildTemplateIndicator: v, memberCount: T, showAccessRate: j, onboardingStep: S, onboardingEnabled: b, welcomeScreenEmpty: E, guildMetadata: R, canAccessClanSettings: Z } = this.props;
         if (null == s) return null;
         let A = eY({
                 guild: s,
@@ -1026,9 +1026,9 @@ class eQ extends r.PureComponent {
                 showDirtyGuildTemplateIndicator: v,
                 memberCount: T,
                 showAccessRate: j,
-                onboardingStep: E,
-                onboardingEnabled: S,
-                welcomeScreenEmpty: b,
+                onboardingStep: S,
+                onboardingEnabled: b,
+                welcomeScreenEmpty: E,
                 guildMetadata: R,
                 section: l,
                 canAccessClanSettings: Z
@@ -1075,13 +1075,13 @@ function eJ() {
         }, [I, _, N, p]);
     let j = null !== (e = null == t ? void 0 : t.hasFeature(eB.oNc.COMMUNITY)) && void 0 !== e && e;
     r.useEffect(() => {
-        null != p && j && ((0, b.eM)(p), (0, W.RM)(p));
+        null != p && j && ((0, E.eM)(p), (0, W.RM)(p));
     }, [p, j]);
-    let { homeSettingsEnabled: E } = (0, L.kZ)(null != p ? p : eB.lds);
+    let { homeSettingsEnabled: S } = (0, L.kZ)(null != p ? p : eB.lds);
     r.useEffect(() => {
-        null != p && E && (0, A.cP)(p);
-    }, [E, p]);
-    let { showAccessRate: S } = (0, et.eA)(null == t ? void 0 : t.id, !T || !_ || !I),
+        null != p && S && (0, A.cP)(p);
+    }, [S, p]);
+    let { showAccessRate: b } = (0, et.eA)(null == t ? void 0 : t.id, !T || !_ || !I),
         Z = x.isGuildAdmin && (null == t ? void 0 : t.hasFeature(eB.oNc.CLAN)),
         y = (0, s.e7)(
             [U.Z],
@@ -1116,7 +1116,7 @@ function eJ() {
             ...x,
             canUnlinkChannels: k,
             canViewGuildAnalytics: _,
-            showAccessRate: S,
+            showAccessRate: b,
             onboardingStep: O,
             onboardingEnabled: M,
             welcomeScreenEmpty: P,

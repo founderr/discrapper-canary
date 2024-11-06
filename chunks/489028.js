@@ -21,19 +21,19 @@ var i = n(200651),
     v = n(326578),
     T = n(981631),
     j = n(674563),
-    E = n(829857),
-    S = n(388032),
-    b = n(383470);
+    S = n(829857),
+    b = n(388032),
+    E = n(383470);
 function R(e) {
     let { onCreateTeamClick: t, isGuildOwner: n } = e;
     return (0, i.jsx)('div', {
-        className: b.selectTeamContainer,
+        className: E.selectTeamContainer,
         children: (0, i.jsx)(s.Button, {
             disabled: !n,
             onClick: t,
-            className: b.enableTicketingButton,
+            className: E.enableTicketingButton,
             fullWidth: !0,
-            children: S.intl.string(S.t['5k6FfX'])
+            children: b.intl.string(b.t['5k6FfX'])
         })
     });
 }
@@ -56,36 +56,36 @@ function Z(e) {
                 (h(t.id),
                 (0, I.B)({
                     Icon: v.Z,
-                    title: S.intl.string(S.t['AP/2qa']),
-                    body: S.intl.string(S.t.kHMgaG)
+                    title: b.intl.string(b.t['AP/2qa']),
+                    body: b.intl.string(b.t.kHMgaG)
                 }));
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: b.selectTeamContainer,
+                className: E.selectTeamContainer,
                 children: [
                     (0, i.jsx)(s.SingleSelect, {
-                        className: b.teamSelect,
+                        className: E.teamSelect,
                         options: x,
-                        placeholder: S.intl.string(S.t.QXf93N),
+                        placeholder: b.intl.string(b.t.QXf93N),
                         value: a,
                         isDisabled: 0 === x.length || g || !l,
                         onChange: (e) => o(e),
-                        'aria-label': S.intl.string(S.t.QXf93N)
+                        'aria-label': b.intl.string(b.t.QXf93N)
                     }),
                     (0, i.jsx)(s.Button, {
                         onClick: p,
-                        className: b.enableTicketingButton,
+                        className: E.enableTicketingButton,
                         submitting: u,
                         disabled: null == a || g || !l,
-                        children: S.intl.string(S.t['9HU3ZW'])
+                        children: b.intl.string(b.t['9HU3ZW'])
                     })
                 ]
             }),
             null != m &&
                 (0, i.jsx)(s.Text, {
-                    className: b.error,
+                    className: E.error,
                     variant: 'text-sm/normal',
                     children: m.getAnyErrorMessage()
                 })
@@ -103,7 +103,7 @@ t.Z = (e) => {
             () =>
                 I.filter((e) => {
                     var t;
-                    return e.payout_account_status !== E.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
+                    return e.payout_account_status !== S.C.BLOCKED && (0, m.Z)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : T.lds, e);
                 }),
             [I, n]
         ),
@@ -134,18 +134,18 @@ t.Z = (e) => {
               children: [
                   !c &&
                       (0, i.jsx)(_.Z, {
-                          className: b.nonOwnerNotice,
-                          children: S.intl.string(S.t.t56qWF)
+                          className: E.nonOwnerNotice,
+                          children: b.intl.string(b.t.t56qWF)
                       }),
                   (0, i.jsxs)(s.FormSection, {
-                      title: S.intl.string(S.t.sYLCY2),
+                      title: b.intl.string(b.t.sYLCY2),
                       disabled: !c,
                       children: [
                           (0, i.jsx)(s.FormText, {
                               type: s.FormText.Types.DESCRIPTION,
-                              className: b.description,
+                              className: E.description,
                               disabled: !c,
-                              children: S.intl.format(S.t['5mfqpa'], { onCreateTeamHook: y })
+                              children: b.intl.format(b.t['5mfqpa'], { onCreateTeamHook: y })
                           }),
                           A
                               ? (0, i.jsx)(Z, {
@@ -160,8 +160,8 @@ t.Z = (e) => {
                       ]
                   }),
                   (0, i.jsx)(s.FormSection, {
-                      title: S.intl.string(S.t['0n7R2d']),
-                      className: b.selfDemonetization,
+                      title: b.intl.string(b.t['0n7R2d']),
+                      className: E.selfDemonetization,
                       children: (0, i.jsx)(N.Z, {
                           guildId: t.id,
                           allPeriods: []

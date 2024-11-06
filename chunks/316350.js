@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     }
 }),
     n(47120);
@@ -113,7 +113,7 @@ function j(e) {
                                 children: l.title
                             }),
                             s
-                                ? (0, a.jsx)(S, {
+                                ? (0, a.jsx)(b, {
                                       transform: null == e ? void 0 : e.unlockedTranslateY.to((e) => 'translate3d(0, '.concat(e, 'px, 0)')),
                                       headerButton: c,
                                       subscriptionsRequired: u,
@@ -130,7 +130,7 @@ function j(e) {
         })
     );
 }
-function E(e) {
+function S(e) {
     let { children: t, subscriptionCount: n, onSetRef: i, tier: r, isAnimatedTo: l, hasBottomMargin: s, headerButton: o = null, withCardBody: c = !0, guildId: u, showHeaderLockStatus: h = !0 } = e,
         p = (0, f.vn)(u)[r.tier],
         N = l && n >= p,
@@ -222,11 +222,11 @@ function E(e) {
     );
 }
 ((l = i || (i = {}))[(l.OPEN = 0)] = 'OPEN'), (l[(l.CLOSING = 1)] = 'CLOSING'), (l[(l.CLOSED = 2)] = 'CLOSED'), ((s = r || (r = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.UNLOCKED_SLIDE = 1)] = 'UNLOCKED_SLIDE');
-let S = (e) => {
+let b = (e) => {
         let { transform: t, hasAnimatedUnlocked: n, headerButton: i, subscriptionsRequired: r } = e;
-        return null !== i ? i : n ? (0, a.jsx)(b, { transform: t }) : (0, a.jsx)(R, { subscriptionsRequired: r });
+        return null !== i ? i : n ? (0, a.jsx)(E, { transform: t }) : (0, a.jsx)(R, { subscriptionsRequired: r });
     },
-    b = (e) => {
+    E = (e) => {
         let { transform: t } = e;
         return (0, a.jsx)(u.animated.div, {
             style: { transform: t },

@@ -71,9 +71,9 @@ function x(e) {
             handleInputChange: v,
             handleKeyDown: T,
             handleContainerKeyUp: j,
-            handleRemoveTag: E,
-            handleTagChangeEvent: S,
-            handleSelectTag: b,
+            handleRemoveTag: S,
+            handleTagChangeEvent: b,
+            handleSelectTag: E,
             handleUnselectTag: R,
             handleResetTagSelections: Z,
             handleInputBlurEvent: A
@@ -111,7 +111,7 @@ function x(e) {
                     null === (n = f.current) || void 0 === n || n.focus(),
                         t
                             ? R(e)
-                            : (b(e),
+                            : (E(e),
                               setImmediate(() => {
                                   var e;
                                   null === (e = f.current) || void 0 === e || e.blur(),
@@ -122,7 +122,7 @@ function x(e) {
                               }));
                 } else R(e, !0), P(!0);
             },
-            [b, R, D, y]
+            [E, R, D, y]
         );
     return (0, i.jsxs)('div', {
         className: s()(m.mainContainer, x),
@@ -139,10 +139,10 @@ function x(e) {
                             c.Z,
                             {
                                 value: e,
-                                onChange: S(t),
+                                onChange: b(t),
                                 onBlur: w,
                                 onFocus: B(t),
-                                onRemove: () => E(t),
+                                onRemove: () => S(t),
                                 isSelected: D.includes(e),
                                 isSelecting: O,
                                 error: d[e],

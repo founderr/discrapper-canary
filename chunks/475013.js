@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     },
     _: function () {
         return j;
@@ -49,7 +49,7 @@ let j = () => {
         onReset: g.S1
     });
 };
-function E(e) {
+function S(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, a.cj)(
             [x.Z],
@@ -72,16 +72,16 @@ function E(e) {
             let e = u.Z.getMemberCount(n.id);
             null != e && e <= f.cm && o.Z.requestMembers(n.id, '', 0, !1);
         }, []);
-    let [j, E] = r.useState(N.ZI.DISPLAY);
+    let [j, S] = r.useState(N.ZI.DISPLAY);
     return (r.useEffect(() => {
-        null == h && E(N.ZI.DISPLAY);
+        null == h && S(N.ZI.DISPLAY);
     }, [h]),
     null != h)
         ? (0, i.jsx)(C.Z, {
               editRoleId: h,
               setEditRoleId: T,
               selectedSection: j,
-              setSelectedSection: E
+              setSelectedSection: S
           })
         : g
           ? (0, i.jsx)(_.Z, {
@@ -89,7 +89,7 @@ function E(e) {
                 guild: n,
                 everyoneRole: c,
                 otherRoles: m,
-                setSelectedSection: E,
+                setSelectedSection: S,
                 refToScroller: t
             })
           : (0, i.jsx)(I.Z, {

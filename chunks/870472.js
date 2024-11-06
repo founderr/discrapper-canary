@@ -290,13 +290,13 @@ function c(e, t) {
             },
             [l, r, u, c.length, o]
         ),
-        E = i.useCallback(
+        S = i.useCallback(
             (e) => {
                 e.relatedTarget !== e.currentTarget && N(e, !1, !1);
             },
             [N]
         ),
-        S = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 let t = e.metaKey || e.ctrlKey;
                 if ('Meta' !== e.key) a.ye.has(e.key) ? N(e) : 'Backspace' === e.key ? v(e) : 'Escape' === e.key ? I(e) : 'a' === e.key && t ? j(e) : a.Bd.has(e.key) && t && T(e);
@@ -306,7 +306,7 @@ function c(e, t) {
     return {
         handlePasteEvent: g,
         handleInputChange: _,
-        handleKeyDown: S,
+        handleKeyDown: b,
         handleContainerKeyUp: i.useCallback(
             (e) => {
                 if (document.activeElement !== l.current) return;
@@ -320,6 +320,6 @@ function c(e, t) {
         handleSelectTag: f,
         handleUnselectTag: C,
         handleResetTagSelections: I,
-        handleInputBlurEvent: E
+        handleInputBlurEvent: S
     };
 }

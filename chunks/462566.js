@@ -18,8 +18,8 @@ t.Z = function (e) {
     var t;
     let { onCardInfoChange: n, error: a } = e,
         r = i.useRef(n),
-        [s, N] = i.useState(!1),
-        [f, b] = i.useState({}),
+        [s, f] = i.useState(!1),
+        [N, b] = i.useState({}),
         [_, y] = i.useState({
             name: '',
             country: '',
@@ -28,7 +28,7 @@ t.Z = function (e) {
         [P, g] = i.useState({}),
         [C, T] = i.useState({});
     function I(e, t) {
-        !!f[e] !== t &&
+        !!N[e] !== t &&
             b((n) => ({
                 ...n,
                 [e]: t
@@ -43,9 +43,9 @@ t.Z = function (e) {
         [P, _]
     );
     i.useEffect(() => {
-        let e = f.cardNumber && f.cardExpiry && f.cardCvc && 0 === Object.keys(S(!0)).length;
+        let e = N.cardNumber && N.cardExpiry && N.cardCvc && 0 === Object.keys(S(!0)).length;
         r.current({ name: _.name }, !!e);
-    }, [f, _, S]);
+    }, [N, _, S]);
     let v = {
             name: 'cardNumber',
             title: () => h.intl.string(h.t.cVyJ3t),
@@ -76,10 +76,10 @@ t.Z = function (e) {
                     stripeType: 'cardCvc',
                     updateCompleted: (e) => I('cardCvc', e),
                     onFocus: () => {
-                        N(!0);
+                        f(!0);
                     },
                     onBlur: () => {
-                        N(!1);
+                        f(!1);
                     }
                 })
         },

@@ -29,7 +29,7 @@ t.Z = r.memo(function (e) {
     r.useEffect(() => {
         m && p(t, !0);
     }, [m, t, p]);
-    let E = r.useCallback(() => {
+    let S = r.useCallback(() => {
         I
             ? !h && p(null)
             : h
@@ -50,7 +50,7 @@ t.Z = r.memo(function (e) {
         }),
         isStuck: I && h,
         isExpanded: I,
-        onExpand: E,
+        onExpand: S,
         children:
             I &&
             (0, i.jsx)(c.Z, {

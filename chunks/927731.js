@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 }),
     n(47120);
@@ -41,18 +41,18 @@ let T = 'guild-role-subscription-tier-template-selector',
             }
         );
     };
-function E(e) {
+function S(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
         j = (0, x._k)(p),
-        { editStateIds: E, addNewEditStateId: S, addNewEditStateFromTemplate: b, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
+        { editStateIds: S, addNewEditStateId: b, addNewEditStateFromTemplate: E, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
         [Z, A] = r.useState({}),
         L = r.useMemo(() => {
-            let e = E.map((e) => {
+            let e = S.map((e) => {
                 var t;
                 return null !== (t = Z[e]) && void 0 !== t ? t : e;
             });
             return (0, a.uniq)(e);
-        }, [E, Z]),
+        }, [S, Z]),
         y = (e, t) => {
             A((n) => ({
                 ...n,
@@ -75,15 +75,15 @@ function E(e) {
                                   (0, i.jsx)(e, {
                                       ...n,
                                       guildId: t,
-                                      addNewEditStateFromTemplate: b,
-                                      addNewEditStateFromScratch: S,
+                                      addNewEditStateFromTemplate: E,
+                                      addNewEditStateFromScratch: b,
                                       priceTiers: l
                                   });
                           },
                           { modalKey: T }
                       )
-                    : S();
-        }, [t, b, S, l, O, D]),
+                    : b();
+        }, [t, E, b, l, O, D]),
         P = C.Lo(L),
         k = r.useCallback(() => L.forEach(C.GM), [L]),
         w = (0, f.mY)(),
@@ -147,7 +147,7 @@ function E(e) {
         })
     );
 }
-function S(e) {
+function b(e) {
     let { guildId: t } = e,
         { priceTiers: n } = j(t),
         r = (0, x.GG)(t),
@@ -162,7 +162,7 @@ function S(e) {
                 children: N.intl.format(N.t.nHRSvL, { maxTiers: l })
             }),
             (0, i.jsx)(d.Spacer, { size: 16 }),
-            (0, i.jsx)(E, {
+            (0, i.jsx)(S, {
                 priceTiers: n,
                 guildId: t,
                 groupListingId: s[0]

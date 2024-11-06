@@ -29,9 +29,9 @@ var i = n(200651),
     v = n(889369),
     T = n(570961),
     j = n(208665),
-    E = n(868814),
-    S = n(974513),
-    b = n(2348),
+    S = n(868814),
+    b = n(974513),
+    E = n(2348),
     R = n(353890),
     Z = n(716130),
     A = n(388032),
@@ -40,7 +40,7 @@ function y(e) {
     let { guild: t } = e,
         l = (0, a.e7)([m.Z], () => m.Z.getEnabled(t.id)),
         s = (0, a.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        c = (0, E.Z)(t),
+        c = (0, S.Z)(t),
         f = (0, a.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
         C = c.filter((e) => !f.has(e.id)),
         [I, _] = r.useState(!1);
@@ -225,7 +225,7 @@ function D(e) {
                                 color: 'header-secondary',
                                 children: A.intl.string(A.t.Kq7FAQ)
                             }),
-                            (0, i.jsx)(S.Wu, {
+                            (0, i.jsx)(b.Wu, {
                                 className: L.advancedModeToggle,
                                 guildId: n.id
                             }),
@@ -234,7 +234,7 @@ function D(e) {
                                 : (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(y, { guild: n }),
-                                          (0, i.jsx)(b.Z, {
+                                          (0, i.jsx)(E.Z, {
                                               className: s()(L.channelBrowserOuter),
                                               guild: n,
                                               categories: d,

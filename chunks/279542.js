@@ -6,7 +6,7 @@ n.d(t, {
         return R;
     },
     k0: function () {
-        return b;
+        return E;
     }
 }),
     n(47120);
@@ -32,8 +32,8 @@ var i = n(200651),
     v = n(193544),
     T = n(981631),
     j = n(388032),
-    E = n(10105);
-function S(e) {
+    S = n(10105);
+function b(e) {
     let { guild: t } = e,
         n = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         l = r.useCallback(
@@ -56,10 +56,10 @@ function S(e) {
         }, [t]),
         a = r.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
     return (0, i.jsxs)('div', {
-        className: E.setupContainer,
+        className: S.setupContainer,
         children: [
             (0, i.jsxs)('div', {
-                className: E.switchItemTextContent,
+                className: S.switchItemTextContent,
                 children: [
                     (0, i.jsx)(c.Text, {
                         color: 'header-primary',
@@ -83,7 +83,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function E(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
         a = (0, o.e7)([g.Z], () => null != t && g.Z.can(T.Plq.MANAGE_GUILD, t), [t]),
         d = r.useCallback(
@@ -107,12 +107,12 @@ function b(e) {
         m = r.useMemo(() => u.find((e) => e.value === (null == t ? void 0 : t.explicitContentFilter)), [t, u]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            l && (0, i.jsx)(c.FormDivider, { className: E.divider }),
+            l && (0, i.jsx)(c.FormDivider, { className: S.divider }),
             (0, i.jsxs)('div', {
-                className: s()(E.setupContainer, n),
+                className: s()(S.setupContainer, n),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: E.switchItemTextContent,
+                        className: S.switchItemTextContent,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 color: 'header-primary',
@@ -160,21 +160,21 @@ function Z(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: E.setupContainer,
+                      className: S.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: a,
                               onChange: u,
-                              className: E.switchItem,
+                              className: S.switchItem,
                               disabled: !n,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: E.switchItemTextContent,
+                                  className: S.switchItemTextContent,
                                   children: [
                                       (0, i.jsxs)(c.Text, {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
-                                          children: [j.intl.string(j.t.jDarm5), (0, i.jsx)(m.Z, { className: E.betaTag })]
+                                          children: [j.intl.string(j.t.jDarm5), (0, i.jsx)(m.Z, { className: S.betaTag })]
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-secondary',
@@ -191,7 +191,7 @@ function Z(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(c.FormDivider, { className: E.divider })
+                  (0, i.jsx)(c.FormDivider, { className: S.divider })
               ]
           });
 }
@@ -224,18 +224,18 @@ function A(e) {
     return l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(c.FormDivider, { className: E.divider }),
+                  (0, i.jsx)(c.FormDivider, { className: S.divider }),
                   (0, i.jsxs)('div', {
-                      className: E.setupContainer,
+                      className: S.setupContainer,
                       children: [
                           (0, i.jsx)(c.FormSwitch, {
                               value: h,
                               onChange: x,
-                              className: E.switchItem,
+                              className: S.switchItem,
                               disabled: !u,
                               hideBorder: !0,
                               children: (0, i.jsxs)('div', {
-                                  className: E.switchItemTextContent,
+                                  className: S.switchItemTextContent,
                                   children: [
                                       (0, i.jsx)(c.Text, {
                                           color: 'header-primary',
@@ -276,18 +276,18 @@ function L() {
           : (0, i.jsxs)(c.FormSection, {
                 title: j.intl.string(j.t['suhY+f']),
                 tag: c.FormTitleTags.H1,
-                titleClassName: E.headerContainer,
+                titleClassName: S.headerContainer,
                 children: [
                     (0, i.jsx)(Z, { guild: e }),
-                    (0, i.jsx)(S, { guild: e }),
+                    (0, i.jsx)(b, { guild: e }),
                     (0, i.jsx)(A, {
                         guild: e,
                         mfaLevel: t
                     }),
-                    (0, i.jsx)(b, { guild: e }),
-                    (0, i.jsx)(c.FormDivider, { className: E.divider }),
+                    (0, i.jsx)(E, { guild: e }),
+                    (0, i.jsx)(c.FormDivider, { className: S.divider }),
                     (0, i.jsx)('div', {
-                        className: s()(E.setupContainer),
+                        className: s()(S.setupContainer),
                         children: (0, i.jsx)(N.w, { guild: e })
                     })
                 ]

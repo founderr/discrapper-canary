@@ -21,8 +21,8 @@ var i = t(200651),
     v = t(653798),
     g = t(314182),
     S = t(251660),
-    j = t(246946),
-    E = t(351402),
+    E = t(246946),
+    j = t(351402),
     I = t(853872),
     y = t(855775),
     P = t(695103),
@@ -32,8 +32,8 @@ var i = t(200651),
     _ = t(937615),
     C = t(987209),
     A = t(563132),
-    R = t(45572),
-    O = t(119226),
+    O = t(45572),
+    R = t(119226),
     Z = t(981631),
     M = t(388032),
     w = t(679640);
@@ -104,9 +104,9 @@ function F(e) {
         ei = null != en ? en[et] : null;
     s()(null != ee, 'SKU must exist and be fetched.'), s()(null != _, 'Application must exist.');
     let el = (0, c.e7)([h.Z, P.Z], () => P.Z.inTestModeForApplication(_.id) || h.Z.inDevModeForApplication(_.id), [_.id]),
-        er = (0, c.e7)([j.Z], () => j.Z.enabled),
-        es = a.M.EEA_COUNTRIES.has(E.Z.ipCountryCodeWithFallback),
-        ea = F === R.A.PURCHASING || F === R.A.COMPLETED,
+        er = (0, c.e7)([E.Z], () => E.Z.enabled),
+        es = a.M.EEA_COUNTRIES.has(j.Z.ipCountryCodeWithFallback),
+        ea = F === O.A.PURCHASING || F === O.A.COMPLETED,
         ec = null != B ? k[B].type : null;
     return (
         l.useEffect(() => {
@@ -146,7 +146,7 @@ function F(e) {
                     sku: ee,
                     isEmbeddedIAP: V
                 }),
-                J && (0, i.jsx)(O.Z, { sku: ee }),
+                J && (0, i.jsx)(R.Z, { sku: ee }),
                 null != q ? (0, i.jsx)(S.s, { giftRecipient: q }) : null,
                 (0, i.jsx)(o.FormTitle, {
                     tag: o.FormTitleTags.H5,

@@ -13,12 +13,12 @@ var a,
     h = n(219929),
     A = n(388032),
     E = n(743736),
-    N = n(803636);
+    f = n(803636);
 ((l = a || (a = {})).CardNumber = 'cardNumber'), (l.CardExpiry = 'cardExpiry'), (l.CardCvc = 'cardCvc'), ((i = r || (r = {})).Change = 'change'), (i.Focus = 'focus'), (i.Blur = 'blur');
 t.Z = function (e) {
     let t = o.useRef(null),
         { stripeType: n, flipped: a, updateCompleted: r, onFocus: l, onBlur: i } = e,
-        [u, f] = o.useState(h.Qy.UNKNOWN),
+        [u, N] = o.useState(h.Qy.UNKNOWN),
         [b, _] = o.useState(!1),
         [y, P] = o.useState(!1),
         [g, C] = o.useState(null),
@@ -66,7 +66,7 @@ t.Z = function (e) {
                         let e = S.getElement(c.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            u !== e.brand && f(e.brand), e.empty && y ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), L(e);
+                            u !== e.brand && N(e.brand), e.empty && y ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), L(e);
                         }),
                             e.on('focus', R),
                             e.on('blur', O);
@@ -137,7 +137,7 @@ t.Z = function (e) {
             children: [
                 (0, s.jsx)('div', {
                     ref: t,
-                    className: d()(E.hiddenDiv, N.input)
+                    className: d()(E.hiddenDiv, f.input)
                 }),
                 (function () {
                     switch (n) {

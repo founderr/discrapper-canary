@@ -14,8 +14,8 @@ var i = t(525654),
     u = t(896797),
     p = t(626135),
     f = t(954824),
-    b = t(981631);
-async function m(e) {
+    m = t(981631);
+async function b(e) {
     var n, t;
     let i = null === (n = r().os) || void 0 === n ? void 0 : n.family;
     if ('Android' === i || 'iOS' === i) {
@@ -34,10 +34,10 @@ async function m(e) {
     return 'discord://';
 }
 async function h(e) {
-    let n = await m(e),
+    let n = await b(e),
         t = (0, a.zS)(n);
     null != t &&
-        p.default.track(b.rMx.DEEP_LINK_CLICKED, {
+        p.default.track(m.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.K)(t.fingerprint),
             attempt_id: t.attemptId,
             source: t.utmSource

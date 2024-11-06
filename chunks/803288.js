@@ -30,9 +30,9 @@ var i = n(200651),
     v = n(621319),
     T = n(44550),
     j = n(770270),
-    E = n(981631),
-    S = n(30513),
-    b = n(388032),
+    S = n(981631),
+    b = n(30513),
+    E = n(388032),
     R = n(279404);
 function Z(e, t, n) {
     return (
@@ -69,7 +69,7 @@ class L extends r.PureComponent {
         let { isRemoving: e } = this.state,
             { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
         if (null == r) return (0, i.jsx)(o.Spinner, {});
-        let a = (null == s ? void 0 : s.hasFeature(E.oNc.VANITY_URL)) === !0;
+        let a = (null == s ? void 0 : s.hasFeature(S.oNc.VANITY_URL)) === !0;
         return (0, i.jsxs)(o.Card, {
             editable: !0,
             className: R.editVanityUrlCard,
@@ -79,9 +79,9 @@ class L extends r.PureComponent {
                     children: [
                         (0, i.jsx)('div', {
                             className: R.formTitleField,
-                            children: b.intl.string(b.t['6oJyq6'])
+                            children: E.intl.string(E.t['6oJyq6'])
                         }),
-                        r.length > 0 ? (0, i.jsx)('div', { children: b.intl.format(b.t.MVWOUV, { uses: l }) }) : null
+                        r.length > 0 ? (0, i.jsx)('div', { children: E.intl.format(E.t.MVWOUV, { uses: l }) }) : null
                     ]
                 }),
                 (0, i.jsx)(g.Z, {
@@ -101,7 +101,7 @@ class L extends r.PureComponent {
                           look: o.Button.Looks.LINK,
                           size: o.Button.Sizes.MIN,
                           color: o.Button.Colors.RED,
-                          children: b.intl.string(b.t['3ggb6O'])
+                          children: E.intl.string(E.t['3ggb6O'])
                       })
                     : null
             ]
@@ -120,7 +120,7 @@ class L extends r.PureComponent {
                     className: R.premiumUpsellBadge
                 }),
                 ' ',
-                b.intl.string(b.t['+7XY39'])
+                E.intl.string(E.t['+7XY39'])
             ]
         });
     }
@@ -138,7 +138,7 @@ class L extends r.PureComponent {
             return (0, i.jsx)(o.FormText, {
                 className: R.__invalid_marginTop20,
                 type: o.FormTextTypes.LABEL_DESCRIPTOR,
-                children: b.intl.format(b.t['1qTOvr'], {
+                children: E.intl.format(E.t['1qTOvr'], {
                     urlText: e,
                     urlValue: e
                 })
@@ -163,10 +163,10 @@ class L extends r.PureComponent {
                             tag: o.FormTitleTags.H1,
                             className: R.flexFormTitle,
                             children: [
-                                (0, i.jsx)('div', { children: b.intl.string(b.t['5XZKy8']) }),
+                                (0, i.jsx)('div', { children: E.intl.string(E.t['5XZKy8']) }),
                                 (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: E.oNc.VANITY_URL,
+                                    guildFeature: S.oNc.VANITY_URL,
                                     className: R.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
@@ -175,17 +175,17 @@ class L extends r.PureComponent {
                         (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
                             className: R.__invalid_marginBottom8,
-                            children: b.intl.string(b.t.IhWDcn)
+                            children: E.intl.string(E.t.IhWDcn)
                         }),
                         (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
                             className: R.__invalid_marginBottom20,
-                            children: b.intl.string(b.t['1mRkFh'])
+                            children: E.intl.string(E.t['1mRkFh'])
                         }),
                         (0, i.jsx)(o.FormText, {
                             type: o.FormTextTypes.DESCRIPTION,
                             className: R.__invalid_marginBottom20,
-                            children: b.intl.string(b.t['eH/HMz'])
+                            children: E.intl.string(E.t['eH/HMz'])
                         }),
                         (0, j.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
                         this.renderInfo()
@@ -199,10 +199,10 @@ class L extends r.PureComponent {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: l, analyticsLocations: s } = this.props;
                 null != l &&
-                    ((0, m.yw)(E.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, m.yw)(S.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: E.qAy.LEARN_MORE,
+                            object: S.qAy.LEARN_MORE,
                             objectType: (0, _.ge)(t),
                             location_stack: s
                         },
@@ -213,17 +213,17 @@ class L extends r.PureComponent {
                         analyticsSourceLocation: {
                             section: n,
                             object: i,
-                            page: E.ZY5.GUILD_SETTINGS
+                            page: S.ZY5.GUILD_SETTINGS
                         },
                         guild: l,
                         perks: r
                     }));
             }),
             Z(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, E.Eu4.TIER_3, E.jXE.GUILD_SETTINGS_VANITY_URL, E.qAy.BADGE, (0, S.WW)());
+                this.handleShowModalUpsell(e, S.Eu4.TIER_3, S.jXE.GUILD_SETTINGS_VANITY_URL, S.qAy.BADGE, (0, b.WW)());
             }),
             Z(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, E.Eu4.TIER_3, E.jXE.GUILD_SETTINGS_VANITY_URL, E.qAy.BUTTON_CTA, (0, S.WW)());
+                this.handleShowModalUpsell(e, S.Eu4.TIER_3, S.jXE.GUILD_SETTINGS_VANITY_URL, S.qAy.BUTTON_CTA, (0, b.WW)());
             });
     }
 }

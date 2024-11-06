@@ -29,9 +29,9 @@ var i = n(200651),
     v = n(813197),
     T = n(210887),
     j = n(314897),
-    E = n(592125),
-    S = n(984933),
-    b = n(430824),
+    S = n(592125),
+    b = n(984933),
+    E = n(430824),
     R = n(709586),
     Z = n(768581),
     A = n(700785),
@@ -107,8 +107,8 @@ function W(e) {
 function Y(e) {
     var t, l, o, d, u;
     let { guildId: g, action: x, actionIndex: p, onChange: _, onDelete: N, onDragStart: v, onDragComplete: T, onDragReset: j } = e,
-        S = (0, a.e7)([E.Z], () => E.Z.getChannel(x.channelId)),
-        R = (0, a.e7)([b.Z], () => b.Z.getGuild(g)),
+        b = (0, a.e7)([S.Z], () => S.Z.getChannel(x.channelId)),
+        R = (0, a.e7)([E.Z], () => E.Z.getGuild(g)),
         { customEmoji: A, unicodeEmoji: L } = (0, f.Z)(null === (t = x.emoji) || void 0 === t ? void 0 : t.id, null === (l = x.emoji) || void 0 === l ? void 0 : l.name),
         y = null == x.emoji || null != A || null != L,
         D = Z.ZP.getNewMemberActionIconURL({
@@ -116,7 +116,7 @@ function Y(e) {
             icon: x.icon
         }),
         O = null;
-    null != S && (0, C.kb)(S) ? !y && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
+    null != b && (0, C.kb)(b) ? !y && (O = U.intl.string(U.t.wAkIZW)) : (O = U.intl.string(U.t.CbTEKC));
     let {
             drag: M,
             dragSourcePosition: P,
@@ -144,8 +144,8 @@ function Y(e) {
                         });
                 });
         }, [g, x, p, _, N]);
-    if (null == S || null == R) return null;
-    let F = null !== (u = (0, m.KS)(S)) && void 0 !== u ? u : c.TextIcon;
+    if (null == b || null == R) return null;
+    let F = null !== (u = (0, m.KS)(b)) && void 0 !== u ? u : c.TextIcon;
     return (0, i.jsxs)('div', {
         className: s()(G.actionItemContainer),
         children: [
@@ -199,7 +199,7 @@ function Y(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'header-secondary',
-                                children: U.intl.format(U.t.Ngk8Nj, { channelName: S.name })
+                                children: U.intl.format(U.t.Ngk8Nj, { channelName: b.name })
                             })
                         ]
                     }),
@@ -416,7 +416,7 @@ function Q() {
 function J(e) {
     var t;
     let { guildId: l } = e,
-        s = (0, a.e7)([b.Z], () => b.Z.getGuild(l)),
+        s = (0, a.e7)([E.Z], () => E.Z.getGuild(l)),
         o = null !== (t = null == s ? void 0 : s.hasFeature(P.oNc.BANNER)) && void 0 !== t && t,
         d = r.useCallback(
             (e, t) => {
@@ -593,9 +593,9 @@ function J(e) {
 }
 function $(e) {
     let { guildId: t, resourceChannel: l, index: o, onDragComplete: d, onDragStart: u, onDragReset: m } = e,
-        g = (0, a.e7)([b.Z], () => b.Z.getGuild(t)),
+        g = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         { title: x, channelId: p, description: f } = l,
-        I = E.Z.getChannel(p),
+        I = S.Z.getChannel(p),
         _ = null;
     (null == I || !(0, C.k3)(I)) && (_ = U.intl.string(U.t.kTdL8f));
     let N = null == f || 0 === f.length,
@@ -606,7 +606,7 @@ function $(e) {
         {
             drag: T,
             dragSourcePosition: j,
-            drop: S,
+            drop: b,
             setIsDraggable: R
         } = (0, h.Z)({
             type: 'RESOURCE_CHANNEL',
@@ -660,7 +660,7 @@ function $(e) {
                           [G.dropIndicatorAfter]: null != j && o > j,
                           [G.resourceChannelError]: null != _
                       }),
-                      ref: (e) => T(S(e)),
+                      ref: (e) => T(b(e)),
                       children: [
                           (0, i.jsx)('div', {
                               className: G.dragContainer,
@@ -774,13 +774,13 @@ function ee(e) {
 }
 function et(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([b.Z], () => b.Z.getGuild(t)),
+        n = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
         l = (0, a.Wu)([O.Z], () => {
             var e, t;
             return null !== (t = null === (e = O.Z.getSettings().resourceChannels) || void 0 === e ? void 0 : e.map((e) => e.channelId)) && void 0 !== t ? t : [];
         }),
         s = (0, a.Wu)([O.Z], () => O.Z.getDismissedSuggestedChannelIds(t)),
-        o = (0, a.e7)([S.ZP], () => (null == t ? [] : S.ZP.getSelectableChannels(t)))
+        o = (0, a.e7)([b.ZP], () => (null == t ? [] : b.ZP.getSelectableChannels(t)))
             .filter((e) => !s.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === P.d4z.GUILD_TEXT && A.Uu(P.Plq.VIEW_CHANNEL, e.channel) && !A.Uu(P.Plq.SEND_MESSAGES, e.channel) && e.channel.id !== (null == n ? void 0 : n.rulesChannelId))
             .slice(0, 5),
         d = r.useCallback(() => {

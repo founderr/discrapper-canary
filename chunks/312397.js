@@ -30,9 +30,9 @@ var i = n(200651),
     v = n(933557),
     T = n(471445),
     j = n(890477),
-    E = n(34586),
-    S = n(600164),
-    b = n(688465),
+    S = n(34586),
+    b = n(600164),
+    E = n(688465),
     R = n(807582),
     Z = n(48217),
     A = n(26323),
@@ -188,14 +188,14 @@ class eC extends r.PureComponent {
     }
     renderBaseSettings() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
-        return (0, i.jsxs)(S.Z, {
+        return (0, i.jsxs)(b.Z, {
             className: s()(ei.__invalid_baseSection),
             children: [
-                (0, i.jsxs)(S.Z, {
+                (0, i.jsxs)(b.Z, {
                     basis: '50%',
-                    justify: S.Z.Justify.BETWEEN,
+                    justify: b.Z.Justify.BETWEEN,
                     children: [
-                        (0, i.jsxs)(S.Z.Child, {
+                        (0, i.jsxs)(b.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, i.jsx)(k.Z, {
@@ -226,9 +226,9 @@ class eC extends r.PureComponent {
                                     : null
                             ]
                         }),
-                        (0, i.jsxs)(S.Z, {
-                            direction: S.Z.Direction.VERTICAL,
-                            align: S.Z.Align.START,
+                        (0, i.jsxs)(b.Z, {
+                            direction: b.Z.Direction.VERTICAL,
+                            align: b.Z.Align.START,
                             style: { maxWidth: 180 },
                             children: [
                                 (0, i.jsx)(g.FormText, {
@@ -255,7 +255,7 @@ class eC extends r.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(S.Z.Child, {
+                (0, i.jsx)(b.Z.Child, {
                     basis: '50%',
                     children: (0, i.jsx)(g.FormItem, {
                         title: en.intl.string(en.t.dBih7e),
@@ -318,9 +318,9 @@ class eC extends r.PureComponent {
             (0, i.jsxs)(g.FormSection, {
                 className: ei.divider,
                 children: [
-                    (0, i.jsxs)(S.Z, {
+                    (0, i.jsxs)(b.Z, {
                         children: [
-                            (0, i.jsx)(S.Z.Child, {
+                            (0, i.jsx)(b.Z.Child, {
                                 basis: '50%',
                                 children: (0, i.jsx)(g.FormItem, {
                                     title: en.intl.string(en.t.KuYcnZ),
@@ -334,7 +334,7 @@ class eC extends r.PureComponent {
                                     })
                                 })
                             }),
-                            (0, i.jsx)(S.Z.Child, {
+                            (0, i.jsx)(b.Z.Child, {
                                 basis: '50%',
                                 children: (0, i.jsx)(g.FormItem, {
                                     title: en.intl.string(en.t.brhYaW),
@@ -454,7 +454,7 @@ class eC extends r.PureComponent {
                         disabled: !r || a === eo,
                         children: (0, i.jsxs)('div', {
                             className: ei.flexRow,
-                            children: [en.intl.string(en.t['3yOX19']), (0, i.jsx)(b.Z, {})]
+                            children: [en.intl.string(en.t['3yOX19']), (0, i.jsx)(E.Z, {})]
                         })
                     })
             ]
@@ -575,12 +575,12 @@ class eC extends r.PureComponent {
             ref: this._inviteSectionRef,
             children: (0, i.jsx)(g.FormSection, {
                 className: ei.divider,
-                children: (0, i.jsxs)(S.Z, {
+                children: (0, i.jsxs)(b.Z, {
                     basis: '50%',
-                    direction: S.Z.Direction.HORIZONTAL,
-                    align: S.Z.Justify.START,
+                    direction: b.Z.Direction.HORIZONTAL,
+                    align: b.Z.Justify.START,
                     children: [
-                        (0, i.jsxs)(S.Z.Child, {
+                        (0, i.jsxs)(b.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: [
@@ -623,7 +623,7 @@ class eC extends r.PureComponent {
                                     : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
                             ]
                         }),
-                        (0, i.jsx)(S.Z.Child, {
+                        (0, i.jsx)(b.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: n
@@ -695,12 +695,12 @@ class eC extends r.PureComponent {
             });
         return (0, i.jsx)(g.FormSection, {
             className: ei.divider,
-            children: (0, i.jsxs)(S.Z, {
+            children: (0, i.jsxs)(b.Z, {
                 basis: '50%',
-                direction: S.Z.Direction.HORIZONTAL,
-                align: S.Z.Justify.START,
+                direction: b.Z.Direction.HORIZONTAL,
+                align: b.Z.Justify.START,
                 children: [
-                    (0, i.jsxs)(S.Z.Child, {
+                    (0, i.jsxs)(b.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: [
@@ -728,7 +728,7 @@ class eC extends r.PureComponent {
                             r ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]
                     }),
-                    (0, i.jsx)(S.Z.Child, {
+                    (0, i.jsx)(b.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: r
@@ -748,13 +748,13 @@ class eC extends r.PureComponent {
     renderProgressBar() {
         let { guild: e, canManageGuild: t, theme: n } = this.props;
         return (0, i.jsx)(g.FormSection, {
-            children: (0, i.jsxs)(S.Z, {
-                align: S.Z.Align.START,
+            children: (0, i.jsxs)(b.Z, {
+                align: b.Z.Align.START,
                 children: [
-                    (0, i.jsxs)(S.Z, {
+                    (0, i.jsxs)(b.Z, {
                         basis: '50%',
-                        direction: S.Z.Direction.VERTICAL,
-                        align: S.Z.Align.STRETCH,
+                        direction: b.Z.Direction.VERTICAL,
+                        align: b.Z.Align.STRETCH,
                         children: [
                             (0, i.jsx)(g.FormSwitch, {
                                 className: s()(ei.marginTop8, ei.marginBottom8),
@@ -771,7 +771,7 @@ class eC extends r.PureComponent {
                             })
                         ]
                     }),
-                    (0, i.jsx)(S.Z.Child, {
+                    (0, i.jsx)(b.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: (0, i.jsx)('img', {
@@ -978,7 +978,7 @@ function eI() {
             isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
         x = (0, u.e7)([U.Z], () => U.Z.getMemberCount(null == t ? void 0 : t.id)),
-        p = (0, E.E)(t),
+        p = (0, S.E)(t),
         I = (0, u.e7)([H.default], () => H.default.getCurrentUser());
     o()(null != I, 'GuildSettingsOverview: currentUser cannot be undefined');
     let { enableDeadchat: v } = j.Z.useExperiment(

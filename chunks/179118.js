@@ -18,8 +18,8 @@ var i = n(200651),
     _ = n(925329),
     b = n(479446),
     h = n(522489),
-    g = n(857039),
-    m = n(93127),
+    m = n(857039),
+    g = n(93127),
     C = n(814443),
     x = n(590783),
     v = n(699516),
@@ -29,24 +29,24 @@ var i = n(200651),
     y = n(669079),
     B = n(74538),
     T = n(51144),
-    F = n(563132),
-    A = n(981631),
+    A = n(563132),
+    F = n(981631),
     L = n(474936),
     E = n(388032),
     R = n(524254);
 function O(e) {
-    let { giftCode: t, application: n, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: m, isSendingMessage: C, halloweenDecoPurchase: v } = e,
+    let { giftCode: t, application: n, sku: r, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: b, giftMessageError: g, isSendingMessage: C, halloweenDecoPurchase: v } = e,
         [S, O] = o.useState(c.CopyInput.Modes.DEFAULT),
         M = (0, d.e7)([I.Z], () => I.Z.enabled),
         N = f || (null != l && null != b),
-        P = (null == r ? void 0 : r.productLine) === A.POd.COLLECTIBLES,
-        { selectedPlan: j } = (0, F.usePaymentContext)(),
-        U = (0, g.Z)({ location: 'Gift purchase confirm' }) && (null == j ? void 0 : j.skuId) === L.Si.TIER_2 && null != v,
+        P = (null == r ? void 0 : r.productLine) === F.POd.COLLECTIBLES,
+        { selectedPlan: j } = (0, A.usePaymentContext)(),
+        U = (0, m.Z)({ location: 'Gift purchase confirm' }) && (null == j ? void 0 : j.skuId) === L.Si.TIER_2 && null != v,
         Z = () => (null != s ? s.skuId : null != r ? r.id : null),
         H = () => {
             let e;
             let t = null != l && L.kJ.includes(l);
-            if (null != m) return E.intl.string(E.t.qB8ayc);
+            if (null != g) return E.intl.string(E.t.qB8ayc);
             if (null == s) return null;
             if (s.interval === L.rV.MONTH) {
                 if (U) return E.intl.string(E.t.IelGKy);
@@ -60,7 +60,7 @@ function O(e) {
                 intervalCount: s.intervalCount
             });
         },
-        D = (e, t) => {
+        G = (e, t) => {
             null != r &&
                 (0, y.dM)(
                     new x.Z({
@@ -78,7 +78,7 @@ function O(e) {
                 O(c.CopyInput.Modes.DEFAULT);
             }, 1500);
         },
-        G = () => {
+        D = () => {
             let e;
             if (null == t) return null;
             switch (S) {
@@ -101,7 +101,7 @@ function O(e) {
                             value: (0, y.Nz)(t),
                             mode: S,
                             text: e,
-                            onCopy: (e) => D(e, t),
+                            onCopy: (e) => G(e, t),
                             supportsCopy: k.wS,
                             className: R.__invalid_copyInput,
                             buttonColor: c.ButtonColors.LINK,
@@ -146,9 +146,9 @@ function O(e) {
                           [R.header]: null == l && !P,
                           [R.headerCustomGifting]: null != l && !P
                       }),
-                      children: null != b || (f && null == m) ? E.intl.string(E.t.zOmK9P) : null != m ? E.intl.string(E.t.d1lrmZ) : E.intl.string(E.t['/s1xR0'])
+                      children: null != b || (f && null == g) ? E.intl.string(E.t.zOmK9P) : null != g ? E.intl.string(E.t.d1lrmZ) : E.intl.string(E.t['/s1xR0'])
                   }),
-                  (f && null != b && null == m) || N
+                  (f && null != b && null == g) || N
                       ? (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {
@@ -187,13 +187,13 @@ function O(e) {
                                         children: H()
                                     }),
                                     !n &&
-                                        null == m &&
+                                        null == g &&
                                         (0, i.jsx)(w, {
                                             giftCode: t,
                                             onClose: u
                                         }),
                                     (0, i.jsx)('div', { className: R.divider }),
-                                    G()
+                                    D()
                                 ]
                             });
                         })()
@@ -203,11 +203,11 @@ function O(e) {
 let w = (e) => {
     let { giftCode: t, onClose: n } = e;
     o.useEffect(() => {
-        f.Z.fetchRelationships(), (0, m.W)();
+        f.Z.fetchRelationships(), (0, g.W)();
     }, []);
     let [r, a] = o.useState(),
         [s, _] = o.useState(!1),
-        [h, g] = o.useState(!1),
+        [h, m] = o.useState(!1),
         { userAffinities: x, isLoading: I } = (0, d.cj)([C.Z], () => ({
             userAffinities: C.Z.getUserAffinitiesUserIds(),
             isLoading: C.Z.getFetching()
@@ -215,10 +215,10 @@ let w = (e) => {
         k = Array.from(x.values()),
         y = (0, d.e7)([v.Z], () => v.Z.getFriendIDs()),
         B = l().difference(y, k),
-        F = [...k, ...B],
-        A = (0, d.e7)([S.default], () => S.default.filter((e) => F.includes(e.id) && !e.bot), [F]);
-    if (null == A || 0 === A.length) return null;
-    let L = l().sortBy(A, (e) => F.indexOf(e.id));
+        A = [...k, ...B],
+        F = (0, d.e7)([S.default], () => S.default.filter((e) => A.includes(e.id) && !e.bot), [A]);
+    if (null == F || 0 === F.length) return null;
+    let L = l().sortBy(F, (e) => A.indexOf(e.id));
     return (0, i.jsxs)('div', {
         className: R.giftRecipientSection,
         children: [
@@ -252,13 +252,13 @@ let w = (e) => {
                         submitting: h,
                         className: R.sendToRecipientButton,
                         onClick: () => {
-                            g(!0),
+                            m(!0),
                                 (0, b.YD)(r, t)
                                     .then(() => {
                                         n(), (0, u.Ou)();
                                     })
                                     .catch(() => {
-                                        _(!0), g(!1);
+                                        _(!0), m(!1);
                                     });
                         },
                         children: E.intl.string(E.t['+EgwQk'])

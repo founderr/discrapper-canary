@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Zm: function () {
-        return E;
+        return S;
     }
 }),
     n(47120);
@@ -228,7 +228,7 @@ function j(e) {
         ]
     });
 }
-function E() {
+function S() {
     let e = (0, l.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, l.e7)([x.Z], () => x.Z.submitting);
     return null == e

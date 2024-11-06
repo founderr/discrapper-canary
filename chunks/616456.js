@@ -999,10 +999,10 @@ var e0 = (((s = e0 || {})[(s.DomContentLoaded = 0)] = 'DomContentLoaded'), (s[(s
 var e1 = (((l = e1 || {})[(l.Mutation = 0)] = 'Mutation'), (l[(l.MouseMove = 1)] = 'MouseMove'), (l[(l.MouseInteraction = 2)] = 'MouseInteraction'), (l[(l.Scroll = 3)] = 'Scroll'), (l[(l.ViewportResize = 4)] = 'ViewportResize'), (l[(l.Input = 5)] = 'Input'), (l[(l.TouchMove = 6)] = 'TouchMove'), (l[(l.MediaInteraction = 7)] = 'MediaInteraction'), (l[(l.StyleSheetRule = 8)] = 'StyleSheetRule'), (l[(l.CanvasMutation = 9)] = 'CanvasMutation'), (l[(l.Font = 10)] = 'Font'), (l[(l.Log = 11)] = 'Log'), (l[(l.Drag = 12)] = 'Drag'), (l[(l.StyleDeclaration = 13)] = 'StyleDeclaration'), (l[(l.Selection = 14)] = 'Selection'), (l[(l.AdoptedStyleSheet = 15)] = 'AdoptedStyleSheet'), (l[(l.CustomElement = 16)] = 'CustomElement'), l);
 var e2 = (((u = e2 || {})[(u.MouseUp = 0)] = 'MouseUp'), (u[(u.MouseDown = 1)] = 'MouseDown'), (u[(u.Click = 2)] = 'Click'), (u[(u.ContextMenu = 3)] = 'ContextMenu'), (u[(u.DblClick = 4)] = 'DblClick'), (u[(u.Focus = 5)] = 'Focus'), (u[(u.Blur = 6)] = 'Blur'), (u[(u.TouchStart = 7)] = 'TouchStart'), (u[(u.TouchMove_Departed = 8)] = 'TouchMove_Departed'), (u[(u.TouchEnd = 9)] = 'TouchEnd'), (u[(u.TouchCancel = 10)] = 'TouchCancel'), u);
 var e3 = (((I = e3 || {})[(I.Mouse = 0)] = 'Mouse'), (I[(I.Pen = 1)] = 'Pen'), (I[(I.Touch = 2)] = 'Touch'), I);
-function e5(e) {
+function e6(e) {
     return '__ln' in e;
 }
-class e6 {
+class e5 {
     constructor() {
         (this.length = 0), (this.head = null), (this.tail = null);
     }
@@ -1066,7 +1066,7 @@ class e8 {
                 if (this.frozen || this.locked) return;
                 let e = [],
                     t = new Set(),
-                    r = new e6(),
+                    r = new e5(),
                     n = (e) => {
                         let t = e,
                             r = -2;
@@ -3555,10 +3555,10 @@ function t3() {
         return !1;
     }
 }
-function t5(e) {
+function t6(e) {
     return void 0 !== e && Math.random() < e;
 }
-function t6(e) {
+function t5(e) {
     let t = Date.now(),
         r = e.id || (0, y.DM)(),
         n = e.started || t,
@@ -3582,8 +3582,8 @@ function t4(e) {
 }
 function t8({ sessionSampleRate: e, allowBuffering: t, stickySession: r = !1 }, { previousSessionId: n } = {}) {
     var a, _;
-    let o = t6({
-        sampled: ((a = e), (_ = t), t5(a) ? 'session' : !!_ && 'buffer'),
+    let o = t5({
+        sampled: ((a = e), (_ = t), t6(a) ? 'session' : !!_ && 'buffer'),
         previousSessionId: n
     });
     return r && t4(o), o;
@@ -3613,7 +3613,7 @@ function rt({ traceInternals: e, sessionIdleExpire: t, maxReplayDuration: r, pre
                 let t = k.sessionStorage.getItem(F);
                 if (!t) return null;
                 let r = JSON.parse(t);
-                return tJ('[Replay] Loading existing session', e), t6(r);
+                return tJ('[Replay] Loading existing session', e), t5(r);
             } catch (e) {
                 return null;
             }
@@ -4776,7 +4776,7 @@ class rB {
                                     return (
                                         (i = r),
                                         (E = e),
-                                        (('buffer' === i.recordingMode && E.message !== X && E.exception && !E.type && t5(i.getOptions().errorSampleRate)) || 'session' === r.recordingMode) &&
+                                        (('buffer' === i.recordingMode && E.message !== X && E.exception && !E.type && t6(i.getOptions().errorSampleRate)) || 'session' === r.recordingMode) &&
                                             (e.tags = {
                                                 ...e.tags,
                                                 replayId: r.getSessionId()

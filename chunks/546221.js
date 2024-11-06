@@ -55,13 +55,13 @@ let v = (e) => {
     var t, n;
     let { guildId: a, application: o } = e,
         { loading: m, team: h, currentPeriod: v, allPeriods: T, metrics: j } = (0, d.Z)(a, o),
-        E = (0, u.u)(a),
-        S = (0, c.mY)();
+        S = (0, u.u)(a),
+        b = (0, c.mY)();
     return m
         ? (0, i.jsx)(r.Spinner, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  E &&
+                  S &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [(0, i.jsx)(l.Z, { children: C.intl.format(C.t['2raBCQ'], { insightsURL: f.EYA.DEVELOPER_PORTAL_GUILD_ANALYTICS_ROLE_SUBSCRIPTION(a) }) }), (0, i.jsx)(r.Spacer, { size: 32 })]
                       }),
@@ -115,7 +115,7 @@ let v = (e) => {
                   }),
                   (0, i.jsx)(r.FormSection, {
                       title: C.intl.string(C.t.O8cDAA),
-                      disabled: S,
+                      disabled: b,
                       className: I.formSection,
                       children: (0, i.jsx)(x.Z, {
                           guildId: a,

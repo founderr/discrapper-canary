@@ -21,7 +21,7 @@ var i = n(200651),
     v = n(981631),
     T = n(388032),
     j = n(366667);
-function E(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,8 +34,8 @@ function E(e, t, n) {
         e
     );
 }
-let S = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
-class b extends r.Component {
+let b = (0, N.Mg)(d.Z.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+class E extends r.Component {
     componentDidMount() {
         this.measure();
         let { guildId: e } = this.props;
@@ -149,13 +149,13 @@ class b extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'tierRefs', {}),
-            E(this, 'defaultTierRef', r.createRef()),
-            E(this, 'state', {
+            S(this, 'tierRefs', {}),
+            S(this, 'defaultTierRef', r.createRef()),
+            S(this, 'state', {
                 tierPositions: null,
                 animatedTier: v.Eu4.NONE
             }),
-            E(this, 'measure', () => {
+            S(this, 'measure', () => {
                 let { subscriberCount: e } = this.props,
                     t = this.defaultTierRef.current;
                 if (null == t) return;
@@ -164,18 +164,18 @@ class b extends r.Component {
                 for (let [t, r] of Object.entries(this.tierRefs)) {
                     if (null == r) return;
                     let { top: l } = r.getBoundingClientRect(),
-                        s = e > 0 ? S : 0;
+                        s = e > 0 ? b : 0;
                     i[t] = l - n + 32 - s;
                 }
                 this.setState({ tierPositions: i });
             }),
-            E(this, 'setTierRef', (e, t) => {
+            S(this, 'setTierRef', (e, t) => {
                 this.tierRefs[t.tier] = e;
             }),
-            E(this, 'handleAnimatedTier', (e) => {
+            S(this, 'handleAnimatedTier', (e) => {
                 this.setState({ animatedTier: e.key });
             }),
-            E(this, 'renderSubscriber', (e, t, n) => {
+            S(this, 'renderSubscriber', (e, t, n) => {
                 var r;
                 return null == e
                     ? null
@@ -199,7 +199,7 @@ class b extends r.Component {
                           n
                       );
             }),
-            E(this, 'renderSubscribersPopout', () =>
+            S(this, 'renderSubscribersPopout', () =>
                 (0, i.jsx)(u.Scroller, {
                     className: j.subscribersPopout,
                     children: this.props.subscribers.map((e) =>
@@ -228,7 +228,7 @@ class b extends r.Component {
                     )
                 })
             ),
-            E(this, 'renderMoreSubscribers', (e, t, n) =>
+            S(this, 'renderMoreSubscribers', (e, t, n) =>
                 (0, i.jsx)(
                     u.Popout,
                     {
@@ -264,5 +264,5 @@ let R = c.ZP.connectStores([g.Z, I.default, f.Z, C.ZP], () => {
         subscribers: i,
         subscriberCount: n.size()
     };
-})(b);
+})(E);
 t.Z = R;

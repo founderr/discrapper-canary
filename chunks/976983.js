@@ -25,9 +25,9 @@ var r = n(120356),
     f = n(926916);
 function C(e) {
     var t, r, s, c;
-    let { guild: u, prompt: C, singleColumn: I, promptIndex: _, option: N, hasError: v, onDragStart: T, onDragComplete: j, onDragReset: E } = e,
-        S = null,
-        b = a().findIndex(C.options, (e) => e.id === N.id),
+    let { guild: u, prompt: C, singleColumn: I, promptIndex: _, option: N, hasError: v, onDragStart: T, onDragComplete: j, onDragReset: S } = e,
+        b = null,
+        E = a().findIndex(C.options, (e) => e.id === N.id),
         {
             drag: R,
             dragSourcePosition: Z,
@@ -35,20 +35,20 @@ function C(e) {
             setIsDraggable: L
         } = (0, d.Z)({
             type: 'ONBOARDING_PROMPT_OPTION_CARD-'.concat(C.id),
-            index: b,
+            index: E,
             optionId: N.id,
             onDragStart: T,
             onDragComplete: j,
-            onDragReset: E
+            onDragReset: S
         }),
         { customEmoji: y, unicodeEmoji: D } = (0, m.Z)(null === (t = N.emoji) || void 0 === t ? void 0 : t.id, null === (r = N.emoji) || void 0 === r ? void 0 : r.name);
     return (
-        !((0, x.Oq)(N.emoji) || null != y || null != D) && (S = p.intl.string(p.t['61wfmp'])),
+        !((0, x.Oq)(N.emoji) || null != y || null != D) && (b = p.intl.string(p.t['61wfmp'])),
         (0, i.jsxs)(o.Clickable, {
             className: l()(f.optionCard, {
-                [f.hasError]: v || null != S,
-                [f.dropIndicatorBefore]: null != Z && b < Z,
-                [f.dropIndicatorAfter]: null != Z && b > Z,
+                [f.hasError]: v || null != b,
+                [f.dropIndicatorBefore]: null != Z && E < Z,
+                [f.dropIndicatorAfter]: null != Z && E > Z,
                 [f.singleColumn]: I
             }),
             onClick: () =>
@@ -112,11 +112,11 @@ function C(e) {
                         })
                     ]
                 }),
-                null != S &&
+                null != b &&
                     (0, i.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-danger',
-                        children: S
+                        children: b
                     })
             ]
         })

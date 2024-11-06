@@ -14,19 +14,19 @@ var i = t(200651),
     d = t(456251);
 function u(e) {
     let { initialStep: n, initialPlanId: t, guildId: u, setAnalyticsData: p, handleClose: f } = e,
-        { blockedPayments: b, setStep: m, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: x, currencyLoading: g, selectedSkuId: _, setSelectedSkuId: v, setSelectedPlanId: C, priceOptions: S, setSubscriptionMetadataRequest: k } = (0, s.usePaymentContext)(),
+        { blockedPayments: m, setStep: b, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: g, currencyLoading: x, selectedSkuId: _, setSelectedSkuId: v, setSelectedPlanId: C, priceOptions: S, setSubscriptionMetadataRequest: k } = (0, s.usePaymentContext)(),
         { isGift: y } = (0, c.wD)(),
-        [j, T] = r.useState(!h || !x || g);
+        [j, T] = r.useState(!h || !g || x);
     return (r.useEffect(() => {
-        T(!h || !x || g);
-    }, [g, x, h]),
+        T(!h || !g || x);
+    }, [x, g, h]),
     r.useEffect(() => {
         null != u && k({ guild_id: u });
     }, [u, k]),
     r.useEffect(() => {
         C(t);
         let e = null != t ? a.Z.get(t) : null;
-        if (!j && !b)
+        if (!j && !m)
             p((n) => {
                 let t = null != e ? (0, l.aS)(e.id, !1, y, S) : void 0;
                 return {
@@ -37,11 +37,11 @@ function u(e) {
                     currency: S.currency
                 };
             }),
-                null != e && (v(null == e ? void 0 : e.skuId), m(n));
-    }, [b, t, y, j, S, _, p, C, v, m, n]),
+                null != e && (v(null == e ? void 0 : e.skuId), b(n));
+    }, [m, t, y, j, S, _, p, C, v, b, n]),
     j)
         ? (0, i.jsx)(d.Z, {})
-        : b
+        : m
           ? (0, i.jsx)(o.Vq, { onClose: f })
           : null;
 }

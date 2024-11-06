@@ -1,9 +1,9 @@
 n.d(t, {
     Fo: function () {
-        return L;
+        return C;
     },
     KY: function () {
-        return C;
+        return L;
     },
     Uo: function () {
         return M;
@@ -45,7 +45,7 @@ var r = n(192379),
 function h(e, t) {
     e.index = t;
 }
-function L(e, t, n, l) {
+function C(e, t, n, l) {
     l = l.toLowerCase();
     let s = (0, _.g)(e),
         a = r.useCallback((e, t) => !(s && e.channel.hasFlag(S.zZ.IS_GUILD_RESOURCE_CHANNEL)) && e.channel.type !== O.d4z.GUILD_DIRECTORY && (0 === t.length || i()(t, e.channel.name.toLowerCase()) || e.channel.topic.toLowerCase().includes(t)), [s]);
@@ -65,7 +65,7 @@ function L(e, t, n, l) {
         );
     }, [t, n, a, l]);
 }
-function C(e) {
+function L(e) {
     let t = e.getSections(!1);
     if (t[A.wZ] > 0)
         switch (e.getGuildActionSection().getRow(0)) {

@@ -26,9 +26,9 @@ var i = n(200651),
     v = n(95242),
     T = n(420966),
     j = n(566476),
-    E = n(203377),
-    S = n(981631),
-    b = n(388032),
+    S = n(203377),
+    b = n(981631),
+    E = n(388032),
     R = n(465848),
     Z = n(571621);
 async function A(e, t, n) {
@@ -40,8 +40,8 @@ async function A(e, t, n) {
         (0, o.openModal)((t) =>
             (0, i.jsx)(o.ConfirmModal, {
                 ...t,
-                header: b.intl.string(b.t.R0RpRU),
-                confirmText: b.intl.string(b.t.BddRzc),
+                header: E.intl.string(E.t.R0RpRU),
+                confirmText: E.intl.string(E.t.BddRzc),
                 confirmButtonColor: o.Button.Colors.BRAND,
                 children: (0, i.jsx)(o.Text, {
                     color: 'text-normal',
@@ -66,15 +66,15 @@ function L(e) {
                 (0, o.openModal)((l) =>
                     (0, i.jsxs)(o.ConfirmModal, {
                         ...l,
-                        header: b.intl.string(b.t['7sFNfX']),
-                        confirmText: b.intl.string(b.t.N86XcH),
-                        cancelText: b.intl.string(b.t['ETE/oK']),
+                        header: E.intl.string(E.t['7sFNfX']),
+                        confirmText: E.intl.string(E.t.N86XcH),
+                        cancelText: E.intl.string(E.t['ETE/oK']),
                         onConfirm: () => A(e, t, n),
                         children: [
                             (0, i.jsx)(o.Text, {
                                 color: 'text-normal',
                                 variant: 'text-md/normal',
-                                children: b.intl.format(b.t.scORUl, {
+                                children: E.intl.format(E.t.scORUl, {
                                     username: e.name,
                                     roleName: null == r ? void 0 : r.name
                                 })
@@ -83,7 +83,7 @@ function L(e) {
                                 className: R.removeTip,
                                 color: 'text-muted',
                                 variant: 'text-md/normal',
-                                children: b.intl.string(b.t.jxIxJC)
+                                children: E.intl.string(E.t.jxIxJC)
                             })
                         ]
                     })
@@ -136,7 +136,7 @@ function L(e) {
                             (0, i.jsx)('div', {
                                 className: R.removeButtonContainer,
                                 children: (0, i.jsx)(o.Tooltip, {
-                                    text: d ? b.intl.string(b.t.wkrQaG) : b.intl.string(b.t['7sFNfX']),
+                                    text: d ? E.intl.string(E.t.wkrQaG) : E.intl.string(E.t['7sFNfX']),
                                     position: 'top',
                                     children: (e) =>
                                         (0, i.jsx)(o.Clickable, {
@@ -171,7 +171,7 @@ function y(e) {
                     className: R.emptyRowText,
                     variant: 'text-sm/semibold',
                     color: 'text-muted',
-                    children: b.intl.format(b.t.P9pZOT, {
+                    children: E.intl.format(E.t.P9pZOT, {
                         addMembersHook: function (e, r) {
                             return n
                                 ? null
@@ -243,15 +243,15 @@ function O(e) {
                 query: t,
                 onChange: n,
                 onClear: () => n(''),
-                placeholder: b.intl.string(b.t.pYHobG),
-                'aria-label': b.intl.string(b.t.pYHobG)
+                placeholder: E.intl.string(E.t.pYHobG),
+                'aria-label': E.intl.string(E.t.pYHobG)
             }),
             (0, i.jsx)(o.Button, {
                 className: R.addButton,
                 size: o.Button.Sizes.SMALL,
                 onClick: l,
                 disabled: r,
-                children: b.intl.string(b.t.cHszXl)
+                children: E.intl.string(E.t.cHszXl)
             })
         ]
     });
@@ -269,7 +269,7 @@ function M(e) {
                 return null !== (n = null === (e = C.Z.getRoleMemberCount(t.id)) || void 0 === e ? void 0 : e[l.id]) && void 0 !== n ? n : 0;
             }) > _.length,
         A = () => {
-            f.default.track(S.rMx.OPEN_MODAL, {
+            f.default.track(b.rMx.OPEN_MODAL, {
                 type: 'Add Role Members',
                 location_page: 'Role Settings',
                 location_section: 'Members'
@@ -298,7 +298,7 @@ function M(e) {
                             (0, i.jsx)(T.Z, {
                                 guild: t,
                                 role: l,
-                                selectedSection: E.ZI.MEMBERS,
+                                selectedSection: S.ZI.MEMBERS,
                                 setSelectedSection: d
                             }),
                             (0, i.jsx)(O, {
@@ -311,7 +311,7 @@ function M(e) {
                                 ? (0, i.jsx)(o.HelpMessage, {
                                       className: R.searchWarning,
                                       messageType: o.HelpMessageTypes.INFO,
-                                      children: b.intl.string(b.t.RQxHZ2)
+                                      children: E.intl.string(E.t.RQxHZ2)
                                   })
                                 : null
                         ]

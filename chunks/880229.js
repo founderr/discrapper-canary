@@ -30,9 +30,9 @@ var i,
     v = n(518738),
     T = n(131704),
     j = n(324067),
-    E = n(430824),
-    S = n(259580),
-    b = n(624138),
+    S = n(430824),
+    b = n(259580),
+    E = n(624138),
     R = n(817460),
     Z = n(166803),
     A = n(629262),
@@ -42,7 +42,7 @@ var i,
     O = n(954477);
 let M = (0, _.hQ)(),
     P = (0, _.hQ)(),
-    k = (0, b.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+    k = (0, E.Mg)(g.Z.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
 function w(e) {
     var t;
     let { emojiId: n, emojiName: i, className: r } = e,
@@ -288,14 +288,14 @@ function F(e) {
             }),
             (0, l.jsx)('div', {
                 className: O.rowCheckbox,
-                children: (0, l.jsx)(S.Z, { direction: S.Z.Directions.RIGHT })
+                children: (0, l.jsx)(b.Z, { direction: b.Z.Directions.RIGHT })
             })
         ]
     });
 }
 function H(e) {
     let { guild: t, onSelect: n } = e,
-        i = (0, m.e7)([E.Z], () => E.Z.getRoles(t.id)),
+        i = (0, m.e7)([S.Z], () => S.Z.getRoles(t.id)),
         r = (0, m.e7)([j.Z], () => j.Z.getCategories(t.id)),
         a = s.useMemo(
             () =>
@@ -350,7 +350,7 @@ function H(e) {
 }
 function z(e) {
     let { onClose: t, guildId: n, onSelect: i } = e,
-        r = (0, m.e7)([E.Z], () => E.Z.getGuild(n));
+        r = (0, m.e7)([S.Z], () => S.Z.getGuild(n));
     return null == r
         ? null
         : (0, l.jsxs)(l.Fragment, {

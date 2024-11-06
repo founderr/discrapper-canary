@@ -50,7 +50,7 @@ class d extends r.PureComponent {
             u(this, 'renderFormSection', (e) => {
                 let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: l, layout: o, ...c } = this.props,
                     { getClassNameForLayout: u, renderInput: d, title: m, name: p, id: h, placeholder: A, ...E } = e,
-                    N = {
+                    f = {
                         ...E,
                         placeholder: null == A ? void 0 : A(),
                         layout: o,
@@ -68,7 +68,7 @@ class d extends r.PureComponent {
                         className: i()(null == u ? void 0 : u(o)),
                         title: m(),
                         titleId: h,
-                        children: d(N, c)
+                        children: d(f, c)
                     },
                     p
                 );

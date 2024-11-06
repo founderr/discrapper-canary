@@ -26,9 +26,9 @@ var r = n(442837),
     v = n(411667),
     T = n(903773),
     j = n(822531),
-    E = n(909656),
-    S = n(210591),
-    b = n(927731),
+    S = n(909656),
+    b = n(210591),
+    E = n(927731),
     R = n(798680),
     Z = n(509026),
     A = n(981631),
@@ -90,7 +90,7 @@ function M(e) {
                 ]
             }
         ];
-    return (0, i.jsx)(S.Z, { children: m });
+    return (0, i.jsx)(b.Z, { children: m });
 }
 function P(e) {
     let { application: t } = e,
@@ -142,7 +142,7 @@ function w(e) {
         { currentTab: h, setCurrentTab: C } = (0, R.dw)(),
         I = (0, f.f)(),
         T = (0, r.e7)([x.default], () => x.default.getCurrentUser()),
-        S = (0, N.Z)(n.id),
+        b = (0, N.Z)(n.id),
         y = n.isOwner(T),
         k = () => {
             let e = g.Z.getRole(n.id, n.getEveryoneRoleId());
@@ -161,10 +161,10 @@ function w(e) {
     if (!I) return (0, i.jsx)(l.Spinner, {});
     switch (h) {
         case R.ue.BASIC_INFO:
-            t = (0, i.jsx)(E.Z, { guild: n });
+            t = (0, i.jsx)(S.Z, { guild: n });
             break;
         case R.ue.TIERS:
-            t = (0, i.jsx)(b.Z, { guildId: n.id });
+            t = (0, i.jsx)(E.Z, { guildId: n.id });
             break;
         case R.ue.PAYMENT:
             t = (0, i.jsx)(j.Z, { guild: n });
@@ -237,13 +237,13 @@ function w(e) {
                                         children: (e) => {
                                             let { onMouseEnter: t, onMouseLeave: n } = e;
                                             return (0, i.jsx)(l.Button, {
-                                                disabled: S,
-                                                onMouseEnter: S ? t : void 0,
-                                                onMouseLeave: S ? n : void 0,
+                                                disabled: b,
+                                                onMouseEnter: b ? t : void 0,
+                                                onMouseLeave: b ? n : void 0,
                                                 onClick: k,
                                                 color: l.Button.Colors.PRIMARY,
                                                 size: l.Button.Sizes.SMALL,
-                                                grow: !S,
+                                                grow: !b,
                                                 look: l.Button.Looks.OUTLINED,
                                                 className: O.previewButton,
                                                 children: D.intl.string(D.t.vM81yc)

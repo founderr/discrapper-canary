@@ -146,7 +146,7 @@ function f(e) {
         v = N[u.u.CAPTCHA_AND_RAID_PROTECTION],
         T = N[u.u.DM_AND_SPAM_PROTECTION],
         j = N[u.u.PERMISSIONS],
-        E = (0, o.pr)(t.id);
+        S = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(l.Heading, {
@@ -179,7 +179,7 @@ function f(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, i.jsx)('div', { className: g.divider }),
-                    E &&
+                    S &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p, {

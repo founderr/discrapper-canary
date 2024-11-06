@@ -93,14 +93,14 @@ function T(e, t) {
 t.Z = (e) => {
     let { guild: t, guildId: l, className: a, noHeader: o = !1, failedItemsOnly: c = !1 } = e,
         [m, j] = (0, u.Wu)([g.ZP], () => [g.ZP.getDiscoveryChecklist(l), g.ZP.isLoading()], [l]),
-        { nsfwProperties: E } = null != m ? m : {},
-        S = null == t ? void 0 : t.hasFeature(I.oNc.PARTNERED),
-        b = null == E ? void 0 : E.channels_banned_keywords,
+        { nsfwProperties: S } = null != m ? m : {},
+        b = null == t ? void 0 : t.hasFeature(I.oNc.PARTNERED),
+        E = null == S ? void 0 : S.channels_banned_keywords,
         R = (0, u.e7)(
             [x.ZP],
             () => {
                 var e, n, i;
-                if (null == b) return [];
+                if (null == E) return [];
                 let r = null !== (n = (null !== (e = x.ZP.getChannels(t.id)) && void 0 !== e ? e : {})[x.sH]) && void 0 !== n ? n : [],
                     l =
                         null !==
@@ -118,14 +118,14 @@ t.Z = (e) => {
                                           )) && void 0 !== i
                             ? i
                             : {};
-                return null == b
+                return null == E
                     ? []
-                    : Object.entries(b).map((e) => {
+                    : Object.entries(E).map((e) => {
                           let [t, n] = e;
                           return [l[t], n];
                       });
             },
-            [t.id, b],
+            [t.id, E],
             T
         );
     if (j || null == m)
@@ -141,7 +141,7 @@ t.Z = (e) => {
                 (0, i.jsx)(h.Spinner, { className: N.__invalid_spinner })
             ]
         });
-    let Z = S ? _.t['WH+1Y2'] : _.t.a4MYDA,
+    let Z = b ? _.t['WH+1Y2'] : _.t.a4MYDA,
         A = [
             {
                 name: _.intl.string(_.t.yvk9p6),
@@ -242,7 +242,7 @@ t.Z = (e) => {
                 description: _.intl.string(_.t.Pbu9AQ),
                 failingDescription: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (null == E ? void 0 : E.channels) != null
+                        (null == S ? void 0 : S.channels) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -278,7 +278,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == E ? void 0 : E.name) != null
+                        (null == S ? void 0 : S.name) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -295,7 +295,7 @@ t.Z = (e) => {
                                   })
                               })
                             : null,
-                        (null == E ? void 0 : E.description) != null
+                        (null == S ? void 0 : S.description) != null
                             ? (0, i.jsx)(h.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
@@ -314,7 +314,7 @@ t.Z = (e) => {
                             : null
                     ]
                 }),
-                checked: null == E || 0 === Object.keys(E).length
+                checked: null == S || 0 === Object.keys(S).length
             },
             {
                 name: _.intl.string(_.t.lSXnLy),

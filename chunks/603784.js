@@ -20,15 +20,15 @@ var i = n(200651),
     v = n(426563),
     T = n(909746),
     j = n(501801),
-    E = n(981631),
-    S = n(388032),
-    b = n(451316);
+    S = n(981631),
+    b = n(388032),
+    E = n(451316);
 class R extends r.PureComponent {
     render() {
         let { user: e, onContextMenu: t } = this.props;
         return (0, i.jsxs)('span', {
             onContextMenu: t,
-            className: b.userHook,
+            className: E.userHook,
             children: [
                 (0, i.jsx)(d.Text, {
                     variant: 'text-md/normal',
@@ -37,7 +37,7 @@ class R extends r.PureComponent {
                 '0' !== e.discriminator &&
                     (0, i.jsxs)(d.Text, {
                         variant: 'text-xs/normal',
-                        className: b.discrim,
+                        className: E.discrim,
                         children: ['#', e.discriminator]
                     })
             ]
@@ -48,7 +48,7 @@ class Z extends r.PureComponent {
     hasChangesToRender() {
         let { log: e } = this.props,
             { changes: t } = e;
-        return (e.actionType !== E.vB8.DELETE || e.action === E.rsA.MEMBER_BAN_ADD || e.action === E.rsA.MEMBER_KICK || e.action === E.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, j.xO)(e, t));
+        return (e.actionType !== S.vB8.DELETE || e.action === S.rsA.MEMBER_BAN_ADD || e.action === S.rsA.MEMBER_KICK || e.action === S.rsA.MEMBER_PRUNE) && null != t && t.some((t) => !(0, j.xO)(e, t));
     }
     renderTitle() {
         let { log: e, onUserContextMenu: t, onTargetContextMenu: n, onChannelContextMenu: r } = this.props,
@@ -56,8 +56,8 @@ class Z extends r.PureComponent {
             o = T.N5(e);
         return null != o
             ? (0, i.jsx)('div', {
-                  className: b.overflowEllipsis,
-                  children: S.intl.format(o, {
+                  className: E.overflowEllipsis,
+                  children: b.intl.format(o, {
                       user: l,
                       target: s.toString(),
                       userHook: (n, r) => {
@@ -73,12 +73,12 @@ class Z extends r.PureComponent {
                           if (null != e.options.integration_type) {
                               var l;
                               let t = u.Z.get(e.options.integration_type);
-                              return null !== (l = null == t ? void 0 : t.name) && void 0 !== l ? l : S.intl.string(S.t['n+olu7']);
+                              return null !== (l = null == t ? void 0 : t.name) && void 0 !== l ? l : b.intl.string(b.t['n+olu7']);
                           }
-                          return S.intl.string(S.t['30mdIy']);
+                          return b.intl.string(b.t['30mdIy']);
                       },
                       targetHook: (t, r) =>
-                          e.targetType === E.KFR.USER && e.target instanceof f.Z
+                          e.targetType === S.KFR.USER && e.target instanceof f.Z
                               ? (0, i.jsx)(
                                     R,
                                     {
@@ -147,8 +147,8 @@ class Z extends r.PureComponent {
                         onClick: (e) => {
                             e.stopPropagation(), n.onClick(e);
                         },
-                        className: b.avatar,
-                        src: ((r = e), (l = t), r.action === E.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === E.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === E.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === E.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
+                        className: E.avatar,
+                        src: ((r = e), (l = t), r.action === S.rsA.AUTO_MODERATION_BLOCK_MESSAGE || r.action === S.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || r.action === S.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || r.action === S.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null === (s = r.user) || void 0 === s ? void 0 : s.getAvatarURL(l, 40)),
                         'aria-hidden': !0,
                         size: d.AvatarSizes.SIZE_40
                     });
@@ -159,7 +159,7 @@ class Z extends r.PureComponent {
             if (null != e) {
                 let t = (0, c.wj)(n) ? e.icon.darkSVG : e.icon.lightSVG;
                 return (0, i.jsx)(d.Avatar, {
-                    className: b.avatar,
+                    className: E.avatar,
                     src: t,
                     'aria-hidden': !0,
                     size: d.AvatarSizes.SIZE_40
@@ -172,28 +172,28 @@ class Z extends r.PureComponent {
         let e;
         let { log: t, className: n, expanded: r, onHeaderClick: l } = this.props,
             o = this.hasChangesToRender(),
-            c = b.headerDefault;
-        r ? (c = b.headerExpanded) : o && (c = b.headerClickable);
+            c = E.headerDefault;
+        r ? (c = E.headerExpanded) : o && (c = E.headerClickable);
         let u = t.timestampStart.calendar(),
             m = t.timestampEnd.calendar();
         e =
             u === m
                 ? (0, i.jsx)(d.Text, {
-                      className: b.timestamp,
+                      className: E.timestamp,
                       variant: 'text-sm/normal',
                       children: u
                   })
                 : (0, i.jsxs)(d.Text, {
-                      className: b.timestamp,
+                      className: E.timestamp,
                       variant: 'text-sm/normal',
                       children: [u, '\u2014', m]
                   });
-        let h = o ? l : E.dG4;
+        let h = o ? l : S.dG4;
         return (0, i.jsx)(a.mh, {
             id: t.id,
             children: (l) =>
                 (0, i.jsxs)('div', {
-                    className: s()(b.auditLog, n),
+                    className: s()(E.auditLog, n),
                     children: [
                         (0, i.jsxs)(d.Clickable, {
                             className: c,
@@ -208,10 +208,10 @@ class Z extends r.PureComponent {
                                 }),
                                 this.renderEntryAvatar(),
                                 (0, i.jsxs)('div', {
-                                    className: b.timeWrap,
+                                    className: E.timeWrap,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: b.title,
+                                            className: E.title,
                                             children: this.renderTitle()
                                         }),
                                         e
@@ -219,15 +219,15 @@ class Z extends r.PureComponent {
                                 }),
                                 o
                                     ? (0, i.jsx)(_.Z, {
-                                          className: b.expand,
-                                          foreground: b.expandForeground,
+                                          className: E.expand,
+                                          foreground: E.expandForeground,
                                           expanded: r,
                                           'aria-hidden': !0
                                       })
                                     : null
                             ]
                         }),
-                        r ? (0, i.jsx)('div', { className: b.divider }) : null,
+                        r ? (0, i.jsx)('div', { className: E.divider }) : null,
                         this.renderChangeSummary()
                     ]
                 })

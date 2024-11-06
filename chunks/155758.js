@@ -25,14 +25,14 @@ function C(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: h, onEdit: g, onMove: C, disabled: I = !1 } = e,
         _ = r.useRef(null),
         N = r.useRef(null),
-        { drag: v, dragPreview: T, drop: j, isDragging: E } = (0, x.Z)(_, d, u, C);
+        { drag: v, dragPreview: T, drop: j, isDragging: S } = (0, x.Z)(_, d, u, C);
     return (
         v(N),
         T(j(_)),
         (0, i.jsxs)('div', {
             ref: _,
             className: s()(f.card, {
-                [f.cardDragging]: E,
+                [f.cardDragging]: S,
                 [f.disabled]: I
             }),
             children: [

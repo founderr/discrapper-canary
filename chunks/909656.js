@@ -26,9 +26,9 @@ var i = n(200651),
     v = n(584825),
     T = n(723047),
     j = n(927954),
-    E = n(164000),
-    S = n(587431),
-    b = n(293810),
+    S = n(164000),
+    b = n(587431),
+    E = n(293810),
     R = n(333866),
     Z = n(388032),
     A = n(155161);
@@ -38,13 +38,13 @@ function y() {
         {
             name: Z.intl.string(Z.t.rXqxhI),
             desc: Z.intl.string(Z.t.yQiJnZ),
-            value: b.e3.SOME_CHANNELS,
+            value: E.e3.SOME_CHANNELS,
             icon: g.TextIcon
         },
         {
             name: Z.intl.string(Z.t.WzC9s7),
             desc: Z.intl.string(Z.t.WmagiI),
-            value: b.e3.ALL_CHANNELS,
+            value: E.e3.ALL_CHANNELS,
             icon: g.KeyIcon
         }
     ];
@@ -91,7 +91,7 @@ function D(e) {
 function O(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
-        { format: s } = (0, E.Z)(n.id),
+        { format: s } = (0, S.Z)(n.id),
         a = (0, v.YB)(n.id),
         c = r.useCallback(() => {
             var e;
@@ -146,7 +146,7 @@ function O(e) {
         children: [
             null != U &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(S.Z, { children: U.getAnyErrorMessage() }), (0, i.jsx)(g.Spacer, { size: 16 })]
+                    children: [(0, i.jsx)(b.Z, { children: U.getAnyErrorMessage() }), (0, i.jsx)(g.Spacer, { size: 16 })]
                 }),
             l
                 ? null
@@ -167,7 +167,7 @@ function O(e) {
                                       value: u,
                                       onChange: (e) => {
                                           s !== e &&
-                                              e === b.e3.ALL_CHANNELS &&
+                                              e === E.e3.ALL_CHANNELS &&
                                               (0, g.openModal)((e) =>
                                                   (0, i.jsx)(g.ConfirmModal, {
                                                       ...e,
@@ -308,7 +308,7 @@ function O(e) {
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');
                                 let e = {};
-                                p !== a.description && (e.description = p), null != y && y.startsWith('data:') && (e.cover_image = y), u !== s && (e.full_server_gate = u === b.e3.ALL_CHANNELS), M !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = M), k !== a.server_shop_tab_order && (e.server_shop_tab_order = k), !d().isEmpty(e) && G(n.id, e);
+                                p !== a.description && (e.description = p), null != y && y.startsWith('data:') && (e.cover_image = y), u !== s && (e.full_server_gate = u === E.e3.ALL_CHANNELS), M !== a.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = M), k !== a.server_shop_tab_order && (e.server_shop_tab_order = k), !d().isEmpty(e) && G(n.id, e);
                             },
                             saveButtonTooltip: X ? void 0 : Z.intl.string(Z.t['6HRvio'])
                         })

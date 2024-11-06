@@ -35,9 +35,9 @@ function C() {
             },
             [l, N]
         ),
-        E = (0, d.mY)(),
-        S = (0, o.Dt)(),
-        b = (0, o.Dt)();
+        S = (0, d.mY)(),
+        b = (0, o.Dt)(),
+        E = (0, o.Dt)();
     return (0, i.jsxs)(x.Z, {
         title: p.intl.string(p.t['6antoq']),
         description: p.intl.string(p.t.urVijY),
@@ -45,31 +45,31 @@ function C() {
             (0, i.jsx)(a.FormSwitch, {
                 onChange: (e, t) => j(e),
                 value: T,
-                disabled: E,
+                disabled: S,
                 hideBorder: !0,
                 children: p.intl.string(p.t['+hTmdX'])
             }),
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t.m1KuWV),
-                titleId: S,
-                disabled: !T || E,
+                titleId: b,
+                disabled: !T || S,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || E,
+                        disabled: !T || S,
                         children: p.intl.string(p.t.NB9NLC)
                     }),
                     (0, i.jsx)(a.Spacer, { size: 8 }),
                     (0, i.jsx)(a.SingleSelect, {
-                        'aria-labelledby': S,
+                        'aria-labelledby': b,
                         options: N,
                         className: f.formInput,
                         placeholder: p.intl.string(p.t.WZG1BQ),
                         value: n,
                         onChange: l,
                         maxVisibleItems: 5,
-                        isDisabled: !T || E,
+                        isDisabled: !T || S,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]
@@ -77,23 +77,23 @@ function C() {
             (0, i.jsx)(a.Spacer, { size: 24 }),
             (0, i.jsxs)(a.FormSection, {
                 title: p.intl.string(p.t['/JD9oa']),
-                titleId: b,
-                disabled: !T || E,
+                titleId: E,
+                disabled: !T || S,
                 children: [
                     (0, i.jsx)(a.FormText, {
                         type: a.FormText.Types.DESCRIPTION,
                         className: f.formDescription,
-                        disabled: !T || E,
+                        disabled: !T || S,
                         children: p.intl.string(p.t.Cg5eBg)
                     }),
                     (0, i.jsx)(a.SingleSelect, {
-                        'aria-labelledby': b,
+                        'aria-labelledby': E,
                         options: v,
                         className: f.formInput,
                         value: C,
                         onChange: I,
                         maxVisibleItems: 5,
-                        isDisabled: !T || E,
+                        isDisabled: !T || S,
                         look: a.SelectLooks.CUSTOM
                     })
                 ]

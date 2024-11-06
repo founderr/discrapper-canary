@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(594174),
     T = n(823379),
     j = n(51144),
-    E = n(987707),
-    S = n(999382),
-    b = n(909746),
+    S = n(987707),
+    b = n(999382),
+    E = n(909746),
     R = n(501801),
     Z = n(603784),
     A = n(981631),
@@ -409,7 +409,7 @@ class w extends r.PureComponent {
                 var e, t;
                 let { actionFilter: n, hide: r, userIdFilter: l, moderators: a } = this.props;
                 if (r) return null;
-                let o = b.Iv(),
+                let o = E.Iv(),
                     c =
                         null !==
                             (e = o.find((e) => {
@@ -544,23 +544,23 @@ class w extends r.PureComponent {
             });
     }
 }
-t.Z = d.ZP.connectStores([E.Z, S.Z, _.Z, p.Z, N.Z, v.default], () => {
-    let e = S.Z.getGuildId(),
+t.Z = d.ZP.connectStores([S.Z, b.Z, _.Z, p.Z, N.Z, v.default], () => {
+    let e = b.Z.getGuildId(),
         t = _.Z.getGuild(e),
-        n = E.Z.logs;
+        n = S.Z.logs;
     return {
         guildId: e,
         guild: t,
-        moderators: E.Z.userIds.map((e) => v.default.getUser(e)).filter(T.lm),
-        isInitialLoading: E.Z.isInitialLoading,
-        isLoading: E.Z.isLoading,
-        isLoadingNextPage: E.Z.isLoadingNextPage,
-        showLoadMore: E.Z.groupedFetchCount > 2,
-        hasError: E.Z.hasError,
-        hasOlderLogs: E.Z.hasOlderLogs,
-        logs: null != n && null != t ? b._$(n, t) : [],
-        actionFilter: E.Z.actionFilter,
-        userIdFilter: E.Z.userIdFilter,
+        moderators: S.Z.userIds.map((e) => v.default.getUser(e)).filter(T.lm),
+        isInitialLoading: S.Z.isInitialLoading,
+        isLoading: S.Z.isLoading,
+        isLoadingNextPage: S.Z.isLoadingNextPage,
+        showLoadMore: S.Z.groupedFetchCount > 2,
+        hasError: S.Z.hasError,
+        hasOlderLogs: S.Z.hasOlderLogs,
+        logs: null != n && null != t ? E._$(n, t) : [],
+        actionFilter: S.Z.actionFilter,
+        userIdFilter: S.Z.userIdFilter,
         theme: p.Z.theme,
         hide: N.Z.enabled
     };

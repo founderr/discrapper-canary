@@ -33,8 +33,8 @@ function T(e, t, n) {
     );
 }
 let j = 'NO_INSTANT_INVITE',
-    E = a.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
-class S extends r.PureComponent {
+    S = a.$e(_.Plq.VIEW_CHANNEL, _.Plq.CREATE_INSTANT_INVITE);
+class b extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { widgetEnabled: n } = e,
             { widgetEnabledProp: i } = t;
@@ -55,7 +55,7 @@ class S extends r.PureComponent {
                 })
                 .filter((e) => {
                     let { channel: n } = e;
-                    return n.id === t || g.Z.can(E, n);
+                    return n.id === t || g.Z.can(S, n);
                 })
                 .map((e) => {
                     let { channel: t } = e;
@@ -176,4 +176,4 @@ t.Z = o.ZP.connectStores([I.Z, p.Z], () => {
         widgetEnabled: n,
         hide: p.Z.enabled
     };
-})(S);
+})(b);

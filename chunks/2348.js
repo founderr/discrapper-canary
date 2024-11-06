@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return S;
     }
 }),
     n(653041);
@@ -99,14 +99,14 @@ let v = r.memo(function () {
     }),
     j = r.memo(function (e) {
         let { channel: t, category: r, guild: l, isFirstChannel: g, isLastChannel: N, tooltipDirection: j = 'right' } = e,
-            E = (0, p.Mf)(t.id, r.id),
-            S = (0, p.t4)(t.id, r.id),
-            b = (0, p.EH)(t.id, r.id),
+            S = (0, p.Mf)(t.id, r.id),
+            b = (0, p.t4)(t.id, r.id),
+            E = (0, p.EH)(t.id, r.id),
             R = (0, p.lL)(l.id, r.id),
             Z = null != (0, f.Z)(l).find((e) => e.id === t.id),
             A = (0, m.mn)(t.id),
             L = (e) => {
-                if (!S)
+                if (!b)
                     return (
                         e.stopPropagation(),
                         (0, u.s)(l.id, t.id)
@@ -147,7 +147,7 @@ let v = r.memo(function () {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.Tooltip, {
-                    text: null != b ? b : R,
+                    text: null != E ? E : R,
                     delay: 500,
                     position: j,
                     children: (e) =>
@@ -155,7 +155,7 @@ let v = r.memo(function () {
                             className: s()(_.channelRow, {
                                 [_.firstChannel]: g,
                                 [_.lastChannel]: N,
-                                [_.disabled]: S
+                                [_.disabled]: b
                             }),
                             ...e,
                             onClick: L,
@@ -176,7 +176,7 @@ let v = r.memo(function () {
                                                     className: _.channelText,
                                                     variant: 'text-md/medium',
                                                     lineClamp: 1,
-                                                    color: S ? 'text-muted' : 'text-normal',
+                                                    color: b ? 'text-muted' : 'text-normal',
                                                     children: t.name
                                                 })
                                             }),
@@ -200,10 +200,10 @@ let v = r.memo(function () {
                                     className: _.channelActions,
                                     children: (0, u.s)(t.guild_id, t.id)
                                         ? (0, i.jsx)(o.Checkbox, {
-                                              'aria-checked': E,
-                                              value: E,
+                                              'aria-checked': S,
+                                              value: S,
                                               type: o.Checkbox.Types.INVERTED,
-                                              disabled: S,
+                                              disabled: b,
                                               color: A ? a.Z.colors.TEXT_BRAND.css : a.Z.colors.BUTTON_SECONDARY_BACKGROUND.css,
                                               innerClassName: _.checkboxInner,
                                               displayOnly: !0
@@ -234,7 +234,7 @@ let v = r.memo(function () {
             ]
         });
     });
-function E(e) {
+function S(e) {
     let { categories: t, guild: n, className: l, hasSidebar: s } = e,
         a = r.useCallback(
             (e) => {

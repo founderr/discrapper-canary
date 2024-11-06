@@ -27,9 +27,9 @@ var i,
     v = n(267101),
     T = n(294294),
     j = n(310800),
-    E = n(833695),
-    S = n(981631),
-    b = n(176505),
+    S = n(833695),
+    b = n(981631),
+    E = n(176505),
     R = n(388032),
     Z = n(85490);
 function A(e) {
@@ -51,9 +51,9 @@ function A(e) {
             type: f.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
-            returnToSection: S.pNK.GUILD_PRODUCTS
+            returnToSection: b.pNK.GUILD_PRODUCTS
         }),
-            (0, C.uL)(S.Z5c.CHANNEL(r.id, b.oC.GUILD_SHOP));
+            (0, C.uL)(b.Z5c.CHANNEL(r.id, E.oC.GUILD_SHOP));
     }, [r]);
     if (!i || y) return (0, l.jsx)(c.Spinner, {});
     if (null == r) return null;
@@ -66,8 +66,8 @@ function A(e) {
                 (0, l.jsx)(c.FormText, {
                     type: c.FormText.Types.DESCRIPTION,
                     children: R.intl.format(R.t.xiYuDg, {
-                        monetizationPolicyLink: N.Z.getArticleURL(S.BhN.CREATOR_POLICY),
-                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(S.BhN.SERVER_PRODUCTS)
+                        monetizationPolicyLink: N.Z.getArticleURL(b.BhN.CREATOR_POLICY),
+                        serverProductsSupportLink: N.Z.getCreatorSupportArticleURL(b.BhN.SERVER_PRODUCTS)
                     })
                 })
             ]
@@ -116,7 +116,7 @@ function A(e) {
         w = (0, a.EQ)(D)
             .with('basic_info', () => (0, l.jsx)(T.Z, { guildId: t }))
             .with('manage_listings', () => (0, l.jsx)(j.Z, { guildId: t }))
-            .with('payment', () => (0, l.jsx)(E.Z, { guildId: t }))
+            .with('payment', () => (0, l.jsx)(S.Z, { guildId: t }))
             .exhaustive(),
         B = i
             ? (0, l.jsx)(c.TabBar.Panel, {

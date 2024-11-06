@@ -18,12 +18,12 @@ var i = n(200651),
 let I = [16, 16, 14, 14, 12, 10, 8];
 t.Z = function (e) {
     var t, n;
-    let { guild: l, disabled: _, small: N, loading: v = !1, description: T, memberCount: j, presenceCount: E, className: S } = e,
-        b = (0, c.ZP)(),
+    let { guild: l, disabled: _, small: N, loading: v = !1, description: T, memberCount: j, presenceCount: S, className: b } = e,
+        E = (0, c.ZP)(),
         [R, Z] = r.useState(!1);
     if (null == l || v)
         return (0, i.jsx)('div', {
-            className: s()(S, p.card, p.cardPlaceholder, {
+            className: s()(b, p.card, p.cardPlaceholder, {
                 [p.cardSmall]: N,
                 [p.cardDisabled]: _
             })
@@ -37,7 +37,7 @@ t.Z = function (e) {
                       splash: l.discoverySplash,
                       size: 240 * (0, m.x_)()
                   }),
-        y = (0, a.wj)(b) ? f : C,
+        y = (0, a.wj)(E) ? f : C,
         D =
             null !==
                 (t = h.ZP.getGuildIconURL({
@@ -49,7 +49,7 @@ t.Z = function (e) {
                 : void 0,
         O = null != l.description ? l.description : T,
         M = null != j ? j : null == l ? void 0 : l.memberCount,
-        P = null != E ? E : null == l ? void 0 : l.presenceCount,
+        P = null != S ? S : null == l ? void 0 : l.presenceCount,
         k = null;
     if (null != D)
         k = (0, i.jsx)('img', {
@@ -70,7 +70,7 @@ t.Z = function (e) {
         });
     }
     return (0, i.jsxs)('div', {
-        className: s()(S, p.card, {
+        className: s()(b, p.card, {
             [p.cardSmall]: N,
             [p.cardDisabled]: _,
             [p.splashLoaded]: R

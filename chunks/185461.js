@@ -1,6 +1,6 @@
 r.d(t, {
     U0: function () {
-        return e6;
+        return e5;
     },
     fA: function () {
         return g;
@@ -2060,7 +2060,7 @@ ${eQ}
         width: Math.abs(e.startX - e.endX),
         height: Math.abs(e.startY - e.endY)
     }),
-    e5 = (e) => {
+    e6 = (e) => {
         let t = e.clientHeight,
             r = e.clientWidth,
             n = e.width / e.height,
@@ -2076,7 +2076,7 @@ ${eQ}
             endY: _ + i
         };
     },
-    e6 = () => ({
+    e5 = () => ({
         name: 'FeedbackScreenshot',
         setupOnce() {},
         createInput: ({ h: e, hooks: t, dialog: r, options: n }) => {
@@ -2237,7 +2237,7 @@ ${eQ}
                             [d, f] = t.useState(!1);
                         function L() {
                             let e = I.current,
-                                t = e3(e5(r));
+                                t = e3(e6(r));
                             if (e) {
                                 (e.width = t.width * e2), (e.height = t.height * e2), (e.style.width = `${t.width}px`), (e.style.height = `${t.height}px`);
                                 let r = e.getContext('2d');
@@ -2268,7 +2268,7 @@ ${eQ}
                                 if (!e) return;
                                 let t = e.getContext('2d');
                                 if (!t) return;
-                                let n = e3(e5(r)),
+                                let n = e3(e6(r)),
                                     a = e3(R);
                                 t.clearRect(0, 0, n.width, n.height), (t.fillStyle = 'rgba(0, 0, 0, 0.5)'), t.fillRect(0, 0, n.width, n.height), t.clearRect(a.x, a.y, a.width, a.height), (t.strokeStyle = '#ffffff'), (t.lineWidth = 3), t.strokeRect(a.x + 1, a.y + 1, a.width - 2, a.height - 2), (t.strokeStyle = '#000000'), (t.lineWidth = 1), t.strokeRect(a.x + 3, a.y + 3, a.width - 6, a.height - 6);
                             }, [R]);
@@ -2516,7 +2516,7 @@ ${eQ}
                                                         e.preventDefault(),
                                                             !(function () {
                                                                 let e = s.createElement('canvas'),
-                                                                    t = e3(e5(r)),
+                                                                    t = e3(e6(r)),
                                                                     n = e3(R);
                                                                 (e.width = n.width * e2), (e.height = n.height * e2);
                                                                 let a = e.getContext('2d');

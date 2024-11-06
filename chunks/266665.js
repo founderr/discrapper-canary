@@ -26,17 +26,17 @@ var i = n(200651),
     v = n(712181),
     T = n(420966),
     j = n(203377),
-    E = n(981631),
-    S = n(388032),
-    b = n(100161);
+    S = n(981631),
+    b = n(388032),
+    E = n(100161);
 let R = 'DRAGGABLE_ROLE';
 function Z(e) {
     var t, r;
     let l,
         { guild: d, role: h, highestRole: g, selectedItem: f, onClick: C, currentPosition: I, onDragStart: _, onDragReset: v, onDragComplete: T, roleStyle: j } = e,
-        S = (0, N.T)(d, g, h),
+        b = (0, N.T)(d, g, h),
         Z = (0, x.pM)(d.id, h.id),
-        A = null == S && !Z,
+        A = null == b && !Z,
         L = (null === (t = h.tags) || void 0 === t ? void 0 : t.guild_connections) !== void 0,
         [, y] = (0, a.c)({
             type: R,
@@ -66,13 +66,13 @@ function Z(e) {
             },
             drop: () => ({ roleId: h.id })
         }),
-        M = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(E.p6O);
+        M = null !== (r = h.colorString) && void 0 !== r ? r : (0, c.Rf)(S.p6O);
     return (
         (l = L
             ? (0, i.jsx)(p.Z, {
                   size: 12,
                   color: h.colorString,
-                  className: b.verifiedRoleIcon
+                  className: E.verifiedRoleIcon
               })
             : 'dot' === j
               ? (0, i.jsx)(u.RoleDot, {
@@ -82,9 +82,9 @@ function Z(e) {
                 })
               : (0, i.jsx)(u.RoleCircle, { color: M })),
         (0, i.jsxs)(u.TabBar.Item, {
-            className: s()(b.row, {
-                [b.dragBefore]: null !== D && I < D,
-                [b.dragAfter]: null !== D && I > D
+            className: s()(E.row, {
+                [E.dragBefore]: null !== D && I < D,
+                [E.dragAfter]: null !== D && I > D
             }),
             id: h.id,
             selectedItem: f,
@@ -108,10 +108,10 @@ function Z(e) {
             },
             children: [
                 l,
-                null != S
+                null != b
                     ? (0, i.jsx)(N.Z, {
-                          className: b.lock,
-                          tooltipText: S
+                          className: E.lock,
+                          tooltipText: b
                       })
                     : null,
                 (0, i.jsx)(u.Text, {
@@ -130,7 +130,7 @@ function A(e) {
         c = (0, d.e7)([C.Z], () => C.Z.getHighestRole(t)),
         m = (0, d.e7)([g.Z], () => g.Z.roleStyle),
         [x, p] = r.useState(o.length),
-        { scrolledToTop: N, handleScroll: E } = (0, T.V)(),
+        { scrolledToTop: N, handleScroll: S } = (0, T.V)(),
         { handleDragStart: R, handleDragReset: A, handleDragComplete: L } = (0, v.Z)(o),
         y = r.useRef(null),
         D = r.useCallback(
@@ -151,37 +151,37 @@ function A(e) {
         h.Z.createRole(t.id), a(j.ZI.DISPLAY);
     };
     return (0, i.jsx)(f.ZP.Sidebar, {
-        className: b.sidebar,
+        className: E.sidebar,
         children: (0, i.jsxs)('div', {
-            className: b.container,
+            className: E.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: s()(b.titleContainer, { [b.titleElevated]: !N }),
+                    className: s()(E.titleContainer, { [E.titleElevated]: !N }),
                     children: [
                         (0, i.jsxs)(u.Clickable, {
-                            className: b.title,
+                            className: E.title,
                             onClick: () => l(null),
                             children: [
                                 (0, i.jsx)(I.Z, { direction: I.Z.Directions.LEFT }),
                                 (0, i.jsx)(u.Text, {
-                                    className: b.titleText,
+                                    className: E.titleText,
                                     variant: 'text-md/semibold',
                                     color: 'none',
-                                    children: S.intl.string(S.t['13/7kZ'])
+                                    children: b.intl.string(b.t['13/7kZ'])
                                 })
                             ]
                         }),
                         (0, i.jsx)(u.Tooltip, {
                             position: 'top',
-                            'aria-label': S.intl.string(S.t.AbxKtr),
+                            'aria-label': b.intl.string(b.t.AbxKtr),
                             text: (0, i.jsx)(u.Text, {
-                                className: b.tooltip,
+                                className: E.tooltip,
                                 variant: 'text-sm/normal',
-                                children: S.intl.string(S.t.AbxKtr)
+                                children: b.intl.string(b.t.AbxKtr)
                             }),
                             children: (e) =>
                                 (0, i.jsx)(u.Clickable, {
-                                    className: b.addRole,
+                                    className: E.addRole,
                                     ...e,
                                     onClick: O,
                                     children: (0, i.jsx)(u.PlusSmallIcon, {
@@ -195,9 +195,9 @@ function A(e) {
                     ]
                 }),
                 (0, i.jsx)(u.AdvancedScroller, {
-                    className: b.list,
+                    className: E.list,
                     ref: y,
-                    onScroll: E,
+                    onScroll: S,
                     children: (0, i.jsx)(u.TabBar, {
                         selectedItem: n,
                         onItemSelect: (e) => l(e),

@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     ZP: function () {
-        return E;
+        return S;
     },
     bL: function () {
         return v;
@@ -177,7 +177,7 @@ let N = (e) => {
             ]
         });
     };
-function E(e) {
+function S(e) {
     let { className: t, headerClassName: n, rowClassName: l, enableRowSeparators: a = !1, initialSortKey: c, initialSortDirection: d = u.sHY.ASCENDING, ...m } = e,
         [g, x] = r.useState(c),
         [p, f] = r.useState(d);

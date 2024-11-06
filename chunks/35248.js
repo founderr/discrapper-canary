@@ -26,8 +26,8 @@ var a = n(200651),
     h = n(737143),
     A = n(362755),
     E = n(981631),
-    N = n(474936),
-    f = n(388032),
+    f = n(474936),
+    N = n(388032),
     b = n(93478);
 let _ = (e) => {
         let { onPurchaseComplete: t, onHandoffFailure: n } = e,
@@ -62,9 +62,9 @@ let _ = (e) => {
                                                     a();
                                                 }
                                             );
-                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : N.Xh.PREMIUM_MONTH_TIER_2, P, y.loadId, n);
+                                })(null !== (e = null == c ? void 0 : c.id) && void 0 !== e ? e : f.Xh.PREMIUM_MONTH_TIER_2, P, y.loadId, n);
                     },
-                    (0, h.q1)().delay ? 1000 : 0
+                    (0, h.q)().delay ? 1000 : 0
                 );
                 return () => clearTimeout(e);
             }, [c, P, y, n, C, g]),
@@ -76,12 +76,12 @@ let _ = (e) => {
                 children: [
                     (0, a.jsx)(s.Heading, {
                         variant: 'heading-xl/bold',
-                        children: f.intl.string(f.t.C4HYf3)
+                        children: N.intl.string(N.t.C4HYf3)
                     }),
                     (0, a.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         className: b.description,
-                        children: f.intl.string(f.t.xfG7Ji)
+                        children: N.intl.string(N.t.xfG7Ji)
                     })
                 ]
             })
@@ -96,7 +96,7 @@ let _ = (e) => {
                 children: [
                     (0, a.jsx)(u.y, {
                         onClick: t,
-                        children: f.intl.string(f.t['4Qvmmp'])
+                        children: N.intl.string(N.t['4Qvmmp'])
                     }),
                     (0, a.jsx)(u.Z, { onClick: n })
                 ]

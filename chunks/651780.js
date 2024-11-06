@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return E;
     }
 });
 var i = n(200651),
@@ -44,7 +44,7 @@ function j(e) {
                         })
           });
 }
-function E(e) {
+function S(e) {
     let { appliedGuildBoosts: t, guildId: n } = e,
         r = (0, C.gZ)(t, n),
         l = (0, C.nW)((0, C.rF)(t.length, n));
@@ -65,7 +65,7 @@ function E(e) {
         ]
     });
 }
-let S = (e) => {
+let b = (e) => {
     let { isAnimatedTo: t, onSetRef: n, subscriptionCount: r, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
     return (0, i.jsx)(
         x.Z,
@@ -80,7 +80,7 @@ let S = (e) => {
         l.tier
     );
 };
-function b() {
+function E() {
     r.useEffect(() => {
         a.Z.wait(() => {
             (0, o.tZ)(), (0, c.Y2)();
@@ -98,7 +98,7 @@ function b() {
                         children: v.intl.string(v.t.nLovSU)
                     }),
                     null != t && null != e
-                        ? (0, i.jsx)(E, {
+                        ? (0, i.jsx)(S, {
                               appliedGuildBoosts: t,
                               guildId: e.id
                           })
@@ -112,7 +112,7 @@ function b() {
             }),
             (0, i.jsx)(g.Z, {
                 tiers: (0, C.cP)(null != e && e.hasFeature(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
-                renderTier: S
+                renderTier: b
             }),
             (0, i.jsx)('div', { className: T.divider }),
             n ? (0, i.jsx)(h.Z, {}) : null,

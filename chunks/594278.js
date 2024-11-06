@@ -25,16 +25,16 @@ t.Z = function (e) {
             },
             [I]
         ),
-        E = r.useCallback(() => {
+        S = r.useCallback(() => {
             if (!v) j(t, 1);
         }, [j, t, v]),
-        S = r.useCallback(() => {
+        b = r.useCallback(() => {
             if (!v) j(t, -1);
         }, [j, t, v]);
     return (
         r.useEffect(() => {
-            null != h && (_ ? _ && x.stop() : x.start(h, E));
-        }, [_, x, h, E]),
+            null != h && (_ ? _ && x.stop() : x.start(h, S));
+        }, [_, x, h, S]),
         (0, i.jsxs)('div', {
             className: m.root,
             onMouseEnter: () => N(!0),
@@ -42,7 +42,7 @@ t.Z = function (e) {
             children: [
                 (0, i.jsx)(o.Clickable, {
                     className: s()(m.carouselCaret, l),
-                    onClick: S,
+                    onClick: b,
                     onMouseEnter: () => f(d.n.RIGHT),
                     ignoreKeyPress: v,
                     children: (0, i.jsx)(c.Z, {
@@ -62,7 +62,7 @@ t.Z = function (e) {
                 }),
                 (0, i.jsx)(o.Clickable, {
                     className: s()(m.carouselCaret, l),
-                    onClick: E,
+                    onClick: S,
                     onMouseEnter: () => f(d.n.LEFT),
                     ignoreKeyPress: v,
                     children: (0, i.jsx)(c.Z, {

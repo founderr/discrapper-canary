@@ -181,7 +181,7 @@ function h(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t({}) });
 }
-function L(e) {
+function C(e) {
     let { type: t } = e,
         n = (0, f.Ph)(t);
     return null == n
@@ -195,7 +195,7 @@ function L(e) {
               }
           });
 }
-function C(e) {
+function L(e) {
     let { sourceInviteCode: t, joinSourceType: n, integrationType: i, showInviterAsFooter: a, guildId: E, inviterUser: u, onClickInviter: c, ...d } = e,
         _ = null != n ? D[n] : null,
         A = n === f.gq.INTEGRATION && null != i,
@@ -236,7 +236,7 @@ function C(e) {
                 tabIndex: 0,
                 onClick: T,
                 children: [
-                    (0, r.jsx)(L, { type: i }),
+                    (0, r.jsx)(C, { type: i }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-sm/medium',
                         children: (0, f.MS)(i)
@@ -288,8 +288,8 @@ t.ZP = l.memo(function (e) {
     let N = (0, a.e7)([_.Z], () => _.Z.hideInstantInvites, []);
     if (null == d) return (0, r.jsx)(S, {});
     let { sourceInviteCode: R, joinSourceType: O, integrationType: U } = d,
-        L = null != O ? D[O] : null,
-        M = null !== (n = null == L ? void 0 : L.hasTooltip) && void 0 !== n && n;
+        C = null != O ? D[O] : null,
+        M = null !== (n = null == C ? void 0 : C.hasTooltip) && void 0 !== n && n;
     return (O === f.gq.INVITE || O === f.gq.VANITY_URL || (O === f.gq.MANUAL_MEMBER_VERIFICATION && null != R)) && N
         ? (0, r.jsx)(p, {})
         : (0, r.jsx)(h, {
@@ -298,7 +298,7 @@ t.ZP = l.memo(function (e) {
               guildId: s,
               joinSourceType: O,
               children: (e) =>
-                  (0, r.jsx)(C, {
+                  (0, r.jsx)(L, {
                       sourceInviteCode: R,
                       joinSourceType: O,
                       integrationType: U,

@@ -18,7 +18,7 @@ var i = t(512722),
     h = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: v, onReturn: g, continueSession: S = !1 } = e,
-        { contextMetadata: j, step: E, paymentSources: I, paymentSourceId: y, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: _, selectedSkuId: C, activeSubscription: A, previousStepRef: R, setPurchaseState: O } = (0, u.usePaymentContext)(),
+        { contextMetadata: E, step: j, paymentSources: I, paymentSourceId: y, setPaymentSourceId: P, purchaseError: T, setPurchaseError: N, purchaseErrorBlockRef: b, paymentAuthenticationState: _, selectedSkuId: C, activeSubscription: A, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
         { isGift: Z } = (0, o.wD)(),
         M = {
             ...(0, a.fL)(),
@@ -40,19 +40,19 @@ function f(e) {
                 : () => {
                       f(Object.values(I).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
-    l()(E, 'Step should be set here');
-    let F = (0, r.Z)(() => Date.now(), [E]);
+    l()(j, 'Step should be set here');
+    let F = (0, r.Z)(() => Date.now(), [j]);
     return (0, a.vP)({
         paymentModalArgs: M,
-        initialStep: S && null == R.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
+        initialStep: S && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: i,
-        currentBreadcrumpStep: E,
+        currentBreadcrumpStep: j,
         usePaymentModalStep: !0,
         onReturn: L,
         onComplete: (e) => {
-            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (O(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
+            e === d.h8.AWAITING_BROWSER_CHECKOUT ? (R(m.A.COMPLETED), f(d.h8.CONFIRM, { trackedFromStep: e })) : f(d.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: t, toStep: i } = e,
@@ -62,10 +62,10 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: l - F,
-                flow_duration_ms: l - j.startTime
+                flow_duration_ms: l - E.startTime
             });
         },
         isEligibleForTrial: D,
-        allowDesktopRedirectPurchase: (0, p.tr)(C, Z, A)
+        allowDesktopRedirectPurchase: (0, p.t)(C, Z, A)
     });
 }

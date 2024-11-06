@@ -21,9 +21,9 @@ var i = n(200651),
     v = n(690221),
     T = n(524329),
     j = n(575258),
-    E = n(514698),
-    S = n(592125),
-    b = n(4912),
+    S = n(514698),
+    b = n(592125),
+    E = n(4912),
     R = n(626135),
     Z = n(700785),
     A = n(434404),
@@ -39,7 +39,7 @@ let P = 'WELCOME_CHANNEL',
             { guildId: a, welcomeChannel: o, onEdit: x, onChannelReorder: I, isDropHovered: _, index: v } = e,
             [T, j] = r.useState(!1),
             R = r.useRef(null),
-            A = (0, u.e7)([S.Z], () => S.Z.getChannel(o.channel_id)),
+            A = (0, u.e7)([b.Z], () => b.Z.getChannel(o.channel_id)),
             L = (0, u.e7)([C.ZP], () => (null != o.emoji_id ? C.ZP.getUsableCustomEmojiById(o.emoji_id) : null)),
             k = null != A && Z.Uu(y.Plq.VIEW_CHANNEL, A),
             w = null !== (t = (0, f.KS)(A)) && void 0 !== t ? t : m.TextIcon,
@@ -86,7 +86,7 @@ let P = 'WELCOME_CHANNEL',
                           color: 'currentColor',
                           className: M.channelIcon
                       })
-                : (0, i.jsx)(b.Z, {
+                : (0, i.jsx)(E.Z, {
                       width: 24,
                       height: 24,
                       className: M.warningIcon
@@ -156,7 +156,7 @@ let P = 'WELCOME_CHANNEL',
                         children: O.intl.string(O.t.bt75u7)
                     }),
                     T &&
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(S.Z, {
                             onConfirm: () => x(),
                             onCancel: () => j(!1),
                             channelId: o.channel_id
@@ -172,17 +172,17 @@ t.Z = (e) => {
         d = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
         [h, g] = r.useState(null),
         [p, f] = r.useState(!1),
-        [C, E] = r.useState(!1),
-        { description: S, channels: Z, enabled: P } = a,
+        [C, S] = r.useState(!1),
+        { description: b, channels: Z, enabled: P } = a,
         { homeSettingsEnabled: w } = (0, N.kZ)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : y.lds),
         B = () => {
-            if (null != l) S !== c.description && ((0, T.Es)(l.id, { description: null == S ? void 0 : S.trim() }), f(!0));
+            if (null != l) b !== c.description && ((0, T.Es)(l.id, { description: null == b ? void 0 : b.trim() }), f(!0));
         },
         U = (e) => {
             if (null != l) !o()(e, c.channels) && ((0, T.Es)(l.id, { channels: e }), f(!0));
         },
         G = (e) => {
-            if (null != l) e !== c.enabled && ((0, T.Es)(l.id, { enabled: e }), E(!d), f(!0));
+            if (null != l) e !== c.enabled && ((0, T.Es)(l.id, { enabled: e }), S(!d), f(!0));
         },
         F = (e) => {
             if (null == e) return;
@@ -236,13 +236,13 @@ t.Z = (e) => {
                             guild_id: null == l ? void 0 : l.id,
                             options: e,
                             options_channel_ids: t,
-                            guild_description: S,
+                            guild_description: b,
                             has_custom_emojis: n,
                             is_enabled: P
                         });
                 }
             },
-            [p, Z, S, P, l, V]
+            [p, Z, b, P, l, V]
         ),
         r.useEffect(() => () => (0, T.sm)(), []);
     let W = r.useCallback(() => {
@@ -260,7 +260,7 @@ t.Z = (e) => {
                           children: (0, i.jsxs)(m.Text, {
                               variant: 'text-md/normal',
                               children: [
-                                  (0, i.jsx)(b.Z, { className: M.noticeIcon }),
+                                  (0, i.jsx)(E.Z, { className: M.noticeIcon }),
                                   O.intl.format(O.t.oj2vi4, {
                                       onboardingLink: (e) =>
                                           (0, i.jsx)(v.Z, {
@@ -352,7 +352,7 @@ t.Z = (e) => {
                                           onKeyDown: (e) => {
                                               e.keyCode === y.yXg.ENTER && e.preventDefault();
                                           },
-                                          value: S,
+                                          value: b,
                                           maxLength: 140,
                                           disabled: w
                                       })

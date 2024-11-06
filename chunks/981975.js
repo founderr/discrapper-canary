@@ -28,19 +28,19 @@ var i = n(200651),
     v = n(981631),
     T = n(856651),
     j = n(388032),
-    E = n(16297),
-    S = n(571621);
-let b = (0, h.hQ)();
+    S = n(16297),
+    b = n(571621);
+let E = (0, h.hQ)();
 function R(e, t) {
     return t !== m.O1.AND ? Object.values(o().groupBy(e, (e) => ''.concat(e.connectionType, ':').concat(e.applicationId))) : 0 === e.length ? [] : [[...e]];
 }
 function Z(e) {
     let { handleAddVerificationClicked: t, locked: n } = e;
     return (0, i.jsxs)('div', {
-        className: E.headerNoConfigContainer,
+        className: S.headerNoConfigContainer,
         children: [
             (0, i.jsx)(d.Heading, {
-                className: E.headerHeading,
+                className: S.headerHeading,
                 variant: 'eyebrow',
                 children: j.intl.string(j.t.nMir29)
             }),
@@ -51,7 +51,7 @@ function Z(e) {
             }),
             (0, i.jsx)(d.Button, {
                 disabled: n,
-                className: E.addVerificationButton,
+                className: S.addVerificationButton,
                 size: d.Button.Sizes.MEDIUM,
                 look: d.Button.Looks.FILLED,
                 color: d.Button.Colors.BRAND,
@@ -112,14 +112,14 @@ function A(e) {
         let e = null;
         P.length < 10 &&
             (e = (0, i.jsx)(d.Button, {
-                className: s()(E.addVerificationButton, E.addVerificationButtonAppend),
+                className: s()(S.addVerificationButton, S.addVerificationButtonAppend),
                 size: d.Button.Sizes.LARGE,
                 look: d.Button.Looks.BLANK,
                 color: d.Button.Colors.LINK,
                 onClick: B,
                 disabled: l,
                 children: (0, i.jsxs)('div', {
-                    className: E.addVerificationButtonAppendTextContainer,
+                    className: S.addVerificationButtonAppendTextContainer,
                     children: [
                         (0, i.jsx)(d.CirclePlusIcon, {
                             size: 'xs',
@@ -136,17 +136,17 @@ function A(e) {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsxs)('div', {
-                                className: E.headerTitleContainer,
+                                className: S.headerTitleContainer,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: E.headerTitleTextContainer,
+                                        className: S.headerTitleTextContainer,
                                         children: (0, i.jsx)(d.Heading, {
                                             variant: 'eyebrow',
                                             children: j.intl.string(j.t.nMir29)
                                         })
                                     }),
                                     (0, i.jsx)(d.Button, {
-                                        className: E.headerTitleButton,
+                                        className: S.headerTitleButton,
                                         size: d.Button.Sizes.TINY,
                                         look: d.Button.Looks.LINK,
                                         color: d.Button.Colors.LINK,
@@ -165,7 +165,7 @@ function A(e) {
                     (function (e, t, n, r, l) {
                         let s = R(r, m.O1.OR);
                         return (0, i.jsx)(d.FormItem, {
-                            className: E.operatorContainer,
+                            className: S.operatorContainer,
                             title: j.intl.string(j.t.Xs7PHR),
                             children: (0, i.jsx)(d.RadioGroup, {
                                 options: [
@@ -181,7 +181,7 @@ function A(e) {
                                 onChange: (e) => l(r, e.value),
                                 value: n,
                                 disabled: e || s.length < 2,
-                                'aria-labelledby': b
+                                'aria-labelledby': E
                             })
                         });
                     })(l, n.id, M, P, (e, t) => (0, p.d_)(n.id, R(e, t))),
@@ -234,7 +234,7 @@ function A(e) {
                             });
                         }
                         return (0, i.jsx)('div', {
-                            className: E.configurationsContainer,
+                            className: S.configurationsContainer,
                             children: Array.from(a.values()).map((e) =>
                                 (0, i.jsx)(
                                     I.Z,
@@ -254,14 +254,14 @@ function A(e) {
             }));
     }
     return (0, i.jsx)(d.AdvancedScrollerAuto, {
-        className: E.scroller,
+        className: S.scroller,
         style: { scrollPaddingTop: h },
         onScroll: y,
         children: (0, i.jsxs)('div', {
-            className: S.contentWidth,
+            className: b.contentWidth,
             children: [
                 (0, i.jsx)('div', {
-                    className: s()(S.header, S.stickyHeader, { [S.stickyHeaderElevated]: !L }),
+                    className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !L }),
                     ref: A,
                     children: (0, i.jsx)(_.Z, {
                         guild: t,
@@ -272,14 +272,14 @@ function A(e) {
                 }),
                 (null != D ? D : 0) > 0
                     ? (0, i.jsxs)('div', {
-                          className: E.warningContainer,
+                          className: S.warningContainer,
                           children: [
                               (0, i.jsx)(d.CircleWarningIcon, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
                                   color: 'currentColor',
-                                  className: E.warningIcon
+                                  className: S.warningIcon
                               }),
                               (0, i.jsx)(d.Text, {
                                   variant: 'text-sm/normal',

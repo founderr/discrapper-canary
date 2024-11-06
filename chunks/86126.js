@@ -29,14 +29,14 @@ function C(e) {
             var e;
             return null != T && null != N && (null !== (e = T[N.role_id]) && void 0 !== e ? e : 0);
         }, [T, N]),
-        E = 0 === j,
-        S = null == v,
-        b = null !== (t = null == N ? void 0 : N.archived) && void 0 !== t && t,
+        S = 0 === j,
+        b = null == v,
+        E = null !== (t = null == N ? void 0 : N.archived) && void 0 !== t && t,
         { deleteSubscriptionListing: R, submitting: Z } = (0, d.r4)(),
         { archiveSubscriptionListing: A, submitting: L } = (0, d._1)(),
         y = () => {
             let e = async () => {
-                if (!!S || (s()(null != _, 'group listing doesnt exist'), s()(null != v, 'subscription listing doesnt exist'), !!(await R(I, _, v)))) null == l || l();
+                if (!!b || (s()(null != _, 'group listing doesnt exist'), s()(null != v, 'subscription listing doesnt exist'), !!(await R(I, _, v)))) null == l || l();
             };
             (0, o.openModalLazy)(async () => {
                 let { ConfirmModal: t } = await Promise.resolve().then(n.bind(n, 481060));
@@ -62,7 +62,7 @@ function C(e) {
         ? null
         : (0, i.jsx)(g.Z, {
               title: x.intl.string(x.t['7Si8Ul']),
-              children: b
+              children: E
                   ? (0, i.jsxs)(o.FormSection, {
                         title: x.intl.string(x.t['2D14T0']),
                         disabled: !D,
@@ -74,7 +74,7 @@ function C(e) {
                                 children: x.intl.string(x.t.Y4KjUF)
                             }),
                             (0, i.jsx)(o.Tooltip, {
-                                shouldShow: !E,
+                                shouldShow: !S,
                                 text: x.intl.formatToPlainString(x.t.ABeonZ, { listingMemberCount: j }),
                                 children: (e) =>
                                     (0, i.jsx)(o.Button, {
@@ -83,7 +83,7 @@ function C(e) {
                                         color: o.Button.Colors.RED,
                                         onClick: y,
                                         submitting: Z,
-                                        disabled: !D || !E,
+                                        disabled: !D || !S,
                                         children: x.intl.string(x.t.GMtG6u)
                                     })
                             })

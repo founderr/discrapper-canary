@@ -26,9 +26,9 @@ var i = n(200651),
     v = n(480608),
     T = n(243730),
     j = n(130341),
-    E = n(970129),
-    S = n(712181),
-    b = n(203377),
+    S = n(970129),
+    b = n(712181),
+    E = n(203377),
     R = n(981631),
     Z = n(388032),
     A = n(956385),
@@ -48,7 +48,7 @@ function D(e) {
     }, [u]);
     let f = r.useMemo(() => s.filter((e) => (0, j.uo)(e, x)), [s, x]),
         C = r.useMemo(() => [...s, l], [s, l]),
-        { draggingId: I, handleDragStart: E, handleDragReset: b, handleDragComplete: Z } = (0, S.Z)(C),
+        { draggingId: I, handleDragStart: S, handleDragReset: E, handleDragComplete: Z } = (0, b.Z)(C),
         A = r.useCallback(
             (e) => {
                 var r;
@@ -63,8 +63,8 @@ function D(e) {
                         highestRole: g,
                         currentPosition: l,
                         memberCount: null !== (r = null == m ? void 0 : m[o.id]) && void 0 !== r ? r : 0,
-                        onDragStart: E,
-                        onDragReset: b,
+                        onDragStart: S,
+                        onDragReset: E,
                         onDragComplete: Z,
                         disableHover: null != I,
                         disableDrag: s.length !== f.length,
@@ -74,7 +74,7 @@ function D(e) {
                     o.id
                 );
             },
-            [f, n, g, m, E, b, Z, I, s, t, a]
+            [f, n, g, m, S, E, Z, I, s, t, a]
         );
     return (0, i.jsx)(h.Xi, {
         sections: [Math.max(f.length, 1)],
@@ -104,8 +104,8 @@ function O() {
 }
 function M(e) {
     var t, l, c;
-    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: _, onDragStart: N, onDragReset: v, onDragComplete: T, disableHover: j, disableDrag: S, setEditRoleId: R, setSelectedSection: D } = e,
-        O = (0, E.T)(h, x, d),
+    let { role: d, guild: h, highestRole: x, currentPosition: C, memberCount: _, onDragStart: N, onDragReset: v, onDragComplete: T, disableHover: j, disableDrag: b, setEditRoleId: R, setSelectedSection: D } = e,
+        O = (0, S.T)(h, x, d),
         M = null != O,
         [k, w] = r.useState(!1),
         B = r.useMemo(
@@ -169,7 +169,7 @@ function M(e) {
         R(d.id);
     }
     function K() {
-        Y(), D(b.ZI.MEMBERS);
+        Y(), D(E.ZI.MEMBERS);
     }
     return (0, i.jsxs)(u.Clickable, {
         className: s()(A.roleRow, {
@@ -187,7 +187,7 @@ function M(e) {
         }),
         children: [
             (0, i.jsx)('div', {
-                className: s()(A.dragIcon, L.dragSpacing, { [A.dragIconHidden]: M || S }),
+                className: s()(A.dragIcon, L.dragSpacing, { [A.dragIconHidden]: M || b }),
                 onMouseEnter: () => w(!0),
                 onMouseLeave: () => w(!1),
                 children: (0, i.jsx)(u.DragIcon, {
@@ -212,7 +212,7 @@ function M(e) {
                               defaultIconClassName: A.shield
                           }),
                     null != O
-                        ? (0, i.jsx)(E.Z, {
+                        ? (0, i.jsx)(S.Z, {
                               className: A.lock,
                               tooltipText: O
                           })

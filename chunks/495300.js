@@ -25,9 +25,9 @@ var i = n(200651),
     v = n(850864),
     T = n(729995),
     j = n(966301),
-    E = n(707076),
-    S = n(213956),
-    b = n(388032),
+    S = n(707076),
+    b = n(213956),
+    E = n(388032),
     R = n(930261);
 function Z() {
     let e = (0, a.e7)([h.Z], () => h.Z.getGuildId());
@@ -56,10 +56,10 @@ function A(e) {
                       completed: !0,
                       guildId: n
                   })
-                : (0, i.jsx)(E.Z, {});
+                : (0, i.jsx)(S.Z, {});
             break;
         case I.PG.SAFETY_CHECK:
-            t = (0, i.jsx)(S.Z, { hideChangelog: !0 });
+            t = (0, i.jsx)(b.Z, { hideChangelog: !0 });
             break;
         case I.PG.DEFAULT_CHANNELS:
             t = (0, i.jsx)(N.Z, { saveOnClose: !f });
@@ -104,7 +104,7 @@ function A(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'interactive-normal',
-                                children: b.intl.string(b.t['13/7kZ'])
+                                children: E.intl.string(E.t['13/7kZ'])
                             })
                         ]
                     })
@@ -131,7 +131,7 @@ function L(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === I.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: b.intl.format(b.t.Me5MmZ, { stepNumber: 1 })
+                        children: E.intl.format(E.t.Me5MmZ, { stepNumber: 1 })
                     })
                 ]
             }),
@@ -143,7 +143,7 @@ function L(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === I.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? b.intl.formatToPlainString(b.t['8mGhOz'], { stepNumber: 2 }) : b.intl.formatToPlainString(b.t.vxpuTU, { stepNumber: 2 })
+                        children: d ? E.intl.formatToPlainString(E.t['8mGhOz'], { stepNumber: 2 }) : E.intl.formatToPlainString(E.t.vxpuTU, { stepNumber: 2 })
                     })
                 ]
             }),
@@ -155,7 +155,7 @@ function L(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === I.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? b.intl.formatToPlainString(b.t.vb6J5u, { stepNumber: 3 }) : b.intl.formatToPlainString(b.t.ZpdQqK, { stepNumber: 3 })
+                        children: d ? E.intl.formatToPlainString(E.t.vb6J5u, { stepNumber: 3 }) : E.intl.formatToPlainString(E.t.ZpdQqK, { stepNumber: 3 })
                     })
                 ]
             }),
@@ -168,7 +168,7 @@ function L(e) {
                         (0, i.jsx)(c.Text, {
                             color: t === I.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
                             variant: 'text-xs/medium',
-                            children: b.intl.format(b.t.KVOukp, { stepNumber: 4 })
+                            children: E.intl.format(E.t.KVOukp, { stepNumber: 4 })
                         })
                     ]
                 }),
@@ -179,7 +179,7 @@ function L(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === I.PG.REVIEW ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: b.intl.format(b.t.oVzkiI, { stepNumber: 3 + (r ? 1 : 0) + 1 })
+                        children: E.intl.format(E.t.oVzkiI, { stepNumber: 3 + (r ? 1 : 0) + 1 })
                     })
                 ]
             })

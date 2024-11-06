@@ -32,7 +32,7 @@ t.Z = function (e) {
             });
         },
         j = t.features.has(g.oNc.ROLE_ICONS),
-        E = (e) => {
+        S = (e) => {
             !j &&
                 ((0, a.yw)(g.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
@@ -53,14 +53,14 @@ t.Z = function (e) {
                     perks: (0, x.Yp)()
                 }));
         },
-        S = (0, i.jsx)(d.Z, {
+        b = (0, i.jsx)(d.Z, {
             className: f.availabilityIndicator,
             guild: t,
             guildFeature: g.oNc.ROLE_ICONS,
             tooltipPosition: 'top',
             hideTooltip: j,
             onClick: () =>
-                E({
+                S({
                     object: g.qAy.LEARN_MORE,
                     objectType: g.Qqv.TIER_2
                 })
@@ -70,7 +70,7 @@ t.Z = function (e) {
         children: [
             (0, i.jsxs)(l.FormTitle, {
                 className: f.formTitle,
-                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), S]
+                children: [(0, i.jsx)('div', { children: p.intl.string(p.t.B9grJy) }), b]
             }),
             (0, i.jsx)(l.FormText, {
                 className: f.description,
@@ -100,7 +100,7 @@ t.Z = function (e) {
                         className: f.button,
                         color: (0, r.ap)(_) ? l.Button.Colors.PRIMARY : l.Button.Colors.WHITE,
                         look: l.Button.Looks.OUTLINED,
-                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : E({ object: g.qAy.UPLOAD_IMAGE })),
+                        onClick: () => (t.hasFeature(g.oNc.ROLE_ICONS) ? T() : S({ object: g.qAy.UPLOAD_IMAGE })),
                         disabled: C,
                         children: p.intl.string(p.t.mD1oGB)
                     }),

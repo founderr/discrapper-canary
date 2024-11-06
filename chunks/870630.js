@@ -13,11 +13,11 @@ var a = n(200651),
     h = n(811974),
     A = n(212545),
     E = n(184229),
-    N = n(504309);
+    f = n(504309);
 t.Z = function (e) {
     let t = (0, o.ZP)(),
         n = r.useRef(null),
-        [f, b] = r.useState({});
+        [N, b] = r.useState({});
     switch (
         (r.useLayoutEffect(() => {
             let { current: e } = n;
@@ -43,7 +43,7 @@ t.Z = function (e) {
         e.type)
     ) {
         case c.He.PRZELEWY24: {
-            let r = (0, i.wj)(t) ? E : N,
+            let r = (0, i.wj)(t) ? E : f,
                 { onNameChange: o, onEmailChange: c, onP24BankChange: m, p24BankValue: p, billingAddressInfo: h } = e;
             return (0, a.jsxs)('div', {
                 className: d.body,
@@ -75,7 +75,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.P24BankElement, {
                                 options: {
                                     value: p,
-                                    style: f
+                                    style: N
                                 },
                                 onChange: (e) => m(e.value)
                             }),
@@ -114,7 +114,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.EpsBankElement, {
                                 options: {
                                     value: c,
-                                    style: f
+                                    style: N
                                 },
                                 onChange: (e) => o(e.value)
                             }),
@@ -153,7 +153,7 @@ t.Z = function (e) {
                             (0, a.jsx)(l.IdealBankElement, {
                                 options: {
                                     value: c,
-                                    style: f
+                                    style: N
                                 },
                                 onChange: (e) => o(e.value)
                             }),

@@ -160,12 +160,12 @@ function _(e) {
         v = r.useMemo(() => new Set(_), [_]),
         [, T] = (0, o.VF)(u, v),
         j = T.length,
-        E = C(u),
-        S = (0, h.O4)(u),
-        b = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(u));
+        S = C(u),
+        b = (0, h.O4)(u),
+        E = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(u));
     let R =
-        ((t = E),
-        (n = b),
+        ((t = S),
+        (n = E),
         (c = j),
         (d = N),
         n
@@ -180,15 +180,15 @@ function _(e) {
                     numChattableChannels: g.X
                 }));
     return (0, i.jsx)(f, {
-        title: b ? x.intl.string(x.t.YZookZ) : x.intl.string(x.t['4GSygo']),
+        title: E ? x.intl.string(x.t.YZookZ) : x.intl.string(x.t['4GSygo']),
         description: R,
         icon: (0, i.jsx)(s.TextIcon, {
             size: 'md',
             color: 'currentColor',
             className: p.channelIcon
         }),
-        hasStarted: j > 0 || b,
-        status: E || S ? (I ? 'none' : 'good') : 'required',
+        hasStarted: j > 0 || E,
+        status: S || b ? (I ? 'none' : 'good') : 'required',
         onEdit: m
     });
 }
@@ -247,12 +247,12 @@ function v(e) {
     v && (I && !o ? (T = 'good') : !I && (T = 'required'));
     let j = x.intl.string(x.t.GMOwOD);
     I ? !v && (j = x.intl.string(x.t.wHOoyM)) : (j = x.intl.string(x.t.wXFbgY));
-    let E = null;
+    let S = null;
     return (
         v &&
             C &&
             g &&
-            (E = (0, i.jsx)(s.Switch, {
+            (S = (0, i.jsx)(s.Switch, {
                 className: p.inlineSwitch,
                 checked: _,
                 onChange: N,
@@ -269,7 +269,7 @@ function v(e) {
             hasStarted: v,
             status: T,
             onEdit: n,
-            extra: E
+            extra: S
         })
     );
 }

@@ -27,19 +27,19 @@ function g(e) {
         v = _ < u.md,
         T = N >= u.X,
         j = I.length - f.length,
-        E = (0, i.jsx)(s.CircleCheckIcon, {
+        S = (0, i.jsx)(s.CircleCheckIcon, {
             size: 'sm',
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
             className: h.icon
         }),
-        S = (0, i.jsx)(s.CircleXIcon, {
+        b = (0, i.jsx)(s.CircleXIcon, {
             size: 'sm',
             className: h.icon,
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
-        b = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
+        E = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, _) / u.md) * 100],
         R = !v && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, i.jsxs)('div', {
         className: h.container,
@@ -61,13 +61,13 @@ function g(e) {
             }),
             (0, i.jsx)(s.StackedProgress, {
                 foregroundColors: R,
-                percents: b,
+                percents: E,
                 size: s.StackedProgress.Sizes.XSMALL
             }),
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    v ? S : E,
+                    v ? b : S,
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -78,7 +78,7 @@ function g(e) {
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    T ? E : S,
+                    T ? S : b,
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',

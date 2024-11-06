@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return E;
     }
 });
 var i = n(200651),
@@ -25,11 +25,11 @@ var i = n(200651),
     v = n(322816),
     T = n(266665),
     j = n(203377),
-    E = n(981631),
-    S = n(77473);
-function b(e) {
+    S = n(981631),
+    b = n(77473);
+function E(e) {
     let t,
-        { editRoleId: n, setEditRoleId: l, selectedSection: b, setSelectedSection: R } = e,
+        { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: R } = e,
         Z = (0, a.e7)([p.Z], () => p.Z.guild, []);
     s()(null != Z, 'guildId cannot be null here');
     let { role: A, permissionSearchQuery: L } = (0, a.cj)(
@@ -50,9 +50,9 @@ function b(e) {
     if (
         (r.useEffect(() => {
             var e, t;
-            let i = (0, C.UT)(b),
+            let i = (0, C.UT)(E),
                 r = null !== (t = null === (e = x.Z.getRoleMemberCount(Z.id)) || void 0 === e ? void 0 : e[n]) && void 0 !== t ? t : 0;
-            h.default.track(E.rMx.ROLE_PAGE_VIEWED, {
+            h.default.track(S.rMx.ROLE_PAGE_VIEWED, {
                 tab_opened: i,
                 is_everyone: (0, d.pM)(Z.id, n),
                 role_id: n,
@@ -62,14 +62,14 @@ function b(e) {
                 role_num_members: r,
                 ...(0, c.hH)(Z.id)
             });
-        }, [b, Z.id, null == A ? void 0 : A.id]),
+        }, [E, Z.id, null == A ? void 0 : A.id]),
         r.useEffect(() => {
             if ((null == A ? void 0 : A.id) != null) (0, u.sE)(Z.id, A.id);
         }, [Z.id, null == A ? void 0 : A.id]),
         null == A)
     )
         return null;
-    switch (b) {
+    switch (E) {
         case j.ZI.DISPLAY:
             t = (0, i.jsx)(_.ZP, {
                 guild: Z,
@@ -106,10 +106,10 @@ function b(e) {
             });
             break;
         default:
-            (0, g.vE)(b);
+            (0, g.vE)(E);
     }
     return (0, i.jsxs)(o.FormSection, {
-        className: S.page,
+        className: b.page,
         children: [
             (0, i.jsx)(T.Z, {
                 guild: Z,
@@ -118,7 +118,7 @@ function b(e) {
                 setSelectedSection: R
             }),
             (0, i.jsx)('div', {
-                className: S.contentContainer,
+                className: b.contentContainer,
                 ref: O,
                 children: (0, i.jsx)(o.FocusRingScope, {
                     containerRef: O,

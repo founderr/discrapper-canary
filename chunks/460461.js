@@ -33,9 +33,9 @@ var i = n(200651),
     v = n(434404),
     T = n(999382),
     j = n(450474),
-    E = n(190287),
-    S = n(981631),
-    b = n(731455),
+    S = n(190287),
+    b = n(981631),
+    E = n(731455),
     R = n(388032),
     Z = n(527337);
 let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
@@ -83,7 +83,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
         r.useEffect(() => {
             !d && null != n && (u.le(), u.aC(n.id), u.i3(n.id), L(!0));
         }, [n, d]);
-        let { canManageGuild: y } = (0, l.cj)([I.Z], () => ({ canManageGuild: I.Z.can(S.Plq.MANAGE_GUILD, n) })),
+        let { canManageGuild: y } = (0, l.cj)([I.Z], () => ({ canManageGuild: I.Z.can(b.Plq.MANAGE_GUILD, n) })),
             D = (0, l.e7)([T.Z], () => T.Z.isGuildMetadataLoaded()),
             O = (0, l.e7)([T.Z], () => (null != n ? T.Z.getMetadata() : null)),
             M = (0, l.e7)([T.Z], () => (null != n && (null == O ? void 0 : O.isPublished) ? T.Z.getSlug() : null)),
@@ -92,7 +92,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             [U, G] = r.useState([!1]),
             [F, H] = r.useState(['']),
             z = (e) => {
-                let t = Object.entries(b.zo)
+                let t = Object.entries(E.zo)
                     .filter((e) => !F.includes(e[1].presentation))
                     .map((e) => ({
                         label: e[1].presentation,
@@ -109,9 +109,9 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 try {
                     var t, n, i, r;
                     let l = new URL(e).hostname.split('.');
-                    if (3 === l.length && 'bandcamp' === l[1].toLowerCase()) return b.zo.bandcamp.presentation;
+                    if (3 === l.length && 'bandcamp' === l[1].toLowerCase()) return E.zo.bandcamp.presentation;
                     let s = null !== (n = null === (t = l.shift()) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== n ? n : '';
-                    if (('www' === s && (s = null !== (r = null === (i = l.shift()) || void 0 === i ? void 0 : i.toLowerCase()) && void 0 !== r ? r : ''), s in b.zo)) return b.zo[s].presentation;
+                    if (('www' === s && (s = null !== (r = null === (i = l.shift()) || void 0 === i ? void 0 : i.toLowerCase()) && void 0 !== r ? r : ''), s in E.zo)) return E.zo[s].presentation;
                     return null;
                 } catch {
                     return null;
@@ -140,7 +140,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
             },
             q = (e) => {
                 var t;
-                (null == n ? void 0 : n.id) != null && u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : b.o3);
+                (null == n ? void 0 : n.id) != null && u.TA(null == n ? void 0 : n.id, null !== (t = null == e ? void 0 : e.value) && void 0 !== t ? t : E.o3);
             },
             X = (e) => {
                 var t;
@@ -191,7 +191,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                 let i = [...O.socialLinks],
                     r = [...F],
                     l = [...P];
-                (r[t] = e), (i[t] = b.zo[e].baseUrl), (l[t] = !0), k(l), H(r), B(l.every((e) => !0 === e)), u.t$(n.id, i);
+                (r[t] = e), (i[t] = E.zo[e].baseUrl), (l[t] = !0), k(l), H(r), B(l.every((e) => !0 === e)), u.t$(n.id, i);
             },
             et = (e, t) => {
                 let i = [...O.socialLinks],
@@ -273,7 +273,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                             (0, i.jsxs)(a.FormText, {
                                                 className: Z.tabMainDescription,
                                                 type: a.FormTextTypes.DESCRIPTION,
-                                                children: [R.intl.format(R.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', R.intl.format(R.t.T6WtKy, { learnMoreURL: N.Z.getArticleURL(S.BhN.SERVER_WEB_PAGES) })]
+                                                children: [R.intl.format(R.t['+ScrMT'], { discordURL: window.GLOBAL_ENV.MARKETING_ENDPOINT }), ' ', R.intl.format(R.t.T6WtKy, { learnMoreURL: N.Z.getArticleURL(b.BhN.SERVER_WEB_PAGES) })]
                                             }),
                                             (() => {
                                                 if (!O.isPublished || null == M) return;
@@ -317,7 +317,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 ]
                                                             }),
                                                             (0, i.jsx)(x.Z, {
-                                                                value: O.primaryCategoryId === b.o3 ? null : null == O ? void 0 : O.primaryCategoryId,
+                                                                value: O.primaryCategoryId === E.o3 ? null : null == O ? void 0 : O.primaryCategoryId,
                                                                 placeholder: R.intl.string(R.t.XqMe3N),
                                                                 options: es,
                                                                 onChange: q,
@@ -452,7 +452,7 @@ let A = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         }),
                                                         (0, i.jsx)('div', {
                                                             className: Z.reasonToJoin,
-                                                            children: (0, i.jsx)(E.Z, {
+                                                            children: (0, i.jsx)(S.Z, {
                                                                 reasonMinLength: 10,
                                                                 reasonMaxLength: 128,
                                                                 guildId: n.id,

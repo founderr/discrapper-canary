@@ -35,7 +35,7 @@ function v(e) {
         null == T)
     )
         return null;
-    let E = (0, C.Q)(T);
+    let S = (0, C.Q)(T);
     switch (j) {
         case x.u.OVERVIEW:
             t = (0, i.jsx)(p.Z, {
@@ -46,13 +46,13 @@ function v(e) {
         case x.u.CAPTCHA_AND_RAID_PROTECTION:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t['53eF5u']),
-                settings: E[x.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: S[x.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
         case x.u.DM_AND_SPAM_PROTECTION:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: E[x.u.DM_AND_SPAM_PROTECTION]
+                settings: S[x.u.DM_AND_SPAM_PROTECTION]
             });
             break;
         case x.u.AUTOMOD:
@@ -61,7 +61,7 @@ function v(e) {
         case x.u.PERMISSIONS:
             t = (0, i.jsx)(f.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: E[x.u.PERMISSIONS]
+                settings: S[x.u.PERMISSIONS]
             });
     }
     return (0, i.jsxs)(i.Fragment, {

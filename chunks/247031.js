@@ -27,9 +27,9 @@ var i = n(200651),
     v = n(372454),
     T = n(999382),
     j = n(84613),
-    E = n(740903),
-    S = n(1080),
-    b = n(981631),
+    S = n(740903),
+    b = n(1080),
+    E = n(981631),
     R = n(388032),
     Z = n(828965),
     A = n(869042);
@@ -205,7 +205,7 @@ class O extends r.PureComponent {
         });
     }
     handleModerationClick() {
-        N.Z.setSection(b.pNK.SAFETY), (0, j.K)(E.u.DM_AND_SPAM_PROTECTION);
+        N.Z.setSection(E.pNK.SAFETY), (0, j.K)(S.u.DM_AND_SPAM_PROTECTION);
     }
     handleQueryChange(e) {
         N.Z.setSearchQuery(e);
@@ -346,10 +346,10 @@ function P() {
     let { guild: t } = (0, o.e7)([T.Z], () => T.Z.getProps(), [], a.isEqual),
         { enabled: n } = v.T.useExperiment(
             {
-                guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : b.lds,
+                guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : E.lds,
                 location: '4d6318_1'
             },
             { autoTrackExposure: !0 }
         );
-    return n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(M, {});
+    return n ? (0, i.jsx)(b.Z, {}) : (0, i.jsx)(M, {});
 }

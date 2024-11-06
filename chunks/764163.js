@@ -109,15 +109,15 @@ function v(e) {
         f = (0, u.Dt)(),
         C = (0, u.Dt)(),
         [v, T] = r.useState(null !== (t = null == l ? void 0 : l.description) && void 0 !== t ? t : ''),
-        [j, E] = r.useState(() => ({
+        [j, S] = r.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name
         })),
-        S = c && '' !== v && (null != j.id || null != j.name);
+        b = c && '' !== v && (null != j.id || null != j.name);
     return (0, i.jsx)('form', {
         onSubmit: function (e) {
             e.preventDefault(),
-                S &&
+                b &&
                     (m({
                         description: v,
                         emojiId: j.id,
@@ -166,7 +166,7 @@ function v(e) {
                             children: (0, i.jsx)(N, {
                                 guildId: n,
                                 emojiData: j,
-                                onSelectEmoji: E,
+                                onSelectEmoji: S,
                                 'aria-labelledby': C
                             })
                         })
@@ -180,7 +180,7 @@ function v(e) {
                             children: [
                                 (0, i.jsx)(o.Button, {
                                     type: 'submit',
-                                    disabled: !S,
+                                    disabled: !b,
                                     children: null == l ? I.intl.string(I.t.OYkgVl) : I.intl.string(I.t.R3BPHx)
                                 }),
                                 null != h &&

@@ -1,6 +1,6 @@
 t.d(n, {
     q: function () {
-        return j;
+        return E;
     }
 }),
     t(47120);
@@ -21,15 +21,15 @@ var i = t(200651),
     v = t(474936),
     g = t(388032),
     S = t(522888);
-let j = (e) => {
+let E = (e) => {
     let { isShopGift: n, className: t, optionsContainerClassName: r } = e,
-        { giftRecipient: j, selectedGiftStyle: E, setSelectedGiftStyle: I, emojiConfetti: y, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
+        { giftRecipient: E, selectedGiftStyle: j, setSelectedGiftStyle: I, emojiConfetti: y, soundEffect: P, setEmojiConfetti: T, setSoundEffect: N } = (0, c.wD)(),
         [b, _] = l.useState(!1),
         C = l.useRef(null),
         A = (0, a.useRadioGroup)({ orientation: 'horizontal' }),
-        R = (0, u.MY)(j, n),
-        O = R === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        Z = R !== u.xr.DEFAULT,
+        O = (0, u.MY)(E, n),
+        R = O === u.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        Z = O !== u.xr.DEFAULT,
         M = (0, m.rK)(),
         { enabled: w } = m.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: M }),
         { enabled: D } = p.O.useExperiment({ location: 'gift card' }),
@@ -43,16 +43,16 @@ let j = (e) => {
                     (0, i.jsxs)('div', {
                         className: s()(S.giftMainAnimation, t),
                         children: [
-                            null != E
+                            null != j
                                 ? (0, i.jsx)(x.Z, {
-                                      giftStyle: E,
+                                      giftStyle: j,
                                       defaultAnimationState: d.SR.ACTION,
                                       idleAnimationState: d.SR.LOOP,
                                       shouldAnimate: !0,
                                       className: S.animation
                                   })
                                 : (0, i.jsx)(a.Spinner, { className: S.spinner }),
-                            O &&
+                            R &&
                                 (0, i.jsxs)('div', {
                                     className: S.soundEmojiContainer,
                                     children: [
@@ -77,7 +77,7 @@ let j = (e) => {
                         ]
                     }),
                 (0, i.jsx)('div', {
-                    tabIndex: null != E || b ? void 0 : 0,
+                    tabIndex: null != j || b ? void 0 : 0,
                     onFocus: (e) => {
                         var n;
                         e.target === e.currentTarget && (null === (n = C.current) || void 0 === n || n.focus());
@@ -91,7 +91,7 @@ let j = (e) => {
                             (0, i.jsx)(
                                 f.m,
                                 {
-                                    isSelected: E === e,
+                                    isSelected: j === e,
                                     giftStyle: e,
                                     setSelectedGiftStyle: I,
                                     ref: 0 === n ? C : null,
