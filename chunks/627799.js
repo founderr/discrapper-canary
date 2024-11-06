@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return c;
     }
 }),
     n(653041);
@@ -9,50 +9,49 @@ n(192379);
 var i = n(243814),
     a = n(993365),
     s = n(481060),
-    o = n(63063),
-    l = n(981631),
-    u = n(388032),
-    c = n(702245);
-function d(e) {
+    o = n(981631),
+    l = n(388032),
+    u = n(702245);
+function c(e) {
     let t,
         { accountScopes: n } = e,
         a = [];
     return (n.includes(i.x.SDK_SOCIAL_LAYER) &&
-        ((t = u.intl.formatToPlainString(u.t.DfBeUl, { learnMoreURL: o.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
+        ((t = l.intl.string(l.t.ex4sMT)),
         a.push(
             {
                 icon: s.FriendsIcon,
-                text: u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: l.L4X })
+                text: l.intl.formatToPlainString(l.t.WNKzo6, { maxFriends: o.L4X })
             },
             {
                 icon: s.ChatSmileIcon,
-                text: u.intl.string(u.t.j7peBg)
+                text: l.intl.string(l.t.j7peBg)
             },
             {
                 icon: s.GameControllerIcon,
-                text: u.intl.string(u.t['feD3+v'])
+                text: l.intl.string(l.t['feD3+v'])
             },
             {
                 icon: s.SettingsIcon,
-                text: u.intl.string(u.t.YFFVMz)
+                text: l.intl.string(l.t.YFFVMz)
             }
         )),
     0 === a.length)
         ? null
         : (0, r.jsxs)('div', {
-              className: c.applicationEducation,
+              className: u.applicationEducation,
               children: [
                   null != t && t.length > 0
                       ? (0, r.jsx)(s.Heading, {
                             variant: 'heading-sm/normal',
-                            className: c.sectionLabel,
+                            className: u.sectionLabel,
                             children: t
                         })
                       : null,
                   a.map((e, t) => {
                       let { icon: n, text: i } = e;
                       return (0, r.jsx)(
-                          f,
+                          d,
                           {
                               icon: n,
                               text: i
@@ -63,18 +62,18 @@ function d(e) {
               ]
           });
 }
-function f(e) {
+function d(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: c.entry,
+        className: u.entry,
         children: [
             (0, r.jsx)(t, {
-                className: c.entryIcon,
+                className: u.entryIcon,
                 color: 'currentColor'
             }),
             (0, r.jsx)(a.x, {
                 variant: 'text-md/normal',
-                className: c.entryText,
+                className: u.entryText,
                 children: n
             })
         ]
