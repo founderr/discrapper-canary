@@ -41,7 +41,6 @@ function _(e) {
                 displayProfile: I,
                 profileType: g.y0.PANEL,
                 themeOverride: E,
-                className: x.container,
                 children: (0, i.jsx)(a.u2, {
                     children: (0, i.jsxs)('div', {
                         className: x.container,

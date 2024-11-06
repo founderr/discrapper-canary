@@ -18,8 +18,8 @@ var r = t(200651),
     I = t(607070),
     N = t(44315),
     g = t(118012),
-    v = t(543241),
-    T = t(906411),
+    T = t(543241),
+    v = t(906411),
     _ = t(565138),
     b = t(822179),
     E = t(419922),
@@ -30,8 +30,8 @@ var r = t(200651),
     S = t(502762),
     U = t(652853),
     R = t(430824),
-    y = t(594174),
-    P = t(314884),
+    P = t(594174),
+    y = t(314884),
     w = t(709586),
     k = t(626135),
     z = t(768581),
@@ -148,19 +148,16 @@ function ed(e) {
                             size: x.AvatarSizes.SIZE_56,
                             'aria-label': s.username
                         }),
-                        (0, r.jsx)(S.Z.Overlay, {
-                            className: H.profileInner,
-                            children: (0, r.jsxs)('div', {
-                                className: H.profileUserInfo,
-                                children: [
-                                    (0, r.jsx)(M.Z, {
-                                        className: H.profileNameTag,
-                                        usernameClass: H.profileNameTagUsername,
-                                        name: s.toString()
-                                    }),
-                                    (0, r.jsx)(em, { className: H.profilePremiumIcon })
-                                ]
-                            })
+                        (0, r.jsxs)('div', {
+                            className: H.profileUserInfo,
+                            children: [
+                                (0, r.jsx)(M.Z, {
+                                    className: H.profileNameTag,
+                                    usernameClass: H.profileNameTagUsername,
+                                    name: s.toString()
+                                }),
+                                (0, r.jsx)(em, { className: H.profilePremiumIcon })
+                            ]
                         })
                     ]
                 })
@@ -208,8 +205,8 @@ function ed(e) {
 function ep(e) {
     let { premiumType: s } = e,
         t = (0, d.e7)([I.Z], () => I.Z.useReducedMotion),
-        n = (0, v.wC)(null)
-            .filter((e) => e.type === T.B.GUILD && (e.animated || null != e.guildId))
+        n = (0, T.wC)(null)
+            .filter((e) => e.type === v.B.GUILD && (e.animated || null != e.guildId))
             .slice(0, 3),
         a = (0, d.Wu)([b.Z], () => b.Z.stickerFrecencyWithoutFetchingLatest.frequently.slice(0, 3 - n.length)),
         i = ec().emojiStickersVisual,
@@ -274,8 +271,8 @@ function ex(e) {
     let { premiumType: s, onClose: t } = e;
     n.useEffect(() => C.Z.wait(() => (0, f.X8)()), []);
     let a = (0, d.e7)([I.Z], () => I.Z.useReducedMotion),
-        [o, l] = (0, d.Wu)([P.Z, R.Z], () => {
-            let e = P.Z.boostSlots,
+        [o, l] = (0, d.Wu)([y.Z, R.Z], () => {
+            let e = y.Z.boostSlots,
                 s = new Map();
             u()(e)
                 .map('premiumGuildSubscription')
@@ -479,8 +476,8 @@ function ej(e) {
 }
 s.Z = function (e) {
     let { premiumType: s, titleText: t, subtitleText: a, footer: i, onClose: o, onDiscountClaim: c, onContinue: u, analyticsLocations: m, isLoading: p = !1, churnUserDiscountOffer: C = null, isDowngrade: f = !1, subtitleIcon: h, subtitleClassName: j } = e,
-        I = (0, d.e7)([y.default], () => {
-            let e = y.default.getCurrentUser();
+        I = (0, d.e7)([P.default], () => {
+            let e = P.default.getCurrentUser();
             return l()(null != e, 'ProfileItem: currentUser cannot be undefined'), e;
         });
     n.useEffect(() => {

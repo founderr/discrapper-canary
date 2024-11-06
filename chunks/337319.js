@@ -1,5 +1,4 @@
 e.exports = {
-    container: 'container_a823cd',
     header: 'header_a823cd',
     headerTag: 'headerTag_a823cd',
     footer: 'footer_a823cd',

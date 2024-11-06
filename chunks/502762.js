@@ -1,87 +1,66 @@
-n(627341);
 var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(278074),
-    l = n(481060),
-    u = n(576635),
-    c = n(213053),
-    d = n(652853),
-    f = n(228168),
-    _ = n(320038);
-let h = (e, t) => {
-        let n = (0, o.EQ)(e)
-                .with(f.y0.BITE_SIZE, () => _.biteSizeOuter)
-                .with(f.y0.FULL_SIZE, () => _.fullSizeOuter)
-                .with(f.y0.PANEL, () => _.userPanelOuter)
-                .otherwise(() => _.userProfileOuter),
-            r = t ? _.userProfileOuterThemed : _.userProfileOuterUnthemed;
-        return s()(n, r);
-    },
-    p = (e, t, n) => {
-        let r = (0, o.EQ)(e)
-                .with(f.y0.PANEL, () => _.userPanelInner)
-                .with(f.y0.FULL_SIZE, () => _.userProfileModalInner)
-                .with(f.y0.BITE_SIZE, () => _.biteSizeInner)
-                .otherwise(() => _.userProfileInner),
-            i = (0, o.EQ)(e)
-                .with(f.y0.PANEL, () => _.userPanelInnerThemed)
-                .with(f.y0.BITE_SIZE, () => _.biteSizeInnerThemed)
-                .with(f.y0.FULL_SIZE, () => _.fullSizeInnerThemed)
-                .otherwise(() => (n ? _.userProfileInnerThemedWithBanner : t ? _.userProfileInnerThemedPremiumWithoutBanner : _.userProfileInnerThemedNonPremium));
-        return s()(r, i);
-    },
-    m = i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, profileType: a, className: o, pendingThemeColors: f, pendingProfileEffectId: m, themeOverride: g, children: E, forceShowPremium: v = !1, showOutOfBoundaryComponents: I = !1 } = e,
+    o = n(481060),
+    l = n(576635),
+    u = n(213053),
+    c = n(652853),
+    d = n(228168),
+    f = n(320038);
+let _ = i.forwardRef(function (e, t) {
+        let { user: n, displayProfile: i, profileType: a, className: _, pendingThemeColors: h, themeOverride: p, children: m, forceShowPremium: g = !1 } = e,
             {
-                theme: S,
-                primaryColor: T,
-                secondaryColor: b
-            } = (0, u.Z)({
+                theme: E,
+                primaryColor: v,
+                secondaryColor: I
+            } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
-                pendingThemeColors: f,
-                isPreview: v
+                pendingThemeColors: h,
+                isPreview: g
             }),
-            { profileThemeStyle: y, profileThemeClassName: A } = (0, c.Z)({
-                theme: null != g ? g : S,
-                primaryColor: T,
-                secondaryColor: b
+            { profileThemeStyle: S, profileThemeClassName: T } = (0, u.Z)({
+                theme: null != p ? p : E,
+                primaryColor: v,
+                secondaryColor: I
             }),
-            N = (null == i ? void 0 : i.canEditThemes) || v,
-            C = null !== m && ((null == i ? void 0 : i.banner) != null || void 0 !== m);
+            b = {
+                [f.biteSize]: a === d.y0.BITE_SIZE,
+                [f.fullSize]: a === d.y0.FULL_SIZE,
+                [f.panel]: a === d.y0.PANEL
+            };
         return (0, r.jsx)('div', {
-            className: s()(h(a, N), I ? _.showOutOfBoundaryComponents : void 0, A, o),
-            style: y,
+            className: s()(f.outer, T, b, _),
+            style: S,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: p(a, N, C),
-                children: (0, r.jsx)(l.ThemeContextProvider, {
-                    theme: null != g ? g : S,
-                    children: (0, r.jsx)(d.X, {
+                className: s()(f.inner, b),
+                children: (0, r.jsx)(o.ThemeContextProvider, {
+                    theme: null != p ? p : E,
+                    children: (0, r.jsx)(c.X, {
                         profileType: a,
-                        theme: null != g ? g : S,
-                        primaryColor: T,
-                        secondaryColor: b,
-                        children: E
+                        theme: null != p ? p : E,
+                        primaryColor: v,
+                        secondaryColor: I,
+                        children: m
                     })
                 })
             })
         });
     }),
-    g = (e) =>
-        (0, o.EQ)(e)
-            .with(f.y0.BITE_SIZE, () => _.biteSizeOverlayBackground)
-            .with(f.y0.FULL_SIZE, () => _.fullSizeOverlayBackground)
-            .otherwise(() => _.overlayBackground),
-    E = i.forwardRef(function (e, t) {
+    h = i.forwardRef(function (e, t) {
         let { children: n, className: i } = e,
-            { profileType: a } = (0, d.z)();
+            { profileType: a } = (0, c.z)(),
+            o = {
+                [f.biteSize]: a === d.y0.BITE_SIZE,
+                [f.fullSize]: a === d.y0.FULL_SIZE,
+                [f.panel]: a === d.y0.PANEL
+            };
         return (0, r.jsx)('div', {
             ref: t,
-            className: s()(g(a), i),
+            className: s()(f.overlay, o, i),
             children: n
         });
     });
-t.Z = Object.assign(m, { Overlay: E });
+t.Z = Object.assign(_, { Overlay: h });

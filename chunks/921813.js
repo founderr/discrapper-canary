@@ -48,7 +48,6 @@ function C(e) {
         displayProfile: U,
         profileType: h.y0.BITE_SIZE,
         pendingThemeColors: L,
-        pendingProfileEffectId: z,
         className: c()(g.container, j),
         forceShowPremium: i,
         children: [

@@ -63,7 +63,6 @@ function R(e) {
                 displayProfile: L,
                 profileType: A.y0.PANEL,
                 themeOverride: k,
-                className: P.container,
                 children: [
                     (0, i.jsxs)(a.u2, {
                         children: [

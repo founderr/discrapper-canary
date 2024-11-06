@@ -12,7 +12,6 @@ t.exports = {
     profileCardTier1: 'profileCardTier1_f4a859 profileCard_f4a859',
     profileAvatar: 'profileAvatar_f4a859',
     profileAvatarTier1: 'profileAvatarTier1_f4a859',
-    profileInner: 'profileInner_f4a859',
     profileUserInfo: 'profileUserInfo_f4a859',
     profileUserInfoTier1: 'profileUserInfoTier1_f4a859',
     profileNameTag: 'profileNameTag_f4a859',

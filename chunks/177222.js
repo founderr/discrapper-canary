@@ -77,7 +77,6 @@ function k(e) {
                     displayProfile: D,
                     profileType: P.y0.PANEL,
                     themeOverride: w,
-                    className: L.container,
                     children: [
                         null != V.interactionType &&
                             (0, i.jsx)(a.animated.div, {
