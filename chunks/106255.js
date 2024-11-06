@@ -8,6 +8,9 @@ n.d(t, {
     Wb: function () {
         return h;
     },
+    Xs: function () {
+        return m;
+    },
     YE: function () {
         return c;
     },
@@ -57,4 +60,7 @@ function h(e) {
 function p() {
     var e;
     return null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
+}
+function m(e) {
+    return e === s.Ft.FREE_AVATAR_DECO_1_MONTH ? s.nW.AVATAR_DECO : e === s.Ft.FREE_GUILD_BOOST_1_MONTH || e === s.Ft.FREE_GUILD_BOOST_3_MONTHS ? s.nW.SERVER_BOOST : void 0;
 }

@@ -1,4 +1,4 @@
-var r, i, a, s, o;
+var r, i, a, s, o, l;
 n.d(t, {
     EB: function () {
         return i;
@@ -7,38 +7,39 @@ n.d(t, {
         return r;
     },
     LJ: function () {
-        return d;
+        return f;
     },
     bm: function () {
-        return c;
+        return d;
     },
     dF: function () {
-        return u;
+        return c;
     },
     fY: function () {
-        return h;
+        return p;
     },
     jW: function () {
-        return _;
+        return h;
     },
     nW: function () {
         return a;
     },
     uv: function () {
-        return l;
+        return u;
     },
     yj: function () {
-        return f;
+        return _;
     }
 }),
     n(47120),
     ((s = r || (r = {})).FREE_GUILD_BOOST_1_MONTH = '1215584796672000000'),
-    (s.FREE_GUILD_BOOST_3_MONTHS = '1215585048330240000');
-let l = new Set(['1215584796672000000', '1215585048330240000']);
-((o = i || (i = {}))[(o.PENDING = 0)] = 'PENDING'), (o[(o.REDEEMABLE = 1)] = 'REDEEMABLE'), (o[(o.REDEEMED = 2)] = 'REDEEMED'), ((a || (a = {})).SERVER_BOOST = 'server_boost');
-let u = 10,
-    c = 10,
-    d = 70,
-    f = 45,
-    _ = 30,
-    h = 90;
+    (s.FREE_GUILD_BOOST_3_MONTHS = '1215585048330240000'),
+    (s.FREE_AVATAR_DECO_1_MONTH = '1297846842163200000');
+let u = new Set(['1215584796672000000', '1215585048330240000', '1297846842163200000']);
+((o = i || (i = {}))[(o.PENDING = 0)] = 'PENDING'), (o[(o.REDEEMABLE = 1)] = 'REDEEMABLE'), (o[(o.REDEEMED = 2)] = 'REDEEMED'), ((l = a || (a = {})).SERVER_BOOST = 'server_boost'), (l.AVATAR_DECO = 'avatar_deco');
+let c = 10,
+    d = 10,
+    f = 70,
+    _ = 45,
+    h = 30,
+    p = 90;

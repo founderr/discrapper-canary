@@ -15,8 +15,9 @@ n.d(t, {
 var r = n(290031);
 function i(e) {
     let { location: t } = e,
-        { enableNitroTenureRewardCard: n } = r.OW.useExperiment({ location: t }, { autoTrackExposure: !1 });
-    return n;
+        { enableNitroTenureRewardCard: n } = r.OW.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+        { enabled: i } = r.Hd.useExperiment({ location: t }, { autoTrackExposure: !1 });
+    return n || i;
 }
 function a(e) {
     let { location: t } = e,

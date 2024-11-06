@@ -1,4 +1,7 @@
 n.d(t, {
+    Hd: function () {
+        return o;
+    },
     OW: function () {
         return i;
     },
@@ -45,6 +48,19 @@ let i = (0, r.B)({
             {
                 id: 1,
                 label: 'Enables the nitro tenure reward backfill for the user',
+                config: { enabled: !0 }
+            }
+        ]
+    }),
+    o = (0, r.B)({
+        kind: 'user',
+        id: '2024-11_nitro_tenure_rewards_collectible',
+        label: 'Nitro Tenure Reward Collectible',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enables nitro tenure reward collectible for the user',
                 config: { enabled: !0 }
             }
         ]

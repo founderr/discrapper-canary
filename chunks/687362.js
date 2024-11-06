@@ -1,9 +1,12 @@
 n.d(t, {
-    Z: function () {
+    ZP: function () {
         return u;
     },
-    v: function () {
+    aJ: function () {
         return g;
+    },
+    vi: function () {
+        return m;
     }
 });
 var i = n(704215),
@@ -19,7 +22,7 @@ function u() {
         t = (0, l.cG)({ location: a.MQ.HOME }),
         n = (0, l.AK)({ location: a.MQ.HOME }),
         r = (0, l.mK)({ location: a.MQ.HOME });
-    if (null != e && !!t)
+    if (null != e && e.tenureRewardType === c.nW.SERVER_BOOST && !!t)
         return {
             title: (0, s.k3)(e.nitroTenureStatus),
             subtitle: (0, s.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId, r && !n),
@@ -29,6 +32,19 @@ function u() {
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function g(e) {
+function g() {
+    let e = (0, o.yQ)(),
+        t = (0, l.cG)({ location: a.MQ.HOME });
+    if (null != e && e.tenureRewardType === c.nW.AVATAR_DECO && !!t)
+        return {
+            title: 'Avatar Deco Reward Title',
+            subtitle: 'Avatar Deco Reward Subtitle',
+            description: 'Avatar Deco Reward Description',
+            ctaDescription: 'Apply',
+            pillText: e.nitroTenureStatus === c.EB.PENDING ? d.intl.string(d.t.jyYgZ2).toLocaleUpperCase() : void 0,
+            dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
+        };
+}
+function m(e) {
     return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, r.un)(e));
 }
