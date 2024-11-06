@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(239091),
     a = n(479531),
     u = n(390322),
-    d = n(617136),
-    c = n(272008),
+    c = n(617136),
+    d = n(272008),
     m = n(113434),
     x = n(569984),
     C = n(497505),
@@ -25,24 +25,27 @@ function T(e) {
     let n = (0, l.e7)([x.Z], () => x.Z.questDeliveryOverride, []),
         u = (0, h.GN)(e.questContent),
         T = (0, h.zK)(e.quest, p.S7.IN_HOUSE_CONSOLE_QUEST),
-        f = [C.jn.QUEST_BAR_V2, C.jn.QUEST_BAR].includes(e.questContent),
-        v = (0, h.zK)(e.quest, p.S7.DISMISSAL_SURVEY),
-        { handleComplete: S, handleProgress: N, handleResetDismissibilityClick: q, handleResetStatusClick: _, handleOverrideDeliveryClick: A } = (0, m.kJ)(e.quest.id),
-        R = s.useCallback(() => {
+        f = (0, h.cr)(e.quest),
+        v = [C.jn.QUEST_BAR_V2, C.jn.QUEST_BAR].includes(e.questContent),
+        S = (0, h.zK)(e.quest, p.S7.DISMISSAL_SURVEY),
+        { handleComplete: N, handleProgress: q, handleResetDismissibilityClick: _, handleResetStatusClick: A, handleOverrideDeliveryClick: R } = (0, m.kJ)(e.quest.id),
+        b = s.useCallback(() => {
             (0, h.FE)(e.quest, {
                 content: e.questContent,
-                ctaContent: d.jZ.CONTEXT_MENU_OPEN_GAME_LINK
+                ctaContent: c.jZ.CONTEXT_MENU_OPEN_GAME_LINK
             });
         }, [e.quest, e.questContent]),
-        b = s.useCallback(() => {
+        I = s.useCallback(() => {
             (0, h.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
-                ctaContent: d.jZ.CONTEXT_MENU_COPY_LINK
-            });
+                ctaContent: c.jZ.CONTEXT_MENU_COPY_LINK
+            }),
+                (0, r.showToast)((0, r.createToast)(j.intl.string(j.t['+5kSoa']), r.ToastType.SUCCESS));
         }, [e.quest, e.questContent, e.questContentPosition]),
-        I = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
-        M = () => (0, c.is)(e.quest.id).catch(I);
+        M = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
+        L = () => (0, d.is)(e.quest.id).catch(M),
+        Z = s.useMemo(() => (f ? j.t.hvVgAQ : j.t.lwQdjI), [f]);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
         onSelect: () => {
@@ -59,15 +62,15 @@ function T(e) {
                         !1 === T &&
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'play-game',
-                                label: j.intl.string(j.t.lwQdjI),
-                                action: R,
+                                label: j.intl.string(Z),
+                                action: b,
                                 icon: r.LinkExternalMediumIcon
                             }),
                         !0 === e.showShareLink &&
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'share-link',
-                                label: j.intl.string(j.t.WqhZsr),
-                                action: b,
+                                label: j.intl.string(j.t.RDE0SU),
+                                action: I,
                                 icon: r.CopyIcon
                             })
                     ]
@@ -83,11 +86,11 @@ function T(e) {
                                 id: 'learn-more',
                                 label: j.intl.string(j.t.LLLLPD),
                                 action: () => {
-                                    (0, d._3)({
+                                    (0, c._3)({
                                         questId: e.quest.id,
                                         questContent: e.questContent,
                                         questContentPosition: e.questContentPosition,
-                                        questContentCTA: d.jZ.CONTEXT_MENU_LEARN_MORE
+                                        questContentCTA: c.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
                                         (0, g.navigateToQuestHome)(p.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
                                 }
@@ -100,7 +103,7 @@ function T(e) {
                                     (0, g.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
                                         position: e.questContentPosition,
-                                        ctaContent: d.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
+                                        ctaContent: c.jZ.CONTEXT_MENU_OPEN_DISCLOSURE
                                     });
                                 }
                             }),
@@ -110,15 +113,15 @@ function T(e) {
                                 label: j.intl.string(j.t.NN79Ex),
                                 action: () => {
                                     if (
-                                        ((0, d._3)({
+                                        ((0, c._3)({
                                             questId: e.quest.id,
                                             questContent: e.questContent,
                                             questContentPosition: e.questContentPosition,
-                                            questContentCTA: d.jZ.CONTEXT_MENU_HIDE_CONTENT
+                                            questContentCTA: c.jZ.CONTEXT_MENU_HIDE_CONTENT
                                         }),
                                         !!(0, h.GN)(e.questContent))
                                     )
-                                        (0, c.gl)(e.quest.id, e.questContent), v && f && (0, g.maybeShowSurveyForQuest)(e.quest);
+                                        (0, d.gl)(e.quest.id, e.questContent), S && v && (0, g.maybeShowSurveyForQuest)(e.quest);
                                 },
                                 subtext: j.intl.string(j.t['1u3YPD'])
                             })
@@ -136,31 +139,31 @@ function T(e) {
                                 id: 'delivery',
                                 label: 'Show in Quest Bar',
                                 checked: (null == n ? void 0 : n.id) === e.quest.id,
-                                action: A
+                                action: R
                             }),
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'dismiss',
                                 label: 'Reset Dismissibility',
-                                action: q
+                                action: _
                             }),
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    _(), M();
+                                    A(), L();
                                 }
                             }),
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'progress',
                                 label: 'Set Random Quest Progress',
                                 action: () => {
-                                    N(0.9 * Math.random() + 0.03);
+                                    q(0.9 * Math.random() + 0.03);
                                 }
                             }),
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'complete',
                                 label: 'Complete Quest',
-                                action: S
+                                action: N
                             }),
                             (0, h.$J)(e.quest) &&
                                 (0, i.jsxs)(r.MenuItem, {
@@ -175,12 +178,12 @@ function T(e) {
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, c.CS)(e.quest.id, !0).catch(I)
+                                            action: () => (0, d.CS)(e.quest.id, !0).catch(M)
                                         }),
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: M
+                                            action: L
                                         })
                                     ]
                                 })
@@ -192,16 +195,16 @@ function T(e) {
     });
 }
 function f(e) {
-    let { children: t, onOpen: n, onClose: l, preventIdle: o, quest: a, questContent: c, questContentPosition: m, ...x } = e,
+    let { children: t, onOpen: n, onClose: l, preventIdle: o, quest: a, questContent: d, questContentPosition: m, ...x } = e,
         C = s.useCallback(() => {
-            (0, d._3)({
+            (0, c._3)({
                 questId: a.id,
-                questContent: c,
-                questContentCTA: d.jZ.OPEN_CONTEXT_MENU,
+                questContent: d,
+                questContentCTA: c.jZ.OPEN_CONTEXT_MENU,
                 questContentPosition: m
             }),
                 null != n && n();
-        }, [n, a.id, c, m]);
+        }, [n, a.id, d, m]);
     return (0, i.jsx)(r.Popout, {
         onRequestOpen: C,
         onRequestClose: l,
@@ -212,7 +215,7 @@ function f(e) {
                       children: (0, i.jsx)(T, {
                           ...x,
                           quest: a,
-                          questContent: c,
+                          questContent: d,
                           questContentPosition: m,
                           onClose: t
                       })
@@ -220,7 +223,7 @@ function f(e) {
                 : (0, i.jsx)(T, {
                       ...x,
                       quest: a,
-                      questContent: c,
+                      questContent: d,
                       questContentPosition: m,
                       onClose: t
                   });
