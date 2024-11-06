@@ -1,91 +1,89 @@
 t.d(n, {
     Z: function () {
-        return C;
+        return f;
     }
 });
 var i = t(200651),
     l = t(192379),
     a = t(481060),
     o = t(239091),
-    r = t(823531),
-    s = t(695346),
-    c = t(973616),
-    d = t(783097),
-    u = t(176412),
-    m = t(753972),
-    p = t(532309),
-    h = t(686356),
-    f = t(413097);
-function C(e) {
+    r = t(973616),
+    s = t(783097),
+    c = t(176412),
+    d = t(570949),
+    u = t(753972),
+    m = t(532309),
+    p = t(686356),
+    h = t(413097);
+function f(e) {
     var n;
-    let { command: t, application: C, onClick: v, query: x, searchResultsPosition: _ } = e,
-        N = s.Sb.useSetting(),
-        g = l.useCallback(
+    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: x } = e,
+        _ = l.useCallback(
             (e) => {
-                if ((0, d.BQ)(C) && N) {
-                    let n = C instanceof c.Z ? C : c.Z.createFromServer(C);
+                if ((0, s.BQ)(f)) {
+                    let n = f instanceof r.Z ? f : r.Z.createFromServer(f);
                     (0, o.vq)(e, (e) =>
-                        (0, i.jsx)(r.Z, {
+                        (0, i.jsx)(d.Z, {
                             application: n,
                             ...e
                         })
                     );
                 }
             },
-            [C, N]
+            [f]
         ),
-        { iconURL: A, name: b, description: E } = l.useMemo(() => (0, d.sl)(C, { fakeAppIconURL: f }), [C]),
-        I = l.useMemo(() => {
+        { iconURL: N, name: g, description: A } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
+        b = l.useMemo(() => {
             var e;
-            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : E;
-            return null == n ? null : (0, u.ae)(n, void 0);
-        }, [E, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: j } = (0, p.Z)({
-            applicationId: C.id,
+            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : A;
+            return null == n ? null : (0, c.ae)(n, void 0);
+        }, [A, null == t ? void 0 : t.displayDescription]),
+        { trackSearchResultsItemImpressionRef: E } = (0, m.Z)({
+            applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
-            query: x,
-            searchResultsPosition: _
+            query: v,
+            searchResultsPosition: x
         });
     return (0, i.jsx)(a.Clickable, {
-        className: h.clickable,
-        innerRef: (e) => (j.current = e),
-        onClick: v,
-        onContextMenu: g,
+        className: p.clickable,
+        innerRef: (e) => (E.current = e),
+        onClick: C,
+        onContextMenu: _,
         children: (0, i.jsxs)(a.FocusBlock, {
-            className: h.focusBlock,
+            className: p.focusBlock,
             children: [
-                (0, i.jsx)(m.Z, {
-                    src: A,
-                    className: h.icon,
+                (0, i.jsx)(u.Z, {
+                    src: N,
+                    className: p.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.cmdDetails,
+                    className: p.cmdDetails,
                     children: [
                         (0, i.jsx)(a.Heading, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : b
+                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : g
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: I
+                            children: b
                         })
                     ]
                 }),
                 null != t
                     ? (0, i.jsx)(a.Text, {
-                          className: h.cmdAppName,
+                          className: p.cmdAppName,
                           variant: 'text-sm/normal',
                           color: 'text-secondary',
-                          children: b
+                          children: g
                       })
                     : null,
-                (0, i.jsx)('div', { className: h.underline })
+                (0, i.jsx)('div', { className: p.underline })
             ]
         })
     });

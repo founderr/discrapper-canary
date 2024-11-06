@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return N;
     }
-});
-var i = t(200651);
-t(192379);
-var l = t(120356),
+}),
+    t(47120);
+var i = t(200651),
+    l = t(120356),
     a = t.n(l),
     o = t(481060),
     r = t(367907),
@@ -16,39 +16,41 @@ var l = t(120356),
     m = t(135431),
     p = t(541099),
     h = t(783097),
-    f = t(314734),
-    C = t(981631),
-    v = t(388032),
-    x = t(500257);
-function _(e) {
+    f = t(570949),
+    C = t(314734),
+    v = t(981631),
+    x = t(388032),
+    _ = t(500257);
+function N(e) {
     let { application: n, className: t, sectionName: l } = e,
-        _ = (0, h.L1)(n),
-        N = (0, m.Eb)(_),
-        g = {
+        N = (0, h.L1)(n),
+        g = (0, m.Eb)(N),
+        A = {
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: n.id,
             section_name: l,
             source: p.Z.lastShownEntrypoint()
         },
-        A = (0, d.Z)({
+        b = (0, d.Z)({
             id: n.id,
-            label: v.intl.string(v.t['+NP/b2'])
-        });
+            label: x.intl.string(x.t['+NP/b2'])
+        }),
+        E = (0, f.P)({ application: n });
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: _.container,
         children: [
             (0, i.jsx)(o.Clickable, {
                 onClick: () => {
                     (0, u.JG)(
                         (0, c.J)({
                             id: n.id,
-                            ..._
+                            ...N
                         })
                     ),
-                        (0, o.showToast)((0, o.createToast)(v.intl.string(v.t['L/PwZW']), o.ToastType.SUCCESS));
+                        (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['L/PwZW']), o.ToastType.SUCCESS));
                 },
-                className: a()(x.clickable, t),
-                'aria-label': v.intl.string(v.t.WqhZsr),
+                className: a()(_.clickable, t),
+                'aria-label': x.intl.string(x.t.WqhZsr),
                 children: (0, i.jsx)(o.LinkIcon, {
                     size: 'sm',
                     color: o.tokens.colors.INTERACTIVE_ACTIVE
@@ -58,24 +60,24 @@ function _(e) {
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
                     return (0, i.jsxs)(o.Menu, {
-                        className: f.NN,
+                        className: C.NN,
                         navId: 'app-details-more-menu',
                         onClose: n,
-                        'aria-label': v.intl.string(v.t.AXIHpa),
+                        'aria-label': x.intl.string(x.t.AXIHpa),
                         onSelect: void 0,
                         children: [
                             (0, i.jsx)(o.MenuGroup, {
-                                children: N
+                                children: g
                                     ? (0, i.jsx)(o.MenuItem, {
                                           id: 'add-app',
-                                          label: v.intl.string(v.t.NgXl3N),
+                                          label: x.intl.string(x.t.NgXl3N),
                                           action: () => {
-                                              null == _.customInstallUrl && (0, r.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, g),
+                                              null == N.customInstallUrl && (0, r.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, A),
                                                   (0, m.LO)({
-                                                      ..._,
+                                                      ...N,
                                                       oauth2Callback: (e) => {
                                                           let { location: n } = e;
-                                                          null != n && (0, r.yw)(C.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, g);
+                                                          null != n && (0, r.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, A);
                                                       },
                                                       source: 'app_launcher_app_details'
                                                   });
@@ -83,7 +85,8 @@ function _(e) {
                                       })
                                     : null
                             }),
-                            (0, i.jsx)(o.MenuGroup, { children: A })
+                            null != E && (0, i.jsxs)(o.MenuGroup, { children: [...E] }),
+                            (0, i.jsx)(o.MenuGroup, { children: b })
                         ]
                     });
                 },
@@ -92,8 +95,8 @@ function _(e) {
                 children: (e) =>
                     (0, i.jsx)(o.Clickable, {
                         onClick: e.onClick,
-                        className: a()(x.clickable, t),
-                        'aria-label': v.intl.string(v.t.UKOtz8),
+                        className: a()(_.clickable, t),
+                        'aria-label': x.intl.string(x.t.UKOtz8),
                         children: (0, i.jsx)(o.MoreHorizontalIcon, {
                             size: 'sm',
                             color: o.tokens.colors.INTERACTIVE_ACTIVE
