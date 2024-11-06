@@ -93,6 +93,7 @@ t.Z = function () {
             G
                 ? (0, i.jsx)(f.Z, {
                       onScroll: e,
+                      onSelectApplication: w,
                       applicationId: U,
                       onCloseAppDetails: k,
                       onOpenCategorySearch: j
