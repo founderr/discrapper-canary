@@ -69,7 +69,8 @@ class u extends r.Component {
                     onConfirmClick: null != d ? this.handleConfirmClick : null,
                     onCancelClick: null != u ? this.handleCancelClick : null,
                     renderFooter: this.renderFooter,
-                    expand: !e && 0 === t
+                    expand: !e && 0 === t,
+                    disabled: 0 !== t
                 })
             });
         return 0 === t
