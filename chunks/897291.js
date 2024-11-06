@@ -5,45 +5,64 @@ var r = n(200651),
     o = n(100527),
     l = n(906732),
     u = n(963249),
-    c = n(51144),
-    d = n(443603),
-    f = n(981631),
-    _ = n(388032),
-    h = n(703130);
+    c = n(109213),
+    d = n(51144),
+    f = n(443603),
+    _ = n(981631),
+    h = n(388032),
+    p = n(703130);
 t.Z = i.memo(function (e) {
-    let { disabled: t, channel: n } = e,
-        { analyticsLocations: i } = (0, l.ZP)(o.Z.GIFT_BUTTON),
-        p = (0, c.Ft)(n),
-        { Component: m, events: g, play: E } = (0, a.$)();
+    let { disabled: t, channel: i } = e,
+        { analyticsLocations: m } = (0, l.ZP)(o.Z.GIFT_BUTTON),
+        g = (0, d.Ft)(i),
+        { Component: E, events: v, play: I } = (0, a.$)(),
+        { enabled: S } = c.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        T = i.type === _.d4z.DM;
     if (t) return null;
-    let v = () => {
-        (0, u.Z)({
-            isGift: !0,
-            giftRecipient: null === p ? void 0 : p,
-            initialPlanId: null,
-            analyticsLocations: i,
-            analyticsObject: {
-                page: n.isPrivate() ? f.ZY5.DM_CHANNEL : f.ZY5.GUILD_CHANNEL,
-                section: f.jXE.CHANNEL_TEXT_AREA,
-                object: f.qAy.BUTTON_ICON,
-                objectType: f.Qqv.GIFT
-            }
-        });
+    let b = () => {
+        S && T && null != g
+            ? (0, s.openModalLazy)(async () => {
+                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('3994'), n.e('69425')]).then(n.bind(n, 435626));
+                  return (t) =>
+                      e({
+                          analyticsLocations: m,
+                          analyticsObject: {
+                              page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+                              section: _.jXE.CHANNEL_TEXT_AREA,
+                              object: _.qAy.BUTTON_ICON,
+                              objectType: _.Qqv.GIFT
+                          },
+                          giftRecipient: g,
+                          ...t
+                      });
+              })
+            : (0, u.Z)({
+                  isGift: !0,
+                  giftRecipient: null === g ? void 0 : g,
+                  initialPlanId: null,
+                  analyticsLocations: m,
+                  analyticsObject: {
+                      page: i.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
+                      section: _.jXE.CHANNEL_TEXT_AREA,
+                      object: _.qAy.BUTTON_ICON,
+                      objectType: _.Qqv.GIFT
+                  }
+              });
     };
     return (0, r.jsx)(s.Tooltip, {
-        text: _.intl.string(_.t.sWtWDQ),
+        text: h.intl.string(h.t.sWtWDQ),
         children: (e) =>
-            (0, r.jsx)(d.Z, {
+            (0, r.jsx)(f.Z, {
                 ...e,
-                innerClassName: h.button,
+                innerClassName: p.button,
                 isActive: !1,
-                'aria-label': _.intl.string(_.t.Z1RnTk),
+                'aria-label': h.intl.string(h.t.Z1RnTk),
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    v(), E();
+                    b(), I();
                 },
-                ...g,
-                children: (0, r.jsx)(m, { color: 'currentColor' })
+                ...v,
+                children: (0, r.jsx)(E, { color: 'currentColor' })
             })
     });
 });

@@ -3071,6 +3071,7 @@ let _q = 'help_center_cta';
     (r2.PREMIUM_CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPSELL = 'Premium Custom Notification Sound Settings Upsell'),
     (r2.PREMIUM_PERKS_DEMO_UPSELL_MODAL = 'Premium Perks Demo Upsell Modal'),
     (r2.PREMIUM_FOR_LATER_UPSELL_MODAL = 'Premium For Later Upsell Modal'),
+    (r2.GIFT_CATEGORY_SELECT_MODAL = 'Select Gift Category Modal'),
     (r2.FOR_LATER_CREATE = 'For Later Create'),
     (r2.SERVER_BANNER_TOOLTIP = 'Server Banner Tooltip'),
     (r2.CHANNEL_NOTICE = 'Channel Notice'),

@@ -1,1 +1,1 @@
-o.exports = { halloweenFooter: 'halloweenFooter_c1dc14' };
+e.exports = { halloweenFooter: 'halloweenFooter_c1dc14' };
