@@ -603,7 +603,8 @@ class es extends _.Z {
                 if ((n === et.hes.RTC_CONNECTING && this.state === et.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === et.hes.NO_ROUTE && (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)), this.state === et.hes.RTC_CONNECTED)) {
                     var r, i;
                     let e = U.Z.shouldIncludePreferredRegion() ? U.Z.getPreferredRegion() : null;
-                    this._connecting &&
+                    if (this._connecting) {
+                        let t = M.Z.getSettings();
                         B.default.track(et.rMx.VOICE_CONNECTION_SUCCESS, {
                             ...this._getAnalyticsProperties(),
                             hostname: this.hostname,
@@ -614,15 +615,12 @@ class es extends _.Z {
                             connect_count: this._connectCount,
                             audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),
                             audio_layer: M.Z.getMediaEngine().getAudioLayer(),
+                            automatic_audio_subsystem: t.automaticAudioSubsystem,
                             media_session_id: this.getMediaSessionId(),
                             ...this.stateHistory.getVoiceConnectionSuccessStats()
-                        }),
-                        null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.setConnection(d),
-                        null === (i = this._goLiveQualityManager) || void 0 === i || i.update(),
-                        (this._connectCompletedTime = (0, p.zO)()),
-                        (this._connected = !0),
-                        (this._connecting = !1),
-                        (this._encountered_socket_failure = !1);
+                        });
+                    }
+                    null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.setConnection(d), null === (i = this._goLiveQualityManager) || void 0 === i || i.update(), (this._connectCompletedTime = (0, p.zO)()), (this._connected = !0), (this._connecting = !1), (this._encountered_socket_failure = !1);
                 } else n === et.hes.RTC_CONNECTED && this.stateHistory.reset(this.state);
             }),
             d.on(h.Sh.SecureFramesUpdate, (e) => {
