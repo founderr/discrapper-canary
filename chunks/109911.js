@@ -1,13 +1,16 @@
 n.d(t, {
     Ji: function () {
-        return s;
+        return l;
     },
     QX: function () {
-        return o;
+        return u;
     }
 });
-var r = n(818083);
-let i = (0, r.B)({
+var r,
+    i,
+    a = n(818083);
+n(171393);
+let s = (0, a.B)({
         kind: 'user',
         id: '2024-07_icymi',
         label: 'In-case-you-missed-it tab',
@@ -20,7 +23,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, a.B)({
         kind: 'user',
         id: '2024-10_icymi_sorting_fe',
         label: 'FE experiment for sorting on ICYMI',
@@ -33,16 +36,16 @@ let i = (0, r.B)({
             }
         ]
     });
-function s(e) {
+function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = i.getCurrentConfig(
+        n = s.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
                 autoTrackExposure: t
             }
         ).enabled,
-        r = a.getCurrentConfig(
+        r = o.getCurrentConfig(
             { location: e },
             {
                 disable: !0,
@@ -51,20 +54,49 @@ function s(e) {
         ).enabled;
     return n || r;
 }
-(0, r.B)({
-    kind: 'user',
-    id: '2024-07_icymi_negative_items',
-    label: 'icymi negative content (debugging only)',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'allow negative items only',
-            config: { enabled: !0 }
-        }
-    ]
-});
-let o = (0, r.B)({
+((r = i || (i = {})).BUTTON = 'notifications_button'),
+    (r.SEGMENTED_CONTROL = 'notifications_segmented_control'),
+    (0, a.B)({
+        kind: 'user',
+        id: '2024-10_merge_notifications_tab',
+        label: 'Merge notifications tab',
+        defaultConfig: {
+            enabled: !1,
+            variant: 'notifications_button'
+        },
+        treatments: [
+            {
+                id: 1,
+                label: 'Merge notifications tab - keep as button on the top right of ICYMI tab',
+                config: {
+                    enabled: !0,
+                    variant: 'notifications_button'
+                }
+            },
+            {
+                id: 2,
+                label: 'Merge notifications tab - keep as segmented section in ICYMI tab',
+                config: {
+                    enabled: !0,
+                    variant: 'notifications_segmented_control'
+                }
+            }
+        ]
+    }),
+    (0, a.B)({
+        kind: 'user',
+        id: '2024-07_icymi_negative_items',
+        label: 'icymi negative content (debugging only)',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'allow negative items only',
+                config: { enabled: !0 }
+            }
+        ]
+    });
+let u = (0, a.B)({
     kind: 'user',
     id: '2024-10_icymi_legacy',
     label: 'Legacy ICYMI experiment',
