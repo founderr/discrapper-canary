@@ -146,6 +146,7 @@ class R extends (r = u.ZP.Store) {
                         [e.relationship.id]: e.relationship.since
                     }),
                 (0, d.A)({ location: 'relationship_store' }) && e.relationship.isSpamRequest ? I.add(e.relationship.id) : I.delete(e.relationship.id),
+                e.relationship.userIgnored ? S.add(e.relationship.id) : S.delete(e.relationship.id),
                 C(),
                 e.relationship.type === m.OGo.FRIEND &&
                     t === m.OGo.PENDING_OUTGOING &&

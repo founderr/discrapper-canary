@@ -187,16 +187,18 @@ function G(e, t, n) {
         user: (0, b.Z)(c)
     };
 }
-function B(e, t, n, i) {
-    let r = v.default.getUser(t);
+function B(e, t, n) {
+    let { isSpamRequest: i, applicationId: r, userIgnored: l } = null != n ? n : {},
+        a = v.default.getUser(t);
     return {
         type: e,
-        user: null != r ? (0, b.Z)(r) : null,
+        user: null != a ? (0, b.Z)(a) : null,
         presence: {
             status: C.Z.getStatus(t),
-            activity: null != i ? C.Z.getApplicationActivity(t, i) : C.Z.getPrimaryActivity(t)
+            activity: null != r ? C.Z.getApplicationActivity(t, r) : C.Z.getPrimaryActivity(t)
         },
-        isSpamRequest: n
+        isSpamRequest: i,
+        userIgnored: l
     };
 }
 function H(e) {

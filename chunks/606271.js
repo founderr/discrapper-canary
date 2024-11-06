@@ -241,9 +241,17 @@ class y {
     }
     handleRelationshipAdd(e) {
         let {
-            relationship: { id: t, type: n, isSpamRequest: i }
+            relationship: { id: t, type: n, isSpamRequest: i, userIgnored: r }
         } = e;
-        if (0 !== this.rpcServer.subscriptions.length) this.rpcServer.dispatchToSubscriptions(x.zMe.RELATIONSHIP_UPDATE, {}, (0, S.cD)(n, t, i));
+        if (0 !== this.rpcServer.subscriptions.length)
+            this.rpcServer.dispatchToSubscriptions(
+                x.zMe.RELATIONSHIP_UPDATE,
+                {},
+                (0, S.cD)(n, t, {
+                    isSpamRequest: i,
+                    userIgnored: r
+                })
+            );
     }
     handleRelationshipRemove(e) {
         let {
