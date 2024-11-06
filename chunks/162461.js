@@ -21,30 +21,20 @@ let a = (0, r.B)({
     kind: 'user',
     id: '2024-03_content_inventory_memberlist_and_ranker',
     label: 'Enables the memberlist content feed',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabled: !0,
+        impressionCappingEnabled: !0
+    },
     treatments: [
         {
-            id: 1,
-            label: 'Recency',
-            config: { enabled: !0 }
+            id: -1,
+            label: 'Not in experiment',
+            config: { enabled: !1 }
         },
         {
-            id: 2,
-            label: 'Heuristic',
-            config: { enabled: !0 }
-        },
-        {
-            id: 3,
-            label: 'Noteworthy',
-            config: {
-                enabled: !0,
-                impressionCappingEnabled: !0
-            }
-        },
-        {
-            id: 4,
-            label: 'Another Heuristic treatment for comparison ranking',
-            config: { enabled: !0 }
+            id: 0,
+            label: 'Holdout',
+            config: { enabled: !1 }
         }
     ]
 });
@@ -54,8 +44,8 @@ function s(e) {
     return t || n;
 }
 function o(e) {
-    let { impressionCappingEnabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-    return !0 === t;
+    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+    return t && !0 === n;
 }
 let l = (0, r.B)({
     kind: 'user',
