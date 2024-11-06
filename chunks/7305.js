@@ -176,24 +176,25 @@ let k = [
 function b(e) {
     let t = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: n } = (0, o.ZP)(e.analyticsLocations, a.Z.PREMIUM_PAYMENT_MODAL),
-        { subscriptionTier: l, isGift: r, giftRecipient: C, giftMessage: d, giftStyle: c, loadId: h, defaultPlanId: _, referralCode: f, repeatPurchase: j } = e;
+        { subscriptionTier: l, isGift: r, giftRecipient: C, giftMessage: d, giftStyle: c, giftingOrigin: h, loadId: _, defaultPlanId: f, referralCode: j, repeatPurchase: L } = e;
     if (null != l && !Object.values(T.Si).includes(l)) throw Error('subscriptionTier must be a premium subscription');
     return (0, i.jsx)(o.Gt, {
         value: n,
         children: (0, i.jsx)(x.PaymentContextProvider, {
-            loadId: h,
+            loadId: _,
             activeSubscription: null != e.subscription ? e.subscription : t,
             stepConfigs: k,
             skuIDs: [...T.YQ],
             isGift: r,
-            defaultPlanId: _,
-            referralCode: f,
-            repeatPurchase: j,
+            defaultPlanId: f,
+            referralCode: j,
+            repeatPurchase: L,
             children: (0, i.jsx)(p.KB, {
                 isGift: r,
                 giftRecipient: null == C ? void 0 : C,
                 giftMessage: d,
                 giftStyle: c,
+                giftingOrigin: h,
                 children: (0, i.jsx)(v, { ...e })
             })
         })

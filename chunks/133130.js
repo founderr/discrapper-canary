@@ -3,12 +3,17 @@ e.exports = {
     stepBodyCustomGift: 'stepBodyCustomGift_d439ef',
     paddingForHalloweenBanner: 'paddingForHalloweenBanner_d439ef',
     bodyColumnMiddle: 'bodyColumnMiddle_d439ef',
+    bodyColumnLeft: 'bodyColumnLeft_d439ef',
     bodyColumnRight: 'bodyColumnRight_d439ef',
     bodyText: 'bodyText_d439ef',
     selectPlanDivider: 'selectPlanDivider_d439ef',
+    selectedGiftAnimation: 'selectedGiftAnimation_d439ef',
+    giftAnimationOptionsContainer: 'giftAnimationOptionsContainer_d439ef',
     selectPlanChooseTitle: 'selectPlanChooseTitle_d439ef',
     selectPlanTotalRow: 'selectPlanTotalRow_d439ef',
     planSelectSeparator: 'planSelectSeparator_d439ef',
     trialPlanSelectHeader: 'trialPlanSelectHeader_d439ef',
-    legacyPricingNotice: 'legacyPricingNotice_d439ef'
+    legacyPricingNotice: 'legacyPricingNotice_d439ef',
+    customGiftMessage: 'customGiftMessage_d439ef',
+    selectGiftTitle: 'selectGiftTitle_d439ef'
 };

@@ -77,6 +77,7 @@ function A(e) {
             (0, v.Z)({
                 isGift: !0,
                 giftRecipient: i,
+                giftingOrigin: f.Wt.DM_CHANNEL,
                 initialPlanId: null,
                 analyticsLocations: t,
                 subscriptionTier: e,
