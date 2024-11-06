@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(570140),
@@ -52,14 +52,14 @@ class C extends r.Component {
             i = t.findIndex((e) => e.key === n),
             r = 0;
         i >= 0 && (r = (i + e) % t.length) < 0 && (r = t.length - 1);
-        let a = t[r];
-        d.wX(null != a ? a.key : null, !0);
+        let l = t[r];
+        d.wX(null != l ? l.key : null, !0);
     }
     render() {
         let { filterQuery: e } = this.props,
             { focused: t } = this.state;
         return (0, i.jsx)('div', {
-            className: l()({
+            className: a()({
                 [E.libraryFilter]: !0,
                 [E.focused]: t
             }),
@@ -89,13 +89,13 @@ class C extends r.Component {
             I(this, 'handleKeyDown', (e) => {
                 var t;
                 let { activeRowKey: n, hasModalOpen: i, applicationViewItems: r } = this.props,
-                    { searchBarRef: a } = this;
-                if (i || e.ctrlKey || e.altKey || e.metaKey || null == a) return;
-                let l = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                if (!(l !== a.inputRef.current && (0, p.VG)(l)))
+                    { searchBarRef: l } = this;
+                if (i || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+                let a = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                if (!(a !== l.inputRef.current && (0, p.VG)(a)))
                     switch (e.which) {
                         case f.yXg.ESCAPE:
-                            e.target !== a.inputRef.current ? this.reset() : null != a.inputRef.current && a.blur();
+                            e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
                             break;
                         case f.yXg.ENTER:
                             if (null != n) {
@@ -120,7 +120,7 @@ class C extends r.Component {
                             e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === f.yXg.ARROW_DOWN ? 1 : -1);
                             break;
                         default:
-                            null != a.inputRef.current && e.target !== a.inputRef.current && a.focus();
+                            null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
                     }
             });
     }

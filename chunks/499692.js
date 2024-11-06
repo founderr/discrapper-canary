@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(873199),
     o = n(442837),
     c = n(481060),
@@ -15,19 +15,19 @@ var i = n(200651),
 t.Z = function (e) {
     let { onSelectApplication: t } = e,
         n = (0, o.e7)([m.default], () => m.default.appDirectoryIncludesInactiveCollections),
-        a = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
+        l = (0, o.e7)([u.Z], () => u.Z.getFetchState({ includesInactive: n })),
         _ = (0, o.e7)([u.Z], () => u.Z.getCollections({ includesInactive: n }));
     r.useEffect(() => {
         d.bG({ includesInactive: n });
     }, [n]);
     let E = r.useMemo(() => (null == _ ? void 0 : _.filter((e) => e.type !== s.o.GALLERY)), [_]);
-    return a === u.M.ERROR
+    return l === u.M.ERROR
         ? (0, i.jsx)('div', {
               className: f.errorContainer,
               children: (0, i.jsx)(g.Z, { className: f.error })
           })
         : (0, i.jsx)(h.Z, {
-              loading: a === u.M.FETCHING,
+              loading: l === u.M.FETCHING,
               children:
                   null == E
                       ? void 0
@@ -37,7 +37,7 @@ t.Z = function (e) {
                                 {
                                     children: [
                                         (0, i.jsx)(c.Heading, {
-                                            className: l()(f.sectionTitle, { [f.titleExtraPadding]: 0 === n }),
+                                            className: a()(f.sectionTitle, { [f.titleExtraPadding]: 0 === n }),
                                             variant: 'heading-lg/semibold',
                                             color: 'header-primary',
                                             children: e.title

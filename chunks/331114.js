@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r = n(442837),
-    a = n(570140),
-    l = n(881052);
+    l = n(570140),
+    a = n(881052);
 function s(e, t, n) {
     return (
         t in e
@@ -25,7 +25,7 @@ class c {
         (this.counts = e), (this.isFetching = !1), (this.isInitialFetchComplete = !0);
     }
     handleSearchCountFailure(e) {
-        (this.error = new l.Hx(e)), (this.isFetching = !1);
+        (this.error = new a.Hx(e)), (this.isFetching = !1);
     }
     constructor() {
         s(this, 'isInitialFetchComplete', !1), s(this, 'isFetching', !1), s(this, 'error', null), s(this, 'counts', null);
@@ -52,7 +52,7 @@ class h extends (i = r.ZP.Store) {
     }
 }
 s(h, 'displayName', 'GlobalDiscoveryServersSearchCountStore'),
-    (t.Z = new h(a.Z, {
+    (t.Z = new h(l.Z, {
         CONNECTION_OPEN: function () {
             o.clear();
         },

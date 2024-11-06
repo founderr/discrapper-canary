@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    o = n(192379),
-    r = n(709014);
-let l = {
+    r = n(192379),
+    l = n(709014);
+let a = {
         deafen: {
             name: 'deafen',
             start: 0,
@@ -29,40 +29,40 @@ let l = {
         }
     },
     s = (e) => {
-        let t = o.useRef(null),
-            s = o.useRef(e);
+        let t = r.useRef(null),
+            s = r.useRef(e);
         s.current = e;
-        let a = o.useMemo(
+        let o = r.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            u = o.useCallback(() => {
+            c = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.play(n);
             }, [e]),
-            c = o.useCallback(() => {
+            d = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.stopIfPlaying(n);
             }, [e]);
         return {
             events: {
-                onClick: a,
-                onMouseEnter: u,
-                onMouseLeave: c
+                onClick: o,
+                onMouseEnter: c,
+                onMouseLeave: d
             },
-            play: a,
-            Component: o.useCallback(
+            play: o,
+            Component: r.useCallback(
                 (e) =>
-                    (0, i.jsx)(r.L, {
+                    (0, i.jsx)(l.L, {
                         ...e,
                         src: () => n.e('68449').then(n.t.bind(n, 406785, 19)),
                         ref: t,
                         initialAnimation: s.current,
-                        markers: l
+                        markers: a
                     }),
                 []
             )

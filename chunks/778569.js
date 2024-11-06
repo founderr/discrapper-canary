@@ -1,30 +1,30 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return c;
+        return l;
     }
 }),
     n(47120);
-var o = n(192379),
-    a = n(81063);
+var i = n(192379),
+    o = n(81063);
 let r = ['embedded_cover', 'embedded_background'];
-function c(t) {
-    let { applicationId: e, size: n, names: c = r } = t,
-        [i, u] = o.useState(null),
-        [l, s] = o.useState(!0),
-        E = (0, a.getAssetImage)(e, i, n);
+function l(e) {
+    let { applicationId: t, size: n, names: l = r } = e,
+        [s, a] = i.useState(null),
+        [u, c] = i.useState(!0),
+        d = (0, o.getAssetImage)(t, s, n);
     return (
-        o.useEffect(() => {
-            (0, a.getAssets)(e).then((t) => {
-                for (let [e, n] of (s(!1), Object.entries(t)))
-                    if (null != n && '' !== n.id && c.includes(n.name)) {
-                        u(n.id);
+        i.useEffect(() => {
+            (0, o.getAssets)(t).then((e) => {
+                for (let [t, n] of (c(!1), Object.entries(e)))
+                    if (null != n && '' !== n.id && l.includes(n.name)) {
+                        a(n.id);
                         return;
                     }
             });
-        }, [e]),
+        }, [t]),
         {
-            url: E,
-            state: l ? 'loading' : null != E ? 'fetched' : 'not-found'
+            url: d,
+            state: u ? 'loading' : null != d ? 'fetched' : 'not-found'
         }
     );
 }

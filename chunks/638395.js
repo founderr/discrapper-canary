@@ -1,7 +1,7 @@
 var i,
     r = n(442837),
-    a = n(570140),
-    l = n(288219);
+    l = n(570140),
+    a = n(288219);
 function s(e, t, n) {
     return (
         t in e
@@ -21,7 +21,7 @@ class c extends (i = r.ZP.DeviceSettingsStore) {
         return { toggleStates: o };
     }
     initialize(e) {
-        for (var t in l.Z) {
+        for (var t in a.Z) {
             var n, i;
             o[t] = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
         }
@@ -36,7 +36,7 @@ class c extends (i = r.ZP.DeviceSettingsStore) {
 }
 s(c, 'displayName', 'LabFeatureStore'),
     s(c, 'persistKey', 'LabFeatureStore'),
-    (t.Z = new c(a.Z, {
+    (t.Z = new c(l.Z, {
         LAB_FEATURE_TOGGLE: function (e) {
             let { labFeature: t, enabled: n } = e;
             o[t] = n;

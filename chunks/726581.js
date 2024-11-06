@@ -1,9 +1,9 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
-    o = n(107769),
+    o = n(304106),
     c = n(649974),
     d = n(246946),
     u = n(594174),
@@ -61,11 +61,11 @@ class C extends r.Component {
             : null;
     }
     render() {
-        let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: r, className: a } = this.props;
+        let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: r, className: l } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
         let s = this.getReviewToRender();
         return (0, i.jsxs)('div', {
-            className: l()(I.root, a),
+            className: a()(I.root, l),
             children: [
                 (0, i.jsx)('div', {
                     className: I.header,

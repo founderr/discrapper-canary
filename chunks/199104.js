@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(442837),
-    a = n(704215),
-    l = n(481060),
+    l = n(704215),
+    a = n(481060),
     s = n(410575),
     o = n(100527),
     c = n(906732),
@@ -21,7 +21,7 @@ var r = n(442837),
     _ = n(831162);
 function E() {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.ACTIVE_NOW_COLUMN),
-        t = (0, r.e7)([m.Z], () => m.Z.hasConsented(g.pjP.PERSONALIZATION)) ? [] : [a.z.NOW_PLAYING_CONSENT_CARD],
+        t = (0, r.e7)([m.Z], () => m.Z.hasConsented(g.pjP.PERSONALIZATION)) ? [] : [l.z.NOW_PLAYING_CONSENT_CARD],
         n = (0, d.Dt)();
     return (0, i.jsx)(c.Gt, {
         value: e,
@@ -30,10 +30,10 @@ function E() {
             children: (0, i.jsx)('aside', {
                 className: _.container,
                 'aria-labelledby': n,
-                children: (0, i.jsxs)(l.Scroller, {
+                children: (0, i.jsxs)(a.Scroller, {
                     className: _.scroller,
                     children: [
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-lg/semibold',
                             className: _.header,
                             id: n,
@@ -43,7 +43,7 @@ function E() {
                             contentTypes: t,
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
-                                if (t === a.z.NOW_PLAYING_CONSENT_CARD)
+                                if (t === l.z.NOW_PLAYING_CONSENT_CARD)
                                     return (0, i.jsx)(h.Z, {
                                         className: _.__invalid_consentCard,
                                         markAsDismissed: n

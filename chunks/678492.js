@@ -1,15 +1,15 @@
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    a = n(570140),
-    l = n(317770),
+    l = n(570140),
+    a = n(317770),
     s = n(388032);
-class o extends l.Z {
+class o extends a.Z {
     _initialize() {
-        a.Z.subscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        l.Z.subscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
     }
     _terminate() {
-        a.Z.unsubscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
+        l.Z.unsubscribe('POGGERMODE_TEMPORARILY_DISABLED', this.handlePoggermodeTemporarilyDisabled);
     }
     handlePoggermodeTemporarilyDisabled() {
         (0, r.openModal)((e) =>

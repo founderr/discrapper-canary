@@ -1,7 +1,7 @@
 var i,
     r = n(442837),
-    a = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,9 +32,9 @@ class o extends (i = r.ZP.DeviceSettingsStore) {
         return s;
     }
 }
-l(o, 'displayName', 'GravityFiltersStore'),
-    l(o, 'persistKey', 'GravityFiltersStore'),
-    (t.Z = new o(a.Z, {
+a(o, 'displayName', 'GravityFiltersStore'),
+    a(o, 'persistKey', 'GravityFiltersStore'),
+    (t.Z = new o(l.Z, {
         SET_GRAVITY_FILTERS: function (e) {
             s = e.filters;
         }

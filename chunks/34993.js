@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    a = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    a = n(481060),
     s = n(388032),
     o = n(969097),
     c = n(602075);
@@ -14,12 +14,12 @@ t.Z = () =>
             children: (0, i.jsxs)('div', {
                 className: o.textContainer,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'heading-xxl/normal',
-                        className: a()(c.title, o.mainTitle),
+                        className: l()(c.title, o.mainTitle),
                         children: s.intl.string(s.t.bmpq6O)
                     }),
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: c.subtitle,

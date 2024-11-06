@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i,
     r = n(392711),
-    a = n.n(r),
-    l = n(442837),
+    l = n.n(r),
+    a = n(442837),
     s = n(570140),
     o = n(846027),
     c = n(581883),
@@ -62,7 +62,7 @@ function x(e, t, n) {
             }
           : e;
 }
-class b extends (i = l.ZP.DeviceSettingsStore) {
+class A extends (i = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (f = null != e ? e : g);
     }
@@ -88,9 +88,9 @@ class b extends (i = l.ZP.DeviceSettingsStore) {
         return S;
     }
 }
-p(b, 'displayName', 'ConnectedDeviceStore'),
-    p(b, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new b(s.Z, {
+p(A, 'displayName', 'ConnectedDeviceStore'),
+    p(A, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new A(s.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
@@ -117,26 +117,26 @@ p(b, 'displayName', 'ConnectedDeviceStore'),
                 (E = i), (I = r), (_ = !0);
                 return;
             }
-            let l = Object.keys(E),
+            let a = Object.keys(E),
                 s = Object.keys(i),
                 o = Object.keys(I),
                 c = Object.keys(r),
-                d = a().difference(l, s),
-                u = a().difference(o, c);
+                d = l().difference(a, s),
+                u = l().difference(o, c);
             return (
                 d.length > 0 || u.length > 0
                     ? (C = {})
-                    : (a()
-                          .difference(s, l)
+                    : (l()
+                          .difference(s, a)
                           .forEach((e) => {
                               C[e] = x(C[e], e, h.QyF.INPUT);
                           }),
-                      a()
+                      l()
                           .difference(c, o)
                           .forEach((e) => {
                               C[e] = x(C[e], e, h.QyF.OUTPUT);
                           })),
-                !(a().isEqual(l, s) && a().isEqual(o, c)) && ((E = i), (I = r), !0)
+                !(l().isEqual(a, s) && l().isEqual(o, c)) && ((E = i), (I = r), !0)
             );
         },
         CONNECTED_DEVICE_SET: function (e) {

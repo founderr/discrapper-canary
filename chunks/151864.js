@@ -1,8 +1,8 @@
 n(653041);
 var i,
     r = n(442837),
-    a = n(570140),
-    l = n(765305);
+    l = n(570140),
+    a = n(765305);
 function s(e, t, n) {
     return (
         t in e
@@ -31,7 +31,7 @@ class c extends (i = r.ZP.PersistedStore) {
 }
 s(c, 'displayName', 'LiveChannelNoticesStore'),
     s(c, 'persistKey', 'liveChannelNotices_v2'),
-    (t.Z = new c(a.Z, {
+    (t.Z = new c(l.Z, {
         LIVE_CHANNEL_NOTICE_HIDE: function (e) {
             let { eventId: t, stageId: n } = e;
             null != t ? o.hiddenEventsAndStages.push('event-'.concat(t)) : null != n && o.hiddenEventsAndStages.push('stage-'.concat(n));
@@ -39,7 +39,7 @@ s(c, 'displayName', 'LiveChannelNoticesStore'),
         GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
             let { guildScheduledEvent: t } = e,
                 n = 'event-'.concat(t.id);
-            o.hiddenEventsAndStages.includes(n) && (t.status === l.p1.CANCELED || t.status === l.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
+            o.hiddenEventsAndStages.includes(n) && (t.status === a.p1.CANCELED || t.status === a.p1.COMPLETED) && (o.hiddenEventsAndStages = o.hiddenEventsAndStages.filter((e) => e !== n));
         },
         GUILD_SCHEDULED_EVENT_DELETE: function (e) {
             let { guildScheduledEvent: t } = e,

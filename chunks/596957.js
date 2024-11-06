@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(529103),
@@ -22,16 +22,16 @@ var i = n(200651),
     N = n(696577),
     T = n(163417),
     x = n(492347),
-    b = n(42575),
-    A = n(617015),
+    A = n(42575),
+    b = n(617015),
     Z = n(981631),
     y = n(388032),
     L = n(522756);
 t.Z = function (e) {
-    let { sectionFilter: t, titleId: a } = e,
+    let { sectionFilter: t, titleId: l } = e,
         { analyticsLocations: R } = (0, p.ZP)(m.Z.FRIENDS_LIST),
-        { rows: P, section: O } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
-        j = (0, s.e7)([I.Z], () => I.Z.isFocused()),
+        { rows: j, section: O } = (0, s.cj)([E.ZP], () => E.ZP.getState()),
+        P = (0, s.e7)([I.Z], () => I.Z.isFocused()),
         D = (0, s.e7)([_.Z], () => _.Z.getRelationshipCount()),
         [M, w] = r.useState(() => {
             let e = {};
@@ -59,8 +59,8 @@ t.Z = function (e) {
                 [t]: ''
             });
         }, [M, t]),
-        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && P.filter(Z.pJs.SPAM).length > 0,
-        H = P.filter(t, M[t]);
+        B = (0, f.A)({ location: 'people_list' }) && t === Z.pJs.PENDING && j.filter(Z.pJs.SPAM).length > 0,
+        H = j.filter(t, M[t]);
     if (
         (r.useEffect(() => {
             t === Z.pJs.ALL && (0, g.d$)();
@@ -87,14 +87,14 @@ t.Z = function (e) {
     let V = [H],
         F = 0 === H.length && '' !== M[t],
         z = H.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
-        Y = t === Z.pJs.PENDING && z > 0 && z >= A.yf;
+        Y = t === Z.pJs.PENDING && z > 0 && z >= b.yf;
     return (0, i.jsx)(p.Gt, {
         value: R,
         children: (0, i.jsxs)(u.Z, {
             section: Z.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
-                    className: l()(L.searchBar, F ? L.searchEmptyState : null),
+                    className: a()(L.searchBar, F ? L.searchEmptyState : null),
                     query: M[t],
                     onChange: U,
                     onClear: G,
@@ -104,7 +104,7 @@ t.Z = function (e) {
                     className: L.sectionTitle,
                     children: [
                         (0, i.jsx)(x.Z, {
-                            id: a,
+                            id: l,
                             title: (function (e, t) {
                                 switch (e) {
                                     case Z.pJs.ONLINE:
@@ -147,17 +147,17 @@ t.Z = function (e) {
                                   case Z.pJs.BLOCKED:
                                       return (0, i.jsx)(C.Z, {
                                           ...e,
-                                          isFocused: j
+                                          isFocused: P
                                       });
                                   case Z.pJs.PENDING:
                                       return (0, i.jsx)(N.Z, {
                                           ...e,
-                                          isFocused: j
+                                          isFocused: P
                                       });
                                   case Z.pJs.SUGGESTIONS:
-                                      return (0, i.jsx)(b.Z, {
+                                      return (0, i.jsx)(A.Z, {
                                           ...e,
-                                          isFocused: j
+                                          isFocused: P
                                       });
                                   case Z.pJs.ONLINE:
                                   case Z.pJs.ALL:
@@ -167,7 +167,7 @@ t.Z = function (e) {
                                           v.Z,
                                           {
                                               ...r,
-                                              isFocused: j
+                                              isFocused: P
                                           },
                                           n
                                       );

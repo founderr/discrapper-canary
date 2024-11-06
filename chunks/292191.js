@@ -5,16 +5,16 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(481060),
     o = n(388032),
     c = n(405787),
     d = n(902294);
 function u(e) {
-    let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: a } = e;
+    let { heading: t = o.intl.string(o.t.NGw8v7), body: n = o.intl.string(o.t['1XZRY2']), className: l } = e;
     return (0, i.jsxs)('div', {
-        className: l()(c.container, a),
+        className: a()(c.container, l),
         children: [
             (0, i.jsx)('div', {
                 className: c.imageContainer,

@@ -1,12 +1,12 @@
 n.d(t, {
     m: function () {
-        return a;
+        return l;
     }
 }),
     n(47120);
 var i = n(243814),
     r = n(103964);
-let a = {
+let l = {
         [r.Q5.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
             response: (e) => e.object({ image_url: e.string().required() })
@@ -54,7 +54,7 @@ let a = {
                         participants: e
                             .array()
                             .items(
-                                l(e)
+                                a(e)
                                     .keys({ nickname: e.string().description('Server nickname. Not unique.') })
                                     .required()
                             )
@@ -63,7 +63,7 @@ let a = {
                     .required()
         }
     },
-    l = (e) =>
+    a = (e) =>
         e
             .object({
                 id: e.string().required().description('User ID'),

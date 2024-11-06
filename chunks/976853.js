@@ -1,15 +1,15 @@
-e.d(t, {
+n.d(e, {
     Z: function () {
         return a;
     }
 });
-var r = e(399606),
-    l = e(592125),
-    i = e(176505);
-function a(n) {
-    let t = (0, r.e7)([l.Z], () => {
-        let t = l.Z.getChannel(n);
-        return (null == t ? void 0 : t.parent_id) != null && t.isForumPost() ? l.Z.getChannel(null == t ? void 0 : t.parent_id) : null;
+var r = n(399606),
+    l = n(592125),
+    i = n(176505);
+function a(t) {
+    let e = (0, r.e7)([l.Z], () => {
+        let e = l.Z.getChannel(t);
+        return (null == e ? void 0 : e.parent_id) != null && e.isForumPost() ? l.Z.getChannel(null == e ? void 0 : e.parent_id) : null;
     });
-    return (null == t ? void 0 : t.hasFlag(i.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0;
+    return (null == e ? void 0 : e.hasFlag(i.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS)) === !0;
 }

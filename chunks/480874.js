@@ -1,12 +1,12 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 });
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(91192),
     o = n(286379),
     c = n(481060),
@@ -26,13 +26,13 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     x = n(908120);
-function b() {
+function A() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
-        a = (0, g.V)(),
-        b = (0, d.N)(),
-        A = (0, u.Z)('message-requests-spam-list'),
+        l = (0, g.V)(),
+        A = (0, d.N)(),
+        b = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         y = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
@@ -44,7 +44,7 @@ function b() {
     r.useEffect(() => {
         p.default.track(N.rMx.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: n }), m.Z.increment({ name: o.V.SPAM_MESSAGE_REQUEST_VIEW });
     }, []);
-    let P = r.useCallback(
+    let j = r.useCallback(
             (e) => {
                 var n, r;
                 let { row: s } = e,
@@ -55,18 +55,18 @@ function b() {
                     v.Z,
                     {
                         index: s,
-                        className: l()({
+                        className: a()({
                             [x.selected]: null != Z && Z === d,
                             [x.siblingSelected]: null != Z && Z === c
                         }),
                         channel: o.channel,
                         user: o.user,
-                        hasSingleMessageRequest: a
+                        hasSingleMessageRequest: l
                     },
                     d
                 );
             },
-            [t, a, Z]
+            [t, l, Z]
         ),
         O = r.useCallback(
             () =>
@@ -76,7 +76,7 @@ function b() {
                         className: x.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
-                            b && n > 0
+                            A && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -102,20 +102,20 @@ function b() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, R, b]
+            [n, R, A]
         );
     return 0 === t.length
         ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: A,
+              navigator: b,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
-                      let { ref: r, role: a, ...l } = n;
+                      let { ref: r, role: l, ...a } = n;
                       return (0, i.jsx)(
                           c.List,
                           {
                               className: x.list,
-                              innerRole: a,
+                              innerRole: l,
                               innerAriaLabel: T.intl.string(T.t.e7GWjY),
                               ref: (t) => {
                                   var n;
@@ -126,11 +126,11 @@ function b() {
                               sectionHeight: S.oi,
                               rowHeight: S.WN,
                               renderSection: O,
-                              renderRow: P,
+                              renderRow: j,
                               sections: [t.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...l
+                              ...a
                           },
                           'message-requests-spam-list'
                       );

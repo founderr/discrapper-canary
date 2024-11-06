@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(812206),
+    l = n(442837),
+    a = n(812206),
     s = n(82950),
     o = n(434404),
     c = n(106976),
@@ -22,12 +22,12 @@ function p(e) {
         p = (0, d.h6)(n),
         g = () => (0, c.sB)(n.id),
         f = r.useMemo(() => new Set(p.map((e) => e.applicationId)), [p]),
-        _ = (0, a.Wu)(
-            [l.Z],
+        _ = (0, l.Wu)(
+            [a.Z],
             () => {
                 let e = [];
                 for (let t of f) {
-                    let n = l.Z.getApplication(t);
+                    let n = a.Z.getApplication(t);
                     null != n && e.push(n);
                 }
                 return e;

@@ -1,12 +1,12 @@
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(705952);
+    l = n(481060),
+    a = n(705952);
 t.Z = r.forwardRef(function (e, t) {
     let { onScroll: n, children: r } = e;
-    return (0, i.jsx)(a.AdvancedScroller, {
+    return (0, i.jsx)(l.AdvancedScroller, {
         onScroll: n,
-        className: l.scroller,
+        className: a.scroller,
         ref: t,
         children: r
     });

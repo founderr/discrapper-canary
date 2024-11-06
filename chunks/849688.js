@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(481060),
     o = n(442837),
     c = n(547280),
@@ -11,29 +11,29 @@ var i = n(200651),
     m = n(224719);
 t.Z = function (e) {
     let { guild: t } = e,
-        a = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
+        l = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
         p = r.useCallback(() => {
-            null != a &&
+            null != l &&
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('22862'), n.e('53596')]).then(n.bind(n, 646202));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            target: a,
+                            target: l,
                             guildId: t.id
                         });
                 });
-        }, [a, t.id]),
+        }, [l, t.id]),
         g = r.useCallback(() => {
-            null != a && (0, c.b)(a.key, a.dismissibleContent);
-        }, [a]);
-    if (null == a) return null;
-    let f = 'url('.concat(a.backgroundAssetUrl, ') black top / cover no-repeat');
+            null != l && (0, c.b)(l.key, l.dismissibleContent);
+        }, [l]);
+    if (null == l) return null;
+    let f = 'url('.concat(l.backgroundAssetUrl, ') black top / cover no-repeat');
     return (0, i.jsx)(s.ThemeProvider, {
         theme: u.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: l()(m.container, e),
+                className: a()(m.container, e),
                 children: (0, i.jsxs)('div', {
                     className: m.card,
                     style: { background: f },
@@ -54,7 +54,7 @@ t.Z = function (e) {
                         }),
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-sm/medium',
-                            children: a.noticeHeader
+                            children: l.noticeHeader
                         }),
                         (0, i.jsx)(s.Button, {
                             className: m.button,

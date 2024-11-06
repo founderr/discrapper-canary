@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 }),
     n(47120);
@@ -18,7 +18,7 @@ function r(e, t, n) {
         e
     );
 }
-class a {
+class l {
     markAsSeen(e, t, n) {
         this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(n)), this.guildIds.add(t);
     }

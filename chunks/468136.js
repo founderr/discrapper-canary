@@ -1,11 +1,11 @@
 n(47120);
 var i = n(544891),
     r = n(626135),
-    a = n(186901),
-    l = n(981631);
+    l = n(186901),
+    a = n(981631);
 t.Z = {
-    [l.Etm.GET_NETWORKING_CONFIG]: {
-        scope: a.lH,
+    [a.Etm.GET_NETWORKING_CONFIG]: {
+        scope: l.lH,
         handler: () =>
             Promise.all([
                 i.tn
@@ -21,7 +21,7 @@ t.Z = {
                     }),
                 i.tn
                     .post({
-                        url: l.ANM.NETWORKING_TOKEN,
+                        url: a.ANM.NETWORKING_TOKEN,
                         retries: 3,
                         oldFormErrors: !0
                     })
@@ -39,26 +39,26 @@ t.Z = {
                 };
             })
     },
-    [l.Etm.NETWORKING_SYSTEM_METRICS]: {
-        scope: a.lH,
+    [a.Etm.NETWORKING_SYSTEM_METRICS]: {
+        scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), r.default.track(l.rMx.NETWORKING_SYSTEM_METRICS, n);
+            (n.application_id = t.application.id), r.default.track(a.rMx.NETWORKING_SYSTEM_METRICS, n);
         }
     },
-    [l.Etm.NETWORKING_PEER_METRICS]: {
-        scope: a.lH,
+    [a.Etm.NETWORKING_PEER_METRICS]: {
+        scope: l.lH,
         handler(e) {
             let { socket: t, args: n } = e;
-            (n.application_id = t.application.id), r.default.track(l.rMx.NETWORKING_PEER_METRICS, n);
+            (n.application_id = t.application.id), r.default.track(a.rMx.NETWORKING_PEER_METRICS, n);
         }
     },
-    [l.Etm.NETWORKING_CREATE_TOKEN]: {
-        scope: a.lH,
+    [a.Etm.NETWORKING_CREATE_TOKEN]: {
+        scope: l.lH,
         handler: () =>
             i.tn
                 .post({
-                    url: l.ANM.NETWORKING_TOKEN,
+                    url: a.ANM.NETWORKING_TOKEN,
                     retries: 1,
                     oldFormErrors: !0
                 })

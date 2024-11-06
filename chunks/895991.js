@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(481060),
     o = n(570140),
     c = n(150063),
@@ -58,7 +58,7 @@ class S extends r.PureComponent {
                 }),
                 e ? null : t,
                 (0, i.jsxs)(s.AdvancedScrollerAuto, {
-                    className: l()(C.container, C.scroller),
+                    className: a()(C.container, C.scroller),
                     ref: this._scrollerRef,
                     children: [
                         e ? t : null,

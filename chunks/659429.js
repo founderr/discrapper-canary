@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(544891),
     r = n(570140),
-    a = n(34756),
-    l = n(981631);
+    l = n(34756),
+    a = n(981631);
 async function s(e) {
     r.Z.dispatch({
         type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_START',
@@ -15,7 +15,7 @@ async function s(e) {
     try {
         let t = (
             await i.tn.get({
-                url: l.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
+                url: a.ANM.APPLICATION_ACTIVITY_STATISTICS(e),
                 oldFormErrors: !0
             })
         ).body;
@@ -33,7 +33,7 @@ async function s(e) {
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL',
                 applicationId: e
             }),
-            new a.Z(t))
+            new l.Z(t))
         );
     }
 }

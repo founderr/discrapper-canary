@@ -30,8 +30,8 @@ n.d(t, {
     n(724458);
 var i,
     r,
-    a = n(661869),
-    l = n(876215);
+    l = n(661869),
+    a = n(876215);
 n(442837), n(638395);
 var s = n(786761);
 n(375954);
@@ -50,17 +50,17 @@ async function g(e, t, n) {
     let i = u.Z.getHydratedItems(),
         r = e.slice(t, n);
     if (0 === r.length) return;
-    let a = r.filter((e) => null == i[e.id]),
-        l = a
+    let l = r.filter((e) => null == i[e.id]),
+        a = l
             .filter((e) => e.type === h.Rr.MESSAGE)
             .map((e) => ({
                 channel_id: e.data.channel_id,
                 message_id: e.data.message_id
             })),
-        s = a
+        s = l
             .map((e) => {
                 if (e.type === h.Rr.MESSAGE) {
-                    var t, n, i, r, a, l;
+                    var t, n, i, r, l, a;
                     let s = [];
                     return (
                         (null === (t = e.data.message_context) || void 0 === t ? void 0 : t.reply_message_id) != null &&
@@ -75,8 +75,8 @@ async function g(e, t, n) {
                                 channel_id: e.data.channel_id,
                                 message_id: e.data.message_context.before_message_id
                             }),
-                        (null === (a = e.data.message_context) || void 0 === a ? void 0 : a.after_message_id) != null &&
-                            0 !== parseInt(null === (l = e.data.message_context) || void 0 === l ? void 0 : l.after_message_id) &&
+                        (null === (l = e.data.message_context) || void 0 === l ? void 0 : l.after_message_id) != null &&
+                            0 !== parseInt(null === (a = e.data.message_context) || void 0 === a ? void 0 : a.after_message_id) &&
                             s.push({
                                 channel_id: e.data.channel_id,
                                 message_id: e.data.message_context.after_message_id
@@ -88,20 +88,20 @@ async function g(e, t, n) {
             })
             .flat()
             .filter(Boolean),
-        o = a
+        o = l
             .filter((e) => e.type === h.Rr.SUMMARY)
             .map((e) => ({
                 guild_id: e.data.guild_id,
                 channel_id: e.data.channel_id,
                 summary_id: e.data.summary_id
             })),
-        c = a
+        c = l
             .filter((e) => e.type === h.Rr.ACTIVITY)
             .map((e) => ({
                 user_id: e.data.user_id,
                 content_id: e.data.content_id
             }));
-    await d.Z.fetchHydrated([...l, ...s], o, c, t, n);
+    await d.Z.fetchHydrated([...a, ...s], o, c, t, n);
 }
 ((r = i || (i = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.DEFAULT = 1)] = 'DEFAULT'), (r[(r.MORE = 2)] = 'MORE'), (r[(r.LESS = 3)] = 'LESS'), (r[(r.MUTED = 4)] = 'MUTED');
 function f(e, t) {
@@ -112,8 +112,8 @@ function f(e, t) {
         if (null != t.reactions) {
             if (n.length < 5)
                 for (let e of t.reactions) {
-                    var a, l;
-                    (null == e.count_details || (null !== (a = e.count_details.burst) && void 0 !== a ? a : 0) > 0 || (null !== (l = e.count_details.normal) && void 0 !== l ? l : 0) > 0) && n.push(e);
+                    var l, a;
+                    (null == e.count_details || (null !== (l = e.count_details.burst) && void 0 !== l ? l : 0) > 0 || (null !== (a = e.count_details.normal) && void 0 !== a ? a : 0) > 0) && n.push(e);
                 }
             r += (function (e) {
                 let t = 0;
@@ -163,10 +163,10 @@ function I(e) {
         activity: {
             id: e.id,
             author_id: e.data.user_id,
-            author_type: a.i.USER,
+            author_type: l.i.USER,
             traits: [],
             participants: [],
-            content_type: l.s.CUSTOM_STATUS,
+            content_type: a.s.CUSTOM_STATUS,
             extra: {
                 type: 'custom_status_extra',
                 status: null !== (t = e.data.text) && void 0 !== t ? t : '',

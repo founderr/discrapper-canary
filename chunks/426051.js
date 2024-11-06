@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(286379),
-    l = n(481060),
+    l = n(286379),
+    a = n(481060),
     s = n(797614),
     o = n(359110),
     c = n(6025),
@@ -21,7 +21,7 @@ function _(e) {
     let { active: t, user: n, channel: _ } = e,
         E = (0, u.V)(),
         I = r.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(g.intl.string(g.t.pIQ3h4), l.ToastType.FAILURE)), s.Z.increment({ name: a.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
+            (0, a.showToast)((0, a.createToast)(g.intl.string(g.t.pIQ3h4), a.ToastType.FAILURE)), s.Z.increment({ name: l.V.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         C = r.useCallback(() => {
             c.Z.closeChannelSidebar(d.uZ);
@@ -40,8 +40,8 @@ function _(e) {
             onRejectSuccess: C,
             onError: I
         }),
-        b = N || T,
-        A = b || x;
+        A = N || T,
+        b = A || x;
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -53,21 +53,21 @@ function _(e) {
             (0, i.jsxs)('div', {
                 className: f.actions,
                 children: [
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(a.Button, {
                         className: f.button,
-                        color: l.ButtonColors.PRIMARY,
-                        size: l.Button.Sizes.SMALL,
+                        color: a.ButtonColors.PRIMARY,
+                        size: a.Button.Sizes.SMALL,
                         onClick: (e) => {
                             S(_.id), e.stopPropagation();
                         },
-                        disabled: A,
-                        submitting: b,
+                        disabled: b,
+                        submitting: A,
                         children: g.intl.string(g.t.vicfl5)
                     }),
                     (0, i.jsx)(p.Z, {
                         className: f.button,
                         channel: _,
-                        buttonSize: l.Button.Sizes.SMALL
+                        buttonSize: a.Button.Sizes.SMALL
                     })
                 ]
             })

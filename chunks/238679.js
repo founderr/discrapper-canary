@@ -14,15 +14,15 @@ n.d(t, {
 });
 var i = n(392711),
     r = n.n(i),
-    a = n(570140),
-    l = n(317381),
+    l = n(570140),
+    a = n(317381),
     s = n(594174),
     o = n(823379),
     c = n(5192),
     d = n(863141),
     u = n(186901);
 function h() {
-    let e = l.ZP.getCurrentEmbeddedActivity();
+    let e = a.ZP.getCurrentEmbeddedActivity();
     if (null == e) return { participants: [] };
     let { guildId: t, channelId: n } = e;
     return {
@@ -51,5 +51,5 @@ function g(e) {
         n = () => {
             e(h());
         };
-    return a.Z.subscribe(t, n), () => a.Z.unsubscribe(t, n);
+    return l.Z.subscribe(t, n), () => l.Z.unsubscribe(t, n);
 }

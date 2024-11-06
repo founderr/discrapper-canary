@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(239091),
@@ -52,41 +52,41 @@ let C = { offset: 2 },
     };
 function S(e) {
     var t, r;
-    let { channel: a, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: b } = e,
-        A = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
+    let { channel: l, user: p, nick: S, mute: N, deaf: T, serverMute: x, serverDeaf: A } = e,
+        b = (0, s.e7)([g.Z], () => g.Z.isLocalMute(p.id)),
         Z = (0, d.Z)({
             userId: p.id,
             checkSoundSharing: !0
         }),
-        y = null !== (t = a.getGuildId()) && void 0 !== t ? t : void 0,
-        L = p.getAvatarURL(a.guild_id, 24),
+        y = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0,
+        L = p.getAvatarURL(l.guild_id, 24),
         R = null != S ? S : f.ZP.getName(p),
         {
-            icon: P,
+            icon: j,
             colorize: O,
-            getStatus: j
+            getStatus: P
         } = null !==
             (r = (function (e) {
-                let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: a } = e;
+                let { serverDeaf: t, deaf: n, serverMute: i, mute: r, localMute: l } = e;
                 if (t) return v.serverDeaf;
                 if (n) return v.deaf;
                 if (i) return v.serverMute;
-                else if (a) return v.localMute;
+                else if (l) return v.localMute;
                 else if (r) return v.mute;
             })({
-                serverDeaf: b,
+                serverDeaf: A,
                 deaf: T,
                 serverMute: x,
                 mute: N,
-                localMute: A
+                localMute: b
             })) && void 0 !== r
             ? r
             : {},
         D =
-            null != j
+            null != P
                 ? E.intl.formatToPlainString(E.t['1+MVBA'], {
                       userName: R,
-                      status: j()
+                      status: P()
                   })
                 : R;
     function M(e) {
@@ -98,7 +98,7 @@ function S(e) {
                           ...t,
                           user: p,
                           guildId: y,
-                          channel: a,
+                          channel: l,
                           showMediaItems: !0
                       });
               })
@@ -116,14 +116,14 @@ function S(e) {
         preload: () =>
             (0, h.Z)(p.id, p.getAvatarURL(y, 80), {
                 guildId: y,
-                channelId: a.id
+                channelId: l.id
             }),
         position: 'top',
         renderPopout: (e) =>
             (0, i.jsx)(m.Z, {
                 userId: p.id,
                 guildId: y,
-                channelId: a.id,
+                channelId: l.id,
                 ...e
             }),
         children: (e) =>
@@ -140,12 +140,12 @@ function S(e) {
                             shakeLocation: _.oZ.VOICE_USER,
                             isShaking: Z,
                             children: (0, i.jsx)('div', {
-                                className: l()(I.avatar, { [I.speaking]: Z }),
+                                className: a()(I.avatar, { [I.speaking]: Z }),
                                 style: { backgroundImage: 'url('.concat(L, ')') },
                                 children:
-                                    null != P
-                                        ? (0, i.jsx)(P, {
-                                              className: l()(I.avatarIconOverlay, { [I.avatarIconRed]: O }),
+                                    null != j
+                                        ? (0, i.jsx)(j, {
+                                              className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: O }),
                                               color: 'currentColor',
                                               size: 'xs'
                                           })
@@ -157,7 +157,7 @@ function S(e) {
     });
 }
 function N(e) {
-    let { voiceStates: t, channel: n, className: a } = e,
+    let { voiceStates: t, channel: n, className: l } = e,
         [c, d] = r.useState(!1),
         u = c ? o.MinusIcon : o.PlusSmallIcon,
         h = (0, i.jsx)(o.CircleIconButton, {
@@ -187,7 +187,7 @@ function N(e) {
     return _.length <= 0
         ? null
         : (0, i.jsx)(o.ScrollerThin, {
-              className: l()(I.scroller, a),
+              className: a()(I.scroller, l),
               fade: !0,
               children: (0, i.jsxs)('div', {
                   className: I.voiceUsers,
@@ -195,7 +195,7 @@ function N(e) {
                   'aria-label': E.intl.string(E.t['/ZgaVV']),
                   children: [
                       _.map((e) => {
-                          let { user: t, nick: r, voiceState: a } = e;
+                          let { user: t, nick: r, voiceState: l } = e;
                           return t.id !== m
                               ? (0, i.jsx)(
                                     S,
@@ -203,11 +203,11 @@ function N(e) {
                                         channel: n,
                                         user: t,
                                         nick: r,
-                                        mute: a.isVoiceMuted(),
-                                        deaf: a.isVoiceDeafened(),
-                                        video: a.selfVideo,
-                                        serverMute: a.mute,
-                                        serverDeaf: a.deaf
+                                        mute: l.isVoiceMuted(),
+                                        deaf: l.isVoiceDeafened(),
+                                        video: l.selfVideo,
+                                        serverMute: l.mute,
+                                        serverDeaf: l.deaf
                                     },
                                     t.id
                                 )

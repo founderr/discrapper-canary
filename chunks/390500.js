@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(970606),
+    l = n(481060),
+    a = n(970606),
     s = n(565138),
     o = n(388032),
     c = n(27471),
@@ -11,7 +11,7 @@ t.Z = function (e) {
         u = null == n ? void 0 : n.id;
     return (
         r.useEffect(() => {
-            null != u && (0, l.Pq)(u);
+            null != u && (0, a.Pq)(u);
         }, [u]),
         (0, i.jsxs)('div', {
             className: c.confirmation,
@@ -29,12 +29,12 @@ t.Z = function (e) {
                                   alt: o.intl.string(o.t.SXZrBw),
                                   src: d
                               }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             variant: 'heading-xl/semibold',
                             className: c.header,
                             children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: o.intl.string(o.t.FdsK4u)
@@ -43,11 +43,11 @@ t.Z = function (e) {
                 }),
                 (0, i.jsx)('div', {
                     className: c.confirmationButtonColumn,
-                    children: (0, i.jsx)(a.Button, {
+                    children: (0, i.jsx)(l.Button, {
                         onClick: t,
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.LINK,
-                        size: a.Button.Sizes.SMALL,
+                        look: l.Button.Looks.LINK,
+                        color: l.Button.Colors.LINK,
+                        size: l.Button.Sizes.SMALL,
                         children: o.intl.string(o.t.mqtdmZ)
                     })
                 })

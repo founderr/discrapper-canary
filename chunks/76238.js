@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(392711),
     r = n.n(i),
-    a = n(996106),
-    l = n(981631);
+    l = n(996106),
+    a = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -44,8 +44,8 @@ class o {
                 name: null,
                 icon: null
             }),
-            null == t || t > l.X6Q || t < 1)
+            null == t || t > a.X6Q || t < 1)
         )
-            throw new a.Z({ closeCode: l.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
+            throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
     }
 }

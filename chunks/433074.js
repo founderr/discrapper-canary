@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    d = n(955415),
-    u = n(706454),
+    u = n(955415),
+    d = n(706454),
     m = n(973616),
     h = n(914010),
     f = n(594174),
@@ -29,7 +29,7 @@ function T(e) {
     var t, n, T;
     let { code: S, message: b } = e,
         [A, j, Z] = (0, o.Wu)([C.Z], () => [C.Z.getApplication(S), C.Z.isInvalidApplication(S), C.Z.getApplicationFetchState(S)], [S]),
-        R = (0, o.e7)([u.default], () => u.default.locale),
+        R = (0, o.e7)([d.default], () => d.default.locale),
         P = (0, o.e7)([h.Z], () => {
             var e;
             return null !== (e = h.Z.getGuildId()) && void 0 !== e ? e : void 0;
@@ -80,16 +80,16 @@ function T(e) {
             });
     };
     if (j)
-        return (0, i.jsxs)(d.Z, {
+        return (0, i.jsxs)(u.Z, {
             containerRef: k,
             children: [
-                (0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.j4KtLS) }),
-                (0, i.jsx)(d.Z.Body, {
+                (0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.j4KtLS) }),
+                (0, i.jsx)(u.Z.Body, {
                     children: (0, i.jsxs)('div', {
                         className: N.invalidBody,
                         children: [
-                            (0, i.jsx)(d.Z.Icon, { expired: !0 }),
-                            (0, i.jsx)(d.Z.Info, {
+                            (0, i.jsx)(u.Z.Icon, { expired: !0 }),
+                            (0, i.jsx)(u.Z.Info, {
                                 expired: !0,
                                 title: v.intl.string(v.t.NaQLEx),
                                 children: v.intl.string(v.t['0H5OT0'])
@@ -100,9 +100,9 @@ function T(e) {
             ]
         });
     if (null == A || Z === C.M.FETCHING)
-        return (0, i.jsxs)(d.Z, {
+        return (0, i.jsxs)(u.Z, {
             containerRef: k,
-            children: [(0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.m9hXGR) }), (0, i.jsx)(d.Z.Body, { resolving: !0 })]
+            children: [(0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.m9hXGR) }), (0, i.jsx)(u.Z.Body, { resolving: !0 })]
         });
     let B = new Intl.NumberFormat(R, {
             notation: 'compact',
@@ -115,21 +115,21 @@ function T(e) {
             integrationTypesConfig: A.integration_types_config
         }),
         F = a.Y.GUILD_INSTALL in (null !== (T = A.integration_types_config) && void 0 !== T ? T : {}) && U;
-    return (0, i.jsxs)(d.Z, {
+    return (0, i.jsxs)(u.Z, {
         containerRef: k,
         children: [
-            (0, i.jsx)(d.Z.Header, { text: v.intl.string(v.t.KC1oZ2) }),
-            (0, i.jsxs)(d.Z.Body, {
+            (0, i.jsx)(u.Z.Header, { text: v.intl.string(v.t.KC1oZ2) }),
+            (0, i.jsxs)(u.Z.Body, {
                 children: [
                     (0, i.jsxs)('div', {
                         className: N.applicationInfoContainer,
                         children: [
-                            (0, i.jsx)(d.Z.Icon, {
+                            (0, i.jsx)(u.Z.Icon, {
                                 application: m.Z.createFromServer(A),
                                 className: N.applicationIcon,
                                 onClick: () => D('application_icon')
                             }),
-                            (0, i.jsx)(d.Z.Info, {
+                            (0, i.jsx)(u.Z.Info, {
                                 title: (0, i.jsx)(s.Clickable, {
                                     onClick: () => D('application_name'),
                                     children: A.name
@@ -155,7 +155,7 @@ function T(e) {
                         ]
                     }),
                     U &&
-                        (0, i.jsx)(d.Z.Button, {
+                        (0, i.jsx)(u.Z.Button, {
                             onClick: () => {
                                 if (null != A)
                                     (0, g.LO)({
@@ -167,7 +167,7 @@ function T(e) {
                                         source: 'app_directory_profile_embed'
                                     });
                             },
-                            color: d.Z.Button.Colors.GREEN,
+                            color: u.Z.Button.Colors.GREEN,
                             children: v.intl.string(v.t.NgXl3N)
                         })
                 ]

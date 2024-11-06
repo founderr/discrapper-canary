@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(149765),
     r = n(442837),
-    a = n(984933),
-    l = n(496675),
+    l = n(984933),
+    a = n(496675),
     s = n(981631);
 function o(e) {
     let t = (0, r.e7)(
-        [a.ZP],
+        [l.ZP],
         () => {
             var t;
-            return null !== (t = a.ZP.getChannels(e)[a.sH]) && void 0 !== t ? t : [];
+            return null !== (t = l.ZP.getChannels(e)[l.sH]) && void 0 !== t ? t : [];
         },
         [e]
     );
@@ -21,6 +21,6 @@ function o(e) {
         ? 0
         : t.filter((e) => {
               let { channel: t } = e;
-              return l.Z.can(i.$e(s.Plq.SEND_MESSAGES, s.Plq.VIEW_CHANNEL), t);
+              return a.Z.can(i.$e(s.Plq.SEND_MESSAGES, s.Plq.VIEW_CHANNEL), t);
           }).length;
 }

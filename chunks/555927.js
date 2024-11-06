@@ -8,18 +8,18 @@ n.d(t, {
     n(390547);
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(906732),
+    l = n(481060),
+    a = n(906732),
     s = n(171368),
     o = n(841710),
     c = n(981631),
     d = n(388032);
 function u(e) {
-    let { priorityMembers: t, otherMembers: n, totalMembers: r, activity: l, guildId: u, sourceAnalyticsLocations: h } = e,
+    let { priorityMembers: t, otherMembers: n, totalMembers: r, activity: a, guildId: u, sourceAnalyticsLocations: h } = e,
         m = [];
     for (let { user: e, status: n } of t)
         m.push(
-            (0, i.jsx)(a.MenuItem, {
+            (0, i.jsx)(l.MenuItem, {
                 id: e.id,
                 keepItemStyles: !0,
                 render: (t) =>
@@ -40,7 +40,7 @@ function u(e) {
         );
     for (let e of n)
         m.push(
-            (0, i.jsx)(a.MenuItem, {
+            (0, i.jsx)(l.MenuItem, {
                 id: e.id,
                 keepItemStyles: !0,
                 render: (t) =>
@@ -62,8 +62,8 @@ function u(e) {
     return (
         p > 0 &&
             m.push(
-                (0, i.jsx)(a.MenuItem, {
-                    id: 'unknown-members-'.concat(null == l ? void 0 : l.session_id),
+                (0, i.jsx)(l.MenuItem, {
+                    id: 'unknown-members-'.concat(null == a ? void 0 : a.session_id),
                     render: (e) =>
                         (0, i.jsx)(o.Y, {
                             ...e,
@@ -83,7 +83,7 @@ function h(e) {
             })
         ),
         h = n.filter((e) => !c.has(e.id)),
-        { analyticsLocations: m } = (0, l.ZP)(),
+        { analyticsLocations: m } = (0, a.ZP)(),
         p = r.useMemo(() => {
             let e = s
                 .flatMap((e) => {
@@ -95,7 +95,7 @@ function h(e) {
         }, [n, s]);
     if (s.length <= 1 && 0 === p.length) {
         var g, f;
-        return (0, i.jsx)(a.MenuGroup, {
+        return (0, i.jsx)(l.MenuGroup, {
             label: n.length > 1 ? d.intl.formatToPlainString(d.t.C4WXvb, { memberCount: n.length }) : void 0,
             children: u({
                 priorityMembers: t,
@@ -108,12 +108,12 @@ function h(e) {
         });
     }
     let _ = s.map((e, n) => {
-            let { playingMembers: r, game: l, activity: s } = e,
+            let { playingMembers: r, game: a, activity: s } = e,
                 d = new Set(r.map((e) => e.id));
             return (0, i.jsx)(
-                a.MenuGroup,
+                l.MenuGroup,
                 {
-                    label: ''.concat(l.name, ' - ').concat(r.length),
+                    label: ''.concat(a.name, ' - ').concat(r.length),
                     children: u({
                         priorityMembers: t.filter((e) => {
                             let { user: t } = e;
@@ -132,7 +132,7 @@ function h(e) {
         E = p.map((e) => e.id);
     return [
         ..._,
-        (0, i.jsx)(a.MenuGroup, {
+        (0, i.jsx)(l.MenuGroup, {
             label: ''.concat(d.intl.string(d.t['mIx+gI']), ' - ').concat(p.length),
             children: u({
                 priorityMembers: t.filter((e) => {

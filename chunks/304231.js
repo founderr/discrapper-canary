@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(100621),
-    l = n(782690),
+    l = n(100621),
+    a = n(782690),
     s = n(442837),
     o = n(481060),
     c = n(607070),
@@ -20,7 +20,7 @@ let E = {
     friction: 60
 };
 function I() {
-    let e = (0, g.GN)((e) => e.selectedGames, l.Z),
+    let e = (0, g.GN)((e) => e.selectedGames, a.Z),
         t = r.useMemo(() => new Set(e), [e]),
         n = r.useCallback((e) => g.GN.getState().setSelectedGames(Array.from(e)), []);
     return (0, i.jsx)(d.Z, {
@@ -32,7 +32,7 @@ function I() {
     });
 }
 function C() {
-    let e = (0, g.GN)((e) => e.selectedPlaystyle, l.Z),
+    let e = (0, g.GN)((e) => e.selectedPlaystyle, a.Z),
         t = r.useCallback((e) => g.GN.getState().setSelectedPlaystyle(e), []);
     return (0, i.jsx)(u.Z, {
         title: f.intl.string(f.t.nSOnKS),
@@ -42,7 +42,7 @@ function C() {
     });
 }
 function v() {
-    let e = (0, g.GN)((e) => e.selectedTraits, l.Z),
+    let e = (0, g.GN)((e) => e.selectedTraits, a.Z),
         t = r.useMemo(() => new Set(e), [e]),
         n = r.useCallback((e) => g.GN.getState().setSelectedTraits([...e]), []);
     return (0, i.jsx)(p.Z, {
@@ -63,11 +63,11 @@ t.Z = r.memo(function (e) {
         u = r.useRef(null),
         p = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, T] = r.useState(0),
-        [x, b] = r.useState(0),
-        A = (0, g.GN)((e) => e.selectedPlaystyle, l.Z),
+        [x, A] = r.useState(0),
+        b = (0, g.GN)((e) => e.selectedPlaystyle, a.Z),
         Z = r.useCallback(
             (e) => {
-                T(e), x < e && b(e);
+                T(e), x < e && A(e);
             },
             [x]
         ),
@@ -77,8 +77,8 @@ t.Z = r.memo(function (e) {
         L = r.useCallback(() => {
             2 === N ? t() : Z(N + 1);
         }, [N, Z, t]),
-        R = r.useMemo(() => 1 === N && null == A, [A, N]),
-        P = r.useMemo(
+        R = r.useMemo(() => 1 === N && null == b, [b, N]),
+        j = r.useMemo(
             () => [
                 {
                     index: 0,
@@ -104,7 +104,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         ),
-        j = (0, o.useSpring)(
+        P = (0, o.useSpring)(
             {
                 ref: d,
                 from: {
@@ -134,7 +134,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         );
-    (0, a.useChain)([n, d, u], [0, 0.2, 0.5]);
+    (0, l.useChain)([n, d, u], [0, 0.2, 0.5]);
     let M = r.useMemo(() => [N], [N]),
         w = r.useCallback((e) => {
             switch (e) {
@@ -146,13 +146,13 @@ t.Z = r.memo(function (e) {
                     return (0, i.jsx)(v, {});
             }
         }, []);
-    return (0, i.jsxs)(a.animated.div, {
+    return (0, i.jsxs)(l.animated.div, {
         className: _.container,
         style: O,
         children: [
-            (0, i.jsx)(a.animated.div, {
+            (0, i.jsx)(l.animated.div, {
                 className: _.sequencer,
-                style: j,
+                style: P,
                 children: (0, i.jsx)(m.Z, {
                     currentStep: N,
                     items: M,
@@ -160,13 +160,13 @@ t.Z = r.memo(function (e) {
                     getItemKey: S
                 })
             }),
-            (0, i.jsxs)(a.animated.div, {
+            (0, i.jsxs)(l.animated.div, {
                 className: _.footer,
                 style: D,
                 children: [
                     (0, i.jsx)(h.T, {
                         currentStepIndex: N,
-                        steps: P,
+                        steps: j,
                         furthestStepIndex: x,
                         onStepClick: Z
                     }),

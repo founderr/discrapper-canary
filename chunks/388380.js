@@ -1,10 +1,10 @@
 var i = n(544891),
     r = n(570140),
-    a = n(981631);
+    l = n(981631);
 t.Z = {
     async fetch() {
         try {
-            let e = await i.tn.get({ url: a.ANM.FRIEND_SUGGESTIONS });
+            let e = await i.tn.get({ url: l.ANM.FRIEND_SUGGESTIONS });
             r.Z.dispatch({
                 type: 'LOAD_FRIEND_SUGGESTIONS_SUCCESS',
                 suggestions: e.body
@@ -14,6 +14,6 @@ t.Z = {
         }
     },
     ignore(e) {
-        i.tn.del(a.ANM.FRIEND_SUGGESTION(e));
+        i.tn.del(l.ANM.FRIEND_SUGGESTION(e));
     }
 };

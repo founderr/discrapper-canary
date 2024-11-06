@@ -9,20 +9,20 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    a = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    a = n(481060),
     s = n(129861),
     o = n(604457);
 function c(e) {
-    let { user: t, status: n, isFocused: r, guildId: a } = e;
+    let { user: t, status: n, isFocused: r, guildId: l } = e;
     return (0, i.jsxs)('div', {
         className: o.memberItem,
         children: [
-            (0, i.jsx)(l.Avatar, {
-                src: t.getAvatarURL(a, 24),
+            (0, i.jsx)(a.Avatar, {
+                src: t.getAvatarURL(l, 24),
                 className: o.avatar,
                 'aria-label': t.username,
-                size: l.AvatarSizes.SIZE_24,
+                size: a.AvatarSizes.SIZE_24,
                 status: n,
                 statusColor: r ? 'currentColor' : void 0
             }),
@@ -37,6 +37,6 @@ function d(e) {
     let { label: t } = e;
     return (0, i.jsxs)('div', {
         className: o.memberItem,
-        children: [(0, i.jsx)('div', { className: a()(o.avatar, o.unknown) }), (0, i.jsx)('div', { children: t })]
+        children: [(0, i.jsx)('div', { className: l()(o.avatar, o.unknown) }), (0, i.jsx)('div', { children: t })]
     });
 }

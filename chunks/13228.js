@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(442837),
     r = n(594190),
-    a = n(480294),
-    l = n(131951),
+    l = n(480294),
+    a = n(131951),
     s = n(924557),
     o = n(435064),
     c = n(779618),
@@ -15,10 +15,10 @@ var i = n(442837),
 function h(e) {
     let t = (0, s.nM)({ autoTrackExposure: !0 }),
         n = o.Z.isDecoupledGameClippingEnabled();
-    return (0, i.e7)([o.Z, r.ZP, a.Z, l.Z], () => {
-        if (!(0, c.Z)(l.Z) || !t || !n) return !1;
+    return (0, i.e7)([o.Z, r.ZP, l.Z, a.Z], () => {
+        if (!(0, c.Z)(a.Z) || !t || !n) return !1;
         if (null != o.Z.getLastClipsError()) return !0;
-        if (!a.Z.hasConsented(u.pjP.PERSONALIZATION) || null == r.ZP.getVisibleGame()) return !1;
+        if (!l.Z.hasConsented(u.pjP.PERSONALIZATION) || null == r.ZP.getVisibleGame()) return !1;
         let {
             clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: h, numberOfTimesDismissed: m },
             hasTakenDecoupledClip: p,

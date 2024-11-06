@@ -10,19 +10,19 @@ var i = n(200651),
     o = n(358555),
     s = n(955415),
     c = n(944486),
-    d = n(914010),
-    u = n(626135),
+    u = n(914010),
+    d = n(626135),
     m = n(981631),
     h = n(388032),
     f = n(691784);
 function p(e) {
     var t;
     let { guild: n, channel: p, messageData: g } = e,
-        _ = d.Z.getGuildId(),
+        _ = u.Z.getGuildId(),
         C = c.Z.getChannelId(_),
         E = r.useCallback(() => {
             var e;
-            u.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
+            d.default.track(m.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: null === (e = g.author) || void 0 === e ? void 0 : e.id,
                 link_guild_id: n.id,
                 link_channel_id: p.id,

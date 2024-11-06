@@ -1,9 +1,9 @@
 n(47120);
 var i,
     r = n(200651),
-    a = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    l = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(873546),
     c = n(481060),
     d = n(599857),
@@ -28,7 +28,7 @@ function E(e, t, n) {
     );
 }
 let I = h.Z.getArticleURL(p.BhN.VERIFICATION_FAQ);
-class C extends (i = a.PureComponent) {
+class C extends (i = l.PureComponent) {
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: i } = this.props;
         return (0, r.jsx)(r.Fragment, {

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(793030),
-    l = n(442837),
+    l = n(793030),
+    a = n(442837),
     s = n(445986),
     o = n(9807),
     c = n(341176),
@@ -18,7 +18,7 @@ var i = n(200651),
     g = n(902294);
 function f(e) {
     let { application: t, carouselItems: n } = e,
-        f = (0, l.e7)([u.Z], () => u.Z.isFocused()),
+        f = (0, a.e7)([u.Z], () => u.Z.isFocused()),
         _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -27,7 +27,7 @@ function f(e) {
                     'aria-hidden': !0,
                     alt: ''
                 }),
-                (0, i.jsx)(a.X6, {
+                (0, i.jsx)(l.X6, {
                     variant: 'heading-xl/semibold',
                     children: m.intl.string(m.t.UvDfMz)
                 })

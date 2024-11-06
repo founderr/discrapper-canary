@@ -2,27 +2,27 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(570140),
-    a = n(317770),
-    l = n(663993),
+    l = n(317770),
+    a = n(663993),
     s = n(788983),
     o = n(981631);
 n(701491);
-let c = (0, l.Un)({
+let c = (0, a.Un)({
         createPromise: () => n.e('58621').then(n.bind(n, 223455)),
         webpackId: 223455,
         name: 'PopoutWindowChannelCall'
     }),
-    d = (0, l.Un)({
+    d = (0, a.Un)({
         createPromise: () => n.e('91032').then(n.bind(n, 432472)),
         webpackId: 432472,
         name: 'PopoutWindowStageChannelCall'
     }),
-    u = (0, l.Un)({
+    u = (0, a.Un)({
         createPromise: () => Promise.all([n.e('33053'), n.e('68638')]).then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     });
-class h extends a.Z {
+class h extends l.Z {
     _initialize() {
         r.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), r.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), this.initializeStyleSheetObserver();
     }

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(704215),
-    a = n(481060),
-    l = n(230711),
+    l = n(481060),
+    a = n(230711),
     s = n(100527),
     o = n(906732),
     c = n(605236),
@@ -26,7 +26,7 @@ function _() {
             (0, c.EW)(r.z.HOLIDAY_COACHMARK_HALLOWEEN_2024, { dismissAction: e });
         },
         E = () => {
-            l.Z.open(m.oAB.NOTIFICATIONS, null, { analyticsLocations: n }), _(p.L.SECONDARY);
+            a.Z.open(m.oAB.NOTIFICATIONS, null, { analyticsLocations: n }), _(p.L.SECONDARY);
         };
     return e && !t
         ? (0, i.jsx)(d.ZP, {
@@ -49,19 +49,19 @@ function _() {
                           children: [
                               (0, i.jsxs)('div', {
                                   children: [
-                                      (0, i.jsx)(a.Heading, {
+                                      (0, i.jsx)(l.Heading, {
                                           variant: 'heading-md/bold',
                                           color: void 0,
                                           className: f.specialText,
                                           children: g.intl.string(g.t.zUhr3N)
                                       }),
-                                      (0, i.jsx)(a.Text, {
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'always-white',
                                           children: g.intl.format(g.t.Xw2XUV, {
                                               settingsHook: (e, t) =>
                                                   (0, i.jsx)(
-                                                      a.Clickable,
+                                                      l.Clickable,
                                                       {
                                                           tag: 'span',
                                                           className: f.specialTextLink,
@@ -74,10 +74,10 @@ function _() {
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(a.Clickable, {
+                              (0, i.jsx)(l.Clickable, {
                                   className: f.closeClickable,
                                   onClick: () => _(p.L.USER_DISMISS),
-                                  children: (0, i.jsx)(a.XSmallIcon, {
+                                  children: (0, i.jsx)(l.XSmallIcon, {
                                       color: 'currentColor',
                                       size: 'xs'
                                   })

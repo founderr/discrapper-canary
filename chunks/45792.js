@@ -6,18 +6,18 @@ n.d(t, {
 var i = n(137006);
 function r(e, t) {
     var n;
-    let { scope: r, handler: a } = t,
-        l = {
+    let { scope: r, handler: l } = t,
+        a = {
             scope: r,
-            handler: a
+            handler: l
         },
         s = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
         o = null;
     return (
         null != s &&
-            (l.validation = function (e) {
+            (a.validation = function (e) {
                 return null == o && (o = s(e)), o;
             }),
-        l
+        a
     );
 }

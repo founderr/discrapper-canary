@@ -1,8 +1,8 @@
 n(47120);
 var i = n(570140),
     r = n(846027),
-    a = n(872810),
-    l = n(317770),
+    l = n(872810),
+    a = n(317770),
     s = n(569545),
     o = n(199902),
     c = n(314897),
@@ -22,7 +22,7 @@ function m(e, t, n) {
         e
     );
 }
-class p extends l.Z {
+class p extends a.Z {
     _initialize() {
         i.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
@@ -41,7 +41,7 @@ class p extends l.Z {
             }),
             m(this, 'handleStopStream', (e) => {
                 let t = o.Z.getActiveStreamForUser(e.userId, e.guildId);
-                if (null != t) (0, a.g)((0, s.V9)(t), !1);
+                if (null != t) (0, l.g)((0, s.V9)(t), !1);
             }),
             m(this, 'handleStopUserVideo', () => {
                 u.Z.isVideoEnabled() && r.Z.setVideoEnabled(!1);

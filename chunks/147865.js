@@ -1,15 +1,15 @@
-n.d(e, {
+n.d(t, {
     ZP: function () {
-        return a;
+        return r;
     },
     lY: function () {
-        return r;
+        return l;
     }
 });
-var o = n(388032);
-function a(t) {
-    return t > 0 ? o.intl.formatToPlainString(o.t['p/YmkZ'], { count: t }) : o.intl.string(o.t.s1vQIC);
+var i = n(388032);
+function r(e) {
+    return e > 0 ? i.intl.formatToPlainString(i.t['p/YmkZ'], { count: e }) : i.intl.string(i.t.s1vQIC);
 }
-function r(t) {
-    return t > 0 ? '1-'.concat(t) : o.intl.string(o.t.zMNEiI);
+function l(e) {
+    return e > 0 ? '1-'.concat(e) : i.intl.string(i.t.zMNEiI);
 }

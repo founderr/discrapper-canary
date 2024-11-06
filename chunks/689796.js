@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(77878),
-    l = n(770146),
+    l = n(77878),
+    a = n(770146),
     s = n(600164),
     o = n(981631),
     c = n(388032),
@@ -11,7 +11,7 @@ class u extends r.PureComponent {
         let { contentRating: e, contentRatingAgency: t } = this.props.sku;
         return null == e || null == t
             ? null
-            : (0, i.jsx)(a.Z, {
+            : (0, i.jsx)(l.Z, {
                   className: d.rating,
                   agency: t,
                   rating: e.rating
@@ -79,18 +79,18 @@ class u extends r.PureComponent {
                     7: c.intl.string(c.t.ai9C3d)
                 }
             },
-            a = e.descriptors.map((e) => r[t][e]).join(', ');
+            l = e.descriptors.map((e) => r[t][e]).join(', ');
         return (0, i.jsxs)('div', {
             className: n,
             children: [
-                (0, i.jsx)(l.Z, { children: c.intl.string(c.t.q9Zqgo) }),
+                (0, i.jsx)(a.Z, { children: c.intl.string(c.t.q9Zqgo) }),
                 (0, i.jsxs)(s.Z, {
                     className: d.content,
                     children: [
                         this.renderContentRatingImage(),
                         (0, i.jsx)('div', {
                             className: d.__invalid_info,
-                            children: a
+                            children: l
                         })
                     ]
                 })

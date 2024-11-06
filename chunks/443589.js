@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(100621),
     o = n(990547),
     c = n(873546),
@@ -26,16 +26,16 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     x = n(756),
-    b = n(886733);
-let A = {
+    A = n(886733);
+let b = {
     width: 14,
     height: 14
 };
 function Z(e) {
-    let { recipientUser: t, giftIntentType: n, analyticsPage: a, shouldHighlight: Z } = e,
+    let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
-        { isHovered: L, setIsHovered: R, onMouseEnter: P, onMouseLeave: O } = (0, p.Z)(200, 300),
-        { enableEmojiCTA: j } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
+        { isHovered: L, setIsHovered: R, onMouseEnter: j, onMouseLeave: O } = (0, p.Z)(200, 300),
+        { enableEmojiCTA: P } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
         (0, h.h)({
@@ -49,9 +49,9 @@ function Z(e) {
     }, [t, n]);
     let D = r.useCallback(
             (e) => {
-                'focus' !== e.type && P();
+                'focus' !== e.type && j();
             },
-            [P]
+            [j]
         ),
         M = (e) => {
             e.stopPropagation();
@@ -67,7 +67,7 @@ function Z(e) {
                     analyticsLocation: (0, C.F)(n).actionButton,
                     analyticsLocations: y,
                     analyticsObject: {
-                        page: a,
+                        page: l,
                         section: N.jXE.FRIENDS_LIST_FRIEND_ROW,
                         object: N.qAy.BUTTON_CTA,
                         objectType: N.Qqv.GIFT
@@ -84,13 +84,13 @@ function Z(e) {
             return (0, _.Ou)(n);
         },
         U = () =>
-            j
+            P
                 ? (0, i.jsx)(d.Clickable, {
                       'aria-label': k(),
                       onClick: M,
-                      className: l()(b.actionButton, x.popoutButton, {
-                          [b.highlight]: Z,
-                          [b.actionButtonMobile]: c.tq
+                      className: a()(A.actionButton, x.popoutButton, {
+                          [A.highlight]: Z,
+                          [A.actionButtonMobile]: c.tq
                       }),
                       onMouseEnter: D,
                       onMouseLeave: O,
@@ -108,8 +108,8 @@ function Z(e) {
                           children: [
                               (0, i.jsx)(d.GiftIcon, {
                                   size: 'custom',
-                                  width: A.width,
-                                  height: A.height,
+                                  width: b.width,
+                                  height: b.height,
                                   color: 'currentColor'
                               }),
                               (0, i.jsx)(d.Text, {
@@ -137,10 +137,10 @@ function Z(e) {
                 giftIntentType: n,
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: P,
+                onMouseEnter: j,
                 onMouseLeave: O,
                 popoutPosition: e.position,
-                analyticsPage: a,
+                analyticsPage: l,
                 analyticsSection: N.jXE.FRIENDS_LIST_FRIEND_ROW_GIFT_POPOUT,
                 giftIntentSecondaryAction: S.X2.SEND_MESSAGE,
                 glow: !0

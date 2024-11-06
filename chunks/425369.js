@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(512969),
-    l = n(410575),
+    l = n(512969),
+    a = n(410575),
     s = n(765717),
     o = n(252618),
     c = n(108427),
@@ -11,12 +11,12 @@ var i = n(200651),
     m = n(388032),
     p = n(991401);
 function g() {
-    return (0, i.jsxs)(a.rs, {
+    return (0, i.jsxs)(l.rs, {
         children: [
             (0, i.jsx)(s.Z, {
                 path: h.Z5c.APPLICATION_LIBRARY_SETTINGS,
                 exact: !0,
-                children: (0, i.jsxs)(l.Z, {
+                children: (0, i.jsxs)(a.Z, {
                     page: h.ZY5.LIBRARY_SETTINGS,
                     root: !0,
                     children: [(0, i.jsx)(o.yY, { subsection: m.intl.string(m.t['3D5yo6']) }), (0, i.jsx)(u.Z, {})]
@@ -24,7 +24,7 @@ function g() {
             }),
             (0, i.jsx)(s.Z, {
                 path: h.Z5c.APPLICATION_LIBRARY,
-                children: (0, i.jsxs)(l.Z, {
+                children: (0, i.jsxs)(a.Z, {
                     page: h.ZY5.LIBRARY,
                     root: !0,
                     children: [(0, i.jsx)(o.yY, { subsection: m.intl.string(m.t.p7ARTE) }), (0, i.jsx)(d.Z, {})]

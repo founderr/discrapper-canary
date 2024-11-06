@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(399606),
     s = n(607070),
     c = n(597688),
-    d = n(624377),
-    u = n(530618),
+    u = n(624377),
+    d = n(530618),
     m = n(331042),
     h = n(372654),
     f = n(987209),
@@ -21,10 +21,10 @@ var i = n(200651),
     C = n(698708);
 function E(e) {
     let { handleClose: t, confettiCanvas: n, hideConfetti: r = !1, analyticsLocations: l } = e,
-        { skusById: s, selectedSkuId: d, application: u } = (0, p.usePaymentContext)(),
-        h = (0, o.e7)([c.Z], () => c.Z.getProduct(d));
-    a()(null != d, 'Expected selectedSkuId'), a()(null != u, 'Expected application');
-    let f = s[d];
+        { skusById: s, selectedSkuId: u, application: d } = (0, p.usePaymentContext)(),
+        h = (0, o.e7)([c.Z], () => c.Z.getProduct(u));
+    a()(null != u, 'Expected selectedSkuId'), a()(null != d, 'Expected application');
+    let f = s[u];
     return (a()(null != f, 'Expected sku'), null == h)
         ? null
         : (0, i.jsxs)(_.C3, {
@@ -46,7 +46,7 @@ function I(e) {
         x = r.useRef(null),
         { selectedSkuId: v } = (0, p.usePaymentContext)(),
         N = (0, o.e7)([c.Z], () => c.Z.getProduct(v)),
-        { confettiColors: T } = (0, d.Z)(null == N ? void 0 : N.styles);
+        { confettiColors: T } = (0, u.Z)(null == N ? void 0 : N.styles);
     return t
         ? (0, i.jsxs)('div', {
               ref: x,
@@ -62,7 +62,7 @@ function I(e) {
                   }),
                   !e.hideConfetti &&
                       !I &&
-                      (0, i.jsx)(u.Z, {
+                      (0, i.jsx)(d.Z, {
                           confettiTarget: x.current,
                           confettiCanvas: e.confettiCanvas,
                           sprites: (0, h.vK)(null == N ? void 0 : N.categorySkuId),

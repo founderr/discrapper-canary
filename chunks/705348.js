@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(82950),
-    a = n(63063),
-    l = n(981631),
+    l = n(63063),
+    a = n(981631),
     s = n(921944),
     o = n(388032),
     c = n(157476);
@@ -18,12 +18,12 @@ function d(e) {
         guild: t,
         onDismissed: () => n(s.L.UNKNOWN),
         onClick: () => {
-            open(a.Z.getArticleURL(l.BhN.CONNECTION_DETAILS)), n(s.L.UNKNOWN);
+            open(l.Z.getArticleURL(a.BhN.CONNECTION_DETAILS)), n(s.L.UNKNOWN);
         },
         title: o.intl.string(o.t.YMgaJi),
         message: o.intl.string(o.t['AV/9eX']),
         cta: o.intl.string(o.t.hvVgAQ),
-        trackingSource: l.PsQ.LINKED_ROLES_ADMIN_NUX,
-        type: l.vID.LINKED_ROLES_ADMIN
+        trackingSource: a.PsQ.LINKED_ROLES_ADMIN_NUX,
+        type: a.vID.LINKED_ROLES_ADMIN
     });
 }

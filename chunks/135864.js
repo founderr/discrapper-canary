@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(636977),
     o = n(481060),
     c = n(352057),
@@ -15,7 +15,7 @@ var i = n(200651),
 function _(e) {
     let { tab: t } = e,
         n = d.Z.useField('selectedTab'),
-        a = r.useMemo(
+        l = r.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
@@ -42,11 +42,11 @@ function _(e) {
         }, [t]);
     return (0, i.jsxs)(o.Clickable, {
         onClick: _,
-        className: l()(f.navItem, { [f.selected]: g }),
+        className: a()(f.navItem, { [f.selected]: g }),
         children: [
             (0, i.jsx)('div', {
                 className: f.navItemIcon,
-                children: a
+                children: l
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-md/medium',

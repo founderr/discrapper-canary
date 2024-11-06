@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(481060),
     o = n(950279),
     c = n(741595),
@@ -11,8 +11,8 @@ var i = n(200651),
     h = n(131325),
     m = n(602075);
 function p(e) {
-    let { gameApplicationIds: t, onUpdateGames: n, error: a } = e,
-        l = r.useCallback(
+    let { gameApplicationIds: t, onUpdateGames: n, error: l } = e,
+        a = r.useCallback(
             (e) => {
                 n(new Set(e));
             },
@@ -31,7 +31,7 @@ function p(e) {
                         (0, i.jsx)(s.Button, {
                             look: s.Button.Looks.LINK,
                             size: s.Button.Sizes.MIN,
-                            onClick: () => l(new Set()),
+                            onClick: () => a(new Set()),
                             color: s.Button.Colors.CUSTOM,
                             className: h.resetButton,
                             children: u.intl.string(u.t['/91lv7'])
@@ -41,9 +41,9 @@ function p(e) {
             (0, i.jsx)(o.p, {
                 gameApplicationIds: t,
                 preventGameRemoval: !1,
-                onUpdateGames: l,
+                onUpdateGames: a,
                 minGames: 0,
-                error: a
+                error: l
             })
         ]
     });
@@ -107,9 +107,9 @@ function f(e) {
     });
 }
 t.Z = (e) => {
-    let { traits: t, gameApplicationIds: n, playstyle: r, onUpdateTraits: a, onUpdateGames: o, onUpdatePlaystyle: c } = e;
+    let { traits: t, gameApplicationIds: n, playstyle: r, onUpdateTraits: l, onUpdateGames: o, onUpdatePlaystyle: c } = e;
     return (0, i.jsxs)('div', {
-        className: l()(m.slideContent, h.container),
+        className: a()(m.slideContent, h.container),
         children: [
             (0, i.jsxs)('div', {
                 className: h.mainHeader,
@@ -139,7 +139,7 @@ t.Z = (e) => {
             (0, i.jsx)('hr', { className: m.divider }),
             (0, i.jsx)(g, {
                 traits: t,
-                onUpdateTraits: a
+                onUpdateTraits: l
             })
         ]
     });

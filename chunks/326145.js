@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(745752),
+    l = n(481060),
+    a = n(745752),
     s = n(17181),
     o = n(388032),
     c = n(894710);
@@ -14,7 +14,7 @@ function d(e) {
     let { guildId: t, channelId: n } = e,
         d = r.useCallback(() => {
             if (null != t && null != n)
-                (0, l.I1)(t),
+                (0, a.I1)(t),
                     (0, s.default)({
                         guildId: t,
                         returnChannelId: n
@@ -25,13 +25,13 @@ function d(e) {
         children: (0, i.jsxs)('div', {
             className: c.explainerContainer,
             children: [
-                (0, i.jsx)(a.Text, {
+                (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children: o.intl.string(o.t.FWtdQk)
                 }),
-                (0, i.jsx)(a.Button, {
+                (0, i.jsx)(l.Button, {
                     onClick: d,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(l.Text, {
                         variant: 'text-md/medium',
                         children: o.intl.string(o.t.VVFjAA)
                     })

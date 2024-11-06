@@ -1,44 +1,44 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return m;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(776862),
-    s = n(306680),
+var r = n(481060),
+    l = n(776862),
+    a = n(306680),
     o = n(626135),
-    l = n(499254),
-    u = n(827498),
-    c = n(314734),
+    s = n(499254),
+    c = n(827498),
+    u = n(314734),
     d = n(981631);
-function f(e) {
-    let { channel: t, openInPopout: f, analyticsLocation: _ } = e;
-    f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
-    let h = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-    (0, l.yT)(u.ti.DISMISSED), (0, l.__)(u._b.VOICE);
+function m(e) {
+    let { channel: t, openInPopout: m, analyticsLocation: h } = e;
+    m && (0, l.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    let f = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+    (0, s.yT)(c.ti.DISMISSED), (0, s.__)(c._b.VOICE);
     let p = t.id,
-        m = s.ZP.hasUnread(p) || s.ZP.getMentionCount(p) > 0;
+        g = a.ZP.hasUnread(p) || a.ZP.getMentionCount(p) > 0;
     return (
         o.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
-            location: _,
-            source: u._b.VOICE,
-            is_chat_badged: m
+            location: h,
+            source: c._b.VOICE,
+            is_chat_badged: g
         }),
-        (0, i.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('67588'), n.e('47321'), n.e('72106')]).then(n.bind(n, 743161));
+                let { default: e } = await Promise.all([n.e('67588'), n.e('47321'), n.e('31740')]).then(n.bind(n, 743161));
                 return (n) =>
-                    (0, r.jsx)(e, {
+                    (0, i.jsx)(e, {
                         channel: t,
                         ...n
                     });
             },
             {
-                modalKey: c.e9,
-                contextKey: h
+                modalKey: u.e9,
+                contextKey: f
             }
         )
     );

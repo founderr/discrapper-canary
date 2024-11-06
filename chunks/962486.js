@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(229765),
+    l = n(481060),
+    a = n(229765),
     s = n(322665),
     o = n(17845),
     c = n(374939),
@@ -30,18 +30,18 @@ function f(e) {
         N = r.useMemo(() => {
             let e = m ? 30 : n.length,
                 t = [];
-            for (let a = 0; a < e; a++) {
+            for (let l = 0; l < e; l++) {
                 var r;
                 t.push(
                     (0, i.jsx)(
                         h.Eo,
                         {
-                            guildId: null !== (r = n[a]) && void 0 !== r ? r : null,
-                            index: a,
-                            onClick: (e) => _(e, a, S, g),
+                            guildId: null !== (r = n[l]) && void 0 !== r ? r : null,
+                            index: l,
+                            onClick: (e) => _(e, l, S, g),
                             onView: (e) => E(e, S)
                         },
-                        n[a]
+                        n[l]
                     )
                 );
             }
@@ -57,11 +57,11 @@ function f(e) {
             }),
             (0, i.jsxs)(c.Z, {
                 children: [
-                    (0, i.jsx)(l.KY, {
+                    (0, i.jsx)(a.KY, {
                         location: 'global_discovery',
                         query: t
                     }),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(l.Heading, {
                         className: p.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',

@@ -6,8 +6,8 @@ e.r(n),
     });
 var l = e(200651);
 e(192379);
-var i = e(481060),
-    r = e(239091),
+var r = e(481060),
+    i = e(239091),
     a = e(358085),
     u = e(29264),
     o = e(905041),
@@ -17,12 +17,12 @@ function s(t) {
         s = (0, u.Z)(n),
         c = (0, o.Z)(n, null);
     return a.isPlatformEmbedded
-        ? (0, l.jsxs)(i.Menu, {
+        ? (0, l.jsxs)(r.Menu, {
               navId: 'image-context',
-              onClose: r.Zy,
+              onClose: i.Zy,
               'aria-label': d.intl.string(d.t.Zow2V1),
               onSelect: e,
-              children: [(0, l.jsx)(i.MenuGroup, { children: s }), (0, l.jsx)(i.MenuGroup, { children: c })]
+              children: [(0, l.jsx)(r.MenuGroup, { children: s }), (0, l.jsx)(r.MenuGroup, { children: c })]
           })
         : null;
 }

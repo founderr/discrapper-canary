@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(873546),
-    l = n(442837),
+    l = n(873546),
+    a = n(442837),
     s = n(481060),
     o = n(355467),
     c = n(270237),
@@ -26,58 +26,58 @@ var i = n(200651),
     N = n(504762),
     T = n(807152),
     x = n(176505),
-    b = n(388032),
-    A = n(752335);
+    A = n(388032),
+    b = n(752335);
 function Z(e) {
     let { guildId: t } = e,
-        n = (0, l.e7)([f.Z], () => f.Z.getGuild(t), [t]),
-        Z = (0, l.e7)([p.Z], () => p.Z.isConnected()),
+        n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
+        Z = (0, a.e7)([p.Z], () => p.Z.isConnected()),
         y = (0, h.Z)(t),
         L = (0, I.Z)(t),
-        R = (0, l.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        P = (0, E.f)(),
-        { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: j } = (0, m.uP)(t),
-        D = null == n || !P || R || j;
+        R = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
+        j = (0, E.f)(),
+        { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: P } = (0, m.uP)(t),
+        D = null == n || !j || R || P;
     (0, d.Tt)({
-        subsection: b.intl.string(b.t['KzCF//']),
+        subsection: A.intl.string(A.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
-        (0, c.Z)(a.tq ? 'role-subscriptions-overview' : void 0);
-    let M = Z && (null == n || !(y || L) || (O && !j));
+        (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
+    let M = Z && (null == n || !(y || L) || (O && !P));
     if (
         (r.useEffect(() => {
             o.jg();
         }, []),
         r.useEffect(() => {
-            M && !a.tq && (0, u.M)(t, x.oC.ROLE_SUBSCRIPTIONS);
+            M && !l.tq && (0, u.M)(t, x.oC.ROLE_SUBSCRIPTIONS);
         }, [t, M]),
-        a.tq && M)
+        l.tq && M)
     ) {
         let e = null == n ? S.J.NOT_GUILD_MEMBER : S.J.GUILD_NOT_ELIGIBLE;
         return (0, i.jsx)(S.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: A.container,
+        className: b.container,
         children: [
             (0, i.jsxs)(g.Z, {
                 toolbar: (0, i.jsx)(r.Fragment, {}),
-                className: A.headerBar,
+                className: b.headerBar,
                 children: [
                     (0, i.jsx)(g.Z.Icon, {
                         icon: (0, s.makeIconCompat)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: A.intl.string(A.t['KzCF//']) })
                 ]
             }),
             (0, i.jsx)('div', { id: T.v }),
             (0, i.jsx)('div', {
-                className: A.content,
+                className: b.content,
                 children: y
                     ? (0, i.jsx)(s.ScrollerNone, {
-                          className: A.scroller,
+                          className: b.scroller,
                           children: (0, i.jsx)('div', {
-                              className: A.scrollerContent,
+                              className: b.scrollerContent,
                               children: D ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })

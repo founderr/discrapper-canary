@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i,
     r = n(200651),
-    a = n(192379),
-    l = n(748780),
+    l = n(192379),
+    a = n(748780),
     s = n(442837),
     o = n(481060),
     c = n(210887),
@@ -36,7 +36,7 @@ let p = Object.freeze({
             width: 376,
             height: 162,
             renderContent: (e) =>
-                (0, r.jsxs)(a.Fragment, {
+                (0, r.jsxs)(l.Fragment, {
                     children: [
                         (0, r.jsx)(o.EmptyStateText, { note: u.intl.string(u.t['oi+B4u']) }),
                         (0, r.jsx)(o.Button, {
@@ -106,7 +106,7 @@ let p = Object.freeze({
         let { theme: t } = e,
             n = u.intl.string(u.t['oi+B4u']),
             i = p.SECTION_ALL;
-        return (0, r.jsx)(a.Fragment, {
+        return (0, r.jsx)(l.Fragment, {
             children: (0, r.jsxs)(o.EmptyState, {
                 theme: t,
                 children: [
@@ -121,11 +121,11 @@ let p = Object.freeze({
             })
         });
     };
-class f extends a.PureComponent {
+class f extends l.PureComponent {
     render() {
         let { type: e, onClick: t, theme: n } = this.props,
             i = { opacity: this.state.opacity },
-            a = (function (e) {
+            l = (function (e) {
                 switch (e) {
                     case d.pJs.ADD_FRIEND:
                     case d.pJs.ALL:
@@ -145,40 +145,40 @@ class f extends a.PureComponent {
                 }
             })(e);
         return e === d.pJs.ADD_FRIEND
-            ? (0, r.jsx)(l.Z.div, {
+            ? (0, r.jsx)(a.Z.div, {
                   className: h.friendsEmpty,
                   style: i,
                   children: (0, r.jsx)(g, { theme: n })
               })
-            : (0, r.jsx)(l.Z.div, {
+            : (0, r.jsx)(a.Z.div, {
                   className: h.friendsEmpty,
                   style: i,
                   children: (0, r.jsxs)(o.EmptyState, {
                       theme: n,
                       children: [
                           (0, r.jsx)(o.EmptyStateImage, {
-                              width: a.width,
-                              height: a.height,
-                              lightSrc: a.lightSrc,
-                              darkSrc: a.darkSrc
+                              width: l.width,
+                              height: l.height,
+                              lightSrc: l.lightSrc,
+                              darkSrc: l.darkSrc
                           }),
-                          a.renderContent(t)
+                          l.renderContent(t)
                       ]
                   })
               });
     }
     constructor(...e) {
         super(...e),
-            m(this, 'state', { opacity: new l.Z.Value(1) }),
+            m(this, 'state', { opacity: new a.Z.Value(1) }),
             m(this, 'componentWillEnter', (e) => {
                 this.state.opacity.setValue(0),
-                    l.Z.timing(this.state.opacity, {
+                    a.Z.timing(this.state.opacity, {
                         toValue: 1,
                         duration: 250
                     }).start(e);
             }),
             m(this, 'componentWillLeave', (e) => {
-                l.Z.timing(this.state.opacity, {
+                a.Z.timing(this.state.opacity, {
                     toValue: 0,
                     duration: 250
                 }).start(e);

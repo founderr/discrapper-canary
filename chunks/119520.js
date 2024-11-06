@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(558381),
-    l = n(986035),
+    l = n(558381),
+    a = n(986035),
     s = n(388032),
     o = n(292309);
 function c(e, t, n) {
@@ -25,7 +25,7 @@ class d extends r.PureComponent {
         } = this.props;
         return (0, i.jsx)('div', {
             className: o.matureListing,
-            children: (0, i.jsx)(l.Z, {
+            children: (0, i.jsx)(a.Z, {
                 onAgree: this.handleAgree,
                 onDisagree: this.handleDisagree,
                 title: s.intl.formatToPlainString(s.t.n5PGER, { name: e }),
@@ -38,10 +38,10 @@ class d extends r.PureComponent {
     constructor(...e) {
         super(...e),
             c(this, 'handleDisagree', () => {
-                (0, a.M9)();
+                (0, l.M9)();
             }),
             c(this, 'handleAgree', () => {
-                (0, a.cj)();
+                (0, l.cj)();
             });
     }
 }

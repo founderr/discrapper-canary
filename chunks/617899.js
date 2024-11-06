@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(904245),
+    l = n(481060),
+    a = n(904245),
     s = n(944486),
     o = n(82950),
     c = n(981631),
@@ -41,7 +41,7 @@ class p extends r.PureComponent {
         super(...e),
             m(this, 'handleInvite', () => {
                 let { guild: e } = this.props;
-                (0, a.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([n.e('7654'), n.e('85683')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, i.jsx)(t, {
@@ -53,7 +53,7 @@ class p extends r.PureComponent {
             }),
             m(this, 'handleClose', () => {
                 let e = s.Z.getChannelId();
-                this.props.markAsDismissed(d.L.UNKNOWN), null != e && l.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
+                this.props.markAsDismissed(d.L.UNKNOWN), null != e && a.Z.sendBotMessage(e, u.intl.formatToPlainString(u.t.DEn7np, { invitePeople: u.intl.string(u.t.BN75l5) }));
             });
     }
 }

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(399606),
     o = n(243778),
     c = n(914010),
@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(921944),
     h = n(464506);
 let m = r.memo(function (e) {
-    var t, n, a;
+    var t, n, l;
     let { state: s, markAsDismissed: o } = e,
         { name: c, guildId: d, boundingRect: u } = s,
         m = r.useMemo(
@@ -27,14 +27,14 @@ let m = r.memo(function (e) {
         );
     if (null == m) return null;
     return (0, i.jsx)('div', {
-        className: l()(h.upsell, !(null != (t = u) && !(t.y < 0)) && h.hidden),
+        className: a()(h.upsell, !(null != (t = u) && !(t.y < 0)) && h.hidden),
         style:
             ((n = c),
-            null == (a = u)
+            null == (l = u)
                 ? {}
                 : {
-                      top: a.top,
-                      left: a.right - a.x
+                      top: l.top,
+                      left: l.right - l.x
                   }),
         children: m
     });
@@ -55,13 +55,13 @@ function p() {
             u.R.SIDEBAR
         );
     if (null == n) return null;
-    let a = t[n];
-    return null == a
+    let l = t[n];
+    return null == l
         ? null
         : (0, i.jsx)('div', {
               className: h.container,
               children: (0, i.jsx)(m, {
-                  state: a,
+                  state: l,
                   markAsDismissed: r
               })
           });

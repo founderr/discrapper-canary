@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(782690),
     o = n(990547),
     c = n(91192),
@@ -27,15 +27,15 @@ var i = n(200651),
     N = n(922409),
     T = n(899740),
     x = n(28476),
-    b = n(880257),
-    A = n(631885),
+    A = n(880257),
+    b = n(631885),
     Z = n(522558),
     y = n(795448),
     L = n(441623),
     R = n(457396),
-    P = n(108989),
+    j = n(108989),
     O = n(51596),
-    j = n(905423),
+    P = n(905423),
     D = n(155409),
     M = n(210887),
     w = n(695346),
@@ -56,8 +56,8 @@ var i = n(200651),
     J = n(465200);
 let $ = (e) => {
         let { selected: t, ...n } = e,
-            a = (0, c.JA)('friends'),
-            l = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
+            l = (0, c.JA)('friends'),
+            a = (0, u.e7)([U.Z], () => U.Z.getPendingCount()),
             s = (0, u.e7)([L.Z], () => L.Z.canShowFriendsTabBadge()),
             d = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: h } = Z.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
@@ -90,12 +90,12 @@ let $ = (e) => {
                         I(!1);
                     },
                     ...n,
-                    ...a,
-                    children: l > 0 ? (0, i.jsx)(p.NumberBadge, { count: l }) : null
+                    ...l,
+                    children: a > 0 ? (0, i.jsx)(p.NumberBadge, { count: a }) : null
                 }),
                 m &&
                     !d &&
-                    (0, i.jsx)(P.Z, {
+                    (0, i.jsx)(j.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -120,15 +120,15 @@ let $ = (e) => {
     },
     ee = (e) => {
         let { selected: t, hideGameUpdateProgressIndicator: n, ...r } = e,
-            a = (0, c.JA)('library');
+            l = (0, c.JA)('library');
         return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.APPLICATION_LIBRARY,
             icon: p.InventoryIcon,
             text: Q.intl.string(Q.t.cw57am),
             ...r,
-            ...a,
-            children: (0, i.jsx)(W.Z, { className: l()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
+            ...l,
+            children: (0, i.jsx)(W.Z, { className: a()(J.downloadProgressCircle, { [J.hideGameUpdateProgressIndicator]: n }) })
         });
     },
     et = () => {
@@ -140,13 +140,13 @@ let $ = (e) => {
             n = (0, c.JA)('messageRequests'),
             { channelId: r } = (0, N._)();
         if (!(0, x.a)()) return null;
-        let a = null == r ? void 0 : () => g.Z.preload(K.ME, r);
+        let l = null == r ? void 0 : () => g.Z.preload(K.ME, r);
         return (0, i.jsx)(z.Qj, {
             selected: t,
             route: K.Z5c.MESSAGE_REQUESTS,
             icon: p.EnvelopeIcon,
             text: Q.intl.string(Q.t.e7GWjY),
-            onClick: a,
+            onClick: l,
             ...n,
             children: (0, i.jsx)(et, {})
         });
@@ -154,11 +154,11 @@ let $ = (e) => {
     ei = (e) => {
         let { selected: t } = e,
             n = Q.intl.string(Q.t.Rkdixs),
-            a = (0, c.JA)('family-center'),
-            l = w.Ex.useSetting(),
-            s = (0, b.Z)(),
+            l = (0, c.JA)('family-center'),
+            a = w.Ex.useSetting(),
+            s = (0, A.Z)(),
             [o, d] = r.useState(!0);
-        return l && s
+        return a && s
             ? (0, i.jsx)(z.Qj, {
                   selected: t,
                   route: K.Z5c.FAMILY_CENTER,
@@ -171,14 +171,14 @@ let $ = (e) => {
                       d(!1);
                   },
                   interactiveClassName: J.familyCenterLinkButton,
-                  ...a,
+                  ...l,
                   children: (0, i.jsx)(er, { isParentHovered: o })
               })
             : null;
     },
     er = (e) => {
         let { isParentHovered: t } = e,
-            r = (0, A.gU)();
+            r = (0, b.gU)();
         return t
             ? (0, i.jsx)(z.PZ, {
                   onClick: () => {
@@ -207,8 +207,8 @@ let $ = (e) => {
                     }
                 });
     },
-    ea = () => (0, O.$Z)('DM_SEARCH');
-function el(e) {
+    el = () => (0, O.$Z)('DM_SEARCH');
+function ea(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
             return K.ZY5.LIBRARY;
@@ -221,8 +221,8 @@ function el(e) {
     return K.ZY5.DM_CHANNEL;
 }
 let es = (e) => {
-    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: a } = e,
-        [o, c] = (0, j.Z)((e) => {
+    let { showLibrary: t, hasLibraryApplication: n, homeLink: r, premiumTabSelected: l } = e,
+        [o, c] = (0, P.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, s.Z);
@@ -235,11 +235,11 @@ let es = (e) => {
                 position: 'right',
                 offsetX: -52,
                 children: (0, i.jsx)('div', {
-                    className: l()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
+                    className: a()(J.searchBar, { [J.themedHeaderMobile]: d.tq }),
                     children: (0, i.jsx)('button', {
                         type: 'button',
-                        className: l()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
-                        onClick: ea,
+                        className: a()(J.searchBarComponent, { [J.themedSearchBarMobile]: d.tq }),
+                        onClick: el,
                         children: Q.intl.string(Q.t.LzcpeX)
                     })
                 })
@@ -264,11 +264,11 @@ let es = (e) => {
                     (0, i.jsx)(
                         R.g,
                         {
-                            selected: null == c ? a : c.startsWith(K.Z5c.APPLICATION_STORE),
+                            selected: null == c ? l : c.startsWith(K.Z5c.APPLICATION_STORE),
                             route: K.Z5c.APPLICATION_STORE,
                             locationState: {
                                 analyticsSource: {
-                                    page: el(r),
+                                    page: ea(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -283,7 +283,7 @@ let es = (e) => {
                             selected: c === K.Z5c.COLLECTIBLES_SHOP || (null == r ? void 0 : r.startsWith(K.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {
-                                    page: el(r),
+                                    page: ea(r),
                                     section: K.jXE.NAVIGATION,
                                     object: K.qAy.NAVIGATION_LINK
                                 }
@@ -315,13 +315,13 @@ function eo() {
         ),
         n = !w.bm.useSetting(),
         { theme: r } = (0, u.cj)([M.Z], () => ({ theme: M.Z.theme })),
-        a = (0, u.e7)([k.Z], () => k.Z.hasLibraryApplication()),
-        l = (0, u.e7)([G.Z], () => G.Z.getCurrentPath());
+        l = (0, u.e7)([k.Z], () => k.Z.hasLibraryApplication()),
+        a = (0, u.e7)([G.Z], () => G.Z.getCurrentPath());
     return (0, i.jsx)(es, {
         theme: r,
         showLibrary: n,
-        hasLibraryApplication: a,
-        storeLink: l,
+        hasLibraryApplication: l,
+        storeLink: a,
         homeLink: e,
         premiumTabSelected: t
     });

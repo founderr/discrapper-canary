@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(100621),
     o = n(442837),
     c = n(481060),
@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(207796),
     T = n(273254),
     x = n(559469),
-    b = n(308083),
-    A = n(388032),
+    A = n(308083),
+    b = n(388032),
     Z = n(431476),
     y = n(345480),
     L = n(236613);
@@ -32,7 +32,7 @@ let R = {
     tension: 600,
     friction: 60
 };
-function P(e) {
+function j(e) {
     let { children: t } = e;
     return (0, i.jsxs)(s.animated.div, {
         className: Z.clanEnvelope,
@@ -73,22 +73,22 @@ function O(e) {
         ]
     });
 }
-function j(e) {
-    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: a, onButtonClick: s, onDismiss: o, buttonText: d, hasCompletedUpsell: u } = e,
+function P(e) {
+    let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: l, onButtonClick: s, onDismiss: o, buttonText: d, hasCompletedUpsell: u } = e,
         h = (0, g.iN)('clan_discovery_admin_upsell'),
         m = (0, g.YH)('clan_discovery_admin_upsell'),
         p = r.useMemo(
             () =>
-                a.map((e) => ({
+                l.map((e) => ({
                     value: e.id,
                     label: e.name
                 })),
-            [a]
+            [l]
         );
     r.useEffect(() => {
-        0 === a.length && m && (0, N.Ce)();
-    }, [a, m]);
-    let f = a.length > 1;
+        0 === l.length && m && (0, N.Ce)();
+    }, [l, m]);
+    let f = l.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             u
@@ -97,13 +97,13 @@ function j(e) {
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: A.intl.string(A.t['6RMihY'])
+                              children: b.intl.string(b.t['6RMihY'])
                           }),
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellSubtitle,
                               variant: 'heading-md/medium',
                               color: 'header-secondary',
-                              children: A.intl.string(A.t.xlIWLS)
+                              children: b.intl.string(b.t.xlIWLS)
                           })
                       ]
                   })
@@ -112,22 +112,22 @@ function j(e) {
                           (0, i.jsxs)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: [A.intl.string(A.t.Uw5KKC), (0, i.jsx)('br', {}), A.intl.string(A.t['jZvR+f'])]
+                              children: [b.intl.string(b.t.Uw5KKC), (0, i.jsx)('br', {}), b.intl.string(b.t['jZvR+f'])]
                           }),
                           (0, i.jsxs)('div', {
                               className: Z.upsellDetails,
                               children: [
                                   (0, i.jsx)(O, {
                                       icon: c.CompassIcon,
-                                      text: A.intl.string(A.t.v0ZdNj)
+                                      text: b.intl.string(b.t.v0ZdNj)
                                   }),
                                   (0, i.jsx)(O, {
                                       icon: c.CircleCheckIcon,
-                                      text: A.intl.string(A.t.L1fEc3)
+                                      text: b.intl.string(b.t.L1fEc3)
                                   }),
                                   (0, i.jsx)(O, {
                                       icon: c.GroupIcon,
-                                      text: A.intl.string(A.t.ChMjnp)
+                                      text: b.intl.string(b.t.ChMjnp)
                                   })
                               ]
                           })
@@ -150,7 +150,7 @@ function j(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: l()(Z.reserveButton, { [Z.buttonWithSelect]: f }),
+                                    className: a()(Z.reserveButton, { [Z.buttonWithSelect]: f }),
                                     onClick: s,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
@@ -171,7 +171,7 @@ function j(e) {
                                                 children: (0, i.jsx)(c.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: 'header-primary',
-                                                    children: A.intl.string(A.t['0ZJsur'])
+                                                    children: b.intl.string(b.t['0ZJsur'])
                                                 })
                                             })
                                         ]
@@ -185,21 +185,21 @@ function j(e) {
 }
 t.Z = r.memo(function (e) {
     let { eligibleGuilds: t, eligibleGuildsIncludingConverted: n } = e,
-        a = (0, g.iN)('clan_discovery_admin_upsell'),
-        l = 0 === t.length,
+        l = (0, g.iN)('clan_discovery_admin_upsell'),
+        a = 0 === t.length,
         [y, L] = r.useState(() => {
             var e, i;
             let r = new Set(f.ZP.getGuildIds());
             for (let e of t) if (r.has(e.id)) return e.id;
-            return l ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
+            return a ? (null === (e = n[0]) || void 0 === e ? void 0 : e.id) : null === (i = t[0]) || void 0 === i ? void 0 : i.id;
         });
     r.useEffect(() => {
-        !l &&
+        !a &&
             (0, p.TE)({
                 guildId: y,
                 location: h.Z.CLAN_DISCOVERY
             });
-    }, [l, y]);
+    }, [a, y]);
     let O = (0, o.e7)([v.Z], () => v.Z.getGuild(y)),
         D = (0, o.e7)([f.ZP], () => (null != y ? f.ZP.getStateForGuild(y).progress : null)),
         M = (0, g.c7)({
@@ -207,7 +207,7 @@ t.Z = r.memo(function (e) {
             location: h.Z.CLAN_DISCOVERY
         }),
         w = r.useCallback(() => {
-            !l &&
+            !a &&
                 ((0, p.aN)({
                     guildId: y,
                     location: h.Z.CLAN_DISCOVERY
@@ -221,7 +221,7 @@ t.Z = r.memo(function (e) {
                                   guildId: y
                               });
                           },
-                          { layerKey: b.Pv }
+                          { layerKey: A.Pv }
                       )
                     : (0, C.q4)(
                           (e) => {
@@ -231,9 +231,9 @@ t.Z = r.memo(function (e) {
                                   guildId: y
                               });
                           },
-                          { layerKey: b.Pv }
+                          { layerKey: A.Pv }
                       ));
-        }, [M, l, y]),
+        }, [M, a, y]),
         k = r.useCallback(() => {
             M ? (0, N.kw)() : (0, N.Ce)();
         }, [M]),
@@ -316,7 +316,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         ),
-        Q = r.useMemo(() => (a ? A.intl.string(A.t.ZA9f19) : null == D ? A.intl.string(A.t.fLiOgI) : A.intl.string(A.t.GnIKBA)), [D, a]),
+        Q = r.useMemo(() => (l ? b.intl.string(b.t.ZA9f19) : null == D ? b.intl.string(b.t.fLiOgI) : b.intl.string(b.t.GnIKBA)), [D, l]),
         J = r.useCallback(async () => {
             await (0, m.Zx)(y), d.Z.transitionToGuildSync('936317138904440892');
         }, [y]),
@@ -326,7 +326,7 @@ t.Z = r.memo(function (e) {
                     tag: 'span',
                     className: Z.joinWFSLink,
                     onClick: J,
-                    'aria-label': A.intl.string(A.t['6PJMUF']),
+                    'aria-label': b.intl.string(b.t['6PJMUF']),
                     children: (0, i.jsx)(c.Text, {
                         tag: 'span',
                         variant: 'text-xs/medium',
@@ -367,7 +367,7 @@ t.Z = r.memo(function (e) {
                         (0, i.jsx)(s.animated.div, {
                             className: Z.clanEnvelope,
                             style: q,
-                            children: (0, i.jsx)(P, {
+                            children: (0, i.jsx)(j, {
                                 children: (0, i.jsx)('div', {
                                     className: Z.clanCardCenterContainer,
                                     style: { overflow: H ? 'hidden' : 'visible' },
@@ -408,17 +408,17 @@ t.Z = r.memo(function (e) {
             }),
             (0, i.jsx)('div', {
                 className: Z.upsellCtaContainer,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(P, {
                     selectedGuildId: y,
                     setSelectedGuildId: L,
                     eligibleGuilds: t,
                     onButtonClick: w,
                     onDismiss: k,
                     buttonText: Q,
-                    hasCompletedUpsell: l
+                    hasCompletedUpsell: a
                 })
             }),
-            l
+            a
                 ? (0, i.jsx)('div', {
                       className: Z.joinWFSContainer,
                       children: (0, i.jsx)('div', {
@@ -426,7 +426,7 @@ t.Z = r.memo(function (e) {
                           children: (0, i.jsx)(c.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: A.intl.format(A.t['5lqT9P'], { wfsHook: $ })
+                              children: b.intl.format(b.t['5lqT9P'], { wfsHook: $ })
                           })
                       })
                   })

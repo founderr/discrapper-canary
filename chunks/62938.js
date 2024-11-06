@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(782690),
-    l = n(481060),
+    l = n(782690),
+    a = n(481060),
     s = n(393238),
     o = n(963202),
     c = n(353093),
@@ -22,20 +22,20 @@ function C(e) {
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        { guilds: a } = (0, o.Pu)({ location: 'ClanDiscoveryAdminContainer' }),
+        { guilds: l } = (0, o.Pu)({ location: 'ClanDiscoveryAdminContainer' }),
         s = r.useMemo(() => {
-            let e = [...n, ...a],
+            let e = [...n, ...l],
                 t = new Set();
             return e.filter((e) => !t.has(e.id) && (t.add(e.id), !(0, c.EJ)(e)));
-        }, [n, a]),
+        }, [n, l]),
         d = r.useMemo(() => {
-            let e = [...n, ...a],
+            let e = [...n, ...l],
                 t = new Set();
             return e.filter((e) => !t.has(e.id) && (t.add(e.id), !0));
-        }, [n, a]);
+        }, [n, l]);
     return (0, i.jsx)('section', {
         className: I.guilds,
-        children: (0, i.jsxs)(l.AdvancedScrollerNone, {
+        children: (0, i.jsxs)(a.AdvancedScrollerNone, {
             onScroll: t,
             className: I.upsellScroller,
             fade: !0,
@@ -60,10 +60,10 @@ function C(e) {
 }
 function v(e) {
     let { onScroll: t, withAdminContent: n } = e,
-        r = (0, h.GN)((e) => e.mode, a.Z),
-        { ref: l, width: o } = (0, s.Z)();
+        r = (0, h.GN)((e) => e.mode, l.Z),
+        { ref: a, width: o } = (0, s.Z)();
     return (0, i.jsxs)('section', {
-        ref: l,
+        ref: a,
         className: I.guilds,
         children: [
             (0, i.jsx)('div', {
@@ -89,18 +89,18 @@ t.Z = function (e) {
             includeConverted: !0
         }),
         { signupEnabled: r } = (0, o.Pu)({ location: 'GuildsTab' }),
-        a = (0, o.iN)('global_discovery_guilds_tab'),
-        l = (0, h.GN)((e) => e.dismissedPilotAdminNux),
+        l = (0, o.iN)('global_discovery_guilds_tab'),
+        a = (0, h.GN)((e) => e.dismissedPilotAdminNux),
         s = (0, h.GN)((e) => e.dismissedSignupAdmin),
         c = (0, o.YH)('clan_discovery_admin_upsell');
     (0, d.LE)(), (0, d.c2)();
-    let u = l || s,
-        m = n && a && !u && !c,
-        p = r && a && !u && !c;
+    let u = a || s,
+        m = n && l && !u && !c,
+        p = r && l && !u && !c;
     return m || p
         ? (0, i.jsx)(C, { onScroll: t })
         : (0, i.jsx)(v, {
               onScroll: t,
-              withAdminContent: n && a
+              withAdminContent: n && l
           });
 };

@@ -2,16 +2,16 @@ n(47120);
 var i = n(243814);
 n(920456);
 var r = n(996106),
-    a = n(452426),
-    l = n(186901),
+    l = n(452426),
+    a = n(186901),
     s = n(981631);
 t.Z = {
     [s.Etm.SET_USER_ACHIEVEMENT]: {
         scope: {
-            [l.Gp.ANY]: [i.x.RPC, l.lH]
+            [a.Gp.ANY]: [i.x.RPC, a.lH]
         },
         validation: (e) =>
-            (0, a.Z)(e)
+            (0, l.Z)(e)
                 .required()
                 .keys({
                     achievement_id: e.string().min(2).max(128),
@@ -28,7 +28,7 @@ t.Z = {
     },
     [s.Etm.GET_USER_ACHIEVEMENTS]: {
         scope: {
-            [l.Gp.ANY]: [i.x.RPC, l.lH]
+            [a.Gp.ANY]: [i.x.RPC, a.lH]
         },
         handler(e) {
             let { socket: t } = e;

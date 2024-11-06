@@ -1,11 +1,11 @@
 n.d(t, {
     y: function () {
-        return a;
+        return l;
     }
 });
 var i = n(603113),
     r = n(122810);
-function a(e) {
+function l(e) {
     return {
         af_voice_chat: e.voiceChannels.length > 0,
         af_people_count: e.partiedMembers.length,

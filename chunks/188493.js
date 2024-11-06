@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(89182),
+    l = n(442837),
+    a = n(89182),
     s = n(706454),
     o = n(762692),
     c = n(164991),
@@ -15,7 +15,7 @@ var i = n(200651),
     h = n(388032);
 function m(e) {
     let { loadId: t } = e,
-        n = (0, a.e7)([s.default], () => (0, d.Xp)([s.default])),
+        n = (0, l.e7)([s.default], () => (0, d.Xp)([s.default])),
         m = (0, c.Dm)(),
         p = null != m ? m : n,
         g = r.useCallback(
@@ -45,7 +45,7 @@ function m(e) {
             let t = (0, u.Cf)().find((e) => e.code === p);
             return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : h.intl.string(h.t.LQLMGB);
         }, [p]);
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(a.Z, {
         items: f,
         title: _,
         onSelect: g,

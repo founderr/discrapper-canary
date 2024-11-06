@@ -1,26 +1,26 @@
 n.d(t, {
     U: function () {
-        return o;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var a = n(481060),
-    l = n(542094),
+var l = n(481060),
+    a = n(542094),
     r = n(388032),
-    s = n(87694);
-function o(e) {
+    o = n(87694);
+function s(e) {
     let { action: t, onClick: n } = e,
-        o = t === l.JS.JOIN ? r.intl.string(r.t['4i2vj4']) : r.intl.string(r.t['R/FK4O']),
-        c = t === l.JS.JOIN ? a.Button.Colors.PRIMARY : a.Button.Colors.RED;
+        s = t === a.JS.JOIN ? r.intl.string(r.t['4i2vj4']) : r.intl.string(r.t['R/FK4O']),
+        c = t === a.JS.JOIN ? l.Button.Colors.PRIMARY : l.Button.Colors.RED;
     return (0, i.jsx)('div', {
-        className: s.activityOverlay,
-        children: (0, i.jsx)(a.Button, {
-            className: s.actionButton,
+        className: o.activityOverlay,
+        children: (0, i.jsx)(l.Button, {
+            className: o.actionButton,
             onClick: n,
-            size: a.Button.Sizes.MEDIUM,
+            size: l.Button.Sizes.MEDIUM,
             color: c,
-            children: o
+            children: s
         })
     });
 }

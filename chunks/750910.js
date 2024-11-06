@@ -1,34 +1,34 @@
 n.d(t, {
     H: function () {
-        return a;
+        return l;
     }
 });
 var i = n(192379),
     r = n(726115);
-function a(e) {
+function l(e) {
     let { guildDiscoveryCardSeenManager: t, loadId: n } = e,
-        a = i.useCallback(
+        l = i.useCallback(
             (e, i) => {
                 t.markAsSeen(i, e, n);
             },
             [t, n]
         ),
-        l = i.useCallback(
-            (e, t, i, a) =>
+        a = i.useCallback(
+            (e, t, i, l) =>
                 (0, r.vL)({
                     loadId: n,
                     guildId: e,
                     index: t,
                     categoryId: i,
-                    analyticsLocation: a
+                    analyticsLocation: l
                 }),
             [n]
         );
     return i.useMemo(
         () => ({
-            onGuildCardSeen: a,
-            onGuildCardClick: l
+            onGuildCardSeen: l,
+            onGuildCardClick: a
         }),
-        [l, a]
+        [a, l]
     );
 }

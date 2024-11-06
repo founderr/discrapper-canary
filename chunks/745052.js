@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(91192),
     o = n(286379),
     c = n(442837),
@@ -22,15 +22,15 @@ var i = n(200651),
     N = n(243778),
     T = n(984370),
     x = n(797614),
-    b = n(359110),
-    A = n(6025),
+    A = n(359110),
+    b = n(6025),
     Z = n(897473),
     y = n(108427),
     L = n(970731),
     R = n(187819),
-    P = n(210887),
+    j = n(210887),
     O = n(433355),
-    j = n(592125),
+    P = n(592125),
     D = n(819640),
     M = n(626135),
     w = n(647090),
@@ -56,7 +56,7 @@ function en() {
     let e = r.useRef(null),
         t = (0, V.q)(),
         n = (0, F.Z)(),
-        a = (0, G.K)(),
+        l = (0, G.K)(),
         c = (0, g.N)(),
         d = r.useCallback(() => {
             (0, u.showToast)((0, u.createToast)($.intl.string($.t.EDYbS0), u.ToastType.FAILURE));
@@ -78,18 +78,18 @@ function en() {
                     W.Z,
                     {
                         index: s,
-                        className: l()({
+                        className: a()({
                             [ee.selected]: null != p && p === d,
                             [ee.siblingSelected]: null != p && p === c
                         }),
                         channel: o.channel,
                         user: o.user,
-                        hasSingleMessageRequest: a
+                        hasSingleMessageRequest: l
                     },
                     d
                 );
             },
-            [a, n, p]
+            [l, n, p]
         ),
         I = r.useCallback(
             () =>
@@ -133,12 +133,12 @@ function en() {
               navigator: m,
               children: (0, i.jsx)(s.SJ, {
                   children: (t) => {
-                      let { ref: r, role: a, ...l } = t;
+                      let { ref: r, role: l, ...a } = t;
                       return (0, i.jsx)(
                           u.List,
                           {
                               className: ee.list,
-                              innerRole: a,
+                              innerRole: l,
                               innerAriaLabel: $.intl.string($.t.e7GWjY),
                               ref: (t) => {
                                   var n;
@@ -153,7 +153,7 @@ function en() {
                               sections: [n.length],
                               chunkSize: 30,
                               fade: !0,
-                              ...l
+                              ...a
                           },
                           'message-requests-list'
                       );
@@ -164,15 +164,15 @@ function en() {
 function ei(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         r = (0, c.e7)([O.ZP], () => O.ZP.getSidebarState(O.uZ)),
-        a = (0, c.e7)([j.Z], () => j.Z.getChannel(null == r ? void 0 : r.channelId));
-    if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
-    let l = t - X.R7I;
+        l = (0, c.e7)([P.Z], () => P.Z.getChannel(null == r ? void 0 : r.channelId));
+    if (null == r || r.type !== Z.tI.VIEW_MESSAGE_REQUEST || null == l || !l.isPrivate()) return null;
+    let a = t - X.R7I;
     return (0, i.jsx)(E.Z, {
         sidebarType: E.y.MessageRequestSidebar,
-        maxWidth: l,
+        maxWidth: a,
         onWidthChange: n,
         children: (0, i.jsx)(I.Z, {
-            channel: a,
+            channel: l,
             baseChannelId: O.uZ
         })
     });
@@ -190,11 +190,11 @@ let er = function (e) {
             headerClassName: ee.__invalid_header
         });
     },
-    ea = (e) => {
+    el = (e) => {
         let t = (0, U.Z)(),
             n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
-            a = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-            l = (0, R._p)({ location: 'message-request-coachmark' });
+            l = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+            a = (0, R._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
                 (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
@@ -215,7 +215,7 @@ let er = function (e) {
                                           secondaryButtonCTA: $.intl.string($.t.LNoAQU),
                                           className: ee.messageRequestCoachmark,
                                           onClick: (e) => {
-                                              e.stopPropagation(), l ? m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : m.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
+                                              e.stopPropagation(), a ? m.Z.open(X.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: J.to.MESSAGE_REQUESTS_V2 }) : m.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: J.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: o,
                                           caretPosition: L.DF.TOP_CENTER,
@@ -223,7 +223,7 @@ let er = function (e) {
                                       }),
                             position: 'bottom',
                             align: 'center',
-                            animation: a ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
+                            animation: l ? u.Popout.Animation.NONE : u.Popout.Animation.TRANSLATE,
                             shouldShow: !n(),
                             spacing: 16,
                             children: () => e.children
@@ -233,7 +233,7 @@ let er = function (e) {
             })
         );
     };
-function el(e) {
+function ea(e) {
     let { section: t } = e;
     return t === q.pS.SPAM ? (0, i.jsx)(K.Z, {}) : (0, i.jsx)(en, {});
 }
@@ -243,7 +243,7 @@ let es = (0, p.Z)(function (e) {
     r.useEffect(() => {
         h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), x.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let a = (0, c.e7)([P.Z], () => P.Z.theme),
+    let l = (0, c.e7)([j.Z], () => j.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
         p = (0, c.e7)([O.ZP], () => {
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, b.Kh)(g), A.Z.closeChannelSidebar(O.uZ));
+        null != g && !_ && E && f && ((0, A.Kh)(g), b.Z.closeChannelSidebar(O.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         S = (e) => {
@@ -266,13 +266,13 @@ let es = (0, p.Z)(function (e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: l()(et.chat, ee.container, {
+                    className: a()(et.chat, ee.container, {
                         [et.threadSidebarOpen]: f,
                         [et.threadSidebarFloating]: f && d
                     }),
                     children: [
                         (0, i.jsx)(u.ThemeProvider, {
-                            theme: a,
+                            theme: l,
                             children: (e) =>
                                 (0, i.jsxs)(T.Z, {
                                     className: e,
@@ -282,7 +282,7 @@ let es = (0, p.Z)(function (e) {
                                             icon: u.EnvelopeIcon,
                                             'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(ea, { children: (0, i.jsx)(T.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, i.jsx)(el, { children: (0, i.jsx)(T.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
                                         (0, i.jsx)(T.Z.Divider, {}),
                                         (0, i.jsxs)(u.TabBar, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
@@ -308,7 +308,7 @@ let es = (0, p.Z)(function (e) {
                         }),
                         (0, i.jsx)('div', {
                             className: et.content,
-                            children: (0, i.jsx)(el, { section: I })
+                            children: (0, i.jsx)(ea, { section: I })
                         })
                     ]
                 }),

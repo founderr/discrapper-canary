@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(546735),
-    a = n(754961),
-    l = n(837275);
+    l = n(754961),
+    a = n(837275);
 function s(e) {
     let { steps: t, progress: n, updateCurrentStep: s, animationStyle: o, animationClassName: c } = e,
         {
@@ -22,9 +22,9 @@ function s(e) {
         }),
         { currentStep: g, furthestStep: f, brandPrimaryColor: _ } = n;
     return (0, i.jsxs)('div', {
-        className: l.navigation,
+        className: a.navigation,
         children: [
-            (0, i.jsx)(a.T, {
+            (0, i.jsx)(l.T, {
                 animationStyle: o,
                 className: c,
                 steps: t,
@@ -33,7 +33,7 @@ function s(e) {
                 onStepClick: d,
                 stepFillColor: _
             }),
-            (0, i.jsx)(a.i, {
+            (0, i.jsx)(l.i, {
                 isBackDisabled: p,
                 isNextDisabled: m,
                 onNextClick: u,

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(392711),
     o = n(100621),
     c = n(442837),
@@ -32,25 +32,25 @@ let x = {
     friction: 60,
     clamp: !0
 };
-function b(e) {
+function A(e) {
     let { guildId: t, onClose: n } = e,
-        a = (0, g.Wg)(),
+        l = (0, g.Wg)(),
         {
-            progress: b,
-            errors: A,
+            progress: A,
+            errors: b,
             submitting: Z
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
             return {
-                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : a,
+                progress: null !== (r = null === (e = g.ZP.getStateForGuild(t)) || void 0 === e ? void 0 : e.progress) && void 0 !== r ? r : l,
                 errors: null === (n = g.ZP.getStateForGuild(t)) || void 0 === n ? void 0 : n.errors,
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        y = r.useMemo(() => (0, f.D)(A), [A]),
+        y = r.useMemo(() => (0, f.D)(b), [b]),
         [L, R] = r.useState(window.innerWidth),
-        P = Number(b.currentStep) >= S.IS.THANK_YOU_END,
-        [O, j] = r.useState(P ? 0 : 1),
+        j = Number(A.currentStep) >= S.IS.THANK_YOU_END,
+        [O, P] = r.useState(j ? 0 : 1),
         D = (0, _.f)(),
         M = (0, d.useSpring)(
             {
@@ -59,7 +59,7 @@ function b(e) {
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(P, {
+        w = (0, d.useTransition)(j, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -68,29 +68,29 @@ function b(e) {
         k = r.useCallback(
             (e) => {
                 var n;
-                e === y.length - 1 ? (j(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === O && j(1),
+                e === y.length - 1 ? (P(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === O && P(1),
                     m._9(t, {
                         currentStep: e,
-                        furthestStep: Math.max(null !== (n = b.furthestStep) && void 0 !== n ? n : 0, e)
+                        furthestStep: Math.max(null !== (n = A.furthestStep) && void 0 !== n ? n : 0, e)
                     });
             },
-            [O, t, b.furthestStep, y]
+            [O, t, A.furthestStep, y]
         );
     r.useEffect(() => {
         (0, p.Gx)({
             guildId: t,
-            signupPage: (0, f.F)(b.currentStep),
+            signupPage: (0, f.F)(A.currentStep),
             actionType: p.eI.NAVIGATE_STEP
         });
-    }, [t, b.currentStep]),
+    }, [t, A.currentStep]),
         r.useEffect(() => {
             let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [O, P]);
-    let U = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
-        G = r.useMemo(() => (null != A && Object.values(A).length > 0 ? (0, f.D)(A).find((e) => e.hasError) : null), [A]),
+        }, [O, j]);
+    let U = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
+        G = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, f.D)(b).find((e) => e.hasError) : null), [b]),
         B = r.useCallback(() => {
-            j(1), m._9(t, { currentStep: null == G ? void 0 : G.index });
+            P(1), m._9(t, { currentStep: null == G ? void 0 : G.index });
         }, [null == G ? void 0 : G.index, t]),
         H = r.useCallback(() => {
             (0, u.fH)(u.v0.ADMIN_UPSELL), (0, u.kw)();
@@ -99,8 +99,8 @@ function b(e) {
             H(), n();
         }, [H, n]),
         F = r.useCallback(() => {
-            P && H(), n();
-        }, [P, n, H]),
+            j && H(), n();
+        }, [j, n, H]),
         z = r.useRef(null),
         Y =
             null != G
@@ -162,40 +162,40 @@ function b(e) {
                             className: T.panel,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: l()(T.stepsContainer),
+                                    className: a()(T.stepsContainer),
                                     children: (0, i.jsx)(C.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: l()(T.navigationContainer, T.elevatedNavigationContainer),
+                                    className: a()(T.navigationContainer, T.elevatedNavigationContainer),
                                     children: (0, i.jsx)(I.Z, {
                                         guildId: t,
-                                        progress: b,
+                                        progress: A,
                                         updateCurrentStep: k,
-                                        animationClassName: l()({ [T.hidden]: P }),
+                                        animationClassName: a()({ [T.hidden]: j }),
                                         inSettings: !1
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            className: l()(T.divider, {
-                                [T.hidden]: P,
-                                [T.dividerResponsive]: !P
+                            className: a()(T.divider, {
+                                [T.hidden]: j,
+                                [T.dividerResponsive]: !j
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: M,
-                            className: l()(T.sidebar, {
-                                [T.sidebarResponsive]: !P,
-                                [T.sidebarHidden]: P
+                            className: a()(T.sidebar, {
+                                [T.sidebarResponsive]: !j,
+                                [T.sidebarHidden]: j
                             }),
                             children: (0, i.jsx)(v.Z, {
                                 guildId: t,
                                 signed: !1,
                                 setSigned: void 0,
-                                sidebarWidth: P ? 0 : 380,
+                                sidebarWidth: j ? 0 : 380,
                                 windowWidth: L,
-                                brandPrimaryColor: b.brandPrimaryColor
+                                brandPrimaryColor: A.brandPrimaryColor
                             })
                         })
                     ]
@@ -216,8 +216,8 @@ function b(e) {
                                 children: (e) =>
                                     (0, i.jsx)(E.Z, {
                                         ...e,
-                                        themeColor: b.brandPrimaryColor,
-                                        disabled: !P || U,
+                                        themeColor: A.brandPrimaryColor,
+                                        disabled: !j || U,
                                         submitting: Z,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

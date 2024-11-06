@@ -5,5 +5,5 @@ e.exports = {
     icon: 'icon_a5a007',
     body: 'body_a5a007',
     details: 'details_a5a007',
-    button: 'button_a5a007'
+    buttonContainer: 'buttonContainer_a5a007'
 };

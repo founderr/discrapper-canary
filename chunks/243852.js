@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r,
-    a,
     l,
+    a,
     s,
     o = n(442837),
     c = n(433517),
@@ -22,24 +22,24 @@ var i,
     N = n(981631);
 let T = 'ActivityTrackingStore',
     x = 30 * f.Z.Millis.MINUTE,
-    b = 5 * f.Z.Millis.MINUTE,
-    A = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
+    A = 5 * f.Z.Millis.MINUTE,
+    b = null !== (i = c.K.get(T)) && void 0 !== i ? i : {},
     Z = {},
     y = !1;
 function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     t && R(e, !0);
     let n = Z[e.applicationId];
-    null != n && (n.stop(), delete Z[e.applicationId]), delete A[e.applicationId], c.K.set(T, A);
+    null != n && (n.stop(), delete Z[e.applicationId]), delete b[e.applicationId], c.K.set(T, b);
 }
 function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
-    i > x + b && (i = 0);
+    i > x + A && (i = 0);
     let r = (0, _.OT)(e.applicationId, C.Z),
-        a = S.Z.getVoiceChannelId(),
-        l = E.default.getSessionId(),
+        l = S.Z.getVoiceChannelId(),
+        a = E.default.getSessionId(),
         s = v.Z.getMediaSessionId();
     h.Z.updateActivity({
         applicationId: e.applicationId,
@@ -49,15 +49,15 @@ function R(e) {
         duration: Math.floor(i / 1000),
         closed: t,
         exePath: e.exePath,
-        voiceChannelId: a,
-        sessionId: l,
+        voiceChannelId: l,
+        sessionId: a,
         mediaSessionId: s
     }),
         (e.updatedAt = n);
     let o = Z[e.applicationId];
-    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => R(e)), !t && ((A[e.applicationId] = e), c.K.set(T, A));
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => R(e)), !t && ((b[e.applicationId] = e), c.K.set(T, b));
 }
-function P() {
+function j() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
@@ -65,7 +65,7 @@ function P() {
         let t = I.Z.getGameByName(e);
         if (null != t)
             n.add(t.id),
-                !(t.id in A) &&
+                !(t.id in b) &&
                     R({
                         applicationId: t.id,
                         updatedAt: Date.now(),
@@ -73,35 +73,35 @@ function P() {
                         exePath: (0, m.N6)(null != r ? r : '')
                     });
     }
-    for (let t of Object.keys(A)) !n.has(t) && L(A[t], e);
+    for (let t of Object.keys(b)) !n.has(t) && L(b[t], e);
 }
 function O() {
-    for (let e of Object.keys(A)) L(A[e]);
+    for (let e of Object.keys(b)) L(b[e]);
     y = !1;
 }
-class j extends (r = o.ZP.Store) {
+class P extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], P);
+        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], j);
     }
     getActivities() {
-        return A;
+        return b;
     }
 }
 (s = 'ActivityTrackingStore'),
-    (l = 'displayName') in (a = j)
-        ? Object.defineProperty(a, l, {
+    (a = 'displayName') in (l = P)
+        ? Object.defineProperty(l, a, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[l] = s),
-    new j(u.Z, {
-        RUNNING_GAMES_CHANGE: () => P(),
+        : (l[a] = s),
+    new P(u.Z, {
+        RUNNING_GAMES_CHANGE: () => j(),
         CONNECTION_OPEN: function () {
             if (y) return !1;
-            for (let e of Object.keys(A)) R(A[e]);
-            P(!1), (y = !0);
+            for (let e of Object.keys(b)) R(b[e]);
+            j(!1), (y = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;
@@ -110,14 +110,14 @@ class j extends (r = o.ZP.Store) {
         LOGOUT: O,
         ACTIVITY_UPDATE_SUCCESS: function (e) {
             let { applicationId: t, token: n } = e,
-                i = A[t];
+                i = b[t];
             if (null == i) return !1;
-            (i.token = n), c.K.set(T, A);
+            (i.token = n), c.K.set(T, b);
         },
         ACTIVITY_UPDATE_FAIL: function (e) {
             let { applicationId: t } = e,
-                n = A[t];
+                n = b[t];
             if (null == n) return !1;
-            (n.token = null), (n.updatedAt = null), c.K.set(T, A);
+            (n.token = null), (n.updatedAt = null), c.K.set(T, b);
         }
     });

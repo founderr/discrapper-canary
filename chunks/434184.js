@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(194359),
+    l = n(481060),
+    a = n(194359),
     s = n(906732),
     o = n(171368),
     c = n(626135),
@@ -21,7 +21,7 @@ function f(e) {
         _ = r.useContext(c.AnalyticsContext),
         { analyticsLocations: E } = (0, s.ZP)(),
         I = (e) => {
-            e.stopPropagation(), l.Z.unblockUser(t.id, { location: 'Friends' });
+            e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
         };
     return (0, i.jsx)(
         u.Z,
@@ -45,7 +45,7 @@ function f(e) {
                             subText: p.intl.string(p.t['4bDptL'])
                         }),
                         (0, i.jsx)(d.Z, {
-                            icon: a.UserMinusIcon,
+                            icon: l.UserMinusIcon,
                             actionType: d.Z.ActionTypes.DENY,
                             tooltip: p.intl.string(p.t.XyHpKC),
                             onClick: I,

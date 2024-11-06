@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(392711),
-    l = n.n(a),
+    l = n(392711),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(493683),
@@ -34,20 +34,20 @@ function x(e, t, n) {
         e
     );
 }
-function b(e) {
+function A(e) {
     let { user: t, onSelect: n } = e,
         r = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        a = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
-        l = t.isProvisional;
+        l = (0, s.e7)([g.Z], () => g.Z.supports(S.AN.VIDEO)),
+        a = t.isProvisional;
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
         'aria-label': N.intl.string(N.t.liqwPD),
         onClose: d.Zy,
         onSelect: n,
         children: [
-            !l && a
+            !a && l
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
                       label: N.intl.string(N.t.oCqlGB),
@@ -56,7 +56,7 @@ function b(e) {
                       }
                   })
                 : null,
-            !l &&
+            !a &&
                 (0, i.jsx)(o.MenuItem, {
                     id: 'start-voice-call',
                     label: N.intl.string(N.t.focH1t),
@@ -87,7 +87,7 @@ function b(e) {
         ]
     });
 }
-class A extends r.PureComponent {
+class b extends r.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -95,7 +95,7 @@ class A extends r.PureComponent {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillEnter(e);
     }
     render() {
-        let { user: e, isFocused: t, activities: n, applicationStream: r, status: a, isMobile: l, giftIntentType: s } = this.props,
+        let { user: e, isFocused: t, activities: n, applicationStream: r, status: l, isMobile: a, giftIntentType: s } = this.props,
             { isActiveRow: c } = this.state;
         return (0, i.jsx)(E.Z, {
             ref: this.peopleListItemRef,
@@ -110,13 +110,13 @@ class A extends r.PureComponent {
                     children: [
                         (0, i.jsx)(C.Z, {
                             user: e,
-                            status: a,
-                            isMobile: l,
+                            status: l,
+                            isMobile: a,
                             subText: (0, i.jsx)(I.Z, {
                                 hovered: t,
                                 activities: n,
                                 applicationStream: r,
-                                status: a,
+                                status: l,
                                 user: e
                             }),
                             hovered: t,
@@ -157,7 +157,7 @@ class A extends r.PureComponent {
             x(this, 'handleOpenPrivateChannel', (e) => {
                 let { user: t } = this.props;
                 e.stopPropagation();
-                let n = l().find(p.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
+                let n = a().find(p.Z.getMutablePrivateChannels(), (e) => e.type === v.d4z.DM && e.getRecipientId() === t.id);
                 null != n ? (0, m.uL)(v.Z5c.CHANNEL(v.ME, n.id)) : c.Z.openPrivateChannel(t.id);
             }),
             x(this, 'handleOpenActionsMenu', (e) => {
@@ -165,7 +165,7 @@ class A extends r.PureComponent {
                 (0, d.vq)(
                     e,
                     (e) =>
-                        (0, i.jsx)(b, {
+                        (0, i.jsx)(A, {
                             ...e,
                             user: t
                         }),
@@ -179,4 +179,4 @@ class A extends r.PureComponent {
             });
     }
 }
-t.Z = A;
+t.Z = b;

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(748780),
     r = n(570140),
-    a = n(317770),
-    l = n(716578),
+    l = n(317770),
+    a = n(716578),
     s = n(928518);
 function o(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function o(e, t, n) {
         e
     );
 }
-class c extends a.Z {
+class c extends l.Z {
     _initialize() {
         s.Z.addChangeListener(this.handlePopoutWindowChange), r.Z.subscribe('WINDOW_FOCUS', this.handleMainWindowFocus);
     }
@@ -27,7 +27,7 @@ class c extends a.Z {
     injectWindowAnimationFrame(e) {
         let t = (t) => e.requestAnimationFrame(t),
             n = (t) => e.cancelAnimationFrame(t);
-        i.Z.inject.RequestAnimationFrame(t), i.Z.inject.CancelAnimationFrame(n), l.f.setRAF(t, n);
+        i.Z.inject.RequestAnimationFrame(t), i.Z.inject.CancelAnimationFrame(n), a.f.setRAF(t, n);
     }
     constructor(...e) {
         super(...e),

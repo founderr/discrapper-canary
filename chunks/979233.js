@@ -1,11 +1,11 @@
 n.d(t, {
     M: function () {
-        return a;
+        return l;
     }
 });
 var i = n(192379),
     r = n(660384);
-function a() {
+function l() {
     let e = i.useRef(new r.Z()),
         t = i.useCallback((t) => {
             e.current.handleScroll(t);

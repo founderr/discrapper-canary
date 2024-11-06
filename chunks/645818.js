@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(846519),
+    l = n(442837),
+    a = n(846519),
     s = n(481060),
     o = n(293245),
     c = n(863969),
@@ -73,22 +73,22 @@ class _ extends r.PureComponent {
     render() {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
             r = null == e ? { type: u.TzF.DONE } : e,
-            a = this.getIsRecentlySynced(),
-            l = {};
-        (g.has(r.type) || a) &&
-            (l.gradientConfig = {
+            l = this.getIsRecentlySynced(),
+            a = {};
+        (g.has(r.type) || l) &&
+            (a.gradientConfig = {
                 id: t.id,
                 startColor: 'rgba(199, 208, 240, 1)',
                 stopColor: 'rgba(114, 137, 218, 1)',
-                stop: this.getStop(r, a)
+                stop: this.getStop(r, l)
             });
-        let o = a ? p : f[r.type];
+        let o = l ? p : f[r.type];
         return (0, i.jsx)(s.Tooltip, {
-            text: this.getTooltip(r, a),
+            text: this.getTooltip(r, l),
             children: (e) =>
                 (0, i.jsx)(o, {
                     className: n,
-                    ...l,
+                    ...a,
                     ...e
                 })
         });
@@ -98,7 +98,7 @@ class _ extends r.PureComponent {
         super(...e),
             (t = this),
             (n = '_doneTimer'),
-            (i = new l.V7()),
+            (i = new a.V7()),
             n in t
                 ? Object.defineProperty(t, n, {
                       value: i,
@@ -109,7 +109,7 @@ class _ extends r.PureComponent {
                 : (t[n] = i);
     }
 }
-t.Z = a.ZP.connectStores([o.Z], (e) => {
+t.Z = l.ZP.connectStores([o.Z], (e) => {
     let { libraryApplication: t } = e;
     return { cloudSyncState: o.Z.getState(t.id, t.branchId) };
 })(_);

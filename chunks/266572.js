@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(544891),
-    a = n(846519),
-    l = n(481060),
+    l = n(846519),
+    a = n(481060),
     s = n(496929),
     o = n(115130),
     c = n(812206),
@@ -35,7 +35,7 @@ t.Z = {
                     })(t, e.id).then((e) => {
                         if (!e) throw new g.Z({ errorCode: _.lTL.INVALID_ENTITLEMENT }, 'User does not have entitlement.');
                     }),
-                    (0, a.GR)(E).then(() => {
+                    (0, l.GR)(E).then(() => {
                         throw new g.Z({ errorCode: _.lTL.INVALID_ENTITLEMENT }, 'Timed out fetching entitlement.');
                     })
                 ]);
@@ -43,7 +43,7 @@ t.Z = {
                 throw (
                     (e.code === _.lTL.INVALID_ENTITLEMENT &&
                         (p.ZP.focus(null, !0),
-                        (0, l.openModalLazy)(async () => {
+                        (0, a.openModalLazy)(async () => {
                             let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                             return (t) =>
                                 (0, i.jsx)(e, {
@@ -60,12 +60,12 @@ t.Z = {
         scope: f.lH,
         handler(e) {
             let { socket: t } = e,
-                a = t.application.id;
-            if (null == a) throw new g.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
+                l = t.application.id;
+            if (null == l) throw new g.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
             return r.tn
                 .post({
-                    url: _.ANM.ENTITLEMENT_TICKET(a),
-                    body: { test_mode: h.Z.inTestModeForApplication(a) || o.Z.inDevModeForApplication(a) },
+                    url: _.ANM.ENTITLEMENT_TICKET(l),
+                    body: { test_mode: h.Z.inTestModeForApplication(l) || o.Z.inDevModeForApplication(l) },
                     retries: 3,
                     oldFormErrors: !0
                 })
@@ -76,12 +76,12 @@ t.Z = {
                 .catch((e) => {
                     throw (
                         (p.ZP.focus(null, !0),
-                        (0, l.openModalLazy)(async () => {
+                        (0, a.openModalLazy)(async () => {
                             let { default: e } = await n.e('48748').then(n.bind(n, 52004));
                             return (t) =>
                                 (0, i.jsx)(e, {
                                     ...t,
-                                    applicationId: a
+                                    applicationId: l
                                 });
                         }),
                         e)

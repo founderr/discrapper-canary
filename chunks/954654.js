@@ -3,7 +3,7 @@ t.d(n, {
         return b;
     },
     xX: function () {
-        return v;
+        return C;
     }
 });
 var l = t(200651);
@@ -19,20 +19,20 @@ var i = t(120356),
     m = t(413991),
     f = t(12067),
     p = t(676149),
-    h = t(861529),
-    _ = t(770009),
-    x = t(889515),
-    C = t(915689);
-function v(e) {
+    x = t(861529),
+    h = t(770009),
+    v = t(889515),
+    _ = t(915689);
+function C(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case a.re.ACTION_ROW:
                     return (0, l.jsx)(
-                        x.Z,
+                        v.Z,
                         {
                             ...e,
-                            renderComponents: v
+                            renderComponents: C
                         },
                         n
                     );
@@ -49,13 +49,13 @@ function v(e) {
                 case a.re.INPUT_TEXT:
                     return (0, l.jsx)(m.Z, { ...e }, n);
                 case a.re.TEXT:
-                    return (0, l.jsx)(h.Z, { ...e }, n);
+                    return (0, l.jsx)(x.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, l.jsx)(f.Z, { ...e }, n);
                 case a.re.SEPARATOR:
                     return (0, l.jsx)(p.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(_.Z, { ...e }, n);
+                    return (0, l.jsx)(h.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
@@ -66,10 +66,10 @@ function b(e) {
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: r()([C.container, { [C.containerUikit]: n.isUIKitComponents() }]),
+              className: r()([_.container, { [_.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: v(t)
+                  children: C(t)
               })
           });
 }

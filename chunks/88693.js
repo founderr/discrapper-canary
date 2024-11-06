@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(49898),
-    a = n(25912);
-let l = 20 + r.U1 - r.Kl,
+    l = n(25912);
+let a = 20 + r.U1 - r.Kl,
     s = 20 + r.U1 + r.Kl;
 function o(e) {
     let { isSearchBarVisible: t, isSearchBarEmpty: n } = e,
@@ -21,7 +21,7 @@ function o(e) {
                         i < 20 && c(n ? r.WB.COLLAPSED : r.WB.FLOATING);
                         break;
                     case r.WB.COLLAPSED:
-                        i > l && c(r.WB.DEFAULT);
+                        i > a && c(r.WB.DEFAULT);
                         break;
                     case r.WB.FLOATING:
                         i > s && c(r.WB.DEFAULT);
@@ -35,7 +35,7 @@ function o(e) {
         h = i.useCallback(() => {
             o === r.WB.FLOATING && n && c(r.WB.COLLAPSED);
         }, [n, o]),
-        m = o === r.WB.FLOATING ? a.floatingSearchTabsMask : void 0;
+        m = o === r.WB.FLOATING ? l.floatingSearchTabsMask : void 0;
     return {
         searchBarState: o,
         onTabsAvailableWidthChange: d,

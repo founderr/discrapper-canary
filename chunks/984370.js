@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(100527),
     s = n(906732),
     c = n(174556),
-    d = n(320007),
-    u = n(540059),
+    u = n(320007),
+    d = n(540059),
     m = n(141321),
     h = n(2818),
     f = n(954551),
@@ -37,7 +37,7 @@ function b(e) {
     let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: g, mobileToolbar: _, 'aria-label': v, 'aria-labelledby': N, scrollable: b, role: A, hideSearch: j, showDivider: Z } = e,
         { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: P, inInbox: y } = h.Z.useExperiment({ location: 'HeaderBar' }),
-        L = (0, u.Q)('HeaderBar');
+        L = (0, d.Q)('HeaderBar');
     return (0, i.jsx)(C.ZP, {
         className: n,
         innerClassName: o,
@@ -47,7 +47,7 @@ function b(e) {
             return a.tq
                 ? _
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [g, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(C.ZP.Divider, {}), !L && (0, i.jsx)(x.Z, {}), (0, i.jsx)(d.Z, { canShowReminder: !0 }), !L && (0, i.jsx)(m.Z, {}), P && !y ? (0, i.jsx)(f.Z, {}) : null, !L && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(E.Z, {}))]
+                      children: [g, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(C.ZP.Divider, {}), !L && (0, i.jsx)(x.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !L && (0, i.jsx)(m.Z, {}), P && !y ? (0, i.jsx)(f.Z, {}) : null, !L && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(E.Z, {}))]
                   });
         })(),
         transparent: s,

@@ -5,12 +5,12 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(120356),
-    a = n.n(r),
-    l = n(481060),
+    l = n.n(r),
+    a = n(481060),
     s = n(392512);
 function o(e) {
-    let { items: t, onClose: n, onSelect: r, selected: a, ...o } = e;
-    return (0, i.jsx)(l.Menu, {
+    let { items: t, onClose: n, onSelect: r, selected: l, ...o } = e;
+    return (0, i.jsx)(a.Menu, {
         className: s.menu,
         navId: 'global-discovery-search-filter-options',
         'aria-label': o['aria-label'],
@@ -18,16 +18,16 @@ function o(e) {
         onClose: n,
         onSelect: n,
         children: (0, i.jsx)(
-            l.MenuGroup,
+            a.MenuGroup,
             {
                 children: t.map((e) => {
                     let { id: t, label: n } = e;
                     return (0, i.jsx)(
-                        l.MenuItem,
+                        a.MenuItem,
                         {
                             id: t,
                             label: n,
-                            icon: t === a ? l.CircleCheckIcon : void 0,
+                            icon: t === l ? a.CircleCheckIcon : void 0,
                             action: () => r(t)
                         },
                         t
@@ -40,7 +40,7 @@ function o(e) {
 }
 function c(e) {
     let { className: t, items: n, title: r, onSelect: c, selected: d, ...u } = e;
-    return (0, i.jsx)(l.Popout, {
+    return (0, i.jsx)(a.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, i.jsx)(o, {
@@ -57,21 +57,21 @@ function c(e) {
             let { isShown: o } = n;
             return (0, i.jsxs)('div', {
                 ...e,
-                className: a()(s.filter, t),
+                className: l()(s.filter, t),
                 children: [
-                    (0, i.jsx)(l.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'interactive-normal',
                         children: r
                     }),
                     o
-                        ? (0, i.jsx)(l.ChevronSmallUpIcon, {
+                        ? (0, i.jsx)(a.ChevronSmallUpIcon, {
                               size: 'xs',
-                              color: l.tokens.colors.INTERACTIVE_NORMAL
+                              color: a.tokens.colors.INTERACTIVE_NORMAL
                           })
-                        : (0, i.jsx)(l.ChevronSmallDownIcon, {
+                        : (0, i.jsx)(a.ChevronSmallDownIcon, {
                               size: 'xs',
-                              color: l.tokens.colors.INTERACTIVE_NORMAL
+                              color: a.tokens.colors.INTERACTIVE_NORMAL
                           })
                 ]
             });

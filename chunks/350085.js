@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(392711),
     r = n.n(i),
-    a = n(283595),
-    l = n(808506),
+    l = n(283595),
+    a = n(808506),
     s = n(237997),
     o = n(996106),
     c = n(186901),
@@ -22,11 +22,11 @@ let u = {
             if ('number' != typeof t || t < 10) throw new o.Z({ errorCode: d.lTL.INVALID_EVENT }, 'Invalid pid');
             return (e) => {
                 let { prevState: i, dispatch: o } = e,
-                    c = l.Z.enabled,
+                    c = a.Z.enabled,
                     d = !0,
                     u = n.application.id;
                 if (null != u) {
-                    let e = a.Z.getActiveLibraryApplication(u);
+                    let e = l.Z.getActiveLibraryApplication(u);
                     null != e && (c = c && e.isOverlayEnabled()), (d = s.Z.isLocked(t));
                 }
                 let h = {

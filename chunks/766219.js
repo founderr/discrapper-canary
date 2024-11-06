@@ -11,20 +11,20 @@ n.d(t, {
 });
 var i = n(963202),
     r = n(703656),
-    a = n(823379),
-    l = n(49898),
+    l = n(823379),
+    a = n(49898),
     s = n(981631),
     o = n(388032);
 function c(e) {
     switch (e) {
-        case l.F$.SERVERS:
+        case a.F$.SERVERS:
             return o.intl.string(o.t['+Anbp6']);
-        case l.F$.APPS:
+        case a.F$.APPS:
             return o.intl.string(o.t.bGwCoa);
-        case l.F$.QUESTS:
+        case a.F$.QUESTS:
             return o.intl.string(o.t.EcaD4e);
         default:
-            (0, a.vE)(e);
+            (0, l.vE)(e);
     }
 }
 function d() {
@@ -33,12 +33,12 @@ function d() {
 function u(e, t) {
     switch (e) {
         case '/discovery/quests':
-            return l.F$.QUESTS;
+            return a.F$.QUESTS;
         case '/discovery/applications':
-            return t ? l.F$.APPS : l.D7;
+            return t ? a.F$.APPS : a.D7;
         case '/discovery/servers':
-            return l.F$.SERVERS;
+            return a.F$.SERVERS;
         default:
-            return l.D7;
+            return a.D7;
     }
 }

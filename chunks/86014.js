@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(782690),
-    l = n(442837),
+    l = n(782690),
+    a = n(442837),
     s = n(481060),
     o = n(100527),
     c = n(970606),
@@ -22,34 +22,34 @@ var i = n(200651),
     N = n(702646),
     T = n(207796),
     x = n(782322),
-    b = n(895068),
-    A = n(308083),
+    A = n(895068),
+    b = n(308083),
     Z = n(388032),
     y = n(641388);
 function L(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n } = e,
-        { guilds: a } = (0, d.C3)({
+        { guilds: l } = (0, d.C3)({
             location: 'ClanDiscoveryContentCtaContent',
             includeConverted: !1
         }),
-        [l, m] = r.useState(() => {
+        [a, m] = r.useState(() => {
             var e;
             let t = new Set(u.ZP.getGuildIds());
-            for (let e of a) if (t.has(e.id)) return e.id;
-            return null === (e = a[0]) || void 0 === e ? void 0 : e.id;
+            for (let e of l) if (t.has(e.id)) return e.id;
+            return null === (e = l[0]) || void 0 === e ? void 0 : e.id;
         }),
         p = r.useMemo(
             () =>
-                a.map((e) => ({
+                l.map((e) => ({
                     value: e.id,
                     label: e.name
                 })),
-            [a]
+            [l]
         ),
-        g = n && a.length > 0,
+        g = n && l.length > 0,
         f = r.useCallback(() => {
             (0, c.aN)({
-                guildId: l,
+                guildId: a,
                 location: o.Z.GLOBAL_DISCOVERY
             }),
                 (0, I.q4)(
@@ -57,12 +57,12 @@ function L(e) {
                         let { closeLayer: t } = e;
                         return (0, i.jsx)(h.Z, {
                             onClose: t,
-                            guildId: l
+                            guildId: a
                         });
                     },
-                    { layerKey: A.Pv }
+                    { layerKey: b.Pv }
                 );
-        }, [l]),
+        }, [a]),
         _ = r.useMemo(
             () =>
                 t
@@ -91,13 +91,13 @@ function L(e) {
         ),
         E = r.useMemo(
             () =>
-                n && a.length > 0
+                n && l.length > 0
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              a.length > 0 &&
+                              l.length > 0 &&
                                   (0, i.jsx)(s.SearchableSelect, {
                                       className: y.upsellSelect,
-                                      value: l,
+                                      value: a,
                                       options: p,
                                       onChange: m
                                   }),
@@ -118,7 +118,7 @@ function L(e) {
                           ]
                       })
                     : null,
-            [n, a.length, p, l, f]
+            [n, l.length, p, a, f]
         );
     return (0, i.jsxs)('div', {
         className: y.contentCtaContainer,
@@ -127,37 +127,37 @@ function L(e) {
 }
 t.Z = r.memo(function (e) {
     let t,
-        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = b.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
-        { enabled: A } = (0, E.I7)(),
+        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = A.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
+        { enabled: b } = (0, E.I7)(),
         R = r.useRef(null),
-        P = r.useRef(null),
-        O = (0, T.GN)((e) => e.completedNux, a.Z),
-        j = (0, T.GN)((e) => e.entrypointGameId, a.Z),
+        j = r.useRef(null),
+        O = (0, T.GN)((e) => e.completedNux, l.Z),
+        P = (0, T.GN)((e) => e.entrypointGameId, l.Z),
         [D, M] = r.useState(null),
-        { backgroundImageUrl: w, gameName: k } = (0, S.kN)(j),
+        { backgroundImageUrl: w, gameName: k } = (0, S.kN)(P),
         U = r.useCallback(() => {
             var e, t, n;
-            if (!A) return;
+            if (!b) return;
             let i = null === (e = R.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
-                r = null !== (n = null === (t = P.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
+                r = null !== (n = null === (t = j.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && D !== i && M(i + r);
-        }, [D, A]);
+        }, [D, b]);
     r.useEffect(() => {
-        if (!A) return;
+        if (!b) return;
         let e = (0, C.pP)(U);
         return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-    }, [A, U]);
+    }, [b, U]);
     let G = r.useCallback(() => {
             var e, t;
-            A && null != D
-                ? null === (e = P.current) ||
+            b && null != D
+                ? null === (e = j.current) ||
                   void 0 === e ||
                   e.scrollTo({
                       to: D - 64,
                       animate: !1
                   })
-                : null === (t = P.current) || void 0 === t || t.scrollToTop();
-        }, [D, A]),
+                : null === (t = j.current) || void 0 === t || t.scrollToTop();
+        }, [D, b]),
         B = r.useMemo(
             () =>
                 (0, i.jsx)(L, {
@@ -166,7 +166,7 @@ t.Z = r.memo(function (e) {
                 }),
             [O, I]
         ),
-        H = (0, l.e7)([v.Z], () => v.Z.getSavedGuilds().length),
+        H = (0, a.e7)([v.Z], () => v.Z.getSavedGuilds().length),
         V = r.useMemo(
             () => [
                 {
@@ -181,7 +181,7 @@ t.Z = r.memo(function (e) {
             ],
             [H]
         ),
-        F = (0, T.GN)((e) => e.mode, a.Z),
+        F = (0, T.GN)((e) => e.mode, l.Z),
         { enableClanCreation: z } = (0, d.C3)({
             location: 'ClanDiscoveryContent',
             includeConverted: !0
@@ -190,7 +190,7 @@ t.Z = r.memo(function (e) {
         W = r.useMemo(() => !z || Y, [Y, z]);
     return (
         (t =
-            null != j && null != k
+            null != P && null != k
                 ? (0, i.jsxs)(p.Z, {
                       title: Z.intl.formatToPlainString(Z.t.kYjB7e, { gameName: k }),
                       description: Z.intl.format(Z.t.PwNiSE, { gameName: k }),
@@ -216,16 +216,16 @@ t.Z = r.memo(function (e) {
                           (0, i.jsx)('div', { className: y.imageBackdrop })
                       ]
                   })
-                : A
+                : b
                   ? (0, i.jsx)(x.Z, {})
                   : (0, i.jsx)(p.Z, {
-                        title: Z.intl.formatToPlainString(Z.t['l8D/Oz'], {}),
+                        title: Z.intl.format(Z.t['l8D/Oz'], {}),
                         description: O ? Z.intl.string(Z.t.JWBE0d) : Z.intl.string(Z.t['b+qgxc']),
                         button: B,
                         children: (0, i.jsx)(m.Z, {})
                     })),
         (0, i.jsxs)(_.Z, {
-            ref: P,
+            ref: j,
             onScroll: h,
             children: [
                 t,
@@ -244,7 +244,7 @@ t.Z = r.memo(function (e) {
                                     F !== T.v0.SAVED_GUILDS && (0, i.jsx)(N.C, {})
                                 ]
                             }),
-                        (0, i.jsx)(b.ZP, {
+                        (0, i.jsx)(A.ZP, {
                             width: n,
                             onUpdatePage: G,
                             paddingHorizontal: c,

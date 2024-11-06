@@ -1,13 +1,13 @@
 n.d(t, {
     r: function () {
-        return l;
+        return a;
     }
 });
 var i = n(817718),
     r = n(612226),
-    a = n(981631);
-let l = {
+    l = n(981631);
+let a = {
     ...r.oT,
-    [a.EkH.CAROUSEL_NEXT]: i.lI,
-    [a.EkH.CAROUSEL_PREV]: i.hd
+    [l.EkH.CAROUSEL_NEXT]: i.lI,
+    [l.EkH.CAROUSEL_PREV]: i.hd
 };

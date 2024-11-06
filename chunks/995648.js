@@ -7,8 +7,8 @@ var i = n(200651);
 n(192379);
 var a = n(120356),
     r = n.n(a),
-    o = n(481060),
-    l = n(422559),
+    l = n(481060),
+    o = n(422559),
     s = n(594045);
 function c(e) {
     let { grantedPermissions: t, disabledPermissions: n, grantedPermissionsHeader: a, disabledPermissionsHeader: c, className: d } = e;
@@ -19,7 +19,7 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != a
-                              ? (0, i.jsx)(o.Heading, {
+                              ? (0, i.jsx)(l.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     className: s.header,
@@ -34,14 +34,14 @@ function c(e) {
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, i.jsx)(o.CheckmarkLargeIcon, {
+                                              (0, i.jsx)(l.CheckmarkLargeIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: s.check
                                               }),
-                                              (0, i.jsx)(o.Text, {
+                                              (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, o.wt)(e)
                                               })
                                           ]
                                       },
@@ -56,7 +56,7 @@ function c(e) {
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != c
-                              ? (0, i.jsx)(o.Heading, {
+                              ? (0, i.jsx)(l.Heading, {
                                     variant: 'heading-sm/semibold',
                                     color: 'header-primary',
                                     className: s.header,
@@ -71,14 +71,14 @@ function c(e) {
                                       {
                                           className: s.permission,
                                           children: [
-                                              (0, i.jsx)(o.XSmallIcon, {
+                                              (0, i.jsx)(l.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: s.cross
                                               }),
-                                              (0, i.jsx)(o.Text, {
+                                              (0, i.jsx)(l.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: (0, l.wt)(e)
+                                                  children: (0, o.wt)(e)
                                               })
                                           ]
                                       },

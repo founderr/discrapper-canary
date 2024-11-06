@@ -1,9 +1,9 @@
 n.d(t, {
     L_: function () {
-        return a;
+        return l;
     },
     _6: function () {
-        return l;
+        return a;
     },
     ji: function () {
         return r;
@@ -19,13 +19,13 @@ function r(e) {
             stageId: n
         });
 }
-function a(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'UPCOMING_GUILD_EVENT_NOTICE_HIDE',
         eventId: e
     });
 }
-function l(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'UPCOMING_GUILD_EVENT_NOTICE_SEEN',
         guildEventId: e

@@ -1,8 +1,8 @@
 var i = n(544891),
     r = n(570140),
-    a = n(960048);
+    l = n(960048);
 n(109911);
-var l = n(715035),
+var a = n(715035),
     s = n(207205),
     o = n(981631);
 t.Z = {
@@ -27,29 +27,29 @@ t.Z = {
                 !0
             );
         } catch (e) {
-            a.Z.captureException(e);
+            l.Z.captureException(e);
         }
         return !1;
     },
     async fetchDehydrated() {
         let { isReloading: e, forceRefresh: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (!(0, s.rK)('fetchDehydrated')) return;
-        let n = l.Z.negativeContentOnly();
+        let n = a.Z.negativeContentOnly();
         try {
-            let a = Date.now(),
-                l = await i.tn.get({
+            let l = Date.now(),
+                a = await i.tn.get({
                     url: n ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED,
                     query: { refresh: t }
                 });
             await r.Z.dispatch({
                 type: 'LOAD_GRAVITY_DEHYDRATED',
-                items: l.body.items,
-                loadId: l.body.load_id,
-                startTime: a,
+                items: a.body.items,
+                loadId: a.body.load_id,
+                startTime: l,
                 isReloading: e
             });
         } catch (e) {
-            a.Z.captureException(e);
+            l.Z.captureException(e);
         }
     },
     async gravityJoinGuild(e, t) {
@@ -66,7 +66,7 @@ t.Z = {
                     !0
                 );
             } catch (e) {
-                return a.Z.captureException(e), !1;
+                return l.Z.captureException(e), !1;
             }
     },
     setGravitySelectedChannel(e) {
@@ -97,10 +97,10 @@ t.Z = {
                     messageItem: n.body.message_items[0]
                 });
             } catch (e) {
-                a.Z.captureException(e);
+                l.Z.captureException(e);
             }
     },
-    async fetchHydrated(e, t, n, l, c) {
+    async fetchHydrated(e, t, n, a, c) {
         if (!!(0, s.rK)('fetchHydrated')) {
             if (0 === e.length && 0 === t.length && 0 === n.length) {
                 r.Z.dispatch({
@@ -111,13 +111,13 @@ t.Z = {
                     messageItems: [],
                     summaryItems: [],
                     activityItems: [],
-                    startingIndex: l,
+                    startingIndex: a,
                     endingIndex: c
                 });
                 return;
             }
             try {
-                let a = await i.tn.post({
+                let l = await i.tn.post({
                     url: o.ANM.GRAVITY_ITEMS_HYDRATE,
                     body: {
                         message_items: e,
@@ -130,14 +130,14 @@ t.Z = {
                     requestMessageItems: e,
                     requestSummaryItems: t,
                     requestActivityItems: n,
-                    messageItems: a.body.message_items,
-                    summaryItems: a.body.summary_items,
-                    activityItems: a.body.activity_items,
-                    startingIndex: l,
+                    messageItems: l.body.message_items,
+                    summaryItems: l.body.summary_items,
+                    activityItems: l.body.activity_items,
+                    startingIndex: a,
                     endingIndex: c
                 });
             } catch (e) {
-                a.Z.captureException(e);
+                l.Z.captureException(e);
             }
         }
     },
@@ -150,7 +150,7 @@ t.Z = {
                     scores: e.body
                 });
             } catch (e) {
-                a.Z.captureException(e);
+                l.Z.captureException(e);
             }
     },
     async getRecommendedGuilds() {
@@ -162,7 +162,7 @@ t.Z = {
                     guilds: e.body.guilds
                 });
             } catch (e) {
-                a.Z.captureException(e);
+                l.Z.captureException(e);
             }
     },
     reloadICYMITab() {

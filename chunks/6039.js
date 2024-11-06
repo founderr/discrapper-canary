@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(568154),
     o = n(703656),
     c = n(430824),
@@ -23,12 +23,12 @@ var i = n(200651),
 t.Z = (e) => {
     var t;
     let n, T;
-    let { guildId: x, inviteCode: b } = e,
-        [A, Z] = r.useState(v.hO.INITIAL),
-        y = (0, a.e7)([p.Z], () => p.Z.get(x)),
-        L = (0, a.e7)([f.Z], () => f.Z.getRequest(x)),
-        R = (0, a.e7)([c.Z], () => c.Z.getGuild(x)),
-        { hasFetchedRequestToJoinGuilds: P, guildPreviewDisabled: O } = (0, a.cj)([f.Z], () => ({
+    let { guildId: x, inviteCode: A } = e,
+        [b, Z] = r.useState(v.hO.INITIAL),
+        y = (0, l.e7)([p.Z], () => p.Z.get(x)),
+        L = (0, l.e7)([f.Z], () => f.Z.getRequest(x)),
+        R = (0, l.e7)([c.Z], () => c.Z.getGuild(x)),
+        { hasFetchedRequestToJoinGuilds: j, guildPreviewDisabled: O } = (0, l.cj)([f.Z], () => ({
             hasFetchedRequestToJoinGuilds: f.Z.hasFetchedRequestToJoinGuilds,
             guildPreviewDisabled: f.Z.getJoinRequestGuild(x)
         }));
@@ -36,9 +36,9 @@ t.Z = (e) => {
         null != R && (0, o.uL)(C.Z5c.CHANNEL(x));
     }, [R, x]),
         r.useEffect(() => {
-            !P && h.Z.fetchRequestToJoinGuilds();
-        }, [P]);
-    let j = r.useCallback((e) => {
+            !j && h.Z.fetchRequestToJoinGuilds();
+        }, [j]);
+    let P = r.useCallback((e) => {
             Z((t) => Math.max(t, e));
         }, []),
         D = async (e) => {
@@ -50,18 +50,18 @@ t.Z = (e) => {
     let w =
             ((n = S.intl.format(S.t['9ZezpK'], { name: null == O ? void 0 : O.toString() })),
             (T = () => {
-                Z(Math.max(A, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
+                Z(Math.max(b, v.hO.FILLING)), h.Z.removeGuildJoinRequest(x), (0, o.uL)(C.Z5c.ME);
             }),
             () => {
-                (0, l.openModal)((e) =>
-                    (0, i.jsx)(l.ConfirmModal, {
+                (0, a.openModal)((e) =>
+                    (0, i.jsx)(a.ConfirmModal, {
                         header: S.intl.string(S.t.y0CVen),
                         cancelText: S.intl.string(S.t.oEAioK),
                         onConfirm: T,
                         confirmText: S.intl.string(S.t.p89ACg),
-                        confirmButtonColor: l.Button.Colors.RED,
+                        confirmButtonColor: a.Button.Colors.RED,
                         ...e,
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             children: n
@@ -81,9 +81,9 @@ t.Z = (e) => {
         children: (0, i.jsxs)(s.Z, {
             embedded: !0,
             splash: k,
-            waveState: A,
+            waveState: b,
             showLogo: !1,
-            updateWaveState: j,
+            updateWaveState: P,
             children: [
                 (0, i.jsx)('div', { className: N.dragRegion }),
                 (0, i.jsx)('div', {
@@ -107,7 +107,7 @@ t.Z = (e) => {
                             default:
                                 return (0, i.jsx)(I.Z, {
                                     guildId: x,
-                                    inviteCode: b,
+                                    inviteCode: A,
                                     onComplete: D,
                                     disableVerification: !0
                                 });

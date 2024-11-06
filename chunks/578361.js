@@ -6,9 +6,9 @@ n.d(t, {
 var i,
     a,
     r = n(200651),
-    o = n(192379),
-    l = n(120356),
-    s = n.n(l),
+    l = n(192379),
+    o = n(120356),
+    s = n.n(o),
     c = n(748780),
     d = n(215569),
     u = n(189682);
@@ -18,7 +18,7 @@ let p = {
     tension: 40,
     clamp: !0
 };
-class m extends o.PureComponent {
+class m extends l.PureComponent {
     componentWillEnter(e) {
         this._animated.setValue(-this.props.direction),
             c.Z.spring(this._animated, {
@@ -79,7 +79,7 @@ class m extends o.PureComponent {
     }
 }
 t.Z = (e) => {
-    let { children: t, step: n, direction: i, className: a, springSettings: o = p, fadeInOut: l = !1 } = e;
+    let { children: t, step: n, direction: i, className: a, springSettings: l = p, fadeInOut: o = !1 } = e;
     return (0, r.jsx)(d.W, {
         component: 'div',
         className: s()(u.animator, a),
@@ -87,8 +87,8 @@ t.Z = (e) => {
             m,
             {
                 direction: i,
-                springSettings: o,
-                fadeInOut: l,
+                springSettings: l,
+                fadeInOut: o,
                 children: t
             },
             n

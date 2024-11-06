@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(570140),
     r = n(317770),
-    a = n(314897),
-    l = n(131951);
+    l = n(314897),
+    a = n(131951);
 function s(e, t, n) {
     return (
         t in e
@@ -35,15 +35,15 @@ class o extends r.Z {
             }),
             s(this, '_stopAndClearSounds', () => {}),
             s(this, '_handleToggleSelfDeafened', () => {
-                l.Z.isDeaf() && this._stopAndClearSounds();
+                a.Z.isDeaf() && this._stopAndClearSounds();
             }),
             s(this, '_handleSoundboardSoundReceived', (e) => {
                 let { soundId: t, soundVolume: n, userId: i, channelId: r } = e;
-                if (null != t && i !== a.default.getId()) return this._playSound(t, n, i, r);
+                if (null != t && i !== l.default.getId()) return this._playSound(t, n, i, r);
             }),
             s(this, '_handleSoundboardSoundPlayLocally', (e) => {
                 let { sound: t, channelId: n } = e,
-                    i = a.default.getId();
+                    i = l.default.getId();
                 return this._playSound(t.soundId, t.volume, i, n);
             }),
             s(this, '_handleVoiceChannelSelect', () => {

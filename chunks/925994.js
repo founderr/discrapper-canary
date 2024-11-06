@@ -129,7 +129,7 @@ function g(e, t) {
             return (0, a.F6)(r, f.default, c.Z, !0, !0);
         }
         case 'soundboard': {
-            let t = '<sound:'.concat(e.soundId, '>');
+            let t = '<sound:'.concat(e.guildId, ':').concat(e.soundId, '>');
             if ('raw' === n) return t;
             let r = o.Z.getSoundById(e.soundId);
             if (null == r) return t;

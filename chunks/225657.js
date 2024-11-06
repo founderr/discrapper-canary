@@ -6,8 +6,8 @@ var r = n(442837),
     o = n(987209),
     s = n(699516),
     c = n(594174),
-    d = n(51144),
-    u = n(388032);
+    u = n(51144),
+    d = n(388032);
 t.Z = (e) => {
     let { selectedSkuId: t, validateSelectedGift: n, className: m } = e,
         h = (0, r.Wu)([s.Z], () => s.Z.getFriendIDs()),
@@ -18,9 +18,9 @@ t.Z = (e) => {
         : (0, i.jsxs)('div', {
               className: m,
               children: [
-                  (0, i.jsx)(l.FormTitle, { children: u.intl.string(u.t.xFn72t) }),
+                  (0, i.jsx)(l.FormTitle, { children: d.intl.string(d.t.xFn72t) }),
                   (0, i.jsx)(l.SearchableSelect, {
-                      placeholder: u.intl.string(u.t.R0vK0N),
+                      placeholder: d.intl.string(d.t.R0vK0N),
                       renderOptionPrefix: (e) =>
                           (null == e ? void 0 : e.value) == null
                               ? null
@@ -34,7 +34,7 @@ t.Z = (e) => {
                       },
                       options: f.map((e) => ({
                           value: e,
-                          label: ''.concat(d.ZP.getUserTag(e))
+                          label: ''.concat(u.ZP.getUserTag(e))
                       }))
                   })
               ]

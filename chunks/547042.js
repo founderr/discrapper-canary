@@ -8,8 +8,8 @@ n.d(t, {
 });
 var i,
     r,
-    a = n(200651),
-    l = n(192379),
+    l = n(200651),
+    a = n(192379),
     s = n(442837),
     o = n(481060),
     c = n(40851),
@@ -34,8 +34,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 analyticsType: N,
                 ctaText: T,
                 dismissText: x,
-                description: b,
-                learnMore: A,
+                description: A,
+                learnMore: b,
                 title: Z,
                 videoPosterUrl: y,
                 videoUrl: L,
@@ -104,22 +104,22 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: P } = (0, m.ZP)(r);
-        l.useEffect(() => {
+            { analyticsLocations: j } = (0, m.ZP)(r);
+        a.useEffect(() => {
             f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
         let O = (0, c.bp)() === _.IlC.POPOUT,
-            j = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
-        return (0, a.jsx)(m.Gt, {
-            value: P,
-            children: (0, a.jsx)('div', {
+            P = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
+        return (0, l.jsx)(m.Gt, {
+            value: j,
+            children: (0, l.jsx)('div', {
                 className: C.wrapper,
-                children: (0, a.jsx)('div', {
+                children: (0, l.jsx)('div', {
                     className: C.container,
-                    children: (0, a.jsxs)('div', {
+                    children: (0, l.jsxs)('div', {
                         className: C.content,
                         children: [
-                            (0, a.jsx)(p.Z, {
+                            (0, l.jsx)(p.Z, {
                                 className: C.video,
                                 src: L,
                                 poster: y,
@@ -129,26 +129,26 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                 muted: !0,
                                 autoPlay: !0
                             }),
-                            (0, a.jsx)('div', {
+                            (0, l.jsx)('div', {
                                 className: C.header,
-                                children: (0, a.jsx)(o.Heading, {
+                                children: (0, l.jsx)(o.Heading, {
                                     className: C.__invalid_headerText,
                                     variant: 'text-sm/bold',
                                     color: 'always-white',
                                     children: Z
                                 })
                             }),
-                            (0, a.jsxs)(o.Text, {
+                            (0, l.jsxs)(o.Text, {
                                 className: C.subheaderText,
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
                                 children: [
-                                    b,
-                                    A
-                                        ? (0, a.jsxs)(a.Fragment, {
+                                    A,
+                                    b
+                                        ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   ' ',
-                                                  (0, a.jsx)(o.Anchor, {
+                                                  (0, l.jsx)(o.Anchor, {
                                                       className: C.learnMoreLink,
                                                       href: 'https://support.discord.com/hc/articles/4422142836759',
                                                       children: I.intl.string(I.t.hvVgAQ)
@@ -158,26 +158,26 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                         : null
                                 ]
                             }),
-                            (0, a.jsxs)('div', {
+                            (0, l.jsxs)('div', {
                                 className: C.ctaActionWrapper,
                                 children: [
-                                    (0, a.jsx)(o.Button, {
+                                    (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND,
                                         onClick: () => {
                                             n(E.L.UNKNOWN);
                                         },
                                         children: x
                                     }),
-                                    (0, a.jsx)(o.Button, {
+                                    (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
                                         onClick:
                                             null != R
                                                 ? R
                                                 : () => {
-                                                      if ((n(E.L.UNKNOWN), null != j))
+                                                      if ((n(E.L.UNKNOWN), null != P))
                                                           (0, u.Z)({
-                                                              channel: j.isGuildVoice() ? j : void 0,
-                                                              guildId: j.guild_id,
+                                                              channel: P.isGuildVoice() ? P : void 0,
+                                                              guildId: P.guild_id,
                                                               locationObject: {
                                                                   page: _.ZY5.GUILD_CHANNEL,
                                                                   section: _.jXE.GUILD_CHANNEL_LIST,
@@ -185,10 +185,10 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
                                                               openInPopout: O,
-                                                              analyticsLocations: P,
+                                                              analyticsLocations: j,
                                                               opensAppLauncherModal: !0
                                                           }),
-                                                              (0, d.w1)({ guildId: j.guild_id });
+                                                              (0, d.w1)({ guildId: P.guild_id });
                                                   },
                                         children: T
                                     })

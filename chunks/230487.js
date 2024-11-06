@@ -6,15 +6,15 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    a = n(740492),
-    l = n(626135),
+    l = n(740492),
+    a = n(626135),
     s = n(358085),
     o = n(998502),
     c = n(258220),
     d = n(981631);
 let u = 'activity-hardware-acceleration-modal';
 function h(e) {
-    !a.ZP.disableActivityHardwareAccelerationPrompt &&
+    !l.ZP.disableActivityHardwareAccelerationPrompt &&
         s.isPlatformEmbedded &&
         !o.ZP.getEnableHardwareAcceleration() &&
         (0, r.openModalLazy)(
@@ -29,7 +29,7 @@ function h(e) {
             {
                 modalKey: u,
                 onCloseRequest: () => {
-                    l.default.track(d.rMx.MODAL_DISMISSED, { type: c.ACTIVITY_ENCOURAGES_HW_ACCELERATION }), (0, r.closeModal)(u);
+                    a.default.track(d.rMx.MODAL_DISMISSED, { type: c.ACTIVITY_ENCOURAGES_HW_ACCELERATION }), (0, r.closeModal)(u);
                 }
             }
         );

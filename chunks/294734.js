@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(902704),
     s = n(692547),
     c = n(481060),
-    d = n(356264),
-    u = n(628238),
+    u = n(356264),
+    d = n(628238),
     m = n(930282),
     h = n(25015),
     f = n(438075),
@@ -47,9 +47,9 @@ function j() {
     });
 }
 function Z(e) {
-    let { message: t, snapshot: n, index: u } = e,
-        m = r.useMemo(() => new v.r(t, n, u), [t, n, u]),
-        h = (0, a.e7)([g.Z, x.default, I.Z, E.Z, C.Z, d.Z], () => m.getForwardInfo(g.Z, x.default, I.Z, E.Z, C.Z, d.Z).footerInfo, [m], o.Z),
+    let { message: t, snapshot: n, index: d } = e,
+        m = r.useMemo(() => new v.r(t, n, d), [t, n, d]),
+        h = (0, a.e7)([g.Z, x.default, I.Z, E.Z, C.Z, u.Z], () => m.getForwardInfo(g.Z, x.default, I.Z, E.Z, C.Z, u.Z).footerInfo, [m], o.Z),
         f = r.useCallback(() => {
             (0, N.Z)(t);
         }, [t]);
@@ -84,11 +84,11 @@ function R(e) {
     let { message: n, snapshot: l, index: o } = e,
         s = r.useMemo(() => (0, T.Z)(n, l), [n, l]),
         c = p.RS.useSetting(),
-        d = p.NA.useSetting(),
+        u = p.NA.useSetting(),
         C = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
-        E = (0, u.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
+        E = (0, d.A)((null !== (t = s.editedTimestamp) && void 0 !== t ? t : s.timestamp).valueOf()),
         { content: I, hasSpoilerEmbeds: x } = (0, h.Z)(s, {
-            hideSimpleEmbedContent: c && d,
+            hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
             allowList: E,

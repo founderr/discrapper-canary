@@ -1,8 +1,8 @@
 n(47120), n(773603);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(447543),
+    l = n(442837),
+    a = n(447543),
     s = n(568154),
     o = n(703656),
     c = n(430824),
@@ -17,10 +17,10 @@ t.Z = (e) => {
         [f, _] = r.useState(p.hO.INITIAL),
         [E, I] = r.useState(null != n);
     r.useEffect(() => {
-        null != n && l.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
+        null != n && a.Z.resolveInvite(n, 'Hub').finally(() => I(!1));
     }, [n]);
-    let C = (0, a.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
-        v = (0, a.e7)([c.Z], () => c.Z.getGuild(t));
+    let C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
+        v = (0, l.e7)([c.Z], () => c.Z.getGuild(t));
     r.useEffect(() => {
         null != v && (0, o.uL)(m.Z5c.CHANNEL(t));
     }, [v, t]);

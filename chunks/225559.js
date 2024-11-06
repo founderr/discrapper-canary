@@ -3,13 +3,13 @@ n.d(t, {
         return r;
     },
     v: function () {
-        return a;
+        return l;
     }
 });
 var i = n(570140);
 function r() {
     i.Z.dispatch({ type: 'NOW_PLAYING_MOUNTED' });
 }
-function a() {
+function l() {
     i.Z.dispatch({ type: 'NOW_PLAYING_UNMOUNTED' });
 }

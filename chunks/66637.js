@@ -1,18 +1,18 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(481060),
     o = n(686907);
 t.Z = r.memo(function (e) {
-    let { onClick: t, onContextMenu: n, className: r, disabled: a, children: c } = e;
+    let { onClick: t, onContextMenu: n, className: r, disabled: l, children: c } = e;
     return (0, i.jsx)(s.Clickable, {
-        className: l()(o.card, r, {
+        className: a()(o.card, r, {
             [o.clickable]: null != t,
-            [o.disabled]: a
+            [o.disabled]: l
         }),
         onContextMenu: n,
-        onClick: a ? void 0 : t,
+        onClick: l ? void 0 : t,
         children: c
     });
 });

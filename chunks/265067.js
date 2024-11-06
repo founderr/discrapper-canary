@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(243814),
     r = n(100527),
-    a = n(208049),
-    l = n(763296),
+    l = n(208049),
+    a = n(763296),
     s = n(697426),
     o = n(242291),
     c = n(641015),
@@ -18,8 +18,8 @@ t.Z = {
             [p.Gp.ANY]: [i.x.RPC, p.lH]
         },
         async handler() {
-            await (0, a.w)();
-            let e = l.Z.getSounds(),
+            await (0, l.w)();
+            let e = a.Z.getSounds(),
                 t = [];
             return e.forEach((e) => e.forEach((e) => t.push((0, s.QL)(e)))), t;
         }
@@ -37,9 +37,9 @@ t.Z = {
             let {
                 args: { guild_id: t, sound_id: n }
             } = e;
-            await (0, a.w)();
+            await (0, l.w)();
             let i = d.default.getCurrentUser(),
-                s = l.Z.getSound(t, n),
+                s = a.Z.getSound(t, n),
                 h = (0, m.Z)(),
                 p = null != s && null != i && (0, o.Nq)(i, s, h);
             if (null == h) throw new u.Z({ errorCode: g.lT.INVALID_CHANNEL }, 'Invalid Channel.');

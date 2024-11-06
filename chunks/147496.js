@@ -1,57 +1,57 @@
-t.r(e),
-    t.d(e, {
+n.r(t),
+    n.d(t, {
         ItemDetailsModal: function () {
-            return x;
+            return g;
         }
     });
-var l = t(200651);
-t(192379);
-var i = t(752843),
-    r = t(442837),
-    o = t(481060),
-    a = t(55563),
-    s = t(551428),
-    u = t(73346),
-    c = t(591759),
-    d = t(110742),
-    p = t(886253),
-    f = t(680005),
-    v = t(938337),
-    m = t(981631),
-    h = t(388032);
-function x(n) {
-    var e, t, x, S;
-    let { onClose: I, transitionState: g, skuId: Z, appId: T, onHeaderTitleClick: N } = n,
-        b = (0, r.e7)([s.Z], () => s.Z.getForSKU(Z), [Z]),
-        j = (0, r.e7)([a.Z], () => a.Z.get(Z), [Z]),
-        E = (0, d.M)(Z);
+var i = n(200651);
+n(192379);
+var a = n(752843),
+    r = n(442837),
+    l = n(481060),
+    o = n(55563),
+    s = n(551428),
+    c = n(73346),
+    d = n(591759),
+    u = n(110742),
+    p = n(886253),
+    m = n(680005),
+    _ = n(938337),
+    h = n(981631),
+    f = n(388032);
+function g(e) {
+    var t, n, g, v;
+    let { onClose: x, transitionState: I, skuId: C, appId: N, onHeaderTitleClick: b } = e,
+        S = (0, r.e7)([s.Z], () => s.Z.getForSKU(C), [C]),
+        j = (0, r.e7)([o.Z], () => o.Z.get(C), [C]),
+        T = (0, u.M)(C);
     if (null == j) return null;
-    let C = null !== (t = j.name) && void 0 !== t ? t : '',
-        k = null !== (x = null == b ? void 0 : null === (e = b.description) || void 0 === e ? void 0 : e.trim()) && void 0 !== x ? x : void 0,
-        R = (null == b ? void 0 : b.headerBackground) != null && null !== (S = c.Z.toURLSafe((0, u._W)(T, b.headerBackground, 256))) && void 0 !== S ? S : void 0,
-        _ = j.type === m.epS.DURABLE && E,
-        O = j.type === m.epS.DURABLE ? (_ ? h.intl.string(h.t.bm82mp) : h.intl.string(h.t['6gprwc'])) : void 0,
-        { price: P } = j;
-    return null == P
+    let y = null !== (n = j.name) && void 0 !== n ? n : '',
+        E = null !== (g = null == S ? void 0 : null === (t = S.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== g ? g : void 0,
+        A = (null == S ? void 0 : S.headerBackground) != null && null !== (v = d.Z.toURLSafe((0, c._W)(N, S.headerBackground, 256))) && void 0 !== v ? v : void 0,
+        P = j.type === h.epS.DURABLE && T,
+        L = j.type === h.epS.DURABLE ? (P ? f.intl.string(f.t.bm82mp) : f.intl.string(f.t['6gprwc'])) : void 0,
+        { price: R } = j;
+    return null == R
         ? null
-        : (0, l.jsx)(p.A, {
-              appId: T,
+        : (0, i.jsx)(p.A, {
+              appId: N,
               skuId: j.id,
-              transitionState: g,
-              onHeaderTitleClick: null != N ? N : I,
-              onClose: I,
-              footer: (0, l.jsx)(f.Y, {
-                  appId: T,
+              transitionState: I,
+              onHeaderTitleClick: null != b ? b : x,
+              onClose: x,
+              footer: (0, i.jsx)(m.Y, {
+                  appId: N,
                   sku: j
               }),
-              children: (0, l.jsx)(v.i, {
-                  appId: T,
+              children: (0, i.jsx)(_.i, {
+                  appId: N,
                   skuId: j.id,
-                  title: C,
-                  description: k,
-                  imgSrc: R,
-                  tag: null != O ? (0, l.jsx)(i.V, { text: O }) : void 0,
-                  FallbackIcon: o.TicketIcon
+                  title: y,
+                  description: E,
+                  imgSrc: A,
+                  tag: null != L ? (0, i.jsx)(a.V, { text: L }) : void 0,
+                  FallbackIcon: l.TicketIcon
               })
           });
 }

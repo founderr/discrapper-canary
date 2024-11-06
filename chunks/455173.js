@@ -1,21 +1,21 @@
 var i,
     r,
-    a,
     l,
+    a,
     s = n(442837),
     o = n(570140),
     c = n(292556),
     d = n(812206);
-class u extends (l = s.ZP.Store) {}
-(a = 'UserAchievementStore'),
+class u extends (a = s.ZP.Store) {}
+(l = 'UserAchievementStore'),
     (r = 'displayName') in (i = u)
         ? Object.defineProperty(i, r, {
-              value: a,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = a);
+        : (i[r] = l);
 new u(o.Z, {
     USER_ACHIEVEMENT_UPDATE: function (e) {
         let { userAchievement: t } = e,

@@ -2,8 +2,8 @@ n(47120);
 var i = n(200651);
 n(192379);
 var r = n(873546),
-    a = n(704215),
-    l = n(481060),
+    l = n(704215),
+    a = n(481060),
     s = n(570140),
     o = n(317770),
     c = n(605236),
@@ -35,7 +35,7 @@ function T(e, t, n) {
     );
 }
 let x = 'PremiumServerDriveAnnouncementModal';
-class b extends o.Z {
+class A extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -52,8 +52,8 @@ class b extends o.Z {
                 if (null != r)
                     return (
                         !!(!1 !== t || (null == r ? void 0 : r.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
-                        ((0, l.closeModal)(x),
-                        (0, l.openModalLazy)(
+                        ((0, a.closeModal)(x),
+                        (0, a.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
                                 return (t) =>
@@ -87,18 +87,18 @@ class b extends o.Z {
                 if ((await (0, I.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
-                    n = (0, c.un)(a.z.REVERSE_TRIAL_ENDED_UPSELL),
+                    n = (0, c.un)(l.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
-                if (t && !n && !(0, l.hasAnyModalOpen)() && !(0, h.I5)(i)) {
+                if (t && !n && !(0, a.hasAnyModalOpen)() && !(0, h.I5)(i)) {
                     let t = await (0, C.r)(e.userTrialOffer);
                     null != t && (0, v.Z)({ upsellType: t });
                 }
                 if (null == i || !!i.verified) {
-                    if (!(0, l.hasAnyModalOpen)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !r.tq) {
+                    if (!(0, a.hasAnyModalOpen)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !r.tq) {
                         for (let t of await (0, E.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                     }
                 }
             });
     }
 }
-t.Z = new b();
+t.Z = new A();

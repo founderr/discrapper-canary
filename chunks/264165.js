@@ -1,19 +1,19 @@
-var i = t(200651);
-t(192379);
-var a = t(120356),
-    o = t.n(a),
-    r = t(354555);
-n.Z = (e) => {
-    let { aspectRatio: n, style: t, className: a, children: s } = e;
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    r = n(354555);
+t.Z = (e) => {
+    let { aspectRatio: t, style: n, className: l, children: o } = e;
     return (0, i.jsx)('div', {
-        className: o()(r.outer, a),
+        className: a()(r.outer, l),
         style: {
-            paddingTop: ''.concat((1 / n) * 100, '%'),
-            ...t
+            paddingTop: ''.concat((1 / t) * 100, '%'),
+            ...n
         },
         children: (0, i.jsx)('div', {
             className: r.inner,
-            children: s
+            children: o
         })
     });
 };

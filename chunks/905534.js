@@ -1,8 +1,8 @@
 n(177593);
 var i = n(626135),
     r = n(996106),
-    a = n(34954),
-    l = n(986768),
+    l = n(34954),
+    a = n(986768),
     s = n(981631);
 t.Z = {
     [s.Etm.SUBSCRIBE]: {
@@ -10,7 +10,7 @@ t.Z = {
             let { server: t, socket: n, evt: o, args: c } = e,
                 d = t.events[o];
             if (null == d) throw new r.Z({ errorCode: s.lTL.INVALID_EVENT }, 'Invalid event: '.concat(o));
-            if (!(0, a.Z)(n.authorization.scopes, d.scope)) throw new r.Z({ errorCode: s.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
+            if (!(0, l.Z)(n.authorization.scopes, d.scope)) throw new r.Z({ errorCode: s.lTL.INVALID_PERMISSIONS }, 'Not authenticated or invalid scope');
             if (
                 (i.default.track(s.rMx.RPC_SUBSCRIPTION_REQUESTED, {
                     event: o,
@@ -27,7 +27,7 @@ t.Z = {
                     args: c,
                     socket: n
                 }),
-                h = await (0, l.V)(n, o, c);
+                h = await (0, a.V)(n, o, c);
             return new Promise((e) => {
                 setImmediate(() => {
                     t.addSubscription(n, o, c, u), null != h && t.dispatchToSubscriptions(o, (e) => e.socket.id === n.id, h);
@@ -38,9 +38,9 @@ t.Z = {
     },
     [s.Etm.UNSUBSCRIBE]: {
         handler(e) {
-            let { server: t, socket: n, evt: i, args: a } = e;
+            let { server: t, socket: n, evt: i, args: l } = e;
             if (null == t.events[i]) throw new r.Z({ errorCode: s.lTL.INVALID_EVENT }, 'Invalid event: '.concat(i));
-            return t.removeSubscription(n, i, a), { evt: i };
+            return t.removeSubscription(n, i, l), { evt: i };
         }
     }
 };

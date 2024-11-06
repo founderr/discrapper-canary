@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(34674),
-    l = n(823379),
+    l = n(34674),
+    a = n(823379),
     s = n(448021),
     o = n(405411),
     c = n(215453),
@@ -17,7 +17,7 @@ function m(e) {
     let { application: t } = e,
         n = r.useMemo(() => {
             var e, n, i;
-            return null !== (i = (null !== (n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(a.RF).filter(l.lm)) && void 0 !== i ? i : [];
+            return null !== (i = (null !== (n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.carousel_items) && void 0 !== n ? n : []).map(l.RF).filter(a.lm)) && void 0 !== i ? i : [];
         }, [t]);
     return (0, i.jsxs)('div', {
         className: h.aboutContainer,

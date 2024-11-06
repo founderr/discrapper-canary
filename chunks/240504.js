@@ -1,7 +1,7 @@
 var i,
     r = n(442837),
-    a = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,9 +38,9 @@ class h extends (i = r.ZP.PersistedStore) {
         return d;
     }
 }
-l(h, 'displayName', 'PerksRelevanceStore'),
-    l(h, 'persistKey', 'PerksRelevanceStore'),
-    (t.Z = new h(a.Z, {
+a(h, 'displayName', 'PerksRelevanceStore'),
+    a(h, 'persistKey', 'PerksRelevanceStore'),
+    (t.Z = new h(l.Z, {
         BILLING_PERKS_RELEVANCE_FETCH_START: function () {
             u.hasFetchedRelevance = !0;
         },

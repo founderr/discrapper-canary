@@ -1,8 +1,8 @@
 n(653041), n(47120), n(724458);
 var i,
     r,
-    a,
     l,
+    a,
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -56,15 +56,15 @@ class v extends (i = c.ZP.Store) {
         return null == p[e] && !(null === (t = _[e]) || void 0 === t ? void 0 : t.loading);
     }
 }
-(l = 'ActiveChannelsStore'),
-    (a = 'displayName') in (r = v)
-        ? Object.defineProperty(r, a, {
-              value: l,
+(a = 'ActiveChannelsStore'),
+    (l = 'displayName') in (r = v)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = l),
+        : (r[l] = a),
     new v(d.Z, {
         CHANNEL_SELECT: function (e) {
             let { channelId: t, guildId: n } = e;
@@ -87,11 +87,11 @@ class v extends (i = c.ZP.Store) {
         },
         MESSAGE_CREATE: function (e) {
             var t;
-            let { channelId: n, message: i, optimistic: r, isPushNotification: a } = e;
-            if (r || a) return !1;
-            let l = u.Z.getChannel(n);
-            if (null == l) return !1;
-            let s = l.guild_id;
+            let { channelId: n, message: i, optimistic: r, isPushNotification: l } = e;
+            if (r || l) return !1;
+            let a = u.Z.getChannel(n);
+            if (null == a) return !1;
+            let s = a.guild_id;
             if (null == s || null == p[s]) return !1;
             I(s, n, i.id, null === (t = i.author) || void 0 === t ? void 0 : t.id);
         },

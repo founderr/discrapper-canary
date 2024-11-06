@@ -7,8 +7,8 @@ n.r(t),
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(593473),
-    l = n(512969),
+    l = n(593473),
+    a = n(512969),
     s = n(442837),
     o = n(930118),
     c = n(355467),
@@ -28,7 +28,7 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     x = n(256109);
-function b(e, t, n) {
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function b(e, t, n) {
         e
     );
 }
-let A = (0, f.Un)({
+let b = (0, f.Un)({
     createPromise: () => Promise.all([n.e('1868'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
@@ -76,7 +76,7 @@ class y extends r.PureComponent {
                       className: x.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(A, {
+                : (0, i.jsx)(b, {
                       className: x.applicationStore,
                       location: t,
                       render: this.renderContent
@@ -88,16 +88,16 @@ class y extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'stopListeningToHistory', void 0),
-            b(this, 'renderStoreListing', (e) => {
+            A(this, 'stopListeningToHistory', void 0),
+            A(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: r }
                         },
-                        location: l
+                        location: a
                     } = e,
                     { width: s } = this.props,
-                    o = (0, a.parse)(l.search);
+                    o = (0, l.parse)(a.search);
                 return (0, i.jsx)(d.Z, {
                     page: N.ZY5.STORE_LISTING,
                     root: !0,
@@ -105,16 +105,16 @@ class y extends r.PureComponent {
                         skuId: t,
                         applicationId: n,
                         slug: r,
-                        location: l,
+                        location: a,
                         storeListingId: o.store_listing_id,
                         pageSize: Z(s)
                     })
                 });
             }),
-            b(this, 'renderContent', () =>
-                (0, i.jsxs)(l.rs, {
+            A(this, 'renderContent', () =>
+                (0, i.jsxs)(a.rs, {
                     children: [
-                        (0, i.jsx)(l.AW, {
+                        (0, i.jsx)(a.AW, {
                             path: N.Z5c.APPLICATION_STORE,
                             exact: !0,
                             render: () =>
@@ -124,26 +124,26 @@ class y extends r.PureComponent {
                                     children: (0, i.jsx)(C.Z, {})
                                 })
                         }),
-                        (0, i.jsx)(l.AW, {
+                        (0, i.jsx)(a.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId', ':slug'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(l.AW, {
+                        (0, i.jsx)(a.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_APPLICATION(':applicationId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(l.AW, {
+                        (0, i.jsx)(a.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(l.AW, {
+                        (0, i.jsx)(a.AW, {
                             path: N.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId'),
                             render: this.renderStoreListing
                         }),
-                        (0, i.jsx)(l.l_, { to: N.Z5c.APP })
+                        (0, i.jsx)(a.l_, { to: N.Z5c.APP })
                     ]
                 })
             );
     }
 }
-t.default = (0, l.EN)((0, u.Z)((0, h.Z)(y)));
+t.default = (0, a.EN)((0, u.Z)((0, h.Z)(y)));

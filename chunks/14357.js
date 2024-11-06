@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(399606),
-    a = n(607070),
-    l = n(70097),
+    l = n(607070),
+    a = n(70097),
     s = n(970731),
     o = n(19199),
     c = n(921944),
@@ -10,10 +10,10 @@ var r = n(399606),
     u = n(797109);
 t.Z = (e) => {
     let { markAsDismissed: t } = e,
-        n = (0, r.e7)([a.Z], () => a.Z.useReducedMotion);
+        n = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
     return (0, o.D)()
         ? (0, i.jsx)(s.ZP, {
-              asset: (0, i.jsx)(l.Z, {
+              asset: (0, i.jsx)(a.Z, {
                   className: u.video,
                   src: 'https://cdn.discordapp.com/attachments/1067194967979733053/1067195118026772480/Safety_MUTE_Coachmark.mp4',
                   loop: !0,

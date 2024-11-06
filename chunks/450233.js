@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i,
     r,
-    a,
     l,
+    a,
     s,
     o,
     c = n(200651),
@@ -46,13 +46,13 @@ class f extends (o = d.PureComponent) {
               });
     }
 }
-(l = { messageStyle: 'LONG' }),
-    (a = 'defaultProps') in (r = f)
-        ? Object.defineProperty(r, a, {
-              value: l,
+(a = { messageStyle: 'LONG' }),
+    (l = 'defaultProps') in (r = f)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = l),
+        : (r[l] = a),
     (t.Z = u.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(f));

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(553813),
     r = n.n(i),
-    a = n(872810),
-    l = n(579806),
+    l = n(872810),
+    a = n(579806),
     s = n(594190),
     o = n(199902),
     c = n(592125),
@@ -29,11 +29,11 @@ function v() {
     if (null == n) return !1;
     let i = n.getGuildId();
     if (!(0, f.JL)(n, d.Z, h.Z, !1)) return !1;
-    if (u.Z.getUseSystemScreensharePicker()) (0, g.isMac)() && r().satisfies(null === l.Z || void 0 === l.Z ? void 0 : l.Z.os.release, C.jR) ? (0, E.T)() : (0, E.T)('window');
+    if (u.Z.getUseSystemScreensharePicker()) (0, g.isMac)() && r().satisfies(null === a.Z || void 0 === a.Z ? void 0 : a.Z.os.release, C.jR) ? (0, E.T)() : (0, E.T)('window');
     else {
         let t = (0, I.Z)(s.ZP, p.Z);
         if (null == t || (t.isLauncher && !e)) return !1;
-        (0, a.WH)(i, n.id, { pid: t.pid });
+        (0, l.WH)(i, n.id, { pid: t.pid });
     }
     return !0;
 }

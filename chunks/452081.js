@@ -6,19 +6,19 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(703656),
-    a = n(113434),
-    l = n(388032);
+    l = n(113434),
+    a = n(388032);
 function s() {
-    let [e, t] = i.useState(a.e5.ALL),
+    let [e, t] = i.useState(l.e5.ALL),
         n = i.useMemo(
             () => [
                 {
-                    id: a.e5.ALL,
-                    label: l.intl.string(l.t['0SzXmp'])
+                    id: l.e5.ALL,
+                    label: a.intl.string(a.t['0SzXmp'])
                 },
                 {
-                    id: a.e5.CLAIMED,
-                    label: l.intl.string(l.t.zyNYND)
+                    id: l.e5.CLAIMED,
+                    label: a.intl.string(a.t.zyNYND)
                 }
             ],
             []

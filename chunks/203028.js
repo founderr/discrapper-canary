@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(512722),
-    a = n.n(r),
-    l = n(841784),
+    l = n.n(r),
+    a = n(841784),
     s = n(503438),
     o = n(802856),
     c = n(707409),
@@ -31,20 +31,20 @@ function f(e) {
                     })
                 ),
                 r = n.filter((e) => !i.has(e.id)),
-                a = d.ZP.getName(t[0].user),
-                l = null != t[1] ? d.ZP.getName(t[1].user) : null != r[0] ? d.ZP.getName(r[0]) : null;
+                l = d.ZP.getName(t[0].user),
+                a = null != t[1] ? d.ZP.getName(t[1].user) : null != r[0] ? d.ZP.getName(r[0]) : null;
             switch (n.length) {
                 case 1:
-                    return a;
+                    return l;
                 case 2:
                     return g.intl.format(g.t.t1DyCw, {
-                        user1: a,
-                        user2: l
+                        user1: l,
+                        user2: a
                     });
                 default:
                     return g.intl.format(g.t['5CSEcH'], {
-                        user1: a,
-                        user2: l,
+                        user1: l,
+                        user2: a,
                         extras: n.length - 2
                     });
             }
@@ -58,7 +58,7 @@ function f(e) {
                 v = null == C ? void 0 : C.activity,
                 S = null == C ? void 0 : C.startedPlayingTime,
                 N = { name: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '' };
-            if ((0, l.Z)(v) && null != v)
+            if ((0, a.Z)(v) && null != v)
                 return {
                     subtitle: (0, i.jsx)(c.ZP, {
                         start: S,
@@ -145,7 +145,7 @@ function f(e) {
                     };
                 let { activity: t, game: n, startedPlayingTime: r } = e;
                 return (
-                    a()(null != t, 'Activity was null somehow'),
+                    l()(null != t, 'Activity was null somehow'),
                     {
                         subtitle: (0, i.jsx)(c.ZP, {
                             start: r,

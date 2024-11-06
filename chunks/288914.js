@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(722770),
-    l = n(873546),
+    l = n(722770),
+    a = n(873546),
     s = n(852229),
     o = n(442837),
     c = n(481060),
@@ -26,15 +26,15 @@ var i = n(200651),
     N = n(300284),
     T = n(680295),
     x = n(703656),
-    b = n(785717),
-    A = n(221292),
+    A = n(785717),
+    b = n(221292),
     Z = n(481046),
     y = n(687158),
     L = n(899007),
     R = n(648052),
-    P = n(867176),
+    j = n(867176),
     O = n(438163),
-    j = n(483424),
+    P = n(483424),
     D = n(681837),
     M = n(502762),
     w = n(530),
@@ -59,8 +59,8 @@ var i = n(200651),
     en = n(228168),
     ei = n(388032),
     er = n(217593),
-    ea = n(451563);
-let el = [
+    el = n(451563);
+let ea = [
     {
         duration: 30 * W.Z.Millis.MINUTE,
         label: () => ei.intl.string(ei.t.RxJGbG)
@@ -88,13 +88,13 @@ let el = [
 ];
 function es(e, t, n) {
     let r = (0, i.jsx)(i.Fragment, {
-        children: el.map((n) => {
-            let { duration: r, label: a } = n;
+        children: ea.map((n) => {
+            let { duration: r, label: l } = n;
             return (0, i.jsx)(
                 c.MenuItem,
                 {
                     id: ''.concat(e, '-').concat(r),
-                    label: a(),
+                    label: l(),
                     action: () => (0, Q.Z)(e, t, void 0, r),
                     dontCloseOnAction: !0
                 },
@@ -173,7 +173,7 @@ function ec(e) {
         eu = (0, y.ZP)(W.id),
         eh = (0, u.O)(),
         { analyticsLocations: em } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        ep = (0, b.ZB)({
+        ep = (0, A.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: W.id
         }),
@@ -191,7 +191,7 @@ function ec(e) {
             let t = I.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = V.Cr.useSetting(),
                 r = (0, C.p)(),
-                l = v.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
+                a = v.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
                 s = V.fv.useSetting(),
                 o = e === et.Skl.DND,
                 d = (t) => {
@@ -209,7 +209,7 @@ function ec(e) {
                     if (e === t && null != i) return i;
                     switch (t) {
                         case et.Skl.DND:
-                            return l ? ei.intl.string(ei.t.day5Aw) : ei.intl.string(ei.t.U9Vv19);
+                            return a ? ei.intl.string(ei.t.day5Aw) : ei.intl.string(ei.t.U9Vv19);
                         case et.Skl.INVISIBLE:
                             return ei.intl.string(ei.t.MqanVF);
                         default:
@@ -217,7 +217,7 @@ function ec(e) {
                     }
                 },
                 u = (0, i.jsx)(i.Fragment, {
-                    children: el.map((t) => {
+                    children: ea.map((t) => {
                         let { duration: n, label: r } = t;
                         return (0, i.jsx)(
                             c.MenuItem,
@@ -240,7 +240,7 @@ function ec(e) {
                     t ? es(et.Skl.IDLE, e, d(et.Skl.IDLE)) : eo(et.Skl.IDLE, e, d(et.Skl.IDLE)),
                     t ? es(et.Skl.DND, e, d(et.Skl.DND)) : eo(et.Skl.DND, e, d(et.Skl.DND)),
                     t ? es(et.Skl.INVISIBLE, e, d(et.Skl.INVISIBLE)) : eo(et.Skl.INVISIBLE, e, d(et.Skl.INVISIBLE)),
-                    l || r
+                    a || r
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
@@ -266,7 +266,7 @@ function ec(e) {
                                                               ei.intl.string(ei.t.gJRnwM),
                                                               (0, i.jsx)(c.TextBadge, {
                                                                   text: r ? ei.intl.string(ei.t.ApAu9f) : o ? ei.intl.string(ei.t.gH3Fra) : ei.intl.string(ei.t['64pl8/']),
-                                                                  color: r ? a.Z.BRAND_500 : o ? a.Z.RED_400 : a.Z.PRIMARY_500
+                                                                  color: r ? l.Z.BRAND_500 : o ? l.Z.RED_400 : l.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
@@ -303,8 +303,8 @@ function ec(e) {
         eN = (0, J.g)(Q),
         eT = (0, N.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: ex } = (0, Z.K)({ location: 'AccountProfilePopout' }),
-        eb = (0, q.I5)(W),
-        eA = (e) => {
+        eA = (0, q.I5)(W),
+        eb = (e) => {
             null == Q || Q(),
                 (0, B.openUserProfileModal)({
                     sourceAnalyticsLocations: em,
@@ -328,7 +328,7 @@ function ec(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: em,
-        children: (0, i.jsx)(b.Mt, {
+        children: (0, i.jsx)(A.Mt, {
             value: ep,
             children: (0, i.jsx)(c.Dialog, {
                 ref: eg,
@@ -348,9 +348,9 @@ function ec(e) {
                                 })
                             }),
                         (0, i.jsxs)('header', {
-                            className: ea.header,
+                            className: el.header,
                             children: [
-                                (0, i.jsx)(P.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: W,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE
@@ -359,7 +359,7 @@ function ec(e) {
                                     user: W,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE,
-                                    onOpenProfile: ed ? void 0 : eA
+                                    onOpenProfile: ed ? void 0 : eb
                                 }),
                                 (0, i.jsx)(O.Z, {
                                     user: W,
@@ -381,7 +381,7 @@ function ec(e) {
                                     className: er.username,
                                     profileType: en.y0.BITE_SIZE,
                                     nickname: K.ZP.getName(null, null, W),
-                                    onOpenProfile: ed ? void 0 : eA,
+                                    onOpenProfile: ed ? void 0 : eb,
                                     pronouns: null == eu ? void 0 : eu.pronouns,
                                     tags: (0, i.jsx)(R.Z, {
                                         displayProfile: eu,
@@ -404,7 +404,7 @@ function ec(e) {
                                     hidePersonalInformation: eE,
                                     onClose: Q
                                 }),
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: W,
                                     currentUser: W,
                                     onClose: Q
@@ -447,7 +447,7 @@ function ec(e) {
                                                         }
                                                     }),
                                                     (0, i.jsx)('div', { className: er.menuDivider }),
-                                                    eb
+                                                    eA
                                                         ? (0, i.jsx)($.Mv, {
                                                               id: 'view-premium-perks',
                                                               action: en.yM.VIEW_PREMIUM_PERKS,
@@ -487,7 +487,7 @@ function ec(e) {
                                                                 size: 12
                                                             }),
                                                         hint: (eI || e_ === et.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
-                                                        renderSubmenu: l.tq
+                                                        renderSubmenu: a.tq
                                                             ? void 0
                                                             : (e) => {
                                                                   let { closePopout: t } = e;
@@ -499,7 +499,7 @@ function ec(e) {
                                                                       children: eS
                                                                   });
                                                               },
-                                                        onClick: l.tq
+                                                        onClick: a.tq
                                                             ? () => {
                                                                   Q(),
                                                                       (0, c.openModalLazy)(
@@ -560,7 +560,7 @@ function ec(e) {
                                                                               className: er.clearCustomStatusHint,
                                                                               onClick: (e) => {
                                                                                   e.stopPropagation(),
-                                                                                      (0, A.pQ)({
+                                                                                      (0, b.pQ)({
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: em
                                                                                       }),

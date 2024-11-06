@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
 var i = n(200651);
 n(192379);
 var r = n(148956);
-function a() {
+function l() {
     return (0, i.jsx)('div', { className: r.divider });
 }

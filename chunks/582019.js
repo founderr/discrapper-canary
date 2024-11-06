@@ -4,9 +4,9 @@ n.d(t, {
     }
 });
 var i = n(200651),
-    o = n(192379),
-    r = n(709014);
-let l = {
+    r = n(192379),
+    l = n(709014);
+let a = {
         all: {
             name: 'all',
             start: 0,
@@ -14,30 +14,30 @@ let l = {
         }
     },
     s = () => {
-        let e = o.useRef(null),
-            t = o.useCallback(() => {
+        let e = r.useRef(null),
+            t = r.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            s = o.useCallback(() => {
+            s = r.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            a = o.useCallback(() => {
+            o = r.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying('all');
             }, []);
         return {
             events: {
                 onClick: t,
                 onMouseEnter: s,
-                onMouseLeave: a
+                onMouseLeave: o
             },
             play: t,
-            Component: o.useCallback(
+            Component: r.useCallback(
                 (t) =>
-                    (0, i.jsx)(r.L, {
+                    (0, i.jsx)(l.L, {
                         ...t,
                         src: () => n.e('66944').then(n.t.bind(n, 166174, 19)),
                         ref: e,
-                        markers: l
+                        markers: a
                     }),
                 []
             )

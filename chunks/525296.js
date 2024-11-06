@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(493683),
-    l = n(239091),
+    l = n(493683),
+    a = n(239091),
     s = n(730749),
     o = n(430824);
 function c(e) {
@@ -22,10 +22,10 @@ function c(e) {
                 });
             }
             handleMessageUser(e, t) {
-                return a.Z.openPrivateChannel(t.id);
+                return l.Z.openPrivateChannel(t.id);
             }
             handleUserContextMenu(e, t, r) {
-                (0, l.jW)(
+                (0, a.jW)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('5901')]).then(n.bind(n, 881351));
@@ -39,7 +39,7 @@ function c(e) {
                 );
             }
             handleGuildContextMenu(e, t) {
-                (0, l.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('44156'), n.e('44294'), n.e('85552'), n.e('58227'), n.e('28377'), n.e('33213'), n.e('75658')]).then(n.bind(n, 545135));
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -51,7 +51,7 @@ function c(e) {
             handleChannelContextMenu(e, t) {
                 let r = o.Z.getGuild(t.getGuildId());
                 if (null == r) return null;
-                (0, l.jW)(e, async () => {
+                (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('40283').then(n.bind(n, 428108));
                     return (n) =>
                         (0, i.jsx)(e, {

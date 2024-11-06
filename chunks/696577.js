@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(692547),
-    l = n(481060),
+    l = n(692547),
+    a = n(481060),
     s = n(194359),
     o = n(906732),
     c = n(171368),
@@ -53,20 +53,20 @@ function E(e) {
                                   (null == t ? void 0 : t.isStaff()) &&
                                   (0, i.jsx)('div', {
                                       className: _.staffIndicator,
-                                      children: (0, i.jsx)(l.TextBadge, {
-                                          color: a.Z.unsafe_rawColors.BRAND_500.css,
+                                      children: (0, i.jsx)(a.TextBadge, {
+                                          color: l.Z.unsafe_rawColors.BRAND_500.css,
                                           text: f.intl.string(f.t.oMx98P)
                                       })
                                   }),
                               (0, i.jsx)(h.Z, {
-                                  icon: l.CheckmarkLargeIcon,
+                                  icon: a.CheckmarkLargeIcon,
                                   actionType: h.Z.ActionTypes.ACCEPT,
                                   tooltip: f.intl.string(f.t.ZcibdX),
                                   onClick: N,
                                   shouldHighlight: e
                               }),
                               (0, i.jsx)(h.Z, {
-                                  icon: l.XSmallIcon,
+                                  icon: a.XSmallIcon,
                                   actionType: h.Z.ActionTypes.DENY,
                                   tooltip: f.intl.string(f.t.xuio0N),
                                   onClick: S,
@@ -75,7 +75,7 @@ function E(e) {
                           ]
                       })
                     : (0, i.jsx)(h.Z, {
-                          icon: l.XSmallIcon,
+                          icon: a.XSmallIcon,
                           actionType: h.Z.ActionTypes.DENY,
                           tooltip: f.intl.string(f.t.eaq81d),
                           onClick: S,

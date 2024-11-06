@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(481060),
     c = n(95398),
@@ -20,11 +20,11 @@ var i = n(200651),
     S = n(554034);
 let N = r.memo(function (e) {
     let { channel: t } = e,
-        { loaded: n, error: a, message: N } = (0, _.a)(t),
+        { loaded: n, error: l, message: N } = (0, _.a)(t),
         T = (0, d.p)(),
         x = (0, s.e7)([f.Z], () => null != N && f.Z.isBlockedForMessage(N), [N]),
-        b = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
-        A = p.cC.useSetting(),
+        A = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        b = p.cC.useSetting(),
         { content: Z } = r.useMemo(
             () =>
                 (null == N ? void 0 : N.content) != null && '' !== N.content
@@ -37,7 +37,7 @@ let N = r.memo(function (e) {
             [N, T]
         ),
         y = null;
-    if (a)
+    if (l)
         y = (0, i.jsx)(o.Text, {
             className: v.messageReplacement,
             variant: 'text-sm/normal',
@@ -53,7 +53,7 @@ let N = r.memo(function (e) {
                 children: C.intl.string(C.t['WPe+xM'])
             });
         else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, Z, x, l()(v.messageContent, S.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, m.f)(N, Z, x, a()(v.messageContent, S.inlineFormat), {
                 leadingIconClass: v.messageContentIcon,
                 trailingIconClass: v.messageContentIcon,
                 iconSize: I.WW
@@ -82,7 +82,7 @@ let N = r.memo(function (e) {
             });
     } else y = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(A, b),
+        value: (0, u.Z)(b, A),
         children: (0, i.jsx)(o.FocusBlock, {
             className: v.messageFocusBlock,
             children: y

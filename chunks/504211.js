@@ -1,4 +1,4 @@
-t.d(e, {
+e.d(t, {
     B: function () {
         return i;
     },
@@ -8,13 +8,13 @@ t.d(e, {
 });
 var l,
     i,
-    r = t(626135),
-    o = t(981631);
-function a(n, e, t) {
-    r.default.track(o.rMx.STOREFRONT_COPY_LINK_CLICKED, {
+    r = e(626135),
+    u = e(981631);
+function a(n, t, e) {
+    r.default.track(u.rMx.STOREFRONT_COPY_LINK_CLICKED, {
         application_id: n,
-        area: e,
-        sku_id: t
+        area: t,
+        sku_id: e
     });
 }
 ((l = i || (i = {})).STORE_MODAL = 'store_modal'), (l.DETAILS_MODAL = 'details_modal'), (l.STORE_EMBED = 'store_embed'), (l.SKU_EMBED = 'sku_embed');

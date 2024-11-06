@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(565138),
     o = n(693546),
     c = n(937111),
@@ -10,7 +10,7 @@ var i = n(200651),
     h = n(364632);
 t.Z = (e) => {
     let { headerId: t, reapplyText: n, onReapply: m, confirmText: p, onWithdrawApplication: g, rejectionReason: f = null, guild: _ = null } = e,
-        E = (0, a.e7)([c.Z], () => {
+        E = (0, l.e7)([c.Z], () => {
             var e;
             return c.Z.getCooldown(null !== (e = null == _ ? void 0 : _.id) && void 0 !== e ? e : '0');
         });
@@ -36,7 +36,7 @@ t.Z = (e) => {
                               src: h,
                               className: u.__invalid_verificationStateIcon
                           }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         id: t,
                         variant: 'heading-xl/semibold',
                         className: u.header,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                     }),
                     null != f && '' !== f
                         ? (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsxs)(l.Text, {
+                              children: (0, i.jsxs)(a.Text, {
                                   variant: 'text-sm/normal',
                                   children: [
                                       (0, i.jsx)('span', {
@@ -64,22 +64,22 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: u.confirmationButtonRow,
                 children: [
-                    (0, i.jsx)(l.TooltipContainer, {
+                    (0, i.jsx)(a.TooltipContainer, {
                         className: u.confirmationButton,
                         text: I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : null,
                         'aria-label': I ? d.intl.formatToPlainString(d.t.A0f0Pz, { days: C }) : void 0,
-                        children: (0, i.jsx)(l.Button, {
+                        children: (0, i.jsx)(a.Button, {
                             className: u.confirmationTooltipContents,
                             onClick: m,
-                            color: l.Button.Colors.PRIMARY,
+                            color: a.Button.Colors.PRIMARY,
                             submitting: null == E,
                             disabled: I,
                             children: n
                         })
                     }),
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(a.Button, {
                         onClick: g,
-                        color: l.Button.Colors.RED,
+                        color: a.Button.Colors.RED,
                         className: u.confirmationButton,
                         children: p
                     })

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(581364),
+    l = n(481060),
+    a = n(581364),
     s = n(665692),
     o = n(388032),
     c = n(974079);
@@ -17,7 +17,7 @@ function d(e) {
             let n = null === (e = t.directory_entry) || void 0 === e ? void 0 : e.popular_application_commands;
             return null != n
                 ? n.map((e) =>
-                      (0, l.Z8)({
+                      (0, a.Z8)({
                           rootCommand: e,
                           command: e,
                           applicationId: e.application_id
@@ -30,7 +30,7 @@ function d(e) {
         : (0, i.jsxs)('div', {
               className: c.sectionContainer,
               children: [
-                  (0, i.jsx)(a.Heading, {
+                  (0, i.jsx)(l.Heading, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
                       children: o.intl.string(o.t.swIgTE)
@@ -43,13 +43,13 @@ function d(e) {
                               {
                                   className: c.commandContainer,
                                   children: [
-                                      (0, i.jsxs)(a.Text, {
+                                      (0, i.jsxs)(l.Text, {
                                           className: c.commandName,
                                           variant: 'code',
                                           color: 'header-primary',
                                           children: [s.GI, e.displayName]
                                       }),
-                                      (0, i.jsx)(a.Text, {
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-normal',
                                           children: e.displayDescription

@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(924826),
-    a = n(91192),
-    l = n(442837),
+    l = n(91192),
+    a = n(442837),
     s = n(215569),
     o = n(481060),
     c = n(607070),
@@ -10,7 +10,7 @@ var r = n(924826),
     u = n(522756);
 t.Z = function (e) {
     let { statusSections: t, renderRow: n, searchQuery: h, sectionFilter: m, useReducedMotion: p, footer: g } = e,
-        f = (0, l.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        f = (0, a.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         _ = (0, r.ZP)({
             id: 'people',
             isEnabled: f,
@@ -32,9 +32,9 @@ t.Z = function (e) {
                       t
                   )
         );
-    return (0, i.jsx)(a.bG, {
+    return (0, i.jsx)(l.bG, {
         navigator: _,
-        children: (0, i.jsx)(a.SJ, {
+        children: (0, i.jsx)(l.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)(o.ScrollerAuto, {

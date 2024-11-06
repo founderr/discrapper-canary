@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(722770),
-    l = n(873546),
+    l = n(722770),
+    a = n(873546),
     s = n(852229),
     o = n(442837),
     c = n(481060),
@@ -26,15 +26,15 @@ var i = n(200651),
     N = n(221292),
     T = n(481046),
     x = n(687158),
-    b = n(899007),
-    A = n(648052),
+    A = n(899007),
+    b = n(648052),
     Z = n(867176),
     y = n(438163),
     L = n(483424),
     R = n(681837),
-    P = n(502762),
+    j = n(502762),
     O = n(530),
-    j = n(544989),
+    P = n(544989),
     D = n(309494),
     M = n(969205),
     w = n(171368),
@@ -84,12 +84,12 @@ let et = [
 function en(e, t, n) {
     let r = (0, i.jsx)(i.Fragment, {
         children: et.map((n) => {
-            let { duration: r, label: a } = n;
+            let { duration: r, label: l } = n;
             return (0, i.jsx)(
                 c.MenuItem,
                 {
                     id: ''.concat(e, '-').concat(r),
-                    label: a(),
+                    label: l(),
                     action: () => (0, Y.Z)(e, t, void 0, r),
                     dontCloseOnAction: !0
                 },
@@ -164,8 +164,8 @@ function ei(e, t, n) {
 function er(e) {
     var t;
     let { currentUser: V, onClose: Y, setPopoutRef: er } = e,
-        ea = __OVERLAY__,
-        el = (0, x.ZP)(V.id),
+        el = __OVERLAY__,
+        ea = (0, x.ZP)(V.id),
         es = (0, u.O)(),
         { analyticsLocations: eo } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
         ec = (0, S.ZB)({
@@ -186,7 +186,7 @@ function er(e) {
             let t = _.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
                 n = U.Cr.useSetting(),
                 r = (0, E.p)(),
-                l = I.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
+                a = I.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || r,
                 s = U.fv.useSetting(),
                 o = e === X.Skl.DND,
                 d = (t) => {
@@ -204,7 +204,7 @@ function er(e) {
                     if (e === t && null != i) return i;
                     switch (t) {
                         case X.Skl.DND:
-                            return l ? J.intl.string(J.t.day5Aw) : J.intl.string(J.t.U9Vv19);
+                            return a ? J.intl.string(J.t.day5Aw) : J.intl.string(J.t.U9Vv19);
                         case X.Skl.INVISIBLE:
                             return J.intl.string(J.t.MqanVF);
                         default:
@@ -235,7 +235,7 @@ function er(e) {
                     t ? en(X.Skl.IDLE, e, d(X.Skl.IDLE)) : ei(X.Skl.IDLE, e, d(X.Skl.IDLE)),
                     t ? en(X.Skl.DND, e, d(X.Skl.DND)) : ei(X.Skl.DND, e, d(X.Skl.DND)),
                     t ? en(X.Skl.INVISIBLE, e, d(X.Skl.INVISIBLE)) : ei(X.Skl.INVISIBLE, e, d(X.Skl.INVISIBLE)),
-                    l || r
+                    a || r
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(c.MenuSeparator, {}, 'menu-separator-statuses'),
@@ -261,7 +261,7 @@ function er(e) {
                                                               J.intl.string(J.t.gJRnwM),
                                                               (0, i.jsx)(c.TextBadge, {
                                                                   text: r ? J.intl.string(J.t.ApAu9f) : o ? J.intl.string(J.t.gH3Fra) : J.intl.string(J.t['64pl8/']),
-                                                                  color: r ? a.Z.BRAND_500 : o ? a.Z.RED_400 : a.Z.PRIMARY_500
+                                                                  color: r ? l.Z.BRAND_500 : o ? l.Z.RED_400 : l.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
@@ -324,14 +324,14 @@ function er(e) {
             children: (0, i.jsx)(c.Dialog, {
                 ref: ed,
                 'aria-label': V.username,
-                children: (0, i.jsxs)(P.Z, {
+                children: (0, i.jsxs)(j.Z, {
                     className: $.themeContainer,
                     user: V,
-                    displayProfile: el,
+                    displayProfile: ea,
                     profileType: Q.y0.BITE_SIZE,
                     children: [
                         !eC &&
-                            (0, i.jsx)(j.Z, {
+                            (0, i.jsx)(P.Z, {
                                 profileType: Q.y0.BITE_SIZE,
                                 children: (0, i.jsx)(M.Z, {
                                     userId: V.id,
@@ -343,14 +343,14 @@ function er(e) {
                             children: [
                                 (0, i.jsx)(Z.Z, {
                                     user: V,
-                                    displayProfile: el,
+                                    displayProfile: ea,
                                     profileType: Q.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: V,
-                                    displayProfile: el,
+                                    displayProfile: ea,
                                     profileType: Q.y0.BITE_SIZE,
-                                    onOpenProfile: ea ? void 0 : ev
+                                    onOpenProfile: el ? void 0 : ev
                                 }),
                                 (0, i.jsx)(y.Z, {
                                     user: V,
@@ -359,9 +359,9 @@ function er(e) {
                                 })
                             ]
                         }),
-                        (null == el ? void 0 : el.profileEffectId) != null &&
+                        (null == ea ? void 0 : ea.profileEffectId) != null &&
                             (0, i.jsx)(v.Z, {
-                                profileEffectId: null == el ? void 0 : el.profileEffectId,
+                                profileEffectId: null == ea ? void 0 : ea.profileEffectId,
                                 isHovering: eu
                             }),
                         (0, i.jsxs)(c.Scroller, {
@@ -372,10 +372,10 @@ function er(e) {
                                     className: $.username,
                                     profileType: Q.y0.BITE_SIZE,
                                     nickname: F.ZP.getName(null, null, V),
-                                    onOpenProfile: ea ? void 0 : ev,
-                                    pronouns: null == el ? void 0 : el.pronouns,
-                                    tags: (0, i.jsx)(A.Z, {
-                                        displayProfile: el,
+                                    onOpenProfile: el ? void 0 : ev,
+                                    pronouns: null == ea ? void 0 : ea.pronouns,
+                                    tags: (0, i.jsx)(b.Z, {
+                                        displayProfile: ea,
                                         profileType: Q.y0.BITE_SIZE,
                                         onClose: Y
                                     }),
@@ -391,7 +391,7 @@ function er(e) {
                                 }),
                                 (0, i.jsx)(k.Z, {
                                     user: V,
-                                    bio: null == el ? void 0 : el.bio,
+                                    bio: null == ea ? void 0 : ea.bio,
                                     hidePersonalInformation: em,
                                     onClose: Y
                                 }),
@@ -403,7 +403,7 @@ function er(e) {
                                 (0, i.jsxs)('div', {
                                     className: $.menus,
                                     children: [
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(j.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'profile-'.concat(V.id),
@@ -433,7 +433,7 @@ function er(e) {
                                                                 size: 12
                                                             }),
                                                         hint: (ep || eh === X.Skl.DND) && (0, i.jsx)(c.BellSlashIcon, { size: 'xxs' }),
-                                                        renderSubmenu: l.tq
+                                                        renderSubmenu: a.tq
                                                             ? void 0
                                                             : (e) => {
                                                                   let { closePopout: t } = e;
@@ -445,7 +445,7 @@ function er(e) {
                                                                       children: e_
                                                                   });
                                                               },
-                                                        onClick: l.tq
+                                                        onClick: a.tq
                                                             ? () => {
                                                                   Y(),
                                                                       (0, c.openModalLazy)(
@@ -526,7 +526,7 @@ function er(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(P.Z.Overlay, {
+                                        (0, i.jsx)(j.Z.Overlay, {
                                             className: $.menuOverlay,
                                             children: (0, i.jsxs)(K.PB, {
                                                 id: 'account-'.concat(V.id),

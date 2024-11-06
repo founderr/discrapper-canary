@@ -1,13 +1,13 @@
 n.d(t, {
     DL: function () {
-        return b;
+        return A;
     }
 }),
     n(411104);
 var i = n(433517),
     r = n(570140),
-    a = n(188471),
-    l = n(581567),
+    l = n(188471),
+    a = n(581567),
     s = n(594190),
     o = n(19780),
     c = n(626135),
@@ -72,9 +72,9 @@ async function S() {
     null != d && (r.client_heartbeat_renderer_memory_used_heap = d);
     {
         let e = s.ZP.getCurrentGameForAnalytics();
-        null != e && ((r.client_heartbeat_current_game_id = e.id), (r.client_heartbeat_current_game_name = e.name), (r.client_heartbeat_current_game_executable = (0, l.N6)(e.exePath)), (r.client_heartbeat_current_game_distributor = e.distributor));
+        null != e && ((r.client_heartbeat_current_game_id = e.id), (r.client_heartbeat_current_game_name = e.name), (r.client_heartbeat_current_game_executable = (0, a.N6)(e.exePath)), (r.client_heartbeat_current_game_distributor = e.distributor));
     }
-    c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, a.Z)();
+    c.default.track(p.rMx.CLIENT_HEARTBEAT, r), i.K.set(g, Date.now().toString()), (0, l.Z)();
 }
 let N = null,
     T = !0;
@@ -87,13 +87,13 @@ function x() {
         }
     else
         !(function () {
-            if (!!I) (I = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), v(), (0, a.Z)();
+            if (!!I) (I = !1), h.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, m.fr)(!1), v(), (0, l.Z)();
         })();
 }
-function b() {
-    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', y), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', A), x();
-}
 function A() {
+    h.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(Z), r.Z.subscribe('WINDOW_FOCUS', y), r.Z.subscribe('APP_STATE_UPDATE', L), r.Z.subscribe('LOGIN_SUCCESS', b), x();
+}
+function b() {
     S();
 }
 function Z() {

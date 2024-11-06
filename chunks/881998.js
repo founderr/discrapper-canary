@@ -1,47 +1,47 @@
-n.d(e, {
+n.d(t, {
     M: function () {
-        return i;
+        return o;
     }
 });
-var o,
-    a,
+var i,
     r,
-    c,
-    i,
-    u,
-    l = n(442837),
-    s = n(570140),
-    E = n(592125),
-    d = n(757266),
-    f = n(375954);
-((o = i || (i = {})).NOT_FETCHED = 'NOT_FETCHED'), (o.FETCHING = 'FETCHING'), (o.FETCHED = 'FETCHED');
-let C = null,
-    _ = 'NOT_FETCHED';
-class N extends (u = l.ZP.Store) {
+    l,
+    a,
+    o,
+    s,
+    c = n(442837),
+    u = n(570140),
+    d = n(592125),
+    m = n(757266),
+    h = n(375954);
+((i = o || (o = {})).NOT_FETCHED = 'NOT_FETCHED'), (i.FETCHING = 'FETCHING'), (i.FETCHED = 'FETCHED');
+let f = null,
+    p = 'NOT_FETCHED';
+class g extends (s = c.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, d.Z, f.Z);
+        this.waitFor(d.Z, m.Z, h.Z);
     }
     getApps() {
-        return C;
+        return f;
     }
     getFetchState() {
-        return _;
+        return p;
     }
 }
-(c = 'AuthorizedAppsStore'),
-    (r = 'displayName') in (a = N)
-        ? Object.defineProperty(a, r, {
-              value: c,
+(a = 'AuthorizedAppsStore'),
+    (l = 'displayName') in (r = g)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = c),
-    (e.Z = new N(s.Z, {
+        : (r[l] = a),
+    (t.Z = new g(u.Z, {
         USER_AUTHORIZED_APPS_REQUEST: function () {
-            _ = 'FETCHING';
+            p = 'FETCHING';
         },
-        USER_AUTHORIZED_APPS_UPDATE: function (t) {
-            (_ = 'FETCHED'), (C = t.apps);
+        USER_AUTHORIZED_APPS_UPDATE: function (e) {
+            (p = 'FETCHED'), (f = e.apps);
         }
     }));

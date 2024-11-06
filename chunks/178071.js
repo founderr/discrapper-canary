@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(239091),
     o = n(585237),
     c = n(551428),
@@ -33,7 +33,7 @@ let h = {
 };
 class m extends r.PureComponent {
     render() {
-        let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: r, currentStoreListingId: a, ...l } = this.props,
+        let { storeListings: e, primaryStoreListing: t, skuId: n, onStoreListingSelect: r, currentStoreListingId: l, ...a } = this.props,
             s = null != t ? 1 : 0;
         return (s += e.length) < 2
             ? null
@@ -41,7 +41,7 @@ class m extends r.PureComponent {
                   onClick: this.handleContextMenu,
                   onDropdownClick: this.handleContextMenu,
                   onContextMenu: this.handleContextMenu,
-                  ...l,
+                  ...a,
                   children: d.intl.string(d.t.hElye3)
               });
     }
@@ -49,9 +49,9 @@ class m extends r.PureComponent {
         super(...e),
             u(this, 'renderContextMenu', () => {
                 let { storeListings: e, onStoreListingSelect: t, currentStoreListingId: n, onMenuSelect: r } = this.props,
-                    a = e.map((e) =>
+                    l = e.map((e) =>
                         e.id !== n
-                            ? (0, i.jsx)(l.MenuItem, {
+                            ? (0, i.jsx)(a.MenuItem, {
                                   id: ''.concat(e.id),
                                   label: e.id,
                                   action: () => {
@@ -60,12 +60,12 @@ class m extends r.PureComponent {
                               })
                             : null
                     );
-                return (0, i.jsx)(l.Menu, {
+                return (0, i.jsx)(a.Menu, {
                     onSelect: r,
                     navId: 'test-store-listing',
                     'aria-label': d.intl.string(d.t.ogxXGh),
                     onClose: s.Zy,
-                    children: a
+                    children: l
                 });
             }),
             u(this, 'handleContextMenu', (e) => {
@@ -73,7 +73,7 @@ class m extends r.PureComponent {
             });
     }
 }
-t.Z = a.ZP.connectStores([c.Z], (e) => {
+t.Z = l.ZP.connectStores([c.Z], (e) => {
     let { skuId: t } = e;
     return {
         storeListings: c.Z.getUnpublishedForSKU(t),

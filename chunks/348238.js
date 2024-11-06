@@ -57,8 +57,8 @@ var i = n(200651),
     o = n(904245),
     s = n(144144),
     c = n(40851),
-    d = n(407477),
-    u = n(675478),
+    u = n(407477),
+    d = n(675478),
     m = n(592125),
     h = n(323873),
     f = n(375954),
@@ -132,8 +132,8 @@ function O(e, t) {
 }
 function M(e, t, l, o) {
     let { id: s } = t,
-        { id: d, flags: u } = e,
-        p = (0, C.yE)(u, N.iLy.EPHEMERAL),
+        { id: u, flags: d } = e,
+        p = (0, C.yE)(d, N.iLy.EPHEMERAL),
         g = (0, c.bp)();
     return r.useCallback(
         (e, t) => {
@@ -145,9 +145,9 @@ function M(e, t, l, o) {
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
             let r = m.Z.getChannel(s),
-                c = f.Z.getMessage(s, d),
-                u = h.Z.isEditing(s, d);
-            if (null != r && null != c && !u)
+                c = f.Z.getMessage(s, u),
+                d = h.Z.isEditing(s, u);
+            if (null != r && null != c && !d)
                 l({ contextMenu: !0 }),
                     (0, a.jW)(
                         e,
@@ -168,7 +168,7 @@ function M(e, t, l, o) {
                         }
                     );
         },
-        [p, s, d, l, g, o]
+        [p, s, u, l, g, o]
     );
 }
 function k(e, t) {
@@ -219,13 +219,13 @@ function w(e, t) {
     );
 }
 function U(e, t, n) {
-    let { canShowReactionsOnMessageHover: i } = d.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
+    let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         l = ''.concat(e, ':').concat(t),
         a = r.useRef(n),
         [o, s] = r.useState(n);
     a.current = o || a.current;
     let c = r.useCallback(() => {
-            i && (0, u.T6)(), !o && (g.S.dispatchKeyed(N.LPv.ANIMATE_CHAT_AVATAR, l, !0), s(!0));
+            i && (0, d.T6)(), !o && (g.S.dispatchKeyed(N.LPv.ANIMATE_CHAT_AVATAR, l, !0), s(!0));
         }, [o, l, i]),
         m = r.useCallback(() => {
             g.S.dispatchKeyed(N.LPv.ANIMATE_CHAT_AVATAR, l, !1), s(!1);

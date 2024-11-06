@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(704215),
+    l = n(442837),
+    a = n(704215),
     s = n(433517),
     o = n(963202),
     c = n(824991),
@@ -22,15 +22,15 @@ var i = n(200651),
     N = n(661599),
     T = n(617899),
     x = n(8521),
-    b = n(760326),
-    A = n(785203),
+    A = n(760326),
+    b = n(785203),
     Z = n(652785),
     y = n(981631),
     L = n(921944);
 function R(e) {
     e.stopPropagation();
 }
-function P(e) {
+function j(e) {
     var t;
     let { guild: n } = e,
         [h, g] = r.useState(null !== (t = s.K.get(Z.Iv)) && void 0 !== t ? t : 0),
@@ -42,7 +42,7 @@ function P(e) {
             location: 'ChannelNoticesGuard',
             includeConverted: !1
         }),
-        C = (0, a.Wu)(Z.HG, () =>
+        C = (0, l.Wu)(Z.HG, () =>
             Z.XN.filter((e) => {
                 let { type: t, store: i } = e;
                 if (t === y.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(y.oNc.CLAN) && I;
@@ -54,45 +54,45 @@ function P(e) {
         groupName: L.R.CHANNEL_NOTICES,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: r } = e,
-                a = () => {
+                l = () => {
                     _(Date.now()), r(L.L.UNKNOWN);
                 },
                 s = (() => {
                     switch (t) {
-                        case l.z.CHANNEL_NOTICE_HUBLINK:
+                        case a.z.CHANNEL_NOTICE_HUBLINK:
                             return (0, i.jsx)(f.Z, {
                                 guild: n,
-                                markAsDismissed: a
+                                markAsDismissed: l
                             });
-                        case l.z.CHANNEL_NOTICE_INVITE:
+                        case a.z.CHANNEL_NOTICE_INVITE:
                             return (0, i.jsx)(T.Z, {
                                 guild: n,
-                                markAsDismissed: a
+                                markAsDismissed: l
                             });
-                        case l.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
+                        case a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
                             return (0, i.jsx)(p.Z, {
                                 guild: n,
-                                markAsDismissed: a
+                                markAsDismissed: l
                             });
-                        case l.z.CHANNEL_NOTICE_QUICKSWITCHER:
-                            return (0, i.jsx)(b.Z, {
+                        case a.z.CHANNEL_NOTICE_QUICKSWITCHER:
+                            return (0, i.jsx)(A.Z, {
                                 guild: n,
-                                markAsDismissed: a
+                                markAsDismissed: l
                             });
-                        case l.z.CHANNEL_NOTICE_GUILD_BANNER:
+                        case a.z.CHANNEL_NOTICE_GUILD_BANNER:
                             return (0, i.jsx)(m.Z, {
                                 guild: n,
-                                markAsDismissed: a
+                                markAsDismissed: l
                             });
-                        case l.z.LINKED_ROLE_ADMIN_GUILD:
+                        case a.z.LINKED_ROLE_ADMIN_GUILD:
                             return (0, i.jsx)(d.Z, {
                                 guild: n,
                                 markAsDismissed: () => r(L.L.UNKNOWN)
                             });
-                        case l.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
+                        case a.z.CHANNEL_LIST_CLAN_ADMIN_UPSELL:
                             return (0, i.jsx)(c.ZP, {
                                 guild: n,
-                                markAsDismissed: a,
+                                markAsDismissed: l,
                                 defaultGameId: E
                             });
                         default:
@@ -110,25 +110,25 @@ function P(e) {
 }
 t.Z = (e) => {
     let { guild: t } = e;
-    switch ((0, A.Z)(t)) {
-        case A.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, b.Z)(t)) {
+        case b.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(C.Z, { guild: t });
-        case A.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+        case b.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(h.Z, { guild: t });
-        case A.R.MAX_MEMBER_COUNT:
+        case b.R.MAX_MEMBER_COUNT:
             return (0, i.jsx)(x.Z, { guild: t });
-        case A.R.GUILD_LIVE_CHANNEL:
+        case b.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(g.ZP, { guild: t });
-        case A.R.GUILD_MFA_WARNING:
+        case b.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(N.Z, { guild: t });
-        case A.R.COMMANDS_MIGRATION:
+        case b.R.COMMANDS_MIGRATION:
             return (0, i.jsx)(E.Z, { guild: t });
-        case A.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case b.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(I.Z, { guild: t });
-        case A.R.HUB_STUDY_ROOM:
+        case b.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(_.Z, { guild: t });
-        case A.R.SIGNUP:
+        case b.R.SIGNUP:
             return (0, i.jsx)(v.Z, { guild: t });
     }
-    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(P, { guild: e.guild });
+    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(j, { guild: e.guild });
 };

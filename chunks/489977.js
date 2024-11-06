@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    a = n(570140),
-    l = n(809206),
+    l = n(570140),
+    a = n(809206),
     s = n(317770),
     o = n(18438),
     c = n(81245),
@@ -16,14 +16,14 @@ function g(e, t) {
     return !!(0, c.iM)(n) && (0, d.openProfileUpsellModal)(e, t);
 }
 let f = (e) => {
-        let { imageSrc: t, file: a, guildId: s, isTryItOutFlow: c } = e;
+        let { imageSrc: t, file: l, guildId: s, isTryItOutFlow: c } = e;
         if (c) {
             (0, u.c_)(t);
             return;
         }
         let d = h.default.getCurrentUser(),
-            f = null != s ? o.I5 : l.I5;
-        if (m.ZP.canUseAnimatedAvatar(d) || 'image/gif' !== a.type) {
+            f = null != s ? o.I5 : a.I5;
+        if (m.ZP.canUseAnimatedAvatar(d) || 'image/gif' !== l.type) {
             f(t);
             return;
         }
@@ -41,13 +41,13 @@ let f = (e) => {
             });
     },
     _ = (e) => {
-        let { imageSrc: t, guildId: a, isTryItOutFlow: l } = e;
-        if (l) {
+        let { imageSrc: t, guildId: l, isTryItOutFlow: a } = e;
+        if (a) {
             (0, u.f4)(t);
             return;
         }
         let s = h.default.getCurrentUser(),
-            c = null != a ? o.g_ : u.g_;
+            c = null != l ? o.g_ : u.g_;
         if (m.ZP.canUsePremiumProfileCustomization(s)) {
             c(t);
             return;
@@ -67,10 +67,10 @@ let f = (e) => {
     };
 class E extends s.Z {
     _initialize() {
-        a.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        l.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     _terminate() {
-        a.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
+        l.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
         return e.uploadType === p.pC.AVATAR ? f(e) : e.uploadType === p.pC.BANNER ? _(e) : void 0;

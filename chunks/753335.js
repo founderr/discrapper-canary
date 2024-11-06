@@ -1,7 +1,7 @@
 var i = n(570140),
     r = n(703656),
-    a = n(998502),
-    l = n(852926),
+    l = n(998502),
+    a = n(852926),
     s = n(186901),
     o = n(981631);
 t.Z = {
@@ -11,7 +11,7 @@ t.Z = {
             let {
                 args: { guild_id: t, channel_id: n, message_id: s, pid: c }
             } = e;
-            if ((0, l.jU)(c).context === o.IlC.OVERLAY) {
+            if ((0, a.jU)(c).context === o.IlC.OVERLAY) {
                 i.Z.dispatch({
                     type: 'OVERLAY_OPEN_MESSAGE',
                     guildId: t,
@@ -20,7 +20,7 @@ t.Z = {
                 });
                 return;
             }
-            (0, r.dL)({ pathname: o.Z5c.CHANNEL(t, n, s) }), a.ZP.focus();
+            (0, r.dL)({ pathname: o.Z5c.CHANNEL(t, n, s) }), l.ZP.focus();
         }
     }
 };

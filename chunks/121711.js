@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(990547),
-    l = n(481060),
+    l = n(990547),
+    a = n(481060),
     s = n(213609),
     o = n(252618),
     c = n(979233),
@@ -21,16 +21,16 @@ var i = n(200651),
     N = n(46140),
     T = n(981631),
     x = n(388032),
-    b = n(431418);
+    A = n(431418);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, S.z)(),
-        { onScroll: A, scrollPosition: Z } = (0, c.M)(),
+        { onScroll: b, scrollPosition: Z } = (0, c.M)(),
         y = I.Z.getState().getUtmCurrentContext(),
         L = (0, E._)({ location: N.dr.QUEST_HOME_DESKTOP }) ? v.Z : v.j;
     r.useEffect(() => {
         (0, s.h)({
-            name: a.ImpressionNames.QUEST_HOME,
-            type: a.ImpressionTypes.VIEW,
+            name: l.ImpressionNames.QUEST_HOME,
+            type: l.ImpressionTypes.VIEW,
             properties: {
                 utm_source_current: y.utmSourceCurrent,
                 utm_medium_current: y.utmMediumCurrent,
@@ -46,25 +46,25 @@ t.Z = function () {
     return (
         (0, o.Tt)({ location: x.intl.string(x.t.JALI2N) }),
         (0, i.jsxs)('div', {
-            className: b.container,
+            className: A.container,
             children: [
                 (0, i.jsxs)(p.ZP, {
-                    children: [(0, i.jsx)('div', { className: b.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: l.QuestsIcon })]
+                    children: [(0, i.jsx)('div', { className: A.dragRegion }), (0, i.jsx)(p.z6, { scrollPosition: Z }), (0, i.jsx)(p.aV, { icon: a.QuestsIcon })]
                 }),
                 (0, i.jsxs)(g.Z, {
-                    onScroll: A,
+                    onScroll: b,
                     children: [
                         (0, i.jsx)(u.Z, {
-                            title: x.intl.formatToPlainString(x.t.lmMBf3, {}),
+                            title: x.intl.format(x.t.lmMBf3, {}),
                             description: x.intl.string(x.t.oWCrBg),
                             button: (0, i.jsx)(d.u, {
                                 text: x.intl.string(x.t.hvVgAQ),
                                 onClick: R
                             }),
-                            className: b.bannerContainer,
+                            className: A.bannerContainer,
                             children: (0, i.jsx)('div', {
-                                className: b.bannerImage,
-                                children: (0, i.jsx)('div', { className: b.bannerGradient })
+                                className: A.bannerImage,
+                                children: (0, i.jsx)('div', { className: A.bannerGradient })
                             })
                         }),
                         (0, i.jsxs)(h.Z, {
@@ -73,7 +73,7 @@ t.Z = function () {
                                     tabs: e,
                                     selectedTab: t,
                                     onTabSelect: n,
-                                    className: b.tabs
+                                    className: A.tabs
                                 }),
                                 t === _.e5.CLAIMED ? (0, i.jsx)(L, { onSelectTab: n }) : (0, i.jsx)(C.Z, {})
                             ]

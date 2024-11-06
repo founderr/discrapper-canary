@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(194359),
+    l = n(481060),
+    a = n(194359),
     s = n(906732),
     o = n(388380),
     c = n(171368),
@@ -23,7 +23,7 @@ function _(e) {
         { analyticsLocations: C } = (0, s.ZP)(),
         v = (e) => {
             null == e || e.stopPropagation(),
-                l.Z.addRelationship({
+                a.Z.addRelationship({
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
@@ -48,14 +48,14 @@ function _(e) {
             let r = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.Z, {
-                        icon: a.CheckmarkLargeIcon,
+                        icon: l.CheckmarkLargeIcon,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: g.intl.string(g.t.ZcibdX),
                         onClick: v,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
-                        icon: a.XSmallIcon,
+                        icon: l.XSmallIcon,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
                         onClick: S,

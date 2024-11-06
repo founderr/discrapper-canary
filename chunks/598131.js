@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(430824),
     o = n(970606),
     c = n(979264),
@@ -37,16 +37,16 @@ t.Z = (e) => {
             },
             [f, v]
         ),
-        b = (0, a.e7)([s.Z], () => s.Z.getGuild(f), [f]);
+        A = (0, l.e7)([s.Z], () => s.Z.getGuild(f), [f]);
     return (0, i.jsxs)('div', {
         className: g.slideContent,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(a.Heading, {
                 variant: 'heading-xxl/medium',
                 className: g.title,
                 children: m.intl.string(m.t.Z36xlZ)
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: g.subtitle,
@@ -60,7 +60,7 @@ t.Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: p.itemContainer,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
                                     children: m.intl.string(m.t.WO4DiI)
@@ -90,15 +90,15 @@ t.Z = (e) => {
                                         (0, i.jsxs)('div', {
                                             className: p.itemDescription,
                                             children: [
-                                                (0, i.jsx)(l.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
                                                     children: m.intl.string(m.t.QotFUV)
                                                 }),
-                                                (0, i.jsx)(l.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: m.intl.format(m.t['g/mtUF'], { guildName: null !== (t = null == b ? void 0 : b.name) && void 0 !== t ? t : '' })
+                                                    children: m.intl.format(m.t['g/mtUF'], { guildName: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : '' })
                                                 })
                                             ]
                                         })
@@ -109,7 +109,7 @@ t.Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: p.itemContainer,
                             children: [
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
                                     children: m.intl.string(m.t.LMz2R0)
@@ -120,7 +120,7 @@ t.Z = (e) => {
                                         (0, i.jsx)('div', {
                                             children: (0, i.jsx)('div', {
                                                 className: p.iconContainer,
-                                                children: (0, i.jsx)(l.CompassIcon, {
+                                                children: (0, i.jsx)(a.CompassIcon, {
                                                     width: 24,
                                                     height: 24,
                                                     size: 'custom'
@@ -130,19 +130,19 @@ t.Z = (e) => {
                                         (0, i.jsxs)('div', {
                                             className: p.itemDescription,
                                             children: [
-                                                (0, i.jsx)(l.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-md/semibold',
                                                     color: 'header-primary',
                                                     children: m.intl.string(m.t.s0u7oq)
                                                 }),
-                                                (0, i.jsx)(l.Text, {
+                                                (0, i.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
-                                                    children: m.intl.format(m.t['5uK+gY'], { guildName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '' })
+                                                    children: m.intl.format(m.t['5uK+gY'], { guildName: null !== (n = null == A ? void 0 : A.name) && void 0 !== n ? n : '' })
                                                 })
                                             ]
                                         }),
-                                        (0, i.jsx)(l.FormSwitch, {
+                                        (0, i.jsx)(a.FormSwitch, {
                                             className: p.toggle,
                                             hideBorder: !0,
                                             onChange: x,

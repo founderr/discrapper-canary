@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return l;
     }
 });
 var i = n(699516),
     r = n(453542);
-function a() {
+function l() {
     return {
         num_friends: i.Z.getFriendCount(),
         num_outgoing_requests: i.Z.getOutgoingCount(),

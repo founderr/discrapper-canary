@@ -6,22 +6,22 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    a = n(970731),
-    l = n(388032),
+    l = n(970731),
+    a = n(388032),
     s = n(56681);
 function o(e) {
     let { guildId: t, markAsDismissed: o } = e;
-    return (0, i.jsx)(a.ZP, {
+    return (0, i.jsx)(l.ZP, {
         className: s.container,
         asset: (0, i.jsx)('img', {
             className: s.image,
             src: n(297806),
             alt: ''
         }),
-        header: l.intl.string(l.t['2l9beX']),
+        header: a.intl.string(a.t['2l9beX']),
         headerClassName: s.header,
-        content: l.intl.string(l.t.gdqdND),
-        buttonCTA: l.intl.string(l.t.RzWDqa),
+        content: a.intl.string(a.t.gdqdND),
+        buttonCTA: a.intl.string(a.t.RzWDqa),
         buttonProps: {
             color: r.ButtonColors.WHITE,
             innerClassName: s.primaryButton
@@ -36,7 +36,7 @@ function o(e) {
                     });
             });
         },
-        secondaryButtonCTA: l.intl.string(l.t.TulDPj),
+        secondaryButtonCTA: a.intl.string(a.t.TulDPj),
         secondaryButtonProps: {
             look: r.ButtonLooks.LINK,
             color: r.ButtonColors.WHITE

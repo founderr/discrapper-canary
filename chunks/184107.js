@@ -1,24 +1,24 @@
 var i,
     r,
-    a,
     l,
+    a,
     s = n(442837),
     o = n(570140);
 let c = {};
-class d extends (l = s.ZP.Store) {
+class d extends (a = s.ZP.Store) {
     getSkuIdForChannel(e) {
         return c[e];
     }
 }
-(a = 'ChannelSKUStore'),
+(l = 'ChannelSKUStore'),
     (r = 'displayName') in (i = d)
         ? Object.defineProperty(i, r, {
-              value: a,
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = a),
+        : (i[r] = l),
     (t.Z = new d(o.Z, {
         CONNECTION_OPEN: function () {
             c = {};

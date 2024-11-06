@@ -11,8 +11,8 @@ var r = n(512722),
     o = n(558381),
     s = n(821849),
     c = n(15640),
-    d = n(724870),
-    u = n(87484),
+    u = n(724870),
+    d = n(87484),
     m = n(928518),
     h = n(106976),
     f = n(689011),
@@ -32,7 +32,7 @@ async function _(e) {
     })();
     if (E.type !== g.epS.SUBSCRIPTION)
         return new Promise((e, i) => {
-            (0, u.Z)({
+            (0, d.Z)({
                 applicationId: t,
                 skuId: n,
                 analyticsLocationObject: C,
@@ -48,7 +48,7 @@ async function _(e) {
             });
         });
     await (function (e, t, n, r, l) {
-        return (0, d.m)({
+        return (0, u.m)({
             applicationId: e,
             skuId: t,
             initialPlanId: n,

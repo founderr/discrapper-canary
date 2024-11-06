@@ -3,10 +3,10 @@ n.d(t, {
         return i;
     },
     x: function () {
-        return s;
+        return a;
     }
 });
-let s = 1000,
+let a = 1000,
     i = Object.freeze({
         SMALL: 'small',
         LARGE: 'large'

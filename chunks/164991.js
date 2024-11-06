@@ -38,8 +38,8 @@ n.d(t, {
 });
 var i = n(192379),
     r = n(903797),
-    a = n(782690),
-    l = n(731965);
+    l = n(782690),
+    a = n(731965);
 let s = Object.freeze({
         query: '',
         languageCode: null,
@@ -59,7 +59,7 @@ function d(e) {
             var t;
             return (t = e), (e) => e[t];
         }, [e]),
-        a.Z
+        l.Z
     );
 }
 function u(e) {
@@ -79,5 +79,5 @@ let h = () => d('resultsQuery'),
     v = () => u('scrollPosition'),
     S = () => d('resultsInitialCategoryId'),
     N = (e) => {
-        (0, l.j)(() => o.setState(e));
+        (0, a.j)(() => o.setState(e));
     };

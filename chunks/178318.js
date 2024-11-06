@@ -1,8 +1,8 @@
 let i, r;
 n(47120), n(610138), n(216116), n(78328), n(815648), n(653041), n(411104);
-var a = n(836560),
-    l = n(392711),
-    s = n.n(l),
+var l = n(836560),
+    a = n(392711),
+    s = n.n(a),
     o = n(729594),
     c = n(570140),
     d = n(710845),
@@ -42,7 +42,7 @@ let v = h.ZP.requireModule('discord_rpc').RPCWebSocket,
 function x(e) {
     return 'function' == typeof e ? e() : e;
 }
-function b() {
+function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
         t =
             e > 0
@@ -58,10 +58,10 @@ function b() {
                   };
     r.listen(E.V6Z + (e % E.frH), '127.0.0.1', t);
 }
-function A(e, t, n) {
+function b(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        a =
+        l =
             null != x(e.headers).origin
                 ? {
                       'Access-Control-Allow-Origin': x(e.headers).origin,
@@ -76,13 +76,13 @@ function A(e, t, n) {
         t.setHeader('Content-Type', 'application/json'),
         t.writeHead(i, {
             ...r,
-            ...a
+            ...l
         }),
         t.end(n);
 }
 function Z(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    A(
+    b(
         e,
         t,
         {
@@ -117,25 +117,25 @@ class L extends g.Z {
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class R extends a.EventEmitter {
+class R extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, i] = x(e.url).split('?'),
             r = x(e.method);
         if ('/rpc' === n && 'OPTIONS' === r) {
-            A(e, t, { body: '' });
+            b(e, t, { body: '' });
             return;
         }
-        let a = 'POST' === r;
-        if ('/rpc' === n && ('GET' === r || a)) {
+        let l = 'POST' === r;
+        if ('/rpc' === n && ('GET' === r || l)) {
             let n = new URLSearchParams(i),
-                r = a ? x(e.headers)['content-type'].split('/')[1] : 'json',
+                r = l ? x(e.headers)['content-type'].split('/')[1] : 'json',
                 s = function () {
                     var e;
                     let { protocol: i, host: r } = o.parse(null !== (e = n.get('callback')) && void 0 !== e ? e : '');
                     i === location.protocol && r === location.host ? t.setHeader('Location', n.get('callback')) : t.setHeader('Location', S), t.writeHead(301), t.end();
                 },
-                c = new L(a ? A.bind(null, e, t) : s, a ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
-            if (a)
+                c = new L(l ? b.bind(null, e, t) : s, l ? Z.bind(null, e, t, 400) : s, Number(n.get('v')), r);
+            if (l)
                 (0, f.em)(c, x(e.headers).origin, n.get('client_id'))
                     .then(() => {
                         let n = '';
@@ -146,8 +146,8 @@ class R extends a.EventEmitter {
                         return c.close(t, n);
                     });
             else {
-                var l;
-                (c.authorization.scopes = [_.CN]), this.handleMessage(c, decodeURIComponent(null !== (l = n.get('payload')) && void 0 !== l ? l : ''));
+                var a;
+                (c.authorization.scopes = [_.CN]), this.handleMessage(c, decodeURIComponent(null !== (a = n.get('payload')) && void 0 !== a ? a : ''));
             }
             return;
         }
@@ -157,7 +157,7 @@ class R extends a.EventEmitter {
         var t, n;
         let i;
         let r = new URLSearchParams(x(e.upgradeReq).url.split('?')[1]),
-            a = null !== (t = x(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
+            l = null !== (t = x(e.upgradeReq).headers.origin) && void 0 !== t ? t : '';
         try {
             i = new y(e, Number(r.get('v')), null !== (n = r.get('encoding')) && void 0 !== n ? n : 'json');
         } catch (t) {
@@ -169,7 +169,7 @@ class R extends a.EventEmitter {
             e.on('close', (e, t) => {
                 N.info('Socket Closed: '.concat(i.id, ', code ').concat(e, ', message ').concat(t)), s().remove(T, (e) => e === i), this.emit('disconnect', i);
             }),
-            (0, f.em)(i, a, r.get('client_id'))
+            (0, f.em)(i, l, r.get('client_id'))
                 .then(() => {
                     T.push(i), e.on('message', (e) => this.handleMessage(i, e)), this.emit('connect', i);
                 })
@@ -195,10 +195,10 @@ class R extends a.EventEmitter {
         super();
         let t = 0;
         (r = v.http.createServer()).on('error', (e) => {
-            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => b(++t), 1000);
+            N.error('Error: '.concat(e.message)), ('EADDRINUSE' === e.code || e.message.includes('EADDRINUSE')) && setTimeout(() => A(++t), 1000);
         }),
             r.on('request', this.handleRequest.bind(this)),
-            b(t);
+            A(t);
         let n = {
             instanceId: null !== (e = r.instanceId) && void 0 !== e ? e : 0,
             server: r

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(243814),
     r = n(846027),
-    a = n(131951),
-    l = n(13140),
+    l = n(131951),
+    a = n(13140),
     s = n(996106),
     o = n(452426),
     c = n(186901),
@@ -33,7 +33,7 @@ t.Z = {
                     args: { input_mode: n, self_mute: i, self_deaf: s }
                 } = e,
                 o = h(t);
-            null != n && r.Z.setMode(n.type, { shortcut: (0, l.Kd)(n.shortcut) }, o), null != i && i !== a.Z.isSelfMute(o) && r.Z.toggleSelfMute({ context: o }), null != s && s !== a.Z.isSelfDeaf(o) && r.Z.toggleSelfDeaf({ context: o });
+            null != n && r.Z.setMode(n.type, { shortcut: (0, a.Kd)(n.shortcut) }, o), null != i && i !== l.Z.isSelfMute(o) && r.Z.toggleSelfMute({ context: o }), null != s && s !== l.Z.isSelfDeaf(o) && r.Z.toggleSelfDeaf({ context: o });
         }
     },
     [d.Etm.SET_USER_VOICE_SETTINGS_2]: {
@@ -49,10 +49,10 @@ t.Z = {
         handler(e) {
             let {
                     socket: t,
-                    args: { user_id: n, mute: i, volume: l }
+                    args: { user_id: n, mute: i, volume: a }
                 } = e,
                 s = h(t);
-            null != i && i !== a.Z.isLocalMute(n, s) && r.Z.toggleLocalMute(n, s), null != l && r.Z.setLocalVolume(n, l, s);
+            null != i && i !== l.Z.isLocalMute(n, s) && r.Z.toggleLocalMute(n, s), null != a && r.Z.setLocalVolume(n, a, s);
         }
     },
     [d.Etm.PUSH_TO_TALK]: {
@@ -64,7 +64,7 @@ t.Z = {
             let {
                 args: { active: t }
             } = e;
-            if (a.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) a.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
+            if (l.Z.getMode(u.Yn.DEFAULT) === d.pM4.PUSH_TO_TALK) l.Z.getMediaEngine().eachConnection((e) => e.setForceAudioInput(t), u.Yn.DEFAULT);
         }
     }
 };

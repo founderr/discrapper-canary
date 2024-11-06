@@ -1,48 +1,48 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
-var r = n(200651);
+var i = n(200651);
 n(192379);
-var i = n(481060),
-    a = n(424602),
-    s = n(397698),
+var r = n(481060),
+    l = n(424602),
+    a = n(397698),
     o = n(776862),
-    l = n(701488),
-    u = n(981631);
-function c(e) {
-    let { channel: t, guildId: c, locationObject: d, openInPopout: f, initialSelectedApplicationId: _, initialSlide: h = l.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: m, opensAppLauncherModal: g = !1 } = e,
-        E = m.length > 0 ? m[m.length - 1] : 'open-activity-shelf',
-        { enabled: v } = a.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
-    if (g && v) {
+    s = n(701488),
+    c = n(981631);
+function u(e) {
+    let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: _ = !1 } = e,
+        C = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
+        { enabled: E } = l.m1.getCurrentConfig({ location: C }, { autoTrackExposure: !1 });
+    if (_ && E) {
         null != t &&
-            (0, s.Z)({
-                openInPopout: f,
+            (0, a.Z)({
+                openInPopout: m,
                 channel: t,
-                analyticsLocation: E
+                analyticsLocation: C
             });
         return;
     }
-    f && (0, o.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-    let I = f ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
-    return (0, i.openModalLazy)(
+    m && (0, o.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+    let I = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
+    return (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('67588'), n.e('47593'), n.e('34614')]).then(n.bind(n, 471840));
+            let { default: e } = await Promise.all([n.e('67588'), n.e('47593'), n.e('69673')]).then(n.bind(n, 471840));
             return (n) =>
-                (0, r.jsx)(e, {
+                (0, i.jsx)(e, {
                     ...n,
                     channel: t,
-                    guildId: c,
+                    guildId: u,
                     locationObject: d,
-                    initialSlide: h,
-                    initialSelectedApplicationId: _,
+                    initialSlide: f,
+                    initialSelectedApplicationId: h,
                     enableSelectedTextChannelInvite: p,
-                    analyticsLocations: m
+                    analyticsLocations: g
                 });
         },
         {
-            modalKey: l.AC,
+            modalKey: s.AC,
             contextKey: I
         }
     );

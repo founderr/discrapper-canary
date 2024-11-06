@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(58642),
     o = n(600164),
     c = n(695346),
@@ -46,10 +46,10 @@ function I(e) {
                                 : null
                         ]
                     }),
-                    (0, i.jsx)(l.Clickable, {
+                    (0, i.jsx)(a.Clickable, {
                         className: E.restoreButton,
                         onClick: () => n(e.libraryApplication),
-                        children: (0, i.jsx)(l.XSmallIcon, {
+                        children: (0, i.jsx)(a.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: E.restoreIcon
@@ -60,10 +60,10 @@ function I(e) {
             e.key
         );
     });
-    return (0, i.jsxs)(l.FormSection, {
+    return (0, i.jsxs)(a.FormSection, {
         className: E.hiddenLibraryApplications,
         children: [
-            (0, i.jsx)(l.FormTitle, {
+            (0, i.jsx)(a.FormTitle, {
                 className: E.hiddenLibraryApplicationsTitle,
                 children: _.intl.string(_.t['5PJtrK'])
             }),
@@ -92,13 +92,13 @@ class C extends r.PureComponent {
                 (0, m.Q)()
                     ? (0, i.jsxs)(r.Fragment, {
                           children: [
-                              (0, i.jsx)(l.FormSwitch, {
+                              (0, i.jsx)(a.FormSwitch, {
                                   value: t,
                                   onChange: this.handleToggleShortcutDesktop,
                                   note: _.intl.string(_.t.vT61Nz),
                                   children: _.intl.string(_.t['9ID+Ki'])
                               }),
-                              (0, i.jsx)(l.FormSwitch, {
+                              (0, i.jsx)(a.FormSwitch, {
                                   value: n,
                                   onChange: this.handleToggleShortcutStartMenu,
                                   note: _.intl.string(_.t.cpYp0N),
@@ -119,7 +119,7 @@ class C extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(p.Z, { currentRoute: f.Z5c.APPLICATION_LIBRARY_SETTINGS }),
-                (0, i.jsx)(l.ScrollerAuto, {
+                (0, i.jsx)(a.ScrollerAuto, {
                     className: E.scroller,
                     children: this.renderBody()
                 })
@@ -149,7 +149,7 @@ function v() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
-        hiddenLibraryApplicationViewItems: (0, a.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
+        hiddenLibraryApplicationViewItems: (0, l.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
     };
     return (0, i.jsx)(C, { ...e });
 }

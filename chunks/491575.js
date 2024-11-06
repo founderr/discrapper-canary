@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(512722),
-    l = n.n(a),
+    l = n(512722),
+    a = n.n(l),
     s = n(481060),
     o = n(176299),
     c = n(512847),
@@ -23,7 +23,7 @@ t.Z = r.memo(function () {
             let { duration: n, intensity: i } = t;
             if (h.Z.useReducedMotion || !f.Z.isFocused()) return;
             let { current: r } = e;
-            l()(null != r, 'Shakeable is shaken when not mounted'), r.shake(n, i);
+            a()(null != r, 'Shakeable is shaken when not mounted'), r.shake(n, i);
         }, []);
     return (
         r.useEffect(() => (u.Z.setLayout(d.ZP), u.Z.enable(), () => u.Z.disable()), []),

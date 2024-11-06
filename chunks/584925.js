@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r = n(442837),
-    a = n(570140),
-    l = n(70956),
+    l = n(570140),
+    a = n(70956),
     s = n(761080),
     o = n(207205);
 function c(e, t, n) {
@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-let d = 5 * l.Z.Millis.DAY,
+let d = 5 * a.Z.Millis.DAY,
     u = { readIdToTimestampMap: {} };
 class h extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
@@ -38,7 +38,7 @@ class h extends (i = r.ZP.DeviceSettingsStore) {
 }
 c(h, 'displayName', 'GravityUnreadStateStore'),
     c(h, 'persistKey', 'GravityUnreadStateStore'),
-    (t.Z = new h(a.Z, {
+    (t.Z = new h(l.Z, {
         GRAVITY_ACK_ITEMS: function (e) {
             let { items: t, override: n } = e;
             t.forEach((e) => {

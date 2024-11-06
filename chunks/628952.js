@@ -7,8 +7,8 @@ var r = n(120356),
     o = n(442837),
     s = n(481060),
     c = n(1585),
-    d = n(125988),
-    u = n(987209),
+    u = n(125988),
+    d = n(987209),
     m = n(921813),
     h = n(731896),
     f = n(484459),
@@ -21,7 +21,7 @@ var r = n(120356),
 let x = (e) => {
         let { avatarDecoration: t } = e,
             n = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-            { avatarDecorationSrc: r } = (0, d.Z)({
+            { avatarDecorationSrc: r } = (0, u.Z)({
                 user: n,
                 avatarDecorationOverride: t,
                 size: (0, c.y9)(s.AvatarSizes.SIZE_40)
@@ -54,9 +54,9 @@ let x = (e) => {
         });
     };
 t.Z = (e) => {
-    let { skuId: t, skuPricePreview: n, isSelected: r, onSelect: c, shouldDisplayHeader: d = !1, className: h } = e,
+    let { skuId: t, skuPricePreview: n, isSelected: r, onSelect: c, shouldDisplayHeader: u = !1, className: h } = e,
         { product: I } = (0, _.T)(t),
-        { giftRecipient: N, giftRecipientError: T } = (0, u.wD)(),
+        { giftRecipient: N, giftRecipientError: T } = (0, d.wD)(),
         S = (0, o.e7)([p.default], () => p.default.getCurrentUser());
     if (null == I || null == n) return null;
     let [b] = I.items,
@@ -64,7 +64,7 @@ t.Z = (e) => {
     return (0, i.jsxs)('div', {
         className: h,
         children: [
-            d &&
+            u &&
                 (0, i.jsxs)('div', {
                     className: E.previewTitleContainer,
                     children: [

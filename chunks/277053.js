@@ -1,7 +1,7 @@
 let i, r;
 n(47120);
-var a,
-    l,
+var l,
+    a,
     s,
     o,
     c = n(392711),
@@ -21,8 +21,8 @@ let I = new Set(),
     N = null,
     T = null,
     x = null,
-    b = null,
     A = null,
+    b = null,
     Z = h.K.get(E.kf) || !1;
 function y(e) {
     let t = e.getGuildId(),
@@ -32,9 +32,9 @@ function y(e) {
 function L() {
     if (((T = g.Z.getChannel()), (x = g.Z.getCategory()), null == T)) return !1;
     let e = T.getGuildId();
-    (N = S = y(T)), null == S[b] && (b = e), (r = null != x), (i = p.o4(T, x)), (A = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
+    (N = S = y(T)), null == S[A] && (A = e), (r = null != x), (i = p.o4(T, x)), (b = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
-class R extends (a = u.ZP.Store) {
+class R extends (l = u.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z);
     }
@@ -54,7 +54,7 @@ class R extends (a = u.ZP.Store) {
         return S;
     }
     get selectedOverwriteId() {
-        return b;
+        return A;
     }
     get formState() {
         return C;
@@ -76,14 +76,14 @@ class R extends (a = u.ZP.Store) {
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
-    (s = 'displayName') in (l = R)
-        ? Object.defineProperty(l, s, {
+    (s = 'displayName') in (a = R)
+        ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[s] = o),
+        : (a[s] = o),
     (t.Z = new R(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
@@ -93,16 +93,16 @@ class R extends (a = u.ZP.Store) {
         CHANNEL_SETTINGS_PERMISSIONS_INIT: L,
         CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION: function (e) {
             let { id: t, allow: n, deny: r } = e,
-                a = null == S ? void 0 : S[t];
-            if (null == a || null == T) return !1;
-            (a = {
-                ...a,
+                l = null == S ? void 0 : S[t];
+            if (null == l || null == T) return !1;
+            (l = {
+                ...l,
                 allow: n,
                 deny: r
             }),
                 (S = {
                     ...S,
-                    [t]: a
+                    [t]: l
                 }),
                 I.add(t),
                 (C = _.QZA.OPEN),
@@ -111,14 +111,14 @@ class R extends (a = u.ZP.Store) {
         },
         CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function (e) {
             let { id: t } = e;
-            if (null != S && null != S[t]) b = t;
+            if (null != S && null != S[t]) A = t;
             else {
                 if (null == T) return !1;
-                A = t;
+                b = t;
             }
         },
         CHANNEL_SETTINGS_CLOSE: function () {
-            (C = _.QZA.CLOSED), (S = null), (N = null), (T = null), (x = null), (v = !1), I.clear(), (b = null), (A = null);
+            (C = _.QZA.CLOSED), (S = null), (N = null), (T = null), (x = null), (v = !1), I.clear(), (A = null), (b = null);
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
@@ -142,9 +142,9 @@ class R extends (a = u.ZP.Store) {
                             (S = {
                                 ...T.permissionOverwrites,
                                 ...n
-                            })[b]
-                                ? (b = t)
-                                : null != A && null != S[A] && ((b = A), (A = null)),
+                            })[A]
+                                ? (A = t)
+                                : null != b && null != S[b] && ((A = b), (b = null)),
                             (i = p.o4(T, x)),
                             !0
                         );

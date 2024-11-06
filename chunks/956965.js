@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(442837),
     o = n(607070),
     c = n(361213),
@@ -15,7 +15,7 @@ var i = n(200651),
 let f = 16 / 9,
     _ = 17 / 6;
 function E(e) {
-    let { application: t, isHovered: n, botBannerUrl: a, botBannerUrlAnimated: s } = e,
+    let { application: t, isHovered: n, botBannerUrl: l, botBannerUrlAnimated: s } = e,
         o = (0, d.Z)({
             applicationId: t.id,
             size: 600,
@@ -30,10 +30,10 @@ function E(e) {
                 'fetched' === o.state && null != o.url
                     ? { imageUrl: o.url }
                     : {
-                          imageUrl: a,
+                          imageUrl: l,
                           imageUrlAnimated: s
                       },
-            [o.state, o.url, a, s]
+            [o.state, o.url, l, s]
         ),
         _ = null != p,
         E = null != m;
@@ -49,7 +49,7 @@ function E(e) {
                           })
                         : (0, i.jsx)(h.Z, {
                               src: m,
-                              className: l()(g.bannerImage, g.bannerMedia),
+                              className: a()(g.bannerImage, g.bannerMedia),
                               muted: !0
                           }),
                     (0, i.jsx)(C, {
@@ -69,20 +69,20 @@ function E(e) {
     return null;
 }
 function I(e) {
-    let { isHovered: t, url: n, animatedUrl: a } = e,
+    let { isHovered: t, url: n, animatedUrl: l } = e,
         [s, o] = r.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('img', {
                 src: n,
                 alt: '',
-                className: l()(g.bannerImage, g.bannerMedia, { [g.loaded]: s }),
+                className: a()(g.bannerImage, g.bannerMedia, { [g.loaded]: s }),
                 onLoad: () => o(!0)
             }),
-            null != a
+            null != l
                 ? (0, i.jsx)(C, {
                       isHovered: t,
-                      url: a,
+                      url: l,
                       isVideo: !1
                   })
                 : null
@@ -90,7 +90,7 @@ function I(e) {
     });
 }
 function C(e) {
-    let { isHovered: t, url: n, isVideo: a } = e,
+    let { isHovered: t, url: n, isVideo: l } = e,
         [s, o] = r.useState(!1),
         [c, d] = r.useState(t);
     return (r.useEffect(() => {
@@ -98,12 +98,12 @@ function C(e) {
     }, [t]),
     c)
         ? (0, i.jsx)('div', {
-              className: l()(g.bannerAnimatedContainer, {
+              className: a()(g.bannerAnimatedContainer, {
                   [g.videoFadeOut]: !t,
                   [g.videoFadeIn]: t && s
               }),
               onAnimationEnd: () => (t ? null : d(!1)),
-              children: a
+              children: l
                   ? (0, i.jsx)(h.Z, {
                         src: n,
                         loop: !0,
@@ -122,15 +122,15 @@ function C(e) {
         : null;
 }
 t.Z = function (e) {
-    let { application: t, bannerType: n, iconURL: a } = e,
-        l = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+    let { application: t, bannerType: n, iconURL: l } = e,
+        a = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
         [c, d] = r.useState(!1),
         h = r.useCallback(() => {
             d(!0);
         }, []),
         C = r.useCallback(() => d(!1), []),
         v = (0, u.ye)(t),
-        S = (0, p.u)(a),
+        S = (0, p.u)(l),
         N = t.bot,
         { botBannerUrl: T, botBannerUrlAnimated: x } = r.useMemo(
             () =>
@@ -143,7 +143,7 @@ t.Z = function (e) {
                               canAnimate: !1,
                               size: 600
                           }),
-                          botBannerUrlAnimated: l
+                          botBannerUrlAnimated: a
                               ? void 0
                               : (0, m.aN)({
                                     id: N.id,
@@ -152,7 +152,7 @@ t.Z = function (e) {
                                     size: 600
                                 })
                       },
-            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, l]
+            [null == N ? void 0 : N.id, null == N ? void 0 : N.banner, a]
         );
     return (0, i.jsx)('div', {
         className: g.banner,

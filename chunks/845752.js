@@ -5,30 +5,30 @@ n.d(t, {
 });
 var i = n(392711),
     r = n.n(i),
-    a = n(243814),
-    l = n(186901),
+    l = n(243814),
+    a = n(186901),
     s = n(981631);
 function o(e, t) {
     return {
         [s.zMe.VOICE_SETTINGS_UPDATE]: {
             scope: {
-                [l.Gp.ANY]: [a.x.RPC, a.x.RPC_VOICE_READ]
+                [a.Gp.ANY]: [l.x.RPC, l.x.RPC_VOICE_READ]
             },
             handler: () => (t) => {
                 let { prevState: n, dispatch: i } = t,
-                    a = e();
-                return !r().isEqual(a, n) && i(a), a;
+                    l = e();
+                return !r().isEqual(l, n) && i(l), l;
             }
         },
         [s.zMe.VOICE_SETTINGS_UPDATE_2]: {
-            scope: l.lH,
+            scope: a.lH,
             handler(e) {
                 let { socket: n } = e;
                 return (e) => {
-                    let { prevState: i, dispatch: a } = e;
+                    let { prevState: i, dispatch: l } = e;
                     if (null == n.application.id) return i;
-                    let l = t(n.application.id);
-                    return !r().isEqual(l, i) && a(l), l;
+                    let a = t(n.application.id);
+                    return !r().isEqual(a, i) && l(a), a;
                 };
             }
         }

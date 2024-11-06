@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(481060),
-    l = n(493683),
+    l = n(481060),
+    a = n(493683),
     s = n(367907),
     o = n(205129),
     c = n(626135),
@@ -23,10 +23,10 @@ function h(e) {
         g = 1 === h.length && 1 === n.length,
         f = n.length - h.length > 0;
     return (g || t) && !f && 0 !== p.length
-        ? (0, i.jsx)(a.MenuItem, {
+        ? (0, i.jsx)(l.MenuItem, {
               id: 'message',
               action: function () {
-                  l.Z.openPrivateChannel(p).then((t) =>
+                  a.Z.openPrivateChannel(p).then((t) =>
                       s.ZP.trackWithMetadata(d.rMx.ACTIVITY_FEED_DM_VISITED, {
                           source: {
                               ...m.location,

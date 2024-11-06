@@ -7,8 +7,8 @@ n.d(t, {
     n(724458);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(780384),
     o = n(481060),
     c = n(410030),
@@ -18,7 +18,7 @@ var i = n(200651),
     m = n(388032),
     p = n(116155);
 function g(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
+    let { onTabSelect: t, tabs: n, selectedTab: l } = e,
         d = (0, c.ZP)(),
         u = (0, s.wj)(d),
         g = r.useMemo(
@@ -26,9 +26,9 @@ function g(e) {
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === a;
+                    return t === l;
                 }),
-            [a, n]
+            [l, n]
         ),
         f = g ? 'header-primary' : u ? 'text-muted' : 'header-primary',
         _ = g ? o.tokens.colors.HEADER_PRIMARY : u ? o.tokens.colors.TEXT_MUTED : o.tokens.colors.HEADER_PRIMARY;
@@ -36,7 +36,7 @@ function g(e) {
         renderPopout: (e) => {
             let { closePopout: r } = e;
             return (0, i.jsx)(h.Z, {
-                selectedTab: a,
+                selectedTab: l,
                 onClose: r,
                 tabs: n,
                 onTabSelect: t
@@ -50,7 +50,7 @@ function g(e) {
                 ...e,
                 id: 'more',
                 color: 'text-muted',
-                className: l()(p.tab, p.more, { [p.selected]: g }),
+                className: a()(p.tab, p.more, { [p.selected]: g }),
                 'aria-label': m.intl.string(m.t.UKOtz8),
                 children: [
                     (0, i.jsx)(o.Text, {
@@ -73,7 +73,7 @@ function g(e) {
     });
 }
 function f(e) {
-    let { className: t, selectedTab: n, tabs: a, onTabSelect: s, onAvailableWidthChange: c } = e,
+    let { className: t, selectedTab: n, tabs: l, onTabSelect: s, onAvailableWidthChange: c } = e,
         [h, m] = r.useState(0),
         f = r.useRef(h),
         {
@@ -82,13 +82,13 @@ function f(e) {
             overflowItemsRef: I,
             itemWidthsRef: C
         } = (0, d.zP)({
-            items: a,
+            items: l,
             itemGapPx: 20,
             maxLines: 1,
             containerWidth: h
         }),
-        v = r.useMemo(() => a.slice(0, _ + 1), [_, a]),
-        S = r.useMemo(() => a.slice(_ + 1), [_, a]),
+        v = r.useMemo(() => l.slice(0, _ + 1), [_, l]),
+        S = r.useMemo(() => l.slice(_ + 1), [_, l]),
         N = r.useRef(null),
         T = r.useCallback(() => {
             var e;
@@ -105,13 +105,13 @@ function f(e) {
     }, [T]);
     let x = 0 !== h;
     return (0, i.jsxs)('div', {
-        className: l()(p.container, t),
+        className: a()(p.container, t),
         ref: N,
         children: [
             (0, i.jsxs)('div', {
                 className: p.measurements,
                 children: [
-                    a.map((e, t) =>
+                    l.map((e, t) =>
                         (0, i.jsx)(
                             d.AJ,
                             {
@@ -154,7 +154,7 @@ function f(e) {
                                 {
                                     id: e.id,
                                     'aria-label': e.label,
-                                    className: l()(p.tab, { [p.selected]: n === e.id }),
+                                    className: a()(p.tab, { [p.selected]: n === e.id }),
                                     children: e.label
                                 },
                                 e.id

@@ -130,7 +130,7 @@ function f(e, t, n) {
             return (0, r.jsxs)(_, {
                 attributes: f,
                 className: g,
-                children: [(0, r.jsx)(s.mv, { soundId: p.soundId }), h]
+                children: [(0, r.jsx)(s.ku, { soundId: p.soundId }), h]
             });
         case 'commandMention':
             return (0, r.jsxs)(_, {

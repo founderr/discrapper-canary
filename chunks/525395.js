@@ -1,22 +1,22 @@
-let i, r, a;
+let i, r, l;
 n(47120);
-var l,
+var a,
     s,
     o,
     c,
     d = n(442837),
     u = n(570140);
 function h() {
-    (r = {}), (i = {}), (a = new Set());
+    (r = {}), (i = {}), (l = new Set());
 }
 h();
-class m extends (l = d.ZP.Store) {
+class m extends (a = d.ZP.Store) {
     getStatisticsForApplication(e) {
         return i[e];
     }
     shouldFetchStatisticsForApplication(e) {
         let t = r[e];
-        return !a.has(e) && (null == t || Date.now() - t > 3600000);
+        return !l.has(e) && (null == t || Date.now() - t > 3600000);
     }
 }
 (c = 'ApplicationStatisticsStore'),
@@ -31,15 +31,15 @@ class m extends (l = d.ZP.Store) {
     (t.Z = new m(u.Z, {
         APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
             let { applicationId: t } = e;
-            a.add(t);
+            l.add(t);
         },
         APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function (e) {
             let { applicationId: t } = e;
-            a.delete(t);
+            l.delete(t);
         },
         APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
             let { statistics: t, applicationId: n } = e;
-            (r[n] = Date.now()), a.delete(n), (i[n] = t);
+            (r[n] = Date.now()), l.delete(n), (i[n] = t);
         },
         LOGOUT: h
     }));

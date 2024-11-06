@@ -1,7 +1,7 @@
 var i,
     r,
-    a = n(442837),
-    l = n(570140),
+    l = n(442837),
+    a = n(570140),
     s = n(749210);
 ((i = r || (r = {}))[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED');
 let o = {},
@@ -13,7 +13,7 @@ function d(e) {
 function u() {
     o = {};
 }
-class h extends a.ZP.Store {
+class h extends l.ZP.Store {
     isFetchingFriendsForGuild(e) {
         return 1 === d(e);
     }
@@ -28,7 +28,7 @@ class h extends a.ZP.Store {
             s.Z.requestMembersById(e, t, !1));
     }
 }
-t.Z = new h(l.Z, {
+t.Z = new h(a.Z, {
     CONNECTION_OPEN: u,
     LOGOUT: u,
     RELATIONSHIP_ADD: u,

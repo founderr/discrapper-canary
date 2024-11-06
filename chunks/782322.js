@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(100621),
     o = n(782690),
     c = n(442837),
@@ -19,12 +19,12 @@ let I = 70,
     C = () => {
         let [e, t] = r.useState(!1),
             n = (0, g.GN)((e) => e.selectedGames, o.Z),
-            { options: a, matchSorterOptions: s } = (0, h.P)(),
+            { options: l, matchSorterOptions: s } = (0, h.P)(),
             c = r.useCallback((e) => {
                 g.GN.getState().setSelectedGames(e), (0, m.Og)();
             }, []);
         return (0, i.jsxs)('div', {
-            className: l()(E.searchBarArea, { [E.popoutOpen]: e }),
+            className: a()(E.searchBarArea, { [E.popoutOpen]: e }),
             children: [
                 (0, i.jsx)(d.MagnifyingGlassIcon, { className: E.searchIcon }),
                 (0, i.jsx)(d.SearchableSelect, {
@@ -36,7 +36,7 @@ let I = 70,
                     look: d.SelectLooks.CUSTOM,
                     wrapperClassName: E.inputWrapper,
                     className: E.searchBar,
-                    options: a,
+                    options: l,
                     value: n,
                     placeholder: _.intl.string(_.t.wkM6xs),
                     onChange: c,
@@ -48,17 +48,17 @@ let I = 70,
     },
     v = (e) => {
         var t;
-        let { game: n, index: r, currentIndex: a, gamesCount: l } = e,
-            o = r - a,
+        let { game: n, index: r, currentIndex: l, gamesCount: a } = e,
+            o = r - l,
             c = Math.abs(o),
-            u = Math.min(c, l - c),
+            u = Math.min(c, a - c),
             h = (0, d.useSpring)({
                 position: 'absolute',
                 display: u <= 4 ? 'flex' : 'none',
-                opacity: r === a ? 1 : 0.5,
-                transform: r === a ? 'translateX(0px)' : 'translateX('.concat(((u <= 5 && c > l / 2 ? o < 0 : o > 0) ? 1 : -1) * (180 * u + I), 'px)'),
-                width: r === a ? ''.concat(280, 'px') : ''.concat(140, 'px'),
-                boxShadow: r === a ? '0px 10px 60px 0px '.concat(n.primaryColor.toHexString()) : 'none'
+                opacity: r === l ? 1 : 0.5,
+                transform: r === l ? 'translateX(0px)' : 'translateX('.concat(((u <= 5 && c > a / 2 ? o < 0 : o > 0) ? 1 : -1) * (180 * u + I), 'px)'),
+                width: r === l ? ''.concat(280, 'px') : ''.concat(140, 'px'),
+                boxShadow: r === l ? '0px 10px 60px 0px '.concat(n.primaryColor.toHexString()) : 'none'
             });
         return (0, i.jsx)(s.animated.div, {
             className: E.carouselCard,
@@ -73,13 +73,13 @@ let I = 70,
 t.Z = () => {
     let { games: e } = (0, p.I9)(8, !0),
         t = r.useMemo(() => [...e, ...e], [e]),
-        [n, a] = r.useState(Math.floor(t.length / 2)),
-        [l, o] = r.useState(f.$N[Math.floor(Math.random() * f.$N.length)]),
+        [n, l] = r.useState(Math.floor(t.length / 2)),
+        [a, o] = r.useState(f.$N[Math.floor(Math.random() * f.$N.length)]),
         h = (0, c.e7)([u.Z], () => u.Z.useReducedMotion);
     r.useEffect(() => {
         if (h) return;
         let e = setInterval(() => {
-            a((n + 1) % t.length), o(f.$N[Math.floor(Math.random() * f.$N.length)]);
+            l((n + 1) % t.length), o(f.$N[Math.floor(Math.random() * f.$N.length)]);
         }, 3000);
         return () => {
             clearInterval(e);
@@ -131,7 +131,7 @@ t.Z = () => {
                                     variant: 'display-lg',
                                     color: 'header-primary',
                                     children: _.intl.format(_.t['82YH1N'], {
-                                        descriptor: l,
+                                        descriptor: a,
                                         gameName: t[n].name,
                                         gameNameHook: (e, r) =>
                                             (0, i.jsx)(

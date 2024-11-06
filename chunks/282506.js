@@ -1,7 +1,7 @@
 let i;
 var r = n(570140),
-    a = n(519938),
-    l = n(317770),
+    l = n(519938),
+    a = n(317770),
     s = n(317381),
     o = n(928518),
     c = n(199902),
@@ -19,7 +19,7 @@ function C() {
     var e;
     let t = i;
     if (null == t || !m.Z.isOpen(t)) return !1;
-    r.Z.wait(() => a.xv(t)), null === (e = p.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), (i = null);
+    r.Z.wait(() => l.xv(t)), null === (e = p.Z.getRTCConnection()) || void 0 === e || e.setPipOpen(!1), (i = null);
 }
 function v() {
     let e = p.Z.getChannelId(),
@@ -46,10 +46,10 @@ function v() {
                   var t;
                   let n = d.Z.getChannel(e);
                   if (null == n || m.Z.isOpen(e)) return !1;
-                  r.Z.wait(() => a.bA(n.id, E.NYg.VIDEO, { channel: n })), null === (t = p.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (i = e);
+                  r.Z.wait(() => l.bA(n.id, E.NYg.VIDEO, { channel: n })), null === (t = p.Z.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), (i = e);
               })(e));
 }
-class S extends l.Z {
+class S extends a.Z {
     _initialize() {
         g.Z.addChangeListener(v), f.Z.addChangeListener(v), p.Z.addChangeListener(v), _.Z.addChangeListener(v), u.Z.addChangeListener(v), c.Z.addChangeListener(v), o.Z.addChangeListener(v), h.Z.addChangeListener(v), s.ZP.addChangeListener(v);
     }

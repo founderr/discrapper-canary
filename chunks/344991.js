@@ -1,6 +1,6 @@
 t.d(n, {
     ZP: function () {
-        return C;
+        return _;
     },
     tE: function () {
         return l;
@@ -19,12 +19,12 @@ var l,
     m = t(970184),
     f = t(280501),
     p = t(388032),
-    h = t(128422),
-    _ = t(601648);
-function x(e) {
+    x = t(128422),
+    h = t(601648);
+function v(e) {
     let { icon: n, iconSize: t } = e;
     return (0, r.jsx)('div', {
-        className: h.iconContainer,
+        className: x.iconContainer,
         style: {
             height: t,
             width: t
@@ -32,68 +32,68 @@ function x(e) {
         children: n
     });
 }
-function C(e) {
+function _(e) {
     let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: C, placeholder: v, maxValues: b, disabled: g } = n,
-        [I, S] = a.useState(!1),
-        [j, y] = a.useState(!1),
-        [E, T] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
-        [N, Z] = a.useState(new Set(E.keys())),
+        { type: _, placeholder: C, maxValues: b, disabled: g } = n,
+        [I, j] = a.useState(!1),
+        [S, N] = a.useState(!1),
+        [T, E] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
+        [y, Z] = a.useState(new Set(T.keys())),
         [k, L] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [O, M] = a.useState(0);
+        [R, O] = a.useState(0);
     a.useEffect(() => {
         let e = (null != o ? o : []).map((e) => e.value);
         if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
         L(e);
         let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        T(n), Z(new Set(n.keys())), M((e) => e + 1);
+        E(n), Z(new Set(n.keys())), O((e) => e + 1);
     }, [o, k]);
     let {
-            state: P,
-            executeStateUpdate: R,
+            state: M,
+            executeStateUpdate: P,
             visualState: B,
             isDisabled: A,
             error: w
         } = (0, m.Ee)(n, {
-            type: C,
-            selectedOptions: Array.from(E.values())
+            type: _,
+            selectedOptions: Array.from(T.values())
         }),
         U = B === f.gH.LOADING;
     a.useEffect(() => {
-        if ((null == P ? void 0 : P.type) === u.re.USER_SELECT || (null == P ? void 0 : P.type) === u.re.ROLE_SELECT || (null == P ? void 0 : P.type) === u.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
-            T(e), Z(new Set(e.keys()));
+        if ((null == M ? void 0 : M.type) === u.re.USER_SELECT || (null == M ? void 0 : M.type) === u.re.ROLE_SELECT || (null == M ? void 0 : M.type) === u.re.MENTIONABLE_SELECT || (null == M ? void 0 : M.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(M.selectedOptions.map((e) => [e.value, e]));
+            E(e), Z(new Set(e.keys()));
         }
-    }, [P]);
+    }, [M]);
     let G = a.useCallback(() => {
-        R({
-            type: C,
-            selectedOptions: Array.from(E.values())
-        }) && Z(new Set(E.keys()));
-    }, [R, C, E]);
+        P({
+            type: _,
+            selectedOptions: Array.from(T.values())
+        }) && Z(new Set(T.keys()));
+    }, [P, _, T]);
     a.useEffect(() => {
-        if (!(I || j || (E.size === N.size && Array.from(E.keys()).every((e) => N.has(e))))) G();
-    }, [I, j, N, E, G]);
-    let H = 0 === E.size || I,
-        D = {
+        if (!(I || S || (T.size === y.size && Array.from(T.keys()).every((e) => y.has(e))))) G();
+    }, [I, S, y, T, G]);
+    let D = 0 === T.size || I,
+        H = {
             isDisabled: g || A,
-            wrapperClassName: h.select,
+            wrapperClassName: x.select,
             options: (e) =>
                 new Promise((n) => {
                     n(t(e));
                 }),
-            placeholder: H ? (null != v ? v : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => S(!1),
-            onOpen: () => S(!0),
-            onBlur: () => y(!1),
+            placeholder: D ? (null != C ? C : p.intl.string(p.t.Otr6W1)) : void 0,
+            onClose: () => j(!1),
+            onOpen: () => j(!0),
+            onBlur: () => N(!1),
             maxVisibleItems: 5,
-            optionClassName: h.__invalid_selectOption,
+            optionClassName: x.__invalid_selectOption,
             renderOptionPrefix: (e, n) => {
                 let { inPill: t } = n,
                     i = t ? 16 : 24,
                     a = l(e, i);
                 return null != a
-                    ? (0, r.jsx)(x, {
+                    ? (0, r.jsx)(v, {
                           icon: a,
                           iconSize: i
                       })
@@ -104,44 +104,44 @@ function C(e) {
     return (0, r.jsxs)(a.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: h.container,
+                className: x.container,
                 children: [
                     b > 1
                         ? (0, r.jsx)(
                               c.SearchableSelect,
                               {
-                                  className: h.badges,
-                                  value: Array.from(E.values()),
+                                  className: x.badges,
+                                  value: Array.from(T.values()),
                                   onChange: (e) => {
-                                      !I && y(!0), T(new Map(e.map((e) => [e.value, e])));
+                                      !I && N(!0), E(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
-                                      [h.soloInput]: 0 === E.size,
-                                      [h.inlineInput]: E.size > 0,
-                                      [h.hidden]: !H
+                                      [x.soloInput]: 0 === T.size,
+                                      [x.inlineInput]: T.size > 0,
+                                      [x.hidden]: !D
                                   }),
                                   closeOnSelect: !1,
                                   centerCaret: !0,
-                                  ...D
+                                  ...H
                               },
-                              O
+                              R
                           )
                         : (0, r.jsx)(
                               c.SearchableSelect,
                               {
-                                  className: (h.badges, h.singleSelect),
-                                  value: [...E.values()][0],
-                                  onChange: (e) => T(null != e ? new Map([[e.value, e]]) : new Map()),
+                                  className: (x.badges, x.singleSelect),
+                                  value: [...T.values()][0],
+                                  onChange: (e) => E(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
                                   centerCaret: !0,
-                                  ...D
+                                  ...H
                               },
-                              O
+                              R
                           ),
                     U
                         ? (0, r.jsx)('div', {
-                              className: h.loading,
+                              className: x.loading,
                               children: (0, r.jsx)(c.Dots, {
                                   dotRadius: 3.5,
                                   themed: !0
@@ -153,7 +153,7 @@ function C(e) {
             null != w
                 ? (0, r.jsx)(d.st, {
                       ...(0, d.c4)(w),
-                      className: _.error
+                      className: h.error
                   })
                 : null
         ]

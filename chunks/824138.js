@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(512722),
     o = n.n(s),
     c = n(481060),
@@ -93,9 +93,9 @@ class T extends r.PureComponent {
             S(this, 'renderPartyMember', (e, t) => {
                 let n;
                 if (null == e) return null;
-                let { host: a, onUserContextMenu: s } = this.props;
+                let { host: l, onUserContextMenu: s } = this.props;
                 return (
-                    (n = (null == a ? void 0 : a.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
+                    (n = (null == l ? void 0 : l.id) === e.id ? C.intl.string(C.t.N9bqDw) : C.intl.string(C.t.Z2Y4c3)),
                     (0, i.jsx)(
                         c.Popout,
                         {
@@ -110,17 +110,17 @@ class T extends r.PureComponent {
                             ),
                             position: 'top',
                             align: 'center',
-                            children: (a) =>
+                            children: (l) =>
                                 (0, i.jsx)(c.Tooltip, {
                                     text: n,
                                     children: (n) => {
                                         let { onMouseEnter: i, onMouseLeave: o } = n;
                                         return (0, r.createElement)(c.Avatar, {
-                                            ...a,
+                                            ...l,
                                             key: e.id,
                                             src: e.getAvatarURL(void 0, 24),
                                             size: c.AvatarSizes.SIZE_24,
-                                            className: l()(v.avatar, t),
+                                            className: a()(v.avatar, t),
                                             'aria-label': e.username,
                                             onMouseEnter: i,
                                             onMouseLeave: o,
@@ -144,7 +144,7 @@ class T extends r.PureComponent {
                                 text: C.intl.string(C.t.Zf4NPT),
                                 children: (r) =>
                                     (0, i.jsx)('div', {
-                                        className: l()(v.overflow, t),
+                                        className: a()(v.overflow, t),
                                         ...r,
                                         ...n,
                                         children: e

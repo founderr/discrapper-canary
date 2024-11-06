@@ -1,8 +1,8 @@
 n(47120);
 var i,
     r,
-    a,
     l,
+    a,
     s = n(442837),
     o = n(433517),
     c = n(570140),
@@ -24,15 +24,15 @@ class _ extends (i = s.ZP.Store) {
         return !f.has(e.id) && null != t && t >= m.U3 && h.Z.can(p.Plq.ADMINISTRATOR, e) && !e.hasFeature(p.oNc.COMMUNITY);
     }
 }
-(l = 'EnablePublicGuildUpsellNoticeStore'),
-    (a = 'displayName') in (r = _)
-        ? Object.defineProperty(r, a, {
-              value: l,
+(a = 'EnablePublicGuildUpsellNoticeStore'),
+    (l = 'displayName') in (r = _)
+        ? Object.defineProperty(r, l, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[a] = l),
+        : (r[l] = a),
     (t.Z = new _(c.Z, {
         PUBLIC_UPSELL_NOTICE_DISMISS: function (e) {
             let t = e.guildId;

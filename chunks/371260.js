@@ -1,7 +1,7 @@
 var i = n(200651),
     r = n(192379),
-    a = n(100621),
-    l = n(442837),
+    l = n(100621),
+    a = n(442837),
     s = n(481060),
     o = n(607070),
     c = n(686907);
@@ -13,7 +13,7 @@ let d = {
 };
 t.Z = function (e) {
     let { animate: t, state: n, cleanUp: u, children: h } = e,
-        m = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+        m = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         p = r.useMemo(() => {
             var e, i, r;
             return (
@@ -39,7 +39,7 @@ t.Z = function (e) {
             );
         }, [t, u, m, n]),
         g = (0, s.useSpring)(p);
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(l.animated.div, {
         style: g,
         className: c.transitionItem,
         children: h

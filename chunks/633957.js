@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(2052),
     s = n(317381),
     c = n(638880),
-    d = n(122613),
-    u = n(527805),
+    u = n(122613),
+    d = n(527805),
     m = n(884338),
     h = n(100527),
     f = n(906732),
@@ -59,7 +59,7 @@ function b(e) {
             let e = new g.Z(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.wT), e;
         }, [n]),
-        w = (0, u.s5)({
+        w = (0, d.s5)({
             userId: y,
             channelId: b,
             application: B
@@ -75,7 +75,7 @@ function b(e) {
         V = null != M && M.isLaunching && M.componentId === G,
         H = async () => {
             U
-                ? await (0, d.Z)({
+                ? await (0, u.Z)({
                       targetApplicationId: n.id,
                       channelId: b,
                       locationObject: Z.location,

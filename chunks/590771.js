@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(571457),
+    l = n(442837),
+    a = n(571457),
     s = n(823379),
     o = n(762692),
     c = n(356164),
@@ -17,12 +17,12 @@ var i = n(200651),
     p = n(128449),
     g = n(731455);
 function f(e) {
-    let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
-        s = (0, a.e7)([c.Z], () => {
+    let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
+        s = (0, l.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds({ categoryId: g.Hk })) && void 0 !== e ? e : p.q5;
         }),
-        d = (0, a.e7)([c.Z], () => {
+        d = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getIsFetching({ categoryId: g.Hk })) || void 0 === e || e;
         });
@@ -36,18 +36,18 @@ function f(e) {
             loading: d,
             onScroll: t,
             onGuildCardSeen: n,
-            onGuildCardClick: l
+            onGuildCardClick: a
         })
     );
 }
 function _(e) {
-    let { tab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: s } = e,
+    let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
         h = (0, d.lg)(t),
-        m = (0, a.e7)([c.Z], () => {
+        m = (0, l.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : p.q5;
         }),
-        g = (0, a.e7)([c.Z], () => {
+        g = (0, l.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getIsFetching({ categoryId: h })) || void 0 === e || e;
         });
@@ -60,17 +60,17 @@ function _(e) {
             guildIds: m,
             loading: g,
             onScroll: n,
-            onGuildCardSeen: l,
+            onGuildCardSeen: a,
             onGuildCardClick: s
         })
     );
 }
 function E(e) {
-    let { selectedTab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: o } = e;
+    let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
     switch (
         (r.useEffect(() => {
             let e = (0, d.lg)(t);
-            (0, l.kR)({ selectedCategoryId: e });
+            (0, a.kR)({ selectedCategoryId: e });
         }, [t]),
         t)
     ) {
@@ -79,7 +79,7 @@ function E(e) {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: o,
-                onGuildCardSeen: a
+                onGuildCardSeen: l
             });
         case p.vf.GAMING:
         case p.vf.MUSIC:
@@ -92,7 +92,7 @@ function E(e) {
                     tab: t,
                     onScroll: n,
                     onGuildCardClick: o,
-                    onGuildCardSeen: a
+                    onGuildCardSeen: l
                 },
                 t
             );

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     r = n(192379),
-    a = n(100621),
-    l = n(481060),
+    l = n(100621),
+    a = n(481060),
     s = n(532490),
     o = n(620929),
     c = n(388032),
@@ -38,7 +38,7 @@ function u(e) {
                   p(
                       (e, t) =>
                           t &&
-                          (0, i.jsx)(a.animated.div, {
+                          (0, i.jsx)(l.animated.div, {
                               className: d.sidebarLeftDecorationContainer,
                               style: {
                                   opacity: e.opacity,
@@ -49,12 +49,12 @@ function u(e) {
                                   className: d.sidebarLeftDecoration,
                                   style: { width: f },
                                   children: [
-                                      (0, i.jsx)(l.Heading, {
+                                      (0, i.jsx)(a.Heading, {
                                           variant: 'heading-xxl/medium',
                                           className: d.header,
                                           children: c.intl.string(c.t.PAYPxM)
                                       }),
-                                      (0, i.jsx)(l.Text, {
+                                      (0, i.jsx)(a.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
                                           children: c.intl.string(c.t.GKxdeX)

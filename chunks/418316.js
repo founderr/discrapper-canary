@@ -11,20 +11,20 @@ var r = n(430824),
     o = n(624138),
     s = n(51144),
     c = n(497089),
-    d = n(981631),
-    u = n(388032);
+    u = n(981631),
+    d = n(388032);
 function m(e) {
     var t, n, m, h, f, p, g, _, C, E, I, x, v, N, T;
-    let S = null !== (m = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== m ? m : d.lds,
+    let S = null !== (m = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== m ? m : u.lds,
         b = s.ZP.getName(a.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
         case c.O7.INCOMING_FRIEND_REQUESTS:
-            return u.intl.formatToPlainString(u.t.uIomX1, { username: '**'.concat(b, '**') });
+            return d.intl.formatToPlainString(d.t.uIomX1, { username: '**'.concat(b, '**') });
         case c.O7.FRIEND_REQUESTS_GROUPED:
             let A = s.ZP.getName(a.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (h = f[0]) || void 0 === h ? void 0 : h.id)),
                 j = s.ZP.getName(a.default.getUser(null === (g = e.other_users) || void 0 === g ? void 0 : null === (p = g[1]) || void 0 === p ? void 0 : p.id)),
                 Z = Math.max((null !== (C = null === (_ = e.other_users) || void 0 === _ ? void 0 : _.length) && void 0 !== C ? C : 0) - 2, 0);
-            return u.intl.format(u.t.g5xyIC, {
+            return d.intl.format(d.t.g5xyIC, {
                 user: A,
                 user2: j,
                 count: Z
@@ -33,7 +33,7 @@ function m(e) {
             let R = null !== (I = null === (E = e.local_id) || void 0 === E ? void 0 : E.split('_').pop()) && void 0 !== I ? I : 'unknown';
             return 'Update to build '.concat(R, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
-            let P = l.Z.getRelationshipType(S) === d.OGo.PENDING_OUTGOING;
+            let P = l.Z.getRelationshipType(S) === u.OGo.PENDING_OUTGOING;
             return null !== (x = e.body) && void 0 !== x ? x : '';
         case c.DY.GUILD_SCHEDULED_EVENT_STARTED:
             let y = e.guild_scheduled_event_id,
@@ -45,12 +45,12 @@ function m(e) {
                 ? null !== (N = e.body) && void 0 !== N
                     ? N
                     : ''
-                : u.intl.format(u.t.AyvfXV, {
+                : d.intl.format(d.t.AyvfXV, {
                       event_name: O,
                       guild_name: M
                   });
         case c.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
-            return u.intl.formatToPlainString(u.t['5Uzkdn'], { username: '**'.concat(b, '**') });
+            return d.intl.formatToPlainString(d.t['5Uzkdn'], { username: '**'.concat(b, '**') });
     }
     return null !== (T = e.body) && void 0 !== T ? T : '';
 }

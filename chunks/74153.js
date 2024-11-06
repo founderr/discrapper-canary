@@ -1,8 +1,8 @@
 n(653041), n(47120);
 var i = n(200651),
     r = n(192379),
-    a = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     s = n(16084),
     o = n(730749),
     c = n(812206),
@@ -46,7 +46,7 @@ class f extends r.PureComponent {
                     label: e.name
                 });
         }
-        return (0, i.jsx)(l.Breadcrumbs, {
+        return (0, i.jsx)(a.Breadcrumbs, {
             renderCustomBreadcrumb: this.renderCustomBreadcrumb,
             onBreadcrumbClick: this.handleClick,
             breadcrumbs: n,
@@ -77,7 +77,7 @@ class f extends r.PureComponent {
     }
 }
 t.Z = (0, o.Z)(
-    a.ZP.connectStores([c.Z, h.Z], (e) => {
+    l.ZP.connectStores([c.Z, h.Z], (e) => {
         let { sku: t } = e,
             n = null != t ? c.Z.getApplication(t.applicationId) : null,
             i = null != n && null != n.primarySkuId && n.primarySkuId !== t.id ? n.primarySkuId : null;

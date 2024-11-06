@@ -16,11 +16,11 @@ var l = t(200651),
     m = t(551428),
     f = t(74538),
     p = t(937615),
-    h = t(147496),
-    _ = t(519896),
-    x = t(981631),
-    C = t(388032);
-let v = (0, r.Kb)([d.Z, u.Z, m.Z], {
+    x = t(147496),
+    h = t(519896),
+    v = t(981631),
+    _ = t(388032);
+let C = (0, r.Kb)([d.Z, u.Z, m.Z], {
     queryId: (e) => (null != e ? ['premium-button', e] : null),
     get: (e) => {
         var n;
@@ -29,7 +29,7 @@ let v = (0, r.Kb)([d.Z, u.Z, m.Z], {
             l = null !== (n = u.Z.getForSKU(e)) && void 0 !== n ? n : [],
             i = m.Z.getForSKU(e),
             r = d.Z.getParentSKU(e);
-        if (null != t && null != i && (null == t || t.type !== x.epS.SUBSCRIPTION || null != r))
+        if (null != t && null != i && (null == t || t.type !== v.epS.SUBSCRIPTION || null != r))
             return {
                 parentSku: r,
                 sku: t,
@@ -39,7 +39,7 @@ let v = (0, r.Kb)([d.Z, u.Z, m.Z], {
     },
     load: async (e, n) => {
         if (null == n) return;
-        let t = { url: x.ANM.STOREFRONT_PREMIUM_BUTTON(n) },
+        let t = { url: v.ANM.STOREFRONT_PREMIUM_BUTTON(n) },
             { body: l } = await a.tn.get(t);
         s.Z.dispatch({
             type: 'STORE_LISTINGS_FETCH_SUCCESS',
@@ -62,7 +62,7 @@ let v = (0, r.Kb)([d.Z, u.Z, m.Z], {
     useStateHook: r.cj
 });
 function b(e) {
-    let { data: n } = v(e),
+    let { data: n } = C(e),
         t = null == n ? void 0 : n.parentSku,
         r = null == n ? void 0 : n.sku,
         a = null == n ? void 0 : n.storeListing,
@@ -71,7 +71,7 @@ function b(e) {
             if ((null == r ? void 0 : r.applicationId) == null || (null == r ? void 0 : r.id) == null || (null == r ? void 0 : r.flags) == null) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(_.SubscriptionDetailsModal, {
+                return (0, l.jsx)(h.SubscriptionDetailsModal, {
                     appId: r.applicationId,
                     subscriptionType: (0, c.KW)(r.flags) ? 'user' : 'guild',
                     onClose: n,
@@ -85,7 +85,7 @@ function b(e) {
             if (null == r) return null;
             (0, o.openModal)((e) => {
                 let { onClose: n, transitionState: t } = e;
-                return (0, l.jsx)(h.ItemDetailsModal, {
+                return (0, l.jsx)(x.ItemDetailsModal, {
                     appId: r.applicationId,
                     skuId: r.id,
                     onClose: n,
@@ -93,23 +93,23 @@ function b(e) {
                 });
             });
         }, [r]);
-    if (null != r && null != a && (null == r || r.type !== x.epS.SUBSCRIPTION || null != t)) {
+    if (null != r && null != a && (null == r || r.type !== v.epS.SUBSCRIPTION || null != t)) {
         if (null == e || (null != r && !r.available))
             return {
                 disabled: !0,
-                label: C.intl.string(C.t.CHa0vL)
+                label: _.intl.string(_.t.CHa0vL)
             };
-        if (r.type === x.epS.SUBSCRIPTION) {
+        if (r.type === v.epS.SUBSCRIPTION) {
             if (null == s || 0 === s.length)
                 return {
                     disabled: !0,
-                    label: C.intl.string(C.t.CHa0vL)
+                    label: _.intl.string(_.t.CHa0vL)
                 };
             let e = s[0],
                 n = (0, f.aS)(e.id);
             return {
                 disabled: !1,
-                label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
+                label: _.intl.formatToPlainString(_.t['c6Q+Bw'], {
                     skuName: r.name,
                     price: (0, p.T4)(n.amount, n.currency)
                 }),
@@ -119,11 +119,11 @@ function b(e) {
         return null == r.price
             ? {
                   disabled: !0,
-                  label: C.intl.string(C.t.CHa0vL)
+                  label: _.intl.string(_.t.CHa0vL)
               }
             : {
                   disabled: !1,
-                  label: C.intl.formatToPlainString(C.t['c6Q+Bw'], {
+                  label: _.intl.formatToPlainString(_.t['c6Q+Bw'], {
                       skuName: r.name,
                       price: (0, p.T4)(r.price.amount, r.price.currency)
                   }),
