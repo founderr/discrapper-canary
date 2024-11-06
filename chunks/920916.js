@@ -85,8 +85,6 @@ function P(e) {
                           : (0, r.jsx)(U, {
                                 quest: l,
                                 user: N,
-                                primaryColor: l.config.colors.primary,
-                                secondaryColor: l.config.colors.secondary,
                                 decoration: h,
                                 decorationName: _.messages.name,
                                 backgroundUrl: R.url,
@@ -131,14 +129,14 @@ function k(e) {
     });
 }
 function U(e) {
-    let { quest: t, user: n, decoration: i, decorationName: a, primaryColor: s, secondaryColor: o, backgroundUrl: l, isSaving: u, onClose: d, onConfirm: f } = e,
-        _ = (0, N.Kr)(t.config),
-        p =
-            null == _
+    let { quest: t, user: n, decoration: i, decorationName: a, backgroundUrl: s, isSaving: o, onClose: l, onConfirm: u } = e,
+        d = (0, N.Kr)(t.config),
+        f =
+            null == d
                 ? x.intl.formatToPlainString(x.t.l9uXLy, { decorationName: a })
                 : x.intl.formatToPlainString(x.t.tTlItr, {
                       decorationName: a,
-                      duration: _
+                      duration: d
                   });
     return (0, r.jsxs)('div', {
         className: w.claimedRootContainer,
@@ -153,7 +151,7 @@ function U(e) {
                         muted: !0,
                         playsInline: !0,
                         controls: !1,
-                        poster: l
+                        poster: s
                     }),
                     (0, r.jsxs)('div', {
                         className: w.headerForeground,
@@ -169,7 +167,7 @@ function U(e) {
                             (0, r.jsx)(c.ModalCloseButton, {
                                 className: w.close,
                                 withCircleBackground: !0,
-                                onClick: d
+                                onClick: l
                             })
                         ]
                     })
@@ -180,7 +178,6 @@ function U(e) {
                 separator: !1,
                 children: (0, r.jsxs)('div', {
                     className: w.gradient,
-                    style: { backgroundImage: 'linear-gradient(180deg, '.concat(s, ', ').concat(o, ')') },
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: 'heading-lg/bold',
@@ -192,11 +189,11 @@ function U(e) {
                             variant: 'text-sm/normal',
                             color: 'always-white',
                             className: w.text,
-                            children: p
+                            children: f
                         }),
                         (0, r.jsx)(c.Button, {
-                            submitting: u,
-                            onClick: f,
+                            submitting: o,
+                            onClick: u,
                             children: x.intl.string(x.t.MAS7uL)
                         }),
                         (0, N.zK)(t, D.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(k, { quest: t })
