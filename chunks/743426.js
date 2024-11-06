@@ -57,6 +57,8 @@ class v extends s.Z {
                 return (0, d.eJ)(p.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
             case p.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
                 return (0, d.eJ)(p.eR.VOICE_AUTOMATIC_SUBSYSTEM);
+            case p.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
+                return (0, d.eJ)(p.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
             case p.AN.DEBUG_LOGGING:
                 return (0, d.eJ)(p.eR.DEBUG_LOGGING);
             case p.AN.SOUNDSHARE:
@@ -363,6 +365,10 @@ class v extends s.Z {
     }
     setAudioSubsystem(e) {
         null != (0, d.zS)().setAudioSubsystem ? (0, d.zS)().setAudioSubsystem(e) : (0, d.zS)().setUseLegacyAudioDevice(e === p.iA.LEGACY);
+    }
+    queueAudioSubsystem(e) {
+        let t = (0, d.zS)();
+        null != t.queueAudioSubsystem ? t.queueAudioSubsystem(e) : this.setAudioSubsystem(e);
     }
     getAudioSubsystem() {
         return this.audioSubsystem;

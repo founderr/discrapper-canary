@@ -107,6 +107,7 @@ class u extends r.Z {
         return Promise.reject(Error('UNSUPPORTED'));
     }
     setAudioSubsystem(e) {}
+    queueAudioSubsystem(e) {}
     getDebugLogging() {
         return !1;
     }

@@ -85,6 +85,7 @@ class C extends l.Z {
             case b.AN.LEGACY_AUDIO_SUBSYSTEM:
             case b.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
             case b.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
+            case b.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
             case b.AN.DEBUG_LOGGING:
             case b.AN.VOICE_PANNING:
             case b.AN.AUTO_ENABLE:
@@ -210,6 +211,7 @@ class C extends l.Z {
     }
     setSoundshareSource(e, t, n) {}
     setAudioSubsystem(e) {}
+    queueAudioSubsystem(e) {}
     getAudioSubsystem() {
         return b.iA.STANDARD;
     }

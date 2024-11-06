@@ -502,8 +502,10 @@ function tT(e) {
     e === e_.iA.AUTOMATIC ? (tl({ automaticAudioSubsystem: !0 }), tb()) : (tl({ automaticAudioSubsystem: !1 }), eT.setAudioSubsystem(e));
 }
 function tb() {
-    let { enabled: e } = G.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' });
-    e ? eT.setAudioSubsystem(e_.iA.EXPERIMENTAL) : eT.setAudioSubsystem(e_.iA.STANDARD);
+    if (eT.supports(e_.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH)) {
+        let { enabled: e } = G.I.getCurrentConfig({ location: 'interpretAutomaticAudioSubsystem' });
+        e ? eT.queueAudioSubsystem(e_.iA.EXPERIMENTAL) : eT.queueAudioSubsystem(e_.iA.STANDARD);
+    } else eT.setAudioSubsystem(e_.iA.STANDARD);
 }
 function ty(e) {
     let { section: t } = e;
