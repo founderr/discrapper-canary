@@ -19,9 +19,9 @@ var i = n(192379),
     m = n(731455);
 function p(e) {
     let { loadId: t } = e,
-        n = (0, c.NL)(),
-        l = (0, c.lZ)(),
-        a = (0, c.Dm)(),
+        n = c.Z.useField('fetchedQuery'),
+        l = c.Z.useField('categoryId'),
+        a = c.Z.useField('languageCode'),
         s = i.useMemo(
             () => ({
                 categoryId: l,
@@ -42,25 +42,24 @@ function p(e) {
             var e;
             return null === (e = o.Z.getIsBlocked(n)) || void 0 === e || e;
         }),
-        g = (0, c.$G)(),
+        g = c.Z.useField('resultsQuery'),
         f = g !== n,
         _ = i.useCallback(() => {
-            let e = (0, c.Zq)(),
-                n = (0, c.lx)(),
-                i = o.Z.getGuildIds(s),
-                r = o.Z.getTotal(s);
-            if (null == i || null == r) return;
-            let l = o.Z.getIsFetching(s),
-                a = o.Z.getIsInitialFetchComplete(s);
-            if (l || !a || i.length >= r) return;
-            let u = (0, c.a7)();
-            (0, d.CD)({
-                loadId: t,
-                categoryId: n,
-                offset: i.length,
-                query: e,
-                languageCode: u
-            });
+            let e = o.Z.getGuildIds(s),
+                n = o.Z.getTotal(s);
+            if (null == e || null == n) return;
+            let i = o.Z.getIsFetching(s),
+                r = o.Z.getIsInitialFetchComplete(s);
+            !i &&
+                r &&
+                !(e.length >= n) &&
+                (0, d.CD)({
+                    loadId: t,
+                    offset: e.length,
+                    categoryId: c.Z.getField('categoryId'),
+                    query: c.Z.getField('fetchedQuery'),
+                    languageCode: c.Z.getField('languageCode')
+                });
         }, [t, s]);
     return i.useMemo(
         () => ({
@@ -77,18 +76,18 @@ function p(e) {
 function g(e) {
     let { loadId: t } = e,
         n = u.Z.useField('isSearchVisible'),
-        r = (0, c.A3)();
+        r = c.Z.useField('query');
     i.useEffect(() => {
         s.Z.createAlgoliaIndex(), (0, l.le)();
     }, []);
     let o = i.useCallback((e) => {
-            (0, c.LD)({ query: e });
+            c.Z.setState({ query: e });
         }, []),
         h = i.useCallback(() => {
             a.IZ(t),
                 s.Z.clearAlgoliaSearchResults(),
                 s.Z.resetSearchLayout(),
-                (0, c.LD)({
+                c.Z.setState({
                     query: '',
                     fetchedQuery: '',
                     resultsQuery: '',
@@ -103,13 +102,13 @@ function g(e) {
         onSearchTextChange: o,
         onClearSearch: h,
         onSearchSubmit: i.useCallback(() => {
-            let e = (0, c.uP)(),
-                n = (0, c.Zq)();
+            let e = c.Z.getField('query'),
+                n = c.Z.getField('fetchedQuery');
             if ('' === e.trim() || e === n) return;
             s.Z.clearAlgoliaSearchResults();
-            let i = (0, c.a7)(),
-                r = (0, c.lx)();
-            (0, c.LD)({ resultsInitialCategoryId: r }),
+            let i = c.Z.getField('languageCode'),
+                r = c.Z.getField('categoryId');
+            c.Z.setState({ resultsInitialCategoryId: r }),
                 u.Z.setState({ isSearchVisible: !0 }),
                 (0, d.NL)({
                     loadId: t,
