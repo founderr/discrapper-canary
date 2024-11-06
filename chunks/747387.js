@@ -38,22 +38,24 @@ t.Z = (e) => {
             },
             [t]
         ),
-        T = i.useCallback(() => {
-            var e, t;
-            null != m && '' !== m && null != S.current && (null === (e = S.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && (null === (t = S.current) || void 0 === t || t.execute());
-        }, [m, S, x]),
         P = i.useCallback(() => {
-            !I && (O('initial-load'), L('initial-load'), j(!0)), T();
-        }, [L, I, O, T]);
+            if (t === p.hP.HCAPTCHA) {
+                var e, n;
+                null != m && '' !== m && null != S.current && (null === (e = S.current) || void 0 === e || e.setData({ rqdata: m })), 'invisible' === x && null != S.current && (null === (n = S.current) || void 0 === n || n.execute());
+            }
+        }, [m, S, x, t]),
+        T = i.useCallback(() => {
+            !I && (O('initial-load'), L('initial-load'), j(!0)), P();
+        }, [L, I, O, P]);
     i.useEffect(() => {
-        T();
-    }, [T]),
+        P();
+    }, [P]),
         i.useEffect(() => {
-            P();
-        }, [P]);
+            T();
+        }, [T]);
     let V = i.useCallback(() => {
-            O('error'), L('error'), T(), null == E || E();
-        }, [O, L, T, E]),
+            O('error'), L('error'), P(), null == E || E();
+        }, [O, L, P, E]),
         N = i.useCallback(
             (e) => {
                 O('verify'), L('verify'), C(e);
@@ -67,15 +69,15 @@ t.Z = (e) => {
             O('open'), L('open'), (0, h.emitCaptchaDistributionMetric)(A, g), null == b || b();
         }, [L, A, b, O, g]),
         M = i.useCallback(() => {
-            O('close'), null == _ || _(), T();
-        }, [_, O, T]),
-        K = i.useCallback(() => {
+            O('close'), null == _ || _(), P();
+        }, [_, O, P]),
+        H = i.useCallback(() => {
             O('chal-expire'), null == R || R();
         }, [R, O]);
     return ((null == n || '' === n) && (n = v.OL7), t === p.hP.RECAPTCHA)
         ? (0, r.jsx)(c.Z, {
               ...w,
-              onLoad: P,
+              onLoad: T,
               onRender: Z,
               onVerify: N,
               onError: V,
@@ -84,7 +86,7 @@ t.Z = (e) => {
         : t === p.hP.RECAPTCHA_ENTERPRISE
           ? (0, r.jsx)(f._, {
                 ...w,
-                onLoad: P,
+                onLoad: T,
                 onRender: Z,
                 onVerify: N,
                 onError: V,
@@ -96,18 +98,19 @@ t.Z = (e) => {
                   ref: S,
                   ...w,
                   sitekey: n,
-                  onLoad: P,
+                  onLoad: T,
                   onError: V,
                   onVerify: N,
-                  onChalExpired: K,
+                  onChalExpired: H,
                   onOpen: D,
                   onClose: M,
-                  size: x
+                  size: x,
+                  reCaptchaCompat: !1
               })
             : (0, r.jsx)(c.Z, {
                   ...w,
                   sitekey: n,
-                  onLoad: P,
+                  onLoad: T,
                   onRender: Z,
                   onVerify: N,
                   onError: V
