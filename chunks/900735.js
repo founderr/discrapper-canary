@@ -11,9 +11,10 @@ var l = n(699516),
     i = n(70956),
     o = n(869031),
     r = n(981631);
-let s = 2 * i.Z.Millis.WEEK,
-    c = 4 * i.Z.Millis.WEEK,
+let s = i.Z.Millis.WEEK,
+    c = i.Z.Millis.DAYS_30,
     u = () => {
+        if (Math.random() >= 0.1) return !1;
         let e = l.Z.getSinces();
         return (
             !!Object.keys(e).some((t) => {
