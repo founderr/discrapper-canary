@@ -89,7 +89,8 @@ let d = (0, o.ZP)()(
                 volume: e.volume,
                 muted: e.muted,
                 videoProgress: e.videoProgress
-            })
+            }),
+            version: 0
         }
     )
 );
