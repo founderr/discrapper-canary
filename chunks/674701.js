@@ -19,8 +19,8 @@ var i,
     h = n(493683),
     f = n(529103),
     p = n(700582),
-    g = n(906732),
-    _ = n(213609),
+    _ = n(906732),
+    g = n(213609),
     E = n(541716),
     C = n(28546),
     I = n(963249),
@@ -41,10 +41,10 @@ var i,
 function M(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: i, onMouseEnter: r, onMouseLeave: o, popoutPosition: M, analyticsPage: k, analyticsSection: D, glow: B, giftIntentSecondaryAction: U } = e,
         w = (0, u.e7)([N.default], () => N.default.getCurrentUser()),
-        { analyticsLocations: F } = (0, g.ZP)(),
+        { analyticsLocations: F } = (0, _.ZP)(),
         G = (0, u.e7)([b.Z], () => b.Z.getFriendAnniversaryYears(i.id));
     a.useEffect(() => {
-        (0, _.h)({
+        (0, g.h)({
             name: c.ImpressionNames.GIFT_INTENT_CARD,
             type: c.ImpressionTypes.VIEW,
             properties: {
@@ -65,7 +65,9 @@ function M(e) {
         Y = H ? O.subHeaderTextCoachmark : O.subHeaderText,
         X = H ? m.Button.Colors.BRAND : m.Button.Colors.WHITE,
         Q = H ? d.Z.colors.WHITE : d.Z.colors.BG_BRAND,
-        q = H ? O.buttonTextPrimaryCoachmark : O.buttonTextPrimary;
+        q = H ? O.buttonTextPrimaryCoachmark : O.buttonTextPrimary,
+        J = H ? O.buttonSecondaryCoachmark : O.buttonSecondary,
+        $ = H ? O.buttonTextSecondaryCoachmark : O.buttonTextSecondary;
     return (0, l.jsx)('div', {
         className: s()(O.content, {
             [O.outerGlow]: B,
@@ -126,7 +128,7 @@ function M(e) {
                     children: [
                         null != U &&
                             (0, l.jsx)(m.Button, {
-                                className: s()(O.button, O.buttonSecondary),
+                                className: s()(O.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
                                         v.default.track(R.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
@@ -153,7 +155,7 @@ function M(e) {
                                     className: O.buttonContentContainer,
                                     children: (0, l.jsx)(m.Text, {
                                         variant: 'text-sm/medium',
-                                        className: s()(O.buttonText, O.buttonTextSecondary),
+                                        className: s()(O.buttonText, $),
                                         children: (() => {
                                             switch (U) {
                                                 case Z.X2.VIEW_ALL:
