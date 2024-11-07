@@ -44,8 +44,8 @@ function T(e) {
                 (0, r.showToast)((0, r.createToast)(j.intl.string(j.t['+5kSoa']), r.ToastType.SUCCESS));
         }, [e.quest, e.questContent, e.questContentPosition]),
         M = (e) => (0, r.showToast)((0, r.createToast)(new a.Z(e, e.status).message, r.ToastType.FAILURE)),
-        L = () => (0, d.is)(e.quest.id).catch(M),
-        Z = s.useMemo(() => (f ? j.t.hvVgAQ : j.t.lwQdjI), [f]);
+        Z = () => (0, d.is)(e.quest.id).catch(M),
+        L = s.useMemo(() => (f ? j.t.hvVgAQ : j.t.lwQdjI), [f]);
     return (0, i.jsxs)(r.Menu, {
         variant: 'fixed',
         onSelect: () => {
@@ -62,7 +62,7 @@ function T(e) {
                         !1 === T &&
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'play-game',
-                                label: j.intl.string(Z),
+                                label: j.intl.string(L),
                                 action: b,
                                 icon: r.LinkExternalMediumIcon
                             }),
@@ -84,7 +84,7 @@ function T(e) {
                         !e.hideLearnMore &&
                             (0, i.jsx)(r.MenuItem, {
                                 id: 'learn-more',
-                                label: j.intl.string(j.t.LLLLPD),
+                                label: j.intl.string(j.t['0SzXmp']),
                                 action: () => {
                                     (0, c._3)({
                                         questId: e.quest.id,
@@ -93,7 +93,8 @@ function T(e) {
                                         questContentCTA: c.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
                                         (0, g.navigateToQuestHome)(p.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
-                                }
+                                },
+                                icon: r.QuestsIcon
                             }),
                         e.shouldShowDisclosure &&
                             (0, i.jsx)(r.MenuItem, {
@@ -150,7 +151,7 @@ function T(e) {
                                 id: 'enrollment',
                                 label: 'Reset Quest',
                                 action: () => {
-                                    A(), L();
+                                    A(), Z();
                                 }
                             }),
                             (0, i.jsx)(r.MenuItem, {
@@ -183,7 +184,7 @@ function T(e) {
                                         (0, i.jsx)(r.MenuItem, {
                                             id: 'stop',
                                             label: 'Stop heartbeat',
-                                            action: L
+                                            action: Z
                                         })
                                     ]
                                 })
