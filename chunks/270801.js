@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(313201),
-    r = n(388032),
+    r = n(313201),
+    a = n(388032),
     s = n(780735);
 let o = () =>
     n
@@ -13,7 +13,7 @@ let o = () =>
             return t;
         });
 t.Z = (e) => {
-    let t = (0, a.Dt)();
+    let t = (0, r.Dt)();
     return (0, i.jsxs)(l.ModalRoot, {
         ...e,
         transitionState: e.transitionState,
@@ -34,19 +34,19 @@ t.Z = (e) => {
                             variant: 'heading-xl/semibold',
                             className: s.header,
                             id: t,
-                            children: r.intl.format(r.t.z9qozM, { guildName: e.guildName })
+                            children: a.intl.format(a.t.z9qozM, { guildName: e.guildName })
                         }),
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            children: r.intl.string(r.t.nwpqyc)
+                            children: a.intl.string(a.t.nwpqyc)
                         }),
                         (0, i.jsx)(l.Button, {
                             className: s.button,
                             onClick: () => {
                                 e.onAccept(), e.onClose();
                             },
-                            children: r.intl.string(r.t.NuzmOD)
+                            children: a.intl.string(a.t.NuzmOD)
                         })
                     ]
                 })

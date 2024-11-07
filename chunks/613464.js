@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(749210),
@@ -27,7 +27,7 @@ var i = n(200651),
     b = n(327250),
     N = n(7340);
 function Z(e) {
-    let { userId: t, guildId: n, onClose: a, className: Z, infoPanelClassName: T, style: S } = e,
+    let { userId: t, guildId: n, onClose: r, className: Z, infoPanelClassName: S, style: T } = e,
         j = (0, I.ms)(n),
         A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
         y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
@@ -38,23 +38,23 @@ function Z(e) {
         O = (0, g.ZP)(t, n),
         D = (0, u.ZP)();
     return (l.useEffect(() => {
-        !j && a();
-    }, [j, a]),
+        !j && r();
+    }, [j, r]),
     l.useEffect(() => {
-        null != R && null == y && !P && a();
-    }, [P, y, a, R]),
+        null != R && null == y && !P && r();
+    }, [P, y, r, R]),
     l.useEffect(() => {
         null != A && null != y && M(!1);
     }, [A, y]),
     l.useEffect(() => {
         let e = null == y;
         return (
-            !P && e && (L.current = window.setTimeout(a, 500)),
+            !P && e && (L.current = window.setTimeout(r, 500)),
             () => {
                 null != L.current && window.clearTimeout(L.current);
             }
         );
-    }, [P, y, a]),
+    }, [P, y, r]),
     (0, h.$)({ [n]: [t] }),
     l.useEffect(() => {
         (async function e() {
@@ -72,8 +72,8 @@ function Z(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: r()(N.sidebarContainer, N.loadingContainer, Z),
-                  style: S,
+                  className: a()(N.sidebarContainer, N.loadingContainer, Z),
+                  style: T,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
                       type: P ? o.Spinner.Type.SPINNING_CIRCLE : o.Spinner.Type.CHASING_DOTS
@@ -82,8 +82,8 @@ function Z(e) {
             : (0, i.jsx)(m.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: r()(N.sidebarContainer, Z),
-                      style: S,
+                      className: a()(N.sidebarContainer, Z),
+                      style: T,
                       children: (0, i.jsx)(x.Z, {
                           user: A,
                           displayProfile: O,
@@ -97,13 +97,13 @@ function Z(e) {
                                   (0, i.jsx)(b.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a
+                                      onClose: r
                                   }),
                                   (0, i.jsx)(E.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a,
-                                      className: T
+                                      onClose: r,
+                                      className: S
                                   })
                               ]
                           })

@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(808326);
 t.Z = o.forwardRef((e, t) => {
     let { quest: n, percentComplete: o, size: i = 42, strokeWidth: m = 3, glowBlur: p = 0.4, percentCompleteText: f, percentCompleteTextVariant: v = 'text-lg/medium', children: C } = e,
-        x = (0, c.E)(n, o > 0),
-        g = i / 2,
+        g = (0, c.E)(n, o > 0),
+        x = i / 2,
         h = i / 2 - m / 2,
         E = 2 * Math.PI * h,
         S = E - o * E,
@@ -22,7 +22,7 @@ t.Z = o.forwardRef((e, t) => {
             strokeDasharray: ''.concat(E, ' ').concat(E),
             strokeDashoffset: -o * E
         },
-        T = { boxShadow: '0 0 30px 0px '.concat(x.glow) },
+        T = { boxShadow: '0 0 30px 0px '.concat(g.glow) },
         { progressTextAnimation: N } = (0, s.useSpring)({
             progressTextAnimation: null != f && 1 !== o ? 1 : 0,
             config: u.Y
@@ -79,11 +79,11 @@ t.Z = o.forwardRef((e, t) => {
                                 children: [
                                     (0, r.jsx)('stop', {
                                         offset: '0%',
-                                        stopColor: x.backgroundTop
+                                        stopColor: g.backgroundTop
                                     }),
                                     (0, r.jsx)('stop', {
                                         offset: '100%',
-                                        stopColor: x.backgroundBottom
+                                        stopColor: g.backgroundBottom
                                     })
                                 ]
                             })
@@ -94,8 +94,8 @@ t.Z = o.forwardRef((e, t) => {
                         strokeWidth: m,
                         fill: 'transparent',
                         r: h,
-                        cx: g,
-                        cy: g,
+                        cx: x,
+                        cy: x,
                         stroke: 'url(#linear)',
                         style: j
                     }),
@@ -104,9 +104,9 @@ t.Z = o.forwardRef((e, t) => {
                         strokeWidth: m,
                         fill: 'transparent',
                         r: h,
-                        cx: g,
-                        cy: g,
-                        stroke: x.foreground,
+                        cx: x,
+                        cy: x,
+                        stroke: g.foreground,
                         style: _
                     })
                 ]

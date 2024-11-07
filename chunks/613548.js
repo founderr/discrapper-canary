@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(848246),
@@ -27,8 +27,8 @@ var i = n(200651),
     b = n(2818),
     N = n(954551),
     Z = n(44136),
-    T = n(651183),
-    S = n(618158),
+    S = n(651183),
+    T = n(618158),
     j = n(390322),
     A = n(616286),
     y = n(961048),
@@ -68,10 +68,10 @@ function W(e) {
                           position: 'bottom',
                           color: u.Tooltip.Colors.GREY,
                           text: V.intl.formatToPlainString(V.t.JjdizM, { username: e.user.username }),
-                          children: (a) =>
+                          children: (r) =>
                               (0, i.jsx)(k.ZP, {
-                                  ...a,
-                                  className: r()(z.speaker, { [z.last]: t === l.length - 1 }),
+                                  ...r,
+                                  className: a()(z.speaker, { [z.last]: t === l.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -84,7 +84,7 @@ function W(e) {
           });
 }
 function K(e) {
-    let { inPopout: t, channel: n, appContext: a, inCall: r, isChatOpen: s, exitFullScreen: o } = e,
+    let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
         Z = n.id,
         {
             voiceParticipantsHidden: k,
@@ -106,7 +106,7 @@ function K(e) {
         J = (0, v.lL)('CallHeader', !0, K, X),
         { enabled: Q, inInbox: $ } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
         ee = (0, f.Q)('ChannelCallHeaderToolbar'),
-        { preventIdle: et, allowIdle: en } = (0, S.Y)('popup'),
+        { preventIdle: et, allowIdle: en } = (0, T.Y)('popup'),
         ei = [];
     if (Y) {
         let e = (null == O ? void 0 : O.type) === G.fO.STREAM ? (0, g.my)(O.id) : void 0,
@@ -151,7 +151,7 @@ function K(e) {
         (null == O ? void 0 : O.type) === G.fO.STREAM &&
             (ei.push(
                 (0, i.jsx)(
-                    T.Z,
+                    S.Z,
                     {
                         className: z.button,
                         participant: O
@@ -193,7 +193,7 @@ function K(e) {
                     'call-members-popout'
                 )
             ),
-        r &&
+        a &&
             ei.push(
                 null != O
                     ? (0, i.jsx)(
@@ -239,7 +239,7 @@ function K(e) {
                             children: (0, i.jsx)(U.Z, {
                                 channelId: Z,
                                 onClose: t,
-                                appContext: a,
+                                appContext: r,
                                 exitFullScreen: o
                             })
                         });

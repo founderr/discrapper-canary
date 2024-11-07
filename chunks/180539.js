@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(816782),
+    r = n(481060),
+    a = n(816782),
     s = n(221292),
     o = n(687158),
     c = n(646915),
@@ -24,13 +24,13 @@ function m(e) {
     return (0, i.jsx)(u.JO, {
         disabled: g || n,
         tooltip: g || n ? p.intl.string(p.t.YneDgI) : C ? p.intl.string(p.t.niD64e) : p.intl.string(p.t['+FAsHh']),
-        icon: a.UserCircleStatusIcon,
+        icon: r.UserCircleStatusIcon,
         onClick: () => {
             (0, s.TY)({
                 displayProfile: f,
                 isProfileOpen: !C
             }),
-                r.Z.toggleProfilePanelSection();
+                a.Z.toggleProfilePanelSection();
         },
         selected: C && !g && !n
     });

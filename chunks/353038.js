@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     Z: function () {
-        return y;
+        return b;
     }
 }),
     n(47120),
@@ -73,7 +73,7 @@ function x(e, t) {
         }
     );
 }
-function Z(e, t) {
+function I(e, t) {
     let { top: n, left: i, bottom: o, right: r } = t;
     switch (e) {
         case 'RESIZE_EAST':
@@ -112,11 +112,11 @@ function Z(e, t) {
             throw Error('getOrientedCoords: Invalid orientation: '.concat(e));
     }
 }
-function I(e) {
+function Z(e) {
     let { computedSize: t } = e;
     return t;
 }
-class y extends (o = s.Component) {
+class b extends (o = s.Component) {
     shouldComponentUpdate(e, t) {
         return !(0, d.Z)(t, this.state) || !(0, d.Z)(e, this.props, ['anchor', 'size', 'minSize', 'container']) || !(0, d.Z)(e.anchor, this.props.anchor) || !(0, d.Z)(e.size, this.props.size) || !(0, d.Z)(e.minSize, this.props.minSize) || !(0, d.Z)(e.container, this.props.container);
     }
@@ -165,7 +165,7 @@ class y extends (o = s.Component) {
                     v
                 )
             ),
-            C = c ? (0, f.R)(_) : Z('RESIZE_SOUTH_EAST', _);
+            C = c ? (0, f.R)(_) : I('RESIZE_SOUTH_EAST', _);
         this.setDOMPositions(C),
             this.setState(
                 {
@@ -186,7 +186,7 @@ class y extends (o = s.Component) {
                     container: { maxX: o, maxY: r, minX: l, minY: s },
                     onDragStart: a,
                     onDrag: u,
-                    resizeValidation: c = I
+                    resizeValidation: c = Z
                 },
                 state: { operation: h, operationStarted: p }
             } = this,
@@ -464,7 +464,7 @@ class y extends (o = s.Component) {
                         offsetY: n - i
                     };
                 } else {
-                    let i = Z(e, c);
+                    let i = I(e, c);
                     this.setDOMPositions(i),
                         (this.dragState = {
                             ...this.dragState,
@@ -522,4 +522,4 @@ class y extends (o = s.Component) {
             (this.size = _(e.size, e.minSize.width, e.minSize.height));
     }
 }
-v(y, 'Operations', i);
+v(b, 'Operations', i);

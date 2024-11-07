@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(570140),
     o = n(384275),
     c = n(763762),
@@ -26,8 +26,8 @@ var i = n(200651),
     b = n(7782),
     N = n(967128),
     Z = n(320781),
-    T = n(269203),
-    S = n(86863),
+    S = n(269203),
+    T = n(86863),
     j = n(558756),
     A = n(753898),
     y = n(734386),
@@ -43,11 +43,11 @@ var i = n(200651),
 function U(e) {
     let { canManageRoles: t, channel: n } = e,
         l = t && (0, u.Yk)(n),
-        r = (0, a.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
+        a = (0, r.e7)([v.ZP], () => null != n.guild_id && n === v.ZP.getDefaultChannel(n.guild_id), [n]);
     if ((0, h.Z)(n.id)) return null;
     if (n.isForumPost()) return (0, i.jsx)(Z.Z, { channel: n });
     if (C.Ec.has(n.type)) return (0, i.jsx)(R.Z, { channel: n });
-    else if (r) return (0, i.jsx)(L.Z, { channel: n });
+    else if (a) return (0, i.jsx)(L.Z, { channel: n });
     else if (l) return (0, i.jsx)(y.Z, { channel: n });
     return (0, i.jsx)(M.Z, { channel: n });
 }
@@ -56,16 +56,16 @@ function H(e) {
     let { channel: u, showingBanner: h } = e,
         C = (0, d.ZP)(u),
         { type: v } = u,
-        Z = (0, a.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
+        Z = (0, r.e7)([I.default], () => (u.isPrivate() ? I.default.getUser(u.getRecipientId()) : null)),
         y = E.ZP.useUserTag(Z),
-        { canManageRoles: M, canReadMessageHistory: R } = (0, a.cj)([_.Z], () => ({
+        { canManageRoles: M, canReadMessageHistory: R } = (0, r.cj)([_.Z], () => ({
             canManageRoles: _.Z.can(k.Plq.MANAGE_ROLES, u),
             canReadMessageHistory: _.Z.can(k.Plq.READ_MESSAGE_HISTORY, u)
         })),
-        L = (0, a.e7)([f.Z], () => (v === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, v]),
+        L = (0, r.e7)([f.Z], () => (v === k.d4z.DM ? f.Z.getMutualGuilds(u.getRecipientId()) : null), [u, v]),
         { systemDMRedesignEnabled: H } = m.Z.useExperiment({ location: 'bf1a4f_1' }, { autoTrackExposure: null !== (t = u.isSystemDM()) && void 0 !== t && t }),
         G = (0, c.Z)(null !== (n = null == Z ? void 0 : Z.id) && void 0 !== n ? n : k.lds),
-        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, a.cj)([x.Z], () => {
+        { authorizedAppToken: F, authorizedAppsFetchState: V } = (0, r.cj)([x.Z], () => {
             var e;
             return {
                 authorizedAppToken: null != G ? (null === (e = x.Z.getApps()) || void 0 === e ? void 0 : e.find((e) => e.application.id === G.id)) : void 0,
@@ -100,7 +100,7 @@ function H(e) {
                               channel: u,
                               user: Z
                           }),
-                          (0, i.jsx)(S.n, {
+                          (0, i.jsx)(T.n, {
                               user: Z,
                               application: G,
                               channel: u,
@@ -118,7 +118,7 @@ function H(e) {
                 user: Z,
                 children: [
                     null != Z &&
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(a.Heading, {
                             variant: 'heading-xl/medium',
                             className: B.marginBottom20,
                             children: y
@@ -137,7 +137,7 @@ function H(e) {
                   children: [(0, i.jsx)(N.Ot, { children: D.intl.format(D.t.I3R7Vl, { channelName: C }) }), (0, i.jsx)(N.jz, { children: D.intl.string(D.t.M8Ao6O) })]
               })
             : u.hasFlag(O.zZ.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)
-              ? (0, i.jsx)(T.Z, { channel: u })
+              ? (0, i.jsx)(S.Z, { channel: u })
               : (0, i.jsx)(A.Z, {
                     channel: u,
                     children: D.intl.format(D.t.MFwcqK, { name: C })

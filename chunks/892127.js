@@ -17,10 +17,10 @@ t.Z = o.memo(function (e) {
     let { widget: t, renderWidget: n, renderTitle: E, renderButtons: _, resizeValidation: C } = e,
         S = a.Z.getWidgetConfig(t.type),
         x = (0, r.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
-        Z = (0, m.Z)(),
-        I = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(Z))),
-        y = (0, m.Z)(),
-        b = o.useCallback((e, t, n, i, o) => {
+        I = (0, m.Z)(),
+        Z = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(I))),
+        b = (0, m.Z)(),
+        y = o.useCallback((e, t, n, i, o) => {
             let r = c.Z.windowSize((0, f.ZY)((0, m.i)())),
                 u = (0, d.jL)(n, r),
                 h = (0, d.Ox)(i, r);
@@ -48,18 +48,18 @@ t.Z = o.memo(function (e) {
             (0, l.Os)(e);
         }, []),
         { id: O, pinned: T, zIndex: A, size: L, anchor: R } = t,
-        k = (0, d.w_)(L, I),
-        w = (0, d.KR)(R, I),
-        { minSize: j, resizeX: M, resizeY: P, dragAnywhere: z } = S,
-        D = T || !x,
+        k = (0, d.w_)(L, Z),
+        w = (0, d.KR)(R, Z),
+        { minSize: j, resizeX: M, resizeY: P, dragAnywhere: D } = S,
+        z = T || !x,
         U = o.useMemo(
             () => ({
                 minX: 0,
                 minY: 0,
-                maxX: I.width,
-                maxY: I.height
+                maxX: Z.width,
+                maxY: Z.height
             }),
-            [I]
+            [Z]
         ),
         V = o.useCallback(
             (e) =>
@@ -69,7 +69,7 @@ t.Z = o.memo(function (e) {
                 }),
             [t, n]
         ),
-        W = o.useCallback(
+        F = o.useCallback(
             (e) =>
                 null != E || null != _
                     ? (0, i.jsxs)('div', {
@@ -93,17 +93,17 @@ t.Z = o.memo(function (e) {
         anchor: w,
         container: U,
         minSize: j,
-        hidden: !D,
+        hidden: !z,
         locked: x,
         resizeX: M,
         resizeY: P,
         style: { zIndex: A },
-        dragAnywhere: z,
+        dragAnywhere: D,
         active: !x,
-        onUpdate: b,
+        onUpdate: y,
         onClick: N,
-        targetWindow: y,
-        renderExtras: W,
+        targetWindow: b,
+        renderExtras: F,
         resizeValidation: B,
         children: V
     });

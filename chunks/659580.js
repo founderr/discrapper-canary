@@ -22,18 +22,18 @@ var l = n(990547),
     v = n(678199);
 function S(e) {
     let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: S = !1, renderInputModes: I = !1, renderInputVolume: _ = !1, renderOutputVolume: x = !1, onSelect: E } = e,
-        { analyticsLocations: C } = (0, s.ZP)();
+        { analyticsLocations: Z } = (0, s.ZP)();
     (0, o.Z)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: C }
+        properties: { location_stack: Z }
     });
-    let Z = (0, p.Z)(),
-        y = (0, m.Z)(C),
-        T = (0, f.Z)(C),
-        b = (0, c.Z)(C),
-        A = (0, u.Z)(C),
-        N = (0, d.Z)(C);
+    let C = (0, p.Z)(),
+        y = (0, m.Z)(Z),
+        b = (0, f.Z)(Z),
+        T = (0, c.Z)(Z),
+        A = (0, u.Z)(Z),
+        N = (0, d.Z)(Z);
     return (0, i.jsx)(r.Z, {
         object: h.qAy.CONTEXT_MENU,
         children: (0, i.jsxs)(a.Menu, {
@@ -52,17 +52,17 @@ function S(e) {
                 n
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['6Ww0iI']),
-                          children: T
+                          children: b
                       })
                     : null,
                 I
                     ? (0, i.jsx)(a.MenuGroup, {
                           label: g.intl.string(g.t['pS+K2N']),
-                          children: b
+                          children: T
                       })
                     : null,
                 (0, i.jsxs)(a.MenuGroup, {
-                    children: [_ ? A : null, x ? N : null, Z]
+                    children: [_ ? A : null, x ? N : null, C]
                 })
             ]
         })

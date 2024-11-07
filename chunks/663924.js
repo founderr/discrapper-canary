@@ -1,8 +1,8 @@
 n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(374470),
-    r = n(442837),
+    r = n(374470),
+    a = n(442837),
     s = n(952265),
     o = n(481060),
     c = n(40851),
@@ -29,13 +29,13 @@ function Z(e) {
         { renderWindow: I, windowDispatch: E } = l.useContext(c.ZP),
         b = null != u,
         Z = (0, s.Jw)(null != u ? u : ''),
-        T = l.useCallback(
+        S = l.useCallback(
             (e) => {
                 var t;
                 if ((!b && (0, s.$s)()) || (b && !(Z && n))) return;
                 let { target: i } = e;
-                if ((0, a.k)(i) && null != i.closest('.' + v.Jh)) return;
-                for (; (0, a.k)(i); ) {
+                if ((0, r.k)(i) && null != i.closest('.' + v.Jh)) return;
+                for (; (0, r.k)(i); ) {
                     if (i === m.current) return;
                     if (i.classList.contains(v.t4)) {
                         e.preventDefault();
@@ -52,26 +52,26 @@ function Z(e) {
         );
     l.useLayoutEffect(
         () => (
-            I.addEventListener('mousedown', T),
-            I.addEventListener('contextmenu', T),
+            I.addEventListener('mousedown', S),
+            I.addEventListener('contextmenu', S),
             E.subscribe(_.CkL.POPOUT_CLOSE, N),
             () => {
-                I.removeEventListener('mousedown', T), I.removeEventListener('contextmenu', T), E.unsubscribe(_.CkL.POPOUT_CLOSE, N);
+                I.removeEventListener('mousedown', S), I.removeEventListener('contextmenu', S), E.unsubscribe(_.CkL.POPOUT_CLOSE, N);
             }
         ),
-        [T, I, E]
+        [S, I, E]
     ),
         (0, o.useFocusLock)(m),
         l.useEffect(() => {
             ((!b && (0, s.$s)()) || (b && !Z)) && N();
         }, [Z, b]);
-    let S = (0, r.e7)([f.Z], () => f.Z.initialState(), []),
-        j = (0, d.q)(null == S ? void 0 : S.applicationId),
+    let T = (0, a.e7)([f.Z], () => f.Z.initialState(), []),
+        j = (0, d.q)(null == T ? void 0 : T.applicationId),
         A = l.useMemo(() => {
-            if (null == S) return;
+            if (null == T) return;
             let e = [{ type: C.gc.HOME }];
             return (
-                null != S.applicationId &&
+                null != T.applicationId &&
                     null != j &&
                     e.push({
                         type: C.gc.APPLICATION,
@@ -79,7 +79,7 @@ function Z(e) {
                     }),
                 e
             );
-        }, [S, j]);
+        }, [T, j]);
     return (0, i.jsx)(x.Z, {
         ref: m,
         channel: t,

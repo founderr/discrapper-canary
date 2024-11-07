@@ -24,9 +24,9 @@ function g(e, t, n, i) {
 }
 function E(e) {
     var t;
-    let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: x, horizontal: Z } = e,
-        I = 2 * C + 2 * S;
-    let { width: y, height: b } = {
+    let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: x, horizontal: I } = e,
+        Z = 2 * C + 2 * S;
+    let { width: b, height: y } = {
             width: 'number' == typeof (t = E).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
@@ -56,7 +56,7 @@ function E(e) {
         ),
         R = L.length,
         k = null == O || 0 === R,
-        w = Z ? f.C.HORIZONTAL : f.C.VERTICAL,
+        w = I ? f.C.HORIZONTAL : f.C.VERTICAL,
         { tileWidth: j } = (function (e, t, n, i, r) {
             let l = (function (e, t, n, i) {
                     let o = g(f.C.HORIZONTAL, e, t, n),
@@ -82,12 +82,12 @@ function E(e) {
                     tileWidth: u
                 }
             );
-        })(!1, R, y - I, b - I, w),
+        })(!1, R, b - Z, y - Z, w),
         M = {
             id: n,
-            width: y,
-            height: b,
-            sizeOffset: I,
+            width: b,
+            height: y,
+            sizeOffset: Z,
             layout: w,
             padding: C,
             participants: L.length

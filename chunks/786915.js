@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(512722),
-    a = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    a = n(442837),
     s = n(481060),
     o = n(40851),
     c = n(430824),
@@ -20,14 +20,14 @@ function m(e) {
     let { applicationId: m, stream: f, channel: g, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: _, ...I } = e,
         E = (0, o.bp)(),
         b = null == g ? void 0 : g.getGuildId(),
-        N = (0, r.e7)([c.Z], () => (null != b ? c.Z.getGuild(b) : null), [b]);
+        N = (0, a.e7)([c.Z], () => (null != b ? c.Z.getGuild(b) : null), [b]);
     return ((t = N), (l = g), null != t && null != l && d.Z.can(h.Plq.CREATE_INSTANT_INVITE, l))
         ? (0, i.jsx)(u.Z, {
               onClick: () => {
-                  a()(null != N, 'guild cannot be null'),
-                      a()(null != g, 'channel cannot be null'),
+                  r()(null != N, 'guild cannot be null'),
+                      r()(null != g, 'channel cannot be null'),
                       !(function (e) {
-                          let { guild: t, channel: l, streamUserId: a, applicationId: r, appContext: o, exitFullScreen: c, analyticsLocation: d, guildScheduledEvent: u } = e;
+                          let { guild: t, channel: l, streamUserId: r, applicationId: a, appContext: o, exitFullScreen: c, analyticsLocation: d, guildScheduledEvent: u } = e;
                           null == c || c(),
                               (0, s.openModalLazy)(
                                   async () => {
@@ -37,8 +37,8 @@ function m(e) {
                                               ...n,
                                               guild: t,
                                               channel: l,
-                                              streamUserId: a,
-                                              applicationId: r,
+                                              streamUserId: r,
+                                              applicationId: a,
                                               analyticsLocation: d,
                                               source: l.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
                                               guildScheduledEvent: u

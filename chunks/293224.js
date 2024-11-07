@@ -41,10 +41,10 @@ var i = n(200651),
     C = n(906732),
     S = n(571250),
     x = n(628581),
-    Z = n(659580),
-    I = n(793865),
-    y = n(55311),
-    b = n(575175),
+    I = n(659580),
+    Z = n(793865),
+    b = n(55311),
+    y = n(575175),
     N = n(933557),
     O = n(471445),
     T = n(74299),
@@ -56,19 +56,19 @@ var i = n(200651),
     j = n(189771),
     M = n(294629),
     P = n(67844),
-    z = n(544384),
-    D = n(892807),
+    D = n(544384),
+    z = n(892807),
     U = n(560688),
     V = n(199902),
-    W = n(592125),
+    F = n(592125),
     B = n(430824),
-    F = n(131951),
+    W = n(131951),
     H = n(19780),
     G = n(944486),
     Y = n(594174),
     K = n(979651),
-    Q = n(823379),
-    X = n(388627),
+    X = n(823379),
+    Q = n(388627),
     J = n(46145),
     q = n(981631),
     $ = n(388032),
@@ -132,7 +132,7 @@ function ei(e) {
     return (0, i.jsx)(p.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(Z.default, {
+            return (0, i.jsx)(I.default, {
                 onClose: m(t),
                 renderInputDevices: !0,
                 renderOutputDevices: !0,
@@ -152,7 +152,7 @@ function ei(e) {
                 }),
                 tooltip: u,
                 isToggled: !a,
-                onClick: () => (0, b.Z)(s, r, q.jXE.OVERLAY),
+                onClick: () => (0, y.Z)(s, r, q.jXE.OVERLAY),
                 onCutoutClick: n,
                 onContextMenu: n,
                 onMouseEnter: () => {
@@ -195,7 +195,7 @@ function eo(e) {
             tooltip: (0, S.Z)(r, l, !1),
             isToggled: s,
             onClick: () => {
-                (0, y.Z)(l, q.jXE.OVERLAY);
+                (0, b.Z)(l, q.jXE.OVERLAY);
             },
             onCutoutClick: (e) => {
                 (0, v.jW)(e, async () => {
@@ -219,8 +219,8 @@ function eo(e) {
 function er(e) {
     var t;
     let { voiceChannel: n, locked: r } = e,
-        l = (0, s.e7)([F.Z], () => F.Z.isVideoEnabled()),
-        a = (0, s.e7)([F.Z], () => Object.values(F.Z.getVideoDevices())[0]),
+        l = (0, s.e7)([W.Z], () => W.Z.isVideoEnabled()),
+        a = (0, s.e7)([W.Z], () => Object.values(W.Z.getVideoDevices())[0]),
         u = null === (t = null == a ? void 0 : a.disabled) || void 0 === t || t,
         c = !1 === u,
         d = (0, j.Z)(n),
@@ -246,12 +246,12 @@ function er(e) {
                   })
                 : void 0;
     o.useEffect(() => () => _(), [l, _]);
-    let Z = et(r),
-        y = null == n || !d;
+    let I = et(r),
+        b = null == n || !d;
     return (0, i.jsx)(p.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(I.Z, { onClose: Z(t) });
+            return (0, i.jsx)(Z.Z, { onClose: I(t) });
         },
         align: 'center',
         position: 'top',
@@ -271,7 +271,7 @@ function er(e) {
                 onContextMenu: n,
                 onMouseEnter: C,
                 onMouseLeave: S,
-                cutoutIcon: y
+                cutoutIcon: b
                     ? null
                     : o
                       ? (0, i.jsx)(p.ChevronSmallUpIcon, {
@@ -282,7 +282,7 @@ function er(e) {
                             color: 'currentColor',
                             size: 'sm'
                         }),
-                disabled: y
+                disabled: b
             });
         }
     });
@@ -293,7 +293,7 @@ function el(e) {
         a = null == r ? void 0 : r.id,
         u = (0, s.e7)([Y.default], () => Y.default.getCurrentUser()),
         c = (0, j.Z)(r),
-        h = (0, s.cj)([F.Z], () => (0, T.Z)(F.Z)),
+        h = (0, s.cj)([W.Z], () => (0, T.Z)(W.Z)),
         f = (0, s.e7)([V.Z], () => V.Z.getCurrentUserActiveStream()),
         m = (0, E.bp)(),
         v = null == r ? void 0 : r.getGuildId(),
@@ -314,7 +314,7 @@ function el(e) {
         _ = null != f;
     if (_) t = $.intl.string($.t.S5anIS);
     else if (null != r) {
-        let e = (0, X.pL)();
+        let e = (0, Q.pL)();
         t = c ? (null != e ? $.intl.format($.t.AB5gT0, { game: e.name }) : $.intl.string($.t.FeUKeH)) : $.intl.string($.t.uQn9Bw);
     }
     let C = () => {
@@ -323,21 +323,21 @@ function el(e) {
         },
         {
             Component: S,
-            events: { onMouseEnter: x, onMouseLeave: Z },
-            play: I
+            events: { onMouseEnter: x, onMouseLeave: I },
+            play: Z
         } = (0, d.P)(_ ? 'disable' : 'enable');
-    o.useEffect(() => () => I(), [_, I]);
-    let y = et(l);
+    o.useEffect(() => () => Z(), [_, Z]);
+    let b = et(l);
     return (0, i.jsx)(p.Popout, {
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return null != r
-                ? (0, i.jsx)(z.Z, {
+                ? (0, i.jsx)(D.Z, {
                       channel: r,
                       currentUser: u,
                       activeStreams: null != f ? [f] : [],
                       handleGoLive: g,
-                      onClose: y(t),
+                      onClose: b(t),
                       appContext: m
                   })
                 : (0, i.jsx)(i.Fragment, {});
@@ -371,7 +371,7 @@ function el(e) {
                 onCutoutClick: o,
                 onContextMenu: o,
                 onMouseEnter: x,
-                onMouseLeave: Z,
+                onMouseLeave: I,
                 disabled: !h || !c
             });
         }
@@ -382,7 +382,7 @@ function es(e) {
     let { voiceChannel: o, locked: r } = e,
         l = null !== (t = null == o ? void 0 : o.getGuildId()) && void 0 !== t ? t : null,
         { mute: a, suppress: u } = (0, M.Z)(o),
-        c = (0, s.e7)([F.Z], () => F.Z.isDeaf()),
+        c = (0, s.e7)([W.Z], () => W.Z.isDeaf()),
         d = null == o || a || u || c;
     function f(e) {
         null != l &&
@@ -443,10 +443,10 @@ function es(e) {
 function ea(e) {
     let { voiceChannel: t, locked: n } = e,
         o = (0, s.e7)([G.Z], () => G.Z.getVoiceChannelId() === (null == t ? void 0 : t.id)),
-        r = (0, s.Wu)([J.Z, W.Z], () =>
+        r = (0, s.Wu)([J.Z, F.Z], () =>
             J.Z.getChannelHistory()
-                .map((e) => W.Z.getChannel(e))
-                .filter(Q.lm)
+                .map((e) => F.Z.getChannel(e))
+                .filter(X.lm)
                 .filter((e) => e.isVocal())
         ),
         l = () => {
@@ -464,7 +464,7 @@ function ea(e) {
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return r.length > 0
-                ? (0, i.jsx)(D.Z, {
+                ? (0, i.jsx)(z.Z, {
                       recentVoiceChannels: r,
                       currentVoiceChannel: t,
                       onClose: f(n),

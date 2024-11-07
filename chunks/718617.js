@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(100621),
-    r = n(442837),
+    r = n(100621),
+    a = n(442837),
     s = n(186325),
     o = n(481060),
     c = n(110924),
@@ -24,17 +24,17 @@ function v(e, t) {
         if (0 === n) return 'auto';
         let i = 'forwards' === t.current,
             l = n > 0,
-            a = !1;
-        return l && i && 'left' === e && (a = !0), l && !i && 'right' === e && (a = !0), !l && i && 'right' === e && (a = !0), !l && !i && 'left' === e && (a = !0), a ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
+            r = !1;
+        return l && i && 'left' === e && (r = !0), l && !i && 'right' === e && (r = !0), !l && i && 'right' === e && (r = !0), !l && !i && 'left' === e && (r = !0), r ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
 function _(e) {
     var t, n;
     let { userId: _, guildId: I, onClose: E, analyticsLocation: b, className: N } = e,
-        Z = (0, r.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
-        T = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
-        S = (0, c.Z)(_);
-    let j = null == (n = T) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
+        Z = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(I), [I]),
+        S = null !== (t = null == Z ? void 0 : Z.details.modViewPanel) && void 0 !== t ? t : C.k.INFO,
+        T = (0, c.Z)(_);
+    let j = null == (n = S) ? null : n === C.k.INFO ? 'backwards' : 'forwards',
         A = (0, u.Z)(j),
         { reducedMotion: y } = l.useContext(s.S),
         P = l.useCallback(
@@ -49,25 +49,25 @@ function _(e) {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
-                        if (T === C.k.INFO) return E();
+                        if (S === C.k.INFO) return E();
                         return P(C.k.INFO);
                     }
                 }
             }),
-            [E, T, P]
+            [E, S, P]
         );
     l.useEffect(() => (d.Z.enable(), d.Z.enableTemp(M), () => d.Z.disableTemp()), [M]);
     let R = (0, o.useTransition)(
-        T,
+        S,
         {
             value: 0,
             from: { value: 1 },
             enter: { value: 0 },
             leave: { value: -1 }
         },
-        S !== _ ? 'animate-never' : 'animate-always'
+        T !== _ ? 'animate-never' : 'animate-always'
     );
-    return (0, i.jsx)(a.animated.div, {
+    return (0, i.jsx)(r.animated.div, {
         style: {
             position: 'relative',
             height: '100%',
@@ -75,10 +75,10 @@ function _(e) {
             overflow: 'hidden'
         },
         children: R((e, t, n) => {
-            var l, r, s;
+            var l, a, s;
             let { key: o } = n;
             return (0, i.jsx)(
-                a.animated.div,
+                r.animated.div,
                 {
                     style: {
                         position: 'absolute',
@@ -90,7 +90,7 @@ function _(e) {
                         ...(y.enabled
                             ? { opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (r = e.value) || void 0 === r ? void 0 : r.to(v('left', A)),
+                                  left: null === (a = e.value) || void 0 === a ? void 0 : a.to(v('left', A)),
                                   right: null === (s = e.value) || void 0 === s ? void 0 : s.to(v('right', A))
                               })
                     },

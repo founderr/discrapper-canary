@@ -1,7 +1,7 @@
 var i = n(192379),
     l = n(904245),
-    a = n(346610),
-    r = n(868643),
+    r = n(346610),
+    a = n(868643),
     s = n(912332),
     o = n(41776),
     c = n(280845),
@@ -21,8 +21,8 @@ var i = n(192379),
     b = n(709054),
     N = n(418476),
     Z = n(901461),
-    T = n(432376),
-    S = n(996861),
+    S = n(432376),
+    T = n(996861),
     j = n(981631);
 function A(e) {
     return v.Z.can(j.Plq.MANAGE_MESSAGES, e);
@@ -46,19 +46,19 @@ t.Z = function (e, t, n) {
                 let G = p.default.getId();
                 switch (n.key.toLowerCase()) {
                     case 'backspace':
-                        k && (A(H) || U.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, S.$Z)(H, U, n));
+                        k && (A(H) || U.canDeleteOwnMessage(G)) && (n.preventDefault(), (0, T.$Z)(H, U, n));
                         break;
                     case 'c':
                         ((0, E.isMac)() ? w : D) && _.wS && (n.preventDefault(), (0, _.JG)(U.content));
                         break;
                     case 'e':
                         if (k) {
-                            if (((i = G), (P = H), (M = U), !P.isSystemDM() && (0, N.Z)(M, i))) n.preventDefault(), (0, S.Hd)(H, U);
+                            if (((i = G), (P = H), (M = U), !P.isSystemDM() && (0, N.Z)(M, i))) n.preventDefault(), (0, T.Hd)(H, U);
                         }
                         break;
                     case 'p':
                         if (k || B) {
-                            if (((R = H), (L = U), !R.isSystemDM() && !(0, Z.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, S.rY)(H, U, n);
+                            if (((R = H), (L = U), !R.isSystemDM() && !(0, Z.Z)(L) && (A(R) || R.isPrivate()))) n.preventDefault(), (0, T.rY)(H, U, n);
                         }
                         break;
                     case '+':
@@ -66,7 +66,7 @@ t.Z = function (e, t, n) {
                             (function (e) {
                                 let t = null == e.guild_id || C.Z.canChatInGuild(e.guild_id),
                                     n = h.nc.getSetting(),
-                                    { disableReactionCreates: i } = (0, T.Z)({
+                                    { disableReactionCreates: i } = (0, S.Z)({
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
@@ -80,12 +80,12 @@ t.Z = function (e, t, n) {
                             (n.preventDefault(), I.S.dispatchKeyed(j.LPv.TOGGLE_REACTION_POPOUT, U.id, { emojiPicker: !0 }));
                         break;
                     case 'r':
-                        (k || B) && (0, c.o)(H, U) && (n.preventDefault(), (0, S.HH)(H, U, n));
+                        (k || B) && (0, c.o)(H, U) && (n.preventDefault(), (0, T.HH)(H, U, n));
                         break;
                     case 'f':
                         (k || B) &&
-                            (0, a.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
-                            (0, r.h)(U) &&
+                            (0, r.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
+                            (0, a.h)(U) &&
                             (n.preventDefault(),
                             (0, s.l8)({
                                 messageId: U.id,
@@ -101,7 +101,7 @@ t.Z = function (e, t, n) {
                         }
                         break;
                     case 'enter':
-                        O && (n.preventDefault(), (0, S.B8)(H, U));
+                        O && (n.preventDefault(), (0, T.B8)(H, U));
                         break;
                     case 'escape':
                         f.Z.isEditing(H.id, U.id) ? l.Z.endEditMessage(H.id) : I.S.dispatch(j.CkL.TEXTAREA_FOCUS);

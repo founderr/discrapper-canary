@@ -27,16 +27,16 @@ var i,
     _ = n(884338),
     x = n(719296),
     E = n(958185),
-    C = n(100527),
-    Z = n(906732),
+    Z = n(100527),
+    C = n(906732),
     y = n(890280),
-    T = n(835473),
-    b = n(522474),
+    b = n(835473),
+    T = n(522474),
     A = n(314897),
     N = n(819640),
     w = n(594174),
-    P = n(823379),
-    j = n(5192),
+    j = n(823379),
+    P = n(5192),
     R = n(388032),
     M = n(456608);
 ((l = i || (i = {}))[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE');
@@ -52,7 +52,7 @@ function L(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = j.ZP.getName(n, i, e);
+            let t = P.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -81,12 +81,12 @@ function k(e) {
         x = (0, c.Wu)([w.default, A.default], () =>
             Array.from(s)
                 .map((e) => ((0, p.J)(e, A.default) ? null : w.default.getUser(e.userId)))
-                .filter(P.lm)
+                .filter(j.lm)
         ),
         E = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(v.id).find((e) => e.applicationId === g.id)),
-        { analyticsLocations: C } = (0, Z.ZP)(),
-        T = (0, d.O)(),
-        b = j.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
+        { analyticsLocations: Z } = (0, C.ZP)(),
+        b = (0, d.O)(),
+        T = P.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
         N =
             (0, h.s5)({
                 userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -97,7 +97,7 @@ function k(e) {
         k = r.useId(),
         D = v.id,
         U = g.id,
-        { submitting: F } = (0, y.Z)({
+        { submitting: V } = (0, y.Z)({
             applicationId: U,
             channelId: D,
             launchingComponentId: k
@@ -120,10 +120,10 @@ function k(e) {
                 children:
                     x.length > 1
                         ? R.intl.formatToPlainString(R.t.cpe6CA, {
-                              username: b,
+                              username: T,
                               count: x.length - 1
                           })
-                        : R.intl.formatToPlainString(R.t['7Uuia2'], { username: b })
+                        : R.intl.formatToPlainString(R.t['7Uuia2'], { username: T })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(M.header, {
@@ -142,12 +142,12 @@ function k(e) {
                                   (0, f.Z)({
                                       applicationId: E.applicationId,
                                       activityChannelId: v.id,
-                                      locationObject: T.location,
-                                      analyticsLocations: C,
+                                      locationObject: b.location,
+                                      analyticsLocations: Z,
                                       componentId: k
                                   });
                           },
-                          submitting: F,
+                          submitting: V,
                           size: (function (e) {
                               switch (e) {
                                   case 2:
@@ -169,11 +169,11 @@ function k(e) {
 }
 function D(e) {
     let { participant: t, width: n, selected: i, interactible: l, channel: s } = e,
-        { analyticsLocations: o } = (0, Z.ZP)(C.Z.ACTIVITY_TILE),
+        { analyticsLocations: o } = (0, C.ZP)(Z.Z.ACTIVITY_TILE),
         { id: u } = t,
         d = (0, g.Z)(),
         m = (null == d ? void 0 : d.channelId) === s.id && d.applicationId === u,
-        [f] = (0, T.Z)([u]),
+        [f] = (0, b.Z)([u]),
         { url: p } = (0, v.Z)({
             applicationId: u,
             names: O,
@@ -182,10 +182,10 @@ function D(e) {
         h = !i && m,
         _ = !m,
         y = !m && !i,
-        A = (0, c.e7)([N.Z, b.Z], () =>
+        A = (0, c.e7)([N.Z, T.Z], () =>
             (0, E.Z)({
                 LayerStore: N.Z,
-                PopoutWindowStore: b.Z
+                PopoutWindowStore: T.Z
             })
         );
     return (
@@ -195,7 +195,7 @@ function D(e) {
                 (0, I.jy)(e);
             }
         }, [h, d, A]),
-        (0, a.jsx)(Z.Gt, {
+        (0, a.jsx)(C.Gt, {
             value: o,
             children: (0, a.jsx)('div', {
                 className: M.container,

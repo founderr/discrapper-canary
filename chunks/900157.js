@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(570140),
     c = n(239091),
@@ -26,16 +26,16 @@ var i = n(200651),
     b = n(979651),
     N = n(664342),
     Z = n(124368),
-    T = n(981631),
-    S = n(388032),
+    S = n(981631),
+    T = n(388032),
     j = n(972270);
 function A(e) {
-    let { channelId: t, baseChannelId: a, channelViewSource: A = 'Split View' } = e,
+    let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
         y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, m.ZP)(y);
     (function (e) {
-        let t = (0, s.e7)([b.Z], () => null != e && !r().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
         l.useEffect(() => {
             t &&
                 null != e &&
@@ -52,19 +52,19 @@ function A(e) {
             if (null == y || R.current) return;
             R.current = !0;
             let e = (0, h.K)(_.Z.getChannel(y.id), !0);
-            (0, u.yw)(T.rMx.CHANNEL_OPENED, {
+            (0, u.yw)(S.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, u.$H)(y.id),
                 channel_view: A
             }),
-                (0, p.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
+                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
         }, [y, A]),
         null == y || null == P)
     )
         return null;
     let L = (0, i.jsx)(N.Z, {
         channel: y,
-        baseChannelId: a
+        baseChannelId: r
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -74,7 +74,7 @@ function A(e) {
             }),
             (0, i.jsx)(C.ZP, {
                 toolbar: L,
-                'aria-label': S.intl.string(S.t.Pwe8tL),
+                'aria-label': T.intl.string(T.t.Pwe8tL),
                 children: (0, x.ud)({
                     channel: y,
                     channelName: M,

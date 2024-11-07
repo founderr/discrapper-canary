@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(570140);
@@ -13,7 +13,7 @@ function l(e) {
         muted: e
     });
 }
-function a(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'STAGE_MUSIC_PLAY',
         play: e

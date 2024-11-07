@@ -1,13 +1,13 @@
 n.d(t, {
     m: function () {
-        return S;
+        return T;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(772848),
     o = n(442837),
     c = n(481060),
@@ -27,9 +27,9 @@ var i = n(200651),
     b = n(981631),
     N = n(388032),
     Z = n(735338);
-let T = 'vc-activities-'.concat((0, s.Z)()),
-    S = l.forwardRef(function (e, t) {
-        let { channel: n, isHovered: a, closePopout: s, onMouseEnter: S, onMouseLeave: j, onClick: A, className: y } = e,
+let S = 'vc-activities-'.concat((0, s.Z)()),
+    T = l.forwardRef(function (e, t) {
+        let { channel: n, isHovered: r, closePopout: s, onMouseEnter: T, onMouseLeave: j, onClick: A, className: y } = e,
             P = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
             { id: M, guild_id: R } = n;
         l.useEffect(() => {
@@ -39,8 +39,8 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
             });
         }, [M, R]),
             l.useEffect(() => {
-                !a && s();
-            }, [s, a]);
+                !r && s();
+            }, [s, r]);
         let L = (0, u.bp)(),
             { analyticsLocations: k } = (0, m.ZP)(p.Z.ACTIVITIES_MINI_SHELF),
             { analyticsLocations: O } = (0, m.ZP)([...k, p.Z.ACTIVITIES_MINI_SHELF_BANNER]),
@@ -68,27 +68,27 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
             }, [w, k, n, A, j, D]),
             H = l.useCallback(
                 (e) => {
-                    S(),
+                    T(),
                         C.default.track(b.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
                 },
-                [S, n]
+                [T, n]
             );
         return (0, i.jsx)(m.Gt, {
             value: k,
             children: (0, i.jsx)(g.Z, {
                 children: (0, i.jsxs)(c.Dialog, {
                     ref: t,
-                    'aria-labelledby': T,
+                    'aria-labelledby': S,
                     className: y,
                     children: [
                         (0, i.jsx)(c.HeadingLevel, {
                             forceLevel: 2,
                             children: (0, i.jsx)(c.HiddenVisually, {
                                 children: (0, i.jsx)(c.H, {
-                                    id: T,
+                                    id: S,
                                     children: N.intl.string(N.t['2lnYtL'])
                                 })
                             })
@@ -158,7 +158,7 @@ let T = 'vc-activities-'.concat((0, s.Z)()),
                                             )
                                         ),
                                         (0, i.jsx)('div', {
-                                            className: r()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
+                                            className: a()(Z.wumpusRocketOuterContainer, { [Z.wumpusReducedMotion]: P }),
                                             children: (0, i.jsx)('div', {
                                                 className: Z.wumpusRocketInnerContainer,
                                                 children: (0, i.jsx)(I.Z, { className: Z.wumpusRocket })

@@ -87,27 +87,27 @@ function v(e, t) {
             let _ = null == S || m ? e : e - i - o,
                 x = Math.max(0, Math.min(Math.floor((_ - o) / (s + o)), u, t.length)),
                 E = Math.min((_ - o) / x - o, i),
-                C = Math.max(0, x - p.length),
-                Z = p.slice(0, x),
-                y = f.slice(0, C),
-                T = Array(C);
-            if (C > 0) {
+                Z = Math.max(0, x - p.length),
+                C = p.slice(0, x),
+                y = f.slice(0, Z),
+                b = Array(Z);
+            if (Z > 0) {
                 let e = [];
                 for (let t of y) {
                     let n = I.current[t.id];
-                    null != n && n < C ? (T[n] = t) : e.push(t);
+                    null != n && n < Z ? (b[n] = t) : e.push(t);
                 }
-                for (let t = 0; t < T.length; t++) {
-                    if (null != T[t]) continue;
+                for (let t = 0; t < b.length; t++) {
+                    if (null != b[t]) continue;
                     let n = e.shift();
                     if (null == n) break;
-                    T[t] = n;
+                    b[t] = n;
                 }
             }
-            let b = T.filter(c.lm),
-                A = (0, a.keyBy)((0, a.range)(b.length), (e) => b[e].id);
+            let T = b.filter(c.lm),
+                A = (0, a.keyBy)((0, a.range)(T.length), (e) => T[e].id);
             I.current = A;
-            let N = [...Z, ...b];
+            let N = [...C, ...T];
             return (
                 null != S && (m && N.length >= x ? (N[Math.max(0, N.length - 1)] = S) : N.push(S)),
                 {

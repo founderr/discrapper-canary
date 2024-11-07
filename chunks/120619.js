@@ -1,80 +1,80 @@
 n(47120);
 var i,
-    l,
-    a,
+    o,
     r,
+    l,
     s = n(442837),
-    o = n(570140),
-    c = n(959546),
-    u = n(215023);
+    a = n(570140),
+    u = n(959546),
+    c = n(215023);
 let d = new Map(),
-    m = new Set(),
+    h = new Set(),
     f = new Set(),
     p = new Set(),
-    h = new Map(),
-    g = !1,
-    v = null;
-class S extends (i = s.ZP.Store) {
+    m = new Map(),
+    v = !1,
+    g = null;
+class E extends (i = s.ZP.Store) {
     getPrice(e) {
         return d.get(e);
     }
     isFetchingPrice(e) {
-        return m.has(e);
+        return h.has(e);
     }
     getErrored(e) {
         return p.has(e);
     }
     getEntitlement(e) {
-        return h.get(e);
+        return m.get(e);
     }
     isEntitlementFetched(e) {
-        return h.has(e);
+        return m.has(e);
     }
     isEntitlementFetching(e) {
         return f.has(e);
     }
     getPlayedAnimation() {
-        return g;
-    }
-    getPreviousGoLiveSettings() {
         return v;
     }
+    getPreviousGoLiveSettings() {
+        return g;
+    }
 }
-(r = 'ConsumablesStore'),
-    (a = 'displayName') in (l = S)
-        ? Object.defineProperty(l, a, {
-              value: r,
+(l = 'ConsumablesStore'),
+    (r = 'displayName') in (o = E)
+        ? Object.defineProperty(o, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[a] = r),
-    (t.Z = new S(o.Z, {
+        : (o[r] = l),
+    (t.Z = new E(a.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
-            m.add(e.skuId);
+            h.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            d.set(e.skuId, e.price), m.delete(e.skuId);
+            d.set(e.skuId, e.price), h.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
-            m.delete(e.skuId), p.add(e.skuId);
+            h.delete(e.skuId), p.add(e.skuId);
         },
         CONSUMABLES_CLEAR_ERROR: (e) => {
             p.delete(e.skuId);
         },
         CONSUMABLES_ENTITLEMENT_FETCH_COMPLETED: (e) => {
-            f.delete(e.skuId), h.set(e.skuId, e.entitlement);
+            f.delete(e.skuId), m.set(e.skuId, e.entitlement);
         },
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
-            if (t.sku_id === u.FX) h.set(e.skuId, c.Z.createFromServer(t));
+            if (t.sku_id === c.FX) m.set(e.skuId, u.Z.createFromServer(t));
         },
         PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
-            g = !0;
+            v = !0;
         },
         RESET_PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
-            g = !1;
+            v = !1;
         },
         CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
             p.add(e.skuId), f.delete(e.skuId);
@@ -83,6 +83,6 @@ class S extends (i = s.ZP.Store) {
             f.add(e.skuId);
         },
         SET_PREVIOUS_GO_LIVE_SETTINGS: (e) => {
-            v = e.previousGoLiveSettings;
+            g = e.previousGoLiveSettings;
         }
     }));

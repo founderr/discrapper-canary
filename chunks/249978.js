@@ -1,14 +1,14 @@
 n.d(t, {
     U: function () {
-        return r;
+        return a;
     },
     v: function () {
-        return a;
+        return r;
     }
 });
 var i = n(818083),
     l = n(987338);
-let a = (0, i.B)({
+let r = (0, i.B)({
         kind: 'user',
         id: '2024-10_user_profile_panel_recent_activity_status',
         label: 'User Profile Panel Recent Activity Status',
@@ -22,7 +22,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    r = (e) => {
+    a = (e) => {
         let { location: t } = e;
-        return a.useExperiment({ location: t });
+        return r.useExperiment({ location: t });
     };

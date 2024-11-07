@@ -1,8 +1,8 @@
 let i;
 n(47120), n(724458), n(653041);
 var l,
-    a,
     r,
+    a,
     s,
     o = n(392711),
     c = n.n(o),
@@ -22,16 +22,16 @@ var l,
     b = n(981631);
 let N = !1,
     Z = '',
-    T = 0,
-    S = [],
+    S = 0,
+    T = [],
     j = !1,
     A = new Set(),
     y = null;
 function P() {
-    (Z = ''), (T = 0), (S = []), (A = new Set()), (N = !1), (y = null);
+    (Z = ''), (S = 0), (T = []), (A = new Set()), (N = !1), (y = null);
 }
 function M(e) {
-    (Z = e), (T = 0), R();
+    (Z = e), (S = 0), R();
 }
 function R() {
     if (!N) return !1;
@@ -39,7 +39,7 @@ function R() {
     if (0 === Z.trim().length)
         return (
             null != i && i.clearQuery(),
-            (S = (function (e) {
+            (T = (function (e) {
                 let t = I.Z.getFriendIDs();
                 return (
                     (null == e ? void 0 : e.isPrivate()) && (t = t.filter((t) => !e.recipients.includes(t))),
@@ -76,9 +76,9 @@ function R() {
                         e.forEach((e) => {
                             let i = _.Z.getScoreWithoutFetchingLatest(e.id),
                                 l = e.getRecipientId(),
-                                a = I.Z.isFriend(l) ? 0.2 : 0,
-                                r = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
-                            n[l] = 1 + i / t + a + r;
+                                r = I.Z.isFriend(l) ? 0.2 : 0,
+                                a = null != x.Z.getDMFromUserId(l) ? 0.1 : 0;
+                            n[l] = 1 + i / t + r + a;
                         }),
                         n
                     );
@@ -94,17 +94,17 @@ function L() {
 }
 function k(e, t) {
     if (v.Z.hasConsented(b.pjP.PERSONALIZATION)) {
-        var n, i, l, a;
-        let r = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
-            s = null !== (a = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== a ? a : 0;
-        if (r !== s) return s - r;
+        var n, i, l, r;
+        let a = null !== (l = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== l ? l : 0,
+            s = null !== (r = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== r ? r : 0;
+        if (a !== s) return s - a;
     }
     return (0, g._I)(C.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, g._I)(C.ZP.getName(t.user).toLocaleLowerCase()));
 }
 function O(e) {
     let { results: t } = e;
     if (!!N && '' !== Z)
-        (S = t
+        (T = t
             .map((e) => {
                 let { id: t } = e;
                 return { user: E.default.getUser(t) };
@@ -131,7 +131,7 @@ class H extends (l = d.ZP.Store) {
         this.waitFor(E.default, x.Z, I.Z, p.Z, v.Z), this.syncWith([E.default, x.Z], R), this.syncWith([I.Z], L);
     }
     getResults() {
-        return S;
+        return T;
     }
     hasFriends() {
         return j;
@@ -145,22 +145,22 @@ class H extends (l = d.ZP.Store) {
     getState() {
         return {
             query: Z,
-            selectedRow: T,
+            selectedRow: S,
             selectedUsers: A,
-            results: S,
+            results: T,
             hasFriends: j
         };
     }
 }
 (s = 'PrivateChannelRecipientsInviteStore'),
-    (r = 'displayName') in (a = H)
-        ? Object.defineProperty(a, r, {
+    (a = 'displayName') in (r = H)
+        ? Object.defineProperty(r, a, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[r] = s);
+        : (r[a] = s);
 let G = new H(u.Z, {
     CONNECTION_OPEN: function () {
         P();
@@ -183,7 +183,7 @@ let G = new H(u.Z, {
         (y = e.channelId), M(e.query);
     },
     PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function (e) {
-        T = e.row;
+        S = e.row;
     },
     PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function (e) {
         let { userId: t } = e;

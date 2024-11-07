@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(852229),
-    r = n(399606),
+    r = n(852229),
+    a = n(399606),
     s = n(481060),
     o = n(367907),
     c = n(592125),
@@ -19,10 +19,10 @@ var i = n(200651),
     g = n(638017);
 function C(e) {
     let { threadId: t } = e,
-        n = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
-        C = (0, r.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
+        n = (0, a.e7)([c.Z], () => c.Z.getChannel(t)),
+        C = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
         x = l.useCallback(() => {
-            null != n && null != C && ((0, o.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, a.J)((0, d.EO)(n, C)));
+            null != n && null != C && ((0, o.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, r.J)((0, d.EO)(n, C)));
         }, [n, C]);
     return (0, i.jsxs)('div', {
         className: g.sharePromptContainer,

@@ -1,13 +1,13 @@
 n.d(t, {
     y: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -27,27 +27,27 @@ var i = n(200651),
     b = n(388032),
     N = n(29150);
 let Z = (e) => {
-        let { style: t, className: n, name: l, icon: a } = e;
+        let { style: t, className: n, name: l, icon: r } = e;
         return (0, i.jsx)(u.Tooltip, {
             text: l,
             children: (e) =>
                 (0, i.jsx)('div', {
-                    className: r()(n, N.iconWidget),
+                    className: a()(n, N.iconWidget),
                     style: t,
                     ...e,
-                    children: null != a && a
+                    children: null != r && r
                 })
         });
     },
-    T = (e) => {
-        let { currentStatus: t, channel: a } = e,
+    S = (e) => {
+        let { currentStatus: t, channel: r } = e,
             s = l.useRef(C.Z.getRecentCustomStatuses()),
-            T = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
-            S = (0, x.V)(),
+            S = l.useRef((0, p.un)(d.z.HANG_STATUS_NEW_BADGE)).current,
+            T = (0, x.V)(),
             [j, A] = l.useState(null != t ? t : null),
             y = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
             P = () => {
-                !T && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
+                !S && (0, p.EW)(d.z.HANG_STATUS_NEW_BADGE);
             },
             M = (e, t) => {
                 e.stopPropagation(), (0, g.Zx)(t, !0), P();
@@ -85,7 +85,7 @@ let Z = (e) => {
         return (0, i.jsxs)('div', {
             className: N.popout,
             children: [
-                !T &&
+                !S &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)('div', { className: N.popoutBackground }),
@@ -145,7 +145,7 @@ let Z = (e) => {
                         (0, i.jsxs)('div', {
                             className: N.iconsContainer,
                             children: [
-                                Object.entries(S).map((e) => {
+                                Object.entries(T).map((e) => {
                                     let [n, l] = e;
                                     return (0, i.jsx)(
                                         u.Clickable,
@@ -154,7 +154,7 @@ let Z = (e) => {
                                             onMouseEnter: () => O(n),
                                             onClick: (e) => M(e, n),
                                             children: (0, i.jsx)(Z, {
-                                                className: r()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
+                                                className: a()(N.iconWidget, { [N.selectedWidget]: n === (null == t ? void 0 : t.state) }),
                                                 name: l.title,
                                                 icon: (0, i.jsx)('img', {
                                                     src: l.icon,
@@ -190,7 +190,7 @@ let Z = (e) => {
                             children: [
                                 s.current.map((e, n) => {
                                     let l = e.status === (null == t ? void 0 : t.details) && o().isEqual(e.emoji, null == t ? void 0 : t.emoji),
-                                        s = null != e.emoji && !(0, v.K)(e.emoji, a);
+                                        s = null != e.emoji && !(0, v.K)(e.emoji, r);
                                     return (0, i.jsxs)(
                                         u.Clickable,
                                         {
@@ -200,7 +200,7 @@ let Z = (e) => {
                                             className: N.statusOptionContainer,
                                             children: [
                                                 (0, i.jsx)(Z, {
-                                                    className: r()(N.iconWidget, { [N.selectedWidget]: l }),
+                                                    className: a()(N.iconWidget, { [N.selectedWidget]: l }),
                                                     name: e.status,
                                                     icon:
                                                         null != e.emoji

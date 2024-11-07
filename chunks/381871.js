@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n(442837),
+    r = n(392711),
+    a = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(570140),
@@ -27,8 +27,8 @@ var i = n(200651),
     b = n(456631),
     N = n(963838),
     Z = n(535879),
-    T = n(310892),
-    S = n(12168),
+    S = n(310892),
+    T = n(12168),
     j = n(353368),
     A = n(981631),
     y = n(354459),
@@ -46,13 +46,13 @@ let O = P.Hz.CHAT,
 function B(e) {
     var t;
     let { channel: n, closePopout: f, onFocus: v } = e,
-        P = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
-        B = (0, r.e7)([C.default], () => C.default.getCurrentUser()),
+        P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        B = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
         U = _.ZP.canUseFancyVoiceChannelReactions(B),
-        H = (0, r.e7)([E.Z], () => E.Z.getState().animationType),
+        H = (0, a.e7)([E.Z], () => E.Z.getState().animationType),
         G = l.useRef(!1),
         F = (0, m.wC)(n.guild_id),
-        V = (0, a.uniqBy)([...F, ...w], 'name')
+        V = (0, r.uniqBy)([...F, ...w], 'name')
             .filter(
                 (e) =>
                     !x.ZP.isEmojiFilteredOrLocked({
@@ -80,7 +80,7 @@ function B(e) {
                 });
         },
         Y = () => {
-            (0, T.openEffectsUpsellModal)({
+            (0, S.openEffectsUpsellModal)({
                 analytics: {
                     type: M.cd.EMOJI_PICKER_EMOJI_CLICKED,
                     object: A.qAy.BUTTON_CTA,
@@ -109,11 +109,11 @@ function B(e) {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
-                a = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                r = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
                 'aria-label': L.intl.string(L.t.RLHsHx),
-                shouldShow: a,
+                shouldShow: r,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: v,
@@ -131,7 +131,7 @@ function B(e) {
                         })
                     }),
                 children: () =>
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(T.Z, {
                         title: L.intl.string(L.t.Nn8lPz),
                         channel: n,
                         closePopout: f,
@@ -156,7 +156,7 @@ function B(e) {
                                         );
                                 },
                                 onShowUpsell: () =>
-                                    (0, T.openEffectsUpsellModal)({
+                                    (0, S.openEffectsUpsellModal)({
                                         analytics: {
                                             type: G.current ? M.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : M.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                             object: A.qAy.VOICE_CHANNEL_EFFECTS_TOGGLE,

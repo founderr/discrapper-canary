@@ -1,14 +1,14 @@
 n.r(t),
     n.d(t, {
         activityInviteKey: function () {
-            return T;
+            return S;
         }
     }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(512722),
-    r = n.n(a),
+    r = n(512722),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(904245),
@@ -40,8 +40,8 @@ function Z(e, t, n) {
         e
     );
 }
-let T = 'ActivityInvite';
-class S extends l.PureComponent {
+let S = 'ActivityInvite';
+class T extends l.PureComponent {
     componentDidMount() {
         this.fetchApplication();
     }
@@ -66,7 +66,7 @@ class S extends l.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: l } = this.state,
-            { activity: a, analyticsLocations: s, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: g, onClose: x } = this.props,
+            { activity: r, analyticsLocations: s, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: g, onClose: x } = this.props,
             v = p > 0,
             _ = v ? b.intl.formatToPlainString(b.t['4rMiHx'], { seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
@@ -89,10 +89,10 @@ class S extends l.PureComponent {
                         }),
                         (0, i.jsx)(d.Z, {
                             activityActionType: h,
-                            activity: a,
+                            activity: r,
                             className: N.preview,
                             application: m,
-                            partyId: null != a.party ? a.party.id : null,
+                            partyId: null != r.party ? r.party.id : null,
                             isPreview: !0,
                             analyticsLocations: s
                         }),
@@ -110,7 +110,7 @@ class S extends l.PureComponent {
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (
-                                    r()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
+                                    a()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
                                     (0, i.jsx)(u.Z, {
                                         onClose: t,
                                         ...l
@@ -127,7 +127,7 @@ class S extends l.PureComponent {
                                     onChange: this.handleTextChange,
                                     onSubmit: this.handleShare,
                                     type: f.I.FORM,
-                                    parentModalKey: T,
+                                    parentModalKey: S,
                                     disableThemedBackground: !0
                                 })
                         })
@@ -200,18 +200,18 @@ class S extends l.PureComponent {
             }),
             Z(this, 'handleShare', () => {
                 let { channel: e, activity: t, activityActionType: n, cooldown: i, onClose: l } = this.props,
-                    { textValue: a, contentWarningProps: r } = this.state;
+                    { textValue: r, contentWarningProps: a } = this.state;
                 if (i > 0)
                     return Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
                     });
-                let s = x.ZP.parse(e, a),
+                let s = x.ZP.parse(e, r),
                     o = {
                         activity: t,
                         type: n
                     };
-                return null != r
+                return null != a
                     ? (this.setState({ contentWarningProps: null }),
                       c.Z.sendMessage(e.id, s, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
                       l(),
@@ -222,7 +222,7 @@ class S extends l.PureComponent {
                     : (0, I.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: f.I.FORM,
-                          content: a,
+                          content: r,
                           channel: e
                       }).then((t) => {
                           let { valid: n } = t;
@@ -247,4 +247,4 @@ t.default = s.ZP.connectStores([_.Z, m.Z], (e) => {
         cooldown: _.Z.getSlowmodeCooldownGuess(t.id),
         application: null != n.application_id ? m.Z.getApplication(n.application_id) : v.r9
     };
-})(S);
+})(T);

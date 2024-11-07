@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return I;
     }
 });
 var i = n(200651),
@@ -83,7 +83,7 @@ function x(e) {
           })
         : null;
 }
-function Z(e) {
+function I(e) {
     let t = (0, s.e7)([g.Z, v.Z], () => v.Z.getChannel(g.Z.getVoiceChannelId())),
         n = (0, h.ZP)(t),
         r = (0, s.Wu)([d.Z], () => (null != t ? d.Z.getVideoParticipants(t.id) : [])),
@@ -98,17 +98,17 @@ function Z(e) {
             cropSelfVideo: !0,
             version: l
         }),
-        Z = {
+        I = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        I = o.useRef(Z);
+        Z = o.useRef(I);
     return (
-        o.useLayoutEffect(() => void (I.current = Z)),
+        o.useLayoutEffect(() => void (Z.current = I)),
         o.useLayoutEffect(() => {
-            let { size: e, id: t, containerWidth: n, containerHeight: i } = I.current;
+            let { size: e, id: t, containerWidth: n, containerHeight: i } = Z.current;
             ((a && e.height > e.width) || (!a && e.width > e.height)) &&
                 (0, u.nv)({
                     widgetId: t,

@@ -1,35 +1,35 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(388032),
-    r = n(583694);
+    r = n(388032),
+    a = n(583694);
 t.Z = (e) => {
     let { guild: t, onClose: s } = e;
     return (0, i.jsxs)('div', {
-        className: r.container,
+        className: a.container,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                className: r.image,
+                className: a.image,
                 src: n(238980)
             }),
             (0, i.jsxs)('div', {
-                className: r.content,
+                className: a.content,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        children: a.intl.format(a.t.THgVCA, { guild: t.name })
+                        children: r.intl.format(r.t.THgVCA, { guild: t.name })
                     }),
                     (0, i.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: a.intl.string(a.t['1yq3nJ'])
+                        children: r.intl.string(r.t['1yq3nJ'])
                     }),
                     (0, i.jsx)('div', {
-                        className: r.buttonContainer,
+                        className: a.buttonContainer,
                         children: (0, i.jsx)(l.Button, {
                             onClick: s,
-                            children: a.intl.string(a.t.hLw0wc)
+                            children: r.intl.string(r.t.hLw0wc)
                         })
                     })
                 ]

@@ -33,9 +33,9 @@ function E(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let _ = o.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: g, cancelText: _, confirmText: C, icon: S, body: x, title: Z, renderFooter: I, contentOpacity: y, status: b, containerRef: N } = e,
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: r, onDismissClick: u, onConfirmClick: d, onCancelClick: h, onNotificationClick: f, hint: g, cancelText: _, confirmText: C, icon: S, body: x, title: I, renderFooter: Z, contentOpacity: b, status: y, containerRef: N } = e,
         [O, T] = o.useState(!1),
-        A = n || O || b === p._1z.FOCUSED;
+        A = n || O || y === p._1z.FOCUSED;
     o.useEffect(() => {
         null == r || r();
     }, [r]);
@@ -76,12 +76,12 @@ let _ = o.memo(function (e) {
                     onClick: f,
                     className: l()(v.container, { [v.clickable]: null != f }),
                     children: (function () {
-                        let e = null == I ? void 0 : I(A);
+                        let e = null == Z ? void 0 : Z(A);
                         return (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsxs)(s.animated.div, {
                                     className: v.iconAndDetails,
-                                    style: { opacity: y },
+                                    style: { opacity: b },
                                     children: [
                                         null == S
                                             ? null
@@ -103,7 +103,7 @@ let _ = o.memo(function (e) {
                                                     color: 'interactive-normal',
                                                     variant: 'text-sm/semibold',
                                                     lineClamp: 2,
-                                                    children: Z
+                                                    children: I
                                                 }),
                                                 null != x
                                                     ? (0, i.jsx)(a.Text, {
@@ -209,25 +209,25 @@ function S(e) {
             },
             [a, d]
         ),
-        Z = o.useCallback(
+        I = o.useCallback(
             (e) => {
                 null == p || p(e, a);
             },
             [p, a]
         ),
-        I = o.useCallback(
+        Z = o.useCallback(
             (e) => {
                 null == m || m(e, a);
             },
             [m, a]
         ),
-        y = o.useCallback(
+        b = o.useCallback(
             (e) => {
                 null == g || g(e, a);
             },
             [g, a]
         ),
-        b = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
+        y = o.useCallback((e) => (null == E ? void 0 : E(e, a)), [E, a]),
         {
             props: { onNotificationShow: N, onDismissClick: O, renderFooter: T, onNotificationClick: A, onConfirmClick: L, onCancelClick: R, ...k },
             status: w
@@ -247,10 +247,10 @@ function S(e) {
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? S : void 0,
                 onDismissClick: x,
-                onNotificationClick: null != p ? Z : void 0,
-                onConfirmClick: null != m ? I : void 0,
-                onCancelClick: null != g ? y : void 0,
-                renderFooter: b,
+                onNotificationClick: null != p ? I : void 0,
+                onConfirmClick: null != m ? Z : void 0,
+                onCancelClick: null != g ? b : void 0,
+                renderFooter: y,
                 expand: !1,
                 index: n,
                 locked: r,

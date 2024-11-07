@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(215569),
     s = n(481060),
     c = n(140710),
-    u = n(833803),
-    d = n(566006),
+    d = n(833803),
+    u = n(566006),
     m = n(60174),
     h = n(453687),
     f = n(434624),
@@ -41,7 +41,7 @@ class N extends r.PureComponent {
             P = Z > 0;
         if (!P && !v) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            { canShowImprovedReactionButton: O } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             M = y && P,
             k = (v && !P) || M,
             D = O && !I;
@@ -84,7 +84,7 @@ class N extends r.PureComponent {
                     !A &&
                     (0, i.jsx)(m.X, {
                         tabIndex: k || this.state.isHovered ? 0 : -1,
-                        type: d.O.NORMAL,
+                        type: u.O.NORMAL,
                         message: e,
                         channel: x,
                         useChatFontScaling: S,
@@ -134,12 +134,12 @@ t.Z = (e) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: d.O.BURST
+                            type: u.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: d.O.NORMAL
+                                type: u.O.NORMAL
                             }),
                         null != t.me_vote && --o;
                 }),

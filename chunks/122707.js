@@ -1,15 +1,15 @@
 n.d(t, {
     q: function () {
-        return a;
+        return r;
     }
 }),
     n(47120);
 var i = n(709054),
     l = n(765104);
-function a(e, t) {
+function r(e, t) {
     var n;
-    let a = null !== (n = l.Z.summaries(e)) && void 0 !== n ? n : [],
-        r = 0;
-    for (let e of a) i.default.compare(e.endId, t) > 0 && (r += 1);
-    return r;
+    let r = null !== (n = l.Z.summaries(e)) && void 0 !== n ? n : [],
+        a = 0;
+    for (let e of r) i.default.compare(e.endId, t) > 0 && (a += 1);
+    return a;
 }

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(952265),
+    r = n(442837),
+    a = n(952265),
     s = n(481060),
     o = n(378298),
     c = n(444957),
@@ -19,11 +19,11 @@ t.Z = l.memo(function (e) {
         x = (0, c.h)(t.id),
         v = (0, d.o)(t.id),
         _ = (0, u.M)(t.id),
-        I = (0, r.f9)(),
-        E = (0, a.e7)([p.Z], () => p.Z.hasLayers()),
+        I = (0, a.f9)(),
+        E = (0, r.e7)([p.Z], () => p.Z.hasLayers()),
         b = l.useCallback(() => (v ? g.intl.string(g.t['16QyDg']) : null != _ ? g.intl.string(g.t.kCN9i4) : null), [v, _]),
         N = l.useMemo(() => (v || null != _) && !I && !E, [v, _, I, E]),
-        [Z, T] = l.useState(b());
+        [Z, S] = l.useState(b());
     l.useEffect(() => {
         null != _ &&
             null != x &&
@@ -58,22 +58,22 @@ t.Z = l.memo(function (e) {
         }, []),
         l.useEffect(() => {
             let e = b();
-            null != e && T(e);
+            null != e && S(e);
         }, [v, _, b]);
-    let S = l.useCallback(() => {
+    let T = l.useCallback(() => {
         if ((null != _ && (0, o.T)(t.id, [_.id]), null != x))
             (0, s.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
-                        let { onClose: l, transitionState: a } = n;
+                        let { onClose: l, transitionState: r } = n;
                         return (0, i.jsx)(e, {
                             otherUserId: t.getRecipientId(),
                             channelId: t.id,
                             warningId: x.id,
                             warningType: x.type,
                             onClose: l,
-                            transitionState: a
+                            transitionState: r
                         });
                     };
                 },
@@ -100,7 +100,7 @@ t.Z = l.memo(function (e) {
               children: () =>
                   (0, i.jsx)(m.ZP.Icon, {
                       icon: s.ShieldIcon,
-                      onClick: S,
+                      onClick: T,
                       tooltip: g.intl.string(g.t.rpc2qq),
                       tooltipDisabled: null != _
                   })

@@ -1,6 +1,6 @@
 n.d(t, {
     eJ: function () {
-        return b;
+        return T;
     },
     nm: function () {
         return N;
@@ -29,10 +29,10 @@ var i,
     _ = n(51144),
     x = n(981631),
     E = n(354459),
-    C = n(927923),
-    Z = n(388032),
+    Z = n(927923),
+    C = n(388032),
     y = n(557369);
-function T(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function T(e, t, n) {
         e
     );
 }
-let b = (e) => {
+let T = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, l.jsx)('div', {
             className: s()(i, y.list, n ? y.listCollapse : y.listDefault),
@@ -60,7 +60,7 @@ let b = (e) => {
                   o.TooltipContainer,
                   {
                       className: y.iconSpacing,
-                      text: Z.intl.string(Z.t.qstQub),
+                      text: C.intl.string(C.t.qstQub),
                       children: (0, l.jsx)(o.PlusLargeIcon, { className: s()(y.icon, n) })
                   },
                   'add-status'
@@ -79,11 +79,11 @@ let b = (e) => {
               );
     };
 function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: T, embeddedApplication: b, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: F, handleHoverIcons: V, disconnected: B } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
     if (f || g) return null;
-    let W = [],
-        G = (0, l.jsx)(j, {
-            iconClassName: T,
+    let B = [],
+        G = (0, l.jsx)(P, {
+            iconClassName: b,
             mute: n,
             localMute: i,
             serverMute: r,
@@ -92,92 +92,92 @@ function N(e) {
         });
     p &&
         (a
-            ? W.push(
+            ? B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: Z.intl.string(Z.t['PXMZ//']),
+                          text: C.intl.string(C.t['PXMZ//']),
                           children: (0, l.jsx)(o.VideoSlashIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, T),
+                              className: s()(y.icon, b),
                               colorClass: y.strikethrough
                           })
                       },
                       'video'
                   )
               )
-            : W.push(
+            : B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: Z.intl.string(Z.t.FlNoSU),
+                          text: C.intl.string(C.t.FlNoSU),
                           children: (0, l.jsx)(o.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, T)
+                              className: s()(y.icon, b)
                           })
                       },
                       'video'
                   )
               )),
-        B &&
-            W.push(
+        W &&
+            B.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
                         className: y.iconSpacing,
-                        text: Z.intl.string(Z.t.HFwRpq),
+                        text: C.intl.string(C.t.HFwRpq),
                         children: (0, l.jsx)(o.CircleWarningIcon, {
-                            className: s()(y.icon, T),
+                            className: s()(y.icon, b),
                             color: o.tokens.colors.STATUS_WARNING_BACKGROUND
                         })
                     },
                     'disconnected'
                 )
             ),
-        null != b &&
-            W.push(
+        null != T &&
+            B.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
-                        text: (0, u.Z)(b.name),
+                        text: (0, u.Z)(T.name),
                         className: y.iconSpacing,
                         children: (0, l.jsx)(o.ActivitiesIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: s()(y.icon, T)
+                            className: s()(y.icon, b)
                         })
                     },
                     'activity'
                 )
             ),
-        N === C.YE.XBOX || w === E.wR.XBOX
-            ? W.push(
+        N === Z.YE.XBOX || w === E.wR.XBOX
+            ? B.push(
                   (0, l.jsx)(
                       'div',
                       {
                           className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(S.Z, { className: s()(y.icon, T) })
+                          children: (0, l.jsx)(S.Z, { className: s()(y.icon, b) })
                       },
                       'xbox'
                   )
               )
-            : (N === C.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
-              W.push(
+            : (N === Z.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
+              B.push(
                   (0, l.jsx)(
                       'div',
                       {
                           className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(v.Z, { className: s()(y.icon, T) })
+                          children: (0, l.jsx)(v.Z, { className: s()(y.icon, b) })
                       },
                       'playstation'
                   )
               ),
         h
-            ? W.push(
+            ? B.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -188,44 +188,44 @@ function N(e) {
                   )
               )
             : _ &&
-              W.push(
+              B.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
                           className: y.iconSpacing,
-                          text: Z.intl.string(Z.t.JH1SJy),
+                          text: C.intl.string(C.t.JH1SJy),
                           children: (0, l.jsx)(o.EyeIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()(y.icon, T)
+                              className: s()(y.icon, b)
                           })
                       },
                       'watch'
                   )
               );
-    let H = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
-        z = null == R && H;
-    return 0 !== W.length || null != G || M || z
+    let z = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
+        H = null == R && z;
+    return 0 !== B.length || null != G || M || H
         ? (0, l.jsxs)('div', {
               className: s()(y.icons, t),
               children: [
                   (0, l.jsxs)('div', {
                       className: y.iconGroup,
-                      onMouseEnter: () => (null == V ? void 0 : V(!0)),
-                      onMouseLeave: () => (null == V ? void 0 : V(!1)),
-                      children: [G, W]
+                      onMouseEnter: () => (null == F ? void 0 : F(!0)),
+                      onMouseLeave: () => (null == F ? void 0 : F(!1)),
+                      children: [G, B]
                   }),
-                  M || z
+                  M || H
                       ? (0, l.jsx)('div', {
                             className: y.iconGroup,
-                            onMouseEnter: () => (null == F ? void 0 : F(!0)),
-                            onMouseLeave: () => (null == F ? void 0 : F(!1)),
-                            children: z
+                            onMouseEnter: () => (null == V ? void 0 : V(!0)),
+                            onMouseLeave: () => (null == V ? void 0 : V(!1)),
+                            children: H
                                 ? (0, l.jsx)(
-                                      P,
+                                      j,
                                       {
                                           application: L,
-                                          iconClassName: T,
+                                          iconClassName: b,
                                           guildId: k,
                                           channelId: D,
                                           userId: U.id
@@ -234,7 +234,7 @@ function N(e) {
                                   )
                                 : (0, l.jsx)(A, {
                                       hangStatusActivity: R,
-                                      iconClassName: T,
+                                      iconClassName: b,
                                       isSelf: O
                                   })
                         })
@@ -248,7 +248,7 @@ class w extends (i = a.Component) {
         let { speaking: e, priority: t, collapsed: n, mute: i, serverMute: a } = this.props;
         return t && !n
             ? (0, l.jsx)(o.Tooltip, {
-                  text: Z.intl.string(Z.t.BVK71t),
+                  text: C.intl.string(C.t.BVK71t),
                   children: (t) =>
                       (0, l.jsx)('div', {
                           className: s()(y.iconPriortySpeaker, { [y.iconPriortySpeakerSpeaking]: !i && !a && e }),
@@ -280,7 +280,7 @@ class w extends (i = a.Component) {
                     c
                         ? (0, l.jsxs)('span', {
                               className: y.guestSuffix,
-                              children: ['\xA0', Z.intl.string(Z.t['pFO/Pj'])]
+                              children: ['\xA0', C.intl.string(C.t['pFO/Pj'])]
                           })
                         : ''
                 ]
@@ -338,33 +338,33 @@ class w extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'handleClick', (e) => {
+            b(this, 'handleClick', (e) => {
                 let { onClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            T(this, 'handleDoubleClick', (e) => {
+            b(this, 'handleDoubleClick', (e) => {
                 let { onDoubleClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            T(this, 'handleContextMenu', (e) => {
+            b(this, 'handleContextMenu', (e) => {
                 let { onContextMenu: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            T(this, 'handleMouseLeave', (e) => {
+            b(this, 'handleMouseLeave', (e) => {
                 let { onMouseLeave: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            T(this, 'handleMouseEnter', (e) => {
+            b(this, 'handleMouseEnter', (e) => {
                 let { onMouseEnter: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            T(this, 'handleMouseDown', (e) => {
+            b(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t, user: n } = this.props;
                 null == t || t(e, n);
             });
     }
 }
-function P(e) {
+function j(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
@@ -378,8 +378,8 @@ function P(e) {
                 });
         }, [t.id, r, i, u, m]),
         (0, l.jsx)(o.TooltipContainer, {
-            text: Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
-            'aria-label': Z.intl.formatToPlainString(Z.t.Sq9xJy, { game: t.name }),
+            text: C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
+            'aria-label': C.intl.formatToPlainString(C.t.Sq9xJy, { game: t.name }),
             className: y.iconSpacing,
             children: (0, l.jsx)('div', {
                 ref: h,
@@ -400,7 +400,7 @@ function P(e) {
         })
     );
 }
-function j(e) {
+function P(e) {
     let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: r, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];
@@ -424,7 +424,7 @@ function j(e) {
             (0, l.jsx)(
                 o.TooltipContainer,
                 {
-                    text: i ? Z.intl.string(Z.t.Q8Uzoa) : a ? Z.intl.string(Z.t.uLddbW) : Z.intl.string(Z.t.tjtv3N),
+                    text: i ? C.intl.string(C.t.Q8Uzoa) : a ? C.intl.string(C.t.uLddbW) : C.intl.string(C.t.tjtv3N),
                     className: y.iconSpacing,
                     children: e
                 },
@@ -451,7 +451,7 @@ function j(e) {
                 o.TooltipContainer,
                 {
                     className: y.iconSpacing,
-                    text: c ? Z.intl.string(Z.t.btxSdH) : Z.intl.string(Z.t.NjmiOD),
+                    text: c ? C.intl.string(C.t.btxSdH) : C.intl.string(C.t.NjmiOD),
                     children: e
                 },
                 'deaf'
@@ -460,7 +460,7 @@ function j(e) {
     }
     return 0 === d.length ? null : (0, l.jsx)(l.Fragment, { children: d });
 }
-T(w, 'defaultProps', {
+b(w, 'defaultProps', {
     avatarContainerClass: y.avatarContainer,
     userNameClassName: y.usernameFont,
     size: x.ipw.SMALL,

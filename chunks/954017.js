@@ -26,7 +26,7 @@ var i = n(512722),
     I = n(388032);
 let _ = async (e) => {
         let { reaction: t, altText: n, ...i } = e,
-            l = await C(i);
+            l = await Z(i);
         (0, h.a)({
             file: l,
             altText: n,
@@ -36,7 +36,7 @@ let _ = async (e) => {
     },
     x = async (e) => {
         let { reply: t, altText: n, ...i } = e,
-            r = await C(i),
+            r = await Z(i),
             s = await a.Z.openPrivateChannel(i.user.id, !1, !1),
             o = m.Z.getChannel(s);
         l()(null != o, 'Channel cannot be null'),
@@ -72,7 +72,7 @@ let _ = async (e) => {
             ...(null != I && { HangStatus: I })
         };
     },
-    C = async (e) => {
+    Z = async (e) => {
         let { user: t, activity: n, application: i, stream: l } = e,
             d = await a.Z.openPrivateChannel(t.id, !1, !1),
             m = E({
@@ -85,7 +85,7 @@ let _ = async (e) => {
             drawImage: (e) => {
                 var i;
                 e.setFont({ truncate: c.GX.Truncate }),
-                    null != l ? N(e, n, t) : (0, o.Z)(n) ? T(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? A(e, n, t) : n.type === S.IIU.HANG_STATUS ? b(e, n, t) : y(e, n, t),
+                    null != l ? N(e, n, t) : (0, o.Z)(n) ? b(e, n, t) : (0, s.Z)(n) && n.name === r.Z.get(S.ABu.LEAGUE_OF_LEGENDS).name ? A(e, n, t) : n.type === S.IIU.HANG_STATUS ? T(e, n, t) : y(e, n, t),
                     (null === (i = e.assetMap) || void 0 === i ? void 0 : i.has('Platform')) &&
                         e.drawImage(
                             'Platform',
@@ -108,7 +108,7 @@ let _ = async (e) => {
             }
         });
     },
-    Z = (e, t) => {
+    C = (e, t) => {
         e.setColor('dark' === t ? 'white' : 'black'),
             e.drawPath(
                 g.Cv,
@@ -175,7 +175,7 @@ let _ = async (e) => {
                         },
                         8
                     )
-                  : Z(e, s);
+                  : C(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -206,7 +206,7 @@ let _ = async (e) => {
                     !0
                 ));
     },
-    T = (e, t, n) => {
+    b = (e, t, n) => {
         var i, l;
         e.setSize({
             w: g.En,
@@ -277,7 +277,7 @@ let _ = async (e) => {
                 !0
             );
     },
-    b = (e, t, i) => {
+    T = (e, t, i) => {
         var l, a;
         e.setSize({
             w: g.En,
@@ -319,7 +319,7 @@ let _ = async (e) => {
                       },
                       8
                   )
-                : Z(e, s);
+                : C(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({
@@ -486,7 +486,7 @@ let _ = async (e) => {
                         },
                         8
                     )
-                  : Z(e, s);
+                  : C(e, s);
         let o = g.vS + g.o3 + g.sB;
         e.setColor('dark' === s ? 'white' : 'rgb(6, 6, 7)'),
             e.setFont({

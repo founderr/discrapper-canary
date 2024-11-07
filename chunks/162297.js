@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    u = n(778569),
-    d = n(182906),
+    d = n(778569),
+    u = n(182906),
     m = n(367907),
     h = n(213609),
     f = n(783097),
@@ -48,7 +48,7 @@ function L(e) {
         : null;
 }
 function P(e) {
-    var t, n, u, d;
+    var t, n, d, u;
     let { application: E } = e,
         x = (0, o.e7)([I.Z], () => {
             var e;
@@ -80,8 +80,8 @@ function P(e) {
                 properties: { application_id: E.id }
             });
     }, [O, E]);
-    let B = E.id in (null !== (u = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== u ? u : {}),
-        U = E.id in (null !== (d = null === (n = (0, p.LD)(x, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== d ? d : {}),
+    let B = E.id in (null !== (d = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== d ? d : {}),
+        U = E.id in (null !== (u = null === (n = (0, p.LD)(x, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== u ? u : {}),
         w = B || U,
         F = E.isVerified && E.isDiscoverable;
     return (0, i.jsxs)('div', {
@@ -165,7 +165,7 @@ function P(e) {
 }
 function y(e) {
     let { application: t, iconUrl: n } = e,
-        r = (0, u.Z)({
+        r = (0, d.Z)({
             applicationId: t.id,
             size: 280,
             names: ['embedded_cover']
@@ -175,7 +175,7 @@ function y(e) {
         o = null,
         s = {};
     if ((0, f.ye)(t))
-        o = (0, i.jsx)(d.Z, {
+        o = (0, i.jsx)(u.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: j.bannerImage,

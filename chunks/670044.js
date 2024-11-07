@@ -1,11 +1,11 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return r;
     }
 });
 var i = n(990547),
     l = n(213609);
-function a(e) {
+function r(e) {
     return (
         (0, l.Z)(
             {

@@ -7,8 +7,8 @@ n.d(t, {
     n(773603);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(848246),
     o = n(793030),
     c = n(442837),
@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(981631),
     N = n(37113),
     Z = n(388032),
-    T = n(351065);
-function S(e) {
+    S = n(351065);
+function T(e) {
     let { className: t, onDismiss: n } = e;
     return (0, i.jsx)(u.Button, {
         className: t,
@@ -39,7 +39,7 @@ function S(e) {
         onClick: n,
         children: (0, i.jsx)(u.XSmallIcon, {
             size: 'xs',
-            className: T.closeIcon,
+            className: S.closeIcon,
             color: 'white'
         })
     });
@@ -49,11 +49,11 @@ let j = N.LY.RESOLUTION_1440,
 function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        [a, r] = l.useState(!1),
+        [r, a] = l.useState(!1),
         { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
         x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
         I = l.useCallback(() => {
-            r(!0),
+            a(!0),
                 (0, C.S)(s.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
@@ -93,7 +93,7 @@ function y(e) {
                     })
                     .catch(() => {})
                     .finally(() => {
-                        r(!1);
+                        a(!1);
                     });
         }, [o, t, x]);
     return (0, i.jsx)(u.ShinyButton, {
@@ -101,36 +101,36 @@ function y(e) {
         pauseAnimation: n,
         color: u.Button.Colors.GREEN,
         size: u.Button.Sizes.SMALL,
-        className: T.optInButton,
+        className: S.optInButton,
         onClick: I,
-        submitting: a,
+        submitting: r,
         children: Z.intl.string(Z.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
-        a = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: r()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
+        className: a()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: T.image,
+                className: S.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(S, {
-                className: T.variant2CloseButton,
+            (0, i.jsx)(T, {
+                className: S.variant2CloseButton,
                 onDismiss: l
             }),
             (0, i.jsx)('div', {
-                className: T.variant2InfoContainerParent,
+                className: S.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: T.variant2InfoContainer,
+                    className: S.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.xv, {
-                            className: T.variant2Text,
+                            className: S.variant2Text,
                             variant: 'text-sm/medium',
-                            children: a ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
+                            children: r ? Z.intl.string(Z.t.ZYQ2zc) : Z.intl.string(Z.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]
@@ -141,18 +141,18 @@ function P(e) {
 }
 function M(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: a } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
-        { enabled: r } = I.Z.useExperiment(
+        { shouldShowOptInPopout: r } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
+        { enabled: a } = I.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
-                disable: !a
+                disable: !r
             }
         ),
         o = l.useRef(!1);
     return (l.useEffect(() => {
-        a &&
-            r &&
+        r &&
+            a &&
             !o.current &&
             ((o.current = !0),
             g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
@@ -160,8 +160,8 @@ function M(e) {
                 channel_id: t.id,
                 perk_type: s.q.STREAM_HIGH_QUALITY
             }));
-    }, [a, r, t]),
-    a && r)
+    }, [r, a, t]),
+    r && a)
         ? (0, i.jsx)(E.h, {
               ...n,
               renderComponent: (e) =>

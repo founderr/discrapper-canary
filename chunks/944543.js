@@ -1,8 +1,8 @@
 n(757143), n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(771340),
@@ -40,7 +40,7 @@ class C extends l.PureComponent {
         let { region: e, selected: t } = this.props;
         return (0, i.jsxs)(d.Z, {
             align: d.Z.Align.CENTER,
-            className: r()({ selected: t }),
+            className: a()({ selected: t }),
             children: [
                 (0, i.jsx)(g, {
                     region: e,

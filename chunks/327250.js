@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(399606),
+    r = n.n(l),
+    a = n(399606),
     s = n(481060),
     o = n(493683),
     c = n(906732),
@@ -27,13 +27,13 @@ var l = n(120356),
     b = n(5192),
     N = n(51144),
     Z = n(981631),
-    T = n(308083),
-    S = n(388032),
+    S = n(308083),
+    T = n(388032),
     j = n(354418);
 function A(e) {
     let { user: t, guildId: n, onClose: l } = e,
-        a = t.id,
-        o = (0, r.e7)([_.Z, v.Z, f.default], () => (a === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(a, n)), [a, n]);
+        r = t.id,
+        o = (0, a.e7)([_.Z, v.Z, f.default], () => (r === f.default.getId() ? _.Z.getStatus() : v.Z.getStatus(r, n)), [r, n]);
     return (0, i.jsxs)('div', {
         className: j.topRow,
         children: [
@@ -66,7 +66,7 @@ function A(e) {
                                         clan: null == t ? void 0 : t.clan,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: T.NC.SIZE_16,
+                                        badgeSize: S.NC.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: j.memberClanTag,
                                         containerClassName: j.memberClanTagContainer
@@ -98,12 +98,12 @@ function A(e) {
     });
 }
 function y(e) {
-    let { tag: t = 'div', disabled: n, children: l, onClick: r, ...o } = e;
+    let { tag: t = 'div', disabled: n, children: l, onClick: a, ...o } = e;
     return (0, i.jsx)(s.Clickable, {
         ...o,
         tag: t,
-        className: a()(j.bottomRowAction, { [j.bottomRowActionDisabled]: n }),
-        onClick: n ? void 0 : r,
+        className: r()(j.bottomRowAction, { [j.bottomRowActionDisabled]: n }),
+        onClick: n ? void 0 : a,
         children: (0, i.jsx)('div', {
             className: j.innerBottomRowAction,
             children: l
@@ -111,13 +111,13 @@ function y(e) {
     });
 }
 function P(e) {
-    let { user: t, member: l, guildId: a } = e,
-        d = (0, r.e7)([C.Z], () => C.Z.getGuild(a)),
+    let { user: t, member: l, guildId: r } = e,
+        d = (0, a.e7)([C.Z], () => C.Z.getGuild(r)),
         {
             canKickUser: g,
             canBanUser: v,
             canModerateMembers: _
-        } = (0, r.cj)(
+        } = (0, a.cj)(
             [x.Z, I.default, C.Z],
             () => ({
                 canKickUser: null != d && x.Z.canManageUser(Z.Plq.KICK_MEMBERS, t, d),
@@ -127,19 +127,19 @@ function P(e) {
             [t, d]
         ),
         b = (0, u.b)(l),
-        { analyticsLocations: N, newestAnalyticsLocation: T } = (0, c.ZP)(),
-        A = (0, m.sE)(a, {
+        { analyticsLocations: N, newestAnalyticsLocation: S } = (0, c.ZP)(),
+        A = (0, m.sE)(r, {
             targetUserId: t.id,
-            location: T,
+            location: S,
             locations: N
         }),
-        P = (0, r.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
+        P = (0, a.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
         className: j.bottomRow,
         children: [
             (0, i.jsxs)(y, {
                 disabled: P,
-                'aria-label': S.intl.string(S.t['g33r/P']),
+                'aria-label': T.intl.string(T.t['g33r/P']),
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
@@ -153,21 +153,21 @@ function P(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.intl.string(S.t['g33r/P'])
+                        children: T.intl.string(T.t['g33r/P'])
                     })
                 ]
             }),
             (0, i.jsxs)(y, {
                 disabled: !g,
-                'aria-label': S.intl.string(S.t['3glT6e']),
+                'aria-label': T.intl.string(T.t['3glT6e']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: T,
-                                guildId: a,
+                                location: S,
+                                guildId: r,
                                 user: t
                             });
                     });
@@ -182,21 +182,21 @@ function P(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.intl.string(S.t['3glT6e'])
+                        children: T.intl.string(T.t['3glT6e'])
                     })
                 ]
             }),
             (0, i.jsxs)(y, {
                 disabled: !v,
-                'aria-label': S.intl.string(S.t['5MBJ5O']),
+                'aria-label': T.intl.string(T.t['5MBJ5O']),
                 onClick: () => {
                     (0, s.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: T,
-                                guildId: a,
+                                location: S,
+                                guildId: r,
                                 user: t
                             });
                     });
@@ -211,13 +211,13 @@ function P(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.intl.string(S.t['5MBJ5O'])
+                        children: T.intl.string(T.t['5MBJ5O'])
                     })
                 ]
             }),
             (0, i.jsxs)(y, {
                 disabled: !_,
-                'aria-label': S.intl.string(S.t.kTlLr6),
+                'aria-label': T.intl.string(T.t.kTlLr6),
                 onClick: () => {
                     b
                         ? (0, h.q)({
@@ -241,12 +241,12 @@ function P(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: b ? S.intl.string(S.t.N86XcH) : S.intl.string(S.t.kTlLr6)
+                        children: b ? T.intl.string(T.t.N86XcH) : T.intl.string(T.t.kTlLr6)
                     })
                 ]
             }),
             (0, i.jsxs)(y, {
-                'aria-label': S.intl.string(S.t.IHTjzM),
+                'aria-label': T.intl.string(T.t.IHTjzM),
                 onClick: () => {
                     A(m.jQ.COPY_ID), (0, E.JG)(t.id);
                 },
@@ -261,7 +261,7 @@ function P(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.intl.string(S.t.IHTjzM)
+                        children: T.intl.string(T.t.IHTjzM)
                     })
                 ]
             })
@@ -270,20 +270,20 @@ function P(e) {
 }
 function M(e) {
     let { userId: t, guildId: n, onClose: l } = e,
-        a = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
-        s = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
-    return null == a || null == s
+        r = (0, a.e7)([I.default], () => I.default.getUser(t), [t]),
+        s = (0, a.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]);
+    return null == r || null == s
         ? null
         : (0, i.jsxs)('div', {
               className: j.container,
               children: [
                   (0, i.jsx)(A, {
-                      user: a,
+                      user: r,
                       guildId: n,
                       onClose: l
                   }),
                   (0, i.jsx)(P, {
-                      user: a,
+                      user: r,
                       member: s,
                       guildId: n
                   })

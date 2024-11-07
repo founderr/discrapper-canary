@@ -10,8 +10,8 @@ n.r(t),
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(70097),
-    r = n(174609),
+    r = n(70097),
+    a = n(174609),
     s = n(98278),
     o = n(790527),
     c = n(626135),
@@ -23,7 +23,7 @@ function m(e) {
     let { onClose: t, analytics: n, ...l } = e,
         m = u.intl.format(u.t['7aNIkZ'], {
             onPressMore: function () {
-                (0, r.Z)(),
+                (0, a.Z)(),
                     t(),
                     c.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
                         location_section: d.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
@@ -48,8 +48,8 @@ function m(e) {
             section: n.section
         },
         onClose: t,
-        onSubscribeClick: r.Z,
-        artElement: (0, i.jsx)(a.Z, {
+        onSubscribeClick: a.Z,
+        artElement: (0, i.jsx)(r.Z, {
             className: h.video,
             src: p,
             loop: !0,

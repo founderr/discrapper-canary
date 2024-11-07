@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(709014);
-let r = {
+    r = n(709014);
+let a = {
         hover: {
             name: 'hover',
             start: 0,
@@ -38,11 +38,11 @@ let r = {
             play: t,
             Component: l.useCallback(
                 (t) =>
-                    (0, i.jsx)(a.L, {
+                    (0, i.jsx)(r.L, {
                         ...t,
                         src: () => n.e('8631').then(n.t.bind(n, 105262, 19)),
                         ref: e,
-                        markers: r
+                        markers: a
                     }),
                 []
             )

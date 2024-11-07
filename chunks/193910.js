@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(831209),
-    r = n(442837),
+    r = n(831209),
+    a = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(538239),
@@ -28,20 +28,20 @@ var i = n(200651),
     b = n(951211),
     N = n(981631),
     Z = n(921944),
-    T = n(489887),
-    S = n(388032),
+    S = n(489887),
+    T = n(388032),
     j = n(695527);
-function A(e, t, l, a) {
+function A(e, t, l, r) {
     (0, o.openModalLazy)(
         async () => {
-            let { default: r } = await Promise.resolve().then(n.bind(n, 538239));
+            let { default: a } = await Promise.resolve().then(n.bind(n, 538239));
             return (n) =>
-                (0, i.jsx)(r, {
+                (0, i.jsx)(a, {
                     ...n,
                     activity: e,
                     channel: t,
                     activityActionType: l,
-                    analyticsLocations: a
+                    analyticsLocations: r
                 });
         },
         { modalKey: c.activityInviteKey }
@@ -49,7 +49,7 @@ function A(e, t, l, a) {
 }
 let y = /(.*)```(\w+)\n(.*)```(.*)/s;
 function P() {
-    let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, m.cv)(t);
@@ -66,8 +66,8 @@ function P() {
                 let { visibleContent: t } = e;
                 return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(o.TextBadge, {
-                          text: S.intl.string(S.t.y2b7CA),
-                          color: a.Z.BUTTON_DANGER_BACKGROUND
+                          text: T.intl.string(T.t.y2b7CA),
+                          color: r.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
             }
@@ -75,7 +75,7 @@ function P() {
     );
 }
 function M(e) {
-    let { channel: t, options: r, onFileUpload: c, onClose: m, onSelect: f, draftType: C, editorTextContent: M, setValue: R, openClips: L } = e,
+    let { channel: t, options: a, onFileUpload: c, onClose: m, onSelect: f, draftType: C, editorTextContent: M, setValue: R, openClips: L } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
         x.default.track(N.rMx.OPEN_POPOUT, {
@@ -104,7 +104,7 @@ function M(e) {
                             channel: t
                         });
                 },
-                { modalKey: T.$z }
+                { modalKey: S.$z }
             );
     }
     function U() {
@@ -139,9 +139,9 @@ function M(e) {
         onSelect: f,
         navId: 'channel-attach',
         onClose: m,
-        'aria-label': S.intl.string(S.t.Xm41aW),
+        'aria-label': T.intl.string(T.t.Xm41aW),
         className: j.menu,
-        children: r.map(function (e) {
+        children: a.map(function (e) {
             var n;
             let l = (0, i.jsxs)('div', {
                 className: j.optionLabel,
@@ -158,7 +158,7 @@ function M(e) {
                         e.badgeVal > 0 &&
                         (0, i.jsx)(o.NumberBadge, {
                             className: j.badge,
-                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
+                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : r.Z.STATUS_DANGER,
                             count: e.badgeVal
                         })
                 ]

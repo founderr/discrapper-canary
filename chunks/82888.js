@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(595519),
-    r = n(317381),
+    r = n(595519),
+    a = n(317381),
     s = n(917107),
     o = n(9145),
     c = n(918559);
@@ -17,16 +17,16 @@ function d(e) {
             connectedChannelId: d,
             connectedActivity: u,
             activityPanelMode: h
-        } = (0, l.cj)([r.ZP], () => {
+        } = (0, l.cj)([a.ZP], () => {
             var e;
-            let t = r.ZP.getConnectedActivityChannelId();
+            let t = a.ZP.getConnectedActivityChannelId();
             return {
                 connectedChannelId: t,
-                connectedActivity: null != t && null !== (e = r.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
-                activityPanelMode: r.ZP.getActivityPanelMode()
+                connectedActivity: null != t && null !== (e = a.ZP.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
+                activityPanelMode: a.ZP.getActivityPanelMode()
             };
         });
-    if (!(0, a.NX)(d)) return null;
+    if (!(0, r.NX)(d)) return null;
     let p = null == u ? void 0 : u.applicationId;
     return h !== c.Ez.PANEL || null == p
         ? null

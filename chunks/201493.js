@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(570140),
     o = n(45114),
     c = n(147754),
@@ -24,12 +24,12 @@ t.Z = (e) => {
     var t;
     let { channel: N, guild: Z } = e,
         {
-            currentCategoryId: T,
-            directoryEntries: S,
+            currentCategoryId: S,
+            directoryEntries: T,
             categoryCounts: j,
             allEntriesCount: A,
             isLoading: y
-        } = (0, a.cj)([f.Z], () => {
+        } = (0, r.cj)([f.Z], () => {
             let e = f.Z.getCurrentCategoryId(N.id),
                 t = f.Z.getDirectoryEntries(N.id, e === I.AR.ALL ? null : e),
                 n = f.Z.getDirectoryCategoryCounts(N.id),
@@ -52,12 +52,12 @@ t.Z = (e) => {
         },
         [N.id]
     );
-    let P = l.useMemo(() => (null != S ? (0, v.v)(Object.values(S), T) : null), [S, T]),
+    let P = l.useMemo(() => (null != T ? (0, v.v)(Object.values(T), S) : null), [T, S]),
         {
             mostRecentQuery: M,
             searchFetching: R,
             searchResults: L
-        } = (0, a.cj)([m.Z], () => {
+        } = (0, r.cj)([m.Z], () => {
             let { mostRecentQuery: e, fetching: t } = m.Z.getSearchState(N.id);
             return {
                 mostRecentQuery: e,
@@ -81,12 +81,12 @@ t.Z = (e) => {
             u.default.track(E.rMx.GUILD_DIRECTORY_CHANNEL_VIEWED, {
                 directory_channel_id: N.id,
                 directory_guild_id: Z.id,
-                primary_category_id: T
+                primary_category_id: S
             });
-        }, [N.id, Z.id, T]);
+        }, [N.id, Z.id, S]);
     let B = (0, g.G)(N)
             ? () => {
-                  (0, r.openModalLazy)(async () => {
+                  (0, a.openModalLazy)(async () => {
                       let { default: e } = await n.e('79764').then(n.bind(n, 533202));
                       return (t) =>
                           (0, i.jsx)(e, {
@@ -94,7 +94,7 @@ t.Z = (e) => {
                               directoryGuildName: Z.name,
                               directoryGuildId: Z.id,
                               directoryChannelId: N.id,
-                              currentCategoryId: T === I.AR.ALL ? null : T
+                              currentCategoryId: S === I.AR.ALL ? null : S
                           });
                   });
               }
@@ -122,12 +122,12 @@ t.Z = (e) => {
               searchResults: L,
               searchFetching: R
           })
-        : null == P && null == T
+        : null == P && null == S
           ? (0, i.jsx)('div', {
                 className: b.pageContainer,
-                children: (0, i.jsx)(r.Spinner, { className: b.spinner })
+                children: (0, i.jsx)(a.Spinner, { className: b.spinner })
             })
-          : (null == P ? void 0 : P.length) === 0 && null == T
+          : (null == P ? void 0 : P.length) === 0 && null == S
             ? (0, i.jsx)('div', {
                   className: b.pageContainer,
                   children: (0, i.jsx)(C.Z, {
@@ -142,7 +142,7 @@ t.Z = (e) => {
                   handleSearchKeyPress: U,
                   handleClearSearch: H,
                   handleCreateOrAddGuild: B,
-                  currentCategoryId: T,
+                  currentCategoryId: S,
                   handleSelectCategory: (e) => {
                       p.Su(N.id, e);
                   },

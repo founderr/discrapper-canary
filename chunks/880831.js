@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n(100621),
     c = n(442837),
@@ -30,14 +30,14 @@ var i = n(200651),
     b = n(768581),
     N = n(70956),
     Z = n(823379),
-    T = n(981631),
-    S = n(217702),
+    S = n(981631),
+    T = n(217702),
     j = n(837161);
 let A = 10 * N.Z.Millis.SECOND;
 function y(e) {
     var t;
     let { message: n } = e,
-        a = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
+        r = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
         s = (0, C.Uj)(n),
         o = l.useContext(m.Z),
         [u, I] = l.useState(!1),
@@ -54,7 +54,7 @@ function y(e) {
             },
             [n.channel_id, n.id]
         ),
-        T =
+        S =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
                       isInteracting: u,
@@ -66,10 +66,10 @@ function y(e) {
             renderedContent: y,
             trailingIcon: P,
             leadingIcon: M
-        } = (0, x.f)(n, T, a, j.messageContent, {
+        } = (0, x.f)(n, S, r, j.messageContent, {
             trailingIconClass: j.messageContentTrailingIcon,
             leadingIconClass: j.messageContentLeadingIcon,
-            iconSize: S.WW
+            iconSize: T.WW
         }),
         R = (0, v.cv)(n),
         L =
@@ -98,7 +98,7 @@ function y(e) {
         onClick: Z,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
+                className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
                 children: [null != L ? null : M, null !== (t = null != y ? y : L) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != L ? null : P]
             }),
             (0, i.jsx)('img', {
@@ -118,10 +118,10 @@ function y(e) {
 }
 function P(e) {
     let { channelId: t, className: n } = e,
-        [a, h] = l.useState(!1),
+        [r, h] = l.useState(!1),
         { toastsHidden: p, toastMessages: m } = (function (e) {
             var t;
-            let { channelId: n, isFrozen: i, count: a, lingerMs: r } = e,
+            let { channelId: n, isFrozen: i, count: r, lingerMs: a } = e,
                 [s, o] = l.useState([]),
                 [d, h] = l.useState(!1),
                 p = l.useRef(null),
@@ -132,7 +132,7 @@ function P(e) {
             l.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== T.uaV.STAGE_START && i.type !== T.uaV.STAGE_END && i.type !== T.uaV.STAGE_TOPIC && i.type !== T.uaV.STAGE_SPEAKER && i.type !== T.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, r)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== S.uaV.STAGE_START && i.type !== S.uaV.STAGE_END && i.type !== S.uaV.STAGE_TOPIC && i.type !== S.uaV.STAGE_SPEAKER && i.type !== S.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
                 }
                 return (
                     u.Z.subscribe('MESSAGE_CREATE', e),
@@ -140,7 +140,7 @@ function P(e) {
                         u.Z.unsubscribe('MESSAGE_CREATE', e);
                     }
                 );
-            }, [n, f, a, r]),
+            }, [n, f, r, a]),
                 l.useEffect(
                     () => () => {
                         clearTimeout(m.current);
@@ -162,7 +162,7 @@ function P(e) {
             };
         })({
             channelId: t,
-            isFrozen: a,
+            isFrozen: r,
             count: 3,
             lingerMs: A
         }),
@@ -210,10 +210,10 @@ function P(e) {
             }
         });
     return (0, i.jsx)(d.ThemeProvider, {
-        theme: T.BRd.DARK,
+        theme: S.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: r()(n, e),
+                className: a()(n, e),
                 onMouseEnter: () => {
                     h(!0);
                 },

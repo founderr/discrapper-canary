@@ -21,7 +21,7 @@ var o = n(120356),
     f = n(46140),
     v = n(388032),
     C = n(128220);
-function x(e) {
+function g(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(l.Button, {
         className: C.cta,
@@ -34,7 +34,7 @@ function x(e) {
         children: (0, p.F9)(n)
     });
 }
-let g = (e) => {
+let x = (e) => {
         let { quest: t } = e;
         return (0, r.jsx)(l.Button, {
             className: C.cta,
@@ -94,12 +94,12 @@ let g = (e) => {
                 isExpanded: i
             });
         if (S)
-            return (0, r.jsx)(x, {
+            return (0, r.jsx)(g, {
                 quest: n,
                 taskDetails: p
             });
         if (m === s.LI.CONSOLE && l && !C) return (0, r.jsx)(h, { quest: n });
-        else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(g, { quest: n });
+        else if (m !== s.LI.SELECT && !a && !d) return (0, r.jsx)(x, { quest: n });
         return null;
     };
 function _(e) {

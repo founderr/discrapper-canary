@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(873546),
-    r = n(442837),
+    r = n(873546),
+    a = n(442837),
     s = n(481060),
     o = n(194359),
     c = n(686546),
@@ -21,14 +21,14 @@ var i = n(200651),
     b = n(377668),
     N = n(228168),
     Z = n(388032),
-    T = n(995593);
-let S = (e) => {
+    S = n(995593);
+let T = (e) => {
         let { userId: t, channelId: n } = e,
-            a = (0, r.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
+            r = (0, a.e7)([f.Z], () => f.Z.getMutualGuilds(t), [t]),
             o = l.useMemo(
                 () =>
-                    null != a
-                        ? a
+                    null != r
+                        ? r
                               .slice(0, 3)
                               .map((e, t) => {
                                   let { guild: n } = e,
@@ -41,22 +41,22 @@ let S = (e) => {
                                                 })
                                               : null;
                                   if (null == l) return null;
-                                  let r = t === (a.length > 3 ? 3 : a.length) - 1,
+                                  let a = t === (r.length > 3 ? 3 : r.length) - 1,
                                       s = (0, i.jsx)(
                                           'img',
                                           {
                                               src: l,
                                               alt: '',
-                                              className: T.avatar
+                                              className: S.avatar
                                           },
                                           t
                                       );
-                                  return r
+                                  return a
                                       ? s
                                       : (0, i.jsx)(
                                             c.ZP,
                                             {
-                                                className: T.avatarMask,
+                                                className: S.avatarMask,
                                                 mask: c.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
                                                 width: 24,
                                                 height: 24,
@@ -67,9 +67,9 @@ let S = (e) => {
                               })
                               .filter((e) => null != e)
                         : [],
-                [a]
+                [r]
             );
-        return null == a || 0 === a.length
+        return null == r || 0 === r.length
             ? (0, i.jsx)(s.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
@@ -78,7 +78,7 @@ let S = (e) => {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)('div', {
-                          className: T.avatarContainer,
+                          className: S.avatarContainer,
                           children: o
                       }),
                       (0, i.jsx)(s.Clickable, {
@@ -91,9 +91,9 @@ let S = (e) => {
                               });
                           },
                           children: (0, i.jsx)(s.Text, {
-                              className: T.mutualGuilds,
+                              className: S.mutualGuilds,
                               variant: 'text-sm/normal',
-                              children: Z.intl.format(Z.t.eE3oen, { count: a.length })
+                              children: Z.intl.format(Z.t.eE3oen, { count: r.length })
                           })
                       })
                   ]
@@ -101,8 +101,8 @@ let S = (e) => {
     },
     j = (e) => {
         var t;
-        let { relationshipType: n, userId: l, showingBanner: a } = e,
-            r = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
+        let { relationshipType: n, userId: l, showingBanner: r } = e,
+            a = null === (t = v.default.getUser(l)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: l,
@@ -110,7 +110,7 @@ let S = (e) => {
                 });
             },
             d = (0, i.jsx)(s.Button, {
-                className: T.action,
+                className: S.action,
                 size: s.Button.Sizes.TINY,
                 color: s.Button.Colors.PRIMARY,
                 onClick: () => {
@@ -126,10 +126,10 @@ let S = (e) => {
             case E.OGo.NONE:
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        !r &&
-                            !a &&
+                        !a &&
+                            !r &&
                             (0, i.jsx)(s.Button, {
-                                className: T.action,
+                                className: S.action,
                                 size: s.Button.Sizes.TINY,
                                 onClick: c,
                                 children: Z.intl.string(Z.t.w5uwoK)
@@ -141,7 +141,7 @@ let S = (e) => {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Button, {
-                            className: T.action,
+                            className: S.action,
                             size: s.Button.Sizes.TINY,
                             onClick: () => {
                                 o.Z.removeFriend(l, { location: E.ZY5.DM_CHANNEL });
@@ -154,7 +154,7 @@ let S = (e) => {
                 });
             case E.OGo.BLOCKED:
                 return (0, i.jsx)(s.Button, {
-                    className: T.action,
+                    className: S.action,
                     size: s.Button.Sizes.TINY,
                     onClick: () => {
                         o.Z.unblockUser(l, { location: E.ZY5.DM_CHANNEL });
@@ -166,19 +166,19 @@ let S = (e) => {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Text, {
-                            className: T.action,
+                            className: S.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
                             children: Z.intl.string(Z.t.c2v5nJ)
                         }),
                         (0, i.jsx)(s.Button, {
-                            className: T.action,
+                            className: S.action,
                             size: s.Button.Sizes.TINY,
                             onClick: c,
                             children: Z.intl.string(Z.t.ZcibdX)
                         }),
                         (0, i.jsx)(s.Button, {
-                            className: T.action,
+                            className: S.action,
                             size: s.Button.Sizes.TINY,
                             color: s.Button.Colors.PRIMARY,
                             onClick: () => {
@@ -193,7 +193,7 @@ let S = (e) => {
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.Button, {
-                            className: T.action,
+                            className: S.action,
                             size: s.Button.Sizes.TINY,
                             disabled: !0,
                             children: Z.intl.string(Z.t.xMH6vL)
@@ -207,10 +207,10 @@ let S = (e) => {
     },
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
-            a = l.useCallback(() => {
+            r = l.useCallback(() => {
                 (0, s.showToast)((0, s.createToast)(Z.intl.string(Z.t.a2j0ho), s.ToastType.FAILURE));
             }, []),
-            r = l.useCallback(() => {
+            a = l.useCallback(() => {
                 m.Z.closeChannelSidebar(C.uZ);
             }, []),
             o = l.useCallback(() => {
@@ -225,15 +225,15 @@ let S = (e) => {
                 isOptimisticRejected: g
             } = (0, u.m)({
                 user: v.default.getUser(n),
-                onError: a,
+                onError: r,
                 onAcceptSuccess: o,
-                onRejectSuccess: r
+                onRejectSuccess: a
             }),
             x = h || p || f || g;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Button, {
-                    className: T.action,
+                    className: S.action,
                     size: s.Button.Sizes.TINY,
                     onClick: () => c(t),
                     disabled: x,
@@ -241,7 +241,7 @@ let S = (e) => {
                     children: Z.intl.string(Z.t.Kz8Pws)
                 }),
                 (0, i.jsx)(s.Button, {
-                    className: T.action,
+                    className: S.action,
                     size: s.Button.Sizes.TINY,
                     onClick: () => d(t),
                     color: s.Button.Colors.PRIMARY,
@@ -255,24 +255,24 @@ let S = (e) => {
 t.Z = (e) => {
     let { userId: t, channel: n, showingBanner: l } = e,
         { channelId: s } = (0, h._)(),
-        o = (0, r.e7)([d.Z], () => null != s && d.Z.isSpam(s), [s]),
-        c = (0, r.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
+        o = (0, a.e7)([d.Z], () => null != s && d.Z.isSpam(s), [s]),
+        c = (0, a.e7)([x.Z], () => x.Z.getRelationshipType(t), [t]),
         u = n.id === s;
     return t === b.fL
         ? null
         : o || u
           ? (0, i.jsxs)('div', {
-                className: T.mobileContainer,
+                className: S.mobileContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: T.mobileMutualGuilds,
-                        children: (0, i.jsx)(S, {
+                        className: S.mobileMutualGuilds,
+                        children: (0, i.jsx)(T, {
                             userId: t,
                             channelId: n.id
                         })
                     }),
                     (0, i.jsxs)('div', {
-                        className: T.mobileButtons,
+                        className: S.mobileButtons,
                         children: [
                             (0, i.jsx)(A, {
                                 channelId: n.id,
@@ -283,19 +283,19 @@ t.Z = (e) => {
                     })
                 ]
             })
-          : !0 === a.tq || u
+          : !0 === r.tq || u
             ? (0, i.jsxs)('div', {
-                  className: T.mobileContainer,
+                  className: S.mobileContainer,
                   children: [
                       (0, i.jsx)('div', {
-                          className: T.mobileMutualGuilds,
-                          children: (0, i.jsx)(S, {
+                          className: S.mobileMutualGuilds,
+                          children: (0, i.jsx)(T, {
                               userId: t,
                               channelId: n.id
                           })
                       }),
                       (0, i.jsxs)('div', {
-                          className: T.mobileButtons,
+                          className: S.mobileButtons,
                           children: [
                               (0, i.jsx)(j, {
                                   relationshipType: c,
@@ -313,13 +313,13 @@ t.Z = (e) => {
                   ]
               })
             : (0, i.jsxs)('div', {
-                  className: T.container,
+                  className: S.container,
                   children: [
-                      (0, i.jsx)(S, {
+                      (0, i.jsx)(T, {
                           userId: t,
                           channelId: n.id
                       }),
-                      (0, i.jsx)('div', { className: T.divider }),
+                      (0, i.jsx)('div', { className: S.divider }),
                       (0, i.jsx)(j, {
                           relationshipType: c,
                           userId: t,

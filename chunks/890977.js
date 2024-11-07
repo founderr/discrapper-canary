@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i,
     l,
-    a = n(200651),
-    r = n(192379),
+    r = n(200651),
+    a = n(192379),
     s = n(120356),
     o = n.n(s),
     c = n(500923),
@@ -18,9 +18,9 @@ var i,
     f = n(958050);
 function g(e) {
     let t = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
-        n = r.useRef(null);
+        n = a.useRef(null);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             let i;
             return (
                 null != n.current &&
@@ -41,14 +41,14 @@ function g(e) {
 }
 function C(e) {
     let { className: t } = e;
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         ref: g(i || (i = n.t(p, 2))),
         className: o()(f.glow, t)
     });
 }
 function x(e) {
     let { className: t } = e;
-    return (0, a.jsx)('div', {
+    return (0, r.jsx)('div', {
         ref: g(l || (l = n.t(m, 2))),
         className: o()(f.trinkets, t)
     });
@@ -56,19 +56,19 @@ function x(e) {
 let v = (e) => {
     let { children: t, animationContainerClassName: n, glowClassName: i, trinketsClassName: l, onMount: s } = e;
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             s();
         }, [s]),
-        (0, a.jsxs)('div', {
+        (0, r.jsxs)('div', {
             className: n,
             children: [
-                (0, a.jsx)(C, { className: i }),
-                (0, a.jsx)('div', { className: f.circleLayer }),
-                (0, a.jsx)('div', {
+                (0, r.jsx)(C, { className: i }),
+                (0, r.jsx)('div', { className: f.circleLayer }),
+                (0, r.jsx)('div', {
                     className: f.entrypoint,
                     children: t
                 }),
-                (0, a.jsx)(x, { className: l })
+                (0, r.jsx)(x, { className: l })
             ]
         })
     );

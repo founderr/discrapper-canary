@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(91192),
+    r = n.n(l),
+    a = n(91192),
     s = n(442837),
     o = n(481060),
     c = n(129861),
@@ -19,7 +19,7 @@ var l = n(120356),
 function f(e) {
     let { user: t, row: n, hideDiscriminator: l, comparator: f, selected: g, checked: C, onClick: x, onMouseEnter: v, 'aria-setsize': _, 'aria-posinset': I } = e,
         E = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
-        b = (0, r.JA)(String(t.id));
+        b = (0, a.JA)(String(t.id));
     return (0, i.jsx)(o.Clickable, {
         id: 'user-row-'.concat(n),
         className: m.friendWrapper,
@@ -36,7 +36,7 @@ function f(e) {
         'aria-posinset': I,
         children: (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: a()(m.friend, { [m.friendSelected]: g }),
+            className: r()(m.friend, { [m.friendSelected]: g }),
             children: [
                 (0, i.jsx)(d.Z, {
                     user: t,

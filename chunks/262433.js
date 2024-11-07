@@ -40,12 +40,12 @@ function g(e, t) {
 }
 function v(e) {
     var t, n, i, r;
-    let { emojiHose: v, context: S, canvasWidth: I, canvasHeight: _, fallbackColor: x, outlineColorDark: E, outlineColorLight: C, streamerId: Z, deadDrawables: y } = e;
+    let { emojiHose: v, context: S, canvasWidth: I, canvasHeight: _, fallbackColor: x, outlineColorDark: E, outlineColorLight: Z, streamerId: C, deadDrawables: y } = e;
     S.save();
-    let T = c.Z.getEmojiImage(null !== (n = null !== (t = v.emojiId) && void 0 !== t ? t : v.emojiName) && void 0 !== n ? n : ''),
-        b = (0, d.np)(v.x, I),
+    let b = c.Z.getEmojiImage(null !== (n = null !== (t = v.emojiId) && void 0 !== t ? t : v.emojiName) && void 0 !== n ? n : ''),
+        T = (0, d.np)(v.x, I),
         A = (0, d.np)(v.y, _),
-        { outlineColor: N } = (0, d.bg)(v.userId, E, C, x);
+        { outlineColor: N } = (0, d.bg)(v.userId, E, Z, x);
     if (
         (g(v, (e) => {
             var t, n;
@@ -90,9 +90,9 @@ function v(e) {
                         return (i.particles[e.id] = c), (i.lastSpawned[e.id] = Date.now()), i;
                     });
                 });
-        })(v, b, A),
-        (0, m.I)(S, b, A, N, f.q2),
-        (0, m.T)(S, b, A, v.userId),
+        })(v, T, A),
+        (0, m.I)(S, T, A, N, f.q2),
+        (0, m.T)(S, T, A, v.userId),
         g(v, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -100,9 +100,9 @@ function v(e) {
                     l = n.x - (i / 2) * window.devicePixelRatio,
                     a = n.y - 1.2 * i * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, i / 2 + l, i / 2 + a, i, i);
-            })(S, T, e)
+            })(S, b, e)
         ),
-        v.lastUpdatedAt + f.FO < Date.now() && (0, o.ZZ)(Z, v),
+        v.lastUpdatedAt + f.FO < Date.now() && (0, o.ZZ)(C, v),
         v.state === u.f.STOP && ((i = v), !(Object.keys(null !== (r = h.getState().particles[i.id]) && void 0 !== r ? r : {}).length > 0)))
     )
         y.push(v);

@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(512722),
-    r = n.n(a),
+    r = n(512722),
+    a = n.n(r),
     s = n(442837),
     o = n(911367),
     c = n(699516),
@@ -20,13 +20,13 @@ var i = n(200651),
     g = n(177222);
 function C(e) {
     let { channel: t, ...n } = e,
-        a = (0, h.Z)();
+        r = (0, h.Z)();
     (0, o.t)();
     let [C] = t.recipients,
         x = (0, s.e7)([d.default], () => d.default.getUser(C));
-    r()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
+    a()(null != x, 'UserProfilePanelWrapper: user cannot be undefined');
     let v = (0, s.e7)([d.default], () => d.default.getCurrentUser());
-    r()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
+    a()(null != v, 'UserProfilePanelWrapper: currentUser cannot be undefined'),
         l.useEffect(() => {
             (0, p.Z)(x, {
                 withMutualFriends: !x.bot,
@@ -40,7 +40,7 @@ function C(e) {
     return (l.useEffect(() => {
         E(_);
     }, [_]),
-    a)
+    r)
         ? null
         : I && b
           ? (0, i.jsx)(m.Z, {

@@ -1,8 +1,8 @@
 n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(965288),
-    r = n(793954);
+    r = n(965288),
+    a = n(793954);
 t.Z = l.memo(function (e) {
     let { channel: t, participants: n, maxTiles: l } = e;
     if (0 === n.length) return null;
@@ -12,7 +12,7 @@ t.Z = l.memo(function (e) {
             let l = n[e];
             s.push(
                 (0, i.jsx)(
-                    a.Z,
+                    r.Z,
                     {
                         channel: t,
                         participant: l
@@ -20,9 +20,9 @@ t.Z = l.memo(function (e) {
                     l.id
                 )
             );
-        } else s.push((0, i.jsx)(a.y, {}, e));
+        } else s.push((0, i.jsx)(r.y, {}, e));
     return (0, i.jsx)('div', {
-        className: r.participants,
+        className: a.participants,
         children: s
     });
 });

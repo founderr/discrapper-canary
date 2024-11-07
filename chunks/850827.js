@@ -19,36 +19,36 @@ var l = n(120356),
     _ = n(802856),
     x = n(387903),
     E = n(606925),
-    C = n(719216),
-    Z = n(429589),
+    Z = n(719216),
+    C = n(429589),
     y = n(276149),
-    T = n(636245),
-    b = n(697761),
+    b = n(636245),
+    T = n(697761),
     A = n(611459),
     N = n(544671),
     w = n(757182),
-    P = n(910424),
-    j = n(981631),
+    j = n(910424),
+    P = n(981631),
     R = n(193710);
 t.Z = (0, u.Z)((e) => {
-    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: F, isEmbedded: V = !1 } = e,
-        B = (0, o.e7)([h.default], () => {
+    let { activity: t, embeddedActivity: n, user: l, applicationStream: r, className: u, guildId: M, channelId: O, source: L, color: k = c.Button.Colors.WHITE, look: D = c.Button.Looks.OUTLINED, type: U, onAction: V, isEmbedded: F = !1 } = e,
+        W = (0, o.e7)([h.default], () => {
             let e = h.default.getCurrentUser();
             return s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        W = U === x.Y.STREAM_PREVIEW || null != r,
+        B = U === x.Y.STREAM_PREVIEW || null != r,
         G = (0, I.Z)(t),
-        H = G || W ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
-        z = (null == t ? void 0 : t.type) === j.IIU.HANG_STATUS,
+        z = G || B ? m.Z.Direction.HORIZONTAL : m.Z.Direction.VERTICAL,
+        H = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
         Y = (0, o.e7)([g.Z, p.Z], () => {
             var e;
-            return z ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return H ? p.Z.getChannel(null === (e = g.Z.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        J = H === m.Z.Direction.VERTICAL;
+        J = z === m.Z.Direction.VERTICAL;
     return (0, i.jsx)(m.Z, {
         grow: 0,
         align: m.Z.Align.STRETCH,
-        direction: H,
+        direction: z,
         wrap: J ? m.Z.Wrap.WRAP : m.Z.Wrap.NO_WRAP,
         className: a()(u, R.buttonsWrapper, J ? R.vertical : R.horizontal),
         children: (() => {
@@ -56,22 +56,22 @@ t.Z = (0, u.Z)((e) => {
                 return (0, i.jsx)(
                     E.Z,
                     {
-                        platform: d.Z.get(j.ABu.XBOX),
+                        platform: d.Z.get(P.ABu.XBOX),
                         look: D,
                         color: k,
-                        onAction: F,
+                        onAction: V,
                         Icon: S.Z
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if ((null == t ? void 0 : t.platform) === j.M7m.PS4 || (null == t ? void 0 : t.platform) === j.M7m.PS5)
+            if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
                 return (0, i.jsx)(
                     E.Z,
                     {
                         look: D,
                         color: k,
-                        platform: d.Z.get(j.ABu.PLAYSTATION),
-                        onAction: F,
+                        platform: d.Z.get(P.ABu.PLAYSTATION),
+                        onAction: V,
                         Icon: v.Z
                     },
                     'ConnectPlatformActivityButton'
@@ -87,7 +87,7 @@ t.Z = (0, u.Z)((e) => {
                             source: L,
                             look: D,
                             color: k,
-                            onAction: F
+                            onAction: V
                         },
                         'spotify-activity-sync-button'
                     ),
@@ -99,7 +99,7 @@ t.Z = (0, u.Z)((e) => {
                             source: L,
                             look: D,
                             color: k,
-                            onAction: F
+                            onAction: V
                         },
                         'spotify-activity-play-button'
                     );
@@ -112,37 +112,37 @@ t.Z = (0, u.Z)((e) => {
                 return null == e
                     ? null
                     : (0, i.jsx)(
-                          T.Z,
+                          b.Z,
                           {
                               guildId: e.guildId,
                               channelId: e.channelId,
                               color: k,
                               look: D,
-                              onAction: F
+                              onAction: V
                           },
                           e.channelId
                       );
             }
-            return W
+            return B
                 ? (0, i.jsx)(
-                      P.Z,
+                      j.Z,
                       {
-                          isCurrentUser: B.id === l.id,
+                          isCurrentUser: W.id === l.id,
                           color: k,
                           look: D,
                           applicationStream: r,
-                          onAction: F
+                          onAction: V
                       },
                       'watch-button'
                   )
-                : z && null != Y
+                : H && null != Y
                   ? (0, i.jsx)(
                         y.Z,
                         {
                             color: k,
                             look: D,
                             hangStatusChannel: Y,
-                            onAction: F
+                            onAction: V
                         },
                         'hang-status-button'
                     )
@@ -154,42 +154,42 @@ t.Z = (0, u.Z)((e) => {
                                     activity: t,
                                     color: k,
                                     look: D,
-                                    onAction: F
+                                    onAction: V
                                 },
                                 'watch-button'
                             ),
                             (0, i.jsx)(
-                                Z.Z,
+                                C.Z,
                                 {
                                     activity: t,
                                     embeddedActivity: n,
                                     user: l,
                                     color: k,
                                     look: D,
-                                    isEmbedded: V,
-                                    onAction: F
+                                    isEmbedded: F,
+                                    onAction: V
                                 },
                                 'join-activity-button'
                             ),
                             (0, i.jsx)(
-                                b.Z,
+                                T.Z,
                                 {
                                     activity: t,
                                     user: l,
                                     color: k,
                                     look: D,
-                                    onAction: F
+                                    onAction: V
                                 },
                                 'notify-button'
                             ),
                             (0, i.jsx)(
-                                C.Z,
+                                Z.Z,
                                 {
                                     user: l,
                                     color: k,
                                     look: D,
                                     activity: t,
-                                    onAction: F
+                                    onAction: V
                                 },
                                 'custom-activity-button'
                             )

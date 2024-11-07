@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -29,15 +29,15 @@ function c(e) {
               }
           });
 }
-function u(e) {
+function d(e) {
     let { usernameHook: t, message: r, compact: l } = e,
-        { content: u, timestamp: d, messageReference: m } = r,
+        { content: d, timestamp: u, messageReference: m } = r,
         h = (0, a.ZP)(r),
         f = t(h),
         p = s.intl.format(s.t['47CZc3'], {
             username: h.nick,
             usernameHook: f,
-            webhookName: u,
+            webhookName: d,
             webhookNameHook: (e, t) =>
                 (0, i.jsx)(
                     c,
@@ -50,7 +50,7 @@ function u(e) {
         });
     return (0, i.jsx)(o.Z, {
         icon: n(570111),
-        timestamp: d,
+        timestamp: u,
         compact: l,
         children: p
     });

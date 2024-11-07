@@ -27,10 +27,10 @@ var i = n(200651),
     C = n(409057),
     S = n(199902),
     x = n(592125),
-    Z = n(158776),
-    I = n(594174),
-    y = n(5192),
-    b = n(358085),
+    I = n(158776),
+    Z = n(594174),
+    b = n(5192),
+    y = n(358085),
     N = n(998502),
     O = n(388627),
     T = n(981631),
@@ -38,7 +38,7 @@ var i = n(200651),
     L = n(250145);
 function R(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
-        c = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
+        c = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
         [f, m] = o.useState('unsent'),
         [v, E] = o.useState(!1);
     o.useEffect(() => {
@@ -83,14 +83,14 @@ function R(e) {
                 }
             }
         },
-        Z = async () => {
+        I = async () => {
             var e;
             if (null == c) return;
             let t = await d.Z.getOrEnsurePrivateChannel(c.id),
                 n = null !== (e = x.Z.getChannel(t)) && void 0 !== e ? e : null;
-            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), b.isPlatformEmbedded ? N.ZP.focus() : window.focus();
+            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), y.isPlatformEmbedded ? N.ZP.focus() : window.focus();
         },
-        y = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
+        b = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
         O = C
             ? (0, i.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
@@ -101,13 +101,13 @@ function R(e) {
                   size: 'sm'
               });
     return (0, i.jsx)(a.Tooltip, {
-        text: y,
-        'aria-label': y,
+        text: b,
+        'aria-label': b,
         children: (e) =>
             (0, i.jsx)(a.Button, {
                 ...e,
                 submitting: 'sending' === f,
-                onClick: v ? Z : S,
+                onClick: v ? I : S,
                 className: L.inviteButton,
                 innerClassName: L.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
@@ -130,8 +130,8 @@ function R(e) {
 }
 function k(e) {
     let { entry: t } = e,
-        n = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
-        r = (0, s.e7)([Z.Z], () => (null != n ? Z.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
+        n = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
+        r = (0, s.e7)([I.Z], () => (null != n ? I.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
         [l, c] = o.useState('unsent');
     if (!(null != r && (0, p.Z)(r, T.xjy.JOIN))) return null;
     let d = async (e) => {
@@ -180,10 +180,10 @@ function k(e) {
 }
 function w(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
-        r = (0, s.e7)([I.default], () => I.default.getUser(t.author_id)),
+        r = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
         l = (0, s.e7)([S.Z], () => (null != r ? S.Z.getAnyStreamForUser(r.id) : null), [r]),
         { isMobileOnline: u, status: c } = (0, s.cj)(
-            [Z.Z],
+            [I.Z],
             () =>
                 null == r
                     ? {
@@ -191,8 +191,8 @@ function w(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: Z.Z.isMobileOnline(r.id),
-                          status: Z.Z.getStatus(r.id)
+                          isMobileOnline: I.Z.isMobileOnline(r.id),
+                          status: I.Z.getStatus(r.id)
                       },
             [r]
         );
@@ -217,7 +217,7 @@ function w(e) {
                                       className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: y.ZP.getName(void 0, void 0, r)
+                                      children: b.ZP.getName(void 0, void 0, r)
                                   }),
                                   null != l && (0, i.jsx)(m.ZP, {})
                               ]
@@ -262,8 +262,8 @@ function M() {
     var e;
     let t = null === (e = (0, O.II)()) || void 0 === e ? void 0 : e.id,
         n = (0, E.Ns)(t),
-        o = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
-        r = (0, s.e7)([Z.Z], () => (null != o && null != t ? Z.Z.getApplicationActivity(o.id, t) : null)),
+        o = (0, s.e7)([Z.default], () => Z.default.getCurrentUser()),
+        r = (0, s.e7)([I.Z], () => (null != o && null != t ? I.Z.getApplicationActivity(o.id, t) : null)),
         l = null != r && (0, p.Z)(r, T.xjy.JOIN);
     return 0 === n.length && null == r
         ? null

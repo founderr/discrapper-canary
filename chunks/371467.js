@@ -19,10 +19,10 @@ var i,
     C = n(314897),
     S = n(592125),
     x = n(375954),
-    Z = n(292959),
-    I = n(158776),
-    y = n(885110),
-    b = n(246946),
+    I = n(292959),
+    Z = n(158776),
+    b = n(885110),
+    y = n(246946),
     N = n(594174),
     O = n(974180),
     T = n(237997),
@@ -34,20 +34,20 @@ var i,
     j = n(996050),
     M = n(609626),
     P = n(421824),
-    z = n(647271),
-    D = n(777036),
+    D = n(647271),
+    z = n(777036),
     U = n(90525),
     V = n(333727),
-    W = n(585708),
+    F = n(585708),
     B = n(588909),
-    F = n(987650),
+    W = n(987650),
     H = n(981631),
     G = n(388032);
 ((l = i || (i = {}))[(l.GENERIC = 0)] = 'GENERIC'), (l[(l.TEXT = 1)] = 'TEXT'), (l[(l.INCOMING_CALL = 2)] = 'INCOMING_CALL'), (l[(l.NUDGE = 3)] = 'NUDGE'), ((s = o || (o = {}))[(s.NORMAL = 0)] = 'NORMAL'), (s[(s.HIGH = 1)] = 'HIGH'), (s[(s.URGENT = 2)] = 'URGENT');
 let Y = 5 * A.Z.Millis.SECOND,
     K = 8 * A.Z.Millis.SECOND,
-    Q = 30 * A.Z.Millis.SECOND,
-    X = Object.freeze({
+    X = 30 * A.Z.Millis.SECOND,
+    Q = Object.freeze({
         timestamp: 0,
         priority: 0,
         duration: Y,
@@ -95,7 +95,7 @@ function ei(e) {
 }
 function eo(e, t) {
     let n = {
-            ...X,
+            ...Q,
             timestamp: Date.now(),
             ...t
         },
@@ -135,10 +135,10 @@ function er(e) {
     if (!n.includes(C.default.getId())) return et(i);
     if (null != i) return !1;
     let o = S.Z.getChannel(t);
-    if (null == o || !o.isPrivate() || y.Z.getStatus() === H.Skl.DND || _.QZ.getSetting()) return !1;
+    if (null == o || !o.isPrivate() || b.Z.getStatus() === H.Skl.DND || _.QZ.getSetting()) return !1;
     let r = J.find((e) => 1 === e.type && e.channelId === t && e.messageType === H.uaV.CALL);
     null != r && et(r.id),
-        eo((0, D.Z)(o), {
+        eo((0, z.Z)(o), {
             priority: 1,
             expirationExternallyManaged: !0,
             type: 2,
@@ -171,10 +171,10 @@ let es = new el(m.Z, {
         let { nudge: t } = e,
             n = (function (e) {
                 switch (e.type) {
-                    case F.nc.GO_LIVE_VOICE:
-                    case F.nc.GO_LIVE_NON_VOICE:
-                        return (0, z.Z)(e);
-                    case F.nc.NEWS:
+                    case W.nc.GO_LIVE_VOICE:
+                    case W.nc.GO_LIVE_NON_VOICE:
+                        return (0, D.Z)(e);
+                    case W.nc.NEWS:
                     default:
                         return (0, B.Z)(e);
                 }
@@ -213,11 +213,11 @@ let es = new el(m.Z, {
                 if (null == r) return !1;
                 switch (t.activity.type) {
                     case H.mFx.JOIN:
-                        if (null == (i = I.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        if (null == (i = Z.Z.getApplicationActivity(n.id, r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                         o = (0, j.Z)(e, t, n, r, i);
                         break;
                     case H.mFx.JOIN_REQUEST:
-                        if (null == (i = y.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                        if (null == (i = b.Z.getApplicationActivity(r.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
                         o = (0, V.Z)(e, n, r, i);
                 }
                 return (
@@ -226,17 +226,17 @@ let es = new el(m.Z, {
                         priority: 2,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
-                        duration: Q
+                        duration: X
                     }),
                     !0)
                 );
             })(s, l, a);
             if (!1 !== e) return e;
         }
-        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || b.Z.disableNotifications || !(0, L.eF)(l, r)) return !1;
-        let u = !Z.Z.isSoundDisabled(O.Ay),
+        if (T.Z.getTextChatNotificationMode() === H.Ypu.DISABLED || y.Z.disableNotifications || !(0, L.eF)(l, r)) return !1;
+        let u = !I.Z.isSoundDisabled(O.Ay),
             c = null !== (o = x.Z.getMessage(r, l.id)) && void 0 !== o ? o : (0, E.e5)(l);
-        eo((0, W.Z)(s, c, a, u), {
+        eo((0, F.Z)(s, c, a, u), {
             type: 1,
             channelId: s.id,
             expirationExternallyManaged: !0,

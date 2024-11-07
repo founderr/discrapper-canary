@@ -7,8 +7,8 @@ var r = n(481060),
     o = n(906732),
     s = n(963249),
     c = n(639119),
-    u = n(474936),
-    d = n(981631),
+    d = n(474936),
+    u = n(981631),
     m = n(388032),
     h = n(569252);
 t.Z = function (e) {
@@ -17,9 +17,9 @@ t.Z = function (e) {
         { analyticsLocations: p } = (0, o.ZP)(
             (function (e) {
                 switch (e) {
-                    case u.Si.TIER_0:
+                    case d.Si.TIER_0:
                         return a.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
-                    case u.Si.TIER_2:
+                    case d.Si.TIER_2:
                         return a.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
@@ -33,9 +33,9 @@ t.Z = function (e) {
         : (0, i.jsxs)(r.Notice, {
               color: (function (e) {
                   switch (e) {
-                      case u.Si.TIER_0:
+                      case d.Si.TIER_0:
                           return r.NoticeColors.PREMIUM_TIER_0;
-                      case u.Si.TIER_2:
+                      case d.Si.TIER_2:
                           return r.NoticeColors.PREMIUM_TIER_2;
                       default:
                           throw Error('Unsupported subscription tier: '.concat(e));
@@ -50,9 +50,9 @@ t.Z = function (e) {
                   }),
                   (function (e, t) {
                       switch (e) {
-                          case u.Si.TIER_0:
+                          case d.Si.TIER_0:
                               return t.days > 0 ? m.intl.formatToPlainString(m.t.sP5OqK, { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t['7Lhfu7'], { hours: t.hours }) : m.intl.formatToPlainString(m.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-                          case u.Si.TIER_2:
+                          case d.Si.TIER_2:
                               return t.days > 0 ? m.intl.formatToPlainString(m.t['4prs5e'], { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t.OD5nIS, { hours: t.hours }) : m.intl.formatToPlainString(m.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
@@ -65,17 +65,17 @@ t.Z = function (e) {
                               subscriptionTier: f,
                               analyticsLocations: p,
                               analyticsObject: {
-                                  page: d.ZY5.IN_APP,
-                                  section: d.jXE.NOTIFICATION_BAR,
-                                  object: d.qAy.BUTTON_CTA
+                                  page: u.ZY5.IN_APP,
+                                  section: u.jXE.NOTIFICATION_BAR,
+                                  object: u.qAy.BUTTON_CTA
                               }
                           });
                       },
                       children: (function (e) {
                           switch (e) {
-                              case u.Si.TIER_0:
+                              case d.Si.TIER_0:
                                   return m.intl.string(m.t.mCG029);
-                              case u.Si.TIER_2:
+                              case d.Si.TIER_2:
                                   return m.intl.string(m.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));

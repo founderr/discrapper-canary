@@ -23,19 +23,19 @@ var i = n(200651),
     _ = n(574176),
     x = n(952164),
     E = n(199902),
-    C = n(592125),
-    Z = n(430824),
+    Z = n(592125),
+    C = n(430824),
     y = n(496675),
-    T = n(979651),
-    b = n(626135),
+    b = n(979651),
+    T = n(626135),
     A = n(153066),
     N = n(981631),
     w = n(388032),
-    P = n(247111);
-function j(e) {
+    j = n(247111);
+function P(e) {
     let { type: t, source: n, activity: l, applicationStream: a, user: r, guildId: s, channelId: c, onAction: d, isEmbedded: f = (0, u.Z)(l), actionColor: p } = e;
     return (0, i.jsx)(m.Z, {
-        className: (0, A.l)(P, 'actions', t),
+        className: (0, A.l)(j, 'actions', t),
         type: t,
         source: n,
         activity: l,
@@ -52,9 +52,9 @@ function j(e) {
 let R = d.Z.Types;
 t.Z = function (e) {
     let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: m = !1, analyticsParams: A, ...R } = e,
-        M = (0, s.e7)([T.Z, C.Z], () => {
+        M = (0, s.e7)([b.Z, Z.Z], () => {
             var e;
-            return C.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return Z.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: O } = _.n.useExperiment(
             {
@@ -66,22 +66,22 @@ t.Z = function (e) {
         L = (0, s.e7)([E.Z], () => (a ? E.Z.getAnyStreamForUser(n.id) : null)),
         k = O && y.Z.can(N.Plq.CONNECT, M),
         D = (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && k ? M : null,
-        U = (0, s.e7)([Z.Z, T.Z, C.Z], () => {
+        U = (0, s.e7)([C.Z, b.Z, Z.Z], () => {
             var e, i;
-            return (0, c.Z)(t, N.xjy.EMBEDDED) ? Z.Z.getGuild(null === (e = C.Z.getChannel(null === (i = T.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? Z.Z.getGuild(D.getGuildId()) : null;
+            return (0, c.Z)(t, N.xjy.EMBEDDED) ? C.Z.getGuild(null === (e = Z.Z.getChannel(null === (i = b.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? C.Z.getGuild(D.getGuildId()) : null;
         }),
-        F = (0, s.e7)([Z.Z], () => (null != L ? Z.Z.getGuild(L.guildId) : null)),
-        V = (0, s.e7)([f.Z], () => {
+        V = (0, s.e7)([C.Z], () => (null != L ? C.Z.getGuild(L.guildId) : null)),
+        F = (0, s.e7)([f.Z], () => {
             if (null != t) return null != t.application_id ? f.Z.getApplication(t.application_id) : f.Z.getApplicationByName(t.name);
             return null;
         }),
-        B = (0, p.Z)(),
-        W = (0, I.Z)(n),
-        G = B && null != t && W;
+        W = (0, p.Z)(),
+        B = (0, I.Z)(n),
+        G = W && null != t && B;
     return (l.useEffect(() => {
         (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS &&
             k &&
-            b.default.track(N.rMx.VIEW_HANG_STATUS, {
+            T.default.track(N.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
@@ -92,18 +92,18 @@ t.Z = function (e) {
               ...R,
               activity: t,
               user: n,
-              application: V,
+              application: F,
               hideHeader: u,
-              activityGuild: null != U ? U : F,
+              activityGuild: null != U ? U : V,
               showReactions: G,
               showChannelDetails: m,
               channel: m ? M : void 0,
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
-                            className: r()(G && P.actionsWrapper),
+                            className: r()(G && j.actionsWrapper),
                             children: [
-                                (0, i.jsx)(j, {
+                                (0, i.jsx)(P, {
                                     ...R,
                                     applicationStream: L,
                                     activity: t,
@@ -119,7 +119,7 @@ t.Z = function (e) {
                                         },
                                         onInteraction: (e) => {
                                             let { interactionType: i, emoji: l, reply: a } = e;
-                                            b.default.track(N.rMx.ACTIVITY_REACTOR_INTERACTED, {
+                                            T.default.track(N.rMx.ACTIVITY_REACTOR_INTERACTED, {
                                                 application_id: t.application_id,
                                                 interaction_type: i,
                                                 ...A
@@ -130,7 +130,7 @@ t.Z = function (e) {
                                                         reaction: l,
                                                         user: n,
                                                         activity: t,
-                                                        application: V,
+                                                        application: F,
                                                         altText: (0, S.xC)(n, t),
                                                         stream: L
                                                     }),
@@ -140,7 +140,7 @@ t.Z = function (e) {
                                                         reply: a,
                                                         user: n,
                                                         activity: t,
-                                                        application: V,
+                                                        application: F,
                                                         altText: (0, S.xC)(n, t),
                                                         stream: L
                                                     });

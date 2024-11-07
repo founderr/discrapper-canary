@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(630388),
-    a = n(901461),
-    r = n(773176),
+    r = n(901461),
+    a = n(773176),
     s = n(981631),
     o = n(916315);
 function c(e) {
@@ -24,10 +24,10 @@ function c(e) {
         v = h.state === s.yb.SEND_FAILED;
     return g || (x && !v)
         ? null
-        : (0, i.jsx)(r.Z, {
+        : (0, i.jsx)(a.Z, {
               className: o.buttons,
               innerClassName: o.buttonsInner,
-              isHeader: !f && C && !(0, a.Z)(h),
+              isHeader: !f && C && !(0, r.Z)(h),
               isReply: !f && h.type === s.uaV.REPLY && null != h.messageReference,
               channel: p,
               message: h,

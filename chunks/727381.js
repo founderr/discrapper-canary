@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(399606),
+    r = n.n(l),
+    a = n(399606),
     s = n(481060),
     o = n(271383),
     c = n(594174),
@@ -49,12 +49,12 @@ function v() {
 }
 function _(e) {
     let { userId: t, guildId: n, location: l, className: d, onNavigate: C } = e,
-        _ = (0, r.e7)([c.default], () => c.default.getUser(t), [t]),
-        I = (0, r.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
+        _ = (0, a.e7)([c.default], () => c.default.getUser(t), [t]),
+        I = (0, a.e7)([o.ZP], () => o.ZP.getMember(n, t), [n, t]);
     return null == _ || null == I
         ? null
         : (0, i.jsxs)('div', {
-              className: a()(x.container, d),
+              className: r()(x.container, d),
               children: [
                   (0, i.jsx)(v, {}),
                   (0, i.jsxs)(s.Scroller, {

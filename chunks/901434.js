@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(287734),
     o = n(358221),
     c = n(305325),
@@ -22,7 +22,7 @@ t.Z = function (e) {
         }, [x.id, x.guild_id, _]),
         E = p.filter((e) => e.type === m.Ui.VOICE),
         b = 4 === E.length ? 2 : 3,
-        N = (0, a.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
+        N = (0, r.Wu)([o.Z], () => E.map((e) => o.Z.getParticipant(x.id, e.id)).filter(h.lm), [x.id, E]);
     return (0, i.jsxs)('div', {
         className: g.container,
         children: [
@@ -46,14 +46,14 @@ t.Z = function (e) {
                     )
                 )
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(a.Heading, {
                 className: g.channelName,
                 variant: 'heading-xxl/semibold',
                 children: x.name
             }),
             (0, i.jsx)('div', {
                 className: g.participantsRow,
-                children: (0, i.jsx)(r.Text, {
+                children: (0, i.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -76,12 +76,12 @@ t.Z = function (e) {
                                   : void 0)
                 })
             }),
-            (0, i.jsx)(r.Button, {
+            (0, i.jsx)(a.Button, {
                 disabled: !v,
                 className: g.joinButton,
-                color: v ? r.Button.Colors.GREEN : r.Button.Colors.PRIMARY,
+                color: v ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
                 onClick: I,
-                size: r.Button.Sizes.MEDIUM,
+                size: a.Button.Sizes.MEDIUM,
                 children: v ? f.intl.string(f.t['7vb2cX']) : f.intl.string(f.t.TVBCKS)
             })
         ]

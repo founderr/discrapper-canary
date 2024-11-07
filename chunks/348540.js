@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(189156),
-    r = n(699516),
+    r = n(189156),
+    a = n(699516),
     s = n(246946),
     o = n(5192),
     c = n(621853),
@@ -27,11 +27,11 @@ var l = n(442837),
     b = n(101638),
     N = n(228168),
     Z = n(981631),
-    T = n(388032),
-    S = n(299336);
+    S = n(388032),
+    T = n(299336);
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
-        M = (0, l.e7)([r.Z], () => r.Z.getRelationshipType(t.id)),
+        M = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
         R = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
         L = (0, l.e7)([c.Z], () => {
             var e;
@@ -40,7 +40,7 @@ function j(e) {
         { recentActivityEnabled: k } = (0, d.I)({ location: 'UserProfilePanelBody' }),
         { recentActivityStatusEnabled: O } = (0, u.U)({ location: 'UserProfilePanelBody' });
     return (0, i.jsxs)('div', {
-        className: S.body,
+        className: T.body,
         children: [
             (0, i.jsx)(I.Z, {
                 user: t,
@@ -71,22 +71,22 @@ function j(e) {
                         channelId: A.id
                     })
                 }),
-            t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
+            t.isProvisional && (0, i.jsx)(r.Z, { look: 'profile' }),
             !k &&
                 !O &&
                 (0, i.jsx)(f.Z, {
                     user: t,
                     currentUser: n,
-                    className: S.activity
+                    className: T.activity
                 }),
             (0, i.jsxs)(_.Z.Overlay, {
-                className: S.overlay,
+                className: T.overlay,
                 children: [
                     !R &&
                         (null == j ? void 0 : j.bio) != null &&
                         (null == j ? void 0 : j.bio) !== '' &&
                         (0, i.jsx)(v.Z, {
-                            heading: T.intl.string(T.t['61W33d']),
+                            heading: S.intl.string(S.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(m.Z, {
                                 userBio: j.bio,
@@ -102,7 +102,7 @@ function j(e) {
                             channel: A
                         }),
                     (0, i.jsx)(v.Z, {
-                        heading: t.bot ? T.intl.string(T.t['A//N4u']) : T.intl.string(T.t.a6XYDw),
+                        heading: t.bot ? S.intl.string(S.t['A//N4u']) : S.intl.string(S.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(x.Z, { userId: t.id })
                     })
@@ -114,7 +114,7 @@ function j(e) {
                         (0, i.jsx)(f.Z, {
                             user: t,
                             currentUser: n,
-                            className: S.activity
+                            className: T.activity
                         }),
                         (0, i.jsx)(b.Z, { user: t })
                     ]
