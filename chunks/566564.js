@@ -19,8 +19,8 @@ var r = n(200651),
     v = n(937510),
     _ = n(823941),
     k = n(752053),
-    E = n(38900),
-    j = n(709999),
+    j = n(38900),
+    E = n(709999),
     I = n(215023),
     T = n(388032),
     S = n(632007),
@@ -32,20 +32,20 @@ var r = n(200651),
 t.Z = (e) => {
     var t, n, s, P, O, w;
     let { handleTransition: A, numVisibleItems: H } = e,
-        { categories: F, isFetchingCategories: R, fetchCategoriesError: D, fetchPurchasesError: M, claimError: V, refreshCategories: W } = (0, x.Z)(),
-        U = null !== (t = null != D ? D : M) && void 0 !== t ? t : V,
+        { categories: F, isFetchingCategories: R, fetchCategoriesError: D, fetchPurchasesError: V, claimError: M, refreshCategories: W } = (0, x.Z)(),
+        U = null !== (t = null != D ? D : V) && void 0 !== t ? t : M,
         z = Array.from(F.values()),
         G = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         K = a.createRef(),
         $ = (0, C.t)('CollectiblesFeedShop'),
-        Y = (0, g.m)('CollectiblesFeedShop'),
-        J = (0, b.b)('Collectibles Shop Button'),
+        J = (0, g.m)('CollectiblesFeedShop'),
+        Y = (0, b.b)('Collectibles Shop Button'),
         q = (0, d.Z)('shop_disable_cache'),
         Q = (0, d.Z)('shop_include_unpublished'),
-        X = Y ? z[0] : f.Z.getCategory($ ? l.T.SPOOKY_NIGHT : l.T.BAND),
-        ee = Y ? z[1] : f.Z.getCategory($ ? l.T.BAND : l.T.AUTUMN_EQUINOX),
+        X = J ? z[0] : f.Z.getCategory($ ? l.T.SPOOKY_NIGHT : l.T.BAND),
+        ee = J ? z[1] : f.Z.getCategory($ ? l.T.BAND : l.T.AUTUMN_EQUINOX),
         et = f.Z.getCategory(l.T.ANIME_V2),
-        en = Y
+        en = J
             ? (0, h.uV)(null !== (n = null == X ? void 0 : X.heroBanner) && void 0 !== n ? n : '', {
                   size: I.pv,
                   format: 'jpg'
@@ -53,7 +53,7 @@ t.Z = (e) => {
             : $
               ? Z
               : y,
-        er = Y
+        er = J
             ? (0, h.uV)(null !== (s = null == ee ? void 0 : ee.featuredBlock) && void 0 !== s ? s : '', {
                   size: I.J0,
                   format: 'png'
@@ -61,7 +61,7 @@ t.Z = (e) => {
             : $
               ? N
               : L,
-        ea = Y
+        ea = J
             ? (0, h.uV)(null !== (P = null == et ? void 0 : et.featuredBlock) && void 0 !== P ? P : '', {
                   size: I.J0,
                   format: 'png'
@@ -70,7 +70,7 @@ t.Z = (e) => {
         es = a.useCallback(() => {
             W();
         }, [W]),
-        ei = Y ? (null !== (O = null == X ? void 0 : X.heroRanking) && void 0 !== O ? O : []) : $ ? I.Ku : I.WC,
+        ei = J ? (null !== (O = null == X ? void 0 : X.heroRanking) && void 0 !== O ? O : []) : $ ? I.Ku : I.WC,
         el = a.useMemo(() => ei.map((e) => f.Z.getProduct(e)).filter((e) => null != e), [R, $]),
         eo = (0, v.l)(el).slice(0, 4),
         ec = a.useMemo(() => I.yo.map((e) => f.Z.getProduct(e)).filter((e) => null != e), [R]),
@@ -80,11 +80,11 @@ t.Z = (e) => {
     if (null != U) {
         let e = [];
         return (
-            null != D ? e.push('shop load fetch categories error: '.concat(U.message)) : null != M ? e.push('shop load fetch purchase error: '.concat(U.message)) : e.push('shop load claim error: '.concat(U.message)),
+            null != D ? e.push('shop load fetch categories error: '.concat(U.message)) : null != V ? e.push('shop load fetch purchase error: '.concat(U.message)) : e.push('shop load claim error: '.concat(U.message)),
             m.Z.captureMessage(e.join('\n'), {
                 tags: {
                     isStaff: G.isStaff().toString(),
-                    preloadEnabled: J.toString(),
+                    preloadEnabled: Y.toString(),
                     disableCache: q.toString(),
                     includeUnpublished: Q.toString()
                 }
@@ -130,7 +130,6 @@ t.Z = (e) => {
                                                   }),
                                               (0, r.jsxs)('div', {
                                                   className: i()(S.heroLogoNameContainer),
-                                                  style: (null == X ? void 0 : X.skuId) === l.T.MYTHICAL_CREATURES ? { alignItems: 'center' } : {},
                                                   children: [
                                                       (0, r.jsx)('img', {
                                                           className: S.heroHeaderLogo,
@@ -163,7 +162,7 @@ t.Z = (e) => {
                             className: i()(S.row, S.feed, S.feedSingleRow),
                             children: R
                                 ? (0, r.jsx)(r.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(E.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(j.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: eo.map((e, t) => {
@@ -179,7 +178,7 @@ t.Z = (e) => {
                                                             categoryPosition: 0
                                                         },
                                                         children: (0, r.jsx)(
-                                                            j.Z,
+                                                            E.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
@@ -279,7 +278,7 @@ t.Z = (e) => {
                             className: S.feed,
                             ref: K,
                             children: R
-                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(E.K, {}, t + 1)) })
+                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(j.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: ed.slice(0, H).map((e, t) => {
                                           let n = f.Z.getCategoryForProduct(e.skuId);
@@ -294,7 +293,7 @@ t.Z = (e) => {
                                                             categoryPosition: 2
                                                         },
                                                         children: (0, r.jsx)(
-                                                            j.Z,
+                                                            E.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
