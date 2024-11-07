@@ -34,9 +34,9 @@ var n,
     T = t(585483),
     S = t(55935),
     N = t(408433),
-    M = t(956664),
-    j = t(468846),
-    A = t(401419),
+    A = t(956664),
+    M = t(468846),
+    j = t(401419),
     k = t(249458),
     H = t(981631),
     F = t(217702),
@@ -60,7 +60,7 @@ function W(e, l, t) {
 }
 function O(e) {
     var l, t;
-    let { className: n, iframeWrapperClassName: a, maxWidth: o, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: _, volume: y, onPlay: w, onPause: E, onEnded: S, onControlsHide: N, onControlsShow: A, onVolumeChange: k, onMute: F, href: L, placeholder: B, placeholderVersion: R, sourceMetadata: P } = e,
+    let { className: n, iframeWrapperClassName: a, maxWidth: o, maxHeight: d, thumbnail: u, video: m, provider: h, allowFullScreen: c = !0, responsive: p = !1, renderImageComponent: b, renderVideoComponent: g, renderLinkComponent: v, playable: x = !0, autoPlay: I = !1, autoMute: _, volume: y, onPlay: w, onPause: E, onEnded: S, onControlsHide: N, onControlsShow: j, onVolumeChange: k, onMute: F, href: L, placeholder: B, placeholderVersion: R, sourceMetadata: P } = e,
         [W, O] = r.useState(I),
         D = null != m && null == m.proxyURL,
         G = r.useCallback(() => O(!1), [O]),
@@ -75,7 +75,7 @@ function O(e) {
     );
     let { width: U, height: q } = u;
     null != m && ((U = m.width), (q = m.height));
-    let z = (0, M.Tj)({
+    let z = (0, A.Tj)({
         width: U,
         height: q,
         maxWidth: o,
@@ -106,7 +106,7 @@ function O(e) {
                 onPause: E,
                 onMute: F,
                 onControlsHide: N,
-                onControlsShow: A,
+                onControlsShow: j,
                 sourceMetadata: P
             })
         });
@@ -147,7 +147,7 @@ function O(e) {
             children: (0, i.jsx)('div', {
                 className: s()(V.embedVideo, a),
                 style: r,
-                children: (0, i.jsx)(j.ZP, {
+                children: (0, i.jsx)(M.ZP, {
                     provider: h,
                     src: m.url,
                     style: e,
@@ -489,7 +489,8 @@ class G extends (n = r.PureComponent) {
             E = v.ZP.isAnimated({
                 src: (0, C.q)(o),
                 original: o.url,
-                animated: !1
+                animated: !1,
+                srcIsAnimated: o.srcIsAnimated
             }),
             T = {
                 containerClassName: s()(b, {
@@ -519,7 +520,7 @@ class G extends (n = r.PureComponent) {
         let S = null !== (n = null === (e = o.url.split('.').pop()) || void 0 === e ? void 0 : e.split('?')[0]) && void 0 !== n ? n : '';
         'jpg' === S && (S = 'jpeg');
         let N = null != o && !v.uo.test(null == o ? void 0 : o.url) && !(o.srcIsAnimated && v.YG.test(null == o ? void 0 : o.url)),
-            M =
+            A =
                 !0 !== this.props.isSearchResult &&
                 a &&
                 (null === (l = this.props.message) || void 0 === l ? void 0 : l.channel_id) != null &&
@@ -540,11 +541,11 @@ class G extends (n = r.PureComponent) {
                                 ...T,
                                 autoPlay: g && !t && !r,
                                 renderAccessory: E ? e : null,
-                                onMouseEnter: () => this.handleImageHover(!0, o, M),
-                                onMouseLeave: () => this.handleImageHover(!1, o, M),
+                                onMouseEnter: () => this.handleImageHover(!0, o, A),
+                                onMouseLeave: () => this.handleImageHover(!1, o, A),
                                 renderAdjacentContent: () => {
                                     var e, l;
-                                    return !0 === this.props.showImageRecs && M
+                                    return !0 === this.props.showImageRecs && A
                                         ? this.renderImageHoverButtons({
                                               mimeType: ['image', S],
                                               downloadURL: null !== (l = o.proxyURL) && void 0 !== l ? l : o.url,
@@ -735,7 +736,7 @@ class G extends (n = r.PureComponent) {
             { maxMediaWidth: a, maxMediaHeight: s } = this.state,
             o = null != l ? l : n;
         if (null == o) return;
-        let { width: d } = (0, M.Tj)({
+        let { width: d } = (0, A.Tj)({
             width: o.width,
             height: o.height,
             maxWidth: a,
@@ -745,7 +746,7 @@ class G extends (n = r.PureComponent) {
         if (i === H.hBH.RICH && void 0 !== t) return 520;
         if (i === H.hBH.GIFV) {
             var u, m, h, c;
-            let { width: e } = (0, M.Tj)({
+            let { width: e } = (0, A.Tj)({
                 width: null !== (m = null !== (u = null == n ? void 0 : n.width) && void 0 !== u ? u : null == r ? void 0 : r.width) && void 0 !== m ? m : 0,
                 height: null !== (c = null !== (h = null == n ? void 0 : n.height) && void 0 !== h ? h : null == r ? void 0 : r.height) && void 0 !== c ? c : 0,
                 maxWidth: a,
@@ -788,7 +789,7 @@ class G extends (n = r.PureComponent) {
         if (void 0 === s && void 0 === t && i !== H.hBH.RICH) {
             let e = null != l ? l : n;
             if (void 0 !== e) {
-                let { width: l } = (0, M.Tj)({
+                let { width: l } = (0, A.Tj)({
                     width: e.width,
                     height: e.height,
                     maxWidth: r,
@@ -805,8 +806,8 @@ class G extends (n = r.PureComponent) {
     render() {
         var e;
         let { embed: l, obscureReason: t, className: n } = this.props;
-        return null != l.provider && A.j.includes(l.provider.name)
-            ? (0, i.jsx)(A.Z, {
+        return null != l.provider && j.j.includes(l.provider.name)
+            ? (0, i.jsx)(j.Z, {
                   embed: l,
                   className: n
               })

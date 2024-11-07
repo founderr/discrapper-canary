@@ -63,7 +63,8 @@ function v(e) {
                     height: l.height,
                     width: l.width,
                     spoiler: e.spoiler,
-                    contentType: l.contentType
+                    contentType: l.contentType,
+                    srcIsAnimated: l.srcIsAnimated
                 },
                 onContextMenu: t,
                 autoPlayGif: C,

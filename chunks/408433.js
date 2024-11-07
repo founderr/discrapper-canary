@@ -1,24 +1,24 @@
 n.d(t, {
     En: function () {
-        return y;
+        return N;
     },
     dY: function () {
-        return I;
+        return T;
     },
     eC: function () {
-        return b;
+        return A;
     },
     kC: function () {
-        return E;
+        return I;
     },
     l3: function () {
-        return S;
+        return b;
     },
     o3: function () {
-        return v;
+        return S;
     },
     vP: function () {
-        return T;
+        return y;
     }
 }),
     n(789020),
@@ -34,30 +34,33 @@ var r = n(392711),
     a = n(913527),
     s = n.n(a),
     o = n(866442),
-    l = n(709054),
-    u = n(981631),
-    c = n(817384);
-let d = /sketchfab/i,
-    f = /^https:\/\/sketchfab\.com/i,
-    _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-    h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-    p = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
-function m(e) {
+    l = n(849727),
+    u = n(630388),
+    c = n(709054),
+    d = n(981631),
+    f = n(817384);
+let _ = /sketchfab/i,
+    h = /^https:\/\/sketchfab\.com/i,
+    p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+    m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+    g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/;
+function E(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function g(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s } = e;
+function v(e) {
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s, flags: o } = e;
     return {
         url: t,
         proxyURL: n,
         width: r,
         height: i,
         placeholder: a,
-        placeholderVersion: s
+        placeholderVersion: s,
+        srcIsAnimated: l.Z.getCurrentConfig({ location: 'embed_utils_sanitize_media' }).enabled && (0, u.yE)(null != o ? o : 0, d.J0y.IS_ANIMATED)
     };
 }
-function E(e, t, n) {
+function I(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -91,22 +94,22 @@ function E(e, t, n) {
             }),
         null != n.timestamp && (r.timestamp = s()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, o.ho)(n.color, !0)),
-        null != n.thumbnail && m(n.thumbnail))
+        null != n.thumbnail && E(n.thumbnail))
     )
         switch (r.type) {
-            case u.hBH.ARTICLE:
-            case u.hBH.IMAGE:
-                r.image = g(n.thumbnail);
+            case d.hBH.ARTICLE:
+            case d.hBH.IMAGE:
+                r.image = v(n.thumbnail);
                 break;
             default:
-                r.thumbnail = g(n.thumbnail);
+                r.thumbnail = v(n.thumbnail);
         }
     if (
-        (null != n.image && m(n.image) && (r.image = g(n.image)),
+        (null != n.image && E(n.image) && (r.image = v(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
-                m(n.video) &&
+                E(n.video) &&
                 (r.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
@@ -121,14 +124,14 @@ function E(e, t, n) {
                     })(n.video.proxy_url, { format: 'webp' })
                 }),
             null != r.thumbnail &&
-                m(n.video) &&
+                E(n.video) &&
                 (function (e, t, n) {
-                    if ((null != t && d.test(t.name)) || f.test(n.url)) return !1;
+                    if ((null != t && _.test(t.name)) || h.test(n.url)) return !1;
                     let r = null != n.proxy_url || /^https:/i.test(n.url);
-                    return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && _.test(t.name)), r;
+                    return null != e && 1492472454139 > c.default.extractTimestamp(e) && (r = r && null != t && p.test(t.name)), r;
                 })(t, n.provider, n.video) &&
-                (r.video = g(n.video))),
-        c.k.has(r.type))
+                (r.video = v(n.video))),
+        f.k.has(r.type))
     ) {
         var a;
         let e = null !== (a = n.fields) && void 0 !== a ? a : [];
@@ -143,7 +146,7 @@ function E(e, t, n) {
     } else r.fields = [];
     return r;
 }
-function v(e) {
+function S(e) {
     let t = new Map(),
         n = [];
     return (
@@ -162,14 +165,14 @@ function v(e) {
         n
     );
 }
-function I(e) {
+function T(e) {
     let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
-    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
+    return (null != t || null != n) && (r === d.hBH.GIFV || (r !== d.hBH.RICH && null == i && null == a));
 }
-function S(e) {
-    return e.type === u.hBH.ARTICLE && null != e.url && (p.test(e.url) || h.test(e.url));
+function b(e) {
+    return e.type === d.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));
 }
-function T(e, t, n) {
+function y(e, t, n) {
     var r;
     return null != t && null != n
         ? {
@@ -186,9 +189,9 @@ function T(e, t, n) {
                 maxMediaHeight: 300
             };
 }
-function b(e, t) {
-    return e.isPrivate() ? !e.isManaged() : t.can(u.Plq.EMBED_LINKS, e);
+function A(e, t) {
+    return e.isPrivate() ? !e.isManaged() : t.can(d.Plq.EMBED_LINKS, e);
 }
-function y(e) {
+function N(e) {
     return '' !== e.content || e.messageSnapshots.some((e) => '' !== e.message.content || e.message.attachments.length > 0);
 }
