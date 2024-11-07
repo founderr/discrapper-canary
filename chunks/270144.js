@@ -164,16 +164,12 @@ function _(n, t, e) {
             [d.ZP, c.Z],
             () => {
                 var n, r;
+                if (null == l || null == i) return [];
                 for (let u of null !== (n = d.ZP.getActiveApplicationSubscriptions()) && void 0 !== n ? n : []) {
-                    if ((0, S.KK)(null != i ? i : 0) && null != t && (null === (r = u.metadata) || void 0 === r ? void 0 : r.application_subscription_guild_id) !== t) continue;
+                    if ((0, S.KK)(i) && null != t && (null === (r = u.metadata) || void 0 === r ? void 0 : r.application_subscription_guild_id) !== t) continue;
                     let n = e(u);
                     if (null == n) continue;
-                    let a = n
-                        .map((n) => c.Z.get(n.planId))
-                        .find((n) => {
-                            var t;
-                            return null != n && null !== (t = null == l ? void 0 : l.includes(n.skuId)) && void 0 !== t && t;
-                        });
+                    let a = n.map((n) => c.Z.get(n.planId)).find((n) => null != n && l.includes(n.skuId));
                     if (null != a) return [u, a];
                 }
                 return [];

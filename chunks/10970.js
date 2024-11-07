@@ -147,18 +147,15 @@ function S(e) {
         { openModal: s } = (0, m.ZP)({
             analyticsLocation: h.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
-            subscribeForGuild: n
+            subscribeForGuild: n,
+            disableGuildSelector: !0
         });
-    return (0, i.jsx)(
-        o.Z,
-        {
-            storeListing: t,
-            cta: (0, i.jsx)(r.Button, {
-                size: r.Button.Sizes.SMALL,
-                onClick: s,
-                children: g.intl.string(g.t['+KwmBg'])
-            })
-        },
-        t.id
-    );
+    return (0, i.jsx)(o.Z, {
+        storeListing: t,
+        cta: (0, i.jsx)(r.Button, {
+            size: r.Button.Sizes.SMALL,
+            onClick: s,
+            children: g.intl.string(g.t['+KwmBg'])
+        })
+    });
 }
