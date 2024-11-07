@@ -1,18 +1,18 @@
-n.d(t, {
+t.d(n, {
     U: function () {
         return u;
     }
 });
-var i = n(192379),
-    r = n(695346),
-    l = n(73346),
-    o = n(834431);
-function u(e, t) {
-    let { shouldAnimate: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+var i = t(192379),
+    r = t(695346),
+    l = t(73346),
+    o = t(834431);
+function u(e, n) {
+    let { shouldAnimate: t = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         u = r.QK.useSetting(),
         a = (0, o.n)(),
-        s = n && a && u;
+        s = t && a && u;
     return i.useMemo(() => {
-        if ((null == e ? void 0 : e.image_asset) != null) return (0, l._W)(e.application_id, e.image_asset, t, s ? void 0 : 'webp');
-    }, [t, e, s]);
+        if ((null == e ? void 0 : e.image_asset) != null) return (0, l._W)(e.application_id, e.image_asset, n, s ? void 0 : 'webp');
+    }, [n, e, s]);
 }

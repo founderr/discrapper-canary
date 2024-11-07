@@ -4,9 +4,9 @@ n.d(t, {
     }
 }),
     n(47120);
-var l = n(903797),
+var l = n(905837),
     o = n(731965);
-let a = (0, l.Z)((e, t) => ({
+let a = (0, l.ZP)((e, t) => ({
     selectedUserIds: {},
     addUsers: (n, l) => {
         var a;

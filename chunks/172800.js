@@ -38,9 +38,9 @@ t.Z = (e) => {
         en = i.useRef(null);
     i.useEffect(
         () =>
-            h.kJ.useStore.subscribe(
-                (e) => $(e),
-                (e) => e.inspectedExpressionPosition
+            h.kJ.subscribe(
+                (e) => e.inspectedExpressionPosition,
+                (e) => $(e)
             ),
         []
     ),

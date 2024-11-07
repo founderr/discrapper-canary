@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     HG: function () {
         return u;
     },
@@ -9,8 +9,8 @@ n.d(t, {
         return l;
     }
 });
-var i = n(373228),
-    r = n(388032);
+var i = t(373228),
+    r = t(388032);
 let l = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
     o = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
     u = [

@@ -1,16 +1,16 @@
-n.d(t, {
+t.d(n, {
     U: function () {
         return l;
     }
 });
-var i = n(990547),
-    r = n(213609);
-function l(e, t) {
+var i = t(990547),
+    r = t(213609);
+function l(e, n) {
     (0, r.Z)({
         type: i.ImpressionTypes.VIEW,
         name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
         properties: {
-            country_code: t,
+            country_code: n,
             action_location: e
         }
     });

@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     C: function () {
         return o;
     },
@@ -6,23 +6,23 @@ n.d(t, {
         return u;
     }
 });
-var i = n(192379),
-    r = n(937615),
-    l = n(388032);
+var i = t(192379),
+    r = t(937615),
+    l = t(388032);
 function o(e) {
     return i.useMemo(() => {
         if (null == e) return;
-        let t = null != e.role_id,
-            n = e.attachments_count > 0;
-        if (t && n) return l.intl.string(l.t.ih4QMT);
-        if (t) return l.intl.string(l.t.o9xphY);
-        if (n) return l.intl.string(l.t.DWYJub);
+        let n = null != e.role_id,
+            t = e.attachments_count > 0;
+        if (n && t) return l.intl.string(l.t.ih4QMT);
+        if (n) return l.intl.string(l.t.o9xphY);
+        if (t) return l.intl.string(l.t.DWYJub);
     }, [e]);
 }
 function u(e) {
     return i.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;
-        let { amount: t, currency: n } = e.price;
-        return (0, r.T4)(t, n);
+        let { amount: n, currency: t } = e.price;
+        return (0, r.T4)(n, t);
     }, [e]);
 }

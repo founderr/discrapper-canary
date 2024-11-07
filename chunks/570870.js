@@ -12,18 +12,18 @@ var i = t(200651),
     E = t(430824),
     p = t(594174),
     v = t(981631),
-    m = t(689079),
-    h = t(388032),
+    h = t(689079),
+    m = t(388032),
     g = t(62352);
 e.Z = (n) => {
     let e,
-        { commandType: t, commandTargetId: l, channel: C, guildId: A, onHeightUpdate: T, context: I } = n,
+        { commandType: t, commandTargetId: l, channel: C, guildId: A, onHeightUpdate: I, context: T } = n,
         N = (0, a.e7)([E.Z], () => E.Z.getGuild(null != A ? A : C.guild_id)),
         b = (0, a.e7)([p.default], () => p.default.getUser(l)),
         S = (0, f.Z)({
             user: b,
             guildId: null == N ? void 0 : N.id,
-            context: I
+            context: T
         }),
         {
             commands: P,
@@ -32,7 +32,7 @@ e.Z = (n) => {
         } = d.wi({
             channel: C,
             filters: { commandTypes: [t] },
-            options: { limit: m.lr },
+            options: { limit: h.lr },
             allowFetch: !0
         }),
         { sections: R } = r.useMemo(() => {
@@ -46,8 +46,8 @@ e.Z = (n) => {
         }, [y]),
         Z = r.useRef(O.current);
     r.useEffect(() => {
-        O.current !== Z.current && ((Z.current = O.current), null == T || T());
-    }, [O, T]);
+        O.current !== Z.current && ((Z.current = O.current), null == I || I());
+    }, [O, I]);
     let M = r.useCallback(
         (n) => {
             u()(null != C, 'menu item should not show if channel is null');
@@ -102,7 +102,7 @@ e.Z = (n) => {
                             o.MenuItem,
                             {
                                 id: 'menu-commands-empty',
-                                label: h.intl.string(h.t.YSNlV1),
+                                label: m.intl.string(m.t.YSNlV1),
                                 disabled: !0
                             },
                             'menu-commands-empty'
@@ -119,7 +119,7 @@ e.Z = (n) => {
     }
     return (0, i.jsx)(o.MenuItem, {
         id: 'apps',
-        label: h.intl.string(h.t.PHjkRE),
+        label: m.intl.string(m.t.PHjkRE),
         listClassName: g.list,
         children: e
     });

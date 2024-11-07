@@ -1,32 +1,32 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return v;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    o = n(442837),
-    u = n(481060),
-    a = n(666188),
-    s = n(372769),
-    c = n(523751),
-    d = n(623624),
-    f = n(290034),
-    p = n(271383),
-    _ = n(594174),
-    E = n(267642),
-    g = n(981631),
-    m = n(388032),
-    h = n(427542);
+var i = t(200651);
+t(192379);
+var r = t(120356),
+    l = t.n(r),
+    o = t(442837),
+    u = t(481060),
+    a = t(666188),
+    s = t(372769),
+    c = t(523751),
+    d = t(623624),
+    f = t(290034),
+    p = t(271383),
+    _ = t(594174),
+    E = t(267642),
+    g = t(981631),
+    m = t(388032),
+    h = t(427542);
 function I(e) {
-    let { guild: t, isBannerVisible: n, disableBoostClick: r } = e,
+    let { guild: n, isBannerVisible: t, disableBoostClick: r } = e,
         l = (0, o.e7)([_.default, p.ZP], () => {
             let e = _.default.getCurrentUser();
-            return p.ZP.isMember(t.id, null == e ? void 0 : e.id);
+            return p.ZP.isMember(n.id, null == e ? void 0 : e.id);
         }),
-        { premiumTier: a, premiumSubscriberCount: s } = t;
+        { premiumTier: a, premiumSubscriberCount: s } = n;
     if (0 === s && a === g.Eu4.NONE) return null;
     let c = (e) => {
             e.stopPropagation(),
@@ -34,7 +34,7 @@ function I(e) {
                 l &&
                     !r &&
                     (0, d.f)({
-                        guildId: t.id,
+                        guildId: n.id,
                         location: {
                             section: g.jXE.GUILD_HEADER,
                             object: g.qAy.BOOST_GEM_ICON
@@ -64,53 +64,53 @@ function I(e) {
                     onClick: c,
                     children: (0, i.jsx)(f.Z, {
                         premiumTier: a,
-                        iconBackgroundClassName: n ? h.boostedGuildTierIconBackgroundWithVisibleBanner : null,
-                        iconClassName: n && a !== g.Eu4.TIER_3 ? h.boostedGuildTierMutedIconWithVisibleBanner : null
+                        iconBackgroundClassName: t ? h.boostedGuildTierIconBackgroundWithVisibleBanner : null,
+                        iconClassName: t && a !== g.Eu4.TIER_3 ? h.boostedGuildTierMutedIconWithVisibleBanner : null
                     })
                 })
         })
     });
 }
 function S(e) {
-    let { guild: t, disableColor: n, disableBoostClick: r } = e;
-    return (0, a.Z)(t)
+    let { guild: n, disableColor: t, disableBoostClick: r } = e;
+    return (0, a.Z)(n)
         ? (0, i.jsx)('div', {
               className: h.guildIconV2Container,
               children: (0, i.jsx)(c.Z, {
-                  guild: t,
+                  guild: n,
                   tooltipPosition: 'bottom',
                   tooltipColor: u.Tooltip.Colors.PRIMARY,
-                  className: l()(h.guildBadge, { [h.disableColor]: n }),
+                  className: l()(h.guildBadge, { [h.disableColor]: t }),
                   disableBoostClick: r
               })
           })
         : (0, i.jsx)('div', {
               className: h.guildIconContainer,
               children: (0, i.jsx)(s.Z, {
-                  guild: t,
+                  guild: n,
                   size: 20,
                   tooltipPosition: 'bottom',
                   tooltipColor: u.Tooltip.Colors.PRIMARY,
-                  className: l()(h.guildBadge, { [h.disableColor]: n })
+                  className: l()(h.guildBadge, { [h.disableColor]: t })
               })
           });
 }
 function v(e) {
-    let { guild: t, isBannerVisible: n, disableBoostClick: r } = e;
-    return (0, a.Z)(t)
+    let { guild: n, isBannerVisible: t, disableBoostClick: r } = e;
+    return (0, a.Z)(n)
         ? (0, i.jsx)(S, {
-              guild: t,
+              guild: n,
               disableColor: !1,
               disableBoostClick: r
           })
-        : t.hasFeature(g.oNc.VERIFIED) || t.hasFeature(g.oNc.PARTNERED)
+        : n.hasFeature(g.oNc.VERIFIED) || n.hasFeature(g.oNc.PARTNERED)
           ? (0, i.jsx)(S, {
-                guild: t,
-                disableColor: !n
+                guild: n,
+                disableColor: !t
             })
           : (0, i.jsx)(I, {
-                guild: t,
-                isBannerVisible: n,
+                guild: n,
+                isBannerVisible: t,
                 disableBoostClick: r
             });
 }

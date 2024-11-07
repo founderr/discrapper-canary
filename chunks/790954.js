@@ -9,7 +9,7 @@ n.d(r, {
         return c;
     }
 });
-var t = n(903797),
+var t = n(905837),
     l = n(731965);
 let o = Object.freeze({
         inspectedStickerPosition: {
@@ -17,7 +17,7 @@ let o = Object.freeze({
             columnIndex: -1
         }
     }),
-    i = (0, t.Z)((e) => o),
+    i = (0, t.ZP)((e) => o),
     s = i,
     a = (e, r, n) => {
         (0, l.j)(() =>

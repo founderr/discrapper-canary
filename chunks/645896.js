@@ -10,13 +10,13 @@ n.d(t, {
     }
 });
 var r = n(192379),
-    i = n(903797),
-    a = n(782690),
+    i = n(905837),
+    a = n(976649),
     s = n(731965),
     o = n(881052),
     l = n(931240);
 let u = {},
-    c = (0, i.Z)((e, t) => ({
+    c = (0, i.ZP)((e, t) => ({
         clans: {},
         isFetchingGuild: (e) => null != t().fetchPromises[e],
         error: null,

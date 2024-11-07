@@ -403,7 +403,7 @@ L(eE, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         M.forEach((e) => {
-                            (B[e.id] = e), e.type === x.Rr.CUSTOM_STATUS && (C.Z.isBlocked(e.data.user_id) ? (V[e.id] = !0) : (H[e.id] = (0, b.mV)(e)));
+                            (B[e.id] = e), e.type === x.Rr.CUSTOM_STATUS && (C.Z.isBlockedOrIgnored(e.data.user_id) ? (V[e.id] = !0) : (H[e.id] = (0, b.mV)(e)));
                         });
                 })(),
                 (G = {

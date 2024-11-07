@@ -1,17 +1,17 @@
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    o = n(772848),
-    u = n(841261);
+var i = t(200651);
+t(192379);
+var r = t(120356),
+    l = t.n(r),
+    o = t(772848),
+    u = t(841261);
 let a = (0, o.Z)();
-t.Z = (e) => {
-    let { open: t, className: n, withHighlight: r = !1 } = e;
+n.Z = (e) => {
+    let { open: n, className: t, withHighlight: r = !1 } = e;
     return (0, i.jsxs)('svg', {
         width: '18',
         height: '18',
-        className: l()(u.button, n, {
-            [u.open]: t,
+        className: l()(u.button, t, {
+            [u.open]: n,
             [u.withHighlight]: r
         }),
         children: [

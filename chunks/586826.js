@@ -3,11 +3,11 @@ t.d(n, {
         return u;
     }
 });
-var l = t(903797),
-    a = t(782690),
+var l = t(905837),
+    a = t(976649),
     i = t(731965),
     r = t(174727);
-let s = (0, l.Z)((e) => ({
+let s = (0, l.ZP)((e) => ({
     audio: null,
     file: null,
     loading: !1,

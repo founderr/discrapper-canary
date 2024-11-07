@@ -37,7 +37,7 @@ function x(e) {
 }
 function S() {
     s().forEach(M, (e) => {
-        e.messages = e.messages.map((e) => e.set('blocked', v.Z.isBlockedForMessage(e)));
+        e.messages = e.messages.map((e) => e.set('blocked', v.Z.isBlockedForMessage(e)).set('ignored', v.Z.isIgnoredForMessage(e)));
     });
 }
 class j extends (i = u.ZP.Store) {

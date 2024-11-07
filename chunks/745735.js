@@ -1,21 +1,21 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return o;
     }
 });
-var i = n(192379),
-    r = n(512722),
-    l = n.n(r);
-function o(e, t) {
-    let n = (0, i.useRef)(e);
+var i = t(192379),
+    r = t(512722),
+    l = t.n(r);
+function o(e, n) {
+    let t = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        n.current = e;
+        t.current = e;
     }, [e]),
         (0, i.useEffect)(() => {
-            if (null === t) return;
+            if (null === n) return;
             let e = setInterval(function () {
-                l()(null != n.current, 'Missing callback'), n.current();
-            }, t);
+                l()(null != t.current, 'Missing callback'), t.current();
+            }, n);
             return () => clearInterval(e);
-        }, [t]);
+        }, [n]);
 }
