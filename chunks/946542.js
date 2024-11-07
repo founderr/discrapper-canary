@@ -8,7 +8,7 @@ var i = n(200651),
     d = n(125909),
     u = n(824606),
     h = n(768581),
-    m = n(689938),
+    m = n(388032),
     p = n(675890);
 function g(e) {
     var t, n, l;
@@ -105,7 +105,7 @@ t.Z = function (e) {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       className: p.sectionHeader,
-                      children: m.Z.Messages.APP_DIRECTORY_PROFILE_RELATED_APPS_HEADING
+                      children: m.intl.string(m.t.E8wCnp)
                   }),
                   (0, i.jsx)(d.Z, {
                       loading: c === o.M.FETCHING,

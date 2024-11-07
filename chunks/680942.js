@@ -77,7 +77,7 @@ t.Z = (e) => {
         { analyticsLocations: v } = (0, l.ZP)(),
         _ = a.useRef(null),
         k = (0, i.Z)(_),
-        E = x ? m.BR.DARK : m.BR.LIGHT;
+        j = x ? m.BR.DARK : m.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(s.Tooltip, {
@@ -113,7 +113,7 @@ t.Z = (e) => {
                           ? (0, r.jsx)(o.e, {
                                 hovered: k,
                                 isContentDismissed: !0,
-                                themeOverride: E,
+                                themeOverride: j,
                                 boxColors: h
                             })
                           : (0, r.jsx)(s.GiftIcon, {

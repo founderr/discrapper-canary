@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(372654),
     _ = n(215023),
     k = n(474936),
-    E = n(388032),
-    j = n(462972),
+    j = n(388032),
+    E = n(462972),
     I = n(275001);
 let T = (0, h.IC)(96),
     S = (e) => {
@@ -38,11 +38,11 @@ let T = (0, h.IC)(96),
         return f.ZP.canUseCollectibles(i)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
-                  children: E.intl.format(E.t['9hafRk'], {
+                  children: j.intl.format(j.t['9hafRk'], {
                       getPremium: (e) =>
                           (0, r.jsx)(c.Clickable, {
                               innerRef: s,
-                              className: j.getPremiumHook,
+                              className: E.getPremiumHook,
                               onClick: () => {
                                   (0, u.Z)({
                                       subscriptionTier: k.Si.TIER_2,
@@ -70,7 +70,7 @@ function B(e) {
         ? (0, r.jsx)(x.O, { category: o })
         : (0, r.jsxs)(C.Z, {
               asset: o.banner,
-              className: i()(j.shopBanner, d),
+              className: i()(E.shopBanner, d),
               style:
                   null != m
                       ? {
@@ -83,40 +83,40 @@ function B(e) {
                       (0, r.jsx)('img', {
                           src: I,
                           alt: '',
-                          className: j.animationAsset
+                          className: E.animationAsset
                       }),
                   (null === (n = _.Ve[o.skuId]) || void 0 === n ? void 0 : n.addAttributionLogo)
                       ? (0, r.jsxs)('div', {
-                            className: j.discordLogo,
+                            className: E.discordLogo,
                             children: [
                                 (0, r.jsx)(c.ClydeIcon, {
                                     size: 'custom',
                                     width: 28,
                                     height: 28,
                                     color: 'currentColor',
-                                    className: j.discordIcon
+                                    className: E.discordIcon
                                 }),
-                                (0, r.jsx)(p.Z, { className: j.discordWordmark })
+                                (0, r.jsx)(p.Z, { className: E.discordWordmark })
                             ]
                         })
                       : (0, r.jsx)(c.Spacer, { size: 28 }),
                   (null === (a = _.Ve[o.skuId]) || void 0 === a ? void 0 : a.addLogo)
                       ? (0, r.jsx)('img', {
-                            className: j.categoryLogo,
+                            className: E.categoryLogo,
                             src: (0, h.uV)(o.logo, { size: T }),
                             alt: o.name,
                             style: { maxWidth: null === (s = _.Ve[o.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
                         })
                       : (0, r.jsx)(c.Spacer, { size: 96 }),
                   (0, r.jsx)(c.Text, {
-                      className: i()(j.summary, { [j.blackSummary]: f }),
+                      className: i()(E.summary, { [E.blackSummary]: f }),
                       variant: 'text-md/normal',
                       children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(S, { category: o }) : o.summary
                   }),
                   !u &&
                       (0, r.jsx)(b.Z, {
                           category: o,
-                          className: j.limitedTimeBadge,
+                          className: E.limitedTimeBadge,
                           display: 'banner'
                       })
               ]

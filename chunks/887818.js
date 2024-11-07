@@ -9,7 +9,7 @@ var i = n(200651),
     r = n(120356),
     l = n.n(r),
     a = n(481060),
-    o = n(689938),
+    o = n(388032),
     c = n(389723);
 let d = s.createContext({
     isOpen: !1,
@@ -34,7 +34,7 @@ u.Toggle = function (e) {
     let { className: t, text: n } = e,
         { isOpen: r, toggleOpen: u } = s.useContext(d),
         m = r ? a.ChevronSmallUpIcon : a.ChevronSmallDownIcon,
-        h = null != n ? n : r ? o.Z.Messages.HIDE : o.Z.Messages.SHOW;
+        h = null != n ? n : r ? o.intl.string(o.t.fgq1go) : o.intl.string(o.t.XJuakJ);
     return (0, i.jsxs)(a.Clickable, {
         className: l()(c.toggle, t),
         onClick: u,

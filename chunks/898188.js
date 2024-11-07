@@ -22,7 +22,7 @@ var r = n(200651),
     E = n(931261),
     v = n(216701),
     I = n(388032),
-    S = n(925259);
+    S = n(80909);
 function T(e) {
     let { action: t } = e,
         n = (0, l.e7)([_.Z], () => _.Z.getChannel(t.channelId)),

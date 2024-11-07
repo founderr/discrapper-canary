@@ -19,8 +19,8 @@ var r = n(200651),
     v = n(214852),
     _ = n(479446),
     k = n(981632),
-    E = n(290026),
-    j = n(819640),
+    j = n(290026),
+    E = n(819640),
     I = n(594174),
     T = n(626135),
     S = n(74538),
@@ -37,16 +37,16 @@ var r = n(200651),
     F = n(426171),
     R = n(823941),
     D = n(752053),
-    M = n(963102),
-    V = n(508498),
+    V = n(963102),
+    M = n(508498),
     W = n(38900),
     U = n(709999),
     z = n(373113),
     G = n(802022),
     K = n(558117),
     $ = n(141594),
-    Y = n(566564),
-    J = n(531864),
+    J = n(566564),
+    Y = n(531864),
     q = n(302800),
     Q = n(215023),
     X = n(981631),
@@ -178,15 +178,15 @@ t.default = function (e) {
         [es, el] = a.useState(Q.IV),
         [eo, ec] = a.useState(),
         [ed, eu] = a.useState(),
-        em = (0, c.e7)([j.Z], () => j.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
+        em = (0, c.e7)([E.Z], () => E.Z.getLayers().includes(X.S9g.COLLECTIBLES_SHOP)),
         ep = (0, u.f9)(),
-        { onClose: ef } = (0, V.Db)(),
+        { onClose: ef } = (0, M.Db)(),
         eh = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
         eg = S.ZP.canUseCollectibles(eh),
         { categories: eC, isFetchingCategories: eb, fetchCategoriesError: ex, fetchPurchasesError: ev, claimError: e_, refreshCategories: ek } = (0, P.Z)(),
-        eE = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
-    (0, E.P)();
-    let ej = (0, O.O)(eC),
+        ej = null !== (t = null != ex ? ex : ev) && void 0 !== t ? t : e_;
+    (0, j.P)();
+    let eE = (0, O.O)(eC),
         eI = a.useRef(null),
         [eT, eS] = a.useState(!1);
     (0, F.Kp)({
@@ -296,14 +296,14 @@ t.default = function (e) {
                                         [er.out]: R === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(M.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ef,
                                             isCatalogView: !1,
                                             transparent: !0
                                         }),
-                                        (0, r.jsx)(Y.Z, {
+                                        (0, r.jsx)(J.Z, {
                                             handleTransition: ew,
                                             numVisibleItems: es
                                         })
@@ -317,7 +317,7 @@ t.default = function (e) {
                                         [er.out]: U === Q.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(M.I, {
+                                        (0, r.jsx)(V.I, {
                                             isFullScreen: n,
                                             isLayer: em,
                                             onClose: ef,
@@ -331,14 +331,14 @@ t.default = function (e) {
                                                 className: i()(er.page, { [er.pageFullscreen]: n }),
                                                 children: eb
                                                     ? (0, r.jsx)(W.Z, {})
-                                                    : null != eE
+                                                    : null != ej
                                                       ? (0, r.jsx)(D.Z, {
                                                             onRetry: eN,
                                                             errorOrigin: D.i.SHOP_PAGE
                                                         })
                                                       : (0, r.jsx)('div', {
                                                             className: er.categories,
-                                                            children: ej
+                                                            children: eE
                                                                 .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                                                                 .filter((e) => {
                                                                     let { products: t } = e;
@@ -377,11 +377,11 @@ t.default = function (e) {
                     U !== Q.f7.VISIBLE &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(J.Z, {
+                            (0, r.jsx)(Y.Z, {
                                 peaking: q,
                                 transitioning: R === Q.f7.OUT
                             }),
-                            (0, r.jsx)(J.Z, {
+                            (0, r.jsx)(Y.Z, {
                                 style: { left: 1850 },
                                 peaking: q,
                                 transitioning: R === Q.f7.OUT
