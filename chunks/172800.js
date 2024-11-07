@@ -31,32 +31,36 @@ t.Z = (e) => {
         K = Y ? n(39874) : n(233892),
         z = Y ? n(853871) : n(942315),
         q = Y ? n(63149) : n(636626),
-        Q = (0, c.ZP)(),
-        X = h.kJ.getState(),
-        [J, $] = i.useState(X.inspectedExpressionPosition),
-        [ee, et] = (0, u.Z)(null, 300),
-        en = i.useRef(null);
+        Q = n(263112),
+        X = n(490567),
+        J = n(292795),
+        $ = n(7940),
+        ee = (0, c.ZP)(),
+        et = h.kJ.getState(),
+        [en, er] = i.useState(et.inspectedExpressionPosition),
+        [ei, ea] = (0, u.Z)(null, 300),
+        es = i.useRef(null);
     i.useEffect(
         () =>
             h.kJ.subscribe(
                 (e) => e.inspectedExpressionPosition,
-                (e) => $(e)
+                (e) => er(e)
             ),
         []
     ),
         i.useEffect(() => {
             m.DZ.loadIfNecessary();
         }, []);
-    let er = a === b.Su.LARGE,
-        ei = a === b.Su.MEDIUM,
-        ea = (e) => {
+    let eo = a === b.Su.LARGE,
+        el = a === b.Su.MEDIUM,
+        eu = (e) => {
             let t = ''.concat(e.rowIndex, 'c').concat(e.columnIndex),
                 n = function () {
                     var n;
                     let { onMouseEnter: a, onMouseLeave: o, handleSelect: u, icon: c, ariaLabel: d, shouldShowRoundHighlight: f } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: h } = e,
                         { ref: p, tabIndex: m, onFocus: g, ...E } = null !== (n = D(h, M)) && void 0 !== n ? n : {},
-                        v = J.rowIndex === _ && J.columnIndex === h,
+                        v = en.rowIndex === _ && en.columnIndex === h,
                         I = () => {
                             !x.current && !w.current && R(e);
                         };
@@ -71,12 +75,12 @@ t.Z = (e) => {
                                 'aria-label': d,
                                 ref: p,
                                 className: s()(N.emojiItem, {
-                                    [N.emojiItemLarge]: er,
-                                    [N.emojiItemMedium]: ei,
+                                    [N.emojiItemLarge]: eo,
+                                    [N.emojiItemMedium]: el,
                                     [N.emojiItemSelected]: v && !f,
-                                    [N.expandCollapseButtonSelected]: v && f,
+                                    [N.expandCollapseButtonSelected]: v && f && !Y,
                                     [null != B ? B : '']: v,
-                                    [N.showPulse]: ee === t
+                                    [N.showPulse]: ei === t
                                 }),
                                 onFocus: null != g ? g : I,
                                 onMouseOver: I,
@@ -92,19 +96,35 @@ t.Z = (e) => {
             switch (e.type) {
                 case S.ld.EXPAND_OR_COLLAPSE_EMOJIS: {
                     let t, i;
+                    let { visibleRowIndex: a, columnIndex: s } = e,
+                        l = en.rowIndex === a && en.columnIndex === s;
                     return (
                         e.sectionCollapsedToThreeRows
-                            ? ((i = (0, r.jsx)('img', {
-                                  className: N.icon,
-                                  src: (0, o.wj)(Q) ? W : K,
-                                  alt: ''
-                              })),
+                            ? ((i =
+                                  l && Y
+                                      ? (0, r.jsx)('img', {
+                                            className: N.icon,
+                                            src: (0, o.wj)(ee) ? X : $,
+                                            alt: ''
+                                        })
+                                      : (0, r.jsx)('img', {
+                                            className: N.icon,
+                                            src: (0, o.wj)(ee) ? W : K,
+                                            alt: ''
+                                        })),
                               (t = A.intl.string(A.t.NZI2Zm)))
-                            : ((i = (0, r.jsx)('img', {
-                                  className: N.icon,
-                                  src: (0, o.wj)(Q) ? z : q,
-                                  alt: ''
-                              })),
+                            : ((i =
+                                  l && Y
+                                      ? (0, r.jsx)('img', {
+                                            className: N.icon,
+                                            src: (0, o.wj)(ee) ? Q : J,
+                                            alt: ''
+                                        })
+                                      : (0, r.jsx)('img', {
+                                            className: N.icon,
+                                            src: (0, o.wj)(ee) ? z : q,
+                                            alt: ''
+                                        })),
                               (t = A.intl.string(A.t['/K2RDA']))),
                         n({
                             handleSelect: (t) => {
@@ -154,7 +174,7 @@ t.Z = (e) => {
                 case S.ld.EMOJI: {
                     var a;
                     let { columnIndex: n, visibleRowIndex: i } = e,
-                        s = J.rowIndex === i && J.columnIndex === n;
+                        s = en.rowIndex === i && en.columnIndex === n;
                     return (0, r.jsx)(
                         T.Z,
                         {
@@ -171,14 +191,14 @@ t.Z = (e) => {
                             onInspect: R,
                             channelGuildId: U,
                             getEmojiItemProps: D,
-                            isMediumSize: ei,
-                            isLargeSize: er,
-                            pulseItemKey: ee,
-                            setPulseItemKey: et,
+                            isMediumSize: el,
+                            isLargeSize: eo,
+                            pulseItemKey: ei,
+                            setPulseItemKey: ea,
                             showEmojiFavoriteTooltip: k,
                             messageId: Z,
                             isBurstReaction: F,
-                            rowPosition: null == en ? void 0 : null === (a = en.current) || void 0 === a ? void 0 : a.getBoundingClientRect(),
+                            rowPosition: null == es ? void 0 : null === (a = es.current) || void 0 === a ? void 0 : a.getBoundingClientRect(),
                             inNitroLockedSection: V
                         },
                         t
@@ -186,43 +206,43 @@ t.Z = (e) => {
                 }
             }
         },
-        es = (e) =>
+        ec = (e) =>
             (0, r.jsx)('ul', {
                 ...L(M),
                 className: s()(N.emojiListRow, {
-                    [N.emojiListRowLargeSize]: er,
-                    [N.emojiListRowMediumSize]: ei
+                    [N.emojiListRowLargeSize]: eo,
+                    [N.emojiListRowMediumSize]: el
                 }),
-                ref: en,
-                children: e.map(ea)
+                ref: es,
+                children: e.map(eu)
             });
-    if (G !== b.En.TOP_GUILD_EMOJI) return es(t);
-    let eo = t.filter((e) => (!!j && e.type === S.ld.CREATE_EMOJI) || e.subCategory === b.t0.TOP_GUILD_EMOJI || (e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
-        el = t.filter((e) => e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
-    return 0 === el.length
-        ? es(t)
+    if (G !== b.En.TOP_GUILD_EMOJI) return ec(t);
+    let ed = t.filter((e) => (!!j && e.type === S.ld.CREATE_EMOJI) || e.subCategory === b.t0.TOP_GUILD_EMOJI || (e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
+        ef = t.filter((e) => e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+    return 0 === ef.length
+        ? ec(t)
         : (0, r.jsxs)('div', {
               className: N.topEmojiSectionContainer,
               children: [
                   (0, r.jsx)('div', {
-                      className: s()(N.topEmojiContainer, { [N.noEmojis]: 0 === eo.length }),
-                      children: es(eo)
+                      className: s()(N.topEmojiContainer, { [N.noEmojis]: 0 === ed.length }),
+                      children: ec(ed)
                   }),
                   (0, r.jsxs)('div', {
                       className: N.newlyAddedHighlightContainer,
                       children: [
                           (0, r.jsx)('div', {
                               className: s()(N.newlyAddedHighlight, {
-                                  [N.oneItem]: 1 === el.length,
-                                  [N.alignRight]: eo.length > 0
+                                  [N.oneItem]: 1 === ef.length,
+                                  [N.alignRight]: ed.length > 0
                               }),
-                              children: es(el)
+                              children: ec(ef)
                           }),
                           (0, r.jsxs)('div', {
                               className: s()(N.newlyAddedBadge, {
-                                  [N.newlyAddedBadgeLarge]: er,
-                                  [N.newlyAddedBadgeMedium]: ei,
-                                  [N.alignRight]: eo.length > 0
+                                  [N.newlyAddedBadgeLarge]: eo,
+                                  [N.newlyAddedBadgeMedium]: el,
+                                  [N.alignRight]: ed.length > 0
                               }),
                               children: [
                                   (0, r.jsx)(g.Z, { foreground: N.newlyAddedBadgeStar }),
