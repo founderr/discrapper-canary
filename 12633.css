@@ -20688,6 +20688,12 @@ h3.improved_f017d0:after {
     pointer-events: all
 }
 
+.popover_cf8aee div:last-child .button_cf8aee {
+    padding-right: 6px;
+    border-radius: 6px 100px 100px 6px;
+    margin-right: 0
+}
+
 .activityPopover_cf8aee {
     right: 8px
 }
@@ -20744,12 +20750,8 @@ h3.improved_f017d0:after {
 
 .button_cf8aee.left_cf8aee {
     padding-left: 6px;
-    border-radius: 100px 6px 6px 100px
-}
-
-.button_cf8aee.right_cf8aee {
-    padding-right: 6px;
-    border-radius: 6px 100px 100px 6px
+    border-radius: 100px 6px 6px 100px;
+    margin-right: 0
 }
 
 .button_cf8aee:hover {
