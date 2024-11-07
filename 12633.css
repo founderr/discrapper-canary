@@ -7922,6 +7922,24 @@ div.modalHeader_c5e09c {
     top: 2px
 }
 
+.icon_dd5a70 {
+    width: 16px;
+    height: 16px
+}
+
+.sliderContainer_dd5a70 {
+    min-width: 188px;
+    display: flex;
+    padding: var(--spacing-12);
+    flex-direction: column;
+    background-color: var(--background-floating);
+    border-radius: var(--radius-sm)
+}
+
+.slider_dd5a70 {
+    margin-bottom: calc(-1*var(--spacing-8))
+}
+
 .soundButtonWrapper_f40049 {
     list-style: none;
     position: relative
@@ -8352,6 +8370,10 @@ div.modalHeader_c5e09c {
 .inlineButton_f38a29:active {
     border: 1px solid rgba(255, 255, 255, .5);
     background: var(--card-primary-pressed-bg)
+}
+
+.inlineButton_f38a29.playing_f38a29 {
+    border: 1px solid var(--button-outline-positive-border)
 }
 
 .inlineContainer_f38a29 {

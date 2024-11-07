@@ -175,7 +175,8 @@ t.Z = (e) => {
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
-                                                            pageSection: 'top 4'
+                                                            pageSection: 'top 4',
+                                                            categoryPosition: 0
                                                         },
                                                         children: (0, r.jsx)(
                                                             j.Z,
@@ -289,7 +290,8 @@ t.Z = (e) => {
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
-                                                            pageSection: 'popular picks'
+                                                            pageSection: 'popular picks',
+                                                            categoryPosition: 2
                                                         },
                                                         children: (0, r.jsx)(
                                                             j.Z,
