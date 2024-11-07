@@ -127,6 +127,9 @@ function y(e) {
                     autoplay: t
                 });
         },
-        { modalKey: (0, u.u7)(e.id) }
+        {
+            modalKey: (0, u.u7)(e.id),
+            backdropStyle: i.BackdropStyles.IMMERSIVE
+        }
     );
 }
