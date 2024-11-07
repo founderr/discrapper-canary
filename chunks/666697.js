@@ -18,26 +18,29 @@ var i,
     I = n(946542),
     C = n(213746),
     v = n(388032),
-    S = n(850258);
+    S = n(162064);
 ((r = i || (i = {})).ABOUT = 'about'), (r.STORE = 'store');
 t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: i, onOpenCategorySearch: r, onCloseAppDetails: N } = e,
-        T = a.useRef(null);
-    a.useEffect(() => {
-        var e;
-        null === (e = T.current) || void 0 === e || e.scrollTo({ to: 0 });
-    }, [t]);
-    let x = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
+        T = a.useRef(null),
+        x = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
         A = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
     a.useEffect(() => {
         null != t && null == x && o.i6(t);
     }, [t, x]);
     let b = null == x ? void 0 : x.storefront_available,
-        [Z, y] = a.useState('about');
+        [Z, y] = a.useState('about'),
+        L = a.useCallback(
+            (e) => {
+                var t;
+                null === (t = T.current) || void 0 === t || t.scrollTo({ to: 0 }), y('about'), n(e);
+            },
+            [n]
+        );
     a.useEffect(() => {
         (null == x ? void 0 : x.storefront_available) && null != t && (0, u.Z)(t);
     }, [null == x ? void 0 : x.storefront_available, t]);
-    let L = a.useMemo(
+    let R = a.useMemo(
             () => [
                 {
                     id: 'about',
@@ -50,7 +53,7 @@ t.Z = function (e) {
             ],
             []
         ),
-        R = a.useMemo(() => {
+        j = a.useMemo(() => {
             if (null == x) return null;
             switch (Z) {
                 case 'about':
@@ -59,7 +62,7 @@ t.Z = function (e) {
                     return (0, l.jsx)(C.Z, { application: x });
             }
         }, [Z, x]),
-        j = a.useCallback(
+        O = a.useCallback(
             (e) => {
                 N(), null == r || r('', e);
             },
@@ -75,7 +78,7 @@ t.Z = function (e) {
                   className: S.centerContainer,
                   children: (0, l.jsx)(g.Z, { className: S.error })
               });
-    let O = 'about' === Z;
+    let P = 'about' === Z;
     return (0, l.jsx)(p.Z, {
         onScroll: i,
         ref: T,
@@ -94,23 +97,23 @@ t.Z = function (e) {
                                         (0, l.jsx)('div', {
                                             className: S.contentTabs,
                                             children: (0, l.jsx)(m.Z, {
-                                                tabs: L,
+                                                tabs: R,
                                                 onTabSelect: y,
                                                 selectedTab: Z
                                             })
                                         }),
-                                    R,
+                                    j,
                                     (0, l.jsx)(I.Z, {
                                         application: x,
-                                        onSelectApplication: n
+                                        onSelectApplication: L
                                     })
                                 ]
                             }),
-                            O &&
+                            P &&
                                 (0, l.jsx)(E.Z, {
                                     className: S.sidebar,
                                     application: x,
-                                    onSelectCategory: j
+                                    onSelectCategory: O
                                 })
                         ]
                     })
