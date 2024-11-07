@@ -34,8 +34,8 @@ function _(e, t, n) {
 }
 let h = 0.5;
 class p {
-    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: o }) {
-        var m = this;
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: o, minViewTimeSeconds: m = 1 }) {
+        var g = this;
         _(this, 'id', void 0),
             _(this, 'quests', void 0),
             _(this, 'questContent', void 0),
@@ -67,15 +67,15 @@ class p {
             }),
             _(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                m.quests.forEach((t) => {
-                    if (null != m.lastBeatTime) {
-                        let n = Math.round(Date.now() - m.lastBeatTime);
+                g.quests.forEach((t) => {
+                    if (null != g.lastBeatTime) {
+                        let n = Math.round(Date.now() - g.lastBeatTime);
                         (0, d.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: m.id }
+                            { impressionId: g.id }
                         ),
                             (0, u.dA)({
                                 questId: t.id,
@@ -83,14 +83,14 @@ class p {
                                 properties: {
                                     is_termination_beat: e,
                                     viewed_time_ms: n,
-                                    triggered_by_status_change: m.triggeredByStatusChange,
-                                    ...m.commonProperties(t)
+                                    triggered_by_status_change: g.triggeredByStatusChange,
+                                    ...g.commonProperties(t)
                                 },
-                                trackGuildAndChannelMetadata: m.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: g.trackGuildAndChannelMetadata
                             });
                     }
                 }),
-                    (m.lastBeatTime = Date.now());
+                    (g.lastBeatTime = Date.now());
             }),
             _(this, 'commonProperties', (e) => ({
                 impression_id: this.id,
@@ -137,12 +137,12 @@ class p {
             }),
             _(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && m.beat(!0), (m.lastBeatTime = void 0), clearInterval(m.heartbeatTimeoutId), clearTimeout(m.minViewTimeReachedTimeoutId), (m.isRunning = !1);
+                e && g.beat(!0), (g.lastBeatTime = void 0), clearInterval(g.heartbeatTimeoutId), clearTimeout(g.minViewTimeReachedTimeoutId), (g.isRunning = !1);
             }),
             (this.id = (0, a.Z)()),
             (this.questContent = t),
             (this.questContentPosition = i),
-            (this.minViewTimeSeconds = 1),
+            (this.minViewTimeSeconds = m),
             (this.minViewportPercentage = h),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = r),
@@ -186,10 +186,11 @@ function E(e) {
                         questContentPosition: e.questContentPosition,
                         questContentRowIndex: e.questContentRowIndex,
                         triggeredByStatusChange: u,
-                        trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata
+                        trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
+                        minViewTimeSeconds: e.minViewTimeSeconds
                     })),
                     l.current.start());
-        }, [s, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u]),
+        }, [s, t, l, o, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds]),
         (0, r.jsx)(r.Fragment, { children: e.children(a) })
     );
 }
