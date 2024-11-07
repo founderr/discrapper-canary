@@ -1,85 +1,86 @@
-n(653041);
+n(653041), n(627341);
 var i = n(200651),
     s = n(192379),
     r = n(120356),
     l = n.n(r),
-    a = n(442837),
-    o = n(481060),
-    c = n(607070),
-    d = n(975298),
-    u = n(158153),
-    m = n(760558),
-    h = n(401786),
-    g = n(450468),
-    p = n(98278),
-    x = n(314684),
-    S = n(594174),
-    T = n(78839),
-    C = n(267642),
-    _ = n(74538),
-    E = n(283029),
-    f = n(357956),
-    I = n(275909),
-    N = n(981631),
-    b = n(474936),
-    A = n(735825),
-    v = n(388032),
-    j = n(601709);
-function O(e) {
-    let { guildBoostSlot: t, isCancellable: n, onCancel: r, onUncancel: l, premiumSubscription: a, useReducedMotion: c } = e,
+    a = n(278074),
+    o = n(442837),
+    c = n(481060),
+    d = n(607070),
+    u = n(975298),
+    m = n(158153),
+    h = n(760558),
+    g = n(401786),
+    p = n(450468),
+    x = n(98278),
+    S = n(314684),
+    T = n(594174),
+    C = n(78839),
+    _ = n(267642),
+    E = n(74538),
+    f = n(283029),
+    I = n(357956),
+    N = n(275909),
+    b = n(981631),
+    A = n(474936),
+    v = n(735825),
+    j = n(388032),
+    O = n(601709);
+function R(e) {
+    let { guildBoostSlot: t, isCancellable: n, onCancel: r, onUncancel: l, premiumSubscription: a, useReducedMotion: o } = e,
         d = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        u = (0, C.tl)(t);
+        u = (0, _.tl)(t);
     return (0, i.jsxs)(
         'li',
         {
-            className: j.unappliedGuildBoostSlot,
+            className: O.unappliedGuildBoostSlot,
             children: [
                 (0, i.jsxs)('div', {
-                    className: j.unappliedGuildBoostSlotContentPrimary,
+                    className: O.unappliedGuildBoostSlotContentPrimary,
                     children: [
-                        (0, i.jsx)(I.Z, {
-                            className: j.unappliedGuildBoostSlotIcon,
+                        (0, i.jsx)(N.Z, {
+                            className: O.unappliedGuildBoostSlotIcon,
                             hasCooldown: t.isOnCooldown(),
                             isCanceled: u,
-                            useReducedMotion: c
+                            useReducedMotion: o
                         }),
                         u && null != a
-                            ? (0, i.jsx)(o.Text, {
+                            ? (0, i.jsx)(c.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/medium',
-                                  children: v.intl.format(v.t.Z4ULRE, { date: a.currentPeriodEnd })
+                                  children: j.intl.format(j.t.Z4ULRE, { date: a.currentPeriodEnd })
                               })
                             : t.isOnCooldown() && null != d
-                              ? (0, i.jsx)(f.Z, { cooldown: d.getTime() })
-                              : (0, i.jsx)(o.Text, {
-                                    className: j.__invalid_unappliedGuildBoostSlotDescription,
+                              ? (0, i.jsx)(I.Z, { cooldown: d.getTime() })
+                              : (0, i.jsx)(c.Text, {
+                                    className: O.__invalid_unappliedGuildBoostSlotDescription,
                                     color: 'text-muted',
                                     variant: 'text-sm/medium',
-                                    children: v.intl.string(v.t['2mcaf3'])
+                                    children: j.intl.string(j.t['2mcaf3'])
                                 })
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: j.unappliedGuildBoostSlotContentSecondary,
+                    className: O.unappliedGuildBoostSlotContentSecondary,
                     children: [
                         n &&
                             !u &&
-                            (0, i.jsx)(o.Button, {
-                                className: j.unappliedGuildBoostSlotCta,
-                                color: o.Button.Colors.PRIMARY,
-                                look: o.Button.Looks.LINK,
+                            (0, i.jsx)(c.Button, {
+                                className: O.unappliedGuildBoostSlotCta,
+                                color: c.Button.Colors.PRIMARY,
+                                look: c.Button.Looks.LINK,
                                 onClick: () => r(t),
-                                size: o.Button.Sizes.NONE,
-                                children: v.intl.string(v.t.twFU3d)
+                                size: c.Button.Sizes.NONE,
+                                children: j.intl.string(j.t.twFU3d)
                             }),
                         u &&
-                            (0, i.jsx)(o.Button, {
-                                className: j.unappliedGuildBoostSlotCta,
-                                color: o.Button.Colors.PRIMARY,
-                                look: o.Button.Looks.LINK,
+                            (0, i.jsx)(c.Button, {
+                                className: O.unappliedGuildBoostSlotCta,
+                                color: c.Button.Colors.PRIMARY,
+                                look: c.Button.Looks.LINK,
                                 onClick: () => l(t),
-                                size: o.Button.Sizes.NONE,
-                                children: v.intl.string(v.t['2glQNj'])
+                                size: c.Button.Sizes.NONE,
+                                children: j.intl.string(j.t['2glQNj'])
                             })
                     ]
                 })
@@ -88,19 +89,19 @@ function O(e) {
         t.id
     );
 }
-function R(e) {
-    (0, o.openModalLazy)(
+function P(e) {
+    (0, c.openModalLazy)(
         async () => (t) =>
-            (0, i.jsx)(h.default, {
+            (0, i.jsx)(g.default, {
                 ...t,
                 guildBoostSlot: e
             })
     );
 }
-function P(e) {
-    (0, o.openModalLazy)(
+function D(e) {
+    (0, c.openModalLazy)(
         async () => (t) =>
-            (0, i.jsx)(g.default, {
+            (0, i.jsx)(p.default, {
                 ...t,
                 guildBoostSlotId: e.id
             })
@@ -109,20 +110,21 @@ function P(e) {
 t.Z = function (e) {
     let t, n;
     let { guildBoostSlots: r } = e,
-        h = (0, a.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
-        g = (null == h ? void 0 : h.isPausedOrPausePending) === !0,
-        { fractionalState: f } = (0, d.Z)(),
-        I = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
-        D = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
-        y = (0, x.Vp)(),
-        B = f === b.a$.FP_SUB,
-        L = g && !B,
+        g = (0, o.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+        p = (null == g ? void 0 : g.isPausedOrPausePending) === !0,
+        { fractionalState: I } = (0, u.Z)(),
+        N = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        y = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
+        B = (0, S.Vp)(),
+        L = I === A.a$.FP_SUB,
+        Z = I !== A.a$.NONE,
+        F = p && !L,
         {
-            appliedGuildBoostSlots: Z,
-            unappliedGuildBoostSlots: F,
-            numActiveGuildBoostSlots: M,
-            hasCooldownBoosts: k,
-            allGuildBoostsAreOnCooldown: w
+            appliedGuildBoostSlots: M,
+            unappliedGuildBoostSlots: k,
+            numActiveGuildBoostSlots: w,
+            hasCooldownBoosts: U,
+            allGuildBoostsAreOnCooldown: V
         } = s.useMemo(() => {
             let e = [],
                 t = [],
@@ -131,7 +133,7 @@ t.Z = function (e) {
                 s = !0;
             return (
                 r.forEach((r) => {
-                    !(0, C.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
+                    !(0, _.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
                 }),
                 {
                     appliedGuildBoostSlots: e,
@@ -142,99 +144,118 @@ t.Z = function (e) {
                 }
             );
         }, [r]),
-        U = null != h ? (0, u.G)(h, y) : 0,
-        V = Math.max(0, U - Z.length),
-        G = M > U,
-        Y = U === r.length,
-        H = Y ? V : 1,
-        z = s.useMemo(() => {
+        G = null != g ? (0, m.G)(g, B) : 0,
+        Y = Math.max(0, G - M.length),
+        H = w > G,
+        z = G === r.length,
+        W = z ? Y : 1,
+        K = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < H; t++)
+            for (let t = 0; t < W; t++)
                 e.push(
                     (0, i.jsx)(
-                        E.Z,
+                        f.Z,
                         {
-                            className: j.headerBoostGem,
-                            useReducedMotion: I
+                            className: O.headerBoostGem,
+                            useReducedMotion: N
                         },
                         t
                     )
                 );
             return e;
-        }, [H, I]),
-        W = null != y,
-        K = s.useMemo(() => F.find((e) => e.isAvailable()), [F]);
-    if (0 === F.length) return null;
-    let q = F.length;
-    if (((t = Y ? (1 === q && W ? v.intl.string(v.t['65r43N']) : v.intl.formatToPlainString(w ? v.t['3DW6DQ'] : v.t['/u15QU'], { numUnappliedGuildBoostSlots: q })) : v.intl.formatToPlainString(w ? v.t['3DW6DQ'] : v.t.BPadnJ, { numUnappliedGuildBoostSlots: q })), _.ZP.isPremium(D))) {
-        if (Y && 1 === q && W) n = y.skuId === A.Ft.FREE_GUILD_BOOST_1_MONTH ? v.intl.string(v.t.dm8r0t) : v.intl.string(v.t.VGJ9IC);
+        }, [W, N]),
+        q = null != B,
+        Q = s.useMemo(() => k.find((e) => e.isAvailable()), [k]);
+    if (0 === k.length) return null;
+    let X = k.length;
+    if (((t = z ? (1 === X && q ? j.intl.string(j.t['65r43N']) : j.intl.formatToPlainString(V ? j.t['3DW6DQ'] : j.t['/u15QU'], { numUnappliedGuildBoostSlots: X })) : j.intl.formatToPlainString(V ? j.t['3DW6DQ'] : j.t.BPadnJ, { numUnappliedGuildBoostSlots: X })), E.ZP.isPremium(y))) {
+        if (z && 1 === X && q) n = B.skuId === v.Ft.FREE_GUILD_BOOST_1_MONTH ? j.intl.string(j.t.dm8r0t) : j.intl.string(j.t.VGJ9IC);
         else {
             let e = (e, t) =>
                 (0, i.jsx)(
-                    o.Clickable,
+                    c.Clickable,
                     {
-                        className: j.headerLearnMoreLink,
+                        className: O.headerLearnMoreLink,
                         tag: 'span',
                         onClick: () => {
-                            (0, p.z)();
+                            (0, x.z)();
                         },
                         children: e
                     },
                     t
                 );
-            n = w
-                ? v.intl.format(v.t.omcpSE, { learnMoreHook: e })
-                : v.intl.format(v.t['5mAkVl'], {
-                      numUnappliedGuildBoostSlots: q,
+            n = V
+                ? j.intl.format(j.t.omcpSE, { learnMoreHook: e })
+                : j.intl.format(j.t['5mAkVl'], {
+                      numUnappliedGuildBoostSlots: X,
                       learnMoreHook: e
                   });
         }
-    } else n = w ? v.intl.string(v.t['8pcUZm']) : v.intl.formatToPlainString(v.t.Kaw82t, { numUnappliedGuildBoostSlots: q });
+    } else n = V ? j.intl.string(j.t['8pcUZm']) : j.intl.formatToPlainString(j.t.Kaw82t, { numUnappliedGuildBoostSlots: X });
+    let J = (0, a.EQ)({
+        subscriptionIsPausedOrPausePending: p,
+        hasFractionPremium: Z
+    })
+        .with(
+            {
+                subscriptionIsPausedOrPausePending: !0,
+                hasFractionPremium: !0
+            },
+            () => j.intl.string(j.t.kJ1AZG)
+        )
+        .with(
+            {
+                subscriptionIsPausedOrPausePending: !0,
+                hasFractionPremium: !1
+            },
+            () => j.intl.string(j.t.mOWsFx)
+        )
+        .otherwise(() => j.intl.string(j.t.xr4m5O));
     return (0, i.jsxs)('div', {
-        className: j.wrapper,
+        className: O.wrapper,
         children: [
-            W &&
+            q &&
                 (0, i.jsxs)('div', {
-                    className: j.specialHeader,
+                    className: O.specialHeader,
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: 'text-xs/semibold',
-                            className: j.pill,
-                            children: v.intl.string(v.t.fhK8ho).toLocaleUpperCase()
+                            className: O.pill,
+                            children: j.intl.string(j.t.fhK8ho).toLocaleUpperCase()
                         }),
-                        (0, i.jsx)(o.Heading, {
+                        (0, i.jsx)(c.Heading, {
                             color: 'header-primary',
                             variant: 'heading-md/semibold',
-                            children: v.intl.string(v.t.Cly3mZ)
+                            children: j.intl.string(j.t.Cly3mZ)
                         })
                     ]
                 }),
             (0, i.jsxs)('div', {
-                className: l()(j.content, {
-                    [j.headerWithBoost]: W,
-                    [j.headerWithoutSpecialHeader]: !W
+                className: l()(O.content, {
+                    [O.headerWithBoost]: q,
+                    [O.headerWithoutSpecialHeader]: !q
                 }),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: j.header,
+                        className: O.header,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: j.headerContentPrimary,
+                                className: O.headerContentPrimary,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: j.headerBoostGems,
-                                        children: z
+                                        className: O.headerBoostGems,
+                                        children: K
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: j.__invalid_headerCopy,
+                                        className: O.__invalid_headerCopy,
                                         children: [
-                                            (0, i.jsx)(o.Heading, {
-                                                className: j.headerHeading,
+                                            (0, i.jsx)(c.Heading, {
+                                                className: O.headerHeading,
                                                 variant: 'heading-lg/bold',
                                                 children: t
                                             }),
-                                            (0, i.jsx)(o.Text, {
-                                                className: j.__invalid_headerSubheading,
+                                            (0, i.jsx)(c.Text, {
+                                                className: O.__invalid_headerSubheading,
                                                 color: 'text-primary',
                                                 variant: 'text-sm/normal',
                                                 children: n
@@ -244,50 +265,50 @@ t.Z = function (e) {
                                 ]
                             }),
                             (0, i.jsx)('div', {
-                                className: j.headerContentSecondary,
-                                children: (0, i.jsx)(o.Tooltip, {
-                                    shouldShow: null == K || L,
-                                    text: g ? v.intl.string(v.t.mOWsFx) : v.intl.string(v.t.xr4m5O),
+                                className: O.headerContentSecondary,
+                                children: (0, i.jsx)(c.Tooltip, {
+                                    shouldShow: null == Q || F,
+                                    text: J,
                                     children: (e) =>
-                                        (0, i.jsx)(o.Button, {
+                                        (0, i.jsx)(c.Button, {
                                             ...e,
-                                            disabled: null == K || L,
+                                            disabled: null == Q || F,
                                             onClick:
-                                                null != K
+                                                null != Q
                                                     ? () => {
                                                           var e;
                                                           return (
-                                                              (e = K),
-                                                              void (0, o.openModalLazy)(
+                                                              (e = Q),
+                                                              void (0, c.openModalLazy)(
                                                                   async () => (t) =>
-                                                                      (0, i.jsx)(m.default, {
+                                                                      (0, i.jsx)(h.default, {
                                                                           ...t,
                                                                           guildBoostSlots: [e],
-                                                                          locationSection: N.jXE.SETTINGS_PREMIUM
+                                                                          locationSection: b.jXE.SETTINGS_PREMIUM
                                                                       })
                                                               )
                                                           );
                                                       }
                                                     : void 0,
-                                            children: v.intl.string(v.t.BMx1i4)
+                                            children: j.intl.string(j.t.BMx1i4)
                                         })
                                 })
                             })
                         ]
                     }),
-                    (!Y || k) &&
+                    (!z || U) &&
                         (0, i.jsx)('ul', {
-                            className: j.unappliedBoostSlots,
-                            children: F.map((e) =>
+                            className: O.unappliedBoostSlots,
+                            children: k.map((e) =>
                                 (0, i.jsx)(
-                                    O,
+                                    R,
                                     {
                                         guildBoostSlot: e,
-                                        isCancellable: G,
-                                        onCancel: R,
-                                        onUncancel: P,
-                                        premiumSubscription: h,
-                                        useReducedMotion: I
+                                        isCancellable: H,
+                                        onCancel: P,
+                                        onUncancel: D,
+                                        premiumSubscription: g,
+                                        useReducedMotion: N
                                     },
                                     e.id
                                 )

@@ -16,5 +16,6 @@ e.exports = {
     guildBoostCtaBoost: 'guildBoostCtaBoost_cbe7a3',
     guildBoostCtaBoostShine: 'guildBoostCtaBoostShine_cbe7a3',
     guildBoostCtaGiftContent: 'guildBoostCtaGiftContent_cbe7a3',
-    guildBoostCtaGiftIcon: 'guildBoostCtaGiftIcon_cbe7a3'
+    guildBoostCtaGiftIcon: 'guildBoostCtaGiftIcon_cbe7a3',
+    FPContainer: 'FPContainer_cbe7a3'
 };

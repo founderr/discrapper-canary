@@ -12,6 +12,5 @@ e.exports = {
     reverseContainer: 'reverseContainer_e81a2a',
     reverseTrialHomeHeader: 'reverseTrialHomeHeader_e81a2a',
     flexCentered: 'flexCentered_e81a2a',
-    fpCountdownPill: 'fpCountdownPill_e81a2a',
-    fpCountdownPillText: 'fpCountdownPillText_e81a2a'
+    fpCountdownPill: 'fpCountdownPill_e81a2a'
 };
