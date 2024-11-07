@@ -75,15 +75,16 @@ function v(e) {
 }
 function I(e) {
     let { id: t, animated: n, size: r, forcePNG: i = !1 } = e,
-        a = i ? 'png' : n ? (g ? 'webp' : 'gif') : g ? 'webp' : 'png',
-        s = 'size='.concat((0, l.oO)(r * (0, l.x_)(), E));
+        a = g && !i ? 'webp' : 'png';
     return null != window.GLOBAL_ENV.CDN_HOST
-        ? ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/').concat(t, '.').concat(a) +
-              '?'
-                  .concat(s)
-                  .concat(g && !E ? '&quality=lossless' : '')
-                  .concat(g && n ? '&animated=true' : '')
-        : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, a);
+        ? ''
+              .concat(location.protocol, '//')
+              .concat(window.GLOBAL_ENV.CDN_HOST, '/emojis/')
+              .concat(t, '.')
+              .concat(n ? 'gif' : a, '?size=')
+              .concat((0, l.oO)(r * (0, l.x_)(), E))
+              .concat(g && !E ? '&quality=lossless' : '')
+        : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + f.ANM.EMOJI(t, n ? 'gif' : a);
 }
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
