@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     I3: function () {
         return c;
     },
@@ -56,9 +56,9 @@ t.d(n, {
 });
 var i,
     r,
-    l = t(401653),
-    o = t(95930),
-    u = t(41381);
+    l = n(401653),
+    o = n(95930),
+    u = n(41381);
 ((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
 let a = 1000,
     s = 100,

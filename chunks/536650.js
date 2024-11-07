@@ -124,7 +124,7 @@ function _(e) {
                             children: (0, i.jsx)(r.Heading, {
                                 ref: I,
                                 className: C.textApplicationName,
-                                variant: 'heading-md/extrabold',
+                                variant: 'heading-lg/extrabold',
                                 children: t
                             })
                         })

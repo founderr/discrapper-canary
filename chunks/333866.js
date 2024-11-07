@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     a3: function () {
         return o;
     },
@@ -16,7 +16,7 @@ var i,
     r,
     l,
     o,
-    u = t(388032);
+    u = n(388032);
 function a(e) {
     return {
         4: u.intl.string(u.t['5tzSRE']),

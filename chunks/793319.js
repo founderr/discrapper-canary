@@ -176,11 +176,11 @@ function ej(e) {
                   })
                 : k && 0 === E.length
                   ? (0, r.jsx)(L.ZP, {
-                        contentTypes: [m.z.REVERSE_TRIAL_STREAM_POPOUT, m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
+                        contentTypes: [m.z.TRIAL_FOR_ALL_STREAM_POPOUT],
                         bypassAutoDismiss: !0,
                         children: (e) => {
                             let { visibleContent: t, markAsDismissed: n } = e;
-                            if (t === m.z.REVERSE_TRIAL_STREAM_POPOUT || t === m.z.TRIAL_FOR_ALL_STREAM_POPOUT)
+                            if (t === m.z.TRIAL_FOR_ALL_STREAM_POPOUT)
                                 return (0, r.jsx)(Y.h, {
                                     buttonRef: T,
                                     dismissed: !1,

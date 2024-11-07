@@ -4,28 +4,28 @@ t.d(s, {
     }
 });
 var n = t(200651),
-    r = t(120356),
-    o = t.n(r),
+    o = t(120356),
+    r = t.n(o),
     a = t(927359),
     i = t(325767),
     c = t(823188),
-    u = t(860553);
-let l = 'premium_tier_gradient',
-    d = 'smaller_sparkle_gradient';
-function f(e) {
-    let { width: s = 14, height: t = 15, color: r = 'white', foreground: o, ...a } = e;
+    l = t(860553);
+let u = 'premium_tier_gradient',
+    f = 'smaller_sparkle_gradient';
+function d(e) {
+    let { width: s = 14, height: t = 15, color: o = 'white', foreground: r, ...a } = e;
     return (0, n.jsxs)('svg', {
         ...(0, i.Z)({ ...a }),
         preserveAspectRatio: 'none',
         width: s,
         height: t,
         viewBox: '0 0 14 15',
-        className: o,
+        className: r,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, n.jsx)('defs', {
                 children: (0, n.jsxs)('linearGradient', {
-                    id: l,
+                    id: u,
                     x1: '0%',
                     y1: '0%',
                     x2: '100%',
@@ -47,7 +47,7 @@ function f(e) {
                 })
             }),
             (0, n.jsxs)('linearGradient', {
-                id: d,
+                id: f,
                 x1: '-4.95474',
                 y1: '5.44067',
                 x2: '11.2384',
@@ -67,35 +67,35 @@ function f(e) {
             }),
             (0, n.jsx)('path', {
                 d: 'M8.59403 1.52779C8.04647 0.0480288 5.95353 0.0480288 5.40597 1.52779L4.56476 3.8011C4.36219 4.34854 3.93057 4.78016 3.38313 4.98273L1.10982 5.82394C-0.36994 6.3715 -0.36994 8.46444 1.10982 9.012L3.38313 9.8532C3.93057 10.0558 4.36219 10.4874 4.56476 11.0348L5.40597 13.3081C5.95353 14.7879 8.04647 14.7879 8.59403 13.3081L9.43524 11.0348C9.63781 10.4874 10.0694 10.0558 10.6169 9.8532L12.8902 9.012C14.3699 8.46444 14.3699 6.3715 12.8902 5.82394L10.6169 4.98273C10.0694 4.78016 9.63781 4.34854 9.43524 3.8011L8.59403 1.52779Z',
-                fill: r
+                fill: o
             })
         ]
     });
 }
 function p(e) {
-    let { className: s, endsAt: t, messageStyle: r, upperCase: i, showSparkles: p } = e,
-        g = (0, a.Z)(t, r);
+    let { className: s, endsAt: t, messageStyle: o, upperCase: i, showSparkles: p } = e,
+        x = (0, a.Z)(t, o);
     return (
-        i && g.toUpperCase(),
+        i && x.toUpperCase(),
         (0, n.jsxs)('div', {
-            className: o()(s, u.countDown),
+            className: r()(s, l.countDown),
             children: [
                 p
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(f, {
-                                  foreground: u.sparkleStar1,
-                                  color: 'url(#'.concat(d, ')')
+                              (0, n.jsx)(d, {
+                                  foreground: l.sparkleStar1,
+                                  color: 'url(#'.concat(f, ')')
                               }),
-                              (0, n.jsx)(f, {
-                                  foreground: u.sparkleStar2,
-                                  color: 'url(#'.concat(l, ')')
+                              (0, n.jsx)(d, {
+                                  foreground: l.sparkleStar2,
+                                  color: 'url(#'.concat(u, ')')
                               })
                           ]
                       })
                     : null,
                 (0, n.jsx)(c.mn, {
-                    text: g,
+                    text: x,
                     colorOptions: c.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                 })
             ]

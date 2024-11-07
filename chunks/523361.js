@@ -1,9 +1,9 @@
-t.d(n, {
+t.d(e, {
     HG: function () {
-        return u;
+        return a;
     },
     Md: function () {
-        return o;
+        return u;
     },
     Q8: function () {
         return l;
@@ -12,8 +12,8 @@ t.d(n, {
 var i = t(373228),
     r = t(388032);
 let l = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
-    o = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
-    u = [
+    u = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
+    a = [
         {
             id: '781323471249604648',
             format_type: i.u3.APNG,

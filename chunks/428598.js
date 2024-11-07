@@ -25,7 +25,7 @@ let c = !1,
     }),
     s = { ...f };
 function _() {
-    i = new Map(s.userAffinities.filter((e) => !l.Z.isBlocked(e.otherUserId)).map((e) => [e.otherUserId, e]));
+    i = new Map(s.userAffinities.filter((e) => !l.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
 class h extends (r = o.ZP.PersistedStore) {
     initialize(e) {

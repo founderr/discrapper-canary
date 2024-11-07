@@ -288,7 +288,7 @@ class C extends l.Z {
             A(this, 'pendingDesktopInputs', {}),
             A(this, 'enablePromise', null),
             A(this, 'handleActiveSinksChange', (e, t) => {
-                this.connections.forEach((n) => n.setHasActiveVideoOutputSink(e, t));
+                this.connections.forEach((n) => n.setHasActiveVideoOutputSink(e, t, 'MediaEngineWebRTC.handleActiveSinksChange'));
             }),
             A(this, 'handleNewListener', (e) => {
                 switch (e) {

@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     EB: function () {
         return o;
     },
@@ -12,55 +12,55 @@ t.d(n, {
         return s;
     }
 });
-var i = t(570140),
-    r = t(881052),
-    l = t(824389);
+var i = n(570140),
+    r = n(881052),
+    l = n(824389);
 let o = async (e) => {
         i.Z.dispatch({
             type: 'GUILD_PRODUCTS_FETCH',
             guildId: e
         });
         try {
-            let n = await l.uV(e);
+            let t = await l.uV(e);
             i.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_SUCCESS',
                 guildId: e,
-                products: n
+                products: t
             });
-        } catch (n) {
+        } catch (t) {
             i.Z.dispatch({
                 type: 'GUILD_PRODUCTS_FETCH_FAILURE',
                 guildId: e
             });
         }
     },
-    u = async (e, n) => {
+    u = async (e, t) => {
         i.Z.dispatch({
             type: 'GUILD_PRODUCT_FETCH',
-            productId: n
+            productId: t
         });
         try {
-            let t = await l.p9(e, n);
+            let n = await l.p9(e, t);
             return (
                 i.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_SUCCESS',
-                    product: t
+                    product: n
                 }),
-                t
+                n
             );
         } catch (e) {
             throw (
                 (i.Z.dispatch({
                     type: 'GUILD_PRODUCT_FETCH_FAILURE',
-                    productId: n,
+                    productId: t,
                     error: new r.Hx(e)
                 }),
                 e)
             );
         }
     };
-async function a(e, n, t) {
-    let r = await l.Je(e, n, t);
+async function a(e, t, n) {
+    let r = await l.Je(e, t, n);
     return (
         i.Z.dispatch({
             type: 'GUILD_PRODUCT_UPDATE',
@@ -69,12 +69,12 @@ async function a(e, n, t) {
         r
     );
 }
-async function s(e, n) {
+async function s(e, t) {
     return (
-        await l.mh(e, n),
+        await l.mh(e, t),
         i.Z.dispatch({
             type: 'GUILD_PRODUCT_DELETE',
-            productId: n
+            productId: t
         }),
         !0
     );

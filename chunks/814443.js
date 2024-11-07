@@ -33,7 +33,7 @@ function _() {
             d.userAffinities
                 .filter((e) => {
                     let { user_id: t } = e;
-                    return !s.Z.isBlocked(t);
+                    return !s.Z.isBlockedOrIgnored(t);
                 })
                 .map((e) => [e.user_id, e])
         ),

@@ -71,8 +71,8 @@ t.Z = function (e) {
             D(!1);
         }, [D]),
         B = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
-        [Z, F] = (0, f.US)(w ? [u.z.REVERSE_TRIAL_EMOJI_BUTTON, u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
-        V = Z === u.z.REVERSE_TRIAL_EMOJI_BUTTON || Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
+        [Z, F] = (0, f.US)(w ? [u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
+        V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         H = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
         text: b(),
