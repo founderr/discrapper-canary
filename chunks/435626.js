@@ -22,8 +22,8 @@ var o = i(120356),
     m = i(981631),
     _ = i(217702),
     f = i(474936),
-    x = i(388032),
-    I = i(601674),
+    I = i(388032),
+    x = i(601674),
     S = i(476945),
     y = i(945182);
 function E(e) {
@@ -36,12 +36,12 @@ function E(e) {
                 transitionState: i,
                 children: [
                     (0, s.jsxs)(l.ModalHeader, {
-                        className: I.header,
+                        className: x.header,
                         separator: !1,
                         children: [
                             (0, s.jsx)(l.FormTitle, {
                                 tag: l.FormTitleTags.H4,
-                                children: x.intl.string(x.t['xU+d9P'])
+                                children: I.intl.string(I.t.YBGjsr)
                             }),
                             (0, s.jsx)(l.ModalCloseButton, {
                                 onClick: () => {
@@ -51,16 +51,17 @@ function E(e) {
                                     }),
                                         n();
                                 },
-                                className: I.cursorPointer
+                                className: x.cursorPointer
                             })
                         ]
                     }),
                     (0, s.jsx)(l.ModalContent, {
-                        className: I.modalContent,
+                        className: x.modalContent,
                         children: (0, s.jsx)(A, {
                             analyticsLocations: t,
                             giftRecipient: r,
-                            analyticsObject: o
+                            analyticsObject: o,
+                            onClose: n
                         })
                     })
                 ]
@@ -71,9 +72,12 @@ function E(e) {
 ((n = r || (r = {}))[(n.NITRO = 0)] = 'NITRO'), (n[(n.NITRO_BASIC = 1)] = 'NITRO_BASIC'), (n[(n.SHOP = 2)] = 'SHOP');
 let C = () => ((0, p.Z)(), null);
 function A(e) {
-    let { analyticsLocations: t, giftRecipient: i, analyticsObject: n } = e,
-        { showBothNitroSkusInCategorySelect: r } = h.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        o = (e) => {
+    let { analyticsLocations: t, giftRecipient: i, analyticsObject: n, onClose: r } = e,
+        { showBothNitroSkusInCategorySelect: o } = h.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        c = (e) => {
+            e && r();
+        },
+        u = (e) => {
             (0, v.Z)({
                 isGift: !0,
                 giftRecipient: i,
@@ -81,37 +85,38 @@ function A(e) {
                 initialPlanId: null,
                 analyticsLocations: t,
                 subscriptionTier: e,
-                analyticsObject: n
+                analyticsObject: n,
+                onClose: c
             });
         };
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(l.Clickable, {
-                onClick: () => o(r ? f.Si.TIER_2 : void 0),
+                onClick: () => u(o ? f.Si.TIER_2 : void 0),
                 children: (0, s.jsxs)('div', {
-                    className: a()(I.categoryButton, I.nitroButton),
+                    className: a()(x.categoryButton, x.nitroButton),
                     children: [
                         (0, s.jsx)(l.Text, {
                             variant: 'display-md',
                             color: 'always-white',
-                            className: I.buttonText,
-                            children: x.intl.string(x.t['lG6a5+'])
+                            className: x.buttonText,
+                            children: I.intl.string(I.t['lG6a5+'])
                         }),
                         (0, s.jsx)(k, { imageType: 0 })
                     ]
                 })
             }),
-            r &&
+            o &&
                 (0, s.jsx)(l.Clickable, {
-                    onClick: () => o(f.Si.TIER_0),
+                    onClick: () => u(f.Si.TIER_0),
                     children: (0, s.jsxs)('div', {
-                        className: a()(I.nitroBasicButton, I.categoryButton),
+                        className: a()(x.nitroBasicButton, x.categoryButton),
                         children: [
                             (0, s.jsx)(l.Text, {
                                 variant: 'display-md',
                                 color: 'always-white',
-                                className: I.buttonText,
-                                children: x.intl.string(x.t['t9uG/v'])
+                                className: x.buttonText,
+                                children: I.intl.string(I.t['t9uG/v'])
                             }),
                             (0, s.jsx)(k, { imageType: 1 })
                         ]
@@ -124,17 +129,18 @@ function A(e) {
                         giftingOrigin: f.Wt.DM_CHANNEL,
                         analyticsLocations: t,
                         analyticsObject: n,
-                        giftRecipient: i
+                        giftRecipient: i,
+                        onClose: c
                     });
                 },
                 children: (0, s.jsxs)('div', {
-                    className: a()(I.shopButton, I.categoryButton),
+                    className: a()(x.shopButton, x.categoryButton),
                     children: [
                         (0, s.jsx)(l.Text, {
                             variant: 'display-md',
                             color: 'always-white',
-                            className: I.buttonText,
-                            children: x.intl.string(x.t.gFlB9f)
+                            className: x.buttonText,
+                            children: I.intl.string(I.t.gFlB9f)
                         }),
                         (0, s.jsx)(k, { imageType: 2 })
                     ]
@@ -149,7 +155,7 @@ function k(e) {
         n = (0, u.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', l.AvatarSizes.SIZE_80, !1);
     return 0 === t || 1 === t
         ? (0, s.jsx)('div', {
-              className: I.wumpusImageContainer,
+              className: x.wumpusImageContainer,
               children: (0, s.jsx)(l.Image, {
                   src: 1 === t ? S : y,
                   mediaLayoutType: _.hV.RESPONSIVE,
@@ -160,7 +166,7 @@ function k(e) {
           })
         : 2 === t
           ? (0, s.jsx)('div', {
-                className: a()(I.wumpusImageContainer, I.shopImageContainer),
+                className: a()(x.wumpusImageContainer, x.shopImageContainer),
                 children: (0, s.jsx)(l.Avatar, {
                     src: i,
                     avatarDecoration: n,
