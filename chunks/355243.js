@@ -54,9 +54,9 @@ function f(e) {
             },
             [h, E]
         ),
-        P = null != N && null != S ? m(N, S, C) : 0,
-        M = (0, c.yv)(P),
-        O = null != S ? S.right - p((t / 100) * C, C, S) : null,
+        M = null != N && null != S ? m(N, S, C) : 0,
+        O = (0, c.yv)(M),
+        P = null != S ? S.right - p((t / 100) * C, C, S) : null,
         R = null != N && null != S ? S.right - N : null,
         w = null != I && null != S ? S.right - I : null;
     return (0, r.jsxs)('div', {
@@ -121,19 +121,22 @@ function f(e) {
                         animate: n
                     }),
                     b &&
-                        null != M &&
+                        null != O &&
                         (0, r.jsx)(a.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
-                            style: { right: null != R ? ''.concat(R - 10, 'px') : 'auto' },
-                            children: M
+                            style: {
+                                right: null != R ? ''.concat(R - 10, 'px') : 'auto',
+                                color: '#FFFFFF'
+                            },
+                            children: O
                         }),
                     b &&
                         i &&
-                        null != O &&
+                        null != P &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: ''.concat(O - 6, 'px') }
+                            style: { right: ''.concat(P - 6, 'px') }
                         })
                 ]
             }),
