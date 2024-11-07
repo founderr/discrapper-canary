@@ -23,7 +23,7 @@ var i = n(200651),
     v = n(176505),
     I = n(490897),
     b = n(388032),
-    S = n(718317);
+    S = n(360110);
 function Z(e) {
     let { guild: t, selected: Z } = e,
         N = (0, h.Z)(t),

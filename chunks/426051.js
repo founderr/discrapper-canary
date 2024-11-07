@@ -16,7 +16,7 @@ var i = n(200651),
     m = n(376191),
     p = n(86203),
     g = n(388032),
-    f = n(894639);
+    f = n(449328);
 function _(e) {
     let { active: t, user: n, channel: _ } = e,
         E = (0, u.V)(),

@@ -34,7 +34,7 @@ var i = n(200651),
     B = n(132547),
     y = n(474936),
     k = n(981631),
-    L = n(700199);
+    L = n(405670);
 t.Z = function (e) {
     let { entrypoint: t = y.EZ.UserSettings } = e;
     (0, C.z)(b.X);

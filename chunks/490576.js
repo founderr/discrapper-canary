@@ -18,7 +18,7 @@ var i = e(512722),
     f = e(598952),
     x = e(596211),
     h = e(388032),
-    g = e(687319);
+    g = e(921438);
 let _ = (0, o.Mg)(c.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
 function j(t) {
     let { guildProductListing: n, guildId: e, onClose: i } = t,

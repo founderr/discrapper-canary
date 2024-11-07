@@ -10,7 +10,7 @@ var i = n(200651),
     o = n(911969),
     s = n(399860),
     c = n(388032),
-    d = n(83956);
+    d = n(226497);
 function u(e) {
     let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: p } = e,
         g = l.useMemo(() => {

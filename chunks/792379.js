@@ -31,8 +31,8 @@ var i = n(200651),
     j = n(171368),
     A = n(228168),
     y = n(388032),
-    P = n(337319),
-    M = n(299336);
+    P = n(483078),
+    M = n(237563);
 function R(e) {
     let { user: t, channel: n } = e,
         R = __OVERLAY__ || !(0, u.Z)(t.id),

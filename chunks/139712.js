@@ -11,7 +11,7 @@ var t = l(200651),
     r = l(124165),
     o = l(765305),
     u = l(388032),
-    c = l(196238);
+    c = l(489103);
 function d(e) {
     let { event: n, recurrenceId: l, guildId: d, onRsvp: m, ...v } = e,
         [p, C] = i.useState(r.KX.SERIES),

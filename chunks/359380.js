@@ -12,7 +12,7 @@ var r = t(200651),
     o = t(18100),
     l = t(308083),
     c = t(388032),
-    d = t(602075);
+    d = t(306882);
 let u = (e) => {
     let { title: n, icon: t, availableTraits: o, selectedTraits: c, onUpdateTraits: u } = e,
         m = a.useCallback(

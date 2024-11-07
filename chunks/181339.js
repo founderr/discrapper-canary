@@ -29,7 +29,7 @@ var i = n(200651),
     v = n(449226),
     T = n(981631),
     j = n(388032),
-    S = n(176981);
+    S = n(901797);
 function b(e) {
     let { guild: t, isExpanded: n, selectedChannelId: l, className: a } = e,
         x = (0, h.BT)(t),

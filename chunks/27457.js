@@ -65,7 +65,7 @@ var i = n(200651),
     es = n(524484),
     eo = n(65154),
     ec = n(388032),
-    eu = n(810190);
+    eu = n(169501);
 let ed = l.memo((e) => {
     var t, n, a, c, _;
     let { participant: Z, onDoubleClick: C, onContextMenu: q, onClick: X, onMouseDown: ei, onKeyDown: ed, className: em, style: ep, containerStyle: eh, channel: eg, width: ev, inPopout: eS, onVideoResize: eI, inCall: e_ = !1, selected: ex = !1, noBorder: eE = !1, noVideoRender: eZ = !1, focused: eC = !1, blocked: ey = !1, fit: eb = T.L.CONTAIN, paused: eT = !1, pulseSpeakingIndicator: eA = !1, forceIdle: eN = !1 } = e,
@@ -130,23 +130,23 @@ let ed = l.memo((e) => {
         e0 = (0, j.o)(Z, eD),
         e1 = (0, w.lL)('CallTile', !0, eD, e0),
         e2 = (0, o.e7)([V.Z], () => (Z.type === er.fO.USER && null != eU ? V.Z.getEffectForUserId(eU) : null)),
-        e9 = (0, o.e7)([J.Z], () => J.Z.getVoicePlatformForChannel(eg.id, null != eU ? eU : ea.lds)),
-        { enableHangStatus: e3 } = E.n.useExperiment({
+        e3 = (0, o.e7)([J.Z], () => J.Z.getVoicePlatformForChannel(eg.id, null != eU ? eU : ea.lds)),
+        { enableHangStatus: e9 } = E.n.useExperiment({
             guildId: eg.guild_id,
             location: 'VoiceUsers'
         }),
         { showGameIcon: e7 } = x.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-        e8 = e7 || e3,
-        { hangStatusActivity: e4, gameActivity: e6 } = (0, o.cj)(
+        e8 = e7 || e9,
+        { hangStatusActivity: e6, gameActivity: e4 } = (0, o.cj)(
             [H.Z],
             () => ({
-                hangStatusActivity: e3 && null != eU ? H.Z.findActivity(eU, (e) => e.type === ea.IIU.HANG_STATUS) : null,
+                hangStatusActivity: e9 && null != eU ? H.Z.findActivity(eU, (e) => e.type === ea.IIU.HANG_STATUS) : null,
                 gameActivity: e8 && null != eU ? H.Z.findActivity(eU, (e) => null != e.application_id && e.type === ea.IIU.PLAYING) : null
             }),
-            [e3, eU, e8]
+            [e9, eU, e8]
         ),
-        e5 = (0, o.e7)([G.Z], () => ((null == e6 ? void 0 : e6.application_id) != null ? G.Z.getDetectableGame(e6.application_id) : null)),
-        te = (0, o.e7)([p.Z], () => (null != e5 && (null == e6 ? void 0 : e6.application_id) != null ? p.Z.getApplication(null == e6 ? void 0 : e6.application_id) : void 0)),
+        e5 = (0, o.e7)([G.Z], () => ((null == e4 ? void 0 : e4.application_id) != null ? G.Z.getDetectableGame(e4.application_id) : null)),
+        te = (0, o.e7)([p.Z], () => (null != e5 && (null == e4 ? void 0 : e4.application_id) != null ? p.Z.getApplication(null == e4 ? void 0 : e4.application_id) : void 0)),
         tt = (0, k.wV)({
             userId: eU,
             channelId: eg.id,
@@ -362,7 +362,7 @@ let ed = l.memo((e) => {
                                               hasVideo: null != eY && eY,
                                               ...eJ,
                                               idle: ew,
-                                              platform: e9,
+                                              platform: e3,
                                               title: (0, K.Z)(eg, Z),
                                               blocked: ey,
                                               localVideoDisabled: eW,
@@ -371,7 +371,7 @@ let ed = l.memo((e) => {
                                               onContextMenu: tp,
                                               onToggleMute: tu,
                                               participantUserId: eU,
-                                              hangStatusActivity: e4,
+                                              hangStatusActivity: e6,
                                               application: te,
                                               speaking: ez,
                                               secureFramesVerified: ti

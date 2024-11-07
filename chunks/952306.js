@@ -7,7 +7,7 @@ t.Z = {
     openNewUserAgeGateModal: (e) => {
         (0, s.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('20727'), n.e('60249')]).then(n.bind(n, 298237));
+                let { default: e } = await Promise.all([n.e('20727'), n.e('433')]).then(n.bind(n, 298237));
                 return (t) => (0, i.jsx)(e, { ...t });
             },
             {

@@ -2,7 +2,7 @@ var i = n(200651);
 n(192379);
 var r = n(481060),
     a = n(858719),
-    s = n(481810);
+    s = n(640004);
 t.Z = (e) => {
     let { header: t, displayType: n } = e,
         l = (0, a.C7)(n);

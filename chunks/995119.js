@@ -7,7 +7,7 @@ var r = t(200651);
 t(192379);
 var a = t(481060),
     i = t(388032),
-    s = t(842196);
+    s = t(384861);
 function o(e) {
     let { onClick: n } = e;
     return (0, r.jsxs)(a.Button, {

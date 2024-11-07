@@ -19,7 +19,7 @@ var r = n(200651),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    v = n(157380);
+    v = n(846862);
 function I(e) {
     let { className: t } = e;
     return (0, r.jsx)(s.SettingsIcon, {

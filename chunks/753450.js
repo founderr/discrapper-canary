@@ -78,7 +78,7 @@ var i = n(200651),
     ep = n(981631),
     em = n(558921),
     e_ = n(388032),
-    eh = n(613250),
+    eh = n(67124),
     ef = n(902294);
 let eg = d().parserFor(es.Z),
     ev = d().reactFor(d().ruleOutput(es.Z, 'react')),
@@ -360,7 +360,7 @@ function eN(e) {
             (0, k.dL)(t), eY('product_page');
         }
     }, [j, eY]);
-    let e9 = a.useCallback(() => {
+    let e6 = a.useCallback(() => {
             if (null != eZ) {
                 if ((u.tq || u.Em) && null == eZ.custom_install_url) {
                     let e = (0, G.Er)({
@@ -386,12 +386,12 @@ function eN(e) {
                       (0, q.rf)({ [eC]: 'true' }));
             }
         }, [eZ, j, eY, m, f]),
-        e6 = (null == eZ ? void 0 : eZ.id) === em.g,
-        [e8, e5] = a.useState(!1),
+        e5 = (null == eZ ? void 0 : eZ.id) === em.g,
+        [e9, e8] = a.useState(!1),
         [e4, e7] = a.useState(!1),
         [te, tt] = a.useState(!0),
         tn = (e) => {
-            null != e && e5(e.scrollHeight > e.clientHeight);
+            null != e && e8(e.scrollHeight > e.clientHeight);
         },
         ti = null != eK && eK.length > 0,
         ta = (null == eZ ? void 0 : eZ.flags) != null,
@@ -429,7 +429,7 @@ function eN(e) {
                                               children: r
                                           })
                                       }),
-                                      (e8 || e4) &&
+                                      (e9 || e4) &&
                                           (0, i.jsx)(eb, {
                                               isViewAll: e4,
                                               onToggle: () => {
@@ -578,7 +578,7 @@ function eN(e) {
                     )
                 )
             );
-        }, [h, eM, eZ, eP, e4, e8, eX, ek, eq, tr, m, ti, ta, eK]),
+        }, [h, eM, eZ, eP, e4, e9, eX, ek, eq, tr, m, ti, ta, eK]),
         to = a.useMemo(() => {
             let e = [
                 {
@@ -689,7 +689,7 @@ function eN(e) {
                                                                                   src: n(744050)
                                                                               })
                                                                       }),
-                                                                  e6 && (0, i.jsx)(ee.Z, { className: eh.partnerBadge })
+                                                                  e5 && (0, i.jsx)(ee.Z, { className: eh.partnerBadge })
                                                               ]
                                                           }),
                                                           (0, i.jsxs)('div', {
@@ -702,7 +702,7 @@ function eN(e) {
                                                                   }),
                                                                   (0, i.jsx)(g.Button, {
                                                                       color: g.Button.Colors.BRAND,
-                                                                      onClick: e9,
+                                                                      onClick: e6,
                                                                       disabled: !ez,
                                                                       children: e_.intl.string(e_.t.NgXl3N)
                                                                   }),

@@ -16,7 +16,7 @@ var s = n(120356),
     g = n(566078),
     p = n(667105),
     E = n(388032),
-    j = n(727526);
+    j = n(490752);
 let T = (e) => (0 === e.length ? j.warning : j.danger),
     f = (e, t) => (0 === e.length ? E.intl.formatToPlainString(E.t.gX0Qc3, { gameTitle: t }) : E.intl.formatToPlainString(E.t['28Ql29'], { gameTitle: t })),
     v = (e) => {

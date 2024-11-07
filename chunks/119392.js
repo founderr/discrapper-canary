@@ -18,7 +18,7 @@ var r = n(481060),
     f = n(49898),
     p = n(128449),
     _ = n(388032),
-    g = n(818768),
+    g = n(439363),
     E = n(761604);
 function C(e) {
     let { gameId: t, onSelect: n } = e;

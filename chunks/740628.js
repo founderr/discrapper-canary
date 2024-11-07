@@ -19,8 +19,8 @@ var i = t(200651),
     x = t(428927),
     I = t(228168),
     h = t(388032),
-    v = t(519294),
-    g = t(722849);
+    v = t(952662),
+    g = t(170273);
 function Z(e) {
     let { section: n, subsection: t, user: l, currentUser: o, displayProfile: s, onClose: r } = e;
     return n === I.oh.ACTIVITY

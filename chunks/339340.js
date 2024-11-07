@@ -24,7 +24,7 @@ var i = e(200651),
     I = e(626135),
     p = e(981631),
     f = e(388032),
-    T = e(897232);
+    T = e(352338);
 let m = 'VoiceChannelStatusModal';
 function S(t) {
     let { channel: n, transitionState: e, onClose: S } = t,

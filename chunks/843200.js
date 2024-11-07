@@ -10,7 +10,7 @@ var i = n(200651),
     m = n(594174),
     h = n(418632),
     g = n(388032),
-    p = n(838344);
+    p = n(633910);
 class x extends s.Component {
     renderNotice() {
         let { isClaimed: e, unclaimedNotice: t, unverifiedNotice: n } = this.props;
@@ -63,7 +63,7 @@ class x extends s.Component {
     }
     openChangeEmailModal() {
         (0, d.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e('9343'), n.e('30566')]).then(n.bind(n, 642298));
+            let { default: e } = await Promise.all([n.e('9343'), n.e('91987')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }

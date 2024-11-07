@@ -42,7 +42,7 @@ var i = n(120356),
     G = n(981631),
     B = n(701488),
     Z = n(388032),
-    F = n(676411);
+    F = n(69035);
 function V(e) {
     let { user: t, currentUser: n, activity: i, application: V, guild: H, channel: j, className: Y, onClose: W } = e,
         { analyticsLocations: K } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),

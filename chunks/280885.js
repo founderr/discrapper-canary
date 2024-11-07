@@ -12,7 +12,7 @@ var r = n(200651),
     u = n(580552),
     c = n(249458),
     d = n(240991),
-    f = n(554034);
+    f = n(882530);
 function _(e) {
     let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: h = 6, setLineClamp: p = !0, textColor: m, userId: g } = e,
         E = i.useMemo(() => ((0, u.Z)(g) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);

@@ -8,7 +8,7 @@ n(192379);
 var i = n(481060),
     a = n(138201),
     s = n(388032),
-    o = n(572184);
+    o = n(860343);
 function l() {
     return (0, r.jsxs)('div', {
         className: o.infoGroup,

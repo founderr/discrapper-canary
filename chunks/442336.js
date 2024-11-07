@@ -16,7 +16,7 @@ var i = n(200651),
     h = n(110255),
     p = n(981631),
     m = n(388032),
-    f = n(938565);
+    f = n(459445);
 function g(e) {
     let { channel: t } = e,
         n = (0, a.useRedesignIconContext)().enabled,

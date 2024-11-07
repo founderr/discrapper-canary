@@ -30,7 +30,7 @@ var i = n(200651),
     Z = n(276264),
     S = n(981631),
     T = n(388032),
-    j = n(204394);
+    j = n(861991);
 let A = [],
     y = N.ZP.getEnableHardwareAcceleration();
 function P(e) {
@@ -41,7 +41,7 @@ function P(e) {
         E = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
         N = (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('18283')]).then(n.bind(n, 354589));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('72714')]).then(n.bind(n, 354589));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

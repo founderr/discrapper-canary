@@ -5,7 +5,7 @@ var s = n(120356),
     a = n(481060),
     r = n(888592),
     o = n(388032),
-    c = n(850477);
+    c = n(178917);
 t.Z = (e) => {
     let { school: t, setStep: n } = e;
     return (0, i.jsxs)('div', {

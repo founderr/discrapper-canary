@@ -20,7 +20,7 @@ var i = n(200651),
     v = n(475595),
     S = n(981631),
     N = n(388032),
-    T = n(874976);
+    T = n(388175);
 t.Z = (0, r.memo)(function (e) {
     var t, n, l, x, A;
     let { quest: b } = e,

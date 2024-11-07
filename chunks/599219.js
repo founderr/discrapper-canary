@@ -32,7 +32,7 @@ var s = n(200651),
     g = n(834891),
     G = n(675999),
     y = n(388032),
-    S = n(456265);
+    S = n(420709);
 function F(e) {
     let t = (0, f.Dt)(),
         { onSlideChange: n, ...o } = e,

@@ -13,8 +13,8 @@ var r = t(200651),
     h = t(116175),
     x = t(308083),
     p = t(388032),
-    g = t(880867),
-    C = t(602075);
+    g = t(129729),
+    C = t(306882);
 let b = [h.ZD.SWORD, h.ZD.WATER_DROP, h.ZD.SKULL, h.ZD.TOADSTOOL, h.ZD.MOON, h.ZD.LIGHTNING, h.ZD.LEAF, h.ZD.HEART, h.ZD.FIRE, h.ZD.COMPASS, h.ZD.CROSSHAIRS, h.ZD.FLOWER, h.ZD.FORCE, h.ZD.GEM, h.ZD.LAVA, h.ZD.PSYCHIC, h.ZD.SMOKE, h.ZD.SNOW, h.ZD.SOUND, h.ZD.SUN, h.ZD.WIND];
 n.Z = (e) => {
     let { handleUpdate: n, badge: t, primaryColor: i, secondaryColor: o, tag: v, error: _, furthestStep: y, inSettings: T } = e,

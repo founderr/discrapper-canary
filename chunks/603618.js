@@ -35,7 +35,7 @@ var i = n(200651),
     O = n(388627),
     T = n(981631),
     A = n(388032),
-    L = n(250145);
+    L = n(918532);
 function R(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
         c = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),

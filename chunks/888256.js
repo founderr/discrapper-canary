@@ -9,7 +9,7 @@ var s = n(481060),
     r = n(921801),
     l = n(726985),
     a = n(388032),
-    o = n(857367);
+    o = n(428322);
 function c(e) {
     let { className: t, currentUser: n, handleDisableAccount: c, handleDeleteAccount: d } = e,
         u = n.isClaimed();

@@ -1,119 +1,119 @@
-n.r(e),
-    n.d(e, {
+e.r(a),
+    e.d(a, {
         default: function () {
-            return E;
+            return T;
         }
     }),
-    n(47120);
-var i,
+    e(47120);
+var r,
     o,
-    a = n(200651),
-    r = n(192379),
-    c = n(541822),
-    s = n(442837),
-    l = n(481060),
-    d = n(728345),
-    u = n(812206),
-    _ = n(600164),
-    p = n(886176),
-    C = n(572004),
-    f = n(504211),
-    S = n(283836),
-    I = n(507608),
-    T = n(533159),
-    b = n(981631),
-    m = n(272242),
-    N = n(388032),
-    L = n(213891);
-function E(t) {
-    let { onClose: e, transitionState: n, appId: i, guildId: o } = t,
-        E = (0, s.e7)([u.Z], () => u.Z.getApplication(i), [i]),
-        [h, g] = r.useState(() => (u.Z.isFetchingApplication(i) ? { status: 1 } : { status: 0 }));
-    r.useEffect(() => {
-        0 === h.status &&
-            (g({ status: 1 }),
-            d.ZP.fetchApplication(i)
+    i = e(200651),
+    s = e(192379),
+    n = e(541822),
+    c = e(442837),
+    l = e(481060),
+    d = e(728345),
+    p = e(812206),
+    u = e(600164),
+    f = e(886176),
+    m = e(572004),
+    h = e(504211),
+    N = e(283836),
+    x = e(507608),
+    _ = e(533159),
+    C = e(981631),
+    S = e(272242),
+    E = e(388032),
+    g = e(775012);
+function T(t) {
+    let { onClose: a, transitionState: e, appId: r, guildId: o } = t,
+        T = (0, c.e7)([p.Z], () => p.Z.getApplication(r), [r]),
+        [j, v] = s.useState(() => (p.Z.isFetchingApplication(r) ? { status: 1 } : { status: 0 }));
+    s.useEffect(() => {
+        0 === j.status &&
+            (v({ status: 1 }),
+            d.ZP.fetchApplication(r)
                 .then(() => {
-                    g({ status: 2 });
+                    v({ status: 2 });
                 })
                 .catch((t) => {
-                    g({
+                    v({
                         status: 3,
                         error: t.message
                     });
                 }));
-    }, [i, h.status]);
-    let { subscriptions: P, otps: O } = (0, S.q)(i);
-    if (null == E) return null;
-    let A = N.intl.formatToPlainString(N.t.XDRjs7, { appName: E.name });
-    return (0, a.jsxs)(l.ModalRoot, {
-        transitionState: n,
-        'aria-label': A,
+    }, [r, j.status]);
+    let { subscriptions: R, otps: O } = (0, N.q)(r);
+    if (null == T) return null;
+    let I = E.intl.formatToPlainString(E.t.XDRjs7, { appName: T.name });
+    return (0, i.jsxs)(l.ModalRoot, {
+        transitionState: e,
+        'aria-label': I,
         size: l.ModalSize.DYNAMIC,
-        className: L.modal,
+        className: g.modal,
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
-                className: L.modalHeader,
+            (0, i.jsxs)(l.ModalHeader, {
+                className: g.modalHeader,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: L.modalTitle,
+                    (0, i.jsxs)('div', {
+                        className: g.modalTitle,
                         children: [
-                            (0, a.jsx)(p.Z, {}),
-                            (0, a.jsx)(l.Heading, {
+                            (0, i.jsx)(f.Z, {}),
+                            (0, i.jsx)(l.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: A
+                                children: I
                             })
                         ]
                     }),
-                    (0, a.jsxs)('div', {
-                        className: L.modalHeaderLinks,
+                    (0, i.jsxs)('div', {
+                        className: g.modalHeaderLinks,
                         children: [
-                            C.wS &&
-                                (0, a.jsx)(l.Button, {
+                            m.wS &&
+                                (0, i.jsx)(l.Button, {
                                     look: l.ButtonLooks.BLANK,
                                     size: l.ButtonSizes.ICON,
                                     color: l.ButtonColors.TRANSPARENT,
-                                    'aria-label': N.intl.string(N.t.WqhZsr),
+                                    'aria-label': E.intl.string(E.t.WqhZsr),
                                     onClick: () => {
-                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(b.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(i, m.ApplicationDirectoryProfileSections.STORE));
-                                        (0, C.JG)(t), (0, l.showToast)((0, l.createToast)(N.intl.string(N.t['L/PwZW']), l.ToastType.SUCCESS)), (0, f.X)(i, f.B.STORE_MODAL);
+                                        let t = ''.concat(location.protocol, '//').concat(location.host).concat(C.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(r, S.ApplicationDirectoryProfileSections.STORE));
+                                        (0, m.JG)(t), (0, l.showToast)((0, l.createToast)(E.intl.string(E.t['L/PwZW']), l.ToastType.SUCCESS)), (0, h.X)(r, h.B.STORE_MODAL);
                                     },
-                                    children: (0, a.jsx)(l.LinkIcon, { size: 'sm' })
+                                    children: (0, i.jsx)(l.LinkIcon, { size: 'sm' })
                                 }),
-                            (0, a.jsx)(l.ModalCloseButton, {
-                                onClick: e,
-                                className: L.modalCloseBtn
+                            (0, i.jsx)(l.ModalCloseButton, {
+                                onClick: a,
+                                className: g.modalCloseBtn
                             })
                         ]
                     })
                 ]
             }),
-            (0, a.jsx)('div', {
-                className: L.scrollerWrapper,
-                children: (0, a.jsx)(c.Z, {
-                    className: L.scroller,
-                    children: (0, a.jsx)(I.AF, {
-                        app: E,
+            (0, i.jsx)('div', {
+                className: g.scrollerWrapper,
+                children: (0, i.jsx)(n.Z, {
+                    className: g.scroller,
+                    children: (0, i.jsx)(x.AF, {
+                        app: T,
                         guildId: o,
-                        subscriptions: P,
+                        subscriptions: R,
                         otps: O
                     })
                 })
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                justify: _.Z.Justify.END,
-                children: (0, a.jsx)(l.Text, {
+            (0, i.jsx)(l.ModalFooter, {
+                justify: u.Z.Justify.END,
+                children: (0, i.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     children:
-                        null != E.termsOfServiceUrl || null != E.privacyPolicyUrl
-                            ? (0, a.jsx)(T.Z, {
-                                  termsOfServiceUrl: E.termsOfServiceUrl,
-                                  privacyPolicyUrl: E.privacyPolicyUrl
+                        null != T.termsOfServiceUrl || null != T.privacyPolicyUrl
+                            ? (0, i.jsx)(_.Z, {
+                                  termsOfServiceUrl: T.termsOfServiceUrl,
+                                  privacyPolicyUrl: T.privacyPolicyUrl
                               })
-                            : N.intl.string(N.t['3ZY+0N'])
+                            : E.intl.string(E.t['3ZY+0N'])
                 })
             })
         ]
     });
 }
-((o = i || (i = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');
+((o = r || (r = {}))[(o.NONE = 0)] = 'NONE'), (o[(o.FETCHING = 1)] = 'FETCHING'), (o[(o.FETCHED = 2)] = 'FETCHED'), (o[(o.ERROR = 3)] = 'ERROR');

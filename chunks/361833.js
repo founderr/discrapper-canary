@@ -12,7 +12,7 @@ var o = n(200651),
     r = n(25990),
     d = n(155433),
     c = n(388032),
-    u = n(859565);
+    u = n(374808);
 function E(e) {
     var t, n;
     let { emailToken: E, isSlideReady: _, onClose: m, onBack: N, onNext: x } = e,

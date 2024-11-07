@@ -4,8 +4,8 @@ var i = n(200651),
     a = n.n(r),
     s = n(481060),
     o = n(600164),
-    c = n(138894),
-    d = n(113207);
+    c = n(965074),
+    d = n(971436);
 class u extends l.PureComponent {
     render() {
         let { title: e, description: t, agreement: n, disagreement: l, onAgree: r, onDisagree: u, imageClassName: h } = this.props;

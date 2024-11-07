@@ -20,7 +20,7 @@ var r = n(200651),
     _ = n(426964),
     h = n(308083),
     p = n(388032),
-    m = n(162685);
+    m = n(36043);
 let g = i.memo(function (e) {
         let { src: t, tag: n, className: i, size: a = h.NC.SIZE_16 } = e;
         return null == t

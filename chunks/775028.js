@@ -33,7 +33,7 @@ var l = t(200651),
     B = t(981631),
     S = t(176505),
     T = t(388032),
-    w = t(456944);
+    w = t(440246);
 let A = new Set([B.d4z.GUILD_FORUM, B.d4z.GUILD_MEDIA]),
     y = new Set([B.d4z.GUILD_VOICE, B.d4z.GUILD_STAGE_VOICE]);
 function L(e) {

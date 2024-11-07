@@ -1,10 +1,10 @@
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    a = t(53304);
-n.Z = () =>
+    r = t(808647);
+e.Z = () =>
     (0, i.jsx)('div', {
-        className: a.loadingWrapper,
+        className: r.loadingWrapper,
         children: (0, i.jsx)(l.Dots, {
             dotRadius: 4,
             themed: !0

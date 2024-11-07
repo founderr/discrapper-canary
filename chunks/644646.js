@@ -15,7 +15,7 @@ var r = n(200651),
     g = n(341907),
     E = n(46140),
     v = n(388032),
-    I = n(141533);
+    I = n(319181);
 t.Z = function (e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: S = null } = e,
         T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),

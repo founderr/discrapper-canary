@@ -28,7 +28,7 @@ var l = n(120356),
     Z = n(176505),
     N = n(629481),
     E = n(388032),
-    y = n(316512);
+    y = n(785534);
 function j(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),

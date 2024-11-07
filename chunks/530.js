@@ -16,7 +16,7 @@ var r = n(200651),
     _ = n(979264),
     h = n(228168),
     p = n(388032),
-    m = n(543337);
+    m = n(86975);
 function g(e) {
     let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: I, className: S, isTryItOut: T, onOpenProfile: b, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
         { newestAnalyticsLocation: N } = (0, u.ZP)(),

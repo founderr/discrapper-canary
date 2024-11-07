@@ -9,7 +9,7 @@ var t = e(481060),
     r = e(630388),
     s = e(981631),
     a = e(388032),
-    o = e(132313);
+    o = e(920633);
 let d = {
     size: 'md',
     color: t.tokens.colors.INTERACTIVE_NORMAL

@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(225675),
     S = n(981631),
     v = n(388032),
-    C = n(679537);
+    C = n(34754);
 function T(e) {
     var t;
     return (0, i.jsx)('span', {

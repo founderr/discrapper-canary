@@ -18,7 +18,7 @@ var r = n(200651),
     v = n(490095),
     I = n(981631),
     S = n(388032),
-    T = n(911038);
+    T = n(375314);
 let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
     y = (0, l.Mg)(T.__invalid_stickerPickerPreviewPadding),
     A = i.memo(function (e) {
@@ -75,7 +75,7 @@ let b = (0, l.Mg)(T.__invalid_stickerPickerPreviewDimensions),
                                                 location: V
                                             }),
                                             (0, u.openModalLazy)(async () => {
-                                                let { default: t } = await Promise.all([n.e('93626'), n.e('44600')]).then(n.bind(n, 136735));
+                                                let { default: t } = await Promise.all([n.e('93626'), n.e('25887')]).then(n.bind(n, 136735));
                                                 return (n) =>
                                                     (0, r.jsx)(t, {
                                                         guildId: e.guild_id,

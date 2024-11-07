@@ -18,7 +18,7 @@ var i = n(200651),
     f = n(475413),
     g = n(228168),
     C = n(388032),
-    x = n(351094),
+    x = n(222470),
     v = n(321975);
 function _(e) {
     let { user: t, channel: n, onViewBlockedProfileClick: _ } = e,

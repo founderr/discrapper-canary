@@ -8,7 +8,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(266711);
+    o = n(348466);
 function l(e) {
     let { rank: t } = e;
     return (0, r.jsx)('div', {

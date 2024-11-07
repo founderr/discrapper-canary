@@ -18,7 +18,7 @@ var r = n(200651),
     I = n(981631),
     S = n(474936),
     T = n(388032),
-    b = n(933815);
+    b = n(11675);
 t.Z = function (e) {
     let { closeLayer: t, guild: n, onCtaVisibilityChange: a } = e,
         y = (0, o.e7)([h.default], () => h.default.getCurrentUser()),

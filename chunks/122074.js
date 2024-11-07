@@ -29,9 +29,9 @@ var i = t(200651),
     m = t(552958),
     p = t(981631),
     v = t(921944),
-    C = t(871465),
-    Z = t(388032),
-    T = t(100210);
+    Z = t(871465),
+    C = t(388032),
+    T = t(158595);
 function j(n, e) {
     let t = g.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
         l = S(n, void 0, u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, t.nestedEntry ? 'trailing' : 'top'),
@@ -51,7 +51,7 @@ function N() {
             e === u.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE &&
             (0, i.jsx)(a.TextBadge, {
                 className: T.newBadge,
-                text: Z.intl.string(Z.t.y2b7CA)
+                text: C.intl.string(C.t.y2b7CA)
             })
     });
 }
@@ -62,7 +62,7 @@ function S(n, e, u, j) {
         U = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
         A = (0, r.e7)([s.ZP], () => s.ZP.isMuted(n), [n]),
         P = f.ZP.canUseCustomNotificationSounds(U),
-        b = P ? (null != O ? O : S) : C.YC.CLASSIC,
+        b = P ? (null != O ? O : S) : Z.YC.CLASSIC,
         y = g.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }).enabled,
         [G, R] = l.useState(!1),
         { playSound: D } = (0, m.Z)(),
@@ -79,18 +79,18 @@ function S(n, e, u, j) {
     )
         return null;
     let w = (t) => {
-            if ((D(t), F(v.L.TAKE_ACTION), !P && t !== C.YC.CLASSIC)) {
+            if ((D(t), F(v.L.TAKE_ACTION), !P && t !== Z.YC.CLASSIC)) {
                 (0, _.Z)(t, 'contextMenu'), (0, h.Z)();
                 return;
             }
             null != e ? (0, x.M)(n, e, b, t, 'contextMenu') : (0, x.t)(n, b, t, 'contextMenu');
         },
         z = P ? a.Text : I.Z,
-        Y = (0, C.LB)(),
-        B = null !== (N = null === (E = Y.find((n) => n.value === b)) || void 0 === E ? void 0 : E.label) && void 0 !== N ? N : Z.intl.string(Z.t.p3Hg5e),
+        Y = (0, Z.LB)(),
+        B = null !== (N = null === (E = Y.find((n) => n.value === b)) || void 0 === E ? void 0 : E.label) && void 0 !== N ? N : C.intl.string(C.t.p3Hg5e),
         V = (0, i.jsx)(a.TextBadge, {
             className: T.newBadge,
-            text: Z.intl.string(Z.t.y2b7CA)
+            text: C.intl.string(C.t.y2b7CA)
         });
     return (0, i.jsx)(a.MenuItem, {
         id: 'notification-sounds',
@@ -111,7 +111,7 @@ function S(n, e, u, j) {
                                             className: T.text,
                                             color: e ? 'always-white' : void 0,
                                             variant: 'text-sm/medium',
-                                            children: Z.intl.string(Z.t.mrqSOj)
+                                            children: C.intl.string(C.t.mrqSOj)
                                         }),
                                         (0, i.jsx)(a.NitroWheelIcon, {
                                             size: 'xs',
@@ -138,7 +138,7 @@ function S(n, e, u, j) {
             n !== p.aIL
                 ? () =>
                       (0, a.openModalLazy)(async () => {
-                          let { default: e } = await Promise.all([t.e('5863'), t.e('17468')]).then(t.bind(t, 751212));
+                          let { default: e } = await Promise.all([t.e('5863'), t.e('98287')]).then(t.bind(t, 751212));
                           return (t) =>
                               (0, i.jsx)(e, {
                                   ...t,
@@ -154,11 +154,11 @@ function S(n, e, u, j) {
                         l.Fragment,
                         {
                             children: [
-                                P || n.value === C.YC.CLASSIC
+                                P || n.value === Z.YC.CLASSIC
                                     ? (0, i.jsx)(a.MenuRadioItem, {
                                           id: n.label,
                                           group: 'notification-preset',
-                                          checked: (null != b ? b : C.YC.CLASSIC) === n.value,
+                                          checked: (null != b ? b : Z.YC.CLASSIC) === n.value,
                                           label: n.label,
                                           action: () => w(n.value)
                                       })
@@ -183,7 +183,7 @@ function S(n, e, u, j) {
                                           },
                                           action: () => w(n.value)
                                       }),
-                                n.value === C.YC.CLASSIC ? (0, i.jsx)(a.MenuSeparator, {}) : null
+                                n.value === Z.YC.CLASSIC ? (0, i.jsx)(a.MenuSeparator, {}) : null
                             ]
                         },
                         e
@@ -198,7 +198,7 @@ function S(n, e, u, j) {
                                 label: (0, i.jsx)(a.Text, {
                                     className: T.mutedLabel,
                                     variant: 'text-sm/medium',
-                                    children: Z.intl.string(Z.t['a9G/ER'])
+                                    children: C.intl.string(C.t['a9G/ER'])
                                 })
                             })
                         ]

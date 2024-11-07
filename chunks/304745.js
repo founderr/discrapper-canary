@@ -27,7 +27,7 @@ var i = n(200651),
     b = n(981631),
     N = n(921944),
     Z = n(388032),
-    S = n(892216);
+    S = n(313439);
 function T(e) {
     let { channel: t, idle: n } = e,
         T = (0, r.e7)([d.ZP], () => d.ZP.isLaunchingActivity()),

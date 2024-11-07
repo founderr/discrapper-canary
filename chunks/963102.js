@@ -17,7 +17,7 @@ var r = n(200651),
     f = n(471731),
     h = n(335131),
     g = n(388032),
-    C = n(454801);
+    C = n(21451);
 function b(e) {
     let { isFullScreen: t, isLayer: n, onClose: s, isCatalogView: b, handleTransition: x, transparent: v } = e,
         _ = (0, u.ZP)(),

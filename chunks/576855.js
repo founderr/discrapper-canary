@@ -1,34 +1,34 @@
 var i,
-    o,
     r,
     l,
-    s = n(200651),
-    a = n(192379),
-    u = n(120356),
-    c = n.n(u),
+    a,
+    o = n(200651),
+    s = n(192379),
+    c = n(120356),
+    u = n.n(c),
     d = n(481060),
-    h = n(388032),
-    f = n(720670);
-let p = {
-    BLOCK: f.block,
-    INLINE: f.inline
+    m = n(388032),
+    h = n(275906);
+let f = {
+    BLOCK: h.block,
+    INLINE: h.inline
 };
-class m extends (l = a.PureComponent) {
+class p extends (a = s.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: i = p.BLOCK, style: o } = this.props;
-        return (0, s.jsxs)('div', {
-            className: c()(t, i),
-            style: o,
+        let { children: e, className: t, textClassName: n, type: i = f.BLOCK, style: r } = this.props;
+        return (0, o.jsxs)('div', {
+            className: u()(t, i),
+            style: r,
             children: [
-                (0, s.jsxs)(d.Text, {
+                (0, o.jsxs)(d.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: f.pro,
-                    children: [h.intl.string(h.t['8tvIiI']), ':']
+                    className: h.pro,
+                    children: [m.intl.string(m.t['8tvIiI']), ':']
                 }),
-                (0, s.jsx)(d.Text, {
-                    className: c()(f.tip, n),
+                (0, o.jsx)(d.Text, {
+                    className: u()(h.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -36,15 +36,15 @@ class m extends (l = a.PureComponent) {
         });
     }
 }
-(i = m),
-    (o = 'Types'),
-    (r = p),
-    o in i
-        ? Object.defineProperty(i, o, {
-              value: r,
+(i = p),
+    (r = 'Types'),
+    (l = f),
+    r in i
+        ? Object.defineProperty(i, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[o] = r),
-    (t.Z = m);
+        : (i[r] = l),
+    (t.Z = p);

@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(981631),
     v = n(231338),
     I = n(388032),
-    S = n(304818);
+    S = n(727086);
 function T(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {

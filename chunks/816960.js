@@ -20,7 +20,7 @@ var s = n(200651),
     N = n(134612),
     T = n(981631),
     _ = n(388032),
-    b = n(899014);
+    b = n(715426);
 function p(t) {
     let { transitionState: e, onClose: n, handleBlock: p, channelId: v, warningId: j, senderId: A } = t,
         C = () => {

@@ -16,7 +16,7 @@ var i = n(200651),
     a = n.n(l),
     s = n(100621),
     o = n(481060),
-    c = n(25912);
+    c = n(593407);
 function d(e) {
     let { scrollPosition: t, minOpacity: n = 0 } = e;
     return (0, i.jsx)(s.animated.div, {

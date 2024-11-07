@@ -9,7 +9,7 @@ var i = n(200651),
     u = n(279745),
     d = n(921944),
     h = n(388032),
-    p = n(138592);
+    p = n(928219);
 t.Z = l.forwardRef(function (e, t) {
     let { body: n, header: r, artClassName: f, headerClassName: m, contentClassName: g, tryItText: C, dismissText: _, onTryFeature: x, onClose: v, className: I, inlineArt: b = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: Z = !1, showGIFTag: N = !1, dismissibleContent: E, position: y = 'top', align: j = 'center', art: T, isPremiumEarlyAccess: P = !1, maxWidth: A = 280, hideDismissButton: M = !1, pointerClassName: w, dismissIconClassName: L, dismissIcon: R, onDismissIconClick: D } = e,
         O = Z ? o.Button.Sizes.LARGE : o.Button.Sizes.MAX,

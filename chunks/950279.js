@@ -15,8 +15,8 @@ var r = t(200651),
     d = t(92373),
     u = t(308083),
     m = t(388032),
-    f = t(494750),
-    h = t(602075);
+    f = t(550379),
+    h = t(306882);
 function x(e) {
     let { gameApplicationIds: n, preventGameRemoval: t, onUpdateGames: i, minGames: l = 1, error: x } = e,
         { options: p, matchSorterOptions: g } = (0, c.P)(),

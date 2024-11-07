@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var a = n(481060),
-    u = n(244203);
+    u = n(471030);
 function l() {
     return (0, r.jsx)(a.Spinner, { className: u.spinner });
 }

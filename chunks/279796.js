@@ -1,6 +1,6 @@
 var r = n(192379),
     i = n(723184),
-    a = n(271255),
+    a = n(820611),
     s = n(877837);
 t.Z = function (e) {
     var t = e.color,

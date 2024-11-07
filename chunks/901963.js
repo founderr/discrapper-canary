@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(981631),
     g = n(474936),
     E = n(388032),
-    v = n(595499);
+    v = n(850298);
 let I = 'premiumRetentionEmojiPickerNotice',
     S = l.K.get(I);
 t.Z = (e) => {

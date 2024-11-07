@@ -6,7 +6,7 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(206295),
-    a = n(847762);
+    a = n(150494);
 function s(e) {
     let { children: t, imageUrl: n } = e,
         { primaryColor: s, secondaryColor: o } = (0, i.Z)(n);

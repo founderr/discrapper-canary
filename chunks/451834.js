@@ -11,8 +11,8 @@ var i = n(120356),
     f = n(510659),
     _ = n(228168),
     h = n(388032),
-    p = n(866777),
-    m = n(482617);
+    p = n(119248),
+    m = n(608675);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
             { trackUserProfileAction: s } = (0, d.KZ)();

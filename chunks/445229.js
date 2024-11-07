@@ -14,7 +14,7 @@ var a = n(200651),
     c = n(823379),
     m = n(5192),
     p = n(388032),
-    v = n(630265);
+    v = n(89403);
 function f(e) {
     let { user: t } = e,
         n = m.ZP.useName(null, null, t);

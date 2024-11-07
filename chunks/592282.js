@@ -15,7 +15,7 @@ var r = n(200651),
     f = n(448239),
     _ = n(247442),
     h = n(939350),
-    p = n(667947);
+    p = n(7758);
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
         b = i.useRef(null),

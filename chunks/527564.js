@@ -22,7 +22,7 @@ var i = n(200651),
     v = n(272242),
     I = n(981631),
     x = n(388032),
-    C = n(778452);
+    C = n(378659);
 function S(e) {
     let { appId: t } = e,
         { subscriptions: n, otps: a } = (0, d.q)(t);

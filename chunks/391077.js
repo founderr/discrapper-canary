@@ -10,7 +10,7 @@ var s = n(120356),
     u = n(74538),
     m = n(474936),
     h = n(388032),
-    g = n(153457);
+    g = n(702422);
 function p(e) {
     let { hasUnactivatedUnits: t, durationText: n, endsAt: s, fractionalState: a, unactivatedHoursString: o, activationDate: c } = e,
         d = t ? h.intl.string(h.t['hT6i//']) : h.intl.string(h.t['3G0CTE']),

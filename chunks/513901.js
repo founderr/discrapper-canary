@@ -18,7 +18,7 @@ var i = n(200651),
     p = n(981631),
     x = n(474936),
     S = n(388032),
-    T = n(492004);
+    T = n(454197);
 function C(e) {
     let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: _ = !1, withTutorial: E = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
         b = (0, m.Kg)(t, n),

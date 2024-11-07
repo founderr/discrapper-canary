@@ -24,7 +24,7 @@ var r = n(200651),
     I = n(228168),
     S = n(981631),
     T = n(474936),
-    b = n(8621);
+    b = n(440619);
 let y = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function A(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,

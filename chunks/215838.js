@@ -10,6 +10,6 @@ var r,
     i,
     a = n(796075),
     s = n(478922),
-    o = n(558025);
+    o = n(494624);
 let l = (0, s.z)(o.thin, o.fade, null !== (r = window.ResizeObserver) && void 0 !== r ? r : a.d),
     u = (0, s.z)(o.auto, o.fade, null !== (i = window.ResizeObserver) && void 0 !== i ? i : a.d);

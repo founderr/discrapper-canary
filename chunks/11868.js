@@ -30,7 +30,7 @@ var t = l(200651),
     S = l(139712),
     Z = l(765305),
     b = l(388032),
-    R = l(639955);
+    R = l(535367);
 let T = (e, n) => (l) => {
         l.stopPropagation(), c.default.selectVoiceChannel(e.channel_id, !1), null == n || n(l);
     },

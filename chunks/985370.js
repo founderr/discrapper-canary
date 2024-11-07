@@ -11,7 +11,7 @@ var i = n(200651),
     h = n(456631),
     p = n(643720),
     m = n(981631),
-    f = n(892216);
+    f = n(313439);
 t.Z = (e) => {
     let { channel: t, className: n } = e,
         { isHovered: r, setIsHovered: g, onMouseEnter: C, onMouseLeave: x, cancelTimers: v } = (0, d.Z)(200, 300),

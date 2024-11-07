@@ -1,68 +1,68 @@
-i.d(n, {
+t.d(e, {
     Z: function () {
-        return I;
+        return m;
     }
 });
-var t = i(200651),
-    a = i(192379),
-    l = i(442837),
-    r = i(481060),
-    o = i(616780),
-    d = i(40851),
-    u = i(300284),
-    s = i(484459),
-    c = i(314897),
-    p = i(271383),
-    f = i(430824),
-    v = i(496675),
-    _ = i(594174),
-    g = i(981631),
-    h = i(388032),
-    A = i(745974);
-function I(e) {
-    let { guildId: n, userId: I, analyticsLocation: x, analyticsLocations: b, context: P, icon: m } = e,
-        C = f.Z.getGuild(n),
-        Z = c.default.getId(),
-        y = (0, l.e7)([_.default], () => _.default.getUser(I)),
-        k = (0, l.e7)([p.ZP], () => p.ZP.isGuestOrLurker(n, I), [n, I]);
-    (0, l.e7)([v.Z], () => v.Z.getGuildVersion(n), [n]);
-    let M = a.useMemo(() => ({ [n]: [I] }), [n, I]);
-    (0, o.$)(M);
-    let N = P === g.IlC.POPOUT,
-        L = (0, u.Z)({
-            guild: C,
-            analyticsLocation: x
+var i = t(200651),
+    l = t(192379),
+    r = t(442837),
+    u = t(481060),
+    a = t(616780),
+    d = t(40851),
+    o = t(300284),
+    s = t(484459),
+    c = t(314897),
+    f = t(271383),
+    _ = t(430824),
+    E = t(496675),
+    p = t(594174),
+    g = t(981631),
+    h = t(388032),
+    A = t(22675);
+function m(n) {
+    let { guildId: e, userId: m, analyticsLocation: M, analyticsLocations: I, context: Z, icon: T } = n,
+        v = _.Z.getGuild(e),
+        b = c.default.getId(),
+        C = (0, r.e7)([p.default], () => p.default.getUser(m)),
+        S = (0, r.e7)([f.ZP], () => f.ZP.isGuestOrLurker(e, m), [e, m]);
+    (0, r.e7)([E.Z], () => E.Z.getGuildVersion(e), [e]);
+    let x = l.useMemo(() => ({ [e]: [m] }), [e, m]);
+    (0, a.$)(x);
+    let N = Z === g.IlC.POPOUT,
+        y = (0, o.Z)({
+            guild: v,
+            analyticsLocation: M
         }),
-        w = (0, d.Aq)();
-    if (null == C || N) return null;
-    let O = Z === I && (v.Z.can(g.Plq.CHANGE_NICKNAME, C) || v.Z.can(g.Plq.MANAGE_NICKNAMES, C)),
-        W = Z === I,
-        G = v.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, I, C);
-    if (!(O || G || W) || null == y || k) return null;
-    let T = C.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
-        E = W ? T : h.intl.string(h.t.dilOFx);
-    return (0, t.jsx)(r.MenuItem, {
+        O = (0, d.Aq)();
+    if (null == v || N) return null;
+    let P = b === m && (E.Z.can(g.Plq.CHANGE_NICKNAME, v) || E.Z.can(g.Plq.MANAGE_NICKNAMES, v)),
+        U = b === m,
+        D = E.Z.canManageUser(g.Plq.MANAGE_NICKNAMES, m, v);
+    if (!(P || D || U) || null == C || S) return null;
+    let R = v.hasFeature(g.oNc.HUB) ? h.intl.string(h.t['+MWrWl']) : h.intl.string(h.t['PKQB/P']),
+        k = U ? R : h.intl.string(h.t.dilOFx);
+    return (0, i.jsx)(u.MenuItem, {
         id: 'change-nickname',
-        label: (0, t.jsx)('div', {
+        label: (0, i.jsx)('div', {
             className: A.labelWrapper,
-            children: (0, t.jsx)('span', {
+            children: (0, i.jsx)('span', {
                 className: A.label,
-                children: E
+                children: k
             })
         }),
-        icon: m,
+        icon: T,
         action: () => {
-            W
-                ? ((0, s.Z)(y.id, y.getAvatarURL(n, 80), { guildId: n }), L(), w.dispatch(g.CkL.POPOUT_CLOSE), (0, r.closeAllModals)())
-                : (0, r.openModalLazy)(async () => {
-                      let { default: e } = await i.e('17712').then(i.bind(i, 620021));
-                      return (i) =>
-                          (0, t.jsx)(e, {
-                              ...i,
-                              guildId: n,
-                              user: y,
-                              analyticsSource: x,
-                              analyticsLocations: b
+            U
+                ? ((0, s.Z)(C.id, C.getAvatarURL(e, 80), { guildId: e }), y(), O.dispatch(g.CkL.POPOUT_CLOSE), (0, u.closeAllModals)())
+                : (0, u.openModalLazy)(async () => {
+                      let { default: n } = await t.e('17712').then(t.bind(t, 620021));
+                      return (t) =>
+                          (0, i.jsx)(n, {
+                              ...t,
+                              guildId: e,
+                              user: C,
+                              analyticsSource: M,
+                              analyticsLocations: I
                           });
                   });
         }

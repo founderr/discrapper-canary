@@ -19,7 +19,7 @@ var i = n(200651),
     p = n(779139),
     _ = n(981631),
     g = n(388032),
-    E = n(280586);
+    E = n(975241);
 let C = (e) => {
         let { channel: t, message: n } = e,
             [l, c] = r.useState(!1),

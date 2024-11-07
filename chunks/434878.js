@@ -66,7 +66,7 @@ var a = n(200651),
     es = n(981631),
     eo = n(124368),
     ec = n(388032),
-    ed = n(738941);
+    ed = n(290966);
 function eu(e) {
     let { channel: t, guild: n, sidebarState: i } = e;
     return (0, a.jsx)(

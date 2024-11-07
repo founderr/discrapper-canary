@@ -25,7 +25,7 @@ var r = t(120356),
     a = t(481060),
     s = t(41959),
     o = t(245561),
-    c = t(893896);
+    c = t(53787);
 let u = (e) => {
         let { application: n, asset: t, className: r, ...l } = e;
         return (0, i.jsx)(s.Z, {

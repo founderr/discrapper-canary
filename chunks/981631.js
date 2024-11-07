@@ -2444,7 +2444,7 @@ let aq = '@me',
         GUILD_LEADERBOARD: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t),
         UPDATE_MY_LOL_LEADERBOARD: () => '/users/@me/update-league-of-legends-leaderboard',
         GUILD_LEADERBOARD_SETTINGS: (e, t) => '/guilds/'.concat(e, '/leaderboards/').concat(t, '/settings'),
-        USER_REDEEM_VIRTUAL_CURRENCY: '/users/@me/virtual-currency/redeem',
+        USER_REDEEM_VIRTUAL_CURRENCY: (e) => '/virtual-currency/skus/'.concat(e, '/redeem'),
         IGNORE_USER: (e) => '/users/@me/relationships/'.concat(e, '/ignore')
     }),
     a6 = Object.freeze({

@@ -12,7 +12,7 @@ var s = n(442837),
     o = n(52597),
     c = n(981631),
     d = n(388032),
-    u = n(983078);
+    u = n(197238);
 function m(e) {
     let { errors: t, pendingNick: n, currentNick: m, username: h, guild: g } = e,
         p = null != n ? n : m,

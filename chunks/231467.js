@@ -39,7 +39,7 @@ var r = n(200651),
     x = n(981631),
     w = n(308083),
     M = n(388032),
-    P = n(68118);
+    P = n(163077);
 function k(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== w.U6).join(', '),

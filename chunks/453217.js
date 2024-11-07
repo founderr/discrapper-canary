@@ -12,7 +12,7 @@ var r = n(120356),
     m = n(788284),
     x = n(46140),
     g = n(388032),
-    f = n(968387);
+    f = n(525875);
 t.Z = function (e) {
     var t;
     let { className: n, expansionSpring: r, isExpanded: h, isExpansionAnimationComplete: C, quest: v, useReducedMotion: j } = e,

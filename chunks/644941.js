@@ -35,7 +35,7 @@ var r = n(200651),
     k = n(978313),
     D = n(206583),
     G = n(388032),
-    Z = n(51527);
+    Z = n(795144);
 let K = () =>
     (0, r.jsxs)('div', {
         className: Z.gameBadge,

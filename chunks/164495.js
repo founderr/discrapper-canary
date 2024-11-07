@@ -20,7 +20,7 @@ var o = n(120356),
     p = n(604162),
     f = n(46140),
     v = n(388032),
-    C = n(128220);
+    C = n(798020);
 function g(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(l.Button, {

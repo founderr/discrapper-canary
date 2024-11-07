@@ -14,7 +14,7 @@ var i = n(200651),
     u = n(451478),
     h = n(981631),
     m = n(388032),
-    p = n(408313),
+    p = n(827962),
     g = n(902294);
 function f(e) {
     let { application: t, carouselItems: n } = e,

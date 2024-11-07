@@ -18,8 +18,8 @@ var r = n(200651),
     g = n(810568),
     f = n(981631),
     h = n(388032),
-    x = n(51527),
-    _ = n(479537);
+    x = n(795144),
+    _ = n(638060);
 function E(e) {
     let { detectedGame: t, trackClick: n, onInviteResolved: a } = e,
         [E, v] = i.useState(),

@@ -10,7 +10,7 @@ var i = n(149765),
     s = n(481060),
     o = n(981631),
     l = n(388032),
-    u = n(507119);
+    u = n(111686);
 function c(e) {
     let { error: t, selectedGuildId: n, onGuildChange: c, guilds: d, disabled: f = !1 } = e,
         _ = d

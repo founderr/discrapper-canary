@@ -9,7 +9,7 @@ var i = n(200651),
     u = n(292191),
     h = n(683544),
     m = n(388032),
-    p = n(624849);
+    p = n(422311);
 t.Z = function (e) {
     let { tabId: t, onSelectApplication: n, onScroll: g } = e,
         f = (0, l.e7)([a.Z], () => a.Z.getCategories()),

@@ -19,7 +19,7 @@ var i = e(200651),
     T = e(586646),
     g = e(760373),
     h = e(388032),
-    I = e(739949);
+    I = e(283997);
 function _(t) {
     let { lobbyId: n, connectionTypeText: e, closePopout: s } = t,
         o = (0, r.cj)([u.Z], () => ({

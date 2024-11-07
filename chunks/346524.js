@@ -9,7 +9,7 @@ var r = n(120356),
     l = n.n(r),
     a = n(754961),
     s = n(80242),
-    o = n(837275);
+    o = n(348944);
 function c(e) {
     let { guildId: t, progress: n, updateCurrentStep: r, animationStyle: c, animationClassName: d, inSettings: u } = e,
         {

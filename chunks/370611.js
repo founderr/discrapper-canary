@@ -28,7 +28,7 @@ var r = n(200651),
     y = n(169080),
     A = n(463031),
     N = n(388032),
-    C = n(881894);
+    C = n(512366);
 function R(e) {
     let { leaderboard: t, previewMode: n = !1 } = e,
         a = (0, o.e7)([f.default], () => f.default.getId()),

@@ -21,7 +21,7 @@ var i = n(200651),
     I = n(146463),
     R = n(981631),
     E = n(388032),
-    T = n(958681);
+    T = n(118442);
 function S(e) {
     let { guild: t } = e;
     return (0, i.jsxs)('div', {

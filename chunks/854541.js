@@ -31,7 +31,7 @@ var r = n(200651),
     E = n(534828),
     v = n(981631),
     I = n(388032),
-    S = n(397375);
+    S = n(547870);
 let T = () => Promise.resolve();
 function b(e) {
     let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: c = {}, onClick: d, 'aria-label': _ } = e,

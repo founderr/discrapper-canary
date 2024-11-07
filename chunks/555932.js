@@ -15,7 +15,7 @@ var r = n(200651),
     d = n(436444),
     f = n(981631),
     _ = n(388032),
-    h = n(527855);
+    h = n(267444);
 let p = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
 function m(e) {
     let { guild: t } = e,

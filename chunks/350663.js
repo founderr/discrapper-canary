@@ -19,7 +19,7 @@ var i,
     m = n(592125),
     v = n(944486),
     g = n(981631),
-    E = n(705617);
+    E = n(900357);
 let _ = new Set([g.jm8.ENDED, g.jm8.FAILED, g.jm8.PAUSED]);
 function C(e) {
     let { participant: t, width: i, locked: o, channel: l } = e,

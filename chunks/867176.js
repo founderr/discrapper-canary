@@ -24,7 +24,7 @@ var r = n(200651),
     g = n(768581),
     E = n(28660),
     v = n(462997),
-    I = n(431405);
+    I = n(520309);
 let S = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;

@@ -21,7 +21,7 @@ var i = n(200651),
     C = n(128449),
     _ = n(46140),
     x = n(388032),
-    v = n(55869);
+    v = n(481284);
 function I(e) {
     switch (e) {
         case g.F$.QUESTS:

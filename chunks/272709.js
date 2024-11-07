@@ -37,7 +37,7 @@ var r = n(200651),
     w = n(981631),
     M = n(765305),
     P = n(388032),
-    k = n(797113);
+    k = n(179924);
 function U(e) {
     let t = (0, y.Z)(e),
         { category: n } = e;

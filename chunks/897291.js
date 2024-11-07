@@ -10,7 +10,7 @@ var r = n(200651),
     f = n(443603),
     _ = n(981631),
     h = n(388032),
-    p = n(703130);
+    p = n(482133);
 t.Z = i.memo(function (e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: m } = (0, l.ZP)(o.Z.GIFT_BUTTON),
@@ -22,7 +22,7 @@ t.Z = i.memo(function (e) {
     let b = () => {
         S && T && null != g
             ? (0, s.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('3994'), n.e('69425')]).then(n.bind(n, 435626));
+                  let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('84622'), n.e('69425')]).then(n.bind(n, 435626));
                   return (t) =>
                       e({
                           analyticsLocations: m,

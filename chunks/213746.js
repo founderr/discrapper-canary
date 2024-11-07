@@ -12,7 +12,7 @@ var r = n(793030),
     o = n(955335),
     c = n(171246),
     d = n(388032),
-    u = n(517836);
+    u = n(858725);
 function h(e) {
     let { application: t } = e;
     return (0, i.jsxs)('div', {

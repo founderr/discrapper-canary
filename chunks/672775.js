@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var r = n(546735),
     l = n(754961),
-    a = n(837275);
+    a = n(348944);
 function s(e) {
     let { steps: t, progress: n, updateCurrentStep: s, animationStyle: o, animationClassName: c } = e,
         {

@@ -9,7 +9,7 @@ var n = t(200651),
     a = t(927359),
     i = t(325767),
     c = t(823188),
-    l = t(860553);
+    l = t(278724);
 let u = 'premium_tier_gradient',
     f = 'smaller_sparkle_gradient';
 function d(e) {

@@ -8,8 +8,8 @@ var i = n(200651),
     c = n(741595),
     d = n(359380),
     u = n(388032),
-    h = n(131325),
-    m = n(602075);
+    h = n(200865),
+    m = n(306882);
 function p(e) {
     let { gameApplicationIds: t, onUpdateGames: n, error: l } = e,
         a = r.useCallback(

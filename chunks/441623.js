@@ -61,7 +61,7 @@ function N() {
             if (S.length >= 15) break;
             let t = _.Z.getSince(e),
                 r = d.Z.getUserAffinity(e);
-            if (_.Z.getRelationshipType(e) === g.OGo.FRIEND && null != r && r.affinity > 0 && null != t) {
+            if (_.Z.getRelationshipType(e) === g.OGo.FRIEND && !_.Z.isIgnored(e) && null != r && r.affinity > 0 && null != t) {
                 var n;
                 let r = new Date(t);
                 if (!A((n = r), n.getFullYear()) && A(n, new Date().getFullYear())) S.push(e), (b[e] = { friendsSince: r });
@@ -87,7 +87,7 @@ function O(e) {
     let { enabled: t } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
     y = e;
-    let n = _.Z.getFriendIDs();
+    let n = _.Z.getFriendIDs().filter((e) => !_.Z.isIgnored(e));
     a()
         .sampleSize(n, e)
         .forEach((e) => {

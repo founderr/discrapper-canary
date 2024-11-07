@@ -10,7 +10,7 @@ var i = n(200651),
     m = n(673885),
     h = n(981631),
     x = n(388032),
-    b = n(794284);
+    b = n(46355);
 t.Z = function (e) {
     let { guild: t, guildJoinRequest: j, guildJoinRequestUser: p, onClose: g } = e,
         v = l.useMemo(() => {

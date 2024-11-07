@@ -4,7 +4,7 @@ var r = n(120356),
     a = n.n(r),
     s = n(481060),
     l = n(51144),
-    o = n(726697);
+    o = n(75847);
 t.Z = (e) => {
     let { user: t, fill: n } = e,
         r = '\xA0(@'.concat(l.ZP.getUserTag(t, { decoration: 'never' }), ')');

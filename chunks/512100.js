@@ -9,7 +9,7 @@ var l = t(409794),
     i = t(777207),
     r = t(541822),
     s = t(330711),
-    a = t(770561);
+    a = t(476818);
 function c(e) {
     let { benefits: n, description: t, imgSrc: c, title: d, tag: u, FallbackIcon: m } = e,
         x = null != c ? { '--custom-background-url': 'url('.concat(c.toString(), ')') } : void 0;

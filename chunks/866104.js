@@ -29,7 +29,7 @@ var i = n(200651),
     N = n(544978),
     v = n(893182),
     T = n(388032),
-    S = n(687006);
+    S = n(306789);
 function A(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(s.Clickable, {

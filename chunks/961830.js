@@ -3,63 +3,63 @@ t.d(n, {
         return x;
     },
     WA: function () {
-        return p;
+        return f;
     },
     s2: function () {
-        return b;
+        return m;
     },
     wo: function () {
-        return h;
+        return g;
     },
     yp: function () {
-        return m;
+        return _;
     }
 });
-var o = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(853872),
-    r = t(409813),
+var r = t(853872),
+    o = t(409813),
     a = t(276442),
-    c = t(793541),
-    d = t(380898),
-    l = t(713316),
-    s = t(710094),
+    l = t(793541),
+    c = t(380898),
+    s = t(713316),
+    d = t(710094),
     u = t(865921),
-    f = t(388032);
-let p = {
+    p = t(388032);
+let f = {
         key: null,
-        renderStep: (e) => (0, o.jsx)(u.v, { ...e })
+        renderStep: (e) => (0, i.jsx)(u.v, { ...e })
     },
-    b = {
-        key: r.h8.ADD_PAYMENT_STEPS,
+    m = {
+        key: o.h8.ADD_PAYMENT_STEPS,
         renderStep: (e) =>
-            (0, o.jsx)(o.Fragment, {
-                children: (0, o.jsx)(a.J, {
+            (0, i.jsx)(i.Fragment, {
+                children: (0, i.jsx)(a.J, {
                     ...e,
-                    breadcrumbSteps: [r.h8.ADD_PAYMENT_STEPS, r.h8.REVIEW, r.h8.CONFIRM],
+                    breadcrumbSteps: [o.h8.ADD_PAYMENT_STEPS, o.h8.REVIEW, o.h8.CONFIRM],
                     onReturn: () => {
-                        0 === Object.keys(i.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(r.h8.REVIEW, { trackedFromStep: r.h8.ADD_PAYMENT_STEPS });
+                        0 === Object.keys(r.Z.paymentSources).length ? e.handleClose() : e.handleStepChange(o.h8.REVIEW, { trackedFromStep: o.h8.ADD_PAYMENT_STEPS });
                     }
                 })
             }),
         options: { renderHeader: !0 }
     },
-    _ = {
-        key: r.h8.AWAITING_PURCHASE_TOKEN_AUTH,
-        renderStep: () => (0, o.jsx)(d.Z, {})
-    },
-    g = {
-        key: r.h8.AWAITING_AUTHENTICATION,
-        renderStep: () => (0, o.jsx)(c.Z, {}),
-        options: { renderHeader: !0 }
+    b = {
+        key: o.h8.AWAITING_PURCHASE_TOKEN_AUTH,
+        renderStep: () => (0, i.jsx)(c.Z, {})
     },
     h = {
-        key: r.h8.REVIEW,
-        renderStep: (e) => (0, o.jsx)(s.l, { ...e }),
-        options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) }
+        key: o.h8.AWAITING_AUTHENTICATION,
+        renderStep: () => (0, i.jsx)(l.Z, {}),
+        options: { renderHeader: !0 }
+    },
+    g = {
+        key: o.h8.REVIEW,
+        renderStep: (e) => (0, i.jsx)(d.l, { ...e }),
+        options: { useBreadcrumbLabel: () => p.intl.string(p.t.QBnNHh) }
     },
     x = {
-        key: r.h8.CONFIRM,
-        renderStep: (e) => (0, o.jsx)(l.w, { ...e })
+        key: o.h8.CONFIRM,
+        renderStep: (e) => (0, i.jsx)(s.w, { ...e })
     },
-    m = [_, g];
+    _ = [b, h];

@@ -15,7 +15,7 @@ var i = n(974674),
     d = n(981631),
     f = n(182294),
     _ = n(388032),
-    h = n(178677);
+    h = n(680009);
 function p(e) {
     let { id: t, user: n, application: p, bot: m, accountScopes: g, showLogout: E, location: v } = e,
         I = l.ZP.getApplicationIconURL({

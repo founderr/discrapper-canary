@@ -12,7 +12,7 @@ var i = n(442837),
     l = n(371583),
     u = n(864138),
     c = n(388032),
-    d = n(20037);
+    d = n(577651);
 function f(e) {
     let { userId: t, leaderboard: n } = e,
         f = (0, i.e7)([s.default], () => s.default.getUser(t));

@@ -3,48 +3,48 @@ t.d(n, {
         return f;
     }
 });
-var a = t(200651);
+var i = t(200651);
 t(192379);
-var i = t(481060),
-    c = t(81245),
+var a = t(481060),
+    r = t(81245),
     o = t(867176),
-    s = t(654904),
-    r = t(486324),
+    l = t(654904),
+    s = t(486324),
     d = t(228168),
-    l = t(388032),
-    u = t(892532);
+    c = t(388032),
+    u = t(90592);
 function f(e) {
-    let { user: n, displayProfile: t, guildId: f, canUsePremiumCustomization: p, pendingBanner: A, isTryItOutFlow: b, disabledInputs: m, onUpsellClick: v } = e,
-        Z = p || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || !1,
-        h = Z ? i.PencilIcon : i.NitroWheelIcon,
-        g = (0, c.Mu)('ProfileCustomizationPreviewBanner', Z);
-    return (0, a.jsx)(o.Z, {
+    let { user: n, displayProfile: t, guildId: f, canUsePremiumCustomization: p, pendingBanner: m, isTryItOutFlow: g, disabledInputs: _, onUpsellClick: b } = e,
+        h = p || (null == t ? void 0 : t.canUsePremiumProfileCustomization) || !1,
+        x = h ? a.PencilIcon : a.NitroWheelIcon,
+        C = (0, r.Mu)('ProfileCustomizationPreviewBanner', h);
+    return (0, i.jsx)(o.Z, {
         user: n,
         displayProfile: t,
         guildId: f,
         profileType: d.y0.BITE_SIZE,
-        pendingBanner: A,
+        pendingBanner: m,
         canUsePremiumProfileCustomization: p,
         children:
-            !m &&
-            (0, a.jsxs)(i.Clickable, {
+            !_ &&
+            (0, i.jsxs)(a.Clickable, {
                 onClick: () => {
-                    if (!Z && !g) {
-                        null == v || v();
+                    if (!h && !C) {
+                        null == b || b();
                         return;
                     }
-                    (0, s.$r)(r.pC.BANNER, f, b);
+                    (0, l.$r)(s.pC.BANNER, f, g);
                 },
                 className: u.clickable,
                 children: [
-                    (0, a.jsx)(h, {
+                    (0, i.jsx)(x, {
                         size: 'xs',
                         color: 'white'
                     }),
-                    (0, a.jsx)(i.Heading, {
+                    (0, i.jsx)(a.Heading, {
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: Z || g ? l.intl.string(l.t.N0bC3N) : l.intl.string(l.t.O1sT5u)
+                        children: h || C ? c.intl.string(c.t.N0bC3N) : c.intl.string(c.t.O1sT5u)
                     })
                 ]
             })

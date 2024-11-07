@@ -18,7 +18,7 @@ var i = n(442837),
     d = n(938475),
     f = n(652853),
     _ = n(228168),
-    h = n(676411);
+    h = n(69035);
 let p = 3;
 function m(e) {
     let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
