@@ -5,9 +5,6 @@ n.d(t, {
     Bn: function () {
         return D;
     },
-    C9: function () {
-        return x;
-    },
     DZ: function () {
         return A;
     },
@@ -28,6 +25,9 @@ n.d(t, {
     },
     hW: function () {
         return y;
+    },
+    m0: function () {
+        return x;
     },
     nm: function () {
         return O;
@@ -335,7 +335,12 @@ function D(e, t) {
     return y.updateAsync(
         'userContent',
         (n) => {
-            null == n.recurringDismissibleContentStates[e] ? (n.recurringDismissibleContentStates[e] = { lastDismissedVersion: t }) : (n.recurringDismissibleContentStates[e].lastDismissedVersion = t);
+            null == n.recurringDismissibleContentStates[e]
+                ? (n.recurringDismissibleContentStates[e] = {
+                      lastDismissedVersion: t,
+                      lastDismissedAtMs: Date.now().toString()
+                  })
+                : ((n.recurringDismissibleContentStates[e].lastDismissedVersion = t), (n.recurringDismissibleContentStates[e].lastDismissedAtMs = Date.now().toString()));
         },
         g.fy.INFREQUENT_USER_ACTION
     );
@@ -355,7 +360,7 @@ function x(e) {
         'userContent',
         (t) => {
             if (null == t.recurringDismissibleContentStates[e]) return !1;
-            t.recurringDismissibleContentStates[e].lastDismissedVersion = 0;
+            (t.recurringDismissibleContentStates[e].lastDismissedVersion = 0), (t.recurringDismissibleContentStates[e].lastDismissedAtMs = '0');
         },
         g.fy.INFREQUENT_USER_ACTION
     );

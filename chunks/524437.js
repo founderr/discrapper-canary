@@ -833,7 +833,10 @@ class Q extends M.C {
 let X = new Q();
 class J extends M.C {
     create(e) {
-        let t = { lastDismissedVersion: 0 };
+        let t = {
+            lastDismissedVersion: 0,
+            lastDismissedAtMs: '0'
+        };
         return (
             globalThis.Object.defineProperty(t, w.C, {
                 enumerable: !1,
@@ -848,18 +851,24 @@ class J extends M.C {
             a = e.pos + t;
         for (; e.pos < a; ) {
             let [t, r] = e.tag();
-            if (1 === t) i.lastDismissedVersion = e.uint32();
-            else {
-                let a = n.readUnknownField;
-                if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
-                let s = e.skip(r);
-                !1 !== a && (!0 === a ? L.z.onRead : a)(this.typeName, i, t, r, s);
+            switch (t) {
+                case 1:
+                    i.lastDismissedVersion = e.uint32();
+                    break;
+                case 2:
+                    i.lastDismissedAtMs = e.uint64().toString();
+                    break;
+                default:
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                    let s = e.skip(r);
+                    !1 !== a && (!0 === a ? L.z.onRead : a)(this.typeName, i, t, r, s);
             }
         }
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.lastDismissedVersion && t.tag(1, L.TD.Varint).uint32(e.lastDismissedVersion);
+        0 !== e.lastDismissedVersion && t.tag(1, L.TD.Varint).uint32(e.lastDismissedVersion), '0' !== e.lastDismissedAtMs && t.tag(2, L.TD.Varint).uint64(e.lastDismissedAtMs);
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? L.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -870,6 +879,12 @@ class J extends M.C {
                 name: 'last_dismissed_version',
                 kind: 'scalar',
                 T: 13
+            },
+            {
+                no: 2,
+                name: 'last_dismissed_at_ms',
+                kind: 'scalar',
+                T: 4
             }
         ]);
     }
