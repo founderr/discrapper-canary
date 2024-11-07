@@ -21,7 +21,15 @@ function E(e, t) {
     let r = g(e, t);
     if (p.has(r) || (null !== (n = m.get(r)) && void 0 !== n ? n : 0) > 3) return !1;
     if (l.Z.getGuildId() !== e) return;
-    if (!(0, f.NM)(e, 'GuildLeaderboardManager') || !u.Z.isFocused() || !s.Z.isConnected()) return !1;
+    if (
+        !(0, f.NM)({
+            guildId: e,
+            location: 'GuildLeaderboardManager'
+        }) ||
+        !u.Z.isFocused() ||
+        !s.Z.isConnected()
+    )
+        return !1;
     let i = o.Z.getIdleSince();
     return !(null != i && Date.now() - i > 900000) && !0;
 }

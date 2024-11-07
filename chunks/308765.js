@@ -373,9 +373,10 @@ let i = {
         inlineRequire: () => n(35260).Z
     },
     LeagueOfLegendsLifecycleManager: {
-        actions: ['RUNNING_GAMES_CHANGE', 'POST_CONNECTION_OPEN'],
+        actions: ['RUNNING_GAMES_CHANGE'],
         inlineRequire: () => n(614571).Z,
-        neverLoadBeforeConnectionOpen: !0
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0
     },
     SharedSpacesWarningManager: {
         actions: ['CHANNEL_SELECT', 'APP_STATE_UPDATE'],
