@@ -14,69 +14,71 @@ var l = t(481060),
     g = t(185457),
     m = t(389052),
     v = t(24311),
-    x = t(710631),
-    M = t(88966),
-    b = t(991307),
-    h = t(37258),
-    C = t(700994),
-    I = t(332031),
-    j = t(981631),
-    E = t(388032);
+    x = t(158508),
+    M = t(710631),
+    b = t(88966),
+    h = t(991307),
+    C = t(37258),
+    I = t(700994),
+    j = t(332031),
+    E = t(981631),
+    U = t(388032);
 n.default = (0, d.Z)(
     (0, o.Z)(
         function (e) {
-            let { user: n, guildId: t, channelId: o, showMediaItems: d = !1, mediaEngineContext: a, onSelect: j } = e,
-                U = (0, h.Z)({
+            let { user: n, guildId: t, channelId: o, showMediaItems: d = !1, mediaEngineContext: a, onSelect: E } = e,
+                A = (0, C.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: o
                 }),
-                A = (0, M.Z)(n.id),
-                L = (0, v.Z)({ user: n }),
-                _ = (0, g.Z)({
+                L = (0, b.Z)(n.id),
+                _ = (0, v.Z)({ user: n }),
+                p = (0, g.Z)({
                     user: n,
                     guildId: t,
                     channelId: o
                 }),
-                p = (0, f.Z)({ user: n }),
-                T = (0, I.Z)(n.id),
-                P = (0, C.Z)(n.id),
-                k = (0, b.Z)(n.id, a),
-                O = (0, x.Z)({ user: n }),
-                S = (0, u.Z)(null, n),
-                D = (0, Z.Z)(n),
-                N = (0, m.Z)({ user: n }),
-                V = (0, s.Z)({
+                T = (0, f.Z)({ user: n }),
+                P = (0, j.Z)(n.id),
+                k = (0, I.Z)(n.id),
+                O = (0, h.Z)(n.id, a),
+                S = (0, M.Z)({ user: n }),
+                D = (0, u.Z)(null, n),
+                N = (0, Z.Z)(n),
+                V = (0, m.Z)({ user: n }),
+                y = (0, x.Z)({ user: n }),
+                F = (0, s.Z)({
                     id: n.id,
-                    label: E.intl.string(E.t['/AXYnJ'])
+                    label: U.intl.string(U.t['/AXYnJ'])
                 }),
-                y = (0, c.Z)(n),
-                F = n.isNonUserBot();
+                G = (0, c.Z)(n),
+                w = n.isNonUserBot();
             return (0, i.jsxs)(l.Menu, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': E.intl.string(E.t.liqwPD),
-                onSelect: j,
+                'aria-label': U.intl.string(U.t.liqwPD),
+                onSelect: E,
                 children: [
-                    !F &&
+                    !w &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsx)(l.MenuGroup, { children: y }),
+                                (0, i.jsx)(l.MenuGroup, { children: G }),
                                 (0, i.jsxs)(l.MenuGroup, {
-                                    children: [U, A, L, _, p, T]
+                                    children: [A, L, _, p, T, P]
                                 }),
-                                d && (0, i.jsx)(l.MenuGroup, { children: P }),
-                                (0, i.jsx)(l.MenuGroup, { children: S }),
+                                d && (0, i.jsx)(l.MenuGroup, { children: k }),
+                                (0, i.jsx)(l.MenuGroup, { children: D }),
                                 (0, i.jsxs)(l.MenuGroup, {
-                                    children: [d && k, O, D, N]
+                                    children: [d && O, S, N, y, V]
                                 })
                             ]
                         }),
-                    (0, i.jsx)(l.MenuGroup, { children: V })
+                    (0, i.jsx)(l.MenuGroup, { children: F })
                 ]
             });
         },
-        { object: j.qAy.CONTEXT_MENU }
+        { object: E.qAy.CONTEXT_MENU }
     ),
     [a.Z.CONTEXT_MENU, a.Z.USER_GENERIC_MENU]
 );

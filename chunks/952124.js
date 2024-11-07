@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return m;
     }
 });
 var r = n(200651);
@@ -11,59 +11,74 @@ var i = n(442837),
     o = n(906732),
     l = n(299206),
     u = n(389052),
-    c = n(622724),
-    d = n(785717),
-    f = n(621853),
-    _ = n(475413),
-    h = n(388032);
-function p(e) {
-    let { user: t, guildId: n, viewProfileItem: p } = e,
-        { trackUserProfileAction: m } = (0, d.KZ)(),
-        { analyticsLocations: g, newestAnalyticsLocation: E } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        v = (0, i.e7)([f.Z], () => f.Z.getUserProfile(t.id)),
-        I = null == v ? void 0 : v.application,
-        S = (0, u.Z)({
+    c = n(158508),
+    d = n(622724),
+    f = n(785717),
+    _ = n(621853),
+    h = n(475413),
+    p = n(388032);
+function m(e) {
+    let { user: t, guildId: n, viewProfileItem: m } = e,
+        { trackUserProfileAction: g } = (0, f.KZ)(),
+        { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        I = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
+        S = null == I ? void 0 : I.application,
+        T = (0, u.Z)({
             user: t,
-            location: E,
+            location: v,
             color: 'danger',
             onBlock: () =>
-                m({
+                g({
                     action: 'BLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 }),
             onUnblock: () =>
-                m({
+                g({
                     action: 'UNBLOCK',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        T = (0, c.Z)({
+        b = (0, c.Z)({
+            user: t,
+            location: v,
+            onIgnore: () =>
+                g({
+                    action: 'IGNORE',
+                    analyticsLocations: E
+                }),
+            onUnignore: () =>
+                g({
+                    action: 'UNIGNORE',
+                    analyticsLocations: E
+                })
+        }),
+        y = (0, d.Z)({
             user: t,
             guildId: n,
-            location: E,
+            location: v,
             color: 'danger',
             onAction: () =>
-                m({
+                g({
                     action: 'REPORT',
-                    analyticsLocations: g
+                    analyticsLocations: E
                 })
         }),
-        b = [
-            [p],
-            [S, T],
+        A = [
+            [m],
+            [b, T, y],
             [
                 (0, l.Z)({
-                    id: null == I ? void 0 : I.id,
-                    label: h.intl.string(h.t['+NP/b2']),
+                    id: null == S ? void 0 : S.id,
+                    label: p.intl.string(p.t['+NP/b2']),
                     onSuccess: () =>
-                        m({
+                        g({
                             action: 'COPY_APP_ID',
-                            analyticsLocations: g
+                            analyticsLocations: E
                         })
                 })
             ]
         ];
-    return b.every((e) => e.every((e) => null == e))
+    return A.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(a.Popout, {
               renderPopout: (e) => {
@@ -72,15 +87,15 @@ function p(e) {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': h.intl.string(h.t.AXIHpa),
-                      children: b.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map((e) => e) }, t))
+                      'aria-label': p.intl.string(p.t.AXIHpa),
+                      children: A.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(_.oY, {
+                  (0, r.jsx)(h.oY, {
                       action: 'PRESS_OPTIONS',
                       icon: a.MoreHorizontalIcon,
-                      tooltipText: h.intl.string(h.t.UKOtz8),
+                      tooltipText: p.intl.string(p.t.UKOtz8),
                       ...e
                   })
           });

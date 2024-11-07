@@ -17,100 +17,102 @@ var i = t(481060),
     v = t(570870),
     x = t(389052),
     h = t(24311),
-    P = t(710631),
-    I = t(297047),
-    p = t(88966),
-    b = t(712301),
-    C = t(520063),
-    E = t(37258),
-    j = t(931617),
-    O = t(332031),
-    N = t(981631),
-    T = t(388032);
+    P = t(158508),
+    I = t(710631),
+    p = t(297047),
+    b = t(88966),
+    C = t(712301),
+    E = t(520063),
+    j = t(37258),
+    O = t(931617),
+    N = t(332031),
+    T = t(981631),
+    _ = t(388032);
 n.default = (0, u.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, guildId: t, channel: a, context: u, onSelect: s, onHeightUpdate: _ } = e,
-                A = (0, E.Z)({
+            let { user: n, guildId: t, channel: a, context: u, onSelect: s, onHeightUpdate: A } = e,
+                U = (0, j.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: a.id
                 }),
-                U = (0, I.Z)(n, t, u),
-                R = (0, p.Z)(n.id, u),
-                S = (0, O.Z)(n.id),
-                L = (0, h.Z)({
+                R = (0, p.Z)(n, t, u),
+                S = (0, b.Z)(n.id, u),
+                L = (0, N.Z)(n.id),
+                k = (0, h.Z)({
                     user: n,
                     context: u
                 }),
-                k = (0, M.Z)({
+                y = (0, M.Z)({
                     user: n,
                     guildId: t,
                     channelId: a.id,
                     context: u
                 }),
-                y = (0, m.Z)({ user: n }),
-                G = (0, Z.Z)({
+                G = (0, m.Z)({ user: n }),
+                q = (0, Z.Z)({
                     guildId: t,
                     userId: n.id,
                     analyticsLocation: {
-                        page: N.ZY5.GUILD_CHANNEL,
-                        section: N.jXE.CHAT_USERNAME,
-                        object: N.qAy.CONTEXT_MENU_ITEM
+                        page: T.ZY5.GUILD_CHANNEL,
+                        section: T.jXE.CHAT_USERNAME,
+                        object: T.qAy.CONTEXT_MENU_ITEM
                     },
                     context: u
                 }),
-                q = (0, P.Z)({
+                w = (0, I.Z)({
                     user: n,
                     guildId: t
                 }),
-                w = (0, o.Z)(null, n),
-                V = (0, g.Z)(n),
-                D = (0, x.Z)({ user: n }),
-                F = (0, C.Z)(n, t, a.id),
-                W = (0, j.Z)(n.id, t),
-                B = (0, b.Z)(n, t),
-                K = (0, c.Z)({
+                V = (0, o.Z)(null, n),
+                D = (0, g.Z)(n),
+                F = (0, x.Z)({ user: n }),
+                W = (0, P.Z)({ user: n }),
+                B = (0, E.Z)(n, t, a.id),
+                K = (0, O.Z)(n.id, t),
+                H = (0, C.Z)(n, t),
+                z = (0, c.Z)({
                     id: n.id,
-                    label: T.intl.string(T.t['/AXYnJ'])
+                    label: _.intl.string(_.t['/AXYnJ'])
                 }),
-                H = (0, f.Z)(n),
-                z = (0, v.Z)({
+                X = (0, f.Z)(n),
+                Y = (0, v.Z)({
                     commandType: d.yU.USER,
                     commandTargetId: n.id,
                     channel: a,
                     guildId: t,
-                    onHeightUpdate: _
+                    onHeightUpdate: A
                 }),
-                X = n.isNonUserBot();
+                J = n.isNonUserBot();
             return (0, l.jsxs)(i.Menu, {
                 navId: 'user-context',
                 onClose: r.Zy,
-                'aria-label': T.intl.string(T.t.liqwPD),
+                'aria-label': _.intl.string(_.t.liqwPD),
                 onSelect: s,
                 children: [
-                    !X &&
+                    !J &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(i.MenuGroup, { children: H }),
+                                (0, l.jsx)(i.MenuGroup, { children: X }),
                                 (0, l.jsxs)(i.MenuGroup, {
-                                    children: [A, U, R, L, k, y, S]
+                                    children: [U, R, S, k, y, G, L]
                                 }),
-                                (0, l.jsx)(i.MenuGroup, { children: w }),
+                                (0, l.jsx)(i.MenuGroup, { children: V }),
                                 (0, l.jsxs)(i.MenuGroup, {
-                                    children: [G, z, q, V, D]
+                                    children: [q, Y, w, D, W, F]
                                 }),
-                                (0, l.jsx)(i.MenuGroup, { children: F }),
+                                (0, l.jsx)(i.MenuGroup, { children: B }),
                                 (0, l.jsxs)(i.MenuGroup, {
-                                    children: [W, B]
+                                    children: [K, H]
                                 })
                             ]
                         }),
-                    (0, l.jsx)(i.MenuGroup, { children: K })
+                    (0, l.jsx)(i.MenuGroup, { children: z })
                 ]
             });
         },
-        { object: N.qAy.CONTEXT_MENU }
+        { object: T.qAy.CONTEXT_MENU }
     ),
     [s.Z.CONTEXT_MENU, s.Z.THREAD_USER_MENU]
 );

@@ -106,6 +106,8 @@ function C(e) {
     (c.REMOVE_FRIEND = 'REMOVE_FRIEND'),
     (c.BLOCK = 'BLOCK'),
     (c.UNBLOCK = 'UNBLOCK'),
+    (c.IGNORE = 'IGNORE'),
+    (c.UNIGNORE = 'UNIGNORE'),
     (c.REPORT = 'REPORT'),
     (c.COPY_USERNAME = 'COPY_USERNAME'),
     (c.COPY_USER_ID = 'COPY_USER_ID'),

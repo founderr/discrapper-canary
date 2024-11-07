@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -10,80 +10,95 @@ var i = n(481060),
     s = n(906732),
     o = n(299206),
     l = n(389052),
-    u = n(710631),
-    c = n(622724),
-    d = n(785717),
-    f = n(475413),
-    _ = n(388032);
-function h(e) {
-    let { user: t, guildId: n, viewProfileItem: h } = e,
-        { trackUserProfileAction: p } = (0, d.KZ)(),
-        { analyticsLocations: m, newestAnalyticsLocation: g } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
-        E = (0, u.Z)({
+    u = n(158508),
+    c = n(710631),
+    d = n(622724),
+    f = n(785717),
+    _ = n(475413),
+    h = n(388032);
+function p(e) {
+    let { user: t, guildId: n, viewProfileItem: p } = e,
+        { trackUserProfileAction: m } = (0, f.KZ)(),
+        { analyticsLocations: g, newestAnalyticsLocation: E } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        v = (0, c.Z)({
             user: t,
             guildId: n,
             onAction: () =>
-                p({
+                m({
                     action: 'PRESS_INVITE_TO_SERVER',
-                    analyticsLocations: m
+                    analyticsLocations: g
                 })
         }),
-        v = (0, l.Z)({
+        I = (0, l.Z)({
             user: t,
-            location: g,
+            location: E,
             color: 'danger',
             onBlock: () =>
-                p({
+                m({
                     action: 'BLOCK',
-                    analyticsLocations: m
+                    analyticsLocations: g
                 }),
             onUnblock: () =>
-                p({
+                m({
                     action: 'UNBLOCK',
-                    analyticsLocations: m
+                    analyticsLocations: g
                 })
         }),
-        I = (0, c.Z)({
+        S = (0, u.Z)({
+            user: t,
+            location: E,
+            onIgnore: () =>
+                m({
+                    action: 'IGNORE',
+                    analyticsLocations: g
+                }),
+            onUnignore: () =>
+                m({
+                    action: 'UNIGNORE',
+                    analyticsLocations: g
+                })
+        }),
+        T = (0, d.Z)({
             user: t,
             guildId: n,
-            location: g,
+            location: E,
             color: 'danger',
             onAction: () =>
-                p({
+                m({
                     action: 'REPORT',
-                    analyticsLocations: m
+                    analyticsLocations: g
                 })
         }),
-        S = (0, c.T)({
+        b = (0, d.T)({
             user: t,
             guildId: n,
-            location: g,
+            location: E,
             color: 'danger',
             onAction: () =>
-                p({
+                m({
                     action: 'REPORT',
-                    analyticsLocations: m
+                    analyticsLocations: g
                 })
         }),
-        T = [
-            [h, E],
-            [v, I, S],
+        y = [
+            [p, v],
+            [S, I, T, b],
             [
                 (0, o.Z)({
                     id: t.id,
-                    label: _.intl.string(_.t['/AXYnJ']),
+                    label: h.intl.string(h.t['/AXYnJ']),
                     onSuccess: () =>
-                        p({
+                        m({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: m
+                            analyticsLocations: g
                         })
                 })
             ]
         ];
-    return T.every((e) => e.every((e) => null == e))
+    return y.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(s.Gt, {
-              value: m,
+              value: g,
               children: (0, r.jsx)(i.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
@@ -91,15 +106,15 @@ function h(e) {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: t,
-                          'aria-label': _.intl.string(_.t.AXIHpa),
-                          children: T.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
+                          'aria-label': h.intl.string(h.t.AXIHpa),
+                          children: y.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
                       });
                   },
                   children: (e) =>
-                      (0, r.jsx)(f.oY, {
+                      (0, r.jsx)(_.oY, {
                           action: 'PRESS_OPTIONS',
                           icon: i.MoreHorizontalIcon,
-                          tooltipText: _.intl.string(_.t.UKOtz8),
+                          tooltipText: h.intl.string(h.t.UKOtz8),
                           ...e
                       })
               })
