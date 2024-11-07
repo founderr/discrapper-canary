@@ -53,6 +53,7 @@ n.d(t, {
 }),
     ((c = r || (r = {}))[(c.PLAY = 0)] = 'PLAY'),
     (c[(c.ADD = 1)] = 'ADD'),
+    (c[(c.SOUNDMOJI = 2)] = 'SOUNDMOJI'),
     ((d = i || (i = {})).ENTRY = 'entry_sound'),
     (d.EXIT = 'exit_sound'),
     (d.DEFAULT = 'default'),
