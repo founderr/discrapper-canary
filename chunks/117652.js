@@ -9,8 +9,8 @@ var i = t(200651),
     o = t(481060),
     l = t(335131),
     s = t(628952),
-    c = t(225657),
-    d = t(600164),
+    d = t(225657),
+    c = t(600164),
     u = t(109213),
     f = t(927699),
     p = t(987716),
@@ -24,28 +24,28 @@ var i = t(200651),
     v = t(409813),
     S = t(614277),
     I = t(981631),
-    T = t(474936),
-    j = t(388032),
+    j = t(474936),
+    T = t(388032),
     y = t(829294);
 let E = {
     key: v.h8.GIFT_CUSTOMIZATION,
     renderStep: (e) => (0, i.jsx)(k, { ...e }),
     options: {
         isLargeModal: !0,
-        useBreadcrumbLabel: () => j.intl.string(j.t['W685+f'])
+        useBreadcrumbLabel: () => T.intl.string(T.t['W685+f'])
     }
 };
 function N(e) {
     let { onStepChange: n, onBackClick: t, showBackButton: a = !1, disabled: r = !1, loading: l = !1 } = e,
         { hasPaymentSources: s } = (0, C.usePaymentContext)(),
-        c = s ? v.h8.REVIEW : v.h8.ADD_PAYMENT_STEPS;
+        d = s ? v.h8.REVIEW : v.h8.ADD_PAYMENT_STEPS;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.Button, {
-                onClick: () => n(c),
+                onClick: () => n(d),
                 disabled: r,
                 submitting: l,
-                children: j.intl.string(j.t.XiOHRU)
+                children: T.intl.string(T.t.XiOHRU)
             }),
             a ? (0, i.jsx)(m.Z, { onClick: t }) : null
         ]
@@ -53,24 +53,24 @@ function N(e) {
 }
 function k(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { customGiftMessage: m = '', setCustomGiftMessage: _, giftRecipientError: v, setGiftRecipientError: I, validatingGiftRecipient: E, giftRecipient: k, recommendedGiftSkuIds: B, giftingOrigin: A, setValidatingGiftRecipient: w } = (0, x.wD)(),
-        { selectedSkuId: Z, setSelectedSkuId: O, selectedSkuPricePreview: R, paymentSourceId: M, skuPricePreviewsById: G } = (0, C.usePaymentContext)(),
+        { customGiftMessage: m = '', setCustomGiftMessage: _, giftRecipientError: v, setGiftRecipientError: I, validatingGiftRecipient: E, giftRecipient: k, recommendedGiftSkuIds: B, giftingOrigin: A, setValidatingGiftRecipient: Z } = (0, x.wD)(),
+        { selectedSkuId: w, setSelectedSkuId: O, selectedSkuPricePreview: M, paymentSourceId: R, skuPricePreviewsById: G } = (0, C.usePaymentContext)(),
         L = (0, r.e7)([b.default], () => b.default.getCurrentUser()),
         { enabled: D, giftRecommendationAlgorithm: H } = u.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
-        F = D && A === T.Wt.DM_CHANNEL,
-        W = H === u.u.POPULAR ? j.intl.string(j.t.Kwgrrq) : j.intl.string(j.t.r1huYW),
+        F = D && A === j.Wt.DM_CHANNEL,
+        W = H === u.u.POPULAR ? T.intl.string(T.t.Kwgrrq) : T.intl.string(T.t.r1huYW),
         z = async (e, n) => {
-            w(!0), null != v && I(), !(await (0, l.B1)(e.id, n)) && I(j.intl.string(j.t['4kgVqa'])), w(!1);
+            Z(!0), null != v && I(), !(await (0, l.B1)(e.id, n)) && I(T.intl.string(T.t['4kgVqa'])), Z(!1);
         };
     a.useEffect(() => {
-        null != Z && null != k && z(k, Z);
+        null != w && null != k && z(k, w);
     }, []);
     let U = (e) => {
             null != k && z(k, e), O(e);
         },
         V = (e) => {
             let n = G[e],
-                t = null != M ? M : h.c,
+                t = null != R ? R : h.c,
                 a = null != n ? n[t] : null;
             if (null != a)
                 return (0, i.jsx)(
@@ -78,7 +78,7 @@ function k(e) {
                     {
                         skuId: e,
                         skuPricePreview: a,
-                        isSelected: e === Z,
+                        isSelected: e === w,
                         onSelect: (e) => U(e),
                         className: y.recommendedGiftPreview
                     },
@@ -87,7 +87,7 @@ function k(e) {
         },
         Y = () =>
             (0, i.jsx)(f.Z, {
-                sectionTitle: j.intl.string(j.t.B3miEx),
+                sectionTitle: T.intl.string(T.t.B3miEx),
                 onTextChange: (e) => (null == _ ? void 0 : _(e)),
                 pendingText: m,
                 currentText: m,
@@ -112,8 +112,7 @@ function k(e) {
                                           children: W.toLocaleUpperCase()
                                       }),
                                       B.map((e) => V(e)),
-                                      (0, i.jsx)(P, { handleClose: t }),
-                                      ';'
+                                      (0, i.jsx)(P, { handleClose: t })
                                   ]
                               })
                             : (0, i.jsx)('div', {
@@ -136,15 +135,15 @@ function k(e) {
                             : (0, i.jsxs)('div', {
                                   className: y.bodyColumnRight,
                                   children: [
-                                      (0, i.jsx)(c.Z, {
-                                          selectedSkuId: Z,
+                                      (0, i.jsx)(d.Z, {
+                                          selectedSkuId: w,
                                           className: y.sendTo,
                                           validateSelectedGift: z
                                       }),
                                       Y(),
                                       (0, i.jsx)(s.Z, {
-                                          skuId: Z,
-                                          skuPricePreview: R,
+                                          skuId: w,
+                                          skuPricePreview: M,
                                           className: y.giftPreview,
                                           isSelected: !0,
                                           shouldDisplayHeader: !0
@@ -156,12 +155,12 @@ function k(e) {
             }),
             (0, i.jsx)(S.O3, {
                 children: (0, i.jsx)(o.ModalFooter, {
-                    justify: d.Z.Justify.BETWEEN,
-                    align: d.Z.Align.CENTER,
+                    justify: c.Z.Justify.BETWEEN,
+                    align: c.Z.Align.CENTER,
                     children: (0, i.jsx)(N, {
                         onStepChange: n,
                         onBackClick: t,
-                        disabled: null != v || null == k || k.id === (null == L ? void 0 : L.id) || m.length > T.$n,
+                        disabled: null != v || null == k || k.id === (null == L ? void 0 : L.id) || m.length > j.$n,
                         loading: E
                     })
                 })
@@ -196,12 +195,12 @@ function P(e) {
                                 (0, i.jsx)(o.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/semibold',
-                                    children: j.intl.string(j.t['1+Co8P'])
+                                    children: T.intl.string(T.t['1+Co8P'])
                                 }),
                                 (0, i.jsx)(o.Heading, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
-                                    children: j.intl.string(j.t.nYn52N)
+                                    children: T.intl.string(T.t.nYn52N)
                                 })
                             ]
                         })

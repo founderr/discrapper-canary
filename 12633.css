@@ -44751,6 +44751,7 @@ html.disable-forced-colors * {
     --badge-brand-bg: var(--brand-260);
     --badge-brand-text: var(--brand-560);
     --bg-backdrop: hsl(var(--black-hsl) / 0.7);
+    --bg-backdrop-immersive: hsl(var(--black-hsl) / 0.85);
     --bg-backdrop-no-opacity: var(--black);
     --bg-base-primary: var(--primary-600);
     --bg-base-secondary: var(--primary-630);
@@ -45162,6 +45163,9 @@ html.disable-forced-colors * {
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.7) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.7) var(--theme-base-color-amount, 0%));
+        --bg-backdrop-immersive: color-mix(in oklab,
+                hsl(var(--black-hsl) / 0.85) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.85) var(--theme-base-color-amount, 0%));
         --bg-backdrop-no-opacity: color-mix(in oklab,
                 var(--black) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
@@ -45909,6 +45913,7 @@ html.disable-forced-colors * {
     --badge-brand-bg: var(--brand-260);
     --badge-brand-text: var(--brand-560);
     --bg-backdrop: hsl(var(--black-hsl) / 0.54);
+    --bg-backdrop-immersive: hsl(var(--black-hsl) / 0.8);
     --bg-backdrop-no-opacity: var(--black);
     --bg-base-primary: var(--white);
     --bg-base-secondary: var(--primary-130);
@@ -46318,6 +46323,9 @@ html.disable-forced-colors * {
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.54) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.54) var(--theme-base-color-amount, 0%));
+        --bg-backdrop-immersive: color-mix(in oklab,
+                hsl(var(--black-hsl) / 0.8) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.8) var(--theme-base-color-amount, 0%));
         --bg-backdrop-no-opacity: color-mix(in oklab,
                 var(--black) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
@@ -47061,6 +47069,7 @@ html.disable-forced-colors * {
     --badge-brand-bg: var(--brand-260);
     --badge-brand-text: var(--brand-560);
     --bg-backdrop: hsl(var(--plum-19-hsl) / 0.75);
+    --bg-backdrop-immersive: hsl(var(--plum-19-hsl) / 0.9);
     --bg-backdrop-no-opacity: var(--plum-19);
     --bg-base-primary: var(--black);
     --bg-base-secondary: var(--black);
@@ -47470,6 +47479,9 @@ html.disable-forced-colors * {
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--plum-19-hsl) / 0.75) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.75) var(--theme-base-color-amount, 0%));
+        --bg-backdrop-immersive: color-mix(in oklab,
+                hsl(var(--plum-19-hsl) / 0.9) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.9) var(--theme-base-color-amount, 0%));
         --bg-backdrop-no-opacity: color-mix(in oklab,
                 var(--plum-19) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));
@@ -48217,6 +48229,7 @@ html.disable-forced-colors * {
     --badge-brand-bg: var(--brand-260);
     --badge-brand-text: var(--brand-560);
     --bg-backdrop: hsl(var(--black-hsl) / 0.7);
+    --bg-backdrop-immersive: hsl(var(--black-hsl) / 0.85);
     --bg-backdrop-no-opacity: var(--black);
     --bg-base-primary: var(--plum-20);
     --bg-base-secondary: var(--plum-20);
@@ -48628,6 +48641,9 @@ html.disable-forced-colors * {
         --bg-backdrop: color-mix(in oklab,
                 hsl(var(--black-hsl) / 0.7) 100%,
                 hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.7) var(--theme-base-color-amount, 0%));
+        --bg-backdrop-immersive: color-mix(in oklab,
+                hsl(var(--black-hsl) / 0.85) 100%,
+                hsl(var(--theme-base-color-hsl, 0 0% 0%) / 0.85) var(--theme-base-color-amount, 0%));
         --bg-backdrop-no-opacity: color-mix(in oklab,
                 var(--black) 100%,
                 var(--theme-base-color, black) var(--theme-base-color-amount, 0%));

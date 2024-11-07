@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(580747),
     u = n(594174),
     m = n(960048),
-    f = n(381585),
-    p = n(597688),
+    p = n(381585),
+    f = n(597688),
     h = n(884697),
     g = n(251068),
     C = n(43610),
@@ -19,8 +19,8 @@ var r = n(200651),
     v = n(937510),
     _ = n(823941),
     k = n(752053),
-    j = n(38900),
-    E = n(709999),
+    E = n(38900),
+    j = n(709999),
     I = n(215023),
     T = n(388032),
     S = n(632007),
@@ -30,11 +30,11 @@ var r = n(200651),
     L = n(562292),
     Z = n(196315);
 t.Z = (e) => {
-    var t, n, s, w, P, O;
+    var t, n, s, P, O, w;
     let { handleTransition: A, numVisibleItems: H } = e,
-        { categories: R, isFetchingCategories: F, fetchCategoriesError: D, fetchPurchasesError: M, claimError: V, refreshCategories: W } = (0, x.Z)(),
+        { categories: F, isFetchingCategories: R, fetchCategoriesError: D, fetchPurchasesError: M, claimError: V, refreshCategories: W } = (0, x.Z)(),
         U = null !== (t = null != D ? D : M) && void 0 !== t ? t : V,
-        z = Array.from(R.values()),
+        z = Array.from(F.values()),
         G = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         K = a.createRef(),
         $ = (0, C.t)('CollectiblesFeedShop'),
@@ -42,9 +42,9 @@ t.Z = (e) => {
         J = (0, b.b)('Collectibles Shop Button'),
         q = (0, d.Z)('shop_disable_cache'),
         Q = (0, d.Z)('shop_include_unpublished'),
-        X = Y ? z[0] : p.Z.getCategory($ ? l.T.SPOOKY_NIGHT : l.T.BAND),
-        ee = Y ? z[1] : p.Z.getCategory($ ? l.T.BAND : l.T.AUTUMN_EQUINOX),
-        et = p.Z.getCategory(l.T.ANIME_V2),
+        X = Y ? z[0] : f.Z.getCategory($ ? l.T.SPOOKY_NIGHT : l.T.BAND),
+        ee = Y ? z[1] : f.Z.getCategory($ ? l.T.BAND : l.T.AUTUMN_EQUINOX),
+        et = f.Z.getCategory(l.T.ANIME_V2),
         en = Y
             ? (0, h.uV)(null !== (n = null == X ? void 0 : X.heroBanner) && void 0 !== n ? n : '', {
                   size: I.pv,
@@ -62,7 +62,7 @@ t.Z = (e) => {
               ? N
               : L,
         ea = Y
-            ? (0, h.uV)(null !== (w = null == et ? void 0 : et.featuredBlock) && void 0 !== w ? w : '', {
+            ? (0, h.uV)(null !== (P = null == et ? void 0 : et.featuredBlock) && void 0 !== P ? P : '', {
                   size: I.J0,
                   format: 'png'
               })
@@ -70,10 +70,10 @@ t.Z = (e) => {
         es = a.useCallback(() => {
             W();
         }, [W]),
-        ei = Y ? (null !== (P = null == X ? void 0 : X.heroRanking) && void 0 !== P ? P : []) : $ ? I.Ku : I.WC,
-        el = a.useMemo(() => ei.map((e) => p.Z.getProduct(e)).filter((e) => null != e), [F, $]),
+        ei = Y ? (null !== (O = null == X ? void 0 : X.heroRanking) && void 0 !== O ? O : []) : $ ? I.Ku : I.WC,
+        el = a.useMemo(() => ei.map((e) => f.Z.getProduct(e)).filter((e) => null != e), [R, $]),
         eo = (0, v.l)(el).slice(0, 4),
-        ec = a.useMemo(() => I.yo.map((e) => p.Z.getProduct(e)).filter((e) => null != e), [F]),
+        ec = a.useMemo(() => I.yo.map((e) => f.Z.getProduct(e)).filter((e) => null != e), [R]),
         ed = (0, v.l)(ec);
     if (null == G) return null;
     let eu = T.intl.formatToPlainString(T.t.wvKYCg, { category_name: null == X ? void 0 : X.name });
@@ -91,6 +91,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(k.Z, {
                 onRetry: es,
+                errorOrigin: k.i.SHOP_PAGE,
                 errorMessage: U.message
             })
         );
@@ -116,7 +117,7 @@ t.Z = (e) => {
                         (0, r.jsxs)('div', {
                             className: i()(S.heroHeaderContainer),
                             children: [
-                                F
+                                R
                                     ? (0, r.jsx)('div', { className: i()(S.heroHeaderBadgeLogoSummaryContainer) })
                                     : (0, r.jsxs)('div', {
                                           className: i()(S.heroHeaderBadgeLogoSummaryContainer),
@@ -133,7 +134,7 @@ t.Z = (e) => {
                                                   children: [
                                                       (0, r.jsx)('img', {
                                                           className: S.heroHeaderLogo,
-                                                          src: (0, h.uV)(null !== (O = null == X ? void 0 : X.logo) && void 0 !== O ? O : '', { size: _.n }),
+                                                          src: (0, h.uV)(null !== (w = null == X ? void 0 : X.logo) && void 0 !== w ? w : '', { size: _.n }),
                                                           alt: null == X ? void 0 : X.name
                                                       }),
                                                       (0, r.jsx)(c.Text, {
@@ -146,7 +147,7 @@ t.Z = (e) => {
                                               })
                                           ]
                                       }),
-                                !F &&
+                                !R &&
                                     (0, r.jsx)('div', {
                                         className: S.heroHeaderButtonContainer,
                                         children: (0, r.jsx)(c.Button, {
@@ -160,24 +161,24 @@ t.Z = (e) => {
                         }),
                         (0, r.jsx)('div', {
                             className: i()(S.row, S.feed, S.feedSingleRow),
-                            children: F
+                            children: R
                                 ? (0, r.jsx)(r.Fragment, {
-                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(j.K, {}, t))
+                                      children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(E.K, {}, t))
                                   })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: eo.map((e, t) => {
-                                          let n = p.Z.getCategoryForProduct(e.skuId);
+                                          let n = f.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
                                               : (0, r.jsx)(
-                                                    f.k0,
+                                                    p.k0,
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
                                                             pageSection: 'top 4'
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            j.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,
@@ -194,7 +195,7 @@ t.Z = (e) => {
                         }),
                         (0, r.jsx)('div', {
                             className: i()(S.section, S.col2, S.featuredBlocksContainer),
-                            children: F
+                            children: R
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
@@ -233,7 +234,7 @@ t.Z = (e) => {
                                               style: { backgroundImage: 'url('.concat(ea, ')') },
                                               onClick: () => A('shop marketing tile', l.T.ANIME_V2),
                                               children:
-                                                  !F &&
+                                                  !R &&
                                                   (0, r.jsxs)(r.Fragment, {
                                                       children: [
                                                           (0, r.jsx)(c.TextBadge, {
@@ -276,22 +277,22 @@ t.Z = (e) => {
                         (0, r.jsx)('div', {
                             className: S.feed,
                             ref: K,
-                            children: F
-                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(j.K, {}, t + 1)) })
+                            children: R
+                                ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(E.K, {}, t + 1)) })
                                 : (0, r.jsx)(r.Fragment, {
                                       children: ed.slice(0, H).map((e, t) => {
-                                          let n = p.Z.getCategoryForProduct(e.skuId);
+                                          let n = f.Z.getCategoryForProduct(e.skuId);
                                           return null == e || null == n
                                               ? null
                                               : (0, r.jsx)(
-                                                    f.k0,
+                                                    p.k0,
                                                     {
                                                         newValue: {
                                                             tilePosition: t,
                                                             pageSection: 'popular picks'
                                                         },
                                                         children: (0, r.jsx)(
-                                                            E.Z,
+                                                            j.Z,
                                                             {
                                                                 product: e,
                                                                 category: n,

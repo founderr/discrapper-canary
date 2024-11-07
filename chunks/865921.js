@@ -1,48 +1,51 @@
-n.d(t, {
+t.d(n, {
     v: function () {
-        return _;
+        return g;
     }
 }),
-    n(47120);
-var o = n(200651),
-    i = n(192379),
-    r = n(512722),
-    a = n.n(r),
-    c = n(399606),
-    d = n(89057),
-    l = n(597688),
-    s = n(987209),
-    u = n(563132),
-    f = n(409813),
-    p = n(456251),
-    b = n(981631);
-function _(e) {
-    let { handleStepChange: t, handleClose: n } = e,
-        { blockedPayments: r, hasFetchedSkus: _, paymentSources: h, hasFetchedPaymentSources: g, application: x, skusById: m, selectedSkuId: v } = (0, u.usePaymentContext)(),
-        { isGift: C } = (0, s.wD)(),
-        [k, S] = i.useState(!0),
-        B = (0, c.e7)([l.Z], () => l.Z.isFetchingCategories);
-    return (i.useEffect(() => {
-        let e = null != x;
-        if (!!_ && !!g && !!e) S(B);
-    }, [_, g, x, B]),
-    i.useEffect(() => {
-        if (k || r) return;
-        a()(null != v, 'Expected selectedSkuId');
-        let e = m[v];
-        if (C && (null == e ? void 0 : e.productLine) === b.POd.COLLECTIBLES) {
-            t(f.h8.GIFT_CUSTOMIZATION);
-            return;
-        }
-        if (0 === Object.keys(h).length) {
-            t(f.h8.ADD_PAYMENT_STEPS);
-            return;
-        }
-        t(f.h8.REVIEW);
-    }, [k, r, t, h, C, m, v]),
-    k)
-        ? (0, o.jsx)(p.Z, {})
-        : r
-          ? (0, o.jsx)(d.Vq, { onClose: n })
-          : null;
+    t(47120);
+var o = t(200651),
+    i = t(192379),
+    r = t(512722),
+    a = t.n(r),
+    c = t(399606),
+    d = t(89057),
+    l = t(597688),
+    s = t(987209),
+    u = t(563132),
+    f = t(409813),
+    p = t(48931),
+    b = t(456251),
+    _ = t(981631);
+function g(e) {
+    let { handleStepChange: n, handleClose: t } = e,
+        { blockedPayments: r, hasFetchedSkus: g, paymentSources: h, hasFetchedPaymentSources: x, application: m, skusById: v, selectedSkuId: C } = (0, u.usePaymentContext)(),
+        { isGift: k } = (0, s.wD)(),
+        [S, B] = i.useState(!0),
+        [O, y] = (0, c.Wu)([l.Z], () => [l.Z.isFetchingCategories, l.Z.error]);
+    if (
+        (i.useEffect(() => {
+            let e = null != m;
+            if (!!g && !!x && !!e) B(O);
+        }, [g, x, m, O]),
+        i.useEffect(() => {
+            if (S || r || O || null != y) return;
+            a()(null != C, 'Expected selectedSkuId');
+            let e = v[C];
+            if (k && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
+                n(f.h8.GIFT_CUSTOMIZATION);
+                return;
+            }
+            if (0 === Object.keys(h).length) {
+                n(f.h8.ADD_PAYMENT_STEPS);
+                return;
+            }
+            n(f.h8.REVIEW);
+        }, [S, r, n, h, k, v, C, y, O]),
+        S)
+    )
+        return (0, o.jsx)(b.Z, {});
+    if (r) return (0, o.jsx)(d.Vq, { onClose: t });
+    if (null != y) return (0, o.jsx)(p.Z, { onClose: t });
+    return null;
 }
