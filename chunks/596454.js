@@ -129,8 +129,7 @@ function v(e) {
                                 style: {
                                     backgroundImage: 'url('.concat(F, ')'),
                                     backgroundSize: 'contain',
-                                    backgroundRepeat: 'no-repeat',
-                                    backgroundPosition: 'center center'
+                                    backgroundRepeat: 'no-repeat'
                                 }
                             },
                             x
