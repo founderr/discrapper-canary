@@ -13,7 +13,7 @@ var i = t(200651),
     d = t(678738),
     u = t(151545),
     f = t(527790),
-    m = t(769140),
+    m = t(493043),
     p = t(981631),
     x = t(921944),
     I = t(388032),
@@ -39,10 +39,12 @@ function v(e) {
                     children: [
                         null != b &&
                             (0, i.jsx)(m.Z, {
+                                location: 'UserProfileModalActivity',
                                 user: n,
                                 currentUser: t,
                                 stream: b,
-                                onClose: v
+                                onClose: v,
+                                profileGuildId: g
                             }),
                         Z.map((e, l) =>
                             (0, i.jsx)(
