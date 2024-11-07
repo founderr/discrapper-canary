@@ -22,7 +22,8 @@ function o(e) {
         {
             modalKey: s.U,
             contextKey: o,
-            onCloseCallback: l
+            onCloseCallback: l,
+            backdropStyle: i.BackdropStyles.IMMERSIVE
         }
     );
 }

@@ -1,66 +1,59 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var r = t(200651),
     i = t(192379),
-    l = t(120356),
-    a = t.n(l),
-    o = t(442837),
-    s = t(481060),
-    u = t(700582),
-    c = t(372900),
-    d = t(318713),
-    m = t(123145),
-    h = t(592125),
-    f = t(231338),
-    p = t(182763);
-let g = i.memo(function (e) {
+    l = t(442837),
+    a = t(481060),
+    o = t(700582),
+    s = t(372900),
+    u = t(318713),
+    c = t(123145),
+    d = t(592125),
+    m = t(182763);
+let h = i.memo(function (e) {
     let { message: n } = e,
-        t = (0, o.e7)([h.Z], () => h.Z.getChannel(n.channel_id));
+        t = (0, l.e7)([d.Z], () => d.Z.getChannel(n.channel_id));
     return null == t
         ? null
         : (0, r.jsx)('div', {
-              className: p.messageContents,
-              children: (0, r.jsxs)(c.Z.Provider, {
+              className: m.messageContents,
+              children: (0, r.jsxs)(s.Z.Provider, {
                   value: t.guild_id,
                   children: [
-                      (0, r.jsx)(u.Z, { user: n.author }),
+                      (0, r.jsx)(o.Z, { user: n.author }),
                       (0, r.jsx)('div', {
-                          children: (0, r.jsx)(m.Z, {
+                          children: (0, r.jsx)(c.Z, {
                               message: n,
                               channel: t
                           })
                       }),
-                      (0, r.jsx)(d.Z, {
+                      (0, r.jsx)(u.Z, {
                           timestamp: n.timestamp,
-                          className: p.timestamp
+                          className: m.timestamp
                       })
                   ]
               })
           });
 });
-function _(e) {
+function f(e) {
     var n;
     let { item: t, onClose: i } = e,
         l = null === (n = t.sourceMetadata) || void 0 === n ? void 0 : n.message;
-    return (0, r.jsx)(s.ThemeProvider, {
-        theme: f.BR.DARK,
-        children: (e) =>
-            (0, r.jsxs)('div', {
-                className: a()(p.topBar, e),
-                children: [
-                    (0, r.jsx)(s.Button, {
-                        look: s.ButtonLooks.BLANK,
-                        color: s.ButtonColors.CUSTOM,
-                        size: s.ButtonSizes.ICON,
-                        className: p.closeButton,
-                        onClick: i,
-                        children: (0, r.jsx)(s.XLargeIcon, {})
-                    }),
-                    null != l && (0, r.jsx)(g, { message: l })
-                ]
-            })
+    return (0, r.jsxs)('div', {
+        className: m.topBar,
+        children: [
+            (0, r.jsx)(a.Button, {
+                look: a.ButtonLooks.BLANK,
+                color: a.ButtonColors.CUSTOM,
+                size: a.ButtonSizes.ICON,
+                className: m.closeButton,
+                onClick: i,
+                children: (0, r.jsx)(a.XLargeIcon, {})
+            }),
+            null != l && (0, r.jsx)(h, { message: l })
+        ]
     });
 }

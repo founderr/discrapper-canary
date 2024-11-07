@@ -1,136 +1,138 @@
 t(47120);
 var r = t(200651),
     i = t(192379),
-    l = t(481060),
-    a = t(346610),
-    o = t(868643),
-    s = t(912332),
-    u = t(378409),
-    c = t(49012),
-    d = t(358085),
-    m = t(998502),
-    h = t(212459),
-    f = t(701865),
-    p = t(388032),
-    g = t(92718);
-function _() {
-    (0, l.closeModal)(f.U);
+    l = t(120356),
+    a = t.n(l),
+    o = t(481060),
+    s = t(346610),
+    u = t(868643),
+    c = t(912332),
+    d = t(378409),
+    m = t(49012),
+    h = t(358085),
+    f = t(998502),
+    p = t(212459),
+    g = t(701865),
+    _ = t(388032),
+    x = t(92718);
+function C() {
+    (0, o.closeModal)(g.U);
 }
-function x(e) {
-    let { onClick: n, tooltipText: t, children: i, ...a } = e;
-    return (0, r.jsx)(l.Tooltip, {
+function S(e) {
+    let { onClick: n, tooltipText: t, children: i, selected: l, ...s } = e;
+    return (0, r.jsx)(o.Tooltip, {
         text: t,
         children: (e) => {
             let { ...t } = e;
-            return (0, r.jsx)(l.Button, {
+            return (0, r.jsx)(o.Button, {
                 ...t,
                 onClick: n,
-                look: l.ButtonLooks.BLANK,
-                size: l.ButtonSizes.ICON,
-                color: l.ButtonColors.CUSTOM,
-                className: g.actionButton,
-                ...a,
+                look: o.ButtonLooks.BLANK,
+                size: o.ButtonSizes.ICON,
+                color: o.ButtonColors.CUSTOM,
+                className: a()(x.actionButton, { [x.selected]: l }),
+                ...s,
                 children: i
             });
         }
     });
 }
-function C() {
-    let { zoomed: e, setZoomed: n } = (0, h.Y)();
-    return (0, r.jsx)(x, {
+function v() {
+    let { zoomed: e, setZoomed: n } = (0, p.Y)();
+    return (0, r.jsx)(S, {
         onClick: () => n(!e),
-        tooltipText: e ? p.intl.string(p.t.vOFof3) : p.intl.string(p.t.Kt4gZ2),
-        children: e ? (0, r.jsx)(l.MagnifyingGlassMinusIcon, {}) : (0, r.jsx)(l.MagnifyingGlassPlusIcon, {})
-    });
-}
-function S(e) {
-    var n, t;
-    let { item: u } = e,
-        c = null === (n = u.sourceMetadata) || void 0 === n ? void 0 : n.message,
-        d = null === (t = u.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
-        m = i.useCallback(() => {
-            if (null != c && null != d) {
-                if ('embed' === d.type) {
-                    (0, s.l8)({
-                        messageId: c.id,
-                        channelId: c.channel_id,
-                        message: c,
-                        source: 'media-viewer',
-                        forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
-                        onRequestSent: _
-                    });
-                    return;
-                }
-                (0, s.l8)({
-                    messageId: c.id,
-                    channelId: c.channel_id,
-                    message: c,
-                    source: 'media-viewer',
-                    forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
-                    onRequestSent: _
-                });
-            }
-        }, [c, d]),
-        { canForwardMessages: h } = (0, a.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return null != c && h && (0, o.h)(c)
-        ? (0, r.jsx)(x, {
-              onClick: m,
-              tooltipText: p.intl.string(p.t.I3ltXF),
-              children: (0, r.jsx)(l.ArrowAngleRightUpIcon, {})
-          })
-        : null;
-}
-function v(e) {
-    let { item: n } = e;
-    if (!('VIDEO' === n.type || (d.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, u.gS)(n.url)))) return null;
-    let t = (0, u.s$)(n.url);
-    async function i() {
-        if (('VIDEO' === n.type && (0, c.q)({ href: t }), 'IMAGE' === n.type))
-            try {
-                await m.ZP.saveImage(t);
-            } catch (e) {
-                (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
-            }
-    }
-    return (0, r.jsx)(x, {
-        onClick: i,
-        tooltipText: p.intl.string(p.t['1WjMbG']),
-        children: (0, r.jsx)(l.DownloadIcon, {})
+        tooltipText: e ? _.intl.string(_.t.vOFof3) : _.intl.string(_.t.Kt4gZ2),
+        children: e ? (0, r.jsx)(o.MagnifyingGlassMinusIcon, {}) : (0, r.jsx)(o.MagnifyingGlassPlusIcon, {})
     });
 }
 function E(e) {
-    var n;
-    let { item: t } = e;
-    if (!(0, u.Jj)(t.url)) return null;
-    let i = (0, u.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
-    return (0, r.jsx)(x, {
-        onClick: () => (0, c.q)({ href: i }),
-        tooltipText: p.intl.string(p.t.wuRE8P),
-        children: (0, r.jsx)(l.WindowLaunchIcon, {})
-    });
+    var n, t;
+    let { item: l } = e,
+        a = null === (n = l.sourceMetadata) || void 0 === n ? void 0 : n.message,
+        d = null === (t = l.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
+        m = i.useCallback(() => {
+            if (null != a && null != d) {
+                if ('embed' === d.type) {
+                    (0, c.l8)({
+                        messageId: a.id,
+                        channelId: a.channel_id,
+                        message: a,
+                        source: 'media-viewer',
+                        forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
+                        onRequestSent: C
+                    });
+                    return;
+                }
+                (0, c.l8)({
+                    messageId: a.id,
+                    channelId: a.channel_id,
+                    message: a,
+                    source: 'media-viewer',
+                    forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
+                    onRequestSent: C
+                });
+            }
+        }, [a, d]),
+        { canForwardMessages: h } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return null != a && h && (0, u.h)(a)
+        ? (0, r.jsx)(S, {
+              onClick: m,
+              tooltipText: _.intl.string(_.t.I3ltXF),
+              children: (0, r.jsx)(o.ArrowAngleRightUpIcon, {})
+          })
+        : null;
 }
 function L(e) {
-    let { item: n, canCopyImage: t, canCopyLink: i, onClose: a, onSelect: o } = e;
+    let { item: n } = e;
+    if (!('VIDEO' === n.type || (h.isPlatformEmbedded && null == n.children && 'IMAGE' === n.type && (0, d.gS)(n.url)))) return null;
+    let t = (0, d.s$)(n.url);
+    async function i() {
+        if (('VIDEO' === n.type && (0, m.q)({ href: t }), 'IMAGE' === n.type))
+            try {
+                await f.ZP.saveImage(t);
+            } catch (e) {
+                (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.R0RpRU), o.ToastType.FAILURE));
+            }
+    }
+    return (0, r.jsx)(S, {
+        onClick: i,
+        tooltipText: _.intl.string(_.t['1WjMbG']),
+        children: (0, r.jsx)(o.DownloadIcon, {})
+    });
+}
+function y(e) {
+    var n;
+    let { item: t } = e;
+    if (!(0, d.Jj)(t.url)) return null;
+    let i = (0, d.s$)(null !== (n = t.original) && void 0 !== n ? n : t.url);
+    return (0, r.jsx)(S, {
+        onClick: () => (0, m.q)({ href: i }),
+        tooltipText: _.intl.string(_.t.wuRE8P),
+        children: (0, r.jsx)(o.WindowLaunchIcon, {})
+    });
+}
+function I(e) {
+    let { item: n, canCopyImage: t, canCopyLink: i, onClose: l, onSelect: a } = e;
     async function s() {
-        let e = (0, u.s$)(n.url);
+        let e = (0, d.s$)(n.url);
         try {
-            await m.ZP.copyImage(e), (0, l.showToast)((0, l.createToast)(p.intl.string(p.t['t5VZ8/']), l.ToastType.SUCCESS));
+            await f.ZP.copyImage(e), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t['t5VZ8/']), o.ToastType.SUCCESS));
         } catch (e) {
-            (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.R0RpRU), o.ToastType.FAILURE));
         }
     }
-    return (0, r.jsx)(l.Menu, {
+    return (0, r.jsx)(o.Menu, {
         navId: 'image-menu',
         'aria-label': 'placeholder',
-        onClose: a,
-        onSelect: o,
-        children: (0, r.jsxs)(l.MenuGroup, {
+        onClose: l,
+        onSelect: a,
+        children: (0, r.jsxs)(o.MenuGroup, {
             children: [
                 t &&
                     (0, r.jsx)(
-                        l.MenuItem,
+                        o.MenuItem,
                         {
-                            label: p.intl.string(p.t.tvUqWl),
+                            label: _.intl.string(_.t.tvUqWl),
                             id: 'media-viewer-copy-image',
                             action: s
                         },
@@ -138,17 +140,17 @@ function L(e) {
                     ),
                 i &&
                     (0, r.jsx)(
-                        l.MenuItem,
+                        o.MenuItem,
                         {
                             id: 'media-viewer-copy-link',
-                            label: p.intl.string(p.t.WqhZsr),
+                            label: _.intl.string(_.t.WqhZsr),
                             action: function () {
                                 var e;
-                                let t = (0, u.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
+                                let t = (0, d.s$)(null !== (e = n.original) && void 0 !== e ? e : n.url);
                                 try {
-                                    d.isPlatformEmbedded ? m.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, l.showToast)((0, l.createToast)(p.intl.string(p.t['L/PwZW']), l.ToastType.SUCCESS));
+                                    h.isPlatformEmbedded ? f.ZP.copy(t) : window.navigator.clipboard.writeText(t), (0, o.showToast)((0, o.createToast)(_.intl.string(_.t['L/PwZW']), o.ToastType.SUCCESS));
                                 } catch (e) {
-                                    (0, l.showToast)((0, l.createToast)(p.intl.string(p.t.R0RpRU), l.ToastType.FAILURE));
+                                    (0, o.showToast)((0, o.createToast)(_.intl.string(_.t.R0RpRU), o.ToastType.FAILURE));
                                 }
                             }
                         },
@@ -158,30 +160,31 @@ function L(e) {
         })
     });
 }
-function y(e) {
+function A(e) {
     let { item: n } = e,
-        [t, a] = i.useState(!1),
-        o = 'IMAGE' === n.type && d.isPlatformEmbedded && null == n.children && m.ZP.canCopyImage() && (0, u.Lz)(n.url),
-        s = (0, u.Jj)(n.url);
-    return o || s
-        ? (0, r.jsx)(l.Popout, {
+        [t, l] = i.useState(!1),
+        a = 'IMAGE' === n.type && h.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        s = (0, d.Jj)(n.url);
+    return a || s
+        ? (0, r.jsx)(o.Popout, {
               shouldShow: t,
               align: 'left',
               position: 'top',
               spacing: 18,
               renderPopout: () =>
-                  (0, r.jsx)(L, {
+                  (0, r.jsx)(I, {
                       item: n,
-                      canCopyImage: o,
+                      canCopyImage: a,
                       canCopyLink: s,
-                      onClose: () => a(!1)
+                      onClose: () => l(!1)
                   }),
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, r.jsx)(x, {
-                      tooltipText: p.intl.string(p.t.UKOtz8),
-                      onClick: () => a(!t),
-                      children: (0, r.jsx)(l.MoreHorizontalIcon, {})
+                  return (0, r.jsx)(S, {
+                      tooltipText: _.intl.string(_.t.UKOtz8),
+                      onClick: () => l(!t),
+                      selected: t,
+                      children: (0, r.jsx)(o.MoreHorizontalIcon, {})
                   });
               }
           })
@@ -190,12 +193,12 @@ function y(e) {
 n.Z = i.memo(function (e) {
     let { item: n, hideMediaOptions: t } = e;
     return (0, r.jsxs)('div', {
-        className: g.actionButtons,
+        className: x.actionButtons,
         children: [
-            (0, r.jsx)(C, {}),
+            (0, r.jsx)(v, {}),
             !t &&
                 (0, r.jsxs)(r.Fragment, {
-                    children: [(0, r.jsx)(S, { item: n }), (0, r.jsx)(v, { item: n }), (0, r.jsx)(E, { item: n }), (0, r.jsx)(y, { item: n })]
+                    children: [(0, r.jsx)(E, { item: n }), (0, r.jsx)(L, { item: n }), (0, r.jsx)(y, { item: n }), (0, r.jsx)(A, { item: n })]
                 })
         ]
     });
