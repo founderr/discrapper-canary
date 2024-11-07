@@ -12,7 +12,6 @@ e.exports = {
     videoFooterContGradient: 'videoFooterContGradient_c73f92',
     videoControlsCont: 'videoControlsCont_c73f92',
     videoControlsGroup: 'videoControlsGroup_c73f92',
-    videoControlsGroupStart: 'videoControlsGroupStart_c73f92',
     videoControlsGroupMid: 'videoControlsGroupMid_c73f92',
     videoControlsGroupEnd: 'videoControlsGroupEnd_c73f92',
     videoControlsBtnCont: 'videoControlsBtnCont_c73f92',

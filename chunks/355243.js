@@ -20,52 +20,65 @@ function p(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function f(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: x, onClick: g, onScrubBack: h, onScrubForward: E } = e,
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: g, onClick: x, onScrubBack: h, onScrubForward: E } = e,
         [S, _] = o.useState(null),
         [j, T] = o.useState(null),
         [N, I] = o.useState(null),
-        [b, y] = o.useState(!1);
+        [b, y] = o.useState(!1),
+        B = o.useRef(null),
+        D = (e) => {
+            (B.current = e), _(e);
+        };
     o.useEffect(() => {
-        if (null != S) null == x ? I(null) : I(p(x, C, S));
-    }, [S, x, C]);
-    let D = (0, s.y)(() => {
-            if (null != D.current) _(D.current.getBoundingClientRect());
-        }),
-        B = (e) => {
+        null != S && (null == g ? I(null) : I(p(g, C, S)));
+    }, [S, g, C]);
+    let k = (0, s.y)(() => {
+        if (null != k.current) D(k.current.getBoundingClientRect());
+    });
+    o.useLayoutEffect(() => {
+        null != k.current && D(k.current.getBoundingClientRect());
+    }, [k]),
+        o.useEffect(() => {
+            let e = () => {
+                null != k.current && D(k.current.getBoundingClientRect());
+            };
+            return window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
+        }, [k]);
+    let A = (e) => {
             T(e.clientX);
         },
-        k = o.useCallback(
+        L = o.useCallback(
             (e) => {
                 let { key: t } = e;
                 t === u.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === u.mR.ArrowRight && null != E && (e.preventDefault(), e.stopPropagation(), E());
             },
             [h, E]
         ),
-        A = null != j && null != S ? m(j, S, C) : 0,
-        L = (0, c.yv)(A),
-        M = null != S ? S.right - p((t / 100) * C, C, S) : null,
-        O = null != j && null != S ? S.right - j : null,
-        P = null != N && null != S ? S.right - N : null;
+        M = null != j && null != S ? m(j, S, C) : 0,
+        O = (0, c.yv)(M),
+        P = null != S ? S.right - p((t / 100) * C, C, S) : null,
+        R = null != j && null != S ? S.right - j : null,
+        w = null != N && null != S ? S.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
-        ref: D,
+        ref: k,
         children: [
             (0, r.jsxs)(a.Clickable, {
                 className: l()(d.hitboxArea, { [d.interactionEnabled]: i }),
                 ignoreKeyPress: !0,
                 onClick: (e) => {
-                    if (!!i && null != g) g(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
+                    if (!!i && null != x) x(m(e.clientX, e.currentTarget.getBoundingClientRect(), C));
                 },
                 onMouseEnter: (e) => {
-                    if (!!i) y(!0), B(e);
+                    if (!!i) null != k.current && D(k.current.getBoundingClientRect()), y(!0), A(e);
                 },
                 onMouseLeave: (e) => {
                     if (!!i) y(!1), T(null);
                 },
                 onMouseMove: (e) => {
-                    if (!!i) b && B(e);
+                    if (!!i) b && A(e);
                 },
-                onKeyDown: k,
+                onKeyDown: L,
                 tabIndex: i ? void 0 : -1,
                 focusProps: {
                     offset: {
@@ -90,13 +103,13 @@ function f(e) {
                               )
                           ),
                     !i &&
-                        null != P &&
-                        P > 0 &&
+                        null != w &&
+                        w > 0 &&
                         (0, r.jsx)('div', {
                             className: d.seekableBar,
                             style: {
-                                right: null != P ? ''.concat(P, 'px') : 'auto',
-                                opacity: null != P ? 1 : 0
+                                right: null != w ? ''.concat(w, 'px') : 'auto',
+                                opacity: null != w ? 1 : 0
                             }
                         }),
                     (0, r.jsx)(a.Progress, {
@@ -108,18 +121,19 @@ function f(e) {
                         animate: n
                     }),
                     b &&
-                        null != L &&
+                        null != O &&
                         (0, r.jsx)(a.Text, {
                             className: d.timeDisplay,
                             variant: 'text-xs/normal',
-                            style: { right: null != O ? ''.concat(O - 10, 'px') : 'auto' },
-                            children: L
+                            style: { right: null != R ? ''.concat(R - 10, 'px') : 'auto' },
+                            children: O
                         }),
                     b &&
                         i &&
+                        null != P &&
                         (0, r.jsx)('div', {
                             className: d.grabber,
-                            style: { right: null != M ? ''.concat(M - 6, 'px') : 'auto' }
+                            style: { right: ''.concat(P - 6, 'px') }
                         })
                 ]
             }),
