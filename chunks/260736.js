@@ -6,58 +6,67 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(739566),
-    a = n(942951),
-    o = n(834129),
-    s = n(388032),
-    c = n(116264);
+    l = n(447564),
+    a = n(739566),
+    o = n(942951),
+    s = n(834129),
+    c = n(388032),
+    d = n(116264);
 function u(e) {
-    let { compact: t, message: n, channel: u } = e,
-        d = (0, l.ZP)(n),
-        m = (0, a.l)({
-            user: n.author,
-            channelId: n.channel_id,
-            guildId: u.guild_id,
-            messageId: n.id
-        })(d);
+    let { compact: t, message: u, channel: m } = e,
+        h = (0, a.ZP)(u),
+        f = (0, o.l)({
+            user: u.author,
+            channelId: u.channel_id,
+            guildId: m.guild_id,
+            messageId: u.id
+        })(h);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(o.Z, {
-                timestamp: n.timestamp,
+            (0, i.jsx)(s.Z, {
+                timestamp: u.timestamp,
                 compact: t,
-                iconNode: (0, i.jsx)(r.HdIcon, {
-                    size: 'md',
-                    colorClass: 'currentColor',
-                    className: c.icon
-                }),
                 children: (0, i.jsx)('div', {
-                    className: c.parentContainer,
-                    children: s.intl.format(s.t['5bYXjo'], {
-                        actorName: d.nick,
-                        actorHook: m
+                    className: d.parentContainer,
+                    children: c.intl.format(c.t['5bYXjo'], {
+                        actorName: h.nick,
+                        actorHook: f
                     })
                 })
             }),
             (0, i.jsxs)(r.Clickable, {
-                className: c.embed,
+                onClick: () => {
+                    (0, r.openModalLazy)(
+                        async () => {
+                            let { default: e } = await Promise.resolve().then(n.bind(n, 447564));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    channel: m,
+                                    ...t
+                                });
+                        },
+                        { modalKey: l.HD_STREAMING_POTION_MODAL_KEY }
+                    );
+                },
+                className: d.embed,
                 children: [
                     (0, i.jsx)('img', {
                         src: 'https://cdn.discordapp.com/assets/shop/images/potion.png',
-                        alt: s.intl.string(s.t.N6rchI)
+                        alt: c.intl.string(c.t.N6rchI)
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.text,
+                        className: d.text,
                         children: [
                             (0, i.jsx)(r.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/semibold',
-                                className: c.title,
-                                children: s.intl.string(s.t.AeU3uL)
+                                className: d.title,
+                                children: c.intl.string(c.t.AeU3uL)
                             }),
                             (0, i.jsx)(r.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: s.intl.string(s.t['UoHq/f'])
+                                children: c.intl.string(c.t['UoHq/f'])
                             })
                         ]
                     })

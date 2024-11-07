@@ -1,157 +1,157 @@
 n.r(t),
     n.d(t, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return E;
+            return N;
         },
         default: function () {
-            return I;
+            return x;
         }
     }),
     n(47120);
 var i = n(200651),
-    l = n(192379),
-    a = n(442837),
-    r = n(481060),
-    s = n(100527),
-    o = n(906732),
+    r = n(192379),
+    l = n(442837),
+    a = n(481060),
+    o = n(100527),
+    s = n(906732),
     c = n(335131),
     d = n(120619),
     u = n(690221),
-    h = n(333867),
-    p = n(422034),
-    m = n(938475),
-    f = n(937615),
-    g = n(981631),
-    C = n(215023),
-    x = n(388032),
-    v = n(912568),
-    _ = n(99713);
-function I(e) {
+    m = n(333867),
+    h = n(422034),
+    f = n(938475),
+    p = n(937615),
+    _ = n(981631),
+    g = n(215023),
+    E = n(388032),
+    C = n(912568),
+    I = n(99713);
+function x(e) {
     let { transitionState: t, channel: n } = e;
-    return (0, i.jsx)(r.ModalRoot, {
-        size: r.ModalSize.DYNAMIC,
+    return (0, i.jsx)(a.ModalRoot, {
+        size: a.ModalSize.DYNAMIC,
         transitionState: t,
-        children: (0, i.jsx)(b, { channel: n })
+        children: (0, i.jsx)(v, { channel: n })
     });
 }
-let E = 'HD_STREAMING_POTION_MODAL_KEY';
-function b(e) {
+let N = 'HD_STREAMING_POTION_MODAL_KEY';
+function v(e) {
     let { channel: t } = e,
-        n = m.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        [I, b, N, Z, T, S] = (0, a.Wu)([d.Z], () => [d.Z.isFetchingPrice(C.FX), d.Z.isEntitlementFetched(C.FX), d.Z.isEntitlementFetching(C.FX), d.Z.getPrice(C.FX), d.Z.getErrored(C.FX), d.Z.getEntitlement(C.FX)]),
-        { analyticsLocations: j } = (0, o.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        A = null != S && !S.consumed && S.type === g.qc2.DEVELOPER_GIFT;
-    l.useEffect(() => {
-        null != S && !1 === S.consumed && S.type !== g.qc2.DEVELOPER_GIFT && (0, c.Zu)(t.id);
-    }, [S, t]),
-        l.useEffect(
+        n = f.ZP.getVoiceStatesForChannel(t).slice(0, 6),
+        [x, v, T, S, A, b] = (0, l.Wu)([d.Z], () => [d.Z.isFetchingPrice(g.FX), d.Z.isEntitlementFetched(g.FX), d.Z.isEntitlementFetching(g.FX), d.Z.getPrice(g.FX), d.Z.getErrored(g.FX), d.Z.getEntitlement(g.FX)]),
+        { analyticsLocations: j } = (0, s.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
+        Z = null != b && !b.consumed && b.type === _.qc2.DEVELOPER_GIFT;
+    r.useEffect(() => {
+        null != b && !1 === b.consumed && b.type !== _.qc2.DEVELOPER_GIFT && (0, c.Zu)(t.id);
+    }, [b, t]),
+        r.useEffect(
             () => () => {
-                (0, c.SN)(C.FX);
+                (0, c.SN)(g.FX);
             },
             []
         ),
-        l.useEffect(() => {
-            !I && null == Z && !T && (0, c.Gq)(C.FX);
-        }, [I, Z, T]),
-        l.useEffect(() => {
-            !b && !N && (0, c.gA)(C.FX);
-        }, [b, N]);
-    let y = () => {
-            (0, r.closeModal)(E);
+        r.useEffect(() => {
+            !x && null == S && !A && (0, c.Gq)(g.FX);
+        }, [x, S, A]),
+        r.useEffect(() => {
+            !v && !T && (0, c.gA)(g.FX);
+        }, [v, T]);
+    let R = () => {
+            (0, a.closeModal)(N);
         },
-        P = n.map((e, t) => {
-            let { user: l } = e;
+        L = n.map((e, t) => {
+            let { user: r } = e;
             return (0, i.jsx)(
-                p.O,
+                h.O,
                 {
-                    affinity: l,
+                    affinity: r,
                     applyMask: t !== n.length - 1,
-                    size: r.AvatarSizes.SIZE_20
+                    size: a.AvatarSizes.SIZE_20
                 },
-                l.id
+                r.id
             );
         });
-    return T
+    return A
         ? (0, i.jsx)('div', {
-              className: v.anomaly,
+              className: C.anomaly,
               children: (0, i.jsxs)('div', {
-                  className: v.error,
+                  className: C.error,
                   children: [
-                      (0, i.jsx)(r.Image, {
-                          src: _,
+                      (0, i.jsx)(a.Image, {
+                          src: I,
                           width: 178,
                           height: 190
                       }),
-                      (0, i.jsx)(r.Text, {
+                      (0, i.jsx)(a.Text, {
                           variant: 'text-md/normal',
-                          children: x.intl.string(x.t.sIA0OD)
+                          children: E.intl.string(E.t.sIA0OD)
                       })
                   ]
               })
           })
-        : null == Z
+        : null == S
           ? (0, i.jsx)('div', {
-                className: v.anomaly,
+                className: C.anomaly,
                 children: (0, i.jsx)('div', {
-                    className: v.spinner,
-                    children: (0, i.jsx)(r.Spinner, {})
+                    className: C.spinner,
+                    children: (0, i.jsx)(a.Spinner, {})
                 })
             })
           : (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: v.modal,
+                        className: C.modal,
                         children: [
                             (0, i.jsx)('img', {
-                                className: v.image,
+                                className: C.image,
                                 src: 'https://cdn.discordapp.com/assets/content/5e2cb8d8137c2e5caecabaa7659295c2d443086ae7141bdc9e35a4825b47bdd7.png',
-                                alt: x.intl.string(x.t.DdigcX)
+                                alt: E.intl.string(E.t.DdigcX)
                             }),
                             (0, i.jsxs)('div', {
-                                className: v.body,
+                                className: C.body,
                                 children: [
-                                    (0, i.jsx)(r.Heading, {
+                                    (0, i.jsx)(a.Heading, {
                                         variant: 'heading-lg/bold',
-                                        children: x.intl.string(x.t.K04rOD)
+                                        children: E.intl.string(E.t.K04rOD)
                                     }),
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
-                                        children: x.intl.string(x.t.xwRQWl)
+                                        children: E.intl.string(E.t.xwRQWl)
                                     }),
                                     (0, i.jsx)(u.Z, {
                                         onClick: () => {},
-                                        children: (0, i.jsx)(r.Text, {
+                                        children: (0, i.jsx)(a.Text, {
                                             color: 'text-link',
                                             variant: 'text-xs/medium',
-                                            children: x.intl.string(x.t.sxVfiY)
+                                            children: E.intl.string(E.t.sxVfiY)
                                         })
                                     })
                                 ]
                             }),
-                            (0, i.jsx)('div', { className: v.divider }),
+                            (0, i.jsx)('div', { className: C.divider }),
                             (0, i.jsxs)('div', {
-                                className: v.applyingTo,
+                                className: C.applyingTo,
                                 children: [
-                                    (0, i.jsx)(r.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'eyebrow',
-                                        children: x.intl.string(x.t.tZyXg4)
+                                        children: E.intl.string(E.t.tZyXg4)
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: v.channel,
+                                        className: C.channel,
                                         children: [
                                             (0, i.jsxs)('div', {
-                                                className: v.channelLeft,
+                                                className: C.channelLeft,
                                                 children: [
-                                                    (0, i.jsx)(r.VoiceNormalIcon, {}),
-                                                    (0, i.jsx)(r.Text, {
+                                                    (0, i.jsx)(a.VoiceNormalIcon, {}),
+                                                    (0, i.jsx)(a.Text, {
                                                         variant: 'text-md/normal',
                                                         children: t.name
                                                     })
                                                 ]
                                             }),
                                             (0, i.jsx)('div', {
-                                                className: v.avatars,
-                                                children: P
+                                                className: C.avatars,
+                                                children: L
                                             })
                                         ]
                                     })
@@ -160,25 +160,28 @@ function b(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: v.footer,
+                        className: C.footer,
                         children: [
-                            (0, i.jsx)(r.Button, {
-                                color: r.Button.Colors.PRIMARY,
-                                children: x.intl.string(x.t.Avt5KS)
-                            }),
-                            (0, i.jsx)(r.Button, {
+                            (0, i.jsx)(a.Button, {
                                 onClick: () => {
-                                    if (A) {
-                                        (0, c.Zu)(t.id), (0, r.closeModal)(E);
+                                    (0, a.closeModal)(N);
+                                },
+                                color: a.Button.Colors.PRIMARY,
+                                children: E.intl.string(E.t.Avt5KS)
+                            }),
+                            (0, i.jsx)(a.Button, {
+                                onClick: () => {
+                                    if (Z) {
+                                        (0, c.Zu)(t.id), (0, a.closeModal)(N);
                                         return;
                                     }
-                                    (0, h.Z)({
-                                        skuId: C.FX,
+                                    (0, m.Z)({
+                                        skuId: g.FX,
                                         analyticsLocations: j,
-                                        onComplete: y
+                                        onComplete: R
                                     });
                                 },
-                                children: A ? x.intl.string(x.t.sl6Tcn) : x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, f.T4)(Z.amount, Z.currency) })
+                                children: Z ? E.intl.string(E.t.sl6Tcn) : E.intl.formatToPlainString(E.t.S9LAdX, { price: (0, p.T4)(S.amount, S.currency) })
                             })
                         ]
                     })
