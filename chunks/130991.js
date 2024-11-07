@@ -36,60 +36,70 @@ function P(e) {
     var t, n, l, c, h;
     let { subscription: g, navigateToSwitchPlan: C } = e,
         A = null === (t = g.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        { renewalMutations: v, planId: P } = g,
         {
-            appId: v,
-            plan: P,
-            storeListing: F,
-            price: M,
-            isGuildSubscription: k,
-            subscriptionForGuild: w,
-            sku: U
+            appId: M,
+            plan: k,
+            storeListing: w,
+            price: U,
+            isGuildSubscription: V,
+            subscriptionForGuild: G,
+            sku: Y,
+            isCancelled: H,
+            renewalPlan: z
         } = (0, a.cj)(
             [E.Z, f.Z, I.Z, _.Z],
             () => {
-                let e = g.planId,
-                    t = E.Z.get(e),
-                    n = null != t ? f.Z.get(t.skuId) : null,
+                let e;
+                let t = E.Z.get(P),
+                    n = null != t ? f.Z.get(t.skuId) : void 0,
                     i = null == n ? void 0 : n.applicationId,
                     s = null != t ? I.Z.getForSKU(t.skuId) : null,
                     r = null != t ? (0, N.og)((0, N.T4)(t.price, t.currency), t.interval, t.intervalCount) : null,
                     l = null != s && (0, b.KK)(s.skuFlags),
-                    a = l && null != A ? _.Z.getGuild(A) : void 0;
+                    a = l && null != A ? _.Z.getGuild(A) : void 0,
+                    o = (0, b.Jf)(g, n);
+                if (!1 === o && null != v && v.items.length > 0) {
+                    var c;
+                    let t = v.items[0];
+                    e = null !== (c = E.Z.get(t.planId)) && void 0 !== c ? c : void 0;
+                }
                 return {
                     appId: i,
                     isGuildSubscription: l,
                     plan: t,
                     price: r,
-                    sku: null != n ? n : void 0,
+                    sku: n,
                     storeListing: s,
-                    subscriptionForGuild: a
+                    subscriptionForGuild: a,
+                    isCancelled: o,
+                    renewalPlan: e
                 };
             },
-            [A, g.planId]
+            [A, P, v, g]
         ),
-        { data: V } = (0, p.IX)(v),
-        G = s.useMemo(() => (null != V ? (0, m.y)(V, 100) : null), [V]),
-        Y = null !== (n = null == U ? void 0 : U.deleted) && void 0 !== n && n,
-        H = null != U && (0, b.OL)(U),
-        z = (0, b.Jf)(g, U),
-        W = g.status === j.O0b.PAST_DUE,
-        { analyticsLocations: K } = (0, u.ZP)(),
-        [q] = (0, S.ED)({
+        { data: W } = (0, p.IX)(M),
+        K = s.useMemo(() => (null != W ? (0, m.y)(W, 100) : null), [W]),
+        q = null !== (n = null == Y ? void 0 : Y.deleted) && void 0 !== n && n,
+        Q = null != Y && (0, b.OL)(Y),
+        X = g.status === j.O0b.PAST_DUE,
+        { analyticsLocations: J } = (0, u.ZP)(),
+        [$] = (0, S.ED)({
             subscriptionId: g.id,
             renewal: !0,
-            analyticsLocations: K,
+            analyticsLocations: J,
             analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        Q = y(g.currentPeriodEnd);
+        ee = B(g.currentPeriodEnd);
     return (0, i.jsxs)(r.l, {
         header: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
                     className: R.headerContent,
                     children: [
-                        null != G &&
+                        null != K &&
                             (0, i.jsx)(o.Image, {
-                                src: G.href,
+                                src: K.href,
                                 imageClassName: R.appIcon,
                                 width: 40,
                                 height: 40
@@ -98,12 +108,12 @@ function P(e) {
                             children: [
                                 (0, i.jsx)(o.Heading, {
                                     variant: 'heading-md/semibold',
-                                    children: null !== (l = null == V ? void 0 : V.name) && void 0 !== l ? l : O.intl.string(O.t['7kqy7e'])
+                                    children: null !== (l = null == W ? void 0 : W.name) && void 0 !== l ? l : O.intl.string(O.t['7kqy7e'])
                                 }),
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: null !== (c = null == P ? void 0 : P.name) && void 0 !== c ? c : O.intl.string(O.t.sqkbMD)
+                                    children: null !== (c = null == k ? void 0 : k.name) && void 0 !== c ? c : O.intl.string(O.t.sqkbMD)
                                 })
                             ]
                         })
@@ -112,54 +122,54 @@ function P(e) {
                 (0, i.jsx)('div', {
                     className: R.headerButtons,
                     children:
-                        null != V &&
-                        null != F &&
-                        null != U &&
-                        (0, i.jsx)(L, {
+                        null != W &&
+                        null != w &&
+                        null != Y &&
+                        (0, i.jsx)(Z, {
                             subscription: g,
-                            app: V,
-                            sku: U,
-                            storeListing: F,
-                            isCancelled: z,
+                            app: W,
+                            sku: Y,
+                            storeListing: w,
+                            isCancelled: H,
                             navigateToSwitchPlan: C
                         })
                 })
             ]
         }),
         children: [
-            z &&
-                (0, i.jsx)(B, {
+            H &&
+                (0, i.jsx)(L, {
                     type: 'warning',
-                    title: H ? O.intl.formatToPlainString(O.t.QOnM19, { subscriptionPeriodEnd: Q }) : O.intl.formatToPlainString(O.t.HOaZu7, { subscriptionPeriodEnd: Q })
+                    title: Q ? O.intl.formatToPlainString(O.t.QOnM19, { subscriptionPeriodEnd: ee }) : O.intl.formatToPlainString(O.t.HOaZu7, { subscriptionPeriodEnd: ee })
                 }),
-            W &&
-                (0, i.jsx)(B, {
+            X &&
+                (0, i.jsx)(L, {
                     type: 'danger',
                     title: O.intl.string(O.t.fvOqBg)
                 }),
             (0, i.jsxs)('div', {
                 className: R.details,
                 children: [
-                    (0, i.jsx)(D, {
+                    (0, i.jsx)(y, {
                         title: O.intl.string(O.t['5D/KEB']),
-                        content: k
+                        content: V
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsxs)('span', {
                                           className: R.subscriptionTypeRow,
                                           children: [(0, i.jsx)(o.ServerIcon, { size: 'xs' }), O.intl.string(O.t.QjL3vr)]
                                       }),
-                                      null != w &&
+                                      null != G &&
                                           (0, i.jsxs)('span', {
                                               className: R.guildSubscriptionContentRow,
                                               children: [
                                                   (0, i.jsx)(o.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
-                                                      children: O.intl.format(O.t['7ZD8p6'], { guildName: w.name })
+                                                      children: O.intl.format(O.t['7ZD8p6'], { guildName: G.name })
                                                   }),
                                                   (0, i.jsx)(x.Z, {
-                                                      guild: w,
+                                                      guild: G,
                                                       size: x.Z.Sizes.MINI
                                                   })
                                               ]
@@ -171,18 +181,19 @@ function P(e) {
                                   children: [(0, i.jsx)(o.UserIcon, { size: 'xs' }), O.intl.string(O.t['6anEVl'])]
                               })
                     }),
-                    null != M &&
-                        (0, i.jsx)(D, {
+                    null != U &&
+                        (0, i.jsx)(y, {
                             title: O.intl.string(O.t.KI7ER0),
-                            content: M
+                            content: U
                         }),
-                    (0, i.jsx)(D, {
+                    (0, i.jsx)(y, {
                         title: O.intl.string(O.t.dnUzb2),
-                        content: y(null !== (h = g.createdAt) && void 0 !== h ? h : g.currentPeriodStart)
+                        content: B(null !== (h = g.createdAt) && void 0 !== h ? h : g.currentPeriodStart)
                     }),
                     (0, i.jsx)(D, {
-                        title: z ? O.intl.string(O.t.enxcAg) : O.intl.string(O.t['Ms+6Zm']),
-                        content: Q
+                        isCancelled: H,
+                        subscriptionPeriodEnd: ee,
+                        renewalPlan: z
                     })
                 ]
             }),
@@ -190,25 +201,53 @@ function P(e) {
                 className: R.payment,
                 children: [
                     (0, i.jsx)(o.FormTitle, { children: O.intl.string(O.t.azZaZW) }),
-                    null != q &&
+                    null != $ &&
                         (0, i.jsx)(T.Z, {
                             subscription: g,
-                            currentInvoicePreview: q,
-                            disabled: Y || z
+                            currentInvoicePreview: $,
+                            disabled: q || H
                         })
                 ]
             }),
-            null != V &&
-                (null == F ? void 0 : F.benefits) != null &&
-                F.benefits.length > 0 &&
-                (0, i.jsx)(Z, {
-                    appId: V.id,
-                    listingBenefits: F.benefits
+            null != W &&
+                (null == w ? void 0 : w.benefits) != null &&
+                w.benefits.length > 0 &&
+                (0, i.jsx)(F, {
+                    appId: W.id,
+                    listingBenefits: w.benefits
                 })
         ]
     });
 }
 function D(e) {
+    let { isCancelled: t, subscriptionPeriodEnd: n, renewalPlan: s } = e;
+    if (null != s) {
+        let e = (0, N.og)((0, N.T4)(s.price, s.currency), s.interval, s.intervalCount);
+        return (0, i.jsx)(y, {
+            title: O.intl.string(O.t.hIhAMz),
+            content: (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)(o.Text, {
+                        variant: 'text-sm/medium',
+                        children: n
+                    }),
+                    (0, i.jsx)(o.Text, {
+                        variant: 'text-sm/normal',
+                        children: O.intl.format(O.t.MCLbvr, {
+                            planName: s.name,
+                            price: e
+                        })
+                    })
+                ]
+            })
+        });
+    }
+    return (0, i.jsx)(y, {
+        title: t ? O.intl.string(O.t.enxcAg) : O.intl.string(O.t['Ms+6Zm']),
+        content: n
+    });
+}
+function y(e) {
     let { title: t, content: n } = e;
     return (0, i.jsxs)('div', {
         className: R.row,
@@ -225,10 +264,10 @@ function D(e) {
         ]
     });
 }
-function y(e) {
+function B(e) {
     return e.toLocaleDateString(void 0, { dateStyle: 'long' });
 }
-function B(e) {
+function L(e) {
     let { type: t, title: n } = e;
     return (0, i.jsx)(o.HelpMessage, {
         messageType: 'warning' === t ? o.HelpMessageTypes.WARNING : o.HelpMessageTypes.ERROR,
@@ -239,7 +278,7 @@ function B(e) {
         })
     });
 }
-function L(e) {
+function Z(e) {
     let { app: t, storeListing: r, sku: l, subscription: d, isCancelled: m, guild: g, navigateToSwitchPlan: p } = e,
         x = (0, b.OL)(l),
         { analyticsLocations: S } = (0, u.ZP)(),
@@ -300,6 +339,7 @@ function L(e) {
                     }),
             A &&
                 null != I &&
+                !1 === m &&
                 (0, i.jsx)(o.Button, {
                     color: o.Button.Colors.BRAND,
                     size: o.Button.Sizes.SMALL,
@@ -317,7 +357,7 @@ function L(e) {
         ]
     });
 }
-function Z(e) {
+function F(e) {
     let { appId: t, listingBenefits: n } = e;
     return (0, i.jsx)(g.Z, {
         children: (e) =>
