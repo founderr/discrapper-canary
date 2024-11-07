@@ -1,18 +1,18 @@
 n.d(t, {
     A7: function () {
-        return y;
+        return Z;
     },
     CI: function () {
-        return L;
+        return y;
     },
     dX: function () {
-        return P;
+        return O;
     },
     j$: function () {
         return r;
     },
     lH: function () {
-        return R;
+        return L;
     }
 });
 var i,
@@ -34,17 +34,16 @@ var i,
     I = n(981631),
     C = n(921944),
     v = n(388032),
-    S = n(938923),
-    N = n(203302);
-let T = 'url(#dark-purple-gradient)';
-function x(e) {
+    S = n(938923);
+let N = 'url(#dark-purple-gradient)';
+function T(e) {
     return e.toLocaleString(m.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
 }
 ((i = r || (r = {})).REFERRAL_PROGRAM = 'referral_program'), (i.TRIAL_FOR_ALL = 'trial_for_all');
-let A = () =>
+let x = () =>
         (0, l.jsxs)('div', {
             className: S.coachtipContent,
             children: [
@@ -58,7 +57,7 @@ let A = () =>
                 })
             ]
         }),
-    b = () =>
+    A = () =>
         (0, l.jsx)('svg', {
             width: '15',
             height: '15',
@@ -70,8 +69,8 @@ let A = () =>
                 fill: 'white'
             })
         }),
-    Z = () => (0, d.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: C.L.TAKE_ACTION }),
-    y = (e) => {
+    b = () => (0, d.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: C.L.TAKE_ACTION }),
+    Z = (e) => {
         let { children: t } = e;
         return (0, l.jsx)(o.Popout, {
             shouldShow: !0,
@@ -79,13 +78,13 @@ let A = () =>
                 (0, l.jsx)(u.Z, {
                     artClassName: S.coachmarkArt,
                     dismissIconClassName: S.exitIcon,
-                    onDismissIconClick: Z,
-                    dismissIcon: (0, l.jsx)(b, {}),
+                    onDismissIconClick: b,
+                    dismissIcon: (0, l.jsx)(A, {}),
                     headerClassName: S.incentiveCoachtipContent,
                     contentClassName: S.incentiveCoachtipContainer,
                     pointerClassName: S.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, h.uL)(I.Z5c.NITRO_HOME), Z();
+                        (0, h.uL)(I.Z5c.NITRO_HOME), b();
                     },
                     art: (0, l.jsx)(l.Fragment, {
                         children: (0, l.jsx)(f.Z, {
@@ -94,8 +93,8 @@ let A = () =>
                             showAnimations: !1,
                             progressCircleVariation: f.Q.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            circleColor: T,
-                            circleStroke: T,
+                            circleColor: N,
+                            circleStroke: N,
                             progressCircleStrokeSize: 4
                         })
                     }),
@@ -111,7 +110,7 @@ let A = () =>
             children: t
         });
     },
-    L = (e) => {
+    y = (e) => {
         let t,
             { children: n, variant: i, trialOffer: r } = e,
             a = 'referral_program' === i;
@@ -132,7 +131,7 @@ let A = () =>
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
-                          (0, l.jsx)(A, {})
+                          (0, l.jsx)(x, {})
                       ]
                   })
                 : (0, l.jsxs)('div', {
@@ -140,9 +139,9 @@ let A = () =>
                       children: [
                           (0, l.jsx)('div', {
                               className: S.t4ACoachtipArtOuterContainer,
-                              children: (0, l.jsx)(j, {})
+                              children: (0, l.jsx)(R, {})
                           }),
-                          (null == r ? void 0 : r.expires_at) != null && (0, l.jsx)(O, { trialExpiration: Date.parse(r.expires_at) })
+                          (0, l.jsx)(j, { trialExpiration: (null == r ? void 0 : r.expires_at) != null ? Date.parse(r.expires_at) : void 0 })
                       ]
                   })),
             (0, l.jsx)(o.Tooltip, {
@@ -160,7 +159,7 @@ let A = () =>
             })
         );
     },
-    R = (e) => {
+    L = (e) => {
         let { isSelected: t, onSelect: n } = e;
         return (
             a.useEffect(() => {
@@ -169,18 +168,20 @@ let A = () =>
             (0, l.jsx)(E.Z, { copy: v.intl.string(v.t.y2b7CA) })
         );
     },
-    j = () =>
+    R = () =>
         (0, l.jsx)('div', {
             className: S.t4ACoachtipArtInnerContainer,
             children: (0, l.jsx)('img', {
-                src: N,
-                alt: ''
+                src: 'https://cdn.discordapp.com/assets/content/31203751b575be7b77118bed309f633290def5b09b8466a5886fd98514fbabb2.png',
+                alt: '',
+                className: S.t4ACoachtipArt
             })
         }),
-    O = (e) => {
+    j = (e) => {
         let { trialExpiration: t } = e,
-            n = (0, c.Z)(t, 1000);
+            n = (0, c.Z)(null != t ? t : Date.parse('2024-11-22T08:00:00Z'), 1000);
         return (0, l.jsxs)('div', {
+            className: S.t4aCoachtipContent,
             children: [
                 (0, l.jsx)(o.Heading, {
                     variant: 'heading-sm/bold',
@@ -192,15 +193,15 @@ let A = () =>
                         n.days > 0
                             ? v.intl.formatToPlainString(v.t.G1Ldn5, { days: n.days })
                             : v.intl.formatToPlainString(v.t.h982oq, {
-                                  hours: x(n.hours),
-                                  minutes: x(n.minutes),
-                                  seconds: x(n.seconds)
+                                  hours: T(n.hours),
+                                  minutes: T(n.minutes),
+                                  seconds: T(n.seconds)
                               })
                 })
             ]
         });
     },
-    P = (e) => {
+    O = (e) => {
         var t, n;
         let { isSelected: i, trialOffer: r, q4MarketingEnabled: o } = e,
             c = (0, d.wE)(s.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
