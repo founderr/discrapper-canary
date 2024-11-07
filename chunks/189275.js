@@ -36,10 +36,5 @@ function u(e) {
                     });
             }
         }
-    ),
-        a.default.track(l.rMx.GDM_BLOCKED_USER_WARNING_VIEWED, {
-            channel_id: t,
-            warning_medium: o.WR.MODAL,
-            blocked_user_ids: u
-        });
+    );
 }
