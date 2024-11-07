@@ -10,9 +10,10 @@ t.Z = function (e) {
         }, []),
         l = r.useCallback(
             (r) => {
+                if (!s.current) return;
                 null == a.current && (a.current = r);
                 let i = r - a.current;
-                i >= t && ((a.current = r), e(i)), s.current && (n.current = requestAnimationFrame(l));
+                i >= t && ((a.current = r), e(i)), (n.current = requestAnimationFrame(l));
             },
             [e, t]
         ),
@@ -20,7 +21,7 @@ t.Z = function (e) {
             (s.current = !0), (a.current = void 0), (n.current = requestAnimationFrame(l));
         }, [l]);
     return (
-        r.useEffect(() => ((n.current = requestAnimationFrame(l)), () => cancelAnimationFrame(n.current)), []),
+        r.useEffect(() => ((n.current = requestAnimationFrame(l)), () => o()), []),
         {
             stop: o,
             reset: u,
