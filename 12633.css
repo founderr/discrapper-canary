@@ -10625,14 +10625,6 @@ div.modalHeader_c5e09c {
 .imageContent_cf58b5 {
     display: flex;
     flex-flow: column nowrap;
-    flex: auto;
-    width: -moz-fit-content;
-    width: fit-content
-}
-
-.imageContentSafari_cf58b5 {
-    display: flex;
-    flex-flow: column nowrap;
     flex: auto
 }
 
