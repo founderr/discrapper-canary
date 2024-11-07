@@ -152,7 +152,8 @@ let b = (e, t, n, r) => {
             guild_id: void 0,
             guild_scheduled_event_id: void 0,
             user_id: void 0,
-            email_token: void 0
+            email_token: void 0,
+            application_id: void 0
         },
         l = {
             version: i,
@@ -244,6 +245,13 @@ let b = (e, t, n, r) => {
             name: t.name,
             message_id: t.record.id,
             email_token: r
+        };
+    else if (t.name === c.b.APPLICATION)
+        return {
+            ...l,
+            ...o,
+            name: t.name,
+            application_id: t.record.id
         };
     return null;
 };

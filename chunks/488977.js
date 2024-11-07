@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return b;
     }
 }),
     t(47120);
@@ -12,45 +12,49 @@ var i = t(200651),
     s = t(895924),
     c = t(311819),
     d = t(299206),
-    u = t(572004),
-    m = t(135431),
-    p = t(541099),
-    h = t(783097),
-    f = t(570949),
-    C = t(314734),
-    v = t(981631),
-    x = t(388032),
-    _ = t(500257);
-function N(e) {
+    u = t(726721),
+    m = t(726521),
+    p = t(973616),
+    h = t(572004),
+    f = t(135431),
+    C = t(541099),
+    v = t(783097),
+    x = t(570949),
+    _ = t(314734),
+    N = t(981631),
+    g = t(388032),
+    A = t(500257);
+function b(e) {
     let { application: n, className: t, sectionName: l } = e,
-        N = (0, h.L1)(n),
-        g = (0, m.Eb)(N),
-        A = {
+        b = (0, v.L1)(n),
+        E = (0, f.Eb)(b),
+        I = {
             location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
             application_id: n.id,
             section_name: l,
-            source: p.Z.lastShownEntrypoint()
+            source: C.Z.lastShownEntrypoint()
         },
-        b = (0, d.Z)({
+        j = u.Z.useExperiment({ location: s.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !1 }).enabled,
+        S = (0, d.Z)({
             id: n.id,
-            label: x.intl.string(x.t['+NP/b2'])
+            label: g.intl.string(g.t['+NP/b2'])
         }),
-        E = (0, f.P)({ application: n });
+        y = (0, x.P)({ application: n });
     return (0, i.jsxs)('div', {
-        className: _.container,
+        className: A.container,
         children: [
             (0, i.jsx)(o.Clickable, {
                 onClick: () => {
-                    (0, u.JG)(
+                    (0, h.JG)(
                         (0, c.J)({
                             id: n.id,
-                            ...N
+                            ...b
                         })
                     ),
-                        (0, o.showToast)((0, o.createToast)(x.intl.string(x.t['L/PwZW']), o.ToastType.SUCCESS));
+                        (0, o.showToast)((0, o.createToast)(g.intl.string(g.t['L/PwZW']), o.ToastType.SUCCESS));
                 },
-                className: a()(_.clickable, t),
-                'aria-label': x.intl.string(x.t.WqhZsr),
+                className: a()(A.clickable, t),
+                'aria-label': g.intl.string(g.t.WqhZsr),
                 children: (0, i.jsx)(o.LinkIcon, {
                     size: 'sm',
                     color: o.tokens.colors.INTERACTIVE_ACTIVE
@@ -58,35 +62,47 @@ function N(e) {
             }),
             (0, i.jsx)(o.Popout, {
                 renderPopout: (e) => {
-                    let { closePopout: n } = e;
+                    let { closePopout: t } = e;
                     return (0, i.jsxs)(o.Menu, {
-                        className: C.NN,
+                        className: _.NN,
                         navId: 'app-details-more-menu',
-                        onClose: n,
-                        'aria-label': x.intl.string(x.t.AXIHpa),
+                        onClose: t,
+                        'aria-label': g.intl.string(g.t.AXIHpa),
                         onSelect: void 0,
                         children: [
-                            (0, i.jsx)(o.MenuGroup, {
-                                children: g
-                                    ? (0, i.jsx)(o.MenuItem, {
-                                          id: 'add-app',
-                                          label: x.intl.string(x.t.NgXl3N),
-                                          action: () => {
-                                              null == N.customInstallUrl && (0, r.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, A),
-                                                  (0, m.LO)({
-                                                      ...N,
-                                                      oauth2Callback: (e) => {
-                                                          let { location: n } = e;
-                                                          null != n && (0, r.yw)(v.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, A);
-                                                      },
-                                                      source: 'app_launcher_app_details'
-                                                  });
-                                          }
-                                      })
-                                    : null
+                            (0, i.jsxs)(o.MenuGroup, {
+                                children: [
+                                    E
+                                        ? (0, i.jsx)(o.MenuItem, {
+                                              id: 'add-app',
+                                              label: g.intl.string(g.t.NgXl3N),
+                                              action: () => {
+                                                  null == b.customInstallUrl && (0, r.yw)(N.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, I),
+                                                      (0, f.LO)({
+                                                          ...b,
+                                                          oauth2Callback: (e) => {
+                                                              let { location: n } = e;
+                                                              null != n && (0, r.yw)(N.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, I);
+                                                          },
+                                                          source: 'app_launcher_app_details'
+                                                      });
+                                              }
+                                          })
+                                        : null,
+                                    j && n instanceof p.Z
+                                        ? (0, i.jsx)(o.MenuItem, {
+                                              id: 'report-app',
+                                              color: 'danger',
+                                              label: g.intl.string(g.t.jhJze3),
+                                              action: () => {
+                                                  (0, m.uu)(n);
+                                              }
+                                          })
+                                        : null
+                                ]
                             }),
-                            null != E && (0, i.jsxs)(o.MenuGroup, { children: [...E] }),
-                            (0, i.jsx)(o.MenuGroup, { children: b })
+                            null != y && (0, i.jsxs)(o.MenuGroup, { children: [...y] }),
+                            (0, i.jsx)(o.MenuGroup, { children: S })
                         ]
                     });
                 },
@@ -95,8 +111,8 @@ function N(e) {
                 children: (e) =>
                     (0, i.jsx)(o.Clickable, {
                         onClick: e.onClick,
-                        className: a()(_.clickable, t),
-                        'aria-label': x.intl.string(x.t.UKOtz8),
+                        className: a()(A.clickable, t),
+                        'aria-label': g.intl.string(g.t.UKOtz8),
                         children: (0, i.jsx)(o.MoreHorizontalIcon, {
                             size: 'sm',
                             color: o.tokens.colors.INTERACTIVE_ACTIVE

@@ -21,6 +21,7 @@ n.d(t, {
     (o.GUILD_SCHEDULED_EVENT = 'guild_scheduled_event'),
     (o.FIRST_DM = 'first_dm'),
     (o.USER = 'user'),
+    (o.APPLICATION = 'application'),
     ((l = i || (i = {})).MESSAGE = 'message_urf'),
     (l.USER = 'user_urf'),
     ((u = a || (a = {})).SUB_SPAM = 'sub_spam'),
