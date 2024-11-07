@@ -42,11 +42,15 @@ class d extends a.Z {
         (this.disabledLocalVideos[e] = t), this.emit(s.S.LocalVideoDisabled, e, t);
     }
     getHasActiveVideoOutputSink(e) {
-        var t;
-        return null !== (t = this.activeOutputSinks[e]) && void 0 !== t && t;
+        return this.activeOutputSinks.has(e) && this.activeOutputSinks.get(e).size > 0;
     }
-    setHasActiveVideoOutputSink(e, t) {
-        (this.isActiveOutputSinksEnabled = !0), (this.activeOutputSinks[e] = t), this.emit(s.S.ActiveSinksChange, e, t);
+    setHasActiveVideoOutputSink(e, t, n) {
+        var r;
+        let i = this.getHasActiveVideoOutputSink(e),
+            a = null !== (r = this.activeOutputSinks.get(e)) && void 0 !== r ? r : new Set();
+        t ? a.add(n) : a.delete(n), this.activeOutputSinks.set(e, a);
+        let o = this.getHasActiveVideoOutputSink(e);
+        (this.isActiveOutputSinksEnabled = !0), i !== o && this.emit(s.S.ActiveSinksChange, e, o);
     }
     getActiveOutputSinkTrackingEnabled() {
         return this.isActiveOutputSinksEnabled;
@@ -152,7 +156,7 @@ class d extends a.Z {
         return null != e && this.emit(s.S.Stats, e), e;
     }
     constructor(e, t) {
-        super(), u(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(c++)), u(this, 'context', void 0), u(this, 'userId', void 0), u(this, 'streamUserId', void 0), u(this, 'destroyed', !1), u(this, 'audioSSRC', 0), u(this, 'selfDeaf', !1), u(this, 'localMutes', {}), u(this, 'disabledLocalVideos', {}), u(this, 'localVolumes', {}), u(this, 'isActiveOutputSinksEnabled', !1), u(this, 'activeOutputSinks', {}), u(this, 'videoSupported', !1), u(this, 'useElectronVideo', !1), u(this, 'voiceBitrate', l.dX), u(this, 'remoteSinkWantsMaxFramerate', l.Gs), u(this, 'videoQualityManager', void 0), u(this, 'wantsPriority', new Set()), u(this, 'localSpeakingFlags', {}), u(this, 'videoReady', !1), u(this, 'videoStreamParameters', []), u(this, 'remoteVideoSinkWants', { any: 100 }), u(this, 'localVideoSinkWants', { any: 100 }), u(this, 'connectionState', l.$j.CONNECTING), u(this, 'stats', void 0), u(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}), u(this, 'experimentFlags', new Set()), u(this, 'framerateReducer', void 0), (this.context = e), (this.userId = t), (this.videoQualityManager = new o.iY(e, this));
+        super(), u(this, 'mediaEngineConnectionId', 'WebRTC-'.concat(c++)), u(this, 'context', void 0), u(this, 'userId', void 0), u(this, 'streamUserId', void 0), u(this, 'destroyed', !1), u(this, 'audioSSRC', 0), u(this, 'selfDeaf', !1), u(this, 'localMutes', {}), u(this, 'disabledLocalVideos', {}), u(this, 'localVolumes', {}), u(this, 'isActiveOutputSinksEnabled', !1), u(this, 'activeOutputSinks', new Map()), u(this, 'videoSupported', !1), u(this, 'useElectronVideo', !1), u(this, 'voiceBitrate', l.dX), u(this, 'remoteSinkWantsMaxFramerate', l.Gs), u(this, 'videoQualityManager', void 0), u(this, 'wantsPriority', new Set()), u(this, 'localSpeakingFlags', {}), u(this, 'videoReady', !1), u(this, 'videoStreamParameters', []), u(this, 'remoteVideoSinkWants', { any: 100 }), u(this, 'localVideoSinkWants', { any: 100 }), u(this, 'connectionState', l.$j.CONNECTING), u(this, 'stats', void 0), u(this, 'onDesktopEncodingOptionsSet', (e, t, n) => {}), u(this, 'experimentFlags', new Set()), u(this, 'framerateReducer', void 0), (this.context = e), (this.userId = t), (this.videoQualityManager = new o.iY(e, this));
         let r = n(988746).Z;
         this.framerateReducer = new r(this, this.videoQualityManager);
     }
