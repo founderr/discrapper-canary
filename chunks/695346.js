@@ -12,7 +12,7 @@ n.d(t, {
         return ey;
     },
     Fg: function () {
-        return H;
+        return j;
     },
     G6: function () {
         return et;
@@ -75,7 +75,7 @@ n.d(t, {
         return eE;
     },
     Wz: function () {
-        return eb;
+        return eT;
     },
     Xc: function () {
         return x;
@@ -90,7 +90,7 @@ n.d(t, {
         return eg;
     },
     _O: function () {
-        return b;
+        return T;
     },
     bh: function () {
         return K;
@@ -111,7 +111,7 @@ n.d(t, {
         return L;
     },
     d4: function () {
-        return T;
+        return b;
     },
     dN: function () {
         return f;
@@ -120,7 +120,7 @@ n.d(t, {
         return O;
     },
     ev: function () {
-        return j;
+        return H;
     },
     fq: function () {
         return p;
@@ -144,7 +144,7 @@ n.d(t, {
         return Z;
     },
     iH: function () {
-        return eT;
+        return eb;
     },
     jU: function () {
         return Y;
@@ -290,13 +290,13 @@ let E = (0, o.Zc)(
         (e) => e
     ),
     S = [],
-    T = (0, o.Zc)(
+    b = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
         (e) => (null != e ? e : S),
         (e) => e
     ),
-    b = (0, o.Zc)(
+    T = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
         (e) => (null != e ? e : S),
@@ -451,7 +451,7 @@ let V = (0, o.Zc)(
         },
         (e) => a.yC.create({ value: e })
     ),
-    H = (0, o.Zc)(
+    j = (0, o.Zc)(
         'debug',
         'rtcPanelShowVoiceStates',
         (e) => {
@@ -460,7 +460,7 @@ let V = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    j = (0, o.Zc)(
+    H = (0, o.Zc)(
         'textAndImages',
         'convertEmoticons',
         (e) => {
@@ -812,13 +812,13 @@ let eh = (0, o.KM)(
         (e) => e
     ),
     eS = [],
-    eT = (0, o.Zc)(
+    eb = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eS),
         (e) => e
     ),
-    eb = (0, o.Zc)(
+    eT = (0, o.Zc)(
         'privacy',
         'defaultGuildsActivityRestricted',
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,
@@ -887,7 +887,16 @@ let eh = (0, o.KM)(
         return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
     },
     (e) => a.D5.create({ value: e })
-);
+),
+    (0, o.Zc)(
+        'appearance',
+        'happeningNowCardsDisabled',
+        (e) => {
+            var t;
+            return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t;
+        },
+        (e) => a.D5.create({ value: e })
+    );
 let eR = (0, o.Zc)(
         'appearance',
         'timestampHourCycle',
