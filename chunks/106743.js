@@ -39,22 +39,24 @@ function c(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(l.ScrollerAuto, {
-                className: s.transcriptScroller,
-                fade: !0,
-                children: (0, r.jsx)('div', {
-                    className: s.transcriptBody,
-                    children:
-                        (null == u ? void 0 : u.fetchStatus) === a.iF.FETCHING
-                            ? (0, r.jsx)('div', {
-                                  className: s.transcriptBodySpinner,
-                                  children: (0, r.jsx)(l.Spinner, { type: l.Spinner.Type.WANDERING_CUBES })
-                              })
-                            : (0, r.jsx)(l.Heading, {
-                                  variant: 'heading-md/normal',
-                                  color: 'text-muted',
-                                  children: m.map((e, t) => (0, r.jsx)('p', { children: e }, t))
-                              })
+            (0, r.jsx)(l.FocusRing, {
+                children: (0, r.jsx)(l.ScrollerAuto, {
+                    className: s.transcriptScroller,
+                    fade: !0,
+                    children: (0, r.jsx)('div', {
+                        className: s.transcriptBody,
+                        children:
+                            (null == u ? void 0 : u.fetchStatus) === a.iF.FETCHING
+                                ? (0, r.jsx)('div', {
+                                      className: s.transcriptBodySpinner,
+                                      children: (0, r.jsx)(l.Spinner, { type: l.Spinner.Type.WANDERING_CUBES })
+                                  })
+                                : (0, r.jsx)(l.Heading, {
+                                      variant: 'heading-md/normal',
+                                      color: 'text-muted',
+                                      children: m.map((e, t) => (0, r.jsx)('p', { children: e }, t))
+                                  })
+                    })
                 })
             })
         ]

@@ -443,6 +443,7 @@ function Z(e) {
                             children: [
                                 (0, r.jsx)(d.Clickable, {
                                     onClick: () => W(!1),
+                                    tabIndex: -1,
                                     children: (0, r.jsx)('div', { className: L.transcriptOverlay })
                                 }),
                                 (0, r.jsx)(a.animated.div, {
