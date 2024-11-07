@@ -41,8 +41,7 @@ let l = (e) => {
     return (
         r.useEffect(
             () =>
-                u.subscribe(
-                    (e) => e.inspectedExpressionPosition,
+                u.useStore.subscribe(
                     (e) => {
                         if (null == e) return;
                         let { columnIndex: t, rowIndex: n, source: r } = e;
@@ -52,7 +51,8 @@ let l = (e) => {
                                 x: t,
                                 y: n
                             });
-                    }
+                    },
+                    (e) => e.inspectedExpressionPosition
                 ),
             [m, u]
         ),

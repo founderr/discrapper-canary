@@ -12,7 +12,7 @@ n.d(t, {
         return s;
     }
 });
-let r = (0, n(905837).ZP)((e) => ({
+let r = (0, n(903797).Z)((e) => ({
     channelDismissTimestamps: {},
     queuedWarning: !1
 }));

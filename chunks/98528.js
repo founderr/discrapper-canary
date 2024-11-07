@@ -313,8 +313,7 @@ function I(e) {
     return (
         r.useEffect(
             () =>
-                a.subscribe(
-                    (e) => e.inspectedExpressionPosition,
+                a.useStore.subscribe(
                     (e) => {
                         if (null == e) return;
                         let { columnIndex: t, rowIndex: n, source: r } = e;
@@ -324,7 +323,8 @@ function I(e) {
                                 x: t,
                                 y: n
                             });
-                    }
+                    },
+                    (e) => e.inspectedExpressionPosition
                 ),
             [u, a]
         ),

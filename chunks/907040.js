@@ -131,8 +131,7 @@ let ea = (e, t) => {
         return (
             s.useEffect(
                 () =>
-                    A.kJ.subscribe(
-                        (e) => e.inspectedExpressionPosition,
+                    A.kJ.useStore.subscribe(
                         (e) => {
                             if (null == e) return;
                             let { columnIndex: t, rowIndex: n, source: r } = e;
@@ -142,7 +141,8 @@ let ea = (e, t) => {
                                     x: t,
                                     y: n
                                 });
-                        }
+                        },
+                        (e) => e.inspectedExpressionPosition
                     ),
                 [h]
             ),

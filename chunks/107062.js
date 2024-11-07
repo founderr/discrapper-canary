@@ -89,7 +89,7 @@ t.ZP = (e) => {
             location: j.Gt.POPOUT,
             entry: n
         }),
-        q = (0, l.jsx)(Z.wG, {
+        W = (0, l.jsx)(Z.wG, {
             channel: t,
             userDescription: (0, g.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
             title: n.extra.activity_name,
@@ -100,8 +100,8 @@ t.ZP = (e) => {
             onClickSubtitle: D,
             onClickThumbnail: D
         }),
-        W = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
-        Y = W
+        q = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
+        Y = q
             ? (0, l.jsx)(c.Z, {
                   isEmbedded: (0, s.Z)(k),
                   embeddedActivity: w,
@@ -119,10 +119,10 @@ t.ZP = (e) => {
             IconComponent: r.AppsIcon,
             children: T.intl.string(T.t.GDWYR0)
         }),
-        J = [W ? Y : F].filter(h.lm);
+        J = [q ? Y : F].filter(h.lm);
     return (0, l.jsxs)(Z.yR, {
         children: [
-            q,
+            W,
             (0, l.jsx)(Z.St, {
                 children: (0, l.jsx)(Z.WT, {
                     onReaction: p,

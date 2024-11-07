@@ -37,7 +37,7 @@ function f(e) {
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
         { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
         h = (0, d._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: E, nextListing: x } = r.useMemo(() => {
+        { currentListing: x, nextListing: E } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -51,12 +51,12 @@ function f(e) {
                 nextListing: h.find((e) => e.subscription_plans[0].id === t)
             };
         }, [n, h]);
-    if (null == n || null == E || null == x) return null;
+    if (null == n || null == x || null == E) return null;
     let b = s()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, i.jsx)(u.Z, {
         message: g.intl.format(g.t.chw89f, {
-            currentListing: E.name,
-            nextListing: x.name,
+            currentListing: x.name,
+            nextListing: E.name,
             changeDate: b
         }),
         error: null == _ ? void 0 : _.message,

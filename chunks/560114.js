@@ -30,8 +30,8 @@ var l,
     w = n(427679),
     B = n(199902),
     A = n(439170),
-    R = n(592125),
-    U = n(984933),
+    U = n(592125),
+    R = n(984933),
     V = n(341165),
     P = n(751771),
     G = n(496675),
@@ -569,23 +569,23 @@ eo(eh, 'defaultProps', {
         let { channel: o, guild: d, source: u, guildScheduledEvent: c, streamUserId: h, applicationId: v, transitionState: p, onClose: C, welcomeToServer: j, page: y, analyticsLocation: Z } = e,
             [B, k] = r.useState(y === ee.RV.GUEST ? g.$.IS_GUEST_INVITE : 0),
             { analyticsLocations: D } = (0, T.ZP)(f.Z.INSTANT_INVITE_MODAL),
-            O = (0, m.e7)([R.Z, L.Z], () => {
+            O = (0, m.e7)([U.Z, L.Z], () => {
                 let e = L.Z.getVoiceChannelId();
                 if (null == e) return null;
-                let t = R.Z.getChannel(e);
+                let t = U.Z.getChannel(e);
                 return (null == t ? void 0 : t.guild_id) === d.id ? t : null;
             }),
             q = null != O && !(0, E.Z)(O) && [et.t4x.GUILD_CONTEXT_MENU, et.t4x.GUILD_HEADER].includes(u),
             W = (0, b.Z)(d.id),
             K = (0, m.e7)(
-                [L.Z, R.Z, U.ZP],
+                [L.Z, U.Z, R.ZP],
                 () => {
                     if (q && ((0, H.yE)(B, g.$.IS_GUEST_INVITE) || y === ee.RV.GUEST)) return O;
                     if (y === ee.RV.GUEST) return 1 === W.length ? W[0] : void 0;
                     if (null != o) return o;
                     let e = L.Z.getChannelId(),
-                        t = null == e || (0, en.AB)(e) ? void 0 : R.Z.getChannel(e);
-                    return (null == t ? void 0 : t.isThread()) && (t = R.Z.getChannel(t.parent_id)), null != t ? t : U.ZP.getDefaultChannel(d.id, !0, et.Plq.CREATE_INSTANT_INVITE);
+                        t = null == e || (0, en.AB)(e) ? void 0 : U.Z.getChannel(e);
+                    return (null == t ? void 0 : t.isThread()) && (t = U.Z.getChannel(t.parent_id)), null != t ? t : R.ZP.getDefaultChannel(d.id, !0, et.Plq.CREATE_INSTANT_INVITE);
                 },
                 [q, B, y, o, d.id, O, W]
             ),
@@ -691,13 +691,13 @@ eo(eh, 'defaultProps', {
                 },
                 [eb.currentPage, eB]
             ),
-            eR = (eZ || q) && y !== ee.RV.GUEST && !ey && !em && !eM,
-            { enabled: eU } = M.o.useExperiment(
+            eU = (eZ || q) && y !== ee.RV.GUEST && !ey && !em && !eM,
+            { enabled: eR } = M.o.useExperiment(
                 {
                     guildId: null == d ? void 0 : d.id,
                     location: 'acc417_3'
                 },
-                { autoTrackExposure: eR }
+                { autoTrackExposure: eU }
             ),
             { maxAge: eV, maxUses: eP, temporary: eG, savedMaxAge: ek } = eb,
             eL = r.useCallback(() => {
@@ -769,8 +769,8 @@ eo(eh, 'defaultProps', {
                     transitionState: p,
                     onClose: C,
                     canShowVanityURL: ey,
-                    isGuestInviteCreationToggleEnabled: eU && eR,
-                    shouldHideTemporaryInviteToggle: (eU && eR) || y === ee.RV.GUEST,
+                    isGuestInviteCreationToggleEnabled: eR && eU,
+                    shouldHideTemporaryInviteToggle: (eR && eU) || y === ee.RV.GUEST,
                     modalState: eb,
                     setModalState: eB,
                     changePage: eA,

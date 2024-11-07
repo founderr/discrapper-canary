@@ -21,8 +21,8 @@ var i,
     p = n(985443),
     _ = n(612253),
     h = n(832287),
-    E = n(860528),
-    x = n(872532),
+    x = n(860528),
+    E = n(872532),
     b = n(91342),
     C = n(181708),
     v = n(821721),
@@ -72,7 +72,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.tPY4o6),
                 description: g.intl.string(g.t.JY0grK),
                 descriptionCta: g.intl.string(g.t.JST6jo),
-                previewImage: E,
+                previewImage: x,
                 videoUrl: i ? S.Z : R.Z
             },
             serverProfiles: {
@@ -80,7 +80,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.I9TYMj),
                 description: g.intl.string(g.t.HMSHeH),
                 descriptionCta: g.intl.string(g.t.JST6jo),
-                previewImage: x,
+                previewImage: E,
                 videoUrl: i ? A.Z : j.Z
             },
             newAppStyles: {

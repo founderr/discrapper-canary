@@ -42,10 +42,10 @@ function C(e) {
                     template_code: e.code
                 });
         }, []),
-        R = l.useCallback((e) => {
+        k = l.useCallback((e) => {
             w(e === f.lr.COMMUNITY), A(f._m.CUSTOMIZE_GUILD);
         }, []),
-        k = l.useCallback(() => A(f._m.JOIN_GUILD), [A]),
+        R = l.useCallback(() => A(f._m.JOIN_GUILD), [A]),
         b = l.useCallback(() => {
             if (L === f._m.CUSTOMIZE_GUILD) {
                 A(f._m.CREATION_INTENT);
@@ -80,7 +80,7 @@ function C(e) {
                             impressionProperties: Z,
                             children: (0, i.jsx)(p.Z, {
                                 isNewUser: !1,
-                                onJoin: S ? k : void 0,
+                                onJoin: S ? R : void 0,
                                 onChooseTemplate: v,
                                 onClose: C
                             })
@@ -92,7 +92,7 @@ function C(e) {
                             children: (0, i.jsx)(_.Z, {
                                 onClose: C,
                                 onBack: b,
-                                onCreationIntentChosen: R
+                                onCreationIntentChosen: k
                             })
                         }),
                         (0, i.jsx)(s.Slide, {

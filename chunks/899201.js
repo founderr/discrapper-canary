@@ -16,12 +16,12 @@ var i = a(200651),
     d = a(442837),
     u = a(481060),
     m = a(493683),
-    f = a(247272),
-    h = a(166459),
+    h = a(247272),
+    f = a(166459),
     g = a(966390),
     p = a(476326),
-    S = a(213609),
-    I = a(835473),
+    I = a(213609),
+    S = a(835473),
     b = a(43267),
     C = a(933557),
     _ = a(957730),
@@ -52,7 +52,7 @@ async function z(e) {
 function H(e) {
     let { applicationId: t, mediaUrl: a, channelId: l, onClose: s, transitionState: r, ...m } = e,
         b = (0, d.e7)([L.ZP], () => L.ZP.getSelfEmbeddedActivityForChannel(l));
-    (0, S.Z)({
+    (0, I.Z)({
         type: c.ImpressionTypes.MODAL,
         name: c.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: {
@@ -60,7 +60,7 @@ function H(e) {
             activity_session_id: null == b ? void 0 : b.compositeInstanceId
         }
     });
-    let [C] = (0, I.Z)([t]),
+    let [C] = (0, S.Z)([t]),
         T = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
         [E, j] = n.useState(''),
         [D, R] = n.useState([]),
@@ -84,20 +84,20 @@ function H(e) {
     }, [a, k]);
     let Q = (0, d.Wu)([x.Z, v.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === M.bm.FRIEND || e.type === M.bm.DM || v.Z.can(O.Plq.ATTACH_FILES, e.item)));
     n.useEffect(() => {
-        (0, f.x)({
+        (0, h.x)({
             omitUserIds: new Set(),
             applicationId: t,
             inviteTargetType: B.Iq.EMBEDDED_APPLICATION
         });
     }, [t]),
-        n.useEffect(() => (0, f.C)(E), [E]);
+        n.useEffect(() => (0, h.C)(E), [E]);
     let W = n.useCallback(async () => {
         await Promise.all(
             D.map(async (e) => {
                 let t = Q.find((t) => t.item.id === e);
                 if (null != t) {
                     let e = await z(t);
-                    h.Z.clearAll(e, w.d.ChannelMessage);
+                    f.Z.clearAll(e, w.d.ChannelMessage);
                 }
             })
         );
@@ -134,7 +134,7 @@ function H(e) {
                     draftType: w.d.ChannelMessage,
                     options: { applicationId: t }
                 }),
-                    h.Z.clearAll(l, w.d.ChannelMessage);
+                    f.Z.clearAll(l, w.d.ChannelMessage);
             }
             let l = x.Z.getInviteSuggestionRows()
                 .filter((e) => D.includes(e.item.id))
@@ -158,11 +158,11 @@ function H(e) {
             let t = async () => {
                 let t = await z(e),
                     a = [...D];
-                if (a.includes(e.item.id)) h.Z.clearAll(t, w.d.ChannelMessage), (a = a.filter((t) => t !== e.item.id));
+                if (a.includes(e.item.id)) f.Z.clearAll(t, w.d.ChannelMessage), (a = a.filter((t) => t !== e.item.id));
                 else {
                     if (a.length >= 10) return;
                     null != U &&
-                        (h.Z.addFile({
+                        (f.Z.addFile({
                             file: {
                                 file: U,
                                 platform: p.ow.WEB

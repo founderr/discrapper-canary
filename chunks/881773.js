@@ -115,7 +115,7 @@ function b(e) {
 }
 function D(e) {
     var t, n;
-    let { videoRef: i, quest: p, playerState: h, animSpring: E, visible: N, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: B, handleCaptionBtnClick: k, handleFullScreenBtnClick: L, handleSeekBackBtnClick: P, handleSeekForwardBtnClick: M, handleControlBarPendingInteraction: O } = e,
+    let { videoRef: i, quest: p, playerState: h, animSpring: E, visible: N, seekForwardEnabled: D, hideCaptionBtn: y, handlePlaybackBtnClick: A, handleTranscriptBtnClick: B, handleCaptionBtnClick: k, handleFullScreenBtnClick: L, handleSeekBackBtnClick: M, handleSeekForwardBtnClick: O, handleControlBarPendingInteraction: P } = e,
         R = (0, f.km)((e) => e.volume),
         w = (0, f.km)((e) => e.setVolume),
         Z = (0, f.km)((e) => e.muted),
@@ -175,7 +175,7 @@ function D(e) {
                         iconComponent: C.d,
                         animationTime: E,
                         visible: N,
-                        onClick: P,
+                        onClick: M,
                         ariaLabel: S.intl.string(S.t.r9s3Ul),
                         tooltipLabel: S.intl.string(S.t.r9s3Ul)
                     }),
@@ -183,7 +183,7 @@ function D(e) {
                         iconComponent: g.o,
                         animationTime: E,
                         visible: N,
-                        onClick: M,
+                        onClick: O,
                         disabled: !D,
                         ariaLabel: D ? S.intl.string(S.t.zWDcND) : S.intl.string(S.t.xXh3y8),
                         tooltipLabel: D ? S.intl.string(S.t.zWDcND) : S.intl.string(S.t.xXh3y8),
@@ -260,10 +260,10 @@ function D(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        $(e), w(e), I(p.id, e), Q && (K(!1), O(!1)), Z && e > 0 && F(!1);
+                                        $(e), w(e), I(p.id, e), Q && (K(!1), P(!1)), Z && e > 0 && F(!1);
                                     },
                                     asValueChanges: (e) => {
-                                        $(e), !Q && (K(!0), O(!0));
+                                        $(e), !Q && (K(!0), P(!0));
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: 'horizontal',

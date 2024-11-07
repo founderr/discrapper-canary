@@ -84,28 +84,28 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Q extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: o, children: s, locationState: u, onClick: h, className: f, role: m, 'aria-posinset': g, 'aria-setsize': C, ...x } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: f, className: m, role: g, 'aria-posinset': C, 'aria-setsize': x, ...v } = this.props;
         return (0, i.jsx)(E.Z, {
-            className: a()(W.channel, { [W.fullWidth]: d.tq }, f),
-            onClick: h,
-            role: m,
+            className: a()(W.channel, { [W.fullWidth]: d.tq }, m),
+            onClick: f,
+            role: g,
             focusProps: {
                 within: !0,
                 ...Y
             },
-            'aria-posinset': g,
-            'aria-setsize': C,
+            'aria-posinset': C,
+            'aria-setsize': x,
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
-                className: a()(r, W.interactive, W.linkButton, { [W.interactiveSelected]: t }),
+                className: a()(o, W.interactive, W.linkButton, { [W.interactiveSelected]: t }),
                 children: (0, i.jsxs)(c.rU, {
                     to: {
                         pathname: e,
-                        state: u
+                        state: h
                     },
                     className: W.link,
-                    ...x,
+                    ...v,
                     children: [
                         (0, i.jsx)(_.Z, {
                             selected: t,
@@ -114,10 +114,10 @@ class Q extends l.Component {
                                 className: a()(W.linkButtonIcon, l),
                                 color: 'currentColor'
                             }),
-                            name: o,
-                            innerClassName: W.avatarWithText
+                            name: s,
+                            innerClassName: a()(W.avatarWithText, r)
                         }),
-                        s
+                        u
                     ]
                 })
             })

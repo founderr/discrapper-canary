@@ -4,17 +4,17 @@ c.r(t),
             return n;
         },
         emitCaptchaDistributionMetric: function () {
-            return i;
+            return o;
         },
         extractCaptchaPropsFromResponse: function () {
-            return u;
+            return i;
         }
     });
 var r,
     n,
     a = c(644947),
-    o = c(234888);
-function u(e) {
+    u = c(234888);
+function i(e) {
     var t;
     return {
         captchaService: e.captcha_service,
@@ -27,7 +27,7 @@ function u(e) {
         }
     };
 }
-function i(e, t) {
-    if (!!e) (0, a._8)() && setTimeout(() => (0, a.Zq)(), o.i), (0, a.s$)(t);
+function o(e, t) {
+    if (!!e) (0, a._8)() && setTimeout(() => (0, a.Zq)(), u.i), (0, a.s$)(t);
 }
 ((r = n || (n = {})).CANCEL = 'cancel'), (r.ERROR = 'error'), (r.EXPIRED = 'expired');

@@ -7,7 +7,7 @@ n.d(t, {
         return l;
     },
     K7: function () {
-        return d;
+        return u;
     },
     NN: function () {
         return s;
@@ -19,7 +19,7 @@ n.d(t, {
         return a;
     },
     lv: function () {
-        return u;
+        return d;
     },
     t4: function () {
         return o;
@@ -35,9 +35,9 @@ let l = 'app-launcher-element',
     o = 'app-launcher-entrypoint',
     s = 'app-launcher-app-details-more-menu',
     c = 500,
-    d = 670,
-    u = 'min(100vh, '.concat(d, 'px)'),
+    u = 670,
+    d = 'min(100vh, '.concat(u, 'px)'),
     m = {
         '--custom-app-launcher-width': ''.concat(c, 'px'),
-        '--custom-app-launcher-height': u
+        '--custom-app-launcher-height': d
     };

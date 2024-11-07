@@ -18,7 +18,7 @@ n.d(t, {
         return Z;
     },
     x$: function () {
-        return L;
+        return k;
     }
 }),
     n(724458),
@@ -38,8 +38,8 @@ var i = n(192379),
     p = n(471309),
     _ = n(474936),
     h = n(388032),
-    E = n(888300),
-    x = n(665321),
+    x = n(888300),
+    E = n(665321),
     b = n(256017),
     C = n(126807),
     v = n(432119),
@@ -78,7 +78,7 @@ let S = () => {
     A = (e) => {
         switch (e) {
             case _.VU.PREMIUM_TENURE_1_MONTH:
-                return E;
+                return x;
             case _.VU.PREMIUM_TENURE_3_MONTH:
                 return I;
             case _.VU.PREMIUM_TENURE_6_MONTH:
@@ -86,7 +86,7 @@ let S = () => {
             case _.VU.PREMIUM_TENURE_12_MONTH:
                 return T;
             case _.VU.PREMIUM_TENURE_24_MONTH:
-                return x;
+                return E;
             case _.VU.PREMIUM_TENURE_36_MONTH:
                 return b;
             case _.VU.PREMIUM_TENURE_60_MONTH:
@@ -157,7 +157,7 @@ let S = () => {
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
         return n === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? h.intl.string(h.t.jyYgZ2).toLocaleUpperCase() : null;
     },
-    L = () => {
+    k = () => {
         let e = R(),
             { enabled: t } = (0, p.Z)(),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);

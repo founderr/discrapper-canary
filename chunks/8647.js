@@ -14,8 +14,8 @@ var r = n(120356),
     p = n(409100),
     _ = n(725727),
     h = n(474936),
-    E = n(981631),
-    x = n(388032),
+    x = n(981631),
+    E = n(388032),
     b = n(44085);
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
@@ -44,7 +44,7 @@ t.Z = function (e) {
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == v || null == (0, g.he)(v) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
+                                    children: null == v || null == (0, g.he)(v) ? E.intl.string(E.t.xbzNJC) : E.intl.string(E.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(l.Text, {
                                     className: b.countdown,
@@ -54,12 +54,12 @@ t.Z = function (e) {
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'always-white',
-                                    children: x.intl.format(x.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(E.BhN.SUMMER_BOGO_2024) })
+                                    children: E.intl.format(E.t['j/x4GB'], { helpCenterLink: u.Z.getArticleURL(x.BhN.SUMMER_BOGO_2024) })
                                 })
                             ]
                         }),
                         (0, i.jsx)(p.Z, {
-                            buttonText: x.intl.string(x.t.J61px8),
+                            buttonText: E.intl.string(E.t.J61px8),
                             buttonTextClassName: b.subscribeButtonText,
                             subscriptionTier: h.Si.TIER_2,
                             showIcon: !1,

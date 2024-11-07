@@ -92,8 +92,8 @@ function M(e) {
         { channel: k, entry: w, closePopout: R, onReaction: b, onVoiceChannelPreview: H } = e,
         { largeImage: O } = (0, v.rv)({ entry: w }),
         { activity: V, currentEntry: B, artist: U, title: D, user: G } = (0, j.pi)(w),
-        { primaryColor: z, secondaryColor: q } = (0, I.Z)(null == O ? void 0 : O.src),
-        W = (0, r.e7)([u.Z, h.default], () => ((null == V ? void 0 : V.type) === T.IIU.LISTENING && null != G ? (0, m.Z)(u.Z, h.default, G, V) : void 0), [V, G], o.Z),
+        { primaryColor: z, secondaryColor: W } = (0, I.Z)(null == O ? void 0 : O.src),
+        q = (0, r.e7)([u.Z, h.default], () => ((null == V ? void 0 : V.type) === T.IIU.LISTENING && null != G ? (0, m.Z)(u.Z, h.default, G, V) : void 0), [V, G], o.Z),
         Y = a.useCallback(() => {
             var e;
             if (null == k || null == G) return;
@@ -112,10 +112,10 @@ function M(e) {
                     k,
                     G
                 ),
-                colors: [z, q],
+                colors: [z, W],
                 badges: (0, f.jE)({ timestamp: n })
             });
-        }, [V, U, k, w, null == O ? void 0 : O.src, z, q, D, G]);
+        }, [V, U, k, w, null == O ? void 0 : O.src, z, W, D, G]);
     if (null == V || null == B) return null;
     let F = U,
         J = [];
@@ -137,13 +137,13 @@ function M(e) {
                 (0, c.d$)(V, G.id, e);
             }
         })),
-            (null == W ? void 0 : W.syncDisabled) === !1 &&
+            (null == q ? void 0 : q.syncDisabled) === !1 &&
                 J.push(
                     (0, l.jsx)(
                         Z.Ll,
                         {
                             onClick: () => {
-                                (0, x.Z)(W, y.kG.USER_ACTIVITY_SYNC), R();
+                                (0, x.Z)(q, y.kG.USER_ACTIVITY_SYNC), R();
                             },
                             IconComponent: s.UserPlayIcon,
                             children: N.intl.string(N.t.eU3inJ)

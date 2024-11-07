@@ -30,8 +30,8 @@ function f(e) {
         _ = (0, c.oX)(n);
     if (null == _) return null;
     let h = (0, a.getAvatarSpecs)(f),
-        { name: E, rarity: x } = _,
-        { color: b } = (0, c.F7)(x),
+        { name: x, rarity: E } = _,
+        { color: b } = (0, c.F7)(E),
         C = (0, r.wj)(p) ? g : m,
         v = (h.size - h.offset - 2 * h.stroke) * 0.8,
         T = h.size - h.stroke,
@@ -53,7 +53,7 @@ function f(e) {
             height: T,
             padding: h.stroke
         },
-        'aria-label': ''.concat(null !== (t = E()) && void 0 !== t ? t : ''),
+        'aria-label': ''.concat(null !== (t = x()) && void 0 !== t ? t : ''),
         children: [
             (0, i.jsx)('div', {
                 className: u.trophyIconContainer,
@@ -75,7 +75,7 @@ function f(e) {
                     })
                 }),
             d &&
-                x === c.EP.LEGENDARY &&
+                E === c.EP.LEGENDARY &&
                 (0, i.jsx)('div', {
                     className: u.lockContainer,
                     style: I,

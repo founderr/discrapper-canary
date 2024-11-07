@@ -22,7 +22,7 @@ function h(e, t) {
         g = e.getReaction(t),
         v = i === d.O.BURST,
         b = o()(m)
-            .reject((e) => r.Z.isBlocked(e.id))
+            .reject((e) => r.Z.isBlockedOrIgnored(e.id))
             .take(3)
             .map((e) => c.ZP.getName(f, null == p ? void 0 : p.id, e))
             .value();

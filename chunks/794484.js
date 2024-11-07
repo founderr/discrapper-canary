@@ -14,34 +14,34 @@ var i = n(200651),
     p = n(976465),
     _ = n(391110),
     h = n(75077),
-    E = n(320319),
-    x = n(821912);
+    x = n(320319),
+    E = n(821912);
 let b = (e) => {
     let { showAllPerksButton: t, leftAlignHeaders: n, title: r, headerClassname: a } = e,
         s = (0, i.jsx)(o.Heading, {
             variant: 'heading-xxl/extrabold',
             color: 'header-primary',
-            className: null != a ? a : x.heading,
+            className: null != a ? a : E.heading,
             children: r
         });
     return null == t
         ? s
         : n
           ? (0, i.jsxs)('div', {
-                className: x.sectionHeader,
+                className: E.sectionHeader,
                 children: [
                     s,
                     null != t &&
                         (0, i.jsx)('div', {
-                            className: x.showAllPerksButton,
+                            className: E.showAllPerksButton,
                             children: t
                         })
                 ]
             })
           : (0, i.jsx)('div', {
-                className: x.container,
+                className: E.container,
                 children: (0, i.jsx)('div', {
-                    className: x.sectionHeaderSeeAll,
+                    className: E.sectionHeaderSeeAll,
                     children: s
                 })
             });
@@ -74,8 +74,8 @@ t.Z = (e) => {
     let w = (0, h.Op)(O),
         B = (0, f.Z)(),
         y = (0, h.mN)(),
-        { fractionalState: L } = (0, c.Z)(),
-        k = (0, h.sP)({
+        { fractionalState: k } = (0, c.Z)(),
+        L = (0, h.sP)({
             perksCards: B,
             variant: a,
             shopMarketingVariation: j,
@@ -83,9 +83,9 @@ t.Z = (e) => {
             showTenureCard: null == R ? void 0 : R.showCard,
             tileOrderVariant: P,
             isPremiumSubscriber: y,
-            fractionalState: L
+            fractionalState: k
         }),
-        U = k.some((e) => null != e.pillText),
+        U = L.some((e) => null != e.pillText),
         [D, G] = r.useState(null),
         H = r.useRef(new l.qA());
     return (0, i.jsxs)(i.Fragment, {
@@ -93,16 +93,16 @@ t.Z = (e) => {
             (null == B ? void 0 : null === (t = B.freeBoost) || void 0 === t ? void 0 : t.name) === f.u.FREE_BOOST &&
                 (0, i.jsx)(l.O_, {
                     ref: G,
-                    className: x.confettiCanvas,
+                    className: E.confettiCanvas,
                     environment: H.current
                 }),
             (0, i.jsxs)('div', {
                 ref: S,
                 className: s()(
-                    x.section,
+                    E.section,
                     {
-                        [x.centerAlignSection]: !v,
-                        [x.leftAlignSection]: v
+                        [E.centerAlignSection]: !v,
+                        [E.leftAlignSection]: v
                     },
                     n
                 ),
@@ -116,30 +116,30 @@ t.Z = (e) => {
                     (0, i.jsx)(o.Text, {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
-                        className: s()(x.subtitle, {
-                            [x.subtitle]: null == T || v,
-                            [x.subtitleWithButton]: null != T && !v,
-                            [x.fullWidth]: O || v,
-                            [x.moreSubtitleMargin]: U,
-                            [x.leftAlignSubtitle]: v,
-                            [x.centerAlignSubtitle]: !v
+                        className: s()(E.subtitle, {
+                            [E.subtitle]: null == T || v,
+                            [E.subtitleWithButton]: null != T && !v,
+                            [E.fullWidth]: O || v,
+                            [E.moreSubtitleMargin]: U,
+                            [E.leftAlignSubtitle]: v,
+                            [E.centerAlignSubtitle]: !v
                         }),
                         children: w.subtitle
                     }),
                     !v &&
                         null != T &&
                         (0, i.jsx)('div', {
-                            className: s()(x.showAllPerksButtonCenter),
+                            className: s()(E.showAllPerksButtonCenter),
                             children: T
                         }),
                     (0, i.jsx)('div', {
                         className: s()({
-                            [x.cardContainer]: I,
-                            [x.cardContainerNarrowWidth]: !I
+                            [E.cardContainer]: I,
+                            [E.cardContainerNarrowWidth]: !I
                         }),
-                        children: k.map((e, t) =>
+                        children: L.map((e, t) =>
                             (0, i.jsx)(
-                                E.Z,
+                                x.Z,
                                 {
                                     confettiCanvas: e.name === f.u.FREE_BOOST ? D : void 0,
                                     ...e,

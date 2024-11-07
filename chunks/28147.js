@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return k;
+        return Z;
     }
 }),
     t(47120);
@@ -37,10 +37,10 @@ let L = Array(6)
         .map((e, n) => n),
     R = [, , ,].fill(0).map((e, n) => n),
     M = [, , , ,].fill(0).map((e, n) => n);
-function k(e) {
-    return (0, i.jsx)(Z, { ...e });
-}
 function Z(e) {
+    return (0, i.jsx)(k, { ...e });
+}
+function k(e) {
     let { channel: n, query: t, entrypoint: a, isScrollCloseToBottom: s } = e,
         c = a === v._b.TEXT,
         d = a === v._b.TEXT,
@@ -100,7 +100,7 @@ function Z(e) {
         I = E.length > 0,
         j = p && !I && !A;
     return u
-        ? (0, i.jsx)(D, {})
+        ? (0, i.jsx)(H, {})
         : j
           ? (0, i.jsx)(b.A, {
                 type: v.LG.SEARCH_EMPTY,
@@ -139,7 +139,7 @@ function O(e) {
     let {
         ref: R,
         isTransitioning: M,
-        onTransitionEnd: k
+        onTransitionEnd: Z
     } = (0, g.Z)({
         key: r,
         isExpanded: L,
@@ -155,9 +155,9 @@ function O(e) {
                 num: o.length
             });
     }, [o.length, A, _]);
-    let Z = L || M,
+    let k = L || M,
         O = L ? E.Z.buttonTypes.VIEW_LESS : E.Z.buttonTypes.VIEW_MORE,
-        U = Z ? o : x;
+        U = k ? o : x;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, {
@@ -168,7 +168,7 @@ function O(e) {
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 ref: R,
-                onTransitionEnd: k,
+                onTransitionEnd: Z,
                 children: U.map((e, n) => {
                     let { command: t, application: l, section: o } = e;
                     return (0, i.jsx)(
@@ -290,7 +290,7 @@ function w(e) {
         searchResultsPosition: e.resultsPosition
     });
 }
-function D() {
+function H() {
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(E.Z, { title: P.intl.string(P.t['0hKkS0']) }),

@@ -48,7 +48,7 @@ t.Z = (e) => {
         { primaryColor: V, secondaryColor: B } = (0, P.Z)(null == w ? void 0 : w.src),
         U = (0, r.e7)([x.default], () => x.default.locale),
         { streamPreviewUrl: D, stream: G } = (0, f.Z)(n),
-        { displayParticipants: z, participant1: q, participant2: W, numOtherParticipants: Y } = (0, g.Z)(n, 3),
+        { displayParticipants: z, participant1: W, participant2: q, numOtherParticipants: Y } = (0, g.Z)(n, 3),
         F = a.useCallback(
             (e) => {
                 if ((null == w ? void 0 : w.src) == null || null == t || null == R) return;
@@ -57,7 +57,7 @@ t.Z = (e) => {
                         ? (0, Z.VY)({
                               entry: n,
                               channel: t,
-                              users: [q, W],
+                              users: [W, q],
                               countOthers: Y
                           })
                         : (0, Z.HV)(n, t, R);
@@ -71,7 +71,7 @@ t.Z = (e) => {
                     channelId: e
                 });
             },
-            [null == w ? void 0 : w.src, t, z, n, U, Y, q, W, V, B, R]
+            [null == w ? void 0 : w.src, t, z, n, U, Y, W, q, V, B, R]
         );
     if (null == R) return null;
     let J = null != n.extra.platform ? A[n.extra.platform] : null,

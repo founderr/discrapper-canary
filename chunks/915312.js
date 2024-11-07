@@ -9,14 +9,14 @@ n.d(t, {
     n(47120),
     n(653041);
 var r = n(192379),
-    i = n(905837),
+    i = n(903797),
     a = n(731965),
     o = n(692114),
     l = n(626135),
     u = n(532810),
     c = n(981631);
 let s = new o.Z('a11y_violations'),
-    d = (0, i.ZP)(() => ({ check: null }));
+    d = (0, i.Z)(() => ({ check: null }));
 function f(e) {
     let t = (0, r.useCallback)((e) => {
         var t;

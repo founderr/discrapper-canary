@@ -3,9 +3,9 @@ t.d(n, {
         return o;
     }
 });
-var i = t(905837),
+var i = t(903797),
     r = t(731965);
-let o = (0, i.ZP)((e) => ({
+let o = (0, i.Z)((e) => ({
     favoriteAdded: !1,
     notifyFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !0 })),
     clearFavoriteAdded: () => (0, r.j)(() => e({ favoriteAdded: !1 }))

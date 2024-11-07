@@ -23,7 +23,7 @@ n.d(t, {
 }),
     n(47120),
     n(733860);
-var r = n(905837),
+var r = n(903797),
     i = n(731965),
     a = n(261376);
 let s = new (n(499303).I)(),
@@ -36,7 +36,7 @@ let s = new (n(499303).I)(),
         currentlyShownGroup: new Set(),
         lastWinnerTime: 0
     }),
-    l = (0, r.ZP)(o),
+    l = (0, r.Z)(o),
     u = (e) => ({
         ...e,
         candidates: new Map(e.candidates),

@@ -15,8 +15,8 @@ t.Z = function (e) {
     var t, n;
     let { isVisible: r, isFullscreen: p, subscriptionTier: _ } = e,
         h = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        E = (0, o.Ng)(),
-        x = (0, o.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+        x = (0, o.Ng)(),
+        E = (0, o.Wp)(x, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
         b = (0, l.useSpring)({
             transform: r ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: r ? 1 : 0,
@@ -37,7 +37,7 @@ t.Z = function (e) {
             children: [
                 (0, i.jsx)(u.Z, {
                     className: f.button,
-                    subscriptionTier: null !== (n = null != _ ? _ : null == h ? void 0 : h.sku_id) && void 0 !== n ? n : x,
+                    subscriptionTier: null !== (n = null != _ ? _ : null == h ? void 0 : h.sku_id) && void 0 !== n ? n : E,
                     premiumModalAnalyticsLocation: C,
                     isPersistentCTA: !0
                 }),

@@ -11,7 +11,7 @@ var r = t(200651),
     s = t.n(l),
     a = t(658722),
     o = t.n(a),
-    c = t(905837),
+    c = t(903797),
     u = t(243814),
     d = t(442837),
     m = t(921072),
@@ -284,7 +284,7 @@ let G = (e) => {
             })
         });
     },
-    B = (0, c.ZP)(() => ({ searchQuery: '' }));
+    B = (0, c.Z)(() => ({ searchQuery: '' }));
 n.Z = () => {
     let e = (0, d.e7)([S.Z], () => S.Z.hidePersonalInformation),
         n = (0, d.e7)([C.Z], () => C.Z.getApps()),

@@ -13,8 +13,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(905837),
-    o = n(588744),
+var i = n(903797),
+    o = n(905642),
     a = n(731965),
     s = n(430742),
     l = n(752305),
@@ -192,5 +192,5 @@ class m {
 }
 let { Provider: p, useStore: f, useStoreApi: g } = (0, o.Z)();
 function v(e) {
-    return (0, i.ZP)((t, n) => new m(e.id, t, n));
+    return (0, i.Z)((t, n) => new m(e.id, t, n));
 }

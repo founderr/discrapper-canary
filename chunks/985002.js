@@ -16,10 +16,10 @@ function o(e) {
         [g, m] = i.useState(!1),
         [f, p] = i.useState(!1),
         [_, h] = i.useState(!1),
-        [E, x] = i.useState(!1),
+        [x, E] = i.useState(!1),
         [b, C] = i.useState(!1),
         [v, T] = i.useState(!1),
-        N = o || d || g || f || E || v,
+        N = o || d || g || f || x || v,
         I = i.useCallback(
             async (e) => {
                 if (!N) {
@@ -115,19 +115,19 @@ function o(e) {
         ),
         O = i.useCallback(
             async (e, i) => {
-                if (!E) {
-                    x(!0);
+                if (!x) {
+                    E(!0);
                     try {
                         await a.ZP.requestLink(e, i), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        x(!1);
+                        E(!1);
                     }
                 }
             },
-            [E, t, n]
+            [x, t, n]
         );
     return {
         acceptLinkRequest: I,
@@ -163,7 +163,7 @@ function o(e) {
         isCancelLoading: f,
         isGetLinkCodeLoading: _,
         isSelectTeenUserLoading: b,
-        isRequestingLink: E,
+        isRequestingLink: x,
         isMoreLoading: v
     };
 }

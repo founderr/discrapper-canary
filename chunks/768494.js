@@ -27,7 +27,7 @@ var r,
     l = n(981631);
 (i = r || (r = {}))[(i.EXPLICIT = 1)] = 'EXPLICIT';
 function u(e) {
-    var t;
+    var t, n;
     return {
         url: e.url,
         proxyUrl: e.proxy_url,
@@ -39,11 +39,11 @@ function u(e) {
         contentScanMetadata:
             null != e.content_scan_metadata
                 ? {
-                      version: (t = e.content_scan_metadata).version,
-                      flags: t.flags
+                      version: (n = e.content_scan_metadata).version,
+                      flags: n.flags
                   }
                 : void 0,
-        srcIsAnimated: !1
+        srcIsAnimated: (0, s.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, l.J0y.IS_ANIMATED)
     };
 }
 function c(e) {

@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(626135),
     _ = n(981631),
     h = n(388032),
-    E = n(456849);
-function x(e, t, n) {
+    x = n(456849);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -81,7 +81,7 @@ class b extends r.PureComponent {
         let { captionVoice: e, captionNoVoice: t } = this.props,
             { isMicTesting: n, isDetectingInput: r } = this.state;
         return (0, i.jsx)(d.FormText, {
-            className: E.micTestCaption,
+            className: x.micTestCaption,
             type: d.FormText.Types.DESCRIPTION,
             children: n ? (r ? e : t) : null
         });
@@ -93,21 +93,21 @@ class b extends r.PureComponent {
         return (
             u && e && !c && this._micTestStop(),
             (0, i.jsxs)('div', {
-                className: E.container,
+                className: x.container,
                 children: [
                     (0, i.jsx)(d.FormTitle, {
                         tag: d.FormTitleTags.H5,
-                        className: E.title,
+                        className: x.title,
                         children: t
                     }),
                     null != n &&
                         (0, i.jsx)(d.FormText, {
                             type: d.FormText.Types.DESCRIPTION,
-                            className: E.description,
+                            className: x.description,
                             children: n
                         }),
                     (0, i.jsxs)('div', {
-                        className: E.micTest,
+                        className: x.micTest,
                         children: [
                             (0, i.jsx)(d.Tooltip, {
                                 text: f,
@@ -138,20 +138,20 @@ class b extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, '_initTimeout', new c.V7()),
-            x(this, '_silenceTimeout', new c.V7()),
-            x(this, '_messageTimeout', new c.V7()),
-            x(this, '_micTestStartTime', void 0),
-            x(this, 'state', {
+            E(this, '_initTimeout', new c.V7()),
+            E(this, '_silenceTimeout', new c.V7()),
+            E(this, '_messageTimeout', new c.V7()),
+            E(this, '_micTestStartTime', void 0),
+            E(this, 'state', {
                 volume: -100,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1
             }),
-            x(this, 'setupVoiceActivity', () => {
+            E(this, 'setupVoiceActivity', () => {
                 m.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
             }),
-            x(this, 'handleVoiceActivity', (e) => {
+            E(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
                 if (t && e <= -100) {
                     !this._silenceTimeout.isStarted() &&
@@ -167,7 +167,7 @@ class b extends r.PureComponent {
                         isDetectingInput: !0
                     });
             }),
-            x(this, 'handleToggleMicTest', () => {
+            E(this, 'handleToggleMicTest', () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
             });
     }

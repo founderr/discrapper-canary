@@ -10,7 +10,7 @@ n.d(t, {
 var i = n(392711),
     l = n.n(i),
     a = n(772848),
-    r = n(905837),
+    r = n(903797),
     s = n(731965),
     o = n(125268),
     c = n(673125),
@@ -30,7 +30,7 @@ let p = {
         SIZE_MIN: f.qh / 2,
         SIZE_MAX: f.qh
     },
-    h = (0, r.ZP)(() => ({
+    h = (0, r.Z)(() => ({
         particles: {},
         lastSpawned: {}
     }));

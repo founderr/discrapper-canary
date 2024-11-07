@@ -25,8 +25,8 @@ var r = n(200651),
     E = n(472144),
     S = n(602667),
     _ = n(644646),
-    j = n(604162),
-    N = n(747717),
+    N = n(604162),
+    j = n(747717),
     I = n(963123),
     T = n(281055),
     b = n(46140),
@@ -43,7 +43,7 @@ function B(e) {
         [P, R] = o.useState(k.progressSeconds),
         [w, Z] = o.useState(!1),
         { completedRatio: F, completedRatioDisplay: U } = (0, p.I)(f),
-        [V, G] = (0, j.G6)(y.intl.string(y.t.RDE0SU), y.intl.string(y.t['+5kSoa']), 1700),
+        [V, G] = (0, N.G6)(y.intl.string(y.t.RDE0SU), y.intl.string(y.t['+5kSoa']), 1700),
         q = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? y.intl.string(y.t.vTgCW1) : y.intl.string(y.t.cfY4PD),
         H = o.useCallback(() => {
             (0, C.f2)(f.id, {
@@ -99,7 +99,7 @@ function B(e) {
                                                     className: l()(A.contentHeaderLogotype, A.accentOnHover),
                                                     src: (0, g.fh)(f, g.eC.LOGO_TYPE, M).url
                                                 }),
-                                                (0, r.jsx)(N.Z, {}),
+                                                (0, r.jsx)(j.Z, {}),
                                                 (0, r.jsxs)('div', {
                                                     className: A.questHeading,
                                                     children: [

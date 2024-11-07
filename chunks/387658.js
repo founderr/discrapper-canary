@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return D;
+        return H;
     }
 }),
     t(47120);
@@ -35,8 +35,8 @@ var i = t(200651),
     L = t(388032),
     R = t(32950),
     M = t(818931);
-let k = 'placeholder',
-    Z = [, , , , ,].fill(k);
+let Z = 'placeholder',
+    k = [, , , , ,].fill(Z);
 function O(e) {
     var n, t;
     let { channel: a, command: o, section: s, sectionName: c } = e,
@@ -226,7 +226,7 @@ function w(e) {
                       className: M.commandContainer,
                       'aria-label': a,
                       children: t.map((e, t) =>
-                          e === k
+                          e === Z
                               ? (0, i.jsx)(U, {}, e + t)
                               : (0, i.jsx)(
                                     O,
@@ -243,7 +243,7 @@ function w(e) {
               ]
           });
 }
-function D(e) {
+function H(e) {
     var n;
     let { channel: t, application: a, sectionName: o, installOnDemand: r, setHasCommands: s } = e,
         {
@@ -299,7 +299,7 @@ function D(e) {
                   (0, i.jsx)(w, {
                       channel: t,
                       section: h,
-                      commands: p.current ? Z : x,
+                      commands: p.current ? k : x,
                       headerName: L.intl.string(L.t.DUU9Ly),
                       sectionName: o,
                       children:

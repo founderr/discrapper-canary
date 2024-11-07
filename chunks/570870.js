@@ -26,8 +26,8 @@ e.Z = (n) => {
             context: T
         }),
         {
-            commands: P,
-            sectionDescriptors: y,
+            commands: y,
+            sectionDescriptors: P,
             loading: O
         } = d.wi({
             channel: C,
@@ -38,12 +38,12 @@ e.Z = (n) => {
         { sections: R } = r.useMemo(() => {
             let n = {};
             return (
-                y.forEach((e) => {
+                P.forEach((e) => {
                     n[e.id] = e;
                 }),
                 { sections: n }
             );
-        }, [y]),
+        }, [P]),
         Z = r.useRef(O.current);
     r.useEffect(() => {
         O.current !== Z.current && ((Z.current = O.current), null == I || I());
@@ -97,7 +97,7 @@ e.Z = (n) => {
                   'menu-commands-placeholder'
               ))
             : ((e =
-                  0 === P.length
+                  0 === y.length
                       ? (0, i.jsx)(
                             o.MenuItem,
                             {
@@ -107,7 +107,7 @@ e.Z = (n) => {
                             },
                             'menu-commands-empty'
                         )
-                      : P.map(M)),
+                      : y.map(M)),
               null != S &&
                   (e = (0, i.jsxs)(i.Fragment, {
                       children: [e, (0, i.jsx)(o.MenuSeparator, {}, 'separator'), S]

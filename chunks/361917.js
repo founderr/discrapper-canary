@@ -36,14 +36,14 @@ var i = t(200651),
     L = t(804307),
     R = t(888617),
     M = t(561160),
-    k = t(41558),
-    Z = t(105862),
+    Z = t(41558),
+    k = t(105862),
     O = t(28147),
     U = t(981631),
     B = t(689079),
     w = t(388032),
-    D = t(597976);
-let H = [],
+    H = t(597976);
+let D = [],
     V = [, , , ,].fill(0).map((e, n) => n),
     W = [
         {
@@ -84,7 +84,7 @@ function F(e) {
         }, [t]);
     let L = a.length > 0;
     return (0, i.jsxs)('div', {
-        className: D.container,
+        className: H.container,
         children: [
             T ? (0, i.jsx)(G, {}) : null,
             (0, i.jsx)(z, {
@@ -94,7 +94,7 @@ function F(e) {
             }),
             (0, i.jsx)(d.Scroller, {
                 ref: r,
-                className: D.scrollableContent,
+                className: H.scrollableContent,
                 fade: !0,
                 children: L
                     ? (0, i.jsx)(O.Z, {
@@ -131,7 +131,7 @@ function F(e) {
                                       type: E.LG.HOME_EMPTY,
                                       textContent: t === E._b.TEXT ? w.intl.string(w.t.iKZctb) : w.intl.string(w.t.RL7Ncn)
                                   }),
-                              P && (0, i.jsx)(Z.Z, {})
+                              P && (0, i.jsx)(k.Z, {})
                           ]
                       })
             })
@@ -140,10 +140,10 @@ function F(e) {
 }
 function G() {
     return (0, i.jsxs)('div', {
-        className: D.developerShelfControlsContainer,
+        className: H.developerShelfControlsContainer,
         children: [
             (0, i.jsx)(d.Text, {
-                className: D.developerShelfControlsLabel,
+                className: H.developerShelfControlsLabel,
                 variant: 'text-sm/normal',
                 children: w.intl.string(w.t.tZ3FNj)
             }),
@@ -205,7 +205,7 @@ function z(e) {
             );
         }, [s, p]),
         (0, i.jsx)('div', {
-            className: D.searchBarContainer,
+            className: H.searchBarContainer,
             children: (0, i.jsx)(d.SearchBar, {
                 ref: (e) => {
                     var n;
@@ -282,15 +282,15 @@ function Y(e) {
         ? null
         : (0, i.jsxs)('div', {
               children: [
-                  (0, i.jsx)(k.Z, {
+                  (0, i.jsx)(Z.Z, {
                       title: d,
-                      buttonType: k.Z.buttonTypes.VIEW_MORE,
+                      buttonType: Z.Z.buttonTypes.VIEW_MORE,
                       onClickViewButton: p
                   }),
                   (0, i.jsx)('div', {
-                      className: D.sectionContentContainer,
+                      className: H.sectionContentContainer,
                       children: (0, i.jsx)('div', {
-                          className: D.frecentList,
+                          className: H.frecentList,
                           children: m.map((e, t) => {
                               let { application: l } = e;
                               return o
@@ -346,10 +346,10 @@ function X(e) {
               children: [
                   (0, i.jsx)('div', {
                       ref: (e) => (r.current = e),
-                      children: (0, i.jsx)(k.Z, { title: w.intl.string(w.t.shUONj) })
+                      children: (0, i.jsx)(Z.Z, { title: w.intl.string(w.t.shUONj) })
                   }),
                   (0, i.jsx)('div', {
-                      className: D.sectionTwoColumnContentContainer,
+                      className: H.sectionTwoColumnContentContainer,
                       children: a.map((e, t) => {
                           let { application: l } = e;
                           return (0, i.jsx)(
@@ -398,14 +398,14 @@ function q(e) {
               children: [
                   (0, i.jsx)('div', {
                       ref: (e) => (d.current = e),
-                      children: (0, i.jsx)(k.Z, {
+                      children: (0, i.jsx)(Z.Z, {
                           title: w.intl.string(w.t.KfkuGR),
-                          buttonType: k.Z.buttonTypes.VIEW_MORE,
+                          buttonType: Z.Z.buttonTypes.VIEW_MORE,
                           onClickViewButton: c
                       })
                   }),
                   (0, i.jsx)('div', {
-                      className: D.sectionRowsContentContainer,
+                      className: H.sectionRowsContentContainer,
                       children: r
                           ? V.map((e) => (0, i.jsx)(L.Z, { look: T.U4.ROW }, e))
                           : s.map((e, n) => {
@@ -482,7 +482,7 @@ function J(e) {
             (0, f.g)();
             let i = (0, h.Z)({ guildId: n.getGuildId() });
             return l.useMemo(() => {
-                if (!t.some((e) => e.appends_remaining_activities)) return H;
+                if (!t.some((e) => e.appends_remaining_activities)) return D;
                 let e = new Set();
                 return (
                     t.forEach((n) => {
@@ -512,9 +512,9 @@ function J(e) {
                             'div',
                             {
                                 children: [
-                                    (0, i.jsx)(k.Z.Loading, {}),
+                                    (0, i.jsx)(Z.Z.Loading, {}),
                                     (0, i.jsx)('div', {
-                                        className: l === T.U4.ROW ? D.sectionRowsContentContainer : D.sectionTwoColumnContentContainer,
+                                        className: l === T.U4.ROW ? H.sectionRowsContentContainer : H.sectionTwoColumnContentContainer,
                                         children: t.map((e) => (0, i.jsx)(L.Z, { look: l }, e))
                                     })
                                 ]
@@ -601,14 +601,14 @@ function Q(e) {
         children: [
             (0, i.jsx)('div', {
                 ref: (e) => (f.current = e),
-                children: (0, i.jsx)(k.Z, {
+                children: (0, i.jsx)(Z.Z, {
                     title: a.section_title,
-                    buttonType: k.Z.buttonTypes.VIEW_MORE,
+                    buttonType: Z.Z.buttonTypes.VIEW_MORE,
                     onClickViewButton: h
                 })
             }),
             (0, i.jsx)('div', {
-                className: n === T.U4.ROW ? D.sectionRowsContentContainer : D.sectionTwoColumnContentContainer,
+                className: n === T.U4.ROW ? H.sectionRowsContentContainer : H.sectionTwoColumnContentContainer,
                 children: p.map((e, t) => {
                     let { application: l, installOnDemand: a } = e;
                     return (0, i.jsx)(

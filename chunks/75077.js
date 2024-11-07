@@ -9,7 +9,7 @@ n.d(t, {
         return v;
     },
     k3: function () {
-        return E;
+        return x;
     },
     mN: function () {
         return R;
@@ -21,7 +21,7 @@ n.d(t, {
         return C;
     },
     vZ: function () {
-        return x;
+        return E;
     }
 }),
     n(653041),
@@ -41,7 +41,7 @@ var i = n(278074),
     p = n(474936),
     _ = n(735825),
     h = n(388032);
-let E = (e) => {
+let x = (e) => {
         switch (e) {
             case _.EB.PENDING:
                 return h.intl.string(h.t.fhK8ho);
@@ -53,7 +53,7 @@ let E = (e) => {
                 return '';
         }
     },
-    x = (e, t, n) => {
+    E = (e, t, n) => {
         switch (e) {
             case _.EB.PENDING:
                 return t === _.Ft.FREE_GUILD_BOOST_1_MONTH ? h.intl.string(h.t.hnbagI) : h.intl.string(h.t['73+DnJ']);

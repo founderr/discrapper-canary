@@ -1,5 +1,5 @@
 var r = n(512969),
-    a = n(905837),
+    a = n(903797),
     l = n(731965),
     i = n(893607),
     o = n(981631);
@@ -23,7 +23,7 @@ function s(e) {
               channelId: null
           };
 }
-t.Z = (0, a.ZP)((e) => ({
+t.Z = (0, a.Z)((e) => ({
     path: null,
     basePath: '/',
     guildId: null,

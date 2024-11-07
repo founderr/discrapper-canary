@@ -6,10 +6,10 @@ n.d(t, {
         return l;
     }
 });
-var i = n(905837);
+var i = n(903797);
 let s = '0',
     r = { selectedGuildId: s },
-    l = (0, i.ZP)((e) => ({
+    l = (0, i.Z)((e) => ({
         ...r,
         setSelectedGuildId: (t) => {
             e({ selectedGuildId: t });

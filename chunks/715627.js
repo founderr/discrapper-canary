@@ -12,7 +12,7 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = r.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: g, offsetXPercentageMax: m, offsetXPercentageMin: f, offsetYPercentageMax: p, offsetYPercentageMin: _, customConfettiCanvas: h, speedValues: E = o, dragCoefficientValue: x = 1.66, onAnimationEnd: b } = e,
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: g, offsetXPercentageMax: m, offsetXPercentageMin: f, offsetYPercentageMax: p, offsetYPercentageMin: _, customConfettiCanvas: h, speedValues: x = o, dragCoefficientValue: E = 1.66, onAnimationEnd: b } = e,
             [C, v] = r.useState(null),
             { confettiCanvas: T } = r.useContext(s.h),
             N = (0, a.uR)(null != h ? h : T, C),
@@ -79,7 +79,7 @@ let o = {
                                             value: s
                                         }
                                     };
-                                })(t.getBoundingClientRect(), m, f, p, _, E, x),
+                                })(t.getBoundingClientRect(), m, f, p, _, x, E),
                                 null != g ? g : 50
                             ),
                                 i === e.length - 1 && null != b && S(!0);
@@ -89,7 +89,7 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [N, t, u, g, m, f, p, _, E, x, b]),
+            }, [N, t, u, g, m, f, p, _, x, E, b]),
             (0, i.jsx)(a.Ji, {
                 ref: v,
                 sprites: null != R ? R : l.CA,

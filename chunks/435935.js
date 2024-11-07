@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return E;
+        return x;
     }
 });
 var i,
@@ -86,7 +86,7 @@ u(h, 'defaultProps', {
     style: {},
     wrap: !1
 });
-class E extends (r = s.PureComponent) {
+class x extends (r = s.PureComponent) {
     render() {
         let { children: e, className: t, direction: n, justify: i, align: r, wrap: s, shrink: l, grow: c, basis: u, style: g, gutter: m, ...f } = this.props,
             p = {
@@ -103,13 +103,13 @@ class E extends (r = s.PureComponent) {
         });
     }
 }
-u(E, 'Child', h),
-    u(E, 'Direction', g),
-    u(E, 'Align', p),
-    u(E, 'Justify', m),
-    u(E, 'Wrap', f),
-    u(E, 'Gutter', _),
-    u(E, 'defaultProps', {
+u(x, 'Child', h),
+    u(x, 'Direction', g),
+    u(x, 'Align', p),
+    u(x, 'Justify', m),
+    u(x, 'Wrap', f),
+    u(x, 'Gutter', _),
+    u(x, 'defaultProps', {
         direction: g.HORIZONTAL,
         justify: m.START,
         align: p.STRETCH,

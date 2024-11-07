@@ -181,13 +181,13 @@ function U(e) {
                     children: [
                         (0, r.jsx)(c.Heading, {
                             variant: 'heading-lg/bold',
-                            color: 'always-white',
+                            color: 'header-primary',
                             className: w.heading,
                             children: x.intl.string(x.t['0/Yz+f'])
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/normal',
-                            color: 'always-white',
+                            color: 'text-normal',
                             className: w.text,
                             children: f
                         }),

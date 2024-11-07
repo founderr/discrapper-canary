@@ -62,8 +62,8 @@ var c = n(442837),
     D = n(594174),
     G = n(979651),
     z = n(938475),
-    q = n(626135),
-    W = n(768581),
+    W = n(626135),
+    q = n(768581),
     Y = n(5192),
     F = n(379357),
     J = n(26033),
@@ -136,7 +136,7 @@ function eh(e) {
         [T, y] = a.useState(null),
         N = (0, c.e7)([V.Z], () => null != t && eo.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && V.Z.can(eo.Plq.SEND_MESSAGES, t)),
         [_, E] = a.useState(!1),
-        [w, W] = a.useState(!1),
+        [w, q] = a.useState(!1),
         { voiceBar: F, joinVoiceButton: J } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: i } = e,
                 { streamPreviewUrl: r, channel: o } = (0, ee.Z)(n),
@@ -362,14 +362,14 @@ function eh(e) {
             let l;
             if (null != e) {
                 if (
-                    (q.default.track(eo.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
+                    (W.default.track(eo.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
                         surface_type: er.Kd.GUILD_MEMBER_LIST,
                         channel_id: null == t ? void 0 : t.id,
                         guild_id: null == t ? void 0 : t.guild_id
                     }),
                     (0, Z.EW)(u.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
                     E(!0),
-                    W(!1),
+                    q(!1),
                     P)
                 )
                     s()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (l = t);
@@ -384,7 +384,7 @@ function eh(e) {
                         reply: ':'.concat(e.name, ':'),
                         sendToChannel: l,
                         onComplete: (e, t) => {
-                            W(!0),
+                            q(!0),
                                 setTimeout(() => {
                                     E(!1), o(e, t);
                                 }, 600);
@@ -568,7 +568,7 @@ let ep = (e) => {
                       }
                     : {
                           emoji: e,
-                          url: (0, W.gT)({
+                          url: (0, q.gT)({
                               id: e.id,
                               animated: e.animated,
                               size: 58
