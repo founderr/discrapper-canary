@@ -80,14 +80,14 @@ let S = 2700,
             )
             .exhaustive();
 function y(e) {
-    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: S } = e,
-        { trackUserProfileAction: T } = (0, _.KZ)(),
-        { pressReact: y, pressReply: A } = (0, p.Q)(n),
-        N = (0, o.e7)([f.default], () => f.default.getId() === t.id),
-        C = (0, h.Z)(t.id),
-        { profileType: R } = (0, g.z)(),
-        { onInteraction: O } = (0, m.Xo)();
-    return t.bot || N || !C
+    let { user: t, sourceType: n, isVisible: i, isExpandable: s, interactionSourceId: S, moreButton: T } = e,
+        { trackUserProfileAction: y } = (0, _.KZ)(),
+        { pressReact: A, pressReply: N } = (0, p.Q)(n),
+        C = (0, o.e7)([f.default], () => f.default.getId() === t.id),
+        R = (0, h.Z)(t.id),
+        { profileType: O } = (0, g.z)(),
+        { onInteraction: D } = (0, m.Xo)();
+    return t.bot || C || !R
         ? null
         : (0, r.jsxs)(c.ZP, {
               className: a()(I.popover, {
@@ -105,14 +105,14 @@ function y(e) {
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
                           onClick: () => {
-                              T({ action: y }),
-                                  null == O ||
-                                      O({
+                              y({ action: A }),
+                                  null == D ||
+                                      D({
                                           interactionType: E.P.REACT,
                                           interactionSource: n,
                                           interactionSourceId: S
                                       }),
-                                  R === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                                  O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
                           className: a()(I.button, I.left),
                           'aria-label': b(E.P.REACT, n),
@@ -130,16 +130,16 @@ function y(e) {
                       'aria-label': !1,
                       children: (0, r.jsx)(c.zx, {
                           onClick: () => {
-                              T({ action: A }),
-                                  null == O ||
-                                      O({
+                              y({ action: N }),
+                                  null == D ||
+                                      D({
                                           interactionType: E.P.REPLY,
                                           interactionSource: n,
                                           interactionSourceId: S
                                       }),
-                                  R === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
+                                  O === E.y0.BITE_SIZE && (0, d.EW)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
                           },
-                          className: a()(I.button, I.right),
+                          className: I.button,
                           'aria-label': b(E.P.REPLY, n),
                           'aria-haspopup': 'dialog',
                           children: (0, r.jsx)(u.ArrowAngleLeftUpIcon, {
@@ -147,7 +147,15 @@ function y(e) {
                               className: I.icon
                           })
                       })
-                  })
+                  }),
+                  null != T &&
+                      (0, r.jsx)(u.TooltipContainer, {
+                          text: v.intl.string(v.t.UKOtz8),
+                          shouldShow: i,
+                          delay: 0,
+                          'aria-label': !1,
+                          children: T
+                      })
               ]
           });
 }
