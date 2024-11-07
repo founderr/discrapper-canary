@@ -49,7 +49,7 @@ function M(e) {
               children: s
           });
 }
-function L(e) {
+function Z(e) {
     let { quest: t, progressState: n, isCollectibleQuest: s, location: l, questContentPosition: u, inGiftInventory: c } = e,
         d = n >= x.OH.COMPLETED,
         m = (0, r.e7)([a.Z], () => a.Z.useReducedMotion),
@@ -102,23 +102,23 @@ function L(e) {
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: C, isExpanded: T, isAnimating: b, contentPosition: Z } = e,
+    let { quest: t, location: n, size: s, isFocused: a, isQuestExpired: C, isExpanded: T, isAnimating: b, contentPosition: L } = e,
         y = (0, x._Q)(t),
-        P = y >= x.OH.ACCEPTED,
-        B = y >= x.OH.COMPLETED,
+        B = y >= x.OH.ACCEPTED,
+        P = y >= x.OH.COMPLETED,
         U = y >= x.OH.CLAIMED,
         D = (0, g.Xv)(t.config),
         w = (0, S.uq)(n),
         O = n === h.jn.QUESTS_EMBED,
         Q = T || b,
-        k = P && !U && w,
+        k = B && !U && w,
         H = (0, x.t5)(t, q.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: z } = (0, x.z6)(),
         G = (0, r.e7)([u.default], () => u.default.locale),
         W = (0, x.z)(t),
         F = w && D,
-        V = C && !B,
-        X = z.length > 0 && w && (0, g.$J)(t) && P && !B && !W,
+        V = C && !P,
+        X = z.length > 0 && w && (0, g.$J)(t) && B && !P && !W,
         Y = (0, i.jsx)(j.Z, {
             autoplay: a,
             className: l()(R.gridImg, {
@@ -131,7 +131,7 @@ t.Z = (e) => {
             location: q.dr.QUESTS_CARD,
             quest: t,
             questContent: n,
-            questContentPosition: Z
+            questContentPosition: L
         });
     return (0, i.jsxs)('div', {
         className: R.root,
@@ -173,7 +173,7 @@ t.Z = (e) => {
                         className: l()(R.gridText, R.taskDetails),
                         children: [
                             (0, i.jsx)(o.Text, {
-                                variant: I(n, s, P),
+                                variant: I(n, s, B),
                                 className: R.taskInstructions,
                                 children: C ? A.intl.formatToPlainString(A.t['ge+AJi'], { questName: t.config.messages.questName }) : H
                             }),
@@ -264,15 +264,15 @@ t.Z = (e) => {
                                             (0, m._3)({
                                                 questId: t.id,
                                                 questContent: n,
-                                                questContentPosition: Z,
+                                                questContentPosition: L,
                                                 questContentCTA: m.jZ.LEARN_MORE
                                             });
                                     },
                                     children: A.intl.string(A.t.LLLLPD)
                                 }),
-                            C && !B
+                            C && !P
                                 ? null
-                                : (0, i.jsx)(L, {
+                                : (0, i.jsx)(Z, {
                                       quest: t,
                                       progressState: y,
                                       isCollectibleQuest: D,
@@ -284,7 +284,7 @@ t.Z = (e) => {
                     k &&
                         (0, i.jsx)(E.Z, {
                             className: R.gridProgressBar,
-                            color: B ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
+                            color: P ? o.tokens.colors.TEXT_POSITIVE : o.tokens.colors.BG_BRAND,
                             quest: t,
                             isInventory: w
                         })

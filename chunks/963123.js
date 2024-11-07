@@ -199,7 +199,7 @@ function Z(e) {
                 });
         }, [$, ee, eo, G.id]),
         o.useEffect(() => {
-            (z === d.ModalTransitionState.HIDDEN || z === d.ModalTransitionState.EXITING || z === d.ModalTransitionState.EXITED || (null != z && en && !et && !eR) || (ee && !$ && !eR)) && null != eP.current && eo === T.r.PLAYING && (eq(T.r.PAUSED), eF(T.y.LOST_FOCUS));
+            (z === d.ModalTransitionState.HIDDEN || z === d.ModalTransitionState.EXITING || z === d.ModalTransitionState.EXITED || (null != z && en && !et && !eR) || (ee && !$ && !eR)) && null != eP.current && eo === T.r.PLAYING && !eR && (eq(T.r.PAUSED), eF(T.y.LOST_FOCUS));
         }, [z, $, ee, et, en, eo, eR, eq]);
     let eH = () => {
             ea(!0);

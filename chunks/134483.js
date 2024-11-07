@@ -28,11 +28,11 @@ var i = n(200651),
     b = n(644646),
     I = n(670638),
     M = n(667105),
-    L = n(860151),
-    Z = n(341907),
+    Z = n(860151),
+    L = n(341907),
     y = n(46140),
-    P = n(981631),
-    B = n(354459),
+    B = n(981631),
+    P = n(354459),
     U = n(388032),
     D = n(869630);
 t.Z = function (e) {
@@ -44,7 +44,7 @@ t.Z = function (e) {
         W = s.useContext(C.h9),
         F = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         V = (0, o.e7)([x.Z], () => x.Z.getState().theme),
-        X = (0, a.wj)(V) ? P.BRd.DARK : P.BRd.LIGHT,
+        X = (0, a.wj)(V) ? B.BRd.DARK : B.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Y, quest: K } = (0, o.cj)(
             [h.Z, c.Z, T.Z],
             () => {
@@ -56,13 +56,13 @@ t.Z = function (e) {
                             : (function (e, t, n) {
                                   for (let r of e) {
                                       var i, s, l;
-                                      if (r.type === B.fO.STREAM) {
+                                      if (r.type === P.fO.STREAM) {
                                           let e = null !== (s = (0, m.Um)(r.stream, n)) && void 0 !== s ? s : null,
                                               l = (0, v.ZZ)(t, e);
                                           if (null != l && (null === (i = l.userStatus) || void 0 === i ? void 0 : i.claimedAt) == null) return l;
                                       }
                                       for (let i of e) {
-                                          if (!(0, B.I)(i))
+                                          if (!(0, P.I)(i))
                                               for (let e of n.getActivities(i.user.id)) {
                                                   let n = (0, v.ZZ)(t, e);
                                                   if (null != n && (null === (l = n.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null && ((0, v.Nj)({ quest: n }) || (0, v.$J)(n))) return n;
@@ -80,7 +80,7 @@ t.Z = function (e) {
                         (n = F),
                         (i = h.Z),
                         e.some((e) => {
-                            if (e.type !== B.fO.STREAM || e.user.id !== n.id) return !1;
+                            if (e.type !== P.fO.STREAM || e.user.id !== n.id) return !1;
                             let s = (0, m.Um)(e.stream, i);
                             return null != s && (0, v._D)(s, t);
                         })),
@@ -97,7 +97,7 @@ t.Z = function (e) {
                 if (null == K) return !1;
                 let e = d.ZP.getRunningGames().map((e) => e.id);
                 if ((0, v.$H)(K) && e.includes($)) return !0;
-                let t = null != F ? h.Z.findActivity(F.id, (e) => e.type !== P.IIU.CUSTOM_STATUS) : null;
+                let t = null != F ? h.Z.findActivity(F.id, (e) => e.type !== B.IIU.CUSTOM_STATUS) : null;
                 return !!(null != t && (0, v.$J)(K) && (0, v._D)(t, K)) || !1;
             },
             [K, $, F]
@@ -121,7 +121,7 @@ t.Z = function (e) {
                     questContent: f.jn.QUEST_LIVE_STREAM,
                     questContentCTA: p.jZ.TRACK_PROGRESS
                 }),
-                (0, Z.navigateToQuestHome)(y.dr.QUEST_CHANNEL_CALL_HEADER, f.jn.QUEST_LIVE_STREAM, K.id));
+                (0, L.navigateToQuestHome)(y.dr.QUEST_CHANNEL_CALL_HEADER, f.jn.QUEST_LIVE_STREAM, K.id));
         }, [K]),
         ea = s.useCallback(() => {
             null != K &&
@@ -130,7 +130,7 @@ t.Z = function (e) {
                     questContent: f.jn.QUEST_LIVE_STREAM,
                     questContentCTA: p.jZ.LEARN_MORE
                 }),
-                (0, Z.navigateToQuestHome)(y.dr.QUEST_CHANNEL_CALL_HEADER, f.jn.QUEST_LIVE_STREAM, K.id));
+                (0, L.navigateToQuestHome)(y.dr.QUEST_CHANNEL_CALL_HEADER, f.jn.QUEST_LIVE_STREAM, K.id));
         }, [K]),
         eu = (0, M.hf)({
             quest: K,
@@ -251,7 +251,7 @@ t.Z = function (e) {
                             em &&
                                 !ex &&
                                 !et &&
-                                (0, i.jsx)(L.Z, {
+                                (0, i.jsx)(Z.Z, {
                                     autoplay: k,
                                     quest: K,
                                     questContent: f.jn.QUEST_LIVE_STREAM,

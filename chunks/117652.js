@@ -172,7 +172,7 @@ function P(e) {
     let { handleClose: n } = e;
     return (0, i.jsx)(o.Clickable, {
         onClick: function () {
-            n(), (0, _.uL)(I.Z5c.COLLECTIBLES_SHOP);
+            n(), (0, o.closeAllModals)(), (0, _.uL)(I.Z5c.COLLECTIBLES_SHOP);
         },
         children: (0, i.jsxs)('div', {
             className: y.navigateToShopButton,

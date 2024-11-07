@@ -28,8 +28,8 @@ var i = n(200651),
     b = n(388032),
     I = n(128175);
 let M = (0, o.animated)(d.ChevronSmallDownIcon),
-    L = (0, o.animated)(C.Z),
-    Z = (e) => {
+    Z = (0, o.animated)(C.Z),
+    L = (e) => {
         let { quest: t, location: n, questContentPosition: l, ...r } = e,
             [o, a] = s.useState(!1),
             u = s.useRef(new c.V7());
@@ -68,7 +68,7 @@ let M = (0, o.animated)(d.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: l, isQuestExpired: c, quest: C, location: g, size: T, expansionSpring: y, isAnimating: P, isExpanded: B, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
+    let { isFocused: l, isQuestExpired: c, quest: C, location: g, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
         { ref: O, height: Q } = (0, m.Z)(),
         { ref: k, width: H, scrollWidth: z } = (0, m.Z)(),
         G = (0, u.e7)([h.Z], () => h.Z.getState().theme),
@@ -96,7 +96,7 @@ t.Z = (e) => {
                 (0, p._3)({
                     questId: C.id,
                     questContent: g,
-                    questContentCTA: B ? p.jZ.COLLAPSE : p.jZ.EXPAND,
+                    questContentCTA: P ? p.jZ.COLLAPSE : p.jZ.EXPAND,
                     questContentPosition: D
                 });
         };
@@ -113,7 +113,7 @@ t.Z = (e) => {
             'aria-label': b.intl.string(b.t.dcl9MT),
             style: { height: X ? Q : void 0 },
             children: [
-                (0, i.jsx)(L, {
+                (0, i.jsx)(Z, {
                     style: {
                         opacity: y.to({
                             range: [0, 1],
@@ -138,7 +138,7 @@ t.Z = (e) => {
                 }),
                 (0, i.jsxs)('div', {
                     className: I.header,
-                    'aria-expanded': B,
+                    'aria-expanded': P,
                     children: [
                         (0, i.jsxs)(o.animated.div, {
                             className: r()(I.headerContent, { [I.headerContentEmbed]: Y }),
@@ -159,9 +159,9 @@ t.Z = (e) => {
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             }),
-                                            visibility: P || !B ? 'inherit' : 'hidden'
+                                            visibility: B || !P ? 'inherit' : 'hidden'
                                         },
-                                        'aria-hidden': !P && B,
+                                        'aria-hidden': !B && P,
                                         children: (0, i.jsxs)(d.ClickableContainer, {
                                             'aria-label': b.intl.string(b.t.dcl9MT),
                                             onClick: et,
@@ -213,9 +213,9 @@ t.Z = (e) => {
                                             range: [0, 1],
                                             output: [0, 1]
                                         }),
-                                        visibility: P || B ? 'inherit' : 'hidden'
+                                        visibility: B || P ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !P && !B,
+                                    'aria-hidden': !B && !P,
                                     children: [
                                         (0, i.jsxs)('div', {
                                             className: I.headerExpandedWrapper,
@@ -257,7 +257,7 @@ t.Z = (e) => {
                                         }),
                                         !c &&
                                             X &&
-                                            (0, i.jsx)(Z, {
+                                            (0, i.jsx)(L, {
                                                 quest: C,
                                                 location: g,
                                                 questContentPosition: D
@@ -288,9 +288,9 @@ t.Z = (e) => {
                                         (0, i.jsx)(o.animated.div, {
                                             style: {
                                                 opacity: y,
-                                                visibility: P || B ? 'inherit' : 'hidden'
+                                                visibility: B || P ? 'inherit' : 'hidden'
                                             },
-                                            'aria-hidden': !P && !B,
+                                            'aria-hidden': !B && !P,
                                             children: (0, i.jsx)(d.Clickable, {
                                                 ...e,
                                                 className: I.iconWrapper,
@@ -307,7 +307,7 @@ t.Z = (e) => {
                                     (0, i.jsx)(d.Clickable, {
                                         onClick: et,
                                         className: I.iconWrapper,
-                                        'aria-label': B ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
+                                        'aria-label': P ? b.intl.string(b.t.iTcumZ) : b.intl.string(b.t.dcl9MT),
                                         children: (0, i.jsx)(M, {
                                             style: {
                                                 rotate: y.to({

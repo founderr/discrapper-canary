@@ -26,7 +26,7 @@ function o(e, t) {
             return {
                 isDismissed: n,
                 handleToggleDismissState: function () {
-                    n ? (0, i.C9)(e) : (0, i.Bn)(e, t);
+                    n ? (0, i.m0)(e) : (0, i.Bn)(e, t);
                 }
             };
         })(e, t);
