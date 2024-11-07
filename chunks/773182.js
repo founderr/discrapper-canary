@@ -1,12 +1,12 @@
 n.d(t, {
     KF: function () {
-        return L;
-    },
-    LW: function () {
         return D;
     },
+    LW: function () {
+        return k;
+    },
     TH: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -27,23 +27,25 @@ var i = n(200651),
     C = n(824991),
     _ = n(931515),
     x = n(243778),
-    v = n(749681),
-    I = n(863249),
-    b = n(937111),
-    S = n(667105),
-    Z = n(451478),
-    N = n(981631),
-    E = n(308083),
-    y = n(921944),
-    j = n(49898),
-    T = n(128449),
-    P = n(46140),
-    A = n(388032),
-    M = n(877861);
-function w(e) {
+    v = n(836768),
+    I = n(749681),
+    b = n(863249),
+    S = n(937111),
+    Z = n(667105),
+    N = n(451478),
+    E = n(602147),
+    y = n(981631),
+    j = n(308083),
+    T = n(921944),
+    P = n(49898),
+    A = n(128449),
+    M = n(46140),
+    w = n(388032),
+    L = n(877861);
+function R(e) {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
-        className: M.doubleIcon,
+        className: L.doubleIcon,
         width: '102',
         height: '61',
         viewBox: '0 0 102 61',
@@ -98,80 +100,87 @@ function w(e) {
         ]
     });
 }
-let L = l.memo(function (e) {
+let D = l.memo(function (e) {
     let { children: t } = e,
         n = (0, o.TH)(),
-        { games: r, treatment: p, hasFetchedGames: I } = (0, _.I9)(),
-        [b, L] = (0, x.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], y.R.SIDEBAR, !0),
-        R = (0, S.Ws)({ location: P.dr.CONFLICT_CHECKS }),
-        D = b !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        O = (0, h.Z)(),
-        k = n.pathname === N.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(N.Z5c.GLOBAL_DISCOVERY),
-        U = R && !O && !D && !k,
-        [G, B] = l.useState(0),
-        V = (0, f.ZP)(),
-        H = l.useMemo(() => r.map((e) => e.id), [r]),
-        F = (0, c.e7)([Z.Z], () => Z.Z.isFocused());
+        { games: r, treatment: p, hasFetchedGames: b } = (0, _.I9)(),
+        [S, D] = (0, x.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], T.R.SIDEBAR, !0),
+        O = (0, Z.Ws)({ location: M.dr.CONFLICT_CHECKS }),
+        k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
+        U = (0, h.Z)(),
+        G = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
+        B = O && !U && !k && !G,
+        [V, H] = l.useState(0),
+        F = (0, f.ZP)(),
+        W = l.useMemo(() => r.map((e) => e.id), [r]),
+        z = (0, c.e7)([N.Z], () => N.Z.isFocused());
     l.useEffect(() => {
-        U &&
+        B &&
             (0, g.tv)({
                 location: m.Z.GUILDS_LIST,
                 treatment: p,
-                gameApplicationIds: H
+                gameApplicationIds: W
             });
-    }, [U, p, H]),
+    }, [B, p, W]),
         l.useEffect(() => {
-            if (!U || !F) return;
+            if (!B || !z) return;
             let e = setInterval(() => {
-                null != H && 0 !== H.length && B((e) => ((isNaN(e) ? 0 : e) + 1) % H.length);
+                null != W && 0 !== W.length && H((e) => ((isNaN(e) ? 0 : e) + 1) % W.length);
             }, 2500);
             return () => clearInterval(e);
-        }, [B, H, U, F]);
-    let W = l.useCallback(() => {
-            R && L(y.L.TAKE_ACTION),
+        }, [H, W, B, z]);
+    let Y = l.useCallback(() => {
+            if (
+                (O && D(T.L.TAKE_ACTION),
                 (0, g.GS)({
                     location: m.Z.GUILDS_LIST,
                     treatment: p,
-                    gameApplicationIds: H
+                    gameApplicationIds: W
                 }),
-                (0, v.transitionToGlobalDiscovery)({
-                    tab: j.F$.SERVERS,
-                    selectedServersTab: T.vf.GUILDS,
-                    entrypoint: T.Qq.GUILDS_BAR
+                B)
+            )
+                (0, I.transitionToGlobalDiscovery)({
+                    tab: P.F$.SERVERS,
+                    selectedServersTab: A.vf.GUILDS,
+                    entrypoint: A.Qq.GUILDS_BAR
                 });
-        }, [L, p, H, R]),
-        z = l.useCallback(
+            else {
+                let e = v.Z.getField('selectedTab');
+                (0, E.o)(e);
+            }
+        }, [O, p, W, B, D]),
+        K = l.useCallback(
             (e) => {
-                e(), L(y.L.USER_DISMISS);
+                e(), D(T.L.USER_DISMISS);
             },
-            [L]
+            [D]
         ),
-        Y = (0, d.useTransition)(G, {
+        q = (0, d.useTransition)(V, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
             config: { duration: 400 },
             exitBeforeEnter: !0
         }),
-        K = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
-        q = l.useMemo(() => t({ onClick: W }), [t, W]);
-    return p !== E.O7.GAME_SPECIFIC || I
+        Q = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
+        J = l.useMemo(() => t({ onClick: Y }), [t, Y]);
+    return p !== j.O7.GAME_SPECIFIC || b
         ? (0, i.jsxs)('div', {
-              className: M.container,
+              className: L.container,
               children: [
                   (0, i.jsx)(d.Popout, {
-                      shouldShow: U,
+                      shouldShow: B,
                       renderPopout: (e) => {
                           let { closePopout: t } = e;
                           return (0, i.jsxs)('div', {
-                              className: a()(M.popoutContainer),
+                              className: a()(L.popoutContainer),
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: M.animatedBgContainer,
-                                      children: Y((e, t) => {
+                                      className: L.animatedBgContainer,
+                                      children: q((e, t) => {
                                           if (null == r[t]) return null;
                                           let { backgroundImageUrl: n, primaryColor: l } = r[t],
-                                              a = 'light' === V ? 'none' : 'linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%), rgba('.concat(l.red, ', ').concat(l.green, ', ').concat(l.blue, ', 1)');
+                                              a = 'light' === F ? 'none' : 'linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.85) 100%), rgba('.concat(l.red, ', ').concat(l.green, ', ').concat(l.blue, ', 1)');
                                           return (0, i.jsxs)(
                                               s.animated.div,
                                               {
@@ -179,17 +188,17 @@ let L = l.memo(function (e) {
                                                       ...e,
                                                       background: a
                                                   },
-                                                  className: M.animatedHeroContainer,
+                                                  className: L.animatedHeroContainer,
                                                   children: [
                                                       (0, i.jsx)('div', {
-                                                          style: K(n),
-                                                          className: M.gameBoxArt
+                                                          style: Q(n),
+                                                          className: L.gameBoxArt
                                                       }),
                                                       (0, i.jsx)('div', {
-                                                          className: M.radialGradient,
+                                                          className: L.radialGradient,
                                                           style: { background: l.toHexString() }
                                                       }),
-                                                      (0, i.jsx)(w, { color: l.toHexString() }, r[t].id)
+                                                      (0, i.jsx)(R, { color: l.toHexString() }, r[t].id)
                                                   ]
                                               },
                                               r[t].id
@@ -197,18 +206,18 @@ let L = l.memo(function (e) {
                                       })
                                   }),
                                   (0, i.jsx)(d.Clickable, {
-                                      onClick: () => z(t),
-                                      className: M.close,
+                                      onClick: () => K(t),
+                                      className: L.close,
                                       children: (0, i.jsx)(d.XSmallIcon, {
                                           size: 'xs',
                                           color: d.tokens.colors.WHITE
                                       })
                                   }),
                                   (0, i.jsxs)('div', {
-                                      className: a()(M.popoutContent),
-                                      children: [(0, i.jsx)(C.aF, { title: A.intl.string(A.t.B2wKJi) }), (0, i.jsx)(C.To, { message: A.intl.string(A.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: W })]
+                                      className: a()(L.popoutContent),
+                                      children: [(0, i.jsx)(C.aF, { title: w.intl.string(w.t.B2wKJi) }), (0, i.jsx)(C.To, { message: w.intl.string(w.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
                                   }),
-                                  (0, i.jsx)('div', { className: M.popoutCaret })
+                                  (0, i.jsx)('div', { className: L.popoutCaret })
                               ]
                           });
                       },
@@ -219,19 +228,19 @@ let L = l.memo(function (e) {
                       children: (e) =>
                           (0, i.jsx)('div', {
                               ...e,
-                              className: M.popoutAnchor
+                              className: L.popoutAnchor
                           })
                   }),
-                  q
+                  J
               ]
           })
-        : (0, i.jsx)(i.Fragment, { children: q });
+        : (0, i.jsx)(i.Fragment, { children: J });
 });
-function R(e) {
+function O(e) {
     let { onActivate: t, children: n } = e,
-        r = (0, c.e7)([b.Z], () => b.Z.hasJoinRequestCoackmark()),
+        r = (0, c.e7)([S.Z], () => S.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            I.ZP.clearCoachmark();
+            b.ZP.clearCoachmark();
         }, []),
         o = (0, p.Z)(r),
         s = l.useRef(null);
@@ -243,29 +252,29 @@ function R(e) {
             }
         }, [s, r, o, t]),
         (0, i.jsxs)('div', {
-            className: M.container,
+            className: L.container,
             children: [
                 (0, i.jsx)(d.Popout, {
                     ref: s,
                     shouldShow: r,
                     renderPopout: () =>
                         (0, i.jsxs)('div', {
-                            className: M.popoutContainer,
+                            className: L.popoutContainer,
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: M.popoutContent,
+                                    className: L.popoutContent,
                                     children: [
                                         (0, i.jsxs)('div', {
-                                            className: M.coachmarkTextContainer,
+                                            className: L.coachmarkTextContainer,
                                             children: [
                                                 (0, i.jsx)(d.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: A.intl.string(A.t.fRUGzs)
+                                                    children: w.intl.string(w.t.fRUGzs)
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: A.intl.string(A.t.ja0Tg4)
+                                                    children: w.intl.string(w.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
@@ -274,11 +283,11 @@ function R(e) {
                                             size: d.ButtonSizes.SMALL,
                                             color: d.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: A.intl.string(A.t.E0MgHh)
+                                            children: w.intl.string(w.t.E0MgHh)
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)('div', { className: M.popoutCaretLeft })
+                                (0, i.jsx)('div', { className: L.popoutCaretLeft })
                             ]
                         }),
                     position: 'right',
@@ -288,7 +297,7 @@ function R(e) {
                     children: (e) =>
                         (0, i.jsx)('div', {
                             ...e,
-                            className: M.popoutAnchor
+                            className: L.popoutAnchor
                         })
                 }),
                 n
@@ -296,10 +305,10 @@ function R(e) {
         })
     );
 }
-function D(e) {
+function k(e) {
     let { hideGradient: t, children: n } = e;
     return (0, i.jsxs)('div', {
-        className: M.footer,
-        children: [(0, i.jsx)('div', { className: a()(M.gradient, { [M.gradientHidden]: t }) }), n]
+        className: L.footer,
+        children: [(0, i.jsx)('div', { className: a()(L.gradient, { [L.gradientHidden]: t }) }), n]
     });
 }
