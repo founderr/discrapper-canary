@@ -13,12 +13,12 @@ n.d(t, {
     n(653041),
     n(47120);
 var i = n(556588),
-    a = n(905837),
+    a = n(903797),
     s = n(388032),
     o = n(424395),
     l = n(689938);
 r = n(330711).Z;
-let u = (0, a.ZP)((e, t) => ({
+let u = (0, a.Z)((e) => ({
     isLoading: !1,
     inProgressLocale: void 0,
     error: void 0,
@@ -27,24 +27,26 @@ let u = (0, a.ZP)((e, t) => ({
             isLoading: !0,
             inProgressLocale: t
         }),
-    setLoadingSucceeded: (n) => {
-        let { inProgressLocale: r } = t();
-        r === n &&
-            e({
-                isLoading: !1,
-                inProgressLocale: void 0,
-                error: void 0
-            });
-    },
-    setLoadingFailed: (n, r) => {
-        let { inProgressLocale: i } = t();
-        i === r &&
-            e({
-                isLoading: !1,
-                inProgressLocale: void 0,
-                error: n
-            });
-    }
+    setLoadingSucceeded: (t) =>
+        e((n) => {
+            let { inProgressLocale: r } = n;
+            r === t &&
+                e({
+                    isLoading: !1,
+                    inProgressLocale: void 0,
+                    error: void 0
+                });
+        }),
+    setLoadingFailed: (t, n) =>
+        e((r) => {
+            let { inProgressLocale: i } = r;
+            i === n &&
+                e({
+                    isLoading: !1,
+                    inProgressLocale: void 0,
+                    error: t
+                });
+        })
 }));
 function c(e) {
     return u.subscribe((t, n) => {
