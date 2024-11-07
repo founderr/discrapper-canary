@@ -18,7 +18,7 @@ function h() {
     let e = (0, l.e7)([c.Z], () => c.Z.isDeveloper),
         [t, h] = r.useState(!1),
         [f, p] = r.useState(0),
-        g = (e) => {
+        _ = (e) => {
             clearTimeout(f),
                 p(
                     setTimeout(() => {
@@ -27,8 +27,8 @@ function h() {
                 );
         };
     return (0, i.jsx)('div', {
-        onMouseEnter: () => g(!0),
-        onMouseLeave: () => g(!1),
+        onMouseEnter: () => _(!0),
+        onMouseLeave: () => _(!1),
         children: (0, i.jsx)(a.Popout, {
             shouldShow: t,
             animation: a.Popout.Animation.NONE,

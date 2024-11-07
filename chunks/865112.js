@@ -28,8 +28,8 @@ var i,
     h = n(659953),
     f = n(319707),
     p = n(584914),
-    g = n(334702),
-    _ = n(333722),
+    _ = n(334702),
+    g = n(333722),
     E = n(549931),
     C = n(178561),
     I = n(39863),
@@ -43,10 +43,10 @@ let N = {
 };
 ((r = a || (a = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (r.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (r.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (r.TOP_MESSAGES = 'TOP_MESSAGES'), (r.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (r.UPDATE_PROFILE = 'UPDATE_PROFILE'), (r.FIND_FRIENDS = 'FIND_FRIENDS'), (r.ADD_FRIEND = 'ADD_FRIEND'), (r.FIRST_MESSAGE = 'FIRST_MESSAGE');
 let v = {
-        MISSED_MESSAGES: _,
+        MISSED_MESSAGES: g,
         FRIEND_REQUEST_REMINDER: p,
         SCHEDULED_GUILD_EVENT: h,
-        TOP_MESSAGES: g,
+        TOP_MESSAGES: _,
         NOTIFICATION_CENTER: d,
         UPDATE_PROFILE: x,
         FIND_FRIENDS: u,

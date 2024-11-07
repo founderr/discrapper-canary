@@ -17,7 +17,7 @@ var i = n(200651),
     h = n(65145),
     f = n(920557),
     p = n(113749);
-function g(e) {
+function _(e) {
     let { media: t } = e;
     return (0, i.jsx)(c.Heading, {
         variant: 'text-md/medium',
@@ -26,7 +26,7 @@ function g(e) {
         children: t.text
     });
 }
-function _(e) {
+function g(e) {
     let { children: t, onClick: n, variant: r = 'text-sm/medium', color: l = 'interactive-active', className: o, buttonRef: s } = e;
     return (0, i.jsx)(c.Button, {
         onClick: n,
@@ -48,7 +48,7 @@ function E(e) {
         className: a()(p.detailsText, o),
         children: [
             l
-                ? (0, i.jsx)(_, {
+                ? (0, i.jsx)(g, {
                       onClick: r,
                       variant: 'text-sm/normal',
                       color: 'none',
@@ -105,7 +105,7 @@ function C(e) {
                 t.presentation
             )
           : 'textButton' === t.presentation
-            ? (0, i.jsx)(_, {
+            ? (0, i.jsx)(g, {
                   buttonRef: d,
                   onClick: f,
                   className: s,
@@ -147,7 +147,7 @@ function I(e) {
                       (0, i.jsxs)('div', {
                           className: p.header,
                           children: [
-                              (0, i.jsx)(g, { media: n.question }),
+                              (0, i.jsx)(_, { media: n.question }),
                               null != n.promptLabel &&
                                   (0, i.jsx)(c.Text, {
                                       variant: 'text-sm/normal',

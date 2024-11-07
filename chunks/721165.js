@@ -25,7 +25,7 @@ function g(e) {
         S = (0, o.e7)([d.Z], () => d.Z.getGuild(null == g ? void 0 : g.guild_id)),
         k = r.useCallback(() => n(p.h8.REVIEW), [n]);
     if (null == x) return null;
-    let y = (0, l.KW)(x.flags);
+    let j = (0, l.KW)(x.flags);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m.C3, {
@@ -35,7 +35,7 @@ function g(e) {
                           onConfirm: k,
                           onCancel: t,
                           title: h.intl.format(h.t['6n6oXF'], { tier: x.name }),
-                          subtitle: y ? h.intl.string(h.t.lzAoKC) : h.intl.formatToPlainString(h.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
+                          subtitle: j ? h.intl.string(h.t.lzAoKC) : h.intl.formatToPlainString(h.t['GqaY/v'], { guildName: null == S ? void 0 : S.name }),
                           showOpenDiscord: !1
                       })
                     : (0, i.jsx)(c.Oc, {
@@ -43,8 +43,8 @@ function g(e) {
                           storeListingBenefits: null == _ ? void 0 : _.benefits,
                           application: null != v ? v : void 0,
                           title: h.intl.format(h.t.haiCxc, { tier: x.name }),
-                          subtitle: y ? h.intl.string(h.t.RvtbPz) : h.intl.string(h.t.zY39Zm),
-                          description: y ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == v ? void 0 : v.name }) : h.intl.string(h.t.n1Pu8P)
+                          subtitle: j ? h.intl.string(h.t.RvtbPz) : h.intl.string(h.t.zY39Zm),
+                          description: j ? h.intl.formatToPlainString(h.t.QCe4ra, { applicationName: null == v ? void 0 : v.name }) : h.intl.string(h.t.n1Pu8P)
                       })
             }),
             !C &&

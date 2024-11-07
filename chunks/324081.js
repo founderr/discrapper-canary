@@ -17,8 +17,8 @@ var r = n(120356),
     h = n(790145),
     f = n(313201),
     p = n(565138),
-    g = n(199902),
-    _ = n(592125),
+    _ = n(199902),
+    g = n(592125),
     E = n(430824),
     C = n(158776),
     I = n(594174),
@@ -103,11 +103,11 @@ function b(e) {
 function j(e) {
     let { channel: t, gotoChannel: n, mentionCount: r } = e,
         a = (0, o.e7)([E.Z], () => E.Z.getGuild(t.guild_id)),
-        c = (0, o.e7)([_.Z], () => _.Z.getChannel(t.parent_id)),
+        c = (0, o.e7)([g.Z], () => g.Z.getChannel(t.parent_id)),
         u = (0, m.KS)(t, a),
         f = (0, d.ZP)(t, !1),
         p = null == c ? (null == a ? void 0 : a.name) : ''.concat(null == a ? void 0 : a.name, ' \u203A ').concat(c.name),
-        g = t.isMultiUserDM()
+        _ = t.isMultiUserDM()
             ? x.intl.formatToPlainString(x.t.CxSA5O, { members: t.recipients.length + 1 })
             : t.isPrivate()
               ? (0, i.jsx)(Z, { channel: t })
@@ -152,7 +152,7 @@ function j(e) {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 className: N.subtextContainer,
-                children: g
+                children: _
             })
         ]
     });
@@ -163,12 +163,12 @@ function Z(e) {
             user: n,
             activities: r,
             applicationStream: l
-        } = (0, o.cj)([I.default, C.Z, g.Z], () => {
+        } = (0, o.cj)([I.default, C.Z, _.Z], () => {
             let e = I.default.getUser(t.getRecipientId());
             return {
                 user: e,
                 activities: null != e ? C.Z.getActivities(e.id) : null,
-                applicationStream: null != e ? g.Z.getAnyStreamForUser(e.id) : null
+                applicationStream: null != e ? _.Z.getAnyStreamForUser(e.id) : null
             };
         });
     return null == r

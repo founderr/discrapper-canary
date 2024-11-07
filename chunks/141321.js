@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(178088),
     f = n(222940),
     p = n(490897),
-    g = n(388032),
-    _ = n(233194);
+    _ = n(388032),
+    g = n(233194);
 function E(e) {
     let { onOpen: t, onClose: n, className: E } = e,
         C = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
@@ -34,7 +34,7 @@ function E(e) {
         children: (e, t, n, r) =>
             (0, i.jsxs)('div', {
                 ref: I,
-                className: _.recentsIcon,
+                className: g.recentsIcon,
                 children: [
                     N &&
                         (0, i.jsx)(f.Z, {
@@ -48,8 +48,8 @@ function E(e) {
                             className: E,
                             onClick: e,
                             icon: a.InboxIcon,
-                            'aria-label': g.intl.string(g.t.GSmTKC),
-                            tooltip: t ? null : g.intl.string(g.t.GSmTKC),
+                            'aria-label': _.intl.string(_.t.GSmTKC),
+                            tooltip: t ? null : _.intl.string(_.t.GSmTKC),
                             selected: t,
                             showBadge: x || v || r
                         })

@@ -5,13 +5,13 @@ var a = t(442837),
     o = t(700582),
     l = t(987209),
     s = t(699516),
-    c = t(594174),
-    d = t(51144),
+    d = t(594174),
+    c = t(51144),
     u = t(388032);
 n.Z = (e) => {
     let { selectedSkuId: n, validateSelectedGift: t, className: f } = e,
         p = (0, a.Wu)([s.Z], () => s.Z.getFriendIDs()),
-        m = (0, a.Wu)([c.default], () => c.default.filter((e) => p.includes(e.id) && !e.bot), [p]),
+        m = (0, a.Wu)([d.default], () => d.default.filter((e) => p.includes(e.id) && !e.bot), [p]),
         { giftRecipient: g, setGiftRecipient: _ } = (0, l.wD)();
     return null == n
         ? null
@@ -34,7 +34,7 @@ n.Z = (e) => {
                       },
                       options: m.map((e) => ({
                           value: e,
-                          label: ''.concat(d.ZP.getUserTag(e))
+                          label: ''.concat(c.ZP.getUserTag(e))
                       }))
                   })
               ]

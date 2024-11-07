@@ -16,8 +16,8 @@ var i,
     h = n(377171),
     f = n(739566),
     p = n(942951),
-    g = n(834129),
-    _ = n(809026),
+    _ = n(834129),
+    g = n(809026),
     E = n(139256),
     C = n(489887),
     I = n(388032),
@@ -174,7 +174,7 @@ function A(e) {
     var t;
     let { message: n, channel: i, compact: r, disableInteraction: o = !1 } = e,
         s = n.embeds[0],
-        m = a.useMemo(() => (0, _.Z)(s), [s]),
+        m = a.useMemo(() => (0, g.Z)(s), [s]),
         h = (0, c.aF)(null !== (t = null == m ? void 0 : m.questionText) && void 0 !== t ? t : '', C.Dv),
         E = (0, f.ZP)(n),
         N = (0, p.l)({
@@ -197,7 +197,7 @@ function A(e) {
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, l.jsx)(g.Z, {
+                  (0, l.jsx)(_.Z, {
                       iconNode: (0, l.jsx)(u.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: r,

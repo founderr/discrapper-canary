@@ -22,8 +22,8 @@ var r = n(200651),
     x = n(475595),
     g = n(566078),
     h = n(164495),
-    S = n(472144),
-    E = n(644646),
+    E = n(472144),
+    S = n(644646),
     _ = n(604162),
     j = n(747717),
     T = n(963123),
@@ -111,13 +111,13 @@ function D(e) {
                                         (0, r.jsx)(c.Clickable, {
                                             className: y.progressCont,
                                             ...e,
-                                            children: (0, r.jsx)(S.Z, {
+                                            children: (0, r.jsx)(E.Z, {
                                                 quest: B,
                                                 size: 48,
                                                 percentComplete: F,
                                                 percentCompleteText: Z ? U : void 0,
                                                 percentCompleteTextVariant: 'text-sm/medium',
-                                                children: (0, r.jsx)(E.Z, {
+                                                children: (0, r.jsx)(S.Z, {
                                                     className: y.questProgressRewardTile,
                                                     quest: B,
                                                     questContent: v.jn.VIDEO_MODAL,

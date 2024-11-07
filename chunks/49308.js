@@ -9,8 +9,8 @@ var i = t(200651),
     o = t.n(r),
     l = t(399606),
     s = t(607070),
-    c = t(597688),
-    d = t(624377),
+    d = t(597688),
+    c = t(624377),
     u = t(530618),
     f = t(331042),
     p = t(372654),
@@ -21,10 +21,10 @@ var i = t(200651),
     h = t(698708);
 function x(e) {
     let { handleClose: n, confettiCanvas: t, hideConfetti: a = !1, analyticsLocations: r } = e,
-        { skusById: s, selectedSkuId: d, application: u } = (0, g.usePaymentContext)(),
-        p = (0, l.e7)([c.Z], () => c.Z.getProduct(d));
-    o()(null != d, 'Expected selectedSkuId'), o()(null != u, 'Expected application');
-    let m = s[d];
+        { skusById: s, selectedSkuId: c, application: u } = (0, g.usePaymentContext)(),
+        p = (0, l.e7)([d.Z], () => d.Z.getProduct(c));
+    o()(null != c, 'Expected selectedSkuId'), o()(null != u, 'Expected application');
+    let m = s[c];
     return (o()(null != m, 'Expected sku'), null == p)
         ? null
         : (0, i.jsxs)(b.C3, {
@@ -45,8 +45,8 @@ function C(e) {
         C = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         v = a.useRef(null),
         { selectedSkuId: S } = (0, g.usePaymentContext)(),
-        I = (0, l.e7)([c.Z], () => c.Z.getProduct(S)),
-        { confettiColors: T } = (0, d.Z)(null == I ? void 0 : I.styles);
+        I = (0, l.e7)([d.Z], () => d.Z.getProduct(S)),
+        { confettiColors: j } = (0, c.Z)(null == I ? void 0 : I.styles);
     return n
         ? (0, i.jsxs)('div', {
               ref: v,
@@ -66,7 +66,7 @@ function C(e) {
                           confettiTarget: v.current,
                           confettiCanvas: e.confettiCanvas,
                           sprites: (0, p.vK)(null == I ? void 0 : I.categorySkuId),
-                          colors: null == T ? void 0 : T.map((e) => e.toHexString())
+                          colors: null == j ? void 0 : j.map((e) => e.toHexString())
                       })
               ]
           })

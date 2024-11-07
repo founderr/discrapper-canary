@@ -22,14 +22,14 @@ function a(e) {
         renderComponentAccessory: h,
         renderSuppressEmbeds: f,
         forceAddReactions: p,
-        className: g
+        className: _
     } = e;
     return u
         ? null
         : (0, i.jsx)(r.Z, {
               message: t,
               children: (0, i.jsx)(l.ZP, {
-                  className: g,
+                  className: _,
                   isInteracting: c,
                   message: t,
                   channel: n,

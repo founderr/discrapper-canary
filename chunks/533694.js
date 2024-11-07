@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 });
 var i = n(200651);
@@ -55,19 +55,19 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function _(e) {
     var t, r, l;
     let { channel: a, message: d, compact: f } = e,
-        g = (0, o.ZP)(d),
-        _ = (0, s.l)({
+        _ = (0, o.ZP)(d),
+        g = (0, s.l)({
             user: d.author,
             channelId: a.id,
             guildId: a.guild_id,
             messageId: d.id
-        })(g),
+        })(_),
         E = h.intl.format(h.t.TQs67u, {
-            username: g.nick,
-            usernameHook: _,
+            username: _.nick,
+            usernameHook: g,
             productName: null !== (l = null === (r = d.purchaseNotification) || void 0 === r ? void 0 : null === (t = r.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : '',
             handleProductListingClick: () => {
                 var e, t, n;
@@ -83,7 +83,7 @@ function g(e) {
                 children: E
             }),
             (0, i.jsx)(p, {
-                username: g.nick,
+                username: _.nick,
                 guildId: a.guild_id,
                 user: d.author
             })

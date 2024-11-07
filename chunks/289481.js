@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(717680),
     f = n(703656),
     p = n(592125),
-    g = n(259580),
-    _ = n(617379),
+    _ = n(259580),
+    g = n(617379),
     E = n(324081),
     C = n(305248),
     I = n(520116),
@@ -99,7 +99,7 @@ let S = r.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: a,
                 channelState: t,
-                children: [(0, i.jsx)(_.Z, { channel: o }), (0, i.jsx)(A, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(b, { ...e })]
+                children: [(0, i.jsx)(g.Z, { channel: o }), (0, i.jsx)(A, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(b, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -164,7 +164,7 @@ function b(e) {
                 ...e,
                 className: a()(v.collapseButton, { [v.collapsed]: t.collapsed }),
                 onClick: l,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(_.Z, {
                     width: 16,
                     height: 16
                 })

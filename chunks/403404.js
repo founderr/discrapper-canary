@@ -12,10 +12,10 @@ var r = n(481060),
     s = n(701488),
     c = n(981631);
 function u(e) {
-    let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: _ = !1 } = e,
-        E = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
+    let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: _, opensAppLauncherModal: g = !1 } = e,
+        E = _.length > 0 ? _[_.length - 1] : 'open-activity-shelf',
         { enabled: C } = l.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
-    if (_ && C) {
+    if (g && C) {
         null != t &&
             (0, a.Z)({
                 openInPopout: m,
@@ -38,7 +38,7 @@ function u(e) {
                     initialSlide: f,
                     initialSelectedApplicationId: h,
                     enableSelectedTextChannelInvite: p,
-                    analyticsLocations: g
+                    analyticsLocations: _
                 });
         },
         {

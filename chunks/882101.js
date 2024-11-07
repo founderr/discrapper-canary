@@ -43,12 +43,12 @@ let f = (e) => {
     let { listingId: t, isListingPublished: n } = e,
         f = (0, c.Z)(),
         [p] = s._T(t),
-        [g] = s.d9(t, f),
-        [_] = s.H9(t);
+        [_] = s.d9(t, f),
+        [g] = s.H9(t);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(m, { listingName: p }),
-            (0, i.jsx)(h, { image: g }),
+            (0, i.jsx)(h, { image: _ }),
             !n &&
                 (0, i.jsx)('div', {
                     className: d.draftBadgeContainer,
@@ -58,7 +58,7 @@ let f = (e) => {
                 variant: 'heading-xl/semibold',
                 className: d.tierPrice,
                 tag: 'div',
-                children: (0, a.T4)(_.price, _.currency)
+                children: (0, a.T4)(g.price, g.currency)
             }),
             (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
@@ -66,8 +66,8 @@ let f = (e) => {
                 className: d.tierPeriod,
                 children: u.intl.format(u.t.isLGyc, {
                     period: (0, o.JE)({
-                        interval: _.interval,
-                        interval_count: _.interval_count
+                        interval: g.interval,
+                        interval_count: g.interval_count
                     })
                 })
             })

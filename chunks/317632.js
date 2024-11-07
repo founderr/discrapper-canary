@@ -33,7 +33,7 @@ function p(e) {
     }
     return null;
 }
-class g extends (i = o.ZP.Store) {
+class _ extends (i = o.ZP.Store) {
     getInvites() {
         return d;
     }
@@ -56,7 +56,7 @@ class g extends (i = o.ZP.Store) {
     }
 }
 (a = 'GameInviteStore'),
-    (l = 'displayName') in (r = g)
+    (l = 'displayName') in (r = _)
         ? Object.defineProperty(r, l, {
               value: a,
               enumerable: !0,
@@ -64,7 +64,7 @@ class g extends (i = o.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new g(s.Z, {
+    (t.Z = new _(s.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { gameInvites: t } = e;
             d = t.map(p).filter(c.lm);

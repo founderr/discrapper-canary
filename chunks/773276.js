@@ -18,8 +18,8 @@ var r = n(399606),
 function h(e) {
     let { channelId: t, messageId: n, transitionState: h, onClose: f } = e,
         p = (0, r.e7)([c.Z], () => c.Z.getFpMessageInfo(n)),
-        g = p.attachments.map((e) => e.id),
-        _ = p.attachments.map((e) => e.filename),
+        _ = p.attachments.map((e) => e.id),
+        g = p.attachments.map((e) => e.filename),
         { reportFalsePositive: E, isReportFalsePositiveLoading: C } = (0, u.$)({
             onSuccess: () => {
                 (0, d.s)(f), a.Z.disableFalsePositiveButton(t, n);
@@ -28,7 +28,7 @@ function h(e) {
                 (0, l.showToast)((0, l.createToast)(m.intl.string(m.t.R0RpRU), l.ToastType.FAILURE));
             },
             report: () => {
-                (0, o.Eq)(t, n, g, _);
+                (0, o.Eq)(t, n, _, g);
             }
         });
     return (

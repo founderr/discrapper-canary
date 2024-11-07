@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 }),
     n(47120);
@@ -18,7 +18,7 @@ var r = n(442837),
     h = n(981631),
     f = n(388032);
 let p = new Set(['ko', 'ja']);
-function g() {
+function _() {
     let e = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
         t = (0, r.e7)([o.default], () => o.default.locale),
         n = (0, d.EO)(e);

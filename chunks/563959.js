@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     e: function () {
-        return g;
+        return _;
     }
 });
 var i = n(200651),
@@ -81,7 +81,7 @@ function p(e) {
         })
     });
 }
-function g(e) {
+function _(e) {
     let { message: t, channel: r, compact: l } = e,
         c = (0, a.ZP)(t),
         u = t.application,

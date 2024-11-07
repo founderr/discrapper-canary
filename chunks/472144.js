@@ -12,15 +12,15 @@ t.Z = o.forwardRef((e, t) => {
         x = (0, c.E)(n, o > 0),
         g = i / 2,
         h = i / 2 - m / 2,
-        S = 2 * Math.PI * h,
-        E = S - o * S,
+        E = 2 * Math.PI * h,
+        S = E - o * E,
         _ = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
-            strokeDashoffset: E
+            strokeDasharray: ''.concat(E, ' ').concat(E),
+            strokeDashoffset: S
         },
         j = {
-            strokeDasharray: ''.concat(S, ' ').concat(S),
-            strokeDashoffset: -o * S
+            strokeDasharray: ''.concat(E, ' ').concat(E),
+            strokeDashoffset: -o * E
         },
         T = { boxShadow: '0 0 30px 0px '.concat(x.glow) },
         { progressTextAnimation: N } = (0, s.useSpring)({

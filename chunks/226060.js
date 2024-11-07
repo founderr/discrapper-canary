@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 });
 var i = n(200651);
@@ -17,13 +17,13 @@ var r = n(512722),
     h = n(57949),
     f = n(400916),
     p = n(388032);
-function g(e) {
+function _(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
-        g = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
-        _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        _ = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
+        g = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
         C = (0, u.n)();
-    if ((l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_)))
+    if ((l()(null != g, 'guild cannot be null'), l()(null != _, 'guildProductListing cannot be null'), (0, d.SO)(g)))
         return (0, i.jsx)(o.Tooltip, {
             text: p.intl.string(p.t.sAJr9f),
             children: (e) =>
@@ -34,22 +34,22 @@ function g(e) {
                     children: p.intl.string(p.t.xUi3BA)
                 })
         });
-    if (!g.has_entitlement)
+    if (!_.has_entitlement)
         return (0, i.jsx)(o.ShinyButton, {
             shineSize: o.ShinyButton.ShineSizes.SMALL,
             pauseAnimation: E || !C,
             onClick: () =>
                 (0, h.z)({
-                    guildProductListing: g,
-                    guildId: _.id,
+                    guildProductListing: _,
+                    guildId: g.id,
                     sourceAnalyticsLocations: r
                 }),
             children: p.intl.string(p.t.xUi3BA)
         });
-    return null != g.attachments
+    return null != _.attachments
         ? (0, i.jsx)(f.Z, {
-              guildId: _.id,
-              productId: g.id
+              guildId: g.id,
+              productId: _.id
           })
         : (0, i.jsx)(o.Button, {
               color: o.Button.Colors.PRIMARY,

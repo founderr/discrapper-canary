@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(598077),
     f = n(63063),
     p = n(153066),
-    g = n(51144),
-    _ = n(620662),
+    _ = n(51144),
+    g = n(620662),
     E = n(994339),
     C = n(503438),
     I = n(981631),
@@ -43,7 +43,7 @@ class S extends r.PureComponent {
             children: (r) => {
                 var l;
                 return (0, i.jsx)(s.Tooltip, {
-                    text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : g.ZP.getName(e.user),
+                    text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : _.ZP.getName(e.user),
                     children: (l) =>
                         (0, i.jsx)(s.Clickable, {
                             className: e.unknownUser ? v.partyMember : v.partyMemberKnown,
@@ -97,15 +97,15 @@ class A extends r.PureComponent {
     }
     canJoin() {
         let { activity: e, isPreview: t, isGameLaunchable: n, isInBrowser: i } = this.props;
-        return !!t || (!(this.isDeadInvite() || !this.isActionType(I.mFx.JOIN) || !(0, _.Z)(e, I.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || i || !n || this.isInParty()) && !0);
+        return !!t || (!(this.isDeadInvite() || !this.isActionType(I.mFx.JOIN) || !(0, g.Z)(e, I.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull() || i || !n || this.isInParty()) && !0);
     }
     canSendInvite() {
         let { activity: e, isPreview: t } = this.props;
-        return !!t || (!(this.isDeadInvite() || !this.isActionType(I.mFx.JOIN_REQUEST) || !(0, _.Z)(e, I.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0);
+        return !!t || (!(this.isDeadInvite() || !this.isActionType(I.mFx.JOIN_REQUEST) || !(0, g.Z)(e, I.xjy.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0);
     }
     canSync() {
         let { activity: e, isPreview: t, isSyncable: n, isInBrowser: i } = this.props;
-        return !!t || (!((!this.isActionType(I.mFx.LISTEN) && !this.isActionType(I.mFx.WATCH)) || this.isDeadInvite() || !(0, _.Z)(e, I.xjy.SYNC) || i || !n || this.isInParty()) && !0);
+        return !!t || (!((!this.isActionType(I.mFx.LISTEN) && !this.isActionType(I.mFx.WATCH)) || this.isDeadInvite() || !(0, g.Z)(e, I.xjy.SYNC) || i || !n || this.isInParty()) && !0);
     }
     getHelpdeskArticleURL() {
         let { partyId: e } = this.props;

@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(626135),
     f = n(585483),
     p = n(115610),
-    g = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    g = n(388032),
     E = n(809858);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
@@ -43,7 +43,7 @@ function C(e) {
                           className: a()(E.__invalid_content, { [E.compact]: C }),
                           children: (0, i.jsx)('div', {
                               className: a()(E.__invalid_messageContent, { [E.compact]: C }),
-                              children: '' !== t.content ? t.content : _.intl.string(_.t.wnn1DQ)
+                              children: '' !== t.content ? t.content : g.intl.string(g.t.wnn1DQ)
                           })
                       })
                   }),
@@ -51,17 +51,17 @@ function C(e) {
                       className: E.actions,
                       children: [
                           (0, i.jsx)(s.TooltipContainer, {
-                              text: _.intl.string(_.t.ASZTf3),
+                              text: g.intl.string(g.t.ASZTf3),
                               children: (0, i.jsx)(s.Button, {
                                   color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      h.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          f.S.dispatch(g.CkL.UPLOAD_FILE),
+                                          f.S.dispatch(_.CkL.UPLOAD_FILE),
                                           (0, u.fE)({
                                               message: t,
                                               channel: l,
@@ -75,11 +75,11 @@ function C(e) {
                               })
                           }),
                           (0, i.jsx)(s.TooltipContainer, {
-                              text: _.intl.string(_.t.gbrrAw),
+                              text: g.intl.string(g.t.gbrrAw),
                               children: (0, i.jsx)(s.Button, {
                                   color: s.Button.Colors.PRIMARY,
                                   onClick: () => {
-                                      h.default.track(g.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
+                                      h.default.track(_.rMx.CHANNEL_PROMPT_ACTION_CLICKED, {
                                           message_id: t.id,
                                           channel_id: l.id,
                                           guild_id: l.guild_id,

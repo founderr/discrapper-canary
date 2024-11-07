@@ -20,14 +20,14 @@ function p(e, t, n) {
     return n.left + (e / t) * n.width;
 }
 function f(e) {
-    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: x, onClick: g, onScrubBack: h, onScrubForward: S } = e,
-        [E, _] = o.useState(null),
+    let { percent: t, animate: n, interactionEnabled: i, backgroundColor: f, preloadedBuffers: v, duration: C, maxSeekableTime: x, onClick: g, onScrubBack: h, onScrubForward: E } = e,
+        [S, _] = o.useState(null),
         [j, T] = o.useState(null),
         [N, I] = o.useState(null),
         [b, y] = o.useState(!1);
     o.useEffect(() => {
-        if (null != E) null == x ? I(null) : I(p(x, C, E));
-    }, [E, x, C]);
+        if (null != S) null == x ? I(null) : I(p(x, C, S));
+    }, [S, x, C]);
     let D = (0, s.y)(() => {
             if (null != D.current) _(D.current.getBoundingClientRect());
         }),
@@ -37,15 +37,15 @@ function f(e) {
         k = o.useCallback(
             (e) => {
                 let { key: t } = e;
-                t === u.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === u.mR.ArrowRight && null != S && (e.preventDefault(), e.stopPropagation(), S());
+                t === u.mR.ArrowLeft && null != h ? (e.preventDefault(), e.stopPropagation(), h()) : t === u.mR.ArrowRight && null != E && (e.preventDefault(), e.stopPropagation(), E());
             },
-            [h, S]
+            [h, E]
         ),
-        A = null != j && null != E ? m(j, E, C) : 0,
+        A = null != j && null != S ? m(j, S, C) : 0,
         L = (0, c.yv)(A),
-        M = null != E ? E.right - p((t / 100) * C, C, E) : null,
-        O = null != j && null != E ? E.right - j : null,
-        P = null != N && null != E ? E.right - N : null;
+        M = null != S ? S.right - p((t / 100) * C, C, S) : null,
+        O = null != j && null != S ? S.right - j : null,
+        P = null != N && null != S ? S.right - N : null;
     return (0, r.jsxs)('div', {
         className: d.cont,
         ref: D,

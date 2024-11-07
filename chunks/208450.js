@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(461745),
     f = n(349033),
     p = n(999650),
-    g = n(857595),
-    _ = n(607070),
+    _ = n(857595),
+    g = n(607070),
     E = n(367907),
     C = n(313201),
     I = n(592125),
@@ -310,7 +310,7 @@ class k extends r.PureComponent {
                 }
                 if ('Tab' === t) {
                     if (a) return;
-                    return (0, g.Qj)(), !0;
+                    return (0, _.Qj)(), !0;
                 }
                 if ('Home' === t || ('ArrowLeft' === t && n)) return e.preventDefault(), (r = i ? S.R8(r) : S.eE(r)), this.setEditorState(r), !0;
                 if ('End' === t || ('ArrowRight' === t && n)) return e.preventDefault(), (r = i ? S.Wg(r) : S.NJ(r)), this.setEditorState(r), !0;
@@ -323,13 +323,13 @@ class k extends r.PureComponent {
             A.WU();
     }
 }
-t.Z = u.ZP.connectStores([_.Z, N.Z], () => {
+t.Z = u.ZP.connectStores([g.Z, N.Z], () => {
     var e;
     let t = N.Z.getCurrentSearchId(),
         n = N.Z.getSearchType(),
         i = null != t && N.Z.isSearching(t),
         r = null != t && null !== (e = N.Z.getEditorState(t)) && void 0 !== e ? e : S.nR(b.Jl(p.ZP)),
-        l = _.Z.keyboardModeEnabled;
+        l = g.Z.keyboardModeEnabled;
     return {
         searchId: t,
         searchType: n,

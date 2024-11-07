@@ -3,10 +3,10 @@ n.d(t, {
         return p;
     },
     R6: function () {
-        return _;
+        return g;
     },
     Ue: function () {
-        return g;
+        return _;
     }
 });
 var i = n(200651),
@@ -56,7 +56,7 @@ function p(e) {
         })
     });
 }
-function g(e) {
+function _(e) {
     var t, r, l;
     let { message: a, channel: s, compact: c } = e,
         { guild: u, joinRequest: d, usernameHook: m, guildNameClick: p } = f(a, s);
@@ -72,7 +72,7 @@ function g(e) {
         })
     });
 }
-function _(e) {
+function g(e) {
     var t, r, l;
     let { message: a, channel: s, compact: c } = e,
         { guild: u, joinRequest: d, usernameHook: m, guildNameClick: p } = f(a, s);

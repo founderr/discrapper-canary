@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(659215),
     f = n(222677),
     p = n(995774),
-    g = n(931651),
-    _ = n(594174),
+    _ = n(931651),
+    g = n(594174),
     E = n(630388),
     C = n(74538),
     I = n(833803),
@@ -50,10 +50,10 @@ class Z extends r.Component {
             c = t.state === N.yb.SENDING,
             h = e === x.O.BURST;
         if (c || (0, E.yE)(t.flags, N.iLy.EPHEMERAL)) return null;
-        let f = _.default.getCurrentUser(),
+        let f = g.default.getCurrentUser(),
             p = (0, C.I5)(f),
-            g = h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
-        !p && h && (g = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
+            _ = h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
+        !p && h && (_ = (0, i.jsx)(m.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
         let T = l ? b : A,
             { canShowImprovedReactionButton: j } = I.Z.getCurrentConfig({ location: 'ButtonAddReaction' }, { autoTrackExposure: !this.props.isForumToolbar }),
             Z = j && !this.props.isForumToolbar,
@@ -70,7 +70,7 @@ class Z extends r.Component {
             children: (e, t) => {
                 let { isShown: l } = t;
                 return (0, i.jsx)(u.TooltipContainer, {
-                    text: g,
+                    text: _,
                     color: u.TooltipColors.PRIMARY,
                     'aria-label': h ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
                     tooltipClassName: T.__invalid_addReactionTooltip,
@@ -110,7 +110,7 @@ class Z extends r.Component {
             j(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = _.default.getCurrentUser();
+                let i = g.default.getCurrentUser();
                 t === x.O.BURST &&
                     !(0, C.I5)(i) &&
                     (0, h.openBurstReactionsUpsellModal)({
@@ -135,7 +135,7 @@ class Z extends r.Component {
                             object: N.qAy.REACTION_RAIL
                         })
                     },
-                    o = (0, i.jsx)(g.$, {
+                    o = (0, i.jsx)(_.$, {
                         closePopout: t,
                         channel: r,
                         onSelectEmoji: (e, n, i) => {

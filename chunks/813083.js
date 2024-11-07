@@ -10,8 +10,8 @@ var i = n(120356),
     d = n(481060),
     u = n(410030),
     m = n(884697),
-    f = n(388032),
-    p = n(161386);
+    p = n(388032),
+    f = n(161386);
 ((a = r || (r = {})).BANNER = 'banner'), (a.MODAL = 'modal'), (a.CARD = 'card');
 t.Z = (e) => {
     let { category: t, display: n, className: r } = e,
@@ -22,12 +22,12 @@ t.Z = (e) => {
         return (0, s.jsx)(d.TextBadge, {
             disableColor: !0,
             text: e,
-            className: l()((0, c.wj)(a) ? p.badgeDark : p.badgeLight, r)
+            className: l()((0, c.wj)(a) ? f.badgeDark : f.badgeLight, r)
         });
     }
     return (0, o.EQ)([n, i > 1])
         .with(['card', !0], () => null)
-        .with(['banner', !0], () => h(f.intl.formatToPlainString(f.t['8gsP5O'], { days: i })))
-        .with(['modal', !0], () => h(f.intl.formatToPlainString(f.t.Io7ozs, { days: i })))
-        .otherwise(() => h(f.intl.string(f.t.Bc13HB)));
+        .with(['banner', !0], () => h(p.intl.formatToPlainString(p.t['8gsP5O'], { days: i })))
+        .with(['modal', !0], () => h(p.intl.formatToPlainString(p.t.Io7ozs, { days: i })))
+        .otherwise(() => h(p.intl.string(p.t.Bc13HB)));
 };

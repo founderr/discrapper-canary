@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(100527),
     f = n(906732),
     p = n(963249),
-    g = n(594174),
-    _ = n(78839),
+    _ = n(594174),
+    g = n(78839),
     E = n(55935),
     C = n(63063),
     I = n(74538),
@@ -32,9 +32,9 @@ var i = n(200651),
 class j extends r.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,
-            r = g.default.getUser(i.user_id),
+            r = _.default.getUser(i.user_id),
             l = null != r ? r.username : '???',
-            a = g.default.getUser(i.referrer_id),
+            a = _.default.getUser(i.referrer_id),
             o = null != a ? a.username : '???';
         if (e && void 0 === i.redeemed_at) return A.intl.formatToPlainString(A.t.Mptau7, { username: l });
         if (t) return n ? A.intl.string(A.t['9SNdf3']) : A.intl.formatToPlainString(A.t['H0+MxM'], { userName: o });
@@ -173,11 +173,11 @@ function Z(e) {
             }),
             [n, t]
         ),
-        a = g.default.getCurrentUser(),
-        o = (0, u.e7)([g.default], () => null != r && (0, I.I5)(void 0 !== a && r.user_id === a.id ? a : g.default.getUser(r.user_id))),
-        s = (0, u.e7)([_.ZP], () => {
+        a = _.default.getCurrentUser(),
+        o = (0, u.e7)([_.default], () => null != r && (0, I.I5)(void 0 !== a && r.user_id === a.id ? a : _.default.getUser(r.user_id))),
+        s = (0, u.e7)([g.ZP], () => {
             var e;
-            return o ? (null === (e = _.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return o ? (null === (e = g.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
         { analyticsLocations: d } = (0, f.ZP)(h.Z.SHARE_NITRO_EMBED),
         { enabled: p } = N.Z.useExperiment({ location: 'f4ff1d_1' }, { autoTrackExposure: !0 });

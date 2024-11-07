@@ -6,8 +6,8 @@ var a = t(120356),
     o = t(979554),
     l = t(442837),
     s = t(481060),
-    c = t(1585),
-    d = t(125988),
+    d = t(1585),
+    c = t(125988),
     u = t(987209),
     f = t(921813),
     p = t(731896),
@@ -21,10 +21,10 @@ var a = t(120356),
 let v = (e) => {
         let { avatarDecoration: n } = e,
             t = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-            { avatarDecorationSrc: a } = (0, d.Z)({
+            { avatarDecorationSrc: a } = (0, c.Z)({
                 user: t,
                 avatarDecorationOverride: n,
-                size: (0, c.y9)(s.AvatarSizes.SIZE_40)
+                size: (0, d.y9)(s.AvatarSizes.SIZE_40)
             });
         return (0, i.jsx)('img', {
             src: a,
@@ -54,17 +54,17 @@ let v = (e) => {
         });
     };
 n.Z = (e) => {
-    let { skuId: n, skuPricePreview: t, isSelected: a, onSelect: c, shouldDisplayHeader: d = !1, className: p } = e,
+    let { skuId: n, skuPricePreview: t, isSelected: a, onSelect: d, shouldDisplayHeader: c = !1, className: p } = e,
         { product: C } = (0, b.T)(n),
-        { giftRecipient: I, giftRecipientError: T } = (0, u.wD)(),
-        j = (0, l.e7)([g.default], () => g.default.getCurrentUser());
+        { giftRecipient: I, giftRecipientError: j } = (0, u.wD)(),
+        T = (0, l.e7)([g.default], () => g.default.getCurrentUser());
     if (null == C || null == t) return null;
     let [y] = C.items,
-        E = null != I && I.id !== (null == j ? void 0 : j.id);
+        E = null != I && I.id !== (null == T ? void 0 : T.id);
     return (0, i.jsxs)('div', {
         className: p,
         children: [
-            d &&
+            c &&
                 (0, i.jsxs)('div', {
                     className: x.previewTitleContainer,
                     children: [
@@ -107,11 +107,11 @@ n.Z = (e) => {
             (0, i.jsxs)(s.Clickable, {
                 tag: 'div',
                 onClick: () => {
-                    null != n && null != c && c(n);
+                    null != n && null != d && d(n);
                 },
                 className: r()(x.previewContainer, {
-                    [x.previewContainerSelected]: a && null == T,
-                    [x.previewContainerError]: a && null != T
+                    [x.previewContainerSelected]: a && null == j,
+                    [x.previewContainerError]: a && null != j
                 }),
                 children: [
                     (0, i.jsxs)('div', {
@@ -140,13 +140,13 @@ n.Z = (e) => {
                         ]
                     }),
                     a &&
-                        null != T &&
+                        null != j &&
                         (0, i.jsx)('div', {
                             className: x.recipientError,
                             children: (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'status-danger-background',
-                                children: T
+                                children: j
                             })
                         })
                 ]

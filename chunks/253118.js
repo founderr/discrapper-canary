@@ -24,7 +24,7 @@ function c(e) {
                 flash: !0
             });
         },
-        g = (0, r.useRedesignIconContext)().enabled
+        _ = (0, r.useRedesignIconContext)().enabled
             ? {
                   iconNode: (0, i.jsx)(r.PinIcon, {
                       size: 'sm',
@@ -33,7 +33,7 @@ function c(e) {
               }
             : { icon: n(879066) };
     return (0, i.jsx)(o.Z, {
-        ...g,
+        ..._,
         timestamp: t.timestamp,
         compact: d,
         children:

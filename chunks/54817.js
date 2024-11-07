@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 });
 var i = n(200651);
@@ -17,10 +17,10 @@ var r = n(120356),
     h = n(674563),
     f = n(388032),
     p = n(38814);
-function g(e) {
+function _(e) {
     let { message: t, compact: n, usernameHook: r } = e,
-        g = (0, s.ZP)(t),
-        _ = r(g),
+        _ = (0, s.ZP)(t),
+        g = r(_),
         {
             avatarSrc: E,
             eventHandlers: { onMouseEnter: C, onMouseLeave: I }
@@ -74,13 +74,13 @@ function g(e) {
                         children:
                             t.type === m.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
                                 ? f.intl.format(f.t['+m8eDw'], {
-                                      username: g.nick,
-                                      usernameHook: _,
+                                      username: _.nick,
+                                      usernameHook: g,
                                       time: x
                                   })
                                 : f.intl.format(f.t.BHeke3, {
-                                      username: g.nick,
-                                      usernameHook: _
+                                      username: _.nick,
+                                      usernameHook: g
                                   })
                     })
                 ]

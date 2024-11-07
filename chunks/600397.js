@@ -17,27 +17,27 @@ var r = n(657707),
 function h(e) {
     let { message: t, channel: n, author: h, compact: f } = e,
         { nick: p } = (0, o.Sw)(h, n),
-        g = (0, c.l)({
+        _ = (0, c.l)({
             user: h,
             channelId: n.id,
             guildId: void 0,
             messageId: void 0
         })(),
-        _ = (0, l.q)(t.applicationId);
-    if (null == _) return null;
+        g = (0, l.q)(t.applicationId);
+    if (null == g) return null;
     let E = d.intl.format(d.t.m7Lwam, {
         username: p,
-        usernameHook: g,
-        gameName: _.name,
+        usernameHook: _,
+        gameName: g.name,
         gameIconHook: (e) =>
             (0, i.jsx)(s.j, {
-                application: _,
+                application: g,
                 timestamp: t.timestamp,
                 children: (0, i.jsxs)('span', {
                     className: m.gameContainer,
                     children: [
                         (0, i.jsx)(a.Z, {
-                            game: _,
+                            game: g,
                             size: a.Z.Sizes.XXSMALL,
                             className: m.inlineIcon
                         }),

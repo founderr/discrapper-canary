@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(608787),
     f = n(442837),
     p = n(481060),
-    g = n(603263),
-    _ = n(542051),
+    _ = n(603263),
+    g = n(542051),
     E = n(349033),
     C = n(999650),
     I = n(933557),
@@ -111,8 +111,8 @@ let U = m()('2015-05-15').local(),
     V = (e) => {
         let t,
             n,
-            { id: r, searchId: l, result: o, group: s, className: c, role: u, tabIndex: d, 'aria-selected': m, onSelect: h, onFocus: f, showFilter: g, renderResult: _ } = e;
-        if (g) {
+            { id: r, searchId: l, result: o, group: s, className: c, role: u, tabIndex: d, 'aria-selected': m, onSelect: h, onFocus: f, showFilter: _, renderResult: g } = e;
+        if (_) {
             var E, I;
             t = (0, i.jsx)('span', {
                 className: D.filter,
@@ -120,7 +120,7 @@ let U = m()('2015-05-15').local(),
             });
         }
         return (
-            (n = null != _ ? _(l, s, o) : (0, i.jsx)('strong', { children: o.text })),
+            (n = null != g ? g(l, s, o) : (0, i.jsx)('strong', { children: o.text })),
             (0, i.jsxs)(p.Clickable, {
                 tag: 'li',
                 className: a()(D.option, c),
@@ -180,7 +180,7 @@ let U = m()('2015-05-15').local(),
                     children: (e) => {
                         let { onMouseEnter: n, onMouseLeave: r } = e;
                         return (0, i.jsx)(p.Clickable, {
-                            onClick: () => (0, g.QQ)(t),
+                            onClick: () => (0, _.QQ)(t),
                             onMouseEnter: n,
                             onMouseLeave: r,
                             className: D.searchClearHistory,
@@ -301,7 +301,7 @@ class W extends r.PureComponent {
     render() {
         let { selectedIndex: e } = this.state,
             { navId: t, resultsState: n, totalResults: r, searchId: l } = this.props;
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(g.Z, {
             numResults: r,
             query: n.query,
             navId: t,
@@ -448,7 +448,7 @@ class W extends r.PureComponent {
                     let h = null !== (s = m.groupTip) && void 0 !== s ? s : null,
                         f = null != h ? (0, i.jsx)(h, { searchId: n }) : null,
                         p = null !== (c = m.component) && void 0 !== c ? c : V,
-                        g = l.type === M.Sap.FILTER_ALL;
+                        _ = l.type === M.Sap.FILTER_ALL;
                     return (0, i.jsxs)(
                         'ul',
                         {
@@ -468,10 +468,10 @@ class W extends r.PureComponent {
                                             searchId: n,
                                             group: null !== (o = l.group) && void 0 !== o ? o : r.group,
                                             result: l,
-                                            showFilter: g,
+                                            showFilter: _,
                                             onSelect: this.selectOption.bind(null, a),
                                             onFocus: this.focusOption.bind(null, a),
-                                            ...(0, _.M)(t, a, c)
+                                            ...(0, g.M)(t, a, c)
                                         },
                                         ''
                                             .concat(r.group, '-')

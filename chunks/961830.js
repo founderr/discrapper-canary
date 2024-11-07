@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     F7: function () {
         return x;
     },
@@ -9,23 +9,23 @@ n.d(t, {
         return b;
     },
     wo: function () {
-        return g;
+        return h;
     },
     yp: function () {
         return m;
     }
 });
-var o = n(200651);
-n(192379);
-var i = n(853872),
-    r = n(409813),
-    a = n(276442),
-    c = n(793541),
-    d = n(380898),
-    l = n(713316),
-    s = n(710094),
-    u = n(865921),
-    f = n(388032);
+var o = t(200651);
+t(192379);
+var i = t(853872),
+    r = t(409813),
+    a = t(276442),
+    c = t(793541),
+    d = t(380898),
+    l = t(713316),
+    s = t(710094),
+    u = t(865921),
+    f = t(388032);
 let p = {
         key: null,
         renderStep: (e) => (0, o.jsx)(u.v, { ...e })
@@ -48,12 +48,12 @@ let p = {
         key: r.h8.AWAITING_PURCHASE_TOKEN_AUTH,
         renderStep: () => (0, o.jsx)(d.Z, {})
     },
-    h = {
+    g = {
         key: r.h8.AWAITING_AUTHENTICATION,
         renderStep: () => (0, o.jsx)(c.Z, {}),
         options: { renderHeader: !0 }
     },
-    g = {
+    h = {
         key: r.h8.REVIEW,
         renderStep: (e) => (0, o.jsx)(s.l, { ...e }),
         options: { useBreadcrumbLabel: () => f.intl.string(f.t.QBnNHh) }
@@ -62,4 +62,4 @@ let p = {
         key: r.h8.CONFIRM,
         renderStep: (e) => (0, o.jsx)(l.w, { ...e })
     },
-    m = [_, h];
+    m = [_, g];

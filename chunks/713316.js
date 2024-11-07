@@ -1,23 +1,23 @@
-n.d(t, {
+t.d(n, {
     w: function () {
         return f;
     }
 });
-var o = n(200651);
-n(192379);
-var i = n(512722),
-    r = n.n(i),
-    a = n(481060),
-    c = n(563132),
-    d = n(698708),
-    l = n(614277),
-    s = n(388032),
-    u = n(525550);
+var o = t(200651);
+t(192379);
+var i = t(512722),
+    r = t.n(i),
+    a = t(481060),
+    c = t(563132),
+    d = t(698708),
+    l = t(614277),
+    s = t(388032),
+    u = t(525550);
 function f(e) {
-    let { handleClose: t } = e,
-        { skusById: n, selectedSkuId: i, application: f } = (0, c.usePaymentContext)();
+    let { handleClose: n } = e,
+        { skusById: t, selectedSkuId: i, application: f } = (0, c.usePaymentContext)();
     r()(null != i, 'Expected selectedSkuId'), r()(null != f, 'Expected application');
-    let p = n[i];
+    let p = t[i];
     r()(null != p, 'Expected sku');
     let b = s.intl.formatToPlainString(s.t.wK0IbG, {
         applicationName: f.name,
@@ -40,7 +40,7 @@ function f(e) {
                     }),
                     (0, o.jsx)('div', { className: u.divider }),
                     (0, o.jsx)(a.Button, {
-                        onClick: t,
+                        onClick: n,
                         children: s.intl.string(s.t.cpT0Cg)
                     })
                 ]

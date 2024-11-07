@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     },
     QQ: function () {
-        return g;
+        return _;
     },
     QY: function () {
         return I;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     j8: function () {
-        return _;
+        return g;
     },
     jn: function () {
         return m;
@@ -114,13 +114,13 @@ function p(e, t) {
             offset: t
         });
 }
-function g(e) {
+function _(e) {
     i.Z.dispatch({
         type: 'SEARCH_CLEAR_HISTORY',
         searchId: e
     });
 }
-function _(e, t) {
+function g(e, t) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',

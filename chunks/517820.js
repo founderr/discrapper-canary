@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(692547),
     f = n(481060),
     p = n(256638),
-    g = n(385499),
-    _ = n(528011),
+    _ = n(385499),
+    g = n(528011),
     E = n(533244),
     C = n(825829),
     I = n(226192),
@@ -214,10 +214,10 @@ function w(e) {
 function F(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: p, resolvedReason: g } = (0, C.FL)(n),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: p, resolvedReason: _ } = (0, C.FL)(n),
         x = (0, m.e7)([S.Z], () => S.Z.getChannel(n.channel_id), [n.channel_id]),
         N = null !== (t = null == x ? void 0 : x.guild_id) && void 0 !== t ? t : null,
-        { shouldShowIncidentActions: v } = (0, _.mI)(N),
+        { shouldShowIncidentActions: v } = (0, g.mI)(N),
         T = (0, Z.sR)(n.author.id, n.channel_id),
         A = r.useCallback(() => {
             let e = null == x ? void 0 : x.guild_id;
@@ -316,7 +316,7 @@ function F(e) {
                               children: (0, i.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, C.ge)(g)
+                                  children: (0, C.ge)(_)
                               })
                           })
                       })
@@ -474,7 +474,7 @@ function H(e) {
                                     className: M.username,
                                     children: O.intl.string(O.t.hG1StL)
                                 }),
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(_.Z, {
                                     type: y.Hb.SYSTEM_DM,
                                     className: M.systemTag
                                 }),

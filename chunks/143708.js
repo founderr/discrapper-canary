@@ -19,16 +19,16 @@ function f(e) {
     let t,
         n,
         f,
-        { author: p, banned: g } = e,
-        _ = (0, r.e7)([o.default], () => o.default.getId()),
+        { author: p, banned: _ } = e,
+        g = (0, r.e7)([o.default], () => o.default.getId()),
         E = (0, r.e7)([s.Z], () => s.Z.getChannelId()),
         C = u.ZP.useName(p),
-        I = _ === p.id;
+        I = g === p.id;
     return (
         I
             ? ((t = m.intl.string(m.t['F/OLvL'])), (f = m.intl.string(m.t.C89OLC)))
             : ((f = m.intl.string(m.t['YVub5+'])),
-              g
+              _
                   ? (t = m.intl.string(m.t['57nBt7']))
                   : null != C
                     ? ((t = m.intl.formatToPlainString(m.t['9Akp1t'], { username: C })),

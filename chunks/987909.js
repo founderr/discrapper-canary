@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(594174),
     f = n(626135),
     p = n(709054),
-    g = n(838440),
-    _ = n(981631),
+    _ = n(838440),
+    g = n(981631),
     E = n(385920);
 function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
@@ -27,7 +27,7 @@ function C(e) {
 }
 function I(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: m, eventProperties: h } = e,
-        [p, _] = r.useState(!1),
+        [p, g] = r.useState(!1),
         I = r.useMemo(
             () =>
                 C({
@@ -47,7 +47,7 @@ function I(e) {
             [u, t, l]
         ),
         N = r.useCallback(async () => {
-            let { valid: e } = await (0, g.v)({
+            let { valid: e } = await (0, _.v)({
                 type: s.I.FORM,
                 content: '',
                 channel: n
@@ -87,8 +87,8 @@ function I(e) {
         className: E.CTAMessageButtonOuter,
         innerClassName: E.CTAMessageButton,
         color: a.ButtonColors.PRIMARY,
-        onMouseEnter: () => _(!0),
-        onMouseLeave: () => _(!1),
+        onMouseEnter: () => g(!0),
+        onMouseLeave: () => g(!1),
         onClick: N,
         children: [
             (0, i.jsx)(c.ZP, {
@@ -111,7 +111,7 @@ function x(e) {
                 let r = t.guild_id;
                 if (null == i || null == r) return !1;
                 let l = (0, u.xl)(t),
-                    a = m.Z.can(_.Plq.SEND_MESSAGES, t),
+                    a = m.Z.can(g.Plq.SEND_MESSAGES, t),
                     o = null === (e = d.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending,
                     s = n.author.bot;
                 return a && !l && !o && !s;

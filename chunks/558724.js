@@ -19,7 +19,7 @@ var s = n(570140),
     h = n(914010),
     f = n(594174),
     p = n(981631);
-function g(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,13 +32,13 @@ function g(e, t, n) {
         e
     );
 }
-let _ = {
+let g = {
         hiddenSurveys: {},
         surveyOverride: null,
         lastFetched: null,
         lastSeen: null
     },
-    E = _,
+    E = g,
     C = {},
     I = null,
     x = 86400000;
@@ -82,9 +82,9 @@ function v(e) {
                     d = m.Z.can(p.Plq.ADMINISTRATOR, o);
                 if ((t.includes('is_owner') && !c) || (t.includes('is_admin') && !d)) continue;
                 null == (C = null != C ? C : {})[e.key] && (C[e.key] = e);
-                let g = h.Z.getGuildId(),
-                    _ = null != g && g === o.id;
-                if (!t.includes('is_viewing') || !!_) {
+                let _ = h.Z.getGuildId(),
+                    g = null != _ && _ === o.id;
+                if (!t.includes('is_viewing') || !!g) {
                     if (!r) return !0;
                 }
             }
@@ -116,7 +116,7 @@ function S() {
 }
 class A extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        (E = null != e ? e : _), this.syncWith([h.Z], S);
+        (E = null != e ? e : g), this.syncWith([h.Z], S);
     }
     getState() {
         return E;
@@ -131,9 +131,9 @@ class A extends (r = o.ZP.PersistedStore) {
         return E.lastSeen;
     }
 }
-g(A, 'displayName', 'SurveyStore'),
-    g(A, 'persistKey', 'SurveyStore'),
-    g(A, 'migrations', [
+_(A, 'displayName', 'SurveyStore'),
+    _(A, 'persistKey', 'SurveyStore'),
+    _(A, 'migrations', [
         (e) => {
             let t = { ...e };
             return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;

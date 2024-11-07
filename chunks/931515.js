@@ -35,8 +35,8 @@ var c = n(731965),
     h = n(410030),
     f = n(728345),
     p = n(812206),
-    g = n(963202),
-    _ = n(564990),
+    _ = n(963202),
+    g = n(564990),
     E = n(353647),
     C = n(669764),
     I = n(210753),
@@ -69,9 +69,9 @@ function U() {
         t = (0, y.GN)((e) => e.setSelectedGames, s.Z),
         n = (0, y.GN)((e) => e.selectedGames, s.Z),
         r = B(),
-        l = (0, g.An)({ location: 'clan_discovery' }),
-        a = (0, g.iN)('clan_discovery'),
-        { defaultGameId: o } = (0, g.nk)('clan_discovery'),
+        l = (0, _.An)({ location: 'clan_discovery' }),
+        a = (0, _.iN)('clan_discovery'),
+        { defaultGameId: o } = (0, _.nk)('clan_discovery'),
         c = null != l ? l : o,
         m = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -109,7 +109,7 @@ function w() {
             savedGuildIds: R.Z.getSavedGuildIds(),
             loaded: R.Z.hasLoadedStaticClanDiscovery()
         })),
-        a = (0, g.iN)('clan_discovery'),
+        a = (0, _.iN)('clan_discovery'),
         o = (0, u.e7)([R.Z], () => R.Z.getSearchResult(n), [n]),
         s = (0, u.Wu)([R.Z], () => (t && null != r ? r.map((e) => R.Z.getGuildProfile(e)).filter(j.lm) : []), [t, r]),
         c = i.useMemo(() => {
@@ -144,18 +144,18 @@ function F(e) {
         h = c - 1,
         f = (0, y.GN)((e) => e.loadingGameApplication, s.Z),
         p = (0, u.e7)([R.Z], () => R.Z.getSavedGuildIds()),
-        g = B(),
-        { searchResult: _, hasError: E } = (0, u.cj)(
+        _ = B(),
+        { searchResult: g, hasError: E } = (0, u.cj)(
             [R.Z],
             () => ({
-                searchResult: R.Z.getSearchResult(g),
+                searchResult: R.Z.getSearchResult(_),
                 hasError: R.Z.hasError()
             }),
-            [g]
+            [_]
         );
     i.useEffect(() => {
         n(e, P.$, { pageMemoryEnabled: !0 });
-    }, [e, n, _]),
+    }, [e, n, g]),
         !(function (e) {
             let [t, n] = i.useState(!1),
                 r = i.useRef(),
@@ -186,18 +186,18 @@ function F(e) {
         I = (0, u.Wu)([R.Z], () => C.map((e) => R.Z.getGuildProfile(e)).filter(j.lm), [C]),
         x = C.length === I.length || t,
         N = I.length === a || x,
-        v = (0, O.Pw)(_);
+        v = (0, O.Pw)(g);
     return {
         loaded: e === r && v && N && !f,
         clans: I,
-        searchCriteria: g,
-        searchResult: _,
+        searchCriteria: _,
+        searchResult: g,
         hasError: E
     };
 }
 function G() {
     let { search: e } = (0, o.TH)(),
-        t = (0, g.iN)('GlobalDiscovery'),
+        t = (0, _.iN)('GlobalDiscovery'),
         { game: n } = t ? a.parse(e.slice(1)) : {},
         r = (0, u.e7)([p.Z], () => (null != n ? p.Z.getApplication(n) : null));
     i.useEffect(() => {
@@ -269,13 +269,13 @@ function z() {
             return t && n.length < e && n.push(...k.Id, ...k.J6.slice(0, e)), Array.from(new Set(n)).slice(0, e);
         }, [m, t, e]);
     i.useEffect(() => {
-        c && s && (0, _.JX)(n);
+        c && s && (0, g.JX)(n);
     }, [n, c, s]),
         i.useEffect(() => {
             d.Z.getDetectableGamesSupplemental(f);
         }, [f]);
     let p = (0, u.Wu)([C.Z], () => C.Z.getGames(f), [f]),
-        g = (0, u.e7)([C.Z], () => f.some((e) => C.Z.isFetching(e)), [f]),
+        _ = (0, u.e7)([C.Z], () => f.some((e) => C.Z.isFetching(e)), [f]),
         I = i.useMemo(() => {
             let e = {};
             for (let t of p) {
@@ -358,7 +358,7 @@ function z() {
                 [f, p, I, x]
             ),
             treatment: m.length > 0 && s ? k.O7.GAME_SPECIFIC : k.O7.GENERIC,
-            hasFetchedGames: !c && !g
+            hasFetchedGames: !c && !_
         }
     );
 }

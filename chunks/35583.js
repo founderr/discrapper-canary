@@ -24,7 +24,7 @@ function p(e, t, n) {
         e
     );
 }
-class g extends r.PureComponent {
+class _ extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         return e.mode !== t.memoizedMode
             ? {
@@ -85,4 +85,4 @@ class g extends r.PureComponent {
             });
     }
 }
-t.Z = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(g);
+t.Z = l.ZP.connectStores([c.Z], () => ({ mode: c.Z.getState() }))(_);

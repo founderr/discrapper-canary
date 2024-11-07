@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(453687),
     f = n(434624),
     p = n(287151),
-    g = n(388032),
-    _ = n(96042),
+    _ = n(388032),
+    g = n(96042),
     E = n(688236);
 let C = (e, t) => (null == e && null == t) || e === t,
     I = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
@@ -37,7 +37,7 @@ class N extends r.PureComponent {
     render() {
         let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
             { disableTransitionAppear: R } = this.state,
-            L = S ? E : _,
+            L = S ? E : g,
             P = Z > 0;
         if (!P && !v) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
@@ -73,7 +73,7 @@ class N extends r.PureComponent {
                             t.stopPropagation(), (0, p.op)(x, e);
                         },
                         className: a()(L.reaction, T, L.remainingReactions),
-                        'aria-label': g.intl.string(g.t.lfIHs7),
+                        'aria-label': _.intl.string(_.t.lfIHs7),
                         children: (0, i.jsxs)(s.Text, {
                             className: L.reactionInner,
                             variant: 'text-sm/normal',

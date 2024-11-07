@@ -22,12 +22,12 @@ var r = n(192379),
     d = n(237031),
     u = n(981631);
 let m = ''.concat('#').concat('itemSkuId', '='),
-    f = new RegExp('^'.concat(m, '(\\d+)$')),
-    p = [u.Z5c.COLLECTIBLES_SHOP, u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    p = new RegExp('^'.concat(m, '(\\d+)$')),
+    f = [u.Z5c.COLLECTIBLES_SHOP, u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
     h = (e) => {
         let t = (0, a.TH)();
         r.useEffect(() => {
-            if (null != e && p.includes(t.pathname))
+            if (null != e && f.includes(t.pathname))
                 return (
                     window.location.replace(''.concat(m).concat(e.skuId)),
                     () => {
@@ -67,14 +67,14 @@ let m = ''.concat('#').concat('itemSkuId', '='),
     },
     C = (e) => {
         let { categories: t, isFetchingCategories: n, isLayer: d, initialItemCardRef: m } = e,
-            p = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
+            f = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
             h = r.useRef(null),
             C = (0, a.TH)(),
             b = C.pathname === u.Z5c.COLLECTIBLES_SHOP ? l.Z.HOME_PAGE_SHOP_TAB : C.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? l.Z.COLLECTIBLES_SHOP_FULLSCREEN : l.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: x } = (0, o.ZP)(b);
         r.useEffect(() => {
             if (d) return;
-            let e = f.exec(C.hash);
+            let e = p.exec(C.hash);
             if (null != e) {
                 let t = e[1];
                 h.current = t;
@@ -93,7 +93,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                             analyticsLocations: x,
                             analyticsSource: b,
                             initialItemCardRef: m,
-                            reducedMotion: p
+                            reducedMotion: f
                         });
                         n.push(r);
                     }, 250);
@@ -104,7 +104,7 @@ let m = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [d, x, b, t, n, v, m, p]);
+        }, [d, x, b, t, n, v, m, f]);
     },
     b = (e) => {
         let t = r.useRef({}),

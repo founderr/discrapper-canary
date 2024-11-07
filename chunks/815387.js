@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(362604),
     f = n(981772),
     p = n(710845),
-    g = n(825829),
-    _ = n(623624),
+    _ = n(825829),
+    g = n(623624),
     E = n(533694),
     C = n(182180),
     I = n(924301),
@@ -66,8 +66,8 @@ var i = n(200651),
     eh = n(507962),
     ef = n(857640),
     ep = n(614972),
-    eg = n(701181),
-    e_ = n(29338),
+    e_ = n(701181),
+    eg = n(29338),
     eE = n(461135),
     eC = n(296571),
     eI = n(587737),
@@ -87,7 +87,7 @@ function eZ(e) {
         u = (0, l.e7)([k.Z], () => k.Z.getGuild(s), [s]),
         d = r.useCallback(() => {
             if (null != u)
-                (0, _.f)({
+                (0, g.f)({
                     guildId: u.id,
                     location: {
                         section: eS.jXE.CHANNEL_TEXT_AREA,
@@ -214,8 +214,8 @@ let eL = Object.freeze({
             h = (0, l.e7)([F.Z], () => F.Z.getVoiceState(eS.ME, u)),
             f = !m && null != t.call && !t.call.participants.includes(u),
             p = m && (null == h || h.channelId !== d),
-            g = r.useCallback(() => c.default.selectVoiceChannel(d), [d]),
-            _ = (0, q.l)({
+            _ = r.useCallback(() => c.default.selectVoiceChannel(d), [d]),
+            g = (0, q.l)({
                 user: s,
                 channelId: d,
                 guildId: a.guild_id,
@@ -226,8 +226,8 @@ let eL = Object.freeze({
             message: t,
             missed: f,
             joinable: p,
-            usernameHook: _,
-            onClickJoinCall: g
+            usernameHook: g,
+            onClickJoinCall: _
         });
     },
     [eS.uaV.CHANNEL_NAME_CHANGE]: function (e) {
@@ -349,7 +349,7 @@ let eL = Object.freeze({
                 guildId: a.guild_id,
                 messageId: t.id
             }),
-            g = r.useCallback(() => {
+            _ = r.useCallback(() => {
                 if (null != h && null != f)
                     (0, u.iV)({
                         streamType: eA.lo.GUILD,
@@ -364,7 +364,7 @@ let eL = Object.freeze({
                   compact: n,
                   channel: h,
                   playingActivity: m,
-                  onJoinStream: g,
+                  onJoinStream: _,
                   usernameHook: p
               })
             : null;
@@ -457,7 +457,7 @@ let eL = Object.freeze({
     },
     [eS.uaV.AUTO_MODERATION_ACTION]: function (e) {
         let { message: t, compact: n, channel: r } = e;
-        return (0, g.nY)(t)
+        return (0, _.nY)(t)
             ? (0, i.jsx)(J.Z, {
                   message: t,
                   compact: n,
@@ -521,7 +521,7 @@ let eL = Object.freeze({
             o = (0, l.e7)([I.ZP], () => I.ZP.getActiveEventByChannel(n.id), [n.id]);
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(e_.Z, {
+                (0, i.jsx)(eg.Z, {
                     message: t,
                     compact: r,
                     usernameHook: a
@@ -552,7 +552,7 @@ let eL = Object.freeze({
                 guildId: n.guild_id,
                 messageId: t.id
             });
-        return (0, i.jsx)(eg.Z, {
+        return (0, i.jsx)(e_.Z, {
             message: t,
             compact: r,
             usernameHook: l

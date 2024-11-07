@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(565138),
     f = n(430824),
     p = n(388032),
-    g = n(239048);
-let _ = {
+    _ = n(239048);
+let g = {
     top: 8,
     bottom: 8,
     left: -4,
@@ -26,9 +26,9 @@ let _ = {
 function E(e) {
     let { channel: t, children: n } = e;
     return (0, i.jsx)(a.tE, {
-        offset: _,
+        offset: g,
         children: (0, i.jsxs)('div', {
-            className: g.channelHeader,
+            className: _.channelHeader,
             'data-recents-channel': t.id,
             children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(o.Fbu, { size: 'xxs' }), (0, i.jsx)(I, { channel: t }), n]
         })
@@ -39,7 +39,7 @@ function C(e) {
         n = (0, s.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null != n
         ? (0, i.jsx)(h.Z, {
-              className: g.icon,
+              className: _.icon,
               guild: n,
               size: h.Z.Sizes.SMALLER,
               'aria-hidden': !0
@@ -51,7 +51,7 @@ function C(e) {
                 experimentLocation: 'ForLaterChannelHeader'
             })
           : (0, i.jsx)('div', {
-                className: l()(g.icon, g.dmIcon),
+                className: l()(_.icon, _.dmIcon),
                 children: (0, i.jsx)(o.kBi, { size: 'xxs' })
             });
 }
@@ -63,12 +63,12 @@ function I(e) {
         a = t.isPrivate() || null == l,
         o = t.isDM() ? p.intl.formatToPlainString(p.t.smD7XV, { username: r }) : r;
     return (0, i.jsxs)('div', {
-        className: g.channelNameSection,
+        className: _.channelNameSection,
         children: [
             a
                 ? null
                 : (0, i.jsx)(l, {
-                      className: g.channelTypeIcon,
+                      className: _.channelTypeIcon,
                       size: 'xxs'
                   }),
             (0, i.jsx)(c.Heading, {

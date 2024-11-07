@@ -18,9 +18,9 @@ function f(e) {
     let { message: t, channel: n } = e,
         f = (0, l.e7)([d.Z], () => d.Z.isBlockedForMessage(t)),
         p = (0, o.p)(),
-        g = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, a.$)(g);
-    let _ = r.useMemo(
+        _ = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, a.$)(_);
+    let g = r.useMemo(
         () =>
             null != t.content && '' !== t.content
                 ? (0, s.ZP)(t, {
@@ -68,7 +68,7 @@ function f(e) {
                             o
                         ]
                     });
-                })(t, _, f)
+                })(t, g, f)
             })
         ]
     });

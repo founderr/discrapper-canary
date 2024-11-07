@@ -1,99 +1,99 @@
-n.d(t, {
+t.d(n, {
     A: function () {
-        return f;
+        return p;
     }
 });
-var i = n(200651);
-n(192379);
-var a = n(442837),
-    r = n(481060),
-    l = n(264043),
-    o = n(812206),
-    s = n(572004),
-    c = n(601911),
-    d = n(504211),
-    u = n(533159),
-    p = n(981631),
-    m = n(388032),
-    _ = n(213891),
-    h = n(566809);
-function f(e) {
-    let { appId: t, skuId: n, transitionState: f, onClose: g, onHeaderTitleClick: v, children: x, footer: I } = e,
-        C = (0, a.e7)(
-            [o.Z, l.Z],
+var o = t(200651);
+t(192379);
+var l = t(442837),
+    i = t(481060),
+    r = t(264043),
+    s = t(812206),
+    a = t(572004),
+    c = t(601911),
+    d = t(504211),
+    u = t(533159),
+    m = t(981631),
+    x = t(388032),
+    h = t(213891),
+    f = t(566809);
+function p(e) {
+    let { appId: n, skuId: t, transitionState: p, onClose: v, onHeaderTitleClick: _, children: j, footer: I } = e,
+        N = (0, l.e7)(
+            [s.Z, r.Z],
             () => {
                 var e;
-                return null !== (e = o.Z.getApplication(t)) && void 0 !== e ? e : l.Z.getApplicationRecord(t);
+                return null !== (e = s.Z.getApplication(n)) && void 0 !== e ? e : r.Z.getApplicationRecord(n);
             },
-            [t]
+            [n]
         );
-    if (null == C) return null;
-    let N = (0, c.y)(C, 25),
-        { termsOfServiceUrl: b, privacyPolicyUrl: S } = C;
-    return (0, i.jsxs)(r.ModalRoot, {
-        transitionState: f,
-        size: r.ModalSize.DYNAMIC,
-        className: h.modal,
+    if (null == N) return null;
+    let k = (0, c.y)(N, 25),
+        { termsOfServiceUrl: g, privacyPolicyUrl: C } = N;
+    return (0, o.jsxs)(i.ModalRoot, {
+        transitionState: p,
+        size: i.ModalSize.DYNAMIC,
+        className: f.modal,
         children: [
-            (0, i.jsxs)(r.ModalHeader, {
-                className: _.modalHeader,
+            (0, o.jsxs)(i.ModalHeader, {
+                className: h.modalHeader,
                 children: [
-                    (0, i.jsxs)(r.Clickable, {
-                        className: _.modalTitle,
-                        onClick: v,
+                    (0, o.jsxs)(i.Clickable, {
+                        className: h.modalTitle,
+                        onClick: _,
                         children: [
-                            null != N &&
-                                (0, i.jsx)('img', {
-                                    src: N.href,
+                            null != k &&
+                                (0, o.jsx)('img', {
+                                    src: k.href,
                                     alt: '',
-                                    className: h.appIcon
+                                    className: f.appIcon
                                 }),
-                            (0, i.jsx)(r.Heading, {
+                            (0, o.jsx)(i.Heading, {
                                 variant: 'heading-md/semibold',
-                                children: C.name
+                                children: N.name
                             })
                         ]
                     }),
-                    (0, i.jsx)(r.ModalCloseButton, {
-                        onClick: g,
-                        className: _.modalCloseBtn
+                    (0, o.jsx)(i.ModalCloseButton, {
+                        onClick: v,
+                        className: h.modalCloseBtn
                     })
                 ]
             }),
-            x,
-            (0, i.jsxs)(r.ModalFooter, {
-                className: h.footer,
+            j,
+            (0, o.jsxs)(i.ModalFooter, {
+                className: f.footer,
                 children: [
-                    null != b || null != S
-                        ? (0, i.jsx)(r.Text, {
+                    null != g || null != C
+                        ? (0, o.jsx)(i.Text, {
                               color: 'header-primary',
                               variant: 'text-sm/normal',
-                              children: (0, i.jsx)(u.Z, {
-                                  termsOfServiceUrl: b,
-                                  privacyPolicyUrl: S
+                              children: (0, o.jsx)(u.Z, {
+                                  termsOfServiceUrl: g,
+                                  privacyPolicyUrl: C
                               })
                           })
-                        : (0, i.jsx)(r.Text, {
+                        : (0, o.jsx)(i.Text, {
                               color: 'header-primary',
                               variant: 'text-xs/normal',
-                              children: m.intl.string(m.t['3ZY+0N'])
+                              children: x.intl.string(x.t['3ZY+0N'])
                           }),
-                    (0, i.jsxs)('div', {
-                        className: h.footerButtons,
+                    (0, o.jsxs)('div', {
+                        className: f.footerButtons,
                         children: [
-                            s.wS &&
-                                (0, i.jsx)(r.Button, {
-                                    look: r.Button.Looks.FILLED,
-                                    size: r.Button.Sizes.ICON,
-                                    color: r.Button.Colors.PRIMARY,
-                                    'aria-label': m.intl.string(m.t.WqhZsr),
-                                    className: h.linkButton,
-                                    innerClassName: h.innerLinkButton,
+                            a.wS &&
+                                (0, o.jsx)(i.Button, {
+                                    look: i.Button.Looks.FILLED,
+                                    size: i.Button.Sizes.ICON,
+                                    color: i.Button.Colors.PRIMARY,
+                                    'aria-label': x.intl.string(x.t.WqhZsr),
+                                    className: f.linkButton,
+                                    innerClassName: f.innerLinkButton,
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(p.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(t, n));
-                                        (0, s.JG)(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS)), (0, d.X)(t, d.B.DETAILS_MODAL, n);
+                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(m.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
+                                        (0, a.JG)(e), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['L/PwZW']), i.ToastType.SUCCESS)), (0, d.X)(n, d.B.DETAILS_MODAL, t);
                                     },
-                                    children: (0, i.jsx)(r.LinkIcon, {
+                                    children: (0, o.jsx)(i.LinkIcon, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     })

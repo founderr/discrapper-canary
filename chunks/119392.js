@@ -17,22 +17,22 @@ var r = n(481060),
     h = n(981631),
     f = n(49898),
     p = n(128449),
-    g = n(388032),
-    _ = n(818768),
+    _ = n(388032),
+    g = n(818768),
     E = n(761604);
 function C(e) {
     let { gameId: t, onSelect: n } = e;
     return (0, i.jsx)(r.Menu, {
         onSelect: n,
         navId: 'discovery-entrypoint-context-menu',
-        'aria-label': g.intl.string(g.t.ogxXGh),
+        'aria-label': _.intl.string(_.t.ogxXGh),
         onClose: l.Zy,
         children: (0, i.jsxs)(r.MenuGroup, {
             children: [
                 u.wS &&
                     (0, i.jsx)(r.MenuItem, {
                         id: 'copy',
-                        label: g.intl.string(g.t.WqhZsr),
+                        label: _.intl.string(_.t.WqhZsr),
                         icon: r.CopyIcon,
                         action: () => {
                             (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
@@ -40,7 +40,7 @@ function C(e) {
                     }),
                 (0, i.jsx)(r.MenuItem, {
                     id: 'learn-more',
-                    label: g.intl.string(g.t.hvVgAQ),
+                    label: _.intl.string(_.t.hvVgAQ),
                     icon: r.LinkExternalMediumIcon,
                     action: () => {
                         (0, a.Z)(d.Z.getArticleURL(h.BhN.CLANS_FAQ));
@@ -53,7 +53,7 @@ function C(e) {
 function I(e) {
     let { gameId: t } = e;
     return (0, i.jsx)(s.ZP, {
-        className: _.buttonContainer,
+        className: g.buttonContainer,
         children: (0, i.jsx)(r.Popout, {
             animation: r.Popout.Animation.NONE,
             position: 'bottom',
@@ -69,7 +69,7 @@ function I(e) {
             children: (e) => {
                 let { onClick: t, ...n } = e;
                 return (0, i.jsx)(r.Tooltip, {
-                    text: g.intl.string(g.t.UKOtz8),
+                    text: _.intl.string(_.t.UKOtz8),
                     hideOnClick: !0,
                     children: (e) => {
                         let { onClick: l, ...a } = e;
@@ -79,11 +79,11 @@ function I(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), null == l || l(), t(e);
                             },
-                            'aria-label': g.intl.string(g.t.UKOtz8),
+                            'aria-label': _.intl.string(_.t.UKOtz8),
                             children: (0, i.jsx)(r.MoreHorizontalIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: _.overflowIcon
+                                className: g.overflowIcon
                             })
                         });
                     }
@@ -103,40 +103,40 @@ function x(e) {
             coverImageHeight: 280
         });
     return n
-        ? (0, i.jsx)(r.Spinner, { className: _.spinner })
+        ? (0, i.jsx)(r.Spinner, { className: g.spinner })
         : null == a
           ? (0, i.jsxs)('div', {
-                className: _.wrapper,
+                className: g.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: _.errorHeader,
+                        className: g.errorHeader,
                         children: [
                             (0, i.jsx)('div', {
-                                className: _.headerContent,
+                                className: g.headerContent,
                                 children: (0, i.jsx)(r.Heading, {
-                                    className: _.title,
+                                    className: g.title,
                                     variant: 'display-md',
                                     color: 'header-secondary',
-                                    children: g.intl.string(g.t.ZDg1eH)
+                                    children: _.intl.string(_.t.ZDg1eH)
                                 })
                             }),
                             (0, i.jsx)('img', {
                                 alt: '',
                                 src: E,
-                                className: _.errorImage
+                                className: g.errorImage
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: _.content,
+                        className: g.content,
                         children: [
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: g.intl.string(g.t['yHp/y8'])
+                                children: _.intl.string(_.t['yHp/y8'])
                             }),
                             (0, i.jsx)(r.Button, {
-                                className: _.button,
+                                className: g.button,
                                 look: r.Button.Looks.FILLED,
                                 size: r.Button.Sizes.MEDIUM,
                                 color: r.Button.Colors.BRAND,
@@ -147,55 +147,55 @@ function x(e) {
                                         entrypoint: p.Qq.EMBED
                                     });
                                 },
-                                children: g.intl.string(g.t.uPeLWl)
+                                children: _.intl.string(_.t.uPeLWl)
                             })
                         ]
                     })
                 ]
             })
           : (0, i.jsxs)('div', {
-                className: _.wrapper,
+                className: g.wrapper,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: _.header,
+                        className: g.header,
                         children: [
                             (0, i.jsx)(I, { gameId: t }),
                             (0, i.jsx)('div', {
-                                className: _.splashWrapper,
+                                className: g.splashWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: _.splash,
+                                    className: g.splash,
                                     style: { backgroundImage: 'url("'.concat(l, '")') }
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: _.headerContent,
+                                className: g.headerContent,
                                 children: [
                                     (0, i.jsxs)(r.Text, {
-                                        className: _.label,
+                                        className: g.label,
                                         variant: 'text-sm/normal',
                                         color: 'text-normal',
-                                        children: [(0, i.jsx)(o.Z, { className: _.icon }), g.intl.string(g.t.KH2azs)]
+                                        children: [(0, i.jsx)(o.Z, { className: g.icon }), _.intl.string(_.t.KH2azs)]
                                     }),
                                     (0, i.jsx)(r.Heading, {
-                                        className: _.title,
+                                        className: g.title,
                                         variant: 'display-md',
                                         color: 'header-secondary',
-                                        children: g.intl.format(g.t.DOeucH, { gameName: a })
+                                        children: _.intl.format(_.t.DOeucH, { gameName: a })
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: _.content,
+                        className: g.content,
                         children: [
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-normal',
-                                children: g.intl.format(g.t['34PBmJ'], { gameName: a })
+                                children: _.intl.format(_.t['34PBmJ'], { gameName: a })
                             }),
                             (0, i.jsx)(r.Button, {
-                                className: _.button,
+                                className: g.button,
                                 look: r.Button.Looks.FILLED,
                                 size: r.Button.Sizes.MEDIUM,
                                 color: r.Button.Colors.BRAND,
@@ -207,7 +207,7 @@ function x(e) {
                                         extra: { search: '?game='.concat(t) }
                                     });
                                 },
-                                children: g.intl.string(g.t['7R5eKi'])
+                                children: _.intl.string(_.t['7R5eKi'])
                             })
                         ]
                     })

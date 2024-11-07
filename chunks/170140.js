@@ -16,11 +16,11 @@ var i = n(192379),
     h = n(158222),
     f = n(312146),
     p = n(487554),
-    g = n(874748),
-    _ = n(981631);
+    _ = n(874748),
+    g = n(981631);
 function E(e, t) {
     let n = (0, f.p$)(),
-        E = (0, g.LR)(e),
+        E = (0, _.LR)(e),
         C = (0, r.e7)(
             [c.ZP, o.default],
             () => {
@@ -30,7 +30,7 @@ function E(e, t) {
             [E]
         ),
         I = (0, r.e7)([l.Z], () => null != E && (null == E ? void 0 : E.channelId) != null && l.Z.isChannelGated(E.guildId, E.channelId), [E]),
-        x = t.hasFlag(_.iLy.IS_CROSSPOST),
+        x = t.hasFlag(g.iLy.IS_CROSSPOST),
         {
             rawMediaPostEmbedData: N,
             guild: v,
@@ -60,7 +60,7 @@ function E(e, t) {
             [E]
         ),
         j = i.useMemo(() => {
-            let e = (0, g.ku)({
+            let e = (0, _.ku)({
                 mediaPostEmbedData: N,
                 guild: v,
                 parentChannel: T,

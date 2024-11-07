@@ -15,8 +15,8 @@ var i = t(200651),
 function u(e) {
     let { initialStep: n, initialPlanId: t, guildId: u, setAnalyticsData: p, handleClose: f } = e,
         { blockedPayments: m, setStep: b, hasFetchedSubscriptions: h, hasFetchedSubscriptionPlans: g, currencyLoading: x, selectedSkuId: _, setSelectedSkuId: v, setSelectedPlanId: C, priceOptions: S, setSubscriptionMetadataRequest: k } = (0, s.usePaymentContext)(),
-        { isGift: y } = (0, c.wD)(),
-        [j, T] = r.useState(!h || !g || x);
+        { isGift: j } = (0, c.wD)(),
+        [y, T] = r.useState(!h || !g || x);
     return (r.useEffect(() => {
         T(!h || !g || x);
     }, [x, g, h]),
@@ -26,9 +26,9 @@ function u(e) {
     r.useEffect(() => {
         C(t);
         let e = null != t ? a.Z.get(t) : null;
-        if (!j && !m)
+        if (!y && !m)
             p((n) => {
-                let t = null != e ? (0, l.aS)(e.id, !1, y, S) : void 0;
+                let t = null != e ? (0, l.aS)(e.id, !1, j, S) : void 0;
                 return {
                     ...n,
                     subscription_plan_id: null == e ? void 0 : e.id,
@@ -38,8 +38,8 @@ function u(e) {
                 };
             }),
                 null != e && (v(null == e ? void 0 : e.skuId), b(n));
-    }, [m, t, y, j, S, _, p, C, v, b, n]),
-    j)
+    }, [m, t, j, y, S, _, p, C, v, b, n]),
+    y)
         ? (0, i.jsx)(d.Z, {})
         : m
           ? (0, i.jsx)(o.Vq, { onClose: f })

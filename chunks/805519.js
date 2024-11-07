@@ -18,7 +18,7 @@ function m(e) {
     let [t, n] = i.useState(!1),
         [m, h] = i.useState(!1),
         f = u.default.cast(e),
-        { joinRequest: p, guild: g } = (0, r.cj)([a.Z, o.Z, s.Z, c.Z], () => {
+        { joinRequest: p, guild: _ } = (0, r.cj)([a.Z, o.Z, s.Z, c.Z], () => {
             var e;
             let t = a.Z.getRequest(f);
             if (null == t)
@@ -36,8 +36,8 @@ function m(e) {
         });
     return (
         i.useEffect(() => {
-            null == g && !m && (h(!0), l.Z.fetchRequestToJoinGuilds());
-        }, [g, m]),
+            null == _ && !m && (h(!0), l.Z.fetchRequestToJoinGuilds());
+        }, [_, m]),
         i.useEffect(() => {
             null == p &&
                 (n(!0),
@@ -48,7 +48,7 @@ function m(e) {
         {
             loading: t,
             joinRequest: p,
-            joinRequestGuild: g
+            joinRequestGuild: _
         }
     );
 }

@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(542578),
     f = n(203143),
     p = n(79390),
-    g = n(839963),
-    _ = n(139256),
+    _ = n(839963),
+    g = n(139256),
     E = n(294608),
     C = n(388032),
     I = n(490351);
@@ -27,11 +27,11 @@ function x(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, m.Dt)(),
         { channelId: c, messageId: u } = (0, E.pE)(),
-        [g, _] = r.useState(''),
+        [_, g] = r.useState(''),
         [C, x] = r.useState(!1),
-        N = '' !== g && C,
+        N = '' !== _ && C,
         v = r.useCallback(() => {
-            _((0, p.e1)(u, c, a));
+            g((0, p.e1)(u, c, a));
         }, [u, c, a]),
         T = r.useCallback(() => {
             v(), x(!0);
@@ -73,7 +73,7 @@ function x(e) {
                                   variant: 'text-sm/normal',
                                   color: 'text-muted',
                                   scaleFontToUserSetting: !0,
-                                  children: g
+                                  children: _
                               }),
                               forceOpen: N,
                               'aria-label': !1,
@@ -95,7 +95,7 @@ function x(e) {
                           N &&
                               (0, i.jsx)(o.T, {
                                   id: s,
-                                  children: g
+                                  children: _
                               })
                       ]
                   })
@@ -134,15 +134,15 @@ function v(e) {
         answersInteraction: t,
         didSelfVote: r
     })
-        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
-            (0, i.jsx)(_.Og, {
+        .with({ answersInteraction: _.Y7.RADIO_BUTTONS }, () =>
+            (0, i.jsx)(g.Og, {
                 isSelected: n,
                 size: 24,
                 className: o
             })
         )
-        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
-            (0, i.jsx)(_.zs, {
+        .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
+            (0, i.jsx)(g.zs, {
                 isSelected: n,
                 size: 20,
                 className: o
@@ -150,11 +150,11 @@ function v(e) {
         )
         .with(
             {
-                answersInteraction: g.Y7.LIST,
+                answersInteraction: _.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
-                (0, i.jsx)(_.ZY, {
+                (0, i.jsx)(g.ZY, {
                     isVictor: l,
                     isExpired: a,
                     size: 24,
@@ -172,7 +172,7 @@ function T(e) {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: a()(I.answerInner, {
-                [I.currentlyVoting]: r !== g.Y7.LIST,
+                [I.currentlyVoting]: r !== _.Y7.LIST,
                 [I.selected]: c
             }),
             children: [
@@ -183,7 +183,7 @@ function T(e) {
                       })
                     : null,
                 null != t.pollMedia.emoji &&
-                    (0, i.jsx)(_.sc, {
+                    (0, i.jsx)(g.sc, {
                         className: I.emoji,
                         emoji: t.pollMedia.emoji
                     }),
@@ -216,7 +216,7 @@ function T(e) {
 }
 function S(e) {
     let { isExpired: t, answersInteraction: n, canShowVoteCounts: r, canTapAnswers: l, ...a } = e;
-    return (0, i.jsx)(_.$e, {
+    return (0, i.jsx)(g.$e, {
         className: I.answersContainer,
         answerClassName: I.answer,
         answersInteraction: n,

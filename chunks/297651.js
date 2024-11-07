@@ -16,23 +16,23 @@ function u(e, t) {
     let n = (0, i.sp)(),
         u = (0, c.x)(),
         m = s.ZP.canUseCollectibles(u),
-        f = r.useRef(null),
-        [p, h] = r.useState(!1),
+        p = r.useRef(null),
+        [f, h] = r.useState(!1),
         [g, C] = r.useState(!1),
         b = (0, o.B)('shop_product_card');
     return (
         r.useEffect(
             () => (
-                p && null === f.current
-                    ? (f.current = setTimeout(() => {
+                f && null === p.current
+                    ? (p.current = setTimeout(() => {
                           C(!0);
                       }, 1000))
-                    : !p && (null !== f.current && (clearTimeout(f.current), (f.current = null)), C(!1)),
+                    : !f && (null !== p.current && (clearTimeout(p.current), (p.current = null)), C(!1)),
                 () => {
-                    null !== f.current && (clearTimeout(f.current), (f.current = null));
+                    null !== p.current && (clearTimeout(p.current), (p.current = null));
                 }
             ),
-            [p]
+            [f]
         ),
         r.useEffect(() => {
             if (g && b) {

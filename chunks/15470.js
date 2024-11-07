@@ -1,18 +1,18 @@
 n.d(t, {
     i: function () {
-        return b;
+        return f;
     }
 }),
     n(47120);
 var a = n(200651),
     i = n(192379),
-    r = n(120356),
-    s = n.n(r),
+    s = n(120356),
+    r = n.n(s),
     l = n(302454),
     o = n.n(l),
     d = n(481060),
-    u = n(770146),
-    c = n(241209),
+    c = n(770146),
+    u = n(241209),
     h = n(73346),
     p = n(388032),
     m = n(499142);
@@ -29,15 +29,15 @@ function g(e, t, n) {
         e
     );
 }
-let f = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
-    b = {
-        ...c.Z.rules,
+let b = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
+    f = {
+        ...u.Z.rules,
         heading: {
-            ...c.Z.rules.heading,
+            ...u.Z.rules.heading,
             react(e, t, n) {
                 let i = 'h'.concat(Math.min(Math.max(2, e.level + 1), 4));
                 return (0, a.jsx)(
-                    u.Z,
+                    c.Z,
                     {
                         tag: i,
                         children: t(e.content, n)
@@ -49,7 +49,7 @@ let f = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
         assetImage: {
             order: 5,
             match(e, t) {
-                let n = e.match(f);
+                let n = e.match(b);
                 if (null != n) {
                     let e = n[2],
                         a = t.assets.find((t) => t.id === e);
@@ -77,8 +77,8 @@ let f = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 )
         }
     },
-    C = o().parserFor(b),
-    I = o().reactFor(o().ruleOutput(b, 'react'));
+    I = o().parserFor(f),
+    C = o().reactFor(o().ruleOutput(f, 'react'));
 class x extends i.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -87,13 +87,13 @@ class x extends i.PureComponent {
         }
     }
     render() {
-        let { applicationId: e, description: t, blurb: n, className: i, assets: r } = this.props,
+        let { applicationId: e, description: t, blurb: n, className: i, assets: s } = this.props,
             { collapsed: l, collapsable: o } = this.state;
         return (0, a.jsxs)('div', {
             className: i,
             children: [
                 (0, a.jsx)('div', {
-                    className: s()({ [m.collapsed]: o && l }),
+                    className: r()({ [m.collapsed]: o && l }),
                     children: (0, a.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
@@ -101,12 +101,12 @@ class x extends i.PureComponent {
                                 className: m.blurb,
                                 children: n
                             }),
-                            (0, a.jsx)(c.Z, {
+                            (0, a.jsx)(u.Z, {
                                 className: m.description,
-                                parser: C,
-                                output: I,
+                                parser: I,
+                                output: C,
                                 state: {
-                                    assets: r,
+                                    assets: s,
                                     applicationId: e
                                 },
                                 children: t

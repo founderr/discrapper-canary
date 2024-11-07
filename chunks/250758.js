@@ -12,8 +12,8 @@ var i,
     h = n(892880),
     f = n(405656),
     p = n(51144),
-    g = n(271383),
-    _ = n(768119),
+    _ = n(271383),
+    g = n(768119),
     E = n(246946),
     C = n(594174),
     I = n(981631);
@@ -88,7 +88,7 @@ function S(e, t, n) {
     let i,
         r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
     if (null == e || '' === e) return null;
-    if (_.Z.getSearchType(n) === I.aib.GUILD && (e === I.dCx.FILTER_FROM || e === I.dCx.FILTER_MENTIONS)) {
+    if (g.Z.getSearchType(n) === I.aib.GUILD && (e === I.dCx.FILTER_FROM || e === I.dCx.FILTER_MENTIONS)) {
         let e = N[n];
         null == e
             ? (i = null)
@@ -125,7 +125,7 @@ function A(e) {
                 [I.dCx.FILTER_BEFORE]: !0,
                 [I.dCx.FILTER_AFTER]: !0,
                 [I.dCx.FILTER_ON]: !0,
-                [I.dCx.FILTER_IN]: _.Z.getSearchType() === I.aib.GUILD,
+                [I.dCx.FILTER_IN]: g.Z.getSearchType() === I.aib.GUILD,
                 [I.dCx.FILTER_PINNED]: !e
             };
         })(),
@@ -148,7 +148,7 @@ function b(e, t) {
                         null != n &&
                             '' !== n &&
                             ((function (e) {
-                                let t = _.Z.getSearchType(e),
+                                let t = g.Z.getSearchType(e),
                                     n = [I.dCx.FILTER_HAS];
                                 return !E.Z.hidePersonalInformation && (n.push(I.dCx.FILTER_FROM), n.push(I.dCx.FILTER_MENTIONS)), t === I.aib.GUILD && n.push(I.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
@@ -183,7 +183,7 @@ function b(e, t) {
                 n.push(
                     (function (e) {
                         if (E.Z.hidePersonalInformation) return null;
-                        let t = _.Z.getHistory(e);
+                        let t = g.Z.getHistory(e);
                         return null == t
                             ? null
                             : {
@@ -212,7 +212,7 @@ function Z(e) {
     });
 }
 function R() {
-    let e = _.Z.getCurrentSearchId();
+    let e = g.Z.getCurrentSearchId();
     if (null == e || null == x[e]) return;
     let { query: t, mode: n, tokens: i, cursorScope: r } = x[e];
     x[e] = v({
@@ -226,7 +226,7 @@ function R() {
 }
 class L extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.ZP, E.Z);
+        this.waitFor(_.ZP, E.Z);
     }
     getState(e) {
         var t;

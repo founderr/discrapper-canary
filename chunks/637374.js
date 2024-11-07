@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(730749),
     f = n(112724),
     p = n(607070),
-    g = n(884697),
-    _ = n(600164),
+    _ = n(884697),
+    g = n(600164),
     E = n(479446),
     C = n(930114),
     I = n(981632),
@@ -113,10 +113,10 @@ class V extends r.Component {
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
-        return (0, i.jsxs)(_.Z, {
-            justify: _.Z.Justify.BETWEEN,
+        return (0, i.jsxs)(g.Z, {
+            justify: g.Z.Justify.BETWEEN,
             children: [
-                (0, i.jsxs)(_.Z, {
+                (0, i.jsxs)(g.Z, {
                     children: [
                         this.renderButton(e),
                         null == t || e.isSubscription
@@ -127,11 +127,11 @@ class V extends r.Component {
                               })
                     ]
                 }),
-                (0, i.jsxs)(_.Z, {
-                    align: _.Z.Align.END,
-                    justify: _.Z.Justify.END,
+                (0, i.jsxs)(g.Z, {
+                    align: g.Z.Align.END,
+                    justify: g.Z.Justify.END,
                     className: U.metadata,
-                    direction: _.Z.Direction.VERTICAL,
+                    direction: g.Z.Direction.VERTICAL,
                     children: [e.hasMultipleCopies ? (0, i.jsx)('div', { children: this.renderGiftCodeCopiesLeft(e) }) : null, e.redeemed || e.isClaimed || null != t || null == e.expiresAt ? null : (0, i.jsx)('div', { children: B.intl.format(B.t.nZBvUV, { hours: e.expiresAt.diff(s()(), 'h') }) })]
                 })
             ]
@@ -155,7 +155,7 @@ class V extends r.Component {
             (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.Button.Colors.BRAND), (l.disabled = !0)),
             (0, i.jsx)(u.Button, {
                 ...l,
-                className: (0, g.mO)(e) ? U.collectiblesAcceptButton : null,
+                className: (0, _.mO)(e) ? U.collectiblesAcceptButton : null,
                 size: u.Button.Sizes.SMALL,
                 children: e.redeemed ? B.intl.string(B.t.BTihoq) : null != e.giftStyle ? B.intl.string(B.t.TiZFqa) : B.intl.string(B.t.bUvv1d)
             })
@@ -175,7 +175,7 @@ class V extends r.Component {
         if (!n && this.isCustomGiftMessage() && !e.redeemed) return;
         let o = i.isPreorder() ? B.intl.formatToPlainString(B.t.evinTU, { name: i.name }) : i.name;
         if (e.redeemed)
-            return e.isSubscription || (0, g.mO)(e)
+            return e.isSubscription || (0, _.mO)(e)
                 ? B.intl.string(B.t.mVC3Cg)
                 : B.intl.format(B.t['ss/L+/'], {
                       skuName: o,
@@ -271,7 +271,7 @@ class V extends r.Component {
                       width: n
                   })
                 : (0, i.jsx)(m.OR, { isHorizontal: n >= m.aL });
-        return (0, g.mO)(e)
+        return (0, _.mO)(e)
             ? (0, i.jsx)('div', {
                   className: U.collectiblesEmbedWrapper,
                   children: this.renderEmbed()

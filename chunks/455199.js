@@ -12,8 +12,8 @@ var i,
     h = n(786761),
     f = n(572804),
     p = n(901461),
-    g = n(814082),
-    _ = n(23750),
+    _ = n(814082),
+    g = n(23750),
     E = n(314897),
     C = n(592125),
     I = n(375954),
@@ -38,7 +38,7 @@ let b = 'recentMentionFilterSettings',
     M = !1,
     k = !1;
 function D(e) {
-    if (e instanceof _.ZP) return e;
+    if (e instanceof g.ZP) return e;
     let t = I.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, h.e5)(e);
 }
@@ -49,7 +49,7 @@ function B(e) {
     let n = C.Z.getChannel(t);
     if (null == n || n.type === A.d4z.DM || (P.guildFilter === A.NgX.THIS_SERVER && n.getGuildId() !== v.Z.getGuildId())) return null;
     let i = E.default.getId();
-    if (N.Z.isBlockedOrIgnoredForMessage(e) || (0, g.Z)(e, i)) return null;
+    if (N.Z.isBlockedOrIgnoredForMessage(e) || (0, _.Z)(e, i)) return null;
     e = D(e);
     let r = !P.everyoneFilter,
         l = !P.roleFilter;

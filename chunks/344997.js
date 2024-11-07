@@ -54,7 +54,7 @@ function p(e) {
             return null;
     }
 }
-function g(e) {
+function _(e) {
     let { iconType: t } = e,
         n = {
             default: (0, i.jsx)(o.AnnouncementsIcon, {
@@ -70,7 +70,7 @@ function g(e) {
           })
         : null;
 }
-function _(e) {
+function g(e) {
     let { children: t, theme: n } = e,
         r = {
             default: d.defaultFooterContainer,
@@ -96,7 +96,7 @@ function E(e) {
                           (0, i.jsxs)('div', {
                               className: d.headerRow,
                               children: [
-                                  (0, i.jsx)(g, { iconType: r.icon }),
+                                  (0, i.jsx)(_, { iconType: r.icon }),
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-md/semibold',
                                       children: r.header
@@ -120,7 +120,7 @@ function E(e) {
                           })
                       ]
                   }),
-                  (0, i.jsx)(_, {
+                  (0, i.jsx)(g, {
                       theme: r.theme,
                       children:
                           null === (t = r.ctas) || void 0 === t

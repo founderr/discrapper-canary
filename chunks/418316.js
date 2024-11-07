@@ -14,7 +14,7 @@ var r = n(430824),
     u = n(981631),
     d = n(388032);
 function m(e) {
-    var t, n, m, h, f, p, g, _, E, C, I, x, N, v, T;
+    var t, n, m, h, f, p, _, g, E, C, I, x, N, v, T;
     let S = null !== (m = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== m ? m : u.lds,
         A = s.ZP.getName(a.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
@@ -22,8 +22,8 @@ function m(e) {
             return d.intl.formatToPlainString(d.t.uIomX1, { username: '**'.concat(A, '**') });
         case c.O7.FRIEND_REQUESTS_GROUPED:
             let b = s.ZP.getName(a.default.getUser(null === (f = e.other_users) || void 0 === f ? void 0 : null === (h = f[0]) || void 0 === h ? void 0 : h.id)),
-                j = s.ZP.getName(a.default.getUser(null === (g = e.other_users) || void 0 === g ? void 0 : null === (p = g[1]) || void 0 === p ? void 0 : p.id)),
-                Z = Math.max((null !== (E = null === (_ = e.other_users) || void 0 === _ ? void 0 : _.length) && void 0 !== E ? E : 0) - 2, 0);
+                j = s.ZP.getName(a.default.getUser(null === (_ = e.other_users) || void 0 === _ ? void 0 : null === (p = _[1]) || void 0 === p ? void 0 : p.id)),
+                Z = Math.max((null !== (E = null === (g = e.other_users) || void 0 === g ? void 0 : g.length) && void 0 !== E ? E : 0) - 2, 0);
             return d.intl.format(d.t.g5xyIC, {
                 user: b,
                 user2: j,

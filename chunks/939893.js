@@ -1,24 +1,24 @@
 var a = n(200651);
 n(192379);
 var i = n(302454),
-    r = n.n(i),
-    s = n(481060),
+    s = n.n(i),
+    r = n(481060),
     l = n(447543),
     o = n(15470),
     d = n(960904),
-    u = n(830121),
-    c = n(746878),
+    c = n(830121),
+    u = n(746878),
     h = n(241209);
 let p = /^discord.gg\/[a-zA-Z0-9-]+/,
     m = {
         ...h.Z.rules,
         heading: { ...o.i.heading },
-        image: { ...r().defaultRules.image },
+        image: { ...s().defaultRules.image },
         inviteLink: {
             order: h.Z.rules.link.order + 1,
             match: (e, t) => (t.inline ? p.exec(e) : null),
             parse: (e, t, n) => {
-                let a = (0, u.zO)(e[0]);
+                let a = (0, c.zO)(e[0]);
                 return null == a || a.type !== d.g.INVITE
                     ? {
                           type: 'text',
@@ -44,12 +44,12 @@ let p = /^discord.gg\/[a-zA-Z0-9-]+/,
             },
             react: (e, t, n) =>
                 (0, a.jsx)(
-                    s.Anchor,
+                    r.Anchor,
                     {
                         onClick: (t) => {
                             t.preventDefault(), e.onClick();
                         },
-                        children: (0, c.S)(e, t, n)
+                        children: (0, u.S)(e, t, n)
                     },
                     n.key
                 )

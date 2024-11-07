@@ -11,8 +11,8 @@ var i = n(200651),
     h = n(977683),
     f = n(869765),
     p = n(695346),
-    g = n(592125),
-    _ = n(699516),
+    _ = n(592125),
+    g = n(699516),
     E = n(709054),
     C = n(786761),
     I = n(493892),
@@ -60,7 +60,7 @@ t.Z = r.memo(function e(t) {
     let { channel: l, message: s, compact: y = !1, className: k, onContextMenu: U, onClick: w, disableInteraction: F = !1, hasThread: G, treatSpam: V } = t,
         H = O.OBS.has(s.type) ? s.messageReference : void 0,
         z = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(H)),
-        W = (0, o.e7)([g.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? g.Z.getChannel(z.message.channel_id) : null)),
+        W = (0, o.e7)([_.Z], () => (s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED ? _.Z.getChannel(z.message.channel_id) : null)),
         K = p.x4.useSetting(),
         Y = p.RS.useSetting(),
         X = p.NA.useSetting(),
@@ -76,7 +76,7 @@ t.Z = r.memo(function e(t) {
             previewLinkTarget: !0
         }),
         en = (0, N.ZP)(s),
-        ei = (0, o.e7)([g.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && g.Z.getChannel(E.default.castMessageIdAsChannelId(s.id))),
+        ei = (0, o.e7)([_.Z], () => s.hasFlag(O.iLy.HAS_THREAD) && _.Z.getChannel(E.default.castMessageIdAsChannelId(s.id))),
         er = s.type === O.uaV.THREAD_STARTER_MESSAGE && z.state === f.Y.LOADED && null != W,
         el = !er && void 0 === r,
         ea = (0, b.Z)({
@@ -94,7 +94,7 @@ t.Z = r.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (_.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
+        : (g.Z.isBlockedForMessage(s) ? (r = M.t['+FcYMz']) : (0, I.DQ)(s) && V && (r = M.t.xfkfTE), void 0 !== r)
           ? (0, i.jsx)(B, {
                 className: k,
                 compact: y,

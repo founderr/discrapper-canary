@@ -20,8 +20,8 @@ var i = n(200651),
     h = n(353254),
     f = n(695346),
     p = n(271383),
-    g = n(594174),
-    _ = n(671533),
+    _ = n(594174),
+    g = n(671533),
     E = n(51144),
     C = n(506071),
     I = n(696014),
@@ -45,8 +45,8 @@ function A(e) {
                 size: 4,
                 horizontal: !0
             }),
-            (0, i.jsx)(_.Z, {
-                direction: _.Z.Directions.RIGHT,
+            (0, i.jsx)(g.Z, {
+                direction: g.Z.Directions.RIGHT,
                 className: S.showMoreArrow
             })
         ]
@@ -88,13 +88,13 @@ function j(e) {
     var t, n, l;
     let { guild: d, subscriptionsSettings: h } = e,
         f = d.id;
-    let { nickname: _, nickcolor: C } =
+    let { nickname: g, nickcolor: C } =
             ((l = f),
             (0, o.cj)(
-                [p.ZP, g.default],
+                [p.ZP, _.default],
                 () => {
                     var e, t;
-                    let n = g.default.getCurrentUser();
+                    let n = _.default.getCurrentUser();
                     a()(null != n, 'user cannot be null');
                     let i = p.ZP.getMember(l, n.id);
                     return {
@@ -169,7 +169,7 @@ function j(e) {
                                         variant: 'text-md/normal',
                                         color: 'text-normal',
                                         children: T.intl.format(T.t['7JwrlJ'], {
-                                            username: _,
+                                            username: g,
                                             usernameHook: function (e, t) {
                                                 return (0, i.jsx)(
                                                     'span',

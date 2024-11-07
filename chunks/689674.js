@@ -24,8 +24,8 @@ function d(e) {
             [m.guild_id]
         ),
         p = (null === (t = d.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != m.guild_id,
-        g = m.type === r.d.GUILD_ANNOUNCEMENT && f,
-        _ = !d.hasFlag(u.iLy.EPHEMERAL) && (p || g),
+        _ = m.type === r.d.GUILD_ANNOUNCEMENT && f,
+        g = !d.hasFlag(u.iLy.EPHEMERAL) && (p || _),
         E = p && null != d.messageReference ? d.messageReference.message_id : d.id,
         C = p && null != d.messageReference ? d.messageReference.channel_id : m.id,
         I = p && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : m.guild_id,
@@ -46,7 +46,7 @@ function d(e) {
         N = s.Z.useExperiment(
             { location: '836a4b_1' },
             {
-                disable: !_ || !h,
+                disable: !g || !h,
                 autoTrackExposure: !0
             }
         ).enabled,

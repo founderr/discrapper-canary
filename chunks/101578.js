@@ -13,8 +13,8 @@ var r = n(442837),
 t.Z = (e) => {
     var t;
     let { channel: n, message: f, hideParty: p } = e,
-        { analyticsLocations: g } = (0, a.ZP)(),
-        _ = (0, r.e7)([c.default], () => c.default.getId()),
+        { analyticsLocations: _ } = (0, a.ZP)(),
+        g = (0, r.e7)([c.default], () => c.default.getId()),
         E = (0, r.e7)(
             [u.Z],
             () => {
@@ -22,10 +22,10 @@ t.Z = (e) => {
                 {
                     var e;
                     let t = f.author.id;
-                    return (null === (e = f.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === _ && n.isPrivate() ? n.getRecipientId() : _), u.Z.getApplicationActivity(t, f.application.id);
+                    return (null === (e = f.activity) || void 0 === e ? void 0 : e.type) === d.mFx.JOIN_REQUEST && (t = t === g && n.isPrivate() ? n.getRecipientId() : g), u.Z.getApplicationActivity(t, f.application.id);
                 }
             },
-            [f, n, _]
+            [f, n, g]
         );
     return (0, i.jsx)(l.Z, {
         className: h.container,
@@ -38,7 +38,7 @@ t.Z = (e) => {
         channelId: n.id,
         guildId: n.getGuildId(),
         hideParty: p,
-        isSender: f.author.id === _,
-        analyticsLocations: g
+        isSender: f.author.id === g,
+        analyticsLocations: _
     });
 };

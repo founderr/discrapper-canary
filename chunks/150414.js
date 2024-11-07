@@ -1,11 +1,11 @@
-n.d(t, {
+n.d(e, {
     q: function () {
-        return r;
+        return a;
     }
 });
 var i = n(73346),
-    a = n(591759);
-function r(e, t, n) {
-    var r;
-    return null !== (r = a.Z.toURLSafe((0, i._W)(e, t, n))) && void 0 !== r ? r : void 0;
+    o = n(591759);
+function a(t, e, n) {
+    var a;
+    return null !== (a = o.Z.toURLSafe((0, i._W)(t, e, n))) && void 0 !== a ? a : void 0;
 }

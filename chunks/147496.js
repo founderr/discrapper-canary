@@ -21,32 +21,32 @@ var a = n(752843),
     f = n(388032);
 function g(e) {
     var t, n, g, v;
-    let { onClose: x, transitionState: I, skuId: C, appId: N, onHeaderTitleClick: b } = e,
-        S = (0, r.e7)([s.Z], () => s.Z.getForSKU(C), [C]),
-        j = (0, r.e7)([o.Z], () => o.Z.get(C), [C]),
-        T = (0, u.M)(C);
-    if (null == j) return null;
-    let y = null !== (n = j.name) && void 0 !== n ? n : '',
-        E = null !== (g = null == S ? void 0 : null === (t = S.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== g ? g : void 0,
-        A = (null == S ? void 0 : S.headerBackground) != null && null !== (v = d.Z.toURLSafe((0, c._W)(N, S.headerBackground, 256))) && void 0 !== v ? v : void 0,
-        P = j.type === h.epS.DURABLE && T,
-        L = j.type === h.epS.DURABLE ? (P ? f.intl.string(f.t.bm82mp) : f.intl.string(f.t['6gprwc'])) : void 0,
-        { price: R } = j;
+    let { onClose: I, transitionState: x, skuId: C, appId: S, onHeaderTitleClick: N } = e,
+        b = (0, r.e7)([s.Z], () => s.Z.getForSKU(C), [C]),
+        T = (0, r.e7)([o.Z], () => o.Z.get(C), [C]),
+        j = (0, u.M)(C);
+    if (null == T) return null;
+    let y = null !== (n = T.name) && void 0 !== n ? n : '',
+        E = null !== (g = null == b ? void 0 : null === (t = b.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== g ? g : void 0,
+        A = (null == b ? void 0 : b.headerBackground) != null && null !== (v = d.Z.toURLSafe((0, c._W)(S, b.headerBackground, 256))) && void 0 !== v ? v : void 0,
+        P = T.type === h.epS.DURABLE && j,
+        L = T.type === h.epS.DURABLE ? (P ? f.intl.string(f.t.bm82mp) : f.intl.string(f.t['6gprwc'])) : void 0,
+        { price: R } = T;
     return null == R
         ? null
         : (0, i.jsx)(p.A, {
-              appId: N,
-              skuId: j.id,
-              transitionState: I,
-              onHeaderTitleClick: null != b ? b : x,
-              onClose: x,
+              appId: S,
+              skuId: T.id,
+              transitionState: x,
+              onHeaderTitleClick: null != N ? N : I,
+              onClose: I,
               footer: (0, i.jsx)(m.Y, {
-                  appId: N,
-                  sku: j
+                  appId: S,
+                  sku: T
               }),
               children: (0, i.jsx)(_.i, {
-                  appId: N,
-                  skuId: j.id,
+                  appId: S,
+                  skuId: T.id,
                   title: y,
                   description: E,
                   imgSrc: A,

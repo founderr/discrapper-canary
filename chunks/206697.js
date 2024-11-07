@@ -16,23 +16,23 @@ var i = n(200651),
     h = n(981631),
     f = n(474936),
     p = n(388032),
-    g = n(169458),
-    _ = n(492764),
+    _ = n(169458),
+    g = n(492764),
     E = n(235810);
 function C() {
     return (0, m.Z)()
         ? (0, i.jsx)('div', {
-              className: g.emptyContainer,
+              className: _.emptyContainer,
               children: (0, i.jsxs)('div', {
-                  className: g.emptyInner,
+                  className: _.emptyInner,
                   children: [
                       (0, i.jsx)('img', {
-                          src: _,
-                          className: g.image,
+                          src: g,
+                          className: _.image,
                           alt: ''
                       }),
                       (0, i.jsx)(o.Heading, {
-                          className: g.header,
+                          className: _.header,
                           variant: 'heading-xl/semibold',
                           color: 'text-normal',
                           children: p.intl.string(p.t.erEf2t)
@@ -46,18 +46,18 @@ function C() {
               })
           })
         : (0, i.jsxs)('div', {
-              className: g.emptyContainer,
+              className: _.emptyContainer,
               children: [
                   (0, i.jsxs)('div', {
-                      className: g.emptyInner,
+                      className: _.emptyInner,
                       children: [
                           (0, i.jsx)('img', {
                               src: E,
-                              className: g.image,
+                              className: _.image,
                               alt: ''
                           }),
                           (0, i.jsx)(o.Heading, {
-                              className: g.header,
+                              className: _.header,
                               variant: 'heading-xl/semibold',
                               color: 'text-normal',
                               children: p.intl.string(p.t.w4DRbW)
@@ -92,7 +92,7 @@ function I() {
             onClick: t
         });
     return (0, i.jsxs)('div', {
-        className: g.upsellContainer,
+        className: _.upsellContainer,
         children: [
             (0, i.jsx)(l.SrA, {
                 size: 'md',
@@ -101,13 +101,13 @@ function I() {
             (0, i.jsx)(a.xv, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                className: g.upsellText,
+                className: _.upsellText,
                 children: m
             }),
             (0, i.jsx)(u.Z, {
-                className: g.upsellButton,
+                className: _.upsellButton,
                 size: o.ButtonSizes.TINY,
-                shinyButtonClassName: g.upsellButton,
+                shinyButtonClassName: _.upsellButton,
                 subscriptionTier: f.Si.TIER_2,
                 premiumModalAnalyticsLocation: { section: h.jXE.FOR_LATER_POPOUT_UPSELL }
             })

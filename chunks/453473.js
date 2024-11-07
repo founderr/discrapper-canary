@@ -20,8 +20,8 @@ var i = n(200651),
     h = n(442837),
     f = n(481060),
     p = n(239091),
-    g = n(494404),
-    _ = n(724757),
+    _ = n(494404),
+    g = n(724757),
     E = n(213609),
     C = n(294218),
     I = n(373662),
@@ -54,7 +54,7 @@ function B(e) {
         children: (0, i.jsxs)('div', {
             className: k.popoutContainer,
             children: [
-                (0, i.jsx)(g.h4, {
+                (0, i.jsx)(_.h4, {
                     icon: f.BookmarkIcon,
                     title: M.intl.string(M.t['2pAkDA'])
                 }),
@@ -116,7 +116,7 @@ function w(e) {
 function F(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
         l = r.useRef(null),
-        a = (0, _.Z)('for-later', l),
+        a = (0, g.Z)('for-later', l),
         [o, s] = r.useState(new Date());
     return (
         r.useEffect(() => {

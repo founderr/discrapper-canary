@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 }),
     n(724458),
@@ -19,10 +19,10 @@ var r = n(512722),
     h = n(981631),
     f = n(388032),
     p = n(691784);
-function g(e) {
+function _(e) {
     let t,
-        { invite: n, author: r, currentUserId: g, onTransitionToInviteChannel: _, onAcceptInstantInvite: E } = e,
-        C = g === r.id,
+        { invite: n, author: r, currentUserId: _, onTransitionToInviteChannel: g, onAcceptInstantInvite: E } = e,
+        C = _ === r.id,
         I = n.state === h.r2o.ACCEPTING,
         x = (0, a.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
     l()(null == x || x.isPrivate(), 'must be a private channel');
@@ -47,7 +47,7 @@ function g(e) {
                       .map((e) => e.username)
                       .join(', ')
                 : f.intl.string(f.t.LJpTRE));
-    let T = N ? _ : E,
+    let T = N ? g : E,
         S = f.intl.string(f.t.XpeFYm),
         A = o.Z.Button.Colors.GREEN;
     N && ((S = f.intl.string(f.t.cEnaW1)), (A = o.Z.Button.Colors.PRIMARY));

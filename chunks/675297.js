@@ -17,8 +17,8 @@ var r = n(399606),
     h = n(623488),
     f = n(942833),
     p = n(391181),
-    g = n(964793),
-    _ = n(226060),
+    _ = n(964793),
+    g = n(226060),
     E = n(981631);
 function C(e) {
     let { guildProductListing: t, guildId: n, location: C, shouldShowFullDescriptionButton: I = !0, hideRoleTag: x = !1, lineClamp: N = 1, cardWidth: v, cardHeight: T, thumbnailHeight: S, descriptionTextVariant: A = 'text-sm/normal', showOpaqueBackground: b = !1 } = e,
@@ -34,7 +34,7 @@ function C(e) {
         O = (0, f.k)(t);
     if (null == j || y) return null;
     let M = () =>
-            (0, g.e)({
+            (0, _.e)({
                 guildId: n,
                 guildProductListingId: t.id,
                 analyticsLocation: C
@@ -71,7 +71,7 @@ function C(e) {
             description: t.description,
             formattedPrice: O,
             role: Z,
-            ctaComponent: (0, i.jsx)(_.Z, {
+            ctaComponent: (0, i.jsx)(g.Z, {
                 guildId: n,
                 guildProductListingId: t.id,
                 sourceAnalyticsLocations: C

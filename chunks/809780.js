@@ -27,8 +27,8 @@ var i,
     h = n(570140),
     f = n(904245),
     p = n(45114),
-    g = n(607070),
-    _ = n(853856),
+    _ = n(607070),
+    g = n(853856),
     E = n(181945),
     C = n(220444),
     I = n(601070),
@@ -222,7 +222,7 @@ class V extends s.EventEmitter {
                         deleted: !0
                     }))
                 }),
-                    g.Z.useReducedMotion && this.deleteChannel(t),
+                    _.Z.useReducedMotion && this.deleteChannel(t),
                     this.maybeLoadMore();
             }),
             (this.undoMarkChannelRead = () => {
@@ -405,7 +405,7 @@ function W(e, t, n, i) {
         mentionCount: s,
         sortOrder: (function (e, t, n) {
             let i = b.Z.getChannel(t);
-            if (_.Z.isFavorite(t)) return 0;
+            if (g.Z.isFavorite(t)) return 0;
             if (i.isPrivate()) return 1;
             if (y.ZP.getMentionCount(t) > 0) return 2;
             if (null != n) {

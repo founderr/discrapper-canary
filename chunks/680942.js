@@ -8,8 +8,8 @@ var r = n(200651),
     d = n(884697),
     u = n(474936),
     m = n(231338),
-    f = n(388032),
-    p = n(65297);
+    p = n(388032),
+    f = n(65297);
 let h = {
     dark: [
         {
@@ -77,22 +77,22 @@ t.Z = (e) => {
         { analyticsLocations: v } = (0, l.ZP)(),
         _ = a.useRef(null),
         k = (0, i.Z)(_),
-        j = x ? m.BR.DARK : m.BR.LIGHT;
+        E = x ? m.BR.DARK : m.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(s.Tooltip, {
-              text: f.intl.string(f.t['JCFN//']),
+              text: p.intl.string(p.t['JCFN//']),
               delay: C,
               children: (e) =>
                   (0, r.jsx)(s.Button, {
                       ...e,
                       buttonRef: _,
-                      className: p.giftButton,
+                      className: f.giftButton,
                       color: x ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
                       look: s.Button.Looks.FILLED,
                       size: s.ButtonSizes.ICON,
-                      innerClassName: p.giftButtonInner,
-                      'aria-label': f.intl.string(f.t.PEjaCw),
+                      innerClassName: f.giftButtonInner,
+                      'aria-label': p.intl.string(p.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
@@ -113,7 +113,7 @@ t.Z = (e) => {
                           ? (0, r.jsx)(o.e, {
                                 hovered: k,
                                 isContentDismissed: !0,
-                                themeOverride: j,
+                                themeOverride: E,
                                 boxColors: h
                             })
                           : (0, r.jsx)(s.GiftIcon, {

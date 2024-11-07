@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(768943),
     f = n(742989),
     p = n(675478),
-    g = n(581883),
-    _ = n(585483),
+    _ = n(581883),
+    g = n(585483),
     E = n(400445),
     C = n(153209),
     I = n(956961),
@@ -32,9 +32,9 @@ function A(e) {
         { analyticsLocations: R } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [L, P] = r.useState(!1),
         [y, O] = (function () {
-            let e = (0, a.e7)([g.Z], () => {
+            let e = (0, a.e7)([_.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : o.X.UNREADS;
+                return null !== (t = null === (e = _.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : o.X.UNREADS;
             });
             return [
                 e,
@@ -51,9 +51,9 @@ function A(e) {
             ];
         })(),
         { showTutorial: M, setSeenTutorial: k } = (function (e) {
-            let t = (0, a.e7)([g.Z], () => {
+            let t = (0, a.e7)([_.Z], () => {
                     var e, t;
-                    return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
+                    return null !== (t = null === (e = _.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
                 }),
                 n = r.useCallback(() => {
                     p.hW.updateAsync(
@@ -75,7 +75,7 @@ function A(e) {
         B = r.useCallback(() => {
             P(!L), L ? null == n || n() : null == t || t();
         }, [n, t, L]);
-    r.useEffect(() => (_.S.subscribe(T.CkL.TOGGLE_INBOX, B), () => void _.S.unsubscribe(T.CkL.TOGGLE_INBOX, B)), [B]);
+    r.useEffect(() => (g.S.subscribe(T.CkL.TOGGLE_INBOX, B), () => void g.S.unsubscribe(T.CkL.TOGGLE_INBOX, B)), [B]);
     let { showReminders: U } = f.Z.useExperiment({ location: 'RecentsPopout' }),
         { enabled: w, inInbox: F } = m.Z.useExperiment({ location: 'RecentsPopout' }),
         G = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && w && F,

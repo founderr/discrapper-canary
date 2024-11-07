@@ -7,13 +7,13 @@ n.d(t, {
     n(411104);
 var a,
     i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    l = n.n(s),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
     o = n(748780),
     d = n(112724),
-    u = n(744184);
-function c(e, t, n) {
+    c = n(744184);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,28 +36,28 @@ let h = {
 function g(e, t) {
     return ((e % t) + t) % t;
 }
-class f extends (a = r.Component) {
+class b extends (a = s.Component) {
     componentDidMount() {
         this.animatedIndex.setValue(this.props.currentIndex);
     }
     componentDidUpdate(e) {
-        let { align: t, animate: n, currentIndex: a, items: i, width: r } = this.props,
-            s = g(a, i.length),
+        let { align: t, animate: n, currentIndex: a, items: i, width: s } = this.props,
+            r = g(a, i.length),
             l = g(e.currentIndex, i.length);
-        (s !== l || i.length !== e.items.length) && this.updateAnimatedIndex(s, l),
-            r !== e.width
+        (r !== l || i.length !== e.items.length) && this.updateAnimatedIndex(r, l),
+            s !== e.width
                 ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t))
                 : n &&
-                  (t !== e.align || s !== l) &&
+                  (t !== e.align || r !== l) &&
                   o.Z.spring(this.animatedAlignmentOffset, {
                       ...h,
                       toValue: this.getAlignmentOffset(t)
                   }).start();
     }
     getAlignmentOffset(e) {
-        let { width: t, itemSize: n, currentIndex: a, gutter: i, items: r } = this.props,
-            s = i * g(a, r.length) * 2;
-        return e === p ? (t - n.width) / 2 + s : e === m ? t - n.width - i + s : i + s;
+        let { width: t, itemSize: n, currentIndex: a, gutter: i, items: s } = this.props,
+            r = i * g(a, s.length) * 2;
+        return e === p ? (t - n.width) / 2 + r : e === m ? t - n.width - i + r : i + r;
     }
     getCarouselTranslate() {
         let { itemSize: e, edgeItems: t } = this.props;
@@ -93,9 +93,9 @@ class f extends (a = r.Component) {
     renderSingleItem() {
         let { renderItem: e, items: t, itemSize: n, className: a } = this.props;
         return (0, i.jsx)('div', {
-            className: l()(u.singleItemWrapper, u.viewport, a),
+            className: l()(c.singleItemWrapper, c.viewport, a),
             children: (0, i.jsx)('div', {
-                className: u.singleItem,
+                className: c.singleItem,
                 style: {
                     width: n.width,
                     height: n.height
@@ -107,34 +107,34 @@ class f extends (a = r.Component) {
     renderCarouselItems() {
         let e;
         let { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: a } = this,
-            { renderItem: r, items: s, itemSize: l, edgeItems: d, gutter: c } = this.props,
+            { renderItem: s, items: r, itemSize: l, edgeItems: d, gutter: u } = this.props,
             { margin: h, width: p } = l,
             m = this.getCarouselTranslate(),
             g = this.getItemStyle(),
-            f = (e = d > 0 ? [...s.slice(-d), ...s, ...s.slice(0, d)] : s).map((e, t) =>
+            b = (e = d > 0 ? [...r.slice(-d), ...r, ...r.slice(0, d)] : r).map((e, t) =>
                 (0, i.jsx)(
                     'div',
                     {
                         style: g,
-                        className: u.item,
-                        children: r(e, t - d, this.interpolateValueForItem(t - d))
+                        className: c.item,
+                        children: s(e, t - d, this.interpolateValueForItem(t - d))
                     },
                     t
                 )
             );
         return (0, i.jsx)(o.Z.div, {
-            className: u.carousel,
+            className: c.carousel,
             style: {
                 opacity: a,
                 left: o.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-m, -h - p - m - c * (s.length - 1)]
+                        outputRange: [-m, -h - p - m - u * (r.length - 1)]
                     }),
                     n
                 )
             },
-            children: f
+            children: b
         });
     }
     render() {
@@ -143,16 +143,16 @@ class f extends (a = r.Component) {
         return 1 === e.length
             ? this.renderSingleItem()
             : (0, i.jsx)('div', {
-                  className: l()({ [u.viewport]: n }, t),
+                  className: l()({ [c.viewport]: n }, t),
                   children: this.renderCarouselItems()
               });
     }
     constructor(...e) {
         super(...e),
-            c(this, 'animatedIndex', new o.Z.Value(this.props.currentIndex)),
-            c(this, 'animatedAlignmentOffset', new o.Z.Value(this.getAlignmentOffset(this.props.align))),
-            c(this, 'animatedOpacity', new o.Z.Value(1)),
-            c(this, 'getItemStyle', () => {
+            u(this, 'animatedIndex', new o.Z.Value(this.props.currentIndex)),
+            u(this, 'animatedAlignmentOffset', new o.Z.Value(this.getAlignmentOffset(this.props.align))),
+            u(this, 'animatedOpacity', new o.Z.Value(1)),
+            u(this, 'getItemStyle', () => {
                 let {
                     itemSize: { width: e, margin: t, height: n }
                 } = this.props;
@@ -164,7 +164,7 @@ class f extends (a = r.Component) {
                     maxWidth: e
                 };
             }),
-            c(this, 'interpolateValueForItem', (e) =>
+            u(this, 'interpolateValueForItem', (e) =>
                 this.animatedIndex.interpolate({
                     inputRange: [e - 1, e, e + 1],
                     outputRange: [0, 1, 0],
@@ -173,11 +173,11 @@ class f extends (a = r.Component) {
             );
     }
 }
-c(f, 'defaultProps', {
+u(b, 'defaultProps', {
     animate: !0,
     edgeItems: 2,
     align: p,
     gutter: 0,
     hideOverflow: !0
 }),
-    (t.ZP = (0, d.Z)(f));
+    (t.ZP = (0, d.Z)(b));

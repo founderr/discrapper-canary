@@ -3,10 +3,10 @@ n.d(t, {
         return p;
     },
     fC: function () {
-        return _;
+        return g;
     },
     gr: function () {
-        return g;
+        return _;
     },
     hQ: function () {
         return r;
@@ -43,7 +43,7 @@ function p(e) {
         isOverdue: a
     };
 }
-function g(e) {
+function _(e) {
     let t = (0, s.e7)([m.Z], () => m.Z.getChannel(e.saveData.channelId));
     return l.useMemo(
         () =>
@@ -60,7 +60,7 @@ function g(e) {
         [t, e]
     );
 }
-async function _(e, t) {
+async function g(e, t) {
     if ((null == t ? void 0 : t.type) === h.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
             let t = await c.Z.fetchChannel(e.saveData.channelId);

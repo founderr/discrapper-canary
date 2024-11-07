@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(885714),
     f = n(314897),
     p = n(430824),
-    g = n(701190),
-    _ = n(610699),
+    _ = n(701190),
+    g = n(610699),
     E = n(313876),
     C = n(778333),
     I = n(949981),
@@ -30,10 +30,10 @@ var i = n(200651),
 function b(e) {
     let { code: t, author: n, getAcceptInviteContext: b } = e,
         { invite: j, inviteError: Z } = (0, l.cj)(
-            [g.Z],
+            [_.Z],
             () => ({
-                invite: g.Z.getInvite(t),
-                inviteError: g.Z.getInviteError(t)
+                invite: _.Z.getInvite(t),
+                inviteError: _.Z.getInviteError(t)
             }),
             [t]
         );
@@ -152,7 +152,7 @@ function b(e) {
                         break;
                     }
                     (0, d.P1)(R) &&
-                        (D = (0, i.jsx)(_.Z, {
+                        (D = (0, i.jsx)(g.Z, {
                             invite: R,
                             getAcceptInviteContext: b
                         }));

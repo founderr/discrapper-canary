@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(565138),
     f = n(267101),
     p = n(336197),
-    g = n(661824),
-    _ = n(430824),
+    _ = n(661824),
+    g = n(430824),
     E = n(626135),
     C = n(76535),
     I = n(866104),
@@ -29,7 +29,7 @@ var i = n(200651),
 function S(e) {
     var t;
     let { guildId: n } = e,
-        l = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
+        l = (0, c.e7)([g.Z], () => g.Z.getGuild(n)),
         { loading: S, subscriptionsSettings: A } = (0, C.H)(n),
         { listingsLoaded: b } = (0, f.eD)(n),
         j = (0, f.ue)(n, { publishedOnly: !0 }),
@@ -86,7 +86,7 @@ function S(e) {
                         children: A.description
                     }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
-                    (0, i.jsx)(g.Z, {}),
+                    (0, i.jsx)(_.Z, {}),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: T.guildShopEmbedFooter,

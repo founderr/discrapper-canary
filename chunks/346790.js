@@ -11,10 +11,10 @@ var a = t(853872),
     l = t(276442);
 let s = {
     key: o.h8.ADD_PAYMENT_STEPS,
-    renderStep: (e) => (0, i.jsx)(c, { ...e }),
+    renderStep: (e) => (0, i.jsx)(d, { ...e }),
     options: { renderHeader: !0 }
 };
-function c(e) {
+function d(e) {
     let { isGift: n } = (0, r.wD)();
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(l.J, {

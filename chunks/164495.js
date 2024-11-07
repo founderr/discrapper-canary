@@ -1,6 +1,6 @@
 n.d(t, {
     i0: function () {
-        return S;
+        return E;
     },
     yD: function () {
         return _;
@@ -64,7 +64,7 @@ let g = (e) => {
             children: v.intl.string(v.t.csptqa)
         });
     },
-    S = (e) => {
+    E = (e) => {
         let { quest: t, useReducedMotion: n, isExpanded: o, className: a, ctaLabel: c, ...u } = e,
             m = (0, d.hf)({
                 quest: t,
@@ -81,19 +81,19 @@ let g = (e) => {
             children: null != c ? c : v.intl.string(v.t.cfY4PD)
         });
     },
-    E = (e) => {
+    S = (e) => {
         var t;
         let { quest: n, useReducedMotion: o, isExpanded: i, awaitingConsoleConnections: l, hasMadeProgress: a, isProgressing: d, activeScreen: m, taskDetails: p } = e,
             v = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
             C = (0, u.P)({ location: f.dr.QUESTS_BAR }),
-            E = (0, c.cr)(n);
+            S = (0, c.cr)(n);
         if (v)
-            return (0, r.jsx)(S, {
+            return (0, r.jsx)(E, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: i
             });
-        if (E)
+        if (S)
             return (0, r.jsx)(x, {
                 quest: n,
                 taskDetails: p
@@ -117,7 +117,7 @@ function _(e) {
                     onClick: e.onBack,
                     children: (0, r.jsx)(l.ChevronSmallLeftIcon, { className: C.backIcon })
                 }),
-            (0, r.jsx)(E, { ...e })
+            (0, r.jsx)(S, { ...e })
         ]
     });
 }

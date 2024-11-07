@@ -19,8 +19,8 @@ var i = n(200651),
     h = n(584656),
     f = n(247206),
     p = n(719548),
-    g = n(388032),
-    _ = n(614092);
+    _ = n(388032),
+    g = n(614092);
 let E = (e) => {
         let { attachment: t } = e,
             { url: n, description: r } = t;
@@ -42,15 +42,15 @@ let E = (e) => {
         let { url: t, description: n } = e,
             r = (0, m.cb)(t);
         return (0, i.jsx)('div', {
-            className: _.mediaContainer,
+            className: g.mediaContainer,
             children: r
                 ? (0, i.jsx)(d.Z, {
-                      className: a()(_.video, _.media),
+                      className: a()(g.video, g.media),
                       controls: !0,
                       src: t
                   })
                 : (0, i.jsx)('img', {
-                      className: a()(_.image, _.media),
+                      className: a()(g.image, g.media),
                       src: t,
                       alt: n
                   })
@@ -60,7 +60,7 @@ function x(e) {
     c.Z.pop(),
         (0, h.t)({
             id: 'explicit-media-false-positive-modal',
-            text: g.intl.string(g.t.gFsTKi)
+            text: _.intl.string(_.t.gFsTKi)
         }),
         e();
 }
@@ -103,20 +103,20 @@ function N(e) {
                     children: [
                         (0, i.jsx)(s.ModalCloseButton, {
                             onClick: I,
-                            className: _.closeButton
+                            className: g.closeButton
                         }),
                         (0, i.jsx)(s.Heading, {
                             id: p,
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            className: _.header,
-                            children: g.intl.string(g.t.TPpVkJ)
+                            className: g.header,
+                            children: _.intl.string(_.t.TPpVkJ)
                         }),
                         (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            className: _.subheader,
-                            children: g.intl.string(g.t.gg5Dp6)
+                            className: g.subheader,
+                            children: _.intl.string(_.t.gg5Dp6)
                         }),
                         null != o && (0, i.jsx)(E, { attachment: o }),
                         null != c && (0, i.jsx)(C, { embed: c })
@@ -125,21 +125,21 @@ function N(e) {
                 (0, i.jsxs)(s.ModalFooter, {
                     children: [
                         (0, i.jsx)(s.Button, {
-                            className: _.button,
+                            className: g.button,
                             disabled: l,
                             submitting: l,
                             size: s.Button.Sizes.MEDIUM,
                             color: s.Button.Colors.BRAND,
                             onClick: x,
-                            children: g.intl.string(g.t['cY+Ooa'])
+                            children: _.intl.string(_.t['cY+Ooa'])
                         }),
                         (0, i.jsx)(s.Button, {
-                            className: _.button,
+                            className: g.button,
                             disabled: l,
                             color: s.Button.Colors.TRANSPARENT,
                             size: s.Button.Sizes.MEDIUM,
                             onClick: I,
-                            children: g.intl.string(g.t['ETE/oK'])
+                            children: _.intl.string(_.t['ETE/oK'])
                         })
                     ]
                 })

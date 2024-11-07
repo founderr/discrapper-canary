@@ -16,8 +16,8 @@ var i,
     h = n(481060),
     f = n(911969),
     p = n(595519),
-    g = n(566620),
-    _ = n(403404),
+    _ = n(566620),
+    g = n(403404),
     E = n(100527),
     C = n(906732),
     I = n(783097),
@@ -54,7 +54,7 @@ function M(e) {
 ((i = r || (r = {}))[(i.InteractionUser = 0)] = 'InteractionUser'), (i[(i.InteractionTarget = 1)] = 'InteractionTarget');
 function k(e, t, n, i, r) {
     var a, o, c;
-    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: g, onClickAvatar: _, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
+    let { message: u, compact: d, channel: m, isInteractionUserBlocked: f, showAvatarPopout: p, showTargetAvatarPopout: _, onClickAvatar: g, onUserContextMenu: E, onClickTargetAvatar: C, onTargetUserContextMenu: I, onPopoutRequestClose: x } = e;
     if (d && 1 === n) return null;
     if ((d && null == u.activityInstance) || f)
         return (0, l.jsx)('div', {
@@ -88,10 +88,10 @@ function k(e, t, n, i, r) {
                 user: t,
                 guildId: m.guild_id,
                 guildAvatar: N,
-                onClick: 1 === n ? C : _,
+                onClick: 1 === n ? C : g,
                 onContextMenu: 1 === n ? I : E
             }),
-        T = 1 === n ? g : p;
+        T = 1 === n ? _ : p;
     return null != r && null != T
         ? (0, l.jsx)(h.Popout, {
               renderPopout: r,
@@ -270,7 +270,7 @@ function U(e) {
                   }));
     else {
         let e = () => {
-            (0, _.Z)({
+            (0, g.Z)({
                 channel: r,
                 guildId: r.guild_id,
                 locationObject: {
@@ -283,7 +283,7 @@ function U(e) {
                 enableSelectedTextChannelInvite: !0,
                 analyticsLocations: o
             }),
-                (0, g.w1)({ guildId: r.guild_id });
+                (0, _.w1)({ guildId: r.guild_id });
         };
         n = G
             ? y.intl.format(y.t.kfV8WF, {

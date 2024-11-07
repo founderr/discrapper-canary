@@ -19,8 +19,8 @@ var i = n(200651),
     h = n(117266),
     f = n(37234),
     p = n(254854),
-    g = n(195500),
-    _ = n(287734),
+    _ = n(195500),
+    g = n(287734),
     E = n(205355),
     C = n(558381),
     I = n(223245),
@@ -73,8 +73,8 @@ var i = n(200651),
     eh = n(474936),
     ef = n(610674),
     ep = n(65154),
-    eg = n(388032),
-    e_ = n(569252);
+    e_ = n(388032),
+    eg = n(569252);
 let eE = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
@@ -84,10 +84,10 @@ let eE = () =>
                         eI(), (0, ed.b)();
                     }
                 }),
-                eg.intl.string(eg.t.nCO9bG),
+                e_.intl.string(e_.t.nCO9bG),
                 (0, i.jsx)(c.NoticeButtonAnchor, {
                     href: es.Z.getArticleURL(em.BhN.NO_INPUT_DETECTED),
-                    children: eg.intl.string(eg.t.RYKKo6)
+                    children: e_.intl.string(e_.t.RYKKo6)
                 })
             ]
         }),
@@ -100,12 +100,12 @@ let eE = () =>
                         eI(), (0, ed.b)();
                     }
                 }),
-                eg.intl.string(eg.t.dNAJ19),
+                e_.intl.string(e_.t.dNAJ19),
                 (0, i.jsx)(c.NoticeButton, {
                     onClick: () => {
                         (0, f.jN)(em.S9g.USER_SETTINGS), v.Z.setSection(em.oAB.VOICE);
                     },
-                    children: eg.intl.string(eg.t.I6YlBw)
+                    children: e_.intl.string(e_.t.I6YlBw)
                 })
             ]
         });
@@ -171,7 +171,7 @@ let ex =
                                   onClick: () => eI(ej),
                                   noticeType: em.kVF.WIN32_DEPRECATED_MESSAGE
                               }),
-                              eg.intl.format(eg.t['08KQ1N'], { helpCenterLink: es.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) })
+                              e_.intl.format(e_.t['08KQ1N'], { helpCenterLink: es.Z.getArticleURL(em.BhN.WIN32_DEPRECATE) })
                           ]
                       });
                   case em.kVF.WIN7_8_DEPRECATED_MESSAGE:
@@ -183,7 +183,7 @@ let ex =
                                   onClick: () => eI(eZ),
                                   noticeType: em.kVF.WIN7_8_DEPRECATED_MESSAGE
                               }),
-                              eg.intl.format(eg.t['8Je+dX'], { helpCenterLink: es.Z.getArticleURL(em.BhN.WIN7_8_DEPRECATE) })
+                              e_.intl.format(e_.t['8Je+dX'], { helpCenterLink: es.Z.getArticleURL(em.BhN.WIN7_8_DEPRECATE) })
                           ]
                       });
                   case em.kVF.MACOS_17_18_DEPRECATED_MESSAGE:
@@ -195,7 +195,7 @@ let ex =
                                   onClick: () => eI(eR),
                                   noticeType: em.kVF.MACOS_17_18_DEPRECATED_MESSAGE
                               }),
-                              eg.intl.format(eg.t.q8VPLi, { helpCenterLink: es.Z.getArticleURL(em.BhN.MACOS_17_18_DEPRECATE) })
+                              e_.intl.format(e_.t.q8VPLi, { helpCenterLink: es.Z.getArticleURL(em.BhN.MACOS_17_18_DEPRECATE) })
                           ]
                       });
                   case em.kVF.GENERIC:
@@ -240,18 +240,18 @@ let ex =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      g.Z.clearRemoteDisconnectVoiceChannelId(), eI();
+                                      _.Z.clearRemoteDisconnectVoiceChannelId(), eI();
                                   },
                                   noticeType: em.kVF.VOICE_DISABLED
                               }),
-                              eg.intl.string(eg.t.bOQ3jY),
+                              e_.intl.string(e_.t.bOQ3jY),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && _.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && g.default.selectVoiceChannel(e);
                                   },
                                   noticeType: em.kVF.VOICE_DISABLED,
-                                  children: eg.intl.string(eg.t.vD60Pj)
+                                  children: e_.intl.string(e_.t.vD60Pj)
                               })
                           ]
                       });
@@ -261,18 +261,18 @@ let ex =
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => {
-                                      g.Z.clearLastSessionVoiceChannelId(), eI();
+                                      _.Z.clearLastSessionVoiceChannelId(), eI();
                                   },
                                   noticeType: em.kVF.VOICE_CONNECTED_LAST_SESSION
                               }),
-                              eg.intl.string(eg.t.jY2lUF),
+                              e_.intl.string(e_.t.jY2lUF),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       let e = et.Z.getLastSessionVoiceChannelId();
-                                      null != e && null != J.Z.getChannel(e) && _.default.selectVoiceChannel(e);
+                                      null != e && null != J.Z.getChannel(e) && g.default.selectVoiceChannel(e);
                                   },
                                   noticeType: em.kVF.VOICE_CONNECTED_LAST_SESSION,
-                                  children: eg.intl.string(eg.t.vD60Pj)
+                                  children: e_.intl.string(e_.t.vD60Pj)
                               })
                           ]
                       });
@@ -287,20 +287,20 @@ let ex =
                               }),
                               (0, i.jsx)('img', {
                                   alt: '',
-                                  className: e_.platformIcon,
+                                  className: eg.platformIcon,
                                   src: eL.icon.whiteSVG
                               }),
-                              eg.intl.string(eg.t['D8Cp7+']),
+                              e_.intl.string(e_.t['D8Cp7+']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => v.Z.open(em.oAB.VOICE),
                                   noticeType: em.kVF.SPOTIFY_AUTO_PAUSED,
-                                  children: eg.intl.string(eg.t.NiTd0d)
+                                  children: e_.intl.string(e_.t.NiTd0d)
                               }),
                               (0, i.jsx)(c.Anchor, {
-                                  className: e_.textLinkSmall,
+                                  className: eg.textLinkSmall,
                                   href: es.Z.getArticleURL(em.BhN.SPOTIFY_AUTO_PAUSED),
                                   target: '_blank',
-                                  children: eg.intl.string(eg.t.CiqAIS)
+                                  children: e_.intl.string(e_.t.CiqAIS)
                               })
                           ]
                       });
@@ -308,11 +308,11 @@ let ex =
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
-                              eg.intl.string(eg.t['f+Zaoq']),
+                              e_.intl.string(e_.t['f+Zaoq']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.UNCLAIMED_ACCOUNT,
                                   onClick: () => (eT && null != S ? (0, D.hk)(S) : j.j()),
-                                  children: eg.intl.string(eg.t.fiNVio)
+                                  children: e_.intl.string(e_.t.fiNVio)
                               })
                           ]
                       });
@@ -320,19 +320,19 @@ let ex =
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DEFAULT,
                           children: [
-                              eg.intl.string(eg.t['3sWbf3']),
+                              e_.intl.string(e_.t['3sWbf3']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.UNVERIFIED_ACCOUNT,
                                   onClick: () => {
                                       m.Z.verifyResend(),
                                           u.Z.show({
-                                              title: eg.intl.string(eg.t.LykQYm),
-                                              body: eg.intl.format(eg.t.azKEPz, { email: null == p ? void 0 : p.email }),
-                                              secondaryConfirmText: eg.intl.string(eg.t.oP5zGB),
+                                              title: e_.intl.string(e_.t.LykQYm),
+                                              body: e_.intl.format(e_.t.azKEPz, { email: null == p ? void 0 : p.email }),
+                                              secondaryConfirmText: e_.intl.string(e_.t.oP5zGB),
                                               onConfirmSecondary: j.j
                                           });
                                   },
-                                  children: eg.intl.string(eg.t.WnX4Jy)
+                                  children: e_.intl.string(e_.t.WnX4Jy)
                               })
                           ]
                       });
@@ -345,10 +345,10 @@ let ex =
                                   onClick: () => E.Z.ackScheduledMaintenance(),
                                   noticeType: em.kVF.SCHEDULED_MAINTENANCE
                               }),
-                              eg.intl.format(eg.t.yb96S0, ed.metadata),
+                              e_.intl.format(e_.t.yb96S0, ed.metadata),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
                                   href: ''.concat(em.yXt.STATUS, '/incidents/').concat(ed.metadata.id),
-                                  children: eg.intl.string(eg.t.hvVgAQ)
+                                  children: e_.intl.string(e_.t.hvVgAQ)
                               })
                           ]
                       });
@@ -361,7 +361,7 @@ let ex =
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
-                              eg.intl.format(eg.t.qoDex8, {
+                              e_.intl.format(e_.t.qoDex8, {
                                   vendorName: eP.name,
                                   modelName: ey.name
                               }),
@@ -374,7 +374,7 @@ let ex =
                                   href: ey.url,
                                   target: '_blank',
                                   rel: 'noreferrer noopener',
-                                  children: eg.intl.string(eg.t['Yl/Rio'])
+                                  children: e_.intl.string(e_.t['Yl/Rio'])
                               })
                           ]
                       });
@@ -386,11 +386,11 @@ let ex =
                                   onClick: () => eI(),
                                   noticeType: em.kVF.STREAMER_MODE
                               }),
-                              eg.intl.string(eg.t.iEgBXl),
+                              e_.intl.string(e_.t.iEgBXl),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => I.Z.setEnabled(!1),
                                   noticeType: em.kVF.STREAMER_MODE,
-                                  children: eg.intl.string(eg.t.R9GHyc)
+                                  children: e_.intl.string(e_.t.R9GHyc)
                               })
                           ]
                       });
@@ -403,12 +403,12 @@ let ex =
                                       eI();
                                   }
                               }),
-                              eg.intl.string(eg.t.HcErZW),
+                              e_.intl.string(e_.t.HcErZW),
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
                                       (0, f.jN)(em.S9g.USER_SETTINGS), v.Z.setSection(em.oAB.VOICE);
                                   },
-                                  children: eg.intl.string(eg.t['51hI/v'])
+                                  children: e_.intl.string(e_.t['51hI/v'])
                               })
                           ]
                       });
@@ -429,9 +429,9 @@ let ex =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: e_.premiumIcon
+                                  className: eg.premiumIcon
                               }),
-                              eg.intl.format(eg.t['g3MU//'], {
+                              e_.intl.format(e_.t['g3MU//'], {
                                   applicationName: eD.name,
                                   skuName: ek.name
                               }),
@@ -453,7 +453,7 @@ let ex =
                                           analyticsLocationObject: eB,
                                           context: __OVERLAY__ ? em.IlC.OVERLAY : em.IlC.APP
                                       }).then(() => h.Z(ek.id)),
-                                  children: eg.intl.string(eg.t.KEwPY2)
+                                  children: e_.intl.string(e_.t.KEwPY2)
                               })
                           ]
                       });
@@ -473,9 +473,9 @@ let ex =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: e_.premiumIcon
+                                  className: eg.premiumIcon
                               }),
-                              eg.intl.format(eg.t.LquIKC, {
+                              e_.intl.format(e_.t.LquIKC, {
                                   applicationName: r.name,
                                   skuName: n.name
                               }),
@@ -486,7 +486,7 @@ let ex =
                                           pathname: em.Z5c.APPLICATION_STORE_LISTING_SKU(n.id),
                                           state: { scrollRestoration: !1 }
                                       },
-                                      children: eg.intl.string(eg.t.hvVgAQ)
+                                      children: e_.intl.string(e_.t.hvVgAQ)
                                   })
                               })
                           ]
@@ -526,14 +526,14 @@ let ex =
                                       eI();
                                   }
                               }),
-                              eg.intl.format(eg.t.RomvGB, { guildName: null !== (t = null == ex ? void 0 : ex.name) && void 0 !== t ? t : 'this server' }),
+                              e_.intl.format(e_.t.RomvGB, { guildName: null !== (t = null == ex ? void 0 : ex.name) && void 0 !== t ? t : 'this server' }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.SERVER_USAGE_SURVEY,
                                   onClick: () => {
                                       window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id='.concat(null == p ? void 0 : p.id, '&guild_id=').concat(null == ex ? void 0 : ex.id), '_blank'), eI();
                                   },
                                   additionalTrackingProps: { guild_id: null == ex ? void 0 : ex.id },
-                                  children: eg.intl.string(eg.t['4RQks7'])
+                                  children: e_.intl.string(e_.t['4RQks7'])
                               })
                           ]
                       });
@@ -541,11 +541,11 @@ let ex =
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.DANGER,
                           children: [
-                              eg.intl.string(eg.t.ugxmk5),
+                              e_.intl.string(e_.t.ugxmk5),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
                                   href: es.Z.getArticleURL(em.BhN.CORRUPT_INSTALLATION),
                                   target: '_blank',
-                                  children: eg.intl.string(eg.t['6ik4Xl'])
+                                  children: e_.intl.string(e_.t['6ik4Xl'])
                               })
                           ]
                       });
@@ -557,7 +557,7 @@ let ex =
                                   onClick: () => eI(),
                                   noticeType: em.kVF.VIDEO_UNSUPPORTED_BROWSER
                               }),
-                              eg.intl.string(eg.t.wVjKGh),
+                              e_.intl.string(e_.t.wVjKGh),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.VIDEO_UNSUPPORTED_BROWSER,
                                   onClick: () => {
@@ -570,7 +570,7 @@ let ex =
                                               });
                                       });
                                   },
-                                  children: eg.intl.string(eg.t['1WjMbG'])
+                                  children: e_.intl.string(e_.t['1WjMbG'])
                               })
                           ]
                       });
@@ -592,7 +592,7 @@ let ex =
                                           let { default: e } = await n.e('20212').then(n.bind(n, 915194));
                                           return (t) => (0, i.jsx)(e, { ...t });
                                       }),
-                                  children: eg.intl.string(eg.t.hvVgAQ)
+                                  children: e_.intl.string(e_.t.hvVgAQ)
                               })
                           ]
                       });
@@ -610,18 +610,18 @@ let ex =
                                   justify: Z.Z.Justify.CENTER,
                                   children: [
                                       null != eG
-                                          ? eg.intl.formatToPlainString(eg.t['pHj+z8'], {
+                                          ? e_.intl.formatToPlainString(e_.t['pHj+z8'], {
                                                 name: ''.concat(eG),
                                                 progress: ew,
                                                 total: eF
                                             })
-                                          : eg.intl.formatToPlainString(eg.t['lHZn+P'], {
+                                          : e_.intl.formatToPlainString(e_.t['lHZn+P'], {
                                                 progress: ew,
                                                 total: eF
                                             }),
                                       (0, i.jsx)(c.Spinner, {
                                           type: c.Spinner.Type.PULSING_ELLIPSIS,
-                                          className: e_.ellipsis
+                                          className: eg.ellipsis
                                       })
                                   ]
                               })
@@ -636,7 +636,7 @@ let ex =
                                   justify: Z.Z.Justify.CENTER,
                                   align: Z.Z.Align.CENTER,
                                   children: [
-                                      (0, i.jsx)('div', { children: eg.intl.format(eg.t['1qxVe3'], { applicationName: ed.metadata.applicationName }) }),
+                                      (0, i.jsx)('div', { children: e_.intl.format(e_.t['1qxVe3'], { applicationName: ed.metadata.applicationName }) }),
                                       (0, i.jsx)(c.NoticeCloseButton, {
                                           onClick: N.mc,
                                           noticeType: em.kVF.APPLICATION_TEST_MODE
@@ -650,10 +650,10 @@ let ex =
                               justify: Z.Z.Justify.CENTER,
                               align: Z.Z.Align.CENTER,
                               children: [
-                                  (0, i.jsx)('div', { children: eg.intl.format(eg.t.Fv5HrK, { applicationName: ed.metadata.applicationName }) }),
+                                  (0, i.jsx)('div', { children: e_.intl.format(e_.t.Fv5HrK, { applicationName: ed.metadata.applicationName }) }),
                                   (0, i.jsx)(eu.Z, {
                                       dropdownSize: eu.E.DropdownSizes.SMALL,
-                                      className: e_.testModeSKUSelector,
+                                      className: eg.testModeSKUSelector,
                                       color: eu.E.Colors.WHITE,
                                       look: eu.E.Looks.OUTLINED,
                                       size: eu.E.Sizes.MIN,
@@ -666,7 +666,7 @@ let ex =
                                               }
                                           }),
                                       applicationId: ed.metadata.applicationId,
-                                      children: eg.intl.string(eg.t.Q5ZgpK)
+                                      children: e_.intl.string(e_.t.Q5ZgpK)
                                   }),
                                   (0, i.jsx)(c.NoticeCloseButton, {
                                       onClick: N.mc,
@@ -693,9 +693,9 @@ let ex =
                               (0, i.jsx)(c.NitroWheelIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: e_.premiumIcon
+                                  className: eg.premiumIcon
                               }),
-                              eA === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.fXv4ws, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t.ZOHZMj, { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.outyHh, { daysLeft: ed.metadata.daysLeft }),
+                              eA === eh.p9.TIER_1 ? e_.intl.formatToPlainString(e_.t.fXv4ws, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? e_.intl.formatToPlainString(e_.t.ZOHZMj, { daysLeft: ed.metadata.daysLeft }) : e_.intl.formatToPlainString(e_.t.outyHh, { daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_UNCANCEL,
                                   onClick: () => {
@@ -713,7 +713,7 @@ let ex =
                                                   });
                                           });
                                   },
-                                  children: eA === eh.p9.TIER_1 ? eg.intl.string(eg.t.BkbUPD) : eA === eh.p9.TIER_0 ? eg.intl.string(eg.t.Px978f) : eg.intl.string(eg.t.LW5tCA)
+                                  children: eA === eh.p9.TIER_1 ? e_.intl.string(e_.t.BkbUPD) : eA === eh.p9.TIER_0 ? e_.intl.string(e_.t.Px978f) : e_.intl.string(e_.t.LW5tCA)
                               })
                           ]
                       });
@@ -728,13 +728,13 @@ let ex =
                                       eI(eH);
                                   }
                               }),
-                              eg.intl.format(eg.t.zxU0Ki, { daysPastDue: eV }),
+                              e_.intl.format(e_.t.zxU0Ki, { daysPastDue: eV }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   onClick: () => {
                                       eI(eH), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eg.intl.string(eg.t.q8rxeX)
+                                  children: e_.intl.string(e_.t.q8rxeX)
                               })
                           ]
                       });
@@ -749,14 +749,14 @@ let ex =
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              eg.intl.string(eg.t.LlZaoa),
+                              e_.intl.string(e_.t.LlZaoa),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                                   onClick: () => {
                                       var e, t;
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eg.intl.string(eg.t['Zpd+Ym'])
+                                  children: e_.intl.string(e_.t['Zpd+Ym'])
                               })
                           ]
                       });
@@ -771,14 +771,14 @@ let ex =
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              eg.intl.string(eg.t['30YfCg']),
+                              e_.intl.string(e_.t['30YfCg']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eg.intl.string(eg.t.U5pKWF)
+                                  children: e_.intl.string(e_.t.U5pKWF)
                               })
                           ]
                       });
@@ -793,20 +793,20 @@ let ex =
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd);
                                   }
                               }),
-                              eA === eh.p9.TIER_1 ? eg.intl.formatToPlainString(eg.t.b6QUvb, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? eg.intl.formatToPlainString(eg.t['tURZ/P'], { daysLeft: ed.metadata.daysLeft }) : eg.intl.formatToPlainString(eg.t.AyC74O, { daysLeft: ed.metadata.daysLeft }),
+                              eA === eh.p9.TIER_1 ? e_.intl.formatToPlainString(e_.t.b6QUvb, { daysLeft: ed.metadata.daysLeft }) : eA === eh.p9.TIER_0 ? e_.intl.formatToPlainString(e_.t['tURZ/P'], { daysLeft: ed.metadata.daysLeft }) : e_.intl.formatToPlainString(e_.t.AyC74O, { daysLeft: ed.metadata.daysLeft }),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       var e, t;
                                       eI(null === (t = ed.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), v.Z.open(em.oAB.SUBSCRIPTIONS);
                                   },
-                                  children: eA === eh.p9.TIER_1 ? eg.intl.string(eg.t.lboF5O) : eA === eh.p9.TIER_0 ? eg.intl.string(eg.t['4UPwOj']) : eg.intl.string(eg.t['P/VvGR'])
+                                  children: eA === eh.p9.TIER_1 ? e_.intl.string(e_.t.lboF5O) : eA === eh.p9.TIER_0 ? e_.intl.string(e_.t['4UPwOj']) : e_.intl.string(e_.t['P/VvGR'])
                               })
                           ]
                       });
                   case em.kVF.BACK_TO_PREVIOUS_SCREEN:
                       return (0, i.jsx)(w.h, {
-                          buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : eg.intl.string(eg.t['/g10LC']),
+                          buttonText: null !== (l = ed.buttonText) && void 0 !== l ? l : e_.intl.string(e_.t['/g10LC']),
                           onGoBack: ed.callback,
                           onDismiss: () => eI(),
                           showCloseButton: !0
@@ -822,19 +822,19 @@ let ex =
                   case em.kVF.QUARANTINED:
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.CUSTOM,
-                          className: e_.quarantineNotice,
+                          className: eg.quarantineNotice,
                           children: [
-                              eg.intl.string(eg.t.DVFJYW),
+                              e_.intl.string(e_.t.DVFJYW),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
                                   href: ef.Z,
                                   target: '_blank',
-                                  children: eg.intl.string(eg.t.kvHdFB)
+                                  children: e_.intl.string(e_.t.kvHdFB)
                               }),
                               (0, i.jsx)(c.Anchor, {
                                   href: es.Z.getArticleURL(em.BhN.QUARANTINE),
                                   target: '_blank',
-                                  className: e_.quarantineLearnMoreLink,
-                                  children: eg.intl.string(eg.t.hvVgAQ)
+                                  className: eg.quarantineLearnMoreLink,
+                                  children: e_.intl.string(e_.t.hvVgAQ)
                               })
                           ]
                       });
@@ -842,10 +842,10 @@ let ex =
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
-                              eg.intl.string(eg.t.Ugijzs),
+                              e_.intl.string(e_.t.Ugijzs),
                               (0, i.jsx)(c.NoticeButtonAnchor, {
                                   href: ''.concat(em.yXt.STATUS),
-                                  children: eg.intl.string(eg.t.hvVgAQ)
+                                  children: e_.intl.string(e_.t.hvVgAQ)
                               }),
                               (0, i.jsx)(c.NoticeCloseButton, {
                                   onClick: () => eI(),
@@ -864,7 +864,7 @@ let ex =
                                       null != S && (0, M.T9)(S), eI(ez);
                                   }
                               }),
-                              eg.intl.string(eg.t.B8ruyc),
+                              e_.intl.string(e_.t.B8ruyc),
                               (0, i.jsx)(c.NoticeButton, {
                                   onClick: () => {
                                       null != S &&
@@ -872,12 +872,12 @@ let ex =
                                               eI(ez), (0, M.T9)(S);
                                           });
                                   },
-                                  children: eg.intl.string(eg.t.oX14Eh)
+                                  children: e_.intl.string(e_.t.oX14Eh)
                               }),
                               null != S
                                   ? (0, i.jsx)(c.NoticeButton, {
                                         onClick: () => F.Z.open(S, em.pNK.GUILD_AUTOMOD, void 0, em.KsC.AUTOMOD_MENTION_SPAM),
-                                        children: eg.intl.string(eg.t['1R7QIy'])
+                                        children: e_.intl.string(e_.t['1R7QIy'])
                                     })
                                   : null
                           ]
@@ -892,7 +892,7 @@ let ex =
                                       X.hZ(), eI();
                                   }
                               }),
-                              eg.intl.string(eg.t.I1nKfH),
+                              e_.intl.string(e_.t.I1nKfH),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   noticeType: em.kVF.SAFETY_USER_SENTIMENT_NAGBAR,
                                   onClick: () => {
@@ -903,7 +903,7 @@ let ex =
                                           X.hZ(),
                                           eI();
                                   },
-                                  children: eg.intl.string(eg.t.l5xYnJ)
+                                  children: e_.intl.string(e_.t.l5xYnJ)
                               })
                           ]
                       });
@@ -926,7 +926,7 @@ let ex =
                                       (null === (e = ed.metadata) || void 0 === e ? void 0 : e.streamKey) != null && (0, Y.nE)(ed.metadata.streamKey);
                                   }
                               }),
-                              eg.intl.string(eg.t.rOx44u)
+                              e_.intl.string(e_.t.rOx44u)
                           ]
                       });
                   case em.kVF.BLOCK_USER_FEEDBACK_NAGBAR:
@@ -940,14 +940,14 @@ let ex =
                                   },
                                   noticeType: em.kVF.BLOCK_USER_FEEDBACK_NAGBAR
                               }),
-                              eg.intl.string(eg.t['0klLS0']),
+                              e_.intl.string(e_.t['0klLS0']),
                               (0, i.jsx)(c.PrimaryCTANoticeButton, {
                                   onClick: () => {
                                       var e;
                                       (0, Q.Z)(), eI(null === (e = ed.metadata) || void 0 === e ? void 0 : e.dismissUntil);
                                   },
                                   noticeType: em.kVF.BLOCK_USER_FEEDBACK_NAGBAR,
-                                  children: eg.intl.string(eg.t.e4y2VF)
+                                  children: e_.intl.string(e_.t.e4y2VF)
                               })
                           ]
                       });

@@ -16,8 +16,8 @@ var i = n(192379),
 let m = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: f } = e,
             p = (0, r.e7)([u.Z], () => u.Z.shouldReload()),
-            g = i.useRef(!1),
-            [_, E] = i.useState(!1),
+            _ = i.useRef(!1),
+            [g, E] = i.useState(!1),
             {
                 initialized: C,
                 loading: I,
@@ -60,12 +60,12 @@ let m = (e) => {
             }, [C, p, t, h, S, A, f]);
         let j = i.useCallback(
             async (e) => {
-                !g.current &&
+                !_.current &&
                     C &&
                     N &&
                     null != v &&
                     (e || !T) &&
-                    ((g.current = !0),
+                    ((_.current = !0),
                     E(!0),
                     await (0, s.jk)(
                         {
@@ -76,7 +76,7 @@ let m = (e) => {
                             limit: h ? 8 : 20
                         },
                         () => {
-                            g.current = !1;
+                            _.current = !1;
                         }
                     ),
                     E(!1));
@@ -89,7 +89,7 @@ let m = (e) => {
             items: x,
             hasMore: N,
             loadMore: j,
-            loadingMore: _,
+            loadingMore: g,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

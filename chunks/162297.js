@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(213609),
     f = n(783097),
     p = n(213459),
-    g = n(132871),
-    _ = n(147890),
+    _ = n(132871),
+    g = n(147890),
     E = n(220082),
     C = n(240991),
     I = n(914010),
@@ -130,11 +130,11 @@ function P(e) {
                                         var e;
                                         a.Y.USER_INSTALL in (null !== (e = E.integrationTypesConfig) && void 0 !== e ? e : {}) || w
                                             ? N.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: E.id })
-                                            : (0, _.goToAppDirectory)({
+                                            : (0, g.goToAppDirectory)({
                                                   guildId: x,
-                                                  view: g.ApplicationDirectoryViews.APPLICATION,
+                                                  view: _.ApplicationDirectoryViews.APPLICATION,
                                                   applicationId: E.id,
-                                                  entrypoint: { name: g.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
+                                                  entrypoint: { name: _.ApplicationDirectoryEntrypointNames.OAUTH2_EMBED }
                                               });
                                     },
                                     children: b.intl.string(b.t.fbcCzc)

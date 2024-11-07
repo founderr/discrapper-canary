@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return p;
     }
 });
 var r = n(200651);
@@ -14,13 +14,13 @@ var a = n(120356),
     d = n(981631),
     u = n(388032),
     m = n(416806);
-function f(e) {
-    let { product: t, isPremiumUser: n, discount: a, className: f, nitroUpsell: p = !1 } = e,
+function p(e) {
+    let { product: t, isPremiumUser: n, discount: a, className: p, nitroUpsell: f = !1 } = e,
         h = (0, l.ql)(t, d.tuJ.DEFAULT);
     if (null == h) return null;
     if (h.amount <= 0)
         return (0, r.jsx)('div', {
-            className: s()(m.priceTagsContainer, f),
+            className: s()(m.priceTagsContainer, p),
             children: (0, r.jsx)(o.F, { price: h })
         });
     let g = (0, l.ql)(t, d.tuJ.PREMIUM_TIER_2),
@@ -33,7 +33,7 @@ function f(e) {
                   }
                 : h;
     return (0, r.jsxs)('div', {
-        className: s()(m.priceTagsContainer, f),
+        className: s()(m.priceTagsContainer, p),
         children: [
             (0, r.jsx)(o.F, {
                 price: b,
@@ -48,7 +48,7 @@ function f(e) {
                 (0, r.jsx)(o.F, {
                     price: g,
                     discount: n ? a : l.f_,
-                    renderPrice: p
+                    renderPrice: f
                         ? (e) =>
                               (0, r.jsx)(i.Text, {
                                   variant: 'text-xs/medium',

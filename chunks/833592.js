@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     g3: function () {
-        return _;
+        return g;
     },
     jF: function () {
         return h;
@@ -81,9 +81,9 @@ function p(e) {
                     ids: [e]
                 });
             })(e.id)
-          : g(e.id);
+          : _(e.id);
 }
-async function g(e) {
+async function _(e) {
     try {
         a.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
@@ -98,7 +98,7 @@ async function g(e) {
         });
     }
 }
-async function _(e) {
+async function g(e) {
     let t = o.d$.getSetting();
     try {
         a.Z.dispatch({

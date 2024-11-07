@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return y;
+        return j;
     }
 }),
     t(47120),
@@ -26,11 +26,11 @@ var i = t(200651),
     C = t(698708),
     S = t(388032),
     k = t(748605);
-function y(e) {
+function j(e) {
     var n, t;
-    let { backButtonEligible: o, prevStep: y, handleStepChange: j, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: O, openInvoiceId: B, analyticsData: E, analyticsLocation: N, handleClose: I } = e,
-        { activeSubscription: A, application: w, setUpdatedSubscription: M, contextMetadata: R, currencies: Z, paymentSources: H, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: V, setPaymentSourceId: K, setPurchaseState: Y, setPurchaseError: z, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != W, 'Expected plan to be selected'), a()(null != w, 'Expected application');
+    let { backButtonEligible: o, prevStep: j, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
+        { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: H, paymentSources: R, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != W, 'Expected plan to be selected'), a()(null != M, 'Expected application');
     let X = r.useRef(null),
         [J, $] = (0, s.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
@@ -42,9 +42,9 @@ function y(e) {
     }, [F]);
     let eo = r.useCallback(
             (e) => {
-                M(e), j(b.h8.CONFIRM);
+                w(e), y(b.h8.CONFIRM);
             },
-            [j, M]
+            [y, w]
         ),
         ea = r.useRef(null);
     return U === h.A.PURCHASING
@@ -67,7 +67,7 @@ function y(e) {
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: S.intl.format(S.t.y4n0GR, { applicationName: w.name })
+                                          children: S.intl.format(S.t.y4n0GR, { applicationName: M.name })
                                       })
                                   ]
                               }),
@@ -98,12 +98,12 @@ function y(e) {
                           null == A
                               ? (0, i.jsx)(d.Z, {
                                     selectedPlanId: W.id,
-                                    paymentSources: H,
-                                    onPaymentSourceChange: (e) => K(null != e ? e.id : null),
+                                    paymentSources: R,
+                                    onPaymentSourceChange: (e) => V(null != e ? e.id : null),
                                     priceOptions: L,
-                                    currencies: Z,
-                                    onCurrencyChange: (e) => V(e),
-                                    handlePaymentSourceAdd: () => j(b.h8.ADD_PAYMENT_STEPS),
+                                    currencies: H,
+                                    onCurrencyChange: (e) => K(e),
+                                    handlePaymentSourceAdd: () => y(b.h8.ADD_PAYMENT_STEPS),
                                     setHasAcceptedTerms: q,
                                     legalTermsNodeRef: ea,
                                     hasLegalTermsFlash: J,
@@ -116,11 +116,11 @@ function y(e) {
                                 })
                               : (0, i.jsx)(u.Z, {
                                     premiumSubscription: A,
-                                    paymentSources: H,
+                                    paymentSources: R,
                                     priceOptions: L,
-                                    onPaymentSourceChange: (e) => K(null != e ? e.id : null),
+                                    onPaymentSourceChange: (e) => V(null != e ? e.id : null),
                                     onPaymentSourceAdd: () => {
-                                        j(b.h8.ADD_PAYMENT_STEPS);
+                                        y(b.h8.ADD_PAYMENT_STEPS);
                                     },
                                     planId: W.id,
                                     setHasAcceptedTerms: q,
@@ -129,10 +129,10 @@ function y(e) {
                                     onInvoiceError: (e) => {
                                         ei(e);
                                     },
-                                    planGroup: O,
-                                    currencies: Z,
-                                    onCurrencyChange: (e) => V(e),
-                                    hasOpenInvoice: null != B,
+                                    planGroup: B,
+                                    currencies: H,
+                                    onCurrencyChange: (e) => K(e),
+                                    hasOpenInvoice: null != N,
                                     purchaseState: U,
                                     handleClose: I
                                 })
@@ -141,18 +141,18 @@ function y(e) {
                   (0, i.jsx)(v.O3, {
                       children: (0, i.jsx)(x.Z, {
                           premiumSubscription: null != A ? A : null,
-                          setPurchaseState: Y,
-                          onBack: () => null != y && j(y),
+                          setPurchaseState: z,
+                          onBack: () => null != j && y(j),
                           onNext: eo,
-                          onPurchaseError: (e) => z(e),
+                          onPurchaseError: (e) => Y(e),
                           legalTermsNodeRef: ea,
                           flashLegalTerms: () => $(!0),
-                          analyticsLocation: N,
-                          baseAnalyticsData: E,
-                          flowStartTime: R.startTime,
-                          planGroup: O,
+                          analyticsLocation: E,
+                          baseAnalyticsData: O,
+                          flowStartTime: Z.startTime,
+                          planGroup: B,
                           purchaseTokenAuthState: D,
-                          openInvoiceId: B,
+                          openInvoiceId: N,
                           metadata: er ? void 0 : Q,
                           backButtonEligible: o,
                           invoiceError: et,

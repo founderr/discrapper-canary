@@ -17,8 +17,8 @@ var r = n(442837),
     h = n(430824),
     f = n(699516),
     p = n(594174),
-    g = n(934415),
-    _ = n(900849),
+    _ = n(934415),
+    g = n(900849),
     E = n(981631);
 function C(e) {
     let { channel: t, onClick: n, beforeTransition: C, className: I, openChatWithoutConnecting: x } = e,
@@ -42,7 +42,7 @@ function C(e) {
                                   if (null == e || null == t) return;
                                   let i = h.Z.getGuild(e);
                                   if ((null == i ? void 0 : i.joinedAt) == null) {
-                                      _.Ub(e, {}, { channelId: t });
+                                      g.Ub(e, {}, { channelId: t });
                                       return;
                                   }
                                   let r = m.Z.getChannel(t);
@@ -59,7 +59,7 @@ function C(e) {
                 },
                 onMouseEnter: r,
                 onMouseLeave: s,
-                iconType: (0, g.wl)(t),
+                iconType: (0, _.wl)(t),
                 children: N
             });
         }

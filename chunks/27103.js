@@ -19,9 +19,9 @@ var r = n(120356),
 function p(e) {
     let { message: t, compact: n, usernameHook: r } = e,
         p = (0, s.ZP)(t),
-        g = r(p),
+        _ = r(p),
         {
-            avatarSrc: _,
+            avatarSrc: g,
             eventHandlers: { onMouseEnter: E, onMouseLeave: C }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
@@ -29,7 +29,7 @@ function p(e) {
         onMouseLeave: C,
         children: (0, i.jsx)(d.Z, {
             className: l()(f.mainContainer, { [f.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: _ }),
+            iconNode: n ? null : (0, i.jsx)(u.S, { src: g }),
             iconContainerClassName: f.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
@@ -62,7 +62,7 @@ function p(e) {
                         className: l()(f.__invalid_messageContent, { [f.compact]: n }),
                         children: h.intl.format(h.t.qntXNT, {
                             username: p.nick,
-                            usernameHook: g
+                            usernameHook: _
                         })
                     })
                 ]

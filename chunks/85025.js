@@ -1,11 +1,11 @@
 n.d(t, {
     O: function () {
-        return r;
+        return s;
     }
 });
 var a = n(630388),
     i = n(981631);
-function r(e) {
+function s(e) {
     if (null != e)
         return {
             guildPresences: (0, a.yE)(e, i.udG.GATEWAY_PRESENCE),

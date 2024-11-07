@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(124072),
     f = n(171368),
     p = n(592125),
-    g = n(430824),
-    _ = n(594174),
+    _ = n(430824),
+    g = n(594174),
     E = n(739566),
     C = n(981631),
     I = n(665692),
@@ -40,7 +40,7 @@ t.Z = r.memo(function (e) {
         { channel: Z, messageId: R, interactionData: L } = e,
         { analyticsLocations: P } = (0, u.ZP)(),
         { onCopy: y, copyRef: O } = (0, d.Z)(Z, null == L ? void 0 : null === (t = L.application_command) || void 0 === t ? void 0 : t.id),
-        M = (0, o.e7)([g.Z], () => g.Z.getGuild(Z.guild_id), [Z.guild_id]);
+        M = (0, o.e7)([_.Z], () => _.Z.getGuild(Z.guild_id), [Z.guild_id]);
     if (
         (r.useEffect(() => {
             (null == L || (L.type === c.yU.CHAT && void 0 === L.application_command)) && m.OG(Z.id, R);
@@ -97,7 +97,7 @@ t.Z = r.memo(function (e) {
                         switch (A.type) {
                             case c.jw.USER: {
                                 let e = A.value.toString(),
-                                    t = _.default.getUser(e);
+                                    t = g.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, E.ij)(t, b);
                                     N = (0, i.jsxs)(h.Z, {
@@ -128,7 +128,7 @@ t.Z = r.memo(function (e) {
                             }
                             case c.jw.ROLE: {
                                 let e = A.value.toString(),
-                                    t = null != j ? g.Z.getRole(j.id, e) : void 0;
+                                    t = null != j ? _.Z.getRole(j.id, e) : void 0;
                                 null != t &&
                                     (N = (0, i.jsxs)(h.Z, {
                                         ...T,
@@ -138,13 +138,13 @@ t.Z = r.memo(function (e) {
                             }
                             case c.jw.MENTIONABLE: {
                                 let e = A.value.toString(),
-                                    t = null != j ? g.Z.getRole(j.id, e) : void 0;
+                                    t = null != j ? _.Z.getRole(j.id, e) : void 0;
                                 if (null != t)
                                     N = (0, i.jsxs)(h.Z, {
                                         children: [I.ME, t.name]
                                     });
                                 else {
-                                    let t = _.default.getUser(e);
+                                    let t = g.default.getUser(e);
                                     if (null != t) {
                                         let e = (0, E.ij)(t, b);
                                         N = (0, i.jsxs)(h.Z, {

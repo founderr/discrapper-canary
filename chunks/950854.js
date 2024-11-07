@@ -63,18 +63,18 @@ function c(e) {
                 })
             ]
         }),
-        x = r()(t, s.container, { [s.hasImage]: g });
+        I = r()(t, s.container, { [s.hasImage]: g });
     return null != n
         ? (0, i.jsx)(l.ClickableContainer, {
               tag: 'article',
               'aria-label': o.intl.formatToPlainString(o.t['0cVQIC'], { name: d }),
               onClick: n,
-              className: r()(x, s.clickable, { [s.animatesOnHoverContainer]: h }),
+              className: r()(I, s.clickable, { [s.animatesOnHoverContainer]: h }),
               focusProps: { offset: 4 },
               children: v
           })
         : (0, i.jsx)('article', {
-              className: x,
+              className: I,
               ...f,
               children: v
           });

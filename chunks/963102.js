@@ -13,16 +13,16 @@ var r = n(200651),
     d = n(425493),
     u = n(410030),
     m = n(984370),
-    f = n(594174),
-    p = n(471731),
+    p = n(594174),
+    f = n(471731),
     h = n(335131),
     g = n(388032),
     C = n(454801);
 function b(e) {
     let { isFullScreen: t, isLayer: n, onClose: s, isCatalogView: b, handleTransition: x, transparent: v } = e,
         _ = (0, u.ZP)(),
-        k = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
-        j = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
+        k = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        E = (null == k ? void 0 : k.isStaff()) || (null == k ? void 0 : k.isStaffPersonal()) || !1;
     return (0, r.jsx)(c.ThemeProvider, {
         theme: _,
         children: (e) =>
@@ -34,7 +34,7 @@ function b(e) {
                     [C.headerBarTransparentDarkBackground]: v && (0, o.wj)(_)
                 }),
                 transparent: v,
-                toolbar: t || !j ? null : (0, r.jsx)(a.Fragment, {}),
+                toolbar: t || !E ? null : (0, r.jsx)(a.Fragment, {}),
                 children: [
                     (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -46,7 +46,7 @@ function b(e) {
                                     'aria-label': g.intl.string(g.t['13/7kZ']),
                                     children: (0, r.jsx)(c.ArrowLargeLeftIcon, {})
                                 }),
-                            (0, r.jsx)(p.Z, {
+                            (0, r.jsx)(f.Z, {
                                 color: v ? ((0, o.wj)(_) ? 'white' : 'black') : void 0,
                                 className: C.discordLogo
                             })

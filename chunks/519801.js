@@ -25,34 +25,34 @@ function _(e) {
     let _,
         v,
         { showBenefits: C, handleClose: S, onSubscriptionConfirmation: k } = e,
-        { updatedSubscription: y, readySlideId: j, selectedSku: T, selectedStoreListing: P, application: O } = (0, u.usePaymentContext)(),
-        B = (0, o.Z)(g.i),
-        { createMultipleConfettiAt: E } = r.useContext(l.h),
-        N = null !== (n = null == T ? void 0 : T.name) && void 0 !== n ? n : '',
+        { updatedSubscription: j, readySlideId: y, selectedSku: T, selectedStoreListing: P, application: B } = (0, u.usePaymentContext)(),
+        N = (0, o.Z)(g.i),
+        { createMultipleConfettiAt: O } = r.useContext(l.h),
+        E = null !== (n = null == T ? void 0 : T.name) && void 0 !== n ? n : '',
         I = () => {
             S(), null == k || k();
         },
-        A = j === p.h8.CONFIRM,
-        w = (0, c.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
-        M = null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t['+IQQVF'], { benefitCount: P.benefits.length }) : null;
+        A = y === p.h8.CONFIRM,
+        M = (0, c.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
+        w = null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t['+IQQVF'], { benefitCount: P.benefits.length }) : null;
     return (
         C
-            ? B
+            ? N
                 ? (_ = (0, i.jsx)(d.h, {
-                      title: x.intl.format(x.t.ea6tZm, { tierName: N }),
-                      subtitle: null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t.HNepfn, { benefits: M }) : null,
+                      title: x.intl.format(x.t.ea6tZm, { tierName: E }),
+                      subtitle: null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t.HNepfn, { benefits: w }) : null,
                       onConfirm: I,
                       confirmCta: x.intl.string(x.t.nlkyw8)
                   }))
                 : ((_ =
-                      null != P && null != O
+                      null != P && null != B
                           ? (0, i.jsx)(s.Oc, {
                                 icon: P.thumbnail,
                                 storeListingBenefits: P.benefits,
-                                application: O,
-                                title: x.intl.format(x.t['Q+qktb'], { tier: N }),
+                                application: B,
+                                title: x.intl.format(x.t['Q+qktb'], { tier: E }),
                                 subtitle: x.intl.string(x.t.ECKxXV),
-                                description: w ? x.intl.format(x.t.MAtQk5, { applicationName: null == O ? void 0 : O.name }) : x.intl.format(x.t.vHkMFx, { tier: N })
+                                description: M ? x.intl.format(x.t.MAtQk5, { applicationName: null == B ? void 0 : B.name }) : x.intl.format(x.t.vHkMFx, { tier: E })
                             })
                           : (0, i.jsx)(m.Z, {})),
                   (v = (0, i.jsx)(f.Z, {
@@ -60,20 +60,20 @@ function _(e) {
                       primaryCTA: f.g.CONTINUE,
                       primaryText: x.intl.string(x.t['JtWl+f'])
                   })))
-            : (_ = B
+            : (_ = N
                   ? (0, i.jsx)(d.m, {
-                        tierName: N,
+                        tierName: E,
                         onConfirm: I,
-                        subscription: y
+                        subscription: j
                     })
                   : (0, i.jsx)(s.xe, {
-                        tierName: N,
+                        tierName: E,
                         onConfirm: I,
-                        subscription: y
+                        subscription: j
                     })),
         r.useEffect(() => {
-            a.Z.useReducedMotion && A && E(window.innerWidth / 2, window.innerHeight / 2);
-        }, [E, A]),
+            a.Z.useReducedMotion && A && O(window.innerWidth / 2, window.innerHeight / 2);
+        }, [O, A]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(b.C3, {

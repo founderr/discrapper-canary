@@ -13,15 +13,15 @@ var r = n(442837),
     c = n(701560),
     u = n(785547);
 function d(e) {
-    let { application: t, fullWidth: n = !1, size: d = l.Button.Sizes.LARGE, color: m, customDisabledColor: h, hideNotLaunchable: f, tooltipPosition: p, onClick: g, className: _, source: E, hover: C, innerClassName: I } = e,
+    let { application: t, fullWidth: n = !1, size: d = l.Button.Sizes.LARGE, color: m, customDisabledColor: h, hideNotLaunchable: f, tooltipPosition: p, onClick: _, className: g, source: E, hover: C, innerClassName: I } = e,
         x = {
             fullWidth: n,
             size: d,
             color: m,
             customDisabledColor: h,
             tooltipPosition: p,
-            onClick: g,
-            className: _,
+            onClick: _,
+            className: g,
             hover: C,
             innerClassName: I
         },

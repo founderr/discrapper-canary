@@ -6,8 +6,8 @@ n.d(t, {
 var a = n(200651);
 n(192379);
 var i = n(120356),
-    r = n.n(i),
-    s = n(481060),
+    s = n.n(i),
+    r = n(481060),
     l = n(769003);
 function o(e) {
     let { supportedLanguages: t } = e;
@@ -17,8 +17,8 @@ function o(e) {
             (0, a.jsx)(
                 'li',
                 {
-                    className: r()(l.innerContainer, l.languageItem),
-                    children: (0, a.jsx)(s.Text, {
+                    className: s()(l.innerContainer, l.languageItem),
+                    children: (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         children: e
                     })

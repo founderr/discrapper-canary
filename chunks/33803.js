@@ -16,8 +16,8 @@ var i = n(200651),
     h = n(287734),
     f = n(607070),
     p = n(385499),
-    g = n(313889),
-    _ = n(825829),
+    _ = n(313889),
+    g = n(825829),
     E = n(226192),
     C = n(36459),
     I = n(336197),
@@ -99,21 +99,21 @@ function W(e) {
 }
 function K(e, t) {
     switch (e) {
-        case g.d.DELETE_USER_MESSAGE:
+        case _.d.DELETE_USER_MESSAGE:
             return (0, i.jsx)(m.TrashIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: G.alertActionIcon,
                 ...t
             });
-        case g.d.SET_COMPLETED:
+        case _.d.SET_COMPLETED:
             return (0, i.jsx)(m.CheckmarkLargeIcon, {
                 size: 'xs',
                 color: 'currentColor',
                 className: a()(G.alertActionIcon, G.alertActionSetCompletedIcon),
                 ...t
             });
-        case g.d.SUBMIT_FEEDBACK:
+        case _.d.SUBMIT_FEEDBACK:
             return (0, i.jsx)(m.FlagIcon, {
                 size: 'xs',
                 color: 'currentColor',
@@ -137,17 +137,17 @@ function Y(e) {
                 a = ''.concat(r, ' ').concat(l.fromNow());
             try {
                 switch (parseInt(e.actionType)) {
-                    case g.d.DELETE_USER_MESSAGE:
+                    case _.d.DELETE_USER_MESSAGE:
                         return F.intl.formatToPlainString(F.t.BtKE9v, {
                             userName: r,
                             timestamp: l.fromNow()
                         });
-                    case g.d.SET_COMPLETED:
+                    case _.d.SET_COMPLETED:
                         return F.intl.formatToPlainString(F.t.dyo9UV, {
                             userName: r,
                             timestamp: l.fromNow()
                         });
-                    case g.d.SUBMIT_FEEDBACK:
+                    case _.d.SUBMIT_FEEDBACK:
                         return F.intl.formatToPlainString(F.t['C9/kIC'], {
                             userName: r,
                             timestamp: l.fromNow()
@@ -224,7 +224,7 @@ let Q = r.memo(function (e) {
         color: 'header-primary',
         tag: 'span',
         className: G.spanCorrection,
-        children: (0, _.Mq)(
+        children: (0, g.Mq)(
             n,
             l,
             () =>
@@ -252,7 +252,7 @@ function q(e) {
         { isFocused: Z, handleFocus: P, handleBlur: O } = (0, y.bb)(A),
         D = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
         H = (0, d.e7)([v.Z], () => v.Z.can(B.Plq.MANAGE_MESSAGES, s), [s]),
-        { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, _.ZP)(o),
+        { ruleName: K, embedChannel: Y, decisionId: q, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: er, quarantineType: el, interactionUserId: ea } = (0, g.ZP)(o),
         eo = r.useMemo(() => (0, b.k$)(ee, J, s.id), [ee, J, s]),
         { selected: es, ...ec } = V(o, s),
         eu = r.useCallback(() => {
@@ -277,13 +277,13 @@ function q(e) {
             [o, Y]
         ),
         eh = r.useCallback(() => {
-            (0, C.Xx)(o.id, s, g.d.DELETE_USER_MESSAGE);
+            (0, C.Xx)(o.id, s, _.d.DELETE_USER_MESSAGE);
         }, [s, o.id]),
         ef = (0, w.L9)(Number(en)),
         ep = null != ei,
-        eg = H && null != et && (null == er || !er.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
-        e_ = o.embeds.length > 0 ? (null === (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
-        eE = null != e_;
+        e_ = H && null != et && (null == er || !er.actions.hasOwnProperty(_.d.DELETE_USER_MESSAGE)),
+        eg = o.embeds.length > 0 ? (null === (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) || void 0 === t ? void 0 : t.rawValue) : null,
+        eE = null != eg;
     return (0, i.jsx)('div', {
         onMouseEnter: T,
         onMouseLeave: S,
@@ -386,7 +386,7 @@ function q(e) {
                                                             color: 'text-muted',
                                                             tag: 'span',
                                                             className: G.titleCase,
-                                                            children: F.intl.format(F.t['26bB2N'], { reason: (0, _.hU)(el) })
+                                                            children: F.intl.format(F.t['26bB2N'], { reason: (0, g.hU)(el) })
                                                         })
                                                     ]
                                                 })
@@ -446,7 +446,7 @@ function q(e) {
                                           children: [
                                               (0, i.jsx)('div', { className: G.dot }),
                                               (0, i.jsx)(m.Button, {
-                                                  onClick: () => em(e_),
+                                                  onClick: () => em(eg),
                                                   color: m.Button.Colors.LINK,
                                                   look: m.Button.Looks.LINK,
                                                   size: m.Button.Sizes.SMALL,
@@ -479,7 +479,7 @@ function q(e) {
                                         })
                                     })
                                 }),
-                                eg
+                                e_
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)('div', { className: G.dot }),

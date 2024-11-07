@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(100527),
     f = n(906732),
     p = n(895924),
-    g = n(973616),
-    _ = n(314897),
+    _ = n(973616),
+    g = n(314897),
     E = n(592125),
     C = n(158776),
     I = n(594174),
@@ -34,7 +34,7 @@ function A(e) {
         Z = (0, o.O)(),
         R = (0, l.e7)([E.Z], () => E.Z.getChannel(A)),
         L = (null == R ? void 0 : null === (t = R.isThread) || void 0 === t ? void 0 : t.call(R)) ? (null == R ? void 0 : R.parent_id) : A,
-        P = (0, l.e7)([_.default], () => _.default.getId()),
+        P = (0, l.e7)([g.default], () => g.default.getId()),
         {
             embeddedActivity: y,
             currentEmbeddedActivity: O,
@@ -56,7 +56,7 @@ function A(e) {
             return null == t ? null : null === (e = C.Z.findActivity(t, (e) => e.application_id === n.id)) || void 0 === e ? void 0 : e.details;
         }),
         B = r.useMemo(() => {
-            let e = new g.Z(n);
+            let e = new _.Z(n);
             return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
         }, [n]),
         U = (0, d.s5)({

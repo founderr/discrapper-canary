@@ -14,7 +14,7 @@ function o(e) {
         h = (0, r.Sw)(s, o),
         f = c(m),
         p = u(null != h ? h : void 0),
-        g = a.intl.format(a.t.tusv2t, {
+        _ = a.intl.format(a.t.tusv2t, {
             actorName: m.nick,
             actorHook: f,
             targetName: null == h ? void 0 : h.nick,
@@ -24,6 +24,6 @@ function o(e) {
         icon: n(570111),
         timestamp: t.timestamp,
         compact: d,
-        children: g
+        children: _
     });
 }

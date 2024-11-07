@@ -18,8 +18,8 @@ var i,
     h = n(710845),
     f = n(703656),
     p = n(173747),
-    g = n(7956),
-    _ = n(293245),
+    _ = n(7956),
+    g = n(293245),
     E = n(417363),
     C = n(941128),
     I = n(780570),
@@ -210,8 +210,8 @@ class L extends (r = o.Component) {
 function P(e) {
     let { libraryApplication: t } = e,
         n = (0, m.O)(),
-        [i, r] = (0, s.Wu)([E.Z, C.Z], () => [(0, g.i)(t, E.Z, C.Z), E.Z.getState(t.id, t.branchId)], [t]),
-        l = (0, s.e7)([_.Z], () => _.Z.isSyncing(t.id, t.branchId), [t]),
+        [i, r] = (0, s.Wu)([E.Z, C.Z], () => [(0, _.i)(t, E.Z, C.Z), E.Z.getState(t.id, t.branchId)], [t]),
+        l = (0, s.e7)([g.Z], () => g.Z.isSyncing(t.id, t.branchId), [t]),
         o = (0, s.e7)([p.Z], () => p.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, a.jsx)(L, {
         ...e,

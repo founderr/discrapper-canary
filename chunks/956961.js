@@ -17,8 +17,8 @@ var i = n(200651),
     h = n(294218),
     f = n(703656),
     p = n(324701),
-    g = n(768943),
-    _ = n(695346),
+    _ = n(768943),
+    g = n(695346),
     E = n(592125),
     C = n(655354),
     I = n(324081),
@@ -35,7 +35,7 @@ let A = {
 };
 function b(e) {
     let { setTab: t, closePopout: n } = e,
-        l = (0, c.e7)([g.Z], () => g.Z.getMessageReminders()),
+        l = (0, c.e7)([_.Z], () => _.Z.getMessageReminders()),
         [a, o] = r.useState(!1),
         s = r.useMemo(() => l.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [l]),
         m = a ? l : s;
@@ -74,7 +74,7 @@ function j(e) {
         l = r.saveData,
         o = r.message,
         u = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
-        g = () => {
+        _ = () => {
             (0, f.uL)(N.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
         x = null;
@@ -99,7 +99,7 @@ function j(e) {
               children: [
                   (0, i.jsx)(I.Z, {
                       channel: u,
-                      gotoChannel: g,
+                      gotoChannel: _,
                       children: (0, i.jsxs)('div', {
                           className: T.reminderActions,
                           children: [
@@ -167,7 +167,7 @@ function j(e) {
                       children: [
                           (0, i.jsx)(C.Z, {
                               className: S.jumpMessageButton,
-                              onJump: g
+                              onJump: _
                           }),
                           (0, i.jsx)(
                               h.Z,
@@ -175,7 +175,7 @@ function j(e) {
                                   message: o,
                                   channel: u,
                                   className: S.message,
-                                  compact: _.jU.getSetting(),
+                                  compact: g.jU.getSetting(),
                                   animateAvatar: !1,
                                   focusProps: A,
                                   trackAnnouncementViews: !0

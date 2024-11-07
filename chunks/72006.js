@@ -66,8 +66,8 @@ var i = n(5148),
     h = n.n(m),
     f = n(34399),
     p = n.n(f),
-    g = n(157202),
-    _ = n.n(g),
+    _ = n(157202),
+    g = n.n(_),
     E = n(473552),
     C = n.n(E),
     I = n(634523),
@@ -127,7 +127,7 @@ function b(e, t) {
         case 'transpose-characters':
             return v()(t);
         case 'move-selection-to-start-of-block':
-            return _()(t);
+            return g()(t);
         case 'move-selection-to-end-of-block':
             return p()(t);
         default:

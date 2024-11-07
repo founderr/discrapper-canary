@@ -19,13 +19,13 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                 price: { amount: n, currency: a },
                 renderPrice: u,
                 icon: m,
-                className: f,
-                discount: p = o.f_,
+                className: p,
+                discount: f = o.f_,
                 variant: h = 'heading-md/semibold'
             } = e,
             g = d((0, l.T4)(n, a)),
             C =
-                p !== o.f_ && p.discountPercentage >= 5
+                f !== o.f_ && f.discountPercentage >= 5
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               g,
@@ -33,7 +33,7 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                                   variant: h,
                                   color: 'text-positive',
                                   className: c.discount,
-                                  children: ' (-'.concat(p.discountPercentage, '%)')
+                                  children: ' (-'.concat(f.discountPercentage, '%)')
                               })
                           ]
                       })
@@ -41,7 +41,7 @@ let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
         return (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)(i.Heading, {
                 variant: h,
-                className: s()(c.container, f),
+                className: s()(c.container, p),
                 children: [m, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
             })
         });

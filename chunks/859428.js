@@ -12,8 +12,8 @@ var i = n(200651),
     h = n(900849),
     f = n(41776),
     p = n(981631),
-    g = n(388032),
-    _ = n(331781),
+    _ = n(388032),
+    g = n(331781),
     E = n(250812);
 t.Z = () => {
     let e = (0, o.e7)([m.Z], () => m.Z.getGuildId(), []),
@@ -30,14 +30,14 @@ t.Z = () => {
         }
     };
     return (0, i.jsxs)('div', {
-        className: a()(_.notice, E.notice),
+        className: a()(g.notice, E.notice),
         children: [
             (0, i.jsxs)(s.Button, {
                 look: s.Button.Looks.OUTLINED,
                 color: s.Button.Colors.WHITE,
                 size: s.Button.Sizes.NONE,
-                className: a()(_.button, _.back),
-                innerClassName: _.iconButton,
+                className: a()(g.button, g.back),
+                innerClassName: g.iconButton,
                 onClick: () => {
                     let e = (0, u.s1)();
                     null != n && null != n.location ? (0, u.dL)({ ...n.location }) : e.goBack();
@@ -46,24 +46,24 @@ t.Z = () => {
                     (0, i.jsx)(s.ArrowSmallLeftIcon, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: _.arrow
+                        className: g.arrow
                     }),
-                    g.intl.string(g.t['13/7kZ'])
+                    _.intl.string(_.t['13/7kZ'])
                 ]
             }),
             (0, i.jsx)(s.Text, {
-                className: _.header,
+                className: g.header,
                 variant: 'text-sm/normal',
-                children: g.intl.string(g.t['N/y2WF'])
+                children: _.intl.string(_.t['N/y2WF'])
             }),
             (0, i.jsx)(s.Button, {
-                className: _.button,
+                className: g.button,
                 look: s.Button.Looks.OUTLINED,
                 color: s.Button.Colors.WHITE,
                 size: s.Button.Sizes.NONE,
                 submitting: l,
                 onClick: I,
-                children: g.intl.format(g.t.uHN7n5, { guild: t.name })
+                children: _.intl.format(_.t.uHN7n5, { guild: t.name })
             })
         ]
     });

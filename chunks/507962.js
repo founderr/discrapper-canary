@@ -14,13 +14,13 @@ function o(e) {
         h = (0, r.ZP)(o),
         f = h.nick,
         p = s(h),
-        g = (0, r.Sw)(c, m);
-    if (null != g && null != u) {
-        let e = u(g);
+        _ = (0, r.Sw)(c, m);
+    if (null != _ && null != u) {
+        let e = u(_);
         t = a.intl.format(a.t.L2FyVl, {
             username: f,
             usernameHook: p,
-            otherUsername: g.nick,
+            otherUsername: _.nick,
             otherUsernameHook: e
         });
     } else

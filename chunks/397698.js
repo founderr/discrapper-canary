@@ -19,13 +19,13 @@ function m(e) {
     let f = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
     (0, s.yT)(c.ti.DISMISSED), (0, s.__)(c._b.VOICE);
     let p = t.id,
-        g = a.ZP.hasUnread(p) || a.ZP.getMentionCount(p) > 0;
+        _ = a.ZP.hasUnread(p) || a.ZP.getMentionCount(p) > 0;
     return (
         o.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
             location: h,
             source: c._b.VOICE,
-            is_chat_badged: g
+            is_chat_badged: _
         }),
         (0, r.openModalLazy)(
             async () => {

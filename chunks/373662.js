@@ -19,7 +19,7 @@ var i = n(200651),
     u = n(388032),
     d = n(189265);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: g, onTooltipHide: _, disabled: E, dangerous: C, separator: I, sparkle: x, showNewBadge: N, buttonClassName: v, children: T, ...S } = e,
+    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: _, onTooltipHide: g, disabled: E, dangerous: C, separator: I, sparkle: x, showNewBadge: N, buttonClassName: v, children: T, ...S } = e,
         { canShowReactionsOnMessageHover: A } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
@@ -27,8 +27,8 @@ function m(e) {
             text: null != r ? r : t,
             color: null != m ? m : a.TooltipColors.PRIMARY,
             'aria-label': t,
-            onTooltipShow: g,
-            onTooltipHide: _,
+            onTooltipShow: _,
+            onTooltipHide: g,
             hideOnClick: !0,
             tooltipClassName: d.tooltip,
             children: (e) => {
