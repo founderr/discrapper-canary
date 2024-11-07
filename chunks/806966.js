@@ -1,24 +1,25 @@
 n.d(t, {
     Wq: function () {
-        return c;
-    },
-    Xn: function () {
         return d;
     },
+    Xn: function () {
+        return f;
+    },
     ZN: function () {
-        return u;
+        return c;
     },
     c: function () {
-        return a;
+        return s;
     },
     kJ: function () {
-        return l;
+        return u;
     }
 });
-var r = n(903797),
-    i = n(731965);
-let a = -1,
-    s = Object.freeze({
+var r = n(905837),
+    i = n(280836),
+    a = n(731965);
+let s = -1,
+    o = Object.freeze({
         inspectedExpressionPosition: {
             rowIndex: 0,
             columnIndex: 0
@@ -27,13 +28,14 @@ let a = -1,
         searchPlaceholder: null,
         bottomPosition: null
     });
-function o() {
-    let e = (0, r.Z)((e) => s);
+function l() {
+    let e = (0, r.ZP)()((0, i.XR)((e) => o));
     return {
         useStore: e,
         getState: () => e.getState(),
+        subscribe: (t, n) => e.subscribe(t, n),
         setInspectedExpressionPosition: (t, n, r) => {
-            (0, i.j)(() =>
+            (0, a.j)(() =>
                 e.setState({
                     inspectedExpressionPosition: {
                         rowIndex: n,
@@ -44,20 +46,20 @@ function o() {
             );
         },
         setActiveCategoryIndex: (t) => {
-            (0, i.j)(() => e.setState({ activeCategoryIndex: t }));
+            (0, a.j)(() => e.setState({ activeCategoryIndex: t }));
         },
         setSearchPlaceholder: (t) => {
-            (0, i.j)(() => e.setState({ searchPlaceholder: t }));
+            (0, a.j)(() => e.setState({ searchPlaceholder: t }));
         },
         resetStoreState: () => {
-            (0, i.j)(() => e.setState(s));
+            (0, a.j)(() => e.setState(o));
         },
         setBottomPosition: (t) => {
-            (0, i.j)(() => e.setState({ bottomPosition: t }));
+            (0, a.j)(() => e.setState({ bottomPosition: t }));
         }
     };
 }
-let l = o(),
-    u = o(),
-    c = o(),
-    d = o();
+let u = l(),
+    c = l(),
+    d = l(),
+    f = l();
