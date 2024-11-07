@@ -18,12 +18,7 @@ function l() {
         redeemVirtualCurrency: async function e(e) {
             t(!0);
             try {
-                let n = (
-                        await s.tn.post({
-                            url: r.ANM.USER_REDEEM_VIRTUAL_CURRENCY,
-                            body: { sku_id: e }
-                        })
-                    ).body,
+                let n = (await s.tn.post({ url: r.ANM.USER_REDEEM_VIRTUAL_CURRENCY(e) })).body,
                     i = n.map((e) => {
                         var t;
                         return null === (t = e.sku) || void 0 === t ? void 0 : t.name;
