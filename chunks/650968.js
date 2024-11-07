@@ -12,7 +12,6 @@ e.exports = {
     tooltip: 'tooltip_cf58b5',
     tooltipEmojiName: 'tooltipEmojiName_cf58b5',
     imageContent: 'imageContent_cf58b5',
-    imageContentSafari: 'imageContentSafari_cf58b5',
     imageContainer: 'imageContainer_cf58b5',
     altText: 'altText_cf58b5',
     mediaMosaicAltTextContainer: 'mediaMosaicAltTextContainer_cf58b5',
