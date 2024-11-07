@@ -26,11 +26,11 @@ class o {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return i.intl.format(i.t.PSaOdX, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_TWO, a(this.items, e));
             case 3:
-                return i.intl.format(i.t.zmkz7O, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_THREE, a(this.items, e));
             default:
-                return i.intl.format(i.t.Lyyt09, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_FOUR, a(this.items, e));
         }
     }
     constructor(e) {
