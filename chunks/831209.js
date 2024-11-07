@@ -37,6 +37,7 @@ var n, r;
     (r.BADGE_BRAND_BG = 'var(--badge-brand-bg)'),
     (r.BADGE_BRAND_TEXT = 'var(--badge-brand-text)'),
     (r.BG_BACKDROP = 'var(--bg-backdrop)'),
+    (r.BG_BACKDROP_IMMERSIVE = 'var(--bg-backdrop-immersive)'),
     (r.BG_BACKDROP_NO_OPACITY = 'var(--bg-backdrop-no-opacity)'),
     (r.BG_BASE_PRIMARY = 'var(--bg-base-primary)'),
     (r.BG_BASE_SECONDARY = 'var(--bg-base-secondary)'),

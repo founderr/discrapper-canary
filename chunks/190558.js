@@ -806,6 +806,25 @@ let { Themes: n } = r(15202).V,
                 }
             }
         },
+        BG_BACKDROP_IMMERSIVE: {
+            category: 'background',
+            [n.DARK]: {
+                raw: 'BLACK',
+                opacity: 0.85
+            },
+            [n.LIGHT]: {
+                raw: 'BLACK',
+                opacity: 0.8
+            },
+            [n.MIDNIGHT]: {
+                raw: 'PLUM_19',
+                opacity: 0.9
+            },
+            [n.DARKER]: {
+                raw: 'BLACK',
+                opacity: 0.85
+            }
+        },
         BG_BACKDROP_NO_OPACITY: {
             category: 'background',
             [n.DARK]: {

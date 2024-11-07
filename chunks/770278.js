@@ -13,7 +13,7 @@ var r,
     c = n(481060),
     d = n(110924),
     f = n(247224);
-((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR');
+((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR'), (r.IMMERSIVE = 'IMMERSIVE');
 let _ = s.forwardRef(function (e, t) {
     let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: _ } = e,
         h = (function () {
@@ -22,7 +22,8 @@ let _ = s.forwardRef(function (e, t) {
             return {
                 SUBTLE: e,
                 DARK: t,
-                BLUR: t
+                BLUR: t,
+                IMMERSIVE: (0, c.useToken)(c.tokens.colors.BG_BACKDROP_IMMERSIVE).spring()
             };
         })()[n],
         p = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
