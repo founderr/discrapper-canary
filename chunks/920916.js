@@ -28,8 +28,8 @@ var r = n(200651),
     v = n(164946),
     I = n(369111),
     S = n(25990),
-    T = n(594174),
-    b = n(960048),
+    b = n(594174),
+    T = n(960048),
     y = n(272008),
     A = n(497505),
     N = n(918701),
@@ -51,8 +51,8 @@ function P(e) {
         E = i.useRef(null),
         [v, I] = i.useState(null),
         S = i.useRef(new o.qA()),
-        b = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        N = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
+        T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        N = (0, u.e7)([b.default], () => b.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
         D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [x, M] = i.useState(!0 === g || D ? 'claimed' : 'loading');
@@ -96,7 +96,7 @@ function P(e) {
                             })
                 })
             }),
-            !b &&
+            !T &&
                 !D &&
                 'claimed' === x &&
                 (0, r.jsx)(m.Z, {
@@ -215,7 +215,7 @@ function G(e) {
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
                     return null == e ? null : e;
                 }, [t, n]);
-            return [r, () => (null == r ? (b.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
+            return [r, () => (null == r ? (T.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
         })(null !== (n = null == f ? void 0 : f.skuId) && void 0 !== n ? n : null);
     if (null == f) return null;
     let g = (0, N.zK)(a, D.S7.IN_HOUSE_CONSOLE_QUEST);

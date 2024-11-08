@@ -36,7 +36,7 @@ let d = {
     v = c(o.Z.GUILD_EVENT_RULES, [(0, s.Z)(d)]),
     I = c(o.Z.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.Z)(d)]),
     S = i().omit(c(o.Z.RULES, [(0, s.Z)(d)]), 'paragraph', 'newline', 'strong', 'codeBlock', 'inlineCode', 'u', 'link', 'url', 'autolink', 'list', 'heading', 'subtext'),
-    T = { text: o.Z.RULES.text };
+    b = { text: o.Z.RULES.text };
 t.Z = {
     combineAndInjectMentionRule: c,
     createReactRules: s.Z,
@@ -44,7 +44,7 @@ t.Z = {
     defaultRules: f,
     guildEventRules: v,
     notifCenterV2MessagePreviewRules: S,
-    lockscreenWidgetMessageRules: T,
+    lockscreenWidgetMessageRules: b,
     astParserFor: a._p,
     reactParserFor: a.w4,
     parse: a.w4(f),

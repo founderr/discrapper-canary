@@ -13,7 +13,7 @@ var i = n(200651),
     d = n(527790),
     u = n(638785),
     h = n(388032);
-let p = new r.Y('UserProfilePanelRecentActivity');
+let p = new r.Yd('UserProfilePanelRecentActivity');
 function m(e) {
     let { user: t } = e,
         { recent: n } = (0, o.Z)(t.id),

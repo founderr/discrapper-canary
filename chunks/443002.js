@@ -18,15 +18,15 @@ var r = n(200651),
     v = n(383881),
     I = n(981631),
     S = n(388032),
-    T = n(180129);
+    b = n(180129);
 t.Z = function (e) {
-    let { analyticsLocation: t, guild: n, onClose: b } = e,
+    let { analyticsLocation: t, guild: n, onClose: T } = e,
         [y, A] = i.useState(!0),
         N = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
         { analyticsLocations: R } = (0, u.ZP)(),
         O = i.useCallback(() => {
-            b(),
+            T(),
                 c.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: R,
@@ -35,7 +35,7 @@ t.Z = function (e) {
                     guild_id: n.id,
                     duration_open_ms: Date.now() - C
                 });
-        }, [b, t, R, C, n.id]),
+        }, [T, t, R, C, n.id]),
         D = i.useCallback(
             (e) => {
                 e &&
@@ -75,25 +75,25 @@ t.Z = function (e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
-                    className: T.closeIconWrapper,
+                    className: b.closeIconWrapper,
                     children: (0, r.jsx)(l.Z, {
-                        className: T.closeIcon,
+                        className: b.closeIcon,
                         closeAction: O,
                         keybind: 'ESC',
                         variant: l.Z.Variants.SOLID
                     })
                 }),
                 (0, r.jsxs)(o.AdvancedScrollerAuto, {
-                    className: T.scroller,
+                    className: b.scroller,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: T.header,
+                            className: b.header,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.headerContentWrapper,
+                                    className: b.headerContentWrapper,
                                     children: [
                                         (0, r.jsx)(o.Heading, {
-                                            className: T.heading,
+                                            className: b.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
                                             children: S.intl.string(S.t.N4sqzM)
@@ -111,17 +111,17 @@ t.Z = function (e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: T.middleBodyContentWrapper,
+                            className: b.middleBodyContentWrapper,
                             children: (0, r.jsx)(E.Z, {})
                         }),
                         (0, r.jsxs)('div', {
-                            className: T.lowerBody,
+                            className: b.lowerBody,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: T.lowerBodyContentWrapper,
+                                    className: b.lowerBodyContentWrapper,
                                     children: [
                                         (0, r.jsx)(g.Z, {
-                                            className: T.tierComparisonTable,
+                                            className: b.tierComparisonTable,
                                             guild: n
                                         }),
                                         (0, r.jsx)(d.Z, {}),
@@ -129,12 +129,12 @@ t.Z = function (e) {
                                     ]
                                 }),
                                 (0, r.jsx)(v.A, {}),
-                                (0, r.jsx)('div', { className: T.lowerBodyBackgroundImage })
+                                (0, r.jsx)('div', { className: b.lowerBodyBackgroundImage })
                             ]
                         }),
                         (0, r.jsx)(s.$, {
                             onChange: D,
-                            children: (0, r.jsx)('div', { className: T.persistentCtaSpacer })
+                            children: (0, r.jsx)('div', { className: b.persistentCtaSpacer })
                         })
                     ]
                 }),

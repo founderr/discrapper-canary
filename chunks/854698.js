@@ -1,6 +1,6 @@
 n.d(t, {
     BP: function () {
-        return j;
+        return H;
     },
     DK: function () {
         return G;
@@ -54,7 +54,7 @@ n.d(t, {
         return x;
     },
     zi: function () {
-        return H;
+        return j;
     }
 }),
     n(47120),
@@ -78,8 +78,8 @@ let _ = 365,
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-    T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    b = new Set([0, 6]);
+    b = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    T = new Set([0, 6]);
 function y(e) {
     var t;
     let n = e.toDate(),
@@ -116,7 +116,7 @@ function y(e) {
             }
         ];
     return (
-        b.has(n.getDay())
+        T.has(n.getDay())
             ? (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) &&
               a.push({
                   value: c.z.WEEKEND_ONLY,
@@ -151,7 +151,7 @@ function R(e, t, n) {
     };
 }
 function O(e) {
-    return new s.OG(T[e]);
+    return new s.OG(b[e]);
 }
 function D(e, t) {
     let n;
@@ -326,7 +326,7 @@ function V(e, t) {
         count: h
     };
 }
-function H(e, t) {
+function j(e, t) {
     if (null == t) return c.z.NONE;
     let n = k(t);
     switch (n.options.freq) {
@@ -345,7 +345,7 @@ function H(e, t) {
             return c.z.NONE;
     }
 }
-function j(e, t) {
+function H(e, t) {
     return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule);
 }
 function Y(e, t, n) {

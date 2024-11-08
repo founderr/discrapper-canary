@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(906732),
     I = n(998698),
     S = n(271668),
-    T = n(404295),
-    b = n(326133),
+    b = n(404295),
+    T = n(326133),
     y = n(570220),
     A = n(28546),
     N = n(805680),
@@ -39,8 +39,8 @@ var r = n(200651),
     Z = n(398327),
     F = n(117530),
     V = n(594174),
-    H = n(459273),
-    j = n(700785),
+    j = n(459273),
+    H = n(700785),
     Y = n(358085),
     W = n(746877),
     K = n(541716),
@@ -60,7 +60,7 @@ var r = n(200651),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, eo, el, eu, ec, ed, ef, e_, eh, ep, em, eg, eE, ev;
-        let { textValue: eI, richValue: eS, className: eT, innerClassName: eb, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eG, onFocus: eB, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: ej, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
+        let { textValue: eI, richValue: eS, className: eb, innerClassName: eT, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eG, onFocus: eB, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
         u()(null != eL, 'chat input type must be set');
         let { analyticsLocations: e6 } = (0, v.ZP)(E.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
@@ -73,7 +73,7 @@ t.Z = i.memo(
             e9 = i.useRef(null),
             te = i.useRef(null);
         null == eJ || eJ(e8.current);
-        let tt = (0, T.h9)(eD.id, 'ChannelTextAreaContainer'),
+        let tt = (0, b.h9)(eD.id, 'ChannelTextAreaContainer'),
             [tn, tr] = i.useState(!tt);
         (0, m.P)(e5, (e) => {
             let { width: t } = e;
@@ -116,7 +116,7 @@ t.Z = i.memo(
                                 disabled: r || s || (!o && !c) || h,
                                 canAttachFiles: !0 === t.attachments && (o || s || d || _),
                                 canCreateThreads: u,
-                                canEveryoneSendMessages: j.Uu(er.Plq.SEND_MESSAGES, e)
+                                canEveryoneSendMessages: H.Uu(er.Plq.SEND_MESSAGES, e)
                             };
                         },
                         [e, t.permissions.requireCreateTherads, t.permissions.requireSendMessages, t.attachments, n, r, s]
@@ -157,20 +157,20 @@ t.Z = i.memo(
                     var n;
                     if (!t && !!(null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending)) (0, A.RO)(ea.X1.STICKER, e);
                 }, [t, e]);
-            (0, H.yp)({
+            (0, j.yp)({
                 event: er.CkL.TOGGLE_EMOJI_POPOUT,
                 handler: n
             }),
-                (0, H.yp)({
+                (0, j.yp)({
                     event: er.CkL.TOGGLE_GIF_PICKER,
                     handler: r
                 }),
-                (0, H.yp)({
+                (0, j.yp)({
                     event: er.CkL.TOGGLE_STICKER_PICKER,
                     handler: a
                 });
         })(eL, tl);
-        let { eventEmitter: tS, handleEditorSelectionChanged: tT } = (function (e, t, n) {
+        let { eventEmitter: tS, handleEditorSelectionChanged: tb } = (function (e, t, n) {
                 let [r] = i.useState(() => new o.EventEmitter());
                 return (
                     i.useEffect(() => {
@@ -185,7 +185,7 @@ t.Z = i.memo(
                 );
             })(e8, eI, eS),
             {
-                submitting: tb,
+                submitting: tT,
                 submit: ty,
                 handleSubmit: tA
             } = (function (e, t, a, s) {
@@ -398,10 +398,10 @@ t.Z = i.memo(
                 };
             })(eL, tS, e8);
         (0, W.S)(tS, eD.guild_id, eD.id);
-        let tH = null != eP,
-            tj = (tl && !((ts || to) && td)) || (tb && (null === (eo = eL.submit) || void 0 === eo ? void 0 : eo.useDisabledStylesOnSubmit)),
+        let tj = null != eP,
+            tH = (tl && !((ts || to) && td)) || (tT && (null === (eo = eL.submit) || void 0 === eo ? void 0 : eo.useDisabledStylesOnSubmit)),
             tY = null;
-        null != ti ? (tY = null == eM ? void 0 : eM(ti, ta, es.attachButton)) : (!tl || tc) && (tY = null == ew ? void 0 : ew(tH, es.attachButton));
+        null != ti ? (tY = null == eM ? void 0 : eM(ti, ta, es.attachButton)) : (!tl || tc) && (tY = null == ew ? void 0 : ew(tj, es.attachButton));
         let tW = t_ && null != eS && !tl && eL.showCharacterCount && null == ti,
             tK = t_ && !__OVERLAY__ && null != eS && null == ti && eL.toolbarType !== K.O.NONE,
             tz = (function (e, t, n, r) {
@@ -439,10 +439,10 @@ t.Z = i.memo(
                           : null,
                     (0, r.jsxs)('div', {
                         ref: e5,
-                        className: s()(eT, {
+                        className: s()(eb, {
                             [es.channelTextArea]: !0,
-                            [es.channelTextAreaDisabled]: tj,
-                            [es.highlighted]: eH,
+                            [es.channelTextAreaDisabled]: tH,
+                            [es.highlighted]: ej,
                             [es.textAreaMobileThemed]: d.tq
                         }),
                         children: [
@@ -450,7 +450,7 @@ t.Z = i.memo(
                             (0, r.jsxs)('div', {
                                 ref: e9,
                                 onScroll: tw,
-                                className: s()(eb, {
+                                className: s()(eT, {
                                     [es.scrollableContainer]: !0,
                                     [es.themedBackground]: !e1,
                                     [es.hasStackedBar]: tq.stacked.length > 0
@@ -469,8 +469,8 @@ t.Z = i.memo(
                                           }),
                                     (0, r.jsxs)('div', {
                                         className: s()(es.inner, {
-                                            [es.innerDisabled]: tj,
-                                            [es.sansAttachButton]: eL !== K.I.EDIT && (null != tY || (tj && null == tY) || ts),
+                                            [es.innerDisabled]: tH,
+                                            [es.sansAttachButton]: eL !== K.I.EDIT && (null != tY || (tH && null == tY) || ts),
                                             [es.sansAttachButtonCreateThread]: eL === K.I.THREAD_CREATION,
                                             [es.sansAttachButtonCreatePost]: eL === K.I.CREATE_FORUM_POST || eL === K.I.FORWARD_MESSAGE_INPUT,
                                             [es.sansAttachButtonUserProfileReply]: eL === K.I.USER_PROFILE_REPLY
@@ -509,13 +509,13 @@ t.Z = i.memo(
                                                     onTab: tk,
                                                     onEnter: tU,
                                                     onMoveSelection: tG,
-                                                    onSelectionChanged: tT,
+                                                    onSelectionChanged: tb,
                                                     onMaybeShowAutocomplete: tC,
                                                     onHideAutocomplete: tR,
                                                     promptToUpload: eV,
                                                     fontSize: tg,
                                                     spellcheckEnabled: tE,
-                                                    canOnlyUseTextCommands: tH,
+                                                    canOnlyUseTextCommands: tj,
                                                     className: s()(
                                                         {
                                                             [es.textAreaThreadCreation]: eL === K.I.THREAD_CREATION,
@@ -544,15 +544,15 @@ t.Z = i.memo(
                                 : (0, r.jsx)(S.Z, {
                                       ref: e7,
                                       channel: eD,
-                                      canOnlyUseTextCommands: tH
+                                      canOnlyUseTextCommands: tj
                                   }),
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(T.Z, {
                                 ref: tN,
                                 channel: eD,
-                                canMentionRoles: ej,
+                                canMentionRoles: eH,
                                 canMentionChannels: eY,
                                 useNewSlashCommands: t_,
-                                canOnlyUseTextCommands: tH,
+                                canOnlyUseTextCommands: tj,
                                 canSendStickers: null === (eu = eL.stickers) || void 0 === eu ? void 0 : eu.allowSending,
                                 textValue: eI,
                                 focused: ex,

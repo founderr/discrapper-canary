@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(652853),
     I = n(448980),
     S = n(194811),
-    T = n(373826),
-    b = n(315324),
+    b = n(373826),
+    T = n(315324),
     y = n(582123),
     A = n(262210),
     N = n(666984),
@@ -59,11 +59,11 @@ function D(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(T.Z, {
+                  ? (0, r.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(T.Z, {
+                  : (0, r.jsx)(b.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -85,7 +85,7 @@ function D(e) {
                         )
                     });
         },
-        H = () => {
+        j = () => {
             let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
@@ -96,13 +96,13 @@ function D(e) {
                       end: n
                   });
         },
-        j = () =>
+        H = () =>
             null == D || null == L
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: O.voiceChannelDivider }),
-                          (0, r.jsx)(b.Z, {
+                          (0, r.jsx)(T.Z, {
                               user: t,
                               guild: D,
                               channel: L,
@@ -162,7 +162,7 @@ function D(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(T.Z, {
+                                                        (0, r.jsx)(b.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {
@@ -177,13 +177,13 @@ function D(e) {
                                                     activity: a,
                                                     className: O.badges
                                                 }),
-                                                H()
+                                                j()
                                             ]
                                         }),
                                         M === R.y0.FULL_SIZE && Y()
                                     ]
                                 }),
-                                j()
+                                H()
                             ]
                         }),
                         M !== R.y0.FULL_SIZE && Y()

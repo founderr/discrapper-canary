@@ -81,7 +81,7 @@ function v(e, t, n, r) {
                             continue;
                         }
                         if (
-                            T(
+                            b(
                                 e,
                                 l,
                                 {
@@ -93,7 +93,7 @@ function v(e, t, n, r) {
                         )
                             continue;
                         let i = (0, o.i)(h[0], n, r);
-                        null != i && b(r, t[0], i)
+                        null != i && T(r, t[0], i)
                             ? g.push({
                                   index: h.index,
                                   length: h[0].length,
@@ -160,7 +160,7 @@ function I(e, t, n, r) {
                     path: f.C0.child(i, 0),
                     offset: 0
                 };
-            (n || (null != r && T(e, a, l, r))) &&
+            (n || (null != r && b(e, a, l, r))) &&
                 (d.Q.voidToText(
                     e,
                     (0, c.sg)(o, {
@@ -262,7 +262,7 @@ function S(e, t, n, r) {
             default:
                 continue;
         }
-        if (!b(n, t[0], l)) continue;
+        if (!T(n, t[0], l)) continue;
         let _ = (0, u.t)(e, i, r.serializedChildren, c.start),
             h = (0, u.t)(e, i, r.serializedChildren, c.start + c.text.length);
         d.Q.textToVoid(e, l, {
@@ -273,7 +273,7 @@ function S(e, t, n, r) {
     }
     return a;
 }
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     let i = 0;
     for (let [r, a] of f.bN.nodes(e, {
         at: {
@@ -291,7 +291,7 @@ function T(e, t, n, r) {
     }
     return !1;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if ('applicationCommandOption' !== t.type) return !0;
     switch (t.optionType) {
         case a.jw.CHANNEL:

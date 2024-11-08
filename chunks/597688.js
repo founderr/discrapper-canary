@@ -17,35 +17,35 @@ let g = new Map(),
     v = [],
     I = g,
     S = E,
-    T = v,
-    b = null,
+    b = v,
+    T = null,
     y = !1,
     A = new Set();
 let N = {},
     C = (e, t) => {
         if (0 === e.length) {
-            T = v;
+            b = v;
             return;
         }
-        switch (b) {
+        switch (T) {
             case _.u.POPULAR:
-                T = m.HU;
+                b = m.HU;
                 break;
             case _.u.RECENT:
-                T = (0, p.x0)(e, t);
+                b = (0, p.x0)(e, t);
                 break;
             case _.u.NONE:
             default:
-                T = v;
+                b = v;
         }
     },
     R = () => {
-        (I = g), (S = E), (T = v), (b = null), (i = void 0), (y = !1), (A = new Set()), (r = void 0), (N = {});
+        (I = g), (S = E), (b = v), (T = null), (i = void 0), (y = !1), (A = new Set()), (r = void 0), (N = {});
     },
     O = () => {
         if (!f.Z.hasLoadedExperiments) return;
         let { giftRecommendationAlgorithm: e } = _.G.getCurrentConfig({ location: 'CollectiblesCategoryStore handleExperimentChange' }, { autoTrackExposure: !1 });
-        e !== b && (i = void 0), (b = e);
+        e !== T && (i = void 0), (T = e);
     };
 class D extends (a = c.ZP.Store) {
     initialize() {
@@ -73,7 +73,7 @@ class D extends (a = c.ZP.Store) {
         return S;
     }
     get recommendedGiftSkuIds() {
-        return T;
+        return b;
     }
     getCategory(e) {
         return null != e ? I.get(e) : void 0;
@@ -104,7 +104,7 @@ class D extends (a = c.ZP.Store) {
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (I = g), (S = E), (T = v), (y = !1), (A = new Set()), (r = t);
+            (I = g), (S = E), (b = v), (y = !1), (A = new Set()), (r = t);
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;

@@ -15,7 +15,7 @@ n.d(t, {
         return C;
     },
     Ol: function () {
-        return b;
+        return T;
     },
     PJ: function () {
         return S;
@@ -39,7 +39,7 @@ n.d(t, {
         return U;
     },
     kr: function () {
-        return T;
+        return b;
     },
     n2: function () {
         return y;
@@ -141,16 +141,16 @@ let p = (e) => {
     I = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return T(e) ? g(e, n) : v(e, t, n, r);
+        return b(e) ? g(e, n) : v(e, t, n, r);
     };
 function S(e, t) {
     return e.traits.find((e) => e.type === t);
 }
-function T(e) {
+function b(e) {
     var t, n;
     return null !== (n = null === (t = S(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
-function b(e) {
+function T(e) {
     var t, n;
     return null !== (n = null === (t = S(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
@@ -158,7 +158,7 @@ function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function A(e) {
-    return T(e) && !y(e);
+    return b(e) && !y(e);
 }
 function N(e) {
     var t;

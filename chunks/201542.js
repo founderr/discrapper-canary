@@ -28,21 +28,21 @@ function S(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    var t, n, a, d, T, b;
+    var t, n, a, d, b, T;
     let y,
         { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
         k = i.useRef(null),
         [U, G] = i.useState(0),
         [B, Z] = i.useState(D),
         [F, V] = i.useState(!1),
-        [H, j] = i.useState(!1),
+        [j, H] = i.useState(!1),
         [Y, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, Q] = i.useState('none'),
         [X, J] = i.useState(() => ('function' == typeof N ? N() : N)),
         $ = i.useRef(void 0),
         ee = i.useCallback(() => {
-            j((e) => !e);
+            H((e) => !e);
         }, []),
         et = i.useCallback(() => {
             Q('metadata');
@@ -52,7 +52,7 @@ t.Z = i.memo(function (e) {
             if (!isNaN(t)) Z(t);
         }, []),
         er = i.useCallback(() => {
-            if ((j(!1), null == $.current))
+            if ((H(!1), null == $.current))
                 $.current = setTimeout(() => {
                     z(!1), ($.current = void 0);
                 }, 500);
@@ -92,12 +92,12 @@ t.Z = i.memo(function (e) {
             [B]
         );
     i.useEffect(() => {
-        !K && H && z(!0);
-    }, [H, K]);
+        !K && j && z(!0);
+    }, [j, K]);
     let ed = i.useRef(null);
     i.useEffect(() => {
-        if (K || H) {
-            if (H) {
+        if (K || j) {
+            if (j) {
                 var e, t;
                 (ed.current = performance.now()), null == w || w(!1, U, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * h.Z.Millis.SECOND);
             } else {
@@ -106,9 +106,9 @@ t.Z = i.memo(function (e) {
                 null == M || M(U, null != t ? (e - t) / 1000 : 0), (ed.current = null);
             }
         }
-    }, [H]),
+    }, [j]),
         (t = k),
-        (n = H),
+        (n = j),
         (a = G),
         i.useEffect(() => {
             let e;
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (T = H),
         (b = j),
+        (T = H),
         i.useEffect(() => {
-            if (!!T)
+            if (!!b)
                 return (
                     _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
                     _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -137,11 +137,11 @@ t.Z = i.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                if (d !== t) b(!1);
+                if (d !== t) T(!1);
             }
-        }, [d, T, b]);
-    let ef = H ? l.PauseIcon : l.PlayIcon,
-        e_ = H ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
+        }, [d, b, T]);
+    let ef = j ? l.PauseIcon : l.PlayIcon,
+        e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
         ? (y = (0, r.jsx)(i.Suspense, {
               children: (0, r.jsx)(I, {
@@ -149,7 +149,7 @@ t.Z = i.memo(function (e) {
                   className: v.audioElement,
                   src: A,
                   preload: q,
-                  playing: H && !Y,
+                  playing: j && !Y,
                   onEnded: ei,
                   onLoadedMetadata: en,
                   onError: ea,
@@ -167,13 +167,13 @@ t.Z = i.memo(function (e) {
               onError: ea,
               muted: F,
               volume: X,
-              playing: H && !Y,
+              playing: j && !Y,
               children: (0, r.jsx)('source', { src: A })
           }));
     let eh = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { enabled: ep } = (0, l.useRedesignIconContext)();
     return (0, r.jsxs)('div', {
-        className: s()(v.container, { [v.playing]: H }),
+        className: s()(v.container, { [v.playing]: j }),
         onMouseEnter: et,
         children: [
             (0, r.jsx)('div', {
@@ -185,7 +185,7 @@ t.Z = i.memo(function (e) {
                 onClick: ee,
                 'aria-label': e_,
                 children: (0, r.jsx)(ef, {
-                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ep && !H }),
+                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ep && !j }),
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
@@ -197,7 +197,7 @@ t.Z = i.memo(function (e) {
                 waveform: O,
                 currentTime: U,
                 duration: null != B ? B : 1,
-                playing: H,
+                playing: j,
                 played: K,
                 onDrag: ec,
                 onDragStart: el,

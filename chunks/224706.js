@@ -18,8 +18,8 @@ var r = n(664751),
     v = n(630388),
     I = n(877481),
     S = n(358085),
-    T = n(573261),
-    b = n(278323),
+    b = n(573261),
+    T = n(278323),
     y = n(58642),
     A = n(254854),
     N = n(981631),
@@ -114,7 +114,7 @@ async function D(e) {
         let e = c.Z.getApplication(t);
         v = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
     }
-    let T = Error('game not found');
+    let b = Error('game not found');
     return null != v
         ? (l.Z.dispatch({
               type: 'LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE',
@@ -138,15 +138,15 @@ async function D(e) {
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
-                          error: T
+                          error: b
                       });
               }))
         : (l.Z.dispatch({
               type: 'GAME_LAUNCH_FAIL',
               applicationId: t,
-              error: T
+              error: b
           }),
-          Promise.reject(T));
+          Promise.reject(b));
 }
 t.Z = {
     addGame(e, t) {
@@ -244,7 +244,7 @@ t.Z = {
         let e = p.Z.detectableGamesEtag;
         l.Z.wait(() => {
             l.Z.dispatch({ type: 'GAMES_DATABASE_FETCH' }),
-                T.Z.get({
+                b.Z.get({
                     url: N.ANM.APPLICATIONS_DETECTABLE,
                     headers: { 'If-None-Match': e },
                     retries: 1,
@@ -362,7 +362,7 @@ t.Z = {
             applicationId: r
         });
         try {
-            let e = await b.Z.getJoinSecret(t, n, r, i, a);
+            let e = await T.Z.getJoinSecret(t, n, r, i, a);
             return (
                 O({
                     applicationId: r,

@@ -3,13 +3,13 @@ n.d(t, {
         return A;
     },
     On: function () {
-        return b;
+        return T;
     },
     Vv: function () {
         return S;
     },
     _: function () {
-        return T;
+        return b;
     },
     bp: function () {
         return N;
@@ -88,7 +88,7 @@ function S(e, t) {
     }),
         E('VOICE_STATE_UPDATE', e);
 }
-function T(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
@@ -97,7 +97,7 @@ function T(e) {
         E('DISCONNECT', e),
         v();
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     let i = (0, l.z)(n);
     null != i &&
         (s.Z.dispatch({

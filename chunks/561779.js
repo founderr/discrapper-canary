@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return b;
+        return T;
     }
 }),
     n(724458),
@@ -50,7 +50,7 @@ function S(e, t) {
     return null;
 }
 ((a = r || (r = {}))[(a.ABOVE = 0)] = 'ABOVE'), (a[(a.BELOW = 1)] = 'BELOW');
-function T(e) {
+function b(e) {
     return {
         value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
         initialValueProp: e.initialValue,
@@ -89,11 +89,11 @@ function T(e) {
         })(e)
     };
 }
-class b extends (i = o.PureComponent) {
+class T extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.initialValue !== t.initialValueProp
             ? {
-                  ...T(e),
+                  ...b(e),
                   active: t.active
               }
             : null;
@@ -108,7 +108,7 @@ class b extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: h, className: E, children: I, barStyles: S, fillStyles: T, mini: b, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            { disabled: _, stickToMarkers: h, className: E, children: I, barStyles: S, fillStyles: b, mini: T, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
             B = 0;
         h ? null != a && (null != l ? (B = a[l]) : null != o && (B = a[o])) : (B = this.scaleValue(t));
         let Z = ''.concat(B, '%'),
@@ -145,7 +145,7 @@ class b extends (i = o.PureComponent) {
                       })
                     : null,
             V = null != R ? R(t) : ''.concat(B.toFixed(0), '%'),
-            H = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+            j = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
         return (0, s.jsx)(y, {
             active: n,
             keyboardFocused: r && g.Z.keyboardModeEnabled,
@@ -158,7 +158,7 @@ class b extends (i = o.PureComponent) {
                         className: u()(v.slider, E, {
                             [v.hasMarks]: (null !== (i = null == F ? void 0 : F.length) && void 0 !== i ? i : 0) > 0,
                             [v.disabled]: _,
-                            [v.mini]: b
+                            [v.mini]: T
                         }),
                         style: null == e ? void 0 : e.sliderStyles,
                         'aria-valuemin': c,
@@ -170,7 +170,7 @@ class b extends (i = o.PureComponent) {
                         'aria-label': k,
                         'aria-labelledby': U,
                         'aria-describedby': G,
-                        'aria-valuetext': H,
+                        'aria-valuetext': j,
                         role: 'slider',
                         tabIndex: 0,
                         onKeyDown: this.handleKeyDown,
@@ -195,7 +195,7 @@ class b extends (i = o.PureComponent) {
                                 children: (0, s.jsx)('div', {
                                     className: v.barFill,
                                     style: {
-                                        ...T,
+                                        ...b,
                                         width: Z
                                     }
                                 })
@@ -369,7 +369,7 @@ class b extends (i = o.PureComponent) {
             (this.state = {
                 active: !1,
                 focused: !1,
-                ...T(e)
+                ...b(e)
             });
     }
 }
@@ -392,7 +392,7 @@ function y(e) {
           })
         : r();
 }
-I(b, 'defaultProps', {
+I(T, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

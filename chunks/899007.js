@@ -23,15 +23,15 @@ var r = n(200651),
     v = n(652853),
     I = n(228168),
     S = n(981631),
-    T = n(474936),
-    b = n(440619);
+    b = n(474936),
+    T = n(440619);
 let y = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function A(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: A, animateOnHover: N, onOpenProfile: C, className: R } = e,
         { theme: O } = (0, v.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: L } = (0, m.KZ)(),
-        x = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, T.p9.TIER_2),
+        x = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, b.p9.TIER_2),
         w = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, p), [t, p]),
         { live: M } = (0, g.Z)(t.id),
         [P] = M,
@@ -41,11 +41,11 @@ function A(e) {
         })),
         G = A === I.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         B = s()(
-            b.avatar,
+            T.avatar,
             {
-                [b.biteSize]: A === I.y0.BITE_SIZE,
-                [b.fullSize]: A === I.y0.FULL_SIZE,
-                [b.panel]: A === I.y0.PANEL
+                [T.biteSize]: A === I.y0.BITE_SIZE,
+                [T.fullSize]: A === I.y0.FULL_SIZE,
+                [T.panel]: A === I.y0.PANEL
             },
             R
         ),
@@ -59,12 +59,12 @@ function A(e) {
             size: G,
             animateOnHover: N
         }),
-        H = (0, r.jsx)(y, {
+        j = (0, r.jsx)(y, {
             src: F,
             avatarDecoration: Z,
             size: G,
             'aria-label': t.username,
-            imageClassName: null != C ? b.overlay : void 0,
+            imageClassName: null != C ? T.overlay : void 0,
             status: w ? S.Skl.UNKNOWN : k,
             statusBackdropColor: x && !w ? (0, l.getStatusBackdropColor)(O) : void 0,
             isMobile: U,
@@ -75,12 +75,12 @@ function A(e) {
         ? (0, r.jsx)('div', {
               ...V,
               className: B,
-              children: H
+              children: j
           })
         : (0, r.jsx)(l.Clickable, {
               ...V,
-              className: s()(B, b.clickable),
-              focusProps: { ringClassName: b.focusRing },
+              className: s()(B, T.clickable),
+              focusProps: { ringClassName: T.focusRing },
               onClick: () => {
                   L({
                       action: 'PRESS_VIEW_PROFILE',
@@ -88,6 +88,6 @@ function A(e) {
                   }),
                       null == C || C();
               },
-              children: H
+              children: j
           });
 }

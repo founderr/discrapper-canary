@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(197115),
     I = n(631771),
     S = n(609218),
-    T = n(210887),
-    b = n(626135),
+    b = n(210887),
+    T = n(626135),
     y = n(176354),
     A = n(74538),
     N = n(543241),
@@ -33,9 +33,9 @@ t.Z = (e) => {
     var t, a;
     let w,
         { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
-        F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
-        [V, H] = i.useState(!1),
-        j = () => {
+        F = (0, o.e7)([b.Z], () => b.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
+        [V, j] = i.useState(!1),
+        H = () => {
             (0, N.A3)(k), (0, h.z)(), M();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
@@ -68,7 +68,7 @@ t.Z = (e) => {
         ea = null != en ? R.qAy.EMOJI : R.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
         !ee &&
-            b.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+            T.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: w,
                 is_animated: er,
                 is_external: ei,
@@ -130,7 +130,7 @@ t.Z = (e) => {
                                     onClose: P,
                                     trialOffer: K,
                                     discountOffer: z,
-                                    children: L.intl.format(L.t.se13Fh, { onClick: j })
+                                    children: L.intl.format(L.t.se13Fh, { onClick: H })
                                 })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
@@ -145,7 +145,7 @@ t.Z = (e) => {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: x.premiumPromoDescription,
-                                            children: L.intl.format(L.t.se13Fh, { onClick: j })
+                                            children: L.intl.format(L.t.se13Fh, { onClick: H })
                                         })
                                     ]
                                 }),
@@ -160,10 +160,10 @@ t.Z = (e) => {
                                   size: l.Button.Sizes.SMALL,
                                   color: l.Button.Colors.GREEN,
                                   onClick: () => {
-                                      H(!0);
+                                      j(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      H(!1), e && P();
+                                      j(!1), e && P();
                                   },
                                   buttonText: q ? L.intl.string(L.t['Gd/XHB']) : L.intl.string(L.t.P3etAg)
                               })

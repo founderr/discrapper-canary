@@ -82,11 +82,11 @@ function S(e, t) {
         )
         .filter(g);
 }
-function T(e, t, n) {
+function b(e, t, n) {
     var r;
     return e.type === t && (null === (r = e.other_user) || void 0 === r ? void 0 : r.id) === n;
 }
-function b(e) {
+function T(e) {
     if (!!(0, s.Z2)(e))
         m.notifCenterItems = m.notifCenterItems.map((t) =>
             t.type === f.DY.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id
@@ -167,7 +167,7 @@ let A = new y(a.Z, {
         }),
             e.guilds.forEach((e) => {
                 e.guild_scheduled_events.forEach((e) => {
-                    b(e);
+                    T(e);
                 });
             }),
             (m.notifCenterLocalItems = t);
@@ -183,7 +183,7 @@ let A = new y(a.Z, {
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
-        b(t);
+        T(t);
     },
     NOTIFICATION_CENTER_ITEM_CREATE: I,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
@@ -221,7 +221,7 @@ let A = new y(a.Z, {
         }
         e.relationship.type === h.OGo.FRIEND &&
             (m.notifCenterLocalItems = m.notifCenterLocalItems.map((t) =>
-                T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)
+                b(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)
                     ? {
                           ...t,
                           acked: !0,
@@ -231,10 +231,10 @@ let A = new y(a.Z, {
                       }
                     : t
             )),
-            e.relationship.type === h.OGo.BLOCKED && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !T(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)));
+            e.relationship.type === h.OGo.BLOCKED && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !b(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !b(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)));
     },
     RELATIONSHIP_REMOVE: function (e) {
-        m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !T(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+        m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !b(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !b(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
     },
     NOTIFICATION_CENTER_ITEM_COMPLETED: function (e) {
         let { item_enum: t } = e;

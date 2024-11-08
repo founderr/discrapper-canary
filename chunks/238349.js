@@ -23,8 +23,8 @@ var i,
     v = n(823379),
     I = n(709054),
     S = n(882252);
-let T = [],
-    b = null,
+let b = [],
+    T = null,
     y = null,
     A = new Set(),
     N = c.z.LATEST_ACTIVITY,
@@ -32,8 +32,8 @@ let T = [],
     R = [],
     O = !1,
     D = [],
-    L = u().chain(T),
-    x = u().chain(T),
+    L = u().chain(b),
+    x = u().chain(b),
     w = new Set(),
     M = new Set();
 function P(e) {
@@ -49,7 +49,7 @@ function k(e) {
     };
 }
 function U() {
-    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(T)), (x = u().chain(T)), M.clear(), w.clear();
+    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(b)), (x = u().chain(b)), M.clear(), w.clear();
 }
 function G() {
     var e;
@@ -121,8 +121,8 @@ class F extends (i = d.ZP.Store) {
         return R;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
-        let e = b;
-        return (b = null), e;
+        let e = T;
+        return (T = null), e;
     }
     getFirstNoReplyThreadId() {
         return r;
@@ -156,7 +156,7 @@ class F extends (i = d.ZP.Store) {
         THREAD_CREATE: function (e) {
             let { channel: t, isNewlyCreated: n } = e;
             if (null == t.parent_id || t.parent_id !== y || !n) return !1;
-            t.ownerId !== p.default.getId() ? C++ : (b = t.id);
+            t.ownerId !== p.default.getId() ? C++ : (T = t.id);
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;

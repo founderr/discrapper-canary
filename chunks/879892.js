@@ -21,7 +21,7 @@ var i = n(481060),
     h = n(981631);
 let p = 'apply-guild-boost-modal';
 async function m(e) {
-    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: I, onSubscriptionConfirmation: S, guild: T, handleSubscribeModalClose: b, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
+    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: I, onSubscriptionConfirmation: S, guild: b, handleSubscribeModalClose: T, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
         C = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         R = l.default.getCurrentUser();
     if (null == R) return;
@@ -46,7 +46,7 @@ async function m(e) {
     let D = (0, f.vx)(u.Z.boostSlots),
         L = D.length,
         x = (e) => {
-            null == v || v(), null == b || b(e);
+            null == v || v(), null == T || T(e);
         };
     if (L > 0 && (null == E || L >= E)) {
         let e;
@@ -61,7 +61,7 @@ async function m(e) {
                             onClose: (e) => {
                                 i(), x(e);
                             },
-                            selectedGuild: T,
+                            selectedGuild: b,
                             locationSection: h.ZY5.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e
                         });
@@ -80,7 +80,7 @@ async function m(e) {
             analyticsLocations: t,
             analyticsLocation: m,
             analyticsSourceLocation: g,
-            guildId: T.id,
+            guildId: b.id,
             closeLayer: () => {
                 null == v || v(),
                     null == I || I(),

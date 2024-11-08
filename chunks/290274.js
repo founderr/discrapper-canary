@@ -19,30 +19,30 @@ function h(e) {
     let { user: t, activity: n, entry: a, display: h, className: p, onSelect: m, onClose: g, onRequestOpen: E } = e,
         [v, I] = i.useState(!1),
         { analyticsLocations: S } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        T = (0, c.Z)({
+        b = (0, c.Z)({
             display: h,
             user: t,
             activity: n,
             entry: a,
             analyticsLocations: S
         }),
-        b = (0, d.Z)({
+        T = (0, d.Z)({
             entry: a,
             activity: n,
             user: t,
             display: h,
             onClose: g,
-            onAction: T,
+            onAction: b,
             isMenuOpen: v
         });
-    return 0 === b.length || t.bot
+    return 0 === T.length || t.bot
         ? null
         : (0, r.jsx)(o.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  T({ action: 'OPEN_MENU' }), I(!0), null == E || E();
+                  b({ action: 'OPEN_MENU' }), I(!0), null == E || E();
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -53,7 +53,7 @@ function h(e) {
                       },
                       'aria-label': f.intl.string(f.t.PlAQz8),
                       onSelect: m,
-                      children: (0, r.jsx)(o.MenuGroup, { children: b })
+                      children: (0, r.jsx)(o.MenuGroup, { children: T })
                   });
               },
               children: (e) =>

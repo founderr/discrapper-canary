@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(768581),
     I = n(111846),
     S = n(392552),
-    T = n(543241),
-    b = n(199257),
+    b = n(543241),
+    T = n(199257),
     y = n(880949),
     A = n(784222),
     N = n(149203),
@@ -70,12 +70,12 @@ let D = (e) => {
         }
         let F = (0, a.e7)([g.Z], () => (null !== t && t.type === c.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
             { useTransparentIcons: V } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-            H = (0, a.e7)([E.Z], () => E.Z.isFocused()),
-            j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
+            j = (0, a.e7)([E.Z], () => E.Z.isFocused()),
+            H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
-            W = (0, T.C1)(P, O(t) ? t : null),
+            W = (0, b.C1)(P, O(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: z } = (0, b.Z)(P, k),
+            { newlyAddedEmojis: z } = (0, T.Z)(P, k),
             q = t.id,
             Q = (null == Z ? void 0 : Z.type) === A.ld.EMOJI ? Z.subCategory : N.t0.NONE;
         if (
@@ -87,7 +87,7 @@ let D = (e) => {
                         Q !== N.t0.NONE &&
                         (Q === N.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, f.Zg)(t.guildId, z[0].id),
                         null != B.source &&
-                            (0, T.Gn)({
+                            (0, b.Gn)({
                                 emoji: t,
                                 subCategory: Q,
                                 position: Z.columnIndex + 1,
@@ -150,7 +150,7 @@ let D = (e) => {
                 ? (0, r.jsx)(y.Z, {
                       className: R.__invalid_guildIcon,
                       guild: F,
-                      shouldAnimate: !j && H
+                      shouldAnimate: !H && j
                   })
                 : null;
         x = G && 'CREATE_EMOJI' === t.type ? C.intl.string(C.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (K.has(t.guildId) ? C.intl.string(C.t['/K2RDA']) : C.intl.string(C.t.NZI2Zm)) : t.allNamesString;

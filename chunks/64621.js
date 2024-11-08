@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -23,9 +23,9 @@ var r = n(200651),
     v = n(425637),
     I = n(895982),
     S = n(685741),
-    T = n(20818);
-function b(e) {
-    var t, n, b;
+    b = n(20818);
+function T(e) {
+    var t, n, T;
     let { sourceType: y, children: A, user: N } = e,
         { profileType: C } = (0, p.z)(),
         { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, h.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
@@ -45,13 +45,13 @@ function b(e) {
             asset: Z,
             assetClassName: F,
             className: V,
-            content: H,
-            header: j,
+            content: j,
+            header: H,
             spacing: Y,
             dismissibleContentType: W
         } = ((t = O),
         (n = R),
-        (b = D),
+        (T = D),
         L
             ? {
                   asset: S,
@@ -62,7 +62,7 @@ function b(e) {
                   spacing: 30,
                   dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
-            : b
+            : T
               ? {
                     asset: v,
                     assetClassName: void 0,
@@ -84,7 +84,7 @@ function b(e) {
                   }
                 : t
                   ? {
-                        asset: T,
+                        asset: b,
                         assetClassName: void 0,
                         className: E.statusCoachmark,
                         content: g.intl.string(g.t.MYYTWV),
@@ -129,9 +129,9 @@ function b(e) {
                     content: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: H
+                        children: j
                     }),
-                    header: j,
+                    header: H,
                     headerClassName: E.tooltipHeader,
                     markAsDismissed: q,
                     onClick: n

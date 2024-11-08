@@ -46,14 +46,14 @@ t.Z = (e) => {
                         i = t(r);
                     a(i, r), null == c || c(i), (E.current = !1);
                 },
-                T = _ ? 'pointerup' : 'mouseup',
-                b = _ ? 'pointermove' : 'mousemove',
+                b = _ ? 'pointerup' : 'mouseup',
+                T = _ ? 'pointermove' : 'mousemove',
                 y = n.current.ownerDocument;
             return (
-                y.addEventListener(T, S),
-                y.addEventListener(b, I),
+                y.addEventListener(b, S),
+                y.addEventListener(T, I),
                 () => {
-                    y.removeEventListener(T, S), y.removeEventListener(b, I), o.cancel();
+                    y.removeEventListener(b, S), y.removeEventListener(T, I), o.cancel();
                 }
             );
         }, [p, a, i, r, f, n, d, c, _, h, s]),

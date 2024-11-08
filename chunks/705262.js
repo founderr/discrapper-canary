@@ -27,8 +27,8 @@ var r,
     v = n(98278),
     I = n(639119),
     S = n(311476),
-    T = n(165583),
-    b = n(587446),
+    b = n(165583),
+    T = n(587446),
     y = n(210887),
     A = n(740492),
     N = n(626135),
@@ -98,7 +98,7 @@ let G = Object.freeze({
                     variant: 'text-md/medium',
                     children: s
                 }),
-                (!i || 'EDITOR' === t) && (0, a.jsx)(b.Z, { className: U.premiumIcon })
+                (!i || 'EDITOR' === t) && (0, a.jsx)(T.Z, { className: U.premiumIcon })
             ]
         });
     },
@@ -166,7 +166,7 @@ let G = Object.freeze({
                   children: c
               });
     },
-    H = (e) => {
+    j = (e) => {
         var t, n;
         let { renderCTAButtons: r } = e,
             { type: i } = s.useContext(B),
@@ -175,7 +175,7 @@ let G = Object.freeze({
         return (0, a.jsx)(a.Fragment, {
             children:
                 'EDITOR' === i && o && u
-                    ? (0, a.jsx)(T.ZP, {
+                    ? (0, a.jsx)(b.ZP, {
                           type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: x.Si.TIER_2,
                           children: k.intl.format(k.t.G8yQXl, { onPremiumClick: () => v.z })
@@ -203,7 +203,7 @@ let G = Object.freeze({
                       })
         });
     },
-    j = (e) => {
+    H = (e) => {
         let { disabled: t } = e,
             { type: r, delay: i } = s.useContext(B),
             { analyticsLocations: o } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
@@ -213,11 +213,11 @@ let G = Object.freeze({
             }),
             [g, E] = s.useState(!1),
             [v, I] = s.useState(-1),
-            T = (0, c.e7)([h.Z], () => h.Z.useReducedMotion);
+            b = (0, c.e7)([h.Z], () => h.Z.useReducedMotion);
         s.useEffect(() => {
             ((v === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && E(!0);
         }, [v, r, u]);
-        let { enabled: b } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: T } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             y = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
@@ -226,7 +226,7 @@ let G = Object.freeze({
                         analyticsLocations: o,
                         themeName: d.Us[e.id]
                     }),
-                    l && 'SETTINGS' === r && b)
+                    l && 'SETTINGS' === r && T)
                 ) {
                     (0, f.openModalLazy)(
                         async () => {
@@ -279,7 +279,7 @@ let G = Object.freeze({
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === r && b && l
+                            showLockedBadge: 'SETTINGS' === r && T && l
                         },
                         e.id
                     )
@@ -302,7 +302,7 @@ let G = Object.freeze({
                             }),
                             (0, a.jsx)(f.LottieAnimation, {
                                 importData: t,
-                                shouldAnimate: !T,
+                                shouldAnimate: !b,
                                 className: U.sparkles
                             })
                         ]
@@ -405,10 +405,10 @@ let G = Object.freeze({
         return (0, a.jsxs)('section', {
             className: t,
             children: [
-                (0, a.jsx)(H, { renderCTAButtons: n }),
+                (0, a.jsx)(j, { renderCTAButtons: n }),
                 (0, a.jsx)('div', {
                     className: U.presets,
-                    children: (0, a.jsx)(j, { disabled: r })
+                    children: (0, a.jsx)(H, { disabled: r })
                 })
             ]
         });
@@ -419,7 +419,7 @@ let G = Object.freeze({
         return (0, a.jsxs)('section', {
             className: n,
             children: [
-                !t && (0, a.jsx)(H, { renderCTAButtons: r }),
+                !t && (0, a.jsx)(j, { renderCTAButtons: r }),
                 t &&
                     i &&
                     (0, a.jsx)(f.Heading, {
@@ -429,7 +429,7 @@ let G = Object.freeze({
                     }),
                 (0, a.jsxs)('div', {
                     className: l()(U.presets, { [U.presetsJustify]: t }),
-                    children: [(0, a.jsx)(Y, { systemSelectorFirst: !0 }), (0, a.jsx)(j, { disabled: !1 })]
+                    children: [(0, a.jsx)(Y, { systemSelectorFirst: !0 }), (0, a.jsx)(H, { disabled: !1 })]
                 })
             ]
         });

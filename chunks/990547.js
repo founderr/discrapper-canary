@@ -82,8 +82,8 @@ var f = n(627420),
     v = n(525769);
 let I = 'deviceProperties',
     S = 'referralProperties',
-    T = {},
     b = {},
+    T = {},
     y = window.DiscordNative;
 if (null != y) {
     let e;
@@ -194,7 +194,7 @@ function D() {
     );
 }
 function L(e) {
-    return null != T[e] && T[e] > Date.now();
+    return null != b[e] && b[e] > Date.now();
 }
 if (null == r)
     try {
@@ -270,7 +270,7 @@ x(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '342880'), '342880'), 10);
+        let a = parseInt(((n = '342931'), '342931'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == y ? void 0 : null === (e = (t = y.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (
@@ -299,11 +299,11 @@ let w = (e) => {
                 if (L(t)) return Promise.resolve();
                 if ('number' == typeof l.throttlePercent && Math.random() > l.throttlePercent) return Promise.resolve();
                 if (l.deduplicate) {
-                    let e = b[t];
+                    let e = T[t];
                     if (o()(e, s)) return Promise.resolve();
-                    b[t] = s;
+                    T[t] = s;
                 }
-                T[t] = Date.now() + l.throttlePeriod;
+                b[t] = Date.now() + l.throttlePeriod;
             } else if ('throttlePercent' in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else u()(!1, 'Unsupported analytics event config: '.concat(l));

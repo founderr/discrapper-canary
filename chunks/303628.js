@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(459273),
     I = n(444282),
     S = n(898463),
-    T = n(981631),
-    b = n(100192),
+    b = n(981631),
+    T = n(100192),
     y = n(110933);
 let A = [];
 function N(e) {
@@ -70,7 +70,7 @@ function N(e) {
         N.focusFirstVisibleItem();
     }, [N]);
     return ((0, v.yp)({
-        event: T.CkL.FOCUS_ATTACHMENT_AREA,
+        event: b.CkL.FOCUS_ATTACHMENT_AREA,
         handler: M
     }),
     i.useEffect(() => {
@@ -97,7 +97,7 @@ function N(e) {
                               return (0, r.jsx)('ul', {
                                   ref: i,
                                   ...o,
-                                  className: s()(b.channelAttachmentArea, y.scrollbarGhost),
+                                  className: s()(T.channelAttachmentArea, y.scrollbarGhost),
                                   children: R
                                       ? L.map((e) =>
                                             (0, r.jsx)(

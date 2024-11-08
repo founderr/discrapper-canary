@@ -6,8 +6,8 @@ var i,
     o = n(442837),
     s = n(570140),
     c = n(959546),
-    u = n(215023);
-let d = new Map(),
+    d = n(215023);
+let u = new Map(),
     m = new Set(),
     h = new Set(),
     f = new Set(),
@@ -16,7 +16,7 @@ let d = new Map(),
     g = null;
 class E extends (i = o.ZP.Store) {
     getPrice(e) {
-        return d.get(e);
+        return u.get(e);
     }
     isFetchingPrice(e) {
         return m.has(e);
@@ -54,7 +54,7 @@ class E extends (i = o.ZP.Store) {
             m.add(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_SUCCEEDED: (e) => {
-            d.set(e.skuId, e.price), m.delete(e.skuId);
+            u.set(e.skuId, e.price), m.delete(e.skuId);
         },
         CONSUMABLES_PRICE_FETCH_FAILED: (e) => {
             m.delete(e.skuId), f.add(e.skuId);
@@ -68,7 +68,7 @@ class E extends (i = o.ZP.Store) {
         SKU_PURCHASE_SUCCESS: (e) => {
             if (1 !== e.entitlements.length) return;
             let t = e.entitlements[0];
-            if (t.sku_id === u.FX) p.set(e.skuId, c.Z.createFromServer(t));
+            if (t.sku_id === d.FX) p.set(e.skuId, c.Z.createFromServer(t));
         },
         PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
             _ = !0;

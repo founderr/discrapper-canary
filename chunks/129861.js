@@ -57,10 +57,10 @@ t.Z = (e) => {
               })(t),
         I = t.isVerifiedBot(),
         S = d.ZP.getName(t),
-        T = i ? E : null != n ? n : S,
-        b = t.isPomelo() || l;
-    if (b || T !== E) {
-        let e = T === E && b && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
+        b = i ? E : null != n ? n : S,
+        T = t.isPomelo() || l;
+    if (T || b !== E) {
+        let e = b === E && T && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : b,
             n = a && e !== '@'.concat(E) ? d.ZP.getUserTag(t) : void 0;
         return (0, r.jsx)(h, {
             primary: e,
@@ -72,10 +72,10 @@ t.Z = (e) => {
         });
     }
     return (0, r.jsx)(u.Z, {
-        name: T,
+        name: b,
         botType: v,
         botVerified: I,
-        discriminator: g || T !== E ? null : null != o ? o : t.discriminator,
+        discriminator: g || b !== E ? null : null != o ? o : t.discriminator,
         ...p
     });
 };

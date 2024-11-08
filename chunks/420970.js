@@ -22,7 +22,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = new i.Y('Flux');
+let o = new i.Yd('Flux');
 class l extends r.EventEmitter {
     log(e, t) {
         let n = new c(e);

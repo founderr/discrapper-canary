@@ -12,7 +12,7 @@ n.d(t, {
         return K;
     },
     L2: function () {
-        return H;
+        return j;
     },
     MY: function () {
         return L;
@@ -42,7 +42,7 @@ n.d(t, {
         return Y;
     },
     iM: function () {
-        return j;
+        return H;
     },
     pO: function () {
         return x;
@@ -76,9 +76,9 @@ var r,
     v = n(388032);
 let I = p.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
     S = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => p.Z.escape(e))].join('|'),
-    T = RegExp('(?: |^|https?://)(?:'.concat(S, ')/([a-z0-9-]+)'), 'gi'),
-    b = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
-    y = RegExp('(?: |^|https?://)(?:'.concat(b, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
+    b = RegExp('(?: |^|https?://)(?:'.concat(S, ')/([a-z0-9-]+)'), 'gi'),
+    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
+    y = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = (e, t) =>
         Array(t)
             .fill(void 0)
@@ -116,7 +116,7 @@ let k = (e) => (null == e ? void 0 : e.type) === g.uaV.CUSTOM_GIFT && (null == e
         let t;
         if (null == e) return [];
         let n = new Set();
-        for (; null != (t = T.exec(e)) && n.size < 3; ) n.add(P(t[1]));
+        for (; null != (t = b.exec(e)) && n.size < 3; ) n.add(P(t[1]));
         for (; null != (t = y.exec(e)) && n.size < 3; ) n.add(P(t[t.length - 1]));
         return Array.from(n);
     };
@@ -186,7 +186,7 @@ function V(e, t, n) {
             return t.isSubscription ? v.intl.formatToPlainString(v.t['2VN4Nz'], { skuName: n.name }) : v.intl.string(v.t.RmamAA);
     }
 }
-function H(e, t, n) {
+function j(e, t, n) {
     switch (e) {
         case g.wZ8.ERROR:
             return v.intl.string(v.t.w19zb2);
@@ -203,7 +203,7 @@ function H(e, t, n) {
             return t.isSubscription ? v.intl.string(v.t.wQ1FHx) : v.intl.string(v.t.OgpR0d);
     }
 }
-function j(e) {
+function H(e) {
     let { step: t, sku: n, libraryApplication: r, error: i, accepted: s, accepting: o, onGoToLibrary: l, subscriptionPlan: u = null } = e;
     switch (t) {
         case g.wZ8.ERROR:

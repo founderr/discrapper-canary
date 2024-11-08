@@ -38,7 +38,7 @@ function _(e, t, n) {
                 t.setSelectedKey(e);
             }
         }),
-        { isInvalid: S, validationErrors: T, validationDetails: b } = t.displayValidation,
+        { isInvalid: S, validationErrors: b, validationDetails: T } = t.displayValidation,
         {
             labelProps: y,
             fieldProps: A,
@@ -48,7 +48,7 @@ function _(e, t, n) {
             ...e,
             labelElementType: 'span',
             isInvalid: S,
-            errorMessage: e.errorMessage || T
+            errorMessage: e.errorMessage || b
         });
     (I.onKeyDown = I.onKeyDownCapture), delete I.onKeyDownCapture;
     let R = (0, r.zL)(e, { labelable: !0 }),
@@ -115,8 +115,8 @@ function _(e, t, n) {
             descriptionProps: N,
             errorMessageProps: C,
             isInvalid: S,
-            validationErrors: T,
-            validationDetails: b
+            validationErrors: b,
+            validationDetails: T
         }
     );
 }

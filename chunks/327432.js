@@ -401,7 +401,7 @@ var v = function (e) {
                         (function (e, t) {
                             return (e & t) != 0;
                         })(s, i.RI) &&
-                        !(u = null !== u ? !u : !!n || j(e.substring(0, e.length - o)))) ||
+                        !(u = null !== u ? !u : !!n || H(e.substring(0, e.length - o)))) ||
                     (a !== i.None &&
                         s !== i.None &&
                         (function (e, t) {
@@ -415,8 +415,8 @@ var v = function (e) {
     },
     I = /\s/,
     S = /[\u0021-\u0023\u0025-\u002A\u002C-\u002F\u003A\u003B\u003F\u0040\u005B-\u005D\u005F\u007B\u007D\u00A1\u00A7\u00AB\u00B6\u00B7\u00BB\u00BF\u037E\u0387\u055A-\u055F\u0589\u058A\u05BE\u05C0\u05C3\u05C6\u05F3\u05F4\u0609\u060A\u060C\u060D\u061B\u061E\u061F\u066A-\u066D\u06D4\u0700-\u070D\u07F7-\u07F9\u0830-\u083E\u085E\u0964\u0965\u0970\u0AF0\u0DF4\u0E4F\u0E5A\u0E5B\u0F04-\u0F12\u0F14\u0F3A-\u0F3D\u0F85\u0FD0-\u0FD4\u0FD9\u0FDA\u104A-\u104F\u10FB\u1360-\u1368\u1400\u166D\u166E\u169B\u169C\u16EB-\u16ED\u1735\u1736\u17D4-\u17D6\u17D8-\u17DA\u1800-\u180A\u1944\u1945\u1A1E\u1A1F\u1AA0-\u1AA6\u1AA8-\u1AAD\u1B5A-\u1B60\u1BFC-\u1BFF\u1C3B-\u1C3F\u1C7E\u1C7F\u1CC0-\u1CC7\u1CD3\u2010-\u2027\u2030-\u2043\u2045-\u2051\u2053-\u205E\u207D\u207E\u208D\u208E\u2329\u232A\u2768-\u2775\u27C5\u27C6\u27E6-\u27EF\u2983-\u2998\u29D8-\u29DB\u29FC\u29FD\u2CF9-\u2CFC\u2CFE\u2CFF\u2D70\u2E00-\u2E2E\u2E30-\u2E3B\u3001-\u3003\u3008-\u3011\u3014-\u301F\u3030\u303D\u30A0\u30FB\uA4FE\uA4FF\uA60D-\uA60F\uA673\uA67E\uA6F2-\uA6F7\uA874-\uA877\uA8CE\uA8CF\uA8F8-\uA8FA\uA92E\uA92F\uA95F\uA9C1-\uA9CD\uA9DE\uA9DF\uAA5C-\uAA5F\uAADE\uAADF\uAAF0\uAAF1\uABEB\uFD3E\uFD3F\uFE10-\uFE19\uFE30-\uFE52\uFE54-\uFE61\uFE63\uFE68\uFE6A\uFE6B\uFF01-\uFF03\uFF05-\uFF0A\uFF0C-\uFF0F\uFF1A\uFF1B\uFF1F\uFF20\uFF3B-\uFF3D\uFF3F\uFF5B\uFF5D\uFF5F-\uFF65]/,
-    T = /['\u2018\u2019]/,
-    b = function (e) {
+    b = /['\u2018\u2019]/,
+    T = function (e) {
         for (var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1], n = 0, r = !1; e.length > 0; ) {
             var i = v(e, t),
                 [a, s] = y(e, i, t);
@@ -437,7 +437,7 @@ var v = function (e) {
     A = function e(t, n) {
         var r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         if (I.test(t)) return !1;
-        if (T.test(t)) {
+        if (b.test(t)) {
             var i = v(n, r),
                 [a, s] = y(n, i, r);
             if (e(a, s, r)) return !0;
@@ -490,9 +490,9 @@ var Z = [
     F =
         /(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDE5\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFA]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])(?:[\u0300-\u036F\u0483-\u0489\u0591-\u05BD\u05BF\u05C1\u05C2\u05C4\u05C5\u05C7\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7\u06E8\u06EA-\u06ED\u0711\u0730-\u074A\u07A6-\u07B0\u07EB-\u07F3\u07FD\u0816-\u0819\u081B-\u0823\u0825-\u0827\u0829-\u082D\u0859-\u085B\u08D3-\u08E1\u08E3-\u0902\u093A\u093C\u0941-\u0948\u094D\u0951-\u0957\u0962\u0963\u0981\u09BC\u09BE\u09C1-\u09C4\u09CD\u09D7\u09E2\u09E3\u09FE\u0A01\u0A02\u0A3C\u0A41\u0A42\u0A47\u0A48\u0A4B-\u0A4D\u0A51\u0A70\u0A71\u0A75\u0A81\u0A82\u0ABC\u0AC1-\u0AC5\u0AC7\u0AC8\u0ACD\u0AE2\u0AE3\u0AFA-\u0AFF\u0B01\u0B3C\u0B3E\u0B3F\u0B41-\u0B44\u0B4D\u0B55-\u0B57\u0B62\u0B63\u0B82\u0BBE\u0BC0\u0BCD\u0BD7\u0C00\u0C04\u0C3E-\u0C40\u0C46-\u0C48\u0C4A-\u0C4D\u0C55\u0C56\u0C62\u0C63\u0C81\u0CBC\u0CBF\u0CC2\u0CC6\u0CCC\u0CCD\u0CD5\u0CD6\u0CE2\u0CE3\u0D00\u0D01\u0D3B\u0D3C\u0D3E\u0D41-\u0D44\u0D4D\u0D57\u0D62\u0D63\u0D81\u0DCA\u0DCF\u0DD2-\u0DD4\u0DD6\u0DDF\u0E31\u0E34-\u0E3A\u0E47-\u0E4E\u0EB1\u0EB4-\u0EBC\u0EC8-\u0ECD\u0F18\u0F19\u0F35\u0F37\u0F39\u0F71-\u0F7E\u0F80-\u0F84\u0F86\u0F87\u0F8D-\u0F97\u0F99-\u0FBC\u0FC6\u102D-\u1030\u1032-\u1037\u1039\u103A\u103D\u103E\u1058\u1059\u105E-\u1060\u1071-\u1074\u1082\u1085\u1086\u108D\u109D\u135D-\u135F\u1712-\u1714\u1732-\u1734\u1752\u1753\u1772\u1773\u17B4\u17B5\u17B7-\u17BD\u17C6\u17C9-\u17D3\u17DD\u180B-\u180D\u1885\u1886\u18A9\u1920-\u1922\u1927\u1928\u1932\u1939-\u193B\u1A17\u1A18\u1A1B\u1A56\u1A58-\u1A5E\u1A60\u1A62\u1A65-\u1A6C\u1A73-\u1A7C\u1A7F\u1AB0-\u1AC0\u1B00-\u1B03\u1B34-\u1B3A\u1B3C\u1B42\u1B6B-\u1B73\u1B80\u1B81\u1BA2-\u1BA5\u1BA8\u1BA9\u1BAB-\u1BAD\u1BE6\u1BE8\u1BE9\u1BED\u1BEF-\u1BF1\u1C2C-\u1C33\u1C36\u1C37\u1CD0-\u1CD2\u1CD4-\u1CE0\u1CE2-\u1CE8\u1CED\u1CF4\u1CF8\u1CF9\u1DC0-\u1DF9\u1DFB-\u1DFF\u200C\u20D0-\u20F0\u2CEF-\u2CF1\u2D7F\u2DE0-\u2DFF\u302A-\u302F\u3099\u309A\uA66F-\uA672\uA674-\uA67D\uA69E\uA69F\uA6F0\uA6F1\uA802\uA806\uA80B\uA825\uA826\uA82C\uA8C4\uA8C5\uA8E0-\uA8F1\uA8FF\uA926-\uA92D\uA947-\uA951\uA980-\uA982\uA9B3\uA9B6-\uA9B9\uA9BC\uA9BD\uA9E5\uAA29-\uAA2E\uAA31\uAA32\uAA35\uAA36\uAA43\uAA4C\uAA7C\uAAB0\uAAB2-\uAAB4\uAAB7\uAAB8\uAABE\uAABF\uAAC1\uAAEC\uAAED\uAAF6\uABE5\uABE8\uABED\uFB1E\uFE00-\uFE0F\uFE20-\uFE2F\uFF9E\uFF9F]|\uD800[\uDDFD\uDEE0\uDF76-\uDF7A]|\uD802[\uDE01-\uDE03\uDE05\uDE06\uDE0C-\uDE0F\uDE38-\uDE3A\uDE3F\uDEE5\uDEE6]|\uD803[\uDD24-\uDD27\uDEAB\uDEAC\uDF46-\uDF50]|\uD804[\uDC01\uDC38-\uDC46\uDC7F-\uDC81\uDCB3-\uDCB6\uDCB9\uDCBA\uDD00-\uDD02\uDD27-\uDD2B\uDD2D-\uDD34\uDD73\uDD80\uDD81\uDDB6-\uDDBE\uDDC9-\uDDCC\uDDCF\uDE2F-\uDE31\uDE34\uDE36\uDE37\uDE3E\uDEDF\uDEE3-\uDEEA\uDF00\uDF01\uDF3B\uDF3C\uDF3E\uDF40\uDF57\uDF66-\uDF6C\uDF70-\uDF74]|\uD805[\uDC38-\uDC3F\uDC42-\uDC44\uDC46\uDC5E\uDCB0\uDCB3-\uDCB8\uDCBA\uDCBD\uDCBF\uDCC0\uDCC2\uDCC3\uDDAF\uDDB2-\uDDB5\uDDBC\uDDBD\uDDBF\uDDC0\uDDDC\uDDDD\uDE33-\uDE3A\uDE3D\uDE3F\uDE40\uDEAB\uDEAD\uDEB0-\uDEB5\uDEB7\uDF1D-\uDF1F\uDF22-\uDF25\uDF27-\uDF2B]|\uD806[\uDC2F-\uDC37\uDC39\uDC3A\uDD30\uDD3B\uDD3C\uDD3E\uDD43\uDDD4-\uDDD7\uDDDA\uDDDB\uDDE0\uDE01-\uDE0A\uDE33-\uDE38\uDE3B-\uDE3E\uDE47\uDE51-\uDE56\uDE59-\uDE5B\uDE8A-\uDE96\uDE98\uDE99]|\uD807[\uDC30-\uDC36\uDC38-\uDC3D\uDC3F\uDC92-\uDCA7\uDCAA-\uDCB0\uDCB2\uDCB3\uDCB5\uDCB6\uDD31-\uDD36\uDD3A\uDD3C\uDD3D\uDD3F-\uDD45\uDD47\uDD90\uDD91\uDD95\uDD97\uDEF3\uDEF4]|\uD81A[\uDEF0-\uDEF4\uDF30-\uDF36]|\uD81B[\uDF4F\uDF8F-\uDF92\uDFE4]|\uD82F[\uDC9D\uDC9E]|\uD834[\uDD65\uDD67-\uDD69\uDD6E-\uDD72\uDD7B-\uDD82\uDD85-\uDD8B\uDDAA-\uDDAD\uDE42-\uDE44]|\uD836[\uDE00-\uDE36\uDE3B-\uDE6C\uDE75\uDE84\uDE9B-\uDE9F\uDEA1-\uDEAF]|\uD838[\uDC00-\uDC06\uDC08-\uDC18\uDC1B-\uDC21\uDC23\uDC24\uDC26-\uDC2A\uDD30-\uDD36\uDEEC-\uDEEF]|\uD83A[\uDCD0-\uDCD6\uDD44-\uDD4A]|\uD83C[\uDFFB-\uDFFF]|\uDB40[\uDC20-\uDC7F\uDD00-\uDDEF])*\u200D$/,
     V = (e) => -1 !== e.search(F),
-    H = /(?:\uD83C[\uDDE6-\uDDFF])+$/g,
-    j = (e) => {
-        var t = e.match(H);
+    j = /(?:\uD83C[\uDDE6-\uDDFF])+$/g,
+    H = (e) => {
+        var t = e.match(j);
         return null !== t && (t[0].length / 2) % 2 == 1;
     },
     Y = (e) => (0, a.P)(e) && er.isNodeList(e.children) && !J.isEditor(e),
@@ -995,7 +995,7 @@ var X = new WeakMap(),
                                 if ('' === d) break;
                                 (f = (function (e, t, n) {
                                     if ('character' === t) return v(e, n);
-                                    if ('word' === t) return b(e, n);
+                                    if ('word' === t) return T(e, n);
                                     if ('line' === t || 'block' === t) return e.length;
                                     return 1;
                                 })(d, r, i)),
@@ -1814,7 +1814,7 @@ var ep = {
     },
     eI = ['text'],
     eS = ['anchor', 'focus'];
-function eT(e, t) {
+function eb(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -1826,16 +1826,16 @@ function eT(e, t) {
     }
     return n;
 }
-function eb(e) {
+function eT(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? eT(Object(n), !0).forEach(function (t) {
+            ? eb(Object(n), !0).forEach(function (t) {
                   o(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eT(Object(n)).forEach(function (t) {
+              : eb(Object(n)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
@@ -1862,7 +1862,7 @@ var ey = {
         return !0;
     },
     decorations(e, t) {
-        var n = [eb({}, e)];
+        var n = [eT({}, e)];
         for (var r of t) {
             var i = E(r, eS),
                 [a, s] = ep.edges(r),
@@ -1886,11 +1886,11 @@ var ey = {
                     m = void 0;
                 if (c < l) {
                     var g = c - _;
-                    (m = eb(eb({}, h), {}, { text: h.text.slice(g) })), (h = eb(eb({}, h), {}, { text: h.text.slice(0, g) }));
+                    (m = eT(eT({}, h), {}, { text: h.text.slice(g) })), (h = eT(eT({}, h), {}, { text: h.text.slice(0, g) }));
                 }
                 if (u > _) {
                     var v = u - _;
-                    (p = eb(eb({}, h), {}, { text: h.text.slice(0, v) })), (h = eb(eb({}, h), {}, { text: h.text.slice(v) }));
+                    (p = eT(eT({}, h), {}, { text: h.text.slice(0, v) })), (h = eT(eT({}, h), {}, { text: h.text.slice(v) }));
                 }
                 Object.assign(h, i), p && o.push(p), o.push(h), m && o.push(m);
             }
@@ -1949,11 +1949,11 @@ var eC = (e, t, n) => {
                     v = eo.previous(g),
                     I = er.get(e, v),
                     S = er.parent(e, g),
-                    T = g[g.length - 1];
+                    b = g[g.length - 1];
                 if (ey.isText(E) && ey.isText(I)) I.text += E.text;
                 else if (ey.isText(E) || ey.isText(I)) throw Error('Cannot apply a "merge_node" operation at path ['.concat(g, '] to nodes of different interfaces: ').concat(eE.stringify(E), ' ').concat(eE.stringify(I)));
                 else I.children.push(...E.children);
-                if ((S.children.splice(T, 1), t)) for (var [b, y] of ep.points(t)) t[y] = ed.transform(b, n);
+                if ((S.children.splice(b, 1), t)) for (var [T, y] of ep.points(t)) t[y] = ed.transform(T, n);
                 break;
             case 'move_node':
                 var { path: A, newPath: N } = n;
@@ -1977,14 +1977,14 @@ var eC = (e, t, n) => {
                         else {
                             var Z = void 0,
                                 F = void 0;
-                            for (var [V, H] of er.texts(e))
-                                if (-1 === eo.compare(H, P)) Z = [V, H];
+                            for (var [V, j] of er.texts(e))
+                                if (-1 === eo.compare(j, P)) Z = [V, j];
                                 else {
-                                    F = [V, H];
+                                    F = [V, j];
                                     break;
                                 }
-                            var j = !1;
-                            Z && F && (j = eo.equals(F[1], P) ? !eo.hasPrevious(F[1]) : eo.common(Z[1], P).length < eo.common(F[1], P).length), Z && !j ? ((U.path = Z[1]), (U.offset = Z[0].text.length)) : F ? ((U.path = F[1]), (U.offset = 0)) : (t = null);
+                            var H = !1;
+                            Z && F && (H = eo.equals(F[1], P) ? !eo.hasPrevious(F[1]) : eo.common(Z[1], P).length < eo.common(F[1], P).length), Z && !H ? ((U.path = Z[1]), (U.offset = Z[0].text.length)) : F ? ((U.path = F[1]), (U.offset = 0)) : (t = null);
                         }
                     }
                 break;
@@ -2033,12 +2033,12 @@ var eC = (e, t, n) => {
                     eI = e_[e_.length - 1];
                 if (ey.isText(eg)) {
                     var eS = eg.text.slice(0, eh),
-                        eT = eg.text.slice(eh);
-                    (eg.text = eS), (ef = eN(eN({}, em), {}, { text: eT }));
+                        eb = eg.text.slice(eh);
+                    (eg.text = eS), (ef = eN(eN({}, em), {}, { text: eb }));
                 } else {
-                    var eb = eg.children.slice(0, eh),
+                    var eT = eg.children.slice(0, eh),
                         eA = eg.children.slice(eh);
-                    (eg.children = eb), (ef = eN(eN({}, em), {}, { children: eA }));
+                    (eg.children = eT), (ef = eN(eN({}, em), {}, { children: eA }));
                 }
                 if ((ev.children.splice(eI + 1, 0, ef), t)) for (var [eC, eR] of ep.points(t)) t[eR] = ed.transform(eC, n);
         }
@@ -2320,18 +2320,18 @@ var eB = eG(
                             var v = eo.next(g),
                                 I = eo.common(p, g),
                                 S = eo.isSibling(p, g),
-                                T = Array.from(J.levels(e, { at: p }), (e) => {
+                                b = Array.from(J.levels(e, { at: p }), (e) => {
                                     var [t] = e;
                                     return t;
                                 })
                                     .slice(I.length)
                                     .slice(0, -1),
-                                b = J.above(e, {
+                                T = J.above(e, {
                                     at: p,
                                     mode: 'highest',
-                                    match: (t) => T.includes(t) && ex(e, t)
+                                    match: (t) => b.includes(t) && ex(e, t)
                                 }),
-                                y = b && J.pathRef(e, b[1]);
+                                y = T && J.pathRef(e, T[1]);
                             if (ey.isText(h) && ey.isText(m)) {
                                 var A = E(h, eR);
                                 (r = m.text.length), (n = A);
@@ -2471,8 +2471,8 @@ var eB = eG(
                                     I = {};
                                 if (0 !== E.length) {
                                     var S = !1;
-                                    for (var T in t) {
-                                        if ('children' !== T && 'text' !== T) a(t[T], g[T]) && ((S = !0), g.hasOwnProperty(T) && (v[T] = g[T]), s ? null != t[T] && (I[T] = s(g[T], t[T])) : null != t[T] && (I[T] = t[T]));
+                                    for (var b in t) {
+                                        if ('children' !== b && 'text' !== b) a(t[b], g[b]) && ((S = !0), g.hasOwnProperty(b) && (v[b] = g[b]), s ? null != t[b] && (I[b] = s(g[b], t[b])) : null != t[b] && (I[b] = t[b]));
                                     }
                                     S &&
                                         e.apply({
@@ -2536,10 +2536,10 @@ var eB = eG(
                                 n = J.pointRef(e, o);
                                 var I = o.path.length - l,
                                     [, S] = h,
-                                    T = o.path.slice(0, I),
-                                    b = 0 === l ? o.offset : o.path[I] + 0;
+                                    b = o.path.slice(0, I),
+                                    T = 0 === l ? o.offset : o.path[I] + 0;
                                 for (var [y, A] of J.levels(e, {
-                                    at: T,
+                                    at: b,
                                     reverse: !0,
                                     voids: a
                                 })) {
@@ -2553,11 +2553,11 @@ var eB = eG(
                                         e.apply({
                                             type: 'split_node',
                                             path: A,
-                                            position: b,
+                                            position: T,
                                             properties: O
                                         });
                                     }
-                                    b = A[A.length - 1] + (N || R ? 1 : 0);
+                                    T = A[A.length - 1] + (N || R ? 1 : 0);
                                 }
                                 if (null == t.at) {
                                     var D = n.current || J.end(e, []);
@@ -2833,23 +2833,23 @@ var eB = eG(
                         }),
                         I = E && v && !eo.equals(E[1], v[1]),
                         S = eo.equals(m.path, g.path),
-                        T = s
+                        b = s
                             ? null
                             : J.void(e, {
                                   at: m,
                                   mode: 'highest'
                               }),
-                        b = s
+                        T = s
                             ? null
                             : J.void(e, {
                                   at: g,
                                   mode: 'highest'
                               });
-                    if (T) {
+                    if (b) {
                         var y = J.before(e, m);
                         y && E && eo.isAncestor(E[1], y.path) && (m = y);
                     }
-                    if (b) {
+                    if (T) {
                         var A = J.after(e, g);
                         A && v && eo.isAncestor(v[1], A.path) && (g = A);
                     }
@@ -2868,7 +2868,7 @@ var eB = eG(
                         L = J.pointRef(e, m),
                         x = J.pointRef(e, g),
                         w = '';
-                    if (!S && !T) {
+                    if (!S && !b) {
                         var M = L.current,
                             [P] = J.leaf(e, M),
                             { path: k } = M,
@@ -2893,21 +2893,21 @@ var eB = eG(
                                     voids: s
                                 })
                             ),
-                        !b)
+                        !T)
                     ) {
                         var B = x.current,
                             [Z] = J.leaf(e, B),
                             { path: F } = B,
                             V = S ? m.offset : 0,
-                            H = Z.text.slice(V, g.offset);
-                        H.length > 0 &&
+                            j = Z.text.slice(V, g.offset);
+                        j.length > 0 &&
                             (e.apply({
                                 type: 'remove_text',
                                 path: F,
                                 offset: V,
-                                text: H
+                                text: j
                             }),
-                            (w = H));
+                            (w = j));
                     }
                     !S &&
                         I &&
@@ -2919,9 +2919,9 @@ var eB = eG(
                             voids: s
                         }),
                         u && r && 'character' === i && w.length > 1 && w.match(/[\u0E00-\u0E7F]+/) && eB.insertText(e, w.slice(0, w.length - a));
-                    var j = L.unref(),
+                    var H = L.unref(),
                         Y = x.unref(),
-                        K = r ? j || Y : Y || j;
+                        K = r ? H || Y : Y || H;
                     null == t.at && K && eB.select(e, K);
                 }
             });
@@ -2972,12 +2972,12 @@ var eB = eG(
                             return 0 !== r.length && (!!h || (!((p && eo.isAncestor(r, g) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n)) || (m && eo.isAncestor(r, E) && W.isElement(n) && !e.isVoid(n) && !e.isInline(n))) && !0));
                         };
                     for (var S of er.nodes({ children: t }, { pass: I })) I(S) && v.push(S);
-                    var T = [],
-                        b = [],
+                    var b = [],
+                        T = [],
                         y = [],
                         A = !0,
                         N = !1;
-                    for (var [C] of v) W.isElement(C) && !e.isInline(C) ? ((A = !1), (N = !0), b.push(C)) : A ? T.push(C) : y.push(C);
+                    for (var [C] of v) W.isElement(C) && !e.isInline(C) ? ((A = !1), (N = !0), T.push(C)) : A ? b.push(C) : y.push(C);
                     var [R] = J.nodes(e, {
                             at: s,
                             match: (t) => ey.isText(t) || J.isInline(e, t),
@@ -2993,26 +2993,26 @@ var eB = eG(
                         at: s,
                         match: (t) => (N ? W.isElement(t) && J.isBlock(e, t) : ey.isText(t) || J.isInline(e, t)),
                         mode: N ? 'lowest' : 'highest',
-                        always: N && (!f || T.length > 0) && (!_ || y.length > 0),
+                        always: N && (!f || b.length > 0) && (!_ || y.length > 0),
                         voids: a
                     });
                     var M = J.pathRef(e, !D || (D && L) ? eo.next(O) : O);
                     if (
-                        (eB.insertNodes(e, T, {
+                        (eB.insertNodes(e, b, {
                             at: M.current,
                             match: (t) => ey.isText(t) || J.isInline(e, t),
                             mode: 'highest',
                             voids: a
                         }),
                         h &&
-                            !T.length &&
-                            b.length &&
+                            !b.length &&
+                            T.length &&
                             !y.length &&
                             eB.delete(e, {
                                 at: d,
                                 voids: a
                             }),
-                        eB.insertNodes(e, b, {
+                        eB.insertNodes(e, T, {
                             at: x.current,
                             match: (t) => W.isElement(t) && J.isBlock(e, t),
                             mode: 'lowest',
@@ -3024,7 +3024,7 @@ var eB = eG(
                             mode: 'highest',
                             voids: a
                         }),
-                        !n.at && (y.length > 0 && w.current ? (r = eo.previous(w.current)) : b.length > 0 && x.current ? (r = eo.previous(x.current)) : M.current && (r = eo.previous(M.current)), r))
+                        !n.at && (y.length > 0 && w.current ? (r = eo.previous(w.current)) : T.length > 0 && x.current ? (r = eo.previous(x.current)) : M.current && (r = eo.previous(M.current)), r))
                     ) {
                         var P = J.end(e, r);
                         eB.select(e, P);

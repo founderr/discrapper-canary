@@ -18,8 +18,8 @@ var r,
     v = n(757266),
     I = n(77498),
     S = n(283595),
-    T = n(246946),
-    b = n(230307),
+    b = n(246946),
+    T = n(230307),
     y = n(799777),
     A = n(417363),
     N = n(941128),
@@ -50,8 +50,8 @@ let F = {
         [P.iEv.ACTIONS]: null
     },
     V = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
-    H = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && A.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
-    j = (0, R.oH)((e, t) => e.filter((e) => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
+    j = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && A.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+    H = (0, R.oH)((e, t) => e.filter((e) => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
     Y = (0, R.oH)((e, t, n, r) => {
         let i = F[t];
         if (null == i) return e;
@@ -60,7 +60,7 @@ let F = {
     }),
     W = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
 function K(e, t) {
-    let n = b.Z.getCurrentUserStatisticsForApplication(e.id);
+    let n = T.Z.getCurrentUserStatisticsForApplication(e.id);
     if (null != n) return new Date(n.last_played_at).getTime();
     let r = t[e.id];
     return null != r ? r : 0;
@@ -100,7 +100,7 @@ function z() {
                             branchId: e.branchId
                         }),
                         isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
-                        shouldShowInLibrary: (0, D.d0)(o, e, T.Z),
+                        shouldShowInLibrary: (0, D.d0)(o, e, b.Z),
                         defaultAction: (0, M.i)(e, A.Z, N.Z)
                     };
                 })(r, n, t, e, !0)
@@ -148,7 +148,7 @@ function z() {
             ((U = a),
             L.isPlatformEmbedded &&
                 x.ZP.setSystemTrayApplications(
-                    H(U)
+                    j(U)
                         .map((e) => e.application)
                         .slice(0, 5)
                 ),
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = _.ZP.Store) {
     initialize() {
-        this.syncWith([p.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, S.Z, b.Z, T.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
+        this.syncWith([p.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, S.Z, T.Z, b.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
     }
     get applicationFilterQuery() {
         return G;
@@ -166,13 +166,13 @@ class q extends (r = _.ZP.Store) {
         return U;
     }
     get launchableApplicationViewItems() {
-        return H(U);
+        return j(U);
     }
     get libraryApplicationViewItems() {
         return V(U);
     }
     get filteredLibraryApplicationViewItems() {
-        return j(this.libraryApplicationViewItems, G);
+        return H(this.libraryApplicationViewItems, G);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, y.Z.sortKey, y.Z.sortDirection, E.default.locale);

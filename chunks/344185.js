@@ -55,8 +55,8 @@ function S(e) {
         delete h[t][n][r],
         l().isEmpty(h[t][n]) && delete h[t][n];
 }
-let T = {};
-class b extends (r = u.ZP.Store) {
+let b = {};
+class T extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(f.Z);
     }
@@ -65,11 +65,11 @@ class b extends (r = u.ZP.Store) {
     }
     getThreadsForGuild(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : T;
+        return null !== (t = h[e]) && void 0 !== t ? t : b;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : T;
+        return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : b;
     }
     hasThreadsForChannel(e, t) {
         return !l().isEmpty(this.getThreadsForParent(e, t));
@@ -84,7 +84,7 @@ class b extends (r = u.ZP.Store) {
     }
 }
 (s = 'ActiveThreadsStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -92,7 +92,7 @@ class b extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(c.Z, {
+    (t.Z = new T(c.Z, {
         CONNECTION_OPEN: function (e) {
             (h = {}),
                 p.clear(),

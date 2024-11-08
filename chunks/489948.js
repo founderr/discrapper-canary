@@ -308,7 +308,7 @@ class v {
 let I = new v();
 'u' > typeof window && I.setContainer(document.body);
 let S = o.createContext(I);
-var T = function (e, t, n, r) {
+var b = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -325,13 +325,13 @@ var T = function (e, t, n, r) {
     }
     return !0;
 };
-let b = !1,
+let T = !1,
     y,
     A = {};
 function N() {
-    if (!b) return;
+    if (!T) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || T(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
+    null == e || b(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
 }
 let C = !1,
     R = {
@@ -342,10 +342,10 @@ let C = !1,
             (C = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (b = !0), (y = requestAnimationFrame(N));
+            (T = !0), (y = requestAnimationFrame(N));
         },
         disableAnimationTracking() {
-            (b = !1), null != y && cancelAnimationFrame(y);
+            (T = !1), null != y && cancelAnimationFrame(y);
         }
     };
 var O = { exports: {} },
@@ -425,8 +425,8 @@ function k(e) {
         [p, m] = o.useState(!1),
         g = o.useContext(S),
         E = o.Children.only(d),
-        { onBlur: v, onFocus: I, ...T } = E.props,
-        b = o.useMemo(
+        { onBlur: v, onFocus: I, ...b } = E.props,
+        T = o.useMemo(
             () => ({
                 className: l,
                 offset: i
@@ -447,8 +447,8 @@ function k(e) {
         ),
         o.useEffect(() => {
             let e = null == s ? void 0 : s.current;
-            null == r || null == e || ((h.current = r), r ? g.showElement(e, b) : !1 === r && g.hide());
-        }, [r, b, g, s]),
+            null == r || null == e || ((h.current = r), r ? g.showElement(e, T) : !1 === r && g.hide());
+        }, [r, T, g, s]),
         P(() => {
             if (null != r) return;
             let e = null == a ? void 0 : a.current,
@@ -464,16 +464,16 @@ function k(e) {
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (h.current = !0), g.showElement(n, b);
+                        (h.current = !0), g.showElement(n, T);
                         return;
                     }
-                    m(!0), t && g.showElement(n, b);
+                    m(!0), t && g.showElement(n, T);
                 }
             }
             function o() {
                 g.hide(), (h.current = !1), m(!1);
             }
-        }, [t, b, r, g, a, s]);
+        }, [t, T, r, g, a, s]);
     let y = o.useCallback(
             (e) => {
                 g.hide(), (h.current = !1), m(!1), null == v || v(e);
@@ -483,14 +483,14 @@ function k(e) {
         A = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((h.current = !0), g.showElement(null != n ? n : e.currentTarget, b)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, b)), null == I || I(e);
+                e.currentTarget === e.target ? ((h.current = !0), g.showElement(null != n ? n : e.currentTarget, T)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, T)), null == I || I(e);
             },
-            [s, t, I, g, b]
+            [s, t, I, g, T]
         );
     return n && null == a && null == r
         ? o.cloneElement(E, {
-              ...T,
-              className: f(T.className, h.current ? u : void 0, p ? c : void 0),
+              ...b,
+              className: f(b.className, h.current ? u : void 0, p ? c : void 0),
               onBlur: y,
               onFocus: A
           })

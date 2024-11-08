@@ -4,7 +4,7 @@ n.r(t),
             return I;
         },
         openQuestSurveyModal: function () {
-            return T;
+            return b;
         }
     }),
     n(47120);
@@ -29,7 +29,7 @@ function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
         l = (0, h.B4)(t),
         [_, p] = s.useState(0),
-        [I, T] = (0, c.useSpring)(() => ({
+        [I, b] = (0, c.useSpring)(() => ({
             from: { width: '0%' },
             config: { duration: 2500 }
         })),
@@ -38,16 +38,16 @@ function I(e) {
                 p(1),
                 null != l &&
                     f.default.track(m.rMx.QUEST_SURVEY_SUBMITTED, {
-                        ...b(l, n),
+                        ...T(l, n),
                         choice: e
                     });
         },
         A = async (e) => {
-            1 === e && (await T({ width: '100%' }), i());
+            1 === e && (await b({ width: '100%' }), i());
         };
     return (
         s.useEffect(() => {
-            null != l && f.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, b(l, n));
+            null != l && f.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, T(l, n));
         }, []),
         null == l && i(),
         (0, a.jsx)(c.ModalRoot, {
@@ -160,7 +160,7 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let t = !1;
     (0, c.openModalLazy)(
         async () => {
@@ -179,14 +179,14 @@ function T(e) {
                 let n = p.Z.getQuest(e.questId);
                 null != n &&
                     f.default.track(m.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...b(n, e.survey),
+                        ...T(n, e.survey),
                         submitted: t
                     });
             }
         }
     );
 }
-function b(e, t) {
+function T(e, t) {
     return {
         quest_id: e.id,
         quest_status: (0, _.uk)(e),

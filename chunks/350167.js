@@ -23,7 +23,7 @@ function s(e, t, n) {
     );
 }
 let o = '1' === a.env.KV_STORAGE_LOGGING,
-    l = new r.Y('Runtime');
+    l = new r.Yd('Runtime');
 class u {
     static nextId() {
         return ++this.counter;

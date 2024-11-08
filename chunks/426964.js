@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(51144),
     I = n(970606),
     S = n(963202),
-    T = n(645896),
-    b = n(905362),
+    b = n(645896),
+    T = n(905362),
     y = n(353093),
     A = n(574410),
     N = n(954138),
@@ -38,9 +38,9 @@ t.Z = i.memo(function (e) {
     var t, n;
     let { clan: k, isLoading: U, onClose: G, profileViewedAnalytics: B, userId: Z } = e,
         F = null == k ? void 0 : k.identityGuildId,
-        V = (0, T.Cc)(null != F ? F : null),
-        H = null == k ? void 0 : k.tag,
-        j = (0, C.Z)('clan_guild_profile'),
+        V = (0, b.Cc)(null != F ? F : null),
+        j = null == k ? void 0 : k.tag,
+        H = (0, C.Z)('clan_guild_profile'),
         { enabled: Y } = (0, c.I7)(),
         { enabled: W } = A.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
         [K, z] = i.useState(!1),
@@ -93,7 +93,7 @@ t.Z = i.memo(function (e) {
         }, [X, q]),
         ed = i.useCallback(
             (e) => {
-                if (null != F) e.stopPropagation(), e.preventDefault(), null == G || G(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, b.SJ)(F);
+                if (null != F) e.stopPropagation(), e.preventDefault(), null == G || G(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, T.SJ)(F);
             },
             [F, G]
         ),
@@ -102,7 +102,7 @@ t.Z = i.memo(function (e) {
                 if (null == V || null == F) return;
                 if ((e.stopPropagation(), e.preventDefault(), null == G || G(), !es))
                     (0, I.hM)(F, I.UE.APPLY_FLOW),
-                        (0, b.qF)(F, V, {
+                        (0, T.qF)(F, V, {
                             source: null == B ? void 0 : B.source,
                             messageId: null == B ? void 0 : B.messageId,
                             tagUserId: null == B ? void 0 : B.tagUserId,
@@ -169,13 +169,13 @@ t.Z = i.memo(function (e) {
             }),
             []
         );
-    if (null == H || null == V || null == F || U)
+    if (null == j || null == V || null == F || U)
         return (0, r.jsx)('div', {
             ...eg,
             children: (0, r.jsx)(a.Spinner, {})
         });
-    let eE = !ei && !j && null != X && !es && W && !K,
-        ev = null != em || (j && Y) || eE,
+    let eE = !ei && !H && null != X && !es && W && !K,
+        ev = null != em || (H && Y) || eE,
         eI = null !== (n = v.ZP.getName(X)) && void 0 !== n ? n : '';
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -194,7 +194,7 @@ t.Z = i.memo(function (e) {
                             className: M.buttonGroupContainer,
                             children: [
                                 null != em && em,
-                                j &&
+                                H &&
                                     Y &&
                                     (0, r.jsx)(a.Button, {
                                         onClick: el,

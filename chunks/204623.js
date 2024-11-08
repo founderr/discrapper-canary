@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -23,7 +23,7 @@ var r = n(200651),
     v = n(981631),
     I = n(388032);
 let S = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
-class T extends i.PureComponent {
+class b extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;

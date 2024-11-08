@@ -17,9 +17,9 @@ function _(e) {
     let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: _, onChange: h, className: p, style: m, note: g, children: E, disabledText: v } = e,
         I = i.useRef(null),
         S = i.useRef(null),
-        T = i.useId(),
-        b = (0, r.jsx)(l.r, {
-            id: T,
+        b = i.useId(),
+        T = (0, r.jsx)(l.r, {
+            id: b,
             checked: t,
             onChange: h,
             disabled: n,
@@ -40,7 +40,7 @@ function _(e) {
                     ref: S,
                     children: [
                         (0, r.jsx)('label', {
-                            htmlFor: T,
+                            htmlFor: b,
                             className: f.title,
                             children: E
                         }),
@@ -50,9 +50,9 @@ function _(e) {
                                 null != _
                                     ? (0, r.jsx)(u.DY, {
                                           text: _,
-                                          children: b
+                                          children: T
                                       })
-                                    : b
+                                    : T
                         })
                     ]
                 })

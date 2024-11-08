@@ -30,7 +30,7 @@ function f(e, t, n) {
     );
 }
 let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
-    h = new o.Y('Flux');
+    h = new o.Yd('Flux');
 class p {
     isDispatching() {
         return null != this._currentDispatchActionType;

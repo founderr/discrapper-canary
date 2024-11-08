@@ -21,7 +21,7 @@ n.d(t, {
         return D;
     },
     Zt: function () {
-        return b;
+        return T;
     },
     Zv: function () {
         return A;
@@ -61,8 +61,8 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
     v = Object.values(d.og),
     I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
     S = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(p, ')(').concat(I, ')'), 'ig'),
-    T = RegExp(''.concat(location.protocol).concat(h, '(').concat(I, ')'), 'ig'),
-    b = (e) => {
+    b = RegExp(''.concat(location.protocol).concat(h, '(').concat(I, ')'), 'ig'),
+    T = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
             if (null != t) return t;
@@ -138,7 +138,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? S : T),
+    O = (e) => null != e.match('development' !== m ? S : b),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
@@ -149,7 +149,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: b(e)
+        previewSticker: T(e)
     }),
     x = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     w = (e, t, n, i) => {

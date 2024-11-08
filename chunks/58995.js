@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(594174),
     I = n(70956),
     S = n(709054),
-    T = n(51144),
-    b = n(443603),
+    b = n(51144),
+    T = n(443603),
     y = n(981631),
     A = n(921944),
     N = n(388032),
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
     w && !t && I && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
     let [P, k] = (0, h.US)(M),
         U = null != P,
-        G = (0, T.Ft)(n),
+        G = (0, b.Ft)(n),
         { Component: B, events: Z, play: F } = (0, u.$)();
     if (t) return null;
     let V = () => {
@@ -101,7 +101,7 @@ t.Z = i.memo(function (e) {
                     onCheckItOutClick: V,
                     markAsDismissed: k
                 }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(T.Z, {
                 innerClassName: R.button,
                 'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,

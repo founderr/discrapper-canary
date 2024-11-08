@@ -23,8 +23,8 @@ var i = n(442837),
     v = n(166584),
     I = n(915014),
     S = n(228168),
-    T = n(981631),
-    b = n(653134);
+    b = n(981631),
+    T = n(653134);
 function y(e) {
     let { user: t, currentUser: n, displayProfile: y, guild: A, isHovering: N, onOpenProfile: C, channelId: R, onClose: O } = e,
         D = u.ZP.getName(null == A ? void 0 : A.id, R, t),
@@ -32,7 +32,7 @@ function y(e) {
         x = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation);
     return (0, r.jsxs)(a.Scroller, {
         fade: !0,
-        className: b.body,
+        className: T.body,
         children: [
             (0, r.jsx)(p.Z, {
                 user: t,
@@ -63,7 +63,7 @@ function y(e) {
                     ]
                 })
             }),
-            L === T.OGo.PENDING_INCOMING &&
+            L === b.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(h.Z.Overlay, {
                     children: (0, r.jsx)(_.Z, {
                         user: t,
@@ -88,7 +88,7 @@ function y(e) {
                 user: t,
                 currentUser: n,
                 onClose: O,
-                className: b.activity
+                className: T.activity
             }),
             null != A &&
                 (0, r.jsx)(v.Z, {

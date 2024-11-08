@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(373228),
     I = n(378233),
     S = n(419922),
-    T = n(981631),
-    b = n(957825),
+    b = n(981631),
+    T = n(957825),
     y = n(388032),
     A = n(191299);
 let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
@@ -142,9 +142,9 @@ let N = (0, m.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                                 }),
                                                 onClick: () => {
                                                     w.type === v.Ih.PACK &&
-                                                        p.default.track(T.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                                                        p.default.track(b.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                                                             location: null == _ ? void 0 : _.location,
-                                                            tab: b.X1.STICKER,
+                                                            tab: T.X1.STICKER,
                                                             sticker_pack_id: w.id,
                                                             guild_id: f
                                                         }),
@@ -217,7 +217,7 @@ t.Z = (e) => {
     let {
             renderCategoryListItem: I,
             rowHeight: S,
-            onScroll: T
+            onScroll: b
         } = P({
             activeIndex: c,
             stickerPickerCategories: f,
@@ -225,7 +225,7 @@ t.Z = (e) => {
             firstStandardStickerCategoryOffsetTop: p,
             setShouldRenderShortcut: u
         }),
-        b = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 e(h), null === (t = a.current) || void 0 === t || t.scrollTo(p);
@@ -238,7 +238,7 @@ t.Z = (e) => {
         expressionsListRef: t,
         store: d.ZN,
         listPadding: x,
-        onScroll: T,
+        onScroll: b,
         renderCategoryListItem: I,
         rowCount: f.length,
         categories: f,
@@ -248,7 +248,7 @@ t.Z = (e) => {
             o &&
             (0, r.jsx)(l.Clickable, {
                 className: s()(A.standardStickerShortcut, { [A.invisibleShortcut]: !o }),
-                onClick: () => b(e),
+                onClick: () => T(e),
                 children: (0, r.jsx)(l.StickerIcon, {
                     size: 'md',
                     color: 'currentColor'

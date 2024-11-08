@@ -18,8 +18,8 @@ var i = n(512969),
     v = n(430824),
     I = n(306680),
     S = n(944486),
-    T = n(914010),
-    b = n(70956),
+    b = n(914010),
+    T = n(70956),
     y = n(198620),
     A = n(981631),
     N = n(176505),
@@ -37,7 +37,7 @@ function R(e, t, n) {
         e
     );
 }
-let O = new a.Y('MessageManager');
+let O = new a.Yd('MessageManager');
 function D(e) {
     let { guildId: t, channelId: n, messageId: i, forceFetch: a, isPreload: o, jumpType: l, skipLocalFetch: d, logFailures: p } = e;
     if (null == n) {
@@ -132,7 +132,7 @@ function D(e) {
         }
     }
 }
-let L = 90 * b.Z.Millis.DAY,
+let L = 90 * T.Z.Millis.DAY,
     x = 'viewedThreadIds';
 function w() {
     let e = S.Z.getChannelId();
@@ -200,7 +200,7 @@ function U(e, t) {
 }
 function G() {
     let e = S.Z.getChannelId(),
-        t = T.Z.getGuildId();
+        t = b.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     if ((null == n ? void 0 : n.type) !== p.tI.VIEW_CHANNEL) U(t, e);
@@ -238,12 +238,12 @@ function F(e) {
     }
 }
 let V = {};
-function H(e) {
+function j(e) {
     var t;
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
     let s = null !== (t = V[n]) && void 0 !== t ? t : 0;
-    if (Date.now() - s < 10 * b.Z.Millis.SECOND) return;
+    if (Date.now() - s < 10 * T.Z.Millis.SECOND) return;
     V[n] = Date.now();
     let o = S.Z.getChannelId(),
         l = g.ZP.getCurrentSidebarChannelId(o),
@@ -257,7 +257,7 @@ function H(e) {
             jump: r
         });
 }
-function j(e) {
+function H(e) {
     let { channelId: t, messageRecord: n, reason: r } = e;
     null != n &&
         o.Z.dispatch({
@@ -298,8 +298,8 @@ class W extends d.Z {
                 CHANNEL_PRELOAD: B,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: F,
-                LOAD_MESSAGES_SUCCESS: H,
-                UPLOAD_FAIL: j,
+                LOAD_MESSAGES_SUCCESS: j,
+                UPLOAD_FAIL: H,
                 CHANNEL_DELETE: () => M(),
                 THREAD_DELETE: () => M()
             });

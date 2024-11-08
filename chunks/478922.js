@@ -24,14 +24,14 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, _) {
         var h;
-        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: b, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: b, renderSection: T, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
-            [V, H] = i.useState(!1),
-            { scrollerRef: j, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
+            [V, j] = i.useState(!1),
+            { scrollerRef: H, scrollerState: Y, getScrollerState: W } = (0, u.T4)();
         (0, u.tT)({
-            scrollerRef: j,
+            scrollerRef: H,
             className: w,
             specs: a,
             orientation: 'vertical',
@@ -51,7 +51,7 @@ function d(e, t, n) {
             getItemKey: v,
             getItemHeight: I,
             getSectionHeight: S,
-            chunkSize: T,
+            chunkSize: b,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
@@ -72,12 +72,12 @@ function d(e, t, n) {
                 },
                 [K, Y, J]
             ),
-            et = (0, u.t2)(j),
+            et = (0, u.t2)(H),
             en = (0, i.useCallback)(() => $.itemGrid, [$]),
             er = (0, i.useCallback)(() => $.coordsMap, [$]),
             ei = i.useCallback(() => ee(), [ee]);
         (0, u.zn)({
-            ref: j,
+            ref: H,
             key: 'container',
             onUpdate: ei,
             resizeObserver: f,
@@ -86,20 +86,20 @@ function d(e, t, n) {
             (0, i.useImperativeHandle)(
                 _,
                 () => ({
-                    getScrollerNode: () => j.current,
+                    getScrollerNode: () => H.current,
                     getItemGrid: en,
                     getCoordsMap: er,
                     getScrollerState: W,
-                    ...(0, u.Ue)(j, W, et)
+                    ...(0, u.Ue)(H, W, et)
                 }),
-                [j, W, en, et, er]
+                [H, W, en, et, er]
             );
         let ea = (0, i.useCallback)(
             (e) => {
                 ee(1),
-                    null == B.current ? H(!0) : clearTimeout(B.current),
+                    null == B.current ? j(!0) : clearTimeout(B.current),
                     (B.current = setTimeout(() => {
-                        (B.current = null), H(!1);
+                        (B.current = null), j(!1);
                     }, 200)),
                     null != p && p(e);
             },
@@ -110,7 +110,7 @@ function d(e, t, n) {
                 2 !== Y.current.dirty && (Y.current.dirty = 2);
             }, [X, Y]),
             (0, r.jsxs)('div', {
-                ref: j,
+                ref: H,
                 onScroll: ea,
                 className: s()(w, {
                     [e]: !0,
@@ -146,7 +146,7 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != b && null != s && b(n, s, e),
+                                                          null != T && null != s && T(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
@@ -160,7 +160,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, y, b, z, X, A, q]
+                        [Q, y, T, z, X, A, q]
                     )
                 ]
             })

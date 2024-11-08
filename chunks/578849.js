@@ -195,8 +195,8 @@ function I(e, { joinWith: t }) {
         .join(t);
 }
 let S = '[a-zA-Z]\\w*',
-    T = '[a-zA-Z_]\\w*',
-    b = '\\b\\d+(\\.\\d+)?',
+    b = '[a-zA-Z_]\\w*',
+    T = '\\b\\d+(\\.\\d+)?',
     y = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
     A = '\\b(0b[01]+)',
     N = {
@@ -230,8 +230,8 @@ var L = Object.freeze({
     __proto__: null,
     MATCH_NOTHING_RE: /\b\B/,
     IDENT_RE: S,
-    UNDERSCORE_IDENT_RE: T,
-    NUMBER_RE: b,
+    UNDERSCORE_IDENT_RE: b,
+    NUMBER_RE: T,
     C_NUMBER_RE: y,
     BINARY_NUMBER_RE: A,
     RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
@@ -275,7 +275,7 @@ var L = Object.freeze({
     HASH_COMMENT_MODE: D,
     NUMBER_MODE: {
         scope: 'number',
-        begin: b,
+        begin: T,
         relevance: 0
     },
     C_NUMBER_MODE: {
@@ -315,11 +315,11 @@ var L = Object.freeze({
     },
     UNDERSCORE_TITLE_MODE: {
         scope: 'title',
-        begin: T,
+        begin: b,
         relevance: 0
     },
     METHOD_GUARD: {
-        begin: '\\.\\s*' + T,
+        begin: '\\.\\s*' + b,
         relevance: 0
     },
     END_SAME_AS_BEGIN: function (e) {
@@ -378,10 +378,10 @@ let G = (e, t) => {
     V = (e, ...t) => {
         console.log(`WARN: ${e}`, ...t);
     },
-    H = (e, t) => {
+    j = (e, t) => {
         !Z[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), (Z[`${e}/${t}`] = !0));
     },
-    j = Error();
+    H = Error();
 function Y(e, t, { key: n }) {
     let r = 0,
         i = e[n],
@@ -397,15 +397,15 @@ function W(e) {
         'string' == typeof e.endScope && (e.endScope = { _wrap: e.endScope }),
         !(function (e) {
             if (Array.isArray(e.begin)) {
-                if (e.skip || e.excludeBegin || e.returnBegin) throw (F('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), j);
-                if ('object' != typeof e.beginScope || null === e.beginScope) throw (F('beginScope must be object'), j);
+                if (e.skip || e.excludeBegin || e.returnBegin) throw (F('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), H);
+                if ('object' != typeof e.beginScope || null === e.beginScope) throw (F('beginScope must be object'), H);
                 Y(e, e.begin, { key: 'beginScope' }), (e.begin = I(e.begin, { joinWith: '' }));
             }
         })(e),
         !(function (e) {
             if (Array.isArray(e.end)) {
-                if (e.skip || e.excludeEnd || e.returnEnd) throw (F('skip, excludeEnd, returnEnd not compatible with endScope: {}'), j);
-                if ('object' != typeof e.endScope || null === e.endScope) throw (F('endScope must be object'), j);
+                if (e.skip || e.excludeEnd || e.returnEnd) throw (F('skip, excludeEnd, returnEnd not compatible with endScope: {}'), H);
+                if ('object' != typeof e.endScope || null === e.endScope) throw (F('endScope must be object'), H);
                 Y(e, e.end, { key: 'endScope' }), (e.end = I(e.end, { joinWith: '' }));
             }
         })(e);
@@ -440,19 +440,19 @@ var q = (function (e) {
     function S(e) {
         return v.noHighlightRe.test(e);
     }
-    function T(e, t, n) {
+    function b(e, t, n) {
         let r = '',
             i = '';
-        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (H('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), H('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
+        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (j('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), j('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
         let a = {
             code: r,
             language: i
         };
         x('before:highlight', a);
-        let s = a.result ? a.result : b(a.language, a.code, n);
+        let s = a.result ? a.result : T(a.language, a.code, n);
         return (s.code = a.code), x('after:highlight', s), s;
     }
-    function b(e, t, s, o) {
+    function T(e, t, s, o) {
         let c = Object.create(null);
         function d() {
             if (!N.keywords) {
@@ -490,7 +490,7 @@ var q = (function (e) {
                               O.addText(D);
                               return;
                           }
-                          (e = b(N.subLanguage, D, !0, C[N.subLanguage])), (C[N.subLanguage] = e._top);
+                          (e = T(N.subLanguage, D, !0, C[N.subLanguage])), (C[N.subLanguage] = e._top);
                       } else e = y(D, N.subLanguage.length ? N.subLanguage : null);
                       N.relevance > 0 && (L += e.relevance), O.addSublanguage(e._emitter, e.language);
                   })()
@@ -577,7 +577,7 @@ var q = (function (e) {
         }
         let S = R(e);
         if (!S) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
-        let T = (function (e) {
+        let b = (function (e) {
                 function t(t, n) {
                     return RegExp(f(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
                 }
@@ -724,7 +724,7 @@ var q = (function (e) {
                 );
             })(S),
             A = '',
-            N = o || T,
+            N = o || b,
             C = {},
             O = new v.__emitter(v);
         !(function () {
@@ -804,7 +804,7 @@ var q = (function (e) {
             a = t
                 .filter(R)
                 .filter(D)
-                .map((t) => b(t, e, !1));
+                .map((t) => T(t, e, !1));
         a.unshift(r);
         let [s, o] = a.sort((e, t) => {
             if (e.relevance !== t.relevance) return t.relevance - e.relevance;
@@ -839,7 +839,7 @@ var q = (function (e) {
             throw new K('One of your code blocks includes unescaped HTML.', e.innerHTML);
         let r = (t = e).textContent,
             i = n
-                ? T(r, {
+                ? b(r, {
                       language: n,
                       ignoreIllegals: !0
                   })
@@ -901,21 +901,21 @@ var q = (function (e) {
         });
     }
     for (let r in (Object.assign(e, {
-        highlight: T,
+        highlight: b,
         highlightAuto: y,
         highlightAll: C,
         highlightElement: A,
         highlightBlock: function (e) {
-            return H('10.7.0', 'highlightBlock will be removed entirely in v12.0'), H('10.7.0', 'Please use highlightElement now.'), A(e);
+            return j('10.7.0', 'highlightBlock will be removed entirely in v12.0'), j('10.7.0', 'Please use highlightElement now.'), A(e);
         },
         configure: function (e) {
             v = a(v, e);
         },
         initHighlighting: () => {
-            C(), H('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
+            C(), j('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
         },
         initHighlightingOnLoad: function () {
-            C(), H('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
+            C(), j('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
         },
         registerLanguage: function (t, r) {
             let i = null;

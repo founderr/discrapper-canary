@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(594174),
     I = n(965645),
     S = n(362061),
-    T = n(70956),
-    b = n(709054),
+    b = n(70956),
+    T = n(709054),
     y = n(51144),
     A = n(443603),
     N = n(981631),
@@ -95,7 +95,7 @@ let x = [
         }
     ],
     M = 1 / 300,
-    P = T.Z.Millis.DAYS_30,
+    P = b.Z.Millis.DAYS_30,
     k = (0, a.animated)(I.Z),
     U = (0, a.animated)(S.Z),
     G = (0, a.animated)(u.GiftIcon);
@@ -158,8 +158,8 @@ t.Z = i.memo(function (e) {
         [l, d] = i.useState(!1),
         I = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         S = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        T = null != S ? b.default.age(S.id) : 0,
-        x = !t && I && T >= P,
+        b = null != S ? T.default.age(S.id) : 0,
+        x = !t && I && b >= P,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
@@ -183,7 +183,7 @@ t.Z = i.memo(function (e) {
                 }
             });
         },
-        H = (0, r.jsxs)('div', {
+        j = (0, r.jsxs)('div', {
             className: D.container,
             onMouseEnter: () => {
                 !l && d(!0);
@@ -217,10 +217,10 @@ t.Z = i.memo(function (e) {
             ]
         });
     return G
-        ? H
+        ? j
         : (0, r.jsx)(u.TooltipContainer, {
               className: D.container,
               text: (0, c.i)(F),
-              children: H
+              children: j
           });
 });

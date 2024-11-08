@@ -1,6 +1,6 @@
 n.d(t, {
     Cf: function () {
-        return b;
+        return T;
     },
     Gj: function () {
         return o;
@@ -27,7 +27,7 @@ n.d(t, {
         return m;
     },
     jb: function () {
-        return T;
+        return b;
     },
     lA: function () {
         return E;
@@ -83,7 +83,7 @@ let I = {
         49: [() => d.intl.string(d.t.QYvZFh), () => d.intl.string(d.t.C2TrLi), () => d.intl.string(d.t['9AEkCw']), () => d.intl.string(d.t['FM0+HR']), () => d.intl.string(d.t['vwjf//']), () => d.intl.string(d.t['Exwe4+']), () => d.intl.string(d.t.QiafXV)]
     },
     S = ['en-GB'];
-function T() {
+function b() {
     return (0, d.getAvailableLocales)()
         .map((e) => {
             let t;
@@ -107,7 +107,7 @@ function T() {
         })
         .filter((e) => !S.includes(e.value));
 }
-function b() {
+function T() {
     return (0, d.getLanguages)()
         .filter((e) => !S.includes(e.code))
         .map((e) =>

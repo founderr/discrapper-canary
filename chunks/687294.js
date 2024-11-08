@@ -18,7 +18,7 @@ var r = n(259443),
     u = n(981631),
     c = n(959517),
     d = n(388032);
-let f = new r.Y('CloudUploaderBase.tsx');
+let f = new r.Yd('CloudUploaderBase.tsx');
 class _ extends l.Z {
     _fileSize() {
         return this.files.reduce((e, t) => {

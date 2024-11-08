@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(480608),
     I = n(124072),
     S = n(184301),
-    T = n(347475),
-    b = n(592125),
+    b = n(347475),
+    T = n(592125),
     y = n(271383),
     A = n(430824),
     N = n(594174),
@@ -79,7 +79,7 @@ function L(e) {
                       null != i && (await (0, v.H)(L, i));
                   },
                   renderPopout: (e) => {
-                      let t = b.Z.getChannel(s),
+                      let t = T.Z.getChannel(s),
                           a = A.Z.getGuild(L),
                           l = y.ZP.getMembers(a.id),
                           u = A.Z.getRole(L, null != i ? i : a.getEveryoneRoleId()),
@@ -101,7 +101,7 @@ function L(e) {
                                                   channelId: t.id
                                               }),
                                           renderPopout: (n) =>
-                                              (0, r.jsx)(T.Z, {
+                                              (0, r.jsx)(b.Z, {
                                                   ...n,
                                                   userId: e.userId,
                                                   guildId: a.id,

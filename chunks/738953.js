@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(510659),
     I = n(113557),
     S = n(867176),
-    T = n(169979),
-    b = n(451834),
+    b = n(169979),
+    T = n(451834),
     y = n(502762),
     A = n(544989),
     N = n(481932),
@@ -38,8 +38,8 @@ var r = n(200651),
     M = n(388032),
     P = n(653134);
 function k(e) {
-    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: H = [] } = e,
-        { analyticsLocations: j } = (0, d.ZP)([...H, c.Z.BITE_SIZE_PROFILE_POPOUT]),
+    let { user: t, currentUser: n, guildId: k, channelId: U, messageId: G, roleId: B, closePopout: Z, setPopoutRef: F, disableUserProfileLink: V = __OVERLAY__, newAnalyticsLocations: j = [] } = e,
+        { analyticsLocations: H } = (0, d.ZP)([...j, c.Z.BITE_SIZE_PROFILE_POPOUT]),
         Y = (0, E.Z)({
             user: t,
             currentUser: n,
@@ -71,13 +71,13 @@ function k(e) {
     let et = (e) => {
         null == Z || Z(),
             (0, O.openUserProfileModal)({
-                sourceAnalyticsLocations: j,
+                sourceAnalyticsLocations: H,
                 ...W,
                 ...e
             });
     };
     return (0, r.jsx)(d.Gt, {
-        value: j,
+        value: H,
         children: (0, r.jsx)(p.Mt, {
             value: W,
             shouldTrackViewOnMount: null == z || null != z.fullProfileLoadedTimestamp,
@@ -125,7 +125,7 @@ function k(e) {
                                                               et(),
                                                                   (0, m.pQ)({
                                                                       action: 'PRESS_VIEW_PROFILE',
-                                                                      analyticsLocations: j,
+                                                                      analyticsLocations: H,
                                                                       ...W
                                                                   });
                                                           }
@@ -142,7 +142,7 @@ function k(e) {
                                             guildId: k,
                                             profileType: x.y0.BITE_SIZE
                                         }),
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(T.Z, {
                                             userId: t.id,
                                             className: P.toast,
                                             onClose: Z
@@ -156,7 +156,7 @@ function k(e) {
                                             profileType: x.y0.BITE_SIZE,
                                             onOpenProfile: V ? void 0 : et
                                         }),
-                                        (0, r.jsx)(T.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: k,

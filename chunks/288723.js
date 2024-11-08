@@ -26,19 +26,19 @@ t.Z = {
                     v = n.altBoundary,
                     I = n.flipVariations,
                     S = void 0 === I || I,
-                    T = n.allowedAutoPlacements,
-                    b = t.options.placement,
-                    y = (0, i.Z)(b) === b,
+                    b = n.allowedAutoPlacements,
+                    T = t.options.placement,
+                    y = (0, i.Z)(T) === T,
                     A =
                         p ||
                         (y || !S
-                            ? [(0, r.Z)(b)]
+                            ? [(0, r.Z)(T)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(b)),
-                    N = [b].concat(A).reduce(function (e, n) {
+                              })(T)),
+                    N = [T].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -47,7 +47,7 @@ t.Z = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: S,
-                                      allowedAutoPlacements: T
+                                      allowedAutoPlacements: b
                                   })
                                 : n
                         );
@@ -92,7 +92,7 @@ t.Z = {
             if (D) {
                 for (
                     var V = S ? 3 : 1,
-                        H = function (e) {
+                        j = function (e) {
                             var t = N.find(function (t) {
                                 var n = O.get(t);
                                 if (n)
@@ -102,9 +102,9 @@ t.Z = {
                             });
                             if (t) return (L = t), 'break';
                         },
-                        j = V;
-                    j > 0 && 'break' !== H(j);
-                    j--
+                        H = V;
+                    H > 0 && 'break' !== j(H);
+                    H--
                 );
             }
             t.placement !== L && ((t.modifiersData[c]._skip = !0), (t.placement = L), (t.reset = !0));

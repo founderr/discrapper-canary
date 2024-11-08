@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(102172),
     I = n(359110),
     S = n(769654),
-    T = n(922482),
-    b = n(543882),
+    b = n(922482),
+    T = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -90,12 +90,12 @@ function $(e) {
             url: eE,
             isLoading: ev,
             canSeePreview: eI
-        } = (0, o.cj)([N.Z, b.Z], () => {
+        } = (0, o.cj)([N.Z, T.Z], () => {
             let e = null != e_ && N.Z.canBasicChannel(W.S7T.CONNECT, e_);
             return e
                 ? {
-                      url: b.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: b.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -117,20 +117,20 @@ function $(e) {
             });
         }
     }, [t, eS, eo, el, a]);
-    let eT = (0, d.Z)(ev ? null : eE),
-        eb = ev || null == eE ? eT : eE;
+    let eb = (0, d.Z)(ev ? null : eE),
+        eT = ev || null == eE ? eb : eE;
     if (null == ef || null == e_ || (eo && !1 === a.discoverable) || null === en) return null;
     let ey = () => {
             let e = s()(Q.preview, es),
                 t = () => {
                     ec({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == ee || ee();
                 };
-            return null == eb && ev
+            return null == eT && ev
                 ? (0, r.jsx)('div', {
                       className: e,
                       children: (0, r.jsx)(l.Spinner, {})
                   })
-                : null == eb
+                : null == eT
                   ? (0, r.jsxs)(l.Clickable, {
                         className: s()(e, Q.overlay, { [Q.clickable]: em }),
                         onClick: em ? t : void 0,
@@ -162,7 +162,7 @@ function $(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: eb,
+                                src: eT,
                                 className: Q.image
                             }),
                             en !== Y.y0.FULL_SIZE &&
@@ -206,7 +206,7 @@ function $(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(q.clickable, q.inline),
                                         onClick: () => {
-                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
+                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
                                         },
                                         children: e_.name
                                     })

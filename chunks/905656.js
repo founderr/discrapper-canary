@@ -36,7 +36,7 @@ function v(e) {
                 'png'
             )
         ],
-        T = [
+        b = [
             (0, r.jsx)(
                 'source',
                 {
@@ -66,7 +66,7 @@ function v(e) {
                     'webm'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function v(e) {
                     'hevc'
                 )
             ),
-            T.unshift(
+            b.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -99,19 +99,19 @@ function v(e) {
             )),
         {
             [c.BRd.DARK]: S,
-            [c.BRd.LIGHT]: T
+            [c.BRd.LIGHT]: b
         }
     );
 }
 let I = o.Z.getAppSpinnerSources(),
     S = null != I ? v(I) : null,
-    T = v({});
+    b = v({});
 t.Z = (e) => {
     var t;
     let { loop: n = !0, autoPlay: o = !0, setRef: l, className: d, onReady: f } = e,
         { theme: _ } = (0, s.useThemeContext)(),
         { reducedMotion: h } = i.useContext(s.AccessibilityPreferencesContext),
-        p = T;
+        p = b;
     null != S && (p = S);
     let m = null !== (t = p[(0, a.wj)(_) ? c.BRd.DARK : c.BRd.LIGHT]) && void 0 !== t ? t : p[c.BRd.DARK];
     return (0, r.jsx)(

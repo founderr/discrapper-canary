@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return H;
+        return j;
     }
 }),
     n(47120);
@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(898531),
     I = n(923973),
     S = n(189771),
-    T = n(560688),
-    b = n(871499),
+    b = n(560688),
+    T = n(871499),
     y = n(136995),
     A = n(25827),
     N = n(131951),
@@ -89,7 +89,7 @@ function V(e) {
     return (0, r.jsxs)('div', {
         className: P.actions,
         children: [
-            (0, r.jsx)(b.d, {
+            (0, r.jsx)(T.d, {
                 iconComponent: u.XSmallIcon,
                 color: 'red',
                 className: P.actionButton,
@@ -119,7 +119,7 @@ function V(e) {
                             onPopoutClick: i > 1 ? s : null,
                             className: P.actionButton,
                             popoutOpen: u,
-                            onCameraUnavailable: T.Z,
+                            onCameraUnavailable: b.Z,
                             onChange: () => {
                                 f.default.selectVoiceChannel(n.id, !0), (0, m.XU)(x.ME, n.id);
                             }
@@ -135,14 +135,14 @@ function V(e) {
         ]
     });
 }
-function H(e) {
+function j(e) {
     let { animatedStyle: t, y: n, x: a, channel: f } = e,
         [m, g] = i.useState(!1),
         E = (0, h.x)(f),
         v = (0, p.ZP)(f),
         [I, S] = (0, l.Wu)([N.Z], () => [N.Z.supports(w.AN.VIDEO), Object.keys(N.Z.getVideoDevices()).length]),
-        T = (0, l.e7)([R.Z], () => R.Z.isFocused()),
-        b = (0, l.e7)([O.Z], () => O.Z.getMode(f.id)),
+        b = (0, l.e7)([R.Z], () => R.Z.isFocused()),
+        T = (0, l.e7)([O.Z], () => O.Z.getMode(f.id)),
         y = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -162,12 +162,12 @@ function H(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [f]);
-    let C = b === x.WtW.VIDEO && I && S > 0,
+    let C = T === x.WtW.VIDEO && I && S > 0,
         L = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(D.Z, {
                     className: P.icon,
-                    ringing: T,
+                    ringing: b,
                     src: null != E ? E : '',
                     ringingType: D.Z.RingingType.INCOMING,
                     size: m ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
@@ -185,14 +185,14 @@ function H(e) {
                             color: 'header-secondary',
                             className: P.subtitle,
                             variant: m ? 'text-sm/normal' : 'text-md/normal',
-                            children: b === x.WtW.VOICE ? M.intl.string(M.t.Js8cKy) : M.intl.string(M.t.KcnWCA)
+                            children: T === x.WtW.VOICE ? M.intl.string(M.t.Js8cKy) : M.intl.string(M.t.KcnWCA)
                         })
                     ]
                 })
             ]
         }),
-        H = C ? U : G,
-        j = (0, l.e7)([R.Z], () => R.Z.windowSize());
+        j = C ? U : G,
+        H = (0, l.e7)([R.Z], () => R.Z.windowSize());
     return (0, r.jsx)(_.Z, {
         className: P.wrapper,
         selector: '.'.concat(P.root),
@@ -200,8 +200,8 @@ function H(e) {
             left: a,
             top: n
         },
-        maxX: j.width,
-        maxY: j.height,
+        maxX: H.width,
+        maxY: H.height,
         onDragEnd: y,
         dragAnywhere: !0,
         children: (0, r.jsx)(u.ThemeProvider, {
@@ -211,9 +211,9 @@ function H(e) {
                     className: s()(P.root, k.elevationHigh, { [P.previewCamera]: m }, e),
                     style: {
                         ...t,
-                        width: A.value.interpolate([0, 1], [H.width, B]),
-                        minHeight: A.value.interpolate([0, 1], [H.height, Z]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - H.width)) / 2])
+                        width: A.value.interpolate([0, 1], [j.width, B]),
+                        minHeight: A.value.interpolate([0, 1], [j.height, Z]),
+                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - j.width)) / 2])
                     },
                     children: [
                         m

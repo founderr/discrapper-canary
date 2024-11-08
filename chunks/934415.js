@@ -62,15 +62,15 @@ var r = n(149765),
     g = n(981631),
     E = n(474936),
     v = n(388032);
-let { GUILD_VOICE: I, GUILD_CATEGORY: S, GUILD_STAGE_VOICE: T } = g.d4z;
-function b(e, t) {
+let { GUILD_VOICE: I, GUILD_CATEGORY: S, GUILD_STAGE_VOICE: b } = g.d4z;
+function T(e, t) {
     return e === t || e === S;
 }
 function y(e, t, n) {
     let i = p.Hn;
     return (
         ((0, u.r8)(t) || t === S) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        (b(t, I) || b(t, T)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        (T(t, I) || T(t, b)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -91,7 +91,7 @@ function A(e, t, n) {
             (c = i.BN.ROLE),
             (n = p.Hn),
             ((0, u.r8)(l) || l === S) && (n = r.IH(n, g.Plq.VIEW_CHANNEL)),
-            b(l, I) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
+            T(l, I) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
             {
                 id: o,
                 type: c,
@@ -133,7 +133,7 @@ function O(e, t, n) {
         d = h.ZP.getVoiceStatesForChannel(e),
         _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
         p = !1;
-    p = e.type === T ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
+    p = e.type === b ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
     let m = e.userLimit > 0 && c >= e.userLimit;
     return p || (m && !_);
 }

@@ -16,7 +16,7 @@ var r = n(259443),
     u = n(594174),
     c = n(484459);
 let d = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
-    f = new r.Y('UserProfileModalActionCreators'),
+    f = new r.Yd('UserProfileModalActionCreators'),
     _ = async (e) => {
         if (l.default.getId() === e)
             try {

@@ -18,8 +18,8 @@ let _ = null,
     v = new Set(),
     I = new Set(),
     S = {},
-    T = 0,
-    b = null,
+    b = 0,
+    T = null,
     y = [],
     A = !1,
     N = 0,
@@ -50,7 +50,7 @@ class U extends (r = l.ZP.Store) {
         this.waitFor(c.default), this.syncWith([c.default], w);
     }
     checkAndFetchReferralsRemaining() {
-        null == _ && !E && T < 5 && (null == b || b < Date.now()) && (0, d.C$)();
+        null == _ && !E && b < 5 && (null == T || T < Date.now()) && (0, d.C$)();
     }
     getReferralsRemaining() {
         return this.checkAndFetchReferralsRemaining(), _;
@@ -134,7 +134,7 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
-            (C = !1), (R = null), (E = !1), (T += 1), (b = Date.now() + 1000 * Math.pow(2, T));
+            (C = !1), (R = null), (E = !1), (b += 1), (T = Date.now() + 1000 * Math.pow(2, b));
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
             let { recipientId: t } = e;
@@ -191,6 +191,6 @@ class U extends (r = l.ZP.Store) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: P,
         LOGOUT: function () {
-            (_ = null), (h = {}), (p = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (S = {}), (T = 0), (b = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
+            (_ = null), (h = {}), (p = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (S = {}), (b = 0), (T = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
         }
     }));

@@ -40,7 +40,7 @@ t.Z = i.memo(
                 }
             );
         }, [g]);
-        let { Component: T, events: b, play: y } = (0, l.z)();
+        let { Component: b, events: T, play: y } = (0, l.z)();
         return n
             ? null
             : (0, r.jsx)('div', {
@@ -48,7 +48,7 @@ t.Z = i.memo(
                   ref: t,
                   children: (0, r.jsx)(d.Z, {
                       innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: E && !I }),
-                      ...b,
+                      ...T,
                       onClick: () => {
                           S(), y();
                       },
@@ -59,7 +59,7 @@ t.Z = i.memo(
                       'aria-controls': m,
                       sparkle: !1,
                       notification: null,
-                      children: (0, r.jsx)(T, { color: 'currentColor' })
+                      children: (0, r.jsx)(b, { color: 'currentColor' })
                   })
               });
     })

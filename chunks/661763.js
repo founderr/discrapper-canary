@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     B3: function () {
-        return H;
+        return j;
     },
     Dt: function () {
         return L;
@@ -81,7 +81,7 @@ n.d(t, {
         return K;
     },
     rf: function () {
-        return j;
+        return H;
     },
     tS: function () {
         return f;
@@ -223,17 +223,17 @@ function I(e, t = {}) {
 function S(e) {
     if (
         (function () {
-            if (null == T) {
-                T = !1;
+            if (null == b) {
+                b = !1;
                 try {
                     document.createElement('div').focus({
                         get preventScroll() {
-                            return (T = !0), !0;
+                            return (b = !0), !0;
                         }
                     });
                 } catch (e) {}
             }
-            return T;
+            return b;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -263,8 +263,8 @@ function S(e) {
             })(t);
     }
 }
-let T = null;
-function b(e) {
+let b = null;
+function T(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -289,14 +289,14 @@ function O() {
 }
 function D() {
     return (
-        b(/AppleWebKit/i) &&
+        T(/AppleWebKit/i) &&
         !(function () {
-            return b(/Chrome/i);
+            return T(/Chrome/i);
         })()
     );
 }
 function L() {
-    return b(/Android/i);
+    return T(/Android/i);
 }
 let x = (0, r.createContext)({
     isNative: !0,
@@ -320,7 +320,7 @@ function M(e, t) {
 function P(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-    b(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
+    T(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
     let u =
         D() && A() && !C()
             ? new KeyboardEvent('keydown', {
@@ -421,7 +421,7 @@ function V(e, t) {
         }
     );
 }
-function H(e) {
+function j(e) {
     let t = (0, r.useRef)();
     return (0, r.useMemo)(
         () => ({
@@ -435,7 +435,7 @@ function H(e) {
         [e]
     );
 }
-function j(e, t) {
+function H(e, t) {
     let n = (0, r.useRef)(!0),
         i = (0, r.useRef)(null);
     (0, r.useEffect)(

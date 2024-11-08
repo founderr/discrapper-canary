@@ -26,15 +26,15 @@ let I = () => 80,
             children: t
         });
     },
-    T = (e) => {
+    b = (e) => {
         let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...p } = e,
             I = (0, u.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
-            T = (0, _.Yq)(n.skuId),
-            b = h.ZP.canUseCollectibles(t),
-            y = s === m.$0.PREMIUM_PURCHASE && !b,
+            b = (0, _.Yq)(n.skuId),
+            T = h.ZP.canUseCollectibles(t),
+            y = s === m.$0.PREMIUM_PURCHASE && !T,
             A = i.useRef(null),
             N = (0, d.Z)(null != a ? a : A),
             { avatarDecorationSrc: C } = (0, g.Z)({
@@ -54,9 +54,9 @@ let I = () => 80,
                     src: C,
                     alt: n.label
                 }),
-                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && b)
+                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && T)
                     ? null
-                    : T
+                    : b
                       ? (0, r.jsx)(c.PremiumBadge, {
                             className: v.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -162,7 +162,7 @@ t.Z = (e) => {
                 .otherwise((e) => {
                     let n = (null == a ? void 0 : a.id) === e.id;
                     return (0, r.jsx)(
-                        T,
+                        b,
                         {
                             style: { ...u },
                             user: t,

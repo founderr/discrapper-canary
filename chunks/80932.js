@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     RE: function () {
-        return b;
+        return T;
     },
     Xe: function () {
         return R;
@@ -15,7 +15,7 @@ n.d(t, {
         return y;
     },
     rS: function () {
-        return T;
+        return b;
     },
     t0: function () {
         return I;
@@ -73,7 +73,7 @@ function S(e) {
                     })
             );
 }
-function T(e) {
+function b(e) {
     let { guildId: t, image: n, name: r, roles: i } = e;
     return (
         o.Z.dispatch({
@@ -106,7 +106,7 @@ function T(e) {
             )
     );
 }
-function b(e, t) {
+function T(e, t) {
     return (
         o.Z.dispatch({
             type: 'EMOJI_DELETE',

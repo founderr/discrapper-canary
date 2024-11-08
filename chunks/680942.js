@@ -8,9 +8,9 @@ var r = n(200651),
     d = n(884697),
     u = n(474936),
     m = n(231338),
-    p = n(388032),
-    f = n(149158);
-let h = {
+    h = n(388032),
+    p = n(149158);
+let f = {
     dark: [
         {
             box: '#FFF19E',
@@ -81,18 +81,18 @@ t.Z = (e) => {
     return (0, d.x6)(t)
         ? null
         : (0, r.jsx)(s.Tooltip, {
-              text: p.intl.string(p.t['JCFN//']),
+              text: h.intl.string(h.t['JCFN//']),
               delay: C,
               children: (e) =>
                   (0, r.jsx)(s.Button, {
                       ...e,
                       buttonRef: _,
-                      className: f.giftButton,
+                      className: p.giftButton,
                       color: x ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
                       look: s.Button.Looks.FILLED,
                       size: s.ButtonSizes.ICON,
-                      innerClassName: f.giftButtonInner,
-                      'aria-label': p.intl.string(p.t.PEjaCw),
+                      innerClassName: p.giftButtonInner,
+                      'aria-label': h.intl.string(h.t.PEjaCw),
                       onClick: (e) => {
                           e.stopPropagation(),
                               (0, c.Z)({
@@ -114,7 +114,7 @@ t.Z = (e) => {
                                 hovered: k,
                                 isContentDismissed: !0,
                                 themeOverride: j,
-                                boxColors: h
+                                boxColors: f
                             })
                           : (0, r.jsx)(s.GiftIcon, {
                                 size: 'md',

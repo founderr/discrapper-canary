@@ -131,8 +131,8 @@ t.ZP = function (e) {
                 }),
             [a]
         ),
-        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
-        b = i.useMemo(() => n.slice(E + 1), [n, E]);
+        b = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        T = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
         ref: m,
@@ -162,8 +162,8 @@ t.ZP = function (e) {
                     })
                 ]
             }),
-            T.map(a),
-            b.length > 0 && (null != p ? p : S)(b)
+            b.map(a),
+            T.length > 0 && (null != p ? p : S)(T)
         ]
     });
 };

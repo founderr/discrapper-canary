@@ -23,7 +23,7 @@ function u(e, t, n) {
         e
     );
 }
-let c = new o.Y('DirectVideo');
+let c = new o.Yd('DirectVideo');
 class d {
     addref() {
         this.refcount++;

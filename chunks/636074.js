@@ -27,9 +27,9 @@ function c(e) {
         v = r.useState(null),
         I = v[0],
         S = v[1],
-        T = r.useState(null),
-        b = T[0],
-        y = T[1];
+        b = r.useState(null),
+        T = b[0],
+        y = b[1];
     r.useEffect(
         function () {
             (0, a.k$)(m, I);
@@ -45,13 +45,13 @@ function c(e) {
                     modifiers: [].concat(_, [
                         {
                             name: 'arrow',
-                            enabled: null != b,
-                            options: { element: b }
+                            enabled: null != T,
+                            options: { element: T }
                         }
                     ])
                 };
             },
-            [n, d, p, _, b]
+            [n, d, p, _, T]
         ),
         N = (0, s.D)(h || E, I, A),
         C = N.state,

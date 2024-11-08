@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(695346),
     I = n(594174),
     S = n(626135),
-    T = n(624138),
-    b = n(45521),
+    b = n(624138),
+    T = n(45521),
     y = n(285651),
     A = n(217590),
     N = n(453070),
@@ -35,28 +35,28 @@ var r = n(200651),
     k = n(611480),
     U = n(981631),
     G = n(319796);
-let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    Z = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
-    F = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    V = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    H = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
-    j = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
-    Y = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    W = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
-    K = j + 2 * W,
+let B = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
+    Z = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
+    F = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
+    V = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    j = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    H = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
+    Y = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
+    W = (0, b.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
+    K = H + 2 * W,
     z = Y + 2 * W,
     q = s()(A.Iw, 200),
     Q = s()(A.m1, 200),
     X = i.forwardRef(function (e, t) {
         var a;
-        let { containerWidth: s, channel: u, onSelectSticker: T, closePopout: j } = e,
+        let { containerWidth: s, channel: u, onSelectSticker: b, closePopout: H } = e,
             { location: Y } = (0, d.O)(),
             { analyticsLocations: W } = (0, _.ZP)(f.Z.STICKER_PICKER),
             X = (null === (a = (0, E.N)()) || void 0 === a ? void 0 : a.subscription_trial) != null,
             J = i.useRef(null),
             $ = i.useRef(null),
             ee = i.useRef(null),
-            et = (0, b.Q)((e) => e.showPremiumUpsell),
+            et = (0, T.Q)((e) => e.showPremiumUpsell),
             [en, er] = (0, p.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.Z),
             ei = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: eL }));
@@ -80,16 +80,16 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eg = ep.length + em.length,
             eE = i.useCallback(
                 (e) => {
-                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), T(e.sticker, R.V0.STICKER_PICKER);
+                    '' === en ? (0, A.On)(e) : (0, A.Yk)(e, en, eg), b(e.sticker, R.V0.STICKER_PICKER);
                 },
-                [T, en, eg]
+                [b, en, eg]
             ),
             ev = null != eo && eo > B,
             {
                 rowCount: eI,
                 rowCountBySection: eS,
-                stickersGrid: eT,
-                gutterWidth: eb,
+                stickersGrid: eb,
+                gutterWidth: eT,
                 columnCounts: ey
             } = (0, N.el)({
                 filteredStickers: ed,
@@ -97,7 +97,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 collapsedStickersCategories: eu,
                 listWidth: eo,
                 listPaddingRight: F,
-                stickerNodeMargin: ev ? V : H,
+                stickerNodeMargin: ev ? V : j,
                 stickerNodeWidth: ev ? K : z
             }),
             eA = i.useCallback(
@@ -133,7 +133,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             } = (0, O.t)({
                 columnCounts: ey,
                 stickersListRef: $,
-                stickersGrid: eT,
+                stickersGrid: eb,
                 onGridItemSelect: eA,
                 store: h.ZN,
                 setInspectedStickerPosition: h.ZN.setInspectedExpressionPosition,
@@ -171,8 +171,8 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 null === (e = ee.current) || void 0 === e || e.focus();
             }, []);
         let ex = i.useCallback(() => {
-            j(), S.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
-        }, [j]);
+            H(), S.default.track(U.rMx.PREMIUM_PROMOTION_OPENED, { location_section: U.jXE.STICKER_PICKER_UPSELL }), (0, g.z)();
+        }, [H]);
         return (0, r.jsxs)(_.Gt, {
             value: W,
             children: [
@@ -189,7 +189,7 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 es
                     ? (0, r.jsx)(L.Z, {
                           className: G.emptyState,
-                          onClose: j
+                          onClose: H
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
@@ -207,13 +207,13 @@ let B = (0, T.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 getStickerItemProps: eN,
                                                 getStickerRowProps: eC,
                                                 gridWidth: eo,
-                                                gutterWidth: eb,
+                                                gutterWidth: eT,
                                                 isUsingKeyboardNavigation: eD,
                                                 onSelectSticker: eE,
                                                 rowCount: eI,
                                                 rowCountBySection: eS,
                                                 stickersCategories: ea,
-                                                stickersGrid: eT,
+                                                stickersGrid: eb,
                                                 channel: u
                                             })
                                           : null

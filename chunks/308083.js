@@ -6,7 +6,7 @@ n.d(t, {
         return en;
     },
     CT: function () {
-        return H;
+        return j;
     },
     DA: function () {
         return ea;
@@ -51,7 +51,7 @@ n.d(t, {
         return Q;
     },
     Pv: function () {
-        return b;
+        return T;
     },
     Sq: function () {
         return C;
@@ -66,7 +66,7 @@ n.d(t, {
         return O;
     },
     WZ: function () {
-        return j;
+        return H;
     },
     Wy: function () {
         return r;
@@ -75,7 +75,7 @@ n.d(t, {
         return N;
     },
     cG: function () {
-        return T;
+        return b;
     },
     cm: function () {
         return A;
@@ -153,8 +153,8 @@ var r,
     v = n(137920),
     I = n(388032);
 let S = 200,
-    T = 4,
-    b = 'ClanSetupModal',
+    b = 4,
+    T = 'ClanSetupModal',
     y = 'ClanSettingsModal',
     A = 20,
     N = 30,
@@ -221,8 +221,8 @@ let G = '700136079562375258',
     Z = ['Server: NA', 'Server: EU', 'Server: LATAM', 'Server: KR', 'Server: AP', 'Voice ON', 'Voice OFF', 'Unrated', 'All Ranks', 'Bronze+', 'Silver+', 'Gold+', 'Platinum+', 'Diamond+'],
     F = new Set([...Z, 'Server: NA', 'Server: EU', 'Server: Asia', 'Server: TW/HK/MO', 'Mondstadt', 'Liyue', 'Inazuma', 'Sumeru', 'Fontaine', 'F2P', 'Spenders', 'Co-op', 'Support']),
     V = ['20+', '30+', '40+', 'All Ages'],
-    H = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
-    j = new Set([...Z, ...V, ...H]),
+    j = ['Recurring Events', 'Beginner Friendly', 'PUGs', 'Inclusive', 'Parent Friendly', 'Work-life Balance', 'Competitive', 'Streamer', 'Esports'],
+    H = new Set([...Z, ...V, ...j]),
     Y = new Set(['Bulgarian', 'Chinese (Simplified)', 'Chinese (Traditional)', 'Croatian', 'Czech', 'Danish', 'Dutch', 'English', 'Finnish', 'French', 'German', 'Greek', 'Hindi', 'Hungarian', 'Italian', 'Japanese', 'Korean', 'Lithuanian', 'Norwegian', 'Polish', 'Portuguese', 'Romanian', 'Russian', 'Spanish', 'Swedish', 'Thai', 'Turkish', 'Ukrainian', 'Vietnamese']);
 function W(e, t) {
     var n;
@@ -231,7 +231,7 @@ function W(e, t) {
         ((n = t),
         (e) => {
             var t;
-            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), j.has(t) || K.has(t) || Y.has(t)) ? 0 : 1) << 3) | ((F.has(e) ? 1 : 0) << 2) | ((V.includes(e) ? 1 : 0) << 1) | ((H.includes(e) ? 1 : 0) << 0));
+            return -((((null == n ? void 0 : n.includes(e)) ? 1 : 0) << 4) | ((((t = e), H.has(t) || K.has(t) || Y.has(t)) ? 0 : 1) << 3) | ((F.has(e) ? 1 : 0) << 2) | ((V.includes(e) ? 1 : 0) << 1) | ((j.includes(e) ? 1 : 0) << 0));
         })
     );
 }

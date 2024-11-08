@@ -58,7 +58,7 @@ function p(e) {
                     analyticsLocations: g
                 })
         }),
-        T = (0, d.Z)({
+        b = (0, d.Z)({
             user: t,
             guildId: n,
             location: E,
@@ -69,7 +69,7 @@ function p(e) {
                     analyticsLocations: g
                 })
         }),
-        b = (0, d.T)({
+        T = (0, d.T)({
             user: t,
             guildId: n,
             location: E,
@@ -82,7 +82,7 @@ function p(e) {
         }),
         y = [
             [p, v],
-            [S, I, T, b],
+            [S, I, b, T],
             [
                 (0, o.Z)({
                     id: t.id,

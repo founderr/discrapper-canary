@@ -27,7 +27,7 @@ n.d(t, {
         return L;
     },
     nk: function () {
-        return b;
+        return T;
     },
     r3: function () {
         return C;
@@ -259,7 +259,7 @@ let S = (0, a.B)({
             }
         ]
     }),
-    T = (0, a.B)({
+    b = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_genshin_pilot',
         label: 'Clans Genshin Pilot',
@@ -278,11 +278,11 @@ let S = (0, a.B)({
             }
         ]
     });
-function b(e) {
+function T(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         i = S.useExperiment({ location: e }, { autoTrackExposure: r }),
-        a = T.useExperiment({ location: e }, { autoTrackExposure: r }),
+        a = b.useExperiment({ location: e }, { autoTrackExposure: r }),
         s = f(e, r);
     return {
         clanDiscoveryEnabled: i.clanDiscoveryEnabled || a.clanDiscoveryEnabled || s,

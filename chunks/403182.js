@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     nA: function () {
-        return T;
+        return b;
     },
     qF: function () {
         return p;
@@ -24,7 +24,7 @@ n.d(t, {
         return v;
     },
     vY: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -130,11 +130,11 @@ function S(e) {
         i = null != r ? h.HO[r.premiumTier].limits.fileSize : _.mBz;
     return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
-function T(e, t) {
+function b(e, t) {
     let n = S(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function b(e) {
+function T(e) {
     return (
         (function (e) {
             let t = 0;

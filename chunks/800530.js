@@ -18,7 +18,7 @@ n.d(t, {
         return v;
     },
     SU: function () {
-        return u;
+        return d;
     },
     Sv: function () {
         return T;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     wo: function () {
-        return d;
+        return u;
     }
 });
 var i,
@@ -52,8 +52,8 @@ var i,
     o,
     s,
     c,
-    u,
     d,
+    u,
     m,
     h,
     f,
@@ -74,11 +74,11 @@ function C(e, t, n) {
         e
     );
 }
-((i = u || (u = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
+((i = d || (d = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
 class I {}
 C(I, 'TOS_LINK', 'https://discord.com/terms'), C(I, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(I, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(I, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class x {}
-C(x, 'CLASSIFICATION_ID', 'classification_id'), C(x, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
+C(x, 'CLASSIFICATION_ID', 'classification_id'), C(x, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
 class N {}
 C(N, 'ICON_TYPE', 'icon_type'),
     C(N, 'HEADER', 'header'),

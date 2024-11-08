@@ -67,7 +67,7 @@ function S() {
     let t = E(e);
     for (let e in t) null == _.Z.getChannel(e) && delete t[e];
 }
-function T(e) {
+function b(e) {
     let {
             channel: { id: t }
         } = e,
@@ -76,7 +76,7 @@ function T(e) {
     let r = E(n);
     return delete r[t], !1;
 }
-class b extends (i = l.ZP.PersistedStore) {
+class T extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         (g = null != e ? e : {}),
             !(function () {
@@ -140,9 +140,9 @@ class b extends (i = l.ZP.PersistedStore) {
         return null == n ? null : n[1];
     }
 }
-p(b, 'displayName', 'DraftStore'),
-    p(b, 'persistKey', 'DraftStore'),
-    p(b, 'migrations', [
+p(T, 'displayName', 'DraftStore'),
+    p(T, 'persistKey', 'DraftStore'),
+    p(T, 'migrations', [
         (e) => {
             if (null == e) return {};
             for (let t in e) 'timestamp' in e[t] && (e[t] = { 0: e[t] });
@@ -157,7 +157,7 @@ p(b, 'displayName', 'DraftStore'),
             return n;
         }
     ]),
-    (t.Z = new b(u.Z, {
+    (t.Z = new T(u.Z, {
         CONNECTION_OPEN: function () {
             let e = f.default.getId();
             return !(e in g) && (g[e] = {}), S(), !1;
@@ -171,8 +171,8 @@ p(b, 'displayName', 'DraftStore'),
         GUILD_DELETE: function () {
             return S(), !1;
         },
-        CHANNEL_DELETE: T,
-        THREAD_DELETE: T,
+        CHANNEL_DELETE: b,
+        THREAD_DELETE: b,
         THREAD_CREATE: function (e) {
             let { channel: t } = e,
                 n = f.default.getId();

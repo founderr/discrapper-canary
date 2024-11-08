@@ -49,14 +49,14 @@ t.Z = {
             v = t._value,
             I = _(n.duration, m, g),
             S = _(n.toValue, a, s),
-            T = r[h](t, {
+            b = r[h](t, {
                 ...E,
                 toValue: S,
                 tension: o,
                 friction: l,
                 duration: I
             }),
-            b = T;
+            T = b;
         if (c || d) {
             let e = _(n.duration, m, g);
             (i = r[h](t, {
@@ -66,13 +66,13 @@ t.Z = {
                 friction: l,
                 duration: e
             })),
-                (b = r.sequence([T, i]));
+                (T = r.sequence([b, i]));
         }
         u
-            ? b.start(() => {
+            ? T.start(() => {
                   (!p || (p && p())) && (f ? f(e.bind(null, t, n)) : e(t, n));
               })
-            : b.start(f);
+            : T.start(f);
     },
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];

@@ -46,7 +46,7 @@ var r,
     m = n(259443),
     g = n(65154),
     E = n(436620);
-let v = new m.Y('SDP');
+let v = new m.Yd('SDP');
 ((a = r || (r = {})).AUDIO = 'a'), (a.VIDEO = 'v'), ((s = i || (i = {})).SENDRECV = 'sendrecv'), (s.SENDONLY = 'sendonly'), (s.RECVONLY = 'recvonly'), (s.INACTIVE = 'inactive');
 let I = 'UDP/TLS/RTP/SAVPF';
 function S(e) {
@@ -61,7 +61,7 @@ function S(e) {
             return 'inactive';
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = ''.concat(e, '-').concat(t),
         i = ''.concat(n).concat(r);
     return [
@@ -87,7 +87,7 @@ function T(e, t, n) {
         }
     ];
 }
-function b(e) {
+function T(e) {
     return p.write({
         version: 0,
         timing: {
@@ -268,7 +268,7 @@ function A(e) {
                         codec: 'audio' === h ? i : o,
                         payload: 'audio' === h ? a : l,
                         bitrate: 'audio' === h ? s : u,
-                        ssrcs: T(d, r, 'audio' === h ? 'a' : 'v'),
+                        ssrcs: b(d, r, 'audio' === h ? 'a' : 'v'),
                         extensions: f
                     })
                 );
@@ -282,7 +282,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return T(n, t, 'a');
+                    return b(n, t, 'a');
                 });
         if (
             (_.push(
@@ -308,7 +308,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return T(n, t, 'v');
+                    return b(n, t, 'v');
                 });
             _.push(
                 y({
@@ -329,7 +329,7 @@ function A(e) {
     }
     return new RTCSessionDescription({
         type: t,
-        sdp: b(_)
+        sdp: T(_)
     });
 }
 function N(e) {
@@ -340,7 +340,7 @@ function N(e) {
         d.forEach((e) => {
             let t,
                 { ssrc: d, cname: p, type: m, direction: g, mid: E } = e;
-            '' !== p ? (t = T(p, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
+            '' !== p ? (t = b(p, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
             _.push(
                 y({
                     mid: E,
@@ -360,7 +360,7 @@ function N(e) {
         }),
         new RTCSessionDescription({
             type: t,
-            sdp: b(_)
+            sdp: T(_)
         })
     );
 }

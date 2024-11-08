@@ -18,8 +18,8 @@ var r,
     v = n(496675),
     I = n(699516),
     S = n(606304),
-    T = n(594174),
-    b = n(979651),
+    b = n(594174),
+    T = n(979651),
     y = n(938475),
     A = n(501655),
     N = n(88751),
@@ -96,11 +96,11 @@ function V(e) {
     let { user: t } = e;
     return G(t.id);
 }
-function H(e) {
+function j(e) {
     let { relationship: t } = e;
     return G(t.id);
 }
-function j(e) {
+function H(e) {
     let { guild: t } = e;
     !(function (e) {
         for (let t of O.values(e)) O.delete(t.id), delete L[t.id];
@@ -115,7 +115,7 @@ function Y(e) {
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, T.default, g.Z, S.Z, b.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, p.Z);
+        this.waitFor(m.default, b.default, g.Z, S.Z, T.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, p.Z);
     }
     getParticipantsVersion(e) {
         var t, n;
@@ -203,10 +203,10 @@ class K extends (r = d.ZP.Store) {
         },
         STREAM_CLOSE: Y,
         STREAM_DELETE: Y,
-        RELATIONSHIP_ADD: H,
-        RELATIONSHIP_REMOVE: H,
-        GUILD_CREATE: j,
-        GUILD_DELETE: j,
+        RELATIONSHIP_ADD: j,
+        RELATIONSHIP_REMOVE: j,
+        GUILD_CREATE: H,
+        GUILD_DELETE: H,
         PASSIVE_UPDATE_V2: function (e) {
             let t = !1;
             for (let n of x(e.guildId)) t = P(n).rebuild() || t;

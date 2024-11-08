@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(639119),
     I = n(631771),
     S = n(790527),
-    T = n(474936),
-    b = n(981631),
+    b = n(474936),
+    T = n(981631),
     y = n(731994),
     A = n(388032),
     N = n(746971);
@@ -44,7 +44,7 @@ function C(e) {
         ),
         M = (0, p.XS)(),
         P = w || M,
-        k = R === b.BRd.LIGHT ? 'light' : 'dark',
+        k = R === T.BRd.LIGHT ? 'light' : 'dark',
         U = P
             ? (0, r.jsx)('img', {
                   className: N.updatedArt,
@@ -59,27 +59,27 @@ function C(e) {
         B = i.useMemo(() => {
             let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G });
             switch (O) {
-                case T.p9.TIER_0:
+                case b.p9.TIER_0:
                     e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: G });
                     break;
-                case T.p9.TIER_1:
+                case b.p9.TIER_1:
                     e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: G });
             }
             return e;
         }, [O, G]),
-        Z = (0, _.BU)(T.Uq / 1024, { useKibibytes: !0 }),
+        Z = (0, _.BU)(b.Uq / 1024, { useKibibytes: !0 }),
         F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
         V = P
             ? M
                 ? (0, g.T)({
                       user: C,
                       onClick: () => {
-                          window.open(h.Z.getArticleURL(b.BhN.NITRO_FAQ), '_blank');
+                          window.open(h.Z.getArticleURL(T.BhN.NITRO_FAQ), '_blank');
                       }
                   })
                 : A.intl.string(A.t.ZcYwgY)
             : A.intl.formatToPlainString(A.t.htbuIS, { premiumMaxSize: Z }),
-        H = P
+        j = P
             ? (0, r.jsx)('div', {
                   className: N.body,
                   children: (0, r.jsx)(s.Text, {
@@ -101,24 +101,24 @@ function C(e) {
         artElement: U,
         artContainerClassName: P ? N.updatedArtContainer : N.artContainer,
         enableArtBoxShadow: !1,
-        type: T.cd.UPLOAD_ERROR_UPSELL,
+        type: b.cd.UPLOAD_ERROR_UPSELL,
         title: F,
-        body: H,
+        body: j,
         context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
         glowUp: V,
-        analyticsLocation: { section: b.jXE.FILE_UPLOAD_POPOUT },
+        analyticsLocation: { section: T.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: T.Si.TIER_2,
+        subscriptionTier: b.Si.TIER_2,
         secondaryCTA: P ? A.intl.string(A.t.ZnqyZ2) : void 0,
         onSecondaryClick: P
             ? function () {
                   (0, l.Z)(),
                       t(),
-                      f.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
-                          location_section: b.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: b.qAy.NAVIGATION_LINK
+                      f.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+                          location_section: T.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: T.qAy.NAVIGATION_LINK
                       }),
-                      (0, u.uL)(b.Z5c.APPLICATION_STORE);
+                      (0, u.uL)(T.Z5c.APPLICATION_STORE);
               }
             : void 0,
         showEnhancedUpsell: P,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -23,9 +23,9 @@ var r = n(200651),
     v = n(388032),
     I = n(83931),
     S = n(881828);
-let T = 32;
-function b(e) {
-    let { user: t, children: n, onClose: b } = e,
+let b = 32;
+function T(e) {
+    let { user: t, children: n, onClose: T } = e,
         { analyticsLocations: y } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
         { context: A } = (0, h.KZ)(),
         { profileType: N, primaryColor: C } = (0, p.z)(),
@@ -45,11 +45,11 @@ function b(e) {
                 sourceAnalyticsLocations: y,
                 ...A
             }),
-                null == b || b();
+                null == T || T();
         };
     return (0, r.jsx)(o.Popout, {
         shouldShow: null != x,
-        spacing: null != C ? T : 28,
+        spacing: null != C ? b : 28,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {

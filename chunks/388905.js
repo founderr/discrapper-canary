@@ -21,7 +21,7 @@ n.d(t, {
         return y;
     },
     Vj: function () {
-        return b;
+        return T;
     },
     gO: function () {
         return N;
@@ -33,7 +33,7 @@ n.d(t, {
         return D;
     },
     qE: function () {
-        return T;
+        return b;
     },
     v6: function () {
         return L;
@@ -101,7 +101,7 @@ let E = (e) => {
         });
     };
 (S.Looks = s.Button.Looks), (S.Colors = s.Button.Colors), (S.Sizes = s.Button.Sizes);
-let T = (e) => {
+let b = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(g, {
             src: n,
@@ -110,7 +110,7 @@ let T = (e) => {
             'aria-hidden': !0
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
         return (0, r.jsx)(d.Z, {
             active: !0,
@@ -120,7 +120,7 @@ let T = (e) => {
             className: a
         });
     };
-b.Sizes = d.Z.Sizes;
+T.Sizes = d.Z.Sizes;
 let y = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(g, {
@@ -132,7 +132,7 @@ let y = (e) => {
 };
 y.Sizes = s.AvatarSizes;
 let A = (e) => {
-        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: h, autoFocus: p, maxLength: g, spellCheck: E, name: v, description: I, required: S, onFocus: T, onBlur: b } = e,
+        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: h, autoFocus: p, maxLength: g, spellCheck: E, name: v, description: I, required: S, onFocus: b, onBlur: T } = e,
             y = (0, c.Dt)();
         return (0, r.jsxs)(s.FormItem, {
             title: t,
@@ -156,8 +156,8 @@ let A = (e) => {
                     maxLength: g,
                     spellCheck: E,
                     id: y,
-                    onFocus: T,
-                    onBlur: b
+                    onFocus: b,
+                    onBlur: T
                 }),
                 null != I
                     ? (0, r.jsx)(s.FormText, {
@@ -245,7 +245,7 @@ let A = (e) => {
                           color: 'header-secondary',
                           children: p.intl.string(p.t['/8WWvL'])
                       }),
-                      (0, r.jsx)(T, {
+                      (0, r.jsx)(b, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.AvatarSizes.SIZE_24,

@@ -18,8 +18,8 @@ var r = n(200651),
     I = n(319181);
 t.Z = function (e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: S = null } = e,
-        T = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        b = i.useMemo(() => (0, h.fh)(n, h.eC.REWARD), [n]),
+        b = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        T = i.useMemo(() => (0, h.fh)(n, h.eC.REWARD), [n]),
         y = i.useCallback(
             (t) => {
                 var r;
@@ -40,14 +40,14 @@ t.Z = function (e) {
         C = i.useRef(a);
     i.useEffect(() => {
         if (null != N.current) {
-            if (!b.isAnimated || T) {
+            if (!T.isAnimated || b) {
                 (N.current.currentTime = 0), N.current.pause();
                 return;
             }
             a && !C.current ? N.current.play() : !a && C.current && ((N.current.currentTime = 0), N.current.pause()), (C.current = a);
         }
-    }, [a, b, T]);
-    let R = b.isAnimated
+    }, [a, T, b]);
+    let R = T.isAnimated
         ? (0, r.jsx)(m.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
               children: (e) => {
@@ -56,15 +56,15 @@ t.Z = function (e) {
                       ref: (t) => {
                           (e.current = t), (N.current = t);
                       },
-                      autoPlay: !T && a,
+                      autoPlay: !b && a,
                       loop: !0,
                       muted: !0,
                       playsInline: !0,
                       className: I.questRewardTileAsset,
                       controls: !1,
                       children: (0, r.jsx)('source', {
-                          src: b.url,
-                          type: null !== (t = b.mimetype) && void 0 !== t ? t : void 0
+                          src: T.url,
+                          type: null !== (t = T.mimetype) && void 0 !== t ? t : void 0
                       })
                   });
               }
@@ -76,7 +76,7 @@ t.Z = function (e) {
                       ref: e,
                       alt: p.r.build(n.config).defaultReward.messages.name,
                       className: s()(I.questRewardTileAsset, I.questRewardTileAssetStatic),
-                      src: b.url
+                      src: T.url
                   })
           });
     return null == S

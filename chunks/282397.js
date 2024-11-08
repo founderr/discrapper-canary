@@ -17,8 +17,8 @@ let g = 5 * p.Z.Millis.MINUTE,
     v = {},
     I = {},
     S = {};
-let T = {};
-function b(e) {
+let b = {};
+function T(e) {
     var t;
     if (null == e) return !1;
     let n = v[e];
@@ -26,8 +26,8 @@ function b(e) {
     null === (t = n.onSuccess) || void 0 === t || t.call(n), y(e);
 }
 function y(e) {
-    if (null != T[e]) {
-        delete T[e];
+    if (null != b[e]) {
+        delete b[e];
         return;
     }
     let t = v[e];
@@ -35,7 +35,7 @@ function y(e) {
     let n = S[e];
     null != n && delete I[n],
         delete S[e],
-        (T[e] = {
+        (b[e] = {
             insertedAt: Date.now(),
             nonce: e,
             messageId: n,
@@ -80,10 +80,10 @@ class A extends (a = u.ZP.Store) {
             (v = {}),
                 (I = {}),
                 (S = {}),
-                (T = {}),
+                (b = {}),
                 setInterval(() => {
                     let e = Date.now();
-                    for (let [t, n] of Object.entries(T)) e - n.insertedAt > E && delete T[t];
+                    for (let [t, n] of Object.entries(b)) e - n.insertedAt > E && delete b[t];
                 }, g);
         },
         INTERACTION_QUEUE: function (e) {
@@ -108,7 +108,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_SUCCESS: function (e) {
             let { nonce: t } = e;
-            b(t);
+            T(t);
         },
         INTERACTION_FAILURE: function (e) {
             var t;
@@ -143,7 +143,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_IFRAME_MODAL_CREATE: function (e) {
             let { application: t, nonce: n } = e;
-            (i = t.id), b(n);
+            (i = t.id), T(n);
         },
         INTERACTION_IFRAME_MODAL_CLOSE: function () {
             (r = void 0), (i = void 0);
@@ -154,7 +154,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_MODAL_CREATE: function (e) {
             let { nonce: t } = e;
-            b(t);
+            T(t);
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
             let t,
@@ -164,7 +164,7 @@ class A extends (a = u.ZP.Store) {
                 a = _.default.getId(),
                 s = r.find((e) => e.user_id === a && e.session_id === i);
             if (null == s || null == s.nonce) return;
-            let o = T[s.nonce];
+            let o = b[s.nonce];
             if ((null == o ? ((t = S[s.nonce]), (n = v[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) y(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
         }
     }));

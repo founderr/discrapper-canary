@@ -24,7 +24,7 @@ n(837748);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: S = 'default', isInteracting: T = !1, shouldAnimate: b, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: S = 'default', isInteracting: b = !1, shouldAnimate: T, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
         M = i.useRef(),
@@ -37,29 +37,29 @@ function v(e) {
         F = i.useMemo(() => {
             if (null != a) return a;
             if (null != d) {
-                let e = !0 === b && G;
+                let e = !0 === T && G;
                 return h.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === I && (e || D || !0 === T),
+                    animated: U && !0 === I && (e || D || !0 === b),
                     size: B
                 });
             }
             if (null != _) return p.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [I, G, d, _, B, U, D, T, b, a]),
+        }, [I, G, d, _, B, U, D, b, T, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {
                     !e && w(Date.now());
                 }));
         }, [F]),
-        H = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 I && L(!0), null == d && P(_), null == y || y(e);
             },
             [I, _, y, P, d]
         ),
-        j = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 I && L(!1), null == A || A(e);
             },
@@ -74,12 +74,12 @@ function v(e) {
                     reactionLarge: 'reactionLarge' === S
                 }),
                 onError: V,
-                onMouseEnter: H,
-                onMouseLeave: j,
+                onMouseEnter: j,
+                onMouseLeave: H,
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, d, _, H, j, V, O, S]);
+        }, [l, d, _, j, H, V, O, S]);
     i.useEffect(
         () => () => {
             var e;

@@ -37,7 +37,7 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     v = r(g, E, '*'),
     I = r(/[A-Z]/, E, '*'),
     S = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, v, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
-    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    b = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 e.exports = function (e) {
     let t = {
             match: /\s+/,
@@ -45,7 +45,7 @@ e.exports = function (e) {
         },
         h = e.COMMENT('/\\*', '\\*/', { contains: ['self'] }),
         g = [e.C_LINE_COMMENT_MODE, h],
-        b = {
+        T = {
             match: [/\./, i(...s, ...o)],
             className: { 2: 'keyword' }
         },
@@ -73,7 +73,7 @@ e.exports = function (e) {
             keyword: A.concat(f),
             literal: c
         },
-        R = [b, y, N],
+        R = [T, y, N],
         O = {
             match: r(/\./, i(..._)),
             relevance: 0
@@ -133,7 +133,7 @@ e.exports = function (e) {
             variants: [B(), B('#'), B('##'), B('###'), Z(), Z('#'), Z('##'), Z('###')]
         },
         V = { match: r(/`/, v, /`/) },
-        H = [
+        j = [
             V,
             {
                 className: 'variable',
@@ -144,7 +144,7 @@ e.exports = function (e) {
                 match: `\\$${E}+`
             }
         ],
-        j = {
+        H = {
             match: /(@|#(un)?)available/,
             className: 'keyword',
             starts: {
@@ -152,7 +152,7 @@ e.exports = function (e) {
                     {
                         begin: /\(/,
                         end: /\)/,
-                        keywords: T,
+                        keywords: b,
                         contains: [...x, P, F]
                     }
                 ]
@@ -163,7 +163,7 @@ e.exports = function (e) {
             match: r(/@/, i(...S))
         },
         W = [
-            j,
+            H,
             Y,
             {
                 className: 'meta',
@@ -222,7 +222,7 @@ e.exports = function (e) {
                 ...x,
                 P,
                 F,
-                ...H,
+                ...j,
                 ...W,
                 K
             ]
@@ -286,7 +286,7 @@ e.exports = function (e) {
     for (let e of F.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...R, ...D, ...x, P, F, ...H];
+        let n = [...R, ...D, ...x, P, F, ...j];
         t.contains = [
             ...n,
             {
@@ -340,7 +340,7 @@ e.exports = function (e) {
             ...x,
             P,
             F,
-            ...H,
+            ...j,
             ...W,
             K,
             q

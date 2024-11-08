@@ -23,17 +23,17 @@ function p(e) {
     return new Promise((e) =>
         (function (e) {
             var t, n, u;
-            let { openWarningPopout: f, type: p, content: m, stickers: g, uploads: E, channel: v, restrictMentions: I, respectCooldown: S, userCanUsePremiumMessageLength: T, resolve: b } = e;
+            let { openWarningPopout: f, type: p, content: m, stickers: g, uploads: E, channel: v, restrictMentions: I, respectCooldown: S, userCanUsePremiumMessageLength: b, resolve: T } = e;
             if (0 === m.length && !(null === (t = p.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == g || 0 === g.length) && (null == E || 0 === E.length)) {
-                b({
+                T({
                     valid: !1,
                     failureReason: _.zYc.EMPTY_MESSAGE
                 });
                 return;
             }
-            let y = T ? _.en1 : _.J6R;
+            let y = b ? _.en1 : _.J6R;
             if (m.length > y) {
-                if (T || null == v) {
+                if (b || null == v) {
                     (n = m.length),
                         (u = y),
                         (0, i.openModal)((e) =>
@@ -57,7 +57,7 @@ function p(e) {
                         channel: v,
                         content: m
                     });
-                b({
+                T({
                     valid: !1,
                     failureReason: _.zYc.MESSAGE_TOO_LONG
                 });
@@ -65,7 +65,7 @@ function p(e) {
             }
             if (null != v) {
                 if (null != v.getGuildId() && S && l.Z.getSlowmodeCooldownGuess(v.id) > 0) {
-                    b({
+                    T({
                         valid: !1,
                         failureReason: _.zYc.SLOWMODE_COOLDOWN
                     });
@@ -79,11 +79,11 @@ function p(e) {
                                 analyticsType: t,
                                 channel: v,
                                 onCancel: () =>
-                                    b({
+                                    T({
                                         valid: !1,
                                         failureReason: _.zYc.SHOUTING_CANCELLED
                                     }),
-                                onConfirm: () => b({ valid: !0 }),
+                                onConfirm: () => T({ valid: !0 }),
                                 popoutText: r,
                                 animation: n
                             });
@@ -102,13 +102,13 @@ function p(e) {
                         }),
                     { onCloseRequest: _.dG4 }
                 ),
-                    b({
+                    T({
                         valid: !1,
                         failureReason: _.zYc.RATE_LIMITED
                     });
                 return;
             }
-            b({ valid: !0 });
+            T({ valid: !0 });
         })({
             openWarningPopout: t,
             type: n,

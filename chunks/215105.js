@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(510659),
     I = n(810097),
     S = n(652853),
-    T = n(228168),
-    b = n(420212),
+    b = n(228168),
+    T = n(420212),
     y = n(388032),
     A = n(678668);
 let N = (0, f.kt)({
@@ -34,13 +34,13 @@ let N = (0, f.kt)({
     C = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case T.n_.ACTIVITY:
+            case b.n_.ACTIVITY:
                 let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n });
                 return ''.concat(I.jd).concat(a, '*\n').concat(t);
-            case T.n_.AVATAR:
+            case b.n_.AVATAR:
                 let s = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
                 return ''.concat(I.jd).concat(s, '*\n').concat(t);
-            case T.n_.STATUS:
+            case b.n_.STATUS:
                 let o = y.intl.formatToPlainString(y.t.lFXgFR, { username: n });
                 return null != i ? ''.concat(I.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(I.jd).concat(o, '*\n').concat(t);
             default:
@@ -49,11 +49,11 @@ let N = (0, f.kt)({
     },
     R = (e) => {
         switch (e) {
-            case T.n_.ACTIVITY:
+            case b.n_.ACTIVITY:
                 return y.t.Qn081N;
-            case T.n_.AVATAR:
+            case b.n_.AVATAR:
                 return y.t.xGNPFB;
-            case T.n_.STATUS:
+            case b.n_.STATUS:
                 return y.t.g9BTCA;
             default:
                 (0, _.vE)(e);
@@ -71,14 +71,14 @@ function O(e) {
         F = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                e.key === b.vn.ESCAPE && (e.stopPropagation(), w());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), w());
             },
             [w]
         );
     i.useEffect(() => {
         null == I || I(null == F ? void 0 : F.current);
     }, [F, I]);
-    let H = async (e) => {
+    let j = async (e) => {
             if (null == e) return;
             L({ action: x });
             let n = C({
@@ -97,23 +97,23 @@ function O(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            M(T.P.REPLY);
+            M(b.P.REPLY);
         },
-        j = {
-            [A.biteSize]: o === T.y0.BITE_SIZE,
-            [A.panel]: o === T.y0.PANEL,
-            [A.fullSize]: o === T.y0.FULL_SIZE
+        H = {
+            [A.biteSize]: o === b.y0.BITE_SIZE,
+            [A.panel]: o === b.y0.PANEL,
+            [A.fullSize]: o === b.y0.FULL_SIZE
         },
         Y = {
-            [A.status]: f === T.n_.STATUS,
-            [A.avatar]: f === T.n_.AVATAR,
-            [A.activity]: f === T.n_.ACTIVITY
+            [A.status]: f === b.n_.STATUS,
+            [A.avatar]: f === b.n_.AVATAR,
+            [A.activity]: f === b.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
         ref: F,
         onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(A.container, j, Y, { [A.customProfileTheme]: null != P }),
+            className: s()(A.container, H, Y, { [A.customProfileTheme]: null != P }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: O,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -141,7 +141,7 @@ function O(e) {
                         };
                     try {
                         return (
-                            await H(n),
+                            await j(n),
                             w(),
                             null == D || D(),
                             {

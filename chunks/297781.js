@@ -27,7 +27,7 @@ n.d(t, {
         return W;
     },
     U9: function () {
-        return j;
+        return H;
     },
     XF: function () {
         return k;
@@ -45,7 +45,7 @@ n.d(t, {
         return L;
     },
     n8: function () {
-        return H;
+        return j;
     },
     pQ: function () {
         return G;
@@ -76,18 +76,18 @@ var r,
     v = n(719247),
     I = n(26033),
     S = n(22211),
-    T = n(561308),
-    b = n(797342),
+    b = n(561308),
+    T = n(797342),
     y = n(371991),
     A = n(206583),
     N = n(388032),
     C = n(369312);
 let R = {
     [d.s.TOP_ARTIST]: [V],
-    [d.s.PLAYED_GAME]: [M, P, w, j, U, Z, H, B, G],
+    [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, B, G],
     [d.s.TOP_GAME]: [F],
     [d.s.WATCHED_MEDIA]: [Y, W],
-    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, j, H, G]
+    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, G]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (r[(r.OVERLAY = 7)] = 'OVERLAY');
 let O = s.createContext({});
@@ -141,7 +141,7 @@ function w(e) {
 function M(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
-        o = (0, T.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
+        o = (0, b.Jg)(t) && (0, g.Hi)(s, [0, 4, 7]),
         l = o ? p.tokens.colors.TEXT_POSITIVE : i,
         { streamPreviewUrl: u } = (0, S.Z)(t),
         c = null != u ? p.ScreenArrowIcon : (0, I.Mq)(t) ? p.AppsIcon : p.GameControllerIcon;
@@ -164,9 +164,9 @@ function M(e) {
 function P(e) {
     let { entry: t } = e,
         { defaultTextColor: n, defaultIconColor: r } = D(),
-        { state: i, party: s, inExperiment: o } = (0, b.n)(t);
+        { state: i, party: s, inExperiment: o } = (0, T.n)(t);
     if (!o) return null;
-    let l = (0, T.bT)(i, s);
+    let l = (0, b.bT)(i, s);
     return null == l
         ? null
         : (0, a.jsxs)(L, {
@@ -188,7 +188,7 @@ function k(e) {
     var t;
     let { entry: n, hovered: r } = e,
         { defaultTextColor: i, defaultIconColor: s, location: o } = D(),
-        l = (0, T.Jg)(n) && (0, g.Hi)(o, [0, 4]),
+        l = (0, b.Jg)(n) && (0, g.Hi)(o, [0, 4]),
         u = l ? p.tokens.colors.TEXT_POSITIVE : s,
         c = l ? 'text-positive' : i,
         d = (0, h.e7)([v.Z], () => v.Z.getMatchingActivity(n)),
@@ -229,7 +229,7 @@ function U(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = (0, g.Hi)(n, [0, 3]) ? p.tokens.colors.STATUS_POSITIVE : void 0;
-    return (0, T.Ol)(t)
+    return (0, b.Ol)(t)
         ? (0, a.jsx)(x, {
               Icon: p.NewUserSimpleIcon,
               text: N.intl.string(N.t.keY6mZ),
@@ -240,9 +240,9 @@ function U(e) {
 function G(e) {
     let { entry: t } = e,
         { location: n } = D();
-    if (!(0, T.V5)(t)) return null;
-    let r = (0, T.kr)(t),
-        { text: i, tooltipText: s } = (0, T.zo)(t);
+    if (!(0, b.V5)(t)) return null;
+    let r = (0, b.kr)(t),
+        { text: i, tooltipText: s } = (0, b.zo)(t);
     return null == i
         ? null
         : (0, a.jsx)(x, {
@@ -256,9 +256,9 @@ function B(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = 0 !== n,
-        i = (0, T.dw)(t);
+        i = (0, b.dw)(t);
     if (null == i) return null;
-    let s = (0, T.GE)(i);
+    let s = (0, b.GE)(i);
     return (0, a.jsx)(x, {
         Icon: p.RetryIcon,
         showTooltip: !r,
@@ -269,8 +269,8 @@ function B(e) {
 function Z(e) {
     let { entry: t } = e,
         { location: n } = D(),
-        r = (0, T.vU)(t);
-    return (0, T.q_)(t)
+        r = (0, b.vU)(t);
+    return (0, b.q_)(t)
         ? (0, a.jsx)(x, {
               Icon: p.FlashIcon,
               showTooltip: 0 === n,
@@ -283,7 +283,7 @@ function F(e) {
     let { entry: t } = e,
         { location: n } = D(),
         r = 0 !== n,
-        i = (0, T.yA)(t);
+        i = (0, b.yA)(t);
     if (null == i) return null;
     let s = r ? N.t.C0Axoa : N.t.SDRHgo;
     return (0, a.jsx)(x, {
@@ -297,7 +297,7 @@ function V(e) {
     var t;
     let { entry: n } = e,
         { location: r } = D(),
-        i = null === (t = (0, T.PJ)(n, f.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+        i = null === (t = (0, b.PJ)(n, f.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == i) return null;
     let s = (0, g.Hi)(r, [1, 2, 5]) ? N.intl.formatToPlainString(N.t.HtifnJ, { count: i }) : N.intl.formatToPlainString(N.t['jq/Bmp'], { count: i });
     return (0, a.jsx)(x, {
@@ -305,11 +305,11 @@ function V(e) {
         text: s
     });
 }
-function H(e) {
+function j(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (3 === n) return null;
-    let r = (0, T.ig)(t);
+    let r = (0, b.ig)(t);
     return null == r || r === _.o.TRENDING_TYPE_UNSPECIFIED
         ? null
         : (0, a.jsx)(x, {
@@ -317,7 +317,7 @@ function H(e) {
               text: N.intl.string(N.t.kAlUs7)
           });
 }
-function j(e) {
+function H(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (3 === n) return null;
@@ -332,7 +332,7 @@ function j(e) {
 function Y(e) {
     let { entry: t, hovered: n } = e,
         { defaultTextColor: r, defaultIconColor: i, location: s } = D(),
-        o = (0, T.Jg)(t) && 4 === s,
+        o = (0, b.Jg)(t) && 4 === s,
         l = o ? p.tokens.colors.TEXT_POSITIVE : i;
     return (0, a.jsxs)('div', {
         className: C.badgeContainer,
@@ -352,7 +352,7 @@ function Y(e) {
 }
 function W(e) {
     let { entry: t } = e,
-        n = (0, T.ap)(t.extra.media_assets_large_text);
+        n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
         : (0, a.jsx)(x, {

@@ -4,7 +4,7 @@ n.d(t, {
         return h;
     },
     Rn: function () {
-        return b;
+        return T;
     },
     Vf: function () {
         return S;
@@ -203,8 +203,8 @@ function I(e) {
 function S(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
-let T = new Map();
-function b(e, t) {
+let b = new Map();
+function T(e, t) {
     var n, r;
     let i,
         a = e.calendar.getDaysInMonth(e);
@@ -220,8 +220,8 @@ function b(e, t) {
                             _[
                                 (function (e) {
                                     if (Intl.Locale) {
-                                        let t = T.get(e);
-                                        return !t && ((t = new Intl.Locale(e).maximize().region), T.set(e, t)), t;
+                                        let t = b.get(e);
+                                        return !t && ((t = new Intl.Locale(e).maximize().region), b.set(e, t)), t;
                                     }
                                     let t = e.split('-')[1];
                                     return 'u' === t ? null : t;
@@ -441,7 +441,7 @@ function V(e) {
     let t = L(e, new f());
     return `${String(t.year).padStart(4, '0')}-${String(t.month).padStart(2, '0')}-${String(t.day).padStart(2, '0')}`;
 }
-function H(e) {
+function j(e) {
     let t,
         n = 'object' == typeof e[0] ? e.shift() : new f();
     if ('string' == typeof e[0]) t = e.shift();
@@ -451,7 +451,7 @@ function H(e) {
     }
     return [n, t, e.shift(), e.shift(), e.shift()];
 }
-var j = new WeakMap();
+var H = new WeakMap();
 class Y {
     copy() {
         return this.era ? new Y(this.calendar, this.era, this.year, this.month, this.day) : new Y(this.calendar, this.year, this.month, this.day);
@@ -478,11 +478,11 @@ class Y {
         return m(this, e);
     }
     constructor(...e) {
-        (0, a._)(this, j, {
+        (0, a._)(this, H, {
             writable: !0,
             value: void 0
         });
-        let [t, n, r, i, s] = H(e);
+        let [t, n, r, i, s] = j(e);
         (this.calendar = t), (this.era = n), (this.year = r), (this.month = i), (this.day = s), k(this);
     }
 }
@@ -573,7 +573,7 @@ class K {
             writable: !0,
             value: void 0
         });
-        let [t, n, r, i, s] = H(e);
+        let [t, n, r, i, s] = j(e);
         (this.calendar = t), (this.era = n), (this.year = r), (this.month = i), (this.day = s), (this.hour = e.shift() || 0), (this.minute = e.shift() || 0), (this.second = e.shift() || 0), (this.millisecond = e.shift() || 0), k(this);
     }
 }
@@ -905,8 +905,8 @@ class eI extends eh {
     }
 }
 let eS = 25920,
-    eT = 29 * eS + 13753;
-function eb(e) {
+    eb = 29 * eS + 13753;
+function eT(e) {
     return 7 > s(7 * e + 1, 19);
 }
 function ey(e) {
@@ -923,7 +923,7 @@ function eN(e) {
     return eA(e + 1) - eA(e);
 }
 function eC(e, t) {
-    if ((t >= 6 && !eb(e) && t++, 4 === t || 7 === t || 9 === t || 11 === t || 13 === t)) return 29;
+    if ((t >= 6 && !eT(e) && t++, 4 === t || 7 === t || 9 === t || 11 === t || 13 === t)) return 29;
     let n = (function (e) {
         let t = eN(e);
         switch ((t > 380 && (t -= 30), t)) {
@@ -935,12 +935,12 @@ function eC(e, t) {
                 return 2;
         }
     })(e);
-    return 2 === t ? (2 === n ? 30 : 29) : 3 === t ? (0 === n ? 29 : 30) : 6 === t ? (eb(e) ? 30 : 0) : 30;
+    return 2 === t ? (2 === n ? 30 : 29) : 3 === t ? (0 === n ? 29 : 30) : 6 === t ? (eT(e) ? 30 : 0) : 30;
 }
 class eR {
     fromJulianDay(e) {
         let t = e - 347997,
-            n = Math.floor((((t * eS) / eT) * 19 + 234) / 235) + 1,
+            n = Math.floor((((t * eS) / eb) * 19 + 234) / 235) + 1,
             r = eA(n),
             i = Math.floor(t - r);
         for (; i < 1; ) i = Math.floor(t - (r = eA(--n)));
@@ -959,7 +959,7 @@ class eR {
         return eC(e.year, e.month);
     }
     getMonthsInYear(e) {
-        return eb(e.year) ? 13 : 12;
+        return eT(e.year) ? 13 : 12;
     }
     getDaysInYear(e) {
         return eN(e.year);
@@ -971,7 +971,7 @@ class eR {
         return ['AM'];
     }
     balanceYearMonth(e, t) {
-        t.year !== e.year && (eb(t.year) && !eb(e.year) && t.month > 6 ? e.month-- : !eb(t.year) && eb(e.year) && t.month > 6 && e.month++);
+        t.year !== e.year && (eT(t.year) && !eT(e.year) && t.month > 6 ? e.month-- : !eT(t.year) && eT(e.year) && t.month > 6 && e.month++);
     }
     constructor() {
         this.identifier = 'hebrew';

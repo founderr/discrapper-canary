@@ -13,14 +13,14 @@ let d = i.forwardRef(function (e, t) {
         [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
         I = n.useStore((e) => e.searchPlaceholder),
         S = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
-        T = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 var t;
                 n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = h.current) || void 0 === t || t.scrollTo(0);
             },
             [h, n]
         ),
-        b = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -45,9 +45,9 @@ let d = i.forwardRef(function (e, t) {
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
                 placeholder: null != I ? I : d || null == m ? p : m,
-                onClear: b,
+                onClear: T,
                 onKeyDown: f,
-                onQueryChange: T,
+                onQueryChange: b,
                 className: c.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,

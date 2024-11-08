@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(626135),
     I = n(624138),
     S = n(543241),
-    T = n(883661),
-    b = n(880949),
+    b = n(883661),
+    T = n(880949),
     y = n(784222),
     A = n(149203),
     N = n(981631),
@@ -64,7 +64,7 @@ function V(e) {
             },
             children: [
                 null != E
-                    ? (0, r.jsx)(b.Z, {
+                    ? (0, r.jsx)(T.Z, {
                           guild: E,
                           isSelected: m,
                           shouldAnimate: !_ && d,
@@ -72,7 +72,7 @@ function V(e) {
                       })
                     : null,
                 null == E && null != p
-                    ? (0, r.jsx)(T.Z, {
+                    ? (0, r.jsx)(b.Z, {
                           categoryId: p,
                           className: O.categoryIcon,
                           height: x,
@@ -106,8 +106,8 @@ t.Z = (e) => {
         }),
         v = (0, _.O)(),
         I = (0, S.kI)(o, u),
-        T = i.useRef(null),
-        b = (0, c.e7)([E.Z], () => E.Z.isFocused()),
+        b = i.useRef(null),
+        T = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, c.e7)([h.Z], () => h.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
@@ -123,13 +123,13 @@ t.Z = (e) => {
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: g,
-                                isWindowFocused: b,
+                                isWindowFocused: T,
                                 useReducedMotion: N
                             },
                             t
                         );
                 }),
-            [d, v, I, g, b, N]
+            [d, v, I, g, T, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
         M = i.useCallback(
@@ -145,8 +145,8 @@ t.Z = (e) => {
             [I]
         ),
         {
-            nonUnicodeCategoryCount: H,
-            firstUnicodeCategoryIndex: j,
+            nonUnicodeCategoryCount: j,
+            firstUnicodeCategoryIndex: H,
             firstUnicodeCategoryOffsetTop: Y,
             rowCountBySection: W
         } = i.useMemo(() => {
@@ -167,12 +167,12 @@ t.Z = (e) => {
         }, [I]),
         [K, z] = i.useState(!0);
     i.useLayoutEffect(() => {
-        z(H >= 7);
-    }, [H]);
+        z(j >= 7);
+    }, [j]);
     let q = i.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = b.current) || void 0 === t ? void 0 : t.getListDimensions();
                 if (null != n) e + n.height - k >= Y ? z(!1) : z(!0);
             },
             [Y]
@@ -180,9 +180,9 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(j), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
+                e(H), null === (t = b.current) || void 0 === t || t.scrollTo(Y);
             },
-            [Y, j]
+            [Y, H]
         ),
         X = i.useCallback(
             (e, t) => {
@@ -207,7 +207,7 @@ t.Z = (e) => {
         ),
         $ = K ? 'shortcut' : 'hiddenshortcut';
     return (0, r.jsx)(m.Z, {
-        categoryListRef: T,
+        categoryListRef: b,
         expressionsListRef: n,
         className: t,
         store: p.kJ,
@@ -221,7 +221,7 @@ t.Z = (e) => {
         getScrollOffsetForIndex: X,
         rowCountBySection: W,
         children: (e) =>
-            H >= 7 &&
+            j >= 7 &&
             (0, r.jsx)(
                 f.Clickable,
                 {

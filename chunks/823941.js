@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return N;
     },
     n: function () {
-        return T;
+        return S;
     }
 });
 var r = n(200651),
@@ -16,9 +16,9 @@ var r = n(200651),
     d = n(906732),
     u = n(963249),
     m = n(594174),
-    p = n(754347),
-    f = n(74538),
-    h = n(884697),
+    h = n(754347),
+    p = n(74538),
+    f = n(884697),
     g = n(624377),
     C = n(141011),
     b = n(813083),
@@ -29,13 +29,13 @@ var r = n(200651),
     j = n(388032),
     E = n(915376),
     I = n(275001);
-let T = (0, h.IC)(96),
-    S = (e) => {
+let S = (0, f.IC)(96),
+    T = (e) => {
         let { category: t } = e,
             { analyticsLocations: n } = (0, d.ZP)(),
             s = a.useRef(null),
             i = (0, o.e7)([m.default], () => m.default.getCurrentUser());
-        return f.ZP.canUseCollectibles(i)
+        return p.ZP.canUseCollectibles(i)
             ? (0, r.jsx)(r.Fragment, { children: t.summary })
             : (0, r.jsx)(r.Fragment, {
                   children: j.intl.format(j.t['9hafRk'], {
@@ -61,11 +61,11 @@ let T = (0, h.IC)(96),
                   })
               });
     };
-function B(e) {
+function N(e) {
     var t, n, a, s;
     let { category: o, className: d, hideLimitedTimeBadge: u = !1 } = e,
         { backgroundColors: m } = (0, g.Z)(o.styles),
-        f = !!(null === (t = _.Ve[o.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
+        p = !!(null === (t = _.Ve[o.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText);
     return o.skuId === l.T.CHANCE
         ? (0, r.jsx)(x.O, { category: o })
         : (0, r.jsxs)(C.Z, {
@@ -96,22 +96,22 @@ function B(e) {
                                     color: 'currentColor',
                                     className: E.discordIcon
                                 }),
-                                (0, r.jsx)(p.Z, { className: E.discordWordmark })
+                                (0, r.jsx)(h.Z, { className: E.discordWordmark })
                             ]
                         })
                       : (0, r.jsx)(c.Spacer, { size: 28 }),
                   (null === (a = _.Ve[o.skuId]) || void 0 === a ? void 0 : a.addLogo)
                       ? (0, r.jsx)('img', {
                             className: E.categoryLogo,
-                            src: (0, h.uV)(o.logo, { size: T }),
+                            src: (0, f.uV)(o.logo, { size: S }),
                             alt: o.name,
                             style: { maxWidth: null === (s = _.Ve[o.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
                         })
                       : (0, r.jsx)(c.Spacer, { size: 96 }),
                   (0, r.jsx)(c.Text, {
-                      className: i()(E.summary, { [E.blackSummary]: f }),
+                      className: i()(E.summary, { [E.blackSummary]: p }),
                       variant: 'text-md/normal',
-                      children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(S, { category: o }) : o.summary
+                      children: o.skuId === l.T.DISXCORE ? (0, r.jsx)(T, { category: o }) : o.summary
                   }),
                   !u &&
                       (0, r.jsx)(b.Z, {

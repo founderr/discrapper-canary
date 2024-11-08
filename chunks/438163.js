@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(277085),
     I = n(228168),
     S = n(388032),
-    T = n(705994);
-let b = 'text-sm/medium',
+    b = n(705994);
+let T = 'text-sm/medium',
     y = 36,
     A = 144;
 function N(e) {
@@ -43,28 +43,28 @@ function N(e) {
         Z = null != B && '' !== B ? B : null,
         F = null != Z && Z.length > 0,
         V = null != G,
-        H = V && !F,
-        j = V ? 1.25 : 0,
-        Y = 18 + j,
-        W = A + j,
-        K = y + j,
+        j = V && !F,
+        H = V ? 1.25 : 0,
+        Y = 18 + H,
+        W = A + H,
+        K = y + H,
         z = V || F,
         q = m && !z,
         Q = m && z,
-        [X, J] = i.useState(H),
-        [$, ee] = i.useState(!H),
+        [X, J] = i.useState(j),
+        [$, ee] = i.useState(!j),
         [et, en] = i.useState(!1),
         er = i.useRef(null);
     i.useLayoutEffect(() => {
-        if (null == M.current || H) return;
+        if (null == M.current || j) return;
         let e = M.current.getBoundingClientRect().height;
-        if ((J(H || e <= Y), E)) {
+        if ((J(j || e <= Y), E)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = M.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
                 a = null !== (i = null === (n = k.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
-            ee(!H && e > a), (P.current = e), (U.current = a);
+            ee(!j && e > a), (P.current = e), (U.current = a);
         }
-    }, [E, H, Y, W, K]);
+    }, [E, j, Y, W, K]);
     let [ei, ea] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(K, 'px'),
         config: {
@@ -105,7 +105,7 @@ function N(e) {
         eo = () =>
             V
                 ? (0, r.jsx)(d.Iv, {
-                      className: F ? T.statusEmojiInline : T.statusEmojiOnly,
+                      className: F ? b.statusEmojiInline : b.statusEmojiOnly,
                       emoji: G,
                       animate: N,
                       hideTooltip: !1,
@@ -115,16 +115,16 @@ function N(e) {
         el = () =>
             F
                 ? (0, r.jsx)(c.Text, {
-                      variant: b,
-                      className: T.statusText,
+                      variant: T,
+                      className: b.statusText,
                       children: Z
                   })
                 : null,
         eu = () => {
-            let e = s()(T.content, {
-                [T.clamp]: x,
-                [T.unclamp]: !x,
-                [T.singleLineAlign]: X
+            let e = s()(b.content, {
+                [b.clamp]: x,
+                [b.unclamp]: !x,
+                [b.singleLineAlign]: X
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: ei,
@@ -134,13 +134,13 @@ function N(e) {
         },
         ec = () =>
             (0, r.jsxs)('div', {
-                className: s()(T.content, T.clamp, T.placeholderWidth, { [T.panel]: p === I.y0.PANEL }),
+                className: s()(b.content, b.clamp, b.placeholderWidth, { [b.panel]: p === I.y0.PANEL }),
                 ref: k,
                 children: [eo(), el()]
             }),
         ed = () =>
             (0, r.jsxs)('div', {
-                className: s()(T.content, T.unclamp, T.placeholderWidth, T.incorporeal, { [T.panel]: p === I.y0.PANEL }),
+                className: s()(b.content, b.unclamp, b.placeholderWidth, b.incorporeal, { [b.panel]: p === I.y0.PANEL }),
                 ref: M,
                 children: [eo(), el()]
             }),
@@ -157,21 +157,21 @@ function N(e) {
                 });
         },
         e_ = {
-            [T.biteSize]: p === I.y0.BITE_SIZE,
-            [T.fullSize]: p === I.y0.FULL_SIZE,
-            [T.panel]: p === I.y0.PANEL
+            [b.biteSize]: p === I.y0.BITE_SIZE,
+            [b.fullSize]: p === I.y0.FULL_SIZE,
+            [b.panel]: p === I.y0.PANEL
         },
-        eh = s()(T.background, { [T.editable]: Q }),
+        eh = s()(b.background, { [b.editable]: Q }),
         ep = s()({
-            [T.statusBubbleShape]: (!F && V) || !X,
-            [T.statusBubbleSingleLineWithTextShape]: (X && F) || q
+            [b.statusBubbleShape]: (!F && V) || !X,
+            [b.statusBubbleSingleLineWithTextShape]: (X && F) || q
         }),
-        em = s()(T.statusBubbleOuter, e_, ep, { [T.statusBubbleOuterAddStatusCursor]: q }),
-        eg = s()(T.statusBubble, ep, {
-            [T.statusBubbleEmojiOnlyPadding]: H,
-            [T.statusBubbleWithTextPadding]: F || q,
-            [T.statusBubbleWithTextMinWidth]: F,
-            [T.statusBubbleCopyStatusCursor]: z
+        em = s()(b.statusBubbleOuter, e_, ep, { [b.statusBubbleOuterAddStatusCursor]: q }),
+        eg = s()(b.statusBubble, ep, {
+            [b.statusBubbleEmojiOnlyPadding]: j,
+            [b.statusBubbleWithTextPadding]: F || q,
+            [b.statusBubbleWithTextMinWidth]: F,
+            [b.statusBubbleCopyStatusCursor]: z
         });
     return (0, r.jsx)(h.Gt, {
         value: R,
@@ -180,22 +180,22 @@ function N(e) {
                 ? (0, r.jsx)(c.Clickable, {
                       'aria-label': S.intl.string(S.t['zrpF/f']),
                       onClick: ef,
-                      className: s()(T.addCustomStatusButtonBubble, e_, eh),
+                      className: s()(b.addCustomStatusButtonBubble, e_, eh),
                       focusProps: { ringClassName: ep },
                       children: (0, r.jsx)('div', {
                           className: em,
                           children: (0, r.jsx)('span', {
                               className: eg,
                               children: (0, r.jsxs)('div', {
-                                  className: T.content,
+                                  className: b.content,
                                   children: [
                                       (0, r.jsx)(c.CirclePlusIcon, {
-                                          className: T.addStatusIcon,
-                                          colorClass: T.addStatusIconColor
+                                          className: b.addStatusIcon,
+                                          colorClass: b.addStatusIconColor
                                       }),
                                       (0, r.jsx)(c.Text, {
-                                          variant: b,
-                                          className: T.addStatusPrompt,
+                                          variant: T,
+                                          className: b.addStatusPrompt,
                                           children: S.intl.string(S.t.evw0o6)
                                       })
                                   ]
@@ -206,7 +206,7 @@ function N(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', {
-                              className: s()(T.invisibleContainer, e_),
+                              className: s()(b.invisibleContainer, e_),
                               children: (0, r.jsx)('div', {
                                   className: em,
                                   children: (0, r.jsxs)('span', {
@@ -219,7 +219,7 @@ function N(e) {
                               ringClassName: ep,
                               children: (0, r.jsxs)('div', {
                                   ref: er,
-                                  className: s()(T.visibleContainer, e_, eh),
+                                  className: s()(b.visibleContainer, e_, eh),
                                   role: 'tooltip',
                                   'aria-label': S.intl.formatToPlainString(S.t.UpF5QU, {
                                       emoji: null !== (t = null == G ? void 0 : G.name) && void 0 !== t ? t : '',

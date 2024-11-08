@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(833858),
     I = n(769654),
     S = n(960870),
-    T = n(139793),
-    b = n(994746),
+    b = n(139793),
+    T = n(994746),
     y = n(232174),
     A = n(502762),
     N = n(652853),
@@ -44,7 +44,7 @@ var i = n(120356),
     Z = n(388032),
     F = n(69035);
 function V(e) {
-    let { user: t, currentUser: n, activity: i, application: V, guild: H, channel: j, className: Y, onClose: W } = e,
+    let { user: t, currentUser: n, activity: i, application: V, guild: j, channel: H, className: Y, onClose: W } = e,
         { analyticsLocations: K } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { profileType: z } = (0, N.z)(),
         q = { [F.fullSize]: z === U.y0.FULL_SIZE },
@@ -69,11 +69,11 @@ function V(e) {
             entry: Q,
             analyticsLocations: K
         }),
-        $ = (0, T.Z)({
+        $ = (0, b.Z)({
             userId: t.id,
             onAction: J
         }),
-        ee = (0, b.Z)(i),
+        ee = (0, T.Z)(i),
         { largeImage: et, smallImage: en } = (0, h.FO)(i, V),
         er = (0, s.EQ)(i)
             .when(c.Z, () => X)
@@ -113,7 +113,7 @@ function V(e) {
                       variant: 'heading-sm/semibold',
                       text: (0, v.O8)(i)
                   })
-                : (0, d.Z)(i) && null != j
+                : (0, d.Z)(i) && null != H
                   ? (0, r.jsxs)('div', {
                         className: F.voiceChannelText,
                         children: [
@@ -124,7 +124,7 @@ function V(e) {
                             }),
                             (0, r.jsx)(D.Z, {
                                 variant: 'heading-sm/semibold',
-                                text: j.name
+                                text: H.name
                             })
                         ]
                     })
@@ -141,12 +141,12 @@ function V(e) {
         es = () =>
             i.type === G.IIU.HANG_STATUS
                 ? null
-                : (0, d.Z)(i) && null != H
+                : (0, d.Z)(i) && null != j
                   ? (0, r.jsx)(D.Z, {
                         variant: 'text-xs/normal',
-                        text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: H.name }),
+                        text: Z.intl.formatToPlainString(Z.t['hq/Qzc'], { guildName: j.name }),
                         onClick: () => {
-                            (0, I.X)(H.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
+                            (0, I.X)(j.id), J({ action: 'OPEN_VOICE_GUILD' }), null == W || W();
                         }
                     })
                   : (0, c.Z)(i)
@@ -233,15 +233,15 @@ function V(e) {
                       children: [ea(), es(), eo()]
                   }),
         ed = () =>
-            null == H || null == j
+            null == j || null == H
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: F.voiceChannelDivider }),
                           (0, r.jsx)(L.Z, {
                               user: t,
-                              guild: H,
-                              channel: j,
+                              guild: j,
+                              channel: H,
                               onAction: J,
                               onClose: W
                           })

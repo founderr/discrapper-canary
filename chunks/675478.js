@@ -12,7 +12,7 @@ n.d(t, {
         return C;
     },
     T6: function () {
-        return T;
+        return b;
     },
     aj: function () {
         return N;
@@ -82,7 +82,7 @@ function v(e, t, n) {
 }
 let I = 'UserSettingsProtoLastWriteTimes',
     S = Date.now();
-function T() {}
+function b() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
 }),
@@ -90,7 +90,7 @@ d.Z.subscribe('CONNECTION_OPEN', () => {
         Date.now();
     }),
     'undefined' != typeof document && (document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
-class b {
+class T {
     getEditInfo() {
         return p.Z.getFullState()[this.type];
     }
@@ -306,11 +306,11 @@ class b {
                     else throw (this.logger.log('Unknown user settings error'), e);
                 }
             }),
-            (this.logger = new a.Y(this.ProtoClass.typeName));
+            (this.logger = new a.Yd(this.ProtoClass.typeName));
     }
 }
-let y = new b(u.o8, g.yP.PRELOADED_USER_SETTINGS),
-    A = new b(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let y = new T(u.o8, g.yP.PRELOADED_USER_SETTINGS),
+    A = new T(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     N = {
         [g.yP.PRELOADED_USER_SETTINGS]: y,
         [g.yP.FRECENCY_AND_FAVORITES_SETTINGS]: A

@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(543882),
     I = n(592125),
     S = n(496675),
-    T = n(594174),
-    b = n(979651),
+    b = n(594174),
+    T = n(979651),
     y = n(912787),
     A = n(623552),
     N = n(718582),
@@ -41,7 +41,7 @@ var r = n(200651),
 function U(e) {
     let t = (0, y.Z)(e),
         { category: n } = e;
-    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && b.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
+    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && T.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
 }
 function G(e) {
     let { users: t, othersCount: n, extraPill: i } = e;
@@ -95,13 +95,13 @@ function B(e) {
         Z = (0, l.e7)([v.Z], () => (B ? v.Z.getPreviewURL(c, a.channelId, a.streamUserIds[0]) : null)),
         F = (0, l.e7)([v.Z], () => (R === x.L.HANGOUT ? v.Z.getIsPreviewLoading(c, a.channelId, a.streamUserIds[0]) : null)),
         V = R === x.L.HANGOUT && a.streamUserIds.length > 0 && null == Z && !F,
-        H = (0, l.e7)([I.Z], () => {
+        j = (0, l.e7)([I.Z], () => {
             let e = R === x.L.HANGOUT || R === x.L.GAMING ? a.channelId : R === x.L.EVENT ? a.event.channel_id : R === x.L.EMBEDDED_ACTIVITY ? a.embeddedActivities[0].channelId : null;
             return I.Z.getChannel(e);
         }),
-        j = (0, l.e7)([h.ZP], () => h.ZP.getActiveEventByChannel(null == H ? void 0 : H.id)),
-        { usersToShow: Y, othersCount: W } = (0, N.QO)(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : '', c),
-        { usersToShow: K } = (0, N.Es)(H),
+        H = (0, l.e7)([h.ZP], () => h.ZP.getActiveEventByChannel(null == j ? void 0 : j.id)),
+        { usersToShow: Y, othersCount: W } = (0, N.QO)(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '', c),
+        { usersToShow: K } = (0, N.Es)(j),
         z = (0, N.ni)(a),
         q = (function (e, t, n, i) {
             let { category: a } = e,
@@ -172,13 +172,13 @@ function B(e) {
                                     e(k.liveBadge)
                                 ]
                             });
-                        let a = i.map((e) => T.default.getUser(e)).filter((e) => null != e);
+                        let a = i.map((e) => b.default.getUser(e)).filter((e) => null != e);
                         return (0, r.jsx)(A.Z, {
                             guildId: t,
                             users: a
                         });
                     }
-                    let _ = a.map((e) => T.default.getUser(e)).filter((e) => null != e);
+                    let _ = a.map((e) => b.default.getUser(e)).filter((e) => null != e);
                     return (0, r.jsx)(A.Z, {
                         guildId: t,
                         users: _
@@ -311,7 +311,7 @@ function B(e) {
                         });
                     return null;
                 case x.L.EMBEDDED_ACTIVITY:
-                    let { embeddedActivities: T } = e;
+                    let { embeddedActivities: b } = e;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(u.ActivitiesIcon, {
@@ -323,7 +323,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: 1 === T.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: T.length })
+                                children: 1 === b.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: b.length })
                             }),
                             '\u2022',
                             null != c && (0, r.jsx)(c, { className: k.categoryIcon }),
@@ -331,7 +331,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: null === (a = I.Z.getChannel(T[0].channelId)) || void 0 === a ? void 0 : a.name
+                                children: null === (a = I.Z.getChannel(b[0].channelId)) || void 0 === a ? void 0 : a.name
                             })
                         ]
                     });
@@ -459,7 +459,7 @@ function B(e) {
                 s = null,
                 o = a === x.L.EVENT;
             if (null == (s = o ? e.event.channel_id : a === x.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !o) return;
-            let l = null != s && b.Z.isInChannel(s),
+            let l = null != s && T.Z.isInChannel(s),
                 c = o && (e.event.entity_type === M.WX.EXTERNAL || e.event.entity_type === M.WX.NONE) ? P.intl.string(P.t['HO/oXl']) : l ? P.intl.string(P.t['/YuDAg']) : P.intl.string(P.t.VJlc0d),
                 d = (null === (i = I.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !S.Z.can(w.Plq.CONNECT, I.Z.getChannel(s)),
                 f = (0, N.DE)(e, t),
@@ -488,11 +488,11 @@ function B(e) {
                 children: _
             });
         })(a, c, f),
-        { hasChannelStatus: et } = (0, N.CE)(H),
+        { hasChannelStatus: et } = (0, N.CE)(j),
         en = U(a),
         er = R === x.L.HANGOUT && et && null == Z,
-        ei = (null != j || !!(null == H ? void 0 : H.isGuildStageVoice())) && K.length > 0,
-        ea = R === x.L.HANGOUT && (0 === a.streamUserIds.length || V) && !(null == H ? void 0 : H.isGuildStageVoice()),
+        ei = (null != H || !!(null == j ? void 0 : j.isGuildStageVoice())) && K.length > 0,
+        ea = R === x.L.HANGOUT && (0 === a.streamUserIds.length || V) && !(null == j ? void 0 : j.isGuildStageVoice()),
         es =
             R === x.L.EMBEDDED_ACTIVITY && a.streamersCount > 0
                 ? (0, r.jsxs)('div', {
@@ -519,7 +519,7 @@ function B(e) {
         onMouseLeave: () => L(!1),
         children: [
             (0, r.jsx)('div', {
-                className: s()(k.image, { [k.streamContainer]: B && !V && !(null == H ? void 0 : H.isGuildStageVoice()) }),
+                className: s()(k.image, { [k.streamContainer]: B && !V && !(null == j ? void 0 : j.isGuildStageVoice()) }),
                 children: q
             }),
             (0, r.jsxs)('div', {
@@ -540,7 +540,7 @@ function B(e) {
                             children: X
                         }),
                     !(ei || ea) &&
-                        !(null == H ? void 0 : H.isGuildStageVoice()) &&
+                        !(null == j ? void 0 : j.isGuildStageVoice()) &&
                         Y.length > 0 &&
                         (0, r.jsx)(G, {
                             users: Y,

@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     Qf: function () {
-        return b;
+        return T;
     },
     X_: function () {
         return h;
@@ -108,7 +108,7 @@ function I() {
         u = s.ZP.getPremiumTypeSubscription(),
         f = (null == u ? void 0 : u.trialId) != null,
         _ = o.Z.hasAnyUnexpiredOffer(),
-        h = f || _ ? i.filter((e) => T(e)) : i;
+        h = f || _ ? i.filter((e) => b(e)) : i;
     return (
         0 !== h.length &&
         (null == a ||
@@ -121,9 +121,9 @@ function I() {
 function S(e) {
     return !(0, u.isIOS)() || !(0, l.yE)(e.flags, d.TD.IS_BLOCKED_IOS);
 }
-function T(e) {
+function b(e) {
     return (0, l.yE)(e.flags, d.TD.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
 }
-function b(e, t) {
-    return null != t[e.id] || T(e);
+function T(e, t) {
+    return null != t[e.id] || b(e);
 }

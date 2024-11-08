@@ -41,8 +41,8 @@ var r = n(200651),
     v = n(592125),
     I = n(496675),
     S = n(944486),
-    T = n(626135),
-    b = n(585483),
+    b = n(626135),
+    T = n(585483),
     y = n(787025),
     A = n(981631),
     N = n(388032),
@@ -84,7 +84,7 @@ function D(e) {
     let { guild: t, application: n, ...a } = e,
         s = N.intl.string(N.t.se5gLi);
     i.useEffect(() => {
-        T.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+        b.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
     let o = i.useMemo(() => {
             if (null != n)
@@ -117,14 +117,14 @@ function L(e) {
             if ((null == t ? void 0 : t.id) != null)
                 (0, E.X)(null == t ? void 0 : t.id),
                     null == s || s(),
-                    T.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                    b.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                         application_id: null == n ? void 0 : n.id,
                         guild_id: null == t ? void 0 : t.id
                     });
         }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
         l = (0, p.useApplicationDirectoryHistory)((e) => e.entrypoint),
         u = i.useCallback(() => {
-            null == s || s(), T.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+            null == s || s(), b.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
         }, [s, null == n ? void 0 : n.id]),
         d = window.location.pathname.startsWith(A.Z5c.APPLICATION_DIRECTORY),
         f = i.useCallback(() => {
@@ -133,7 +133,7 @@ function L(e) {
                 null == s || s(),
                     null != l && (0, g.uL)(null !== (e = l.pathname) && void 0 !== e ? e : ''),
                     setImmediate(() => {
-                        b.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), T.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                        T.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), b.default.track(A.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                     });
         }, [null == n ? void 0 : n.id, s, l]),
         m = h.zQ.useExperiment({ location: 'OAuth2AuthorizedSuccess' }, { autoTrackExposure: !1 }).enabled,

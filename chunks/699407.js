@@ -45,14 +45,14 @@ let f = 1500,
         var t;
         let { dispatcher: n, actionHandler: s, getFingerprint: c, getSessionId: E = g, TRACKING_URL: v, drainTimeoutOverride: I, waitFor: S } = e;
         f = null != I ? I : 1500;
-        function T() {
+        function b() {
             return 0 !== m.length && (null != i ? null != r : null != c());
         }
-        function b() {
-            null == a && T() && (a = _(y, { timeout: f }));
+        function T() {
+            null == a && b() && (a = _(y, { timeout: f }));
         }
         function y() {
-            if (((a = null), !T())) return;
+            if (((a = null), !b())) return;
             let e = m.slice();
             (m = []),
                 A(e).then(
@@ -89,7 +89,7 @@ let f = 1500,
         }
         (p.handleConnectionOpen = function (e) {
             let { analyticsToken: t, user: n } = e;
-            return null != t && (r = t), null != n.id && (i = n.id), b(), !1;
+            return null != t && (r = t), null != n.id && (i = n.id), T(), !1;
         }),
             (p.handleConnectionClosed = function () {
                 return y(), (r = null), (i = null), !1;
@@ -118,7 +118,7 @@ let f = 1500,
                                 return null != t ? (0, o.s)(t) : null;
                             })(u);
                         null != d && (u.properties.client_uuid = h.generate(d)), m.push(u);
-                        m.length > 10000 && (m = m.slice(-10000)), r ? y() : b();
+                        m.length > 10000 && (m = m.slice(-10000)), r ? y() : T();
                     }),
                     !1
                 );

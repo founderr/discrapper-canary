@@ -50,12 +50,12 @@ var r = n(581031),
             for (o += (m - a) * g, a = m, t = 0; t < e.length; t++) {
                 if ((n = e[t]) < a && ++o > 2147483647) throw l(s);
                 if (n === a) {
-                    for (var S = o, T = 36; ; ) {
-                        var b = T <= u ? 1 : T >= u + 26 ? 26 : T - u;
-                        if (S < b) break;
-                        var y = S - b,
-                            A = 36 - b;
-                        h(r, d(v(b + (y % A)))), (S = c(y / A)), (T += 36);
+                    for (var S = o, b = 36; ; ) {
+                        var T = b <= u ? 1 : b >= u + 26 ? 26 : b - u;
+                        if (S < T) break;
+                        var y = S - T,
+                            A = 36 - T;
+                        h(r, d(v(T + (y % A)))), (S = c(y / A)), (b += 36);
                     }
                     h(r, d(v(S))), (u = I(o, g, p === f)), (o = 0), p++;
                 }

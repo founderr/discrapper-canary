@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(611480),
     I = n(981631),
     S = n(474936),
-    T = n(388032),
-    b = n(781152);
+    b = n(388032),
+    T = n(781152);
 function y(e) {
     var t, n, a;
     let { className: y, onClose: A } = e;
@@ -42,7 +42,7 @@ function y(e) {
         D = null != R || null != O,
         L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_0;
     return (0, r.jsxs)('div', {
-        className: s()(b.emptyState, y, { [b.unifyTrialUpsell]: D }),
+        className: s()(T.emptyState, y, { [T.unifyTrialUpsell]: D }),
         children: [
             D
                 ? (0, r.jsx)(_.ZP, {
@@ -51,29 +51,29 @@ function y(e) {
                       onClose: A,
                       type: S.cd.EMPTY_STICKER_PICKER_UPSELL,
                       subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.Si.TIER_2,
-                      children: T.intl.string(T.t.FnNud3)
+                      children: b.intl.string(b.t.FnNud3)
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.Heading, {
-                              className: b.header,
+                              className: T.header,
                               variant: 'heading-xl/semibold',
-                              children: T.intl.string(T.t.HEm04O)
+                              children: b.intl.string(b.t.HEm04O)
                           }),
                           (0, r.jsx)(l.Text, {
-                              className: b.subtitle,
+                              className: T.subtitle,
                               color: 'header-secondary',
                               variant: 'text-md/normal',
-                              children: T.intl.string(T.t.FnNud3)
+                              children: b.intl.string(b.t.FnNud3)
                           }),
                           (0, r.jsx)('div', {
-                              className: b.stickersRow,
+                              className: T.stickersRow,
                               children: C.filter((e) => null != e).map((e) =>
                                   (0, r.jsx)(
                                       g.ZP,
                                       {
                                           sticker: e,
-                                          className: b.sticker,
+                                          className: T.sticker,
                                           size: 80
                                       },
                                       null == e ? void 0 : e.id
@@ -85,7 +85,7 @@ function y(e) {
             !D &&
                 (0, r.jsx)(E.Z, {
                     analyticsSection: I.jXE.EXPRESSION_PICKER,
-                    buttonText: D ? (L ? T.intl.string(T.t.hz78hI) : T.intl.string(T.t['Gd/XHB'])) : void 0
+                    buttonText: D ? (L ? b.intl.string(b.t.hz78hI) : b.intl.string(b.t['Gd/XHB'])) : void 0
                 })
         ]
     });

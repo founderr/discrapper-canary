@@ -22,8 +22,8 @@ var r = n(443704),
     v = n(112741),
     I = n(421607),
     S = n(595938),
-    T = n(154072),
-    b = n(999209),
+    b = n(154072),
+    T = n(999209),
     y = n(374705),
     A = n(868055),
     N = n(443507),
@@ -43,14 +43,14 @@ var r = n(443704),
     Z = n(921336),
     F = n(298397),
     V = n(649859),
-    H = n(98881),
-    j = {};
+    j = n(98881),
+    H = {};
 function Y(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: h, formatOptions: p, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: S, errorMessage: T, ...b } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: h, formatOptions: p, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: S, errorMessage: b, ...T } = e,
         { increment: y, incrementToMax: A, decrement: N, decrementToMin: C, numberValue: R, inputValue: O, commit: D, commitValidation: L } = t;
-    let x = (0, V.qb)((r = j) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
+    let x = (0, V.qb)((r = H) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         w = (0, U.Me)(a),
         { focusProps: M } = (0, Z.KK)({
             onBlur() {
@@ -68,7 +68,7 @@ function Y(e, t, n) {
             spinButtonProps: K,
             incrementButtonProps: z,
             decrementButtonProps: q
-        } = (0, H.G)({
+        } = (0, j.G)({
             isDisabled: l,
             isReadOnly: u,
             isRequired: c,
@@ -119,7 +119,7 @@ function Y(e, t, n) {
             errorMessageProps: ef
         } = (0, F.h)(
             {
-                ...b,
+                ...T,
                 ...ei,
                 name: void 0,
                 label: h,
@@ -146,7 +146,7 @@ function Y(e, t, n) {
                 onKeyDown: (0, G.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: I,
                 description: S,
-                errorMessage: T
+                errorMessage: b
             },
             t,
             n
@@ -210,7 +210,7 @@ function Y(e, t, n) {
         validationDetails: el
     };
 }
-j = {
+H = {
     'ar-AE': r.Z,
     'bg-BG': i.Z,
     'cs-CZ': a.Z,
@@ -230,8 +230,8 @@ j = {
     'ko-KR': v.Z,
     'lt-LT': I.Z,
     'lv-LV': S.Z,
-    'nb-NO': T.Z,
-    'nl-NL': b.Z,
+    'nb-NO': b.Z,
+    'nl-NL': T.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

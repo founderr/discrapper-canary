@@ -8,7 +8,7 @@ n.r(t),
             return I;
         },
         hideToken: function () {
-            return T;
+            return b;
         },
         init: function () {
             return v;
@@ -20,7 +20,7 @@ n.r(t),
             return S;
         },
         showToken: function () {
-            return b;
+            return T;
         }
     }),
     n(47120),
@@ -98,10 +98,10 @@ function S(e, t) {
     }
     (r = e), null != t && (f[t] = e), d ? A() : ((i = r), (_ = f), m());
 }
-function T() {
+function b() {
     if (!h) (h = !0), m();
 }
-function b() {
+function T() {
     if (!!h) (h = !1), m();
 }
 function y(e) {

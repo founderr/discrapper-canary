@@ -39,8 +39,8 @@ function v(e, t, n) {
 var I = (v.prototype = new E());
 (I.constructor = v), p(I, g.prototype), (I.isPureReactComponent = !0);
 var S = Array.isArray,
-    T = Object.prototype.hasOwnProperty,
-    b = { current: null },
+    b = Object.prototype.hasOwnProperty,
+    T = { current: null },
     y = {
         key: !0,
         ref: !0,
@@ -52,7 +52,7 @@ function A(e, t, r) {
         a = {},
         s = null,
         o = null;
-    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) T.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) b.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
     var l = arguments.length - 2;
     if (1 === l) a.children = r;
     else if (1 < l) {
@@ -66,7 +66,7 @@ function A(e, t, r) {
         key: s,
         ref: o,
         props: a,
-        _owner: b.current
+        _owner: T.current
     };
 }
 function N(e) {
@@ -217,7 +217,7 @@ function w() {
     (t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = {
         ReactCurrentDispatcher: L,
         ReactCurrentBatchConfig: x,
-        ReactCurrentOwner: b
+        ReactCurrentOwner: T
     }),
     (t.act = w),
     (t.cloneElement = function (e, t, r) {
@@ -227,8 +227,8 @@ function w() {
             s = e.ref,
             o = e._owner;
         if (null != t) {
-            if ((void 0 !== t.ref && ((s = t.ref), (o = b.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
-            for (u in t) T.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
+            if ((void 0 !== t.ref && ((s = t.ref), (o = T.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
+            for (u in t) b.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
         }
         var u = arguments.length - 2;
         if (1 === u) i.children = r;

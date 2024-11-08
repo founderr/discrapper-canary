@@ -16,23 +16,23 @@ function u(e, t) {
     let n = (0, i.sp)(),
         u = (0, c.x)(),
         m = s.ZP.canUseCollectibles(u),
-        p = r.useRef(null),
-        [f, h] = r.useState(!1),
+        h = r.useRef(null),
+        [p, f] = r.useState(!1),
         [g, C] = r.useState(!1),
         b = (0, o.B)('shop_product_card');
     return (
         r.useEffect(
             () => (
-                f && null === p.current
-                    ? (p.current = setTimeout(() => {
+                p && null === h.current
+                    ? (h.current = setTimeout(() => {
                           C(!0);
                       }, 1000))
-                    : !f && (null !== p.current && (clearTimeout(p.current), (p.current = null)), C(!1)),
+                    : !p && (null !== h.current && (clearTimeout(h.current), (h.current = null)), C(!1)),
                 () => {
-                    null !== p.current && (clearTimeout(p.current), (p.current = null));
+                    null !== h.current && (clearTimeout(h.current), (h.current = null));
                 }
             ),
-            [f]
+            [p]
         ),
         r.useEffect(() => {
             if (g && b) {
@@ -55,7 +55,7 @@ function u(e, t) {
         }, [null == n ? void 0 : n.sessionId, null == n ? void 0 : n.categoryPosition, null == n ? void 0 : n.pageCategory, null == n ? void 0 : n.pageSection, null == n ? void 0 : n.tilePosition, g, m, b, t, e]),
         {
             handleCardVisibilityChange: (e) => {
-                h(e);
+                f(e);
             }
         }
     );

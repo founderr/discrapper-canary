@@ -87,14 +87,14 @@ var r, i;
             v,
             I,
             S = (t.momentProperties = []);
-        function T(e, t) {
+        function b(e, t) {
             var n, r, i;
             if ((!a(t._isAMomentObject) && (e._isAMomentObject = t._isAMomentObject), !a(t._i) && (e._i = t._i), !a(t._f) && (e._f = t._f), !a(t._l) && (e._l = t._l), !a(t._strict) && (e._strict = t._strict), !a(t._tzm) && (e._tzm = t._tzm), !a(t._isUTC) && (e._isUTC = t._isUTC), !a(t._offset) && (e._offset = t._offset), !a(t._pf) && (e._pf = f(t)), !a(t._locale) && (e._locale = t._locale), S.length > 0)) for (n = 0; n < S.length; n++) !a((i = t[(r = S[n])])) && (e[r] = i);
             return e;
         }
-        var b = !1;
+        var T = !1;
         function y(e) {
-            T(this, e), (this._d = new Date(null != e._d ? e._d.getTime() : NaN)), !this.isValid() && (this._d = new Date(NaN)), !1 === b && ((b = !0), t.updateOffset(this), (b = !1));
+            b(this, e), (this._d = new Date(null != e._d ? e._d.getTime() : NaN)), !this.isValid() && (this._d = new Date(NaN)), !1 === T && ((T = !0), t.updateOffset(this), (T = !1));
         }
         function A(e) {
             return e instanceof y || (null != e && null != e._isAMomentObject);
@@ -189,8 +189,8 @@ var r, i;
                 r
             );
         }
-        var H = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
-            j = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
+        var j = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
+            H = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
             Y = {},
             W = {};
         function K(e, t, n, r) {
@@ -217,7 +217,7 @@ var r, i;
                           var t,
                               n,
                               r,
-                              i = e.match(H);
+                              i = e.match(j);
                           for (n = 0, r = i.length; n < r; n++)
                               if (W[i[n]]) i[n] = W[i[n]];
                               else {
@@ -238,7 +238,7 @@ var r, i;
             function r(e) {
                 return t.longDateFormat(e) || e;
             }
-            for (j.lastIndex = 0; n >= 0 && j.test(e); ) (e = e.replace(j, r)), (j.lastIndex = 0), (n -= 1);
+            for (H.lastIndex = 0; n >= 0 && H.test(e); ) (e = e.replace(H, r)), (H.lastIndex = 0), (n -= 1);
             return e;
         }
         var Q = /\d/,
@@ -328,13 +328,13 @@ var r, i;
         var eI = eS('FullYear', !0);
         function eS(e, n) {
             return function (r) {
-                return null != r ? (eb(this, e, r), t.updateOffset(this, n), this) : eT(this, e);
+                return null != r ? (eT(this, e, r), t.updateOffset(this, n), this) : eb(this, e);
             };
         }
-        function eT(e, t) {
+        function eb(e, t) {
             return e.isValid() ? e._d['get' + (e._isUTC ? 'UTC' : '') + t]() : NaN;
         }
-        function eb(e, t, n) {
+        function eT(e, t, n) {
             e.isValid() && !isNaN(n) && ('FullYear' === t && ev(e.year()) && 1 === e.month() && 29 === e.date() ? e._d['set' + (e._isUTC ? 'UTC' : '') + t](n, e.month(), ey(n, e.month())) : e._d['set' + (e._isUTC ? 'UTC' : '') + t](n));
         }
         function ey(e, t) {
@@ -398,7 +398,7 @@ var r, i;
             return (n = Math.min(e.date(), ey(e.year(), t))), e._d['set' + (e._isUTC ? 'UTC' : '') + 'Month'](t, n), e;
         }
         function eO(e) {
-            return null != e ? (eR(this, e), t.updateOffset(this, !0), this) : eT(this, 'Month');
+            return null != e ? (eR(this, e), t.updateOffset(this, !0), this) : eb(this, 'Month');
         }
         function eD() {
             function e(e, t) {
@@ -608,8 +608,8 @@ var r, i;
                     i = e.length - 2;
                 (t[3] = C(e.substr(0, r))), (t[4] = C(e.substr(r, 2))), (t[5] = C(e.substr(i)));
             });
-        var eH = eS('Hours', !0),
-            ej = {
+        var ej = eS('Hours', !0),
+            eH = {
                 calendar: {
                     sameDay: '[Today at] LT',
                     nextDay: '[Tomorrow at] LT',
@@ -680,7 +680,7 @@ var r, i;
         function eQ(e, t) {
             if (null === t) return delete eY[e], null;
             var n,
-                r = ej;
+                r = eH;
             if (((t.abbr = e), null != eY[e])) x('defineLocaleOverride', 'use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.'), (r = eY[e]._config);
             else if (null != t.parentLocale) {
                 if (null != eY[t.parentLocale]) r = eY[t.parentLocale]._config;
@@ -931,7 +931,7 @@ var r, i;
                 h = '' + e._i,
                 p = h.length,
                 m = 0;
-            for (o = 0, c = q(e._f, e._locale).match(H) || []; o < c.length; o++) {
+            for (o = 0, c = q(e._f, e._locale).match(j) || []; o < c.length; o++) {
                 if (
                     ((d = c[o]),
                     (l = (h.match(
@@ -988,7 +988,7 @@ var r, i;
                                     return;
                                 }
                                 for (i = 0; i < e._f.length; i++) {
-                                    if (((a = 0), (t = T({}, e)), null != e._useUTC && (t._useUTC = e._useUTC), (t._f = e._f[i]), tt(t), !!_(t))) (a += f(t).charsLeftOver + 10 * f(t).unusedTokens.length), (f(t).score = a), (null == r || a < r) && ((r = a), (n = t));
+                                    if (((a = 0), (t = b({}, e)), null != e._useUTC && (t._useUTC = e._useUTC), (t._f = e._f[i]), tt(t), !!_(t))) (a += f(t).charsLeftOver + 10 * f(t).unusedTokens.length), (f(t).score = a), (null == r || a < r) && ((r = a), (n = t));
                                 }
                                 c(e, n || t);
                             })(e)
@@ -1189,7 +1189,7 @@ var r, i;
                               ((i = (function (e, t) {
                                   var n;
                                   return e.isValid() && t.isValid()
-                                      ? ((t = tp(t, e)), e.isBefore(t) ? (n = tT(e, t)) : (((n = tT(t, e)).milliseconds = -n.milliseconds), (n.months = -n.months)), n)
+                                      ? ((t = tp(t, e)), e.isBefore(t) ? (n = tb(e, t)) : (((n = tb(t, e)).milliseconds = -n.milliseconds), (n.months = -n.months)), n)
                                       : {
                                             milliseconds: 0,
                                             months: 0
@@ -1206,7 +1206,7 @@ var r, i;
             var n = e && parseFloat(e.replace(',', '.'));
             return (isNaN(n) ? 0 : n) * t;
         }
-        function tT(e, t) {
+        function tb(e, t) {
             var n = {
                 milliseconds: 0,
                 months: 0
@@ -1217,7 +1217,7 @@ var r, i;
             (tI.invalid = function () {
                 return tI(NaN);
             });
-        function tb(e, t) {
+        function tT(e, t) {
             return function (n, r) {
                 var i;
                 return null !== r && !isNaN(+r) && (x(t, 'moment().' + t + '(period, number) is deprecated. Please use moment().' + t + '(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.'), (i = n), (n = r), (r = i)), ty(this, tI((n = 'string' == typeof n ? +n : n), r), e), this;
@@ -1227,10 +1227,10 @@ var r, i;
             var a = n._milliseconds,
                 s = td(n._days),
                 o = td(n._months);
-            if (!!e.isValid()) (i = null == i || i), o && eR(e, eT(e, 'Month') + o * r), s && eb(e, 'Date', eT(e, 'Date') + s * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, s || o);
+            if (!!e.isValid()) (i = null == i || i), o && eR(e, eb(e, 'Month') + o * r), s && eT(e, 'Date', eb(e, 'Date') + s * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, s || o);
         }
-        var tA = tb(1, 'add'),
-            tN = tb(-1, 'subtract');
+        var tA = tT(1, 'add'),
+            tN = tT(-1, 'subtract');
         function tC(e, t) {
             var n,
                 r,
@@ -1651,7 +1651,7 @@ var r, i;
                 var t = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 86400000) + 1;
                 return null == e ? t : this.add(e - t, 'd');
             }),
-            (tB.hour = tB.hours = eH),
+            (tB.hour = tB.hours = ej),
             (tB.minute = tB.minutes = tP),
             (tB.second = tB.seconds = tk),
             (tB.millisecond = tB.milliseconds = tG),
@@ -1708,7 +1708,7 @@ var r, i;
             (tB.isDSTShifted = D('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', function () {
                 if (!a(this._isDSTShifted)) return this._isDSTShifted;
                 var e = {};
-                if ((T(e, this), (e = tn(e))._a)) {
+                if ((b(e, this), (e = tn(e))._a)) {
                     var t = e._isUTC ? d(e._a) : ti(e._a);
                     this._isDSTShifted = this.isValid() && R(e._a, t.toArray()) > 0;
                 } else this._isDSTShifted = !1;
@@ -1723,14 +1723,14 @@ var r, i;
                 a = d().set(r, t);
             return i[n](a, e);
         }
-        function tH(e, t, n) {
+        function tj(e, t, n) {
             if ((s(e) && ((t = e), (e = void 0)), (e = e || ''), null != t)) return tV(e, t, n, 'month');
             var r,
                 i = [];
             for (r = 0; r < 12; r++) i[r] = tV(e, r, n, 'month');
             return i;
         }
-        function tj(e, t, n, r) {
+        function tH(e, t, n, r) {
             'boolean' == typeof e || ((n = t = e), (e = !1)), s(t) && ((n = t), (t = void 0)), (t = t || '');
             var i,
                 a = eX(),
@@ -2054,7 +2054,7 @@ var r, i;
                 return ti(1000 * e);
             }),
             (t.months = function (e, t) {
-                return tH(e, t, 'months');
+                return tj(e, t, 'months');
             }),
             (t.isDate = o),
             (t.locale = eq),
@@ -2062,7 +2062,7 @@ var r, i;
             (t.duration = tI),
             (t.isMoment = A),
             (t.weekdays = function (e, t, n) {
-                return tj(e, t, n, 'weekdays');
+                return tH(e, t, n, 'weekdays');
             }),
             (t.parseZone = function () {
                 return ti.apply(null, arguments).parseZone();
@@ -2070,17 +2070,17 @@ var r, i;
             (t.localeData = eX),
             (t.isDuration = tc),
             (t.monthsShort = function (e, t) {
-                return tH(e, t, 'monthsShort');
+                return tj(e, t, 'monthsShort');
             }),
             (t.weekdaysMin = function (e, t, n) {
-                return tj(e, t, n, 'weekdaysMin');
+                return tH(e, t, n, 'weekdaysMin');
             }),
             (t.defineLocale = eQ),
             (t.updateLocale = function (e, t) {
                 if (null != t) {
                     var n,
                         r,
-                        i = ej;
+                        i = eH;
                     null != (r = ez(e)) && (i = r._config), ((n = new P((t = M(i, t)))).parentLocale = eY[e]), (eY[e] = n), eq(e);
                 } else null != eY[e] && (null != eY[e].parentLocale ? (eY[e] = eY[e].parentLocale) : null != eY[e] && delete eY[e]);
                 return eY[e];
@@ -2089,7 +2089,7 @@ var r, i;
                 return g(eY);
             }),
             (t.weekdaysShort = function (e, t, n) {
-                return tj(e, t, n, 'weekdaysShort');
+                return tH(e, t, n, 'weekdaysShort');
             }),
             (t.normalizeUnits = G),
             (t.relativeTimeRounding = function (e) {

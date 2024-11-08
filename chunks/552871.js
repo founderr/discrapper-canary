@@ -11,7 +11,7 @@ var r = n(259443),
     o = n(403182),
     l = n(579806),
     u = n(981631);
-let c = new r.Y('uploadRtcLogFiles');
+let c = new r.Yd('uploadRtcLogFiles');
 async function d(e, t) {
     let n;
     if (null == l.Z.fileManager.readLogFiles) throw new a.n0(a.cz.GENERAL);

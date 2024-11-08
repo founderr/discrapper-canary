@@ -77,6 +77,6 @@ class g {
         });
     }
     constructor(e) {
-        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new a.Y(e));
+        p(this, 'logger', void 0), p(this, 'spinnerVisibleStart', null), (this.logger = new a.Yd(e));
     }
 }

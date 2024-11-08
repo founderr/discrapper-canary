@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(388032),
     v = n(817407);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: S, onClose: T = () => {}, closeLayer: b = () => {}, pauseAnimation: y = !1, applicationId: A, handleSubscribeModalClose: N, withHighlight: C = !1, ...R } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: I, targetBoostedGuildTier: S, onClose: b = () => {}, closeLayer: T = () => {}, pauseAnimation: y = !1, applicationId: A, handleSubscribeModalClose: N, withHighlight: C = !1, ...R } = e,
         { analyticsLocations: O } = (0, c.ZP)(),
         D = (0, u.bp)() === m.IlC.POPOUT,
         [L, x] = i.useState(!1),
@@ -34,8 +34,8 @@ t.Z = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: P,
-                    onClose: T,
-                    closeLayer: b,
+                    onClose: b,
+                    closeLayer: T,
                     inPopout: D,
                     applicationId: A,
                     handleSubscribeModalClose: N

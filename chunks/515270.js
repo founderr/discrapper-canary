@@ -1,12 +1,12 @@
 n.d(t, {
     L6: function () {
-        return b;
+        return T;
     },
     ZP: function () {
         return E;
     },
     iF: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -201,7 +201,7 @@ let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         updateAgeOnGet: !0
     },
     S = new (a())(I);
-function T(e, t) {
+function b(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -222,8 +222,8 @@ function T(e, t) {
     }
     return n % 2 != 0;
 }
-function b(e) {
+function T(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return T(e, t);
+    return b(e, t);
 }

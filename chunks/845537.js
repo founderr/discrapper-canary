@@ -48,8 +48,8 @@ var p = n(592125),
     v = n(934415),
     I = n(5192),
     S = n(51144),
-    T = n(377668),
-    b = n(388032),
+    b = n(377668),
+    T = n(388032),
     y = n(499492),
     A = n(882530);
 function N(e) {
@@ -86,7 +86,7 @@ function R(e) {
     let { text: t, channelId: n, guildId: i } = e,
         a = m.Z.getGuild(i),
         s = p.Z.getChannel(n),
-        o = (0, u.Ib)(a, s) && '@Clyde' === t ? T.jM : null;
+        o = (0, u.Ib)(a, s) && '@Clyde' === t ? b.jM : null;
     return (0, r.jsx)(_.Z, {
         color: o,
         children: t
@@ -139,7 +139,7 @@ function D(e) {
         o = (0, i.e7)([l.Z], () => l.Z.roleStyle);
     if (null == s)
         return (0, r.jsxs)('span', {
-            children: ['@', b.intl.string(b.t['YV4F/v'])]
+            children: ['@', T.intl.string(T.t['YV4F/v'])]
         });
     let u = null != s.color && 0 !== s.color;
     return (0, r.jsxs)(_.Z, {
@@ -159,12 +159,12 @@ function D(e) {
 function L(e) {
     let { id: t } = e,
         n = (0, i.e7)([p.Z], () => p.Z.getChannel(t)),
-        a = b.intl.string(b.t.zLZPmp).toLowerCase(),
+        a = T.intl.string(T.t.zLZPmp).toLowerCase(),
         s = 'text',
         o = !0;
     if (null != n) {
         var l;
-        (a = (0, c.YO)(n) ? n.name : b.intl.string(b.t['/YzI6+'])), (s = (0, c.YO)(n) ? (null !== (l = (0, v.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
+        (a = (0, c.YO)(n) ? n.name : T.intl.string(T.t['/YzI6+'])), (s = (0, c.YO)(n) ? (null !== (l = (0, v.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
     }
     return o
         ? (0, r.jsx)(_.Z, {

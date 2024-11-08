@@ -23,7 +23,7 @@ t.Z = i.memo(function (e) {
         }, 500);
         return () => clearTimeout(e);
     }, [g]);
-    let T = (e) => {
+    let b = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
             E(!0),
@@ -48,7 +48,7 @@ t.Z = i.memo(function (e) {
                     [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: T,
+                onClick: b,
                 onDoubleClick: (e) => e.preventDefault(),
                 children: (0, r.jsx)(S, {
                     color: 'currentColor',

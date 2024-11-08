@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -23,11 +23,11 @@ var r = n(200651),
     v = n(185923),
     I = n(388032),
     S = n(120385);
-let T = {
+let b = {
         tension: 800,
         friction: 24
     },
-    b = () => {
+    T = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
             className: S.premiumTooltipContainer,
@@ -73,9 +73,9 @@ t.Z = function (e) {
         B = i.useCallback(() => (0, _.x)(v.qR.EmojiButtonFocused), []),
         [Z, F] = (0, f.US)(w ? [u.z.TRIAL_FOR_ALL_EMOJI_BUTTON] : [], void 0, !0),
         V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
-        H = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
+        j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
-        text: b(),
+        text: T(),
         'aria-label': I.intl.formatToMarkdownString(I.t['/7R4q6'], {}),
         position: 'top',
         shouldShow: w && !A && V,
@@ -111,7 +111,7 @@ t.Z = function (e) {
                     null != y
                         ? y()
                         : (0, r.jsx)(c.Spring, {
-                              config: T,
+                              config: b,
                               to: { value: M ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;
@@ -121,7 +121,7 @@ t.Z = function (e) {
                                           ...k,
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                       },
-                                      children: [(0, r.jsx)('div', { className: s()(S.sprite, S.spriteColored, M ? S.active : S.inactive) }), (0, r.jsx)('div', { className: s()(S.sprite, w && V ? S.spritePremiumColored : S.spriteGreyscale, M ? S.inactive : S.active, { [S.reducedMotion]: H }) })]
+                                      children: [(0, r.jsx)('div', { className: s()(S.sprite, S.spriteColored, M ? S.active : S.inactive) }), (0, r.jsx)('div', { className: s()(S.sprite, w && V ? S.spritePremiumColored : S.spriteGreyscale, M ? S.inactive : S.active, { [S.reducedMotion]: j }) })]
                                   });
                               }
                           })

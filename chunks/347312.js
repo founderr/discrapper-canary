@@ -32,7 +32,7 @@ function S(e) {
         f = d ? (24 - E) * u + E : 24 * u;
     if (0 !== f) (t = s), (n = 6 * c * o), (r = (l / 2 - f / 2) * o), (i = f * o), (a = 1 * o), t.moveTo(n, r + a), t.lineTo(n, r + i - a), t.arc(n + a, r + i - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, r + a), t.arc(n + a, r + a, a, 0, Math.PI, !0), t.closePath();
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let [r, a] = i.useState(e),
         [s, o] = i.useState(e);
     return (
@@ -42,7 +42,7 @@ function T(e, t, n) {
         [r, s]
     );
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     if (null == r) return [t, !1];
     let i = Math.min((n - r) / 200, 1);
     return 1 === i ? [t, !1] : [(0, d.BM)(e, t, i), !0];
@@ -114,9 +114,9 @@ function y(e) {
                 a = (0, l.useToken)(o.Z.unsafe_rawColors.BRAND_430).hex(),
                 s = (0, l.useToken)(o.Z.unsafe_rawColors.WHITE_500).hex(),
                 u = t ? a : n,
-                [c, d] = T(u, t, e),
-                [f, _] = T(t ? s : e ? i : r, t, e),
-                [h, p] = T(e ? u : r, t, e);
+                [c, d] = b(u, t, e),
+                [f, _] = b(t ? s : e ? i : r, t, e),
+                [h, p] = b(e ? u : r, t, e);
             return {
                 lastBackgroundFillColor: c,
                 backgroundFillColor: d,
@@ -165,7 +165,7 @@ function y(e) {
                     (w.current !== E || M.current !== y) && ((w.current = E), (M.current = y), (P.current = n)), null != P.current && n > P.current + 200 && (P.current = null);
                     let o = r.height / k;
                     i.clearRect(0, 0, r.width, r.height), i.beginPath();
-                    let [l, u] = b(U, G, n, P.current);
+                    let [l, u] = T(U, G, n, P.current);
                     (s = s || u), (i.fillStyle = l);
                     for (let e = 0; e < x.length; e++)
                         S({
@@ -177,9 +177,9 @@ function y(e) {
                             constrainMin: !0
                         });
                     i.fill();
-                    let [c, d] = b(F, V, n, P.current);
+                    let [c, d] = T(F, V, n, P.current);
                     s = s || d;
-                    let [f, _] = b(B, Z, n, P.current);
+                    let [f, _] = T(B, Z, n, P.current);
                     s = s || _;
                     for (let e = 0; e < a.length; e++) {
                         let t = a[e],
@@ -204,14 +204,14 @@ function y(e) {
                 }
             );
         }, [R, k, x, O, a, d, E, y, U, G, B, Z, F, V]);
-    let [, H] = (0, c.Z)({
+    let [, j] = (0, c.Z)({
         ref: R,
         onDrag: A,
         onDragStart: N,
         onDragEnd: C
     });
     return (0, r.jsx)('canvas', {
-        onMouseDown: H,
+        onMouseDown: j,
         className: s()(p.canvas, t),
         style: { width: D },
         ref: R,

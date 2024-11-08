@@ -27,7 +27,7 @@ var r = n(512722),
     d = n(594174),
     f = n(573261),
     _ = n(981631);
-let h = new s.Y('UserProfileModalActionCreators');
+let h = new s.Yd('UserProfileModalActionCreators');
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;

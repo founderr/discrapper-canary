@@ -394,7 +394,7 @@ class m extends l.Z {
                         });
                 }
             }),
-            (this.logger = new s.Y('UnifiedConnection('.concat(e, ')'))),
+            (this.logger = new s.Yd('UnifiedConnection('.concat(e, ')'))),
             (this.videoSupported = f.U8);
         let i = (this.pc = new RTCPeerConnection({
             bundlePolicy: 'max-bundle',

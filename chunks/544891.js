@@ -36,7 +36,7 @@ var s = n(259443),
 n(380094);
 var u = n(817109),
     c = n(413135).Buffer;
-let d = new s.Y('HTTPUtils'),
+let d = new s.Yd('HTTPUtils'),
     f = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 function _(e, t, n, r, s) {
     var u, d, h, p, g;
@@ -213,14 +213,14 @@ function E(e, t, n) {
 let v = E.bind(null, 'get'),
     I = E.bind(null, 'post'),
     S = E.bind(null, 'put'),
-    T = E.bind(null, 'patch'),
-    b = E.bind(null, 'del'),
+    b = E.bind(null, 'patch'),
+    T = E.bind(null, 'del'),
     y = {
         get: v,
         post: I,
         put: S,
-        patch: T,
-        del: b
+        patch: b,
+        del: T
     };
 if (n.g.isServerRendering) {
     let e = (e, t) =>
@@ -231,7 +231,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (v = e), (I = e), (S = e), (T = e), (b = e);
+    (v = e), (I = e), (S = e), (b = e), (T = e);
 }
 function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

@@ -11,8 +11,8 @@ var d,
     v = n(442837),
     I = n(544891),
     S = n(433517),
-    T = n(570140),
-    b = n(749210),
+    b = n(570140),
+    T = n(749210),
     y = n(131704),
     A = n(601964),
     N = n(758449),
@@ -32,8 +32,8 @@ let k = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkCh
     Z = {},
     F = !1,
     V = null,
-    H = null,
-    j = 0,
+    j = null,
+    H = 0,
     Y = w.BpS.NONE,
     W = null,
     K = {
@@ -73,7 +73,7 @@ function er(e) {
     });
 }
 function ei() {
-    (G = !1), (B = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (H = null), (j = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
+    (G = !1), (B = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (j = null), (H = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
 }
 function ea(e) {
     if (null == o) return !1;
@@ -83,7 +83,7 @@ function ea(e) {
             guildId: o.id,
             location: '7f0c91_1'
         });
-        !e && b.Z.fetchGuildBans(o.id);
+        !e && T.Z.fetchGuildBans(o.id);
     } else if (r === w.pNK.INSTANT_INVITES)
         I.tn
             .get({
@@ -91,7 +91,7 @@ function ea(e) {
                 oldFormErrors: !0
             })
             .then((e) => {
-                T.Z.dispatch({
+                b.Z.dispatch({
                     type: 'GUILD_SETTINGS_LOADED_INVITES',
                     invites: e.body
                 });
@@ -103,7 +103,7 @@ function ea(e) {
                 oldFormErrors: !0
             })
             .then((e) => {
-                T.Z.dispatch({
+                b.Z.dispatch({
                     type: 'GUILD_SETTINGS_SET_WIDGET',
                     enabled: e.body.enabled,
                     channelId: e.body.channel_id
@@ -124,7 +124,7 @@ function ea(e) {
                         let {
                             body: { code: t, uses: n, error: r }
                         } = e;
-                        T.Z.dispatch({
+                        b.Z.dispatch({
                             type: 'GUILD_SETTINGS_SET_VANITY_URL',
                             code: t,
                             uses: n,
@@ -132,7 +132,7 @@ function ea(e) {
                         });
                     })
               : r === w.pNK.SAFETY &&
-                T.Z.dispatch({
+                b.Z.dispatch({
                     type: 'GUILD_SETTINGS_SAFETY_SET_SUBSECTION',
                     subsection: null == i ? w.KsC.SAFETY_OVERVIEW : i
                 });
@@ -221,8 +221,8 @@ class el extends (d = v.ZP.Store) {
             embedChannelId: V,
             mfaLevel: Y,
             searchQuery: a,
-            vanityURLCode: H,
-            vanityURLUses: j,
+            vanityURLCode: j,
+            vanityURLUses: H,
             originalGuild: s,
             hasChanges: this.hasChanges(),
             guildMetadata: Q,
@@ -241,7 +241,7 @@ class el extends (d = v.ZP.Store) {
           })
         : (f[_] = h),
     (t.Z = new el(
-        T.Z,
+        b.Z,
         __OVERLAY__
             ? {}
             : {
@@ -301,7 +301,7 @@ class el extends (d = v.ZP.Store) {
                   },
                   GUILD_SETTINGS_SET_VANITY_URL: function (e) {
                       var t;
-                      (H = null !== (t = e.code) && void 0 !== t ? t : null), (j = e.uses);
+                      (j = null !== (t = e.code) && void 0 !== t ? t : null), (H = e.uses);
                   },
                   GUILD_SETTINGS_SET_MFA_SUCCESS: function (e) {
                       let { level: t } = e;

@@ -17,7 +17,7 @@ n.d(e, {
     }
 }),
     n(47120);
-let l = new (n(259443).Y)('AssetMap');
+let l = new (n(259443).Yd)('AssetMap');
 async function r(t) {
     let e = new o(),
         n = Object.entries(t).map((t) => {

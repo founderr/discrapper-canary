@@ -45,7 +45,7 @@ function o(e) {
                     });
             })
         })),
-        T = r.useCallback(
+        b = r.useCallback(
             (e) => {
                 if (!d.current) return;
                 e.key === a.R8.ESCAPE && null != c && (e.stopPropagation(), e.preventDefault(), c());
@@ -85,7 +85,7 @@ function o(e) {
             },
             [h, t, p, l, c]
         ),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             !m && g(!0);
         }, [m]),
         y = r.useCallback(
@@ -109,13 +109,13 @@ function o(e) {
                 role: 'menu',
                 id: t,
                 tabIndex: -1,
-                onKeyDown: T,
-                onFocus: b,
+                onKeyDown: b,
+                onFocus: T,
                 onBlur: y,
                 onMouseLeave: A,
                 'aria-activedescendant': p.length > 0 ? (0, s.qR)(t, p.join('--')) : void 0
             }),
-            [t, T, b, y, A, p]
+            [t, b, T, y, A, p]
         ),
         R = r.useCallback(
             (e) => {

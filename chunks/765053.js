@@ -1,6 +1,6 @@
 n.d(t, {
     B6: function () {
-        return H;
+        return j;
     },
     ql: function () {
         return X;
@@ -80,10 +80,10 @@ var m = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    T = Object.keys(S).reduce(function (e, t) {
+    b = Object.keys(S).reduce(function (e, t) {
         return (e[S[t]] = t), e;
     }, {}),
-    b = function (e, t) {
+    T = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
             var r = e[n];
             if (Object.prototype.hasOwnProperty.call(r, t)) return r[t];
@@ -91,13 +91,13 @@ var m = {
         return null;
     },
     y = function (e) {
-        var t = b(e, m.TITLE),
-            n = b(e, 'titleTemplate');
+        var t = T(e, m.TITLE),
+            n = T(e, 'titleTemplate');
         if ((Array.isArray(t) && (t = t.join('')), n && t))
             return n.replace(/%s/g, function () {
                 return t;
             });
-        var r = b(e, 'defaultTitle');
+        var r = T(e, 'defaultTitle');
         return t || r || void 0;
     },
     A = function (e, t) {
@@ -288,27 +288,27 @@ var m = {
                 p,
                 I,
                 S,
-                T,
                 b,
+                T,
                 y =
                     ((h = (_ = e).linkTags),
                     (p = _.scriptTags),
                     (I = _.encode),
                     (S = O(_.metaTags, v)),
-                    (T = O(h, g)),
-                    (b = O(p, E)),
+                    (b = O(h, g)),
+                    (T = O(p, E)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(P(m.META, S.priority), P(m.LINK, T.priority), P(m.SCRIPT, b.priority));
+                                return [].concat(P(m.META, S.priority), P(m.LINK, b.priority), P(m.SCRIPT, T.priority));
                             },
                             toString: function () {
-                                return k(m.META, S.priority, I) + ' ' + k(m.LINK, T.priority, I) + ' ' + k(m.SCRIPT, b.priority, I);
+                                return k(m.META, S.priority, I) + ' ' + k(m.LINK, b.priority, I) + ' ' + k(m.SCRIPT, T.priority, I);
                             }
                         },
                         metaTags: S.default,
-                        linkTags: T.default,
-                        scriptTags: b.default
+                        linkTags: b.default,
+                        scriptTags: T.default
                     });
             (f = y.priorityMethods), (u = y.linkTags), (c = y.metaTags), (d = y.scriptTags);
         }
@@ -381,7 +381,7 @@ var m = {
         })
     }),
     V = 'undefined' != typeof document,
-    H = (function (e) {
+    j = (function (e) {
         function t(n) {
             var r;
             return ((r = e.call(this, n) || this).helmetData = new B(r.props.context, t.canUseDOM)), r;
@@ -394,14 +394,14 @@ var m = {
             t
         );
     })(r.Component);
-(H.canUseDOM = V),
-    (H.propTypes = {
+(j.canUseDOM = V),
+    (j.propTypes = {
         context: a().shape({ helmet: a().shape() }),
         children: a().node.isRequired
     }),
-    (H.defaultProps = { context: {} }),
-    (H.displayName = 'HelmetProvider');
-var j = function (e, t) {
+    (j.defaultProps = { context: {} }),
+    (j.displayName = 'HelmetProvider');
+var H = function (e, t) {
         var n,
             r = document.head || document.querySelector(m.HEAD),
             i = r.querySelectorAll(e + '[data-rh]'),
@@ -461,12 +461,12 @@ var j = function (e, t) {
             _ = e.titleAttributes;
         Y(m.BODY, e.bodyAttributes), Y(m.HTML, a), (n = f), (r = _), void 0 !== n && document.title !== n && (document.title = R(n)), Y(m.TITLE, r);
         var h = {
-                baseTag: j(m.BASE, i),
-                linkTags: j(m.LINK, s),
-                metaTags: j(m.META, o),
-                noscriptTags: j(m.NOSCRIPT, l),
-                scriptTags: j(m.SCRIPT, c),
-                styleTags: j(m.STYLE, d)
+                baseTag: H(m.BASE, i),
+                linkTags: H(m.LINK, s),
+                metaTags: H(m.META, o),
+                noscriptTags: H(m.NOSCRIPT, l),
+                scriptTags: H(m.SCRIPT, c),
+                styleTags: H(m.STYLE, d)
             },
             p = {},
             g = {};
@@ -526,20 +526,20 @@ var j = function (e, t) {
                                     return t;
                                 }, [])),
                         bodyAttributes: A('bodyAttributes', t),
-                        defer: b(t, 'defer'),
-                        encode: b(t, 'encodeSpecialCharacters'),
+                        defer: T(t, 'defer'),
+                        encode: T(t, 'encodeSpecialCharacters'),
                         htmlAttributes: A('htmlAttributes', t),
                         linkTags: N(m.LINK, ['rel', 'href'], t),
                         metaTags: N(m.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], t),
                         noscriptTags: N(m.NOSCRIPT, ['innerHTML'], t),
-                        onChangeClientState: b(t, 'onChangeClientState') || function () {},
+                        onChangeClientState: T(t, 'onChangeClientState') || function () {},
                         scriptTags: N(m.SCRIPT, ['src', 'innerHTML'], t),
                         styleTags: N(m.STYLE, ['cssText'], t),
                         title: y(t),
                         titleAttributes: A('titleAttributes', t),
                         prioritizeSeoTags: C(t, 'prioritizeSeoTags')
                     };
-                H.canUseDOM
+                j.canUseDOM
                     ? (K && cancelAnimationFrame(K),
                       a.defer
                           ? (K = requestAnimationFrame(function () {
@@ -649,7 +649,7 @@ var q = ['children'],
                                 a = r.children,
                                 s = p(r, q),
                                 o = Object.keys(s).reduce(function (e, t) {
-                                    return (e[T[t] || t] = s[t]), e;
+                                    return (e[b[t] || t] = s[t]), e;
                                 }, {}),
                                 l = e.type;
                             switch (('symbol' == typeof l ? (l = l.toString()) : n.warnOnInvalidChildren(e, a), l)) {

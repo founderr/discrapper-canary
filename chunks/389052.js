@@ -30,7 +30,7 @@ function p(e) {
         ),
         I = (0, a.e7)([d.Z], () => d.Z.isBlocked(E), [E]),
         S = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        T = (0, i.EQ)({
+        b = (0, i.EQ)({
             isStealthRemediationEnabled: S,
             isBlocked: I
         })
@@ -53,7 +53,7 @@ function p(e) {
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'block',
-              color: null != T ? T : 'default',
+              color: null != b ? b : 'default',
               label: I ? h.intl.string(h.t.XyHpKC) : h.intl.string(h.t.l4EmaW),
               action: I
                   ? () => {

@@ -25,8 +25,8 @@ var r = n(302454),
     v = n(430824),
     I = n(20303),
     S = n(902676),
-    T = n(375954),
-    b = n(699516),
+    b = n(375954),
+    T = n(699516),
     y = n(944486),
     A = n(626135),
     N = n(981631),
@@ -34,11 +34,11 @@ var r = n(302454),
 function R(e, t) {
     var n;
     let r = E.Z.getChannel(y.Z.getChannelId());
-    return !!(null == r || r.type !== N.d4z.DM || b.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
+    return !!(null == r || r.type !== N.d4z.DM || T.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
 }
 function O(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-        { trusted: b, onClick: y, onConfirm: R, shouldConfirm: O, messageId: D, channelId: L } = e,
+        { trusted: T, onClick: y, onConfirm: R, shouldConfirm: O, messageId: D, channelId: L } = e,
         x = i().sanitizeUrl(e.href);
     if (null == x) {
         null != t && t.preventDefault(),
@@ -62,7 +62,7 @@ function O(e, t) {
         G = null;
     if (null != D && null != L) {
         var B, Z, F;
-        let e = T.Z.getMessage(L, D),
+        let e = b.Z.getMessage(L, D),
             t = E.Z.getBasicChannel(L);
         M = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
         let n = v.Z.getGuild(M),
@@ -128,10 +128,10 @@ function O(e, t) {
         null == t || t.preventDefault(), d.Z.show(w);
         return;
     }
-    let H = 'function' == typeof b ? b() : b,
-        j = (0, S.E)(w),
-        Y = !('http:' === j || 'https:' === j);
-    if ((!Y && (H || I.Z.isTrustedDomain(w))) || (Y && I.Z.isTrustedProtocol(w))) {
+    let j = 'function' == typeof T ? T() : T,
+        H = (0, S.E)(w),
+        Y = !('http:' === H || 'https:' === H);
+    if ((!Y && (j || I.Z.isTrustedDomain(w))) || (Y && I.Z.isTrustedProtocol(w))) {
         null == t || (null != O && O)
             ? V()
             : P &&

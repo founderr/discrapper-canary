@@ -18,7 +18,7 @@ var r = n(200651),
     I = n(388032),
     S = n(346161);
 t.Z = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: b } = e,
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: b, setTrackedUpsellViewed: T } = e,
         { location: y } = (0, u.O)(),
         { analyticsLocations: A } = (0, d.ZP)(),
         N = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
@@ -27,7 +27,7 @@ t.Z = (e) => {
     return (i.useEffect(() => {
         C &&
             R &&
-            T &&
+            b &&
             ((0, c.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: y,
                 guild_id: null == N ? void 0 : N.id,
@@ -35,8 +35,8 @@ t.Z = (e) => {
                 type: 'Expression Picker Inline Sticker Upsell',
                 location_stack: A
             }),
-            b(!0));
-    }, [R, N, a, y, T, b, A, C]),
+            T(!0));
+    }, [R, N, a, y, b, T, A, C]),
     null != N && C)
         ? R
             ? (0, r.jsxs)('div', {

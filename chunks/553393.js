@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(430824),
     I = n(496675),
     S = n(979651),
-    T = n(617136),
-    b = n(113434),
+    b = n(617136),
+    T = n(113434),
     y = n(497505),
     A = n(475595),
     N = n(602667),
@@ -46,10 +46,10 @@ t.Z = function (e) {
             quest: m,
             location: y.jn.MEMBERS_LIST
         }),
-        F = (0, b.tP)(m),
+        F = (0, T.tP)(m),
         V = (null == m ? void 0 : null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        H = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-        j = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
+        j = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        H = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
         Y = (0, o.e7)([g.Z], () => g.Z.getState().theme),
         W = (0, l.wj)(Y) ? x.BR.DARK : x.BR.LIGHT,
         K = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -106,22 +106,22 @@ t.Z = function (e) {
         er = 'top' === S ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
     if (null == m || F || (V && !k(I, B))) return null;
     let ei = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.OPEN_DISCLOSURE,
+                questContentCTA: b.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(m, {
                     content: y.jn.MEMBERS_LIST,
-                    ctaContent: T.jZ.OPEN_DISCLOSURE
+                    ctaContent: b.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
-            (0, T._3)({
+            (0, b._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.LEARN_MORE,
+                questContentCTA: b.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, y.jn.MEMBERS_LIST, m.id);
@@ -132,10 +132,10 @@ t.Z = function (e) {
         eo = () => {
             if (k(I, B) && null != B)
                 return (
-                    (0, T._3)({
+                    (0, b._3)({
                         questId: m.id,
                         questContent: y.jn.MEMBERS_LIST,
-                        questContentCTA: T.jZ.WATCH_STREAM,
+                        questContentCTA: b.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(B.id),
@@ -144,14 +144,14 @@ t.Z = function (e) {
             ea();
         },
         el =
-            j && !V
+            H && !V
                 ? {
                       headerText: w.intl.string(w.t.gHerLS),
                       ctaText: w.intl.string(w.t.cfY4PD),
                       handleClickCta: Z,
                       tileAssetType: 'reward'
                   }
-                : H && !V
+                : j && !V
                   ? {
                         headerText: w.intl.string(w.t.uH2sf3),
                         ctaText: w.intl.string(w.t.VN1Ajo),

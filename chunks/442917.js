@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(221888),
     I = n(933557),
     S = n(569545),
-    T = n(74299),
-    b = n(863908),
+    b = n(74299),
+    T = n(863908),
     y = n(803647),
     A = n(266910),
     N = n(788983),
@@ -39,8 +39,8 @@ var r = n(200651),
     Z = n(248402),
     F = n(33039),
     V = n(451478),
-    H = n(626135),
-    j = n(5192),
+    j = n(626135),
+    H = n(5192),
     Y = n(51144),
     W = n(484286),
     K = n(822296),
@@ -93,18 +93,18 @@ class ei extends i.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, ee._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, b.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, T.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        H.default.track($.rMx.VIDEO_LAYOUT_TOGGLED, {
+        j.default.track($.rMx.VIDEO_LAYOUT_TOGGLED, {
             video_layout: 'pip',
             ...(0, m.AB)(e.id)
         });
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
-        H.default.track($.rMx.VIDEO_LAYOUT_TOGGLED, {
+        j.default.track($.rMx.VIDEO_LAYOUT_TOGGLED, {
             video_layout: g.Z.getLayout(e.id),
             ...(0, m.AB)(e.id)
         });
@@ -133,7 +133,7 @@ class ei extends i.PureComponent {
         let { channel: e, participantOnScreen: t } = this.props;
         if ((null == t ? void 0 : t.type) === ee.fO.STREAM || (null == t ? void 0 : t.type) === ee.fO.USER) {
             var n;
-            let i = null !== (n = j.ZP.getNickname(e.getGuildId(), e.id, t.user)) && void 0 !== n ? n : Y.ZP.getName(t.user);
+            let i = null !== (n = H.ZP.getNickname(e.getGuildId(), e.id, t.user)) && void 0 !== n ? n : Y.ZP.getName(t.user);
             return (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
                 color: 'always-white',
@@ -290,7 +290,7 @@ t.Z = u.ZP.connectStores([U.Z, g.Z, k.default, Z.Z, F.Z, P.Z, V.Z], (e) => {
         a = null == i || i.disabled,
         s = null != r && r.type !== ee.fO.ACTIVITY && r.type !== ee.fO.HIDDEN_STREAM ? F.Z.getStreamId(r.user.id, t.getGuildId(), (0, E.Z)(r.type)) : null,
         o = !a && U.Z.isVideoEnabled(),
-        u = (0, T.Z)(U.Z),
+        u = (0, b.Z)(U.Z),
         c = k.default.getId(),
         d = P.Z.getCurrentUserActiveStream();
     return {

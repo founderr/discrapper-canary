@@ -274,11 +274,11 @@ function S(e, t) {
     let a = r[n.layoutId];
     return null != a && t(n, a);
 }
-function T(e) {
+function b(e) {
     var t;
     return null === (t = I[e]) || void 0 === t ? void 0 : t.defaultSettings;
 }
-class b extends (s = d.ZP.PersistedStore) {
+class T extends (s = d.ZP.PersistedStore) {
     initialize(e) {
         null != e && null != e.layouts && null != e.widgets
             ? ((r = (function (e) {
@@ -376,7 +376,7 @@ class b extends (s = d.ZP.PersistedStore) {
         return I[e];
     }
     getWidgetDefaultSettings(e) {
-        return T(e);
+        return b(e);
     }
     getWidgetType(e) {
         let t = i[e];
@@ -407,9 +407,9 @@ class b extends (s = d.ZP.PersistedStore) {
         );
     }
 }
-E(b, 'displayName', 'LayoutStore'),
-    E(b, 'persistKey', 'LayoutStore'),
-    E(b, 'migrations', [
+E(T, 'displayName', 'LayoutStore'),
+    E(T, 'persistKey', 'LayoutStore'),
+    E(T, 'migrations', [
         () => {
             let { pinnedWidgets: e, positions: t, sizes: n, v: r } = { ...f.K.get('OverlayStore') };
             if (5 === r && e) {
@@ -486,7 +486,7 @@ E(b, 'displayName', 'LayoutStore'),
                         i.push([
                             s,
                             {
-                                ...T(g.Odu.GUILDS_TEXT),
+                                ...b(g.Odu.GUILDS_TEXT),
                                 type: g.Odu.GUILDS_TEXT,
                                 id: s,
                                 layoutId: t,
@@ -530,7 +530,7 @@ E(b, 'displayName', 'LayoutStore'),
             };
         }
     ]),
-    (t.Z = new b(_.Z, {
+    (t.Z = new T(_.Z, {
         LAYOUT_CREATE: function (e) {
             let { layoutId: t, widgets: n, version: a, defaultResolution: s } = e;
             if (null != r[t]) return !1;

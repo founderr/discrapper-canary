@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     hQ: function () {
-        return b;
+        return T;
     },
     lo: function () {
         return A;
@@ -56,14 +56,14 @@ function I(e) {
 function S(e) {
     return String(e);
 }
-let T = i.createContext({
+let b = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
     itemToString: S
 });
-function b(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: b = !1, maxVisibleItems: y = 5, itemToString: A = S, showScrollbar: N = !1 } = e,
+function T(e) {
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: T = !1, maxVisibleItems: y = 5, itemToString: A = S, showScrollbar: N = !1 } = e,
         [C, R] = i.useState(''),
         [O] = i.useState(!0),
         [D, L] = i.useState(null),
@@ -131,7 +131,7 @@ function b(e) {
                     className: s()(m.combobox, c),
                     children: [
                         (0, r.jsx)(f.E, {
-                            autoFocus: b,
+                            autoFocus: T,
                             size: f.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: C,
@@ -163,7 +163,7 @@ function b(e) {
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(T.Provider, {
+                                    : (0, r.jsx)(b.Provider, {
                                           value: {
                                               activeDescendant: D,
                                               selected: a,
@@ -198,11 +198,11 @@ let y = i.createContext(null);
 function A(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = E.STANDARD, ...d } = e,
-        { activeDescendant: f, selected: _, setSelected: h, itemToString: p } = i.useContext(T),
+        { activeDescendant: f, selected: _, setSelected: h, itemToString: p } = i.useContext(b),
         v = p(n),
         I = f === v,
         S = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
-        b = (0, l.JA)(v);
+        T = (0, l.JA)(v);
     return (0, r.jsx)(c.P, {
         tag: 'li',
         id: v,
@@ -213,7 +213,7 @@ function A(e) {
             [u]: S,
             [m.disabled]: o
         }),
-        ...b,
+        ...T,
         role: 'option',
         'aria-selected': S,
         'aria-disabled': o,
@@ -240,7 +240,7 @@ function A(e) {
     }),
     (A.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(T),
+            { selected: n } = i.useContext(b),
             a = i.useContext(y);
         return (0, r.jsx)('span', {
             className: m.itemCheckbox,
@@ -253,7 +253,7 @@ function A(e) {
         });
     }),
     (A.Checkmark = function () {
-        let { selected: e } = i.useContext(T),
+        let { selected: e } = i.useContext(b),
             t = i.useContext(y);
         return e.has(t)
             ? (0, r.jsx)('span', {

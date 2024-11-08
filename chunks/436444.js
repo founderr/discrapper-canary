@@ -26,8 +26,8 @@ let m = {
 };
 t.Z = function (e) {
     let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: g, setConfettiCount: E, setShouldFireConfetti: v, tier: I, tierMarkerAnimationPosition: S } = e,
-        { analyticsLocations: T } = (0, l.ZP)(),
-        b = _.oCV[I] - i.premiumSubscriberCount,
+        { analyticsLocations: b } = (0, l.ZP)(),
+        T = _.oCV[I] - i.premiumSubscriberCount,
         y = I <= S || g,
         A = y && I <= i.premiumTier,
         N = y && I < i.premiumTier,
@@ -60,7 +60,7 @@ t.Z = function (e) {
                   onClick: function () {
                       y &&
                           (0, d.u)({
-                              analyticsLocations: T,
+                              analyticsLocations: b,
                               analyticsLocation: {
                                   page: _.ZY5.PREMIUM_GUILD_USER_MODAL,
                                   section: _.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
@@ -78,7 +78,7 @@ t.Z = function (e) {
                                       }
                                   })(I)
                               },
-                              numberOfBoostsToAdd: b,
+                              numberOfBoostsToAdd: T,
                               guild: i
                           });
                   }
@@ -87,7 +87,7 @@ t.Z = function (e) {
         text: A
             ? h.intl.formatToPlainString(h.t['1o48kp'], { tierName: (0, c.nW)(I, { useLevels: !1 }) })
             : h.intl.formatToPlainString(h.t.r6NN6e, {
-                  numBoostsRequired: b,
+                  numBoostsRequired: T,
                   tierName: (0, c.nW)(I, { useLevels: !1 })
               }),
         shouldShow: I !== _.Eu4.NONE,

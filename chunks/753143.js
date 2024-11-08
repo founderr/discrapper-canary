@@ -26,8 +26,8 @@ function l(e) {
         {
             dirty: I,
             chunkStart: S,
-            chunkEnd: T,
-            forceUpdateOnChunkChange: b
+            chunkEnd: b,
+            forceUpdateOnChunkChange: T
         } = (0, s.Z)({
             chunkSize: f,
             getScrollerState: p,
@@ -68,15 +68,15 @@ function l(e) {
                           sections: t,
                           getAnchorId: m
                       }),
-                      v.compute(Math.max(0, S * f), T * f)),
-            [I, S, T, n, l, u, d, h, _, t, v, f, m]
+                      v.compute(Math.max(0, S * f), b * f)),
+            [I, S, b, n, l, u, d, h, _, t, v, f, m]
         );
     return (
         (0, r.useLayoutEffect)(() => void (E.current = R)),
         {
             ...R,
             listComputer: v,
-            forceUpdateOnChunkChange: b,
+            forceUpdateOnChunkChange: T,
             anchor: A,
             isSidebarVisible: C
         }

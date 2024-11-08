@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         enable: function () {
-            return T;
+            return b;
         },
         isNotSupported: function () {
             return I;
@@ -10,7 +10,7 @@ n.r(t),
             return y;
         },
         trackToggleSelfMute: function () {
-            return b;
+            return T;
         }
     });
 var r = n(200651);
@@ -66,7 +66,7 @@ function S(e) {
         action: e
     });
 }
-function T() {
+function b() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return I()
         ? Promise.resolve(!1)
@@ -100,7 +100,7 @@ function T() {
               )
               .then(() => !0));
 }
-function b(e) {
+function T(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = c.Z.getKeybindForAction(p.kg4.TOGGLE_MUTE, !1, !0),
         i = u.Z.getVoiceChannelId(),

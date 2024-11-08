@@ -71,15 +71,15 @@ let E = (e) => {
             name: g,
             properties: E
         });
-    let T = (0, c.Aq)(),
-        b = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_SHOW);
-        }, [T]),
+    let b = (0, c.Aq)(),
+        T = i.useCallback(() => {
+            b.dispatch(m.CkL.POPOUT_SHOW);
+        }, [b]),
         y = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_HIDE);
-        }, [T]);
+            b.dispatch(m.CkL.POPOUT_HIDE);
+        }, [b]);
     return (0, r.jsx)(f.W5, {
-        onMount: b,
+        onMount: T,
         onUnmount: y,
         targetRef: I,
         overrideTargetRect: _,

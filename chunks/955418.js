@@ -26,8 +26,8 @@ function g(e) {
         { newestAnalyticsLocation: g } = (0, a.ZP)(),
         { trackUserProfileAction: E } = (0, d.KZ)(),
         [v, I] = i.useState(''),
-        [S, T] = i.useState((0, o.JM)(v)),
-        b = i.useRef(!1);
+        [S, b] = i.useState((0, o.JM)(v)),
+        T = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
         innerClassName: p.inner,
         editorClassName: p.editor,
@@ -37,14 +37,14 @@ function g(e) {
         textValue: v,
         richValue: S,
         onChange: (e, t, n) => {
-            if (t !== v) I(t), T(n);
+            if (t !== v) I(t), b(n);
         },
-        focused: b.current,
+        focused: T.current,
         onFocus: () => {
-            b.current = !0;
+            T.current = !0;
         },
         onBlur: () => {
-            b.current = !1;
+            T.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;

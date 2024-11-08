@@ -19,11 +19,11 @@ var r,
     I = n(590415);
 ((a = r || (r = {})).SPEAKER = 'speaker'), (a.MODERATOR = 'moderator');
 let S = {},
-    T = {
+    b = {
         speaker: !1,
         moderator: !1
     };
-function b(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     null == S[t] && (S[t] = {});
     let r = (function (e, t) {
@@ -32,7 +32,7 @@ function b(e, t) {
             s = _.Z.getChannel(t),
             o = null == s ? void 0 : s.getGuildId(),
             l = p.Z.getGuild(o);
-        if (null == l || null == s || !s.isGuildStageVoice()) return T;
+        if (null == l || null == s || !s.isGuildStageVoice()) return b;
         return {
             speaker: (function (e, t) {
                 let n = g.Z.getVoiceStateForChannel(t, e);
@@ -98,10 +98,10 @@ class C extends (i = d.ZP.Store) {
     getPermissionsForUser(e, t) {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || null == t) return T;
+        if (null == e || null == t) return b;
         let i = null === (n = S[t]) || void 0 === n ? void 0 : n[e];
-        if (null != i) return r && null == i.moderator ? b(e, t, !0) : i;
-        return b(e, t, r);
+        if (null != i) return r && null == i.moderator ? T(e, t, !0) : i;
+        return T(e, t, r);
     }
 }
 (l = 'StageChannelRoleStore'),

@@ -18,10 +18,10 @@ let h = new Set([_.ABu.CONTACTS]),
     v = new Set(),
     I = {},
     S = {},
-    T = (e) => {
+    b = (e) => {
         (m = e.filter((e) => !h.has(e.type) && c.Z.isSupported(e.type))), (g = e.filter((e) => h.has(e.type))), (p = !1);
     };
-class b extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     isJoining(e) {
         return E[e] || !1;
     }
@@ -57,7 +57,7 @@ class b extends (r = o.ZP.Store) {
     }
 }
 (s = 'ConnectedAccountsStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -65,13 +65,13 @@ class b extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(l.Z, {
+    (t.Z = new T(l.Z, {
         CONNECTION_OPEN: function (e) {
-            T(e.connectedAccounts.map((e) => new d.Z(e)));
+            b(e.connectedAccounts.map((e) => new d.Z(e)));
         },
         USER_CONNECTIONS_UPDATE: function (e) {
             e.local && null != e.accounts
-                ? T(
+                ? b(
                       e.accounts.map(
                           (e) =>
                               new d.Z({

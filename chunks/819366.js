@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(271383),
     I = n(430824),
     S = n(699516),
-    T = n(594174),
-    b = n(5192),
+    b = n(594174),
+    T = n(5192),
     y = n(51144),
     A = n(377668);
 function N(e) {
@@ -55,7 +55,7 @@ function N(e) {
 function C(e) {
     let { className: t, userId: i, channelId: a, parsedUserId: h, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([T.default], () => T.default.getUser(i)),
+        L = (0, l.e7)([b.default], () => b.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
         w = null != x ? x.getGuildId() : null,
         M =
@@ -76,7 +76,7 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, S.Z], () => b.ZP.getNickname(w, a, L)),
+        k = (0, l.e7)([E.Z, v.ZP, S.Z], () => T.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
         G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)

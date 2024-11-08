@@ -18,8 +18,8 @@ var r = n(392711),
     v = n(430824),
     I = n(496675),
     S = n(699516),
-    T = n(246946),
-    b = n(594174),
+    b = n(246946),
+    T = n(594174),
     y = n(483360),
     A = n(176354),
     N = n(51144),
@@ -231,9 +231,9 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(P),
             parse(e, t, n) {
                 let { isNotification: r } = n,
-                    i = b.default.getUser(e[1]);
+                    i = T.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = N.ZP.getUserTag(i, { identifiable: r && T.Z.enabled ? 'never' : 'always' });
+                let a = N.ZP.getUserTag(i, { identifiable: r && b.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
                     let e = N.ZP.getGlobalName(i);
@@ -256,7 +256,7 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(U),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, b.default, S.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, T.default, S.Z, !0, !0) };
             }
         },
         emoji: {
@@ -299,8 +299,8 @@ let w = c.Z.RULES,
     });
 });
 let V = s().parserFor(Z),
-    H = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
-function j(e, t, n, r) {
+    j = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
+function H(e, t, n, r) {
     let i = '';
     return (
         e.forEach((e) => {
@@ -310,7 +310,7 @@ function j(e, t, n, r) {
                         if (('customEmoticon' === t.type && n(t.emoji, !1), 'emoticon' === t.type || 'text' === t.type)) {
                             let r;
                             let i = u.ZP.translateSurrogatesToInlineEmoji(t.content);
-                            for (; null !== (r = H.exec(i)); ) {
+                            for (; null !== (r = j.exec(i)); ) {
                                 let i;
                                 null != r[1] && '' !== r[1] ? e.emojiContext && (i = e.emojiContext.getById(r[1])) : (i = u.ZP.getByName(r[2])), i && n(i, t.isShortcut || !1);
                             }
@@ -331,7 +331,7 @@ function j(e, t, n, r) {
                     default:
                         i += n(e.content);
                 }
-            else e.content.constructor === Array ? (i += j(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
+            else e.content.constructor === Array ? (i += H(e.content, t, n, r)) : console.warn('Unknown message item type: ', e);
         }),
         i
     );
@@ -358,7 +358,7 @@ function Y(e) {
     let s = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
-                    r = b.default.getUser(n);
+                    r = T.default.getUser(n);
                 return null == r
                     ? e
                     : (e.push({
@@ -448,7 +448,7 @@ t.ZP = {
                         ? o.invalidEmojis.push(t)
                         : !n && o.validNonShortcutEmojis.push(t);
                 }),
-                j(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i))),
+                H(V(n, r), r, u.ZP.translateInlineEmojiToSurrogates, i))),
             o
         );
     },
@@ -465,6 +465,6 @@ t.ZP = {
                 guild: o,
                 isNotification: n
             };
-        return j(d(e, f), f, c);
+        return H(d(e, f), f, c);
     }
 };

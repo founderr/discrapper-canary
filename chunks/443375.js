@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(833858),
     I = n(769654),
     S = n(960870),
-    T = n(139793),
-    b = n(994746),
+    b = n(139793),
+    T = n(994746),
     y = n(232174),
     A = n(510659),
     N = n(287954),
@@ -44,8 +44,8 @@ var i = n(120356),
     Z = n(553375),
     F = n(228168),
     V = n(981631),
-    H = n(701488),
-    j = n(388032),
+    j = n(701488),
+    H = n(388032),
     Y = n(617114),
     W = n(69035);
 function K(e) {
@@ -76,11 +76,11 @@ function K(e) {
             entry: ea,
             analyticsLocations: ee
         }),
-        el = (0, T.Z)({
+        el = (0, b.Z)({
             userId: n.id,
             onAction: eo
         }),
-        eu = (0, b.Z)(K),
+        eu = (0, T.Z)(K),
         { largeImage: ec, smallImage: ed } = (0, h.FO)(K, z),
         ef = (0, s.EQ)(K)
             .when(c.Z, () => es)
@@ -151,7 +151,7 @@ function K(e) {
                 : (0, d.Z)(K) && null != q
                   ? (0, r.jsx)(M.Z, {
                         variant: 'text-xs/normal',
-                        text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: q.name }),
+                        text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: q.name }),
                         onClick: () => {
                             (0, I.X)(q.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == J || J();
                         }
@@ -178,7 +178,7 @@ function K(e) {
         },
         eg = () => {
             var e, t, n, i;
-            return (null === (e = K.party) || void 0 === e ? void 0 : e.size) == null && K.application_id === H.Zc
+            return (null === (e = K.party) || void 0 === e ? void 0 : e.size) == null && K.application_id === j.Zc
                 ? (0, r.jsxs)('div', {
                       className: W.gameState,
                       children: [
@@ -188,7 +188,7 @@ function K(e) {
                           }),
                           (0, r.jsx)(M.Z, {
                               variant: 'text-xs/normal',
-                              text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                              text: H.intl.formatToPlainString(H.t['u//9Bw'], {
                                   count: '0',
                                   max: null !== (i = null == z ? void 0 : z.getMaxParticipants()) && void 0 !== i ? i : 0
                               })
@@ -205,7 +205,7 @@ function K(e) {
                             }),
                             (0, r.jsx)(M.Z, {
                                 variant: 'text-xs/normal',
-                                text: j.intl.formatToPlainString(j.t['u//9Bw'], {
+                                text: H.intl.formatToPlainString(H.t['u//9Bw'], {
                                     count: K.party.size[0],
                                     max: K.party.size[1]
                                 })
@@ -268,8 +268,8 @@ function K(e) {
                       })
                   });
     if (null === et) return null;
-    let eT = null !== (t = K.application_id) && void 0 !== t ? t : K.name,
-        eb = er === F.n_.ACTIVITY && ei === eT;
+    let eb = null !== (t = K.application_id) && void 0 !== t ? t : K.name,
+        eT = er === F.n_.ACTIVITY && ei === eb;
     return (0, r.jsx)(_.Gt, {
         value: ee,
         children: (0, r.jsx)(D.Z, {
@@ -284,16 +284,16 @@ function K(e) {
                         user: n,
                         guildId: $,
                         profileType: et,
-                        sourceId: eT,
+                        sourceId: eb,
                         sourceType: F.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(R.Z.Overlay, {
-                                className: a()(W.card, X, { [W.hoisted]: eb }),
+                                className: a()(W.card, X, { [W.hoisted]: eT }),
                                 ref: el,
                                 children: (0, r.jsxs)(C.Z, {
                                     user: n,
                                     className: W.body,
-                                    interactionSourceId: eT,
+                                    interactionSourceId: eb,
                                     sourceType: F.n_.ACTIVITY,
                                     moreButton: (0, r.jsx)(B.Z, {
                                         display: 'live',

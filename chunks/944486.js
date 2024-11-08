@@ -18,8 +18,8 @@ var c,
     v = n(57132),
     I = n(703656),
     S = n(131704),
-    T = n(823379),
-    b = n(314897),
+    b = n(823379),
+    T = n(314897),
     y = n(592125),
     A = n(984933),
     N = n(430824),
@@ -47,7 +47,7 @@ function U() {
             knownThreadIds: p()(x)
                 .values()
                 .concat(p().values(M))
-                .filter(T.lm)
+                .filter(b.lm)
                 .uniq()
                 .filter((e) => {
                     let t = y.Z.getBasicChannel(e);
@@ -101,13 +101,13 @@ function V(e, t) {
         r = !1;
     o === e && ((o = null), (r = !0)), !(0, v.cn)() && (x[k(n)] === e && ((x[k(n)] = G(k(n))), R.Z.getGuildId() === n && (0, I.dL)(O.Z5c.CHANNEL(t, x[k(n)])), (r = !0)), null != n && M[n] === e && (delete M[n], (r = !0))), r && U();
 }
-function H(e) {
+function j(e) {
     let {
         channel: { id: t, guild_id: n }
     } = e;
     V(t, n);
 }
-class j extends (c = m.ZP.Store) {
+class H extends (c = m.ZP.Store) {
     initialize() {
         if (!__OVERLAY__) {
             var e, t;
@@ -162,7 +162,7 @@ class j extends (c = m.ZP.Store) {
     }
 }
 (_ = 'SelectedChannelStore'),
-    (f = 'displayName') in (d = j)
+    (f = 'displayName') in (d = H)
         ? Object.defineProperty(d, f, {
               value: _,
               enumerable: !0,
@@ -170,7 +170,7 @@ class j extends (c = m.ZP.Store) {
               writable: !0
           })
         : (d[f] = _),
-    (t.Z = new j(E.Z, {
+    (t.Z = new H(E.Z, {
         CONNECTION_OPEN: function (e) {
             (r = e.sessionId), null != o && null == y.Z.getChannel(o) && (o = null), F() && U();
         },
@@ -195,12 +195,12 @@ class j extends (c = m.ZP.Store) {
             }
             return !1;
         },
-        CHANNEL_DELETE: H,
+        CHANNEL_DELETE: j,
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
             for (let e of t) e.isScheduledForDeletion() && V(e.id, e.guild_id);
         },
-        THREAD_DELETE: H,
+        THREAD_DELETE: j,
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
             if (null == x[t.id]) {
@@ -239,7 +239,7 @@ class j extends (c = m.ZP.Store) {
                             }, 60000)),
                         U();
                 } else {
-                    if (t.userId !== b.default.getId()) return e;
+                    if (t.userId !== T.default.getId()) return e;
                     clearInterval(u), (u = void 0), (l = 0);
                     let n = null === (i = y.Z.getChannel(o)) || void 0 === i ? void 0 : i.getGuildId(),
                         r = null === (a = y.Z.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();

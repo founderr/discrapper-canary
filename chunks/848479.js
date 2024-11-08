@@ -3,7 +3,7 @@ var r = n(259443),
     i = n(579806),
     a = n(77450),
     s = n(998502);
-let o = new r.Y('ProcessUtilsElectron');
+let o = new r.Yd('ProcessUtilsElectron');
 class l extends a.h {
     setupReportingTimer() {
         var e, t;

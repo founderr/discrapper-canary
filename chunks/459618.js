@@ -9,7 +9,7 @@ var r = n(259443),
     c = n(866960),
     d = n(626135),
     f = n(981631);
-let _ = new r.Y('MessageRoundtripTrackerStore');
+let _ = new r.Yd('MessageRoundtripTrackerStore');
 function h(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }

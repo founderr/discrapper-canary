@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(273514),
     I = n(995712),
     S = n(234937),
-    T = n(473121),
-    b = n(449413),
+    b = n(473121),
+    T = n(449413),
     y = n(266080),
     A = n(316617),
     N = n(15682),
@@ -49,7 +49,7 @@ function B(e, t) {
     });
 }
 t.Z = (e) => {
-    let { node: t, reportType: n, reportSubType: Z, history: F, onSelectChild: V, onModalClose: H, onSubmit: j, multiSelect: Y, reportId: W, textInput: K } = e,
+    let { node: t, reportType: n, reportSubType: Z, history: F, onSelectChild: V, onModalClose: j, onSubmit: H, multiSelect: Y, reportId: W, textInput: K } = e,
         z = G(t, 'checkbox'),
         q = G(t, 'text_line_resource'),
         Q = B(t, 'external_link'),
@@ -96,7 +96,7 @@ t.Z = (e) => {
             else ei(k.intl.string(k.t.h6D8V1));
         },
         eh = () =>
-            j({
+            H({
                 nodeRef: t.id,
                 destination: ['', e.successNodeId]
             })
@@ -114,11 +114,11 @@ t.Z = (e) => {
         t.is_auto_submit &&
             !et &&
             (en(!0),
-            j({
+            H({
                 nodeRef: t.id,
                 destination: ['', t.id]
             }));
-    }, [t.is_auto_submit, et, j, t.id]);
+    }, [t.is_auto_submit, et, H, t.id]);
     let ep = (0, o.fW)(Z),
         em = (0, l.A)({
             location: 'web_iar_node_view',
@@ -132,7 +132,7 @@ t.Z = (e) => {
                 separator: !1,
                 direction: s.Z.Direction.VERTICAL,
                 className: U.header,
-                children: [(0, r.jsx)(L.Z, { element: G(t, 'success') }), (0, r.jsx)(T.Z, { node: t }), (0, r.jsx)(b.Z, { node: t })]
+                children: [(0, r.jsx)(L.Z, { element: G(t, 'success') }), (0, r.jsx)(b.Z, { node: t }), (0, r.jsx)(T.Z, { node: t })]
             }),
             (0, r.jsxs)(a.ModalContent, {
                 className: U.body,
@@ -183,7 +183,7 @@ t.Z = (e) => {
                         (0, r.jsx)(O.Z, {
                             settingsUpsells: ep,
                             channelId: n.record.channel_id,
-                            onModalClose: H,
+                            onModalClose: j,
                             reportId: W,
                             reportType: n,
                             reportSubType: Z
@@ -238,7 +238,7 @@ t.Z = (e) => {
                     switch (e.type) {
                         case 'done':
                         case 'cancel':
-                            H();
+                            j();
                             break;
                         case 'next':
                             ef(['', e.target]);
@@ -252,7 +252,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(a.ModalCloseButton, {
                 className: U.closeButton,
-                onClick: H
+                onClick: j
             })
         ]
     });

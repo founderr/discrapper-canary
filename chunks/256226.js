@@ -17,8 +17,8 @@ var r = n(200651),
     v = n(257972);
 t.Z = i.forwardRef(function (e, t) {
     var a, I, S;
-    let T;
-    let { canRemove: b, className: y, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
+    let b;
+    let { canRemove: T, className: y, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
         { tabIndex: D, ...L } = (0, o.JA)(A.id),
         x = (0, g.p9)({
             roleId: A.id,
@@ -47,10 +47,10 @@ t.Z = i.forwardRef(function (e, t) {
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
-        (T = M
+        (b = M
             ? (0, r.jsx)(h.Z, {
                   className: v.roleFlowerStar,
-                  iconClassName: b ? v.roleVerifiedIcon : void 0,
+                  iconClassName: T ? v.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
@@ -83,7 +83,7 @@ t.Z = i.forwardRef(function (e, t) {
             tabIndex: D,
             ...L,
             children: [
-                b
+                T
                     ? (0, r.jsx)(d.TooltipContainer, {
                           text: E.intl.string(E.t.u3RVsL),
                           children: (0, r.jsxs)(d.Clickable, {
@@ -94,7 +94,7 @@ t.Z = i.forwardRef(function (e, t) {
                               'aria-hidden': !1,
                               'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
                               children: [
-                                  T,
+                                  b,
                                   (0, r.jsx)(d.XSmallIcon, {
                                       size: 'md',
                                       color: B,
@@ -110,7 +110,7 @@ t.Z = i.forwardRef(function (e, t) {
                           focusProps: { focusClassName: v.roleRemoveIconFocused },
                           'aria-hidden': !0,
                           'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
-                          children: T
+                          children: b
                       }),
                 null != x
                     ? (0, r.jsx)(m.Z, {

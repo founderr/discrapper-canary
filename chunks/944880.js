@@ -28,7 +28,7 @@ function v(e) {
 }
 function I() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    T();
+    b();
     let t = u.Z.getForApplication(p.CL),
         n = (0, h.kG)(t),
         r = (0, h.MR)([m.Ft.FREE_GUILD_BOOST_1_MONTH, m.Ft.FREE_GUILD_BOOST_3_MONTHS], t),
@@ -80,7 +80,7 @@ async function S() {
             a.Z.wait(() =>
                 (function () {
                     var e;
-                    if ((T(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
+                    if ((b(), _.Z.getFetchState() !== _.M.FETCHED || E)) return;
                     let t = null !== (e = _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : _.Z.getTenureRewardStatusForRewardId(m.Ft.FREE_GUILD_BOOST_3_MONTHS);
                     if ((null == t ? void 0 : t.redeemable_at) == null) return;
                     let n = (null == t ? void 0 : t.redeemable_at) != null ? new Date(t.redeemable_at).getTime() - Date.now() : null;
@@ -88,11 +88,11 @@ async function S() {
                 })()
             );
 }
-function T() {
+function b() {
     clearTimeout(g), (g = null);
 }
-function b() {
-    T();
+function T() {
+    b();
 }
 function y() {
     I();
@@ -109,12 +109,12 @@ class A extends s.Z {
             (n = 'actions'),
             (r = {
                 POST_CONNECTION_OPEN: y,
-                CONNECTION_CLOSED: b,
+                CONNECTION_CLOSED: T,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => I(),
                 ENTITLEMENT_CREATE: v,
                 ENTITLEMENT_UPDATE: () => I(),
                 ENTITLEMENT_DELETE: () => I(),
-                LOGOUT: T
+                LOGOUT: b
             }),
             n in t
                 ? Object.defineProperty(t, n, {

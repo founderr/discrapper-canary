@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(366050),
     I = n(944486),
     S = n(594174),
-    T = n(566620),
-    b = n(317381),
+    b = n(566620),
+    T = n(317381),
     y = n(175894),
     A = n(246106),
     N = n(963614),
@@ -37,12 +37,12 @@ function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
         [U, G] = i.useState(!1),
-        B = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(y.id)),
-        Z = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
+        B = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
+        Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == B ? void 0 : B.applicationId),
         V = null == B ? void 0 : B.launchId,
-        H = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
-        { dockedRect: j, isHidden: Y } = (0, o.cj)([v.Z], () => {
+        j = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
+        { dockedRect: H, isHidden: Y } = (0, o.cj)([v.Z], () => {
             let e = v.Z.pipWindow;
             return {
                 dockedRect: null != e ? v.Z.getDockedRect(e.id) : null,
@@ -59,11 +59,11 @@ function U(e) {
             selectedParticipant: h.Z.getSelectedParticipant(y.id),
             participantsOpen: h.Z.getParticipantsOpen(y.id)
         })),
-        Q = H || null != W,
+        Q = j || null != W,
         X = (0, C.Z)(y.id),
         J = X && (null == z ? void 0 : z.type) !== w.fO.ACTIVITY,
         $ = !X && Z === L.Ez.PIP,
-        ee = (!Q || (Q && (J || $) && null == j)) && !Y,
+        ee = (!Q || (Q && (J || $) && null == H)) && !Y,
         et = ee && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
     function en() {
         var e;
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, T.tg)(L.Ez.PANEL);
+                                                        en(), (0, b.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: B.applicationId,
@@ -192,7 +192,7 @@ function U(e) {
                                       [M.pipModeTall]: ee && U,
                                       [M.pipNonInteractive]: ee && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
                                   }),
-                                  shouldRefocus: !ee && H
+                                  shouldRefocus: !ee && j
                               }),
                         !ee &&
                             (0, r.jsx)(O.Ds, {

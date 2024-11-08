@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(378233),
     I = n(388032),
     S = n(808754);
-let T = (e) => e.preventDefault(),
-    b = {
+let b = (e) => e.preventDefault(),
+    T = {
         tension: 1100,
         friction: 40
     },
@@ -81,7 +81,7 @@ let C = (e) => {
         let { shouldAnimate: t, size: a, sticker: s, fileUri: o, assetData: u, isFocused: c, className: d, maskAsset: f, positionRef: _, withLoadingIndicator: p, onError: m } = e,
             g = i.useRef(null),
             E = i.useRef(null),
-            [T, b] = i.useState(!0),
+            [b, T] = i.useState(!0),
             [y, R] = i.useState(!1),
             O = i.useRef(!1);
         O.current = t && c;
@@ -102,10 +102,10 @@ let C = (e) => {
                             assetUrl: D,
                             assetData: u,
                             onInitialDraw: () => {
-                                !t && b(!1);
+                                !t && T(!1);
                             },
                             onError: () => {
-                                !t && (b(!1), R(!0), null == m || m());
+                                !t && (T(!1), R(!0), null == m || m());
                             }
                         })),
                         O.current && E.current.setState(!0));
@@ -130,7 +130,7 @@ let C = (e) => {
                   ref: _,
                   children: (0, r.jsx)(C, {
                       hasError: y,
-                      isLoading: T,
+                      isLoading: b,
                       maskAsset: f,
                       size: a,
                       withLoadingIndicator: p,
@@ -149,7 +149,7 @@ let C = (e) => {
             [h, p] = i.useState(!1),
             [m, g] = i.useState(!0),
             [E, I] = i.useState(!1),
-            b = i.useRef(null),
+            T = i.useRef(null),
             y = i.useRef(null),
             R =
                 null != _
@@ -165,8 +165,8 @@ let C = (e) => {
                 I(!0);
             }, []);
         return (i.useEffect(() => {
-            if (null != b.current) {
-                let { isVisible: e } = b.current;
+            if (null != T.current) {
+                let { isVisible: e } = T.current;
                 p(e);
             }
         }, []),
@@ -177,7 +177,7 @@ let C = (e) => {
         null == R)
             ? null
             : (0, r.jsx)(d.$, {
-                  ref: b,
+                  ref: T,
                   onChange: p,
                   threshold: 0.7,
                   children: (0, r.jsx)('div', {
@@ -197,7 +197,7 @@ let C = (e) => {
                                   draggable: !1,
                                   onError: D,
                                   onLoad: O,
-                                  onContextMenu: T,
+                                  onContextMenu: b,
                                   ref: y
                               }),
                               n.id
@@ -222,7 +222,7 @@ let C = (e) => {
                     opacity: 1
                 },
                 leave: g,
-                config: b
+                config: T
             }),
             v = i.useRef(null),
             I = (0, f.useSpring)(
@@ -285,12 +285,12 @@ let C = (e) => {
             I = (0, g.t$)(t) && !n,
             S = i.useRef(null);
         if (null == c) return null;
-        let T = c.format_type === E.u3.LOTTIE ? R : O;
+        let b = c.format_type === E.u3.LOTTIE ? R : O;
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
-                    (0, r.jsx)(T, {
+                    (0, r.jsx)(b, {
                         shouldAnimate: I,
                         isFocused: v,
                         size: u,

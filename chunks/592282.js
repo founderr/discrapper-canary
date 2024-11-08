@@ -17,19 +17,19 @@ var r = n(200651),
     h = n(939350),
     p = n(7758);
 function m(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
-        b = i.useRef(null),
+    let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I, className: S, focusedClassName: b } = e,
+        T = i.useRef(null),
         y = (0, d.Q)('MenuCheckboxItem');
     return (
         i.useEffect(() => {
-            E && (0, u.F)(b);
+            E && (0, u.F)(T);
         }, [E]),
         (0, r.jsxs)(o.P, {
-            innerRef: b,
+            innerRef: T,
             className: s()(p.item, p.checkboxContainer, p.labelContainer, h._[t], S, {
                 [p.disabled]: g,
                 [p.focused]: E,
-                [null != T ? T : '']: E
+                [null != b ? b : '']: E
             }),
             onClick: g ? void 0 : I,
             ...v,

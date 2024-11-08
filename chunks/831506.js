@@ -6,8 +6,8 @@ var i,
     o = n(392711),
     s = n.n(o),
     c = n(442837),
-    u = n(570140),
-    d = n(314897),
+    d = n(570140),
+    u = n(314897),
     m = n(699516),
     h = n(885110),
     f = n(981631);
@@ -58,7 +58,7 @@ function x(e, t) {
     );
 }
 function N() {
-    let e = d.default.getId(),
+    let e = u.default.getId(),
         t = h.Z.getActivities();
     return C(f.ME, e, t);
 }
@@ -85,7 +85,7 @@ class v extends (i = c.ZP.Store) {
               writable: !0
           })
         : (r[l] = a),
-    (t.Z = new v(u.Z, {
+    (t.Z = new v(d.Z, {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 i = !1;

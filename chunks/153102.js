@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-let s = new r.Y('Flux'),
+let s = new r.Yd('Flux'),
     o = (e) => e();
 t.Z = new (class e {
     destroy() {

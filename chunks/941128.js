@@ -18,8 +18,8 @@ var r,
     v = n(173747),
     I = n(780570),
     S = n(830168),
-    T = n(358085),
-    b = n(417363),
+    b = n(358085),
+    T = n(417363),
     y = n(981631),
     A = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
@@ -82,13 +82,13 @@ function V(e) {
     let { applicationId: t, branchId: n } = e;
     F(t, n);
 }
-function H(e) {
+function j(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, I.Tu)(t, n),
         i = O.indexOf(r);
     -1 !== i && O.splice(i, 1);
 }
-function j() {
+function H() {
     let e = E.default.getToken(),
         t = E.default.getId();
     if (null != e) S.Z.setCredentials(t, e);
@@ -118,7 +118,7 @@ class W extends (a = _.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(b.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(b.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(T.Z);
     }
     get activeItems() {
         return R.map((e) => {
@@ -158,7 +158,7 @@ class W extends (a = _.ZP.Store) {
             Z(t, n, r, 'Patch');
         },
         DISPATCH_APPLICATION_UNINSTALL: function (e) {
-            V(e), H(e);
+            V(e), j(e);
         },
         DISPATCH_APPLICATION_CANCEL: V,
         DISPATCH_APPLICATION_REPAIR: function (e) {
@@ -171,7 +171,7 @@ class W extends (a = _.ZP.Store) {
             if (r < 1) return !1;
             R.splice(0, 0, R.splice(r, 1)[0]), G(), D && S.Z.resume(), U();
         },
-        DISPATCH_APPLICATION_REMOVE_FINISHED: H,
+        DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
             !w && ((w = !0), G(), !D && S.Z.resume());
@@ -181,7 +181,7 @@ class W extends (a = _.ZP.Store) {
             (R = R.filter((e) => {
                 let { comboId: t } = e,
                     { applicationId: n, branchId: i } = (0, I.CP)(t),
-                    a = b.Z.getState(n, i),
+                    a = T.Z.getState(n, i),
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
                 if (null != a && a.type === y.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && f().isEqual(a.manifestIds, a.targetManifestIds) && f().isEqual(a.manifestIds, o)) {
@@ -206,7 +206,7 @@ class W extends (a = _.ZP.Store) {
             let { error: t } = e,
                 { code: n } = t;
             if (null != n) {
-                if (N.includes(n)) j();
+                if (N.includes(n)) H();
                 else if (n === A.ff.APPLICATION_NOT_FOUND) {
                     let { context: e } = t;
                     if (null != e) {
@@ -217,9 +217,9 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, T.isDesktop)() && j();
+            (0, b.isDesktop)() && H();
         },
         LOGOUT: function () {
-            h.K.remove(C), (0, T.isDesktop)() && S.Z.pause();
+            h.K.remove(C), (0, b.isDesktop)() && S.Z.pause();
         }
     }));

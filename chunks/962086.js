@@ -12,10 +12,10 @@ n.d(t, {
         return I;
     },
     og: function () {
-        return b;
+        return T;
     },
     zS: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -80,7 +80,7 @@ function S(e) {
         null != t && (0, a.uL)(m.Z5c.CHANNEL(e, t.id));
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = new Set(f.ZP.getOptedInChannels(e));
     t.forEach((e) => r.add(e)),
         n.forEach((e) => r.delete(e)),
@@ -89,7 +89,7 @@ function T(e, t, n) {
             optInChannels: r
         });
 }
-function b(e, t) {
+function T(e, t) {
     let n = u.Z.getRoles(e);
     !(function (e, t) {
         let n = [...o.ZP.getSelectableChannelIds(e), ...o.ZP.getVocalChannelIds(e)],
@@ -99,7 +99,7 @@ function b(e, t) {
             if (null == t) return !1;
             if (r.some((e) => !t.roles.includes(e))) return !0;
             let i = [...o.ZP.getSelectableChannelIds(e), ...o.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
-            return i.length > 0 && T(e, i, []), !1;
+            return i.length > 0 && b(e, i, []), !1;
         });
     })(e, t);
     let r = {};

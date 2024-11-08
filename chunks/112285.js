@@ -17,8 +17,8 @@ var r,
     v = o.setImmediate,
     I = o.clearImmediate,
     S = o.process,
-    T = o.Dispatch,
-    b = o.Function,
+    b = o.Dispatch,
+    T = o.Function,
     y = o.MessageChannel,
     A = o.String,
     N = 0,
@@ -47,7 +47,7 @@ var O = function (e) {
 (!v || !I) &&
     ((v = function (e) {
         m(arguments.length, 1);
-        var t = c(e) ? e : b(e),
+        var t = c(e) ? e : T(e),
             n = h(arguments, 1);
         return (
             (C[++N] = function () {
@@ -64,9 +64,9 @@ var O = function (e) {
         ? (i = function (e) {
               S.nextTick(D(e));
           })
-        : T && T.now
+        : b && b.now
           ? (i = function (e) {
-                T.now(D(e));
+                b.now(D(e));
             })
           : y && !g
             ? ((s = (a = new y()).port2), (a.port1.onmessage = L), (i = u(s.postMessage, s)))

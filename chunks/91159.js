@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     Ok: function () {
-        return T;
+        return b;
     },
     U4: function () {
         return v;
@@ -64,9 +64,9 @@ function S(e, t) {
         E = _(p),
         v = h.Z.isMuted(e.id),
         I = (0, f.sK)(h.Z.getMuteConfig(e.id)),
-        { can_send_message: S, ...T } = i,
-        b = {
-            ...T,
+        { can_send_message: S, ...b } = i,
+        T = {
+            ...b,
             channel_id: e.id,
             guild_id: a,
             parent_id: s,
@@ -81,10 +81,10 @@ function S(e, t) {
             old_thread_muted_until: I,
             new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         };
-    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, b);
+    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, T);
 }
 n(388032);
-let T = (e) => {
+let b = (e) => {
     var t, n;
     let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
         s = null != r ? _.default.extractTimestamp(r) : null,

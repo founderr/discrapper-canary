@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         AnalyticEventConfigs: function () {
-            return T;
+            return b;
         },
         AnalyticsContext: function () {
             return g;
@@ -19,7 +19,7 @@ n.r(t),
             return C;
         },
         expandLocation: function () {
-            return b;
+            return T;
         },
         getNewAnalyticsLoadId: function () {
             return L;
@@ -54,7 +54,7 @@ let g = r.createContext({ location: {} }),
 function S(e) {
     I.push(e);
 }
-let T = {
+let b = {
     [h.rMx.APP_OPENED]: {
         throttlePeriod: 300000,
         throttleKeys: () => []
@@ -245,7 +245,7 @@ let T = {
         deduplicate: !0
     }
 };
-function b(e) {
+function T(e) {
     return 'string' == typeof e
         ? { location: e }
         : {
@@ -258,7 +258,7 @@ function b(e) {
 }
 let y = () => p.E.NONE,
     A = (0, a.trackMaker)({
-        analyticEventConfigs: T,
+        analyticEventConfigs: b,
         dispatcher: s.Z,
         TRACK_ACTION_NAME: 'TRACK'
     });
@@ -272,7 +272,7 @@ function C(e) {
         let { location: e, ...t } = s;
         s = {
             ...t,
-            ...b(e)
+            ...T(e)
         };
     }
     if (null != s.source) {
@@ -301,7 +301,7 @@ function R(e, t) {
     c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
 let O = (0, a.trackMaker)({
-    analyticEventConfigs: T,
+    analyticEventConfigs: b,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });

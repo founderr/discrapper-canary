@@ -23,8 +23,8 @@ var i = n(496532),
     v = n(66334),
     I = n(215635),
     S = n(718572),
-    T = n(496223),
-    b = n(846262),
+    b = n(496223),
+    T = n(846262),
     y = n(926372),
     A = n(116175);
 let N = (e) => {
@@ -37,7 +37,7 @@ let N = (e) => {
                 ...C
             });
         case A.ZD.WATER_DROP:
-            return (0, r.jsx)(b.l, {
+            return (0, r.jsx)(T.l, {
                 primaryTintColor: n,
                 ...C
             });
@@ -47,7 +47,7 @@ let N = (e) => {
                 ...C
             });
         case A.ZD.TOADSTOOL:
-            return (0, r.jsx)(T.j, {
+            return (0, r.jsx)(b.j, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C

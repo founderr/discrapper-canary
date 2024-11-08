@@ -113,12 +113,12 @@ function I(e) {
 }
 async function S() {
     try {
-        for (; p.hasNext(); ) await T(p.next());
+        for (; p.hasNext(); ) await b(p.next());
     } finally {
         m = null;
     }
 }
-async function T(e) {
+async function b(e) {
     let t = p.getNextBatch(e, 10);
     try {
         var n;

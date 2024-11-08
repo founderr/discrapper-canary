@@ -1,6 +1,6 @@
 n.d(t, {
     Vq: function () {
-        return T;
+        return b;
     },
     Xo: function () {
         return O;
@@ -50,7 +50,7 @@ function S(e) {
         ...a
     });
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = (0, c.W5)(e.status, t, n, r),
         a = (r ? e.size - (i.width / 2 + e.status / 2) : e.size - i.width) - e.offset;
@@ -60,8 +60,8 @@ function T(e, t, n) {
         y: e.size - i.height - e.offset
     };
 }
-function b(e, t, n, i) {
-    let a = T(n, i, t, !1),
+function T(e, t, n, i) {
+    let a = b(n, i, t, !1),
         s = (0, c.lm)(i, e);
     if (!t) {
         let t = a.height / 2 + n.stroke,
@@ -116,7 +116,7 @@ function y(e) {
     };
 }
 function A(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: I, ariaHidden: S, status: T, isMobile: b = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: f, tabIndex: m, ariaLabel: I, ariaHidden: S, status: b, isMobile: T = !1, isTyping: y = !1, avatarDecoration: A, typingOffset: N, specs: C } = e,
         R = {
             width: (0, p.px)(n),
             height: (0, p.px)(n)
@@ -132,7 +132,7 @@ function A(e) {
                                 status: (0, h.u5)(t, n)
                             })
                           : e;
-                  })(I, T, b),
+                  })(I, b, T),
         D = C.size * g.hs,
         L = (function (e, t, n, r) {
             if (null == e) return null;
@@ -193,7 +193,7 @@ function A(e) {
                     return _.QS.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
-        })(T, n, b, y),
+        })(b, n, T, y),
         x =
             null != A &&
             (0, r.jsx)('svg', {
@@ -371,7 +371,7 @@ function C(e) {
                         className: R
                     })
                 }),
-                null != O && null != S ? b(S, o, D, O) : null,
+                null != O && null != S ? T(S, o, D, O) : null,
                 null != O
                     ? (0, r.jsx)(d.u, {
                           text: E ? (0, h.u5)(O) : null,
@@ -384,7 +384,7 @@ function C(e) {
                                   children: [
                                       (0, r.jsx)('rect', {
                                           ...e,
-                                          ...T(D, O, o, l),
+                                          ...b(D, O, o, l),
                                           fill: w,
                                           mask: 'url(#'.concat((0, c.rs)(O, o, l), ')'),
                                           className: v.pointerEvents
@@ -406,7 +406,7 @@ function C(e) {
     });
 }
 function R(e) {
-    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: T, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: M } = e,
+    let { fromIsMobile: t = !0, fromStatus: n, fromColor: a, isMobile: l = !1, isTyping: _ = !1, typingIndicatorRef: m, isSpeaking: g = !1, size: E, src: b, status: C, statusColor: R, statusTooltip: O = !1, statusTooltipDelay: D, statusBackdropColor: L, 'aria-hidden': x = !1, 'aria-label': w, imageClassName: M } = e,
         P = (0, c.vj)(C, R),
         k = i.useId(),
         U = i.useId(),
@@ -435,8 +435,8 @@ function R(e) {
             avatarCutoutX: Z,
             avatarCutoutY: F,
             avatarCutoutWidth: V,
-            avatarCutoutHeight: H,
-            avatarCutoutRadius: j,
+            avatarCutoutHeight: j,
+            avatarCutoutRadius: H,
             fill: Y,
             ...W
         } = (0, f.useSpring)(
@@ -484,9 +484,9 @@ function R(e) {
                             x: Z,
                             y: F,
                             width: V,
-                            height: H,
-                            rx: j,
-                            ry: j
+                            height: j,
+                            rx: H,
+                            ry: H
                         })
                     ]
                 }),
@@ -498,12 +498,12 @@ function R(e) {
                     height: K,
                     mask: 'url(#'.concat(k, ')'),
                     children: (0, r.jsx)(N, {
-                        src: T,
+                        src: b,
                         isSpeaking: g,
                         className: M
                     })
                 }),
-                null != L && b(L, l, z, C),
+                null != L && T(L, l, z, C),
                 (0, r.jsx)(d.u, {
                     text: O ? (0, h.u5)(C) : null,
                     'aria-label': !1,

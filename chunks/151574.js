@@ -18,8 +18,8 @@ var r,
     v = n(28546),
     I = n(285651),
     S = n(926491),
-    T = n(373228),
-    b = n(378233),
+    b = n(373228),
+    T = n(378233),
     y = n(419922),
     A = n(490095),
     N = n(652136),
@@ -72,14 +72,14 @@ t.Z = s.memo(function (e) {
         [B, Z] = s.useState(null),
         F = (0, v.Iu)((e) => null != e.activeView),
         V = s.useRef(null),
-        [H, j] = s.useState(''),
+        [j, H] = s.useState(''),
         [Y, W] = s.useState(''),
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
-        X = (0, O.Z)(H, M, r),
+        X = (0, O.Z)(j, M, r),
         { analyticsLocations: J } = (0, m.ZP)(p.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, O.m)({
-            setTextInputValue: j,
+            setTextInputValue: H,
             setHasDismissed: P,
             setHasSelection: Q,
             setFocusedSuggestionType: A
@@ -163,7 +163,7 @@ t.Z = s.memo(function (e) {
             setFocusedSuggestionType: A,
             setHasDismissed: P,
             setFocusedStickerListItem: Z,
-            setTextInputValue: j
+            setTextInputValue: H
         }),
         es = (e, t) => {
             if (ei) {
@@ -174,8 +174,8 @@ t.Z = s.memo(function (e) {
                     }),
                     t === I.eb.SENDABLE)
                 )
-                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), j('');
-                else if ((0, b.jl)(e)) {
+                    P(!0), o(e, b.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
+                else if ((0, T.jl)(e)) {
                     let t = S.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
@@ -189,8 +189,8 @@ t.Z = s.memo(function (e) {
         eo = s.useRef([]),
         el = s.useRef(!1);
     s.useEffect(() => {
-        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(H), W(H))), (el.current = ei);
-    }, [E, ei, X, H]);
+        ei && (eo.current = X), ei !== el.current && (E.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(j), W(j))), (el.current = ei);
+    }, [E, ei, X, j]);
     let eu = !ei,
         ec = ei ? X : eo.current;
     return (0, a.jsx)(m.Gt, {

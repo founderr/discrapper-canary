@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(835473),
     I = n(592745),
     S = n(592125),
-    T = n(757266),
-    b = n(650774),
+    b = n(757266),
+    T = n(650774),
     y = n(430824),
     A = n(283595),
     N = n(496675),
@@ -42,8 +42,8 @@ var r = n(200651),
 function G(e) {
     let { user: t, currentUser: n, activity: G, onAction: B, onClose: Z } = e,
         { analyticsLocations: F, newestAnalyticsLocation: V } = (0, E.ZP)(),
-        [H] = (0, v.Z)([null == G ? void 0 : G.application_id]),
-        j = (0, m.Z)(G),
+        [j] = (0, v.Z)([null == G ? void 0 : G.application_id]),
+        H = (0, m.Z)(G),
         Y = null == G ? void 0 : G.application_id,
         W = null == G ? void 0 : G.session_id,
         K = (0, h.Z)({
@@ -53,7 +53,7 @@ function G(e) {
         }),
         z =
             (0, a.e7)(
-                [A.Z, I.Z, L.Z, T.Z],
+                [A.Z, I.Z, L.Z, b.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
@@ -61,9 +61,9 @@ function G(e) {
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: I.Z,
                         DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: T.Z
+                        ConnectedAppsStore: b.Z
                     })
-            ) || j,
+            ) || H,
         q = (0, a.e7)([d.ZP], () =>
             [...d.ZP.getSelfEmbeddedActivities().values()].some((e) => {
                 let { applicationId: t, channelId: n } = e;
@@ -71,17 +71,17 @@ function G(e) {
             })
         ),
         Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([S.Z, y.Z, b.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        X = (0, a.e7)([S.Z, y.Z, T.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
                 activity: G,
-                application: H,
+                application: j,
                 channelId: K,
                 currentUser: n,
-                isEmbedded: j,
+                isEmbedded: H,
                 ChannelStore: S.Z,
                 GuildStore: y.Z,
-                GuildMemberCountStore: b.Z,
+                GuildMemberCountStore: T.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: R.Z,
                 VoiceStateStore: O.Z,
@@ -90,10 +90,10 @@ function G(e) {
         ),
         [J, $] = i.useState(!1),
         ee = J || q || (x.isPlatformEmbedded && !z);
-    if (null == Y || !X || (!(0, p.Z)(G, P.xjy.JOIN) && !j)) return null;
+    if (null == Y || !X || (!(0, p.Z)(G, P.xjy.JOIN) && !H)) return null;
     let et = async () => {
             if (
-                j &&
+                H &&
                 X &&
                 null != K &&
                 null != Y &&
@@ -118,12 +118,12 @@ function G(e) {
                     channelId: r,
                     messageId: null,
                     intent: k.Ws.PLAY,
-                    embedded: j,
+                    embedded: H,
                     partyId: null == G ? void 0 : null === (e = G.party) || void 0 === e ? void 0 : e.id,
                     locationObject: { page: P.ZY5.USER_PROFILE },
                     analyticsLocations: F
                 }),
-                    !j &&
+                    !H &&
                         (0, g.Z)({
                             type: P.q5t.JOIN,
                             userId: t.id,
@@ -153,7 +153,7 @@ function G(e) {
             }
         },
         en = () => (t.id === n.id ? U.intl.string(U.t['0OiwfH']) : x.isPlatformEmbedded && !z && null != G ? U.intl.formatToPlainString(U.t.SqJBnJ, { name: G.name }) : null);
-    return j
+    return H
         ? (0, r.jsx)(s.Tooltip, {
               text: en(),
               children: (e) =>

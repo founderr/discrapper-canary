@@ -61,12 +61,12 @@ t.default = (function () {
                         description: '"number"'
                     },
                     S = 'date',
-                    T = {
+                    b = {
                         type: 'literal',
                         value: 'date',
                         description: '"date"'
                     },
-                    b = 'time',
+                    T = 'time',
                     y = {
                         type: 'literal',
                         value: 'time',
@@ -132,8 +132,8 @@ t.default = (function () {
                         value: '0',
                         description: '"0"'
                     },
-                    H = /^[1-9]/,
-                    j = {
+                    j = /^[1-9]/,
+                    H = {
                         type: 'class',
                         value: '[1-9]',
                         description: '[1-9]'
@@ -245,7 +245,7 @@ t.default = (function () {
                                                         return (
                                                             (e = (function () {
                                                                 var e, n, r, i, a, s, o;
-                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(I)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(T)), n === c && (t.substr(J, 4) === b ? ((n = b), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
+                                                                if (((e = J), t.substr(J, 6) === v ? ((n = v), (J += 6)) : ((n = c), 0 === er && ei(I)), n === c && (t.substr(J, 4) === S ? ((n = S), (J += 4)) : ((n = c), 0 === er && ei(b)), n === c && (t.substr(J, 4) === T ? ((n = T), (J += 4)) : ((n = c), 0 === er && ei(y)))), n !== c)) {
                                                                     if (ed() !== c) {
                                                                         if (((r = J), 44 === t.charCodeAt(J) ? ((i = ','), J++) : ((i = c), 0 === er && ei(g)), i !== c && (a = ed()) !== c && (s = em()) !== c ? (r = i = [i, a, s]) : ((J = r), (r = c)), r === c && (r = null), r !== c)) {
                                                                             e = n = {
@@ -421,7 +421,7 @@ t.default = (function () {
                 function eh() {
                     var e, n, r, i, a, s;
                     if (((e = J), 48 === t.charCodeAt(J) ? ((n = '0'), J++) : ((n = c), 0 === er && ei(V)), n === c)) {
-                        if (((n = J), (r = J), H.test(t.charAt(J)) ? ((i = t.charAt(J)), J++) : ((i = c), 0 === er && ei(j)), i !== c)) {
+                        if (((n = J), (r = J), j.test(t.charAt(J)) ? ((i = t.charAt(J)), J++) : ((i = c), 0 === er && ei(H)), i !== c)) {
                             for (a = [], s = ef(); s !== c; ) a.push(s), (s = ef());
                             a !== c ? (r = i = [i, a]) : ((J = r), (r = c));
                         } else (J = r), (r = c);

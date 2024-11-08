@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     SI: function () {
-        return T;
+        return b;
     },
     XB: function () {
         return h;
@@ -213,7 +213,7 @@ async function S(e) {
         );
     }
 }
-async function T(e) {
+async function b(e) {
     o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_DELETE',
         guildId: e

@@ -26,14 +26,14 @@ function a(e, t) {
         o && (r.push(o), (o = ''));
         var I = null != h && null != _ && _ !== h,
             S = '+' === E || '*' === E,
-            T = '?' === E || '*' === E,
-            b = n[2] || u,
+            b = '?' === E || '*' === E,
+            T = n[2] || u,
             y = m || g;
         r.push({
             name: p || a++,
             prefix: h || '',
-            delimiter: b,
-            optional: T,
+            delimiter: T,
+            optional: b,
             repeat: S,
             partial: I,
             asterisk: !!v,
@@ -43,7 +43,7 @@ function a(e, t) {
                   })(y)
                 : v
                   ? '.*'
-                  : '[^' + l(b) + ']+?'
+                  : '[^' + l(T) + ']+?'
         });
     }
     return s < e.length && (o += e.substr(s)), o && r.push(o), r;

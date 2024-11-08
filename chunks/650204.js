@@ -19,8 +19,8 @@ var d = n(616254),
     v = n(471638),
     I = n(585275),
     S = n(960048),
-    T = n(63063),
-    b = n(240849),
+    b = n(63063),
+    T = n(240849),
     y = n(998502),
     A = n(513566),
     N = n(534713),
@@ -43,8 +43,8 @@ let Z = 5 * B.Z.Millis.MINUTE,
     F = document.getElementById('app-mount');
 _()(null != F, 'Could not find app-mount'), (F.className = __OVERLAY__ ? '' : k.appMount);
 let V = (0, d.createRoot)(F),
-    H = { '/oauth2/authorize': N.Z },
-    j = (e) => V.render((0, c.jsx)(M.Z, { children: (0, c.jsx)(w.Z, { children: (0, c.jsx)(e, {}) }) }));
+    j = { '/oauth2/authorize': N.Z },
+    H = (e) => V.render((0, c.jsx)(M.Z, { children: (0, c.jsx)(w.Z, { children: (0, c.jsx)(e, {}) }) }));
 if (null != x.Z) {
     null === (r = x.Z.setUncaughtExceptionHandler) ||
         void 0 === r ||
@@ -70,11 +70,11 @@ if (null != x.Z) {
     let d = null === (l = (u = x.Z.remoteApp).getReleaseChannel) || void 0 === l ? void 0 : l.call(u);
     ('canary' === d || 'development' === d) && y.ZP.pauseFrameEvictor(), y.ZP.initializeExitHook(), y.ZP.initializeWERHandler();
 }
-if (((0, D.O)(window), __OVERLAY__)) j(h.Z.Overlay);
-else if (null != window.require && null == window.DiscordNative) j(h.Z.OutdatedClient);
+if (((0, D.O)(window), __OVERLAY__)) H(h.Z.Overlay);
+else if (null != window.require && null == window.DiscordNative) H(h.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(T.Z.getCommunityURL()));
+        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(b.Z.getCommunityURL()));
         let e = new L.sW(Z, () => y.ZP.purgeMemory());
         y.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), y.ZP.setFocused(!1), (0, O.T_)(window, !1);
@@ -85,11 +85,11 @@ else {
             y.ZP.on('MAIN_WINDOW_PATH', function (e, t, n) {
                 var r;
                 let i = null != n ? new URLSearchParams(n) : null;
-                if (null === (r = H[t]) || void 0 === r ? !void 0 : !r.call(H, i)) (0, R.uL)(t);
+                if (null === (r = j[t]) || void 0 === r ? !void 0 : !r.call(j, i)) (0, R.uL)(t);
             }),
             y.ZP.on('MAIN_WINDOW_HIDDEN', () => {
                 (0, O.al)(window);
             });
     }
-    E.Z.initialize(), p.Z.initialize(), m.Z.init(), I.Z.init(), U.Z.init(), g.Z.initialize(), b.Z.initialize(), A.Z.initialize(), v.j(), j(h.Z.App);
+    E.Z.initialize(), p.Z.initialize(), m.Z.init(), I.Z.init(), U.Z.init(), g.Z.initialize(), T.Z.initialize(), A.Z.initialize(), v.j(), H(h.Z.App);
 }

@@ -130,9 +130,9 @@ function I(e) {
         _ = l.forceRefresh,
         I = void 0 !== _ && _,
         S = l.getUserConfirmation,
-        T = void 0 === S ? m : S,
-        b = l.keyLength,
-        y = void 0 === b ? 6 : b,
+        b = void 0 === S ? m : S,
+        T = l.keyLength,
+        y = void 0 === T ? 6 : T,
         A = e.basename ? c(o(e.basename)) : '';
     function N(e) {
         var t = e || {},
@@ -159,7 +159,7 @@ function I(e) {
     function w(e) {
         x
             ? ((x = !1), O())
-            : R.confirmTransitionTo(e, 'POP', T, function (t) {
+            : R.confirmTransitionTo(e, 'POP', b, function (t) {
                   t
                       ? O({
                             action: 'POP',
@@ -197,7 +197,7 @@ function I(e) {
             push: function (e, t) {
                 var r = 'PUSH',
                     a = f(e, t, C(), F.location);
-                R.confirmTransitionTo(a, r, T, function (e) {
+                R.confirmTransitionTo(a, r, b, function (e) {
                     if (e) {
                         var t = k(a),
                             s = a.key,
@@ -232,7 +232,7 @@ function I(e) {
             replace: function (e, t) {
                 var r = 'REPLACE',
                     a = f(e, t, C(), F.location);
-                R.confirmTransitionTo(a, r, T, function (e) {
+                R.confirmTransitionTo(a, r, b, function (e) {
                     if (e) {
                         var t = k(a),
                             s = a.key,
@@ -292,7 +292,7 @@ function I(e) {
     return F;
 }
 var S = 'hashchange',
-    T = {
+    b = {
         hashbang: {
             encodePath: function (e) {
                 return '!' === e.charAt(0) ? e : '!/' + l(e);
@@ -310,7 +310,7 @@ var S = 'hashchange',
             decodePath: o
         }
     };
-function b(e) {
+function T(e) {
     var t = e.indexOf('#');
     return -1 === t ? e : e.slice(0, t);
 }
@@ -320,7 +320,7 @@ function y() {
     return -1 === t ? '' : e.substring(t + 1);
 }
 function A(e) {
-    window.location.replace(b(window.location.href) + '#' + e);
+    window.location.replace(T(window.location.href) + '#' + e);
 }
 function N(e) {
     void 0 === e && (e = {}), p || (0, s.Z)(!1);
@@ -331,7 +331,7 @@ function N(e) {
         a = void 0 === i ? m : i,
         l = n.hashType,
         _ = e.basename ? c(o(e.basename)) : '',
-        g = T[void 0 === l ? 'slash' : l],
+        g = b[void 0 === l ? 'slash' : l],
         E = g.encodePath,
         v = g.decodePath;
     function I() {
@@ -397,7 +397,7 @@ function N(e) {
             createHref: function (e) {
                 var t = document.querySelector('base'),
                     n = '';
-                return t && t.getAttribute('href') && (n = b(window.location.href)), n + '#' + E(_ + d(e));
+                return t && t.getAttribute('href') && (n = T(window.location.href)), n + '#' + E(_ + d(e));
             },
             push: function (e, t) {
                 var n = 'PUSH',

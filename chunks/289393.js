@@ -38,8 +38,8 @@ let v = new f.h(
         (e) => e.id
     ),
     S = {},
-    T = new Set(),
-    b = {},
+    b = new Set(),
+    T = {},
     y = {},
     A = {},
     N = {},
@@ -61,7 +61,7 @@ class x extends (i = d.ZP.Store) {
         return null !== (t = S[e]) && void 0 !== t ? t : 0;
     }
     getDidFetchListingForSubscriptionPlanId(e) {
-        return T.has(e);
+        return b.has(e);
     }
     getSubscriptionGroupListing(e) {
         return v.get(e);
@@ -86,7 +86,7 @@ class x extends (i = d.ZP.Store) {
         return c()(t.length <= 1, 'Found multiple listings for plan'), t[0];
     }
     getSubscriptionSettings(e) {
-        return b[e];
+        return T[e];
     }
     getSubscriptionTrial(e) {
         return y[e];
@@ -113,11 +113,11 @@ class x extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new x(_.Z, {
         CONNECTION_OPEN: function () {
-            v.clear(), I.clear(), (S = {}), T.clear(), (b = {}), (y = {}), (A = {}), (N = {}), C.clear();
+            v.clear(), I.clear(), (S = {}), b.clear(), (T = {}), (y = {}), (A = {}), (N = {}), C.clear();
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
             let { settings: t } = e;
-            b[t.guild_id] = t;
+            T[t.guild_id] = t;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { guildId: t } = e;
@@ -126,7 +126,7 @@ class x extends (i = d.ZP.Store) {
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
             for (let e of ((S[t] = 2), n)) O(e);
-            for (let e of ((b[t] = r), i)) y[e.id] = e;
+            for (let e of ((T[t] = r), i)) y[e.id] = e;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { guildId: t } = e;
@@ -142,7 +142,7 @@ class x extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function (e) {
             let { planId: t } = e;
-            T.add(t);
+            b.add(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;

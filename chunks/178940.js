@@ -39,12 +39,12 @@ function S(e, t, n) {
     );
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
-let T = {
+let b = {
         BOX: I.box,
         ROUND: I.round,
         SMALL_BOX: I.smallBox
     },
-    b = {
+    T = {
         top: I.alignTop,
         center: I.alignCenter
     };
@@ -61,7 +61,7 @@ class y extends (a = u.PureComponent) {
                     : null,
             p = this.props.disabled ? I.inputDisabled : this.props.readOnly ? I.inputReadonly : I.inputDefault;
         return (0, l.jsxs)(c ? 'span' : 'label', {
-            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, b[r], i, {
+            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, T[r], i, {
                 [I.row]: 'row' === f,
                 [I.checked]: n
             }),
@@ -95,7 +95,7 @@ class y extends (a = u.PureComponent) {
     }
 }
 S(y, 'Types', r),
-    S(y, 'Shapes', T),
+    S(y, 'Shapes', b),
     S(y, 'Aligns', i),
     S(y, 'defaultProps', {
         size: 24,
@@ -104,7 +104,7 @@ S(y, 'Types', r),
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: T.BOX,
+        shape: b.BOX,
         align: 'center',
         onChange: v.dG4,
         reverse: !1

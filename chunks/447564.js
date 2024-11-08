@@ -15,8 +15,8 @@ var i = n(200651),
     o = n(100527),
     s = n(906732),
     c = n(335131),
-    u = n(120619),
-    d = n(690221),
+    d = n(120619),
+    u = n(690221),
     m = n(333867),
     h = n(422034),
     f = n(938475),
@@ -38,7 +38,7 @@ let N = 'HD_STREAMING_POTION_MODAL_KEY';
 function v(e) {
     let { channel: t } = e,
         n = f.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        [x, v, T, S, A, b] = (0, l.Wu)([u.Z], () => [u.Z.isFetchingPrice(g.FX), u.Z.isEntitlementFetched(g.FX), u.Z.isEntitlementFetching(g.FX), u.Z.getPrice(g.FX), u.Z.getErrored(g.FX), u.Z.getEntitlement(g.FX)]),
+        [x, v, T, S, A, b] = (0, l.Wu)([d.Z], () => [d.Z.isFetchingPrice(g.FX), d.Z.isEntitlementFetched(g.FX), d.Z.isEntitlementFetching(g.FX), d.Z.getPrice(g.FX), d.Z.getErrored(g.FX), d.Z.getEntitlement(g.FX)]),
         { analyticsLocations: j } = (0, s.ZP)([o.Z.HD_STREAMING_POTION_MODAL]),
         Z = null != b && !b.consumed && b.type === _.qc2.DEVELOPER_GIFT;
     r.useEffect(() => {
@@ -118,7 +118,7 @@ function v(e) {
                                         variant: 'text-sm/normal',
                                         children: E.intl.string(E.t.xwRQWl)
                                     }),
-                                    (0, i.jsx)(d.Z, {
+                                    (0, i.jsx)(u.Z, {
                                         onClick: () => {},
                                         children: (0, i.jsx)(a.Text, {
                                             color: 'text-link',

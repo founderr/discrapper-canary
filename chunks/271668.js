@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(555573),
     I = n(10718),
     S = n(367790),
-    T = n(895924),
-    b = n(581364),
+    b = n(895924),
+    T = n(581364),
     y = n(56801),
     A = n(342687),
     N = n(826298),
@@ -49,8 +49,8 @@ t.Z = i.forwardRef(function (e, t) {
     let {
             sectionDescriptors: F,
             activeSections: V,
-            commandsByActiveSection: H,
-            hasMoreAfter: j,
+            commandsByActiveSection: j,
+            hasMoreAfter: H,
             commands: Y,
             filteredSectionId: W,
             scrollDown: K,
@@ -85,14 +85,14 @@ t.Z = i.forwardRef(function (e, t) {
         }),
         Q = (e) => {
             let t = V.length,
-                n = H.reduce((e, t) => e + t.data.length, 0) - (j ? 7 : 0);
-            j && e + 420 > 48 * t + 56 * n - 512 && K(), q(e), w(), (l.current = e);
+                n = j.reduce((e, t) => e + t.data.length, 0) - (H ? 7 : 0);
+            H && e + 420 > 48 * t + 56 * n - 512 && K(), q(e), w(), (l.current = e);
         };
     i.useEffect(() => {
         Q(l.current);
     }, [Y]);
-    let X = i.useCallback((e) => (e !== V.length - 1 || j ? 16 : 0), [V.length, j]),
-        J = H.map((e) => e.data.length);
+    let X = i.useCallback((e) => (e !== V.length - 1 || H ? 16 : 0), [V.length, H]),
+        J = j.map((e) => e.data.length);
     i.useEffect(() => {
         null != U.current && G && null != P && U.current.scrollRowIntoView(P);
     }, [G, P]),
@@ -117,7 +117,7 @@ t.Z = i.forwardRef(function (e, t) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: T.Vh.DISCOVERY,
+                    location: b.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -131,24 +131,24 @@ t.Z = i.forwardRef(function (e, t) {
                 if (null == P) return !1;
                 let t = 0,
                     n = 0;
-                for (let e of H)
+                for (let e of j)
                     if (((t = n), P < (n += e.data.length))) {
                         let n = e.data[P - t],
                             r = F.find((e) => e.id === n.applicationId);
-                        ee(n, r, (0, b.tI)(e.section));
+                        ee(n, r, (0, T.tI)(e.section));
                         break;
                     }
                 return !0;
             },
             onMoveSelection: (e) => {
                 if (0 === Y.length) return !0;
-                let t = j ? 7 : 0,
+                let t = H ? 7 : 0,
                     n = Y.length + t,
                     r = null == P ? 0 : P + e;
                 return r >= n ? (r = n - 1) : r < 0 && (r = 0), k(r), B(!0), !0;
             }
         }),
-        [Y.length, H, j, F, ee, P]
+        [Y.length, j, H, F, ee, P]
     );
     let et = i.useCallback(
             (e) => {
@@ -178,7 +178,7 @@ t.Z = i.forwardRef(function (e, t) {
             (e, t) => {
                 let n = e === V.length - 1,
                     i = V[e],
-                    { data: a } = H[e];
+                    { data: a } = j[e];
                 return (0, r.jsxs)(
                     'ul',
                     {
@@ -198,15 +198,15 @@ t.Z = i.forwardRef(function (e, t) {
                     e
                 );
             },
-            [V, H]
+            [V, j]
         ),
         er = i.useCallback(
             (e, t) => {
                 var i;
-                let a = H[t.sectionIndex],
+                let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === b.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
                 let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     f.ZP.NewCommand,
@@ -218,7 +218,7 @@ t.Z = i.forwardRef(function (e, t) {
                         selected: P === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
-                        onClick: () => ee(s, l, (0, b.tI)(a.section)),
+                        onClick: () => ee(s, l, (0, T.tI)(a.section)),
                         onHover: () => {
                             k(null), B(!1);
                         }
@@ -226,7 +226,7 @@ t.Z = i.forwardRef(function (e, t) {
                     o
                 );
             },
-            [n, H, ee, F, P]
+            [n, j, ee, F, P]
         ),
         ei = (0, p.Dt)();
     return (

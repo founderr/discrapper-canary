@@ -32,8 +32,8 @@ var r = n(392711),
     v = n(279779),
     I = n(620490),
     S = n(727785),
-    T = n(981631);
-function b(e, t, n) {
+    b = n(981631);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function A(e, t) {
             s = i.filter((e) => e instanceof u.ZP);
             break;
         case S.h8.USER:
-            s = i.filter((e) => e instanceof l.Sf && e.type === T.d4z.DM);
+            s = i.filter((e) => e instanceof l.Sf && e.type === b.d4z.DM);
             break;
         case S.h8.GROUP_DM:
             s = i.filter((e) => e instanceof l.Sf && e.isMultiUserDM());
@@ -78,8 +78,8 @@ function A(e, t) {
         let { id: n } = t,
             r = f.Z.getScoreWithoutFetchingLatest(n);
         if (e === S.h8.USER && t instanceof l.mn) {
-            if (t.type === T.d4z.DM) o[(n = t.getRecipientId())] = 1 + r / a;
-            else if (t.type === T.d4z.GROUP_DM) {
+            if (t.type === b.d4z.DM) o[(n = t.getRecipientId())] = 1 + r / a;
+            else if (t.type === b.d4z.GROUP_DM) {
                 let e = t.recipients.length;
                 for (let n of t.recipients) o[n] = 1 + (r / a) * (1 / e);
             }
@@ -248,24 +248,24 @@ class N {
             : [];
     }
     constructor(e, t, n = 100, r = y) {
-        b(this, 'query', ''),
-            b(this, 'options', y),
-            b(this, 'results', []),
-            b(this, '_userResults', []),
-            b(this, '_groupDMResults', []),
-            b(this, '_textChannelResults', []),
-            b(this, '_voiceChannelResults', []),
-            b(this, '_guildResults', []),
-            b(this, '_applicationResults', []),
-            b(this, '_linkResults', []),
-            b(this, '_inAppNavigations', []),
-            b(this, '_asyncTimeout', void 0),
-            b(this, 'userSearchContext', void 0),
-            b(this, 'onResultsChange', void 0),
-            b(this, 'resultTypes', void 0),
-            b(this, '_userBlacklist', null),
-            b(this, '_limit', void 0),
-            b(this, 'parseUserResults', (e) => {
+        T(this, 'query', ''),
+            T(this, 'options', y),
+            T(this, 'results', []),
+            T(this, '_userResults', []),
+            T(this, '_groupDMResults', []),
+            T(this, '_textChannelResults', []),
+            T(this, '_voiceChannelResults', []),
+            T(this, '_guildResults', []),
+            T(this, '_applicationResults', []),
+            T(this, '_linkResults', []),
+            T(this, '_inAppNavigations', []),
+            T(this, '_asyncTimeout', void 0),
+            T(this, 'userSearchContext', void 0),
+            T(this, 'onResultsChange', void 0),
+            T(this, 'resultTypes', void 0),
+            T(this, '_userBlacklist', null),
+            T(this, '_limit', void 0),
+            T(this, 'parseUserResults', (e) => {
                 let { results: t } = e;
                 if (!!this._include(S.h8.USER)) {
                     for (let { id: e, score: n, comparator: r } of ((this._userResults = []), t)) {
@@ -285,7 +285,7 @@ class N {
                     this._userResults.length > this._limit && (this._userResults.length = this._limit), this.updateAllResults();
                 }
             }),
-            b(this, 'updateAllResults', () => {
+            T(this, 'updateAllResults', () => {
                 clearTimeout(this._asyncTimeout),
                     (this.results = i()([...this._userResults, ...this._groupDMResults, ...this._textChannelResults, ...this._voiceChannelResults, ...this._guildResults, ...this._linkResults, ...this._inAppNavigations])
                         .uniqBy((e) => ''.concat(e.type, '-').concat(e.record.id))

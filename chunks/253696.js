@@ -32,15 +32,15 @@ function g(e) {
         v = l.Z.getChannel(u.Z.getChannelId()),
         I = null == v ? void 0 : v.getGuildId(),
         { canSplitFrecencyList: S } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
-        T = (0, o.E2)({
+        b = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         });
     o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let b = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+    let T = (S || b) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         y = null != v ? a.ZP.getDisambiguatedEmojiContext(v.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        A = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
-        N = b.slice(0, A),
+        A = (S || b) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        N = T.slice(0, A),
         C = null != I ? a.ZP.getGuildEmoji(I) : [],
         R = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == v ? void 0 : v.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: O, newlyAddedEmojis: D } = (0, f._)({

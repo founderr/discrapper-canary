@@ -38,8 +38,8 @@ let E = 'scientist:triggered',
     v = 'exerimentOverrides',
     I = 'userExperimentOverrides',
     S = 'guildExperimentOverrides',
-    T = new c.Z('ExperimentStore'),
-    b = !1,
+    b = new c.Z('ExperimentStore'),
+    T = !1,
     y = {},
     A = {},
     N = {
@@ -179,11 +179,11 @@ function V(e) {
         }),
         ee(y));
 }
-function H(e) {
+function j(e) {
     let [t, n] = e;
     return null != h.Z[t] ? h.Z[t](n) : null;
 }
-function j(e) {
+function H(e) {
     let [t, n] = e;
     return {
         buckets: t.map((e) => {
@@ -199,7 +199,7 @@ function j(e) {
                 })
             };
         }),
-        filters: n.map(H),
+        filters: n.map(j),
         rawFilterData: n
     };
 }
@@ -207,7 +207,7 @@ function Y(e) {
     var t;
     !x && 'CONNECTION_OPEN' === e.type && U(e.user) && (x = !0),
         'EXPERIMENTS_FETCH_SUCCESS' === e.type &&
-            b &&
+            T &&
             'ready_payload' === N.source &&
             _.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
                 fingerprint: e.fingerprint,
@@ -235,7 +235,7 @@ function Y(e) {
             !1
         ),
         n(598984).Vx.trackExposure(),
-        (b = !0);
+        (T = !0);
 }
 function W(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
@@ -270,14 +270,14 @@ function W(e) {
                 R[t] = {
                     hashKey: n,
                     revision: o,
-                    populations: l.map(j),
+                    populations: l.map(H),
                     overrides: (function (e) {
                         let t = {};
                         if (null == e) return t;
                         for (let { b: n, k: r } of e) for (let e of r) t[e] = n;
                         return t;
                     })(u),
-                    overridesFormatted: (null != c ? c : []).map((e) => e.map(j)),
+                    overridesFormatted: (null != c ? c : []).map((e) => e.map(H)),
                     holdoutName: null != d ? d : null,
                     holdoutBucket: null != f ? f : null,
                     aaMode: 1 === _,
@@ -318,15 +318,15 @@ function z(e) {
     for (let r in e) {
         var n;
         let i = e[r];
-        for (let e of ((t[r] = { ...i }), t[r].populations)) e.filters = e.rawFilterData.map(H);
-        for (let e of null !== (n = t[r].overridesFormatted) && void 0 !== n ? n : []) for (let t of e) t.filters = t.rawFilterData.map(H);
+        for (let e of ((t[r] = { ...i }), t[r].populations)) e.filters = e.rawFilterData.map(j);
+        for (let e of null !== (n = t[r].overridesFormatted) && void 0 !== n ? n : []) for (let t of e) t.filters = t.rawFilterData.map(j);
     }
     return t;
 }
 function q(e) {
     let { serializedExperimentStore: t, user: n } = e;
     !x && U(n) && (x = !0),
-        (b = t.hasLoadedExperiments),
+        (T = t.hasLoadedExperiments),
         (y = t.trackedExposureExperiments),
         (C = t.loadedUserExperiments),
         (D = t.userExperimentOverrides),
@@ -341,7 +341,7 @@ function q(e) {
         (O = {});
 }
 function Q() {
-    b = !0;
+    T = !0;
 }
 function X(e) {
     let { isSwitchingAccount: t } = e;
@@ -353,16 +353,16 @@ function X(e) {
             rawUserExperiments: []
         }),
         (y = {}),
-        (b = !1);
+        (T = !1);
 }
 function J() {
-    (b = !1), (y = {}), (R = {}), o.K.remove(E);
+    (T = !1), (y = {}), (R = {}), o.K.remove(E);
 }
 function $() {
     try {
         o.K.set(I, D);
     } catch (e) {
-        T.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        b.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -371,7 +371,7 @@ function $() {
     try {
         o.K.set(S, L);
     } catch (e) {
-        T.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        b.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -385,7 +385,7 @@ function ee(e) {
             e: e
         });
     } catch (e) {
-        T.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        b.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
@@ -499,7 +499,7 @@ class ei extends f.Z {
         };
     }
     get hasLoadedExperiments() {
-        return b;
+        return T;
     }
     hasRegisteredExperiment(e) {
         return null != A[e];
@@ -650,7 +650,7 @@ class ei extends f.Z {
         let e = {};
         for (let t in R) for (let n of ((e[t] = JSON.parse(JSON.stringify(R[t]))), e[t].populations)) n.filters = [];
         return {
-            hasLoadedExperiments: b,
+            hasLoadedExperiments: T,
             trackedExposureExperiments: y,
             loadedUserExperiments: C,
             loadedGuildExperiments: e,

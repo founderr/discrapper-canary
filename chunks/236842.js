@@ -21,7 +21,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = new i.Y('PeerConnection');
+let o = new i.Yd('PeerConnection');
 class l extends r.EventEmitter {
     setBitRate(e) {
         this.bitrate !== e && ((this.bitrate = e), this.negotiationNeeded());

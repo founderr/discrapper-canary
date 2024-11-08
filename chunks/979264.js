@@ -109,13 +109,13 @@ t.ZP = i.memo(function (e) {
     var t;
     let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: h, disableGuildProfile: p = !1, inline: g = !0, profileViewedAnalytics: I } = e,
         S = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
-        T = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
-        { tag: b, badge: y, guildId: A } = (0, d.vh)(T);
+        b = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
+        { tag: T, badge: y, guildId: A } = (0, d.vh)(b);
     return (0, d.p0)(i, a) && null != A
         ? p
             ? (0, r.jsx)(E, {
                   guildId: A,
-                  clanTag: b,
+                  clanTag: T,
                   clanBadge: y,
                   className: s()(m.noTooltip, l),
                   textVariant: f,
@@ -124,13 +124,13 @@ t.ZP = i.memo(function (e) {
                   inline: g
               })
             : (0, r.jsx)(v, {
-                  clan: T,
+                  clan: b,
                   userId: i,
                   profileViewedAnalytics: I,
                   className: c,
                   children: (0, r.jsx)(E, {
                       guildId: A,
-                      clanTag: b,
+                      clanTag: T,
                       clanBadge: y,
                       className: l,
                       textVariant: f,

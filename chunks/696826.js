@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     P5: function () {
-        return b;
+        return T;
     },
     QF: function () {
         return E;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     vP: function () {
-        return T;
+        return b;
     },
     vj: function () {
         return m;
@@ -221,7 +221,7 @@ function S(e) {
             };
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     var i;
     let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: h, cutoutRadius: p, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
     return (0, r.jsxs)('mask', {
@@ -267,7 +267,7 @@ function T(e, t, n) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { status: t, isMobile: n = !1, size: a = 8, color: l, className: c, style: d } = e,
         g = i.useId(),
         E = t === f.Skl.ONLINE && n,
@@ -287,14 +287,14 @@ function b(e) {
             },
             'animate-always'
         ),
-        b = m(t, l),
+        T = m(t, l),
         [{ fill: y }] = (0, u.useSpring)(
             {
                 config: p,
-                fill: b
+                fill: T
             },
             'animate-always',
-            [b]
+            [T]
         ),
         A = Math.ceil(a * _.EW);
     return (0, r.jsxs)('svg', {
@@ -304,7 +304,7 @@ function b(e) {
         className: s()(h.mask, c),
         style: d,
         children: [
-            T(I, a, g),
+            b(I, a, g),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,

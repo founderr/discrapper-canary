@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -35,17 +35,17 @@ function S(e, t, n) {
         e
     );
 }
-class T extends (r = a.PureComponent) {
+class b extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: S = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: S = v, minWidth: b, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
         let G = (0, f.Tj)({
                 width: _,
                 height: v,
                 maxWidth: I,
                 maxHeight: S,
-                minWidth: T,
+                minWidth: b,
                 minHeight: A
             }),
             B = 0 !== G.width ? G.width / G.height : 1;
@@ -58,7 +58,7 @@ class T extends (r = a.PureComponent) {
                   mediaLayoutType: N
               }))
             : r !== p.zo9.LOADING &&
-              (e = (0, i.jsx)(b, {
+              (e = (0, i.jsx)(T, {
                   size: G,
                   mediaLayoutType: N,
                   alt: c
@@ -144,7 +144,7 @@ class T extends (r = a.PureComponent) {
         super(...e), S(this, '_containerRef', a.createRef()), S(this, '_clickableRef', a.createRef());
     }
 }
-function b(e) {
+function T(e) {
     let { size: t, mediaLayoutType: n, alt: r } = e,
         a = (0, c.ZP)();
     return (0, i.jsx)('div', {
@@ -175,7 +175,7 @@ function b(e) {
         })
     });
 }
-S(T, 'defaultProps', {
+S(b, 'defaultProps', {
     readyState: p.zo9.READY,
     zoomable: !0,
     children: (e) => {

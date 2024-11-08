@@ -58,9 +58,9 @@ function f(e, t, n) {
         v = e.type !== a.uaV.DEFAULT || (!E && '' !== e.content),
         I = (0, i.Z)(e),
         S = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        T = l(e, t),
-        b = o(e),
-        y = I ? '' : ''.concat(c ? b : T, ' ').concat(r.Z0);
+        b = l(e, t),
+        T = o(e),
+        y = I ? '' : ''.concat(c ? T : b, ' ').concat(r.Z0);
     if (v) {
         let t = s(e);
         y += ' '.concat(t);

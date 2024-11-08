@@ -19,12 +19,12 @@ var i = n(97613),
     p = n(981631),
     m = n(474936);
 function g(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: g, onComplete: E, onSubscriptionConfirmation: v, analyticsLocations: I, analyticsObject: S, analyticsLocation: T, analyticsSourceLocation: b, isGift: y = !1, giftMessage: A, giftStyle: N, giftingOrigin: C, subscriptionTier: R, trialId: O, postSuccessGuild: D, openInvoiceId: L, applicationId: x, referralTrialOfferId: w, giftRecipient: M, returnRef: P, subscription: k, skipConfirm: U, repeatPurchase: G } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: g, onComplete: E, onSubscriptionConfirmation: v, analyticsLocations: I, analyticsObject: S, analyticsLocation: b, analyticsSourceLocation: T, isGift: y = !1, giftMessage: A, giftStyle: N, giftingOrigin: C, subscriptionTier: R, trialId: O, postSuccessGuild: D, openInvoiceId: L, applicationId: x, referralTrialOfferId: w, giftRecipient: M, returnRef: P, subscription: k, skipConfirm: U, repeatPurchase: G } = null != e ? e : {},
         B = !1,
         Z = (0, s.Z)(),
         F = d.default.getCurrentUser(),
         V = (0, h.M5)(F, m.p9.TIER_2),
-        H = a()('payment-modal');
+        j = a()('payment-modal');
     return (0, o.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('8016'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('17938'), n.e('95900'), n.e('32776'), n.e('54433'), n.e('32383')]).then(n.bind(n, 7305));
@@ -51,8 +51,8 @@ function g(e) {
                     onSubscriptionConfirmation: v,
                     analyticsLocations: I,
                     analyticsObject: S,
-                    analyticsLocation: T,
-                    analyticsSourceLocation: b,
+                    analyticsLocation: b,
+                    analyticsSourceLocation: T,
                     trialId: O,
                     postSuccessGuild: D,
                     planGroup: m.Y1,
@@ -67,14 +67,14 @@ function g(e) {
             };
         },
         {
-            modalKey: H,
+            modalKey: j,
             onCloseCallback: () => {
                 !B &&
                     f.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: Z,
                         payment_type: p.Zuq[p.GZQ.SUBSCRIPTION],
-                        location: null != T ? T : S,
-                        source: b,
+                        location: null != b ? b : S,
+                        source: T,
                         subscription_type: p.NYc.PREMIUM,
                         is_gift: y,
                         eligible_for_trial: null != O,

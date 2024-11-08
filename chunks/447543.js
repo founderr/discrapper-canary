@@ -24,8 +24,8 @@ var r = n(525654),
     v = n(305325),
     I = n(281956),
     S = n(931261),
-    T = n(15274),
-    b = n(924301),
+    b = n(15274),
+    T = n(924301),
     y = n(82085),
     A = n(264229),
     N = n(652898),
@@ -45,8 +45,8 @@ var r = n(525654),
     Z = n(914010),
     F = n(594174),
     V = n(626135),
-    H = n(70956),
-    j = n(630388),
+    j = n(70956),
+    H = n(630388),
     Y = n(573261),
     W = n(954824),
     K = n(749210),
@@ -71,7 +71,7 @@ function en(e) {
         case J.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             a.targetType = e.target_type;
     }
-    return (!(null != k.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, L.zi)(e.channel.type) && (a.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (a.guildScheduledEvent = e.guild_scheduled_event), (a.isGuestInvite = (0, j.yE)(null !== (i = e.flags) && void 0 !== i ? i : 0, s.$.IS_GUEST_INVITE)), a;
+    return (!(null != k.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, L.zi)(e.channel.type) && (a.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (a.guildScheduledEvent = e.guild_scheduled_event), (a.isGuestInvite = (0, H.yE)(null !== (i = e.flags) && void 0 !== i ? i : 0, s.$.IS_GUEST_INVITE)), a;
 }
 function er(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
@@ -88,8 +88,8 @@ function er(e) {
             let a = w.Z.getChannel(t.id);
             return B.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
-        T = f === q.d4z.GUILD_STAGE_VOICE,
-        b = q.Z5c.CHANNEL(t, g);
+        b = f === q.d4z.GUILD_STAGE_VOICE,
+        T = q.Z5c.CHANNEL(t, g);
     L.tx.has(f)
         ? (0, E.h)(() => {
               Promise.resolve()
@@ -97,8 +97,8 @@ function er(e) {
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (T) {
-                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, O.uL)(b);
+                              if (b) {
+                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, O.uL)(T);
                                   return;
                               }
                               n.selectVoiceChannel(g),
@@ -128,7 +128,7 @@ function er(e) {
         })(
             r,
             i
-        )(b);
+        )(T);
 }
 let ei = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -146,7 +146,7 @@ let ei = function (e, t) {
                               if (null != t)
                                   (0, E.h)(() => {
                                       let e = { guildScheduledEventId: t.id };
-                                      null != n && (e.welcomeModalChannelId = n), (0, T.P3)(t, e);
+                                      null != n && (e.welcomeModalChannelId = n), (0, b.P3)(t, e);
                                   });
                           })(t),
                           !1)
@@ -162,7 +162,7 @@ let ei = function (e, t) {
     },
     ea = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, b.xt)(e) && null != n ? ei(n) : await K.Z.transitionToGuildSync(t);
+        (0, T.xt)(e) && null != n ? ei(n) : await K.Z.transitionToGuildSync(t);
     };
 t.Z = {
     resolveInvite: function e(t, n, r) {
@@ -229,7 +229,7 @@ t.Z = {
     async mobileCreateInvite(e, t) {
         let n = G.Z.getInvite(e.id);
         if (null != n && !n.isExpired()) return n.code;
-        let r = { max_age: H.Z.Seconds.DAY },
+        let r = { max_age: j.Z.Seconds.DAY },
             i = await this.createInvite(e.id, r, t).catch(() => d.Z.dispatch({ type: 'NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED' }));
         return null == i ? void 0 : i.code;
     },
@@ -363,7 +363,7 @@ t.Z = {
                               invite: e.body,
                               code: f
                           });
-                          let i = b.ZP.getGuildScheduledEvent(u.guildScheduledEventId),
+                          let i = T.ZP.getGuildScheduledEvent(u.guildScheduledEventId),
                               a = {
                                   ...e.body,
                                   guild_scheduled_event: i

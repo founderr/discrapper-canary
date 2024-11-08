@@ -31,8 +31,8 @@ var r,
     v = n(271383),
     I = n(430824),
     S = n(158776),
-    T = n(885110),
-    b = n(594174),
+    b = n(885110),
+    T = n(594174),
     y = n(981631),
     A = n(388032);
 function N(e, t, n) {
@@ -88,10 +88,10 @@ function O(e, t, n, r) {
 function D(e, t, n) {
     let r = n === m.default.getId(),
         i = S.Z.isMobileOnline(n),
-        a = r ? T.Z.getStatus() : S.Z.getStatus(n, e),
-        s = r ? T.Z.getActivities() : S.Z.getActivities(n, e),
+        a = r ? b.Z.getStatus() : S.Z.getStatus(n, e),
+        s = r ? b.Z.getActivities() : S.Z.getActivities(n, e),
         o = p.Z.getStreamForUser(n, e),
-        l = b.default.getUser(n);
+        l = T.default.getUser(n);
     return null == l
         ? null
         : {
@@ -253,7 +253,7 @@ function U() {
 }
 class G extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(b.default, I.Z, g.Z, v.ZP, S.Z, T.Z, m.default, E.Z, p.Z, _.Z), this.syncWith([T.Z], U), this.syncWith([p.Z], k);
+        this.waitFor(T.default, I.Z, g.Z, v.ZP, S.Z, b.Z, m.default, E.Z, p.Z, _.Z), this.syncWith([b.Z], U), this.syncWith([p.Z], k);
     }
     getProps(e, t) {
         let n = w.get(e, L(t));

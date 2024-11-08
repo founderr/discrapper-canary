@@ -63,10 +63,10 @@ var t, n;
                                             I = v.order;
                                         if (I > _) break;
                                         var S = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            T = v.match(t, s, S);
-                                        if (T) {
-                                            var b = v.quality ? v.quality(T, s, S) : 0;
-                                            (I < _ || b > f) && ((l = E), (c = v), (d = T), (f = b), (_ = I));
+                                            b = v.match(t, s, S);
+                                        if (b) {
+                                            var T = v.quality ? v.quality(b, s, S) : 0;
+                                            (I < _ || T > f) && ((l = E), (c = v), (d = b), (f = T), (_ = I));
                                         }
                                     }
                             }
@@ -132,8 +132,8 @@ var t, n;
                 }
                 return e;
             },
-            T = /[<>&"']/g,
-            b = {
+            b = /[<>&"']/g,
+            T = {
                 '<': '&lt;',
                 '>': '&gt;',
                 '&': '&amp;',
@@ -143,8 +143,8 @@ var t, n;
                 '`': '&#96;'
             },
             y = function (e) {
-                return String(e).replace(T, function (e) {
-                    return b[e];
+                return String(e).replace(b, function (e) {
+                    return T[e];
                 });
             },
             A = /\\([^0-9A-Za-z\s])/g,
@@ -239,7 +239,7 @@ var t, n;
             Z = '(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*',
             F = '\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+[\'"]([\\s\\S]*?)[\'"])?\\s*',
             V = /mailto:/i,
-            H = function (e, t, n) {
+            j = function (e, t, n) {
                 var r = (e[2] || e[1]).replace(/\s+/g, ' ').toLowerCase();
                 if (t._defs && t._defs[r]) {
                     var i = t._defs[r];
@@ -247,9 +247,9 @@ var t, n;
                 }
                 return (t._refs = t._refs || {}), (t._refs[r] = t._refs[r] || []), t._refs[r].push(n), n;
             },
-            j = !1;
+            H = !1;
         try {
-            RegExp('(?<=a)'), RegExp('(?<!a)'), (j = !0);
+            RegExp('(?<=a)'), RegExp('(?<!a)'), (H = !0);
         } catch (e) {}
         var Y = 0,
             W = {
@@ -701,7 +701,7 @@ var t, n;
                     order: Y++,
                     match: h(RegExp('^\\[(' + Z + ')\\]\\s*\\[([^\\]]*)\\]')),
                     parse: function (e, t, n) {
-                        return H(e, n, {
+                        return j(e, n, {
                             type: 'link',
                             content: t(e[1], n)
                         });
@@ -713,7 +713,7 @@ var t, n;
                     order: Y++,
                     match: h(RegExp('^!\\[(' + Z + ')\\]\\s*\\[([^\\]]*)\\]')),
                     parse: function (e, t, n) {
-                        return H(e, n, {
+                        return j(e, n, {
                             type: 'image',
                             alt: e[1]
                         });
@@ -723,7 +723,7 @@ var t, n;
                 },
                 em: {
                     order: Y,
-                    match: h(RegExp((j ? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b' : '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') + '|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)')),
+                    match: h(RegExp((H ? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b' : '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') + '|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)')),
                     quality: function (e) {
                         return e[0].length + 0.2;
                     },

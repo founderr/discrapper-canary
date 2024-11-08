@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     ZK: function () {
-        return d;
+        return u;
     },
     en: function () {
         return f;
@@ -19,11 +19,11 @@ var a = n(981631),
     o = n(388032);
 let s = {},
     c = {},
-    u = Object.freeze({
+    d = Object.freeze({
         ALL: -1,
         ...a.EKQ
     });
-function d(e) {
+function u(e) {
     let t = (0, l.LX)(e, { path: a.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
     return null != t ? t.params.skuId : null;
 }
@@ -171,9 +171,9 @@ function m(e) {
             return o.intl.string(o.t['9b4eUl']);
     }
 }
-Object.keys(u).forEach((e) => {
+Object.keys(d).forEach((e) => {
     let t = e.toLowerCase().replace(/_/g, '-'),
-        n = u[e];
+        n = d[e];
     (s[t] = n), (c[n] = t);
 });
 let h = [

@@ -24,8 +24,8 @@ var r = n(200651),
     v = n(160404),
     I = n(703656),
     S = n(814443),
-    T = n(592125),
-    b = n(626135),
+    b = n(592125),
+    T = n(626135),
     y = n(912787),
     A = n(272709),
     N = n(718582),
@@ -78,7 +78,7 @@ function L(e) {
                 i.push(p.length > 0 ? p[0].id : '0'),
                 s.push(p.length > 0 && null !== (_ = null === (c = S.Z.getUserAffinity(p[0].id)) || void 0 === c ? void 0 : c.affinity) && void 0 !== _ ? _ : 0),
                 n.push(Math.min(p.length, 6)),
-                l.push(null !== (h = null === (d = T.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== h ? h : R.d4z.UNKNOWN),
+                l.push(null !== (h = null === (d = b.Z.getChannel(a)) || void 0 === d ? void 0 : d.type) && void 0 !== h ? h : R.d4z.UNKNOWN),
                 (u['position_'.concat(m + 1, '_affinity_user_ids')] = p.slice(0, 6).map((e) => e.id)),
                 (u['position_'.concat(m + 1, '_user_affinity_scores')] = p.slice(0, 6).map((e) => {
                     var t, n;
@@ -93,7 +93,7 @@ function L(e) {
             (u.max_affinity_user_scores = s),
             (u.channel_types = l),
             (u.guild_id = t.id),
-            b.default.track(R.rMx.GUILD_TOOLTIP_SHOWN, {
+            T.default.track(R.rMx.GUILD_TOOLTIP_SHOWN, {
                 ...u,
                 ...(0, o.hH)(t.id)
             }));
@@ -108,8 +108,8 @@ function L(e) {
 function x(e) {
     var t;
     let { guild: n, closePopout: o, nudge: S } = e,
-        T = i.useRef(null),
-        b = (0, u.Z)(n),
+        b = i.useRef(null),
+        T = (0, u.Z)(n),
         y = (0, m.I)(n),
         { isViewingRoles: A, backNavigationSection: N } = (0, a.cj)([v.Z], () => ({
             isViewingRoles: v.Z.isViewingRoles(n.id),
@@ -118,13 +118,13 @@ function x(e) {
         C = () => {
             v.Z.isFullServerPreview(n.id) && (0, I.uL)(R.Z5c.CHANNEL(n.id)), _.ZP.shouldShowOnboarding(n.id) && (f.Z.finishOnboarding(n.id), (0, h.discardOnboardingPromise)(n.id)), (0, E.mL)(n.id), g.Z.open(n.id, N), N === R.pNK.ROLE_SUBSCRIPTIONS && (0, p.GN)(n.id);
         },
-        x = null === (t = T.current) || void 0 === t ? void 0 : t.clientHeight,
+        x = null === (t = b.current) || void 0 === t ? void 0 : t.clientHeight,
         w = S + 14;
     return (0, r.jsx)(l.Z.Provider, {
         value: n.id,
         children: (0, r.jsxs)('div', {
             className: D.container,
-            ref: T,
+            ref: b,
             children: [
                 (0, r.jsx)('div', {
                     className: D.tooltipPointer,
@@ -133,7 +133,7 @@ function x(e) {
                 (0, r.jsxs)('div', {
                     className: D.header,
                     children: [
-                        b
+                        T
                             ? (0, r.jsx)(d.Z, {
                                   guild: n,
                                   className: D.rowIconV2,

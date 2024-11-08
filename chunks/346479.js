@@ -18,7 +18,7 @@ var r = n(697988),
     v = n(981631),
     I = n(176505),
     S = n(388032);
-function T(e, t) {
+function b(e, t) {
     return i.tn
         .patch({
             url: v.ANM.CHANNEL(e.id),
@@ -40,7 +40,7 @@ function T(e, t) {
             )
         );
 }
-function b(e, t) {
+function T(e, t) {
     a.Z.dispatch({
         type: 'THREAD_MEMBER_LOCAL_UPDATE',
         id: e.id,
@@ -52,13 +52,13 @@ function b(e, t) {
 t.Z = {
     archiveThread(e, t) {
         let n = { archived: !0 };
-        return t && (n.locked = !0), T(e, n);
+        return t && (n.locked = !0), b(e, n);
     },
     async lockThread(e) {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !1)),
-            T(e, {
+            b(e, {
                 locked: !0,
                 archived: t
             })
@@ -68,7 +68,7 @@ t.Z = {
         let t = e.isArchivedThread();
         return (
             t && (await this.unarchiveThread(e, !0)),
-            T(e, {
+            b(e, {
                 locked: !1,
                 archived: t
             })
@@ -79,7 +79,7 @@ t.Z = {
             r = e.isForumPost();
         t && (n.locked = !1);
         try {
-            return await T(e, n);
+            return await b(e, n);
         } catch (e) {
             var i, a;
             throw (
@@ -112,9 +112,9 @@ t.Z = {
             r = _.Z.can(v.Plq.MANAGE_THREADS, n);
         null != n && n.isArchivedThread() && (r || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && (await this.unarchiveThread(n, !1));
     },
-    setInvitable: (e, t) => T(e, { invitable: t }),
+    setInvitable: (e, t) => b(e, { invitable: t }),
     async joinThread(e, t) {
-        e.isForumPost() && b(e, !0);
+        e.isForumPost() && T(e, !0);
         try {
             return await i.tn.post({
                 url: v.ANM.THREAD_MEMBER(e.id),
@@ -133,7 +133,7 @@ t.Z = {
                     title: S.intl.string(S.t.j2d6Ki),
                     body: S.intl.string(S.t.fEptJC)
                 });
-            e.isForumPost() && b(e, !1);
+            e.isForumPost() && T(e, !1);
         }
     },
     async addMember(e, t, n) {
@@ -158,7 +158,7 @@ t.Z = {
         }
     },
     leaveThread: (e, t) => (
-        e.isForumPost() && b(e, !1),
+        e.isForumPost() && T(e, !1),
         i.tn.del({
             url: v.ANM.THREAD_MEMBER(e.id),
             query: { location: t }

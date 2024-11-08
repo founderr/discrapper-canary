@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     Mq: function () {
-        return T;
+        return b;
     },
     NK: function () {
         return C;
@@ -21,7 +21,7 @@ n.d(t, {
         return R;
     },
     hU: function () {
-        return b;
+        return T;
     },
     nY: function () {
         return v;
@@ -90,7 +90,7 @@ function S(e, t) {
                     : a.rawValue;
     }
 }
-function T(e, t) {
+function b(e, t) {
     var n, r;
     let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.VqG,
         d = arguments.length > 3 ? arguments[3] : void 0,
@@ -115,8 +115,8 @@ function T(e, t) {
             let t = S(e, o.G.DECISION_OUTCOME);
             if (null != t) return t;
         })(e),
-        T = S(e, o.G.INTERACTION_CALLBACK_TYPE),
-        b = S(e, o.G.APPLICATION_NAME);
+        b = S(e, o.G.INTERACTION_CALLBACK_TYPE),
+        T = S(e, o.G.APPLICATION_NAME);
     if (null != v) {
         let e = (function (e, t, n) {
             switch (t) {
@@ -167,28 +167,28 @@ function T(e, t) {
             });
         })(e, A, l);
     if (null != C) return C;
-    if (null != b)
-        return T === s.y.MODAL && null != f
+    if (null != T)
+        return b === s.y.MODAL && null != f
             ? I !== a.P.BLOCKED
                 ? E.intl.format(E.t['4xL9Sk'], {
-                      applicationName: b,
+                      applicationName: T,
                       interactionUserHook: f,
                       integrationOwnerHook: d
                   })
                 : E.intl.format(E.t.S3lNIS, {
-                      applicationName: b,
+                      applicationName: T,
                       interactionUserHook: f,
                       integrationOwnerHook: d
                   })
             : I !== a.P.BLOCKED
               ? E.intl.format(E.t.AXQufH, {
-                    applicationName: b,
+                    applicationName: T,
                     channelName: A,
                     channelHook: N,
                     integrationOwnerHook: d
                 })
               : E.intl.format(E.t.s3tjMD, {
-                    applicationName: b,
+                    applicationName: T,
                     channelName: A,
                     channelHook: N,
                     integrationOwnerHook: d
@@ -203,7 +203,7 @@ function T(e, t) {
               channelHook: N
           });
 }
-function b(e) {
+function T(e) {
     switch (e) {
         case d.i.NICKNAME:
             return E.intl.string(E.t.fkBQa2);

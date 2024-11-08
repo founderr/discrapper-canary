@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(481046),
     I = n(510659),
     S = n(277085),
-    T = n(287954),
-    b = n(810097),
+    b = n(287954),
+    T = n(810097),
     y = n(64621),
     A = n(228168),
     N = n(388032),
@@ -41,8 +41,8 @@ function L(e) {
         [B, Z] = i.useState(!0),
         F = i.useRef(null),
         V = i.useRef(null),
-        H = i.useRef(null),
         j = i.useRef(null),
+        H = i.useRef(null),
         { emoji: Y, state: W } = null != t ? t : {},
         K = null != W && '' !== W ? W : null,
         z = null != K && K.length > 0,
@@ -69,8 +69,8 @@ function L(e) {
         if ((ed(Q || e <= J), L)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = F.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : $,
-                a = null !== (i = null === (n = H.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ee;
-            e_(!Q && e > a), (V.current = e), (j.current = a);
+                a = null !== (i = null === (n = j.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : ee;
+            e_(!Q && e > a), (V.current = e), (H.current = a);
         }
     }, [L, Q, J, $, ee]);
     let [eg, eE] = (0, c.useSpring)(() => ({
@@ -103,7 +103,7 @@ function L(e) {
                         }
                     });
                 } else {
-                    let e = Math.min(null !== (n = j.current) && void 0 !== n ? n : ee, ee);
+                    let e = Math.min(null !== (n = H.current) && void 0 !== n ? n : ee, ee);
                     eE({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
@@ -128,7 +128,7 @@ function L(e) {
                       tooltipDelay: A.vB
                   })
                 : null,
-        eT = () =>
+        eb = () =>
             z
                 ? (0, r.jsx)(c.Text, {
                       variant: R,
@@ -136,7 +136,7 @@ function L(e) {
                       children: K
                   })
                 : null,
-        eb = () => {
+        eT = () => {
             let e = s()(C.content, {
                 [C.clamp]: B,
                 [C.unclamp]: !B,
@@ -145,20 +145,20 @@ function L(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eg,
                 className: e,
-                children: [eS(), eT()]
+                children: [eS(), eb()]
             });
         },
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
-                ref: H,
-                children: [eS(), eT()]
+                ref: j,
+                children: [eS(), eb()]
             }),
         eA = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: v === A.y0.PANEL }),
                 ref: F,
-                children: [eS(), eT()]
+                children: [eS(), eb()]
             }),
         eN = () => {
             k({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -221,7 +221,7 @@ function L(e) {
                             className: eL,
                             children: (0, r.jsx)('span', {
                                 className: ex,
-                                children: et && eb()
+                                children: et && eT()
                             })
                         }),
                         eu
@@ -230,7 +230,7 @@ function L(e) {
                                   isExpandable: ef,
                                   onCloseProfile: M
                               })
-                            : (0, r.jsx)(b.ZP, {
+                            : (0, r.jsx)(T.ZP, {
                                   user: a,
                                   sourceType: A.n_.STATUS,
                                   isVisible: eh && !eo,
@@ -290,7 +290,7 @@ function L(e) {
                               ]
                           });
                       })(),
-                      (0, r.jsx)(T.Z, {
+                      (0, r.jsx)(b.Z, {
                           user: a,
                           guildId: p,
                           channelId: g,

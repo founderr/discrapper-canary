@@ -38,25 +38,25 @@ function g(e) {
 }
 function E(e) {
     var t, n, g, E, v;
-    let { contentDisplay: I, fadeInOut: S = !1, ...T } = e,
-        b = {},
+    let { contentDisplay: I, fadeInOut: S = !1, ...b } = e,
+        T = {},
         { analyticsLocations: y } = (0, _.ZP)();
-    i.Children.forEach(T.children, (e, t) => {
-        b[e.props.id] = {
+    i.Children.forEach(b.children, (e, t) => {
+        T[e.props.id] = {
             children: e.props.children,
             impressionName: e.props.impressionName,
             impressionProperties: e.props.impressionProperties,
             index: t
         };
     });
-    let A = T.activeSlide,
-        N = (0, d.Z)(T.activeSlide);
-    let C = null !== (t = T.directionOverride) && void 0 !== t ? t : ((E = null != N ? b[N] : null), (v = b[A]), null == E ? null : E.index > v.index ? 'backwards' : E.index < v.index ? 'forwards' : null),
+    let A = b.activeSlide,
+        N = (0, d.Z)(b.activeSlide);
+    let C = null !== (t = b.directionOverride) && void 0 !== t ? t : ((E = null != N ? T[N] : null), (v = T[A]), null == E ? null : E.index > v.index ? 'backwards' : E.index < v.index ? 'forwards' : null),
         { reducedMotion: R } = i.useContext(l.S),
         O = i.useContext(f.Z),
-        D = b[A].impressionName,
+        D = T[A].impressionName,
         L = {
-            ...b[A].impressionProperties,
+            ...T[A].impressionProperties,
             location_stack: y
         };
     O({
@@ -68,12 +68,12 @@ function E(e) {
     let { ref: x, width: w = 0, height: M = 0 } = (0, c.Z)(A),
         P = {
             ...p,
-            ...T.springConfig,
+            ...b.springConfig,
             ...(R.enabled ? { clamp: !0 } : null)
         },
         k = (0, u.useSpring)(
             {
-                width: null !== (n = T.width) && void 0 !== n ? n : w,
+                width: null !== (n = b.width) && void 0 !== n ? n : w,
                 height: M,
                 config: P
             },
@@ -89,16 +89,16 @@ function E(e) {
                 config: P,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === A && null != T.onSlideReady && T.onSlideReady(n);
+                    n === A && null != b.onSlideReady && b.onSlideReady(n);
                 }
             },
             null == N ? 'animate-never' : 'respect-motion-settings'
         ),
         G = (0, h.Z)(C),
-        { width: B, centered: Z = !0 } = T,
+        { width: B, centered: Z = !0 } = b,
         F = o.tq ? '100%' : k.width.to((e) => Math.round(e)),
         V = o.tq ? '100%' : k.height.to((e) => Math.round(e)),
-        H = o.tq
+        j = o.tq
             ? {}
             : Z
               ? {
@@ -106,13 +106,13 @@ function E(e) {
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
-        j = o.tq ? {} : { overflow: null !== (g = T.overflow) && void 0 !== g ? g : 'hidden' };
+        H = o.tq ? {} : { overflow: null !== (g = b.overflow) && void 0 !== g ? g : 'hidden' };
     return (0, r.jsx)(a.animated.div, {
         style: {
             position: 'relative',
             width: F,
             height: V,
-            ...j
+            ...H
         },
         children: U((e, t, n) => {
             let { key: i } = n,
@@ -127,7 +127,7 @@ function E(e) {
                         flexDirection: 'column',
                         backfaceVisibility: 'hidden',
                         width: o.tq ? '100%' : B,
-                        ...H,
+                        ...j,
                         ...(R.enabled
                             ? s
                             : {
@@ -136,7 +136,7 @@ function E(e) {
                                   ...(S && s)
                               })
                     },
-                    children: b[t].children
+                    children: T[t].children
                 },
                 i
             );

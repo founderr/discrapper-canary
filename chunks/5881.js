@@ -30,7 +30,7 @@ function l() {
         n = o(),
         i = null == e ? void 0 : e.config.messages.questName,
         s = 'QuestLogger'.concat(null != t ? '-'.concat(t) : '').concat(null != i ? '-'.concat(i, ')') : ''),
-        l = new r.Y(s);
+        l = new r.Yd(s);
     return {
         log: n ? l.log : a.dG,
         warn: n ? l.warn : a.dG,

@@ -39,7 +39,7 @@ function E(e) {
             },
             [E, e]
         ),
-        T = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(e));
+        b = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(e));
     (0, r.useEffect)(() => {
         if (v && null != S) {
             var t;
@@ -47,12 +47,12 @@ function E(e) {
                 activity_user_id: e,
                 discoverable: null === (t = null == S ? void 0 : S.discoverable) || void 0 === t || t,
                 surface: 'user-profile-activity',
-                relationship_type: T,
+                relationship_type: b,
                 treatment: E && (null == S ? void 0 : S.discoverable) === !1 ? s.h9.HIDE : s.h9.SHOW
             });
         }
-    }, [S, E, v, e, T]);
-    let { live: b, recent: y } = (0, r.useMemo)(() => {
+    }, [S, E, v, e, b]);
+    let { live: T, recent: y } = (0, r.useMemo)(() => {
         let e = (0, i.uniqWith)(
                 t.filter((e) => {
                     let { type: t } = e;
@@ -67,7 +67,7 @@ function E(e) {
         };
     }, [t, null == n ? void 0 : n.entries]);
     return {
-        live: b,
+        live: T,
         recent: y,
         stream: I,
         outbox: n

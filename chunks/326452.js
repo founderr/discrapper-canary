@@ -82,7 +82,7 @@ class g extends (r = a.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = f.intl.string(f.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: h, size: p, disabled: g, onChange: E, onBlur: v, onFocus: I, autoComplete: S, inputProps: T, hideSearchIcon: b, 'aria-label': y = f.intl.string(f.t['5h0QOD']), ...A } = this.props;
+        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = f.intl.string(f.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: h, size: p, disabled: g, onChange: E, onBlur: v, onFocus: I, autoComplete: S, inputProps: b, hideSearchIcon: T, 'aria-label': y = f.intl.string(f.t['5h0QOD']), ...A } = this.props;
         return (0, i.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
@@ -94,7 +94,7 @@ class g extends (r = a.PureComponent) {
                     className: _.inner,
                     children: [
                         (0, i.jsx)('input', {
-                            ...T,
+                            ...b,
                             onFocus: I,
                             onBlur: v,
                             className: _.input,
@@ -110,7 +110,7 @@ class g extends (r = a.PureComponent) {
                             'aria-label': y,
                             ref: this.inputRef
                         }),
-                        !b &&
+                        !T &&
                             (0, i.jsx)(m, {
                                 size: p,
                                 hasContent: e.length > 0,

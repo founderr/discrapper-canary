@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     Ux: function () {
-        return b;
+        return T;
     },
     Xe: function () {
         return A;
@@ -94,11 +94,11 @@ function I(e, t) {
     return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
 function S(e) {
-    e = (0, o.vE)(null != e ? e : {}, T);
+    e = (0, o.vE)(null != e ? e : {}, b);
     let { locale: t } = g();
     return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
 }
-function T(e, t) {
+function b(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
         r = Object.keys(t);
@@ -106,7 +106,7 @@ function T(e, t) {
     for (let r of n) if (t[r] !== e[r]) return !1;
     return !0;
 }
-function b(e = {}) {
+function T(e = {}) {
     let { locale: t } = g();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }

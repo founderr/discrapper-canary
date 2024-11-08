@@ -18,14 +18,14 @@ var i = n(481060),
     E = n(110223);
 t.Z = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: v, needSubscriptionToAccess: I, locked: S = !1, routeDirectlyToChannel: T = !1, bypassChangeModal: b, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
+        let { channel: t, connected: v, needSubscriptionToAccess: I, locked: S = !1, routeDirectlyToChannel: b = !1, bypassChangeModal: T, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), !c.Z.hasJoined(t.id) && (await d.Z.joinThread(t, 'Join Voice')));
         let N = s.Z.getRemoteSessionId(),
             C = h.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === h.Z.getCurrentClientVoiceChannelId(t.guild_id),
             O = u.Z.getBlockedUsersForVoiceChannel(t.id);
         return ((0, l.B)(t.id) && (y = !0), y || S || v || !(O.size > 0))
-            ? !b && !S && (0, m._)(t)
+            ? !T && !S && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.openModalLazy)(async () => {
                           let { default: i } = await n.e('65045').then(n.bind(n, 143782));
@@ -38,7 +38,7 @@ t.Z = {
                                               channel: t,
                                               connected: v,
                                               needSubscriptionToAccess: I,
-                                              routeDirectlyToChannel: T,
+                                              routeDirectlyToChannel: b,
                                               locked: S,
                                               bypassChangeModal: !0
                                           })
@@ -49,7 +49,7 @@ t.Z = {
                   })
                 : (!S && !v && a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (v || R || I || T) &&
+                      (v || R || I || b) &&
                       !(function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = e.getGuildId();
@@ -74,7 +74,7 @@ t.Z = {
                                               channel: t,
                                               connected: v,
                                               needSubscriptionToAccess: I,
-                                              routeDirectlyToChannel: T,
+                                              routeDirectlyToChannel: b,
                                               locked: S,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0

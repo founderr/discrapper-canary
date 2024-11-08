@@ -83,20 +83,20 @@ n.d(t, {
                         );
                 }
                 if ((0, a.Wi)(h)) {
-                    var T = h.options[m] || h.options.other;
-                    if (!T) throw new s.C8(h.value, m, Object.keys(h.options), c);
-                    f.push.apply(f, e(T.value, n, r, o, l));
+                    var b = h.options[m] || h.options.other;
+                    if (!b) throw new s.C8(h.value, m, Object.keys(h.options), c);
+                    f.push.apply(f, e(b.value, n, r, o, l));
                     continue;
                 }
                 if ((0, a.Jo)(h)) {
-                    var T = h.options['='.concat(m)];
-                    if (!T) {
+                    var b = h.options['='.concat(m)];
+                    if (!b) {
                         if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, c);
-                        var b = r.getPluralRules(n, { type: h.pluralType }).select(m - (h.offset || 0));
-                        T = h.options[b] || h.options.other;
+                        var T = r.getPluralRules(n, { type: h.pluralType }).select(m - (h.offset || 0));
+                        b = h.options[T] || h.options.other;
                     }
-                    if (!T) throw new s.C8(h.value, m, Object.keys(h.options), c);
-                    f.push.apply(f, e(T.value, n, r, o, l, m - (h.offset || 0)));
+                    if (!b) throw new s.C8(h.value, m, Object.keys(h.options), c);
+                    f.push.apply(f, e(b.value, n, r, o, l, m - (h.offset || 0)));
                     continue;
                 }
             }

@@ -15,7 +15,7 @@ n.d(t, {
         return B;
     },
     OP: function () {
-        return j;
+        return H;
     },
     Pq: function () {
         return s;
@@ -33,7 +33,7 @@ n.d(t, {
         return i;
     },
     aP: function () {
-        return H;
+        return j;
     },
     bR: function () {
         return Q;
@@ -80,8 +80,8 @@ var r,
     v = n(699516),
     I = n(594174),
     S = n(626135),
-    T = n(630388),
-    b = n(948561),
+    b = n(630388),
+    T = n(948561),
     y = n(651530),
     A = n(719548),
     N = n(981631),
@@ -175,11 +175,11 @@ function B(e, t) {
     if (_.ZP.get('obscure_blur_effect_enabled')) return !0;
     switch (e.type) {
         case 1:
-            return (0, T.yE)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, N.xPJ.CONTAINS_EXPLICIT_MEDIA);
+            return (0, b.yE)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, N.xPJ.CONTAINS_EXPLICIT_MEDIA);
         case 0:
-            return (0, T.yE)(null !== (r = e.media.flags) && void 0 !== r ? r : 0, N.J0y.CONTAINS_EXPLICIT_MEDIA);
+            return (0, b.yE)(null !== (r = e.media.flags) && void 0 !== r ? r : 0, N.J0y.CONTAINS_EXPLICIT_MEDIA);
         case 2:
-            return (0, T.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : 0, h.Cb.EXPLICIT);
+            return (0, b.yE)(null !== (a = null === (i = e.media.contentScanMetadata) || void 0 === i ? void 0 : i.flags) && void 0 !== a ? a : 0, h.Cb.EXPLICIT);
         default:
             return !1;
     }
@@ -217,7 +217,7 @@ function F(e) {
 function V(e) {
     return !_.ZP.get('explicit_media_redaction_ignore_pending_scan') && null == e;
 }
-function H(e) {
+function j(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
     let a = E.Z.getChannel(n);
@@ -230,7 +230,7 @@ function H(e) {
         context: i
     });
 }
-function j(e, t) {
+function H(e, t) {
     let n = Math.min(Math.floor((Date.now() - e) / 1000), 3);
     p.Z.increment({
         name: d.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,
@@ -248,7 +248,7 @@ function Y(e) {
         message_id: s,
         embed_ids: l,
         user_is_underage: (0, m.U)(),
-        scan_timeout_duration: b.b2,
+        scan_timeout_duration: T.b2,
         attachment_ids_v2: o
     }),
         p.Z.increment({

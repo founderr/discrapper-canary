@@ -66,8 +66,8 @@ var r,
     v = n(15274),
     I = n(924301),
     S = n(230900),
-    T = n(703656),
-    b = n(881824),
+    b = n(703656),
+    T = n(881824),
     y = n(922482),
     A = n(565799),
     N = n(501655),
@@ -87,8 +87,8 @@ var r,
     Z = n(626135),
     F = n(823379),
     V = n(5192),
-    H = n(51144),
-    j = n(912787),
+    j = n(51144),
+    H = n(912787),
     Y = n(126134),
     W = n(981631),
     K = n(765305),
@@ -273,11 +273,11 @@ function ei(e) {
         ),
         v = (0, l.e7)([L.Z], () => L.Z.hasConsented(W.pjP.PERSONALIZATION)),
         S = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
-        T = v && S.length > 0,
-        b = [...E, ..._];
+        b = v && S.length > 0,
+        T = [...E, ..._];
     return (
-        i !== b.length &&
-            b.length > 0 &&
+        i !== T.length &&
+            T.length > 0 &&
             (r(
                 (function (e) {
                     let t = [...e],
@@ -374,10 +374,10 @@ function ei(e) {
                             ],
                             ['desc']
                         );
-                    })(b, T)
+                    })(T, b)
                 ).slice(0, 3)
             ),
-            u(b.length)),
+            u(T.length)),
         n
     );
 }
@@ -484,7 +484,7 @@ function eu(e, t) {
                     let n = U.default.getUser(e);
                     if (null == n) return null;
                     let i = w.ZP.getNick(r, n.id);
-                    return null !== (t = null != i ? i : H.ZP.getGlobalName(n)) && void 0 !== t ? t : H.ZP.getUserTag(n);
+                    return null !== (t = null != i ? i : j.ZP.getGlobalName(n)) && void 0 !== t ? t : j.ZP.getUserTag(n);
                 })
                 .filter((e) => null != e)),
         s = a.length;
@@ -504,7 +504,7 @@ function eu(e, t) {
 function ec(e, t, n, r) {
     var i, a;
     let s = {},
-        o = null !== (a = (0, j.i)(e)) && void 0 !== a ? a : '';
+        o = null !== (a = (0, H.i)(e)) && void 0 !== a ? a : '';
     (s.source = r), (s.card_type = e.category), (s.card_position = n), (s.channel_id = o), (s.channel_type = null === (i = D.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
     let l = en(o, t);
     (s.card_affinity_users_count = Math.min(l.length, 6)),
@@ -529,14 +529,14 @@ function ed(e, t, n) {
                 let { channelId: r } = e,
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, b.XU)(t, r) : ((0, b.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EMBEDDED_ACTIVITY:
             return () => {
                 let { channelId: r } = e.embeddedActivities[0],
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, b.XU)(t, r) : ((0, b.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EVENT:
             return () => {
@@ -548,7 +548,7 @@ function ed(e, t, n) {
 }
 let ef = async (e, t) => {
         let n = await (0, y.AC)(e, t);
-        (0, b.R5)(n, null, !1);
+        (0, T.R5)(n, null, !1);
     },
     e_ = (e, t) => {
         m.Z.handleVoiceConnect({
@@ -557,7 +557,7 @@ let ef = async (e, t) => {
             needSubscriptionToAccess: (0, E.$)(t.id).needSubscriptionToAccess,
             locked: !1
         }),
-            (0, T.XU)(e, t.id);
+            (0, b.XU)(e, t.id);
     };
 function eh(e, t) {
     let { category: n } = e;

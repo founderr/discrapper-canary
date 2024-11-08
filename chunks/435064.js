@@ -30,8 +30,8 @@ let E = 'default',
     v = [],
     I = [],
     S = [],
-    T = 0,
-    b = null,
+    b = 0,
+    T = null,
     y = null,
     A = {},
     N = null,
@@ -89,7 +89,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return y;
     }
     getClipsWarningShown(e) {
-        return b === e;
+        return T === e;
     }
     getActiveAnimation() {
         return C;
@@ -111,7 +111,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return D.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return T >= h.Kw;
+        return b >= h.Kw;
     }
     getLastClipsError() {
         return N;
@@ -256,7 +256,7 @@ let w = new x(a.Z, {
     CLIPS_SAVE_CLIP: function (e) {
         var t, n;
         let { clip: r } = e;
-        (T = Math.max(T - 1, 0)),
+        (b = Math.max(b - 1, 0)),
             (y = {
                 applicationName: r.applicationName,
                 ended: !1,
@@ -287,7 +287,7 @@ let w = new x(a.Z, {
     },
     CLIPS_SAVE_CLIP_START: function (e) {
         let { clipType: t, streamKey: n, thumbnail: r } = e;
-        if (((T += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === h.X9.DECOUPLED), null != n && null != r)) {
+        if (((b += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === h.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
             (C = null != C ? C : e),
@@ -301,7 +301,7 @@ let w = new x(a.Z, {
         }
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        T = Math.max(T - 1, 0);
+        b = Math.max(b - 1, 0);
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;
@@ -368,11 +368,11 @@ let w = new x(a.Z, {
     },
     CLIPS_SHOW_CALL_WARNING: function (e) {
         let { channelId: t } = e;
-        b = t;
+        T = t;
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        t !== b && (b = null);
+        t !== T && (T = null);
     },
     CLIPS_CLASSIFY_HARDWARE: function (e) {
         let { classification: t } = e,

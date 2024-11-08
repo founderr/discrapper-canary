@@ -40,8 +40,8 @@ var r = n(728804),
         strictNullHandling: !1
     },
     h = {},
-    p = function e(t, n, a, s, o, u, d, f, p, m, g, E, v, I, S, T) {
-        for (var b, y, A = t, N = T, C = 0, R = !1; void 0 !== (N = N.get(h)) && !R; ) {
+    p = function e(t, n, a, s, o, u, d, f, p, m, g, E, v, I, S, b) {
+        for (var T, y, A = t, N = b, C = 0, R = !1; void 0 !== (N = N.get(h)) && !R; ) {
             var O = N.get(t);
             if (((C += 1), void 0 !== O)) {
                 if (O === C) throw RangeError('Cyclic object value');
@@ -64,7 +64,7 @@ var r = n(728804),
             if (o) return d && !I ? d(n, _.encoder, S, 'key', E) : n;
             A = '';
         }
-        if ('string' == typeof (b = A) || 'number' == typeof b || 'boolean' == typeof b || 'symbol' == typeof b || 'bigint' == typeof b || i.isBuffer(A)) return d ? [v(I ? n : d(n, _.encoder, S, 'key', E)) + '=' + v(d(A, _.encoder, S, 'value', E))] : [v(n) + '=' + v(String(A))];
+        if ('string' == typeof (T = A) || 'number' == typeof T || 'boolean' == typeof T || 'symbol' == typeof T || 'bigint' == typeof T || i.isBuffer(A)) return d ? [v(I ? n : d(n, _.encoder, S, 'key', E)) + '=' + v(d(A, _.encoder, S, 'value', E))] : [v(n) + '=' + v(String(A))];
         var D = [];
         if (void 0 === A) return D;
         if ('comma' === a && l(A)) I && d && (A = i.maybeMap(A, d)), (y = [{ value: A.length > 0 ? A.join(',') || null : void 0 }]);
@@ -78,9 +78,9 @@ var r = n(728804),
                 P = 'object' == typeof M && void 0 !== M.value ? M.value : A[M];
             if (!u || null !== P) {
                 var k = l(A) ? ('function' == typeof a ? a(x, M) : x) : x + (m ? '.' + M : '[' + M + ']');
-                T.set(t, C);
+                b.set(t, C);
                 var U = r();
-                U.set(h, T), c(D, e(P, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, p, m, g, E, v, I, S, U));
+                U.set(h, b), c(D, e(P, k, a, s, o, u, 'comma' === a && I && l(A) ? null : d, f, p, m, g, E, v, I, S, U));
             }
         }
         return D;

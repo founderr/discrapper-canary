@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(907040),
     I = n(455708),
     S = n(314910),
-    T = n(315744),
-    b = n(603074),
+    b = n(315744),
+    T = n(603074),
     y = n(453070),
     A = n(926491),
     N = n(457040),
@@ -113,7 +113,7 @@ let G = L.Om + w.Su.MEDIUM,
     };
 t.Z = i.memo(function (e) {
     var t, n, a;
-    let { positionTargetRef: o, hideGifFavorites: l, includeCreateEmojiButton: h, onSelectGIF: C, onSelectEmoji: F, onSelectSticker: V, onSelectSound: H, channel: j, type: Y, position: W, align: K, positionLayerClassName: z, closeOnModalOuterClick: q = !1, parentModalKey: Q } = e,
+    let { positionTargetRef: o, hideGifFavorites: l, includeCreateEmojiButton: h, onSelectGIF: C, onSelectEmoji: F, onSelectSticker: V, onSelectSound: j, channel: H, type: Y, position: W, align: K, positionLayerClassName: z, closeOnModalOuterClick: q = !1, parentModalKey: Q } = e,
         X = i.useRef(null),
         J = i.useRef(!1),
         $ = i.useRef(),
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             orientation: 'left' === K ? m.y.HORIZONTAL_RIGHT : m.y.HORIZONTAL_LEFT
         }),
         er = (0, D.Iu)((e) => e.activeView),
-        ei = (0, y.fQ)(j),
+        ei = (0, y.fQ)(H),
         { renderWindow: ea, windowDispatch: es } = i.useContext(g.ZP),
         eo = (0, d.e7)([A.Z], () => !A.Z.hasLoadedStickerPacks),
-        el = (0, T.P)('expression_picker'),
+        el = (0, b.P)('expression_picker'),
         eu = null != Q,
         ec = (0, f.Jw)(null != Q ? Q : ''),
         ed = i.useCallback(
@@ -264,7 +264,7 @@ t.Z = i.memo(function (e) {
                                                                 children: k.intl.string(k.t.Xu3wEx)
                                                             }),
                                                             el &&
-                                                                null != H &&
+                                                                null != j &&
                                                                 (0, r.jsx)(B, {
                                                                     id: w.Hr,
                                                                     'aria-controls': w.gV,
@@ -280,7 +280,7 @@ t.Z = i.memo(function (e) {
                                           er === L.X1.STICKER && eh
                                               ? (0, r.jsx)(N.Z, {
                                                     isLoading: eo,
-                                                    channel: j,
+                                                    channel: H,
                                                     containerWidth: et,
                                                     onSelectSticker: V,
                                                     closePopout: ef,
@@ -301,7 +301,7 @@ t.Z = i.memo(function (e) {
                                                     hasTabWrapper: !0,
                                                     containerContext: ep ? v.v.TABS_EXPRESSION_PICKER : v.v.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
-                                                    channel: j,
+                                                    channel: H,
                                                     containerWidth: et,
                                                     includeCreateEmojiButton: h,
                                                     emojiSize: null != et && et < G ? w.Su.MEDIUM : w.Su.LARGE,
@@ -316,12 +316,12 @@ t.Z = i.memo(function (e) {
                                           er === L.X1.SOUNDBOARD
                                               ? (0, r.jsx)('div', {
                                                     className: U.soundboardContainer,
-                                                    children: (0, r.jsx)(b.Z, {
-                                                        guildId: j.guild_id,
-                                                        channel: j,
+                                                    children: (0, r.jsx)(T.Z, {
+                                                        guildId: H.guild_id,
+                                                        channel: H,
                                                         containerWidth: et,
                                                         onClose: ef,
-                                                        onSelect: H,
+                                                        onSelect: j,
                                                         analyticsSource: 'expression-picker',
                                                         renderHeader: (e) =>
                                                             (0, r.jsx)('div', {

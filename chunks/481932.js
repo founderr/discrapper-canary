@@ -23,7 +23,7 @@ function m(e) {
         { trackUserProfileAction: v } = (0, d.KZ)(),
         I = (0, i.e7)([u.default], () => u.default.getId() === (null == t ? void 0 : t.id)),
         S = (0, i.e7)([c.Z], () => (null != t ? c.Z.getRelationshipType(t.id) : h.OGo.NONE)),
-        T = (0, l.Z)({
+        b = (0, l.Z)({
             user: t,
             color: 'danger',
             location: E,
@@ -40,7 +40,7 @@ function m(e) {
                         onSelect: void 0,
                         onClose: t,
                         'aria-label': p.intl.string(p.t.Jszi3N),
-                        children: T
+                        children: b
                     });
                 },
                 children: (e) =>

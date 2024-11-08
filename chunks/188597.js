@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     Sg: function () {
-        return b;
+        return T;
     },
     ow: function () {
         return I;
@@ -54,7 +54,7 @@ let S = async (e) => {
                     customId: i,
                     componentId: s
                 },
-                onFailure: (e, t) => T(u, e, t)
+                onFailure: (e, t) => b(u, e, t)
             }),
             null != m && (0, h.B0)(n, g, m, s);
         let v = {
@@ -87,14 +87,14 @@ let S = async (e) => {
                 timeout: 3000
             },
             (e) => {
-                b(g, e, o, u, c);
+                T(g, e, o, u, c);
             }
         );
     },
-    T = (e, t, n) => {
+    b = (e, t, n) => {
         null == n && null != t && o.Z.sendClydeError(e, t);
     },
-    b = (e, t, n, r, i) => {
+    T = (e, t, n, r, i) => {
         if (!t.ok) {
             if (!t.hasErr) {
                 var a;

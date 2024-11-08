@@ -18,8 +18,8 @@ var r = n(512722),
     v = n(565473),
     I = n(444092),
     S = n(927923),
-    T = n(65154),
-    b = n(388032);
+    b = n(65154),
+    T = n(388032);
 function y(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ class C extends l.Z {
             }),
             y(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
-                if (!t || n !== T.Yn.DEFAULT) return;
+                if (!t || n !== b.Yn.DEFAULT) return;
                 let r = d.Z.isSelfDeaf(),
                     i = d.Z.isSelfMute(),
                     a = c.default.getId(),
@@ -114,8 +114,8 @@ class C extends l.Z {
                 this.awaitRemoteTimeout.start(60000, () => {
                     (0, m.s6)(),
                         s.Z.show({
-                            title: b.intl.string(b.t.wGMxr6),
-                            body: b.intl.string(b.t.i5k8b2)
+                            title: T.intl.string(T.t.wGMxr6),
+                            body: T.intl.string(T.t.i5k8b2)
                         });
                 });
             }),
@@ -132,8 +132,8 @@ class C extends l.Z {
                             ? s
                             : {
                                   id: 'id',
-                                  platform: b.intl.string(b.t['UQMV/P']),
-                                  name: b.intl.string(b.t['UQMV/P'])
+                                  platform: T.intl.string(T.t['UQMV/P']),
+                                  name: T.intl.string(T.t['UQMV/P'])
                               },
                         r,
                         i

@@ -20,8 +20,8 @@ let I = 'premiumRetentionEmojiPickerNotice',
     S = l.K.get(I);
 t.Z = (e) => {
     let { closePopout: t, channel: n } = e,
-        [a, T] = i.useState(!1),
-        { subscription: b, hasFetchedSubscriptions: y } = (0, o.cj)([_.ZP], () => ({
+        [a, b] = i.useState(!1),
+        { subscription: T, hasFetchedSubscriptions: y } = (0, o.cj)([_.ZP], () => ({
             subscription: _.ZP.getPremiumSubscription(),
             hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
         }));
@@ -29,13 +29,13 @@ t.Z = (e) => {
         (i.useEffect(() => {
             !y && (0, c.jg)();
         }, [y]),
-        null == b || !(0, h.zV)(b.status) || a)
+        null == T || !(0, h.zV)(T.status) || a)
     )
         return null;
-    let A = b.status === m.O0b.PAST_DUE ? (0, h.lY)(b).expiresDate : s()(b.currentPeriodStart).add(g.gh),
-        N = ''.concat(b.id, ':').concat(A.toISOString());
+    let A = T.status === m.O0b.PAST_DUE ? (0, h.lY)(T).expiresDate : s()(T.currentPeriodStart).add(g.gh),
+        N = ''.concat(T.id, ':').concat(A.toISOString());
     if (S === N) return null;
-    let C = h.ZP.getPremiumType(b.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : h.ZP.getPremiumType(b.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
+    let C = h.ZP.getPremiumType(T.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : h.ZP.getPremiumType(T.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
     return (0, r.jsxs)('div', {
         className: v.premiumRetentionNotice,
         children: [
@@ -50,7 +50,7 @@ t.Z = (e) => {
                     (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: E.intl.format(E.t.bTMjiI, {
-                            planName: h.ZP.getDisplayPremiumType(b.planId),
+                            planName: h.ZP.getDisplayPremiumType(T.planId),
                             endsAt: A.toDate()
                         })
                     }),
@@ -66,7 +66,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(u.Clickable, {
                 onClick: () => {
-                    l.K.set(I, N), (S = N), T(!0);
+                    l.K.set(I, N), (S = N), b(!0);
                 },
                 children: (0, r.jsx)(u.XSmallIcon, {
                     size: 'md',

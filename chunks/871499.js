@@ -19,16 +19,16 @@ var i = n(120356),
     f = n(388032),
     _ = n(109438);
 function h(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: h, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: I = 'top', shouldShowTooltip: S = !0, forceTooltipOpen: T = !1, buttonRef: b, grow: y, 'aria-label': A } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: o, onMouseLeave: l, onContextMenu: u, className: d, wrapperClassName: f, iconClassName: h, iconColor: p = 'currentColor', iconComponent: m, themeable: g = !1, disabled: E = !1, isActive: v = !1, tooltipPosition: I = 'top', shouldShowTooltip: S = !0, forceTooltipOpen: b = !1, buttonRef: T, grow: y, 'aria-label': A } = e;
     return (0, r.jsx)(c.Z, {
         children: (0, r.jsx)(s.Tooltip, {
             position: I,
             text: t,
             'aria-label': A,
             shouldShow: S,
-            forceOpen: T,
+            forceOpen: b,
             children: (e) => {
-                let { onClick: t, onContextMenu: c, onMouseEnter: I, onMouseLeave: S, ...T } = e;
+                let { onClick: t, onContextMenu: c, onMouseEnter: I, onMouseLeave: S, ...b } = e;
                 return (0, r.jsx)(s.Button, {
                     look: s.Button.Looks.BLANK,
                     size: s.Button.Sizes.NONE,
@@ -57,10 +57,10 @@ function h(e) {
                     innerClassName: _.lineHeightReset,
                     className: a()({ [_.active]: v }, d),
                     wrapperClassName: f,
-                    buttonRef: b,
+                    buttonRef: T,
                     grow: y,
                     'aria-label': A,
-                    ...T,
+                    ...b,
                     children: (0, r.jsx)(m, {
                         className: a()(_.controlIcon, h, {
                             [_.themeable]: g,
@@ -85,16 +85,16 @@ let p = {
 function m(e) {
     let { color: t, isActive: n = !1, className: i, iconClassName: m, onPopoutClick: g, popoutOpen: E = !1, premiumGlow: v = !1, ...I } = e,
         S = (0, d.Z)(t, n),
-        T = (0, o.Z)('(max-width: 456px)'),
-        b = (0, r.jsx)(h, {
+        b = (0, o.Z)('(max-width: 456px)'),
+        T = (0, r.jsx)(h, {
             ...I,
             grow: !1,
             onContextMenu: g,
             iconClassName: a()(m, _.centerIcon),
-            className: a()(T ? i : null, _.staticButton, _.centerButton, p[S])
+            className: a()(b ? i : null, _.staticButton, _.centerButton, p[S])
         });
-    return T
-        ? b
+    return b
+        ? T
         : (0, r.jsxs)('div', {
               className: a()(i, _.contextMenuContainer),
               children: [
@@ -103,7 +103,7 @@ function m(e) {
                       mask: null == g ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
                       width: 56,
                       height: 56,
-                      children: b
+                      children: T
                   }),
                   null != g
                       ? (0, r.jsx)(c.Z, {

@@ -50,8 +50,8 @@ e.exports = function (e) {
         I = {};
     (I.callOnAdd = !!g(e, 'callOnAdd', !0)), (I.debug = !!g(e, 'debug', !1));
     var S = a(t),
-        T = i({ stateHandler: d }),
-        b = g(e, 'strategy', 'object'),
+        b = i({ stateHandler: d }),
+        T = g(e, 'strategy', 'object'),
         y = g(e, 'important', !1),
         A = {
             reporter: E,
@@ -60,9 +60,9 @@ e.exports = function (e) {
             idHandler: t,
             important: y
         };
-    if (('scroll' === b && (u.isLegacyOpera() ? (E.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (b = 'object')) : u.isIE(9) && (E.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (b = 'object'))), 'scroll' === b)) n = _(A);
-    else if ('object' === b) n = f(A);
-    else throw Error('Invalid strategy name: ' + b);
+    if (('scroll' === T && (u.isLegacyOpera() ? (E.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (T = 'object')) : u.isIE(9) && (E.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (T = 'object'))), 'scroll' === T)) n = _(A);
+    else if ('object' === T) n = f(A);
+    else throw Error('Invalid strategy name: ' + T);
     var N = {};
     return {
         listenTo: function (e, i, a) {
@@ -88,8 +88,8 @@ e.exports = function (e) {
             r(i, function (e) {
                 !d.getState(e) && (d.initState(e), t.set(e));
                 var _ = t.get(e);
-                if ((f && E.log('Attaching listener to element', _, e), !T.isDetectable(e))) {
-                    if ((f && E.log(_, 'Not detectable.'), T.isBusy(e))) {
+                if ((f && E.log('Attaching listener to element', _, e), !b.isDetectable(e))) {
+                    if ((f && E.log(_, 'Not detectable.'), b.isBusy(e))) {
                         f && E.log(_, 'System busy making it detectable'),
                             o(u, e, a),
                             (N[_] = N[_] || []),
@@ -100,7 +100,7 @@ e.exports = function (e) {
                     }
                     return (
                         f && E.log(_, 'Making detectable...'),
-                        T.markBusy(e, !0),
+                        b.markBusy(e, !0),
                         n.makeDetectable(
                             {
                                 debug: f,
@@ -109,7 +109,7 @@ e.exports = function (e) {
                             e,
                             function (e) {
                                 if ((f && E.log(_, 'onElementDetectable'), d.getState(e))) {
-                                    T.markAsDetectable(e), T.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
+                                    b.markAsDetectable(e), b.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
                                         var h = e.offsetWidth,

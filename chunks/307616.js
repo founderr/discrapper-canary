@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     v: function () {
-        return T;
+        return b;
     }
 }),
     n(47120),
@@ -93,13 +93,13 @@ class S extends i.PureComponent {
             );
     }
 }
-function T() {
+function b() {
     return (0, p.Vn)((0, d.bp)());
 }
-let b = [];
+let T = [];
 function y() {
-    let e = T(),
-        t = (0, p.s9)((t) => (void 0 !== t[e] ? t[e] : b)),
+    let e = b(),
+        t = (0, p.s9)((t) => (void 0 !== t[e] ? t[e] : T)),
         n = i.useRef();
     i.useLayoutEffect(() => {
         n.current = t[t.length - 1];

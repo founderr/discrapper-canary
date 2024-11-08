@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(280885),
     I = n(502762),
     S = n(530),
-    T = n(679332),
-    b = n(544989),
+    b = n(679332),
+    T = n(544989),
     y = n(171368),
     A = n(228168),
     N = n(388032),
@@ -67,9 +67,9 @@ function R(e) {
                         displayProfile: P,
                         profileType: A.y0.BITE_SIZE,
                         children: [
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(T.Z, {
                                 profileType: A.y0.BITE_SIZE,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(b.Z, {
                                     user: t,
                                     viewProfileItem: F
                                         ? (0, r.jsx)(a.MenuItem, {

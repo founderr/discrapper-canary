@@ -25,7 +25,7 @@ function d(e, t, n) {
         e
     );
 }
-let f = new i.Y('Output'),
+let f = new i.Yd('Output'),
     _ = new s.Z();
 class h extends r.EventEmitter {
     destroy() {

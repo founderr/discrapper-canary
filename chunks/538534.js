@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Fj: function () {
-        return T;
+        return b;
     },
     ar: function () {
         return A;
@@ -49,7 +49,7 @@ let S = {
     SMALL: '7px 10px',
     MEDIUM: '10px'
 };
-function T(e) {
+function b(e) {
     let { checked: t, radioItemIconClassName: n, icon: r } = e;
     return (0, p.Q)('RadioGroup')
         ? (0, i.jsxs)('svg', {
@@ -93,12 +93,12 @@ function T(e) {
               ]
           });
 }
-function b(e) {
+function T(e) {
     var t;
     let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: _, radioItemIconClassName: h, radioBarClassName: p, hasSelection: m, radioPosition: g = 'left', icon: E, withTransparentBackground: I } = e,
         S = null !== (t = a.color) && void 0 !== t ? t : '',
-        b = r || !m,
-        y = (0, i.jsx)(T, {
+        T = r || !m,
+        y = (0, i.jsx)(b, {
             checked: r,
             radioItemIconClassName: h,
             icon: E
@@ -107,7 +107,7 @@ function b(e) {
         role: 'radio',
         'aria-checked': r,
         onClick: n ? void 0 : l,
-        tabIndex: !n && b ? 0 : -1,
+        tabIndex: !n && T ? 0 : -1,
         className: o()(
             null != a.collapsibleContent ? v.collapsibleItem : v.item,
             {
@@ -167,7 +167,7 @@ class y extends (r = a.PureComponent) {
                           collapsibleContent: n.collapsibleContent,
                           children: (t) => {
                               let { onClick: c } = t;
-                              return (0, i.jsx)(b, {
+                              return (0, i.jsx)(T, {
                                   disabled: !!m,
                                   checked: e,
                                   hasSelection: s,
@@ -187,7 +187,7 @@ class y extends (r = a.PureComponent) {
                               });
                           }
                       })
-                    : (0, i.jsx)(b, {
+                    : (0, i.jsx)(T, {
                           disabled: !!m,
                           checked: e,
                           hasSelection: s,

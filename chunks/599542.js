@@ -12,7 +12,7 @@ n.d(t, {
         return o;
     },
     gn: function () {
-        return b;
+        return T;
     },
     lq: function () {
         return l;
@@ -164,12 +164,12 @@ function S(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
-function T(e) {
+function b(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
-function b() {
-    return T(/^iPhone/i) || T(/^iPad/i) || (T(/^Mac/i) && navigator.maxTouchPoints > 1);
+function T() {
+    return b(/^iPhone/i) || b(/^iPad/i) || (b(/^Mac/i) && navigator.maxTouchPoints > 1);
 }
 function y() {
     return (

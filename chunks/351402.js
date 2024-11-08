@@ -14,8 +14,8 @@ let p = !1,
     v = !1,
     I = null,
     S = null,
-    T = !1,
-    b = !1;
+    b = !1,
+    T = !1;
 function y() {
     p = !1;
 }
@@ -69,7 +69,7 @@ class O extends (c = d.ZP.Store) {
         return null != i ? i : h.OMz;
     }
     get ipCountryCodeHasError() {
-        return T;
+        return b;
     }
     get paymentSourcesFetchRequest() {
         return r;
@@ -78,7 +78,7 @@ class O extends (c = d.ZP.Store) {
         return s;
     }
     get localizedPricingPromoHasError() {
-        return b;
+        return T;
     }
     get isLocalizedPromoEnabled() {
         return null != s;
@@ -152,17 +152,17 @@ class O extends (c = d.ZP.Store) {
             i = t;
         },
         BILLING_IP_COUNTRY_CODE_FAILURE: function () {
-            (i = null), (T = !0);
+            (i = null), (b = !0);
         },
         BILLING_SET_LOCALIZED_PRICING_PROMO: function (e) {
             let { localizedPricingPromo: t } = e;
             s = _.U.createFromServer(t);
         },
         BILLING_LOCALIZED_PRICING_PROMO_FAILURE: function () {
-            (s = null), (b = !0);
+            (s = null), (T = !0);
         },
         LOGOUT: function () {
-            (r = void 0), (a = void 0), (i = void 0), (T = !1), (s = null), (S = null), (I = null);
+            (r = void 0), (a = void 0), (i = void 0), (b = !1), (s = null), (S = null), (I = null);
         },
         CONNECTION_OPEN: (e) => {
             let { countryCode: t } = e;

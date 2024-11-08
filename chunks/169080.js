@@ -23,8 +23,8 @@ function p(e) {
         I = i.useMemo(() => p.users.findIndex((e) => e.user_id === m) + 1, [p, m]),
         S = i.useMemo(() => p.users.find((e) => e.user_id === m), [p, m]);
     s()(null != S, 'User row should not be null');
-    let T = d.ZP.getName(g, void 0, E),
-        b = null !== (n = null === (t = S.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
+    let b = d.ZP.getName(g, void 0, E),
+        T = null !== (n = null === (t = S.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
     return (0, r.jsxs)('div', {
         ref: a,
         className: h.container,
@@ -53,7 +53,7 @@ function p(e) {
                         className: h.title,
                         variant: 'text-md/semibold',
                         children: _.intl.format(_.t.tluICw, {
-                            username: T,
+                            username: b,
                             rank: I
                         })
                     }),
@@ -62,7 +62,7 @@ function p(e) {
                         location: u.Gt.EMBED,
                         children: [
                             (0, r.jsx)(f.DC, {
-                                value: b,
+                                value: T,
                                 statisticId: v
                             }),
                             (0, r.jsx)(f.Js, {

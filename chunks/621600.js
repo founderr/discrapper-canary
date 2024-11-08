@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     I: function () {
-        return b;
+        return T;
     },
     UE: function () {
         return p;
@@ -21,7 +21,7 @@ n.d(t, {
         return I;
     },
     rU: function () {
-        return T;
+        return b;
     },
     sK: function () {
         return v;
@@ -89,7 +89,7 @@ function g(e, t, n, r, i) {
         g = E(_, p, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = null !== (o = g('guild_flags')) && void 0 !== o ? o : 0,
         I = (null !== (l = p.guild_flags) && void 0 !== l ? l : 0) ^ v,
-        T = 0 === (0, c.M1)(I, h.vc.OPT_IN_CHANNELS_OFF, h.vc.OPT_IN_CHANNELS_ON);
+        b = 0 === (0, c.M1)(I, h.vc.OPT_IN_CHANNELS_OFF, h.vc.OPT_IN_CHANNELS_ON);
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...p,
         ...s.Z.getStats(e),
@@ -105,7 +105,7 @@ function g(e, t, n, r, i) {
         guild_receive_mobile_push_old: g('guild_receive_mobile_push'),
         guild_scheduled_events_muted_old: g('guild_scheduled_events_muted'),
         guild_message_notification_settings_old: g('guild_message_notification_settings'),
-        is_opt_in_only_change: T
+        is_opt_in_only_change: b
     });
 }
 function E(e, t, n) {
@@ -132,9 +132,9 @@ function I(e, t, n, r, i, u) {
                 channel_muted_until: v(i.mute_config)
             };
         },
-        T = S(r),
-        y = S(b(e, t), n),
-        A = E(T, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        b = S(r),
+        y = S(T(e, t), n),
+        A = E(b, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         N = o.Z.getChannel(t),
         C = null !== (p = A('channel_flags')) && void 0 !== p ? p : 0,
         R = (null !== (g = y.channel_flags) && void 0 !== g ? g : 0) ^ C,
@@ -173,11 +173,11 @@ function S(e) {
         guild_flags: u.ZP.getGuildFlags(e)
     };
 }
-function T(e) {
+function b(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e, S(e))), t;
 }
-function b(e, t) {
+function T(e, t) {
     let n = u.ZP.isChannelMuted(e, t),
         r = u.ZP.getChannelMuteConfig(e, t);
     return {
@@ -189,5 +189,5 @@ function b(e, t) {
 }
 function y(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, b(e, t))), n;
+    return t.forEach((t) => n.set(t, T(e, t))), n;
 }

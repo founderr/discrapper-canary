@@ -27,8 +27,8 @@ var r,
     v = n(926491),
     I = n(378233),
     S = n(695346),
-    T = n(430824),
-    b = n(699516),
+    b = n(430824),
+    T = n(699516),
     y = n(594174),
     A = n(768581),
     N = n(51144),
@@ -195,7 +195,7 @@ x(
             renderContent() {
                 var e;
                 let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: s } = this.props,
-                    o = null == s ? b.Z.getNickname(t.id) : null;
+                    o = null == s ? T.Z.getNickname(t.id) : null;
                 return (0, i.jsxs)(C.RX, {
                     children: [
                         (0, i.jsx)(C.Tw, {
@@ -267,7 +267,7 @@ x(
                 let { channel: e, category: t } = this.props,
                     n = e.type === R.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, g.KS)(e);
                 return (0, i.jsxs)(C.RX, {
-                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, m.F6)(e, y.default, b.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
+                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, m.F6)(e, y.default, T.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
                 });
             }
         }
@@ -390,7 +390,7 @@ x(
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = T.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = b.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),

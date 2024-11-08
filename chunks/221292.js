@@ -12,10 +12,10 @@ n.d(t, {
         return N;
     },
     pQ: function () {
-        return T;
+        return b;
     },
     z7: function () {
-        return b;
+        return T;
     }
 }),
     n(653041),
@@ -109,7 +109,7 @@ let g = (e) => {
                   affinity: null === (n = i.Z.getUserAffinity(r)) || void 0 === n ? void 0 : n.affinity
               };
     },
-    T = (e) => {
+    b = (e) => {
         let { guildId: t, channelId: n, messageId: i, roleId: a, analyticsLocations: s, action: o, section: l } = e;
         c.default.track(p.rMx.USER_PROFILE_ACTION, {
             ...(0, r.hH)(t),
@@ -123,7 +123,7 @@ let g = (e) => {
             source_role_id: a
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: s, activity: o, stream: l, entry: u, outbox: d } = e;
         c.default.track(p.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, r.hH)(t),

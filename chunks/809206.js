@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     I5: function () {
-        return T;
+        return b;
     },
     Mn: function () {
         return v;
@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     UZ: function () {
-        return b;
+        return T;
     },
     V3: function () {
         return S;
@@ -177,14 +177,14 @@ function S(e) {
         oldFormErrors: !0
     });
 }
-function T(e) {
+function b(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
         null == e ? a.uv.announce(h.intl.string(h.t['f1+oNj'])) : a.uv.announce(h.intl.string(h.t.NstziY));
 }
-function b(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e

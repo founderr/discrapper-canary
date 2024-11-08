@@ -38,7 +38,7 @@ e.exports = function (e, t, n) {
     function S(e) {
         return ((f = void 0), g && l) ? E(e) : ((l = u = void 0), d);
     }
-    function T() {
+    function b() {
         var e,
             n = i(),
             r = v(n);
@@ -51,12 +51,12 @@ e.exports = function (e, t, n) {
         return void 0 === f && (f = setTimeout(I, t)), d;
     }
     return (
-        (T.cancel = function () {
+        (b.cancel = function () {
             void 0 !== f && clearTimeout(f), (h = 0), (l = _ = u = f = void 0);
         }),
-        (T.flush = function () {
+        (b.flush = function () {
             return void 0 === f ? d : S(i());
         }),
-        T
+        b
     );
 };

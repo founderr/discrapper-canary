@@ -25,8 +25,8 @@ var r,
     v = n(626135),
     I = n(70956),
     S = n(36703),
-    T = n(228488),
-    b = n(540026),
+    b = n(228488),
+    T = n(540026),
     y = n(455813),
     A = n(283756),
     N = n(793148),
@@ -185,13 +185,13 @@ class B extends (r = s.Component) {
                           duration: r
                       })
                     : null,
-                (0, a.jsx)(b.Z, {
+                (0, a.jsx)(T.Z, {
                     buffers: e,
                     value: null != r ? r : 0,
                     onDrag: s,
                     onDragEnd: o,
                     onDragStart: l,
-                    type: b.Z.Types.DURATION,
+                    type: T.Z.Types.DURATION,
                     ref: this.setDurationRef
                 }),
                 (0, a.jsx)('div', {
@@ -203,7 +203,7 @@ class B extends (r = s.Component) {
                         minValue: 0,
                         maxValue: 1,
                         currentWindow: window,
-                        onValueChange: (e) => s(e, b.Z.Types.VOLUME),
+                        onValueChange: (e) => s(e, T.Z.Types.VOLUME),
                         onToggleMute: u,
                         onVolumeShow: c,
                         onVolumeHide: f,
@@ -338,7 +338,7 @@ let V = (0, p.B)({
         }
     ]
 });
-class H {
+class j {
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
     }
@@ -523,7 +523,7 @@ class H {
             (this.analyticsEnabled = V.getCurrentConfig({ location: 'media_player' }).enabled);
     }
 }
-class j extends (i = s.PureComponent) {
+class H extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return !e.playable && t.playing
             ? {
@@ -546,15 +546,15 @@ class j extends (i = s.PureComponent) {
             { current: d } = this.playPausePopRef;
         if (null == c) return;
         a && !t.playing ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && (null == d || d.pop(a))) : !a && t.playing && (c.pause(), null == d || d.pop(a), null == n || n());
-        let f = (0, T.fn)(c.parentNode, c);
-        s && !t.fullscreen && null != f ? ((0, T.Dj)(f), f.addEventListener(T.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(f)), l === b.Z.Types.DURATION && t.dragging !== b.Z.Types.DURATION && a ? c.pause() : l !== b.Z.Types.DURATION && t.dragging === b.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == i || i(o)), u !== t.volume && ((c.volume = u), null == r || r(u));
+        let f = (0, b.fn)(c.parentNode, c);
+        s && !t.fullscreen && null != f ? ((0, b.Dj)(f), f.addEventListener(b.NO, this.handleFullScreenExit)) : !s && t.fullscreen && null != f && (f.removeEventListener(b.NO, this.handleFullScreenExit), (0, b.Pr)(f)), l === T.Z.Types.DURATION && t.dragging !== T.Z.Types.DURATION && a ? c.pause() : l !== T.Z.Types.DURATION && t.dragging === T.Z.Types.DURATION && a && c.play(), o !== t.muted && ((c.muted = o), null == i || i(o)), u !== t.volume && ((c.volume = u), null == r || r(u));
     }
     componentWillUnmount() {
         this._unmounted = !0;
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, T.fn)(e.parentNode, e);
-        null != t && (t.removeEventListener(T.NO, this.handleFullScreenExit), (0, T.Pr)(t));
+        let t = (0, b.fn)(e.parentNode, e);
+        null != t && (t.removeEventListener(b.NO, this.handleFullScreenExit), (0, b.Pr)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -575,11 +575,11 @@ class j extends (i = s.PureComponent) {
     }
     getWidth() {
         let { width: e } = this.props;
-        return '100%' === e ? e : Math.max(e, j.minWidth);
+        return '100%' === e ? e : Math.max(e, H.minWidth);
     }
     getHeight() {
         let { height: e } = this.props;
-        return '100%' === e ? e : Math.max(e, j.minHeight);
+        return '100%' === e ? e : Math.max(e, H.minHeight);
     }
     updateValue(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -696,7 +696,7 @@ class j extends (i = s.PureComponent) {
                                 iconClassName: D.controlIcon,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, T.fn)(null == e ? void 0 : e.parentNode, e)
+                                node: (0, b.fn)(null == e ? void 0 : e.parentNode, e)
                             })
                           : null
               })
@@ -804,8 +804,8 @@ class j extends (i = s.PureComponent) {
             x(this, 'handleFullScreenExit', () => {
                 let { current: e } = this.mediaRef;
                 if (null == e) return;
-                let t = (0, T.fn)(e.parentNode, e);
-                (null == t || !(0, T.rB)(t)) && this.setState({ fullscreen: !1 });
+                let t = (0, b.fn)(e.parentNode, e);
+                (null == t || !(0, b.rB)(t)) && this.setState({ fullscreen: !1 });
             }),
             x(this, 'toggleFullscreen', () => {
                 let e = !this.state.fullscreen;
@@ -829,8 +829,8 @@ class j extends (i = s.PureComponent) {
             }),
             x(this, 'handleDrag', (e, t) => {
                 let { current: n } = this.mediaRef;
-                if (t === b.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
-                else if (t === b.Z.Types.VOLUME) {
+                if (t === T.Z.Types.DURATION) null != n && isFinite(n.duration) && this.setTime(n.duration * e, !1);
+                else if (t === T.Z.Types.VOLUME) {
                     let t = (0, S.A)(e, 1);
                     0 === t
                         ? this.setState({
@@ -953,7 +953,7 @@ class j extends (i = s.PureComponent) {
                     (t.currentTime = t.duration * n), this.setPlay(!0);
                 }
             }),
-            (this._analytics = new H({
+            (this._analytics = new j({
                 src: e.src,
                 mimeType: null === (n = e.mimeType) || void 0 === n ? void 0 : n.join('/'),
                 fileSize: e.fileSizeBytes
@@ -974,14 +974,14 @@ class j extends (i = s.PureComponent) {
             volume: l,
             playing: r,
             preload: 'none',
-            width: j.minWidth,
-            height: j.minHeight,
+            width: H.minWidth,
+            height: H.minHeight,
             hovering: !1
         };
     }
 }
-x(j, 'Types', P),
-    x(j, 'defaultProps', {
+x(H, 'Types', P),
+    x(H, 'defaultProps', {
         width: 400,
         height: 300,
         forceExternal: !1,
@@ -991,6 +991,6 @@ x(j, 'Types', P),
         autoMute: !1,
         volume: 1
     }),
-    x(j, 'minWidth', 150),
-    x(j, 'minHeight', 110),
-    (t.ZP = j);
+    x(H, 'minWidth', 150),
+    x(H, 'minHeight', 110),
+    (t.ZP = H);

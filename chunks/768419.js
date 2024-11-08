@@ -16,8 +16,8 @@ var s,
     v = n(710845),
     I = n(594190),
     S = n(314897),
-    T = n(553795),
-    b = n(517100),
+    b = n(553795),
+    T = n(517100),
     y = n(158776),
     A = n(606304),
     N = n(979651),
@@ -49,9 +49,9 @@ let P = g.Z.get(w.ABu.SPOTIFY),
     Z = 5 * O.Z.Millis.SECOND,
     F = 1.5 * O.Z.Millis.SECOND,
     V = 1 * O.Z.Millis.MINUTE,
-    H = 3 * O.Z.Millis.SECOND;
+    j = 3 * O.Z.Millis.SECOND;
 ((l = s || (s = {})).PLAYER_STATE_CHANGED = 'PLAYER_STATE_CHANGED'), (l.DEVICE_STATE_CHANGED = 'DEVICE_STATE_CHANGED');
-let j = {
+let H = {
         MESSAGE: 'message',
         PING: 'ping',
         PONG: 'pong'
@@ -123,7 +123,7 @@ class eo {
     }
     ping() {
         var e;
-        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: j.PING })));
+        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: H.PING })));
     }
     handleOpen() {
         W.info('WS Connected'), this.backoff.succeed(), this.pingInterval.start(U, () => this.ping()), (0, L.Ai)(this.accountId, this.accessToken), (0, L.PW)(this.accountId, this.accessToken);
@@ -133,12 +133,12 @@ class eo {
         if ('string' != typeof t) return;
         let { type: n, uri: r, payloads: i } = JSON.parse(t);
         switch (n) {
-            case j.MESSAGE:
+            case H.MESSAGE:
                 if ('string' == typeof r && r.startsWith(k)) (this.connectionId = decodeURIComponent(r.split(k)[1])), (0, L.am)(this.accountId, this.accessToken, this.connectionId);
                 else if (Array.isArray(i)) {
                     for (let { events: e } of i) if (null != e) for (let t of e) this.handleEvent(t);
                 }
-            case j.PONG:
+            case H.PONG:
         }
     }
     handleClose() {
@@ -175,7 +175,7 @@ class eo {
                 'handleDeviceStateChange',
                 c().throttle(() => {
                     (0, L.PW)(this.accountId, this.accessToken), eg(this.accountId, this.accessToken);
-                }, H)
+                }, j)
             ),
             (this.accountId = e),
             (this.accessToken = t),
@@ -245,7 +245,7 @@ function ef() {
 }
 function e_() {
     let e = Object.keys(J),
-        t = T.Z.getAccounts().filter((e) => {
+        t = b.Z.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === w.ABu.SPOTIFY;
         });
@@ -292,7 +292,7 @@ function em(e, t, n) {
     var r, i, a, s, o, l, u, c, d, f, _, h, m, g;
     let E,
         v,
-        { device: I, progress_ms: S, is_playing: T, repeat_state: b, item: y, context: A } = n;
+        { device: I, progress_ms: S, is_playing: b, repeat_state: T, item: y, context: A } = n;
     if (null != y && y.type === x.Hw.TRACK) {
         let e = y.id;
         null != y.linked_from && null != y.linked_from.id && (e = y.linked_from.id),
@@ -360,8 +360,8 @@ function em(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != I ? I.volume_percent : 0,
-                isPlaying: T,
-                repeat: 'off' !== b,
+                isPlaying: b,
+                repeat: 'off' !== T,
                 position: S,
                 context: t,
                 device: I
@@ -383,7 +383,7 @@ function eg(e, t) {
 }
 class eE extends (o = f.ZP.Store) {
     initialize() {
-        this.waitFor(T.Z, A.Z),
+        this.waitFor(b.Z, A.Z),
             this.syncWith([y.Z], () =>
                 (function () {
                     if (null == i || null == er()) return !1;
@@ -445,7 +445,7 @@ class eE extends (o = f.ZP.Store) {
         return ee[e];
     }
     shouldShowActivity() {
-        return null != r && r.account.showActivity && !b.Z.isIdle();
+        return null != r && r.account.showActivity && !T.Z.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -522,7 +522,7 @@ let ev = new eE(p.Z, {
             } else ($[t] = [l]), (d = !0);
         }
         n ? null == en || en.start(G, eh) : ((s = null), null == en || en.stop());
-        let f = T.Z.getAccount(t, w.ABu.SPOTIFY);
+        let f = b.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let h = ee[t],
             m =

@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         maybeShowSurveyForQuest: function () {
-            return b;
+            return T;
         },
         navigateToQuestHome: function () {
-            return T;
+            return b;
         },
         openDisclosureModal: function () {
             return S;
@@ -91,7 +91,7 @@ function S(e, t) {
                 });
         });
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = h.Z.getState().setUtmCurrentContext;
     r({
         utmSourceCurrent: 'Discord Widget',
@@ -102,7 +102,7 @@ function T(e, t, n) {
     let i = null != n ? '#'.concat(n) : '';
     a.Z.setState({ selectedTab: g.F$.QUESTS }), (0, s.uL)(m.Z5c.QUEST_HOME + i);
 }
-function b(e) {
+function T(e) {
     let t = (0, d.T)({ quest: e }),
         n = { location: p.dr.QUESTS_BAR };
     if (!(0, c.j)(n)) return;

@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     BM: function () {
-        return T;
+        return b;
     },
     Cj: function () {
         return l;
@@ -265,7 +265,7 @@ function S(e) {
     if (null == i) return null == n ? void 0 : n.toHexString();
     return null === (t = m(i.hue, i.saturation * r, i.lightness)) || void 0 === t ? void 0 : t.toHexString();
 }
-function T(e, t, n) {
+function b(e, t, n) {
     let r = parseInt(e.substring(1, 3), 16),
         i = parseInt(e.substring(3, 5), 16),
         a = parseInt(e.substring(5, 7), 16),

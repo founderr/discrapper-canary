@@ -1,6 +1,6 @@
 n.d(t, {
     RR: function () {
-        return T;
+        return b;
     },
     WW: function () {
         return I;
@@ -12,7 +12,7 @@ n.d(t, {
         return C;
     },
     q8: function () {
-        return b;
+        return T;
     },
     t$: function () {
         return S;
@@ -54,10 +54,10 @@ function S(e) {
             throw Error('Unexpected sort order '.concat(e));
     }
 }
-function T(e) {
+function b(e) {
     return d.Z.getUploads(e, u.d.FirstThreadMessage).length;
 }
-function b(e) {
+function T(e) {
     var t, n;
     let r = l.Z.getChannel(e);
     if (null == r) return [];

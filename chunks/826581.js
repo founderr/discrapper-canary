@@ -20,18 +20,18 @@ let v = new Map(),
 function S(e) {
     return I[e];
 }
-function T(e, t) {
+function b(e, t) {
     (I[e] = t), v.set(e, l()());
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if (t !== n && null != t) {
         if (t === m.wB.SUBMITTED) {
             let t = I[e];
-            T(e, t + 1);
+            b(e, t + 1);
         }
         if (n === m.wB.SUBMITTED) {
             let t = I[e];
-            T(e, Math.max(0, t - 1));
+            b(e, Math.max(0, t - 1));
         }
     }
 }
@@ -58,7 +58,7 @@ function w(e) {
         s = _.default.getCurrentUser();
     if (null == s || a.userId === s.id) return !1;
     let o = null === ((n = a.joinRequestId), (t = R.get(n))) || void 0 === t ? void 0 : t.applicationStatus;
-    return b(r, a.applicationStatus, o), x(a), !0;
+    return T(r, a.applicationStatus, o), x(a), !0;
 }
 let M = {},
     P = {},
@@ -118,7 +118,7 @@ class B extends (r = u.ZP.Store) {
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
             let { status: t, requests: n, total: r, guildId: i } = e;
             (y = !1),
-                t === m.wB.SUBMITTED && T(i, r),
+                t === m.wB.SUBMITTED && b(i, r),
                 n.forEach((e) => {
                     x(e);
                 });
@@ -137,7 +137,7 @@ class B extends (r = u.ZP.Store) {
                     applicationStatus: n
                 });
             }),
-                T(t, 0);
+                b(t, 0);
         },
         GUILD_JOIN_REQUEST_CREATE: w,
         GUILD_JOIN_REQUEST_UPDATE: w,
@@ -146,7 +146,7 @@ class B extends (r = u.ZP.Store) {
             let { id: r, guildId: i } = e;
             let a = ((t = r), R.get(t));
             if (null != a) {
-                b(i, null, a.applicationStatus), (n = r), delete U[n], R.delete(n), O.delete(n), D.delete(n);
+                T(i, null, a.applicationStatus), (n = r), delete U[n], R.delete(n), O.delete(n), D.delete(n);
             }
         },
         GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {

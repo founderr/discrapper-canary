@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(594174),
     I = n(981631),
     S = n(37113),
-    T = n(65154),
-    b = n(388032);
+    b = n(65154),
+    T = n(388032);
 function y(e, t) {
     let { preset: y, resolution: A, fps: N } = (0, s.cj)([h.Z], () => h.Z.getState()),
         C = (0, s.e7)([g.Z], () => g.Z.getGoLiveSource()),
@@ -45,7 +45,7 @@ function y(e, t) {
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: T.Yn.STREAM
+                            context: b.Yn.STREAM
                         };
                         null != C.desktopSource
                             ? (e.desktopSettings = {
@@ -121,11 +121,11 @@ function y(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.MenuGroup, {
-                label: b.intl.string(b.t.SkkeIi),
+                label: T.intl.string(T.t.SkkeIi),
                 children: k
             }),
             (0, r.jsx)(o.MenuGroup, {
-                label: b.intl.string(b.t.rHyPXl),
+                label: T.intl.string(T.t.rHyPXl),
                 children: U
             })
         ]

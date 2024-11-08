@@ -20,7 +20,7 @@ var i = n(259443),
         t = n(902653);
     r = e ? t.WebAudioAPISound : t.WebAudioSound;
 }
-let u = new i.Y('SoundUtils');
+let u = new i.Yd('SoundUtils');
 function c(e, t) {
     var n;
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;

@@ -23,7 +23,7 @@ function g(e, t) {
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: I, subsection: S, guildId: T, channelId: b, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: I, subsection: S, guildId: b, channelId: T, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
@@ -40,22 +40,22 @@ async function E(e) {
             return (t) =>
                 (0, r.jsx)(e, {
                     user: R,
-                    guildId: T,
+                    guildId: b,
                     friendToken: y,
                     initialSection: I,
                     initialSubsection: S,
-                    channelId: b,
+                    channelId: T,
                     showGuildProfile: N,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: g(v, N ? T : void 0) }
+        { modalKey: g(v, N ? b : void 0) }
     )),
         f.default.track(h.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: T,
-            channel_id: b,
+            guild_id: b,
+            channel_id: T,
             other_user_id: v,
             application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
             application_name: null == D ? void 0 : D.name,

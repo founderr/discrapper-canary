@@ -18,7 +18,7 @@ var r = n(200651),
     v = n(231338),
     I = n(388032),
     S = n(727086);
-function T(e) {
+function b(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {
         theme: v.BR.DARK,
@@ -30,7 +30,7 @@ function T(e) {
             })
     });
 }
-function b(e) {
+function T(e) {
     let { leaderboard: t } = e,
         n = i.useMemo(() => (0, f.n)(c.default.extractTimestamp(t.interval_end)), [t]);
     return (0, r.jsxs)('div', {
@@ -148,7 +148,7 @@ t.Z = (e) => {
     }),
     null == f)
         ? null
-        : (0, r.jsx)(T, {
+        : (0, r.jsx)(b, {
               children: (0, r.jsxs)('div', {
                   className: S.popout,
                   ref: d,
@@ -156,7 +156,7 @@ t.Z = (e) => {
                       (0, r.jsxs)('div', {
                           className: S.content,
                           children: [
-                              (0, r.jsx)(b, { leaderboard: f }),
+                              (0, r.jsx)(T, { leaderboard: f }),
                               (0, r.jsx)(m.Z, {
                                   leaderboard: f,
                                   previewMode: l

@@ -18,8 +18,8 @@ var r,
     v = n(358085),
     I = n(804739),
     S = n(941128),
-    T = n(391690),
-    b = n(981631);
+    b = n(391690),
+    T = n(981631);
 let y = 1 * g.Z.Millis.MINUTE;
 (r || (r = {})).DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
 let A = {},
@@ -33,13 +33,13 @@ let A = {},
     w = [],
     M = !1;
 function P(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.networkProgress : null;
+    return e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING || e.type === T.vxO.REPAIRING ? e.networkProgress : null;
 }
 function k(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.diskProgress : null;
+    return e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING || e.type === T.vxO.REPAIRING ? e.diskProgress : null;
 }
 function U(e) {
-    return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.readerProgress : null;
+    return e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING || e.type === T.vxO.REPAIRING ? e.readerProgress : null;
 }
 let G = u().throttle(function (e) {
         x = (x = [
@@ -89,7 +89,7 @@ class V extends (i = c.ZP.Store) {
     }
     isUpToDate(e, t) {
         let n = A[(0, E.Tu)(e, t)];
-        return null != n && n.type === b.vxO.UP_TO_DATE;
+        return null != n && n.type === T.vxO.UP_TO_DATE;
     }
     shouldPatch(e, t) {
         let n = A[(0, E.Tu)(e, t)];
@@ -97,7 +97,7 @@ class V extends (i = c.ZP.Store) {
     }
     isInstalled(e, t) {
         let n = A[(0, E.Tu)(e, t)];
-        return null != n ? n.type !== b.vxO.UNINSTALLING : T.Z.shouldBeInstalled(e, t);
+        return null != n ? n.type !== T.vxO.UNINSTALLING : b.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
@@ -107,7 +107,7 @@ class V extends (i = c.ZP.Store) {
     isLaunchable(e, t) {
         if (!(0, I.Q)()) return !1;
         let n = A[(0, E.Tu)(e, t)];
-        return null != n && n.type === b.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
+        return null != n && n.type === T.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
         let n = A[(0, E.Tu)(e, t)];
@@ -162,19 +162,19 @@ class V extends (i = c.ZP.Store) {
                             let { build_id: t, target_build_id: n, manifest_ids: r, target_manifest_ids: i, application_id: a, branch_id: s, launch_commands: o, launch_options: l, storage: c, install_path: d, installed_size: _, repairing: h } = e,
                                 { should_patch: p } = e;
                             switch ((null == p && (p = !0), e.state.type)) {
-                                case b.DJE.COMPLETE: {
+                                case T.DJE.COMPLETE: {
                                     let e;
                                     let E = {},
                                         I = null;
-                                    if (h) e = b.vxO.REPAIRING;
-                                    else if (null == t) e = b.vxO.INSTALL_REQUIRED;
-                                    else if (p && (t !== n || (null != r && 0 !== u().difference(r, i).length))) e = b.vxO.UPDATE_REQUIRED;
-                                    else if (((e = b.vxO.UP_TO_DATE), null != d)) {
+                                    if (h) e = T.vxO.REPAIRING;
+                                    else if (null == t) e = T.vxO.INSTALL_REQUIRED;
+                                    else if (p && (t !== n || (null != r && 0 !== u().difference(r, i).length))) e = T.vxO.UPDATE_REQUIRED;
+                                    else if (((e = T.vxO.UP_TO_DATE), null != d)) {
                                         let e = f.Z.fileManager.join(d, 'content'),
                                             t = (0, m.D)();
                                         if (null != l && 0 !== l.length) {
                                             var g;
-                                            if (t === b.QR$.WIN64 && ((g = t), !l.some((e) => e.platforms.includes(g)))) t = b.QR$.WIN32;
+                                            if (t === T.QR$.WIN64 && ((g = t), !l.some((e) => e.platforms.includes(g)))) t = T.QR$.WIN32;
                                             for (let n of l)
                                                 if (n.platforms.includes(t)) {
                                                     let t;
@@ -191,7 +191,7 @@ class V extends (i = c.ZP.Store) {
                                                         null == I && (I = i);
                                                 }
                                         } else if (null != o) {
-                                            t === b.QR$.WIN64 && null == o[t] && (t = b.QR$.WIN32);
+                                            t === T.QR$.WIN64 && null == o[t] && (t = T.QR$.WIN32);
                                             let n = o[t];
                                             if (null != n) {
                                                 let { executable: r } = n,
@@ -224,12 +224,12 @@ class V extends (i = c.ZP.Store) {
                                         storage: c
                                     };
                                 }
-                                case b.DJE.TRANSITION: {
+                                case T.DJE.TRANSITION: {
                                     let o;
                                     let { stage: l, disk_progress: u, network_progress: c, reader_progress: f, progress: m, total: g, paused: E } = e.state,
                                         v = l.type;
                                     return {
-                                        type: (o = v === b.f07.UNINSTALLING ? b.vxO.UNINSTALLING : h ? b.vxO.REPAIRING : null == t ? b.vxO.INSTALLING : b.vxO.UPDATING),
+                                        type: (o = v === T.f07.UNINSTALLING ? T.vxO.UNINSTALLING : h ? T.vxO.REPAIRING : null == t ? T.vxO.INSTALLING : T.vxO.UPDATING),
                                         stage: v,
                                         applicationId: a,
                                         branchId: s,
@@ -260,20 +260,20 @@ class V extends (i = c.ZP.Store) {
                         let o = F(n, s, U);
                         if ((o > 0 && B((D += o)), i === t)) {
                             let e = n[s];
-                            if (!0 !== e.paused && (e.type === b.vxO.UNINSTALLING || e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING))
+                            if (!0 !== e.paused && (e.type === T.vxO.UNINSTALLING || e.type === T.vxO.INSTALLING || e.type === T.vxO.UPDATING))
                                 switch (e.stage) {
-                                    case b.f07.PATCHING:
-                                    case b.f07.FINALIZING:
-                                    case b.f07.VERIFYING:
-                                    case b.f07.REPAIRING:
-                                    case b.f07.POST_INSTALL_SCRIPTS:
+                                    case T.f07.PATCHING:
+                                    case T.f07.FINALIZING:
+                                    case T.f07.VERIFYING:
+                                    case T.f07.REPAIRING:
+                                    case T.f07.POST_INSTALL_SCRIPTS:
                                         _.Z.setProgress('dispatch_application_progress', (0, E.xI)(e.progress, e.total) / 100), (a = !0);
                                 }
                         }
                     }
                     if (!M) {
                         let r = f.Z.fileManager.dirname(n[s].installPath);
-                        T.Z.getInstallationPath(e, t) !== r &&
+                        b.Z.getInstallationPath(e, t) !== r &&
                             d.Z.wait(() => {
                                 d.Z.dispatch({
                                     type: 'DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS',
@@ -283,9 +283,9 @@ class V extends (i = c.ZP.Store) {
                                 });
                             }),
                             -1 === S.Z.getQueuePosition(e, t) &&
-                                (n[s].type === b.vxO.INSTALLING || n[s].type === b.vxO.UPDATING) &&
+                                (n[s].type === T.vxO.INSTALLING || n[s].type === T.vxO.UPDATING) &&
                                 p.Z.hasApplication(e, t) &&
-                                T.Z.shouldBeInstalled(e, t) &&
+                                b.Z.shouldBeInstalled(e, t) &&
                                 d.Z.wait(() => {
                                     d.Z.dispatch({
                                         type: 'DISPATCH_APPLICATION_UPDATE',

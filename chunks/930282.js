@@ -34,19 +34,19 @@ t.ZP = i.memo(function (e) {
         v = a.isEdited(),
         I = a.state === f.yb.SEND_FAILED,
         S = a.state === f.yb.SENDING,
-        T = a.isCommandType(),
-        b = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        b = a.isCommandType(),
+        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         y = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
             y.current ? null != g && g() : (y.current = !0);
-        }, [g, a.content, u, b, o]),
+        }, [g, a.content, u, T, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),
             ref: E,
             className: s()(n, p.markup, {
                 [h.messageContent]: !0,
-                [h.isSending]: S && !T,
+                [h.isSending]: S && !b,
                 [h.markupRtl]: 'rtl' === l()(a.content),
                 [h.isFailed]: I,
                 [h.isUnsupported]: a.isUnsupported

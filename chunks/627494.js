@@ -17,7 +17,7 @@ var r = n(147018),
     v = a(''.replace),
     I = a(''.slice),
     S = Math.max,
-    T = function (e, t, n) {
+    b = function (e, t, n) {
         return n > e.length ? -1 : '' === t ? n : E(e, t, n);
     };
 r(
@@ -31,7 +31,7 @@ r(
                 r,
                 a,
                 h,
-                b,
+                T,
                 y,
                 A,
                 N,
@@ -44,7 +44,7 @@ r(
                 if ((r = d(e, m))) return i(r, e, C, t);
                 if (p && n) return v(c(C), e, t);
             }
-            for (a = c(C), h = c(e), !(b = o(t)) && (t = c(t)), A = S(1, (y = h.length)), R = T(a, h, 0); -1 !== R; ) (N = b ? c(t(h, R, a)) : _(h, a, R, [], void 0, t)), (D += I(a, O, R) + N), (O = R + y), (R = T(a, h, R + A));
+            for (a = c(C), h = c(e), !(T = o(t)) && (t = c(t)), A = S(1, (y = h.length)), R = b(a, h, 0); -1 !== R; ) (N = T ? c(t(h, R, a)) : _(h, a, R, [], void 0, t)), (D += I(a, O, R) + N), (O = R + y), (R = b(a, h, R + A));
             return O < a.length && (D += I(a, O)), D;
         }
     }

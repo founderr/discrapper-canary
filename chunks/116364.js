@@ -27,13 +27,13 @@ let v = { results: { choices: [] } },
         displayName: '',
         value: ''
     })),
-    T = {
+    b = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    b = a().debounce(c.Z, p.Fu, {
+    T = a().debounce(c.Z, p.Fu, {
         leading: !0,
         trailing: !0
     }),
@@ -51,7 +51,7 @@ let v = { results: { choices: [] } },
             if (s.autocomplete) {
                 if (i) {
                     let i = u.Z.getActiveCommand(e.id);
-                    b({
+                    T({
                         command: i,
                         optionValues: r.getCommandOptionValues(),
                         context: {
@@ -64,7 +64,7 @@ let v = { results: { choices: [] } },
                         }
                     });
                 }
-                if (l.Z.getLastErrored(e.id)) return T;
+                if (l.Z.getLastErrored(e.id)) return b;
                 let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
                 return null == a ? I : { results: { choices: a } };
             }

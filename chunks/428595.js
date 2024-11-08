@@ -18,8 +18,8 @@ var r = n(392711),
     v = n(800927),
     I = n(945884),
     S = n(594199),
-    T = n(97734),
-    b = n(303694),
+    b = n(97734),
+    T = n(303694),
     y = n(660199),
     A = n(364458),
     N = n(981631),
@@ -247,7 +247,7 @@ let P = (e) => {
         silentPrefix: {
             order: S.ZP.order,
             requiredFirstCharacters: ['@'],
-            match: (e, t, n) => (null == n || '' === n ? /^(@silent)/.exec(e) : null),
+            match: (e, t, n) => (null == n || '' === n ? /^(@silent(?![^\s]))/.exec(e) : null),
             parse: function (e) {
                 return {
                     type: 'silentPrefix',
@@ -352,8 +352,8 @@ let P = (e) => {
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    s = (0, b.l)(i),
-                    o = (0, b.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
+                    s = (0, T.l)(i),
+                    o = (0, T.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -379,7 +379,7 @@ let P = (e) => {
         list: v.Z,
         subtext: I.Z
     },
-    G = (0, A.Z)([U, T.Z]),
+    G = (0, A.Z)([U, b.Z]),
     B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
     Z = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
     F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
@@ -399,8 +399,8 @@ let P = (e) => {
         ]),
         ['blockQuote', 'codeBlock', 'br']
     ),
-    H = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
-    j = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
+    j = i().omit(G, ['codeBlock', 'br', 'blockQuote']),
+    H = i().omit(G, ['codeBlock', 'br', 'attachmentLink', 'mention', 'roleMention', 'channel', 'paragraph', 'newline', 'subtext']),
     Y = i().omit(G, ['codeBlock', 'blockQuote', 'br']),
     W = i().omit(G, ['codeBlock', 'br', 'inlineCode']);
 function K(e, t) {
@@ -451,9 +451,9 @@ t.Z = {
     VOICE_CHANNEL_STATUS_RULES: Z,
     EMBED_TITLE_RULES: F,
     INLINE_REPLY_RULES: V,
-    GUILD_VERIFICATION_FORM_RULES: H,
+    GUILD_VERIFICATION_FORM_RULES: j,
     GUILD_EVENT_RULES: Y,
-    PROFILE_BIO_RULES: j,
+    PROFILE_BIO_RULES: H,
     AUTO_MODERATION_SYSTEM_MESSAGE_RULES: z,
     NATIVE_SEARCH_RESULT_LINK_RULES: W
 };
