@@ -20,21 +20,21 @@ var s = n(442837),
     p = n(78481);
 function x(e) {
     var t;
-    let { app: n, currentSubscription: m, currentListing: h, alternativeListings: x, bundleSku: T } = e,
-        C = (0, l.y)(n, 100),
-        _ = (0, u.KK)(T.flags),
-        E = _ ? r.ServerIcon : r.UserIcon,
-        f = _ ? g.intl.string(g.t['46YF2N']) : g.intl.string(g.t.fFyGiI),
-        I = null === (t = m.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
-        N = (0, s.e7)([d.Z], () => (_ && null != I ? d.Z.getGuild(I) : void 0), [I, _]);
+    let { app: n, currentSubscription: m, currentListing: h, alternativeListings: x, bundleSku: T, navigateToHome: C } = e,
+        _ = (0, l.y)(n, 100),
+        E = (0, u.KK)(T.flags),
+        f = E ? r.ServerIcon : r.UserIcon,
+        I = E ? g.intl.string(g.t['46YF2N']) : g.intl.string(g.t.fFyGiI),
+        N = null === (t = m.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        A = (0, s.e7)([d.Z], () => (E && null != N ? d.Z.getGuild(N) : void 0), [N, E]);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
                 className: p.header,
                 children: [
-                    null != C &&
+                    null != _ &&
                         (0, i.jsx)(r.Image, {
-                            src: C.href,
+                            src: _.href,
                             imageClassName: p.appIcon,
                             width: 48,
                             height: 48
@@ -52,15 +52,15 @@ function x(e) {
                                         variant: 'heading-md/normal',
                                         className: p.subInfoType,
                                         children: [
-                                            (0, i.jsx)(E, {
+                                            (0, i.jsx)(f, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
                                             ' ',
-                                            f
+                                            I
                                         ]
                                     }),
-                                    null != N &&
+                                    null != A &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(r.Text, {
@@ -71,13 +71,13 @@ function x(e) {
                                                     className: p.guildSubscription,
                                                     children: [
                                                         (0, i.jsx)(c.Z, {
-                                                            guild: N,
+                                                            guild: A,
                                                             size: c.Z.Sizes.SMOL
                                                         }),
                                                         (0, i.jsx)(r.Heading, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'text-muted',
-                                                            children: g.intl.format(g.t['7ZD8p6'], { guildName: N.name })
+                                                            children: g.intl.format(g.t['7ZD8p6'], { guildName: A.name })
                                                         })
                                                     ]
                                                 })
@@ -132,7 +132,8 @@ function x(e) {
                             S,
                             {
                                 storeListing: e,
-                                guildId: I
+                                guildId: N,
+                                navigateToHome: C
                             },
                             e.id
                         )
@@ -143,18 +144,19 @@ function x(e) {
     });
 }
 function S(e) {
-    let { storeListing: t, guildId: n } = e,
-        { openModal: s } = (0, m.ZP)({
+    let { storeListing: t, guildId: n, navigateToHome: s } = e,
+        { openModal: l } = (0, m.ZP)({
             analyticsLocation: h.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
             subscribeForGuild: n,
-            disableGuildSelector: !0
+            disableGuildSelector: !0,
+            onComplete: s
         });
     return (0, i.jsx)(o.Z, {
         storeListing: t,
         cta: (0, i.jsx)(r.Button, {
             size: r.Button.Sizes.SMALL,
-            onClick: s,
+            onClick: l,
             children: g.intl.string(g.t['+KwmBg'])
         })
     });

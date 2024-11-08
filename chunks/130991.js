@@ -1,68 +1,73 @@
 n.d(t, {
+    G: function () {
+        return i;
+    },
     Z: function () {
-        return P;
+        return y;
     }
 }),
     n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(561537),
-    l = n(269210),
-    a = n(442837),
-    o = n(481060),
-    c = n(355467),
-    d = n(100527),
-    u = n(906732),
-    m = n(601911),
-    h = n(283836),
-    g = n(887818),
-    p = n(728345),
-    x = n(565138),
-    S = n(374649),
-    T = n(908951),
-    C = n(255078),
-    _ = n(430824),
-    E = n(509545),
-    f = n(55563),
-    I = n(551428),
-    N = n(937615),
-    b = n(171246),
-    A = n(889989),
-    v = n(547283),
-    j = n(981631),
-    O = n(388032),
-    R = n(526831);
-function P(e) {
-    var t, n, l, c, h;
-    let { subscription: g, navigateToSwitchPlan: C } = e,
-        A = null === (t = g.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
-        { renewalMutations: v, planId: P } = g,
+var i,
+    s,
+    r = n(200651),
+    l = n(192379),
+    a = n(561537),
+    o = n(269210),
+    c = n(442837),
+    d = n(481060),
+    u = n(355467),
+    m = n(100527),
+    h = n(906732),
+    g = n(601911),
+    p = n(283836),
+    x = n(887818),
+    S = n(728345),
+    T = n(565138),
+    C = n(374649),
+    _ = n(908951),
+    E = n(255078),
+    f = n(430824),
+    I = n(509545),
+    N = n(55563),
+    A = n(551428),
+    b = n(937615),
+    v = n(171246),
+    j = n(889989),
+    O = n(547283),
+    R = n(981631),
+    P = n(388032),
+    D = n(526831);
+function y(e) {
+    var t, n, i, s, o;
+    let { subscription: u, navigateToSwitchPlan: p, loadingState: x } = e,
+        E = null === (t = u.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        { renewalMutations: j, planId: O } = u,
         {
-            appId: M,
-            plan: k,
-            storeListing: w,
-            price: U,
-            isGuildSubscription: V,
-            subscriptionForGuild: G,
-            sku: Y,
-            isCancelled: H,
-            renewalPlan: z
-        } = (0, a.cj)(
-            [E.Z, f.Z, I.Z, _.Z],
+            appId: y,
+            plan: w,
+            storeListing: U,
+            price: V,
+            isGuildSubscription: G,
+            subscriptionForGuild: Y,
+            sku: H,
+            isCancelled: z,
+            renewalPlan: W
+        } = (0, c.cj)(
+            [I.Z, N.Z, A.Z, f.Z],
             () => {
                 let e;
-                let t = E.Z.get(P),
-                    n = null != t ? f.Z.get(t.skuId) : void 0,
+                let t = I.Z.get(O),
+                    n = null != t ? N.Z.get(t.skuId) : void 0,
                     i = null == n ? void 0 : n.applicationId,
-                    s = null != t ? I.Z.getForSKU(t.skuId) : null,
-                    r = null != t ? (0, N.og)((0, N.T4)(t.price, t.currency), t.interval, t.intervalCount) : null,
-                    l = null != s && (0, b.KK)(s.skuFlags),
-                    a = l && null != A ? _.Z.getGuild(A) : void 0,
-                    o = (0, b.Jf)(g, n);
-                if (!1 === o && null != v && v.items.length > 0) {
+                    s = null != t ? A.Z.getForSKU(t.skuId) : null,
+                    r = null != t ? (0, b.og)((0, b.T4)(t.price, t.currency), t.interval, t.intervalCount) : null,
+                    l = null != s && (0, v.KK)(s.skuFlags),
+                    a = l && null != E ? f.Z.getGuild(E) : void 0,
+                    o = (0, v.Jf)(u, n);
+                if (!1 === o && null != j && j.items.length > 0) {
                     var c;
-                    let t = v.items[0];
-                    e = null !== (c = E.Z.get(t.planId)) && void 0 !== c ? c : void 0;
+                    let t = j.items[0];
+                    e = null !== (c = I.Z.get(t.planId)) && void 0 !== c ? c : void 0;
                 }
                 return {
                     appId: i,
@@ -76,165 +81,171 @@ function P(e) {
                     renewalPlan: e
                 };
             },
-            [A, P, v, g]
+            [E, O, j, u]
         ),
-        { data: W } = (0, p.IX)(M),
-        K = s.useMemo(() => (null != W ? (0, m.y)(W, 100) : null), [W]),
-        q = null !== (n = null == Y ? void 0 : Y.deleted) && void 0 !== n && n,
-        Q = null != Y && (0, b.OL)(Y),
-        X = g.status === j.O0b.PAST_DUE,
-        { analyticsLocations: J } = (0, u.ZP)(),
-        [$] = (0, S.ED)({
-            subscriptionId: g.id,
+        { data: K } = (0, S.IX)(y),
+        q = l.useMemo(() => (null != K ? (0, g.y)(K, 100) : null), [K]),
+        Q = null !== (n = null == H ? void 0 : H.deleted) && void 0 !== n && n,
+        X = null != H && (0, v.OL)(H),
+        J = u.status === R.O0b.PAST_DUE,
+        { analyticsLocations: $ } = (0, h.ZP)(),
+        [ee] = (0, C.ED)({
+            subscriptionId: u.id,
             renewal: !0,
-            analyticsLocations: J,
-            analyticsLocation: d.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
+            analyticsLocations: $,
+            analyticsLocation: m.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        ee = B(g.currentPeriodEnd);
-    return (0, i.jsxs)(r.l, {
-        header: (0, i.jsxs)(i.Fragment, {
-            children: [
-                (0, i.jsxs)('div', {
-                    className: R.headerContent,
-                    children: [
-                        null != K &&
-                            (0, i.jsx)(o.Image, {
-                                src: K.href,
-                                imageClassName: R.appIcon,
-                                width: 40,
-                                height: 40
-                            }),
-                        (0, i.jsxs)('div', {
-                            children: [
-                                (0, i.jsx)(o.Heading, {
-                                    variant: 'heading-md/semibold',
-                                    children: null !== (l = null == W ? void 0 : W.name) && void 0 !== l ? l : O.intl.string(O.t['7kqy7e'])
-                                }),
-                                (0, i.jsx)(o.Text, {
-                                    variant: 'text-sm/medium',
-                                    color: 'header-secondary',
-                                    children: null !== (c = null == k ? void 0 : k.name) && void 0 !== c ? c : O.intl.string(O.t.sqkbMD)
-                                })
-                            ]
-                        })
-                    ]
-                }),
-                (0, i.jsx)('div', {
-                    className: R.headerButtons,
-                    children:
-                        null != W &&
-                        null != w &&
-                        null != Y &&
-                        (0, i.jsx)(Z, {
-                            subscription: g,
-                            app: W,
-                            sku: Y,
-                            storeListing: w,
-                            isCancelled: H,
-                            navigateToSwitchPlan: C
-                        })
-                })
-            ]
-        }),
-        children: [
-            H &&
-                (0, i.jsx)(L, {
-                    type: 'warning',
-                    title: Q ? O.intl.formatToPlainString(O.t.QOnM19, { subscriptionPeriodEnd: ee }) : O.intl.formatToPlainString(O.t.HOaZu7, { subscriptionPeriodEnd: ee })
-                }),
-            X &&
-                (0, i.jsx)(L, {
-                    type: 'danger',
-                    title: O.intl.string(O.t.fvOqBg)
-                }),
-            (0, i.jsxs)('div', {
-                className: R.details,
-                children: [
-                    (0, i.jsx)(y, {
-                        title: O.intl.string(O.t['5D/KEB']),
-                        content: V
-                            ? (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      (0, i.jsxs)('span', {
-                                          className: R.subscriptionTypeRow,
-                                          children: [(0, i.jsx)(o.ServerIcon, { size: 'xs' }), O.intl.string(O.t.QjL3vr)]
+        et = Z(u.currentPeriodEnd),
+        en = 0 === x;
+    return (0, r.jsxs)(a.l, {
+        headerClassName: D.headerWrapper,
+        header:
+            !1 === en
+                ? (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsxs)('div', {
+                              className: D.headerContent,
+                              children: [
+                                  null != q &&
+                                      (0, r.jsx)(d.Image, {
+                                          src: q.href,
+                                          imageClassName: D.appIcon,
+                                          width: 40,
+                                          height: 40
                                       }),
-                                      null != G &&
-                                          (0, i.jsxs)('span', {
-                                              className: R.guildSubscriptionContentRow,
+                                  (0, r.jsxs)('div', {
+                                      children: [
+                                          (0, r.jsx)(d.Heading, {
+                                              variant: 'heading-md/semibold',
+                                              children: null !== (i = null == K ? void 0 : K.name) && void 0 !== i ? i : P.intl.string(P.t['7kqy7e'])
+                                          }),
+                                          (0, r.jsx)(d.Text, {
+                                              variant: 'text-sm/medium',
+                                              color: 'header-secondary',
+                                              children: null !== (s = null == w ? void 0 : w.name) && void 0 !== s ? s : P.intl.string(P.t.sqkbMD)
+                                          })
+                                      ]
+                                  })
+                              ]
+                          }),
+                          (0, r.jsx)('div', {
+                              className: D.headerButtons,
+                              children:
+                                  null != K &&
+                                  null != U &&
+                                  null != H &&
+                                  (0, r.jsx)(M, {
+                                      subscription: u,
+                                      app: K,
+                                      sku: H,
+                                      storeListing: U,
+                                      isCancelled: z,
+                                      navigateToSwitchPlan: p
+                                  })
+                          })
+                      ]
+                  })
+                : (0, r.jsx)(d.Spinner, { type: d.SpinnerTypes.PULSING_ELLIPSIS }),
+        children: [
+            z &&
+                (0, r.jsx)(F, {
+                    type: 'warning',
+                    title: X ? P.intl.formatToPlainString(P.t.QOnM19, { subscriptionPeriodEnd: et }) : P.intl.formatToPlainString(P.t.HOaZu7, { subscriptionPeriodEnd: et })
+                }),
+            J &&
+                (0, r.jsx)(F, {
+                    type: 'danger',
+                    title: P.intl.string(P.t.fvOqBg)
+                }),
+            (0, r.jsxs)('div', {
+                className: D.details,
+                children: [
+                    (0, r.jsx)(L, {
+                        title: P.intl.string(P.t['5D/KEB']),
+                        content: G
+                            ? (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsxs)('span', {
+                                          className: D.subscriptionTypeRow,
+                                          children: [(0, r.jsx)(d.ServerIcon, { size: 'xs' }), P.intl.string(P.t.QjL3vr)]
+                                      }),
+                                      null != Y &&
+                                          (0, r.jsxs)('span', {
+                                              className: D.guildSubscriptionContentRow,
                                               children: [
-                                                  (0, i.jsx)(o.Text, {
+                                                  (0, r.jsx)(d.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-muted',
-                                                      children: O.intl.format(O.t['7ZD8p6'], { guildName: G.name })
+                                                      children: P.intl.format(P.t['7ZD8p6'], { guildName: Y.name })
                                                   }),
-                                                  (0, i.jsx)(x.Z, {
-                                                      guild: G,
-                                                      size: x.Z.Sizes.MINI
+                                                  (0, r.jsx)(T.Z, {
+                                                      guild: Y,
+                                                      size: T.Z.Sizes.MINI
                                                   })
                                               ]
                                           })
                                   ]
                               })
-                            : (0, i.jsxs)('span', {
-                                  className: R.subscriptionTypeRow,
-                                  children: [(0, i.jsx)(o.UserIcon, { size: 'xs' }), O.intl.string(O.t['6anEVl'])]
+                            : (0, r.jsxs)('span', {
+                                  className: D.subscriptionTypeRow,
+                                  children: [(0, r.jsx)(d.UserIcon, { size: 'xs' }), P.intl.string(P.t['6anEVl'])]
                               })
                     }),
-                    null != U &&
-                        (0, i.jsx)(y, {
-                            title: O.intl.string(O.t.KI7ER0),
-                            content: U
+                    null != V &&
+                        (0, r.jsx)(L, {
+                            title: P.intl.string(P.t.KI7ER0),
+                            content: V
                         }),
-                    (0, i.jsx)(y, {
-                        title: O.intl.string(O.t.dnUzb2),
-                        content: B(null !== (h = g.createdAt) && void 0 !== h ? h : g.currentPeriodStart)
+                    (0, r.jsx)(L, {
+                        title: P.intl.string(P.t.dnUzb2),
+                        content: Z(null !== (o = u.createdAt) && void 0 !== o ? o : u.currentPeriodStart)
                     }),
-                    (0, i.jsx)(D, {
-                        isCancelled: H,
-                        subscriptionPeriodEnd: ee,
-                        renewalPlan: z
+                    (0, r.jsx)(B, {
+                        isCancelled: z,
+                        subscriptionPeriodEnd: et,
+                        renewalPlan: W
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: R.payment,
+            (0, r.jsxs)('div', {
+                className: D.payment,
                 children: [
-                    (0, i.jsx)(o.FormTitle, { children: O.intl.string(O.t.azZaZW) }),
-                    null != $ &&
-                        (0, i.jsx)(T.Z, {
-                            subscription: g,
-                            currentInvoicePreview: $,
-                            disabled: q || H
+                    (0, r.jsx)(d.FormTitle, { children: P.intl.string(P.t.azZaZW) }),
+                    null != ee &&
+                        !(en || 2 === x) &&
+                        (0, r.jsx)(_.Z, {
+                            subscription: u,
+                            currentInvoicePreview: ee,
+                            disabled: Q || z
                         })
                 ]
             }),
-            null != W &&
-                (null == w ? void 0 : w.benefits) != null &&
-                w.benefits.length > 0 &&
-                (0, i.jsx)(F, {
-                    appId: W.id,
-                    listingBenefits: w.benefits
+            null != K &&
+                (null == U ? void 0 : U.benefits) != null &&
+                U.benefits.length > 0 &&
+                (0, r.jsx)(k, {
+                    appId: K.id,
+                    listingBenefits: U.benefits
                 })
         ]
     });
 }
-function D(e) {
-    let { isCancelled: t, subscriptionPeriodEnd: n, renewalPlan: s } = e;
-    if (null != s) {
-        let e = (0, N.og)((0, N.T4)(s.price, s.currency), s.interval, s.intervalCount);
-        return (0, i.jsx)(y, {
-            title: O.intl.string(O.t.hIhAMz),
-            content: (0, i.jsxs)(i.Fragment, {
+function B(e) {
+    let { isCancelled: t, subscriptionPeriodEnd: n, renewalPlan: i } = e;
+    if (null != i) {
+        let e = (0, b.og)((0, b.T4)(i.price, i.currency), i.interval, i.intervalCount);
+        return (0, r.jsx)(L, {
+            title: P.intl.string(P.t.hIhAMz),
+            content: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(d.Text, {
                         variant: 'text-sm/medium',
                         children: n
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(d.Text, {
                         variant: 'text-sm/normal',
-                        children: O.intl.format(O.t.MCLbvr, {
-                            planName: s.name,
+                        children: P.intl.format(P.t.MCLbvr, {
+                            planName: i.name,
                             price: e
                         })
                     })
@@ -242,151 +253,151 @@ function D(e) {
             })
         });
     }
-    return (0, i.jsx)(y, {
-        title: t ? O.intl.string(O.t.enxcAg) : O.intl.string(O.t['Ms+6Zm']),
+    return (0, r.jsx)(L, {
+        title: t ? P.intl.string(P.t.enxcAg) : P.intl.string(P.t['Ms+6Zm']),
         content: n
     });
 }
-function y(e) {
+function L(e) {
     let { title: t, content: n } = e;
-    return (0, i.jsxs)('div', {
-        className: R.row,
+    return (0, r.jsxs)('div', {
+        className: D.row,
         children: [
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 children: t
             }),
-            (0, i.jsx)(o.Text, {
+            (0, r.jsx)(d.Text, {
                 variant: 'text-sm/medium',
-                className: R.rowContent,
+                className: D.rowContent,
                 children: n
             })
         ]
     });
 }
-function B(e) {
+function Z(e) {
     return e.toLocaleDateString(void 0, { dateStyle: 'long' });
 }
-function L(e) {
+function F(e) {
     let { type: t, title: n } = e;
-    return (0, i.jsx)(o.HelpMessage, {
-        messageType: 'warning' === t ? o.HelpMessageTypes.WARNING : o.HelpMessageTypes.ERROR,
-        className: R.noticeBanner,
-        children: (0, i.jsx)(o.Text, {
+    return (0, r.jsx)(d.HelpMessage, {
+        messageType: 'warning' === t ? d.HelpMessageTypes.WARNING : d.HelpMessageTypes.ERROR,
+        className: D.noticeBanner,
+        children: (0, r.jsx)(d.Text, {
             variant: 'text-sm/normal',
             children: n
         })
     });
 }
-function Z(e) {
-    let { app: t, storeListing: r, sku: l, subscription: d, isCancelled: m, guild: g, navigateToSwitchPlan: p } = e,
-        x = (0, b.OL)(l),
-        { analyticsLocations: S } = (0, u.ZP)(),
-        [T, _] = s.useState(!1),
-        E = (0, h.q)(t.id),
-        I = (0, a.e7)([f.Z], () => f.Z.getParentSKU(r.skuId), [r.skuId]),
-        N = s.useMemo(() => (null == I ? [] : (0, v.$)(r.id, I, E.subscriptions)), [r.id, E, I]),
-        A = 0 !== N.length,
-        j = async () => {
+function M(e) {
+    let { app: t, storeListing: i, sku: s, subscription: a, isCancelled: o, guild: m, navigateToSwitchPlan: g } = e,
+        x = (0, v.OL)(s),
+        { analyticsLocations: S } = (0, h.ZP)(),
+        [T, C] = l.useState(!1),
+        _ = (0, p.q)(t.id),
+        f = (0, c.e7)([N.Z], () => N.Z.getParentSKU(i.skuId), [i.skuId]),
+        I = l.useMemo(() => (null == f ? [] : (0, O.$)(i.id, f, _.subscriptions)), [i.id, _, f]),
+        A = 0 !== I.length,
+        b = async () => {
             try {
-                _(!0);
-                let { subscription: e } = await (0, c.pl)(d, S);
+                C(!0);
+                let { subscription: e } = await (0, u.pl)(a, S);
                 if (null == e) return;
-                (0, o.openModalLazy)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: t } = await n.e('18879').then(n.bind(n, 535278));
                     return (n) =>
-                        (0, i.jsx)(t, {
+                        (0, r.jsx)(t, {
                             ...n,
-                            storeListing: r,
-                            subscription: C.Z.createFromServer(e)
+                            storeListing: i,
+                            subscription: E.Z.createFromServer(e)
                         });
                 });
             } finally {
-                _(!1);
+                C(!1);
             }
         };
-    return (0, i.jsxs)('div', {
-        className: R.managementBtns,
+    return (0, r.jsxs)('div', {
+        className: D.managementBtns,
         children: [
             x
                 ? null
-                : m
-                  ? (0, i.jsx)(o.Button, {
-                        color: o.Button.Colors.PRIMARY,
-                        size: o.Button.Sizes.SMALL,
-                        onClick: j,
+                : o
+                  ? (0, r.jsx)(d.Button, {
+                        color: d.Button.Colors.PRIMARY,
+                        size: d.Button.Sizes.SMALL,
+                        onClick: b,
                         submitting: T,
-                        children: O.intl.string(O.t.QtMnkZ)
+                        children: P.intl.string(P.t.QtMnkZ)
                     })
-                  : (0, i.jsx)(o.Button, {
-                        color: o.Button.Colors.CUSTOM,
-                        size: o.Button.Sizes.SMALL,
-                        className: R.secondaryBtn,
+                  : (0, r.jsx)(d.Button, {
+                        color: d.Button.Colors.CUSTOM,
+                        size: d.Button.Sizes.SMALL,
+                        className: D.secondaryBtn,
                         onClick: () => {
-                            (0, o.openModalLazy)(async () => {
+                            (0, d.openModalLazy)(async () => {
                                 let { default: e } = await n.e('6284').then(n.bind(n, 257514));
                                 return (n) =>
-                                    (0, i.jsx)(e, {
+                                    (0, r.jsx)(e, {
                                         ...n,
                                         application: t,
-                                        storeListing: r,
-                                        subscription: d,
-                                        guild: g
+                                        storeListing: i,
+                                        subscription: a,
+                                        guild: m
                                     });
                             });
                         },
-                        children: O.intl.string(O.t['E8G/tr'])
+                        children: P.intl.string(P.t['E8G/tr'])
                     }),
             A &&
-                null != I &&
-                !1 === m &&
-                (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    size: o.Button.Sizes.SMALL,
+                null != f &&
+                !1 === o &&
+                (0, r.jsx)(d.Button, {
+                    color: d.Button.Colors.BRAND,
+                    size: d.Button.Sizes.SMALL,
                     onClick: () => {
-                        p({
-                            currentSubscription: d,
-                            alternativeListings: N,
+                        g({
+                            currentSubscription: a,
+                            alternativeListings: I,
                             app: t,
-                            bundleSku: I,
-                            currentListing: r
+                            bundleSku: f,
+                            currentListing: i
                         });
                     },
-                    children: O.intl.string(O.t.R74ZBQ)
+                    children: P.intl.string(P.t.R74ZBQ)
                 })
         ]
     });
 }
-function F(e) {
+function k(e) {
     let { appId: t, listingBenefits: n } = e;
-    return (0, i.jsx)(g.Z, {
+    return (0, r.jsx)(x.Z, {
         children: (e) =>
-            (0, i.jsxs)('div', {
-                className: R.benefits,
+            (0, r.jsxs)('div', {
+                className: D.benefits,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: R.benefitsHeader,
+                    (0, r.jsxs)('div', {
+                        className: D.benefitsHeader,
                         children: [
                             e &&
-                                (0, i.jsx)(o.Text, {
+                                (0, r.jsx)(d.Text, {
                                     variant: 'text-sm/semibold',
-                                    children: O.intl.string(O.t['mORL6+'])
+                                    children: P.intl.string(P.t['mORL6+'])
                                 }),
-                            (0, i.jsx)(g.Z.Toggle, {
-                                className: R.benefitsBtn,
-                                text: e ? O.intl.string(O.t.gsbFAw) : O.intl.string(O.t.Iwjfxc)
+                            (0, r.jsx)(x.Z.Toggle, {
+                                className: D.benefitsBtn,
+                                text: e ? P.intl.string(P.t.gsbFAw) : P.intl.string(P.t.Iwjfxc)
                             })
                         ]
                     }),
                     e
                         ? n.map((e) => {
-                              let { id: n, name: s, description: r, icon: a } = e;
-                              return (0, i.jsx)(
-                                  l.G,
+                              let { id: n, name: i, description: s, icon: l } = e;
+                              return (0, r.jsx)(
+                                  o.G,
                                   {
-                                      name: s,
-                                      icon: (0, A.n)(t, a),
-                                      description: r
+                                      name: i,
+                                      icon: (0, j.n)(t, l),
+                                      description: s
                                   },
                                   n
                               );
@@ -396,3 +407,4 @@ function F(e) {
             })
     });
 }
+((s = i || (i = {}))[(s.LOADING = 0)] = 'LOADING'), (s[(s.DONE = 1)] = 'DONE'), (s[(s.ERROR = 2)] = 'ERROR');

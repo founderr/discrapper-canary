@@ -30,40 +30,35 @@ function g(e) {
                 ? t
                 : [];
         }),
-        { loading: g } = (0, c.sp)(n),
-        { loadState: x } = (0, c.qz)(),
-        S = g || x !== c.jd.LOADED,
-        { enabled: T } = a.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
-        [C, _] = s.useState();
+        { enabled: l } = a.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' }),
+        [c, u] = s.useState();
     return (
-        null == C &&
-            (C = (0, i.jsx)(p, {
+        null == c &&
+            (c = (0, i.jsx)(p, {
                 onBack: t,
                 title: m.intl.string(m.t['DB/m9f'])
             })),
         (0, i.jsxs)('div', {
             children: [
-                C,
-                S
-                    ? (0, i.jsx)(l.Spinner, {})
-                    : (0, i.jsx)('div', {
-                          className: h.subscriptionsContainer,
-                          children: T
-                              ? (0, i.jsx)(d.Z, {
-                                    subscriptions: n,
-                                    updateHeader: (e, t) => {
-                                        _(
-                                            (0, i.jsx)(p, {
-                                                title: e,
-                                                onBack: () => {
-                                                    t(), _(void 0);
-                                                }
-                                            })
-                                        );
-                                    }
-                                })
-                              : n.map((e) => (0, i.jsx)(u.Z, { subscription: e }, e.id))
-                      })
+                c,
+                (0, i.jsx)('div', {
+                    className: h.subscriptionsContainer,
+                    children: l
+                        ? (0, i.jsx)(d.Z, {
+                              subscriptions: n,
+                              updateHeader: (e, t) => {
+                                  u(
+                                      (0, i.jsx)(p, {
+                                          title: e,
+                                          onBack: () => {
+                                              t(), u(void 0);
+                                          }
+                                      })
+                                  );
+                              }
+                          })
+                        : (0, i.jsx)(x, { subscriptions: n })
+                })
             ]
         })
     );
@@ -85,4 +80,10 @@ function p(e) {
             })
         ]
     });
+}
+function x(e) {
+    let { subscriptions: t } = e,
+        { loading: n } = (0, c.sp)(t),
+        { loadState: s } = (0, c.qz)();
+    return n || s !== c.jd.LOADED ? (0, i.jsx)(l.Spinner, {}) : t.map((e) => (0, i.jsx)(u.Z, { subscription: e }, e.id));
 }

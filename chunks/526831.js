@@ -1,4 +1,5 @@
 e.exports = {
+    headerWrapper: 'headerWrapper_df137d',
     headerContent: 'headerContent_df137d',
     appIcon: 'appIcon_df137d',
     headerButtons: 'headerButtons_df137d',

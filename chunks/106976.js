@@ -127,7 +127,11 @@ async function m(e) {
             groupListing: n
         });
         let l = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
-        for (let t of l) t.subscription_plans[0].id === e && (await a.GZ(t.id, void 0, void 0, !0));
-        c(l);
+        await Promise.all(
+            l.map((t) => {
+                if (t.subscription_plans[0].id === e) return a.GZ(t.id, void 0, void 0, !0);
+            })
+        ),
+            c(l);
     } catch (e) {}
 }
