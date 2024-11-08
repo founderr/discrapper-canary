@@ -45,8 +45,8 @@ function T(e) {
             asset: Z,
             assetClassName: F,
             className: V,
-            content: j,
-            header: H,
+            content: H,
+            header: j,
             spacing: Y,
             dismissibleContentType: W
         } = ((t = O),
@@ -129,9 +129,9 @@ function T(e) {
                     content: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',
-                        children: j
+                        children: H
                     }),
-                    header: H,
+                    header: j,
                     headerClassName: E.tooltipHeader,
                     markAsDismissed: q,
                     onClick: n

@@ -99,8 +99,8 @@ let P = new u.Yd('ApplicationCommandIndexStore'),
         sensitivity: 'accent',
         numeric: !0
     },
-    j = !1,
-    H = [];
+    H = !1,
+    j = [];
 function Y(e) {
     switch (e.type) {
         case 'guild':
@@ -168,7 +168,7 @@ function X(e) {
     var t, n;
     let { target: r, index: i } = e,
         a = null === (t = S.default.getCurrentUser()) || void 0 === t ? void 0 : t.id;
-    if (null == a) return !j && H.push(e), !1;
+    if (null == a) return !H && j.push(e), !1;
     let s = {},
         o = {},
         l = new Set();
@@ -366,10 +366,10 @@ let ee = new $(d.Z, {
     CONNECTION_OPEN: function () {
         for (let e of Object.values(ee.indices)) e.serverVersion = U;
         !(function () {
-            for (let e of H) X(e);
-            H = [];
+            for (let e of j) X(e);
+            j = [];
         })(),
-            (j = !0);
+            (H = !0);
     },
     APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
         var t;

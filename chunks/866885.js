@@ -41,8 +41,8 @@ function U(e) {
         Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == B ? void 0 : B.applicationId),
         V = null == B ? void 0 : B.launchId,
-        j = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
-        { dockedRect: H, isHidden: Y } = (0, o.cj)([v.Z], () => {
+        H = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
+        { dockedRect: j, isHidden: Y } = (0, o.cj)([v.Z], () => {
             let e = v.Z.pipWindow;
             return {
                 dockedRect: null != e ? v.Z.getDockedRect(e.id) : null,
@@ -59,11 +59,11 @@ function U(e) {
             selectedParticipant: h.Z.getSelectedParticipant(y.id),
             participantsOpen: h.Z.getParticipantsOpen(y.id)
         })),
-        Q = j || null != W,
+        Q = H || null != W,
         X = (0, C.Z)(y.id),
         J = X && (null == z ? void 0 : z.type) !== w.fO.ACTIVITY,
         $ = !X && Z === L.Ez.PIP,
-        ee = (!Q || (Q && (J || $) && null == H)) && !Y,
+        ee = (!Q || (Q && (J || $) && null == j)) && !Y,
         et = ee && null != v.Z.pipVideoWindow && null != v.Z.pipActivityWindow;
     function en() {
         var e;
@@ -192,7 +192,7 @@ function U(e) {
                                       [M.pipModeTall]: ee && U,
                                       [M.pipNonInteractive]: ee && !(null === (n = B.config) || void 0 === n ? void 0 : n.useInteractivePIP)
                                   }),
-                                  shouldRefocus: !ee && j
+                                  shouldRefocus: !ee && H
                               }),
                         !ee &&
                             (0, r.jsx)(O.Ds, {

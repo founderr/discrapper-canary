@@ -67,17 +67,17 @@ var o = function (e, t) {
         var Z = getComputedStyle(x),
             F = parseInt(Z.borderLeftWidth, 10),
             V = parseInt(Z.borderTopWidth, 10),
-            j = parseInt(Z.borderRightWidth, 10),
-            H = parseInt(Z.borderBottomWidth, 10),
+            H = parseInt(Z.borderRightWidth, 10),
+            j = parseInt(Z.borderBottomWidth, 10),
             Y = 0,
             W = 0,
-            K = 'offsetWidth' in x ? x.offsetWidth - x.clientWidth - F - j : 0,
-            z = 'offsetHeight' in x ? x.offsetHeight - x.clientHeight - V - H : 0,
+            K = 'offsetWidth' in x ? x.offsetWidth - x.clientWidth - F - H : 0,
+            z = 'offsetHeight' in x ? x.offsetHeight - x.clientHeight - V - j : 0,
             q = 'offsetWidth' in x ? (0 === x.offsetWidth ? 0 : P / x.offsetWidth) : 0,
             Q = 'offsetHeight' in x ? (0 === x.offsetHeight ? 0 : M / x.offsetHeight) : 0;
-        if (h === x) (Y = 'start' === o ? R : 'end' === o ? R - E : 'nearest' === o ? s(I, I + E, E, V, H, I + R, I + R + b, b) : R - E / 2), (W = 'start' === l ? O : 'center' === l ? O - g / 2 : 'end' === l ? O - g : s(v, v + g, g, F, j, v + O, v + O + T, T)), (Y = Math.max(0, Y + I)), (W = Math.max(0, W + v));
+        if (h === x) (Y = 'start' === o ? R : 'end' === o ? R - E : 'nearest' === o ? s(I, I + E, E, V, j, I + R, I + R + b, b) : R - E / 2), (W = 'start' === l ? O : 'center' === l ? O - g / 2 : 'end' === l ? O - g : s(v, v + g, g, F, H, v + O, v + O + T, T)), (Y = Math.max(0, Y + I)), (W = Math.max(0, W + v));
         else {
-            (Y = 'start' === o ? R - k - V : 'end' === o ? R - G + H + z : 'nearest' === o ? s(k, G, M, V, H + z, R, R + b, b) : R - (k + M / 2) + z / 2), (W = 'start' === l ? O - B - F : 'center' === l ? O - (B + P / 2) + K / 2 : 'end' === l ? O - U + j + K : s(B, U, P, F, j + K, O, O + T, T));
+            (Y = 'start' === o ? R - k - V : 'end' === o ? R - G + j + z : 'nearest' === o ? s(k, G, M, V, j + z, R, R + b, b) : R - (k + M / 2) + z / 2), (W = 'start' === l ? O - B - F : 'center' === l ? O - (B + P / 2) + K / 2 : 'end' === l ? O - U + H + K : s(B, U, P, F, H + K, O, O + T, T));
             var X = x.scrollLeft,
                 J = x.scrollTop;
             (R += J - (Y = Math.max(0, Math.min(J + Y / Q, x.scrollHeight - M / Q + z)))), (O += X - (W = Math.max(0, Math.min(X + W / q, x.scrollWidth - P / q + K))));

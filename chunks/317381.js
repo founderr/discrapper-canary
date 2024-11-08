@@ -130,7 +130,7 @@ function B(e) {
                       embeddedActivity: C
                   }),
                   (k = r !== d.Z.getChannelId() || (0, E.Z)(i) ? v.Ez.PIP : v.Ez.PANEL),
-                  P.set(j(i, a), Date.now());
+                  P.set(H(i, a), Date.now());
           })({
               channelId: o,
               applicationId: h,
@@ -143,8 +143,8 @@ function B(e) {
           });
     let F = (null !== (i = C.get(o)) && void 0 !== i ? i : []).filter((e) => e.applicationId !== h),
         V = G(s),
-        H = (null !== (a = N.get(V)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === h && e.channelId === o));
-    L.length > 0 && (F.push(Z), H.push(Z)), C.set(o, F), N.set(V, H);
+        j = (null !== (a = N.get(V)) && void 0 !== a ? a : []).filter((e) => !(e.applicationId === h && e.channelId === o));
+    L.length > 0 && (F.push(Z), j.push(Z)), C.set(o, F), N.set(V, j);
 }
 function Z(e) {
     let t = e.activity_instances;
@@ -173,10 +173,10 @@ function V(e) {
     let { applicationId: t, channelId: n } = e;
     R.delete(F(n, t));
 }
-function j(e, t) {
+function H(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-class H extends (i = a.ZP.PersistedStore) {
+class j extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         var t;
         let n = new Set(null !== (t = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== t ? t : []);
@@ -214,7 +214,7 @@ class H extends (i = a.ZP.PersistedStore) {
         return C;
     }
     getEmbeddedActivityDurationMs(e, t) {
-        let n = P.get(j(e, t));
+        let n = P.get(H(e, t));
         return null == n ? null : Date.now() - n;
     }
     isLaunchingActivity() {
@@ -286,9 +286,9 @@ class H extends (i = a.ZP.PersistedStore) {
         return R;
     }
 }
-S(H, 'displayName', 'EmbeddedActivitiesStore'),
-    S(H, 'persistKey', 'EmbeddedActivities'),
-    S(H, 'migrations', [
+S(j, 'displayName', 'EmbeddedActivitiesStore'),
+    S(j, 'persistKey', 'EmbeddedActivities'),
+    S(j, 'migrations', [
         (e) => ({
             ...e,
             seenFeaturedActivities: [],
@@ -312,7 +312,7 @@ S(H, 'displayName', 'EmbeddedActivitiesStore'),
         },
         (e) => (delete e.usersHavePlayedByApp, { ...e })
     ]);
-let Y = new H(s.Z, {
+let Y = new j(s.Z, {
     ACTIVITY_LAYOUT_MODE_UPDATE: function (e) {
         let { applicationId: t, layoutMode: n } = e;
         M.set(t, n);

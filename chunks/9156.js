@@ -145,8 +145,8 @@ function Z(e, t) {
     });
 }
 function F(e, t, n) {
-    let r = H(e, t, n);
-    j(e, { [t]: r });
+    let r = j(e, t, n);
+    H(e, { [t]: r });
 }
 function V(e, t) {
     var n;
@@ -154,7 +154,7 @@ function V(e, t) {
         i = null !== (n = null != e ? k[e] : null) && void 0 !== n ? n : {};
     h.default.keys(t).forEach((n) => {
         var a;
-        let s = H(e, n, t[n]);
+        let s = j(e, n, t[n]);
         (r[n] = s), (i[n] = { flags: null !== (a = s.flags) && void 0 !== a ? a : 0 });
     }),
         null != e &&
@@ -162,9 +162,9 @@ function V(e, t) {
                 ...k[e],
                 ...i
             }),
-        j(e, r);
+        H(e, r);
 }
-function j(e, t) {
+function H(e, t) {
     var n;
     let r = T[e],
         i = null !== (n = null == r ? void 0 : r.channel_overrides) && void 0 !== n ? n : {};
@@ -178,7 +178,7 @@ function j(e, t) {
                   }
     });
 }
-function H(e, t, n) {
+function j(e, t, n) {
     var r;
     let i = T[e],
         a = null !== (r = null == i ? void 0 : i.channel_overrides) && void 0 !== r ? r : {};

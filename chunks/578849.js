@@ -378,10 +378,10 @@ let G = (e, t) => {
     V = (e, ...t) => {
         console.log(`WARN: ${e}`, ...t);
     },
-    j = (e, t) => {
+    H = (e, t) => {
         !Z[`${e}/${t}`] && (console.log(`Deprecated as of ${e}. ${t}`), (Z[`${e}/${t}`] = !0));
     },
-    H = Error();
+    j = Error();
 function Y(e, t, { key: n }) {
     let r = 0,
         i = e[n],
@@ -397,15 +397,15 @@ function W(e) {
         'string' == typeof e.endScope && (e.endScope = { _wrap: e.endScope }),
         !(function (e) {
             if (Array.isArray(e.begin)) {
-                if (e.skip || e.excludeBegin || e.returnBegin) throw (F('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), H);
-                if ('object' != typeof e.beginScope || null === e.beginScope) throw (F('beginScope must be object'), H);
+                if (e.skip || e.excludeBegin || e.returnBegin) throw (F('skip, excludeBegin, returnBegin not compatible with beginScope: {}'), j);
+                if ('object' != typeof e.beginScope || null === e.beginScope) throw (F('beginScope must be object'), j);
                 Y(e, e.begin, { key: 'beginScope' }), (e.begin = I(e.begin, { joinWith: '' }));
             }
         })(e),
         !(function (e) {
             if (Array.isArray(e.end)) {
-                if (e.skip || e.excludeEnd || e.returnEnd) throw (F('skip, excludeEnd, returnEnd not compatible with endScope: {}'), H);
-                if ('object' != typeof e.endScope || null === e.endScope) throw (F('endScope must be object'), H);
+                if (e.skip || e.excludeEnd || e.returnEnd) throw (F('skip, excludeEnd, returnEnd not compatible with endScope: {}'), j);
+                if ('object' != typeof e.endScope || null === e.endScope) throw (F('endScope must be object'), j);
                 Y(e, e.end, { key: 'endScope' }), (e.end = I(e.end, { joinWith: '' }));
             }
         })(e);
@@ -443,7 +443,7 @@ var q = (function (e) {
     function b(e, t, n) {
         let r = '',
             i = '';
-        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (j('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), j('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
+        'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (H('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), H('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
         let a = {
             code: r,
             language: i
@@ -906,16 +906,16 @@ var q = (function (e) {
         highlightAll: C,
         highlightElement: A,
         highlightBlock: function (e) {
-            return j('10.7.0', 'highlightBlock will be removed entirely in v12.0'), j('10.7.0', 'Please use highlightElement now.'), A(e);
+            return H('10.7.0', 'highlightBlock will be removed entirely in v12.0'), H('10.7.0', 'Please use highlightElement now.'), A(e);
         },
         configure: function (e) {
             v = a(v, e);
         },
         initHighlighting: () => {
-            C(), j('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
+            C(), H('10.6.0', 'initHighlighting() deprecated.  Use highlightAll() now.');
         },
         initHighlightingOnLoad: function () {
-            C(), j('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
+            C(), H('10.6.0', 'initHighlightingOnLoad() deprecated.  Use highlightAll() now.');
         },
         registerLanguage: function (t, r) {
             let i = null;

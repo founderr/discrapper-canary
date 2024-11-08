@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(410575),
     s = n(906732),
     c = n(924301),
-    d = n(11868),
-    u = n(413605),
+    u = n(11868),
+    d = n(413605),
     m = n(451603),
     h = n(885714),
     f = n(314897),
@@ -102,8 +102,8 @@ function b(e) {
             });
             break;
         default:
-            switch ((0, u.VR)(R)) {
-                case u.wx.GROUP_DM:
+            switch ((0, d.VR)(R)) {
+                case d.wx.GROUP_DM:
                     D = (0, i.jsx)(I.Z, {
                         onTransitionToInviteChannel: M,
                         onAcceptInstantInvite: k,
@@ -112,7 +112,7 @@ function b(e) {
                         author: n
                     });
                     break;
-                case u.wx.FRIEND:
+                case d.wx.FRIEND:
                     D = (0, i.jsx)(C.Z, {
                         invite: R,
                         author: n,
@@ -120,7 +120,7 @@ function b(e) {
                     });
                     break;
                 default:
-                    if ((0, u.TY)(R)) {
+                    if ((0, d.TY)(R)) {
                         D = (0, i.jsx)(S.Z, {
                             onTransitionToInviteChannel: M,
                             onAcceptInstantInvite: k,
@@ -130,8 +130,8 @@ function b(e) {
                         });
                         break;
                     }
-                    if ((0, u.Tx)(R)) {
-                        D = (0, i.jsx)(d.ZP, {
+                    if ((0, d.Tx)(R)) {
+                        D = (0, i.jsx)(u.ZP, {
                             guildScheduledEvent: O,
                             guild: R.guild,
                             channel: R.channel,
@@ -141,7 +141,7 @@ function b(e) {
                         });
                         break;
                     }
-                    if ((0, u.$P)(R)) {
+                    if ((0, d.$P)(R)) {
                         D = (0, i.jsx)(T.Z, {
                             stageInstance: R.stage_instance,
                             guild: R.guild,
@@ -151,7 +151,7 @@ function b(e) {
                         });
                         break;
                     }
-                    (0, u.P1)(R) &&
+                    (0, d.P1)(R) &&
                         (D = (0, i.jsx)(g.Z, {
                             invite: R,
                             getAcceptInviteContext: b

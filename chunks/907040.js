@@ -45,8 +45,8 @@ var r,
     Z = n(253696),
     F = n(199257),
     V = n(636411),
-    j = n(380331),
-    H = n(170762),
+    H = n(380331),
+    j = n(170762),
     Y = n(22363),
     W = n(784222),
     K = n(141507),
@@ -201,13 +201,13 @@ t.Z = s.memo(
             eZ = (0, U.I5)(eB);
         s.useImperativeHandle(t, () => ({ onPickerOpen: e5 }));
         let { location: eF } = (0, E.O)(),
-            { page: eV, section: ej, object: eH, openPopoutType: eY } = em,
+            { page: eV, section: eH, object: ej, openPopoutType: eY } = em,
             eW = s.useMemo(
                 () => ({
                     ...eF,
-                    section: null != ej ? ej : J.jXE.EMOJI_PICKER_POPOUT
+                    section: null != eH ? eH : J.jXE.EMOJI_PICKER_POPOUT
                 }),
-                [eF, ej]
+                [eF, eH]
             ),
             { analyticsLocations: eK } = (0, I.ZP)(v.Z.EMOJI_PICKER),
             { diversitySurrogate: ez } = (0, f.cj)([b.ZP], () => ({ diversitySurrogate: b.ZP.diversitySurrogate })),
@@ -243,7 +243,7 @@ t.Z = s.memo(
         (0, Z.b)({
             intention: o,
             isBurstReaction: eU,
-            analyticsObject: eH
+            analyticsObject: ej
         });
         let e5 = s.useCallback(() => {
                 let e = e6.length > 0 ? e6[0].id : null;
@@ -251,9 +251,9 @@ t.Z = s.memo(
                     (0, Z.Z)({
                         intention: o,
                         isBurstReaction: eU,
-                        analyticsObject: eH
+                        analyticsObject: ej
                     });
-            }, [e6, ek, o, eU, eH]),
+            }, [e6, ek, o, eU, ej]),
             e7 = (0, W.rf)({
                 pickerIntention: o,
                 selectedChannel: u,
@@ -275,7 +275,7 @@ t.Z = s.memo(
                               emoji: e.emoji,
                               location: {
                                   ...eW,
-                                  object: null != eH ? eH : J.qAy.EMOJI,
+                                  object: null != ej ? ej : J.qAy.EMOJI,
                                   ...(null != eV && { page: eV })
                               },
                               pickerIntention: o,
@@ -417,7 +417,7 @@ t.Z = s.memo(
                                         contentTypes: to,
                                         children: (e) => {
                                             let { visibleContent: t, markAsDismissed: n } = e;
-                                            if (t === _.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, a.jsx)(H.Z, { markAsDismissed: () => n($.L.UNKNOWN) });
+                                            if (t === _.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP) return (0, a.jsx)(j.Z, { markAsDismissed: () => n($.L.UNKNOWN) });
                                         }
                                     }),
                                     ev
@@ -469,7 +469,7 @@ t.Z = s.memo(
                     }),
                     ev
                         ? null
-                        : (0, a.jsx)(j.Z, {
+                        : (0, a.jsx)(H.Z, {
                               className: l()(et.categoryList, eT),
                               emojiListRef: eM,
                               sectionDescriptors: e2,

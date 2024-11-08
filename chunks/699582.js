@@ -728,7 +728,7 @@ function V(e, t, n) {
     }),
         (r['[[initializedIntlObject]]'] = !0);
     var s = O(t),
-        n = H(n, 'any', 'date'),
+        n = j(n, 'any', 'date'),
         o = new X();
     (T = M(n, 'localeMatcher', 'string', new J('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = T);
     var d = v.DateTimeFormat,
@@ -738,9 +738,9 @@ function V(e, t, n) {
     var h = _['[[dataLocale]]'],
         p = n.timeZone;
     if (void 0 !== p && 'UTC' !== (p = ee(p))) throw RangeError('timeZone is not supported.');
-    for (var m in ((r['[[timeZone]]'] = p), (o = new X()), j))
-        if (u.call(j, m)) {
-            var g = M(n, m, 'string', j[m]);
+    for (var m in ((r['[[timeZone]]'] = p), (o = new X()), H))
+        if (u.call(H, m)) {
+            var g = M(n, m, 'string', H[m]);
             o['[[' + m + ']]'] = g;
         }
     var E,
@@ -758,8 +758,8 @@ function V(e, t, n) {
             : (function (e, t) {
                   return Y(e, t, !0);
               })(o, b)),
-    j))
-        if (u.call(j, m) && u.call(E, m)) {
+    H))
+        if (u.call(H, m) && u.call(E, m)) {
             var y = E[m];
             r['[[' + m + ']]'] = y;
         }
@@ -799,7 +799,7 @@ c(s.NumberFormat.prototype, 'resolvedOptions', {
         value: F
     }),
     c(F, 'prototype', { writable: !1 });
-var j = {
+var H = {
     weekday: ['narrow', 'short', 'long'],
     era: ['narrow', 'short', 'long'],
     year: ['2-digit', 'numeric'],
@@ -810,7 +810,7 @@ var j = {
     second: ['2-digit', 'numeric'],
     timeZoneName: ['short', 'long']
 };
-function H(e, t, n) {
+function j(e, t, n) {
     if (void 0 === e) e = null;
     else {
         var r = et(e);
@@ -824,8 +824,8 @@ function Y(e, t, n) {
     for (var r, i = -1 / 0, a = 0, s = t.length; a < s; ) {
         var o = t[a],
             l = 0;
-        for (var c in j)
-            if (u.call(j, c)) {
+        for (var c in H)
+            if (u.call(H, c)) {
                 var f = e['[[' + c + ']]'],
                     _ = u.call(o, c) ? o[c] : void 0;
                 if (void 0 === f && void 0 !== _) l -= 20;
@@ -882,7 +882,7 @@ function K(e, t) {
         d = n['[[dataLocale]]'],
         f = v.DateTimeFormat['[[localeData]]'][d].calendars,
         _ = n['[[calendar]]'];
-    for (var h in j)
+    for (var h in H)
         if (u.call(n, '[[' + h + ']]')) {
             var p,
                 m,
@@ -960,7 +960,7 @@ var z = (s.__localeSensitiveProtos = {
         if (isNaN(e)) return 'Invalid Date';
         var t = arguments[0],
             n = arguments[1],
-            n = H(n, 'any', 'all');
+            n = j(n, 'any', 'all');
         return K(new F(t, n), e);
     }),
     (z.Date.toLocaleDateString = function () {
@@ -969,7 +969,7 @@ var z = (s.__localeSensitiveProtos = {
         if (isNaN(e)) return 'Invalid Date';
         var t = arguments[0],
             n = arguments[1],
-            n = H(n, 'date', 'date');
+            n = j(n, 'date', 'date');
         return K(new F(t, n), e);
     }),
     (z.Date.toLocaleTimeString = function () {
@@ -978,7 +978,7 @@ var z = (s.__localeSensitiveProtos = {
         if (isNaN(e)) return 'Invalid Date';
         var t = arguments[0],
             n = arguments[1],
-            n = H(n, 'time', 'time');
+            n = j(n, 'time', 'time');
         return K(new F(t, n), e);
     }),
     c(s, '__applyLocaleSensitivePrototypes', {

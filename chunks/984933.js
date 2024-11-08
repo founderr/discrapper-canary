@@ -151,14 +151,14 @@ function V(e) {
     if (null == t) return !1;
     (O[t] = void 0), R === t && F(t);
 }
-function j(e) {
+function H(e) {
     let {
         channel: { guild_id: t }
     } = e;
     if (null == t) return !1;
     (O[t] = void 0), t === R && F(t);
 }
-function H(e) {
+function j(e) {
     let { guildId: t } = e;
     (O[t] = void 0), t === R && F(t);
 }
@@ -290,8 +290,8 @@ class z extends (r = c.ZP.Store) {
             if (E.default.getId() !== n.id) return !1;
             (O[t] = void 0), t === R && F(t);
         },
-        CHANNEL_CREATE: j,
-        CHANNEL_DELETE: j,
+        CHANNEL_CREATE: H,
+        CHANNEL_DELETE: H,
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = !1;
@@ -301,11 +301,11 @@ class z extends (r = c.ZP.Store) {
             }
             return n;
         },
-        GUILD_ROLE_CREATE: H,
-        GUILD_ROLE_UPDATE: H,
-        GUILD_ROLE_DELETE: H,
-        IMPERSONATE_UPDATE: H,
-        IMPERSONATE_STOP: H,
+        GUILD_ROLE_CREATE: j,
+        GUILD_ROLE_UPDATE: j,
+        GUILD_ROLE_DELETE: j,
+        IMPERSONATE_UPDATE: j,
+        IMPERSONATE_STOP: j,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             return null == t && null != x ? W(v.Z.getChannel(x), null) : W(v.Z.getChannel(t), t);

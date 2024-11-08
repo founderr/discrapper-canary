@@ -101,7 +101,7 @@ function D(e) {
 }
 t.ZP = i.forwardRef(function (e, t) {
     var n, a, c, v, I, R, L, x, w, M;
-    let { sound: P, channel: k, containerClassName: U, className: G, focused: B, forceSecondaryActions: Z = !1, interactive: F = !0, enableSecondaryActions: V = !1, suppressPlaySound: j, onMouseEnter: H, onSelectItem: Y, analyticsLocations: W, buttonOverlay: K = S.Pb.PLAY, showLockForDisabledSound: z = !0, inNitroLockedSection: q = !1, refreshEnabled: Q = !1, isAnimated: X = !0, isPlayingSoundOverride: J, isSoundmoji: $, overrideTooltipPosition: ee, ...et } = e,
+    let { sound: P, channel: k, containerClassName: U, className: G, focused: B, forceSecondaryActions: Z = !1, interactive: F = !0, enableSecondaryActions: V = !1, suppressPlaySound: H, onMouseEnter: j, onSelectItem: Y, analyticsLocations: W, buttonOverlay: K = S.Pb.PLAY, showLockForDisabledSound: z = !0, inNitroLockedSection: q = !1, refreshEnabled: Q = !1, isAnimated: X = !0, isPlayingSoundOverride: J, isSoundmoji: $, overrideTooltipPosition: ee, ...et } = e,
         { name: en, emojiId: er, emojiName: ei } = P,
         ea = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         es = (0, y.z)(P, null == k ? void 0 : k.guild_id),
@@ -143,7 +143,7 @@ t.ZP = i.forwardRef(function (e, t) {
             Y();
             return;
         }
-        j || eo(W);
+        H || eo(W);
     }
     let eD = O({
             sound: P,
@@ -152,7 +152,7 @@ t.ZP = i.forwardRef(function (e, t) {
             refreshEnabled: Q
         }),
         eL = (e) =>
-            j || eS || Q
+            H || eS || Q
                 ? eS && z && eR
                     ? (0, r.jsx)(d.LockIcon, {
                           size: 'xs',
@@ -188,7 +188,7 @@ t.ZP = i.forwardRef(function (e, t) {
                 : (0, r.jsxs)('div', {
                       className: C.buttonOverlay,
                       children: [
-                          !Q && (0, r.jsx)('div', { className: s()({ [C.buttonOverlayBackground]: !j }) }),
+                          !Q && (0, r.jsx)('div', { className: s()({ [C.buttonOverlayBackground]: !H }) }),
                           (0, r.jsx)('div', {
                               className: Q ? C.buttonOverlayActionsRefresh : C.buttonOverlayActions,
                               children:
@@ -214,7 +214,7 @@ t.ZP = i.forwardRef(function (e, t) {
         (0, r.jsxs)('li', {
             ref: t,
             className: s()(C.soundButtonWrapper, U),
-            onMouseEnter: H,
+            onMouseEnter: j,
             children: [
                 (0, r.jsx)(d.Tooltip, {
                     text: P.name,
@@ -237,7 +237,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                     [C.animated]: X,
                                     [C.playing]: null != J ? J : eu,
                                     [C.previewing]: ec,
-                                    [C.hoverActiveBackground]: j && !Q,
+                                    [C.hoverActiveBackground]: H && !Q,
                                     [C.soundButtonInteractive]: F && !Q,
                                     [C.soundButtonInteractiveRefresh]: F && Q,
                                     [C.buttonDisabled]: !F && !Z,

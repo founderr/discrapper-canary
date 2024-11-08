@@ -242,11 +242,11 @@ function V(e) {
     let { guildId: t, threads: n } = e;
     return !!(null != n && (0, b.Kh)()) && E.Z.getGuildId() === t && U(v.default.keys(n).map((e) => n[e].first_message));
 }
-function j(e) {
+function H(e) {
     let { guildId: t, firstMessages: n } = e;
     return !!(null != n && (0, b.Kh)()) && E.Z.getGuildId() === t && U(n, { forceBatchScan: !0 });
 }
-function H(e) {
+function j(e) {
     (0, N.U)();
     let { channelId: t } = e;
     return !!(null != t && (0, b.Kh)()) && t === g.Z.getChannelId() && K(t);
@@ -310,14 +310,14 @@ class z extends u.Z {
             (r = {
                 LOAD_MESSAGES_SUCCESS: Z,
                 LOAD_FORUM_POSTS: V,
-                LOAD_THREADS_SUCCESS: j,
-                LOAD_ARCHIVED_THREADS_SUCCESS: j,
+                LOAD_THREADS_SUCCESS: H,
+                LOAD_ARCHIVED_THREADS_SUCCESS: H,
                 MESSAGE_CREATE: B,
                 MESSAGE_UPDATE: G,
                 LOGOUT: x,
                 SEARCH_FINISH: F,
                 MOD_VIEW_SEARCH_FINISH: F,
-                CHANNEL_SELECT: H,
+                CHANNEL_SELECT: j,
                 LOAD_PINNED_MESSAGES_SUCCESS: F,
                 USER_SETTINGS_PROTO_UPDATE: Y,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: W

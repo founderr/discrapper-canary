@@ -57,8 +57,8 @@ let u = i.memo(
             F = i.useRef([]),
             {
                 totalHeight: V,
-                rowDescriptors: j,
-                sectionDescriptors: H
+                rowDescriptors: H,
+                sectionDescriptors: j
             } = i.useMemo(() => {
                 let e = 0,
                     t = null != m,
@@ -99,7 +99,7 @@ let u = i.memo(
                     sectionDescriptors: a
                 };
             }, [k, G, U, B, u, p, m, P]);
-        (Z.current = H), (F.current = j);
+        (Z.current = j), (F.current = H);
         let Y = i.useCallback(() => {
             var e;
             let t = null === (e = x.current) || void 0 === e ? void 0 : e.getScrollerNode();
@@ -226,11 +226,11 @@ let u = i.memo(
                     r = [],
                     i = P();
                 null != h && R < i ? r.push(h()) : (n += i);
-                for (let i = 0; i < H.length; i++) {
+                for (let i = 0; i < j.length; i++) {
                     let {
                             firstRowIndex: a,
                             offset: { top: s, bottom: o }
-                        } = H[i],
+                        } = j[i],
                         l = o - s;
                     if (0 === l) continue;
                     let u = U(i),
@@ -267,7 +267,7 @@ let u = i.memo(
                     visibleItems: r,
                     listOffset: n
                 };
-            }, [k, G, U, B, u, c, d, _, f, R, H, b, h, P, D]),
+            }, [k, G, U, B, u, c, d, _, f, R, j, b, h, P, D]),
             q = i.useMemo(() => {
                 var e, t, n;
                 return {

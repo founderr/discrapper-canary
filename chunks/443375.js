@@ -44,8 +44,8 @@ var i = n(120356),
     Z = n(553375),
     F = n(228168),
     V = n(981631),
-    j = n(701488),
-    H = n(388032),
+    H = n(701488),
+    j = n(388032),
     Y = n(617114),
     W = n(69035);
 function K(e) {
@@ -151,7 +151,7 @@ function K(e) {
                 : (0, d.Z)(K) && null != q
                   ? (0, r.jsx)(M.Z, {
                         variant: 'text-xs/normal',
-                        text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: q.name }),
+                        text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: q.name }),
                         onClick: () => {
                             (0, I.X)(q.id), eo({ action: 'OPEN_VOICE_GUILD' }), null == J || J();
                         }
@@ -178,7 +178,7 @@ function K(e) {
         },
         eg = () => {
             var e, t, n, i;
-            return (null === (e = K.party) || void 0 === e ? void 0 : e.size) == null && K.application_id === j.Zc
+            return (null === (e = K.party) || void 0 === e ? void 0 : e.size) == null && K.application_id === H.Zc
                 ? (0, r.jsxs)('div', {
                       className: W.gameState,
                       children: [
@@ -188,7 +188,7 @@ function K(e) {
                           }),
                           (0, r.jsx)(M.Z, {
                               variant: 'text-xs/normal',
-                              text: H.intl.formatToPlainString(H.t['u//9Bw'], {
+                              text: j.intl.formatToPlainString(j.t['u//9Bw'], {
                                   count: '0',
                                   max: null !== (i = null == z ? void 0 : z.getMaxParticipants()) && void 0 !== i ? i : 0
                               })
@@ -205,7 +205,7 @@ function K(e) {
                             }),
                             (0, r.jsx)(M.Z, {
                                 variant: 'text-xs/normal',
-                                text: H.intl.formatToPlainString(H.t['u//9Bw'], {
+                                text: j.intl.formatToPlainString(j.t['u//9Bw'], {
                                     count: K.party.size[0],
                                     max: K.party.size[1]
                                 })

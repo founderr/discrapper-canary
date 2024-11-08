@@ -39,8 +39,8 @@ var r = n(200651),
     Z = n(429142),
     F = n(813744),
     V = n(311476),
-    j = n(892254),
-    H = n(210887),
+    H = n(892254),
+    j = n(210887),
     Y = n(978781),
     W = n(819640),
     K = n(594174),
@@ -87,7 +87,7 @@ t.Z = function (e) {
         { pathname: a } = (0, l.TH)(),
         f = (0, q.getPlatform)(),
         v = u.tq || u.Em,
-        z = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? er.BRd.DARK : void 0)),
+        z = (0, c.e7)([j.Z], () => (j.Z.darkSidebar ? er.BRd.DARK : void 0)),
         X = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
         [en, el, eu] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
         [ec, ed] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
@@ -127,7 +127,7 @@ t.Z = function (e) {
             }
         );
     return (0, r.jsx)(
-        j.Z,
+        H.Z,
         {
             children: (0, r.jsx)(b.Z, {
                 children: (0, r.jsxs)(_.RedesignIconContextProvider, {

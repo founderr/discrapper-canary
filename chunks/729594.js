@@ -100,11 +100,11 @@ i.prototype.parse = function (e, t, n) {
         }
     var V = E.indexOf('#');
     -1 !== V && ((this.hash = E.substr(V)), (E = E.slice(0, V)));
-    var j = E.indexOf('?');
-    if ((-1 !== j ? ((this.search = E.substr(j)), (this.query = E.substr(j + 1)), t && (this.query = m.parse(this.query)), (E = E.slice(0, j))) : t && ((this.search = ''), (this.query = {})), E && (this.pathname = E), p[S] && this.hostname && !this.pathname && (this.pathname = '/'), this.pathname || this.search)) {
+    var H = E.indexOf('?');
+    if ((-1 !== H ? ((this.search = E.substr(H)), (this.query = E.substr(H + 1)), t && (this.query = m.parse(this.query)), (E = E.slice(0, H))) : t && ((this.search = ''), (this.query = {})), E && (this.pathname = E), p[S] && this.hostname && !this.pathname && (this.pathname = '/'), this.pathname || this.search)) {
         var G = this.pathname || '',
-            H = this.search || '';
-        this.path = G + H;
+            j = this.search || '';
+        this.path = G + j;
     }
     return (this.href = this.format()), this;
 };

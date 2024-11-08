@@ -82,7 +82,7 @@ function F(e) {
                           let e = n.toArray().find((e) => e.type === y.fO.USER && e.id !== t && !e.ringing);
                           r = null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : t;
                       }
-                      let [o] = j(e);
+                      let [o] = H(e);
                       if (o !== y.dF.AUTO && o !== y.dF.NONE) {
                           let e = n.getParticipant(o);
                           (null == e || (e.type === y.fO.STREAM && null == h.Z.getActiveStreamForStreamKey(e.id))) && (o = y.dF.NONE);
@@ -98,13 +98,13 @@ function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O;
     return F((t) => t.updateParticipant(e), t);
 }
-function j(e) {
+function H(e) {
     var t;
     let n = g.Z.getChannel(e),
         r = (null == n ? void 0 : n.isDM()) ? y.dF.AUTO : y.dF.NONE;
     return null !== (t = L[e]) && void 0 !== t ? t : [r, y.dF.NONE];
 }
-function H(e) {
+function j(e) {
     if (null == L[e]) return !1;
     let [t] = L[e];
     return t !== y.dF.NONE;
@@ -119,7 +119,7 @@ function Y(e) {
         });
     let t = x[e],
         n = performance.now(),
-        r = H(e);
+        r = j(e);
     if (t.lastUpdate > 0) {
         let e = n - t.lastUpdate;
         t[r ? 'focusDurationMs' : 'gridDurationMs'] += e;
@@ -128,8 +128,8 @@ function Y(e) {
 }
 function W(e, t) {
     Y(e);
-    let n = H(e);
-    null == t ? delete L[e] : (L[e] = t), n !== H(e) && x[e].toggleCount++;
+    let n = j(e);
+    null == t ? delete L[e] : (L[e] = t), n !== j(e) && x[e].toggleCount++;
 }
 function K(e) {
     return e.size(T.sI.STREAM) > 0 || e.size(T.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
@@ -233,7 +233,7 @@ class er extends (r = l.ZP.PersistedStore) {
         return null !== (t = k[e]) && void 0 !== t && t;
     }
     getSelectedParticipantId(e) {
-        let [t, n] = j(e);
+        let [t, n] = H(e);
         return t === y.dF.NONE ? null : t !== y.dF.AUTO ? t : n === y.dF.NONE || n === y.dF.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
@@ -333,7 +333,7 @@ N(er, 'displayName', 'ChannelRTCStore'),
                 r.toArray(T.sI.STREAM).forEach((e) => {
                     (0, y._5)(e) && r.updateParticipant(e.user.id);
                 });
-            let [, i] = j(t);
+            let [, i] = H(t);
             if ((W(t, [null != n ? n : y.dF.NONE, i]), (0, _.DB)(n))) {
                 try {
                     let { ownerId: e } = (0, _.my)(n);
@@ -371,7 +371,7 @@ N(er, 'displayName', 'ChannelRTCStore'),
             let { channelId: t, selfStreamHidden: n } = e,
                 r = p.default.getId();
             if (n) {
-                let [e] = j(t);
+                let [e] = H(t);
                 (0, _.DB)(e) && e.includes(r) && W(t, null);
             }
             V(r, [t]);

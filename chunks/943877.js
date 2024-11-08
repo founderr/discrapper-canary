@@ -571,14 +571,14 @@ function S(e) {
     }, [N, b, B, T, e.placeholderValue]),
         C && Object.keys(B).length < Object.keys(G).length && Z((B = { ...G })),
         null == C && Object.keys(B).length === Object.keys(G).length && (Z((B = {})), L(h(e.placeholderValue, b, N, T)));
-    let j = O && Object.keys(B).length >= Object.keys(G).length ? O : D,
-        H = (t) => {
+    let H = O && Object.keys(B).length >= Object.keys(G).length ? O : D,
+        j = (t) => {
             if (e.isDisabled || e.isReadOnly) return;
             let n = Object.keys(B),
                 i = Object.keys(G);
             null == t ? (R(null), L(h(e.placeholderValue, b, N, T)), Z({})) : n.length >= i.length || (n.length === i.length - 1 && G.dayPeriod && !B.dayPeriod && 'dayPeriod' !== F.current) ? R((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ()))) : L(t), (F.current = null);
         },
-        Y = (0, s.useMemo)(() => j.toDate(y), [j, y]),
+        Y = (0, s.useMemo)(() => H.toDate(y), [H, y]),
         W = (0, s.useMemo)(
             () =>
                 k.formatToParts(Y).map((e) => {
@@ -655,13 +655,13 @@ function S(e) {
                                         };
                                 }
                             return {};
-                        })(j, e.type, U),
+                        })(H, e.type, U),
                         isPlaceholder: o,
                         placeholder: l,
                         isEditable: s
                     };
                 }),
-            [Y, B, k, U, j, N, i]
+            [Y, B, k, U, H, N, i]
         );
     G.era && B.year && !B.era ? ((B.era = !0), Z({ ...B })) : !G.era && B.era && (delete B.era, Z({ ...B }));
     let K = (e) => {
@@ -669,7 +669,7 @@ function S(e) {
         },
         z = (e, t) => {
             if (B[e])
-                H(
+                j(
                     (function (e, t, n, r) {
                         switch (t) {
                             case 'era':
@@ -692,13 +692,13 @@ function S(e) {
                                         hourCycle: r.hour12 ? 12 : 24
                                     });
                             }
-                    })(j, e, t, U)
+                    })(H, e, t, U)
                 );
             else {
                 K(e);
                 let t = Object.keys(B),
                     n = Object.keys(G);
-                (t.length >= n.length || (t.length === n.length - 1 && G.dayPeriod && !B.dayPeriod)) && H(j);
+                (t.length >= n.length || (t.length === n.length - 1 && G.dayPeriod && !B.dayPeriod)) && j(H);
             }
         },
         q = e.isInvalid || 'invalid' === e.validationState || l(O, e.minValue, e.maxValue);
@@ -706,7 +706,7 @@ function S(e) {
         value: O,
         dateValue: Y,
         calendar: N,
-        setValue: H,
+        setValue: j,
         segments: W,
         dateFormatter: k,
         validationState: e.validationState || (q ? 'invalid' : null),
@@ -730,7 +730,7 @@ function S(e) {
         },
         setSegment(e, t) {
             K(e),
-                H(
+                j(
                     (function (e, t, n, r) {
                         switch (t) {
                             case 'day':
@@ -756,25 +756,25 @@ function S(e) {
                                 case 'second':
                                     return e.set({ [t]: n });
                             }
-                    })(j, e, t, U)
+                    })(H, e, t, U)
                 );
         },
         confirmPlaceholder() {
             if (e.isDisabled || e.isReadOnly) return;
             let t = Object.keys(B),
                 n = Object.keys(G);
-            t.length === n.length - 1 && G.dayPeriod && !B.dayPeriod && (Z((B = { ...G })), H(j.copy()));
+            t.length === n.length - 1 && G.dayPeriod && !B.dayPeriod && (Z((B = { ...G })), j(H.copy()));
         },
         clearSegment(t) {
             delete B[t], (F.current = t), Z({ ...B });
             let n = h(e.placeholderValue, b, N, T),
-                r = j;
-            if ('dayPeriod' === t && 'hour' in j && 'hour' in n) {
-                let e = j.hour >= 12,
+                r = H;
+            if ('dayPeriod' === t && 'hour' in H && 'hour' in n) {
+                let e = H.hour >= 12,
                     t = n.hour >= 12;
-                e && !t ? (r = j.set({ hour: j.hour - 12 })) : !e && t && (r = j.set({ hour: j.hour + 12 }));
-            } else t in j && (r = j.set({ [t]: n[t] }));
-            R(null), H(r);
+                e && !t ? (r = H.set({ hour: H.hour - 12 })) : !e && t && (r = H.set({ hour: H.hour + 12 }));
+            } else t in H && (r = H.set({ [t]: n[t] }));
+            R(null), j(r);
         },
         formatValue(e) {
             if (!O) return '';

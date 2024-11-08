@@ -46,8 +46,8 @@ function b(e) {
         Z = n.getAvatarURL(v, (0, c.getAvatarSize)(A)),
         F = (0, o._i)((0, d.ZP)(Z, B, !1)),
         V = (0, f.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : F).hex,
-        j = S(A),
-        H = O - C - D;
+        H = S(A),
+        j = O - C - D;
     return (0, r.jsxs)('svg', {
         className: I.mask,
         viewBox: '0 0 '.concat(R, ' ').concat(O),
@@ -68,9 +68,9 @@ function b(e) {
                     }),
                     (0, r.jsx)('circle', {
                         fill: 'black',
-                        cx: j + N - D,
-                        cy: H,
-                        r: j
+                        cx: H + N - D,
+                        cy: j,
+                        r: H
                     })
                 ]
             }),

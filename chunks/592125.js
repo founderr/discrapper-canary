@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return H;
+        return j;
     }
 }),
     n(47120),
@@ -46,15 +46,15 @@ let C = new E.Z('ChannelStore'),
     Z = 0,
     F = {},
     V = 0,
-    j = 0;
-class H {
+    H = 0;
+class j {
     static loadAllMissingChannels() {
         let e = y.Z.getGuildIds().filter((e) => !G.has(e));
         return this.loadGuildIds(e);
     }
     static loadGuildFromChannelId(e) {
         var t;
-        return null == e ? null : H.loadGuildIds([null === (t = z(e)) || void 0 === t ? void 0 : t.guild_id]);
+        return null == e ? null : j.loadGuildIds([null === (t = z(e)) || void 0 === t ? void 0 : t.guild_id]);
     }
     static loadGuildIds(e) {
         let t = e.filter(S.lm);
@@ -113,8 +113,8 @@ function Y(e, t, n) {
         return;
     }
     let [a, s] = i;
-    for (let n of ((0, m.ZP)(a), 0 !== t && (j += 1), G.add(e), p.Z.restored(e), u.Z.mark('\u2757', 'loaded guild channels (guild: '.concat(e, ')'), s), a)) !Object.hasOwn(O, n.id) && $((0, I._H)(n));
-    C.verbose('hydration complete (guild: '.concat(e, ', channels: ').concat(a.length, ', guilds_loaded: ').concat(j, ')'));
+    for (let n of ((0, m.ZP)(a), 0 !== t && (H += 1), G.add(e), p.Z.restored(e), u.Z.mark('\u2757', 'loaded guild channels (guild: '.concat(e, ')'), s), a)) !Object.hasOwn(O, n.id) && $((0, I._H)(n));
+    C.verbose('hydration complete (guild: '.concat(e, ', channels: ').concat(a.length, ', guilds_loaded: ').concat(H, ')'));
 }
 function W(e, t, n) {
     if (!Object.hasOwn(O, e) && !Object.hasOwn(L, e) && !Object.hasOwn(w, e) && !Object.hasOwn(U, e) && 1 === t) {

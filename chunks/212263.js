@@ -34,8 +34,8 @@ t.Z = (e) => {
     let w,
         { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
         F = (0, o.e7)([b.Z], () => b.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
-        [V, j] = i.useState(!1),
-        H = () => {
+        [V, H] = i.useState(!1),
+        j = () => {
             (0, N.A3)(k), (0, h.z)(), M();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
@@ -130,7 +130,7 @@ t.Z = (e) => {
                                     onClose: P,
                                     trialOffer: K,
                                     discountOffer: z,
-                                    children: L.intl.format(L.t.se13Fh, { onClick: H })
+                                    children: L.intl.format(L.t.se13Fh, { onClick: j })
                                 })
                               : (0, r.jsxs)(r.Fragment, {
                                     children: [
@@ -145,7 +145,7 @@ t.Z = (e) => {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: x.premiumPromoDescription,
-                                            children: L.intl.format(L.t.se13Fh, { onClick: H })
+                                            children: L.intl.format(L.t.se13Fh, { onClick: j })
                                         })
                                     ]
                                 }),
@@ -160,10 +160,10 @@ t.Z = (e) => {
                                   size: l.Button.Sizes.SMALL,
                                   color: l.Button.Colors.GREEN,
                                   onClick: () => {
-                                      j(!0);
+                                      H(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      j(!1), e && P();
+                                      H(!1), e && P();
                                   },
                                   buttonText: q ? L.intl.string(L.t['Gd/XHB']) : L.intl.string(L.t.P3etAg)
                               })

@@ -5,8 +5,8 @@ var i,
     o = n(200651),
     s = n(192379),
     c = n(120356),
-    d = n.n(c),
-    u = n(481060),
+    u = n.n(c),
+    d = n(481060),
     m = n(388032),
     h = n(275906);
 let f = {
@@ -17,18 +17,18 @@ class p extends (a = s.PureComponent) {
     render() {
         let { children: e, className: t, textClassName: n, type: i = f.BLOCK, style: r } = this.props;
         return (0, o.jsxs)('div', {
-            className: d()(t, i),
+            className: u()(t, i),
             style: r,
             children: [
-                (0, o.jsxs)(u.Text, {
+                (0, o.jsxs)(d.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
                     className: h.pro,
                     children: [m.intl.string(m.t['8tvIiI']), ':']
                 }),
-                (0, o.jsx)(u.Text, {
-                    className: d()(h.tip, n),
+                (0, o.jsx)(d.Text, {
+                    className: u()(h.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })

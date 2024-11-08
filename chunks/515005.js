@@ -24,15 +24,15 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
     A = i.memo(function (e) {
         let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: A, gutterWidth: N, inspectedStickerPosition: C, isScrolling: R, isUsingKeyboardNavigation: O, onInspect: D, onSelect: L, rowIndex: x, stickerClassName: w, stickerDescriptors: M, stickerPadding: P = y, stickerSize: k = T, ownedStickerPacks: U, enlargeOnInteraction: G = !1, channel: B, currentUser: Z, checkSendability: F = !0 } = e,
             { location: V } = (0, d.O)(),
-            j = k + 2 * P,
-            H = i.useMemo(
+            H = k + 2 * P,
+            j = i.useMemo(
                 () => ({
                     gridColumnGap: N,
-                    gridTemplateColumns: 'repeat(auto-fill, '.concat(j, 'px)'),
-                    height: j,
-                    paddingRight: t ? void 0 : j
+                    gridTemplateColumns: 'repeat(auto-fill, '.concat(H, 'px)'),
+                    height: H,
+                    paddingRight: t ? void 0 : H
                 }),
-                [t, N, j]
+                [t, N, H]
             ),
             Y = i.useMemo(
                 () => ({
@@ -45,7 +45,7 @@ let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
             [W, K] = (0, f.Z)(null, 300);
         return (0, r.jsx)('div', {
             className: b.row,
-            style: H,
+            style: j,
             ...(null == A ? void 0 : A(x)),
             children: M.map((e) => {
                 var d;

@@ -70,8 +70,8 @@ let D = (e) => {
         }
         let F = (0, a.e7)([g.Z], () => (null !== t && t.type === c.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
             { useTransparentIcons: V } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
-            j = (0, a.e7)([E.Z], () => E.Z.isFocused()),
-            H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
+            H = (0, a.e7)([E.Z], () => E.Z.isFocused()),
+            j = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
             W = (0, b.C1)(P, O(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
@@ -150,7 +150,7 @@ let D = (e) => {
                 ? (0, r.jsx)(y.Z, {
                       className: R.__invalid_guildIcon,
                       guild: F,
-                      shouldAnimate: !H && j
+                      shouldAnimate: !j && H
                   })
                 : null;
         x = G && 'CREATE_EMOJI' === t.type ? C.intl.string(C.t.XCmLfH) : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (K.has(t.guildId) ? C.intl.string(C.t['/K2RDA']) : C.intl.string(C.t.NZI2Zm)) : t.allNamesString;

@@ -133,7 +133,7 @@ e.exports = function (e) {
             variants: [B(), B('#'), B('##'), B('###'), Z(), Z('#'), Z('##'), Z('###')]
         },
         V = { match: r(/`/, v, /`/) },
-        j = [
+        H = [
             V,
             {
                 className: 'variable',
@@ -144,7 +144,7 @@ e.exports = function (e) {
                 match: `\\$${E}+`
             }
         ],
-        H = {
+        j = {
             match: /(@|#(un)?)available/,
             className: 'keyword',
             starts: {
@@ -163,7 +163,7 @@ e.exports = function (e) {
             match: r(/@/, i(...S))
         },
         W = [
-            H,
+            j,
             Y,
             {
                 className: 'meta',
@@ -222,7 +222,7 @@ e.exports = function (e) {
                 ...x,
                 P,
                 F,
-                ...j,
+                ...H,
                 ...W,
                 K
             ]
@@ -286,7 +286,7 @@ e.exports = function (e) {
     for (let e of F.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = C;
-        let n = [...R, ...D, ...x, P, F, ...j];
+        let n = [...R, ...D, ...x, P, F, ...H];
         t.contains = [
             ...n,
             {
@@ -340,7 +340,7 @@ e.exports = function (e) {
             ...x,
             P,
             F,
-            ...j,
+            ...H,
             ...W,
             K,
             q

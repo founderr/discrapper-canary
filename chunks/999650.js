@@ -149,7 +149,7 @@ function V(e, t, n) {
         .map((e) => ({ text: e }))
         .value();
 }
-function j(e, t) {
+function H(e, t) {
     let n,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -191,7 +191,7 @@ function j(e, t) {
             };
         });
 }
-function H() {
+function j() {
     return h.Z.getSearchType() === b.aib.GUILD;
 }
 function Y() {
@@ -214,7 +214,7 @@ function z() {
                     key: w(T.intl.string(T.t['1TUdFh'])),
                     plainText: T.intl.string(T.t['1TUdFh']),
                     validator: Y,
-                    getAutocompletions: j
+                    getAutocompletions: H
                 },
                 [b.dCx.ANSWER_USERNAME_FROM]: {
                     follows: [b.dCx.FILTER_FROM],
@@ -230,7 +230,7 @@ function z() {
                     key: w(T.intl.string(T.t.i96lOz)),
                     plainText: T.intl.string(T.t.i96lOz),
                     validator: Y,
-                    getAutocompletions: j
+                    getAutocompletions: H
                 },
                 [b.dCx.ANSWER_USERNAME_MENTIONS]: {
                     follows: [b.dCx.FILTER_MENTIONS],
@@ -327,7 +327,7 @@ function z() {
                     componentType: 'FILTER',
                     key: w(T.intl.string(T.t.WNpFHR)),
                     plainText: T.intl.string(T.t.WNpFHR),
-                    validator: H,
+                    validator: j,
                     getAutocompletions(e, t, n) {
                         '#' === e[0] && (e = e.substring(1));
                         let r = v.ZP.queryChannels({

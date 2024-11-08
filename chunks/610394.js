@@ -138,10 +138,10 @@ function V(e, t) {
         x();
     }
 }
-function j() {
+function H() {
     L() ? V(E.v.enabled, E.v.global) : C && ((C = !1), (0, g.vR)(!1), x());
 }
-class H extends (r = o.ZP.Store) {
+class j extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(_.ZP, p.default, f.Z);
     }
@@ -165,7 +165,7 @@ class H extends (r = o.ZP.Store) {
     }
 }
 (s = 'OverlayStore-v3'),
-    (a = 'displayName') in (i = H)
+    (a = 'displayName') in (i = j)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -173,9 +173,9 @@ class H extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new H(l.Z, {
-        CONNECTION_OPEN: j,
-        EXPERIMENT_OVERRIDE_BUCKET: j,
+    (t.Z = new j(l.Z, {
+        CONNECTION_OPEN: H,
+        EXPERIMENT_OVERRIDE_BUCKET: H,
         OVERLAY_SET_ENABLED: function (e) {
             let { enabled: t, global: n } = e;
             V(t, n);

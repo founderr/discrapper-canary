@@ -32,8 +32,8 @@ let k = ['name', 'description', 'icon', 'splash', 'banner', 'homeHeader', 'afkCh
     Z = {},
     F = !1,
     V = null,
-    j = null,
-    H = 0,
+    H = null,
+    j = 0,
     Y = w.BpS.NONE,
     W = null,
     K = {
@@ -73,7 +73,7 @@ function er(e) {
     });
 }
 function ei() {
-    (G = !1), (B = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (j = null), (H = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
+    (G = !1), (B = w.QZA.CLOSED), (s = o = null), (F = !1), (V = null), (H = null), (j = 0), (X = null), (ee = null), (et = null), (r = null), (i = null), (a = null), (Y = w.BpS.NONE), (u = void 0);
 }
 function ea(e) {
     if (null == o) return !1;
@@ -221,8 +221,8 @@ class el extends (d = v.ZP.Store) {
             embedChannelId: V,
             mfaLevel: Y,
             searchQuery: a,
-            vanityURLCode: j,
-            vanityURLUses: H,
+            vanityURLCode: H,
+            vanityURLUses: j,
             originalGuild: s,
             hasChanges: this.hasChanges(),
             guildMetadata: Q,
@@ -301,7 +301,7 @@ class el extends (d = v.ZP.Store) {
                   },
                   GUILD_SETTINGS_SET_VANITY_URL: function (e) {
                       var t;
-                      (j = null !== (t = e.code) && void 0 !== t ? t : null), (H = e.uses);
+                      (H = null !== (t = e.code) && void 0 !== t ? t : null), (j = e.uses);
                   },
                   GUILD_SETTINGS_SET_MFA_SUCCESS: function (e) {
                       let { level: t } = e;

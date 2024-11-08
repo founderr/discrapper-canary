@@ -51,9 +51,9 @@ function _(e, t) {
             V = (w + U + _(F, M)) | 0;
         (V = (V + P + _((F = (F + k) | 0), k)) | 0), (V = (V + B + _((F = (F + Z) | 0), Z)) | 0), (t[b] = V), (t[b + 1] = F);
     }
-    for (var j = 0; j < 160; j += 2) {
-        (V = t[j]), (F = t[j + 1]);
-        var H,
+    for (var H = 0; H < 160; H += 2) {
+        (V = t[H]), (F = t[H + 1]);
+        var j,
             Y,
             W,
             K,
@@ -63,14 +63,14 @@ function _(e, t) {
             X,
             J,
             $,
-            ee = ((H = n) & (Y = r)) | (i & (H | Y));
+            ee = ((j = n) & (Y = r)) | (i & (j | Y));
         var et = ((W = h) & (K = p)) | (m & (W | K)),
             en = d(n, h),
             er = d(h, n),
             ei = f(o, E),
             ea = f(E, o),
-            es = s[j],
-            eo = s[j + 1];
+            es = s[H],
+            eo = s[H + 1];
         var el = ((z = o), (q = l), (Q = u) ^ (z & (q ^ Q)));
         var eu = ((X = E), (J = v), ($ = I) ^ (X & (J ^ $))),
             ec = (S + ea) | 0,

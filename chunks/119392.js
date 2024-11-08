@@ -11,8 +11,8 @@ var r = n(481060),
     o = n(570938),
     s = n(951394),
     c = n(749681),
-    d = n(572004),
-    u = n(63063),
+    u = n(572004),
+    d = n(63063),
     m = n(931515),
     h = n(981631),
     f = n(49898),
@@ -29,13 +29,13 @@ function C(e) {
         onClose: l.Zy,
         children: (0, i.jsxs)(r.MenuGroup, {
             children: [
-                d.wS &&
+                u.wS &&
                     (0, i.jsx)(r.MenuItem, {
                         id: 'copy',
                         label: _.intl.string(_.t.WqhZsr),
                         icon: r.CopyIcon,
                         action: () => {
-                            (0, d.JG)(''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
+                            (0, u.JG)(''.concat(location.protocol, '//').concat(location.host).concat(h.Z5c.DISCOVERY_GUILD_GAME_RESULTS(t)));
                         }
                     }),
                 (0, i.jsx)(r.MenuItem, {
@@ -43,7 +43,7 @@ function C(e) {
                     label: _.intl.string(_.t.hvVgAQ),
                     icon: r.LinkExternalMediumIcon,
                     action: () => {
-                        (0, a.Z)(u.Z.getArticleURL(h.BhN.CLANS_FAQ));
+                        (0, a.Z)(d.Z.getArticleURL(h.BhN.CLANS_FAQ));
                     }
                 })
             ]

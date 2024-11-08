@@ -68,8 +68,8 @@ var f = n(120356),
     Z = n(230916),
     F = n(346497),
     V = n(504865),
-    j = n(63802),
-    H = n(318990),
+    H = n(63802),
+    j = n(318990),
     Y = n(474936),
     W = n(217702),
     K = n(388032),
@@ -104,11 +104,11 @@ function J(e) {
             t = g.Z.unsafe_rawColors.PREMIUM_TIER_0_PURPLE_FOR_GRADIENTS.css;
             break;
         case 3:
-            t = 'url(#'.concat(j.l_, ')');
+            t = 'url(#'.concat(H.l_, ')');
             break;
         case 4:
         case 5:
-            t = 'url(#'.concat(j.Qi, ')');
+            t = 'url(#'.concat(H.Qi, ')');
             break;
         default:
             t = 'white';
@@ -117,15 +117,15 @@ function J(e) {
         ? (0, d.jsxs)('div', {
               className: _()(r, z.freeTrialPillWithSparkles),
               children: [
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar1,
                       color: t
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar2,
                       color: t
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar3,
                       color: t
                   }),
@@ -133,11 +133,11 @@ function J(e) {
                       text: n,
                       colorOptions: i
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar4,
                       color: t
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar5,
                       color: t
                   })
@@ -150,7 +150,7 @@ function J(e) {
                       text: n,
                       colorOptions: i
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar1,
                       style: {
                           marginLeft: 4,
@@ -158,7 +158,7 @@ function J(e) {
                       },
                       color: t
                   }),
-                  (0, d.jsx)(j.R9, {
+                  (0, d.jsx)(H.R9, {
                       foreground: z.sparkleStar2,
                       color: t
                   })
@@ -436,7 +436,7 @@ function er(e) {
                 ]
             }),
             i,
-            o || p !== Y.Si.TIER_0 ? null : (0, d.jsx)(j.t, { tier: Y.p9.TIER_0 })
+            o || p !== Y.Si.TIER_0 ? null : (0, d.jsx)(H.t, { tier: Y.p9.TIER_0 })
         ]
     });
 }
@@ -479,7 +479,7 @@ function ei(e) {
                         className: z.item,
                         textVariant: 'text-sm/normal'
                     }),
-                    s && (0, d.jsx)(H.Z, {})
+                    s && (0, d.jsx)(j.Z, {})
                 ]
             });
         case 1:
@@ -562,7 +562,7 @@ function ei(e) {
                         Icon: v.UserSquareIcon,
                         text: K.intl.string(K.t.CNIZf3)
                     }),
-                    s && (0, d.jsx)(H.Z, {})
+                    s && (0, d.jsx)(j.Z, {})
                 ]
             });
     }
@@ -585,8 +585,8 @@ function ea(e) {
         P = (0, E.ap)((0, I.ZP)()),
         Z = P ? 5 : 2,
         { enabled: V } = k._.useExperiment({ location: 'Tier2Card' }, { autoTrackExposure: !1 }),
-        H = K.intl.string(K.t.IBYG5e);
-    V && (null == S ? void 0 : S.trial_id) === Y.a7 && (H = K.intl.string(K.t.gtNqJS));
+        j = K.intl.string(K.t.IBYG5e);
+    V && (null == S ? void 0 : S.trial_id) === Y.a7 && (j = K.intl.string(K.t.gtNqJS));
     let q = x && !P ? z.rimGlowTier2 : void 0;
     return (0, d.jsxs)('div', {
         className: _()(z.card, z.tier2, s, {
@@ -612,7 +612,7 @@ function ea(e) {
                 : (0, d.jsxs)(d.Fragment, {
                       children: [
                           (0, d.jsx)(J, {
-                              text: H,
+                              text: j,
                               className: z.topRimPill,
                               colorOptions: Z
                           }),
@@ -706,7 +706,7 @@ function ea(e) {
                 ]
             }),
             r,
-            o || (b !== Y.Si.TIER_2 && null == C) ? null : (0, d.jsx)(j.t, { tier: Y.p9.TIER_2 }),
+            o || (b !== Y.Si.TIER_2 && null == C) ? null : (0, d.jsx)(H.t, { tier: Y.p9.TIER_2 }),
             c
                 ? (0, d.jsxs)('div', {
                       className: z.halloweenGiftMessage,

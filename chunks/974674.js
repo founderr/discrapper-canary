@@ -435,8 +435,8 @@ function R(e) {
             avatarCutoutX: Z,
             avatarCutoutY: F,
             avatarCutoutWidth: V,
-            avatarCutoutHeight: j,
-            avatarCutoutRadius: H,
+            avatarCutoutHeight: H,
+            avatarCutoutRadius: j,
             fill: Y,
             ...W
         } = (0, f.useSpring)(
@@ -484,9 +484,9 @@ function R(e) {
                             x: Z,
                             y: F,
                             width: V,
-                            height: j,
-                            rx: H,
-                            ry: H
+                            height: H,
+                            rx: j,
+                            ry: j
                         })
                     ]
                 }),

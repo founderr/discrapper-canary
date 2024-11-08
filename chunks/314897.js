@@ -38,8 +38,8 @@ let L = new S.Z('AuthenticationStore'),
     Z = null,
     F = null,
     V = null,
-    j = O.u34.NONE,
-    H = O.$ib.NONE,
+    H = O.u34.NONE,
+    j = O.$ib.NONE,
     Y = !1,
     W = [],
     K = '',
@@ -143,7 +143,7 @@ function eg(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         R.Z.clearAll();
-    I.ZH(), N.Z.clearUser(), p.K.remove(M), (P = null), (U = null), (j = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (H = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
+    I.ZH(), N.Z.clearUser(), p.K.remove(M), (P = null), (U = null), (H = (null == e ? void 0 : e.isSwitchingAccount) ? O.u34.LOGGING_IN : O.u34.NONE), (j = O.$ib.NONE), (K = ''), (J = ''), (q = null), (z = !1), ($ = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
 }
 class eE extends (a = _.ZP.Store) {
     initialize() {
@@ -165,10 +165,10 @@ class eE extends (a = _.ZP.Store) {
         return ee;
     }
     getLoginStatus() {
-        return j;
+        return H;
     }
     getRegisterStatus() {
-        return H;
+        return j;
     }
     getId() {
         return P;
@@ -307,18 +307,18 @@ class eE extends (a = _.ZP.Store) {
                 null != t && (G = t);
             },
             LOGIN: function (e) {
-                (en = {}), (j = O.u34.LOGGING_IN), (J = ''), (i = null), null != e.login && (ea = e.login), el || (el = e.loginMethod === O.nnr.PASSWORD);
+                (en = {}), (H = O.u34.LOGGING_IN), (J = ''), (i = null), null != e.login && (ea = e.login), el || (el = e.loginMethod === O.nnr.PASSWORD);
             },
             LOGIN_SUCCESS: function (e) {
                 let { token: t } = e;
-                (j = O.u34.NONE), eh(t), e_(), (K = ''), (z = !1), (q = null), (eo = !1), (J = '');
+                (H = O.u34.NONE), eh(t), e_(), (K = ''), (z = !1), (q = null), (eo = !1), (J = '');
             },
             LOGIN_FAILURE: function (e) {
                 let { error: t } = e;
                 (K = ''),
                     (z = !1),
                     (q = null),
-                    (j =
+                    (H =
                         null !=
                         (en = (function (e) {
                             if (Object.keys(e.fields).length > 0) return e.fields;
@@ -330,44 +330,44 @@ class eE extends (a = _.ZP.Store) {
             },
             LOGIN_MFA_STEP: function (e) {
                 let { ticket: t, sms: n, webauthn: r, backup: i, totp: a } = e;
-                null != t && ((K = t), (z = n), (J = ''), (q = null != r ? r : null), (X = i), (Q = a)), (en = {}), (j = O.u34.MFA_STEP);
+                null != t && ((K = t), (z = n), (J = ''), (q = null != r ? r : null), (X = i), (Q = a)), (en = {}), (H = O.u34.MFA_STEP);
             },
             LOGIN_MFA: function () {
-                j = O.u34.LOGGING_IN_MFA;
+                H = O.u34.LOGGING_IN_MFA;
             },
             LOGIN_MFA_FAILURE: function (e) {
                 let { message: t } = e;
-                (j = O.u34.MFA_STEP), (en = { code: t });
+                (H = O.u34.MFA_STEP), (en = { code: t });
             },
             LOGIN_MFA_SMS: function () {
-                j = O.u34.LOGGING_IN_MFA_SMS;
+                H = O.u34.LOGGING_IN_MFA_SMS;
             },
             LOGIN_MFA_SMS_REQUEST_SUCCESS: function (e) {
                 let { phone: t } = e;
-                (j = O.u34.MFA_SMS_STEP), (J = t);
+                (H = O.u34.MFA_SMS_STEP), (J = t);
             },
             LOGIN_MFA_SMS_FAILURE: function (e) {
                 let { message: t } = e;
-                (j = O.u34.MFA_SMS_STEP), (en = { code: t });
+                (H = O.u34.MFA_SMS_STEP), (en = { code: t });
             },
             LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION: function (e) {
-                (j = O.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
+                (H = O.u34.ACCOUNT_SCHEDULED_FOR_DELETION), (r = e.credentials);
             },
             LOGIN_ACCOUNT_DISABLED: function (e) {
-                (j = O.u34.ACCOUNT_DISABLED), (r = e.credentials);
+                (H = O.u34.ACCOUNT_DISABLED), (r = e.credentials);
             },
             LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION: function () {
-                j = O.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION;
+                H = O.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION;
             },
             LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED: function () {
-                j = O.u34.PHONE_IP_AUTHORIZATION;
+                H = O.u34.PHONE_IP_AUTHORIZATION;
             },
             LOGIN_RESET: function (e) {
                 let { isMultiAccount: t } = e;
-                if (((en = {}), (j = O.u34.NONE), (K = ''), (z = !1), (q = null), (i = null), (r = null), !t)) ep(), ed(!1);
+                if (((en = {}), (H = O.u34.NONE), (K = ''), (z = !1), (q = null), (i = null), (r = null), !t)) ep(), ed(!1);
             },
             LOGIN_STATUS_RESET: function () {
-                j = O.u34.NONE;
+                H = O.u34.NONE;
             },
             LOGIN_SUSPENDED_USER: function (e) {
                 let { suspendedUserToken: t } = e;
@@ -402,7 +402,7 @@ class eE extends (a = _.ZP.Store) {
             },
             REGISTER_SAVE_FORM: function (e) {
                 let { form: t } = e;
-                (i = t), (H = O.$ib.REGISTER_AGE_GATE);
+                (i = t), (j = O.$ib.REGISTER_AGE_GATE);
             },
             REGISTER: function (e) {
                 let { birthday: t } = e;
@@ -413,15 +413,15 @@ class eE extends (a = _.ZP.Store) {
                             ...i,
                             birthday: t
                         })),
-                    (H = O.$ib.REGISTERING);
+                    (j = O.$ib.REGISTERING);
             },
             REGISTER_SUCCESS: function (e) {
                 let { token: t } = e;
-                (H = O.$ib.NONE), (i = null), eh(t), e_();
+                (j = O.$ib.NONE), (i = null), eh(t), e_();
             },
             REGISTER_FAILURE: function (e) {
                 let { error: t } = e;
-                (en = eu(t)), (H = null != t.getFieldErrors('date_of_birth') ? O.$ib.REGISTER_AGE_GATE : O.$ib.REGISTER_WITH_ERROR);
+                (en = eu(t)), (j = null != t.getFieldErrors('date_of_birth') ? O.$ib.REGISTER_AGE_GATE : O.$ib.REGISTER_WITH_ERROR);
             },
             VERIFY_FAILURE: function (e) {
                 let { errors: t } = e;
@@ -435,10 +435,10 @@ class eE extends (a = _.ZP.Store) {
                 en = {};
             },
             FORGOT_PASSWORD_REQUEST: function () {
-                (j = O.u34.FORGOT_PASSWORD), (en = {});
+                (H = O.u34.FORGOT_PASSWORD), (en = {});
             },
             FORGOT_PASSWORD_SENT: function () {
-                (j = O.u34.NONE), (en = {});
+                (H = O.u34.NONE), (en = {});
             },
             UPDATE_TOKEN: function (e) {
                 let { token: t, userId: n } = e;
@@ -454,11 +454,11 @@ class eE extends (a = _.ZP.Store) {
                 en = {};
             },
             CLOSE_SUSPENDED_USER: function () {
-                (es = null), (j = O.u34.NONE), eg(), setImmediate(() => (0, b.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
+                (es = null), (H = O.u34.NONE), eg(), setImmediate(() => (0, b.uL)(O.Z5c.DEFAULT_LOGGED_OUT));
             },
             PASSWORDLESS_FAILURE: function (e) {
                 let { error: t } = e;
-                (K = ''), (z = !1), (q = null), (eo = !1), (j = null != (en = eu(t)).date_of_birth ? O.u34.LOGIN_AGE_GATE : O.u34.NONE);
+                (K = ''), (z = !1), (q = null), (eo = !1), (H = null != (en = eu(t)).date_of_birth ? O.u34.LOGIN_AGE_GATE : O.u34.NONE);
             },
             PASSWORDLESS_START: function () {
                 (en = {}), (eo = !0);

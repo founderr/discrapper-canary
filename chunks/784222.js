@@ -67,12 +67,12 @@ let B = (e) => {
             location: 'useEmojiGrid',
             autoTrackExposure: !0
         }),
-        j = (0, E.p3)({
+        H = (0, E.p3)({
             location: 'useEmojiGrid',
             autoTrackExposure: !0
         });
     E.Xb.useExperiment({ location: 'useEmojiGrid' }, { autoTrackExposure: !0 });
-    let { topEmojis: H, newlyAddedEmojis: Y } = (0, P.Z)(I, i),
+    let { topEmojis: j, newlyAddedEmojis: Y } = (0, P.Z)(I, i),
         W = (0, _.Wu)([C.ZP], () => C.ZP.getFlattenedGuildIds(), []),
         K = (0, _.e7)([p.ZP], () => p.ZP.expandedSectionsByGuildIds),
         { canCreateExpressions: z } = (0, b.XJ)(h),
@@ -150,7 +150,7 @@ let B = (e) => {
                                     columnIndex: P && t ? n + 1 : n,
                                     visibleRowIndex: m,
                                     category: s.type,
-                                    subCategory: s.sectionId === k.En.TOP_GUILD_EMOJI ? (0, w.IP)(H, Y, null !== (i = null !== (r = e.id) && void 0 !== r ? r : e.uniqueName) && void 0 !== i ? i : e.name) : k.t0.NONE
+                                    subCategory: s.sectionId === k.En.TOP_GUILD_EMOJI ? (0, w.IP)(j, Y, null !== (i = null !== (r = e.id) && void 0 !== r ? r : e.uniqueName) && void 0 !== i ? i : e.name) : k.t0.NONE
                                 };
                             });
                         if (
@@ -260,7 +260,7 @@ let B = (e) => {
                     } else if (e === k.UX.TOP_GUILD_EMOJI) {
                         if (null != h) {
                             let { allEmojis: t } = (0, M.J)({
-                                topEmojis: H,
+                                topEmojis: j,
                                 newlyAddedEmojis: Y
                             });
                             t.length > 0 &&
@@ -274,7 +274,7 @@ let B = (e) => {
                                 });
                         }
                     } else if (e === k.UX.RECENT) {
-                        let n = (i === U.Hz.REACTION && (V || j) ? F : Z).filter(
+                        let n = (i === U.Hz.REACTION && (V || H) ? F : Z).filter(
                             (e) =>
                                 !O.ZP.isEmojiFiltered({
                                     emoji: e,
@@ -324,7 +324,7 @@ let B = (e) => {
             rowCountBySection: e,
             sectionDescriptors: u
         };
-    }, [S, s, l, o, a, n, et, en, ee, r, z, er, K, t, i, H, Y, Q, c, h, W, V, j, F, Z, B, X]);
+    }, [S, s, l, o, a, n, et, en, ee, r, z, er, K, t, i, j, Y, Q, c, h, W, V, H, F, Z, B, X]);
 };
 ((l = a || (a = {}))[(l.PREMIUM = 0)] = 'PREMIUM'), (l[(l.ROLE_SUBSCRIPTION = 1)] = 'ROLE_SUBSCRIPTION');
 let Z = (e) => {

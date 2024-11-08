@@ -48,8 +48,8 @@ var L = n(615830),
     Z = n(630388),
     F = n(931619),
     V = n(358085),
-    j = n(579806),
-    H = n(859401),
+    H = n(579806),
+    j = n(859401),
     Y = n(437263),
     W = n(423343),
     K = n(685756),
@@ -631,7 +631,7 @@ class es extends _.Z {
             d.on(h.Sh.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
             d.on(h.Sh.SoundshareTrace, this._handleSoundshareTrace.bind(this)),
             d.on(h.Sh.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
-            d.on(h.Sh.Stats, H.Z.create()),
+            d.on(h.Sh.Stats, j.Z.create()),
             d.on(h.Sh.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
             d.on(h.Sh.NoiseCancellationError, (e) => {
                 this._noiseCancellationError = e;
@@ -1260,7 +1260,7 @@ class es extends _.Z {
             (this._soundshareStats = new q.Z()),
             F.Z.addOnlineCallback(this._handleNetworkOnline),
             F.Z.addOfflineCallback(this._handleNetworkOffline),
-            (0, V.isDesktop)() && (this.powerMonitorListener = j.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
+            (0, V.isDesktop)() && (this.powerMonitorListener = H.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
             M.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {

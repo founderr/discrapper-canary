@@ -189,8 +189,8 @@ var r, i;
                 r
             );
         }
-        var j = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
-            H = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
+        var H = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|YYYYYY|YYYYY|YYYY|YY|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
+            j = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
             Y = {},
             W = {};
         function K(e, t, n, r) {
@@ -217,7 +217,7 @@ var r, i;
                           var t,
                               n,
                               r,
-                              i = e.match(j);
+                              i = e.match(H);
                           for (n = 0, r = i.length; n < r; n++)
                               if (W[i[n]]) i[n] = W[i[n]];
                               else {
@@ -238,7 +238,7 @@ var r, i;
             function r(e) {
                 return t.longDateFormat(e) || e;
             }
-            for (H.lastIndex = 0; n >= 0 && H.test(e); ) (e = e.replace(H, r)), (H.lastIndex = 0), (n -= 1);
+            for (j.lastIndex = 0; n >= 0 && j.test(e); ) (e = e.replace(j, r)), (j.lastIndex = 0), (n -= 1);
             return e;
         }
         var Q = /\d/,
@@ -608,8 +608,8 @@ var r, i;
                     i = e.length - 2;
                 (t[3] = C(e.substr(0, r))), (t[4] = C(e.substr(r, 2))), (t[5] = C(e.substr(i)));
             });
-        var ej = eS('Hours', !0),
-            eH = {
+        var eH = eS('Hours', !0),
+            ej = {
                 calendar: {
                     sameDay: '[Today at] LT',
                     nextDay: '[Tomorrow at] LT',
@@ -680,7 +680,7 @@ var r, i;
         function eQ(e, t) {
             if (null === t) return delete eY[e], null;
             var n,
-                r = eH;
+                r = ej;
             if (((t.abbr = e), null != eY[e])) x('defineLocaleOverride', 'use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.'), (r = eY[e]._config);
             else if (null != t.parentLocale) {
                 if (null != eY[t.parentLocale]) r = eY[t.parentLocale]._config;
@@ -931,7 +931,7 @@ var r, i;
                 h = '' + e._i,
                 p = h.length,
                 m = 0;
-            for (o = 0, c = q(e._f, e._locale).match(j) || []; o < c.length; o++) {
+            for (o = 0, c = q(e._f, e._locale).match(H) || []; o < c.length; o++) {
                 if (
                     ((d = c[o]),
                     (l = (h.match(
@@ -1651,7 +1651,7 @@ var r, i;
                 var t = Math.round((this.clone().startOf('day') - this.clone().startOf('year')) / 86400000) + 1;
                 return null == e ? t : this.add(e - t, 'd');
             }),
-            (tB.hour = tB.hours = ej),
+            (tB.hour = tB.hours = eH),
             (tB.minute = tB.minutes = tP),
             (tB.second = tB.seconds = tk),
             (tB.millisecond = tB.milliseconds = tG),
@@ -1723,14 +1723,14 @@ var r, i;
                 a = d().set(r, t);
             return i[n](a, e);
         }
-        function tj(e, t, n) {
+        function tH(e, t, n) {
             if ((s(e) && ((t = e), (e = void 0)), (e = e || ''), null != t)) return tV(e, t, n, 'month');
             var r,
                 i = [];
             for (r = 0; r < 12; r++) i[r] = tV(e, r, n, 'month');
             return i;
         }
-        function tH(e, t, n, r) {
+        function tj(e, t, n, r) {
             'boolean' == typeof e || ((n = t = e), (e = !1)), s(t) && ((n = t), (t = void 0)), (t = t || '');
             var i,
                 a = eX(),
@@ -2054,7 +2054,7 @@ var r, i;
                 return ti(1000 * e);
             }),
             (t.months = function (e, t) {
-                return tj(e, t, 'months');
+                return tH(e, t, 'months');
             }),
             (t.isDate = o),
             (t.locale = eq),
@@ -2062,7 +2062,7 @@ var r, i;
             (t.duration = tI),
             (t.isMoment = A),
             (t.weekdays = function (e, t, n) {
-                return tH(e, t, n, 'weekdays');
+                return tj(e, t, n, 'weekdays');
             }),
             (t.parseZone = function () {
                 return ti.apply(null, arguments).parseZone();
@@ -2070,17 +2070,17 @@ var r, i;
             (t.localeData = eX),
             (t.isDuration = tc),
             (t.monthsShort = function (e, t) {
-                return tj(e, t, 'monthsShort');
+                return tH(e, t, 'monthsShort');
             }),
             (t.weekdaysMin = function (e, t, n) {
-                return tH(e, t, n, 'weekdaysMin');
+                return tj(e, t, n, 'weekdaysMin');
             }),
             (t.defineLocale = eQ),
             (t.updateLocale = function (e, t) {
                 if (null != t) {
                     var n,
                         r,
-                        i = eH;
+                        i = ej;
                     null != (r = ez(e)) && (i = r._config), ((n = new P((t = M(i, t)))).parentLocale = eY[e]), (eY[e] = n), eq(e);
                 } else null != eY[e] && (null != eY[e].parentLocale ? (eY[e] = eY[e].parentLocale) : null != eY[e] && delete eY[e]);
                 return eY[e];
@@ -2089,7 +2089,7 @@ var r, i;
                 return g(eY);
             }),
             (t.weekdaysShort = function (e, t, n) {
-                return tH(e, t, n, 'weekdaysShort');
+                return tj(e, t, n, 'weekdaysShort');
             }),
             (t.normalizeUnits = G),
             (t.relativeTimeRounding = function (e) {

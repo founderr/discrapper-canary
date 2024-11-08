@@ -56,8 +56,8 @@ var r = n(200651),
     Z = n(524444),
     F = n(981631),
     V = n(176505),
-    j = n(474936),
-    H = n(388032),
+    H = n(474936),
+    j = n(388032),
     Y = n(236327);
 let W = () => ({
         page: null != (0, l.e7)([w.Z], () => w.Z.getGuildId()) ? F.ZY5.GUILD_CHANNEL : F.ZY5.DM_CHANNEL,
@@ -94,7 +94,7 @@ let W = () => ({
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/normal',
-                                    children: H.intl.string(H.t.sXdH8f)
+                                    children: j.intl.string(j.t.sXdH8f)
                                 })
                             ]
                         })
@@ -124,7 +124,7 @@ let W = () => ({
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: H.intl.format(H.t['LC+S+v'], { membersOnline: t.presenceCount })
+                            children: j.intl.format(j.t['LC+S+v'], { membersOnline: t.presenceCount })
                         }),
                         (0, r.jsx)('div', { className: Y.dotSeparator }),
                         e
@@ -134,13 +134,13 @@ let W = () => ({
                                   children: (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'text-link',
-                                      children: H.intl.string(H.t.riu2R0)
+                                      children: j.intl.string(j.t.riu2R0)
                                   })
                               })
                             : (0, r.jsx)(c.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'header-secondary',
-                                  children: H.intl.string(H.t.inyJqK)
+                                  children: j.intl.string(j.t.inyJqK)
                               })
                     ]
                 });
@@ -207,7 +207,7 @@ let W = () => ({
                                 : (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/normal',
                                       color: 'header-secondary',
-                                      children: H.intl.string(H.t.H29mx8)
+                                      children: j.intl.string(j.t.H29mx8)
                                   })
                         })
                     ]
@@ -371,7 +371,7 @@ let W = () => ({
                             e_
                                 ? (0, r.jsx)(D.Z, {
                                       className: Y.ctaButton,
-                                      subscriptionTier: j.Si.TIER_2,
+                                      subscriptionTier: H.Si.TIER_2,
                                       size: c.Button.Sizes.SMALL,
                                       fullWidth: !0,
                                       buttonText: el.text,
@@ -397,7 +397,7 @@ let W = () => ({
                                     onClick: () => {
                                         R(), (null == y ? void 0 : y.id) != null && d.Z.transitionToGuildSync(y.id, { sourceLocationStack: [_.Z.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL] }, V.oC.ROLE_SUBSCRIPTIONS);
                                     },
-                                    children: ei ? H.intl.string(H.t.yma8Vl) : H.intl.string(H.t.nN2DIi)
+                                    children: ei ? j.intl.string(j.t.yma8Vl) : j.intl.string(j.t.nN2DIi)
                                 })
                         ]
                     });
@@ -414,7 +414,7 @@ let W = () => ({
                             children: [
                                 (0, r.jsx)(c.FormTitle, {
                                     className: Y.guildTitle,
-                                    children: $ ? H.intl.string(H.t.ohTzZG) : H.intl.string(H.t['eLfh+f'])
+                                    children: $ ? j.intl.string(j.t.ohTzZG) : j.intl.string(j.t['eLfh+f'])
                                 }),
                                 (0, r.jsx)(z, {
                                     expressionSourceGuild: null != T ? T : S.JO.createFromGuildRecord(y),
@@ -425,7 +425,7 @@ let W = () => ({
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (() => {
-                                                let e = H.intl.string(H.t.pnsAS0);
+                                                let e = j.intl.string(j.t.pnsAS0);
                                                 return (0, r.jsx)(c.Clickable, {
                                                     onClick: i,
                                                     className: Y.showMoreEmojis,
@@ -500,7 +500,7 @@ let W = () => ({
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(D.Z, {
-                                      subscriptionTier: j.Si.TIER_2,
+                                      subscriptionTier: H.Si.TIER_2,
                                       buttonText: s.text,
                                       className: Y.ctaButton,
                                       fullWidth: !0,

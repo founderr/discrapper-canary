@@ -95,13 +95,13 @@ function B(e) {
         Z = (0, l.e7)([v.Z], () => (B ? v.Z.getPreviewURL(c, a.channelId, a.streamUserIds[0]) : null)),
         F = (0, l.e7)([v.Z], () => (R === x.L.HANGOUT ? v.Z.getIsPreviewLoading(c, a.channelId, a.streamUserIds[0]) : null)),
         V = R === x.L.HANGOUT && a.streamUserIds.length > 0 && null == Z && !F,
-        j = (0, l.e7)([I.Z], () => {
+        H = (0, l.e7)([I.Z], () => {
             let e = R === x.L.HANGOUT || R === x.L.GAMING ? a.channelId : R === x.L.EVENT ? a.event.channel_id : R === x.L.EMBEDDED_ACTIVITY ? a.embeddedActivities[0].channelId : null;
             return I.Z.getChannel(e);
         }),
-        H = (0, l.e7)([h.ZP], () => h.ZP.getActiveEventByChannel(null == j ? void 0 : j.id)),
-        { usersToShow: Y, othersCount: W } = (0, N.QO)(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '', c),
-        { usersToShow: K } = (0, N.Es)(j),
+        j = (0, l.e7)([h.ZP], () => h.ZP.getActiveEventByChannel(null == H ? void 0 : H.id)),
+        { usersToShow: Y, othersCount: W } = (0, N.QO)(null !== (n = null == H ? void 0 : H.id) && void 0 !== n ? n : '', c),
+        { usersToShow: K } = (0, N.Es)(H),
         z = (0, N.ni)(a),
         q = (function (e, t, n, i) {
             let { category: a } = e,
@@ -488,11 +488,11 @@ function B(e) {
                 children: _
             });
         })(a, c, f),
-        { hasChannelStatus: et } = (0, N.CE)(j),
+        { hasChannelStatus: et } = (0, N.CE)(H),
         en = U(a),
         er = R === x.L.HANGOUT && et && null == Z,
-        ei = (null != H || !!(null == j ? void 0 : j.isGuildStageVoice())) && K.length > 0,
-        ea = R === x.L.HANGOUT && (0 === a.streamUserIds.length || V) && !(null == j ? void 0 : j.isGuildStageVoice()),
+        ei = (null != j || !!(null == H ? void 0 : H.isGuildStageVoice())) && K.length > 0,
+        ea = R === x.L.HANGOUT && (0 === a.streamUserIds.length || V) && !(null == H ? void 0 : H.isGuildStageVoice()),
         es =
             R === x.L.EMBEDDED_ACTIVITY && a.streamersCount > 0
                 ? (0, r.jsxs)('div', {
@@ -519,7 +519,7 @@ function B(e) {
         onMouseLeave: () => L(!1),
         children: [
             (0, r.jsx)('div', {
-                className: s()(k.image, { [k.streamContainer]: B && !V && !(null == j ? void 0 : j.isGuildStageVoice()) }),
+                className: s()(k.image, { [k.streamContainer]: B && !V && !(null == H ? void 0 : H.isGuildStageVoice()) }),
                 children: q
             }),
             (0, r.jsxs)('div', {
@@ -540,7 +540,7 @@ function B(e) {
                             children: X
                         }),
                     !(ei || ea) &&
-                        !(null == j ? void 0 : j.isGuildStageVoice()) &&
+                        !(null == H ? void 0 : H.isGuildStageVoice()) &&
                         Y.length > 0 &&
                         (0, r.jsx)(G, {
                             users: Y,

@@ -39,8 +39,8 @@ var r = n(200651),
     Z = n(665722),
     F = n(239840);
 let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
-    j = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
-    H = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
+    H = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
+    j = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP),
     Y = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_TOP_SEARCH_RESULTS),
     W = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
     K = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_BOTTOM),
@@ -53,7 +53,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     ee = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
     et = X + 2 * $ + ee,
     en = J + 2 * $ + ee,
-    er = [H, W, K, z],
+    er = [j, W, K, z],
     ei = [Y, W, K, z],
     ea = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
     es = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
@@ -145,7 +145,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 currentUser: C
             }),
             [k, F] = i.useState(!1),
-            H = i.useCallback((e) => {
+            j = i.useCallback((e) => {
                 I._O.updateSetting(Array.from(e));
             }, []),
             Y = i.useCallback(
@@ -167,7 +167,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   stickerClassName: Z.sticker,
                                   stickerDescriptors: t,
                                   stickerSize: n > V ? X : J,
-                                  preferAnimation: n <= j,
+                                  preferAnimation: n <= H,
                                   ownedStickerPacks: y,
                                   isDisplayingIndividualStickers: !0,
                                   channel: A,
@@ -192,9 +192,9 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             collapsed: !i,
                             sticker_pack_id: n ? e : null
                         }),
-                        H(r);
+                        j(r);
                 },
-                [N, t, H]
+                [N, t, j]
             ),
             z = i.useCallback(
                 (e) => {
@@ -360,8 +360,8 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 renderSection: k,
                 renderSectionFooter: U,
                 sectionFooterHeight: G,
-                renderSectionHeader: j,
-                sectionHeaderHeight: H
+                renderSectionHeader: H,
+                sectionHeaderHeight: j
             } = eu({
                 collapsedStickersCategories: n,
                 gridWidth: o,
@@ -453,12 +453,12 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   onScroll: Y,
                                   renderRow: P,
                                   renderSection: null == l ? k : void 0,
-                                  renderSectionHeader: j,
+                                  renderSectionHeader: H,
                                   renderSectionFooter: U,
                                   rowCount: S,
                                   rowCountBySection: b,
                                   rowHeight: o > V ? et : en,
-                                  sectionHeaderHeight: H,
+                                  sectionHeaderHeight: j,
                                   sectionFooterHeight: G,
                                   stickyHeaders: !0,
                                   ref: C

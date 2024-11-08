@@ -13,8 +13,8 @@ var i = n(200651),
     o = n(512722),
     s = n.n(o),
     c = n(442837),
-    d = n(477690),
-    u = n(481060),
+    u = n(477690),
+    d = n(481060),
     m = n(447543),
     h = n(317381),
     f = n(778569),
@@ -37,9 +37,9 @@ var i = n(200651),
     L = n(245335),
     P = n(388032),
     y = n(737510);
-let O = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-    M = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-    k = (0, j.Mg)(d.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let O = (0, j.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+    M = (0, j.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+    k = (0, j.Mg)(u.Z.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 function D(e) {
     let { members: t, membersOnline: n, isLarge: r, isStacked: l } = e,
         o = [];
@@ -53,7 +53,7 @@ function D(e) {
                         className: y.statusWrapper,
                         children: [
                             (0, i.jsx)('i', { className: y.statusOnline }),
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: y.count,
                                 children: P.intl.format(P.t['LC+S+v'], { membersOnline: n })
@@ -71,7 +71,7 @@ function D(e) {
                         className: y.statusWrapper,
                         children: [
                             (0, i.jsx)('i', { className: y.statusOffline }),
-                            (0, i.jsx)(u.Text, {
+                            (0, i.jsx)(d.Text, {
                                 variant: 'text-xs/normal',
                                 className: y.count,
                                 children: P.intl.format(P.t.zRl6XV, { count: t })
@@ -108,7 +108,7 @@ function B(e) {
                       })
                     : null,
                 (0, i.jsx)(x.Z, {
-                    children: (0, i.jsx)(u.Text, {
+                    children: (0, i.jsx)(d.Text, {
                         variant: 'text-xs/normal',
                         children: P.intl.format(P.t['dc+LW1'], {
                             channelName: t.name,
@@ -126,7 +126,7 @@ function B(e) {
                   [y.ended]: l
               }),
               children: (0, i.jsx)(x.Z, {
-                  children: (0, i.jsx)(u.Text, {
+                  children: (0, i.jsx)(d.Text, {
                       variant: 'text-xs/normal',
                       children: P.intl.format(P.t.u0vaDA, { guildName: n.name })
                   })
@@ -138,8 +138,8 @@ function U(e) {
     var t, n;
     let l,
         o,
-        { invite: d, getAcceptInviteContext: I } = e,
-        { approximate_member_count: x, approximate_presence_count: j, target_type: U, target_application: w } = d;
+        { invite: u, getAcceptInviteContext: I } = e,
+        { approximate_member_count: x, approximate_presence_count: j, target_type: U, target_application: w } = u;
     s()(U === L.Iq.EMBEDDED_APPLICATION && null != w, 'invalid application invite');
     let F = r.useRef(null),
         [G, V] = r.useState(!1),
@@ -160,20 +160,20 @@ function U(e) {
             }
         );
     }, [F, V, z]);
-    let W = (0, c.e7)([S.Z], () => (null != d.guild ? S.Z.getGuild(d.guild.id) : null), [d]),
+    let W = (0, c.e7)([S.Z], () => (null != u.guild ? S.Z.getGuild(u.guild.id) : null), [u]),
         K = (0, C.Z)([w.id])[0],
         Y = (0, c.e7)([h.ZP], () => {
             var e;
-            return (null == d ? void 0 : d.channel) != null && (null === (e = h.ZP.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === w.id;
+            return (null == u ? void 0 : u.channel) != null && (null === (e = h.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === w.id;
         }),
         X = (0, c.e7)([h.ZP], () => {
             var e;
-            return ((null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? h.ZP.getEmbeddedActivitiesForChannel(d.channel.id) : []).some((e) => {
+            return ((null === (e = u.channel) || void 0 === e ? void 0 : e.id) != null ? h.ZP.getEmbeddedActivitiesForChannel(u.channel.id) : []).some((e) => {
                 let { applicationId: t } = e;
                 return w.id === t;
             });
         }),
-        Q = T.Z.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+        Q = T.Z.getChannel(null === (t = u.channel) || void 0 === t ? void 0 : t.id),
         q = (0, c.e7)([A.Z], () => null != Q && A.Z.can(R.Plq.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
         { analyticsLocations: J } = (0, E.ZP)(g.Z.INVITE_EMBED),
         $ = (0, f.Z)({
@@ -192,21 +192,21 @@ function U(e) {
             [Q, w.id]
         ),
         et = (0, c.Wu)([b.default], () => ee.map((e) => b.default.getUser(e)), [ee]),
-        en = d.state === R.r2o.ACCEPTING,
+        en = u.state === R.r2o.ACCEPTING,
         ei = null != W;
     if (null == W) {
-        if (null == d.guild) return (0, i.jsx)(Z.Z, {});
-        W = new v.ZP(d.guild);
+        if (null == u.guild) return (0, i.jsx)(Z.Z, {});
+        W = new v.ZP(u.guild);
     }
     let er = (ei && !q) || (ei && Y),
         el = () => {
             m.Z.acceptInviteAndTransitionToInviteChannel({
-                inviteKey: d.code,
+                inviteKey: u.code,
                 context: I('Invite Button Embed'),
                 analyticsLocations: J
             });
         };
-    return (ei && Y && (l = P.intl.string(P.t.wJNK8P)), !q && (l = P.intl.string(P.t.hHGrW1)), (o = Y ? P.intl.string(P.t.KC26NT) : X || !ei ? P.intl.string(P.t.VJlc0d) : P.intl.string(P.t.I0v0Qk)), null == d.code || '' === d.code)
+    return (ei && Y && (l = P.intl.string(P.t.wJNK8P)), !q && (l = P.intl.string(P.t.hHGrW1)), (o = Y ? P.intl.string(P.t.KC26NT) : X || !ei ? P.intl.string(P.t.VJlc0d) : P.intl.string(P.t.I0v0Qk)), null == u.code || '' === u.code)
         ? null
         : (0, i.jsxs)('div', {
               className: y.container,
@@ -239,8 +239,8 @@ function U(e) {
                           (0, i.jsxs)('div', {
                               className: y.info,
                               children: [
-                                  (0, i.jsx)(u.FormTitle, { children: ei ? P.intl.string(P.t['1ckx+P']) : P.intl.string(P.t.BoQUFR) }),
-                                  (0, i.jsx)(u.Heading, {
+                                  (0, i.jsx)(d.FormTitle, { children: ei ? P.intl.string(P.t['1ckx+P']) : P.intl.string(P.t.BoQUFR) }),
+                                  (0, i.jsx)(d.Heading, {
                                       className: y.heading,
                                       variant: 'heading-xl/semibold',
                                       children: null == K ? void 0 : K.name
@@ -263,11 +263,11 @@ function U(e) {
                                       ? (0, i.jsxs)('div', {
                                             className: a()(y.endedNote, { [y.large]: G }),
                                             children: [
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
                                                     children: P.intl.string(P.t.JBnc7O)
                                                 }),
-                                                (0, i.jsx)(u.Text, {
+                                                (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/medium',
                                                     children: P.intl.string(P.t.lEvDDQ)
                                                 })
@@ -295,11 +295,11 @@ function U(e) {
                                                     })
                                                 })
                                               : null,
-                                          (0, i.jsx)(u.Tooltip, {
+                                          (0, i.jsx)(d.Tooltip, {
                                               text: l,
                                               children: (e) => {
                                                   let { onClick: t, ...n } = e;
-                                                  return (0, i.jsx)(u.Button, {
+                                                  return (0, i.jsx)(d.Button, {
                                                       className: y.actionButton,
                                                       onClick: () => {
                                                           el(), null == t || t();
@@ -308,7 +308,7 @@ function U(e) {
                                                       ...n,
                                                       submitting: en,
                                                       disabled: er,
-                                                      color: u.ButtonColors.GREEN,
+                                                      color: d.ButtonColors.GREEN,
                                                       children: o
                                                   });
                                               }

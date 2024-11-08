@@ -24,7 +24,7 @@ function g(e) {
         Z = (0, s.Z)(),
         F = d.default.getCurrentUser(),
         V = (0, h.M5)(F, m.p9.TIER_2),
-        j = a()('payment-modal');
+        H = a()('payment-modal');
     return (0, o.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('8016'), n.e('52249'), n.e('14627'), n.e('31605'), n.e('26182'), n.e('17938'), n.e('95900'), n.e('32776'), n.e('54433'), n.e('32383')]).then(n.bind(n, 7305));
@@ -67,7 +67,7 @@ function g(e) {
             };
         },
         {
-            modalKey: j,
+            modalKey: H,
             onCloseCallback: () => {
                 !B &&
                     f.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {

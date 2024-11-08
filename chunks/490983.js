@@ -50,8 +50,8 @@ let F = {
         [P.iEv.ACTIONS]: null
     },
     V = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
-    j = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && A.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
-    H = (0, R.oH)((e, t) => e.filter((e) => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
+    H = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && A.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+    j = (0, R.oH)((e, t) => e.filter((e) => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
     Y = (0, R.oH)((e, t, n, r) => {
         let i = F[t];
         if (null == i) return e;
@@ -148,7 +148,7 @@ function z() {
             ((U = a),
             L.isPlatformEmbedded &&
                 x.ZP.setSystemTrayApplications(
-                    j(U)
+                    H(U)
                         .map((e) => e.application)
                         .slice(0, 5)
                 ),
@@ -166,13 +166,13 @@ class q extends (r = _.ZP.Store) {
         return U;
     }
     get launchableApplicationViewItems() {
-        return j(U);
+        return H(U);
     }
     get libraryApplicationViewItems() {
         return V(U);
     }
     get filteredLibraryApplicationViewItems() {
-        return H(this.libraryApplicationViewItems, G);
+        return j(this.libraryApplicationViewItems, G);
     }
     get sortedFilteredLibraryApplicationViewItems() {
         return Y(this.filteredLibraryApplicationViewItems, y.Z.sortKey, y.Z.sortDirection, E.default.locale);

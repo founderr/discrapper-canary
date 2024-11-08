@@ -97,7 +97,7 @@ function y(e) {
         V = i.useCallback(() => {
             x(!0), F({ action: 'EXPAND_ROLES' });
         }, [F]),
-        j = i.useCallback(() => {
+        H = i.useCallback(() => {
             x(!1), F({ action: 'COLLAPSE_ROLES' });
         }, [F]);
     return (0, r.jsx)(o.bG, {
@@ -117,7 +117,7 @@ function y(e) {
                                 ? (0, r.jsx)(u.TooltipContainer, {
                                       text: S.intl.string(S.t.XnXtCg),
                                       children: (0, r.jsx)(u.Clickable, {
-                                          onClick: j,
+                                          onClick: H,
                                           className: b.collapseButton,
                                           children: (0, r.jsx)(p.Z, {
                                               direction: p.Z.Directions.LEFT,

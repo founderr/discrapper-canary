@@ -164,7 +164,7 @@ function V(e, t, n) {
             flags: u
         });
 }
-function j(e) {
+function H(e) {
     let { member: t, mentions: n, author: r, guild_id: i } = e;
     null != t && null != i && V(i, r, t),
         null != n &&
@@ -175,7 +175,7 @@ function j(e) {
                 }
             });
 }
-function H(e) {
+function j(e) {
     return e.map((e) => ({
         sessionId: e.session_id,
         lastModified: e.last_modified,
@@ -347,7 +347,7 @@ B(
                             guildExperiments: e.guild_experiments,
                             requiredAction: e.required_action,
                             consents: e.consents,
-                            sessions: H(e.sessions || []),
+                            sessions: j(e.sessions || []),
                             pendingPayments: e.pending_payments,
                             countryCode: null !== (n = e.country_code) && void 0 !== n ? n : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
@@ -403,7 +403,7 @@ B(
         ['MESSAGE_CREATE'],
         (e) => S.o.loadGuildIds([e.guild_id]),
         (e) => {
-            j(e),
+            H(e),
                 null != e.author &&
                     F({
                         type: 'MESSAGE_CREATE',
@@ -419,7 +419,7 @@ B(
         ['MESSAGE_UPDATE'],
         (e) => S.o.loadGuildIds([e.guild_id]),
         (e) => {
-            j(e),
+            H(e),
                 F({
                     type: 'MESSAGE_UPDATE',
                     guildId: e.guild_id,
@@ -907,7 +907,7 @@ B(
     G(['SESSIONS_REPLACE'], (e) => {
         F({
             type: 'SESSIONS_REPLACE',
-            sessions: H(e)
+            sessions: j(e)
         });
     }),
     G(['VOICE_STATE_UPDATE'], (e) => {

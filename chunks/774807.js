@@ -7,7 +7,7 @@ var a = n(455199),
     o = n(70956),
     s = n(709054),
     c = n(497089);
-function d(e, t, n) {
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-let u = 90 * o.Z.Millis.DAY,
+let d = 90 * o.Z.Millis.DAY,
     m = {
         tab: null,
         localItemAcks: {},
@@ -34,7 +34,7 @@ class h extends (i = r.ZP.PersistedStore) {
             var t;
             ((m = e).localItemAcks = (function (e) {
                 let t = {};
-                for (let [n, i] of Object.entries(e)) Date.now() - i < u && (t[n] = i);
+                for (let [n, i] of Object.entries(e)) Date.now() - i < d && (t[n] = i);
                 return t;
             })(null !== (t = m.localItemAcks) && void 0 !== t ? t : {})),
                 (m.isDataStale = !0);
@@ -48,7 +48,7 @@ class h extends (i = r.ZP.PersistedStore) {
         return null !== (e = m.tab) && void 0 !== e ? e : c.b1.ForYou;
     }
     isLocalItemAcked(e) {
-        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > u);
+        return null != e.local_id && (null != m.localItemAcks[e.local_id] || s.default.age(e.id) > d);
     }
     hasNewMentions() {
         return m.hasNewMentions;
@@ -63,7 +63,7 @@ class h extends (i = r.ZP.PersistedStore) {
         return m.hasNewMentions || m.isDataStale || m.isRefreshing;
     }
 }
-d(h, 'displayName', 'NotificationCenterStore'), d(h, 'persistKey', 'NotificationCenterStore');
+u(h, 'displayName', 'NotificationCenterStore'), u(h, 'persistKey', 'NotificationCenterStore');
 function f() {
     (m.hasNewMentions = !1), (m.isDataStale = !1), (m.isRefreshing = !1);
 }

@@ -389,7 +389,7 @@ class D {
         for (let t of Object.values(D.gamesByPid)) t.rtcConnectionTimer.toggle(e);
     }
     constructor(e) {
-        y(this, 'game', void 0), y(this, 'uuid', void 0), y(this, 'overlayStatus', void 0), y(this, 'notificationAnalytics', void 0), y(this, 'widgetAnalytics', void 0), y(this, 'screenAnalytics', void 0), y(this, 'uiUnlockedCount', void 0), y(this, 'uiLockedCount', void 0), y(this, 'gameFocusChangedCount', void 0), y(this, 'gameConcurrentGameCount', void 0), y(this, 'overlayMessageAckCount', void 0), y(this, 'overlayMessageCreateCount', void 0), y(this, 'gameTimer', void 0), y(this, 'gameFocusedTimer', void 0), y(this, 'unlockedTimer', void 0), y(this, 'rtcConnectionTimer', void 0), y(this, 'desktopFocusedTimer', void 0), y(this, 'desktopFocusChangedCount', void 0), y(this, 'desktopMessageAckCount', void 0), y(this, 'desktopMessageCreateCount', void 0), y(this, 'soundboardShownTimer', void 0), y(this, 'soundboardShownCount', void 0), y(this, 'soundboardKeepOpenCount', void 0), y(this, 'muteToggledCount', void 0), y(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new C()), (this.widgetAnalytics = new R()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new O(e)), (this.overlayStatus = f.ZP.getGameOverlayStatus(e)), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), j.hasConnection() && this.rtcConnectionTimer.start();
+        y(this, 'game', void 0), y(this, 'uuid', void 0), y(this, 'overlayStatus', void 0), y(this, 'notificationAnalytics', void 0), y(this, 'widgetAnalytics', void 0), y(this, 'screenAnalytics', void 0), y(this, 'uiUnlockedCount', void 0), y(this, 'uiLockedCount', void 0), y(this, 'gameFocusChangedCount', void 0), y(this, 'gameConcurrentGameCount', void 0), y(this, 'overlayMessageAckCount', void 0), y(this, 'overlayMessageCreateCount', void 0), y(this, 'gameTimer', void 0), y(this, 'gameFocusedTimer', void 0), y(this, 'unlockedTimer', void 0), y(this, 'rtcConnectionTimer', void 0), y(this, 'desktopFocusedTimer', void 0), y(this, 'desktopFocusChangedCount', void 0), y(this, 'desktopMessageAckCount', void 0), y(this, 'desktopMessageCreateCount', void 0), y(this, 'soundboardShownTimer', void 0), y(this, 'soundboardShownCount', void 0), y(this, 'soundboardKeepOpenCount', void 0), y(this, 'muteToggledCount', void 0), y(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new C()), (this.widgetAnalytics = new R()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new O(e)), (this.overlayStatus = f.ZP.getGameOverlayStatus(e)), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), H.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function L(e) {
@@ -497,26 +497,26 @@ function V(e) {
     t.successfullyShown = !0;
 }
 y(D, 'gamesByPid', {}), y(D, 'gamesByName', {}), y(D, 'desktopMainWindowHasFocus', document.hasFocus());
-class j {
+class H {
     static hasConnection() {
-        return j.connections.size > 0;
+        return H.connections.size > 0;
     }
     static handleRTCConnectionState(e) {
         var t;
         let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
         switch (e.state) {
             case b.hes.RTC_CONNECTED:
-                j.connections.add(n);
+                H.connections.add(n);
                 break;
             case b.hes.DISCONNECTED:
-                j.connections.delete(n);
+                H.connections.delete(n);
         }
-        let r = j.hasConnection();
-        j.previousHasConnection !== r && (D.toggleRtcConnection(r), (j.previousHasConnection = r));
+        let r = H.hasConnection();
+        H.previousHasConnection !== r && (D.toggleRtcConnection(r), (H.previousHasConnection = r));
     }
 }
-y(j, 'connections', new Set()), y(j, 'previousHasConnection', !1);
-class H {
+y(H, 'connections', new Set()), y(H, 'previousHasConnection', !1);
+class j {
     static handleMessageAcked(e) {
         A.verbose('MESSAGE_ACKED', e);
         let t = _.Z.getGame();
@@ -555,8 +555,8 @@ class Y extends u.Z {
                 'actions',
                 __OVERLAY__
                     ? {
-                          MESSAGE_ACKED: H.handleMessageAcked,
-                          MESSAGE_CREATE: H.handleMessageCreate
+                          MESSAGE_ACKED: j.handleMessageAcked,
+                          MESSAGE_CREATE: j.handleMessageCreate
                       }
                     : {
                           OVERLAY_FOCUSED: P,
@@ -569,7 +569,7 @@ class Y extends u.Z {
                           MESSAGE_ACKED: G,
                           MESSAGE_CREATE: B,
                           WINDOW_FOCUS: F,
-                          RTC_CONNECTION_STATE: j.handleRTCConnectionState,
+                          RTC_CONNECTION_STATE: H.handleRTCConnectionState,
                           AUDIO_TOGGLE_SELF_MUTE: Z,
                           OVERLAY_SUCCESSFULLY_SHOWN: V
                       }
