@@ -27,10 +27,10 @@ var i = n(200651),
     Z = n(652785),
     y = n(981631),
     L = n(921944);
-function R(e) {
+function j(e) {
     e.stopPropagation();
 }
-function j(e) {
+function R(e) {
     var t;
     let { guild: n } = e,
         [h, g] = r.useState(null !== (t = s.K.get(Z.Iv)) && void 0 !== t ? t : 0),
@@ -102,7 +102,7 @@ function j(e) {
             return null == s
                 ? null
                 : (0, i.jsx)('div', {
-                      onContextMenu: R,
+                      onContextMenu: j,
                       children: s
                   });
         }
@@ -130,5 +130,5 @@ t.Z = (e) => {
         case b.R.SIGNUP:
             return (0, i.jsx)(v.Z, { guild: t });
     }
-    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(j, { guild: e.guild });
+    return S.s.isDisallowPopupsSet() ? null : (0, i.jsx)(R, { guild: e.guild });
 };

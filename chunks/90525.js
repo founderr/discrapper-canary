@@ -10,7 +10,7 @@ var o = n(512722),
     l = n(13245),
     s = n(835473),
     a = n(442550),
-    u = n(998502),
+    u = n(145597),
     c = n(603618),
     d = n(620954),
     h = n(987650),
@@ -49,7 +49,7 @@ function E(e, t) {
                     });
             },
             onNotificationClick: (e, t) => {
-                o('unlock'), u.ZP.focus(null, !0);
+                o('unlock'), l.Z.setInputLocked(!1, (0, u.QF)());
             },
             onDismissClick: () => {
                 o('dismiss');

@@ -66,7 +66,7 @@ let y = (e) => {
             children: c
         });
     },
-    R = (e) => {
+    j = (e) => {
         let { selected: t, locationState: n } = e;
         return (0, i.jsx)(L, {
             selected: t,
@@ -74,7 +74,7 @@ let y = (e) => {
             children: (0, i.jsx)(y, {})
         });
     },
-    j = r.memo(function (e) {
+    R = r.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: r, reducedMotion: l = !1 } = e,
             a = null != r ? (0, _.Z)(r, d.AvatarSizes.SIZE_80, !l) : void 0,
@@ -116,7 +116,7 @@ let y = (e) => {
         var t, n, l, s, u, h, g, f, _, E, I, v;
         let S, N;
         let { selected: T, locationState: x, displayOptions: A } = e,
-            R = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
+            j = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
             [O, P] = r.useState(0),
             [D, M] = r.useState(!1),
             w = (0, m.ZP)(),
@@ -134,10 +134,10 @@ let y = (e) => {
             }, []),
             H = A.title();
         return (0, i.jsx)(d.Tooltip, {
-            text: (0, i.jsx)(j, {
+            text: (0, i.jsx)(R, {
                 displayOptions: A,
                 assetId: A.assetIds[O],
-                reducedMotion: R
+                reducedMotion: j
             }),
             tooltipClassName: Z.marketingBadgeTooltip,
             position: 'right',
@@ -168,7 +168,7 @@ let y = (e) => {
                                 })
                         }),
                         null != k &&
-                            !R &&
+                            !j &&
                             (0, i.jsx)('img', {
                                 src: (0, c.wj)(w) ? k.srcDark : k.srcLight,
                                 className: a()(Z.marketingButtonImage, { [Z.marketingButtonImageHovered]: D }),
@@ -227,7 +227,7 @@ let y = (e) => {
                         displayOptions: r
                     });
                 case x.k2.BADGE:
-                    return (0, i.jsx)(R, {
+                    return (0, i.jsx)(j, {
                         selected: t,
                         locationState: n
                     });

@@ -45,7 +45,7 @@ function m(e) {
             let t = (0, u.Cf)().find((e) => e.code === p);
             return null !== (e = null == t ? void 0 : t.name) && void 0 !== e ? e : h.intl.string(h.t.LQLMGB);
         }, [p]);
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(a.ZP, {
         items: f,
         title: _,
         onSelect: g,

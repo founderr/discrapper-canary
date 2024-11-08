@@ -31,8 +31,8 @@ var i = n(200651),
     Z = n(648052),
     y = n(867176),
     L = n(438163),
-    R = n(537006),
-    j = n(483424),
+    j = n(537006),
+    R = n(483424),
     O = n(681837),
     P = n(502762),
     D = n(530),
@@ -401,11 +401,11 @@ function es(e) {
                                     onClose: q
                                 }),
                                 eT &&
-                                    (0, i.jsx)(R.Z, {
+                                    (0, i.jsx)(j.Z, {
                                         isPremiumUser: ex,
                                         onInteraction: q
                                     }),
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(R.Z, {
                                     user: z,
                                     currentUser: z,
                                     onClose: q

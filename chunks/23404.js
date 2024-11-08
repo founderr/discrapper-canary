@@ -66,8 +66,8 @@ t.Z = function (e) {
         d = (0, s.e7)([p.Z], () => p.Z.isEnrolling(o.id), [o]),
         [E, I] = r.useState(!1),
         b = r.useCallback(() => I(!0), []),
-        R = r.useCallback(() => I(!1), []),
-        j = r.useCallback((e) => {
+        j = r.useCallback(() => I(!1), []),
+        R = r.useCallback((e) => {
             e.stopPropagation();
         }, []),
         O = r.useCallback(() => {
@@ -121,12 +121,12 @@ t.Z = function (e) {
                           e.current = t;
                       },
                       className: a()(y.wrapper, { [y.wrapperQuestAccepted]: k }),
-                      onClick: j,
-                      onKeyPress: j,
+                      onClick: R,
+                      onKeyPress: R,
                       onFocus: b,
                       onMouseEnter: b,
-                      onBlur: R,
-                      onMouseLeave: R,
+                      onBlur: j,
+                      onMouseLeave: j,
                       children: [
                           (0, i.jsxs)('div', {
                               className: y.utils,

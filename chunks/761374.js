@@ -24,40 +24,40 @@ function g(e, t, n, i) {
 }
 function E(e) {
     var t;
-    let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: x, horizontal: I } = e,
+    let { id: n, size: E, locked: _, padding: C, borderWidth: S, opacity: I, horizontal: x } = e,
         Z = 2 * C + 2 * S;
-    let { width: b, height: y } = {
+    let { width: y, height: N } = {
             width: 'number' == typeof (t = E).width ? t.width : 256,
             height: 'number' == typeof t.height ? t.height : 144
         },
-        N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId()),
-        O = (0, r.e7)([d.Z], () => d.Z.getChannel(N)),
+        b = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId()),
+        O = (0, r.e7)([d.Z], () => d.Z.getChannel(b)),
         T = (0, r.e7)([c.default], () => c.default.getId()),
         { participantsVersion: A, streamParticipants: L } = (0, r.e7)(
             [u.Z, s.Z],
             () => {
-                if (null == N)
+                if (null == b)
                     return {
                         streamParticipants: v,
                         participantsVersion: -1
                     };
-                let e = new Set(u.Z.getAllActiveStreamsForChannel(N).map((e) => (0, a.V9)(e))),
-                    t = s.Z.getStreamParticipants(N).filter((t) => t.user.id !== T && e.has((0, a.V9)(t.stream)));
+                let e = new Set(u.Z.getAllActiveStreamsForChannel(b).map((e) => (0, a.V9)(e))),
+                    t = s.Z.getStreamParticipants(b).filter((t) => t.user.id !== T && e.has((0, a.V9)(t.stream)));
                 return (
                     t.sort((e, t) => e.user.username.localeCompare(t.user.username)),
                     {
                         streamParticipants: t,
-                        participantsVersion: s.Z.getParticipantsVersion(N)
+                        participantsVersion: s.Z.getParticipantsVersion(b)
                     }
                 );
             },
-            [N, T],
+            [b, T],
             p.yp
         ),
         R = L.length,
         k = null == O || 0 === R,
-        w = I ? f.C.HORIZONTAL : f.C.VERTICAL,
-        { tileWidth: j } = (function (e, t, n, i, r) {
+        w = x ? f.C.HORIZONTAL : f.C.VERTICAL,
+        { tileWidth: M } = (function (e, t, n, i, r) {
             let l = (function (e, t, n, i) {
                     let o = g(f.C.HORIZONTAL, e, t, n),
                         r = g(f.C.VERTICAL, e, t, n);
@@ -82,18 +82,18 @@ function E(e) {
                     tileWidth: u
                 }
             );
-        })(!1, R, b - Z, y - Z, w),
-        M = {
+        })(!1, R, y - Z, N - Z, w),
+        j = {
             id: n,
-            width: b,
-            height: y,
+            width: y,
+            height: N,
             sizeOffset: Z,
             layout: w,
             padding: C,
             participants: L.length
         },
-        P = o.useRef(M);
-    return (o.useEffect(() => void (P.current = M)),
+        P = o.useRef(j);
+    return (o.useEffect(() => void (P.current = j)),
     o.useEffect(() => {
         let { id: e, width: t, height: n, sizeOffset: i, layout: o, padding: r } = P.current;
         if (0 === L.length) {
@@ -172,9 +172,9 @@ function E(e) {
         ? null
         : (0, i.jsx)('div', {
               className: m.goLiveGridContainer,
-              style: { opacity: x },
+              style: { opacity: I },
               children: (0, i.jsx)(f.Z, {
-                  tileWidth: j,
+                  tileWidth: M,
                   locked: _,
                   layout: w,
                   streamParticipants: L,

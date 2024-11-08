@@ -34,7 +34,7 @@ function L() {
     let e = T.getGuildId();
     (N = S = y(T)), null == S[A] && (A = e), (r = null != x), (i = p.o4(T, x)), (b = null), (v = !1), (C = _.QZA.CLOSED), I.clear();
 }
-class R extends (l = u.ZP.Store) {
+class j extends (l = u.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, f.Z);
     }
@@ -76,7 +76,7 @@ class R extends (l = u.ZP.Store) {
     }
 }
 (o = 'ChannelSettingsPermissionsStore'),
-    (s = 'displayName') in (a = R)
+    (s = 'displayName') in (a = j)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -84,7 +84,7 @@ class R extends (l = u.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new R(m.Z, {
+    (t.Z = new j(m.Z, {
         CHANNEL_SETTINGS_SET_SECTION: function (e) {
             let { section: t } = e;
             if (null != T || t !== _.CoT.PERMISSIONS) return !1;

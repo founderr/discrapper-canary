@@ -51,8 +51,8 @@ t.Z = function (e) {
             null != t && m.Z.setInitialSection(t);
         }, [t]);
     let E = (0, c.e7)([v.Z], () => v.Z.theme),
-        { section: L, pendingCount: R } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
-        j = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
+        { section: L, pendingCount: j } = (0, c.cj)([S.ZP], () => S.ZP.getState()),
+        R = (0, c.cj)([f.Z], () => f.Z.getSuggestionCount()),
         O = (e) => {
             m.Z.setSection(e);
         },
@@ -105,15 +105,15 @@ t.Z = function (e) {
                                         'aria-label': b.intl.string(b.t.p6IHGB),
                                         children: [
                                             b.intl.string(b.t.p6IHGB),
-                                            R > 0
+                                            j > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
-                                                      count: R,
+                                                      count: j,
                                                       className: Z.badge
                                                   })
                                                 : null
                                         ]
                                     }),
-                                    j > 0
+                                    R > 0
                                         ? (0, i.jsxs)(d.TabBar.Item, {
                                               id: x.pJs.SUGGESTIONS,
                                               className: Z.item,
@@ -121,7 +121,7 @@ t.Z = function (e) {
                                               children: [
                                                   b.intl.string(b.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
-                                                      count: j,
+                                                      count: R,
                                                       className: Z.badge
                                                   })
                                               ]

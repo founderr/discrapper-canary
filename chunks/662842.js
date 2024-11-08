@@ -32,8 +32,8 @@ var i,
     Z = n(427679),
     y = n(448206),
     L = n(184301),
-    R = n(347475),
-    j = n(496675),
+    j = n(347475),
+    R = n(496675),
     O = n(594174),
     P = n(662868),
     D = n(981631),
@@ -57,7 +57,7 @@ function U(e) {
         B = null == i ? void 0 : i.id,
         H = (0, c.Wu)([A.Z], () => [...new Set(A.Z.getMutableParticipants(B, b.pV.SPEAKER).map((e) => e.user))], [B]),
         V = (0, c.e7)([A.Z], () => (null != B ? A.Z.getParticipantCount(B, b.pV.AUDIENCE) : 0), [B]),
-        F = (0, c.e7)([j.Z], () => j.Z.can(D.Plq.CONNECT, i)),
+        F = (0, c.e7)([R.Z], () => R.Z.can(D.Plq.CONNECT, i)),
         z = (0, y.Z)(null == i ? void 0 : i.id),
         Y = null == r ? void 0 : r.creator_id,
         W = (0, c.e7)([O.default], () => O.default.getUser(Y), [Y]);
@@ -330,7 +330,7 @@ function U(e) {
                                       {
                                           preload: () => (0, L.Z)(e, { guildId: t.id }),
                                           renderPopout: (n) =>
-                                              (0, l.jsx)(R.Z, {
+                                              (0, l.jsx)(j.Z, {
                                                   ...n,
                                                   userId: e.id,
                                                   guildId: t.id,

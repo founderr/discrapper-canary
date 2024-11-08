@@ -34,7 +34,7 @@ let b = {
 function Z(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: Z } = e,
         { analyticsLocations: y } = (0, u.ZP)(),
-        { isHovered: L, setIsHovered: R, onMouseEnter: j, onMouseLeave: O } = (0, p.Z)(200, 300),
+        { isHovered: L, setIsHovered: j, onMouseEnter: R, onMouseLeave: O } = (0, p.Z)(200, 300),
         { enableEmojiCTA: P } = E.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     r.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -49,9 +49,9 @@ function Z(e) {
     }, [t, n]);
     let D = r.useCallback(
             (e) => {
-                'focus' !== e.type && j();
+                'focus' !== e.type && R();
             },
-            [j]
+            [R]
         ),
         M = (e) => {
             e.stopPropagation();
@@ -130,14 +130,14 @@ function Z(e) {
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            R(!1);
+            j(!1);
         },
         renderPopout: (e) =>
             (0, i.jsx)(v.Z, {
                 giftIntentType: n,
                 premiumGiftIntentCardType: v.U.COACHMARK,
                 recipientUser: t,
-                onMouseEnter: j,
+                onMouseEnter: R,
                 onMouseLeave: O,
                 popoutPosition: e.position,
                 analyticsPage: l,

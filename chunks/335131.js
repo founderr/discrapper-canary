@@ -97,7 +97,7 @@ let E = (e) => {
             options: null != e ? e : {}
         });
         let t = {};
-        null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), !0 === e.includeBundles && (t.include_bundles = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway), e.variantsReturnStyle === a.v.VARIANTS_GROUP && (t.variants_return_style = a.v.VARIANTS_GROUP));
+        null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), !0 === e.requestHomePayload && (t.request_home_payload = !0), !0 === e.includeBundles && (t.include_bundles = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway), e.variantsReturnStyle === a.v.VARIANTS_GROUP && (t.variants_return_style = a.v.VARIANTS_GROUP));
         try {
             let e = await s.tn.get({
                 url: g.ANM.COLLECTIBLES_CATEGORIES,

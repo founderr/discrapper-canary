@@ -27,8 +27,8 @@ var i,
     Z = n(925329),
     y = n(102172),
     L = n(871118),
-    R = n(707409),
-    j = n(849171),
+    j = n(707409),
+    R = n(849171),
     O = n(314897),
     P = n(592125),
     D = n(594174),
@@ -86,10 +86,10 @@ class Q extends a.Component {
             : K(
                   (e = (0, _.Z)(t)
                       ? (0, l.jsx)(q, { timestamps: n })
-                      : (0, l.jsx)(R.ZP, {
+                      : (0, l.jsx)(j.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: R.ZP.Locations.USER_ACTIVITY,
+                            location: j.ZP.Locations.USER_ACTIVITY,
                             className: F.__invalid_playTime
                         }))
               );
@@ -550,7 +550,7 @@ let ee = (e) => {
                         (0, l.jsxs)('div', {
                             className: F.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(j.OV, {
+                                (0, l.jsx)(R.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id

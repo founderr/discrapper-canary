@@ -39,7 +39,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 title: Z,
                 videoPosterUrl: y,
                 videoUrl: L,
-                ctaOnClick: R
+                ctaOnClick: j
             } = (function (e) {
                 switch (e) {
                     case 'BOOSTING':
@@ -104,14 +104,14 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                         };
                 }
             })(i),
-            { analyticsLocations: j } = (0, m.ZP)(r);
+            { analyticsLocations: R } = (0, m.ZP)(r);
         a.useEffect(() => {
             f.default.track(_.rMx.TOOLTIP_VIEWED, { type: N });
         }, [N]);
         let O = (0, c.bp)() === _.IlC.POPOUT,
             P = (0, s.e7)([g.Z], () => g.Z.getChannel(t), [t]);
         return (0, l.jsx)(m.Gt, {
-            value: j,
+            value: R,
             children: (0, l.jsx)('div', {
                 className: C.wrapper,
                 children: (0, l.jsx)('div', {
@@ -171,8 +171,8 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                     (0, l.jsx)(o.Button, {
                                         color: o.Button.Colors.BRAND_INVERTED,
                                         onClick:
-                                            null != R
-                                                ? R
+                                            null != j
+                                                ? j
                                                 : () => {
                                                       if ((n(E.L.UNKNOWN), null != P))
                                                           (0, u.Z)({
@@ -185,7 +185,7 @@ let v = 'https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                                                                   objectType: _.Qqv.ACTIVITY
                                                               },
                                                               openInPopout: O,
-                                                              analyticsLocations: j,
+                                                              analyticsLocations: R,
                                                               opensAppLauncherModal: !0
                                                           }),
                                                               (0, d.w1)({ guildId: P.guild_id });

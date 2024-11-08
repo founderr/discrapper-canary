@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return x;
     }
 });
 var i = n(200651),
@@ -22,7 +22,7 @@ var i = n(200651),
     _ = n(501787),
     C = n(65154),
     S = n(227002);
-function x(e) {
+function I(e) {
     let { context: t = C.Yn.DEFAULT, participants: r, locked: s, widget: u, channel: c, width: d, height: h, containerRef: m } = e,
         v = (e, o) => {
             (0, a.jW)(o, async () => {
@@ -83,7 +83,7 @@ function x(e) {
           })
         : null;
 }
-function I(e) {
+function x(e) {
     let t = (0, s.e7)([g.Z, v.Z], () => v.Z.getChannel(g.Z.getVoiceChannelId())),
         n = (0, h.ZP)(t),
         r = (0, s.Wu)([d.Z], () => (null != t ? d.Z.getVideoParticipants(t.id) : [])),
@@ -98,15 +98,15 @@ function I(e) {
             cropSelfVideo: !0,
             version: l
         }),
-        I = {
+        x = {
             id: e.widget.id,
             size: e.widget.size,
             containerWidth: e.width,
             containerHeight: e.height
         },
-        Z = o.useRef(I);
+        Z = o.useRef(x);
     return (
-        o.useLayoutEffect(() => void (Z.current = I)),
+        o.useLayoutEffect(() => void (Z.current = x)),
         o.useLayoutEffect(() => {
             let { size: e, id: t, containerWidth: n, containerHeight: i } = Z.current;
             ((a && e.height > e.width) || (!a && e.width > e.height)) &&
@@ -119,7 +119,7 @@ function I(e) {
                     }
                 });
         }, [a]),
-        (0, i.jsx)(x, {
+        (0, i.jsx)(I, {
             ...e,
             channel: t,
             title: null != n ? n : '',

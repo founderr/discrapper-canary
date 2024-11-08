@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(710808),
     I = n(625205),
     N = n(325808),
-    A = n(823087),
-    b = n(546997),
+    b = n(823087),
+    A = n(546997),
     v = n(520384),
     j = n(167540),
     O = n(803567),
@@ -109,7 +109,7 @@ function U() {
             (0, i.jsxs)(g.F, {
                 setting: y.s6.VOICE_AND_VIDEO_MIC_TEST,
                 children: [
-                    (0, i.jsx)(A.Z, {}),
+                    (0, i.jsx)(b.Z, {}),
                     (0, i.jsx)(o.FormText, {
                         className: F.marginBottom20,
                         type: o.FormText.Types.DESCRIPTION,
@@ -278,7 +278,7 @@ function U() {
                         (0, i.jsxs)(g.F, {
                             setting: y.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
                             children: [
-                                (0, i.jsx)(b.Z, {}),
+                                (0, i.jsx)(A.Z, {}),
                                 (0, i.jsx)(o.FormSection, {
                                     className: F.marginBottom20,
                                     title: Z.intl.string(Z.t['aP1N/v']),

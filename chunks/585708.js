@@ -21,7 +21,7 @@ var o = n(937889),
 function g(e, t, n, g) {
     var E;
     let { icon: _, title: C, body: S } = (0, s.Xi)(e, t, n),
-        { trackView: x, trackClick: I } = (0, f.R)(p.n0.TextChat, {
+        { trackView: I, trackClick: x } = (0, f.R)(p.n0.TextChat, {
             notif_type: p.n0.TextChat,
             notif_user_id: null === (E = t.author) || void 0 === E ? void 0 : E.id,
             message_id: t.id,
@@ -48,17 +48,17 @@ function g(e, t, n, g) {
                 ? (0, i.jsx)(d.Z, {
                       id: n,
                       channel: e,
-                      onSend: () => I('send')
+                      onSend: () => x('send')
                   })
                 : null,
         onNotificationShow: () => {
-            g && (0, u.GN)(l.Ay, l.yk), x();
+            g && (0, u.GN)(l.Ay, l.yk), I();
         },
         onNotificationClick: () => {
-            (0, r.uL)(m.Z5c.CHANNEL(e.guild_id, e.id, t.id)), I('jump'), a.isPlatformEmbedded ? c.ZP.focus() : window.focus();
+            (0, r.uL)(m.Z5c.CHANNEL(e.guild_id, e.id, t.id)), x('jump'), a.isPlatformEmbedded && c.ZP.focus(null, !0);
         },
         onDismissClick: () => {
-            I('dismiss');
+            x('dismiss');
         }
     };
 }

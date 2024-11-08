@@ -22,10 +22,10 @@ function v(e) {
         g = (0, h.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, s.Z)(n),
         [C, S] = o.useState(() => (0, u.H2)()),
-        { textValue: x, richValue: I } = C,
-        [Z, b] = o.useState(!1),
-        y = o.useCallback(() => b(!0), []),
-        N = o.useCallback(() => b(!1), []),
+        { textValue: I, richValue: x } = C,
+        [Z, y] = o.useState(!1),
+        N = o.useCallback(() => y(!0), []),
+        b = o.useCallback(() => y(!1), []),
         O = o.useCallback((e, t, n) => {
             S({
                 textValue: t,
@@ -34,20 +34,20 @@ function v(e) {
         }, []),
         T = o.useCallback(
             () =>
-                x.length > g
+                I.length > g
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (r.Z.sendMessage(n.id, d.ZP.parse(n, x), !1),
+                    : (r.Z.sendMessage(n.id, d.ZP.parse(n, I), !1),
                       l.Z.setInputLocked(!0, (0, f.QF)()),
                       l.Z.updateNotificationStatus(t, p._1z.DISMISSED),
-                      null == v || v(x),
+                      null == v || v(I),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [x, g, n, t, v]
+            [I, g, n, t, v]
         );
     return (0, i.jsx)(c.Z, {
         innerClassName: m.textArea,
@@ -55,11 +55,11 @@ function v(e) {
         placeholder: E,
         accessibilityLabel: _,
         channel: n,
-        textValue: x,
-        richValue: I,
+        textValue: I,
+        richValue: x,
         type: a.I.OVERLAY_INLINE_REPLY,
-        onBlur: N,
-        onFocus: y,
+        onBlur: b,
+        onFocus: N,
         focused: Z,
         onSubmit: T,
         autoCompletePosition: 'bottom',

@@ -18,20 +18,20 @@ var i = n(481060),
     _ = n(785359),
     C = n(79390),
     S = n(623292),
-    x = n(807092),
-    I = n(467798),
+    I = n(807092),
+    x = n(467798),
     Z = n(703558),
-    b = n(117530),
-    y = n(630388),
-    N = n(226351),
+    y = n(117530),
+    N = n(630388),
+    b = n(226351),
     O = n(981631),
     T = n(388032);
 async function A(e) {
     var t, n, i;
     let d,
         { channelId: h, uploads: A, draftType: L, parsedMessage: R, options: k = {}, raiseEndpointErrors: w = !1 } = e,
-        j = new f.Z(O.ANM.MESSAGES(h)),
-        M = new N.o(),
+        M = new f.Z(O.ANM.MESSAGES(h)),
+        j = new b.o(),
         P = {
             content: '',
             nonce: '',
@@ -40,9 +40,9 @@ async function A(e) {
             sticker_ids: null == k ? void 0 : k.stickerIds,
             poll: null == k ? void 0 : k.poll
         };
-    null != R && (P.content = null == R ? void 0 : R.content), null != x.Z.getPendingReply(h) && ((P.type = O.uaV.REPLY), (P.message_reference = k.messageReference), (P.allowed_mentions = k.allowedMentions), (0, S.A6)(h));
-    let [D, z] = (0, I.Z)(P.content);
-    D && ((P.content = z), (P.flags = (0, y.pj)(null !== (t = P.flags) && void 0 !== t ? t : 0, O.iLy.SUPPRESS_NOTIFICATIONS)));
+    null != R && (P.content = null == R ? void 0 : R.content), null != I.Z.getPendingReply(h) && ((P.type = O.uaV.REPLY), (P.message_reference = k.messageReference), (P.allowed_mentions = k.allowedMentions), (0, S.A6)(h));
+    let [D, z] = (0, x.Z)(P.content);
+    D && ((P.content = z), (P.flags = (0, N.pj)(null !== (t = P.flags) && void 0 !== t ? t : 0, O.iLy.SUPPRESS_NOTIFICATIONS)));
     let U = null !== (n = k.nonce) && void 0 !== n ? n : (0, E.r)(),
         V = (0, g.ZP)({
             channelId: h,
@@ -56,7 +56,7 @@ async function A(e) {
         });
     return (
         ((P.nonce = U),
-        j.on('start', (e) => {
+        M.on('start', (e) => {
             (d = (0, v.e5)({
                 ...V,
                 id: e.id
@@ -66,17 +66,17 @@ async function A(e) {
                     channelId: h,
                     file: e,
                     message: d,
-                    uploader: j
+                    uploader: M
                 });
         }),
-        j.on('progress', (e) => {
+        M.on('progress', (e) => {
             o.Z.dispatch({
                 type: 'UPLOAD_PROGRESS',
                 channelId: h,
                 file: e
             });
         })),
-        j.on('error', (e, t, n, i) => {
+        M.on('error', (e, t, n, i) => {
             if (
                 (o.Z.dispatch({
                     type: 'UPLOAD_FAIL',
@@ -117,7 +117,7 @@ async function A(e) {
             }
             if (t !== O.evJ.GUILD_FILE_UPLOAD_RATE_LIMITED_ACCESS) {
                 if (w)
-                    M.reject(
+                    j.reject(
                         new u.Hx(
                             {
                                 status: t,
@@ -134,7 +134,7 @@ async function A(e) {
                     });
                 }
                 '' !== P.content && '' === Z.Z.getDraft(h, L) && r.Z.saveDraft(h, P.content, L),
-                    0 === b.Z.getUploadCount(h, L) &&
+                    0 === y.Z.getUploadCount(h, L) &&
                         s.Z.setUploads({
                             channelId: h,
                             uploads: A,
@@ -142,18 +142,18 @@ async function A(e) {
                         });
             }
         }),
-        j.on('complete', (e, t) => {
+        M.on('complete', (e, t) => {
             o.Z.dispatch({
                 type: 'UPLOAD_COMPLETE',
                 channelId: h,
                 file: e,
-                aborted: j._aborted,
+                aborted: M._aborted,
                 messageRecord: t
             });
         }),
-        await j.uploadFiles(A, P),
-        M.resolve(),
-        M.promise
+        await M.uploadFiles(A, P),
+        j.resolve(),
+        j.promise
     );
 }
 t.Z = {
@@ -187,7 +187,7 @@ t.Z = {
             };
         if (null != c) {
             (m.content = c.content), (m.tts = c.tts), (m.channel_id = c.channel_id);
-            let e = x.Z.getPendingReply(n);
+            let e = I.Z.getPendingReply(n);
             if (null != e) {
                 let t = l.Z.getSendMessageOptionsForReply(e);
                 (m.type = O.uaV.REPLY), (m.message_reference = t.messageReference), (m.allowed_mentions = t.allowedMentions), (0, S.A6)(n);

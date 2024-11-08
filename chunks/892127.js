@@ -16,11 +16,11 @@ var i = n(200651),
 t.Z = o.memo(function (e) {
     let { widget: t, renderWidget: n, renderTitle: E, renderButtons: _, resizeValidation: C } = e,
         S = a.Z.getWidgetConfig(t.type),
-        x = (0, r.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
-        I = (0, m.Z)(),
-        Z = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(I))),
-        b = (0, m.Z)(),
-        y = o.useCallback((e, t, n, i, o) => {
+        I = (0, r.e7)([u.Z], () => u.Z.isLocked((0, h.QF)())),
+        x = (0, m.Z)(),
+        Z = (0, r.e7)([c.Z], () => c.Z.windowSize((0, f.ZY)(x))),
+        y = (0, m.Z)(),
+        N = o.useCallback((e, t, n, i, o) => {
             let r = c.Z.windowSize((0, f.ZY)((0, m.i)())),
                 u = (0, d.jL)(n, r),
                 h = (0, d.Ox)(i, r);
@@ -44,14 +44,14 @@ t.Z = o.memo(function (e) {
                 widget_top: E.top
             });
         }, []),
-        N = o.useCallback((e) => {
+        b = o.useCallback((e) => {
             (0, l.Os)(e);
         }, []),
         { id: O, pinned: T, zIndex: A, size: L, anchor: R } = t,
         k = (0, d.w_)(L, Z),
         w = (0, d.KR)(R, Z),
-        { minSize: j, resizeX: M, resizeY: P, dragAnywhere: D } = S,
-        z = T || !x,
+        { minSize: M, resizeX: j, resizeY: P, dragAnywhere: D } = S,
+        z = T || !I,
         U = o.useMemo(
             () => ({
                 minX: 0,
@@ -92,17 +92,17 @@ t.Z = o.memo(function (e) {
         size: k,
         anchor: w,
         container: U,
-        minSize: j,
+        minSize: M,
         hidden: !z,
-        locked: x,
-        resizeX: M,
+        locked: I,
+        resizeX: j,
         resizeY: P,
         style: { zIndex: A },
         dragAnywhere: D,
-        active: !x,
-        onUpdate: y,
-        onClick: N,
-        targetWindow: b,
+        active: !I,
+        onUpdate: N,
+        onClick: b,
+        targetWindow: y,
         renderExtras: F,
         resizeValidation: B,
         children: V

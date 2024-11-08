@@ -23,12 +23,12 @@ var i = n(200651),
     _ = n(565799),
     C = n(501655),
     S = n(597998),
-    x = n(199902),
-    I = n(314897),
+    I = n(199902),
+    x = n(314897),
     Z = n(592125),
-    b = n(355863),
-    y = n(131951),
-    N = n(944486),
+    y = n(355863),
+    N = n(131951),
+    b = n(944486),
     O = n(938475),
     T = n(237997),
     A = n(136015),
@@ -36,8 +36,8 @@ var i = n(200651),
     R = n(145597),
     k = n(658785),
     w = n(388627),
-    j = n(981631),
-    M = n(65154),
+    M = n(981631),
+    j = n(65154),
     P = n(368430);
 function D(e) {
     let { avatarSize: t, userId: n, channelId: o, guildId: r } = e,
@@ -63,19 +63,19 @@ function D(e) {
     });
 }
 function z(e) {
-    let { channel: t, flipped: n = !1, locked: r = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = j.ipw.LARGE, onClick: v, onContextMenu: E, context: _, guildId: C, voiceState: Z, showStreamPreview: b, onShowStreamPreview: N, onWatchStream: O } = e,
-        T = (0, s.e7)([I.default], () => I.default.getId() === u.id, [u.id]),
-        [A, L, R] = (0, s.Wu)([y.Z], () => (T ? [!y.Z.isSupported() || y.Z.isSelfMute() || y.Z.isSelfMutedTemporarily(), y.Z.isSelfDeaf(), !1] : [!y.Z.isSupported() || y.Z.isLocalMute(u.id), !1, y.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
-        k = (0, s.e7)([x.Z], () => x.Z.getCurrentUserActiveStream()),
-        w = (0, s.Wu)([x.Z], () => (null != k ? x.Z.getViewerIds(k) : [])),
-        M = (0, f.Z)({
+    let { channel: t, flipped: n = !1, locked: r = !1, user: u, nick: c, displayNameMode: d, displayUserMode: p, size: m = M.ipw.LARGE, onClick: v, onContextMenu: E, context: _, guildId: C, voiceState: Z, showStreamPreview: y, onShowStreamPreview: b, onWatchStream: O } = e,
+        T = (0, s.e7)([x.default], () => x.default.getId() === u.id, [u.id]),
+        [A, L, R] = (0, s.Wu)([N.Z], () => (T ? [!N.Z.isSupported() || N.Z.isSelfMute() || N.Z.isSelfMutedTemporarily(), N.Z.isSelfDeaf(), !1] : [!N.Z.isSupported() || N.Z.isLocalMute(u.id), !1, N.Z.isLocalVideoDisabled(u.id)]), [T, u.id]),
+        k = (0, s.e7)([I.Z], () => I.Z.getCurrentUserActiveStream()),
+        w = (0, s.Wu)([I.Z], () => (null != k ? I.Z.getViewerIds(k) : [])),
+        j = (0, f.Z)({
             userId: u.id,
             context: _
         }),
-        z = (0, s.e7)([x.Z], () => x.Z.getStreamForUser(u.id, C)),
+        z = (0, s.e7)([I.Z], () => I.Z.getStreamForUser(u.id, C)),
         U = null != z,
         V = o.useMemo(() => null != k && k.ownerId !== u.id && w.includes(u.id), [k, u.id, w]),
-        F = o.useCallback(() => N(null), [N]),
+        F = o.useCallback(() => b(null), [b]),
         B = o.useCallback(
             () =>
                 (0, i.jsx)(g.Z, {
@@ -90,28 +90,28 @@ function z(e) {
                             O();
                     },
                     onAction: O,
-                    previewIsOpen: b,
-                    location: j.Sbl.UNLOCKED_OVERLAY
+                    previewIsOpen: y,
+                    location: M.Sbl.UNLOCKED_OVERLAY
                 }),
-            [u, t, z, b, F, O]
+            [u, t, z, y, F, O]
         );
-    if (p === j.OYC.ONLY_WHILE_SPEAKING && r && !M) return null;
+    if (p === M.OYC.ONLY_WHILE_SPEAKING && r && !j) return null;
     let { mute: W, suppress: H, deaf: G } = Z,
-        Y = m === j.ipw.LARGE ? 32 : 24;
+        Y = m === M.ipw.LARGE ? 32 : 24;
     return (0, i.jsxs)(a.Clickable, {
         className: l()(P.voiceUser, {
-            [P.speaking]: M,
+            [P.speaking]: j,
             [P.interactive]: !r,
             [P.flipped]: n
         }),
         onClick: r ? void 0 : (e) => (null == v ? void 0 : v(e, u)),
         onContextMenu: r ? void 0 : (e) => (null == E ? void 0 : E(e, u)),
-        onMouseEnter: () => N(u.id),
+        onMouseEnter: () => b(u.id),
         onMouseLeave: F,
         children: [
             (0, i.jsx)(a.Avatar, {
                 className: P.avatar,
-                size: m === j.ipw.LARGE ? a.AvatarSizes.SIZE_32 : a.AvatarSizes.SIZE_24,
+                size: m === M.ipw.LARGE ? a.AvatarSizes.SIZE_32 : a.AvatarSizes.SIZE_24,
                 src: u.getAvatarURL(C, Y),
                 'aria-hidden': !0
             }),
@@ -121,12 +121,12 @@ function z(e) {
                 channelId: t.id,
                 guildId: t.getGuildId()
             }),
-            r && (d === j.wC$.NEVER || (!M && d === j.wC$.ONLY_WHILE_SPEAKING))
+            r && (d === M.wC$.NEVER || (!j && d === M.wC$.ONLY_WHILE_SPEAKING))
                 ? null
                 : (0, i.jsx)(a.Popout, {
                       position: 'right',
                       renderPopout: B,
-                      shouldShow: b,
+                      shouldShow: y,
                       onRequestClose: F,
                       spacing: 0,
                       children: () =>
@@ -161,7 +161,7 @@ function z(e) {
     });
 }
 function U(e) {
-    let { id: t, context: r = M.Yn.DEFAULT, channel: l, sortedVoiceStates: s, displayNameMode: a, displayUserMode: h, locked: f, pinned: p, isPreviewingInGame: m, anchorLeft: v, avatarSizeMode: g } = e,
+    let { id: t, context: r = j.Yn.DEFAULT, channel: l, sortedVoiceStates: s, displayNameMode: a, displayUserMode: h, locked: f, pinned: p, isPreviewingInGame: m, anchorLeft: v, avatarSizeMode: g } = e,
         [E, _] = o.useState(null),
         C = (e, t) => {
             (0, u.jW)(e, async () => {
@@ -176,19 +176,19 @@ function U(e) {
             });
         },
         S = s.length > 0 && null != r && null != l && (!f || p),
-        x = o.useCallback(() => {
+        I = o.useCallback(() => {
             var e, n;
-            let i = null === (e = b.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
-                o = null != i ? (null === (n = b.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === j.Odu.GO_LIVE)) : null;
+            let i = null === (e = y.Z.getWidget(t)) || void 0 === e ? void 0 : e.layoutId,
+                o = null != i ? (null === (n = y.Z.getWidgetsForLayout(i)) || void 0 === n ? void 0 : n.find((e) => e.type === M.Odu.GO_LIVE)) : null;
             null != o &&
                 !o.pinned &&
                 ((0, c.xh)(o.id),
-                d.Z.track(j.rMx.OVERLAY_PIN_TOGGLED, {
+                d.Z.track(M.rMx.OVERLAY_PIN_TOGGLED, {
                     pinned: !0,
                     guild_id: null == l ? void 0 : l.guild_id,
                     channel_id: null == l ? void 0 : l.id,
                     channel_type: null == l ? void 0 : l.type,
-                    widget_type: j.Odu.GO_LIVE
+                    widget_type: M.Odu.GO_LIVE
                 }));
         }, [l, t]);
     return S
@@ -216,7 +216,7 @@ function U(e) {
                                 channel: l,
                                 showStreamPreview: n.id === E,
                                 onShowStreamPreview: _,
-                                onWatchStream: x
+                                onWatchStream: I
                             },
                             n.id
                         );
@@ -226,27 +226,27 @@ function U(e) {
 }
 function V(e) {
     var t;
-    let n = (0, s.e7)([N.Z, Z.Z], () => Z.Z.getChannel(N.Z.getVoiceChannelId())),
+    let n = (0, s.e7)([b.Z, Z.Z], () => Z.Z.getChannel(b.Z.getVoiceChannelId())),
         r = (0, v.ZP)(n),
         l = (function () {
             let [e] = (0, s.e7)(
-                    [O.ZP, _.Z, N.Z, Z.Z],
+                    [O.ZP, _.Z, b.Z, Z.Z],
                     () => {
-                        let e = Z.Z.getChannel(N.Z.getVoiceChannelId());
+                        let e = Z.Z.getChannel(b.Z.getVoiceChannelId());
                         return null == e ? [[], -1] : e.isGuildStageVoice() ? [_.Z.getMutableParticipants(e.id, C.pV.SPEAKER), _.Z.getParticipantsVersion(e.id)] : [O.ZP.getVoiceStatesForChannel(e), O.ZP.getVoiceStateVersion(e.getGuildId())];
                     },
                     [],
                     A.Q
                 ),
-                t = (0, s.e7)([I.default], () => I.default.getId()),
+                t = (0, s.e7)([x.default], () => x.default.getId()),
                 { showKeybindIndicators: n } = k.Z.useExperiment({ location: 'voice_widget' });
             return o.useMemo(() => (n ? [...e].sort((e, n) => (e.user.id === t ? -1 : n.user.id === t ? 1 : 0)) : e), [e, t, n]);
         })(),
-        a = (0, s.e7)([x.Z], () => x.Z.getStreamerActiveStreamMetadata()),
+        a = (0, s.e7)([I.Z], () => I.Z.getStreamerActiveStreamMetadata()),
         u = (0, w.II)(),
         c = (0, p.q)(null == u ? void 0 : u.id),
-        d = (0, s.cj)([x.Z, T.Z], () => {
-            let e = x.Z.getCurrentUserActiveStream();
+        d = (0, s.cj)([I.Z, T.Z], () => {
+            let e = I.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: T.Z.getDisplayUserMode(),
                 displayNameMode: T.Z.getDisplayNameMode(),

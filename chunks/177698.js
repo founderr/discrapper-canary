@@ -26,8 +26,8 @@ t.Z = (0, p.Z)(
                     let { clientId: r, location: a } = i;
                     if (null == r || r === n) s.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                 },
-                R = (0, c.R)();
-            if (s.context === f.IlC.OVERLAY && !R) {
+                j = (0, c.R)();
+            if (s.context === f.IlC.OVERLAY && !j) {
                 l.Z.subscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y),
                     l.Z.dispatch({
                         type: 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN',
@@ -79,7 +79,7 @@ t.Z = (0, p.Z)(
                         (0, r.closeModal)(Z), t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
                     }
                 },
-                (null != L && (0, a.Z)(L, S)) || R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+                (null != L && (0, a.Z)(L, S)) || j ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
             );
         });
     },

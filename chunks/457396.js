@@ -32,8 +32,8 @@ var i,
     Z = n(650032),
     y = n(767870),
     L = n(104494),
-    R = n(639119),
-    j = n(655525),
+    j = n(639119),
+    R = n(655525),
     O = n(314684),
     P = n(52188),
     D = n(346497),
@@ -62,7 +62,7 @@ let q = (e) => {
         [ee, et] = a.useState(!1),
         en = (0, T.Qo)(J, $),
         ei = (0, c.JA)('nitro'),
-        er = (0, R.N)(),
+        er = (0, j.N)(),
         el = (0, L.Ng)(),
         ea = (0, d.e7)([S.ZP], () => S.ZP.inReverseTrial()),
         es = (null == er ? void 0 : er.trial_id) === H.jz,
@@ -119,7 +119,7 @@ let q = (e) => {
               : eg
                 ? ((i = (0, l.jsx)(U.Z, { copy: z.intl.string(z.t.jyYgZ2) })), (r = 8))
                 : ec
-                  ? ((i = (0, l.jsx)(j.Z, {})), (r = 0))
+                  ? ((i = (0, l.jsx)(R.Z, {})), (r = 0))
                   : null != ex && ex === u.z.REVERSE_TRIAL_NITRO_TAB_BADGE
                     ? ((i = (0, l.jsx)(B.Z, {
                           copy: z.intl.string(z.t.HwUCnp),

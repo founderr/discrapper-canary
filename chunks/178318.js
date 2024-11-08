@@ -117,7 +117,7 @@ class L extends g.Z {
         (this._sendCallback = e), (this._closeCallback = t);
     }
 }
-class R extends l.EventEmitter {
+class j extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, i] = x(e.url).split('?'),
             r = x(e.method);
@@ -206,4 +206,4 @@ class R extends l.EventEmitter {
         new v.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
-t.Z = new R();
+t.Z = new j();

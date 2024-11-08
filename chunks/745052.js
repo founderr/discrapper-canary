@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(897473),
     y = n(108427),
     L = n(970731),
-    R = n(187819),
-    j = n(210887),
+    j = n(187819),
+    R = n(210887),
     O = n(433355),
     P = n(592125),
     D = n(819640),
@@ -194,7 +194,7 @@ let er = function (e) {
         let t = (0, U.Z)(),
             n = () => D.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
             l = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
-            a = (0, R._p)({ location: 'message-request-coachmark' });
+            a = (0, j._p)({ location: 'message-request-coachmark' });
         return (
             r.useEffect(() => {
                 (0, S.kk)(d.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK);
@@ -243,7 +243,7 @@ let es = (0, p.Z)(function (e) {
     r.useEffect(() => {
         h.Y(X.Z5c.MESSAGE_REQUESTS), (0, y.e)('message-requests'), M.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), x.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
-    let l = (0, c.e7)([j.Z], () => j.Z.theme),
+    let l = (0, c.e7)([R.Z], () => R.Z.theme),
         s = (0, z.w)(),
         [d, m] = r.useState(!1),
         p = (0, c.e7)([O.ZP], () => {

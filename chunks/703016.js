@@ -27,8 +27,8 @@ var i = n(913527),
     Z = n(981631),
     y = n(388032);
 let L = [],
-    R = null,
     j = null,
+    R = null,
     O = null,
     P = /\|\|([\s\S]+?)\|\|/g;
 function D(e, t, n, i) {
@@ -76,11 +76,11 @@ function M() {
         O = null === (t = window.speechSynthesis) || void 0 === t ? void 0 : t.getVoices();
     }
     let n = O.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e || !1);
-    j = n.length > 0 ? n[0] : null;
+    R = n.length > 0 ? n[0] : null;
 }
 async function w(e, t, n, i, r) {
     let l = s.e6(e, n);
-    null !== l && (null == j && M(), t ? await (0, x.NB)() : null == R || R.removeEventListener('end', x.NB), l.addEventListener('end', x.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (R = l), s.iq(l, j));
+    null !== l && (null == R && M(), t ? await (0, x.NB)() : null == j || j.removeEventListener('end', x.NB), l.addEventListener('end', x.NB), null != i && l.addEventListener('start', i), null != r && l.addEventListener('end', r), (j = l), s.iq(l, R));
 }
 function k(e, t, n, i, r) {
     w(e, t, r, () => {
@@ -92,7 +92,7 @@ function U(e) {
     w(t, n, i, r, l);
 }
 function G() {
-    return null !== R && R.removeEventListener('end', x.NB), s.M9(), (R = null), !0;
+    return null !== j && j.removeEventListener('end', x.NB), s.M9(), (j = null), !0;
 }
 function B(e) {
     var t, n, i;

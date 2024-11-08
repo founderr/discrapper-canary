@@ -45,9 +45,9 @@ function y(e, t) {
 }
 t.default = function (e) {
     let { guildId: t, transitionState: l, onClose: L } = e,
-        R = (0, s.e7)([C.Z], () => C.Z.getRoles(t)),
-        j = (0, s.e7)([E.default], () => E.default.getId()),
-        O = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, j)),
+        j = (0, s.e7)([C.Z], () => C.Z.getRoles(t)),
+        R = (0, s.e7)([E.default], () => E.default.getId()),
+        O = (0, s.e7)([I.ZP], () => I.ZP.getMember(t, R)),
         [P, D] = r.useState([]),
         M = (0, h.ZP)(),
         w = (0, f.Dt)();
@@ -68,7 +68,7 @@ t.default = function (e) {
         null == O)
     )
         return null;
-    let k = Object.values(R).filter((e) => {
+    let k = Object.values(j).filter((e) => {
         var t;
         return (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null;
     });
