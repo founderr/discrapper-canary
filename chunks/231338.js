@@ -30,7 +30,7 @@ r.d(t, {
         return g;
     },
     ET: function () {
-        return P;
+        return U;
     },
     Et: function () {
         return T;
@@ -63,7 +63,7 @@ r.d(t, {
         return eF;
     },
     Pl: function () {
-        return eU;
+        return eP;
     },
     Py: function () {
         return l;
@@ -75,7 +75,7 @@ r.d(t, {
         return eL;
     },
     RG: function () {
-        return U;
+        return P;
     },
     RK: function () {
         return eK;
@@ -126,7 +126,7 @@ r.d(t, {
         return G;
     },
     dG: function () {
-        return eP;
+        return eU;
     },
     fK: function () {
         return ek;
@@ -203,8 +203,8 @@ var n,
     D,
     C,
     g,
-    U,
     P,
+    U,
     M,
     G,
     m,
@@ -372,7 +372,7 @@ let eg = Object.freeze({
     1: 'sku'
 });
 ((F = N || (N = {}))[(F.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (F[(F.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (F[(F.CONNECT = 1048576)] = 'CONNECT');
-let eU = Object.freeze({
+let eP = Object.freeze({
         CREATE_INSTANT_INVITE: ei.r0(0),
         KICK_MEMBERS: ei.r0(1),
         BAN_MEMBERS: ei.r0(2),
@@ -425,12 +425,12 @@ let eU = Object.freeze({
         MANAGE_EVENTS: ei.r0(33),
         CREATE_EVENTS: ei.r0(44)
     }),
-    eP = function () {
+    eU = function () {
         for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
     },
     eM = () => null,
     eG = () => Promise.resolve(),
-    em = [eU.KICK_MEMBERS, eU.BAN_MEMBERS, eU.ADMINISTRATOR, eU.MANAGE_CHANNELS, eU.MANAGE_GUILD, eU.MANAGE_ROLES, eU.MANAGE_MESSAGES, eU.MANAGE_THREADS, eU.MODERATE_MEMBERS],
+    em = [eP.KICK_MEMBERS, eP.BAN_MEMBERS, eP.ADMINISTRATOR, eP.MANAGE_CHANNELS, eP.MANAGE_GUILD, eP.MANAGE_ROLES, eP.MANAGE_MESSAGES, eP.MANAGE_THREADS, eP.MODERATE_MEMBERS],
     ey = ei.$e(...em),
     eb = 1,
     ev = 6463,
@@ -496,8 +496,6 @@ let eU = Object.freeze({
     (X.NETWORKING_SYSTEM_METRICS = 'NETWORKING_SYSTEM_METRICS'),
     (X.NETWORKING_PEER_METRICS = 'NETWORKING_PEER_METRICS'),
     (X.NETWORKING_CREATE_TOKEN = 'NETWORKING_CREATE_TOKEN'),
-    (X.SET_USER_ACHIEVEMENT = 'SET_USER_ACHIEVEMENT'),
-    (X.GET_USER_ACHIEVEMENTS = 'GET_USER_ACHIEVEMENTS'),
     (X.USER_SETTINGS_GET_LOCALE = 'USER_SETTINGS_GET_LOCALE'),
     (X.SEND_GENERIC_EVENT = 'SEND_GENERIC_EVENT'),
     (X.SEND_ANALYTICS_EVENT = 'SEND_ANALYTICS_EVENT'),
@@ -548,7 +546,6 @@ let eU = Object.freeze({
     (j.OVERLAY_UPDATE = 'OVERLAY_UPDATE'),
     (j.ENTITLEMENT_CREATE = 'ENTITLEMENT_CREATE'),
     (j.ENTITLEMENT_DELETE = 'ENTITLEMENT_DELETE'),
-    (j.USER_ACHIEVEMENT_UPDATE = 'USER_ACHIEVEMENT_UPDATE'),
     (j.VOICE_CHANNEL_EFFECT_SEND = 'VOICE_CHANNEL_EFFECT_SEND'),
     (j.VOICE_CHANNEL_EFFECT_RECENT_EMOJI = 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI'),
     (j.VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE = 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE'),
@@ -962,9 +959,9 @@ let eF = 'US';
     (et[(et.INDIE = 67)] = 'INDIE'),
     (et[(et.ARCADE = 68)] = 'ARCADE'),
     (et[(et.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((er = U || (U = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
+    ((er = P || (P = {}))[(er.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
     (er[(er.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
-    ((en = P || (P = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
+    ((en = U || (U = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
     (en.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
     (en.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
     ((ea = M || (M = {})).SWIPE = 'SWIPE'),

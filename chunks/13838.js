@@ -309,10 +309,6 @@ let L = {
         },
         handler() {}
     },
-    [x.zMe.USER_ACHIEVEMENT_UPDATE]: {
-        scope: T.lH,
-        handler() {}
-    },
     [x.zMe.SCREENSHARE_STATE_UPDATE]: {
         scope: {
             [T.Gp.ALL]: [T.lH, l.x.RPC_SCREENSHARE_READ]

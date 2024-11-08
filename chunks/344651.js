@@ -1190,12 +1190,6 @@ B(
             giftCode: e
         });
     }),
-    G(['USER_ACHIEVEMENT_UPDATE'], (e) => {
-        F({
-            type: 'USER_ACHIEVEMENT_UPDATE',
-            userAchievement: e
-        });
-    }),
     G(['LIBRARY_APPLICATION_UPDATE'], (e) => {
         F({
             type: 'LIBRARY_APPLICATION_UPDATE',

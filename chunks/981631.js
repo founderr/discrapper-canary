@@ -24,7 +24,7 @@ r.d(t, {
         return tW;
     },
     ABu: function () {
-        return eP;
+        return eU;
     },
     AEg: function () {
         return eq;
@@ -72,7 +72,7 @@ r.d(t, {
         return j;
     },
     CgE: function () {
-        return tP;
+        return tU;
     },
     CkL: function () {
         return eg;
@@ -150,7 +150,7 @@ r.d(t, {
         return oR;
     },
     IE4: function () {
-        return U;
+        return P;
     },
     IIU: function () {
         return ea;
@@ -216,7 +216,7 @@ r.d(t, {
         return _M;
     },
     LPv: function () {
-        return eU;
+        return eP;
     },
     Lcj: function () {
         return ei;
@@ -312,7 +312,7 @@ r.d(t, {
         return ec;
     },
     QKv: function () {
-        return P;
+        return U;
     },
     QL: function () {
         return ak.QL;
@@ -582,7 +582,7 @@ r.d(t, {
         return eb;
     },
     eWB: function () {
-        return _U;
+        return _P;
     },
     ecB: function () {
         return e0;
@@ -612,7 +612,7 @@ r.d(t, {
         return aF.fM;
     },
     fo$: function () {
-        return _P;
+        return _U;
     },
     frH: function () {
         return ak.fr;
@@ -972,8 +972,8 @@ var n,
     D,
     C,
     g,
-    U,
     P,
+    U,
     M,
     G,
     m,
@@ -1026,8 +1026,8 @@ var n,
     eD,
     eC,
     eg,
-    eU,
     eP,
+    eU,
     eM,
     eG,
     em,
@@ -1090,8 +1090,8 @@ var n,
     tD,
     tC,
     tg,
-    tU,
     tP,
+    tU,
     tM,
     tG,
     tm,
@@ -1154,8 +1154,8 @@ var n,
     rD,
     rC,
     rg,
-    rU,
     rP,
+    rU,
     rM,
     rG,
     rm,
@@ -1218,8 +1218,8 @@ var n,
     nD,
     nC,
     ng,
-    nU,
     nP,
+    nU,
     nM,
     nG,
     nm,
@@ -1282,8 +1282,8 @@ var n,
     aD,
     aC,
     ag,
-    aU,
     aP,
+    aU,
     aM,
     aG = r(512722),
     am = r.n(aG),
@@ -1691,9 +1691,9 @@ let aX = Object.freeze({
     SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES: 32,
     SUPPRESS_CHANNEL_PROMPT_DEADCHAT: 128
 });
-((rA = g || (g = {})).DISCONNECTED = 'DISCONNECTED'), (rA.AWAITING_ENDPOINT = 'AWAITING_ENDPOINT'), (rA.AUTHENTICATING = 'AUTHENTICATING'), (rA.CONNECTING = 'CONNECTING'), (rA.RTC_DISCONNECTED = 'RTC_DISCONNECTED'), (rA.RTC_CONNECTING = 'RTC_CONNECTING'), (rA.RTC_CONNECTED = 'RTC_CONNECTED'), (rA.NO_ROUTE = 'NO_ROUTE'), (rA.ICE_CHECKING = 'ICE_CHECKING'), (rA.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((rN = U || (U = {})).UNKNOWN = 'unknown'), (rN.BAD = 'bad'), (rN.AVERAGE = 'average'), (rN.FINE = 'fine'), ((rT = P || (P = {})).CONNECTED = 'connected'), (rT.CONNECTING = 'connecting'), (rT.ERROR = 'error'), ((rd = M || (M = {})).MANUAL_ENABLED = 'MANUAL_ENABLED'), (rd.AUTO_PROBING = 'AUTO_PROBING'), (rd.AUTO_ENABLED = 'AUTO_ENABLED'), (rd.DISABLED = 'DISABLED'), (rd.NONE = 'NONE'), ((rf = G || (G = {})).LOGIN = 'Login'), (rf.REGISTER = 'Register'), (rf.INVITE = 'Accept Invite Page'), (rf.VERIFY = 'Verify Email'), (rf.DISABLE_EMAIL_NOTIFICATIONS = 'Disable Email Notifications'), (rf.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS = 'Disable Server Highlight Notifications'), (rf.AUTHORIZE_IP = 'Authorize Ip'), (rf.REJECT_IP = 'Reject Ip'), (rf.REJECT_MFA = 'Reject MFA'), (rf.REPORT = 'Report Illegal Content'), (rf.REPORT_SECOND_LOOK = 'Report Second Look'), (rf.AUTHORIZE_PAYMENT = 'Authorize Payment'), (rf.RESET = 'Reset'), (rf.ACCOUNT_REVERT = 'Account Revert'), (rf.HANDOFF = 'Handoff'), (rf.UNKNOWN = 'Unknown'), (rf.LANDING = 'Landing'), ((rL = m || (m = {})).SENT = 'SENT'), (rL.SENDING = 'SENDING'), (rL.SEND_FAILED = 'SEND_FAILED');
+((rA = g || (g = {})).DISCONNECTED = 'DISCONNECTED'), (rA.AWAITING_ENDPOINT = 'AWAITING_ENDPOINT'), (rA.AUTHENTICATING = 'AUTHENTICATING'), (rA.CONNECTING = 'CONNECTING'), (rA.RTC_DISCONNECTED = 'RTC_DISCONNECTED'), (rA.RTC_CONNECTING = 'RTC_CONNECTING'), (rA.RTC_CONNECTED = 'RTC_CONNECTED'), (rA.NO_ROUTE = 'NO_ROUTE'), (rA.ICE_CHECKING = 'ICE_CHECKING'), (rA.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((rN = P || (P = {})).UNKNOWN = 'unknown'), (rN.BAD = 'bad'), (rN.AVERAGE = 'average'), (rN.FINE = 'fine'), ((rT = U || (U = {})).CONNECTED = 'connected'), (rT.CONNECTING = 'connecting'), (rT.ERROR = 'error'), ((rd = M || (M = {})).MANUAL_ENABLED = 'MANUAL_ENABLED'), (rd.AUTO_PROBING = 'AUTO_PROBING'), (rd.AUTO_ENABLED = 'AUTO_ENABLED'), (rd.DISABLED = 'DISABLED'), (rd.NONE = 'NONE'), ((rf = G || (G = {})).LOGIN = 'Login'), (rf.REGISTER = 'Register'), (rf.INVITE = 'Accept Invite Page'), (rf.VERIFY = 'Verify Email'), (rf.DISABLE_EMAIL_NOTIFICATIONS = 'Disable Email Notifications'), (rf.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS = 'Disable Server Highlight Notifications'), (rf.AUTHORIZE_IP = 'Authorize Ip'), (rf.REJECT_IP = 'Reject Ip'), (rf.REJECT_MFA = 'Reject MFA'), (rf.REPORT = 'Report Illegal Content'), (rf.REPORT_SECOND_LOOK = 'Report Second Look'), (rf.AUTHORIZE_PAYMENT = 'Authorize Payment'), (rf.RESET = 'Reset'), (rf.ACCOUNT_REVERT = 'Account Revert'), (rf.HANDOFF = 'Handoff'), (rf.UNKNOWN = 'Unknown'), (rf.LANDING = 'Landing'), ((rL = m || (m = {})).SENT = 'SENT'), (rL.SENDING = 'SENDING'), (rL.SEND_FAILED = 'SEND_FAILED');
 let aj = new Set([aB.u.REPLY, aB.u.THREAD_STARTER_MESSAGE, aB.u.CONTEXT_MENU_COMMAND]);
-((rO = y || (y = {}))[(rO.CROSSPOSTED = 1)] = 'CROSSPOSTED'), (rO[(rO.IS_CROSSPOST = 2)] = 'IS_CROSSPOST'), (rO[(rO.SUPPRESS_EMBEDS = 4)] = 'SUPPRESS_EMBEDS'), (rO[(rO.SOURCE_MESSAGE_DELETED = 8)] = 'SOURCE_MESSAGE_DELETED'), (rO[(rO.URGENT = 16)] = 'URGENT'), (rO[(rO.HAS_THREAD = 32)] = 'HAS_THREAD'), (rO[(rO.EPHEMERAL = 64)] = 'EPHEMERAL'), (rO[(rO.LOADING = 128)] = 'LOADING'), (rO[(rO.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD = 256)] = 'FAILED_TO_MENTION_SOME_ROLES_IN_THREAD'), (rO[(rO.GUILD_FEED_HIDDEN = 512)] = 'GUILD_FEED_HIDDEN'), (rO[(rO.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING = 1024)] = 'SHOULD_SHOW_LINK_NOT_DISCORD_WARNING'), (rO[(rO.SUPPRESS_NOTIFICATIONS = 4096)] = 'SUPPRESS_NOTIFICATIONS'), (rO[(rO.IS_VOICE_MESSAGE = 8192)] = 'IS_VOICE_MESSAGE'), (rO[(rO.HAS_SNAPSHOT = 16384)] = 'HAS_SNAPSHOT'), (rO[(rO.IS_UIKIT_COMPONENTS = 32768)] = 'IS_UIKIT_COMPONENTS'), (rO[(rO.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = 'SENT_BY_SOCIAL_LAYER_INTEGRATION'), ((rp = b || (b = {}))[(rp.IS_CLIP = 1)] = 'IS_CLIP'), (rp[(rp.IS_THUMBNAIL = 2)] = 'IS_THUMBNAIL'), (rp[(rp.IS_REMIX = 4)] = 'IS_REMIX'), (rp[(rp.IS_SPOILER = 8)] = 'IS_SPOILER'), (rp[(rp.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rp[(rp.IS_ANIMATED = 32)] = 'IS_ANIMATED'), ((rh = v || (v = {}))[(rh.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rh[(rh.IS_CONTENT_INVENTORY_ENTRY = 32)] = 'IS_CONTENT_INVENTORY_ENTRY'), ((rS = w || (w = {})).ALWAYS = 'ALWAYS'), (rS.NEVER = 'NEVER'), (rS.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rD = B || (B = {})).ALWAYS = 'ALWAYS'), (rD.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rC = W || (W = {})).GUILDS = 'GUILDS'), (rC.VOICE = 'VOICE'), (rC.VIDEO = 'VIDEO'), (rC.VOICE_V3 = 'VOICE_V3'), (rC.TEXT = 'TEXT'), (rC.GUILDS_TEXT = 'GUILDS_TEXT'), (rC.GO_LIVE = 'GO_LIVE'), (rC.QUICK_ACTIONS = 'QUICK_ACTIONS'), (rC.NOTIFICATIONS = 'NOTIFICATIONS'), (rC.ACTIVITY = 'ACTIVITY'), ((rg = H || (H = {})).DEFAULT = 'DEFAULT'), (rg.PINNED = 'PINNED'), (rg.UNPINNED = 'UNPINNED'), (rg.IN_GAME = 'IN_GAME'), (rg.IN_GAME_TEXT = 'IN_GAME_TEXT'), (rg.IN_GAME_ACTIVE = 'IN_GAME_ACTIVE'), (rg.IN_GAME_PREVIEW = 'IN_GAME_PREVIEW'), ((rU = Y || (Y = {})).LARGE = 'large'), (rU.SMALL = 'small'), ((rP = x || (x = {}))[(rP.ACTIVE = 0)] = 'ACTIVE'), (rP[(rP.TIMED_OUT = 1)] = 'TIMED_OUT'), (rP[(rP.DISMISSED = 2)] = 'DISMISSED'), (rP[(rP.FOCUSED = 3)] = 'FOCUSED'), ((rM = K || (K = {})).TOP_LEFT = 'topLeft'), (rM.TOP_RIGHT = 'topRight'), (rM.BOTTOM_LEFT = 'bottomLeft'), (rM.BOTTOM_RIGHT = 'bottomRight'), (rM.DISABLED = 'disabled'), ((rG = V || (V = {})).ENABLED = 'ENABLED'), (rG.DISABLED = 'DISABLED'), ((rm = k || (k = {})).CONNECT = 'CONNECT'), (rm.DISPATCH = 'DISPATCH'), (rm.LOG_MESSAGES = 'LOG_MESSAGES'), (rm.STORAGE_SYNC = 'STORAGE_SYNC'), ((F || (F = {})).TEXT_WIDGET = 'TEXT_WIDGET'), ((ry = X || (X = {}))[(ry.NONE = 0)] = 'NONE'), (ry[(ry.LOW = 1)] = 'LOW'), (ry[(ry.MEDIUM = 2)] = 'MEDIUM'), (ry[(ry.HIGH = 3)] = 'HIGH'), (ry[(ry.VERY_HIGH = 4)] = 'VERY_HIGH');
+((rO = y || (y = {}))[(rO.CROSSPOSTED = 1)] = 'CROSSPOSTED'), (rO[(rO.IS_CROSSPOST = 2)] = 'IS_CROSSPOST'), (rO[(rO.SUPPRESS_EMBEDS = 4)] = 'SUPPRESS_EMBEDS'), (rO[(rO.SOURCE_MESSAGE_DELETED = 8)] = 'SOURCE_MESSAGE_DELETED'), (rO[(rO.URGENT = 16)] = 'URGENT'), (rO[(rO.HAS_THREAD = 32)] = 'HAS_THREAD'), (rO[(rO.EPHEMERAL = 64)] = 'EPHEMERAL'), (rO[(rO.LOADING = 128)] = 'LOADING'), (rO[(rO.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD = 256)] = 'FAILED_TO_MENTION_SOME_ROLES_IN_THREAD'), (rO[(rO.GUILD_FEED_HIDDEN = 512)] = 'GUILD_FEED_HIDDEN'), (rO[(rO.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING = 1024)] = 'SHOULD_SHOW_LINK_NOT_DISCORD_WARNING'), (rO[(rO.SUPPRESS_NOTIFICATIONS = 4096)] = 'SUPPRESS_NOTIFICATIONS'), (rO[(rO.IS_VOICE_MESSAGE = 8192)] = 'IS_VOICE_MESSAGE'), (rO[(rO.HAS_SNAPSHOT = 16384)] = 'HAS_SNAPSHOT'), (rO[(rO.IS_UIKIT_COMPONENTS = 32768)] = 'IS_UIKIT_COMPONENTS'), (rO[(rO.SENT_BY_SOCIAL_LAYER_INTEGRATION = 65536)] = 'SENT_BY_SOCIAL_LAYER_INTEGRATION'), ((rp = b || (b = {}))[(rp.IS_CLIP = 1)] = 'IS_CLIP'), (rp[(rp.IS_THUMBNAIL = 2)] = 'IS_THUMBNAIL'), (rp[(rp.IS_REMIX = 4)] = 'IS_REMIX'), (rp[(rp.IS_SPOILER = 8)] = 'IS_SPOILER'), (rp[(rp.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rp[(rp.IS_ANIMATED = 32)] = 'IS_ANIMATED'), ((rh = v || (v = {}))[(rh.CONTAINS_EXPLICIT_MEDIA = 16)] = 'CONTAINS_EXPLICIT_MEDIA'), (rh[(rh.IS_CONTENT_INVENTORY_ENTRY = 32)] = 'IS_CONTENT_INVENTORY_ENTRY'), ((rS = w || (w = {})).ALWAYS = 'ALWAYS'), (rS.NEVER = 'NEVER'), (rS.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rD = B || (B = {})).ALWAYS = 'ALWAYS'), (rD.ONLY_WHILE_SPEAKING = 'ONLY_WHILE_SPEAKING'), ((rC = W || (W = {})).GUILDS = 'GUILDS'), (rC.VOICE = 'VOICE'), (rC.VIDEO = 'VIDEO'), (rC.VOICE_V3 = 'VOICE_V3'), (rC.TEXT = 'TEXT'), (rC.GUILDS_TEXT = 'GUILDS_TEXT'), (rC.GO_LIVE = 'GO_LIVE'), (rC.QUICK_ACTIONS = 'QUICK_ACTIONS'), (rC.NOTIFICATIONS = 'NOTIFICATIONS'), (rC.ACTIVITY = 'ACTIVITY'), ((rg = H || (H = {})).DEFAULT = 'DEFAULT'), (rg.PINNED = 'PINNED'), (rg.UNPINNED = 'UNPINNED'), (rg.IN_GAME = 'IN_GAME'), (rg.IN_GAME_TEXT = 'IN_GAME_TEXT'), (rg.IN_GAME_ACTIVE = 'IN_GAME_ACTIVE'), (rg.IN_GAME_PREVIEW = 'IN_GAME_PREVIEW'), ((rP = Y || (Y = {})).LARGE = 'large'), (rP.SMALL = 'small'), ((rU = x || (x = {}))[(rU.ACTIVE = 0)] = 'ACTIVE'), (rU[(rU.TIMED_OUT = 1)] = 'TIMED_OUT'), (rU[(rU.DISMISSED = 2)] = 'DISMISSED'), (rU[(rU.FOCUSED = 3)] = 'FOCUSED'), ((rM = K || (K = {})).TOP_LEFT = 'topLeft'), (rM.TOP_RIGHT = 'topRight'), (rM.BOTTOM_LEFT = 'bottomLeft'), (rM.BOTTOM_RIGHT = 'bottomRight'), (rM.DISABLED = 'disabled'), ((rG = V || (V = {})).ENABLED = 'ENABLED'), (rG.DISABLED = 'DISABLED'), ((rm = k || (k = {})).CONNECT = 'CONNECT'), (rm.DISPATCH = 'DISPATCH'), (rm.LOG_MESSAGES = 'LOG_MESSAGES'), (rm.STORAGE_SYNC = 'STORAGE_SYNC'), ((F || (F = {})).TEXT_WIDGET = 'TEXT_WIDGET'), ((ry = X || (X = {}))[(ry.NONE = 0)] = 'NONE'), (ry[(ry.LOW = 1)] = 'LOW'), (ry[(ry.MEDIUM = 2)] = 'MEDIUM'), (ry[(ry.HIGH = 3)] = 'HIGH'), (ry[(ry.VERY_HIGH = 4)] = 'VERY_HIGH');
 let a$ = Object.freeze({
     ACCOUNT_AGE: 5,
     MEMBER_AGE: 10
@@ -2102,8 +2102,6 @@ let aq = '@me',
         DOWNGRADE_SUBSCRIPTION: '/google-play/downgrade-subscription',
         GOOGLE_PLAY_VALIDATE_PURCHASE: '/google-play/validate-purchase',
         USER_AGREEMENTS: '/users/@me/agreements',
-        USER_ACHIEVEMENTS: (e) => '/users/@me/applications/'.concat(e, '/achievements'),
-        USER_ACHIEVEMENTS_FOR_USER: (e, t, r) => '/users/'.concat(e, '/applications/').concat(t, '/achievements/').concat(r),
         HANDOFF: '/auth/handoff',
         HANDOFF_EXCHANGE: '/auth/handoff/exchange',
         LIBRARY: '/users/@me/library',
@@ -2619,8 +2617,8 @@ let _S = 128,
     _D = 1024,
     _C = 2000,
     _g = 64000,
-    _U = 96000,
-    _P = '0000',
+    _P = 96000,
+    _U = '0000',
     _M = '1',
     _G = 10000,
     _m = 50,
@@ -3783,11 +3781,11 @@ let _J = Object.freeze({
     (na.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION = 'HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION'),
     (na.BOTTOM_CHANNEL_SCREEN_DRAG_START = 'BOTTOM_CHANNEL_SCREEN_DRAG_START'),
     (na.OVERLAY_V3_SHOW_WIDGETS = 'OVERLAY_V3_SHOW_WIDGETS'),
-    ((n_ = eU || (eU = {})).TOGGLE_REACTION_POPOUT = 'TOGGLE_REACTION_POPOUT'),
+    ((n_ = eP || (eP = {})).TOGGLE_REACTION_POPOUT = 'TOGGLE_REACTION_POPOUT'),
     (n_.ANIMATE_CHAT_AVATAR = 'ANIMATE_CHAT_AVATAR'),
     (n_.VOICE_MESSAGE_SEND = 'VOICE_MESSAGE_SEND');
 let _z = 50;
-((no = eP || (eP = {})).TWITCH = 'twitch'),
+((no = eU || (eU = {})).TWITCH = 'twitch'),
     (no.YOUTUBE = 'youtube'),
     (no.SKYPE = 'skype'),
     (no.STEAM = 'steam'),
@@ -5097,7 +5095,7 @@ let or = Object.freeze({
         }
     }),
     on = 86400000;
-((nC = eq || (eq = {})).NORMAL = 'normal'), (nC.MINIMUM = 'minimum'), (nC.NO_CHAT = 'no-chat'), (nC.FULL_SCREEN = 'full-screen'), ((ng = eJ || (eJ = {})).THEATRE = 'theatre'), (ng.FULL_SCREEN = 'full-screen'), (ng.PIP = 'pip'), (ng.POPOUT = 'popout'), (ng.PORTRAIT = 'portrait'), (ng.LANDSCAPE = 'landscape'), (ng.MINIMIZED = 'minimized'), ((nU = ez || (ez = {})).USER_SETTINGS = 'USER_SETTINGS'), (nU.CHANNEL_SETTINGS = 'CHANNEL_SETTINGS'), (nU.GUILD_SETTINGS = 'GUILD_SETTINGS'), (nU.RTC_DEBUG = 'RTC_DEBUG'), (nU.GUILD_IDENTITY_SETTINGS = 'GUILD_IDENTITY_SETTINGS'), (nU.COLLECTIBLES_SHOP = 'COLLECTIBLES_SHOP');
+((nC = eq || (eq = {})).NORMAL = 'normal'), (nC.MINIMUM = 'minimum'), (nC.NO_CHAT = 'no-chat'), (nC.FULL_SCREEN = 'full-screen'), ((ng = eJ || (eJ = {})).THEATRE = 'theatre'), (ng.FULL_SCREEN = 'full-screen'), (ng.PIP = 'pip'), (ng.POPOUT = 'popout'), (ng.PORTRAIT = 'portrait'), (ng.LANDSCAPE = 'landscape'), (ng.MINIMIZED = 'minimized'), ((nP = ez || (ez = {})).USER_SETTINGS = 'USER_SETTINGS'), (nP.CHANNEL_SETTINGS = 'CHANNEL_SETTINGS'), (nP.GUILD_SETTINGS = 'GUILD_SETTINGS'), (nP.RTC_DEBUG = 'RTC_DEBUG'), (nP.GUILD_IDENTITY_SETTINGS = 'GUILD_IDENTITY_SETTINGS'), (nP.COLLECTIBLES_SHOP = 'COLLECTIBLES_SHOP');
 let oa = Object.freeze({
     ALL: null,
     GUILD_UPDATE: 1,
@@ -5177,10 +5175,10 @@ let oa = Object.freeze({
     GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: 201,
     GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: 202
 });
-((nP = eQ || (eQ = {})).ALL = 'ALL'),
-    (nP.CREATE = 'CREATE'),
-    (nP.UPDATE = 'UPDATE'),
-    (nP.DELETE = 'DELETE'),
+((nU = eQ || (eQ = {})).ALL = 'ALL'),
+    (nU.CREATE = 'CREATE'),
+    (nU.UPDATE = 'UPDATE'),
+    (nU.DELETE = 'DELETE'),
     ((nM = eZ || (eZ = {})).USER = '1'),
     (nM.ROLE = '0'),
     ((nG = e0 || (e0 = {}))[(nG.ROLE = 1)] = 'ROLE'),
@@ -5799,7 +5797,7 @@ let oR = Object.freeze({
         down: 81,
         up: 82
     });
-((an = tU || (tU = {}))[(an.Left = 0)] = 'Left'), (an[(an.Right = 1)] = 'Right'), (an[(an.Center = 2)] = 'Center'), (an[(an.Back = 3)] = 'Back'), (an[(an.Forward = 4)] = 'Forward');
+((an = tP || (tP = {}))[(an.Left = 0)] = 'Left'), (an[(an.Right = 1)] = 'Right'), (an[(an.Center = 2)] = 'Center'), (an[(an.Back = 3)] = 'Back'), (an[(an.Forward = 4)] = 'Forward');
 let oN = Object.freeze({
     a: 65,
     s: 83,
@@ -5915,7 +5913,7 @@ let oN = Object.freeze({
     '\\': 220,
     "'": 222
 });
-((aa = tP || (tP = {}))[(aa.WINDOWS = 1)] = 'WINDOWS'), (aa[(aa.MACOS = 2)] = 'MACOS'), (aa[(aa.LINUX = 3)] = 'LINUX'), (aa[(aa.BROWSER = 4)] = 'BROWSER'), ((a_ = tM || (tM = {})).EMPTY_MESSAGE = 'EMPTY_MESSAGE'), (a_.MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG'), (a_.RATE_LIMITED = 'RATE_LIMITED'), (a_.SHOUTING_CANCELLED = 'SHOUTING_CANCELLED'), (a_.SLOWMODE_COOLDOWN = 'SLOWMODE_COOLDOWN'), ((ao = tG || (tG = {}))[(ao.IMG = 1)] = 'IMG'), (ao[(ao.YOUTUBE_VIDEO = 2)] = 'YOUTUBE_VIDEO'), (ao[(ao.VIDEO = 3)] = 'VIDEO'), ((ai = tm || (tm = {})).NOW_PLAYING = '1'), (ai.RECENTLY_PLAYED = '2'), (ai.EVER_PLAYED = '3'), (ai.FLAVOR_TEXT = '4'), (ai.RECENT_RELEASE_DATE = '6'), (ai.RELEASE_DATE = '7'), (ai.EARLY_ACCESS = '8'), (ai.HAS_FREE_PREMIUM_CONTENT = '9'), ((aE = ty || (ty = {})).INPUT = 'INPUT'), (aE.OUTPUT = 'OUTPUT'), (aE.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((ac = tb || (tb = {})).INPUT = 'INPUT'), (ac.OUTPUT = 'OUTPUT'), (ac.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((as = tv || (tv = {})).APPLICATION_LIBRARY_BADGE = 'application_library_badge_18_11_02'), (as.SERVER_DISCOVERY_BADGE = 'server_discovery_badge_19_02_11'), (as.E3_SERVER_DISCOVERY_BADGE = 'e3_server_discovery_badge_19_06_08'), ((al = tw || (tw = {})).MESSAGE = 'MESSAGE'), (al.MESSAGE_FAILED_TO_SEND = 'MESSAGE_FAILED_TO_SEND'), (al.FORUM_THREAD_CREATED = 'FORUM_THREAD_CREATED'), (al.BUG_REPORTER = 'BUG_REPORTER'), (al.ALERT = 'ALERT'), (al.REACTION = 'REACTION'), (al.MESSAGE_REMINDER = 'MESSAGE_REMINDER'), ((au = tB || (tB = {})).TRENDING_GIFS = 'Trending'), (au.FAVORITES = 'Favorites'), (au.TRENDING_CATEGORY = 'Category'), (au.SEARCH = 'Search'), (au.SEARCH_SUGGESTION = 'Search Suggestion');
+((aa = tU || (tU = {}))[(aa.WINDOWS = 1)] = 'WINDOWS'), (aa[(aa.MACOS = 2)] = 'MACOS'), (aa[(aa.LINUX = 3)] = 'LINUX'), (aa[(aa.BROWSER = 4)] = 'BROWSER'), ((a_ = tM || (tM = {})).EMPTY_MESSAGE = 'EMPTY_MESSAGE'), (a_.MESSAGE_TOO_LONG = 'MESSAGE_TOO_LONG'), (a_.RATE_LIMITED = 'RATE_LIMITED'), (a_.SHOUTING_CANCELLED = 'SHOUTING_CANCELLED'), (a_.SLOWMODE_COOLDOWN = 'SLOWMODE_COOLDOWN'), ((ao = tG || (tG = {}))[(ao.IMG = 1)] = 'IMG'), (ao[(ao.YOUTUBE_VIDEO = 2)] = 'YOUTUBE_VIDEO'), (ao[(ao.VIDEO = 3)] = 'VIDEO'), ((ai = tm || (tm = {})).NOW_PLAYING = '1'), (ai.RECENTLY_PLAYED = '2'), (ai.EVER_PLAYED = '3'), (ai.FLAVOR_TEXT = '4'), (ai.RECENT_RELEASE_DATE = '6'), (ai.RELEASE_DATE = '7'), (ai.EARLY_ACCESS = '8'), (ai.HAS_FREE_PREMIUM_CONTENT = '9'), ((aE = ty || (ty = {})).INPUT = 'INPUT'), (aE.OUTPUT = 'OUTPUT'), (aE.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((ac = tb || (tb = {})).INPUT = 'INPUT'), (ac.OUTPUT = 'OUTPUT'), (ac.INPUT_AND_OUTPUT = 'INPUT_AND_OUTPUT'), ((as = tv || (tv = {})).APPLICATION_LIBRARY_BADGE = 'application_library_badge_18_11_02'), (as.SERVER_DISCOVERY_BADGE = 'server_discovery_badge_19_02_11'), (as.E3_SERVER_DISCOVERY_BADGE = 'e3_server_discovery_badge_19_06_08'), ((al = tw || (tw = {})).MESSAGE = 'MESSAGE'), (al.MESSAGE_FAILED_TO_SEND = 'MESSAGE_FAILED_TO_SEND'), (al.FORUM_THREAD_CREATED = 'FORUM_THREAD_CREATED'), (al.BUG_REPORTER = 'BUG_REPORTER'), (al.ALERT = 'ALERT'), (al.REACTION = 'REACTION'), (al.MESSAGE_REMINDER = 'MESSAGE_REMINDER'), ((au = tB || (tB = {})).TRENDING_GIFS = 'Trending'), (au.FAVORITES = 'Favorites'), (au.TRENDING_CATEGORY = 'Category'), (au.SEARCH = 'Search'), (au.SEARCH_SUGGESTION = 'Search Suggestion');
 let oT = new Set([ak.pK.USD, ak.pK.CAD, ak.pK.EUR, ak.pK.AUD, ak.pK.GBP, ak.pK.PHP, ak.pK.MYR, ak.pK.VND, ak.pK.KRW, ak.pK.IDR]);
 ((aI = tW || (tW = {})).ALWAYS = 'ALWAYS'), (aI.ON_CLICK = 'ON_CLICK'), (aI.IF_MODERATOR = 'IF_MODERATOR');
 let od = [];
@@ -5926,6 +5924,6 @@ let of = 2500,
 ((aC = tz || (tz = {})).USERS = 'users'), (aC.ROLES = 'roles'), (aC.EVERYONE = 'everyone'), ((ag = tQ || (tQ = {}))[(ag.AUTO = 1)] = 'AUTO'), (ag[(ag.FULL = 2)] = 'FULL');
 let op = 100,
     oh = /(mfa\.[a-z0-9_-]{20,})|([a-z0-9_-]{23,28}\.[a-z0-9_-]{6,7}\.[a-z0-9_-]{27})/i;
-((aU = tZ || (tZ = {}))[(aU.NULL = 0)] = 'NULL'), (aU[(aU.DISABLED = 1)] = 'DISABLED'), (aU[(aU.ENABLED = 2)] = 'ENABLED');
+((aP = tZ || (tZ = {}))[(aP.NULL = 0)] = 'NULL'), (aP[(aP.DISABLED = 1)] = 'DISABLED'), (aP[(aP.ENABLED = 2)] = 'ENABLED');
 let oS = 'https://creator-support.discord.com/hc/en-us/articles/12653663868823';
-((aP = t0 || (t0 = {}))[(aP.CLIPS_ENABLED = 1)] = 'CLIPS_ENABLED'), (aP[(aP.ALLOW_VOICE_RECORDING = 2)] = 'ALLOW_VOICE_RECORDING'), (aP[(aP.ALLOW_ANY_VIEWER_CLIPS = 4)] = 'ALLOW_ANY_VIEWER_CLIPS'), ((aM = t1 || (t1 = {})).LOADING = 'LOADING'), (aM.ERROR = 'ERROR'), (aM.READY = 'READY');
+((aU = t0 || (t0 = {}))[(aU.CLIPS_ENABLED = 1)] = 'CLIPS_ENABLED'), (aU[(aU.ALLOW_VOICE_RECORDING = 2)] = 'ALLOW_VOICE_RECORDING'), (aU[(aU.ALLOW_ANY_VIEWER_CLIPS = 4)] = 'ALLOW_ANY_VIEWER_CLIPS'), ((aM = t1 || (t1 = {})).LOADING = 'LOADING'), (aM.ERROR = 'ERROR'), (aM.READY = 'READY');
