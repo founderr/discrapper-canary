@@ -1200,6 +1200,25 @@ let { Themes: n } = r(15202).V,
                 opacity: 0.06
             }
         },
+        BORDER_NORMAL: {
+            category: 'border',
+            [n.DARK]: {
+                raw: 'OPACITY_6',
+                opacity: 0.2
+            },
+            [n.LIGHT]: {
+                raw: 'OPACITY_8',
+                opacity: 0.28
+            },
+            [n.MIDNIGHT]: {
+                raw: 'OPACITY_6',
+                opacity: 0.2
+            },
+            [n.DARKER]: {
+                raw: 'OPACITY_6',
+                opacity: 0.2
+            }
+        },
         BORDER_STRONG: {
             category: 'border',
             [n.DARK]: {

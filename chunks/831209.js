@@ -53,6 +53,7 @@ var n, r;
     (r.BLUR_FALLBACK = 'var(--blur-fallback)'),
     (r.BLUR_FALLBACK_PRESSED = 'var(--blur-fallback-pressed)'),
     (r.BORDER_FAINT = 'var(--border-faint)'),
+    (r.BORDER_NORMAL = 'var(--border-normal)'),
     (r.BORDER_STRONG = 'var(--border-strong)'),
     (r.BORDER_SUBTLE = 'var(--border-subtle)'),
     (r.BUG_REPORTER_MODAL_SUBMITTING_BACKGROUND = 'var(--bug-reporter-modal-submitting-background)'),

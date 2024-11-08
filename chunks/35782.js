@@ -134,6 +134,26 @@ let { Themes: r } = n(15202).V,
                     }
                 }
             },
+            BORDER_STRONG: {
+                'visual-refresh': {
+                    [r.DARK]: {
+                        raw: 'OPACITY_14',
+                        opacity: 0.52
+                    },
+                    [r.LIGHT]: {
+                        raw: 'OPACITY_14',
+                        opacity: 0.52
+                    },
+                    [r.MIDNIGHT]: {
+                        raw: 'OPACITY_14',
+                        opacity: 0.52
+                    },
+                    [r.DARKER]: {
+                        raw: 'OPACITY_14',
+                        opacity: 0.52
+                    }
+                }
+            },
             CHANNEL_ICON: {
                 'visual-refresh': {
                     [r.DARK]: {
