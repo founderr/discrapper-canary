@@ -96,11 +96,11 @@ function V(e) {
     let { user: t } = e;
     return G(t.id);
 }
-function H(e) {
+function j(e) {
     let { relationship: t } = e;
     return G(t.id);
 }
-function j(e) {
+function H(e) {
     let { guild: t } = e;
     !(function (e) {
         for (let t of O.values(e)) O.delete(t.id), delete L[t.id];
@@ -203,10 +203,10 @@ class K extends (r = d.ZP.Store) {
         },
         STREAM_CLOSE: Y,
         STREAM_DELETE: Y,
-        RELATIONSHIP_ADD: H,
-        RELATIONSHIP_REMOVE: H,
-        GUILD_CREATE: j,
-        GUILD_DELETE: j,
+        RELATIONSHIP_ADD: j,
+        RELATIONSHIP_REMOVE: j,
+        GUILD_CREATE: H,
+        GUILD_DELETE: H,
         PASSIVE_UPDATE_V2: function (e) {
             let t = !1;
             for (let n of x(e.guildId)) t = P(n).rebuild() || t;

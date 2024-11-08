@@ -733,13 +733,13 @@ n.r(t),
             return V.h;
         },
         FormSwitch: function () {
-            return H.j;
+            return j.j;
         },
         FormText: function () {
-            return j.R;
+            return H.R;
         },
         FormTextTypes: function () {
-            return j.g;
+            return H.g;
         },
         FormTitle: function () {
             return Y.v;
@@ -1609,7 +1609,7 @@ n.r(t),
             return td.o;
         },
         Slider: function () {
-            return eH.i;
+            return ej.i;
         },
         Slides: function () {
             return eV.H;
@@ -1630,10 +1630,10 @@ n.r(t),
             return tN.EmW;
         },
         Spinner: function () {
-            return ej.$;
+            return eH.$;
         },
         SpinnerTypes: function () {
-            return ej.R;
+            return eH.R;
         },
         SpoilerIcon: function () {
             return tN.W5T;
@@ -2291,8 +2291,8 @@ var r = n(680732),
     Z = n(722187),
     F = n(383838),
     V = n(789164),
-    H = n(471141),
-    j = n(534542),
+    j = n(471141),
+    H = n(534542),
     Y = n(512983),
     W = n(652334),
     K = n(793030),
@@ -2345,8 +2345,8 @@ var r = n(680732),
     eZ = n(503145),
     eF = n(936621),
     eV = n(718580),
-    eH = n(561779),
-    ej = n(922770),
+    ej = n(561779),
+    eH = n(922770),
     eY = n(696826),
     eW = n(437337),
     eK = n(706898),

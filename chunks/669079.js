@@ -12,7 +12,7 @@ n.d(t, {
         return K;
     },
     L2: function () {
-        return H;
+        return j;
     },
     MY: function () {
         return L;
@@ -42,7 +42,7 @@ n.d(t, {
         return Y;
     },
     iM: function () {
-        return j;
+        return H;
     },
     pO: function () {
         return x;
@@ -186,7 +186,7 @@ function V(e, t, n) {
             return t.isSubscription ? v.intl.formatToPlainString(v.t['2VN4Nz'], { skuName: n.name }) : v.intl.string(v.t.RmamAA);
     }
 }
-function H(e, t, n) {
+function j(e, t, n) {
     switch (e) {
         case g.wZ8.ERROR:
             return v.intl.string(v.t.w19zb2);
@@ -203,7 +203,7 @@ function H(e, t, n) {
             return t.isSubscription ? v.intl.string(v.t.wQ1FHx) : v.intl.string(v.t.OgpR0d);
     }
 }
-function j(e) {
+function H(e) {
     let { step: t, sku: n, libraryApplication: r, error: i, accepted: s, accepting: o, onGoToLibrary: l, subscriptionPlan: u = null } = e;
     switch (t) {
         case g.wZ8.ERROR:

@@ -187,8 +187,8 @@ function Z(e) {
         {
             tag: Z,
             badge: F,
-            branding: { primaryColor: V, secondaryColor: H },
-            bannerHash: j,
+            branding: { primaryColor: V, secondaryColor: j },
+            bannerHash: H,
             gameActivity: Y
         } = n,
         W = (0, d.Z)(n.games),
@@ -220,8 +220,8 @@ function Z(e) {
             q(!1);
         }, []),
         es = M.intl.formatToPlainString(M.t['0WHArK'], { count: n.memberCount }),
-        eo = null != A ? A : (0, m.pY)(n.id, j),
-        el = null == a && null == eo ? { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(H, ')') } : void 0,
+        eo = null != A ? A : (0, m.pY)(n.id, H),
+        el = null == a && null == eo ? { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(j, ')') } : void 0,
         eu =
             null != a
                 ? a
@@ -424,7 +424,7 @@ function Z(e) {
             T &&
                 (0, r.jsx)('div', {
                     className: P.cardBrandingFooter,
-                    style: { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(H, ')') }
+                    style: { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(j, ')') }
                 }),
             x
         ]

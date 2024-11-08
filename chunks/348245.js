@@ -238,7 +238,7 @@ function F(e) {
     }
 }
 let V = {};
-function H(e) {
+function j(e) {
     var t;
     let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
     if (a) return;
@@ -257,7 +257,7 @@ function H(e) {
             jump: r
         });
 }
-function j(e) {
+function H(e) {
     let { channelId: t, messageRecord: n, reason: r } = e;
     null != n &&
         o.Z.dispatch({
@@ -298,8 +298,8 @@ class W extends d.Z {
                 CHANNEL_PRELOAD: B,
                 GUILD_CREATE: () => M(),
                 MESSAGE_END_EDIT: F,
-                LOAD_MESSAGES_SUCCESS: H,
-                UPLOAD_FAIL: j,
+                LOAD_MESSAGES_SUCCESS: j,
+                UPLOAD_FAIL: H,
                 CHANNEL_DELETE: () => M(),
                 THREAD_DELETE: () => M()
             });

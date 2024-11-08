@@ -60,7 +60,7 @@ n.d(t, {
         return L;
     },
     tl: function () {
-        return H;
+        return j;
     },
     vn: function () {
         return U;
@@ -378,7 +378,7 @@ function M(e) {
             )
             .otherwise(() => null);
     if (null != s) return E.intl.string(s);
-    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: f } = Object.values(c.Z.boostSlots).reduce((e, t) => (H(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: f } = Object.values(c.Z.boostSlots).reduce((e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0
     });
@@ -446,7 +446,7 @@ function V(e, t) {
     let n = e.premiumSubscriberCount;
     return Math.max(0, U(e.id)[t] - n);
 }
-function H(e) {
+function j(e) {
     var t;
     return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === m.O0b.CANCELED || e.canceled;
 }

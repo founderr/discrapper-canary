@@ -289,12 +289,12 @@ var B = function (e, t) {
             }
         );
     };
-function H(e, t) {
+function j(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-function j(e, t, n, r) {
+function H(e, t, n, r) {
     return Y.apply(this, arguments);
 }
 function Y() {
@@ -415,10 +415,10 @@ function Y() {
                                                                                                               Array.isArray(e) ||
                                                                                                               (e = (function (e, t) {
                                                                                                                   if (e) {
-                                                                                                                      if ('string' == typeof e) return H(e, t);
+                                                                                                                      if ('string' == typeof e) return j(e, t);
                                                                                                                       var n = Object.prototype.toString.call(e).slice(8, -1);
                                                                                                                       if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-                                                                                                                      if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return H(e, t);
+                                                                                                                      if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return j(e, t);
                                                                                                                   }
                                                                                                               })(e))
                                                                                                           )
@@ -890,9 +890,9 @@ var K = (function (e) {
                     k = P ? v : this.get(),
                     G = U(g),
                     B = a.is.num(G) || a.is.arr(G) || a.isAnimatedString(G),
-                    H = !C && (!B || D(o.immediate || t.immediate, r));
+                    j = !C && (!B || D(o.immediate || t.immediate, r));
                 if (T) {
-                    if (H) M = this._updateNode(G);
+                    if (j) M = this._updateNode(G);
                     else {
                         var Y = this._getNodeType(g);
                         if (Y !== M.constructor) throw Error('Cannot animate between ' + M.constructor.name + ' and ' + Y.name + ', as the "to" prop suggests');
@@ -906,7 +906,7 @@ var K = (function (e) {
                     (T || q) && (K = !(z = a.isEqual(U(k), G))), (!a.isEqual(R.decay, L) || !a.isEqual(R.velocity, x)) && (K = !0);
                 }
                 if ((z && this.is($) && (i.changed && !P ? (K = !0) : !K && this._stop()), !C)) {
-                    (K || a.getFluidConfig(h)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(G))), (i.immediate = H), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
+                    (K || a.getFluidConfig(h)) && ((i.values = M.getPayload()), (i.toValues = A ? null : W == f.AnimatedString ? [1] : a.toArray(G))), (i.immediate = j), (i.onStart = ei(c('onStart'), r)), (i.onChange = ei(c('onChange'), r));
                     var Q = i.onRest,
                         ee = P && !t.onRest ? Q[0] || a.noop : ea(ei(c('onRest'), r), this);
                     if (K) {
@@ -919,7 +919,7 @@ var K = (function (e) {
                     } else (P || t.onRest) && (i.onRest[0] = ee);
                 }
                 var en = ei(c('onProps'), r);
-                if ((en && en(t, this), P && M.setValue(k), C)) n(j(t.to, t, this._state, this));
+                if ((en && en(t, this), P && M.setValue(k), C)) n(H(t.to, t, this._state, this));
                 else if (K) P && (this._phase = J), this._reset(), this._start();
                 else if (this.is($) && !T) i.onRest.push(ea(n, this));
                 else {
@@ -1258,7 +1258,7 @@ function ef(e, t) {
                                           if (((e.onRest = o), e.cancel)) {
                                               var r, i;
                                               if (((r = e), (i = 'cancel'), !a.is.und(x(r, i)))) W(c, e.callId);
-                                          } else n(j(l, e, c, t));
+                                          } else n(H(l, e, c, t));
                                       }
                                   }
                               })

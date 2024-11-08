@@ -27,7 +27,7 @@ n.d(t, {
         return W;
     },
     U9: function () {
-        return j;
+        return H;
     },
     XF: function () {
         return k;
@@ -45,7 +45,7 @@ n.d(t, {
         return L;
     },
     n8: function () {
-        return H;
+        return j;
     },
     pQ: function () {
         return G;
@@ -84,10 +84,10 @@ var r,
     C = n(369312);
 let R = {
     [d.s.TOP_ARTIST]: [V],
-    [d.s.PLAYED_GAME]: [M, P, w, j, U, Z, H, B, G],
+    [d.s.PLAYED_GAME]: [M, P, w, H, U, Z, j, B, G],
     [d.s.TOP_GAME]: [F],
     [d.s.WATCHED_MEDIA]: [Y, W],
-    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, j, H, G]
+    [d.s.LAUNCHED_ACTIVITY]: [M, P, w, H, j, G]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED'), (r[(r.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (r[(r.OVERLAY = 7)] = 'OVERLAY');
 let O = s.createContext({});
@@ -305,7 +305,7 @@ function V(e) {
         text: s
     });
 }
-function H(e) {
+function j(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (3 === n) return null;
@@ -317,7 +317,7 @@ function H(e) {
               text: N.intl.string(N.t.kAlUs7)
           });
 }
-function j(e) {
+function H(e) {
     let { entry: t } = e,
         { location: n } = D();
     if (3 === n) return null;

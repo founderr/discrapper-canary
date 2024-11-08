@@ -239,7 +239,7 @@ var t, n;
             Z = '(?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*',
             F = '\\s*<?((?:\\([^)]*\\)|[^\\s\\\\]|\\\\.)*?)>?(?:\\s+[\'"]([\\s\\S]*?)[\'"])?\\s*',
             V = /mailto:/i,
-            H = function (e, t, n) {
+            j = function (e, t, n) {
                 var r = (e[2] || e[1]).replace(/\s+/g, ' ').toLowerCase();
                 if (t._defs && t._defs[r]) {
                     var i = t._defs[r];
@@ -247,9 +247,9 @@ var t, n;
                 }
                 return (t._refs = t._refs || {}), (t._refs[r] = t._refs[r] || []), t._refs[r].push(n), n;
             },
-            j = !1;
+            H = !1;
         try {
-            RegExp('(?<=a)'), RegExp('(?<!a)'), (j = !0);
+            RegExp('(?<=a)'), RegExp('(?<!a)'), (H = !0);
         } catch (e) {}
         var Y = 0,
             W = {
@@ -701,7 +701,7 @@ var t, n;
                     order: Y++,
                     match: h(RegExp('^\\[(' + Z + ')\\]\\s*\\[([^\\]]*)\\]')),
                     parse: function (e, t, n) {
-                        return H(e, n, {
+                        return j(e, n, {
                             type: 'link',
                             content: t(e[1], n)
                         });
@@ -713,7 +713,7 @@ var t, n;
                     order: Y++,
                     match: h(RegExp('^!\\[(' + Z + ')\\]\\s*\\[([^\\]]*)\\]')),
                     parse: function (e, t, n) {
-                        return H(e, n, {
+                        return j(e, n, {
                             type: 'image',
                             alt: e[1]
                         });
@@ -723,7 +723,7 @@ var t, n;
                 },
                 em: {
                     order: Y,
-                    match: h(RegExp((j ? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b' : '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') + '|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)')),
+                    match: h(RegExp((H ? '^\\b_((?:_[_(]|\\\\[\\s\\S]|(?<!_)\\B_\\B|[^\\\\_])+?)_(?![(])\\b' : '^\\b_((?:__|\\\\[\\s\\S]|[^\\\\_])+?)_\\b') + '|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)')),
                     quality: function (e) {
                         return e[0].length + 0.2;
                     },

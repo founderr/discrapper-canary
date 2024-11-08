@@ -122,7 +122,7 @@ function C(e) {
 function R(e) {
     let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: I = g.q.FILLED, onClose: S, onOpen: b, renderOptionLabel: T = N, renderOptionValue: y = C, popoutClassName: A, popoutPosition: R = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: M, serialize: P, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
         [Z, F] = i.useState(!1),
-        { ref: V, width: H, height: j } = (0, h.Z)(),
+        { ref: V, width: j, height: H } = (0, h.Z)(),
         Y = i.useCallback(
             (e) => {
                 Z !== e && !o && (F(e), e ? null == b || b() : null == S || S());
@@ -175,10 +175,10 @@ function R(e) {
                 className: A,
                 closeOnSelect: x,
                 maxVisibleItems: l,
-                width: null != f ? f : H,
+                width: null != f ? f : j,
                 isSelected: M,
                 closePopout: n,
-                buttonHeight: null != j ? j : 0,
+                buttonHeight: null != H ? H : 0,
                 onSelect: z,
                 options: t,
                 serialize: P,

@@ -124,25 +124,25 @@ t.ZP = (e) => {
               hideTooltip: E,
               className: u
           }));
-    let { blockeeExperimentEnabled: V, blockerExperimentEnabled: H, analyticsEligible: j } = (0, f.NR)('activity-status-web'),
+    let { blockeeExperimentEnabled: V, blockerExperimentEnabled: j, analyticsEligible: H } = (0, f.NR)('activity-status-web'),
         Y = (0, o.e7)([b.Z], () => (null != x ? b.Z.getRelationshipType(x.id) : N.OGo.NONE)),
         W = (0, d.Z)(t, n, void 0, F, V),
         K = (0, d.Z)(t, n, void 0, F, !1);
     i.useEffect(() => {
-        if (null != K && null == K.activity && null != n && j) {
+        if (null != K && null == K.activity && null != n && H) {
             var e;
             A.default.track(N.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: null == x ? void 0 : x.id,
                 discoverable: null === (e = n.discoverable) || void 0 === e || e,
                 surface: 'activity-status-web',
                 relationship_type: Y,
-                treatment: (V && !1 === n.discoverable) || (H && Y === N.OGo.BLOCKED) ? f.h9.HIDE : f.h9.SHOW
+                treatment: (V && !1 === n.discoverable) || (j && Y === N.OGo.BLOCKED) ? f.h9.HIDE : f.h9.SHOW
             });
         }
-    }, [V, H, j, x, n, K, Y]);
+    }, [V, j, H, x, n, K, Y]);
     let z = null == W ? void 0 : W.activityText,
         q = null != z && '' !== z;
-    return (H && Y === N.OGo.BLOCKED) || (null == Z && !q)
+    return (j && Y === N.OGo.BLOCKED) || (null == Z && !q)
         ? null
         : (0, r.jsxs)('div', {
               className: a,

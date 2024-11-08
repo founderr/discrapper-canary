@@ -82,13 +82,13 @@ function V(e) {
     let { applicationId: t, branchId: n } = e;
     F(t, n);
 }
-function H(e) {
+function j(e) {
     let { applicationId: t, branchId: n } = e,
         r = (0, I.Tu)(t, n),
         i = O.indexOf(r);
     -1 !== i && O.splice(i, 1);
 }
-function j() {
+function H() {
     let e = E.default.getToken(),
         t = E.default.getId();
     if (null != e) S.Z.setCredentials(t, e);
@@ -158,7 +158,7 @@ class W extends (a = _.ZP.Store) {
             Z(t, n, r, 'Patch');
         },
         DISPATCH_APPLICATION_UNINSTALL: function (e) {
-            V(e), H(e);
+            V(e), j(e);
         },
         DISPATCH_APPLICATION_CANCEL: V,
         DISPATCH_APPLICATION_REPAIR: function (e) {
@@ -171,7 +171,7 @@ class W extends (a = _.ZP.Store) {
             if (r < 1) return !1;
             R.splice(0, 0, R.splice(r, 1)[0]), G(), D && S.Z.resume(), U();
         },
-        DISPATCH_APPLICATION_REMOVE_FINISHED: H,
+        DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
             !w && ((w = !0), G(), !D && S.Z.resume());
@@ -206,7 +206,7 @@ class W extends (a = _.ZP.Store) {
             let { error: t } = e,
                 { code: n } = t;
             if (null != n) {
-                if (N.includes(n)) j();
+                if (N.includes(n)) H();
                 else if (n === A.ff.APPLICATION_NOT_FOUND) {
                     let { context: e } = t;
                     if (null != e) {
@@ -217,7 +217,7 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, b.isDesktop)() && j();
+            (0, b.isDesktop)() && H();
         },
         LOGOUT: function () {
             h.K.remove(C), (0, b.isDesktop)() && S.Z.pause();

@@ -95,7 +95,7 @@ function V(e) {
     let { messages: t, threads: n } = e;
     return !!(n.length > 0) || t.some((e) => e.some((e) => null != e.thread));
 }
-function H(e) {
+function j(e) {
     let { guildId: t } = e;
     delete O[t];
     let n = b.Z.getMutableBasicGuildChannelsForGuild(t);
@@ -105,7 +105,7 @@ function H(e) {
         (x += 1),
         k(t);
 }
-function j(e) {
+function H(e) {
     let { instance: t } = e,
         n = b.Z.getChannel(t.channel_id);
     if (null == n) return !1;
@@ -309,13 +309,13 @@ function z() {
             let { channel: t } = e;
             return delete D[t.id], (x += 1), k(t.guild_id), !1;
         },
-        GUILD_ROLE_CREATE: H,
-        GUILD_ROLE_UPDATE: H,
-        GUILD_ROLE_DELETE: H,
+        GUILD_ROLE_CREATE: j,
+        GUILD_ROLE_UPDATE: j,
+        GUILD_ROLE_DELETE: j,
         LOGOUT: z,
-        STAGE_INSTANCE_CREATE: j,
-        STAGE_INSTANCE_UPDATE: j,
-        STAGE_INSTANCE_DELETE: j,
+        STAGE_INSTANCE_CREATE: H,
+        STAGE_INSTANCE_UPDATE: H,
+        STAGE_INSTANCE_DELETE: H,
         IMPERSONATE_UPDATE: Y,
         IMPERSONATE_STOP: Y
     }));

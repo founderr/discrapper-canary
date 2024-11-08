@@ -338,7 +338,7 @@ let V = (0, p.B)({
         }
     ]
 });
-class H {
+class j {
     moveToState(e) {
         (this.stateTime = performance.now()), (this.currentState = e);
     }
@@ -523,7 +523,7 @@ class H {
             (this.analyticsEnabled = V.getCurrentConfig({ location: 'media_player' }).enabled);
     }
 }
-class j extends (i = s.PureComponent) {
+class H extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return !e.playable && t.playing
             ? {
@@ -575,11 +575,11 @@ class j extends (i = s.PureComponent) {
     }
     getWidth() {
         let { width: e } = this.props;
-        return '100%' === e ? e : Math.max(e, j.minWidth);
+        return '100%' === e ? e : Math.max(e, H.minWidth);
     }
     getHeight() {
         let { height: e } = this.props;
-        return '100%' === e ? e : Math.max(e, j.minHeight);
+        return '100%' === e ? e : Math.max(e, H.minHeight);
     }
     updateValue(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
@@ -953,7 +953,7 @@ class j extends (i = s.PureComponent) {
                     (t.currentTime = t.duration * n), this.setPlay(!0);
                 }
             }),
-            (this._analytics = new H({
+            (this._analytics = new j({
                 src: e.src,
                 mimeType: null === (n = e.mimeType) || void 0 === n ? void 0 : n.join('/'),
                 fileSize: e.fileSizeBytes
@@ -974,14 +974,14 @@ class j extends (i = s.PureComponent) {
             volume: l,
             playing: r,
             preload: 'none',
-            width: j.minWidth,
-            height: j.minHeight,
+            width: H.minWidth,
+            height: H.minHeight,
             hovering: !1
         };
     }
 }
-x(j, 'Types', P),
-    x(j, 'defaultProps', {
+x(H, 'Types', P),
+    x(H, 'defaultProps', {
         width: 400,
         height: 300,
         forceExternal: !1,
@@ -991,6 +991,6 @@ x(j, 'Types', P),
         autoMute: !1,
         volume: 1
     }),
-    x(j, 'minWidth', 150),
-    x(j, 'minHeight', 110),
-    (t.ZP = j);
+    x(H, 'minWidth', 150),
+    x(H, 'minHeight', 110),
+    (t.ZP = H);

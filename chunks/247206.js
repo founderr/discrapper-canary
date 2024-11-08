@@ -15,7 +15,7 @@ n.d(t, {
         return B;
     },
     OP: function () {
-        return j;
+        return H;
     },
     Pq: function () {
         return s;
@@ -33,7 +33,7 @@ n.d(t, {
         return i;
     },
     aP: function () {
-        return H;
+        return j;
     },
     bR: function () {
         return Q;
@@ -217,7 +217,7 @@ function F(e) {
 function V(e) {
     return !_.ZP.get('explicit_media_redaction_ignore_pending_scan') && null == e;
 }
-function H(e) {
+function j(e) {
     let { action: t, channelId: n, messageId: r, context: i } = e;
     if (null == n || null == r) return;
     let a = E.Z.getChannel(n);
@@ -230,7 +230,7 @@ function H(e) {
         context: i
     });
 }
-function j(e, t) {
+function H(e, t) {
     let n = Math.min(Math.floor((Date.now() - e) / 1000), 3);
     p.Z.increment({
         name: d.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMING,

@@ -88,10 +88,10 @@ function l(e) {
         let r = null !== (n = null === (t = T.getItem(A)) || void 0 === t ? void 0 : t.textValue) && void 0 !== n ? n : '';
         !S && null != A && void 0 === e.inputValue && A === F.current && V.current !== r && ((B.current = r), D(r)), (F.current = A), (V.current = r);
     });
-    let H = () => {
+    let j = () => {
             (F.current = null), N(null), G();
         },
-        j = () => {
+        H = () => {
             if (void 0 !== e.selectedKey && void 0 !== e.inputValue) {
                 var t, n;
                 e.onSelectionChange(A);
@@ -102,8 +102,8 @@ function l(e) {
         Y = () => {
             if (g) {
                 var e, t;
-                O === (null !== (t = null === (e = T.getItem(A)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? j() : H();
-            } else j();
+                O === (null !== (t = null === (e = T.getItem(A)) || void 0 === e ? void 0 : e.textValue) && void 0 !== t ? t : '') ? H() : j();
+            } else H();
         },
         W = (0, a.useMemo)(() => (P.isOpen ? (v ? T : L) : x), [P.isOpen, T, L, v, x]);
     return {
@@ -127,10 +127,10 @@ function l(e) {
         inputValue: O,
         setInputValue: D,
         commit: () => {
-            P.isOpen && null != y.focusedKey ? (A === y.focusedKey ? j() : N(y.focusedKey)) : Y();
+            P.isOpen && null != y.focusedKey ? (A === y.focusedKey ? H() : N(y.focusedKey)) : Y();
         },
         revert: () => {
-            g && null == A ? H() : j();
+            g && null == A ? j() : H();
         }
     };
 }

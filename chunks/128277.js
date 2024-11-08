@@ -85,7 +85,7 @@ function D(e) {
                         )
                     });
         },
-        H = () => {
+        j = () => {
             let { timestamps: e } = a;
             if (null == e) return null;
             let { start: t, end: n } = e;
@@ -96,7 +96,7 @@ function D(e) {
                       end: n
                   });
         },
-        j = () =>
+        H = () =>
             null == D || null == L
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
@@ -177,13 +177,13 @@ function D(e) {
                                                     activity: a,
                                                     className: O.badges
                                                 }),
-                                                H()
+                                                j()
                                             ]
                                         }),
                                         M === R.y0.FULL_SIZE && Y()
                                     ]
                                 }),
-                                j()
+                                H()
                             ]
                         }),
                         M !== R.y0.FULL_SIZE && Y()

@@ -53,13 +53,13 @@ function v(e) {
                     !e && w(Date.now());
                 }));
         }, [F]),
-        H = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 I && L(!0), null == d && P(_), null == y || y(e);
             },
             [I, _, y, P, d]
         ),
-        j = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 I && L(!1), null == A || A(e);
             },
@@ -74,12 +74,12 @@ function v(e) {
                     reactionLarge: 'reactionLarge' === S
                 }),
                 onError: V,
-                onMouseEnter: H,
-                onMouseLeave: j,
+                onMouseEnter: j,
+                onMouseLeave: H,
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, d, _, H, j, V, O, S]);
+        }, [l, d, _, j, H, V, O, S]);
     i.useEffect(
         () => () => {
             var e;

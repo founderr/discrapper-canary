@@ -92,7 +92,7 @@ t.Z = {
             if (D) {
                 for (
                     var V = S ? 3 : 1,
-                        H = function (e) {
+                        j = function (e) {
                             var t = N.find(function (t) {
                                 var n = O.get(t);
                                 if (n)
@@ -102,9 +102,9 @@ t.Z = {
                             });
                             if (t) return (L = t), 'break';
                         },
-                        j = V;
-                    j > 0 && 'break' !== H(j);
-                    j--
+                        H = V;
+                    H > 0 && 'break' !== j(H);
+                    H--
                 );
             }
             t.placement !== L && ((t.modifiersData[c]._skip = !0), (t.placement = L), (t.reset = !0));

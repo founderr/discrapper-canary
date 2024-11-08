@@ -7,15 +7,15 @@ var i = t(200651);
 t(192379);
 var l = t(481060),
     o = t(194359),
-    s = t(906732),
-    r = t(475413),
+    r = t(906732),
+    s = t(475413),
     c = t(934861),
     a = t(981631),
     d = t(388032),
     u = t(128039);
 function f(e) {
-    let { isCurrentUser: n, user: t, relationshipType: f, friendToken: m, onClose: p } = e,
-        { newestAnalyticsLocation: x } = (0, s.ZP)();
+    let { isCurrentUser: n, user: t, relationshipType: f, friendToken: m, onClose: I } = e,
+        { newestAnalyticsLocation: x } = (0, r.ZP)();
     return n || f === a.OGo.BLOCKED
         ? null
         : f === a.OGo.FRIEND || t.bot
@@ -23,21 +23,21 @@ function f(e) {
                 className: u.multipleButtons,
                 children: (0, i.jsx)(c.c, {
                     userId: t.id,
-                    onClose: p
+                    onClose: I
                 })
             })
           : f === a.OGo.PENDING_OUTGOING || f === a.OGo.PENDING_INCOMING
             ? (0, i.jsxs)('div', {
                   className: u.multipleButtons,
                   children: [
-                      (0, i.jsx)(r.ef, {
+                      (0, i.jsx)(s.ef, {
                           icon: l.UserClockIcon,
                           tooltipText: d.intl.string(d.t.p6IHGB),
                           disabled: !0
                       }),
                       (0, i.jsx)(c.c, {
                           userId: t.id,
-                          onClose: p
+                          onClose: I
                       })
                   ]
               })
@@ -46,9 +46,9 @@ function f(e) {
                   children: [
                       (0, i.jsx)(c.v, {
                           userId: t.id,
-                          onClose: p
+                          onClose: I
                       }),
-                      (0, i.jsx)(r.tG, {
+                      (0, i.jsx)(s.tG, {
                           action: 'SEND_FRIEND_REQUEST',
                           icon: l.UserPlusIcon,
                           text: d.intl.string(d.t['7815aW']),

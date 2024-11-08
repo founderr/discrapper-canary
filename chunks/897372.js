@@ -39,8 +39,8 @@ var r,
     Z = u([].shift),
     F = u(''.split),
     V = u(''.slice),
-    H = u(''.toLowerCase),
-    j = u([].unshift),
+    j = u(''.toLowerCase),
+    H = u([].unshift),
     Y = 'Invalid scheme',
     W = 'Invalid host',
     K = 'Invalid port',
@@ -148,7 +148,7 @@ var r,
     eu = function (e) {
         var t, n, r, i;
         if ('number' == typeof e) {
-            for (n = 0, t = []; n < 4; n++) j(t, e % 256), (e = L(e / 256));
+            for (n = 0, t = []; n < 4; n++) H(t, e % 256), (e = L(e / 256));
             return P(t, '.');
         }
         if ('object' == typeof e) {
@@ -249,7 +249,7 @@ eB.prototype = {
         for (e = v(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ei, '$1'))), c = p((e = B(e, ea, ''))); a <= c.length; ) {
             switch (((d = c[a]), i)) {
                 case eE:
-                    if (d && M(z, d)) (s += H(d)), (i = ev);
+                    if (d && M(z, d)) (s += j(d)), (i = ev);
                     else {
                         if (t) return Y;
                         i = eI;
@@ -257,7 +257,7 @@ eB.prototype = {
                     }
                     break;
                 case ev:
-                    if (d && (M(q, d) || '+' === d || '-' === d || '.' === d)) s += H(d);
+                    if (d && (M(q, d) || '+' === d || '-' === d || '.' === d)) s += j(d);
                     else if (':' === d) {
                         if (t && (this.isSpecial() !== _(ep, s) || ('file' === s && (this.includesCredentials() || null !== this.port)) || ('file' === this.scheme && !this.host))) return;
                         if (((this.scheme = s), t)) {
@@ -428,9 +428,9 @@ eB.prototype = {
                     break;
                 case eP:
                     if (d === r || '/' === d || ('\\' === d && this.isSpecial()) || (!t && ('?' === d || '#' === d))) {
-                        if ('..' === (g = H((g = s))) || '%2e.' === g || '.%2e' === g || '%2e%2e' === g) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
+                        if ('..' === (g = j((g = s))) || '%2e.' === g || '.%2e' === g || '%2e%2e' === g) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
                         else {
-                            if ('.' === (E = s) || '%2e' === H(E)) '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
+                            if ('.' === (E = s) || '%2e' === j(E)) '/' !== d && !('\\' === d && this.isSpecial()) && G(this.path, '');
                             else 'file' === this.scheme && !this.path.length && em(s) && (this.host && (this.host = ''), (s = w(s, 0) + ':')), G(this.path, s);
                         }
                         if (((s = ''), 'file' === this.scheme && (d === r || '?' === d || '#' === d))) for (; this.path.length > 1 && '' === this.path[0]; ) Z(this.path);
@@ -626,9 +626,9 @@ if (
     ),
     R)
 ) {
-    var eH = R.createObjectURL,
-        ej = R.revokeObjectURL;
-    eH && c(eZ, 'createObjectURL', l(eH, R)), ej && c(eZ, 'revokeObjectURL', l(ej, R));
+    var ej = R.createObjectURL,
+        eH = R.revokeObjectURL;
+    ej && c(eZ, 'createObjectURL', l(ej, R)), eH && c(eZ, 'revokeObjectURL', l(eH, R));
 }
 I(eZ, 'URL'),
     i(

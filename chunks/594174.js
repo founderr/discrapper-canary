@@ -269,13 +269,13 @@ function V(e) {
     }
     return !1;
 }
-function H(e) {
+function j(e) {
     let {
         channel: { rawRecipients: t }
     } = e;
     return null != t && t.forEach((e) => T(e)), !1;
 }
-function j(e) {
+function H(e) {
     let { channels: t } = e;
     for (let { rawRecipients: e } of t) null != e && e.forEach((e) => T(e));
     return !1;
@@ -560,8 +560,8 @@ class eS extends d.Z {
             GUILD_MEMBER_LIST_UPDATE: J,
             THREAD_MEMBER_LIST_UPDATE: en,
             THREAD_MEMBERS_UPDATE: er,
-            CHANNEL_CREATE: H,
-            CHANNEL_UPDATES: j,
+            CHANNEL_CREATE: j,
+            CHANNEL_UPDATES: H,
             RELATIONSHIP_ADD: ea,
             LOAD_RELATIONSHIPS_SUCCESS: es,
             FRIEND_SUGGESTION_CREATE: eo,

@@ -44,8 +44,8 @@ var r = n(200651),
     Z = n(290274),
     F = n(228168),
     V = n(981631),
-    H = n(388032),
-    j = n(69035),
+    j = n(388032),
+    H = n(69035),
     Y = n(856120),
     W = n(924482),
     K = n(774797);
@@ -54,7 +54,7 @@ function z(e) {
         { profileType: Q, theme: X } = (0, M.z)(),
         J = {
             [Y.fullSize]: Q === F.y0.FULL_SIZE,
-            [j.fullSize]: Q === F.y0.FULL_SIZE
+            [H.fullSize]: Q === F.y0.FULL_SIZE
         },
         { enabled: $, analyticsEligible: ee } = (0, m.R4)('user-profile-stream-activity-card-web'),
         { analyticsLocations: et } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
@@ -144,7 +144,7 @@ function z(e) {
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: ef ? H.intl.string(H.t.uQZTBQ) : H.intl.string(H.t.pgUTZG)
+                                            children: ef ? j.intl.string(j.t.uQZTBQ) : j.intl.string(j.t.pgUTZG)
                                         })
                                     ]
                                 })
@@ -183,22 +183,22 @@ function z(e) {
             let e = ea.isGuildStageVoice(),
                 n = e ? l.StageIcon : l.VoiceNormalIcon;
             return (0, r.jsxs)('div', {
-                className: j.details,
+                className: H.details,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsxs)(l.Heading, {
                                 variant: 'heading-sm/semibold',
                                 color: 'text-normal',
-                                className: j.voiceChannelHeading,
+                                className: H.voiceChannelHeading,
                                 children: [
                                     (0, r.jsx)(n, {
                                         size: 'xxs',
                                         color: l.tokens.colors.TEXT_NORMAL,
-                                        className: j.voiceIcon
+                                        className: H.voiceIcon
                                     }),
                                     (0, r.jsx)(l.Clickable, {
-                                        className: s()(j.clickable, j.inline),
+                                        className: s()(H.clickable, H.inline),
                                         onClick: () => {
                                             null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                                         },
@@ -208,7 +208,7 @@ function z(e) {
                             }),
                             (0, r.jsx)(k.Z, {
                                 variant: 'text-xs/normal',
-                                text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: ei.name }),
+                                text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: ei.name }),
                                 onClick: () => {
                                     en({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ei.id), null == q || q();
                                 }
@@ -233,7 +233,7 @@ function z(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: j.voiceChannelDivider }),
+                          (0, r.jsx)('div', { className: H.voiceChannelDivider }),
                           (0, r.jsx)(U.Z, {
                               user: t,
                               guild: ei,
@@ -247,7 +247,7 @@ function z(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(j.actions, J),
+                      className: s()(H.actions, J),
                       children: (0, r.jsx)(B.Z, {
                           channel: ea,
                           onAction: en,
@@ -262,11 +262,11 @@ function z(e) {
             children: (e) => {
                 let { onAutoDismiss: n } = e;
                 return (0, r.jsxs)(w.Z.Overlay, {
-                    className: s()(j.card, z),
+                    className: s()(H.card, z),
                     ref: er,
                     children: [
                         (0, r.jsx)(P.Z, {
-                            text: null != eo ? H.intl.formatToPlainString(H.t['4CQq9f'], { name: eo.name }) : H.intl.string(H.t['Jpkr/v']),
+                            text: null != eo ? j.intl.formatToPlainString(j.t['4CQq9f'], { name: eo.name }) : j.intl.string(j.t['Jpkr/v']),
                             tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL }),
                             contextMenu: (0, r.jsx)(Z.Z, {
                                 display: 'live',
@@ -276,10 +276,10 @@ function z(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: j.body,
+                            className: H.body,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: s()(j.content, J),
+                                    className: s()(H.content, J),
                                     children: [em(), eg(), Q === F.y0.FULL_SIZE && ev()]
                                 }),
                                 eE()

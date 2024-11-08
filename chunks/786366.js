@@ -8,8 +8,8 @@ var i = t(200651);
 t(192379);
 var l = t(597312),
     o = t(442837),
-    s = t(481060),
-    r = t(860719),
+    r = t(481060),
+    s = t(860719),
     c = t(621853),
     a = t(388032),
     d = t(838756);
@@ -30,11 +30,11 @@ function u(e) {
             (0, i.jsxs)('div', {
                 className: d.rowText,
                 children: [
-                    (0, i.jsx)(s.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         variant: 'text-xs/semibold',
                         children: t
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         children: l
                     })
@@ -49,30 +49,30 @@ function f(e) {
             var e;
             return null === (e = c.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: m, hasGuildMembers: p } = (0, r.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: f, hasGuildPresences: m, hasGuildMembers: I } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
     return (0, i.jsxs)(l.zJ, {
         fade: !0,
         className: d.scroller,
         children: [
             f &&
                 (0, i.jsx)(u, {
-                    icon: s.ChatIcon,
+                    icon: r.ChatIcon,
                     title: a.intl.string(a.t['7Tmhfn']),
                     description: a.intl.string(a.t['eu5x7+'])
                 }),
             m &&
                 (0, i.jsx)(u, {
-                    icon: s.GameControllerIcon,
+                    icon: r.GameControllerIcon,
                     title: a.intl.string(a.t.awYSsL),
                     description: a.intl.string(a.t.TpsXoK)
                 }),
-            p &&
+            I &&
                 (0, i.jsx)(u, {
-                    icon: s.GroupIcon,
+                    icon: r.GroupIcon,
                     title: a.intl.string(a.t.WuKeSE),
                     description: a.intl.string(a.t.wOBmtb)
                 }),
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 children: a.intl.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })

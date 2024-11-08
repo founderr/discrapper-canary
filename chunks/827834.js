@@ -132,8 +132,8 @@ t.default = (function () {
                         value: '0',
                         description: '"0"'
                     },
-                    H = /^[1-9]/,
-                    j = {
+                    j = /^[1-9]/,
+                    H = {
                         type: 'class',
                         value: '[1-9]',
                         description: '[1-9]'
@@ -421,7 +421,7 @@ t.default = (function () {
                 function eh() {
                     var e, n, r, i, a, s;
                     if (((e = J), 48 === t.charCodeAt(J) ? ((n = '0'), J++) : ((n = c), 0 === er && ei(V)), n === c)) {
-                        if (((n = J), (r = J), H.test(t.charAt(J)) ? ((i = t.charAt(J)), J++) : ((i = c), 0 === er && ei(j)), i !== c)) {
+                        if (((n = J), (r = J), j.test(t.charAt(J)) ? ((i = t.charAt(J)), J++) : ((i = c), 0 === er && ei(H)), i !== c)) {
                             for (a = [], s = ef(); s !== c; ) a.push(s), (s = ef());
                             a !== c ? (r = i = [i, a]) : ((J = r), (r = c));
                         } else (J = r), (r = c);

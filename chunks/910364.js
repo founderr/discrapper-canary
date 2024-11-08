@@ -7,24 +7,24 @@ t.d(n, {
 var i = t(200651),
     l = t(192379),
     o = t(100621),
-    s = t(442837),
-    r = t(481060),
+    r = t(442837),
+    s = t(481060),
     c = t(727637),
     a = t(616780),
     d = t(100527),
     u = t(906732),
     f = t(680295),
     m = t(699516),
-    p = t(5192),
+    I = t(5192),
     x = t(785717),
-    I = t(221292),
+    p = t(221292),
     h = t(816988),
     v = t(687158),
     g = t(326094),
     Z = t(510659),
     _ = t(113557),
-    b = t(867176),
-    j = t(169979),
+    j = t(867176),
+    b = t(169979),
     E = t(451834),
     T = t(502762),
     N = t(544989),
@@ -60,16 +60,16 @@ function G(e) {
             showGuildProfile: X
         }),
         en = (0, Z.$m)(),
-        et = (0, r.useSpring)({
+        et = (0, s.useSpring)({
             opacity: null != en.interactionType ? 1 : 0,
             config: { duration: 150 }
         }),
         ei = (0, v.ZP)(n.id, X ? G : void 0),
         el = (0, v.ZP)(n.id, G),
-        eo = (0, s.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
-        es = n.id === t.id,
-        er = l.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
-    (0, a.$)(er);
+        eo = (0, r.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
+        er = n.id === t.id,
+        es = l.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
+    (0, a.$)(es);
     let ec = l.createRef(),
         ea = (0, c.Z)(ec),
         { permanentEntryPointsEnabled: ed } = (0, h.u)({ location: 'UserProfileModal' }),
@@ -77,10 +77,10 @@ function G(e) {
             (null == el ? void 0 : el.guildId) == null
                 ? null
                 : (null == ei ? void 0 : ei.guildId) != null
-                  ? (0, i.jsx)(r.MenuItem, {
+                  ? (0, i.jsx)(s.MenuItem, {
                         id: 'view-main-profile',
                         label: F.intl.string(F.t.GISTtb),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: p.ZP.getName(void 0, void 0, n) }),
+                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: I.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -89,17 +89,17 @@ function G(e) {
                                     friendToken: z,
                                     sourceAnalyticsLocations: q
                                 }),
-                                (0, I.pQ)({
+                                (0, p.pQ)({
                                     action: 'PRESS_VIEW_MAIN_PROFILE',
                                     analyticsLocations: Q,
                                     ...ee
                                 });
                         }
                     })
-                  : (0, i.jsx)(r.MenuItem, {
+                  : (0, i.jsx)(s.MenuItem, {
                         id: 'view-server-profile',
                         label: F.intl.string(F.t.DisZzM),
-                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: p.ZP.getName(G, w, n) }),
+                        subtext: F.intl.formatToPlainString(F.t['mn/nW1'], { displayName: I.ZP.getName(G, w, n) }),
                         action: () => {
                             J(),
                                 (0, M.openUserProfileModal)({
@@ -108,7 +108,7 @@ function G(e) {
                                     friendToken: z,
                                     sourceAnalyticsLocations: q
                                 }),
-                                (0, I.pQ)({
+                                (0, p.pQ)({
                                     action: 'PRESS_VIEW_SERVER_PROFILE',
                                     analyticsLocations: Q,
                                     ...ee
@@ -121,7 +121,7 @@ function G(e) {
             value: ee,
             children: (0, i.jsx)(Z.NJ, {
                 value: en,
-                children: (0, i.jsxs)(r.ModalRoot, {
+                children: (0, i.jsxs)(s.ModalRoot, {
                     transitionState: H,
                     className: D.root,
                     hideShadow: !0,
@@ -137,7 +137,7 @@ function G(e) {
                                     profileType: U.y0.FULL_SIZE,
                                     children: [
                                         ed &&
-                                            es &&
+                                            er &&
                                             (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)(L.Z, { onClose: J }),
@@ -169,7 +169,7 @@ function G(e) {
                                 }),
                                 (0, i.jsxs)('header', {
                                     children: [
-                                        (0, i.jsx)(b.Z, {
+                                        (0, i.jsx)(j.Z, {
                                             user: n,
                                             displayProfile: ei,
                                             profileType: U.y0.FULL_SIZE
@@ -195,21 +195,21 @@ function G(e) {
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE
                                                 }),
-                                                (0, i.jsx)(j.Z, {
+                                                (0, i.jsx)(b.Z, {
                                                     location: 'SimplifiedUserProfileModal',
                                                     user: n,
                                                     displayProfile: ei,
                                                     guildId: G,
                                                     channelId: w,
                                                     profileType: U.y0.FULL_SIZE,
-                                                    hasEntered: H === r.ModalTransitionState.ENTERED,
+                                                    hasEntered: H === s.ModalTransitionState.ENTERED,
                                                     onCloseProfile: J
                                                 }),
                                                 (0, i.jsxs)('div', {
                                                     className: D.headerButtons,
                                                     children: [
                                                         (0, i.jsx)(O.Z, {
-                                                            isCurrentUser: es,
+                                                            isCurrentUser: er,
                                                             user: n,
                                                             relationshipType: eo,
                                                             friendToken: z,

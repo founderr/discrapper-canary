@@ -47,8 +47,8 @@ var i = n(658722),
     Z = n(226951),
     F = n(709054),
     V = n(624138),
-    H = n(51144),
-    j = n(981631),
+    j = n(51144),
+    H = n(981631),
     Y = n(727785),
     W = n(176505),
     K = n(388032);
@@ -64,7 +64,7 @@ function et() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     return 1000 * e * (null != t ? t : 1);
 }
-let en = [N.sH, N.Zb, j.d4z.GUILD_CATEGORY];
+let en = [N.sH, N.Zb, H.d4z.GUILD_CATEGORY];
 function er(e, t) {
     let { exactQuery: n, containQuery: r, queryLower: i, isFullMatch: s } = t,
         o = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -105,7 +105,7 @@ function ea(e) {
         let e, r;
         let u = n[p];
         u instanceof y.Z ? ((r = u), (e = null === (E = C.ZP.getNick(l, r.id)) || void 0 === E ? void 0 : E.toLocaleLowerCase())) : ((e = null === (v = u.nick) || void 0 === v ? void 0 : v.toLocaleLowerCase()), (r = o[u.userId]));
-        let h = null === (g = H.ZP.getGlobalName(r)) || void 0 === g ? void 0 : g.toLocaleLowerCase();
+        let h = null === (g = j.ZP.getGlobalName(r)) || void 0 === g ? void 0 : g.toLocaleLowerCase();
         if (null != r && (null == i || i(r))) {
             let n = r.username.toLocaleLowerCase(),
                 i = (0, V._I)(n),
@@ -175,7 +175,7 @@ function eo(e, t) {
                       type: Y.h8.USER,
                       record: e,
                       score: 0,
-                      comparator: null !== (t = null == i ? void 0 : i.nick) && void 0 !== t ? t : H.ZP.getName(e)
+                      comparator: null !== (t = null == i ? void 0 : i.nick) && void 0 !== t ? t : j.ZP.getName(e)
                   };
               })
               .take(t)
@@ -240,7 +240,7 @@ t.ZP = {
             filter: (e) =>
                 c.isPrivate() ||
                 B.BT({
-                    permission: j.Plq.VIEW_CHANNEL,
+                    permission: H.Plq.VIEW_CHANNEL,
                     user: e,
                     context: c
                 }),
@@ -282,7 +282,7 @@ t.ZP = {
     },
     queryChannels(e) {
         let t,
-            { query: n, guildId: r, limit: i = j.rnv, fuzzy: a = !0, filter: s = q, type: l = N.sH, allowEmptyQueries: d = !1, requireVocalConnectAccess: f = !0, boosters: _ = {}, allowSnowflake: h } = e,
+            { query: n, guildId: r, limit: i = H.rnv, fuzzy: a = !0, filter: s = q, type: l = N.sH, allowEmptyQueries: d = !1, requireVocalConnectAccess: f = !0, boosters: _ = {}, allowSnowflake: h } = e,
             p = (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = e
@@ -319,7 +319,7 @@ t.ZP = {
             g = [];
         for (let e of t) {
             var E, v, I, b, y;
-            if (((E = l), (v = e.type), (I = null != r), !(E === v || ((I || (0, T.Km)(v)) && (E === N.sH ? (0, T.r8)(v) || (0, T.bw)(v) : E === N.Zb && (0, T.bw)(v)))) || ((0, T.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : j.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            if (((E = l), (v = e.type), (I = null != r), !(E === v || ((I || (0, T.Km)(v)) && (E === N.sH ? (0, T.r8)(v) || (0, T.bw)(v) : E === N.Zb && (0, T.bw)(v)))) || ((0, T.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...p],
                 i = e.name.toLocaleLowerCase(),
                 o = h && n === e.id,
@@ -480,7 +480,7 @@ t.ZP = {
             l = o()(k.Z.getSKUs()).values().value(),
             c = [];
         for (let e of l)
-            if (e.type === j.epS.DURABLE_PRIMARY && i(e)) {
+            if (e.type === H.epS.DURABLE_PRIMARY && i(e)) {
                 let t = e.name.toLocaleLowerCase(),
                     n = er(t, s, r);
                 n > 0 &&
@@ -496,7 +496,7 @@ t.ZP = {
     },
     getRecentlyTalked: eo,
     queryMentionResults(e) {
-        let { query: t, channel: n, canMentionEveryone: r = !1, canMentionHere: i = !0, canMentionUsers: s = !0, canMentionRoles: l = !0, includeAllGuildUsers: u = !1, includeNonMentionableRoles: c = !1, checkRecentlyTalkedOnEmptyQuery: d = !0, limit: f = j.rnv, request: _, allowSnowflake: h = !1 } = e,
+        let { query: t, channel: n, canMentionEveryone: r = !1, canMentionHere: i = !0, canMentionUsers: s = !0, canMentionRoles: l = !0, includeAllGuildUsers: u = !1, includeNonMentionableRoles: c = !1, checkRecentlyTalkedOnEmptyQuery: d = !0, limit: f = H.rnv, request: _, allowSnowflake: h = !1 } = e,
             p = s
                 ? (u && null != n.guild_id
                       ? this.queryGuildUsers({
@@ -567,7 +567,7 @@ t.ZP = {
             c = u.length,
             f = t.toLowerCase(),
             _ = [];
-        if (c < j.rnv && s) {
+        if (c < H.rnv && s) {
             let e = R.Z.getGuild(n);
             null != e &&
                 (o()(R.Z.getRoles(e.id))
@@ -575,7 +575,7 @@ t.ZP = {
                         let { mentionable: t, name: i, id: s } = e;
                         return (t || r || l) && a()(f, i.toLowerCase()) && (0, d.Gy)(n, s);
                     })
-                    .take(j.rnv - c)
+                    .take(H.rnv - c)
                     .forEach((e) => {
                         _.push(e);
                     }),
@@ -583,7 +583,7 @@ t.ZP = {
         }
         let h = [];
         return (
-            r && s && (c < j.rnv && a()(f, J().test) && (h.push(J()), (c += 1)), c < j.rnv && a()(f, $().test) && h.push($())),
+            r && s && (c < H.rnv && a()(f, J().test) && (h.push(J()), (c += 1)), c < H.rnv && a()(f, $().test) && h.push($())),
             {
                 users: u,
                 globals: h,
@@ -627,9 +627,9 @@ t.ZP = {
                 containQuery: RegExp(Z.Z.escape(r), 'i'),
                 queryLower: r
             },
-            a = (0, m.s)(n.id) && !n.hasFeature(j.oNc.HUB),
-            s = n.hasFeature(j.oNc.COMMUNITY),
-            o = (0, p.t)(n) && n.hasFeature(j.oNc.COMMUNITY),
+            a = (0, m.s)(n.id) && !n.hasFeature(H.oNc.HUB),
+            s = n.hasFeature(H.oNc.COMMUNITY),
+            o = (0, p.t)(n) && n.hasFeature(H.oNc.COMMUNITY),
             l = [
                 {
                     id: W.HY.SERVER_GUIDE,
@@ -652,7 +652,7 @@ t.ZP = {
                         new T.nl({
                             id: e.id,
                             name: e.name,
-                            type: j.d4z.UNKNOWN,
+                            type: H.d4z.UNKNOWN,
                             guild_id: n.id
                         })
                     );
@@ -674,7 +674,7 @@ t.ZP = {
         };
     },
     queryApplicationCommandChannelResults(e) {
-        let { query: t, channel: n, channelTypes: r, limit: i = j.rnv, allowSnowflake: a } = e;
+        let { query: t, channel: n, channelTypes: r, limit: i = H.rnv, allowSnowflake: a } = e;
         if (null == n.guild_id) {
             let e = [];
             return (null == r || r.includes(n.type)) && e.push(n), { channels: e };
@@ -716,7 +716,7 @@ t.ZP = {
         };
     },
     queryEmojiResults(e) {
-        let { query: t, channel: n, intention: r, maxCount: i = j.rnv, matchComparator: a } = e;
+        let { query: t, channel: n, intention: r, maxCount: i = H.rnv, matchComparator: a } = e;
         return (
             b.DZ.loadIfNecessary(),
             {

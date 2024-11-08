@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return H;
+        return j;
     },
     d: function () {
         return Y;
@@ -65,9 +65,9 @@ let Z = (e, t) => {
             n = e.toLowerCase() === k.Lu.toLowerCase();
         return t || n ? t : null;
     };
-async function H(e) {
+async function j(e) {
     var t, n, r, s, l, c, d, h, p, m, g, E, v, I, T, A, N;
-    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: G = M.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: H = z, source: Y } = e,
+    let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: G = M.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
         K = null !== (r = w.Z.getSource(D.channel.id)) && void 0 !== r ? r : Y,
         Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : G;
     null == D.autocomplete &&
@@ -236,15 +236,15 @@ async function H(e) {
                   attachments: J,
                   maxSizeCallback: k,
                   onMessageSuccess: () => {
-                      j(R);
+                      H(R);
                   },
                   analytics_location: q(Q),
                   sectionName: B,
                   source: K,
-                  interactionLifecycleOptions: await H(C, D, ee)
+                  interactionLifecycleOptions: await j(C, D, ee)
               }));
 }
-let j = (e) => {
+let H = (e) => {
         let t = Object.values(e).flatMap((e) =>
             e
                 .map((e) =>

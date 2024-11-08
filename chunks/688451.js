@@ -26,7 +26,7 @@ function a(e) {
             var t = Object.getPrototypeOf(e);
             if (null === t) return !0;
             var n = Object.hasOwnProperty.call(t, 'constructor') && t.constructor;
-            return n === Object || ('function' == typeof n && Function.toString.call(n) === H);
+            return n === Object || ('function' == typeof n && Function.toString.call(n) === j);
         })(e) ||
             Array.isArray(e) ||
             !!e[F] ||
@@ -38,7 +38,7 @@ function a(e) {
 function s(e, t, n) {
     void 0 === n && (n = !1),
         0 === o(e)
-            ? (n ? Object.keys : j)(e).forEach(function (r) {
+            ? (n ? Object.keys : H)(e).forEach(function (r) {
                   (n && 'symbol' == typeof r) || t(r, e[r], e);
               })
             : e.forEach(function (n, r) {
@@ -83,7 +83,7 @@ function _(e) {
     if (Array.isArray(e)) return Array.prototype.slice.call(e);
     var t = Y(e);
     delete t[V];
-    for (var n = j(t), r = 0; r < n.length; r++) {
+    for (var n = H(t), r = 0; r < n.length; r++) {
         var i = n[r],
             a = t[i];
         !1 === a.writable && ((a.writable = !0), (a.configurable = !0)),
@@ -278,8 +278,8 @@ var M,
     Z = k ? Symbol.for('immer-nothing') : (((M = {})['immer-nothing'] = !0), M),
     F = k ? Symbol.for('immer-draftable') : '__$immer_draftable',
     V = k ? Symbol.for('immer-state') : '__$immer_state',
-    H = '' + Object.prototype.constructor,
-    j =
+    j = '' + Object.prototype.constructor,
+    H =
         'undefined' != typeof Reflect && Reflect.ownKeys
             ? Reflect.ownKeys
             : void 0 !== Object.getOwnPropertySymbols
@@ -292,7 +292,7 @@ var M,
         function (e) {
             var t = {};
             return (
-                j(e).forEach(function (n) {
+                H(e).forEach(function (n) {
                     t[n] = Object.getOwnPropertyDescriptor(e, n);
                 }),
                 t

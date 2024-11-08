@@ -66,8 +66,8 @@ var r,
     Z = n(176354),
     F = n(700785),
     V = n(591759),
-    H = n(807675),
-    j = n(489863),
+    j = n(807675),
+    H = n(489863),
     Y = n(228763),
     W = n(422559),
     K = n(713938),
@@ -90,7 +90,7 @@ var r,
 let ec = 'oauth2-authorize-header-id';
 function ed() {
     let e = (0, u.TH)(),
-        t = s.useMemo(() => (0, H.y)(e.search), [e.search]);
+        t = s.useMemo(() => (0, j.y)(e.search), [e.search]);
     (0, C.Z)();
     let r = !e.search.includes('response_type'),
         [i, o] = s.useState(!1),
@@ -206,11 +206,11 @@ function e_(e) {
         [eG, eB] = s.useState(!1),
         [eZ, eF] = s.useState(!1),
         eV = null == ex ? void 0 : ex.guilds,
-        [eH, ej] = s.useState(null != eg ? eg : null),
+        [ej, eH] = s.useState(null != eg ? eg : null),
         [eY, eW] = s.useState(null != eE ? eE : null),
         [eK, ez] = s.useState(F.Hn),
         eq = s.useMemo(() => ((null == ex ? void 0 : ex.user) != null ? new U.Z(ex.user) : null), [null == ex ? void 0 : ex.user]),
-        eQ = s.useMemo(() => (null == eV ? void 0 : eV.find((e) => e.id === eH)), [eV, eH]),
+        eQ = s.useMemo(() => (null == eV ? void 0 : eV.find((e) => e.id === ej)), [eV, ej]),
         [eX, eJ] = s.useState(null),
         e$ = s.useMemo(() => {
             var e;
@@ -226,7 +226,7 @@ function e_(e) {
         }, [null == e0 ? void 0 : e0.integrationTypesConfig, eX]),
         { requestedScopes: e3, accountScopes: e4 } = s.useMemo(() => {
             let e = e$ ? (null == e2 ? void 0 : e2.scopes) : ep,
-                t = (0, H.K)(null != e ? e : []),
+                t = (0, j.K)(null != e ? e : []),
                 n = K.Qe.filter((e) => t.includes(e));
             return {
                 requestedScopes: t,
@@ -251,7 +251,7 @@ function e_(e) {
             } catch (n) {
                 let { status: e, body: t } = n;
                 if (401 === e) {
-                    (0, j.c$)(eD);
+                    (0, H.c$)(eD);
                     return;
                 }
                 eU(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -261,7 +261,7 @@ function e_(e) {
         };
         if (null == eR) {
             if (!G.default.isAuthenticated()) {
-                (0, j.c$)(eD);
+                (0, H.c$)(eD);
                 return;
             }
             e();
@@ -288,7 +288,7 @@ function e_(e) {
                 }
                 try {
                     eB(!0);
-                    let t = await (0, j.Iq)({
+                    let t = await (0, H.Iq)({
                         authorize: e,
                         clientId: x,
                         scopes: e3,
@@ -300,7 +300,7 @@ function e_(e) {
                         nonce: ef,
                         integrationType: eX,
                         permissions: h.Od(e6, eK),
-                        guildId: eX === f.Y.GUILD_INSTALL && null != eH ? eH : void 0,
+                        guildId: eX === f.Y.GUILD_INSTALL && null != ej ? ej : void 0,
                         channelId: eX === f.Y.GUILD_INSTALL && null != eY ? eY : void 0
                     });
                     if (
@@ -333,12 +333,12 @@ function e_(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eP('AUTHORIZE_SCOPES'), eB(!1);
                 }
             },
-            [eN, eb, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, B, en, eo, ed, ef, e6, eK, eH, eX, eY, e7]
+            [eN, eb, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, B, en, eo, ed, ef, e6, eK, ej, eX, eY, e7]
         ),
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
             if (!G.default.isAuthenticated()) {
-                (0, j.c$)(eD);
+                (0, H.c$)(eD);
                 return;
             }
             if (!e5.current) {
@@ -348,7 +348,7 @@ function e_(e) {
                         let e =
                             null != eO
                                 ? eO
-                                : await (0, j.Ww)({
+                                : await (0, H.Ww)({
                                       clientId: x,
                                       scopes: e3,
                                       responseType: M,
@@ -363,7 +363,7 @@ function e_(e) {
                     } catch (n) {
                         let { status: e, body: t } = n;
                         if (401 === e) {
-                            (0, j.c$)(eD);
+                            (0, H.c$)(eD);
                             return;
                         }
                         eU(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
@@ -408,7 +408,7 @@ function e_(e) {
         }, [eO, ti, e0, e$, ev, eM, eL]),
         s.useEffect(() => {
             if (null == eX || null != ex || null != ek) return;
-            eX === f.Y.USER_INSTALL && (ej(null), eW(null));
+            eX === f.Y.USER_INSTALL && (eH(null), eW(null));
             let e = e3.filter((e) => !K.ak.includes(e));
             0 === e3.length ? eU(Error('No scopes were provided.')) : e.length > 0 ? eU(Error('Invalid scope: '.concat(e[0]))) : (0, W._$)(e6) ? eU(Error('Invalid permission(s) provided.')) : tr();
         }, [e9, tr, e3, e6, eX, ex, ek]);
@@ -464,17 +464,17 @@ function e_(e) {
                     tg
                         ? (0, a.jsx)($.Z, {
                               error: (null !== (n = null !== (t = th[_.x.BOT]) && void 0 !== t ? t : th[_.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
-                              selectedGuildId: eH,
-                              onGuildChange: ej,
+                              selectedGuildId: ej,
+                              onGuildChange: eH,
                               guilds: null != tp ? tp : [],
-                              disabled: '' !== eH && null != eH && !0 === eI
+                              disabled: '' !== ej && null != ej && !0 === eI
                           })
                         : null,
                     tm
                         ? (0, a.jsx)(ei.Z, {
                               error: (null !== (r = th[_.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
                               selectedChannelId: eY,
-                              selectedGuildId: eH,
+                              selectedGuildId: ej,
                               onChannelChange: eW
                           })
                         : null
@@ -676,6 +676,6 @@ function em(e, t) {
 }
 function eg(e) {
     let { hostname: t = '', host: n, path: r, query: i } = c.parse(e);
-    return null != r && null != i && (V.Z.isDiscordHostname(t) || n === window.location.host) && (r.startsWith('/api'.concat(es.ANM.OAUTH2_AUTHORIZE)) || r.startsWith(es.Z5c.OAUTH2_AUTHORIZE)) ? (0, H.y)(i) : null;
+    return null != r && null != i && (V.Z.isDiscordHostname(t) || n === window.location.host) && (r.startsWith('/api'.concat(es.ANM.OAUTH2_AUTHORIZE)) || r.startsWith(es.Z5c.OAUTH2_AUTHORIZE)) ? (0, j.y)(i) : null;
 }
 ((i = r || (r = {})).SELECT_INSTALL_TYPE = 'SELECT_INSTALL_TYPE'), (i.AUTHORIZE_SCOPES = 'AUTHORIZE_SCOPES'), (i.AUTHORIZE_BOT_PERMISSIONS = 'AUTHORIZE_BOT_PERMISSIONS');

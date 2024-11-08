@@ -3,7 +3,7 @@ n.d(t, {
         return K;
     },
     Sq: function () {
-        return H;
+        return j;
     },
     ZP: function () {
         return Y;
@@ -88,11 +88,11 @@ function V(e, t) {
     let o = a.substring(s.length);
     return '' === o ? null : o;
 }
-function H(e) {
+function j(e) {
     var t, n, r, i;
     return null !== (i = null !== (r = null !== (n = null !== (t = V(M, e)) && void 0 !== t ? t : V(P, e)) && void 0 !== n ? n : V(k, e)) && void 0 !== r ? r : V(U, e)) && void 0 !== i ? i : V(G, e);
 }
-function j(e) {
+function H(e) {
     var t, n, r, i;
     let a = K(e);
     if (null == a || null == a.pathname)
@@ -121,7 +121,7 @@ function Y(e) {
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
         if (n.length >= 10) break;
-        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: s, primaryHostRemainingPath: o } = j(e);
+        let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: s, primaryHostRemainingPath: o } = H(e);
         if (null == r || null == r.pathname) continue;
         let l = (e, r) => {
             !t.has(r) &&
@@ -190,7 +190,7 @@ function Y(e) {
         null != w && l(g.g.QUESTS_EMBED, w);
         let M = (function (e) {
             var t, n;
-            let r = j(e),
+            let r = H(e),
                 i = null == r ? void 0 : null === (t = r.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(O);
             return null !== (n = null == i ? void 0 : i[1]) && void 0 !== n ? n : null;
         })(e);
@@ -200,7 +200,7 @@ function Y(e) {
 }
 function W(e) {
     var t, n;
-    let r = j(e),
+    let r = H(e),
         i = null == r ? void 0 : null === (t = r.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(R);
     return null !== (n = null == i ? void 0 : i[1]) && void 0 !== n ? n : null;
 }

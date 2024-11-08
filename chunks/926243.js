@@ -72,11 +72,11 @@ function y(e) {
         Z = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         F = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(h), [h]),
         V = i.useRef(null),
-        { emoji: H, size: j, isDisabled: Y, columnIndex: W } = t,
+        { emoji: j, size: H, isDisabled: Y, columnIndex: W } = t,
         K = (e) => {
             if ((e.stopPropagation(), S.current || y.current)) return;
             let n = e.altKey;
-            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(H) && w(a),
+            n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(j) && w(a),
                 (0, p.Kw)(p.v6.FAVORITE_EMOJI_TOOLTIP),
                 v(t, {
                     isFinalSelection: !e.shiftKey,
@@ -106,8 +106,8 @@ function y(e) {
                 G !== b(W, f) &&
                     (0, r.jsx)(T, {
                         ref: o,
-                        emoji: H,
-                        isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(H),
+                        emoji: j,
+                        isFavorite: F.isFavoriteEmojiWithoutFetchingLatest(j),
                         isLargeSize: D,
                         isMediumSize: O,
                         isInspected: s,
@@ -119,10 +119,10 @@ function y(e) {
                         onMouseEnter: t,
                         onMouseLeave: n,
                         onClick: (e) => {
-                            if (null != V.current && null != k && null != M && !e.shiftKey && null != H.name && P && !Z && x) {
-                                let e = null == H.id ? _.ZP.convertNameToSurrogate(H.name) : H.name,
+                            if (null != V.current && null != k && null != M && !e.shiftKey && null != j.name && P && !Z && x) {
+                                let e = null == j.id ? _.ZP.convertNameToSurrogate(j.name) : j.name,
                                     t = V.current.getBoundingClientRect();
-                                (t.x = k.x + (W + 1) * j), B(b(W, f)), (0, m.U)(M, e, H.id, t);
+                                (t.x = k.x + (W + 1) * H), B(b(W, f)), (0, m.U)(M, e, j.id, t);
                             }
                             K(e);
                         },
@@ -130,7 +130,7 @@ function y(e) {
                         tabIndex: l,
                         columnIndex: W,
                         rowIndex: f,
-                        size: j,
+                        size: H,
                         surrogateCodePoint: N,
                         selectedItemClassName: C,
                         inNitroLockedSection: U

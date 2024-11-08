@@ -1,34 +1,34 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return b;
     }
 }),
     t(47120);
 var i = t(200651),
     l = t(192379),
     o = t(772848),
-    s = t(924826),
-    r = t(91192),
+    r = t(924826),
+    s = t(91192),
     c = t(442837),
     a = t(749210),
     d = t(434404),
     u = t(271383),
     f = t(430824),
     m = t(496675),
-    p = t(700785),
+    I = t(700785),
     x = t(785717),
-    I = t(256226),
+    p = t(256226),
     h = t(678738),
     v = t(314172),
     g = t(981631),
     Z = t(388032),
     _ = t(9834);
-function b(e) {
+function j(e) {
     let { user: n, currentUser: t, guild: c, guildMember: a, roles: d, highestRole: u, canManageRoles: f, onAddRole: m, onRemoveRole: x } = e,
         h = f && null != a,
-        b = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
-        j = (0, s.ZP)({
-            id: b,
+        j = l.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
+        b = (0, r.ZP)({
+            id: j,
             isEnabled: !0,
             scrollToStart: g.Cyb,
             scrollToEnd: g.Cyb,
@@ -39,20 +39,20 @@ function b(e) {
         N = d.map((e) => {
             var l;
             return (0, i.jsx)(
-                I.Z,
+                p.Z,
                 {
                     role: e,
                     guildId: c.id,
                     disableBorderColor: !0,
                     onRemove: () => x(e),
-                    canRemove: f ? p.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
+                    canRemove: f ? I.r6(c, t.id, u, e) : (null === (l = e.tags) || void 0 === l ? void 0 : l.guild_connections) === null && n.id === t.id
                 },
                 e.id
             );
         });
-    return (0, i.jsx)(r.bG, {
-        navigator: j,
-        children: (0, i.jsx)(r.SJ, {
+    return (0, i.jsx)(s.bG, {
+        navigator: b,
+        children: (0, i.jsx)(s.SJ, {
             children: (e) => {
                 let { ref: n, ...t } = e;
                 return (0, i.jsxs)('div', {
@@ -76,13 +76,13 @@ function b(e) {
         })
     });
 }
-function j(e) {
-    let { user: n, currentUser: t, guild: o, scrollIntoView: s } = e,
-        { trackUserProfileAction: r } = (0, x.KZ)(),
-        I = (0, c.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
+function b(e) {
+    let { user: n, currentUser: t, guild: o, scrollIntoView: r } = e,
+        { trackUserProfileAction: s } = (0, x.KZ)(),
+        p = (0, c.e7)([u.ZP], () => u.ZP.getMember(o.id, n.id)),
         v = (0, c.e7)([f.Z], () => f.Z.getRoles(o.id)),
-        _ = null == I ? void 0 : I.roles,
-        j = l.useMemo(
+        _ = null == p ? void 0 : p.roles,
+        b = l.useMemo(
             () =>
                 null == _ || 0 === _.length
                     ? []
@@ -96,36 +96,36 @@ function j(e) {
                           }),
             [v, _]
         ),
-        E = p.e9(o, t.id),
+        E = I.e9(o, t.id),
         [T] = (0, c.Wu)([m.Z], () => [m.Z.can(g.Plq.MANAGE_ROLES, o), null != o ? m.Z.getGuildVersion(o.id) : null]),
         N = l.useCallback(
             (e) => {
                 var t, i;
-                r({ action: 'REMOVE_ROLE' });
+                s({ action: 'REMOVE_ROLE' });
                 let l = null !== (i = null == _ ? void 0 : _.filter((n) => n !== e.id)) && void 0 !== i ? i : [];
                 (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? a.Z.unassignGuildRoleConnection(o.id, e.id) : d.Z.updateMemberRoles(o.id, n.id, l, [], [e.id]);
             },
-            [_, o.id, n.id, r]
+            [_, o.id, n.id, s]
         ),
         S = l.useCallback(
             (e) => {
-                r({ action: 'ADD_ROLE' });
+                s({ action: 'ADD_ROLE' });
                 let t = null != _ ? _ : [];
                 -1 === t.indexOf(e) && (t = t.concat([e])), d.Z.updateMemberRoles(o.id, n.id, t, [e], []);
             },
-            [_, o.id, n.id, r]
+            [_, o.id, n.id, s]
         ),
-        y = T && null != I;
-    return 0 !== j.length || y
+        y = T && null != p;
+    return 0 !== b.length || y
         ? (0, i.jsx)(h.Z, {
               heading: Z.intl.string(Z.t.LPJmLy),
-              scrollIntoView: s,
-              children: (0, i.jsx)(b, {
+              scrollIntoView: r,
+              children: (0, i.jsx)(j, {
                   user: n,
                   currentUser: t,
                   guild: o,
-                  guildMember: I,
-                  roles: j,
+                  guildMember: p,
+                  roles: b,
                   highestRole: E,
                   canManageRoles: T,
                   onAddRole: S,

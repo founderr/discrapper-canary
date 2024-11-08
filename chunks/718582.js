@@ -87,8 +87,8 @@ var r,
     Z = n(626135),
     F = n(823379),
     V = n(5192),
-    H = n(51144),
-    j = n(912787),
+    j = n(51144),
+    H = n(912787),
     Y = n(126134),
     W = n(981631),
     K = n(765305),
@@ -484,7 +484,7 @@ function eu(e, t) {
                     let n = U.default.getUser(e);
                     if (null == n) return null;
                     let i = w.ZP.getNick(r, n.id);
-                    return null !== (t = null != i ? i : H.ZP.getGlobalName(n)) && void 0 !== t ? t : H.ZP.getUserTag(n);
+                    return null !== (t = null != i ? i : j.ZP.getGlobalName(n)) && void 0 !== t ? t : j.ZP.getUserTag(n);
                 })
                 .filter((e) => null != e)),
         s = a.length;
@@ -504,7 +504,7 @@ function eu(e, t) {
 function ec(e, t, n, r) {
     var i, a;
     let s = {},
-        o = null !== (a = (0, j.i)(e)) && void 0 !== a ? a : '';
+        o = null !== (a = (0, H.i)(e)) && void 0 !== a ? a : '';
     (s.source = r), (s.card_type = e.category), (s.card_position = n), (s.channel_id = o), (s.channel_type = null === (i = D.Z.getChannel(o)) || void 0 === i ? void 0 : i.type);
     let l = en(o, t);
     (s.card_affinity_users_count = Math.min(l.length, 6)),

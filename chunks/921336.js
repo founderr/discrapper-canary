@@ -524,10 +524,10 @@ function F(e) {
 function V(e) {
     e.target !== window && e.target !== document && (!P && !k && ((x = 'virtual'), G('virtual', e)), (P = !1), (k = !1));
 }
-function H() {
+function j() {
     (P = !1), (k = !0);
 }
-function j() {
+function H() {
     if ('undefined' == typeof window || M) return;
     let e = HTMLElement.prototype.focus;
     (HTMLElement.prototype.focus = function () {
@@ -537,7 +537,7 @@ function j() {
         document.addEventListener('keyup', B, !0),
         document.addEventListener('click', F, !0),
         window.addEventListener('focus', V, !0),
-        window.addEventListener('blur', H, !1),
+        window.addEventListener('blur', j, !1),
         'undefined' != typeof PointerEvent ? (document.addEventListener('pointerdown', Z, !0), document.addEventListener('pointermove', Z, !0), document.addEventListener('pointerup', Z, !0)) : (document.addEventListener('mousedown', Z, !0), document.addEventListener('mousemove', Z, !0), document.addEventListener('mouseup', Z, !0)),
         (M = !0);
 }
@@ -551,7 +551,7 @@ function K(e) {
     (x = e), G(e, null);
 }
 function z() {
-    j();
+    H();
     let [e, t] = (0, i.useState)(x);
     return (
         (0, i.useEffect)(() => {
@@ -568,10 +568,10 @@ function z() {
         (0, l.Av)() ? null : e
     );
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? j() : document.addEventListener('DOMContentLoaded', j));
+'undefined' != typeof document && ('loading' !== document.readyState ? H() : document.addEventListener('DOMContentLoaded', H));
 let q = new Set(['checkbox', 'radio', 'range', 'color', 'file', 'image', 'button', 'submit', 'reset']);
 function Q(e, t, n) {
-    j(),
+    H(),
         (0, i.useEffect)(() => {
             let t = (t, r) => {
                 var i, a, s, o;

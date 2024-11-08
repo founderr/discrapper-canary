@@ -145,7 +145,7 @@ class T extends (i = o.PureComponent) {
                       })
                     : null,
             V = null != R ? R(t) : ''.concat(B.toFixed(0), '%'),
-            H = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+            j = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
         return (0, s.jsx)(y, {
             active: n,
             keyboardFocused: r && g.Z.keyboardModeEnabled,
@@ -170,7 +170,7 @@ class T extends (i = o.PureComponent) {
                         'aria-label': k,
                         'aria-labelledby': U,
                         'aria-describedby': G,
-                        'aria-valuetext': H,
+                        'aria-valuetext': j,
                         role: 'slider',
                         tabIndex: 0,
                         onKeyDown: this.handleKeyDown,

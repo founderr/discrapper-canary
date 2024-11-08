@@ -117,7 +117,7 @@ function V(e) {
         ),
         p.Z.validateKeybind((0, b.BB)(e.shortcut));
 }
-function H(e) {
+function j(e) {
     let t = {
         id: w.toString(),
         enabled: !0,
@@ -136,7 +136,7 @@ function H(e) {
         t
     );
 }
-function j(e) {
+function H(e) {
     F(e.id), (x = { ...x }), delete x[e.id], e.action === y.kg4.TOGGLE_MUTE && G();
 }
 function Y(e) {
@@ -159,7 +159,7 @@ function W(e, t) {
     return (
         null == f().find(x, (t) => t.action === e && (!n || t.managed === n)) &&
         (V(
-            H({
+            j({
                 action: e,
                 enabled: !0,
                 shortcut: (0, b.Kd)(t),
@@ -175,7 +175,7 @@ let K = [
         let e = E.Z.getShortcuts();
         return (
             f().each(x, (t) => {
-                t.action === y.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && j(t);
+                t.action === y.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && H(t);
             }),
             f().reduce(
                 E.Z.getShortcuts(),
@@ -183,7 +183,7 @@ let K = [
                     let r = f().find(x, (e) => e.action === y.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
                     if (null == r)
                         V(
-                            H({
+                            j({
                                 action: y.kg4.PUSH_TO_TALK,
                                 enabled: !0,
                                 shortcut: t,
@@ -330,7 +330,7 @@ R(q, 'displayName', 'KeybindsStore'),
         RPC_APP_DISCONNECTED: z,
         KEYBINDS_ADD_KEYBIND: function (e) {
             let { keybind: t } = e;
-            V(H(t));
+            V(j(t));
         },
         KEYBINDS_DELETE_KEYBIND: function (e) {
             let { id: t } = e,
@@ -341,7 +341,7 @@ R(q, 'displayName', 'KeybindsStore'),
                     keybind_is_bound: !1,
                     keybind_has_shortcut: !1
                 }),
-                null != n && j(n);
+                null != n && H(n);
         },
         KEYBINDS_SET_KEYBIND: Y,
         KEYBINDS_ENABLE_ALL_KEYBINDS: function (e) {

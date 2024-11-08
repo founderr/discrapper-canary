@@ -59,7 +59,7 @@ function A(e) {
             size: G,
             animateOnHover: N
         }),
-        H = (0, r.jsx)(y, {
+        j = (0, r.jsx)(y, {
             src: F,
             avatarDecoration: Z,
             size: G,
@@ -75,7 +75,7 @@ function A(e) {
         ? (0, r.jsx)('div', {
               ...V,
               className: B,
-              children: H
+              children: j
           })
         : (0, r.jsx)(l.Clickable, {
               ...V,
@@ -88,6 +88,6 @@ function A(e) {
                   }),
                       null == C || C();
               },
-              children: H
+              children: j
           });
 }

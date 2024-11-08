@@ -247,10 +247,10 @@ function D(e) {
                       })
               });
     }
-    let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: H, premiumBackgroundColor: j, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
+    let { IconComponent: B, backgroundDarkColor: Z, backgroundLightColor: F, foregroundDarkColor: V, foregroundLightColor: j, premiumBackgroundColor: H, premiumForegroundColor: Y, sizeAdjustment: W } = C[k];
     if (null == B) return null;
-    P.premium && ((t = Y), (n = j));
-    let K = (0, u.wj)(M) ? V : H,
+    P.premium && ((t = Y), (n = H));
+    let K = (0, u.wj)(M) ? V : j,
         z = (0, u.wj)(M) ? Z : F;
     (t = null != t ? t : K), (n = null != n ? n : z);
     let q = Math.floor(0.75 * D) - (null != W ? W : 0);

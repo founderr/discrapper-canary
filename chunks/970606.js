@@ -18,7 +18,7 @@ n.d(t, {
         return O;
     },
     Gh: function () {
-        return H;
+        return j;
     },
     Gx: function () {
         return g;
@@ -54,7 +54,7 @@ n.d(t, {
         return o;
     },
     _v: function () {
-        return j;
+        return H;
     },
     aC: function () {
         return P;
@@ -354,7 +354,7 @@ function V(e) {
         favorite: r
     });
 }
-function H(e) {
+function j(e) {
     let { feature: t, guildId: n, position: r } = e;
     f.default.track(h.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
         ...m(),
@@ -363,7 +363,7 @@ function H(e) {
         position: r
     });
 }
-function j(e) {
+function H(e) {
     let { guildId: t, position: n } = e;
     f.default.track(h.rMx.GUILD_APPLICATION_ABANDONED, {
         ...m({ outcome: p.qz.HIT }),

@@ -21,7 +21,7 @@ n.d(t, {
         return x;
     },
     eL: function () {
-        return H;
+        return j;
     },
     eU: function () {
         return k;
@@ -48,7 +48,7 @@ n.d(t, {
         return U;
     },
     zq: function () {
-        return j;
+        return H;
     }
 }),
     n(47120),
@@ -332,10 +332,10 @@ async function V(e, t) {
             clip: r
         }));
 }
-function H() {
+function j() {
     s.Z.dispatch({ type: 'CLIPS_CLEAR_CLIPS_SESSION' });
 }
-function j() {
+function H() {
     s.Z.dispatch({ type: 'CLIPS_CLEAR_NEW_CLIP_IDS' });
 }
 async function Y(e) {

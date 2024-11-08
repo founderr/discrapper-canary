@@ -79,7 +79,7 @@ function C(e) {
                   })
                 : A.intl.string(A.t.ZcYwgY)
             : A.intl.formatToPlainString(A.t.htbuIS, { premiumMaxSize: Z }),
-        H = P
+        j = P
             ? (0, r.jsx)('div', {
                   className: N.body,
                   children: (0, r.jsx)(s.Text, {
@@ -103,7 +103,7 @@ function C(e) {
         enableArtBoxShadow: !1,
         type: b.cd.UPLOAD_ERROR_UPSELL,
         title: F,
-        body: H,
+        body: j,
         context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
         glowUp: V,
         analyticsLocation: { section: T.jXE.FILE_UPLOAD_POPOUT },

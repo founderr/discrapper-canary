@@ -53,11 +53,11 @@ let L = 'seenQSTutorial',
 function V() {
     (P = I.Z.getGuildCount() >= 3 || s().size(m.Z.getMutablePrivateChannels()) >= 20), (Z = []);
 }
-function H(e) {
+function j(e) {
     let t = (0, d.Z)(e);
     return null == t || (null != k && k !== t.type) ? null : t;
 }
-function j(e) {
+function H(e) {
     var t;
     let { query: n, queryMode: i } = e,
         a = null !== (t = y.Z.getGuildId()) && void 0 !== t ? t : void 0,
@@ -132,7 +132,7 @@ function Y(e, t) {
                           let i = [],
                               a = [];
                           for (let e = 1; e < F.length; e += 1) {
-                              let t = H(F[e]);
+                              let t = j(F[e]);
                               if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || S.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
                           a.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
@@ -142,7 +142,7 @@ function Y(e, t) {
                                   g.Z.getRecentlyEditedDrafts(g.d.ChannelMessage).forEach((n) => {
                                       let { channelId: r } = n;
                                       if (e(r)) return;
-                                      let i = H(r);
+                                      let i = j(r);
                                       null != i && t.push(i);
                                   }),
                                   t
@@ -151,7 +151,7 @@ function Y(e, t) {
                           o.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
                           let l = b.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !F.includes(e))
-                              .map((e) => H(e))
+                              .map((e) => j(e))
                               .filter(C.lm)
                               .reverse();
                           if ((l.length > 0 && (i.push((0, c.o6)(O.intl.string(O.t['61Df19']))), (i = i.concat(l))), null != n)) {
@@ -160,11 +160,11 @@ function Y(e, t) {
                                       let t = m.Z.getChannel(e);
                                       return !(null == t || e === r || F.includes(e) || A.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && A.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, f.d)(t);
                                   })
-                                  .map((e) => H(e))
+                                  .map((e) => j(e))
                                   .filter((e) => e);
                               Object.values(_.Z.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
                                   for (let n in t) {
-                                      let t = H(n);
+                                      let t = j(n);
                                       null != t && e.push(t);
                                   }
                               }),
@@ -255,8 +255,8 @@ D(K, 'displayName', 'QuickSwitcherStore'), D(K, 'persistKey', 'QuickSwitcherStor
 let z = new K(u.Z, {
     CONNECTION_OPEN: V,
     CONNECTION_OPEN_SUPPLEMENTAL: V,
-    QUICKSWITCHER_SHOW: j,
-    SHOW_ACTION_SHEET_QUICK_SWITCHER: j,
+    QUICKSWITCHER_SHOW: H,
+    SHOW_ACTION_SHEET_QUICK_SWITCHER: H,
     QUICKSWITCHER_HIDE: W,
     OVERLAY_SET_INPUT_LOCKED: W,
     HIDE_ACTION_SHEET_QUICK_SWITCHER: W,

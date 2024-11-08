@@ -7,31 +7,31 @@ t.d(n, {
 var i = t(200651),
     l = t(192379),
     o = t(481060),
-    s = t(100527),
-    r = t(906732),
+    r = t(100527),
+    s = t(906732),
     c = t(138201),
     a = t(785717),
     d = t(221292),
     u = t(687158),
     f = t(471879),
     m = t(502762),
-    p = t(475413),
+    I = t(475413),
     x = t(228168),
-    I = t(981631),
+    p = t(981631),
     h = t(388032),
     v = t(284373),
     g = t(161068);
 function Z(e) {
-    let { user: n, guildId: t, channelId: Z, messageId: _, roleId: b, transitionState: j, onViewBlockedProfileClick: E, showGuildProfile: T = !0, sourceAnalyticsLocations: N = [] } = e,
-        S = t === I.ME ? void 0 : t,
-        { analyticsLocations: y } = (0, r.ZP)([...N, s.Z.BLOCKED_PROFILE_MODAL]),
+    let { user: n, guildId: t, channelId: Z, messageId: _, roleId: j, transitionState: b, onViewBlockedProfileClick: E, showGuildProfile: T = !0, sourceAnalyticsLocations: N = [] } = e,
+        S = t === p.ME ? void 0 : t,
+        { analyticsLocations: y } = (0, s.ZP)([...N, r.Z.BLOCKED_PROFILE_MODAL]),
         P = (0, a.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: S,
             channelId: Z,
             messageId: _,
-            roleId: b,
+            roleId: j,
             showGuildProfile: T
         }),
         A = [
@@ -46,12 +46,12 @@ function Z(e) {
         ],
         C = (0, u.ZP)(n.id, T ? S : void 0),
         L = l.createRef();
-    return (0, i.jsx)(r.Gt, {
+    return (0, i.jsx)(s.Gt, {
         value: y,
         children: (0, i.jsx)(a.Mt, {
             value: P,
             children: (0, i.jsx)(o.ModalRoot, {
-                transitionState: j,
+                transitionState: b,
                 className: v.root,
                 hideShadow: !0,
                 'aria-label': h.intl.string(h.t['3N/J2t']),
@@ -104,7 +104,7 @@ function Z(e) {
                                             );
                                         })
                                     }),
-                                    (0, i.jsx)(p.tG, {
+                                    (0, i.jsx)(I.tG, {
                                         className: v.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
                                         text: h.intl.string(h.t.iXAna2),

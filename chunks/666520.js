@@ -7,15 +7,15 @@ t.d(n, {
 var i,
     l = t(200651),
     o = t(192379),
-    s = t(995295),
-    r = t(442837),
+    r = t(995295),
+    s = t(442837),
     c = t(481060),
     a = t(34854),
     d = t(531301),
     u = t(246946),
     f = t(981631),
     m = t(388032),
-    p = t(934824);
+    I = t(934824);
 function x(e, n, t) {
     return (
         n in e
@@ -29,10 +29,10 @@ function x(e, n, t) {
         e
     );
 }
-class I extends (i = o.PureComponent) {
+class p extends (i = o.PureComponent) {
     componentDidMount() {
         if (this.props.autoFocus && !this.props.hideNote) {
-            let e = s.findDOMNode(this.noteRef.current);
+            let e = r.findDOMNode(this.noteRef.current);
             null != e && null != e.selectionStart && (e.focus(), (e.selectionStart = e.selectionEnd = e.value.length));
         }
     }
@@ -44,7 +44,7 @@ class I extends (i = o.PureComponent) {
                   className: e,
                   children: (0, l.jsx)(c.TextAreaAutosize, {
                       ref: this.noteRef,
-                      className: p.textarea,
+                      className: I.textarea,
                       disabled: n,
                       placeholder: n ? m.intl.string(m.t['WLKx//']) : m.intl.string(m.t.VBhOe3),
                       'aria-label': m.intl.string(m.t.PbMNh4),
@@ -74,12 +74,12 @@ class I extends (i = o.PureComponent) {
     }
 }
 function h(e) {
-    let n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
+    let n = (0, s.e7)([u.Z], () => u.Z.hidePersonalInformation),
         t = (0, d.Z)(e.userId);
-    return (0, l.jsx)(I, {
+    return (0, l.jsx)(p, {
         ...e,
         ...t,
         hideNote: n
     });
 }
-x(I, 'defaultProps', { autoFocus: !1 });
+x(p, 'defaultProps', { autoFocus: !1 });

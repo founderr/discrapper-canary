@@ -1,6 +1,6 @@
 n.d(t, {
     B6: function () {
-        return H;
+        return j;
     },
     ql: function () {
         return X;
@@ -381,7 +381,7 @@ var m = {
         })
     }),
     V = 'undefined' != typeof document,
-    H = (function (e) {
+    j = (function (e) {
         function t(n) {
             var r;
             return ((r = e.call(this, n) || this).helmetData = new B(r.props.context, t.canUseDOM)), r;
@@ -394,14 +394,14 @@ var m = {
             t
         );
     })(r.Component);
-(H.canUseDOM = V),
-    (H.propTypes = {
+(j.canUseDOM = V),
+    (j.propTypes = {
         context: a().shape({ helmet: a().shape() }),
         children: a().node.isRequired
     }),
-    (H.defaultProps = { context: {} }),
-    (H.displayName = 'HelmetProvider');
-var j = function (e, t) {
+    (j.defaultProps = { context: {} }),
+    (j.displayName = 'HelmetProvider');
+var H = function (e, t) {
         var n,
             r = document.head || document.querySelector(m.HEAD),
             i = r.querySelectorAll(e + '[data-rh]'),
@@ -461,12 +461,12 @@ var j = function (e, t) {
             _ = e.titleAttributes;
         Y(m.BODY, e.bodyAttributes), Y(m.HTML, a), (n = f), (r = _), void 0 !== n && document.title !== n && (document.title = R(n)), Y(m.TITLE, r);
         var h = {
-                baseTag: j(m.BASE, i),
-                linkTags: j(m.LINK, s),
-                metaTags: j(m.META, o),
-                noscriptTags: j(m.NOSCRIPT, l),
-                scriptTags: j(m.SCRIPT, c),
-                styleTags: j(m.STYLE, d)
+                baseTag: H(m.BASE, i),
+                linkTags: H(m.LINK, s),
+                metaTags: H(m.META, o),
+                noscriptTags: H(m.NOSCRIPT, l),
+                scriptTags: H(m.SCRIPT, c),
+                styleTags: H(m.STYLE, d)
             },
             p = {},
             g = {};
@@ -539,7 +539,7 @@ var j = function (e, t) {
                         titleAttributes: A('titleAttributes', t),
                         prioritizeSeoTags: C(t, 'prioritizeSeoTags')
                     };
-                H.canUseDOM
+                j.canUseDOM
                     ? (K && cancelAnimationFrame(K),
                       a.defer
                           ? (K = requestAnimationFrame(function () {

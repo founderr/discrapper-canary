@@ -60,15 +60,15 @@ function F(e, t, n) {
 }
 ((a = i || (i = {}))[(a.ClientError = 0)] = 'ClientError'), (a[(a.CallbackError = 1)] = 'CallbackError'), (a[(a.ApiError = 2)] = 'ApiError');
 let V = {},
-    H = {};
-function j(e) {
+    j = {};
+function H(e) {
     var t;
     return { releasePhase: null == e ? void 0 : null === (t = e.activity) || void 0 === t ? void 0 : t.client_platform_config[(0, k.Z)((0, N.getOS)())].release_phase };
 }
 function Y(e) {
     let { applicationId: t, nonce: n, analyticsLocations: r, source: i } = e;
     (null != r || null != i) &&
-        (H[t] = {
+        (j[t] = {
             nonce: n,
             locations: r,
             source: i
@@ -97,7 +97,7 @@ async function W(e) {
             applicationId: i,
             activityConfigs: p
         }),
-        { releasePhase: g } = j(m),
+        { releasePhase: g } = H(m),
         E = await (0, _.Z)();
     y.default.track(B.rMx.ACTIVITY_SESSION_LEFT, {
         channel_id: d.id,
@@ -150,7 +150,7 @@ async function K(e) {
             activityConfigs: M
         }),
         U = 1 + P.findIndex((e) => e === o),
-        { releasePhase: G } = j(k),
+        { releasePhase: G } = H(k),
         Z = await (0, _.Z)(),
         F = null != E ? [E] : [],
         Y = {
@@ -161,7 +161,7 @@ async function K(e) {
             activitiesInfraVersion: O
         };
     V[o] = Y;
-    let W = H[o];
+    let W = j[o];
     !(0, C.Ew)(m.nonce) && m.nonce !== (null == W ? void 0 : W.nonce) && (W = void 0),
         y.default.track(B.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: g.id,
@@ -246,8 +246,8 @@ class q extends c.Z {
             F(this, 'handleActivityLaunchSuccess', (e) => {
                 let { nonce: t, applicationId: n } = e;
                 setTimeout(() => {
-                    let e = H[n];
-                    null != e && e.nonce === t && delete H[n];
+                    let e = j[n];
+                    null != e && e.nonce === t && delete j[n];
                 }, 2000);
             }),
             F(this, 'handleActivityLaunchFail', async (e) => {
@@ -255,8 +255,8 @@ class q extends c.Z {
                     n,
                     r,
                     { error: i, nonce: a, channelId: s, guildId: o, applicationId: l, isStart: u } = e,
-                    c = H[l];
-                null != c && c.nonce === a ? delete H[l] : (c = void 0);
+                    c = j[l];
+                null != c && c.nonce === a ? delete j[l] : (c = void 0);
                 let d = Z.intl.string(Z.t['IOy+Iy']);
                 if (i instanceof h.Z) {
                     (t = 0), (r = i.reason);

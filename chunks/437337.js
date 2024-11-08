@@ -76,7 +76,7 @@ let p = {
                         style: {
                             left: R.to({
                                 range: [0, 0.3, 0.7, 1],
-                                output: [A ? 0 : -3, 1, 8, 12]
+                                output: [A ? -4 : -3, 1, 8, 12]
                             })
                         },
                         'aria-hidden': !0,

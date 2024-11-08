@@ -367,7 +367,7 @@ var n;
                                         return n;
                                     })(e, t))
                                 ) {
-                                    var n = H(t, e);
+                                    var n = j(t, e);
                                     M(n, n.next);
                                 }
                             })(u[i], n),
@@ -384,8 +384,8 @@ var n;
         }
         function w(e, t, n, r, i) {
             var a, s;
-            if (i === K(e, t, n, r) > 0) for (a = t; a < n; a += r) s = j(a, e[a], e[a + 1], s);
-            else for (a = n - r; a >= t; a -= r) s = j(a, e[a], e[a + 1], s);
+            if (i === K(e, t, n, r) > 0) for (a = t; a < n; a += r) s = H(a, e[a], e[a + 1], s);
+            else for (a = n - r; a >= t; a -= r) s = H(a, e[a], e[a + 1], s);
             return s && Z(s, s.next) && (Y(s), (s = s.next)), s;
         }
         function M(e, t) {
@@ -516,7 +516,7 @@ var n;
                                                       );
                                                   })(s, o)
                                               ) {
-                                                  var l = H(s, o);
+                                                  var l = j(s, o);
                                                   return (s = M(s, s.next)), (l = M(l, l.next)), P(s, t, n, r, i, a), void P(l, t, n, r, i, a);
                                               }
                                               o = o.next;
@@ -550,14 +550,14 @@ var n;
         function V(e, t) {
             return 0 > B(e.prev, e, e.next) ? B(e, t, e.next) >= 0 && B(e, e.prev, t) >= 0 : 0 > B(e, t, e.prev) || 0 > B(e, e.next, t);
         }
-        function H(e, t) {
+        function j(e, t) {
             var n = new W(e.i, e.x, e.y),
                 r = new W(t.i, t.x, t.y),
                 i = e.next,
                 a = t.prev;
             return (e.next = t), (t.prev = e), (n.next = i), (i.prev = n), (r.next = n), (n.prev = r), (a.next = r), (r.prev = a), r;
         }
-        function j(e, t, n, r) {
+        function H(e, t, n, r) {
             var i = new W(e, t, n);
             return r ? ((i.next = r.next), (i.prev = r), (r.next.prev = i), (r.next = i)) : ((i.prev = i), (i.next = i)), i;
         }
@@ -1040,7 +1040,7 @@ var n;
                     F = G[3],
                     V = Math.max(Math.ceil(Math.abs(F) / (ed / 4)), 1);
                 F /= V;
-                for (var H = 0; H < V; H++)
+                for (var j = 0; j < V; j++)
                     B.push(
                         (function (e, t) {
                             var n = (4 / 3) * Math.tan(t / 4),
@@ -1498,7 +1498,7 @@ var n;
                     F = G[3],
                     V = Math.max(Math.ceil(Math.abs(F) / (eT / 4)), 1);
                 F /= V;
-                for (var H = 0; H < V; H++)
+                for (var j = 0; j < V; j++)
                     B.push(
                         (function (e, t) {
                             var n = (4 / 3) * Math.tan(t / 4),

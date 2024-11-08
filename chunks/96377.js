@@ -67,8 +67,8 @@ t.Z = {
                     Z = 'y' === O ? r.I : r.F2,
                     F = 'y' === O ? 'height' : 'width',
                     V = L[O],
-                    H = V + A[B],
-                    j = V - A[Z],
+                    j = V + A[B],
+                    H = V - A[Z],
                     Y = b ? -w[F] / 2 : 0,
                     W = C === r.BL ? x[F] : w[F],
                     K = C === r.BL ? -w[F] : -x[F],
@@ -89,7 +89,7 @@ t.Z = {
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                     er = en ? ('y' === O ? en.clientTop || 0 : en.clientLeft || 0) : 0,
                     ei = null != (G = null == k ? void 0 : k[O]) ? G : 0,
-                    ea = (0, o.u)(b ? (0, _.VV)(H, V + ee - ei - er) : H, V, b ? (0, _.Fp)(j, V + et - ei) : j);
+                    ea = (0, o.u)(b ? (0, _.VV)(j, V + ee - ei - er) : j, V, b ? (0, _.Fp)(H, V + et - ei) : H);
                 (L[O] = ea), (U[O] = ea - V);
             }
             if (void 0 !== m && m) {

@@ -65,7 +65,7 @@ function A(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        H = i.useCallback(() => {
+        j = i.useCallback(() => {
             var e, t, n;
             (null === (n = m.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
                 ? m.Z.getMediaEngine().eachConnection((e) => {
@@ -73,7 +73,7 @@ function A(e) {
                   })
                 : C();
         }, [C]),
-        j = i.useCallback(() => {
+        H = i.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = h.Z.getState(),
                 r = {
                     qualityOptions: {
@@ -121,7 +121,7 @@ function A(e) {
                                     id: 'stream-settings-audio-enable',
                                     label: T.intl.string(T.t.ZJEHt7),
                                     checked: x,
-                                    action: j
+                                    action: H
                                 })
                               : null,
                           w
@@ -129,7 +129,7 @@ function A(e) {
                                     id: 'change-windows',
                                     label: T.intl.string(T.t.qntSam),
                                     icon: s.ScreenArrowIcon,
-                                    action: H
+                                    action: j
                                 })
                               : null,
                           (0, r.jsx)(s.MenuItem, {

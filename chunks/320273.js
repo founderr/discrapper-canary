@@ -43,8 +43,8 @@ var r = n(147018),
     Z = U('Headers'),
     F = B && B.prototype,
     V = Z && Z.prototype,
-    H = i.RegExp,
-    j = i.TypeError,
+    j = i.RegExp,
+    H = i.TypeError,
     Y = i.decodeURIComponent,
     W = i.encodeURIComponent,
     K = s(''.charAt),
@@ -72,7 +72,7 @@ var r = n(147018),
             return Y(n);
         } catch (e) {
             for (; r; ) {
-                n = Q(n, en[(t = r--) - 1] || (en[t - 1] = H('((?:%[\\da-f]{2}){' + t + '})', 'gi')), er);
+                n = Q(n, en[(t = r--) - 1] || (en[t - 1] = j('((?:%[\\da-f]{2}){' + t + '})', 'gi')), er);
             }
             return n;
         }
@@ -129,7 +129,7 @@ ec.prototype = {
             u = N(e);
         if (u)
             for (n = (t = A(e, u)).next; !(r = a(n, t)).done; ) {
-                if ((o = a((s = (i = A(I(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw j('Expected sequence with length 2');
+                if ((o = a((s = (i = A(I(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw H('Expected sequence with length 2');
                 q(this.entries, {
                     key: b(o.value),
                     value: b(l.value)

@@ -48,8 +48,8 @@ t.Z = function (e) {
         }),
         F = (0, T.tP)(m),
         V = (null == m ? void 0 : null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        H = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-        j = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
+        j = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        H = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
         Y = (0, o.e7)([g.Z], () => g.Z.getState().theme),
         W = (0, l.wj)(Y) ? x.BR.DARK : x.BR.LIGHT,
         K = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
@@ -144,14 +144,14 @@ t.Z = function (e) {
             ea();
         },
         el =
-            j && !V
+            H && !V
                 ? {
                       headerText: w.intl.string(w.t.gHerLS),
                       ctaText: w.intl.string(w.t.cfY4PD),
                       handleClickCta: Z,
                       tileAssetType: 'reward'
                   }
-                : H && !V
+                : j && !V
                   ? {
                         headerText: w.intl.string(w.t.uH2sf3),
                         ctaText: w.intl.string(w.t.VN1Ajo),
