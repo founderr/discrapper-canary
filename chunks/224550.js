@@ -15,7 +15,7 @@ var i = t(442837),
     b = t(788107);
 n.Z = function (e) {
     let n, t, v, h;
-    let { subscriptionPlan: P, isGift: A, isEmbeddedIAP: T, renewalInvoice: g, paymentSourceType: y, hide: E, purchaseType: I, productLine: x, basePrice: N, currentSubscription: _ } = e,
+    let { subscriptionPlan: P, isGift: A, isEmbeddedIAP: T, renewalInvoice: g, paymentSourceType: y, hide: E, purchaseType: I, productLine: x, basePrice: _, currentSubscription: N } = e,
         C = (0, i.e7)([l.ZP], () => l.ZP.inReverseTrial());
     if (E) return null;
     let R = null == e.planGroup ? [] : e.planGroup;
@@ -26,7 +26,7 @@ n.Z = function (e) {
     let S = (0, a.K)({
             purchaseType: I || p.GZQ.SUBSCRIPTION,
             plan: P,
-            premiumSubscription: null == _ ? null : _,
+            premiumSubscription: null == N ? null : N,
             isGift: !!A,
             planGroup: R,
             isPrepaidPaymentSource: !1
@@ -54,11 +54,17 @@ n.Z = function (e) {
                     throw Error('Unexpected interval: '.concat(n));
             }
     } else if (I === p.GZQ.ONE_TIME)
-        (j = m.intl.format(m.t.H2uH5e, {
-            primaryText: S,
-            paidURL: p.EYA.PAID_TERMS
-        })),
-            (M = x === p.POd.COLLECTIBLES ? (A ? m.intl.string(m.t.ofqyUl) : m.intl.string(m.t.G3l0s7)) : m.intl.string(m.t['9/siSU']));
+        x === p.POd.COLLECTIBLES
+            ? ((j = m.intl.format(m.t.Y2Rkqa, {
+                  primaryText: S,
+                  paidURL: p.EYA.PAID_TERMS
+              })),
+              (M = A ? m.intl.string(m.t.ofqyUl) : m.intl.string(m.t.G3l0s7)))
+            : ((j = m.intl.format(m.t.H2uH5e, {
+                  primaryText: S,
+                  paidURL: p.EYA.PAID_TERMS
+              })),
+              (M = m.intl.string(m.t['9/siSU'])));
     else if (null == P || A)
         switch (
             (A &&
@@ -85,16 +91,16 @@ n.Z = function (e) {
         let r = (0, a.K)({
             purchaseType: p.GZQ.SUBSCRIPTION,
             plan: P,
-            premiumSubscription: null == _ ? null : _,
+            premiumSubscription: null == N ? null : N,
             isGift: !1,
             planGroup: R,
             isPrepaidPaymentSource: !1
         });
-        if ((null != N && null != n && null != t && (e = (0, u.og)((0, u.T4)(N.amount, N.currency), n, t)), null == e)) {
+        if ((null != _ && null != n && null != t && (e = (0, u.og)((0, u.T4)(_.amount, _.currency), n, t)), null == e)) {
             let e = Error('Missing base rate for legal fine print');
             (0, s.q2)(e, { tags: { planId: P.id } });
         }
-        M = (null == _ ? void 0 : _.isPaused)
+        M = (null == N ? void 0 : N.isPaused)
             ? m.intl.format(m.t.B6oNwM, {
                   primaryText: r,
                   rate: e,
@@ -102,7 +108,7 @@ n.Z = function (e) {
                   contactLink: p.EYA.CONTACT,
                   helpdeskArticle: o.Z.getArticleURL(p.BhN.BILLING)
               })
-            : null != _ && (0, d.GY)(_, P.id, R)
+            : null != N && (0, d.GY)(N, P.id, R)
               ? m.intl.format(m.t.LyBQUV, {
                     primaryText: r,
                     rate: e,
@@ -110,9 +116,9 @@ n.Z = function (e) {
                     contactLink: p.EYA.CONTACT,
                     helpdeskArticle: o.Z.getArticleURL(p.BhN.BILLING)
                 })
-              : C && x === p.POd.BOOST && null != N
+              : C && x === p.POd.BOOST && null != _
                 ? m.intl.format(m.t['2nKy//'], {
-                      price: (0, u.T4)(N.amount, N.currency),
+                      price: (0, u.T4)(_.amount, _.currency),
                       paidServiceTermsArticle: p.EYA.PAID_TERMS,
                       contactUsArticle: p.EYA.CONTACT,
                       subscriptionFAQArticle: o.Z.getArticleURL(p.BhN.BILLING)
