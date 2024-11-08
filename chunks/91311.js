@@ -23,6 +23,7 @@ let o = {
         profile_effect_debug_controls: 'Shop: Scrolls through profile effects with arrow up / down. Restart with R',
         shop_disable_cache: 'Shop: Disable shop cache',
         shop_include_unpublished: 'Shop: Show unpublished items in the shop',
+        shop_request_home_payload: 'Shop: Request only shop home payload',
         enable_avatar_decoration_uploads: 'Shop: Enable avatar decoration uploads',
         lottie_hover_multiple_loop: 'Lotties - continue playing the hover animation after mouse enter',
         ss01: 'Italic - straight forms (K,R,k)',
