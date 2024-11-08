@@ -75,12 +75,13 @@ class O extends o.Z {
             t = this._videoQuality;
         if (null != t) {
             var n;
-            let { duration: r, avg_bitrate: i, avg_fps: a, avg_resolution: s } = this.isOwner ? t.getOutboundStats()[0] : null !== (n = t.getInboundStats(e)) && void 0 !== n ? n : {};
+            let { duration: r, avg_bitrate: i, avg_fps: a, avg_resolution: s, inbound_bitrate_estimate_percentile99: o } = this.isOwner ? t.getOutboundStats()[0] : null !== (n = t.getInboundStats(e)) && void 0 !== n ? n : {};
             return {
                 duration: r,
                 avg_bitrate: i,
                 avg_fps: a,
-                avg_resolution: s
+                avg_resolution: s,
+                inbound_bitrate_estimate_percentile99: o
             };
         }
         return null;
