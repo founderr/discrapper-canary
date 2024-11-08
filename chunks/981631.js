@@ -3383,6 +3383,7 @@ let _q = 'help_center_cta';
     (r2.SECURE_FRAMES = 'Secure Frames'),
     (r2.REVERSE_TRIAL_UPSELL_MODAL = 'Reverse trial Upsell Modal'),
     (r2.WEB_SETTING_TREE_TOOL = 'Web Setting Tree Tool'),
+    (r2.THIRD_PARTY_ACCESS = 'Third Party Access'),
     ((r3 = eN || (eN = {})).TOOLTIP = 'Tooltip'),
     (r3.CARD = 'Card'),
     (r3.CAROUSEL = 'Carousel'),
