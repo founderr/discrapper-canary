@@ -1,6 +1,8 @@
 e.exports = {
+    container: 'container_e9dbfa',
     content: 'content_e9dbfa',
     paginationInput: 'paginationInput_e9dbfa',
-    sidebar: 'sidebar_e9dbfa',
-    sidebarContent: 'sidebarContent_e9dbfa'
+    topFilterContainer: 'topFilterContainer_e9dbfa',
+    sideFilterContainer: 'sideFilterContainer_e9dbfa',
+    sideFilterContent: 'sideFilterContent_e9dbfa'
 };
