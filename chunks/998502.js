@@ -19,31 +19,32 @@ var r,
     c,
     d = n(512722),
     f = n.n(d),
-    _ = n(719711),
-    h = n(544891),
-    p = n(433517),
-    m = n(593472),
-    g = n(189451),
-    E = n(358085),
-    v = n(591759),
-    I = n(981631),
-    S = n(413135).Buffer;
+    _ = n(259443),
+    h = n(719711),
+    p = n(544891),
+    m = n(433517),
+    g = n(593472),
+    E = n(189451),
+    v = n(358085),
+    I = n(591759),
+    S = n(981631),
+    b = n(413135).Buffer;
 let T = window.DiscordNative,
-    b = ['jpg', 'jpeg', 'png'],
-    y = null,
+    y = ['jpg', 'jpeg', 'png'],
     A = null,
     N = null,
-    C = {};
+    C = null,
+    R = {};
 null != T &&
-    ((y = T.remoteApp
+    ((A = T.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (N = null === (r = (i = T.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
-    (A = null === (a = (s = T.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
-let R = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    O = !1;
-async function D(e) {
+    (C = null === (r = (i = T.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
+    (N = null === (a = (s = T.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+let O = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
+    D = !1;
+async function L(e) {
     let t = await fetch(
         new Request(e, {
             method: 'GET',
@@ -54,13 +55,13 @@ async function D(e) {
     let n = await t.arrayBuffer();
     return f()(null != n, 'Data is null'), n;
 }
-function L(e) {
-    return D(e);
-}
 function x(e) {
+    return L(e);
+}
+function w(e) {
     var t, n, r, i, a, s, o, l;
     return {
-        id: C[null !== (t = e.id) && void 0 !== t ? t : ''],
+        id: R[null !== (t = e.id) && void 0 !== t ? t : ''],
         nativeProcessObserverId: parseInt(null !== (n = e.id) && void 0 !== n ? n : '', 10),
         name: null !== (r = e.gameName) && void 0 !== r ? r : e.name,
         processName: null !== (i = e.name) && void 0 !== i ? i : '',
@@ -76,7 +77,7 @@ function x(e) {
         pid: e.pid,
         pidPath: null !== (s = e.pidPath) && void 0 !== s ? s : [],
         windowHandle: null !== (o = e.windowHandle) && void 0 !== o ? o : null,
-        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : m.Jx.UNKNOWN
+        fullscreenType: null !== (l = e.fullscreenType) && void 0 !== l ? l : g.Jx.UNKNOWN
     };
 }
 ((u = o || (o = {}))[(u.Camera = 0)] = 'Camera'),
@@ -90,7 +91,7 @@ function x(e) {
     (c.DISCONNECT = 'DISCONNECT'),
     (t.ZP = {
         requireModule: (e) => T.nativeModules.requireModule(e),
-        ensureModule: (e) => (E.isPlatformEmbedded ? (__OVERLAY__ && R.has(e) ? Promise.resolve() : T.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
+        ensureModule: (e) => (v.isPlatformEmbedded ? (__OVERLAY__ && O.has(e) ? Promise.resolve() : T.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
         get canBootstrapNewUpdater() {
             return T.nativeModules.canBootstrapNewUpdater || !1;
         },
@@ -102,7 +103,7 @@ function x(e) {
             try {
                 n = this.requireModule('discord_overlay2');
             } catch (e) {}
-            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), T.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== p.K.get(_.SV) && this.supportsFeature(I.eRX.USER_DATA_CACHE) && T.userDataCache.cacheUserData(p.K.stringify()), null == T || null === (t = T.window) || void 0 === t || t.close(null == T ? void 0 : null === (e = T.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
+            n && n.reset && n.reset(), n && n.disconnectAllProcesses && n.destroyHostProcess && (n.disconnectAllProcesses(), n.destroyHostProcess()), T.remotePowerMonitor.removeAllListeners(), window.location.origin === window.GLOBAL_ENV.MIGRATION_SOURCE_ORIGIN && !0 !== m.K.get(h.SV) && this.supportsFeature(S.eRX.USER_DATA_CACHE) && T.userDataCache.cacheUserData(m.K.stringify()), null == T || null === (t = T.window) || void 0 === t || t.close(null == T ? void 0 : null === (e = T.globalOverlay) || void 0 === e ? void 0 : e.WINDOW_KEY);
         },
         inputEventRegister(e, t, n, r) {
             !Array.isArray(t) && (t = t.toJS()),
@@ -120,20 +121,20 @@ function x(e) {
             this.getDiscordUtils().inputEventUnregister(parseInt(e));
         },
         setOnInputEventCallback(e) {
-            if (!!E.isPlatformEmbedded) this.getDiscordUtils().inputWatchAll(e);
+            if (!!v.isPlatformEmbedded) this.getDiscordUtils().inputWatchAll(e);
         },
         setFocused(e) {
             this.getDiscordUtils().inputSetFocused(e);
         },
         setObservedGamesCallback(e, t) {
             try {
-                C = {};
+                R = {};
                 let n = 0;
                 this.getDiscordUtils().setObservedGamesCallback(
                     e.map((e) => {
                         let t = ++n;
                         return (
-                            null != e.id && (C[t] = e.id),
+                            null != e.id && (R[t] = e.id),
                             {
                                 ...e,
                                 cmdline: e.cmdLine,
@@ -141,12 +142,12 @@ function x(e) {
                             }
                         );
                     }),
-                    (e) => t(e.map(x))
+                    (e) => t(e.map(w))
                 );
             } catch (e) {}
         },
         setCandidateGamesCallback(e) {
-            this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(x)));
+            this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(w)));
         },
         clearCandidateGamesCallback() {
             this.getDiscordUtils().clearCandidateGamesCallback();
@@ -164,17 +165,25 @@ function x(e) {
             this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
         },
         clearObserverDebugCallback() {
-            this.getDiscordUtils().setObserverDebugCallback(null, g.l.NONE, 0);
+            this.getDiscordUtils().setObserverDebugCallback(null, E.l.NONE, 0);
         },
         shouldDisplayNotifications() {
             return this.getDiscordUtils().shouldDisplayNotifications();
         },
         getVoiceEngine() {
             if (__OVERLAY__) throw Error('cannot require discord_voice in overlay');
-            return (O = !0), this.requireModule('discord_voice');
+            let e = this.requireModule('discord_voice');
+            return (
+                !D &&
+                    (0, _.Bl)((t, n, r) => {
+                        e.consoleLog(n, '['.concat(t, '] ').concat(r));
+                    }),
+                (D = !0),
+                e
+            );
         },
         getDiscordUtils() {
-            if (!O)
+            if (!D)
                 try {
                     this.getVoiceEngine();
                 } catch (e) {}
@@ -182,7 +191,7 @@ function x(e) {
         },
         isSystemDarkMode() {
             var e, t, n;
-            return !!(0, E.isWindows)() && (null === (n = null === (e = (t = this.getDiscordUtils()).isSystemDarkMode) || void 0 === e ? void 0 : e.call(t)) || void 0 === n || n);
+            return !!(0, v.isWindows)() && (null === (n = null === (e = (t = this.getDiscordUtils()).isSystemDarkMode) || void 0 === e ? void 0 : e.call(t)) || void 0 === n || n);
         },
         getGameUtils() {
             return this.requireModule('discord_game_utils');
@@ -194,20 +203,20 @@ function x(e) {
             return this.requireModule('discord_dispatch');
         },
         setBadge(e) {
-            if ('darwin' === (0, E.getPlatformName)()) {
+            if ('darwin' === (0, v.getPlatformName)()) {
                 let t = '';
                 -1 === e ? (t = '\u2022') : e > 0 && (t = ''.concat(e)), T.remoteApp.dock.setBadge(t);
-            } else 'win32' === (0, E.getPlatformName)() ? this.send('APP_BADGE_SET', e) : 'linux' === (0, E.getPlatformName)() && T.remoteApp.setBadgeCount(e >= 0 ? e : 0);
+            } else 'win32' === (0, v.getPlatformName)() ? this.send('APP_BADGE_SET', e) : 'linux' === (0, v.getPlatformName)() && T.remoteApp.setBadgeCount(e >= 0 ? e : 0);
         },
         setSystemTrayIcon(e) {
-            if (!!E.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_ICON', e);
+            if (!!v.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_ICON', e);
         },
         setThumbarButtons(e) {
             var t, n;
-            if (!!E.isPlatformEmbedded) null === (n = T.thumbar) || void 0 === n || null === (t = n.setThumbarButtons) || void 0 === t || t.call(n, e, this.isSystemDarkMode());
+            if (!!v.isPlatformEmbedded) null === (n = T.thumbar) || void 0 === n || null === (t = n.setThumbarButtons) || void 0 === t || t.call(n, e, this.isSystemDarkMode());
         },
         bounceDock(e) {
-            if (E.isPlatformEmbedded) {
+            if (v.isPlatformEmbedded) {
                 let t = T.remoteApp;
                 if (null != t.dock) {
                     let n = t.dock.bounce(e);
@@ -219,72 +228,72 @@ function x(e) {
             }
         },
         setSystemTrayApplications(e) {
-            if (!!E.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_APPLICATIONS', e);
+            if (!!v.isPlatformEmbedded) this.send('SYSTEM_TRAY_SET_APPLICATIONS', e);
         },
         get architecture() {
-            return E.isPlatformEmbedded ? T.process.arch : '';
+            return v.isPlatformEmbedded ? T.process.arch : '';
         },
         get releaseChannel() {
-            if (!E.isPlatformEmbedded) return '';
+            if (!v.isPlatformEmbedded) return '';
             let e = T.remoteApp.getReleaseChannel();
             if (null != e) return e;
             return '';
         },
         get version() {
-            return y;
-        },
-        get buildNumber() {
             return A;
         },
-        get moduleVersions() {
+        get buildNumber() {
             return N;
         },
+        get moduleVersions() {
+            return C;
+        },
         copy(e) {
-            E.isPlatformEmbedded && T.clipboard.copy(e);
+            v.isPlatformEmbedded && T.clipboard.copy(e);
         },
         async copyImage(e) {
-            f()(E.isPlatformEmbedded, 'Copy image method called outside native app'), f()('function' == typeof T.clipboard.copyImage, 'Copy image not supported');
-            let t = await D(e);
-            T.clipboard.copyImage(S.from(t), e);
+            f()(v.isPlatformEmbedded, 'Copy image method called outside native app'), f()('function' == typeof T.clipboard.copyImage, 'Copy image not supported');
+            let t = await L(e);
+            T.clipboard.copyImage(b.from(t), e);
         },
         async saveImage(e) {
             var t;
-            f()(E.isPlatformEmbedded, 'Save image method called outside native app');
-            let n = v.Z.toURLSafe(e);
+            f()(v.isPlatformEmbedded, 'Save image method called outside native app');
+            let n = I.Z.toURLSafe(e);
             if (null == n) return;
             let r = null !== (t = n.pathname.split('/').pop()) && void 0 !== t ? t : 'unknown',
-                i = await D(e),
-                a = S.from(i);
+                i = await L(e),
+                a = b.from(i);
             T.fileManager.saveWithDialog(a, r);
         },
         async saveFile(e, t) {
             var n;
-            f()(E.isPlatformEmbedded, 'Save file method called outside native app');
-            let r = v.Z.toURLSafe(e);
+            f()(v.isPlatformEmbedded, 'Save file method called outside native app');
+            let r = I.Z.toURLSafe(e);
             if (null == r) return;
             let i = null !== (n = null != t ? t : r.pathname.split('/').pop()) && void 0 !== n ? n : 'unknown',
-                a = await D(e),
-                s = S.from(a);
+                a = await L(e),
+                s = b.from(a);
             T.fileManager.saveWithDialog(s, i);
         },
         canCopyImage() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
             if (null != e) {
                 var t, n;
-                let r = null === (t = v.Z.toURLSafe(e)) || void 0 === t ? void 0 : t.pathname;
+                let r = null === (t = I.Z.toURLSafe(e)) || void 0 === t ? void 0 : t.pathname;
                 if (null == r) return !1;
                 let i = null === (n = r.split('.').pop()) || void 0 === n ? void 0 : n.toLowerCase();
-                if (null != i && !b.includes(i)) return !1;
+                if (null != i && !y.includes(i)) return !1;
             }
             return 'function' == typeof T.clipboard.copyImage;
         },
         cut() {
-            E.isPlatformEmbedded && T.clipboard.cut();
+            v.isPlatformEmbedded && T.clipboard.cut();
         },
         paste() {
-            E.isPlatformEmbedded && T.clipboard.paste();
+            v.isPlatformEmbedded && T.clipboard.paste();
         },
-        readClipboard: () => (E.isPlatformEmbedded ? T.clipboard.read() : ''),
+        readClipboard: () => (v.isPlatformEmbedded ? T.clipboard.read() : ''),
         on(e, t) {
             T.ipc.on(e, t);
         },
@@ -312,10 +321,10 @@ function x(e) {
         },
         focus(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            t && (0, E.isWindows)() && this.minimize(null), T.window.focus(t, e);
+            t && (0, v.isWindows)() && this.minimize(null), T.window.focus(t, e);
         },
         blur() {
-            E.isPlatformEmbedded && null != T.window.blur ? T.window.blur() : window.blur();
+            v.isPlatformEmbedded && null != T.window.blur ? T.window.blur() : window.blur();
         },
         fullscreen(e) {
             T.window.fullscreen(e);
@@ -335,7 +344,7 @@ function x(e) {
             null == T || null === (r = T.window) || void 0 === r || null === (n = r.setMinimumSize) || void 0 === n || n.call(r, e, t);
         },
         purgeMemory() {
-            if (!!E.isPlatformEmbedded) T.processUtils.purgeMemory();
+            if (!!v.isPlatformEmbedded) T.processUtils.purgeMemory();
         },
         updateCrashReporter(e) {
             T.crashReporter.updateCrashReporter(e);
@@ -344,10 +353,10 @@ function x(e) {
             T.crashReporter.triggerJSException(e);
         },
         flushDNSCache() {
-            E.isPlatformEmbedded && T.processUtils.flushDNSCache();
+            v.isPlatformEmbedded && T.processUtils.flushDNSCache();
         },
         supportsFeature: (e) => T.features.supports(e),
-        getEnableHardwareAcceleration: () => !E.isPlatformEmbedded || (!__OVERLAY__ && T.gpuSettings.getEnableHardwareAcceleration()),
+        getEnableHardwareAcceleration: () => !v.isPlatformEmbedded || (!__OVERLAY__ && T.gpuSettings.getEnableHardwareAcceleration()),
         setEnableHardwareAcceleration(e) {
             T.gpuSettings.setEnableHardwareAcceleration(e);
         },
@@ -355,9 +364,9 @@ function x(e) {
             T.gpuSettings.setChromiumSwitches(e);
         },
         getGPUDriverVersions() {
-            return (0, E.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions ? this.getDiscordUtils().getGPUDriverVersions() : Promise.resolve(Object.freeze({}));
+            return (0, v.isWindows)() && null != this.getDiscordUtils().getGPUDriverVersions ? this.getDiscordUtils().getGPUDriverVersions() : Promise.resolve(Object.freeze({}));
         },
-        setZoomFactor: (e) => !!E.isPlatformEmbedded && (T.window.setZoomFactor(e), !0),
+        setZoomFactor: (e) => !!v.isPlatformEmbedded && (T.window.setZoomFactor(e), !0),
         setBackgroundThrottling(e) {
             null != T.window.setBackgroundThrottling ? T.window.setBackgroundThrottling(e) : T.window.webContents.setBackgroundThrottling(e);
         },
@@ -370,7 +379,7 @@ function x(e) {
             null === (e = (t = T.app).pauseFrameEvictor) || void 0 === e || e.call(t);
         },
         getPidFromDesktopSource(e) {
-            if (!((0, E.isWindows)() || (0, E.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
+            if (!((0, v.isWindows)() || (0, v.isMac)()) || null == this.getDiscordUtils().getPidFromWindowHandle) return null;
             let t = null == e ? void 0 : e.split(':'),
                 n = null == t ? void 0 : t[0];
             if ('window' === n) {
@@ -384,7 +393,7 @@ function x(e) {
             else return null;
         },
         getDesktopSourceFromPid(e) {
-            if (!(0, E.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
+            if (!(0, v.isWindows)() || null == this.getDiscordUtils().getWindowHandleFromPid || null == e) return null;
             let t = this.getDiscordUtils().getWindowHandleFromPid(e);
             return null == t || 0 === t.length ? null : ['window', t, '0'].join(':');
         },
@@ -408,34 +417,34 @@ function x(e) {
         },
         showOpenDialog: (e) => T.fileManager.showOpenDialog({ properties: e }),
         flushStorageData: () =>
-            E.isPlatformEmbedded
+            v.isPlatformEmbedded
                 ? new Promise((e, t) => {
                       null != T.processUtils.flushStorageData ? T.processUtils.flushStorageData((n) => (null != n ? t(Error(n)) : e())) : e();
                   })
                 : Promise.resolve(),
         flushCookies: () =>
-            E.isPlatformEmbedded
+            v.isPlatformEmbedded
                 ? new Promise((e, t) => {
                       null != T.processUtils.flushCookies ? T.processUtils.flushCookies((n) => (null != n ? t(Error(n)) : e())) : e();
                   })
                 : Promise.resolve(),
         setCrashInformation(e, t) {
             var n;
-            if (!!E.isPlatformEmbedded && (null == T ? void 0 : null === (n = T.processUtils) || void 0 === n ? void 0 : n.setCrashInformation) != null) T.processUtils.setCrashInformation(e, t);
+            if (!!v.isPlatformEmbedded && (null == T ? void 0 : null === (n = T.processUtils) || void 0 === n ? void 0 : n.setCrashInformation) != null) T.processUtils.setCrashInformation(e, t);
         },
-        blockDisplaySleep: () => (E.isPlatformEmbedded && null != T.powerSaveBlocker ? T.powerSaveBlocker.blockDisplaySleep() : null),
+        blockDisplaySleep: () => (v.isPlatformEmbedded && null != T.powerSaveBlocker ? T.powerSaveBlocker.blockDisplaySleep() : null),
         unblockDisplaySleep(e) {
-            if (!!E.isPlatformEmbedded && null != T.powerSaveBlocker) T.powerSaveBlocker.unblockDisplaySleep(e);
+            if (!!v.isPlatformEmbedded && null != T.powerSaveBlocker) T.powerSaveBlocker.unblockDisplaySleep(e);
         },
         cleanupDisplaySleep() {
-            if (!!E.isPlatformEmbedded && null != T.powerSaveBlocker) T.powerSaveBlocker.cleanupDisplaySleep();
+            if (!!v.isPlatformEmbedded && null != T.powerSaveBlocker) T.powerSaveBlocker.cleanupDisplaySleep();
         },
         relaunch() {
-            if (!!E.isPlatformEmbedded) null != T.remoteApp.relaunch && T.remoteApp.relaunch();
+            if (!!v.isPlatformEmbedded) null != T.remoteApp.relaunch && T.remoteApp.relaunch();
         },
         makeChunkedRequest(e, t, n) {
-            let r = ''.concat((0, h.K0)()).concat(e);
-            if (!E.isPlatformEmbedded) return Promise.reject(Error('Not embedded!'));
+            let r = ''.concat((0, p.K0)()).concat(e);
+            if (!v.isPlatformEmbedded) return Promise.reject(Error('Not embedded!'));
             if (null == T.http) return Promise.reject(Error('HTTP module not available'));
             let {
                     method: i,
@@ -474,7 +483,7 @@ function x(e) {
             });
         },
         submitLiveCrashReport(e) {
-            if (!(0, E.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
+            if (!(0, v.isWindows)() || null == this.getDiscordUtils().submitLiveCrashReport) return Promise.resolve();
             let t = this.getCrashReporterMetadata(),
                 n = T.app.getReleaseChannel(),
                 r = null == t ? void 0 : t.sentry;
@@ -518,11 +527,11 @@ function x(e) {
             var r;
             let { getWindowFullscreenTypeByPid: i } = this.getDiscordUtils(),
                 a = 0 !== e && null != i && null != t ? i(e, t) : null;
-            return -1 === a && (a = null), null !== (r = null != a ? a : n) && void 0 !== r ? r : m.Jx.UNKNOWN;
+            return -1 === a && (a = null), null !== (r = null != a ? a : n) && void 0 !== r ? r : g.Jx.UNKNOWN;
         },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
-            let a = [...(null != y ? y : [0, 0, 0])];
+            let a = [...(null != A ? A : [0, 0, 0])];
             a.push(null !== (r = null === (n = this.moduleVersions) || void 0 === n ? void 0 : n[e]) && void 0 !== r ? r : 0);
             let s = null !== (i = t[this.releaseChannel]) && void 0 !== i ? i : t.stable;
             for (let [e, t] of a.entries()) {
@@ -531,5 +540,5 @@ function x(e) {
             }
             return !0;
         },
-        fetchRiotGamesLiveClientData: (e, t) => (E.isPlatformEmbedded ? (null == T.riotGames ? Promise.reject(Error('Riot Games module not available')) : T.riotGames.fetchLiveClientData(e, t)) : Promise.reject(Error('Not embedded!')))
+        fetchRiotGamesLiveClientData: (e, t) => (v.isPlatformEmbedded ? (null == T.riotGames ? Promise.reject(Error('Riot Games module not available')) : T.riotGames.fetchLiveClientData(e, t)) : Promise.reject(Error('Not embedded!')))
     });

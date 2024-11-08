@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return H;
     }
 }),
     n(315314),
@@ -30,8 +30,8 @@ var r = n(512722),
     v = n(857192),
     I = n(626135),
     S = n(12647),
-    T = n(70956),
-    b = n(358085),
+    b = n(70956),
+    T = n(358085),
     y = n(960048),
     A = n(138859),
     N = n(14639),
@@ -59,14 +59,14 @@ function P(e, t, n) {
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
 function G() {}
-let B = 30 * T.Z.Millis.SECOND,
-    Z = 3 * T.Z.Millis.MINUTE,
-    F = 1 * T.Z.Millis.MINUTE;
+let B = 30 * b.Z.Millis.SECOND,
+    Z = 3 * b.Z.Millis.MINUTE,
+    F = 1 * b.Z.Millis.MINUTE;
 function V(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
-let H = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class j extends L.Z {
+let j = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class H extends L.Z {
     get connectionState() {
         return this.connectionState_;
     }
@@ -110,8 +110,9 @@ class j extends L.Z {
             null != e && i.searchParams.append('compress', e),
             !(function (e) {
                 let t,
-                    { gatewayURL: n, newCallback: r, onOpen: i, onMessage: a, onError: s, onClose: o } = e,
-                    l = window._ws,
+                    { gatewayURL: n, newCallback: r, onOpen: i, onMessage: a, onError: s, onClose: o } = e;
+                k.enableNativeLogger(!0);
+                let l = window._ws,
                     u = !1,
                     c = !1,
                     d = null,
@@ -252,7 +253,7 @@ class j extends L.Z {
         (this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0);
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : H;
+        return null != this.resumeUrl ? this.resumeUrl : j;
     }
     _handleHeartbeatReceive() {
         this._sendHeartbeat(), null != this.heartbeater && null != this.heartbeatInterval && (clearInterval(this.heartbeater), (this.heartbeater = setInterval(this._doHeartbeatInterval.bind(this), this.heartbeatInterval)));
@@ -290,7 +291,7 @@ class j extends L.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, b.isIOS)() &&
+        (0, T.isIOS)() &&
             null != this.token &&
             1001 === e &&
             'Stream end encountered' === t &&

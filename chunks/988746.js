@@ -19,7 +19,7 @@ function s(e, t, n) {
         e
     );
 }
-let o = new r.Y('ConnectionEventFramerateReducer');
+let o = new r.Yd('ConnectionEventFramerateReducer');
 class l {
     initialize() {
         this.userSpeakingChange(!0);
@@ -58,6 +58,7 @@ class l {
             (this.handleSelfMute = (e) => {
                 if (!this.connection.hasDesktopSource()) this.destroyFramerateScaleFactorTimers(), (this.sinkWants.isMuted = e), this.updateRemoteWantsFramerate();
             }),
+            o.enableNativeLogger(!0),
             e.on(i.Sh.Speaking, this.handleSpeaking),
             e.on(i.Sh.Mute, this.handleSelfMute),
             this.initialize();

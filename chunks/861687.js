@@ -26,8 +26,8 @@ var r,
     v = n(304680),
     I = n(547727),
     S = n(710845),
-    T = n(811660),
-    b = n(42352),
+    b = n(811660),
+    T = n(42352),
     y = n(148959),
     A = n(926951),
     N = n(868616),
@@ -48,8 +48,8 @@ var L = n(615830),
     Z = n(630388),
     F = n(931619),
     V = n(358085),
-    H = n(579806),
-    j = n(859401),
+    j = n(579806),
+    H = n(859401),
     Y = n(437263),
     W = n(423343),
     K = n(685756),
@@ -352,7 +352,7 @@ class es extends _.Z {
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats('sender', this.userId),
                                 ...this._soundshareStats.getStats(),
-                                device_performance_class: (0, T.R)()
+                                device_performance_class: (0, b.R)()
                             });
                     }),
                 e.getInboundParticipants().forEach((t) => {
@@ -420,7 +420,7 @@ class es extends _.Z {
                 input_device_count: Object.keys(M.Z.getInputDevices()).length,
                 output_device: this.getOutputDeviceName(),
                 output_device_count: Object.keys(M.Z.getOutputDevices()).length,
-                device_performance_class: (0, T.R)(),
+                device_performance_class: (0, b.R)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),
@@ -631,7 +631,7 @@ class es extends _.Z {
             d.on(h.Sh.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
             d.on(h.Sh.SoundshareTrace, this._handleSoundshareTrace.bind(this)),
             d.on(h.Sh.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
-            d.on(h.Sh.Stats, j.Z.create()),
+            d.on(h.Sh.Stats, H.Z.create()),
             d.on(h.Sh.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
             d.on(h.Sh.NoiseCancellationError, (e) => {
                 this._noiseCancellationError = e;
@@ -840,7 +840,7 @@ class es extends _.Z {
     }
     async _handleMediaSessionId(e) {
         (this._mediaSessionId = e), this.logger.info('Setting media-session-id: '.concat(e, ' for rtc-connection-id: ').concat(this.getRTCConnectionId()));
-        let t = await (0, b.Z)();
+        let t = await (0, T.Z)();
         B.default.track(et.rMx.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),
             media_session_id: this.getMediaSessionId(),
@@ -1177,6 +1177,7 @@ class es extends _.Z {
             }),
             (this.context = i),
             (this.logger = new S.Z('RTCConnection('.concat(null !== (l = null != a ? a : n) && void 0 !== l ? l : r, ', ').concat(this.context, ')'))),
+            this.logger.enableNativeLogger(!0),
             (this.userId = e),
             (this.sessionId = t),
             (this.guildId = n),
@@ -1259,7 +1260,7 @@ class es extends _.Z {
             (this._soundshareStats = new q.Z()),
             F.Z.addOnlineCallback(this._handleNetworkOnline),
             F.Z.addOfflineCallback(this._handleNetworkOffline),
-            (0, V.isDesktop)() && (this.powerMonitorListener = H.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
+            (0, V.isDesktop)() && (this.powerMonitorListener = j.Z.remotePowerMonitor.on('resume', this._handlePowerResume)),
             (this._supportedBandwidthEstimationExperiments = []),
             (this._bandwidthEstimationExperiment = null),
             M.Z.getMediaEngine().getSupportedBandwidthEstimationExperiments((e) => {

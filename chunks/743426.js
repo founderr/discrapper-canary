@@ -577,7 +577,7 @@ class v extends s.Z {
             m(this, 'deviceChangeGeneration', 0),
             m(this, 'consecutiveWatchdogFailures', 0),
             m(this, 'codecSurvey', null),
-            m(this, 'logger', new a.Y('MediaEngineNative')),
+            m(this, 'logger', new a.Yd('MediaEngineNative')),
             m(this, 'handleDeviceChange', function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -626,8 +626,7 @@ class v extends s.Z {
                 -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
         let i = (0, d.zS)();
-        if (
-            (i.setDeviceChangeCallback(this.handleDeviceChange),
+        i.setDeviceChangeCallback(this.handleDeviceChange),
             i.setVolumeChangeCallback(this.handleVolumeChange),
             i.setOnVoiceCallback(this.handleVoiceActivity),
             null === (t = i.setVideoInputInitializationCallback) || void 0 === t || t.call(i, this.handleVideoInputInitialization),
@@ -645,24 +644,7 @@ class v extends s.Z {
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? p.iA.LEGACY : p.iA.STANDARD),
             null != i.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            this.getDebugLogging() && !v.installedLogHooks)
-        )
-            for (let e of ((v.installedLogHooks = !0), ['trace', 'debug', 'info', 'warn', 'error', 'log'])) {
-                let t = console,
-                    n = t[e];
-                null != n &&
-                    (t[e] = function () {
-                        n.apply(this, arguments);
-                        try {
-                            let t = Array.from(arguments)
-                                .map((e) => (null != e ? e.toString() : e))
-                                .filter((e) => 'string' != typeof e || '\nfont-weight: bold;\ncolor: purple;\n' !== e)
-                                .map((e) => (e.startsWith('%c') ? e.slice(2) : e));
-                            (0, d.zS)().consoleLog(e, t.join(' '));
-                        } catch (e) {}
-                    });
-            }
-        null != i.setActiveSinksChangeCallback && i.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
+            null != i.setActiveSinksChangeCallback && i.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            (0, l.Z)(this);
     }
 }
-m(v, 'installedLogHooks', !1);
