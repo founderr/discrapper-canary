@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return w;
     }
 }),
     n(47120);
@@ -20,8 +20,8 @@ var r = n(319147),
     p = n(56790),
     _ = n(90718),
     h = n(897482),
-    x = n(4515),
-    E = n(474472),
+    E = n(4515),
+    x = n(474472),
     b = n(156129),
     C = n(799303),
     v = n(245630),
@@ -36,7 +36,7 @@ var r = n(319147),
     O = n(93125),
     Z = n(278583),
     M = n(814437);
-let w = new Map([
+let B = new Map([
     ['BG', s],
     ['CZ', c],
     ['HU', h],
@@ -44,8 +44,8 @@ let w = new Map([
     ['SE', O],
     ['CY', o],
     ['EE', u],
-    ['IS', E],
-    ['IE', x],
+    ['IS', x],
+    ['IE', E],
     ['LV', N],
     ['LI', C],
     ['LT', v],
@@ -68,10 +68,10 @@ let w = new Map([
     ['PL', A],
     ['HR', _]
 ]);
-function B(e) {
+function w(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !w.has(n)) return null;
-    let r = w.get(n);
+    if (null == n || !B.has(n)) return null;
+    let r = B.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

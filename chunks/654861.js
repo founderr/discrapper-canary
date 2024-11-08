@@ -361,11 +361,11 @@ var n = (function (e) {
         for (var r = e.length - 1; r >= 0; r--) if (e[r] !== t[r]) return e[r] > t[r] ? 1 : -1;
         return 0;
     }
-    function U(e) {
+    function P(e) {
         var t = e.abs();
         return !t.isUnit() && (!!(t.equals(2) || t.equals(3) || t.equals(5)) || (!(t.isEven() || t.isDivisibleBy(3) || t.isDivisibleBy(5)) && (!!t.lesser(49) || void 0)));
     }
-    function P(e, t) {
+    function U(e, t) {
         for (var r, a, _, o = e.prev(), i = o, E = 0; i.isEven(); ) (i = i.divide(2)), E++;
         e: for (a = 0; a < t.length; a++) {
             if (!e.lesser(t[a])) {
@@ -574,20 +574,20 @@ var n = (function (e) {
         }),
         (E.prototype.isDivisibleBy = i.prototype.isDivisibleBy = o.prototype.isDivisibleBy),
         (o.prototype.isPrime = function (e) {
-            var t = U(this);
+            var t = P(this);
             if (void 0 !== t) return t;
             var r = this.abs(),
                 a = r.bitLength();
-            if (a <= 64) return P(r, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
+            if (a <= 64) return U(r, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37]);
             for (var _ = Math.log(2) * a.toJSNumber(), o = Math.ceil(!0 === e ? 2 * Math.pow(_, 2) : _), i = [], E = 0; E < o; E++) i.push(n(E + 2));
-            return P(r, i);
+            return U(r, i);
         }),
         (E.prototype.isPrime = i.prototype.isPrime = o.prototype.isPrime),
         (o.prototype.isProbablePrime = function (t, r) {
-            var a = U(this);
+            var a = P(this);
             if (e !== a) return a;
             for (var _ = this.abs(), o = e === t ? 5 : t, i = [], E = 0; E < o; E++) i.push(n.randBetween(2, _.minus(2), r));
-            return P(_, i);
+            return U(_, i);
         }),
         (E.prototype.isProbablePrime = i.prototype.isProbablePrime = o.prototype.isProbablePrime),
         (o.prototype.modInv = function (e) {

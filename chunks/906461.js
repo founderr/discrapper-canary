@@ -17,9 +17,9 @@ t.Z = function (e) {
     let { isFullScreen: t } = e,
         r = (0, u.N)(),
         h = (null == r ? void 0 : r.trial_id) === m.jz,
-        { enabled: x } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
-    if (!h || !x || null == r.expires_at) return null;
-    let E = new Date(r.expires_at);
+        { enabled: E } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
+    if (!h || !E || null == r.expires_at) return null;
+    let x = new Date(r.expires_at);
     return (0, i.jsx)(o.O, {
         newLocations: [l.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -45,7 +45,7 @@ t.Z = function (e) {
                                 className: _.countdown,
                                 variant: 'text-sm/bold',
                                 color: 'always-white',
-                                children: (0, i.jsx)(g.Z, { endDate: E })
+                                children: (0, i.jsx)(g.Z, { endDate: x })
                             }),
                             (0, i.jsxs)(s.Text, {
                                 variant: 'text-sm/medium',

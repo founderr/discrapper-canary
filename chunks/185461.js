@@ -57,8 +57,8 @@ let c = _.n,
                 a = r.on('afterSendEvent', (r, o) => (r.event_id !== _ ? void 0 : (clearTimeout(n), a(), o && 'number' == typeof o.statusCode && o.statusCode >= 200 && o.statusCode < 300 && e(_), o && 'number' == typeof o.statusCode && 0 === o.statusCode) ? t('Unable to send Feedback. This is because of network issues, or because you are using an ad-blocker.') : t('Unable to send Feedback. This could be because of network issues, or because you are using an ad-blocker')));
         });
     },
-    U = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function P(e, t) {
+    P = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
+function U(e, t) {
     return {
         ...e,
         ...t,
@@ -286,9 +286,9 @@ ${
             eN = async (e) => {
                 let n = e.enableScreenshot && !(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(l.userAgent) || (/Macintosh/i.test(l.userAgent) && l.maxTouchPoints && l.maxTouchPoints > 1)) && !!isSecureContext && !0,
                     [a, _] = await Promise.all([eA('FeedbackModal', t, 'feedbackModalIntegration'), n ? eA('FeedbackScreenshot', r, 'feedbackScreenshotIntegration') : void 0]);
-                if (!a) throw (U && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
+                if (!a) throw (P && i.kg.error('[Feedback] Missing feedback modal integration. Try using `feedbackSyncIntegration` in your `Sentry.init`.'), Error('[Feedback] Missing feedback modal integration!'));
                 return (
-                    n && !_ && U && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
+                    n && !_ && P && i.kg.error('[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.'),
                     a.createDialog({
                         options: e,
                         screenshotIntegration: n ? _ : void 0,
@@ -298,9 +298,9 @@ ${
                 );
             },
             eT = (e, t = {}) => {
-                let r = P(el, t),
+                let r = U(el, t),
                     n = 'string' == typeof e ? s.querySelector(e) : 'function' == typeof e.addEventListener ? e : null;
-                if (!n) throw (U && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
+                if (!n) throw (P && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let a = null,
                     _ = async () => {
                         !a &&
@@ -323,7 +323,7 @@ ${
                 return eI.push(o), o;
             },
             ed = (e = {}) => {
-                let t = P(el, e),
+                let t = U(el, e),
                     r = eR(t),
                     n = (function ({ triggerLabel: e, triggerAriaLabel: t, shadow: r }) {
                         let n = s.createElement('button');
@@ -464,10 +464,10 @@ ${
             },
             attachTo: eT,
             createWidget(e = {}) {
-                let t = ed(P(el, e));
+                let t = ed(U(el, e));
                 return t.appendToDom(), t;
             },
-            createForm: async (e = {}) => eN(P(el, e)),
+            createForm: async (e = {}) => eN(U(el, e)),
             remove() {
                 eu && (eu.parentElement && eu.parentElement.remove(), (eu = null)), eI.forEach((e) => e()), (eI = []);
             }
@@ -880,10 +880,10 @@ function eg(e, t) {
         });
     return e >= r.__.length && r.__.push({ __V: ef }), r.__[e];
 }
-function eU(e) {
-    return (eT = 1), eP(eW, e);
+function eP(e) {
+    return (eT = 1), eU(eW, e);
 }
-function eP(e, t, r) {
+function eU(e, t, r) {
     var n = eg(eI++, 2);
     if (
         ((n.t = e),
@@ -1074,7 +1074,7 @@ let eH = {
         },
         useErrorBoundary: function (e) {
             var t = eg(eI++, 10),
-                r = eU();
+                r = eP();
             return (
                 (t.__ = e),
                 eR.componentDidCatch ||
@@ -1119,7 +1119,7 @@ let eH = {
         },
         useLayoutEffect: eM,
         useMemo: eG,
-        useReducer: eP,
+        useReducer: eU,
         useRef: function (e) {
             return (
                 (eT = 5),
@@ -1128,7 +1128,7 @@ let eH = {
                 }, [])
             );
         },
-        useState: eU
+        useState: eP
     },
     eY = '/home/runner/work/sentry-javascript/sentry-javascript/packages/feedback/src/modal/components/DialogHeader.tsx';
 function ex({ options: e }) {
@@ -1186,12 +1186,12 @@ function eV(e, t) {
 }
 function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: _, onSubmitError: o, showEmail: E, showName: c, screenshotInput: s }) {
     let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: A, emailPlaceholder: N, isEmailRequired: T, isNameRequired: d, messageLabel: f, messagePlaceholder: L, nameLabel: O, namePlaceholder: p, submitButtonLabel: h, isRequiredLabel: S } = e,
-        [D, C] = eU(null),
-        [g, P] = eU(!1),
+        [D, C] = eP(null),
+        [g, U] = eP(!1),
         M = s && s.input,
-        [G, m] = eU(null),
+        [G, m] = eP(null),
         y = em((e) => {
-            m(e), P(!1);
+            m(e), U(!1);
         }, []),
         b = em(
             (e) => {
@@ -1239,7 +1239,7 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             ),
                                 _(n);
                         } catch (e) {
-                            U && i.kg.error(e), C(e), o(e);
+                            P && i.kg.error(e), C(e), o(e);
                         }
                     } catch (e) {}
                 },
@@ -1446,7 +1446,7 @@ function ek({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      m(null), P((e) => !e);
+                                      m(null), U((e) => !e);
                                   },
                                   __self: this,
                                   __source: {
@@ -1575,7 +1575,7 @@ function ej({ open: e, onFormSubmitted: t, ...r }) {
             }),
             []
         ),
-        [_, o] = eU(null),
+        [_, o] = eP(null),
         i = em(() => {
             _ && (clearTimeout(_), o(null)), t();
         }, [_]),

@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     FM: function () {
-        return B;
+        return w;
     },
     IB: function () {
         return Z;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     JR: function () {
-        return w;
+        return B;
     },
     Vp: function () {
         return j;
@@ -43,8 +43,8 @@ var i = n(192379),
     p = n(580130),
     _ = n(626135),
     h = n(823379),
-    x = n(111361),
-    E = n(595878),
+    E = n(111361),
+    x = n(595878),
     b = n(944880),
     C = n(513785),
     v = n(106255),
@@ -133,7 +133,7 @@ function j() {
         ),
         t = (0, s.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
-            return null != e && (0, x.M5)(e, T.p9.TIER_2);
+            return null != e && (0, E.M5)(e, T.p9.TIER_2);
         });
     if (null != (0, v.kG)(e) || !!t) return (0, v.MR)([N.Ft.FREE_GUILD_BOOST_1_MONTH, N.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
 }
@@ -151,7 +151,7 @@ let P = (e) => {
     O = () => {
         let e = S(),
             [t, n] = i.useState(P(e)),
-            r = (0, E.cG)({ location: 'Home' });
+            r = (0, x.cG)({ location: 'Home' });
         i.useEffect(() => {
             if (!1 !== r) n(P(e));
         }, [e, r]);
@@ -161,7 +161,7 @@ let P = (e) => {
     Z = () => {
         var e;
         let t = null === (e = S()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            n = (0, E.cG)({ location: 'Home' }) && null != t && t === N.EB.REDEEMABLE,
+            n = (0, x.cG)({ location: 'Home' }) && null != t && t === N.EB.REDEEMABLE,
             [i] = (0, g.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && i === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
@@ -180,29 +180,29 @@ let P = (e) => {
                     (_.default.track(I.rMx.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED, {
                         user_tenure_reward_id: null == e ? void 0 : e.tenureRewardStatusId,
                         tenure_reward_id: e.tenureRewardSkuId,
-                        reward_type: N.nW.SERVER_BOOST,
+                        reward_type: null == e ? void 0 : e.tenureRewardType,
                         redeemable_at: null == e ? void 0 : e.redeemableAt
                     }),
                     (r.current = !0)));
         }, [e, n]);
     };
-function w() {
+function B() {
     let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, s.cj)([p.Z], () => ({
             hasFetchedPremiumApplicationEntitlements: p.Z.isFetchedForApplication(T.CL),
             isFetchingPremiumApplicationEntitlements: p.Z.isFetchingForApplication(T.CL)
         })),
         n = (0, s.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
-            return null != e && (0, x.M5)(e, T.p9.TIER_2);
+            return null != e && (0, E.M5)(e, T.p9.TIER_2);
         }),
         r = i.useRef(!1);
     i.useEffect(() => {
         !1 === e && !1 === t && !0 === n && !1 === r.current && (o.yD(T.CL), (r.current = !0));
     }, [e, t, n]);
 }
-function B() {
+function w() {
     var e;
-    w();
+    B();
     let t = S(),
         n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
     i.useEffect(() => {

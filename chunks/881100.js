@@ -18,8 +18,8 @@ var i = n(399606),
     p = n(101732),
     _ = n(450598),
     h = n(633030),
-    x = n(97942),
-    E = n(269987),
+    E = n(97942),
+    x = n(269987),
     b = n(548629),
     C = n(507084),
     v = n(680313),
@@ -34,11 +34,11 @@ var i = n(399606),
     O = n(193943),
     Z = n(334347),
     M = n(943734),
-    w = n(603076),
-    B = n(472656),
+    B = n(603076),
+    w = n(472656),
     y = n(912429),
-    k = n(772969),
-    L = n(926262);
+    L = n(772969),
+    k = n(926262);
 let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
     D = (e) => {
         let { styles: t } = e,
@@ -91,19 +91,19 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     };
                     return r ? m.intl.format(m.t.aj1pfX, { onCheckItOutClick: t }) : m.intl.format(m.t.d2oYS0, { onTryItOutClick: t });
                 },
-                imageSource: x,
+                imageSource: E,
                 imageClassName: t.perGuildProfilesImage
             },
             longerMessages: {
                 title: m.intl.string(m.t.BUSciY),
                 description: m.intl.string(m.t.vN6Xpa),
-                imageSource: U(n, M, w),
+                imageSource: U(n, M, B),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {
                 title: m.intl.string(m.t.Bv8Pfn),
                 description: m.intl.string(m.t.JMfaTU),
-                imageSource: U(n, h, B),
+                imageSource: U(n, h, w),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
@@ -115,7 +115,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             remix: {
                 title: m.intl.string(m.t.ZvulDg),
                 description: m.intl.string(m.t['8GwCPT']),
-                imageSource: U(n, E, b),
+                imageSource: U(n, x, b),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
@@ -146,7 +146,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             streaming: {
                 title: m.intl.string(m.t.RSXQYG),
                 description: m.intl.string(m.t.ymCPxs),
-                imageSource: k,
+                imageSource: L,
                 imageClassName: t.streamingImage
             },
             superReactions: {
@@ -158,7 +158,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             upload: {
                 title: m.intl.formatToPlainString(m.t.jqhAdH, { premiumMaxSize: D }),
                 description: m.intl.formatToPlainString(m.t['HI+cfn'], { premiumMaxSize: D }),
-                imageSource: L,
+                imageSource: k,
                 imageClassName: t.uploadImage
             },
             videoBackground: {

@@ -37,10 +37,10 @@ function g() {
         t = (0, l.cG)({ location: a.MQ.HOME });
     if (null != e && e.tenureRewardType === c.nW.AVATAR_DECO && !!t)
         return {
-            title: 'Avatar Deco Reward Title',
-            subtitle: 'Avatar Deco Reward Subtitle',
-            description: 'Avatar Deco Reward Description',
-            ctaDescription: 'Apply',
+            title: (0, s.Dp)(e.nitroTenureStatus),
+            subtitle: (0, s.oo)(e.nitroTenureStatus),
+            description: (0, s.Gw)(e.nitroTenureStatus),
+            ctaDescription: (0, s.iG)(e.nitroTenureStatus, e.redeemableInDays),
             pillText: e.nitroTenureStatus === c.EB.PENDING ? d.intl.string(d.t.jyYgZ2).toLocaleUpperCase() : void 0,
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };

@@ -62,8 +62,8 @@ function h(e, t) {
                     for (let r of e) {
                         var t, n;
                         if (r.target !== g.current) continue;
-                        let e = r.target.clientWidth,
-                            i = r.target.clientHeight;
+                        let e = window.devicePixelRatio * r.target.clientWidth,
+                            i = window.devicePixelRatio * r.target.clientHeight;
                         null === (t = (n = v.current).onContainerResized) || void 0 === t || t.call(n, v.current.streamId, e, i);
                     }
                 });

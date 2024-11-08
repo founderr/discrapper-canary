@@ -14,8 +14,8 @@ var r = n(120356),
     p = n(105759),
     _ = n(346497),
     h = n(422034),
-    x = n(206127),
-    E = n(710220),
+    E = n(206127),
+    x = n(710220),
     b = n(318747),
     C = n(409100),
     v = n(474936),
@@ -62,7 +62,7 @@ let I = (e) => {
     };
 function R(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0 } = e,
-        r = (0, x.$)();
+        r = (0, E.$)();
     return (0, i.jsx)(l.Text, {
         variant: t,
         color: 'always-white',
@@ -71,22 +71,22 @@ function R(e) {
     });
 }
 t.Z = (e) => {
-    let { isFullscreen: t, className: n, buttonClassName: r, subscriptionTier: d, hideSparkles: x, hideSubscribeAndGiftButton: C, entrypoint: A } = e,
+    let { isFullscreen: t, className: n, buttonClassName: r, subscriptionTier: d, hideSparkles: E, hideSubscribeAndGiftButton: C, entrypoint: A } = e,
         { analyticsLocations: j } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, m._O)(),
         O = (0, g.Nx)(),
         Z = (0, _.Vi)(),
         M = (0, s.e7)([u.Z], () => u.Z.affinities),
-        w = (0, p.Z)(),
-        { enabled: B } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        y = A === v.EZ.ApplicationStoreHome && null != w && B,
-        k = M.length > 0;
+        B = (0, p.Z)(),
+        { enabled: w } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
+        y = A === v.EZ.ApplicationStoreHome && null != B && w,
+        L = M.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: j,
         children: (0, i.jsxs)('div', {
             className: a()(N.container, n, {
                 [N.settingsContainer]: !t,
-                [N.affinityHeight]: !t && k
+                [N.affinityHeight]: !t && L
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
@@ -99,8 +99,8 @@ t.Z = (e) => {
                             children: T.intl.string(T.t.YCZldH)
                         }),
                         y
-                            ? (0, i.jsx)(E.Z, { referrer: w })
-                            : k
+                            ? (0, i.jsx)(x.Z, { referrer: B })
+                            : L
                               ? (0, i.jsx)('div', {
                                     className: a()(N.affinityDescription),
                                     children: (0, i.jsx)(h.Z, {
@@ -125,7 +125,7 @@ t.Z = (e) => {
                                     inTrial: P,
                                     buttonClassName: r
                                 }),
-                        k &&
+                        L &&
                             !y &&
                             (0, i.jsx)(R, {
                                 variant: 'text-md/normal',
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(O || x) && (0, i.jsx)(S, { isFullscreen: t })
+                !(O || E) && (0, i.jsx)(S, { isFullscreen: t })
             ]
         })
     });

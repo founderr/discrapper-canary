@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(78839),
     _ = n(626135),
     h = n(74538),
-    x = n(140465),
-    E = n(184508),
+    E = n(140465),
+    x = n(184508),
     b = n(67645),
     C = n(599659),
     v = n(257944),
@@ -30,11 +30,11 @@ var i = n(200651),
     O = n(218390),
     Z = n(823188),
     M = n(241158),
-    w = n(135785),
-    B = n(498765),
+    B = n(135785),
+    w = n(498765),
     y = n(635921),
-    k = n(177839),
-    L = n(794484),
+    L = n(177839),
+    k = n(794484),
     U = n(392521),
     D = n(349803),
     G = n(179984),
@@ -51,36 +51,36 @@ var i = n(200651),
     X = n(786362);
 let $ = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
-        return (t && null == n) || (n === z.p9.TIER_2 && t) ? null : (0, i.jsx)(k.Z, { className: t ? Q.perkCardsContainerSpacingFullscreen : Q.perkCardsContainerSpacingSettings });
+        return (t && null == n) || (n === z.p9.TIER_2 && t) ? null : (0, i.jsx)(L.Z, { className: t ? Q.perkCardsContainerSpacingFullscreen : Q.perkCardsContainerSpacingSettings });
     },
     ee = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
-        return t || n ? (0, i.jsx)(B.Z, { lifted: !t && n }) : null;
+        return t || n ? (0, i.jsx)(w.Z, { lifted: !t && n }) : null;
     },
     et = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: a, whatsNewV2Enabled: l, BestOfNitroV2Enabled: c, setIsWhatsNewBoxVisible: d, setIsBestOfNitroVisible: u, isWhatsNewBoxVisible: g, isBestOfNitroVisible: m, hasRenderedOnce: f } = e,
             p = r.useRef(0),
             h = r.useRef(0),
-            x = r.useRef(0),
-            E = r.useRef(0);
+            E = r.useRef(0),
+            x = r.useRef(0);
         return (r.useEffect(() => {
             g ? (p.current = Date.now()) : 0 !== p.current && ((h.current = h.current + Date.now() - p.current), (p.current = 0));
         }, [g]),
         r.useEffect(() => {
-            m ? (x.current = Date.now()) : 0 !== x.current && ((E.current = E.current + Date.now() - x.current), (x.current = 0));
+            m ? (E.current = Date.now()) : 0 !== E.current && ((x.current = x.current + Date.now() - E.current), (E.current = 0));
         }, [m]),
         r.useEffect(
             () => () => {
                 0 !== p.current && (h.current = h.current + (Date.now() - p.current)),
-                    0 !== x.current && (E.current = E.current + (Date.now() - x.current)),
+                    0 !== E.current && (x.current = x.current + (Date.now() - E.current)),
                     0 !== h.current &&
                         _.default.track(Y.rMx.PREMIUM_WHATS_NEW_VIEW_TIME, {
                             view_time: h.current,
                             is_v2: l
                         }),
-                    0 !== E.current &&
+                    0 !== x.current &&
                         _.default.track(Y.rMx.PREMIUM_BEST_OF_VIEW_TIME, {
-                            view_time: E.current,
+                            view_time: x.current,
                             is_v2: l
                         });
             },
@@ -94,7 +94,7 @@ let $ = (e) => {
                   }),
                   children: [
                       !l &&
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(k.Z, {
                               variant: V.R0.WHATS_NEW,
                               isFullScreen: t
                           }),
@@ -116,7 +116,7 @@ let $ = (e) => {
                               })
                           }),
                       !c &&
-                          (0, i.jsx)(L.Z, {
+                          (0, i.jsx)(k.Z, {
                               isFullScreen: t,
                               showAllPerksButton: t
                                   ? (0, i.jsx)(W.Z, {
@@ -146,9 +146,9 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: a } = e;
     (0, f.z)(m.X);
     let M = (0, v.z7)('PremiumMarketingHome'),
-        B = (0, b.g)('PremiumMarketingHome'),
-        k = (0, E.tY)('PremiumMarketingHome'),
-        L = r.useRef(null),
+        w = (0, b.g)('PremiumMarketingHome'),
+        L = (0, x.tY)('PremiumMarketingHome'),
+        k = r.useRef(null),
         [U, W] = r.useState(!1),
         [en, ei] = r.useState(!1),
         [er, ea] = r.useState(!1),
@@ -161,11 +161,11 @@ t.Z = (e) => {
         ep = null !== ef && ef !== z.Si.TIER_2 ? z.Si.TIER_2 : null,
         e_ = (0, T.n)(),
         eh = null != e_,
-        [ex, eE] = r.useState(!1),
+        [eE, ex] = r.useState(!1),
         eb = (0, N.Ng)(),
         eC = (0, I.N)(),
         ev = null == eC ? void 0 : null === (t = eC.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        eT = (0, x.Nx)(),
+        eT = (0, E.Nx)(),
         eN = (0, P.Vi)(),
         { analyticsLocations: eI } = (0, g.ZP)(u.Z.PREMIUM_MARKETING),
         eS = 'PremiumMarketingHome';
@@ -191,8 +191,8 @@ t.Z = (e) => {
                 threshold: 0.1,
                 active: !0,
                 children: (0, i.jsx)(Z.ZP, {
-                    variant: k ? (n ? Z.NN.TAGLINE_XP_COPY_HOME : Z.NN.TAGLINE_XP_COPY_SETTINGS) : Z.NN.DEFAULT,
-                    showWumpus: !k,
+                    variant: L ? (n ? Z.NN.TAGLINE_XP_COPY_HOME : Z.NN.TAGLINE_XP_COPY_SETTINGS) : Z.NN.DEFAULT,
+                    showWumpus: !L,
                     tier0CTAButton:
                         ev === z.Si.TIER_2 || eN || null != eb
                             ? (0, i.jsx)(H.Z, {
@@ -238,7 +238,7 @@ t.Z = (e) => {
             className: s()(Q.container, { [Q.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
-                (0, i.jsx)(w.Z, {
+                (0, i.jsx)(B.Z, {
                     premiumSubscription: eg,
                     className: s()(n ? Q.fullscreenExistingSubscriberSpacing : Q.existingSubscriberSpacing, { [Q.zIndex1]: eT }),
                     isFullscreen: n
@@ -279,16 +279,16 @@ t.Z = (e) => {
                 (0, i.jsx)(et, {
                     isFullscreen: n,
                     inOfferExperience: eT,
-                    setIsAllPerksVisible: eE,
+                    setIsAllPerksVisible: ex,
                     whatsNewV2Enabled: M,
-                    BestOfNitroV2Enabled: B,
+                    BestOfNitroV2Enabled: w,
                     setIsWhatsNewBoxVisible: ea,
                     setIsBestOfNitroVisible: el,
                     isWhatsNewBoxVisible: er,
                     isBestOfNitroVisible: es,
                     hasRenderedOnce: ed
                 }),
-                !M && !B && (0, i.jsx)($, { isFullscreen: n }),
+                !M && !w && (0, i.jsx)($, { isFullscreen: n }),
                 (0, i.jsxs)('div', {
                     className: Q.planComparisonTableContainer,
                     children: [
@@ -344,13 +344,13 @@ t.Z = (e) => {
               children: [
                   (0, i.jsx)(c.AdvancedScrollerAuto, {
                       className: Q.scroller,
-                      ref: L,
+                      ref: k,
                       children: eP
                   }),
                   (0, i.jsx)(F.Z, {
                       previousComponent: V.MQ.MARKETING,
-                      isAllPerksVisible: ex,
-                      setIsAllPerksVisible: eE,
+                      isAllPerksVisible: eE,
+                      setIsAllPerksVisible: ex,
                       isFullScreen: n
                   })
               ]

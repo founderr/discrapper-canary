@@ -38,11 +38,11 @@ function A(e, t = {}) {
             let t = (0, I.qp)(e);
             return (0, c.D)((0, _.nZ)(), t), o.X && a.kg.log('[Tracing] Started span is an idle span'), t;
         })(e);
-    function U() {
+    function P() {
         r && (clearTimeout(r), (r = void 0));
     }
-    function P(e) {
-        U(),
+    function U(e) {
+        P(),
             (r = setTimeout(() => {
                 !N && 0 === A.size && d && ((T = 'idleTimeout'), g.end(e));
             }, L));
@@ -100,7 +100,7 @@ function A(e, t = {}) {
                 if (!N && e !== g && !(0, s.XU)(e).timestamp) {
                     if ((0, s.Dp)(g).includes(e)) {
                         var t;
-                        (t = e.spanContext().spanId), U(), A.set(t, !0), M((0, n.ph)() + p / 1000);
+                        (t = e.spanContext().spanId), P(), A.set(t, !0), M((0, n.ph)() + p / 1000);
                     }
                 }
             })
@@ -108,15 +108,15 @@ function A(e, t = {}) {
         f.push(
             S.on('spanEnd', (e) => {
                 var t;
-                if (!N) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && P((0, n.ph)() + L / 1000);
+                if (!N) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && U((0, n.ph)() + L / 1000);
             })
         ),
         f.push(
             S.on('idleSpanEnableAutoFinish', (e) => {
-                e === g && ((d = !0), P(), A.size && M());
+                e === g && ((d = !0), U(), A.size && M());
             })
         ),
-        !t.disableAutoFinish && P(),
+        !t.disableAutoFinish && U(),
         setTimeout(() => {
             !N &&
                 (g.setStatus({

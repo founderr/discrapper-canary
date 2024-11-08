@@ -44,8 +44,8 @@ var i = n(120356),
     Z = n(290274),
     F = n(553375),
     V = n(228168),
-    H = n(981631),
-    j = n(701488),
+    j = n(981631),
+    H = n(701488),
     Y = n(388032),
     W = n(617114),
     K = n(69035);
@@ -116,7 +116,7 @@ function z(e) {
         },
         ep = () => {
             var e;
-            return z.type === H.IIU.HANG_STATUS
+            return z.type === j.IIU.HANG_STATUS
                 ? (0, r.jsx)(P.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, v.O8)(z)
@@ -147,7 +147,7 @@ function z(e) {
                       });
         },
         em = () =>
-            z.type === H.IIU.HANG_STATUS
+            z.type === j.IIU.HANG_STATUS
                 ? null
                 : (0, d.Z)(z) && null != Q
                   ? (0, r.jsx)(P.Z, {
@@ -168,7 +168,7 @@ function z(e) {
                       }),
         eg = () => {
             var e;
-            return z.type === H.IIU.WATCHING
+            return z.type === j.IIU.WATCHING
                 ? null
                 : (0, c.Z)(z)
                   ? eE()
@@ -179,7 +179,7 @@ function z(e) {
         },
         eE = () => {
             var e, t, n, i;
-            return (null === (e = z.party) || void 0 === e ? void 0 : e.size) == null && z.application_id === j.Zc
+            return (null === (e = z.party) || void 0 === e ? void 0 : e.size) == null && z.application_id === H.Zc
                 ? (0, r.jsxs)('div', {
                       className: K.gameState,
                       children: [

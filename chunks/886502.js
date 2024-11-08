@@ -29,8 +29,8 @@ e.exports = function (e, t, r, A, N, T) {
             C = h && R.call(t, '__wrapped__');
         if (D || C) {
             var g = D ? e.value() : e,
-                U = C ? t.value() : t;
-            return T || (T = new n()), N(g, U, r, A, T);
+                P = C ? t.value() : t;
+            return T || (T = new n()), N(g, P, r, A, T);
         }
     }
     return !!S && (T || (T = new n()), o(e, t, r, A, N, T));

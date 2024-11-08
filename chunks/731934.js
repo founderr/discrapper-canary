@@ -14,8 +14,8 @@ var i = n(200651),
     p = n(880257),
     _ = n(631885),
     h = n(895328),
-    x = n(568671),
-    E = n(419821),
+    E = n(568671),
+    x = n(419821),
     b = n(367515),
     C = n(250285),
     v = n(292352),
@@ -124,7 +124,7 @@ function P() {
                         className: S.marginBottom20,
                         children: N.intl.format(N.t.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
-                    e ? null : (0, i.jsx)(x.Z, {})
+                    e ? null : (0, i.jsx)(E.Z, {})
                 ]
             }),
             (0, i.jsx)('img', {
@@ -152,7 +152,7 @@ function O(e) {
                           {
                               userId: s.id,
                               isLast: l,
-                              children: () => (t === v.ne.ACTIVE ? (0, i.jsx)(E.u, { user: s }) : (0, i.jsx)(b.B, { user: s }))
+                              children: () => (t === v.ne.ACTIVE ? (0, i.jsx)(x.u, { user: s }) : (0, i.jsx)(b.B, { user: s }))
                           },
                           s.id
                       );
@@ -258,7 +258,7 @@ let Z = () => {
               })
             : null;
     },
-    w = () => {
+    B = () => {
         let e = (0, f.o)(),
             t = (0, g.zF)('family-center-requests-page-desktop'),
             n = (0, l.EQ)({
@@ -286,7 +286,7 @@ let Z = () => {
                   ]
               });
     },
-    B = () => {
+    w = () => {
         let e = (0, _.mq)(v.ne.PENDING),
             t = (0, m.o)(N.intl.formatToPlainString(N.t.IkAgkJ, { count: e.length }), N.intl.formatToPlainString(N.t.Q8XnAQ, { count: e.length }));
         return 0 === e.length
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, p.Z)();
     return (0, i.jsxs)('div', {
         className: I.container,
-        children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(B, {}), (0, i.jsx)(M, {}), (0, i.jsx)(w, {})]
+        children: [e ? (0, i.jsx)(j, {}) : (0, i.jsx)(P, {}), (0, i.jsx)(Z, {}), (0, i.jsx)(w, {}), (0, i.jsx)(M, {}), (0, i.jsx)(B, {})]
     });
 };

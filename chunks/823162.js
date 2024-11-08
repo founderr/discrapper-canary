@@ -1,12 +1,12 @@
 n.d(t, {
     Xy: function () {
-        return u;
+        return d;
     },
     e4: function () {
         return s;
     },
     gN: function () {
-        return d;
+        return u;
     },
     hi: function () {
         return h;
@@ -39,13 +39,13 @@ function c(e) {
         body: { consent_status: a.h.UNSPECIFIED }
     });
 }
-function u(e) {
+function d(e) {
     return i.tn.put({
         url: o.ANM.CHANNEL_RECIPIENT_ME(e),
         body: { consent_status: a.h.PENDING }
     });
 }
-function d(e) {
+function u(e) {
     return i.tn.del({ url: o.ANM.CHANNEL_RECIPIENT_ME(e) });
 }
 function m(e) {

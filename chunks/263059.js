@@ -40,8 +40,8 @@ function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
         { profileType: V } = (0, T.z)(),
-        H = { [P.fullSize]: V === w.y0.FULL_SIZE },
-        { interactionSource: j, interactionSourceId: Y } = (0, v.Xo)(),
+        j = { [P.fullSize]: V === w.y0.FULL_SIZE },
+        { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Bq)({
             activity: k,
             user: n
@@ -123,7 +123,7 @@ function k(e) {
             n.id === a.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(P.actions, H),
+                      className: s()(P.actions, j),
                       children: (0, r.jsx)(L.Z, {
                           user: n,
                           activity: k,
@@ -132,7 +132,7 @@ function k(e) {
                   });
     if (null === V) return null;
     let en = null !== (t = k.application_id) && void 0 !== t ? t : k.name,
-        er = j === w.n_.ACTIVITY && Y === en;
+        er = H === w.n_.ACTIVITY && Y === en;
     return (0, r.jsx)(c.Gt, {
         value: q,
         children: (0, r.jsx)(y.Z, {
@@ -174,7 +174,7 @@ function k(e) {
                                             className: P.body,
                                             children: [
                                                 (0, r.jsxs)('div', {
-                                                    className: s()(P.content, H),
+                                                    className: s()(P.content, j),
                                                     children: [
                                                         (0, r.jsx)(f.E, {
                                                             image: z,

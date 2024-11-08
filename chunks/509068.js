@@ -1,6 +1,6 @@
 r.d(t, {
     Eg: function () {
-        return U;
+        return P;
     },
     Jd: function () {
         return M;
@@ -12,7 +12,7 @@ r.d(t, {
         return g;
     },
     lA: function () {
-        return P;
+        return U;
     },
     nV: function () {
         return D;
@@ -134,8 +134,8 @@ function g(e = {}) {
     let o = T.m9.document.head || T.m9.document.body;
     o ? o.appendChild(a) : N.X && l.kg.error('Not injecting report dialog. No injection point found in HTML');
 }
-function U() {}
-function P(e) {
+function P() {}
+function U(e) {
     e();
 }
 function M(e) {

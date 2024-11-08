@@ -5,7 +5,7 @@ var i,
     o = n(442837),
     s = n(570140);
 let c = null;
-class u extends (a = o.ZP.Store) {
+class d extends (a = o.ZP.Store) {
     hasAction() {
         return null != c;
     }
@@ -13,11 +13,11 @@ class u extends (a = o.ZP.Store) {
         return c;
     }
 }
-function d(e) {
+function u(e) {
     c = e.requiredAction;
 }
 (l = 'UserRequiredActionStore'),
-    (r = 'displayName') in (i = u)
+    (r = 'displayName') in (i = d)
         ? Object.defineProperty(i, r, {
               value: l,
               enumerable: !0,
@@ -25,7 +25,7 @@ function d(e) {
               writable: !0
           })
         : (i[r] = l),
-    (t.Z = new u(s.Z, {
-        CONNECTION_OPEN: d,
-        USER_REQUIRED_ACTION_UPDATE: d
+    (t.Z = new d(s.Z, {
+        CONNECTION_OPEN: u,
+        USER_REQUIRED_ACTION_UPDATE: u
     }));

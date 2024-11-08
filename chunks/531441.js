@@ -1,4 +1,4 @@
-var i, r, l, a, o, s, c, u, d, m, h, f, p;
+var i, r, l, a, o, s, c, d, u, m, h, f, p;
 n.d(t, {
     OY: function () {
         return c;
@@ -17,11 +17,11 @@ n.d(t, {
     }
 }),
     ((i || (i = {})).MESSAGE = 'message'),
-    ((u = r || (r = {}))[(u.OWNER = 1)] = 'OWNER'),
-    (u[(u.MEMBER = 2)] = 'MEMBER'),
-    ((d = l || (l = {}))[(d.REVIEW_PENDING = 1)] = 'REVIEW_PENDING'),
-    (d[(d.CLASSIFICATION_UPHELD = 2)] = 'CLASSIFICATION_UPHELD'),
-    (d[(d.CLASSIFICATION_INVALIDATED = 3)] = 'CLASSIFICATION_INVALIDATED'),
+    ((d = r || (r = {}))[(d.OWNER = 1)] = 'OWNER'),
+    (d[(d.MEMBER = 2)] = 'MEMBER'),
+    ((u = l || (l = {}))[(u.REVIEW_PENDING = 1)] = 'REVIEW_PENDING'),
+    (u[(u.CLASSIFICATION_UPHELD = 2)] = 'CLASSIFICATION_UPHELD'),
+    (u[(u.CLASSIFICATION_INVALIDATED = 3)] = 'CLASSIFICATION_INVALIDATED'),
     ((m = a || (a = {}))[(m.UNSPECIFIED = 0)] = 'UNSPECIFIED'),
     (m[(m.UNKNOWN = 1)] = 'UNKNOWN'),
     (m[(m.UNSOLICITED_PORNOGRAPHY = 100)] = 'UNSOLICITED_PORNOGRAPHY'),

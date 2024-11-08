@@ -19,8 +19,8 @@ var i = n(200651),
     p = n(37234),
     _ = n(821849),
     h = n(230711),
-    x = n(497321),
-    E = n(634894),
+    E = n(497321),
+    x = n(634894),
     b = n(410030),
     C = n(100527),
     v = n(906732),
@@ -35,11 +35,11 @@ var i = n(200651),
     O = n(483444),
     Z = n(626135),
     M = n(63063),
-    w = n(74538),
-    B = n(140465),
+    B = n(74538),
+    w = n(140465),
     y = n(599659),
-    k = n(91802),
-    L = n(898997),
+    L = n(91802),
+    k = n(898997),
     U = n(197115),
     D = n(823188),
     G = n(504865),
@@ -62,7 +62,7 @@ function ee(e) {
         d = n || l,
         m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         f = W.GP[t.planIdFromItems],
-        p = w.ZP.formatPriceString(w.ZP.getDefaultPrice(f.id), f.interval);
+        p = B.ZP.formatPriceString(B.ZP.getDefaultPrice(f.id), f.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -81,7 +81,7 @@ function ee(e) {
                           var e, n, i;
                           if (l) {
                               if (r) {
-                                  let e = w.ZP.getReverseTrialWeeks(t.trialId);
+                                  let e = B.ZP.getReverseTrialWeeks(t.trialId);
                                   return Y.intl.format(Y.t.jLglur, { weeks: e });
                               }
                               return Y.intl.format(Y.t['2CGBrq'], {
@@ -110,8 +110,8 @@ function ee(e) {
           });
 }
 function et() {
-    let e = (0, B.t7)(),
-        t = (0, B.lr)(),
+    let e = (0, w.t7)(),
+        t = (0, w.lr)(),
         n = (0, c.e7)([P.ZP], () => P.ZP.inReverseTrial()),
         r = (0, b.ZP)(),
         a = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
@@ -299,19 +299,19 @@ t.Z = function () {
         s = (0, I.V)(),
         [l, o] = r.useState(!0),
         { fractionalState: u } = (0, N.Z)(),
-        p = (0, k.n)(),
+        p = (0, L.n)(),
         h = null == p ? void 0 : p.countryCode,
         b = (0, c.e7)([j.Z], () => j.Z.enabled),
         A = 'PremiumManagementSettings';
-    (0, E.j)({
+    (0, x.j)({
         location: A + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, E.j)({
+        (0, x.j)({
             location: A + ' auto off',
             autoTrackExposure: !1
         }),
-        (0, L.B)('PremiumManagementSettings');
+        (0, k.B)('PremiumManagementSettings');
     let O = (0, V.bD)('PremiumManagementSettings'),
         M = (0, V.pn)('PremiumManagementSettings');
     r.useEffect(() => {
@@ -319,8 +319,8 @@ t.Z = function () {
             !b && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, b, e]);
-    let [w, B] = r.useState(!1);
-    if (b) return (0, i.jsx)(x.Z, {});
+    let [B, w] = r.useState(!1);
+    if (b) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(S.c8, {});
     let y = a && null !== n && s,
         U = u !== W.a$.NONE;
@@ -353,7 +353,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !w && (Z.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), B(!0));
+                        e && !B && (Z.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', { className: K.bottomOfPageVisibilitySensor })
                 })

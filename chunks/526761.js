@@ -49,7 +49,7 @@ r.d(t, {
         return O;
     },
     vc: function () {
-        return U;
+        return P;
     },
     yP: function () {
         return c;
@@ -90,7 +90,7 @@ let g = {
         UNREADS_ALL_MESSAGES: 1024,
         UNREADS_ONLY_MENTIONS: 512
     },
-    U = {
+    P = {
         OPT_IN_CHANNELS_ON: 16384,
         OPT_IN_CHANNELS_OFF: 8192,
         UNREADS_ONLY_MENTIONS: 4096,

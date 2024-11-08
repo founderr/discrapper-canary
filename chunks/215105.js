@@ -80,7 +80,7 @@ function O(e) {
     i.useEffect(() => {
         null == I || I(null == F ? void 0 : F.current);
     }, [F, I]);
-    let H = async (e) => {
+    let j = async (e) => {
             if (null == e) return;
             L({ action: x });
             let n = C({
@@ -101,7 +101,7 @@ function O(e) {
             } catch (e) {}
             M(b.P.REPLY);
         },
-        j = {
+        H = {
             [A.biteSize]: o === b.y0.BITE_SIZE,
             [A.panel]: o === b.y0.PANEL,
             [A.fullSize]: o === b.y0.FULL_SIZE
@@ -115,7 +115,7 @@ function O(e) {
         ref: F,
         onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(A.container, j, Y, { [A.customProfileTheme]: null != P }),
+            className: s()(A.container, H, Y, { [A.customProfileTheme]: null != P }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: O,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -143,7 +143,7 @@ function O(e) {
                         };
                     try {
                         return (
-                            await H(n),
+                            await j(n),
                             w(),
                             null == D || D(),
                             {

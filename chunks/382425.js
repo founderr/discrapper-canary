@@ -44,8 +44,8 @@ var r = n(200651),
     Z = n(373826),
     F = n(315324),
     V = n(582123),
-    H = n(599864),
-    j = n(290274),
+    j = n(599864),
+    H = n(290274),
     Y = n(228168),
     W = n(981631),
     K = n(388032),
@@ -254,7 +254,7 @@ function $(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: s()(q.actions, es),
-                      children: (0, r.jsx)(H.Z, {
+                      children: (0, r.jsx)(j.Z, {
                           channel: e_,
                           onAction: ec,
                           onClose: ee
@@ -288,7 +288,7 @@ function $(e) {
                                     className: q.body,
                                     interactionSourceId: eE,
                                     sourceType: Y.n_.ACTIVITY,
-                                    moreButton: (0, r.jsx)(j.Z, {
+                                    moreButton: (0, r.jsx)(H.Z, {
                                         display: 'live',
                                         user: t,
                                         onClose: ee,

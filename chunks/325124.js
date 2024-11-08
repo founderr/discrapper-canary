@@ -48,8 +48,8 @@ let O = {
                 beforeStartSpan: p,
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: U,
-                markBackgroundSpan: P,
+                childSpanTimeout: P,
+                markBackgroundSpan: U,
                 traceFetch: M,
                 traceXHR: G,
                 shouldCreateSpanForRequest: m,
@@ -74,7 +74,7 @@ let O = {
             let i = (0, o.R)(a, {
                 idleTimeout: C,
                 finalTimeout: g,
-                childSpanTimeout: U,
+                childSpanTimeout: P,
                 disableAutoFinish: r,
                 beforeSpanEnd: (e) => {
                     w(), (0, n.f7)(e);
@@ -155,7 +155,7 @@ let O = {
                                         }
                                     }));
                             })),
-                    P && (0, f.j)(),
+                    U && (0, f.j)(),
                     N &&
                         (function (e, t, r, n) {
                             let a;
@@ -192,7 +192,7 @@ let O = {
                                         capture: !0
                                     }
                                 );
-                        })(C, g, U, B),
+                        })(C, g, P, B),
                     t && (0, a.D)(),
                     (0, L.L7)(e, {
                         traceFetch: M,

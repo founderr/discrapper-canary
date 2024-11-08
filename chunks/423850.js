@@ -40,24 +40,24 @@ function A() {
                     D = L.getUser(),
                     C = r.getIntegrationByName('Replay'),
                     g = C && C.getReplayId(),
-                    U = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
+                    P = void 0 !== D ? D.email || D.id || D.ip_address : void 0;
                 try {
                     t = L.getScopeData().contexts.profile.profile_id;
                 } catch (e) {}
-                let P = (0, E.Rt)(l.target),
+                let U = (0, E.Rt)(l.target),
                     M = (0, c.Jr)({
                         release: T.release,
                         environment: T.environment,
                         transaction: S,
                         [_.JQ]: e.value,
                         [_.S3]: 'auto.http.browser.inp',
-                        user: U || void 0,
+                        user: P || void 0,
                         profile_id: t || void 0,
                         replay_id: g || void 0,
                         'user_agent.original': s.m.navigator && s.m.navigator.userAgent
                     }),
                     G = (0, o.qp)({
-                        name: P,
+                        name: U,
                         op: `ui.interaction.${A}`,
                         attributes: M,
                         startTime: d,
