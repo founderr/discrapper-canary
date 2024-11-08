@@ -7,6 +7,5 @@ e.exports = {
     rank: 'rank_e6eff2',
     goldText: 'goldText_e6eff2',
     silverText: 'silverText_e6eff2',
-    bronzeText: 'bronzeText_e6eff2',
-    defaultText: 'defaultText_e6eff2'
+    bronzeText: 'bronzeText_e6eff2'
 };

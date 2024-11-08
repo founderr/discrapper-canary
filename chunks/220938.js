@@ -1,4 +1,5 @@
 e.exports = {
-    innerContainer: 'innerContainer_f62934',
-    rankText: 'rankText_f62934'
+    container: 'container_f62934',
+    frame: 'frame_f62934',
+    rankBadge: 'rankBadge_f62934'
 };

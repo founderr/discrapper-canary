@@ -24,8 +24,7 @@ function l(e) {
             className: a()(o.rank, {
                 [o.goldText]: 1 === t,
                 [o.silverText]: 2 === t,
-                [o.bronzeText]: 3 === t,
-                [o.defaultText]: t > 3
+                [o.bronzeText]: 3 === t
             }),
             children: t
         })

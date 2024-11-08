@@ -1,23 +1,36 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return f;
     }
 });
-var l = n(200651),
-    a = n(481060),
-    i = n(531501),
-    r = n(220938);
-function o(e) {
-    let { rank: t } = e;
-    return (0, l.jsx)(i.Z, {
-        color: '#cbaa62',
-        children: (0, l.jsx)('div', {
-            className: r.innerContainer,
-            children: (0, l.jsx)(a.Text, {
-                variant: 'text-sm/medium',
-                className: r.rankText,
-                children: t
-            })
-        })
+var r = n(200651),
+    i = n(481060),
+    a = n(99690),
+    s = n(473188),
+    o = n(220938),
+    l = n(191420),
+    u = n(774621),
+    c = n(49274),
+    d = n(904141);
+function f(e) {
+    let { user: t, rank: n, withRankBadge: f = !0 } = e;
+    return (0, r.jsxs)('div', {
+        className: o.container,
+        children: [
+            (0, r.jsx)('img', {
+                className: o.frame,
+                src: 1 === n ? l : 2 === n ? u : 3 === n ? c : d,
+                alt: ''
+            }),
+            (0, r.jsx)(a.Z, {
+                user: t,
+                size: i.AvatarSizes.SIZE_40
+            }),
+            f &&
+                (0, r.jsx)('div', {
+                    className: o.rankBadge,
+                    children: (0, r.jsx)(s._, { rank: n })
+                })
+        ]
     });
 }
