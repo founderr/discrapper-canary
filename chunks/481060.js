@@ -1326,6 +1326,12 @@ n.r(t),
         PlayIcon: function () {
             return tN.o1U;
         },
+        PlaybackOffIcon: function () {
+            return tN.X_q;
+        },
+        PlaybackOnIcon: function () {
+            return tN.Iy5;
+        },
         PlaystationNeutralIcon: function () {
             return tN.Tsp;
         },
@@ -1349,6 +1355,9 @@ n.r(t),
         },
         PopoutList: function () {
             return eT.m;
+        },
+        PotionIcon: function () {
+            return tN.hh5;
         },
         PremiumBadge: function () {
             return tg.lB;
@@ -1776,6 +1785,9 @@ n.r(t),
         TextBadge: function () {
             return tg.IG;
         },
+        TextControllerIcon: function () {
+            return tN.rbH;
+        },
         TextIcon: function () {
             return tN.VL1;
         },
@@ -1787,6 +1799,9 @@ n.r(t),
         },
         TextLockIcon: function () {
             return tN.W4G;
+        },
+        TextUserIcon: function () {
+            return tN.tKz;
         },
         TextWarningIcon: function () {
             return tN.z0B;
