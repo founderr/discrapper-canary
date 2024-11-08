@@ -1,68 +1,80 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return Z;
     }
 });
 var i = t(200651);
 t(192379);
 var l = t(442837),
     o = t(699516),
-    s = t(5192),
-    r = t(648052),
-    c = t(681837),
-    a = t(91433),
-    d = t(502762),
-    u = t(530),
-    f = t(740628),
-    m = t(643518),
-    p = t(228168),
-    x = t(981631),
-    I = t(37682);
-function h(e) {
+    r = t(5192),
+    s = t(111361),
+    c = t(816988),
+    a = t(648052),
+    d = t(537006),
+    u = t(681837),
+    f = t(91433),
+    m = t(502762),
+    I = t(530),
+    x = t(740628),
+    p = t(643518),
+    h = t(228168),
+    v = t(981631),
+    g = t(37682);
+function Z(e) {
     var n;
-    let { user: t, currentUser: h, channelId: v, displayProfile: g, initialSection: Z, initialSubsection: _, friendToken: b, onClose: j } = e,
-        E = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
-        T = (0, m.Z)({
+    let { user: t, currentUser: Z, channelId: _, displayProfile: j, initialSection: b, initialSubsection: E, friendToken: T, onClose: N } = e,
+        S = (0, l.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
+        y = (0, p.Z)({
             user: t,
-            currentUser: h
-        });
+            currentUser: Z
+        }),
+        P = t.id === Z.id,
+        { dimissibleUpsellsEnabled: A } = (0, c.u)({ location: 'UserProfileModalBody' }),
+        C = (0, s.I5)(Z);
     return (0, i.jsxs)('div', {
-        className: I.body,
+        className: g.body,
         children: [
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: p.y0.FULL_SIZE,
-                nickname: s.ZP.getName(null == g ? void 0 : g.guildId, v, t),
-                pronouns: null == g ? void 0 : g.pronouns,
+                profileType: h.y0.FULL_SIZE,
+                nickname: r.ZP.getName(null == j ? void 0 : j.guildId, _, t),
+                pronouns: null == j ? void 0 : j.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, i.jsx)(c.Z, { userId: t.id }),
-                tags: (0, i.jsx)(r.Z, {
-                    displayProfile: g,
-                    profileType: p.y0.FULL_SIZE,
-                    onClose: j
+                nicknameIcons: (0, i.jsx)(u.Z, { userId: t.id }),
+                tags: (0, i.jsx)(a.Z, {
+                    displayProfile: j,
+                    profileType: h.y0.FULL_SIZE,
+                    onClose: N
                 })
             }),
-            E === x.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(d.Z.Overlay, {
-                    className: I.friendRequestBannerOverlay,
-                    children: (0, i.jsx)(a.Z, {
+            S === v.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(m.Z.Overlay, {
+                    className: g.friendRequestBannerOverlay,
+                    children: (0, i.jsx)(f.Z, {
                         user: t,
-                        guildId: null !== (n = null == g ? void 0 : g.guildId) && void 0 !== n ? n : void 0,
-                        channelId: v,
-                        friendToken: b,
-                        className: I.friendRequestBanner
+                        guildId: null !== (n = null == j ? void 0 : j.guildId) && void 0 !== n ? n : void 0,
+                        channelId: _,
+                        friendToken: T,
+                        className: g.friendRequestBanner
                     })
                 }),
-            (0, i.jsx)(d.Z.Overlay, {
-                className: I.overlay,
-                children: (0, i.jsx)(f.Z, {
+            A &&
+                P &&
+                (0, i.jsx)(d.Z, {
+                    isPremiumUser: C,
+                    onInteraction: N
+                }),
+            (0, i.jsx)(m.Z.Overlay, {
+                className: g.overlay,
+                children: (0, i.jsx)(x.Z, {
                     user: t,
-                    currentUser: h,
-                    displayProfile: g,
-                    items: T,
-                    initialSection: Z,
-                    initialSubsection: _,
-                    onClose: j
+                    currentUser: Z,
+                    displayProfile: j,
+                    items: y,
+                    initialSection: b,
+                    initialSubsection: E,
+                    onClose: N
                 })
             })
         ]

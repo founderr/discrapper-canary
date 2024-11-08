@@ -5,5 +5,6 @@ e.exports = {
     footer: 'footer_b8cc6d',
     backdrop: 'backdrop_b8cc6d',
     toast: 'toast_b8cc6d',
-    activity: 'activity_b8cc6d'
+    activity: 'activity_b8cc6d',
+    upsell: 'upsell_b8cc6d'
 };
