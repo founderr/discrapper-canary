@@ -29,8 +29,7 @@ t.Z = function (e) {
                     className: _.bannerLeftImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: t ? n(277698) : n(144823),
-                        className: _.image
+                        src: n(28517)
                     })
                 }),
                 (0, i.jsx)('div', {
@@ -55,7 +54,7 @@ t.Z = function (e) {
                                     p.intl.string(p.t['2a1fz8']),
                                     '\xA0',
                                     (0, i.jsx)(s.Anchor, {
-                                        href: c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL),
+                                        href: c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL),
                                         children: p.intl.string(p.t['sBp+u7'])
                                     })
                                 ]
@@ -67,7 +66,7 @@ t.Z = function (e) {
                     className: _.bannerRightImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: t ? n(10501) : n(485978),
+                        src: n(557622),
                         className: _.image
                     })
                 })
