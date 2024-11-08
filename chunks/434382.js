@@ -21,15 +21,7 @@ function E(e, t) {
     let r = g(e, t);
     if (p.has(r) || (null !== (n = m.get(r)) && void 0 !== n ? n : 0) > 3) return !1;
     if (l.Z.getGuildId() !== e) return;
-    if (
-        !(0, f.NM)({
-            guildId: e,
-            location: 'GuildLeaderboardManager'
-        }) ||
-        !u.Z.isFocused() ||
-        !s.Z.isConnected()
-    )
-        return !1;
+    if (!(0, f.NM)(e, 'GuildLeaderboardManager') || !u.Z.isFocused() || !s.Z.isConnected()) return !1;
     let i = o.Z.getIdleSince();
     return !(null != i && Date.now() - i > 900000) && !0;
 }
@@ -107,11 +99,11 @@ async function S(e) {
             );
         }
 }
-function T() {
+function b() {
     I();
 }
-function b() {
-    v(), (h = new Map()), (p = new Set()), (m = new Map()), T();
+function T() {
+    v(), (h = new Map()), (p = new Set()), (m = new Map()), b();
 }
 class y extends a.Z {
     fetchLeaderboard(e) {
@@ -123,11 +115,11 @@ class y extends a.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: b,
-                CONNECTION_CLOSED: T,
-                WINDOW_FOCUS: T,
-                IDLE: T,
-                CHANNEL_SELECT: T
+                POST_CONNECTION_OPEN: T,
+                CONNECTION_CLOSED: b,
+                WINDOW_FOCUS: b,
+                IDLE: b,
+                CHANNEL_SELECT: b
             }),
             n in t
                 ? Object.defineProperty(t, n, {
