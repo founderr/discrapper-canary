@@ -12,6 +12,9 @@ n.r(t),
         addExtraAnalyticsDecorator: function () {
             return S;
         },
+        clearAnalyticsEventsRecording: function () {
+            return M;
+        },
         debugLogEvent: function () {
             return R;
         },
@@ -21,14 +24,23 @@ n.r(t),
         expandLocation: function () {
             return T;
         },
+        getAnalyticsEventsRecording: function () {
+            return w;
+        },
         getNewAnalyticsLoadId: function () {
-            return L;
+            return U;
         },
         setUTMContext: function () {
             return N;
         },
+        startRecordingAnalyticsEvents: function () {
+            return L;
+        },
+        stopRecordingAnalyticsEvents: function () {
+            return x;
+        },
         trackNetworkAction: function () {
-            return D;
+            return k;
         }
     }),
     n(653041),
@@ -300,12 +312,28 @@ function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     c.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? l.Hj('Analytics', e, t) : l.Hj('Analytics', e);
 }
-let O = (0, a.trackMaker)({
+let O = !1,
+    D = {};
+function L() {
+    O = !0;
+}
+function x() {
+    O = !1;
+}
+function w() {
+    return D;
+}
+function M() {
+    Object.keys(D).forEach((e) => {
+        delete D[e];
+    });
+}
+let P = (0, a.trackMaker)({
     analyticEventConfigs: b,
     dispatcher: s.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function D(e, t) {
+function k(e, t) {
     let n = C({
         location: (0, o.k$)(),
         ...t
@@ -315,9 +343,9 @@ function D(e, t) {
         ...t
     }),
         R(e, n),
-        O(e, n);
+        P(e, n);
 }
-function L() {
+function U() {
     return (0, i.Z)();
 }
 t.default = {
@@ -328,22 +356,27 @@ t.default = {
     },
     expandEventProperties: C,
     track: function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        var n, r;
+        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            a = String(e);
         if (
-            (!u.R.includes(e) &&
+            (!u.R.includes(a) &&
                 _.Z.addBreadcrumb({
                     category: 'analytics',
-                    message: ''.concat(e)
+                    message: ''.concat(a)
                 }),
-            null != n.throttlePercent && Math.random() > n.throttlePercent)
+            (n = e),
+            (r = t),
+            !O || (null != r && (Array.isArray(D[n]) ? D[n].push(r) : (D[n] = [r]))),
+            null != i.throttlePercent && Math.random() > i.throttlePercent)
         )
             return Promise.resolve();
-        let r = C(t);
+        let s = C(t);
         return (
-            R(e, r, n.logEventProperties),
-            A(e, r, {
-                flush: n.flush,
-                fingerprint: n.fingerprint
+            R(a, s, i.logEventProperties),
+            A(e, s, {
+                flush: i.flush,
+                fingerprint: i.fingerprint
             })
         );
     }
