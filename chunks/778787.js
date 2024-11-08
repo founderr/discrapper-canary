@@ -1,10 +1,10 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
-    n(724458),
     n(627341),
+    n(724458),
     n(653041);
 var r = n(278074),
     i = n(979554),
@@ -27,28 +27,49 @@ function d(e, t, n) {
         e
     );
 }
-class f extends l.Z {
+let f = (e) =>
+        (0, r.EQ)(e)
+            .with({ type: i.Z.AVATAR_DECORATION }, (e) => a.Z.fromServer(e))
+            .with({ type: i.Z.PROFILE_EFFECT }, (e) => u.Z.fromServer(e))
+            .otherwise(() => null),
+    _ = (e) =>
+        null != e
+            ? e.reduce((e, t) => {
+                  let n = f(t);
+                  return null != n && e.push(n), e;
+              }, [])
+            : [];
+class h extends l.Z {
     static fromServer(e) {
-        let { type: t, premium_type: n, category_sku_id: l, prices: d, bundled_products: _, ...h } = e;
-        return new f({
-            ...super.fromServer(h),
+        let { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l, ...u } = e;
+        return new h({
+            ...super.fromServer(u),
             type: t,
             premiumType: n === c.WND ? null : n,
-            categorySkuId: l,
-            prices: (0, o.l)(d),
-            items: h.items.reduce(
-                (e, t) =>
-                    (0, r.EQ)(t)
-                        .with({ type: i.Z.AVATAR_DECORATION }, (t) => (e.push(a.Z.fromServer(t)), e))
-                        .with({ type: i.Z.PROFILE_EFFECT }, (t) => (e.push(u.Z.fromServer(t)), e))
-                        .otherwise(() => e),
-                []
-            ),
-            bundledProducts: null == _ ? void 0 : _.map(s.Z.fromServer),
-            googleSkuIds: h.google_sku_ids
+            categorySkuId: r,
+            prices: (0, o.l)(i),
+            items: _(u.items),
+            bundledProducts: null == a ? void 0 : a.map(s.Z.fromServer),
+            variants: null == l ? void 0 : l.map(p.fromServer),
+            googleSkuIds: u.google_sku_ids
         });
     }
     constructor(e) {
-        super(e), d(this, 'prices', void 0), d(this, 'type', void 0), d(this, 'premiumType', void 0), d(this, 'items', void 0), d(this, 'categorySkuId', void 0), d(this, 'bundledProducts', void 0), d(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds);
+        super(e), d(this, 'prices', void 0), d(this, 'type', void 0), d(this, 'premiumType', void 0), d(this, 'items', void 0), d(this, 'categorySkuId', void 0), d(this, 'bundledProducts', void 0), d(this, 'variants', void 0), d(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants);
+    }
+}
+class p extends h {
+    static fromServer(e) {
+        let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...a } = e;
+        return new p({
+            ...super.fromServer(a),
+            baseVariantName: t,
+            baseVariantSkuId: n,
+            variantLabel: r,
+            variantValue: i
+        });
+    }
+    constructor(e) {
+        super(e), d(this, 'baseVariantName', void 0), d(this, 'baseVariantSkuId', void 0), d(this, 'variantLabel', void 0), d(this, 'variantValue', void 0), (this.baseVariantName = e.baseVariantName), (this.baseVariantSkuId = e.baseVariantSkuId), (this.variantLabel = e.variantLabel), (this.variantValue = e.variantValue);
     }
 }

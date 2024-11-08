@@ -8,6 +8,7 @@ e.exports = {
     avatarContainer: 'avatarContainer_c23530',
     mysteryAvatarContainer: 'mysteryAvatarContainer_c23530',
     cardText: 'cardText_c23530',
+    variantsGroup: 'variantsGroup_c23530',
     cardTextBlur: 'cardTextBlur_c23530',
     cardBackground: 'cardBackground_c23530',
     cardLowOpacity: 'cardLowOpacity_c23530',
@@ -32,5 +33,11 @@ e.exports = {
     productName: 'productName_c23530',
     newBadge: 'newBadge_c23530',
     partiallyOwned: 'partiallyOwned_c23530',
-    preview: 'preview_c23530'
+    preview: 'preview_c23530',
+    variantsPanel: 'variantsPanel_c23530',
+    variantLabel: 'variantLabel_c23530',
+    variantsList: 'variantsList_c23530',
+    colorVariant: 'colorVariant_c23530',
+    selectedVariant: 'selectedVariant_c23530',
+    colorSwatch: 'colorSwatch_c23530'
 };
