@@ -15,7 +15,7 @@ t.Z = (e) => {
     var t;
     let n,
         r,
-        { title: p, titleClassName: _, buttonClassName: h, perkImage: E, isCarousel: x, onCtaClick: b, perkComponent: C, subtitle: v = '', descriptionCta: T = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
+        { title: _, titleClassName: p, buttonClassName: h, perkImage: E, isCarousel: b, onCtaClick: x, perkComponent: C, subtitle: T = '', descriptionCta: v = '', cardVariant: N, subtitleClassName: I, imageOverlayText: S } = e,
         R = (0, o._)(N),
         A = (0, l.yQ)(),
         j = (null == A ? void 0 : A.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -37,22 +37,22 @@ t.Z = (e) => {
         children: [
             (0, i.jsx)('div', { className: a()(u.cover, u.below) }),
             (0, i.jsx)(c.Z, {
-                title: p,
+                title: _,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: R,
-                titleClassName: _,
-                subtitle: v,
+                titleClassName: p,
+                subtitle: T,
                 subtitleClassName: I
             }),
             null != E &&
                 (0, i.jsxs)('div', {
-                    className: a()(u.relative, { [u.cardImage]: !x }),
+                    className: a()(u.relative, { [u.cardImage]: !b }),
                     children: [
                         (0, i.jsx)('img', {
                             src: E,
                             alt: '',
                             className: a()({
-                                [u.carouselCardImage]: x,
+                                [u.carouselCardImage]: b,
                                 [u.greyScaleFilter]: P
                             })
                         }),
@@ -74,13 +74,13 @@ t.Z = (e) => {
                         className: u.cardIllustrationNoHover,
                         children: [
                             C,
-                            0 !== T.length &&
-                                null != b &&
+                            0 !== v.length &&
+                                null != x &&
                                 (0, i.jsx)(s.Button, {
                                     className: h,
                                     disabled: !j,
                                     fullWidth: !0,
-                                    onClick: b,
+                                    onClick: x,
                                     children: (0, i.jsxs)('div', {
                                         className: null == R ? void 0 : null === (t = R.descriptionCta) || void 0 === t ? void 0 : t.className,
                                         children: [
@@ -88,7 +88,7 @@ t.Z = (e) => {
                                                 alt: r,
                                                 src: n
                                             }),
-                                            T
+                                            v
                                         ]
                                     })
                                 })

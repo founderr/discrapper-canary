@@ -28,8 +28,8 @@ var i = n(200651),
     g = n(430824),
     C = n(496675),
     _ = n(9156),
-    x = n(203818),
-    v = n(438144),
+    v = n(203818),
+    x = n(438144),
     I = n(981631),
     b = n(388032),
     S = n(747834);
@@ -38,7 +38,7 @@ function Z(e) {
 }
 let N = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: x, disableManageChannels: v, position: N, sortingPosition: E, hideIcon: y, children: j } = e,
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: N, sortingPosition: E, hideIcon: y, children: j } = e,
         T = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
         P = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
         A = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
@@ -129,7 +129,7 @@ let N = l.memo(function (e) {
                                 onClick: Z,
                                 className: S.children,
                                 children:
-                                    A && !v
+                                    A && !x
                                         ? (0, i.jsx)(c.Tooltip, {
                                               text: b.intl.string(b.t['fUYU+v']),
                                               children: (e) => {
@@ -167,7 +167,7 @@ let N = l.memo(function (e) {
                 j
             ]
         });
-    return null != x && null != h ? x(h(G)) : G;
+    return null != v && null != h ? v(h(G)) : G;
 });
 t.ZP = (0, h.B)(N);
 let E = l.memo(function (e) {
@@ -205,9 +205,9 @@ let E = l.memo(function (e) {
     }),
     y = l.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id)),
             r = l.useCallback(() => {
-                n ? (0, v.s)(t.guild.id) : (0, v.M)(t.guild.id);
+                n ? (0, x.s)(t.guild.id) : (0, x.M)(t.guild.id);
             }, [t.guild.id, n]);
         return n
             ? (0, i.jsxs)(c.Clickable, {
@@ -243,7 +243,7 @@ let E = l.memo(function (e) {
     }),
     j = l.memo(function (e) {
         let { category: t, channel: n } = e,
-            l = (0, s.e7)([x.Z], () => x.Z.isVoiceCategoryCollapsed(t.guild.id));
+            l = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === I.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {

@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(276952),
     C = n(199540),
     _ = n(40153),
-    x = n(252686),
-    v = n(682662),
+    v = n(252686),
+    x = n(682662),
     I = n(662146),
     b = n(388032),
     S = n(581294),
@@ -72,7 +72,7 @@ function j(e) {
             config: { duration: N }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(G, e)), [n, G]),
-        el = (0, i.jsxs)(v.H, {
+        el = (0, i.jsxs)(x.H, {
             children: [
                 (0, i.jsx)(g.Z, {
                     disabled: K || u,
@@ -91,7 +91,7 @@ function j(e) {
                         className: a()({ [Z.wobble]: !K && W && !u }),
                         'data-dnd-name': X,
                         children: K
-                            ? (0, i.jsx)(x.Z, {})
+                            ? (0, i.jsx)(v.Z, {})
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: u,

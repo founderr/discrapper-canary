@@ -108,7 +108,7 @@ let m = (e, t) => {
     };
 };
 t.Z = l.memo(function (e) {
-    let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: C, showDeadZoneIndicator: _, activeItem: x, onItemSelect: v, onItemAction: I, interactive: b = !0, children: S } = e,
+    let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: C, showDeadZoneIndicator: _, activeItem: v, onItemSelect: x, onItemAction: I, interactive: b = !0, children: S } = e,
         Z = l.useRef(null),
         N = l.useRef([]),
         E = l.useRef(!1),
@@ -128,13 +128,13 @@ t.Z = l.memo(function (e) {
         ),
         R = l.useCallback(
             (e, t) => {
-                (y.current = t), v(p * e + t);
+                (y.current = t), x(p * e + t);
             },
-            [v]
+            [x]
         ),
         D = l.useCallback(() => {
-            (y.current = null), v(null);
-        }, [v]),
+            (y.current = null), x(null);
+        }, [x]),
         O = l.useCallback(
             (e) => {
                 D(), (E.current = e);
@@ -183,7 +183,7 @@ t.Z = l.memo(function (e) {
                             y: e.clientY
                         };
                     if ((k(a, r, Math.max(t, n)), E.current)) {
-                        null != x && D();
+                        null != v && D();
                         return;
                     }
                     let o = (0, s.ld)(r, a, Math.max(t, n));
@@ -198,7 +198,7 @@ t.Z = l.memo(function (e) {
                     }
                     D();
                 }, 16),
-            [x, k, D, R, j, n, t]
+            [v, k, D, R, j, n, t]
         ),
         B = l.useCallback(
             (e) => {

@@ -20,8 +20,8 @@ var l = n(120356),
     g = n(886176),
     C = n(605236),
     _ = n(703656),
-    x = n(984933),
-    v = n(430824),
+    v = n(984933),
+    x = n(430824),
     I = n(626135),
     b = n(434479),
     S = n(981631),
@@ -32,7 +32,7 @@ var l = n(120356),
 function j(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, f.RF)(t, 'guild_shop_channel_row'),
-        m = (0, a.e7)([v.Z], () => v.Z.getGuild(t)),
+        m = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
         Z = (null == m ? void 0 : m.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
         j = 'false' === s.K.get(N.tM, 'false'),
         T = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
@@ -80,7 +80,7 @@ function j(e) {
                                 !u || !Z)
                             ) {
                                 var n;
-                                (0, _.dL)(S.Z5c.CHANNEL(t, null === (n = x.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
+                                (0, _.dL)(S.Z5c.CHANNEL(t, null === (n = v.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
                             }
                         },
                         'aria-label': E.intl.string(E.t.cpT0Cg),

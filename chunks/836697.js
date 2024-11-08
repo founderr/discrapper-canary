@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return x;
     }
 }),
     n(47120),
@@ -21,10 +21,10 @@ var i = n(200651),
     g = n(773182),
     C = n(588275),
     _ = n(388032),
-    x = n(33321);
-function v(e) {
+    v = n(33321);
+function x(e) {
     let { onActivate: t } = e,
-        [n, v] = l.useState(!1),
+        [n, x] = l.useState(!1),
         I = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         b = (0, r.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         S = (0, f.Z)(),
@@ -44,7 +44,7 @@ function v(e) {
     }, [n, b]);
     let E = null != I && S.includes(I);
     return (l.useEffect(() => {
-        !n && E && Z !== I && v(!0);
+        !n && E && Z !== I && x(!0);
     }, [n, E, Z, I]),
     0 === S.length)
         ? null
@@ -58,14 +58,14 @@ function v(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      v(!n), c.ZP.clearCoachmark();
+                      x(!n), c.ZP.clearCoachmark();
                   },
                   folderIconContent: (0, i.jsx)(a.HourglassIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
-                      className: x.pendingIcon
+                      className: v.pendingIcon
                   }),
                   renderChildNode: function (e) {
                       return e.type !== p.eD.GUILD ? null : (0, i.jsx)(C.Z, { guildNode: e }, e.id);

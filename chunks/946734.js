@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(884338),
@@ -49,24 +49,24 @@ class S {
     }
     renderNicknamePairs() {
         return this.getNicknameGuildPairs().map((e, t) => {
-            let [n, r] = e,
-                a = (0, i.jsx)(o.Clickable, {
+            let [n, a] = e,
+                r = (0, i.jsx)(o.Clickable, {
                     tag: 'span',
                     onClick: this.handleClick,
                     children: n
                 });
             return (
-                r.length > 0 &&
-                    (a = (0, i.jsx)(o.TooltipContainer, {
+                a.length > 0 &&
+                    (r = (0, i.jsx)(o.TooltipContainer, {
                         className: N.tooltip,
-                        text: r.join(', '),
+                        text: a.join(', '),
                         position: 'bottom',
-                        children: a
+                        children: r
                     })),
                 (0, i.jsxs)(
                     l.Fragment,
                     {
-                        children: [0 !== t ? ', ' : null, a]
+                        children: [0 !== t ? ', ' : null, r]
                     },
                     t
                 )
@@ -83,7 +83,7 @@ class S {
                 'generateNicknameGuildPairs',
                 (0, x.oH)((e) => {
                     var t;
-                    return a()(f.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
+                    return r()(f.ZP.getNicknameGuildsMapping(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : this.userId))
                         .toPairs()
                         .map((e) => {
                             let [t, n] = e;
@@ -137,36 +137,36 @@ class S {
 function T(e) {
     let { channel: t } = e,
         n = t.getRecipientId(),
-        r = (0, p.gc)(n),
-        a = Array(r.length).fill(null),
+        a = (0, p.gc)(n),
+        r = Array(a.length).fill(null),
         { analyticsLocations: m } = (0, u.ZP)(d.Z.AKA),
         f = (function (e) {
             let { userId: t, channelId: n, analyticsLocations: i } = e,
-                r = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
-                [a] = l.useState(
+                a = (0, s.e7)([C.default], () => C.default.getUser(t), [t]),
+                [r] = l.useState(
                     () =>
                         new S({
-                            user: r,
+                            user: a,
                             userId: t,
                             channelId: n,
                             analyticsLocations: i
                         })
                 );
             return (
-                a.updateData({
+                r.updateData({
                     userId: t,
-                    user: r,
+                    user: a,
                     channelId: n,
                     analyticsLocations: i
                 }),
-                a
+                r
             );
         })({
             userId: n,
             analyticsLocations: m,
             channelId: t.id
         });
-    return 0 === f.getNicknameGuildPairs().length && 0 === r.length
+    return 0 === f.getNicknameGuildPairs().length && 0 === a.length
         ? (0, i.jsx)('div', { className: N.spacer })
         : (0, i.jsxs)(u.Gt, {
               value: m,
@@ -177,16 +177,16 @@ function T(e) {
                       disableColor: !0,
                       className: N.akaBadge
                   }),
-                  r.length > 0
+                  a.length > 0
                       ? (0, i.jsx)(c.Z, {
                             size: 16,
-                            users: a,
+                            users: r,
                             showUserPopout: !1,
                             renderUser: (e, t, n) => {
                                 var l;
-                                let a = f.user,
-                                    s = r[n];
-                                return null == s || null == a
+                                let r = f.user,
+                                    s = a[n];
+                                return null == s || null == r
                                     ? null
                                     : (0, i.jsx)(
                                           o.TooltipContainer,
@@ -197,7 +197,7 @@ function T(e) {
                                                   alt: '',
                                                   className: N.avatar,
                                                   onClick: f.handleClick,
-                                                  src: a.getAvatarURL(s, 16),
+                                                  src: r.getAvatarURL(s, 16),
                                                   'aria-hidden': !0
                                               })
                                           },

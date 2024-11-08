@@ -31,8 +31,8 @@ var i,
     f = n(351402),
     I = n(975060),
     N = n(505649),
-    b = n(358085),
-    A = n(622999),
+    A = n(358085),
+    b = n(622999),
     v = n(462566),
     j = n(801937),
     O = n(282164),
@@ -82,7 +82,7 @@ class z extends l.PureComponent {
     }
     async componentDidMount() {
         x.eI();
-        let e = await (0, A.d2)();
+        let e = await (0, b.d2)();
         this.setState({ stripe: e });
     }
     componentWillUnmount() {
@@ -299,7 +299,7 @@ class z extends l.PureComponent {
                 payment_type: {
                     renderBody: () =>
                         (0, r.jsx)(j.Z, {
-                            allowStripeRequestPayments: !b.isPlatformEmbedded,
+                            allowStripeRequestPayments: !A.isPlatformEmbedded,
                             onChooseType: this.handleChooseType,
                             onStripePaymentMethodReceived: this.handleStripePaymentMethod
                         })

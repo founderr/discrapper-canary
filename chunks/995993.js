@@ -19,8 +19,8 @@ var i = n(200651),
     g = n(709054),
     C = n(540126),
     _ = n(434479),
-    x = n(981631),
-    v = n(176505),
+    v = n(981631),
+    x = n(176505),
     I = n(490897),
     b = n(388032),
     S = n(360110);
@@ -39,7 +39,7 @@ function Z(e) {
             return null != e && e > i;
         }),
         A = l.useCallback(() => {
-            (0, f.uL)(x.Z5c.CHANNEL(t.id, N ? v.oC.CUSTOMIZE_COMMUNITY : v.oC.CHANNEL_BROWSER));
+            (0, f.uL)(v.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         M = l.useCallback(
             (e) => {

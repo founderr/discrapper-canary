@@ -44,7 +44,7 @@ function C(e) {
             [t]
         ),
         _ = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        x = (0, i.jsxs)('div', {
+        v = (0, i.jsxs)('div', {
             className: g.tooltipContainer,
             children: [
                 (0, i.jsx)('div', {
@@ -61,17 +61,17 @@ function C(e) {
                 })
             ]
         }),
-        v = (0, c.Fg)();
+        x = (0, c.Fg)();
     return (0, i.jsxs)(d.H, {
         children: [
             (0, i.jsx)(a.ThemeContextProvider, {
                 theme: f.BRd.DARK,
                 children: (0, i.jsx)(h.Z, {
-                    text: x,
+                    text: v,
                     tooltipClass: g.tooltip,
                     tooltipContentClass: g.tooltipContent,
                     children: (0, i.jsx)(a.ThemeContextProvider, {
-                        theme: v,
+                        theme: x,
                         children: (0, i.jsx)(a.BlobMask, {
                             lowerBadge: (0, i.jsx)(a.NumberBadge, {
                                 count: 1,

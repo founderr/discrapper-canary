@@ -48,9 +48,9 @@ function A(e) {
             };
         }),
         y = r.useMemo(() => (0, f.D)(b), [b]),
-        [L, j] = r.useState(window.innerWidth),
-        R = Number(A.currentStep) >= S.IS.THANK_YOU_END,
-        [O, P] = r.useState(R ? 0 : 1),
+        [L, R] = r.useState(window.innerWidth),
+        j = Number(A.currentStep) >= S.IS.THANK_YOU_END,
+        [O, P] = r.useState(j ? 0 : 1),
         D = (0, _.f)(),
         M = (0, d.useSpring)(
             {
@@ -59,7 +59,7 @@ function A(e) {
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(R, {
+        w = (0, d.useTransition)(j, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -84,9 +84,9 @@ function A(e) {
         });
     }, [t, A.currentStep]),
         r.useEffect(() => {
-            let e = (0, h.pP)((0, s.debounce)(() => j(window.innerWidth), 250));
+            let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
-        }, [O, R]);
+        }, [O, j]);
     let U = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
         G = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, f.D)(b).find((e) => e.hasError) : null), [b]),
         B = r.useCallback(() => {
@@ -99,8 +99,8 @@ function A(e) {
             H(), n();
         }, [H, n]),
         F = r.useCallback(() => {
-            R && H(), n();
-        }, [R, n, H]),
+            j && H(), n();
+        }, [j, n, H]),
         z = r.useRef(null),
         Y =
             null != G
@@ -171,7 +171,7 @@ function A(e) {
                                         guildId: t,
                                         progress: A,
                                         updateCurrentStep: k,
-                                        animationClassName: a()({ [T.hidden]: R }),
+                                        animationClassName: a()({ [T.hidden]: j }),
                                         inSettings: !1
                                     })
                                 })
@@ -179,21 +179,21 @@ function A(e) {
                         }),
                         (0, i.jsx)(o.animated.div, {
                             className: a()(T.divider, {
-                                [T.hidden]: R,
-                                [T.dividerResponsive]: !R
+                                [T.hidden]: j,
+                                [T.dividerResponsive]: !j
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
                             style: M,
                             className: a()(T.sidebar, {
-                                [T.sidebarResponsive]: !R,
-                                [T.sidebarHidden]: R
+                                [T.sidebarResponsive]: !j,
+                                [T.sidebarHidden]: j
                             }),
                             children: (0, i.jsx)(v.Z, {
                                 guildId: t,
                                 signed: !1,
                                 setSigned: void 0,
-                                sidebarWidth: R ? 0 : 380,
+                                sidebarWidth: j ? 0 : 380,
                                 windowWidth: L,
                                 brandPrimaryColor: A.brandPrimaryColor
                             })
@@ -217,7 +217,7 @@ function A(e) {
                                     (0, i.jsx)(E.Z, {
                                         ...e,
                                         themeColor: A.brandPrimaryColor,
-                                        disabled: !R || U,
+                                        disabled: !j || U,
                                         submitting: Z,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,

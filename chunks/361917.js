@@ -42,8 +42,8 @@ var i = t(200651),
     U = t(981631),
     B = t(689079),
     w = t(388032),
-    H = t(450586);
-let D = [],
+    D = t(450586);
+let H = [],
     V = [, , , ,].fill(0).map((e, n) => n),
     W = [
         {
@@ -84,7 +84,7 @@ function F(e) {
         }, [t]);
     let L = a.length > 0;
     return (0, i.jsxs)('div', {
-        className: H.container,
+        className: D.container,
         children: [
             T ? (0, i.jsx)(G, {}) : null,
             (0, i.jsx)(z, {
@@ -94,7 +94,7 @@ function F(e) {
             }),
             (0, i.jsx)(d.Scroller, {
                 ref: r,
-                className: H.scrollableContent,
+                className: D.scrollableContent,
                 fade: !0,
                 children: L
                     ? (0, i.jsx)(O.Z, {
@@ -140,10 +140,10 @@ function F(e) {
 }
 function G() {
     return (0, i.jsxs)('div', {
-        className: H.developerShelfControlsContainer,
+        className: D.developerShelfControlsContainer,
         children: [
             (0, i.jsx)(d.Text, {
-                className: H.developerShelfControlsLabel,
+                className: D.developerShelfControlsLabel,
                 variant: 'text-sm/normal',
                 children: w.intl.string(w.t.tZ3FNj)
             }),
@@ -205,7 +205,7 @@ function z(e) {
             );
         }, [s, p]),
         (0, i.jsx)('div', {
-            className: H.searchBarContainer,
+            className: D.searchBarContainer,
             children: (0, i.jsx)(d.SearchBar, {
                 ref: (e) => {
                     var n;
@@ -288,9 +288,9 @@ function Y(e) {
                       onClickViewButton: p
                   }),
                   (0, i.jsx)('div', {
-                      className: H.sectionContentContainer,
+                      className: D.sectionContentContainer,
                       children: (0, i.jsx)('div', {
-                          className: H.frecentList,
+                          className: D.frecentList,
                           children: m.map((e, t) => {
                               let { application: l } = e;
                               return o
@@ -349,7 +349,7 @@ function X(e) {
                       children: (0, i.jsx)(Z.Z, { title: w.intl.string(w.t.shUONj) })
                   }),
                   (0, i.jsx)('div', {
-                      className: H.sectionTwoColumnContentContainer,
+                      className: D.sectionTwoColumnContentContainer,
                       children: a.map((e, t) => {
                           let { application: l } = e;
                           return (0, i.jsx)(
@@ -405,7 +405,7 @@ function q(e) {
                       })
                   }),
                   (0, i.jsx)('div', {
-                      className: H.sectionRowsContentContainer,
+                      className: D.sectionRowsContentContainer,
                       children: r
                           ? V.map((e) => (0, i.jsx)(L.Z, { look: T.U4.ROW }, e))
                           : s.map((e, n) => {
@@ -482,7 +482,7 @@ function J(e) {
             (0, f.g)();
             let i = (0, h.Z)({ guildId: n.getGuildId() });
             return l.useMemo(() => {
-                if (!t.some((e) => e.appends_remaining_activities)) return D;
+                if (!t.some((e) => e.appends_remaining_activities)) return H;
                 let e = new Set();
                 return (
                     t.forEach((n) => {
@@ -514,7 +514,7 @@ function J(e) {
                                 children: [
                                     (0, i.jsx)(Z.Z.Loading, {}),
                                     (0, i.jsx)('div', {
-                                        className: l === T.U4.ROW ? H.sectionRowsContentContainer : H.sectionTwoColumnContentContainer,
+                                        className: l === T.U4.ROW ? D.sectionRowsContentContainer : D.sectionTwoColumnContentContainer,
                                         children: t.map((e) => (0, i.jsx)(L.Z, { look: l }, e))
                                     })
                                 ]
@@ -608,7 +608,7 @@ function Q(e) {
                 })
             }),
             (0, i.jsx)('div', {
-                className: n === T.U4.ROW ? H.sectionRowsContentContainer : H.sectionTwoColumnContentContainer,
+                className: n === T.U4.ROW ? D.sectionRowsContentContainer : D.sectionTwoColumnContentContainer,
                 children: p.map((e, t) => {
                     let { application: l, installOnDemand: a } = e;
                     return (0, i.jsx)(

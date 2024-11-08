@@ -10,8 +10,8 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    r = n(192379),
-    a = n(392711),
+    a = n(192379),
+    r = n(392711),
     s = n(442837),
     o = n(638730),
     c = n(358221),
@@ -21,9 +21,9 @@ var i,
     p = n(501655);
 function m(e) {
     let t = (0, h.Rk)(e, p.pV.AUDIENCE),
-        [n, i] = r.useState(!1);
+        [n, i] = a.useState(!1);
     return (
-        r.useEffect(() => {
+        a.useEffect(() => {
             t > 100 ? i(!0) : t < 75 && i(!1);
         }, [t]),
         n ? 5000 : 0
@@ -34,8 +34,8 @@ function f(e, t, n) {
         l = (function (e, t, n) {
             let i = (0, s.e7)([u.Z], () => [e, u.Z.getParticipantsVersion(e)], [e], d.Q),
                 l = (0, s.e7)([c.Z], () => c.Z.getSelectedParticipantId(e), [e]);
-            return r.useMemo(() => {
-                let r = [],
+            return a.useMemo(() => {
+                let a = [],
                     s = [],
                     o = -1,
                     c = [];
@@ -45,8 +45,8 @@ function f(e, t, n) {
                         else break;
                 let d = (e, t, n) => {
                         let i = n ? e.filter((e, t) => e.id !== l && t > o) : e,
-                            c = (0, a.chunk)(i, t);
-                        s.push(c), r.push(c.length);
+                            c = (0, r.chunk)(i, t);
+                        s.push(c), a.push(c.length);
                     },
                     h = null != l ? u.Z.getParticipant(e, l) : null;
                 return (
@@ -55,7 +55,7 @@ function f(e, t, n) {
                         d(u.Z.getMutableParticipants(i[0], e), t[e], e === p.pV.SPEAKER);
                     }),
                     d(c, 1, !1),
-                    [r, s]
+                    [a, s]
                 );
             }, [i, t, l, n, e]);
         })(e, t, i),

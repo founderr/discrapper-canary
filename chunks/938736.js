@@ -1,155 +1,155 @@
-n.d(t, {
+s.d(t, {
     $s: function () {
-        return I;
+        return O;
     },
     AV: function () {
-        return f;
+        return x;
     },
     Hg: function () {
-        return S;
+        return T;
     },
     Kn: function () {
-        return N;
+        return A;
     },
     Nq: function () {
-        return g;
+        return p;
     },
     Q_: function () {
-        return m;
+        return f;
     },
     TW: function () {
         return h;
     },
     bD: function () {
-        return _;
+        return g;
     },
     pn: function () {
-        return E;
+        return _;
     },
     uv: function () {
-        return C;
+        return v;
     },
     vx: function () {
-        return x;
+        return m;
     },
     wG: function () {
-        return T;
+        return E;
     }
 });
-var i = n(442837),
-    r = n(704215),
-    a = n(605236),
-    s = n(276444),
-    l = n(822070),
-    o = n(520540),
-    c = n(898997),
-    d = n(981631),
-    u = n(388032);
-let g = '40%',
-    m = 3,
-    f = 8,
-    p = (e) => {
-        let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: i, helpdeskArticle: r } = e;
+var n = s(442837),
+    r = s(704215),
+    i = s(605236),
+    o = s(276444),
+    a = s(822070),
+    l = s(520540),
+    c = s(898997),
+    d = s(981631),
+    u = s(388032);
+let p = '40%',
+    f = 3,
+    x = 8,
+    C = (e) => {
+        let { hasSentAll: t, hasSentAtLeastOne: s, numSentUsers: n, helpdeskArticle: r } = e;
         return t
             ? u.intl.format(u.t['3OYZMT'], { helpdeskArticle: r })
-            : n
+            : s
               ? u.intl.format(u.t.EkWiZm, {
-                    numFriends: m - i,
+                    numFriends: f - n,
                     helpdeskArticle: r
                 })
               : u.intl.format(u.t.FjrXCg, {
-                    numFriends: m,
+                    numFriends: f,
                     helpdeskArticle: r
                 });
     },
-    _ = (e) => {
-        let { enabled: t, eligibleToFetch: n } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
-        (0, c.B)(e, !n);
-        let r = (0, i.e7)([s.Z], () => s.Z.getIsEligibleToSendReferrals());
+    g = (e) => {
+        let { enabled: t, eligibleToFetch: s } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 });
+        (0, c.B)(e, !s);
+        let r = (0, n.e7)([o.Z], () => o.Z.getIsEligibleToSendReferrals());
         return t && r;
     },
     h = (e) => {
-        let t = C(e);
+        let t = v(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    E = (e) => {
+    _ = (e) => {
         let t = h(e),
-            n = _('PremiumManagementSettings'),
-            r = (0, i.e7)([s.Z], () => s.Z.getRecipientStatus());
+            s = g('PremiumManagementSettings'),
+            r = (0, n.e7)([o.Z], () => o.Z.getRecipientStatus());
         if (!t) return !1;
-        if (!n) return !!(r.size > 0) || !1;
+        if (!s) return !!(r.size > 0) || !1;
         return !0;
     },
-    x = (e) => {
-        let t = b(e),
-            n = (0, a.wE)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
-        return t && !n;
+    m = (e) => {
+        let t = L(e),
+            s = (0, i.wE)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR);
+        return t && !s;
     },
-    b = (e) => {
-        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, i.e7)([s.Z], () => s.Z.getIsSenderEligibleForIncentive());
-        return t && n && r;
-    },
-    C = (e) => {
-        let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
-            r = (0, i.e7)([s.Z], () => s.Z.getIsFetchingReferralIncentiveEligibility()),
-            a = (0, i.e7)([s.Z], () => s.Z.getSenderIncentiveState());
-        return r ? d.g2L.NOT_ELIGIBLE : n && t ? a : d.g2L.NOT_ELIGIBLE;
+    L = (e) => {
+        let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: s } = a.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+            r = (0, n.e7)([o.Z], () => o.Z.getIsSenderEligibleForIncentive());
+        return t && s && r;
     },
     v = (e) => {
-        let t = C(e);
+        let { enabled: t } = l.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: s } = a.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
+            r = (0, n.e7)([o.Z], () => o.Z.getIsFetchingReferralIncentiveEligibility()),
+            i = (0, n.e7)([o.Z], () => o.Z.getSenderIncentiveState());
+        return r ? d.g2L.NOT_ELIGIBLE : s && t ? i : d.g2L.NOT_ELIGIBLE;
+    },
+    j = (e) => {
+        let t = v(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
-    T = (e) => {
-        let t = v(e),
-            n = (0, a.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
-        return t && !n;
+    E = (e) => {
+        let t = j(e),
+            s = (0, i.wE)(r.z.REFERRAL_INCENTIVE_AWARDED_INFO);
+        return t && !s;
     },
-    N = (e) => {
+    A = (e) => {
         let t = h(e),
-            n = _(e),
-            i = (0, a.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
-        return !t && n && !i;
+            s = g(e),
+            n = (0, i.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
+        return !t && s && !n;
     },
-    I = (e) => {
-        let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: i } = e;
+    O = (e) => {
+        let { referralIncentiveLifecycleState: t, hasSentAll: s, referralsStatuses: n } = e;
         switch (t) {
             case d.g2L.NOT_ELIGIBLE:
-                return n ? u.intl.string(u.t.M47CJS) : u.intl.string(u.t.USo4s7);
+                return s ? u.intl.string(u.t.M47CJS) : u.intl.string(u.t.USo4s7);
             case d.g2L.ELIGIBLE:
-                if (i.sent < 2) return u.intl.formatToPlainString(u.t.md2GU1, { discountRate: g });
-                if (i.redeemed === m) return u.intl.string(u.t.SRJkUV);
-                return u.intl.formatToPlainString(u.t.O8mswM, { discountRate: g });
+                if (n.sent < 2) return u.intl.formatToPlainString(u.t.md2GU1, { discountRate: p });
+                if (n.redeemed === f) return u.intl.string(u.t.SRJkUV);
+                return u.intl.formatToPlainString(u.t.O8mswM, { discountRate: p });
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                return i.redeemed === m ? u.intl.string(u.t.SRJkUV) : u.intl.string(u.t.MoKnzc);
+                return n.redeemed === f ? u.intl.string(u.t.SRJkUV) : u.intl.string(u.t.MoKnzc);
         }
     },
-    S = (e) => {
-        let { helpdeskArticle: t, referralIncentiveLifecycleState: n, referralsStatuses: i, isWithinCountdownRange: r } = e;
-        switch (n) {
+    T = (e) => {
+        let { helpdeskArticle: t, referralIncentiveLifecycleState: s, referralsStatuses: n, isWithinCountdownRange: r } = e;
+        switch (s) {
             case d.g2L.NOT_ELIGIBLE:
-                return p({
-                    hasSentAll: i.sent >= m,
-                    hasSentAtLeastOne: i.sent >= 1,
-                    numSentUsers: i.sent,
+                return C({
+                    hasSentAll: n.sent >= f,
+                    hasSentAtLeastOne: n.sent >= 1,
+                    numSentUsers: n.sent,
                     helpdeskArticle: t
                 });
             case d.g2L.ELIGIBLE:
-                let a = {
-                    discountRate: g,
+                let i = {
+                    discountRate: p,
                     learnMoreLink: t,
                     subscriptionInterval: u.intl.string(u.t.FPybU1)
                 };
-                if (i.redeemed <= 1) return u.intl.format(u.t.nysttb, a);
-                return u.intl.format(u.t.nHuzUF, a);
+                if (n.redeemed <= 1) return u.intl.format(u.t.nysttb, i);
+                return u.intl.format(u.t.nHuzUF, i);
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                if (i.redeemed < m) return u.intl.format(u.t.HGO89v, { learnMoreLink: t });
+                if (n.redeemed < f) return u.intl.format(u.t.HGO89v, { learnMoreLink: t });
                 if (!r)
                     return u.intl.format(u.t.iGlQKi, {
                         learnMoreLink: t,

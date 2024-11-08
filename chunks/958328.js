@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return _;
     }
 });
 var r = n(200651);
@@ -9,8 +9,8 @@ var a = n(120356),
     l = n.n(a),
     i = n(149765),
     o = n(442837),
-    s = n(481060),
-    c = n(933557),
+    c = n(481060),
+    s = n(933557),
     d = n(592125),
     u = n(430824),
     h = n(496675),
@@ -22,7 +22,7 @@ var a = n(120356),
     b = n(986310);
 function v(e) {
     let { title: t, can: n } = e,
-        a = n ? s.CheckmarkLargeIcon : s.XSmallIcon,
+        a = n ? c.CheckmarkLargeIcon : c.XSmallIcon,
         i = (0, r.jsx)('div', {
             className: l()(g.iconOuter, n ? g.iconCheck : g.iconCross),
             children: (0, r.jsx)(a, { className: g.icon })
@@ -33,7 +33,7 @@ function v(e) {
             i,
             (0, r.jsx)('div', {
                 className: g.scopeInner,
-                children: (0, r.jsx)(s.Text, {
+                children: (0, r.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
@@ -41,19 +41,19 @@ function v(e) {
         ]
     });
 }
-function j() {
+function _() {
     let e = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
         t = (0, o.e7)([x.Z], () => x.Z.getGuildId()),
         n = (0, o.e7)([d.Z], () => d.Z.getChannel(e)),
         a = (0, o.e7)([u.Z], () => u.Z.getGuild(t)),
-        j = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
-        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
-        C = (0, c.ZP)(n, !0),
+        _ = (0, o.e7)([h.Z], () => h.Z.computePermissions(n)),
+        C = (0, o.e7)([h.Z], () => h.Z.computePermissions(a)),
+        j = (0, s.ZP)(n, !0),
         T = null != n ? (0, p.IG)(n, !1, !0) : null,
         S = null != a ? f.Z.getGuildPermissionSpecMap(a) : null,
         N = Object.values(null != T ? T : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(j, n);
+                a = i.e$(_, n);
             return (0, r.jsx)(
                 v,
                 {
@@ -65,7 +65,7 @@ function j() {
         }),
         y = Object.values(null != S ? S : {}).map((e) => {
             let { title: t, flag: n } = e,
-                a = i.e$(_, n);
+                a = i.e$(C, n);
             return (0, r.jsx)(
                 v,
                 {
@@ -83,9 +83,9 @@ function j() {
                 (0, r.jsxs)('section', {
                     className: g.section,
                     children: [
-                        (0, r.jsx)(s.Heading, {
+                        (0, r.jsx)(c.Heading, {
                             variant: 'heading-md/semibold',
-                            children: null != C ? 'Permissions in '.concat(C) : 'No channel selected'
+                            children: null != j ? 'Permissions in '.concat(j) : 'No channel selected'
                         }),
                         N
                     ]
@@ -93,7 +93,7 @@ function j() {
                 (0, r.jsxs)('section', {
                     className: g.section,
                     children: [
-                        (0, r.jsx)(s.Heading, {
+                        (0, r.jsx)(c.Heading, {
                             variant: 'heading-md/semibold',
                             children: null != a ? 'Permissions in '.concat(a.name) : 'No guild selected'
                         }),

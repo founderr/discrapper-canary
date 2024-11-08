@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(768581),
     C = n(823379),
     _ = n(51144),
-    x = n(668930);
-let v = d.u.SIZE_24;
+    v = n(668930);
+let x = d.u.SIZE_24;
 function I(e) {
     var t, n;
     let { activity: r, user: a, embeddedApp: o, onOpenSpotifyAlbum: u } = e,
@@ -42,14 +42,14 @@ function I(e) {
                           (0, i.jsx)('img', {
                               alt: n,
                               src: t,
-                              className: x.applicationLargeImage
+                              className: v.applicationLargeImage
                           })
                   });
               })(o)
             : null;
     let p = null !== (t = d.large_image) && void 0 !== t ? t : d.small_image,
         f = (0, c.Z)(r),
-        C = f ? x.spotifyLargeImage : x.applicationLargeImage,
+        C = f ? v.spotifyLargeImage : v.applicationLargeImage,
         _ =
             null != p
                 ? (0, i.jsx)('img', {
@@ -60,7 +60,7 @@ function I(e) {
                 : null;
     return f && null != u
         ? ((_ = (0, i.jsx)(s.Clickable, {
-              className: x.clickable,
+              className: v.clickable,
               onClick: () => {
                   u(r, a.id);
               },
@@ -86,7 +86,7 @@ function b(e) {
         if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == r || null == l) return null;
         (a = r),
             (o = (0, i.jsx)(s.Clickable, {
-                className: x.headerLink,
+                className: v.headerLink,
                 onClick: () => {
                     l(t);
                 },
@@ -95,7 +95,7 @@ function b(e) {
     }
     return (0, i.jsx)(h.Z, {
         title: a,
-        className: x.header,
+        className: v.header,
         children: o
     });
 }
@@ -112,7 +112,7 @@ function S(e) {
                 p.Z,
                 {
                     artists: o,
-                    linkClassName: x.bodyLink,
+                    linkClassName: v.bodyLink,
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         null == l || l(t, n.id, e);
@@ -124,7 +124,7 @@ function S(e) {
     null == s || '' === s)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(x.ellipsisRow, x.colorHeaderSecondary, x.bodyTextSize),
+              className: a()(v.ellipsisRow, v.colorHeaderSecondary, v.bodyTextSize),
               children: s
           });
 }
@@ -134,7 +134,7 @@ function Z(e) {
     return null == n || '' === n || (0, c.Z)(t)
         ? null
         : (0, i.jsx)('div', {
-              className: a()(x.ellipsisRow, x.colorHeaderSecondary, x.bodyTextSize, x.__invalid_activity),
+              className: a()(v.ellipsisRow, v.colorHeaderSecondary, v.bodyTextSize, v.__invalid_activity),
               children: n
           });
 }
@@ -147,7 +147,7 @@ function N(e) {
     return (0, i.jsx)(u.Z, {
         start: l,
         end: r,
-        className: x.timeBar,
+        className: v.timeBar,
         themed: !0,
         singleLine: !0
     });
@@ -172,10 +172,10 @@ function E(e) {
         }, [u, y]);
     return y
         ? (0, i.jsxs)('div', {
-              className: x.flexColumn,
+              className: v.flexColumn,
               children: [
                   (0, i.jsxs)('div', {
-                      className: x.flexRow,
+                      className: v.flexRow,
                       children: [
                           (0, i.jsx)(I, {
                               activity: t,
@@ -184,7 +184,7 @@ function E(e) {
                               onOpenSpotifyAlbum: m
                           }),
                           (0, i.jsxs)('div', {
-                              className: x.detailsAndAvatarsContainer,
+                              className: v.detailsAndAvatarsContainer,
                               children: [
                                   (0, i.jsx)(b, {
                                       activity: t,
@@ -199,10 +199,10 @@ function E(e) {
                                   (0, i.jsx)(Z, { activity: t }),
                                   g.length > 0 &&
                                       (0, i.jsx)(d.Z, {
-                                          className: x.usersSummary,
+                                          className: v.usersSummary,
                                           guildId: a.guild_id,
                                           users: E,
-                                          size: v,
+                                          size: x,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
@@ -217,9 +217,9 @@ function E(e) {
                                                       children: (0, i.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(a.guild_id, v),
+                                                              src: e.getAvatarURL(a.guild_id, x),
                                                               alt: l,
-                                                              className: x.avatar
+                                                              className: v.avatar
                                                           },
                                                           e.id
                                                       )

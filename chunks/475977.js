@@ -59,15 +59,15 @@ t.Z = () => {
     let { analyticsLocations: n } = (0, m.ZP)(u.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         r = s.useRef(null),
         I = (0, x.ZP)('CollectiblesUpsellBanner'),
-        b = (0, c.e7)([p.Z], () => p.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
+        A = (0, c.e7)([p.Z], () => p.Z.getMarketingBySurface(a.K.EDIT_PROFILE_SETTINGS));
     return (
         (t =
-            (null == b ? void 0 : b.type) === o.Z.BANNER
+            (null == A ? void 0 : A.type) === o.Z.BANNER
                 ? {
-                      artSrc: b.popoutAsset,
-                      backgroundSrc: b.asset,
-                      title: () => b.title,
-                      description: () => b.body
+                      artSrc: A.popoutAsset,
+                      backgroundSrc: A.asset,
+                      title: () => A.title,
+                      description: () => A.body
                   }
                 : S.GX[I]),
         s.useEffect(() => {

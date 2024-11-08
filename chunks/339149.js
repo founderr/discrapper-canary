@@ -22,8 +22,8 @@ var i,
     g = n(417363),
     C = n(941128),
     _ = n(780570),
-    x = n(353042),
-    v = n(981631),
+    v = n(353042),
+    x = n(981631),
     I = n(388032),
     b = n(757937);
 function S(e, t, n) {
@@ -40,7 +40,7 @@ function S(e, t, n) {
     );
 }
 let Z = {
-    [v.vxO.INSTALLING]: {
+    [x.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
@@ -58,7 +58,7 @@ let Z = {
                 timeRemaining: t
             })
     },
-    [v.vxO.UPDATING]: {
+    [x.vxO.UPDATING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['6F9QzM'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['2OVgVl'], {
@@ -76,7 +76,7 @@ let Z = {
                 timeRemaining: t
             })
     },
-    [v.vxO.REPAIRING]: {
+    [x.vxO.REPAIRING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
             I.intl.formatToPlainString(I.t['/0NgPD'], {
@@ -98,10 +98,10 @@ let Z = {
 class N extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === v.vxO.UPDATING || e.type === v.vxO.REPAIRING || e.type === v.vxO.INSTALLING) {
+        if (e.type === x.vxO.UPDATING || e.type === x.vxO.REPAIRING || e.type === x.vxO.INSTALLING) {
             if (t) return I.intl.string(I.t['5oxtFR']);
-            if (e.stage === v.f07.PATCHING || e.stage === v.f07.REPAIRING)
-                return (0, l.jsx)(x.Z, {
+            if (e.stage === x.f07.PATCHING || e.stage === x.f07.REPAIRING)
+                return (0, l.jsx)(v.Z, {
                     getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
@@ -189,7 +189,7 @@ class E extends (i = r.PureComponent) {
             S(this, 'state', { animationScale: new s.Z.Value(0) }),
             S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(v.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, m.uL)(x.Z5c.APPLICATION_LIBRARY);
             });
     }
 }

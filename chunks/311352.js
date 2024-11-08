@@ -15,13 +15,13 @@ var l = n(399606),
     g = n(981631),
     C = n(388032),
     _ = n(499410);
-function x(e) {
+function v(e) {
     (0, o.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function v() {
+function x() {
     (0, m.C1)();
 }
 let I = (e) => {
@@ -94,8 +94,8 @@ t.Z = () => {
         children: (0, i.jsx)(c.Z, {
             disabled: r,
             tooltipText: null != o ? C.intl.formatToPlainString(C.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : C.intl.string(C.t.s52pjo),
-            onClick: v,
-            onContextMenu: x,
+            onClick: x,
+            onContextMenu: v,
             icon: a.ClipsIcon
         })
     });

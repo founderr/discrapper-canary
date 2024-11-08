@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i,
     l,
-    r = n(200651),
-    a = n(192379),
+    a = n(200651),
+    r = n(192379),
     s = n(120356),
     o = n.n(s),
     c = n(100621),
@@ -42,20 +42,20 @@ function _(e) {
             assetNames: x,
             commandOrigin: I
         }),
-        [S, T] = a.useState(!1),
-        j = a.useCallback(() => {
+        [S, T] = r.useState(!1),
+        j = r.useCallback(() => {
             T(!0);
         }, [T]),
-        A = a.useCallback(() => {
+        A = r.useCallback(() => {
             T(!1);
         }, [T]),
-        y = a.useMemo(
+        y = r.useMemo(
             () =>
-                (0, r.jsx)('div', {
+                (0, a.jsx)('div', {
                     className: C.overlayBadge,
-                    children: (0, r.jsx)('div', {
+                    children: (0, a.jsx)('div', {
                         className: C.badgeContainer,
-                        children: (0, r.jsx)(p.Z, {
+                        children: (0, a.jsx)(p.Z, {
                             name: i.application.name,
                             labelType: Z
                         })
@@ -63,14 +63,14 @@ function _(e) {
                 }),
             [i.application.name, Z]
         ),
-        P = a.useMemo(() => {
+        P = r.useMemo(() => {
             switch (N) {
                 case u.JS.JOIN:
-                    return (0, r.jsx)('div', {
+                    return (0, a.jsx)('div', {
                         className: C.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, a.jsx)('div', {
                             className: C.activityActionButton,
-                            children: (0, r.jsx)(d.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: g.intl.string(g.t.VJlc0d)
@@ -78,11 +78,11 @@ function _(e) {
                         })
                     });
                 case u.JS.LEAVE:
-                    return (0, r.jsx)('div', {
+                    return (0, a.jsx)('div', {
                         className: C.activityAction,
-                        children: (0, r.jsx)('div', {
+                        children: (0, a.jsx)('div', {
                             className: o()(C.activityActionButton, C.activityActionButtonDanger),
-                            children: (0, r.jsx)(d.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: g.intl.string(g.t['wH/wDA'])
@@ -91,10 +91,10 @@ function _(e) {
                     });
                 case u.JS.START:
                 default:
-                    return (0, r.jsx)(r.Fragment, {});
+                    return (0, a.jsx)(a.Fragment, {});
             }
         }, [N]);
-    return (0, r.jsx)(d.Button, {
+    return (0, a.jsx)(d.Button, {
         onClick: E,
         color: 'transparent',
         look: d.Button.Looks.BLANK,
@@ -104,16 +104,16 @@ function _(e) {
         onMouseEnter: j,
         onMouseLeave: A,
         innerClassName: C.activityItemButtonInnerClass,
-        children: (0, r.jsx)(d.Spring, {
+        children: (0, a.jsx)(d.Spring, {
             config: v,
             from: { value: 0 },
             to: { value: S ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
-                return (0, r.jsx)(d.ThemeProvider, {
+                return (0, a.jsx)(d.ThemeProvider, {
                     theme: f.BRd.DARK,
                     children: (e) =>
-                        (0, r.jsx)(c.animated.div, {
+                        (0, a.jsx)(c.animated.div, {
                             className: o()(e, C.activityItem, _, {
                                 [C.activityItem_13_11]: 0 === s,
                                 [C.activityItem_16_9]: 1 === s
@@ -121,9 +121,9 @@ function _(e) {
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
                             },
-                            children: (0, r.jsxs)(r.Fragment, {
+                            children: (0, a.jsxs)(a.Fragment, {
                                 children: [
-                                    (0, r.jsx)(h.Z, {
+                                    (0, a.jsx)(h.Z, {
                                         imageBackground: b,
                                         applicationName: i.application.name,
                                         imageClassName: C.activitySuggestionImage,

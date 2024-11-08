@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(420660),
     C = n(385499),
     _ = n(570908),
-    x = n(702321),
-    v = n(201895),
+    v = n(702321),
+    x = n(201895),
     I = n(43267),
     b = n(933557),
     S = n(979264),
@@ -84,7 +84,7 @@ let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
         });
 class Q extends l.Component {
     render() {
-        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: f, className: m, role: g, 'aria-posinset': C, 'aria-setsize': x, ...v } = this.props;
+        let { route: e, selected: t, icon: n, iconClassName: l, avatarWithTextClassName: r, interactiveClassName: o, text: s, children: u, locationState: h, onClick: f, className: m, role: g, 'aria-posinset': C, 'aria-setsize': v, ...x } = this.props;
         return (0, i.jsx)(E.Z, {
             className: a()(W.channel, { [W.fullWidth]: d.tq }, m),
             onClick: f,
@@ -94,7 +94,7 @@ class Q extends l.Component {
                 ...Y
             },
             'aria-posinset': C,
-            'aria-setsize': x,
+            'aria-setsize': v,
             children: (0, i.jsx)(p.Interactive, {
                 as: 'div',
                 selected: t,
@@ -105,7 +105,7 @@ class Q extends l.Component {
                         state: h
                     },
                     className: W.link,
-                    ...v,
+                    ...x,
                     children: [
                         (0, i.jsx)(_.Z, {
                             selected: t,
@@ -215,7 +215,7 @@ function J(e) {
             return t.isSystemDM()
                 ? (0, i.jsx)('div', {
                       className: W.subtext,
-                      children: (0, x.Z)(t.id) ? F.intl.string(F.t.FL5T09) : F.intl.string(F.t.NnY5lZ)
+                      children: (0, v.Z)(t.id) ? F.intl.string(F.t.FL5T09) : F.intl.string(F.t.NnY5lZ)
                   })
                 : t.isMultiUserDM()
                   ? (0, i.jsx)('div', {
@@ -277,7 +277,7 @@ function J(e) {
         eg = t.isMultiUserDM(),
         eC = t.isSystemDM(),
         e_ = (0, A.Q)(),
-        ex =
+        ev =
             eg || eC || t.type !== H.d4z.DM || (null == d ? void 0 : d.clan) == null
                 ? el
                 : (0, i.jsxs)(i.Fragment, {
@@ -325,7 +325,7 @@ function J(e) {
                             innerRef: J,
                             to: H.Z5c.CHANNEL(H.ME, t.id),
                             className: W.link,
-                            'aria-label': (0, v.ZP)({
+                            'aria-label': (0, x.ZP)({
                                 channel: t,
                                 unread: ei
                             }),
@@ -338,7 +338,7 @@ function J(e) {
                                 subText: ef(),
                                 name: (0, i.jsx)(y.Z, {
                                     tooltipClassName: W.overflowTooltip,
-                                    children: ex
+                                    children: ev
                                 }),
                                 decorators: t.isSystemDM()
                                     ? (0, i.jsx)(C.Z, {

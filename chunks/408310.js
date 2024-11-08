@@ -1,8 +1,8 @@
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(671533),
-    a = n(400251),
+    a = n(671533),
+    r = n(400251),
     s = n(388032),
     o = n(67915),
     c = n(10385),
@@ -56,7 +56,7 @@ t.Z = (e) => {
     } else
         t = (0, i.jsx)('div', {
             className: o.cardsContainer,
-            children: g.map((e) => (0, i.jsx)(a.Z, { entry: e }, e.guildId))
+            children: g.map((e) => (0, i.jsx)(r.Z, { entry: e }, e.guildId))
         });
     return (0, i.jsx)('div', {
         className: o.pageContainer,
@@ -72,7 +72,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(l.Clickable, {
                                     onClick: p,
                                     className: c.arrow,
-                                    children: (0, i.jsx)(r.Z, { direction: r.Z.Directions.LEFT })
+                                    children: (0, i.jsx)(a.Z, { direction: a.Z.Directions.LEFT })
                                 }),
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'heading-xl/semibold',

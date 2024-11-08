@@ -54,7 +54,7 @@ function _(e, t) {
         }
     );
 }
-function x(e) {
+function v(e) {
     let { name: t, targetNode: n, combine: r, below: o } = e,
         s = l.useMemo(() => _([h.eD.GUILD, h.eD.FOLDER], n, o, r), [n, o, r]),
         [{ canDrop: u, isOver: d }, p] = (0, c.L)(s),
@@ -70,7 +70,7 @@ function x(e) {
         className: a()(g.target)
     });
 }
-function v(e) {
+function x(e) {
     let { name: t, targetNode: n, onDragOverChanged: r } = e,
         [{ canDrop: o, isOver: s }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
     l.useEffect(() => {
@@ -134,13 +134,13 @@ t.ZP = l.memo(function (e) {
         className: g.wrapper,
         'aria-hidden': !0,
         children: [
-            (0, i.jsx)(x, {
+            (0, i.jsx)(v, {
                 name: t,
                 targetNode: n,
                 below: r
             }),
             o
-                ? (0, i.jsx)(v, {
+                ? (0, i.jsx)(x, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: a

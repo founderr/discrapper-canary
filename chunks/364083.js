@@ -6,15 +6,15 @@ t.d(n, {
 var r = t(192379),
     a = t(392711),
     i = t.n(a),
-    s = t(442837),
-    o = t(77498),
+    o = t(442837),
+    s = t(77498),
     l = t(308083);
 function c(e) {
     var n;
     return null !== (n = l.gQ.get(e)) && void 0 !== n ? n : 0;
 }
 function d() {
-    let e = (0, s.e7)([o.Z], () => o.Z.games),
+    let e = (0, o.e7)([s.Z], () => s.Z.games),
         n = r.useMemo(
             () =>
                 i()(e)

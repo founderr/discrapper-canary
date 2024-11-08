@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(925549),
     C = n(209613),
     _ = n(100527),
-    x = n(906732),
-    v = n(358221),
+    v = n(906732),
+    x = n(358221),
     I = n(963202),
     b = n(706590),
     S = n(940777),
@@ -174,7 +174,7 @@ function er(e) {
         p = l.useMemo(() => (n ? [] : d), [d, n]),
         g = (0, h.Wu)([T.Z, j.ZP], () => M.default.keys(T.Z.getGuilds()).filter((e) => j.ZP.isCurrentUserGuest(e))),
         C = p.concat(g),
-        $ = (0, h.e7)([v.Z], () => v.Z.isFullscreenInContext()),
+        $ = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
         ee = (0, h.e7)([T.Z], () => T.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
         ei = l.useCallback(() => en(!0), []),
@@ -204,10 +204,10 @@ function er(e) {
                 ),
             [s]
         ),
-        { analyticsLocations: ex } = (0, x.ZP)(_.Z.GUILDS_LIST),
-        { pathname: ev } = (0, c.TH)(),
-        eI = ev.startsWith(Q.Z5c.GUILD_DISCOVERY) || ev.startsWith(Q.Z5c.GLOBAL_DISCOVERY),
-        eb = ev.startsWith(Q.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        { analyticsLocations: ev } = (0, v.ZP)(_.Z.GUILDS_LIST),
+        { pathname: ex } = (0, c.TH)(),
+        eI = ex.startsWith(Q.Z5c.GUILD_DISCOVERY) || ex.startsWith(Q.Z5c.GLOBAL_DISCOVERY),
+        eb = ex.startsWith(Q.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     l.useLayoutEffect(() => {
         if (!ea.current) {
             if (0 !== s.size) {
@@ -299,8 +299,8 @@ function er(e) {
                 e.id
             )
         );
-    return (0, i.jsx)(x.Gt, {
-        value: ex,
+    return (0, i.jsx)(v.Gt, {
+        value: ev,
         children: (0, i.jsx)(m.ThemeProvider, {
             theme: o,
             children: (e) =>

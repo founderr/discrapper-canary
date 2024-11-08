@@ -32,8 +32,8 @@ var i = n(200651),
     Z = n(135864),
     y = n(372900),
     L = n(6039),
-    j = n(637853),
-    R = n(326145),
+    R = n(637853),
+    j = n(326145),
     O = n(269675),
     P = n(242601),
     D = n(416568),
@@ -175,8 +175,8 @@ let eg = 'resizable-sidebar-width',
                 default:
                     (0, et.vE)(l);
             }
-        if ((0, j.p3)(s, o))
-            return (0, i.jsx)(R.Z, {
+        if ((0, R.p3)(s, o))
+            return (0, i.jsx)(j.Z, {
                 guildId: r,
                 channelId: l
             });
@@ -235,8 +235,8 @@ let eg = 'resizable-sidebar-width',
             : null;
     },
     eL = () => (0, i.jsx)(ec.Z, {}),
-    ej = () => (0, i.jsx)(ed.Z, {}),
-    eR = function () {
+    eR = () => (0, i.jsx)(ed.Z, {}),
+    ej = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             return (0, i.jsx)(N.Z, {
@@ -489,23 +489,23 @@ function eG() {
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.APPLICATION_STORE,
-                                                    render: ej,
+                                                    render: eR,
                                                     impressionName: o.ImpressionNames.APPLICATION_STORE,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                    render: eR(!0),
+                                                    render: ej(!0),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP,
-                                                    render: eR(!1),
+                                                    render: ej(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {
                                                     path: eu.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                    render: eR(!1),
+                                                    render: ej(!1),
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(I.Z, {

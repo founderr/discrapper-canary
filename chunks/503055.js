@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(908951),
     I = n(703656),
     N = n(853872),
-    b = n(245950),
-    A = n(404203),
+    A = n(245950),
+    b = n(404203),
     v = n(330181),
     j = n(954821),
     O = n(980864),
@@ -119,7 +119,7 @@ let L = (e) => {
     };
 t.Z = (e) => {
     let { subscription: t } = e,
-        { listing: n, groupListing: r, guild: o, expanded: g, handleToggleExpanded: S, subscriptionInfo: E } = (0, b.Z)(t),
+        { listing: n, groupListing: r, guild: o, expanded: g, handleToggleExpanded: S, subscriptionInfo: E } = (0, A.Z)(t),
         [f, N] = s.useState(!1),
         M = (0, T.Dt)(),
         { analyticsLocations: k } = (0, p.ZP)(),
@@ -186,7 +186,7 @@ t.Z = (e) => {
     return (0, i.jsxs)('div', {
         className: B.container,
         children: [
-            (0, i.jsx)(A.Z, {
+            (0, i.jsx)(b.Z, {
                 onClick: S,
                 className: B.headerContainer,
                 children: (e) => {

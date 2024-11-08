@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    s = n(481060),
-    c = n(98357),
+    c = n(481060),
+    s = n(98357),
     d = n(432877),
     u = n(575731),
     h = n(986310);
@@ -22,10 +22,10 @@ function m(e) {
                 n.map((e) => {
                     let [t, n, { label: a }] = e;
                     return (0, r.jsx)(
-                        s.FormSwitch,
+                        c.FormSwitch,
                         {
                             value: n,
-                            onChange: (e) => (0, c.Z)(t, e),
+                            onChange: (e) => (0, s.Z)(t, e),
                             hideBorder: !0,
                             className: u.switch,
                             children: a

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -9,8 +9,8 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(442837),
-    s = n(481060),
-    c = n(665149),
+    c = n(481060),
+    s = n(665149),
     d = n(428530),
     u = n(484036),
     h = n(681619),
@@ -34,7 +34,7 @@ function g(e) {
                 }
             );
         }, [t, n]),
-        (0, r.jsx)(s.ScrollerThin, {
+        (0, r.jsx)(c.ScrollerThin, {
             className: f.inspectorContainer,
             children: (0, r.jsx)(d.Z, { data: l })
         })
@@ -79,7 +79,7 @@ let b = [
             }
         }
     ];
-function j(e) {
+function _(e) {
     let { store: t, initialHeight: n } = e,
         { TabBar: a, renderSelectedTab: l } = (0, m.Z)({ tabs: v }, []);
     return (0, r.jsxs)(u.Z, {
@@ -88,25 +88,25 @@ function j(e) {
         initialHeight: n,
         children: [
             (0, r.jsx)(a, {}),
-            (0, r.jsxs)(c.ZP, {
+            (0, r.jsxs)(s.ZP, {
                 className: i()(x.headerBar, f.subPanelHeaderBar),
                 children: [
-                    (0, r.jsx)(c.ZP.Icon, {
-                        icon: s.TagIcon,
+                    (0, r.jsx)(s.ZP.Icon, {
+                        icon: c.TagIcon,
                         tooltip: t.getName()
                     }),
-                    (0, r.jsx)(c.ZP.Title, { children: t.getName() })
+                    (0, r.jsx)(s.ZP.Title, { children: t.getName() })
                 ]
             }),
             l({ store: t })
         ]
     });
 }
-function _() {
+function C() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = o.yh.getAll(),
-        c = a
+        s = a
             .useMemo(
                 () =>
                     l
@@ -131,9 +131,9 @@ function _() {
         children: [
             (0, r.jsx)('div', {
                 className: f.toolbar,
-                children: (0, r.jsx)(s.SearchBar, {
+                children: (0, r.jsx)(c.SearchBar, {
                     className: f.searchBar,
-                    size: s.SearchBar.Sizes.SMALL,
+                    size: c.SearchBar.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),
@@ -143,12 +143,12 @@ function _() {
             }),
             (0, r.jsx)(h.Z, {
                 columns: b,
-                data: c,
+                data: s,
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
             null != m &&
-                (0, r.jsx)(j, {
+                (0, r.jsx)(_, {
                     store: m,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

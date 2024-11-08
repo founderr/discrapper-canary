@@ -16,18 +16,18 @@ var l = n(120356),
 function h(e) {
     var t;
     let { id: n, className: l, innerClassName: h, renderIcon: p, text: f, selected: m, trailing: g, showUnread: C = !1, ..._ } = e,
-        x = (0, a.JA)(n),
-        v = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
+        v = (0, a.JA)(n),
+        x = null !== (t = (0, o.q)(f)) && void 0 !== t ? t : '';
     return (0, i.jsx)('li', {
         children: (0, i.jsxs)(s.ClickableContainer, {
             ..._,
             buttonProps: {
-                ...x,
+                ...v,
                 id: n,
                 role: 'button'
             },
             tag: 'div',
-            'aria-label': v,
+            'aria-label': x,
             focusProps: {
                 offset: {
                     top: 1,

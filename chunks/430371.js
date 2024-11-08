@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(100621),
     o = n(481060),
     c = n(110924),
@@ -30,7 +30,7 @@ let N = 16 / 9,
 function S(e) {
     var t;
     let n,
-        { onSelectParticipant: r, onContextMenuParticipant: S, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: R, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
+        { onSelectParticipant: a, onContextMenuParticipant: S, onFullscreenParticipant: T, participants: j, filteredParticipants: A, popoutWindow: y, inCall: P, channel: M, selectedParticipant: R, showParticipants: L = !0, className: k, paused: O, width: D, height: w, layout: B, idle: U } = e,
         H = null != y,
         G = p.Z.getVideoComponent(),
         F = h.default.getId(),
@@ -46,11 +46,11 @@ function S(e) {
         en = B === _.AEg.MINIMUM || B === _.AEg.NORMAL,
         ei = !$ && (!en || X),
         el = (0, f.Z)(ei, 100),
-        er = (null !== (t = (0, c.Z)(R.id)) && void 0 !== t ? t : R.id) !== R.id,
-        ea = 0;
-    (X || ee) && (ea += 72), X && !ee && (ei ? (ea += 48) : (ea += 8)), ee && (ea += 0.5 * Z + 8);
-    let es = l.useMemo(() => (X && J ? D / (w - 2 * ea) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : N), [Q, V, X, D, w, ea, J]),
-        eo = w - 2 * ea,
+        ea = (null !== (t = (0, c.Z)(R.id)) && void 0 !== t ? t : R.id) !== R.id,
+        er = 0;
+    (X || ee) && (er += 72), X && !ee && (ei ? (er += 48) : (er += 8)), ee && (er += 0.5 * Z + 8);
+    let es = l.useMemo(() => (X && J ? D / (w - 2 * er) : Q && null != V && V.width > 0 && V.height > 0 ? V.width / V.height : N), [Q, V, X, D, w, er, J]),
+        eo = w - 2 * er,
         ec = X && J ? D : eo * es,
         ed = Math.floor(Math.min(D, ec) / es),
         eu = w > D / es + 72 + Z + 8;
@@ -97,7 +97,7 @@ function S(e) {
                     clamp: !0
                 }
             },
-            (et === ee && ep.value.idle && !el) || er ? 'animate-never' : 'animate-always'
+            (et === ee && ep.value.idle && !el) || ea ? 'animate-never' : 'animate-always'
         ),
         ef = (0, o.useSpring)(
             {
@@ -130,7 +130,7 @@ function S(e) {
         ex = ee || O ? [] : (0, x.n3)(j, R, F),
         { visibleParticipants: ev, participantTileWidth: e_ } = (0, v.ZB)(D, A);
     return (0, i.jsxs)('div', {
-        className: a()(b.root, E.flexCenter, k),
+        className: r()(b.root, E.flexCenter, k),
         children: [
             (0, i.jsxs)('div', {
                 className: b.tileWrapper,
@@ -144,7 +144,7 @@ function S(e) {
                                 style: { width: em.value },
                                 className: b.videoWrapper,
                                 children: (0, i.jsx)('div', {
-                                    className: a()(E.videoSizer),
+                                    className: r()(E.videoSizer),
                                     style: { aspectRatio: es },
                                     children: eg((e, t, n) => {
                                         let { key: l } = n;
@@ -163,7 +163,7 @@ function S(e) {
                                                           paused: O,
                                                           width: D,
                                                           participant: t,
-                                                          onClick: r,
+                                                          onClick: a,
                                                           onDoubleClick: T,
                                                           onContextMenu: S,
                                                           onVideoResize: eC,
@@ -179,7 +179,7 @@ function S(e) {
                             }),
                             ei
                                 ? (0, i.jsx)(s.animated.div, {
-                                      className: a()(b.actionRow, { [b.idle]: U }),
+                                      className: r()(b.actionRow, { [b.idle]: U }),
                                       style: { bottom: ef.value },
                                       children: (0, i.jsx)(u.Z, {
                                           channelId: M.id,
@@ -199,7 +199,7 @@ function S(e) {
                         },
                         children: (0, i.jsx)(v.ZP, {
                             channel: M,
-                            onClick: r,
+                            onClick: a,
                             onContextMenu: S,
                             onDoubleClick: T,
                             participants: ev,

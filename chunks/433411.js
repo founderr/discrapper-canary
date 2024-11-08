@@ -21,7 +21,7 @@ function S(e) {
     let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: S = !1, withTutorial: C = !1, isTryItOutFlow: _ = !1 } = e,
         { analyticsLocations: E } = (0, o.ZP)(),
         f = null != n,
-        { userAvatarDecoration: I, guildAvatarDecoration: N, pendingAvatarDecoration: b, pendingErrors: A } = (0, h.$U)(t, n),
+        { userAvatarDecoration: I, guildAvatarDecoration: N, pendingAvatarDecoration: A, pendingErrors: b } = (0, h.$U)(t, n),
         v = (0, u.Z)('enable_avatar_decoration_uploads'),
         j = s.useCallback(
             () =>
@@ -32,14 +32,14 @@ function S(e) {
                 }),
             [E, _, n]
         ),
-        O = _ || void 0 !== b ? null != b : (f ? N : I) != null,
+        O = _ || void 0 !== A ? null != A : (f ? N : I) != null,
         R = C ? a.ShinyButton : a.Button;
     return (0, i.jsxs)(g.Z, {
         className: r,
         forcedDivider: S,
         hasBackground: !0,
         title: m,
-        errors: A,
+        errors: b,
         children: [
             (0, i.jsxs)('div', {
                 className: x.buttonsContainer,

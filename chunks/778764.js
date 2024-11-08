@@ -29,20 +29,20 @@ function f(e) {
         m = (0, d.Dt)(),
         [S, f] = s.useState(''),
         [I, N] = s.useState(!0),
-        [b, A] = s.useState(T.x.INIT),
+        [A, b] = s.useState(T.x.INIT),
         [v, j] = s.useState(''),
         [O, R] = s.useState(null),
         P = async () => {
             let e;
-            A(T.x.REGISTER);
+            b(T.x.REGISTER);
             let t = h.isPlatformEmbedded && p.ZP.supportsFeature(C.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(c) : r.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), R(_.intl.string(_.t.xSCvBQ)), A(T.x.INIT);
+                g.Z.captureException(e), R(_.intl.string(_.t.xSCvBQ)), b(T.x.INIT);
                 return;
             }
-            j(e), A(T.x.NAME);
+            j(e), b(T.x.NAME);
         };
     return (0, i.jsxs)(a.ModalRoot, {
         transitionState: t,
@@ -55,7 +55,7 @@ function f(e) {
                     (0, i.jsxs)(a.Heading, {
                         id: m,
                         variant: 'heading-lg/semibold',
-                        children: [b === T.x.INIT && _.intl.string(_.t.vrOCCg), b === T.x.REGISTER && _.intl.string(_.t.wePEBA), b === T.x.NAME && _.intl.string(_.t['cY/IOj'])]
+                        children: [A === T.x.INIT && _.intl.string(_.t.vrOCCg), A === T.x.REGISTER && _.intl.string(_.t.wePEBA), A === T.x.NAME && _.intl.string(_.t['cY/IOj'])]
                     }),
                     (0, i.jsx)(a.ModalCloseButton, {
                         onClick: l,
@@ -64,7 +64,7 @@ function f(e) {
                 ]
             }),
             (0, i.jsxs)(a.Slides, {
-                activeSlide: b,
+                activeSlide: A,
                 width: 440,
                 children: [
                     (0, i.jsxs)(a.Slide, {
@@ -140,7 +140,7 @@ function f(e) {
                                         })
                                         .then(() => l())
                                         .catch(() => {
-                                            R(_.intl.string(_.t.fEptJC)), A(T.x.INIT);
+                                            R(_.intl.string(_.t.fEptJC)), b(T.x.INIT);
                                         });
                             },
                             children: [
@@ -185,7 +185,7 @@ function f(e) {
                                             look: a.Button.Looks.LINK,
                                             color: a.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                A(T.x.INIT);
+                                                b(T.x.INIT);
                                             },
                                             children: _.intl.string(_.t['13/7kZ'])
                                         })

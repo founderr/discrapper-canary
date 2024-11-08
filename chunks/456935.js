@@ -6,8 +6,8 @@ t.d(n, {
 var r = t(200651),
     a = t(192379),
     i = t(692547),
-    s = t(481060),
-    o = t(496675),
+    o = t(481060),
+    s = t(496675),
     l = t(484455),
     c = t(981631),
     d = t(388032),
@@ -35,9 +35,9 @@ let f = {
 };
 n.ZP = function (e) {
     let { guild: n } = e,
-        i = o.Z.can(c.Plq.MANAGE_GUILD, n),
+        i = s.Z.can(c.Plq.MANAGE_GUILD, n),
         h = n.verificationLevel,
-        x = h === c.sFg.VERY_HIGH ? s.MobilePhoneIcon : s.EnvelopeIcon,
+        x = h === c.sFg.VERY_HIGH ? o.MobilePhoneIcon : o.EnvelopeIcon,
         p = a.useMemo(() => m(h), [h]),
         g = f[h],
         C = (0, r.jsx)('div', {
@@ -45,7 +45,7 @@ n.ZP = function (e) {
             children: d.intl.format(d.t.OpV87e, {
                 verificationLevelHook: function () {
                     return (0, r.jsx)(
-                        s.Text,
+                        o.Text,
                         {
                             className: u.verificationLevelHook,
                             style: { color: g },
@@ -70,16 +70,16 @@ n.ZP = function (e) {
                     height: 20,
                     className: u.icon
                 }),
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(o.Text, {
                     className: u.guildVerificationText,
                     variant: 'text-sm/normal',
                     children: b
                 }),
                 i &&
-                    (0, r.jsx)(s.Clickable, {
+                    (0, r.jsx)(o.Clickable, {
                         className: u.iconInteractiveContainer,
                         onClick: () =>
-                            (0, s.openModalLazy)(async () => {
+                            (0, o.openModalLazy)(async () => {
                                 let { default: e } = await t.e('72458').then(t.bind(t, 694278));
                                 return (t) =>
                                     (0, r.jsx)(e, {
@@ -87,7 +87,7 @@ n.ZP = function (e) {
                                         guild: n
                                     });
                             }),
-                        children: (0, r.jsx)(s.PencilIcon, {
+                        children: (0, r.jsx)(o.PencilIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,

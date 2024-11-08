@@ -2,8 +2,8 @@ t(47120);
 var r = t(200651),
     a = t(192379),
     i = t(442837),
-    s = t(481060),
-    o = t(496675),
+    o = t(481060),
+    s = t(496675),
     l = t(246364),
     c = t(983736),
     d = t(5056),
@@ -16,8 +16,8 @@ var r = t(200651),
     g = t(981631),
     C = t(388032);
 n.Z = function (e) {
-    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: b, hideVerificationLevelField: v, isClanContext: _, formDescription: y, onFieldsSave: T, onDescriptionSave: j } = e,
-        I = a.useRef(!1),
+    let { guild: n, submittedGuildJoinRequestsCount: t, onFormFieldUpdate: b, hideVerificationLevelField: v, isClanContext: _, formDescription: y, onFieldsSave: T, onDescriptionSave: I } = e,
+        j = a.useRef(!1),
         [N, S] = a.useState(null),
         [E, k] = a.useState(e.formFields);
     a.useEffect(() => k(e.formFields), [e.formFields]);
@@ -31,19 +31,19 @@ n.Z = function (e) {
         P = R > 0,
         O = n.hasFeature(g.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || _,
         F = a.useCallback(() => {
-            (0, s.showToast)((0, s.createToast)(C.intl.string(C.t.R0RpRU), s.ToastType.FAILURE));
+            (0, o.showToast)((0, o.createToast)(C.intl.string(C.t.R0RpRU), o.ToastType.FAILURE));
         }, []),
-        G = (0, i.e7)([o.Z], () => o.Z.can(g.Plq.MANAGE_GUILD, n)),
-        B = a.useCallback(
+        B = (0, i.e7)([s.Z], () => s.Z.can(g.Plq.MANAGE_GUILD, n)),
+        G = a.useCallback(
             async (e) => {
-                if (!I.current) {
-                    (I.current = !0), _ && (e = e.filter((e) => e.field_type !== l.QJ.TERMS));
+                if (!j.current) {
+                    (j.current = !0), _ && (e = e.filter((e) => e.field_type !== l.QJ.TERMS));
                     try {
                         await T(n.id, e), b(), k(e), (A.current = e);
                     } catch (e) {
                         throw (k(A.current), e);
                     } finally {
-                        null != N && S(null), (I.current = !1);
+                        null != N && S(null), (j.current = !1);
                     }
                 }
             },
@@ -52,17 +52,17 @@ n.Z = function (e) {
         H = a.useCallback(
             async (e) => {
                 let n = e.field_type === l.QJ.TERMS ? [e, ...E] : [...E, e];
-                await B(n);
+                await G(n);
             },
-            [E, B]
+            [E, G]
         ),
         U = a.useCallback(
             async (e, n) => {
                 if (E[e] === n) return;
                 let t = [...E];
-                (t[e] = n), await B(t);
+                (t[e] = n), await G(t);
             },
-            [E, B]
+            [E, G]
         ),
         W = a.useCallback(
             async (e, n, t) => {
@@ -70,35 +70,35 @@ n.Z = function (e) {
                     a = [...E];
                 if ((null != n && n !== r && (a.splice(r, 1), a.splice(n, 0, e), k(a)), t))
                     try {
-                        await B(a), null !== N && S(null);
+                        await G(a), null !== N && S(null);
                     } catch (e) {
                         F();
                     }
                 else N !== n && S(n);
             },
-            [N, E, B, F]
+            [N, E, G, F]
         ),
         q = a.useCallback(
             async (e) => {
                 try {
-                    await B([...E.slice(0, e), ...E.slice(e + 1)]);
+                    await G([...E.slice(0, e), ...E.slice(e + 1)]);
                 } catch (e) {
                     F();
                 }
             },
-            [E, B, F]
+            [E, G, F]
         ),
-        z = G ? (_ ? 'side' : 'footer') : 'none',
+        z = B ? (_ ? 'side' : 'footer') : 'none',
         V = (0, r.jsxs)(r.Fragment, {
             children: [
                 !v && (0, r.jsx)(f.ZP, { guild: n }),
                 (0, r.jsx)(u.Z, {
                     formDescription: y,
                     guildId: n.id,
-                    onSave: j,
-                    disable: !G
+                    onSave: I,
+                    disable: !B
                 }),
-                G &&
+                B &&
                     !Z &&
                     !D &&
                     (0, r.jsx)(m.Z, {
@@ -139,18 +139,18 @@ n.Z = function (e) {
                           formField: e,
                           guild: n,
                           index: E.indexOf(e),
-                          isDragEnabled: P && G,
+                          isDragEnabled: P && B,
                           submittedGuildJoinRequestsCount: t,
                           removeFormField: q,
                           updateFormField: U,
                           updateFormFieldOrder: W,
-                          canRemove: !(_ && M.length <= 1) && G,
+                          canRemove: !(_ && M.length <= 1) && B,
                           actionsLocation: z
                       })
                   ),
                   L &&
                       !D &&
-                      G &&
+                      B &&
                       (0, r.jsx)(h.Z, {
                           addFormField: H,
                           guild: n

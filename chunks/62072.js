@@ -1,7 +1,7 @@
 var i = n(192379),
     l = n(904245),
-    r = n(346610),
-    a = n(868643),
+    a = n(346610),
+    r = n(868643),
     s = n(912332),
     o = n(41776),
     c = n(280845),
@@ -84,8 +84,8 @@ t.Z = function (e, t, n) {
                         break;
                     case 'f':
                         (k || B) &&
-                            (0, r.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
-                            (0, a.h)(U) &&
+                            (0, a.WT)({ location: 'keyboard-shortcut' }, { autoTrackExposure: !1 }).canForwardMessages &&
+                            (0, r.h)(U) &&
                             (n.preventDefault(),
                             (0, s.l8)({
                                 messageId: U.id,

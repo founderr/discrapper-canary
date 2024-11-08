@@ -15,8 +15,8 @@ var i,
     g = n(802856),
     C = n(420660),
     _ = n(728345),
-    x = n(812206),
-    v = n(750881),
+    v = n(812206),
+    x = n(750881),
     I = n(710845),
     b = n(38618),
     S = n(656063),
@@ -79,7 +79,7 @@ function et(e) {
 }
 function en(e) {
     if ((0, m.Z)(e)) return E.r9;
-    let t = null != e.application_id ? x.Z.getApplication(e.application_id) : null;
+    let t = null != e.application_id ? v.Z.getApplication(e.application_id) : null;
     return null != t ? t : (0, g.Z)(e) ? $(e.name) : (0, C.Z)(e) && null != e.url ? ee(e.url) : (null != e.application_id && et(e.application_id), t);
 }
 function ei(e) {
@@ -97,7 +97,7 @@ function er(e, t, n) {
         g = t.map((e) => e.id),
         C = t.filter((t) => e.has(t.id)),
         _ = !1,
-        v = [],
+        x = [],
         b = new Set(),
         N = !1,
         A = [];
@@ -120,7 +120,7 @@ function er(e, t, n) {
         if (null == c) continue;
         N = c === E.XB;
         let u = (function (e) {
-                let t = x.Z.getApplication(e);
+                let t = v.Z.getApplication(e);
                 return null != t ? t : 'string' != typeof e ? (new I.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === E.XB ? E.r9 : e.startsWith(j.H) ? $(e.slice(j.H.length)) : e.startsWith(y._) ? ee(e.slice(y._.length)) : (et(e), null);
             })(c),
             g = null === (l = o.timestamps) || void 0 === l ? void 0 : l.start;
@@ -159,7 +159,7 @@ function er(e, t, n) {
                   })),
             (D = s().orderBy(D, [el], ['desc'])).length !== t.length && (_ = !0),
             b.add(u.id),
-            v.push({
+            x.push({
                 game: u,
                 activity: o,
                 activityUser: e,
@@ -210,7 +210,7 @@ function er(e, t, n) {
         partiedMembers: t,
         showPlayingMembers: _,
         guildContext: u,
-        currentActivities: ((o = v),
+        currentActivities: ((o = x),
         (c = (e) => {
             var t;
             return null !== (t = e.startedPlayingTime) && void 0 !== t ? t : 0;
@@ -221,7 +221,7 @@ function er(e, t, n) {
 }
 function ea(e) {
     return (
-        !!(0 !== e.voiceChannels.length && (0, v.$W)('now-playing-view-store')) &&
+        !!(0 !== e.voiceChannels.length && (0, x.$W)('now-playing-view-store')) &&
         e.voiceChannels.length > 0 &&
         e.voiceChannels.some((e) => {
             let { voiceStates: t } = e;
@@ -231,7 +231,7 @@ function ea(e) {
 }
 function eo(e) {
     return (
-        !!(0 !== e.voiceChannels.length && (0, v.$W)('now-playing-view-store')) &&
+        !!(0 !== e.voiceChannels.length && (0, x.$W)('now-playing-view-store')) &&
         e.voiceChannels.length > 0 &&
         e.voiceChannels.every((e) => {
             let { voiceStates: t } = e;
@@ -240,7 +240,7 @@ function eo(e) {
     );
 }
 function es(e) {
-    return !!(0, v.sb)('now-playing-view-store') && e.partiedMembers.some((e) => O.Z.isBlocked(e.id));
+    return !!(0, x.sb)('now-playing-view-store') && e.partiedMembers.some((e) => O.Z.isBlocked(e.id));
 }
 function ec() {
     return H && b.Z.isConnected();
@@ -269,7 +269,7 @@ let eu = s().throttle(() => {
                 .values()
                 .orderBy([ea, (e) => e.partiedMembers.length > 1, (e) => e.applicationStreams.length > 0, (e) => e.voiceChannels.length > 0, (e) => e.currentActivities.length > 0, (e) => e.isSpotifyActivity, (e) => e.priorityMembers.map((e) => e.user.username.toLowerCase()).join(' ')], ['asc', 'desc', 'desc', 'desc', 'desc', 'asc', 'asc'])
                 .value(),
-            { blockeeExperimentEnabled: n, blockerExperimentEnabled: i, analyticsEligible: l } = (0, v.p7)('now-playing-view-store');
+            { blockeeExperimentEnabled: n, blockerExperimentEnabled: i, analyticsEligible: l } = (0, x.p7)('now-playing-view-store');
         l &&
             t.forEach((e) => {
                 let t = (0, c.EQ)({
@@ -283,23 +283,23 @@ let eu = s().throttle(() => {
                             blockerExperimentEnabled: !0,
                             party: c.P.when(es)
                         },
-                        () => v.h9.HIDE
+                        () => x.h9.HIDE
                     )
                     .with(
                         {
                             blockeeExperimentEnabled: !0,
                             party: c.P.when(eo)
                         },
-                        () => v.h9.HIDE
+                        () => x.h9.HIDE
                     )
                     .with(
                         {
                             blockeeExperimentEnabled: !0,
                             party: c.P.when(ea)
                         },
-                        () => v.h9.DERANK
+                        () => x.h9.DERANK
                     )
-                    .otherwise(() => v.h9.SHOW);
+                    .otherwise(() => x.h9.SHOW);
                 e.voiceChannels.forEach((e) => {
                     let { voiceStates: n, channel: i } = e,
                         l = s().map(n, 'userId'),
@@ -316,7 +316,7 @@ let eu = s().throttle(() => {
                 });
             }),
             (z = (W = t.filter((e) => {
-                let { blockeeExperimentEnabled: t, blockerExperimentEnabled: n } = (0, v.p7)('now-playing-view-store'),
+                let { blockeeExperimentEnabled: t, blockerExperimentEnabled: n } = (0, x.p7)('now-playing-view-store'),
                     i = n && es(e),
                     l = t && eo(e);
                 return (e.voiceChannels.length >= 1 || e.currentActivities.length > 0 || e.applicationStreams.length > 0) && !i && !l;
@@ -339,7 +339,7 @@ function ed() {
 }
 class eh extends (i = u.ZP.Store) {
     initialize() {
-        this.syncWith([k.default, x.Z, D.Z, M.Z, U.Z, T.Z, O.Z, A.Z, N.Z], ed), this.waitFor(b.Z, L.Z, x.Z, k.default, N.Z);
+        this.syncWith([k.default, v.Z, D.Z, M.Z, U.Z, T.Z, O.Z, A.Z, N.Z], ed), this.waitFor(b.Z, L.Z, v.Z, k.default, N.Z);
     }
     get currentActivityParties() {
         return W;

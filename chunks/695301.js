@@ -16,8 +16,8 @@ t.Z = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         C = t.id,
         _ = (0, r.e7)([h.Z], () => h.Z.getGuild(C)),
-        x = (0, o.E)(_),
-        v = (0, r.e7)([p.Z], () => p.Z.isFocused()),
+        v = (0, o.E)(_),
+        x = (0, r.e7)([p.Z], () => p.Z.isFocused()),
         I = (0, r.e7)([u.Z], () => u.Z.isUnavailable(C)),
         b = (0, c.Z)((e) => e.guildId),
         S = (0, f.Z)(C),
@@ -48,12 +48,12 @@ t.Z = l.memo(function (e) {
         ...e,
         guild: _,
         unavailable: I,
-        animatable: v,
+        animatable: x,
         selected: b === C,
         badge: Z,
         lowerBadge: y,
         unread: N,
         mediaState: S,
-        guildJoinRequestStatus: x
+        guildJoinRequestStatus: v
     });
 });

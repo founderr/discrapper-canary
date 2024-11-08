@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(873546),
     o = n(442837),
     c = n(570140),
@@ -46,15 +46,15 @@ class _ extends (i = o.ZP.Store) {
         return null != t ? t[e] : null;
     }
 }
-(a = 'TutorialIndicatorStore'),
-    (r = 'displayName') in (l = _)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'TutorialIndicatorStore'),
+    (a = 'displayName') in (l = _)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new _(c.Z, {
         CONNECTION_OPEN: function (e) {
             let { tutorial: t } = e;

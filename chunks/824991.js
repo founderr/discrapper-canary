@@ -69,8 +69,8 @@ function _(e) {
         });
     }, [t.id]);
     let _ = r === u.xn ? p.intl.string(p.t.Y95lq6) : r === u.nJ ? p.intl.string(p.t['1UjqaG']) : p.intl.string(p.t.MA2x2N),
-        x = l.useCallback(() => (0, i.jsx)(g, { message: p.intl.string(p.t.VuqJFR) }), []),
-        v = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
+        v = l.useCallback(() => (0, i.jsx)(g, { message: p.intl.string(p.t.VuqJFR) }), []),
+        x = l.useCallback(() => (0, i.jsx)(m, { title: _ }), [_]),
         I = l.useCallback(() => {
             (0, c.aN)({
                 guildId: t.id,
@@ -83,8 +83,8 @@ function _(e) {
         className: f.notice,
         guild: t,
         onDismissed: () => n(h.L.DISMISS),
-        title: v,
-        message: x,
+        title: x,
+        message: v,
         cta: b,
         trackingSource: d.PsQ.CLAN_ADMIN_UPSELL,
         type: d.vID.CLAN_ADMIN_UPSELL

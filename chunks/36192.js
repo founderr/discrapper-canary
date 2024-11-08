@@ -63,7 +63,7 @@ function N() {
                                         titleClassName: I.groupTitle,
                                         children:
                                             null != t
-                                                ? (0, i.jsx)(b, {
+                                                ? (0, i.jsx)(A, {
                                                       session: t,
                                                       current: !0
                                                   })
@@ -79,7 +79,7 @@ function N() {
                                               children: [
                                                   n.map((e) =>
                                                       (0, i.jsx)(
-                                                          b,
+                                                          A,
                                                           {
                                                               session: e,
                                                               useChecks: N.size > 0,
@@ -92,7 +92,7 @@ function N() {
                                                           e.id_hash
                                                       )
                                                   ),
-                                                  (null == l ? void 0 : l.mfaEnabled) ? null : (0, i.jsx)(A, {})
+                                                  (null == l ? void 0 : l.mfaEnabled) ? null : (0, i.jsx)(b, {})
                                               ]
                                           })
                                 ]
@@ -166,7 +166,7 @@ function N() {
               ]
           }));
 }
-function b(e) {
+function A(e) {
     var t, n, s, r, a;
     let { session: o, current: c, setChecked: u, checked: m, useChecks: p } = e,
         x = null !== (a = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== a ? a : null === (n = o.client_info) || void 0 === n ? void 0 : n.ip,
@@ -195,7 +195,7 @@ function b(e) {
         })(null === (r = o.client_info) || void 0 === r ? void 0 : r.os),
         E = c ? null : (0, g.p)(o.approx_last_used_time),
         N = [T, S].filter(C.lm),
-        b = [x, E].filter(C.lm);
+        A = [x, E].filter(C.lm);
     return (0, i.jsxs)(
         'div',
         {
@@ -226,10 +226,10 @@ function b(e) {
                             variant: 'text-sm/medium',
                             className: I.sessionInfoRow,
                             children: [
-                                (0, i.jsx)('span', { children: b[0] }),
-                                b.length > 1 &&
+                                (0, i.jsx)('span', { children: A[0] }),
+                                A.length > 1 &&
                                     (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: b[1] })]
+                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: A[1] })]
                                     })
                             ]
                         })
@@ -263,7 +263,7 @@ function b(e) {
         o.id_hash
     );
 }
-function A() {
+function b() {
     return (0, i.jsxs)('div', {
         className: l()(I.session, I.legacySession),
         children: [

@@ -35,9 +35,9 @@ let m = (e) => {
 function f(e) {
     let { groupListingId: t, subscription: n, className: a } = e,
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: f, submitting: p, error: _ } = m(l),
+        { resetRenewalMutation: f, submitting: _, error: p } = m(l),
         h = (0, d._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: E, nextListing: x } = r.useMemo(() => {
+        { currentListing: E, nextListing: b } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -51,17 +51,17 @@ function f(e) {
                 nextListing: h.find((e) => e.subscription_plans[0].id === t)
             };
         }, [n, h]);
-    if (null == n || null == E || null == x) return null;
-    let b = s()(n.currentPeriodEnd).format('MMM DD, YYYY');
+    if (null == n || null == E || null == b) return null;
+    let x = s()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, i.jsx)(u.Z, {
         message: g.intl.format(g.t.chw89f, {
             currentListing: E.name,
-            nextListing: x.name,
-            changeDate: b
+            nextListing: b.name,
+            changeDate: x
         }),
-        error: null == _ ? void 0 : _.message,
+        error: null == p ? void 0 : p.message,
         onClick: () => f(n),
-        submitting: p,
+        submitting: _,
         ctaMessage: g.intl.string(g.t.De4wIy),
         className: a
     });

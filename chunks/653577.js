@@ -19,11 +19,11 @@ var i = n(200651),
     g = n(402328),
     C = n(882530);
 function _(e) {
-    let { channel: t, connected: n, hovered: r, subtitle: _, onClick: x, enableHangStatus: v, allowChannelTopic: I } = e,
+    let { channel: t, connected: n, hovered: r, subtitle: _, onClick: v, enableHangStatus: x, allowChannelTopic: I } = e,
         b = (0, o.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         S = null != b && b.length > 0,
         Z = (0, c.ZP)(t, !0),
-        N = (!v || !!I) && Z,
+        N = (!x || !!I) && Z,
         E = null != _ && _.length > 0;
     l.useEffect(() => {
         S &&
@@ -38,7 +38,7 @@ function _(e) {
     if (S)
         return (0, i.jsx)(s.Clickable, {
             className: j,
-            onClick: N ? x : void 0,
+            onClick: N ? v : void 0,
             children: (0, i.jsx)(s.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, C.markup),
@@ -48,7 +48,7 @@ function _(e) {
     if (n && N && (!E || r))
         return (0, i.jsxs)(s.Clickable, {
             className: j,
-            onClick: x,
+            onClick: v,
             children: [
                 (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',

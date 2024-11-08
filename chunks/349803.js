@@ -13,11 +13,11 @@ var r = n(120356),
     f = n(324285);
 t.Z = function (e) {
     var t, n;
-    let { isVisible: r, isFullscreen: p, subscriptionTier: _ } = e,
+    let { isVisible: r, isFullscreen: _, subscriptionTier: p } = e,
         h = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         E = (0, o.Ng)(),
-        x = (0, o.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
-        b = (0, l.useSpring)({
+        b = (0, o.Wp)(E, g.Si.TIER_2) ? g.Si.TIER_2 : void 0,
+        x = (0, l.useSpring)({
             transform: r ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: r ? 1 : 0,
             config: {
@@ -28,16 +28,16 @@ t.Z = function (e) {
         C = { section: m.jXE.MARKETING_FLOATING_CTA };
     return (0, i.jsx)(s.animated.div, {
         className: a()(f.wrapper, {
-            [f.fullscreenWrapper]: p,
+            [f.fullscreenWrapper]: _,
             [f.invisible]: !r
         }),
-        style: b,
+        style: x,
         children: (0, i.jsxs)('div', {
             className: f.innerWrapper,
             children: [
                 (0, i.jsx)(u.Z, {
                     className: f.button,
-                    subscriptionTier: null !== (n = null != _ ? _ : null == h ? void 0 : h.sku_id) && void 0 !== n ? n : x,
+                    subscriptionTier: null !== (n = null != p ? p : null == h ? void 0 : h.sku_id) && void 0 !== n ? n : b,
                     premiumModalAnalyticsLocation: C,
                     isPersistentCTA: !0
                 }),

@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     u: function () {
-        return y;
+        return T;
     }
 }),
     n(47120);
@@ -13,8 +13,8 @@ var l = n(200651),
     r = n.n(i),
     o = n(392711),
     s = n(100621),
-    c = n(481060),
-    u = n(596454),
+    u = n(481060),
+    c = n(596454),
     d = n(727637),
     m = n(313201),
     x = n(543241),
@@ -26,22 +26,22 @@ var l = n(200651),
     f = n(823379),
     I = n(354459),
     j = n(185923),
-    Z = n(420212),
-    P = n(879730);
+    P = n(420212),
+    Z = n(879730);
 let L = j.Hz.CHAT,
-    T = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
-function y(e) {
+    y = [C.ZP.getByName('thumbsup'), C.ZP.getByName('eyes'), C.ZP.getByName('laughing'), C.ZP.getByName('watermelon'), C.ZP.getByName('fork_and_knife'), C.ZP.getByName('yum')].filter(f.lm);
+function T(e) {
     let { emoji: t, isDisabled: n = !1, onClick: i, className: o } = e,
         m = a.useRef(null),
         x = (0, d.Z)(m);
     return (0, l.jsx)('span', {
         ref: m,
-        children: (0, l.jsx)(c.Button, {
+        children: (0, l.jsx)(u.Button, {
             onClick: i,
-            look: c.Button.Looks.BLANK,
-            size: c.Button.Sizes.NONE,
+            look: u.Button.Looks.BLANK,
+            size: u.Button.Sizes.NONE,
             focusProps: { enabled: !n },
-            children: (0, l.jsx)(c.Spring, {
+            children: (0, l.jsx)(u.Spring, {
                 config: h.u,
                 from: { value: 0 },
                 to: { value: x ? 1 : 0 },
@@ -51,8 +51,8 @@ function y(e) {
                         style: {
                             transform: a.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                         },
-                        children: (0, l.jsx)(u.Z, {
-                            className: r()(P.emoji, o, { [P.emojiItemDisabled]: n }),
+                        children: (0, l.jsx)(c.Z, {
+                            className: r()(Z.emoji, o, { [Z.emojiItemDisabled]: n }),
                             emojiId: t.id,
                             emojiName: null == t ? void 0 : t.surrogates,
                             animated: t.animated
@@ -68,26 +68,26 @@ function N(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             t,
-            (0, l.jsx)(c.Clickable, {
-                className: P.dropDownContainer,
+            (0, l.jsx)(u.Clickable, {
+                className: Z.dropDownContainer,
                 onClick: () => {
                     a(!n), i();
                 },
-                children: (0, l.jsx)(c.ChevronSmallDownIcon, {
+                children: (0, l.jsx)(u.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: r()(P.dropDown, { [P.dropDownOpen]: n })
+                    className: r()(Z.dropDown, { [Z.dropDownOpen]: n })
                 })
             })
         ]
     });
 }
 function _(e) {
-    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
+    let { channel: t, title: n, closePopout: i, onFocus: s, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: h, emojiSearchProps: C, recentlyUsedEmojis: f, analyticsOverride: _ } = e,
         E = (0, m.Dt)(),
         [S, A] = a.useState(!1),
         M = (0, x.wC)(t.guild_id),
-        k = (0, o.uniqBy)([...M, ...T], 'name')
+        k = (0, o.uniqBy)([...M, ...y], 'name')
             .filter(
                 (e) =>
                     !g.ZP.isEmojiFilteredOrLocked({
@@ -106,29 +106,29 @@ function _(e) {
                 i();
                 return;
             }
-            null != e && u(e);
+            null != e && c(e);
             w(!t), t && v.kJ.setSearchPlaceholder(null);
         };
-    return (0, l.jsxs)(c.Dialog, {
+    return (0, l.jsxs)(u.Dialog, {
         'aria-labelledby': E,
         children: [
-            (0, l.jsx)(c.HeadingLevel, {
+            (0, l.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
-                children: (0, l.jsx)(c.HiddenVisually, {
-                    children: (0, l.jsx)(c.H, {
+                children: (0, l.jsx)(u.HiddenVisually, {
+                    children: (0, l.jsx)(u.H, {
                         id: E,
                         children: n
                     })
                 })
             }),
             (0, l.jsxs)('div', {
-                className: P.container,
+                className: Z.container,
                 children: [
                     (0, l.jsx)(p.Z, {
                         analyticsOverride: _,
                         channel: t,
-                        className: r()(P.animatedPicker, { [P.animatedPickerTall]: S }),
-                        headerClassName: r()(P.emojiPickerHeader, { [P.emojiPickerHeaderExpanded]: S }),
+                        className: r()(Z.animatedPicker, { [Z.animatedPickerTall]: S }),
+                        headerClassName: r()(Z.emojiPickerHeader, { [Z.emojiPickerHeaderExpanded]: S }),
                         closePopout: i,
                         onSelectEmoji: S ? R : () => {},
                         shouldHidePickerActions: !S,
@@ -143,14 +143,14 @@ function _(e) {
                                 onFocus: s
                             }),
                             onKeyDown: (e) => {
-                                null != e && e.key !== Z.vn.TAB && (e.key !== Z.vn.ENTER || e.shiftKey ? w(!0) : w(!S));
+                                null != e && e.key !== P.vn.TAB && (e.key !== P.vn.ENTER || e.shiftKey ? w(!0) : w(!S));
                             }
                         }
                     }),
                     (0, l.jsx)('div', {
-                        className: P.slotsContainer,
+                        className: Z.slotsContainer,
                         children: (0, l.jsx)('div', {
-                            className: r()(P.slots, P.slotsWide),
+                            className: r()(Z.slots, Z.slotsWide),
                             children: k.map((e) => {
                                 let n = g.ZP.isEmojiDisabled({
                                     emoji: e,
@@ -160,14 +160,14 @@ function _(e) {
                                 return (0, l.jsx)(
                                     'div',
                                     {
-                                        className: P.slot,
-                                        children: (0, l.jsx)(c.TooltipContainer, {
+                                        className: Z.slot,
+                                        children: (0, l.jsx)(u.TooltipContainer, {
                                             text: e.name,
                                             position: 'top',
                                             'aria-label': e.name,
-                                            tooltipClassName: P.tooltipContainer,
-                                            color: c.Tooltip.Colors.BRAND,
-                                            children: (0, l.jsx)(y, {
+                                            tooltipClassName: Z.tooltipContainer,
+                                            color: u.Tooltip.Colors.BRAND,
+                                            children: (0, l.jsx)(T, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

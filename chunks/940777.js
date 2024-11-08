@@ -22,8 +22,8 @@ var i = n(200651),
     g = n(593364),
     C = n(905423),
     _ = n(199902),
-    x = n(592125),
-    v = n(944486),
+    v = n(592125),
+    x = n(944486),
     I = n(979651),
     b = n(709054),
     S = n(853856),
@@ -49,12 +49,12 @@ function M() {
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
-        D = (0, s.e7)([v.Z], () => v.Z.getChannelId(j.I_8)),
-        O = (0, s.e7)([x.Z], () => x.Z.getChannel(D)),
+        D = (0, s.e7)([x.Z], () => x.Z.getChannelId(j.I_8)),
+        O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
         k = (0, C.Z)((e) => e.guildId) === j.I_8,
         { badge: U, unread: G } = (0, N.Z)(R),
         B = (function (e) {
-            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 i = (0, s.e7)([_.Z], () => {
                     if (!n) return !1;

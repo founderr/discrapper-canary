@@ -6,12 +6,12 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(50493),
-    a = n(388032),
+    a = n(50493),
+    r = n(388032),
     s = n(174398),
     o = n(466691);
 function c(e) {
-    let { onNavigate: t, backPanel: n = r.k.INFO } = e;
+    let { onNavigate: t, backPanel: n = a.k.INFO } = e;
     return (0, i.jsxs)('div', {
         className: o.header,
         children: [
@@ -28,7 +28,7 @@ function c(e) {
                         }),
                         (0, i.jsx)(l.Heading, {
                             variant: 'heading-md/semibold',
-                            children: a.intl.string(a.t['13/7kZ'])
+                            children: r.intl.string(r.t['13/7kZ'])
                         })
                     ]
                 })

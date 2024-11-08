@@ -2,8 +2,8 @@ var r = t(200651);
 t(192379);
 var a = t(481060),
     i = t(239091),
-    s = t(838221),
-    o = t(246364),
+    o = t(838221),
+    s = t(246364),
     l = t(700833),
     c = t(388032),
     d = t(291924);
@@ -19,21 +19,21 @@ function u(e) {
             children: [
                 (0, r.jsx)(a.MenuItem, {
                     id: 'text-input',
-                    icon: (0, a.makeIconCompat)(s.Z),
+                    icon: (0, a.makeIconCompat)(o.Z),
                     label: c.intl.string(c.t.w6Q9w8),
-                    action: () => (0, l.Md)(o.QJ.TEXT_INPUT, n, u)
+                    action: () => (0, l.Md)(s.QJ.TEXT_INPUT, n, u)
                 }),
                 (0, r.jsx)(a.MenuItem, {
                     id: 'paragraph',
                     icon: a.ChannelListIcon,
                     label: c.intl.string(c.t.gG0JBA),
-                    action: () => (0, l.Md)(o.QJ.PARAGRAPH, n, u)
+                    action: () => (0, l.Md)(s.QJ.PARAGRAPH, n, u)
                 }),
                 (0, r.jsx)(a.MenuItem, {
                     id: 'multiple-choice',
                     icon: a.ListBulletsIcon,
                     label: c.intl.string(c.t.ooKh3t),
-                    action: () => (0, l.Md)(o.QJ.MULTIPLE_CHOICE, n, u)
+                    action: () => (0, l.Md)(s.QJ.MULTIPLE_CHOICE, n, u)
                 })
             ]
         })
@@ -41,7 +41,7 @@ function u(e) {
 }
 n.Z = function (e) {
     let { addFormField: n, guild: t } = e,
-        s = (e) => {
+        o = (e) => {
             (0, i.vq)(
                 e,
                 (e) =>
@@ -62,7 +62,7 @@ n.Z = function (e) {
             (0, r.jsxs)(a.Clickable, {
                 ...e,
                 className: d.container,
-                onClick: s,
+                onClick: o,
                 children: [
                     (0, r.jsx)(a.PlusSmallIcon, {
                         size: 'md',

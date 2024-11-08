@@ -11,11 +11,11 @@ var i = n(200651),
     g = n(409100),
     m = n(831964),
     f = n(981631),
-    p = n(869783),
-    _ = n(388032),
+    _ = n(869783),
+    p = n(388032),
     h = n(868106);
 let E = (e) => {
-    let { name: t, title: n, description: a, descriptionCta: _, previewImage: E, videoUrl: x, shouldLoadVideo: b, isCompact: C, onClick: v, index: T } = e,
+    let { name: t, title: n, description: a, descriptionCta: p, previewImage: E, videoUrl: b, shouldLoadVideo: x, isCompact: C, onClick: T, index: v } = e,
         N = (0, u.rO)(),
         I = r.useRef(null),
         [S, R] = r.useState(0),
@@ -51,10 +51,10 @@ let E = (e) => {
         P = () => {
             null != I.current && ((I.current.currentTime = S), I.current.play());
         },
-        O = () => {
+        Z = () => {
             null != I.current && (R(I.current.currentTime), I.current.pause());
         },
-        Z = () =>
+        O = () =>
             (0, i.jsxs)('div', {
                 className: s()({
                     [h.whatsNewTextBoxOuter]: !C,
@@ -76,19 +76,19 @@ let E = (e) => {
                         className: h.whatsNewBoxDescription,
                         children: a
                     }),
-                    null != _ &&
-                        (null != v
+                    null != p &&
+                        (null != T
                             ? (0, i.jsx)(o.Button, {
                                   className: h.whatsNewBoxButton,
                                   onClick: () => {
-                                      j(), v();
+                                      j(), T();
                                   },
-                                  children: _
+                                  children: p
                               })
                             : (0, i.jsx)(g.Z, {
                                   className: h.whatsNewBoxButton,
                                   onClick: j,
-                                  buttonText: _,
+                                  buttonText: p,
                                   color: o.Button.Colors.BRAND,
                                   look: o.Button.Looks.FILLED,
                                   showIcon: !1
@@ -104,7 +104,7 @@ let E = (e) => {
                 }),
                 children: (0, i.jsx)(c.Z, {
                     playsInline: !0,
-                    preload: b ? 'auto' : 'none',
+                    preload: x ? 'auto' : 'none',
                     muted: !0,
                     poster: E,
                     loop: !0,
@@ -115,13 +115,13 @@ let E = (e) => {
                     }),
                     ref: I,
                     children: (0, i.jsx)('source', {
-                        src: x,
-                        type: N ? p.m.MP4 : p.m.WEBM
+                        src: b,
+                        type: N ? _.m.MP4 : _.m.WEBM
                     })
                 })
             });
         };
-    return T % 2 != 0
+    return v % 2 != 0
         ? (0, i.jsxs)('div', {
               className: s()(A, {
                   [h.whatsNewBoxContainer]: !C,
@@ -129,9 +129,9 @@ let E = (e) => {
               }),
               onMouseEnter: P,
               onFocus: P,
-              onBlur: O,
-              onMouseLeave: O,
-              children: [(0, i.jsx)(Z, {}), (0, i.jsx)(M, { isLeft: !1 })]
+              onBlur: Z,
+              onMouseLeave: Z,
+              children: [(0, i.jsx)(O, {}), (0, i.jsx)(M, { isLeft: !1 })]
           })
         : (0, i.jsxs)('div', {
               className: s()(A, {
@@ -141,9 +141,9 @@ let E = (e) => {
               }),
               onMouseEnter: P,
               onFocus: P,
-              onBlur: O,
-              onMouseLeave: O,
-              children: [(0, i.jsx)(M, { isLeft: !0 }), (0, i.jsx)(Z, {})]
+              onBlur: Z,
+              onMouseLeave: Z,
+              children: [(0, i.jsx)(M, { isLeft: !0 }), (0, i.jsx)(O, {})]
           });
 };
 t.Z = r.memo(function (e) {
@@ -157,7 +157,7 @@ t.Z = r.memo(function (e) {
                 (0, i.jsx)(o.Heading, {
                     className: h.whatsNewHeader,
                     variant: 'heading-xxl/extrabold',
-                    children: r ? _.intl.string(_.t.EnzW2N) : _.intl.string(_.t.LRmNAg)
+                    children: r ? p.intl.string(p.t.EnzW2N) : p.intl.string(p.t.LRmNAg)
                 }),
                 a.map((e, t) =>
                     (0, i.jsx)(

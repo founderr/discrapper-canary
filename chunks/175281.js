@@ -21,8 +21,8 @@ var i,
     g = n(481060),
     C = n(612226),
     _ = n(951483),
-    x = n(714338),
-    v = n(607070),
+    v = n(714338),
+    x = n(607070),
     I = n(585483),
     b = n(557177),
     S = n(264549),
@@ -316,9 +316,9 @@ function R(e) {
         [i, l] = a.useState(!1),
         [o, c] = a.useState(!1),
         u = a.useMemo(() => (__OVERLAY__ ? (0, _.Zg)() : (0, C.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: h } = (0, f.cj)([v.Z], () => ({
-            keyboardModeEnabled: v.Z.keyboardModeEnabled,
-            useReducedMotion: v.Z.useReducedMotion
+        { keyboardModeEnabled: d, useReducedMotion: h } = (0, f.cj)([x.Z], () => ({
+            keyboardModeEnabled: x.Z.keyboardModeEnabled,
+            useReducedMotion: x.Z.useReducedMotion
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -346,7 +346,7 @@ function R(e) {
                                   content: u,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      !h && (x.Z.disable(), l(!0), c(!0));
+                                      !h && (v.Z.disable(), l(!0), c(!0));
                                   }
                               },
                               'modal'

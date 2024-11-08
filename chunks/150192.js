@@ -8,9 +8,9 @@ t.d(n, {
 var r,
     a,
     i,
-    s,
-    o = t(392711),
-    l = t.n(o),
+    o,
+    s = t(392711),
+    l = t.n(s),
     c = t(442837),
     d = t(570140),
     u = t(823379),
@@ -60,15 +60,15 @@ class b extends (r = c.ZP.Store) {
         return e === m.Hk ? f.intl.string(f.t.Ym2Ri4) : C[e];
     }
 }
-(s = 'GuildDiscoveryCategoryStore'),
+(o = 'GuildDiscoveryCategoryStore'),
     (i = 'displayName') in (a = b)
         ? Object.defineProperty(a, i, {
-              value: s,
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = s),
+        : (a[i] = o),
     (n.Z = new b(d.Z, {
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let n,
@@ -79,7 +79,7 @@ class b extends (r = c.ZP.Store) {
                 (t
                     .sort((e, n) => (e.name < n.name ? -1 : 1))
                     .forEach((e) => {
-                        let { id: t, name: r, is_primary: s } = e;
+                        let { id: t, name: r, is_primary: o } = e;
                         if (t !== m.o3) {
                             if (t === m.dc) {
                                 n = {
@@ -88,7 +88,7 @@ class b extends (r = c.ZP.Store) {
                                 };
                                 return;
                             }
-                            !0 === s &&
+                            !0 === o &&
                                 a.push({
                                     categoryId: t,
                                     name: r

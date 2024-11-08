@@ -27,8 +27,8 @@ var i = n(200651),
     f = n(212895),
     I = n(296848),
     N = n(374649),
-    b = n(981631),
-    A = n(388032),
+    A = n(981631),
+    b = n(388032),
     v = n(558290),
     j = n(639944);
 function O(e) {
@@ -70,7 +70,7 @@ function O(e) {
             let n = _.Z.get(t.planIdForCurrencies);
             o()(null != e, 'paymentSource not specified for change'), o()(null != n, 'Unable to fetch plan');
             let i = (0, f.DE)(n.id, e.id, !1);
-            return i.length > 0 ? i[0] : b.pKx.USD;
+            return i.length > 0 ? i[0] : A.pKx.USD;
         },
         z = (e) => {
             null != e && Y(e, H(e), G);
@@ -93,7 +93,7 @@ function O(e) {
                     onCloseCallback: () => {
                         (0, u.fw)();
                     },
-                    onCloseRequest: b.dG4
+                    onCloseRequest: A.dG4
                 }
             );
         };
@@ -109,7 +109,7 @@ function O(e) {
                     fullWidth: !0,
                     look: d.Button.Looks.FILLED,
                     color: d.Button.Colors.PRIMARY,
-                    children: A.intl.string(A.t.SgX7RU)
+                    children: b.intl.string(b.t.SgX7RU)
                 })
             });
         })(t);
@@ -120,7 +120,7 @@ function O(e) {
             look: d.Button.Looks.FILLED,
             color: r ? d.Button.Colors.BRAND : d.Button.Colors.PRIMARY,
             onClick: K,
-            children: A.intl.string(A.t.CpOiEB)
+            children: b.intl.string(b.t.CpOiEB)
         });
     else {
         let e = _.Z.get(t.planIdForCurrencies);
@@ -134,7 +134,7 @@ function O(e) {
                         prependOption:
                             null == e
                                 ? {
-                                      label: A.intl.string(A.t.iA5vAw),
+                                      label: b.intl.string(b.t.iA5vAw),
                                       value: null
                                   }
                                 : null,
@@ -154,7 +154,7 @@ function O(e) {
                           children: (0, i.jsxs)('div', {
                               className: l()(v.currency, j.flex, j.alignCenter),
                               children: [
-                                  (0, i.jsx)('div', { children: A.intl.string(A.t['0YjaXV']) }),
+                                  (0, i.jsx)('div', { children: b.intl.string(b.t['0YjaXV']) }),
                                   (0, i.jsx)(g.Z, {
                                       className: v.currencyDropdown,
                                       selectedCurrency: U,

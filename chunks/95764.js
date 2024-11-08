@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(40851),
+    a = n(481060),
+    r = n(40851),
     s = n(357156),
     o = n(390322),
     c = n(871499),
@@ -20,7 +20,7 @@ var l = n(442837),
     g = n(465108);
 function C(e) {
     let { channelId: t, onClick: n } = e,
-        C = (0, a.bp)(),
+        C = (0, r.bp)(),
         x = (0, m.qY)(t),
         v = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
         { canManageGuildEvent: _ } = (0, s.XJ)(v),
@@ -37,34 +37,34 @@ function C(e) {
             h.Z.endEvent(x.id, x.guild_id);
         };
     return I
-        ? (0, i.jsx)(r.Popout, {
+        ? (0, i.jsx)(a.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, i.jsx)(o.Z, {
-                      children: (0, i.jsx)(r.Menu, {
+                      children: (0, i.jsx)(a.Menu, {
                           navId: 'exit-options',
                           onSelect: () => {},
                           'aria-label': f.intl.string(f.t['K6/mk5']),
                           onClose: t,
-                          children: (0, i.jsx)(r.MenuItem, {
+                          children: (0, i.jsx)(a.MenuItem, {
                               id: 'end-voice-event',
                               color: 'danger',
                               action: b,
                               label: f.intl.string(f.t.qaYzPD),
-                              icon: r.CircleXIcon
+                              icon: a.CircleXIcon
                           })
                       })
                   });
               },
               align: 'center',
               position: 'top',
-              animation: r.Popout.Animation.FADE,
+              animation: a.Popout.Animation.FADE,
               children: (e) => {
                   let { onClick: t } = e;
                   return (0, i.jsx)(c.d, {
                       label: f.intl.string(f.t['6vrfgo']),
                       color: 'red',
-                      iconComponent: r.PhoneHangUpIcon,
+                      iconComponent: a.PhoneHangUpIcon,
                       onClick: E,
                       onPopoutClick: t,
                       className: g.buttonSpacing
@@ -75,7 +75,7 @@ function C(e) {
               className: g.buttonSpacing,
               label: f.intl.string(f.t['6vrfgo']),
               color: 'red',
-              iconComponent: r.PhoneHangUpIcon,
+              iconComponent: a.PhoneHangUpIcon,
               onClick: n
           });
 }

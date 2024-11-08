@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(786761),
     I = n(3148),
     N = n(739566),
-    b = n(753206),
-    A = n(311476),
+    A = n(753206),
+    b = n(311476),
     v = n(921801),
     j = n(145158),
     O = n(594174),
@@ -112,7 +112,7 @@ let Y = {
     },
     Q = () => {
         let e = (0, a.e7)([T.Z], () => T.Z.isPreview),
-            { enabled: t } = A.Z.useExperiment(
+            { enabled: t } = b.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -226,7 +226,7 @@ class X extends s.Component {
                 'aria-hidden': !0,
                 children: r.map((t, n) =>
                     (0, i.jsx)(
-                        b.Z,
+                        A.Z,
                         {
                             author: (0, N.ZH)(t),
                             message: t,

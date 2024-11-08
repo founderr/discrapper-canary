@@ -7,8 +7,8 @@ var r = t(200651);
 t(192379);
 var a = t(249849),
     i = t(907561),
-    s = t(388032),
-    o = t(585025);
+    o = t(388032),
+    s = t(585025);
 let l = ['#0fa3dd', '#a7e4e4', '#a2ccdd'],
     c = ['#0b3215', '#a6b51a', '#35748a', '#65a88f', '#621c12', '#f96748', '#ffbbbb'],
     d = [0.25, 0.9, 0.9],
@@ -72,7 +72,7 @@ function h(e) {
         { styleContent: b, containerId: v } = (0, i.bC)(g, C);
     return (0, r.jsxs)('svg', {
         ...p,
-        'aria-label': s.intl.string(s.t.nH6S2d),
+        'aria-label': o.intl.string(o.t.nH6S2d),
         width: n,
         height: t,
         viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
@@ -102,11 +102,11 @@ function h(e) {
                 ]
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#sky'),
+                href: ''.concat(s, '#sky'),
                 style: { fill: 'url(#sky-gradient)' }
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#wrapper-layer'),
+                href: ''.concat(s, '#wrapper-layer'),
                 id: v
             })
         ]

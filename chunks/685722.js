@@ -5,11 +5,11 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(120356),
-    r = n.n(l),
-    a = n(811825);
+    a = n.n(l),
+    r = n(811825);
 function s() {
     return (0, i.jsxs)('div', {
-        className: a.container,
-        children: [(0, i.jsx)('div', { className: r()(a.placeholderItem, a.chatTextAreaPlaceholder) }), (0, i.jsx)('div', { className: r()(a.placeholderItem, a.appLauncherPlaceholder) }), (0, i.jsx)('div', { className: r()(a.placeholderItem, a.entryPointAppCommandPlaceholder) })]
+        className: r.container,
+        children: [(0, i.jsx)('div', { className: a()(r.placeholderItem, r.chatTextAreaPlaceholder) }), (0, i.jsx)('div', { className: a()(r.placeholderItem, r.appLauncherPlaceholder) }), (0, i.jsx)('div', { className: a()(r.placeholderItem, r.entryPointAppCommandPlaceholder) })]
     });
 }

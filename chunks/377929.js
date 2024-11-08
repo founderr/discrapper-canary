@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(32750),
@@ -28,9 +28,9 @@ var i = n(200651),
     N = n(388032);
 function Z(e) {
     let { channel: t } = e,
-        [n, r] = l.useState(!1);
-    function a() {
-        r((e) => !e);
+        [n, a] = l.useState(!1);
+    function r() {
+        a((e) => !e);
     }
     let s = N.intl.string(N.t.UKOtz8);
     return (0, i.jsx)(o.Popout, {
@@ -39,7 +39,7 @@ function Z(e) {
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => r(!1),
+        onRequestClose: () => a(!1),
         renderPopout: function (e) {
             return (0, i.jsx)(S, {
                 ...e,
@@ -50,7 +50,7 @@ function Z(e) {
             let { isShown: n } = t;
             return (0, i.jsx)(_.ZP.Icon, {
                 ...e,
-                onClick: a,
+                onClick: r,
                 tooltip: n ? null : s,
                 icon: o.MoreHorizontalIcon,
                 'aria-label': s,
@@ -61,7 +61,7 @@ function Z(e) {
 }
 function S(e) {
     let { channel: t, closePopout: n, onSelect: l } = e,
-        r = (0, c.Z)(t),
+        a = (0, c.Z)(t),
         _ = (0, m.Z)(t),
         Z = (0, C.Z)(t.id),
         S = (0, g.Z)(t),
@@ -76,7 +76,7 @@ function S(e) {
         M = (0, p.Z)(t),
         R = (0, x.Z)(t),
         L = I.vF.useSetting(),
-        k = (0, s.e7)([E.Z], () => !a().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
+        k = (0, s.e7)([E.Z], () => !r().isEmpty(E.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {
         navId: 'thread-context',
         onClose: n,
@@ -103,7 +103,7 @@ function S(e) {
                 ]
             }),
             (0, i.jsxs)(o.MenuGroup, {
-                children: [R, r, _, A]
+                children: [R, a, _, A]
             }),
             (0, i.jsxs)(o.MenuGroup, {
                 children: [j, T]

@@ -27,8 +27,8 @@ var i = n(200651),
     f = n(223683),
     I = n(312400),
     N = n(115345),
-    b = n(392888),
-    A = n(106371),
+    A = n(392888),
+    b = n(106371),
     v = n(995774),
     j = n(921801),
     O = n(292959),
@@ -546,7 +546,7 @@ function X() {
                                   value: n,
                                   disabled: r || n,
                                   note: 'Turns on the new notification system',
-                                  onChange: () => (0, b.R)(!0),
+                                  onChange: () => (0, A.R)(!0),
                                   children: U.intl.string(U.t.z21l8P)
                               })
                           })
@@ -573,7 +573,7 @@ function X() {
                                           setting: M.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, i.jsx)(u.Button, {
                                               onClick: () => {
-                                                  (0, b.R)(!0);
+                                                  (0, A.R)(!0);
                                               },
                                               children: 'Launch Migration'
                                           })
@@ -651,7 +651,7 @@ function et() {
                 value: d.Ns.NOTIFICATIONS_DISABLED
             }
         ];
-    return A.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
+    return b.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
         ? (0, i.jsxs)(j.F, {
               setting: M.s6.NOTIFICATIONS_REACTIONS,
               children: [

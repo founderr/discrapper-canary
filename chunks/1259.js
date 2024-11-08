@@ -10,8 +10,8 @@ t.d(n, {
 var r = t(192379),
     a = t(442837),
     i = t(818083),
-    s = t(650774),
-    o = t(430824),
+    o = t(650774),
+    s = t(430824),
     l = t(496675),
     c = t(946314),
     d = t(981631);
@@ -29,10 +29,10 @@ let u = (0, i.B)({
     ]
 });
 function m(e) {
-    let n = (0, a.e7)([o.Z], () => o.Z.getGuild(e)),
+    let n = (0, a.e7)([s.Z], () => s.Z.getGuild(e)),
         t = (0, a.e7)([l.Z], () => l.Z.can(d.Plq.ADMINISTRATOR, n)),
         i = null == n ? void 0 : n.hasFeature(d.oNc.COMMUNITY),
-        [m] = (0, a.Wu)([s.Z], () => [s.Z.getMemberCount(e)], [e]),
+        [m] = (0, a.Wu)([o.Z], () => [o.Z.getMemberCount(e)], [e]),
         f = (null != m ? m : 0) >= c.WZ && (null != m ? m : 0) < c.TN,
         h = t && i && f;
     r.useEffect(() => {

@@ -15,8 +15,8 @@ var l = n(120356),
     g = n(768581),
     C = n(51144),
     _ = n(754231),
-    x = n(790707);
-function v(e) {
+    v = n(790707);
+function x(e) {
     let { guildId: t, member: n, className: l } = e,
         a = null != n.member ? (0, g.CA)(n.member) : null;
     return (0, i.jsx)(o.Tooltip, {
@@ -27,7 +27,7 @@ function v(e) {
             return (0, i.jsx)(o.Avatar, {
                 src: null != a ? a : n.user.getAvatarURL(t, 16),
                 size: o.AvatarSizes.SIZE_16,
-                className: r()(l, x.partyAvatar),
+                className: r()(l, v.partyAvatar),
                 'aria-label': null !== (s = n.nick) && void 0 !== s ? s : C.ZP.getName(n.user),
                 ...e
             });
@@ -37,13 +37,13 @@ function v(e) {
 function I(e) {
     let { members: t, guildId: n } = e;
     return (0, i.jsx)(h.Z, {
-        className: x.partyMembers,
+        className: v.partyMembers,
         guildId: n,
         users: t,
         max: 6,
         renderUser: (e, t, l) =>
             (0, i.jsx)(
-                v,
+                x,
                 {
                     guildId: n,
                     member: e,
@@ -55,7 +55,7 @@ function I(e) {
             (0, i.jsx)(
                 'div',
                 {
-                    className: r()(x.morePartyMembers, t),
+                    className: r()(v.morePartyMembers, t),
                     children: e
                 },
                 n
@@ -74,14 +74,14 @@ t.Z = (e) => {
             }
         });
     if (null == C) return null;
-    let v = h || (0, c.Z)(n),
+    let x = h || (0, c.Z)(n),
         b = (0, p.vd)(t.type);
     return (0, i.jsxs)('div', {
-        className: x.activity,
+        className: v.activity,
         children: [
             (0, i.jsx)('div', {
-                className: x.channelActivityContainer,
-                children: v
+                className: v.channelActivityContainer,
+                children: x
                     ? (0, i.jsx)(_.Z, {
                           activity: n,
                           embeddedApp: r,
@@ -110,7 +110,7 @@ t.Z = (e) => {
                       })
             }),
             (0, i.jsx)('div', {
-                className: x.activityActionsContainer,
+                className: v.activityActionsContainer,
                 children: (0, i.jsx)(u.Z, {
                     type: s.P.VOICE_CHANNEL,
                     activity: n,
@@ -118,7 +118,7 @@ t.Z = (e) => {
                     user: C,
                     guildId: t.getGuildId(),
                     channelId: t.id,
-                    color: x.button,
+                    color: v.button,
                     onAction: o,
                     isEmbedded: h
                 })

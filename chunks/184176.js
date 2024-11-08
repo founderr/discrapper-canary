@@ -11,21 +11,21 @@ var r = n(442837),
     g = n(474936),
     m = n(981631),
     f = n(388032),
-    p = n(834523);
+    _ = n(834523);
 t.Z = () => {
     let e = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         t = (0, d.u0)(null == e ? void 0 : e.trialId),
         n = (0, l.ZP)([s.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
     return (0, i.jsxs)('div', {
-        className: p.banner,
+        className: _.banner,
         children: [
             (0, i.jsx)(u.Cy, {
                 text: f.intl.string(f.t.qYKftb),
-                className: p.trialPill,
+                className: _.trialPill,
                 colorOptions: u.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, i.jsx)('div', {
-                className: p.body,
+                className: _.body,
                 children: (0, i.jsx)(a.Text, {
                     color: 'always-white',
                     variant: 'text-md/medium',

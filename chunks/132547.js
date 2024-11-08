@@ -11,15 +11,15 @@ var i = n(200651),
     g = n(214852),
     m = n(626135),
     f = n(314684),
-    p = n(794484),
-    _ = n(536844),
+    _ = n(794484),
+    p = n(536844),
     h = n(342414),
     E = n(938736),
-    x = n(391110),
-    b = n(71363),
+    b = n(391110),
+    x = n(71363),
     C = n(781800),
-    v = n(981631),
-    T = n(388032),
+    T = n(981631),
+    v = n(388032),
     N = n(255591),
     I = n(865215);
 let S = 'SubscriberNitroHome';
@@ -44,35 +44,35 @@ t.Z = () => {
                         children: [
                             (0, i.jsx)(h.Z, {
                                 className: N.heroHeading,
-                                location: x.MQ.HOME
+                                location: b.MQ.HOME
                             }),
-                            (0, i.jsx)(p.Z, {
-                                variant: x.R0.WHATS_NEW,
+                            (0, i.jsx)(_.Z, {
+                                variant: b.R0.WHATS_NEW,
                                 className: s()(N.whatsNew, { [N.whatsNewWithOriginalHeroHeading]: !(j || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
-                            (0, i.jsx)(p.Z, {
+                            (0, i.jsx)(_.Z, {
                                 className: N.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, i.jsx)(C.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: x.MQ.HOME
+                                    previousComponent: b.MQ.HOME
                                 })
                             }),
-                            (0, i.jsx)(_.Z, {
+                            (0, i.jsx)(p.Z, {
                                 className: N.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: v.ZY5.NITRO_HOME,
-                                    section: v.jXE.GIFT_BANNER
+                                    page: T.ZY5.NITRO_HOME,
+                                    section: T.jXE.GIFT_BANNER
                                 }
                             }),
                             (0, i.jsx)('div', { className: N.footerSpacing }),
                             (0, i.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !R && (m.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
+                                    e && !R && (m.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: a }), A(!0));
                                 },
                                 children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                             }),
@@ -81,16 +81,16 @@ t.Z = () => {
                                 className: N.bottomIllustration,
                                 width: 112,
                                 height: 85,
-                                alt: T.intl.string(T.t.X4IxWF)
+                                alt: v.intl.string(v.t.X4IxWF)
                             })
                         ]
                     })
                 })
             }),
-            (0, i.jsx)(b.Z, {
+            (0, i.jsx)(x.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: x.MQ.HOME
+                previousComponent: b.MQ.HOME
             })
         ]
     });

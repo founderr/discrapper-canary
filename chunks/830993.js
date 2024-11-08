@@ -21,15 +21,15 @@ var i = n(200651),
     g = n(823379),
     C = n(355363),
     _ = n(449932),
-    x = n(561788),
-    v = n(135724),
+    v = n(561788),
+    x = n(135724),
     I = n(543432),
     b = n(981631),
     S = n(388032),
     Z = n(208745);
 function N(e) {
     var t, d;
-    let { channel: h, guild: p, onAction: m, voiceStates: C, isChannelSelected: x, shouldShowSettingNudge: v } = e;
+    let { channel: h, guild: p, onAction: m, voiceStates: C, isChannelSelected: v, shouldShowSettingNudge: x } = e;
     !(function (e, t) {
         let n = l.useMemo(() => {
             var n;
@@ -85,7 +85,7 @@ function N(e) {
               children: [
                   (0, i.jsx)(E, {
                       channel: h,
-                      isChannelSelected: x,
+                      isChannelSelected: v,
                       voiceStatesCount: null !== (d = null == C ? void 0 : C.length) && void 0 !== d ? d : 0
                   }),
                   (0, i.jsx)('div', { className: Z.headerDivider }),
@@ -115,7 +115,7 @@ function N(e) {
                           t
                       );
                   }),
-                  v &&
+                  x &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)('div', { className: Z.headerDivider }),
@@ -127,7 +127,7 @@ function N(e) {
                                       children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('8821'), n.e('57772'), n.e('29612'), n.e('37229'), n.e('28044'), n.e('26069'), n.e('20872')]).then(n.bind(n, 241420));
+                                                  let { default: e } = await Promise.all([n.e('23217'), n.e('33053'), n.e('8016'), n.e('76540'), n.e('15669'), n.e('17938'), n.e('22646'), n.e('25183'), n.e('30419'), n.e('48923'), n.e('18824'), n.e('8821'), n.e('57772'), n.e('42587'), n.e('37229'), n.e('28044'), n.e('26069'), n.e('1989')]).then(n.bind(n, 241420));
                                                   return (t) =>
                                                       (0, i.jsx)(e, {
                                                           ...t,
@@ -159,9 +159,9 @@ function E(e) {
         : (0, i.jsxs)('div', {
               className: Z.popoutHeaderContainer,
               children: [
-                  (0, i.jsx)(x.Z, { channel: t }),
+                  (0, i.jsx)(v.Z, { channel: t }),
                   s
-                      ? (0, i.jsx)(v.Z, {
+                      ? (0, i.jsx)(x.Z, {
                             userCount: l,
                             video: o,
                             channel: t

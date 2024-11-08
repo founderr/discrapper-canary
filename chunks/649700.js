@@ -26,7 +26,7 @@ function m(e) {
             tryItOutAvatar: f,
             tryItOutBanner: I,
             tryItOutAvatarDecoration: N,
-            tryItOutProfileEffectId: b
+            tryItOutProfileEffectId: A
         } = (0, r.cj)([c.Z], () => {
             let e = c.Z.getAllPending(),
                 t = c.Z.getAllTryItOut();
@@ -35,8 +35,8 @@ function m(e) {
                 ...t
             };
         }),
-        { enabled: A } = o.Z.useExperiment({ location: 'TryItOutPreview' }, { autoTrackExposure: !1 }),
-        v = (0, a.Z)(N, !A);
+        { enabled: b } = o.Z.useExperiment({ location: 'TryItOutPreview' }, { autoTrackExposure: !1 }),
+        v = (0, a.Z)(N, !b);
     return (0, i.jsx)(d.Z, {
         containerClassName: g,
         user: m,
@@ -46,7 +46,7 @@ function m(e) {
         pendingAvatar: null != f ? f : x,
         pendingThemeColors: null != E ? E : T,
         pendingAvatarDecoration: v,
-        pendingProfileEffectId: b,
+        pendingProfileEffectId: A,
         avatarClassName: null != f || null != x || p.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,

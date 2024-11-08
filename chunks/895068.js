@@ -35,8 +35,8 @@ var i,
     Z = n(976757),
     y = n(981631),
     L = n(388032),
-    j = n(914301),
-    R = n(882008);
+    R = n(914301),
+    j = n(882008);
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === A.v0.SAVED_GUILDS ? 'saved_guilds' : t;
@@ -49,13 +49,13 @@ function P(e) {
             opacity: r ? 0 : void 0,
             animationDelay: ''.concat(i, 'ms')
         },
-        className: j.animatedCard,
+        className: R.animatedCard,
         children: (0, s.jsx)(
             S.ZP,
             {
                 clan: n,
                 affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, v.y)(n, l),
-                className: d()(j.card, a),
+                className: d()(R.card, a),
                 source: null != o ? o : y.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
@@ -225,7 +225,7 @@ t.ZP = o.memo(function (e) {
                 switch (i) {
                     case 'top_picks':
                         return (0, s.jsx)('div', {
-                            className: j.topPicksSection,
+                            className: R.topPicksSection,
                             children: (0, s.jsx)(b.Z, {
                                 title: t,
                                 subtitle: n
@@ -236,7 +236,7 @@ t.ZP = o.memo(function (e) {
                             children:
                                 W > K &&
                                 (0, s.jsx)(m.Paginator, {
-                                    className: d()(j.paginationInput),
+                                    className: d()(R.paginationInput),
                                     totalCount: W,
                                     pageSize: K,
                                     disablePaginationGap: !0,
@@ -246,7 +246,7 @@ t.ZP = o.memo(function (e) {
                                 })
                         });
                     case 'header_spacer':
-                        return (0, s.jsx)('div', { className: j.headerSpacer });
+                        return (0, s.jsx)('div', { className: R.headerSpacer });
                     default:
                         if (null == t) return null;
                         return (0, s.jsx)(b.Z, {
@@ -272,7 +272,7 @@ t.ZP = o.memo(function (e) {
         );
     return 0 === k.length && w
         ? (0, s.jsx)('div', {
-              className: j.emptySavedGuilds,
+              className: R.emptySavedGuilds,
               children:
                   'saved_guilds' === y
                       ? (0, s.jsxs)(s.Fragment, {
@@ -306,12 +306,12 @@ t.ZP = o.memo(function (e) {
           })
         : B && 0 === k.length
           ? (0, s.jsxs)('div', {
-                className: j.errorPage,
+                className: R.errorPage,
                 children: [
                     (0, s.jsx)('img', {
                         alt: '',
-                        src: R,
-                        className: j.errorImage
+                        src: j,
+                        className: R.errorImage
                     }),
                     (0, s.jsx)(m.Heading, {
                         variant: 'heading-xl/semibold',
@@ -325,7 +325,7 @@ t.ZP = o.memo(function (e) {
                 ]
             })
           : (0, s.jsx)('div', {
-                className: j.sectionContainer,
+                className: R.sectionContainer,
                 style: {
                     paddingTop: v,
                     paddingLeft: S,
@@ -341,13 +341,13 @@ t.ZP = o.memo(function (e) {
                     return (0, s.jsxs)(
                         'div',
                         {
-                            className: j.section,
+                            className: R.section,
                             style: { gap: ''.concat(16, 'px') },
                             children: [
                                 null != l &&
                                     (0, s.jsx)('div', {
                                         ...r.props,
-                                        className: d()(j.sectionHeader, null === (n = r.props) || void 0 === n ? void 0 : n.className),
+                                        className: d()(R.sectionHeader, null === (n = r.props) || void 0 === n ? void 0 : n.className),
                                         style: {
                                             height: ''.concat(r.sectionHeight, 'px'),
                                             ...(null === (i = r.props) || void 0 === i ? void 0 : i.style)
@@ -356,7 +356,7 @@ t.ZP = o.memo(function (e) {
                                     }),
                                 e > 0 &&
                                     (0, s.jsx)('div', {
-                                        className: j.sectionContent,
+                                        className: R.sectionContent,
                                         style: { gridTemplateColumns: 'repeat('.concat(M, ', minmax(252px, 1fr))') },
                                         children: Array.from({ length: e }).map((e, n) => {
                                             let i = ''.concat(t, '-').concat(n);

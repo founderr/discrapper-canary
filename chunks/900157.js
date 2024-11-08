@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(570140),
     c = n(239091),
@@ -30,12 +30,12 @@ var i = n(200651),
     T = n(388032),
     j = n(783989);
 function A(e) {
-    let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
+    let { channelId: t, baseChannelId: a, channelViewSource: A = 'Split View' } = e,
         y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, m.ZP)(y);
     (function (e) {
-        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, s.e7)([b.Z], () => null != e && !r().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
         l.useEffect(() => {
             t &&
                 null != e &&
@@ -64,7 +64,7 @@ function A(e) {
         return null;
     let L = (0, i.jsx)(N.Z, {
         channel: y,
-        baseChannelId: r
+        baseChannelId: a
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [

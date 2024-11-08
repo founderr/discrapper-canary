@@ -2,8 +2,8 @@ let r;
 t(47120), t(653041);
 var a,
     i = t(442837),
-    s = t(570140);
-function o(e, n, t) {
+    o = t(570140);
+function s(e, n, t) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -39,9 +39,9 @@ class u extends (a = i.ZP.PersistedStore) {
         return d.has(e);
     }
 }
-o(u, 'displayName', 'CommandsMigrationStore'),
-    o(u, 'persistKey', 'CommandsMigrationStore'),
-    (n.Z = new u(s.Z, {
+s(u, 'displayName', 'CommandsMigrationStore'),
+    s(u, 'persistKey', 'CommandsMigrationStore'),
+    (n.Z = new u(o.Z, {
         COMMANDS_MIGRATION_UPDATE_SUCCESS: function (e) {
             let { guildId: n, integrationIdsWithAppCommands: t } = e;
             return c.set(n, new Set(t)), !0;

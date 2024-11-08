@@ -18,15 +18,15 @@ var i,
     g = n(388032),
     m = n(509614),
     f = n(880511),
-    p = n(985443),
-    _ = n(612253),
+    _ = n(985443),
+    p = n(612253),
     h = n(832287),
     E = n(860528),
-    x = n(872532),
-    b = n(91342),
+    b = n(872532),
+    x = n(91342),
     C = n(181708),
-    v = n(821721),
-    T = n(158897),
+    T = n(821721),
+    v = n(158897),
     N = n(290650),
     I = n(751125),
     S = n(904505),
@@ -34,8 +34,8 @@ var i,
     A = n(845571),
     j = n(220046),
     P = n(385874),
-    O = n(371000),
-    Z = n(377679),
+    Z = n(371000),
+    O = n(377679),
     M = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
 let B = () => {
@@ -46,7 +46,7 @@ let B = () => {
             title: g.intl.string(g.t.zY5PPT),
             description: g.intl.string(g.t.R5Xag4),
             previewImage: m,
-            videoUrl: e ? b.Z : C.Z,
+            videoUrl: e ? x.Z : C.Z,
             isCompact: !0
         },
         noLimits: {
@@ -80,7 +80,7 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.I9TYMj),
                 description: g.intl.string(g.t.HMSHeH),
                 descriptionCta: g.intl.string(g.t.JST6jo),
-                previewImage: x,
+                previewImage: b,
                 videoUrl: i ? A.Z : j.Z
             },
             newAppStyles: {
@@ -89,7 +89,7 @@ t.ZP = (e) => {
                 description: g.intl.string(g.t.HC5wVV),
                 descriptionCta: g.intl.string(g.t.d8o6lZ),
                 previewImage: h,
-                videoUrl: i ? v.Z : T.Z
+                videoUrl: i ? T.Z : v.Z
             }
         },
         m = {
@@ -98,23 +98,23 @@ t.ZP = (e) => {
                 title: g.intl.string(g.t.Ij3Zmp),
                 description: g.intl.string(g.t.UsOUxc),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: _,
+                previewImage: p,
                 onClick: n,
-                videoUrl: i ? P.Z : O.Z
+                videoUrl: i ? P.Z : Z.Z
             },
             yourSpace: {
                 name: 'yourSpace',
                 title: g.intl.string(g.t.Wme3nZ),
                 description: g.intl.string(g.t['/aAIqa']),
                 descriptionCta: g.intl.string(g.t.jVcuVV),
-                previewImage: p,
+                previewImage: _,
                 onClick: () => {
                     a.Z.open(d.oAB.APPEARANCE, null, {
                         openWithoutBackstack: !0,
                         analyticsLocations: t
                     });
                 },
-                videoUrl: i ? Z.Z : M.Z
+                videoUrl: i ? O.Z : M.Z
             }
         };
     return e ? m : r;

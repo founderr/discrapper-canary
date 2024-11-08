@@ -14,8 +14,8 @@ n.d(t, {
 });
 var i,
     l,
-    r = n(539573),
-    a = n(388032);
+    a = n(539573),
+    r = n(388032);
 function s(e, t) {
     return {
         type: e,
@@ -26,13 +26,13 @@ function o(e) {
     return s(0, e);
 }
 function c() {
-    return s(0, a.intl.string(a.t['uXA57+']));
+    return s(0, r.intl.string(r.t['uXA57+']));
 }
 function d() {
-    return s(0, a.intl.string(a.t.kesTVV));
+    return s(0, r.intl.string(r.t.kesTVV));
 }
 function u(e, t) {
-    return s(1, (0, r.$q)(e, null == t ? void 0 : t.id));
+    return s(1, (0, a.$q)(e, null == t ? void 0 : t.id));
 }
 function h(e, t) {
     var n;

@@ -3,8 +3,8 @@ var r = t(200651);
 t(192379);
 var a = t(442837),
     i = t(481060),
-    s = t(863249),
-    o = t(122051),
+    o = t(863249),
+    s = t(122051),
     l = t(430824),
     c = t(389134),
     d = t(650461),
@@ -43,10 +43,10 @@ n.Z = (e) => {
                                   className: m.errorText,
                                   children: t
                               }),
-                          (0, r.jsx)(o.Z, {
+                          (0, r.jsx)(s.Z, {
                               guild: h,
                               isClanContext: !0,
-                              onFieldsSave: (e, n) => (s.ZP.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
+                              onFieldsSave: (e, n) => (o.ZP.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
                               verificationForm: x
                           })
                       ]

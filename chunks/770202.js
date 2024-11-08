@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(98597),
     C = n(473403),
     _ = n(981631),
-    x = n(490897),
-    v = n(766075);
+    v = n(490897),
+    x = n(766075);
 function I(e, t, n) {
     return (
         t in e
@@ -39,10 +39,10 @@ class S extends g.ZP {
     render() {
         let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: l, connectDragPreview: r, canReorderChannel: o } = this.props,
             s = (0, i.jsx)('li', {
-                className: a()(this.getClassName(), { [v.disabled]: this.isDisabled() }),
+                className: a()(this.getClassName(), { [x.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, i.jsxs)(C.Z, {
-                    className: v.iconVisibility,
+                    className: x.iconVisibility,
                     channel: e,
                     selected: t,
                     onClick: this.handleClick,
@@ -50,7 +50,7 @@ class S extends g.ZP {
                     onContextMenu: this.handleContextMenu,
                     connectDragPreview: o ? r : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: x.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: v.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });

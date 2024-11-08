@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(423875),
     o = n(442837),
     s = n(18323),
-    c = n(594174),
-    u = n(908841),
+    u = n(594174),
+    c = n(908841),
     d = n(823379),
     m = n(5192),
     x = n(561308),
@@ -18,7 +18,7 @@ var l = n(200651),
     f = n(410441),
     I = n(616922),
     j = n(388032);
-let Z = (e, t, n, l) => {
+let P = (e, t, n, l) => {
         let a = (function (e) {
                 if (e === i._.WEEK) return j.t.SjOZfn;
             })(l),
@@ -31,31 +31,31 @@ let Z = (e, t, n, l) => {
             })
             .replaceAll('*', '');
     },
-    P = (e, t) =>
+    Z = (e, t) =>
         j.intl.formatToPlainString(j.t.Osmpr6, {
             username: t.username,
             artist: e.extra.artist.name
         });
 t.Z = (e) => {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: L, provider: T, image_url: y } = n.extra.media,
+        { parent_title: L, provider: y, image_url: T } = n.extra.media,
         N = n.extra.artist.name,
-        _ = (0, o.e7)([c.default], () => c.default.getUser(n.author_id)),
-        { primaryColor: E, secondaryColor: S } = (0, p.Z)(y),
+        _ = (0, o.e7)([u.default], () => u.default.getUser(n.author_id)),
+        { primaryColor: E, secondaryColor: S } = (0, p.Z)(T),
         A = (0, x.Nq)(n),
         M = a.useCallback(() => {
             if (null == t || null == _ || !(0, d.Hi)(A, C.y9)) return;
-            let e = Z(n, t, _, A);
+            let e = P(n, t, _, A);
             return (0, h.CR)({
                 user: _,
                 channel: t,
-                mediaImageSrc: y,
+                mediaImageSrc: T,
                 artist: N,
                 description: e,
                 colors: [E, S],
                 badges: (0, h.UU)(n)
             });
-        }, [y, N, t, n, E, A, S, _]);
+        }, [T, N, t, n, E, A, S, _]);
     if (null == _ || !(0, d.Hi)(A, C.y9)) return null;
     let k = () => {
         let e = I.Hw.ALBUM,
@@ -75,9 +75,9 @@ t.Z = (e) => {
                 channel: t,
                 entry: n,
                 headerIcons:
-                    T === r.p.SPOTIFY
+                    y === r.p.SPOTIFY
                         ? (0, l.jsx)(f.Z, {
-                              Icon: u.Z,
+                              Icon: c.Z,
                               'aria-label': j.intl.string(j.t['0ZB/XF'])
                           })
                         : null,
@@ -96,7 +96,7 @@ t.Z = (e) => {
                     user: _,
                     channel: t,
                     generateReactionImage: M,
-                    reactionImageAltText: P(n, _),
+                    reactionImageAltText: Z(n, _),
                     entry: n
                 })
             })

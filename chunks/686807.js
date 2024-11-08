@@ -1,26 +1,26 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return p;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(201895),
-    o = n(471445),
-    u = n(823379),
-    a = n(303737),
-    s = n(293810),
-    c = n(388032),
-    d = n(695087);
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(201895),
+    o = t(471445),
+    u = t(823379),
+    a = t(303737),
+    s = t(293810),
+    c = t(388032),
+    d = t(695087);
 function f(e) {
-    let { channelId: t } = e,
-        n = (0, a.m7)(t);
-    if (null == n) return (0, i.jsx)(i.Fragment, { children: '['.concat(c.intl.string(c.t.bz1PZW), ']') });
-    let u = n.isMediaChannel() ? r.ImageIcon : (0, o.Th)(n.type);
+    let { channelId: n } = e,
+        t = (0, a.m7)(n);
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: '['.concat(c.intl.string(c.t.bz1PZW), ']') });
+    let u = t.isMediaChannel() ? r.ImageIcon : (0, o.Th)(t.type);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.HiddenVisually, { children: (0, l.ZP)({ channel: n }) }),
+            (0, i.jsx)(r.HiddenVisually, { children: (0, l.ZP)({ channel: t }) }),
             (0, i.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [
@@ -29,7 +29,7 @@ function f(e) {
                             className: d.icon,
                             'aria-hidden': !0
                         }),
-                    n.name
+                    t.name
                 ]
             })
         ]

@@ -1,43 +1,43 @@
-t.d(s, {
+s.d(t, {
     Z: function () {
-        return l;
+        return c;
     }
 });
-var n = t(200651);
-t(192379);
-var o = t(120356),
-    r = t.n(o),
-    a = t(481060),
-    i = t(679768),
-    c = t(9642);
-function l(e) {
-    let { copy: s, showStars: t = !0, className: o } = e;
+var n = s(200651);
+s(192379);
+var r = s(120356),
+    i = s.n(r),
+    o = s(481060),
+    a = s(679768),
+    l = s(9642);
+function c(e) {
+    let { copy: t, showStars: s = !0, className: r } = e;
     return (0, n.jsxs)('div', {
-        className: r()(c.badgeContainer, o),
+        className: i()(l.badgeContainer, r),
         children: [
-            t &&
+            s &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)('span', {
-                            className: r()(c.star, c.starLeft),
-                            children: (0, n.jsx)(i.Z, {
+                            className: i()(l.star, l.starLeft),
+                            children: (0, n.jsx)(a.Z, {
                                 width: '10',
                                 height: '10'
                             })
                         }),
                         (0, n.jsx)('span', {
-                            className: r()(c.star, c.starRight),
-                            children: (0, n.jsx)(i.Z, {
+                            className: i()(l.star, l.starRight),
+                            children: (0, n.jsx)(a.Z, {
                                 width: '14',
                                 height: '14'
                             })
                         })
                     ]
                 }),
-            (0, n.jsx)(a.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: 'eyebrow',
-                className: c.newBadge,
-                children: s
+                className: l.newBadge,
+                children: t
             })
         ]
     });

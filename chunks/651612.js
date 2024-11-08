@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n(442837),
+    a = n(392711),
+    r = n(442837),
     s = n(481060),
     o = n(481051),
     c = n(871499),
@@ -23,14 +23,14 @@ var i = n(200651),
 function v(e) {
     let { channelId: t, className: n, ...v } = e,
         _ = l.useRef(null),
-        I = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
+        I = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
         E = l.useCallback(() => {
             let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
             (0, p.gC)(e);
         }, [I]),
         { unreadCount: b, mentionCount: N } = (function (e) {
-            let t = (0, a.e7)([u.Z], () => !(0, r.isEmpty)(u.Z.getTypingUsers(e)), [e]),
-                { unreadCount: n, mentionCount: i } = (0, a.cj)(
+            let t = (0, r.e7)([u.Z], () => !(0, a.isEmpty)(u.Z.getTypingUsers(e)), [e]),
+                { unreadCount: n, mentionCount: i } = (0, r.cj)(
                     [d.ZP],
                     () => ({
                         unreadCount: d.ZP.getUnreadCount(e),
@@ -55,7 +55,7 @@ function v(e) {
     let S = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
         T = [S];
     N > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: N })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
-    let j = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
+    let j = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
         A = N > 0 ? N : b,
         y = A > 0;
     return (0, i.jsxs)('div', {

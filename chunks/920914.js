@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(888496),
     I = n(605236),
     N = n(565138),
-    b = n(297700),
-    A = n(553795),
+    A = n(297700),
+    b = n(553795),
     v = n(430824),
     j = n(771845),
     O = n(246946),
@@ -48,11 +48,11 @@ let G = (e) => {
             joinErrorMessage: o,
             showJoinErrorMessage: c
         } = (0, a.cj)(
-            [A.Z],
+            [b.Z],
             () => ({
-                isJoining: A.Z.isJoining(r.id),
-                joinErrorMessage: '' === A.Z.joinErrorMessage(r.id) ? w.intl.string(w.t.j2d6Ki) : A.Z.joinErrorMessage(r.id),
-                showJoinErrorMessage: void 0 !== A.Z.joinErrorMessage(r.id)
+                isJoining: b.Z.isJoining(r.id),
+                joinErrorMessage: '' === b.Z.joinErrorMessage(r.id) ? w.intl.string(w.t.j2d6Ki) : b.Z.joinErrorMessage(r.id),
+                showJoinErrorMessage: void 0 !== b.Z.joinErrorMessage(r.id)
             }),
             [r.id]
         ),
@@ -117,7 +117,7 @@ function Y(e) {
         o,
         { onDisconnect: m, account: g, theme: p, locale: S } = e,
         [I, N] = s.useState(g.friendSync),
-        [A, v] = s.useState(g.visibility),
+        [b, v] = s.useState(g.visibility),
         [j, O] = s.useState(g.metadataVisibility),
         [R, D] = s.useState(g.showActivity),
         [k, V] = s.useState(null),
@@ -209,7 +209,7 @@ function Y(e) {
                         (l = (0, i.jsx)(u.Tooltip, {
                             text: w.intl.string(w.t.Jebrw8),
                             children: (e) =>
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     ...e,
                                     color: c.Z.unsafe_rawColors.TWITTER.css,
                                     children: (0, i.jsx)(u.CheckmarkSmallIcon, {
@@ -411,7 +411,7 @@ function Y(e) {
                     hideBorder: !0,
                     value: 1 === j,
                     onChange: et,
-                    disabled: 1 !== A || null == g.metadata,
+                    disabled: 1 !== b || null == g.metadata,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
                         children: w.intl.string(w.t.FYKGsL)
@@ -425,7 +425,7 @@ function Y(e) {
                         (0, i.jsx)(u.FormSwitch, {
                             className: U.connectionOptionSwitch,
                             hideBorder: !0,
-                            value: 1 === A,
+                            value: 1 === b,
                             onChange: ee,
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -607,8 +607,8 @@ function K(e) {
 }
 t.Z = () => {
     let e = (0, a.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        t = (0, a.e7)([A.Z], () => A.Z.isFetching()),
-        n = (0, a.e7)([A.Z], () => A.Z.getAccounts()),
+        t = (0, a.e7)([b.Z], () => b.Z.isFetching()),
+        n = (0, a.e7)([b.Z], () => b.Z.getAccounts()),
         r = (0, S.ZP)();
     (0, a.e7)([j.ZP], () => j.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([D.default], () => D.default.locale);

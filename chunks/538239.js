@@ -7,8 +7,8 @@ n.r(t),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    a = n(512722),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(904245),
@@ -66,7 +66,7 @@ class T extends l.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: l } = this.state,
-            { activity: r, analyticsLocations: s, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: g, onClose: x } = this.props,
+            { activity: a, analyticsLocations: s, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: g, onClose: x } = this.props,
             v = p > 0,
             _ = v ? b.intl.formatToPlainString(b.t['4rMiHx'], { seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
@@ -89,10 +89,10 @@ class T extends l.PureComponent {
                         }),
                         (0, i.jsx)(d.Z, {
                             activityActionType: h,
-                            activity: r,
+                            activity: a,
                             className: N.preview,
                             application: m,
-                            partyId: null != r.party ? r.party.id : null,
+                            partyId: null != a.party ? a.party.id : null,
                             isPreview: !0,
                             analyticsLocations: s
                         }),
@@ -110,7 +110,7 @@ class T extends l.PureComponent {
                             renderPopout: (e) => {
                                 let { closePopout: t } = e;
                                 return (
-                                    a()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
+                                    r()(null != l, 'ActivityInvite.render - renderPopout: contentWarningProps cannot be null'),
                                     (0, i.jsx)(u.Z, {
                                         onClose: t,
                                         ...l
@@ -200,18 +200,18 @@ class T extends l.PureComponent {
             }),
             Z(this, 'handleShare', () => {
                 let { channel: e, activity: t, activityActionType: n, cooldown: i, onClose: l } = this.props,
-                    { textValue: r, contentWarningProps: a } = this.state;
+                    { textValue: a, contentWarningProps: r } = this.state;
                 if (i > 0)
                     return Promise.resolve({
                         shouldClear: !1,
                         shouldRefocus: !0
                     });
-                let s = x.ZP.parse(e, r),
+                let s = x.ZP.parse(e, a),
                     o = {
                         activity: t,
                         type: n
                     };
-                return null != a
+                return null != r
                     ? (this.setState({ contentWarningProps: null }),
                       c.Z.sendMessage(e.id, s, !0, { activityAction: o }).then((e) => this.trackInvite(e)),
                       l(),
@@ -222,7 +222,7 @@ class T extends l.PureComponent {
                     : (0, I.v)({
                           openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
                           type: f.I.FORM,
-                          content: r,
+                          content: a,
                           channel: e
                       }).then((t) => {
                           let { valid: n } = t;

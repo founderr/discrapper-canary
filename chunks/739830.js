@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(665149),
+    a = n(481060),
+    r = n(665149),
     s = n(585483),
     o = n(723170),
     c = n(64247),
@@ -19,7 +19,7 @@ function m(e) {
     let { channel: t } = e,
         n = (0, o.B)(t),
         [m, f] = l.useState(!1),
-        g = (0, r.useRedesignIconContext)().enabled;
+        g = (0, a.useRedesignIconContext)().enabled;
     l.useEffect(() => {
         let e = () => f(!0);
         return (
@@ -30,9 +30,9 @@ function m(e) {
         );
     }, []);
     let C = h.intl.string(h.t.h850Sk);
-    return (0, i.jsx)(r.Popout, {
+    return (0, i.jsx)(a.Popout, {
         shouldShow: m,
-        animation: r.Popout.Animation.NONE,
+        animation: a.Popout.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
@@ -46,11 +46,11 @@ function m(e) {
             }),
         children: (e, t) => {
             let { isShown: l } = t;
-            return (0, i.jsx)(a.ZP.Icon, {
+            return (0, i.jsx)(r.ZP.Icon, {
                 ...e,
                 onClick: () => f((e) => !e),
                 tooltip: l ? null : C,
-                icon: n === d.iN.NO_MESSAGES ? r.BellSlashIcon : r.BellIcon,
+                icon: n === d.iN.NO_MESSAGES ? a.BellSlashIcon : a.BellIcon,
                 foreground: n !== d.iN.NO_MESSAGES || g ? null : p.strikethrough,
                 'aria-label': C,
                 selected: l

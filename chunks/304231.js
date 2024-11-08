@@ -77,8 +77,8 @@ t.Z = r.memo(function (e) {
         L = r.useCallback(() => {
             2 === N ? t() : Z(N + 1);
         }, [N, Z, t]),
-        j = r.useMemo(() => 1 === N && null == b, [b, N]),
-        R = r.useMemo(
+        R = r.useMemo(() => 1 === N && null == b, [b, N]),
+        j = r.useMemo(
             () => [
                 {
                     index: 0,
@@ -166,14 +166,14 @@ t.Z = r.memo(function (e) {
                 children: [
                     (0, i.jsx)(h.T, {
                         currentStepIndex: N,
-                        steps: R,
+                        steps: j,
                         furthestStepIndex: x,
                         onStepClick: Z
                     }),
                     (0, i.jsx)(h.i, {
                         className: _.footerButtons,
                         isBackDisabled: !1,
-                        isNextDisabled: j,
+                        isNextDisabled: R,
                         onNextClick: L,
                         onBackClick: y
                     })

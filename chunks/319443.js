@@ -26,7 +26,7 @@ t.Z = function () {
         r.useEffect(() => {
             a.g5();
         }, []);
-    let { searchQuery: x, searchFetchedQuery: A, onSearchTextChange: b, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L, initialSearchCategoryId: j, onOpenCategorySearch: R } = (0, h.M)(),
+    let { searchQuery: x, searchFetchedQuery: A, onSearchTextChange: b, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L, initialSearchCategoryId: R, onOpenCategorySearch: j } = (0, h.M)(),
         {
             searchBarState: O,
             onTabsAvailableWidthChange: P,
@@ -96,13 +96,13 @@ t.Z = function () {
                       onSelectApplication: w,
                       applicationId: U,
                       onCloseAppDetails: k,
-                      onOpenCategorySearch: R
+                      onOpenCategorySearch: j
                   })
                 : B
                   ? (0, i.jsx)(E.Z, {
                         query: A,
                         onSelectApplication: w,
-                        initialCategoryId: j
+                        initialCategoryId: R
                     })
                   : N === I.kK
                     ? (0, i.jsx)(_.Z, {

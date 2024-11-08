@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n(442837),
+    a = n(392711),
+    r = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(570140),
@@ -46,13 +46,13 @@ let O = P.Hz.CHAT,
 function B(e) {
     var t;
     let { channel: n, closePopout: f, onFocus: v } = e,
-        P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
-        B = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
+        P = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
+        B = (0, r.e7)([C.default], () => C.default.getCurrentUser()),
         U = _.ZP.canUseFancyVoiceChannelReactions(B),
-        H = (0, a.e7)([E.Z], () => E.Z.getState().animationType),
+        H = (0, r.e7)([E.Z], () => E.Z.getState().animationType),
         G = l.useRef(!1),
         F = (0, m.wC)(n.guild_id),
-        V = (0, r.uniqBy)([...F, ...w], 'name')
+        V = (0, a.uniqBy)([...F, ...w], 'name')
             .filter(
                 (e) =>
                     !x.ZP.isEmojiFilteredOrLocked({
@@ -109,11 +109,11 @@ function B(e) {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
-                r = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                a = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
                 'aria-label': L.intl.string(L.t.RLHsHx),
-                shouldShow: r,
+                shouldShow: a,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: v,

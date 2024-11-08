@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(442837),
-    r = n(367907),
-    a = n(906732),
+    a = n(367907),
+    r = n(906732),
     s = n(703656),
     o = n(626135),
     c = n(730647),
@@ -28,7 +28,7 @@ function p(e) {
                 }),
             [f]
         ),
-        { analyticsLocations: _ } = (0, a.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
+        { analyticsLocations: _ } = (0, r.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
         I = i.useRef(!1);
     i.useEffect(() => {
         g &&
@@ -42,7 +42,7 @@ function p(e) {
                 is_premium_member: x,
                 location_stack: _,
                 location: m,
-                ...(0, r.hH)(n)
+                ...(0, a.hH)(n)
             }));
     }, [n, p, g, m, v, x, _]);
 }

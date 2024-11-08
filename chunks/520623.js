@@ -1,6 +1,6 @@
 t.d(n, {
     M: function () {
-        return s;
+        return o;
     }
 }),
     t(724458);
@@ -17,6 +17,6 @@ let i = (e) =>
         ),
         {}
     );
-async function s(e) {
+async function o(e) {
     return i((await r.tn.get({ url: a.ANM.GUILD_TOP_GAMES(e) })).body.top_games);
 }

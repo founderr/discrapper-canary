@@ -1,31 +1,31 @@
-t.d(s, {
+s.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 });
-var n = t(200651),
-    o = t(120356),
-    r = t.n(o),
-    a = t(927359),
-    i = t(325767),
-    c = t(823188),
-    l = t(278724);
-let u = 'premium_tier_gradient',
-    f = 'smaller_sparkle_gradient';
-function d(e) {
-    let { width: s = 14, height: t = 15, color: o = 'white', foreground: r, ...a } = e;
+var n = s(200651),
+    r = s(120356),
+    i = s.n(r),
+    o = s(927359),
+    a = s(325767),
+    l = s(823188),
+    c = s(278724);
+let d = 'premium_tier_gradient',
+    u = 'smaller_sparkle_gradient';
+function p(e) {
+    let { width: t = 14, height: s = 15, color: r = 'white', foreground: i, ...o } = e;
     return (0, n.jsxs)('svg', {
-        ...(0, i.Z)({ ...a }),
+        ...(0, a.Z)({ ...o }),
         preserveAspectRatio: 'none',
-        width: s,
-        height: t,
+        width: t,
+        height: s,
         viewBox: '0 0 14 15',
-        className: r,
+        className: i,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, n.jsx)('defs', {
                 children: (0, n.jsxs)('linearGradient', {
-                    id: u,
+                    id: d,
                     x1: '0%',
                     y1: '0%',
                     x2: '100%',
@@ -47,7 +47,7 @@ function d(e) {
                 })
             }),
             (0, n.jsxs)('linearGradient', {
-                id: f,
+                id: u,
                 x1: '-4.95474',
                 y1: '5.44067',
                 x2: '11.2384',
@@ -67,36 +67,36 @@ function d(e) {
             }),
             (0, n.jsx)('path', {
                 d: 'M8.59403 1.52779C8.04647 0.0480288 5.95353 0.0480288 5.40597 1.52779L4.56476 3.8011C4.36219 4.34854 3.93057 4.78016 3.38313 4.98273L1.10982 5.82394C-0.36994 6.3715 -0.36994 8.46444 1.10982 9.012L3.38313 9.8532C3.93057 10.0558 4.36219 10.4874 4.56476 11.0348L5.40597 13.3081C5.95353 14.7879 8.04647 14.7879 8.59403 13.3081L9.43524 11.0348C9.63781 10.4874 10.0694 10.0558 10.6169 9.8532L12.8902 9.012C14.3699 8.46444 14.3699 6.3715 12.8902 5.82394L10.6169 4.98273C10.0694 4.78016 9.63781 4.34854 9.43524 3.8011L8.59403 1.52779Z',
-                fill: o
+                fill: r
             })
         ]
     });
 }
-function p(e) {
-    let { className: s, endsAt: t, messageStyle: o, upperCase: i, showSparkles: p } = e,
-        x = (0, a.Z)(t, o);
+function f(e) {
+    let { className: t, endsAt: s, messageStyle: r, upperCase: a, showSparkles: f } = e,
+        x = (0, o.Z)(s, r);
     return (
-        i && x.toUpperCase(),
+        a && x.toUpperCase(),
         (0, n.jsxs)('div', {
-            className: r()(s, l.countDown),
+            className: i()(t, c.countDown),
             children: [
-                p
+                f
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, n.jsx)(d, {
-                                  foreground: l.sparkleStar1,
-                                  color: 'url(#'.concat(f, ')')
-                              }),
-                              (0, n.jsx)(d, {
-                                  foreground: l.sparkleStar2,
+                              (0, n.jsx)(p, {
+                                  foreground: c.sparkleStar1,
                                   color: 'url(#'.concat(u, ')')
+                              }),
+                              (0, n.jsx)(p, {
+                                  foreground: c.sparkleStar2,
+                                  color: 'url(#'.concat(d, ')')
                               })
                           ]
                       })
                     : null,
-                (0, n.jsx)(c.mn, {
+                (0, n.jsx)(l.mn, {
                     text: x,
-                    colorOptions: c.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                    colorOptions: l.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
                 })
             ]
         })

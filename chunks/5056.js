@@ -1,8 +1,8 @@
 var r = t(200651),
     a = t(192379),
     i = t(120356),
-    s = t.n(i),
-    o = t(481060),
+    o = t.n(i),
+    s = t(481060),
     l = t(838221),
     c = t(246364),
     d = t(700833),
@@ -12,7 +12,7 @@ function f(e) {
     let { onClick: n, text: t, icon: a } = e;
     return (0, r.jsx)('div', {
         className: m.addFormFieldContainer,
-        children: (0, r.jsxs)(o.Clickable, {
+        children: (0, r.jsxs)(s.Clickable, {
             className: m.addFormField,
             onClick: n,
             children: [
@@ -21,7 +21,7 @@ function f(e) {
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, r.jsx)(o.FormText, {
+                (0, r.jsx)(s.FormText, {
                     className: m.addFormFieldText,
                     children: t
                 })
@@ -40,7 +40,7 @@ n.Z = function (e) {
         g = a.useCallback(
             (e) => {
                 i
-                    ? (0, o.openModalLazy)(async () => {
+                    ? (0, s.openModalLazy)(async () => {
                           let { default: n } = await t.e('54845').then(t.bind(t, 199836));
                           return (t) =>
                               (0, r.jsx)(n, {
@@ -53,12 +53,12 @@ n.Z = function (e) {
             [i, p]
         );
     return (0, r.jsxs)('div', {
-        className: s()(m.spacingContainer, m.backgroundContainer),
+        className: o()(m.spacingContainer, m.backgroundContainer),
         children: [
             x &&
                 (0, r.jsx)('div', {
                     className: m.containerTopHat,
-                    children: (0, r.jsx)(o.Text, {
+                    children: (0, r.jsx)(s.Text, {
                         className: m.containerTopHatText,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
@@ -70,7 +70,7 @@ n.Z = function (e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: m.iconContainer,
-                        children: (0, r.jsx)(o.PlusSmallIcon, {
+                        children: (0, r.jsx)(s.PlusSmallIcon, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 18,
@@ -78,36 +78,36 @@ n.Z = function (e) {
                             className: m.icon
                         })
                     }),
-                    (0, r.jsxs)(o.FormSection, {
+                    (0, r.jsxs)(s.FormSection, {
                         children: [
-                            (0, r.jsx)(o.FormTitle, {
+                            (0, r.jsx)(s.FormTitle, {
                                 tag: 'h3',
                                 className: m.leftRailIconContainerTitle,
                                 children: u.intl.string(u.t['7v2xvr'])
                             }),
-                            (0, r.jsx)(o.FormText, {
+                            (0, r.jsx)(s.FormText, {
                                 className: m.leftRailIconContainerDescription,
-                                type: o.FormText.Types.DESCRIPTION,
+                                type: s.FormText.Types.DESCRIPTION,
                                 children: u.intl.string(u.t.DyARHR)
                             }),
                             (0, r.jsx)(f, {
                                 formFieldType: c.QJ.TEXT_INPUT,
                                 addFormField: n,
-                                icon: (0, o.makeIconCompat)(l.Z),
+                                icon: (0, s.makeIconCompat)(l.Z),
                                 text: u.intl.string(u.t.w6Q9w8),
                                 onClick: () => g(c.QJ.TEXT_INPUT)
                             }),
                             (0, r.jsx)(f, {
                                 formFieldType: c.QJ.PARAGRAPH,
                                 addFormField: n,
-                                icon: o.ChannelListIcon,
+                                icon: s.ChannelListIcon,
                                 text: u.intl.string(u.t.gG0JBA),
                                 onClick: () => g(c.QJ.PARAGRAPH)
                             }),
                             (0, r.jsx)(f, {
                                 formFieldType: c.QJ.MULTIPLE_CHOICE,
                                 addFormField: n,
-                                icon: o.ListBulletsIcon,
+                                icon: s.ListBulletsIcon,
                                 text: u.intl.string(u.t.ooKh3t),
                                 onClick: () => g(c.QJ.MULTIPLE_CHOICE)
                             })

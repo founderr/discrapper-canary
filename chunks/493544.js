@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     NM: function () {
-        return P;
+        return T;
     },
     Xi: function () {
         return y;
@@ -24,8 +24,8 @@ var i,
     h = n.n(d),
     m = n(100621),
     p = n(608863),
-    b = n(873546),
-    f = n(215569),
+    f = n(873546),
+    b = n(215569),
     v = n(481060),
     S = n(110924),
     x = n(358085),
@@ -56,7 +56,7 @@ class y extends (o = u.PureComponent) {
         });
     }
 }
-function P(e) {
+function T(e) {
     let { children: t } = e;
     return (0, c.jsx)('div', {
         className: j.customColumn,
@@ -85,7 +85,7 @@ function P(e) {
     (r.CUSTOM = 'custom'),
     (r.DEFAULT = 'default'),
     (r.WIDE = 'wide');
-let T = Object.freeze({
+let P = Object.freeze({
     minimal: 'contentColumnMinimal',
     custom: 'contentColumnCustom',
     default: 'contentColumnDefault',
@@ -121,7 +121,7 @@ t.ZP = function (e) {
     let { sidebar: t, content: n, notice: i, section: l, closeAction: s, sidebarTheme: r, contentType: o, scrollerRef: a, mobileSidebarOpen: d, toggleSidebar: x, hideSidebar: g = !1 } = e,
         N = u.useRef(null),
         y = u.useRef(null),
-        P = (0, S.Z)(l),
+        T = (0, S.Z)(l),
         I = (0, v.useTransition)(
             g,
             {
@@ -142,10 +142,10 @@ t.ZP = function (e) {
             [a]
         );
     u.useLayoutEffect(() => {
-        null != N.current && P !== l && N.current.scrollTo({ to: 0 });
-    }, [l, P, N]);
+        null != N.current && T !== l && N.current.scrollTo({ to: 0 });
+    }, [l, T, N]);
     let A = (0, c.jsx)(E, {
-        isMobile: b.tq,
+        isMobile: f.tq,
         mobileSidebarOpen: d,
         closeAction: s
     });
@@ -175,16 +175,16 @@ t.ZP = function (e) {
                                   children: (e) =>
                                       (0, c.jsx)('div', {
                                           className: h()(j.sidebarRegion, e, {
-                                              [j.flexFullWidth]: b.tq,
-                                              [j.hidden]: b.tq && !1 === d
+                                              [j.flexFullWidth]: f.tq,
+                                              [j.hidden]: f.tq && !1 === d
                                           }),
                                           children: (0, c.jsx)(v.AdvancedScrollerThin, {
                                               className: j.sidebarRegionScroller,
                                               fade: !0,
                                               children: (0, c.jsxs)('nav', {
-                                                  className: h()(j.sidebar, { [j.mobileSidebar]: b.tq }),
+                                                  className: h()(j.sidebar, { [j.mobileSidebar]: f.tq }),
                                                   children: [
-                                                      b.tq &&
+                                                      f.tq &&
                                                           (0, c.jsx)('div', {
                                                               className: j.mobileSidebarHeader,
                                                               children: A
@@ -198,21 +198,21 @@ t.ZP = function (e) {
                     (function () {
                         let e = null != x && null != s && d,
                             t =
-                                b.tq &&
+                                f.tq &&
                                 (0, c.jsxs)('div', {
                                     className: h()(j.mobileContentHeader, { [j.hideHamburger]: !e }),
                                     children: [e && (0, c.jsx)(p.r, { onClick: x }), A]
                                 });
                         if ('custom' === o)
-                            return (0, c.jsxs)(f.W, {
+                            return (0, c.jsxs)(b.W, {
                                 component: 'div',
                                 className: j.contentRegion,
-                                children: [t, n, !b.tq && A, Z()]
+                                children: [t, n, !f.tq && A, Z()]
                             });
-                        let i = T[null != o ? o : 'default'];
-                        return (0, c.jsxs)(f.W, {
+                        let i = P[null != o ? o : 'default'];
+                        return (0, c.jsxs)(b.W, {
                             component: 'div',
-                            className: h()(j.contentRegion, { [j.hidden]: b.tq && !0 === d }),
+                            className: h()(j.contentRegion, { [j.hidden]: f.tq && !0 === d }),
                             children: [
                                 (0, c.jsxs)('div', {
                                     className: j.contentTransitionWrap,
@@ -226,9 +226,9 @@ t.ZP = function (e) {
                                                     value: N.current,
                                                     children: (0, c.jsx)(v.TabBar.Panel, {
                                                         id: l,
-                                                        className: h()(j.contentColumn, j[i], { [j.mobileContent]: b.tq }),
+                                                        className: h()(j.contentColumn, j[i], { [j.mobileContent]: f.tq }),
                                                         ref: y,
-                                                        style: b.tq ? { maxWidth: window.innerWidth } : void 0,
+                                                        style: f.tq ? { maxWidth: window.innerWidth } : void 0,
                                                         children: g
                                                             ? n
                                                             : (0, c.jsx)(v.FocusRingScope, {
@@ -237,7 +237,7 @@ t.ZP = function (e) {
                                                               })
                                                     })
                                                 }),
-                                                !b.tq && A
+                                                !f.tq && A
                                             ]
                                         })
                                     ]

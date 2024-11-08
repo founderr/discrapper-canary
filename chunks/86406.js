@@ -7,8 +7,8 @@ var r = t(200651);
 t(192379);
 var a = t(249849),
     i = t(907561),
-    s = t(388032),
-    o = t(408263);
+    o = t(388032),
+    s = t(408263);
 let l = ['#00ff00'],
     c = ['#000000', '#ed1c24'],
     d = [0.7],
@@ -44,7 +44,7 @@ function h(e) {
         { styleContent: b, containerId: v } = (0, i.bC)(g, C);
     return (0, r.jsxs)('svg', {
         ...p,
-        'aria-label': s.intl.string(s.t.nH6S2d),
+        'aria-label': o.intl.string(o.t.nH6S2d),
         width: n,
         height: t,
         viewBox: '0 0 '.concat(i.Km, ' ').concat(i.md),
@@ -82,19 +82,19 @@ function h(e) {
                 ]
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#wrapper-layer'),
+                href: ''.concat(s, '#wrapper-layer'),
                 id: v
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#heightmap-lines-0'),
+                href: ''.concat(s, '#heightmap-lines-0'),
                 style: { fill: 'url(#line-gradient)' }
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#heightmap-lines-1'),
+                href: ''.concat(s, '#heightmap-lines-1'),
                 style: { fill: 'url(#line-gradient)' }
             }),
             (0, r.jsx)('use', {
-                href: ''.concat(o, '#heightmap-lines-2'),
+                href: ''.concat(s, '#heightmap-lines-2'),
                 style: { fill: 'url(#line-gradient)' }
             })
         ]

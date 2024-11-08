@@ -129,8 +129,8 @@ t.Z = r.memo(function (e) {
     let t,
         { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = A.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
         { enabled: b } = (0, E.I7)(),
-        j = r.useRef(null),
         R = r.useRef(null),
+        j = r.useRef(null),
         O = (0, T.GN)((e) => e.completedNux, l.Z),
         P = (0, T.GN)((e) => e.entrypointGameId, l.Z),
         [D, M] = r.useState(null),
@@ -138,8 +138,8 @@ t.Z = r.memo(function (e) {
         U = r.useCallback(() => {
             var e, t, n;
             if (!b) return;
-            let i = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
-                r = null !== (n = null === (t = R.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
+            let i = null === (e = R.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
+                r = null !== (n = null === (t = j.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && D !== i && M(i + r);
         }, [D, b]);
     r.useEffect(() => {
@@ -150,13 +150,13 @@ t.Z = r.memo(function (e) {
     let G = r.useCallback(() => {
             var e, t;
             b && null != D
-                ? null === (e = R.current) ||
+                ? null === (e = j.current) ||
                   void 0 === e ||
                   e.scrollTo({
                       to: D - 64,
                       animate: !1
                   })
-                : null === (t = R.current) || void 0 === t || t.scrollToTop();
+                : null === (t = j.current) || void 0 === t || t.scrollToTop();
         }, [D, b]),
         B = r.useMemo(
             () =>
@@ -225,7 +225,7 @@ t.Z = r.memo(function (e) {
                         children: (0, i.jsx)(m.Z, {})
                     })),
         (0, i.jsxs)(_.Z, {
-            ref: R,
+            ref: j,
             onScroll: h,
             children: [
                 t,
@@ -234,7 +234,7 @@ t.Z = r.memo(function (e) {
                         W &&
                             (0, i.jsxs)('div', {
                                 className: y.contentTabs,
-                                ref: j,
+                                ref: R,
                                 children: [
                                     (0, i.jsx)(f.Z, {
                                         tabs: V,

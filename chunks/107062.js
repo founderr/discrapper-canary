@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(481060),
     o = n(620662),
     s = n(841784),
-    c = n(429589),
-    u = n(499254),
+    u = n(429589),
+    c = n(499254),
     d = n(827498),
     m = n(541716),
     x = n(706454),
@@ -18,20 +18,20 @@ var l = n(200651),
     f = n(907152),
     I = n(206295),
     j = n(297781),
-    Z = n(591853),
-    P = n(797342),
+    P = n(591853),
+    Z = n(797342),
     L = n(981631),
-    T = n(388032);
-let y = (e, t) =>
-        T.intl.formatToPlainString(T.t.tAwI1t, {
+    y = n(388032);
+let T = (e, t) =>
+        y.intl.formatToPlainString(y.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
     N = (e, t, n) => {
-        let l = T.t['bES+y8'],
+        let l = y.t['bES+y8'],
             a = p.ZP.getName(t.guild_id, t.id, n),
             i = e.extra.activity_name;
-        return T.intl
+        return y.intl
             .formatToMarkdownString(l, {
                 gameName: i,
                 userName: a
@@ -40,8 +40,8 @@ let y = (e, t) =>
     },
     _ = (e) => {
         let { entry: t, channel: n, users: l, countOthers: a } = e,
-            i = T.t['7j/5mp'];
-        return T.intl
+            i = y.t['7j/5mp'];
+        return y.intl
             .formatToMarkdownString(i, {
                 gameName: t.extra.activity_name,
                 user1: p.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, l[0]),
@@ -53,12 +53,12 @@ let y = (e, t) =>
 t.ZP = (e) => {
     let { channel: t, entry: n, onReaction: p, onVoiceChannelPreview: E } = e,
         { largeImage: S } = (0, C.rv)({ entry: n }),
-        { user: A, details: M, activity: k, embeddedActivity: w } = (0, P.n)(n),
+        { user: A, details: M, activity: k, embeddedActivity: w } = (0, Z.n)(n),
         { primaryColor: R, secondaryColor: b } = (0, I.Z)(null == S ? void 0 : S.src),
         H = (0, i.e7)([x.default], () => x.default.locale),
         { displayParticipants: O, participant1: V, participant2: B, numOtherParticipants: U } = (0, v.Z)(n, 3),
         D = () => {
-            u.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
+            c.__(d._b.TEXT, m.I.NORMAL, { applicationId: n.extra.application_id });
         },
         G = a.useCallback(
             (e) => {
@@ -89,9 +89,9 @@ t.ZP = (e) => {
             location: j.Gt.POPOUT,
             entry: n
         }),
-        W = (0, l.jsx)(Z.wG, {
+        W = (0, l.jsx)(P.wG, {
             channel: t,
-            userDescription: (0, g.kr)(n) ? T.t.vPg1JS : T.t.rPqqtr,
+            userDescription: (0, g.kr)(n) ? y.t.vPg1JS : y.t.rPqqtr,
             title: n.extra.activity_name,
             subtitle: M,
             badges: z,
@@ -102,35 +102,35 @@ t.ZP = (e) => {
         }),
         q = (0, o.Z)(k, L.xjy.JOIN) || (0, s.Z)(k),
         Y = q
-            ? (0, l.jsx)(c.Z, {
+            ? (0, l.jsx)(u.Z, {
                   isEmbedded: (0, s.Z)(k),
                   embeddedActivity: w,
                   activity: k,
                   user: A,
                   ButtonComponent: (e) =>
-                      (0, l.jsx)(Z.Ll, {
+                      (0, l.jsx)(P.Ll, {
                           IconComponent: r.DoorEnterIcon,
                           ...e
                       })
               })
             : null,
-        F = (0, l.jsx)(Z.Ll, {
+        F = (0, l.jsx)(P.Ll, {
             onClick: D,
             IconComponent: r.AppsIcon,
-            children: T.intl.string(T.t.GDWYR0)
+            children: y.intl.string(y.t.GDWYR0)
         }),
         J = [q ? Y : F].filter(h.lm);
-    return (0, l.jsxs)(Z.yR, {
+    return (0, l.jsxs)(P.yR, {
         children: [
             W,
-            (0, l.jsx)(Z.St, {
-                children: (0, l.jsx)(Z.WT, {
+            (0, l.jsx)(P.St, {
+                children: (0, l.jsx)(P.WT, {
                     onReaction: p,
                     onVoiceChannelPreview: E,
                     user: A,
                     channel: t,
                     generateReactionImage: G,
-                    reactionImageAltText: y(n, A),
+                    reactionImageAltText: T(n, A),
                     entry: n,
                     buttons: J
                 })

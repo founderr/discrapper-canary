@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(189156),
-    a = n(699516),
+    a = n(189156),
+    r = n(699516),
     s = n(246946),
     o = n(5192),
     c = n(621853),
@@ -31,7 +31,7 @@ var l = n(442837),
     T = n(237563);
 function j(e) {
     let { user: t, currentUser: n, displayProfile: j, channel: A, isHovering: y, onOpenProfile: P } = e,
-        M = (0, l.e7)([a.Z], () => a.Z.getRelationshipType(t.id)),
+        M = (0, l.e7)([r.Z], () => r.Z.getRelationshipType(t.id)),
         R = (0, l.e7)([s.Z], () => s.Z.hidePersonalInformation),
         L = (0, l.e7)([c.Z], () => {
             var e;
@@ -71,7 +71,7 @@ function j(e) {
                         channelId: A.id
                     })
                 }),
-            t.isProvisional && (0, i.jsx)(r.Z, { look: 'profile' }),
+            t.isProvisional && (0, i.jsx)(a.Z, { look: 'profile' }),
             !k &&
                 !O &&
                 (0, i.jsx)(f.Z, {

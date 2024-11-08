@@ -26,8 +26,8 @@ var i = n(200651),
     f = n(485341),
     I = n(687158),
     N = n(518950),
-    b = n(184325),
-    A = n(867176),
+    A = n(184325),
+    b = n(867176),
     v = n(25990),
     j = n(594174),
     O = n(572004),
@@ -452,7 +452,7 @@ function K() {
     return (0, i.jsxs)('div', {
         className: k.accountProfileCard,
         children: [
-            (0, i.jsx)(A.b, {
+            (0, i.jsx)(b.b, {
                 user: t,
                 displayProfile: n,
                 avatarSize: u.AvatarSizes.SIZE_80,
@@ -486,7 +486,7 @@ function K() {
                                     (0, i.jsx)(z, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(b.Z, {
+                            (0, i.jsx)(A.Z, {
                                 badges: s,
                                 className: k.badgeList,
                                 badgeClassName: k.badge

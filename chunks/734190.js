@@ -14,8 +14,8 @@ var i = n(200651),
     g = n(306680),
     C = n(979651),
     _ = n(938475),
-    x = n(714794),
-    v = n(135724),
+    v = n(714794),
+    x = n(135724),
     I = n(25601),
     b = n(207055),
     S = n(981631),
@@ -134,13 +134,13 @@ t.Z = l.memo(function (e) {
                                         className: y.children,
                                         children: [
                                             G > 0 && t.userLimit > 0
-                                                ? (0, i.jsx)(v.Z, {
+                                                ? (0, i.jsx)(x.Z, {
                                                       userCount: G,
                                                       video: w,
                                                       channel: t
                                                   })
                                                 : null,
-                                            (0, x.Z)(R) ? (0, i.jsx)(I.Z, { mentionsCount: R }) : null
+                                            (0, v.Z)(R) ? (0, i.jsx)(I.Z, { mentionsCount: R }) : null
                                         ]
                                     })
                                 ]

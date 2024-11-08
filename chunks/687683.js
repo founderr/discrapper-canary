@@ -1,4 +1,4 @@
-var i, l, r, a;
+var i, l, a, r;
 n.d(t, {
     WN: function () {
         return o;
@@ -20,8 +20,8 @@ n.d(t, {
     }
 });
 let s = 'Message Request Accept Confirmation';
-((r = i || (i = {}))[(r.ACCEPT = 0)] = 'ACCEPT'), (r[(r.REJECT = 1)] = 'REJECT'), (r[(r.ACCEPT_CONFIRMATION_PROMPT = 2)] = 'ACCEPT_CONFIRMATION_PROMPT'), (r[(r.DISMISS_CONFIRMATION_PROMPT = 3)] = 'DISMISS_CONFIRMATION_PROMPT'), (r[(r.ACCEPT_HAM_CONFIRMATION_PROMPT = 4)] = 'ACCEPT_HAM_CONFIRMATION_PROMPT'), (r[(r.DISMISS_HAM_CONFIRMATION_PROMPT = 5)] = 'DISMISS_HAM_CONFIRMATION_PROMPT');
+((a = i || (i = {}))[(a.ACCEPT = 0)] = 'ACCEPT'), (a[(a.REJECT = 1)] = 'REJECT'), (a[(a.ACCEPT_CONFIRMATION_PROMPT = 2)] = 'ACCEPT_CONFIRMATION_PROMPT'), (a[(a.DISMISS_CONFIRMATION_PROMPT = 3)] = 'DISMISS_CONFIRMATION_PROMPT'), (a[(a.ACCEPT_HAM_CONFIRMATION_PROMPT = 4)] = 'ACCEPT_HAM_CONFIRMATION_PROMPT'), (a[(a.DISMISS_HAM_CONFIRMATION_PROMPT = 5)] = 'DISMISS_HAM_CONFIRMATION_PROMPT');
 let o = 73,
     c = 26,
     d = 100;
-((a = l || (l = {})).REQUESTS = 'REQUESTS'), (a.SPAM = 'SPAM');
+((r = l || (l = {})).REQUESTS = 'REQUESTS'), (r.SPAM = 'SPAM');

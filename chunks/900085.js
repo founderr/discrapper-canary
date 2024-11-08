@@ -21,8 +21,8 @@ var i,
     g = n(576855),
     C = n(313201),
     _ = n(592125),
-    x = n(888369),
-    v = n(430824),
+    v = n(888369),
+    x = n(430824),
     I = n(306680),
     b = n(944486),
     S = n(938475),
@@ -68,7 +68,7 @@ let L = 10,
         });
 class D extends (i = r.Component) {
     render() {
-        let e = v.Z.getGuild(this.props.channel.guild_id);
+        let e = x.Z.getGuild(this.props.channel.guild_id);
         return (0, l.jsx)(j.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
@@ -92,9 +92,9 @@ let O = c.ZP.connectStores([I.ZP, _.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    U = c.ZP.connectStores([x.default], (e) => {
+    U = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
-        return { unread: x.default.hasUnread(t.id) };
+        return { unread: v.default.hasUnread(t.id) };
     })(j.ic),
     G = c.ZP.connectStores([I.ZP], (e) => {
         let { channel: t } = e;
@@ -262,7 +262,7 @@ class H extends r.PureComponent {
                 switch (t.type) {
                     case f.h8.GUILD:
                         return (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('29612'), n.e('44156'), n.e('16141'), n.e('85552'), n.e('58227'), n.e('50034'), n.e('41661'), n.e('33213'), n.e('71840')]).then(n.bind(n, 545135));
+                            let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('42587'), n.e('44156'), n.e('16141'), n.e('85552'), n.e('58227'), n.e('50034'), n.e('48649'), n.e('33213'), n.e('71840')]).then(n.bind(n, 545135));
                             return (n) =>
                                 (0, l.jsx)(e, {
                                     ...n,
@@ -274,7 +274,7 @@ class H extends r.PureComponent {
                     case f.h8.TEXT_CHANNEL:
                     case f.h8.VOICE_CHANNEL:
                         let i = t.record,
-                            r = v.Z.getGuild(i.getGuildId());
+                            r = x.Z.getGuild(i.getGuildId());
                         if (null == r) return;
                         switch (i.type) {
                             case P.d4z.GUILD_TEXT:

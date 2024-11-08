@@ -24,7 +24,7 @@ function _(e) {
         n = d.Z.getChannel(t);
     return !!(null != n && (0, c.hv)(n.type)) && g();
 }
-class x extends (i = o.ZP.Store) {
+class v extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, d.Z, p.Z, h.ZP);
     }
@@ -33,7 +33,7 @@ class x extends (i = o.ZP.Store) {
     }
 }
 (a = 'PrivateChannelReadStateStore'),
-    (r = 'displayName') in (l = x)
+    (r = 'displayName') in (l = v)
         ? Object.defineProperty(l, r, {
               value: a,
               enumerable: !0,
@@ -41,7 +41,7 @@ class x extends (i = o.ZP.Store) {
               writable: !0
           })
         : (l[r] = a),
-    (t.Z = new x(s.Z, {
+    (t.Z = new v(s.Z, {
         CONNECTION_OPEN: C,
         OVERLAY_INITIALIZE: C,
         MESSAGE_CREATE: _,

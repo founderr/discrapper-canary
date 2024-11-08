@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(570140),
     c = n(430198),
@@ -16,15 +16,15 @@ class f extends (i = s.ZP.Store) {
         return m.has(e);
     }
 }
-(a = 'MediaPostSharePromptStore'),
-    (r = 'displayName') in (l = f)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'MediaPostSharePromptStore'),
+    (a = 'displayName') in (l = f)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new f(o.Z, {
         CONNECTION_OPEN: function () {
             m = new Set();

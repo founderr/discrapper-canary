@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(688465),
-    a = n(690221),
+    a = n(688465),
+    r = n(690221),
     s = n(447564),
     o = n(388032),
     c = n(924430),
@@ -26,7 +26,7 @@ function u(e) {
                         className: c.title,
                         children: o.intl.string(o.t.bVbBT0)
                     }),
-                    (0, i.jsx)(r.Z, {})
+                    (0, i.jsx)(a.Z, {})
                 ]
             }),
             (0, i.jsx)(l.Clickable, {
@@ -59,7 +59,7 @@ function u(e) {
                 })
             }),
             (0, i.jsx)('div', { className: c.divider }),
-            (0, i.jsx)(a.Z, {
+            (0, i.jsx)(r.Z, {
                 onClick: () => {},
                 children: (0, i.jsx)(l.Text, {
                     color: 'text-link',

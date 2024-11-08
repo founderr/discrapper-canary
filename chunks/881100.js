@@ -15,15 +15,15 @@ var i = n(399606),
     g = n(526761),
     m = n(388032),
     f = n(323780),
-    p = n(101732),
-    _ = n(450598),
+    _ = n(101732),
+    p = n(450598),
     h = n(633030),
     E = n(97942),
-    x = n(269987),
-    b = n(548629),
+    b = n(269987),
+    x = n(548629),
     C = n(507084),
-    v = n(680313),
-    T = n(926433),
+    T = n(680313),
+    v = n(926433),
     N = n(302036),
     I = n(994554),
     S = n(1549),
@@ -31,14 +31,14 @@ var i = n(399606),
     A = n(59137),
     j = n(405991),
     P = n(24615),
-    O = n(193943),
-    Z = n(334347),
+    Z = n(193943),
+    O = n(334347),
     M = n(943734),
     B = n(603076),
     w = n(472656),
     y = n(912429),
-    L = n(772969),
-    k = n(926262);
+    k = n(772969),
+    L = n(926262);
 let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
     D = (e) => {
         let { styles: t } = e,
@@ -52,13 +52,13 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badge: {
                 title: m.intl.string(m.t.SS87ra),
                 description: m.intl.string(m.t.oD6CRk),
-                imageSource: _,
+                imageSource: p,
                 imageClassName: t.badgeImage
             },
             badgeAlt: {
                 title: m.intl.string(m.t['5cYMu7']),
                 description: m.intl.string(m.t.vxk9vb),
-                imageSource: U(n, f, p),
+                imageSource: U(n, f, _),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
@@ -71,13 +71,13 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             customAppIcons: {
                 title: m.intl.string(m.t.OuItFh),
                 description: m.intl.string(m.t.mPyrEx),
-                imageSource: O,
+                imageSource: Z,
                 imageClassName: t.customAppIconImage
             },
             emoji: {
                 title: m.intl.string(m.t['R2IV/f']),
                 description: m.intl.string(m.t.R5Xag4),
-                imageSource: Z,
+                imageSource: O,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
@@ -109,20 +109,20 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: m.intl.string(m.t.Bv8Pfn),
                 description: m.intl.string(m.t.JMfaTU),
-                imageSource: U(n, C, v),
+                imageSource: U(n, C, T),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: m.intl.string(m.t.ZvulDg),
                 description: m.intl.string(m.t['8GwCPT']),
-                imageSource: U(n, x, b),
+                imageSource: U(n, b, x),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: m.intl.string(m.t['lGcW+f']),
                 description: m.intl.string(m.t['/fDyOz']),
-                imageSource: U(n, T, N),
+                imageSource: U(n, v, N),
                 imageClassName: t.soundboardImage
             },
             stickers: {
@@ -146,7 +146,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             streaming: {
                 title: m.intl.string(m.t.RSXQYG),
                 description: m.intl.string(m.t.ymCPxs),
-                imageSource: L,
+                imageSource: k,
                 imageClassName: t.streamingImage
             },
             superReactions: {
@@ -158,7 +158,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             upload: {
                 title: m.intl.formatToPlainString(m.t.jqhAdH, { premiumMaxSize: D }),
                 description: m.intl.formatToPlainString(m.t['HI+cfn'], { premiumMaxSize: D }),
-                imageSource: k,
+                imageSource: L,
                 imageClassName: t.uploadImage
             },
             videoBackground: {

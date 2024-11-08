@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(941128),
     y = n(451478),
     L = n(424218),
-    j = n(780570),
-    R = n(353042),
+    R = n(780570),
+    j = n(353042),
     O = n(86826),
     P = n(981631),
     D = n(388032),
@@ -296,7 +296,7 @@ class K extends r.PureComponent {
             if (null != i && null != r) {
                 let n = B(r, l),
                     a = B(i, l),
-                    s = Math.floor((t = j.xI(i, r)));
+                    s = Math.floor((t = R.xI(i, r)));
                 e =
                     l === P.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
@@ -327,7 +327,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let r = j.xI(n, i),
+        let r = R.xI(n, i),
             l = Math.floor(r),
             a =
                 0 === n && 1 === i
@@ -344,7 +344,7 @@ class K extends r.PureComponent {
         });
     }
     renderProgressPatching() {
-        return (0, i.jsx)(R.Z, {
+        return (0, i.jsx)(j.Z, {
             getHistoricalTotalBytes: b.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
@@ -355,7 +355,7 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { total: t, progress: n, stage: i, type: r } = e;
         if (null == t || null == n || null == i) return null;
-        let l = j.xI(n, t),
+        let l = R.xI(n, t),
             a = Math.floor(l);
         return this.renderBody({
             percent: l,
@@ -395,8 +395,8 @@ class K extends r.PureComponent {
                 if (null == n) return null;
                 let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
                 if (null == r || null == l || null == i) return null;
-                let o = j.xI(r, l),
-                    c = j.xI(null != s ? s : 0, l),
+                let o = R.xI(r, l),
+                    c = R.xI(null != s ? s : 0, l),
                     d = (e[e.length - 1] / t) * 1000,
                     u = l - r,
                     h = F({

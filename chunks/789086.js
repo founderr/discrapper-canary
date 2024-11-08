@@ -8,18 +8,18 @@ var r = n(200651),
     l = n(481060),
     i = n(346486),
     o = n(146282),
-    s = n(371991),
-    c = n(206583);
+    c = n(371991),
+    s = n(206583);
 function d() {
     let e = (0, a.e7)([o.Z], () => {
             var e;
-            return (null === (e = o.Z.getFeed(c.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null;
+            return (null === (e = o.Z.getFeed(s.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.refresh_stale_inbox_after_ms) != null;
         }),
         { loading: t, nextFetchDate: n } = (0, a.cj)([o.Z], () => {
             var e;
-            return null !== (e = o.Z.getFeedState(c.YN.GLOBAL_FEED)) && void 0 !== e ? e : { loading: !1 };
+            return null !== (e = o.Z.getFeedState(s.YN.GLOBAL_FEED)) && void 0 !== e ? e : { loading: !1 };
         }),
-        d = (0, a.e7)([o.Z], () => o.Z.getLastFeedFetchDate(c.YN.GLOBAL_FEED));
+        d = (0, a.e7)([o.Z], () => o.Z.getLastFeedFetchDate(s.YN.GLOBAL_FEED));
     return (0, r.jsxs)('div', {
         children: [
             t
@@ -37,7 +37,7 @@ function d() {
                     'Last fetch:',
                     ' ',
                     null != d
-                        ? (0, r.jsx)(s.x3, {
+                        ? (0, r.jsx)(c.x3, {
                               inline: !0,
                               entry: { start: d.getTime() }
                           })

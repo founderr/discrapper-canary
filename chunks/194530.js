@@ -21,7 +21,7 @@ function g(e) {
     let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: C, noSkip: _ = !1 } = e,
         [E, f] = s.useState(''),
         [I, N] = s.useState(''),
-        [b, A] = s.useState(''),
+        [A, b] = s.useState(''),
         [v, j] = s.useState(null),
         [O, R] = s.useState(null),
         P = (0, r.e7)([c.Z], () => c.Z.getErrors()),
@@ -30,7 +30,7 @@ function g(e) {
     async function B(e) {
         e.preventDefault(), (0, a.b9)();
         let t = !1;
-        if (('' === I ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), I !== b ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
+        if (('' === I ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), I !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
             password: E,
             newPassword: I
@@ -106,8 +106,8 @@ function g(e) {
                                     error: null != O ? O : void 0,
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
-                                        value: b,
-                                        onChange: A
+                                        value: A,
+                                        onChange: b
                                     })
                                 })
                             ]

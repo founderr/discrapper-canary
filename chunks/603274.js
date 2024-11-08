@@ -23,8 +23,8 @@ var l = n(120356),
     g = n(594174),
     C = n(938475),
     _ = n(823379),
-    x = n(709054),
-    v = n(853856),
+    v = n(709054),
+    x = n(853856),
     I = n(981631),
     b = n(388032),
     S = n(479315),
@@ -49,9 +49,9 @@ function N(e, t) {
 }
 function E() {
     var e, t;
-    let n = (0, s.Wu)([v.Z, m.Z], () =>
-            x.default
-                .keys(v.Z.getFavoriteChannels())
+    let n = (0, s.Wu)([x.Z, m.Z], () =>
+            v.default
+                .keys(x.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
                 .filter(_.lm)
         ),

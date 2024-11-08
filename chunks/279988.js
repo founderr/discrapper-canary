@@ -3,8 +3,8 @@ var r = t(200651);
 t(192379);
 var a = t(120356),
     i = t.n(a),
-    s = t(692547),
-    o = t(481060),
+    o = t(692547),
+    s = t(481060),
     l = t(259580),
     c = t(196345),
     d = t(137158),
@@ -33,11 +33,11 @@ n.Z = function (e) {
                 channelId: n
             }),
             0 !== T &&
-                (0, r.jsxs)(o.Clickable, {
+                (0, r.jsxs)(s.Clickable, {
                     className: i()(m.fieldFooterContainer, m.clickable),
                     onClick: p,
                     children: [
-                        (0, r.jsx)(o.FormText, {
+                        (0, r.jsx)(s.FormText, {
                             className: m.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: T })
                         }),
@@ -45,7 +45,7 @@ n.Z = function (e) {
                             className: m.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: s.Z.unsafe_rawColors.WHITE_500.css
+                            color: o.Z.unsafe_rawColors.WHITE_500.css
                         })
                     ]
                 }),

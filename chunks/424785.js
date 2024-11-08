@@ -22,8 +22,8 @@ var l = n(120356),
     g = n(66999),
     C = n(378844),
     _ = n(359110),
-    x = n(922482),
-    v = n(431328),
+    v = n(922482),
+    x = n(431328),
     I = n(501655),
     b = n(427679),
     S = n(368442),
@@ -90,7 +90,7 @@ class F extends L.ZP {
         return this.props.channelInfo;
     }
     render() {
-        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: C, resolvedUnreadSetting: _, mentionCount: x, isFavoriteSuggestion: v } = this.props,
+        let { channel: e, selected: t, connected: n, locked: l, connectChannelDropTarget: a, connectChannelDragSource: s, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: p, stageInstance: f, isSubscriptionGated: m, needSubscriptionToAccess: g, unread: C, resolvedUnreadSetting: _, mentionCount: v, isFavoriteSuggestion: x } = this.props,
             { shouldShowGuildVerificationPopout: I } = this.state,
             b = this.getVoiceStatesCount(),
             S = (0, i.jsxs)('li', {
@@ -112,11 +112,11 @@ class F extends L.ZP {
                                         className: B.iconVisibility,
                                         iconClassName: r()({ [V.iconLive]: null != f }),
                                         channel: e,
-                                        selected: !v && t,
+                                        selected: !x && t,
                                         connected: n,
                                         unread: n ? C : void 0,
                                         resolvedUnreadSetting: _,
-                                        mentionCount: x,
+                                        mentionCount: v,
                                         locked: l,
                                         onClick: () => {
                                             this.handleClick(), null == o || o();
@@ -126,17 +126,17 @@ class F extends L.ZP {
                                         },
                                         connectDragPreview: u,
                                         subtitle: this.renderSubtitle(),
-                                        isFavoriteSuggestion: v,
+                                        isFavoriteSuggestion: x,
                                         'aria-label': (0, h.ZP)({
                                             channel: e,
                                             unread: C,
-                                            mentionCount: x,
+                                            mentionCount: v,
                                             userCount: b,
                                             isSubscriptionGated: m,
                                             needSubscriptionToAccess: g
                                         }),
                                         ...c,
-                                        children: [v && this.renderAcceptSuggestionButton(), v && this.renderRemoveSuggestionButton(), !v && this.renderOpenChatButton(), !v && this.renderInviteButton(), !v && this.renderEditButton(), !v && this.renderChannelInfo()]
+                                        children: [x && this.renderAcceptSuggestionButton(), x && this.renderRemoveSuggestionButton(), !x && this.renderOpenChatButton(), !x && this.renderInviteButton(), !x && this.renderEditButton(), !x && this.renderChannelInfo()]
                                     });
                                 }
                             })
@@ -155,7 +155,7 @@ class F extends L.ZP {
             H(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: i } = this.props,
                     l = e.getGuildId();
-                null != l && (0, m.n)(l) && (0, f.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, x.Cq)(e), !__OVERLAY__ && (0, _.Kh)(e.id);
+                null != l && (0, m.n)(l) && (0, f.hk)(l), i && this.setState({ shouldShowGuildVerificationPopout: !0 }), !t && !n && !e.isRoleSubscriptionTemplatePreviewChannel() && (0, v.Cq)(e), !__OVERLAY__ && (0, _.Kh)(e.id);
             }),
             H(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
@@ -246,9 +246,9 @@ function z(e) {
         h = (0, a.e7)([N.Z], () => N.Z.isCollapsed(n.parent_id)),
         p = (0, Z.ZP)(n.id),
         f = (0, a.e7)([b.Z], () => b.Z.getStageInstanceByChannel(n.id), [n.id]),
-        m = (0, v.Rk)(n.id, I.pV.AUDIENCE),
+        m = (0, x.Rk)(n.id, I.pV.AUDIENCE),
         { isSubscriptionGated: C, needSubscriptionToAccess: _ } = (0, g.Z)(n.id),
-        x = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
+        v = (0, a.e7)([A.ZP], () => A.ZP.isFavorite(t.id, n.id)),
         y = (0, S.xJ)(n.id),
         M = (0, R.Z)({
             channel: n,
@@ -270,7 +270,7 @@ function z(e) {
         ...c,
         ...d,
         ...e,
-        isFavoriteSuggestion: r && !x,
+        isFavoriteSuggestion: r && !v,
         forceShowButtons: w,
         channelInfo: M,
         resolvedUnreadSetting: u

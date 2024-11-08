@@ -4,12 +4,12 @@ t.d(n, {
     }
 }),
     t(47120);
-var r = t(192379),
-    s = t(442837),
+var s = t(192379),
+    r = t(442837),
     i = t(353926);
 function l(e) {
-    let [n, t] = (0, s.Wu)([i.Z], () => [i.Z.getAllUserExperimentDescriptors(), i.Z.getGuildExperiments()]);
-    r.useEffect(() => {
+    let [n, t] = (0, r.Wu)([i.Z], () => [i.Z.getAllUserExperimentDescriptors(), i.Z.getGuildExperiments()]);
+    s.useEffect(() => {
         e.trigger();
     }, [e, n, t]);
 }

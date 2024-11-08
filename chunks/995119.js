@@ -1,18 +1,18 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var r = t(200651);
 t(192379);
 var a = t(481060),
     i = t(388032),
-    s = t(384861);
-function o(e) {
+    o = t(384861);
+function s(e) {
     let { onClick: n } = e;
     return (0, r.jsxs)(a.Button, {
-        className: s.randomizeButton,
-        innerClassName: s.randomizeButtonInner,
+        className: o.randomizeButton,
+        innerClassName: o.randomizeButtonInner,
         look: a.Button.Looks.OUTLINED,
         size: a.Button.Sizes.MEDIUM,
         color: a.Button.Colors.PRIMARY,

@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(954709),
     y = n(644679),
     L = n(314533),
-    j = n(9029),
-    R = n(935347),
+    R = n(9029),
+    j = n(935347),
     O = n(560067),
     P = n(823169),
     D = n(845767),
@@ -81,8 +81,8 @@ var i = n(200651),
     eZ = n(171368),
     ey = n(429974),
     eL = n(332754),
-    ej = n(507468),
-    eR = n(357269),
+    eR = n(507468),
+    ej = n(357269),
     eO = n(282506),
     eP = n(444961),
     eD = n(314897),
@@ -161,8 +161,8 @@ let e4 = s.ZP.connectStores([F.Z, ek.Z, eD.default], () => ({
         }
     ),
     e3 = (0, x.e)(b.Z, null, { passProps: !1 }),
-    e6 = (0, x.e)(T.default, null, { passProps: !1 }),
-    e7 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
+    e7 = (0, x.e)(T.default, null, { passProps: !1 }),
+    e6 = [eJ.Z5c.GUILD_BOOSTING_MARKETING(ef.Hw.guildId()), ...Array.from(e$.Vg).map((e) => eJ.Z5c.CHANNEL(ef.Hw.guildId(), e))];
 function e5(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: r = null } = e.params;
     return {
@@ -271,7 +271,7 @@ let e9 = [
         path: [eJ.Z5c.SETTINGS(':section', ':subsection?')],
         render: function (e) {
             let { location: t } = e,
-                n = (0, eR.default)(t.pathname);
+                n = (0, ej.default)(t.pathname);
             return (
                 null != n &&
                     (0, z.h)(() =>
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eJ.Z5c.APPLICATION_DIRECTORY],
-        render: e6,
+        render: e7,
         isSessionRequired: !0
     }
 ];
@@ -413,7 +413,7 @@ class tt extends r.PureComponent {
             eN.Z.initialize(),
             eT.Z.initialize(),
             ey.Z.initialize(),
-            ej.Z.init(),
+            eR.Z.init(),
             w.Z.initialize(),
             _.Z.initialize(),
             eI.Z.initialize(),
@@ -422,7 +422,7 @@ class tt extends r.PureComponent {
             ea.Z.initialize(),
             eo.Z.initialize(),
             L.Z.initialize(),
-            j.Z.initialize(),
+            R.Z.initialize(),
             $.Z.init({
                 hasModalOpen: o.hasAnyModalOpen,
                 openModal: () =>
@@ -442,7 +442,7 @@ class tt extends r.PureComponent {
             (this.historyUnlisten = eg.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eP.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), A.Z.terminate(), C.ZP.terminate(), eO.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), ey.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), eS.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), L.Z.terminate(), j.Z.terminate(), eu.Z.terminate(), P.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), y.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eP.Z.terminate(), eh.Z.terminate(), ed.Z.terminate(), A.Z.terminate(), C.ZP.terminate(), eO.Z.terminate(), I.Z.terminate(), em.Z.terminate(), ec.Z.terminate(), ey.Z.terminate(), E.Z.terminate(), w.Z.terminate(), et.Z.terminate(), _.Z.terminate(), ep.Z.terminate(), eI.Z.terminate(), eS.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), eo.Z.terminate(), L.Z.terminate(), R.Z.terminate(), eu.Z.terminate(), P.Z.terminate(), U.Z.terminate(), Z.Z.terminate(), y.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -510,7 +510,7 @@ class tt extends r.PureComponent {
                     var f;
                     if (
                         ((f = e),
-                        !e7.some((e) => {
+                        !e6.some((e) => {
                             var t;
                             return (null === (t = (0, a.LX)(f, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))
@@ -588,7 +588,7 @@ class tt extends r.PureComponent {
                         (0, i.jsx)(a.l_, { to: '/' })
                     ]
                 }),
-                (0, i.jsx)(R.Z, {})
+                (0, i.jsx)(j.Z, {})
             ]
         });
     }

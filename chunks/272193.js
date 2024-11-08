@@ -9,15 +9,15 @@ var a = n(120356),
     l = n.n(a),
     i = n(442837),
     o = n(481060),
-    s = n(570140),
-    c = n(441623),
+    c = n(570140),
+    s = n(441623),
     d = n(246992),
     u = n(960755),
     h = n(986310);
 function m() {
-    let e = (0, i.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
+    let e = (0, i.e7)([s.Z], () => s.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
-            s.Z.dispatch({
+            c.Z.dispatch({
                 type: 'DEV_TOOLS_SET_FRIEND_ANNIVERSARY_COUNT',
                 total: e
             });
@@ -42,7 +42,7 @@ function m() {
                         (0, r.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
+                                c.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
                             },
                             children: 'Reset'
                         })
@@ -58,7 +58,7 @@ function m() {
                         (0, r.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
+                                c.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
                             },
                             children: 'Reset'
                         })
@@ -74,7 +74,7 @@ function m() {
                         (0, r.jsx)(o.Button, {
                             size: o.Button.Sizes.SMALL,
                             onClick: () => {
-                                s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
+                                c.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
                             },
                             children: 'Clear'
                         })

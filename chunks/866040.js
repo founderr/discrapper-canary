@@ -1,37 +1,37 @@
-l.d(n, {
+n.d(t, {
     Z: function () {
-        return x;
+        return f;
     }
 }),
-    l(411104);
-var t = l(200651),
-    i = l(192379),
-    r = l(442837),
-    a = l(481060),
-    s = l(239091),
-    o = l(751688),
-    u = l(184301),
-    c = l(347475),
-    d = l(210887),
-    m = l(5192),
-    p = l(846921);
-function f(e) {
-    let { participants: n, channel: i } = e;
-    return (0, t.jsx)(a.Scroller, {
+    n(411104);
+var r = n(200651),
+    i = n(192379),
+    a = n(442837),
+    l = n(481060),
+    o = n(239091),
+    s = n(751688),
+    c = n(184301),
+    d = n(347475),
+    u = n(210887),
+    m = n(5192),
+    p = n(846921);
+function g(e) {
+    let { participants: t, channel: i } = e;
+    return (0, r.jsx)(l.Scroller, {
         className: p.popout,
-        children: n.map((e) =>
-            (0, t.jsx)(
-                o.Z,
+        children: t.map((e) =>
+            (0, r.jsx)(
+                s.Z,
                 {
                     guildId: null == i ? void 0 : i.guild_id,
                     user: e,
                     nick: m.ZP.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
-                    onContextMenu: (n) => {
-                        (0, s.jW)(n, async () => {
-                            let { default: n } = await Promise.all([l.e('79695'), l.e('69220'), l.e('44378')]).then(l.bind(l, 881351));
-                            return (l) =>
-                                (0, t.jsx)(n, {
-                                    ...l,
+                    onContextMenu: (t) => {
+                        (0, o.jW)(t, async () => {
+                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('44378')]).then(n.bind(n, 881351));
+                            return (n) =>
+                                (0, r.jsx)(t, {
+                                    ...n,
                                     user: e
                                 });
                         });
@@ -42,43 +42,43 @@ function f(e) {
         )
     });
 }
-function x(e) {
-    let { children: n, participants: l, channel: s, onPopoutClosed: o } = e,
-        m = (0, r.e7)([d.Z], () => d.Z.theme),
-        p = 1 === l.length ? l[0] : null,
-        x = (0, i.useCallback)(
+function f(e) {
+    let { children: t, participants: n, channel: o, onPopoutClosed: s } = e,
+        m = (0, a.e7)([u.Z], () => u.Z.theme),
+        p = 1 === n.length ? n[0] : null,
+        f = (0, i.useCallback)(
             (e) => {
                 if (null != p)
-                    return (0, t.jsx)(c.Z, {
+                    return (0, r.jsx)(d.Z, {
                         ...e,
                         closePopout: () => {
-                            e.closePopout(), null == o || o();
+                            e.closePopout(), null == s || s();
                         },
                         userId: p.id,
-                        guildId: null == s ? void 0 : s.guild_id,
-                        channelId: null == s ? void 0 : s.id
+                        guildId: null == o ? void 0 : o.guild_id,
+                        channelId: null == o ? void 0 : o.id
                     });
-                if (null != l)
-                    return (0, t.jsx)(f, {
-                        participants: l,
-                        channel: s
+                if (null != n)
+                    return (0, r.jsx)(g, {
+                        participants: n,
+                        channel: o
                     });
                 throw Error('One of participant or participants is required');
             },
-            [s, o, l, p]
+            [o, s, n, p]
         );
-    return (0, t.jsx)(a.ThemeContextProvider, {
+    return (0, r.jsx)(l.ThemeContextProvider, {
         theme: m,
-        children: (0, t.jsx)(a.Popout, {
-            renderPopout: x,
+        children: (0, r.jsx)(l.Popout, {
+            renderPopout: f,
             preload: () =>
                 null != p
-                    ? (0, u.Z)(p, {
-                          guildId: null == s ? void 0 : s.guild_id,
-                          channelId: null == s ? void 0 : s.id
+                    ? (0, c.Z)(p, {
+                          guildId: null == o ? void 0 : o.guild_id,
+                          channelId: null == o ? void 0 : o.id
                       })
                     : Promise.resolve(),
-            children: n
+            children: t
         })
     });
 }

@@ -11,51 +11,51 @@ var r = n(120356),
     g = n(276800),
     m = n(474936),
     f = n(981631),
-    p = n(388032),
-    _ = n(746051);
+    _ = n(388032),
+    p = n(746051);
 t.Z = function (e) {
     let { isFullScreen: t } = e,
         r = (0, u.N)(),
         h = (null == r ? void 0 : r.trial_id) === m.jz,
         { enabled: E } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
     if (!h || !E || null == r.expires_at) return null;
-    let x = new Date(r.expires_at);
+    let b = new Date(r.expires_at);
     return (0, i.jsx)(o.O, {
         newLocations: [l.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
-            className: a()(_.banner, { [_.bannerFullScreen]: t }),
+            className: a()(p.banner, { [p.bannerFullScreen]: t }),
             children: [
                 (0, i.jsx)('div', {
-                    className: _.bannerLeftImageContainer,
+                    className: p.bannerLeftImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(28517)
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: _.bannerContent,
+                    className: p.bannerContent,
                     children: (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'display-sm',
                                 color: 'always-white',
-                                children: p.intl.string(p.t.Kkcmj4)
+                                children: _.intl.string(_.t.Kkcmj4)
                             }),
                             (0, i.jsx)(s.Text, {
-                                className: _.countdown,
+                                className: p.countdown,
                                 variant: 'text-sm/bold',
                                 color: 'always-white',
-                                children: (0, i.jsx)(g.Z, { endDate: x })
+                                children: (0, i.jsx)(g.Z, { endDate: b })
                             }),
                             (0, i.jsxs)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: [
-                                    p.intl.string(p.t['2a1fz8']),
+                                    _.intl.string(_.t['2a1fz8']),
                                     '\xA0',
                                     (0, i.jsx)(s.Anchor, {
                                         href: c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL),
-                                        children: p.intl.string(p.t['sBp+u7'])
+                                        children: _.intl.string(_.t['sBp+u7'])
                                     })
                                 ]
                             })
@@ -63,11 +63,11 @@ t.Z = function (e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: _.bannerRightImageContainer,
+                    className: p.bannerRightImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(557622),
-                        className: _.image
+                        className: p.image
                     })
                 })
             ]

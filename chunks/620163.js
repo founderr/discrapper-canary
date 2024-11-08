@@ -26,8 +26,8 @@ var s = n(990547),
     f = n(18438),
     I = n(778825),
     N = n(665166),
-    b = n(351780),
-    A = n(231765),
+    A = n(351780),
+    b = n(231765),
     v = n(813732),
     j = n(398140),
     O = n(564344),
@@ -80,8 +80,8 @@ var s = n(990547),
     ef = n(889029),
     eI = n(400287),
     eN = n(554042),
-    eb = n(936982),
-    eA = n(200645),
+    eA = n(936982),
+    eb = n(200645),
     ev = n(287490),
     ej = n(706060),
     eO = n(168308),
@@ -94,7 +94,7 @@ var s = n(990547),
     eZ = n(388032),
     eF = n(308574);
 let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
-    ek = eA.Z,
+    ek = eb.Z,
     ew = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: ew, impressionSource: eU, numOfPendingFamilyRequests: eV, isOverlaySupported: eG, isClipsBetaTagShowing: eY = !1, shouldMergeGameSettings: eH, isUserSettingsSearchEnabled: ez, isKeywordFilteringEnabled: eW, isStaff: eK, isInappropriateConversationWarningEnabled: eq, paymentsBlocked: eQ, isEligibleForQuests: eX, showGiftNitro: eJ, isStricterMessageRequestsEnabled: e$, hasLibraryApplication: e0, hasTOTPEnabled: e1, developerMode: e2, isSafetySettingsV2Enabled: e6, isAdultUser: e3, hasSecureFramesVerifiedUserIds: e8, hypeSquadRemoved: e4 } = e;
         return Object.freeze({
@@ -605,7 +605,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.intl.string(eZ.t['Ig/XFR']), eZ.intl.string(eZ.t['3fe7U1']), eZ.intl.string(eZ.t['f6kk+v'])],
                 label: eZ.intl.string(eZ.t['Ig/XFR']),
                 parent: eD.s6.CONNECTIONS,
-                element: eb.Z
+                element: eA.Z
             },
             [eD.s6.CONNECTIONS_CONNECTED_ACCOUNTS]: {
                 section: ey.oAB.CONNECTIONS,
@@ -1069,8 +1069,8 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.intl.string(eZ.t.AtCukJ)],
                 label: eZ.intl.string(eZ.t.AtCukJ),
                 ariaLabel: eZ.intl.string(eZ.t.AtCukJ),
-                element: A.Z,
-                predicate: () => b.Z.settingsVisible,
+                element: b.Z,
+                predicate: () => A.Z.settingsVisible,
                 icon: (0, i.jsx)('img', {
                     alt: '',
                     src: n(348621),
@@ -1312,7 +1312,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ey.oAB.WINDOWS,
                 searchableTitles: [eZ.intl.string(eZ.t.ZkDZoq)],
                 label: eZ.intl.string(eZ.t.ZkDZoq),
-                element: eA.Z,
+                element: eb.Z,
                 predicate: () => w.isPlatformEmbedded && (0, w.isWindows)()
             },
             [eD.s6.LINUX_SETTINGS]: {

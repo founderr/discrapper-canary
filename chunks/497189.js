@@ -27,12 +27,12 @@ var i = n(200651),
     Z = n(51796),
     y = n(345480),
     L = n(236613);
-let j = {
+let R = {
     mass: 1,
     tension: 600,
     friction: 60
 };
-function R(e) {
+function j(e) {
     let { children: t } = e;
     return (0, i.jsxs)(s.animated.div, {
         className: Z.clanEnvelope,
@@ -254,7 +254,7 @@ t.Z = r.memo(function (e) {
             {
                 from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(324px, -56px) rotate(8deg) scale(1.25)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: j,
+                config: R,
                 delay: 400
             },
             'animate-always'
@@ -263,7 +263,7 @@ t.Z = r.memo(function (e) {
             {
                 from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(176px, -24px) rotate(4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: j,
+                config: R,
                 delay: 350
             },
             'animate-always'
@@ -272,7 +272,7 @@ t.Z = r.memo(function (e) {
             {
                 from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-176px, -24px) rotate(-4deg) scale(1.1111)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: j,
+                config: R,
                 delay: 350
             },
             'animate-always'
@@ -281,7 +281,7 @@ t.Z = r.memo(function (e) {
             {
                 from: U ? { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' } : { transform: 'translate(-324px, -56px) rotate(-8deg) scale(1.25)' },
                 to: { transform: 'translate(0px, 0px) rotate(0deg) scale(1)' },
-                config: j,
+                config: R,
                 delay: 400
             },
             'animate-always'
@@ -301,7 +301,7 @@ t.Z = r.memo(function (e) {
                     transform: 'scale(1)',
                     opacity: 1
                 },
-                config: j,
+                config: R,
                 delay: 200
             },
             'animate-always'
@@ -310,7 +310,7 @@ t.Z = r.memo(function (e) {
             {
                 from: U ? { transform: 'translateY(0px)' } : { transform: 'translateY(240px)' },
                 to: { transform: 'translateY(0px)' },
-                config: j,
+                config: R,
                 delay: 250,
                 onRest: () => V(!1)
             },
@@ -367,7 +367,7 @@ t.Z = r.memo(function (e) {
                         (0, i.jsx)(s.animated.div, {
                             className: Z.clanEnvelope,
                             style: q,
-                            children: (0, i.jsx)(R, {
+                            children: (0, i.jsx)(j, {
                                 children: (0, i.jsx)('div', {
                                     className: Z.clanCardCenterContainer,
                                     style: { overflow: H ? 'hidden' : 'visible' },

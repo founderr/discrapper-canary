@@ -20,8 +20,8 @@ var l = n(442837),
     g = n(968358),
     C = n(790901),
     _ = n(714794),
-    x = n(355363),
-    v = n(687352),
+    v = n(355363),
+    x = n(687352),
     I = n(135724),
     b = n(25601),
     S = n(981631),
@@ -36,7 +36,7 @@ function y(e) {
         U = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         G = (0, l.e7)([m.Z], () => m.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        V = (0, x.ZP)({
+        V = (0, v.ZP)({
             channel: n,
             locked: U,
             video: G || B,
@@ -81,7 +81,7 @@ function y(e) {
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
           : null != A && A && (0, C.u)(k)
-            ? (0, i.jsx)(v.Z, {
+            ? (0, i.jsx)(x.Z, {
                   embeddedApps: k,
                   muted: R
               })

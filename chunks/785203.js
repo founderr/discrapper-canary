@@ -44,8 +44,8 @@ function T(e) {
         Z = null != r && Date.now() - r <= N.Dge,
         y = null != e ? e.premiumSubscriberCount : 0,
         L = (0, S.rF)(y, n) !== N.Eu4.NONE,
-        j = null != i && Date.now() - i <= 43200000,
-        R = !j && !Z && b && L,
+        R = null != i && Date.now() - i <= 43200000,
+        j = !R && !Z && b && L,
         O = (0, c.m)(n),
         P = (0, a.e7)([I.Z], () => I.Z.isVisible(e)),
         D = h.Z.useShouldShowChannelNotice(n),
@@ -62,7 +62,7 @@ function T(e) {
         l.useEffect(() => {
             let e = -1;
             return (
-                R &&
+                j &&
                     (e = window.setTimeout(
                         () => {
                             null != n && (0, s.C0)(n);
@@ -73,7 +73,7 @@ function T(e) {
                     window.clearTimeout(e);
                 }
             );
-        }, [n, R]),
+        }, [n, j]),
         x)
     )
         return 0;

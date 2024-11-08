@@ -34,10 +34,10 @@ function Z(e) {
         Z = (0, a.e7)([p.Z], () => p.Z.isConnected()),
         y = (0, h.Z)(t),
         L = (0, I.Z)(t),
-        j = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
-        R = (0, E.f)(),
+        R = (0, a.e7)([_.Z], () => _.Z.isSubscriptionFetching),
+        j = (0, E.f)(),
         { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: P } = (0, m.uP)(t),
-        D = null == n || !R || j || P;
+        D = null == n || !j || R || P;
     (0, d.Tt)({
         subsection: A.intl.string(A.t['KzCF//']),
         location: null == n ? void 0 : n.name

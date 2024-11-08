@@ -9,9 +9,9 @@ var r = n(200651),
     l = n(120356),
     i = n.n(l),
     o = n(658722),
-    s = n.n(o),
-    c = n(913527),
-    d = n.n(c),
+    c = n.n(o),
+    s = n(913527),
+    d = n.n(s),
     u = n(442837),
     h = n(481060),
     m = n(570140),
@@ -21,9 +21,9 @@ var r = n(200651),
     g = n(31336),
     b = n(257785),
     v = n(484036),
-    j = n(681619),
-    _ = n(621060),
-    C = n(388032),
+    _ = n(681619),
+    C = n(621060),
+    j = n(388032),
     T = n(619208),
     S = n(986310);
 let N = [
@@ -58,7 +58,7 @@ let N = [
             name: 'Details',
             render: (e) => {
                 let {
-                        loggedTrigger: { experimentId: t, descriptor: n, exposureType: a, excluded: l, timestamp: o, location: s, previouslyTracked: c }
+                        loggedTrigger: { experimentId: t, descriptor: n, exposureType: a, excluded: l, timestamp: o, location: c, previouslyTracked: s }
                     } = e,
                     u = d()(o);
                 return (0, r.jsxs)(r.Fragment, {
@@ -111,11 +111,11 @@ let N = [
                                 }),
                                 (0, r.jsx)(b.Z9, {
                                     name: 'Previously tracked',
-                                    children: (0, r.jsx)(b.wl, { value: c })
+                                    children: (0, r.jsx)(b.wl, { value: s })
                                 }),
                                 (0, r.jsx)(b.Z9, {
                                     name: 'Location',
-                                    children: (0, r.jsx)('code', { children: s })
+                                    children: (0, r.jsx)('code', { children: c })
                                 })
                             ]
                         })
@@ -128,10 +128,10 @@ function I() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, u.Wu)([p.Z], () => p.Z.loggedTriggers),
-        o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
-        [c, d] = a.useState(void 0),
-        x = o.find((e) => e.key === c),
-        { TabBar: f, renderSelectedTab: b } = (0, _.Z)({ tabs: y }, []),
+        o = a.useMemo(() => l.filter((t) => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
+        [s, d] = a.useState(void 0),
+        x = o.find((e) => e.key === s),
+        { TabBar: f, renderSelectedTab: b } = (0, C.Z)({ tabs: y }, []),
         I = (0, u.e7)([p.Z], () => p.Z.trackTriggers),
         k = a.useCallback((e) => {
             m.Z.dispatch({
@@ -161,11 +161,11 @@ function I() {
                         size: h.Button.Sizes.ICON,
                         onClick: g.Zw,
                         children: (0, r.jsx)('span', {
-                            title: C.intl.string(C.t.VkKicX),
+                            title: j.intl.string(j.t.VkKicX),
                             children: (0, r.jsx)(h.TrashIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': C.intl.string(C.t.VkKicX)
+                                'aria-label': j.intl.string(j.t.VkKicX)
                             })
                         })
                     }),
@@ -178,10 +178,10 @@ function I() {
                     })
                 ]
             }),
-            (0, r.jsx)(j.Z, {
+            (0, r.jsx)(_.Z, {
                 columns: N,
                 data: o,
-                selectedRowKey: c,
+                selectedRowKey: s,
                 onClickRow: (e) => d(e.key)
             }),
             null != x &&

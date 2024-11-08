@@ -2,8 +2,8 @@ var r = t(200651);
 t(192379);
 var a = t(120356),
     i = t.n(a),
-    s = t(481060),
-    o = t(246364),
+    o = t(481060),
+    s = t(246364),
     l = t(700833),
     c = t(388032),
     d = t(55529);
@@ -14,7 +14,7 @@ n.Z = function (e) {
         children: [
             (0, r.jsx)('div', {
                 className: d.iconContainer,
-                children: (0, r.jsx)(s.BookCheckIcon, {
+                children: (0, r.jsx)(o.BookCheckIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
@@ -22,20 +22,20 @@ n.Z = function (e) {
                     className: d.icon
                 })
             }),
-            (0, r.jsxs)(s.FormSection, {
+            (0, r.jsxs)(o.FormSection, {
                 children: [
-                    (0, r.jsx)(s.FormTitle, {
+                    (0, r.jsx)(o.FormTitle, {
                         tag: 'h3',
                         className: d.leftRailIconContainerTitle,
                         children: c.intl.string(c.t.qWqnws)
                     }),
-                    (0, r.jsx)(s.FormText, {
+                    (0, r.jsx)(o.FormText, {
                         className: d.leftRailIconContainerDescription,
-                        type: s.FormText.Types.DESCRIPTION,
+                        type: o.FormText.Types.DESCRIPTION,
                         children: c.intl.string(c.t['3+rPkp'])
                     }),
-                    (0, r.jsx)(s.Button, {
-                        onClick: () => (0, l.Md)(o.QJ.TERMS, n, t),
+                    (0, r.jsx)(o.Button, {
+                        onClick: () => (0, l.Md)(s.QJ.TERMS, n, t),
                         children: c.intl.string(c.t['5AelkZ'])
                     })
                 ]

@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(243778),
     C = n(749681),
     _ = n(216742),
-    x = n(803647),
-    v = n(131704),
+    v = n(803647),
+    x = n(131704),
     I = n(626135),
     b = n(870569),
     S = n(981631),
@@ -91,10 +91,10 @@ let A = l.memo(function (e) {
             []
         ),
         K = l.useCallback(() => {
-            (0, x.Z)(f);
+            (0, v.Z)(f);
         }, [f]),
         q = l.useCallback(() => {
-            let e = null != L && (0, v.vd)(L.type) ? L : null,
+            let e = null != L && (0, x.vd)(L.type) ? L : null,
                 t = null != e ? e.getGuildId() : M;
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('46746'), n.e('33641')]).then(n.bind(n, 60594));
@@ -118,7 +118,7 @@ let A = l.memo(function (e) {
         }, [D, F]);
     let J =
             (null != D || null == O) && (w || (A && null != D))
-                ? (w ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : R ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, v.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
+                ? (w ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : R ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, x.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: j.panelButtonContainer,
                       children: (0, i.jsx)(b.Z, {

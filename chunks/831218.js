@@ -15,8 +15,8 @@ var i,
     g = n(607070),
     C = n(367907),
     _ = n(453542),
-    x = n(702321),
-    v = n(485267),
+    v = n(702321),
+    x = n(485267),
     I = n(82295),
     b = n(313201),
     S = n(860144),
@@ -295,7 +295,7 @@ class G extends (l = o.Component) {
                 let r = Math.round((t.offsetHeight - 44 * l) / 44),
                     a = r > n.length ? n.slice(0, r + 1) : n,
                     s = a.map((e) => (null != i[e] ? i[e].getRecipientId() : null)),
-                    c = n.some((e) => (0, x.Z)(e)),
+                    c = n.some((e) => (0, v.Z)(e)),
                     u = {
                         num_users_visible: a.length,
                         num_users_visible_with_mobile_indicator: s.filter((e) => null != e && M.Z.isMobileOnline(e)).length
@@ -404,7 +404,7 @@ t.Z = (e) => {
     (0, Z.z)(S.R);
     let { recentActivityStatusEnabled: f } = (0, T.U)({ location: 'PrivateChannelsList' });
     o.useEffect(() => {
-        f && (0, v.Jn)();
+        f && (0, x.Jn)();
     }, [f]);
     let m = (0, h.cj)([g.Z, P.Z, A.Z], () => ({
             theme: P.Z.darkSidebar ? R.BRd.DARK : n,
@@ -427,7 +427,7 @@ t.Z = (e) => {
                     }
                 });
         }, []),
-        x = o.useCallback(
+        v = o.useCallback(
             () =>
                 new Promise((e) => {
                     let t = C.current;
@@ -453,7 +453,7 @@ t.Z = (e) => {
         M = (0, d.ZP)({
             id: 'private-channels-'.concat(N),
             isEnabled: m.keyboardModeEnabled,
-            scrollToStart: x,
+            scrollToStart: v,
             scrollToEnd: I,
             defaultFocused: (r + (l ? 1 : 0)).toString(),
             setFocus: _

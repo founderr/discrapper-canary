@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(313201),
     C = n(451603),
     _ = n(885714),
-    x = n(973616),
-    v = n(594174),
+    v = n(973616),
+    x = n(594174),
     I = n(855981),
     b = n(55543),
     S = n(626135),
@@ -131,9 +131,9 @@ function O(e) {
     let t,
         n,
         { transitionState: r } = e;
-    (0, o.e7)([v.default], () => {
+    (0, o.e7)([x.default], () => {
         var e;
-        return null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
+        return null === (e = x.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType;
     });
     let { invite: m, error: _, submitting: I } = (0, o.cj)([j.Z], () => j.Z.getProps());
     l.useEffect(() => {
@@ -151,7 +151,7 @@ function O(e) {
         G = null != R,
         B = null != m.stage_instance,
         V = null == m.guild && null == m.channel && null != m.inviter;
-    if (null != U) (t = null == R ? void 0 : R.name), (n = x.Z.createFromServer(U).getCoverImageURL(1024));
+    if (null != U) (t = null == R ? void 0 : R.name), (n = v.Z.createFromServer(U).getCoverImageURL(1024));
     else if (null != R)
         (t = R.name),
             (n = Z.ZP.getGuildSplashURL({

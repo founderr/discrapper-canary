@@ -27,8 +27,8 @@ var i = n(200651),
 function N(e) {
     let { className: t, showHeader: n = !0 } = e,
         N = u.tU.useSetting(),
-        { enableViewerClipping: b } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
-        { analyticsLocations: A } = (0, o.ZP)(),
+        { enableViewerClipping: A } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        { analyticsLocations: b } = (0, o.ZP)(),
         v = (0, h.Go)(),
         { viewerClipsEnabled: j } = (0, r.cj)([g.Z], () => g.Z.getSettings()),
         O = (0, p.Z)(m.Z);
@@ -37,7 +37,7 @@ function N(e) {
             (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, i.jsxs)(o.Gt, {
-            value: A,
+            value: b,
             children: [
                 (v || n) &&
                     (0, i.jsx)(a.FormSection, {
@@ -68,7 +68,7 @@ function N(e) {
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
                             children: _.intl.string(_.t.AGDDkJ)
                         }),
-                        b &&
+                        A &&
                             O &&
                             (0, i.jsx)(a.FormSwitch, {
                                 hideBorder: !0,

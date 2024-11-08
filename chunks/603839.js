@@ -48,7 +48,7 @@ function x(e) {
         }),
         Z = r.useMemo(() => (0, v.G)(A), [A]),
         [y, L] = r.useState(!1),
-        [j, R] = r.useState(window.innerWidth),
+        [R, j] = r.useState(window.innerWidth),
         [O, P] = r.useState(1),
         [D, M] = r.useState(!0),
         w = (0, f.f)(),
@@ -60,7 +60,7 @@ function x(e) {
         }),
         U = (0, d.useSpring)(
             {
-                transform: 'translateX('.concat(1 === O ? 0 : (-1 * (j - 380)) / 2 + 47.5, 'px)'),
+                transform: 'translateX('.concat(1 === O ? 0 : (-1 * (R - 380)) / 2 + 47.5, 'px)'),
                 config: T
             },
             'respect-motion-settings'
@@ -97,7 +97,7 @@ function x(e) {
         (0, p.Lp)(t, (0, p.Qh)(x.currentStep));
     }, [t, x.currentStep]),
         r.useEffect(() => {
-            let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
+            let e = (0, h.pP)((0, s.debounce)(() => j(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
         }, [O, D]);
     let V = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
@@ -209,7 +209,7 @@ function x(e) {
                                 signed: y,
                                 setSigned: D ? void 0 : L,
                                 sidebarWidth: 380,
-                                windowWidth: j,
+                                windowWidth: R,
                                 transition: G,
                                 brandPrimaryColor: x.brandPrimaryColor
                             })

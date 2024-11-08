@@ -22,8 +22,8 @@ var l = n(120356),
     g = n(718589),
     C = n(933557),
     _ = n(557135),
-    x = n(873696),
-    v = n(446226),
+    v = n(873696),
+    x = n(446226),
     I = n(305325),
     b = n(281956),
     S = n(66999),
@@ -86,7 +86,7 @@ class q extends k.ZP {
     renderSubtitle() {
         var e;
         let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
-            a = null === (e = (0, x.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
+            a = null === (e = (0, v.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
             { hovered: o } = this.state;
         return (0, i.jsx)(V.Z, {
             onClick: this.handleVoiceStatusClick,
@@ -120,7 +120,7 @@ class q extends k.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: C, canReorderChannel: _, canMoveMembers: x, showTutorial: v, hasActiveEvent: I, embeddedApps: b, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
+        let { channel: e, selected: t, connected: n, unread: l, resolvedUnreadSetting: a, mentionCount: o, locked: c, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: C, canReorderChannel: _, canMoveMembers: v, showTutorial: x, hasActiveEvent: I, embeddedApps: b, isSubscriptionGated: S, isFavoriteSuggestion: Z, withGuildIcon: N } = this.props,
             { shouldShowActivities: E, shouldShowGuildVerificationPopout: y } = this.state,
             T = this.getVoiceStatesCount(),
             P = (0, i.jsxs)('li', {
@@ -184,9 +184,9 @@ class q extends k.ZP {
                 ]
             });
         return (
-            x && (P = f(P)),
+            v && (P = f(P)),
             _ && (P = h(p(P))),
-            v &&
+            x &&
                 (P = (0, i.jsx)(j.Z, {
                     tutorialId: 'voice-conversations',
                     position: 'right',
@@ -348,8 +348,8 @@ function J(e) {
         m = (0, p.ZP)(n),
         g = (0, C.ZP)(n),
         _ = (0, Z.qY)(n.id),
-        { isSubscriptionGated: x, needSubscriptionToAccess: I } = (0, S.Z)(n.id),
-        b = (0, v.Z)(),
+        { isSubscriptionGated: v, needSubscriptionToAccess: I } = (0, S.Z)(n.id),
+        b = (0, x.Z)(),
         N = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)),
         y = e.connected || (null == b ? void 0 : b.channelId) === n.id,
         { enableHangStatus: j, allowChannelTopic: T } = E.n.useExperiment(
@@ -364,7 +364,7 @@ function J(e) {
             isChannelSelected: o,
             isChannelCollapsed: s,
             voiceStates: c,
-            isSubscriptionGated: x,
+            isSubscriptionGated: v,
             needSubscriptionToAccess: I,
             enableConnectedUserLimit: !0,
             enableActivities: !0
@@ -376,7 +376,7 @@ function J(e) {
         embeddedActivityType: F.IIU.PLAYING,
         video: f,
         hasActiveEvent: null != _,
-        isSubscriptionGated: x,
+        isSubscriptionGated: v,
         needSubscriptionToAccess: I,
         ...u,
         ...h,

@@ -42,7 +42,7 @@ var r = n(200651),
     x = n(388032),
     G = n(507917);
 let F = () => Promise.resolve();
-function j(e) {
+function y(e) {
     let { userRoles: t, position: n, ...l } = e,
         i = (0, D.Dt)();
     return (0, r.jsxs)(T.Dialog, {
@@ -108,10 +108,10 @@ let B = l.forwardRef(function (e, t) {
         ),
         P = (0, T.useToken)(A.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         F = null !== (a = N.colorString) && void 0 !== a ? a : P,
-        j = null !== (o = (0, d.wK)(F, 0.6)) && void 0 !== o ? o : void 0,
+        y = null !== (o = (0, d.wK)(F, 0.6)) && void 0 !== o ? o : void 0,
         B = A.Z.unsafe_rawColors.WHITE_500.css,
-        y = (0, d._i)(F);
-    null != y && 0.3 > (0, d.Bd)(y) && (B = A.Z.unsafe_rawColors.PRIMARY_630.css),
+        j = (0, d._i)(F);
+    null != j && 0.3 > (0, d.Bd)(j) && (B = A.Z.unsafe_rawColors.PRIMARY_630.css),
         (E = v
             ? (0, r.jsx)(O.Z, {
                   className: G.roleFlowerStar,
@@ -130,10 +130,10 @@ let B = l.forwardRef(function (e, t) {
     let z = l.useMemo(() => {
         var t;
         return {
-            borderColor: D ? void 0 : j,
+            borderColor: D ? void 0 : y,
             ...(null !== (t = e.style) && void 0 !== t ? t : {})
         };
-    }, [j, D, e.style]);
+    }, [y, D, e.style]);
     return (0, r.jsx)(T.FocusRing, {
         children: (0, r.jsxs)('div', {
             ref: t,
@@ -184,13 +184,13 @@ let B = l.forwardRef(function (e, t) {
         })
     });
 });
-function y(e) {
+function j(e) {
     let { user: t, numRolesHidden: n, roleClassName: l } = e,
         i = (0, u.JA)('overflow-more-roles-'.concat(t.id));
     return (0, r.jsx)(T.Popout, {
         renderPopout: (t) => {
             let { position: n } = t;
-            return (0, r.jsx)(j, {
+            return (0, r.jsx)(y, {
                 ...e,
                 position: null != n ? n : 'top'
             });
@@ -295,10 +295,10 @@ function k(e) {
         }
         D((t) => (e < C.length ? e : t));
     }, [d, A, C]);
-    let j = m.default.getCurrentUser();
-    o()(null != j, 'MemberRolesList: currentUser cannot be undefined');
+    let y = m.default.getCurrentUser();
+    o()(null != y, 'MemberRolesList: currentUser cannot be undefined');
     let k = !I && M.Z.can(P.Plq.MANAGE_ROLES, i),
-        H = v.e9(i, j.id),
+        H = v.e9(i, y.id),
         V = l.useMemo(() => 'roles-'.concat((0, E.Z)()), []),
         w = (0, c.ZP)({
             id: V,
@@ -314,7 +314,7 @@ function k(e) {
                 {
                     className: N,
                     role: e,
-                    canRemove: (k && v.r6(i, j.id, H, e)) || ((null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === j.id),
+                    canRemove: (k && v.r6(i, y.id, H, e)) || ((null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && n.id === y.id),
                     onRemove: () => O(e),
                     ref: (t) => {
                         var n, r;
@@ -328,7 +328,7 @@ function k(e) {
         });
     return (
         null != p && 0 !== b
-            ? (t = (0, r.jsx)(y, {
+            ? (t = (0, r.jsx)(j, {
                   ...e,
                   numRolesHidden: b
               }))

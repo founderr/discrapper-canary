@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(493683),
-    a = n(726521),
+    a = n(493683),
+    r = n(726521),
     s = n(718538),
     o = n(868807),
     c = n(388032);
@@ -18,7 +18,7 @@ function d(e) {
         x = (0, s.V)(t.id, C);
     if (null == x && (g || f)) return null;
     let v = () => {
-        null == h || h(), r.Z.closePrivateChannel(t.id);
+        null == h || h(), a.Z.closePrivateChannel(t.id);
     };
     return (0, i.jsx)(l.Button, {
         className: d,
@@ -26,7 +26,7 @@ function d(e) {
         color: l.Button.Colors.RED,
         disabled: null == x,
         onClick: (e) => {
-            e.stopPropagation(), null == u || u(), null != x && (0, a.WL)(x, v);
+            e.stopPropagation(), null == u || u(), null != x && (0, r.WL)(x, v);
         },
         onMouseEnter: p,
         onMouseLeave: m,

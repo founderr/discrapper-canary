@@ -80,7 +80,7 @@ async function L(e, t, n) {
         });
     } else t(void 0);
 }
-function j(e) {
+function R(e) {
     let { application: t, loadingAppId: n, setLoadingAppId: r, botUserId: l, analyticsLocations: c } = e,
         u = (0, s.e7)([C.Z], () => C.Z.getDMFromUserId(l)),
         h = (0, s.e7)([d.ZP], () => d.ZP.getCurrentEmbeddedActivity()),
@@ -122,14 +122,14 @@ function j(e) {
         })
     });
 }
-function R(e) {
+function j(e) {
     let { frecentApps: t, loadingAppId: n, setLoadingAppId: r, analyticsLocations: l } = e;
     return (0, i.jsx)('div', {
         className: Z.itemContainer,
         children: t.map((e) => {
             var t;
             return (0, i.jsx)(
-                j,
+                R,
                 {
                     application: e,
                     loadingAppId: n,
@@ -179,7 +179,7 @@ function O() {
                               children: b.intl.string(b.t.SCViVl)
                           })
                       }),
-                      (0, i.jsx)(R, {
+                      (0, i.jsx)(j, {
                           frecentApps: u,
                           loadingAppId: n,
                           setLoadingAppId: l,

@@ -1,8 +1,8 @@
 n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(374470),
     o = n(481060),
     c = n(239091),
@@ -31,12 +31,12 @@ function _(e, t, n) {
 }
 function I(e) {
     var t;
-    let { channel: n, onClose: l, guild: r, transitionState: a } = e,
-        s = (0, p.KS)(n, r),
+    let { channel: n, onClose: l, guild: a, transitionState: r } = e,
+        s = (0, p.KS)(n, a),
         c = (0, h.ZP)(n, !1),
         g = (0, u.q)(null === (t = n.linkedLobby) || void 0 === t ? void 0 : t.application_id);
     return (0, i.jsx)(o.ModalRoot, {
-        transitionState: a,
+        transitionState: r,
         'aria-label': x.intl.string(x.t.X8jMDg),
         children: (0, i.jsx)(o.ModalContent, {
             children: (0, i.jsxs)(d.Z, {
@@ -108,7 +108,7 @@ class b extends l.Component {
                   children: [
                       (0, i.jsx)(g.Z.Divider, {}),
                       (0, i.jsxs)('div', {
-                          className: a()(v.topic, v.expandable),
+                          className: r()(v.topic, v.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,

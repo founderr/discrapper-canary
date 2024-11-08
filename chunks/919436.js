@@ -15,8 +15,8 @@ var i,
     g = n(199902),
     C = n(19780),
     _ = n(306680),
-    x = n(944486),
-    v = n(594174),
+    v = n(944486),
+    x = n(594174),
     I = n(451478),
     b = n(276952),
     S = n(682662),
@@ -111,7 +111,7 @@ class A extends (i = r.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === E.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
+            t = e.type === E.d4z.DM ? x.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -185,7 +185,7 @@ class A extends (i = r.PureComponent) {
             }),
             j(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    i = t.type === E.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
+                    i = t.type === E.d4z.DM ? x.default.getUser(t.getRecipientId()) : null;
                 null != i
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('12327')]).then(n.bind(n, 131404));
@@ -220,14 +220,14 @@ j(A, 'defaultProps', {
             r = (0, s.e7)([C.Z], () => C.Z.getChannelId(), []),
             a = (0, s.e7)([d.Z], () => (null != r ? d.Z.getMode(r) : E.WtW.VOICE), [r]),
             o = (0, s.e7)([g.Z], () => g.Z.getAllApplicationStreamsForChannel(n).length > 0),
-            c = (0, s.e7)([x.Z], () => x.Z.getChannelId(), []),
+            c = (0, s.e7)([v.Z], () => v.Z.getChannelId(), []),
             u = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
             { isFacepileEnabled: h } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
             m = r === n,
-            v = !1,
+            x = !1,
             I = !1;
         return (
-            m && ((v = a === E.WtW.VOICE), (I = a === E.WtW.VIDEO)),
+            m && ((x = a === E.WtW.VOICE), (I = a === E.WtW.VIDEO)),
             (0, l.jsx)(A, {
                 ...e,
                 ref: t,
@@ -235,7 +235,7 @@ j(A, 'defaultProps', {
                 unread: u > 0,
                 selected: c === n,
                 badge: u,
-                audio: v,
+                audio: x,
                 video: I,
                 stream: o,
                 isCurrentUserInThisDMCall: m,

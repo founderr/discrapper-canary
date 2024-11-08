@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(49898),
     C = n(128449),
     _ = n(46140),
-    x = n(388032),
-    v = n(481284);
+    v = n(388032),
+    x = n(481284);
 function I(e) {
     switch (e) {
         case g.F$.QUESTS:
@@ -54,7 +54,7 @@ let b = l.forwardRef(function (e, t) {
                     width: 12,
                     height: 12
                 },
-                lowerBadge: N ? (0, i.jsx)('div', { className: v.guildNotif }) : void 0
+                lowerBadge: N ? (0, i.jsx)('div', { className: x.guildNotif }) : void 0
             }),
             [N]
         );
@@ -64,7 +64,7 @@ let b = l.forwardRef(function (e, t) {
         className: r,
         onClick: E,
         selected: n,
-        tooltip: x.intl.string(x.t['4nEZLi']),
+        tooltip: v.intl.string(v.t['4nEZLi']),
         icon: o.CompassIcon,
         ...y
     });

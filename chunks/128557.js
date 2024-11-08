@@ -10,8 +10,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(75124),
     o = n(748780),
     c = n(442837),
@@ -37,7 +37,7 @@ var i = n(200651),
     A = n(388032),
     y = n(169158);
 function P(e) {
-    let { className: t, iconUrl: n, icon: r, header: s, completed: o, onClick: c } = e,
+    let { className: t, iconUrl: n, icon: a, header: s, completed: o, onClick: c } = e,
         [d, p] = l.useState(!1),
         m = (0, h.Z)(o);
     return (
@@ -45,18 +45,18 @@ function P(e) {
             null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
         }, [o, m]),
         (0, i.jsxs)(u.Clickable, {
-            className: a()(t, y.card, { [y.completed]: o }),
+            className: r()(t, y.card, { [y.completed]: o }),
             onClick: c,
             children: [
-                null != r
-                    ? r
+                null != a
+                    ? a
                     : (0, i.jsx)('div', {
                           className: y.icon,
                           style: { backgroundImage: "url('".concat(n, "')") }
                       }),
                 (0, i.jsx)(u.Text, {
                     color: 'header-primary',
-                    className: a()(y.cardTextContainer, y.cardHeader),
+                    className: r()(y.cardTextContainer, y.cardHeader),
                     variant: 'text-sm/normal',
                     children: s
                 }),
@@ -64,7 +64,7 @@ function P(e) {
                     ? (0, i.jsx)(u.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: a()(y.checkmark, { [y.animate]: d })
+                          className: r()(y.checkmark, { [y.animate]: d })
                       })
                     : (0, i.jsx)(I.Z, {
                           className: y.arrow,
@@ -76,15 +76,15 @@ function P(e) {
 }
 function M(e) {
     let { channel: t } = e,
-        r = (0, c.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && Z.default.extractTimestamp(r.id) < Date.now() - T._8R,
-        I = (0, c.e7)([x.default], () => (null == r ? void 0 : r.ownerId) === x.default.getId(), [r]),
-        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, r),
+        a = (0, c.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
+        h = null != a && Z.default.extractTimestamp(a.id) < Date.now() - T._8R,
+        I = (0, c.e7)([x.default], () => (null == a ? void 0 : a.ownerId) === x.default.getId(), [a]),
+        { canInvite: M, canManageGuild: R, canMessage: L } = (0, f.TE)(t, a),
         k = (0, c.e7)([_.default], () => {
             var e, t;
             return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: O, guildMessaged: D, guildPersonalized: w } = (0, f.h_)(r),
+        { guildPopulated: O, guildMessaged: D, guildPersonalized: w } = (0, f.h_)(a),
         {
             handleInvite: B,
             handleMessage: U,
@@ -109,7 +109,7 @@ function M(e) {
                                     });
                             });
                 }, [e]),
-                r = l.useCallback(() => {
+                a = l.useCallback(() => {
                     p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.SEND_MESSAGE
@@ -119,7 +119,7 @@ function M(e) {
                             channelId: T.lds
                         });
                 }, []),
-                a = l.useCallback(() => {
+                r = l.useCallback(() => {
                     p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.PERSONALIZE_SERVER
@@ -142,8 +142,8 @@ function M(e) {
                 }, []);
             return {
                 handleInvite: t,
-                handleMessage: r,
-                handlePersonalize: a,
+                handleMessage: a,
+                handlePersonalize: r,
                 handleDownload: s,
                 handleAddApplication: l.useCallback(() => {
                     null != e &&
@@ -164,7 +164,7 @@ function M(e) {
                         }));
                 }, [e])
             };
-        })(r),
+        })(a),
         V = !(k || O || D || w),
         { titleAnimatedStyle: z, opacities: W } = (function (e) {
             let t = (0, s.Z)(() => new o.Z.Value(0)),
@@ -225,13 +225,13 @@ function M(e) {
                 }
             );
         })(V),
-        K = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == r ? void 0 : r.id)).length > 0;
+        K = (0, c.e7)([m.Z], () => m.Z.getGuildApplicationIds(null == a ? void 0 : a.id)).length > 0;
     if (
         (l.useEffect(() => {
             var e;
-            (0, C.i)(null !== (e = null == r ? void 0 : r.id) && void 0 !== e ? e : T.lds);
-        }, [r]),
-        null == r)
+            (0, C.i)(null !== (e = null == a ? void 0 : a.id) && void 0 !== e ? e : T.lds);
+        }, [a]),
+        null == a)
     )
         return null;
     let Y = [];
@@ -336,11 +336,11 @@ function M(e) {
                             (0, i.jsx)(u.Heading, {
                                 className: y.titleName,
                                 variant: 'heading-xxl/semibold',
-                                children: A.intl.format(A.t.rkHVKS, { guildName: r.name })
+                                children: A.intl.format(A.t.rkHVKS, { guildName: a.name })
                             }),
                             (0, i.jsxs)(u.Text, {
                                 color: 'header-secondary',
-                                className: a()({
+                                className: r()({
                                     [y.subtitle]: !0,
                                     [y.noChildren]: 0 === Y.length
                                 }),

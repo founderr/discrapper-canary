@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(990547),
+    a = n.n(l),
+    r = n(990547),
     s = n(481060),
     o = n(213609),
     c = n(626135),
@@ -20,14 +20,14 @@ function m(e) {
     return (
         (0, o.Z)(
             {
-                type: a.ImpressionTypes.VIEW,
-                name: a.ImpressionNames.HD_STREAMING_POPOUT
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.HD_STREAMING_POPOUT
             },
             { disableTrack: t },
             [t]
         ),
         (0, i.jsxs)('div', {
-            className: r()(p.popoutContainer, { [p.hidden]: t }),
+            className: a()(p.popoutContainer, { [p.hidden]: t }),
             children: [
                 (0, i.jsx)('img', {
                     className: p.image,

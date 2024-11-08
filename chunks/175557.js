@@ -7,8 +7,8 @@ var r = t(200651);
 t(192379);
 var a = t(108930),
     i = t(86406),
-    s = t(146068),
-    o = t(308545),
+    o = t(146068),
+    s = t(308545),
     l = t(397697),
     c = t(129871),
     d = t(206851),
@@ -29,11 +29,11 @@ function h(e) {
         case f.qC.WARP_TUNNEL:
             return (0, r.jsx)(u.Z, { ...t });
         case f.qC.HOUSE:
-            return (0, r.jsx)(s.Z, { ...t });
+            return (0, r.jsx)(o.Z, { ...t });
         case f.qC.HEIGHTMAP:
             return (0, r.jsx)(i.Z, { ...t });
         case f.qC.MESH:
-            return (0, r.jsx)(o.Z, { ...t });
+            return (0, r.jsx)(s.Z, { ...t });
         case f.qC.SPATTER:
             return (0, r.jsx)(d.Z, { ...t });
     }

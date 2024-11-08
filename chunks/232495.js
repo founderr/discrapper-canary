@@ -7,8 +7,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(430824),
+    a = n(481060),
+    r = n(430824),
     s = n(914010),
     o = n(388032),
     c = n(125224);
@@ -16,11 +16,11 @@ let d = () =>
         (0, i.jsx)(i.Fragment, {
             children: o.intl.format(o.t.ymkBtr, {
                 shareIcon: o.intl.string(o.t.VINpSE),
-                shareIconHook: () => (0, i.jsx)(r.GroupPlusIcon, { className: c.icon }, 'icon')
+                shareIconHook: () => (0, i.jsx)(a.GroupPlusIcon, { className: c.icon }, 'icon')
             })
         }),
     u = () => {
-        let e = (0, l.e7)([a.Z, s.Z], () => a.Z.getGuild(s.Z.getGuildId()), []),
+        let e = (0, l.e7)([r.Z, s.Z], () => r.Z.getGuild(s.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
         return (0, i.jsx)(i.Fragment, { children: o.intl.format(o.t.oQuG3N, { serverName: t }) });
     },
@@ -77,10 +77,10 @@ let d = () =>
                     body: o.intl.format(o.t.NTq0AQ, {})
                 }
             },
-            r = null !== (t = l[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
+            a = null !== (t = l[e.replace(/-/g, '_').toUpperCase()]) && void 0 !== t ? t : {};
         return {
-            title: r.title,
-            body: r.body,
-            isLongText: null !== (n = r.isLongText) && void 0 !== n && n
+            title: a.title,
+            body: a.body,
+            isLongText: null !== (n = a.isLongText) && void 0 !== n && n
         };
     };

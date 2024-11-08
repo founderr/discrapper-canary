@@ -14,8 +14,8 @@ var i = n(200651),
     m = n(981631);
 t.Z = l.memo(function (e) {
     let { folderNode: t, ...g } = e,
-        { id: C, name: _, color: x, children: v } = t,
-        I = v.map((e) => e.id),
+        { id: C, name: _, color: v, children: x } = t,
+        I = x.map((e) => e.id),
         b = (0, s.Z)((e) => e.guildId),
         S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(C)),
         Z = (function (e) {
@@ -48,12 +48,12 @@ t.Z = l.memo(function (e) {
                             ...t,
                             folderId: C,
                             folderName: _,
-                            folderColor: x,
+                            folderColor: v,
                             unread: y || E > 0
                         });
                 });
             },
-            [C, _, x, y, E]
+            [C, _, v, y, E]
         );
     return (0, i.jsx)(p.Z, {
         ...g,

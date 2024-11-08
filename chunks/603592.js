@@ -10,13 +10,13 @@ var i = n(200651),
     d = n(662146),
     h = n(69517);
 let p = l.forwardRef(function (e, t) {
-    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: m, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: x, showPill: v = !0, className: I, 'aria-label': b, children: S, onMouseEnter: Z, onMouseLeave: N, onMouseDown: E } = e,
+    let { id: n, onClick: r, onContextMenu: p, icon: f, selected: m, tooltip: g, upperBadge: C, lowerBadge: _, lowerBadgeSize: v, showPill: x = !0, className: I, 'aria-label': b, children: S, onMouseEnter: Z, onMouseLeave: N, onMouseDown: E } = e,
         y = (0, o.Ie)(n),
         [j, T] = l.useState(!1),
         P = 'string' == typeof g && null == b ? g : b;
     return (0, i.jsxs)(u.H, {
         children: [
-            v
+            x
                 ? (0, i.jsx)('div', {
                       className: h.pill,
                       children: (0, i.jsx)(c.Z, {
@@ -33,7 +33,7 @@ let p = l.forwardRef(function (e, t) {
                     selected: m || j,
                     upperBadge: C,
                     lowerBadge: _,
-                    lowerBadgeSize: x,
+                    lowerBadgeSize: v,
                     children: (0, i.jsx)(s.Clickable, {
                         innerRef: t,
                         onMouseEnter: () => {

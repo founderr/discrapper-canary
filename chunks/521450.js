@@ -10,11 +10,11 @@ var i = n(200651),
     g = n(960412),
     m = n(151662),
     f = n(695346),
-    p = n(981631),
-    _ = n(930441),
+    _ = n(981631),
+    p = n(930441),
     h = n(388032),
     E = n(909273),
-    x = n(971436);
+    b = n(971436);
 t.Z = () => {
     let e = f.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([m.Z], () => m.Z.getEmailSettings());
@@ -31,7 +31,7 @@ t.Z = () => {
                     children: h.intl.string(h.t.USIXU1)
                 }),
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(x.marginTop8, x.marginBottom20),
+                    className: s()(b.marginTop8, b.marginBottom20),
                     value: e,
                     note: h.intl.string(h.t['5MdB3t']),
                     hideBorder: !0,
@@ -57,7 +57,7 @@ t.Z = () => {
                                       children: (0, i.jsx)(l.rU, {
                                           onClick: u.xf,
                                           to: {
-                                              pathname: p.Z5c.FAMILY_CENTER,
+                                              pathname: _.Z5c.FAMILY_CENTER,
                                               state: { scrollRestoration: !1 }
                                           },
                                           children: h.intl.string(h.t.cUIXFR)
@@ -73,12 +73,12 @@ t.Z = () => {
                       })
                     : null,
                 (0, i.jsx)(d.FormSwitch, {
-                    className: s()(x.marginTop20, x.marginBottom20),
-                    value: !!t[_.$Z.FAMILY_CENTER_DIGEST],
+                    className: s()(b.marginTop20, b.marginBottom20),
+                    value: !!t[p.$Z.FAMILY_CENTER_DIGEST],
                     note: h.intl.string(h.t['y34S4+']),
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, g.pR)(_.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, g.pR)(p.$Z.FAMILY_CENTER_DIGEST, e);
                     },
                     children: h.intl.string(h.t.irvJKS)
                 })

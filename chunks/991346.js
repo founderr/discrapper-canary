@@ -41,8 +41,8 @@ var i = n(192379),
     f = n(314897),
     I = n(283595),
     N = n(663389),
-    b = n(594174),
-    A = n(202527),
+    A = n(594174),
+    b = n(202527),
     v = n(187819),
     j = n(413182),
     O = n(695346),
@@ -108,10 +108,10 @@ function M() {
             location: k + ' auto off',
             autoTrackExposure: !1
         });
-    let { shouldMergeGameSettings: w } = A.b.useExperiment({ location: 'settings' }),
+    let { shouldMergeGameSettings: w } = b.b.useExperiment({ location: 'settings' }),
         U = (0, P.eA)({ location: 'settings' }),
         V = (0, m.Xo)({ location: 'settings' }),
-        G = null !== (n = null === (e = b.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
+        G = null !== (n = null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n,
         Y = (0, E.y0)({ location: 'settings' }),
         H = (0, o.Q)(),
         z = (0, C.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
@@ -248,7 +248,7 @@ function w(e, t) {
 }
 function U() {
     let e = M(),
-        { shouldMergeGameSettings: t } = A.b.useExperiment({ location: 'settings' }),
+        { shouldMergeGameSettings: t } = b.b.useExperiment({ location: 'settings' }),
         { showRedesign: n } = j.b.useExperiment({ location: 'settings' }),
         s = i.useMemo(
             () =>
@@ -263,7 +263,7 @@ function U() {
 function V(e) {
     let t = M(),
         n = (function () {
-            let { shouldMergeGameSettings: e } = A.b.useExperiment({ location: 'settings' }),
+            let { shouldMergeGameSettings: e } = b.b.useExperiment({ location: 'settings' }),
                 { showRedesign: t } = j.b.useExperiment({ location: 'settings' }),
                 n = F({
                     shouldMergeGameSettings: e,

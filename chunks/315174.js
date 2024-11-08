@@ -47,7 +47,7 @@ function _(e) {
         })
     });
 }
-function x(e) {
+function v(e) {
     let { guild: t, controller: n, hasBanner: l, hasSubheader: r } = e,
         { value: s } = n.springs,
         u = t.hasFeature(f.oNc.DISCOVERABLE),
@@ -90,7 +90,7 @@ function x(e) {
               children: d
           });
 }
-function v() {
+function x() {
     return (0, i.jsx)(c.StarIcon, {
         size: 'custom',
         color: 'currentColor',
@@ -161,7 +161,7 @@ t.ZP = l.memo(function (e) {
                                                 guild: E,
                                                 isBannerVisible: t
                                             }),
-                                            E.id === m._ && (0, i.jsx)(v, {}),
+                                            E.id === m._ && (0, i.jsx)(x, {}),
                                             (0, i.jsx)(c.Heading, {
                                                 variant: 'text-md/semibold',
                                                 lineClamp: 1,
@@ -188,7 +188,7 @@ t.ZP = l.memo(function (e) {
                                         ]
                                     }),
                                     R &&
-                                        (0, i.jsx)(x, {
+                                        (0, i.jsx)(v, {
                                             guild: E,
                                             controller: n,
                                             hasBanner: null != y,

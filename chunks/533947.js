@@ -29,7 +29,7 @@ function b() {
     (N = I.QZA.OPEN), (T = {}), (x = !1);
 }
 let Z = u().debounce(() => {
-    x && ((null == v || u().isEqual(v, y(v.id))) && (x = !1), !x && j.emitChange());
+    x && ((null == v || u().isEqual(v, y(v.id))) && (x = !1), !x && R.emitChange());
 }, 500);
 function y(e) {
     return C.find((t) => {
@@ -81,7 +81,7 @@ class L extends (a = h.ZP.Store) {
               writable: !0
           })
         : (s[o] = c);
-let j = new L(
+let R = new L(
     m.Z,
     __OVERLAY__
         ? {}
@@ -155,4 +155,4 @@ let j = new L(
               }
           }
 );
-t.Z = j;
+t.Z = R;

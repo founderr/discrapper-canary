@@ -21,8 +21,8 @@ var i = n(200651),
     g = n(174470),
     C = n(549771),
     _ = n(964398),
-    x = n(409673),
-    v = n(710111),
+    v = n(409673),
+    x = n(710111),
     I = n(422092);
 function b(e) {
     let { guildId: t, channel: n, width: b, height: S, keepOpen: Z, interactive: N = !0, analyticsSource: E, onClose: y } = e,
@@ -30,7 +30,7 @@ function b(e) {
             let [t, n] = (0, a.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites()]);
             return l.useMemo(() => {
                 let i = [],
-                    l = [...e, v.X8],
+                    l = [...e, x.X8],
                     r = (e, l) => {
                         var r, a;
                         for (let o of null !== (a = null === (r = t.get(e)) || void 0 === r ? void 0 : r.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== a ? a : []) {
@@ -103,7 +103,7 @@ function b(e) {
             () =>
                 j.map((e) =>
                     (0, i.jsx)(
-                        x.ZP,
+                        v.ZP,
                         {
                             interactive: N,
                             className: I.soundButton,

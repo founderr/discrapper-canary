@@ -1,37 +1,37 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return m;
+        return E;
     },
     m: function () {
         return g;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    o = n(481060),
-    u = n(239091),
-    a = n(166081),
-    s = n(937615),
-    c = n(942833),
-    d = n(48691),
-    f = n(231338),
-    p = n(388032),
-    _ = n(783210);
-function E(e) {
-    let { showEditProduct: t, showUnpublishProduct: n, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: f, onTestDownload: E, onReportProduct: g, closePopout: m, onSelect: h } = e;
+var i = t(200651);
+t(192379);
+var r = t(120356),
+    l = t.n(r),
+    o = t(481060),
+    u = t(239091),
+    a = t(166081),
+    s = t(937615),
+    c = t(942833),
+    d = t(48691),
+    f = t(231338),
+    p = t(388032),
+    _ = t(783210);
+function m(e) {
+    let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: f, onTestDownload: m, onReportProduct: g, closePopout: E, onSelect: h } = e;
     return (0, i.jsx)('div', {
         className: _.menuContainer,
         children: (0, i.jsxs)(o.Menu, {
             navId: 'guild-product-context',
-            onClose: m,
+            onClose: E,
             'aria-label': p.intl.string(p.t.Z146dH),
             onSelect: h,
             children: [
                 (0, i.jsxs)(o.MenuGroup, {
                     children: [
-                        t &&
+                        n &&
                             (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-edit',
                                 label: p.intl.string(p.t.EEfce3),
@@ -49,13 +49,13 @@ function E(e) {
                                 id: 'guild-product-test-download',
                                 label: p.intl.string(p.t.aXoI6e),
                                 icon: o.DownloadIcon,
-                                action: E
+                                action: m
                             })
                     ]
                 }),
                 (0, i.jsxs)(o.MenuGroup, {
                     children: [
-                        n &&
+                        t &&
                             (0, i.jsx)(o.MenuItem, {
                                 id: 'guild-product-unpublish',
                                 label: p.intl.string(p.t.QrkMlJ),
@@ -85,7 +85,7 @@ function E(e) {
     });
 }
 function g(e) {
-    let { product: t, guildId: n, showEditProduct: r, showUnpublishProduct: l, showTestDownload: u, showCopyLink: a, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: f, onDeleteProduct: g, onCopyProductLink: m, onTestDownload: h, onReportProduct: I } = e;
+    let { product: n, guildId: t, showEditProduct: r, showUnpublishProduct: l, showTestDownload: u, showCopyLink: a, showDeleteProduct: s, showReportProduct: c, onEditProduct: d, onUnpublishProduct: f, onDeleteProduct: g, onCopyProductLink: E, onTestDownload: h, onReportProduct: I } = e;
     return (0, i.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
@@ -96,10 +96,10 @@ function g(e) {
             spacing: -8,
             animation: o.Popout.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(E, {
+                (0, i.jsx)(m, {
                     ...e,
-                    guildId: n,
-                    productId: t.id,
+                    guildId: t,
+                    productId: n.id,
                     showEditProduct: r,
                     showUnpublishProduct: l,
                     showCopyLink: a,
@@ -109,15 +109,15 @@ function g(e) {
                     onEditProduct: d,
                     onUnpublishProduct: f,
                     onDeleteProduct: g,
-                    onCopyLink: m,
+                    onCopyLink: E,
                     onTestDownload: h,
                     onReportProduct: I
                 }),
-            children: (e, n) => {
-                let { isShown: r } = n;
+            children: (e, t) => {
+                let { isShown: r } = t;
                 return (0, i.jsx)(o.Clickable, {
                     ...e,
-                    'aria-label': p.intl.formatToPlainString(p.t.RtqjeH, { productName: t.name }),
+                    'aria-label': p.intl.formatToPlainString(p.t.RtqjeH, { productName: n.name }),
                     'aria-haspopup': 'listbox',
                     'aria-expanded': r,
                     className: _.productActionMenuButton,
@@ -132,11 +132,11 @@ function g(e) {
         })
     });
 }
-function m(e) {
-    let { product: t, guildId: n, onEditProduct: r, onUnpublishProduct: m, onDeleteProduct: h, onCopyProductLink: I, onTestDownload: S, disabled: v = !1 } = e,
-        C = (0, a.U)(t, 600),
-        T = null !== t.price_tier ? (0, s.T4)(t.price_tier, f.pK.USD) : void 0,
-        N = (0, c.C)(t);
+function E(e) {
+    let { product: n, guildId: t, onEditProduct: r, onUnpublishProduct: E, onDeleteProduct: h, onCopyProductLink: I, onTestDownload: S, disabled: v = !1 } = e,
+        C = (0, a.U)(n, 600),
+        T = null !== n.price_tier ? (0, s.T4)(n.price_tier, f.pK.USD) : void 0,
+        N = (0, c.C)(n);
     return (0, i.jsxs)(o.ClickableContainer, {
         tag: 'article',
         className: l()(_.productCardClickable, _.productCard, { [_.disabled]: v }),
@@ -144,19 +144,19 @@ function m(e) {
         onContextMenu: function (e) {
             (0, u.jW)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(E, {
+                    (0, i.jsx)(m, {
                         ...e,
                         closePopout: u.Zy,
-                        guildId: n,
-                        productId: t.id,
+                        guildId: t,
+                        productId: n.id,
                         showEditProduct: !0,
-                        showUnpublishProduct: t.published,
-                        showCopyLink: t.published,
-                        showTestDownload: null != t.attachments,
+                        showUnpublishProduct: n.published,
+                        showCopyLink: n.published,
+                        showTestDownload: null != n.attachments,
                         showDeleteProduct: !0,
                         showReportProduct: !1,
                         onEditProduct: r,
-                        onUnpublishProduct: m,
+                        onUnpublishProduct: E,
                         onDeleteProduct: h,
                         onCopyLink: I,
                         onTestDownload: S,
@@ -165,7 +165,7 @@ function m(e) {
                 )
             );
         },
-        'aria-label': p.intl.formatToPlainString(p.t['X/yAKi'], { productName: t.name }),
+        'aria-label': p.intl.formatToPlainString(p.t['X/yAKi'], { productName: n.name }),
         children: [
             (0, i.jsx)('img', {
                 alt: '',
@@ -182,7 +182,7 @@ function m(e) {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 className: _.productName,
-                                children: t.name
+                                children: n.name
                             }),
                             (0, i.jsx)(o.Spacer, { size: 8 }),
                             (0, i.jsxs)('div', {
@@ -208,21 +208,21 @@ function m(e) {
                                 ]
                             }),
                             (0, i.jsx)(o.Spacer, { size: 16 }),
-                            t.published ? (0, i.jsx)(d.t, {}) : (0, i.jsx)(d.b, {})
+                            n.published ? (0, i.jsx)(d.t, {}) : (0, i.jsx)(d.b, {})
                         ]
                     }),
                     !v &&
                         (0, i.jsx)(g, {
-                            product: t,
-                            guildId: n,
+                            product: n,
+                            guildId: t,
                             showEditProduct: !0,
-                            showUnpublishProduct: t.published,
-                            showCopyLink: t.published,
-                            showTestDownload: null != t.attachments,
+                            showUnpublishProduct: n.published,
+                            showCopyLink: n.published,
+                            showTestDownload: null != n.attachments,
                             showDeleteProduct: !0,
                             showReportProduct: !1,
                             onEditProduct: r,
-                            onUnpublishProduct: m,
+                            onUnpublishProduct: E,
                             onDeleteProduct: h,
                             onCopyProductLink: I,
                             onTestDownload: S,

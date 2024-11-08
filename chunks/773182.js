@@ -26,8 +26,8 @@ var i = n(200651),
     g = n(970606),
     C = n(824991),
     _ = n(931515),
-    x = n(243778),
-    v = n(836768),
+    v = n(243778),
+    x = n(836768),
     I = n(749681),
     b = n(863249),
     S = n(937111),
@@ -104,7 +104,7 @@ let D = l.memo(function (e) {
     let { children: t } = e,
         n = (0, o.TH)(),
         { games: r, treatment: p, hasFetchedGames: b } = (0, _.I9)(),
-        [S, D] = (0, x.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], T.R.SIDEBAR, !0),
+        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], T.R.SIDEBAR, !0),
         O = (0, Z.Ws)({ location: M.dr.CONFLICT_CHECKS }),
         k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
         U = (0, h.Z)(),
@@ -145,7 +145,7 @@ let D = l.memo(function (e) {
                     entrypoint: A.Qq.GUILDS_BAR
                 });
             else {
-                let e = v.Z.getField('selectedTab');
+                let e = x.Z.getField('selectedTab');
                 (0, E.o)(e);
             }
         }, [O, p, W, B, D]),

@@ -51,11 +51,11 @@ var i,
     U = t(947051),
     B = t(413097),
     w = t(969728);
-function H(e) {
+function D(e) {
     var n;
     let { application: t, look: i = 'large_banner', onClick: l, imageStyle: o, enableVideoBanner: r = !0, children: s, sectionName: c, resultsPosition: d, sectionOverallPosition: u, tracksImpression: p = !0, disabled: h = !1 } = e,
         f = null !== (n = (0, m.Z)(h)) && void 0 !== n ? n : h;
-    return (0, a.jsx)(D, {
+    return (0, a.jsx)(H, {
         application: t,
         onClick: l,
         sectionName: c,
@@ -81,7 +81,7 @@ function H(e) {
                   })
     });
 }
-function D(e) {
+function H(e) {
     let { application: n, onClick: t, children: i, sectionName: l, resultsPosition: r, sectionOverallPosition: c, tracksImpression: m, disabled: p, containerStyle: h, look: f } = e,
         C = o.useCallback(
             (e) => {
@@ -415,7 +415,7 @@ function J(e) {
 }
 function Q(e) {
     let n = J(e);
-    return (0, a.jsx)(H, {
+    return (0, a.jsx)(D, {
         ...e,
         onClick: n
     });
@@ -441,7 +441,7 @@ function K(e) {
         });
     if (_ === v.JS.START || _ === v.JS.JOIN)
         return r
-            ? (0, a.jsx)(H, {
+            ? (0, a.jsx)(D, {
                   ...u,
                   sectionName: l,
                   application: t,
@@ -461,7 +461,7 @@ function K(e) {
                   application: t,
                   location: i
               });
-    return (0, a.jsx)(H, {
+    return (0, a.jsx)(D, {
         ...u,
         sectionName: l,
         application: t,

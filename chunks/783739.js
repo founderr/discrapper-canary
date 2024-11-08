@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
 var i = n(200651),
@@ -25,20 +25,20 @@ var i = n(200651),
     f = n(912152),
     I = n(615603),
     N = n(474936),
-    b = n(139842);
-function A(e) {
+    A = n(139842);
+function b(e) {
     let { premiumSubscription: t } = e,
         n = (0, r.e7)([p.Z], () => p.Z.boostSlots),
-        A = s.useMemo(() => Object.values(n), [n]),
+        b = s.useMemo(() => Object.values(n), [n]),
         v = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         j = x.ZP.isPremium(v, N.p9.TIER_2),
         O = (0, r.e7)([m.Z], () => m.Z.affinities),
         R = (0, r.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
         P = O.length > 0 || R.length > 0,
-        D = A.length > 0,
-        y = s.useMemo(() => A.filter((e) => null != e.premiumGuildSubscription), [A]),
+        D = b.length > 0,
+        y = s.useMemo(() => b.filter((e) => null != e.premiumGuildSubscription), [b]),
         B = y.length > 0,
-        L = A.length > y.length,
+        L = b.length > y.length,
         Z = (0, r.e7)([u.Z], () => u.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: F } = (0, l.Z)(),
         M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && F === N.a$.NONE,
@@ -46,7 +46,7 @@ function A(e) {
         w = j && F === N.a$.FP_SUB;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(a.oQ, { className: b.blockedPaymentsWarning }),
+            (0, i.jsx)(a.oQ, { className: A.blockedPaymentsWarning }),
             (0, i.jsx)(C.Z, {
                 hasGuildBoostSlots: D,
                 hasAppliedGuildBoosts: B,
@@ -62,8 +62,8 @@ function A(e) {
                 }),
             (0, i.jsx)(S.Z, {
                 hide: L,
-                containerClassName: b.FPContainer,
-                pillClassName: b.FPPill
+                containerClassName: A.FPContainer,
+                pillClassName: A.FPPill
             }),
             !P && (0, i.jsx)(_.Z, {}),
             (null == t ? void 0 : t.isPaused) && F === N.a$.NONE
@@ -75,18 +75,18 @@ function A(e) {
                       guildBoostSlots: n,
                       premiumSubscription: t
                   }),
-            (0, i.jsx)(I.Z, { guildBoostSlots: A }),
+            (0, i.jsx)(I.Z, { guildBoostSlots: b }),
             (0, i.jsx)(E.Z, {
                 canAddBoosts: B && k,
                 canApplyBoosts: L
             }),
             (0, i.jsx)(d.Z, {
-                className: b.tierComparisonTable,
+                className: A.tierComparisonTable,
                 hideHeading: !0,
                 hideTier0: !0
             }),
-            (0, i.jsx)(o.Z, { cardClassName: b.boosterRecognitionCard }),
-            (0, i.jsx)(c.Z, { className: b.faq })
+            (0, i.jsx)(o.Z, { cardClassName: A.boosterRecognitionCard }),
+            (0, i.jsx)(c.Z, { className: A.faq })
         ]
     });
 }

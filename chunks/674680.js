@@ -26,18 +26,18 @@ let g = {
 function f(e) {
     var t;
     let { achievementId: n, unlocked: d, size: f = a.AvatarSizes.SIZE_40 } = e,
-        p = (0, s.ZP)(),
-        _ = (0, c.oX)(n);
-    if (null == _) return null;
+        _ = (0, s.ZP)(),
+        p = (0, c.oX)(n);
+    if (null == p) return null;
     let h = (0, a.getAvatarSpecs)(f),
-        { name: E, rarity: x } = _,
-        { color: b } = (0, c.F7)(x),
-        C = (0, r.wj)(p) ? g : m,
-        v = (h.size - h.offset - 2 * h.stroke) * 0.8,
-        T = h.size - h.stroke,
+        { name: E, rarity: b } = p,
+        { color: x } = (0, c.F7)(b),
+        C = (0, r.wj)(_) ? g : m,
+        T = (h.size - h.offset - 2 * h.stroke) * 0.8,
+        v = h.size - h.stroke,
         N = {
-            width: 0.4 * v,
-            height: 0.4 * v
+            width: 0.4 * T,
+            height: 0.4 * T
         },
         I = {
             width: N.width + 1,
@@ -49,8 +49,8 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: u.container,
         style: {
-            width: T,
-            height: T,
+            width: v,
+            height: v,
             padding: h.stroke
         },
         'aria-label': ''.concat(null !== (t = E()) && void 0 !== t ? t : ''),
@@ -59,9 +59,9 @@ function f(e) {
                 className: u.trophyIconContainer,
                 children: (0, i.jsx)(a.TrophyIcon, {
                     size: 'custom',
-                    color: d ? b : (0, l.Lq)(C.trophy),
-                    width: v,
-                    height: v
+                    color: d ? x : (0, l.Lq)(C.trophy),
+                    width: T,
+                    height: T
                 })
             }),
             !d &&
@@ -75,7 +75,7 @@ function f(e) {
                     })
                 }),
             d &&
-                x === c.EP.LEGENDARY &&
+                b === c.EP.LEGENDARY &&
                 (0, i.jsx)('div', {
                     className: u.lockContainer,
                     style: I,

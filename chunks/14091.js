@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -60,13 +60,13 @@ class T extends l.Component {
                 let n = 0,
                     i = 0,
                     l = 0,
-                    r = 0;
+                    a = 0;
                 null != t.props.searchResults &&
                     o()(t.props.searchResults)
                         .flatten()
                         .filter((e) => e.isSearchHit)
                         .forEach((e) => {
-                            null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && r++), null != e.embeds && e.embeds.length > 0 && l++, null != e.attachments && e.attachments.length > 0 && i++;
+                            null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && a++), null != e.embeds && e.embeds.length > 0 && l++, null != e.attachments && e.attachments.length > 0 && i++;
                         }),
                     p.ZP.trackWithMetadata(b.rMx.SEARCH_RESULT_VIEWED, {
                         search_type: t.props.searchType,
@@ -80,7 +80,7 @@ class T extends l.Component {
                         page_results: null != t.props.searchResults ? t.props.searchResults.length : null,
                         is_indexing: t.props.searchIsIndexing,
                         page_num_messages: n,
-                        page_num_links: r,
+                        page_num_links: a,
                         page_num_embeds: l,
                         page_num_attach: i
                     });
@@ -126,7 +126,7 @@ class A extends l.PureComponent {
     }
     render() {
         let { searchAnalyticsId: e, searchType: t, searchResults: n } = this.props,
-            { offset: l, hasError: r, totalResults: a, isHistoricalIndexing: s } = this.props.search;
+            { offset: l, hasError: a, totalResults: r, isHistoricalIndexing: s } = this.props.search;
         return (0, i.jsxs)('section', {
             className: Z.searchResultsWrap,
             'aria-label': N.intl.string(N.t.zkoeq6),
@@ -143,8 +143,8 @@ class A extends l.PureComponent {
                     searchResults: n,
                     searchOffset: l,
                     searchLimit: b.vpv,
-                    searchHasError: r,
-                    searchTotalResults: a,
+                    searchHasError: a,
+                    searchTotalResults: r,
                     searchIsIndexing: s
                 })
             ]
@@ -212,14 +212,14 @@ class A extends l.PureComponent {
             }),
             S(this, 'renderHeader', () => {
                 let { searchMode: e } = this.state,
-                    { totalResults: t, isSearching: n, isHistoricalIndexing: l, documentsIndexed: r } = this.props.search;
+                    { totalResults: t, isSearching: n, isHistoricalIndexing: l, documentsIndexed: a } = this.props.search;
                 return (0, i.jsx)(_.Z, {
                     searchMode: e,
                     searchByMode: this.searchByMode,
                     totalResults: t,
                     isSearching: n,
                     isIndexing: l,
-                    documentsIndexed: r
+                    documentsIndexed: a
                 });
             }),
             S(this, 'renderIndexing', () => {
@@ -239,9 +239,9 @@ class A extends l.PureComponent {
                     t = e ? N.intl.string(N.t['VrK/2d']) : N.intl.string(N.t.V6nAfH);
                 return (0, i.jsxs)(j, {
                     children: [
-                        (0, i.jsx)('div', { className: a()(Z.noResultsImage, { [Z.alt]: e }) }),
+                        (0, i.jsx)('div', { className: r()(Z.noResultsImage, { [Z.alt]: e }) }),
                         (0, i.jsx)('div', {
-                            className: a()(Z.emptyResultsText, Z.noResults, { [Z.alt]: e }),
+                            className: r()(Z.emptyResultsText, Z.noResults, { [Z.alt]: e }),
                             children: t
                         })
                     ]
@@ -252,7 +252,7 @@ class A extends l.PureComponent {
                     children: [
                         (0, i.jsx)('div', { className: Z.errorImage }),
                         (0, i.jsx)('div', {
-                            className: a()(Z.emptyResultsText, Z.errorMessage),
+                            className: r()(Z.emptyResultsText, Z.errorMessage),
                             children: N.intl.string(N.t.uvDZBQ)
                         })
                     ]
@@ -260,10 +260,10 @@ class A extends l.PureComponent {
             ),
             S(this, 'renderContent', () => {
                 let { searchResults: e, blockCount: t } = this.props,
-                    { totalResults: n, isSearching: l, isIndexing: r, hasError: a } = this.props.search;
-                return a
+                    { totalResults: n, isSearching: l, isIndexing: a, hasError: r } = this.props.search;
+                return r
                     ? this.renderError()
-                    : r
+                    : a
                       ? this.renderIndexing()
                       : l
                         ? null

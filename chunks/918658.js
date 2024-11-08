@@ -1,62 +1,62 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return M;
+        return L;
     },
     d: function () {
-        return x;
+        return y;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(120356),
-    l = n.n(r),
-    o = n(442837),
-    u = n(692547),
-    a = n(481060),
-    s = n(549817),
-    c = n(819553),
-    d = n(17181),
-    f = n(303737),
-    p = n(434404),
-    _ = n(703656),
-    E = n(944486),
-    g = n(914010),
-    m = n(671533),
-    h = n(259580),
-    I = n(358085),
-    S = n(962086),
-    v = n(160404),
-    C = n(889695),
-    T = n(981631),
-    N = n(176505),
-    b = n(302463),
-    A = n(293810),
-    O = n(388032),
-    P = n(499595);
+var i = t(200651);
+t(192379);
+var r = t(120356),
+    l = t.n(r),
+    o = t(442837),
+    u = t(692547),
+    a = t(481060),
+    s = t(549817),
+    c = t(819553),
+    d = t(17181),
+    f = t(303737),
+    p = t(434404),
+    _ = t(703656),
+    m = t(944486),
+    g = t(914010),
+    E = t(671533),
+    h = t(259580),
+    I = t(358085),
+    S = t(962086),
+    v = t(160404),
+    C = t(889695),
+    T = t(981631),
+    N = t(176505),
+    b = t(302463),
+    A = t(293810),
+    O = t(388032),
+    P = t(499595);
 function R(e) {
-    let { className: t, onClick: n, children: r } = e;
+    let { className: n, onClick: t, children: r } = e;
     return (0, i.jsx)(a.Button, {
-        className: l()(P.button, t),
+        className: l()(P.button, n),
         innerClassName: P.buttonInner,
         look: a.Button.Looks.OUTLINED,
         color: a.Button.Colors.WHITE,
         size: a.Button.Sizes.NONE,
-        onClick: n,
+        onClick: t,
         children: r
     });
 }
-function L(e) {
-    let { onClick: t } = e;
+function x(e) {
+    let { onClick: n } = e;
     return (0, i.jsx)(R, {
-        onClick: t,
+        onClick: n,
         children: O.intl.string(O.t.R9GHyc)
     });
 }
-function M() {
+function L() {
     let e = (0, o.e7)([g.Z], () => g.Z.getGuildId()),
-        t = (0, o.e7)([E.Z], () => E.Z.getChannelId(e)),
+        n = (0, o.e7)([m.Z], () => m.Z.getChannelId(e)),
         {
-            viewingRoles: n,
+            viewingRoles: t,
             backNavigationSection: r,
             isFullServerPreview: l,
             isServerShopPreview: I
@@ -66,8 +66,8 @@ function M() {
             isFullServerPreview: null != e && v.Z.isFullServerPreview(e),
             isServerShopPreview: null != e && v.Z.isViewingServerShop(e)
         }));
-    if (null == n || null == e) return null;
-    let M = (function (e) {
+    if (null == t || null == e) return null;
+    let L = (function (e) {
             switch (e) {
                 case T.pNK.INTEGRATIONS:
                     return O.intl.string(O.t.k7LGdn);
@@ -79,11 +79,11 @@ function M() {
                     return O.intl.string(O.t.MTIXho);
             }
         })(r),
-        x = r === T.pNK.ROLE_SUBSCRIPTIONS ? O.intl.string(O.t.hZUCzc) : O.intl.string(O.t['/djIh4']),
-        y = t === N.oC.GUILD_ONBOARDING,
-        Z = (t) => {
-            let { backToSettings: n } = t;
-            null != e && (v.Z.isFullServerPreview(e) && (0, _.uL)(T.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, S.mL)(e), n && p.Z.open(e, r), r === T.pNK.ROLE_SUBSCRIPTIONS && (0, f.GN)(e));
+        y = r === T.pNK.ROLE_SUBSCRIPTIONS ? O.intl.string(O.t.hZUCzc) : O.intl.string(O.t['/djIh4']),
+        M = n === N.oC.GUILD_ONBOARDING,
+        Z = (n) => {
+            let { backToSettings: t } = n;
+            null != e && (v.Z.isFullServerPreview(e) && (0, _.uL)(T.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, S.mL)(e), t && p.Z.open(e, r), r === T.pNK.ROLE_SUBSCRIPTIONS && (0, f.GN)(e));
         };
     return (0, i.jsxs)(a.Notice, {
         color: a.NoticeColors.BRAND,
@@ -93,16 +93,16 @@ function M() {
                 onClick: () => Z({ backToSettings: !0 }),
                 className: P.backButton,
                 children: [
-                    (0, i.jsx)(m.Z, {
+                    (0, i.jsx)(E.Z, {
                         width: 16,
                         height: 16,
-                        direction: m.Z.Directions.LEFT,
+                        direction: E.Z.Directions.LEFT,
                         className: P.backArrow
                     }),
-                    M
+                    L
                 ]
             }),
-            y && l
+            M && l
                 ? (0, i.jsx)('div', {
                       className: P.noticeContents,
                       children: (0, i.jsx)('div', {
@@ -115,17 +115,17 @@ function M() {
                       children: [
                           (0, i.jsx)('div', {
                               className: P.noticeText,
-                              children: l ? O.intl.formatToPlainString(O.t['0PHahI'], { numRoles: Object.keys(n).length }) : O.intl.formatToPlainString(O.t.vMlK8v, { numRoles: Object.keys(n).length })
+                              children: l ? O.intl.formatToPlainString(O.t['0PHahI'], { numRoles: Object.keys(t).length }) : O.intl.formatToPlainString(O.t.vMlK8v, { numRoles: Object.keys(t).length })
                           }),
                           (0, i.jsx)(a.Popout, {
                               position: 'bottom',
                               renderPopout: () => (0, i.jsx)(C.Z, { guildId: e }),
                               children: (e) => {
-                                  let { onClick: t } = e;
+                                  let { onClick: n } = e;
                                   return (0, i.jsxs)(R, {
-                                      onClick: t,
+                                      onClick: n,
                                       children: [
-                                          x,
+                                          y,
                                           (0, i.jsx)(h.Z, {
                                               width: 16,
                                               height: 16,
@@ -159,19 +159,19 @@ function M() {
                               })
                       ]
                   }),
-            l || r === T.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(L, { onClick: () => Z({ backToSettings: !1 }) })
+            l || r === T.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(x, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }
-function x(e) {
-    let { guildId: t } = e;
-    return (0, o.e7)([v.Z], () => v.Z.isViewingRoles(t))
+function y(e) {
+    let { guildId: n } = e;
+    return (0, o.e7)([v.Z], () => v.Z.isViewingRoles(n))
         ? (0, i.jsx)('div', {
               className: l()(P.settingsWrapper, {
                   [P.windows]: (0, I.isWindows)(),
                   [P.osx]: (0, I.isMac)()
               }),
-              children: (0, i.jsx)(M, {})
+              children: (0, i.jsx)(L, {})
           })
         : null;
 }

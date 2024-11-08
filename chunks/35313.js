@@ -1,14 +1,14 @@
 t.d(n, {
     f: function () {
-        return o;
+        return s;
     }
 });
 var r = t(748780),
     a = t(442837),
     i = t(481060),
-    s = t(607070);
-function o() {
-    let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
+    o = t(607070);
+function s() {
+    let e = (0, a.e7)([o.Z], () => o.Z.useReducedMotion);
     return (0, i.useSpring)(
         {
             from: {

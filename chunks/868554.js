@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(100621),
     o = n(442837),
     c = n(481060),
@@ -27,11 +27,11 @@ var i = n(200651),
     b = n(382873),
     N = n(454120);
 function Z(e) {
-    let { buttonRef: t, channel: r, userId: Z, streaming: S, onClose: T } = e,
+    let { buttonRef: t, channel: a, userId: Z, streaming: S, onClose: T } = e,
         j = (0, o.e7)([g.default], () => g.default.getUser(Z)),
         A = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         y = (0, o.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
-        P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(r.id)),
+        P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(a.id)),
         M = S && null != y && y.resolution !== I.LY.RESOLUTION_1440 && y.frameRate !== I.ws.FPS_60,
         R = l.useContext(m.h9),
         L = l.useRef(0),
@@ -139,7 +139,7 @@ function Z(e) {
                             children: [
                                 (0, i.jsx)(c.Button, {
                                     onClick: V,
-                                    className: a()({ [b.actionButton]: !0 !== S }),
+                                    className: r()({ [b.actionButton]: !0 !== S }),
                                     children: F
                                 }),
                                 !G &&

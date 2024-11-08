@@ -26,8 +26,8 @@ var i,
     f = n(957730),
     I = n(31590),
     N = n(53691),
-    b = n(267717),
-    A = n(296810),
+    A = n(267717),
+    b = n(296810),
     v = n(921813),
     j = n(935147),
     O = n(246946),
@@ -119,7 +119,7 @@ function w() {
                           look: 'pill'
                       }),
                   Q &&
-                      (0, r.jsx)(A.Z, {
+                      (0, r.jsx)(b.Z, {
                           profilePreview: (0, r.jsx)(v.Z, {
                               user: e,
                               canUsePremiumCustomization: c,
@@ -147,7 +147,7 @@ function w() {
                       (0, r.jsx)(N.p, {
                           className: k.floatingNitroUpsell,
                           showUpsell: Y && !W,
-                          text: M.intl.format(M.t.TmfgIy, { onClick: () => (0, b.openPremiumTryItOutProfileUpsell)() }),
+                          text: M.intl.format(M.t.TmfgIy, { onClick: () => (0, A.openPremiumTryItOutProfileUpsell)() }),
                           textVariant: 'heading-md/medium',
                           button: (0, r.jsxs)(h.ShinyButton, {
                               className: k.floatingNitroButton,

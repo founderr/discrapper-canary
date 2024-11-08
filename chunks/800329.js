@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(218867),
     o = n(585122);
 let c = 16 / 9;
@@ -25,13 +25,13 @@ function u(e, t, n) {
 }
 function h(e) {
     var t;
-    let { className: n, children: r, keyExtractor: h, paddingTop: p = 0, paddingBottom: m = 0 } = e,
+    let { className: n, children: a, keyExtractor: h, paddingTop: p = 0, paddingBottom: m = 0 } = e,
         [f, g] = l.useState({
             width: 0,
             height: 0
         }),
         { width: C, height: x } = f,
-        v = null !== (t = null == r ? void 0 : r.length) && void 0 !== t ? t : 0,
+        v = null !== (t = null == a ? void 0 : a.length) && void 0 !== t ? t : 0,
         _ = C - 16,
         I = x - (p + m),
         {
@@ -45,7 +45,7 @@ function h(e) {
                     let {
                         rows: i,
                         columns: l,
-                        tileWidth: r
+                        tileWidth: a
                     } = (function (e, t, n) {
                         let i;
                         let l = Math.floor(t / 25);
@@ -61,23 +61,23 @@ function h(e) {
                                   })
                                 : u(l, t, (i) => {
                                       let l = d(i, t),
-                                          r = (function (e, t) {
+                                          a = (function (e, t) {
                                               let n = e / c;
                                               return Math.floor((t - n) / (8 + n)) + 1;
                                           })(i, n);
-                                      return l * r >= e;
+                                      return l * a >= e;
                                   }) - 1;
-                        let r = d(i, t),
-                            a = Math.ceil(e / r);
+                        let a = d(i, t),
+                            r = Math.ceil(e / a);
                         return {
                             tileWidth: i,
-                            columns: Math.max(1, r),
-                            rows: a
+                            columns: Math.max(1, a),
+                            rows: r
                         };
                     })(e, t, n);
                     return {
-                        tileStyle: { width: r },
-                        tileWidth: r,
+                        tileStyle: { width: a },
+                        tileWidth: a,
                         rows: i,
                         columns: l
                     };
@@ -100,28 +100,28 @@ function h(e) {
                 {
                     className: o.row,
                     children:
-                        null == r
+                        null == a
                             ? void 0
-                            : null === (t = r.slice(n, n + Z)) || void 0 === t
+                            : null === (t = a.slice(n, n + Z)) || void 0 === t
                               ? void 0
                               : t.map((e, t) => {
                                     var l;
-                                    let r = n + t;
+                                    let a = n + t;
                                     return (0, i.jsx)(
                                         'div',
                                         {
                                             style: E,
-                                            className: a()(o.tile, {
+                                            className: r()(o.tile, {
                                                 [o.padColumn]: T,
-                                                [o.noVerticalMargin]: r >= (N - 1) * Z,
-                                                [o.noHorizontalMargin]: (r + 1) % Z == 0 || r === v - 1
+                                                [o.noVerticalMargin]: a >= (N - 1) * Z,
+                                                [o.noHorizontalMargin]: (a + 1) % Z == 0 || a === v - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,
                                                 children: e(b)
                                             })
                                         },
-                                        null !== (l = null == h ? void 0 : h(r)) && void 0 !== l ? l : r
+                                        null !== (l = null == h ? void 0 : h(a)) && void 0 !== l ? l : a
                                     );
                                 })
                 },

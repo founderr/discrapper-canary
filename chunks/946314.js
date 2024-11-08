@@ -9,14 +9,14 @@ t.d(n, {
 var r,
     a,
     i,
-    s,
-    o = t(442837),
+    o,
+    s = t(442837),
     l = t(570140);
 let c = 1000,
     d = 200,
     u = {},
     m = !1;
-class f extends (s = o.ZP.Store) {
+class f extends (o = s.ZP.Store) {
     isLoading() {
         return m;
     }

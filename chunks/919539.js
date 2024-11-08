@@ -36,7 +36,7 @@ function E() {
             },
             [e]
         );
-    function b(e, t) {
+    function A(e, t) {
         a.default.track(C.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
@@ -61,10 +61,10 @@ function E() {
                                   cancelText: _.intl.string(_.t.p89ACg),
                                   confirmButtonColor: r.Button.Colors.BRAND,
                                   onConfirm: () => {
-                                      u.mX.updateSetting(e), b(e, !1);
+                                      u.mX.updateSetting(e), A(e, !1);
                                   },
                                   onCancel: () => {
-                                      u.mX.updateSetting(e), u.zA.updateSetting(e ? c.default.keys(l.Z.getGuilds()) : []), b(e, !0);
+                                      u.mX.updateSetting(e), u.zA.updateSetting(e ? c.default.keys(l.Z.getGuilds()) : []), A(e, !0);
                                   }
                               })
                           );

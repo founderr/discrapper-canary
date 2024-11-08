@@ -15,10 +15,10 @@ var l,
     g = n(701190),
     C = n(496675),
     _ = n(594174),
-    x = n(998502),
-    v = n(981631),
+    v = n(998502),
+    x = n(981631),
     I = n(176505);
-let b = v.IlC.APP,
+let b = x.IlC.APP,
     S = !1,
     Z = !1,
     N = [];
@@ -30,7 +30,7 @@ class y extends (l = s.ZP.Store) {
         this.waitFor(m.Z, g.Z, _.default);
     }
     isOpen() {
-        let e = __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP;
+        let e = __OVERLAY__ ? x.IlC.OVERLAY : x.IlC.APP;
         return !!(S && N.length > 0 && b === e);
     }
     getProps() {
@@ -59,11 +59,11 @@ class y extends (l = s.ZP.Store) {
         INVITE_MODAL_OPEN: function (e) {
             let t = e.invite;
             if (null == t) return !1;
-            if (!(t.state === v.r2o.EXPIRED || t.state === v.r2o.BANNED || t.state === v.r2o.ERROR)) {
+            if (!(t.state === x.r2o.EXPIRED || t.state === x.r2o.BANNED || t.state === x.r2o.ERROR)) {
                 let { channel: e, guild: n } = t;
                 if (null == e) return !1;
                 if ((0, h.bc)(e.type)) {
-                    if (null != f.Z.getChannel(e.id)) return (0, d.XU)(v.ME, e.id), x.ZP.focus(), !1;
+                    if (null != f.Z.getChannel(e.id)) return (0, d.XU)(x.ME, e.id), v.ZP.focus(), !1;
                 } else {
                     if (null == n) return !1;
                     if (null != m.Z.getGuild(n.id) && !(0, u.TY)(t)) {
@@ -72,11 +72,11 @@ class y extends (l = s.ZP.Store) {
                             let { channel: t } = e;
                             if (null != t) {
                                 let e = f.Z.getChannel(t.id);
-                                if (C.Z.can(v.Plq.VIEW_CHANNEL, e)) return t.id;
+                                if (C.Z.can(x.Plq.VIEW_CHANNEL, e)) return t.id;
                             }
                             return null;
                         })(t);
-                        return (0, d.XU)(n.id, e), x.ZP.focus(), !1;
+                        return (0, d.XU)(n.id, e), v.ZP.focus(), !1;
                     }
                 }
             }

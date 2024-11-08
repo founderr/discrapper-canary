@@ -49,18 +49,18 @@ function f(e, t, n) {
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: c, voiceStates: u, guildId: p, selectedChannelId: f, selectedVoiceChannelId: m, optInEnabled: g } = e,
         { hasDivider: C, canHaveVoiceSummary: _ } = l.useMemo(() => (0, s.ie)(n, g, t), [n, g, t, c]),
-        x = l.useMemo(() => (t === o.wZ ? null : n.getCategoryFromSection(t)), [n, t, c]),
-        v = l.useMemo(
+        v = l.useMemo(() => (t === o.wZ ? null : n.getCategoryFromSection(t)), [n, t, c]),
+        x = l.useMemo(
             () =>
-                null != x && x.isCollapsed
+                null != v && v.isCollapsed
                     ? (0, a.c4)({
-                          channels: x.getChannelRecords(),
+                          channels: v.getChannelRecords(),
                           selectedChannelId: f,
                           selectedVoiceChannelId: m,
                           voiceStates: u
                       })
                     : [],
-            [x, f, m, u]
+            [v, f, m, u]
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, i.jsx)(h, {
@@ -68,14 +68,14 @@ t.ZP = l.memo(function (e) {
             guildChannelsVersion: c
         });
     let I = C ? (0, i.jsx)('div', { className: d.sectionDivider }) : null;
-    return _ && 0 !== v.length
+    return _ && 0 !== x.length
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)('div', {
                       className: d.voiceUserSummary,
                       children: (0, i.jsx)(r.Z, {
                           renderIcon: !0,
-                          users: v,
+                          users: x,
                           max: 8,
                           showUserPopout: !0,
                           guildId: p

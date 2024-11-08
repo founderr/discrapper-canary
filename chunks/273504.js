@@ -1,76 +1,76 @@
-e.d(t, {
+t.d(n, {
     I3: function () {
-        return d;
-    },
-    Ic: function () {
-        return N;
-    },
-    Lg: function () {
-        return O;
-    },
-    OU: function () {
-        return A;
-    },
-    RH: function () {
-        return o;
-    },
-    Ux: function () {
-        return i;
-    },
-    VW: function () {
-        return s;
-    },
-    Vg: function () {
-        return I;
-    },
-    Vk: function () {
-        return E;
-    },
-    _6: function () {
-        return T;
-    },
-    aj: function () {
-        return M;
-    },
-    dc: function () {
-        return L;
-    },
-    fX: function () {
-        return l.f;
-    },
-    hu: function () {
-        return _;
-    },
-    jj: function () {
-        return u.j;
-    },
-    n4: function () {
         return c;
     },
+    Ic: function () {
+        return I;
+    },
+    Lg: function () {
+        return h;
+    },
+    OU: function () {
+        return g;
+    },
+    RH: function () {
+        return a;
+    },
+    Ux: function () {
+        return r;
+    },
+    VW: function () {
+        return d;
+    },
+    Vg: function () {
+        return E;
+    },
+    Vk: function () {
+        return p;
+    },
+    _6: function () {
+        return S;
+    },
+    aj: function () {
+        return m;
+    },
+    dc: function () {
+        return v;
+    },
+    fX: function () {
+        return u.f;
+    },
+    hu: function () {
+        return f;
+    },
+    jj: function () {
+        return l.j;
+    },
+    n4: function () {
+        return s;
+    },
     q4: function () {
-        return a.q;
+        return o.q;
     },
     uE: function () {
-        return f;
+        return _;
     }
 });
-var r,
-    i,
-    u = e(401653),
-    a = e(95930),
-    l = e(41381);
-((r = i || (i = {}))[(r.PROFANITY = 1)] = 'PROFANITY'), (r[(r.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (r[(r.SLURS = 3)] = 'SLURS'), l.f.USER_PROFILE, l.f.SERVER_POLICY, l.f.MENTION_SPAM, l.f.ML_SPAM, l.f.DEFAULT_KEYWORD_LIST, l.f.KEYWORD;
-let o = 1000,
-    c = 100,
-    d = 1000,
-    s = 10,
-    _ = 60,
+var i,
+    r,
+    l = t(401653),
+    o = t(95930),
+    u = t(41381);
+((i = r || (r = {}))[(i.PROFANITY = 1)] = 'PROFANITY'), (i[(i.SEXUAL_CONTENT = 2)] = 'SEXUAL_CONTENT'), (i[(i.SLURS = 3)] = 'SLURS'), u.f.USER_PROFILE, u.f.SERVER_POLICY, u.f.MENTION_SPAM, u.f.ML_SPAM, u.f.DEFAULT_KEYWORD_LIST, u.f.KEYWORD;
+let a = 1000,
+    s = 100,
+    c = 1000,
+    d = 10,
+    f = 60,
+    p = 1,
+    _ = 1,
+    m = 260,
+    g = 100,
     E = 1,
-    f = 1,
-    M = 260,
-    A = 100,
-    I = 1,
-    O = 50,
-    N = 20,
-    T = 150,
-    L = 'automod-profile-quarantine-alert';
+    h = 50,
+    I = 20,
+    S = 150,
+    v = 'automod-profile-quarantine-alert';

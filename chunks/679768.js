@@ -1,10 +1,10 @@
-t.d(s, {
+s.d(t, {
     Z: function () {
-        return o;
+        return r;
     }
 });
-var n = t(200651);
-function o(e) {
+var n = s(200651);
+function r(e) {
     return (0, n.jsxs)('svg', {
         width: '14',
         height: '14',
@@ -45,4 +45,4 @@ function o(e) {
         ]
     });
 }
-t(192379);
+s(192379);

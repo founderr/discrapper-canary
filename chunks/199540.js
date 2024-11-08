@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(981631),
     C = n(388032),
     _ = n(581294);
-let x = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    v = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
+let v = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    x = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE);
 function I(e) {
     let { guildId: t, animate: n } = e,
         l = (0, c.e7)([p.Z], () => p.Z.getGuild(t), [t]);
@@ -47,11 +47,11 @@ function b(e) {
         f = h.map((e) => e.id),
         [m, C] = l.useState(!1),
         [b, S] = l.useState(c),
-        Z = c ? 0 : -v,
+        Z = c ? 0 : -x,
         N = (0, d.useSpring)(
             {
                 transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
-                config: { duration: x },
+                config: { duration: v },
                 onStart() {
                     C(!0), S(c);
                 },
@@ -109,17 +109,17 @@ function S(e) {
             folderIconContent: p,
             onClick: f,
             onContextMenu: g,
-            onHoverChange: x,
-            onKeyDown: v,
+            onHoverChange: v,
+            onKeyDown: x,
             treeItemProps: { onFocus: I, ...S }
         } = e,
         [Z, N] = l.useState(!1),
         E = l.useCallback(() => {
-            o || N(!0), null == x || x(!0);
-        }, [o, x]),
+            o || N(!0), null == v || v(!0);
+        }, [o, v]),
         y = l.useCallback(() => {
-            o || N(!1), null == x || x(!1);
-        }, [o, x]),
+            o || N(!1), null == v || v(!1);
+        }, [o, v]),
         j = r || null == s ? null : (0, m.Or)(s),
         T = !r && c > 0 ? (0, m.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
@@ -133,7 +133,7 @@ function S(e) {
             onContextMenu: g,
             onMouseEnter: E,
             onMouseLeave: y,
-            onKeyDown: v,
+            onKeyDown: x,
             onFocus: I,
             'aria-label': C.intl.formatToPlainString(C.t['90/DwM'], {
                 folderName: u,

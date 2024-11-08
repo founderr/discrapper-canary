@@ -66,7 +66,7 @@ function A() {
                     }
                 );
         },
-        j = () => {
+        R = () => {
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('76540'), n.e('43876')]).then(n.bind(n, 607018));
@@ -129,7 +129,7 @@ function A() {
             },
             theme: t,
             onClick: (e) => {
-                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : j();
+                e === v.PUi.EMAIL_OR_PHONE || e === v.PUi.EMAIL || e === v.PUi.REVERIFY_EMAIL ? L() : R();
             },
             onLogout: () => {
                 (0, o.openModalLazy)(

@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(392711),
     o = n.n(s),
     c = n(848246),
@@ -68,10 +68,10 @@ function W(e) {
                           position: 'bottom',
                           color: u.Tooltip.Colors.GREY,
                           text: V.intl.formatToPlainString(V.t.JjdizM, { username: e.user.username }),
-                          children: (r) =>
+                          children: (a) =>
                               (0, i.jsx)(k.ZP, {
-                                  ...r,
-                                  className: a()(z.speaker, { [z.last]: t === l.length - 1 }),
+                                  ...a,
+                                  className: r()(z.speaker, { [z.last]: t === l.length - 1 }),
                                   user: e.user,
                                   speaking: !0,
                                   collapsed: !0,
@@ -84,7 +84,7 @@ function W(e) {
           });
 }
 function K(e) {
-    let { inPopout: t, channel: n, appContext: r, inCall: a, isChatOpen: s, exitFullScreen: o } = e,
+    let { inPopout: t, channel: n, appContext: a, inCall: r, isChatOpen: s, exitFullScreen: o } = e,
         Z = n.id,
         {
             voiceParticipantsHidden: k,
@@ -193,7 +193,7 @@ function K(e) {
                     'call-members-popout'
                 )
             ),
-        a &&
+        r &&
             ei.push(
                 null != O
                     ? (0, i.jsx)(
@@ -239,7 +239,7 @@ function K(e) {
                             children: (0, i.jsx)(U.Z, {
                                 channelId: Z,
                                 onClose: t,
-                                appContext: r,
+                                appContext: a,
                                 exitFullScreen: o
                             })
                         });

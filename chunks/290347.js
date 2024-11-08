@@ -72,10 +72,10 @@ let N = [],
         });
     };
 function A(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: b, header: Z, headerClassName: y, subHeader: L, subHeaderExtra: j, featureCards: R, changeLogId: O, button: P, body: D } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: T, modalDismissibleContent: A, modalTopExtra: b, header: Z, headerClassName: y, subHeader: L, subHeaderExtra: R, featureCards: j, changeLogId: O, button: P, body: D } = e,
         { onClose: M, transitionState: w } = n,
         k = (0, h.Dt)(),
-        U = R.length % 2 == 0,
+        U = j.length % 2 == 0,
         G = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         [B, H] = r.useState(Date.now()),
         [V, F] = r.useState(0),
@@ -254,7 +254,7 @@ function A(e) {
                         (0, i.jsxs)(o.Heading, {
                             variant: 'heading-lg/semibold',
                             className: S.subHeader,
-                            children: [L, null == j ? void 0 : j()]
+                            children: [L, null == R ? void 0 : R()]
                         }),
                         null != D &&
                             (0, i.jsx)(o.Heading, {
@@ -262,10 +262,10 @@ function A(e) {
                                 className: S.bodyText,
                                 children: D
                             }),
-                        R.length > 0 &&
+                        j.length > 0 &&
                             (0, i.jsx)('div', {
                                 className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
-                                children: R.map((e, t) =>
+                                children: j.map((e, t) =>
                                     (0, i.jsx)(
                                         x,
                                         {

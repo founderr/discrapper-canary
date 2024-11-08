@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(112724),
     o = n(413458),
     c = n(351248),
@@ -16,7 +16,7 @@ var i = n(200651),
     x = n(354459),
     v = n(456895);
 t.Z = (0, s.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: r, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: N, hasConnectPermission: Z, className: S, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: a, participantsVersion: s, layout: _, onSelectParticipant: I, onContextMenuParticipant: E, onFullscreenParticipant: b, channel: N, hasConnectPermission: Z, className: S, inCall: T, showParticipants: j = !0, paused: A = !1, width: y, height: P, idle: M, mode: R, popoutWindow: L, awaitingRemoteSessionInfo: k, callContainerDimensions: O } = e;
     l.useEffect(() => {
         u.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [y, P, O.width, O.height]);
@@ -36,10 +36,10 @@ t.Z = (0, s.Z)((e) => {
             participants: t,
             onContextMenu: E
         });
-    if (((n = T ? n : t), null == r))
+    if (((n = T ? n : t), null == a))
         return 0 === n.length
             ? (0, i.jsx)(g.Z, {
-                  className: a()(v.videoGrid, v.hiddenParticipants),
+                  className: r()(v.videoGrid, v.hiddenParticipants),
                   channelId: N.id,
                   width: y
               })
@@ -63,7 +63,7 @@ t.Z = (0, s.Z)((e) => {
         onFullscreenParticipant: b,
         onContextMenuParticipant: E,
         onSelectParticipant: I,
-        selectedParticipant: r,
+        selectedParticipant: a,
         filteredParticipants: D,
         participants: t,
         popoutWindow: L,

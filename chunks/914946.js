@@ -84,14 +84,14 @@ var i,
     Z = n(186901),
     y = n(981631);
 let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
-    j = (function () {
+    R = (function () {
         let e = L.split(':')[0];
         if (!e.includes('.')) return e;
         let t = e.split('.'),
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    R = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(j), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
     O = 1 * N.Z.Millis.MINUTE,
     P = {};
 function D(e) {
@@ -211,7 +211,7 @@ function H(e) {
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(R.test(e) && R.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(j.test(e) && j.test(n)) || !1));
 }
 function V(e, t, n) {
     let i = _.Z.getGuild(e.getGuildId());

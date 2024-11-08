@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 }),
     n(47120);
@@ -45,7 +45,7 @@ function N(e) {
         })
     );
 }
-function b() {
+function A() {
     let [e, t] = s.useState(!1),
         { debugLogging: n, aecDumpEnabled: d } = (0, r.cj)([p.Z], () => ({
             aecDumpSupported: p.Z.isAecDumpSupported(),
@@ -53,8 +53,8 @@ function b() {
             aecDumpEnabled: p.Z.getAecDump(),
             supportsConnectionReplay: p.Z.supports(_.AN.CONNECTION_REPLAY)
         })),
-        b = (0, r.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
-        A = (0, r.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
+        A = (0, r.e7)([g.default], () => g.default.isStreamInfoOverlayEnabled),
+        b = (0, r.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
     async function v() {
         t(!0);
         try {
@@ -103,7 +103,7 @@ function b() {
             (0, i.jsx)(h.F, {
                 setting: T.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.FormSwitch, {
-                    value: b,
+                    value: A,
                     onChange: (e) => (0, o.y)({ isStreamInfoOverlayEnabled: e }),
                     note: E.intl.string(E.t.kBXuW1),
                     children: E.intl.string(E.t['0CEP6e'])
@@ -123,7 +123,7 @@ function b() {
                 children: [
                     (0, i.jsx)(l.FormSwitch, {
                         hideBorder: !0,
-                        value: A,
+                        value: b,
                         onChange: (e) => c.TC(e),
                         note: E.intl.string(E.t.Lm72RU),
                         children: E.intl.string(E.t.U4FgFB)

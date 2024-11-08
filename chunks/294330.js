@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     VD: function () {
-        return j;
+        return R;
     }
 }),
     n(47120);
@@ -35,13 +35,13 @@ var i = n(200651),
     Z = n(129512),
     y = n(330065),
     L = n(755386);
-function j(e) {
+function R(e) {
     let { guild: t, onClick: l, onView: s } = e,
         [E, I] = r.useState(!1),
-        [T, j] = r.useState(!1),
-        [R, O] = r.useState(!1),
+        [T, R] = r.useState(!1),
+        [j, O] = r.useState(!1),
         P = r.useCallback(async () => {
-            j(!0);
+            R(!0);
             try {
                 await l(t.id);
             } catch (n) {
@@ -52,7 +52,7 @@ function j(e) {
                     body: null !== (e = t.getAnyErrorMessage()) && void 0 !== e ? e : A.intl.string(A.t.eAn6z8)
                 });
             } finally {
-                j(!1);
+                R(!1);
             }
         }, [t.id, l]),
         D = r.useCallback(
@@ -128,7 +128,7 @@ function j(e) {
                             className: b.header,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: a()(b.banner, { [b.loaded]: R }),
+                                    className: a()(b.banner, { [b.loaded]: j }),
                                     children: (0, i.jsx)('img', {
                                         src: U,
                                         alt: '',
@@ -227,12 +227,12 @@ function j(e) {
         ]
     });
 }
-function R(e) {
+function j(e) {
     let { guildId: t, onClick: n, onView: r } = e,
         l = (0, s.e7)([T.Z], () => T.Z.getGuild(t));
     return null == l
         ? null
-        : (0, i.jsx)(j, {
+        : (0, i.jsx)(R, {
               guild: l,
               onClick: n,
               onView: r
@@ -259,7 +259,7 @@ function O(e) {
                               state: n,
                               cleanUp: r,
                               animate: s.current,
-                              children: (0, i.jsx)(R, {
+                              children: (0, i.jsx)(j, {
                                   guildId: t.guildId,
                                   onClick: l,
                                   onView: a
@@ -291,4 +291,4 @@ function O(e) {
         })
     });
 }
-t.ZP = r.memo(R);
+t.ZP = r.memo(j);

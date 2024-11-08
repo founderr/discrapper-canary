@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(924826),
-    r = n(459273),
-    a = n(585483),
+    a = n(459273),
+    r = n(585483),
     s = n(534091),
     o = n(959517),
     c = n(981631);
@@ -30,14 +30,14 @@ function d(e) {
         }, []),
         h = i.useCallback(
             (e) => {
-                var i, l, r;
+                var i, l, a;
                 if (!n.keyboardModeEnabled) return;
-                let a = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
-                    s = null == a ? void 0 : a.querySelector(e);
+                let r = null === (l = t.current) || void 0 === l ? void 0 : null === (i = l.getScrollerNode()) || void 0 === i ? void 0 : i.ownerDocument,
+                    s = null == r ? void 0 : r.querySelector(e);
                 null != s &&
-                    (null === (r = t.current) ||
-                        void 0 === r ||
-                        r.scrollIntoViewNode({
+                    (null === (a = t.current) ||
+                        void 0 === a ||
+                        a.scrollIntoViewNode({
                             node: s,
                             padding: 4 * o.kQ,
                             callback: () => (null == s ? void 0 : s.focus())
@@ -46,7 +46,7 @@ function d(e) {
             [n.keyboardModeEnabled]
         ),
         p = i.useCallback(() => {
-            !n.hasMoreAfter && a.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
+            !n.hasMoreAfter && r.S.dispatchToLastSubscribed(c.CkL.TEXTAREA_FOCUS);
         }, [n.hasMoreAfter]),
         m = (0, l.ZP)({
             id: s.W,
@@ -65,7 +65,7 @@ function d(e) {
             [m]
         );
     return (
-        (0, r.yp)({
+        (0, a.yp)({
             event: c.CkL.FOCUS_MESSAGES,
             handler: f
         }),

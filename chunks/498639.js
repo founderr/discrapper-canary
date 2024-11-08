@@ -21,8 +21,8 @@ var i = n(200651),
     f = n(911367),
     I = n(838588),
     N = n(430824),
-    b = n(78839),
-    A = n(981631),
+    A = n(78839),
+    b = n(981631),
     v = n(474936),
     j = n(933263);
 function O(e) {
@@ -52,7 +52,7 @@ t.Z = function () {
     let [e, t] = s.useState(v.Si.TIER_2),
         [n, x] = s.useState(null),
         [S] = (0, l.Wu)([N.Z], () => [N.Z.getGuilds()]),
-        [R] = (0, l.Wu)([b.ZP], () => [b.ZP.getPremiumSubscription()]);
+        [R] = (0, l.Wu)([A.ZP], () => [A.ZP.getPremiumSubscription()]);
     (0, f.t)();
     let P = Object.values(S).map((e) => ({
             value: e,
@@ -68,12 +68,12 @@ t.Z = function () {
         [k, w] = s.useState(P.length > 0 ? P[0].value : null),
         { analyticsLocations: U } = (0, m.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [V, G] = s.useState(''),
-        [Y, H] = s.useState(A.lds),
+        [Y, H] = s.useState(b.lds),
         { isSubmitting: z, responseMessage: W, redeemVirtualCurrency: K } = (0, I.Z)(),
-        [q, Q] = s.useState(A.lds),
+        [q, Q] = s.useState(b.lds),
         [X, J] = s.useState(''),
-        [$, ee] = s.useState(A.lds),
-        [et, en] = s.useState(A.lds);
+        [$, ee] = s.useState(b.lds),
+        [et, en] = s.useState(b.lds);
     return (0, i.jsx)(m.Gt, {
         value: U,
         children: (0, i.jsxs)(a.FormSection, {
@@ -196,7 +196,7 @@ t.Z = function () {
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     onClick: () => {
-                                        window.open(A.Z5c.BILLING_PROMOTION_REDEMPTION(B));
+                                        window.open(b.Z5c.BILLING_PROMOTION_REDEMPTION(B));
                                     },
                                     children: 'Open Link'
                                 });
@@ -259,7 +259,7 @@ t.Z = function () {
                                     onMouseEnter: t,
                                     disabled: M,
                                     onClick: () => {
-                                        window.open(A.Z5c.BILLING_PREMIUM_SUBSCRIBE + '?' + r.stringify({ ...Z }));
+                                        window.open(b.Z5c.BILLING_PREMIUM_SUBSCRIBE + '?' + r.stringify({ ...Z }));
                                     },
                                     children: 'Open Link'
                                 });
@@ -340,8 +340,8 @@ t.Z = function () {
                                     skuId: Y,
                                     openPremiumPaymentModal: () => !0,
                                     analyticsLocations: [],
-                                    analyticsLocationObject: { page: A.ZY5.IN_APP },
-                                    context: A.IlC.APP
+                                    analyticsLocationObject: { page: b.ZY5.IN_APP },
+                                    context: b.IlC.APP
                                 }),
                             children: 'Open App Subs Modal for Activity'
                         })

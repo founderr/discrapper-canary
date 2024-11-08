@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(512722),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     s = n(779618),
     o = n(215339),
     c = n(446226),
@@ -28,9 +28,9 @@ var l = n(512722),
     N = n(141373);
 function Z(e) {
     let { channel: t, hasActiveStream: n, themeable: l = !1 } = e,
-        Z = (0, a.e7)([m.default], () => {
+        Z = (0, r.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
-            return r()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
+            return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
         S = (0, o.j)('VoiceEffectsActionBar'),
         T = (0, c.Z)(),

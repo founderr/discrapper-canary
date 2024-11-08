@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(566620),
     C = n(317381),
     _ = n(835473),
-    x = n(933557),
-    v = n(194082),
+    v = n(933557),
+    x = n(194082),
     I = n(436774),
     b = n(594190),
     S = n(925329),
@@ -88,9 +88,9 @@ class ee extends l.PureComponent {
             children: [
                 e
                     ? (0, i.jsx)(y.Z, { title: r })
-                    : (0, i.jsx)(v.ZP, {
-                          look: v.ZP.Looks.GRAY,
-                          size: v.ZP.Sizes.SMALL,
+                    : (0, i.jsx)(x.ZP, {
+                          look: x.ZP.Looks.GRAY,
+                          size: x.ZP.Sizes.SMALL,
                           className: X.liveIndicator
                       }),
                 (0, i.jsxs)('div', {
@@ -201,7 +201,7 @@ t.Z = (0, f.Z)(function (e) {
         [h, p] = (0, c.Wu)([w.Z], () => [w.Z.getCurrentUserActiveStream(), w.Z.getStreamerActiveStreamMetadata()]),
         f = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
         g = (0, c.e7)([C.ZP], () => (null != u ? C.ZP.getSelfEmbeddedActivityForChannel(u.id) : null)),
-        v = (0, c.e7)([O.Z, U.Z, D.ZP], () => (null != o ? Z.JL(o, O.Z, U.Z, !1) : null != n && Z.h_(D.ZP.getChannels(n), O.Z, U.Z).length > 0)),
+        x = (0, c.e7)([O.Z, U.Z, D.ZP], () => (null != o ? Z.JL(o, O.Z, U.Z, !1) : null != n && Z.h_(D.ZP.getChannels(n), O.Z, U.Z).length > 0)),
         [I] = (0, _.Z)([
             null !==
                 (t = (function () {
@@ -215,7 +215,7 @@ t.Z = (0, f.Z)(function (e) {
         S = (0, c.e7)([k.Z], () => (0, N.Z)(k.Z) && (0, W.isWindows)()),
         E = (0, c.e7)([G.Z], () => (null != r ? G.Z.findActivity(r, (e) => e.type === Q.IIU.PLAYING) : null)),
         y = null != h && h.ownerId === r && h.state !== Q.jm8.ENDED,
-        T = (0, c.e7)([H.default, B.Z], () => (null != u ? (0, x.F6)(u, H.default, B.Z) : void 0)),
+        T = (0, c.e7)([H.default, B.Z], () => (null != u ? (0, v.F6)(u, H.default, B.Z) : void 0)),
         A = (0, P.Z)();
     return (0, i.jsx)(ee, {
         ...l,
@@ -229,7 +229,7 @@ t.Z = (0, f.Z)(function (e) {
         useReducedMotion: f,
         isStreaming: y,
         channel: u,
-        canStream: v,
+        canStream: x,
         stream: h,
         streamMetadata: p,
         channelName: T,

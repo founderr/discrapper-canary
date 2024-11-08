@@ -6,16 +6,16 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     l = n(585483),
-    r = n(424602),
-    a = n(783097),
+    a = n(424602),
+    r = n(783097),
     s = n(981631);
 function o(e) {
     let { obstructedFromView: t, disabled: n } = e,
-        o = r._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
+        o = a._f.getCurrentConfig({ location: 'inAppOAuth2ModalCallback' }, { autoTrackExposure: !1 }),
         [c, d] = i.useState(null),
         u = i.useRef(c);
     u.current = c;
-    let h = i.useMemo(() => (null != c ? (0, a.sl)(c) : null), [c]);
+    let h = i.useMemo(() => (null != c ? (0, r.sl)(c) : null), [c]);
     i.useEffect(() => {
         n && d(null);
     }, [n]);

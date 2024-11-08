@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(873546),
-    a = n(442837),
+    a = n(873546),
+    r = n(442837),
     s = n(481060),
     o = n(239091),
     c = n(144144),
@@ -35,10 +35,10 @@ let A = [],
     y = N.ZP.getEnableHardwareAcceleration();
 function P(e) {
     let { user: t, channel: l, status: d, activities: u } = e,
-        h = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
-        p = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
-        _ = (0, a.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
-        E = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        h = (0, r.e7)([x.Z], () => null != x.Z.getTypingUsers(l.id)[t.id]),
+        p = (0, r.e7)([v.default], () => v.default.getCurrentUser()),
+        _ = (0, r.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
+        E = (0, r.e7)([C.Z], () => C.Z.getNickname(t.id)),
         N = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('72714')]).then(n.bind(n, 354589));
@@ -58,7 +58,7 @@ function P(e) {
                 userId: t.id,
                 channelId: l.id
             }),
-        position: r.tq ? 'window_center' : 'left',
+        position: a.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: () => {
             let e = '@'.concat(b.ZP.getUserTag(t, { decoration: 'never' })),
@@ -103,38 +103,38 @@ function M(e, t) {
 function R(e) {
     var t;
     let { channel: n } = e,
-        r = v.default.getCurrentUser(),
-        o = null == r ? void 0 : r.isStaff(),
+        a = v.default.getCurrentUser(),
+        o = null == a ? void 0 : a.isStaff(),
         { analyticsLocations: c } = (0, u.ZP)(d.Z.MEMBER_LIST);
     let { listItems: m } =
         ((t = n),
-        (0, a.e7)(
+        (0, r.e7)(
             [C.Z, v.default, g.Z],
             () => {
                 let e = (0, E.T)(t.recipients, v.default),
                     n = {};
                 for (let t of e) {
-                    var i, l, r;
+                    var i, l, a;
                     C.Z.isFriend(t.id) || t.id === (null === (i = v.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                         ? (n[t.id] = {
                               status: null !== (l = g.Z.getStatus(t.id)) && void 0 !== l ? l : S.Skl.OFFLINE,
-                              activities: null !== (r = g.Z.getActivities(t.id)) && void 0 !== r ? r : A
+                              activities: null !== (a = g.Z.getActivities(t.id)) && void 0 !== a ? a : A
                           })
                         : (n[t.id] = {
                               status: S.Skl.OFFLINE,
                               activities: A
                           });
                 }
-                let a = [];
+                let r = [];
                 for (let t of e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
                         activities: n[t.id].activities
                     };
-                    a.push(e);
+                    r.push(e);
                 }
-                return { listItems: a };
+                return { listItems: r };
             },
             [t],
             M

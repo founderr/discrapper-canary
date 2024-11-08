@@ -28,11 +28,11 @@ let T = 'ActivityTrackingStore',
     y = !1;
 function L(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && j(e, !0);
+    t && R(e, !0);
     let n = Z[e.applicationId];
     null != n && (n.stop(), delete Z[e.applicationId]), delete b[e.applicationId], c.K.set(T, b);
 }
-function j(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = Date.now(),
         i = null != e.updatedAt ? n - e.updatedAt : 0;
@@ -55,9 +55,9 @@ function j(e) {
     }),
         (e.updatedAt = n);
     let o = Z[e.applicationId];
-    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => j(e)), !t && ((b[e.applicationId] = e), c.K.set(T, b));
+    null == o && (o = Z[e.applicationId] = new d.Xp()).start(x, () => R(e)), !t && ((b[e.applicationId] = e), c.K.set(T, b));
 }
-function R() {
+function j() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = p.ZP.getVisibleRunningGames(),
         n = new Set();
@@ -66,7 +66,7 @@ function R() {
         if (null != t)
             n.add(t.id),
                 !(t.id in b) &&
-                    j({
+                    R({
                         applicationId: t.id,
                         updatedAt: Date.now(),
                         distributor: i,
@@ -81,7 +81,7 @@ function O() {
 }
 class P extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], R);
+        this.waitFor(p.ZP, g.Z, C.Z), this.syncWith([g.Z], j);
     }
     getActivities() {
         return b;
@@ -97,11 +97,11 @@ class P extends (r = o.ZP.Store) {
           })
         : (l[a] = s),
     new P(u.Z, {
-        RUNNING_GAMES_CHANGE: () => R(),
+        RUNNING_GAMES_CHANGE: () => j(),
         CONNECTION_OPEN: function () {
             if (y) return !1;
-            for (let e of Object.keys(b)) j(b[e]);
-            R(!1), (y = !0);
+            for (let e of Object.keys(b)) R(b[e]);
+            j(!1), (y = !0);
         },
         CONNECTION_CLOSED: function (e) {
             let { code: t } = e;

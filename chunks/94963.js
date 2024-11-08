@@ -2,9 +2,9 @@ t(47120), t(724458);
 var r = t(200651),
     a = t(192379),
     i = t(688619),
-    s = t.n(i),
-    o = t(120356),
-    l = t.n(o),
+    o = t.n(i),
+    s = t(120356),
+    l = t.n(s),
     c = t(97028),
     d = t(866442),
     u = t(442837),
@@ -20,7 +20,7 @@ var r = t(200651),
     _ = t(388032),
     y = t(480160),
     T = t(306882);
-let j = [
+let I = [
         {
             name: 'Night Sky',
             bannerKind: v.qC.NIGHT_SKY,
@@ -67,7 +67,7 @@ let j = [
             icon: m.PaintbrushThickIcon
         }
     ],
-    I = (e) => {
+    j = (e) => {
         let { name: n, primaryColor: t, secondaryColor: a, isCustom: i } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -88,10 +88,10 @@ let j = [
     };
 n.Z = (e) => {
     var n;
-    let { handleUpdate: t, progress: i, guildId: o } = e,
+    let { handleUpdate: t, progress: i, guildId: s } = e,
         { banner: N, brandPrimaryColor: S, brandSecondaryColor: E, badgePrimaryColor: k, badgeSecondaryColor: A } = i,
-        w = (0, u.e7)([x.Z], () => x.Z.getGuild(o)),
-        M = null !== (n = (0, u.e7)([h.Z], () => h.Z.getMemberCount(o))) && void 0 !== n ? n : 0,
+        w = (0, u.e7)([x.Z], () => x.Z.getGuild(s)),
+        M = null !== (n = (0, u.e7)([h.Z], () => h.Z.getMemberCount(s))) && void 0 !== n ? n : 0,
         R = a.useMemo(
             () => ({
                 primary: null != S ? S : v.OH,
@@ -122,13 +122,13 @@ n.Z = (e) => {
                 };
             }
         }, [R, O, P, k, A, D]),
-        G = a.useCallback(() => {
-            let e = j[Math.floor(Math.random() * j.length)].bannerKind,
-                n = s().random().hex();
+        B = a.useCallback(() => {
+            let e = I[Math.floor(Math.random() * I.length)].bannerKind,
+                n = o().random().hex();
             t({
                 banner: e,
                 brandPrimaryColor: n,
-                brandSecondaryColor: s().random().hex()
+                brandSecondaryColor: o().random().hex()
             });
         }, [t]);
     a.useEffect(() => {
@@ -138,11 +138,11 @@ n.Z = (e) => {
             brandSecondaryColor: F.secondary
         });
     }, [t, N, F.primary, F.secondary]);
-    let B = a.useMemo(() => {
+    let G = a.useMemo(() => {
         var e, n, t;
         return {
             ...i,
-            id: o,
+            id: s,
             name: null !== (e = null == w ? void 0 : w.name) && void 0 !== e ? e : '',
             icon: null == w ? void 0 : w.icon,
             memberCount: M,
@@ -169,7 +169,7 @@ n.Z = (e) => {
                 {}
             )
         };
-    }, [i, o, w, M, N, k, A, F]);
+    }, [i, s, w, M, N, k, A, F]);
     return (0, r.jsxs)('div', {
         className: T.slideContent,
         children: [
@@ -192,7 +192,7 @@ n.Z = (e) => {
                         children: (0, r.jsxs)('div', {
                             className: y.colorsContainer,
                             children: [
-                                (0, r.jsx)(C.Z, { onClick: G }),
+                                (0, r.jsx)(C.Z, { onClick: B }),
                                 (0, r.jsxs)('div', {
                                     className: y.colorPickerContainer,
                                     children: [
@@ -222,7 +222,7 @@ n.Z = (e) => {
                                                                 L((e) => !e);
                                                             },
                                                             className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 0 === D }),
-                                                            children: (0, r.jsx)(I, {
+                                                            children: (0, r.jsx)(j, {
                                                                 name: _.intl.string(_.t.AemVoa),
                                                                 isCustom: !0
                                                             })
@@ -236,7 +236,7 @@ n.Z = (e) => {
                                                         });
                                                     },
                                                     className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: 1 === D }),
-                                                    children: (0, r.jsx)(I, {
+                                                    children: (0, r.jsx)(j, {
                                                         name: _.intl.string(_.t['1Pvr/v']),
                                                         primaryColor: k,
                                                         secondaryColor: A
@@ -254,7 +254,7 @@ n.Z = (e) => {
                                                                 });
                                                             },
                                                             className: l()(y.brandItemContainer, { [y.brandItemContainerSelected]: D === n + 2 }),
-                                                            children: (0, r.jsx)(I, {
+                                                            children: (0, r.jsx)(j, {
                                                                 name: e.name,
                                                                 primaryColor: e.primary,
                                                                 secondaryColor: e.secondary
@@ -277,7 +277,7 @@ n.Z = (e) => {
                                         }),
                                         (0, r.jsx)('div', {
                                             className: y.bannerPickerGrid,
-                                            children: j.map((e, n) =>
+                                            children: I.map((e, n) =>
                                                 (0, r.jsxs)(
                                                     m.Clickable,
                                                     {
@@ -314,7 +314,7 @@ n.Z = (e) => {
                                 secondaryTintColor: F.secondary,
                                 className: y.clanBannerPreview
                             }),
-                            clan: B
+                            clan: G
                         })
                     })
                 ]

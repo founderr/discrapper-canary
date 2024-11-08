@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(594174),
     C = n(768581),
     _ = n(709054),
-    x = n(981631),
-    v = n(124368),
+    v = n(981631),
+    x = n(124368),
     I = n(388032),
     b = n(491372);
 function S(e) {
@@ -32,7 +32,7 @@ function S(e) {
                 .values()
                 .map((e) => e.channel)
                 .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && f.Z.can(x.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && f.Z.can(v.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = m.ZP.lastMessageId(e.id),
                         i = m.ZP.lastMessageId(t.id);
@@ -91,7 +91,7 @@ function Z(e) {
     return (0, i.jsxs)(s.Clickable, {
         className: b.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, v.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, x.on.POPOUT);
         },
         children: [
             null == n

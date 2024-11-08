@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(782690),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(43267),
     o = n(565138),
     c = n(905423),
@@ -24,15 +24,15 @@ function f() {
                 channelId: n
             };
         }, l.Z),
-        n = (0, r.e7)([u.Z], () => u.Z.getGuild(e)),
-        f = (0, r.e7)([d.Z], () => (null == n ? d.Z.getChannel(t) : null)),
-        g = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
+        n = (0, a.e7)([u.Z], () => u.Z.getGuild(e)),
+        f = (0, a.e7)([d.Z], () => (null == n ? d.Z.getChannel(t) : null)),
+        g = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         C = null != f ? (0, s.x)(f) : null,
         x = null != g ? g.getAvatarURL(e, 80) : p.pK['0'],
-        v = (0, i.jsx)(a.Avatar, {
+        v = (0, i.jsx)(r.Avatar, {
             src: x,
             'aria-hidden': !0,
-            size: a.AvatarSizes.SIZE_80,
+            size: r.AvatarSizes.SIZE_80,
             className: m.avatarSizeOverride
         }),
         _ = null;
@@ -41,10 +41,10 @@ function f() {
             null != n
                 ? (0, i.jsx)(o.Z, { guild: n })
                 : null != C
-                  ? (0, i.jsx)(a.Avatar, {
+                  ? (0, i.jsx)(r.Avatar, {
                         'aria-hidden': !0,
                         src: C,
-                        size: a.AvatarSizes.SIZE_80,
+                        size: r.AvatarSizes.SIZE_80,
                         className: m.avatarSizeOverride
                     })
                   : v),

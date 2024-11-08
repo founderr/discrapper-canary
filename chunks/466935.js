@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return v;
     }
 });
 var i = n(200651),
@@ -19,20 +19,20 @@ var i = n(200651),
     g = n(981631),
     C = n(176505),
     _ = n(388032);
-function x(e) {
+function v(e) {
     let { guild: t, selected: n } = e,
-        x = (0, r.e7)([p.Z], () => p.Z.can(g.Plq.KICK_MEMBERS, t)),
-        v = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        I = x && null != v ? v : 0;
+        v = (0, r.e7)([p.Z], () => p.Z.can(g.Plq.KICK_MEMBERS, t)),
+        x = (0, r.e7)([c.Z], () => c.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        I = v && null != x ? x : 0;
     return (
         l.useEffect(() => {
-            x &&
+            v &&
                 s.Z.fetchGuildJoinRequests({
                     guildId: t.id,
                     status: u.wB.SUBMITTED,
                     limit: d.p
                 });
-        }, [x, t.id]),
+        }, [v, t.id]),
         (0, i.jsx)(m.m, {
             id: 'application-review-'.concat(t.id),
             renderIcon: (e) =>

@@ -20,8 +20,8 @@ var i = n(200651),
     g = n(155409),
     C = n(699516),
     _ = n(944486),
-    x = n(594174),
-    v = n(431),
+    v = n(594174),
+    x = n(431),
     I = n(774343),
     b = n(417363),
     S = n(941128),
@@ -53,7 +53,7 @@ function O(e) {
     let { selected: t, user: n, badge: o, link: p, showProgressBadge: f } = e,
         m = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
         [C, _] = l.useState(!1),
-        [x, v] = l.useState(!1),
+        [v, x] = l.useState(!1),
         [I, b] = l.useState(null),
         [S, Z] = l.useState(0),
         E = (0, r.Ie)('home'),
@@ -62,7 +62,7 @@ function O(e) {
         };
     if (null == n) return null;
     let O = L.intl.string(L.t.YUU0RE);
-    x && (O = s.K.get(A.wli) ? L.intl.string(L.t.nkq1l5) : L.intl.string(L.t.Be8Q5O));
+    v && (O = s.K.get(A.wli) ? L.intl.string(L.t.nkq1l5) : L.intl.string(L.t.Be8Q5O));
     let k = null;
     !t &&
         f &&
@@ -86,9 +86,9 @@ function O(e) {
                         s.K.set(A.wli, e),
                             e && s.K.set(w.O5, !0),
                             e ? (0, N.GN)('discodo') : (0, N.GN)('user_leave'),
-                            v(!0),
+                            x(!0),
                             setTimeout(() => {
-                                v(!1);
+                                x(!1);
                             }, 1000);
                     }
                 },
@@ -143,14 +143,14 @@ function k() {
         }),
         n = (0, a.e7)([C.Z], () => C.Z.getPendingCount()),
         l = Object.keys(M.nG),
-        { unviewedTrialCount: r, unviewedDiscountCount: s } = (0, a.cj)([v.Z], () => ({
-            unviewedTrialCount: v.Z.getUnacknowledgedOffers(l).length,
-            unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
+        { unviewedTrialCount: r, unviewedDiscountCount: s } = (0, a.cj)([x.Z], () => ({
+            unviewedTrialCount: x.Z.getUnacknowledgedOffers(l).length,
+            unviewedDiscountCount: x.Z.getUnacknowledgedDiscountOffers().length
         })),
         c = (0, m.w)(M.jz),
         d = (0, p.wE)(o.z.TRIAL_FOR_ALL_MARKETING_PAGE_BADGE),
         h = r + s + (null == c || d ? 0 : 1),
-        g = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+        g = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
         N = (0, f.q)(),
         y = n + h + N,
         j = y === h && h > 0 && n + N === 0,

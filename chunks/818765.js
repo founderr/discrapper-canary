@@ -11,34 +11,34 @@ var i = n(570140),
     g = n(843693),
     m = n(981631);
 let f = (0, d.uk)('poggermode_applause', a.Z.getSoundpack()),
-    p = !1,
     _ = !1,
+    p = !1,
     h = [],
     E = null,
-    x = () => {
-        if (!p) f.loop(), (p = !0);
-    },
     b = () => {
-        f.stop(), (p = !1);
+        if (!_) f.loop(), (_ = !0);
+    },
+    x = () => {
+        f.stop(), (_ = !1);
     },
     C = () => {
         let e = u.Z.isEnabled(),
             t = u.Z.comboSoundsEnabled;
         return (!!e && !!t && null != o.Z.getChannelId()) || !1;
     },
-    v = () => {
-        if (0 === h.length || !C() || _) return;
-        _ = !0;
-        let [e, t] = h[h.length - 1];
-        (0, d.GN)(e, t), (E = setTimeout(T, 1000));
-    },
     T = () => {
-        h.pop(), (_ = !1), v();
+        if (0 === h.length || !C() || p) return;
+        p = !0;
+        let [e, t] = h[h.length - 1];
+        (0, d.GN)(e, t), (E = setTimeout(v, 1000));
+    },
+    v = () => {
+        h.pop(), (p = !1), T();
     },
     N = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = l.Z.isConnected();
-        h.push([e, t * (n ? 0.1 : 1)]), v();
+        h.push([e, t * (n ? 0.1 : 1)]), T();
     };
 class I extends r.Z {
     _initialize() {
@@ -53,10 +53,10 @@ class I extends r.Z {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        s.default.getId() === t && b();
+        s.default.getId() === t && x();
     }
     stopAudio() {
-        b();
+        x();
     }
     startAudio() {
         var e;
@@ -67,7 +67,7 @@ class I extends r.Z {
             i = c.Z.isTyping(t, n),
             r = g.ZP.getUserCombo(n, t),
             a = null !== (e = null == r ? void 0 : r.multiplier) && void 0 !== e ? e : 1;
-        i && a >= 7 ? x() : b();
+        i && a >= 7 ? b() : x();
     }
     playAchievementUnlockSound() {
         if (!!C()) N('poggermode_achievement_unlock');

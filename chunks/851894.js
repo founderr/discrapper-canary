@@ -25,8 +25,8 @@ var i = n(200651),
     f = n(778825),
     I = n(856607),
     N = n(594496),
-    b = n(856768),
-    A = n(981631),
+    A = n(856768),
+    b = n(981631),
     v = n(388032);
 function j(e) {
     (0, o.openModalLazy)(async () => {
@@ -35,7 +35,7 @@ function j(e) {
             (0, i.jsx)(t, {
                 source: {
                     ...e,
-                    page: A.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
+                    page: b.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
                 },
                 ...n
             });
@@ -57,9 +57,9 @@ function O(e) {
     return (s.useEffect(() => () => c.Z.wait(E.W3), []),
     s.useEffect(() => {
         null != P &&
-            m.ZP.trackWithMetadata(A.rMx.SETTINGS_PANE_VIEWED, {
+            m.ZP.trackWithMetadata(b.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: A.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: b.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: P
             });
     }, [P]),
@@ -71,12 +71,12 @@ function O(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: v.intl.format(v.t['/PTB2N'], { helpCenterLink: C.Z.getArticleURL(A.BhN.GUILD_PROFILES) })
+                        children: v.intl.format(v.t['/PTB2N'], { helpCenterLink: C.Z.getArticleURL(b.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(b.Z, {
+                                  (0, i.jsx)(A.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
                                           null != e && (0, E.HP)(e);

@@ -2,9 +2,9 @@ t(47120);
 var r,
     a,
     i,
-    s,
-    o = t(392711),
-    l = t.n(o),
+    o,
+    s = t(392711),
+    l = t.n(s),
     c = t(906280),
     d = t.n(c),
     u = t(442837),
@@ -36,7 +36,7 @@ let C = () => ({
     _ = !1,
     y = !1,
     T = {};
-class j extends (r = u.ZP.Store) {
+class I extends (r = u.ZP.Store) {
     getState() {
         return {
             initialSettings: b,
@@ -47,16 +47,16 @@ class j extends (r = u.ZP.Store) {
         };
     }
 }
-(s = 'ClanSettingsStore'),
-    (i = 'displayName') in (a = j)
+(o = 'ClanSettingsStore'),
+    (i = 'displayName') in (a = I)
         ? Object.defineProperty(a, i, {
-              value: s,
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (a[i] = s),
-    (n.Z = new j(m.Z, {
+        : (a[i] = o),
+    (n.Z = new I(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
             (y = !1), (b = C()), (v = d()(b)), (_ = !1), (T = {});
         },

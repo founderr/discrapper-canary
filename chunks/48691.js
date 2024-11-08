@@ -1,4 +1,4 @@
-n.d(t, {
+t.d(n, {
     b: function () {
         return f;
     },
@@ -6,25 +6,25 @@ n.d(t, {
         return d;
     }
 });
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(44315),
-    o = n(377171),
-    u = n(981631),
-    a = n(388032),
-    s = n(503880);
+var i = t(200651);
+t(192379);
+var r = t(481060),
+    l = t(44315),
+    o = t(377171),
+    u = t(981631),
+    a = t(388032),
+    s = t(503880);
 function c(e) {
-    let { label: t, backgroundColor: n = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = e;
+    let { label: n, backgroundColor: t = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = e;
     return (0, i.jsxs)('div', {
         className: s.badge,
-        style: { backgroundColor: n },
+        style: { backgroundColor: t },
         children: [
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
                 className: s.__invalid_badgeText,
-                children: t
+                children: n
             }),
             (0, i.jsx)(l, {
                 className: s.badgeIcon,

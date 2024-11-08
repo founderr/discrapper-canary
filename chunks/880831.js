@@ -9,8 +9,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(392711),
     o = n(100621),
     c = n(442837),
@@ -37,7 +37,7 @@ let A = 10 * N.Z.Millis.SECOND;
 function y(e) {
     var t;
     let { message: n } = e,
-        r = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
+        a = (0, c.e7)([E.Z], () => E.Z.isBlockedForMessage(n)),
         s = (0, C.Uj)(n),
         o = l.useContext(m.Z),
         [u, I] = l.useState(!1),
@@ -66,7 +66,7 @@ function y(e) {
             renderedContent: y,
             trailingIcon: P,
             leadingIcon: M
-        } = (0, x.f)(n, S, r, j.messageContent, {
+        } = (0, x.f)(n, S, a, j.messageContent, {
             trailingIconClass: j.messageContentTrailingIcon,
             leadingIconClass: j.messageContentLeadingIcon,
             iconSize: T.WW
@@ -98,7 +98,7 @@ function y(e) {
         onClick: Z,
         children: [
             (0, i.jsxs)('div', {
-                className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
+                className: r()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
                 children: [null != L ? null : M, null !== (t = null != y ? y : L) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != L ? null : P]
             }),
             (0, i.jsx)('img', {
@@ -118,10 +118,10 @@ function y(e) {
 }
 function P(e) {
     let { channelId: t, className: n } = e,
-        [r, h] = l.useState(!1),
+        [a, h] = l.useState(!1),
         { toastsHidden: p, toastMessages: m } = (function (e) {
             var t;
-            let { channelId: n, isFrozen: i, count: r, lingerMs: a } = e,
+            let { channelId: n, isFrozen: i, count: a, lingerMs: r } = e,
                 [s, o] = l.useState([]),
                 [d, h] = l.useState(!1),
                 p = l.useRef(null),
@@ -132,7 +132,7 @@ function P(e) {
             l.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== S.uaV.STAGE_START && i.type !== S.uaV.STAGE_END && i.type !== S.uaV.STAGE_TOPIC && i.type !== S.uaV.STAGE_SPEAKER && i.type !== S.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, a)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== S.uaV.STAGE_START && i.type !== S.uaV.STAGE_END && i.type !== S.uaV.STAGE_TOPIC && i.type !== S.uaV.STAGE_SPEAKER && i.type !== S.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(f, r)), o((e) => [...e, i.id]);
                 }
                 return (
                     u.Z.subscribe('MESSAGE_CREATE', e),
@@ -140,7 +140,7 @@ function P(e) {
                         u.Z.unsubscribe('MESSAGE_CREATE', e);
                     }
                 );
-            }, [n, f, r, a]),
+            }, [n, f, a, r]),
                 l.useEffect(
                     () => () => {
                         clearTimeout(m.current);
@@ -162,7 +162,7 @@ function P(e) {
             };
         })({
             channelId: t,
-            isFrozen: r,
+            isFrozen: a,
             count: 3,
             lingerMs: A
         }),
@@ -213,7 +213,7 @@ function P(e) {
         theme: S.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: a()(n, e),
+                className: r()(n, e),
                 onMouseEnter: () => {
                     h(!0);
                 },

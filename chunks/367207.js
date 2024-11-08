@@ -16,8 +16,8 @@ var l = n(392711),
     g = n(430824),
     C = n(594174),
     _ = n(431),
-    x = n(626135),
-    v = n(74538),
+    v = n(626135),
+    x = n(74538),
     I = n(557457),
     b = n(970645),
     S = n(30684),
@@ -77,7 +77,7 @@ class Y extends c.Z {
     }
     _getReferralIncentiveEligibility() {
         let e = C.default.getCurrentUser();
-        if (A.Z.getIsFetchingReferralIncentiveEligibility() || !(0, v.I5)(e)) return;
+        if (A.Z.getIsFetchingReferralIncentiveEligibility() || !(0, x.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
         if (!!U.g.getCurrentConfig(t, n).enabled && !O.eP.getCurrentConfig(t, n).enabled) k.$.getCurrentConfig(t, n).enabled && (0, P.bq)();
@@ -133,14 +133,14 @@ class Y extends c.Z {
             z(this, '_maybeFetchPremiumOffer', async () => {
                 let e = C.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = !(0, v.I5)(e) && _.Z.shouldFetchOffer();
+                    let t = !(0, x.I5)(e) && _.Z.shouldFetchOffer();
                     await (0, w.T)('PremiumManager', t);
                 }
                 o.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = C.default.getCurrentUser();
-                null != e && e.verified && !(0, v.I5)(e) && S.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
+                null != e && e.verified && !(0, x.I5)(e) && S.Z.shouldFetchCheckoutRecovery() && (await (0, b.o)());
             }),
             z(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = D.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
@@ -189,7 +189,7 @@ class Y extends c.Z {
                         fps: (0, I.bp)(r.maxFrameRate)
                     });
                     s.Z.sendNitroSystemMessage(e, u),
-                        x.default.track(V.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                        v.default.track(V.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: B.cd.HD_STREAMING_VIEWER_UPSELL,
                             location_section: null != t ? V.jXE.TEXT_IN_VOICE : V.jXE.CHANNEL_TEXT_AREA,
                             location_object: V.qAy.MESSAGE,

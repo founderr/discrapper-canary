@@ -27,8 +27,8 @@ n(63063);
 var f = n(13140),
     I = n(981631),
     N = n(388032),
-    b = n(366698);
-let A = v(null);
+    A = n(366698);
+let b = v(null);
 function v(e) {
     var t;
     let n = _.Z.getNotificationPositionMode(),
@@ -50,7 +50,7 @@ function j(e) {
     let { children: t, title: n } = e;
     return (0, i.jsx)(c.FormItem, {
         title: n,
-        className: b.userSettingsOverlayField,
+        className: A.userSettingsOverlayField,
         children: t
     });
 }
@@ -95,8 +95,8 @@ function O(e) {
     }
     return (
         !(function () {
-            let e = v(A);
-            !a().isEqual(e, A) && (E.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (A = e));
+            let e = v(b);
+            !a().isEqual(e, b) && (E.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, e), (b = e));
         })(),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -107,22 +107,22 @@ function O(e) {
                     children: [
                         !1,
                         (0, i.jsxs)('div', {
-                            className: b.enableOverlaySection,
+                            className: A.enableOverlaySection,
                             children: [
                                 (0, g.H)()
                                     ? (0, i.jsxs)(c.FormItem, {
                                           title: N.intl.string(N.t.XkaTrq),
-                                          className: b.enableOverlayItem,
+                                          className: A.enableOverlayItem,
                                           children: [
                                               (0, i.jsx)(c.FormSwitch, {
-                                                  className: b.enableSwitch,
+                                                  className: A.enableSwitch,
                                                   value: s,
                                                   hideBorder: !0,
                                                   onChange: M,
                                                   children: N.intl.string(N.t.vSP6c3)
                                               }),
                                               (0, i.jsx)(c.FormSwitch, {
-                                                  className: b.enableSwitch,
+                                                  className: A.enableSwitch,
                                                   value: l,
                                                   disabled: Z || !s,
                                                   note: Z ? N.intl.string(N.t.Eb0lnJ) : null,
@@ -134,9 +134,9 @@ function O(e) {
                                       })
                                     : (0, i.jsx)(c.FormItem, {
                                           title: N.intl.string(N.t.XkaTrq),
-                                          className: b.enableOverlayItem,
+                                          className: A.enableOverlayItem,
                                           children: (0, i.jsx)(c.FormSwitch, {
-                                              className: b.enableSwitch,
+                                              className: A.enableSwitch,
                                               value: s,
                                               disabled: Z,
                                               note: Z ? N.intl.string(N.t.Eb0lnJ) : null,
@@ -147,7 +147,7 @@ function O(e) {
                                       }),
                                 (0, i.jsx)(c.FormItem, {
                                     title: N.intl.string(N.t.VsAZcH),
-                                    className: b.enableOverlayItem,
+                                    className: A.enableOverlayItem,
                                     children: (0, i.jsx)(m.Z, {
                                         disabled: !s,
                                         defaultValue: null != B ? B.shortcut : [],
@@ -240,14 +240,14 @@ function O(e) {
                 (0, i.jsxs)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
                     title: N.intl.string(N.t['3GMnLi']),
-                    className: b.notificationSection,
+                    className: A.notificationSection,
                     children: [
                         F
                             ? null
                             : (0, i.jsx)(j, {
                                   title: N.intl.string(N.t.IQv8Eh),
                                   children: (0, i.jsx)('div', {
-                                      className: b.notificationSettings,
+                                      className: A.notificationSettings,
                                       children: (0, i.jsx)(p.Z, {
                                           position: P,
                                           onChange: (e, t) => u.Z.setNotificationPositionMode(t)

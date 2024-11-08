@@ -7,8 +7,8 @@ t.d(n, {
 var r = t(200651),
     a = t(192379),
     i = t(120356),
-    s = t.n(i),
-    o = t(442837),
+    o = t.n(i),
+    s = t(442837),
     l = t(481060),
     c = t(11265),
     d = t(863249),
@@ -21,7 +21,7 @@ var r = t(200651),
     g = t(901797),
     C = t(4581);
 function b(e) {
-    let { guild: n, isExpanded: i, emptyFormFields: s, hasTermsField: o } = e,
+    let { guild: n, isExpanded: i, emptyFormFields: o, hasTermsField: s } = e,
         c = n.hasVerificationGate(),
         [u, m] = a.useState(c),
         f = (e) => {
@@ -35,7 +35,7 @@ function b(e) {
             }
         },
         b = (e) => {
-            e && s
+            e && o
                 ? (0, l.openModalLazy)(async () => {
                       let { ConfirmModal: n } = await Promise.resolve().then(t.bind(t, 481060));
                       return (t) =>
@@ -75,7 +75,7 @@ function b(e) {
                         color: 'header-primary',
                         children: p.intl.string(p.t.NEXim5)
                     }),
-                    (i || (s && !u)) &&
+                    (i || (o && !u)) &&
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
@@ -85,7 +85,7 @@ function b(e) {
                         (0, r.jsx)('div', {
                             className: C.pillRow,
                             children:
-                                o &&
+                                s &&
                                 (0, r.jsxs)(l.Text, {
                                     color: 'interactive-normal',
                                     variant: 'text-xs/medium',
@@ -106,7 +106,7 @@ function b(e) {
             (0, r.jsx)('div', {
                 className: C.previewAndEnable,
                 children:
-                    i || u || !s
+                    i || u || !o
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(l.Clickable, {
@@ -150,13 +150,13 @@ async function _(e, n) {
 function y(e) {
     var n, t, i;
     let { guild: l, isClanContext: x = !1, onFieldsSave: p, onDescriptionSave: y, verificationForm: T } = e,
-        [j, I] = a.useState(x),
+        [I, j] = a.useState(x),
         N = a.useRef(!1),
         S = a.useCallback(() => {
             N.current = !0;
         }, []),
         E = null !== (n = (0, f.A)({ guildId: l.id })) && void 0 !== n ? n : 0,
-        k = (0, o.e7)([u.Z], () => (null != T ? T : u.Z.get(l.id))),
+        k = (0, s.e7)([u.Z], () => (null != T ? T : u.Z.get(l.id))),
         A = null !== (t = null == k ? void 0 : k.formFields) && void 0 !== t ? t : [];
     a.useEffect(() => {
         d.ZP.fetchVerificationForm(l.id);
@@ -167,17 +167,17 @@ function y(e) {
         renderHeader: M
             ? (0, r.jsx)(b, {
                   guild: l,
-                  isExpanded: j,
+                  isExpanded: I,
                   emptyFormFields: (null == A ? void 0 : A.length) == null || (null == A ? void 0 : A.length) === 0,
                   hasTermsField: null == A ? void 0 : A.some((e) => e.field_type === m.QJ.TERMS)
               })
             : null,
-        isExpanded: j,
-        onExpand: () => I(!j),
+        isExpanded: I,
+        onExpand: () => j(!I),
         disableAnimation: x,
         disableBackground: !M,
         children: (0, r.jsx)('div', {
-            className: s()(g.itemBodyContainer, {
+            className: o()(g.itemBodyContainer, {
                 [g.noPadding]: !M,
                 [C.rulesScreeningItemsNoBorder]: !M
             }),

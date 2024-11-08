@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(831209),
-    a = n(442837),
+    a = n(831209),
+    r = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(538239),
@@ -31,17 +31,17 @@ var i = n(200651),
     S = n(489887),
     T = n(388032),
     j = n(948840);
-function A(e, t, l, r) {
+function A(e, t, l, a) {
     (0, o.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.resolve().then(n.bind(n, 538239));
+            let { default: r } = await Promise.resolve().then(n.bind(n, 538239));
             return (n) =>
-                (0, i.jsx)(a, {
+                (0, i.jsx)(r, {
                     ...n,
                     activity: e,
                     channel: t,
                     activityActionType: l,
-                    analyticsLocations: r
+                    analyticsLocations: a
                 });
         },
         { modalKey: c.activityInviteKey }
@@ -49,7 +49,7 @@ function A(e, t, l, r) {
 }
 let y = /(.*)```(\w+)\n(.*)```(.*)/s;
 function P() {
-    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, m.cv)(t);
@@ -67,7 +67,7 @@ function P() {
                 return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(o.TextBadge, {
                           text: T.intl.string(T.t.y2b7CA),
-                          color: r.Z.BUTTON_DANGER_BACKGROUND
+                          color: a.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
             }
@@ -75,7 +75,7 @@ function P() {
     );
 }
 function M(e) {
-    let { channel: t, options: a, onFileUpload: c, onClose: m, onSelect: f, draftType: C, editorTextContent: M, setValue: R, openClips: L } = e,
+    let { channel: t, options: r, onFileUpload: c, onClose: m, onSelect: f, draftType: C, editorTextContent: M, setValue: R, openClips: L } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
         x.default.track(N.rMx.OPEN_POPOUT, {
@@ -141,7 +141,7 @@ function M(e) {
         onClose: m,
         'aria-label': T.intl.string(T.t.Xm41aW),
         className: j.menu,
-        children: a.map(function (e) {
+        children: r.map(function (e) {
             var n;
             let l = (0, i.jsxs)('div', {
                 className: j.optionLabel,
@@ -158,7 +158,7 @@ function M(e) {
                         e.badgeVal > 0 &&
                         (0, i.jsx)(o.NumberBadge, {
                             className: j.badge,
-                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : r.Z.STATUS_DANGER,
+                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
                             count: e.badgeVal
                         })
                 ]

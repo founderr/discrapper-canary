@@ -360,24 +360,24 @@ function M(e) {
                     fractionalState: g.a$.FP_SUB,
                     canApplyBoosts: !1
                 },
-                () => E.t['4RgA6O']
+                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: h.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
             )
             .with(
                 {
                     isPausedOrPausePending: void 0,
                     fractionalState: g.a$.FP_ONLY
                 },
-                () => E.t['4RgA6O']
+                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: h.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
             )
             .with(
                 {
                     isPausedOrPausePending: !0,
                     fractionalState: g.a$.NONE
                 },
-                () => E.t.mOWsFx
+                () => E.intl.string(E.t.mOWsFx)
             )
             .otherwise(() => null);
-    if (null != s) return E.intl.string(s);
+    if (null != s) return s;
     let { numAvailableGuildBoostSlots: l, numCanceledGuildBoostSlots: f } = Object.values(c.Z.boostSlots).reduce((e, t) => (j(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
         numAvailableGuildBoostSlots: 0,
         numCanceledGuildBoostSlots: 0

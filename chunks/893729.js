@@ -1,28 +1,28 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
         return h;
     }
 });
-var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    u = n(442837),
-    a = n(481060),
-    s = n(518738),
-    c = n(786761),
-    d = n(3148),
-    f = n(753206),
-    p = n(594174),
-    _ = n(5192),
-    E = n(981631),
-    g = n(388032),
-    m = n(25674);
+var i = t(200651),
+    r = t(192379),
+    l = t(120356),
+    o = t.n(l),
+    u = t(442837),
+    a = t(481060),
+    s = t(518738),
+    c = t(786761),
+    d = t(3148),
+    f = t(753206),
+    p = t(594174),
+    _ = t(5192),
+    m = t(981631),
+    g = t(388032),
+    E = t(25674);
 function h(e) {
-    var t;
-    let { guildId: n, role: l, theme: h, content: I = g.intl.string(g.t['6OSasb']), className: S } = e,
+    var n;
+    let { guildId: t, role: l, theme: h, content: I = g.intl.string(g.t['6OSasb']), className: S } = e,
         v = (0, u.e7)([p.default], () => p.default.getCurrentUser()),
-        C = _.ZP.useName(n, null, v),
+        C = _.ZP.useName(t, null, v),
         T = (0, s.Kz)(l),
         N = r.useMemo(
             () =>
@@ -36,20 +36,20 @@ function h(e) {
                         allowedMentions: void 0,
                         author: v
                     }),
-                    state: E.yb.SENT,
+                    state: m.yb.SENT,
                     id: '0'
                 }),
             [v, I]
         ),
         b = {
             nick: C,
-            colorString: null !== (t = l.colorString) && void 0 !== t ? t : void 0
+            colorString: null !== (n = l.colorString) && void 0 !== n ? n : void 0
         };
     return (0, i.jsx)(a.ThemeProvider, {
         theme: h,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, m.container, S),
+                className: o()(e, E.container, S),
                 children: (0, i.jsx)(f.Z, {
                     hideTimestamp: !0,
                     author: b,

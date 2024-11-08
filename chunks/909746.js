@@ -75,7 +75,7 @@ n.d(t, {
         return ee;
     },
     pY: function () {
-        return y;
+        return j;
     },
     pi: function () {
         return $;
@@ -129,9 +129,9 @@ var r = n(654861),
     x = n(765305),
     G = n(388032);
 let F = new A.Z('AuditLogUtils'),
-    j = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
+    y = [c.J6.DAYS, c.J6.HOURS, c.J6.MINUTES, c.J6.SECONDS],
     B = () => ({ [v.zUn.REASON]: () => G.t['2IW3Cw'] }),
-    y = () => ({
+    j = () => ({
         [v.zUn.NAME]: () => G.t.CkDiND,
         [v.zUn.DESCRIPTION]: eD(G.t.RP3Ey8, G.t.QAVj1d),
         [v.zUn.ICON_HASH]: () => G.t.iLZ8Q0,
@@ -707,7 +707,7 @@ function ec(e) {
             let n = new Date(null == t ? void 0 : t.newValue).getTime(),
                 r = n - M.default.extractTimestamp(e.id),
                 l = Math.round(r / 1000 / 60),
-                i = (0, c.CI)(l, j);
+                i = (0, c.CI)(l, y);
             if (null == i.unit || null == i.time) return null;
             if (i.unit in eu) {
                 let e = i.unit,

@@ -27,8 +27,8 @@ var i = n(200651),
     Z = n(706454),
     y = n(210887),
     L = n(430824),
-    j = n(496675),
-    R = n(525395),
+    R = n(496675),
+    j = n(525395),
     O = n(558314),
     P = n(580130),
     D = n(55563),
@@ -428,7 +428,7 @@ class ec extends r.PureComponent {
             }),
             eo(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (j.Z.can(er.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (R.Z.can(er.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, i.jsx)(d.Button, {
                           'aria-label': ea.intl.string(ea.t.zJrgTE),
                           look: d.Button.Looks.BLANK,
@@ -556,7 +556,7 @@ class ec extends r.PureComponent {
 }
 t.Z = (0, _.Z)(
     (0, E.Z)(
-        s.ZP.connectStores([O.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, R.Z, L.Z, P.Z], (e) => {
+        s.ZP.connectStores([O.Z, y.Z, Z.default, k.Z, M.Z, D.Z, w.Z, I.Z, C.Z, j.Z, L.Z, P.Z], (e) => {
             let t,
                 n,
                 i,
@@ -575,7 +575,7 @@ t.Z = (0, _.Z)(
                 application: null != l ? C.Z.getApplication(l) : null,
                 isFetchingEntitlements: null != l && P.Z.applicationIdsFetching.has(l),
                 didFetchEntitlements: null != l && P.Z.applicationIdsFetched.has(l),
-                shouldFetchStatistics: s && null != l && R.Z.shouldFetchStatisticsForApplication(l),
+                shouldFetchStatistics: s && null != l && j.Z.shouldFetchStatisticsForApplication(l),
                 sku: n,
                 isFocused: k.Z.isFocused(),
                 storeListing: M.Z.getStoreListing({

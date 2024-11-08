@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return A;
     }
 });
 var i = n(200651);
@@ -52,7 +52,7 @@ let f = () =>
             webSetting: _.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
             children: (0, i.jsx)(d.Z, {})
         });
-function b() {
+function A() {
     return (0, i.jsxs)(r.N, {
         header: E.intl.string(E.t['+o1pDQ']),
         children: [(0, i.jsx)(I, {}), (0, i.jsx)(f, {}), (0, i.jsx)(N, {})]

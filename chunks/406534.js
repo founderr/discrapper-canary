@@ -8,8 +8,8 @@ n.d(t, {
     n(733860);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(904245),
+    a = n(442837),
+    r = n(904245),
     s = n(966390),
     o = n(902840),
     c = n(607070),
@@ -60,9 +60,9 @@ function $(e) {
     return null != e && e.type === X.ys_.MESSAGE && e.content.id === e.groupId;
 }
 let ee = l.memo(function (e) {
-    let { file: t, channel: n, user: l, isGroupStart: r } = e;
+    let { file: t, channel: n, user: l, isGroupStart: a } = e;
     return (0, i.jsx)(U.Z, {
-        isGroupStart: r,
+        isGroupStart: a,
         channel: n,
         message: new T.ZP({
             id: t.id,
@@ -88,13 +88,13 @@ function et(e) {
     var t;
     let n,
         l,
-        { channel: s, messages: u, unreadCount: U, showNewMessagesBar: et, messageDisplayCompact: en, channelStream: ei, uploads: el, scrollManager: er, specs: ea, filterAfterTimestamp: es, showingQuarantineBanner: eo, hideSummaries: ec } = e,
+        { channel: s, messages: u, unreadCount: U, showNewMessagesBar: et, messageDisplayCompact: en, channelStream: ei, uploads: el, scrollManager: ea, specs: er, filterAfterTimestamp: es, showingQuarantineBanner: eo, hideSummaries: ec } = e,
         ed = P.default.getCurrentUser(),
-        eu = () => er.isInitialized() || u.ready,
+        eu = () => ea.isInitialized() || u.ready,
         eh = (0, B.$)(s),
         ep = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(s)),
         em = (0, o.ts)(s),
-        ef = (0, r.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ec),
+        ef = (0, a.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ec),
         eg = (0, _.P)(s.id),
         eC = (0, x.z)(s.id, J.zr),
         ex = (0, w.Z)(),
@@ -123,7 +123,7 @@ function et(e) {
         eN = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, l;
-                let r = null != e.unreadId;
+                let a = null != e.unreadId;
                 return null != es
                     ? null
                     : e.isSummaryDivider
@@ -136,9 +136,9 @@ function et(e) {
                       : (0, i.jsx)(
                             F.Z,
                             {
-                                isUnread: r,
+                                isUnread: a,
                                 isBeforeGroup: null == e.content && $(ei[t + 1]),
-                                id: r ? q.j1 : void 0,
+                                id: a ? q.j1 : void 0,
                                 children: e.content
                             },
                             'divider-'.concat(null !== (l = null !== (n = e.contentKey) && void 0 !== n ? n : e.unreadId) && void 0 !== l ? l : t)
@@ -173,10 +173,10 @@ function et(e) {
                 );
             }
             if (null != es && es > e.content.timestamp.getTime() * R.Z.Millis.SECOND) return;
-            let r = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, s);
-            if ((0, O.Z)(e.content, r)) return;
+            let a = j.Z.can(X.Plq.CREATE_INSTANT_INVITE, s);
+            if ((0, O.Z)(e.content, a)) return;
             e.type === X.ys_.MESSAGE && null == eE && (eE = e);
-            let a = e.groupId === (null == eE ? void 0 : eE.groupId) ? eE.content.id : e.groupId,
+            let r = e.groupId === (null == eE ? void 0 : eE.groupId) ? eE.content.id : e.groupId,
                 o = e.type === X.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, i.jsx)(
                 o,
@@ -184,7 +184,7 @@ function et(e) {
                     compact: en,
                     channel: s,
                     message: e.content,
-                    groupId: a,
+                    groupId: r,
                     flashKey: e.flashKey,
                     id: (0, k.p)(s.id, e.content.id),
                     isLastItem: t >= ei.length - 1,
@@ -243,7 +243,7 @@ function et(e) {
                     z.ZP,
                     {
                         compact: en,
-                        ...ea
+                        ...er
                     },
                     'has-more'
                 )
@@ -267,7 +267,7 @@ function et(e) {
                     z.ZP,
                     {
                         compact: en,
-                        ...ea
+                        ...er
                     },
                     'has-more-after'
                 )
@@ -277,14 +277,14 @@ function et(e) {
     ) {
         let e, t;
         let l = A.ZP.getOldestUnreadTimestamp(s.id),
-            r = 0 !== l ? l : L.default.extractTimestamp(s.id),
-            a = (0, M.KC)(new Date(), new Date(r));
-        if ((A.ZP.isEstimated(s.id) ? ((e = a ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = a ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), em && (0, o.tW)(s) && ex.includes(Y.E.SUMMARIES))) {
+            a = 0 !== l ? l : L.default.extractTimestamp(s.id),
+            r = (0, M.KC)(new Date(), new Date(a));
+        if ((A.ZP.isEstimated(s.id) ? ((e = r ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = r ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), em && (0, o.tW)(s) && ex.includes(Y.E.SUMMARIES))) {
             let l = A.ZP.ackMessageId(s.id),
-                a = (0, Z.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
+                r = (0, Z.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
             if (
                 ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
-                    num_unread_summaries: a,
+                    num_unread_summaries: r,
                     num_unread_messages: U,
                     last_ack_message_id: l,
                     summaries_enabled_by_user: ef,
@@ -296,11 +296,11 @@ function et(e) {
                     ? Q.intl.format(t, { count: U })
                     : Q.intl.format(e, {
                           count: U,
-                          timestamp: r
+                          timestamp: a
                       });
                 if (ef) {
                     let e =
-                        a > 0
+                        r > 0
                             ? (0, i.jsxs)('div', {
                                   style: {
                                       display: 'flex',
@@ -319,7 +319,7 @@ function et(e) {
                                           height: 4,
                                           width: 4
                                       }),
-                                      Q.intl.format(Q.t.CBftDQ, { count: a })
+                                      Q.intl.format(Q.t.CBftDQ, { count: r })
                                   ]
                               })
                             : (0, i.jsx)('div', {
@@ -333,7 +333,7 @@ function et(e) {
                                   children: l
                               });
                     n = (0, i.jsx)(V.G5, {
-                        scrollManager: er,
+                        scrollManager: ea,
                         content: e,
                         channel: s
                     });
@@ -345,7 +345,7 @@ function et(e) {
                             alignItems: 'center'
                         },
                         children:
-                            a > 0
+                            r > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           Q.intl.format(t, { count: U }),
@@ -357,7 +357,7 @@ function et(e) {
                                               height: 4,
                                               width: 4
                                           }),
-                                          Q.intl.format(Q.t.CBftDQ, { count: a })
+                                          Q.intl.format(Q.t.CBftDQ, { count: r })
                                       ]
                                   })
                                 : (0, i.jsx)(i.Fragment, { children: l })
@@ -373,7 +373,7 @@ function et(e) {
                 (n = (0, i.jsx)(V.LE, {
                     content: Q.intl.format(e, {
                         count: U,
-                        timestamp: r
+                        timestamp: a
                     }),
                     channelId: s.id
                 }));
@@ -385,7 +385,7 @@ function et(e) {
             ex.includes(Y.E.SUMMARIES) &&
             (n = (0, i.jsx)(V.BO, {
                 channel: s,
-                scrollManager: er
+                scrollManager: ea
             })),
         u.error)
     )
@@ -395,7 +395,7 @@ function et(e) {
                 var e;
                 return (
                     (e = s.id),
-                    void a.Z.fetchMessages({
+                    void r.Z.fetchMessages({
                         channelId: e,
                         limit: X.AQB,
                         truncate: !0
@@ -416,7 +416,7 @@ function et(e) {
                             return (
                                 (t = s),
                                 (n = e),
-                                void a.Z.jumpToMessage({
+                                void r.Z.jumpToMessage({
                                     channelId: t.id,
                                     messageId: n,
                                     flash: !0
@@ -427,7 +427,7 @@ function et(e) {
                   : (0, i.jsx)(V.DR, {
                         onClick: () =>
                             (function (e) {
-                                a.Z.jumpToPresent(e.id, X.AQB);
+                                r.Z.jumpToPresent(e.id, X.AQB);
                                 let t = y.Z.getChannelId();
                                 e.id === t && (0, g.Kh)(e.id);
                             })(s)

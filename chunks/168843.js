@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(816782),
+    a = n(481060),
+    r = n(816782),
     s = n(367907),
     o = n(433355),
     c = n(914010),
@@ -21,14 +21,14 @@ function p(e) {
         m = n === u.ULH.MEMBERS;
     return (0, i.jsx)(d.JO, {
         tooltip: m ? h.intl.string(h.t.Axvx8f) : h.intl.string(h.t.gxChDw),
-        icon: r.GroupIcon,
+        icon: a.GroupIcon,
         onClick: () => {
             s.ZP.trackWithMetadata(u.rMx.MEMBER_LIST_TOGGLED, {
                 channel_id: t,
                 guild_id: p,
                 member_list_open: !m
             }),
-                a.Z.toggleMembersSection();
+                r.Z.toggleMembersSection();
         },
         selected: m
     });

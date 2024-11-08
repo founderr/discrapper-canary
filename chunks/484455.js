@@ -7,16 +7,16 @@ var r = t(200651);
 t(192379);
 var a = t(120356),
     i = t.n(a),
-    s = t(481060),
-    o = t(55529);
+    o = t(481060),
+    s = t(55529);
 function l(e) {
     let { title: n, children: t } = e;
-    return (0, r.jsxs)(s.FormSection, {
-        className: i()(o.backgroundContainer, o.spacingContainer, o.containerPadding),
+    return (0, r.jsxs)(o.FormSection, {
+        className: i()(s.backgroundContainer, s.spacingContainer, s.containerPadding),
         children: [
-            (0, r.jsx)(s.FormTitle, {
+            (0, r.jsx)(o.FormTitle, {
                 tag: 'h3',
-                className: o.containerTitle,
+                className: s.containerTitle,
                 children: n
             }),
             t

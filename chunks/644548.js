@@ -5,8 +5,8 @@ var l = n(200651),
     r = n(70956),
     o = n(5192),
     s = n(379357),
-    c = n(561308),
-    u = n(919394),
+    u = n(561308),
+    c = n(919394),
     d = n(206295),
     m = n(227172),
     x = n(555672),
@@ -35,27 +35,27 @@ let f = (e, t, n, l) => {
         });
 t.Z = (e) => {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: o, onVoiceChannelPreview: j } = e,
-        { largeImage: Z } = (0, s.rv)({ entry: n }),
-        { user: P, details: L, appName: T } = (0, v.n)(n),
-        { primaryColor: y, secondaryColor: N } = (0, d.Z)(null == Z ? void 0 : Z.src),
-        _ = (0, c.yA)(n),
-        E = (0, c.Nq)(n),
+        { largeImage: P } = (0, s.rv)({ entry: n }),
+        { user: Z, details: L, appName: y } = (0, v.n)(n),
+        { primaryColor: T, secondaryColor: N } = (0, d.Z)(null == P ? void 0 : P.src),
+        _ = (0, u.yA)(n),
+        E = (0, u.Nq)(n),
         S = a.useCallback(
             (e) => {
-                if (null != t && null != P && null != _ && null != E && !!(0, x.qy)(E))
-                    return (0, u.SO)({
+                if (null != t && null != Z && null != _ && null != E && !!(0, x.qy)(E))
+                    return (0, c.SO)({
                         entry: n,
-                        applicationImageSrc: null == Z ? void 0 : Z.src,
-                        avatarSrcs: [P.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                        description: f(n, t, P, E),
+                        applicationImageSrc: null == P ? void 0 : P.src,
+                        avatarSrcs: [Z.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
+                        description: f(n, t, Z, E),
                         timestamp: g.intl.formatToPlainString(g.t.YL7UEx, { hours: Math.round(_ / r.Z.Seconds.HOUR) }),
-                        colors: [y, N],
+                        colors: [T, N],
                         channelId: e
                     });
             },
-            [null == Z ? void 0 : Z.src, t, _, n, y, E, N, P]
+            [null == P ? void 0 : P.src, t, _, n, T, E, N, Z]
         );
-    if (null == P || null == _ || null == E || !(0, x.qy)(E)) return null;
+    if (null == Z || null == _ || null == E || !(0, x.qy)(E)) return null;
     let A = null != n.extra.platform ? m.v[n.extra.platform] : null;
     return (0, l.jsxs)(p.yR, {
         children: [
@@ -70,7 +70,7 @@ t.Z = (e) => {
                           }),
                 entry: n,
                 userDescription: g.t.rPqqtr,
-                title: T,
+                title: y,
                 subtitle: L,
                 badges: (0, l.jsx)(h.Gk, {
                     location: h.Gt.POPOUT,
@@ -82,10 +82,10 @@ t.Z = (e) => {
                 children: (0, l.jsx)(p.WT, {
                     onReaction: o,
                     onVoiceChannelPreview: j,
-                    user: P,
+                    user: Z,
                     channel: t,
                     generateReactionImage: S,
-                    reactionImageAltText: I(n, P),
+                    reactionImageAltText: I(n, Z),
                     entry: n
                 })
             })

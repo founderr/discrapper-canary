@@ -8,13 +8,13 @@ t.d(n, {
 var r = t(200651),
     a = t(192379),
     i = t(481060),
-    s = t(214715),
-    o = t(18100),
+    o = t(214715),
+    s = t(18100),
     l = t(308083),
     c = t(388032),
     d = t(306882);
 let u = (e) => {
-    let { title: n, icon: t, availableTraits: o, selectedTraits: c, onUpdateTraits: u } = e,
+    let { title: n, icon: t, availableTraits: s, selectedTraits: c, onUpdateTraits: u } = e,
         m = a.useCallback(
             (e) => {
                 let n = new Set(c);
@@ -40,10 +40,10 @@ let u = (e) => {
             }),
             (0, r.jsx)('div', {
                 className: d.utilityTraits,
-                children: o.map((e) => {
+                children: s.map((e) => {
                     let n = c.has(e);
                     return (0, r.jsx)(
-                        s.Z,
+                        o.Z,
                         {
                             variant: 'text-xs/semibold',
                             color: 'interactive-normal',
@@ -60,7 +60,7 @@ let u = (e) => {
     });
 };
 function m(e) {
-    let { guildId: n, onUpdateTraits: t, progress: s, availableTraits: m, hidePreview: f = !1 } = e,
+    let { guildId: n, onUpdateTraits: t, progress: o, availableTraits: m, hidePreview: f = !1 } = e,
         h = a.useMemo(() => {
             let e = [];
             return (
@@ -75,8 +75,8 @@ function m(e) {
         }, []),
         x = a.useMemo(() => {
             var e;
-            return null !== (e = null != m ? m : null == s ? void 0 : s.interests) && void 0 !== e ? e : new Set();
-        }, [m, null == s ? void 0 : s.interests]),
+            return null !== (e = null != m ? m : null == o ? void 0 : o.interests) && void 0 !== e ? e : new Set();
+        }, [m, null == o ? void 0 : o.interests]),
         p = a.useMemo(() => Array.from(x), [x]),
         g = a.useMemo(() => p.filter((e) => l.gh.has(e)), [p]),
         C = a.useCallback(
@@ -135,12 +135,12 @@ function m(e) {
             (0, r.jsx)('div', {
                 className: d.fixedWidthSidebar,
                 children:
-                    null != s &&
+                    null != o &&
                     p.length > 0 &&
                     !f &&
-                    (0, r.jsx)(o.Z, {
+                    (0, r.jsx)(s.Z, {
                         guildId: n,
-                        progress: s,
+                        progress: o,
                         traitsToHighlight: b,
                         maskDescription: !0,
                         onTraitClick: v
@@ -150,7 +150,7 @@ function m(e) {
     });
 }
 n.Z = (e) => {
-    let { guildId: n, title: t, description: a, onUpdateTraits: s, progress: o, traits: l, optional: u = !1, hidePreview: f = !1 } = e;
+    let { guildId: n, title: t, description: a, onUpdateTraits: o, progress: s, traits: l, optional: u = !1, hidePreview: f = !1 } = e;
     return (0, r.jsxs)('div', {
         className: d.slideContent,
         children: [
@@ -174,8 +174,8 @@ n.Z = (e) => {
             }),
             (0, r.jsx)(m, {
                 guildId: n,
-                onUpdateTraits: s,
-                progress: o,
+                onUpdateTraits: o,
+                progress: s,
                 availableTraits: l,
                 hidePreview: f
             })

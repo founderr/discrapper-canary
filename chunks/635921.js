@@ -11,15 +11,15 @@ var r = n(120356),
     g = n(140465),
     m = n(775412),
     f = n(650032),
-    p = n(105759),
-    _ = n(346497),
+    _ = n(105759),
+    p = n(346497),
     h = n(422034),
     E = n(206127),
-    x = n(710220),
-    b = n(318747),
+    b = n(710220),
+    x = n(318747),
     C = n(409100),
-    v = n(474936),
-    T = n(388032),
+    T = n(474936),
+    v = n(388032),
     N = n(139874);
 let I = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: r, buttonClassName: s } = e,
@@ -33,7 +33,7 @@ let I = (e) => {
                         className: a()(N.button, s),
                         subscriptionTier: r
                     }),
-                    (0, i.jsx)(b.Z, {
+                    (0, i.jsx)(x.Z, {
                         className: a()(N.button, s),
                         forceWhite: !0
                     })
@@ -44,7 +44,7 @@ let I = (e) => {
             n &&
                 (o = (0, i.jsx)('div', {
                     className: N.buttonContainer,
-                    children: (0, i.jsx)(b.Z, {
+                    children: (0, i.jsx)(x.Z, {
                         className: a()(N.button, s),
                         forceWhite: !0
                     })
@@ -67,26 +67,26 @@ function R(e) {
         variant: t,
         color: 'always-white',
         className: a()(N.description, { [N.descriptionBottomMargin]: n }),
-        children: T.intl.format(T.t.kt9wxs, { cheapestMonthlyPrice: r })
+        children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: r })
     });
 }
 t.Z = (e) => {
     let { isFullscreen: t, className: n, buttonClassName: r, subscriptionTier: d, hideSparkles: E, hideSubscribeAndGiftButton: C, entrypoint: A } = e,
         { analyticsLocations: j } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, m._O)(),
-        O = (0, g.Nx)(),
-        Z = (0, _.Vi)(),
+        Z = (0, g.Nx)(),
+        O = (0, p.Vi)(),
         M = (0, s.e7)([u.Z], () => u.Z.affinities),
-        B = (0, p.Z)(),
+        B = (0, _.Z)(),
         { enabled: w } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        y = A === v.EZ.ApplicationStoreHome && null != B && w,
-        L = M.length > 0;
+        y = A === T.EZ.ApplicationStoreHome && null != B && w,
+        k = M.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: j,
         children: (0, i.jsxs)('div', {
             className: a()(N.container, n, {
                 [N.settingsContainer]: !t,
-                [N.affinityHeight]: !t && L
+                [N.affinityHeight]: !t && k
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
@@ -96,11 +96,11 @@ t.Z = (e) => {
                         (0, i.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: T.intl.string(T.t.YCZldH)
+                            children: v.intl.string(v.t.YCZldH)
                         }),
                         y
-                            ? (0, i.jsx)(x.Z, { referrer: B })
-                            : L
+                            ? (0, i.jsx)(b.Z, { referrer: B })
+                            : k
                               ? (0, i.jsx)('div', {
                                     className: a()(N.affinityDescription),
                                     children: (0, i.jsx)(h.Z, {
@@ -109,10 +109,10 @@ t.Z = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(R, {}),
-                        Z
+                        O
                             ? (0, i.jsx)('div', {
                                   className: N.buttonContainer,
-                                  children: (0, i.jsx)(b.Z, {
+                                  children: (0, i.jsx)(x.Z, {
                                       className: a()(N.button, r),
                                       forceWhite: !0
                                   })
@@ -121,11 +121,11 @@ t.Z = (e) => {
                               ? null
                               : (0, i.jsx)(I, {
                                     subscriptionTier: d,
-                                    inOfferExperience: O,
+                                    inOfferExperience: Z,
                                     inTrial: P,
                                     buttonClassName: r
                                 }),
-                        L &&
+                        k &&
                             !y &&
                             (0, i.jsx)(R, {
                                 variant: 'text-md/normal',
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(O || E) && (0, i.jsx)(S, { isFullscreen: t })
+                !(Z || E) && (0, i.jsx)(S, { isFullscreen: t })
             ]
         })
     });

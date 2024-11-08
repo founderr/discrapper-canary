@@ -7,8 +7,8 @@ n.d(t, {
     n(47120);
 var i = n(275726),
     l = n(135938),
-    r = n(55935),
-    a = n(709054),
+    a = n(55935),
+    r = n(709054),
     s = n(554838),
     o = n(493892),
     c = n(356647),
@@ -20,17 +20,17 @@ function u(e) {
         { channel: h, messages: p, oldestUnreadMessageId: m, treatSpam: f, summaries: g, selectedSummary: C } = e,
         x = [],
         v = !1,
-        _ = null != m ? a.default.extractTimestamp(m) : null,
+        _ = null != m ? r.default.extractTimestamp(m) : null,
         I = null;
     return (
         p.forEach((e) => {
             var l, E, b, N, Z, S, T, j;
             if (null != g && g.length > 0) {
-                let t = a.default.extractTimestamp(e.id);
+                let t = r.default.extractTimestamp(e.id);
                 for (let e = 0; (l = e < (null == g ? void 0 : g.length)), l; e++) {
                     if (null == g[e]) continue;
-                    let n = a.default.extractTimestamp(g[e].startId),
-                        i = a.default.extractTimestamp(g[e].endId);
+                    let n = r.default.extractTimestamp(g[e].startId),
+                        i = r.default.extractTimestamp(g[e].endId);
                     if (t >= n && t <= i) {
                         if (I === g[e].id) break;
                         x.push({
@@ -43,7 +43,7 @@ function u(e) {
                     }
                 }
             }
-            let A = (0, r.vc)(e.timestamp, 'LL');
+            let A = (0, a.vc)(e.timestamp, 'LL');
             A !== t &&
                 null == I &&
                 (x.push({
@@ -100,7 +100,7 @@ function u(e) {
                         (_ = null);
             } else
                 null != _ &&
-                    a.default.extractTimestamp(e.id) > _ &&
+                    r.default.extractTimestamp(e.id) > _ &&
                     (!e.isFirstMessageInForumPost(h) &&
                         x.push({
                             type: d.ys_.DIVIDER,

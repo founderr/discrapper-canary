@@ -27,8 +27,8 @@ function _(e) {
         [E, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
         I = s.useRef(!1),
         N = s.useRef(E),
-        b = (0, o.O)(),
-        A = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
+        A = (0, o.O)(),
+        b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
         s.useEffect(
             () => () => {
@@ -39,7 +39,7 @@ function _(e) {
         (0, i.jsx)(m.Z, {
             selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: b.location }).catch(p.dG4);
+                (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
             renderCamera: (e) =>
                 t
@@ -63,12 +63,12 @@ function _(e) {
                           children: [
                               (0, i.jsx)('div', { className: S.previewImage }),
                               (0, i.jsx)(l.Tooltip, {
-                                  text: A ? null : x.intl.string(x.t['8jSzSU']),
+                                  text: b ? null : x.intl.string(x.t['8jSzSU']),
                                   children: (e) =>
                                       (0, i.jsx)(l.Button, {
                                           ...e,
                                           onClick: n,
-                                          disabled: !A,
+                                          disabled: !b,
                                           children: x.intl.string(x.t.JIf4v7)
                                       })
                               })

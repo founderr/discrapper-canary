@@ -37,12 +37,12 @@ function N(e) {
         L = r.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: j } = (0, m.m)({
+        { markAsNotSpam: R } = (0, m.m)({
             onAcceptSuccess: y,
             onError: L
         });
     if (null == t || !t.isDM()) return null;
-    let R = [
+    let j = [
         (0, i.jsx)(
             o.ZP.Icon,
             {
@@ -56,7 +56,7 @@ function N(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.ZP, {
-                toolbar: R,
+                toolbar: j,
                 'aria-label': C.intl.string(C.t.BIYAqa),
                 children: (0, c.ud)({
                     channel: t,
@@ -76,7 +76,7 @@ function N(e) {
                         (0, i.jsx)(a.Button, {
                             className: S.hamBannerButton,
                             size: a.ButtonSizes.SMALL,
-                            onClick: () => j(t, Z),
+                            onClick: () => R(t, Z),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

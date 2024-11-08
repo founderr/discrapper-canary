@@ -1,8 +1,8 @@
 n(47120), n(411104);
 var i = n(572299),
     o = n(38618),
-    r = n(905423),
-    a = n(622143),
+    a = n(905423),
+    r = n(622143),
     c = n(703656),
     l = n(981631);
 function u(e, t, n) {
@@ -22,23 +22,23 @@ t.Z = new (class e {
     initialize() {
         this.cleanup(), (this.unlistenHistory = (0, c.s1)().listen(this.handleRouteChange));
         let { pathname: e } = (0, c.s1)().location;
-        r.Z.getState().resetPath(e), (this.unlistenKeyboardChange = r.Z.subscribe(this.handleKeybindRouteChange)), o.Z.addChangeListener(this.handleConnectionChange);
+        a.Z.getState().resetPath(e), (this.unlistenKeyboardChange = a.Z.subscribe(this.handleKeybindRouteChange)), o.Z.addChangeListener(this.handleConnectionChange);
     }
     executeRouteRewrites(e, t) {
         if (((this.routeChangeCount += 1), this.routeChangeCount < 10))
             for (let n of this.rewrites) {
                 let o = (0, c.s1)().location.pathname,
-                    r = n(e, t);
-                if (null != r)
+                    a = n(e, t);
+                if (null != a)
                     return (
                         (0, i.n)({
                             message: 'RouteManager.handleRouteChange: A route rewrite is replacing the current route',
                             data: {
-                                replacePath: r.path,
+                                replacePath: a.path,
                                 previousPath: o
                             }
                         }),
-                        (0, c.dL)(r.path, r.state),
+                        (0, c.dL)(a.path, a.state),
                         !0
                     );
             }
@@ -83,11 +83,11 @@ t.Z = new (class e {
             }),
             u(this, 'handleRouteChange', (e, t) => {
                 if (this.executeRouteRewrites(e, t)) return;
-                if (!(0, a.r)(e)) {
+                if (!(0, r.r)(e)) {
                     (0, c.dL)(l.Z5c.ME);
                     return;
                 }
-                let n = r.Z.getState();
+                let n = a.Z.getState();
                 for (let i of (n.basePath !== e.pathname && n.resetPath(e.pathname), this.listeners))
                     try {
                         i(e, t);
@@ -102,7 +102,7 @@ t.Z = new (class e {
             }),
             u(this, 'flushRoute', () => {
                 clearTimeout(this.timer);
-                let e = r.Z.getState();
+                let e = a.Z.getState();
                 null != e.path && (0, c.uL)(e.path);
             });
     }

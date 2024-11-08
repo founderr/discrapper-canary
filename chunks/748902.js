@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    r,
     a,
+    r,
     s = n(442837),
     o = n(570140),
     c = n(786761),
@@ -43,15 +43,15 @@ class C extends (i = s.ZP.Store) {
         );
     }
 }
-(a = 'MessageRequestPreviewStore'),
-    (r = 'displayName') in (l = C)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'MessageRequestPreviewStore'),
+    (a = 'displayName') in (l = C)
+        ? Object.defineProperty(l, a, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
+        : (l[a] = r),
     (t.Z = new C(o.Z, {
         CONNECTION_OPEN: function () {
             (p = {}), m.clear();

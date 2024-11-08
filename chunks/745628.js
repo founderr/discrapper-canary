@@ -3,8 +3,8 @@ var r = t(200651);
 t(192379);
 var a = t(120356),
     i = t.n(a),
-    s = t(481060),
-    o = t(18100),
+    o = t(481060),
+    s = t(18100),
     l = t(308083),
     c = t(388032),
     d = t(306882);
@@ -19,19 +19,19 @@ n.Z = (e) => {
     return (0, r.jsxs)('div', {
         className: d.slideContent,
         children: [
-            (0, r.jsx)(s.Heading, {
+            (0, r.jsx)(o.Heading, {
                 variant: 'heading-xxl/medium',
                 className: d.title,
                 children: c.intl.string(c.t.pdVsBA)
             }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 className: d.subtitle,
                 children: c.intl.string(c.t.E1L1o6)
             }),
             (null == h ? void 0 : h.description) != null &&
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'status-danger',
                     className: d.errorText,
@@ -45,7 +45,7 @@ n.Z = (e) => {
                         children: [
                             (0, r.jsx)('div', {
                                 className: d.maxWidthContainer,
-                                children: (0, r.jsx)(s.TextArea, {
+                                children: (0, r.jsx)(o.TextArea, {
                                     className: d.input,
                                     maxLength: l.Us,
                                     onChange: (e) => m({ description: e }),
@@ -56,20 +56,20 @@ n.Z = (e) => {
                                     placeholder: c.intl.string(c.t['/pfXKi'])
                                 })
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 className: d.optionalTag,
                                 children: c.intl.string(c.t['vWEL6+'])
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
                                 className: d.title,
                                 children: c.intl.string(c.t['2g9zfX'])
                             }),
                             (null == h ? void 0 : h.wildcardDescriptors) != null &&
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(o.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'status-danger',
                                     className: d.errorText,
@@ -78,21 +78,21 @@ n.Z = (e) => {
                             (0, r.jsxs)('div', {
                                 className: d.wildcardRow,
                                 children: [
-                                    (0, r.jsx)(s.TextInput, {
+                                    (0, r.jsx)(o.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
                                         value: null !== (n = x[0]) && void 0 !== n ? n : '',
                                         onChange: (e) => g(e, 0),
                                         maxLength: l.TY,
                                         placeholder: l.LK['0']
                                     }),
-                                    (0, r.jsx)(s.TextInput, {
+                                    (0, r.jsx)(o.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
                                         value: null !== (t = x[1]) && void 0 !== t ? t : '',
                                         onChange: (e) => g(e, 1),
                                         maxLength: l.TY,
                                         placeholder: l.LK['1']
                                     }),
-                                    (0, r.jsx)(s.TextInput, {
+                                    (0, r.jsx)(o.TextInput, {
                                         inputClassName: i()(d.input, d.wildcardInput),
                                         value: null !== (a = x[2]) && void 0 !== a ? a : '',
                                         onChange: (e) => g(e, 2),
@@ -105,7 +105,7 @@ n.Z = (e) => {
                     }),
                     (0, r.jsx)('div', {
                         className: d.fixedWidthSidebar,
-                        children: (0, r.jsx)(o.Z, {
+                        children: (0, r.jsx)(s.Z, {
                             guildId: u,
                             progress: f,
                             maskTraits: !0

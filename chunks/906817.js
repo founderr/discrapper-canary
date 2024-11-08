@@ -52,8 +52,8 @@ function g(e, t) {
 }
 t.ZP = l.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: g, selectedChannelId: C, disableManageChannels: _ } = e,
-        { isFavoritesPerk: x } = (0, a.z)('ChannelListSection'),
-        v = l.useCallback(() => {
+        { isFavoritesPerk: v } = (0, a.z)('ChannelListSection'),
+        x = l.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
@@ -67,11 +67,11 @@ t.ZP = l.memo(function (e) {
             if (n.hasFeature(h.oNc.HUB)) return null;
             return (0, i.jsx)('div', { style: { height: d.$k } });
         case c.p2:
-            return (0, i.jsx)(u.P, { name: x ? p.intl.string(p.t.mlPMCw) : p.intl.string(p.t.k8fFjo) });
+            return (0, i.jsx)(u.P, { name: v ? p.intl.string(p.t.mlPMCw) : p.intl.string(p.t.k8fFjo) });
         case m.recentsSectionNumber:
             return (0, i.jsx)(u.P, {
                 name: p.intl.string(p.t.gKcrqK),
-                onDismiss: v
+                onDismiss: x
             });
         case m.voiceChannelsSectionNumber: {
             var I;

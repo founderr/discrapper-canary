@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(442837),
-    r = n(570140),
-    a = n(911969),
+    a = n(570140),
+    r = n(911969),
     s = n(110924),
     o = n(213459),
     c = n(404295),
@@ -45,7 +45,7 @@ function C(e) {
     }, [v, N, x]),
         i.useEffect(() => {
             (null == v ? void 0 : v.id) != null &&
-                r.Z.dispatch({
+                a.Z.dispatch({
                     type: 'APP_DM_OPEN',
                     botUserId: v.id
                 });
@@ -53,7 +53,7 @@ function C(e) {
     let Z = (0, o.v1)(
             C,
             {
-                commandTypes: [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER]
+                commandTypes: [r.yU.PRIMARY_ENTRY_POINT, r.yU.CHAT, r.yU.MESSAGE, r.yU.USER]
             },
             {
                 applicationId: N,
@@ -61,7 +61,7 @@ function C(e) {
                 allowApplicationState: !0
             }
         ),
-        S = Z.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === N)[0],
+        S = Z.commands.filter((e) => e.type === r.yU.PRIMARY_ENTRY_POINT && e.applicationId === N)[0],
         T = Z.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         j = Z.loading,
         A =

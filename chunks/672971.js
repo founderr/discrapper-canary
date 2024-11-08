@@ -46,7 +46,7 @@ class A extends i.Component {
     }
     render() {
         let { eulaId: e, applicationName: n, hasPreviouslyAcceptedEULA: i, forceShow: a, disabled: s, className: c, checkboxClassname: d, checkboxLabelClassname: b, finePrint: P, showPricingLink: A, showWithdrawalWaiver: T, isTrial: g, inReverseTrial: y, isDiscount: E, subscriptionPlan: I, finePrintClassname: x } = this.props,
-            { hasAcceptedEULA: N, hasAcceptedWithdrawalWaiver: _ } = this.state;
+            { hasAcceptedEULA: _, hasAcceptedWithdrawalWaiver: N } = this.state;
         return (o()(!g || null != I, 'subscriptionPlan cannot be null if shouldShowUpdatedPaymentModal is true'), a || (null != e && !i) || T)
             ? (0, r.jsxs)('div', {
                   className: c,
@@ -59,7 +59,7 @@ class A extends i.Component {
                       null != e && (a || !i)
                           ? (0, r.jsx)(u.Checkbox, {
                                 type: u.Checkbox.Types.INVERTED,
-                                value: N,
+                                value: _,
                                 onChange: this.handleToggleEULAAcceptance,
                                 disabled: s,
                                 className: h.checkbox,
@@ -94,7 +94,7 @@ class A extends i.Component {
                                 children: [
                                     (0, r.jsx)(u.Checkbox, {
                                         type: u.Checkbox.Types.INVERTED,
-                                        value: _,
+                                        value: N,
                                         onChange: this.handleToggleEUWithdralWaiverAcceptance,
                                         disabled: s,
                                         className: l()(h.checkbox, d),

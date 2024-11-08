@@ -33,8 +33,8 @@ var i = n(200651),
     Z = n(571250),
     y = n(628581),
     L = n(55311),
-    j = n(575175),
-    R = n(64220),
+    R = n(575175),
+    j = n(64220),
     O = n(377171),
     P = n(600164),
     D = n(676035),
@@ -99,7 +99,7 @@ function eb(e, t, n) {
 let eZ = eI.ZP.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar,
     ey = 2 * eg.Z.Millis.MINUTE,
     eL = 30 * eg.Z.Millis.DAY;
-function ej(e) {
+function eR(e) {
     let { speaking: t, streaming: n, currentUser: r, status: l, handleMouseLeave: s, renderNameTag: o } = e,
         c = (0, T.Z)(null == r ? void 0 : r.avatarDecoration),
         d = (0, em.NZ)({
@@ -158,7 +158,7 @@ function ej(e) {
               })
           });
 }
-class eR extends r.PureComponent {
+class ej extends r.PureComponent {
     get isCopiedStreakGodlike() {
         let { copiedStreak: e } = this.state;
         return e >= 10;
@@ -216,7 +216,7 @@ class eR extends r.PureComponent {
         );
     }
     renderAvatarWithPopout() {
-        return (0, i.jsx)(ej, {
+        return (0, i.jsx)(eR, {
             ...this.props,
             handleMouseLeave: this.handleMouseLeave,
             renderNameTag: () => this.renderNameTag()
@@ -232,7 +232,7 @@ class eR extends r.PureComponent {
                       children: (e) => {
                           let { visibleContent: t, markAsDismissed: n } = e;
                           if (t === o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)
-                              return (0, i.jsx)(R.Z, {
+                              return (0, i.jsx)(j.Z, {
                                   markAsDismissed: n,
                                   children: () => this.renderAvatarWithPopout()
                               });
@@ -360,7 +360,7 @@ class eR extends r.PureComponent {
             }),
             eb(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t } = this.props;
-                (0, j.Z)(e, t, eN.jXE.ACCOUNT_PANEL);
+                (0, R.Z)(e, t, eN.jXE.ACCOUNT_PANEL);
             }),
             eb(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
@@ -512,8 +512,8 @@ function eO() {
         }),
         y = (0, s.e7)([eu.ZP], () => eu.ZP.getPremiumTypeSubscription()),
         L = (0, s.e7)([ea.Z], () => ea.Z.getSpeakingWhileMuted()),
-        j = (0, s.e7)([el.Z], () => el.Z.hasLayers()),
-        R = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || j || e_.s.isDisallowPopupsSet(),
+        R = (0, s.e7)([el.Z], () => el.Z.hasLayers()),
+        j = (0, m.useModalsStore)(m.hasAnyModalOpenSelector) || R || e_.s.isDisallowPopupsSet(),
         O = (0, H.b)(),
         P = (0, s.e7)([U.Z], () => null != U.Z.getAwaitingRemoteSessionInfo()),
         M = (0, Y.D)(),
@@ -560,16 +560,16 @@ function eO() {
             settings: []
         };
     return (
-        !R && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !j && (X && $.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === k ? $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), q && $.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), G && $.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), B && $.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), z && $.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(N.Gt, {
             value: J,
-            children: (0, i.jsx)(eR, {
+            children: (0, i.jsx)(ej, {
                 currentUser: t,
                 customStatusActivity: l,
                 dismissibleContents: $,
                 userTag: u,
                 hidePrivateData: h,
-                occluded: R,
+                occluded: j,
                 premiumSubscription: y,
                 selfDeaf: T,
                 selfMute: _,

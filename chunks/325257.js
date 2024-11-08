@@ -15,8 +15,8 @@ var i = n(200651),
     g = n(703656),
     C = n(769654),
     _ = n(271383),
-    x = n(771845),
-    v = n(727258),
+    v = n(771845),
+    x = n(727258),
     I = n(276952),
     b = n(249792),
     S = n(40153),
@@ -36,7 +36,7 @@ let A = {
 };
 function M(e, t) {
     (0, p.jW)(e, async () => {
-        let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('29612'), n.e('44156'), n.e('16141'), n.e('85552'), n.e('58227'), n.e('50034'), n.e('41661'), n.e('33213'), n.e('71840')]).then(n.bind(n, 545135));
+        let { default: e } = await Promise.all([n.e('33053'), n.e('15669'), n.e('7654'), n.e('42587'), n.e('44156'), n.e('16141'), n.e('85552'), n.e('58227'), n.e('50034'), n.e('48649'), n.e('33213'), n.e('71840')]).then(n.bind(n, 545135));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,
@@ -53,7 +53,7 @@ t.Z = l.memo(function (e) {
     null == ee && W > 0 ? (ee = null !== (r = (0, y.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, y.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
     let et = null !== (w = e.lowerBadgeSize) && void 0 !== w ? w : { width: (0, d.getBadgeWidthForValue)(W) },
         [{ dragging: en }, ei] = (0, o.c)({
-            type: v.eD.GUILD,
+            type: x.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
                     null == D || D();
@@ -64,7 +64,7 @@ t.Z = l.memo(function (e) {
                 }
             ),
             end() {
-                null == O || O(), (0, f.V1)(x.ZP.getCompatibleGuildFolders());
+                null == O || O(), (0, f.V1)(v.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -113,14 +113,14 @@ t.Z = l.memo(function (e) {
             },
             [eh]
         ),
-        ex = l.useCallback(
+        ev = l.useCallback(
             (e) => {
                 null == R || R(J, e);
             },
             [J, R]
         );
     if (null == U) return null;
-    let ev =
+    let ex =
             eu || es
                 ? (0, i.jsx)(b.Z, {
                       guild: U,
@@ -169,11 +169,11 @@ t.Z = l.memo(function (e) {
                       upperBadge: $,
                       lowerBadge: ee,
                       lowerBadgeSize: et,
-                      children: ev
+                      children: ex
                   })
               });
     return (0, i.jsxs)(E.H, {
-        ref: ex,
+        ref: ev,
         children: [
             (0, i.jsx)(I.Z, {
                 hovered: !en && eo,

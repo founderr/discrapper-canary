@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(25209),
+    a = n(442837),
+    r = n(25209),
     s = n(39154),
     o = n(35125),
     c = n(905405),
@@ -35,7 +35,7 @@ let b = l.memo(function (e) {
             let e = (0, s.Z)(P);
             if (e.type === I.uaV.USER_JOIN) {
                 let t = f.Z.getWelcomeMessageKind(N.guild_id);
-                return (0, a.Rp)(
+                return (0, r.Rp)(
                     E.intl.formatToParts(f.Z.getSystemMessageUserJoin(e.id, t), {
                         username: null != M ? M.nick : e.author.username,
                         usernameHook: (e) => e
@@ -43,7 +43,7 @@ let b = l.memo(function (e) {
                 );
             }
             if (e.type === I.uaV.ROLE_SUBSCRIPTION_PURCHASE)
-                return (0, a.Rp)(
+                return (0, r.Rp)(
                     (0, o.PA)({
                         username: null != M ? M.nick : e.author.username,
                         guildId: null == N ? void 0 : N.guild_id,
@@ -51,21 +51,21 @@ let b = l.memo(function (e) {
                     })
                 );
             if (e.type === I.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, a.Rp)(
+                return (0, r.Rp)(
                     (0, u.Y)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick
                     })
                 );
             else if (e.type === I.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED)
-                return (0, a.Rp)(
+                return (0, r.Rp)(
                     (0, h.B2)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick
                     })
                 );
             else if (e.type === I.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED)
-                return (0, a.Rp)(
+                return (0, r.Rp)(
                     (0, h.hj)({
                         application: null == e ? void 0 : e.application,
                         username: null == M ? void 0 : M.nick
@@ -95,7 +95,7 @@ let b = l.memo(function (e) {
             }
             return null;
         }, [P, M, N, L, R]),
-        O = (0, r.e7)([m.Z], () => null != P && m.Z.isBlockedForMessage(P), [P]),
+        O = (0, a.e7)([m.Z], () => null != P && m.Z.isBlockedForMessage(P), [P]),
         D = (0, _.wq)(null == P ? void 0 : P.author.id, N.id),
         w = (0, _.$3)(n, P, O),
         B = (0, _.Wl)(P, N, S, j),
@@ -131,7 +131,7 @@ let b = l.memo(function (e) {
     });
 });
 function N(e) {
-    let { message: t, channel: n, compact: l, setPopout: r, referencedUsernameProfile: a, referencedAvatarProfile: s, replyReference: o, replyMessage: c, isReplySpineClickable: d, showReplySpine: u = !0 } = e,
+    let { message: t, channel: n, compact: l, setPopout: a, referencedUsernameProfile: r, referencedAvatarProfile: s, replyReference: o, replyMessage: c, isReplySpineClickable: d, showReplySpine: u = !0 } = e,
         h =
             null != o &&
             (0, i.jsx)(b, {
@@ -140,8 +140,8 @@ function N(e) {
                 referencedMessage: c,
                 channel: n,
                 compact: l,
-                setPopout: r,
-                referencedUsernameProfile: a,
+                setPopout: a,
+                referencedUsernameProfile: r,
                 referencedAvatarProfile: s,
                 isReplySpineClickable: d,
                 showReplySpine: u

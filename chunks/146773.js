@@ -20,8 +20,8 @@ var l = n(155281),
     g = n(984933),
     C = n(430824),
     _ = n(496675),
-    x = n(914010),
-    v = n(281029),
+    v = n(914010),
+    x = n(281029),
     I = n(700785),
     b = n(981631);
 let S = 'DRAGGABLE_GUILD_CHANNEL';
@@ -39,16 +39,16 @@ function N(e) {
         {
             drop(e, t) {
                 let n;
-                let l = x.Z.getGuildId(),
+                let l = v.Z.getGuildId(),
                     r = t.getItem(),
-                    a = (0, v.if)(Z(l, r.id), r.position, e.channel, e.position, r.channelList);
+                    a = (0, x.if)(Z(l, r.id), r.position, e.channel, e.position, r.channelList);
                 if (null == a) return;
                 let u = Z(l, r.id);
                 if (null == u) return;
                 let h = m.Z.getCategories(l),
                     p = C.Z.getGuild(l);
                 if (null == p) return;
-                let g = (0, v.Dn)(u, Z(l, a.referenceId), a.parentId, h);
+                let g = (0, x.Dn)(u, Z(l, a.referenceId), a.parentId, h);
                 if (0 !== g.length) {
                     if (l === b.I_8) {
                         (0, d.s3)(g);
@@ -95,9 +95,9 @@ function N(e) {
                 let n = t.getItem(),
                     i = f.Z.getChannel(n.id);
                 if (null == i) return !1;
-                let l = (0, v.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
+                let l = (0, x.if)(f.Z.getChannel(n.id), n.position, e.channel, e.position, n.channelList);
                 if (null == l) return !1;
-                if (x.Z.getGuildId() === b.I_8) return !0;
+                if (v.Z.getGuildId() === b.I_8) return !0;
                 let r = C.Z.getGuild(n.guildId);
                 if (null == r) return !1;
                 let a = f.Z.getChannel(l.parentId),
@@ -132,7 +132,7 @@ function N(e) {
             {
                 canDrag(e) {
                     let { channel: t } = e;
-                    if (x.Z.getGuildId() === b.I_8) return !0;
+                    if (v.Z.getGuildId() === b.I_8) return !0;
                     let l = C.Z.getGuild(t.getGuildId());
                     if (null == l) return !1;
                     if ((0, h.r1)(l.id) && _.Z.can(b.Plq.MANAGE_CHANNELS, l))
@@ -153,7 +153,7 @@ function N(e) {
                             channel: { id: t, parent_id: n, guild_id: i, type: l },
                             position: r
                         } = e,
-                        a = x.Z.getGuildId(),
+                        a = v.Z.getGuildId(),
                         o = m.Z.getCategories(a);
                     return {
                         isChannelDrag: !0,

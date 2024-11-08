@@ -11,13 +11,13 @@ var r = n(120356),
     g = n(568147),
     m = n(332796);
 t.Z = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: f, analyticsLocation: p } = e,
-        { analyticsLocations: _ } = (0, l.ZP)(f),
+    let { className: t, imageClassName: n, textContainerOverrideStyles: r, location: f, analyticsLocation: _ } = e,
+        { analyticsLocations: p } = (0, l.ZP)(f),
         h = (0, o.rK)(),
         { enabled: E } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: h }),
-        x = E && h;
+        b = E && h;
     return (0, i.jsx)(l.Gt, {
-        value: _,
+        value: p,
         children: (0, i.jsxs)('div', {
             className: a()(u.container, t),
             children: [
@@ -28,11 +28,11 @@ t.Z = (e) => {
                         (0, i.jsx)(s.Heading, {
                             variant: 'heading-lg/extrabold',
                             className: u.heading,
-                            children: x ? d.intl.string(d.t.LB3bJC) : d.intl.string(d.t.Ve9Ge3)
+                            children: b ? d.intl.string(d.t.LB3bJC) : d.intl.string(d.t.Ve9Ge3)
                         }),
                         (0, i.jsx)(s.Text, {
                             variant: 'text-sm/medium',
-                            children: x ? d.intl.string(d.t.u49cn5) : d.intl.string(d.t.yQ06u7)
+                            children: b ? d.intl.string(d.t.u49cn5) : d.intl.string(d.t.yQ06u7)
                         }),
                         (0, i.jsx)(c.Z, {
                             isGift: !0,
@@ -41,12 +41,12 @@ t.Z = (e) => {
                             buttonText: d.intl.string(d.t.Ve9Ge3),
                             buttonTextClassName: u.giftButtonCTA,
                             color: s.Button.Colors.CUSTOM,
-                            premiumModalAnalyticsLocation: p
+                            premiumModalAnalyticsLocation: _
                         })
                     ]
                 }),
                 (0, i.jsx)('img', {
-                    src: x ? m : g,
+                    src: b ? m : g,
                     className: a()(u.bannerImage, n),
                     alt: 'gift nitro banner'
                 })

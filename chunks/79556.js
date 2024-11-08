@@ -21,8 +21,8 @@ var l = n(120356),
     g = n(22082),
     C = n(665906),
     _ = n(592125),
-    x = n(430824),
-    v = n(496675),
+    v = n(430824),
+    x = n(496675),
     I = n(306680),
     b = n(9156),
     S = n(594174),
@@ -64,9 +64,9 @@ class w extends N.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: m, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: _, subtitle: x, forceTopLevelThread: v, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: S, enableActivities: Z } = this.props,
+        let { channel: e, guild: t, selected: n, muted: l, unread: a, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: m, canReorderChannel: g, isSubscriptionGated: C, isFavoriteSuggestion: _, subtitle: v, forceTopLevelThread: x, embeddedApps: I, resolvedUnreadSetting: b, withGuildIcon: S, enableActivities: Z } = this.props,
             N = Z && null != I && I.length > 0,
-            E = (0, f.D)(x),
+            E = (0, f.D)(v),
             j = (0, i.jsx)('li', {
                 className: r()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
@@ -97,7 +97,7 @@ class w extends N.ZP {
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: g ? m : null,
                             isFavoriteSuggestion: _,
-                            channelTypeOverride: v ? T.d4z.GUILD_TEXT : void 0,
+                            channelTypeOverride: x ? T.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: b,
                             withGuildIcon: S,
                             'aria-label': (0, p.ZP)({
@@ -190,7 +190,7 @@ class w extends N.ZP {
                         });
                     return;
                 }
-                let l = x.Z.getGuild(t.getGuildId());
+                let l = v.Z.getGuild(t.getGuildId());
                 null != l &&
                     (0, c.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('54310')]).then(n.bind(n, 373651));
@@ -214,11 +214,11 @@ function R(e) {
             mentionCount: I.ZP.getMentionCount(t.id)
         })),
         f = (0, a.e7)([b.ZP], () => b.ZP.resolveUnreadSetting(t)),
-        x = (0, a.cj)([_.Z, v.Z], () => {
+        v = (0, a.cj)([_.Z, x.Z], () => {
             let e = _.Z.getChannel(t.parent_id);
             return {
-                canManageChannel: v.Z.can(T.Plq.MANAGE_CHANNELS, t),
-                canReorderChannel: !0 !== l && (n.id === P._ || (null != e ? v.Z.can(T.Plq.MANAGE_CHANNELS, e) : v.Z.can(T.Plq.MANAGE_CHANNELS, n)))
+                canManageChannel: x.Z.can(T.Plq.MANAGE_CHANNELS, t),
+                canReorderChannel: !0 !== l && (n.id === P._ || (null != e ? x.Z.can(T.Plq.MANAGE_CHANNELS, e) : x.Z.can(T.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         Z = (0, a.e7)([g.Z], () => g.Z.shouldIndicateNewChannel(n.id, t.id)),
@@ -247,7 +247,7 @@ function R(e) {
         R = (0, h.ZP)(t);
     return (0, i.jsx)(L, {
         ...p,
-        ...x,
+        ...v,
         ...e,
         hasActiveThreads: c,
         hasMoreActiveThreads: u,

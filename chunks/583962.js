@@ -23,8 +23,8 @@ var i = n(200651),
     g = n(434404),
     C = n(496675),
     _ = n(259580),
-    x = n(267642),
-    v = n(624138),
+    v = n(267642),
+    x = n(624138),
     I = n(667815),
     b = n(531572),
     S = n(26323),
@@ -32,7 +32,7 @@ var i = n(200651),
     N = n(981631),
     E = n(388032),
     y = n(183694);
-let j = (0, v.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let j = (0, x.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     T = (e) => {
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
@@ -65,10 +65,10 @@ t.ZP = (e) => {
     let { guild: t, withMargin: n } = e,
         { analyticsLocations: r } = (0, m.ZP)(p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY),
         { premiumSubscriberCount: u, id: g } = t,
-        v = (0, x.rF)(u, g),
-        j = (0, x.FZ)(v, t.id),
+        x = (0, v.rF)(u, g),
+        j = (0, v.FZ)(x, t.id),
         P = null == j,
-        A = null != j ? j : v,
+        A = null != j ? j : x,
         w = (0, c.e7)([b.Z], () => {
             var e;
             return null !== (e = b.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
@@ -77,7 +77,7 @@ t.ZP = (e) => {
     l.useEffect(() => {
         w !== u && (0, I.v)(g, u);
     }, [g, w, u]);
-    let R = ''.concat(Math.min(100, (u / (0, x.vn)(t.id)[A]) * 100), '%'),
+    let R = ''.concat(Math.min(100, (u / (0, v.vn)(t.id)[A]) * 100), '%'),
         { current: D } = l.useRef(R),
         O = {
             from: { width: w === u ? D : '0%' },
@@ -103,16 +103,16 @@ t.ZP = (e) => {
                     perkIntro: E.intl.string(E.t.ZhvSn5)
                 });
         },
-        B = E.intl.formatToPlainString(E.t['2oNfMT'], { levelName: (0, x.e9)(A) }),
+        B = E.intl.formatToPlainString(E.t['2oNfMT'], { levelName: (0, v.e9)(A) }),
         V = E.intl.format(E.t.dhKnYm, {
             numBoosts: u,
-            numTotal: (0, x.vn)(t.id)[A]
+            numTotal: (0, v.vn)(t.id)[A]
         });
-    P && ((B = (0, x.e9)(A)), (V = E.intl.format(E.t.B2byER, { numBoosts: u })));
+    P && ((B = (0, v.e9)(A)), (V = E.intl.format(E.t.B2byER, { numBoosts: u })));
     let H = (0, s.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
-            text: P ? E.intl.string(E.t['Y+V9go']) : E.intl.formatToPlainString(E.t.UyDKl5, { levelName: (0, x.nW)(A) }),
+            text: P ? E.intl.string(E.t['Y+V9go']) : E.intl.formatToPlainString(E.t.UyDKl5, { levelName: (0, v.nW)(A) }),
             color: d.Tooltip.Colors.BLACK,
             position: 'top',
             delay: 200,

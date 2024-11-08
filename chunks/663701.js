@@ -32,8 +32,8 @@ var i = n(200651),
     Z = n(522558),
     y = n(795448),
     L = n(441623),
-    j = n(457396),
-    R = n(108989),
+    R = n(457396),
+    j = n(108989),
     O = n(51596),
     P = n(905423),
     D = n(155409),
@@ -95,7 +95,7 @@ let $ = (e) => {
                 }),
                 m &&
                     !d &&
-                    (0, i.jsx)(R.Z, {
+                    (0, i.jsx)(j.Z, {
                         className: J.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -262,7 +262,7 @@ let es = (e) => {
                           )
                         : null,
                     (0, i.jsx)(
-                        j.g,
+                        R.g,
                         {
                             selected: null == c ? l : c.startsWith(K.Z5c.APPLICATION_STORE),
                             route: K.Z5c.APPLICATION_STORE,

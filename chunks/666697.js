@@ -40,7 +40,7 @@ t.Z = function (e) {
     a.useEffect(() => {
         (null == x ? void 0 : x.storefront_available) && null != t && (0, u.Z)(t);
     }, [null == x ? void 0 : x.storefront_available, t]);
-    let j = a.useMemo(
+    let R = a.useMemo(
             () => [
                 {
                     id: 'about',
@@ -53,7 +53,7 @@ t.Z = function (e) {
             ],
             []
         ),
-        R = a.useMemo(() => {
+        j = a.useMemo(() => {
             if (null == x) return null;
             switch (Z) {
                 case 'about':
@@ -97,12 +97,12 @@ t.Z = function (e) {
                                         (0, l.jsx)('div', {
                                             className: S.contentTabs,
                                             children: (0, l.jsx)(m.Z, {
-                                                tabs: j,
+                                                tabs: R,
                                                 onTabSelect: y,
                                                 selectedTab: Z
                                             })
                                         }),
-                                    R,
+                                    j,
                                     (0, l.jsx)(I.Z, {
                                         application: x,
                                         onSelectApplication: L

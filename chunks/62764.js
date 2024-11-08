@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(852229),
     o = n(442837),
     c = n(52826),
@@ -36,7 +36,7 @@ var i = n(200651),
     M = n(382275),
     R = n(351821);
 function L(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: r = !1, parentChannelId: L } = e,
+    let { postId: t, isFirstMessage: n, isLastItem: a = !1, parentChannelId: L } = e,
         { ref: k, width: O } = (0, p.Z)(),
         [D, w] = l.useState(3),
         [B, U] = l.useState(!n),
@@ -82,7 +82,7 @@ function L(e) {
         el = () => {
             z ? N.Z.leaveThread(F, 'Forum Toolbar') : N.Z.joinThread(F, 'Forum Toolbar');
         },
-        er = () => {
+        ea = () => {
             (0, A.B)({
                 postId: F.id,
                 location: { section: y.jXE.CHANNEL_HEADER }
@@ -90,7 +90,7 @@ function L(e) {
                 (0, s.J)((0, S.EO)(F, J)),
                 G(!0);
         },
-        ea = () => {
+        er = () => {
             u.Z.jumpToMessage({
                 channelId: F.id,
                 messageId: F.id,
@@ -102,11 +102,11 @@ function L(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: a()(M.container, { [M.header]: B }),
+                className: r()(M.container, { [M.header]: B }),
                 ref: k,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: a()(M.reactButtons, { [M.loading]: et }),
+                        className: r()(M.reactButtons, { [M.loading]: et }),
                         children: [
                             !ei &&
                                 !K &&
@@ -167,7 +167,7 @@ function L(e) {
                                         size: d.Button.Sizes.SMALL,
                                         onClick: el,
                                         className: M.button,
-                                        innerClassName: a()(M.buttonInner, { [M.active]: z }),
+                                        innerClassName: r()(M.buttonInner, { [M.active]: z }),
                                         children: [
                                             (0, i.jsx)(es, {
                                                 size: 'xs',
@@ -184,7 +184,7 @@ function L(e) {
                                         ...e,
                                         look: d.Button.Looks.BLANK,
                                         size: d.Button.Sizes.SMALL,
-                                        onClick: er,
+                                        onClick: ea,
                                         className: M.button,
                                         innerClassName: M.buttonInner,
                                         children: [
@@ -213,7 +213,7 @@ function L(e) {
                                             ...e,
                                             look: d.Button.Looks.BLANK,
                                             size: d.Button.Sizes.SMALL,
-                                            onClick: ea,
+                                            onClick: er,
                                             className: M.button,
                                             innerClassName: M.buttonInner,
                                             children: (0, i.jsx)(c.Z, {
@@ -231,7 +231,7 @@ function L(e) {
             $ && (0, i.jsx)(g.Z, { threadId: t }),
             (0, i.jsx)(_.Z, {
                 channel: F,
-                isLastItem: r
+                isLastItem: a
             })
         ]
     });

@@ -2,8 +2,8 @@ t(47120);
 var r = t(200651),
     a = t(192379),
     i = t(120356),
-    s = t.n(i),
-    o = t(100621),
+    o = t.n(i),
+    s = t(100621),
     l = t(481060),
     c = t(393238),
     d = t(388032),
@@ -14,12 +14,12 @@ n.Z = a.memo(function (e) {
         [C, b] = a.useState(!1),
         { ref: v, height: _ = 0 } = (0, c.Z)(),
         { ref: y, height: T = 0 } = (0, c.Z)(),
-        [j, I] = a.useState(i),
+        [I, j] = a.useState(i),
         N = (0, l.useSpring)(
             {
-                height: j ? T + _ : _,
+                height: I ? T + _ : _,
                 config: {
-                    ...o.config.stiff,
+                    ...s.config.stiff,
                     clamp: !0
                 },
                 onStart: () => {
@@ -33,7 +33,7 @@ n.Z = a.memo(function (e) {
         );
     return (
         a.useLayoutEffect(() => {
-            b(!1), I(i);
+            b(!1), j(i);
         }, [i]),
         a.useLayoutEffect(() => {
             let e = setTimeout(() => {
@@ -42,18 +42,18 @@ n.Z = a.memo(function (e) {
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)(l.Clickable, {
-            className: s()(u.editCard, {
+            className: o()(u.editCard, {
                 [u.toggled]: i,
                 [u.noBackground]: x
             }),
-            children: (0, r.jsxs)(o.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: i && C }),
+            children: (0, r.jsxs)(s.animated.div, {
+                className: o()(u.contentExpandContainer, { [u.showOverflow]: i && C }),
                 style: N,
                 children: [
                     (0, r.jsx)(l.Clickable, {
                         innerRef: v,
                         onClick: m ? void 0 : f,
-                        className: s()(u.innerHeader, { [u.toggled]: i && m }),
+                        className: o()(u.innerHeader, { [u.toggled]: i && m }),
                         'aria-label': d.intl.string(d.t.dcl9MT),
                         children: n
                     }),

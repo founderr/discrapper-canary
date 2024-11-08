@@ -1,19 +1,19 @@
-n.d(t, {
+t.d(n, {
     HG: function () {
-        return s;
+        return u;
     },
     Md: function () {
-        return l;
+        return o;
     },
     Q8: function () {
-        return r;
+        return l;
     }
 });
-var i = n(373228),
-    o = n(388032);
-let r = () => [o.intl.string(o.t.b6wEe3), o.intl.string(o.t.i8o9hY)],
-    l = () => [o.intl.string(o.t.vqnToa), o.intl.string(o.t['9yh+dH'])],
-    s = [
+var i = t(373228),
+    r = t(388032);
+let l = () => [r.intl.string(r.t.b6wEe3), r.intl.string(r.t.i8o9hY)],
+    o = () => [r.intl.string(r.t.vqnToa), r.intl.string(r.t['9yh+dH'])],
+    u = [
         {
             id: '781323471249604648',
             format_type: i.u3.APNG,

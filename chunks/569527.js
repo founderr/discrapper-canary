@@ -58,11 +58,11 @@ function v(e) {
                 : {};
         }),
         L = (0, c.Z)(Z),
-        j = r.useMemo(() => (b === u.M.FETCHING ? L : Z), [b, L, Z]);
+        R = r.useMemo(() => (b === u.M.FETCHING ? L : Z), [b, L, Z]);
     r.useEffect(() => {
         A(1);
     }, [n]);
-    let R = r.useCallback(
+    let j = r.useCallback(
             (e) => {
                 d.yC({
                     query: n,
@@ -113,9 +113,9 @@ function v(e) {
                                 children: (0, i.jsx)('div', {
                                     className: C.content,
                                     children:
-                                        null == j
+                                        null == R
                                             ? void 0
-                                            : j.results.map((e) => {
+                                            : R.results.map((e) => {
                                                   if (e.type === l.s.APPLICATION) {
                                                       let t = e.data;
                                                       return (0, i.jsx)(
@@ -134,12 +134,12 @@ function v(e) {
                             }),
                             (0, i.jsx)(o.Paginator, {
                                 className: C.paginationInput,
-                                totalCount: Math.min((null !== (t = null == j ? void 0 : j.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
+                                totalCount: Math.min((null !== (t = null == R ? void 0 : R.totalPages) && void 0 !== t ? t : 0) * I.IV, I.Et * I.IV),
                                 pageSize: I.IV,
                                 disablePaginationGap: !0,
                                 hideMaxPage: !0,
                                 currentPage: x,
-                                onPageChange: R
+                                onPageChange: j
                             })
                         ]
                     })
