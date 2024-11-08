@@ -1,24 +1,21 @@
 n.d(t, {
     Kv: function () {
-        return u;
+        return l;
     },
     T: function () {
         return a;
     },
     _f: function () {
-        return d;
+        return c;
     },
     aq: function () {
-        return c;
+        return u;
     },
     m1: function () {
         return s;
     },
     nS: function () {
         return o;
-    },
-    zQ: function () {
-        return l;
     }
 });
 var r = n(818083),
@@ -78,20 +75,6 @@ let a = (0, r.B)({
     }),
     l = (0, r.B)({
         kind: 'user',
-        id: '2024-08_open_platform_link_sharing',
-        label: 'Open Platform Link Sharing',
-        defaultConfig: { enabled: !1 },
-        commonTriggerPoint: i.$P.CONNECTION_OPEN,
-        treatments: [
-            {
-                id: 1,
-                label: 'Enable app link sharing and install flow improvements',
-                config: { enabled: !0 }
-            }
-        ]
-    }),
-    u = (0, r.B)({
-        kind: 'user',
         id: '2024-09_open_platform_link_sharing_mobile',
         label: 'Open Platform Link Sharing Mobile',
         defaultConfig: { enabled: !1 },
@@ -104,7 +87,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    c = (0, r.B)({
+    u = (0, r.B)({
         kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
@@ -123,7 +106,7 @@ let a = (0, r.B)({
             }
         ]
     }),
-    d = (0, r.B)({
+    c = (0, r.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
