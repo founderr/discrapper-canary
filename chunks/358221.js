@@ -1,33 +1,45 @@
 n(47120), n(653041), n(724458);
 var r,
-    i,
-    a,
-    s,
-    o = n(512722),
-    l = n.n(o),
-    u = n(392711),
-    c = n.n(u),
-    d = n(442837),
-    f = n(570140),
-    _ = n(317381),
-    h = n(710845),
-    p = n(258609),
-    m = n(569545),
-    g = n(199902),
-    E = n(314897),
-    v = n(523746),
-    I = n(592125),
-    S = n(944486),
-    T = n(606304),
-    b = n(594174),
-    y = n(33039),
-    A = n(979651),
-    N = n(413523),
-    C = n(354459),
-    R = n(981631);
-let O = new h.Z('ChannelRTCStore'),
-    D = Object.freeze([]),
-    L = [],
+    i = n(512722),
+    a = n.n(i),
+    s = n(392711),
+    o = n.n(s),
+    l = n(442837),
+    u = n(570140),
+    c = n(317381),
+    d = n(710845),
+    f = n(258609),
+    _ = n(569545),
+    h = n(199902),
+    p = n(314897),
+    m = n(523746),
+    g = n(592125),
+    E = n(944486),
+    v = n(606304),
+    I = n(594174),
+    S = n(33039),
+    b = n(979651),
+    T = n(413523),
+    y = n(354459),
+    A = n(981631);
+function N(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let C = new d.Z('ChannelRTCStore'),
+    R = Object.freeze([]),
+    O = [],
+    D = {},
+    L = {},
     x = {},
     w = {},
     M = {},
@@ -35,200 +47,201 @@ let O = new h.Z('ChannelRTCStore'),
     k = {},
     U = {},
     G = {},
-    B = {},
-    Z = {},
-    F = {};
-function V(e) {
-    let t = x[e];
-    return null == t && ((t = new N.ZP(e)), (x[e] = t)), t;
+    B = {};
+function Z(e) {
+    let t = D[e];
+    return null == t && ((t = new T.ZP(e)), (D[e] = t)), t;
 }
-function H(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
+function F(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O;
     return t.reduce(
         (t, n) =>
-            e(V(n))
+            e(Z(n))
                 ? ((function (e) {
-                      let t = V(e);
+                      let t = Z(e);
                       if (0 === t.size()) return;
-                      let n = ei(e) || q(t) ? R.WtW.VIDEO : R.WtW.VOICE;
-                      n === R.WtW.VOICE ? (delete P[e], delete k[e]) : (P[e] = n);
+                      let n = en(e) || K(t) ? A.WtW.VIDEO : A.WtW.VOICE;
+                      n === A.WtW.VOICE ? (delete w[e], delete M[e]) : (w[e] = n);
                   })(n),
                   (function (e) {
-                      let t = E.default.getId(),
-                          n = V(e);
-                      if (0 === n.size() || S.Z.getVoiceChannelId() !== e) {
-                          z(e, null);
+                      let t = p.default.getId(),
+                          n = Z(e);
+                      if (0 === n.size() || E.Z.getVoiceChannelId() !== e) {
+                          W(e, null);
                           return;
                       }
-                      let r = C.dF.NONE,
-                          i = n.toArray(N.sI.STREAM).find((e) => e.type === C.fO.STREAM && g.Z.getActiveStreamForStreamKey(e.id));
-                      if (null != i) l()(i.type === C.fO.STREAM, 'Impossible condition'), (r = i.id);
+                      let r = y.dF.NONE,
+                          i = n.toArray(T.sI.STREAM).find((e) => e.type === y.fO.STREAM && h.Z.getActiveStreamForStreamKey(e.id));
+                      if (null != i) a()(i.type === y.fO.STREAM, 'Impossible condition'), (r = i.id);
                       else if (1 === n.size()) r = t;
-                      else if (1 === n.size(N.sI.VIDEO)) {
-                          let [e] = n.toArray(N.sI.VIDEO);
+                      else if (1 === n.size(T.sI.VIDEO)) {
+                          let [e] = n.toArray(T.sI.VIDEO);
                           r = e.id;
                       } else {
-                          var a;
-                          let e = n.toArray().find((e) => e.type === C.fO.USER && e.id !== t && !e.ringing);
-                          r = null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : t;
+                          var s;
+                          let e = n.toArray().find((e) => e.type === y.fO.USER && e.id !== t && !e.ringing);
+                          r = null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : t;
                       }
-                      let [s] = Y(e);
-                      if (s !== C.dF.AUTO && s !== C.dF.NONE) {
-                          let e = n.getParticipant(s);
-                          (null == e || (e.type === C.fO.STREAM && null == g.Z.getActiveStreamForStreamKey(e.id))) && (s = C.dF.NONE);
+                      let [o] = H(e);
+                      if (o !== y.dF.AUTO && o !== y.dF.NONE) {
+                          let e = n.getParticipant(o);
+                          (null == e || (e.type === y.fO.STREAM && null == h.Z.getActiveStreamForStreamKey(e.id))) && (o = y.dF.NONE);
                       }
-                      z(e, [s, r]);
+                      W(e, [o, r]);
                   })(n),
                   !0)
                 : t,
         !1
     );
 }
+function V(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O;
+    return F((t) => t.updateParticipant(e), t);
+}
+function H(e) {
+    var t;
+    let n = g.Z.getChannel(e),
+        r = (null == n ? void 0 : n.isDM()) ? y.dF.AUTO : y.dF.NONE;
+    return null !== (t = L[e]) && void 0 !== t ? t : [r, y.dF.NONE];
+}
 function j(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L;
-    return H((t) => t.updateParticipant(e), t);
+    if (null == L[e]) return !1;
+    let [t] = L[e];
+    return t !== y.dF.NONE;
 }
 function Y(e) {
-    var t;
-    let n = I.Z.getChannel(e),
-        r = (null == n ? void 0 : n.isDM()) ? C.dF.AUTO : C.dF.NONE;
-    return null !== (t = w[e]) && void 0 !== t ? t : [r, C.dF.NONE];
-}
-function W(e) {
-    if (null == w[e]) return !1;
-    let [t] = w[e];
-    return t !== C.dF.NONE;
-}
-function K(e) {
-    null == M[e] &&
-        (M[e] = {
+    null == x[e] &&
+        (x[e] = {
             gridDurationMs: 0,
             focusDurationMs: 0,
             toggleCount: 0,
             lastUpdate: 0
         });
-    let t = M[e],
+    let t = x[e],
         n = performance.now(),
-        r = W(e);
+        r = j(e);
     if (t.lastUpdate > 0) {
         let e = n - t.lastUpdate;
         t[r ? 'focusDurationMs' : 'gridDurationMs'] += e;
     }
     t.lastUpdate = n;
 }
-function z(e, t) {
-    K(e);
-    let n = W(e);
-    null == t ? delete w[e] : (w[e] = t), n !== W(e) && M[e].toggleCount++;
+function W(e, t) {
+    Y(e);
+    let n = j(e);
+    null == t ? delete L[e] : (L[e] = t), n !== j(e) && x[e].toggleCount++;
 }
-function q(e) {
-    return e.size(N.sI.STREAM) > 0 || e.size(N.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
+function K(e) {
+    return e.size(T.sI.STREAM) > 0 || e.size(T.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
-function Q(e) {
-    delete x[e], delete w[e], delete P[e], delete k[e];
+function z(e) {
+    delete D[e], delete L[e], delete w[e], delete M[e];
 }
-function X() {
-    return H(
+function q() {
+    return F(
         (e) => e.rebuild(),
         (function () {
             let e = [],
-                t = S.Z.getChannelId();
+                t = E.Z.getChannelId();
             null != t && e.push(t);
-            let n = S.Z.getVoiceChannelId();
+            let n = E.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
-            let r = p.Z.getRemoteSessionId(),
-                i = A.Z.getVoiceStateForSession(E.default.getId(), r);
-            (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), c().difference(L, e).forEach(Q);
-            let a = c().difference(e, L);
-            return (L = e), a;
+            let r = f.Z.getRemoteSessionId(),
+                i = b.Z.getVoiceStateForSession(p.default.getId(), r);
+            (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), o().difference(O, e).forEach(z);
+            let a = o().difference(e, O);
+            return (O = e), a;
         })()
     );
 }
-function J() {
-    return H((e) => e.updateEmbeddedActivities());
+function Q() {
+    return F((e) => e.updateEmbeddedActivities());
+}
+function X(e) {
+    let { userId: t } = e;
+    return F((e) => e.updateParticipantSpeaking(t));
+}
+function J(e) {
+    let { user: t } = e;
+    return V(t.id);
 }
 function $(e) {
-    let { userId: t } = e;
-    return H((e) => e.updateParticipantSpeaking(t));
+    let { channelId: t } = e;
+    return F((e) => e.rebuild(), [t]);
 }
 function ee(e) {
-    let { user: t } = e;
-    return j(t.id);
-}
-function et(e) {
-    let { channelId: t } = e;
-    return H((e) => e.rebuild(), [t]);
-}
-function en(e) {
     let {
         channel: { id: t }
     } = e;
-    return delete B[t], delete Z[t], Q(t);
+    return delete U[t], delete G[t], z(t);
 }
-function er(e) {
+function et(e) {
     let { streamKey: t } = e,
-        { channelId: n, ownerId: r } = (0, m.my)(t);
-    return j(r, [n]);
+        { channelId: n, ownerId: r } = (0, _.my)(t);
+    return V(r, [n]);
 }
-function ei(e) {
+function en(e) {
     var t;
-    return !!(null === (t = I.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
+    return !!(null === (t = g.Z.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal());
 }
-class ea extends (r = d.ZP.Store) {
-    initialize() {
-        this.waitFor(g.Z, E.default, v.Z, I.Z, _.ZP, S.Z, T.Z, b.default, y.Z, A.Z), this.syncWith([_.ZP], J), this.syncWith([p.Z], X);
+class er extends (r = l.ZP.PersistedStore) {
+    initialize(e) {
+        this.waitFor(h.Z, p.default, m.Z, g.Z, c.ZP, E.Z, v.Z, I.default, S.Z, b.Z), this.syncWith([c.ZP], Q), this.syncWith([f.Z], q), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(k, null == e ? void 0 : e.voiceParticipantsHidden);
+    }
+    getState() {
+        return { voiceParticipantsHidden: k };
     }
     getParticipantsVersion(e) {
-        return V(e).version;
+        return Z(e).version;
     }
     getParticipants(e) {
         var t;
-        return null !== (t = V(e).toArray()) && void 0 !== t ? t : D;
+        return null !== (t = Z(e).toArray()) && void 0 !== t ? t : R;
     }
     getSpeakingParticipants(e) {
         var t;
-        return null !== (t = V(e).toArray(N.sI.SPEAKING)) && void 0 !== t ? t : D;
+        return null !== (t = Z(e).toArray(T.sI.SPEAKING)) && void 0 !== t ? t : R;
     }
     getFilteredParticipants(e) {
-        return G[e] ? V(e).toArray(N.sI.FILTERED) : V(e).toArray();
+        return k[e] ? Z(e).toArray(T.sI.FILTERED) : Z(e).toArray();
     }
     getVideoParticipants(e) {
         var t;
-        return null !== (t = V(e).toArray(N.sI.VIDEO)) && void 0 !== t ? t : D;
+        return null !== (t = Z(e).toArray(T.sI.VIDEO)) && void 0 !== t ? t : R;
     }
     getStreamParticipants(e) {
         var t;
-        return null !== (t = V(e).toArray(N.sI.STREAM)) && void 0 !== t ? t : D;
+        return null !== (t = Z(e).toArray(T.sI.STREAM)) && void 0 !== t ? t : R;
     }
     getActivityParticipants(e) {
         var t;
-        return null !== (t = V(e).toArray(N.sI.ACTIVITY)) && void 0 !== t ? t : D;
+        return null !== (t = Z(e).toArray(T.sI.ACTIVITY)) && void 0 !== t ? t : R;
     }
     getParticipant(e, t) {
-        return V(e).getParticipant(t);
+        return Z(e).getParticipant(t);
     }
     getUserParticipantCount(e) {
-        let t = V(e);
-        return t.size() - t.size(N.sI.STREAM) - t.size(N.sI.ACTIVITY);
+        let t = Z(e);
+        return t.size() - t.size(T.sI.STREAM) - t.size(T.sI.ACTIVITY);
     }
     getParticipantsOpen(e) {
         var t;
-        return null === (t = U[e]) || void 0 === t || t;
+        return null === (t = P[e]) || void 0 === t || t;
     }
     getVoiceParticipantsHidden(e) {
         var t;
-        return null !== (t = G[e]) && void 0 !== t && t;
+        return null !== (t = k[e]) && void 0 !== t && t;
     }
     getSelectedParticipantId(e) {
-        let [t, n] = Y(e);
-        return t === C.dF.NONE ? null : t !== C.dF.AUTO ? t : n === C.dF.NONE || n === C.dF.AUTO ? null : n;
+        let [t, n] = H(e);
+        return t === y.dF.NONE ? null : t !== y.dF.AUTO ? t : n === y.dF.NONE || n === y.dF.AUTO ? null : n;
     }
     getSelectedParticipant(e) {
         let t = this.getSelectedParticipantId(e);
-        return null == t ? null : V(e).getParticipant(t);
+        return null == t ? null : Z(e).getParticipant(t);
     }
     getSelectedParticipantStats(e) {
-        let t = M[e];
+        let t = x[e];
         return null == t
             ? {}
             : {
@@ -239,180 +252,173 @@ class ea extends (r = d.ZP.Store) {
     }
     getMode(e) {
         var t;
-        return null !== (t = P[e]) && void 0 !== t ? t : ei(e) ? R.WtW.VIDEO : R.WtW.VOICE;
+        return null !== (t = w[e]) && void 0 !== t ? t : en(e) ? A.WtW.VIDEO : A.WtW.VOICE;
     }
     getLayout(e) {
         var t, n;
-        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R.IlC.APP;
-        if (__OVERLAY__) return R.AEg.NORMAL;
-        let i = ei(e);
-        return null !== (n = null === (t = k[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : i ? R.AEg.NO_CHAT : R.AEg.NORMAL;
+        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : A.IlC.APP;
+        if (__OVERLAY__) return A.AEg.NORMAL;
+        let i = en(e);
+        return null !== (n = null === (t = M[e]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : i ? A.AEg.NO_CHAT : A.AEg.NORMAL;
     }
     getChatOpen(e) {
         var t;
-        return null !== (t = B[e]) && void 0 !== t && t;
+        return null !== (t = U[e]) && void 0 !== t && t;
     }
     getAllChatOpen() {
-        return B;
+        return U;
     }
     isFullscreenInContext() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R.IlC.APP;
-        return Object.values(k).some((t) => t[e] === R.AEg.FULL_SCREEN);
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : A.IlC.APP;
+        return Object.values(M).some((t) => t[e] === A.AEg.FULL_SCREEN);
     }
     getStageStreamSize(e) {
-        return Z[e];
+        return G[e];
     }
     getStageVideoLimitBoostUpsellDismissed(e) {
-        return F[e];
+        return B[e];
     }
 }
-(s = 'ChannelRTCStore'),
-    (a = 'displayName') in (i = ea)
-        ? Object.defineProperty(i, a, {
-              value: s,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (i[a] = s),
-    (t.Z = new ea(f.Z, {
+N(er, 'displayName', 'ChannelRTCStore'),
+    N(er, 'persistKey', 'ChannelRTCStore'),
+    (t.Z = new er(u.Z, {
         CONNECTION_OPEN: function () {
-            for (let e of L) Q(e);
-            X();
+            for (let e of O) z(e);
+            q();
         },
-        CONNECTION_OPEN_SUPPLEMENTAL: X,
-        THREAD_LIST_SYNC: X,
-        OVERLAY_INITIALIZE: X,
+        CONNECTION_OPEN_SUPPLEMENTAL: q,
+        THREAD_LIST_SYNC: q,
+        OVERLAY_INITIALIZE: q,
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t, currentVoiceChannelId: n } = e;
-            return null != t ? delete M[t] : null != n && (delete B[n], delete Z[n], K(n)), X();
+            return null != t ? delete x[t] : null != n && (delete U[n], delete G[n], Y(n)), q();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t, messageId: n } = e,
-                r = X(),
-                i = I.Z.getChannel(t);
-            return null == t || null == n || ((null == i ? void 0 : i.type) !== R.d4z.GUILD_VOICE && (null == i ? void 0 : i.type) !== R.d4z.GUILD_STAGE_VOICE) || B[t] ? r : ((B[t] = !0), !0);
+                r = q(),
+                i = g.Z.getChannel(t);
+            return null == t || null == n || ((null == i ? void 0 : i.type) !== A.d4z.GUILD_VOICE && (null == i ? void 0 : i.type) !== A.d4z.GUILD_STAGE_VOICE) || U[t] ? r : ((U[t] = !0), !0);
         },
-        CHANNEL_RTC_ACTIVE_CHANNELS: X,
+        CHANNEL_RTC_ACTIVE_CHANNELS: q,
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t, initial: n } = e;
             return t.reduce((e, t) => {
                 let { userId: r, channelId: i } = t;
-                return n && null != i && !L.includes(i) ? e : j(r) || e;
+                return n && null != i && !O.includes(i) ? e : V(r) || e;
             }, !1);
         },
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
-            if (t.type === R.d4z.GROUP_DM) {
+            if (t.type === A.d4z.GROUP_DM) {
                 let e = t.originChannelId;
                 if (null != e) {
                     var n, r;
-                    return (k[t.id] = { [R.IlC.APP]: null !== (r = null === (n = k[e]) || void 0 === n ? void 0 : n[R.IlC.APP]) && void 0 !== r ? r : R.AEg.NORMAL }), !0;
+                    return (M[t.id] = { [A.IlC.APP]: null !== (r = null === (n = M[e]) || void 0 === n ? void 0 : n[A.IlC.APP]) && void 0 !== r ? r : A.AEg.NORMAL }), !0;
                 }
             }
             return !1;
         },
-        CHANNEL_DELETE: en,
-        THREAD_DELETE: en,
-        CALL_CREATE: et,
-        CALL_UPDATE: et,
+        CHANNEL_DELETE: ee,
+        THREAD_DELETE: ee,
+        CALL_CREATE: $,
+        CALL_UPDATE: $,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
-            return Q(t);
+            return z(t);
         },
         CHANNEL_RTC_SELECT_PARTICIPANT: function (e) {
             let { channelId: t, id: n } = e,
-                r = V(t);
+                r = Z(t);
             null == n &&
-                r.toArray(N.sI.STREAM).forEach((e) => {
-                    (0, C._5)(e) && r.updateParticipant(e.user.id);
+                r.toArray(T.sI.STREAM).forEach((e) => {
+                    (0, y._5)(e) && r.updateParticipant(e.user.id);
                 });
-            let [, i] = Y(t);
-            if ((z(t, [null != n ? n : C.dF.NONE, i]), (0, m.DB)(n))) {
+            let [, i] = H(t);
+            if ((W(t, [null != n ? n : y.dF.NONE, i]), (0, _.DB)(n))) {
                 try {
-                    let { ownerId: e } = (0, m.my)(n);
-                    e === E.default.getId() && j(e, [t]);
+                    let { ownerId: e } = (0, _.my)(n);
+                    e === p.default.getId() && V(e, [t]);
                 } catch (e) {
-                    O.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
+                    C.warn('INVALID STREAM KEY FORMAT '.concat(n), e);
                 }
-                !q(r) && (U[t] = !1);
+                !K(r) && (P[t] = !1);
             }
         },
         CHANNEL_RTC_UPDATE_LAYOUT: function (e) {
             let { channelId: t, layout: n, appContext: r } = e;
-            k[t] = {
-                ...k[t],
+            M[t] = {
+                ...M[t],
                 [r]: n
             };
         },
         CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN: function (e) {
             let { channelId: t, participantsOpen: n } = e;
-            U[t] = n;
+            P[t] = n;
         },
         CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function (e) {
             let { channelId: t, voiceParticipantsHidden: n } = e;
-            G[t] = n;
+            k[t] = n;
         },
         CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function (e) {
             let { channelId: t, large: n } = e;
-            Z[t] = n;
+            G[t] = n;
         },
         CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function (e) {
             let { channelId: t, dismissed: n } = e;
-            F[t] = n;
+            B[t] = n;
         },
         STREAM_UPDATE_SELF_HIDDEN: function (e) {
             let { channelId: t, selfStreamHidden: n } = e,
-                r = E.default.getId();
+                r = p.default.getId();
             if (n) {
-                let [e] = Y(t);
-                (0, m.DB)(e) && e.includes(r) && z(t, null);
+                let [e] = H(t);
+                (0, _.DB)(e) && e.includes(r) && W(t, null);
             }
-            j(r, [t]);
+            V(r, [t]);
         },
         CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
             let { channelId: t, chatOpen: n } = e;
-            B[t] = n;
+            U[t] = n;
         },
         RTC_CONNECTION_VIDEO: function (e) {
             let { channelId: t, userId: n } = e;
-            return j(n, [t]);
+            return V(n, [t]);
         },
         RTC_CONNECTION_PLATFORM: function (e) {
             let { channelId: t, userId: n } = e;
-            return j(n, [t]);
+            return V(n, [t]);
         },
         AUDIO_SET_LOCAL_VIDEO_DISABLED: function (e) {
             let { userId: t } = e;
-            return j(t);
+            return V(t);
         },
         MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: function (e) {
             let { channelId: t, senderUserId: n, maxResolution: r, maxFrameRate: i } = e;
-            return H((e) => e.updateParticipantQuality(n, r, i), [t]);
+            return F((e) => e.updateParticipantQuality(n, r, i), [t]);
         },
-        STREAM_CLOSE: er,
-        STREAM_DELETE: er,
+        STREAM_CLOSE: et,
+        STREAM_DELETE: et,
         STREAM_WATCH: function (e) {
             let { streamKey: t } = e,
-                { channelId: n, ownerId: r } = (0, m.my)(t);
-            return j(r, [n]);
+                { channelId: n, ownerId: r } = (0, _.my)(t);
+            return V(r, [n]);
         },
-        SPEAKING: $,
-        GUILD_SOUNDBOARD_SOUND_PLAY_START: $,
-        GUILD_SOUNDBOARD_SOUND_PLAY_END: $,
-        USER_UPDATE: ee,
-        GUILD_MEMBER_UPDATE: ee,
+        SPEAKING: X,
+        GUILD_SOUNDBOARD_SOUND_PLAY_START: X,
+        GUILD_SOUNDBOARD_SOUND_PLAY_END: X,
+        USER_UPDATE: J,
+        GUILD_MEMBER_UPDATE: J,
         GUILD_DELETE: function (e) {
             let { guild: t } = e,
                 n = [];
             if (
-                (c().forEach(L, (e) => {
-                    let r = I.Z.getChannel(e);
+                (o().forEach(O, (e) => {
+                    let r = g.Z.getChannel(e);
                     (null == r || r.getGuildId() === t.id) && n.push(e);
                 }),
                 0 === n.length)
             )
                 return !1;
-            c().forEach(n, (e) => Q(e));
+            o().forEach(n, (e) => z(e));
         }
     }));
