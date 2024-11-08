@@ -1,86 +1,97 @@
 n(411104);
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(774078),
-    a = n(100527),
-    o = n(906732),
-    s = n(963249),
-    c = n(639119),
-    d = n(474936),
-    u = n(981631),
-    m = n(388032),
-    h = n(411605);
+var r = n(990547),
+    l = n(481060),
+    a = n(774078),
+    o = n(100527),
+    s = n(906732),
+    c = n(213609),
+    d = n(963249),
+    u = n(639119),
+    m = n(474936),
+    h = n(981631),
+    f = n(388032),
+    p = n(411605);
 t.Z = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: f } = e,
-        { analyticsLocations: p } = (0, o.ZP)(
+    let { dismissCurrentNotice: n, subscriptionTier: _ } = e,
+        { analyticsLocations: g } = (0, s.ZP)(
             (function (e) {
                 switch (e) {
-                    case d.Si.TIER_0:
-                        return a.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
-                    case d.Si.TIER_2:
-                        return a.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
+                    case m.Si.TIER_0:
+                        return o.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
+                    case m.Si.TIER_2:
+                        return o.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
                 }
-            })(f)
+            })(_)
         ),
-        _ = (0, c.N)(),
-        g = (0, l.Z)(null != _ && null != _.expires_at ? Date.parse(_.expires_at) : 0);
-    return null == _ || (null === (t = _.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== f || null == _.expires_at || Object.values(g).every((e) => 0 === e)
+        E = (0, u.N)(),
+        C = (0, a.Z)(null != E && null != E.expires_at ? Date.parse(E.expires_at) : 0),
+        I = null == E || (null === (t = E.subscription_trial) || void 0 === t ? void 0 : t.sku_id) !== _ || null == E.expires_at || Object.values(C).every((e) => 0 === e);
+    return ((0, c.Z)(
+        {
+            type: r.ImpressionTypes.VIEW,
+            name: r.ImpressionNames.TRIAL_NOTICE,
+            properties: { trial_id: null == E ? void 0 : E.id }
+        },
+        { disableTrack: I }
+    ),
+    I)
         ? null
-        : (0, i.jsxs)(r.Notice, {
+        : (0, i.jsxs)(l.Notice, {
               color: (function (e) {
                   switch (e) {
-                      case d.Si.TIER_0:
-                          return r.NoticeColors.PREMIUM_TIER_0;
-                      case d.Si.TIER_2:
-                          return r.NoticeColors.PREMIUM_TIER_2;
+                      case m.Si.TIER_0:
+                          return l.NoticeColors.PREMIUM_TIER_0;
+                      case m.Si.TIER_2:
+                          return l.NoticeColors.PREMIUM_TIER_2;
                       default:
                           throw Error('Unsupported subscription tier: '.concat(e));
                   }
-              })(f),
+              })(_),
               children: [
-                  (0, i.jsx)(r.NoticeCloseButton, { onClick: n }),
-                  (0, i.jsx)(r.NitroWheelIcon, {
+                  (0, i.jsx)(l.NoticeCloseButton, { onClick: n }),
+                  (0, i.jsx)(l.NitroWheelIcon, {
                       size: 'md',
                       color: 'currentColor',
-                      className: h.premiumIcon
+                      className: p.premiumIcon
                   }),
                   (function (e, t) {
                       switch (e) {
-                          case d.Si.TIER_0:
-                              return t.days > 0 ? m.intl.formatToPlainString(m.t.sP5OqK, { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t['7Lhfu7'], { hours: t.hours }) : m.intl.formatToPlainString(m.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-                          case d.Si.TIER_2:
-                              return t.days > 0 ? m.intl.formatToPlainString(m.t['4prs5e'], { days: t.days }) : t.hours > 0 ? m.intl.formatToPlainString(m.t.OD5nIS, { hours: t.hours }) : m.intl.formatToPlainString(m.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
+                          case m.Si.TIER_0:
+                              return t.days > 0 ? f.intl.formatToPlainString(f.t.sP5OqK, { days: t.days }) : t.hours > 0 ? f.intl.formatToPlainString(f.t['7Lhfu7'], { hours: t.hours }) : f.intl.formatToPlainString(f.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                          case m.Si.TIER_2:
+                              return t.days > 0 ? f.intl.formatToPlainString(f.t['4prs5e'], { days: t.days }) : t.hours > 0 ? f.intl.formatToPlainString(f.t.OD5nIS, { hours: t.hours }) : f.intl.formatToPlainString(f.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(f, g),
-                  (0, i.jsx)(r.NoticeButton, {
+                  })(_, C),
+                  (0, i.jsx)(l.NoticeButton, {
                       onClick: () => {
-                          (0, s.Z)({
-                              trialId: _.trial_id,
-                              subscriptionTier: f,
-                              analyticsLocations: p,
+                          (0, d.Z)({
+                              trialId: E.trial_id,
+                              subscriptionTier: _,
+                              analyticsLocations: g,
                               analyticsObject: {
-                                  page: u.ZY5.IN_APP,
-                                  section: u.jXE.NOTIFICATION_BAR,
-                                  object: u.qAy.BUTTON_CTA
+                                  page: h.ZY5.IN_APP,
+                                  section: h.jXE.NOTIFICATION_BAR,
+                                  object: h.qAy.BUTTON_CTA
                               }
                           });
                       },
                       children: (function (e) {
                           switch (e) {
-                              case d.Si.TIER_0:
-                                  return m.intl.string(m.t.mCG029);
-                              case d.Si.TIER_2:
-                                  return m.intl.string(m.t['7590PT']);
+                              case m.Si.TIER_0:
+                                  return f.intl.string(f.t.mCG029);
+                              case m.Si.TIER_2:
+                                  return f.intl.string(f.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }
-                      })(f)
+                      })(_)
                   })
               ]
           });

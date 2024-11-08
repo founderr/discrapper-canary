@@ -168,6 +168,8 @@ n.d(t, {
     (a.SNOWSGIVING = 'impression_snowsgiving'),
     (a.SOUNDBOARD_POPOUT = 'impression_soundboard_popout'),
     (a.STAGE_DISCOVERY = 'impression_stage_discovery'),
+    (a.TRIAL_FOR_ALL_COACHTIP = 'impression_trial_for_all_coachtip'),
+    (a.TRIAL_NOTICE = 'impression_trial_notice'),
     (a.URF_CONFIRM_EMAIL_CODE = 'impression_urf_confirm_email_code'),
     (a.URF_ENTER_EMAIL = 'impression_urf_enter_email'),
     (a.USER_ACCOUNT_EMAIL_CHANGE_COLLECT_REASONS = 'impression_user_account_email_change_collect_reasons'),
