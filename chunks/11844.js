@@ -3,37 +3,38 @@ var i = n(200651),
     r = n(481060),
     l = n(906732),
     a = n(975298),
-    o = n(879892),
-    c = n(709586),
-    d = n(267642),
-    u = n(981631),
-    m = n(388032),
-    h = n(156124);
+    o = n(125529),
+    c = n(879892),
+    d = n(709586),
+    u = n(267642),
+    m = n(981631),
+    h = n(388032),
+    g = n(156124);
 t.Z = function () {
     let e = s.useRef(null),
         { analyticsLocations: t } = (0, l.ZP)(),
-        { fractionalState: g } = (0, a.Z)();
-    function p(n) {
+        { fractionalState: p } = (0, a.Z)();
+    function x(n) {
         null != e.current && (0, r.closeModal)(e.current),
-            (0, o.u)({
+            (0, c.u)({
                 analyticsLocation: {
-                    page: u.ZY5.GUILD_BOOSTING_USER_SETTINGS,
-                    section: u.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
-                    object: u.qAy.BUTTON_CTA,
-                    objectType: u.Qqv.BUY
+                    page: m.ZY5.GUILD_BOOSTING_USER_SETTINGS,
+                    section: m.jXE.GUILD_BOOSTING_BOOST_ANY_GUILD_CTA,
+                    object: m.qAy.BUTTON_CTA,
+                    objectType: m.Qqv.BUY
                 },
                 analyticsLocations: t,
                 guild: n
             });
     }
-    async function x() {
+    async function S() {
         e.current = await (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,
-                        onSelectGuild: p
+                        onSelectGuild: x
                     });
             },
             {
@@ -43,39 +44,40 @@ t.Z = function () {
             }
         );
     }
-    let S = (0, d.aq)({ fractionalState: g });
+    let T = (0, u.aq)({ fractionalState: p });
     return (0, i.jsxs)('div', {
-        className: h.wrapper,
+        className: g.wrapper,
         children: [
-            (0, i.jsx)(c.Z, {
-                className: h.boostIcon,
+            (0, i.jsx)(d.Z, {
+                className: g.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, i.jsx)(r.Text, {
-                className: h.copy,
+                className: g.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: m.intl.format(m.t.kqC5vr, {
+                children: h.intl.format(h.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
-                        let n = null != S,
+                        let n = null != T,
                             s = (0, i.jsx)(
                                 r.Button,
                                 {
-                                    className: h.cta,
+                                    className: g.cta,
                                     disabled: n,
                                     color: r.Button.Colors.LINK,
                                     look: r.Button.Looks.LINK,
-                                    onClick: n ? void 0 : x,
+                                    onClick: n ? void 0 : S,
                                     children: e
                                 },
                                 t
                             );
                         return n
                             ? (0, i.jsx)(
-                                  r.Tooltip,
+                                  o.Z,
                                   {
-                                      text: S,
+                                      text: T,
+                                      'aria-label': T.toString(),
                                       children: (e) =>
                                           (0, i.jsx)('span', {
                                               ...e,
