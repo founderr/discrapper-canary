@@ -1,1 +1,1 @@
-i.exports = JSON.parse('{"iCehw8":"Terverifikasi","4PJP5u":"Terverifikasi"}');
+i.exports = JSON.parse('{"4PJP5u":"Terverifikasi","iCehw8":"Terverifikasi"}');

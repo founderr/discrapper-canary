@@ -1,27 +1,39 @@
 n.d(t, {
     BS: function () {
-        return b;
-    },
-    Op: function () {
-        return S;
-    },
-    gx: function () {
         return v;
     },
-    k3: function () {
+    Dp: function () {
         return x;
     },
-    mN: function () {
-        return R;
+    Gw: function () {
+        return T;
     },
-    sP: function () {
+    Op: function () {
+        return P;
+    },
+    gx: function () {
+        return S;
+    },
+    iG: function () {
         return I;
     },
-    t2: function () {
+    k3: function () {
+        return E;
+    },
+    mN: function () {
+        return O;
+    },
+    oo: function () {
         return C;
     },
+    sP: function () {
+        return j;
+    },
+    t2: function () {
+        return N;
+    },
     vZ: function () {
-        return E;
+        return b;
     }
 }),
     n(653041),
@@ -41,7 +53,7 @@ var i = n(278074),
     p = n(474936),
     _ = n(735825),
     h = n(388032);
-let x = (e) => {
+let E = (e) => {
         switch (e) {
             case _.EB.PENDING:
                 return h.intl.string(h.t.fhK8ho);
@@ -53,7 +65,18 @@ let x = (e) => {
                 return '';
         }
     },
-    E = (e, t, n) => {
+    x = (e) => {
+        switch (e) {
+            case _.EB.PENDING:
+                return h.intl.string(h.t['9o4F4+']);
+            case _.EB.REDEEMABLE:
+            case _.EB.REDEEMED:
+                return h.intl.string(h.t['3R9pPD']);
+            default:
+                return '';
+        }
+    },
+    b = (e, t, n) => {
         switch (e) {
             case _.EB.PENDING:
                 return t === _.Ft.FREE_GUILD_BOOST_1_MONTH ? h.intl.string(h.t.hnbagI) : h.intl.string(h.t['73+DnJ']);
@@ -66,7 +89,18 @@ let x = (e) => {
                 return;
         }
     },
-    b = (e) => {
+    C = (e) => {
+        switch (e) {
+            case _.EB.PENDING:
+                return h.intl.string(h.t.nlcs6O);
+            case _.EB.REDEEMABLE:
+            case _.EB.REDEEMED:
+                return h.intl.string(h.t.F915ra);
+            default:
+                return;
+        }
+    },
+    v = (e) => {
         switch (e) {
             case _.EB.PENDING:
                 return h.intl.string(h.t.tncFsb);
@@ -77,8 +111,19 @@ let x = (e) => {
             default:
                 return;
         }
+    },
+    T = (e) => {
+        switch (e) {
+            case _.EB.PENDING:
+                return h.intl.string(h.t.LAFMBQ);
+            case _.EB.REDEEMABLE:
+            case _.EB.REDEEMED:
+                return h.intl.string(h.t['4cCWPT']);
+            default:
+                return;
+        }
     };
-function C(e, t) {
+function N(e, t) {
     switch (e) {
         case _.EB.PENDING:
             return null != t ? h.intl.formatToPlainString(h.t.FULtam, { days: t }) : '';
@@ -90,9 +135,21 @@ function C(e, t) {
             return '';
     }
 }
-let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
-    T = 'getWhatsNewRow',
-    N = (e) => {
+function I(e, t) {
+    switch (e) {
+        case _.EB.PENDING:
+            return null != t ? h.intl.formatToPlainString(h.t.a1eKDg, { days: t }) : '';
+        case _.EB.REDEEMABLE:
+            return h.intl.string(h.t.B9eJyc);
+        case _.EB.REDEEMED:
+            return h.intl.string(h.t.hpy7PD);
+        default:
+            return '';
+    }
+}
+let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
+    R = 'getWhatsNewRow',
+    A = (e) => {
         let { cards: t, perksCards: n, isFullScreen: i, showTenureCard: r, shopMarketingVariation: a } = e,
             l = i ? 3 : 2,
             o = (e) => {
@@ -102,14 +159,14 @@ let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
             c = () => {
                 a !== s.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: g } = m._.getCurrentConfig({ location: T }, { autoTrackExposure: !1 }),
-            { enabled: f } = u.r.getCurrentConfig({ location: T }, { autoTrackExposure: !1 }),
-            { enabled: p } = d.C.getCurrentConfig({ location: T }, { autoTrackExposure: !1 }),
+            { enabled: g } = m._.getCurrentConfig({ location: R }, { autoTrackExposure: !1 }),
+            { enabled: f } = u.r.getCurrentConfig({ location: R }, { autoTrackExposure: !1 }),
+            { enabled: p } = d.C.getCurrentConfig({ location: R }, { autoTrackExposure: !1 }),
             _ = g && !f && !p,
-            h = A();
+            h = Z();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
-    I = (e) => {
+    j = (e) => {
         let { perksCards: t, variant: n, shopMarketingVariation: r, isFullScreen: a, showTenureCard: s, tileOrderVariant: l, isPremiumSubscriber: o, fractionalState: c } = e,
             d = [],
             u = p.a$.FP_ONLY;
@@ -138,7 +195,7 @@ let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
                     .otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
                 break;
             case f.R0.WHATS_NEW:
-                d = N({
+                d = A({
                     cards: d,
                     perksCards: t,
                     isFullScreen: a,
@@ -195,7 +252,7 @@ let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
         }
         return !a && (d = d.filter((e) => !e.hideOnNarrowScreen)), d;
     },
-    S = (e) => {
+    P = (e) => {
         let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === p.Si.TIER_2;
@@ -214,11 +271,11 @@ let v = (e, t, n) => ((0, a.wj)(e) ? t : n),
             subtitle: h.intl.string(h.t['5TFEXl'])
         };
     },
-    R = () => {
+    O = () => {
         let e = (0, r.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    A = () => {
+    Z = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, p.p9.TIER_2);
     };
