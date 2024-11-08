@@ -81,7 +81,13 @@ let q = (e) => {
         eC = null != ef ? ef : null == J ? void 0 : J.createdAt,
         ev = s || null != er || null != el || ec || ep || eg || null != eu || null != eh || en,
         { enabled: eS } = Z._.useExperiment({ location: W }, { autoTrackExposure: !1 }),
-        { enabled: eN } = b.Z.useExperiment({ location: W }, { autoTrackExposure: !1 }),
+        { enabled: eN } = b.Z.useExperiment(
+            { location: W },
+            {
+                autoTrackExposure: es,
+                disable: !es
+            }
+        ),
         eT = eS && (null == er ? void 0 : er.trial_id) === H.a7,
         [ex, eA] = (0, E.US)(ea ? [u.z.REVERSE_TRIAL_NITRO_TAB_BADGE] : [], void 0, !0);
     if (!(ev = ev || (null != J && null != eC && Date.now() - eC.getTime() > K))) return null;
