@@ -1,5 +1,6 @@
 e.exports = {
     modal: 'modal_beafbd',
+    heading: 'heading_beafbd',
     divider: 'divider_beafbd',
     channel: 'channel_beafbd',
     image: 'image_beafbd',
