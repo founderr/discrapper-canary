@@ -57,4 +57,17 @@ function f() {
         e
     );
 }
-t.ZP = c;
+(0, o.Z)({
+    id: '2024-11_seasonal_gifting_reminder',
+    label: 'Seasonal Gifting Reminder 2024',
+    kind: 'user',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enabled',
+            config: { enabled: !0 }
+        }
+    ]
+}),
+    (t.ZP = c);
