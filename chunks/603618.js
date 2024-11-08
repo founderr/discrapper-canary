@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return j;
     },
     i: function () {
-        return j;
+        return M;
     }
 }),
     n(47120);
@@ -26,12 +26,12 @@ var i = n(200651),
     _ = n(703656),
     C = n(409057),
     S = n(199902),
-    x = n(592125),
-    I = n(158776),
+    I = n(592125),
+    x = n(158776),
     Z = n(594174),
-    b = n(5192),
-    y = n(358085),
-    N = n(998502),
+    y = n(5192),
+    N = n(358085),
+    b = n(998502),
     O = n(388627),
     T = n(981631),
     A = n(388032),
@@ -62,7 +62,7 @@ function R(e) {
                     else {
                         var i;
                         let e = await d.Z.getOrEnsurePrivateChannel(c.id),
-                            n = null !== (i = x.Z.getChannel(e)) && void 0 !== i ? i : null;
+                            n = null !== (i = I.Z.getChannel(e)) && void 0 !== i ? i : null;
                         l()(null != n, 'Send channel must be defined'),
                             (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)),
                             await (0, g.p)({
@@ -83,14 +83,14 @@ function R(e) {
                 }
             }
         },
-        I = async () => {
+        x = async () => {
             var e;
             if (null == c) return;
             let t = await d.Z.getOrEnsurePrivateChannel(c.id),
-                n = null !== (e = x.Z.getChannel(t)) && void 0 !== e ? e : null;
-            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), y.isPlatformEmbedded ? N.ZP.focus() : window.focus();
+                n = null !== (e = I.Z.getChannel(t)) && void 0 !== e ? e : null;
+            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), N.isPlatformEmbedded && b.ZP.focus(null, !0);
         },
-        b = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
+        y = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
         O = C
             ? (0, i.jsx)(a.GroupPlusIcon, {
                   color: 'currentColor',
@@ -101,18 +101,20 @@ function R(e) {
                   size: 'sm'
               });
     return (0, i.jsx)(a.Tooltip, {
-        text: b,
-        'aria-label': b,
+        text: y,
+        'aria-label': y,
         children: (e) =>
             (0, i.jsx)(a.Button, {
                 ...e,
                 submitting: 'sending' === f,
-                onClick: v ? I : S,
+                onClick: v ? x : S,
                 className: L.inviteButton,
+                wrapperClassName: L.inviteButtonWrapper,
                 innerClassName: L.inviteButtonInner,
                 color: a.ButtonColors.TRANSPARENT,
                 look: 'sent' === f ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
                 size: a.ButtonSizes.ICON,
+                grow: !1,
                 children:
                     'sent' === f
                         ? v
@@ -131,7 +133,7 @@ function R(e) {
 function k(e) {
     let { entry: t } = e,
         n = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
-        r = (0, s.e7)([I.Z], () => (null != n ? I.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
+        r = (0, s.e7)([x.Z], () => (null != n ? x.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
         [l, c] = o.useState('unsent');
     if (!(null != r && (0, p.Z)(r, T.xjy.JOIN))) return null;
     let d = async (e) => {
@@ -183,7 +185,7 @@ function w(e) {
         r = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
         l = (0, s.e7)([S.Z], () => (null != r ? S.Z.getAnyStreamForUser(r.id) : null), [r]),
         { isMobileOnline: u, status: c } = (0, s.cj)(
-            [I.Z],
+            [x.Z],
             () =>
                 null == r
                     ? {
@@ -191,8 +193,8 @@ function w(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: I.Z.isMobileOnline(r.id),
-                          status: I.Z.getStatus(r.id)
+                          isMobileOnline: x.Z.isMobileOnline(r.id),
+                          status: x.Z.getStatus(r.id)
                       },
             [r]
         );
@@ -217,9 +219,9 @@ function w(e) {
                                       className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: b.ZP.getName(void 0, void 0, r)
+                                      children: y.ZP.getName(void 0, void 0, r)
                                   }),
-                                  null != l && (0, i.jsx)(m.ZP, {})
+                                  null != l && (0, i.jsx)(m.ZP, { className: L.liveIndicator })
                               ]
                           }),
                           (0, i.jsx)(v.Gk, {
@@ -241,7 +243,7 @@ function w(e) {
               ]
           });
 }
-function j(e) {
+function M(e) {
     let { entries: t, currentUserActivity: n } = e,
         o = t.slice(0, 5);
     return (0, i.jsx)(i.Fragment, {
@@ -258,12 +260,12 @@ function j(e) {
         )
     });
 }
-function M() {
+function j() {
     var e;
     let t = null === (e = (0, O.II)()) || void 0 === e ? void 0 : e.id,
         n = (0, E.Ns)(t),
         o = (0, s.e7)([Z.default], () => Z.default.getCurrentUser()),
-        r = (0, s.e7)([I.Z], () => (null != o && null != t ? I.Z.getApplicationActivity(o.id, t) : null)),
+        r = (0, s.e7)([x.Z], () => (null != o && null != t ? x.Z.getApplicationActivity(o.id, t) : null)),
         l = null != r && (0, p.Z)(r, T.xjy.JOIN);
     return 0 === n.length && null == r
         ? null
@@ -287,7 +289,7 @@ function M() {
                             children: A.intl.string(A.t['6Qgren'])
                         })
                       : null,
-                  (0, i.jsx)(j, {
+                  (0, i.jsx)(M, {
                       entries: n,
                       currentUserActivity: r
                   })

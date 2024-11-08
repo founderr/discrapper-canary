@@ -22,12 +22,12 @@ var i = n(200651),
     _ = n(74299),
     C = n(199902),
     S = n(592125),
-    x = n(430824),
-    I = n(131951),
+    I = n(430824),
+    x = n(131951),
     Z = n(944486),
-    b = n(574254),
-    y = n(556296),
-    N = n(237997),
+    y = n(574254),
+    N = n(556296),
+    b = n(237997),
     O = n(451478),
     T = n(585483),
     A = n(358085),
@@ -35,8 +35,8 @@ var i = n(200651),
     R = n(145597),
     k = n(830917),
     w = n(681603),
-    j = n(358446),
-    M = n(915614),
+    M = n(358446),
+    j = n(915614),
     P = n(690336),
     D = n(388627),
     z = n(561064),
@@ -85,7 +85,7 @@ let J = o.memo(function (e) {
             onContextMenu: Q,
             children: o
                 ? null
-                : (0, i.jsx)(M.Z, {
+                : (0, i.jsx)(j.Z, {
                       className: H.closeContainer,
                       keybind: t,
                       onClick: n,
@@ -96,7 +96,7 @@ let J = o.memo(function (e) {
     q = o.memo(function (e) {
         let { locked: t, focused: n } = e;
         return t && n
-            ? (0, i.jsx)(M.Z, {
+            ? (0, i.jsx)(j.Z, {
                   className: H.closeContainer,
                   onClick: () => d.Z.setInputLocked(!1, (0, R.QF)()),
                   IconComponent: u.LockUnlockedIcon
@@ -116,7 +116,7 @@ let J = o.memo(function (e) {
         );
     });
 function ee() {
-    if (null != b.Z.getContextMenu()) {
+    if (null != y.Z.getContextMenu()) {
         (0, c.Zy)();
         return;
     }
@@ -129,7 +129,7 @@ function en() {
     d.Z.setFocusedPID(null);
 }
 function ei(e) {
-    let t = N.Z.isLocked((0, R.QF)());
+    let t = b.Z.isLocked((0, R.QF)());
     'alt' === e.key.toLowerCase() && !t && ('keyup' === e.type.toLowerCase() ? T.S.dispatch(F.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }) : 'keydown' === e.type.toLowerCase() && T.S.dispatch(F.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }));
 }
 function eo() {
@@ -141,21 +141,21 @@ function eo() {
             incompatibleApp: v,
             hasValidResolution: g,
             hasZeroSizeDimension: E,
-            keybind: b
-        } = (0, s.cj)([N.Z, O.Z, y.Z], () => {
+            keybind: y
+        } = (0, s.cj)([b.Z, O.Z, N.Z], () => {
             let e = O.Z.windowSize((0, k.ZY)(n)),
-                t = y.Z.getOverlayKeybind();
+                t = N.Z.getOverlayKeybind();
             return {
-                locked: N.Z.isLocked((0, R.QF)()),
-                focused: N.Z.isFocused((0, R.QF)()),
-                incompatibleApp: N.Z.incompatibleApp,
+                locked: b.Z.isLocked((0, R.QF)()),
+                focused: b.Z.isFocused((0, R.QF)()),
+                incompatibleApp: b.Z.incompatibleApp,
                 hasValidResolution: (0, R.Te)(e),
                 hasZeroSizeDimension: 0 === e.height || 0 === e.width,
                 keybind: null != t ? (0, L.BB)(t.shortcut, !0) : '???'
             };
         }),
         { analyticsLocations: T } = (0, m.ZP)(p.Z.OVERLAY),
-        { showKeybindIndicators: A, dismissKeybindNotification: M } = (0, j.K)();
+        { showKeybindIndicators: A, dismissKeybindNotification: j } = (0, M.K)();
     return (
         !(function (e, t) {
             let n = o.useRef({
@@ -184,14 +184,14 @@ function eo() {
                     let { locked: t, showKeybindNotification: n, dismissKeybindNotification: i } = e,
                         o = Z.Z.getVoiceChannelId(),
                         r = S.Z.getChannel(o),
-                        l = null != r ? x.Z.getGuild(r.guild_id) : null,
+                        l = null != r ? I.Z.getGuild(r.guild_id) : null,
                         s = null != C.Z.getCurrentUserActiveStream(),
                         a = (0, D.pL)(),
-                        u = (0, _.Z)(I.Z),
+                        u = (0, _.Z)(x.Z),
                         c = null != o;
                     d.Z.track(F.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: c,
-                        text_widget_connected: N.Z.isPinned(F.Odu.TEXT)
+                        text_widget_connected: b.Z.isPinned(F.Odu.TEXT)
                     });
                     let p = u && !s && null != a,
                         m = c && null != l && null != o,
@@ -214,12 +214,12 @@ function eo() {
                                 game: a
                             }),
                         d.Z.overlayMounted(v);
-                    let g = t && N.Z.isPinned(F.Odu.TEXT);
+                    let g = t && b.Z.isPinned(F.Odu.TEXT);
                     f.Z.setLayout(g ? h.Xq : h.Sr), g && f.Z.enable();
                 })({
                     locked: r,
                     showKeybindNotification: A,
-                    dismissKeybindNotification: M,
+                    dismissKeybindNotification: j,
                     targetWindow: n
                 }),
                     n.addEventListener('keydown', ei),
@@ -250,38 +250,42 @@ function eo() {
                 children: [
                     E || v
                         ? null
-                        : (0, i.jsxs)('div', {
-                              className: l()(H.overlay, (0, u.getThemeClass)('dark')),
-                              children: [
-                                  Y,
-                                  (0, i.jsx)(J, {
-                                      locked: r,
-                                      keybind: b,
-                                      onClick: ee
-                                  }),
-                                  g
-                                      ? (0, i.jsx)(P.Z, {
-                                            className: l()({
-                                                [H.layoutLocked]: r,
-                                                [H.layoutUnlocked]: !r
-                                            })
-                                        })
-                                      : r
-                                        ? null
-                                        : (0, i.jsx)('div', {
-                                              className: H.invalidContainer,
-                                              children: (0, i.jsx)('div', {
-                                                  className: H.inactiveContainer,
-                                                  children: W.intl.format(W.t.ketnW1, R.FW)
-                                              })
+                        : (0, i.jsx)(u.ThemeProvider, {
+                              theme: F.BRd.DARK,
+                              children: (e) =>
+                                  (0, i.jsxs)('div', {
+                                      className: l()(H.overlay, e),
+                                      children: [
+                                          Y,
+                                          (0, i.jsx)(J, {
+                                              locked: r,
+                                              keybind: y,
+                                              onClick: ee
                                           }),
-                                  G &&
-                                      (0, i.jsx)(q, {
-                                          locked: r,
-                                          focused: c
-                                      }),
-                                  (0, i.jsx)(w.Z, {})
-                              ]
+                                          g
+                                              ? (0, i.jsx)(P.Z, {
+                                                    className: l()({
+                                                        [H.layoutLocked]: r,
+                                                        [H.layoutUnlocked]: !r
+                                                    })
+                                                })
+                                              : r
+                                                ? null
+                                                : (0, i.jsx)('div', {
+                                                      className: H.invalidContainer,
+                                                      children: (0, i.jsx)('div', {
+                                                          className: H.inactiveContainer,
+                                                          children: W.intl.format(W.t.ketnW1, R.FW)
+                                                      })
+                                                  }),
+                                          G &&
+                                              (0, i.jsx)(q, {
+                                                  locked: r,
+                                                  focused: c
+                                              }),
+                                          (0, i.jsx)(w.Z, {})
+                                      ]
+                                  })
                           }),
                     (0, i.jsx)($, {})
                 ]

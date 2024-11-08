@@ -230,13 +230,7 @@ let v = {
     [p.Odu.ACTIVITY]: {
         renderWidget: () => (0, i.jsx)(r.Z, {}),
         renderTitle: () => (0, i.jsx)(d.PI, { children: m.intl.string(m.t['6gwSFR']) }),
-        renderButtons: (e) =>
-            (0, i.jsx)(i.Fragment, {
-                children: (0, i.jsx)(d.RT, {
-                    id: e.id,
-                    pinned: e.pinned
-                })
-            })
+        renderButtons: () => null
     }
 };
 t.Z = v;
