@@ -8,7 +8,7 @@ var r = n(311570),
     a = n(987338);
 let s = (0, i.B)({
         kind: 'user',
-        id: '2024-2024-10_shop_variants',
+        id: '2024-10_shop_variants',
         label: 'Shop Variants Experiment',
         defaultConfig: { variantsReturnStyle: r.v.INDIVIDUAL_PRODUCTS },
         treatments: [
