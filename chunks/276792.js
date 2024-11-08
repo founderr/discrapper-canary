@@ -46,10 +46,15 @@ function _(e) {
         b =
             '' !== _.helpArticleId
                 ? () =>
-                      (0, i.jsx)(a.Anchor, {
-                          className: g.termsApplyAnchor,
-                          href: d.Z.getArticleURL(_.helpArticleId),
-                          children: p.intl.string(p.t['sBp+u7'])
+                      (0, i.jsxs)(i.Fragment, {
+                          children: [
+                              '\xA0',
+                              (0, i.jsx)(a.Anchor, {
+                                  className: g.termsApplyAnchor,
+                                  href: d.Z.getArticleURL(_.helpArticleId),
+                                  children: p.intl.string(p.t['sBp+u7'])
+                              })
+                          ]
                       })
                 : void 0,
         Z = {
@@ -67,7 +72,7 @@ function _(e) {
                 type: 'image',
                 src: v ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
             });
-    let y = v ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let y = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         L =
             '' !== _.modalTopPill
                 ? () =>

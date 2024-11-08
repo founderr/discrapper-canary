@@ -262,19 +262,20 @@ function A(e) {
                                 className: S.bodyText,
                                 children: D
                             }),
-                        (0, i.jsx)('div', {
-                            className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
-                            children: j.map((e, t) =>
-                                (0, i.jsx)(
-                                    x,
-                                    {
-                                        ...e,
-                                        wideStyle: U
-                                    },
-                                    ''.concat(e.header, '_').concat(t)
+                        j.length > 0 &&
+                            (0, i.jsx)('div', {
+                                className: a()(S.featureCardGroup, { [S.wideStyle]: U }),
+                                children: j.map((e, t) =>
+                                    (0, i.jsx)(
+                                        x,
+                                        {
+                                            ...e,
+                                            wideStyle: U
+                                        },
+                                        ''.concat(e.header, '_').concat(t)
+                                    )
                                 )
-                            )
-                        }),
+                            }),
                         P()
                     ]
                 })
