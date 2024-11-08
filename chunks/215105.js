@@ -35,14 +35,16 @@ let N = (0, f.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case b.n_.ACTIVITY:
-                let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n });
-                return ''.concat(I.jd).concat(a, '*\n').concat(t);
+                let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n }),
+                    s = '\n> '.concat(i);
+                return null != i ? ''.concat(I.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(I.jd).concat(a, '*\n').concat(t);
             case b.n_.AVATAR:
-                let s = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
-                return ''.concat(I.jd).concat(s, '*\n').concat(t);
+                let o = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
+                return ''.concat(I.jd).concat(o, '*\n').concat(t);
             case b.n_.STATUS:
-                let o = y.intl.formatToPlainString(y.t.lFXgFR, { username: n });
-                return null != i ? ''.concat(I.jd).concat(o, '*').concat('\n> '.concat(i), '\n').concat(t) : ''.concat(I.jd).concat(o, '*\n').concat(t);
+                let l = y.intl.formatToPlainString(y.t.lFXgFR, { username: n }),
+                    u = '\n> '.concat(i);
+                return null != i ? ''.concat(I.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(I.jd).concat(l, '*\n').concat(t);
             default:
                 (0, _.vE)(r);
         }
@@ -78,7 +80,7 @@ function O(e) {
     i.useEffect(() => {
         null == I || I(null == F ? void 0 : F.current);
     }, [F, I]);
-    let j = async (e) => {
+    let H = async (e) => {
             if (null == e) return;
             L({ action: x });
             let n = C({
@@ -99,7 +101,7 @@ function O(e) {
             } catch (e) {}
             M(b.P.REPLY);
         },
-        H = {
+        j = {
             [A.biteSize]: o === b.y0.BITE_SIZE,
             [A.panel]: o === b.y0.PANEL,
             [A.fullSize]: o === b.y0.FULL_SIZE
@@ -113,7 +115,7 @@ function O(e) {
         ref: F,
         onKeyDown: V,
         children: (0, r.jsx)('div', {
-            className: s()(A.container, H, Y, { [A.customProfileTheme]: null != P }),
+            className: s()(A.container, j, Y, { [A.customProfileTheme]: null != P }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: O,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -141,7 +143,7 @@ function O(e) {
                         };
                     try {
                         return (
-                            await j(n),
+                            await H(n),
                             w(),
                             null == D || D(),
                             {

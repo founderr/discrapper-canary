@@ -44,8 +44,8 @@ var r = n(200651),
     Z = n(373826),
     F = n(315324),
     V = n(582123),
-    j = n(599864),
-    H = n(290274),
+    H = n(599864),
+    j = n(290274),
     Y = n(228168),
     W = n(981631),
     K = n(388032),
@@ -254,13 +254,14 @@ function $(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: s()(q.actions, es),
-                      children: (0, r.jsx)(j.Z, {
+                      children: (0, r.jsx)(H.Z, {
                           channel: e_,
                           onAction: ec,
                           onClose: ee
                       })
                   }),
-        eR = ei === Y.n_.ACTIVITY && ea === eE;
+        eR = ei === Y.n_.ACTIVITY && ea === eE,
+        eO = null != ep ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: ep.name }) : K.intl.string(K.t['Jpkr/v']);
     return (0, r.jsx)(p.Gt, {
         value: eu,
         children: (0, r.jsx)(G.Z, {
@@ -276,6 +277,7 @@ function $(e) {
                         guildId: et,
                         profileType: en,
                         sourceId: eE,
+                        sourceDetails: eO,
                         sourceType: Y.n_.ACTIVITY,
                         children: () =>
                             (0, r.jsx)(k.Z.Overlay, {
@@ -286,7 +288,7 @@ function $(e) {
                                     className: q.body,
                                     interactionSourceId: eE,
                                     sourceType: Y.n_.ACTIVITY,
-                                    moreButton: (0, r.jsx)(H.Z, {
+                                    moreButton: (0, r.jsx)(j.Z, {
                                         display: 'live',
                                         user: t,
                                         onClose: ee,
@@ -295,7 +297,7 @@ function $(e) {
                                     }),
                                     children: [
                                         (0, r.jsx)(B.Z, {
-                                            text: null != ep ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: ep.name }) : K.intl.string(K.t['Jpkr/v']),
+                                            text: eO,
                                             tags: (0, r.jsx)(g.ZP, { size: g.OH.SMALL })
                                         }),
                                         (0, r.jsxs)('div', {

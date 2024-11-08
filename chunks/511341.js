@@ -28,14 +28,16 @@ let T = (e) => {
         a = ':'.concat(t.name, ':');
     switch (r) {
         case g.n_.ACTIVITY:
-            let s = S.intl.formatToPlainString(S.t.EUFEJi, { username: n });
-            return ''.concat(p.jd).concat(s, '*\n').concat(a);
+            let s = S.intl.formatToPlainString(S.t.EUFEJi, { username: n }),
+                o = '\n> '.concat(i);
+            return null != i ? ''.concat(p.jd).concat(s, '*').concat(o, '\n').concat(a) : ''.concat(p.jd).concat(s, '*\n').concat(a);
         case g.n_.AVATAR:
-            let o = S.intl.formatToPlainString(S.t.E6H15u, { username: n });
-            return ''.concat(p.jd).concat(o, '*\n').concat(a);
+            let l = S.intl.formatToPlainString(S.t.E6H15u, { username: n });
+            return ''.concat(p.jd).concat(l, '*\n').concat(a);
         case g.n_.STATUS:
-            let l = S.intl.formatToPlainString(S.t.XPQgLy, { username: n });
-            return null != i ? ''.concat(p.jd).concat(l, '*').concat('\n> '.concat(i), '\n').concat(a) : ''.concat(p.jd).concat(l, '*\n').concat(a);
+            let c = S.intl.formatToPlainString(S.t.XPQgLy, { username: n }),
+                d = '\n> '.concat(i);
+            return null != i ? ''.concat(p.jd).concat(c, '*').concat(d, '\n').concat(a) : ''.concat(p.jd).concat(c, '*\n').concat(a);
         default:
             (0, u.vE)(r);
     }
