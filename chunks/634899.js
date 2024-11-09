@@ -24,7 +24,7 @@ r.inherits(c, u),
     (c.padLength = 64),
     (c.prototype._update = function (e, t) {
         for (var n = this.h[0], r = this.h[1], i = this.h[2], u = this.h[3], c = this.h[4], m = n, g = r, E = i, v = u, I = c, S = 0; S < 80; S++) {
-            var b = s(
+            var T = s(
                 a(
                     l(
                         n,
@@ -46,8 +46,8 @@ r.inherits(c, u),
                 (c = u),
                 (u = a(i, 10)),
                 (i = r),
-                (r = b),
-                (b = s(
+                (r = T),
+                (T = s(
                     a(
                         l(
                             m,
@@ -69,9 +69,9 @@ r.inherits(c, u),
                 (I = v),
                 (v = a(E, 10)),
                 (E = g),
-                (g = b);
+                (g = T);
         }
-        (b = o(this.h[1], i, v)), (this.h[1] = o(this.h[2], u, I)), (this.h[2] = o(this.h[3], c, m)), (this.h[3] = o(this.h[4], n, g)), (this.h[4] = o(this.h[0], r, E)), (this.h[0] = b);
+        (T = o(this.h[1], i, v)), (this.h[1] = o(this.h[2], u, I)), (this.h[2] = o(this.h[3], c, m)), (this.h[3] = o(this.h[4], n, g)), (this.h[4] = o(this.h[0], r, E)), (this.h[0] = T);
     }),
     (c.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'little') : r.split32(this.h, 'little');

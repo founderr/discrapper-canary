@@ -162,8 +162,8 @@ var n = (function () {
                     v,
                     I,
                     S,
-                    b,
                     T,
+                    b,
                     y =
                         ((l = s),
                         (f = Array(32768)),
@@ -182,12 +182,12 @@ var n = (function () {
                         (v = 0),
                         (I = 1000000),
                         (S = 0),
-                        (b = 1000000),
-                        (T = 0),
+                        (T = 1000000),
+                        (b = 0),
                         _.forEach(function (t) {
-                            (p = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), p < E ? (E = p) : p > v && (v = p), m < I ? (I = m) : m > S && (S = m), g < b ? (b = g) : g > T && (T = g);
+                            (p = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), p < E ? (E = p) : p > v && (v = p), m < I ? (I = m) : m > S && (S = m), g < T ? (T = g) : g > b && (b = g);
                         }),
-                        new i(E, v, I, S, b, T, h)),
+                        new i(E, v, I, S, T, b, h)),
                     C = new r(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });

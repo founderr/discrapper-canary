@@ -487,19 +487,19 @@ function S(e, t, n) {
     if (e % 1 != 0 || e < 0) throw RangeError('offset is not uint');
     if (e + t > n) throw RangeError('Trying to access beyond buffer length');
 }
-function b(e, t, n, r, i, a) {
+function T(e, t, n, r, i, a) {
     if (!o.isBuffer(e)) throw TypeError('"buffer" argument must be a Buffer instance');
     if (t > i || t < a) throw RangeError('"value" argument is out of bounds');
     if (n + r > e.length) throw RangeError('Index out of range');
 }
-function T(e, t, n, r, i, a) {
+function b(e, t, n, r, i, a) {
     if (n + r > e.length || n < 0) throw RangeError('Index out of range');
 }
 function y(e, t, n, r, a) {
-    return (t = +t), (n >>>= 0), !a && T(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
+    return (t = +t), (n >>>= 0), !a && b(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
 }
 function A(e, t, n, r, a) {
-    return (t = +t), (n >>>= 0), !a && T(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
+    return (t = +t), (n >>>= 0), !a && b(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
 }
 (o.prototype.slice = function (e, t) {
     var n = this.length;
@@ -576,7 +576,7 @@ function A(e, t, n, r, a) {
     (o.prototype.writeUIntLE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), (n >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n) - 1;
-            b(this, e, t, n, i, 0);
+            T(this, e, t, n, i, 0);
         }
         var a = 1,
             s = 0;
@@ -586,7 +586,7 @@ function A(e, t, n, r, a) {
     (o.prototype.writeUIntBE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), (n >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n) - 1;
-            b(this, e, t, n, i, 0);
+            T(this, e, t, n, i, 0);
         }
         var a = n - 1,
             s = 1;
@@ -594,24 +594,24 @@ function A(e, t, n, r, a) {
         return t + n;
     }),
     (o.prototype.writeUInt8 = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 1, 255, 0), (this[t] = 255 & e), t + 1;
     }),
     (o.prototype.writeUInt16LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 65535, 0), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
     }),
     (o.prototype.writeUInt16BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 65535, 0), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
     }),
     (o.prototype.writeUInt32LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 4294967295, 0), (this[t + 3] = e >>> 24), (this[t + 2] = e >>> 16), (this[t + 1] = e >>> 8), (this[t] = 255 & e), t + 4;
     }),
     (o.prototype.writeUInt32BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 4294967295, 0), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
     }),
     (o.prototype.writeIntLE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n - 1);
-            b(this, e, t, n, i - 1, -i);
+            T(this, e, t, n, i - 1, -i);
         }
         var a = 0,
             s = 1,
@@ -622,7 +622,7 @@ function A(e, t, n, r, a) {
     (o.prototype.writeIntBE = function (e, t, n, r) {
         if (((e = +e), (t >>>= 0), !r)) {
             var i = Math.pow(2, 8 * n - 1);
-            b(this, e, t, n, i - 1, -i);
+            T(this, e, t, n, i - 1, -i);
         }
         var a = n - 1,
             s = 1,
@@ -631,19 +631,19 @@ function A(e, t, n, r, a) {
         return t + n;
     }),
     (o.prototype.writeInt8 = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 1, 127, -128), e < 0 && (e = 255 + e + 1), (this[t] = 255 & e), t + 1;
     }),
     (o.prototype.writeInt16LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 32767, -32768), (this[t] = 255 & e), (this[t + 1] = e >>> 8), t + 2;
     }),
     (o.prototype.writeInt16BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 2, 32767, -32768), (this[t] = e >>> 8), (this[t + 1] = 255 & e), t + 2;
     }),
     (o.prototype.writeInt32LE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 2147483647, -2147483648), (this[t] = 255 & e), (this[t + 1] = e >>> 8), (this[t + 2] = e >>> 16), (this[t + 3] = e >>> 24), t + 4;
     }),
     (o.prototype.writeInt32BE = function (e, t, n) {
-        return (e = +e), (t >>>= 0), !n && b(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
+        return (e = +e), (t >>>= 0), !n && T(this, e, t, 4, 2147483647, -2147483648), e < 0 && (e = 4294967295 + e + 1), (this[t] = e >>> 24), (this[t + 1] = e >>> 16), (this[t + 2] = e >>> 8), (this[t + 3] = 255 & e), t + 4;
     }),
     (o.prototype.writeFloatLE = function (e, t, n) {
         return y(this, e, t, !0, n);

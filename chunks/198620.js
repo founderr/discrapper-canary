@@ -9,7 +9,7 @@ n.d(t, {
         return g;
     },
     k5: function () {
-        return T;
+        return b;
     },
     q5: function () {
         return E;
@@ -67,12 +67,12 @@ function S(e) {
     let t = o.Z.toURLSafe(e.url);
     return !!(null != t && m(t)) && v(t);
 }
-function b(e) {
+function T(e) {
     var t;
     return S(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(S)) || S(e.video);
 }
-function T(e) {
-    return e.attachments.some(I) || e.embeds.some(b);
+function b(e) {
+    return e.attachments.some(I) || e.embeds.some(T);
 }
 async function y(e) {
     let t = await a.tn.post({

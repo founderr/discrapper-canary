@@ -17,8 +17,8 @@ var r = n(200651),
     d = n(318713),
     f = n(981631),
     _ = n(388032),
-    h = n(12645),
-    p = n(882530);
+    h = n(825193),
+    p = n(554034);
 function m(e, t) {
     return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
@@ -34,19 +34,19 @@ t.ZP = i.memo(function (e) {
         v = a.isEdited(),
         I = a.state === f.yb.SEND_FAILED,
         S = a.state === f.yb.SENDING,
-        b = a.isCommandType(),
-        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        T = a.isCommandType(),
+        b = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         y = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
             y.current ? null != g && g() : (y.current = !0);
-        }, [g, a.content, u, T, o]),
+        }, [g, a.content, u, b, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),
             ref: E,
             className: s()(n, p.markup, {
                 [h.messageContent]: !0,
-                [h.isSending]: S && !b,
+                [h.isSending]: S && !T,
                 [h.markupRtl]: 'rtl' === l()(a.content),
                 [h.isFailed]: I,
                 [h.isUnsupported]: a.isUnsupported

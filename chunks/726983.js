@@ -46,8 +46,8 @@ var i = n(97290),
     v = n(48087),
     I = n(787969),
     S = n(43771),
-    b = n(14046),
-    T = n(287372),
+    T = n(14046),
+    b = n(287372),
     y = n(712139),
     A = n(446894),
     N = n(304665),
@@ -244,20 +244,20 @@ function ec(e) {
                     (I.height += S.top + S.bottom),
                     (function (e, t, n, r, i, a, s, o, l, u, c, d, f, _, h, p) {
                         var m, g, E, v, I, S;
-                        let b = en(e),
-                            { size: T, crossAxis: y, crossSize: A, placement: N, crossPlacement: C } = b,
-                            R = er(t, o, n, b, c, d, u, f, h, p),
+                        let T = en(e),
+                            { size: b, crossAxis: y, crossSize: A, placement: N, crossPlacement: C } = T,
+                            R = er(t, o, n, T, c, d, u, f, h, p),
                             O = c,
-                            D = ei(o, u, t, i, a + c, b);
-                        if (s && r[T] > D) {
+                            D = ei(o, u, t, i, a + c, T);
+                        if (s && r[b] > D) {
                             let e = en(`${z[N]} ${C}`),
                                 r = er(t, o, n, e, c, d, u, f, h, p);
-                            ei(o, u, t, i, a + c, e) > D && ((b = e), (R = r), (O = c));
+                            ei(o, u, t, i, a + c, e) > D && ((T = e), (R = r), (O = c));
                         }
                         let L = et(y, R[y], n[A], o, l, a);
                         R[y] += L;
                         let x = ((m = R), (g = o), (E = u), (v = t), (I = i), (S = a), null != m.top ? Math.max(0, g.height + g.top + g.scroll.top - (E.top + m.top) - (I.top + I.bottom + S)) : Math.max(0, v.top + E.top - (g.top + g.scroll.top) - (I.top + I.bottom + S)));
-                        _ && _ < x && (x = _), (n.height = Math.min(n.height, x)), (L = et(y, (R = er(t, o, n, b, O, d, u, f, h, p))[y], n[A], o, l, a)), (R[y] += L);
+                        _ && _ < x && (x = _), (n.height = Math.min(n.height, x)), (L = et(y, (R = er(t, o, n, T, O, d, u, f, h, p))[y], n[A], o, l, a)), (R[y] += L);
                         let w = {},
                             M = t[y] + 0.5 * t[A] - n[y],
                             P = h / 2 + p,
@@ -272,7 +272,7 @@ function ec(e) {
                                 maxHeight: x,
                                 arrowOffsetLeft: w.left,
                                 arrowOffsetTop: w.top,
-                                placement: b.placement
+                                placement: T.placement
                             }
                         );
                     })(
@@ -352,7 +352,7 @@ function ec(e) {
             }
         );
     }, [I]);
-    let b = (0, G.useCallback)(() => {
+    let T = (0, G.useCallback)(() => {
         !S.current && h();
     }, [h, S]);
     return (
@@ -376,7 +376,7 @@ function ec(e) {
         })({
             triggerRef: r,
             isOpen: _,
-            onClose: h && b
+            onClose: h && T
         }),
         {
             overlayProps: {
@@ -611,10 +611,10 @@ function eI(e) {
 function eS(e) {
     return (e instanceof HTMLInputElement && !ep.has(e.type)) || e instanceof HTMLTextAreaElement || (e instanceof HTMLElement && e.isContentEditable);
 }
-let eb = G.createContext(null);
-function eT(e) {
+let eT = G.createContext(null);
+function eb(e) {
     let { children: t } = e,
-        n = (0, G.useContext)(eb),
+        n = (0, G.useContext)(eT),
         [r, i] = (0, G.useState)(0),
         a = (0, G.useMemo)(
             () => ({
@@ -629,11 +629,11 @@ function eT(e) {
             }),
             [n, r]
         );
-    return G.createElement(eb.Provider, { value: a }, t);
+    return G.createElement(eT.Provider, { value: a }, t);
 }
 function ey(e) {
     let t;
-    let { modalProviderProps: n } = { modalProviderProps: { 'aria-hidden': (!!(t = (0, G.useContext)(eb)) && t.modalCount > 0) || null } };
+    let { modalProviderProps: n } = { modalProviderProps: { 'aria-hidden': (!!(t = (0, G.useContext)(eT)) && t.modalCount > 0) || null } };
     return G.createElement('div', {
         'data-overlay-container': !0,
         ...e,
@@ -641,7 +641,7 @@ function ey(e) {
     });
 }
 function eA(e) {
-    return G.createElement(eT, null, G.createElement(ey, e));
+    return G.createElement(eb, null, G.createElement(ey, e));
 }
 function eN(e) {
     let t = (0, Y.Av)(),
@@ -697,8 +697,8 @@ eC = {
     'ja-JP': v.Z,
     'ko-KR': I.Z,
     'lt-LT': S.Z,
-    'lv-LV': b.Z,
-    'nb-NO': T.Z,
+    'lv-LV': T.Z,
+    'nb-NO': b.Z,
     'nl-NL': y.Z,
     'pl-PL': A.Z,
     'pt-BR': N.Z,

@@ -318,7 +318,7 @@
             return this._applyModification(S, arguments);
         },
         darken: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(T, arguments);
         },
         desaturate: function () {
             return this._applyModification(g, arguments);
@@ -330,7 +330,7 @@
             return this._applyModification(v, arguments);
         },
         spin: function () {
-            return this._applyModification(T, arguments);
+            return this._applyModification(b, arguments);
         },
         _applyCombination: function (e, t) {
             return e.apply(null, [this].concat([].slice.call(t)));
@@ -447,12 +447,12 @@
         var n = f(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), f(n);
     }
-    function b(e, t) {
+    function T(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toHsl();
         return (n.l -= t / 100), (n.l = M(n.l)), f(n);
     }
-    function T(e, t) {
+    function b(e, t) {
         var n = f(e).toHsl(),
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), f(n);

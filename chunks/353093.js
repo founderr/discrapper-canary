@@ -18,10 +18,10 @@ n.d(t, {
         return S;
     },
     p0: function () {
-        return T;
+        return b;
     },
     pY: function () {
-        return b;
+        return T;
     },
     vh: function () {
         return p;
@@ -108,12 +108,12 @@ function S(e, t) {
     let i = I[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function b(e, t) {
+function T(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function T(e, t) {
+function b(e, t) {
     let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
         r = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
         i = (0, a.e7)(

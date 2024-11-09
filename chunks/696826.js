@@ -3,7 +3,7 @@ n.d(t, {
         return S;
     },
     P5: function () {
-        return T;
+        return b;
     },
     QF: function () {
         return E;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     vP: function () {
-        return b;
+        return T;
     },
     vj: function () {
         return m;
@@ -42,7 +42,7 @@ var r = n(200651),
     d = n(686546),
     f = n(981631),
     _ = n(182294),
-    h = n(26255);
+    h = n(454857);
 let p = {
     tension: 600,
     friction: 70
@@ -221,7 +221,7 @@ function S(e) {
             };
     }
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var i;
     let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: h, cutoutRadius: p, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
     return (0, r.jsxs)('mask', {
@@ -267,7 +267,7 @@ function b(e, t, n) {
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { status: t, isMobile: n = !1, size: a = 8, color: l, className: c, style: d } = e,
         g = i.useId(),
         E = t === f.Skl.ONLINE && n,
@@ -287,14 +287,14 @@ function T(e) {
             },
             'animate-always'
         ),
-        T = m(t, l),
+        b = m(t, l),
         [{ fill: y }] = (0, u.useSpring)(
             {
                 config: p,
-                fill: T
+                fill: b
             },
             'animate-always',
-            [T]
+            [b]
         ),
         A = Math.ceil(a * _.EW);
     return (0, r.jsxs)('svg', {
@@ -304,7 +304,7 @@ function T(e) {
         className: s()(h.mask, c),
         style: d,
         children: [
-            b(I, a, g),
+            T(I, a, g),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,

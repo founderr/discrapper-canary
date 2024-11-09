@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(366050),
     I = n(944486),
     S = n(594174),
-    b = n(566620),
-    T = n(317381),
+    T = n(566620),
+    b = n(317381),
     y = n(175894),
     A = n(246106),
     N = n(963614),
@@ -30,15 +30,15 @@ var r = n(200651),
     L = n(918559),
     x = n(981631),
     w = n(354459),
-    M = n(207683),
-    P = n(957471),
-    k = n(152105);
+    M = n(938103),
+    P = n(497041),
+    k = n(852401);
 function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
         [U, G] = i.useState(!1),
-        B = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
-        Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
+        B = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(y.id)),
+        Z = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == B ? void 0 : B.applicationId),
         V = null == B ? void 0 : B.launchId,
         j = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, b.tg)(L.Ez.PANEL);
+                                                        en(), (0, T.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: B.applicationId,

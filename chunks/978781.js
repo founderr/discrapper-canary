@@ -27,8 +27,8 @@ var r,
     v = n(238302),
     I = n(514361),
     S = n(572397),
-    b = n(705262),
-    T = n(436774),
+    T = n(705262),
+    b = n(436774),
     y = n(768762),
     A = n(197115),
     N = n(727939),
@@ -36,14 +36,14 @@ var r,
     R = n(921944),
     O = n(474936),
     D = n(388032),
-    L = n(261286);
+    L = n(396088);
 function x() {
     let e = (0, S.q)();
     return (
         s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(b.ZP, {
-            type: b.yH.EDITOR,
-            children: (0, a.jsx)(b.ZP.BasicAndGradient, { isEditor: !0 })
+        (0, a.jsx)(T.ZP, {
+            type: T.yH.EDITOR,
+            children: (0, a.jsx)(T.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
@@ -104,7 +104,7 @@ function M(e) {
                         (0, a.jsx)(d.NitroWheelIcon, {
                             className: L.footerNitro,
                             size: 'xs',
-                            color: T.JX.PREMIUM_TIER_2
+                            color: b.JX.PREMIUM_TIER_2
                         }),
                         (0, a.jsx)(d.Text, {
                             className: L.footerText,
@@ -163,7 +163,7 @@ function P(e) {
             l && h(), u && (0, p.O7)();
         }, [l, u, h]),
         E = (0, _.Z)(null, f ? g : C.dG4),
-        b = s.useCallback(() => {
+        T = s.useCallback(() => {
             (0, p.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
         }, [g, n]);
     return (0, a.jsx)(N.Z, {
@@ -186,7 +186,7 @@ function P(e) {
                                     className: L.closeContainer,
                                     innerClassName: L.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: b
+                                    onClick: T
                                 })
                             ]
                         }),
@@ -208,7 +208,7 @@ function P(e) {
                 (0, a.jsx)(M, {
                     tab: r,
                     isPreview: f,
-                    onClose: b,
+                    onClose: T,
                     isCoachmark: !1
                 })
             ]

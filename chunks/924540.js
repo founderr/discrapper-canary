@@ -3,10 +3,10 @@ s.d(t, {
         return g;
     },
     GN: function () {
-        return h;
+        return _;
     },
     _y: function () {
-        return _;
+        return h;
     }
 });
 var n = s(200651),
@@ -20,7 +20,7 @@ var n = s(200651),
     u = s(639119),
     p = s(474936),
     f = s(388032),
-    x = s(700706);
+    x = s(742774);
 function C(e) {
     let { isTabSelected: t, expiresAt: s, trialDuration: i, className: d } = e,
         u = r.useMemo(() => Date.parse(s), [s]),
@@ -61,24 +61,24 @@ function g(e) {
             intervalType: null == i ? void 0 : i.interval,
             intervalCount: null == i ? void 0 : i.interval_count
         });
-    return (0, n.jsx)(_, {
+    return (0, n.jsx)(h, {
         isTabSelected: s,
         badgeCopy: o,
         offerExpiresAt: r.expires_at,
         className: (null == i ? void 0 : i.sku_id) === p.Si.TIER_2 ? x.premiumTrialTier2UnacknowledgedBadge : x.premiumTrialTier0UnacknowledgedBadge
     });
 }
-function h(e) {
+function _(e) {
     let { isTabSelected: t, userDiscount: s, includesAmountOff: r } = e,
         i = f.intl.formatToPlainString(f.t.iiLbvr, { percent: s.discount.amount });
-    return (0, n.jsx)(_, {
+    return (0, n.jsx)(h, {
         isTabSelected: t,
         badgeCopy: r ? i : f.intl.string(f.t['/DTtr6']),
         offerExpiresAt: s.expires_at,
         className: x.premiumDiscountUnacknowledgedBadge
     });
 }
-function _(e) {
+function h(e) {
     let { isTabSelected: t, badgeCopy: s, offerExpiresAt: r, className: i, ackedClassName: l } = e;
     return null != r
         ? (0, n.jsx)(C, {

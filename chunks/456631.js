@@ -33,7 +33,7 @@ let p = [],
         let e = (0, _.cX)(g);
         c.uv.announce(e, 'polite'), (g = []);
     }, 500);
-class b extends (i = u.ZP.Store) {
+class T extends (i = u.ZP.Store) {
     get recentlyUsedEmojis() {
         return p;
     }
@@ -48,7 +48,7 @@ class b extends (i = u.ZP.Store) {
     }
 }
 (o = 'VoiceChannelEffectsStore'),
-    (s = 'displayName') in (a = b)
+    (s = 'displayName') in (a = T)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -56,7 +56,7 @@ class b extends (i = u.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new b(d.Z, {
+    (t.Z = new T(d.Z, {
         VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
             let { userId: t } = e;
             null != m[t] && delete m[t];

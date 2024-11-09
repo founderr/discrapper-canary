@@ -15,7 +15,7 @@ var t = l(200651),
     d = l(970184),
     m = l(280501),
     p = l(388032),
-    f = l(503738);
+    f = l(601648);
 function x(e) {
     let { emoji: n, label: l, description: i, isDisabled: r, isOffset: s } = e,
         u = a()(f.labelContainer, {

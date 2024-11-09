@@ -13,7 +13,7 @@ var r = n(200651),
     l = n.n(o),
     u = n(84735),
     c = n(562701),
-    d = n(494624);
+    d = n(558025);
 function f(e, t, n, a) {
     let o = (0, c.G6)(e),
         f = new Map(),
@@ -25,7 +25,7 @@ function f(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, h) {
-        let { className: p, onScroll: m, onResize: g = null, onContentResize: E = null, dir: v = 'ltr', sections: I, sectionHeight: S, rowHeight: b, footerHeight: T = 0, sidebarHeight: y, listHeaderHeight: A = 0, renderSection: N, renderRow: C, renderFooter: R, renderSidebar: O, renderListHeader: D, stickyListHeader: L, wrapSection: x, getAnchorId: w, paddingTop: M, paddingBottom: P, fade: k = !1, customTheme: U = !1, chunkSize: G, style: B, innerId: Z, innerRole: F, innerAriaLabel: V, innerAriaMultiselectable: j, innerAriaOrientation: H, innerClassName: Y, innerTag: W = 'div', ...K } = a,
+        let { className: p, onScroll: m, onResize: g = null, onContentResize: E = null, dir: v = 'ltr', sections: I, sectionHeight: S, rowHeight: T, footerHeight: b = 0, sidebarHeight: y, listHeaderHeight: A = 0, renderSection: N, renderRow: C, renderFooter: R, renderSidebar: O, renderListHeader: D, stickyListHeader: L, wrapSection: x, getAnchorId: w, paddingTop: M, paddingBottom: P, fade: k = !1, customTheme: U = !1, chunkSize: G, style: B, innerId: Z, innerRole: F, innerAriaLabel: V, innerAriaMultiselectable: j, innerAriaOrientation: H, innerClassName: Y, innerTag: W = 'div', ...K } = a,
             z = i.useRef(null),
             q = i.useRef(null),
             [Q, X] = i.useState(!1),
@@ -48,8 +48,8 @@ function f(e, t, n, a) {
             } = (0, c.aU)({
                 sections: I,
                 sectionHeight: S,
-                rowHeight: b,
-                footerHeight: T,
+                rowHeight: T,
+                footerHeight: b,
                 sidebarHeight: y,
                 listHeaderHeight: A,
                 paddingTop: M,

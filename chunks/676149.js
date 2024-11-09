@@ -8,7 +8,7 @@ l(192379);
 var i = l(120356),
     r = l.n(i),
     a = l(911969),
-    s = l(600984);
+    s = l(908000);
 function o(e) {
     let { divider: n, spacing: l } = e;
     return (0, t.jsx)('div', {

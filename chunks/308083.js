@@ -51,7 +51,7 @@ n.d(t, {
         return Q;
     },
     Pv: function () {
-        return T;
+        return b;
     },
     Sq: function () {
         return C;
@@ -75,7 +75,7 @@ n.d(t, {
         return N;
     },
     cG: function () {
-        return b;
+        return T;
     },
     cm: function () {
         return A;
@@ -153,8 +153,8 @@ var r,
     v = n(137920),
     I = n(388032);
 let S = 200,
-    b = 4,
-    T = 'ClanSetupModal',
+    T = 4,
+    b = 'ClanSetupModal',
     y = 'ClanSettingsModal',
     A = 20,
     N = 30,

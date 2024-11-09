@@ -18,7 +18,7 @@ var r = n(200651),
     h = n(74538),
     p = n(921944),
     m = n(388032),
-    g = n(84201);
+    g = n(489680);
 let E = {
     tension: 750,
     mass: 2.5,
@@ -59,15 +59,15 @@ function I(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         S = _.default.getCurrentUser(),
-        b = null == S || (0, h.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [T, y] = (0, f.US)(b),
+        T = null == S || (0, h.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [b, y] = (0, f.US)(T),
         [A, N] = i.useState(!1),
         [C, R] = (0, c.useSpring)(() => ({})),
         O = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
-        let e = T === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        let e = b === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (y(p.L.DISMISS), setTimeout(() => N(e), 200));
-    }, [T, y]);
+    }, [b, y]);
     let D = A ? m.intl.string(m.t['Osi/u7']) : t ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am),
         L = A ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {

@@ -139,11 +139,11 @@ function S(e, t) {
     for (let r of e) n = !1 !== t(r) || n;
     return n;
 }
-function b(e) {
+function T(e) {
     let { messages: t } = e;
     return S(t, (e) => I(e));
 }
-function T(e) {
+function b(e) {
     let { messages: t } = e;
     return S(t, (e) => S(e, (e) => I(e)));
 }
@@ -184,11 +184,11 @@ p(R, 'displayName', 'ReferencedMessageStore'),
             let { messages: t } = e;
             return S(Object.values(t), (e) => S(Object.values(e), (e) => I(e)));
         },
-        LOCAL_MESSAGES_LOADED: b,
-        LOAD_MESSAGES_SUCCESS: b,
-        LOAD_MESSAGES_AROUND_SUCCESS: b,
-        SEARCH_FINISH: T,
-        MOD_VIEW_SEARCH_FINISH: T,
+        LOCAL_MESSAGES_LOADED: T,
+        LOAD_MESSAGES_SUCCESS: T,
+        LOAD_MESSAGES_AROUND_SUCCESS: T,
+        SEARCH_FINISH: b,
+        MOD_VIEW_SEARCH_FINISH: b,
         LOAD_THREADS_SUCCESS: C,
         LOAD_ARCHIVED_THREADS_SUCCESS: C,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {

@@ -18,8 +18,8 @@ var r,
     v = n(378233);
 let I = 2,
     S = new Map(),
-    b = new Map(),
-    T = null,
+    T = new Map(),
+    b = null,
     y = [],
     A = null,
     N = !1,
@@ -43,11 +43,11 @@ let I = 2,
     L = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        b.set(e.id, e), t && x(e, n);
+        T.set(e.id, e), t && x(e, n);
     },
     x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null == T) return;
+        if (null == b) return;
         let { tags: n } = e,
             r = {
                 type: E.MO.STICKER_NAME,
@@ -67,7 +67,7 @@ let I = 2,
                     type: E.MO.PACK_NAME,
                     value: t.name
                 }),
-                T.set(e.id, i);
+                b.set(e.id, i);
         } else if ((0, v.J8)(e) && null != n) {
             let i = _.ZP.getByName(n),
                 a = [
@@ -87,7 +87,7 @@ let I = 2,
                     });
             }
             if (null == i) {
-                T.set(e.id, a);
+                b.set(e.id, a);
                 return;
             }
             a.push({
@@ -100,7 +100,7 @@ let I = 2,
                         value: e.surrogates
                     })
                 ),
-                T.set(e.id, a);
+                b.set(e.id, a);
         }
     },
     w = (e, t, n) => {
@@ -136,7 +136,7 @@ class k extends (r = l.ZP.Store) {
         return I;
     }
     get stickerMetadata() {
-        return D(), null == T && ((T = new Map()), M()), T;
+        return D(), null == b && ((b = new Map()), M()), b;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + O > Date.now();
@@ -145,7 +145,7 @@ class k extends (r = l.ZP.Store) {
         return N;
     }
     getStickerById(e) {
-        return !b.has(e) && D(), b.get(e);
+        return !T.has(e) && D(), T.get(e);
     }
     getStickerPack(e) {
         return S.get(e);
@@ -160,7 +160,7 @@ class k extends (r = l.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return D(), b.values();
+        return D(), T.values();
     }
     getAllGuildStickers() {
         return D(), C;
@@ -180,11 +180,11 @@ class k extends (r = l.ZP.Store) {
         : (i[a] = s),
     (t.Z = new k(u.Z, {
         BACKGROUND_SYNC: () => {
-            (T = null), (b = new Map()), (C = new Map()), (I = 0);
+            (b = null), (T = new Map()), (C = new Map()), (I = 0);
         },
         CONNECTION_OPEN: (e) => {
             let { guilds: t } = e;
-            (T = null), (b = new Map()), (C = new Map()), t.forEach(P), (I = t.every((e) => null != e.stickers) ? 1 : 0);
+            (b = null), (T = new Map()), (C = new Map()), t.forEach(P), (I = t.every((e) => null != e.stickers) ? 1 : 0);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -194,13 +194,13 @@ class k extends (r = l.ZP.Store) {
             var t;
             let { guild: n } = e;
             (null !== (t = C.get(n.id)) && void 0 !== t ? t : []).forEach((e) => {
-                null != T && T.delete(e.id), b.delete(e.id);
+                null != b && b.delete(e.id), T.delete(e.id);
             }),
                 C.delete(n.id),
                 (C = new Map(C));
         },
         LOGOUT: () => {
-            (I = 0), (y = []), b.clear(), S.clear(), (T = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
+            (I = 0), (y = []), T.clear(), S.clear(), (b = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
         },
         STICKER_PACKS_FETCH_START: () => {
             N = !0;
@@ -232,7 +232,7 @@ class k extends (r = l.ZP.Store) {
             let { guildId: n, stickers: r } = e,
                 i = (e) => {
                     let t;
-                    let n = b.get(e.id);
+                    let n = T.get(e.id);
                     return (
                         null != n && (0, v.J8)(n) && (t = null != n.user ? n.user : void 0),
                         {
@@ -244,7 +244,7 @@ class k extends (r = l.ZP.Store) {
             (null !== (t = C.get(n)) && void 0 !== t ? t : [])
                 .filter((e) => null == r.find((t) => t.id === e.id))
                 .forEach((e) => {
-                    b.delete(e.id), null != T && T.delete(e.id);
+                    T.delete(e.id), null != b && b.delete(e.id);
                 });
             let a = r.map((e) => i(e));
             a.forEach((e) => L(e)), R(n, a);

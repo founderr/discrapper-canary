@@ -15,7 +15,7 @@ var i = n(200651),
     r = n.n(a),
     s = n(566898),
     o = n(981631),
-    c = n(805926);
+    c = n(623433);
 function d(e) {
     let { compact: t, messageGroups: n, groupRange: i, attachments: l, fontSize: a, groupSpacing: c } = e;
     if (l > n) throw Error('generateMessageSpecs: too many attachments relative to messageGroups: '.concat(n, ', ').concat(l));

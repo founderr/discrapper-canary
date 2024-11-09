@@ -13,7 +13,7 @@ var r = n(200651),
     h = n(145022),
     p = n(981631),
     m = n(388032),
-    g = n(167484);
+    g = n(528370);
 function E(e) {
     let { url: t } = e,
         [n, a] = i.useState(!1),
@@ -71,14 +71,14 @@ function v(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: d, linkMeta: I, url: S, applyBuildOverride: b, clearBuildOverride: T } = e,
+    let { loading: o = !1, currentOverrides: d, linkMeta: I, url: S, applyBuildOverride: T, clearBuildOverride: b } = e,
         [y, A] = i.useState(!1),
         N = i.useCallback(() => {
-            if (!y) A(!0), b().catch(() => A(!1));
-        }, [b, y]),
-        C = i.useCallback(() => {
             if (!y) A(!0), T().catch(() => A(!1));
-        }, [T, y]);
+        }, [T, y]),
+        C = i.useCallback(() => {
+            if (!y) A(!0), b().catch(() => A(!1));
+        }, [b, y]);
     return (0, r.jsxs)('div', {
         className: g.wrapper,
         children: [

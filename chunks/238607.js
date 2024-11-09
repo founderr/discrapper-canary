@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(835473),
     I = n(592745),
     S = n(592125),
-    b = n(757266),
-    T = n(650774),
+    T = n(757266),
+    b = n(650774),
     y = n(430824),
     A = n(283595),
     N = n(496675),
@@ -53,7 +53,7 @@ function G(e) {
         }),
         z =
             (0, a.e7)(
-                [A.Z, I.Z, L.Z, b.Z],
+                [A.Z, I.Z, L.Z, T.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
@@ -61,7 +61,7 @@ function G(e) {
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: I.Z,
                         DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: b.Z
+                        ConnectedAppsStore: T.Z
                     })
             ) || H,
         q = (0, a.e7)([d.ZP], () =>
@@ -71,7 +71,7 @@ function G(e) {
             })
         ),
         Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([S.Z, y.Z, T.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        X = (0, a.e7)([S.Z, y.Z, b.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
                 activity: G,
@@ -81,7 +81,7 @@ function G(e) {
                 isEmbedded: H,
                 ChannelStore: S.Z,
                 GuildStore: y.Z,
-                GuildMemberCountStore: T.Z,
+                GuildMemberCountStore: b.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: R.Z,
                 VoiceStateStore: O.Z,

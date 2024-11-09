@@ -75,7 +75,7 @@ n.d(t, {
         return eE;
     },
     Wz: function () {
-        return eT;
+        return eb;
     },
     Xc: function () {
         return x;
@@ -90,7 +90,7 @@ n.d(t, {
         return eg;
     },
     _O: function () {
-        return T;
+        return b;
     },
     bh: function () {
         return K;
@@ -111,7 +111,7 @@ n.d(t, {
         return L;
     },
     d4: function () {
-        return b;
+        return T;
     },
     dN: function () {
         return f;
@@ -144,7 +144,7 @@ n.d(t, {
         return Z;
     },
     iH: function () {
-        return eb;
+        return eT;
     },
     jU: function () {
         return Y;
@@ -290,13 +290,13 @@ let E = (0, o.Zc)(
         (e) => e
     ),
     S = [],
-    b = (0, o.Zc)(
+    T = (0, o.Zc)(
         'textAndImages',
         'emojiPickerCollapsedSections',
         (e) => (null != e ? e : S),
         (e) => e
     ),
-    T = (0, o.Zc)(
+    b = (0, o.Zc)(
         'textAndImages',
         'stickerPickerCollapsedSections',
         (e) => (null != e ? e : S),
@@ -812,13 +812,13 @@ let eh = (0, o.KM)(
         (e) => e
     ),
     eS = [],
-    eb = (0, o.Zc)(
+    eT = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eS),
         (e) => e
     ),
-    eT = (0, o.Zc)(
+    eb = (0, o.Zc)(
         'privacy',
         'defaultGuildsActivityRestricted',
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,

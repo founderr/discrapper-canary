@@ -3,8 +3,8 @@ n(47120);
 var v,
     I,
     S,
-    b,
-    T = n(392711),
+    T,
+    b = n(392711),
     y = n(754700),
     A = n(887003),
     N = n(442837),
@@ -30,7 +30,7 @@ function P(e, t) {
             var n, r, i, a;
             if (null != t.userStatus)
                 for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
-                    if (!(0, T.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
+                    if (!(0, b.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
                 }
         })(e, t),
             a.set(e, r);
@@ -109,15 +109,15 @@ class Z extends (v = N.ZP.Store) {
         return null === (n = w.get(e)) || void 0 === n ? void 0 : n.get(t);
     }
 }
-(b = 'QuestsStore'),
+(T = 'QuestsStore'),
     (S = 'displayName') in (I = Z)
         ? Object.defineProperty(I, S, {
-              value: b,
+              value: T,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[S] = b),
+        : (I[S] = T),
     (t.Z = new Z(C.Z, {
         LOGOUT: function () {
             M();

@@ -61,7 +61,7 @@ function S(e) {
             return 'inactive';
     }
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = ''.concat(e, '-').concat(t),
         i = ''.concat(n).concat(r);
     return [
@@ -87,7 +87,7 @@ function b(e, t, n) {
         }
     ];
 }
-function T(e) {
+function b(e) {
     return p.write({
         version: 0,
         timing: {
@@ -268,7 +268,7 @@ function A(e) {
                         codec: 'audio' === h ? i : o,
                         payload: 'audio' === h ? a : l,
                         bitrate: 'audio' === h ? s : u,
-                        ssrcs: b(d, r, 'audio' === h ? 'a' : 'v'),
+                        ssrcs: T(d, r, 'audio' === h ? 'a' : 'v'),
                         extensions: f
                     })
                 );
@@ -282,7 +282,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return b(n, t, 'a');
+                    return T(n, t, 'a');
                 });
         if (
             (_.push(
@@ -308,7 +308,7 @@ function A(e) {
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return b(n, t, 'v');
+                    return T(n, t, 'v');
                 });
             _.push(
                 y({
@@ -329,7 +329,7 @@ function A(e) {
     }
     return new RTCSessionDescription({
         type: t,
-        sdp: T(_)
+        sdp: b(_)
     });
 }
 function N(e) {
@@ -340,7 +340,7 @@ function N(e) {
         d.forEach((e) => {
             let t,
                 { ssrc: d, cname: p, type: m, direction: g, mid: E } = e;
-            '' !== p ? (t = b(p, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
+            '' !== p ? (t = T(p, d, 'audio' === m ? 'a' : 'v')) : ((t = []), 'sendonly' === g ? (g = 'inactive') : 'sendrecv' === g && (g = 'recvonly'));
             _.push(
                 y({
                     mid: E,
@@ -360,7 +360,7 @@ function N(e) {
         }),
         new RTCSessionDescription({
             type: t,
-            sdp: T(_)
+            sdp: b(_)
         })
     );
 }

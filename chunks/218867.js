@@ -4,10 +4,10 @@ var r = n(200651),
     a = n(120356),
     s = n.n(a),
     o = n(147479),
-    l = n(22832);
+    l = n(436599);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: h, rowCount: p, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: I, listHeaderHeight: S, stickyHeaders: b = !1, className: T, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: f, renderSectionFooter: _, renderListHeader: h, rowCount: p, rowCountBySection: m, rowHeight: g, sectionMarginBottom: E, sectionHeaderHeight: v, sectionFooterHeight: I, listHeaderHeight: S, stickyHeaders: T = !1, className: b, hideScrollbar: y = !1, fade: A = !1, initialScrollTop: N = 0, role: C = 'list' } = e,
             [R, O] = i.useState(-1),
             [D, L] = i.useState(-1),
             x = i.useRef(null),
@@ -160,11 +160,11 @@ let u = i.memo(
                                     offset: { top: o, bottom: l }
                                 } = i,
                                 u = U(s),
-                                c = o - (b ? u : 0) - r <= w.current,
+                                c = o - (T ? u : 0) - r <= w.current,
                                 d = l + r >= w.current + D;
                             if (c) {
                                 let i = w.current + u - o,
-                                    a = b ? w.current - i : o;
+                                    a = T ? w.current - i : o;
                                 null === (t = x.current) ||
                                     void 0 === t ||
                                     t.scrollTo({
@@ -212,7 +212,7 @@ let u = i.memo(
                     return null === (t = x.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({ node: e });
                 }
             }),
-            [U, b, V, D]
+            [U, T, V, D]
         );
         let { visibleItems: K, listOffset: z } = i.useMemo(() => {
                 if (-1 === D || -1 === R)
@@ -243,11 +243,11 @@ let u = i.memo(
                             m = 0,
                             g = 0,
                             E = s + u >= R && s <= e;
-                        for (null != f && (b || E) && o.push(f(i)), !E && !b && (n += u); m + u + h < l - p; ) {
+                        for (null != f && (T || E) && o.push(f(i)), !E && !T && (n += u); m + u + h < l - p; ) {
                             let r = k(i, g, t),
                                 a = s + m + u,
                                 l = a + r;
-                            if (l <= R) n = l - (b ? u : 0);
+                            if (l <= R) n = l - (T ? u : 0);
                             else if (l > R && a < e)
                                 o.push(
                                     c(t, {
@@ -267,7 +267,7 @@ let u = i.memo(
                     visibleItems: r,
                     listOffset: n
                 };
-            }, [k, G, U, B, u, c, d, _, f, R, H, b, h, P, D]),
+            }, [k, G, U, B, u, c, d, _, f, R, H, T, h, P, D]),
             q = i.useMemo(() => {
                 var e, t, n;
                 return {
@@ -281,7 +281,7 @@ let u = i.memo(
             X = y ? o.xV : o.h2;
         return (0, r.jsxs)(X, {
             fade: A,
-            className: s()(l.scroller, T),
+            className: s()(l.scroller, b),
             ref: x,
             onScroll: W,
             children: [

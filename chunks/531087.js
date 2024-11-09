@@ -8,7 +8,7 @@ n(192379);
 var l = n(120356),
     r = n.n(l),
     a = n(325767),
-    o = n(529300);
+    o = n(373963);
 function s(e) {
     let { width: t = 16, height: n = 16, color: l = 'currentColor', foreground: s, className: c, ...d } = e;
     return (0, i.jsx)('svg', {

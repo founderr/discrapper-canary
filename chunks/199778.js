@@ -16,7 +16,7 @@ var i = n(120356),
     f = n(981631),
     _ = n(474936),
     h = n(388032),
-    p = n(997977);
+    p = n(551648);
 function m(e) {
     let { hide: t, pillClassName: n, containerClassName: i } = e,
         { fractionalState: m, endsAt: g } = (0, l.Z)(),

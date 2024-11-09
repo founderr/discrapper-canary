@@ -13,7 +13,7 @@ var r = e(481060),
     o = e(46920),
     a = e(939863),
     d = e(388032),
-    u = e(691021);
+    u = e(851836);
 function _(n) {
     let { channel: t, transitionState: e, onClose: _, ...h } = n,
         m = (0, c.Dt)(),

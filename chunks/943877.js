@@ -3,10 +3,10 @@ n.d(t, {
         return m;
     },
     OV: function () {
-        return b;
+        return T;
     },
     P$: function () {
-        return T;
+        return b;
     },
     RM: function () {
         return S;
@@ -87,10 +87,10 @@ function m(e) {
         E = 'hour' === h || 'minute' === h || 'second' === h,
         v = null === (n = e.shouldCloseOnSelect) || void 0 === n || n,
         [I, S] = (0, s.useState)(null),
-        [b, T] = (0, s.useState)(null);
-    if ((u && ((I = u), 'hour' in u && (b = u)), _ && !(h in _))) throw Error('Invalid granularity ' + h + ' for value ' + _.toString());
+        [T, b] = (0, s.useState)(null);
+    if ((u && ((I = u), 'hour' in u && (T = u)), _ && !(h in _))) throw Error('Invalid granularity ' + h + ' for value ' + _.toString());
     let y = (e, t) => {
-            c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), S(null), T(null);
+            c('timeZone' in t ? t.set((0, r.WG)(e)) : (0, r.IO)(e, t)), S(null), b(null);
         },
         A = e.isInvalid || 'invalid' === e.validationState || l(u, e.minValue, e.maxValue) || (u && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, u))),
         N = e.validationState || (A ? 'invalid' : null);
@@ -98,19 +98,19 @@ function m(e) {
         value: u,
         setValue: c,
         dateValue: I,
-        timeValue: b,
+        timeValue: T,
         setDateValue: (t) => {
             let n = 'function' == typeof v ? v() : v;
-            E ? (b || n ? y(t, b || f(e.placeholderValue)) : S(t)) : c(t), n && o.setOpen(!1);
+            E ? (T || n ? y(t, T || f(e.placeholderValue)) : S(t)) : c(t), n && o.setOpen(!1);
         },
         setTimeValue: (e) => {
-            I && e ? y(I, e) : T(e);
+            I && e ? y(I, e) : b(e);
         },
         granularity: h,
         hasTime: E,
         ...o,
         setOpen(t) {
-            !t && !u && I && E && y(I, b || f(e.placeholderValue)), o.setOpen(t);
+            !t && !u && I && E && y(I, T || f(e.placeholderValue)), o.setOpen(t);
         },
         validationState: N,
         isInvalid: A,
@@ -530,27 +530,27 @@ function S(e) {
     var t, n;
     let { locale: i, createCalendar: o, hideTimeZone: u, isDisabled: c, isReadOnly: f, isRequired: m } = e,
         S = e.value || e.defaultValue || e.placeholderValue,
-        [b, T] = p(S, e.granularity),
-        y = T || 'UTC';
-    if (S && !(b in S)) throw Error('Invalid granularity ' + b + ' for value ' + S.toString());
+        [T, b] = p(S, e.granularity),
+        y = b || 'UTC';
+    if (S && !(T in S)) throw Error('Invalid granularity ' + T + ' for value ' + S.toString());
     let A = (0, s.useMemo)(() => new r.CN(i), [i]),
         N = (0, s.useMemo)(() => o(A.resolvedOptions().calendar), [o, A]),
         [C, R] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
         O = (0, s.useMemo)(() => _(C, N), [C, N]),
-        [D, L] = (0, s.useState)(() => h(e.placeholderValue, b, N, T)),
+        [D, L] = (0, s.useState)(() => h(e.placeholderValue, T, N, b)),
         x = O || D,
         w = 'gregory' === N.identifier && 'BC' === x.era,
         M = (0, s.useMemo)(
             () => ({
-                granularity: b,
+                granularity: T,
                 maxGranularity: null !== (t = e.maxGranularity) && void 0 !== t ? t : 'year',
-                timeZone: T,
+                timeZone: b,
                 hideTimeZone: u,
                 hourCycle: e.hourCycle,
                 showEra: w,
                 shouldForceLeadingZeros: e.shouldForceLeadingZeros
             }),
-            [e.maxGranularity, b, e.hourCycle, e.shouldForceLeadingZeros, T, u, w]
+            [e.maxGranularity, T, e.hourCycle, e.shouldForceLeadingZeros, b, u, w]
         ),
         P = (0, s.useMemo)(() => d({}, M), [M]),
         k = (0, s.useMemo)(() => new r.CN(i, P), [i, P]),
@@ -567,16 +567,16 @@ function S(e) {
         F = (0, s.useRef)(),
         V = (0, s.useRef)(N.identifier);
     (0, s.useEffect)(() => {
-        N.identifier !== V.current && ((V.current = N.identifier), L((t) => (Object.keys(B).length > 0 ? (0, r.Mw)(t, N) : h(e.placeholderValue, b, N, T))));
-    }, [N, b, B, T, e.placeholderValue]),
+        N.identifier !== V.current && ((V.current = N.identifier), L((t) => (Object.keys(B).length > 0 ? (0, r.Mw)(t, N) : h(e.placeholderValue, T, N, b))));
+    }, [N, T, B, b, e.placeholderValue]),
         C && Object.keys(B).length < Object.keys(G).length && Z((B = { ...G })),
-        null == C && Object.keys(B).length === Object.keys(G).length && (Z((B = {})), L(h(e.placeholderValue, b, N, T)));
+        null == C && Object.keys(B).length === Object.keys(G).length && (Z((B = {})), L(h(e.placeholderValue, T, N, b)));
     let j = O && Object.keys(B).length >= Object.keys(G).length ? O : D,
         H = (t) => {
             if (e.isDisabled || e.isReadOnly) return;
             let n = Object.keys(B),
                 i = Object.keys(G);
-            null == t ? (R(null), L(h(e.placeholderValue, b, N, T)), Z({})) : n.length >= i.length || (n.length === i.length - 1 && G.dayPeriod && !B.dayPeriod && 'dayPeriod' !== F.current) ? R((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ()))) : L(t), (F.current = null);
+            null == t ? (R(null), L(h(e.placeholderValue, T, N, b)), Z({})) : n.length >= i.length || (n.length === i.length - 1 && G.dayPeriod && !B.dayPeriod && 'dayPeriod' !== F.current) ? R((t = (0, r.Mw)(t, (null == S ? void 0 : S.calendar) || new r.IQ()))) : L(t), (F.current = null);
         },
         Y = (0, s.useMemo)(() => j.toDate(y), [j, y]),
         W = (0, s.useMemo)(
@@ -711,7 +711,7 @@ function S(e) {
         dateFormatter: k,
         validationState: e.validationState || (q ? 'invalid' : null),
         isInvalid: q,
-        granularity: b,
+        granularity: T,
         maxGranularity: null !== (n = e.maxGranularity) && void 0 !== n ? n : 'year',
         isDisabled: c,
         isReadOnly: f,
@@ -767,7 +767,7 @@ function S(e) {
         },
         clearSegment(t) {
             delete B[t], (F.current = t), Z({ ...B });
-            let n = h(e.placeholderValue, b, N, T),
+            let n = h(e.placeholderValue, T, N, b),
                 r = j;
             if ('dayPeriod' === t && 'hour' in j && 'hour' in n) {
                 let e = j.hour >= 12,
@@ -783,7 +783,7 @@ function S(e) {
         }
     };
 }
-function b(e) {
+function T(e) {
     var t, n, o;
     let u = (0, i.d)(e),
         [c, _] = (0, a.zk)(e.value, e.defaultValue || null, e.onChange),
@@ -810,15 +810,15 @@ function b(e) {
         [v] = p((null == g ? void 0 : g.start) || (null == g ? void 0 : g.end) || e.placeholderValue, e.granularity),
         I = 'hour' === v || 'minute' === v || 'second' === v,
         S = null === (o = e.shouldCloseOnSelect) || void 0 === o || o,
-        [b, T] = (0, s.useState)(null),
+        [T, b] = (0, s.useState)(null),
         [y, A] = (0, s.useState)(null);
-    g && g.start && g.end && ((b = g), 'hour' in g.start && (y = g));
+    g && g.start && g.end && ((T = g), 'hour' in g.start && (y = g));
     let N = (e, t) => {
             E({
                 start: 'timeZone' in t.start ? t.start.set((0, r.WG)(e.start)) : (0, r.IO)(e.start, t.start),
                 end: 'timeZone' in t.end ? t.end.set((0, r.WG)(e.end)) : (0, r.IO)(e.end, t.end)
             }),
-                T(null),
+                b(null),
                 A(null);
         },
         C = (t) => {
@@ -829,27 +829,27 @@ function b(e) {
                           start: (null == y ? void 0 : y.start) || f(e.placeholderValue),
                           end: (null == y ? void 0 : y.end) || f(e.placeholderValue)
                       })
-                    : T(t)
+                    : b(t)
                 : t.start && t.end
                   ? E(t)
-                  : T(t),
+                  : b(t),
                 n && u.setOpen(!1);
         },
         R = (e) => {
-            (null == b ? void 0 : b.start) && (null == b ? void 0 : b.end) && e.start && e.end ? N(b, e) : A(e);
+            (null == T ? void 0 : T.start) && (null == T ? void 0 : T.end) && e.start && e.end ? N(T, e) : A(e);
         },
         O = e.isInvalid || 'invalid' === e.validationState || (null != g && (l(g.start, e.minValue, e.maxValue) || l(g.end, e.minValue, e.maxValue) || (null != g.end && null != g.start && 0 > g.end.compare(g.start)) || ((null == g ? void 0 : g.start) && (null === (t = e.isDateUnavailable) || void 0 === t ? void 0 : t.call(e, g.start))) || ((null == g ? void 0 : g.end) && (null === (n = e.isDateUnavailable) || void 0 === n ? void 0 : n.call(e, g.end))))),
         D = e.validationState || (O ? 'invalid' : null);
     return {
         value: g,
         setValue: E,
-        dateRange: b,
+        dateRange: T,
         timeRange: y,
         granularity: v,
         hasTime: I,
         setDate(e, t) {
             C({
-                ...b,
+                ...T,
                 [e]: t
             });
         },
@@ -871,10 +871,10 @@ function b(e) {
         setOpen(t) {
             !t &&
                 !((null == g ? void 0 : g.start) && (null == g ? void 0 : g.end)) &&
-                (null == b ? void 0 : b.start) &&
-                (null == b ? void 0 : b.end) &&
+                (null == T ? void 0 : T.start) &&
+                (null == T ? void 0 : T.end) &&
                 I &&
-                N(b, {
+                N(T, {
                     start: (null == y ? void 0 : y.start) || f(e.placeholderValue),
                     end: (null == y ? void 0 : y.end) || f(e.placeholderValue)
                 }),
@@ -933,7 +933,7 @@ function b(e) {
         }
     };
 }
-function T(e) {
+function b(e) {
     let { placeholderValue: t = new r.qp(), minValue: n, maxValue: i, granularity: o } = e,
         [l, u] = (0, a.zk)(e.value, e.defaultValue, e.onChange),
         c = l || t,

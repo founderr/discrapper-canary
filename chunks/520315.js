@@ -23,11 +23,11 @@ function s(e) {
     v.current = l;
     let I = r.useRef(u);
     I.current = u;
-    let [S, b] = r.useState(!1),
-        T = r.useCallback(() => b(!1), []);
+    let [S, T] = r.useState(!1),
+        b = r.useCallback(() => T(!1), []);
     return (
         r.useLayoutEffect(() => {
-            void 0 !== t && ((h.current = void 0), (p.current = void 0), b(!1));
+            void 0 !== t && ((h.current = void 0), (p.current = void 0), T(!1));
         }, [t]),
         r.useLayoutEffect(() => {
             var e, r, i;
@@ -42,7 +42,7 @@ function s(e) {
                 c = n ? s : u,
                 f = n ? u : s;
             if (!(c !== f)) return;
-            b(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
+            T(!0), (d.style.height = ''.concat(c, 'px')), (d.style.transition = '');
             let _ = null;
             return (
                 (_ = requestAnimationFrame(() => {
@@ -57,7 +57,7 @@ function s(e) {
         {
             ref: c ? _ : f,
             isTransitioning: S,
-            onTransitionEnd: T
+            onTransitionEnd: b
         }
     );
 }

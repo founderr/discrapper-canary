@@ -18,8 +18,8 @@ var i,
     v = n(486472),
     I = n(271383),
     S = n(430824),
-    b = n(19780),
-    T = n(699516),
+    T = n(19780),
+    b = n(699516),
     y = n(944486),
     A = n(914010),
     N = n(981631);
@@ -34,7 +34,7 @@ function R(e, t) {
     let n = {};
     C.forEach((i) => {
         var a;
-        i !== A.Z.getGuildId() && i !== b.Z.getGuildId() && i !== (null === (a = E.Z.getChannel(y.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
+        i !== A.Z.getGuildId() && i !== T.Z.getGuildId() && i !== (null === (a = E.Z.getChannel(y.Z.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == r || r.guildId !== i) && (C.clearWithoutFlushing(i, e), t && (n[i] = C.get(i)));
     }),
         !u().isEmpty(n) &&
             d.Z.dispatch({
@@ -79,7 +79,7 @@ function M() {
     if (null == e) null != r && (C.unsubscribeUser(r.guildId, r.userId), (r = null));
     else {
         let { userId: t } = e;
-        if ((null != r && r.userId === t) || T.Z.isFriend(t)) return !1;
+        if ((null != r && r.userId === t) || b.Z.isFriend(t)) return !1;
         let n = I.ZP.memberOf(t);
         if (0 === n.length) return !1;
         let [i] = n;
@@ -93,7 +93,7 @@ function M() {
 }
 class P extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(E.Z, S.Z, A.Z, y.Z, b.Z, p.default, g.ZP, _.Z), this.syncWith([h.Z], M), this.syncWith([g.ZP], w);
+        this.waitFor(E.Z, S.Z, A.Z, y.Z, T.Z, p.default, g.ZP, _.Z), this.syncWith([h.Z], M), this.syncWith([g.ZP], w);
     }
     getSubscribedThreadIds() {
         return C.getSubscribedThreadIds();

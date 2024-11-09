@@ -41,11 +41,11 @@ var r = n(200651),
     v = n(496675),
     I = n(944486),
     S = n(626135),
-    b = n(585483),
-    T = n(787025),
+    T = n(585483),
+    b = n(787025),
     y = n(981631),
     A = n(388032),
-    N = n(579398);
+    N = n(193310);
 function C(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o } = e;
     return (
@@ -132,13 +132,13 @@ function D(e) {
                 null == s || s(),
                     null != l && (0, m.uL)(null !== (e = l.pathname) && void 0 !== e ? e : ''),
                     setImmediate(() => {
-                        b.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                        T.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                     });
         }, [null == n ? void 0 : n.id, s, l]),
         p = (0, c.e7)([I.Z, E.Z], () => E.Z.getChannel(I.Z.getChannelId())),
-        T = (0, c.e7)([v.Z], () => v.Z.can(y.Plq.SEND_MESSAGES, p)),
+        b = (0, c.e7)([v.Z], () => v.Z.can(y.Plq.SEND_MESSAGES, p)),
         C = null != t,
-        R = null == t && T && (!d || null != l);
+        R = null == t && b && (!d || null != l);
     return null != t || null != s
         ? (0, r.jsxs)('div', {
               className: N.buttonsContainer,
@@ -184,7 +184,7 @@ function L(e) {
 function x() {
     var e, t;
     let n = (0, l.TH)();
-    return (0, r.jsx)(T.G, {
+    return (0, r.jsx)(b.G, {
         children: (0, r.jsx)(O, {
             guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
             application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
@@ -202,7 +202,7 @@ function w(e) {
     }, [a]);
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : A.intl.string(A.t['mqn87+']);
-    return (0, r.jsx)(T.G, {
+    return (0, r.jsx)(b.G, {
         children: (0, r.jsx)(L, {
             message: l,
             showsCloseWindowText: !0

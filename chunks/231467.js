@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(214715),
     I = n(550271),
     S = n(686546),
-    b = n(216742),
-    T = n(246364),
+    T = n(216742),
+    b = n(246364),
     y = n(937111),
     A = n(703656),
     N = n(271383),
@@ -39,7 +39,7 @@ var r = n(200651),
     x = n(981631),
     w = n(308083),
     M = n(388032),
-    P = n(163077);
+    P = n(68118);
 function k(e) {
     let { wildcardDescriptors: t, primaryColor: n } = e,
         a = t.filter((e) => e !== w.U6).join(', '),
@@ -183,7 +183,7 @@ function B(e) {
 }
 function Z(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: h, prioritizedGameIds: p, className: v, position: b, showBrandingFooter: T = !1, showFavoriteButton: y = !1, bannerUrl: A, onlyAnimateIconOnHover: N = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1, footer: x = null } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: h, prioritizedGameIds: p, className: v, position: T, showBrandingFooter: b = !1, showFavoriteButton: y = !1, bannerUrl: A, onlyAnimateIconOnHover: N = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1, footer: x = null } = e,
         {
             tag: Z,
             badge: F,
@@ -205,13 +205,13 @@ function Z(e) {
                     e.preventDefault(),
                     ee(!0),
                     (0, f.j$)({
-                        position: b,
+                        position: T,
                         guildId: n.id,
                         isFavorited: !et
                     }),
                     et ? (0, O.SI)(n.id) : (0, O.EV)(n.id);
             },
-            [n.id, et, b]
+            [n.id, et, T]
         ),
         ei = i.useCallback(() => {
             q(!0);
@@ -240,12 +240,12 @@ function Z(e) {
     let ed = i.useCallback(
             (e) => () => {
                 (0, f.Gh)({
-                    position: b,
+                    position: T,
                     guildId: n.id,
                     feature: e
                 });
             },
-            [b, n.id]
+            [T, n.id]
         ),
         ef = en && (y || z || et);
     return (0, r.jsxs)('div', {
@@ -421,7 +421,7 @@ function Z(e) {
                     })
                 ]
             }),
-            T &&
+            b &&
                 (0, r.jsx)('div', {
                     className: P.cardBrandingFooter,
                     style: { background: 'linear-gradient(90deg, '.concat(V, ', ').concat(j, ')') }
@@ -437,10 +437,10 @@ t.ZP = function (e) {
         R = (0, l.e7)([N.ZP], () => N.ZP.isMember(m.id, null == S ? void 0 : S.id), [m, S]),
         O = (0, l.e7)([y.Z], () => {
             var e;
-            return (null === (e = y.Z.getRequest(m.id)) || void 0 === e ? void 0 : e.applicationStatus) === T.wB.SUBMITTED;
+            return (null === (e = y.Z.getRequest(m.id)) || void 0 === e ? void 0 : e.applicationStatus) === b.wB.SUBMITTED;
         }),
         D = (0, _.iN)('ClanGuildProfile'),
-        L = (0, b.I7)().enabled,
+        L = (0, T.I7)().enabled,
         k = m.memberCount >= w.Du,
         U = i.useRef(-1),
         G = i.useCallback((e) => d(e, U), [d]),

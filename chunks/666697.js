@@ -18,7 +18,7 @@ var i,
     I = n(946542),
     C = n(213746),
     v = n(388032),
-    S = n(162064);
+    S = n(850258);
 ((r = i || (i = {})).ABOUT = 'about'), (r.STORE = 'store');
 t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: i, onOpenCategorySearch: r, onCloseAppDetails: N } = e,

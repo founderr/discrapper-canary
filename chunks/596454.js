@@ -20,11 +20,11 @@ var r = n(200651),
     p = n(176354),
     m = n(506071),
     g = n(149203);
-n(837748);
+n(13585);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: S = 'default', isInteracting: b = !1, shouldAnimate: T, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: S = 'default', isInteracting: T = !1, shouldAnimate: b, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
         M = i.useRef(),
@@ -37,16 +37,16 @@ function v(e) {
         F = i.useMemo(() => {
             if (null != a) return a;
             if (null != d) {
-                let e = !0 === T && G;
+                let e = !0 === b && G;
                 return h.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === I && (e || D || !0 === b),
+                    animated: U && !0 === I && (e || D || !0 === T),
                     size: B
                 });
             }
             if (null != _) return p.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [I, G, d, _, B, U, D, b, T, a]),
+        }, [I, G, d, _, B, U, D, T, b, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {

@@ -20,7 +20,7 @@ var l = n(442837),
     g = n(643632),
     C = n(939863),
     x = n(388032),
-    v = n(324167);
+    v = n(187169);
 function _(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.Z, {

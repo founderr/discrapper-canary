@@ -18,7 +18,7 @@ var r = n(200651),
     h = n(436660),
     p = n(887490),
     m = n(447525),
-    g = n(220869);
+    g = n(3066);
 function E(e) {
     var t;
     let { editorRef: n, options: i, iconClassName: a, dividerClassName: o } = e,
@@ -144,7 +144,7 @@ t.Z = i.forwardRef(function (e, t) {
         I = i.useCallback(() => {
             h(!1), clearTimeout(m.current);
         }, []),
-        b = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 let n = v.renderWindow;
@@ -152,7 +152,7 @@ t.Z = i.forwardRef(function (e, t) {
             },
             [v, I]
         ),
-        T = i.useCallback(
+        b = i.useCallback(
             (e) => {
                 let t = v.renderWindow;
                 if (e.target instanceof t.Element) {
@@ -177,15 +177,15 @@ t.Z = i.forwardRef(function (e, t) {
             let e = v.renderWindow;
             return (
                 e.document.addEventListener('keydown', I),
-                e.document.addEventListener('mousedown', b),
-                e.document.addEventListener('mouseup', T),
+                e.document.addEventListener('mousedown', T),
+                e.document.addEventListener('mouseup', b),
                 e.addEventListener('focus', I),
                 e.addEventListener('blur', I),
                 () => {
-                    e.document.removeEventListener('keydown', I), e.document.removeEventListener('mousedown', b), e.document.removeEventListener('mouseup', T), e.removeEventListener('focus', I), e.removeEventListener('blur', I), clearTimeout(m.current);
+                    e.document.removeEventListener('keydown', I), e.document.removeEventListener('mousedown', T), e.document.removeEventListener('mouseup', b), e.removeEventListener('focus', I), e.removeEventListener('blur', I), clearTimeout(m.current);
                 }
             );
-        }, [v, I, b, T]);
+        }, [v, I, T, b]);
     let { x: y, y: A } = i.useMemo(() => {
             var e, t, n, r;
             let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();

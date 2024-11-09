@@ -132,7 +132,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
             return (0, r.uniqBy)(t, 'id');
         }
     },
-    b = (e, t) => {
+    T = (e, t) => {
         let n = I(e);
         if (t === i.Z.AVATAR_DECORATION) {
             let e = (0, r.flatMap)(n, 'items').filter(o.M);
@@ -143,9 +143,9 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
             return (0, r.uniqBy)(e, 'id');
         }
     },
-    T = (e) => S(e, i.Z.AVATAR_DECORATION),
-    y = (e) => b(e, i.Z.AVATAR_DECORATION),
-    A = (e, t) => (0, r.uniqBy)([...T(e), ...y(t)], 'id'),
+    b = (e) => S(e, i.Z.AVATAR_DECORATION),
+    y = (e) => T(e, i.Z.AVATAR_DECORATION),
+    A = (e, t) => (0, r.uniqBy)([...b(e), ...y(t)], 'id'),
     N = (e, t) => {
         var n;
         let { CDN_HOST: r, API_ENDPOINT: i } = window.GLOBAL_ENV,
@@ -156,7 +156,7 @@ let d = (e) => (null == e ? void 0 : e.premiumType) != null,
         return ''.concat(location.protocol).concat(i).concat(l, '?size=').concat(s);
     },
     C = (e) => S(e, i.Z.PROFILE_EFFECT),
-    R = (e) => b(e, i.Z.PROFILE_EFFECT),
+    R = (e) => T(e, i.Z.PROFILE_EFFECT),
     O = (e, t) => {
         let n = C(t),
             r = R(e).filter((e) => {

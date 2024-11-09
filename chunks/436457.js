@@ -18,7 +18,7 @@ var o = n(200651),
     m = n(782605),
     h = n(981631),
     E = n(388032),
-    x = n(404840);
+    x = n(830513);
 let N = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
 function T(e) {
     let { onBack: t, onComplete: n, onConnect: s, isSlideReady: a } = e,

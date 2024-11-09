@@ -30,7 +30,7 @@ function I(e, t, n) {
     );
 }
 let S = new l.g8();
-function b(e) {
+function T(e) {
     switch (e.type) {
         case l.eD.FOLDER:
             return {
@@ -49,7 +49,7 @@ function b(e) {
             throw Error('[SortedGuildStore] Unexpected guilds tree node type.');
     }
 }
-function T(e, t) {
+function b(e, t) {
     let n = S;
     if (((S = new l.g8()), 0 === e.length && t.length > 0)) for (let e of t) S.addNode((0, l.Mg)(e));
     else
@@ -75,12 +75,12 @@ function T(e, t) {
 }
 function y() {
     var e, t, n;
-    return T(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
+    return b(null !== (t = c.Z.getGuildFolders()) && void 0 !== t ? t : [], null !== (n = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== n ? n : []);
 }
 function A() {
     var e, t;
     let n = c.Z.getGuildFolders();
-    return !(null != r && a()(r, n)) && T(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
+    return !(null != r && a()(r, n)) && b(null != (r = n) ? r : [], null !== (t = null === (e = c.Z.settings.guildFolders) || void 0 === e ? void 0 : e.guildPositions) && void 0 !== t ? t : []);
 }
 function N(e) {
     let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
@@ -172,7 +172,7 @@ function M(e, t) {
     o()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), S.replaceNode(e, n);
 }
 let P = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
-    k = (0, d.oH)((e, t) => e.getRoots().map(b)),
+    k = (0, d.oH)((e, t) => e.getRoots().map(T)),
     U = (0, d.oH)((e, t) => {
         let n = [];
         return (
@@ -187,7 +187,7 @@ let P = (0, d.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
             n
         );
     }),
-    G = (0, d.oH)((e, t) => e.root.children.map(b));
+    G = (0, d.oH)((e, t) => e.root.children.map(T));
 class B extends g.Z {
     initialize() {
         this.waitFor(m.Z, E.ZP, c.Z, h.Z, u.Z, _.Z);

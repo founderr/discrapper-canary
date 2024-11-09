@@ -34,7 +34,7 @@ var i = n(200651),
     D = n(981631),
     B = n(231338),
     P = n(388032),
-    k = n(834275);
+    k = n(94255);
 function O(e) {
     let { channel: t, roles: n, members: l, disabledReason: s, getRemoveTooltipHint: a } = e;
     return (0, i.jsx)(o.List, {

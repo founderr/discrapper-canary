@@ -66,15 +66,15 @@ n.d(t, {
                         I = p.value,
                         S = u[I];
                     if (!o(S)) throw new s.YR(I, 'function', d);
-                    var b = S(
+                    var T = S(
                         e(v, n, r, l, u, c).map(function (e) {
                             return e.value;
                         })
                     );
-                    !Array.isArray(b) && (b = [b]),
+                    !Array.isArray(T) && (T = [T]),
                         _.push.apply(
                             _,
-                            b.map(function (e) {
+                            T.map(function (e) {
                                 return {
                                     type: 'string' == typeof e ? i.literal : i.object,
                                     value: e
@@ -83,20 +83,20 @@ n.d(t, {
                         );
                 }
                 if ((0, a.Wi)(p)) {
-                    var T = p.options[g] || p.options.other;
-                    if (!T) throw new s.C8(p.value, g, Object.keys(p.options), d);
-                    _.push.apply(_, e(T.value, n, r, l, u));
+                    var b = p.options[g] || p.options.other;
+                    if (!b) throw new s.C8(p.value, g, Object.keys(p.options), d);
+                    _.push.apply(_, e(b.value, n, r, l, u));
                     continue;
                 }
                 if ((0, a.Jo)(p)) {
-                    var T = p.options['='.concat(g)];
-                    if (!T) {
+                    var b = p.options['='.concat(g)];
+                    if (!b) {
                         if (!Intl.PluralRules) throw new s.u_('Intl.PluralRules is not available in this environment.\nTry polyfilling it using "@formatjs/intl-pluralrules"\n', s.jK.MISSING_INTL_API, d);
                         var y = r.getPluralRules(n, { type: p.pluralType }).select(g - (p.offset || 0));
-                        T = p.options[y] || p.options.other;
+                        b = p.options[y] || p.options.other;
                     }
-                    if (!T) throw new s.C8(p.value, g, Object.keys(p.options), d);
-                    _.push.apply(_, e(T.value, n, r, l, u, g - (p.offset || 0)));
+                    if (!b) throw new s.C8(p.value, g, Object.keys(p.options), d);
+                    _.push.apply(_, e(b.value, n, r, l, u, g - (p.offset || 0)));
                     continue;
                 }
             }

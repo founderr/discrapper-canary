@@ -23,20 +23,20 @@ var r = n(200651),
     v = n(518950),
     I = n(594174),
     S = n(709586),
-    b = n(624138),
-    T = n(51144),
+    T = n(624138),
+    b = n(51144),
     y = n(788307),
     A = n(981631),
     N = n(674563),
     C = n(524484),
     R = n(388032),
-    O = n(753629);
-let D = (0, b.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+    O = n(226686);
+let D = (0, T.Mg)(o.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 t.Z = function (e) {
     var t;
-    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: b, ownerTooltipText: D, lostPermissionTooltipText: L, isTyping: x = !1, nick: w, user: M, currentUser: P, activities: k, applicationStream: U, status: G, shouldAnimateStatus: B = !1, isMobile: Z, premiumSince: F, channel: V, guildId: j, className: H, onMouseDown: Y, onKeyDown: W, onClick: K, onContextMenu: z, onClickPremiumGuildIcon: q, onFocus: Q, 'aria-controls': X, 'aria-expanded': J, 'aria-posinset': $, 'aria-setsize': ee, id: et, tabIndex: en, itemProps: er } = e,
+    let { selected: n = !1, colorString: a, colorRoleName: o, isOwner: T, ownerTooltipText: D, lostPermissionTooltipText: L, isTyping: x = !1, nick: w, user: M, currentUser: P, activities: k, applicationStream: U, status: G, shouldAnimateStatus: B = !1, isMobile: Z, premiumSince: F, channel: V, guildId: j, className: H, onMouseDown: Y, onKeyDown: W, onClick: K, onContextMenu: z, onClickPremiumGuildIcon: q, onFocus: Q, 'aria-controls': X, 'aria-expanded': J, 'aria-posinset': $, 'aria-setsize': ee, id: et, tabIndex: en, itemProps: er } = e,
         ei = null == M ? void 0 : M.id,
-        ea = T.ZP.useName(M),
+        ea = b.ZP.useName(M),
         es = (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === ei,
         eo = i.useRef(null),
         [el, eu] = i.useState(!1),
@@ -70,10 +70,10 @@ t.Z = function (e) {
         eS = () => {
             eu(!1);
         },
-        eb = (e) => {
+        eT = (e) => {
             ed(e);
         },
-        eT = () => {
+        eb = () => {
             let e = null != k ? k.find((e) => e.type === A.IIU.CUSTOM_STATUS) : null,
                 t = null != e && null != M && (0, h.Z)(e, M, V);
             return (0, r.jsx)(y.ZP, {
@@ -90,7 +90,7 @@ t.Z = function (e) {
             });
         },
         ey = () =>
-            null != b && b && null == L
+            null != T && T && null == L
                 ? (0, r.jsx)(l.Tooltip, {
                       text: null != D ? D : R.intl.string(R.t.pclUFB),
                       children: (e) =>
@@ -148,7 +148,7 @@ t.Z = function (e) {
                             'aria-label': e.username,
                             statusTooltip: !0,
                             avatarDecoration: ef,
-                            typingIndicatorRef: eb
+                            typingIndicatorRef: eT
                         }),
                         (0, r.jsx)(p.Z, {
                             confettiSpawnRef: ec,
@@ -227,7 +227,7 @@ t.Z = function (e) {
                                         })
                                 }),
                       avatar: eR(M, eD),
-                      subText: eT(),
+                      subText: eb(),
                       decorators: eC(),
                       'aria-controls': X,
                       'aria-expanded': J,

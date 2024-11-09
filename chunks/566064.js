@@ -24,16 +24,16 @@ function c(e) {
             },
             [g]
         ),
-        [S, b] = r.useReducer(I, {
+        [S, T] = r.useReducer(I, {
             focusedX: c,
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: T, focusedX: y, focusedY: A } = S,
-        [N] = r.useState(() => (0, s.P2)(b, 16));
+        { columnCounts: b, focusedX: y, focusedY: A } = S,
+        [N] = r.useState(() => (0, s.P2)(T, 16));
     return (
         r.useEffect(() => {
-            b({
+            T({
                 type: i.s.UPDATE_COLUMN_COUNTS,
                 columnCounts: n
             });
@@ -43,7 +43,7 @@ function c(e) {
                 I = r.useRef();
             I.current = g;
             let S = u(l(t, c, d)),
-                [b, T] = r.useState(!1),
+                [T, b] = r.useState(!1),
                 [y, A] = r.useState(!1),
                 [N, C] = r.useState(!1),
                 [R] = r.useState(
@@ -51,7 +51,7 @@ function c(e) {
                         new s.$o((e) => {
                             let [t, n] = e.split(',').map(Number);
                             return () => {
-                                T(!0),
+                                b(!0),
                                     p({
                                         type: i.s.SET_FOCUSED_POSITION,
                                         x: t,
@@ -101,25 +101,25 @@ function c(e) {
                 ),
                 [x, w] = r.useState(!1);
             r.useEffect(() => {
-                if (!x || !b) return;
+                if (!x || !T) return;
                 w(!1);
                 let e = u(l(t, c, d));
                 if (null != e) {
                     O(e);
                     return;
                 }
-                T(!1);
+                b(!1);
                 let n = u(l(t));
                 null != n && O(n);
-            }, [t, x, b, O, c, d]);
+            }, [t, x, T, O, c, d]);
             let M = r.useCallback((e) => {
                 I.current && null == e && w(!0);
             }, []);
             r.useEffect(() => {
-                b && y && null != S && (O(S), A(!1));
+                T && y && null != S && (O(S), A(!1));
             }, [y, S]),
                 r.useEffect(() => {
-                    b && (!N && D(c, d), C(!1));
+                    T && (!N && D(c, d), C(!1));
                 }, [c, d]);
             let P = r.useCallback(
                     (e) => {
@@ -167,11 +167,11 @@ function c(e) {
                     },
                     [L, p, E, S, f, c, d]
                 ),
-                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!b && (T(!0), C(!0)), !1) : b ? (L(!1), !1) : void (m && null != S ? D(c, d) : L(!0))), [b, m, S, L, D, c, d]),
+                k = r.useCallback((e) => (e.currentTarget !== e.target ? (!T && (b(!0), C(!0)), !1) : T ? (L(!1), !1) : void (m && null != S ? D(c, d) : L(!0))), [T, m, S, L, D, c, d]),
                 U = r.useCallback((e) => {
                     if (e.target !== e.currentTarget) {
                         if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                        T(!1);
+                        b(!1);
                     }
                 }, []),
                 G = r.useMemo(() => Math.max(...n), [n]),
@@ -180,13 +180,13 @@ function c(e) {
                         role: 'grid',
                         'aria-rowcount': n.length,
                         'aria-colcount': G,
-                        tabIndex: b && m ? -1 : 0,
+                        tabIndex: T && m ? -1 : 0,
                         'data-ref-id': t,
                         onKeyDown: P,
                         onFocus: k,
                         onBlur: U
                     }),
-                    [n.length, G, b, m, t, P, k, U]
+                    [n.length, G, T, m, t, P, k, U]
                 ),
                 Z = r.useCallback(
                     (e, n) => {
@@ -220,7 +220,7 @@ function c(e) {
             );
         })({
             navId: t,
-            columnCounts: T,
+            columnCounts: b,
             focusedX: y,
             focusedY: A,
             dispatch: N,

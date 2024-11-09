@@ -33,7 +33,7 @@ var i = n(200651),
     y = n(603274),
     j = n(981631),
     T = n(388032),
-    P = n(534977);
+    P = n(599576);
 let A = {
     analyticsSource: {
         page: j.ZY5.GUILD_CHANNEL,

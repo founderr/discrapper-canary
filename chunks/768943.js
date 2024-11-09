@@ -42,7 +42,7 @@ function S(e) {
         a = null !== (t = E.get(i)) && void 0 !== t ? t : new Set();
     a.add(r), E.set(i, a), null == e.message && g.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? m.add(r) : m.delete(r);
 }
-function b(e) {
+function T(e) {
     let { messageId: t, channelId: n } = e,
         r = I({
             messageId: t,
@@ -53,7 +53,7 @@ function b(e) {
     let a = { ...i };
     return (a.message = null), _.set(r, a), !0;
 }
-function T() {
+function b() {
     if (0 === g.size || h) return !1;
     h = !0;
 }
@@ -148,7 +148,7 @@ class y extends (r = o.ZP.Store) {
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e;
-            return b({
+            return T({
                 messageId: t,
                 channelId: n
             });
@@ -156,7 +156,7 @@ class y extends (r = o.ZP.Store) {
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
             for (let e of t)
-                b({
+                T({
                     messageId: e,
                     channelId: n
                 });
@@ -173,9 +173,9 @@ class y extends (r = o.ZP.Store) {
             let i = { ...r };
             (i.message = (0, c.wi)(r.message, t)), _.set(n, i);
         },
-        GUILD_CREATE: T,
-        GUILD_UPDATE: T,
-        GUILD_DELETE: T,
+        GUILD_CREATE: b,
+        GUILD_UPDATE: b,
+        GUILD_DELETE: b,
         CHANNEL_CREATE: function (e) {
             let { channel: t } = e;
             if (0 === g.size || h || !v(t.id)) return !1;
@@ -201,9 +201,9 @@ class y extends (r = o.ZP.Store) {
             if (0 === g.size || h || n.id !== (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
             h = !0;
         },
-        GUILD_ROLE_CREATE: T,
-        GUILD_ROLE_UPDATE: T,
-        GUILD_ROLE_DELETE: T,
+        GUILD_ROLE_CREATE: b,
+        GUILD_ROLE_UPDATE: b,
+        GUILD_ROLE_DELETE: b,
         MESSAGE_REMINDER_DUE: function (e) {
             let { savedMessage: t } = e;
             m.add(t.saveData.messageId);

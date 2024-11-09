@@ -18,8 +18,8 @@ var i = n(120356),
     v = n(639119),
     I = n(474936),
     S = n(981631),
-    b = n(388032),
-    T = n(910465);
+    T = n(388032),
+    b = n(186903);
 t.Z = function (e) {
     let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
         V = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
@@ -103,7 +103,7 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.Button, {
             size: A,
             className: N,
-            innerClassName: T.premiumSubscribeButton,
+            innerClassName: b.premiumSubscribeButton,
             color: o.Button.Colors.BRAND_INVERTED,
             onClick: q,
             ...F,
@@ -112,11 +112,11 @@ t.Z = function (e) {
                     (0, r.jsx)(o.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: T.premiumIcon
+                        className: b.premiumIcon
                     }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
-                    children: null != R ? R : b.intl.string(b.t['Gd/XHB'])
+                    className: a()(b.buttonText, O),
+                    children: null != R ? R : T.intl.string(T.t['Gd/XHB'])
                 })
             ]
         });
@@ -124,7 +124,7 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.Button, {
             size: A,
             className: N,
-            innerClassName: T.giftButton,
+            innerClassName: b.giftButton,
             color: o.Button.Colors.PRIMARY,
             onClick: q,
             ...F,
@@ -132,19 +132,19 @@ t.Z = function (e) {
                 (0, r.jsx)(o.GiftIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: T.giftIcon
+                    className: b.giftIcon
                 }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
-                    children: null != R ? R : b.intl.string(b.t.PEjaCw)
+                    className: a()(b.buttonText, O),
+                    children: null != R ? R : T.intl.string(T.t.PEjaCw)
                 })
             ]
         });
-    let Q = b.intl.string(b.t['2pG5GR']),
+    let Q = T.intl.string(T.t['2pG5GR']),
         X = null != H ? (0, E.Af)(H) : null,
         J = null != X ? E.ZP.getPremiumType(X.planId) : null == V ? void 0 : V.premiumType,
         $ = i === I.Si.TIER_2 && null != J && [I.p9.TIER_0, I.p9.TIER_1].includes(J);
-    $ && (Q = b.intl.string(b.t.IJI7ys));
+    $ && (Q = T.intl.string(T.t.IJI7ys));
     let ee = null != H && E.ZP.isSwitchingPlansDisabled(H, Y),
         et = (null != H && H.status !== S.O0b.ACCOUNT_HOLD && !(0, h.Q0)(H.planId) && !$) || ee,
         en = et
@@ -163,7 +163,7 @@ t.Z = function (e) {
                           l = null != o ? I.$e[o] : null,
                           u = null != n ? I.$e[n] : null;
                       return (
-                          r ? (s = E.ZP.getSwitchingPlansDisabledMessage(i)) : null != u && null != l && l < u ? ((a = b.intl.string(b.t['2pG5GR'])), (s = b.intl.string(b.t.jXaaRk))) : null != o && null != n && o === n ? ((a = b.intl.string(b.t.ymSxh4)), (s = b.intl.string(b.t.jXaaRk))) : null == o && null != n && n === I.p9.TIER_2 && (s = b.intl.string(b.t.jXaaRk)),
+                          r ? (s = E.ZP.getSwitchingPlansDisabledMessage(i)) : null != u && null != l && l < u ? ((a = T.intl.string(T.t['2pG5GR'])), (s = T.intl.string(T.t.jXaaRk))) : null != o && null != n && o === n ? ((a = T.intl.string(T.t.ymSxh4)), (s = T.intl.string(T.t.jXaaRk))) : null == o && null != n && n === I.p9.TIER_2 && (s = T.intl.string(T.t.jXaaRk)),
                           {
                               disabledButtonText: a,
                               disabledButtonTooltipText: s
@@ -181,14 +181,14 @@ t.Z = function (e) {
         return (0, r.jsxs)(o.ShinyButton, {
             disabled: et,
             onClick: q,
-            innerClassName: T.premiumSubscribeButton,
+            innerClassName: b.premiumSubscribeButton,
             color: i === I.Si.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
             size: A,
             className: B,
             wrapperClassName: a()(
                 {
-                    [T.tier2Gradient]: Z && i === I.Si.TIER_2,
-                    [T.tier1Gradient]: Z && i === I.Si.TIER_1
+                    [b.tier2Gradient]: Z && i === I.Si.TIER_2,
+                    [b.tier1Gradient]: Z && i === I.Si.TIER_1
                 },
                 N
             ),
@@ -200,10 +200,10 @@ t.Z = function (e) {
                     (0, r.jsx)(o.NitroWheelIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a()(T.premiumIcon, D)
+                        className: a()(b.premiumIcon, D)
                     }),
                 (0, r.jsx)('span', {
-                    className: a()(T.buttonText, O),
+                    className: a()(b.buttonText, O),
                     children: null !== (n = null !== (t = null == en ? void 0 : en.disabledButtonText) && void 0 !== t ? t : R) && void 0 !== n ? n : Q
                 })
             ]

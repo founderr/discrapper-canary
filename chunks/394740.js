@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(981631),
     I = n(474936),
     S = n(388032),
-    b = n(113065),
-    T = n(368308);
+    T = n(383052),
+    b = n(145834);
 function y(e) {
     var t;
     let { onClose: a, closePopout: y, sound: A, channel: N } = e,
@@ -62,36 +62,36 @@ function y(e) {
         p.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), y();
     }, [y]);
     return (0, r.jsxs)('div', {
-        className: s()(T.premiumPromo, b.container),
+        className: s()(b.premiumPromo, T.container),
         children: [
             (0, r.jsx)(l.Clickable, {
-                className: T.premiumPromoClose,
+                className: b.premiumPromoClose,
                 onClick: a,
                 children: S.intl.string(S.t.cpT0Cg)
             }),
             (0, r.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: s()(T.premiumPromoImage, T.premiumPromoImageSmaller, b.image),
+                className: s()(b.premiumPromoImage, b.premiumPromoImageSmaller, T.image),
                 src: P
             }),
             (0, r.jsx)(l.Heading, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
-                className: T.premiumPromoTitle,
+                className: b.premiumPromoTitle,
                 children: S.intl.string(S.t['/a5qY2'])
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: T.premiumPromoDescription,
+                className: b.premiumPromoDescription,
                 children: S.intl.format(S.t.lcSxhI, { onClick: k })
             }),
             (0, r.jsxs)('div', {
-                className: b.buttonContainer,
+                className: T.buttonContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: b.previewButtonContainer,
+                        className: T.previewButtonContainer,
                         children: M
                     }),
                     (0, r.jsx)(h.Z, {

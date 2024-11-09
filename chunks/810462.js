@@ -6,21 +6,21 @@ var r = n(200651),
     o = n(461745),
     l = n(806966),
     u = n(28546),
-    c = n(640085);
+    c = n(324889);
 let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
         [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
         I = n.useStore((e) => e.searchPlaceholder),
         S = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
-        b = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = h.current) || void 0 === t || t.scrollTo(0);
             },
             [h, n]
         ),
-        T = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -45,9 +45,9 @@ let d = i.forwardRef(function (e, t) {
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
                 placeholder: null != I ? I : d || null == m ? p : m,
-                onClear: T,
+                onClear: b,
                 onKeyDown: f,
-                onQueryChange: b,
+                onQueryChange: T,
                 className: c.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,

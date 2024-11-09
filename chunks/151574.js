@@ -18,8 +18,8 @@ var r,
     v = n(28546),
     I = n(285651),
     S = n(926491),
-    b = n(373228),
-    T = n(378233),
+    T = n(373228),
+    b = n(378233),
     y = n(419922),
     A = n(490095),
     N = n(652136),
@@ -29,7 +29,7 @@ var r,
     D = n(606301),
     L = n(981631),
     x = n(388032),
-    w = n(787040);
+    w = n(238268);
 let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
     P = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_SIZE),
     k = 2 * P + (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_STICKER_SUGGESTION_MARGIN) + 2 * M,
@@ -174,8 +174,8 @@ t.Z = s.memo(function (e) {
                     }),
                     t === I.eb.SENDABLE)
                 )
-                    P(!0), o(e, b.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
-                else if ((0, T.jl)(e)) {
+                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
+                else if ((0, b.jl)(e)) {
                     let t = S.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({

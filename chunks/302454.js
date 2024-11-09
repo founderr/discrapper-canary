@@ -63,10 +63,10 @@ var t, n;
                                             I = v.order;
                                         if (I > _) break;
                                         var S = null == s.prevCapture ? '' : s.prevCapture[0],
-                                            b = v.match(t, s, S);
-                                        if (b) {
-                                            var T = v.quality ? v.quality(b, s, S) : 0;
-                                            (I < _ || T > f) && ((l = E), (c = v), (d = b), (f = T), (_ = I));
+                                            T = v.match(t, s, S);
+                                        if (T) {
+                                            var b = v.quality ? v.quality(T, s, S) : 0;
+                                            (I < _ || b > f) && ((l = E), (c = v), (d = T), (f = b), (_ = I));
                                         }
                                     }
                             }
@@ -132,8 +132,8 @@ var t, n;
                 }
                 return e;
             },
-            b = /[<>&"']/g,
-            T = {
+            T = /[<>&"']/g,
+            b = {
                 '<': '&lt;',
                 '>': '&gt;',
                 '&': '&amp;',
@@ -143,8 +143,8 @@ var t, n;
                 '`': '&#96;'
             },
             y = function (e) {
-                return String(e).replace(b, function (e) {
-                    return T[e];
+                return String(e).replace(T, function (e) {
+                    return b[e];
                 });
             },
             A = /\\([^0-9A-Za-z\s])/g,

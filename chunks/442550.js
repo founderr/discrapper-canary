@@ -12,15 +12,15 @@ var r = n(200651),
     l = n(481060),
     u = n(410030),
     c = n(388032),
-    d = n(363909);
+    d = n(449761);
 function f(e) {
     let { src: t, size: n, constrain: a = 'height', className: f, alt: _, fallbackSrc: h, 'aria-hidden': p, showTooltip: m = !1 } = e,
         g = (0, u.ZP)(),
         E = ''.concat(n, 'px'),
         [v, I] = i.useState(!1),
-        [S, b] = i.useState(!1),
-        T = null == h || S;
-    if (null == t || (v && T))
+        [S, T] = i.useState(!1),
+        b = null == h || S;
+    if (null == t || (v && b))
         return (0, r.jsx)(l.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
@@ -53,7 +53,7 @@ function f(e) {
                     src: v && null != h ? h : t,
                     'aria-hidden': p,
                     alt: null != _ ? _ : p ? void 0 : c.intl.string(c.t['2B/phI']),
-                    onError: (e) => (v ? b(!0) : I(!0))
+                    onError: (e) => (v ? T(!0) : I(!0))
                 })
         },
         'content-image'

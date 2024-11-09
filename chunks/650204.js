@@ -19,8 +19,8 @@ var d = n(616254),
     v = n(471638),
     I = n(585275),
     S = n(960048),
-    b = n(63063),
-    T = n(240849),
+    T = n(63063),
+    b = n(240849),
     y = n(998502),
     A = n(513566),
     N = n(534713),
@@ -32,13 +32,13 @@ var d = n(616254),
     x = n(579806),
     w = n(896361),
     M = n(892254);
-n(916160);
+n(776200);
 var P = n(857192),
-    k = n(786882),
+    k = n(203088),
     U = n(44163),
     G = n(710845),
     B = n(70956);
-P.default.cssDebuggingEnabled && n.e('30592').then(n.bind(n, 623763));
+P.default.cssDebuggingEnabled && n.e('55776').then(n.bind(n, 233999));
 let Z = 5 * B.Z.Millis.MINUTE,
     F = document.getElementById('app-mount');
 _()(null != F, 'Could not find app-mount'), (F.className = __OVERLAY__ ? '' : k.appMount);
@@ -74,7 +74,7 @@ if (((0, D.O)(window), __OVERLAY__)) H(h.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) H(h.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), C.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(b.Z.getCommunityURL()));
+        (window.onbeforeunload = () => y.ZP.beforeUnload()), y.ZP.on('HELP_OPEN', () => window.open(T.Z.getCommunityURL()));
         let e = new L.sW(Z, () => y.ZP.purgeMemory());
         y.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), y.ZP.setFocused(!1), (0, O.T_)(window, !1);
@@ -91,5 +91,5 @@ else {
                 (0, O.al)(window);
             });
     }
-    E.Z.initialize(), p.Z.initialize(), m.Z.init(), I.Z.init(), U.Z.init(), g.Z.initialize(), T.Z.initialize(), A.Z.initialize(), v.j(), H(h.Z.App);
+    E.Z.initialize(), p.Z.initialize(), m.Z.init(), I.Z.init(), U.Z.init(), g.Z.initialize(), b.Z.initialize(), A.Z.initialize(), v.j(), H(h.Z.App);
 }

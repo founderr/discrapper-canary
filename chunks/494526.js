@@ -31,8 +31,8 @@ var i,
     T = n(981631),
     A = n(231338),
     Z = n(388032),
-    j = n(506966),
-    R = n(971436);
+    j = n(506303),
+    R = n(113207);
 ((s = i || (i = {}))[(s.INITIALIZING = 0)] = 'INITIALIZING'), (s[(s.PENDING_REMOTE_INIT = 1)] = 'PENDING_REMOTE_INIT'), (s[(s.PENDING_FINISH = 2)] = 'PENDING_FINISH'), (s[(s.PENDING_TICKET = 3)] = 'PENDING_TICKET'), (s[(s.PENDING_LOGIN = 4)] = 'PENDING_LOGIN'), (s[(s.FINISH = 5)] = 'FINISH'), ((a = r || (r = {}))[(a.QR_CODE = 0)] = 'QR_CODE'), (a[(a.CONFIRM = 1)] = 'CONFIRM');
 let O = n(515695),
     L = new E.Z('LoginQRSocket');

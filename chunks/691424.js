@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(628692),
     I = n(590956),
     S = n(703656),
-    b = n(271383),
-    T = n(430824),
+    T = n(271383),
+    b = n(430824),
     y = n(572004),
     A = n(746878),
     N = n(285063),
@@ -35,9 +35,9 @@ var r = n(200651),
     L = n(532901),
     x = n(981631),
     w = n(176505),
-    M = n(882530),
-    P = n(110933);
-n(713376);
+    M = n(554034),
+    P = n(112864);
+n(504833);
 function k(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1);
@@ -171,7 +171,7 @@ let U = {
                           role: 'link',
                           onClick: () => {
                               !(function (e, t, n) {
-                                  let r = T.Z.getGuild(e);
+                                  let r = b.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
                                       r.hasFeature(x.oNc.COMMUNITY) && (0, S.uL)(x.Z5c.CHANNEL(e, t));
@@ -189,9 +189,9 @@ let U = {
                                           break;
                                       case 'linked-roles':
                                           if (null != n) {
-                                              let t = b.ZP.getSelfMember(e);
+                                              let t = T.ZP.getSelfMember(e);
                                               if (null == t) return;
-                                              let r = T.Z.getRoles(e)[n];
+                                              let r = b.Z.getRoles(e)[n];
                                               null == r || t.roles.includes(r.id)
                                                   ? u.Z.dispatch({
                                                         type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
@@ -245,7 +245,7 @@ let U = {
     },
     guild: {
         react: (e, t, n) => {
-            let i = T.Z.getGuild(e.guildId);
+            let i = b.Z.getGuild(e.guildId);
             return (0, r.jsx)(
                 p.Z,
                 {

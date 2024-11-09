@@ -4,7 +4,7 @@ var l = n(481060),
     s = n(184508),
     r = n(823188),
     C = n(474936),
-    a = n(385190);
+    a = n(377628);
 function o(e) {
     let { onClick: t, isGift: n, priceOptions: s, showHalloweenGift: C, shouldUseTaglineXPCopy: o } = e;
     return (0, i.jsx)(l.Clickable, {

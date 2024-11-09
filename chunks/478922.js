@@ -11,7 +11,7 @@ var r = n(200651),
     o = n(663507),
     l = n(84735),
     u = n(562701),
-    c = n(494624);
+    c = n(558025);
 function d(e, t, n) {
     let a = (0, u.G6)(e),
         d = new Map(),
@@ -24,7 +24,7 @@ function d(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, _) {
         var h;
-        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: b, renderSection: T, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: b, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
@@ -51,7 +51,7 @@ function d(e, t, n) {
             getItemKey: v,
             getItemHeight: I,
             getSectionHeight: S,
-            chunkSize: b,
+            chunkSize: T,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
@@ -146,7 +146,7 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != T && null != s && T(n, s, e),
+                                                          null != b && null != s && b(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
@@ -160,7 +160,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, y, T, z, X, A, q]
+                        [Q, y, b, z, X, A, q]
                     )
                 ]
             })

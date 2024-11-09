@@ -24,7 +24,7 @@ n.d(t, {
         return d;
     },
     r4: function () {
-        return b;
+        return T;
     }
 }),
     n(642549),
@@ -118,7 +118,7 @@ function v(e) {
 }
 let I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
     S = new Set(['/__development/link', '/__development/link/']);
-function b(e) {
+function T(e) {
     if (v(e))
         return {
             payload: null,

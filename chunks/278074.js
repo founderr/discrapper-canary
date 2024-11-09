@@ -160,22 +160,22 @@ function I(e) {
 function S(e) {
     return 'bigint' == typeof e;
 }
-let b = d(
+let T = d(
         g(function (e) {
             return !0;
         })
     ),
-    T = (e) =>
+    b = (e) =>
         Object.assign(d(e), {
             startsWith: (t) =>
-                T(
+                b(
                     p(
                         e,
                         g((e) => I(e) && e.startsWith(t))
                     )
                 ),
             endsWith: (t) =>
-                T(
+                b(
                     p(
                         e,
                         g((e) => I(e) && e.endsWith(t))
@@ -183,28 +183,28 @@ let b = d(
                 ),
             minLength: (t) => {
                 let n;
-                return T(p(e, ((n = t), g((e) => I(e) && e.length >= n))));
+                return b(p(e, ((n = t), g((e) => I(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return T(p(e, ((n = t), g((e) => I(e) && e.length <= n))));
+                return b(p(e, ((n = t), g((e) => I(e) && e.length <= n))));
             },
             includes: (t) =>
-                T(
+                b(
                     p(
                         e,
                         g((e) => I(e) && e.includes(t))
                     )
                 ),
             regex: (t) =>
-                T(
+                b(
                     p(
                         e,
                         g((e) => I(e) && !!e.match(t))
                     )
                 )
         }),
-    y = T(g(I)),
+    y = b(g(I)),
     A = (e, t) => g((n) => v(n) && e <= n && t >= n),
     N = (e) => g((t) => v(t) && t < e),
     C = (e) => g((t) => v(t) && t > e),
@@ -378,8 +378,8 @@ var z = {
     },
     when: g,
     select: E,
-    any: b,
-    _: b,
+    any: T,
+    _: T,
     string: y,
     between: A,
     lt: N,

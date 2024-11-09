@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(907040),
     I = n(455708),
     S = n(314910),
-    b = n(315744),
-    T = n(603074),
+    T = n(315744),
+    b = n(603074),
     y = n(453070),
     A = n(926491),
     N = n(457040),
@@ -33,7 +33,7 @@ var r = n(200651),
     M = n(185923),
     P = n(611480),
     k = n(388032),
-    U = n(215786);
+    U = n(226090);
 let G = L.Om + w.Su.MEDIUM,
     B = i.memo(function (e) {
         let { isActive: t, className: n, viewType: i, autoFocus: a = !1, 'aria-controls': o, ...l } = e;
@@ -127,7 +127,7 @@ t.Z = i.memo(function (e) {
         ei = (0, y.fQ)(H),
         { renderWindow: ea, windowDispatch: es } = i.useContext(g.ZP),
         eo = (0, d.e7)([A.Z], () => !A.Z.hasLoadedStickerPacks),
-        el = (0, b.P)('expression_picker'),
+        el = (0, T.P)('expression_picker'),
         eu = null != Q,
         ec = (0, f.Jw)(null != Q ? Q : ''),
         ed = i.useCallback(
@@ -316,7 +316,7 @@ t.Z = i.memo(function (e) {
                                           er === L.X1.SOUNDBOARD
                                               ? (0, r.jsx)('div', {
                                                     className: U.soundboardContainer,
-                                                    children: (0, r.jsx)(T.Z, {
+                                                    children: (0, r.jsx)(b.Z, {
                                                         guildId: H.guild_id,
                                                         channel: H,
                                                         containerWidth: et,

@@ -1,6 +1,6 @@
 n.d(t, {
     AH: function () {
-        return b;
+        return T;
     },
     Ag: function () {
         return x;
@@ -18,7 +18,7 @@ n.d(t, {
         return L;
     },
     QB: function () {
-        return T;
+        return b;
     },
     T0: function () {
         return O;
@@ -181,7 +181,7 @@ async function S(e) {
         });
     }
 }
-async function b(e, t) {
+async function T(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({
@@ -214,7 +214,7 @@ async function b(e, t) {
         }
     }
 }
-async function T(e, t, n) {
+async function b(e, t, n) {
     if (!c.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',

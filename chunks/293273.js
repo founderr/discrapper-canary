@@ -18,8 +18,8 @@ var r,
     v = n(695346),
     I = n(581883),
     S = n(199902),
-    b = n(272053),
-    T = n(77498),
+    T = n(272053),
+    b = n(77498),
     y = n(981631);
 let A = [],
     N = {};
@@ -29,7 +29,7 @@ function C() {
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, h.I)(t));
     let n = g.Z.getActivities();
     e.push(...n);
-    let r = b.Z.getStream();
+    let r = T.Z.getStream();
     null != r &&
         e.push({
             type: y.IIU.STREAMING,
@@ -48,7 +48,7 @@ function C() {
         e.push({
             type: y.IIU.PLAYING,
             name: a.name,
-            application_id: null !== (f = a.id) && void 0 !== f ? f : null === (d = T.Z.getGameByName(a.name)) || void 0 === d ? void 0 : d.id,
+            application_id: null !== (f = a.id) && void 0 !== f ? f : null === (d = b.Z.getGameByName(a.name)) || void 0 === d ? void 0 : d.id,
             timestamps: { start: a.start }
         });
     }
@@ -73,7 +73,7 @@ function C() {
 }
 class R extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, _.ZP, b.Z, S.Z, E.Z, I.Z, m.Z, T.Z), this.syncWith([g.Z, m.Z], () => C());
+        this.waitFor(p.ZP, _.ZP, T.Z, S.Z, E.Z, I.Z, m.Z, b.Z), this.syncWith([g.Z, m.Z], () => C());
     }
     getActivities() {
         return A;

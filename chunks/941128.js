@@ -18,8 +18,8 @@ var r,
     v = n(173747),
     I = n(780570),
     S = n(830168),
-    b = n(358085),
-    T = n(417363),
+    T = n(358085),
+    b = n(417363),
     y = n(981631),
     A = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
@@ -118,7 +118,7 @@ class W extends (a = _.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(T.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(b.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(b.Z);
     }
     get activeItems() {
         return R.map((e) => {
@@ -181,7 +181,7 @@ class W extends (a = _.ZP.Store) {
             (R = R.filter((e) => {
                 let { comboId: t } = e,
                     { applicationId: n, branchId: i } = (0, I.CP)(t),
-                    a = T.Z.getState(n, i),
+                    a = b.Z.getState(n, i),
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
                 if (null != a && a.type === y.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && f().isEqual(a.manifestIds, a.targetManifestIds) && f().isEqual(a.manifestIds, o)) {
@@ -217,9 +217,9 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, b.isDesktop)() && H();
+            (0, T.isDesktop)() && H();
         },
         LOGOUT: function () {
-            h.K.remove(C), (0, b.isDesktop)() && S.Z.pause();
+            h.K.remove(C), (0, T.isDesktop)() && S.Z.pause();
         }
     }));

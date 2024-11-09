@@ -34,7 +34,7 @@ var r = n(568611),
     j = n(701488),
     Z = n(981631),
     R = n(388032),
-    L = n(414482);
+    L = n(896219);
 let P = (0, I.Mg)(a.Z.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 function y(e) {
     var t, n, a, I;

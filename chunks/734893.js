@@ -1,6 +1,6 @@
 n.d(t, {
     HH: function () {
-        return T;
+        return b;
     },
     O9: function () {
         return p;
@@ -51,7 +51,7 @@ n.d(t, {
         return y;
     },
     tB: function () {
-        return b;
+        return T;
     },
     uo: function () {
         return C;
@@ -115,7 +115,7 @@ function S(e) {
         icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function b(e) {
+function T(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
         a = {
@@ -130,7 +130,7 @@ function b(e) {
         enabled: i
     };
 }
-function T(e, t) {
+function b(e, t) {
     var n, r;
     if (null == t) return null;
     let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,

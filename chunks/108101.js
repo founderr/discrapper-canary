@@ -17,8 +17,8 @@ var r = n(687249),
     v = n(551023),
     I = n(118788),
     S = n(661233),
-    b = n(357361),
-    T = n(438330),
+    T = n(357361),
+    b = n(438330),
     y = '[object Arguments]',
     A = '[object Function]',
     N = '[object Object]',
@@ -49,7 +49,7 @@ e.exports = function e(t, n, R, O, D, L) {
     var B = L.get(t);
     if (B) return B;
     L.set(t, x),
-        b(t)
+        T(t)
             ? t.forEach(function (r) {
                   x.add(e(r, n, R, r, t, L));
               })
@@ -57,7 +57,7 @@ e.exports = function e(t, n, R, O, D, L) {
               t.forEach(function (r, i) {
                   x.set(i, e(r, n, R, i, t, L));
               });
-    var Z = P ? (M ? _ : f) : M ? keysIn : T,
+    var Z = P ? (M ? _ : f) : M ? keysIn : b,
         F = k ? void 0 : Z(t);
     return (
         i(F || t, function (r, i) {

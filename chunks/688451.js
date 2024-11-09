@@ -133,12 +133,12 @@ function v(e, t) {
     t && (g('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
 function I(e) {
-    S(e), e.p.forEach(T), (e.p = null);
+    S(e), e.p.forEach(b), (e.p = null);
 }
 function S(e) {
     e === P && (P = e.l);
 }
-function b(e) {
+function T(e) {
     return (P = {
         p: [],
         l: P,
@@ -147,7 +147,7 @@ function b(e) {
         _: 0
     });
 }
-function T(e) {
+function b(e) {
     var t = e[V];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
@@ -392,7 +392,7 @@ var q = new ((function () {
                         );
                     }
                     if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
-                        var l = b(t),
+                        var l = T(t),
                             u = x(t, e, void 0),
                             c = !0;
                         try {
@@ -467,7 +467,7 @@ var q = new ((function () {
                             );
                         })(t)));
                 var t,
-                    n = b(this),
+                    n = T(this),
                     l = x(this, e, void 0);
                 return (l[V].C = !0), S(n), l;
             }),

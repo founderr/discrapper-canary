@@ -35,7 +35,7 @@ var r = n(200651),
     A = n(981631),
     B = n(217702),
     k = n(388032),
-    L = n(136880);
+    L = n(417575);
 let M = new Set([A.IyS.FIVE_G, A.IyS.FOUR_G, A.IyS.UNKNOWN]),
     O = {
         tension: 250,
@@ -302,7 +302,7 @@ function Z(e) {
         }, 1000);
         return () => clearTimeout(e);
     }, [ed]);
-    let [{ controlBarAnimSpring: e9 }, e7] = (0, d.useSpring)(() => ({
+    let [{ controlBarAnimSpring: e7 }, e9] = (0, d.useSpring)(() => ({
             from: { controlBarAnimSpring: 0 },
             config: O,
             onStart: () => {
@@ -312,8 +312,8 @@ function Z(e) {
                 1 === e.value && eD(!0);
             }
         })),
-        e3 = (0, o.useRef)(null),
-        [{ captionHeightSpring: e6 }, e4] = (0, d.useSpring)(() => ({
+        e6 = (0, o.useRef)(null),
+        [{ captionHeightSpring: e3 }, e4] = (0, d.useSpring)(() => ({
             from: { captionHeightSpring: 0 },
             config: O
         }));
@@ -321,25 +321,25 @@ function Z(e) {
         var e, t;
         return (
             e4({
-                captionHeightSpring: Q && null != eU && null !== (t = null === (e = e3.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
+                captionHeightSpring: Q && null != eU && null !== (t = null === (e = e6.current) || void 0 === e ? void 0 : e.clientHeight) && void 0 !== t ? t : 0,
                 immediate: eL
             }),
             () => {
-                e6.stop();
+                e3.stop();
             }
         );
-    }, [Q, e4, eL, eU, e6]),
+    }, [Q, e4, eL, eU, e3]),
         o.useEffect(
             () => (
-                e7({
+                e9({
                     controlBarAnimSpring: eY || eI ? 1 : 0,
                     immediate: eL
                 }),
                 () => {
-                    e9.stop();
+                    e7.stop();
                 }
             ),
-            [eY, e7, eL, eI, e9]
+            [eY, e9, eL, eI, e7]
         );
     let e8 = (e) => {
             !eR && (0, x.FI)(G.id, e),
@@ -459,7 +459,7 @@ function Z(e) {
                                 (0, r.jsx)(a.animated.div, {
                                     className: L.transcriptCont,
                                     style: {
-                                        marginBottom: (0, a.to)([e9, e6], (e, t) => ''.concat(50 * e + t, 'px'))
+                                        marginBottom: (0, a.to)([e7, e3], (e, t) => ''.concat(50 * e + t, 'px'))
                                     },
                                     children: (0, r.jsx)(I.K, {
                                         quest: G,
@@ -500,7 +500,7 @@ function Z(e) {
                         style: {
                             opacity: (0, a.to)(
                                 [
-                                    e9.to({
+                                    e7.to({
                                         range: [0, 1],
                                         output: [0, 1]
                                     })
@@ -524,11 +524,11 @@ function Z(e) {
                         null != eU &&
                         (0, r.jsx)(a.animated.div, {
                             className: L.captionContainer,
-                            ref: e3,
+                            ref: e6,
                             style: {
                                 translateY: (0, a.to)(
                                     [
-                                        e9.to({
+                                        e7.to({
                                             range: [0, 1],
                                             output: [0, -50]
                                         })
@@ -548,7 +548,7 @@ function Z(e) {
                         style: {
                             paddingLeft: (0, a.to)(
                                 [
-                                    e9.to({
+                                    e7.to({
                                         range: [0, 1],
                                         output: [0, 25]
                                     })
@@ -557,7 +557,7 @@ function Z(e) {
                             ),
                             paddingRight: (0, a.to)(
                                 [
-                                    e9.to({
+                                    e7.to({
                                         range: [0, 1],
                                         output: [0, 25]
                                     })
@@ -566,7 +566,7 @@ function Z(e) {
                             ),
                             height: (0, a.to)(
                                 [
-                                    e9.to({
+                                    e7.to({
                                         range: [0, 1],
                                         output: [0, 50]
                                     })
@@ -598,7 +598,7 @@ function Z(e) {
                                 style: {
                                     paddingTop: (0, a.to)(
                                         [
-                                            e9.to({
+                                            e7.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
@@ -607,7 +607,7 @@ function Z(e) {
                                     ),
                                     paddingBottom: (0, a.to)(
                                         [
-                                            e9.to({
+                                            e7.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
@@ -616,7 +616,7 @@ function Z(e) {
                                     ),
                                     pointerEvents: (0, a.to)(
                                         [
-                                            e9.to({
+                                            e7.to({
                                                 range: [0, 1],
                                                 output: [0, 1]
                                             })
@@ -628,7 +628,7 @@ function Z(e) {
                                     videoRef: eM,
                                     quest: G,
                                     playerState: eo,
-                                    animSpring: e9,
+                                    animSpring: e7,
                                     visible: eY,
                                     seekForwardEnabled: tr,
                                     hideCaptionBtn: null == tn,

@@ -1,6 +1,6 @@
 n.d(t, {
     ku: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -21,7 +21,7 @@ var r = n(200651),
     g = n(409673),
     E = n(592125),
     v = n(388032),
-    I = n(979093);
+    I = n(42693);
 function S(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(l.Clickable, {
@@ -39,12 +39,12 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([_.Z], () => _.Z.getSoundById(t));
-    return null == n ? (0, r.jsx)(S, {}) : (0, r.jsx)(T, { sound: n });
+    return null == n ? (0, r.jsx)(S, {}) : (0, r.jsx)(b, { sound: n });
 }
-function T(e) {
+function b(e) {
     let { sound: t, playSound: n, isPlaying: i } = e,
         a = (null == t ? void 0 : t.emojiId) != null || (null == t ? void 0 : t.emojiName) != null,
         o = v.intl.formatToPlainString(v.t.tuMUJy, {
@@ -72,13 +72,13 @@ t.ZP = function (e) {
         { currentPreviewRef: l } = i.useContext(f.Z),
         u = i.useMemo(() => (0, d.Z)(t, n, a), [t, n, a]),
         _ = (0, o.e7)([E.Z], () => E.Z.getChannel(t)),
-        [v, b] = i.useState(!1),
+        [v, T] = i.useState(!1),
         y = (0, c.P)('soundmoji_chat_mention'),
         A = i.useCallback(() => {
             var e;
             let t = new Audio((0, p.Z)(a));
-            null != l.current && l.current.pause(), (l.current = t), (t.currentTime = 0), (t.volume = (0, m.Z)(null !== (e = null == u ? void 0 : u.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => b(!0)), (t.onpause = () => b(!1)), (t.onended = () => b(!1));
-        }, [a, u, l, b]);
+            null != l.current && l.current.pause(), (l.current = t), (t.currentTime = 0), (t.volume = (0, m.Z)(null !== (e = null == u ? void 0 : u.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => T(!0)), (t.onpause = () => T(!1)), (t.onended = () => T(!1));
+        }, [a, u, l, T]);
     return y
         ? null == u
             ? (0, r.jsx)(S, { playSound: A })
@@ -99,7 +99,7 @@ t.ZP = function (e) {
                     },
                     ''.concat(u.soundId)
                 )
-              : (0, r.jsx)(T, {
+              : (0, r.jsx)(b, {
                     sound: u,
                     playSound: A,
                     isPlaying: v

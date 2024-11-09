@@ -30,8 +30,8 @@ var r = n(512722),
     v = n(857192),
     I = n(626135),
     S = n(12647),
-    b = n(70956),
-    T = n(358085),
+    T = n(70956),
+    b = n(358085),
     y = n(960048),
     A = n(138859),
     N = n(14639),
@@ -59,9 +59,9 @@ function P(e, t, n) {
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
 function G() {}
-let B = 30 * b.Z.Millis.SECOND,
-    Z = 3 * b.Z.Millis.MINUTE,
-    F = 1 * b.Z.Millis.MINUTE;
+let B = 30 * T.Z.Millis.SECOND,
+    Z = 3 * T.Z.Millis.MINUTE,
+    F = 1 * T.Z.Millis.MINUTE;
 function V(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
@@ -291,7 +291,7 @@ class H extends L.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, T.isIOS)() &&
+        (0, b.isIOS)() &&
             null != this.token &&
             1001 === e &&
             'Stream end encountered' === t &&

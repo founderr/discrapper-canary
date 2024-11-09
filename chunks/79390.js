@@ -24,10 +24,10 @@ n.d(t, {
         return x;
     },
     eQ: function () {
-        return T;
+        return b;
     },
     fw: function () {
-        return b;
+        return T;
     },
     uY: function () {
         return R;
@@ -66,10 +66,10 @@ function S() {
         })()
     };
 }
-function b(e) {
+function T(e) {
     return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, '');
 }
-function T(e) {
+function b(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }

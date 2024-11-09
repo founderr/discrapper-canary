@@ -10,7 +10,7 @@ n.d(t, {
     }
 });
 var r = n(627472),
-    i = n(664435);
+    i = n(49505);
 let a = (0, r.z)(i.thin, i.fade),
     s = (0, r.z)(i.auto, i.fade),
     o = (0, r.z)(i.none, i.fade);

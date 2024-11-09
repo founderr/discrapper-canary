@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(551058),
     I = n(695346),
     S = n(430824),
-    b = n(594174),
-    T = n(626135),
+    T = n(594174),
+    b = n(626135),
     y = n(624138),
     A = n(45521),
     N = n(285651),
@@ -36,7 +36,7 @@ var r = n(200651),
     U = n(981631),
     G = n(957825),
     B = n(388032),
-    Z = n(665722),
+    Z = n(221351),
     F = n(239840);
 let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     j = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_MEDIUM),
@@ -101,7 +101,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     if (null != u && !(0, N.kl)(u, r, n)) {
                         let e = O.Z.getStickerPack(l);
                         null != e &&
-                            (T.default.track(U.rMx.STICKER_PACK_VIEW_ALL, {
+                            (b.default.track(U.rMx.STICKER_PACK_VIEW_ALL, {
                                 sticker_id: u.id,
                                 sticker_pack_id: l,
                                 location: c,
@@ -138,7 +138,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     eu = (e) => {
         let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: o, getStickerRowProps: u, gutterWidth: d, inspectedStickerPosition: f, isScrolling: _, isUsingKeyboardNavigation: p, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: y, channel: A } = e,
             N = (0, c.O)(),
-            C = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+            C = (0, s.e7)([T.default], () => T.default.getCurrentUser()),
             { handleStickerInspect: R, handleSelect: M } = el({
                 onSelectSticker: a,
                 channel: A,
@@ -186,7 +186,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         r = new Set(t),
                         i = t.has(e);
                     i ? r.delete(e) : r.add(e),
-                        T.default.track(U.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        b.default.track(U.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == N ? void 0 : N.location,
                             tab: G.X1.STICKER,
                             collapsed: !i,
@@ -348,7 +348,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         };
     },
     ec = i.forwardRef(function (e, t) {
-        let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: h, gutterWidth: g, isUsingKeyboardNavigation: v, onSelectSticker: I, rowCount: S, rowCountBySection: b, stickersCategories: T, stickersGrid: y, channel: A } = e,
+        let { collapsedStickersCategories: n, gridWidth: o, filteredStickers: l, getStickerItemProps: c, getStickerRowProps: h, gutterWidth: g, isUsingKeyboardNavigation: v, onSelectSticker: I, rowCount: S, rowCountBySection: T, stickersCategories: b, stickersGrid: y, channel: A } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
             [R, D] = p.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.Z),
@@ -365,7 +365,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             } = eu({
                 collapsedStickersCategories: n,
                 gridWidth: o,
-                stickersCategories: T,
+                stickersCategories: b,
                 stickersGrid: y,
                 isScrolling: N,
                 isUsingKeyboardNavigation: v,
@@ -456,7 +456,7 @@ let V = (0, y.Mg)(o.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   renderSectionHeader: j,
                                   renderSectionFooter: U,
                                   rowCount: S,
-                                  rowCountBySection: b,
+                                  rowCountBySection: T,
                                   rowHeight: o > V ? et : en,
                                   sectionHeaderHeight: H,
                                   sectionFooterHeight: G,

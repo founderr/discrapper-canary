@@ -20,7 +20,7 @@ var r = n(200651),
     _ = n(426964),
     h = n(308083),
     p = n(388032),
-    m = n(36043);
+    m = n(162685);
 let g = i.memo(function (e) {
         let { src: t, tag: n, className: i, size: a = h.NC.SIZE_16 } = e;
         return null == t
@@ -109,13 +109,13 @@ t.ZP = i.memo(function (e) {
     var t;
     let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: h, disableGuildProfile: p = !1, inline: g = !0, profileViewedAnalytics: I } = e,
         S = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
-        b = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
-        { tag: T, badge: y, guildId: A } = (0, d.vh)(b);
+        T = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
+        { tag: b, badge: y, guildId: A } = (0, d.vh)(T);
     return (0, d.p0)(i, a) && null != A
         ? p
             ? (0, r.jsx)(E, {
                   guildId: A,
-                  clanTag: T,
+                  clanTag: b,
                   clanBadge: y,
                   className: s()(m.noTooltip, l),
                   textVariant: f,
@@ -124,13 +124,13 @@ t.ZP = i.memo(function (e) {
                   inline: g
               })
             : (0, r.jsx)(v, {
-                  clan: b,
+                  clan: T,
                   userId: i,
                   profileViewedAnalytics: I,
                   className: c,
                   children: (0, r.jsx)(E, {
                       guildId: A,
-                      clanTag: T,
+                      clanTag: b,
                       clanBadge: y,
                       className: l,
                       textVariant: f,

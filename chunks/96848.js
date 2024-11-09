@@ -12,7 +12,7 @@ var i = t(200651),
     a = t(981631),
     c = t(185923),
     o = t(388032),
-    u = t(147192);
+    u = t(898492);
 let d = {
         section: a.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'gift_effect_emoji_picker'

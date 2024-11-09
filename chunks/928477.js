@@ -43,8 +43,8 @@ var r,
     v = n(300429),
     I = n(70956),
     S = n(630388),
-    b = n(709054),
-    T = n(968437),
+    T = n(709054),
+    b = n(968437),
     y = n(665906),
     A = n(456077),
     N = n(124368),
@@ -103,8 +103,8 @@ function w(e) {
                 let e = x(t, n);
                 S = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
             }
-            let y = (0, T.WD)(t),
-                A = m.Z.getChannel(b.default.castMessageIdAsChannelId(n)),
+            let y = (0, b.WD)(t),
+                A = m.Z.getChannel(T.default.castMessageIdAsChannelId(n)),
                 N = await k(t, () => {
                     let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                     return s.tn.post({
@@ -152,7 +152,7 @@ function P(e) {
             let c = 0,
                 [f, h] = (0, p.Z)(e);
             f && ((e = h), (c = (0, S.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
-            let m = (0, T.WD)(t, null),
+            let m = (0, b.WD)(t, null),
                 E = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
                 v = {
                     name: n,

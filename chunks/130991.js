@@ -36,7 +36,7 @@ var i,
     O = n(547283),
     R = n(981631),
     P = n(388032),
-    D = n(526831);
+    D = n(73282);
 function y(e) {
     var t, n, i, s, o;
     let { subscription: u, navigateToSwitchPlan: p, loadingState: x } = e,

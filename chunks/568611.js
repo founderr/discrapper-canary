@@ -99,8 +99,8 @@ E(function (e, t) {
         v = e.isActive,
         I = e.location,
         S = e.sensitive,
-        b = e.strict,
-        T = e.style,
+        T = e.strict,
+        b = e.style,
         y = e.to,
         A = e.innerRef,
         N = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
@@ -115,7 +115,7 @@ E(function (e, t) {
                       path: C,
                       exact: p,
                       sensitive: S,
-                      strict: b
+                      strict: T
                   })
                 : null,
             O = !!(v ? v(R, n) : R),
@@ -129,7 +129,7 @@ E(function (e, t) {
                           .join(' ');
                   })(h, c)
                 : h,
-            L = O ? (0, o.Z)({}, T, {}, _) : T,
+            L = O ? (0, o.Z)({}, b, {}, _) : b,
             x = (0, o.Z)(
                 {
                     'aria-current': (O && i) || null,

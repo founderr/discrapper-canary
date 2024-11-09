@@ -3,7 +3,7 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(12645);
+    o = n(825193);
 t.Z = function (e) {
     let {
             className: t,
@@ -28,9 +28,9 @@ t.Z = function (e) {
             hasThread: v,
             isSystemMessage: I,
             hasReply: S,
-            ...b
+            ...T
         } = e,
-        T = (0, r.jsx)(s.FocusRing, {
+        b = (0, r.jsx)(s.FocusRing, {
             ...E,
             children: (0, r.jsxs)('div', {
                 className: a()(t, {
@@ -44,7 +44,7 @@ t.Z = function (e) {
                     [o.hasReply]: S
                 }),
                 ref: g,
-                ...b,
+                ...T,
                 role: 'article',
                 children: [
                     c,
@@ -63,5 +63,5 @@ t.Z = function (e) {
                 ]
             })
         });
-    return u ? (0, r.jsx)(s.FocusBlock, { children: T }) : T;
+    return u ? (0, r.jsx)(s.FocusBlock, { children: b }) : b;
 };

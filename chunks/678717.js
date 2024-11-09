@@ -49,8 +49,8 @@ var v = n(392750),
     U = n(596768),
     G = n(621060),
     z = n(388032),
-    V = n(654404),
-    W = n(986310);
+    V = n(622331),
+    W = n(219299);
 function Y(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, d.Z)({

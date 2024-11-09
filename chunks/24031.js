@@ -1,13 +1,13 @@
-n.r(e),
-    n.d(e, {
+n.r(t),
+    n.d(t, {
         openMFAModal: function () {
-            return r;
+            return a;
         }
     }),
     n(51350);
-var o = n(658550),
-    s = n(48550);
-function r(t, e, r) {
-    t.methods = t.methods.filter((t) => Object.hasOwn(s.P, t.type));
-    n(124860).YR(t, (t) => (0, o.P0)(t, e), r);
+var r = n(658550),
+    i = n(48550);
+function a(e, t, a) {
+    e.methods = e.methods.filter((e) => Object.hasOwn(i.P, e.type));
+    n(124860).YR(e, (e) => (0, r.P0)(e, t), a);
 }

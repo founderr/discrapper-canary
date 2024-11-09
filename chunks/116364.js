@@ -13,7 +13,7 @@ var i = n(392711),
     h = n(590921),
     p = n(689079),
     m = n(388032),
-    g = n(485540),
+    g = n(481476),
     E = n(239840);
 let v = { results: { choices: [] } },
     I = {
@@ -27,13 +27,13 @@ let v = { results: { choices: [] } },
         displayName: '',
         value: ''
     })),
-    b = {
+    T = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    T = a().debounce(c.Z, p.Fu, {
+    b = a().debounce(c.Z, p.Fu, {
         leading: !0,
         trailing: !0
     }),
@@ -51,7 +51,7 @@ let v = { results: { choices: [] } },
             if (s.autocomplete) {
                 if (i) {
                     let i = u.Z.getActiveCommand(e.id);
-                    T({
+                    b({
                         command: i,
                         optionValues: r.getCommandOptionValues(),
                         context: {
@@ -64,7 +64,7 @@ let v = { results: { choices: [] } },
                         }
                     });
                 }
-                if (l.Z.getLastErrored(e.id)) return b;
+                if (l.Z.getLastErrored(e.id)) return T;
                 let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
                 return null == a ? I : { results: { choices: a } };
             }

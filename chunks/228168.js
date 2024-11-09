@@ -12,7 +12,7 @@ n.d(t, {
         return C;
     },
     n_: function () {
-        return T;
+        return b;
     },
     oh: function () {
         return h;
@@ -46,8 +46,8 @@ var r,
     v,
     I,
     S,
-    b,
     T,
+    b,
     y,
     A = n(981631);
 let N = 300;
@@ -185,7 +185,7 @@ function C(e) {
     (c.VISIT_SHOP = 'VISIT_SHOP'),
     (c.GET_PREMIUM = 'GET_NITRO'),
     (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
-    ((d = b || (b = {})).VIEW = 'VIEW'),
+    ((d = T || (T = {})).VIEW = 'VIEW'),
     (d.PRESS_TEXT = 'PRESS_TEXT'),
     (d.PRESS_IMAGE = 'PRESS_IMAGE'),
     (d.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'),
@@ -219,7 +219,7 @@ function C(e) {
     (d.PRESS_CONNECT_SPOTIFY_MENU_ITEM = 'PRESS_CONNECT_SPOTIFY_MENU_ITEM'),
     (d.PRESS_VIEW_GAME_PROFILE_MENU_ITEM = 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM'),
     (d.PRESS_VIEW_ACTIVITY_MENU_ITEM = 'PRESS_VIEW_ACTIVITY_MENU_ITEM'),
-    ((f = T || (T = {})).ACTIVITY = 'ACTIVITY'),
+    ((f = b || (b = {})).ACTIVITY = 'ACTIVITY'),
     (f.AVATAR = 'AVATAR'),
     (f.STATUS = 'STATUS'),
     ((_ = y || (y = {})).REPLY = 'REPLY'),

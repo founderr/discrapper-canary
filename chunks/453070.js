@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     Pq: function () {
-        return b;
+        return T;
     },
     RJ: function () {
         return D;
@@ -27,7 +27,7 @@ n.d(t, {
         return A;
     },
     t$: function () {
-        return T;
+        return b;
     }
 }),
     n(653041),
@@ -52,14 +52,14 @@ var r = n(192379),
     v = n(378233),
     I = n(981631),
     S = n(388032);
-let b = (e) => {
+let T = (e) => {
         N();
         let t = (0, i.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         r.useEffect(() => {
             t && null == g.Z.getStickerPack(e) && (0, p.FQ)(e);
         }, [e, t]);
     },
-    T = (e) => {
+    b = (e) => {
         let t = s.Wp.useSetting();
         return (0, v.WD)(t, e);
     },
@@ -81,10 +81,10 @@ let b = (e) => {
                         { canCreateExpressions: s } = (0, a.Gw)(i),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
-                        b = d.findIndex((e) => e.type === E.Ih.RECENT),
-                        T = t.length;
-                    null != i && o === i.id && s && t.length < (0, f.A3)(i.premiumTier) && T++;
-                    let y = Math.ceil(T / e);
+                        T = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        b = t.length;
+                    null != i && o === i.id && s && t.length < (0, f.A3)(i.premiumTier) && b++;
+                    let y = Math.ceil(b / e);
                     h[g] = r ? 0 : y;
                     for (let a = 0; a < y; a++) {
                         let s = a * e,
@@ -99,10 +99,10 @@ let b = (e) => {
                                 visibleRowIndex: I,
                                 category: n
                             }));
-                        g > b &&
+                        g > T &&
                             g > c &&
                             null != i &&
-                            T > t.length &&
+                            b > t.length &&
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: i.id,

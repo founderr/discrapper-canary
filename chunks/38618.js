@@ -18,8 +18,8 @@ var r,
     v = n(19780),
     I = n(936349),
     S = n(944486),
-    b = n(885110),
-    T = n(959457),
+    T = n(885110),
+    b = n(959457),
     y = n(358085),
     A = n(138859),
     N = n(955132),
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(p.default, S.Z, g.Z, m.Z, h.Z), this.syncWith([E.Z], B), this.syncWith([b.Z], Z);
+        this.waitFor(p.default, S.Z, g.Z, m.Z, h.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -233,9 +233,9 @@ class V extends (r = u.ZP.Store) {
                     (n ||
                         !(function () {
                             let e = (function () {
-                                return T.Z.getAllActiveStreamKeys().find((e) => (0, _.my)(e).ownerId === p.default.getId());
+                                return b.Z.getAllActiveStreamKeys().find((e) => (0, _.my)(e).ownerId === p.default.getId());
                             })();
-                            T.Z.getAllActiveStreamKeys()
+                            b.Z.getAllActiveStreamKeys()
                                 .filter((t) => t !== e)
                                 .forEach((e) => F(e));
                         })(),

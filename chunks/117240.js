@@ -15,12 +15,12 @@ var s,
     v = n(374023);
 let I = 'BrowserHandoffStore',
     S = !1,
-    b = new _.V7();
-function T() {
+    T = new _.V7();
+function b() {
     null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), g.Z.focus(null, !0));
 }
 function y() {
-    (i = null), b.stop(), (S = !1), f.K.set(I, S);
+    (i = null), T.stop(), (S = !1), f.K.set(I, S);
 }
 function A() {
     y();
@@ -50,16 +50,16 @@ class N extends (u = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new N(h.Z, {
         RPC_SERVER_READY: function (e) {
-            (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), T();
+            (r = ''.concat(location.protocol, '//').concat(location.host, '/handoff?rpc=').concat(e.port)), b();
         },
         BROWSER_HANDOFF_BEGIN: function (e) {
             if (null != i) return !1;
-            (i = (0, c.Z)()), b.start(e.timeout, () => (0, p.lx)()), T();
+            (i = (0, c.Z)()), T.start(e.timeout, () => (0, p.lx)()), b();
         },
         BROWSER_HANDOFF_FROM_APP: function (e) {
             let { handoffKey: t, handoffToken: n, timeout: r } = e;
             if (null == t || null == n) return !1;
-            (S = !0), b.start(r, () => (0, p.lx)());
+            (S = !0), T.start(r, () => (0, p.lx)());
         },
         BROWSER_HANDOFF_UNAVAILABLE: y,
         BROWSER_HANDOFF_SET_USER: function (e) {

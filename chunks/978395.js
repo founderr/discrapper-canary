@@ -23,11 +23,11 @@ var i = n(442837),
     v = n(827313),
     I = n(420654),
     S = n(116854),
-    b = n(166584),
-    T = n(915014),
+    T = n(166584),
+    b = n(915014),
     y = n(228168),
     A = n(981631),
-    N = n(653134);
+    N = n(451563);
 function C(e) {
     let { user: t, currentUser: n, displayProfile: C, guild: R, isHovering: O, onOpenProfile: D, channelId: L, onClose: x } = e,
         w = u.ZP.getName(null == R ? void 0 : R.id, L, t),
@@ -78,7 +78,7 @@ function C(e) {
                     })
                 }),
             !k &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(b.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
                 }),
@@ -104,7 +104,7 @@ function C(e) {
                 className: N.activity
             }),
             null != R &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(T.Z, {
                     user: t,
                     currentUser: n,
                     guild: R

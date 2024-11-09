@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(246946),
     d = n(51144),
     f = n(388032),
-    _ = n(514340);
+    _ = n(845286);
 let h = (e) => {
     let { primary: t, secondary: n, botType: i, botVerified: s, discriminatorClass: u, className: c, usernameClass: d, color: h, botClass: p, showStreamerModeTooltip: m } = e;
     return (0, r.jsxs)('div', {
@@ -57,10 +57,10 @@ t.Z = (e) => {
               })(t),
         I = t.isVerifiedBot(),
         S = d.ZP.getName(t),
-        b = i ? E : null != n ? n : S,
-        T = t.isPomelo() || l;
-    if (T || b !== E) {
-        let e = b === E && T && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : b,
+        T = i ? E : null != n ? n : S,
+        b = t.isPomelo() || l;
+    if (b || T !== E) {
+        let e = T === E && b && i ? d.ZP.getUserTag(t, { forcePomelo: l }) : T,
             n = a && e !== '@'.concat(E) ? d.ZP.getUserTag(t) : void 0;
         return (0, r.jsx)(h, {
             primary: e,
@@ -72,10 +72,10 @@ t.Z = (e) => {
         });
     }
     return (0, r.jsx)(u.Z, {
-        name: b,
+        name: T,
         botType: v,
         botVerified: I,
-        discriminator: g || b !== E ? null : null != o ? o : t.discriminator,
+        discriminator: g || T !== E ? null : null != o ? o : t.discriminator,
         ...p
     });
 };

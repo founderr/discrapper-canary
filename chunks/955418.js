@@ -16,7 +16,7 @@ var r = n(200651),
     f = n(698305),
     _ = n(981631),
     h = n(388032),
-    p = n(41737);
+    p = n(687610);
 let m = (0, u.kt)({
     id: '1',
     type: _.d4z.DM
@@ -26,8 +26,8 @@ function g(e) {
         { newestAnalyticsLocation: g } = (0, a.ZP)(),
         { trackUserProfileAction: E } = (0, d.KZ)(),
         [v, I] = i.useState(''),
-        [S, b] = i.useState((0, o.JM)(v)),
-        T = i.useRef(!1);
+        [S, T] = i.useState((0, o.JM)(v)),
+        b = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
         innerClassName: p.inner,
         editorClassName: p.editor,
@@ -37,14 +37,14 @@ function g(e) {
         textValue: v,
         richValue: S,
         onChange: (e, t, n) => {
-            if (t !== v) I(t), b(n);
+            if (t !== v) I(t), T(n);
         },
-        focused: T.current,
+        focused: b.current,
         onFocus: () => {
-            T.current = !0;
+            b.current = !0;
         },
         onBlur: () => {
-            T.current = !1;
+            b.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;

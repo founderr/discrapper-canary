@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var i = n(192379),
     r = n(49898),
-    l = n(593407);
+    l = n(25912);
 let a = 20 + r.U1 - r.Kl,
     s = 20 + r.U1 + r.Kl;
 function o(e) {

@@ -236,10 +236,10 @@ function I(e, t, n) {
 function S(e, t, n) {
     return m(e, t, n) >= 0;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     return 0 >= m(e, t, n);
 }
-function T(e, t, n, r) {
+function b(e, t, n, r) {
     switch (t) {
         case '===':
             return 'object' == typeof e && (e = e.version), 'object' == typeof n && (n = n.version), e === n;
@@ -258,7 +258,7 @@ function T(e, t, n, r) {
         case '<':
             return E(e, n, r);
         case '<=':
-            return b(e, n, r);
+            return T(e, n, r);
         default:
             throw TypeError('Invalid operator: ' + t);
     }
@@ -278,7 +278,7 @@ function y(e, t) {
     if (!(this instanceof y)) return new y(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === A ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = S), (t.lte = b), (t.cmp = T), (t.Comparator = y);
+(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = S), (t.lte = T), (t.cmp = b), (t.Comparator = y);
 var A = {};
 function N(e, t) {
     if (
@@ -335,7 +335,7 @@ function C(e, t) {
             } catch (e) {
                 return !1;
             }
-        return T(e, this.operator, this.semver, this.options);
+        return b(e, this.operator, this.semver, this.options);
     }),
     (y.prototype.intersects = function (e, t) {
         if (!(e instanceof y)) throw TypeError('a Comparator is required');
@@ -354,8 +354,8 @@ function C(e, t) {
             i = ('<=' === this.operator || '<' === this.operator) && ('<=' === e.operator || '<' === e.operator),
             a = this.semver.version === e.semver.version,
             s = ('>=' === this.operator || '<=' === this.operator) && ('>=' === e.operator || '<=' === e.operator),
-            o = T(this.semver, '<', e.semver, t) && ('>=' === this.operator || '>' === this.operator) && ('<=' === e.operator || '<' === e.operator),
-            l = T(this.semver, '>', e.semver, t) && ('<=' === this.operator || '<' === this.operator) && ('>=' === e.operator || '>' === e.operator);
+            o = b(this.semver, '<', e.semver, t) && ('>=' === this.operator || '>' === this.operator) && ('<=' === e.operator || '<' === e.operator),
+            l = b(this.semver, '>', e.semver, t) && ('<=' === this.operator || '<' === this.operator) && ('>=' === e.operator || '>' === e.operator);
         return r || i || (a && s) || o || l;
     }),
     (t.Range = N),
@@ -604,7 +604,7 @@ t.gtr = function (e, t, n) {
 function L(e, t, n, r) {
     switch (((e = new _(e, r)), (t = new N(t, r)), n)) {
         case '>':
-            (i = g), (a = b), (s = E), (o = '>'), (l = '>=');
+            (i = g), (a = T), (s = E), (o = '>'), (l = '>=');
             break;
         case '<':
             (i = E), (a = S), (s = g), (o = '<'), (l = '<=');

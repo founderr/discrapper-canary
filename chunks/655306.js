@@ -42,8 +42,8 @@ function I(e, t, n) {
     );
 }
 let S = { any: 100 },
-    b = 30 * p.Z.Millis.SECOND,
-    T = 120 * p.Z.Millis.SECOND,
+    T = 30 * p.Z.Millis.SECOND,
+    b = 120 * p.Z.Millis.SECOND,
     y = -1 !== (0, h.hY)();
 ((i = r || (r = {})).UserSSRCUpdate = 'user-ssrc-update'), (i.Update = 'update');
 class A extends o.Z {
@@ -147,7 +147,7 @@ class A extends o.Z {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? T : b;
+        return this.isStageChannel ? b : T;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : v.Z.NO_OVERRIDE;

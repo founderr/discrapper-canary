@@ -286,7 +286,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    b = {
+    T = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -301,7 +301,7 @@ let o = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    T = {
+    b = {
         analyticsName: 'atomic_reator_reply_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -329,8 +329,8 @@ let o = {
         RULES_INPUT: S,
         CREATE_FORUM_POST: h,
         CREATE_POLL: p,
-        FORUM_CHANNEL_GUIDELINES: b,
-        ATOMIC_REACTOR_REPLY_INPUT: T,
+        FORUM_CHANNEL_GUIDELINES: T,
+        ATOMIC_REACTOR_REPLY_INPUT: b,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',
             drafts: { type: s.d.ChannelMessage },

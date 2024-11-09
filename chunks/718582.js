@@ -66,8 +66,8 @@ var r,
     v = n(15274),
     I = n(924301),
     S = n(230900),
-    b = n(703656),
-    T = n(881824),
+    T = n(703656),
+    b = n(881824),
     y = n(922482),
     A = n(565799),
     N = n(501655),
@@ -273,11 +273,11 @@ function ei(e) {
         ),
         v = (0, l.e7)([L.Z], () => L.Z.hasConsented(W.pjP.PERSONALIZATION)),
         S = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
-        b = v && S.length > 0,
-        T = [...E, ..._];
+        T = v && S.length > 0,
+        b = [...E, ..._];
     return (
-        i !== T.length &&
-            T.length > 0 &&
+        i !== b.length &&
+            b.length > 0 &&
             (r(
                 (function (e) {
                     let t = [...e],
@@ -374,10 +374,10 @@ function ei(e) {
                             ],
                             ['desc']
                         );
-                    })(T, b)
+                    })(b, T)
                 ).slice(0, 3)
             ),
-            u(T.length)),
+            u(b.length)),
         n
     );
 }
@@ -529,14 +529,14 @@ function ed(e, t, n) {
                 let { channelId: r } = e,
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, b.XU)(t, r) : ((0, b.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EMBEDDED_ACTIVITY:
             return () => {
                 let { channelId: r } = e.embeddedActivities[0],
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, b.XU)(t, r) : ((0, b.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EVENT:
             return () => {
@@ -548,7 +548,7 @@ function ed(e, t, n) {
 }
 let ef = async (e, t) => {
         let n = await (0, y.AC)(e, t);
-        (0, T.R5)(n, null, !1);
+        (0, b.R5)(n, null, !1);
     },
     e_ = (e, t) => {
         m.Z.handleVoiceConnect({
@@ -557,7 +557,7 @@ let ef = async (e, t) => {
             needSubscriptionToAccess: (0, E.$)(t.id).needSubscriptionToAccess,
             locked: !1
         }),
-            (0, b.XU)(e, t.id);
+            (0, T.XU)(e, t.id);
     };
 function eh(e, t) {
     let { category: n } = e;

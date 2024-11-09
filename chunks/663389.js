@@ -17,8 +17,8 @@ let _ = f.QZA.CLOSED,
     v = null,
     I = null,
     S = !1,
-    b = !1,
-    T = null,
+    T = !1,
+    b = null,
     y = null,
     A = null,
     N = [],
@@ -32,7 +32,7 @@ function O(e) {
         (C = null !== (n = e.section) && void 0 !== n ? n : p),
         null != e.subsection && null != p && (m[p] = e.subsection),
         null != e.scrollPosition && null != p && (g[p] = e.scrollPosition),
-        (b = !!e.openWithoutBackstack),
+        (T = !!e.openWithoutBackstack),
         (_ = f.QZA.OPEN),
         (E = {}),
         (I = {
@@ -65,7 +65,7 @@ class x extends (s = u.ZP.Store) {
         this.waitFor(d.default);
     }
     hasChanges() {
-        return null != I && null != v && (!!this.isOpen() || T === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
+        return null != I && null != v && (!!this.isOpen() || b === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
     }
     isOpen() {
         return S;
@@ -83,7 +83,7 @@ class x extends (s = u.ZP.Store) {
         return null != p ? g[p] : null;
     }
     shouldOpenWithoutBackstack() {
-        return b;
+        return T;
     }
     getProps() {
         return {
@@ -94,7 +94,7 @@ class x extends (s = u.ZP.Store) {
             settings: I,
             errors: E,
             hasChanges: this.hasChanges(),
-            openWithoutBackstack: b,
+            openWithoutBackstack: T,
             analyticsLocation: A,
             analyticsLocations: N,
             initialSection: C,
@@ -172,9 +172,9 @@ class x extends (s = u.ZP.Store) {
         },
         DRAWER_SELECT_TAB: function (e) {
             return (
-                (T = e.tab),
+                (b = e.tab),
                 null == p &&
-                    T === f.cII.USER_SETTINGS &&
+                    b === f.cII.USER_SETTINGS &&
                     O({
                         type: 'USER_SETTINGS_MODAL_INIT',
                         section: null,

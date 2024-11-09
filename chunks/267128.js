@@ -26,15 +26,15 @@ var r = n(200651),
     v = n(378233),
     I = n(768581),
     S = n(55935),
-    b = n(823379),
-    T = n(453687),
+    T = n(823379),
+    b = n(453687),
     y = n(930282),
     A = n(123145),
     N = n(223021),
     C = n(217702),
     R = n(981631),
     O = n(388032),
-    D = n(12645);
+    D = n(825193);
 function L(e) {
     let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
     return (0, r.jsx)('svg', {
@@ -69,8 +69,8 @@ function w(e, t, n, i, a) {
         { trailingIconClass: f, leadingIconClass: g, iconSize: E } = a,
         I = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
         S = (0, v.cv)(d).length > 0,
-        b = null != d.interaction,
-        T = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
+        T = null != d.interaction,
+        b = d.hasFlag(R.iLy.IS_VOICE_MESSAGE),
         A = d.isPoll(),
         N = d.type === R.uaV.POLL_RESULT;
     if (
@@ -94,9 +94,9 @@ function w(e, t, n, i, a) {
                 ? (s = (0, m.N4)(d))
                 : S
                   ? (s = O.intl.string(O.t.kHdYCQ))
-                  : b
+                  : T
                     ? (s = O.intl.string(O.t['E+6SSU']))
-                    : T
+                    : b
                       ? (s = O.intl.string(O.t['XC3A5+']))
                       : ((s = O.intl.string(O.t['6hGo0d'])),
                         (l = (0, r.jsx)(u.ImageIcon, {
@@ -121,7 +121,7 @@ function w(e, t, n, i, a) {
                   width: E,
                   height: E
               }))
-            : b
+            : T
               ? (l = (0, r.jsx)(u.SlashBoxIcon, {
                     size: 'custom',
                     color: 'currentColor',
@@ -129,7 +129,7 @@ function w(e, t, n, i, a) {
                     width: E,
                     height: E
                 }))
-              : T
+              : b
                 ? (l = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
@@ -304,7 +304,7 @@ function M(e) {
                         })
                     });
                 default:
-                    (0, b.vE)(a);
+                    (0, T.vE)(a);
             }
         })(e, y, k),
         Z = i.useMemo(() => (e.compact ? (0, N.Z)((0, S.vc)(l()(), 'LT')) : null), [e.compact]);
@@ -316,7 +316,7 @@ function M(e) {
         }));
     let F = o.type === R.uaV.CONTEXT_MENU_COMMAND;
     return (0, r.jsxs)('div', {
-        id: (0, T.Gq)(o),
+        id: (0, b.Gq)(o),
         className: s()(D.repliedMessage, Z, {
             [D.messageSpine]: !v || (!p && m),
             [D.contextCommandMessage]: F

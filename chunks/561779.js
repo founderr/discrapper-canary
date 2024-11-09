@@ -1,6 +1,6 @@
 n.d(t, {
     i: function () {
-        return T;
+        return b;
     }
 }),
     n(724458),
@@ -22,7 +22,7 @@ var r,
     m = n(981729),
     g = n(607070),
     E = n(540059),
-    v = n(129186);
+    v = n(752325);
 function I(e, t, n) {
     return (
         t in e
@@ -50,7 +50,7 @@ function S(e, t) {
     return null;
 }
 ((a = r || (r = {}))[(a.ABOVE = 0)] = 'ABOVE'), (a[(a.BELOW = 1)] = 'BELOW');
-function b(e) {
+function T(e) {
     return {
         value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
         initialValueProp: e.initialValue,
@@ -89,11 +89,11 @@ function b(e) {
         })(e)
     };
 }
-class T extends (i = o.PureComponent) {
+class b extends (i = o.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         return e.initialValue !== t.initialValueProp
             ? {
-                  ...b(e),
+                  ...T(e),
                   active: t.active
               }
             : null;
@@ -108,7 +108,7 @@ class T extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: h, className: E, children: I, barStyles: S, fillStyles: b, mini: T, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            { disabled: _, stickToMarkers: h, className: E, children: I, barStyles: S, fillStyles: T, mini: b, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: w = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
             B = 0;
         h ? null != a && (null != l ? (B = a[l]) : null != o && (B = a[o])) : (B = this.scaleValue(t));
         let Z = ''.concat(B, '%'),
@@ -158,7 +158,7 @@ class T extends (i = o.PureComponent) {
                         className: u()(v.slider, E, {
                             [v.hasMarks]: (null !== (i = null == F ? void 0 : F.length) && void 0 !== i ? i : 0) > 0,
                             [v.disabled]: _,
-                            [v.mini]: T
+                            [v.mini]: b
                         }),
                         style: null == e ? void 0 : e.sliderStyles,
                         'aria-valuemin': c,
@@ -195,7 +195,7 @@ class T extends (i = o.PureComponent) {
                                 children: (0, s.jsx)('div', {
                                     className: v.barFill,
                                     style: {
-                                        ...b,
+                                        ...T,
                                         width: Z
                                     }
                                 })
@@ -369,7 +369,7 @@ class T extends (i = o.PureComponent) {
             (this.state = {
                 active: !1,
                 focused: !1,
-                ...b(e)
+                ...T(e)
             });
     }
 }
@@ -392,7 +392,7 @@ function y(e) {
           })
         : r();
 }
-I(T, 'defaultProps', {
+I(b, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

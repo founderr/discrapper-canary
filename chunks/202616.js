@@ -43,8 +43,8 @@ var r = n(425960),
     v = n(610963),
     I = n(452801),
     S = n(278891),
-    b = n(543705),
-    T = n(2778),
+    T = n(543705),
+    b = n(2778),
     y = n(219907),
     A = n(56013),
     N = n(94750),
@@ -350,7 +350,7 @@ function $(e, t, n) {
             [v, p.onBlur]
         ),
         S = (0, V.pu)(n, { isDisabled: 0 !== t.collection.size }),
-        b = (0, B.dG)(
+        T = (0, B.dG)(
             E,
             {
                 role: 'grid',
@@ -361,7 +361,7 @@ function $(e, t, n) {
             0 === t.collection.size && { tabIndex: S ? -1 : 0 },
             g
         );
-    return r && ((b['aria-rowcount'] = t.collection.size), (b['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: b };
+    return r && ((T['aria-rowcount'] = t.collection.size), (T['aria-colcount'] = t.collection.columnCount)), Q({ getRowText: o }, t), { gridProps: T };
 }
 function ee() {
     return { rowGroupProps: { role: 'rowgroup' } };
@@ -526,8 +526,8 @@ q = {
     'ko-KR': v.Z,
     'lt-LT': I.Z,
     'lv-LV': S.Z,
-    'nb-NO': b.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': b.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

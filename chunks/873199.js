@@ -1,10 +1,10 @@
-var n, a;
-i.d(t, {
+var i, r;
+n.d(t, {
     o: function () {
-        return n;
+        return i;
     }
 }),
-    i(47120),
-    ((a = n || (n = {}))[(a.LIST = 1)] = 'LIST'),
-    (a[(a.LIST_WITH_IMAGE = 2)] = 'LIST_WITH_IMAGE'),
-    (a[(a.GALLERY = 3)] = 'GALLERY');
+    n(47120),
+    ((r = i || (i = {}))[(r.LIST = 1)] = 'LIST'),
+    (r[(r.LIST_WITH_IMAGE = 2)] = 'LIST_WITH_IMAGE'),
+    (r[(r.GALLERY = 3)] = 'GALLERY');

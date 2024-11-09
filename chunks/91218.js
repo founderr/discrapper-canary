@@ -9,7 +9,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(388032),
-    l = n(77360);
+    l = n(774056);
 function u(e) {
     let t,
         { className: n, src: i, unicodeEmoji: u, name: c, size: d = 20, enableTooltip: f = !0, enableHeight: _ = !0, onClick: h } = e;

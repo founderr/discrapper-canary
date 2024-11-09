@@ -1,6 +1,6 @@
 n.d(t, {
     HT: function () {
-        return b;
+        return T;
     },
     K5: function () {
         return h;
@@ -217,7 +217,7 @@ let o = async (e, t) => {
             throw new i.Hx(e);
         }
     },
-    b = async (e) => {
+    T = async (e) => {
         try {
             var t;
             let n = await r.tn.get({ url: a.ANM.GUILD_DISCOVERY_SLUG(e) });

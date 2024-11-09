@@ -11,22 +11,22 @@ var r = n(200651),
     o = n(686546),
     l = n(768581),
     u = n(895924),
-    c = n(277016),
+    c = n(696967),
     d = n(970952);
 function f(e) {
     let { section: t, isSelected: n, width: a, height: f, className: _, selectable: h = !1, isSquircle: p, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
-        [S, b] = i.useState(!1),
-        T = i.useCallback(() => {
-            b(!0), null == m || m();
+        [S, T] = i.useState(!1),
+        b = i.useCallback(() => {
+            T(!0), null == m || m();
         }, [m]),
         y = i.useCallback(() => {
-            b(!1), null == g || g();
+            T(!1), null == g || g();
         }, [g]),
         A = i.useCallback(() => {
-            b(!0), null == E || E();
+            T(!0), null == E || E();
         }, [E]),
         N = i.useCallback(() => {
-            b(!1), null == v || v();
+            T(!1), null == v || v();
         }, [v]),
         C = i.useMemo(() => {
             if (t.type === u.Qi.APPLICATION) {
@@ -47,7 +47,7 @@ function f(e) {
             [c.selectable]: h,
             [c.selected]: h && n
         }),
-        onFocus: T,
+        onFocus: b,
         onBlur: y,
         onMouseOver: A,
         onMouseLeave: N,

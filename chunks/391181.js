@@ -18,7 +18,7 @@ var r = t(120356),
     d = t(48691),
     f = t(231338),
     p = t(388032),
-    _ = t(783210);
+    _ = t(772103);
 function m(e) {
     let { showEditProduct: n, showUnpublishProduct: t, showCopyLink: r, showTestDownload: l, showDeleteProduct: u, showReportProduct: a, onEditProduct: s, onUnpublishProduct: c, onDeleteProduct: d, onCopyLink: f, onTestDownload: m, onReportProduct: g, closePopout: E, onSelect: h } = e;
     return (0, i.jsx)('div', {

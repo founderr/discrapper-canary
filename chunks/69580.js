@@ -45,8 +45,8 @@ var r,
     v = n(21340),
     I = n(922770),
     S = n(481060),
-    b = n(893776),
-    T = n(384275),
+    T = n(893776),
+    b = n(384275),
     y = n(596454),
     A = n(434650),
     N = n(367907),
@@ -86,7 +86,7 @@ var r,
     es = n(981631),
     eo = n(186901),
     el = n(388032),
-    eu = n(617801);
+    eu = n(195943);
 let ec = 'oauth2-authorize-header-id';
 function ed() {
     let e = (0, u.TH)(),
@@ -193,12 +193,12 @@ function e_(e) {
         C,
         R,
         L,
-        { clientId: x, responseType: M, redirectUri: B, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: eh, scopes: ep, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eI = !1, showLogout: eS = !1, cancelCompletesFlow: eb = !0, isTrustedName: eT = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
+        { clientId: x, responseType: M, redirectUri: B, codeChallenge: en, codeChallengeMethod: eo, state: ed, nonce: ef, prompt: e_, authorizations: eh, scopes: ep, permissions: em, guildId: eg, channelId: eE, integrationType: ev, disableGuildSelect: eI = !1, showLogout: eS = !1, cancelCompletesFlow: eT = !0, isTrustedName: eb = !1, isEmbeddedFlow: ey = !1, callback: eA, callbackWithoutPost: eN, onClose: eC, disclosures: eR } = e,
         eO = null != ev ? (null == eh ? void 0 : eh.get(ev)) : void 0,
         eD = (0, u.TH)(),
         eL = (0, p.e7)([w.Z], () => w.Z.hasLoadedExperiments);
     s.useEffect(() => {
-        G.default.isAuthenticated() && !eL && b.Z.getExperiments();
+        G.default.isAuthenticated() && !eL && T.Z.getExperiments();
     }, [eL]);
     let [ex, ew] = s.useState(null),
         [eM, eP] = s.useState(null),
@@ -273,7 +273,7 @@ function e_(e) {
                     eB(!0), eN(e);
                     return;
                 }
-                if (!e && !eb) {
+                if (!e && !eT) {
                     null != eA &&
                         (eA({
                             application: null == ex ? void 0 : ex.application,
@@ -307,7 +307,7 @@ function e_(e) {
                         (e &&
                             (await (0, D.x9)(x, e7),
                             setTimeout(() => {
-                                T.Z.fetch();
+                                b.Z.fetch();
                             }, 100)),
                         null != eA)
                     )
@@ -333,7 +333,7 @@ function e_(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eP('AUTHORIZE_SCOPES'), eB(!1);
                 }
             },
-            [eN, eb, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, B, en, eo, ed, ef, e6, eK, ej, eX, eY, e7]
+            [eN, eT, eA, null == ex ? void 0 : ex.application, eQ, eC, x, e3, M, B, en, eo, ed, ef, e6, eK, ej, eX, eY, e7]
         ),
         tn = s.useRef(!1),
         tr = s.useCallback(async () => {
@@ -455,7 +455,7 @@ function e_(e) {
                         requestedScopes: e3,
                         integrationType: eX,
                         errors: th,
-                        isTrustedName: eT
+                        isTrustedName: eb
                     }),
                     (0, a.jsx)('div', {
                         className: eu.intObserver,

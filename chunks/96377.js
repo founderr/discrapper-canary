@@ -24,9 +24,9 @@ t.Z = {
             v = n.altBoundary,
             I = n.padding,
             S = n.tether,
-            b = void 0 === S || S,
-            T = n.tetherOffset,
-            y = void 0 === T ? 0 : T,
+            T = void 0 === S || S,
+            b = n.tetherOffset,
+            y = void 0 === b ? 0 : b,
             A = (0, c.Z)(t, {
                 boundary: g,
                 rootBoundary: E,
@@ -69,12 +69,12 @@ t.Z = {
                     V = L[O],
                     j = V + A[B],
                     H = V - A[Z],
-                    Y = b ? -w[F] / 2 : 0,
+                    Y = T ? -w[F] / 2 : 0,
                     W = C === r.BL ? x[F] : w[F],
                     K = C === r.BL ? -w[F] : -x[F],
                     z = t.elements.arrow,
                     q =
-                        b && z
+                        T && z
                             ? (0, l.Z)(z)
                             : {
                                   width: 0,
@@ -89,7 +89,7 @@ t.Z = {
                     en = t.elements.arrow && (0, u.Z)(t.elements.arrow),
                     er = en ? ('y' === O ? en.clientTop || 0 : en.clientLeft || 0) : 0,
                     ei = null != (G = null == k ? void 0 : k[O]) ? G : 0,
-                    ea = (0, o.u)(b ? (0, _.VV)(j, V + ee - ei - er) : j, V, b ? (0, _.Fp)(H, V + et - ei) : H);
+                    ea = (0, o.u)(T ? (0, _.VV)(j, V + ee - ei - er) : j, V, T ? (0, _.Fp)(H, V + et - ei) : H);
                 (L[O] = ea), (U[O] = ea - V);
             }
             if (void 0 !== m && m) {
@@ -104,7 +104,7 @@ t.Z = {
                     eh = null != (es = null == k ? void 0 : k[D]) ? es : 0,
                     ep = e_ ? ed : eu - x[ec] - w[ec] - eh + P.altAxis,
                     em = e_ ? eu + x[ec] + w[ec] - eh - P.altAxis : ef,
-                    eg = b && e_ ? (0, o.q)(ep, eu, em) : (0, o.u)(b ? ep : ed, eu, b ? em : ef);
+                    eg = T && e_ ? (0, o.q)(ep, eu, em) : (0, o.u)(T ? ep : ed, eu, T ? em : ef);
                 (L[D] = eg), (U[D] = eg - eu);
             }
             t.modifiersData[h] = U;

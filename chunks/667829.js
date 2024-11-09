@@ -24,15 +24,15 @@ var r = n(200651),
     v = n(117530),
     I = n(459273),
     S = n(403182),
-    b = n(541716),
-    T = n(752305),
+    T = n(541716),
+    b = n(752305),
     y = n(30465),
     A = n(140963),
     N = n(4484),
     C = n(925994),
     R = n(981631),
     O = n(388032),
-    D = n(482133);
+    D = n(703130);
 function L(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ class M extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, T.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, b.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -176,7 +176,7 @@ class M extends i.Component {
                 accessibilityLabel: G,
                 disabled: c || !1,
                 submitting: B,
-                isEdit: g === b.I.EDIT,
+                isEdit: g === T.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -191,11 +191,11 @@ class M extends i.Component {
                 onKeyDown: _,
                 onSubmit: p,
                 textAreaPaddingClassName: s()(w[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== b.I.NORMAL && g !== b.I.OVERLAY && g !== b.I.THREAD_CREATION && g !== b.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === b.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === b.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === b.I.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === b.I.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== T.I.NORMAL && g !== T.I.OVERLAY && g !== T.I.THREAD_CREATION && g !== T.I.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === T.I.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === T.I.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
                 }),
                 spellcheckEnabled: S,
                 useNewSlashCommands: y,
@@ -215,7 +215,7 @@ class M extends i.Component {
                       ref: this.ref,
                       ...F,
                       type: g,
-                      value: c ? (0, T.JM)('') : u,
+                      value: c ? (0, b.JM)('') : u,
                       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
@@ -294,7 +294,7 @@ class M extends i.Component {
             }),
             L(this, 'handleClearText', () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, T.JM)(''));
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, b.JM)(''));
             }),
             L(this, 'handleInsertText', (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;

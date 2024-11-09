@@ -11,7 +11,7 @@ var l = e(481060),
     a = e(313201),
     r = e(988158),
     i = e(388032),
-    s = e(952430);
+    s = e(66015);
 function c(t) {
     let { url: n, trustUrl: e, isProtocol: c, onConfirm: d, onClose: x, transitionState: u } = t,
         h = (0, a.Dt)(),

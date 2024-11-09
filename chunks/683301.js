@@ -27,14 +27,14 @@ let S = {
         loading: !1,
         isFirstLoad: !0
     },
-    b = {
+    T = {
         [v.Lcj.FEATURED]: { ...S },
         [v.Lcj.GAMES_YOU_PLAY]: { ...S },
         [v.Lcj.MISC]: { ...S },
         [v.Lcj.SEARCH]: {},
         [I.Hk]: { ...S }
     },
-    T = '',
+    b = '',
     y = !1,
     A = 'unset',
     N = null,
@@ -76,7 +76,7 @@ class w extends (a = h.ZP.Store) {
         return 'failed' === A;
     }
     getDiscoverableGuilds() {
-        return b;
+        return T;
     }
     getCurrentCategoryId() {
         return C;
@@ -88,11 +88,11 @@ class w extends (a = h.ZP.Store) {
         return R;
     }
     getMostRecentQuery() {
-        return T;
+        return b;
     }
     getTopCategoryCounts(e) {
         var t;
-        return null === (t = b[v.Lcj.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts;
+        return null === (t = T[v.Lcj.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts;
     }
     getSeenGuildIds() {
         return O;
@@ -121,10 +121,10 @@ class w extends (a = h.ZP.Store) {
         GUILD_DISCOVERY_FETCH_START: function (e) {
             let { section: t } = e;
             (y = !0),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [t]: {
-                        ...b[t],
+                        ...T[t],
                         loading: !0
                     }
                 });
@@ -133,8 +133,8 @@ class w extends (a = h.ZP.Store) {
             let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
             (y = !1), (N = Date.now()), (D = (0, m.P)());
             let s = _().map(t, x);
-            b = {
-                ...b,
+            T = {
+                ...T,
                 [n]: {
                     guilds: s,
                     offset: i,
@@ -148,8 +148,8 @@ class w extends (a = h.ZP.Store) {
         GUILD_DISCOVERY_FETCH_FAILURE: function (e) {
             let { section: t } = e;
             (y = !1),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [t]: {
                         ...S,
                         loading: !1
@@ -159,11 +159,11 @@ class w extends (a = h.ZP.Store) {
         GUILD_DISCOVERY_POPULAR_FETCH_START: function (e) {
             let { categoryId: t } = e;
             (y = !0),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [t]: {
                         ...S,
-                        ...b[t],
+                        ...T[t],
                         loading: !0
                     }
                 });
@@ -172,8 +172,8 @@ class w extends (a = h.ZP.Store) {
             let { categoryId: t, guilds: n } = e;
             (y = !1), (N = Date.now());
             let r = _().map(n, x);
-            b = {
-                ...b,
+            T = {
+                ...T,
                 [t]: {
                     ...S,
                     guilds: r,
@@ -185,8 +185,8 @@ class w extends (a = h.ZP.Store) {
         GUILD_DISCOVERY_POPULAR_FETCH_FAILURE: function (e) {
             let { categoryId: t } = e;
             (y = !1),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [t]: {
                         ...S,
                         loading: !1
@@ -198,34 +198,34 @@ class w extends (a = h.ZP.Store) {
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
                 (A = 'fetching'),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [n]: {
-                        ...b[n],
+                        ...T[n],
                         [r]: {
-                            ...b[n][r],
+                            ...T[n][r],
                             [i]: {
-                                ...(null === (t = b[n][r]) || void 0 === t ? void 0 : t[i]),
+                                ...(null === (t = T[n][r]) || void 0 === t ? void 0 : t[i]),
                                 loading: !0
                             }
                         }
                     }
                 }),
-                (T = r);
+                (b = r);
         },
         GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS: function (e) {
             var t;
             let { section: n, guilds: r, total: i, offset: a, limit: s, query: o, categoryId: l } = e;
             d()('search' === n, 'This action only supports search it seems');
             let u = r.map(x);
-            (b = {
-                ...b,
+            (T = {
+                ...T,
                 [n]: {
-                    ...b[n],
+                    ...T[n],
                     [o]: {
-                        ...b[n][o],
+                        ...T[n][o],
                         [l]: {
-                            ...(null === (t = b[n][o]) || void 0 === t ? void 0 : t[l]),
+                            ...(null === (t = T[n][o]) || void 0 === t ? void 0 : t[l]),
                             guilds: u,
                             total: i,
                             offset: a,
@@ -235,7 +235,7 @@ class w extends (a = h.ZP.Store) {
                     }
                 }
             }),
-                (T = o),
+                (b = o),
                 (A = 'succeeded');
         },
         GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function (e) {
@@ -243,14 +243,14 @@ class w extends (a = h.ZP.Store) {
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
                 (A = 'failed'),
-                (b = {
-                    ...b,
+                (T = {
+                    ...T,
                     [n]: {
-                        ...b[n],
+                        ...T[n],
                         [r]: {
-                            ...b[n][r],
+                            ...T[n][r],
                             [i]: {
-                                ...(null === (t = b[n][r]) || void 0 === t ? void 0 : t[i]),
+                                ...(null === (t = T[n][r]) || void 0 === t ? void 0 : t[i]),
                                 loading: !1
                             }
                         }
@@ -262,7 +262,7 @@ class w extends (a = h.ZP.Store) {
             (C = t), n && (r = t);
         },
         GUILD_DISCOVERY_CLEAR_SEARCH: function () {
-            T = '';
+            b = '';
         },
         GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS: function (e) {
             let { nbHits: t, facets: n, query: r } = e,
@@ -279,12 +279,12 @@ class w extends (a = h.ZP.Store) {
                         .sort((e, t) => t[1] - e[1])
                         .slice(0, 7));
             }
-            b = {
-                ...b,
+            T = {
+                ...T,
                 [v.Lcj.SEARCH]: {
-                    ...b[v.Lcj.SEARCH],
+                    ...T[v.Lcj.SEARCH],
                     [r]: {
-                        ...b[v.Lcj.SEARCH][r],
+                        ...T[v.Lcj.SEARCH][r],
                         resultCounts: [[I.Hk, Math.min(I.lA, t)], ...i]
                     }
                 }
@@ -292,12 +292,12 @@ class w extends (a = h.ZP.Store) {
         },
         GUILD_DISCOVERY_SEARCH_COUNTS_FAIL: function (e) {
             let { query: t } = e;
-            b = {
-                ...b,
+            T = {
+                ...T,
                 [v.Lcj.SEARCH]: {
-                    ...b[v.Lcj.SEARCH],
+                    ...T[v.Lcj.SEARCH],
                     [t]: {
-                        ...b[v.Lcj.SEARCH][t],
+                        ...T[v.Lcj.SEARCH][t],
                         resultCounts: null
                     }
                 }

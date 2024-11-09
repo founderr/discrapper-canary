@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     Fj: function () {
-        return b;
+        return T;
     },
     ar: function () {
         return A;
@@ -29,7 +29,7 @@ var r,
     m = n(186523),
     g = n(553826),
     E = n(981631),
-    v = n(755570);
+    v = n(780994);
 function I(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ let S = {
     SMALL: '7px 10px',
     MEDIUM: '10px'
 };
-function b(e) {
+function T(e) {
     let { checked: t, radioItemIconClassName: n, icon: r } = e;
     return (0, p.Q)('RadioGroup')
         ? (0, i.jsxs)('svg', {
@@ -93,12 +93,12 @@ function b(e) {
               ]
           });
 }
-function T(e) {
+function b(e) {
     var t;
     let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: _, radioItemIconClassName: h, radioBarClassName: p, hasSelection: m, radioPosition: g = 'left', icon: E, withTransparentBackground: I } = e,
         S = null !== (t = a.color) && void 0 !== t ? t : '',
-        T = r || !m,
-        y = (0, i.jsx)(b, {
+        b = r || !m,
+        y = (0, i.jsx)(T, {
             checked: r,
             radioItemIconClassName: h,
             icon: E
@@ -107,7 +107,7 @@ function T(e) {
         role: 'radio',
         'aria-checked': r,
         onClick: n ? void 0 : l,
-        tabIndex: !n && T ? 0 : -1,
+        tabIndex: !n && b ? 0 : -1,
         className: o()(
             null != a.collapsibleContent ? v.collapsibleItem : v.item,
             {
@@ -167,7 +167,7 @@ class y extends (r = a.PureComponent) {
                           collapsibleContent: n.collapsibleContent,
                           children: (t) => {
                               let { onClick: c } = t;
-                              return (0, i.jsx)(T, {
+                              return (0, i.jsx)(b, {
                                   disabled: !!m,
                                   checked: e,
                                   hasSelection: s,
@@ -187,7 +187,7 @@ class y extends (r = a.PureComponent) {
                               });
                           }
                       })
-                    : (0, i.jsx)(T, {
+                    : (0, i.jsx)(b, {
                           disabled: !!m,
                           checked: e,
                           hasSelection: s,

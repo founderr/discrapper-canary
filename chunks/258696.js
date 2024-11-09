@@ -18,14 +18,14 @@ var r = n(200651),
     v = n(74538),
     I = n(94161),
     S = n(9277),
-    b = n(58995),
-    T = n(897291),
+    T = n(58995),
+    b = n(897291),
     y = n(764794),
     A = n(241553),
     N = n(319417),
     C = n(728386),
     R = n(474936),
-    O = n(482133);
+    O = n(703130);
 function D(e) {
     let { disabled: t, channel: n } = e,
         { enabled: a } = _.ZP.useExperiment({ location: 'dc120b_1' }, { autoTrackExposure: !1 }),
@@ -36,7 +36,7 @@ function D(e) {
     let { enabled: o } = h.O.useExperiment({ location: 'gift-button' }),
         l = a && s;
     return o
-        ? (0, r.jsx)(b.Z, {
+        ? (0, r.jsx)(T.Z, {
               disabled: t,
               channel: n
           })
@@ -45,13 +45,13 @@ function D(e) {
                 disabled: t,
                 channel: n
             })
-          : (0, r.jsx)(T.Z, {
+          : (0, r.jsx)(b.Z, {
                 disabled: t,
                 channel: n
             });
 }
 t.Z = i.memo(function (e) {
-    var t, n, i, _, h, b, T, A;
+    var t, n, i, _, h, T, b, A;
     let { type: L, disabled: x, channel: w, handleSubmit: M, isEmpty: P, showAllButtons: k } = e,
         U = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
         G = (0, s.e7)([m.Z], () => m.Z.getStickerPreview(w.id, L.drafts.type)),
@@ -98,7 +98,7 @@ t.Z = i.memo(function (e) {
                         'referral'
                     )
                 )),
-        (null === (b = L.gifts) || void 0 === b ? void 0 : b.button) != null &&
+        (null === (T = L.gifts) || void 0 === T ? void 0 : T.button) != null &&
             null == F &&
             !j &&
             (null == q || v.ZP.isPremiumEligible(q)) &&
@@ -112,7 +112,7 @@ t.Z = i.memo(function (e) {
                     'gift'
                 )
             ),
-        (null === (T = L.gifs) || void 0 === T ? void 0 : T.button) != null &&
+        (null === (b = L.gifs) || void 0 === b ? void 0 : b.button) != null &&
             null == F &&
             k &&
             H.push(

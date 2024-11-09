@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(430824),
     I = n(496675),
     S = n(979651),
-    b = n(617136),
-    T = n(113434),
+    T = n(617136),
+    b = n(113434),
     y = n(497505),
     A = n(475595),
     N = n(602667),
@@ -30,7 +30,7 @@ var r = n(200651),
     L = n(981631),
     x = n(231338),
     w = n(388032),
-    M = n(6464);
+    M = n(242468);
 let P = '11px';
 function k(e, t) {
     return null != e && null != t && (0, m.p9)(t, S.Z, v.Z, I.Z, p.Z)[0];
@@ -46,7 +46,7 @@ t.Z = function (e) {
             quest: m,
             location: y.jn.MEMBERS_LIST
         }),
-        F = (0, T.tP)(m),
+        F = (0, b.tP)(m),
         V = (null == m ? void 0 : null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         j = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         H = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
@@ -106,22 +106,22 @@ t.Z = function (e) {
         er = 'top' === S ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
     if (null == m || F || (V && !k(I, B))) return null;
     let ei = () => {
-            (0, b._3)({
+            (0, T._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: b.jZ.OPEN_DISCLOSURE,
+                questContentCTA: T.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(m, {
                     content: y.jn.MEMBERS_LIST,
-                    ctaContent: b.jZ.OPEN_DISCLOSURE
+                    ctaContent: T.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
-            (0, b._3)({
+            (0, T._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: b.jZ.LEARN_MORE,
+                questContentCTA: T.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, y.jn.MEMBERS_LIST, m.id);
@@ -132,10 +132,10 @@ t.Z = function (e) {
         eo = () => {
             if (k(I, B) && null != B)
                 return (
-                    (0, b._3)({
+                    (0, T._3)({
                         questId: m.id,
                         questContent: y.jn.MEMBERS_LIST,
-                        questContentCTA: b.jZ.WATCH_STREAM,
+                        questContentCTA: T.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(B.id),

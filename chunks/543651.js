@@ -12,7 +12,7 @@ var i = n(120356),
     _ = n(594174),
     h = n(823379),
     p = n(388032),
-    m = n(875338);
+    m = n(789909);
 t.Z = function (e) {
     let { createdAt: t, participantIds: n, applicationId: i, title: s, guildId: g, className: E } = e,
         v = (0, c.q)(i),
@@ -21,7 +21,7 @@ t.Z = function (e) {
             return null !== (e = n.map((e) => _.default.getUser(e)).filter(h.lm)) && void 0 !== e ? e : [];
         }),
         S = null == v ? void 0 : v.name,
-        b = o()(t).fromNow();
+        T = o()(t).fromNow();
     return null == t
         ? null
         : (0, r.jsxs)('div', {
@@ -46,7 +46,7 @@ t.Z = function (e) {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
                               className: m.__invalid_subtitle,
-                              children: [null != S ? ''.concat(S, ' \u2022 ') : null, b]
+                              children: [null != S ? ''.concat(S, ' \u2022 ') : null, T]
                           }),
                           (0, r.jsx)(u.Text, {
                               variant: 'text-xs/medium',

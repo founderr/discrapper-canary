@@ -27,8 +27,8 @@ var r,
     v = n(588215),
     I = n(496135),
     S = n(893966);
-let b = new d.Yd('MemberSafetySearchManager');
-function T(e) {
+let T = new d.Yd('MemberSafetySearchManager');
+function b(e) {
     return 'guild_'.concat(e);
 }
 function y(e) {
@@ -79,7 +79,7 @@ async function O(e) {
 }
 function D(e) {
     var t;
-    (t = T(e)),
+    (t = b(e)),
         (0, f.j)(() => {
             A.setState((e) => {
                 let n = { ...e };
@@ -95,7 +95,7 @@ async function x(e) {
     var t, n, r, i, a;
     let s = S.Z.getSearchStateByGuildId(e),
         o = S.Z.getPaginationStateByGuildId(e),
-        c = T(e),
+        c = b(e),
         d = R(c),
         [f, _] = (function (e, t, n) {
             var r, i, a, s, o, l;
@@ -116,7 +116,7 @@ async function x(e) {
                                 nextPageChunkNumber: L(i, t)
                             };
                         })(t),
-                        { previousPagination: s } = R(T(e)),
+                        { previousPagination: s } = R(b(e)),
                         o = t.currentPage,
                         l = null !== (n = null == s ? void 0 : s.currentPage) && void 0 !== n ? n : 0,
                         u = S.Z.getElasticSearchPaginationByGuildId(e);
@@ -247,7 +247,7 @@ async function x(e) {
     })(c, h, f, o, y);
     try {
         if (
-            (b.info('Making member search request', {
+            (T.info('Making member search request', {
                 query: A.query,
                 guildId: e
             }),
@@ -272,13 +272,13 @@ async function x(e) {
 function w(e) {
     return A((t) => {
         var n;
-        return (null === (n = t[T(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
+        return (null === (n = t[b(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
     });
 }
 function M(e) {
     return A((t) => {
         var n;
-        return (null === (n = t[T(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
+        return (null === (n = t[b(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
     });
 }
 class P extends h.Z {
@@ -300,11 +300,11 @@ class P extends h.Z {
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        return O(T(t));
+        return O(b(t));
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        N(T(t), {
+        N(b(t), {
             requestState: 4,
             abortController: null,
             lastUpdated: Date.now()

@@ -25,12 +25,12 @@ var r,
     v = n(184301),
     I = n(768581),
     S = n(463396),
-    b = n(981631),
-    T = n(12645);
+    T = n(981631),
+    b = n(825193);
 function y(e) {
     let { compact: t } = e;
     return (0, a.jsx)(p.Z, {
-        className: t ? T.botTagCompact : T.botTagCozy,
+        className: t ? b.botTagCompact : b.botTagCozy,
         type: p.Z.Types.REMIX,
         useRemSizes: !0
     });
@@ -43,19 +43,19 @@ function A(e) {
         k = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : P,
         { analyticsLocations: U } = (0, h.ZP)(_.Z.USERNAME),
         { nick: G, colorString: B, colorRoleName: Z } = r,
-        F = null != i.messageReference && null != i.webhookId && i.hasFlag(b.iLy.IS_CROSSPOST),
+        F = null != i.messageReference && null != i.webhookId && i.hasFlag(T.iLy.IS_CROSSPOST),
         V = (0, c.e7)([f.Z], () => f.Z.roleStyle),
         j = (0, E.X$)(),
         H = s.useMemo(
             () => ({
-                source: b.jXE.CHANNEL,
+                source: T.jXE.CHANNEL,
                 messageId: i.id,
                 tagUserId: i.author.id
             }),
             [i.id, i.author.id]
         ),
         Y = {
-            className: T.username,
+            className: b.username,
             style: 'username' === V && null != B ? { color: B } : void 0,
             onClick: O,
             onContextMenu: D,
@@ -68,7 +68,7 @@ function A(e) {
                           clan: r.clan,
                           userId: i.author.id,
                           contextGuildId: k,
-                          className: T.clanTagChiplet,
+                          className: b.clanTagChiplet,
                           profileViewedAnalytics: H
                       })
                     : null,
@@ -109,7 +109,7 @@ function A(e) {
                                   tag: 'span',
                                   ...n,
                                   ...Y,
-                                  className: l()(Y.className, T.clickable, R)
+                                  className: l()(Y.className, b.clickable, R)
                               }),
                               W
                           ]
@@ -139,7 +139,7 @@ function A(e) {
                 ? (0, a.jsx)(d.RoleDot, {
                       color: B,
                       name: Z,
-                      className: T.roleDot
+                      className: b.roleDot
                   })
                 : null,
             n,
@@ -149,7 +149,7 @@ function A(e) {
                         clan: r.clan,
                         userId: i.author.id,
                         contextGuildId: k,
-                        className: T.clanTagChiplet,
+                        className: b.clanTagChiplet,
                         profileViewedAnalytics: H
                     })
                 }),

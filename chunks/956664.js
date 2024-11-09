@@ -18,7 +18,7 @@ n.d(t, {
         return p;
     },
     c0: function () {
-        return b;
+        return T;
     },
     fD: function () {
         return E;
@@ -148,7 +148,7 @@ function S(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function b(e) {
+async function T(e) {
     var t;
     if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),

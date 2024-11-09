@@ -15,7 +15,7 @@ var r = n(200651),
     d = n(436444),
     f = n(981631),
     _ = n(388032),
-    h = n(267444);
+    h = n(527855);
 let p = [f.Eu4.NONE, f.Eu4.TIER_1, f.Eu4.TIER_2, f.Eu4.TIER_3];
 function m(e) {
     let { guild: t } = e,
@@ -24,9 +24,9 @@ function m(e) {
         [E, v] = i.useState(0),
         I = i.useRef(null),
         S = Math.min(f.Eu4.TIER_3, t.premiumTier + 1),
-        b = f.oCV[t.premiumTier],
-        T = f.oCV[S],
-        y = (t.premiumSubscriberCount - b) / (T - b),
+        T = f.oCV[t.premiumTier],
+        b = f.oCV[S],
+        y = (t.premiumSubscriberCount - T) / (b - T),
         A = d.P[t.premiumTier],
         N = d.P[S],
         C = t.premiumTier === f.Eu4.TIER_3,

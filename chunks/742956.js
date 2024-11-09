@@ -14,7 +14,7 @@ var a = t(120356),
     d = t(409813),
     c = t(474936),
     u = t(388032),
-    f = t(820130);
+    f = t(73913);
 function p(e) {
     let { step: n, onClose: t, giftingOrigin: a } = e,
         { enabled: p } = s.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),

@@ -23,8 +23,8 @@ var i = n(120356),
     v = n(833858),
     I = n(769654),
     S = n(960870),
-    b = n(139793),
-    T = n(994746),
+    T = n(139793),
+    b = n(994746),
     y = n(232174),
     A = n(502762),
     N = n(652853),
@@ -42,7 +42,7 @@ var i = n(120356),
     G = n(981631),
     B = n(701488),
     Z = n(388032),
-    F = n(69035);
+    F = n(676411);
 function V(e) {
     let { user: t, currentUser: n, activity: i, application: V, guild: j, channel: H, className: Y, onClose: W } = e,
         { analyticsLocations: K } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
@@ -69,11 +69,11 @@ function V(e) {
             entry: Q,
             analyticsLocations: K
         }),
-        $ = (0, b.Z)({
+        $ = (0, T.Z)({
             userId: t.id,
             onAction: J
         }),
-        ee = (0, T.Z)(i),
+        ee = (0, b.Z)(i),
         { largeImage: et, smallImage: en } = (0, h.FO)(i, V),
         er = (0, s.EQ)(i)
             .when(c.Z, () => X)

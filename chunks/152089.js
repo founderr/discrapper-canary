@@ -20,8 +20,8 @@ var r = n(911969),
     u = n(185923);
 function c(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: h, hideMentionDescription: p, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: v, onSendMessage: I, onSendSticker: S, setValue: b } = e,
-        T = {
+    let { activeCommandOption: n, canMentionUsers: s = !0, canMentionRoles: o = !0, canMentionChannels: u = !0, canMentionEveryone: c, canMentionClyde: d = !1, useNewSlashCommands: f, canOnlyUseTextCommands: _, canSendStickers: h, hideMentionDescription: p, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: v, onSendMessage: I, onSendSticker: S, setValue: T } = e,
+        b = {
             mentions: {
                 channel: l.nS.DENY,
                 global: l.VV.DENY,
@@ -43,7 +43,7 @@ function c(e) {
                 null === (n = v.current) || void 0 === n || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                b(e, null != t ? t : (0, a.JM)(e));
+                T(e, null != t ? t : (0, a.JM)(e));
             },
             getCommandOptionValues: () => {
                 var e;
@@ -52,9 +52,9 @@ function c(e) {
         };
     if (null != n) {
         let e = (0, i.$z)(n);
-        e.canMentionChannels && (T.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (T.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (T.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (T.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (T.hideMentionDescription = !0);
-    } else u && (T.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (T.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (T.mentions.user = l.h3.ALLOW_CHANNEL), c && (T.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (T.mentions.clyde = l.cz.ALLOW);
-    return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? (T.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (T.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (T.allowedChannelTypes = n.channelTypes), T;
+        e.canMentionChannels && (b.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (b.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (b.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (b.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (b.hideMentionDescription = !0);
+    } else u && (b.mentions.channel = l.nS.ALLOW_SELECTABLE), o && (b.mentions.role = l.Fw.ALLOW_MENTIONABLE), s && (b.mentions.user = l.h3.ALLOW_CHANNEL), c && (b.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE), d && (b.mentions.clyde = l.cz.ALLOW);
+    return (null === (t = g.commands) || void 0 === t ? void 0 : t.enabled) && (f ? (b.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (b.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (b.allowedChannelTypes = n.channelTypes), b;
 }
 function d(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: s } = e,

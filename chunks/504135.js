@@ -13,17 +13,17 @@ var r = n(200651),
     c = n(743236),
     d = n(481060),
     f = n(939350),
-    _ = n(7758);
+    _ = n(667947);
 function h(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: p = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: b, action: T, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: p = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: T, action: b, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
         w = i.useContext(u.r),
         M = i.useRef(null),
         P = i.useCallback(
             (e) => {
-                if (null == T) return !1;
-                !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => T(e));
+                if (null == b) return !1;
+                !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => b(e));
             },
-            [T, y, w, O, D]
+            [b, y, w, O, D]
         );
     return (
         i.useEffect(() => {
@@ -38,7 +38,7 @@ function h(e) {
             }),
             onClick: I ? void 0 : P,
             'aria-disabled': I,
-            ...b,
+            ...T,
             'data-menu-item': 'true',
             children: [
                 null != h &&

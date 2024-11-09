@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(102172),
     I = n(359110),
     S = n(769654),
-    b = n(922482),
-    T = n(543882),
+    T = n(922482),
+    b = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -45,8 +45,8 @@ var r = n(200651),
     F = n(228168),
     V = n(981631),
     j = n(388032),
-    H = n(69035),
-    Y = n(856120),
+    H = n(676411),
+    Y = n(380934),
     W = n(924482),
     K = n(774797);
 function z(e) {
@@ -84,12 +84,12 @@ function z(e) {
             url: ec,
             isLoading: ed,
             canSeePreview: ef
-        } = (0, o.cj)([N.Z, T.Z], () => {
+        } = (0, o.cj)([N.Z, b.Z], () => {
             let e = null != ea && N.Z.canBasicChannel(V.S7T.CONNECT, ea);
             return e
                 ? {
-                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: b.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: b.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -200,7 +200,7 @@ function z(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(H.clickable, H.inline),
                                         onClick: () => {
-                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, b.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                                         },
                                         children: ea.name
                                     })

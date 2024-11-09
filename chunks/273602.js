@@ -29,7 +29,7 @@ var l = i(200651),
     C = i(981631),
     I = i(231338),
     S = i(388032),
-    P = i(693582);
+    P = i(947251);
 function y(e) {
     var t;
     let { threadId: i, attachments: y, sendMessage: T, transitionState: z, onClose: A } = e,

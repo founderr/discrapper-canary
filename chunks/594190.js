@@ -36,8 +36,8 @@ var i,
     v = n(630699),
     I = n(855403),
     S = n(454991),
-    b = n(77498),
-    T = n(283595),
+    T = n(77498),
+    b = n(283595),
     y = n(417363),
     A = n(626135),
     N = n(70956),
@@ -225,9 +225,9 @@ function ec(e) {
             enabled: !1,
             overlayMethod: M.gl.Disabled
         };
-    let t = b.Z.getGameByName(e.name);
+    let t = T.Z.getGameByName(e.name);
     if (null != t) {
-        let e = T.Z.getActiveLibraryApplication(t.id);
+        let e = b.Z.getActiveLibraryApplication(t.id);
         if (null != e)
             return {
                 source: x.d.LIBRARY_APPLICATION,
@@ -273,7 +273,7 @@ function eh(e) {
         ...e,
         played: null != e.lastFocused && 0 !== e.lastFocused ? d()(new Date(e.lastFocused * N.Z.Millis.SECOND)).fromNow() : ' ',
         overlay: ((t = e), null !== (n = z.enableOverlay[eu(t)]) && void 0 !== n ? n : ec(t).enabled),
-        verified: b.Z.isGameInDatabase(e),
+        verified: T.Z.isGameInDatabase(e),
         detectable: ed(e)
     };
     if (null != e.id && null != Q[e.id]) {
@@ -286,9 +286,9 @@ function ep() {
     let e = !1;
     return (
         (F = u()
-            .values(T.Z.libraryApplications)
+            .values(b.Z.libraryApplications)
             .reduce((t, n) => {
-                let r = b.Z.getDetectableGame(n.id);
+                let r = T.Z.getDetectableGame(n.id);
                 if (null == r) return t;
                 for (let i of y.Z.getLaunchOptions(n.id, n.branchId)) {
                     let a = ''.concat(n.id, ':').concat(n.branchId);
@@ -361,7 +361,7 @@ function eE() {
         let e = [],
             t = new Set();
         r = {};
-        let n = b.Z.games;
+        let n = T.Z.games;
         for (let e of n) {
             var i, a, s, o;
             Q[e.id] = {
@@ -470,7 +470,7 @@ class ev extends (i = f.ZP.Store) {
             Array.isArray(i.gamesSeen))
         )
             for (let e of i.gamesSeen) 'number' == typeof e.id && ((e.nativeProcessObserverId = e.id), delete e.id, (a = !0));
-        eg(i.gamesSeen), this.waitFor(b.Z), this.syncWith([T.Z, b.Z, y.Z], u().throttle(ep, 1000)), a && e_();
+        eg(i.gamesSeen), this.waitFor(T.Z), this.syncWith([b.Z, T.Z, y.Z], u().throttle(ep, 1000)), a && e_();
     }
     getVisibleGame() {
         return null == H || ef(H) ? H : null;
@@ -491,7 +491,7 @@ class ev extends (i = f.ZP.Store) {
     }
     getRunningVerifiedApplicationIds() {
         return this.getRunningGames()
-            .map((e) => b.Z.getGameByName(e.name))
+            .map((e) => T.Z.getGameByName(e.name))
             .filter(R.lm)
             .map((e) => e.id);
     }
@@ -611,7 +611,7 @@ class ev extends (i = f.ZP.Store) {
         },
         RUNNING_GAME_TOGGLE_OVERLAY: function (e) {
             if (((z.enableOverlay[eu(e.game)] = e.newEnabledValue), e_(), !__OVERLAY__)) {
-                let t = null != e.game.id ? b.Z.getDetectableGame(e.game.id) : null;
+                let t = null != e.game.id ? T.Z.getDetectableGame(e.game.id) : null;
                 null != t &&
                     A.default.track(w.rMx.OVERLAY_TOGGLED, {
                         enabled: e.newEnabledValue,
@@ -677,7 +677,7 @@ class ev extends (i = f.ZP.Store) {
             if (__OVERLAY__ || !O.isPlatformEmbedded) return;
             let n = D.ZP.getDiscordUtils().notifyGameLaunched;
             if (null == n) return;
-            let r = b.Z.getDetectableGame(e.applicationId);
+            let r = T.Z.getDetectableGame(e.applicationId);
             if (null != r) n(r.id, r.name, null !== (t = e.pids) && void 0 !== t ? t : []);
         },
         GAME_DETECTION_WATCH_CANDIDATE_GAMES_START: function () {

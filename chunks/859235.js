@@ -17,16 +17,16 @@ var r,
     h = n(43085),
     p = n(981631),
     m = n(388032),
-    g = n(882586);
+    g = n(57604);
 function E(e) {
     e.stopPropagation();
 }
 ((r = i || (i = {}))[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), (r[(r.CLIP = 2)] = 'CLIP');
 t.Z = s.forwardRef(function (e, t) {
-    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: S, draftType: b, size: T = 1 } = e,
+    let { id: n, channelId: r, className: i, children: s, actions: o, handleEditModal: v, keyboardModeEnabled: I, onKeyDown: S, draftType: T, size: b = 1 } = e,
         { onFocus: y, ...A } = (0, u.JA)(n),
         { handleFocus: N, handleBlur: C } = (0, h.b)(y),
-        R = 0 === T,
+        R = 0 === b,
         O = null != o;
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
@@ -37,13 +37,13 @@ t.Z = s.forwardRef(function (e, t) {
                 if (!!I) {
                     switch (e.which) {
                         case p.yXg.D:
-                            e.preventDefault(), d.Z.remove(r, n, b);
+                            e.preventDefault(), d.Z.remove(r, n, T);
                             return;
                         case p.yXg.E:
                             null != v && (e.preventDefault(), v(e));
                             return;
                         case p.yXg.BACKSPACE:
-                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, b)) : (e.preventDefault(), d.Z.remove(r, n, b));
+                            e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(r, T)) : (e.preventDefault(), d.Z.remove(r, n, T));
                             return;
                         case p.yXg.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
@@ -52,7 +52,7 @@ t.Z = s.forwardRef(function (e, t) {
                     null == S || S(e);
                 }
             },
-            className: l()(g.upload, i, { [g.sizeClip]: 2 === T }),
+            className: l()(g.upload, i, { [g.sizeClip]: 2 === b }),
             ref: t,
             children: (0, a.jsxs)('div', {
                 className: g.uploadContainer,

@@ -18,8 +18,8 @@ var r,
     v = n(568963),
     I = n(388627),
     S = n(987650),
-    b = n(501787);
-let T = new d.Z('OverlayStore'),
+    T = n(501787);
+let b = new d.Z('OverlayStore'),
     y = new Set(),
     A = new Set(),
     N = null,
@@ -53,16 +53,16 @@ function w(e) {
 }
 async function M(e) {
     var t, n;
-    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(b.$J))) && void 0 !== n ? n : '';
+    return await (0, I.fK)(), c.Z.window.setBackgroundThrottling(!1), (O = e), (0, g.tB)(O), null !== (n = await (null === c.Z || void 0 === c.Z ? void 0 : null === (t = c.Z.window) || void 0 === t ? void 0 : t.getNativeHandle(T.$J))) && void 0 !== n ? n : '';
 }
 function P() {
     var e;
-    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(b.$J), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
+    null === c.Z || void 0 === c.Z || null === (e = c.Z.window) || void 0 === e || e.close(T.$J), (O = null), (0, g.tB)(null != O ? O : -1), c.Z.window.setBackgroundThrottling(!0);
 }
 function k(e) {
     let t = _.ZP.getGameForPID(e);
     u.Z.setAssociatedGame(null != O ? O : -1, e, t), A.delete(null != O ? O : -1), (O = e), (0, g.tB)(null != O ? O : -1);
-    let n = h.Z.getWindow(b.$J),
+    let n = h.Z.getWindow(T.$J),
         r = () =>
             new Promise((e) => {
                 null == n ||
@@ -81,7 +81,7 @@ function k(e) {
     a();
 }
 function U(e, t, n, r) {
-    let i = h.Z.getWindow(b.$J);
+    let i = h.Z.getWindow(T.$J);
     if (null == i) return;
     let a = Math.ceil(n * i.innerWidth),
         s = Math.ceil(r * i.innerHeight),
@@ -109,14 +109,14 @@ function Z(e) {
 let F = (() => {
     let e = null;
     async function t() {
-        if (!S.iP) throw (T.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
+        if (!S.iP) throw (b.error('Attempted to load overlay on an unsupported platform.'), Error('Overlay v3 is not supported on this platform.'));
         try {
             var e, t, n;
             await m.ZP.ensureModule('discord_desktop_overlay');
             let r = m.ZP.requireModule('discord_desktop_overlay');
             null == r || null === (e = r.init) || void 0 === e || e.call(r), r.setCaptureZoneCallback(U), r.setHostWindowCallbacks(M, P, k), r.setFocusCallback(G), null === (t = r.setFocusLostCallback) || void 0 === t || t.call(r, B), null === (n = r.setSuccessfullyShownCallback) || void 0 === n || n.call(r, Z), (N = r), x();
         } catch (e) {
-            throw (T.error('failed loading overlay module', e), e);
+            throw (b.error('failed loading overlay module', e), e);
         }
     }
     return () => (null == e && (e = t()), e);

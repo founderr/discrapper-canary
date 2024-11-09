@@ -12,7 +12,7 @@ var l = n(120356),
     s = n(481060),
     c = n(565138),
     u = n(252686),
-    d = n(581294);
+    d = n(115376);
 function h(e) {
     let { guild: t, show: n, active: l, onAnimationStart: h, onAnimationRest: p } = e,
         f = {},

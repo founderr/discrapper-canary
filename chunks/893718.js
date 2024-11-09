@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(906732),
     I = n(998698),
     S = n(271668),
-    b = n(404295),
-    T = n(326133),
+    T = n(404295),
+    b = n(326133),
     y = n(570220),
     A = n(28546),
     N = n(805680),
@@ -56,11 +56,11 @@ var r = n(200651),
     er = n(981631),
     ei = n(665692),
     ea = n(957825),
-    es = n(482133);
+    es = n(703130);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, eo, el, eu, ec, ed, ef, e_, eh, ep, em, eg, eE, ev;
-        let { textValue: eI, richValue: eS, className: eb, innerClassName: eT, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eG, onFocus: eB, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
+        let { textValue: eI, richValue: eS, className: eT, innerClassName: eb, editorClassName: ey, id: eA, required: eN, disabled: eC, placeholder: eR, accessibilityLabel: eO, channel: eD, type: eL, focused: ex, renderAttachButton: ew, renderApplicationCommandIcon: eM, pendingReply: eP, onChange: ek, onResize: eU, onBlur: eG, onFocus: eB, onKeyDown: eZ, onSubmit: eF, promptToUpload: eV, highlighted: ej, canMentionRoles: eH, canMentionChannels: eY, maxCharacterCount: eW, showRemainingCharsAfterCount: eK, allowNewLines: ez = !0, characterCountClassName: eq, 'aria-describedby': eQ, 'aria-labelledby': eX, setEditorRef: eJ, autoCompletePosition: e$, children: e0, disableThemedBackground: e1 = !1, emojiPickerCloseOnModalOuterClick: e2, parentModalKey: e3, onCommandSentinelTyped: e4 } = e;
         u()(null != eL, 'chat input type must be set');
         let { analyticsLocations: e6 } = (0, v.ZP)(E.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
@@ -73,7 +73,7 @@ t.Z = i.memo(
             e9 = i.useRef(null),
             te = i.useRef(null);
         null == eJ || eJ(e8.current);
-        let tt = (0, b.h9)(eD.id, 'ChannelTextAreaContainer'),
+        let tt = (0, T.h9)(eD.id, 'ChannelTextAreaContainer'),
             [tn, tr] = i.useState(!tt);
         (0, m.P)(e5, (e) => {
             let { width: t } = e;
@@ -170,7 +170,7 @@ t.Z = i.memo(
                     handler: a
                 });
         })(eL, tl);
-        let { eventEmitter: tS, handleEditorSelectionChanged: tb } = (function (e, t, n) {
+        let { eventEmitter: tS, handleEditorSelectionChanged: tT } = (function (e, t, n) {
                 let [r] = i.useState(() => new o.EventEmitter());
                 return (
                     i.useEffect(() => {
@@ -185,7 +185,7 @@ t.Z = i.memo(
                 );
             })(e8, eI, eS),
             {
-                submitting: tT,
+                submitting: tb,
                 submit: ty,
                 handleSubmit: tA
             } = (function (e, t, a, s) {
@@ -399,7 +399,7 @@ t.Z = i.memo(
             })(eL, tS, e8);
         (0, W.S)(tS, eD.guild_id, eD.id);
         let tj = null != eP,
-            tH = (tl && !((ts || to) && td)) || (tT && (null === (eo = eL.submit) || void 0 === eo ? void 0 : eo.useDisabledStylesOnSubmit)),
+            tH = (tl && !((ts || to) && td)) || (tb && (null === (eo = eL.submit) || void 0 === eo ? void 0 : eo.useDisabledStylesOnSubmit)),
             tY = null;
         null != ti ? (tY = null == eM ? void 0 : eM(ti, ta, es.attachButton)) : (!tl || tc) && (tY = null == ew ? void 0 : ew(tj, es.attachButton));
         let tW = t_ && null != eS && !tl && eL.showCharacterCount && null == ti,
@@ -439,7 +439,7 @@ t.Z = i.memo(
                           : null,
                     (0, r.jsxs)('div', {
                         ref: e5,
-                        className: s()(eb, {
+                        className: s()(eT, {
                             [es.channelTextArea]: !0,
                             [es.channelTextAreaDisabled]: tH,
                             [es.highlighted]: ej,
@@ -450,7 +450,7 @@ t.Z = i.memo(
                             (0, r.jsxs)('div', {
                                 ref: e9,
                                 onScroll: tw,
-                                className: s()(eT, {
+                                className: s()(eb, {
                                     [es.scrollableContainer]: !0,
                                     [es.themedBackground]: !e1,
                                     [es.hasStackedBar]: tq.stacked.length > 0
@@ -509,7 +509,7 @@ t.Z = i.memo(
                                                     onTab: tk,
                                                     onEnter: tU,
                                                     onMoveSelection: tG,
-                                                    onSelectionChanged: tb,
+                                                    onSelectionChanged: tT,
                                                     onMaybeShowAutocomplete: tC,
                                                     onHideAutocomplete: tR,
                                                     promptToUpload: eV,
@@ -546,7 +546,7 @@ t.Z = i.memo(
                                       channel: eD,
                                       canOnlyUseTextCommands: tj
                                   }),
-                            (0, r.jsx)(T.Z, {
+                            (0, r.jsx)(b.Z, {
                                 ref: tN,
                                 channel: eD,
                                 canMentionRoles: eH,

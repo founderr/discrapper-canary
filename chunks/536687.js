@@ -32,7 +32,7 @@ var r = n(200651),
     b = n(46140),
     D = n(981631),
     y = n(388032),
-    A = n(136880);
+    A = n(417575);
 function B(e) {
     var t;
     let { transitionState: n, onClose: i, quest: f, autoplay: B } = e,

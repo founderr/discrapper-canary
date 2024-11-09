@@ -1,23 +1,23 @@
-var i = t(200651);
-t(192379);
-var r = t(120356),
-    o = t.n(r),
-    a = t(772848),
-    l = t(718922);
-let c = (0, a.Z)();
-n.Z = (e) => {
-    let { open: n, className: t, withHighlight: r = !1 } = e;
-    return (0, i.jsxs)('svg', {
+var t = n(200651);
+n(192379);
+var o = n(120356),
+    r = n.n(o),
+    l = n(772848),
+    a = n(841261);
+let c = (0, l.Z)();
+i.Z = (e) => {
+    let { open: i, className: n, withHighlight: o = !1 } = e;
+    return (0, t.jsxs)('svg', {
         width: '18',
         height: '18',
-        className: o()(l.button, t, {
-            [l.open]: n,
-            [l.withHighlight]: r
+        className: r()(a.button, n, {
+            [a.open]: i,
+            [a.withHighlight]: o
         }),
         children: [
-            r &&
-                (0, i.jsx)('defs', {
-                    children: (0, i.jsxs)('linearGradient', {
+            o &&
+                (0, t.jsx)('defs', {
+                    children: (0, t.jsxs)('linearGradient', {
                         id: c,
                         x1: '0',
                         y1: '0',
@@ -25,29 +25,29 @@ n.Z = (e) => {
                         y2: '18',
                         gradientUnits: 'userSpaceOnUse',
                         children: [
-                            (0, i.jsx)('stop', {
+                            (0, t.jsx)('stop', {
                                 offset: '0',
                                 stopColor: '#B473F5'
                             }),
-                            (0, i.jsx)('stop', {
+                            (0, t.jsx)('stop', {
                                 offset: '1',
                                 stopColor: '#E292AA'
                             })
                         ]
                     })
                 }),
-            (0, i.jsxs)('g', {
+            (0, t.jsxs)('g', {
                 fill: 'none',
                 fillRule: 'evenodd',
                 children: [
-                    (0, i.jsx)('path', { d: 'M0 0h18v18H0' }),
-                    (0, i.jsx)('path', {
-                        stroke: r ? 'url(#'.concat(c, ')') : 'currentColor',
+                    (0, t.jsx)('path', { d: 'M0 0h18v18H0' }),
+                    (0, t.jsx)('path', {
+                        stroke: o ? 'url(#'.concat(c, ')') : 'currentColor',
                         d: 'M4.5 4.5l9 9',
                         strokeLinecap: 'round'
                     }),
-                    (0, i.jsx)('path', {
-                        stroke: r ? 'url(#'.concat(c, ')') : 'currentColor',
+                    (0, t.jsx)('path', {
+                        stroke: o ? 'url(#'.concat(c, ')') : 'currentColor',
                         d: 'M13.5 4.5l-9 9',
                         strokeLinecap: 'round'
                     })

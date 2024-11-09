@@ -1,63 +1,63 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return A;
     }
 });
-var i = t(200651);
+var a = t(200651);
 t(192379);
-var a = t(442837),
-    r = t(648052),
+var i = t(442837),
+    c = t(648052),
     o = t(530),
-    l = t(420654),
-    s = t(116854),
+    s = t(420654),
+    r = t(116854),
     d = t(271383),
-    c = t(246946),
+    l = t(246946),
     u = t(654904),
     f = t(228168),
-    p = t(653134);
-function m(e) {
+    p = t(451563);
+function A(e) {
     var n;
-    let { user: t, displayProfile: m, guild: g, pendingAvatar: _, pendingNickname: b, pendingGlobalName: h, pendingBio: x, pendingPronouns: C, isTryItOutFlow: v, hideBioSection: S } = e,
-        I = (0, a.e7)([d.ZP], () => (null == g ? null : d.ZP.getMember(g.id, t.id))),
-        j = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        T = null == m ? void 0 : null === (n = m.getPreviewBio(x)) || void 0 === n ? void 0 : n.value,
-        y = null != C ? C : null == m ? void 0 : m.pronouns,
-        E = (0, u.Ly)({
-            pendingNickname: b,
-            pendingGlobalName: h,
+    let { user: t, displayProfile: A, guild: b, pendingAvatar: m, pendingNickname: v, pendingGlobalName: Z, pendingBio: h, pendingPronouns: g, isTryItOutFlow: C, hideBioSection: E } = e,
+        P = (0, i.e7)([d.ZP], () => (null == b ? null : d.ZP.getMember(b.id, t.id))),
+        N = (0, i.e7)([l.Z], () => l.Z.hidePersonalInformation),
+        T = null == A ? void 0 : null === (n = A.getPreviewBio(h)) || void 0 === n ? void 0 : n.value,
+        R = null != g ? g : null == A ? void 0 : A.pronouns,
+        I = (0, u.Ly)({
+            pendingNickname: v,
+            pendingGlobalName: Z,
             user: t,
-            guildMember: I
+            guildMember: P
         });
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         inert: '',
         className: p.body,
         children: [
-            (0, i.jsx)(o.Z, {
+            (0, a.jsx)(o.Z, {
                 user: t,
                 profileType: f.y0.BITE_SIZE,
                 usernameIcon: (() => {
-                    if (!(null != I)) return;
-                    if (null !== _ && !!(null != I.avatar || null != _))
-                        return (0, i.jsx)(s.Z, {
+                    if (!(null != P)) return;
+                    if (null !== m && !!(null != P.avatar || null != m))
+                        return (0, a.jsx)(r.Z, {
                             user: t,
-                            nickname: E
+                            nickname: I
                         });
                 })(),
-                nickname: E,
-                pronouns: y,
-                isTryItOut: v,
-                tags: (0, i.jsx)(r.Z, {
-                    displayProfile: m,
+                nickname: I,
+                pronouns: R,
+                isTryItOut: C,
+                tags: (0, a.jsx)(c.Z, {
+                    displayProfile: A,
                     profileType: f.y0.BITE_SIZE
                 })
             }),
-            !S &&
+            !E &&
                 null != T &&
                 '' !== T &&
-                (0, i.jsx)(l.Z, {
+                (0, a.jsx)(s.Z, {
                     user: t,
                     bio: T,
-                    hidePersonalInformation: j,
+                    hidePersonalInformation: N,
                     viewFullBioDisabled: !0
                 })
         ]

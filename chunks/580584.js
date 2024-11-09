@@ -10,7 +10,7 @@ var a = n(332664),
     o = n(814249),
     i = n(531578),
     l = n(388032),
-    r = n(991442);
+    r = n(443241);
 let c = [
     {
         className: r.emojiThumbsUp,

@@ -26,7 +26,7 @@ var o = n(200651),
     C = n(667105),
     v = n(981631),
     j = n(388032),
-    _ = n(934293),
+    _ = n(24444),
     E = n(708901);
 function b(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: b } = e,

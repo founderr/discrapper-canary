@@ -15,8 +15,8 @@ var l = t(442837),
     u = t(533159),
     m = t(981631),
     x = t(388032),
-    h = t(775012),
-    f = t(191046);
+    h = t(213891),
+    f = t(566809);
 function p(e) {
     let { appId: n, skuId: t, transitionState: p, onClose: v, onHeaderTitleClick: _, children: j, footer: I } = e,
         N = (0, l.e7)(

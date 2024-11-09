@@ -26,19 +26,19 @@ t.Z = {
                     v = n.altBoundary,
                     I = n.flipVariations,
                     S = void 0 === I || I,
-                    b = n.allowedAutoPlacements,
-                    T = t.options.placement,
-                    y = (0, i.Z)(T) === T,
+                    T = n.allowedAutoPlacements,
+                    b = t.options.placement,
+                    y = (0, i.Z)(b) === b,
                     A =
                         p ||
                         (y || !S
-                            ? [(0, r.Z)(T)]
+                            ? [(0, r.Z)(b)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(T)),
-                    N = [T].concat(A).reduce(function (e, n) {
+                              })(b)),
+                    N = [b].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -47,7 +47,7 @@ t.Z = {
                                       rootBoundary: E,
                                       padding: m,
                                       flipVariations: S,
-                                      allowedAutoPlacements: b
+                                      allowedAutoPlacements: T
                                   })
                                 : n
                         );

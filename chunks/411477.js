@@ -1,38 +1,38 @@
-n.d(i, {
+n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var t = n(200651);
+var i = n(200651);
 n(192379);
 var o = n(120356),
-    r = n.n(o),
-    l = n(481060),
-    a = n(436774),
-    c = n(118012),
-    s = n(11623);
-function d(e) {
-    let { text: i, textSize: n = c.Z.Sizes.SIZE_12, textColor: o = c.Z.Colors.STANDARD, className: d, button: u, reducedRightPadding: g = !1 } = e;
-    return (0, t.jsxs)('div', {
-        className: r()(g ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, d),
+    a = n.n(o),
+    r = n(481060),
+    c = n(436774),
+    l = n(118012),
+    s = n(148393);
+function u(e) {
+    let { text: t, textSize: n = l.Z.Sizes.SIZE_12, textColor: o = l.Z.Colors.STANDARD, className: u, button: d, reducedRightPadding: b = !1 } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(b ? s.noticeWithoutRightPadding : s.noticeWithRightPadding, u),
         children: [
-            (0, t.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: s.noticeLeft,
                 children: [
-                    (0, t.jsx)(l.NitroWheelIcon, {
+                    (0, i.jsx)(r.NitroWheelIcon, {
                         size: 'md',
                         className: s.icon,
-                        color: a.JX.PREMIUM_TIER_2
+                        color: c.JX.PREMIUM_TIER_2
                     }),
-                    (0, t.jsx)(c.Z, {
+                    (0, i.jsx)(l.Z, {
                         className: s.text,
                         size: n,
                         color: o,
-                        children: i
+                        children: t
                     })
                 ]
             }),
-            u
+            d
         ]
     });
 }

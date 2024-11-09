@@ -7,7 +7,7 @@ var r = n(200651),
     i = n(120356),
     a = n.n(i),
     l = n(481060),
-    o = n(40305);
+    o = n(615934);
 function s(e) {
     let { className: t, onClick: n, ...i } = e,
         s = (0, r.jsx)(l.Clickable, {

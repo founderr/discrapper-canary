@@ -22,8 +22,8 @@ var r = n(288377),
     v = n(629053),
     I = n(890521),
     S = n(891873),
-    b = n(695848),
-    T = n(261978),
+    T = n(695848),
+    b = n(261978),
     y = n(917322),
     A = n(108901),
     N = n(591840),
@@ -67,14 +67,14 @@ function V(e) {
                     (isNaN(s) || isNaN(r) || r < s) && S(60);
                 }, e));
         }),
-        b = (0, B.iW)((e) => {
+        T = (0, B.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(a) || isNaN(r) || r > a) && b(60);
+                    (isNaN(a) || isNaN(r) || r > a) && T(60);
                 }, e));
         }),
-        T = (e) => {
+        b = (e) => {
             e.preventDefault();
         },
         { addGlobalListener: y, removeAllGlobalListeners: A } = (0, B.xi)();
@@ -121,7 +121,7 @@ function V(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                S(400), y(window, 'contextmenu', T);
+                S(400), y(window, 'contextmenu', b);
             },
             onPressEnd: () => {
                 g(), A();
@@ -131,7 +131,7 @@ function V(e) {
         },
         decrementButtonProps: {
             onPressStart: () => {
-                b(400), y(window, 'contextmenu', T);
+                T(400), y(window, 'contextmenu', b);
             },
             onPressEnd: () => {
                 g(), A();
@@ -161,8 +161,8 @@ F = {
     'ko-KR': v.Z,
     'lt-LT': I.Z,
     'lv-LV': S.Z,
-    'nb-NO': b.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': b.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

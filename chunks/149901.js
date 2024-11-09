@@ -22,8 +22,8 @@ var r = n(443704),
     v = n(112741),
     I = n(421607),
     S = n(595938),
-    b = n(154072),
-    T = n(999209),
+    T = n(154072),
+    b = n(999209),
     y = n(374705),
     A = n(868055),
     N = n(443507),
@@ -48,7 +48,7 @@ var r = n(443704),
 function Y(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: h, formatOptions: p, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: S, errorMessage: b, ...T } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: h, formatOptions: p, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: S, errorMessage: T, ...b } = e,
         { increment: y, incrementToMax: A, decrement: N, decrementToMin: C, numberValue: R, inputValue: O, commit: D, commitValidation: L } = t;
     let x = (0, V.qb)((r = H) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         w = (0, U.Me)(a),
@@ -119,7 +119,7 @@ function Y(e, t, n) {
             errorMessageProps: ef
         } = (0, F.h)(
             {
-                ...T,
+                ...b,
                 ...ei,
                 name: void 0,
                 label: h,
@@ -146,7 +146,7 @@ function Y(e, t, n) {
                 onKeyDown: (0, G.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: I,
                 description: S,
-                errorMessage: b
+                errorMessage: T
             },
             t,
             n
@@ -230,8 +230,8 @@ H = {
     'ko-KR': v.Z,
     'lt-LT': I.Z,
     'lv-LV': S.Z,
-    'nb-NO': b.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': b.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

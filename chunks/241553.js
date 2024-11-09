@@ -24,16 +24,16 @@ var r = n(200651),
     v = n(594174),
     I = n(965645),
     S = n(362061),
-    b = n(70956),
-    T = n(709054),
+    T = n(70956),
+    b = n(709054),
     y = n(51144),
     A = n(443603),
     N = n(981631),
     C = n(921944),
     R = n(474936),
     O = n(388032),
-    D = n(967850),
-    L = n(482133);
+    D = n(746734),
+    L = n(703130);
 let x = [
         {
             box: '#FFD89E',
@@ -95,7 +95,7 @@ let x = [
         }
     ],
     M = 1 / 300,
-    P = b.Z.Millis.DAYS_30,
+    P = T.Z.Millis.DAYS_30,
     k = (0, a.animated)(I.Z),
     U = (0, a.animated)(S.Z),
     G = (0, a.animated)(u.GiftIcon);
@@ -158,8 +158,8 @@ t.Z = i.memo(function (e) {
         [l, d] = i.useState(!1),
         I = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         S = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        b = null != S ? T.default.age(S.id) : 0,
-        x = !t && I && b >= P,
+        T = null != S ? b.default.age(S.id) : 0,
+        x = !t && I && T >= P,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);

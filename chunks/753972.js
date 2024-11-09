@@ -9,7 +9,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(768581),
     l = n(388032),
-    u = n(968749);
+    u = n(90043);
 function c(e) {
     let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
         h = i.useMemo(

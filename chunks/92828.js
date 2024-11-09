@@ -80,8 +80,8 @@ function _(e, t, n) {
             },
             linkBehavior: g
         }),
-        b = S.hasAction ? (0, r.ib)(i.props) : {},
-        T = (0, r.dG)(I, b, {
+        T = S.hasAction ? (0, r.ib)(i.props) : {},
+        b = (0, r.dG)(I, T, {
             role: 'row',
             onKeyDownCapture: (e) => {
                 if (!e.currentTarget.contains(e.target)) return;
@@ -127,9 +127,9 @@ function _(e, t, n) {
             id: d(t, i.key)
         });
     return (
-        f && (T['aria-rowindex'] = i.index + 1),
+        f && (b['aria-rowindex'] = i.index + 1),
         {
-            rowProps: T,
+            rowProps: b,
             gridCellProps: {
                 role: 'gridcell',
                 'aria-colindex': 1

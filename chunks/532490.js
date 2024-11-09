@@ -22,7 +22,7 @@ var n,
     C = l(856682),
     j = l(284019),
     p = l(388032),
-    N = l(399637);
+    N = l(906326);
 ((i = n || (n = {})).LEFT = 'left'), (i.RIGHT = 'right');
 t.Z = s.memo(function (e) {
     let { guildId: t, primaryColor: l, children: n, canSignCharter: i = !0, signed: r, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: S, signHintHelperText: y, signHintPosition: w = 'left', className: H, fullHeight: b, showDisclaimer: M } = e,

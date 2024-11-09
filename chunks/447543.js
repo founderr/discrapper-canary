@@ -24,8 +24,8 @@ var r = n(525654),
     v = n(305325),
     I = n(281956),
     S = n(931261),
-    b = n(15274),
-    T = n(924301),
+    T = n(15274),
+    b = n(924301),
     y = n(82085),
     A = n(264229),
     N = n(652898),
@@ -88,8 +88,8 @@ function er(e) {
             let a = w.Z.getChannel(t.id);
             return B.Z.can(q.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = M.ZP.getDefaultChannel(e, !0, q.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
-        b = f === q.d4z.GUILD_STAGE_VOICE,
-        T = q.Z5c.CHANNEL(t, g);
+        T = f === q.d4z.GUILD_STAGE_VOICE,
+        b = q.Z5c.CHANNEL(t, g);
     L.tx.has(f)
         ? (0, E.h)(() => {
               Promise.resolve()
@@ -97,8 +97,8 @@ function er(e) {
                   .then((e) => {
                       let { default: n } = e,
                           s = () => {
-                              if (b) {
-                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, O.uL)(T);
+                              if (T) {
+                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, O.uL)(b);
                                   return;
                               }
                               n.selectVoiceChannel(g),
@@ -128,7 +128,7 @@ function er(e) {
         })(
             r,
             i
-        )(T);
+        )(b);
 }
 let ei = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -146,7 +146,7 @@ let ei = function (e, t) {
                               if (null != t)
                                   (0, E.h)(() => {
                                       let e = { guildScheduledEventId: t.id };
-                                      null != n && (e.welcomeModalChannelId = n), (0, b.P3)(t, e);
+                                      null != n && (e.welcomeModalChannelId = n), (0, T.P3)(t, e);
                                   });
                           })(t),
                           !1)
@@ -162,7 +162,7 @@ let ei = function (e, t) {
     },
     ea = async (e) => {
         let { guild_id: t, channel_id: n } = e;
-        (0, T.xt)(e) && null != n ? ei(n) : await K.Z.transitionToGuildSync(t);
+        (0, b.xt)(e) && null != n ? ei(n) : await K.Z.transitionToGuildSync(t);
     };
 t.Z = {
     resolveInvite: function e(t, n, r) {
@@ -363,7 +363,7 @@ t.Z = {
                               invite: e.body,
                               code: f
                           });
-                          let i = T.ZP.getGuildScheduledEvent(u.guildScheduledEventId),
+                          let i = b.ZP.getGuildScheduledEvent(u.guildScheduledEventId),
                               a = {
                                   ...e.body,
                                   guild_scheduled_event: i

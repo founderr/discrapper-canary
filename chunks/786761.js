@@ -3,10 +3,10 @@ n.d(t, {
         return L;
     },
     e5: function () {
-        return b;
+        return T;
     },
     gx: function () {
-        return T;
+        return b;
     },
     lp: function () {
         return D;
@@ -54,9 +54,9 @@ function S(e) {
         codedLinks: e.type === v.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
     });
 }
-function b(e) {
-    var t, n, r, i, a, s, l, p, E, b;
-    let { reactions: T, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+function T(e) {
+    var t, n, r, i, a, s, l, p, E, T;
+    let { reactions: b, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         A = S(e),
         C = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         D = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
@@ -71,7 +71,7 @@ function b(e) {
         B = e.content;
     return (
         e.type === v.uaV.PREMIUM_REFERRAL && (B = ''),
-        (b = 0),
+        (T = 0),
         new c.ZP({
             ...e,
             ...A.toJS(),
@@ -96,7 +96,7 @@ function b(e) {
             referralTrialOfferId: G,
             call: N(e.call, A.timestamp),
             messageSnapshots: O(e),
-            reactions: R(null != T ? T : e.reactions, e.poll),
+            reactions: R(null != b ? b : e.reactions, e.poll),
             interaction: k,
             interactionData: null != y ? y : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
@@ -108,7 +108,7 @@ function b(e) {
         })
     );
 }
-function T(e, t) {
+function b(e, t) {
     return null != t.edited_timestamp
         ? {
               ...t,
@@ -122,7 +122,7 @@ function T(e, t) {
 }
 function y(e, t) {
     if (null != t.edited_timestamp)
-        return b(t, {
+        return T(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });

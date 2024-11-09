@@ -27,8 +27,8 @@ var r = n(200651),
     v = n(746916),
     I = n(965638),
     S = n(160404),
-    b = n(41776),
-    T = n(777861),
+    T = n(41776),
+    b = n(777861),
     y = n(565799),
     A = n(501655),
     N = n(517334),
@@ -48,8 +48,8 @@ var r = n(200651),
     Z = n(718582),
     F = n(981631),
     V = n(388032),
-    j = n(479315),
-    H = n(455491);
+    j = n(516126),
+    H = n(64056);
 function Y(e, t, n) {
     return 0 === t.length
         ? null
@@ -77,7 +77,7 @@ function W(e) {
               className: n,
               children: V.intl.string(V.t.fpKdS0)
           })
-        : (0, r.jsx)(T.Z, {
+        : (0, r.jsx)(b.Z, {
               muteConfig: t,
               className: n
           });
@@ -93,7 +93,7 @@ function K(e) {
             streamUsersToShow: v,
             embeddedActivitiesUsers: I,
             gameUsers: S,
-            shouldShowGameBadge: b
+            shouldShowGameBadge: T
         } = (function (e) {
             let t = e.id,
                 n = (0, u.Wu)(
@@ -167,7 +167,7 @@ function K(e) {
                     },
                     [t, c, o]
                 ),
-                b = (0, u.Wu)(
+                T = (0, u.Wu)(
                     [P.default],
                     () => {
                         let e = S.map((e) => P.default.getUser(e));
@@ -175,23 +175,23 @@ function K(e) {
                     },
                     [c, S]
                 ),
-                T = (0, u.Wu)([P.default], () => g.map((e) => P.default.getUser(e)), [g]),
+                b = (0, u.Wu)([P.default], () => g.map((e) => P.default.getUser(e)), [g]),
                 L = f.filter((e) => !g.includes(e.id) && !S.includes(e.id) && !I.includes(e.id)),
                 M = c ? (0, _.Qj)(L) : L,
-                G = T.filter((e) => null != e && !S.includes(e.id)),
-                B = p.length > 0 || L.length > 0 || G.length > 0 || b.length > 0;
+                G = b.filter((e) => null != e && !S.includes(e.id)),
+                B = p.length > 0 || L.length > 0 || G.length > 0 || T.length > 0;
             return {
                 voiceUsersToShow: M,
                 stageSpeakers: p,
                 numStageListeners: m,
                 streamUsersToShow: G,
-                embeddedActivitiesUsers: b,
+                embeddedActivitiesUsers: T,
                 gameUsers: E,
                 shouldShowGameBadge: v,
                 hasActivity: B
             };
         })(o),
-        T = Y(c.GameControllerIcon, S, p),
+        b = Y(c.GameControllerIcon, S, p),
         L = Y(c.VoiceNormalIcon, m, p);
     let G =
             ((t = p),
@@ -240,13 +240,13 @@ function K(e) {
             [p]
         );
     return (
-        null != T && U.ZP.trackExposure({ location: 'Guild Tooltip' }),
+        null != b && U.ZP.trackExposure({ location: 'Guild Tooltip' }),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 G,
                 L,
                 B,
-                b && T,
+                T && b,
                 Z,
                 V
                     ? (0, r.jsx)(W, {
@@ -333,8 +333,8 @@ function Q(e) {
         d = (0, G.o)('guilds_bar', !1),
         [f, _] = i.useState(!1),
         h = (0, Z.V1)(t),
-        { isUserLurking: p, isUnverifiedAccount: m } = (0, u.cj)([b.Z, L.Z], () => {
-            let e = b.Z.isLurking(t.id);
+        { isUserLurking: p, isUnverifiedAccount: m } = (0, u.cj)([T.Z, L.Z], () => {
+            let e = T.Z.isLurking(t.id);
             return {
                 isUserLurking: e,
                 isUnverifiedAccount: !L.Z.getCheck(t.id).canChat

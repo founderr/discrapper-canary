@@ -4,17 +4,17 @@ var r = n(200651),
     s = n.n(a),
     o = n(568611),
     l = n(481060),
-    u = n(559171);
+    u = n(440718);
 let c = i.forwardRef(function (e, t) {
     var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: h, muted: p, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: S, focusProps: b, ...T } = e;
-    (T.className = s()(T.className, u.container, {
+    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: h, muted: p, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: S, focusProps: T, ...b } = e;
+    (b.className = s()(b.className, u.container, {
         [u.selected]: h,
         [u.highlighted]: S,
         [null != E ? E : '']: h,
         [u.clickable]: !h && (null != m || null != _)
     })),
-        (T['aria-selected'] = null !== (n = T['aria-selected']) && void 0 !== n ? n : h);
+        (b['aria-selected'] = null !== (n = b['aria-selected']) && void 0 !== n ? n : h);
     let y = (0, r.jsxs)('div', {
         className: s()(v, u.layout, {
             [u.muted]: !h && p,
@@ -56,11 +56,11 @@ let c = i.forwardRef(function (e, t) {
     });
     return null != m
         ? (0, r.jsx)(l.FocusRing, {
-              ...b,
+              ...T,
               children: (0, r.jsx)(o.rU, {
                   to: m,
                   onClick: _,
-                  ...T,
+                  ...b,
                   role: 'listitem',
                   ref: t,
                   children: y
@@ -69,16 +69,16 @@ let c = i.forwardRef(function (e, t) {
         : null != _
           ? (0, r.jsx)(l.Clickable, {
                 onClick: _,
-                focusProps: b,
-                ...T,
+                focusProps: T,
+                ...b,
                 role: 'listitem',
                 innerRef: t,
                 children: y
             })
           : (0, r.jsx)(l.FocusRing, {
-                ...b,
+                ...T,
                 children: (0, r.jsx)('div', {
-                    ...T,
+                    ...b,
                     role: 'listitem',
                     ref: t,
                     children: y

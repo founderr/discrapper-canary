@@ -25,7 +25,7 @@ var l = n(512722),
     I = n(997614),
     E = n(159909),
     b = n(981631),
-    N = n(141373);
+    N = n(307410);
 function Z(e) {
     let { channel: t, hasActiveStream: n, themeable: l = !1 } = e,
         Z = (0, r.e7)([m.default], () => {

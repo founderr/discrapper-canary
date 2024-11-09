@@ -13,7 +13,7 @@ var r = t(481060),
     o = t(377171),
     u = t(981631),
     a = t(388032),
-    s = t(503880);
+    s = t(405013);
 function c(e) {
     let { label: n, backgroundColor: t = o.Z.BUTTON_SECONDARY_BACKGROUND, icon: l, iconColor: u } = e;
     return (0, i.jsxs)('div', {

@@ -24,7 +24,7 @@ var i = n(200651),
     A = n(145807),
     b = n(56744),
     j = n(981631),
-    Z = n(596756);
+    Z = n(916315);
 t.Z = r.memo(function (e) {
     var t, n;
     let { message: r, compact: l = !1, className: R, onContextMenu: L, onClick: P, hideSimpleEmbedContent: y = !0, channel: O, isGroupStart: M, animateAvatar: k, subscribeToComponentDispatch: D, renderThreadAccessory: B, trackAnnouncementViews: U = !1, ...w } = e,

@@ -18,8 +18,8 @@ var r,
     v = n(973542),
     I = n(889564),
     S = n(687476),
-    b = n(978519),
-    T = n(706454),
+    T = n(978519),
+    b = n(706454),
     y = n(581883),
     A = n(271383),
     N = n(93093),
@@ -364,7 +364,7 @@ function ep(e, t) {
     if ((e_(e), eu.clear(e), null == t)) return;
     let n = O.default.getCurrentUser();
     if (null == n) return;
-    let r = (0, b.r)(e);
+    let r = (0, T.r)(e);
     et[e] = new Q(e, n.id, t, r);
 }
 function em() {
@@ -430,7 +430,7 @@ function ev(e) {
 }
 class eI extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(h.Z, N.Z, A.ZP, C.Z, T.default, S.Z, Z.Z, O.default, E.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([y.Z], em), this.syncWith([E.Z], eg);
+        this.waitFor(h.Z, N.Z, A.ZP, C.Z, b.default, S.Z, Z.Z, O.default, E.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([y.Z], em), this.syncWith([E.Z], eg);
     }
     getState() {
         return q;
@@ -650,7 +650,7 @@ W(eI, 'displayName', 'EmojiStore'),
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            if ((g.Z.setEmojiLocale(T.default.locale), t !== Y.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+            if ((g.Z.setEmojiLocale(b.default.locale), t !== Y.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
             (q.pendingUsages = []), (q.emojiReactionPendingUsages = []);
         },
         GUILD_ROLE_CREATE: ev,

@@ -223,17 +223,17 @@ function I(e, t = {}) {
 function S(e) {
     if (
         (function () {
-            if (null == b) {
-                b = !1;
+            if (null == T) {
+                T = !1;
                 try {
                     document.createElement('div').focus({
                         get preventScroll() {
-                            return (b = !0), !0;
+                            return (T = !0), !0;
                         }
                     });
                 } catch (e) {}
             }
-            return b;
+            return T;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -263,8 +263,8 @@ function S(e) {
             })(t);
     }
 }
-let b = null;
-function T(e) {
+let T = null;
+function b(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -289,14 +289,14 @@ function O() {
 }
 function D() {
     return (
-        T(/AppleWebKit/i) &&
+        b(/AppleWebKit/i) &&
         !(function () {
-            return T(/Chrome/i);
+            return b(/Chrome/i);
         })()
     );
 }
 function L() {
-    return T(/Android/i);
+    return b(/Android/i);
 }
 let x = (0, r.createContext)({
     isNative: !0,
@@ -320,7 +320,7 @@ function M(e, t) {
 function P(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-    T(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
+    b(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
     let u =
         D() && A() && !C()
             ? new KeyboardEvent('keydown', {

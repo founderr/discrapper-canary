@@ -31,9 +31,9 @@ var r = n(200651),
     E = n(534828),
     v = n(981631),
     I = n(388032),
-    S = n(547870);
-let b = () => Promise.resolve();
-function T(e) {
+    S = n(397375);
+let T = () => Promise.resolve();
+function b(e) {
     let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: c = {}, onClick: d, 'aria-label': _ } = e,
         p = (0, o.JA)('color-'.concat(t)),
         g = null != t ? (0, u.Rf)(t) : c.backgroundColor,
@@ -88,7 +88,7 @@ function T(e) {
 class y extends i.PureComponent {
     render() {
         let { color: e, onChange: t, value: n, disabled: i } = this.props;
-        return (0, r.jsx)(T, {
+        return (0, r.jsx)(b, {
             isDefault: !0,
             color: e,
             isSelected: e === n || 0 === n,
@@ -100,7 +100,7 @@ class y extends i.PureComponent {
 class A extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, 'aria-label': i } = this.props;
-        return (0, r.jsx)(T, {
+        return (0, r.jsx)(b, {
             isCustom: !0,
             color: e,
             isSelected: t === e,
@@ -110,7 +110,7 @@ class A extends i.PureComponent {
     }
 }
 let N = i.memo(function (e) {
-    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: b, className: T } = e,
+    let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: f, footer: m, showEyeDropper: v, wrapperComponentType: T, className: b } = e,
         y = (0, p.Z)(),
         A = (function (e) {
             if (null == e) return null;
@@ -235,10 +235,10 @@ let N = i.memo(function (e) {
                 m
             ]
         }),
-        k = null != b ? b : d.V;
+        k = null != T ? T : d.V;
     return (0, r.jsx)(k, {
         'aria-label': I.intl.string(I.t.WTqQ5e),
-        className: s()(S.customColorPicker, T),
+        className: s()(S.customColorPicker, b),
         children: P
     });
 });
@@ -249,7 +249,7 @@ function C(e) {
                 className: S.colorPickerRow,
                 children: e.map((e) =>
                     (0, r.jsx)(
-                        T,
+                        b,
                         {
                             color: e,
                             isSelected: e === u,
@@ -265,8 +265,8 @@ function C(e) {
         E = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: b,
-            scrollToEnd: b
+            scrollToStart: T,
+            scrollToEnd: T
         });
     return (0, r.jsx)(o.bG, {
         navigator: E,

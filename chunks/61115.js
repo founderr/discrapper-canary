@@ -4,7 +4,7 @@ n.r(t),
             return I;
         },
         openQuestSurveyModal: function () {
-            return b;
+            return T;
         }
     }),
     n(47120);
@@ -23,13 +23,13 @@ var r,
     p = n(569984),
     m = n(981631),
     g = n(388032),
-    E = n(949561),
+    E = n(950542),
     v = n(677486);
 function I(e) {
     let { questId: t, survey: n, transitionState: r, onClose: i, onSubmit: o } = e,
         l = (0, h.B4)(t),
         [_, p] = s.useState(0),
-        [I, b] = (0, c.useSpring)(() => ({
+        [I, T] = (0, c.useSpring)(() => ({
             from: { width: '0%' },
             config: { duration: 2500 }
         })),
@@ -38,16 +38,16 @@ function I(e) {
                 p(1),
                 null != l &&
                     f.default.track(m.rMx.QUEST_SURVEY_SUBMITTED, {
-                        ...T(l, n),
+                        ...b(l, n),
                         choice: e
                     });
         },
         A = async (e) => {
-            1 === e && (await b({ width: '100%' }), i());
+            1 === e && (await T({ width: '100%' }), i());
         };
     return (
         s.useEffect(() => {
-            null != l && f.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, T(l, n));
+            null != l && f.default.track(m.rMx.QUEST_SURVEY_DISPLAYED, b(l, n));
         }, []),
         null == l && i(),
         (0, a.jsx)(c.ModalRoot, {
@@ -160,7 +160,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let t = !1;
     (0, c.openModalLazy)(
         async () => {
@@ -179,14 +179,14 @@ function b(e) {
                 let n = p.Z.getQuest(e.questId);
                 null != n &&
                     f.default.track(m.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...T(n, e.survey),
+                        ...b(n, e.survey),
                         submitted: t
                     });
             }
         }
     );
 }
-function T(e, t) {
+function b(e, t) {
     return {
         quest_id: e.id,
         quest_status: (0, _.uk)(e),

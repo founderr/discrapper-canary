@@ -37,7 +37,7 @@ let a = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     v = r(g, E, '*'),
     I = r(/[A-Z]/, E, '*'),
     S = ['autoclosure', r(/convention\(/, i('swift', 'block', 'c'), /\)/), 'discardableResult', 'dynamicCallable', 'dynamicMemberLookup', 'escaping', 'frozen', 'GKInspectable', 'IBAction', 'IBDesignable', 'IBInspectable', 'IBOutlet', 'IBSegueAction', 'inlinable', 'main', 'nonobjc', 'NSApplicationMain', 'NSCopying', 'NSManaged', r(/objc\(/, v, /\)/), 'objc', 'objcMembers', 'propertyWrapper', 'requires_stored_property_inits', 'resultBuilder', 'testable', 'UIApplicationMain', 'unknown', 'usableFromInline'],
-    b = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
+    T = ['iOS', 'iOSApplicationExtension', 'macOS', 'macOSApplicationExtension', 'macCatalyst', 'macCatalystApplicationExtension', 'watchOS', 'watchOSApplicationExtension', 'tvOS', 'tvOSApplicationExtension', 'swift'];
 e.exports = function (e) {
     let t = {
             match: /\s+/,
@@ -45,7 +45,7 @@ e.exports = function (e) {
         },
         h = e.COMMENT('/\\*', '\\*/', { contains: ['self'] }),
         g = [e.C_LINE_COMMENT_MODE, h],
-        T = {
+        b = {
             match: [/\./, i(...s, ...o)],
             className: { 2: 'keyword' }
         },
@@ -73,7 +73,7 @@ e.exports = function (e) {
             keyword: A.concat(f),
             literal: c
         },
-        R = [T, y, N],
+        R = [b, y, N],
         O = {
             match: r(/\./, i(..._)),
             relevance: 0
@@ -152,7 +152,7 @@ e.exports = function (e) {
                     {
                         begin: /\(/,
                         end: /\)/,
-                        keywords: b,
+                        keywords: T,
                         contains: [...x, P, F]
                     }
                 ]

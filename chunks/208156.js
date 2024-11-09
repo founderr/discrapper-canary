@@ -23,16 +23,16 @@ var r = n(200651),
     p = n(953101),
     m = n(701488),
     g = n(981631),
-    E = n(835296);
+    E = n(336259);
 function v(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: E, queryParams: v, allowPopups: I = !1, referrerPolicy: S = 'origin' } = e,
-        b = (0, u.e7)([c.Z], () => c.Z.getWindow(g.KJ3.CHANNEL_CALL_POPOUT)),
-        T = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
+        T = (0, u.e7)([c.Z], () => c.Z.getWindow(g.KJ3.CHANNEL_CALL_POPOUT)),
+        b = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         y = i.useRef(null),
-        A = (0, h.Z)(y, E, null == b ? window : b),
+        A = (0, h.Z)(y, E, null == T ? window : T),
         N = {
             ...v,
-            frame_id: T,
+            frame_id: b,
             platform: m.S4.DESKTOP
         },
         [C, R] = i.useState(!1),
@@ -42,12 +42,12 @@ function v(e) {
         O === g.BRd.LIGHT ? (D.colorScheme = 'light') : (D.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                _.S.dispatch(g.CkL.IFRAME_MOUNT, { id: T }),
+                _.S.dispatch(g.CkL.IFRAME_MOUNT, { id: b }),
                 () => {
-                    _.S.dispatch(g.CkL.IFRAME_UNMOUNT, { id: T });
+                    _.S.dispatch(g.CkL.IFRAME_UNMOUNT, { id: b });
                 }
             ),
-            [T]
+            [b]
         ),
         i.useEffect(() => {
             let e = (e) => {

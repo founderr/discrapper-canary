@@ -9,7 +9,7 @@ var s = e(481060),
     l = e(313201),
     o = e(192635),
     r = e(388032),
-    a = e(322683);
+    a = e(169528);
 function c(t) {
     let { transitionState: n, Icon: e, title: c, body: u, onClose: d } = t,
         g = (0, l.Dt)();

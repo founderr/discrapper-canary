@@ -15,7 +15,7 @@ var i = n(120356),
     p = n(74538),
     m = n(204418),
     g = n(388032),
-    E = n(120187);
+    E = n(256985);
 let v = [
         {
             avatarSize: l.AvatarSizes.SIZE_40,
@@ -96,13 +96,13 @@ let v = [
 t.Z = (e) => {
     let { user: t, guildId: n, avatarDecorationOverride: i, className: f } = e,
         h = (0, o.e7)([_.Z], () => _.Z.getStatus(t.id)),
-        { product: S, purchase: b } = (0, c.Z)(null == i ? void 0 : i.skuId),
-        T = p.ZP.canUseCollectibles(t),
-        y = (0, u.qS)(b),
+        { product: S, purchase: T } = (0, c.Z)(null == i ? void 0 : i.skuId),
+        b = p.ZP.canUseCollectibles(t),
+        y = (0, u.qS)(T),
         A = (0, u.G1)(S),
-        N = !T && y,
-        C = (0, d.Mu)('ProfileEffectDescription', !A || T);
-    return null != S && (null == b || N)
+        N = !b && y,
+        C = (0, d.Mu)('ProfileEffectDescription', !A || b);
+    return null != S && (null == T || N)
         ? (0, r.jsxs)('div', {
               className: a()(E.modalPreview, E.shopPreviewContainer, f),
               children: [
@@ -125,7 +125,7 @@ t.Z = (e) => {
                               variant: 'text-sm/normal',
                               children: N
                                   ? g.intl.string(g.t.zrBmQE)
-                                  : (0, s.EQ)([A, T, C])
+                                  : (0, s.EQ)([A, b, C])
                                         .with([!0, !0, !1], () => g.intl.string(g.t.L5hyz8))
                                         .with([!0, !1, !0], () => g.intl.string(g.t.q0PlFh))
                                         .with([!0, !1, !1], () => g.intl.string(g.t.ucqOV1))
@@ -172,7 +172,7 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  null != b && (0, r.jsx)(I, { purchase: b })
+                  null != T && (0, r.jsx)(I, { purchase: T })
               ]
           });
 };

@@ -1,9 +1,9 @@
 n.d(t, {
     B6: function () {
-        return b;
+        return T;
     },
     qc: function () {
-        return T;
+        return b;
     },
     sp: function () {
         return S;
@@ -73,10 +73,10 @@ function S(e, t) {
         }
     );
 }
-async function b(e) {
+async function T(e) {
     return await c.Z.getEmojiColors(e);
 }
-function T(e) {
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
         { id: n, name: r, animated: i } = e;
     return null != n

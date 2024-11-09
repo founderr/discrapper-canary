@@ -107,11 +107,11 @@ async function S(e) {
             );
         }
 }
-function b() {
+function T() {
     I();
 }
-function T() {
-    v(), (h = new Map()), (p = new Set()), (m = new Map()), b();
+function b() {
+    v(), (h = new Map()), (p = new Set()), (m = new Map()), T();
 }
 class y extends a.Z {
     fetchLeaderboard(e) {
@@ -123,11 +123,11 @@ class y extends a.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: T,
-                CONNECTION_CLOSED: b,
-                WINDOW_FOCUS: b,
-                IDLE: b,
-                CHANNEL_SELECT: b
+                POST_CONNECTION_OPEN: b,
+                CONNECTION_CLOSED: T,
+                WINDOW_FOCUS: T,
+                IDLE: T,
+                CHANNEL_SELECT: T
             }),
             n in t
                 ? Object.defineProperty(t, n, {

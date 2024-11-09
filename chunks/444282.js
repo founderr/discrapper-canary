@@ -17,15 +17,15 @@ var r = n(200651),
     _ = n(859235),
     h = n(898463),
     p = n(981631),
-    m = n(465126),
+    m = n(52522),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = i.useRef(null),
         [v, I] = i.useState(!1),
         S = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        b = i.useRef(null),
-        T = i.useCallback(() => {
+        T = i.useRef(null),
+        b = i.useCallback(() => {
             I(!0);
         }, []),
         y = i.useCallback(() => {
@@ -50,14 +50,14 @@ function E(e) {
             [t, n]
         );
     return (i.useEffect(() => {
-        let e = b.current;
+        let e = T.current;
         return (
-            null == S && (null == e || e.addEventListener('dragover', T, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == S && (null == e || e.addEventListener('dragover', b, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', T, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
+                null == e || e.removeEventListener('dragover', b, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
             }
         );
-    }, [S, T, y, A]),
+    }, [S, b, y, A]),
     null != S)
         ? (0, r.jsx)(h.Z, {
               channelId: t,
@@ -93,7 +93,7 @@ function E(e) {
               },
               className: s()(m.emptyOption, { [m.emptyOptionActive]: v }),
               draftType: d.d.SlashCommand,
-              ref: b,
+              ref: T,
               children: [
                   (0, r.jsx)('span', {
                       className: s()(m.optionName, { [m.optionNameActive]: v }),

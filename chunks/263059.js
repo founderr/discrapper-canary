@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(510659),
     I = n(287954),
     S = n(660579),
-    b = n(502762),
-    T = n(652853),
+    T = n(502762),
+    b = n(652853),
     y = n(64621),
     A = n(448980),
     N = n(194811),
@@ -34,12 +34,12 @@ var r = n(200651),
     L = n(666984),
     x = n(290274),
     w = n(228168),
-    M = n(617114),
-    P = n(69035);
+    M = n(727747),
+    P = n(676411);
 function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
-        { profileType: V } = (0, T.z)(),
+        { profileType: V } = (0, b.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Bq)({
@@ -151,7 +151,7 @@ function k(e) {
                         sourceDetails: (0, E.Z)(k),
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(b.Z.Overlay, {
+                            (0, r.jsx)(T.Z.Overlay, {
                                 className: s()(P.card, B, { [P.hoisted]: er }),
                                 ref: X,
                                 children: (0, r.jsxs)(S.Z, {

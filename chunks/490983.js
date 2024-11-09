@@ -18,8 +18,8 @@ var r,
     v = n(757266),
     I = n(77498),
     S = n(283595),
-    b = n(246946),
-    T = n(230307),
+    T = n(246946),
+    b = n(230307),
     y = n(799777),
     A = n(417363),
     N = n(941128),
@@ -60,7 +60,7 @@ let F = {
     }),
     W = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
 function K(e, t) {
-    let n = T.Z.getCurrentUserStatisticsForApplication(e.id);
+    let n = b.Z.getCurrentUserStatisticsForApplication(e.id);
     if (null != n) return new Date(n.last_played_at).getTime();
     let r = t[e.id];
     return null != r ? r : 0;
@@ -100,7 +100,7 @@ function z() {
                             branchId: e.branchId
                         }),
                         isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
-                        shouldShowInLibrary: (0, D.d0)(o, e, b.Z),
+                        shouldShowInLibrary: (0, D.d0)(o, e, T.Z),
                         defaultAction: (0, M.i)(e, A.Z, N.Z)
                     };
                 })(r, n, t, e, !0)
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = _.ZP.Store) {
     initialize() {
-        this.syncWith([p.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, S.Z, T.Z, b.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
+        this.syncWith([p.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, S.Z, b.Z, T.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
     }
     get applicationFilterQuery() {
         return G;

@@ -16,8 +16,8 @@ var r = n(200651),
     E = n(921944),
     v = n(474936),
     I = n(388032),
-    S = n(429264);
-function b(e) {
+    S = n(458965);
+function T(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(o.Clickable, {
         'aria-label': I.intl.string(I.t.WAI6xs),
@@ -30,7 +30,7 @@ function b(e) {
         })
     });
 }
-function T(e) {
+function b(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: s } = (0, l.ZP)();
     return (0, r.jsxs)('div', {
@@ -110,8 +110,8 @@ t.Z = function (e) {
                             children: I.intl.string(I.t.EIYbj4)
                         })
                     }),
-                    s = (0, r.jsx)(b, { onClose: () => c(E.L.USER_DISMISS) }),
-                    l = (0, r.jsx)(T, {
+                    s = (0, r.jsx)(T, { onClose: () => c(E.L.USER_DISMISS) }),
+                    l = (0, r.jsx)(b, {
                         isPremiumUser: t,
                         onInteraction: n,
                         tiny: u

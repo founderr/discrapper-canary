@@ -16,17 +16,17 @@ e.exports = function (e, t, n, p, m, g) {
         I = E ? f : o(e),
         S = v ? f : o(t);
     (I = I == d ? _ : I), (S = S == d ? _ : S);
-    var b = I == _,
-        T = S == _,
+    var T = I == _,
+        b = S == _,
         y = I == S;
     if (y && u(e)) {
         if (!u(t)) return !1;
-        (E = !0), (b = !1);
+        (E = !0), (T = !1);
     }
-    if (y && !b) return g || (g = new r()), E || c(e) ? i(e, t, n, p, m, g) : a(e, t, I, n, p, m, g);
+    if (y && !T) return g || (g = new r()), E || c(e) ? i(e, t, n, p, m, g) : a(e, t, I, n, p, m, g);
     if (!(1 & n)) {
-        var A = b && h.call(e, '__wrapped__'),
-            N = T && h.call(t, '__wrapped__');
+        var A = T && h.call(e, '__wrapped__'),
+            N = b && h.call(t, '__wrapped__');
         if (A || N) {
             var C = A ? e.value() : e,
                 R = N ? t.value() : t;

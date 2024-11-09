@@ -9,24 +9,24 @@ var r = n(200651),
     d = n(484459),
     f = n(695346),
     _ = n(981631),
-    h = n(520696);
+    h = n(67996);
 t.Z = function (e) {
     let { style: t, src: n, backgroundSrc: p, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
         I = null != p ? p : n,
         S = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        b = (0, l.c)(!0, 'VideoBackground-web').enabled,
-        T = (0, c.ZP)(null != m ? m : _.lds),
+        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        b = (0, c.ZP)(null != m ? m : _.lds),
         y =
-            null == T
+            null == b
                 ? void 0
-                : T.getBannerURL({
+                : b.getBannerURL({
                       size: 1024,
                       canAnimate: f.QK.getSetting()
                   });
     if (
         (i.useEffect(() => {
-            null != m && b && (0, d.Z)(m, void 0, { dispatchWait: !0 });
-        }, [b, m]),
+            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [T, m]),
         null == n)
     )
         return null;
@@ -40,7 +40,7 @@ t.Z = function (e) {
             backgroundColor: S
         };
     return (
-        null != y && E && b && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
+        null != y && E && T && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
             style: N,
             className: h.background,

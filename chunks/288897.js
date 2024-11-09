@@ -16,9 +16,9 @@ var r = n(200651),
     g = n(135223),
     E = n(704875),
     v = n(653309),
-    I = n(658841),
-    S = n(882530);
-function b(e, t, n) {
+    I = n(930762),
+    S = n(554034);
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function b(e, t, n) {
         e
     );
 }
-class T extends i.PureComponent {
+class b extends i.PureComponent {
     componentDidMount() {
         this.props.editor.events.addListener('onChange', this.handleOnChange);
     }
@@ -319,8 +319,8 @@ class T extends i.PureComponent {
     }
     constructor(e) {
         super(e),
-            b(this, 'containerRef', i.createRef()),
-            b(this, 'state', void 0),
+            T(this, 'containerRef', i.createRef()),
+            T(this, 'state', void 0),
             (this.decorate = this.decorate.bind(this)),
             (this.renderElement = this.renderElement.bind(this)),
             (this.renderLeaf = this.renderLeaf.bind(this)),
@@ -345,4 +345,4 @@ class T extends i.PureComponent {
                   });
     }
 }
-t.Z = T;
+t.Z = b;

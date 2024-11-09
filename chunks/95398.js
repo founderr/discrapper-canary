@@ -16,7 +16,7 @@ var r,
     f = n(169525),
     _ = n(823379),
     h = n(388032),
-    p = n(760585);
+    p = n(705418);
 function m(e, t, n) {
     return (
         t in e
@@ -104,7 +104,7 @@ let g = (e) => {
               });
     },
     S = o.createContext(!1);
-class b extends (i = o.PureComponent) {
+class T extends (i = o.PureComponent) {
     renderWithTooltip(e) {
         return (0, s.jsx)(d.Tooltip, {
             position: 'left',
@@ -331,4 +331,4 @@ class b extends (i = o.PureComponent) {
             });
     }
 }
-m(b, 'Types', r), m(b, 'Reasons', f.wk), (t.Z = b);
+m(T, 'Types', r), m(T, 'Reasons', f.wk), (t.Z = T);

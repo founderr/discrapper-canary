@@ -25,7 +25,7 @@ n.d(t, {
         return I;
     },
     ov: function () {
-        return T;
+        return b;
     },
     pK: function () {
         return p;
@@ -93,7 +93,7 @@ function S(e, t) {
     let i = (0, u.Lk)(t, 0);
     return i > 0 ? r[i % 5] : null != e ? r[a()(e).shiftRight(22).mod(r.length).toJSNumber()] : r[0];
 }
-function b(e) {
+function T(e) {
     let { id: t, avatar: n, discriminator: i, bot: a } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.IXf,
@@ -113,12 +113,12 @@ function b(e) {
         format: l
     });
 }
-function T(e) {
+function b(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : f.IXf,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-    return null !== (t = b(e, n, r, i)) && void 0 !== t ? t : S(e.id, e.discriminator, e.isProvisional);
+    return null !== (t = T(e, n, r, i)) && void 0 !== t ? t : S(e.id, e.discriminator, e.isProvisional);
 }
 function y(e) {
     let t,
@@ -233,7 +233,7 @@ function M(e) {
 function P(e) {
     let { id: t, icon: n, size: r = f.IXf, bot: i, botIconFirst: a, fallbackAvatar: s = !0 } = e;
     if (null != i && a) {
-        let e = b(i, !1, r);
+        let e = T(i, !1, r);
         if (null != e) return e;
     }
     if (null != n)
@@ -246,7 +246,7 @@ function P(e) {
             canAnimate: !1
         });
     if (null != i) {
-        let e = b(i, !1, r);
+        let e = T(i, !1, r);
         if (null != e) return e;
     }
     if (s) return h;
@@ -324,7 +324,7 @@ function V(e) {
     return 'number' == typeof e ? e : { uri: null != e ? e : void 0 };
 }
 t.ZP = {
-    getUserAvatarURL: T,
+    getUserAvatarURL: b,
     getDefaultAvatarURL: S,
     getGuildMemberAvatarURL: A,
     getGuildMemberAvatarURLSimple: y,
@@ -340,7 +340,7 @@ t.ZP = {
         return B(null == e ? void 0 : e.icon);
     },
     isAnimatedIconHash: B,
-    getUserAvatarSource: (e, t, n) => V(T(e, t, n)),
+    getUserAvatarSource: (e, t, n) => V(b(e, t, n)),
     getGuildIconURL: w,
     getGuildSplashURL: O,
     getGuildSplashSource: function (e) {

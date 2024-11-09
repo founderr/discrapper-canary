@@ -7,7 +7,7 @@ var i = n(200651);
 n(192379);
 var l = n(120356),
     a = n.n(l),
-    r = n(561220);
+    r = n(244119);
 function s(e) {
     let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
     return (0, i.jsxs)('div', {

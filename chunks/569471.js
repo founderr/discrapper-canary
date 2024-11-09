@@ -42,7 +42,7 @@ function I(e) {
         !0 === t.muted
             ? ((m = new Set(m)).add(e),
               p.setTimer(e, t.muteConfig, () => {
-                  (h[e].muted = !1), (m = new Set(m)).delete(e), T.emitChange();
+                  (h[e].muted = !1), (m = new Set(m)).delete(e), b.emitChange();
               }) && ((h[e].muted = !1), (m = new Set(m)).delete(e)))
             : (m = new Set(m)).delete(e);
 }
@@ -62,7 +62,7 @@ function S(e) {
                 I(e.id);
         });
 }
-class b extends (r = u.ZP.Store) {
+class T extends (r = u.ZP.Store) {
     hasJoined(e) {
         return e in h;
     }
@@ -89,7 +89,7 @@ class b extends (r = u.ZP.Store) {
     }
 }
 (s = 'JoinedThreadsStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -97,7 +97,7 @@ class b extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let T = new b(c.Z, {
+let b = new T(c.Z, {
     CONNECTION_OPEN: function (e) {
         p.reset(),
             (m = new Set()),
@@ -188,4 +188,4 @@ let T = new b(c.Z, {
         );
     }
 });
-t.Z = T;
+t.Z = b;

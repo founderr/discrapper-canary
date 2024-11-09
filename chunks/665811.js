@@ -8,7 +8,7 @@ n(192379);
 var l = n(481060),
     a = n(542094),
     r = n(388032),
-    o = n(887477);
+    o = n(87694);
 function s(e) {
     let { action: t, onClick: n } = e,
         s = t === a.JS.JOIN ? r.intl.string(r.t['4i2vj4']) : r.intl.string(r.t['R/FK4O']),

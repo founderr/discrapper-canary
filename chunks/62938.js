@@ -15,7 +15,7 @@ var i = n(200651),
     f = n(490610),
     _ = n(322665),
     E = n(388032),
-    I = n(487060);
+    I = n(590522);
 function C(e) {
     let { onScroll: t } = e,
         { guilds: n } = (0, o.C3)({

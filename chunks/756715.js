@@ -14,12 +14,12 @@ var r = n(200651),
     u = n(84735),
     c = n(335854),
     d = n(645499),
-    f = n(314159);
+    f = n(235585);
 function _(e) {
     let { href: t, onClick: n, className: a, children: _, rel: h, target: p, useDefaultUnderlineStyles: m = !0, title: g, style: E, focusProps: v, ...I } = e;
     null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
     let S = i.useContext(o.g),
-        b = {
+        T = {
             className: s()(f.anchor, { [f.anchorUnderlineOnHover]: m }, a),
             href: t,
             onClick: n,
@@ -28,11 +28,11 @@ function _(e) {
             title: null != g ? g : void 0,
             style: null != E ? E : void 0
         };
-    return (null != t && !(0, d.B)(t) && ((b.rel = 'noreferrer noopener'), (b.target = '_blank')), S && delete b.href, null != n)
+    return (null != t && !(0, d.B)(t) && ((T.rel = 'noreferrer noopener'), (T.target = '_blank')), S && delete T.href, null != n)
         ? (0, r.jsx)(l.P, {
               tag: 'a',
               ...I,
-              ...b,
+              ...T,
               onClick: n,
               focusProps: v,
               children: _
@@ -41,7 +41,7 @@ function _(e) {
               ...v,
               children: (0, r.jsx)('a', {
                   ...I,
-                  ...b,
+                  ...T,
                   children: _
               })
           });

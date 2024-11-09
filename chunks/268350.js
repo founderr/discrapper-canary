@@ -15,7 +15,7 @@ n.d(t, {
         return O;
     },
     Um: function () {
-        return T;
+        return b;
     },
     eu: function () {
         return N;
@@ -27,7 +27,7 @@ n.d(t, {
         return y;
     },
     pk: function () {
-        return b;
+        return T;
     },
     qB: function () {
         return C;
@@ -86,7 +86,7 @@ let v = async (e, t) => {
             sticker: t
         });
     },
-    b = async (e) => {
+    T = async (e) => {
         let { body: t } = await a.tn.get({ url: m.ANM.GUILD_STICKER_PACKS(e) });
         s.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
@@ -101,7 +101,7 @@ let v = async (e, t) => {
             )
         });
     },
-    T = async (e) => {
+    b = async (e) => {
         await a.tn.del({ url: m.ANM.GUILD_STICKER(e.guild_id, e.id) });
     },
     y = async (e, t) => {

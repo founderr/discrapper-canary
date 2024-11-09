@@ -100,20 +100,20 @@ e.exports = function (e) {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
-        b = {
+        T = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
             keywords: m,
             contains: [S, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
         },
-        T = {
+        b = {
             relevance: 0,
             match: [/\b/, t.concat('(?!fn\\b|function\\b|', g(h).join('\\b|'), '|', g(p).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
-            contains: [b]
+            contains: [T]
         };
-    b.contains.push(T);
+    T.contains.push(b);
     let y = [S, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
     return {
         case_insensitive: !1,
@@ -190,7 +190,7 @@ e.exports = function (e) {
                 match: /\$this\b/
             },
             a,
-            T,
+            b,
             I,
             {
                 match: [/const/, /\s/, r],

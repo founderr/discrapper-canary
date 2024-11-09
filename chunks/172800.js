@@ -18,11 +18,11 @@ var r = n(200651),
     v = n(111846),
     I = n(392552),
     S = n(784222),
-    b = n(926243),
-    T = n(149203),
+    T = n(926243),
+    b = n(149203),
     y = n(981631),
     A = n(388032),
-    N = n(949235);
+    N = n(886028);
 t.Z = (e) => {
     let { emojiDescriptors: t, emojiSize: a, onSelect: C, onInspect: R, surrogateCodePoint: O, getEmojiItemProps: D, getEmojiRowProps: L, isScrolling: x, isUsingKeyboardNavigation: w, rowIndex: M, allowAnimatedEmoji: P, showEmojiFavoriteTooltip: k, channelGuildId: U, category: G, selectedItemClassName: B, messageId: Z, isBurstReaction: F, inNitroLockedSection: V, handleScrollUpOnSectionCollapse: j } = e,
         { enabled: H } = I.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
@@ -51,8 +51,8 @@ t.Z = (e) => {
         i.useEffect(() => {
             m.DZ.loadIfNecessary();
         }, []);
-    let eo = a === T.Su.LARGE,
-        el = a === T.Su.MEDIUM,
+    let eo = a === b.Su.LARGE,
+        el = a === b.Su.MEDIUM,
         eu = (e) => {
             let t = ''.concat(e.rowIndex, 'c').concat(e.columnIndex),
                 n = function () {
@@ -176,7 +176,7 @@ t.Z = (e) => {
                     let { columnIndex: n, visibleRowIndex: i } = e,
                         s = en.rowIndex === i && en.columnIndex === n;
                     return (0, r.jsx)(
-                        b.Z,
+                        T.Z,
                         {
                             rowIndex: M,
                             descriptor: e,
@@ -216,9 +216,9 @@ t.Z = (e) => {
                 ref: es,
                 children: e.map(eu)
             });
-    if (G !== T.En.TOP_GUILD_EMOJI) return ec(t);
-    let ed = t.filter((e) => (!!H && e.type === S.ld.CREATE_EMOJI) || e.subCategory === T.t0.TOP_GUILD_EMOJI || (e.subCategory === T.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
-        ef = t.filter((e) => e.subCategory === T.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
+    if (G !== b.En.TOP_GUILD_EMOJI) return ec(t);
+    let ed = t.filter((e) => (!!H && e.type === S.ld.CREATE_EMOJI) || e.subCategory === b.t0.TOP_GUILD_EMOJI || (e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && !_.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id))),
+        ef = t.filter((e) => e.subCategory === b.t0.NEWLY_ADDED_EMOJI && e.emoji.type === f.B.GUILD && _.Z.isNewerThanLastSeen(e.emoji.guildId, e.emoji.id));
     return 0 === ef.length
         ? ec(t)
         : (0, r.jsxs)('div', {

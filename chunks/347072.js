@@ -11,7 +11,7 @@ var i = n(120356),
     o = n(357156),
     l = n(343747),
     u = n(388032),
-    c = n(296059);
+    c = n(5477);
 function d(e) {
     let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ...f } = e,
         { canCreateExpressions: _ } = (0, o.XJ)(t);

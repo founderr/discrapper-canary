@@ -16,7 +16,7 @@ var s = n(481060),
     u = n(726985),
     m = n(981631),
     h = n(388032),
-    g = n(971436);
+    g = n(113207);
 function p() {
     let e = d.G6.useSetting(),
         t = d.Wz.useSetting(),

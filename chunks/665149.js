@@ -15,9 +15,9 @@ var r = n(200651),
     u = n(481060),
     c = n(290297),
     d = n(686546),
-    f = n(840680);
+    f = n(977148);
 let _ = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: h, background: p, icon: m, onClick: g, onContextMenu: E, tooltip: v = null, tooltipColor: I, tooltipPosition: S = 'bottom', tooltipDisabled: b, hideOnClick: T = !0, role: y, 'aria-label': A, 'aria-hidden': N, 'aria-checked': C, 'aria-expanded': R, 'aria-haspopup': O } = e,
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: _, foreground: h, background: p, icon: m, onClick: g, onContextMenu: E, tooltip: v = null, tooltipColor: I, tooltipPosition: S = 'bottom', tooltipDisabled: T, hideOnClick: b = !0, role: y, 'aria-label': A, 'aria-hidden': N, 'aria-checked': C, 'aria-expanded': R, 'aria-haspopup': O } = e,
             D = (0, r.jsx)(m, {
                 x: 0,
                 y: 0,
@@ -36,10 +36,10 @@ let _ = (e) => {
                 text: v,
                 color: I,
                 position: S,
-                hideOnClick: T,
-                shouldShow: !b,
+                hideOnClick: b,
+                shouldShow: !T,
                 children: (e) => {
-                    let { onMouseEnter: v, onMouseLeave: I, onFocus: S, onBlur: b } = e;
+                    let { onMouseEnter: v, onMouseLeave: I, onFocus: S, onBlur: T } = e;
                     return null == g
                         ? (0, r.jsx)('div', {
                               className: s()(t, [f.iconWrapper]),
@@ -57,7 +57,7 @@ let _ = (e) => {
                                   onMouseEnter: v,
                                   onMouseLeave: I,
                                   onFocus: S,
-                                  onBlur: b
+                                  onBlur: T
                               })
                           })
                         : (0, r.jsxs)(u.Clickable, {
@@ -67,7 +67,7 @@ let _ = (e) => {
                               onMouseEnter: v,
                               onMouseLeave: I,
                               onFocus: S,
-                              onBlur: b,
+                              onBlur: T,
                               className: s()(t, {
                                   [f.iconWrapper]: !0,
                                   [f.clickable]: !o && null != g,

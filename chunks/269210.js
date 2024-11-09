@@ -15,8 +15,8 @@ var i = e(557533),
     o = e(777207),
     s = e(692547),
     c = e(330711),
-    d = e(377199),
-    f = e(847987);
+    d = e(56273),
+    f = e(103077);
 function p(n) {
     let { description: t, imgSrc: e, renderPurchaseButton: i, onPurchase: p, title: v, onDetails: m, benefitItems: h, benefitsSummary: S, subtitle: g } = n;
     return (0, l.jsx)(u.tE, {

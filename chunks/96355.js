@@ -111,7 +111,7 @@ var n;
             if (0 === l) return 0;
             if (0 === e) {
                 for (s = 0, o = 0; o <= l; o++) {
-                    s += ((r = l), (i = o), eb[r][i] * Math.pow(1 - t, l - o) * Math.pow(t, o) * n[o]);
+                    s += ((r = l), (i = o), eT[r][i] * Math.pow(1 - t, l - o) * Math.pow(t, o) * n[o]);
                 }
                 return s;
             }
@@ -154,10 +154,10 @@ var n;
         function S(e, t) {
             return Math.sqrt((e[0] - t[0]) * (e[0] - t[0]) + (e[1] - t[1]) * (e[1] - t[1]));
         }
-        function b(e, t, n) {
+        function T(e, t, n) {
             return [e[0] + (t[0] - e[0]) * n, e[1] + (t[1] - e[1]) * n];
         }
-        function T(e, t, n) {
+        function b(e, t, n) {
             var r = e.map(function (e, n) {
                 return (function (e, t) {
                     return function (n) {
@@ -212,7 +212,7 @@ var n;
                 var o = e[i],
                     l = e[(i + 1) % e.length],
                     u = S(o, l);
-                s <= a + u ? (e.splice(i + 1, 0, u ? b(o, l, (s - a) / u) : o.slice(0)), (s += r)) : ((a += u), i++);
+                s <= a + u ? (e.splice(i + 1, 0, u ? T(o, l, (s - a) / u) : o.slice(0)), (s += r)) : ((a += u), i++);
             }
         }
         function D(e, t) {
@@ -289,14 +289,14 @@ var n;
                     t > 0 &&
                     (function (e, t) {
                         void 0 === t && (t = 1 / 0);
-                        for (var n = 0; n < e.length; n++) for (var r = e[n], i = n === e.length - 1 ? e[0] : e[n + 1]; S(r, i) > t; ) (i = b(r, i, 0.5)), e.splice(n + 1, 0, i);
+                        for (var n = 0; n < e.length; n++) for (var r = e[n], i = n === e.length - 1 ? e[0] : e[n + 1]; S(r, i) > t; ) (i = T(r, i, 0.5)), e.splice(n + 1, 0, i);
                     })(r, t),
                 r
             );
         }
         function L(e, t, n) {
             var r;
-            return (r = e.length - t.length), O(e, r < 0 ? -1 * r : 0), O(t, r > 0 ? r : 0), eD(e, t), T(e, t, n);
+            return (r = e.length - t.length), O(e, r < 0 ? -1 * r : 0), O(t, r > 0 ? r : 0), eD(e, t), b(e, t, n);
         }
         function x(e, t, n) {
             n = n || 2;
@@ -812,7 +812,7 @@ var n;
                 l = D(t, a);
             return (
                 y(r) && l.length < r / a && O(l, Math.ceil(r / a - l.length)),
-                (o = T(e(l), l, s)),
+                (o = b(e(l), l, s)),
                 s
                     ? function (e) {
                           return e < 0.0001 ? n : o(e);
@@ -1015,8 +1015,8 @@ var n;
                     v,
                     I,
                     S,
-                    b,
                     T,
+                    b,
                     y,
                     A,
                     N,
@@ -1034,7 +1034,7 @@ var n;
                 o = Math.abs(o);
                 var U = (P * P) / (o * o) + (k * k) / ((l = Math.abs(l)) * l);
                 U > 1 && ((o *= Math.sqrt(U)), (l *= Math.sqrt(U)));
-                var G = ((c = e), (d = t), (f = n), (_ = r), (h = i), (p = a), (m = o), (g = l), (E = w), (I = ((v = M) * (c - f)) / 2 + (E * (d - _)) / 2), (S = (-E * (c - f)) / 2 + (v * (d - _)) / 2), (b = m * m), (T = g * g), (y = I * I), (N = b * T - b * (A = S * S) - T * y) < 0 && (N = 0), (N /= b * A + T * y), (C = (((N = Math.sqrt(N) * (h === p ? -1 : 1)) * m) / g) * S), (R = (-(N * g) / m) * I), (L = s(1, 0, (O = (I - C) / m), (D = (S - R) / g))), (x = s(O, D, (-I - C) / m, (-S - R) / g)), 0 === p && x > 0 && (x -= ed), 1 === p && x < 0 && (x += ed), [v * C - E * R + (c + f) / 2, E * C + v * R + (d + _) / 2, L, x]),
+                var G = ((c = e), (d = t), (f = n), (_ = r), (h = i), (p = a), (m = o), (g = l), (E = w), (I = ((v = M) * (c - f)) / 2 + (E * (d - _)) / 2), (S = (-E * (c - f)) / 2 + (v * (d - _)) / 2), (T = m * m), (b = g * g), (y = I * I), (N = T * b - T * (A = S * S) - b * y) < 0 && (N = 0), (N /= T * A + b * y), (C = (((N = Math.sqrt(N) * (h === p ? -1 : 1)) * m) / g) * S), (R = (-(N * g) / m) * I), (L = s(1, 0, (O = (I - C) / m), (D = (S - R) / g))), (x = s(O, D, (-I - C) / m, (-S - R) / g)), 0 === p && x > 0 && (x -= ed), 1 === p && x < 0 && (x += ed), [v * C - E * R + (c + f) / 2, E * C + v * R + (d + _) / 2, L, x]),
                     B = [],
                     Z = G[2],
                     F = G[3],
@@ -1458,8 +1458,8 @@ var n;
                 [0.13365457218610619, 0.1324620394046966, 0.1324620394046966, 0.12890572218808216, 0.12890572218808216, 0.12304908430672953, 0.12304908430672953, 0.11499664022241136, 0.11499664022241136, 0.10489209146454141, 0.10489209146454141, 0.09291576606003515, 0.09291576606003515, 0.07928141177671895, 0.07928141177671895, 0.06423242140852585, 0.06423242140852585, 0.04803767173108467, 0.04803767173108467, 0.030988005856979445, 0.030988005856979445, 0.013411859487141771, 0.013411859487141771],
                 [0.12793819534675216, 0.12793819534675216, 0.1258374563468283, 0.1258374563468283, 0.12167047292780339, 0.12167047292780339, 0.1155056680537256, 0.1155056680537256, 0.10744427011596563, 0.10744427011596563, 0.09761865210411388, 0.09761865210411388, 0.08619016153195327, 0.08619016153195327, 0.0733464814110803, 0.0733464814110803, 0.05929858491543678, 0.05929858491543678, 0.04427743881741981, 0.04427743881741981, 0.028531388628933663, 0.028531388628933663, 0.0123412297999872, 0.0123412297999872]
             ],
-            eb = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]],
-            eT = 2 * Math.PI,
+            eT = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]],
+            eb = 2 * Math.PI,
             ey = function (e, t, n, r, i, a, s, o, l) {
                 var u,
                     c,
@@ -1473,8 +1473,8 @@ var n;
                     v,
                     I,
                     S,
-                    b,
                     T,
+                    b,
                     y,
                     A,
                     N,
@@ -1484,19 +1484,19 @@ var n;
                     D,
                     L,
                     x,
-                    w = Math.sin((i * eT) / 360),
-                    M = Math.cos((i * eT) / 360),
+                    w = Math.sin((i * eb) / 360),
+                    M = Math.cos((i * eb) / 360),
                     P = (M * (e - o)) / 2 + (w * (t - l)) / 2,
                     k = (-w * (e - o)) / 2 + (M * (t - l)) / 2;
                 if ((0 === P && 0 === k) || 0 === n || 0 === r) return [];
                 n = Math.abs(n);
                 var U = (P * P) / (n * n) + (k * k) / ((r = Math.abs(r)) * r);
                 U > 1 && ((n *= Math.sqrt(U)), (r *= Math.sqrt(U)));
-                var G = ((u = e), (c = t), (d = o), (f = l), (_ = a), (h = s), (p = n), (m = r), (g = w), (I = ((v = M) * (u - d)) / 2 + (g * (c - f)) / 2), (S = (-g * (u - d)) / 2 + (v * (c - f)) / 2), (b = p * p), (T = m * m), (y = I * I), (N = b * T - b * (A = S * S) - T * y) < 0 && (N = 0), (N /= b * A + T * y), (C = (((N = Math.sqrt(N) * (_ === h ? -1 : 1)) * p) / m) * S), (R = (-(N * m) / p) * I), (L = E(1, 0, (O = (I - C) / p), (D = (S - R) / m))), (x = E(O, D, (-I - C) / p, (-S - R) / m)), 0 === h && x > 0 && (x -= eT), 1 === h && x < 0 && (x += eT), [v * C - g * R + (u + d) / 2, g * C + v * R + (c + f) / 2, L, x]),
+                var G = ((u = e), (c = t), (d = o), (f = l), (_ = a), (h = s), (p = n), (m = r), (g = w), (I = ((v = M) * (u - d)) / 2 + (g * (c - f)) / 2), (S = (-g * (u - d)) / 2 + (v * (c - f)) / 2), (T = p * p), (b = m * m), (y = I * I), (N = T * b - T * (A = S * S) - b * y) < 0 && (N = 0), (N /= T * A + b * y), (C = (((N = Math.sqrt(N) * (_ === h ? -1 : 1)) * p) / m) * S), (R = (-(N * m) / p) * I), (L = E(1, 0, (O = (I - C) / p), (D = (S - R) / m))), (x = E(O, D, (-I - C) / p, (-S - R) / m)), 0 === h && x > 0 && (x -= eb), 1 === h && x < 0 && (x += eb), [v * C - g * R + (u + d) / 2, g * C + v * R + (c + f) / 2, L, x]),
                     B = [],
                     Z = G[2],
                     F = G[3],
-                    V = Math.max(Math.ceil(Math.abs(F) / (eT / 4)), 1);
+                    V = Math.max(Math.ceil(Math.abs(F) / (eb / 4)), 1);
                 F /= V;
                 for (var j = 0; j < V; j++)
                     B.push(

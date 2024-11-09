@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     hM: function () {
-        return T;
+        return b;
     },
     iy: function () {
         return w;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     t1: function () {
-        return b;
+        return T;
     },
     uL: function () {
         return M;
@@ -56,7 +56,7 @@ var r = n(392711),
     v = n(526761),
     I = n(388032);
 let S = /-/g;
-function b(e) {
+function T(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -65,7 +65,7 @@ function b(e) {
         modifiers: t
     });
 }
-function T(e, t) {
+function b(e, t) {
     let { startTime: n, ...r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = {
             offset: 0,
@@ -85,7 +85,7 @@ function T(e, t) {
 }
 function y(e, t, n) {
     let r = Date.now();
-    b(t),
+    T(t),
         s.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -101,7 +101,7 @@ function y(e, t, n) {
             .then(
                 (i) => {
                     let a = i.body;
-                    T(a, t, {
+                    b(a, t, {
                         startTime: r,
                         limit: n
                     }),
@@ -218,7 +218,7 @@ function L() {
 }
 function x(e) {
     let t = Date.now();
-    b(E.wI2.TRENDING_GIFS),
+    T(E.wI2.TRENDING_GIFS),
         s.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -233,7 +233,7 @@ function x(e) {
             .then(
                 (n) => {
                     let { body: r } = n;
-                    T(r, E.wI2.TRENDING_GIFS, {
+                    b(r, E.wI2.TRENDING_GIFS, {
                         startTime: t,
                         limit: e
                     }),

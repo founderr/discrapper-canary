@@ -38,8 +38,8 @@ let E = 'scientist:triggered',
     v = 'exerimentOverrides',
     I = 'userExperimentOverrides',
     S = 'guildExperimentOverrides',
-    b = new c.Z('ExperimentStore'),
-    T = !1,
+    T = new c.Z('ExperimentStore'),
+    b = !1,
     y = {},
     A = {},
     N = {
@@ -207,7 +207,7 @@ function Y(e) {
     var t;
     !x && 'CONNECTION_OPEN' === e.type && U(e.user) && (x = !0),
         'EXPERIMENTS_FETCH_SUCCESS' === e.type &&
-            T &&
+            b &&
             'ready_payload' === N.source &&
             _.default.track(m.rMx.EXPERIMENT_FETCH_IGNORED, {
                 fingerprint: e.fingerprint,
@@ -235,7 +235,7 @@ function Y(e) {
             !1
         ),
         n(598984).Vx.trackExposure(),
-        (T = !0);
+        (b = !0);
 }
 function W(e) {
     let { rawUserExperiments: t, rawGuildExperiments: n, source: r, sessionId: i, fingerprint: a } = e,
@@ -326,7 +326,7 @@ function z(e) {
 function q(e) {
     let { serializedExperimentStore: t, user: n } = e;
     !x && U(n) && (x = !0),
-        (T = t.hasLoadedExperiments),
+        (b = t.hasLoadedExperiments),
         (y = t.trackedExposureExperiments),
         (C = t.loadedUserExperiments),
         (D = t.userExperimentOverrides),
@@ -341,7 +341,7 @@ function q(e) {
         (O = {});
 }
 function Q() {
-    T = !0;
+    b = !0;
 }
 function X(e) {
     let { isSwitchingAccount: t } = e;
@@ -353,16 +353,16 @@ function X(e) {
             rawUserExperiments: []
         }),
         (y = {}),
-        (T = !1);
+        (b = !1);
 }
 function J() {
-    (T = !1), (y = {}), (R = {}), o.K.remove(E);
+    (b = !1), (y = {}), (R = {}), o.K.remove(E);
 }
 function $() {
     try {
         o.K.set(I, D);
     } catch (e) {
-        b.error('Error saving user experiment overrides, unsaved data will be lost', e),
+        T.error('Error saving user experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -371,7 +371,7 @@ function $() {
     try {
         o.K.set(S, L);
     } catch (e) {
-        b.error('Error saving guild experiment overrides, unsaved data will be lost', e),
+        T.error('Error saving guild experiment overrides, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveExperimentOverrides'
@@ -385,7 +385,7 @@ function ee(e) {
             e: e
         });
     } catch (e) {
-        b.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
+        T.error('Error saving tracked exposure experiments, unsaved data will be lost', e),
             _.default.track(m.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                 module: 'discord_app',
                 call: 'ExperimentStore.saveTrackedExposureExperiments'
@@ -499,7 +499,7 @@ class ei extends f.Z {
         };
     }
     get hasLoadedExperiments() {
-        return T;
+        return b;
     }
     hasRegisteredExperiment(e) {
         return null != A[e];
@@ -650,7 +650,7 @@ class ei extends f.Z {
         let e = {};
         for (let t in R) for (let n of ((e[t] = JSON.parse(JSON.stringify(R[t]))), e[t].populations)) n.filters = [];
         return {
-            hasLoadedExperiments: T,
+            hasLoadedExperiments: b,
             trackedExposureExperiments: y,
             loadedUserExperiments: C,
             loadedGuildExperiments: e,

@@ -22,7 +22,7 @@ var r,
     h = n(872801),
     p = n(302901),
     m = n(981631),
-    g = n(531941);
+    g = n(136753);
 function E(e, t, n) {
     return (
         t in e
@@ -52,7 +52,7 @@ function S(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : ''.concat(n, ':').concat(r);
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     switch (e) {
         case 'top':
             return u()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
@@ -69,7 +69,7 @@ function b(e, t, n, r) {
             throw Error('Unexpected position: '.concat(e));
     }
 }
-function T(e, t, n) {
+function b(e, t, n) {
     if (null != e && e < 0 && ('top' === n.position || 'bottom' === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
         let t = 'top' === n.position ? 'bottom' : 'top',
             r = n.style[t];
@@ -238,7 +238,7 @@ class A extends (r = a.Component) {
             { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
             s = null,
             o = null;
-        if (t && (s = b(e, i, n, r)) < 0) {
+        if (t && (s = T(e, i, n, r)) < 0) {
             let t = (function (e) {
                     switch (e) {
                         case 'top':
@@ -258,14 +258,14 @@ class A extends (r = a.Component) {
                     }
                 })(e),
                 { style: i, nudge: a } = this.calculatePositionStyle(t, n, r);
-            if ((o = b(t, i, n, r)) > s)
-                return T(o, n, {
+            if ((o = T(t, i, n, r)) > s)
+                return b(o, n, {
                     position: t,
                     nudge: a,
                     style: i
                 });
         }
-        return T(s, n, {
+        return b(s, n, {
             position: e,
             nudge: a,
             style: i

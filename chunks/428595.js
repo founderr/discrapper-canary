@@ -18,8 +18,8 @@ var r = n(392711),
     v = n(800927),
     I = n(945884),
     S = n(594199),
-    b = n(97734),
-    T = n(303694),
+    T = n(97734),
+    b = n(303694),
     y = n(660199),
     A = n(364458),
     N = n(981631),
@@ -352,8 +352,8 @@ let P = (e) => {
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    s = (0, T.l)(i),
-                    o = (0, T.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
+                    s = (0, b.l)(i),
+                    o = (0, b.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -379,7 +379,7 @@ let P = (e) => {
         list: v.Z,
         subtext: I.Z
     },
-    G = (0, A.Z)([U, b.Z]),
+    G = (0, A.Z)([U, T.Z]),
     B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
     Z = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
     F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),

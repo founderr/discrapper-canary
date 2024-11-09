@@ -18,15 +18,15 @@ var r = n(200651),
     v = n(194625),
     I = n(77188),
     S = n(230554),
-    b = n(780748),
-    T = n(464581),
+    T = n(780748),
+    b = n(464581),
     y = n(732659),
     A = n(86724),
     N = n(847302),
     C = n(657198),
     R = n(321127),
     O = n(981631),
-    D = n(484918);
+    D = n(770206);
 t.Z = i.forwardRef(function (e, t) {
     let { value: n, type: a, channel: L, className: x, id: w, disabled: M, submitting: P, placeholder: k, required: U, textAreaPaddingClassName: G, onChange: B, onPaste: Z, onResize: F, onFocus: V, onBlur: j, onKeyDown: H, onKeyUp: Y, onTab: W, onEnter: K, onSubmit: z, maybeShowAutocomplete: q, hideAutocomplete: Q, moveSelection: X, spellcheckEnabled: J, canUseCommands: $, canOnlyUseTextCommands: ee, disableAutoFocus: et, disableEnterToSubmit: en, allowNewLines: er, 'aria-owns': ei, 'aria-expanded': ea, 'aria-haspopup': es, 'aria-activedescendant': eo, 'aria-controls': el, 'aria-invalid': eu, 'aria-describedby': ec, 'aria-labelledby': ed, 'aria-autocomplete': ef } = e,
         e_ = i.useRef(null),
@@ -99,7 +99,7 @@ t.Z = i.forwardRef(function (e, t) {
             onChangeEnd: eI,
             updateState: eE
         }),
-        eb = i.useCallback(
+        eT = i.useCallback(
             (e, t) => {
                 let n = _.tM(eS, e, L.id),
                     r = _.lk(e, L.guild_id, L.id, n, t);
@@ -110,11 +110,11 @@ t.Z = i.forwardRef(function (e, t) {
             },
             [L.guild_id, L.id, eS]
         ),
-        eT = i.useCallback(() => {
+        eb = i.useCallback(() => {
             let e;
             let t = $ ? u.Z.getActiveCommand(L.id) : null;
             if (null != t && null != t.options) {
-                let i = eb(t, !1);
+                let i = eT(t, !1);
                 e = i.values;
                 let a = _.cu(eS)
                     .filter((e) => !i.results[e].success)
@@ -149,9 +149,9 @@ t.Z = i.forwardRef(function (e, t) {
                     t,
                     e
                 );
-        }, [L.id, eS, z, eb, $]);
-    (0, S.Z)(t, eS, L, eT), (0, y.Z)(eS, e_, F);
-    let { handleKeyDown: ey, handleKeyUp: eA } = (0, b.Z)({
+        }, [L.id, eS, z, eT, $]);
+    (0, S.Z)(t, eS, L, eb), (0, y.Z)(eS, e_, F);
+    let { handleKeyDown: ey, handleKeyUp: eA } = (0, T.Z)({
             editor: eS,
             channel: L,
             disableEnterToSubmit: en,
@@ -160,11 +160,11 @@ t.Z = i.forwardRef(function (e, t) {
             onTab: W,
             onEnter: K,
             allowNewLines: er,
-            submit: eT,
+            submit: eb,
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: eN, handleGlobalPaste: eC } = (0, T.Z)(eS, eg, Z),
+        { handlePaste: eN, handleGlobalPaste: eC } = (0, b.Z)(eS, eg, Z),
         eR = i.useCallback(
             (e) => {
                 null == q || q();
@@ -184,10 +184,10 @@ t.Z = i.forwardRef(function (e, t) {
             let e = () => {
                 var e;
                 let t = null !== (e = u.Z.getActiveCommand(L.id)) && void 0 !== e ? e : null;
-                null !== t && null != t.options && eb(t, !0);
+                null !== t && null != t.options && eT(t, !0);
             };
             return c.Z.addChangeListener(e), () => c.Z.removeChangeListener(e);
-        }, [L, eS, eb]);
+        }, [L, eS, eT]);
     let eD = i.useCallback((e, t) => (0, v.Z)(e, t), []),
         eL = i.useCallback((e) => (0, C.Z)(eS, e, L.id), [L.id, eS]),
         ex = i.useCallback((e) => (0, R.Z)(e), []);

@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(347312),
     g = n(981631),
     E = n(388032),
-    v = n(883113);
+    v = n(506574);
 let I = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
 function S(e) {
     let { played: t, duration: n, currentTime: i } = e,
@@ -28,7 +28,7 @@ function S(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    var t, n, a, d, b, T;
+    var t, n, a, d, T, b;
     let y,
         { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
         k = i.useRef(null),
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (b = j),
-        (T = H),
+        (T = j),
+        (b = H),
         i.useEffect(() => {
-            if (!!b)
+            if (!!T)
                 return (
                     _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
                     _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -137,9 +137,9 @@ t.Z = i.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                if (d !== t) T(!1);
+                if (d !== t) b(!1);
             }
-        }, [d, b, T]);
+        }, [d, T, b]);
     let ef = j ? l.PauseIcon : l.PlayIcon,
         e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name

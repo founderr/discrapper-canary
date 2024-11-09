@@ -15,7 +15,7 @@ var i = n(481060),
     d = n(146078),
     f = n(228168),
     _ = n(182294),
-    h = n(736720);
+    h = n(352235);
 function p(e) {
     let { user: t, onOpenProfile: n } = e,
         { mutualFriends: p } = (0, l.Z)(t.id),

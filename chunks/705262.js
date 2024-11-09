@@ -27,8 +27,8 @@ var r,
     v = n(98278),
     I = n(639119),
     S = n(311476),
-    b = n(165583),
-    T = n(587446),
+    T = n(165583),
+    b = n(587446),
     y = n(210887),
     A = n(740492),
     N = n(626135),
@@ -42,7 +42,7 @@ var r,
     M = n(526761),
     P = n(231338),
     k = n(388032),
-    U = n(834476);
+    U = n(767023);
 ((i = r || (r = {})).EDITOR = 'EDITOR'), (i.SETTINGS = 'SETTINGS');
 let G = Object.freeze({
         EDITOR: M.fy.SLOW_USER_ACTION,
@@ -98,7 +98,7 @@ let G = Object.freeze({
                     variant: 'text-md/medium',
                     children: s
                 }),
-                (!i || 'EDITOR' === t) && (0, a.jsx)(T.Z, { className: U.premiumIcon })
+                (!i || 'EDITOR' === t) && (0, a.jsx)(b.Z, { className: U.premiumIcon })
             ]
         });
     },
@@ -175,7 +175,7 @@ let G = Object.freeze({
         return (0, a.jsx)(a.Fragment, {
             children:
                 'EDITOR' === i && o && u
-                    ? (0, a.jsx)(b.ZP, {
+                    ? (0, a.jsx)(T.ZP, {
                           type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: x.Si.TIER_2,
                           children: k.intl.format(k.t.G8yQXl, { onPremiumClick: () => v.z })
@@ -213,11 +213,11 @@ let G = Object.freeze({
             }),
             [g, E] = s.useState(!1),
             [v, I] = s.useState(-1),
-            b = (0, c.e7)([h.Z], () => h.Z.useReducedMotion);
+            T = (0, c.e7)([h.Z], () => h.Z.useReducedMotion);
         s.useEffect(() => {
             ((v === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && E(!0);
         }, [v, r, u]);
-        let { enabled: T } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: b } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             y = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
@@ -226,7 +226,7 @@ let G = Object.freeze({
                         analyticsLocations: o,
                         themeName: d.Us[e.id]
                     }),
-                    l && 'SETTINGS' === r && T)
+                    l && 'SETTINGS' === r && b)
                 ) {
                     (0, f.openModalLazy)(
                         async () => {
@@ -279,7 +279,7 @@ let G = Object.freeze({
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === r && T && l
+                            showLockedBadge: 'SETTINGS' === r && b && l
                         },
                         e.id
                     )
@@ -302,7 +302,7 @@ let G = Object.freeze({
                             }),
                             (0, a.jsx)(f.LottieAnimation, {
                                 importData: t,
-                                shouldAnimate: !b,
+                                shouldAnimate: !T,
                                 className: U.sparkles
                             })
                         ]

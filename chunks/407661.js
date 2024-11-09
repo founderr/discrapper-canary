@@ -19,7 +19,7 @@ var r = n(200651),
     m = n(962293),
     g = n(981631),
     E = n(388032),
-    v = n(455490);
+    v = n(486522);
 function I(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     return (
@@ -62,7 +62,7 @@ function I(e) {
 function S(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: u, showMentionToggle: h } = t,
-        { nick: S, colorString: b, colorRoleName: T } = (0, c.ZP)(a),
+        { nick: S, colorString: T, colorRoleName: b } = (0, c.ZP)(a),
         y = (function (e, t) {
             let n = e.id,
                 r = t.id;
@@ -114,8 +114,8 @@ function S(e) {
                                             {
                                                 className: v.name,
                                                 name: S,
-                                                color: b,
-                                                roleName: T
+                                                color: T,
+                                                roleName: b
                                             },
                                             t
                                         )

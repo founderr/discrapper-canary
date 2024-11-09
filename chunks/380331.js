@@ -18,14 +18,14 @@ var r = n(200651),
     v = n(626135),
     I = n(624138),
     S = n(543241),
-    b = n(883661),
-    T = n(880949),
+    T = n(883661),
+    b = n(880949),
     y = n(784222),
     A = n(149203),
     N = n(981631),
     C = n(957825),
     R = n(388032),
-    O = n(76640);
+    O = n(932740);
 let D = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     L = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
     x = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
@@ -64,7 +64,7 @@ function V(e) {
             },
             children: [
                 null != E
-                    ? (0, r.jsx)(T.Z, {
+                    ? (0, r.jsx)(b.Z, {
                           guild: E,
                           isSelected: m,
                           shouldAnimate: !_ && d,
@@ -72,7 +72,7 @@ function V(e) {
                       })
                     : null,
                 null == E && null != p
-                    ? (0, r.jsx)(b.Z, {
+                    ? (0, r.jsx)(T.Z, {
                           categoryId: p,
                           className: O.categoryIcon,
                           height: x,
@@ -106,8 +106,8 @@ t.Z = (e) => {
         }),
         v = (0, _.O)(),
         I = (0, S.kI)(o, u),
-        b = i.useRef(null),
-        T = (0, c.e7)([E.Z], () => E.Z.isFocused()),
+        T = i.useRef(null),
+        b = (0, c.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, c.e7)([h.Z], () => h.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
@@ -123,13 +123,13 @@ t.Z = (e) => {
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: g,
-                                isWindowFocused: T,
+                                isWindowFocused: b,
                                 useReducedMotion: N
                             },
                             t
                         );
                 }),
-            [d, v, I, g, T, N]
+            [d, v, I, g, b, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
         M = i.useCallback(
@@ -172,7 +172,7 @@ t.Z = (e) => {
     let q = i.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = b.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
                 if (null != n) e + n.height - k >= Y ? z(!1) : z(!0);
             },
             [Y]
@@ -180,7 +180,7 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(H), null === (t = b.current) || void 0 === t || t.scrollTo(Y);
+                e(H), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
             },
             [Y, H]
         ),
@@ -207,7 +207,7 @@ t.Z = (e) => {
         ),
         $ = K ? 'shortcut' : 'hiddenshortcut';
     return (0, r.jsx)(m.Z, {
-        categoryListRef: b,
+        categoryListRef: T,
         expressionsListRef: n,
         className: t,
         store: p.kJ,

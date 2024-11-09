@@ -25,8 +25,8 @@ var r = n(200651),
     p = n(998502),
     m = n(981631),
     g = n(388032),
-    E = n(516331),
-    v = n(971436);
+    E = n(570486),
+    v = n(113207);
 function I(e, t, n) {
     return (
         t in e
@@ -95,7 +95,7 @@ function S(e) {
         }
     });
 }
-class b extends i.Component {
+class T extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
@@ -103,7 +103,7 @@ class b extends i.Component {
         return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
-class T extends i.Component {
+class b extends i.Component {
     componentDidMount() {
         var e;
         (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) &&
@@ -136,7 +136,7 @@ class T extends i.Component {
                         (0, r.jsxs)('div', {
                             className: s()(E.file, { [E.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(b, { upload: e }),
+                                (0, r.jsx)(T, { upload: e }),
                                 (0, r.jsxs)('div', {
                                     className: E.description,
                                     children: [
@@ -268,7 +268,7 @@ function y(e) {
     let t = (0, d.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null
-        : (0, r.jsx)(T, {
+        : (0, r.jsx)(b, {
               ...e,
               file: e.upload.item.file,
               messageMaxLength: t

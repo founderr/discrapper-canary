@@ -23,12 +23,12 @@ var r = n(200651),
     v = n(280885),
     I = n(502762),
     S = n(530),
-    b = n(679332),
-    T = n(544989),
+    T = n(679332),
+    b = n(544989),
     y = n(171368),
     A = n(228168),
     N = n(388032),
-    C = n(653134);
+    C = n(451563);
 function R(e) {
     let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
         P = (0, p.ZP)(t.id, n),
@@ -67,9 +67,9 @@ function R(e) {
                         displayProfile: P,
                         profileType: A.y0.BITE_SIZE,
                         children: [
-                            (0, r.jsx)(T.Z, {
+                            (0, r.jsx)(b.Z, {
                                 profileType: A.y0.BITE_SIZE,
-                                children: (0, r.jsx)(b.Z, {
+                                children: (0, r.jsx)(T.Z, {
                                     user: t,
                                     viewProfileItem: F
                                         ? (0, r.jsx)(a.MenuItem, {

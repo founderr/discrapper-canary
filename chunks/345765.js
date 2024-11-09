@@ -18,8 +18,8 @@ let g = p.YN.GLOBAL_FEED,
     v = new Set(),
     I = new Map(),
     S = null,
-    b = (0, r.debounce)(f.yK, 3000, { trailing: !0 });
-function T(e, t) {
+    T = (0, r.debounce)(f.yK, 3000, { trailing: !0 });
+function b(e, t) {
     i.Z.dispatch({
         type: 'CONTENT_INVENTORY_SET_FEED_STATE',
         feedId: e,
@@ -39,7 +39,7 @@ function A(e) {
     return !0;
 }
 function N(e) {
-    T(e, { loading: !1 });
+    b(e, { loading: !1 });
     let t = E.get(e);
     void 0 !== t && (clearTimeout(t), E.delete(e));
 }
@@ -49,7 +49,7 @@ function C() {
     if ((null == e ? void 0 : e.refresh_stale_inbox_after_ms) != null && null == S) return;
     let t = (null == e ? void 0 : e.expired_at) == null ? 0 : new Date(e.expired_at).getTime() - Date.now(),
         n = Math.max(0, null == S ? 0 : new Date(S).getTime() - Date.now(), t);
-    T(g, {
+    b(g, {
         loading: !1,
         nextFetchDate: new Date(Date.now() + n)
     }),
@@ -63,7 +63,7 @@ async function R(e) {
     if (!!(A(e) || t))
         try {
             let t = h.Z.getFeed(e);
-            v.add(e), T(e, { loading: !0 });
+            v.add(e), b(e, { loading: !0 });
             let n = await (0, f.mt)({
                 token: null == t ? void 0 : t.refresh_token,
                 feedId: e
@@ -75,7 +75,7 @@ async function R(e) {
             }),
                 I.set(e, 0),
                 v.delete(e),
-                T(e, { loading: !1 }),
+                b(e, { loading: !1 }),
                 e === g && ((S = null), C());
         } catch (a) {
             var n;
@@ -110,7 +110,7 @@ function L(e) {
 function x(e) {
     var t;
     let { connectionId: n, track: r } = e;
-    if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack')) (null === (t = l.Z.getAccount(n, m.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && b(n, r);
+    if (null != n && !!(0, d.Dy)('ContentInventoryManager.handleSpotifyNewTrack')) (null === (t = l.Z.getAccount(n, m.ABu.SPOTIFY)) || void 0 === t ? void 0 : t.showActivity) && T(n, r);
 }
 function w() {
     R(p.YN.GAME_PROFILE_FEED);

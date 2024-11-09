@@ -17,8 +17,8 @@ var a,
     v = n(687516),
     I = n(139656),
     S = n(358085),
-    b = n(199902),
-    T = n(314897),
+    T = n(199902),
+    b = n(314897),
     y = n(131951),
     A = n(158776),
     N = n(19780),
@@ -72,8 +72,8 @@ class B extends (a = _.ZP.Store) {
     getStatsHistory(e, t, n) {
         if (!(0, I.Z)(y.Z) || null == t) return null;
         if (n) {
-            let n = b.Z.getActiveStreamForUser(t, e);
-            if (null == n || 0 === b.Z.getViewerIds(n).length) return null;
+            let n = T.Z.getActiveStreamForUser(t, e);
+            if (null == n || 0 === T.Z.getViewerIds(n).length) return null;
         }
         return P.map((e) =>
             n
@@ -198,7 +198,7 @@ class B extends (a = _.ZP.Store) {
                               streamType: t,
                               guildId: n,
                               channelId: r,
-                              ownerId: T.default.getId()
+                              ownerId: b.default.getId()
                           });
                       if (
                           ((O[o] = i),

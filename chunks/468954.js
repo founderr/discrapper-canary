@@ -9,9 +9,9 @@ var r = n(200651),
     s = n(98528),
     o = n(429155),
     l = n(810462),
-    u = n(767896);
+    u = n(425396);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: I, renderSectionFooter: S, renderInspector: b, renderEmptySearchState: T, renderCategoryList: y, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: M, renderHeader: P, renderUpsell: k, setShowUpsell: U } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: I, renderSectionFooter: S, renderInspector: T, renderEmptySearchState: b, renderCategoryList: y, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: M, renderHeader: P, renderUpsell: k, setShowUpsell: U } = e,
         G = i.useRef(null),
         B = i.useRef(null),
         Z = i.useRef(null),
@@ -73,8 +73,8 @@ function c(e) {
         ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
         ea = i.useCallback(() => {
             var e;
-            return null == b ? void 0 : b(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
-        }, [Y, j.columnIndex, j.rowIndex, b]);
+            return null == T ? void 0 : T(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
+        }, [Y, j.columnIndex, j.rowIndex, T]);
     i.useEffect(() => {
         _(V);
     }, [_, V]),
@@ -137,8 +137,8 @@ function c(e) {
                                             renderSection: null != v ? en : void 0,
                                             renderSectionHeader: null != I ? er : void 0,
                                             renderSectionFooter: null != S ? ei : void 0,
-                                            renderInspector: null != b ? ea : void 0,
-                                            renderEmptySearchState: T,
+                                            renderInspector: null != T ? ea : void 0,
+                                            renderEmptySearchState: b,
                                             rowCount: W,
                                             rowCountBySection: K,
                                             rowHeight: N,

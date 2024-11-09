@@ -4,7 +4,7 @@ var n = s(200651),
     i = s(780384),
     o = s(410030),
     a = s(119269),
-    l = s(77368);
+    l = s(315566);
 let c = 'url(#gradient)',
     d = (e, t) => {
         switch (e) {
@@ -37,8 +37,8 @@ let c = 'url(#gradient)',
     };
 t.Z = (e) => {
     let { percentage: t = 0, children: s, animationClassName: c, initialPercentage: f = 0, progressCircleStrokeSize: x = 2, progressCircleVariation: C, progressCircleStroke: g } = e,
-        h = 43 + x / 2,
-        _ = 2 * Math.PI * h,
+        _ = 43 + x / 2,
+        h = 2 * Math.PI * _,
         [m, L] = r.useState(f);
     r.useEffect(() => {
         let e = setTimeout(() => {
@@ -62,7 +62,7 @@ t.Z = (e) => {
                         className: C === a.Q.NITRO_GEM ? l.baseProgressCircle : void 0,
                         fill: 'transparent',
                         strokeWidth: x,
-                        r: ''.concat(h),
+                        r: ''.concat(_),
                         cx: '50%',
                         cy: '50%',
                         stroke: E,
@@ -72,10 +72,10 @@ t.Z = (e) => {
                         stroke: O,
                         strokeWidth: x,
                         strokeLinecap: 'round',
-                        strokeDasharray: ''.concat(_, ' ').concat(_),
+                        strokeDasharray: ''.concat(h, ' ').concat(h),
                         className: c,
-                        style: { strokeDashoffset: (1 - m / 100) * _ },
-                        r: ''.concat(h),
+                        style: { strokeDashoffset: (1 - m / 100) * h },
+                        r: ''.concat(_),
                         cx: '50%',
                         cy: '50%'
                     })

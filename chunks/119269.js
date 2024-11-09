@@ -14,14 +14,14 @@ var o = s(120356),
     d = s(967538),
     u = s(885302),
     p = s(914677),
-    f = s(595837);
+    f = s(226705);
 ((n = r || (r = {}))[(n.NITRO_GEM = 0)] = 'NITRO_GEM'), (n[(n.NITRO_LOGO = 1)] = 'NITRO_LOGO');
 t.Z = (e) => {
-    let { showAnimations: t = !0, iconClassName: s, staticPercentage: n, innerCircleClassName: r, progressCircleStrokeSize: o, backgroundCircleSize: x, percentage: C, initialPercentage: g, progressCircleVariation: h = 0, ellipseOpacity: _, customAnimationClassName: m, circleColor: L, circleStroke: v } = e,
+    let { showAnimations: t = !0, iconClassName: s, staticPercentage: n, innerCircleClassName: r, progressCircleStrokeSize: o, backgroundCircleSize: x, percentage: C, initialPercentage: g, progressCircleVariation: _ = 0, ellipseOpacity: h, customAnimationClassName: m, circleColor: L, circleStroke: v } = e,
         j = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         E = t && !j;
     return (0, i.jsx)('div', {
-        className: a()(f.progressCircle, s, { [f.progressCricleBottomMargin]: 0 === h }),
+        className: a()(f.progressCircle, s, { [f.progressCricleBottomMargin]: 0 === _ }),
         children: (0, i.jsx)(p.Z, {
             animationClassName: a()(f.activeProgressCircle, {
                 [f.activeProgressCircleAnimation]: E,
@@ -31,9 +31,9 @@ t.Z = (e) => {
             progressCircleStrokeSize: o,
             percentage: null != n ? n : C,
             initialPercentage: null != n ? n : g,
-            progressCircleVariation: h,
+            progressCircleVariation: _,
             children:
-                0 === h
+                0 === _
                     ? (0, i.jsx)(d.Z, {
                           className: E ? f.nitroGemAnimation : void 0,
                           backgroundColor: a()(f.gemBackgroundFill, r),
@@ -41,7 +41,7 @@ t.Z = (e) => {
                       })
                     : (0, i.jsx)(u.Z, {
                           circleColor: L,
-                          ellipseOpacity: _
+                          ellipseOpacity: h
                       })
         })
     });

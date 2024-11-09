@@ -109,8 +109,8 @@ var r,
     v = n(63063),
     I = n(930153),
     S = n(358085),
-    b = n(617136),
-    T = n(272008),
+    T = n(617136),
+    b = n(272008),
     y = n(569984),
     A = n(497505),
     N = n(918701),
@@ -133,7 +133,7 @@ function P() {
         s = (0, C.cB)({ location: x.dr.USE_QUESTS });
     return (
         u.useEffect(() => {
-            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, T.xw)(), (0, O.Z)({ location: x.dr.USE_QUESTS }) && (0, T.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+            if ('cache-only' !== e.fetchPolicy) ('cache-and-network' === e.fetchPolicy || ('cache-or-network' === e.fetchPolicy && 0 === a)) && s && !t && !i && (n(!0), (0, b.xw)(), (0, O.Z)({ location: x.dr.USE_QUESTS }) && (0, b.w)(A.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
         }, [e.fetchPolicy, s, t, i, a]),
         {
             quests: r,
@@ -214,7 +214,7 @@ function G() {
         n = (0, h.e7)([y.Z], () => y.Z.isFetchingClaimedQuests);
     return (
         u.useEffect(() => {
-            !n && !e.current && ((e.current = !0), (0, T.Ag)());
+            !n && !e.current && ((e.current = !0), (0, b.Ag)());
         }, [n]),
         {
             claimedQuests: t,
@@ -311,14 +311,14 @@ let K = (e) => {
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: b.jZ.CONNECT_CONSOLE_LINK
+                      ctaContent: T.jZ.CONNECT_CONSOLE_LINK
                   }
               )
             : (0, N.V$)(
                   { quest: t },
                   {
                       content: n,
-                      ctaContent: b.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+                      ctaContent: T.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                   }
               );
     };
@@ -403,11 +403,11 @@ function X(e) {
 function J(e) {
     return u.useMemo(
         () => ({
-            handleComplete: () => (0, T.Wf)(e),
-            handleProgress: (t) => (0, T.Wf)(e, t),
-            handleResetStatusClick: () => (0, T.eT)(e),
-            handleResetDismissibilityClick: () => (0, T.T0)(e),
-            handleOverrideDeliveryClick: () => (0, T.EW)(e)
+            handleComplete: () => (0, b.Wf)(e),
+            handleProgress: (t) => (0, b.Wf)(e, t),
+            handleResetStatusClick: () => (0, b.eT)(e),
+            handleResetDismissibilityClick: () => (0, b.T0)(e),
+            handleOverrideDeliveryClick: () => (0, b.EW)(e)
         }),
         [e]
     );
@@ -454,7 +454,7 @@ let ee = (e) => {
                     null == r || r(), l(!0);
                     let e = null;
                     try {
-                        (e = await (0, T.CS)(t, n)), s(e.errorHints);
+                        (e = await (0, b.CS)(t, n)), s(e.errorHints);
                     } finally {
                         var a;
                         l(!1), null == i || i(null !== (a = null == e ? void 0 : e.errorHints) && void 0 !== a ? a : []);
@@ -536,7 +536,7 @@ function ea(e) {
 function es(e, t) {
     let [n, r] = (function (e) {
             let t = (0, h.e7)([y.Z], () => y.Z.selectedTaskPlatform(e));
-            return [t, u.useCallback((t) => (0, T.OR)(e, t), [e])];
+            return [t, u.useCallback((t) => (0, b.OR)(e, t), [e])];
         })(e.id),
         i = u.useMemo(() => (0, N.yH)(e), [e]),
         a = i.includes(x.cd.DESKTOP),
@@ -639,7 +639,7 @@ function eu(e) {
     u.useEffect(() => {
         null != r &&
             i.current !== t &&
-            ((0, b.Ic)({
+            ((0, T.Ic)({
                 mode: t,
                 prevMode: i.current,
                 questContent: n,
@@ -650,7 +650,7 @@ function eu(e) {
         u.useEffect(() => {
             if (null != r)
                 return () => {
-                    (0, b.Ic)({
+                    (0, T.Ic)({
                         mode: null,
                         prevMode: i.current,
                         questContent: n,

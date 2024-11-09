@@ -14,12 +14,12 @@ var r = n(200651),
     c = n(390507),
     d = n(679400),
     f = n(580747),
-    _ = n(529961);
+    _ = n(657375);
 let h = i.forwardRef(function (e, t) {
     let { color: a, src: o, size: h = 'md', width: p, height: m, className: g, initialAnimation: E, markers: v } = e,
         [I, S] = i.useState(null),
-        b = i.useRef(null),
         T = i.useRef(null),
+        b = i.useRef(null),
         y = i.useRef(null),
         A =
             'custom' === h
@@ -39,7 +39,7 @@ let h = i.forwardRef(function (e, t) {
             () => ({
                 play: (e) => {
                     if (null != y.current) {
-                        if (((T.current = e), O)) {
+                        if (((b.current = e), O)) {
                             let t = v[e];
                             y.current.resetSegments(!0), y.current.setSegment(t.start + t.duration, t.start + t.duration), y.current.stop();
                         } else y.current.setLoop(!N && e.includes('hover')), y.current.resetSegments(!0), y.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
@@ -49,7 +49,7 @@ let h = i.forwardRef(function (e, t) {
                     if (null == y.current || O) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != y.current && !O && T.current === e && (y.current.resetSegments(!0), y.current.setSegment(v[e].start, v[e].start), y.current.stop());
+                    null != y.current && !O && b.current === e && (y.current.resetSegments(!0), y.current.setSegment(v[e].start, v[e].start), y.current.stop());
                 }
             }),
             [O, N, v]
@@ -66,14 +66,14 @@ let h = i.forwardRef(function (e, t) {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = T.current) && void 0 !== t ? t : D.current;
+                            i = null !== (t = b.current) && void 0 !== t ? t : D.current;
                         if (null != i && null != v[i]) {
                             let e = v[i];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != b.current &&
+                        null != T.current &&
                             (y.current = r.loadAnimation({
-                                container: b.current,
+                                container: T.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -95,7 +95,7 @@ let h = i.forwardRef(function (e, t) {
                 ...A
             },
             className: s()(_.lottieIcon, g),
-            ref: b
+            ref: T
         })
     );
 });

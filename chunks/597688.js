@@ -16,31 +16,31 @@ let E = new Map(),
     v = new Map(),
     I = [],
     S = E,
-    b = v,
-    T = I,
+    T = v,
+    b = I,
     y = null,
     A = !1,
     N = new Set();
 let C = {},
     R = (e, t) => {
         if (0 === e.length) {
-            T = I;
+            b = I;
             return;
         }
         switch (y) {
             case h.u.POPULAR:
-                T = g.HU;
+                b = g.HU;
                 break;
             case h.u.RECENT:
-                T = (0, m.x0)(e, t);
+                b = (0, m.x0)(e, t);
                 break;
             case h.u.NONE:
             default:
-                T = I;
+                b = I;
         }
     },
     O = () => {
-        (S = E), (b = v), (T = I), (y = null), (i = void 0), (A = !1), (N = new Set()), (r = void 0), (a = void 0), (C = {});
+        (S = E), (T = v), (b = I), (y = null), (i = void 0), (A = !1), (N = new Set()), (r = void 0), (a = void 0), (C = {});
     },
     D = () => {
         if (!_.Z.hasLoadedExperiments) return;
@@ -73,16 +73,16 @@ class L extends (s = d.ZP.Store) {
         return S;
     }
     get products() {
-        return b;
+        return T;
     }
     get recommendedGiftSkuIds() {
-        return T;
+        return b;
     }
     getCategory(e) {
         return null != e ? S.get(e) : void 0;
     }
     getProduct(e) {
-        return null != e ? b.get(e) : void 0;
+        return null != e ? T.get(e) : void 0;
     }
     getCategoryForProduct(e) {
         let t = this.getProduct(e);
@@ -103,11 +103,11 @@ class L extends (s = d.ZP.Store) {
             (A = !0), (r = void 0), (a = void 0), (C = e.options);
         },
         COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
-            0 === e.categories.length ? ((S = E), (b = v)) : !(0, c.isEqual)([...S.values()], e.categories) && ((S = new Map(e.categories.map((e) => [e.skuId, e]))), (b = new Map((0, m.Cs)(S).map((e) => [e.skuId, e])))), R(e.categories, b), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
+            0 === e.categories.length ? ((S = E), (T = v)) : !(0, c.isEqual)([...S.values()], e.categories) && ((S = new Map(e.categories.map((e) => [e.skuId, e]))), (T = new Map((0, m.Cs)(S).map((e) => [e.skuId, e])))), R(e.categories, T), (i = Date.now()), (A = !1), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (S = E), (b = v), (T = I), (A = !1), (N = new Set()), (r = t), (a = Date.now());
+            (S = E), (T = v), (b = I), (A = !1), (N = new Set()), (r = t), (a = Date.now());
         },
         COLLECTIBLES_PRODUCT_FETCH: (e) => {
             let { skuId: t } = e;
@@ -115,7 +115,7 @@ class L extends (s = d.ZP.Store) {
         },
         COLLECTIBLES_PRODUCT_FETCH_SUCCESS: (e) => {
             let { skuId: t, product: n } = e;
-            b.set(t, n), (N = new Set(N)).delete(t), (r = void 0), (a = void 0);
+            T.set(t, n), (N = new Set(N)).delete(t), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_PRODUCT_FETCH_FAILURE: (e) => {
             let { skuId: t, error: n } = e;

@@ -47,8 +47,8 @@ var r,
     v = n(592125),
     I = n(430824),
     S = n(594174),
-    b = n(626135),
-    T = n(254711),
+    T = n(626135),
+    b = n(254711),
     y = n(700089),
     A = n(654455),
     N = n(963456),
@@ -302,7 +302,7 @@ class $ extends (r = c.ZP.Store) {
                 l &&
                 null != e &&
                 eu(e) &&
-                (b.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                     miss: null == r.result,
                     size: Object.keys(ee.indices).length
                 }),
@@ -503,7 +503,7 @@ function et(e, t, n) {
                 n &&
                     t &&
                     eu(e) &&
-                    (b.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == a.result,
                         size: Object.keys(ee.indices).length
                     }),
@@ -534,7 +534,7 @@ function en(e, t) {
             n &&
                 null != e &&
                 (t &&
-                    (b.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
+                    (T.default.track(w.rMx.APPLICATION_COMMAND_CACHE_FETCH, {
                         miss: null == i.result,
                         size: Object.keys(ee.indices).length
                     }),
@@ -595,11 +595,11 @@ function ei(e, t, n, r) {
                   loading: l
               }
             : {
-                  descriptors: [T.Tm[x.bi.FRECENCY], ...i],
+                  descriptors: [b.Tm[x.bi.FRECENCY], ...i],
                   commands: e.concat(a),
                   sectionedCommands: [
                       {
-                          section: T.Tm[x.bi.FRECENCY],
+                          section: b.Tm[x.bi.FRECENCY],
                           data: e
                       },
                       ...o
@@ -663,12 +663,12 @@ function es(e, t, n) {
 }
 function eo(e) {
     var t, n, r, i, a, s, o;
-    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: p = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: S = C.p.NONE, sortOptions: b = ea, installOnDemand: y = !1 } = e,
+    let { permissionContext: u, contextState: c, userState: d, applicationStates: f, text: _, builtIns: p = C.D.ALLOW, allowApplicationCommands: m = !0, singleApplicationId: E, allowEmptySections: v = !1, scoreMethod: S = C.p.NONE, sortOptions: T = ea, installOnDemand: y = !1 } = e,
         { commandTypes: N } = u,
         R = null == _ ? void 0 : _.toLowerCase(),
         O = null == R ? void 0 : R.split(' '),
         D = p === C.D.ONLY_TEXT,
-        L = p !== C.D.DENY ? (0, T.Kh)(N, !0, D) : [],
+        L = p !== C.D.DENY ? (0, b.Kh)(N, !0, D) : [],
         w = [],
         M = {
             permissionContext: u,
@@ -721,15 +721,15 @@ function eo(e) {
         null != u && w.push(u);
     }
     if (
-        (b.applications.useFrecency && g.DZ.loadIfNecessary(),
+        (T.applications.useFrecency && g.DZ.loadIfNecessary(),
         w.sort((e, t) => {
-            if (b.applications.useScore && S === C.p.APPLICATION_ONLY) {
+            if (T.applications.useScore && S === C.p.APPLICATION_ONLY) {
                 var n, r, i, a;
                 let s = null !== (i = null === (n = e.data[0]) || void 0 === n ? void 0 : n.score) && void 0 !== i ? i : Number.MAX_VALUE,
                     o = null !== (a = null === (r = t.data[0]) || void 0 === r ? void 0 : r.score) && void 0 !== a ? a : Number.MAX_VALUE;
                 if (s !== o) return s - o;
             }
-            if (b.applications.useFrecency) {
+            if (T.applications.useFrecency) {
                 let n = h.Z.getScoreWithoutLoadingLatest(e.section.id),
                     r = h.Z.getScoreWithoutLoadingLatest(t.section.id);
                 if (n !== r) return r - n;
@@ -738,7 +738,7 @@ function eo(e) {
         }),
         L.length > 0 || !0 === v)
     ) {
-        let e = el(T.Tm[x.bi.BUILT_IN], L, !0, !0, M);
+        let e = el(b.Tm[x.bi.BUILT_IN], L, !0, !0, M);
         null != e && w.push(e);
     }
     let B = w.flatMap((e) =>
@@ -750,7 +750,7 @@ function eo(e) {
     if (S === C.p.COMMAND_ONLY || S === C.p.COMMAND_OR_APPLICATION) {
         let e = u.context,
             t = I.Z.getGuild(null == u ? void 0 : null === (o = u.context) || void 0 === o ? void 0 : o.guild_id);
-        b.commands.useFrecency && g.DZ.loadIfNecessary();
+        T.commands.useFrecency && g.DZ.loadIfNecessary();
         let n =
             null != e
                 ? {
@@ -759,13 +759,13 @@ function eo(e) {
                   }
                 : void 0;
         B.sort((e, t) => {
-            if (b.commands.useScore) {
+            if (T.commands.useScore) {
                 var r, i;
                 let n = null !== (r = e.score) && void 0 !== r ? r : 0,
                     a = null !== (i = t.score) && void 0 !== i ? i : 0;
                 if (n !== a) return n - a;
             }
-            if (b.commands.useFrecency) {
+            if (T.commands.useFrecency) {
                 let r = A.ZP.getScoreWithoutLoadingLatest(n, e),
                     i = A.ZP.getScoreWithoutLoadingLatest(n, t);
                 if (r !== i) return i - r;
@@ -921,8 +921,8 @@ function em(e, t) {
     let l, u;
     if (t === x.bi.BUILT_IN)
         return {
-            descriptor: T.Tm[x.bi.BUILT_IN],
-            sectionCommands: (0, T.Kh)([_.yU.CHAT], !0, !1),
+            descriptor: b.Tm[x.bi.BUILT_IN],
+            sectionCommands: (0, b.Kh)([_.yU.CHAT], !0, !1),
             isGuildInstalled: !0,
             isUserInstalled: !0
         };

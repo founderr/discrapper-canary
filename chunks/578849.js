@@ -195,8 +195,8 @@ function I(e, { joinWith: t }) {
         .join(t);
 }
 let S = '[a-zA-Z]\\w*',
-    b = '[a-zA-Z_]\\w*',
-    T = '\\b\\d+(\\.\\d+)?',
+    T = '[a-zA-Z_]\\w*',
+    b = '\\b\\d+(\\.\\d+)?',
     y = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
     A = '\\b(0b[01]+)',
     N = {
@@ -230,8 +230,8 @@ var L = Object.freeze({
     __proto__: null,
     MATCH_NOTHING_RE: /\b\B/,
     IDENT_RE: S,
-    UNDERSCORE_IDENT_RE: b,
-    NUMBER_RE: T,
+    UNDERSCORE_IDENT_RE: T,
+    NUMBER_RE: b,
     C_NUMBER_RE: y,
     BINARY_NUMBER_RE: A,
     RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
@@ -275,7 +275,7 @@ var L = Object.freeze({
     HASH_COMMENT_MODE: D,
     NUMBER_MODE: {
         scope: 'number',
-        begin: T,
+        begin: b,
         relevance: 0
     },
     C_NUMBER_MODE: {
@@ -315,11 +315,11 @@ var L = Object.freeze({
     },
     UNDERSCORE_TITLE_MODE: {
         scope: 'title',
-        begin: b,
+        begin: T,
         relevance: 0
     },
     METHOD_GUARD: {
-        begin: '\\.\\s*' + b,
+        begin: '\\.\\s*' + T,
         relevance: 0
     },
     END_SAME_AS_BEGIN: function (e) {
@@ -440,7 +440,7 @@ var q = (function (e) {
     function S(e) {
         return v.noHighlightRe.test(e);
     }
-    function b(e, t, n) {
+    function T(e, t, n) {
         let r = '',
             i = '';
         'object' == typeof t ? ((r = e), (n = t.ignoreIllegals), (i = t.language)) : (j('10.7.0', 'highlight(lang, code, ...args) has been deprecated.'), j('10.7.0', 'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'), (i = e), (r = t)), void 0 === n && (n = !0);
@@ -449,10 +449,10 @@ var q = (function (e) {
             language: i
         };
         x('before:highlight', a);
-        let s = a.result ? a.result : T(a.language, a.code, n);
+        let s = a.result ? a.result : b(a.language, a.code, n);
         return (s.code = a.code), x('after:highlight', s), s;
     }
-    function T(e, t, s, o) {
+    function b(e, t, s, o) {
         let c = Object.create(null);
         function d() {
             if (!N.keywords) {
@@ -490,7 +490,7 @@ var q = (function (e) {
                               O.addText(D);
                               return;
                           }
-                          (e = T(N.subLanguage, D, !0, C[N.subLanguage])), (C[N.subLanguage] = e._top);
+                          (e = b(N.subLanguage, D, !0, C[N.subLanguage])), (C[N.subLanguage] = e._top);
                       } else e = y(D, N.subLanguage.length ? N.subLanguage : null);
                       N.relevance > 0 && (L += e.relevance), O.addSublanguage(e._emitter, e.language);
                   })()
@@ -577,7 +577,7 @@ var q = (function (e) {
         }
         let S = R(e);
         if (!S) throw (F(u.replace('{}', e)), Error('Unknown language: "' + e + '"'));
-        let b = (function (e) {
+        let T = (function (e) {
                 function t(t, n) {
                     return RegExp(f(t), 'm' + (e.case_insensitive ? 'i' : '') + (e.unicodeRegex ? 'u' : '') + (n ? 'g' : ''));
                 }
@@ -724,7 +724,7 @@ var q = (function (e) {
                 );
             })(S),
             A = '',
-            N = o || b,
+            N = o || T,
             C = {},
             O = new v.__emitter(v);
         !(function () {
@@ -804,7 +804,7 @@ var q = (function (e) {
             a = t
                 .filter(R)
                 .filter(D)
-                .map((t) => T(t, e, !1));
+                .map((t) => b(t, e, !1));
         a.unshift(r);
         let [s, o] = a.sort((e, t) => {
             if (e.relevance !== t.relevance) return t.relevance - e.relevance;
@@ -839,7 +839,7 @@ var q = (function (e) {
             throw new K('One of your code blocks includes unescaped HTML.', e.innerHTML);
         let r = (t = e).textContent,
             i = n
-                ? b(r, {
+                ? T(r, {
                       language: n,
                       ignoreIllegals: !0
                   })
@@ -901,7 +901,7 @@ var q = (function (e) {
         });
     }
     for (let r in (Object.assign(e, {
-        highlight: b,
+        highlight: T,
         highlightAuto: y,
         highlightAll: C,
         highlightElement: A,

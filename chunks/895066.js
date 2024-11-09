@@ -171,8 +171,8 @@ class c {
             let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: I, numRateSamples: S } = m;
             if (void 0 !== I && v > I) {
                 var t, n, r, i, a, s, o, l, u, c, d, f, _, h;
-                let b = v - I,
-                    T = {
+                let T = v - I,
+                    b = {
                         userId: p,
                         silent: null !== (n = E.silent) && void 0 !== n ? n : 0 - (null !== (t = g.silent) && void 0 !== t ? t : 0),
                         normal: null !== (i = E.normal) && void 0 !== i ? i : 0 - (null !== (r = g.normal) && void 0 !== r ? r : 0),
@@ -185,9 +185,9 @@ class c {
                         expandRate: m.expandRateSum / S,
                         preemptiveExpandRate: m.preemptiveExpandRateSum / S,
                         speechExpandRate: m.speechExpandRateSum / S,
-                        durationMs: b
+                        durationMs: T
                     };
-                T.normal + T.merged + T.expanded + T.accelerated + T.preemptiveExpanded > 0 && e.push(T);
+                b.normal + b.merged + b.expanded + b.accelerated + b.preemptiveExpanded > 0 && e.push(b);
             }
             (this.periodicInboundStats[p].accelerateRateSum = 0), (this.periodicInboundStats[p].expandRateSum = 0), (this.periodicInboundStats[p].preemptiveExpandRateSum = 0), (this.periodicInboundStats[p].speechExpandRateSum = 0), (this.periodicInboundStats[p].numRateSamples = 0), (this.periodicInboundStats[p].previous = E), (this.periodicInboundStats[p].previousTimestampMs = v);
         }
@@ -238,8 +238,8 @@ class c {
                             if ('audio' === t.type) {
                                 var r, a, s, o, l, u, c, d, f, _, h, p, m, g, E, v, I;
                                 let S = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
-                                    b = t.packetsReceived,
-                                    T = t.packetsLost,
+                                    T = t.packetsReceived,
+                                    b = t.packetsLost,
                                     y = t.bytesReceived,
                                     A = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
                                     N = null !== (s = t.fecPacketsDiscarded) && void 0 !== s ? s : 0,
@@ -268,15 +268,15 @@ class c {
                                         decryptAttempts: null !== (f = t.decryptAttempts) && void 0 !== f ? f : 0
                                     };
                                 if (null != this.inboundStats[n]) {
-                                    let e = b - this.inboundStats[n].packetsReceived,
-                                        r = T - this.inboundStats[n].packetsLost,
+                                    let e = T - this.inboundStats[n].packetsReceived,
+                                        r = b - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         s = this.inboundStats[n].mosBuckets;
                                     e > 0 && r >= 0 && ((a = this.calculateMos(S + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
-                                            packetsReceived: b,
+                                            packetsReceived: T,
                                             bytesReceived: y,
-                                            packetsLost: T,
+                                            packetsLost: b,
                                             fecPacketsReceived: A,
                                             fecPacketsDiscarded: N,
                                             mos: a,
@@ -300,9 +300,9 @@ class c {
                                         });
                                 } else
                                     (this.inboundStats[n] = {
-                                        packetsReceived: b,
+                                        packetsReceived: T,
                                         bytesReceived: y,
-                                        packetsLost: T,
+                                        packetsLost: b,
                                         fecPacketsReceived: A,
                                         fecPacketsDiscarded: N,
                                         mos: 0,

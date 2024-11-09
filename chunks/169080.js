@@ -14,7 +14,7 @@ var r = n(200651),
     d = n(5192),
     f = n(709737),
     _ = n(388032),
-    h = n(696294);
+    h = n(553928);
 function p(e) {
     var t, n;
     let { generateImageRef: a, leaderboard: p, userId: m, guildId: g } = e,
@@ -23,8 +23,8 @@ function p(e) {
         I = i.useMemo(() => p.users.findIndex((e) => e.user_id === m) + 1, [p, m]),
         S = i.useMemo(() => p.users.find((e) => e.user_id === m), [p, m]);
     s()(null != S, 'User row should not be null');
-    let b = d.ZP.getName(g, void 0, E),
-        T = null !== (n = null === (t = S.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
+    let T = d.ZP.getName(g, void 0, E),
+        b = null !== (n = null === (t = S.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
     return (0, r.jsxs)('div', {
         ref: a,
         className: h.container,
@@ -53,7 +53,7 @@ function p(e) {
                         className: h.title,
                         variant: 'text-md/semibold',
                         children: _.intl.format(_.t.tluICw, {
-                            username: b,
+                            username: T,
                             rank: I
                         })
                     }),
@@ -62,7 +62,7 @@ function p(e) {
                         location: u.Gt.EMBED,
                         children: [
                             (0, r.jsx)(f.DC, {
-                                value: T,
+                                value: b,
                                 statisticId: v
                             }),
                             (0, r.jsx)(f.Js, {

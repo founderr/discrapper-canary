@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(420212),
     I = n(231338),
     S = n(388032),
-    b = n(667854);
-let T = (e) => {
+    T = n(209960);
+let b = (e) => {
     let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
         a = ':'.concat(t.name, ':');
     switch (r) {
@@ -68,7 +68,7 @@ function y(e) {
     let w = async (e) => {
         if (null == e) return;
         A({ action: N });
-        let n = T({
+        let n = b({
             emoji: e,
             username: c.ZP.getName(t),
             sourceType: u,
@@ -87,7 +87,7 @@ function y(e) {
         R(g.P.REACT);
     };
     return (0, r.jsx)(o.Z, {
-        headerClassName: L ? b.noBoxShadowMargin : void 0,
+        headerClassName: L ? T.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
         closePopout: I.dG,
         onSelectEmoji: async (e, t) => {

@@ -16,8 +16,8 @@ var s,
     v = n(710845),
     I = n(594190),
     S = n(314897),
-    b = n(553795),
-    T = n(517100),
+    T = n(553795),
+    b = n(517100),
     y = n(158776),
     A = n(606304),
     N = n(979651),
@@ -245,7 +245,7 @@ function ef() {
 }
 function e_() {
     let e = Object.keys(J),
-        t = b.Z.getAccounts().filter((e) => {
+        t = T.Z.getAccounts().filter((e) => {
             let { type: t } = e;
             return t === w.ABu.SPOTIFY;
         });
@@ -292,7 +292,7 @@ function em(e, t, n) {
     var r, i, a, s, o, l, u, c, d, f, _, h, m, g;
     let E,
         v,
-        { device: I, progress_ms: S, is_playing: b, repeat_state: T, item: y, context: A } = n;
+        { device: I, progress_ms: S, is_playing: T, repeat_state: b, item: y, context: A } = n;
     if (null != y && y.type === x.Hw.TRACK) {
         let e = y.id;
         null != y.linked_from && null != y.linked_from.id && (e = y.linked_from.id),
@@ -360,8 +360,8 @@ function em(e, t, n) {
                 accountId: e,
                 track: E,
                 volumePercent: null != I ? I.volume_percent : 0,
-                isPlaying: b,
-                repeat: 'off' !== T,
+                isPlaying: T,
+                repeat: 'off' !== b,
                 position: S,
                 context: t,
                 device: I
@@ -383,7 +383,7 @@ function eg(e, t) {
 }
 class eE extends (o = f.ZP.Store) {
     initialize() {
-        this.waitFor(b.Z, A.Z),
+        this.waitFor(T.Z, A.Z),
             this.syncWith([y.Z], () =>
                 (function () {
                     if (null == i || null == er()) return !1;
@@ -445,7 +445,7 @@ class eE extends (o = f.ZP.Store) {
         return ee[e];
     }
     shouldShowActivity() {
-        return null != r && r.account.showActivity && !T.Z.isIdle();
+        return null != r && r.account.showActivity && !b.Z.isIdle();
     }
     getActivity() {
         let e, t, n;
@@ -522,7 +522,7 @@ let ev = new eE(p.Z, {
             } else ($[t] = [l]), (d = !0);
         }
         n ? null == en || en.start(G, eh) : ((s = null), null == en || en.stop());
-        let f = b.Z.getAccount(t, w.ABu.SPOTIFY);
+        let f = T.Z.getAccount(t, w.ABu.SPOTIFY);
         if (null == f) return d;
         let h = ee[t],
             m =

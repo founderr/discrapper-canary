@@ -21,7 +21,7 @@ n.d(t, {
         return y;
     },
     Vj: function () {
-        return T;
+        return b;
     },
     gO: function () {
         return N;
@@ -33,7 +33,7 @@ n.d(t, {
         return D;
     },
     qE: function () {
-        return b;
+        return T;
     },
     v6: function () {
         return L;
@@ -57,7 +57,7 @@ var i = n(120356),
     _ = n(63063),
     h = n(981631),
     p = n(388032),
-    m = n(704042);
+    m = n(878145);
 let g = s.Avatar;
 null == g && (g = () => null);
 let E = (e) => {
@@ -101,7 +101,7 @@ let E = (e) => {
         });
     };
 (S.Looks = s.Button.Looks), (S.Colors = s.Button.Colors), (S.Sizes = s.Button.Sizes);
-let b = (e) => {
+let T = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(g, {
             src: n,
@@ -110,7 +110,7 @@ let b = (e) => {
             'aria-hidden': !0
         });
     },
-    T = (e) => {
+    b = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
         return (0, r.jsx)(d.Z, {
             active: !0,
@@ -120,7 +120,7 @@ let b = (e) => {
             className: a
         });
     };
-T.Sizes = d.Z.Sizes;
+b.Sizes = d.Z.Sizes;
 let y = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(g, {
@@ -132,7 +132,7 @@ let y = (e) => {
 };
 y.Sizes = s.AvatarSizes;
 let A = (e) => {
-        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: h, autoFocus: p, maxLength: g, spellCheck: E, name: v, description: I, required: S, onFocus: b, onBlur: T } = e,
+        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: h, autoFocus: p, maxLength: g, spellCheck: E, name: v, description: I, required: S, onFocus: T, onBlur: b } = e,
             y = (0, c.Dt)();
         return (0, r.jsxs)(s.FormItem, {
             title: t,
@@ -156,8 +156,8 @@ let A = (e) => {
                     maxLength: g,
                     spellCheck: E,
                     id: y,
-                    onFocus: b,
-                    onBlur: T
+                    onFocus: T,
+                    onBlur: b
                 }),
                 null != I
                     ? (0, r.jsx)(s.FormText, {
@@ -245,7 +245,7 @@ let A = (e) => {
                           color: 'header-secondary',
                           children: p.intl.string(p.t['/8WWvL'])
                       }),
-                      (0, r.jsx)(b, {
+                      (0, r.jsx)(T, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.AvatarSizes.SIZE_24,

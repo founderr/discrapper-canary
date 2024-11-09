@@ -41,7 +41,7 @@ var i = n(200651),
     A = n(128449),
     M = n(46140),
     w = n(388032),
-    L = n(816417);
+    L = n(877861);
 function R(e) {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {

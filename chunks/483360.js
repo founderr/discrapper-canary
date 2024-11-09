@@ -26,8 +26,8 @@ var i = n(658722),
     v = n(926491),
     I = n(373228),
     S = n(601070),
-    b = n(675478),
-    T = n(131704),
+    T = n(675478),
+    b = n(131704),
     y = n(598077),
     A = n(592125),
     N = n(984933),
@@ -101,7 +101,7 @@ function ea(e) {
         p = 0,
         m = 0;
     for (; p < h; ) {
-        var g, E, v, I, S, b, T, A, N;
+        var g, E, v, I, S, T, b, A, N;
         let e, r;
         let u = n[p];
         u instanceof y.Z ? ((r = u), (e = null === (E = C.ZP.getNick(l, r.id)) || void 0 === E ? void 0 : E.toLocaleLowerCase())) : ((e = null === (v = u.nick) || void 0 === v ? void 0 : v.toLocaleLowerCase()), (r = o[u.userId]));
@@ -127,8 +127,8 @@ function ea(e) {
                         type: Y.h8.USER,
                         record: r,
                         score: 1,
-                        comparator: null !== (b = null != h ? h : e) && void 0 !== b ? b : n,
-                        sortable: null !== (T = null != p ? p : l) && void 0 !== T ? T : i
+                        comparator: null !== (T = null != h ? h : e) && void 0 !== T ? T : n,
+                        sortable: null !== (b = null != p ? p : l) && void 0 !== b ? b : i
                     })
                   : m < 50 &&
                     (a()(c, i) || a()(d, o) || (null != l && a()(c, l)) || (null != u && a()(d, u)) || (null != p && a()(c, p)) || (null != g && a()(d, g))) &&
@@ -318,8 +318,8 @@ t.ZP = {
         let m = {},
             g = [];
         for (let e of t) {
-            var E, v, I, b, y;
-            if (((E = l), (v = e.type), (I = null != r), !(E === v || ((I || (0, T.Km)(v)) && (E === N.sH ? (0, T.r8)(v) || (0, T.bw)(v) : E === N.Zb && (0, T.bw)(v)))) || ((0, T.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            var E, v, I, T, y;
+            if (((E = l), (v = e.type), (I = null != r), !(E === v || ((I || (0, b.Km)(v)) && (E === N.sH ? (0, b.r8)(v) || (0, b.bw)(v) : E === N.Zb && (0, b.bw)(v)))) || ((0, b.Km)(e.type) && !D.Z.can(f ? e.accessPermissions : H.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...p],
                 i = e.name.toLocaleLowerCase(),
                 o = h && n === e.id,
@@ -353,9 +353,9 @@ t.ZP = {
                     u = Math.min(6, u);
                 }
                 if (0 === u || t.length > 1 || (1 === t.length && !t[0].isFullMatch && !o)) continue;
-                if (((b = l), (y = e.type), b === N.sH && (0, T.bw)(y))) u = Math.max(u - 1, 0.5);
+                if (((T = l), (y = e.type), T === N.sH && (0, b.bw)(y))) u = Math.max(u - 1, 0.5);
                 g.push({
-                    type: (0, T.bw)(e.type) ? Y.h8.VOICE_CHANNEL : Y.h8.TEXT_CHANNEL,
+                    type: (0, b.bw)(e.type) ? Y.h8.VOICE_CHANNEL : Y.h8.TEXT_CHANNEL,
                     record: e,
                     score: et(u, _[e.id]),
                     comparator: (0, c.F6)(e, P.default, x.Z),
@@ -649,7 +649,7 @@ t.ZP = {
             if ((e.id !== W.HY.SERVER_GUIDE || !!a) && (e.id !== W.HY.CHANNEL_BROWSER || !!s) && (e.id !== W.HY.CUSTOMIZE_COMMUNITY || !!o))
                 er(e.name.toLocaleLowerCase(), i, !1) > 0 &&
                     u.push(
-                        new T.nl({
+                        new b.nl({
                             id: e.id,
                             name: e.name,
                             type: H.d4z.UNKNOWN,
@@ -718,7 +718,7 @@ t.ZP = {
     queryEmojiResults(e) {
         let { query: t, channel: n, intention: r, maxCount: i = H.rnv, matchComparator: a } = e;
         return (
-            b.DZ.loadIfNecessary(),
+            T.DZ.loadIfNecessary(),
             {
                 emojis: h.ZP.searchWithoutFetchingLatest({
                     channel: n,
@@ -737,7 +737,7 @@ t.ZP = {
             a = P.default.getCurrentUser(),
             s = new Set(),
             l = [];
-        for (let o of (b.DZ.loadIfNecessary(), e)) {
+        for (let o of (T.DZ.loadIfNecessary(), e)) {
             if ('' === o) continue;
             let e = o.toLocaleLowerCase(),
                 u = (0, V._I)(e),

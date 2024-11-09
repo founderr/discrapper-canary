@@ -28,8 +28,8 @@ var r,
     v = n(823379),
     I = n(709054),
     S = n(314897),
-    b = n(592125),
-    T = n(430824),
+    T = n(592125),
+    b = n(430824),
     y = n(372897);
 let A = new h.Z('GuildMemberStore'),
     N = {},
@@ -100,8 +100,8 @@ function j(e, t) {
 }
 function H(e) {
     let { userId: t, nick: n, guildId: r, avatar: i, avatarDecoration: a, guildRoles: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: d, unusualDMActivityUntil: f, fullProfileLoadedTimestamp: _, flags: h } = e,
-        { colorString: p, colorRoleId: m, iconRoleId: E, hoistRoleId: v, highestRoleId: b } = j(s, o),
-        T = {
+        { colorString: p, colorRoleId: m, iconRoleId: E, hoistRoleId: v, highestRoleId: T } = j(s, o),
+        b = {
             userId: t,
             nick: n,
             guildId: r,
@@ -112,7 +112,7 @@ function H(e) {
             colorRoleId: m,
             iconRoleId: E,
             hoistRoleId: v,
-            highestRoleId: b,
+            highestRoleId: T,
             premiumSince: l,
             isPending: u,
             joinedAt: c,
@@ -121,18 +121,18 @@ function H(e) {
             fullProfileLoadedTimestamp: _,
             flags: h
         };
-    if (null == N[r]) return T;
+    if (null == N[r]) return b;
     if (t === S.default.getId()) {
         if (g.Z.isViewingRoles(r) || g.Z.isFullServerPreview(r)) {
             let e = g.Z.getViewingRoles(r);
             C[r] = {
-                ...T,
+                ...b,
                 ...g.Z.getMemberOptions(r),
                 roles: null != e ? I.default.keys(e) : []
             };
         } else null != C[r] && delete C[r];
     }
-    return T;
+    return b;
 }
 ((a = r || (r = {}))[(a.GUILD = 0)] = 'GUILD'), (a[(a.USER = 1)] = 'USER');
 function Y(e) {
@@ -162,7 +162,7 @@ function W(e) {
     let { guildId: n, user: r, nick: i, avatar: a, avatarDecoration: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: d, unusualDMActivityUntil: f, flags: _ } = e,
         h = N[n];
     if (null == h) return !1;
-    let p = T.Z.getGuild(n);
+    let p = b.Z.getGuild(n);
     if (null == p) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
     (h[r.id] = H({
         userId: r.id,
@@ -176,7 +176,7 @@ function W(e) {
                       skuId: s.sku_id
                   }
                 : void 0,
-        guildRoles: T.Z.getRoles(p.id),
+        guildRoles: b.Z.getRoles(p.id),
         roles: o,
         premiumSince: l,
         isPending: u,
@@ -191,7 +191,7 @@ function W(e) {
 function K(e, t) {
     let n = N[e];
     if (null == n) return !1;
-    let r = T.Z.getGuild(e);
+    let r = b.Z.getGuild(e);
     return null == r
         ? (A.warn('Guild '.concat(e, ' not found during batchUpdateGuildMembers.')), !1)
         : (t.forEach((t) => {
@@ -203,7 +203,7 @@ function K(e, t) {
                   guildId: e,
                   avatar: t.avatar,
                   avatarDecoration: z(t),
-                  guildRoles: T.Z.getRoles(r.id),
+                  guildRoles: b.Z.getRoles(r.id),
                   roles: t.roles,
                   premiumSince: t.premium_since,
                   isPending: t.pending,
@@ -235,7 +235,7 @@ function q(e, t) {
 function Q(e) {
     let t = e.id;
     !(t in N) && (N[e.id] = {});
-    let n = T.Z.getGuild(t);
+    let n = b.Z.getGuild(t);
     if (null == n) return !1;
     let r = N[t];
     for (let a of e.members) {
@@ -248,7 +248,7 @@ function Q(e) {
                 guildId: e.id,
                 avatar: a.avatar,
                 avatarDecoration: z(a),
-                guildRoles: T.Z.getRoles(n.id),
+                guildRoles: b.Z.getRoles(n.id),
                 roles: a.roles,
                 premiumSince: a.premium_since,
                 isPending: a.pending,
@@ -265,7 +265,7 @@ function Q(e) {
 function X(e) {
     let t = N[e.guildId];
     if (null == t) return !1;
-    let n = T.Z.getGuild(e.guildId);
+    let n = b.Z.getGuild(e.guildId);
     if (null == n) return A.warn('Guild '.concat(e.guildId, ' not found during ').concat(e.type, '.')), !1;
     let r = S.default.getId();
     for (let i of I.default.keys(t)) {
@@ -278,7 +278,7 @@ function X(e) {
                 guildId: e.guildId,
                 avatar: a.avatar,
                 avatarDecoration: a.avatarDecoration,
-                guildRoles: T.Z.getRoles(n.id),
+                guildRoles: b.Z.getRoles(n.id),
                 roles: s,
                 premiumSince: a.premiumSince,
                 isPending: a.isPending,
@@ -294,7 +294,7 @@ function J(e) {
     let { guildId: t } = e,
         n = N[t];
     if (null == n) return !1;
-    let r = T.Z.getGuild(t);
+    let r = b.Z.getGuild(t);
     if (null == r) return A.warn('Guild '.concat(t, ' not found during IMPERSONATE_UPDATE.')), !1;
     let i = S.default.getId(),
         a = n[i];
@@ -304,7 +304,7 @@ function J(e) {
         guildId: t,
         avatar: a.avatar,
         avatarDecoration: a.avatarDecoration,
-        guildRoles: T.Z.getRoles(r.id),
+        guildRoles: b.Z.getRoles(r.id),
         roles: a.roles,
         premiumSince: a.premiumSince,
         isPending: a.isPending,
@@ -341,7 +341,7 @@ function ee(e) {
         (function (e) {
             var t;
             if ((null === (t = e.resolved) || void 0 === t ? void 0 : t.members) == null) return;
-            let n = b.Z.getChannel(e.channel_id);
+            let n = T.Z.getChannel(e.channel_id);
             !(null == n || n.isPrivate()) &&
                 Q({
                     id: n.guild_id,
@@ -367,7 +367,7 @@ function et(e) {
 }
 class en extends (i = f.ZP.Store) {
     initialize() {
-        this.waitFor(T.Z, S.default, g.Z);
+        this.waitFor(b.Z, S.default, g.Z);
     }
     getMutableAllGuildsAndMembers() {
         return N;
@@ -533,7 +533,7 @@ class en extends (i = f.ZP.Store) {
                 d = N[i],
                 f = null != d ? d[u] : null;
             if (null == f) return !1;
-            let _ = T.Z.getGuild(i);
+            let _ = b.Z.getGuild(i);
             if (null == _) return !1;
             let h = null !== (t = M[i]) && void 0 !== t ? t : {};
             (M[i] = {
@@ -546,7 +546,7 @@ class en extends (i = f.ZP.Store) {
                     nick: f.nick,
                     avatar: f.avatar,
                     avatarDecoration: f.avatarDecoration,
-                    guildRoles: T.Z.getRoles(_.id),
+                    guildRoles: b.Z.getRoles(_.id),
                     roles: null != a ? a : f.roles,
                     premiumSince: f.premiumSince,
                     isPending: f.isPending,
@@ -593,12 +593,12 @@ class en extends (i = f.ZP.Store) {
             let { guildId: t, userId: n, roleId: r } = e,
                 i = N[t];
             if (null == i) return !1;
-            let a = T.Z.getGuild(t);
+            let a = b.Z.getGuild(t);
             if (null == a) return A.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             let s = i[n];
             if (null == s || !s.roles.includes(r)) return !1;
             s.roles = s.roles.filter((e) => e !== r);
-            let o = j(T.Z.getRoles(a.id), s.roles);
+            let o = j(b.Z.getRoles(a.id), s.roles);
             return (
                 (i[n] = {
                     ...s,
@@ -611,12 +611,12 @@ class en extends (i = f.ZP.Store) {
             let { guildId: t, userId: n, roleId: r } = e,
                 i = N[t];
             if (null == i) return !1;
-            let a = T.Z.getGuild(t);
+            let a = b.Z.getGuild(t);
             if (null == a) return A.warn('Guild '.concat(t, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             let s = i[n];
             if (null == s || s.roles.includes(r)) return !1;
             s.roles = [...s.roles, r];
-            let o = j(T.Z.getRoles(a.id), s.roles);
+            let o = j(b.Z.getRoles(a.id), s.roles);
             return (
                 (i[n] = {
                     ...s,
@@ -629,7 +629,7 @@ class en extends (i = f.ZP.Store) {
             let { guildMember: t, guildId: n } = e,
                 r = N[n];
             if (null == r) return !1;
-            let i = T.Z.getGuild(n);
+            let i = b.Z.getGuild(n);
             if (null == i) return A.warn('Guild '.concat(n, ' not found during GUILD_MEMBER_UPDATE.')), !1;
             (r[t.user.id] = H({
                 userId: t.user.id,
@@ -637,7 +637,7 @@ class en extends (i = f.ZP.Store) {
                 guildId: n,
                 avatar: t.avatar,
                 avatarDecoration: z(t),
-                guildRoles: T.Z.getRoles(i.id),
+                guildRoles: b.Z.getRoles(i.id),
                 roles: t.roles,
                 premiumSince: t.premium_since,
                 isPending: t.pending,
@@ -661,7 +661,7 @@ class en extends (i = f.ZP.Store) {
         },
         LOCAL_MESSAGES_LOADED: function (e) {
             var t, n;
-            if (null == e.guildId || null == T.Z.getGuild(e.guildId)) return !1;
+            if (null == e.guildId || null == b.Z.getGuild(e.guildId)) return !1;
             (D = !0), (N[e.guildId] = null !== (t = N[e.guildId]) && void 0 !== t ? t : {});
             let r = !1;
             for (let t of ((D = !0), (N[e.guildId] = null !== (n = N[e.guildId]) && void 0 !== n ? n : {}), e.members)) null == N[e.guildId][t.userId] && ((r = !0), (N[e.guildId][t.userId] = t));

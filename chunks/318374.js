@@ -14,9 +14,9 @@ var r = n(200651),
     c = n(239091),
     d = n(751688),
     f = n(51144),
-    _ = n(351342);
+    _ = n(711258);
 function h(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: h, className: p, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: S = 'interactive-normal', hideOverflowCount: b = !1, disableUsernameTooltip: T = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
+    let { users: t, maxUsers: a, guildId: o, channelId: h, className: p, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: S = 'interactive-normal', hideOverflowCount: T = !1, disableUsernameTooltip: b = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
         [N, C] = i.useState(!1);
     function R() {
         return (0, r.jsx)(u.Dialog, {
@@ -40,7 +40,7 @@ function h(e) {
                                 (0, c.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('44378')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('50261')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(t, {
                                                 ...n,
@@ -67,7 +67,7 @@ function h(e) {
                           .take(a)
                           .map((e) => {
                               let t = f.ZP.getName(e);
-                              return T
+                              return b
                                   ? (0, r.jsx)(
                                         'div',
                                         {
@@ -98,7 +98,7 @@ function h(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !b &&
+                          !T &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {

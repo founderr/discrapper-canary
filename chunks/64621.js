@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     }
 }),
     n(47120);
@@ -19,13 +19,13 @@ var r = n(200651),
     p = n(652853),
     m = n(228168),
     g = n(388032),
-    E = n(595250),
+    E = n(671511),
     v = n(425637),
     I = n(895982),
     S = n(685741),
-    b = n(20818);
-function T(e) {
-    var t, n, T;
+    T = n(20818);
+function b(e) {
+    var t, n, b;
     let { sourceType: y, children: A, user: N } = e,
         { profileType: C } = (0, p.z)(),
         { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, h.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
@@ -51,7 +51,7 @@ function T(e) {
             dismissibleContentType: W
         } = ((t = O),
         (n = R),
-        (T = D),
+        (b = D),
         L
             ? {
                   asset: S,
@@ -62,7 +62,7 @@ function T(e) {
                   spacing: 30,
                   dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
-            : T
+            : b
               ? {
                     asset: v,
                     assetClassName: void 0,
@@ -84,7 +84,7 @@ function T(e) {
                   }
                 : t
                   ? {
-                        asset: b,
+                        asset: T,
                         assetClassName: void 0,
                         className: E.statusCoachmark,
                         content: g.intl.string(g.t.MYYTWV),

@@ -19,7 +19,7 @@ var r = n(481060),
     s = n(290348),
     c = n(367719),
     d = n(388032),
-    u = n(746860);
+    u = n(544126);
 let m = (e) => {
     let { listingName: t } = e;
     return (0, i.jsx)(r.Heading, {

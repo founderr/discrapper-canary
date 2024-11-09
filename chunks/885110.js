@@ -18,8 +18,8 @@ var r,
     v = n(517100),
     I = n(283595),
     S = n(293273),
-    b = n(158776),
-    T = n(797258),
+    T = n(158776),
+    b = n(797258),
     y = n(981631);
 let A = !1,
     N = y.Skl.ONLINE,
@@ -64,7 +64,7 @@ function k() {
     let t = !1,
         n = L || N === y.Skl.INVISIBLE ? [] : S.Z.getActivities().filter(P);
     !l()(O, n) && ((O = n), (t = !0));
-    let r = T.Z.getRemoteActivities();
+    let r = b.Z.getRemoteActivities();
     if ((x !== r && ((x = r), (t = !0)), t)) {
         let e = O.find((e) => e.type === y.IIU.CUSTOM_STATUS);
         w =
@@ -82,11 +82,11 @@ function k() {
     }
 }
 function U() {
-    (L = !1), (C = y.Skl.UNKNOWN), k(), b.Z.setCurrentUserOnConnectionOpen(N, w);
+    (L = !1), (C = y.Skl.UNKNOWN), k(), T.Z.setCurrentUserOnConnectionOpen(N, w);
 }
 class G extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, m.Z, S.Z, T.Z, I.Z, E.Z), this.syncWith([S.Z], k);
+        this.waitFor(v.Z, m.Z, S.Z, b.Z, I.Z, E.Z), this.syncWith([S.Z], k);
     }
     getLocalPresence() {
         return {

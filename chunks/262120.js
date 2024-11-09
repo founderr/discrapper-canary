@@ -112,14 +112,14 @@ function i() {
     function v() {}
     function I() {}
     function S() {}
-    var b = {};
-    f(b, u, function () {
+    var T = {};
+    f(T, u, function () {
         return this;
     });
-    var T = Object.getPrototypeOf,
-        y = T && T(T(L([])));
-    y && y !== a && s.call(y, u) && (b = y);
-    var A = (S.prototype = v.prototype = Object.create(b));
+    var b = Object.getPrototypeOf,
+        y = b && b(b(L([])));
+    y && y !== a && s.call(y, u) && (T = y);
+    var A = (S.prototype = v.prototype = Object.create(T));
     function N(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             f(e, t, function (e) {

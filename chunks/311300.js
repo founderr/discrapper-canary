@@ -22,8 +22,8 @@ var r = n(513394),
     v = n(685995),
     I = n(478638),
     S = n(578163),
-    b = n(595048),
-    T = n(762120),
+    T = n(595048),
+    b = n(762120),
     y = n(670598),
     A = n(102315),
     N = n(948109),
@@ -75,8 +75,8 @@ function q(e, t) {
         E = (0, Z.tv)(),
         { isInvalid: v, validationErrors: I, validationDetails: S } = t.displayValidation,
         {
-            labelProps: b,
-            inputProps: T,
+            labelProps: T,
+            inputProps: b,
             descriptionProps: y,
             errorMessageProps: A
         } = (0, K.E)(
@@ -132,12 +132,12 @@ function q(e, t) {
         N = (0, Z.bE)({
             id: h.id,
             'aria-label': _.format('buttonLabel'),
-            'aria-labelledby': e['aria-labelledby'] || b.id
+            'aria-labelledby': e['aria-labelledby'] || T.id
         }),
         C = (0, Z.bE)({
             id: p.id,
             'aria-label': _.format('listboxLabel'),
-            'aria-labelledby': e['aria-labelledby'] || b.id
+            'aria-labelledby': e['aria-labelledby'] || T.id
         }),
         R = (0, F.useRef)(0),
         O = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
@@ -186,7 +186,7 @@ function q(e, t) {
             if (t.isOpen) return (0, G.RP)([o.current, s.current]);
         }, [t.isOpen, o, s]),
         {
-            labelProps: b,
+            labelProps: T,
             buttonProps: {
                 ...h,
                 ...N,
@@ -199,7 +199,7 @@ function q(e, t) {
                 },
                 isDisabled: f || d
             },
-            inputProps: (0, Z.dG)(T, {
+            inputProps: (0, Z.dG)(b, {
                 role: 'combobox',
                 'aria-expanded': h['aria-expanded'],
                 'aria-controls': t.isOpen ? p.id : void 0,
@@ -255,8 +255,8 @@ z = {
     'ko-KR': v.Z,
     'lt-LT': I.Z,
     'lv-LV': S.Z,
-    'nb-NO': b.Z,
-    'nl-NL': T.Z,
+    'nb-NO': T.Z,
+    'nl-NL': b.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

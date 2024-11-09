@@ -12,12 +12,12 @@ var i = n(120356),
     f = n(600164),
     _ = n(540059),
     h = n(388032),
-    p = n(828046);
+    p = n(149536);
 t.default = (e) => {
     let t,
         n,
         i,
-        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = h.intl.string(h.t.BddRzc), secondaryConfirmText: S, onCancel: b, onClose: T, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
+        { body: m, cancelText: g, className: E, confirmColor: v, confirmText: I = h.intl.string(h.t.BddRzc), secondaryConfirmText: S, onCancel: T, onClose: b, onConfirm: y, onConfirmSecondary: A, title: N, transitionState: C, titleClassName: R } = e,
         O = (0, _.Q)('ConfirmModal'),
         D = O ? s.zx.Sizes.MEDIUM : s.zx.Sizes.LARGE;
     return (
@@ -28,7 +28,7 @@ t.default = (e) => {
                 size: D,
                 color: s.zx.Colors.PRIMARY,
                 onClick: () => {
-                    null == T || T(), null == b || b();
+                    null == b || b(), null == T || T();
                 },
                 className: p.secondaryButton,
                 grow: !O,
@@ -49,7 +49,7 @@ t.default = (e) => {
             '' !== S &&
             (i = (0, r.jsx)(o.P, {
                 onClick: () => {
-                    null == T || T(), null == A || A();
+                    null == b || b(), null == A || A();
                 },
                 className: p.minorContainer,
                 children: (0, r.jsx)(c.x, {
@@ -64,7 +64,7 @@ t.default = (e) => {
             'aria-label': N,
             children: (0, r.jsxs)('form', {
                 onSubmit: (e) => {
-                    null != e && e.preventDefault(), null == T || T(), null == y || y();
+                    null != e && e.preventDefault(), null == b || b(), null == y || y();
                 },
                 className: p.form,
                 children: [

@@ -11,7 +11,7 @@ var l = n(120356),
     o = n(600164),
     s = n(528144),
     c = n(388032),
-    d = n(285194);
+    d = n(365515);
 function u(e) {
     let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: p, details: g, detailsClassName: x, isHeader: f, isPremium: b } = e;
     return (0, i.jsxs)(o.Z, {

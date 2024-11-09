@@ -80,10 +80,10 @@ var m = {
         itemprop: 'itemProp',
         tabindex: 'tabIndex'
     },
-    b = Object.keys(S).reduce(function (e, t) {
+    T = Object.keys(S).reduce(function (e, t) {
         return (e[S[t]] = t), e;
     }, {}),
-    T = function (e, t) {
+    b = function (e, t) {
         for (var n = e.length - 1; n >= 0; n -= 1) {
             var r = e[n];
             if (Object.prototype.hasOwnProperty.call(r, t)) return r[t];
@@ -91,13 +91,13 @@ var m = {
         return null;
     },
     y = function (e) {
-        var t = T(e, m.TITLE),
-            n = T(e, 'titleTemplate');
+        var t = b(e, m.TITLE),
+            n = b(e, 'titleTemplate');
         if ((Array.isArray(t) && (t = t.join('')), n && t))
             return n.replace(/%s/g, function () {
                 return t;
             });
-        var r = T(e, 'defaultTitle');
+        var r = b(e, 'defaultTitle');
         return t || r || void 0;
     },
     A = function (e, t) {
@@ -288,27 +288,27 @@ var m = {
                 p,
                 I,
                 S,
-                b,
                 T,
+                b,
                 y =
                     ((h = (_ = e).linkTags),
                     (p = _.scriptTags),
                     (I = _.encode),
                     (S = O(_.metaTags, v)),
-                    (b = O(h, g)),
-                    (T = O(p, E)),
+                    (T = O(h, g)),
+                    (b = O(p, E)),
                     {
                         priorityMethods: {
                             toComponent: function () {
-                                return [].concat(P(m.META, S.priority), P(m.LINK, b.priority), P(m.SCRIPT, T.priority));
+                                return [].concat(P(m.META, S.priority), P(m.LINK, T.priority), P(m.SCRIPT, b.priority));
                             },
                             toString: function () {
-                                return k(m.META, S.priority, I) + ' ' + k(m.LINK, b.priority, I) + ' ' + k(m.SCRIPT, T.priority, I);
+                                return k(m.META, S.priority, I) + ' ' + k(m.LINK, T.priority, I) + ' ' + k(m.SCRIPT, b.priority, I);
                             }
                         },
                         metaTags: S.default,
-                        linkTags: b.default,
-                        scriptTags: T.default
+                        linkTags: T.default,
+                        scriptTags: b.default
                     });
             (f = y.priorityMethods), (u = y.linkTags), (c = y.metaTags), (d = y.scriptTags);
         }
@@ -526,13 +526,13 @@ var H = function (e, t) {
                                     return t;
                                 }, [])),
                         bodyAttributes: A('bodyAttributes', t),
-                        defer: T(t, 'defer'),
-                        encode: T(t, 'encodeSpecialCharacters'),
+                        defer: b(t, 'defer'),
+                        encode: b(t, 'encodeSpecialCharacters'),
                         htmlAttributes: A('htmlAttributes', t),
                         linkTags: N(m.LINK, ['rel', 'href'], t),
                         metaTags: N(m.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], t),
                         noscriptTags: N(m.NOSCRIPT, ['innerHTML'], t),
-                        onChangeClientState: T(t, 'onChangeClientState') || function () {},
+                        onChangeClientState: b(t, 'onChangeClientState') || function () {},
                         scriptTags: N(m.SCRIPT, ['src', 'innerHTML'], t),
                         styleTags: N(m.STYLE, ['cssText'], t),
                         title: y(t),
@@ -649,7 +649,7 @@ var q = ['children'],
                                 a = r.children,
                                 s = p(r, q),
                                 o = Object.keys(s).reduce(function (e, t) {
-                                    return (e[b[t] || t] = s[t]), e;
+                                    return (e[T[t] || t] = s[t]), e;
                                 }, {}),
                                 l = e.type;
                             switch (('symbol' == typeof l ? (l = l.toString()) : n.warnOnInvalidChildren(e, a), l)) {

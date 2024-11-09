@@ -22,7 +22,7 @@ var r = n(200651),
     p = n(981631),
     m = n(185923),
     g = n(474936),
-    E = n(864603);
+    E = n(659932);
 let v = (e) => {
         var t;
         let { node: n, tooltipPosition: a = h.b_.position, enableClick: o = !0, channelId: c, messageId: d } = e,
@@ -90,8 +90,8 @@ let v = (e) => {
     },
     I = (e) => {
         let { node: t, isInteracting: n, tooltipPosition: a = h.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
-            [I, b] = i.useState(String(Date.now())),
-            [T, y] = i.useState(!1),
+            [I, T] = i.useState(String(Date.now())),
+            [b, y] = i.useState(!1),
             [A, N] = i.useState(!1),
             C = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -138,7 +138,7 @@ let v = (e) => {
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                T && (f.default.track(p.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
+                                b && (f.default.track(p.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
                             },
                             tag: 'span',
                             className: s()(E.emojiContainer, {
@@ -162,7 +162,7 @@ let v = (e) => {
                       (0, r.jsx)(_.vk, {
                           ...e,
                           node: t,
-                          refreshPositionKey: () => b(String(Date.now())),
+                          refreshPositionKey: () => T(String(Date.now())),
                           nonce: R
                       }),
                   positionKey: I,

@@ -29,7 +29,7 @@ var i = n(200651),
     I = n(981631),
     C = n(921944),
     v = n(388032),
-    S = n(484857);
+    S = n(29861);
 let N = [],
     T = (e) => {
         let { tagText: t, className: n } = e;

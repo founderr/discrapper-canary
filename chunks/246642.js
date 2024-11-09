@@ -10,7 +10,7 @@ var o = n(481060),
     s = n(641033),
     l = n(989830),
     r = n(388032),
-    c = n(870882);
+    c = n(80195);
 function d(e) {
     let { channelId: t } = e,
         n = (0, l.Z)(t);

@@ -15,11 +15,11 @@ var r = n(200651),
     f = n(186523),
     _ = n(553826),
     h = n(939350),
-    p = n(7758);
+    p = n(667947);
 function m(e) {
     let { color: t = 'default', label: n, checked: a, subtext: m, disabled: g, isFocused: E, menuItemProps: v, action: I } = e,
         S = i.useRef(null),
-        b = (0, d.Q)('MenuRadioItem');
+        T = (0, d.Q)('MenuRadioItem');
     return (
         i.useEffect(() => {
             E && (0, u.F)(S);
@@ -48,7 +48,7 @@ function m(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: p.iconContainer,
-                    children: b
+                    children: T
                         ? (0, r.jsx)(c.RadioIndicator, {
                               checked: a,
                               radioItemIconClassName: p.radioIcon

@@ -14,8 +14,8 @@ var i = n(481060),
 function c(e) {
     var t, n;
     let { user: c, guildId: d, channelId: f, profileType: _, sourceType: h, sourceDetails: p, sourceId: m, onClose: g, children: E } = e,
-        { interactionType: v, interactionSource: I, resetInteraction: S, interactionSourceId: b } = (0, a.Xo)(),
-        T = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
+        { interactionType: v, interactionSource: I, resetInteraction: S, interactionSourceId: T } = (0, a.Xo)(),
+        b = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
         y = I === h && v === u.P.REACT,
         A = I === h && v === u.P.REPLY;
     return (0, r.jsx)(i.Popout, {
@@ -30,14 +30,14 @@ function c(e) {
                 sourceType: h,
                 sourceDetails: p,
                 onClose: g,
-                modalKey: T,
+                modalKey: b,
                 setPopoutRef: t
             });
         },
         onRequestClose: () => {
             S(), null == g || g();
         },
-        shouldShow: (y || A) && b === m,
+        shouldShow: (y || A) && T === m,
         ...((t = v),
         (n = _),
         t === u.P.REACT

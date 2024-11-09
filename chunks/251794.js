@@ -1,37 +1,37 @@
-t.d(e, {
+i.d(n, {
     q: function () {
-        return u;
+        return r;
     },
     z: function () {
-        return r;
+        return l;
     }
 });
-var i = t(200651);
-t(192379);
-var l = t(481060);
-function r(n) {
-    let { guildId: e, userId: r, anaylticsLocations: u } = n;
-    (0, l.openModalLazy)(async () => {
-        let { default: n } = await t.e('72920').then(t.bind(t, 109730));
-        return (t) =>
-            (0, i.jsx)(n, {
-                guildId: e,
-                userId: r,
-                anaylticsLocations: u,
-                ...t
+var t = i(200651);
+i(192379);
+var a = i(481060);
+function l(e) {
+    let { guildId: n, userId: l, anaylticsLocations: r } = e;
+    (0, a.openModalLazy)(async () => {
+        let { default: e } = await i.e('72920').then(i.bind(i, 109730));
+        return (i) =>
+            (0, t.jsx)(e, {
+                guildId: n,
+                userId: l,
+                anaylticsLocations: r,
+                ...i
             });
     });
 }
-function u(n) {
-    let { guildId: e, userId: r, anaylticsLocations: u } = n;
-    (0, l.openModalLazy)(async () => {
-        let { default: n } = await t.e('76233').then(t.bind(t, 171494));
-        return (t) =>
-            (0, i.jsx)(n, {
-                guildId: e,
-                userId: r,
-                anaylticsLocations: u,
-                ...t
+function r(e) {
+    let { guildId: n, userId: l, anaylticsLocations: r } = e;
+    (0, a.openModalLazy)(async () => {
+        let { default: e } = await i.e('76233').then(i.bind(i, 171494));
+        return (i) =>
+            (0, t.jsx)(e, {
+                guildId: n,
+                userId: l,
+                anaylticsLocations: r,
+                ...i
             });
     });
 }

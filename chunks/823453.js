@@ -18,14 +18,14 @@ var r = n(200651),
     v = n(252618),
     I = n(80006),
     S = n(587061),
-    b = n(392358),
-    T = n(981631);
-n(607234);
-let y = new Set([T.Z5c.LOGIN, T.Z5c.REGISTER]);
+    T = n(392358),
+    b = n(981631);
+n(81693);
+let y = new Set([b.Z5c.LOGIN, b.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
     (0, v.ZD)({ skipsSettingDefaultPageTitle: a });
-    let { clientThemesClassName: T, clientThemesCSS: A } = (0, _.ZP)(),
+    let { clientThemesClassName: b, clientThemesCSS: A } = (0, _.ZP)(),
         N = i.createElement('style', { [_.PQ]: !0 }, A);
     return (0, r.jsxs)(o.ql, {
         children: [
@@ -35,17 +35,17 @@ t.Z = i.memo(function (e) {
                     { theme: a, density: o } = (0, f.useThemeContext)(),
                     { reducedMotion: d } = i.useContext(f.AccessibilityPreferencesContext),
                     { accessibilitySettings: _, appWrapperClassName: v } = (0, I.I)(),
-                    { fontScale: T, fontScaleClass: A, saturation: N, desaturateUserColors: C, useForcedColors: R, systemForcedColors: O } = _,
+                    { fontScale: b, fontScaleClass: A, saturation: N, desaturateUserColors: C, useForcedColors: R, systemForcedColors: O } = _,
                     D = (0, l.TH)(),
                     L = i.useMemo(() => y.has(D.pathname), [D.pathname]);
                 (0, S.Z)(window, L);
-                let x = (0, b.Z)(window, __OVERLAY__ || n),
+                let x = (0, T.Z)(window, __OVERLAY__ || n),
                     w = (0, c.e7)([p.Z], () => p.Z.sidebarWidth),
                     M = (0, f.useRedesignIconContext)().enabled,
                     P = (0, h.Q)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
-                    style: 'font-size: '.concat(T, '%; --saturation-factor: ').concat(N, '; --devtools-sidebar-width: ').concat(w, 'px;'),
+                    style: 'font-size: '.concat(b, '%; --saturation-factor: ').concat(N, '; --devtools-sidebar-width: ').concat(w, 'px;'),
                     className: s()(
                         e,
                         v,
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                         A
                     )
                 });
-            })(T),
+            })(b),
             (function () {
                 let [e, t] = i.useState([]);
                 return (

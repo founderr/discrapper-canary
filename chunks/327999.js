@@ -1,6 +1,6 @@
 n.d(t, {
     MS: function () {
-        return T;
+        return b;
     },
     Ph: function () {
         return y;
@@ -9,7 +9,7 @@ n.d(t, {
         return N;
     },
     bE: function () {
-        return b;
+        return T;
     },
     gq: function () {
         return i;
@@ -56,7 +56,7 @@ function S(e, t) {
     );
 }
 ((o = i || (i = {}))[(o.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (o[(o.BOT = 1)] = 'BOT'), (o[(o.INTEGRATION = 2)] = 'INTEGRATION'), (o[(o.DISCOVERY = 3)] = 'DISCOVERY'), (o[(o.HUB = 4)] = 'HUB'), (o[(o.INVITE = 5)] = 'INVITE'), (o[(o.VANITY_URL = 6)] = 'VANITY_URL'), (o[(o.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-let b = function (e) {
+let T = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
@@ -80,7 +80,7 @@ let b = function (e) {
     }
 };
 ((l = a || (a = {})).DISCORD = 'discord'), (l.TWITCH = 'twitch'), (l.YOUTUBE = 'youtube'), (l.GUILD_SUBSCRIPTION = 'guild_subscription');
-let T = (e) => {
+let b = (e) => {
         switch (e) {
             case 'twitch':
                 return p.intl.string(p.t.AVGAk5);

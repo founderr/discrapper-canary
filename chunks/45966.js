@@ -18,7 +18,7 @@ let E = {},
     v = {},
     I = {},
     S = !1;
-function b(e, t, n) {
+function T(e, t, n) {
     return e.map((e) =>
         (function (e, t, n) {
             let r = !1,
@@ -41,12 +41,12 @@ function b(e, t, n) {
         })(e, t, n)
     );
 }
-function T(e) {
+function b(e) {
     var t, n, r, i, a, s, o, l, u;
     let { guildId: c, updates: d } = e,
         f = null !== (a = null !== (i = d.onboardingPromptsSeen) && void 0 !== i ? i : null === (t = E[c]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {},
         _ = null !== (o = null !== (s = d.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = E[c]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {},
-        h = b(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
+        h = T(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
     E[c] = {
         ...E[c],
         ...d,
@@ -178,7 +178,7 @@ class R extends (r = u.ZP.Store) {
             let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
             S = !1;
             let c = m.ZP.getOnboardingStatus(t) === m.uX.READY,
-                d = b(n, s, o);
+                d = T(n, s, o);
             (E[t] = {
                 enabled: i,
                 mode: l,
@@ -205,7 +205,7 @@ class R extends (r = u.ZP.Store) {
             y(t, n);
             let a = E[t];
             if (null == a) return !1;
-            let s = b(a.prompts, r, i);
+            let s = T(a.prompts, r, i);
             E[t] = {
                 ...a,
                 prompts: s,
@@ -214,8 +214,8 @@ class R extends (r = u.ZP.Store) {
                 onboardingResponsesSeen: i
             };
         },
-        GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: T,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: T,
+        GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: b,
+        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: b,
         GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: function (e) {
             let { guildId: t, channelIds: n } = e;
             E[t] = {

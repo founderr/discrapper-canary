@@ -152,7 +152,7 @@ let h = async (e) => {
             guilds: e.body
         });
     },
-    b = async function (e) {
+    T = async function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = await r.tn.post({ url: f.ANM.GUILD_JOIN_REQUEST_INTERVIEW(e) }),
             a = (0, l.q_)(n.body);
@@ -165,7 +165,7 @@ let h = async (e) => {
             a.id
         );
     },
-    T = async (e) => {
+    b = async (e) => {
         try {
             let t = await r.tn.get({ url: f.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e) });
             return (
@@ -223,6 +223,6 @@ t.Z = {
                 request: t
             });
     },
-    createOrEnterJoinRequestInterview: b,
-    fetchJoinRequestCooldown: T
+    createOrEnterJoinRequestInterview: T,
+    fetchJoinRequestCooldown: b
 };

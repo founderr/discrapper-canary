@@ -1,6 +1,6 @@
 n.d(t, {
     Af: function () {
-        return T;
+        return b;
     },
     B3: function () {
         return A;
@@ -12,7 +12,7 @@ n.d(t, {
         return x;
     },
     GO: function () {
-        return b;
+        return T;
     },
     GS: function () {
         return O;
@@ -178,13 +178,13 @@ function S(e, t) {
         step: t
     });
 }
-function b(e, t) {
+function T(e, t) {
     f.default.track(h.rMx.CLAN_SETTINGS_VIEWED, {
         guild_id: e,
         page: t
     });
 }
-function T(e) {
+function b(e) {
     f.default.track(h.rMx.CLAN_SETTINGS_SAVED, { guild_id: e });
 }
 function y(e) {

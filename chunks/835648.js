@@ -20,9 +20,9 @@ var r = n(200651),
     g = n(526617),
     E = n(474936),
     v = n(388032),
-    I = n(47293);
+    I = n(199398);
 let S = [8, 8, 8, 8];
-function b(e) {
+function T(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;
     return (0, r.jsx)(u.Clickable, {
         ...a,
@@ -35,7 +35,7 @@ function b(e) {
         })
     });
 }
-function T(e) {
+function b(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: s } = e,
         l = (0, o.JA)('soundboard_guild_'.concat(n));
     return (0, r.jsx)(u.Tooltip, {
@@ -76,7 +76,7 @@ function T(e) {
                 switch (e.categoryInfo.type) {
                     case m.bg.FAVORITES:
                         return (0, r.jsx)(
-                            b,
+                            T,
                             {
                                 ...i,
                                 icon: u.StarIcon,
@@ -88,7 +88,7 @@ function T(e) {
                         );
                     case m.bg.RECENTLY_HEARD:
                         return (0, r.jsx)(
-                            b,
+                            T,
                             {
                                 ...i,
                                 icon: u.ClockIcon,
@@ -100,7 +100,7 @@ function T(e) {
                         );
                     case m.bg.FREQUENTLY_USED:
                         return (0, r.jsx)(
-                            b,
+                            T,
                             {
                                 ...i,
                                 icon: u.AnalyticsIcon,
@@ -128,7 +128,7 @@ function T(e) {
                         );
                     case m.bg.DEFAULTS:
                         return (0, r.jsx)(
-                            b,
+                            T,
                             {
                                 ...i,
                                 icon: u.ClydeIcon,
@@ -152,7 +152,7 @@ function y(e) {
         v = i.useCallback(
             (e, t, n, i) => {
                 let s = a && (0, g.O)(e.categoryInfo, m, o);
-                return (0, r.jsx)(T, {
+                return (0, r.jsx)(b, {
                     category: e,
                     categoryIndex: t,
                     onClick: n,

@@ -10,7 +10,7 @@ var r = n(200651),
     s = n.n(a),
     o = n(84735),
     l = n(780900),
-    u = n(664435);
+    u = n(49505);
 function c(e, t) {
     let n = new Map(),
         a = new t((e) => {
@@ -23,8 +23,8 @@ function c(e, t) {
     return i.forwardRef(function (t, c) {
         let { children: d, className: f, onResize: _, contentClassName: h, onScroll: p, dir: m = 'ltr', fade: g = !1, customTheme: E = !1, style: v, ...I } = t,
             S = i.useRef(null),
-            b = i.useRef(null),
-            [T, y] = i.useState(!1),
+            T = i.useRef(null),
+            [b, y] = i.useState(!1),
             { scrollerRef: A, getScrollerState: N } = (0, l.Ke)(),
             C = (0, l.t2)(A);
         i.useImperativeHandle(
@@ -57,7 +57,7 @@ function c(e, t) {
                 listenerMap: n
             }),
             (0, l.zn)({
-                ref: b,
+                ref: T,
                 key: 'content',
                 onUpdate: _,
                 resizeObserver: a,
@@ -70,18 +70,18 @@ function c(e, t) {
                     [u.customTheme]: E,
                     [e]: !0,
                     [u.managedReactiveScroller]: !0,
-                    [u.scrolling]: T && g
+                    [u.scrolling]: b && g
                 }),
                 style: v,
                 dir: m,
                 onScroll: R,
                 ...I,
                 children: (0, r.jsx)(o.J, {
-                    containerRef: b,
+                    containerRef: T,
                     children: (0, r.jsxs)('div', {
-                        ref: b,
+                        ref: T,
                         className: s()(h, u.content),
-                        children: [d, T && (0, r.jsx)('div', { className: u.pointerCover })]
+                        children: [d, b && (0, r.jsx)('div', { className: u.pointerCover })]
                     })
                 })
             })

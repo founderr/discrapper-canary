@@ -12,10 +12,10 @@ n.d(t, {
         return W;
     },
     Ev: function () {
-        return T;
+        return b;
     },
     Fr: function () {
-        return b;
+        return T;
     },
     Fu: function () {
         return Y;
@@ -137,8 +137,8 @@ var r,
     v = n(911969),
     I = n(981631);
 let S = 160,
-    b = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    T = '438122941302046720',
+    T = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    b = '438122941302046720',
     y = '773336526917861400',
     A = '880218832743055411',
     N = '1050941315912835122',

@@ -11,7 +11,7 @@ var o = n(13245),
     s = n(620954),
     a = n(987650),
     u = n(388032),
-    c = n(638266);
+    c = n(213973);
 let d = () => ({
         icon: n(328756),
         title: u.intl.string(u.t.pkXAeH),

@@ -9,13 +9,13 @@ n.d(t, {
         return i;
     },
     U0: function () {
-        return b;
+        return T;
     },
     WO: function () {
         return C;
     },
     rU: function () {
-        return T;
+        return b;
     },
     wX: function () {
         return A;
@@ -80,7 +80,7 @@ function S(e) {
     return null == i ? g.ANM.REACTIONS(t, n, o) : a ? g.ANM.REACTION_WITH_TYPE(t, n, o, i, s) : g.ANM.REACTION(t, n, o, i);
 }
 ((r = i || (i = {})).MESSAGE = 'Message'), (r.FORUM_TOOLBAR = 'Forum Toolbar'), (r.MOBILE_MEDIA_VIEWER = 'Mobile Media Viewer'), (r.MESSAGE_HOVER_BAR = 'Message Hover Bar'), (r.MESSAGE_INLINE_BUTTON = 'Message Inline Button'), (r.MESSAGE_CONTEXT_MENU = 'Message Context Menu'), (r.MESSAGE_REACTION_PICKER = 'Message Reaction Picker');
-async function b(e) {
+async function T(e) {
     let { channelId: t, messageId: n, emoji: r, limit: i, after: s, type: l } = e,
         c =
             l === u.O.VOTE
@@ -116,7 +116,7 @@ async function b(e) {
         f
     );
 }
-async function T(e, t, n) {
+async function b(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'Message',
         i = arguments.length > 4 ? arguments[4] : void 0,
         o = null != i && !!i.burst,
@@ -173,7 +173,7 @@ async function T(e, t, n) {
                 v(
                     i,
                     () =>
-                        T(e, t, n, r, {
+                        b(e, t, n, r, {
                             burst: o,
                             isRetry: !0
                         }),

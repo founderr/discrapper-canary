@@ -15,7 +15,7 @@ var a = n(200651),
     u = n(916001),
     m = n(981631),
     x = n(388032),
-    h = n(390593);
+    h = n(506885);
 let f = 'expanded-area';
 function j(e) {
     let { attachments: t, role: n, roleLocked: i } = e,

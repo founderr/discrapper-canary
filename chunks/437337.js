@@ -15,7 +15,7 @@ var r = n(200651),
     d = n(180035),
     f = n(481060),
     _ = n(540059),
-    h = n(895508);
+    h = n(980492);
 let p = {
         mass: 1,
         tension: 250
@@ -37,8 +37,8 @@ let p = {
     g = function (e) {
         let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: I } = e,
             { reducedMotion: S } = i.useContext(u.S),
-            b = i.useRef(null),
-            [T, y] = i.useState(!1),
+            T = i.useRef(null),
+            [b, y] = i.useState(!1),
             A = (0, _.Q)('Switch'),
             N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
             C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
@@ -46,7 +46,7 @@ let p = {
                 {
                     config: p,
                     opacity: g ? (A ? 0.5 : 0.3) : 1,
-                    state: T ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                    state: b ? (a ? 0.7 : 0.3) : a ? 1 : 0
                 },
                 'animate-always'
             );
@@ -134,7 +134,7 @@ let p = {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (b.current = e), null != I && (I.current = e);
+                            (T.current = e), null != I && (I.current = e);
                         },
                         className: h.input,
                         tabIndex: g ? -1 : 0,
@@ -143,7 +143,7 @@ let p = {
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!g && !!T && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = b.current) || void 0 === t || t.click());
+                            if (!g && !!b && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
                             y(!1), null == n || n(e.currentTarget.checked, e);

@@ -28,14 +28,14 @@ function I(e, t, n, r, i) {
 function S(e, t) {
     (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
 }
-function b(e) {
+function T(e) {
     return e < 256 ? m[e] : m[256 + (e >>> 7)];
 }
-function T(e, t) {
+function b(e, t) {
     (e.pending_buf[e.pending++] = 255 & t), (e.pending_buf[e.pending++] = (t >>> 8) & 255);
 }
 function y(e, t, n) {
-    e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), T(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
+    e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), b(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
 }
 function A(e, t, n) {
     y(e, n[2 * t], n[2 * t + 1]);
@@ -66,7 +66,7 @@ function R(e) {
     (e.dyn_ltree[512] = 1), (e.opt_len = e.static_len = 0), (e.last_lit = e.matches = 0);
 }
 function O(e) {
-    e.bi_valid > 8 ? T(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), (e.bi_buf = 0), (e.bi_valid = 0);
+    e.bi_valid > 8 ? b(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), (e.bi_buf = 0), (e.bi_valid = 0);
 }
 function D(e, t, n, r) {
     var i = 2 * t,
@@ -86,7 +86,7 @@ function x(e, t, n) {
         s,
         o = 0;
     if (0 !== e.last_lit)
-        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? A(e, i, t) : (A(e, (a = g[i]) + 256 + 1, t), 0 !== (s = c[a]) && y(e, (i -= E[a]), s), A(e, (a = b(--r)), n), 0 !== (s = d[a]) && y(e, (r -= v[a]), s));
+        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? A(e, i, t) : (A(e, (a = g[i]) + 256 + 1, t), 0 !== (s = c[a]) && y(e, (i -= E[a]), s), A(e, (a = T(--r)), n), 0 !== (s = d[a]) && y(e, (r -= v[a]), s));
         while (o < e.last_lit);
     A(e, 256, t);
 }
@@ -174,7 +174,7 @@ function P(e, t, n) {
 var k = !1;
 function U(e, t, n, r) {
     var i, a, o, l;
-    y(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), O(i), l && (T(i, o), T(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
+    y(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), O(i), l && (b(i, o), b(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
 }
 (t._tr_init = function (e) {
     !k &&
@@ -244,9 +244,9 @@ function U(e, t, n, r) {
             r && O(e);
     }),
     (t._tr_tally = function (e, t, n) {
-        return (e.pending_buf[e.d_buf + 2 * e.last_lit] = (t >>> 8) & 255), (e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t), (e.pending_buf[e.l_buf + e.last_lit] = 255 & n), e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(g[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * b(t)]++), e.last_lit === e.lit_bufsize - 1;
+        return (e.pending_buf[e.d_buf + 2 * e.last_lit] = (t >>> 8) & 255), (e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t), (e.pending_buf[e.l_buf + e.last_lit] = 255 & n), e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(g[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * T(t)]++), e.last_lit === e.lit_bufsize - 1;
     }),
     (t._tr_align = function (e) {
         var t;
-        y(e, 2, 3), A(e, 256, h), 16 === (t = e).bi_valid ? (T(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
+        y(e, 2, 3), A(e, 256, h), 16 === (t = e).bi_valid ? (b(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
     });

@@ -26,12 +26,12 @@ var r = n(200651),
     v = n(314897),
     I = n(592125),
     S = n(496675),
-    b = n(699516),
-    T = n(979651),
+    T = n(699516),
+    b = n(979651),
     y = n(6074),
     A = n(626135),
     N = n(981631),
-    C = n(909057);
+    C = n(23952);
 let R = '14px';
 function O(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
@@ -96,9 +96,9 @@ t.ZP = (e) => {
         M = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
         P = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
         k = (0, o.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
-        U = (0, o.e7)([T.Z, I.Z], () => {
+        U = (0, o.e7)([b.Z, I.Z], () => {
             var e;
-            return null != k && null != x ? I.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != k && null != x ? I.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
         { enableHangStatus: G } = p.n.useExperiment(
             {
@@ -125,7 +125,7 @@ t.ZP = (e) => {
               className: u
           }));
     let { blockeeExperimentEnabled: V, blockerExperimentEnabled: j, analyticsEligible: H } = (0, f.NR)('activity-status-web'),
-        Y = (0, o.e7)([b.Z], () => (null != x ? b.Z.getRelationshipType(x.id) : N.OGo.NONE)),
+        Y = (0, o.e7)([T.Z], () => (null != x ? T.Z.getRelationshipType(x.id) : N.OGo.NONE)),
         W = (0, d.Z)(t, n, void 0, F, V),
         K = (0, d.Z)(t, n, void 0, F, !1);
     i.useEffect(() => {

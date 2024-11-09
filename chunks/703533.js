@@ -268,12 +268,12 @@ var h = function () {
 function S(e, t) {
     return e === t ? e : Math.random() * (t - e + 1) + e;
 }
-function b(e) {
+function T(e) {
     var t = Math.floor(S(0, e.length - 1));
     return [e[t], t];
 }
-function T(e, t) {
-    return b([e, t])[0];
+function b(e, t) {
+    return T([e, t])[0];
 }
 function y(e) {
     return 'number' == typeof e
@@ -328,7 +328,7 @@ function N(e) {
                     g = y(e.maxDuration),
                     A = y(e.minDirection),
                     N = y(e.maxDirection);
-                return new m(new I(S(n.x, r.x), S(d.x, f.x), S(_.x, h.x), S(p.x, g.x), T(A.x, N.x), b(e.easingFunctions)[0]), new I(S(n.y, r.y), S(d.y, f.y), S(_.y, h.y), S(p.y, g.y), T(A.y, N.y), b(e.easingFunctions)[0]));
+                return new m(new I(S(n.x, r.x), S(d.x, f.x), S(_.x, h.x), S(p.x, g.x), b(A.x, N.x), T(e.easingFunctions)[0]), new I(S(n.y, r.y), S(d.y, f.y), S(_.y, h.y), S(p.y, g.y), b(A.y, N.y), T(e.easingFunctions)[0]));
         }
     })(h(h({}, e), { valueType: 'Vector2' }));
 }
@@ -424,7 +424,7 @@ var C = r.forwardRef(function (e, t) {
                                 });
                                 if (-1 !== n) return [e, n];
                             }
-                            return b(t.sprites);
+                            return T(t.sprites);
                         })(d, l))[0]),
                         (R = y[1]),
                         (O = (function (e, t, n) {
@@ -479,7 +479,7 @@ var C = r.forwardRef(function (e, t) {
                                                 m = A(e.maxDuration),
                                                 y = A(e.minDirection),
                                                 N = A(e.maxDirection);
-                                            return new g(new I(S(n.x, r.x), S(d.x, f.x), S(_.x, h.x), S(p.x, m.x), T(y.x, N.x), b(e.easingFunctions)[0]), new I(S(n.y, r.y), S(d.y, f.y), S(_.y, h.y), S(p.y, m.y), T(y.y, N.y), b(e.easingFunctions)[0]), new I(S(n.z, r.z), S(d.z, f.z), S(_.z, h.z), S(p.z, m.z), T(y.z, N.z), b(e.easingFunctions)[0]));
+                                            return new g(new I(S(n.x, r.x), S(d.x, f.x), S(_.x, h.x), S(p.x, m.x), b(y.x, N.x), T(e.easingFunctions)[0]), new I(S(n.y, r.y), S(d.y, f.y), S(_.y, h.y), S(p.y, m.y), b(y.y, N.y), T(e.easingFunctions)[0]), new I(S(n.z, r.z), S(d.z, f.z), S(_.z, h.z), S(p.z, m.z), b(y.z, N.z), T(e.easingFunctions)[0]));
                                     }
                                 })(h(h({}, D), { valueType: 'Vector3' }))),
                             dragCoefficient: N(p.dragCoefficient),
@@ -499,7 +499,7 @@ var C = r.forwardRef(function (e, t) {
                                         case 'oscillating':
                                             return new I(e.value, e.start, e.final, e.duration, e.direction, e.easingFunction);
                                         case 'oscillating-random':
-                                            return new I(S(e.minValue, e.maxValue), S(e.minStart, e.maxStart), S(e.minFinal, e.maxFinal), S(e.minDuration, e.maxDuration), T(e.minDirection, e.maxDirection), b(e.easingFunctions)[0]);
+                                            return new I(S(e.minValue, e.maxValue), S(e.minStart, e.maxStart), S(e.minFinal, e.maxFinal), S(e.minDuration, e.maxDuration), b(e.minDirection, e.maxDirection), T(e.easingFunctions)[0]);
                                     }
                                 })(h(h({}, L), { valueType: 'number' }))),
                             airResistanceArea: N(p.airResistanceArea),

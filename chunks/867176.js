@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return b;
     },
     b: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -24,21 +24,21 @@ var r = n(200651),
     g = n(768581),
     E = n(28660),
     v = n(462997),
-    I = n(520309);
+    I = n(431405);
 let S = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
-function b(e) {
+function T(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: v, pendingBanner: b, children: T, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
+    let { user: n, displayProfile: a, guildId: v, pendingBanner: T, children: b, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
         x = (0, _.Dt)(),
         [w, M] = i.useState(!1),
         P = (0, l.e7)([m.Z], () => m.Z.isFocused()),
         k = p.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
-            pendingBanner: b,
+            pendingBanner: T,
             size: R,
             canAnimate: L || !k ? w : P
         }),
@@ -82,7 +82,7 @@ function b(e) {
                 overflow: 'visible',
                 mask: 'url(#'.concat(x, ')'),
                 children: [
-                    T,
+                    b,
                     (0, r.jsxs)('div', {
                         className: s()(I.banner, y),
                         onMouseMove: () => M(!0),
@@ -93,18 +93,18 @@ function b(e) {
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== G ? u.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },
-                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(h.Z, { className: I.gifTag }), T]
+                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(h.Z, { className: I.gifTag }), b]
                     })
                 ]
             })
         ]
     });
 }
-function T(e) {
+function b(e) {
     let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1, ...a } = e,
         s = v.q[t],
         o = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(T, {
         ...a,
         ...s,
         displayProfile: n,

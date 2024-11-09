@@ -10,7 +10,7 @@ var l = n(780384),
     u = n(703614),
     c = n(182294),
     p = n(388032),
-    x = n(377040);
+    x = n(279521);
 t.Z = () => {
     let e = (0, o.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, C.Z)({

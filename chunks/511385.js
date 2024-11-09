@@ -16,7 +16,7 @@ var i = a(200651),
     f = a(308083),
     p = a(981631),
     N = a(388032),
-    j = a(252642);
+    j = a(457243);
 t.default = (e) => {
     var t, a, l, S;
     let { guildId: _, tag: w, brandPrimaryColor: b, transitionState: T, onClose: k } = e,

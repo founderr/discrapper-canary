@@ -8,7 +8,7 @@ var i = n(200651),
     d = n(27457),
     u = n(354459),
     h = n(388032),
-    p = n(289682);
+    p = n(754833);
 t.Z = function (e) {
     var t, n;
     let { participants: m, channel: f, hasConnectPermission: g } = e,

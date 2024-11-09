@@ -24,8 +24,8 @@ var r,
     v = n(100527),
     I = n(906732),
     S = n(243778),
-    b = n(339085),
-    T = n(438332),
+    T = n(339085),
+    b = n(438332),
     y = n(664437),
     A = n(806966),
     N = n(28546),
@@ -57,7 +57,7 @@ var r,
     J = n(981631),
     $ = n(921944),
     ee = n(185923),
-    et = n(744924);
+    et = n(74353);
 let en = (0, G.Mg)(h.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
     er = (0, G.Mg)(h.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
     ei = (e) => e.stopPropagation();
@@ -67,7 +67,7 @@ let ea = (e, t) => {
     },
     es = (e) => {
         let { analyticsLocation: t, pickerIntention: n, columnCounts: r, onSelectEmoji: i, emojiGrid: a, emojiList: o, channelGuildId: l, isBurstReaction: u } = e,
-            c = (0, f.e7)([b.ZP], () => b.ZP.getDisambiguatedEmojiContext(l), [l]),
+            c = (0, f.e7)([T.ZP], () => T.ZP.getDisambiguatedEmojiContext(l), [l]),
             _ = s.useCallback(
                 (e, r) => {
                     switch (e.type) {
@@ -105,7 +105,7 @@ let ea = (e, t) => {
                                     pickerIntention: n,
                                     category: e.category,
                                     subCategory: e.subCategory,
-                                    newlyAddedHighlight: e.subCategory === X.t0.NEWLY_ADDED_EMOJI && T.Z.isNewerThanLastSeen(l, e.emoji.id)
+                                    newlyAddedHighlight: e.subCategory === X.t0.NEWLY_ADDED_EMOJI && b.Z.isNewerThanLastSeen(l, e.emoji.id)
                                 }),
                                 i(e.emoji, !r.shiftKey, u);
                         }
@@ -185,7 +185,7 @@ t.Z = s.memo(
     s.forwardRef(function (e, t) {
         var n, r;
         let i,
-            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: h = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: G, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: eh, headerClassName: ep, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eI, renderHeader: eS, listHeaderClassName: eb, categoryListClassName: eT } = e,
+            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: h = X.Su.MEDIUM, hasTabWrapper: m = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: G, containerWidth: ea, onNavigateAway: ef, persistSearch: e_, className: eh, headerClassName: ep, analyticsOverride: em = ed, searchProps: eg = {}, wrapper: eE, shouldHidePickerActions: ev = !1, messageId: eI, renderHeader: eS, listHeaderClassName: eT, categoryListClassName: eb } = e,
             { onFocus: ey, onKeyDown: eA, autoFocus: eN = !0, accessory: eC } = eg,
             eR = (0, f.e7)([M.ZP], () => (null != c ? M.ZP.getDefaultChannel(c) : null), [c]),
             [eO, eD] = s.useState(null),
@@ -210,7 +210,7 @@ t.Z = s.memo(
                 [eF, ej]
             ),
             { analyticsLocations: eK } = (0, I.ZP)(v.Z.EMOJI_PICKER),
-            { diversitySurrogate: ez } = (0, f.cj)([b.ZP], () => ({ diversitySurrogate: b.ZP.diversitySurrogate })),
+            { diversitySurrogate: ez } = (0, f.cj)([T.ZP], () => ({ diversitySurrogate: T.ZP.diversitySurrogate })),
             eq = (0, B.DV)(ex, u, o),
             eQ = null == eq ? 0 : eq.locked.length + eq.unlocked.length,
             eX = w.d4.useSetting(),
@@ -282,7 +282,7 @@ t.Z = s.memo(
                               category: e.category,
                               subCategory: e.subCategory,
                               position: e.columnIndex + 1,
-                              newlyAddedHighlight: e.subCategory === X.t0.NEWLY_ADDED_EMOJI && T.Z.isNewerThanLastSeen(ek, e.emoji.id),
+                              newlyAddedHighlight: e.subCategory === X.t0.NEWLY_ADDED_EMOJI && b.Z.isNewerThanLastSeen(ek, e.emoji.id),
                               isBurstReaction: eU
                           });
                 },
@@ -387,7 +387,7 @@ t.Z = s.memo(
                 renderHeader: eS
             }),
             to = [];
-        o === ee.Hz.REACTION && to.push(_.z.SUPER_REACTIONS_NITRO_MARKETING), !b.ZP.hasFavoriteEmojis(ek) && to.push(_.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
+        o === ee.Hz.REACTION && to.push(_.z.SUPER_REACTIONS_NITRO_MARKETING), !T.ZP.hasFavoriteEmojis(ek) && to.push(_.z.EMOJI_PICKER_FAVORITE_EMOJIS_TIP);
         let tl = (0, a.jsx)(g.Z, {
             ...eW,
             children: (0, a.jsxs)(ti, {
@@ -451,7 +451,7 @@ t.Z = s.memo(
                                                         channelGuildId: ek,
                                                         messageId: eI,
                                                         isBurstReaction: eU,
-                                                        listHeaderClassName: eb
+                                                        listHeaderClassName: eT
                                                     })
                                                   : null
                                           })
@@ -470,7 +470,7 @@ t.Z = s.memo(
                     ev
                         ? null
                         : (0, a.jsx)(j.Z, {
-                              className: l()(et.categoryList, eT),
+                              className: l()(et.categoryList, eb),
                               emojiListRef: eM,
                               sectionDescriptors: e2,
                               intention: o,

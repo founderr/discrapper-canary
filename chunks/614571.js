@@ -59,7 +59,7 @@ async function S(e) {
         })
     );
 }
-function b() {
+function T() {
     return Object.values(l.Z.getGuilds()).some(
         (e) =>
             e.hasFeature(_.oNc.LEADERBOARD_ENABLED) &&
@@ -70,11 +70,11 @@ function b() {
             })
     );
 }
-class T extends s.Z {
+class b extends s.Z {
     handleRunningGameChange(e) {
         let { added: t, removed: n } = e,
             a = I();
-        if (null != a && !!b())
+        if (null != a && !!T())
             v(t) &&
                 (null != i && clearInterval(i),
                 (i = setInterval(async () => {
@@ -94,7 +94,7 @@ class T extends s.Z {
     handleDependantStoreChanges() {
         let e = I(),
             t = null != e,
-            n = b() && t;
+            n = T() && t;
         g.isStarted() && !n
             ? g.stop()
             : !g.isStarted() &&
@@ -109,4 +109,4 @@ class T extends s.Z {
         super(...e), h(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), h(this, 'stores', new Map().set(l.Z, this.handleDependantStoreChanges).set(o.Z, this.handleDependantStoreChanges));
     }
 }
-t.Z = new T();
+t.Z = new b();

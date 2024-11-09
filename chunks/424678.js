@@ -4,10 +4,10 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(200651),
-    r = n(192379),
-    l = n(481060);
-function a(e, t, n) {
+var r = n(200651),
+    i = n(192379),
+    a = n(481060);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +20,12 @@ function a(e, t, n) {
         e
     );
 }
-class o extends r.PureComponent {
+class o extends i.PureComponent {
     render() {
         let { text: e, lastItem: t, className: n } = this.props;
-        return (0, i.jsxs)('span', {
+        return (0, r.jsxs)('span', {
             children: [
-                (0, i.jsx)(l.Anchor, {
+                (0, r.jsx)(a.Anchor, {
                     className: n,
                     onClick: this.handleClick,
                     children: e
@@ -36,19 +36,19 @@ class o extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            a(this, 'handleClick', () => {
+            l(this, 'handleClick', () => {
                 let { onClick: e, index: t } = this.props;
                 null == e || e(t);
             });
     }
 }
-class s extends r.PureComponent {
+class s extends i.PureComponent {
     render() {
         let e = this.props.artists.split(';');
         if (!this.props.canOpen) return e.join(', ');
         let t = e.length - 1;
         return e.map((e, n) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 o,
                 {
                     text: e,
@@ -63,7 +63,7 @@ class s extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            a(this, 'handleOpenSpotifyArtist', (e) => {
+            l(this, 'handleOpenSpotifyArtist', (e) => {
                 let { onOpenSpotifyArtist: t } = this.props;
                 null == t || t(e);
             });

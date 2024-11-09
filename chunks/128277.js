@@ -22,14 +22,14 @@ var r = n(200651),
     v = n(652853),
     I = n(448980),
     S = n(194811),
-    b = n(373826),
-    T = n(315324),
+    T = n(373826),
+    b = n(315324),
     y = n(582123),
     A = n(262210),
     N = n(666984),
     C = n(290274),
     R = n(228168),
-    O = n(69035);
+    O = n(676411);
 function D(e) {
     let { user: t, currentUser: n, activity: a, guild: D, channel: L, className: x, onClose: w } = e,
         { profileType: M } = (0, v.z)(),
@@ -59,11 +59,11 @@ function D(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(b.Z, {
+                  ? (0, r.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(b.Z, {
+                  : (0, r.jsx)(T.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -102,7 +102,7 @@ function D(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: O.voiceChannelDivider }),
-                          (0, r.jsx)(T.Z, {
+                          (0, r.jsx)(b.Z, {
                               user: t,
                               guild: D,
                               channel: L,
@@ -162,7 +162,7 @@ function D(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(b.Z, {
+                                                        (0, r.jsx)(T.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {

@@ -10,8 +10,8 @@ var i = n(200651),
     u = n(116175),
     h = n(308083),
     m = n(388032),
-    p = n(900989),
-    g = n(306882);
+    p = n(969676),
+    g = n(602075);
 t.Z = (e) => {
     var t, n;
     let { guildId: f, badge: _, primaryColor: E, secondaryColor: I, tag: C, inSettings: v } = e,

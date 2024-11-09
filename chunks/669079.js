@@ -76,9 +76,9 @@ var r,
     v = n(388032);
 let I = p.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
     S = [I, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => p.Z.escape(e))].join('|'),
-    b = RegExp('(?: |^|https?://)(?:'.concat(S, ')/([a-z0-9-]+)'), 'gi'),
-    T = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
-    y = RegExp('(?: |^|https?://)(?:'.concat(T, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
+    T = RegExp('(?: |^|https?://)(?:'.concat(S, ')/([a-z0-9-]+)'), 'gi'),
+    b = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => p.Z.escape(e))].join('|'),
+    y = RegExp('(?: |^|https?://)(?:'.concat(b, ')(/|(/)?\\?code=)([a-z0-9-]+)'), 'gi'),
     A = (e, t) =>
         Array(t)
             .fill(void 0)
@@ -116,7 +116,7 @@ let k = (e) => (null == e ? void 0 : e.type) === g.uaV.CUSTOM_GIFT && (null == e
         let t;
         if (null == e) return [];
         let n = new Set();
-        for (; null != (t = b.exec(e)) && n.size < 3; ) n.add(P(t[1]));
+        for (; null != (t = T.exec(e)) && n.size < 3; ) n.add(P(t[1]));
         for (; null != (t = y.exec(e)) && n.size < 3; ) n.add(P(t[t.length - 1]));
         return Array.from(n);
     };

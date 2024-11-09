@@ -49,7 +49,7 @@ var i = n(200651),
     V = n(788307),
     H = n(981631),
     F = n(388032),
-    W = n(372242);
+    W = n(931450);
 let z = B.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
     Y = {
         offset: {
@@ -180,7 +180,7 @@ function J(e) {
                       { noBlurEvent: !0 }
                   )
                 : (0, m.jW)(e, async () => {
-                      let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('12327')]).then(n.bind(n, 131404));
+                      let { default: e } = await Promise.all([n.e('79695'), n.e('92453'), n.e('56826'), n.e('29212')]).then(n.bind(n, 131404));
                       return (n) =>
                           (0, i.jsx)(e, {
                               ...n,

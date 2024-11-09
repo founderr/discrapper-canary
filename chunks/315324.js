@@ -18,7 +18,7 @@ var i = n(442837),
     d = n(938475),
     f = n(652853),
     _ = n(228168),
-    h = n(69035);
+    h = n(676411);
 let p = 3;
 function m(e) {
     let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
@@ -30,8 +30,8 @@ function m(e) {
             })
         ),
         S = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
-        b = v === _.y0.FULL_SIZE,
-        T = v === _.y0.PANEL;
+        T = v === _.y0.FULL_SIZE,
+        b = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
         className: h.voiceChannel,
         children: [
@@ -74,7 +74,7 @@ function m(e) {
                 maxUsers: p,
                 size: a.AvatarSizes.SIZE_16,
                 onClick: () => (null == g ? void 0 : g({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                disableUserPopout: !!(!b && !T) || ((e) => e === t.id),
+                disableUserPopout: !!(!T && !b) || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
         ]

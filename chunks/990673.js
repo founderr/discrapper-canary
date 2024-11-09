@@ -8,7 +8,7 @@ n(192379);
 var r = n(382790),
     s = n(430036),
     a = n(518084),
-    l = n(380177);
+    l = n(240038);
 function o(e) {
     let { dragStart: t, dragging: n, pinned: o, locked: c } = e;
     return (0, i.jsxs)(a.ZP, {

@@ -5,8 +5,8 @@ var r = n(200651),
     s = n(454585),
     o = n(273744),
     l = n(388032),
-    u = n(936230),
-    c = n(971436);
+    u = n(650626),
+    c = n(113207);
 let d = (e) => {
     let {
             data: { title: t, subtitle: n, placeholder: d, rows: f, character_limit: _, pattern: h },
@@ -21,22 +21,22 @@ let d = (e) => {
             })
         ),
         [v, I] = i.useState(''),
-        [S, b] = i.useState('');
+        [S, T] = i.useState('');
     i.useEffect(() => {
         var e;
         I(null !== (e = null == m ? void 0 : m.value) && void 0 !== e ? e : '');
     }, [m]);
-    let T = i.useCallback(
+    let b = i.useCallback(
         (e) => {
             let t = null != h ? new RegExp(h) : null;
             null != t && null == t.exec(e)
-                ? (b(l.intl.string(l.t['24xrGR'])),
+                ? (T(l.intl.string(l.t['24xrGR'])),
                   p({
                       value: e,
                       isValid: !1
                   }))
                 : null != e &&
-                  (b(''),
+                  (T(''),
                   I(e),
                   p({
                       value: e,
@@ -65,7 +65,7 @@ let d = (e) => {
                 }),
             (0, r.jsx)(a.TextArea, {
                 maxLength: _,
-                onChange: T,
+                onChange: b,
                 value: v,
                 error: S,
                 rows: f,

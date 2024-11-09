@@ -39,27 +39,27 @@ var r;
             (d = 22), (_ = 66), (f = 0);
         });
     function v() {
-        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), b())), E();
+        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), T())), E();
     }
     function I() {
-        (i = null), (r = setTimeout(T, 0));
+        (i = null), (r = setTimeout(b, 0));
     }
     function S() {
         (r = null), s(I);
     }
-    function b() {
+    function T() {
         if (!c) (t = _ - (Date.now() - p)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S());
     }
-    function T() {
+    function b() {
         var n,
             i,
             a,
             s = d > 9 ? 9 : 1;
         if (((p = Date.now()), (c = !1), (r = null), u > 2 || p - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
-        l.length ? b() : (u = 0);
+        l.length ? T() : (u = 0);
     }
     function y(e) {
-        return h++, l.push(e), b(), h;
+        return h++, l.push(e), T(), h;
     }
     function A(e) {
         var t = e - 1 - m;

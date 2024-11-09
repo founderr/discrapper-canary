@@ -21,7 +21,7 @@ var i = n(200651),
     _ = n(797908),
     E = n(120549),
     I = n(979007),
-    C = n(870411);
+    C = n(463051);
 function v(e) {
     var t;
     let { query: n, initialCategoryId: v, onSelectApplication: S } = e,

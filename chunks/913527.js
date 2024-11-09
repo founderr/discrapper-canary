@@ -87,14 +87,14 @@ var r, i;
             v,
             I,
             S = (t.momentProperties = []);
-        function b(e, t) {
+        function T(e, t) {
             var n, r, i;
             if ((!a(t._isAMomentObject) && (e._isAMomentObject = t._isAMomentObject), !a(t._i) && (e._i = t._i), !a(t._f) && (e._f = t._f), !a(t._l) && (e._l = t._l), !a(t._strict) && (e._strict = t._strict), !a(t._tzm) && (e._tzm = t._tzm), !a(t._isUTC) && (e._isUTC = t._isUTC), !a(t._offset) && (e._offset = t._offset), !a(t._pf) && (e._pf = f(t)), !a(t._locale) && (e._locale = t._locale), S.length > 0)) for (n = 0; n < S.length; n++) !a((i = t[(r = S[n])])) && (e[r] = i);
             return e;
         }
-        var T = !1;
+        var b = !1;
         function y(e) {
-            b(this, e), (this._d = new Date(null != e._d ? e._d.getTime() : NaN)), !this.isValid() && (this._d = new Date(NaN)), !1 === T && ((T = !0), t.updateOffset(this), (T = !1));
+            T(this, e), (this._d = new Date(null != e._d ? e._d.getTime() : NaN)), !this.isValid() && (this._d = new Date(NaN)), !1 === b && ((b = !0), t.updateOffset(this), (b = !1));
         }
         function A(e) {
             return e instanceof y || (null != e && null != e._isAMomentObject);
@@ -328,13 +328,13 @@ var r, i;
         var eI = eS('FullYear', !0);
         function eS(e, n) {
             return function (r) {
-                return null != r ? (eT(this, e, r), t.updateOffset(this, n), this) : eb(this, e);
+                return null != r ? (eb(this, e, r), t.updateOffset(this, n), this) : eT(this, e);
             };
         }
-        function eb(e, t) {
+        function eT(e, t) {
             return e.isValid() ? e._d['get' + (e._isUTC ? 'UTC' : '') + t]() : NaN;
         }
-        function eT(e, t, n) {
+        function eb(e, t, n) {
             e.isValid() && !isNaN(n) && ('FullYear' === t && ev(e.year()) && 1 === e.month() && 29 === e.date() ? e._d['set' + (e._isUTC ? 'UTC' : '') + t](n, e.month(), ey(n, e.month())) : e._d['set' + (e._isUTC ? 'UTC' : '') + t](n));
         }
         function ey(e, t) {
@@ -398,7 +398,7 @@ var r, i;
             return (n = Math.min(e.date(), ey(e.year(), t))), e._d['set' + (e._isUTC ? 'UTC' : '') + 'Month'](t, n), e;
         }
         function eO(e) {
-            return null != e ? (eR(this, e), t.updateOffset(this, !0), this) : eb(this, 'Month');
+            return null != e ? (eR(this, e), t.updateOffset(this, !0), this) : eT(this, 'Month');
         }
         function eD() {
             function e(e, t) {
@@ -988,7 +988,7 @@ var r, i;
                                     return;
                                 }
                                 for (i = 0; i < e._f.length; i++) {
-                                    if (((a = 0), (t = b({}, e)), null != e._useUTC && (t._useUTC = e._useUTC), (t._f = e._f[i]), tt(t), !!_(t))) (a += f(t).charsLeftOver + 10 * f(t).unusedTokens.length), (f(t).score = a), (null == r || a < r) && ((r = a), (n = t));
+                                    if (((a = 0), (t = T({}, e)), null != e._useUTC && (t._useUTC = e._useUTC), (t._f = e._f[i]), tt(t), !!_(t))) (a += f(t).charsLeftOver + 10 * f(t).unusedTokens.length), (f(t).score = a), (null == r || a < r) && ((r = a), (n = t));
                                 }
                                 c(e, n || t);
                             })(e)
@@ -1189,7 +1189,7 @@ var r, i;
                               ((i = (function (e, t) {
                                   var n;
                                   return e.isValid() && t.isValid()
-                                      ? ((t = tp(t, e)), e.isBefore(t) ? (n = tb(e, t)) : (((n = tb(t, e)).milliseconds = -n.milliseconds), (n.months = -n.months)), n)
+                                      ? ((t = tp(t, e)), e.isBefore(t) ? (n = tT(e, t)) : (((n = tT(t, e)).milliseconds = -n.milliseconds), (n.months = -n.months)), n)
                                       : {
                                             milliseconds: 0,
                                             months: 0
@@ -1206,7 +1206,7 @@ var r, i;
             var n = e && parseFloat(e.replace(',', '.'));
             return (isNaN(n) ? 0 : n) * t;
         }
-        function tb(e, t) {
+        function tT(e, t) {
             var n = {
                 milliseconds: 0,
                 months: 0
@@ -1217,7 +1217,7 @@ var r, i;
             (tI.invalid = function () {
                 return tI(NaN);
             });
-        function tT(e, t) {
+        function tb(e, t) {
             return function (n, r) {
                 var i;
                 return null !== r && !isNaN(+r) && (x(t, 'moment().' + t + '(period, number) is deprecated. Please use moment().' + t + '(number, period). See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.'), (i = n), (n = r), (r = i)), ty(this, tI((n = 'string' == typeof n ? +n : n), r), e), this;
@@ -1227,10 +1227,10 @@ var r, i;
             var a = n._milliseconds,
                 s = td(n._days),
                 o = td(n._months);
-            if (!!e.isValid()) (i = null == i || i), o && eR(e, eb(e, 'Month') + o * r), s && eT(e, 'Date', eb(e, 'Date') + s * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, s || o);
+            if (!!e.isValid()) (i = null == i || i), o && eR(e, eT(e, 'Month') + o * r), s && eb(e, 'Date', eT(e, 'Date') + s * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, s || o);
         }
-        var tA = tT(1, 'add'),
-            tN = tT(-1, 'subtract');
+        var tA = tb(1, 'add'),
+            tN = tb(-1, 'subtract');
         function tC(e, t) {
             var n,
                 r,
@@ -1708,7 +1708,7 @@ var r, i;
             (tB.isDSTShifted = D('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', function () {
                 if (!a(this._isDSTShifted)) return this._isDSTShifted;
                 var e = {};
-                if ((b(e, this), (e = tn(e))._a)) {
+                if ((T(e, this), (e = tn(e))._a)) {
                     var t = e._isUTC ? d(e._a) : ti(e._a);
                     this._isDSTShifted = this.isValid() && R(e._a, t.toArray()) > 0;
                 } else this._isDSTShifted = !1;

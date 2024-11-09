@@ -64,8 +64,8 @@ r.inherits(v, g),
             v = this.h[8],
             I = this.h[9],
             S = this.h[10],
-            b = this.h[11],
-            T = this.h[12],
+            T = this.h[11],
+            b = this.h[12],
             y = this.h[13],
             A = this.h[14],
             N = this.h[15];
@@ -84,11 +84,11 @@ r.inherits(v, g),
                 x = (function (e, t, n, r, i) {
                     var a = (e & n) ^ (~e & i);
                     return a < 0 && (a += 4294967296), a;
-                })(v, I, S, b, T, y),
+                })(v, I, S, T, b, y),
                 w = (function (e, t, n, r, i, a) {
                     var s = (t & r) ^ (~t & a);
                     return s < 0 && (s += 4294967296), s;
-                })(v, I, S, b, T, y),
+                })(v, I, S, T, b, y),
                 M = this.k[C],
                 P = this.k[C + 1],
                 k = n[C],
@@ -117,9 +117,9 @@ r.inherits(v, g),
                     })(r, i, l, u, _, h))
                 ),
                 F = f(R, O, D, L);
-            (A = T), (N = y), (T = S), (y = b), (S = v), (b = I), (v = d(g, E, G, B)), (I = f(E, E, G, B)), (g = _), (E = h), (_ = l), (h = u), (l = r), (u = i), (r = d(G, B, Z, F)), (i = f(G, B, Z, F));
+            (A = b), (N = y), (b = S), (y = T), (S = v), (T = I), (v = d(g, E, G, B)), (I = f(E, E, G, B)), (g = _), (E = h), (_ = l), (h = u), (l = r), (u = i), (r = d(G, B, Z, F)), (i = f(G, B, Z, F));
         }
-        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, _, h), c(this.h, 6, g, E), c(this.h, 8, v, I), c(this.h, 10, S, b), c(this.h, 12, T, y), c(this.h, 14, A, N);
+        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, _, h), c(this.h, 6, g, E), c(this.h, 8, v, I), c(this.h, 10, S, T), c(this.h, 12, b, y), c(this.h, 14, A, N);
     }),
     (v.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');

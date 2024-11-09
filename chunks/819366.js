@@ -22,8 +22,8 @@ var r = n(200651),
     v = n(271383),
     I = n(430824),
     S = n(699516),
-    b = n(594174),
-    T = n(5192),
+    T = n(594174),
+    b = n(5192),
     y = n(51144),
     A = n(377668);
 function N(e) {
@@ -55,7 +55,7 @@ function N(e) {
 function C(e) {
     let { className: t, userId: i, channelId: a, parsedUserId: h, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([b.default], () => b.default.getUser(i)),
+        L = (0, l.e7)([T.default], () => T.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
         w = null != x ? x.getGuildId() : null,
         M =
@@ -64,7 +64,7 @@ function C(e) {
                 : (e) => {
                       null != x &&
                           (0, c.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('92453'), n.e('13125'), n.e('80863')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('92453'), n.e('13125'), n.e('13441')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(e, {
                                       ...t,
@@ -76,7 +76,7 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, S.Z], () => T.ZP.getNickname(w, a, L)),
+        k = (0, l.e7)([E.Z, v.ZP, S.Z], () => b.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
         G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)

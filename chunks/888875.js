@@ -18,8 +18,8 @@ var r = n(392711),
 let v = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     I = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
     S = null,
-    b = !1;
-class T extends s.Z {
+    T = !1;
+class b extends s.Z {
     _initialize() {
         h.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
@@ -86,13 +86,13 @@ class T extends s.Z {
     }
 }
 function y() {
-    (b = !0), R(v, !0);
+    (T = !0), R(v, !0);
 }
 function A(e) {
-    b && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
+    T && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
 }
 function N() {
-    b && (clearTimeout(S), (S = null), C(!1));
+    T && (clearTimeout(S), (S = null), C(!1));
 }
 async function C(e) {
     R(I, !1),
@@ -104,4 +104,4 @@ async function C(e) {
 function R(e, t) {
     null != S && clearTimeout(S), (S = setTimeout(() => C(t), e));
 }
-t.Z = new T();
+t.Z = new b();

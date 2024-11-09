@@ -28,7 +28,7 @@ var r,
     p = n(714338),
     m = n(624138),
     g = n(314910),
-    E = n(502997);
+    E = n(81448);
 let v = (0, m.Mg)(_.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
 ((i = r || (r = {}))[(i.ENTERING = 1)] = 'ENTERING'), (i[(i.ENTERED = 2)] = 'ENTERED'), (i[(i.EXITING = 3)] = 'EXITING'), (i[(i.EXITED = 4)] = 'EXITED');
 let I = (0, d.Z)((e) => ({
@@ -85,7 +85,7 @@ function S(e) {
         })
     );
 }
-let b = {
+let T = {
         enter: E.enter,
         enterActive: E.enterActive,
         enterDone: E.enterDone,
@@ -93,7 +93,7 @@ let b = {
         exitActive: E.exitActive,
         exitDone: E.exitDone
     },
-    T = {
+    b = {
         enter: E.enterReducedMotion,
         enterActive: E.enterActiveReducedMotion,
         enterDone: E.enterDoneReducedMotion,
@@ -103,7 +103,7 @@ let b = {
     };
 function y() {
     let { reducedMotion: e } = s.useContext(h.AccessibilityPreferencesContext),
-        t = e.enabled ? T : b,
+        t = e.enabled ? b : T,
         n = I((e) => e.fullScreenLayers);
     return (0, a.jsx)(u.Z, {
         children: n.map((e) =>

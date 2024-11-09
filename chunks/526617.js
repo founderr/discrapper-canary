@@ -26,8 +26,8 @@ var r = n(200651),
     v = n(53691),
     I = n(75145),
     S = n(631771),
-    b = n(609218),
-    T = n(695346),
+    T = n(609218),
+    b = n(695346),
     y = n(594174),
     A = n(979651),
     N = n(259580),
@@ -50,7 +50,7 @@ var r = n(200651),
     j = n(981631),
     H = n(474936),
     Y = n(388032),
-    W = n(315302);
+    W = n(185426);
 let K = [8, 0, 8, 0],
     z = 32 + I.Kn;
 function q(e, t, n) {
@@ -217,19 +217,19 @@ function $(e) {
         eE = (0, h.Dt)(),
         { categories: ev } = (0, k.ZP)(a, void 0, en),
         [eI, eS] = i.useState([]),
-        [eb, eT] = i.useState(!1),
+        [eT, eb] = i.useState(!1),
         ey = (0, k.FS)(ev, eI, em).filter((e) => e.items.length > 0),
         eA = ey.some((e) => !!(0, R._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eN = !e_ && U && eA,
         { enableInlineUpsell: eC, enableRoadblock: eR, enableRoadblockWithSocialProof: eO } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
         eD = eN && eC,
-        eL = T.T4.useSetting(),
+        eL = b.T4.useSetting(),
         ex = i.useMemo(() => new Set(eL), [eL]),
         ew = null == a,
         eM = R.ZP.canUseCustomCallSounds(ef),
         eP = i.useCallback(
             (e) => {
-                ex.has(e) ? ex.delete(e) : ex.add(e), T.T4.updateSetting(Array.from(ex));
+                ex.has(e) ? ex.delete(e) : ex.add(e), b.T4.updateSetting(Array.from(ex));
             },
             [ex]
         ),
@@ -394,13 +394,13 @@ function $(e) {
             () =>
                 eD
                     ? (0, r.jsx)(v.p, {
-                          showUpsell: eb,
+                          showUpsell: eT,
                           text: eq(),
                           button: Y.intl.string(Y.t.pj0XBA),
                           buttonAnalyticsObject: { section: j.jXE.SOUND_PICKER_FLOATING_UPSELL }
                       })
                     : null,
-            [eq, eb, eD]
+            [eq, eT, eD]
         ),
         eX = i.useCallback(
             (e) => {
@@ -425,8 +425,8 @@ function $(e) {
         children: [
             null != ec
                 ? eR
-                    ? (0, r.jsx)(b.Z, {
-                          containerContext: b.p.NONE,
+                    ? (0, r.jsx)(T.Z, {
+                          containerContext: T.p.NONE,
                           image: {
                               url: 'https://cdn.discordapp.com/assets/premium/roadblocks/soundboard_dark.png',
                               width: 220,
@@ -481,7 +481,7 @@ function $(e) {
                 gridNotice: G,
                 renderHeader: et,
                 renderUpsell: eQ,
-                setShowUpsell: eT
+                setShowUpsell: eb
             })
         ]
     });

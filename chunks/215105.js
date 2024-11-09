@@ -23,10 +23,10 @@ var r = n(200651),
     v = n(510659),
     I = n(810097),
     S = n(652853),
-    b = n(228168),
-    T = n(420212),
+    T = n(228168),
+    b = n(420212),
     y = n(388032),
-    A = n(678668);
+    A = n(639899);
 let N = (0, f.kt)({
         id: '1',
         type: o.d.DM
@@ -34,14 +34,14 @@ let N = (0, f.kt)({
     C = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case b.n_.ACTIVITY:
+            case T.n_.ACTIVITY:
                 let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n }),
                     s = '\n> '.concat(i);
                 return null != i ? ''.concat(I.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(I.jd).concat(a, '*\n').concat(t);
-            case b.n_.AVATAR:
+            case T.n_.AVATAR:
                 let o = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
                 return ''.concat(I.jd).concat(o, '*\n').concat(t);
-            case b.n_.STATUS:
+            case T.n_.STATUS:
                 let l = y.intl.formatToPlainString(y.t.lFXgFR, { username: n }),
                     u = '\n> '.concat(i);
                 return null != i ? ''.concat(I.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(I.jd).concat(l, '*\n').concat(t);
@@ -51,11 +51,11 @@ let N = (0, f.kt)({
     },
     R = (e) => {
         switch (e) {
-            case b.n_.ACTIVITY:
+            case T.n_.ACTIVITY:
                 return y.t.Qn081N;
-            case b.n_.AVATAR:
+            case T.n_.AVATAR:
                 return y.t.xGNPFB;
-            case b.n_.STATUS:
+            case T.n_.STATUS:
                 return y.t.g9BTCA;
             default:
                 (0, _.vE)(e);
@@ -73,7 +73,7 @@ function O(e) {
         F = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                e.key === T.vn.ESCAPE && (e.stopPropagation(), w());
+                e.key === b.vn.ESCAPE && (e.stopPropagation(), w());
             },
             [w]
         );
@@ -99,17 +99,17 @@ function O(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            M(b.P.REPLY);
+            M(T.P.REPLY);
         },
         H = {
-            [A.biteSize]: o === b.y0.BITE_SIZE,
-            [A.panel]: o === b.y0.PANEL,
-            [A.fullSize]: o === b.y0.FULL_SIZE
+            [A.biteSize]: o === T.y0.BITE_SIZE,
+            [A.panel]: o === T.y0.PANEL,
+            [A.fullSize]: o === T.y0.FULL_SIZE
         },
         Y = {
-            [A.status]: f === b.n_.STATUS,
-            [A.avatar]: f === b.n_.AVATAR,
-            [A.activity]: f === b.n_.ACTIVITY
+            [A.status]: f === T.n_.STATUS,
+            [A.avatar]: f === T.n_.AVATAR,
+            [A.activity]: f === T.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
         ref: F,

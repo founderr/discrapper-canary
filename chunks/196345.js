@@ -1,6 +1,6 @@
-n.d(t, {
+t.d(n, {
     EK: function () {
-        return d;
+        return u;
     },
     G0: function () {
         return m;
@@ -9,83 +9,83 @@ n.d(t, {
         return f;
     },
     dd: function () {
-        return p;
+        return h;
     }
 }),
-    n(47120);
-var o = n(200651);
-n(192379);
-var r = n(120356),
-    a = n.n(r),
-    i = n(481060),
-    l = n(454585),
-    s = n(489813),
-    c = n(388032),
-    u = n(633656);
-function d(e) {
-    let { terms: t, channelId: n, className: r } = e;
-    return (0, o.jsx)('div', {
-        className: a()(u.termsFieldBody, r),
-        children: t.map((e, t) =>
-            (0, o.jsxs)(
+    t(47120);
+var r = t(200651);
+t(192379);
+var a = t(120356),
+    i = t.n(a),
+    o = t(481060),
+    s = t(454585),
+    l = t(489813),
+    c = t(388032),
+    d = t(738912);
+function u(e) {
+    let { terms: n, channelId: t, className: a } = e;
+    return (0, r.jsx)('div', {
+        className: i()(d.termsFieldBody, a),
+        children: n.map((e, n) =>
+            (0, r.jsxs)(
                 'div',
                 {
-                    className: u.termsRow,
+                    className: d.termsRow,
                     children: [
-                        (0, o.jsx)(i.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            children: ''.concat(t + 1, '.')
+                            children: ''.concat(n + 1, '.')
                         }),
-                        (0, o.jsx)(i.Text, {
+                        (0, r.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: u.termsRowContent,
-                            children: l.Z.parseGuildVerificationFormRule(e, !0, { channelId: n })
+                            className: d.termsRowContent,
+                            children: s.Z.parseGuildVerificationFormRule(e, !0, { channelId: t })
                         })
                     ]
                 },
-                'term-'.concat(t)
+                'term-'.concat(n)
             )
         )
     });
 }
 function m(e) {
-    let { onChange: t, checked: n, disabled: r } = e;
-    return (0, o.jsx)(i.Checkbox, {
+    let { onChange: n, checked: t, disabled: a } = e;
+    return (0, r.jsx)(o.Checkbox, {
         size: 20,
-        type: i.Checkbox.Types.INVERTED,
-        value: n,
-        onChange: t,
-        disabled: r,
+        type: o.Checkbox.Types.INVERTED,
+        value: t,
+        onChange: n,
+        disabled: a,
         style: { borderWidth: 2 },
-        className: u.checkbox,
-        children: (0, o.jsx)(i.Text, {
+        className: d.checkbox,
+        children: (0, r.jsx)(o.Text, {
             variant: 'text-sm/normal',
             children: c.intl.string(c.t['2EXfGB'])
         })
     });
 }
 function f(e) {
-    let { formField: t } = e;
-    return (0, o.jsx)(s.Ih, {
-        icon: i.BookCheckIcon,
+    let { formField: n } = e;
+    return (0, r.jsx)(l.Ih, {
+        icon: o.BookCheckIcon,
         text: c.intl.string(c.t['2xbmoK']),
-        meetsRequirement: !!t.response
+        meetsRequirement: !!n.response
     });
 }
-let p = (e) => {
-    let { channelId: t, formField: n, onChange: r } = e;
-    return (0, o.jsxs)(s.hK, {
+let h = (e) => {
+    let { channelId: n, formField: t, onChange: a } = e;
+    return (0, r.jsxs)(l.hK, {
         title: c.intl.string(c.t.Q8OFNz),
         children: [
-            (0, o.jsx)(d, {
-                className: u.fieldBackground,
-                terms: n.values,
-                channelId: t
+            (0, r.jsx)(u, {
+                className: d.fieldBackground,
+                terms: t.values,
+                channelId: n
             }),
-            (0, o.jsx)(m, {
-                onChange: r,
-                checked: n.response
+            (0, r.jsx)(m, {
+                onChange: a,
+                checked: t.response
             })
         ]
     });

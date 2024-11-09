@@ -18,15 +18,15 @@ let g = {},
     v = {},
     I = new Set(),
     S = new Set(),
-    b = 0,
     T = 0,
+    b = 0,
     y = 0,
     A = 0,
     N = 0;
 function C() {
     A = Object.values(g).length;
     let { [m.OGo.PENDING_INCOMING]: e = 0, [m.OGo.PENDING_OUTGOING]: t = 0, [m.OGo.FRIEND]: n = 0 } = l().countBy(Object.values(g), (e) => e);
-    (T = t), (y = n), (b = e - (N = I.size));
+    (b = t), (y = n), (T = e - (N = I.size));
 }
 class R extends (r = u.ZP.Store) {
     initialize() {
@@ -64,13 +64,13 @@ class R extends (r = u.ZP.Store) {
         return !1;
     }
     getPendingCount() {
-        return b;
+        return T;
     }
     getSpamCount() {
         return (0, d.A)({ location: 'friend_request_spam_inbox' }) ? N : 0;
     }
     getOutgoingCount() {
-        return T;
+        return b;
     }
     getFriendCount() {
         return y;

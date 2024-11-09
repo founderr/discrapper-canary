@@ -38,7 +38,7 @@ var i = n(200651),
     w = n(526761),
     U = n(726985),
     V = n(388032),
-    G = n(393267);
+    G = n(982241);
 function Y() {
     return (0, i.jsx)(o.Card, {
         className: G.noItemsCard,

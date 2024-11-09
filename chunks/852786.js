@@ -7,7 +7,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(790315);
+    o = n(47763);
 function l(e) {
     let { className: t, width: n, height: a, delayMs: l } = e,
         u = i.useMemo(() => {

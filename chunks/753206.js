@@ -7,7 +7,7 @@ var i = t(200651),
     s = t(25015),
     c = t(963550),
     d = t(845080),
-    f = t(596756);
+    f = t(916315);
 n.Z = r.memo(function (e) {
     var n;
     let { message: t, channel: r, compact: l, className: p, isGroupStart: _, hideSimpleEmbedContent: m = !0, disableInteraction: g } = e,

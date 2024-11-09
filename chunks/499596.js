@@ -13,7 +13,7 @@ var i = n(120356),
     c = n(471445),
     d = n(5192),
     u = n(388032),
-    f = n(894305);
+    f = n(532036);
 function h(e) {
     let { channel: t, users: n, selected: i = !1 } = e,
         h = (0, o.ZP)(t),

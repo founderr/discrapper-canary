@@ -30,7 +30,7 @@ function c(e, t, n) {
         I = (0, r.zL)(e, { labelable: !0 }),
         S = -1;
     null != t.selectedValue ? t.selectedValue === o && (S = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (S = 0), f && (S = void 0);
-    let { name: b, descriptionId: T, errorMessageId: y, validationBehavior: A } = u.get(t);
+    let { name: T, descriptionId: b, errorMessageId: y, validationBehavior: A } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
         (0, a.Q)({ validationBehavior: A }, t, n),
@@ -39,7 +39,7 @@ function c(e, t, n) {
             inputProps: (0, r.dG)(I, {
                 ...v,
                 type: 'radio',
-                name: b,
+                name: T,
                 tabIndex: S,
                 disabled: f,
                 required: t.isRequired && 'native' === A,
@@ -48,7 +48,7 @@ function c(e, t, n) {
                 onChange: (e) => {
                     e.stopPropagation(), t.setSelectedValue(o);
                 },
-                'aria-describedby': [e['aria-describedby'], t.isInvalid ? y : null, T].filter(Boolean).join(' ') || void 0
+                'aria-describedby': [e['aria-describedby'], t.isInvalid ? y : null, b].filter(Boolean).join(' ') || void 0
             }),
             isDisabled: f,
             isSelected: _,
@@ -71,8 +71,8 @@ function d(e, t) {
             isInvalid: t.isInvalid,
             errorMessage: e.errorMessage || m
         }),
-        b = (0, r.zL)(e, { labelable: !0 }),
-        { focusWithinProps: T } = (0, s.L_)({
+        T = (0, r.zL)(e, { labelable: !0 }),
+        { focusWithinProps: b } = (0, s.L_)({
             onBlurWithin(n) {
                 var r;
                 null === (r = e.onBlur) || void 0 === r || r.call(e, n), !t.selectedValue && t.setLastFocusedValue(null);
@@ -89,7 +89,7 @@ function d(e, t) {
             validationBehavior: _
         }),
         {
-            radioGroupProps: (0, r.dG)(b, {
+            radioGroupProps: (0, r.dG)(T, {
                 role: 'radiogroup',
                 onKeyDown: (e) => {
                     let n, r;
@@ -120,7 +120,7 @@ function d(e, t) {
                 'aria-disabled': d || void 0,
                 'aria-orientation': f,
                 ...v,
-                ...T
+                ...b
             }),
             labelProps: E,
             descriptionProps: I,

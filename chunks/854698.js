@@ -78,8 +78,8 @@ let _ = 365,
     v = [s.Ci.SA.weekday, s.Ci.SU.weekday],
     I = [s.Ci.FR.weekday, s.Ci.SA.weekday],
     S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
-    b = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
-    T = new Set([0, 6]);
+    T = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
+    b = new Set([0, 6]);
 function y(e) {
     var t;
     let n = e.toDate(),
@@ -116,7 +116,7 @@ function y(e) {
             }
         ];
     return (
-        T.has(n.getDay())
+        b.has(n.getDay())
             ? (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) &&
               a.push({
                   value: c.z.WEEKEND_ONLY,
@@ -151,7 +151,7 @@ function R(e, t, n) {
     };
 }
 function O(e) {
-    return new s.OG(b[e]);
+    return new s.OG(T[e]);
 }
 function D(e, t) {
     let n;

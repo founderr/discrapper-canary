@@ -17,8 +17,8 @@ var r = 'function' == typeof Map && Map.prototype,
     v = String.prototype.replace,
     I = String.prototype.toUpperCase,
     S = String.prototype.toLowerCase,
-    b = RegExp.prototype.test,
-    T = Array.prototype.concat,
+    T = RegExp.prototype.test,
+    b = Array.prototype.concat,
     y = Array.prototype.join,
     A = Array.prototype.slice,
     N = Math.floor,
@@ -36,7 +36,7 @@ var r = 'function' == typeof Map && Map.prototype,
               }
             : null);
 function M(e, t) {
-    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || b.call(/e/, t)) return t;
+    if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || T.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ('number' == typeof e) {
         var r = e < 0 ? -N(-e) : N(e);
@@ -77,8 +77,8 @@ e.exports = function e(t, r, i, o) {
         })(t, l);
     if ('number' == typeof t) {
         if (0 === t) return 1 / 0 / t > 0 ? '0' : '-0';
-        var b = String(t);
-        return I ? M(t, b) : b;
+        var T = String(t);
+        return I ? M(t, T) : T;
     }
     if ('bigint' == typeof t) {
         var N = String(t) + 'n';
@@ -156,7 +156,7 @@ e.exports = function e(t, r, i, o) {
         })(t)
     ) {
         var ea = X(t, V);
-        return 'cause' in Error.prototype || !('cause' in t) || x.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + y.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + y.call(T.call('[cause]: ' + V(t.cause), ea), ', ') + ' }';
+        return 'cause' in Error.prototype || !('cause' in t) || x.call(t, 'cause') ? (0 === ea.length ? '[' + String(t) + ']' : '{ [' + String(t) + '] ' + y.call(ea, ', ') + ' }') : '{ [' + String(t) + '] ' + y.call(b.call('[cause]: ' + V(t.cause), ea), ', ') + ' }';
     }
     if ('object' == typeof t && p) {
         if (U && 'function' == typeof t[U] && P) return P(t, { depth: R - i });
@@ -292,7 +292,7 @@ e.exports = function e(t, r, i, o) {
             eu = w ? w(t) === Object.prototype : t instanceof Object || t.constructor === Object,
             ec = t instanceof Object ? '' : 'null prototype',
             ed = !eu && L && Object(t) === t && L in t ? E.call(H(t), 8, -1) : ec ? 'Object' : '',
-            ef = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + y.call(T.call([], ed || [], ec || []), ': ') + '] ' : '');
+            ef = (eu || 'function' != typeof t.constructor ? '' : t.constructor.name ? t.constructor.name + ' ' : '') + (ed || ec ? '[' + y.call(b.call([], ed || [], ec || []), ': ') + '] ' : '');
         return 0 === el.length ? ef + '{}' : k ? ef + '{' + Q(el, k) + '}' : ef + '{ ' + y.call(el, ', ') + ' }';
     }
     return String(t);
@@ -368,7 +368,7 @@ function X(e, t) {
     }
     for (var l in e) {
         if (!j(e, l) || (r && String(Number(l)) === l && l < e.length)) continue;
-        if (!(D && n['$' + l] instanceof Symbol)) b.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
+        if (!(D && n['$' + l] instanceof Symbol)) T.call(/[^\w$]/, l) ? i.push(t(l, e) + ': ' + t(e[l], e)) : i.push(l + ': ' + t(e[l], e));
     }
     if ('function' == typeof R) for (var u = 0; u < s.length; u++) x.call(e, s[u]) && i.push('[' + t(s[u]) + ']: ' + t(e[s[u]], e));
     return i;

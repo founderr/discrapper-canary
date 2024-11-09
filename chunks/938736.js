@@ -18,13 +18,13 @@ s.d(t, {
         return f;
     },
     TW: function () {
-        return h;
+        return _;
     },
     bD: function () {
         return g;
     },
     pn: function () {
-        return _;
+        return h;
     },
     uv: function () {
         return v;
@@ -68,12 +68,12 @@ let p = '40%',
         let r = (0, n.e7)([o.Z], () => o.Z.getIsEligibleToSendReferrals());
         return t && r;
     },
-    h = (e) => {
+    _ = (e) => {
         let t = v(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
-    _ = (e) => {
-        let t = h(e),
+    h = (e) => {
+        let t = _(e),
             s = g('PremiumManagementSettings'),
             r = (0, n.e7)([o.Z], () => o.Z.getRecipientStatus());
         if (!t) return !1;
@@ -108,7 +108,7 @@ let p = '40%',
         return t && !s;
     },
     A = (e) => {
-        let t = h(e),
+        let t = _(e),
             s = g(e),
             n = (0, i.wE)(r.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
         return !t && s && !n;

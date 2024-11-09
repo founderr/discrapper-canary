@@ -48,7 +48,7 @@ var i = n(200651),
     H = n(981631),
     U = n(474936),
     B = n(388032),
-    W = n(748705);
+    W = n(677825);
 function V(e) {
     let { analyticsLocations: t, analyticsLocation: n, analyticsObject: r, analyticsSourceLocation: s, analyticsSubscriptionType: c = H.NYc.PREMIUM, onComplete: d, transitionState: f, initialPlanId: L, subscriptionTier: S, onClose: R, trialId: k, trialFooterMessageOverride: w, reviewWarningMessage: F, planGroup: V = U.Y1, openInvoiceId: Y, onSubscriptionConfirmation: z, renderPurchaseConfirmation: G, postSuccessGuild: K, followupSKUInfo: Q, renderHeader: $, applicationId: q, guildId: J, referralTrialOfferId: X, skuId: ee, onStepChange: et, shakeWhilePurchasing: en = !1, isLargeModal: ei = !1, hideShadow: el = !1, returnRef: er, skipConfirm: ea = !1, continueSession: eo = !1 } = e,
         { activitySessionId: es, purchaseState: eu, setPurchaseState: ec, selectedSkuId: ed, setSelectedSkuId: ef, selectedPlan: eC, setSelectedPlanId: e_, setStep: em, setPurchaseError: eL, paymentAuthenticationState: eS, step: ep, contextMetadata: eT, purchaseTokenAuthState: eE, activeSubscription: eh, priceOptions: eN, hasPaymentSources: eg, paymentSourceId: eA, paymentSources: ev, purchaseType: eR, defaultPlanId: ex } = (0, y.usePaymentContext)(),

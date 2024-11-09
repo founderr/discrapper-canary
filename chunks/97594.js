@@ -17,7 +17,7 @@ var r = t(200651),
     m = t(860153),
     h = t(981631),
     f = t(388032),
-    p = t(267189);
+    p = t(619377);
 function g(e) {
     let { onClose: n, items: t, startingIndex: l, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...S } = e,
         [v, E] = i.useState(null != l ? l : 0),

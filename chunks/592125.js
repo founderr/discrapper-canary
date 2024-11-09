@@ -25,8 +25,8 @@ var r,
     v = n(853856),
     I = n(131704),
     S = n(823379),
-    b = n(709054),
-    T = n(314897),
+    T = n(709054),
+    b = n(314897),
     y = n(430824),
     A = n(594174),
     N = n(981631);
@@ -124,7 +124,7 @@ function W(e, t, n) {
 }
 function K(e) {
     if ((C.fileOnly('Deleting guild channels for '.concat(e)), null != D[e])) {
-        for (let t of b.default.keys(D[e])) delete O[t];
+        for (let t of T.default.keys(D[e])) delete O[t];
         delete D[e];
     }
 }
@@ -269,7 +269,7 @@ class eu extends (r = c.ZP.Store) {
     }
     getChannelIds(e) {
         var t, n;
-        return (Y(e, 0, 'getChannelIds'), null == e) ? b.default.keys(L) : b.default.keys(null !== (n = null !== (t = p.Z.getGuildBasicChannels(e)) && void 0 !== t ? t : D[e]) && void 0 !== n ? n : R);
+        return (Y(e, 0, 'getChannelIds'), null == e) ? T.default.keys(L) : T.default.keys(null !== (n = null !== (t = p.Z.getGuildBasicChannels(e)) && void 0 !== t ? t : D[e]) && void 0 !== n ? n : R);
     }
     getMutablePrivateChannels() {
         return L;
@@ -285,7 +285,7 @@ class eu extends (r = c.ZP.Store) {
     getSortedPrivateChannels() {
         return l()(L)
             .values()
-            .sort((e, t) => b.default.compare(e.lastMessageId, t.lastMessageId))
+            .sort((e, t) => T.default.compare(e.lastMessageId, t.lastMessageId))
             .reverse()
             .value();
     }
@@ -299,7 +299,7 @@ class eu extends (r = c.ZP.Store) {
         return M;
     }
     getDMUserIds() {
-        return b.default.keys(M);
+        return T.default.keys(M);
     }
     getPrivateChannelsVersion() {
         return P;
@@ -322,10 +322,10 @@ class eu extends (r = c.ZP.Store) {
     }
     getDebugInfo() {
         return {
-            loadedGuildIds: Array.from(G).sort(b.default.compare),
-            pendingGuildLoads: Object.keys(B).sort(b.default.compare),
+            loadedGuildIds: Array.from(G).sort(T.default.compare),
+            pendingGuildLoads: Object.keys(B).sort(T.default.compare),
             guildSizes: Object.keys(D)
-                .sort(b.default.compare)
+                .sort(T.default.compare)
                 .map((e) => ''.concat(e, ': ').concat(ec(e)))
         };
     }
@@ -376,7 +376,7 @@ function ec(e) {
         CHANNEL_DELETE: ei,
         CHANNEL_RECIPIENT_ADD: function (e) {
             let t = q(e.channelId),
-                n = T.default.getId();
+                n = b.default.getId();
             return (null == t ? !!void 0 : !!t.isPrivate()) && (Q(t.addRecipient(e.user.id, e.nick, n)), !0);
         },
         CHANNEL_RECIPIENT_REMOVE: function (e) {

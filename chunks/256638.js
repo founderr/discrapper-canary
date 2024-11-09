@@ -74,7 +74,7 @@ var i = n(200651),
     ef = n(610674),
     ep = n(65154),
     e_ = n(388032),
-    eg = n(411605);
+    eg = n(569252);
 let eE = () =>
         (0, i.jsxs)(c.Notice, {
             color: c.NoticeColors.DANGER,
@@ -702,7 +702,7 @@ let ex =
                                       var e, t;
                                       eI(null === (t = eu.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd),
                                           (0, c.openModalLazy)(async () => {
-                                              let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('57969')]).then(n.bind(n, 561623));
+                                              let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('87446')]).then(n.bind(n, 561623));
                                               return (t) =>
                                                   (0, i.jsx)(e, {
                                                       ...t,

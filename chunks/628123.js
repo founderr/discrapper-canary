@@ -18,9 +18,9 @@ var r = n(200651),
     v = n(626135),
     I = n(960048),
     S = n(998502),
-    b = n(981631),
-    T = n(388032),
-    y = n(624013);
+    T = n(981631),
+    b = n(388032),
+    y = n(584738);
 function A(e, t, n) {
     return (
         t in e
@@ -56,7 +56,7 @@ function N() {
         onClick: n,
         submitting: e,
         className: y.clearOverrideButton,
-        children: T.intl.string(T.t['/Nz9ra'])
+        children: b.intl.string(b.t['/Nz9ra'])
     });
 }
 let C = s().throttle(
@@ -84,7 +84,7 @@ class R extends i.PureComponent {
         });
         let r = (0, m.e)(),
             i = I.Z.captureCrash(e, { extra: t });
-        v.default.track(b.rMx.APP_CRASHED, {
+        v.default.track(T.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -115,7 +115,7 @@ class R extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: T.intl.string(T.t.tx8CkJ) }), (0, r.jsx)('p', { children: T.intl.string(T.t.CvQlAA) })]
+                    children: [(0, r.jsx)('p', { children: b.intl.string(b.t.tx8CkJ) }), (0, r.jsx)('p', { children: b.intl.string(b.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
                     className: y.buttons,
@@ -123,13 +123,13 @@ class R extends i.PureComponent {
                         (0, r.jsx)(d.Button, {
                             size: d.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: T.intl.string(T.t['+hivLS'])
+                            children: b.intl.string(b.t['+hivLS'])
                         }),
                         (0, r.jsx)(N, {})
                     ]
                 });
             return (0, r.jsx)(p.Z, {
-                title: T.intl.string(T.t['3h+n+/']),
+                title: b.intl.string(b.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
                 className: y.errorPage

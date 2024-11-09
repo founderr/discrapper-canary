@@ -21,7 +21,7 @@ var i = e(860911),
     v = e(110742),
     m = e(981631),
     h = e(388032),
-    S = e(968629);
+    S = e(962083);
 function g(n) {
     let { appId: t, className: e, onClick: i, onHasClicked: r, skuId: u, subscriptionPlan: a, icon: o, cannotOpenReason: s } = n,
         d = null != a ? (0, p.xg)(a) : null,

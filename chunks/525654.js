@@ -60,12 +60,12 @@
             t || (t = _);
             var I = c ? !!d.likeChrome : /\bChrome\b/.test(t) && !/internal|\n/i.test(f.toString()),
                 S = 'Object',
-                b = c ? S : 'ScriptBridgingProxyObject',
-                T = c ? S : 'Environment',
+                T = c ? S : 'ScriptBridgingProxyObject',
+                b = c ? S : 'Environment',
                 y = c && l.java ? 'JavaPackage' : m(l.java),
                 A = c ? S : 'RuntimeObject',
                 N = /\bJava/.test(y) && l.java,
-                C = N && m(l.environment) == T,
+                C = N && m(l.environment) == b,
                 R = N ? 'a' : 'α',
                 O = N ? 'b' : 'β',
                 D = l.document || {},
@@ -404,7 +404,7 @@
                     return e || (RegExp(n + '(?:-[\\d.]+/|(?: for [\\w-]+)?[ /-])([\\d.]+[^ ();/_-]*)', 'i').exec(t) || 0)[1] || null;
                 });
             if (((s = ('iCab' == G && parseFloat(U) > 3 && 'WebKit') || (/\bOpera\b/.test(B) && (/\bOPR\b/.test(t) ? 'Blink' : 'Presto')) || (/\b(?:Midori|Nook|Safari)\b/i.test(t) && !/^(?:Trident|EdgeHTML)$/.test(G) && 'WebKit') || (!G && /\bMSIE\b/i.test(t) && ('Mac OS' == V ? 'Tasman' : 'Trident')) || ('WebKit' == G && /\bPlayStation\b(?! Vita\b)/i.test(B) && 'NetFront')) && (G = [s]), 'IE' == B && (s = (/; *(?:XBLWP|ZuneWP)(\d+)/i.exec(t) || 0)[1]) ? ((B += ' Mobile'), (V = 'Windows Phone ' + (/\+$/.test(s) ? s : s + '.x')), M.unshift('desktop mode')) : /\bWPDesktop\b/i.test(t) ? ((B = 'IE Mobile'), (V = 'Windows Phone 8.x'), M.unshift('desktop mode'), U || (U = (/\brv:([\d.]+)/.exec(t) || 0)[1])) : 'IE' != B && 'Trident' == G && (s = /\brv:([\d.]+)/.exec(t)) && (B && M.push('identifying as ' + B + (U ? ' ' + U : '')), (B = 'IE'), (U = s[1])), k)) {
-                if (((r = 'global'), (a = null != (n = l) ? typeof n[r] : 'number'), /^(?:boolean|number|string|undefined)$/.test(a) || ('object' == a && !n[r]))) m((s = l.runtime)) == b ? ((B = 'Adobe AIR'), (V = s.flash.system.Capabilities.os)) : m((s = l.phantom)) == A ? ((B = 'PhantomJS'), (U = (s = s.version || null) && s.major + '.' + s.minor + '.' + s.patch)) : 'number' == typeof D.documentMode && (s = /\bTrident\/(\d+)/i.exec(t)) ? ((U = [U, D.documentMode]), (s = +s[1] + 4) != U[1] && (M.push('IE ' + U[1] + ' mode'), G && (G[1] = ''), (U[1] = s)), (U = 'IE' == B ? String(U[1].toFixed(1)) : U[0])) : 'number' == typeof D.documentMode && /^(?:Chrome|Firefox)\b/.test(B) && (M.push('masking as ' + B + ' ' + U), (B = 'IE'), (U = '11.0'), (G = ['Trident']), (V = 'Windows'));
+                if (((r = 'global'), (a = null != (n = l) ? typeof n[r] : 'number'), /^(?:boolean|number|string|undefined)$/.test(a) || ('object' == a && !n[r]))) m((s = l.runtime)) == T ? ((B = 'Adobe AIR'), (V = s.flash.system.Capabilities.os)) : m((s = l.phantom)) == A ? ((B = 'PhantomJS'), (U = (s = s.version || null) && s.major + '.' + s.minor + '.' + s.patch)) : 'number' == typeof D.documentMode && (s = /\bTrident\/(\d+)/i.exec(t)) ? ((U = [U, D.documentMode]), (s = +s[1] + 4) != U[1] && (M.push('IE ' + U[1] + ' mode'), G && (G[1] = ''), (U[1] = s)), (U = 'IE' == B ? String(U[1].toFixed(1)) : U[0])) : 'number' == typeof D.documentMode && /^(?:Chrome|Firefox)\b/.test(B) && (M.push('masking as ' + B + ' ' + U), (B = 'IE'), (U = '11.0'), (G = ['Trident']), (V = 'Windows'));
                 else if ((N && ((w = (s = N.lang.System).getProperty('os.arch')), (V = V || s.getProperty('os.name') + ' ' + s.getProperty('os.version'))), C)) {
                     try {
                         (U = l.require('ringo/engine').version.join('.')), (B = 'RingoJS');

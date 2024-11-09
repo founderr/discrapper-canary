@@ -23,30 +23,30 @@ var r = n(200651),
     v = n(235874),
     I = n(922770),
     S = n(993365),
-    b = n(481060),
-    T = n(393238),
+    T = n(481060),
+    b = n(393238),
     y = n(434650),
     A = n(98650),
     N = n(237617),
     C = n(540059),
     R = n(748585),
     O = n(388032),
-    D = n(430865);
+    D = n(711230);
 let L = { keys: ['label'] };
 function x(e) {
     return e.label;
 }
 let w = i.forwardRef(function (e, t) {
     let { options: n, value: a, onChange: l, clearable: d = !1, multi: f = !1, closeOnSelect: _ = !0, onOpen: g, onClose: E, placeholder: I = O.intl.string(O.t.XqMe3N), wrapperClassName: S, className: A, isDisabled: C = !1, maxVisibleItems: w = 7, look: P = R.q.FILLED, autoFocus: G = !1, popoutPosition: B = 'bottom', filter: V = !0, debounceTime: j, renderOptionLabel: H = x, onSearchChange: Y, renderOptionPrefix: W = () => null, renderOptionSuffix: K = () => null, 'aria-describedby': z, 'aria-invalid': q, 'aria-labelledby': Q, 'aria-required': X, inputClassNames: J, centerCaret: $ = !1, onBlur: ee, matchSorterOptions: et, clearQueryOnSelect: en = !1, hidePills: er, renderCustomPill: ei, customPillContainerClassName: ea, ...es } = e,
-        { ref: eo, width: el } = (0, T.Z)(),
+        { ref: eo, width: el } = (0, b.Z)(),
         { titleId: eu, errorId: ec, error: ed } = (0, m.Gc)(),
-        { ref: ef, width: e_ } = (0, T.Z)(),
+        { ref: ef, width: e_ } = (0, b.Z)(),
         eh = i.useRef(null),
         [ep, em] = i.useState(null),
         [eg, eE] = i.useState(!1),
         [ev, eI] = i.useState(null),
-        [eS, eb] = i.useState(!1),
-        eT = i.useRef(null),
+        [eS, eT] = i.useState(!1),
+        eb = i.useRef(null),
         ey = i.useRef(null),
         {
             options: eA,
@@ -161,13 +161,13 @@ let w = i.forwardRef(function (e, t) {
     }));
     let eG = i.useCallback((e, t) => {
             let n = document.querySelector(e),
-                r = eT.current;
+                r = eb.current;
             em(t), null != r && null != n && r.scrollIntoViewNode({ node: n });
         }, []),
         eB = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = eT.current;
+                    let t = eb.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -176,7 +176,7 @@ let w = i.forwardRef(function (e, t) {
         eZ = i.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = eT.current;
+                    let t = eb.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
@@ -202,7 +202,7 @@ let w = i.forwardRef(function (e, t) {
             null != t &&
             !eN &&
             requestAnimationFrame(() => {
-                let n = eT.current,
+                let n = eb.current,
                     r = e.indexOf(t);
                 null == n ||
                     n.scrollToIndex({
@@ -250,7 +250,7 @@ let w = i.forwardRef(function (e, t) {
                     null === (s = eh.current) || void 0 === s || s.focus();
                 }
             } else l(i);
-            em(null), (!f || _) && eP(!1), eb(!1), en && eI('');
+            em(null), (!f || _) && eP(!1), eT(!1), en && eI('');
         },
         [n, eA, f, _, en, l, a, eP]
     );
@@ -279,7 +279,7 @@ let w = i.forwardRef(function (e, t) {
         eK = eA;
     eS && null != ev && !1 !== V && (eK = 'function' == typeof V ? V(eA, ev) : (0, o.Lu)(eA, ev, null != et ? et : L)),
         i.useEffect(() => {
-            let e = eT.current;
+            let e = eb.current;
             null == e || e.scrollToTop();
         }, [ev]),
         i.useEffect(() => {
@@ -302,7 +302,7 @@ let w = i.forwardRef(function (e, t) {
                     return (0, r.jsx)(M, {
                         loading: eN,
                         multi: !!f,
-                        listRef: eT,
+                        listRef: eb,
                         listId: ex,
                         maxVisibleItems: w,
                         width: e_,
@@ -323,7 +323,7 @@ let w = i.forwardRef(function (e, t) {
                 children: (e, t) => {
                     let { 'aria-expanded': n, 'aria-controls': i } = e,
                         { isShown: a, position: o } = t,
-                        l = a ? b.ChevronSmallUpIcon : b.ChevronSmallDownIcon,
+                        l = a ? T.ChevronSmallUpIcon : T.ChevronSmallDownIcon,
                         { ref: u, onKeyDown: c } = eF.containerProps;
                     return (0, r.jsxs)('div', {
                         ref: ey,
@@ -331,7 +331,7 @@ let w = i.forwardRef(function (e, t) {
                         style: { '--icons-width': ''.concat(el, 'px') },
                         onBlur: (e) => {
                             var t, n, r;
-                            if (!((null === (t = ey.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (r = eT.current) || void 0 === r ? void 0 : null === (n = r.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget)))) !f && null != eD && eI(eD.label), eb(!1), eP(!1), null == ee || ee(e);
+                            if (!((null === (t = ey.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || (null === (r = eb.current) || void 0 === r ? void 0 : null === (n = r.getScrollerNode()) || void 0 === n ? void 0 : n.contains(e.relatedTarget)))) !f && null != eD && eI(eD.label), eT(!1), eP(!1), null == ee || ee(e);
                         },
                         children: [
                             (0, r.jsx)(p.t, {
@@ -381,7 +381,7 @@ let w = i.forwardRef(function (e, t) {
                                                 null === (e = eh.current) || void 0 === e || e.setSelectionRange(0, null !== (t = null == ev ? void 0 : ev.length) && void 0 !== t ? t : 0);
                                             },
                                             onChange: (e) => {
-                                                eC(e), null == Y || Y(e), eI(e), eP(!0), eb(!0);
+                                                eC(e), null == Y || Y(e), eI(e), eP(!0), eT(!0);
                                             },
                                             onKeyDown: (e) => {
                                                 var t;
@@ -414,7 +414,7 @@ let w = i.forwardRef(function (e, t) {
                                               'aria-label': O.intl.string(O.t.VkKicX),
                                               'aria-controls': eM,
                                               onClick: eY,
-                                              children: (0, r.jsx)(b.XSmallIcon, {
+                                              children: (0, r.jsx)(T.XSmallIcon, {
                                                   size: 'xs',
                                                   color: 'currentColor',
                                                   className: D.clear
@@ -456,13 +456,13 @@ let w = i.forwardRef(function (e, t) {
     });
 });
 function M(e) {
-    let { onSelect: t, closePopout: n, selectedValues: a, options: o, width: l, maxVisibleItems: u, activeDescendant: d, listRef: f, listId: _, renderOptionLabel: h, updatePosition: p, loading: m = !1, multi: g, popoutPosition: v, closeOnSelect: b, renderOptionPrefix: T = () => null, renderOptionSuffix: y = () => null } = e,
+    let { onSelect: t, closePopout: n, selectedValues: a, options: o, width: l, maxVisibleItems: u, activeDescendant: d, listRef: f, listId: _, renderOptionLabel: h, updatePosition: p, loading: m = !1, multi: g, popoutPosition: v, closeOnSelect: T, renderOptionPrefix: b = () => null, renderOptionSuffix: y = () => null } = e,
         N = i.useRef(null),
         C = i.useCallback(
             (e) => {
-                t(e), b && n();
+                t(e), T && n();
             },
-            [b, n, t]
+            [T, n, t]
         );
     return ((0, A.Z)(p), m)
         ? (0, r.jsx)('div', {
@@ -526,7 +526,7 @@ function M(e) {
                                     value: i.value,
                                     label: s,
                                     onSelect: C,
-                                    prefix: T(i, {
+                                    prefix: b(i, {
                                         inPill: !1,
                                         inDropdown: !0
                                     }),
@@ -724,14 +724,14 @@ function B(e) {
                   }),
                   children:
                       t &&
-                      (0, r.jsx)(b.CheckmarkLargeIcon, {
+                      (0, r.jsx)(T.CheckmarkLargeIcon, {
                           size: 'md',
                           color: 'currentColor',
                           colorClass: D.multiSelectCheck
                       })
               })
         : t
-          ? (0, r.jsx)(b.CircleCheckIcon, {
+          ? (0, r.jsx)(T.CircleCheckIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 'aria-hidden': !0,
@@ -817,7 +817,7 @@ function F(e) {
     });
 }
 function V(e) {
-    let { query: t, inputId: n, 'aria-describedby': i, 'aria-invalid': a, 'aria-required': o, 'aria-labelledby': l, 'aria-expanded': u, isDisabled: c, listboxId: f, activeDescendant: _, navigatorId: h, onChange: p, onFocus: m, setInputRef: g, isEditing: E, onKeyDown: v, placeholder: I, loading: S, style: b, className: T } = e;
+    let { query: t, inputId: n, 'aria-describedby': i, 'aria-invalid': a, 'aria-required': o, 'aria-labelledby': l, 'aria-expanded': u, isDisabled: c, listboxId: f, activeDescendant: _, navigatorId: h, onChange: p, onFocus: m, setInputRef: g, isEditing: E, onKeyDown: v, placeholder: I, loading: S, style: T, className: b } = e;
     return (0, r.jsx)('input', {
         role: 'combobox',
         id: n,
@@ -831,7 +831,7 @@ function V(e) {
         'aria-controls': f,
         'aria-required': o,
         'aria-busy': S,
-        style: null != b ? b : {},
+        style: null != T ? T : {},
         'aria-activedescendant': null != _ ? (0, d.jb)(h, _) : '',
         disabled: c,
         value: null != t ? t : '',
@@ -839,7 +839,7 @@ function V(e) {
             p(e.target.value);
         },
         onFocus: m,
-        className: s()(D.searchInput, T, {
+        className: s()(D.searchInput, b, {
             [D.editing]: E,
             [D.disabled]: c
         }),
@@ -891,7 +891,7 @@ function j(e) {
                     }),
                 (0, r.jsx)(g.n, { children: O.intl.string(O.t.N86XcH) }),
                 !u &&
-                    (0, r.jsx)(b.XSmallIcon, {
+                    (0, r.jsx)(T.XSmallIcon, {
                         size: 'custom',
                         color: 'currentColor',
                         className: D.deleteOptionIcon,

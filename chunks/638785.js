@@ -11,7 +11,7 @@ var i = n(200651),
     s = n(481060),
     o = n(566898),
     c = n(785717),
-    d = n(743461);
+    d = n(46560);
 function u(e) {
     let { section: t, header: n, items: a, minItems: u = 0, isLoading: h, listClassName: p } = e,
         { trackUserProfileAction: m } = (0, c.KZ)(),

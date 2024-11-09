@@ -25,7 +25,7 @@ var i = n(200651),
     I = n(981631),
     E = n(231338),
     b = n(388032),
-    N = n(987870);
+    N = n(29150);
 let Z = (e) => {
         let { style: t, className: n, name: l, icon: a } = e;
         return (0, i.jsx)(u.Tooltip, {

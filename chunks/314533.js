@@ -15,7 +15,7 @@ class o extends a.Z {
         let { onComplete: t, excludedPlatformTypes: l, includedPlatformTypes: a, integrations: o, onCompleteApplication: c } = e;
         !(0, r.hasModalOpen)(s) &&
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await n.e('28538').then(n.bind(n, 51299));
+                let { default: e } = await n.e('28538').then(n.bind(n, 432990));
                 return (n) =>
                     (0, i.jsx)(e, {
                         onComplete: t,

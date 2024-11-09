@@ -27,16 +27,16 @@ function f(e) {
         v = e.offsets,
         I = e.position,
         S = e.gpuAcceleration,
-        b = e.adaptive,
-        T = e.roundOffsets,
+        T = e.adaptive,
+        b = e.roundOffsets,
         y = e.isFixed,
         A = v.x,
         N = void 0 === A ? 0 : A,
         C = v.y,
         R = void 0 === C ? 0 : C,
         O =
-            'function' == typeof T
-                ? T({
+            'function' == typeof b
+                ? b({
                       x: N,
                       y: R
                   })
@@ -50,16 +50,16 @@ function f(e) {
         x = r.t$,
         w = r.we,
         M = window;
-    if (b) {
+    if (T) {
         var P = (0, i.Z)(p),
             k = 'clientHeight',
             U = 'clientWidth';
         P === (0, a.Z)(p) && ((P = (0, s.Z)(p)), 'static' !== (0, o.Z)(P).position && 'absolute' === I && ((k = 'scrollHeight'), (U = 'scrollWidth')));
         (g === r.we || ((g === r.t$ || g === r.F2) && E === r.ut)) && ((w = r.I), (R -= (y && P === M && M.visualViewport ? M.visualViewport.height : P[k]) - m.height), (R *= S ? 1 : -1)), (g === r.t$ || ((g === r.we || g === r.I) && E === r.ut)) && ((x = r.F2), (N -= (y && P === M && M.visualViewport ? M.visualViewport.width : P[U]) - m.width), (N *= S ? 1 : -1));
     }
-    var G = Object.assign({ position: I }, b && d);
+    var G = Object.assign({ position: I }, T && d);
     var B =
-        !0 === T
+        !0 === b
             ? ((t = {
                   x: N,
                   y: R

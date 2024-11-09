@@ -180,7 +180,7 @@ function E(e) {
         }),
         P = (0, r.iW)((e) => {
             let t = O.current;
-            t.isPressed && t.target && (t.isOverTarget && null != t.pointerType && w(b(t.target, e), t.pointerType, !1), (t.isPressed = !1), (t.isOverTarget = !1), (t.activePointerId = null), (t.pointerType = null), L(), !p && _(t.target));
+            t.isPressed && t.target && (t.isOverTarget && null != t.pointerType && w(T(t.target, e), t.pointerType, !1), (t.isPressed = !1), (t.isOverTarget = !1), (t.activePointerId = null), (t.pointerType = null), L(), !p && _(t.target));
         }),
         k = (0, r.iW)((e) => {
             d && P(e);
@@ -197,7 +197,7 @@ function E(e) {
                         } else 'Meta' === t.key && (e.metaKeyEvents = new Map());
                     },
                     onKeyUp(t) {
-                        I(t.nativeEvent, t.currentTarget) && !t.repeat && t.currentTarget.contains(t.target) && e.target && M(b(e.target, t), 'keyboard');
+                        I(t.nativeEvent, t.currentTarget) && !t.repeat && t.currentTarget.contains(t.target) && e.target && M(T(e.target, t), 'keyboard');
                     },
                     onClick(t) {
                         if ((!t || t.currentTarget.contains(t.target)) && t && 0 === t.button && !e.isTriggeringEvent && !r.nG.isOpening) {
@@ -218,7 +218,7 @@ function E(e) {
                     if (e.isPressed && e.target && I(t, e.target)) {
                         A(t.target, t.key) && t.preventDefault();
                         let n = t.target,
-                            a = w(b(e.target, t), 'keyboard', e.target.contains(n));
+                            a = w(T(e.target, t), 'keyboard', e.target.contains(n));
                         L(), a && t.stopPropagation(), 'Enter' !== t.key && v(e.target) && e.target.contains(n) && !t[g] && ((t[g] = !0), (0, r.nG)(e.target, t, !1)), (e.isPressed = !1), null === (i = e.metaKeyEvents) || void 0 === i || i.delete(t.key);
                     } else if ('Meta' === t.key && (null === (n = e.metaKeyEvents) || void 0 === n ? void 0 : n.size)) {
                         let t = e.metaKeyEvents;
@@ -240,13 +240,13 @@ function E(e) {
                         e.currentTarget.contains(e.target) && 0 === e.button && (y(e.currentTarget) && e.preventDefault(), e.stopPropagation());
                     }),
                     (t.onPointerUp = (t) => {
-                        t.currentTarget.contains(t.target) && 'virtual' !== e.pointerType && 0 === t.button && T(t, t.currentTarget) && M(t, e.pointerType || t.pointerType);
+                        t.currentTarget.contains(t.target) && 'virtual' !== e.pointerType && 0 === t.button && b(t, t.currentTarget) && M(t, e.pointerType || t.pointerType);
                     });
                 let n = (t) => {
-                        t.pointerId === e.activePointerId && (e.target && T(t, e.target) ? !e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !0), x(b(e.target, t), e.pointerType)) : e.target && e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !1), w(b(e.target, t), e.pointerType, !1), k(t)));
+                        t.pointerId === e.activePointerId && (e.target && b(t, e.target) ? !e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !0), x(T(e.target, t), e.pointerType)) : e.target && e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !1), w(T(e.target, t), e.pointerType, !1), k(t)));
                     },
                     i = (t) => {
-                        t.pointerId === e.activePointerId && e.isPressed && 0 === t.button && e.target && (T(t, e.target) && null != e.pointerType ? w(b(e.target, t), e.pointerType) : e.isOverTarget && null != e.pointerType && w(b(e.target, t), e.pointerType, !1), (e.isPressed = !1), (e.isOverTarget = !1), (e.activePointerId = null), (e.pointerType = null), L(), !p && _(e.target));
+                        t.pointerId === e.activePointerId && e.isPressed && 0 === t.button && e.target && (b(t, e.target) && null != e.pointerType ? w(T(e.target, t), e.pointerType) : e.isOverTarget && null != e.pointerType && w(T(e.target, t), e.pointerType, !1), (e.isPressed = !1), (e.isOverTarget = !1), (e.activePointerId = null), (e.pointerType = null), L(), !p && _(e.target));
                     },
                     a = (e) => {
                         P(e);
@@ -283,7 +283,7 @@ function E(e) {
                             e.ignoreEmulatedMouseEvents = !1;
                             return;
                         }
-                        e.target && T(t, e.target) && null != e.pointerType ? w(b(e.target, t), e.pointerType) : e.target && e.isOverTarget && null != e.pointerType && w(b(e.target, t), e.pointerType, !1), (e.isOverTarget = !1);
+                        e.target && b(t, e.target) && null != e.pointerType ? w(T(e.target, t), e.pointerType) : e.target && e.isOverTarget && null != e.pointerType && w(T(e.target, t), e.pointerType, !1), (e.isOverTarget = !1);
                     }
                 };
                 (t.onTouchStart = (t) => {
@@ -302,7 +302,7 @@ function E(e) {
                         }
                         let n = S(t.nativeEvent, e.activePointerId),
                             r = !0;
-                        n && T(n, t.currentTarget) ? !e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !0), (r = x(t, e.pointerType))) : e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !1), (r = w(t, e.pointerType, !1)), k(t)), r && t.stopPropagation();
+                        n && b(n, t.currentTarget) ? !e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !0), (r = x(t, e.pointerType))) : e.isOverTarget && null != e.pointerType && ((e.isOverTarget = !1), (r = w(t, e.pointerType, !1)), k(t)), r && t.stopPropagation();
                     }),
                     (t.onTouchEnd = (t) => {
                         if (!t.currentTarget.contains(t.target)) return;
@@ -312,7 +312,7 @@ function E(e) {
                         }
                         let n = S(t.nativeEvent, e.activePointerId),
                             r = !0;
-                        n && T(n, t.currentTarget) && null != e.pointerType ? (M(t, e.pointerType), (r = w(t, e.pointerType))) : e.isOverTarget && null != e.pointerType && (r = w(t, e.pointerType, !1)), r && t.stopPropagation(), (e.isPressed = !1), (e.activePointerId = null), (e.isOverTarget = !1), (e.ignoreEmulatedMouseEvents = !0), e.target && !p && _(e.target), L();
+                        n && b(n, t.currentTarget) && null != e.pointerType ? (M(t, e.pointerType), (r = w(t, e.pointerType))) : e.isOverTarget && null != e.pointerType && (r = w(t, e.pointerType, !1)), r && t.stopPropagation(), (e.isPressed = !1), (e.activePointerId = null), (e.isOverTarget = !1), (e.ignoreEmulatedMouseEvents = !0), e.target && !p && _(e.target), L();
                     }),
                     (t.onTouchCancel = (t) => {
                         t.currentTarget.contains(t.target) && (t.stopPropagation(), e.isPressed && P(t));
@@ -364,7 +364,7 @@ function S(e, t) {
     }
     return null;
 }
-function b(e, t) {
+function T(e, t) {
     return {
         currentTarget: e,
         shiftKey: t.shiftKey,
@@ -373,7 +373,7 @@ function b(e, t) {
         altKey: t.altKey
     };
 }
-function T(e, t) {
+function b(e, t) {
     var n, r, i;
     let a,
         s,

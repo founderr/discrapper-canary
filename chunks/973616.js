@@ -77,7 +77,7 @@ class f extends i.Z {
         });
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, a, s, o, l, u, c, d, _, h, p, m, g, E, v, I, S, b, T, y, A, N, C, R, O, D, L, x, w, M, P, k, U, G, B, Z;
+        var t, n, r, i, a, s, o, l, u, c, d, _, h, p, m, g, E, v, I, S, T, b, y, A, N, C, R, O, D, L, x, w, M, P, k, U, G, B, Z;
         return new f({
             id: null !== (t = e.id) && void 0 !== t ? t : this.id,
             name: null !== (n = e.name) && void 0 !== n ? n : this.name,
@@ -99,8 +99,8 @@ class f extends i.Z {
             executables: null !== (v = e.executables) && void 0 !== v ? v : this.executables,
             hashes: null !== (I = e.hashes) && void 0 !== I ? I : this.hashes,
             description: null !== (S = e.description) && void 0 !== S ? S : this.description,
-            eulaId: null !== (b = e.eulaId) && void 0 !== b ? b : this.eulaId,
-            slug: null !== (T = e.slug) && void 0 !== T ? T : this.slug,
+            eulaId: null !== (T = e.eulaId) && void 0 !== T ? T : this.eulaId,
+            slug: null !== (b = e.slug) && void 0 !== b ? b : this.slug,
             coverImage: null !== (y = e.coverImage) && void 0 !== y ? y : this.coverImage,
             bot: null !== (A = e.bot) && void 0 !== A ? A : this.bot,
             flags: null !== (N = e.flags) && void 0 !== N ? N : this.flags,

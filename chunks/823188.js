@@ -47,8 +47,8 @@ var f = n(120356),
     v = n(481060),
     I = n(410030),
     S = n(100527),
-    b = n(906732),
-    T = n(535322),
+    T = n(906732),
+    b = n(535322),
     y = n(706454),
     A = n(594174),
     N = n(78839),
@@ -73,7 +73,7 @@ var f = n(120356),
     Y = n(474936),
     W = n(217702),
     K = n(388032),
-    z = n(802574),
+    z = n(645512),
     q = n(476945),
     Q = n(945182);
 function X(e) {
@@ -180,7 +180,7 @@ function $(e) {
                 children: n
             }),
             r
-                ? (0, d.jsx)(T.Z, {
+                ? (0, d.jsx)(b.Z, {
                       className: z.newTagItem,
                       forceUseColorForSparkles: !0,
                       shouldInheritBackgroundColor: !0,
@@ -206,11 +206,11 @@ function et(e) {
     var t, n, r, i, a, s, o;
     let { isGift: l, premiumTier: u, offerTierMatchesCard: c, offerType: f, showYearlyPrice: _, priceOptions: h, textVariant: g, className: E, shouldUseTaglineXPCopy: I } = e,
         S = (0, m.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
-        b = (0, m.e7)([A.default], () => A.default.getCurrentUser()),
-        T = (0, M.t7)(),
+        T = (0, m.e7)([A.default], () => A.default.getCurrentUser()),
+        b = (0, M.t7)(),
         y = (0, M.lr)(),
         C = u === Y.p9.TIER_0 ? Y.Si.TIER_0 : Y.Si.TIER_2,
-        R = (null == S ? void 0 : S.trialId) != null ? (null == b ? void 0 : b.premiumType) : T ? Y.p9.TIER_2 : null,
+        R = (null == S ? void 0 : S.trialId) != null ? (null == T ? void 0 : T.premiumType) : b ? Y.p9.TIER_2 : null,
         O = (0, B.N)(),
         D = (0, G.Ng)(),
         L = null == O ? void 0 : O.subscription_trial;
@@ -573,12 +573,12 @@ function ea(e) {
         p = (0, m.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
         g = (0, m.e7)([A.default], () => A.default.getCurrentUser()),
         S = (0, B.N)(),
-        b = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        T = (null == p ? void 0 : p.trialId) != null ? (null == g ? void 0 : g.premiumType) : null,
+        T = null == S ? void 0 : null === (t = S.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
+        b = (null == p ? void 0 : p.trialId) != null ? (null == g ? void 0 : g.premiumType) : null,
         y = (0, M.Nx)(),
         C = (0, G.Ng)(),
         O = (0, M.t7)(),
-        D = null != b || null != T ? 0 : null != C || O ? 1 : null,
+        D = null != T || null != b ? 0 : null != C || O ? 1 : null,
         L = (0, F.Vi)(),
         x = !o && y,
         w = (0, F.W1)(),
@@ -607,7 +607,7 @@ function ea(e) {
                       ]
                   })
                 : null,
-            o || b !== Y.Si.TIER_2
+            o || T !== Y.Si.TIER_2
                 ? null
                 : (0, d.jsxs)(d.Fragment, {
                       children: [
@@ -619,7 +619,7 @@ function ea(e) {
                           (0, d.jsx)('div', { className: q })
                       ]
                   }),
-            o || T !== Y.p9.TIER_2
+            o || b !== Y.p9.TIER_2
                 ? null
                 : (0, d.jsxs)(d.Fragment, {
                       children: [
@@ -667,7 +667,7 @@ function ea(e) {
                                 })
                             }),
                             !o &&
-                                b !== Y.Si.TIER_2 &&
+                                T !== Y.Si.TIER_2 &&
                                 L &&
                                 (0, d.jsx)('div', {
                                     children: (0, d.jsx)(v.Text, {
@@ -687,7 +687,7 @@ function ea(e) {
                                 isGift: o,
                                 premiumTier: Y.p9.TIER_2,
                                 offerType: D,
-                                offerTierMatchesCard: b === Y.Si.TIER_2 || (0, G.Wp)(C, Y.Si.TIER_2),
+                                offerTierMatchesCard: T === Y.Si.TIER_2 || (0, G.Wp)(C, Y.Si.TIER_2),
                                 showYearlyPrice: i,
                                 priceOptions: u,
                                 textVariant: f ? 'heading-lg/normal' : void 0,
@@ -706,7 +706,7 @@ function ea(e) {
                 ]
             }),
             r,
-            o || (b !== Y.Si.TIER_2 && null == C) ? null : (0, d.jsx)(j.t, { tier: Y.p9.TIER_2 }),
+            o || (T !== Y.Si.TIER_2 && null == C) ? null : (0, d.jsx)(j.t, { tier: Y.p9.TIER_2 }),
             c
                 ? (0, d.jsxs)('div', {
                       className: z.halloweenGiftMessage,
@@ -728,9 +728,9 @@ function ea(e) {
 }
 function es(e) {
     let { variant: t, showWumpus: n, tier0CTAButton: r, tier2CTAButton: i, className: a } = e,
-        { analyticsLocations: s } = (0, b.ZP)(S.Z.PREMIUM_MARKETING_TIER_CARD),
+        { analyticsLocations: s } = (0, T.ZP)(S.Z.PREMIUM_MARKETING_TIER_CARD),
         o = 2 === t || 1 === t;
-    return (0, d.jsx)(b.Gt, {
+    return (0, d.jsx)(T.Gt, {
         value: s,
         children: (0, d.jsxs)('div', {
             className: _()(z.premiumCards, a),

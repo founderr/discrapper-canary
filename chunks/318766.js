@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -22,12 +22,12 @@ var r = n(200651),
     E = n(921944),
     v = n(185923),
     I = n(388032),
-    S = n(120385);
-let b = {
+    S = n(427522);
+let T = {
         tension: 800,
         friction: 24
     },
-    T = () => {
+    b = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
             className: S.premiumTooltipContainer,
@@ -75,7 +75,7 @@ t.Z = function (e) {
         V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
-        text: T(),
+        text: b(),
         'aria-label': I.intl.formatToMarkdownString(I.t['/7R4q6'], {}),
         position: 'top',
         shouldShow: w && !A && V,
@@ -111,7 +111,7 @@ t.Z = function (e) {
                     null != y
                         ? y()
                         : (0, r.jsx)(c.Spring, {
-                              config: b,
+                              config: T,
                               to: { value: M ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;

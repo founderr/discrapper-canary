@@ -31,7 +31,7 @@ var a = n(200651),
     f = n(226799),
     T = n(981631),
     k = n(388032),
-    S = n(658638);
+    S = n(710137);
 function O(e) {
     var i, n;
     let { match: o } = e,
@@ -250,7 +250,7 @@ function D(e) {
         }, [s, d, v, u]),
         C = t.useCallback(() => {
             (0, r.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('60133'), n.e('39739')]).then(n.bind(n, 827940));
+                let { default: e } = await Promise.all([n.e('60133'), n.e('87546')]).then(n.bind(n, 827940));
                 return (i) =>
                     (0, a.jsx)(e, {
                         activityItem: s,

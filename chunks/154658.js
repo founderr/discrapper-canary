@@ -14,7 +14,7 @@ var i = n(120356),
     c = n(5192),
     d = n(873128),
     f = n(388032),
-    _ = n(727623);
+    _ = n(98518);
 function h(e) {
     var t;
     let { guildId: n, leaderboardId: i, intervalOffset: h = -1, className: p } = e,

@@ -7,7 +7,7 @@ var r = n(200651),
     u = n(213053),
     c = n(652853),
     d = n(228168),
-    f = n(165374);
+    f = n(320038);
 let _ = i.forwardRef(function (e, t) {
         let { user: n, displayProfile: i, profileType: a, className: _, pendingThemeColors: h, themeOverride: p, children: m, forceShowPremium: g = !1 } = e,
             {
@@ -20,22 +20,22 @@ let _ = i.forwardRef(function (e, t) {
                 pendingThemeColors: h,
                 isPreview: g
             }),
-            { profileThemeStyle: S, profileThemeClassName: b } = (0, u.Z)({
+            { profileThemeStyle: S, profileThemeClassName: T } = (0, u.Z)({
                 theme: null != p ? p : E,
                 primaryColor: v,
                 secondaryColor: I
             }),
-            T = {
+            b = {
                 [f.biteSize]: a === d.y0.BITE_SIZE,
                 [f.fullSize]: a === d.y0.FULL_SIZE,
                 [f.panel]: a === d.y0.PANEL
             };
         return (0, r.jsx)('div', {
-            className: s()(f.outer, b, T, _),
+            className: s()(f.outer, T, b, _),
             style: S,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: s()(f.inner, T),
+                className: s()(f.inner, b),
                 children: (0, r.jsx)(o.ThemeContextProvider, {
                     theme: null != p ? p : E,
                     children: (0, r.jsx)(c.X, {

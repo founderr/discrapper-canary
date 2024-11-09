@@ -18,12 +18,12 @@ var r,
     v = n(714050),
     I = n(865312),
     S = n(202934),
-    b = n(320273),
-    T = n(644659),
-    y = T.set,
-    A = T.getterFor('URL'),
-    N = b.URLSearchParams,
-    C = b.getState,
+    T = n(320273),
+    b = n(644659),
+    y = b.set,
+    A = b.getterFor('URL'),
+    N = T.URLSearchParams,
+    C = T.getState,
     R = o.URL,
     O = o.TypeError,
     D = o.parseInt,
@@ -207,8 +207,8 @@ var r,
     ev = {},
     eI = {},
     eS = {},
-    eb = {},
     eT = {},
+    eb = {},
     ey = {},
     eA = {},
     eN = {},
@@ -264,7 +264,7 @@ eB.prototype = {
                             this.isSpecial() && ep[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eb), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
+                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eT), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
                     } else {
                         if (t) return Y;
                         (s = ''), (i = eI), (a = 0);
@@ -277,23 +277,23 @@ eB.prototype = {
                         (this.scheme = n.scheme), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = eG);
                         break;
                     }
-                    i = 'file' === n.scheme ? eL : eT;
+                    i = 'file' === n.scheme ? eL : eb;
                     continue;
                 case eS:
                     if ('/' === d && '/' === c[a + 1]) (i = eN), a++;
                     else {
-                        i = eT;
+                        i = eb;
                         continue;
                     }
                     break;
-                case eb:
+                case eT:
                     if ('/' === d) {
                         i = eC;
                         break;
                     }
                     i = eP;
                     continue;
-                case eT:
+                case eb:
                     if (((this.scheme = n.scheme), d === r)) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = n.query);
                     else if ('/' === d || ('\\' === d && this.isSpecial())) i = ey;
                     else if ('?' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = ''), (i = eU);
@@ -330,8 +330,8 @@ eB.prototype = {
                                 u = !0;
                                 continue;
                             }
-                            var b = eh(S, e_);
-                            u ? (this.password += b) : (this.username += b);
+                            var T = eh(S, e_);
+                            u ? (this.password += T) : (this.username += T);
                         }
                         s = '';
                     } else if (d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) {
@@ -364,9 +364,9 @@ eB.prototype = {
                     else {
                         if (!(d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) && !t) return K;
                         if ('' !== s) {
-                            var T = D(s, 10);
-                            if (T > 65535) return K;
-                            (this.port = this.isSpecial() && T === ep[this.scheme] ? null : T), (s = '');
+                            var b = D(s, 10);
+                            if (b > 65535) return K;
+                            (this.port = this.isSpecial() && b === ep[this.scheme] ? null : b), (s = '');
                         }
                         if (t) return;
                         i = eM;

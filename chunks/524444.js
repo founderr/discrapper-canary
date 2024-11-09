@@ -71,8 +71,8 @@ var r,
     v = n(110924),
     I = n(858644),
     S = n(249458),
-    b = n(313201),
-    T = n(688465),
+    T = n(313201),
+    b = n(688465),
     y = n(425886),
     A = n(80966),
     N = n(593545),
@@ -93,7 +93,7 @@ var r,
     F = n(420212),
     V = n(814249),
     j = n(388032),
-    H = n(338939);
+    H = n(650968);
 let Y = {
         delay: 300,
         position: 'top'
@@ -341,7 +341,7 @@ let et = (e) => {
     };
 function er(e) {
     let { content: t, channelId: n } = e,
-        [r] = s.useState(() => (0, b.hQ)('NewMessagesBarJumpToNewMessages_')),
+        [r] = s.useState(() => (0, T.hQ)('NewMessagesBarJumpToNewMessages_')),
         i = s.useCallback(() => {
             let e = x.ZP.ackMessageId(n);
             null != e
@@ -406,7 +406,7 @@ function ei(e) {
     let { channel: i, content: o, scrollManager: u } = e,
         { disableInteractions: m } = s.useContext(S.G),
         [g, I] = s.useState(null),
-        b = s.useRef(null),
+        T = s.useRef(null),
         [y, A] = s.useState(null),
         N = s.useRef(null),
         D = (0, f.Wu)(
@@ -546,7 +546,7 @@ function ei(e) {
     let $ = s.useCallback(
         (e) => {
             var t;
-            if (!((0, d.k)(e.target) && (null === (t = b.current) || void 0 === t ? void 0 : t.contains(e.target))))
+            if (!((0, d.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 z &&
                     P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
@@ -620,7 +620,7 @@ function ei(e) {
         m
             ? null
             : (0, a.jsxs)('div', {
-                  ref: b,
+                  ref: T,
                   className: l()(H.newTopicsBarContainer, H.containerMarginTop),
                   children: [
                       (0, a.jsx)('div', {
@@ -698,7 +698,7 @@ function ei(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(b.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {
@@ -740,7 +740,7 @@ function es(e) {
         { disableInteractions: u } = s.useContext(S.G),
         [p, m] = s.useState(null),
         g = s.useRef(null),
-        [I, b] = s.useState(null),
+        [I, T] = s.useState(null),
         y = s.useRef(null),
         A = (0, f.Wu)(
             [R.Z],
@@ -876,7 +876,7 @@ function es(e) {
             var t;
             K(e);
             let n = null === (t = y.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && b(n);
+            null != n && T(n);
         }, []);
     s.useEffect(() => {
         if (null != I && W) {
@@ -1028,7 +1028,7 @@ function es(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(b.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {

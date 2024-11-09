@@ -23,8 +23,8 @@ var r = n(200651),
     v = n(543882),
     I = n(592125),
     S = n(496675),
-    b = n(594174),
-    T = n(979651),
+    T = n(594174),
+    b = n(979651),
     y = n(912787),
     A = n(623552),
     N = n(718582),
@@ -37,11 +37,11 @@ var r = n(200651),
     w = n(981631),
     M = n(765305),
     P = n(388032),
-    k = n(179924);
+    k = n(797113);
 function U(e) {
     let t = (0, y.Z)(e),
         { category: n } = e;
-    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && T.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
+    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && b.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
 }
 function G(e) {
     let { users: t, othersCount: n, extraPill: i } = e;
@@ -172,13 +172,13 @@ function B(e) {
                                     e(k.liveBadge)
                                 ]
                             });
-                        let a = i.map((e) => b.default.getUser(e)).filter((e) => null != e);
+                        let a = i.map((e) => T.default.getUser(e)).filter((e) => null != e);
                         return (0, r.jsx)(A.Z, {
                             guildId: t,
                             users: a
                         });
                     }
-                    let _ = a.map((e) => b.default.getUser(e)).filter((e) => null != e);
+                    let _ = a.map((e) => T.default.getUser(e)).filter((e) => null != e);
                     return (0, r.jsx)(A.Z, {
                         guildId: t,
                         users: _
@@ -311,7 +311,7 @@ function B(e) {
                         });
                     return null;
                 case x.L.EMBEDDED_ACTIVITY:
-                    let { embeddedActivities: b } = e;
+                    let { embeddedActivities: T } = e;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(u.ActivitiesIcon, {
@@ -323,7 +323,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: 1 === b.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: b.length })
+                                children: 1 === T.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: T.length })
                             }),
                             '\u2022',
                             null != c && (0, r.jsx)(c, { className: k.categoryIcon }),
@@ -331,7 +331,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: null === (a = I.Z.getChannel(b[0].channelId)) || void 0 === a ? void 0 : a.name
+                                children: null === (a = I.Z.getChannel(T[0].channelId)) || void 0 === a ? void 0 : a.name
                             })
                         ]
                     });
@@ -459,7 +459,7 @@ function B(e) {
                 s = null,
                 o = a === x.L.EVENT;
             if (null == (s = o ? e.event.channel_id : a === x.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !o) return;
-            let l = null != s && T.Z.isInChannel(s),
+            let l = null != s && b.Z.isInChannel(s),
                 c = o && (e.event.entity_type === M.WX.EXTERNAL || e.event.entity_type === M.WX.NONE) ? P.intl.string(P.t['HO/oXl']) : l ? P.intl.string(P.t['/YuDAg']) : P.intl.string(P.t.VJlc0d),
                 d = (null === (i = I.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !S.Z.can(w.Plq.CONNECT, I.Z.getChannel(s)),
                 f = (0, N.DE)(e, t),

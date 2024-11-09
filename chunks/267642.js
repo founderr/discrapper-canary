@@ -18,7 +18,7 @@ n.d(t, {
         return r;
     },
     U2: function () {
-        return T;
+        return b;
     },
     Vx: function () {
         return P;
@@ -48,7 +48,7 @@ n.d(t, {
         return O;
     },
     ig: function () {
-        return b;
+        return T;
     },
     nW: function () {
         return N;
@@ -111,8 +111,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
         return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = G(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
     S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
-    b = (e) => g.pH[e],
-    T = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
+    T = (e) => g.pH[e],
+    b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
     y = (e) => {
         if (e === m.Eu4.NONE) return g._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -133,7 +133,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_1),
+                        adding: T(m.Eu4.TIER_1),
                         total: S(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.JfsnDQ),
@@ -142,7 +142,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_1),
-                        totalSoundCount: T(m.Eu4.TIER_1)
+                        totalSoundCount: b(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.Oq7OVl),
                     icon: 13
@@ -183,7 +183,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_2),
+                        adding: T(m.Eu4.TIER_2),
                         total: S(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.t4TM29),
@@ -192,7 +192,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_2),
-                        totalSoundCount: T(m.Eu4.TIER_2)
+                        totalSoundCount: b(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.pEYlPT),
                     icon: 13
@@ -245,7 +245,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: b(m.Eu4.TIER_3),
+                        adding: T(m.Eu4.TIER_3),
                         total: S(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['+ZI4QU']),
@@ -254,7 +254,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_3),
-                        totalSoundCount: T(m.Eu4.TIER_3)
+                        totalSoundCount: b(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['8omJSU']),
                     icon: 13
@@ -431,7 +431,7 @@ function B(e, t) {
     return null;
 }
 function Z(e, t) {
-    let n = b(t),
+    let n = T(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
@@ -440,7 +440,7 @@ function Z(e, t) {
     return Math.max(0, n - e.slice(a, s).length);
 }
 function F(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, T(n, e) - t.length);
+    return -1 === v.indexOf(n) ? 0 : Math.max(0, b(n, e) - t.length);
 }
 function V(e, t) {
     let n = e.premiumSubscriberCount;

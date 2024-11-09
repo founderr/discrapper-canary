@@ -18,8 +18,8 @@ var r = n(200651),
     v = n(197115),
     I = n(631771),
     S = n(609218),
-    b = n(210887),
-    T = n(626135),
+    T = n(210887),
+    b = n(626135),
     y = n(176354),
     A = n(74538),
     N = n(543241),
@@ -28,12 +28,12 @@ var r = n(200651),
     O = n(185923),
     D = n(474936),
     L = n(388032),
-    x = n(368308);
+    x = n(145834);
 t.Z = (e) => {
     var t, a;
     let w,
         { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
-        F = (0, o.e7)([b.Z], () => b.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
+        F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
         [V, j] = i.useState(!1),
         H = () => {
             (0, N.A3)(k), (0, h.z)(), M();
@@ -68,7 +68,7 @@ t.Z = (e) => {
         ea = null != en ? R.qAy.EMOJI : R.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
         !ee &&
-            T.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+            b.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: w,
                 is_animated: er,
                 is_external: ei,

@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         maybeShowSurveyForQuest: function () {
-            return T;
+            return b;
         },
         navigateToQuestHome: function () {
-            return b;
+            return T;
         },
         openDisclosureModal: function () {
             return S;
@@ -41,7 +41,7 @@ var i = n(481060),
 function E(e) {
     let { questId: t, location: a, questContentPosition: s, preview: o = !1 } = e;
     (0, i.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('58950')]).then(n.bind(n, 985866));
+        let { default: e } = await Promise.all([n.e('48923'), n.e('99393'), n.e('28044'), n.e('71740')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(e, {
                 ...n,
@@ -91,7 +91,7 @@ function S(e, t) {
                 });
         });
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = h.Z.getState().setUtmCurrentContext;
     r({
         utmSourceCurrent: 'Discord Widget',
@@ -102,7 +102,7 @@ function b(e, t, n) {
     let i = null != n ? '#'.concat(n) : '';
     a.Z.setState({ selectedTab: g.F$.QUESTS }), (0, s.uL)(m.Z5c.QUEST_HOME + i);
 }
-function T(e) {
+function b(e) {
     let t = (0, d.T)({ quest: e }),
         n = { location: p.dr.QUESTS_BAR };
     if (!(0, c.j)(n)) return;

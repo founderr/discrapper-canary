@@ -18,7 +18,7 @@ n.d(t, {
         return h;
     },
     HW: function () {
-        return b;
+        return T;
     },
     Hp: function () {
         return S;
@@ -48,7 +48,7 @@ n.d(t, {
         return u;
     },
     XH: function () {
-        return T;
+        return b;
     },
     _U: function () {
         return k;
@@ -110,8 +110,8 @@ let _ = 'alt+c',
     v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
     S = 0.1,
-    b = 25,
-    T = 0,
+    T = 25,
+    b = 0,
     y = 200,
     A = 'clips-edit',
     N = 'clips-gallery',

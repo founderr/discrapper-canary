@@ -18,7 +18,7 @@ var r = n(704215),
     d = n(987650),
     u = n(921944),
     h = n(388032),
-    p = n(476012);
+    p = n(240209);
 function f() {
     let [e, t] = (0, o.cv)([r.z.OVERLAY_KEYBIND_NOTIFICATION]),
         { showKeybindIndicators: n } = c.Z.useExperiment({ location: 'Overlay' }, { autoTrackExposure: !1 });

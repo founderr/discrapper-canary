@@ -23,12 +23,12 @@ var r = n(200651),
     v = n(481046),
     I = n(510659),
     S = n(277085),
-    b = n(287954),
-    T = n(810097),
+    T = n(287954),
+    b = n(810097),
     y = n(64621),
     A = n(228168),
     N = n(388032),
-    C = n(546717);
+    C = n(705236);
 let R = 'text-sm/medium',
     O = 36,
     D = 144;
@@ -128,7 +128,7 @@ function L(e) {
                       tooltipDelay: A.vB
                   })
                 : null,
-        eb = () =>
+        eT = () =>
             z
                 ? (0, r.jsx)(c.Text, {
                       variant: R,
@@ -136,7 +136,7 @@ function L(e) {
                       children: K
                   })
                 : null,
-        eT = () => {
+        eb = () => {
             let e = s()(C.content, {
                 [C.clamp]: B,
                 [C.unclamp]: !B,
@@ -145,20 +145,20 @@ function L(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eg,
                 className: e,
-                children: [eS(), eb()]
+                children: [eS(), eT()]
             });
         },
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
                 ref: j,
-                children: [eS(), eb()]
+                children: [eS(), eT()]
             }),
         eA = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: v === A.y0.PANEL }),
                 ref: F,
-                children: [eS(), eb()]
+                children: [eS(), eT()]
             }),
         eN = () => {
             k({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -221,7 +221,7 @@ function L(e) {
                             className: eL,
                             children: (0, r.jsx)('span', {
                                 className: ex,
-                                children: et && eT()
+                                children: et && eb()
                             })
                         }),
                         eu
@@ -230,7 +230,7 @@ function L(e) {
                                   isExpandable: ef,
                                   onCloseProfile: M
                               })
-                            : (0, r.jsx)(T.ZP, {
+                            : (0, r.jsx)(b.ZP, {
                                   user: a,
                                   sourceType: A.n_.STATUS,
                                   isVisible: eh && !eo,
@@ -290,7 +290,7 @@ function L(e) {
                               ]
                           });
                       })(),
-                      (0, r.jsx)(b.Z, {
+                      (0, r.jsx)(T.Z, {
                           user: a,
                           guildId: p,
                           channelId: g,

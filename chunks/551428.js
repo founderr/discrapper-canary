@@ -31,7 +31,7 @@ function S() {
     if (r === c.default.locale) return !1;
     I(), (r = c.default.locale);
 }
-class b extends (i = l.ZP.Store) {
+class T extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(c.default), this.syncWith([c.default], S), (r = c.default.locale);
     }
@@ -72,7 +72,7 @@ class b extends (i = l.ZP.Store) {
     }
 }
 (o = 'StoreListingStore'),
-    (s = 'displayName') in (a = b)
+    (s = 'displayName') in (a = T)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -80,7 +80,7 @@ class b extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new b(u.Z, {
+    (t.Z = new T(u.Z, {
         STORE_LISTINGS_FETCH_START: function (e) {
             let { skuId: t } = e;
             g.add(t);

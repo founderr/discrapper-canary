@@ -19,14 +19,14 @@ var i = n(120356),
     p = n(981631),
     m = n(474936),
     g = n(388032),
-    E = n(444045);
+    E = n(766905);
 function v(e) {
     var t, n, i, v;
-    let { type: I, textValue: S, maxCharacterCount: b, showRemainingCharsAfterCount: T, className: y } = e,
+    let { type: I, textValue: S, maxCharacterCount: T, showRemainingCharsAfterCount: b, className: y } = e,
         A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         N = (0, c.Z)(),
-        C = null != b ? b : N,
-        R = null !== (v = null != T ? T : b) && void 0 !== v ? v : N / 10,
+        C = null != T ? T : N,
+        R = null !== (v = null != b ? b : T) && void 0 !== v ? v : N / 10,
         O = S.length,
         D = null != I.upsellLongMessages && (null != O ? O : 0) > p.J6R && A,
         L = null != I.upsellLongMessages && !A,

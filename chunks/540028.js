@@ -15,14 +15,14 @@ var i = n(442837),
     p = n(981631),
     m = n(354459),
     g = n(388032),
-    E = n(957471);
+    E = n(497041);
 function v(e) {
     let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: h, onSelect: E } = e;
     n && t();
     let v = (0, i.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(h)),
         I = (0, i.e7)([_.Z], () => _.Z.pipWindow),
         S = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(h)),
-        b = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(h));
+        T = (0, i.e7)([d.Z], () => d.Z.getStreamParticipants(h));
     return (0, r.jsx)(s.Menu, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
@@ -33,7 +33,7 @@ function v(e) {
                 t = a.find((e) => e.component === p.NYg.VIDEO);
             return (
                 null != t &&
-                    b.forEach((n) => {
+                    T.forEach((n) => {
                         let r = f.Z.getActiveStreamForApplicationStream(n.stream),
                             i = n.id === (null == S ? void 0 : S.id) && (null == I ? void 0 : I.id) === t.id;
                         null != r &&

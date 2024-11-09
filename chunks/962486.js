@@ -15,7 +15,7 @@ var i = n(200651),
     u = n(726115),
     h = n(294330),
     m = n(981631),
-    p = n(547425);
+    p = n(417712);
 let g = {
     page: m.ZY5.GUILD_DISCOVERY,
     object: m.qAy.CARD,

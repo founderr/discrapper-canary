@@ -7,7 +7,7 @@ var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(388032),
-    s = n(840901);
+    s = n(661143);
 function o() {
     return (0, r.jsx)(i.Tooltip, {
         text: a.intl.string(a.t['RO/KYm']),

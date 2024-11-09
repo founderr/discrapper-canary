@@ -23,7 +23,7 @@ var l = n(120356),
     x = n(351402),
     g = n(170671),
     j = n(474936),
-    N = n(840468);
+    N = n(655580);
 let C = 'UserSettingsPremiumLabel';
 function y(e) {
     let t,

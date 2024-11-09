@@ -18,8 +18,8 @@ var r,
     v = n(496675),
     I = n(699516),
     S = n(606304),
-    b = n(594174),
-    T = n(979651),
+    T = n(594174),
+    b = n(979651),
     y = n(938475),
     A = n(501655),
     N = n(88751),
@@ -115,7 +115,7 @@ function Y(e) {
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, b.default, g.Z, S.Z, T.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, p.Z);
+        this.waitFor(m.default, T.default, g.Z, S.Z, b.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, p.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

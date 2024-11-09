@@ -19,7 +19,7 @@ var r,
     c = n.n(u),
     d = n(481060),
     f = n(921944),
-    _ = n(718991);
+    _ = n(592827);
 function h(e) {
     let {
         className: t,
@@ -40,12 +40,12 @@ function h(e) {
         asset: v,
         markAsDismissed: I,
         caretPosition: S = 'caretTopCenter',
-        buttonLayout: b = 0
+        buttonLayout: T = 0
     } = e;
     l.useEffect(() => {
         null == E || E();
     }, []);
-    let T = null != u;
+    let b = null != u;
     return (0, o.jsxs)('div', {
         className: c()(t, _.upsellTooltipWrapper, _[S]),
         children: [
@@ -63,17 +63,17 @@ function h(e) {
                 variant: 'text-sm/normal',
                 children: i
             }),
-            null != s || T
+            null != s || b
                 ? (0, o.jsxs)('div', {
                       className: c()(_.upsellButtonsContainer, {
-                          [_.upsellButtonsAdjacent]: 0 === b,
-                          [_.upsellButtonsStacked]: 1 === b
+                          [_.upsellButtonsAdjacent]: 0 === T,
+                          [_.upsellButtonsStacked]: 1 === T
                       }),
                       children: [
-                          T
+                          b
                               ? (0, o.jsx)(d.Button, {
                                     ...g,
-                                    fullWidth: 1 === b,
+                                    fullWidth: 1 === T,
                                     onClick: () => {
                                         null == p || p(), null == I || I(f.L.SECONDARY);
                                     },
@@ -84,7 +84,7 @@ function h(e) {
                               ? null
                               : (0, o.jsx)(d.Button, {
                                     ...m,
-                                    fullWidth: !T || 1 === b,
+                                    fullWidth: !b || 1 === T,
                                     onClick: (e) => {
                                         h(e), null == I || I(f.L.PRIMARY);
                                     },

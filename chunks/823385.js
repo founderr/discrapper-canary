@@ -18,8 +18,8 @@ var i,
     v = n(271383),
     I = n(430824),
     S = n(496675),
-    b = n(306680),
-    T = n(944486),
+    T = n(306680),
+    b = n(944486),
     y = n(914010),
     A = n(9156),
     N = n(483360),
@@ -91,7 +91,7 @@ function Y(e, t) {
                     ? (function () {
                           var e, t;
                           let n = null !== (e = y.Z.getGuildId()) && void 0 !== e ? e : void 0,
-                              r = null !== (t = T.Z.getChannelId()) && void 0 !== t ? t : void 0;
+                              r = null !== (t = b.Z.getChannelId()) && void 0 !== t ? t : void 0;
                           switch (k) {
                               case c.h8.USER: {
                                   let e = p.default.getId();
@@ -149,7 +149,7 @@ function Y(e, t) {
                               );
                           })((e) => e === r || F.includes(e));
                           o.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-                          let l = b.ZP.getMentionChannelIds()
+                          let l = T.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !F.includes(e))
                               .map((e) => j(e))
                               .filter(C.lm)

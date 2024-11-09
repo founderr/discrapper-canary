@@ -18,15 +18,15 @@ var r = n(200651),
     v = n(555573),
     I = n(10718),
     S = n(367790),
-    b = n(895924),
-    T = n(581364),
+    T = n(895924),
+    b = n(581364),
     y = n(56801),
     A = n(342687),
     N = n(826298),
     C = n(689079),
     R = n(981631),
     O = n(388032),
-    D = n(48560),
+    D = n(590515),
     L = n(239840);
 let x = [8, 8, 0, 8],
     w = l().debounce(() => {
@@ -117,7 +117,7 @@ t.Z = i.forwardRef(function (e, t) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: b.Vh.DISCOVERY,
+                    location: T.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -135,7 +135,7 @@ t.Z = i.forwardRef(function (e, t) {
                     if (((t = n), P < (n += e.data.length))) {
                         let n = e.data[P - t],
                             r = F.find((e) => e.id === n.applicationId);
-                        ee(n, r, (0, T.tI)(e.section));
+                        ee(n, r, (0, b.tI)(e.section));
                         break;
                     }
                 return !0;
@@ -206,7 +206,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === b.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
                 let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     f.ZP.NewCommand,
@@ -218,7 +218,7 @@ t.Z = i.forwardRef(function (e, t) {
                         selected: P === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
-                        onClick: () => ee(s, l, (0, T.tI)(a.section)),
+                        onClick: () => ee(s, l, (0, b.tI)(a.section)),
                         onHover: () => {
                             k(null), B(!1);
                         }

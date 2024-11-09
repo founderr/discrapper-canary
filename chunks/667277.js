@@ -94,8 +94,8 @@ var E = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     v = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
     I = /^'([^]*?)'?$/,
     S = /''/g,
-    b = /\S/,
-    T = /[a-zA-Z]/;
+    T = /\S/,
+    b = /[a-zA-Z]/;
 function y(e, t, n, g) {
     (0, d.Z)(3, arguments);
     var y = String(e),
@@ -165,7 +165,7 @@ function y(e, t, n, g) {
                     if (!s) return { v: new Date(NaN) };
                     L.push(s.setter), (y = s.rest);
                 } else {
-                    if (n.match(T)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
+                    if (n.match(b)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
                     if (
                         ("''" === t
                             ? (t = "'")
@@ -186,7 +186,7 @@ function y(e, t, n, g) {
     } finally {
         $.f();
     }
-    if (y.length > 0 && b.test(y)) return new Date(NaN);
+    if (y.length > 0 && T.test(y)) return new Date(NaN);
     var et = L.map(function (e) {
             return e.priority;
         })

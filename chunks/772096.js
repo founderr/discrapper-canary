@@ -1,6 +1,6 @@
 n.d(t, {
     yw: function () {
-        return b;
+        return T;
     }
 }),
     n(47120),
@@ -51,7 +51,7 @@ function S(e, t) {
     }
     return e;
 }
-function b(e) {
+function T(e) {
     try {
         var t;
         let n = new URL(e),
@@ -80,13 +80,13 @@ t.ZP = {
             }),
             _ = h(s),
             p = h(a),
-            T = h(null != o ? o : ''),
+            b = h(null != o ? o : ''),
             y = _.whitespaceSanitized,
             A = p.fullySanitized,
-            N = T.fullySanitized,
+            N = b.fullySanitized,
             C = A.trim();
         if (0 === y.trim().length || 0 === C.length) return f();
-        let R = b(l().unescapeUrl(s)),
+        let R = T(l().unescapeUrl(s)),
             O = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
         if (null == R || O) return f();
         let D = {
@@ -145,7 +145,7 @@ t.ZP = {
             return f();
         let k = i().pick(t.rules, L),
             U = l().parserFor(k)(p.whitespaceSanitized, D),
-            G = T.whitespaceSanitized,
+            G = b.whitespaceSanitized,
             { target: B } = R;
         return {
             content: U,

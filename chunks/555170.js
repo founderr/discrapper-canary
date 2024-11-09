@@ -22,8 +22,8 @@ var h = n(443551),
     I = g.ERR_METHOD_NOT_IMPLEMENTED,
     S = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(A, c);
-var b = p.errorOrDestroy,
-    T = ['error', 'close', 'destroy', 'pause', 'resume'];
+var T = p.errorOrDestroy,
+    b = ['error', 'close', 'destroy', 'pause', 'resume'];
 function y(e, t, i) {
     (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.readableObjectMode), (this.highWaterMark = m(this, e, 'readableHighWaterMark', i)), (this.buffer = new h()), (this.length = 0), (this.pipes = null), (this.pipesCount = 0), (this.flowing = null), (this.ended = !1), (this.endEmitted = !1), (this.reading = !1), (this.sync = !0), (this.needReadable = !1), (this.emittedReadable = !1), (this.readableListening = !1), (this.resumeScheduled = !1), (this.paused = !0), (this.emitClose = !1 !== e.emitClose), (this.autoDestroy = !!e.autoDestroy), (this.destroyed = !1), (this.defaultEncoding = e.defaultEncoding || 'utf8'), (this.awaitDrain = 0), (this.readingMore = !1), (this.decoder = null), (this.encoding = null), e.encoding && (!a && (a = n(2682).StringDecoder), (this.decoder = new a(e.encoding)), (this.encoding = e.encoding));
 }
@@ -57,13 +57,13 @@ function N(e, t, n, r, a) {
             })(l, t)),
         o)
     )
-        b(e, o);
+        T(e, o);
     else if (l.objectMode || (t && t.length > 0)) {
         if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
             (s = t), (t = d.from(s));
         }
-        if (r) l.endEmitted ? b(e, new S()) : C(e, l, t, !0);
-        else if (l.ended) b(e, new v());
+        if (r) l.endEmitted ? T(e, new S()) : C(e, l, t, !0);
+        else if (l.ended) T(e, new v());
         else {
             if (l.destroyed) return !1;
             (l.reading = !1), l.decoder && !n ? ((t = l.decoder.write(t)), l.objectMode || 0 !== t.length ? C(e, l, t, !1) : L(e, l)) : C(e, l, t, !1);
@@ -145,7 +145,7 @@ function x(e, t) {
     t.readingMore = !1;
 }
 (A.prototype._read = function (e) {
-    b(this, new I('_read()'));
+    T(this, new I('_read()'));
 }),
     (A.prototype.pipe = function (e, t) {
         var n = this,
@@ -190,7 +190,7 @@ function x(e, t) {
             i('dest.write', a), !1 === a && (((1 === r.pipesCount && r.pipes === e) || (r.pipesCount > 1 && -1 !== Z(r.pipes, e))) && !d && (i('false write response, pause', r.awaitDrain), r.awaitDrain++), n.pause());
         }
         function _(t) {
-            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && b(e, t);
+            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && T(e, t);
         }
         function h() {
             e.removeListener('finish', p), m();
@@ -314,7 +314,7 @@ function Z(e, t) {
                         return e[t].apply(e, arguments);
                     };
                 })(a));
-        for (var s = 0; s < T.length; s++) e.on(T[s], this.emit.bind(this, T[s]));
+        for (var s = 0; s < b.length; s++) e.on(b[s], this.emit.bind(this, b[s]));
         return (
             (this._read = function (t) {
                 i('wrapped _read', t), r && ((r = !1), e.resume());

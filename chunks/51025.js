@@ -27,10 +27,10 @@ n.d(t, {
         return E;
     },
     pC: function () {
-        return b;
+        return T;
     },
     v4: function () {
-        return T;
+        return b;
     },
     wO: function () {
         return y;
@@ -139,7 +139,7 @@ function S(e, t, n, r) {
             automatic: a
         });
 }
-function b(e, t, n) {
+function T(e, t, n) {
     let r = a.Z.getApplication(e);
     null != r &&
         (f.Z.removeShortcuts(r.name),
@@ -156,7 +156,7 @@ function b(e, t, n) {
             branchId: t
         });
 }
-function T() {
+function b() {
     _.Z.resume();
 }
 function y() {

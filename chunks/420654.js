@@ -10,30 +10,30 @@ var r = n(200651),
     d = n(171368),
     f = n(981631),
     _ = n(388032),
-    h = n(671180);
+    h = n(362187);
 let p = 57.75;
 t.Z = i.memo(function (e) {
     let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
         { context: E } = (0, u.KZ)(),
         { analyticsLocations: v } = (0, l.ZP)(),
         [I, S] = i.useState(!1),
-        [b, T] = i.useState(!1);
+        [T, b] = i.useState(!1);
     return m || null == a || '' === a
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (S(!b && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > p && T(!0));
+                          null != e && (S(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > p && b(!0));
                       },
-                      className: s()(h.descriptionClamp, b && h.maxBioHeight),
+                      className: s()(h.descriptionClamp, T && h.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
                           userBio: a,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (I || b) &&
+                  (I || T) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,

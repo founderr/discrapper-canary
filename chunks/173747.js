@@ -18,8 +18,8 @@ var r,
     v = n(70956),
     I = n(780570),
     S = n(804739);
-let b = new Set(),
-    T = {},
+let T = new Set(),
+    b = {},
     y = new Set(),
     A = {},
     N = new Set(),
@@ -40,8 +40,8 @@ function w() {
     d.Z.wait(() => f.o(t));
 }
 function M(e, t) {
-    if (null != T[t] && E.Z.shouldBeInstalled(e, t)) {
-        let n = T[t],
+    if (null != b[t] && E.Z.shouldBeInstalled(e, t)) {
+        let n = b[t],
             r = n.manifestIds,
             i = g.Z.getState(e, t);
         null != i &&
@@ -61,16 +61,16 @@ class k extends (r = u.ZP.Store) {
         this.syncWith([m.Z], w), this.waitFor(g.Z, m.Z, p.Z);
     }
     getTargetBuildId(e, t) {
-        return null == T[t] ? null : T[t].id;
+        return null == b[t] ? null : b[t].id;
     }
     getTargetManifests(e, t) {
-        return null == T[t] ? null : T[t].manifestIds;
+        return null == b[t] ? null : b[t].manifestIds;
     }
     hasNoBuild(e, t) {
         return y.has(t);
     }
     isFetching(e, t) {
-        return b.has(t);
+        return T.has(t);
     }
     needsToFetchBuildSize(e) {
         return !A.hasOwnProperty(e);
@@ -101,18 +101,18 @@ class k extends (r = u.ZP.Store) {
         },
         APPLICATION_BUILD_FETCH_START: function (e) {
             let { branchId: t } = e;
-            b.add(t);
+            T.add(t);
         },
         APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
             let { applicationId: t, branchId: n, locale: r, build: i } = e;
-            b.delete(n);
+            T.delete(n);
             let a = i.manifests.map((e) => {
                     let { id: t } = e;
                     return t;
                 }),
                 s = i.id;
             y.delete(n),
-                (T[n] = {
+                (b[n] = {
                     id: s,
                     applicationId: t,
                     branchId: n,
@@ -123,7 +123,7 @@ class k extends (r = u.ZP.Store) {
         },
         APPLICATION_BUILD_NOT_FOUND: function (e) {
             let { branchId: t } = e;
-            b.delete(t), y.add(t);
+            T.delete(t), y.add(t);
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
             let { buildId: t } = e;

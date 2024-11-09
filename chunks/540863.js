@@ -8,15 +8,15 @@ var r = n(200651),
     i = n(192379),
     a = n(15127),
     s = n(512983),
-    o = n(770680);
+    o = n(958920);
 let l = i.forwardRef(function (e, t) {
     var n, l;
     let { children: u, disabled: c = !1, className: d, titleClassName: f, tag: _ = 'h5', required: h = !1, style: p, title: m, error: g, ...E } = e,
         v = i.useId(),
         I = i.useId(),
         S = null !== (n = E.titleId) && void 0 !== n ? n : v,
-        b = null != g ? (null !== (l = E.errorId) && void 0 !== l ? l : I) : void 0,
-        [T, y] = i.useState(void 0),
+        T = null != g ? (null !== (l = E.errorId) && void 0 !== l ? l : I) : void 0,
+        [b, y] = i.useState(void 0),
         [A, N] = i.useState(void 0),
         C = void 0 !== A;
     return (0, r.jsx)('div', {
@@ -25,9 +25,9 @@ let l = i.forwardRef(function (e, t) {
         style: null != p ? p : void 0,
         children: (0, r.jsx)(a.ol, {
             titleId: S,
-            errorId: b,
+            errorId: T,
             error: null != g ? g : void 0,
-            isFocused: T,
+            isFocused: b,
             setIsFocused: y,
             hasValue: A,
             setHasValue: N,
@@ -42,7 +42,7 @@ let l = i.forwardRef(function (e, t) {
                               error: g,
                               className: f,
                               id: S,
-                              errorId: b,
+                              errorId: T,
                               ...E,
                               children: m
                           })

@@ -18,7 +18,7 @@ n.d(t, {
         return y;
     },
     Je: function () {
-        return b;
+        return T;
     },
     Js: function () {
         return p;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     ab: function () {
-        return T;
+        return b;
     },
     e5: function () {
         return O;
@@ -172,7 +172,7 @@ function S(e) {
         channel_id: n
     });
 }
-function b(e) {
+function T(e) {
     let { guildId: t, channelId: n, postId: i } = e;
     function a() {
         r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POST_CREATED, {
@@ -183,7 +183,7 @@ function b(e) {
     }
     c.Z.isLoading(i) ? c.Z.addConditionalChangeListener(() => !!c.Z.isLoading(i) || (a(), !1)) : a();
 }
-function T(e) {
+function b(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SCROLLED, {
         ...(0, f.xl)({ channelId: n }),

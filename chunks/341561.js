@@ -14,7 +14,7 @@ var i = n(952265),
     p = n(665692),
     m = n(981631),
     g = n(388032),
-    E = n(15183);
+    E = n(438993);
 function v(e, t) {
     return (0, r.jsx)(c.ZP, {
         sticker: e,

@@ -17,7 +17,7 @@ var r = n(200651),
     o = n(481060),
     l = n(393903),
     u = n(388032),
-    c = n(749579);
+    c = n(516617);
 function d(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: a } = e,
         [s, o] = i.useState(0),
@@ -131,8 +131,8 @@ t.ZP = function (e) {
                 }),
             [a]
         ),
-        b = i.useMemo(() => n.slice(0, E + 1), [n, E]),
-        T = i.useMemo(() => n.slice(E + 1), [n, E]);
+        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        b = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
         ref: m,
@@ -162,8 +162,8 @@ t.ZP = function (e) {
                     })
                 ]
             }),
-            b.map(a),
-            T.length > 0 && (null != p ? p : S)(T)
+            T.map(a),
+            b.length > 0 && (null != p ? p : S)(b)
         ]
     });
 };

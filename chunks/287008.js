@@ -29,12 +29,12 @@ function c(e) {
                     : void 0,
             [v, I, t, g, c]
         ),
-        b = r.useCallback(() => p(!0), []);
+        T = r.useCallback(() => p(!0), []);
     return {
         avatarSrc: S,
         isAvatarAnimating: g,
         eventHandlers: {
-            onMouseEnter: b,
+            onMouseEnter: T,
             onMouseLeave: r.useCallback(() => p(!1), [])
         }
     };

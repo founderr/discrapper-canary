@@ -9,7 +9,7 @@ var r = n(200651),
     c = n(585483),
     d = n(981631),
     f = n(388032),
-    _ = n(929410);
+    _ = n(591745);
 t.Z = i.memo(function (e) {
     let { width: t, height: n, src: a, url: h, format: p, className: m } = e,
         [g, E] = i.useState(!1),
@@ -23,7 +23,7 @@ t.Z = i.memo(function (e) {
         }, 500);
         return () => clearTimeout(e);
     }, [g]);
-    let b = (e) => {
+    let T = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
             E(!0),
@@ -48,7 +48,7 @@ t.Z = i.memo(function (e) {
                     [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: b,
+                onClick: T,
                 onDoubleClick: (e) => e.preventDefault(),
                 children: (0, r.jsx)(S, {
                     color: 'currentColor',

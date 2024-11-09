@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 });
 var r = n(200651);
@@ -22,16 +22,16 @@ var i = n(399606),
     E = n(763296),
     v = n(981631),
     I = n(388032),
-    S = n(883849);
-function b(e) {
-    let { soundboardSound: t, closePicker: b } = e,
-        T = (0, d.Iu)((e) => e.searchQuery),
+    S = n(298763);
+function T(e) {
+    let { soundboardSound: t, closePicker: T } = e,
+        b = (0, d.Iu)((e) => e.searchQuery),
         y = (0, i.e7)([E.Z], () => null != t && E.Z.isFavoriteSound(t.soundId)),
         A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
         N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([p.Z], () => p.Z.isFocused()),
         R = (0, i.e7)([h.Z], () => h.Z.getKeybindForAction(v.kg4.SOUNDBOARD_HOLD));
-    if (null != t && T.length > 0)
+    if (null != t && b.length > 0)
         return (0, r.jsx)(f.Z, {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
@@ -57,7 +57,7 @@ function b(e) {
             isFavorite: y
         });
     let O = () => {
-            b(),
+            T(),
                 (0, s.openModalLazy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, { ...t });

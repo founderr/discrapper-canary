@@ -213,14 +213,14 @@ function E(e, t, n) {
 let v = E.bind(null, 'get'),
     I = E.bind(null, 'post'),
     S = E.bind(null, 'put'),
-    b = E.bind(null, 'patch'),
-    T = E.bind(null, 'del'),
+    T = E.bind(null, 'patch'),
+    b = E.bind(null, 'del'),
     y = {
         get: v,
         post: I,
         put: S,
-        patch: b,
-        del: T
+        patch: T,
+        del: b
     };
 if (n.g.isServerRendering) {
     let e = (e, t) =>
@@ -231,7 +231,7 @@ if (n.g.isServerRendering) {
             body: null,
             text: ''
         });
-    (v = e), (I = e), (S = e), (b = e), (T = e);
+    (v = e), (I = e), (S = e), (T = e), (b = e);
 }
 function A() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];

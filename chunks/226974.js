@@ -64,16 +64,16 @@ function S(e) {
         t = r(d);
     }
 }
-function b(e) {
+function T(e) {
     if (((g = !1), S(e), !m)) {
-        if (null !== r(c)) (m = !0), w(T);
+        if (null !== r(c)) (m = !0), w(b);
         else {
             var t = r(d);
-            null !== t && M(b, t.startTime - e);
+            null !== t && M(T, t.startTime - e);
         }
     }
 }
-function T(e, n) {
+function b(e, n) {
     (m = !1), g && ((g = !1), v(N), (N = -1)), (p = !0);
     var a = h;
     try {
@@ -89,7 +89,7 @@ function T(e, n) {
         if (null !== _) var l = !0;
         else {
             var u = r(d);
-            null !== u && M(b, u.startTime - n), (l = !1);
+            null !== u && M(T, u.startTime - n), (l = !1);
         }
         return l;
     } finally {
@@ -150,7 +150,7 @@ function M(e, n) {
         e.callback = null;
     }),
     (t.unstable_continueExecution = function () {
-        m || p || ((m = !0), w(T));
+        m || p || ((m = !0), w(b));
     }),
     (t.unstable_forceFrameRate = function (e) {
         0 > e || 125 < e ? console.error('forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported') : (C = 0 < e ? Math.floor(1000 / e) : 5);
@@ -228,7 +228,7 @@ function M(e, n) {
                 expirationTime: o,
                 sortIndex: -1
             }),
-            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (g ? (v(N), (N = -1)) : (g = !0), M(b, a - s))) : ((e.sortIndex = o), n(c, e), m || p || ((m = !0), w(T))),
+            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (g ? (v(N), (N = -1)) : (g = !0), M(T, a - s))) : ((e.sortIndex = o), n(c, e), m || p || ((m = !0), w(b))),
             e
         );
     }),

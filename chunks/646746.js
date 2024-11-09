@@ -16,7 +16,7 @@ var l = n(200651),
     f = n(930282),
     _ = n(318616),
     g = n(388032),
-    m = n(766177);
+    m = n(228895);
 function p(e) {
     let { message: t, forwardOptions: n, channel: a } = e,
         {

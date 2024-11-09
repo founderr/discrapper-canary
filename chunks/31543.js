@@ -8,7 +8,7 @@ var r = n(200651),
     c = n(453070),
     d = n(611480),
     f = n(388032),
-    _ = n(304829);
+    _ = n(42241);
 let h = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: h, channel: p } = e,
         m = (0, c.fQ)(p),
@@ -22,14 +22,14 @@ let h = i.forwardRef(function (e, t) {
         ),
         I = l.ZN.useStore((e) => e.searchPlaceholder),
         S = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.Z),
-        b = i.useCallback(
+        T = i.useCallback(
             (e) => {
                 var t;
                 l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = h.current) || void 0 === t || t.scrollTo(0);
             },
             [h]
         ),
-        T = i.useCallback(() => {
+        b = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -54,9 +54,9 @@ let h = i.forwardRef(function (e, t) {
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
                 placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
-                onClear: T,
+                onClear: b,
                 onKeyDown: n,
-                onQueryChange: b,
+                onQueryChange: T,
                 className: _.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,

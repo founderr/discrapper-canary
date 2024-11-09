@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     g5: function () {
-        return b;
+        return T;
     },
     gZ: function () {
         return m;
@@ -176,7 +176,7 @@ async function I(e) {
     let { query: n, guildId: r, options: l, onSuccessCallback: u } = e,
         { page: c, pageSize: f, categoryId: _, integrationType: p, minUserInstallCommandCount: m, excludeAppsWithCustomInstallUrl: g, excludeNonEmbeddedApps: E, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: v, source: I = i.F.APP_DIRECTORY } = null != l ? l : {},
         S = Date.now(),
-        b = d.Z.getFetchState({
+        T = d.Z.getFetchState({
             query: n,
             guildId: r,
             page: c,
@@ -184,7 +184,7 @@ async function I(e) {
             categoryId: _,
             integrationType: p
         }),
-        { lastFetchTimeMs: T } =
+        { lastFetchTimeMs: b } =
             null !==
                 (t = d.Z.getSearchResults({
                     query: n,
@@ -196,7 +196,7 @@ async function I(e) {
                 })) && void 0 !== t
                 ? t
                 : {};
-    if (b !== d.M.FETCHING && (null == T || !(T + 600000 > S))) {
+    if (T !== d.M.FETCHING && (null == b || !(b + 600000 > S))) {
         s.Z.dispatch({
             type: 'APPLICATION_DIRECTORY_FETCH_SEARCH',
             query: n,
@@ -301,7 +301,7 @@ async function S() {
         }
     }
 }
-async function b() {
+async function T() {
     let e = Date.now(),
         t = _.Z.getFetchState(),
         n = _.Z.getLastFetchTimeMs(),

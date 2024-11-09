@@ -20,14 +20,14 @@ function s(e) {
                 }),
             [f, l, I]
         ),
-        b = (0, a.useMemo)(() => S.resolvedOptions(), [S]),
-        T = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : S.format(e)), [S]),
+        T = (0, a.useMemo)(() => S.resolvedOptions(), [S]),
+        b = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : S.format(e)), [S]),
         y = isNaN(s) ? 1 : s;
-    'percent' === b.style && isNaN(s) && (y = 0.01);
+    'percent' === T.style && isNaN(s) && (y = 0.01);
     let [A, N] = (0, a.useState)(p),
         [C, R] = (0, a.useState)(f),
         [O, D] = (0, a.useState)(l);
-    (!Object.is(p, A) || f !== C || l !== O) && (E(T(p)), N(p), R(f), D(l));
+    (!Object.is(p, A) || f !== C || l !== O) && (E(b(p)), N(p), R(f), D(l));
     let L = (0, a.useMemo)(() => v.parse(g), [v, g]),
         x = (e, i) => {
             if (isNaN(L)) {
@@ -45,14 +45,14 @@ function s(e) {
         validate: (e) => v.isValidPartialNumber(e, t, n),
         increment: () => {
             let e = x('+', t);
-            e === p && E(T(e)), m(e);
+            e === p && E(b(e)), m(e);
         },
         incrementToMax: () => {
             null != n && m((0, r.N4)(n, t, n, y));
         },
         decrement: () => {
             let e = x('-', n);
-            e === p && E(T(e)), m(e);
+            e === p && E(b(e)), m(e);
         },
         decrementToMin: () => {
             null != t && m(t);
@@ -68,14 +68,14 @@ function s(e) {
         commit: () => {
             let e;
             if (!g.length) {
-                m(NaN), E(void 0 === u ? '' : T(p));
+                m(NaN), E(void 0 === u ? '' : b(p));
                 return;
             }
             if (isNaN(L)) {
-                E(T(p));
+                E(b(p));
                 return;
             }
-            (e = isNaN(s) ? (0, r.uZ)(L, t, n) : (0, r.N4)(L, t, n, s)), m((e = v.parse(T(e)))), E(T(void 0 === u ? e : p));
+            (e = isNaN(s) ? (0, r.uZ)(L, t, n) : (0, r.N4)(L, t, n, s)), m((e = v.parse(b(e)))), E(b(void 0 === u ? e : p));
         }
     };
 }

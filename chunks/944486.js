@@ -18,8 +18,8 @@ var c,
     v = n(57132),
     I = n(703656),
     S = n(131704),
-    b = n(823379),
-    T = n(314897),
+    T = n(823379),
+    b = n(314897),
     y = n(592125),
     A = n(984933),
     N = n(430824),
@@ -47,7 +47,7 @@ function U() {
             knownThreadIds: p()(x)
                 .values()
                 .concat(p().values(M))
-                .filter(b.lm)
+                .filter(T.lm)
                 .uniq()
                 .filter((e) => {
                     let t = y.Z.getBasicChannel(e);
@@ -239,7 +239,7 @@ class H extends (c = m.ZP.Store) {
                             }, 60000)),
                         U();
                 } else {
-                    if (t.userId !== T.default.getId()) return e;
+                    if (t.userId !== b.default.getId()) return e;
                     clearInterval(u), (u = void 0), (l = 0);
                     let n = null === (i = y.Z.getChannel(o)) || void 0 === i ? void 0 : i.getGuildId(),
                         r = null === (a = y.Z.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();

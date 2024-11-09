@@ -23,12 +23,12 @@ var r = n(200651),
     v = n(371583),
     I = n(246627),
     S = n(249268),
-    b = n(864138),
-    T = n(473188),
+    T = n(864138),
+    b = n(473188),
     y = n(169080),
     A = n(463031),
     N = n(388032),
-    C = n(512366);
+    C = n(881894);
 function R(e) {
     let { leaderboard: t, previewMode: n = !1 } = e,
         a = (0, o.e7)([f.default], () => f.default.getId()),
@@ -59,8 +59,8 @@ function R(e) {
         { primaryColor: p } = (0, c.Z)(h),
         m = i.useMemo(() => null == _.find((e) => e.userId === a) && _.length <= 10, [_, a]);
     if (0 === t.users.length) return (0, r.jsx)(O, { leaderboard: t });
-    let { sort_by_statistic_id: g, sort_desc: b } = t.guild_settings,
-        T = t.settings.statistics[g];
+    let { sort_by_statistic_id: g, sort_desc: T } = t.guild_settings,
+        b = t.settings.statistics[g];
     return (0, r.jsxs)('div', {
         className: C.container,
         style: { background: p },
@@ -92,8 +92,8 @@ function R(e) {
                                           className: C.headerValue,
                                           children: (0, E.s)({
                                               statisticId: g,
-                                              sortDesc: b,
-                                              aggregationType: null == T ? void 0 : T.aggregation_type
+                                              sortDesc: T,
+                                              aggregationType: null == b ? void 0 : b.aggregation_type
                                           })
                                       })
                                   ]
@@ -122,7 +122,7 @@ function R(e) {
 function O(e) {
     let { leaderboard: t } = e,
         n = (0, v.K)(t);
-    return (0, r.jsx)(b.z, {
+    return (0, r.jsx)(T.z, {
         imageUrl: n,
         children: (0, r.jsxs)('span', {
             className: C.emptyTitleContainer,
@@ -148,7 +148,7 @@ function D(e) {
         E = (0, o.e7)([h.default], () => h.default.getUser(t)),
         v = p.ZP.getName(s, void 0, E),
         I = null != c && c > n,
-        [S, b] = i.useState(!1),
+        [S, T] = i.useState(!1),
         R = (0, o.e7)([_.Z], () => {
             let e = _.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
@@ -165,7 +165,7 @@ function D(e) {
         }),
         L = async () => {
             let e = await D();
-            await g.ZP.copyImage(e), b(!0);
+            await g.ZP.copyImage(e), T(!0);
         };
     return (0, r.jsxs)('div', {
         className: C.userRow,
@@ -175,7 +175,7 @@ function D(e) {
                 className: C.userRank,
                 children:
                     n <= 3
-                        ? (0, r.jsx)(T._, { rank: n })
+                        ? (0, r.jsx)(b._, { rank: n })
                         : (0, r.jsx)(l.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',
@@ -231,7 +231,7 @@ function D(e) {
                         (0, r.jsx)(l.Tooltip, {
                             text: S ? N.intl.string(N.t.ZO0ku7) : N.intl.string(N.t.mikfoa),
                             shouldShow: !O,
-                            onTooltipHide: () => b(!1),
+                            onTooltipHide: () => T(!1),
                             children: (e) =>
                                 (0, r.jsx)(l.Clickable, {
                                     ...e,

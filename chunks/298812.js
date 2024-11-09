@@ -32,7 +32,7 @@ var i = n(200651),
     O = n(569658),
     L = n(981631),
     I = n(388032),
-    M = n(896623);
+    M = n(805747);
 function A(e) {
     let { guildId: t, requestScrollToBottom: n } = e,
         s = (0, a.Wu)([S.Z, N.ZP], () =>
