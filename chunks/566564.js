@@ -79,8 +79,7 @@ t.Z = (e) => {
     let em = S.intl.formatToPlainString(S.t.wvKYCg, { category_name: null == ee ? void 0 : ee.name });
     if (null != z) {
         let e = [];
-        return (
-            null != V ? e.push('shop load fetch categories error: '.concat(z.message)) : null != M ? e.push('shop load fetch purchase error: '.concat(z.message)) : e.push('shop load claim error: '.concat(z.message)),
+        null != V ? e.push('shop load fetch categories error: '.concat(z.message)) : null != M ? e.push('shop load fetch purchase error: '.concat(z.message)) : e.push('shop load claim error: '.concat(z.message)),
             m.Z.captureMessage(e.join('\n'), {
                 tags: {
                     isStaff: K.isStaff().toString(),
@@ -88,14 +87,14 @@ t.Z = (e) => {
                     disableCache: Q.toString(),
                     includeUnpublished: X.toString()
                 }
-            }),
-            (0, r.jsx)(k.Z, {
-                onRetry: ei,
-                errorOrigin: k.i.SHOP_PAGE,
-                errorMessage: z.message
-            })
-        );
+            });
     }
+    if (null != V)
+        return (0, r.jsx)(k.Z, {
+            onRetry: ei,
+            errorOrigin: k.i.SHOP_PAGE,
+            errorMessage: V.message
+        });
     return (0, r.jsx)(r.Fragment, {
         children: (0, r.jsxs)('div', {
             className: T.shop,
