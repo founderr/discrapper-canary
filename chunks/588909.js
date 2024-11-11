@@ -1,67 +1,112 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return Z;
     }
-});
+}),
+    n(47120);
 var i = n(200651);
 n(192379);
-var o = n(13245),
-    r = n(145597),
-    l = n(380736),
-    s = n(620954),
-    a = n(987650),
-    u = n(388032),
-    c = n(213973);
-let d = () => ({
-        icon: n(328756),
-        title: u.intl.string(u.t.pkXAeH),
-        body: null,
-        hint: h,
-        notifType: a.n0.WelcomeNudge
-    }),
-    h = () => (0, l.Q)((0, s.P)(), u.t['z8/sgI']);
-function f(e) {
-    let { type: t } = e,
-        {
-            icon: n,
-            title: l,
-            body: u,
-            hint: h,
-            notifType: f
-        } = (function (e, t) {
-            if (t.type === a.nc.NEWS) {
-                var n, i, o, r, l, s, u, c;
-                return {
-                    icon: null !== (l = null === (n = t.news) || void 0 === n ? void 0 : n.icon) && void 0 !== l ? l : e.icon,
-                    title: null !== (s = null === (i = t.news) || void 0 === i ? void 0 : i.title) && void 0 !== s ? s : e.title,
-                    body: null !== (u = null === (o = t.news) || void 0 === o ? void 0 : o.body) && void 0 !== u ? u : e.body,
-                    hint: null !== (c = null === (r = t.news) || void 0 === r ? void 0 : r.hint) && void 0 !== c ? c : e.hint,
-                    notifType: null != t.news ? a.n0.NewsNudge : e.notifType
-                };
+var r = n(952265),
+    l = n(988298),
+    o = n(13245),
+    a = n(620662),
+    s = n(835473),
+    u = n(442550),
+    c = n(293273),
+    d = n(145597),
+    h = n(603618),
+    f = n(380736),
+    p = n(620954),
+    m = n(987650),
+    E = n(981631),
+    g = n(602091),
+    v = n(701488),
+    _ = n(388032),
+    C = n(213973),
+    S = n(401461);
+function I(e) {
+    let { game: t } = e,
+        n = (0, s.q)(t.id);
+    return null == n
+        ? null
+        : (0, i.jsx)(u.f, {
+              src: n.getIconURL(v.Si.LARGE),
+              size: 40
+          });
+}
+function Z(e, t) {
+    let { trackView: s, trackClick: u } = (0, p.R)(m.n0.WelcomeNudge, { notif_type: m.n0.WelcomeNudge }),
+        v = {};
+    for (let s of t)
+        switch (s.type) {
+            case m.nc.WELCOME: {
+                let t = (null == e ? void 0 : e.altId) != null ? c.Z.getApplicationActivity(e.altId) : (null == e ? void 0 : e.id) != null ? c.Z.getApplicationActivity(e.id) : null;
+                null != t &&
+                    (0, a.Z)(t, E.xjy.JOIN) &&
+                    ((v.cancelText = _.intl.string(_.t['6F9ivr'])),
+                    (v.onCancelClick = (e, n) => {
+                        u('unlock'), o.Z.updateNotificationStatus(n), o.Z.setInputLocked(!1, (0, d.QF)()), (0, l.h7)(t, !1, E.IlC.POPOUT);
+                    }));
+                break;
             }
-            return e;
-        })(d(), e),
-        { trackView: p, trackClick: m } = (0, s.R)(f, { notif_type: f });
+            case m.nc.GO_LIVE_VOICE:
+            case m.nc.GO_LIVE_NON_VOICE:
+                (v.confirmText = _.intl.string(_.t.U76Ft7)),
+                    (v.onConfirmClick = (e, t) => {
+                        u('unlock'),
+                            o.Z.updateNotificationStatus(t),
+                            o.Z.setInputLocked(!1, (0, d.QF)()),
+                            (0, r.ZD)(
+                                async () => {
+                                    let { default: e } = await Promise.all([n.e('46746'), n.e('3572')]).then(n.bind(n, 60594));
+                                    return (t) =>
+                                        (0, i.jsx)(e, {
+                                            ...t,
+                                            selectSource: !1,
+                                            guildId: s.type === m.nc.GO_LIVE_VOICE ? s.voiceGuild.id : void 0,
+                                            selectGuild: s.type === m.nc.GO_LIVE_NON_VOICE,
+                                            analyticsLocation: E.Sbl.OVERLAY_NUDGE
+                                        });
+                                },
+                                { contextKey: g.u1 }
+                            );
+                    });
+                break;
+            case m.nc.CONTENT_INVENTORY:
+                (v.renderFooter = () =>
+                    (0, i.jsx)('div', {
+                        className: S.container,
+                        children: (0, i.jsx)(h.i, { entries: s.entries })
+                    })),
+                    (v.onNotificationShow = () => {
+                        o.Z.track(E.rMx.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {
+                            user_ids: s.entries.map((e) => e.author_id),
+                            entry_ids: s.entries.map((e) => e.id)
+                        });
+                    });
+        }
     return {
+        ...v,
         icon:
-            null != n
-                ? (0, i.jsx)('img', {
-                      src: n,
-                      className: c.icon,
+            null != e
+                ? (0, i.jsx)(I, { game: e })
+                : (0, i.jsx)('img', {
+                      src: n(328756),
+                      className: C.icon,
                       alt: ''
-                  })
-                : null,
-        title: l,
-        body: u,
-        hint: h,
-        onNotificationShow: () => {
-            p();
+                  }),
+        title: null != e ? e.name : _.intl.string(_.t.pkXAeH),
+        body: null,
+        hint: () => (0, f.Q)((0, p.P)(), _.t.e6giBQ),
+        onNotificationShow: (e) => {
+            var t;
+            s(), null === (t = v.onNotificationShow) || void 0 === t || t.call(v, e);
         },
-        onNotificationClick: (e, n) => {
-            m('unlock'), t === a.nc.NEWS && o.Z.updateNotificationStatus(n), o.Z.setInputLocked(!1, (0, r.QF)());
+        onNotificationClick: () => {
+            u('unlock'), o.Z.setInputLocked(!1, (0, d.QF)());
         },
         onDismissClick: () => {
-            m('dismiss');
+            u('dismiss');
         }
     };
 }

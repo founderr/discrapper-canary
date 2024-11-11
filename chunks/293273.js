@@ -37,7 +37,8 @@ function C() {
         });
     let i = new Set();
     c().forEach(N, (t) => {
-        null != t.application_id && (i.add(t.name), e.push(t));
+        let [, n] = t;
+        null != n.application_id && (i.add(n.name), e.push(n));
     });
     let a = p.ZP.getVisibleGame(),
         s = null != a && null != a.name && i.has(a.name),
@@ -93,6 +94,10 @@ class R extends (r = d.ZP.Store) {
     getApplicationActivities() {
         return N;
     }
+    getActivityForPID(e) {
+        for (let [t, n] of Object.values(N)) if (t === e) return n;
+        return null;
+    }
 }
 (s = 'LocalActivityStore'),
     (a = 'displayName') in (i = R)
@@ -112,9 +117,9 @@ class R extends (r = d.ZP.Store) {
             (N = {}), C();
         },
         LOCAL_ACTIVITY_UPDATE: function (e) {
-            let { socketId: t, activity: n } = e;
-            if (l()(N[t], n)) return !1;
-            null != n ? (N[t] = n) : delete N[t], C();
+            let { socketId: t, pid: n, activity: r } = e;
+            if (l()(N[t], [n, r])) return !1;
+            null != r ? (N[t] = [n, r]) : delete N[t], C();
         },
         RPC_APP_DISCONNECTED: function (e) {
             let { socketId: t } = e;

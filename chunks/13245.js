@@ -21,10 +21,11 @@ let _ = {
             pid: e
         });
     },
-    overlayMounted(e) {
+    overlayMounted() {
+        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         i.Z.dispatch({
             type: 'OVERLAY_MOUNTED',
-            nudge: e
+            nudges: t
         });
     },
     setFocusedPID(e) {

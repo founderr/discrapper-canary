@@ -10,5 +10,6 @@ e.exports = {
     inviteButton: 'inviteButton_e2d331',
     inviteButtonWrapper: 'inviteButtonWrapper_e2d331',
     inviteButtonInner: 'inviteButtonInner_e2d331',
-    liveIndicator: 'liveIndicator_e2d331'
+    liveIndicator: 'liveIndicator_e2d331',
+    badgesContainer: 'badgesContainer_e2d331'
 };

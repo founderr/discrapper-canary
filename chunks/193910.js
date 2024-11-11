@@ -1,17 +1,17 @@
 n.d(t, {
     Z: function () {
-        return M;
+        return P;
     }
 }),
     n(653041),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(831209),
-    r = n(442837),
+    r = n(831209),
+    a = n(442837),
     s = n(704215),
     o = n(481060),
-    c = n(538239),
+    c = n(278323),
     d = n(566620),
     u = n(403404),
     h = n(906732),
@@ -26,37 +26,21 @@ var i = n(200651),
     I = n(127654),
     E = n(752305),
     b = n(951211),
-    N = n(981631),
-    Z = n(921944),
+    Z = n(981631),
+    N = n(921944),
     S = n(489887),
     T = n(388032),
     j = n(695527);
-function A(e, t, l, a) {
-    (0, o.openModalLazy)(
-        async () => {
-            let { default: r } = await Promise.resolve().then(n.bind(n, 538239));
-            return (n) =>
-                (0, i.jsx)(r, {
-                    ...n,
-                    activity: e,
-                    channel: t,
-                    activityActionType: l,
-                    analyticsLocations: a
-                });
-        },
-        { modalKey: c.activityInviteKey }
-    );
-}
-let y = /(.*)```(\w+)\n(.*)```(.*)/s;
-function P() {
-    let e = (0, r.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
+let A = /(.*)```(\w+)\n(.*)```(.*)/s;
+function y() {
+    let e = (0, a.e7)([C.Z], () => C.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
     e && t.push(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, m.cv)(t);
     return (
         l.useEffect(
             () => () => {
-                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: Z.L.TAKE_ACTION });
+                n === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: N.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -67,18 +51,18 @@ function P() {
                 return t === s.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, i.jsx)(o.TextBadge, {
                           text: T.intl.string(T.t.y2b7CA),
-                          color: a.Z.BUTTON_DANGER_BACKGROUND
+                          color: r.Z.BUTTON_DANGER_BACKGROUND
                       })
                     : null;
             }
         })
     );
 }
-function M(e) {
-    let { channel: t, options: r, onFileUpload: c, onClose: m, onSelect: f, draftType: C, editorTextContent: M, setValue: R, openClips: L } = e,
+function P(e) {
+    let { channel: t, options: a, onFileUpload: m, onClose: f, onSelect: C, draftType: P, editorTextContent: M, setValue: R, openClips: L } = e,
         { analyticsLocations: k } = (0, h.ZP)();
     l.useEffect(() => {
-        x.default.track(N.rMx.OPEN_POPOUT, {
+        x.default.track(Z.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -88,13 +72,13 @@ function M(e) {
         (0, g.R6)(t, void 0, 'Plus Button');
     }
     function D() {
-        x.default.track(N.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, E.JM)('/'));
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, E.JM)('/'));
     }
     function w() {
         L();
     }
     function B() {
-        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: Z.L.TAKE_ACTION }),
+        (0, p.EW)(s.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: N.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -108,7 +92,7 @@ function M(e) {
             );
     }
     function U() {
-        x.default.track(N.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        x.default.track(Z.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -117,10 +101,10 @@ function M(e) {
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: {
-                    page: t.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
-                    section: N.jXE.CHANNEL_TEXT_AREA,
-                    object: N.qAy.CONTEXT_MENU_ITEM,
-                    objectType: N.Qqv.ACTIVITY
+                    page: t.isPrivate() ? Z.ZY5.DM_CHANNEL : Z.ZY5.GUILD_CHANNEL,
+                    section: Z.jXE.CHANNEL_TEXT_AREA,
+                    object: Z.qAy.CONTEXT_MENU_ITEM,
+                    objectType: Z.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -132,16 +116,16 @@ function M(e) {
         let e = M,
             n = 'txt',
             i = '',
-            l = M.match(y);
-        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, _.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, C), v.S.dispatchToLastSubscribed(N.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(N.CkL.INSERT_TEXT, { plainText: i });
+            l = M.match(A);
+        null != l && ((i = l[1]), (n = l[2]), (e = l[3]), (i += l[4])), (0, I.d)([(0, _.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, P), v.S.dispatchToLastSubscribed(Z.CkL.CLEAR_TEXT), '' !== i && v.S.dispatchToLastSubscribed(Z.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
-        onSelect: f,
+        onSelect: C,
         navId: 'channel-attach',
-        onClose: m,
+        onClose: f,
         'aria-label': T.intl.string(T.t.Xm41aW),
         className: j.menu,
-        children: r.map(function (e) {
+        children: a.map(function (e) {
             var n;
             let l = (0, i.jsxs)('div', {
                 className: j.optionLabel,
@@ -158,7 +142,7 @@ function M(e) {
                         e.badgeVal > 0 &&
                         (0, i.jsx)(o.NumberBadge, {
                             className: j.badge,
-                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : a.Z.STATUS_DANGER,
+                            color: null !== (n = e.badgeColor) && void 0 !== n ? n : r.Z.STATUS_DANGER,
                             count: e.badgeVal
                         })
                 ]
@@ -170,7 +154,7 @@ function M(e) {
                         {
                             id: 'upload-file',
                             label: l,
-                            action: c
+                            action: m
                         },
                         'upload-file'
                     );
@@ -215,12 +199,12 @@ function M(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (x.default.track(N.rMx.OPEN_MODAL, {
-                                        type: 'Send Join Invite',
-                                        application_id: n.application_id,
-                                        location: N.jXE.CHANNEL_TEXT_AREA
-                                    }),
-                                    A(n, t, N.mFx.JOIN, k))
+                                    void c.Z.sendActivityInvite({
+                                        channelId: t.id,
+                                        type: Z.mFx.JOIN,
+                                        activity: n,
+                                        location: k[k.length - 1]
+                                    })
                                 );
                             }
                         },
@@ -236,11 +220,12 @@ function M(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (x.default.track(N.rMx.OPEN_MODAL, {
-                                        type: 'Send Listen Invite',
-                                        location: N.jXE.CHANNEL_TEXT_AREA
-                                    }),
-                                    A(n, t, N.mFx.LISTEN, k))
+                                    void c.Z.sendActivityInvite({
+                                        channelId: t.id,
+                                        type: Z.mFx.LISTEN,
+                                        activity: n,
+                                        location: k[k.length - 1]
+                                    })
                                 );
                             }
                         },
@@ -256,11 +241,12 @@ function M(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (x.default.track(N.rMx.OPEN_MODAL, {
-                                        type: 'Send Watch Invite',
-                                        location: N.jXE.CHANNEL_TEXT_AREA
-                                    }),
-                                    A(n, t, N.mFx.WATCH, k))
+                                    void c.Z.sendActivityInvite({
+                                        channelId: t.id,
+                                        type: Z.mFx.WATCH,
+                                        activity: n,
+                                        location: k[k.length - 1]
+                                    })
                                 );
                             }
                         },
@@ -293,7 +279,7 @@ function M(e) {
                             id: 'activity',
                             label: l,
                             action: U,
-                            hint: (0, i.jsx)(P, {})
+                            hint: (0, i.jsx)(y, {})
                         },
                         'activity'
                     );

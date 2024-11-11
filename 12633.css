@@ -18153,7 +18153,7 @@ span.clanTag_a31c43 {
 
 :where(.badgesContainer_d60c6d) {
     display: flex;
-    gap: 8px;
+    gap: 0 8px;
     align-items: center
 }
 

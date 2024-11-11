@@ -3,16 +3,16 @@ n.d(t, {
         return j;
     },
     i: function () {
-        return M;
+        return w;
     }
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    r = n(512722),
-    l = n.n(r),
-    s = n(442837),
-    a = n(481060),
+    r = n(192379),
+    l = n(512722),
+    o = n.n(l),
+    a = n(442837),
+    s = n(481060),
     u = n(278323),
     c = n(988298),
     d = n(493683),
@@ -20,62 +20,63 @@ var i = n(200651),
     f = n(99690),
     p = n(620662),
     m = n(194082),
-    v = n(297781),
+    E = n(297781),
     g = n(656709),
-    E = n(567409),
+    v = n(567409),
     _ = n(703656),
     C = n(409057),
     S = n(199902),
     I = n(592125),
-    x = n(158776),
-    Z = n(594174),
-    y = n(5192),
-    N = n(358085),
-    b = n(998502),
-    O = n(388627),
-    T = n(981631),
-    A = n(388032),
+    Z = n(293273),
+    N = n(158776),
+    x = n(594174),
+    O = n(5192),
+    T = n(358085),
+    A = n(998502),
+    y = n(388627),
+    b = n(981631),
+    R = n(388032),
     L = n(250145);
-function R(e) {
-    let { entry: t, currentUserActivity: n, idx: r } = e,
-        c = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
-        [f, m] = o.useState('unsent'),
-        [v, E] = o.useState(!1);
-    o.useEffect(() => {
+function k(e) {
+    let { entry: t, currentUserActivity: n, idx: l } = e,
+        c = (0, a.e7)([x.default], () => x.default.getUser(t.author_id)),
+        [f, m] = r.useState('unsent'),
+        [E, v] = r.useState(!1);
+    r.useEffect(() => {
         if ('sent' === f) {
-            let e = setTimeout(() => E(!0), 2000);
+            let e = setTimeout(() => v(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [f]);
-    let C = null != n && (0, p.Z)(n, T.xjy.JOIN),
+    let C = null != n && (0, p.Z)(n, b.xjy.JOIN),
         S = async (e) => {
             if (null != c && 'unsent' === f) {
                 e.stopPropagation();
                 try {
                     if ((m('sending'), C))
                         await u.Z.sendActivityInviteUser({
-                            type: T.mFx.JOIN,
+                            type: b.mFx.JOIN,
                             userId: c.id,
                             activity: n,
-                            location: T.Sbl.UNLOCKED_OVERLAY
+                            location: b.Sbl.UNLOCKED_OVERLAY
                         });
                     else {
                         var i;
                         let e = await d.Z.getOrEnsurePrivateChannel(c.id),
                             n = null !== (i = I.Z.getChannel(e)) && void 0 !== i ? i : null;
-                        l()(null != n, 'Send channel must be defined'),
-                            (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)),
+                        o()(null != n, 'Send channel must be defined'),
+                            (0, _.uL)(b.Z5c.CHANNEL(n.guild_id, n.id)),
                             await (0, g.p)({
                                 channel: n,
-                                content: A.intl.string(A.t.DwAcMz),
+                                content: R.intl.string(R.t.DwAcMz),
                                 entry: t,
                                 whenReady: !0
                             });
                     }
-                    h.Z.track(T.rMx.OVERLAY_GAME_INVITE_SENT, {
+                    h.Z.track(b.rMx.OVERLAY_GAME_INVITE_SENT, {
                         target_user_id: c.id,
                         target_content_entry_id: t.id,
-                        target_index: r
+                        target_index: l
                     }),
                         m('sent');
                 } catch (e) {
@@ -83,46 +84,46 @@ function R(e) {
                 }
             }
         },
-        x = async () => {
+        Z = async () => {
             var e;
             if (null == c) return;
             let t = await d.Z.getOrEnsurePrivateChannel(c.id),
                 n = null !== (e = I.Z.getChannel(t)) && void 0 !== e ? e : null;
-            l()(null != n, 'Send channel must be defined'), (0, _.uL)(T.Z5c.CHANNEL(n.guild_id, n.id)), N.isPlatformEmbedded && b.ZP.focus(null, !0);
+            o()(null != n, 'Send channel must be defined'), (0, _.uL)(b.Z5c.CHANNEL(n.guild_id, n.id)), T.isPlatformEmbedded && A.ZP.focus();
         },
-        y = C ? A.intl.string(A.t['3fRyS0']) : A.intl.string(A.t.y9eo7e),
+        N = C ? R.intl.string(R.t['3fRyS0']) : R.intl.string(R.t.y9eo7e),
         O = C
-            ? (0, i.jsx)(a.GroupPlusIcon, {
+            ? (0, i.jsx)(s.GroupPlusIcon, {
                   color: 'currentColor',
                   size: 'sm'
               })
-            : (0, i.jsx)(a.SendMessageIcon, {
+            : (0, i.jsx)(s.SendMessageIcon, {
                   color: 'currentColor',
                   size: 'sm'
               });
-    return (0, i.jsx)(a.Tooltip, {
-        text: y,
-        'aria-label': y,
+    return (0, i.jsx)(s.Tooltip, {
+        text: N,
+        'aria-label': N,
         children: (e) =>
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(s.Button, {
                 ...e,
                 submitting: 'sending' === f,
-                onClick: v ? x : S,
+                onClick: E ? Z : S,
                 className: L.inviteButton,
                 wrapperClassName: L.inviteButtonWrapper,
                 innerClassName: L.inviteButtonInner,
-                color: a.ButtonColors.TRANSPARENT,
-                look: 'sent' === f ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
-                size: a.ButtonSizes.ICON,
+                color: s.ButtonColors.TRANSPARENT,
+                look: s.ButtonLooks.FILLED,
+                size: s.ButtonSizes.ICON,
                 grow: !1,
                 children:
                     'sent' === f
-                        ? v
-                            ? (0, i.jsx)(a.ChatIcon, {
+                        ? E
+                            ? (0, i.jsx)(s.ChatIcon, {
                                   color: 'currentColor',
                                   size: 'sm'
                               })
-                            : (0, i.jsx)(a.CheckmarkSmallBoldIcon, {
+                            : (0, i.jsx)(s.CheckmarkSmallBoldIcon, {
                                   color: 'currentColor',
                                   size: 'sm'
                               })
@@ -130,82 +131,84 @@ function R(e) {
             })
     });
 }
-function k(e) {
-    let { entry: t } = e,
-        n = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
-        r = (0, s.e7)([x.Z], () => (null != n ? x.Z.getApplicationActivity(n.id, t.extra.application_id) : null), [t.extra.application_id, n]),
-        [l, c] = o.useState('unsent');
-    if (!(null != r && (0, p.Z)(r, T.xjy.JOIN))) return null;
-    let d = async (e) => {
-            if (null != n && 'unsent' === l) {
+function M(e) {
+    var t;
+    let { entry: n, currentUserActivity: l } = e,
+        o = (0, a.e7)([x.default], () => x.default.getUser(n.author_id)),
+        c = null !== (t = null == l ? void 0 : l.application_id) && void 0 !== t ? t : n.extra.application_id,
+        d = (0, a.e7)([N.Z], () => (null != o ? N.Z.getApplicationActivity(o.id, c) : null), [c, o]),
+        [h, f] = r.useState('unsent');
+    if (!(null != d && (0, p.Z)(d, b.xjy.JOIN))) return null;
+    let m = async (e) => {
+            if (null != o && 'unsent' === h) {
                 e.stopPropagation();
                 try {
-                    c('sending'),
+                    f('sending'),
                         await u.Z.sendActivityInviteUser({
-                            type: T.mFx.JOIN_REQUEST,
-                            userId: n.id,
-                            activity: r,
-                            location: T.Sbl.UNLOCKED_OVERLAY
+                            type: b.mFx.JOIN_REQUEST,
+                            userId: o.id,
+                            activity: d,
+                            location: b.Sbl.UNLOCKED_OVERLAY
                         }),
-                        c('sent');
+                        f('sent');
                 } catch (e) {
-                    c('unsent');
+                    f('unsent');
                 }
             }
         },
-        h = A.intl.string(A.t.OKsSCQ);
-    return (0, i.jsx)(a.Tooltip, {
-        text: h,
-        'aria-label': h,
+        E = R.intl.string(R.t.OKsSCQ);
+    return (0, i.jsx)(s.Tooltip, {
+        text: E,
+        'aria-label': E,
         children: (e) =>
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(s.Button, {
                 ...e,
-                submitting: 'sending' === l,
-                onClick: d,
+                submitting: 'sending' === h,
+                onClick: m,
                 className: L.inviteButton,
                 innerClassName: L.inviteButtonInner,
-                color: a.ButtonColors.TRANSPARENT,
-                look: 'sent' === l ? a.ButtonLooks.OUTLINED : a.ButtonLooks.FILLED,
-                size: a.ButtonSizes.ICON,
+                color: s.ButtonColors.TRANSPARENT,
+                look: 'sent' === h ? s.ButtonLooks.OUTLINED : s.ButtonLooks.FILLED,
+                size: s.ButtonSizes.ICON,
                 children:
-                    'sent' === l
-                        ? (0, i.jsx)(a.CheckmarkSmallBoldIcon, {
+                    'sent' === h
+                        ? (0, i.jsx)(s.CheckmarkSmallBoldIcon, {
                               color: 'currentColor',
                               size: 'sm'
                           })
-                        : (0, i.jsx)(a.HandRequestSpeakIcon, {
+                        : (0, i.jsx)(s.HandRequestSpeakIcon, {
                               color: 'currentColor',
                               size: 'sm'
                           })
             })
     });
 }
-function w(e) {
-    let { entry: t, currentUserActivity: n, idx: o } = e,
-        r = (0, s.e7)([Z.default], () => Z.default.getUser(t.author_id)),
-        l = (0, s.e7)([S.Z], () => (null != r ? S.Z.getAnyStreamForUser(r.id) : null), [r]),
-        { isMobileOnline: u, status: c } = (0, s.cj)(
-            [x.Z],
+function P(e) {
+    let { entry: t, currentUserActivity: n, idx: r } = e,
+        l = (0, a.e7)([x.default], () => x.default.getUser(t.author_id)),
+        o = (0, a.e7)([S.Z], () => (null != l ? S.Z.getAnyStreamForUser(l.id) : null), [l]),
+        { isMobileOnline: u, status: c } = (0, a.cj)(
+            [N.Z],
             () =>
-                null == r
+                null == l
                     ? {
                           isMobileOnline: void 0,
                           status: void 0
                       }
                     : {
-                          isMobileOnline: x.Z.isMobileOnline(r.id),
-                          status: x.Z.getStatus(r.id)
+                          isMobileOnline: N.Z.isMobileOnline(l.id),
+                          status: N.Z.getStatus(l.id)
                       },
-            [r]
+            [l]
         );
-    return null == r
+    return null == l
         ? null
         : (0, i.jsxs)('div', {
               className: L.row,
               children: [
                   (0, i.jsx)(f.Z, {
                       className: L.avatar,
-                      user: r,
+                      user: l,
                       isMobile: u,
                       status: c
                   }),
@@ -215,41 +218,42 @@ function w(e) {
                           (0, i.jsxs)('div', {
                               className: L.usernameWrapper,
                               children: [
-                                  (0, i.jsx)(a.Text, {
+                                  (0, i.jsx)(s.Text, {
                                       className: L.username,
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: y.ZP.getName(void 0, void 0, r)
+                                      children: O.ZP.getName(void 0, void 0, l)
                                   }),
-                                  null != l && (0, i.jsx)(m.ZP, { className: L.liveIndicator })
+                                  null != o && (0, i.jsx)(m.ZP, { className: L.liveIndicator })
                               ]
                           }),
-                          (0, i.jsx)(v.Gk, {
-                              location: v.Gt.OVERLAY,
-                              children: [v.OV, v.wO, v.f, v.v1, v.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
+                          (0, i.jsx)(E.Gk, {
+                              location: E.Gt.OVERLAY,
+                              className: L.badgesContainer,
+                              children: [E.OV, E.wO, E.f, E.v1, E.pQ].map((e, n) => (0, i.jsx)(e, { entry: t }, 'entry-'.concat(n)))
                           })
                       ]
+                  }),
+                  (0, i.jsx)(M, {
+                      entry: t,
+                      currentUserActivity: n,
+                      idx: r
                   }),
                   (0, i.jsx)(k, {
                       entry: t,
                       currentUserActivity: n,
-                      idx: o
-                  }),
-                  (0, i.jsx)(R, {
-                      entry: t,
-                      currentUserActivity: n,
-                      idx: o
+                      idx: r
                   })
               ]
           });
 }
-function M(e) {
+function w(e) {
     let { entries: t, currentUserActivity: n } = e,
-        o = t.slice(0, 5);
+        r = t.slice(0, 5);
     return (0, i.jsx)(i.Fragment, {
-        children: o.map((e, t) =>
+        children: r.map((e, t) =>
             (0, i.jsx)(
-                w,
+                P,
                 {
                     idx: t,
                     entry: e,
@@ -261,37 +265,38 @@ function M(e) {
     });
 }
 function j() {
-    var e;
-    let t = null === (e = (0, O.II)()) || void 0 === e ? void 0 : e.id,
-        n = (0, E.Ns)(t),
-        o = (0, s.e7)([Z.default], () => Z.default.getCurrentUser()),
-        r = (0, s.e7)([x.Z], () => (null != o && null != t ? x.Z.getApplicationActivity(o.id, t) : null)),
-        l = null != r && (0, p.Z)(r, T.xjy.JOIN);
-    return 0 === n.length && null == r
+    let e = (0, y.II)(),
+        t = null == e ? void 0 : e.id,
+        n = null == e ? void 0 : e.altId,
+        r = (0, v.Ns)(t),
+        l = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
+        o = (0, a.e7)([Z.Z], () => (null != n ? Z.Z.getApplicationActivity(n) : null != t ? Z.Z.getApplicationActivity(t) : null)),
+        u = null != o && (0, p.Z)(o, b.xjy.JOIN);
+    return 0 === r.length && null == o
         ? null
         : (0, i.jsxs)('div', {
               className: L.container,
               children: [
-                  null != r && null != o
+                  null != o && null != l
                       ? (0, i.jsx)(C.Z, {
                             className: L.activityCard,
-                            activity: r,
-                            user: o,
-                            currentUser: o
+                            activity: o,
+                            user: l,
+                            currentUser: l
                         })
                       : null,
-                  l
-                      ? (0, i.jsx)(a.Button, {
+                  u
+                      ? (0, i.jsx)(s.Button, {
                             className: L.inviteFriendsButton,
-                            onClick: () => (0, c.h7)(r, !1, T.IlC.POPOUT),
-                            size: a.ButtonSizes.SMALL,
-                            color: a.ButtonColors.PRIMARY,
-                            children: A.intl.string(A.t['6Qgren'])
+                            onClick: () => (0, c.h7)(o, !1, b.IlC.POPOUT),
+                            size: s.ButtonSizes.SMALL,
+                            color: s.ButtonColors.PRIMARY,
+                            children: R.intl.string(R.t['6Qgren'])
                         })
                       : null,
-                  (0, i.jsx)(M, {
-                      entries: n,
-                      currentUserActivity: r
+                  (0, i.jsx)(w, {
+                      entries: r,
+                      currentUserActivity: o
                   })
               ]
           });

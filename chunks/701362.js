@@ -66,7 +66,7 @@ class A extends l.PureComponent {
         });
     }
     render() {
-        let { activity: e, user: t, stream: n, previewIsOpen: l, onAction: a } = this.props;
+        let { activity: e, user: t, stream: n, previewIsOpen: l, onAction: a, hideTip: s } = this.props;
         return null == n
             ? null
             : (0, i.jsx)('div', {
@@ -104,11 +104,12 @@ class A extends l.PureComponent {
                                             color: T.watchButton,
                                             onAction: a
                                         }),
-                                  (0, i.jsx)(m.Z, {
-                                      type: m.Z.Types.INLINE,
-                                      className: T.protip,
-                                      children: __OVERLAY__ ? b.intl.string(b.t['YRdw7+']) : b.intl.string(b.t.CCTgbG)
-                                  })
+                                  !s &&
+                                      (0, i.jsx)(m.Z, {
+                                          type: m.Z.Types.INLINE,
+                                          className: T.protip,
+                                          children: __OVERLAY__ ? b.intl.string(b.t['YRdw7+']) : b.intl.string(b.t.CCTgbG)
+                                      })
                               ]
                           })
                       ]
