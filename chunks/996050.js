@@ -4,19 +4,19 @@ n.d(t, {
     }
 });
 var i = n(224706),
-    o = n(13245),
-    r = n(150097),
-    l = n(620954),
-    s = n(987650),
-    a = n(388032);
+    r = n(13245),
+    l = n(150097),
+    o = n(620954),
+    a = n(987650),
+    s = n(388032);
 function u(e, t, n, u, c) {
-    if (null == t.activity) return null;
+    if (null == t.activity || null == u.id) return null;
     let d = t.activity.type,
         h = c.session_id;
     if (null == h) return null;
-    let { icon: f, title: p, body: m } = (0, r.Xi)(e, t, n),
-        { trackView: v, trackClick: g } = (0, l.R)(s.n0.ActivityInvite, {
-            notif_type: s.n0.ActivityInvite,
+    let { icon: f, title: p, body: m } = (0, l.Xi)(e, t, n),
+        { trackView: E, trackClick: v } = (0, o.R)(a.n0.ActivityInvite, {
+            notif_type: a.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
             message_type: t.type,
@@ -31,22 +31,23 @@ function u(e, t, n, u, c) {
         title: p,
         body: m,
         onNotificationShow: () => {
-            v();
+            E();
         },
-        confirmText: a.intl.string(a.t.VJlc0d),
-        onConfirmClick: (r, l) => {
+        confirmText: s.intl.string(s.t.VJlc0d),
+        onConfirmClick: (l, o) => {
+            var a;
             i.Z.join({
                 userId: n.id,
                 sessionId: h,
-                applicationId: u.id,
+                applicationId: null !== (a = u.altId) && void 0 !== a ? a : u.id,
                 channelId: e.id,
                 messageId: t.id
             }),
-                o.Z.updateNotificationStatus(l),
-                g('join');
+                r.Z.updateNotificationStatus(o),
+                v('join');
         },
         onDismissClick: () => {
-            g('dismiss');
+            v('dismiss');
         }
     };
 }

@@ -13,8 +13,8 @@ var i,
     p = n(442837),
     m = n(570140),
     E = n(13245),
-    g = n(435064),
-    v = n(786761),
+    v = n(435064),
+    g = n(786761),
     _ = n(695346),
     C = n(314897),
     S = n(592125),
@@ -211,22 +211,24 @@ let el = new er(m.Z, {
         if ((null === (n = o.activity) || void 0 === n ? void 0 : n.type) === V.mFx.JOIN || (null === (i = o.activity) || void 0 === i ? void 0 : i.type) === V.mFx.JOIN_REQUEST) {
             if (!(0, R.eF)(o, l, !0, !0)) return !1;
             let e = (function (e, t, n) {
-                let i, r;
+                var i;
+                let r, l;
                 if ((h()(null != t.activity, 'received null message activity'), n.id === C.default.getId())) return !1;
-                let l = (0, k.pL)();
-                if ((null == l ? void 0 : l.id) == null) return !1;
+                let o = (0, k.pL)(),
+                    a = null !== (i = null == o ? void 0 : o.altId) && void 0 !== i ? i : null == o ? void 0 : o.id;
+                if (null == o || null == a) return !1;
                 switch (t.activity.type) {
                     case V.mFx.JOIN:
-                        if (null == (i = N.Z.getApplicationActivity(n.id, l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, M.Z)(e, t, n, l, i);
+                        if (null == (r = N.Z.getApplicationActivity(n.id, a)) || null == r.party || r.party.id !== t.activity.party_id) return !1;
+                        l = (0, M.Z)(e, t, n, o, r);
                         break;
                     case V.mFx.JOIN_REQUEST:
-                        if (null == (i = x.Z.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, D.Z)(e, n, l, i);
+                        if (null == (r = x.Z.getApplicationActivity(a)) || null == r.party || r.party.id !== t.activity.party_id) return !1;
+                        l = (0, D.Z)(e, n, o, r);
                 }
                 return (
-                    null != r &&
-                    (en(r, {
+                    null != l &&
+                    (en(l, {
                         priority: 2,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
@@ -239,7 +241,7 @@ let el = new er(m.Z, {
         }
         if (y.Z.getTextChatNotificationMode() === V.Ypu.DISABLED || O.Z.disableNotifications || !(0, R.eF)(o, l)) return !1;
         let u = !Z.Z.isSoundDisabled(A.Ay),
-            c = null !== (r = I.Z.getMessage(l, o.id)) && void 0 !== r ? r : (0, v.e5)(o);
+            c = null !== (r = I.Z.getMessage(l, o.id)) && void 0 !== r ? r : (0, g.e5)(o);
         en((0, z.Z)(a, c, s, u), {
             type: 1,
             channelId: a.id,
@@ -278,7 +280,7 @@ let el = new er(m.Z, {
         en((0, w.f)(G.intl.string(G.t.NBMK9v)));
     },
     CLIPS_SAVE_CLIP: function () {
-        en((0, w.f)(G.intl.format(G.t.KLhk6u, { duration: (0, L.A)(g.Z.getSettings().clipsLength / 1000, !0) })));
+        en((0, w.f)(G.intl.format(G.t.KLhk6u, { duration: (0, L.A)(v.Z.getSettings().clipsLength / 1000, !0) })));
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
         en((0, w.f)(G.intl.string(G.t['1ZbZur'])));

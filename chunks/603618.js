@@ -21,8 +21,8 @@ var i = n(200651),
     p = n(620662),
     m = n(194082),
     E = n(297781),
-    g = n(656709),
-    v = n(567409),
+    v = n(656709),
+    g = n(567409),
     _ = n(703656),
     C = n(409057),
     S = n(199902),
@@ -41,10 +41,10 @@ function k(e) {
     let { entry: t, currentUserActivity: n, idx: l } = e,
         c = (0, a.e7)([x.default], () => x.default.getUser(t.author_id)),
         [f, m] = r.useState('unsent'),
-        [E, v] = r.useState(!1);
+        [E, g] = r.useState(!1);
     r.useEffect(() => {
         if ('sent' === f) {
-            let e = setTimeout(() => v(!0), 2000);
+            let e = setTimeout(() => g(!0), 2000);
             return () => clearTimeout(e);
         }
     }, [f]);
@@ -66,7 +66,7 @@ function k(e) {
                             n = null !== (i = I.Z.getChannel(e)) && void 0 !== i ? i : null;
                         o()(null != n, 'Send channel must be defined'),
                             (0, _.uL)(b.Z5c.CHANNEL(n.guild_id, n.id)),
-                            await (0, g.p)({
+                            await (0, v.p)({
                                 channel: n,
                                 content: R.intl.string(R.t.DwAcMz),
                                 entry: t,
@@ -166,10 +166,12 @@ function M(e) {
                 submitting: 'sending' === h,
                 onClick: m,
                 className: L.inviteButton,
+                wrapperClassName: L.inviteButtonWrapper,
                 innerClassName: L.inviteButtonInner,
                 color: s.ButtonColors.TRANSPARENT,
-                look: 'sent' === h ? s.ButtonLooks.OUTLINED : s.ButtonLooks.FILLED,
+                look: s.ButtonLooks.FILLED,
                 size: s.ButtonSizes.ICON,
+                grow: !1,
                 children:
                     'sent' === h
                         ? (0, i.jsx)(s.CheckmarkSmallBoldIcon, {
@@ -268,7 +270,7 @@ function j() {
     let e = (0, y.II)(),
         t = null == e ? void 0 : e.id,
         n = null == e ? void 0 : e.altId,
-        r = (0, v.Ns)(t),
+        r = (0, g.Ns)(t),
         l = (0, a.e7)([x.default], () => x.default.getCurrentUser()),
         o = (0, a.e7)([Z.Z], () => (null != n ? Z.Z.getApplicationActivity(n) : null != t ? Z.Z.getApplicationActivity(t) : null)),
         u = null != o && (0, p.Z)(o, b.xjy.JOIN);
