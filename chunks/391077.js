@@ -12,19 +12,18 @@ var s = n(120356),
     h = n(388032),
     g = n(153457);
 function p(e) {
-    let { hasUnactivatedUnits: t, durationText: n, endsAt: s, fractionalState: a, unactivatedHoursString: o, activationDate: c } = e,
-        d = t ? h.intl.string(h.t['hT6i//']) : h.intl.string(h.t['3G0CTE']),
-        u = t ? (void 0 === c ? h.intl.formatToPlainString(h.t['0Vwb/v'], { activateDate: c }) : '') : a === m.a$.FP_SUB ? h.intl.formatToPlainString(h.t.MMvaIC, { resumeDate: s.toDate() }) : '',
-        p = t ? o : n,
-        x = r()({
+    let { showChargingUpState: t, rowValueText: n, endsAt: s, fractionalState: a, activationDate: o } = e,
+        c = t ? h.intl.string(h.t['hT6i//']) : h.intl.string(h.t['3G0CTE']),
+        d = t ? (void 0 === o ? h.intl.formatToPlainString(h.t['0Vwb/v'], { activateDate: o }) : '') : a === m.a$.FP_SUB ? h.intl.formatToPlainString(h.t.MMvaIC, { resumeDate: s.toDate() }) : '',
+        u = r()({
             [g.fractionalUnactivatedPill]: t,
             [g.fractionalTimeRemainingPill]: !t
         }),
-        S = r()({
+        p = r()({
             [g.fractionalUnactivatedPillText]: t,
             [g.fractionalTimeRemainingPillText]: !t
         }),
-        T = r()({ [g.fractionalTimeRemainingRowHeader]: !t });
+        x = r()({ [g.fractionalTimeRemainingRowHeader]: !t });
     return (0, i.jsxs)('div', {
         className: g.fractionalTimeRemainingRow,
         children: [
@@ -33,24 +32,24 @@ function p(e) {
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        className: T,
-                        children: d
+                        className: x,
+                        children: c
                     }),
-                    u.length > 0 &&
+                    d.length > 0 &&
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: u
+                            children: d
                         })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: g.fractionalTimeRemainingPillWrapper,
                 children: (0, i.jsx)('div', {
-                    className: x,
+                    className: u,
                     children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
-                        className: S,
-                        children: p
+                        className: p,
+                        children: n
                     })
                 })
             })
@@ -59,27 +58,26 @@ function p(e) {
 }
 t.Z = function (e) {
     var t;
-    let { className: n, unactivatedUnits: s, activationDate: m } = e,
-        { fractionalState: x, endsAt: S } = (0, o.Z)({ forceFetch: !0 }),
-        T = (0, a.Z)(S, a.a.SHORT_TIME),
+    let { className: n, unactivatedUnits: s, activationDate: x } = e,
+        { fractionalState: S, endsAt: T } = (0, o.Z)({ forceFetch: !0 }),
         C = (0, u.sk)(s),
-        _ = C > 0,
-        E = {
+        E = C > 0 && S === m.a$.NONE,
+        _ = {
             days: h.t.fYmir6,
             hours: h.t['C3RO+v'],
             minutes: h.t.r77oHR
         },
-        f = _
-            ? (0, d.QX)(
-                  {
-                      days: 0,
-                      hours: C,
-                      minutes: 0,
-                      seconds: 0
-                  },
-                  E
-              )
-            : '';
+        f = (0, d.QX)(
+            {
+                days: 0,
+                hours: C,
+                minutes: 0,
+                seconds: 0
+            },
+            _
+        ),
+        I = (0, a.Z)(T, a.a.SHORT_TIME),
+        N = E ? f : I;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: r()(n, g.fractionalPremiumAccountCredit),
@@ -111,12 +109,11 @@ t.Z = function (e) {
                     ]
                 })),
                 (0, i.jsx)(p, {
-                    hasUnactivatedUnits: _,
-                    durationText: T,
-                    endsAt: S,
-                    fractionalState: x,
-                    unactivatedHoursString: f,
-                    activationDate: m
+                    showChargingUpState: E,
+                    rowValueText: N,
+                    endsAt: T,
+                    fractionalState: S,
+                    activationDate: x
                 })
             ]
         })
