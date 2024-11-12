@@ -19,7 +19,8 @@ t.Z = function (e) {
         h = (null == r ? void 0 : r.trial_id) === m.jz,
         { enabled: E } = d.Z.useExperiment({ location: 'Q4MomentBanner' + (t ? '-NitroHome' : '-NitroSettings') });
     if (!h || !E || null == r.expires_at) return null;
-    let b = new Date(r.expires_at);
+    let b = new Date(r.expires_at),
+        x = c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL);
     return (0, i.jsx)(o.O, {
         newLocations: [l.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -48,17 +49,10 @@ t.Z = function (e) {
                                 color: 'always-white',
                                 children: (0, i.jsx)(g.Z, { endDate: b })
                             }),
-                            (0, i.jsxs)(s.Text, {
+                            (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: [
-                                    p.intl.string(p.t['2a1fz8']),
-                                    '\xA0',
-                                    (0, i.jsx)(s.Anchor, {
-                                        href: c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL),
-                                        children: p.intl.string(p.t['sBp+u7'])
-                                    })
-                                ]
+                                children: p.intl.format(p.t['5GKXe3'], { helpCenterLink: x })
                             })
                         ]
                     })
