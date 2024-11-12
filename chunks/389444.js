@@ -22,8 +22,6 @@ e.exports = {
     rewardTileWrapper: 'rewardTileWrapper_d7df05',
     rewardTileExpired: 'rewardTileExpired_d7df05',
     rewardTileExpirationTooltip: 'rewardTileExpirationTooltip_d7df05',
-    inHouseButton: 'inHouseButton_d7df05',
-    inHouseIcon: 'inHouseIcon_d7df05',
     separator: 'separator_d7df05',
     microphoneContainer: 'microphoneContainer_d7df05'
 };

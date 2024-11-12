@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return E;
     }
 }),
     n(47120);
@@ -36,7 +36,7 @@ let _ = [
         }
     }
 ];
-function E(e) {
+function b(e) {
     let t,
         n,
         { value: r } = e;
@@ -55,9 +55,9 @@ function E(e) {
         children: [n, t]
     });
 }
-function b(e) {
-    var t, n, s, b;
-    let { quest: N, location: S, onReceiveErrorHints: T, contentPosition: B, rowIndex: A } = e,
+function E(e) {
+    var t, n, s, E;
+    let { quest: N, location: B, onReceiveErrorHints: T, contentPosition: S, rowIndex: A } = e,
         y = (0, i.e7)([c.Z], () => c.Z.useReducedMotion),
         R = (0, g.g2)({ useReducedMotion: y }),
         w = (0, u._s)({ quest: N }),
@@ -70,46 +70,44 @@ function b(e) {
             isClaiming: p.Z.isClaimingReward(N.id) || p.Z.isFetchingRewardCode(N.id),
             isEnrolling: p.Z.isEnrolling(N.id)
         })),
-        O = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        M = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        W = M && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
+        M = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        O = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        W = O && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
         L = (0, x.iQ)(N),
         Q = !(0, x.zi)(N),
         Z = (0, u._Q)(N),
-        D = (0, x.zK)(N, C.S7.IN_HOUSE_CONSOLE_QUEST),
-        H = (0, x.Xv)(N.config),
-        U = (0, x.cr)(N),
-        V = (0, u.Rf)(N),
-        [z, F, G] = (0, u.me)(N, V),
-        K = Q && Z === u.OH.ACCEPTED,
-        Y = K && z === m.LI.SELECT,
-        X = K && !Y && F.length > 1,
-        J = r.useCallback(
+        D = (0, x.Xv)(N.config),
+        V = (0, x.cr)(N),
+        H = (0, u.Rf)(N),
+        [U, z, F] = (0, u.me)(N, H),
+        G = Q && Z === u.OH.ACCEPTED,
+        Y = G && U === m.LI.SELECT,
+        K = G && !Y && z.length > 1,
+        X = r.useCallback(
             (e) => {
-                G(e), e === C.cd.DESKTOP && T([]);
+                F(e), e === C.cd.DESKTOP && T([]);
             },
-            [G, T]
+            [F, T]
         ),
-        { text: $, onClick: ee } = (0, g.Ks)({
+        { text: J, onClick: $ } = (0, g.Ks)({
             progressState: Z,
             quest: N,
-            isInHouseQuest: D,
-            location: S,
-            isCollectibleQuest: H,
-            questContentPosition: B,
+            location: B,
+            isCollectibleQuest: D,
+            questContentPosition: S,
             questContentRowIndex: A,
             inGiftInventory: !0,
-            isVideoQuest: U
+            isVideoQuest: V
         }),
-        { startingConsoleQuest: et, startConsoleQuest: en } = (0, u.GI)({
+        { startingConsoleQuest: ee, startConsoleQuest: et } = (0, u.GI)({
             questId: N.id,
             beforeRequest: () => {
                 R.startAnimation(),
                     (0, d._3)({
                         questId: N.id,
-                        questContent: S,
+                        questContent: B,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: B,
+                        questContentPosition: S,
                         questContentRowIndex: A
                     });
             },
@@ -117,18 +115,18 @@ function b(e) {
                 R.stopAnimation(), T(e);
             }
         }),
-        eo = (null === (b = N.userStatus) || void 0 === b ? void 0 : b.claimedAt) != null,
-        er = null;
+        en = (null === (E = N.userStatus) || void 0 === E ? void 0 : E.claimedAt) != null,
+        eo = null;
     return (L && W
-        ? (er = (0, o.jsx)(l.Button, {
+        ? (eo = (0, o.jsx)(l.Button, {
               color: l.ButtonColors.BRAND,
               submitting: q,
-              onClick: null != ee ? ee : void 0,
+              onClick: null != $ ? $ : void 0,
               className: j.button,
-              children: $
+              children: J
           }))
-        : M
-          ? (er = U
+        : O
+          ? (eo = V
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(l.Button, {
@@ -152,35 +150,35 @@ function b(e) {
                           (0, o.jsx)(l.Button, {
                               color: l.ButtonColors.BRAND,
                               className: j.button,
-                              onClick: null != ee ? ee : void 0,
-                              children: $
+                              onClick: null != $ ? $ : void 0,
+                              children: J
                           })
                       ]
                   })
                 : (0, o.jsx)(l.Button, {
                       color: l.ButtonColors.BRAND,
                       className: j.button,
-                      onClick: null != ee ? ee : void 0,
-                      children: $
+                      onClick: null != $ ? $ : void 0,
+                      children: J
                   }))
           : Q
             ? Q && W
-                ? (er = (0, o.jsx)(l.Button, {
+                ? (eo = (0, o.jsx)(l.Button, {
                       color: l.ButtonColors.BRAND,
                       submitting: q,
-                      onClick: null != ee ? ee : void 0,
+                      onClick: null != $ ? $ : void 0,
                       className: j.button,
-                      children: $
+                      children: J
                   }))
-                : Q && O && !eo
-                  ? (er = Y
+                : Q && M && !en
+                  ? (eo = Y
                         ? (0, o.jsx)(l.Select, {
                               className: j.platformSelectorPrimary,
                               isSelected: () => !1,
                               options: _,
                               placeholder: v.intl.string(v.t.drVw4e),
-                              renderOptionLabel: E,
-                              select: J,
+                              renderOptionLabel: b,
+                              select: X,
                               serialize: (e) => {
                                   switch (e) {
                                       case C.cd.DESKTOP:
@@ -190,30 +188,30 @@ function b(e) {
                                   }
                               }
                           })
-                        : (0, x.$J)(N) && !I && z !== m.LI.DESKTOP
+                        : (0, x.$J)(N) && !I && U !== m.LI.DESKTOP
                           ? w
                               ? (0, o.jsx)(l.Button, {
                                     color: l.ButtonColors.PRIMARY,
                                     className: j.button,
-                                    onClick: null != ee ? ee : void 0,
-                                    children: $
+                                    onClick: null != $ ? $ : void 0,
+                                    children: J
                                 })
                               : (0, o.jsx)(l.Button, {
                                     color: l.ButtonColors.PRIMARY,
-                                    onClick: en,
-                                    disabled: et,
+                                    onClick: et,
+                                    disabled: ee,
                                     className: j.button,
                                     children: (0, o.jsxs)('div', {
                                         className: j.ctaInner,
                                         children: [R.render(), v.intl.string(v.t.nPThNT)]
                                     })
                                 })
-                          : U
+                          : V
                             ? (0, o.jsx)(l.Button, {
                                   color: l.ButtonColors.BRAND,
-                                  onClick: null != ee ? ee : void 0,
+                                  onClick: null != $ ? $ : void 0,
                                   className: j.button,
-                                  children: $
+                                  children: J
                               })
                             : (0, o.jsx)(l.Button, {
                                   color: l.ButtonColors.PRIMARY,
@@ -222,29 +220,29 @@ function b(e) {
                                   children: v.intl.string(v.t['9KoPyM'])
                               }))
                   : Q &&
-                    !O &&
-                    (er = (0, o.jsx)(l.Button, {
+                    !M &&
+                    (eo = (0, o.jsx)(l.Button, {
                         submitting: P,
                         color: l.ButtonColors.BRAND,
-                        onClick: null != ee ? ee : void 0,
+                        onClick: null != $ ? $ : void 0,
                         className: j.button,
-                        children: $
+                        children: J
                     }))
-            : (er = (0, o.jsx)(l.Button, {
+            : (eo = (0, o.jsx)(l.Button, {
                   color: l.ButtonColors.PRIMARY,
                   disabled: !0,
                   className: j.button,
                   children: v.intl.format(v.t['14o6QU'], { expiryDate: k })
               })),
-    null == er)
+    null == eo)
         ? null
         : (0, o.jsxs)('div', {
               className: j.container,
               children: [
-                  er,
-                  X &&
+                  eo,
+                  K &&
                       (0, o.jsx)(h.U, {
-                          onSelect: J,
+                          onSelect: X,
                           quest: N,
                           questContent: m.jn.ACTIVITY_PANEL,
                           children: (e) =>
@@ -264,7 +262,7 @@ function b(e) {
                                                   default:
                                                       return null;
                                               }
-                                          })(z),
+                                          })(U),
                                           (0, o.jsx)(l.ChevronSmallDownIcon, {
                                               className: j.platformSelectorSecondaryChevron,
                                               color: 'currentColor'

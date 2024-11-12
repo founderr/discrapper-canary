@@ -1,7 +1,7 @@
 n.r(e),
     n.d(e, {
         default: function () {
-            return b;
+            return T;
         }
     });
 var s = n(200651),
@@ -12,12 +12,11 @@ var s = n(200651),
     l = n(113434),
     c = n(497505),
     d = n(918701),
-    m = n(46140),
-    u = n(981631),
-    x = n(388032),
-    _ = n(367928),
-    j = n(708901);
-let T = (t, e) => {
+    m = n(981631),
+    u = n(388032),
+    x = n(367928),
+    _ = n(708901);
+let j = (t, e) => {
     switch (t) {
         case c.jn.QUEST_BAR:
         case c.jn.QUEST_BAR_V2:
@@ -28,111 +27,109 @@ let T = (t, e) => {
             return !1;
     }
 };
-function b(t) {
+function T(t) {
     var e;
-    let { transitionState: n, onClose: b, questContent: g, quest: f } = t,
-        E = (0, d.zK)(f, m.S7.IN_HOUSE_CONSOLE_QUEST),
-        S = (0, d.Mi)(f, c.jn.GIFT_INVENTORY_FOR_YOU),
-        p = (0, l.tP)(f),
-        N = (null === (e = f.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null,
-        C = T(g, S && !p && !N),
-        v = o.useMemo(
+    let { transitionState: n, onClose: T, questContent: b, quest: h } = t,
+        f = (0, d.Mi)(h, c.jn.GIFT_INVENTORY_FOR_YOU),
+        E = (0, l.tP)(h),
+        p = (null === (e = h.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null,
+        S = j(b, f && !E && !p),
+        C = o.useMemo(
             () =>
                 (0, d.Fs)({
-                    isTargetedDisclosure: C,
-                    gamePublisher: f.config.messages.gamePublisher,
-                    gameTitle: f.config.messages.gameTitle,
-                    isInHouseQuest: E
+                    isTargetedDisclosure: S,
+                    gamePublisher: h.config.messages.gamePublisher,
+                    gameTitle: h.config.messages.gameTitle
                 }),
-            [f, E, C]
+            [h, S]
         );
     return (0, s.jsxs)(a.ModalRoot, {
         transitionState: n,
         size: a.ModalSize.DYNAMIC,
-        className: _.modalRoot,
+        className: x.modalRoot,
         children: [
             (0, s.jsxs)(a.ModalHeader, {
                 direction: i.Z.Direction.VERTICAL,
                 separator: !1,
-                className: _.modalHeader,
+                className: x.modalHeader,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: _.modalTop,
+                        className: x.modalTop,
                         children: [
                             (0, s.jsx)('div', {
-                                className: _.iconFrame,
+                                className: x.iconFrame,
                                 children: (0, s.jsx)('img', {
-                                    className: _.icon,
+                                    className: x.icon,
                                     alt: '',
-                                    src: j
+                                    src: _
                                 })
                             }),
                             (0, s.jsx)(a.ModalCloseButton, {
-                                className: _.closeBtn,
-                                onClick: b
+                                className: x.closeBtn,
+                                onClick: T
                             })
                         ]
                     }),
                     (0, s.jsx)(a.Heading, {
                         variant: 'heading-xl/bold',
-                        children: x.intl.string(x.t.GcsZKC)
+                        children: u.intl.string(u.t.GcsZKC)
                     })
                 ]
             }),
             (0, s.jsxs)(a.ModalContent, {
-                className: _.modalContent,
+                className: x.modalContent,
                 children: [
                     (0, s.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: _.upperBodyText,
-                        children: v
+                        className: x.upperBodyText,
+                        children: C
                     }),
-                    (0, s.jsx)(h, {
-                        quest: f,
-                        questContent: g
+                    (0, s.jsx)(g, {
+                        quest: h,
+                        questContent: b
                     }),
                     (0, s.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: x.intl.format(x.t.tzq9WV, { privacySettingsUrl: r.Z.getArticleURL(u.BhN.QUESTS_PRIVACY_CONTROLS) })
+                        children: u.intl.format(u.t.tzq9WV, { privacySettingsUrl: r.Z.getArticleURL(m.BhN.QUESTS_PRIVACY_CONTROLS) })
                     })
                 ]
             }),
             (0, s.jsx)(a.ModalFooter, {
-                className: _.footer,
+                className: x.footer,
                 children: (0, s.jsx)(a.Button, {
-                    onClick: b,
-                    children: x.intl.string(x.t.cpT0Cg)
+                    onClick: T,
+                    children: u.intl.string(u.t.cpT0Cg)
                 })
             })
         ]
     });
 }
-function g(t) {
+function b(t) {
     let { location: e, age: n, activity: o } = t;
     return (0, s.jsxs)('ul', {
-        className: _.targetList,
+        className: x.targetList,
         children: [
             e &&
-                (0, s.jsx)(f, {
+                (0, s.jsx)(h, {
                     icon: a.GlobeEarthIcon,
-                    children: x.intl.string(x.t.xQSdPj)
+                    children: u.intl.string(u.t.xQSdPj)
                 }),
             n &&
-                (0, s.jsx)(f, {
+                (0, s.jsx)(h, {
                     icon: a.UserIcon,
-                    children: x.intl.string(x.t.mYt7hY)
+                    children: u.intl.string(u.t.mYt7hY)
                 }),
             o &&
-                (0, s.jsx)(f, {
+                (0, s.jsx)(h, {
                     icon: a.GameControllerIcon,
-                    children: x.intl.string(x.t.XAsWxc)
+                    children: u.intl.string(u.t.XAsWxc)
                 })
         ]
     });
 }
-function h(t) {
+function g(t) {
     var e;
     let { questContent: n, quest: o } = t,
         a = (0, d.Mi)(o, c.jn.GIFT_INVENTORY_FOR_YOU),
@@ -140,20 +137,20 @@ function h(t) {
         r = (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
     return n !== c.jn.QUEST_BAR && n !== c.jn.QUEST_BAR_V2 && (n !== c.jn.QUEST_HOME_DESKTOP || !a || i || r)
         ? n === c.jn.ACTIVITY_PANEL || n === c.jn.QUESTS_EMBED || n === c.jn.QUEST_LIVE_STREAM
-            ? (0, s.jsx)(g, { activity: !0 })
+            ? (0, s.jsx)(b, { activity: !0 })
             : null
-        : (0, s.jsx)(g, {
+        : (0, s.jsx)(b, {
               location: !0,
               age: !0,
               activity: !0
           });
 }
-function f(t) {
+function h(t) {
     let { icon: e, children: n } = t;
     return (0, s.jsxs)(a.Text, {
         variant: 'text-sm/medium',
         tag: 'li',
-        className: _.targetItem,
+        className: x.targetItem,
         children: [
             (0, s.jsx)(e, {
                 size: 'xs',
