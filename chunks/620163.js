@@ -21,8 +21,8 @@ var s = n(990547),
     S = n(163379),
     T = n(703288),
     C = n(574755),
-    _ = n(377171),
-    E = n(621628),
+    E = n(377171),
+    _ = n(621628),
     f = n(18438),
     I = n(778825),
     N = n(665166),
@@ -75,8 +75,8 @@ var s = n(990547),
     eS = n(327885),
     eT = n(595242),
     eC = n(301121),
-    e_ = n(463153),
-    eE = n(36192),
+    eE = n(463153),
+    e_ = n(36192),
     ef = n(889029),
     eI = n(400287),
     eN = n(554042),
@@ -100,7 +100,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: h.ID.CUSTOM,
-                element: e_.Z,
+                element: eE.Z,
                 predicate: () => ez
             },
             [eD.s6.ACCOUNT_SECURITY_TAB]: {
@@ -566,7 +566,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 badgeCount: eV,
                 newIndicator: (0, i.jsx)(a.TextBadge, {
                     text: eZ.intl.string(eZ.t.y2b7CA),
-                    color: _.Z.BG_BRAND
+                    color: E.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [r.z.FAMILY_CENTER_NEW_BADGE]
             },
@@ -586,7 +586,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.intl.string(eZ.t['+1h0k5'])],
                 label: eZ.intl.string(eZ.t['+1h0k5']),
                 ariaLabel: eZ.intl.string(eZ.t['+1h0k5']),
-                element: eE.Z,
+                element: e_.Z,
                 newIndicatorDismissibleContentTypes: [r.z.AUTH_SESSIONS_NEW],
                 predicate: () => V.Z.getCurrentConfig({ location: '9f7d84_1' }, { autoTrackExposure: !1 }).showSettings
             },
@@ -1023,6 +1023,30 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.intl.string(eZ.t.wVBHr6)],
                 parent: eD.s6.VOICE_AND_VIDEO_ADVANCED,
                 predicate: () => L.Z.supports(eL.AN.LEGACY_AUDIO_SUBSYSTEM) || L.Z.supports(eL.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM)
+            },
+            [eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE]: {
+                section: ey.oAB.VOICE,
+                searchableTitles: [eZ.intl.string(eZ.t.NMCIf3), eZ.intl.string(eZ.t.FeUKeH)],
+                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED,
+                predicate: () => L.Z.supportsVideoHook() || L.Z.supportsExperimentalSoundshare() || (L.Z.supportsSystemScreensharePicker() && (0, w.isMac)())
+            },
+            [eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK]: {
+                section: ey.oAB.VOICE,
+                searchableTitles: [eZ.intl.string(eZ.t.GmWk2N), eZ.intl.string(eZ.t['Fj/xn5'])],
+                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => L.Z.supportsVideoHook()
+            },
+            [eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE]: {
+                section: ey.oAB.VOICE,
+                searchableTitles: [eZ.intl.string(eZ.t['4I0qzc'])],
+                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => L.Z.supportsExperimentalSoundshare()
+            },
+            [eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER]: {
+                section: ey.oAB.VOICE,
+                searchableTitles: [eZ.intl.string(eZ.t.ie1mgY)],
+                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
+                predicate: () => L.Z.supportsSystemScreensharePicker() && (0, w.isMac)()
             },
             [eD.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING]: {
                 section: ey.oAB.VOICE,
@@ -1645,7 +1669,7 @@ let eM = () => [r.z.CLIENT_THEMES_SETTINGS_BADGE, r.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ey.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: E.Z,
+                element: _.Z,
                 predicate: () => y.Z.isDeveloper
             },
             [eD.s6.PAYMENT_FLOW_MODALS]: {
