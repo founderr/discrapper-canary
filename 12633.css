@@ -53718,7 +53718,8 @@ code {
         var(--custom-theme-background) fixed 0 0 / cover
 }
 
-[data-disable-adaptive-theme=true] {
+[data-disable-adaptive-theme=true],
+.disable-adaptive-theme {
     --theme-base-color-amount: 0% !important;
     --theme-text-color-amount: 0% !important
 }
