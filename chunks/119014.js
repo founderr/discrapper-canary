@@ -1,36 +1,37 @@
 n.d(t, {
     i: function () {
-        return o;
+        return c;
     }
 }),
     n(47120);
 var i = n(192379),
     r = n(442837),
     l = n(894653),
-    a = n(979007),
-    s = n(388032);
-function o() {
-    let e = (0, r.e7)([l.Z], () => l.Z.getCategories()),
-        [t, n] = i.useState(a.kK),
-        o = i.useMemo(
+    a = n(133743),
+    s = n(979007),
+    o = n(388032);
+function c(e) {
+    let t = (0, r.e7)([l.Z], () => l.Z.getCategories()),
+        n = i.useMemo(
             () => [
                 {
-                    id: a.kK,
-                    label: s.intl.string(s.t.ijDDw8)
+                    id: s.kK,
+                    label: o.intl.string(o.t.ijDDw8)
                 },
-                ...e.map((e) => ({
+                ...t.map((e) => ({
                     id: e.id.toString(),
                     label: e.name
                 }))
             ],
-            [e]
+            [t]
         ),
         c = i.useCallback((e) => {
-            n(e);
-        }, []);
+            (0, a.O)({ categoryId: e });
+        }, []),
+        d = null != e && n.some((t) => t.id === e) ? e : n[0].id;
     return {
-        tabs: o,
-        selectedTab: null != t ? t : o[0].id,
+        tabs: n,
+        selectedTab: d,
         onSelectTab: c
     };
 }

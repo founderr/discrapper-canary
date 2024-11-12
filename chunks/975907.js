@@ -12,14 +12,13 @@ function s() {
     let [e, t] = i.useState(''),
         [n, s] = i.useState(''),
         [o, c] = i.useState(!1),
-        [d, u] = i.useState(void 0),
-        h = i.useCallback((e) => {
+        d = i.useCallback((e) => {
             t(e);
         }, []),
-        m = i.useCallback(() => {
-            t(''), s(''), c(!1), u(void 0);
+        u = i.useCallback(() => {
+            t(''), s(''), c(!1);
         }, []),
-        p = i.useCallback(() => {
+        h = i.useCallback(() => {
             l.yC({
                 query: e,
                 options: {
@@ -29,31 +28,14 @@ function s() {
                 }
             }),
                 c(!0),
-                s(e),
-                u(void 0);
+                s(e);
         }, [e]);
     return {
         searchQuery: e,
         searchFetchedQuery: n,
-        onSearchTextChange: h,
-        onClearSearch: m,
-        onSearchSubmit: p,
-        hasSearchView: o,
-        initialSearchCategoryId: d,
-        onOpenCategorySearch: i.useCallback((e, n) => {
-            t(e),
-                l.yC({
-                    query: e,
-                    options: {
-                        page: 1,
-                        source: r.F.APP_DIRECTORY,
-                        pageSize: a.IV,
-                        categoryId: n
-                    }
-                }),
-                c(!0),
-                s(e),
-                u(n);
-        }, [])
+        onSearchTextChange: d,
+        onClearSearch: u,
+        onSearchSubmit: h,
+        hasSearchView: o
     };
 }

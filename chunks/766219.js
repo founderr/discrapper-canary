@@ -31,11 +31,10 @@ function d() {
     (0, i.rx)('discovery_history_util') && (0, r.uL)(s.Z5c.GLOBAL_DISCOVERY_SERVERS);
 }
 function u(e, t) {
+    if (e.startsWith('/discovery/applications') && t) return a.F$.APPS;
     switch (e) {
         case '/discovery/quests':
             return a.F$.QUESTS;
-        case '/discovery/applications':
-            return t ? a.F$.APPS : a.D7;
         case '/discovery/servers':
             return a.F$.SERVERS;
         default:

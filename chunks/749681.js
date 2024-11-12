@@ -4,6 +4,11 @@ n.r(t),
             return d;
         }
     }),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120),
     n(411104);
 var r = n(207796),
     i = n(859921),
@@ -41,7 +46,12 @@ function d(e) {
             })({ extra: e.extra });
             return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_SERVERS, _);
         case l.F$.APPS:
-            return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
+            if (null != e.applicationId) return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+            if (null != e.query) {
+                let t = new URLSearchParams();
+                return t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() });
+            } else if (null != e.categoryId) return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
+            else return (0, s.uL)(u.Z5c.GLOBAL_DISCOVERY_APPS);
         case l.F$.QUESTS:
             return (0, a.navigateToQuestHome)(e.location, e.questContent, e.questId);
         default:

@@ -10,101 +10,102 @@ var i = n(200651),
     h = n(975907),
     m = n(119014),
     p = n(578470),
-    g = n(726941),
-    f = n(666697),
-    _ = n(370648),
-    E = n(569527),
-    I = n(979007),
-    C = n(388032),
-    v = n(842221);
+    g = n(258971),
+    f = n(726941),
+    _ = n(666697),
+    E = n(370648),
+    I = n(569527),
+    C = n(979007),
+    v = n(388032),
+    S = n(842221);
 t.Z = function () {
     let { onScroll: e, scrollPosition: t, resetScrollPosition: n } = (0, s.M)(),
-        { tabs: S, selectedTab: N, onSelectTab: T } = (0, m.i)();
+        N = (0, g.Xh)(),
+        T = (null == N ? void 0 : N.type) === g.m_.CATEGORY ? N.categoryId : void 0,
+        { tabs: x, selectedTab: A, onSelectTab: b } = (0, m.i)(null == T ? void 0 : T.toString());
     r.useEffect(() => {
         a.CP();
     }, []),
         r.useEffect(() => {
             a.g5();
         }, []);
-    let { searchQuery: x, searchFetchedQuery: b, onSearchTextChange: A, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L, initialSearchCategoryId: R, onOpenCategorySearch: j } = (0, h.M)(),
+    let { searchQuery: Z, searchFetchedQuery: y, onSearchTextChange: L, onClearSearch: R, onSearchSubmit: O, hasSearchView: j } = (0, h.M)(),
         {
-            searchBarState: O,
-            onTabsAvailableWidthChange: P,
-            onCollapsedSearchBarClick: D,
-            onSearchBarBlur: M
+            searchBarState: P,
+            onTabsAvailableWidthChange: D,
+            onCollapsedSearchBarClick: M,
+            onSearchBarBlur: w
         } = (0, o.U)({
             isSearchBarVisible: !0,
-            isSearchBarEmpty: '' === x.trim()
+            isSearchBarEmpty: '' === Z.trim()
         }),
-        { onSelectApplication: w, onCloseAppDetails: k, selectedAppId: U } = (0, p.g)(n),
-        G = null != U,
-        B = L && !G,
-        H = r.useCallback(
+        { onSelectApplication: k, onCloseAppDetails: U, selectedAppId: G } = (0, p.g)(n),
+        B = null != G,
+        H = j && !B,
+        V = r.useCallback(
             (e) => {
-                T(e), B && Z(), n();
+                b(e), H && R(), n();
             },
-            [B, Z, T, n]
+            [H, R, b, n]
         );
     return (0, i.jsxs)('div', {
-        className: v.container,
+        className: S.container,
         children: [
             (0, i.jsxs)(c.ZP, {
-                className: B ? v.search : void 0,
+                className: H ? S.search : void 0,
                 children: [
-                    !B && (0, i.jsx)(c.z6, { scrollPosition: t }),
+                    !H && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     (0, i.jsx)(c.aV, {
-                        icon: B || G ? l.ArrowLargeLeftIcon : l.AppsIcon,
-                        onClick: G ? k : B ? Z : void 0
+                        icon: H || B ? l.ArrowLargeLeftIcon : l.AppsIcon,
+                        onClick: B ? U : H ? R : void 0
                     }),
-                    G || B
+                    B || H
                         ? (0, i.jsx)(l.Heading, {
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
-                              className: v.alternateHeader,
-                              children: G ? C.intl.string(C.t['13/7kZ']) : C.intl.formatToPlainString(C.t.zHdzqa, { query: b })
+                              className: S.alternateHeader,
+                              children: B ? v.intl.string(v.t['13/7kZ']) : v.intl.formatToPlainString(v.t.zHdzqa, { query: y })
                           })
                         : (0, i.jsx)(d.Z, {
-                              tabs: S,
-                              selectedTab: N,
-                              onTabSelect: H,
-                              onAvailableWidthChange: P
+                              tabs: x,
+                              selectedTab: A,
+                              onTabSelect: V,
+                              onAvailableWidthChange: D
                           }),
-                    !G &&
+                    !B &&
                         (0, i.jsx)(u.Z, {
-                            query: x,
-                            placeholder: C.intl.string(C.t['7J5i+/']),
-                            onTextChange: A,
-                            onClear: Z,
-                            onSubmit: y,
-                            onCollapsedClick: D,
-                            state: O,
-                            onBlur: M
+                            query: Z,
+                            placeholder: v.intl.string(v.t['7J5i+/']),
+                            onTextChange: L,
+                            onClear: R,
+                            onSubmit: O,
+                            onCollapsedClick: M,
+                            state: P,
+                            onBlur: w
                         })
                 ]
             }),
-            G
-                ? (0, i.jsx)(f.Z, {
+            B
+                ? (0, i.jsx)(_.Z, {
                       onScroll: e,
-                      onSelectApplication: w,
-                      applicationId: U,
-                      onCloseAppDetails: k,
-                      onOpenCategorySearch: j
+                      onSelectApplication: k,
+                      applicationId: G,
+                      onCloseAppDetails: U
                   })
-                : B
-                  ? (0, i.jsx)(E.Z, {
-                        query: b,
-                        onSelectApplication: w,
-                        initialCategoryId: R
+                : H
+                  ? (0, i.jsx)(I.Z, {
+                        query: y,
+                        onSelectApplication: k
                     })
-                  : N === I.kK
-                    ? (0, i.jsx)(_.Z, {
+                  : A === C.kK
+                    ? (0, i.jsx)(E.Z, {
                           onScroll: e,
-                          onSelectApplication: w
+                          onSelectApplication: k
                       })
-                    : (0, i.jsx)(g.Z, {
-                          tabId: Number(N),
+                    : (0, i.jsx)(f.Z, {
+                          tabId: Number(A),
                           onScroll: e,
-                          onSelectApplication: w
+                          onSelectApplication: k
                       })
         ]
     });
