@@ -10,11 +10,11 @@ var r,
     d = n(131704),
     f = n(592125);
 let _ = {};
-function h(e) {
-    var t;
-    null === (t = e.threads) || void 0 === t || t.forEach(p);
-}
 function p(e) {
+    var t;
+    null === (t = e.threads) || void 0 === t || t.forEach(h);
+}
+function h(e) {
     if (!d.AW.has(e.type)) return !1;
     let t = (function (e) {
         if (!(e.id in _)) {
@@ -32,7 +32,7 @@ function p(e) {
 }
 function m(e) {
     let { channel: t } = e;
-    return p(t);
+    return h(t);
 }
 function g(e) {
     let { threads: t } = e;
@@ -51,7 +51,7 @@ function E(e) {
 function v(e) {
     if (null != e && !(e.id in _)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return p(t), !0;
+        if (null != t) return h(t), !0;
     }
     return !1;
 }
@@ -82,7 +82,7 @@ class I extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new I(c.Z, {
         CONNECTION_OPEN: function (e) {
-            (_ = {}), e.guilds.forEach(h);
+            (_ = {}), e.guilds.forEach(p);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { threadMembers: t } = e;
@@ -90,7 +90,7 @@ class I extends (r = u.ZP.Store) {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            h(t);
+            p(t);
         },
         GUILD_DELETE: function (e) {
             var t;
@@ -106,7 +106,7 @@ class I extends (r = u.ZP.Store) {
         THREAD_UPDATE: m,
         THREAD_LIST_SYNC: function (e) {
             let { threads: t } = e;
-            t.forEach(p);
+            t.forEach(h);
         },
         THREAD_MEMBERS_UPDATE: function (e) {
             let t = _[e.id];

@@ -23,22 +23,22 @@ var r = n(200651),
     d = n(476326),
     f = n(543651),
     _ = n(377171),
-    h = n(95398),
-    p = n(70097),
+    p = n(95398),
+    h = n(70097),
     m = n(592125),
     g = n(956664),
     E = n(709054),
     v = n(273031),
     I = n(859235),
-    S = n(388032),
-    T = n(671292);
-let b = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
+    b = n(388032),
+    S = n(671292);
+let T = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'video/quicktime', 'video/mp4'];
 function y(e) {
     let { alt: t, spoiler: n, renderContent: a, size: s } = e,
         [o, l] = i.useState(!1);
-    return (0, r.jsx)(h.a.Provider, {
+    return (0, r.jsx)(p.a.Provider, {
         value: !n,
-        children: (0, r.jsx)(h.Z, {
+        children: (0, r.jsx)(p.Z, {
             containerStyles:
                 s === I.q.CLIP
                     ? {
@@ -47,27 +47,27 @@ function y(e) {
                           boxShadow: 'none'
                       }
                     : void 0,
-            type: h.Z.Types.ATTACHMENT,
+            type: p.Z.Types.ATTACHMENT,
             onReveal: () => l(!0),
-            className: T.spoilerContainer,
+            className: S.spoilerContainer,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: T.spoilerWrapper,
+                    className: S.spoilerWrapper,
                     children: [
                         a(e),
                         (0, r.jsxs)('div', {
-                            className: T.tags,
+                            className: S.tags,
                             children: [
                                 null != t && '' !== t
                                     ? (0, r.jsx)('span', {
-                                          className: T.altTag,
-                                          children: S.intl.string(S.t.QEW819)
+                                          className: S.altTag,
+                                          children: b.intl.string(b.t.QEW819)
                                       })
                                     : null,
                                 o && n
                                     ? (0, r.jsx)('span', {
-                                          className: T.altTag,
-                                          children: S.intl.string(S.t['F+x38P'])
+                                          className: S.altTag,
+                                          children: b.intl.string(b.t['F+x38P'])
                                       })
                                     : null
                             ]
@@ -84,9 +84,9 @@ function A(e) {
             width: 0,
             height: 0
         }),
-        h = o === I.q.SMALL;
+        p = o === I.q.SMALL;
     i.useEffect(() => {
-        if (null == t || !1 === b.includes(t.type)) return;
+        if (null == t || !1 === T.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         d(e);
         let n = new Image();
@@ -109,47 +109,47 @@ function A(e) {
             }
         );
     }, [t]);
-    let p = i.useCallback(
+    let h = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == c
                     ? (0, r.jsx)(r.Fragment, {})
                     : (0, r.jsx)('img', {
                           src: c,
-                          className: s()(T.media, {
-                              [T.spoiler]: e,
-                              [T.imageSmall]: h
+                          className: s()(S.media, {
+                              [S.spoiler]: e,
+                              [S.imageSmall]: p
                           }),
                           'aria-hidden': !0,
                           alt: null != n ? n : '',
                           style: t ? f : {}
                       });
             },
-            [c, h, n, f]
+            [c, p, n, f]
         ),
         m = i.useCallback(() => {
             if (null != c)
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(l.ModalRoot, {
-                        className: T.__invalid_modal,
+                        className: S.__invalid_modal,
                         ...e,
                         size: l.ModalSize.DYNAMIC,
-                        'aria-label': S.intl.string(S.t.X4IxWF),
-                        children: p(!1, !0)
+                        'aria-label': b.intl.string(b.t.X4IxWF),
+                        children: h(!1, !0)
                     })
                 );
-        }, [c, p]);
+        }, [c, h]);
     return (0, r.jsx)('div', {
         onMouseEnter: u,
-        className: s()(T.mediaContainer, { [T.imageSmall]: h }),
+        className: s()(S.mediaContainer, { [S.imageSmall]: p }),
         children: (0, r.jsx)(l.Clickable, {
             onClick: m,
-            className: T.clickableMedia,
+            className: S.clickableMedia,
             children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
                 spoiler: a,
-                renderContent: p
+                renderContent: h
             })
         })
     });
@@ -171,18 +171,18 @@ function N(e) {
         }, [t]),
         (0, r.jsx)('div', {
             onMouseEnter: l,
-            className: T.mediaContainer,
+            className: S.mediaContainer,
             children: (0, r.jsx)(y, {
                 size: o,
                 alt: n,
                 spoiler: a,
                 renderContent: (e) =>
-                    (0, r.jsx)(p.Z, {
+                    (0, r.jsx)(h.Z, {
                         ref: f,
                         src: c,
-                        className: s()(T.media, {
-                            [T.spoiler]: e,
-                            [T.sizeClip]: o === I.q.CLIP
+                        className: s()(S.media, {
+                            [S.spoiler]: e,
+                            [S.sizeClip]: o === I.q.CLIP
                         }),
                         onError: u,
                         preload: 'none',
@@ -216,25 +216,25 @@ function C(e) {
             })
           : (0, r.jsx)('div', {
                 onMouseEnter: o,
-                className: s()(T.icon, T.__invalid_imageContainer, {
-                    [T[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
-                    [T.imageSmall]: c
+                className: s()(S.icon, S.__invalid_imageContainer, {
+                    [S[null !== (t = n.classification) && void 0 !== t ? t : '']]: !0,
+                    [S.imageSmall]: c
                 }),
                 children: (0, r.jsx)('div', {
-                    className: T.tags,
+                    className: S.tags,
                     children: n.spoiler
                         ? (0, r.jsx)('span', {
-                              className: T.altTag,
-                              children: S.intl.string(S.t['F+x38P'])
+                              className: S.altTag,
+                              children: b.intl.string(b.t['F+x38P'])
                           })
                         : null
                 })
             });
 }
 function R(e) {
-    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: h, size: p = I.q.MEDIUM, canEdit: g = !0, hideFileName: b = !1, clip: y } = e,
+    let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: p, size: h = I.q.MEDIUM, canEdit: g = !0, hideFileName: T = !1, clip: y } = e,
         A = null != y,
-        N = (p = A ? I.q.CLIP : p) === I.q.SMALL,
+        N = (h = A ? I.q.CLIP : h) === I.q.SMALL,
         R = (0, o.e7)([m.Z], () => {
             var e;
             return null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
@@ -263,43 +263,43 @@ function R(e) {
             children: [
                 g
                     ? (0, r.jsx)(v.Z, {
-                          className: s()({ [T.action]: N }),
-                          tooltip: A ? S.intl.string(S.t.MYgdY2) : S.intl.string(S.t.cuurzM),
+                          className: s()({ [S.action]: N }),
+                          tooltip: A ? b.intl.string(b.t.MYgdY2) : b.intl.string(b.t.cuurzM),
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: s()({ [T.actionBarIcon]: N })
+                                    className: s()({ [S.actionBarIcon]: N })
                                 })
                               : (0, r.jsx)(l.EyeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s()({ [T.actionBarIcon]: N })
+                                    className: s()({ [S.actionBarIcon]: N })
                                 })
                       })
                     : null,
                 g && !A
                     ? (0, r.jsx)(v.Z, {
-                          className: s()({ [T.action]: N }),
-                          tooltip: S.intl.string(S.t.Y8ujqq),
+                          className: s()({ [S.action]: N }),
+                          tooltip: b.intl.string(b.t.Y8ujqq),
                           onClick: O,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()({ [T.actionBarIcon]: N })
+                              className: s()({ [S.actionBarIcon]: N })
                           })
                       })
                     : null,
                 (0, r.jsx)(v.Z, {
-                    className: s()({ [T.action]: N }),
-                    tooltip: A ? S.intl.string(S.t.MskAXV) : S.intl.string(S.t.vN7REx),
+                    className: s()({ [S.action]: N }),
+                    tooltip: A ? b.intl.string(b.t.MskAXV) : b.intl.string(b.t.vN7REx),
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()({ [T.actionBarIcon]: N })
+                        className: s()({ [S.actionBarIcon]: N })
                     })
                 })
             ]
@@ -309,28 +309,28 @@ function R(e) {
         channelId: t,
         handleEditModal: O,
         keyboardModeEnabled: d,
-        size: p,
-        className: s()({ [T.attachmentItemSmall]: N }),
+        size: h,
+        className: s()({ [S.attachmentItemSmall]: N }),
         children: [
             (0, r.jsx)(C, {
                 upload: a,
-                size: p
+                size: h
             }),
-            !b &&
+            !T &&
                 !A &&
                 (0, r.jsx)('div', {
-                    className: T.filenameContainer,
+                    className: S.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
-                        className: T.filename,
+                        className: S.filename,
                         variant: 'text-sm/normal',
-                        children: null != h ? h : a.filename
+                        children: null != p ? p : a.filename
                     })
                 }),
             A &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(f.Z, {
-                            className: T.clipsFooter,
+                            className: S.clipsFooter,
                             createdAt: E.default.extractTimestamp(y.id),
                             participantIds: y.users,
                             applicationId: y.applicationId,
@@ -339,8 +339,8 @@ function R(e) {
                         }),
                         (0, r.jsx)(l.TextBadge, {
                             color: _.Z.BG_BRAND,
-                            className: T.clipsBadge,
-                            text: S.intl.string(S.t.oA4afH)
+                            className: S.clipsBadge,
+                            text: b.intl.string(b.t.oA4afH)
                         })
                     ]
                 })

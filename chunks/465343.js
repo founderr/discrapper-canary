@@ -18,11 +18,11 @@ var r = n(933557),
     d = n(430824),
     f = n(594174),
     _ = n(483360),
-    h = n(709054),
-    p = n(752305),
+    p = n(709054),
+    h = n(752305),
     m = n(377668);
 function g(e, t, n, f) {
-    let { allowUsers: p = !0, allowRoles: g = !0 } = null != f ? f : {};
+    let { allowUsers: h = !0, allowRoles: g = !0 } = null != f ? f : {};
     switch (e[0]) {
         case '@':
             return (function (e, t, n, r, a) {
@@ -67,7 +67,7 @@ function g(e, t, n, f) {
                     }
                 }
                 return null;
-            })(e, t, n, p, g);
+            })(e, t, n, h, g);
         case ':':
             return (function (e, t) {
                 let n = s.ZP.EMOJI_NAME_RE.exec(e);
@@ -95,7 +95,7 @@ function g(e, t, n, f) {
                 if (null == t) return null;
                 n = e.length > 3 && '"' === e[1] && '"' === e[e.length - 1] ? (0, r.mA)(e.slice(2, e.length - 1)) : e.slice(1);
                 let i = u.ZP.getTextChannelNameDisambiguations(t);
-                for (let e of h.default.keys(i))
+                for (let e of p.default.keys(i))
                     if (i[e].name === n)
                         return {
                             type: 'channelMention',
@@ -114,8 +114,8 @@ function g(e, t, n, f) {
                     }
                 }
                 let a = o.Z.getActiveJoinedThreadsForGuild(t);
-                for (let e of h.default.keys(a))
-                    for (let t of h.default.keys(a[e])) {
+                for (let e of p.default.keys(a))
+                    for (let t of p.default.keys(a[e])) {
                         let { channel: r } = a[e][t];
                         if (r.name === n)
                             return {
@@ -131,7 +131,7 @@ function g(e, t, n, f) {
 }
 function E(e, t, n, r) {
     let i = g(e, t, n, r);
-    return null == i ? null : (0, p.VI)(i);
+    return null == i ? null : (0, h.VI)(i);
 }
 function v(e, t, n) {
     let r = f.default.getUser(n);

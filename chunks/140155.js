@@ -11,8 +11,8 @@ var o = n(786761),
     d = n(709054),
     f = n(497089),
     _ = n(178480),
-    h = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -70,7 +70,7 @@ function I(e) {
     if (!m.initialized || !g(t) || m.notifCenterIds.has(t.id)) return !1;
     m.notifCenterIds.add(t.id), (m.notifCenterItems = [t, ...m.notifCenterItems]), m.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
-function S(e, t) {
+function b(e, t) {
     m.notifCenterItems = m.notifCenterItems
         .map((n) =>
             e.includes(n.id)
@@ -82,11 +82,11 @@ function S(e, t) {
         )
         .filter(g);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     var r;
     return e.type === t && (null === (r = e.other_user) || void 0 === r ? void 0 : r.id) === n;
 }
-function b(e) {
+function T(e) {
     if (!!(0, s.Z2)(e))
         m.notifCenterItems = m.notifCenterItems.map((t) =>
             t.type === f.DY.GUILD_SCHEDULED_EVENT_STARTED && t.guild_scheduled_event_id === e.id
@@ -153,21 +153,21 @@ class y extends (r = i.ZP.PersistedStore) {
         return m.notifCenterTabFocused;
     }
 }
-p(y, 'displayName', 'NotificationCenterItemsStore'), p(y, 'persistKey', 'NotificationCenterItemsStore_v2');
+h(y, 'displayName', 'NotificationCenterItemsStore'), h(y, 'persistKey', 'NotificationCenterItemsStore_v2');
 let A = new y(a.Z, {
     CONNECTION_OPEN: function (e) {
         E();
         let t = [];
         e.relationships.forEach((e) => {
             let { type: n, user: r, since: i, is_spam_request: a } = e;
-            if (n !== h.OGo.PENDING_INCOMING || ((0, l.A)({ location: 'notification-center' }) && a) || null == r || null == i) return null;
+            if (n !== p.OGo.PENDING_INCOMING || ((0, l.A)({ location: 'notification-center' }) && a) || null == r || null == i) return null;
             let s = c.default.getUser(r.id);
             if (null == s) return null;
             t.push((0, _.mH)(s, i));
         }),
             e.guilds.forEach((e) => {
                 e.guild_scheduled_events.forEach((e) => {
-                    b(e);
+                    T(e);
                 });
             }),
             (m.notifCenterLocalItems = t);
@@ -175,15 +175,15 @@ let A = new y(a.Z, {
     LOGOUT: E,
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        S(t, !0);
+        b(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        S(t, !1);
+        b(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
-        b(t);
+        T(t);
     },
     NOTIFICATION_CENTER_ITEM_CREATE: I,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
@@ -212,16 +212,16 @@ let A = new y(a.Z, {
         m.notifCenterTabFocused = t;
     },
     RELATIONSHIP_ADD: function (e) {
-        if (e.relationship.type === h.OGo.PENDING_INCOMING && (!(0, l.A)({ location: 'notification-center' }) || !e.relationship.isSpamRequest)) {
+        if (e.relationship.type === p.OGo.PENDING_INCOMING && (!(0, l.A)({ location: 'notification-center' }) || !e.relationship.isSpamRequest)) {
             let { user: t, since: n } = e.relationship;
             if (null == n) return null;
             let r = c.default.getUser(t.id);
             if (null == r) return null;
             m.notifCenterLocalItems = [...m.notifCenterLocalItems, (0, _.mH)(r, n)];
         }
-        e.relationship.type === h.OGo.FRIEND &&
+        e.relationship.type === p.OGo.FRIEND &&
             (m.notifCenterLocalItems = m.notifCenterLocalItems.map((t) =>
-                T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)
+                S(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)
                     ? {
                           ...t,
                           acked: !0,
@@ -231,10 +231,10 @@ let A = new y(a.Z, {
                       }
                     : t
             )),
-            e.relationship.type === h.OGo.BLOCKED && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !T(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)));
+            e.relationship.type === p.OGo.BLOCKED && (m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !S(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !S(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)));
     },
     RELATIONSHIP_REMOVE: function (e) {
-        m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !T(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !T(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
+        m.notifCenterLocalItems = m.notifCenterLocalItems.filter((t) => !S(t, f.O7.INCOMING_FRIEND_REQUESTS, e.relationship.id) && !S(t, f.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id));
     },
     NOTIFICATION_CENTER_ITEM_COMPLETED: function (e) {
         let { item_enum: t } = e;

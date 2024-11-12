@@ -11,12 +11,12 @@ t.Z = (e) => {
     let { cards: t, className: n, cardType: a } = e,
         u = () => (window.innerWidth < 910 ? 1 : window.innerWidth < 1400 ? 2 : 3),
         [g, m] = r.useState(0),
-        [f, _] = r.useState(u()),
-        [p, h] = r.useState(!1),
+        [f, p] = r.useState(u()),
+        [_, h] = r.useState(!1),
         E = t.length;
     r.useEffect(() => {
         let e = () => {
-            _(u());
+            p(u());
         };
         return (
             window.addEventListener('resize', e),
@@ -41,14 +41,14 @@ t.Z = (e) => {
                 children: [
                     E > f &&
                         (0, i.jsx)(o.Clickable, {
-                            onClick: p
+                            onClick: _
                                 ? () => {
                                       m((e) => (0 === e ? E - f : e - 1));
                                   }
                                 : void 0,
                             className: s()({
-                                [d.leftArrow]: p,
-                                [d.inactiveArrow]: !p
+                                [d.leftArrow]: _,
+                                [d.inactiveArrow]: !_
                             }),
                             children: (0, i.jsx)(o.ArrowSmallLeftIcon, {
                                 className: d.arrowIcon,

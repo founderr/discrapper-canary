@@ -10,15 +10,15 @@ var r = n(200651),
     d = n(979192),
     f = n(814059),
     _ = n(873128),
-    h = n(114201),
-    p = n(154658),
+    p = n(114201),
+    h = n(154658),
     m = n(370611),
     g = n(463031),
     E = n(981631),
     v = n(231338),
     I = n(388032),
-    S = n(304818);
-function T(e) {
+    b = n(304818);
+function S(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.ThemeProvider, {
         theme: v.BR.DARK,
@@ -30,11 +30,11 @@ function T(e) {
             })
     });
 }
-function b(e) {
+function T(e) {
     let { leaderboard: t } = e,
         n = i.useMemo(() => (0, f.n)(c.default.extractTimestamp(t.interval_end)), [t]);
     return (0, r.jsxs)('div', {
-        className: S.header,
+        className: b.header,
         children: [
             (0, r.jsx)(s.LeagueOfLegendsBrandIcon, { size: 'md' }),
             (0, r.jsx)(s.Spacer, {
@@ -43,7 +43,7 @@ function b(e) {
             }),
             (0, r.jsx)(s.Heading, {
                 variant: 'heading-sm/normal',
-                className: S.leaderboardTitle,
+                className: b.leaderboardTitle,
                 children: I.intl.format(I.t['MlT4+P'], {
                     leaderboardName: 'League of Legends',
                     timeLeft: n,
@@ -52,14 +52,14 @@ function b(e) {
                             s.Text,
                             {
                                 variant: 'text-sm/medium',
-                                className: S.leaderboardName,
+                                className: b.leaderboardName,
                                 children: e
                             },
                             t
                         )
                 })
             }),
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(p.Z, {
                 guildId: t.guild_id,
                 leaderboardId: g._
             })
@@ -72,9 +72,9 @@ function y(e) {
     return null == (0, a.e7)([l.Z], () => l.Z.getAccount(null, E.ABu.RIOT_GAMES)) || u
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(o.Z, { className: S.divider }),
+                  (0, r.jsx)(o.Z, { className: b.divider }),
                   (0, r.jsx)(s.Button, {
-                      className: S.joinLeaderboardButton,
+                      className: b.joinLeaderboardButton,
                       onClick: function () {
                           (0, s.openModalLazy)(async () => {
                               let { default: e } = await n.e('73217').then(n.bind(n, 139964));
@@ -148,15 +148,15 @@ t.Z = (e) => {
     }),
     null == f)
         ? null
-        : (0, r.jsx)(T, {
+        : (0, r.jsx)(S, {
               children: (0, r.jsxs)('div', {
-                  className: S.popout,
+                  className: b.popout,
                   ref: d,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: S.content,
+                          className: b.content,
                           children: [
-                              (0, r.jsx)(b, { leaderboard: f }),
+                              (0, r.jsx)(T, { leaderboard: f }),
                               (0, r.jsx)(m.Z, {
                                   leaderboard: f,
                                   previewMode: l
@@ -165,8 +165,8 @@ t.Z = (e) => {
                                   ? null
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
-                                            (0, r.jsx)(p.Z, {
-                                                className: S.previousChampion,
+                                            (0, r.jsx)(h.Z, {
+                                                className: b.previousChampion,
                                                 guildId: t,
                                                 leaderboardId: o,
                                                 intervalOffset: -1
@@ -184,10 +184,10 @@ t.Z = (e) => {
                                 children: (0, r.jsx)(s.Clickable, {
                                     onClick: () => c(!1),
                                     children: (0, r.jsx)('div', {
-                                        className: S.exitPreviewModeButton,
+                                        className: b.exitPreviewModeButton,
                                         children: (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            className: S.exitPreviewModeText,
+                                            className: b.exitPreviewModeText,
                                             children: I.intl.string(I.t.GLeQe3)
                                         })
                                     })

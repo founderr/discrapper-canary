@@ -11,13 +11,13 @@ var r = n(120356),
     g = n(318747),
     m = n(409100),
     f = n(474936),
-    _ = n(981631),
-    p = n(273553);
+    p = n(981631),
+    _ = n(273553);
 t.Z = function (e) {
     let { localizedPricingPromo: t, smallGap: n } = e,
         r = t.countryCode,
         h = (0, s.e7)([o.default], () => o.default.locale);
-    (0, u.U)(_.jXE.SETTINGS_PREMIUM_BANNER, r);
+    (0, u.U)(p.jXE.SETTINGS_PREMIUM_BANNER, r);
     let E = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         { localizedPricingBannerHeader: b, localizedPricingBannerBody: x } = (0, d.vB)({
             localizedPricingPromo: t,
@@ -26,38 +26,38 @@ t.Z = function (e) {
         }),
         C = r.toLowerCase() + 'Banner';
     return (0, i.jsxs)('div', {
-        className: a()(p.bannerContainer, {
-            [p.smallGap]: n,
-            [p.bigGap]: !n
+        className: a()(_.bannerContainer, {
+            [_.smallGap]: n,
+            [_.bigGap]: !n
         }),
         children: [
-            (0, i.jsx)('div', { className: a()(p[C], p.bannerImageContainer) }),
+            (0, i.jsx)('div', { className: a()(_[C], _.bannerImageContainer) }),
             (0, i.jsx)(l.Heading, {
-                className: p.bannerHeading,
+                className: _.bannerHeading,
                 variant: 'heading-xl/semibold',
                 children: b
             }),
             (0, i.jsx)('div', {
-                className: p.textContainer,
+                className: _.textContainer,
                 children: (0, i.jsx)(l.Text, {
                     color: 'none',
                     variant: 'text-md/normal',
-                    className: p.bannerBody,
+                    className: _.bannerBody,
                     children: x
                 })
             }),
             (0, i.jsxs)('div', {
-                className: p.ctaButtonContainer,
+                className: _.ctaButtonContainer,
                 children: [
                     (0, i.jsx)(m.Z, {
                         forceInverted: !0,
-                        className: p.ctaButton,
+                        className: _.ctaButton,
                         subscriptionTier: f.Si.TIER_2
                     }),
                     (0, i.jsx)(g.Z, {
                         forceWhite: !0,
                         subscriptionTier: f.Si.TIER_2,
-                        className: p.ctaButton
+                        className: _.ctaButton
                     })
                 ]
             })

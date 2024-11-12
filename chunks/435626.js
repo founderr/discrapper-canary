@@ -115,7 +115,7 @@ function R(e) {
                     className: l()(C.categoryButton, C.nitroButton),
                     children: [
                         (0, s.jsx)(c.Text, {
-                            variant: 'display-md',
+                            variant: 'display-sm',
                             color: 'always-white',
                             className: C.buttonText,
                             children: E.intl.string(E.t['lG6a5+'])
@@ -131,7 +131,7 @@ function R(e) {
                         className: l()(C.nitroBasicButton, C.categoryButton),
                         children: [
                             (0, s.jsx)(c.Text, {
-                                variant: 'display-md',
+                                variant: 'display-sm',
                                 color: 'always-white',
                                 className: C.buttonText,
                                 children: E.intl.string(E.t['t9uG/v'])
@@ -155,7 +155,7 @@ function R(e) {
                     className: l()(C.shopButton, C.categoryButton),
                     children: [
                         (0, s.jsx)(c.Text, {
-                            variant: 'display-md',
+                            variant: 'display-sm',
                             color: 'always-white',
                             className: C.buttonText,
                             children: E.intl.string(E.t.gFlB9f)
@@ -177,14 +177,14 @@ function k(e) {
               children: (0, s.jsx)(c.Image, {
                   src: 1 === t ? T : y,
                   mediaLayoutType: x.hV.RESPONSIVE,
-                  width: 270,
-                  height: 242,
+                  width: 122,
+                  height: 110,
                   zoomable: !1
               })
           })
         : 2 === t
           ? (0, s.jsx)('div', {
-                className: l()(C.wumpusImageContainer, C.shopImageContainer),
+                className: C.shopImageContainer,
                 children: (0, s.jsx)(c.Avatar, {
                     src: i,
                     avatarDecoration: n,

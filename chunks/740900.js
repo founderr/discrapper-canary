@@ -19,7 +19,7 @@ var r,
     d = n(588215),
     f = n(44715),
     _ = n(331551);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function h(e, t, n) {
         e
     );
 }
-let p = Date.now();
+let h = Date.now();
 function m(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? 'CURRENT_GUILD_MEMBER' : 'NEW_GUILD_MEMBER'];
     return e.isIncludedInSearchResults && t.push('INCLUDED_IN_SEARCH_RESULTS'), t;
@@ -55,19 +55,19 @@ class v {
         var n;
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             i = (0, c.Dw)(e.joinedAt),
-            { hasUnusualDmActivity: a, hasUnusualAccountActivity: s, sourceInviteCode: o, joinSourceType: l, inviterId: f, integrationType: h } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
-            p = u.default.getUser(e.userId);
+            { hasUnusualDmActivity: a, hasUnusualAccountActivity: s, sourceInviteCode: o, joinSourceType: l, inviterId: f, integrationType: p } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
+            h = u.default.getUser(e.userId);
         return {
             hasUnusualDmActivity: a,
             hasUnusualAccountActivity: s,
             sourceInviteCode: o,
             joinSourceType: l,
             inviterId: f,
-            integrationType: h,
+            integrationType: p,
             ...e,
             isCurrentGuildMemberByTimestamp: i <= this.newMemberTimestamp,
             isIncludedInSearchResults: !1,
-            user: p,
+            user: h,
             sort: (0, _.b)(e, null !== (n = t.selectedSort) && void 0 !== n ? n : d.d$.ORDER_BY_UNSPECIFIED),
             joinedAtTimestamp: i,
             ...r
@@ -81,7 +81,7 @@ class v {
             joinSourceType: null != a ? a : null,
             inviterId: null != s ? s : null,
             integrationType: null != o ? o : null,
-            hasUnusualDmActivity: null != (r = t) && new Date(r).getTime() >= p - d.rL,
+            hasUnusualDmActivity: null != (r = t) && new Date(r).getTime() >= h - d.rL,
             hasUnusualAccountActivity: (0, l.He)(e)
         };
     }
@@ -118,6 +118,6 @@ class v {
         return this._membersMap.version;
     }
     constructor(e) {
-        h(this, 'guildId', void 0), h(this, '_membersMap', void 0), h(this, 'newMemberTimestamp', Date.now()), (this.guildId = e), (this._membersMap = E());
+        p(this, 'guildId', void 0), p(this, '_membersMap', void 0), p(this, 'newMemberTimestamp', Date.now()), (this.guildId = e), (this._membersMap = E());
     }
 }

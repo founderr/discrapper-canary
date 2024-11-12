@@ -47,8 +47,8 @@ n(
                     d,
                     f,
                     _,
-                    h = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
-                _ = 'The "'.concat(e, '" ').concat(h, ' ').concat(f, ' ').concat(r(t, 'type'));
+                    p = ((u = e), (c = '.'), 'number' != typeof d && (d = 0), d + 1 > u.length || -1 === u.indexOf(c, d)) ? 'argument' : 'property';
+                _ = 'The "'.concat(e, '" ').concat(p, ' ').concat(f, ' ').concat(r(t, 'type'));
             }
             return (_ += '. Received type '.concat(typeof n));
         },

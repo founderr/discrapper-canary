@@ -1,6 +1,6 @@
 n.d(t, {
     Ao: function () {
-        return S;
+        return b;
     },
     B3: function () {
         return j;
@@ -51,7 +51,7 @@ n.d(t, {
         return er;
     },
     dG: function () {
-        return p;
+        return h;
     },
     gn: function () {
         return R;
@@ -63,7 +63,7 @@ n.d(t, {
         return k;
     },
     kR: function () {
-        return h;
+        return p;
     },
     lE: function () {
         return W;
@@ -185,8 +185,8 @@ let _ = (e) => {
         var t;
         return null !== (t = null == e ? void 0 : e.ownerDocument) && void 0 !== t ? t : document;
     },
-    h = (e) => (e && 'window' in e && e.window === e ? e : _(e).defaultView || window);
-function p(...e) {
+    p = (e) => (e && 'window' in e && e.window === e ? e : _(e).defaultView || window);
+function h(...e) {
     let t = { ...e[0] };
     for (let n = 1; n < e.length; n++) {
         let r = e[n];
@@ -220,20 +220,20 @@ function I(e, t = {}) {
     for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (m.has(t) || (n && g.has(t)) || (r && E.has(t)) || (null == i ? void 0 : i.has(t)) || v.test(t)) && (a[t] = e[t]);
     return a;
 }
-function S(e) {
+function b(e) {
     if (
         (function () {
-            if (null == T) {
-                T = !1;
+            if (null == S) {
+                S = !1;
                 try {
                     document.createElement('div').focus({
                         get preventScroll() {
-                            return (T = !0), !0;
+                            return (S = !0), !0;
                         }
                     });
                 } catch (e) {}
             }
-            return T;
+            return S;
         })()
     )
         e.focus({ preventScroll: !0 });
@@ -263,8 +263,8 @@ function S(e) {
             })(t);
     }
 }
-let T = null;
-function b(e) {
+let S = null;
+function T(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
@@ -289,14 +289,14 @@ function O() {
 }
 function D() {
     return (
-        b(/AppleWebKit/i) &&
+        T(/AppleWebKit/i) &&
         !(function () {
-            return b(/Chrome/i);
+            return T(/Chrome/i);
         })()
     );
 }
 function L() {
-    return b(/Android/i);
+    return T(/Android/i);
 }
 let x = (0, r.createContext)({
     isNative: !0,
@@ -320,7 +320,7 @@ function M(e, t) {
 function P(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-    b(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
+    T(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (A() ? (a = !0) : (s = !0));
     let u =
         D() && A() && !C()
             ? new KeyboardEvent('keydown', {
@@ -338,7 +338,7 @@ function P(e, t, n = !0) {
                   bubbles: !0,
                   cancelable: !0
               });
-    (P.isOpening = n), S(e), e.dispatchEvent(u), (P.isOpening = !1);
+    (P.isOpening = n), b(e), e.dispatchEvent(u), (P.isOpening = !1);
 }
 P.isOpening = !1;
 function k(e) {

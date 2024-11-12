@@ -15,14 +15,14 @@ var i = n(442837),
 function d(e, t, d) {
     var f;
     let _ = (0, o.Cf)(e),
-        h = (0, i.e7)([l.default], () => l.default.getId()),
-        p = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
-        m = null !== (f = u.Z.getVideoStats(p)) && void 0 !== f ? f : {},
+        p = (0, i.e7)([l.default], () => l.default.getId()),
+        h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
+        m = null !== (f = u.Z.getVideoStats(h)) && void 0 !== f ? f : {},
         g = {
-            media_session_id: u.Z.getMediaSessionId(p),
-            rtc_connection_id: u.Z.getRtcConnectionId(p),
-            stream_region: u.Z.getRegion(p),
-            max_viewers: u.Z.getMaxViewers(p),
+            media_session_id: u.Z.getMediaSessionId(h),
+            rtc_connection_id: u.Z.getRtcConnectionId(h),
+            stream_region: u.Z.getRegion(h),
+            max_viewers: u.Z.getMaxViewers(h),
             ...m
         };
     return null == e
@@ -39,7 +39,7 @@ function d(e, t, d) {
                                   (0, r.jsx)(t, {
                                       stream: e,
                                       streamApplication: _,
-                                      isStreamer: h === (null == e ? void 0 : e.ownerId),
+                                      isStreamer: p === (null == e ? void 0 : e.ownerId),
                                       analyticsData: g,
                                       ...n
                                   });

@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     d7: function () {
-        return h;
+        return p;
     },
     p: function () {
         return f;
@@ -32,7 +32,7 @@ function d(e) {
 }
 function f(e) {
     let { children: t, isPreview: n = !1, source: f, questId: _ } = e,
-        [h, p] = i.useState(!1),
+        [p, h] = i.useState(!1),
         [m, g] = i.useState(new Set()),
         [E, v] = i.useState(!1),
         I = i.useRef(!1);
@@ -41,7 +41,7 @@ function f(e) {
         for (let t of m) !c(t) && e.add(t);
         e.size !== m.size && g(e);
     }, [m]);
-    let S = i.useCallback(
+    let b = i.useCallback(
             (e) => {
                 let { assetNode: t, nodeId: r, errorPrefix: i, errorMessage: a } = e;
                 !n &&
@@ -61,17 +61,17 @@ function f(e) {
                         ),
                         { tags: { source: f } }
                     ),
-                    p(!0));
+                    h(!0));
             },
             [n, f, _]
         ),
-        T = i.useCallback((e) => {
+        S = i.useCallback((e) => {
             g((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
         }, []),
-        b = i.useCallback(
+        T = i.useCallback(
             (e, t) => {
                 var n;
                 if ((v(!0), c(e))) return;
@@ -81,11 +81,11 @@ function f(e) {
                 });
                 let r = ((n = e), (0, a.k)(n, HTMLImageElement) ? 'load' : (0, a.k)(n, HTMLVideoElement) ? 'canplaythrough' : 'load');
                 e.addEventListener(r, function t() {
-                    T(e), e.removeEventListener(r, t);
+                    S(e), e.removeEventListener(r, t);
                 });
                 e.addEventListener('error', function n(r) {
-                    T(e),
-                        S({
+                    S(e),
+                        b({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: 'Error loading asset',
@@ -94,7 +94,7 @@ function f(e) {
                         e.removeEventListener('error', n);
                 });
             },
-            [S, T]
+            [b, S]
         ),
         y = i.useMemo(() => m.size > 0 || !E, [E, m]);
     i.useEffect(() => {
@@ -102,12 +102,12 @@ function f(e) {
     }, [y]);
     let A = i.useMemo(
         () => ({
-            registerAsset: b,
-            unregisterAsset: T,
-            hasError: h,
+            registerAsset: T,
+            unregisterAsset: S,
+            hasError: p,
             isLoading: y && !I.current
         }),
-        [b, T, h, y]
+        [T, S, p, y]
     );
     return (0, r.jsx)(u.Provider, {
         value: A,
@@ -131,7 +131,7 @@ function _(e) {
         n(s)
     );
 }
-function h() {
+function p() {
     let { hasError: e, isLoading: t } = i.useContext(u);
     return {
         hasError: e,

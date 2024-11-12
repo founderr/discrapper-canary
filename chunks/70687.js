@@ -26,9 +26,9 @@ r.inherits(f, c),
             f = this.h[3],
             _ = this.h[4];
         for (r = 0; r < n.length; r++) {
-            var h = ~~(r / 20),
-                p = l(s(i, 5), u(h, a, c, f), _, n[r], d[h]);
-            (_ = f), (f = c), (c = s(a, 30)), (a = i), (i = p);
+            var p = ~~(r / 20),
+                h = l(s(i, 5), u(p, a, c, f), _, n[r], d[p]);
+            (_ = f), (f = c), (c = s(a, 30)), (a = i), (i = h);
         }
         (this.h[0] = o(this.h[0], i)), (this.h[1] = o(this.h[1], a)), (this.h[2] = o(this.h[2], c)), (this.h[3] = o(this.h[3], f)), (this.h[4] = o(this.h[4], _));
     }),

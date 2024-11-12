@@ -17,19 +17,19 @@ var r = n(200651),
     d = n(418469),
     f = n(776031),
     _ = n(803647),
-    h = n(361291),
-    p = n(199902),
+    p = n(361291),
+    h = n(199902),
     m = n(131951),
     g = n(594174),
     E = n(5192),
     v = n(358085),
     I = n(521147),
-    S = n(981631),
-    T = n(65154),
-    b = n(388032);
+    b = n(981631),
+    S = n(65154),
+    T = n(388032);
 function y(e, t, n) {
     let r = (0, a.e7)([c.Z], () => c.Z.getSelectedParticipantId(e.id)),
-        i = (0, a.e7)([p.Z], () => (null != r ? p.Z.getActiveStreamForStreamKey(r) : null), [r]);
+        i = (0, a.e7)([h.Z], () => (null != r ? h.Z.getActiveStreamForStreamKey(r) : null), [r]);
     return (0, a.Wu)(
         [g.default],
         () => {
@@ -46,15 +46,15 @@ function y(e, t, n) {
 }
 function A(e) {
     var t, n, c;
-    let { channel: p, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = S.IlC.APP, disableChangeWindows: L = !1 } = e,
+    let { channel: h, currentUser: g, activeStreams: E, hideSelfOptions: A = !1, showReportOption: N = !1, handleGoLive: C, onClose: R, onSelect: O, appContext: D = b.IlC.APP, disableChangeWindows: L = !1 } = e,
         x = (0, a.e7)([m.Z], () => m.Z.getGoLiveSource()),
-        w = (0, a.e7)([h.Z], () => h.Z.getState().soundshareEnabled),
-        M = m.Z.supports(T.AN.DESKTOP_CAPTURE_APPLICATIONS),
+        w = (0, a.e7)([p.Z], () => p.Z.getState().soundshareEnabled),
+        M = m.Z.supports(S.AN.DESKTOP_CAPTURE_APPLICATIONS),
         P = null !== (c = E.find((e) => e.ownerId === (null == g ? void 0 : g.id))) && void 0 !== c ? c : null,
-        k = y(p, g, E),
+        k = y(h, g, E),
         U = (0, f.Z)(P, D),
-        G = (0, d.Z)(P, D, S.VqG),
-        B = (0, a.e7)([m.Z], () => m.Z.supports(T.AN.SOUNDSHARE)),
+        G = (0, d.Z)(P, D, b.VqG),
+        B = (0, a.e7)([m.Z], () => m.Z.supports(S.AN.SOUNDSHARE)),
         Z = (0, a.e7)([m.Z], () => m.Z.supportsScreenSoundshare()),
         F = (null == x ? void 0 : x.desktopSource) != null,
         V = null == x ? void 0 : null === (n = x.desktopSource) || void 0 === n ? void 0 : null === (t = n.id) || void 0 === t ? void 0 : t.startsWith('screen'),
@@ -69,19 +69,19 @@ function A(e) {
             var e, t, n;
             (null === (n = m.Z.getGoLiveSource()) || void 0 === n ? void 0 : null === (t = n.desktopSource) || void 0 === t ? void 0 : null === (e = t.id) || void 0 === e ? void 0 : e.startsWith('prepicked:'))
                 ? m.Z.getMediaEngine().eachConnection((e) => {
-                      e.context === T.Yn.STREAM && e.presentDesktopSourcePicker();
+                      e.context === S.Yn.STREAM && e.presentDesktopSourcePicker();
                   })
                 : C();
         }, [C]),
         Y = i.useCallback(() => {
-            let { preset: e, resolution: t, fps: n } = h.Z.getState(),
+            let { preset: e, resolution: t, fps: n } = p.Z.getState(),
                 r = {
                     qualityOptions: {
                         preset: e,
                         resolution: t,
                         frameRate: n
                     },
-                    context: T.Yn.STREAM
+                    context: S.Yn.STREAM
                 };
             if ((null == x ? void 0 : x.desktopSource) != null) {
                 var i;
@@ -102,7 +102,7 @@ function A(e) {
             null == P
                 ? (0, r.jsx)(s.MenuItem, {
                       id: 'share-your-screen',
-                      label: b.intl.string(b.t.fjBNo6),
+                      label: T.intl.string(T.t.fjBNo6),
                       icon: s.ScreenArrowIcon,
                       action: C
                   })
@@ -111,7 +111,7 @@ function A(e) {
                           v.isPlatformEmbedded
                               ? (0, r.jsx)(s.MenuItem, {
                                     id: 'stream-settings',
-                                    label: b.intl.string(b.t.ytAD9f),
+                                    label: T.intl.string(T.t.ytAD9f),
                                     children: U
                                 })
                               : null,
@@ -119,7 +119,7 @@ function A(e) {
                           j
                               ? (0, r.jsx)(s.MenuCheckboxItem, {
                                     id: 'stream-settings-audio-enable',
-                                    label: b.intl.string(b.t.ZJEHt7),
+                                    label: T.intl.string(T.t.ZJEHt7),
                                     checked: w,
                                     action: Y
                                 })
@@ -127,26 +127,26 @@ function A(e) {
                           M && !L
                               ? (0, r.jsx)(s.MenuItem, {
                                     id: 'change-windows',
-                                    label: b.intl.string(b.t.qntSam),
+                                    label: T.intl.string(T.t.qntSam),
                                     icon: s.ScreenArrowIcon,
                                     action: H
                                 })
                               : null,
                           (0, r.jsx)(s.MenuItem, {
                               id: 'stop-streaming',
-                              label: b.intl.string(b.t.S5anIS),
+                              label: T.intl.string(T.t.S5anIS),
                               icon: s.ScreenXIcon,
                               action: () => (0, _.Z)(P)
                           })
                       ]
                   });
     return (0, r.jsx)(u.Z, {
-        section: S.jXE.CONTEXT_MENU,
+        section: b.jXE.CONTEXT_MENU,
         children: (0, r.jsxs)(s.Menu, {
             onSelect: O,
             navId: 'manage-streams',
             onClose: R,
-            'aria-label': null != P ? b.intl.string(b.t.S5anIS) : b.intl.string(b.t.fjBNo6),
+            'aria-label': null != P ? T.intl.string(T.t.S5anIS) : T.intl.string(T.t.fjBNo6),
             children: [
                 (0, r.jsx)(s.MenuGroup, {
                     children: k.map((e) => {
@@ -155,7 +155,7 @@ function A(e) {
                             s.MenuItem,
                             {
                                 id: t.ownerId,
-                                label: b.intl.formatToPlainString(b.t['7rkg+/'], { username: n }),
+                                label: T.intl.formatToPlainString(T.t['7rkg+/'], { username: n }),
                                 icon: s.ScreenXIcon,
                                 action: () => (0, _.Z)(t)
                             },

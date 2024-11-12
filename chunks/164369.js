@@ -21,15 +21,15 @@ function _(e) {
     if (isNaN(n.getTime())) throw RangeError('End Date is invalid');
     var _ = {};
     _.years = Math.abs((0, c.Z)(n, t));
-    var h = (0, r.Z)(n, t),
-        p = (0, i.Z)(t, { years: h * _.years });
-    _.months = Math.abs((0, l.Z)(n, p));
-    var m = (0, i.Z)(p, { months: h * _.months });
+    var p = (0, r.Z)(n, t),
+        h = (0, i.Z)(t, { years: p * _.years });
+    _.months = Math.abs((0, l.Z)(n, h));
+    var m = (0, i.Z)(h, { months: p * _.months });
     _.days = Math.abs((0, a.Z)(n, m));
-    var g = (0, i.Z)(m, { days: h * _.days });
+    var g = (0, i.Z)(m, { days: p * _.days });
     _.hours = Math.abs((0, s.Z)(n, g));
-    var E = (0, i.Z)(g, { hours: h * _.hours });
+    var E = (0, i.Z)(g, { hours: p * _.hours });
     _.minutes = Math.abs((0, o.Z)(n, E));
-    var v = (0, i.Z)(E, { minutes: h * _.minutes });
+    var v = (0, i.Z)(E, { minutes: p * _.minutes });
     return (_.seconds = Math.abs((0, u.Z)(n, v))), _;
 }

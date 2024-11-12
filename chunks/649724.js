@@ -1,9 +1,9 @@
 n.d(t, {
     k: function () {
-        return p;
+        return h;
     },
     u: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -30,12 +30,12 @@ function _(e, t, n) {
         e
     );
 }
-let h = {
+let p = {
     DEFAULT: 'default',
     SUCCESS: 'success',
     ERROR: 'error'
 };
-class p extends (r = a.PureComponent) {
+class h extends (r = a.PureComponent) {
     select() {
         var e;
         null === (e = this.inputRef.current) || void 0 === e || e.select();
@@ -59,10 +59,10 @@ class p extends (r = a.PureComponent) {
         let { text: t = d.intl.string(d.t.OpuAlJ), mode: n, hideMessage: r, className: a, buttonLook: s } = this.props,
             _ = null != r;
         switch (n) {
-            case h.SUCCESS:
+            case p.SUCCESS:
                 e = l.ButtonColors.GREEN;
                 break;
-            case h.ERROR:
+            case p.ERROR:
                 e = l.ButtonColors.RED;
                 break;
             default:
@@ -121,13 +121,13 @@ class p extends (r = a.PureComponent) {
             });
     }
 }
-_(p, 'contextType', l.FormContext),
-    _(p, 'defaultProps', {
+_(h, 'contextType', l.FormContext),
+    _(h, 'defaultProps', {
         supportsCopy: !0,
         buttonColor: l.ButtonColors.PRIMARY,
         buttonLook: l.ButtonLooks.FILLED,
-        mode: h.DEFAULT
+        mode: p.DEFAULT
     }),
-    _(p, 'Modes', h),
-    _(p, 'ButtonColors', l.ButtonColors),
-    _(p, 'ButtonLooks', l.ButtonLooks);
+    _(h, 'Modes', p),
+    _(h, 'ButtonColors', l.ButtonColors),
+    _(h, 'ButtonLooks', l.ButtonLooks);

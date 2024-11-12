@@ -1,6 +1,6 @@
 n.d(t, {
     Gg: function () {
-        return S;
+        return b;
     },
     KH: function () {
         return E;
@@ -22,12 +22,12 @@ var r = n(512722),
     d = n(436660),
     f = n(887490);
 let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    h = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
-    p = new Set(['line', 'blockQuote']),
+    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
+    h = new Set(['line', 'blockQuote']),
     m = new Set(['applicationCommandOption']);
 function g(e, t, n) {
     let { isInline: r, isVoid: i, onChange: a } = e;
-    (e.isVoid = (e) => !!h.has(e.type) || i(e)), (e.isInline = (e) => !!h.has(e.type) || r(e));
+    (e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e));
     let s = null,
         o = !0;
     return (
@@ -47,7 +47,7 @@ function g(e, t, n) {
 function E(e, t, n) {
     let r = f.bN.areStylesDisabled(e);
     for (let i of f.bN.blocks(e))
-        if (p.has(i[0].type)) r ? I(e, i, !0, null) : v(e, i, t, n);
+        if (h.has(i[0].type)) r ? I(e, i, !0, null) : v(e, i, t, n);
         else {
             let [a, s] = i;
             for (let i = a.children.length - 1; i >= 0; i--) {
@@ -65,41 +65,41 @@ function v(e, t, n, r) {
         l = f.q.markdown(t[0], n);
     I(e, t, s, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
         !s &&
-            (S(e, t, r, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
+            (b(e, t, r, l) && ((t = f.q.updateElement(e, t)), (l = f.q.markdown(t[0], n))),
             (function (e, t, n, r, a) {
                 let [s, l] = t,
                     u = !1;
                 for (let c = s.children.length - 1; c >= 0; c--) {
-                    let h;
-                    let p = s.children[c];
-                    if (!f.LC.isText(p)) continue;
+                    let p;
+                    let h = s.children[c];
+                    if (!f.LC.isText(h)) continue;
                     let m = f.C0.child(l, c),
                         g = [];
-                    for (_.lastIndex = 0; null != (h = _.exec(p.text)); ) {
-                        if (0 !== h.index && null == p.text.charAt(h.index - 1).match(/(\t|\s)/)) {
-                            _.lastIndex = h.index + 1;
+                    for (_.lastIndex = 0; null != (p = _.exec(h.text)); ) {
+                        if (0 !== p.index && null == h.text.charAt(p.index - 1).match(/(\t|\s)/)) {
+                            _.lastIndex = p.index + 1;
                             continue;
                         }
                         if (
-                            T(
+                            S(
                                 e,
                                 l,
                                 {
                                     path: m,
-                                    offset: h.index
+                                    offset: p.index
                                 },
                                 a
                             )
                         )
                             continue;
-                        let i = (0, o.i)(h[0], n, r);
-                        null != i && b(r, t[0], i)
+                        let i = (0, o.i)(p[0], n, r);
+                        null != i && T(r, t[0], i)
                             ? g.push({
-                                  index: h.index,
-                                  length: h[0].length,
+                                  index: p.index,
+                                  length: p[0].length,
                                   node: i
                               })
-                            : (_.lastIndex = h.index + 1);
+                            : (_.lastIndex = p.index + 1);
                     }
                     for (let t of g.reverse())
                         (function (e, t, n, r, a) {
@@ -118,7 +118,7 @@ function v(e, t, n, r) {
                                     anchor: l,
                                     focus: u
                                 });
-                        })(e, [p, f.C0.child(l, c)], t.index, t.length, t.node),
+                        })(e, [h, f.C0.child(l, c)], t.index, t.length, t.node),
                             (u = !0);
                 }
             })(e, t, n, r, l));
@@ -160,7 +160,7 @@ function I(e, t, n, r) {
                     path: f.C0.child(i, 0),
                     offset: 0
                 };
-            (n || (null != r && T(e, a, l, r))) &&
+            (n || (null != r && S(e, a, l, r))) &&
                 (d.Q.voidToText(
                     e,
                     (0, c.sg)(o, {
@@ -174,7 +174,7 @@ function I(e, t, n, r) {
     }
     return s;
 }
-function S(e, t, n, r) {
+function b(e, t, n, r) {
     let i = t[1],
         a = !1,
         s = [...r.entries].reverse();
@@ -262,18 +262,18 @@ function S(e, t, n, r) {
             default:
                 continue;
         }
-        if (!b(n, t[0], l)) continue;
+        if (!T(n, t[0], l)) continue;
         let _ = (0, u.t)(e, i, r.serializedChildren, c.start),
-            h = (0, u.t)(e, i, r.serializedChildren, c.start + c.text.length);
+            p = (0, u.t)(e, i, r.serializedChildren, c.start + c.text.length);
         d.Q.textToVoid(e, l, {
             anchor: _,
-            focus: h
+            focus: p
         }),
             (a = !0);
     }
     return a;
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     let i = 0;
     for (let [r, a] of f.bN.nodes(e, {
         at: {
@@ -291,7 +291,7 @@ function T(e, t, n, r) {
     }
     return !1;
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if ('applicationCommandOption' !== t.type) return !0;
     switch (t.optionType) {
         case a.jw.CHANNEL:

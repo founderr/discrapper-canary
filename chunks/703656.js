@@ -1,13 +1,13 @@
 let r, i, a;
 n.d(t, {
     At: function () {
-        return T;
+        return S;
     },
     DB: function () {
         return N;
     },
     DR: function () {
-        return b;
+        return T;
     },
     Wf: function () {
         return A;
@@ -28,7 +28,7 @@ n.d(t, {
         return C;
     },
     s1: function () {
-        return S;
+        return b;
     },
     uL: function () {
         return g;
@@ -48,10 +48,10 @@ let d = new o.Z('Routing/Utils'),
     f = [c.E07.DEVELOPER_PORTAL];
 r = __OVERLAY__ ? (0, s.PP)() : (0, s.lX)();
 let _ = !1,
-    h = r.listen((e, t) => {
-        'REPLACE' !== t && ((_ = !0), h());
+    p = r.listen((e, t) => {
+        'REPLACE' !== t && ((_ = !0), p());
     });
-function p() {
+function h() {
     return !l.S.hasSubscribers(c.CkL.MODAL_CLOSE) && (n(574254).Z.close(), !0);
 }
 function m(e, t) {
@@ -91,13 +91,13 @@ function v() {
 function I(e, t, n) {
     !m(e, 'replace') && (d.log('Replacing route with '.concat(e)), 'string' == typeof e ? r.replace(e, t) : r.replace(e), (i = n));
 }
-function S() {
+function b() {
     return r;
 }
-function T() {
+function S() {
     return i;
 }
-function b() {
+function T() {
     return a;
 }
 function y(e) {
@@ -132,8 +132,8 @@ function N() {
     return _;
 }
 function C() {
-    p() && ((i = null), r.goBack());
+    h() && ((i = null), r.goBack());
 }
 function R() {
-    p() && ((i = null), r.goForward());
+    h() && ((i = null), r.goForward());
 }

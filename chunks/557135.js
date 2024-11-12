@@ -11,21 +11,21 @@ var i = n(481060),
     d = n(346479),
     f = n(314897),
     _ = n(944486),
-    h = n(979651),
-    p = n(626135),
+    p = n(979651),
+    h = n(626135),
     m = n(366297),
     g = n(981631),
     E = n(110223);
 t.Z = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: v, needSubscriptionToAccess: I, locked: S = !1, routeDirectlyToChannel: T = !1, bypassChangeModal: b, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
+        let { channel: t, connected: v, needSubscriptionToAccess: I, locked: b = !1, routeDirectlyToChannel: S = !1, bypassChangeModal: T, bypassBlockedWarningModal: y, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), !c.Z.hasJoined(t.id) && (await d.Z.joinThread(t, 'Join Voice')));
         let N = s.Z.getRemoteSessionId(),
-            C = h.Z.getVoiceStateForSession(f.default.getId(), N),
-            R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === h.Z.getCurrentClientVoiceChannelId(t.guild_id),
+            C = p.Z.getVoiceStateForSession(f.default.getId(), N),
+            R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             O = u.Z.getBlockedUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (y = !0), y || S || v || !(O.size > 0))
-            ? !b && !S && (0, m._)(t)
+        return ((0, l.B)(t.id) && (y = !0), y || b || v || !(O.size > 0))
+            ? !T && !b && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.openModalLazy)(async () => {
                           let { default: i } = await n.e('65045').then(n.bind(n, 143782));
@@ -38,8 +38,8 @@ t.Z = {
                                               channel: t,
                                               connected: v,
                                               needSubscriptionToAccess: I,
-                                              routeDirectlyToChannel: T,
-                                              locked: S,
+                                              routeDirectlyToChannel: S,
+                                              locked: b,
                                               bypassChangeModal: !0
                                           })
                                       ),
@@ -47,9 +47,9 @@ t.Z = {
                               });
                       });
                   })
-                : (!S && !v && a.default.selectVoiceChannel(t.id),
+                : (!b && !v && a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (v || R || I || T) &&
+                      (v || R || I || S) &&
                       !(function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = e.getGuildId();
@@ -74,8 +74,8 @@ t.Z = {
                                               channel: t,
                                               connected: v,
                                               needSubscriptionToAccess: I,
-                                              routeDirectlyToChannel: T,
-                                              locked: S,
+                                              routeDirectlyToChannel: S,
+                                              locked: b,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0
                                           })
@@ -85,7 +85,7 @@ t.Z = {
                       },
                       {
                           onCloseCallback: () => {
-                              p.default.track(g.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                              h.default.track(g.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                   action: E.q.DISMISS,
                                   channel_id: t.id,
                                   blocked_user_ids: Array.from(O),

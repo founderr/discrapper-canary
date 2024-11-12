@@ -34,11 +34,11 @@ class _ extends (r = a.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: f, minValue: _, maxValue: h, value: p, onVolumeShow: m, onVolumeHide: g } = this.props,
+        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: s, muted: f, minValue: _, maxValue: p, value: h, onVolumeShow: m, onVolumeHide: g } = this.props,
             { hovered: E, focused: v, dragging: I } = this.state,
-            S = l.VoiceNormalIcon;
+            b = l.VoiceNormalIcon;
         return (
-            f || p === _ ? (S = l.VoiceXIcon) : p < h / 2 && (S = l.VoiceLowIcon),
+            f || h === _ ? (b = l.VoiceXIcon) : h < p / 2 && (b = l.VoiceLowIcon),
             (0, i.jsxs)('div', {
                 className: o()(n, d.container),
                 onMouseEnter: () => {
@@ -65,7 +65,7 @@ class _ extends (r = a.PureComponent) {
                         children: (0, i.jsx)(u.Z, {
                             sliderClassName: a,
                             type: u.Z.Types.VOLUME,
-                            value: p / h,
+                            value: h / p,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
@@ -79,7 +79,7 @@ class _ extends (r = a.PureComponent) {
                         size: l.Button.Sizes.NONE,
                         look: l.Button.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(S, {
+                        children: (0, i.jsx)(b, {
                             color: t,
                             className: e
                         })

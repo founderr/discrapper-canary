@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     ZP: function () {
-        return p;
+        return h;
     },
     vM: function () {
         return _;
@@ -28,9 +28,9 @@ let f = (0, s.Ue)(() => ({
 }));
 async function _(e) {
     var t;
-    if (((t = e), null == f.getState().palette[t])) await h(e);
+    if (((t = e), null == f.getState().palette[t])) await p(e);
 }
-async function h(e) {
+async function p(e) {
     if (!f.getState().fetching[e]) {
         (0, o.j)(() =>
             f.setState((t) => ({
@@ -67,7 +67,7 @@ async function h(e) {
         }
     }
 }
-function p(e, t) {
+function h(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         [r] = m(e, t, n);
     return r;
@@ -77,7 +77,7 @@ function m(e, t) {
         i = f((t) => (null == e ? void 0 : t.palette[e])),
         s = (0, l.e7)([u.Z], () => (n && u.Z.desaturateUserColors ? u.Z.saturation : 1));
     r.useEffect(() => {
-        if (null != e && null == i) h(e);
+        if (null != e && null == i) p(e);
     }, [e, i]);
     let o = r.useMemo(
         () =>

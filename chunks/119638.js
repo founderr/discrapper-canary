@@ -14,7 +14,7 @@ var r,
     d = n(326452),
     f = n(874967),
     _ = n(48465);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-class p extends (r = s.PureComponent) {
+class h extends (r = s.PureComponent) {
     render() {
         let { className: e, ...t } = this.props;
         return (0, a.jsx)(d.E, {
@@ -36,7 +36,7 @@ class p extends (r = s.PureComponent) {
         });
     }
 }
-h(p, 'defaultProps', { autoFocus: !0 });
+p(h, 'defaultProps', { autoFocus: !0 });
 class m extends (i = s.PureComponent) {
     render() {
         let { className: e, children: t } = this.props;
@@ -47,10 +47,10 @@ class m extends (i = s.PureComponent) {
         });
     }
 }
-h(m, 'SearchBar', p),
-    h(m, 'Item', f.Z),
-    h(m, 'Divider', () => (0, a.jsx)(c.$, { className: _.divider })),
-    h(m, 'Empty', (e) => {
+p(m, 'SearchBar', h),
+    p(m, 'Item', f.Z),
+    p(m, 'Divider', () => (0, a.jsx)(c.$, { className: _.divider })),
+    p(m, 'Empty', (e) => {
         let { children: t } = e;
         return (0, a.jsx)('div', {
             className: _.popoutListEmpty,

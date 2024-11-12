@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(706454),
     f = n(314897),
     _ = n(158776),
-    h = n(594174),
-    p = n(5192),
+    p = n(594174),
+    h = n(5192),
     m = n(358085),
     g = n(998502),
     E = n(528567),
     v = n(371583),
     I = n(246627),
-    S = n(249268),
-    T = n(864138),
-    b = n(473188),
+    b = n(249268),
+    S = n(864138),
+    T = n(473188),
     y = n(169080),
     A = n(463031),
     N = n(388032),
@@ -55,17 +55,17 @@ function R(e) {
                 };
             });
         }, [t, u]),
-        h = (0, v.K)(t),
-        { primaryColor: p } = (0, c.Z)(h),
+        p = (0, v.K)(t),
+        { primaryColor: h } = (0, c.Z)(p),
         m = i.useMemo(() => null == _.find((e) => e.userId === a) && _.length <= 10, [_, a]);
     if (0 === t.users.length) return (0, r.jsx)(O, { leaderboard: t });
-    let { sort_by_statistic_id: g, sort_desc: T } = t.guild_settings,
-        b = t.settings.statistics[g];
+    let { sort_by_statistic_id: g, sort_desc: S } = t.guild_settings,
+        T = t.settings.statistics[g];
     return (0, r.jsxs)('div', {
         className: C.container,
-        style: { background: p },
+        style: { background: h },
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(b.Z, {
                 userId: _[0].userId,
                 leaderboard: t
             }),
@@ -92,8 +92,8 @@ function R(e) {
                                           className: C.headerValue,
                                           children: (0, E.s)({
                                               statisticId: g,
-                                              sortDesc: T,
-                                              aggregationType: null == b ? void 0 : b.aggregation_type
+                                              sortDesc: S,
+                                              aggregationType: null == T ? void 0 : T.aggregation_type
                                           })
                                       })
                                   ]
@@ -122,7 +122,7 @@ function R(e) {
 function O(e) {
     let { leaderboard: t } = e,
         n = (0, v.K)(t);
-    return (0, r.jsx)(T.z, {
+    return (0, r.jsx)(S.z, {
         imageUrl: n,
         children: (0, r.jsxs)('span', {
             className: C.emptyTitleContainer,
@@ -145,10 +145,10 @@ function O(e) {
 }
 function D(e) {
     let { userId: t, rank: n, value: a, guildId: s, previousRank: c, locale: d, leaderboard: f } = e,
-        E = (0, o.e7)([h.default], () => h.default.getUser(t)),
-        v = p.ZP.getName(s, void 0, E),
+        E = (0, o.e7)([p.default], () => p.default.getUser(t)),
+        v = h.ZP.getName(s, void 0, E),
         I = null != c && c > n,
-        [S, T] = i.useState(!1),
+        [b, S] = i.useState(!1),
         R = (0, o.e7)([_.Z], () => {
             let e = _.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
@@ -165,7 +165,7 @@ function D(e) {
         }),
         L = async () => {
             let e = await D();
-            await g.ZP.copyImage(e), T(!0);
+            await g.ZP.copyImage(e), S(!0);
         };
     return (0, r.jsxs)('div', {
         className: C.userRow,
@@ -175,7 +175,7 @@ function D(e) {
                 className: C.userRank,
                 children:
                     n <= 3
-                        ? (0, r.jsx)(b._, { rank: n })
+                        ? (0, r.jsx)(T._, { rank: n })
                         : (0, r.jsx)(l.Text, {
                               tabularNumbers: !0,
                               color: 'text-muted',
@@ -229,9 +229,9 @@ function D(e) {
                         }),
                     m.isPlatformEmbedded &&
                         (0, r.jsx)(l.Tooltip, {
-                            text: S ? N.intl.string(N.t.ZO0ku7) : N.intl.string(N.t.mikfoa),
+                            text: b ? N.intl.string(N.t.ZO0ku7) : N.intl.string(N.t.mikfoa),
                             shouldShow: !O,
-                            onTooltipHide: () => T(!1),
+                            onTooltipHide: () => S(!1),
                             children: (e) =>
                                 (0, r.jsx)(l.Clickable, {
                                     ...e,

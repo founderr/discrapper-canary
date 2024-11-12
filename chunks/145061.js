@@ -23,7 +23,7 @@ var r = n(192379),
             d = e.pointer,
             f = e.styles,
             _ = e.className,
-            h = (0, s.default)(
+            p = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: {
@@ -41,12 +41,12 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: h.picker,
+                style: p.picker,
                 className: 'hue-picker ' + (void 0 === _ ? '' : _)
             },
             r.createElement(
                 l.PS,
-                c({}, h.hue, {
+                c({}, p.hue, {
                     hsl: a,
                     pointer: d,
                     onChange: function (e) {

@@ -14,18 +14,18 @@ var r = n(200651),
     d = n(386542),
     f = n(933843),
     _ = n(746599),
-    h = n(361291),
-    p = n(592125),
+    p = n(361291),
+    h = n(592125),
     m = n(430824),
     g = n(131951),
     E = n(944486),
     v = n(594174),
     I = n(981631),
-    S = n(37113),
-    T = n(65154),
-    b = n(388032);
+    b = n(37113),
+    S = n(65154),
+    T = n(388032);
 function y(e, t) {
-    let { preset: y, resolution: A, fps: N } = (0, s.cj)([h.Z], () => h.Z.getState()),
+    let { preset: y, resolution: A, fps: N } = (0, s.cj)([p.Z], () => p.Z.getState()),
         C = (0, s.e7)([g.Z], () => g.Z.getGoLiveSource()),
         R = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         O = (0, s.e7)([m.Z], () => {
@@ -34,18 +34,18 @@ function y(e, t) {
         }),
         { location: D } = (0, u.O)(),
         { available: L, activated: x } = (0, d.k)(a.q.STREAM_HIGH_QUALITY),
-        w = (0, s.e7)([E.Z, p.Z], () => p.Z.getChannel(E.Z.getVoiceChannelId())),
+        w = (0, s.e7)([E.Z, h.Z], () => h.Z.getChannel(E.Z.getVoiceChannelId())),
         M = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
                     if (null != C) {
                         let e = {
                             qualityOptions: {
-                                preset: S.tI.PRESET_CUSTOM,
+                                preset: b.tI.PRESET_CUSTOM,
                                 resolution: i,
                                 frameRate: a
                             },
-                            context: T.Yn.STREAM
+                            context: S.Yn.STREAM
                         };
                         null != C.desktopSource
                             ? (e.desktopSettings = {
@@ -84,10 +84,10 @@ function y(e, t) {
             [t, D, C, L]
         );
     if (null == e) return null;
-    let P = y === S.tI.PRESET_DOCUMENTS ? S.ws.FPS_30 : N,
-        k = S.af.map((e) => {
+    let P = y === b.tI.PRESET_DOCUMENTS ? b.ws.FPS_30 : N,
+        k = b.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(S.tI.PRESET_CUSTOM, A, t, R, O, w);
+                i = (0, c.Z)(b.tI.PRESET_CUSTOM, A, t, R, O, w);
             return (0, r.jsx)(
                 o.MenuRadioItem,
                 {
@@ -100,9 +100,9 @@ function y(e, t) {
                 'stream-settings-fps-'.concat(t)
             );
         }),
-        U = S.km.map((e) => {
+        U = b.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(S.tI.PRESET_CUSTOM, t, P, R, O, w);
+                i = (0, c.Z)(b.tI.PRESET_CUSTOM, t, P, R, O, w);
             return (
                 L && !x && (i = !1),
                 (0, r.jsx)(
@@ -121,11 +121,11 @@ function y(e, t) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.MenuGroup, {
-                label: b.intl.string(b.t.SkkeIi),
+                label: T.intl.string(T.t.SkkeIi),
                 children: k
             }),
             (0, r.jsx)(o.MenuGroup, {
-                label: b.intl.string(b.t.rHyPXl),
+                label: T.intl.string(T.t.rHyPXl),
                 children: U
             })
         ]

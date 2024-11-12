@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     UP: function () {
-        return h;
+        return p;
     },
     Zx: function () {
         return d;
@@ -70,7 +70,7 @@ function _(e) {
             media_session_id: s.Z.getMediaSessionId()
         });
 }
-function h() {
+function p() {
     let e = [u.Z.getCustomHangStatus(), ...u.Z.getRecentCustomStatuses()].filter((e) => {
         var t;
         return null != e && null != e.emoji && (null === (t = e.emoji) || void 0 === t ? void 0 : t.id) != null && null == i.ZP.getCustomEmojiById(e.emoji.id);

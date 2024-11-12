@@ -21,8 +21,8 @@ var i,
     S = n(557177),
     T = n(57562),
     C = n(955204),
-    _ = n(64078),
-    E = n(351780),
+    E = n(64078),
+    _ = n(351780),
     f = n(954794),
     I = n(112843),
     N = n(524484),
@@ -387,7 +387,7 @@ let G = () =>
         });
 function Y(e) {
     let { onChangePage: t, setShowEnableAnimation: n } = e,
-        i = (0, d.cj)([E.Z], () => E.Z.getState()),
+        i = (0, d.cj)([_.Z], () => _.Z.getState()),
         [s, r] = o.useState({
             x: 0,
             y: 0
@@ -408,7 +408,7 @@ function Y(e) {
             }
         },
         h = (e, t) => {
-            if ((u(e), (0, _.AI)(e), null == t)) return;
+            if ((u(e), (0, E.AI)(e), null == t)) return;
             let n = c(i.confettiEnabled, e.confettiEnabled, i.enabled, e.enabled);
             0 === t && n && l.fire(s.x, s.y, { settings: e });
             let r = c(i.screenshakeEnabled, e.screenshakeEnabled, i.enabled, e.enabled);

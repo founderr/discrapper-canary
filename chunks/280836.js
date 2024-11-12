@@ -111,11 +111,11 @@ let a = (e) => (t) => {
                 if (e) throw e;
                 return t;
             },
-            h = i.setState;
+            p = i.setState;
         i.setState = (e, t) => {
-            h(e, t), _();
+            p(e, t), _();
         };
-        let p = e(
+        let h = e(
                 (...e) => {
                     n(...e), _();
                 },
@@ -140,7 +140,7 @@ let a = (e) => (t) => {
                     })
                     .then((e) => {
                         var t;
-                        return n((o = l.merge(e, null != (t = r()) ? t : p)), !0), _();
+                        return n((o = l.merge(e, null != (t = r()) ? t : h)), !0), _();
                     })
                     .then(() => {
                         null == t || t(o, void 0), (u = !0), d.forEach((e) => e(o));
@@ -178,7 +178,7 @@ let a = (e) => (t) => {
                 )
             }),
             m(),
-            o || p
+            o || h
         );
     },
     o = (e, t) => (n, r, s) => {
@@ -212,27 +212,27 @@ let a = (e) => (t) => {
                     version: l.version
                 });
             },
-            h = s.setState;
+            p = s.setState;
         s.setState = (e, t) => {
-            h(e, t), _();
+            p(e, t), _();
         };
-        let p = e(
+        let h = e(
             (...e) => {
                 n(...e), _();
             },
             r,
             s
         );
-        s.getInitialState = () => p;
+        s.getInitialState = () => h;
         let m = () => {
             var e, t;
             if (!f) return;
             (u = !1),
                 c.forEach((e) => {
                     var t;
-                    return e(null != (t = r()) ? t : p);
+                    return e(null != (t = r()) ? t : h);
                 });
-            let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : p)) || void 0;
+            let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
             return a(f.getItem.bind(f))(l.name)
                 .then((e) => {
                     if (e) {
@@ -243,7 +243,7 @@ let a = (e) => (t) => {
                 })
                 .then((e) => {
                     var t;
-                    return n((o = l.merge(e, null != (t = r()) ? t : p)), !0), _();
+                    return n((o = l.merge(e, null != (t = r()) ? t : h)), !0), _();
                 })
                 .then(() => {
                     null == i || i(o, void 0), (o = r()), (u = !0), d.forEach((e) => e(o));
@@ -281,7 +281,7 @@ let a = (e) => (t) => {
                 )
             }),
             !l.skipHydration && m(),
-            o || p
+            o || h
         );
     },
     l = (e, t) => ('getStorage' in t || 'serialize' in t || 'deserialize' in t ? (console.warn('[DEPRECATED] `getStorage`, `serialize` and `deserialize` options are deprecated. Use `storage` option instead.'), s(e, t)) : o(e, t));

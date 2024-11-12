@@ -74,16 +74,16 @@ var a,
 n(804098);
 var f = n(627420),
     _ = n(433517),
-    h = n(298444),
-    p = n(979675),
+    p = n(298444),
+    h = n(979675),
     m = n(947486),
     g = n(699407),
     E = n(20281),
     v = n(525769);
 let I = 'deviceProperties',
-    S = 'referralProperties',
+    b = 'referralProperties',
+    S = {},
     T = {},
-    b = {},
     y = window.DiscordNative;
 if (null != y) {
     let e;
@@ -194,7 +194,7 @@ function D() {
     );
 }
 function L(e) {
-    return null != T[e] && T[e] > Date.now();
+    return null != S[e] && S[e] > Date.now();
 }
 if (null == r)
     try {
@@ -229,15 +229,15 @@ if (null == r)
                     );
                 })()),
                 _.K.set(I, e)),
-            (t = _.K.get(S)),
-            null == t && ((t = D()), _.K.set(S, t)),
-            (n = h.x.get(S)),
+            (t = _.K.get(b)),
+            null == t && ((t = D()), _.K.set(b, t)),
+            (n = p.x.get(b)),
             null == n &&
                 ((n = (function (e, t) {
                     let n = {};
                     return Object.keys(e).map((r) => (n[''.concat(r).concat(t)] = e[r])), n;
                 })(D(), '_current')),
-                h.x.set(S, n)),
+                p.x.set(b, n)),
             (r = {
                 ...e,
                 ...(function () {
@@ -270,7 +270,7 @@ x(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '343539'), '343539'), 10);
+        let a = parseInt(((n = '343589'), '343589'), 10);
         !isNaN(a) && (r.client_build_number = a);
         let s = null == y ? void 0 : null === (e = (t = y.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (
@@ -287,7 +287,7 @@ x(
 );
 let w = (e) => {
     let { analyticEventConfigs: t, dispatcher: r, TRACK_ACTION_NAME: i } = e,
-        a = (0, p.$)(r, i);
+        a = (0, h.$)(r, i);
     return function (e, r) {
         let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();
@@ -299,11 +299,11 @@ let w = (e) => {
                 if (L(t)) return Promise.resolve();
                 if ('number' == typeof l.throttlePercent && Math.random() > l.throttlePercent) return Promise.resolve();
                 if (l.deduplicate) {
-                    let e = b[t];
+                    let e = T[t];
                     if (o()(e, s)) return Promise.resolve();
-                    b[t] = s;
+                    T[t] = s;
                 }
-                T[t] = Date.now() + l.throttlePeriod;
+                S[t] = Date.now() + l.throttlePeriod;
             } else if ('throttlePercent' in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
             } else u()(!1, 'Unsupported analytics event config: '.concat(l));

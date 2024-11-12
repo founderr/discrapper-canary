@@ -13,10 +13,10 @@ var r = n(200651),
 function u(e, t) {
     let n = (0, l.G6)(e);
     return i.forwardRef(function (a, u) {
-        let { children: c, className: d, dir: f = 'ltr', orientation: _ = 'vertical', paddingFix: h = !0, fade: p = !1, onScroll: m, style: g, ...E } = a,
+        let { children: c, className: d, dir: f = 'ltr', orientation: _ = 'vertical', paddingFix: p = !0, fade: h = !1, onScroll: m, style: g, ...E } = a,
             v = i.useRef(null),
             I = (0, l.tT)({
-                paddingFix: h,
+                paddingFix: p,
                 orientation: _,
                 dir: f,
                 className: d,
@@ -29,7 +29,7 @@ function u(e, t) {
             },
             className: s()(d, {
                 [e]: !0,
-                [t]: p
+                [t]: h
             }),
             style: (0, l.uT)(g, _),
             dir: f,

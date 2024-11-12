@@ -22,8 +22,8 @@ var i = n(243814),
     d = n(713938),
     f = n(981631),
     _ = n(388032),
-    h = n(883540);
-let p = (e) => {
+    p = n(883540);
+let h = (e) => {
     switch (e) {
         case o.ZC.IP_LOCATION:
             return s.GlobeEarthIcon;
@@ -36,9 +36,9 @@ let p = (e) => {
 function m(e) {
     var t;
     let n,
-        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: S } = e,
-        T = new Date(u.default.extractTimestamp(a.id)),
-        b = (0, d.W3)(m),
+        { application: a, scopes: m, redirectUri: E, approximateGuildCount: v, isEmbeddedFlow: I, disclosures: b } = e,
+        S = new Date(u.default.extractTimestamp(a.id)),
+        T = (0, d.W3)(m),
         y = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
     if (null != E && !y && !I)
         try {
@@ -48,7 +48,7 @@ function m(e) {
             n = null;
         }
     return (0, r.jsxs)('div', {
-        className: h.applicationDetails,
+        className: p.applicationDetails,
         children: [
             null != n
                 ? (0, r.jsx)(g, {
@@ -62,7 +62,7 @@ function m(e) {
             }),
             (0, r.jsx)(g, {
                 icon: s.ClockIcon,
-                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: T })
+                text: _.intl.formatToPlainString(_.t['+1bjc3'], { date: S })
             }),
             m.includes(i.x.BOT) && null != v
                 ? (0, r.jsx)(g, {
@@ -72,12 +72,12 @@ function m(e) {
                 : null,
             (0, r.jsx)(g, {
                 icon: s.ShieldIcon,
-                text: b
+                text: T
             }),
-            null != S
-                ? S.map((e) => {
+            null != b
+                ? b.map((e) => {
                       let t = (0, o.PM)(e),
-                          n = p(e);
+                          n = h(e);
                       return null != n && null != t
                           ? (0, r.jsx)(g, {
                                 icon: n,
@@ -92,15 +92,15 @@ function m(e) {
 function g(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: h.entry,
+        className: p.entry,
         children: [
             (0, r.jsx)(t, {
-                className: h.entryIcon,
+                className: p.entryIcon,
                 color: 'currentColor'
             }),
             (0, r.jsx)(a.x, {
                 variant: 'text-xs/normal',
-                className: h.entryInner,
+                className: p.entryInner,
                 children: n
             })
         ]

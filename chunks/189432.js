@@ -14,9 +14,9 @@ function u(e, t, n) {
     let f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: l.k.INFO };
     if (!(0, o.By)(e)) return Promise.resolve();
     let _ = null !== (u = f.modViewPanel) && void 0 !== u ? u : l.k.INFO,
-        h = null !== (c = f.sourceLocation) && void 0 !== c ? c : r.Z.MEMBER_SAFETY_PAGE;
+        p = null !== (c = f.sourceLocation) && void 0 !== c ? c : r.Z.MEMBER_SAFETY_PAGE;
     return (
-        (0, s.q)(e, t, _, h),
+        (0, s.q)(e, t, _, p),
         i.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,

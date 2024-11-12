@@ -21,16 +21,16 @@ var r = n(997945),
     d = n(448578),
     f = n(946185),
     _ = n(480423),
-    h = n(273593),
-    p = n(665801),
+    p = n(273593),
+    h = n(665801),
     m = n(818143),
     g = n(666475),
     E = n(591304),
     v = n(73375),
     I = n(328664),
-    S = n(328259),
-    T = n(19009),
-    b = n(234912),
+    b = n(328259),
+    S = n(19009),
+    T = n(234912),
     y = n(405571),
     A = n(730886),
     N = n(473974),
@@ -58,13 +58,13 @@ function O() {
         },
         {
             id: r.Ru.MATTE_DARK,
-            iconSource: S,
+            iconSource: b,
             isPremium: !0,
             name: i.intl.string(i.t.NkshQk)
         },
         {
             id: r.Ru.MATTE_LIGHT,
-            iconSource: T,
+            iconSource: S,
             name: i.intl.string(i.t.G2W309),
             isPremium: !0
         },
@@ -148,7 +148,7 @@ function O() {
         },
         {
             id: r.Ru.CONTROLLER,
-            iconSource: p,
+            iconSource: h,
             isPremium: !0,
             name: i.intl.string(i.t['4QM2U1'])
         },
@@ -166,13 +166,13 @@ function O() {
         },
         {
             id: r.Ru.MIDNIGHT_PRISM,
-            iconSource: b,
+            iconSource: T,
             isPremium: !0,
             name: i.intl.string(i.t.nshUZW)
         },
         {
             id: r.Ru.COLOR_WAVE,
-            iconSource: h,
+            iconSource: p,
             isPremium: !0,
             name: i.intl.string(i.t.MWRYqq)
         }

@@ -11,8 +11,8 @@ var u = n(960048),
     d = n(303850),
     f = n(981631);
 let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    h = new d.R(),
-    p = /\/api(\/v\d+)?\/science/;
+    p = new d.R(),
+    h = /\/api(\/v\d+)?\/science/;
 (0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
@@ -44,11 +44,11 @@ let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://
             let _ = a.getDebugOptionsHeaderValue();
             if ((null != _ && '' !== _ && e.set('X-Debug-Options', _), a.isTracingRequests)) {
                 let t = o.getCurrentUser(),
-                    n = h.generate(null !== (m = null == t ? void 0 : t.id) && void 0 !== m ? m : '0');
+                    n = p.generate(null !== (m = null == t ? void 0 : t.id) && void 0 !== m ? m : '0');
                 e.set('x-client-trace-id', n);
                 try {
                     let t = new URL(e.url).pathname;
-                    if (!p.test(t)) {
+                    if (!h.test(t)) {
                         let r = (function (e) {
                             let t = new URLSearchParams();
                             t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');

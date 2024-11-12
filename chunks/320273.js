@@ -10,16 +10,16 @@ var r = n(147018),
     d = n(90338),
     f = n(865312),
     _ = n(673743),
-    h = n(644659),
-    p = n(603528),
+    p = n(644659),
+    h = n(603528),
     m = n(354848),
     g = n(740362),
     E = n(566885),
     v = n(974971),
     I = n(24033),
-    S = n(622281),
-    T = n(714050),
-    b = n(803938),
+    b = n(622281),
+    S = n(714050),
+    T = n(803938),
     y = n(879),
     A = n(981971),
     N = n(11697),
@@ -29,9 +29,9 @@ var r = n(147018),
     D = R('iterator'),
     L = 'URLSearchParams',
     x = L + 'Iterator',
-    w = h.set,
-    M = h.getterFor(L),
-    P = h.getterFor(x),
+    w = p.set,
+    M = p.getterFor(L),
+    P = p.getterFor(x),
     k = Object.getOwnPropertyDescriptor,
     U = function (e) {
         if (!o) return i[e];
@@ -111,7 +111,7 @@ var r = n(147018),
         !0
     ),
     ec = function (e) {
-        (this.entries = []), (this.url = null), void 0 !== e && (S(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : T(e)));
+        (this.entries = []), (this.url = null), void 0 !== e && (b(e) ? this.parseObject(e) : this.parseQuery('string' == typeof e ? ('?' === K(e, 0) ? ee(e, 1) : e) : S(e)));
     };
 ec.prototype = {
     type: L,
@@ -131,8 +131,8 @@ ec.prototype = {
             for (n = (t = A(e, u)).next; !(r = a(n, t)).done; ) {
                 if ((o = a((s = (i = A(I(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw H('Expected sequence with length 2');
                 q(this.entries, {
-                    key: T(o.value),
-                    value: T(l.value)
+                    key: S(o.value),
+                    value: S(l.value)
                 });
             }
         else
@@ -140,7 +140,7 @@ ec.prototype = {
                 g(e, c) &&
                     q(this.entries, {
                         key: c,
-                        value: T(e[c])
+                        value: S(e[c])
                     });
     },
     parseQuery: function (e) {
@@ -166,7 +166,7 @@ ec.prototype = {
     }
 };
 var ed = function () {
-        p(this, ef);
+        h(this, ef);
         var e = arguments.length > 0 ? arguments[0] : void 0,
             t = w(this, new ec(e));
         !o && (this.size = t.entries.length);
@@ -180,14 +180,14 @@ if (
                 var n = M(this);
                 C(arguments.length, 2),
                     q(n.entries, {
-                        key: T(e),
-                        value: T(t)
+                        key: S(e),
+                        value: S(t)
                     }),
                     !o && this.length++,
                     n.updateURL();
             },
             delete: function (e) {
-                for (var t = M(this), n = C(arguments.length, 1), r = t.entries, i = T(e), a = n < 2 ? void 0 : arguments[1], s = void 0 === a ? a : T(a), l = 0; l < r.length; ) {
+                for (var t = M(this), n = C(arguments.length, 1), r = t.entries, i = S(e), a = n < 2 ? void 0 : arguments[1], s = void 0 === a ? a : S(a), l = 0; l < r.length; ) {
                     var u = r[l];
                     if (u.key === i && (void 0 === s || u.value === s)) {
                         if ((J(r, l, 1), void 0 !== s)) break;
@@ -198,17 +198,17 @@ if (
             get: function (e) {
                 var t = M(this).entries;
                 C(arguments.length, 1);
-                for (var n = T(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
+                for (var n = S(e), r = 0; r < t.length; r++) if (t[r].key === n) return t[r].value;
                 return null;
             },
             getAll: function (e) {
                 var t = M(this).entries;
                 C(arguments.length, 1);
-                for (var n = T(e), r = [], i = 0; i < t.length; i++) t[i].key === n && q(r, t[i].value);
+                for (var n = S(e), r = [], i = 0; i < t.length; i++) t[i].key === n && q(r, t[i].value);
                 return r;
             },
             has: function (e) {
-                for (var t = M(this).entries, n = C(arguments.length, 1), r = T(e), i = n < 2 ? void 0 : arguments[1], a = void 0 === i ? i : T(i), s = 0; s < t.length; ) {
+                for (var t = M(this).entries, n = C(arguments.length, 1), r = S(e), i = n < 2 ? void 0 : arguments[1], a = void 0 === i ? i : S(i), s = 0; s < t.length; ) {
                     var o = t[s++];
                     if (o.key === r && (void 0 === a || o.value === a)) return !0;
                 }
@@ -218,7 +218,7 @@ if (
                 var n,
                     r = M(this);
                 C(arguments.length, 1);
-                for (var i = r.entries, a = !1, s = T(e), l = T(t), u = 0; u < i.length; u++) (n = i[u]).key === s && (a ? J(i, u--, 1) : ((a = !0), (n.value = l)));
+                for (var i = r.entries, a = !1, s = S(e), l = S(t), u = 0; u < i.length; u++) (n = i[u]).key === s && (a ? J(i, u--, 1) : ((a = !0), (n.value = l)));
                 !a &&
                     q(i, {
                         key: s,
@@ -278,16 +278,16 @@ if (
     !l && m(Z))
 ) {
     var e_ = s(V.has),
-        eh = s(V.set),
-        ep = function (e) {
-            if (S(e)) {
+        ep = s(V.set),
+        eh = function (e) {
+            if (b(e)) {
                 var t,
                     n = e.body;
                 if (v(n) === L)
                     return (
-                        !e_((t = e.headers ? new Z(e.headers) : new Z()), 'content-type') && eh(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
-                        b(e, {
-                            body: y(0, T(n)),
+                        !e_((t = e.headers ? new Z(e.headers) : new Z()), 'content-type') && ep(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
+                        T(e, {
+                            body: y(0, S(n)),
                             headers: y(0, t)
                         })
                     );
@@ -305,14 +305,14 @@ if (
                 },
                 {
                     fetch: function (e) {
-                        return G(e, arguments.length > 1 ? ep(arguments[1]) : {});
+                        return G(e, arguments.length > 1 ? eh(arguments[1]) : {});
                     }
                 }
             ),
         m(B))
     ) {
         var em = function (e) {
-            return p(this, F), new B(e, arguments.length > 1 ? ep(arguments[1]) : {});
+            return h(this, F), new B(e, arguments.length > 1 ? eh(arguments[1]) : {});
         };
         (F.constructor = em),
             (em.prototype = F),

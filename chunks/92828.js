@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     fQ: function () {
-        return p;
+        return h;
     }
 });
 var r = n(661763),
@@ -44,11 +44,11 @@ function f(e, t, n) {
         onAction: u,
         linkBehavior: d
     });
-    let h = (0, i.jS)({
+    let p = (0, i.jS)({
             selectionManager: t.selectionManager,
             hasItemActions: !!u
         }),
-        p = (0, a.pu)(n, { isDisabled: 0 !== t.collection.size }),
+        h = (0, a.pu)(n, { isDisabled: 0 !== t.collection.size }),
         m = (0, r.zL)(e, { labelable: !0 }),
         g = (0, r.dG)(
             m,
@@ -57,18 +57,18 @@ function f(e, t, n) {
                 id: _,
                 'aria-multiselectable': 'multiple' === t.selectionManager.selectionMode ? 'true' : void 0
             },
-            0 === t.collection.size ? { tabIndex: p ? -1 : 0 } : f,
-            h
+            0 === t.collection.size ? { tabIndex: h ? -1 : 0 } : f,
+            p
         );
     return o && ((g['aria-rowcount'] = t.collection.size), (g['aria-colcount'] = 1)), (0, i.B6)({}, t), { gridProps: g };
 }
 function _(e, t, n) {
     let { node: i, isVirtualized: f, shouldSelectOnPressUp: _ } = e,
-        { direction: p } = (0, u.bU)(),
+        { direction: h } = (0, u.bU)(),
         { onAction: m, linkBehavior: g } = c.get(t),
         E = (0, r.mp)(),
         v = (0, l.useRef)(null),
-        { itemProps: I, ...S } = (0, s.Cs)({
+        { itemProps: I, ...b } = (0, s.Cs)({
             selectionManager: t.selectionManager,
             key: i.key,
             ref: n,
@@ -80,31 +80,31 @@ function _(e, t, n) {
             },
             linkBehavior: g
         }),
-        T = S.hasAction ? (0, r.ib)(i.props) : {},
-        b = (0, r.dG)(I, T, {
+        S = b.hasAction ? (0, r.ib)(i.props) : {},
+        T = (0, r.dG)(I, S, {
             role: 'row',
             onKeyDownCapture: (e) => {
                 if (!e.currentTarget.contains(e.target)) return;
                 let t = (0, a.QL)(n.current);
                 switch (((t.currentNode = document.activeElement), e.key)) {
                     case 'ArrowLeft': {
-                        let i = 'rtl' === p ? t.nextNode() : t.previousNode();
+                        let i = 'rtl' === h ? t.nextNode() : t.previousNode();
                         if (i) e.preventDefault(), e.stopPropagation(), (0, a.ex)(i), (0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
-                        else if ((e.preventDefault(), e.stopPropagation(), 'rtl' === p)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
+                        else if ((e.preventDefault(), e.stopPropagation(), 'rtl' === h)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
                         else {
                             t.currentNode = n.current;
-                            let e = h(t);
+                            let e = p(t);
                             e && ((0, a.ex)(e), (0, r.Gt)(e, { containingElement: (0, r.rP)(n.current) }));
                         }
                         break;
                     }
                     case 'ArrowRight': {
-                        let i = 'rtl' === p ? t.previousNode() : t.nextNode();
+                        let i = 'rtl' === h ? t.previousNode() : t.nextNode();
                         if (i) e.preventDefault(), e.stopPropagation(), (0, a.ex)(i), (0, r.Gt)(i, { containingElement: (0, r.rP)(n.current) });
-                        else if ((e.preventDefault(), e.stopPropagation(), 'ltr' === p)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
+                        else if ((e.preventDefault(), e.stopPropagation(), 'ltr' === h)) (0, a.ex)(n.current), (0, r.Gt)(n.current, { containingElement: (0, r.rP)(n.current) });
                         else {
                             t.currentNode = n.current;
-                            let e = h(t);
+                            let e = p(t);
                             e && ((0, a.ex)(e), (0, r.Gt)(e, { containingElement: (0, r.rP)(n.current) }));
                         }
                         break;
@@ -127,25 +127,25 @@ function _(e, t, n) {
             id: d(t, i.key)
         });
     return (
-        f && (b['aria-rowindex'] = i.index + 1),
+        f && (T['aria-rowindex'] = i.index + 1),
         {
-            rowProps: b,
+            rowProps: T,
             gridCellProps: {
                 role: 'gridcell',
                 'aria-colindex': 1
             },
             descriptionProps: { id: E },
-            ...S
+            ...b
         }
     );
 }
-function h(e) {
+function p(e) {
     let t, n;
     do (n = e.lastChild()) && (t = n);
     while (n);
     return t;
 }
-function p(e, t) {
+function h(e, t) {
     let { key: n } = e,
         { checkboxProps: r } = (0, i.Ug)(e, t);
     return {

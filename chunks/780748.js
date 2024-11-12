@@ -10,7 +10,7 @@ var r = n(192379),
     o = n(417662),
     l = n(981631);
 function u(e) {
-    let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: f, onEnter: _, allowNewLines: h, submit: p, hideAutocomplete: m, moveSelection: g } = e,
+    let { editor: t, channel: n, disableEnterToSubmit: u, onKeyDown: c, onKeyUp: d, onTab: f, onEnter: _, allowNewLines: p, submit: h, hideAutocomplete: m, moveSelection: g } = e,
         E = r.useCallback(
             (e) => {
                 var r;
@@ -62,9 +62,9 @@ function u(e) {
                     e.preventDefault(), e.stopPropagation();
                     return;
                 }
-                e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !h) && (e.preventDefault(), e.stopPropagation(), p()), null == c || c(e);
+                e.which === l.yXg.ENTER && ((!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.L6)(t)) || !p) && (e.preventDefault(), e.stopPropagation(), h()), null == c || c(e);
             },
-            [h, n.id, u, t, m, g, _, c, f, p]
+            [p, n.id, u, t, m, g, _, c, f, h]
         );
     return {
         handleKeyDown: E,

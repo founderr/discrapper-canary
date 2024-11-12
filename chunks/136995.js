@@ -15,22 +15,22 @@ function d(e) {
     let { channel: t, centerButton: n = !1, ...d } = e,
         f = n ? l.d : l.Z,
         _ = t.isManaged() || !t.isPrivate() ? c.intl.string(c.t.S0W8Z2) : c.intl.string(c.t['0D/6R0']),
-        h = i.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
+        p = i.useCallback(() => s.default.selectVoiceChannel(t.id), [t.id]);
     return (
         i.useEffect(
             () => (
-                o.S.subscribe(u.CkL.CALL_ACCEPT, h),
+                o.S.subscribe(u.CkL.CALL_ACCEPT, p),
                 () => {
-                    o.S.unsubscribe(u.CkL.CALL_ACCEPT, h);
+                    o.S.unsubscribe(u.CkL.CALL_ACCEPT, p);
                 }
             ),
-            [h]
+            [p]
         ),
         (0, r.jsx)(f, {
             ...d,
             iconComponent: a.PhoneCallIcon,
             label: _,
-            onClick: h
+            onClick: p
         })
     );
 }

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     PI: function () {
-        return h;
+        return p;
     },
     ui: function () {
         return E;
@@ -32,8 +32,8 @@ function _(e, t, n) {
         e
     );
 }
-let h = 0.5;
-class p {
+let p = 0.5;
+class h {
     constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: o, minViewTimeSeconds: m = 1 }) {
         var g = this;
         _(this, 'id', void 0),
@@ -101,7 +101,7 @@ class p {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new p({
+                    new h({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -143,7 +143,7 @@ class p {
             (this.questContent = t),
             (this.questContentPosition = i),
             (this.minViewTimeSeconds = m),
-            (this.minViewportPercentage = h),
+            (this.minViewportPercentage = p),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = r),
             (this.triggeredByStatusChange = n),
@@ -180,7 +180,7 @@ function E(e) {
                 a = ((n || o) && !r) || u;
             (i || a) && null != l.current && l.current.stop(),
                 i &&
-                    ((l.current = new p({
+                    ((l.current = new h({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,

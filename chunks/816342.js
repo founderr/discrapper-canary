@@ -11,13 +11,13 @@ var r = n(200651),
     f = n(388032);
 t.Z = (e) => {
     let { user: t, reportId: n } = e,
-        [_, h] = i.useState(!1),
-        p = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id), [t.id]) === d.OGo.BLOCKED;
+        [_, p] = i.useState(!1),
+        h = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(t.id), [t.id]) === d.OGo.BLOCKED;
     i.useEffect(() => {
-        h(p);
-    }, [p]);
+        p(h);
+    }, [h]);
     let m = i.useCallback(() => {
-        h(!0),
+        p(!0),
             l.ZP.trackWithMetadata(d.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: n

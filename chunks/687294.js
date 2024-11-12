@@ -1,6 +1,6 @@
 n.d(t, {
     $: function () {
-        return h;
+        return p;
     },
     Z: function () {
         return _;
@@ -125,7 +125,7 @@ class _ extends l.Z {
                 : (t[n] = r);
     }
 }
-async function h(e) {
+async function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = e.map(

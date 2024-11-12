@@ -42,10 +42,10 @@ function _(e, t, n, r, i) {
     };
 }
 ((s = r || (r = {}))[(s.DISABLED = 0)] = 'DISABLED'), (s[(s.DEFAULT = 1)] = 'DEFAULT'), (s[(s.OFFSET = 2)] = 'OFFSET'), ((o = i || (i = {})).TOP = 'TOP'), (o.BOTTOM = 'BOTTOM'), (o.RIGHT = 'RIGHT'), (o.LEFT = 'LEFT');
-function h(e) {
+function p(e) {
     return [null == e.bottom ? 'TOP' : 'BOTTOM', null == e.right ? 'LEFT' : 'RIGHT'];
 }
-function p(e) {
+function h(e) {
     let { top: t, left: n, bottom: r, right: i } = e;
     return (
         0 === t || t <= r ? (r = null) : (t = null),
@@ -182,7 +182,7 @@ class E extends (a = u.PureComponent) {
                     { current: r } = this.draggableRef,
                     { maxX: i, maxY: a, flipVertical: s, flipHorizontal: o, onDragStart: l, onDrag: u, onFlip: c, snapOrientation: d } = this.props,
                     { dragging: g, dragging: E, verticalOrientation: v, horizontalOrientation: I } = this.state,
-                    S = !1;
+                    b = !1;
                 if (
                     null == r ||
                     (!g &&
@@ -194,7 +194,7 @@ class E extends (a = u.PureComponent) {
                 )
                     return;
                 g = !0;
-                let { clientWidth: T, clientHeight: b } = r,
+                let { clientWidth: S, clientHeight: T } = r,
                     y = n - this._offsetY,
                     A = m(
                         _(
@@ -204,24 +204,24 @@ class E extends (a = u.PureComponent) {
                             },
                             i,
                             a,
-                            T,
-                            b
+                            S,
+                            T
                         )
                     );
                 if (d) {
-                    let e = h((A = p(A)));
+                    let e = p((A = h(A)));
                     (v = e[0]), (I = e[1]);
                 } else
                     A = {
                         top: A.top,
                         left: A.left
                     };
-                2 === o && I !== this.state.horizontalOrientation && ((this._offsetX = T - this._offsetX), (S = !0)),
-                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = b - this._offsetY), (S = !0)),
+                2 === o && I !== this.state.horizontalOrientation && ((this._offsetX = S - this._offsetX), (b = !0)),
+                    2 === s && v !== this.state.verticalOrientation && ((this._offsetY = T - this._offsetY), (b = !0)),
                     this.setDOMPositions(A),
                     !E && (null == l || l(A, r)),
                     null == u || u(A, r),
-                    S && (null == c || c([v, I])),
+                    b && (null == c || c([v, I])),
                     this.setState({
                         dragging: g,
                         verticalOrientation: v,
@@ -256,7 +256,7 @@ class E extends (a = u.PureComponent) {
                 let { clientHeight: c, clientWidth: d } = r,
                     f = _(t, i, a, d, c);
                 if (((f = m(f)), o)) {
-                    let t = h((e = p(f)));
+                    let t = p((e = h(f)));
                     (l = t[0]), (u = t[1]);
                 } else
                     e = {
@@ -275,7 +275,7 @@ class E extends (a = u.PureComponent) {
                         atTopEdge: g
                     });
             });
-        let [t, n] = h(e.initialPosition);
+        let [t, n] = p(e.initialPosition);
         (this.position = (function (e) {
             let { top: t, left: n, bottom: r, right: i } = e;
             return (

@@ -18,7 +18,7 @@ n.d(t, {
         return d;
     },
     lk: function () {
-        return h;
+        return p;
     },
     pQ: function () {
         return l;
@@ -30,7 +30,7 @@ n.d(t, {
         return _;
     },
     ur: function () {
-        return p;
+        return h;
     }
 }),
     n(653041);
@@ -61,11 +61,11 @@ function _(e, t) {
     let n = [];
     return e && n.push(a.dj.INVITES_DISABLED), t && n.push(a.dj.DMS_DISABLED), n;
 }
-function h(e, t) {
+function p(e, t) {
     let n = [];
     return !e && n.push(a.dj.INVITES_DISABLED), !t && n.push(a.dj.DMS_DISABLED), n;
 }
-function p(e) {
+function h(e) {
     return (null != e.dmsDisabledUntil && new Date(e.dmsDisabledUntil) > new Date()) || (null != e.invitesDisabledUntil && new Date(e.invitesDisabledUntil) > new Date());
 }
 function m(e) {

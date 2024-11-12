@@ -15,22 +15,22 @@ var r = n(200651),
     d = n(221292),
     f = n(687158),
     _ = n(471879),
-    h = n(502762),
-    p = n(475413),
+    p = n(502762),
+    h = n(475413),
     m = n(228168),
     g = n(388032),
     E = n(572046),
     v = n(609440);
 function I(e) {
-    let { user: t, guildId: n, setPopoutRef: I, channelId: S, messageId: T, roleId: b, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
+    let { user: t, guildId: n, setPopoutRef: I, channelId: b, messageId: S, roleId: T, onViewBlockedProfileClick: y, newAnalyticsLocations: A = [] } = e,
         { analyticsLocations: N } = (0, l.ZP)([...A, o.Z.BLOCKED_PROFILE_POPOUT]),
         C = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_POPOUT',
             userId: t.id,
             guildId: n,
-            channelId: S,
-            messageId: T,
-            roleId: b
+            channelId: b,
+            messageId: S,
+            roleId: T
         }),
         R = i.useRef(null),
         O = (0, f.ZP)(t.id, n),
@@ -47,7 +47,7 @@ function I(e) {
                 children: (0, r.jsx)(s.Dialog, {
                     ref: R,
                     'aria-label': t.username,
-                    children: (0, r.jsx)(h.Z, {
+                    children: (0, r.jsx)(p.Z, {
                         user: t,
                         displayProfile: O,
                         profileType: m.y0.BITE_SIZE,
@@ -80,7 +80,7 @@ function I(e) {
                                             variant: 'text-sm/medium',
                                             children: g.intl.string(g.t['20WzZ2'])
                                         }),
-                                        (0, r.jsx)(p.tG, {
+                                        (0, r.jsx)(h.tG, {
                                             className: E.centeredButton,
                                             action: 'VIEW_BLOCKED_PROFILE',
                                             text: g.intl.string(g.t.iXAna2),

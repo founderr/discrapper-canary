@@ -16,7 +16,7 @@ var r = n(192379),
     d = n(515270),
     f = n(847302),
     _ = n(42530);
-let h = (e, t, n) => ({
+let p = (e, t, n) => ({
     getSlateEditor: () => e,
     submit(e) {
         e.preventDefault(), n();
@@ -90,7 +90,7 @@ let h = (e, t, n) => ({
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         l.T.withSingleEntry(e, () => {
             let a = o.HZ(e),
-                s = null != a && p(t, a[0]);
+                s = null != a && h(t, a[0]);
             if ((null != r && s && (u.Q.removeInlineChildren(e, a), (i = !1)), m(e, n, r, i), null != r && s)) {
                 let n = o.cr(e);
                 if (((a = c.q.updateElement(e, a)), null != n)) {
@@ -106,7 +106,7 @@ let h = (e, t, n) => ({
             i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         l.T.withSingleEntry(e, () => {
             let a = o.HZ(e),
-                s = null != a && p(t, a[0]);
+                s = null != a && h(t, a[0]);
             if (s) u.Q.removeInlineChildren(e, a), (i = !1);
             else {
                 let { word: t } = this.getCurrentWord();
@@ -132,7 +132,7 @@ let h = (e, t, n) => ({
         });
     }
 });
-function p(e, t) {
+function h(e, t) {
     var n;
     let r = s.Z.getActiveCommand(e.id),
         i = null == r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t.optionName);
@@ -145,5 +145,5 @@ function m(e, t, n, r) {
     });
 }
 function g(e, t, n, i) {
-    r.useImperativeHandle(e, () => h(t, n, i), [t, n, i]);
+    r.useImperativeHandle(e, () => p(t, n, i), [t, n, i]);
 }

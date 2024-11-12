@@ -8,19 +8,19 @@ var r = n(200651),
     u = n(28546),
     c = n(324889);
 let d = i.forwardRef(function (e, t) {
-    let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m } = e,
+    let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
         [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
         I = n.useStore((e) => e.searchPlaceholder),
-        S = n.useStore((e) => e.inspectedExpressionPosition, a.X),
-        T = i.useCallback(
+        b = n.useStore((e) => e.inspectedExpressionPosition, a.X),
+        S = i.useCallback(
             (e) => {
                 var t;
-                n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = h.current) || void 0 === t || t.scrollTo(0);
+                n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
-            [h, n]
+            [p, n]
         ),
-        b = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -44,10 +44,10 @@ let d = i.forwardRef(function (e, t) {
                 query: E,
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
-                placeholder: null != I ? I : d || null == m ? p : m,
-                onClear: b,
+                placeholder: null != I ? I : d || null == m ? h : m,
+                onClear: T,
                 onKeyDown: f,
-                onQueryChange: T,
+                onQueryChange: S,
                 className: c.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
@@ -55,7 +55,7 @@ let d = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': _,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(_, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(_, b.columnIndex, b.rowIndex)
                 }
             })
         })

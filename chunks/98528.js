@@ -9,10 +9,10 @@ n.d(t, {
         return E;
     },
     Xs: function () {
-        return p;
+        return h;
     },
     ep: function () {
-        return h;
+        return p;
     },
     t$: function () {
         return I;
@@ -34,7 +34,7 @@ var r = n(192379),
     d = n(691251),
     f = n(981631);
 let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    h = (e) => {
+    p = (e) => {
         let { gridWrapperRef: t, containerWidth: n, showingEmptyState: i, listPaddingLeft: s = _, listScrollbarWidth: o = 8 } = e,
             [l, u] = r.useState(void 0),
             c = r.useCallback(() => {
@@ -52,7 +52,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             l
         );
     },
-    p = (e) => {
+    h = (e) => {
         let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
             a = r.useRef(i),
             s = r.useRef(!0);
@@ -203,7 +203,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 },
                 [f]
             ),
-            h = r.useCallback(
+            p = r.useCallback(
                 (e, t, n) => {
                     let r = d(e, t);
                     null != r && l(r, n);
@@ -211,7 +211,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 [d, l]
             ),
             {
-                dispatch: p,
+                dispatch: h,
                 getItemProps: m,
                 getRowProps: g,
                 getContainerProps: E
@@ -219,7 +219,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 navId: n,
                 columnCounts: t,
                 onDispatch: _,
-                onSelect: h,
+                onSelect: p,
                 autoFocusElement: !1,
                 useVirtualFocus: !0
             }),
@@ -238,7 +238,7 @@ let _ = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 return window.addEventListener('mousemove', e), () => window.removeEventListener('mousemove', e);
             }, []),
             {
-                gridDispatch: p,
+                gridDispatch: h,
                 getItemProps: m,
                 getRowProps: g,
                 gridContainerProps: v,
@@ -280,8 +280,8 @@ function v(e) {
             };
             for (let e of t)
                 if (e.items.length > 0) {
-                    var h;
-                    r(e.items, e.categoryInfo.type, null !== (h = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== h && h);
+                    var p;
+                    r(e.items, e.categoryInfo.type, null !== (p = null == n ? void 0 : n.has(''.concat(e.key))) && void 0 !== p && p);
                 }
         }
         return {
@@ -300,8 +300,8 @@ function I(e) {
             getItemProps: c,
             getRowProps: f,
             gridContainerProps: _,
-            handleGridContainerKeyDown: h,
-            isUsingKeyboardNavigation: p
+            handleGridContainerKeyDown: p,
+            isUsingKeyboardNavigation: h
         } = E({
             columnCounts: t,
             gridNavigatorId: s,
@@ -332,8 +332,8 @@ function I(e) {
             getItemProps: c,
             getRowProps: f,
             gridContainerProps: _,
-            handleGridContainerKeyDown: h,
-            isUsingKeyboardNavigation: p
+            handleGridContainerKeyDown: p,
+            isUsingKeyboardNavigation: h
         }
     );
 }

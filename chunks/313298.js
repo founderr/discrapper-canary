@@ -47,10 +47,10 @@ function _(e) {
             })(e)
     );
 }
-function h(e) {
+function p(e) {
     (l[e] = new Set()), (u[e] = null);
 }
-class p extends i.Z {
+class h extends i.Z {
     handleInitialize() {
         null == c &&
             !(function () {
@@ -70,11 +70,11 @@ class p extends i.Z {
     }
     handleGuildDelete(e) {
         let t = e.guild.id;
-        if (!!o.Z.isInitialized(t)) h(t);
+        if (!!o.Z.isInitialized(t)) p(t);
     }
     handleGuildMemberSearchSuccess(e) {
         let { guildId: t } = e;
-        if (!!o.Z.isInitialized(t)) h(t);
+        if (!!o.Z.isInitialized(t)) p(t);
     }
     constructor(...e) {
         var t, n, r;
@@ -98,4 +98,4 @@ class p extends i.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new p();
+t.Z = new h();

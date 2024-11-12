@@ -12,10 +12,10 @@ n.d(t, {
         return _;
     },
     _S: function () {
-        return p;
+        return h;
     },
     fD: function () {
-        return h;
+        return p;
     },
     mG: function () {
         return v;
@@ -24,7 +24,7 @@ n.d(t, {
         return d;
     },
     r4: function () {
-        return T;
+        return S;
     }
 }),
     n(642549),
@@ -94,10 +94,10 @@ function _(e) {
                   () => null
               ));
 }
-function h() {
+function p() {
     return -1 !== window.document.cookie.indexOf(''.concat(l.ZF, '='));
 }
-function p() {
+function h() {
     try {
         var e;
         let t = r.parse(window.document.cookie)[l.ZF];
@@ -117,15 +117,15 @@ function v(e) {
     return null != e && E.test(e);
 }
 let I = new Set(['canary.discord.com', 'ptb.discord.com', 'discord.com', 'canary.discordapp.com', 'ptb.discordapp.com', 'discordapp.com']),
-    S = new Set(['/__development/link', '/__development/link/']);
-function T(e) {
+    b = new Set(['/__development/link', '/__development/link/']);
+function S(e) {
     if (v(e))
         return {
             payload: null,
             url: e
         };
     let t = o.Z.safeParseWithQuery(e);
-    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !S.has(t.pathname)) return null;
+    if (null == t || !I.has(t.hostname) || !('s' in t.query) || !b.has(t.pathname)) return null;
     for (let e in t.query) 's' !== e && delete t.query[e];
     return {
         payload: t.query.s,

@@ -36,25 +36,25 @@ let f = {
                                   if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
                                       return {
                                           success: !1,
-                                          error: d.intl.formatToPlainString(n.exactRangeErrorMessage, { value: p(t.minLength) })
+                                          error: d.intl.formatToPlainString(n.exactRangeErrorMessage, { value: h(t.minLength) })
                                       };
                                   if (void 0 !== t.maxLength && void 0 !== t.minLength)
                                       return {
                                           success: !1,
                                           error: d.intl.formatToPlainString(n.rangeErrorMessage, {
-                                              minimum: p(t.minLength),
-                                              maximum: p(t.maxLength)
+                                              minimum: h(t.minLength),
+                                              maximum: h(t.maxLength)
                                           })
                                       };
                                   else if (void 0 !== t.minLength)
                                       return {
                                           success: !1,
-                                          error: d.intl.formatToPlainString(n.minErrorMessage, { minimum: p(t.minLength) })
+                                          error: d.intl.formatToPlainString(n.minErrorMessage, { minimum: h(t.minLength) })
                                       };
                                   else if (void 0 !== t.maxLength)
                                       return {
                                           success: !1,
-                                          error: d.intl.formatToPlainString(n.maxErrorMessage, { maximum: p(t.maxLength) })
+                                          error: d.intl.formatToPlainString(n.maxErrorMessage, { maximum: h(t.maxLength) })
                                       };
                               }
                               return { success: !0 };
@@ -81,7 +81,7 @@ let f = {
             let s = o.Z.getAutocompleteLastChoices(n, t.name);
             if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? h(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']) : { success: !1 };
+            return !isNaN(u) && Number.isInteger(u) && Number.isSafeInteger(u) ? p(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']) : { success: !1 };
         },
         [r.jw.NUMBER]: (e, t, n) => {
             if ('text' !== e.type || t.type !== r.jw.NUMBER) return { success: !1 };
@@ -91,7 +91,7 @@ let f = {
             let s = o.Z.getAutocompleteLastChoices(n, t.name);
             if (null != s && s.map((e) => e.displayName).includes(i)) return { success: !0 };
             let u = Number(l.AS(a.default.locale, i));
-            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : h(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']);
+            return isNaN(u) || u > Number.MAX_SAFE_INTEGER || u < Number.MIN_SAFE_INTEGER ? { success: !1 } : p(u, t, d.t['8Y5zsr'], d.t.CyRLmJ, d.t['VD3Q+f']);
         },
         [r.jw.USER]: (e, t, n, r) => {
             if ('text' !== e.type) return { success: 'userMention' === e.type };
@@ -132,30 +132,30 @@ let f = {
         }
     },
     _ = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
-function h(e, t, n, r, i) {
+function p(e, t, n, r, i) {
     if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
                 error: d.intl.formatToPlainString(n, {
-                    minimum: p(t.minValue),
-                    maximum: p(t.maxValue)
+                    minimum: h(t.minValue),
+                    maximum: h(t.maxValue)
                 })
             };
         if (null != t.minValue)
             return {
                 success: !1,
-                error: d.intl.formatToPlainString(r, { minimum: p(t.minValue) })
+                error: d.intl.formatToPlainString(r, { minimum: h(t.minValue) })
             };
         else if (null != t.maxValue)
             return {
                 success: !1,
-                error: d.intl.formatToPlainString(i, { maximum: p(t.maxValue) })
+                error: d.intl.formatToPlainString(i, { maximum: h(t.maxValue) })
             };
     }
     return { success: !0 };
 }
-function p(e) {
+function h(e) {
     return e.toLocaleString(d.intl.currentLocale, { useGrouping: !1 });
 }
 t.Z = f;

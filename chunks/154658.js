@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -15,20 +15,20 @@ var i = n(120356),
     d = n(873128),
     f = n(388032),
     _ = n(98518);
-function h(e) {
+function p(e) {
     var t;
-    let { guildId: n, leaderboardId: i, intervalOffset: h = -1, className: p } = e,
+    let { guildId: n, leaderboardId: i, intervalOffset: p = -1, className: h } = e,
         m = (0, d.Z)({
             guildId: n,
             leaderboardId: i,
-            intervalOffset: h
+            intervalOffset: p
         }),
         g = null == m ? void 0 : null === (t = m.users) || void 0 === t ? void 0 : t[0],
         E = (0, o.e7)([u.default], () => u.default.getUser(null == g ? void 0 : g.user_id));
     if (null == E || null == m) return null;
     let v = c.ZP.getName(n, void 0, E);
     return (0, r.jsxs)('div', {
-        className: a()(_.container, p),
+        className: a()(_.container, h),
         children: [
             (0, r.jsx)(l.Text, {
                 variant: 'text-xs/medium',

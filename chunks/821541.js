@@ -13,20 +13,20 @@ var r = n(200651),
     l = n.n(o),
     u = n(534493);
 let c = i.forwardRef(function (e, t) {
-        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: h, children: p, ...m } = e;
+        let { as: n = 'div', gap: i = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: p, children: h, ...m } = e;
         return (0, r.jsx)(n, {
             ref: t,
             'data-align': o,
             'data-justify': l,
             'data-direction': a,
-            className: s()(u.stack, h),
+            className: s()(u.stack, p),
             style: {
                 ..._,
                 gap: d(i),
                 ...f(c)
             },
             ...m,
-            children: p
+            children: h
         });
     }),
     d = (e) => 'var(--space-'.concat(e, ')'),

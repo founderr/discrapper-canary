@@ -51,7 +51,7 @@ if (!Object.keys) {
                 }
             return !1;
         })(),
-        h = function (e) {
+        p = function (e) {
             if ('undefined' == typeof window || !_) return d(e);
             try {
                 return d(e);
@@ -68,10 +68,10 @@ if (!Object.keys) {
         if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
         var f = u && n;
         if (o && e.length > 0 && !i.call(e, 0)) for (var _ = 0; _ < e.length; ++_) d.push(String(_));
-        if (r && e.length > 0) for (var p = 0; p < e.length; ++p) d.push(String(p));
+        if (r && e.length > 0) for (var h = 0; h < e.length; ++h) d.push(String(h));
         else for (var m in e) !(f && 'prototype' === m) && i.call(e, m) && d.push(String(m));
         if (l) {
-            for (var g = h(e), E = 0; E < c.length; ++E) !(g && 'constructor' === c[E]) && i.call(e, c[E]) && d.push(c[E]);
+            for (var g = p(e), E = 0; E < c.length; ++E) !(g && 'constructor' === c[E]) && i.call(e, c[E]) && d.push(c[E]);
         }
         return d;
     };

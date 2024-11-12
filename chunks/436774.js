@@ -94,7 +94,7 @@ let o = Object.freeze({
                 })
             ]
         }),
-    h = i.memo(
+    p = i.memo(
         function () {
             return (0, r.jsxs)('svg', {
                 viewBox: '0 0 1 1',
@@ -112,4 +112,4 @@ let o = Object.freeze({
         },
         () => !0
     );
-t.ZP = h;
+t.ZP = p;

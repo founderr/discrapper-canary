@@ -15,8 +15,8 @@ var i = n(200651),
     S = n(15640),
     T = n(600164),
     C = n(925329),
-    _ = n(406174),
-    E = n(810762),
+    E = n(406174),
+    _ = n(810762),
     f = n(681833),
     I = n(856888),
     N = n(921801),
@@ -134,7 +134,7 @@ t.Z = function () {
             className: l()(G.container, G.loading),
             children: (0, i.jsx)(o.Spinner, {})
         });
-    if (M === w.cP) return (0, i.jsx)(E.Z, { onGoBack: () => g.Z.clearSubsection() });
+    if (M === w.cP) return (0, i.jsx)(_.Z, { onGoBack: () => g.Z.clearSubsection() });
     if (M === w.XZ) return (0, i.jsx)(I.Z, { onGoBack: () => g.Z.clearSubsection() });
     return (0, i.jsx)('div', {
         className: G.container,
@@ -180,7 +180,7 @@ t.Z = function () {
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(z, {}),
-                            (0, i.jsx)(_.Z, {
+                            (0, i.jsx)(E.Z, {
                                 count: W,
                                 onClickManageSubscription: () => g.Z.setSection(k.oAB.SUBSCRIPTIONS, w.cP)
                             })

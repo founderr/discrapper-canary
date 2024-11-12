@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return E;
     }
 }),
     n(47120);
@@ -21,12 +21,12 @@ var i = n(200651),
     S = n(205058);
 let T = 387,
     C = 218;
-function _(e) {
+function E(e) {
     let { previewEnabled: t, onEnablePreview: n } = e,
-        _ = h.Z.getCameraComponent(),
-        [E, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
+        E = h.Z.getCameraComponent(),
+        [_, f] = s.useState((0, c.P)(g.default.getCurrentUser())),
         I = s.useRef(!1),
-        N = s.useRef(E),
+        N = s.useRef(_),
         A = (0, o.O)(),
         b = (0, r.e7)([h.Z], () => Object.values(h.Z.getVideoDevices()).length > 0);
     return (
@@ -37,7 +37,7 @@ function _(e) {
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: E,
+            selectedBackgroundOption: _,
             onSelectBackgroundOption: (e) => {
                 (I.current = !0), (N.current = e), f(e), (0, u.wG)(e, { location: A.location }).catch(p.dG4);
             },
@@ -48,7 +48,7 @@ function _(e) {
                           children: (0, i.jsxs)('div', {
                               className: S.camera,
                               children: [
-                                  (0, i.jsx)(_, {
+                                  (0, i.jsx)(E, {
                                       deviceId: e,
                                       width: T,
                                       height: C,

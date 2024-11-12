@@ -52,7 +52,7 @@ let r = Symbol.for('@ts-pattern/matcher'),
 function d(e) {
     return Object.assign(e, {
         optional: () => f(e),
-        and: (t) => p(e, t),
+        and: (t) => h(e, t),
         or: (t) => m(e, t),
         select: (t) => (void 0 === t ? E(e) : E(t, e))
     });
@@ -85,11 +85,11 @@ let _ = (e, t) => {
         for (let n of e) if (!t(n)) return !1;
         return !0;
     },
-    h = (e, t) => {
+    p = (e, t) => {
         for (let [n, r] of e.entries()) if (!t(r, n)) return !1;
         return !0;
     };
-function p(...e) {
+function h(...e) {
     return d({
         [r]: () => ({
             match: (t) => {
@@ -157,54 +157,54 @@ function v(e) {
 function I(e) {
     return 'string' == typeof e;
 }
-function S(e) {
+function b(e) {
     return 'bigint' == typeof e;
 }
-let T = d(
+let S = d(
         g(function (e) {
             return !0;
         })
     ),
-    b = (e) =>
+    T = (e) =>
         Object.assign(d(e), {
             startsWith: (t) =>
-                b(
-                    p(
+                T(
+                    h(
                         e,
                         g((e) => I(e) && e.startsWith(t))
                     )
                 ),
             endsWith: (t) =>
-                b(
-                    p(
+                T(
+                    h(
                         e,
                         g((e) => I(e) && e.endsWith(t))
                     )
                 ),
             minLength: (t) => {
                 let n;
-                return b(p(e, ((n = t), g((e) => I(e) && e.length >= n))));
+                return T(h(e, ((n = t), g((e) => I(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return b(p(e, ((n = t), g((e) => I(e) && e.length <= n))));
+                return T(h(e, ((n = t), g((e) => I(e) && e.length <= n))));
             },
             includes: (t) =>
-                b(
-                    p(
+                T(
+                    h(
                         e,
                         g((e) => I(e) && e.includes(t))
                     )
                 ),
             regex: (t) =>
-                b(
-                    p(
+                T(
+                    h(
                         e,
                         g((e) => I(e) && !!e.match(t))
                     )
                 )
         }),
-    y = b(g(I)),
+    y = T(g(I)),
     A = (e, t) => g((n) => v(n) && e <= n && t >= n),
     N = (e) => g((t) => v(t) && t < e),
     C = (e) => g((t) => v(t) && t > e),
@@ -216,35 +216,35 @@ let T = d(
     w = () => g((e) => v(e) && e < 0),
     M = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => M(p(e, A(t, n))),
-            lt: (t) => M(p(e, N(t))),
-            gt: (t) => M(p(e, C(t))),
-            lte: (t) => M(p(e, R(t))),
-            gte: (t) => M(p(e, O(t))),
-            int: () => M(p(e, D())),
-            finite: () => M(p(e, L())),
-            positive: () => M(p(e, x())),
-            negative: () => M(p(e, w()))
+            between: (t, n) => M(h(e, A(t, n))),
+            lt: (t) => M(h(e, N(t))),
+            gt: (t) => M(h(e, C(t))),
+            lte: (t) => M(h(e, R(t))),
+            gte: (t) => M(h(e, O(t))),
+            int: () => M(h(e, D())),
+            finite: () => M(h(e, L())),
+            positive: () => M(h(e, x())),
+            negative: () => M(h(e, w()))
         }),
     P = M(g(v)),
-    k = (e, t) => g((n) => S(n) && e <= n && t >= n),
-    U = (e) => g((t) => S(t) && t < e),
-    G = (e) => g((t) => S(t) && t > e),
-    B = (e) => g((t) => S(t) && t <= e),
-    Z = (e) => g((t) => S(t) && t >= e),
-    F = () => g((e) => S(e) && e > 0),
-    V = () => g((e) => S(e) && e < 0),
+    k = (e, t) => g((n) => b(n) && e <= n && t >= n),
+    U = (e) => g((t) => b(t) && t < e),
+    G = (e) => g((t) => b(t) && t > e),
+    B = (e) => g((t) => b(t) && t <= e),
+    Z = (e) => g((t) => b(t) && t >= e),
+    F = () => g((e) => b(e) && e > 0),
+    V = () => g((e) => b(e) && e < 0),
     j = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => j(p(e, k(t, n))),
-            lt: (t) => j(p(e, U(t))),
-            gt: (t) => j(p(e, G(t))),
-            lte: (t) => j(p(e, B(t))),
-            gte: (t) => j(p(e, Z(t))),
-            positive: () => j(p(e, F())),
-            negative: () => j(p(e, V()))
+            between: (t, n) => j(h(e, k(t, n))),
+            lt: (t) => j(h(e, U(t))),
+            gt: (t) => j(h(e, G(t))),
+            lte: (t) => j(h(e, B(t))),
+            gte: (t) => j(h(e, Z(t))),
+            positive: () => j(h(e, F())),
+            negative: () => j(h(e, V()))
         }),
-    H = j(g(S)),
+    H = j(g(b)),
     Y = d(
         g(function (e) {
             return 'boolean' == typeof e;
@@ -351,7 +351,7 @@ var z = {
                     if (1 === e.length) throw Error(`\`P.map\` wasn't given enough arguments. Expected (key, value), received ${null == (n = e[0]) ? void 0 : n.toString()}`);
                     let [a, s] = e;
                     return {
-                        matched: h(t, (e, t) => {
+                        matched: p(t, (e, t) => {
                             let n = l(a, t, i),
                                 r = l(s, e, i);
                             return n && r;
@@ -363,7 +363,7 @@ var z = {
             })
         });
     },
-    intersection: p,
+    intersection: h,
     union: m,
     not: function (e) {
         return d({
@@ -378,8 +378,8 @@ var z = {
     },
     when: g,
     select: E,
-    any: T,
-    _: T,
+    any: S,
+    _: S,
     string: y,
     between: A,
     lt: N,

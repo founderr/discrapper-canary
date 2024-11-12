@@ -1,31 +1,31 @@
-t.d(n, {
+n.d(t, {
     i: function () {
         return i;
     }
 });
 var o,
     i,
-    r = t(200651);
-t(192379);
-var a = t(442837),
-    c = t(780384),
-    d = t(481060),
-    l = t(410030),
-    s = t(594174),
-    u = t(388032),
-    f = t(417552),
-    p = t(982240),
-    b = t(533854);
+    r = n(200651);
+n(192379);
+var a = n(442837),
+    c = n(780384),
+    d = n(481060),
+    l = n(410030),
+    s = n(594174),
+    u = n(388032),
+    f = n(417552),
+    p = n(982240),
+    b = n(533854);
 ((o = i || (i = {}))[(o.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (o[(o.GIFT_MODAL = 1)] = 'GIFT_MODAL');
-n.Z = (e) => {
-    let { onRetry: n, errorOrigin: t, errorMessage: o } = e,
+t.Z = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: o } = e,
         i = (0, l.ZP)(),
         _ = (0, a.e7)([s.default], () => {
             let e = s.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        g = 1 === t ? f.giftModalContainer : f.shopPageContainer,
-        h = 1 === t ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
+        g = 1 === n ? f.giftModalContainer : f.shopPageContainer,
+        h = 1 === n ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
     return (0, r.jsxs)('div', {
         className: g,
         children: [
@@ -54,7 +54,7 @@ n.Z = (e) => {
                 className: f.reload,
                 size: d.Button.Sizes.MEDIUM,
                 color: d.Button.Colors.BRAND,
-                onClick: n,
+                onClick: t,
                 children: u.intl.string(u.t['+hivLS'])
             })
         ]

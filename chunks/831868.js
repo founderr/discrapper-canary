@@ -11,10 +11,10 @@ var l = 286,
     d = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13],
     f = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7],
     _ = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
-    h = Array((l + 2) * 2);
-o(h);
-var p = Array(60);
+    p = Array((l + 2) * 2);
 o(p);
+var h = Array(60);
+o(h);
 var m = Array(512);
 o(m);
 var g = Array(256);
@@ -25,17 +25,17 @@ var v = Array(30);
 function I(e, t, n, r, i) {
     (this.static_tree = e), (this.extra_bits = t), (this.extra_base = n), (this.elems = r), (this.max_length = i), (this.has_stree = e && e.length);
 }
-function S(e, t) {
+function b(e, t) {
     (this.dyn_tree = e), (this.max_code = 0), (this.stat_desc = t);
 }
-function T(e) {
+function S(e) {
     return e < 256 ? m[e] : m[256 + (e >>> 7)];
 }
-function b(e, t) {
+function T(e, t) {
     (e.pending_buf[e.pending++] = 255 & t), (e.pending_buf[e.pending++] = (t >>> 8) & 255);
 }
 function y(e, t, n) {
-    e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), b(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
+    e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), T(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
 }
 function A(e, t, n) {
     y(e, n[2 * t], n[2 * t + 1]);
@@ -66,7 +66,7 @@ function R(e) {
     (e.dyn_ltree[512] = 1), (e.opt_len = e.static_len = 0), (e.last_lit = e.matches = 0);
 }
 function O(e) {
-    e.bi_valid > 8 ? b(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), (e.bi_buf = 0), (e.bi_valid = 0);
+    e.bi_valid > 8 ? T(e, e.bi_buf) : e.bi_valid > 0 && (e.pending_buf[e.pending++] = e.bi_buf), (e.bi_buf = 0), (e.bi_valid = 0);
 }
 function D(e, t, n, r) {
     var i = 2 * t,
@@ -86,7 +86,7 @@ function x(e, t, n) {
         s,
         o = 0;
     if (0 !== e.last_lit)
-        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? A(e, i, t) : (A(e, (a = g[i]) + 256 + 1, t), 0 !== (s = c[a]) && y(e, (i -= E[a]), s), A(e, (a = T(--r)), n), 0 !== (s = d[a]) && y(e, (r -= v[a]), s));
+        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? A(e, i, t) : (A(e, (a = g[i]) + 256 + 1, t), 0 !== (s = c[a]) && y(e, (i -= E[a]), s), A(e, (a = S(--r)), n), 0 !== (s = d[a]) && y(e, (r -= v[a]), s));
         while (o < e.last_lit);
     A(e, 256, t);
 }
@@ -118,19 +118,19 @@ function w(e, t) {
                 d = t.stat_desc.static_tree,
                 f = t.stat_desc.has_stree,
                 _ = t.stat_desc.extra_bits,
-                h = t.stat_desc.extra_base,
-                p = t.stat_desc.max_length,
+                p = t.stat_desc.extra_base,
+                h = t.stat_desc.max_length,
                 m = 0;
             for (a = 0; a <= 15; a++) e.bl_count[a] = 0;
             for (l[2 * e.heap[e.heap_max] + 1] = 0, n = e.heap_max + 1; n < u; n++) {
-                if (((a = l[2 * l[2 * (r = e.heap[n]) + 1] + 1] + 1) > p && ((a = p), m++), (l[2 * r + 1] = a), !(r > c))) e.bl_count[a]++, (s = 0), r >= h && (s = _[r - h]), (o = l[2 * r]), (e.opt_len += o * (a + s)), f && (e.static_len += o * (d[2 * r + 1] + s));
+                if (((a = l[2 * l[2 * (r = e.heap[n]) + 1] + 1] + 1) > h && ((a = h), m++), (l[2 * r + 1] = a), !(r > c))) e.bl_count[a]++, (s = 0), r >= p && (s = _[r - p]), (o = l[2 * r]), (e.opt_len += o * (a + s)), f && (e.static_len += o * (d[2 * r + 1] + s));
             }
             if (0 !== m) {
                 do {
-                    for (a = p - 1; 0 === e.bl_count[a]; ) a--;
-                    e.bl_count[a]--, (e.bl_count[a + 1] += 2), e.bl_count[p]--, (m -= 2);
+                    for (a = h - 1; 0 === e.bl_count[a]; ) a--;
+                    e.bl_count[a]--, (e.bl_count[a + 1] += 2), e.bl_count[h]--, (m -= 2);
                 } while (m > 0);
-                for (a = p; 0 !== a; a--)
+                for (a = h; 0 !== a; a--)
                     for (r = e.bl_count[a]; 0 !== r; ) {
                         if (!((i = e.heap[--n]) > c)) l[2 * i + 1] !== a && ((e.opt_len += (a - l[2 * i + 1]) * l[2 * i]), (l[2 * i + 1] = a)), r--;
                     }
@@ -174,7 +174,7 @@ function P(e, t, n) {
 var k = !1;
 function U(e, t, n, r) {
     var i, a, o, l;
-    y(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), O(i), l && (b(i, o), b(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
+    y(e, 0 + (r ? 1 : 0), 3), (i = e), (a = t), (o = n), (l = !0), O(i), l && (T(i, o), T(i, ~o)), s.arraySet(i.pending_buf, i.window, a, o, i.pending), (i.pending += o);
 }
 (t._tr_init = function (e) {
     !k &&
@@ -189,17 +189,17 @@ function U(e, t, n, r) {
             for (g[n - 1] = s, o = 0, s = 0; s < 16; s++) for (e = 0, v[s] = o; e < 1 << d[s]; e++) m[o++] = s;
             for (o >>= 7; s < 30; s++) for (e = 0, v[s] = o << 7; e < 1 << (d[s] - 7); e++) m[256 + o++] = s;
             for (t = 0; t <= 15; t++) u[t] = 0;
-            for (e = 0; e <= 143; ) (h[2 * e + 1] = 8), e++, u[8]++;
-            for (; e <= 255; ) (h[2 * e + 1] = 9), e++, u[9]++;
-            for (; e <= 279; ) (h[2 * e + 1] = 7), e++, u[7]++;
-            for (; e <= 287; ) (h[2 * e + 1] = 8), e++, u[8]++;
-            for (C(h, l + 1, u), e = 0; e < 30; e++) (p[2 * e + 1] = 5), (p[2 * e] = N(e, 5));
-            (r = new I(h, c, 257, l, 15)), (i = new I(p, d, 0, 30, 15)), (a = new I([], f, 0, 19, 7));
+            for (e = 0; e <= 143; ) (p[2 * e + 1] = 8), e++, u[8]++;
+            for (; e <= 255; ) (p[2 * e + 1] = 9), e++, u[9]++;
+            for (; e <= 279; ) (p[2 * e + 1] = 7), e++, u[7]++;
+            for (; e <= 287; ) (p[2 * e + 1] = 8), e++, u[8]++;
+            for (C(p, l + 1, u), e = 0; e < 30; e++) (h[2 * e + 1] = 5), (h[2 * e] = N(e, 5));
+            (r = new I(p, c, 257, l, 15)), (i = new I(h, d, 0, 30, 15)), (a = new I([], f, 0, 19, 7));
         })(),
         (k = !0)),
-        (e.l_desc = new S(e.dyn_ltree, r)),
-        (e.d_desc = new S(e.dyn_dtree, i)),
-        (e.bl_desc = new S(e.bl_tree, a)),
+        (e.l_desc = new b(e.dyn_ltree, r)),
+        (e.d_desc = new b(e.dyn_dtree, i)),
+        (e.bl_desc = new b(e.bl_tree, a)),
         (e.bi_buf = 0),
         (e.bi_valid = 0),
         R(e);
@@ -232,7 +232,7 @@ function U(e, t, n, r) {
             n + 4 <= i && -1 !== t
                 ? U(e, t, n, r)
                 : 4 === e.strategy || a === i
-                  ? (y(e, 2 + (r ? 1 : 0), 3), x(e, h, p))
+                  ? (y(e, 2 + (r ? 1 : 0), 3), x(e, p, h))
                   : (y(e, 4 + (r ? 1 : 0), 3),
                     !(function (e, t, n, r) {
                         var i;
@@ -244,9 +244,9 @@ function U(e, t, n, r) {
             r && O(e);
     }),
     (t._tr_tally = function (e, t, n) {
-        return (e.pending_buf[e.d_buf + 2 * e.last_lit] = (t >>> 8) & 255), (e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t), (e.pending_buf[e.l_buf + e.last_lit] = 255 & n), e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(g[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * T(t)]++), e.last_lit === e.lit_bufsize - 1;
+        return (e.pending_buf[e.d_buf + 2 * e.last_lit] = (t >>> 8) & 255), (e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t), (e.pending_buf[e.l_buf + e.last_lit] = 255 & n), e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(g[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * S(t)]++), e.last_lit === e.lit_bufsize - 1;
     }),
     (t._tr_align = function (e) {
         var t;
-        y(e, 2, 3), A(e, 256, h), 16 === (t = e).bi_valid ? (b(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
+        y(e, 2, 3), A(e, 256, p), 16 === (t = e).bi_valid ? (T(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
     });

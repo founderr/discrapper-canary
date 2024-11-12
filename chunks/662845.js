@@ -1,6 +1,6 @@
 n.d(t, {
     E7: function () {
-        return b;
+        return T;
     },
     Fx: function () {
         return R;
@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     },
     QL: function () {
-        return T;
+        return S;
     },
     cW: function () {
         return E;
@@ -45,15 +45,15 @@ function u(e) {
         c = (0, i.useRef)(null),
         d = (0, i.useRef)([]),
         { parentNode: f } = (0, i.useContext)(o) || {},
-        p = (0, i.useMemo)(() => new N({ scopeRef: d }), [d]);
+        h = (0, i.useMemo)(() => new N({ scopeRef: d }), [d]);
     (0, r.bt)(() => {
         let e = f || C.root;
         if (C.getTreeNode(e.scopeRef) && l && !v(l, e.scopeRef)) {
             let t = C.getTreeNode(l);
             t && (e = t);
         }
-        e.addChild(p), C.addNode(p);
-    }, [p, f]),
+        e.addChild(h), C.addNode(h);
+    }, [h, f]),
         (0, r.bt)(() => {
             let e = C.getTreeNode(d);
             e && (e.contain = !!n);
@@ -95,27 +95,27 @@ function u(e) {
                 }
                 let s = (0, r.r3)(i ? i[0] : void 0),
                     o = (t) => {
-                        if ('Tab' !== t.key || t.altKey || t.ctrlKey || t.metaKey || !h(e)) return;
+                        if ('Tab' !== t.key || t.altKey || t.ctrlKey || t.metaKey || !p(e)) return;
                         let n = s.activeElement,
                             r = e.current;
                         if (!r || !m(n, r)) return;
-                        let i = T(_(r), { tabbable: !0 }, r);
+                        let i = S(_(r), { tabbable: !0 }, r);
                         if (!n) return;
                         i.currentNode = n;
                         let a = t.shiftKey ? i.previousNode() : i.nextNode();
                         !a && ((i.currentNode = t.shiftKey ? r[r.length - 1].nextElementSibling : r[0].previousElementSibling), (a = t.shiftKey ? i.previousNode() : i.nextNode())), t.preventDefault(), a && I(a, !0);
                     },
                     u = (t) => {
-                        (!l || v(l, e)) && m(t.target, e.current) ? ((l = e), (n.current = t.target)) : h(e) && !g(t.target, e) ? (n.current ? n.current.focus() : l && l.current && S(l.current)) : h(e) && (n.current = t.target);
+                        (!l || v(l, e)) && m(t.target, e.current) ? ((l = e), (n.current = t.target)) : p(e) && !g(t.target, e) ? (n.current ? n.current.focus() : l && l.current && b(l.current)) : p(e) && (n.current = t.target);
                     },
                     c = (t) => {
                         a.current && cancelAnimationFrame(a.current),
                             (a.current = requestAnimationFrame(() => {
-                                if (s.activeElement && h(e) && !g(s.activeElement, e)) {
+                                if (s.activeElement && p(e) && !g(s.activeElement, e)) {
                                     if (((l = e), s.body.contains(t.target))) {
                                         var r;
                                         (n.current = t.target), null === (r = n.current) || void 0 === r || r.focus();
-                                    } else l.current && S(l.current);
+                                    } else l.current && b(l.current);
                                 }
                             }));
                     };
@@ -157,13 +157,13 @@ function u(e) {
                     let i = (0, r.r3)(e.current ? e.current[0] : void 0);
                     if (!t) return;
                     let a = (t) => {
-                        if ('Tab' !== t.key || t.altKey || t.ctrlKey || t.metaKey || !h(e)) return;
+                        if ('Tab' !== t.key || t.altKey || t.ctrlKey || t.metaKey || !p(e)) return;
                         let n = i.activeElement;
                         if (!m(n, e.current)) return;
                         let r = C.getTreeNode(e);
                         if (!r) return;
                         let a = r.nodeToRestore,
-                            s = T(i.body, { tabbable: !0 });
+                            s = S(i.body, { tabbable: !0 });
                         s.currentNode = n;
                         let o = t.shiftKey ? s.previousNode() : s.nextNode();
                         if (((!a || !i.body.contains(a) || a === i.body) && ((a = void 0), (r.nodeToRestore = void 0)), (!o || !m(o, e.current)) && a)) {
@@ -221,7 +221,7 @@ function u(e) {
                                             }
                                             for (n = t.getTreeNode(e); n; ) {
                                                 if (n.scopeRef && n.scopeRef.current && C.getTreeNode(n.scopeRef)) {
-                                                    S(n.scopeRef.current, !0);
+                                                    b(n.scopeRef.current, !0);
                                                     return;
                                                 }
                                                 n = n.parent;
@@ -236,7 +236,7 @@ function u(e) {
         (function (e, t) {
             let n = i.useRef(t);
             (0, i.useEffect)(() => {
-                n.current && ((l = e), !m((0, r.r3)(e.current ? e.current[0] : void 0).activeElement, l.current) && e.current && S(e.current)), (n.current = !1);
+                n.current && ((l = e), !m((0, r.r3)(e.current ? e.current[0] : void 0).activeElement, l.current) && e.current && b(e.current)), (n.current = !1);
             }, [e]);
         })(d, s),
         (0, i.useEffect)(() => {
@@ -264,7 +264,7 @@ function u(e) {
                                 { from: i, tabbable: a, wrap: s, accept: o } = t,
                                 l = i || (0, r.r3)(n[0]).activeElement,
                                 u = n[0].previousElementSibling,
-                                c = T(
+                                c = S(
                                     _(n),
                                     {
                                         tabbable: a,
@@ -281,7 +281,7 @@ function u(e) {
                                 { from: i, tabbable: a, wrap: s, accept: o } = t,
                                 l = i || (0, r.r3)(n[0]).activeElement,
                                 u = n[n.length - 1].nextElementSibling,
-                                c = T(
+                                c = S(
                                     _(n),
                                     {
                                         tabbable: a,
@@ -296,7 +296,7 @@ function u(e) {
                         focusFirst(t = {}) {
                             let n = e.current,
                                 { tabbable: r, accept: i } = t,
-                                a = T(
+                                a = S(
                                     _(n),
                                     {
                                         tabbable: r,
@@ -311,7 +311,7 @@ function u(e) {
                         focusLast(t = {}) {
                             let n = e.current,
                                 { tabbable: r, accept: i } = t,
-                                a = T(
+                                a = S(
                                     _(n),
                                     {
                                         tabbable: r,
@@ -327,16 +327,16 @@ function u(e) {
                 })(d),
             []
         ),
-        b = (0, i.useMemo)(
+        T = (0, i.useMemo)(
             () => ({
                 focusManager: E,
-                parentNode: p
+                parentNode: h
             }),
-            [p, E]
+            [h, E]
         );
     return i.createElement(
         o.Provider,
-        { value: b },
+        { value: T },
         i.createElement('span', {
             'data-focus-scope-start': !0,
             hidden: !0,
@@ -357,7 +357,7 @@ let f = c.join(':not([hidden]):not([tabindex="-1"]),');
 function _(e) {
     return e[0].parentElement;
 }
-function h(e) {
+function p(e) {
     let t = C.getTreeNode(l);
     for (; t && t.scopeRef !== e; ) {
         if (t.contain) return !1;
@@ -365,7 +365,7 @@ function h(e) {
     }
     return !0;
 }
-function p(e) {
+function h(e) {
     return g(e);
 }
 function m(e, t) {
@@ -399,15 +399,15 @@ function I(e, t = !1) {
             s(e);
         } catch (e) {}
 }
-function S(e, t = !0) {
+function b(e, t = !0) {
     let n = e[0].previousElementSibling,
         r = _(e),
-        i = T(r, { tabbable: t }, e);
+        i = S(r, { tabbable: t }, e);
     i.currentNode = n;
     let a = i.nextNode();
-    t && !a && (((i = T((r = _(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), I(a);
+    t && !a && (((i = S((r = _(e)), { tabbable: !1 }, e)).currentNode = n), (a = i.nextNode())), I(a);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let i = (null == t ? void 0 : t.tabbable) ? f : d,
         a = (0, r.r3)(e).createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
             acceptNode(e) {
@@ -443,14 +443,14 @@ function T(e, t, n) {
         });
     return (null == t ? void 0 : t.from) && (a.currentNode = t.from), a;
 }
-function b(e, t = {}) {
+function T(e, t = {}) {
     return {
         focusNext(n = {}) {
             let i = e.current;
             if (!i) return null;
             let { from: a, tabbable: s = t.tabbable, wrap: o = t.wrap, accept: l = t.accept } = n,
                 u = a || (0, r.r3)(i).activeElement,
-                c = T(i, {
+                c = S(i, {
                     tabbable: s,
                     accept: l
                 });
@@ -463,7 +463,7 @@ function b(e, t = {}) {
             if (!i) return null;
             let { from: a, tabbable: s = t.tabbable, wrap: o = t.wrap, accept: l = t.accept } = n,
                 u = a || (0, r.r3)(i).activeElement,
-                c = T(i, {
+                c = S(i, {
                     tabbable: s,
                     accept: l
                 });
@@ -485,7 +485,7 @@ function b(e, t = {}) {
             let r = e.current;
             if (!r) return null;
             let { tabbable: i = t.tabbable, accept: a = t.accept } = n,
-                s = T(r, {
+                s = S(r, {
                     tabbable: i,
                     accept: a
                 }).nextNode();
@@ -496,7 +496,7 @@ function b(e, t = {}) {
             if (!r) return null;
             let { tabbable: i = t.tabbable, accept: a = t.accept } = n,
                 s = y(
-                    T(r, {
+                    S(r, {
                         tabbable: i,
                         accept: a
                     })
@@ -587,14 +587,14 @@ function R(e = {}) {
             isDisabled: r,
             onFocusChange: f
         }),
-        { focusWithinProps: h } = (0, a.L_)({
+        { focusWithinProps: p } = (0, a.L_)({
             isDisabled: !r,
             onFocusWithinChange: f
         });
     return {
         isFocused: o,
         isFocusVisible: u,
-        focusProps: r ? h : _
+        focusProps: r ? p : _
     };
 }
 let O = i.createContext(null);
@@ -632,7 +632,7 @@ function L(e, t) {
         (0, r.bt)(() => {
             if ((null == e ? void 0 : e.current) && !n) {
                 let t = () => {
-                    e.current && s(!!T(e.current, { tabbable: !0 }).nextNode());
+                    e.current && s(!!S(e.current, { tabbable: !0 }).nextNode());
                 };
                 t();
                 let n = new MutationObserver(t);

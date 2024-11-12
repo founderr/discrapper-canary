@@ -59,7 +59,7 @@ function d(e) {
 }
 ((r = i || (i = {})).CHANNEL_SELECTOR = 'ChannelSelector'), (r.DETAILS = 'Details'), (r.PREVIEW = 'Preview');
 function f(e, t, n) {
-    let { name: r, description: i, privacyLevel: s, channelId: o, scheduledStartTime: u, scheduledEndTime: d, entityType: f, entityMetadata: _, image: h, recurrenceRule: p, eventExceptions: m } = e;
+    let { name: r, description: i, privacyLevel: s, channelId: o, scheduledStartTime: u, scheduledEndTime: d, entityType: f, entityMetadata: _, image: p, recurrenceRule: h, eventExceptions: m } = e;
     return {
         id: null != n ? n : l.Ku,
         name: r,
@@ -69,12 +69,12 @@ function f(e, t, n) {
         scheduled_end_time: d,
         entity_type: f,
         entity_metadata: null != _ ? _ : null,
-        image: null != h ? h : void 0,
+        image: null != p ? p : void 0,
         channel_id: o,
         guild_id: t,
         creator_id: a.default.getId(),
         status: l.p1.SCHEDULED,
-        recurrence_rule: c(p),
+        recurrence_rule: c(h),
         guild_scheduled_event_exceptions: m.map((e) => ({
             event_exception_id: e.eventExceptionId,
             event_id: e.eventId,
@@ -87,7 +87,7 @@ function f(e, t, n) {
 }
 function _(e, t) {
     var n, r, i, a, u, c, f, _;
-    let h = {
+    let p = {
         name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : '',
         privacyLevel: null !== (r = null == e ? void 0 : e.privacy_level) && void 0 !== r ? r : l.j8.GUILD_ONLY,
         description: null !== (i = null == e ? void 0 : e.description) && void 0 !== i ? i : '',
@@ -110,7 +110,7 @@ function _(e, t) {
     };
     if (null != (_ = e) && 'id' in _ && (null == e ? void 0 : e.entity_type) === l.WX.EXTERNAL) {
         let t = (0, s.cS)(e);
-        null != t && (h.entityMetadata = { location: t });
-    } else null == h.channelId && null != t && ((h.channelId = t.id), t.isGuildStageVoice() ? (h.entityType = l.WX.STAGE_INSTANCE) : t.isGuildVoice() && (h.entityType = l.WX.VOICE));
-    return h;
+        null != t && (p.entityMetadata = { location: t });
+    } else null == p.channelId && null != t && ((p.channelId = t.id), t.isGuildStageVoice() ? (p.entityType = l.WX.STAGE_INSTANCE) : t.isGuildVoice() && (p.entityType = l.WX.VOICE));
+    return p;
 }

@@ -18,8 +18,8 @@ var r = n(512722),
     d = n(428595),
     f = n(594199),
     _ = n(364458),
-    h = n(70956),
-    p = n(40786),
+    p = n(70956),
+    h = n(40786),
     m = n(362092);
 let g = {
         link: { type: 'skip' },
@@ -135,9 +135,9 @@ let g = {
 for (let e in d.Z.RULES) {
     if (!(e in g)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
     let t = g[e];
-    'skip' !== t.type && (v[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (I[e] = S('text' === e ? f.ZP : d.Z.RULES[e]));
+    'skip' !== t.type && (v[e] = b(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (I[e] = b('text' === e ? f.ZP : d.Z.RULES[e]));
 }
-function S(e) {
+function b(e) {
     i()(null != e.parse, 'Slate: rule must have a parse function');
     let t = e.parse;
     return {
@@ -148,7 +148,7 @@ function S(e) {
         }
     };
 }
-let T = {
+let S = {
         url: {
             parse: (e) =>
                 null == (0, c.yw)(e[1])
@@ -201,14 +201,14 @@ let T = {
                       }
         }
     },
-    b = /(-# +)/,
-    y = (0, _.Z)([v, T]),
-    A = (0, _.Z)([I, T]),
+    T = /(-# +)/,
+    y = (0, _.Z)([v, S]),
+    A = (0, _.Z)([I, S]),
     N = l._p(y),
     C = l._p(A),
     R = {
         max: 1 / 0,
-        maxAge: 1 * h.Z.Millis.MINUTE,
+        maxAge: 1 * p.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
     O = new (s())(R),
@@ -357,7 +357,7 @@ function x(e, t, n, r, a) {
                 }
             });
         case 'timestamp':
-            if (p.Z.getCurrentConfig({ location: 'c70cbb_1' }, { autoTrackExposure: !1 }).enabled)
+            if (h.Z.getCurrentConfig({ location: 'c70cbb_1' }, { autoTrackExposure: !1 }).enabled)
                 return P({
                     result: e,
                     sourceText: t,
@@ -394,7 +394,7 @@ function x(e, t, n, r, a) {
                     };
                 if ('subtext' === t)
                     return {
-                        before: b.exec(r.input)[1],
+                        before: T.exec(r.input)[1],
                         after: ''
                     };
                 let i = g['link' === t ? 'url' : t];

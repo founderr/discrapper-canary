@@ -115,7 +115,7 @@ function _(e) {
         E = a.length > 4,
         v = a.length - 3,
         I = v >= 10 ? 1 : 2,
-        S = g.map((e, t) => {
+        b = g.map((e, t) => {
             let i = a[t];
             if (null == i) return null;
             let o = E && t === I;
@@ -128,8 +128,8 @@ function _(e) {
                         transform: 'translateX('.concat(e.translateX, 'px) translateY(').concat(e.translateY, 'px) scale(').concat(e.scale, ')')
                     },
                     children: o
-                        ? (0, r.jsx)(h, { count: v })
-                        : (0, r.jsx)(p, {
+                        ? (0, r.jsx)(p, { count: v })
+                        : (0, r.jsx)(h, {
                               guildId: n,
                               user: i
                           })
@@ -141,11 +141,11 @@ function _(e) {
         className: o === c.BRd.DARK ? d.gradientContainerDark : d.gradientContainer,
         children: (0, r.jsx)('div', {
             className: d.groupContainer,
-            children: S
+            children: b
         })
     });
 }
-function h(e) {
+function p(e) {
     let { count: t } = e;
     return (0, r.jsx)('div', {
         className: d.avatarWrapper,
@@ -158,7 +158,7 @@ function h(e) {
         })
     });
 }
-function p(e) {
+function h(e) {
     let { guildId: t, user: n } = e;
     return null == i.useMemo(() => (null == n ? void 0 : n.getAvatarSource(t, !1, 30)), [t, n])
         ? null

@@ -19,16 +19,16 @@ var r = n(512722),
     d = n(904245),
     f = n(911969),
     _ = n(386696),
-    h = n(957730),
-    p = n(968437),
+    p = n(957730),
+    h = n(968437),
     m = n(928477),
     g = n(665906),
     E = n(695346),
     v = n(592125),
     I = n(496675),
-    S = n(594174),
-    T = n(70956),
-    b = n(51144),
+    b = n(594174),
+    S = n(70956),
+    T = n(51144),
     y = n(895924),
     A = n(689079),
     N = n(981631),
@@ -344,8 +344,8 @@ let O = n(227419).Z,
                 let { channel: i } = t,
                     a = null !== (n = D(e, 'name')) && void 0 !== n ? n : '',
                     s = null !== (r = D(e, 'message')) && void 0 !== r ? r : '',
-                    l = await (0, m.gK)(i, a, o.d.PUBLIC_THREAD, (0, p.WD)(i, null), 'Slash Command');
-                d.Z.sendMessage(l.id, h.ZP.parse(l, s));
+                    l = await (0, m.gK)(i, a, o.d.PUBLIC_THREAD, (0, h.WD)(i, null), 'Slash Command');
+                d.Z.sendMessage(l.id, p.ZP.parse(l, s));
             }
         },
         {
@@ -402,9 +402,9 @@ let O = n(227419).Z,
                 }
                 (async () => {
                     var t;
-                    let n = S.default.getUser(a);
+                    let n = b.default.getUser(a);
                     if (null == n) throw Error();
-                    await c.Z.kickUser(r.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: b.ZP.getUserTag(n) }));
+                    await c.Z.kickUser(r.id, a, null !== (t = D(e, 'reason')) && void 0 !== t ? t : ''), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t['9wzHDQ'], { user: T.ZP.getUserTag(n) }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.l0gNlp));
                 });
@@ -457,32 +457,32 @@ let O = n(227419).Z,
                             {
                                 name: R.intl.string(R.t.RKpitb),
                                 displayName: R.intl.string(R.t.RKpitb),
-                                value: T.Z.Seconds.HOUR
+                                value: S.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t['8WfJZ2']),
                                 displayName: R.intl.string(R.t['8WfJZ2']),
-                                value: 6 * T.Z.Seconds.HOUR
+                                value: 6 * S.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.p1up7u),
                                 displayName: R.intl.string(R.t.p1up7u),
-                                value: 12 * T.Z.Seconds.HOUR
+                                value: 12 * S.Z.Seconds.HOUR
                             },
                             {
                                 name: R.intl.string(R.t.XuVkkJ),
                                 displayName: R.intl.string(R.t.XuVkkJ),
-                                value: T.Z.Seconds.DAY
+                                value: S.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.gMcDS0),
                                 displayName: R.intl.string(R.t.gMcDS0),
-                                value: 3 * T.Z.Seconds.DAY
+                                value: 3 * S.Z.Seconds.DAY
                             },
                             {
                                 name: R.intl.string(R.t.FA7IUl),
                                 displayName: R.intl.string(R.t.FA7IUl),
-                                value: 7 * T.Z.Seconds.DAY
+                                value: 7 * S.Z.Seconds.DAY
                             }
                         ];
                     }
@@ -518,8 +518,8 @@ let O = n(227419).Z,
                     if ('' === a) throw Error();
                     let s = null !== (t = D(e, 'delete_messages')) && void 0 !== t ? t : 0,
                         o = null !== (n = D(e, 'reason')) && void 0 !== n ? n : '',
-                        l = S.default.getUser(a);
-                    await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? b.ZP.getUserTag(l) : a }));
+                        l = b.default.getUser(a);
+                    await c.Z.banUser(r.id, a, s, o), d.Z.sendBotMessage(i.id, R.intl.formatToPlainString(R.t.YflWdH, { user: null != l ? T.ZP.getUserTag(l) : a }));
                 })().catch(() => {
                     d.Z.sendBotMessage(i.id, R.intl.string(R.t.w2J6Qk));
                 });
@@ -599,7 +599,7 @@ let O = n(227419).Z,
                     var t, a;
                     let o = null !== (t = D(e, 'duration')) && void 0 !== t ? t : '',
                         l = null !== (a = D(e, 'reason')) && void 0 !== a ? a : '',
-                        u = S.default.getUser(i);
+                        u = b.default.getUser(i);
                     if (null == u) throw Error();
                     await c.Z.setCommunicationDisabledUntil({
                         guildId: n.id,
@@ -611,7 +611,7 @@ let O = n(227419).Z,
                         d.Z.sendBotMessage(
                             r.id,
                             R.intl.formatToPlainString(R.t.BbRV6u, {
-                                user: b.ZP.getUserTag(u),
+                                user: T.ZP.getUserTag(u),
                                 duration: o
                             })
                         );
@@ -659,7 +659,7 @@ let O = n(227419).Z,
                     required: !0,
                     get maxLength() {
                         var w;
-                        return (null === (w = S.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
+                        return (null === (w = b.default.getCurrentUser()) || void 0 === w ? void 0 : w.premiumType) ? N.en1 : N.J6R;
                     }
                 }
             ],
@@ -671,7 +671,7 @@ let O = n(227419).Z,
                 (async () => {
                     await u.Z.openPrivateChannel(a).then((e) => {
                         let t = v.Z.getChannel(e);
-                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, h.ZP.parse(t, s));
+                        i()(null != t, 'Newly created PrivateChannel is null'), d.Z.sendMessage(t.id, p.ZP.parse(t, s));
                     });
                 })().catch(() => {
                     d.Z.sendBotMessage(r.id, R.intl.string(R.t['3XaE9/']));

@@ -26,8 +26,8 @@ function S() {
         S = m.vF.useSetting(),
         T = m.H1.useSetting(),
         C = m.ev.useSetting(),
-        _ = m.x4.useSetting(),
-        E = m.RS.useSetting(),
+        E = m.x4.useSetting(),
+        _ = m.RS.useSetting(),
         f = m.NA.useSetting(),
         I = m.nc.useSetting(),
         { analyticsLocations: N } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
@@ -46,7 +46,7 @@ function S() {
                         setting: h.s6.CHAT_INLINE_MEDIA_LINKS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(x.marginTop8, x.marginBottom20),
-                            value: E,
+                            value: _,
                             onChange: m.RS.updateSetting,
                             children: p.intl.string(p.t.U47N1t)
                         })
@@ -55,7 +55,7 @@ function S() {
                         setting: h.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(l.FormSwitch, {
                             className: r()(x.marginTop8, x.marginBottom20),
-                            value: _,
+                            value: E,
                             note: p.intl.formatToPlainString(p.t.qjjvqK, { maxSize: 10 }),
                             onChange: m.x4.updateSetting,
                             children: p.intl.string(p.t.VP11Nj)

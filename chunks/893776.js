@@ -17,16 +17,16 @@ var i,
     d = n(881052),
     f = n(882037),
     _ = n(710845),
-    h = n(57132),
-    p = n(703656),
+    p = n(57132),
+    h = n(703656),
     m = n(365007),
     g = n(314897),
     E = n(480294),
     v = n(573261),
     I = n(572691),
-    S = n(981631),
-    T = n(792101);
-let b = new _.Z('AuthenticationActionCreators'),
+    b = n(981631),
+    S = n(792101);
+let T = new _.Z('AuthenticationActionCreators'),
     y = null;
 function A(e) {
     let t = {
@@ -35,15 +35,15 @@ function A(e) {
     };
     c.Z.dispatch(t).catch((e) => {
         var t;
-        throw (b.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
+        throw (T.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
     });
 }
 function N() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT;
     if ((A(), null == e)) return;
-    let t = (0, h.PP)();
+    let t = (0, p.PP)();
     if (null == t) {
-        (0, p.uL)(e);
+        (0, h.uL)(e);
         return;
     }
     I.Z.popAll(),
@@ -76,11 +76,11 @@ function N() {
             c.Z.dispatch({
                 type: 'LOGIN',
                 login: n,
-                loginMethod: null != i && '' !== i ? S.nnr.LOGIN_CODE : S.nnr.PASSWORD
+                loginMethod: null != i && '' !== i ? b.nnr.LOGIN_CODE : b.nnr.PASSWORD
             }),
                 this.setLoginCredentials(n, null !== (t = null != r ? r : i) && void 0 !== t ? t : void 0),
                 v.Z.post({
-                    url: S.ANM.LOGIN,
+                    url: b.ANM.LOGIN,
                     body: {
                         login: n,
                         password: r,
@@ -135,7 +135,7 @@ function N() {
                             return;
                         }
                         let s = null === (i = e.body) || void 0 === i ? void 0 : i.code;
-                        s === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
+                        s === b.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
                             ? c.Z.dispatch({
                                   type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
                                   credentials: {
@@ -143,7 +143,7 @@ function N() {
                                       password: r
                                   }
                               })
-                            : s === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
+                            : s === b.evJ.ACCOUNT_DISABLED && null != r && '' !== r
                               ? c.Z.dispatch({
                                     type: 'LOGIN_ACCOUNT_DISABLED',
                                     credentials: {
@@ -151,7 +151,7 @@ function N() {
                                         password: r
                                     }
                                 })
-                              : s === S.evJ.PHONE_VERIFICATION_REQUIRED
+                              : s === b.evJ.PHONE_VERIFICATION_REQUIRED
                                 ? c.Z.dispatch({ type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED' })
                                 : c.Z.dispatch({
                                       type: 'LOGIN_FAILURE',
@@ -163,7 +163,7 @@ function N() {
         loginMFAv2(e) {
             let { code: t, ticket: n, source: r, giftCodeSKUId: i, isMultiAccount: a, mfaType: o } = e;
             return v.Z.post({
-                url: S.ANM.LOGIN_MFA(o),
+                url: b.ANM.LOGIN_MFA(o),
                 body: {
                     code: t,
                     ticket: n,
@@ -191,7 +191,7 @@ function N() {
                         });
                         return;
                     }
-                    if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === S.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
+                    if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === b.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
                     throw e;
                 });
         },
@@ -226,7 +226,7 @@ function N() {
         loginWebAuthn(e) {
             let { ticket: t, credential: n, source: r, giftCodeSKUId: i } = e;
             return v.Z.post({
-                url: S.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+                url: b.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
                 body: {
                     credential: n,
                     ticket: t,
@@ -297,15 +297,15 @@ function N() {
         },
         logout() {
             var e;
-            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT,
+            let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT,
                 n = arguments.length > 1 ? arguments[1] : void 0;
             return v.Z.post({
-                url: S.ANM.LOGOUT,
+                url: b.ANM.LOGOUT,
                 body: {
-                    provider: (0, T.xJ)(),
-                    token: u.K.get(S.JkL),
-                    voip_provider: T.mv,
-                    voip_token: u.K.get(S.scU)
+                    provider: (0, S.xJ)(),
+                    token: u.K.get(b.JkL),
+                    voip_provider: S.mv,
+                    voip_token: u.K.get(b.scU)
                 },
                 oldFormErrors: !0,
                 trackedActionData: { event: s.NetworkActionNames.USER_LOGOUT },
@@ -318,7 +318,7 @@ function N() {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 n = g.default.getToken();
             return (
-                b.log('Switching accounts', {
+                T.log('Switching accounts', {
                     wasLoggedIn: null != n,
                     tokenHasChanged: e !== n
                 }),
@@ -328,15 +328,15 @@ function N() {
                 }),
                 this.loginToken(e, !0).then(() => {
                     let t = g.default.getToken();
-                    b.log('Switched accounts finished', { isCorrectToken: e === t });
+                    T.log('Switched accounts finished', { isCorrectToken: e === t });
                 })
             );
         },
         verifySSOToken() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
+            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : b.Z5c.DEFAULT_LOGGED_OUT;
             return l.tn
                 .get({
-                    url: S.ANM.ME,
+                    url: b.ANM.ME,
                     oldFormErrors: !0
                 })
                 .catch(() => N(e));
@@ -344,7 +344,7 @@ function N() {
         verify(e) {
             null != e
                 ? v.Z.post({
-                      url: S.ANM.VERIFY,
+                      url: b.ANM.VERIFY,
                       body: { token: e },
                       oldFormErrors: !0,
                       trackedActionData: { event: s.NetworkActionNames.USER_VERIFY }
@@ -373,7 +373,7 @@ function N() {
         async authorizePayment(e) {
             try {
                 await v.Z.post({
-                    url: S.ANM.AUTHORIZE_PAYMENT,
+                    url: b.ANM.AUTHORIZE_PAYMENT,
                     body: { token: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.AUTHORIZE_PAYMENT }
@@ -396,7 +396,7 @@ function N() {
             }
             try {
                 await v.Z.post({
-                    url: S.ANM.AUTHORIZE_IP,
+                    url: b.ANM.AUTHORIZE_IP,
                     body: { token: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.AUTHORIZE_IP }
@@ -411,7 +411,7 @@ function N() {
         },
         verifyResend: () =>
             v.Z.post({
-                url: S.ANM.VERIFY_RESEND,
+                url: b.ANM.VERIFY_RESEND,
                 oldFormErrors: !0,
                 trackedActionData: { event: s.NetworkActionNames.USER_VERIFY_RESEND }
             }),
@@ -422,16 +422,16 @@ function N() {
                     password: t,
                     source: n
                 },
-                i = u.K.get(S.JkL),
-                a = (0, T.xJ)();
+                i = u.K.get(b.JkL),
+                a = (0, S.xJ)();
             null != a && null != i && ((r.push_provider = a), (r.push_token = i));
-            let o = u.K.get(S.scU);
-            null != T.mv && null != o && ((r.push_voip_provider = T.mv), (r.push_voip_token = o));
+            let o = u.K.get(b.scU);
+            null != S.mv && null != o && ((r.push_voip_provider = S.mv), (r.push_voip_token = o));
             try {
                 let {
                     body: { mfa: e, sms: t, webauthn: n, ticket: i, token: a, backup: o, totp: l }
                 } = await v.Z.post({
-                    url: S.ANM.RESET_PASSWORD,
+                    url: b.ANM.RESET_PASSWORD,
                     body: r,
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.USER_RESET_PASSWORD }
@@ -461,7 +461,7 @@ function N() {
                 c.Z.dispatch({ type: 'LOGIN_MFA' }),
                 (
                     await v.Z.post({
-                        url: S.ANM.RESET_PASSWORD,
+                        url: b.ANM.RESET_PASSWORD,
                         body: {
                             code: n,
                             ticket: r,
@@ -483,7 +483,7 @@ function N() {
             this.setLoginCredentials(e), c.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
             try {
                 await v.Z.post({
-                    url: S.ANM.FORGOT_PASSWORD,
+                    url: b.ANM.FORGOT_PASSWORD,
                     body: { login: e },
                     oldFormErrors: !0,
                     trackedActionData: { event: s.NetworkActionNames.FORGOT_PASSWORD }
@@ -492,7 +492,7 @@ function N() {
             } catch (t) {
                 let e = new d.yZ(t);
                 throw (
-                    (e.code === S.evJ.PHONE_VERIFICATION_REQUIRED
+                    (e.code === b.evJ.PHONE_VERIFICATION_REQUIRED
                         ? c.Z.dispatch({ type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION' })
                         : c.Z.dispatch({
                               type: 'LOGIN_FAILURE',
@@ -526,7 +526,7 @@ function N() {
                   }, 5000)),
                   (y = l.tn
                       .get({
-                          url: S.ANM.AUTH_LOCATION_METADATA,
+                          url: b.ANM.AUTH_LOCATION_METADATA,
                           retries: 2,
                           oldFormErrors: !0
                       })

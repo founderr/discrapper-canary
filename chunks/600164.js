@@ -62,12 +62,12 @@ _.defaultProps = {
     basis: 'auto',
     wrap: !1
 };
-let h = (e) => {
-    let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: _ = f.NO_WRAP, shrink: h, grow: p, basis: m, style: g, ...E } = e;
+let p = (e) => {
+    let { children: t, className: n, direction: i = u.HORIZONTAL, justify: a = c.START, align: l = d.STRETCH, wrap: _ = f.NO_WRAP, shrink: p, grow: h, basis: m, style: g, ...E } = e;
     return (0, r.jsx)('div', {
         style: {
-            flexShrink: h,
-            flexGrow: p,
+            flexShrink: p,
+            flexGrow: h,
             flexBasis: m,
             ...g
         },
@@ -76,14 +76,14 @@ let h = (e) => {
         children: t
     });
 };
-(h.defaultProps = {
+(p.defaultProps = {
     shrink: 1,
     grow: 1,
     basis: 'auto'
 }),
-    (h.Child = _),
-    (h.Direction = u),
-    (h.Align = d),
-    (h.Justify = c),
-    (h.Wrap = f),
-    (t.Z = h);
+    (p.Child = _),
+    (p.Direction = u),
+    (p.Align = d),
+    (p.Justify = c),
+    (p.Wrap = f),
+    (t.Z = p);

@@ -6,7 +6,7 @@ n.d(t, {
         return r;
     },
     ND: function () {
-        return p;
+        return h;
     },
     WC: function () {
         return g;
@@ -15,16 +15,16 @@ n.d(t, {
         return f;
     },
     af: function () {
-        return T;
+        return S;
     },
     k0: function () {
-        return S;
+        return b;
     },
     km: function () {
         return I;
     },
     no: function () {
-        return h;
+        return p;
     },
     o6: function () {
         return v;
@@ -80,7 +80,7 @@ function _(e) {
     }
 }
 ((s = r || (r = {}))[(s.RESOLUTION_480 = 480)] = 'RESOLUTION_480'), (s[(s.RESOLUTION_720 = 720)] = 'RESOLUTION_720'), (s[(s.RESOLUTION_1080 = 1080)] = 'RESOLUTION_1080'), (s[(s.RESOLUTION_1440 = 1440)] = 'RESOLUTION_1440'), (s[(s.RESOLUTION_SOURCE = 0)] = 'RESOLUTION_SOURCE'), ((o = i || (i = {}))[(o.FPS_5 = 5)] = 'FPS_5'), (o[(o.FPS_15 = 15)] = 'FPS_15'), (o[(o.FPS_30 = 30)] = 'FPS_30'), (o[(o.FPS_60 = 60)] = 'FPS_60'), ((l = a || (a = {}))[(l.PRESET_VIDEO = 1)] = 'PRESET_VIDEO'), (l[(l.PRESET_DOCUMENTS = 2)] = 'PRESET_DOCUMENTS'), (l[(l.PRESET_CUSTOM = 3)] = 'PRESET_CUSTOM');
-let h = {
+let p = {
         2: [
             {
                 resolution: 0,
@@ -111,7 +111,7 @@ let h = {
         ],
         3: []
     },
-    p = [
+    h = [
         {
             resolution: 0,
             fps: 60,
@@ -217,5 +217,5 @@ let g = [m(720), m(1080), m(1440), m(0, () => d.intl.string(d.t.XjXqzs))],
     E = [m(720), m(1080), m(1440)],
     v = (e) => (0 === e ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e })),
     I = [m(480, () => v(480)), m(720, () => v(720)), m(1080, () => v(1080)), m(1440, () => v(1440)), m(0, () => v(0))],
-    S = [m(15), m(30), m(60)],
-    T = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];
+    b = [m(15), m(30), m(60)],
+    S = [m(15, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 15 })), m(30, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 30 })), m(60, () => d.intl.formatToPlainString(d.t['bW+JCQ'], { value: 60 }))];

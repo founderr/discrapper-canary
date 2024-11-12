@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(925549),
     f = n(37234),
     _ = n(835473),
-    h = n(358221),
-    p = n(928518),
+    p = n(358221),
+    h = n(928518),
     m = n(703656),
     g = n(607187),
     E = n(937995),
     v = n(366050),
     I = n(944486),
-    S = n(594174),
-    T = n(566620),
-    b = n(317381),
+    b = n(594174),
+    S = n(566620),
+    T = n(317381),
     y = n(175894),
     A = n(246106),
     N = n(963614),
@@ -37,8 +37,8 @@ function U(e) {
     var t, n, a;
     let { channel: y, isLoading: A } = e,
         [U, G] = i.useState(!1),
-        B = (0, o.e7)([b.ZP], () => b.ZP.getSelfEmbeddedActivityForChannel(y.id)),
-        Z = (0, o.e7)([b.ZP], () => b.ZP.getActivityPanelMode()),
+        B = (0, o.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivityForChannel(y.id)),
+        Z = (0, o.e7)([T.ZP], () => T.ZP.getActivityPanelMode()),
         F = (0, _.q)(null == B ? void 0 : B.applicationId),
         V = null == B ? void 0 : B.launchId,
         j = (0, o.e7)([I.Z], () => I.Z.getChannelId() === y.id),
@@ -49,15 +49,15 @@ function U(e) {
                 isHidden: v.Z.isEmbeddedActivityHidden()
             };
         }),
-        W = (0, o.e7)([p.Z], () => p.Z.getWindow(x.KJ3.CHANNEL_CALL_POPOUT)),
+        W = (0, o.e7)([h.Z], () => h.Z.getWindow(x.KJ3.CHANNEL_CALL_POPOUT)),
         {
             activityParticipant: K,
             selectedParticipant: z,
             participantsOpen: q
-        } = (0, o.cj)([h.Z], () => ({
-            activityParticipant: null != B ? h.Z.getParticipant(y.id, B.applicationId) : null,
-            selectedParticipant: h.Z.getSelectedParticipant(y.id),
-            participantsOpen: h.Z.getParticipantsOpen(y.id)
+        } = (0, o.cj)([p.Z], () => ({
+            activityParticipant: null != B ? p.Z.getParticipant(y.id, B.applicationId) : null,
+            selectedParticipant: p.Z.getSelectedParticipant(y.id),
+            participantsOpen: p.Z.getParticipantsOpen(y.id)
         })),
         Q = j || null != W,
         X = (0, C.Z)(y.id),
@@ -86,7 +86,7 @@ function U(e) {
     }, [null == B ? void 0 : B.applicationId, ee]);
     if (null == B || null == V || (null == K && (0, C.Z)(y.id)) || null == F) return null;
     let ei = Array.from(B.userIds)
-            .map((e) => S.default.getUser(e))
+            .map((e) => b.default.getUser(e))
             .filter((e) => null != e),
         ea = {
             instance_id: null !== (a = null !== (n = B.compositeInstanceId) && void 0 !== n ? n : B.launchId) && void 0 !== a ? a : '',
@@ -100,7 +100,7 @@ function U(e) {
             timeout: 2000,
             children: (e) => {
                 var t, n, i, a, o, u, c, d;
-                let { idle: f, onActive: _, onForceIdle: h } = e;
+                let { idle: f, onActive: _, onForceIdle: p } = e;
                 return (0, r.jsxs)(g.Z, {
                     className: s()(M.root, {
                         [M.pipMode]: ee,
@@ -117,7 +117,7 @@ function U(e) {
                             className: 'theme-dark',
                             children:
                                 ((i = _),
-                                (a = h),
+                                (a = p),
                                 (o = f),
                                 (u = $),
                                 (c = ei),
@@ -143,7 +143,7 @@ function U(e) {
                                                     onMouseDown: i,
                                                     onMouseLeave: a,
                                                     onJumpToChannel: () => {
-                                                        en(), (0, T.tg)(L.Ez.PANEL);
+                                                        en(), (0, S.tg)(L.Ez.PANEL);
                                                     },
                                                     channel: y,
                                                     applicationId: B.applicationId,

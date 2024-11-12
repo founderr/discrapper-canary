@@ -28,9 +28,9 @@ function l(e, t, n) {
         c = void 0 === l ? s.MATCHES : l,
         f = i.baseSort,
         _ = void 0 === f ? o : f,
-        h = i.sorter;
+        p = i.sorter;
     return (
-        void 0 === h
+        void 0 === p
             ? function (e) {
                   return e.sort(function (e, t) {
                       return (function (e, t, n) {
@@ -42,7 +42,7 @@ function l(e, t, n) {
                       })(e, t, _);
                   });
               }
-            : h
+            : p
     )(
         e.reduce(function (e, i, o) {
             var l = (function (e, t, n, i) {
@@ -104,15 +104,15 @@ function l(e, t, n) {
                                       d = t.itemValue,
                                       f = t.attributes,
                                       _ = u(d, n, i),
-                                      h = o,
-                                      p = f.minRanking,
+                                      p = o,
+                                      h = f.minRanking,
                                       m = f.maxRanking,
                                       g = f.threshold;
                                   return (
-                                      _ < p && _ >= s.MATCHES ? (_ = p) : _ > m && (_ = m),
-                                      _ > a && ((a = _), (l = r), (c = g), (h = d)),
+                                      _ < h && _ >= s.MATCHES ? (_ = h) : _ > m && (_ = m),
+                                      _ > a && ((a = _), (l = r), (c = g), (p = d)),
                                       {
-                                          rankedValue: h,
+                                          rankedValue: p,
                                           rank: a,
                                           keyIndex: l,
                                           keyThreshold: c

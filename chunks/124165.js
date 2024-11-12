@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     cg: function () {
-        return h;
+        return p;
     },
     pF: function () {
         return _;
@@ -37,13 +37,13 @@ function _() {
         }
     ];
 }
-function h(e) {
+function p(e) {
     let { eventId: t, recurrenceId: n, guildId: r, updateRsvp: i, openRsvpPicker: a, onRsvp: d } = e,
         _ = s.ZP.getGuildScheduledEvent(t);
     if (null == _) return;
-    let h = (0, o.c)(n, t),
-        { startTime: p } = (0, l.Kq)(_, n),
-        m = (null == _ ? void 0 : _.scheduled_start_time) != null ? (0, u.lh)(h, p, new Date(null == _ ? void 0 : _.scheduled_start_time)) : null,
+    let p = (0, o.c)(n, t),
+        { startTime: h } = (0, l.Kq)(_, n),
+        m = (null == _ ? void 0 : _.scheduled_start_time) != null ? (0, u.lh)(p, h, new Date(null == _ ? void 0 : _.scheduled_start_time)) : null,
         g = null != m && c.$I.has(m) ? null : null != n ? n : (0, u.DK)(_),
         E = f(_.id),
         v = f(_.id, g);

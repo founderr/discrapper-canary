@@ -9,7 +9,7 @@ n.d(t, {
         return E;
     },
     k: function () {
-        return p;
+        return h;
     },
     mB: function () {
         return g;
@@ -27,8 +27,8 @@ var r = n(512722),
     d = n(594174),
     f = n(573261),
     _ = n(981631);
-let h = new s.Yd('UserProfileModalActionCreators');
-function p() {
+let p = new s.Yd('UserProfileModalActionCreators');
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
     return o.tn
@@ -137,7 +137,7 @@ async function v(e) {
         );
     } catch (t) {
         throw (
-            (null != t && (null == t ? void 0 : t.body) != null && h.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
+            (null != t && (null == t ? void 0 : t.body) != null && p.warn('fetchProfile error: '.concat(t.body.code, ' - ').concat(t.body.message)),
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_FAILURE',
                 apiError: new u.Hx(t),

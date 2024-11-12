@@ -18,10 +18,10 @@ n.d(t, {
         return y;
     },
     Je: function () {
-        return T;
+        return S;
     },
     Js: function () {
-        return p;
+        return h;
     },
     KR: function () {
         return N;
@@ -33,7 +33,7 @@ n.d(t, {
         return w;
     },
     Oq: function () {
-        return S;
+        return b;
     },
     P_: function () {
         return E;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     ab: function () {
-        return b;
+        return T;
     },
     e5: function () {
         return O;
@@ -60,7 +60,7 @@ n.d(t, {
         return v;
     },
     qs: function () {
-        return h;
+        return p;
     },
     qz: function () {
         return U;
@@ -86,7 +86,7 @@ var r = n(367907),
     d = n(208970),
     f = n(6496),
     _ = n(981631);
-function h(e) {
+function p(e) {
     let { guildId: t, channelId: n, sessionId: i, postIds: a, additionalTimes: s } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SEEN_BATCH, {
         ...(0, f.xl)({
@@ -99,7 +99,7 @@ function h(e) {
         additional_seen_time_millis: s
     });
 }
-function p(e) {
+function h(e) {
     let { guildId: t, channelId: n, numSearchResults: i } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SEARCHED, {
         ...(0, f.xl)({ channelId: n }),
@@ -150,9 +150,9 @@ function I(e) {
         c = s.Z.getChannel(u);
     if (null == c) return;
     let d = o.Z.getThreadSettings(u),
-        h = null === (t = c.template) || void 0 === t ? void 0 : t.trim(),
-        p = o.Z.getDraft(u, o.d.FirstThreadMessage),
-        m = null == p || 0 === p.length || (null == p ? void 0 : p.trim()) === h,
+        p = null === (t = c.template) || void 0 === t ? void 0 : t.trim(),
+        h = o.Z.getDraft(u, o.d.FirstThreadMessage),
+        m = null == h || 0 === h.length || (null == h ? void 0 : h.trim()) === p,
         g = (null == d ? void 0 : d.appliedTags) == null || (null == d ? void 0 : null === (n = d.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
         E = (null == d ? void 0 : d.name) == null || (null == d ? void 0 : null === (a = d.name) || void 0 === a ? void 0 : null === (i = a.trim()) || void 0 === i ? void 0 : i.length) === 0;
     if (!m || !g || !E)
@@ -164,7 +164,7 @@ function I(e) {
             num_attachments: (0, f.RR)(u)
         });
 }
-function S(e) {
+function b(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
         ...(0, f.xl)({ channelId: n }),
@@ -172,7 +172,7 @@ function S(e) {
         channel_id: n
     });
 }
-function T(e) {
+function S(e) {
     let { guildId: t, channelId: n, postId: i } = e;
     function a() {
         r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POST_CREATED, {
@@ -183,7 +183,7 @@ function T(e) {
     }
     c.Z.isLoading(i) ? c.Z.addConditionalChangeListener(() => !!c.Z.isLoading(i) || (a(), !1)) : a();
 }
-function b(e) {
+function T(e) {
     let { guildId: t, channelId: n } = e;
     r.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SCROLLED, {
         ...(0, f.xl)({ channelId: n }),

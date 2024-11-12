@@ -14,16 +14,16 @@ var r = n(200651),
     d = n(594174),
     f = n(626135),
     _ = n(424218),
-    h = n(63063),
-    p = n(380684),
+    p = n(63063),
+    h = n(380684),
     m = n(74538),
     g = n(684259),
     E = n(104494),
     v = n(639119),
     I = n(631771),
-    S = n(790527),
-    T = n(474936),
-    b = n(981631),
+    b = n(790527),
+    S = n(474936),
+    T = n(981631),
     y = n(731994),
     A = n(388032),
     N = n(128893);
@@ -42,9 +42,9 @@ function C(e) {
                 disable: x
             }
         ),
-        M = (0, p.XS)(),
+        M = (0, h.XS)(),
         P = w || M,
-        k = R === b.BRd.LIGHT ? 'light' : 'dark',
+        k = R === T.BRd.LIGHT ? 'light' : 'dark',
         U = P
             ? (0, r.jsx)('img', {
                   className: N.updatedArt,
@@ -59,22 +59,22 @@ function C(e) {
         B = i.useMemo(() => {
             let e = A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G });
             switch (O) {
-                case T.p9.TIER_0:
+                case S.p9.TIER_0:
                     e = A.intl.formatToPlainString(A.t['/DXKen'], { maxSize: G });
                     break;
-                case T.p9.TIER_1:
+                case S.p9.TIER_1:
                     e = A.intl.formatToPlainString(A.t['Kf/MPD'], { maxSize: G });
             }
             return e;
         }, [O, G]),
-        Z = (0, _.BU)(T.Uq / 1024, { useKibibytes: !0 }),
+        Z = (0, _.BU)(S.Uq / 1024, { useKibibytes: !0 }),
         F = M ? A.intl.string(A.t['9C+41t']) : A.intl.string(A.t['/tGlcn']),
         V = P
             ? M
                 ? (0, g.T)({
                       user: C,
                       onClick: () => {
-                          window.open(h.Z.getArticleURL(b.BhN.NITRO_FAQ), '_blank');
+                          window.open(p.Z.getArticleURL(T.BhN.NITRO_FAQ), '_blank');
                       }
                   })
                 : A.intl.string(A.t.ZcYwgY)
@@ -97,28 +97,28 @@ function C(e) {
                       })
                   ]
               });
-    return (0, r.jsx)(S.Z, {
+    return (0, r.jsx)(b.Z, {
         artElement: U,
         artContainerClassName: P ? N.updatedArtContainer : N.artContainer,
         enableArtBoxShadow: !1,
-        type: T.cd.UPLOAD_ERROR_UPSELL,
+        type: S.cd.UPLOAD_ERROR_UPSELL,
         title: F,
         body: j,
         context: A.intl.formatToPlainString(A.t.q5fTZm, { maxSize: G }),
         glowUp: V,
-        analyticsLocation: { section: b.jXE.FILE_UPLOAD_POPOUT },
+        analyticsLocation: { section: T.jXE.FILE_UPLOAD_POPOUT },
         onClose: t,
-        subscriptionTier: T.Si.TIER_2,
+        subscriptionTier: S.Si.TIER_2,
         secondaryCTA: P ? A.intl.string(A.t.ZnqyZ2) : void 0,
         onSecondaryClick: P
             ? function () {
                   (0, l.Z)(),
                       t(),
-                      f.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
-                          location_section: b.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                          location_object: b.qAy.NAVIGATION_LINK
+                      f.default.track(T.rMx.PREMIUM_PROMOTION_OPENED, {
+                          location_section: T.jXE.FILE_UPLOAD_UPSELL_MODAL,
+                          location_object: T.qAy.NAVIGATION_LINK
                       }),
-                      (0, u.uL)(b.Z5c.APPLICATION_STORE);
+                      (0, u.uL)(T.Z5c.APPLICATION_STORE);
               }
             : void 0,
         showEnhancedUpsell: P,

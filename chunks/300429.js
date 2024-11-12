@@ -15,8 +15,8 @@ var r,
     d = n(570140),
     f = n(70956),
     _ = n(592125),
-    h = n(496675),
-    p = n(981631);
+    p = n(496675),
+    h = n(981631);
 ((a = r || (r = {}))[(a.SendMessage = 0)] = 'SendMessage'), (a[(a.CreateThread = 1)] = 'CreateThread');
 let m = {
     0: {},
@@ -28,7 +28,7 @@ function g(e, t, n) {
             null != m[t][e.id] && (m[t][e.id].timer.stop(), delete m[t][e.id]);
         })(e, t),
         (function (e, t) {
-            return 0 === t ? h.Z.can(p.Plq.MANAGE_CHANNELS, e) || h.Z.can(p.Plq.MANAGE_MESSAGES, e) : h.Z.can(p.Plq.MANAGE_THREADS, e);
+            return 0 === t ? p.Z.can(h.Plq.MANAGE_CHANNELS, e) || p.Z.can(h.Plq.MANAGE_MESSAGES, e) : p.Z.can(h.Plq.MANAGE_THREADS, e);
         })(e, t) || n <= 0)
     )
         return;

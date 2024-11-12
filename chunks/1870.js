@@ -8,18 +8,18 @@ var s,
     d = n(442837),
     f = n(570140);
 let _ = new Map(),
-    h = _,
-    p = !1;
+    p = _,
+    h = !1;
 let m = !1;
 class g extends (s = d.ZP.Store) {
     get isFetching() {
-        return p;
+        return h;
     }
     get isClaiming() {
         return r;
     }
     get purchases() {
-        return h;
+        return p;
     }
     get fetchError() {
         return i;
@@ -31,7 +31,7 @@ class g extends (s = d.ZP.Store) {
         return m;
     }
     getPurchase(e) {
-        return null != e ? h.get(e) : void 0;
+        return null != e ? p.get(e) : void 0;
     }
 }
 (u = 'CollectiblesPurchaseStore'),
@@ -45,26 +45,26 @@ class g extends (s = d.ZP.Store) {
         : (o[l] = u),
     (t.Z = new g(f.Z, {
         COLLECTIBLES_PURCHASES_FETCH: (e) => {
-            (p = !0), (i = void 0);
+            (h = !0), (i = void 0);
         },
         COLLECTIBLES_PURCHASES_FETCH_SUCCESS: (e) => {
-            0 === e.purchases.length ? (h = _) : !(0, c.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (p = !1), (i = void 0);
+            0 === e.purchases.length ? (p = _) : !(0, c.isEqual)([...p.values()], e.purchases) && (p = new Map(e.purchases.map((e) => [e.skuId, e]))), (m = !0), (h = !1), (i = void 0);
         },
         COLLECTIBLES_PURCHASES_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (h = _), (p = !1), (i = t), (m = !0);
+            (p = _), (h = !1), (i = t), (m = !0);
         },
         COLLECTIBLES_CLAIM: (e) => {
             (r = e.skuId), (a = void 0);
         },
         COLLECTIBLES_CLAIM_SUCCESS: (e) => {
-            null == e.purchases || 0 === e.purchases.length ? (h = _) : !(0, c.isEqual)([...h.values()], e.purchases) && (h = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
+            null == e.purchases || 0 === e.purchases.length ? (p = _) : !(0, c.isEqual)([...p.values()], e.purchases) && (p = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
         },
         COLLECTIBLES_CLAIM_FAILURE: (e) => {
             let { error: t, skuId: n } = e;
             (r = n), (a = t);
         },
         LOGOUT: (e) => {
-            (h = _), (p = !1), (r = void 0), (i = void 0), (a = void 0);
+            (p = _), (h = !1), (r = void 0), (i = void 0), (a = void 0);
         }
     }));

@@ -22,16 +22,16 @@ var r = n(512722),
     d = n(687294),
     f = n(367907),
     _ = n(465343),
-    h = n(339085),
-    p = n(906411),
+    p = n(339085),
+    h = n(906411),
     m = n(633302),
     g = n(603721),
     E = n(188597),
     v = n(3148),
     I = n(48854),
-    S = n(346479),
-    T = n(706454),
-    b = n(430824),
+    b = n(346479),
+    S = n(706454),
+    T = n(430824),
     y = n(117530),
     A = n(594174),
     N = n(403182),
@@ -66,7 +66,7 @@ let Z = (e, t) => {
         return t || n ? t : null;
     };
 async function j(e) {
-    var t, n, r, s, l, c, d, h, p, m, g, E, v, I, b, A, N;
+    var t, n, r, s, l, c, d, p, h, m, g, E, v, I, T, A, N;
     let { command: C, optionValues: R, context: D, commandTargetId: x, maxSizeCallback: k, commandOrigin: G = M.bB.CHAT, sectionName: B, interactionLifecycleOptionsFactory: j = z, source: Y } = e,
         K = null !== (r = w.Z.getSource(D.channel.id)) && void 0 !== r ? r : Y,
         Q = null !== (s = w.Z.getCommandOrigin(D.channel.id)) && void 0 !== s ? s : G;
@@ -77,7 +77,7 @@ async function j(e) {
             command: C,
             commandOrigin: Q
         }),
-        await S.Z.unarchiveThreadIfNecessary(D.channel.id);
+        await b.Z.unarchiveThreadIfNecessary(D.channel.id);
     let X = [],
         J = [],
         $ = (0, P.D7)(Q);
@@ -116,8 +116,8 @@ async function j(e) {
             let r = L.OU(R[e.name]);
             if ((i()(null != D.autocomplete || 1 === r.length, 'Option "'.concat(e.name, '" expects a single option type')), null == r[0] && !t)) continue;
             let a =
-                null !== (h = r[0]) && void 0 !== h
-                    ? h
+                null !== (p = r[0]) && void 0 !== p
+                    ? p
                     : {
                           type: 'text',
                           text: ''
@@ -128,7 +128,7 @@ async function j(e) {
                     else if ('text' === a.type) {
                         if ((0, P.BH)(a.text)) n = a.text.trim();
                         else {
-                            let e = (0, _.K)(a.text, null === (p = D.guild) || void 0 === p ? void 0 : p.id, D.channel.id);
+                            let e = (0, _.K)(a.text, null === (h = D.guild) || void 0 === h ? void 0 : h.id, D.channel.id);
                             i()((null == e ? void 0 : e.type) === 'channelMention', 'Failed to resolve '.concat(a.text)), (n = e.channelId);
                         }
                     }
@@ -161,7 +161,7 @@ async function j(e) {
                         if ((0, P.BH)(a.text)) n = a.text.trim();
                         else {
                             let e = (0, _.K)(a.text, null === (I = D.guild) || void 0 === I ? void 0 : I.id, D.channel.id);
-                            (null == e ? void 0 : e.type) === 'userMention' ? (n = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (n = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (n = null === (b = D.guild) || void 0 === b ? void 0 : b.id) : i()(!1, 'Failed to resolve '.concat(a.text));
+                            (null == e ? void 0 : e.type) === 'userMention' ? (n = e.userId) : (null == e ? void 0 : e.type) === 'roleMention' ? (n = e.roleId) : (null == e ? void 0 : e.type) === 'textMention' && '@everyone' === e.text ? (n = null === (T = D.guild) || void 0 === T ? void 0 : T.id) : i()(!1, 'Failed to resolve '.concat(a.text));
                         }
                     }
                     break;
@@ -171,13 +171,13 @@ async function j(e) {
                 case u.jw.INTEGER:
                     if ('text' === a.type) {
                         let t = a.text.trim();
-                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(T.default.locale, t));
+                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(S.default.locale, t));
                     }
                     break;
                 case u.jw.NUMBER:
                     if ('text' === a.type) {
                         let t = a.text.trim();
-                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(T.default.locale, t));
+                        n = null != e.choices ? Number(Z(e.choices, t)) : e.autocomplete ? F(e, t, D, Number) : Number(L.AS(S.default.locale, t));
                     }
                     break;
                 default:
@@ -250,12 +250,12 @@ let H = (e) => {
                 .map((e) =>
                     'emoji' === e.type
                         ? new m.dy({
-                              type: p.B.UNICODE,
+                              type: h.B.UNICODE,
                               names: [e.name.replaceAll(':', '')],
                               surrogates: ''
                           })
                         : 'customEmoji' === e.type
-                          ? h.ZP.getCustomEmojiById(e.emojiId)
+                          ? p.ZP.getCustomEmojiById(e.emojiId)
                           : null
                 )
                 .filter(C.lm)
@@ -270,7 +270,7 @@ let H = (e) => {
         if (e.isCommandType() && null != e.interactionData && null != n.command) {
             let r = {
                 channel: t,
-                guild: null != t.guild_id ? b.Z.getGuild(t.guild_id) : null
+                guild: null != t.guild_id ? T.Z.getGuild(t.guild_id) : null
             };
             W({
                 applicationId: n.command.applicationId,
@@ -283,12 +283,12 @@ let H = (e) => {
     W = (e) => {
         var t;
         let { applicationId: n, data: r, context: i, attachments: a, maxSizeCallback: s, onMessageSuccess: o, analytics_location: l, sectionName: c, source: d, interactionLifecycleOptions: f } = e,
-            { channel: _, guild: h } = i,
-            p = _.id,
-            m = null == h ? void 0 : h.id,
+            { channel: _, guild: p } = i,
+            h = _.id,
+            m = null == p ? void 0 : p.id,
             E = {
                 applicationId: n,
-                channelId: p,
+                channelId: h,
                 guildId: m,
                 data: r,
                 nonce: null !== (t = f.nonce) && void 0 !== t ? t : (0, I.r)(),
@@ -305,7 +305,7 @@ let H = (e) => {
             onFailure: f.onFailure,
             data: {
                 interactionType: u.B8.APPLICATION_COMMAND,
-                channelId: p
+                channelId: h
             }
         }),
             null != a

@@ -28,14 +28,14 @@ let d = {
     },
     f = !1,
     _ = d;
-function h(e) {
+function p(e) {
     _ = {
         ..._,
         ...(null == e ? void 0 : e(_))
     };
 }
-function p() {
-    h(() => d);
+function h() {
+    p(() => d);
 }
 function m() {
     r = u.Z.getCurrentConfig({ location: 'handleExperimentFetch' }, { autoTrackExposure: !1 });
@@ -55,14 +55,14 @@ c(g, 'displayName', 'PerksDemosUIState'),
     c(g, 'persistKey', 'PerksDemosUIState'),
     (t.Z = new g(s.Z, {
         PERMIUM_PERKS_DEMO_FRAME_ANIMATION_PLAYED: function () {
-            h(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
+            p(() => ({ hqStreamingFrameAnimationPlayed: !0 }));
         },
         PREMIUM_PERKS_DEMO_POPOUT_DISMISSED: function () {
-            h(() => ({ hqStreamingPopoutDismissed: !0 }));
+            p(() => ({ hqStreamingPopoutDismissed: !0 }));
         },
         PREMIUM_PERKS_DEMO_OPT_IN_POPOUT_DISMISSED: function () {
             !_.hqStreamingOptInPopoutDismissed &&
-                h((e) => ({
+                p((e) => ({
                     hqStreamingOptInPopoutDismissedCount: e.hqStreamingOptInPopoutDismissedCount + 1,
                     hqStreamingOptInPopoutDismissed: !0
                 }));
@@ -74,15 +74,15 @@ c(g, 'displayName', 'PerksDemosUIState'),
         },
         PREMIUM_PERKS_DEMO_ENABLED: function (e) {
             let { enabled: t } = e;
-            h((e) => ({
+            p((e) => ({
                 hqStreamingIsEnabled: t,
                 hqStreamingDidEnable: t || e.hqStreamingDidEnable
             }));
         },
-        PREMIUM_PERKS_DEMO_UI_RESET: p,
+        PREMIUM_PERKS_DEMO_UI_RESET: h,
         VOICE_STATE_UPDATES: function () {
             if (null == l.Z.getVoiceStateForUser(o.default.getId()))
-                h(() => ({
+                p(() => ({
                     hqStreamingOptInPopoutDismissed: !1,
                     hqStreamingFrameAnimationPlayed: !1
                 }));
@@ -90,5 +90,5 @@ c(g, 'displayName', 'PerksDemosUIState'),
         CONNECTION_OPEN: m,
         EXPERIMENTS_FETCH_SUCCESS: m,
         EXPERIMENT_OVERRIDE_BUCKET: m,
-        LOGOUT: p
+        LOGOUT: h
     }));

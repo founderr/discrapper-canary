@@ -9,12 +9,12 @@ var r = n(481060),
     d = n(779618),
     f = n(39604),
     _ = n(356659),
-    h = n(388032);
-class p extends u.Z {
+    p = n(388032);
+class h extends u.Z {
     showClipsToast() {
         (0, r.showToast)({
             id: 'CLIPS_IN_CALL_WARNING',
-            message: h.intl.string(h.t['d+41qK']),
+            message: p.intl.string(p.t['d+41qK']),
             type: r.ToastType.CLIP,
             options: { duration: _.G$ }
         });
@@ -66,4 +66,4 @@ class p extends u.Z {
         });
     }
 }
-t.Z = new p();
+t.Z = new h();

@@ -83,8 +83,8 @@ var d = (function (e) {
                             })
                     );
                 }),
-                this._rdate.length && e.push(h('RDATE', this._rdate, this.tzid())),
-                this._exdate.length && e.push(h('EXDATE', this._exdate, this.tzid())),
+                this._rdate.length && e.push(p('RDATE', this._rdate, this.tzid())),
+                this._exdate.length && e.push(p('EXDATE', this._exdate, this.tzid())),
                 e
             );
         }),
@@ -120,7 +120,7 @@ function _(e, t) {
     if (!(e instanceof Date)) throw TypeError(String(e) + ' is not Date instance');
     !(0, s.q9)(t.map(Number), Number(e)) && (t.push(e), (0, a.DY)(t));
 }
-function h(e, t, n) {
+function p(e, t, n) {
     var r = !n || 'UTC' === n.toUpperCase(),
         i = r ? ''.concat(e, ':') : ''.concat(e, ';TZID=').concat(n, ':'),
         s = t

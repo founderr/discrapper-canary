@@ -20,8 +20,8 @@ e.exports = function () {
             o,
             u,
             d,
-            h,
             p,
+            h,
             m,
             g,
             E = i < c.length - 1;
@@ -29,13 +29,13 @@ e.exports = function () {
             (a = e),
             (o = E),
             (u = i > 0),
-            (h = d =
+            (p = d =
                 function (e) {
                     !t && (t = e), e && _.forEach(l), !E && (_.forEach(l), f(t));
                 }),
-            (p = !1),
+            (h = !1),
             (d = function () {
-                !p && ((p = !0), h.apply(void 0, arguments));
+                !h && ((h = !0), p.apply(void 0, arguments));
             }),
             (m = !1),
             a.on('close', function () {

@@ -12,8 +12,8 @@ var r = n(192379),
     u = n(388032),
     c = n(170714);
 function d(e, t) {
-    let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: f = !1, isInteracting: _ = !1, allowHeading: h = !1, allowList: p = !1, allowLinks: m = !1, allowDevLinks: g = !1, allowSubtext: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = t,
-        S = (0, i.p)();
+    let { hideSimpleEmbedContent: n, formatInline: d = !1, noStyleAndInteraction: f = !1, isInteracting: _ = !1, allowHeading: p = !1, allowList: h = !1, allowLinks: m = !1, allowDevLinks: g = !1, allowSubtext: E = !1, previewLinkTarget: v = !1, viewingChannelId: I } = t,
+        b = (0, i.p)();
     return r.useMemo(
         () =>
             null != e.customRenderedContent
@@ -36,15 +36,15 @@ function d(e, t) {
                             formatInline: d,
                             noStyleAndInteraction: f,
                             isInteracting: _,
-                            allowHeading: h,
-                            allowList: p,
+                            allowHeading: p,
+                            allowList: h,
                             allowLinks: m,
                             allowSubtext: E,
                             allowDevLinks: g,
                             previewLinkTarget: v,
-                            shouldFilterKeywords: S,
+                            shouldFilterKeywords: b,
                             viewingChannelId: I
                         }),
-        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, f, _, h, p, m, v, E, S]
+        [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, d, f, _, p, h, m, v, E, b]
     );
 }

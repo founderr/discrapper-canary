@@ -31,15 +31,15 @@ function o(e) {
         d = i()(e),
         f = c.luminance(),
         _ = d,
-        h = l + u,
-        p = i().contrast(c, d),
+        p = l + u,
+        h = i().contrast(c, d),
         m = 100;
     for (; m-- > 0; ) {
-        let e = p < l,
-            t = p > h;
+        let e = h < l,
+            t = h > p;
         if (!e && !t) break;
         let n = _.luminance() > f;
-        (_ = (t && n) || (e && !n) ? _.darken() : _.brighten()), (p = i().contrast(c, _));
+        (_ = (t && n) || (e && !n) ? _.darken() : _.brighten()), (h = i().contrast(c, _));
     }
     return s(_);
 }

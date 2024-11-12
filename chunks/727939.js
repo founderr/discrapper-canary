@@ -10,12 +10,12 @@ let l = 48,
     d = 32;
 t.Z = (0, a.Z)(function (e) {
     let { className: t, defaultPosition: n = o.VD2.BOTTOM_RIGHT, children: a, width: f, height: _ } = e,
-        [h, p] = i.useState(n);
+        [p, h] = i.useState(n);
     return (0, r.jsx)(s._, {
         className: t,
-        position: h,
+        position: p,
         id: 0,
-        onMove: (e, t) => p(t),
+        onMove: (e, t) => h(t),
         maxX: f,
         maxY: _,
         edgeOffsetTop: l,

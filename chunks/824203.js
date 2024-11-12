@@ -18,11 +18,11 @@ function c(e, t, n) {
     var r, u, c, d;
     let f = (0, o.Hs)(t, [i.yU.CHAT]),
         _ = (0, a.PL)(!0, !1),
-        h = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
-        p = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
-    if (null == e || p) return !1;
+        p = (0, a.LD)(null == t ? void 0 : t.guild_id, !1),
+        h = (0, s.vC)(null == t ? void 0 : t.guild_id, n);
+    if (null == e || h) return !1;
     let { context: m, userId: g, roleIds: E, isImpersonating: v } = f,
-        I = null === (u = h.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
+        I = null === (u = p.result) || void 0 === u ? void 0 : null === (r = u.sections[e.applicationId]) || void 0 === r ? void 0 : r.descriptor;
     if (void 0 !== I) {
         let n = (0, l.ZJ)(I.permissions, t, null == t ? void 0 : t.guild_id),
             r = (0, l.ML)(I.permissions, null == m ? void 0 : m.guild_id, g, E, v);
@@ -35,8 +35,8 @@ function c(e, t, n) {
         )
             return !1;
     }
-    let S = null === (d = _.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
-    return null != S && e.id in S;
+    let b = null === (d = _.result) || void 0 === d ? void 0 : null === (c = d.sections[e.applicationId]) || void 0 === c ? void 0 : c.commands;
+    return null != b && e.id in b;
 }
 function d(e) {
     switch (e) {

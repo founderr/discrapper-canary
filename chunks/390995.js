@@ -117,7 +117,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        h = [
+        p = [
             c,
             {
                 variants: [
@@ -223,13 +223,13 @@ e.exports = function (e) {
                 relevance: 0
             }
         ].concat(o, l);
-    (u.contains = h), (_.contains = h);
-    let p = [
+    (u.contains = p), (_.contains = p);
+    let h = [
         {
             begin: /^\s*=>/,
             starts: {
                 end: '$',
-                contains: h
+                contains: p
             }
         },
         {
@@ -238,7 +238,7 @@ e.exports = function (e) {
             starts: {
                 end: '$',
                 keywords: a,
-                contains: h
+                contains: p
             }
         }
     ];
@@ -249,7 +249,7 @@ e.exports = function (e) {
             aliases: ['rb', 'gemspec', 'podspec', 'thor', 'irb'],
             keywords: a,
             illegal: /\/\*/,
-            contains: [e.SHEBANG({ binary: 'ruby' })].concat(p).concat(l).concat(h)
+            contains: [e.SHEBANG({ binary: 'ruby' })].concat(h).concat(l).concat(p)
         }
     );
 };

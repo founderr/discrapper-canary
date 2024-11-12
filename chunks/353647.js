@@ -10,8 +10,8 @@ let c = new Map(),
     d = new Set(),
     f = null,
     _ = !1,
-    h = !1;
-function p() {
+    p = !1;
+function h() {
     (c = new Map()), (d = new Set()), (f = null), (_ = !1);
 }
 class m extends (r = o.ZP.Store) {
@@ -33,7 +33,7 @@ class m extends (r = o.ZP.Store) {
         return _;
     }
     get hasInitialized() {
-        return h;
+        return p;
     }
 }
 (s = 'ContentInventoryOutboxStore'),
@@ -47,10 +47,10 @@ class m extends (r = o.ZP.Store) {
         : (i[a] = s),
     (t.Z = new m(l.Z, {
         CONNECTION_OPEN: function () {
-            p(), (h = !0);
+            h(), (p = !0);
         },
         LOGOUT: function () {
-            p();
+            h();
         },
         CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
             let { userId: t } = e;

@@ -1,11 +1,11 @@
 n.d(t, {
     j: function () {
-        return h;
+        return p;
     }
 });
 var r = n(302454);
 let { newline: i, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: f, text: _ } = r.defaultRules,
-    h = {
+    p = {
         newline: i,
         paragraph: a,
         url: s,

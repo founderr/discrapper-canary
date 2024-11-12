@@ -69,7 +69,7 @@ e.exports = function (e) {
             begin: '\\(\\s*',
             end: '\\)'
         },
-        h = {
+        p = {
             endsWithParent: !0,
             relevance: 0
         };
@@ -85,9 +85,9 @@ e.exports = function (e) {
                     { begin: n }
                 ]
             },
-            h
+            p
         ]),
-        (h.contains = [d, f, _, i, a, s, o, l, u, { begin: n }, c]),
+        (p.contains = [d, f, _, i, a, s, o, l, u, { begin: n }, c]),
         {
             name: 'Lisp',
             illegal: /\S/,

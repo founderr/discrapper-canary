@@ -9,16 +9,16 @@ var r = n(620014),
     d = n(325512),
     f = n(990393),
     _ = n(890179),
-    h = n(65064),
-    p = n(207635),
+    p = n(65064),
+    h = n(207635),
     m = n(354199),
     g = n(671660),
     E = n(402428),
     v = n(207757),
     I = n(397985),
-    S = n(706627),
-    T = n(822480),
-    b = n(58834),
+    b = n(706627),
+    S = n(822480),
+    T = n(58834),
     y = n(453342),
     A = '[object Arguments]',
     N = '[object Function]',
@@ -31,12 +31,12 @@ e.exports = function e(t, n, O, D, L, x) {
         P = 2 & n,
         k = 4 & n;
     if ((O && (w = L ? O(t, D, L, x) : O(t)), void 0 !== w)) return w;
-    if (!S(t)) return t;
+    if (!b(t)) return t;
     var U = E(t);
     if (U) {
-        if (((w = p(t)), !M)) return u(t, w);
+        if (((w = h(t)), !M)) return u(t, w);
     } else {
-        var G = h(t),
+        var G = p(t),
             B = G == N || '[object GeneratorFunction]' == G;
         if (v(t)) return l(t, M);
         if (G == C || G == A || (B && !L)) {
@@ -50,7 +50,7 @@ e.exports = function e(t, n, O, D, L, x) {
     var Z = x.get(t);
     if (Z) return Z;
     x.set(t, w),
-        T(t)
+        S(t)
             ? t.forEach(function (r) {
                   w.add(e(r, n, O, r, t, x));
               })
@@ -58,7 +58,7 @@ e.exports = function e(t, n, O, D, L, x) {
               t.forEach(function (r, i) {
                   w.set(i, e(r, n, O, i, t, x));
               });
-    var F = k ? (P ? _ : f) : P ? y : b,
+    var F = k ? (P ? _ : f) : P ? y : T,
         V = U ? void 0 : F(t);
     return (
         i(V || t, function (r, i) {

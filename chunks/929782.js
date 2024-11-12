@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         enable: function () {
-            return T;
+            return S;
         },
         isNotSupported: function () {
             return I;
@@ -10,7 +10,7 @@ n.r(t),
             return y;
         },
         trackToggleSelfMute: function () {
-            return b;
+            return T;
         }
     });
 var r = n(200651);
@@ -25,8 +25,8 @@ var i = n(481060),
     d = n(451478),
     f = n(626135),
     _ = n(13140),
-    h = n(554174),
-    p = n(981631),
+    p = n(554174),
+    h = n(981631),
     m = n(761274),
     g = n(388032);
 let E = new s.Z('AudioActionCreators');
@@ -60,17 +60,17 @@ function I() {
         !0)
     );
 }
-function S(e) {
-    f.default.track(p.rMx.PERMISSIONS_ACKED, {
+function b(e) {
+    f.default.track(h.rMx.PERMISSIONS_ACKED, {
         type: 'audio',
         action: e
     });
 }
-function T() {
+function S() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return I()
         ? Promise.resolve(!1)
-        : (f.default.track(p.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
+        : (f.default.track(h.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
           l.Z.getMediaEngine()
               .enable()
               .then(
@@ -80,52 +80,52 @@ function T() {
                           enabled: !0,
                           unmute: e
                       }),
-                          S(m.PQ.ACCEPTED);
+                          b(m.PQ.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
-                          case p.ETv.NO_DEVICES_FOUND:
-                              S(m.PQ.NO_DEVICES);
+                          case h.ETv.NO_DEVICES_FOUND:
+                              b(m.PQ.NO_DEVICES);
                               break;
-                          case p.ETv.PERMISSION_DENIED:
-                              S(m.PQ.DENIED);
+                          case h.ETv.PERMISSION_DENIED:
+                              b(m.PQ.DENIED);
                               break;
-                          case p.ETv.PERMISSION_DISMISSED:
-                              S(m.PQ.DISMISSED);
+                          case h.ETv.PERMISSION_DISMISSED:
+                              b(m.PQ.DISMISSED);
                               break;
                           default:
-                              S(m.PQ.ERROR), E.warn('unknown getUserMedia error: '.concat(e));
+                              b(m.PQ.ERROR), E.warn('unknown getUserMedia error: '.concat(e));
                       }
                   }
               )
               .then(() => !0));
 }
-function b(e) {
+function T(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = c.Z.getKeybindForAction(p.kg4.TOGGLE_MUTE, !1, !0),
+        r = c.Z.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
         i = u.Z.getVoiceChannelId(),
         a = null != i ? o.Z.getChannel(i) : null;
-    f.default.track(p.rMx.INPUT_MUTE_TOGGLED, {
+    f.default.track(h.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !l.Z.isSelfMute(),
         custom_keybind_assigned: null != r && r.id !== c.E.id,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
-        overlay_activated: null != (0, h.Z)(),
+        overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != a ? a.type : null,
         location: n
     });
 }
 function y(e) {
     let { usedKeybind: t = !1, location: n } = e,
-        r = c.Z.getKeybindForAction(p.kg4.TOGGLE_DEAFEN, !1, !0),
+        r = c.Z.getKeybindForAction(h.kg4.TOGGLE_DEAFEN, !1, !0),
         i = u.Z.getVoiceChannelId(),
         a = null != i ? o.Z.getChannel(i) : null;
-    f.default.track(p.rMx.SELF_DEAFEN_TOGGLED, {
+    f.default.track(h.rMx.SELF_DEAFEN_TOGGLED, {
         enabled: !l.Z.isSelfDeaf(),
         keybind_assigned: null != r ? (0, _.BB)(r.shortcut) : void 0,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
-        overlay_activated: null != (0, h.Z)(),
+        overlay_activated: null != (0, p.Z)(),
         voice_channel_type: null != a ? a.type : null,
         location: n
     });

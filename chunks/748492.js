@@ -24,16 +24,16 @@ var i = n(120356),
     d = n(221888),
     f = n(600164),
     _ = n(788983),
-    h = n(189771),
-    p = n(560688),
+    p = n(189771),
+    h = n(560688),
     m = n(618158),
     g = n(922745),
     E = n(871499),
     v = n(402113),
     I = n(800965),
-    S = n(157813),
-    T = n(25827),
-    b = n(131951),
+    b = n(157813),
+    S = n(25827),
+    T = n(131951),
     y = n(884338),
     A = n(349619),
     N = n(981631),
@@ -52,13 +52,13 @@ function L(e) {
 }
 function x(e) {
     var t, n;
-    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: S, onJumpToChannel: y, idle: R, selectedParticipant: L } = e,
+    let { channel: i, applicationId: a, onMouseDown: o, onMouseMove: E, onMouseLeave: b, onJumpToChannel: y, idle: R, selectedParticipant: L } = e,
         x = (0, u.bp)() === N.IlC.POPOUT,
-        w = (0, s.e7)([b.Z], () => b.Z.isVideoEnabled()),
-        M = (0, s.e7)([b.Z], () => Object.values(b.Z.getVideoDevices())[0]),
+        w = (0, s.e7)([T.Z], () => T.Z.isVideoEnabled()),
+        M = (0, s.e7)([T.Z], () => Object.values(T.Z.getVideoDevices())[0]),
         P = !1 === (null === (t = null == M ? void 0 : M.disabled) || void 0 === t || t),
         k = (0, c.Z)([a])[0],
-        U = (0, h.Z)(i),
+        U = (0, p.Z)(i),
         G = (e) => {
             l.Z.setVideoEnabled(e);
         };
@@ -66,7 +66,7 @@ function x(e) {
         className: D.videoControls,
         onMouseMove: E,
         onMouseDown: o,
-        onMouseLeave: S,
+        onMouseLeave: b,
         children: [
             (0, r.jsx)('div', {
                 className: D.topControls,
@@ -86,14 +86,14 @@ function x(e) {
                         basis: '50%',
                         align: f.Z.Align.CENTER,
                         children: [
-                            (0, r.jsx)(T.C, {
+                            (0, r.jsx)(S.C, {
                                 className: O.leftPipIcon,
                                 enabled: w,
                                 cameraUnavailable: !P,
                                 hasPermission: U,
                                 onChange: G,
                                 onCameraUnavailable: () => {
-                                    P ? G(!0) : (0, p.Z)();
+                                    P ? G(!0) : (0, h.Z)();
                                 }
                             }),
                             (0, r.jsx)(m.Z, {
@@ -139,7 +139,7 @@ function x(e) {
 function w(e) {
     var t;
     let { channel: n, applicationId: i, onMouseDown: s, onMouseMove: l, onMouseLeave: u, onJumpToChannel: d, idle: f, users: _ } = e,
-        h = (0, c.Z)([i])[0];
+        p = (0, c.Z)([i])[0];
     return (0, r.jsxs)(o.Clickable, {
         className: a()(D.videoControls, D.videoControlsTextActivity),
         onMouseMove: l,
@@ -151,7 +151,7 @@ function w(e) {
                 className: a()(D.topControls),
                 children: (0, r.jsx)(g.r, {
                     idle: f,
-                    title: null !== (t = null == h ? void 0 : h.name) && void 0 !== t ? t : n.name,
+                    title: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : n.name,
                     onJumpToChannel: d,
                     preventIdleComponent: m.Z
                 })
@@ -180,7 +180,7 @@ function w(e) {
 function M(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: i } = e;
     return i
-        ? (0, r.jsx)(S.Z, {
+        ? (0, r.jsx)(b.Z, {
               channelId: t,
               isParticipantsOpen: n,
               className: O.participantsButton
@@ -189,7 +189,7 @@ function M(e) {
 }
 function P(e) {
     var t;
-    let { onMouseDown: n, onMouseMove: i, onMouseLeave: s, showControls: l, applicationId: u, channel: d, onJumpToChannel: f, onToggleHeight: _, isExpanded: h, hideExpandedButton: p } = e,
+    let { onMouseDown: n, onMouseMove: i, onMouseLeave: s, showControls: l, applicationId: u, channel: d, onJumpToChannel: f, onToggleHeight: _, isExpanded: p, hideExpandedButton: h } = e,
         E = (0, c.Z)([u])[0];
     return (0, r.jsx)('div', {
         className: O.pipHeader,
@@ -217,10 +217,10 @@ function P(e) {
                             (0, r.jsxs)('div', {
                                 className: O.pipHeaderButtonsRight,
                                 children: [
-                                    p
+                                    h
                                         ? null
                                         : (0, r.jsx)(L, {
-                                              isExpanded: h,
+                                              isExpanded: p,
                                               onClick: _
                                           }),
                                     (0, r.jsx)(v.Z, {

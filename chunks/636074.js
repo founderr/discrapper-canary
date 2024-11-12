@@ -19,17 +19,17 @@ function c(e) {
         d = void 0 === c ? 'absolute' : c,
         f = e.modifiers,
         _ = void 0 === f ? u : f,
-        h = e.referenceElement,
-        p = e.onFirstUpdate,
+        p = e.referenceElement,
+        h = e.onFirstUpdate,
         m = e.innerRef,
         g = e.children,
         E = r.useContext(i.C8),
         v = r.useState(null),
         I = v[0],
-        S = v[1],
-        T = r.useState(null),
-        b = T[0],
-        y = T[1];
+        b = v[1],
+        S = r.useState(null),
+        T = S[0],
+        y = S[1];
     r.useEffect(
         function () {
             (0, a.k$)(m, I);
@@ -41,19 +41,19 @@ function c(e) {
                 return {
                     placement: n,
                     strategy: d,
-                    onFirstUpdate: p,
+                    onFirstUpdate: h,
                     modifiers: [].concat(_, [
                         {
                             name: 'arrow',
-                            enabled: null != b,
-                            options: { element: b }
+                            enabled: null != T,
+                            options: { element: T }
                         }
                     ])
                 };
             },
-            [n, d, p, _, b]
+            [n, d, h, _, T]
         ),
-        N = (0, s.D)(h || E, I, A),
+        N = (0, s.D)(p || E, I, A),
         C = N.state,
         R = N.styles,
         O = N.forceUpdate,
@@ -61,7 +61,7 @@ function c(e) {
         L = r.useMemo(
             function () {
                 return {
-                    ref: S,
+                    ref: b,
                     style: R.popper,
                     placement: C ? C.placement : n,
                     hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
@@ -74,7 +74,7 @@ function c(e) {
                     update: D || l
                 };
             },
-            [S, y, n, C, R, D, O]
+            [b, y, n, C, R, D, O]
         );
     return (0, a.$p)(g)(L);
 }

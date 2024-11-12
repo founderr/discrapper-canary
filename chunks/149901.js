@@ -14,16 +14,16 @@ var r = n(443704),
     d = n(995031),
     f = n(981752),
     _ = n(805711),
-    h = n(588290),
-    p = n(414842),
+    p = n(588290),
+    h = n(414842),
     m = n(565894),
     g = n(819931),
     E = n(324600),
     v = n(112741),
     I = n(421607),
-    S = n(595938),
-    T = n(154072),
-    b = n(999209),
+    b = n(595938),
+    S = n(154072),
+    T = n(999209),
     y = n(374705),
     A = n(868055),
     N = n(443507),
@@ -48,7 +48,7 @@ var r = n(443704),
 function Y(e, t, n) {
     var r;
     let i,
-        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: h, formatOptions: p, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: S, errorMessage: T, ...b } = e,
+        { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: f, autoFocus: _, label: p, formatOptions: h, onBlur: m = () => {}, onFocus: g, onFocusChange: E, onKeyDown: v, onKeyUp: I, description: b, errorMessage: S, ...T } = e,
         { increment: y, incrementToMax: A, decrement: N, decrementToMin: C, numberValue: R, inputValue: O, commit: D, commitValidation: L } = t;
     let x = (0, V.qb)((r = H) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         w = (0, U.Me)(a),
@@ -57,10 +57,10 @@ function Y(e, t, n) {
                 D();
             }
         }),
-        P = (0, V.Ux)(p),
+        P = (0, V.Ux)(h),
         k = (0, G.useMemo)(() => P.resolvedOptions(), [P]),
         Y = (0, V.Ux)({
-            ...p,
+            ...h,
             currencySign: void 0
         }),
         W = (0, G.useMemo)(() => (isNaN(R) ? '' : Y.format(R)), [Y, R]),
@@ -119,10 +119,10 @@ function Y(e, t, n) {
             errorMessageProps: ef
         } = (0, F.h)(
             {
-                ...b,
+                ...T,
                 ...ei,
                 name: void 0,
-                label: h,
+                label: p,
                 autoFocus: _,
                 isDisabled: l,
                 isReadOnly: u,
@@ -145,8 +145,8 @@ function Y(e, t, n) {
                 onFocusChange: E,
                 onKeyDown: (0, G.useMemo)(() => (0, U.tS)(ea, v), [ea, v]),
                 onKeyUp: I,
-                description: S,
-                errorMessage: T
+                description: b,
+                errorMessage: S
             },
             t,
             n
@@ -163,15 +163,15 @@ function Y(e, t, n) {
         spellCheck: 'false'
     });
     'native' === e.validationBehavior && (e_['aria-required'] = void 0);
-    let eh = (e) => {
+    let ep = (e) => {
             document.activeElement !== n.current && ('mouse' === e.pointerType ? n.current.focus() : e.target.focus());
         },
-        ep = e['aria-label'] || ('string' == typeof e.label ? e.label : '');
-    !ep && (i = null != e.label ? eu.id : e['aria-labelledby']);
+        eh = e['aria-label'] || ('string' == typeof e.label ? e.label : '');
+    !eh && (i = null != e.label ? eu.id : e['aria-labelledby']);
     let em = (0, U.Me)(),
         eg = (0, U.Me)(),
         eE = (0, U.dG)(z, {
-            'aria-label': o || x.format('increase', { fieldLabel: ep }).trim(),
+            'aria-label': o || x.format('increase', { fieldLabel: eh }).trim(),
             id: i && !o ? em : null,
             'aria-labelledby': i && !o ? `${em} ${i}` : null,
             'aria-controls': w,
@@ -179,10 +179,10 @@ function Y(e, t, n) {
             preventFocusOnPress: !0,
             allowFocusWhenDisabled: !0,
             isDisabled: !t.canIncrement,
-            onPressStart: eh
+            onPressStart: ep
         }),
         ev = (0, U.dG)(q, {
-            'aria-label': s || x.format('decrease', { fieldLabel: ep }).trim(),
+            'aria-label': s || x.format('decrease', { fieldLabel: eh }).trim(),
             id: i && !s ? eg : null,
             'aria-labelledby': i && !s ? `${eg} ${i}` : null,
             'aria-controls': w,
@@ -190,7 +190,7 @@ function Y(e, t, n) {
             preventFocusOnPress: !0,
             allowFocusWhenDisabled: !0,
             isDisabled: !t.canDecrement,
-            onPressStart: eh
+            onPressStart: ep
         });
     return {
         groupProps: {
@@ -222,16 +222,16 @@ H = {
     'et-EE': d.Z,
     'fi-FI': f.Z,
     'fr-FR': _.Z,
-    'he-IL': h.Z,
-    'hr-HR': p.Z,
+    'he-IL': p.Z,
+    'hr-HR': h.Z,
     'hu-HU': m.Z,
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': S.Z,
-    'nb-NO': T.Z,
-    'nl-NL': b.Z,
+    'lv-LV': b.Z,
+    'nb-NO': S.Z,
+    'nl-NL': T.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

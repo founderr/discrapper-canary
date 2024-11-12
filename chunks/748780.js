@@ -45,34 +45,34 @@ t.Z = {
     },
     animate: function e(t, n) {
         let i;
-        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: h = 'spring', shouldLoop: p, durationMin: m, durationMax: g, ...E } = n,
+        let { toValueMin: a, toValueMax: s, tension: o = 0, friction: l = 0, loop: u, reverse: c, invert: d, callback: f, type: p = 'spring', shouldLoop: h, durationMin: m, durationMax: g, ...E } = n,
             v = t._value,
             I = _(n.duration, m, g),
-            S = _(n.toValue, a, s),
-            T = r[h](t, {
+            b = _(n.toValue, a, s),
+            S = r[p](t, {
                 ...E,
-                toValue: S,
+                toValue: b,
                 tension: o,
                 friction: l,
                 duration: I
             }),
-            b = T;
+            T = S;
         if (c || d) {
             let e = _(n.duration, m, g);
-            (i = r[h](t, {
+            (i = r[p](t, {
                 ...E,
-                toValue: c ? v : -S,
+                toValue: c ? v : -b,
                 tension: o,
                 friction: l,
                 duration: e
             })),
-                (b = r.sequence([T, i]));
+                (T = r.sequence([S, i]));
         }
         u
-            ? b.start(() => {
-                  (!p || (p && p())) && (f ? f(e.bind(null, t, n)) : e(t, n));
+            ? T.start(() => {
+                  (!h || (h && h())) && (f ? f(e.bind(null, t, n)) : e(t, n));
               })
-            : b.start(f);
+            : T.start(f);
     },
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];

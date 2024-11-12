@@ -3,10 +3,10 @@ n.d(t, {
         return E;
     },
     ML: function () {
-        return T;
+        return S;
     },
     ZJ: function () {
-        return S;
+        return b;
     },
     mF: function () {
         return r;
@@ -24,17 +24,17 @@ var r,
     d = n(131704),
     f = n(430824),
     _ = n(895924),
-    h = n(581364),
-    p = n(807169),
+    p = n(581364),
+    h = n(807169),
     m = n(689079),
     g = n(981631);
 function E(e, t, n) {
     var r;
-    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: I, isImpersonating: b, hasBaseAccessPermissions: y } = t,
+    let { context: i, commandTypes: a, allowNsfw: c, computedPermissions: E, userId: v, roleIds: I, isImpersonating: T, hasBaseAccessPermissions: y } = t,
         { applicationAllowedForUser: A, applicationAllowedForChannel: N, isGuildInstalled: C, isUserInstalled: R, commandBotId: O } = n;
     if (!a.includes(e.type)) return 2;
     if (e.nsfw && !c) return 1;
-    let D = null != i ? (0, p.Vh)(i, O) : void 0;
+    let D = null != i ? (0, h.Vh)(i, O) : void 0;
     if (null != e.contexts) {
         if (null != D && !e.contexts.includes(D)) return 4;
     } else if (e.inputType === _.iw.BOT && ((!1 === e.dmPermission && D === u.D.BOT_DM) || D === u.D.PRIVATE_CHANNEL)) return 4;
@@ -49,12 +49,12 @@ function E(e, t, n) {
             return 3;
     }
     if (e.applicationId === m.bi.BUILT_IN) return 0;
-    let L = null != i ? (0, p.ny)(i) : void 0;
+    let L = null != i ? (0, h.ny)(i) : void 0;
     if (null == L || l.e$(E, g.Plq.ADMINISTRATOR) || (R && (null === (r = e.integration_types) || void 0 === r ? void 0 : r.includes(o.Y.USER_INSTALL)))) return 0;
     if (!y && C && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (i instanceof d.Sf) {
         s()(void 0 !== N, 'missing applicationAllowedForChannel');
-        let t = S(e.permissions, i, L);
+        let t = b(e.permissions, i, L);
         if (
             (function (e) {
                 return !1 === e;
@@ -68,7 +68,7 @@ function E(e, t, n) {
         )
             return 6;
     }
-    let x = T(e.permissions, L, v, I, b);
+    let x = S(e.permissions, L, v, I, T);
     return (function (e) {
         return !0 === e;
     })(x)
@@ -80,7 +80,7 @@ function E(e, t, n) {
           : (function (e) {
                   return !1 === e;
               })(A) ||
-              (null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, h.BO) && l.e$(E, e.defaultMemberPermissions)))
+              (null != e.defaultMemberPermissions && !(!l.fS(e.defaultMemberPermissions, p.BO) && l.e$(E, e.defaultMemberPermissions)))
             ? 7
             : 0;
 }
@@ -90,7 +90,7 @@ function v(e) {
 function I(e) {
     return !1 === e;
 }
-function S(e, t, n) {
+function b(e, t, n) {
     if (null == e) return null;
     let r = t.id;
     if (t.isThread()) {
@@ -99,10 +99,10 @@ function S(e, t, n) {
     }
     let a = e[(0, c.rE)(r, _.Kw.CHANNEL)];
     if (null != a) return a.permission;
-    let s = e[(0, c.rE)((0, h.bD)(n), _.Kw.CHANNEL)];
+    let s = e[(0, c.rE)((0, p.bD)(n), _.Kw.CHANNEL)];
     return null != s ? s.permission : null;
 }
-function T(e, t, n, r, i) {
+function S(e, t, n, r, i) {
     if (null == e) return null;
     if (!i) {
         let t = e[(0, c.rE)(n, _.Kw.USER)];

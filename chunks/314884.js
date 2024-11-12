@@ -20,7 +20,7 @@ function _() {
     for (let t of Object.values(d)) (e[t.id] = t), (t.subscription = u.ZP.getSubscriptionById(t.subscriptionId));
     d = e;
 }
-class h extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     initialize() {
         this.syncWith([u.ZP], _);
     }
@@ -35,7 +35,7 @@ class h extends (r = o.ZP.Store) {
     }
 }
 (s = 'GuildBoostSlotStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -43,7 +43,7 @@ class h extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         GUILD_BOOST_SLOTS_FETCH_SUCCESS: function (e) {
             let { guildBoostSlots: t } = e;
             (d = {}),

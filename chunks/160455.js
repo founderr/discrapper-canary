@@ -406,14 +406,14 @@ e.exports = function (e) {
                 begin: '~?' + e + '.*?' + e
             };
         },
-        h = function (e, t, n) {
+        p = function (e, t, n) {
             return {
                 className: e,
                 begin: t,
                 relevance: n
             };
         },
-        p = {
+        h = {
             $pattern: /[a-z-]+/,
             keyword: 'and or not only',
             attribute: r.join(' ')
@@ -437,12 +437,12 @@ e.exports = function (e) {
             begin: '\\(',
             end: '\\)',
             contains: f,
-            keywords: p,
+            keywords: h,
             relevance: 0
         },
-        h('variable', '@@?' + u, 10),
-        h('variable', '@\\{' + u + '\\}'),
-        h('built_in', '~?`[^`]*?`'),
+        p('variable', '@@?' + u, 10),
+        p('variable', '@\\{' + u + '\\}'),
+        p('built_in', '~?`[^`]*?`'),
         {
             className: 'attribute',
             begin: u + '\\s*:',
@@ -504,17 +504,17 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 g,
-                h('keyword', 'all\\b'),
-                h('variable', '@\\{' + u + '\\}'),
+                p('keyword', 'all\\b'),
+                p('variable', '@\\{' + u + '\\}'),
                 {
                     begin: '\\b(' + n.join('|') + ')\\b',
                     className: 'selector-tag'
                 },
                 l.CSS_NUMBER_MODE,
-                h('selector-tag', c, 0),
-                h('selector-id', '#' + c),
-                h('selector-class', '\\.' + c, 0),
-                h('selector-tag', '&', 0),
+                p('selector-tag', c, 0),
+                p('selector-id', '#' + c),
+                p('selector-class', '\\.' + c, 0),
+                p('selector-tag', '&', 0),
                 l.ATTRIBUTE_SELECTOR_MODE,
                 {
                     className: 'selector-pseudo',
@@ -548,7 +548,7 @@ e.exports = function (e) {
                 begin: '@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b',
                 starts: {
                     end: '[;{}]',
-                    keywords: p,
+                    keywords: h,
                     returnEnd: !0,
                     contains: f,
                     relevance: 0

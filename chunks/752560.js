@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return h;
+        return p;
     }
 }),
     n(47120),
@@ -29,7 +29,7 @@ function f(e, t, n) {
     );
 }
 let _ = 3 * s.Z.Millis.SECOND;
-class h {
+class p {
     getSearchIndex() {
         return null == this._search || this._search.hasDefaultQuery ? l.R_.CURRENT_GUILD_MEMBER : l.R_.INCLUDED_IN_SEARCH_RESULTS;
     }

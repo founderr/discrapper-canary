@@ -46,17 +46,17 @@ function f(e) {
             buckets: [...f.keys()]
         }),
         'guild' === t ? (0, s.gK)(n) : (0, s.Xz)(n));
-    function h(e) {
+    function p(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0,
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
         if (((t.exposureType = n ? u.a0.AUTO_FALLBACK : u.a0.AUTO), (t.excluded = !1), null == r)) {
-            p(e, t);
+            h(e, t);
             return;
         }
         m(e, t, r);
     }
-    function p(t) {
+    function h(t) {
         let n =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -106,41 +106,41 @@ function f(e) {
             let o = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 l = null !== (n = o.disable) && void 0 !== n && n,
                 _ = !1 !== o.autoTrackExposure,
-                p = c(e.kind, e.id, t),
+                h = c(e.kind, e.id, t),
                 m = null == o.trackExposureOptions ? void 0 : (0, i.Z)(null !== (a = o.trackExposureOptions) && void 0 !== a ? a : {}),
-                E = null !== (s = null == p ? void 0 : p.triggerDebuggingEnabled) && void 0 !== s && s,
-                [[v, I, S], T] = (0, r.useState)(() => {
-                    let t = null == p || l ? u.NZ.NOT_ELIGIBLE : p.bucket;
-                    return [d(e, t, f, p), t, null == p ? -1 : p.revision];
+                E = null !== (s = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== s && s,
+                [[v, I, b], S] = (0, r.useState)(() => {
+                    let t = null == h || l ? u.NZ.NOT_ELIGIBLE : h.bucket;
+                    return [d(e, t, f, h), t, null == h ? -1 : h.revision];
                 }),
-                b = (0, i.Z)(t);
+                T = (0, i.Z)(t);
             return (
                 (0, r.useEffect)(() => {
-                    if (!l && (!!_ || !!E)) h(b, m, !1 === _);
-                }, [l, _, b, m, I, S, E]),
+                    if (!l && (!!_ || !!E)) p(T, m, !1 === _);
+                }, [l, _, T, m, I, b, E]),
                 (0, r.useEffect)(
                     () =>
                         g(
-                            b,
+                            T,
                             (e, t, n) => {
-                                T((r) => (r[0] === e && r[1] === t && r[2] === n ? r : [e, t, n]));
+                                S((r) => (r[0] === e && r[1] === t && r[2] === n ? r : [e, t, n]));
                             },
                             { disable: l }
                         ),
-                    [l, b]
+                    [l, T]
                 ),
                 v
             );
         },
         subscribe: g,
-        trackExposure: p,
+        trackExposure: h,
         getCurrentConfig: function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 r = c(e.kind, e.id, t);
             if (null == r || n.disable) return d(e, u.NZ.NOT_ELIGIBLE, f, r);
             if (!1 !== n.autoTrackExposure || r.triggerDebuggingEnabled) {
                 let e = !1 === n.autoTrackExposure;
-                h(t, n.trackExposureOptions, e, r);
+                p(t, n.trackExposureOptions, e, r);
             }
             return d(e, r.bucket, f, r);
         },

@@ -11,8 +11,8 @@ var r = t(409813),
     o = t(276442),
     a = t(961830),
     l = t(721165),
-    c = t(519801),
-    s = t(589771),
+    s = t(519801),
+    c = t(589771),
     d = t(883419),
     u = t(388032);
 function p(e) {
@@ -21,7 +21,7 @@ function p(e) {
         {
             key: null,
             renderStep: (e) =>
-                (0, i.jsx)(s.Z, {
+                (0, i.jsx)(c.Z, {
                     initialStep: t ? r.h8.BENEFITS : r.h8.REVIEW,
                     guildId: n,
                     ...e
@@ -60,7 +60,7 @@ function p(e) {
         {
             key: r.h8.CONFIRM,
             renderStep: (e) =>
-                (0, i.jsx)(c.Z, {
+                (0, i.jsx)(s.Z, {
                     showBenefits: !t,
                     ...e
                 })

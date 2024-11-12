@@ -13,7 +13,7 @@ var r = n(200651),
     c = n(667947);
 function d(e) {
     let { subMenuClassName: t, parentItem: n, isFocused: a, menuSubmenuProps: d, renderSubmenu: f } = e,
-        { focusIndex: _, isUsingKeyboardNavigation: h, ...p } = d,
+        { focusIndex: _, isUsingKeyboardNavigation: p, ...h } = d,
         m = i.useRef(null),
         g = i.useRef(null),
         E = i.useRef(null);
@@ -42,7 +42,7 @@ function d(e) {
                                   className: c.submenuPaddingContainer,
                                   children: (0, r.jsx)('div', {
                                       className: s()(c.submenu, t),
-                                      ...p,
+                                      ...h,
                                       ref: E,
                                       children: (0, r.jsx)(u.zJ, {
                                           className: c.scroller,

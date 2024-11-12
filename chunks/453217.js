@@ -17,9 +17,9 @@ t.Z = function (e) {
     var t;
     let { className: n, expansionSpring: r, isExpanded: h, isExpansionAnimationComplete: C, quest: v, useReducedMotion: j } = e,
         _ = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        { percentComplete: E } = (0, l.Rf)(v),
-        b = (0, l.Jf)(v),
-        N = null != b ? b.completedRatio > 0 : E > 0;
+        { percentComplete: b } = (0, l.Rf)(v),
+        E = (0, l.Jf)(v),
+        N = null != E ? E.completedRatio > 0 : b > 0;
     return (0, o.jsxs)(a.animated.div, {
         'aria-hidden': h && C,
         className: s()(n, f.contentCollapsed, {

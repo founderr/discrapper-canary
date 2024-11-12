@@ -10,8 +10,8 @@ let o = /\n{2,}$/,
     d = RegExp('^' + c.replace('%INDENT_CAPTURE_PATTERN%', ' *')),
     f = c + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + u + ' )[^\\n]*)*(\n|$)',
     _ = / *\n$/,
-    h = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'),
-    p = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+    p = RegExp('^( *)(' + u + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + u + ' )|$)'),
+    h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
     m = (e) => e.map((e) => ('text' === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, '')), e)),
     g = {
         ...s().defaultRules.list,
@@ -20,7 +20,7 @@ let o = /\n{2,}$/,
             if (!t.allowList || t._listLevel >= 11) return null;
             let n = null == t.prevCapture ? '' : t.prevCapture[0],
                 r = l.exec(n);
-            return null == r || p.test(r[0]) ? null : h.exec(e);
+            return null == r || h.test(r[0]) ? null : p.exec(e);
         },
         parse: (e, t, n) => {
             let r = e[2],
@@ -29,9 +29,9 @@ let o = /\n{2,}$/,
                 l = e[0].replace(o, '\n'),
                 u = d.exec(l),
                 c = null != u ? u[0].length : 0,
-                h = null != u ? u[1].length : 0,
-                p = ' {'.concat(h, ',').concat(h + 1, '}'),
-                g = RegExp(f.replaceAll('%INDENT_CAPTURE_PATTERN%', p), 'gm'),
+                p = null != u ? u[1].length : 0,
+                h = ' {'.concat(p, ',').concat(p + 1, '}'),
+                g = RegExp(f.replaceAll('%INDENT_CAPTURE_PATTERN%', h), 'gm'),
                 E = RegExp('^ {1,' + c + '}', 'gm'),
                 v = l.match(g);
             i()(null != v, 'markup list items can not be parsed.');

@@ -30,10 +30,10 @@ function o(e, t, n) {
                     mode: 'lowest',
                     voids: !1
                 }),
-                h = {};
+                p = {};
             for (let e of n.attributes)
-                if (((h[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) h['before_'.concat(e)] = !0;
-                else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) h['after_'.concat(e)] = !0;
+                if (((p[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) p['before_'.concat(e)] = !0;
+                else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) p['after_'.concat(e)] = !0;
             for (let [t, n] of _) {
                 let t = {
                     anchor: i.bN.start(e, n),
@@ -42,7 +42,7 @@ function o(e, t, n) {
                 i.Jz.isBefore(t.anchor, f.anchor) && (t.anchor = f.anchor),
                     i.Jz.isAfter(t.focus, f.focus) && (t.focus = f.focus),
                     d.push({
-                        ...h,
+                        ...p,
                         ...t
                     });
             }

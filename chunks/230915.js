@@ -43,16 +43,16 @@ var r,
         var r = e.apply(void 0, t);
         return u(r, n), r;
     },
-    h = function (e) {
+    p = function (e) {
         var t = 'invalid load parameters; expected object of shape\n\n    {advancedFraudSignals: boolean}\n\nbut received\n\n    '.concat(JSON.stringify(e), '\n');
         if (null === e || 'object' !== n(e)) throw Error(t);
         if (1 === Object.keys(e).length && 'boolean' == typeof e.advancedFraudSignals) return e;
         throw Error(t);
     },
-    p = !1,
+    h = !1,
     m = function () {
         for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-        p = !0;
+        h = !0;
         var a = Date.now();
         return ((e = r),
         null !== c
@@ -97,16 +97,16 @@ var r,
 (m.setLoadParameters = function (e) {
     if (
         !(
-            p &&
+            h &&
             r &&
-            Object.keys(h(e)).reduce(function (t, n) {
+            Object.keys(p(e)).reduce(function (t, n) {
                 var i;
                 return t && e[n] === (null === (i = r) || void 0 === i ? void 0 : i[n]);
             }, !0)
         )
     ) {
-        if (p) throw Error('You cannot change load parameters after calling loadStripe');
-        r = h(e);
+        if (h) throw Error('You cannot change load parameters after calling loadStripe');
+        r = p(e);
     }
 }),
     (t.loadStripe = m);

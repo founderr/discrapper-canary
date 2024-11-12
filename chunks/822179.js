@@ -22,9 +22,9 @@ function _(e, t, n) {
         e
     );
 }
-let h = { pendingUsages: [] };
+let p = { pendingUsages: [] };
 c.Z.Millis.DAY;
-let p = new l.ZP({
+let h = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
             let t = 1;
@@ -35,7 +35,7 @@ let p = new l.ZP({
         numFrequentlyItems: 20
     }),
     m = () => {
-        d.Z.isLoaded && p.compute();
+        d.Z.isLoaded && h.compute();
     },
     g = () => {
         m();
@@ -44,26 +44,26 @@ function E() {
     var e;
     let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
     if (null == t) return !1;
-    p.overwriteHistory(
+    h.overwriteHistory(
         a().mapValues(t, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        h.pendingUsages
+        p.pendingUsages
     );
 }
 class v extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(d.Z), null != e && (h = e), this.syncWith([d.Z], g), this.syncWith([u.Z], E);
+        this.waitFor(d.Z), null != e && (p = e), this.syncWith([d.Z], g), this.syncWith([u.Z], E);
     }
     getState() {
-        return h;
+        return p;
     }
     hasPendingUsage() {
-        return h.pendingUsages.length > 0;
+        return p.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return p;
+        return h;
     }
 }
 _(v, 'displayName', 'StickersPersistedStore'),
@@ -73,8 +73,8 @@ _(v, 'displayName', 'StickersPersistedStore'),
             let { stickerIds: t } = e;
             null == t ||
                 t.forEach((e) => {
-                    p.track(e),
-                        h.pendingUsages.push({
+                    h.track(e),
+                        p.pendingUsages.push({
                             key: e,
                             timestamp: Date.now()
                         });
@@ -87,6 +87,6 @@ _(v, 'displayName', 'StickersPersistedStore'),
                 wasSaved: n
             } = e;
             if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            h.pendingUsages = [];
+            p.pendingUsages = [];
         }
     }));

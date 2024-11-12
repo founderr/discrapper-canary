@@ -15,8 +15,8 @@ var r,
     f = n(570140);
 ((r = o || (o = {}))[(r.FETCHING = 0)] = 'FETCHING'), (r[(r.FETCHED = 1)] = 'FETCHED'), (r[(r.ERROR = 2)] = 'ERROR');
 let _ = {},
-    h = {},
-    p = {};
+    p = {},
+    h = {};
 function m(e) {
     let { includesInactive: t } = e;
     return 'includes_inactive:'.concat(t);
@@ -24,11 +24,11 @@ function m(e) {
 class g extends (l = d.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { includesInactive: t } = e;
-        return p[m({ includesInactive: t })];
+        return h[m({ includesInactive: t })];
     }
     getFetchState(e) {
         let { includesInactive: t } = e;
-        return h[m({ includesInactive: t })];
+        return p[m({ includesInactive: t })];
     }
     getCollections(e) {
         let { includesInactive: t } = e;
@@ -47,8 +47,8 @@ class g extends (l = d.ZP.Store) {
     (t.Z = new g(f.Z, {
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS: function (e) {
             let { includesInactive: t } = e;
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [m({ includesInactive: t })]: 0
             };
         },
@@ -66,20 +66,20 @@ class g extends (l = d.ZP.Store) {
                 ..._,
                 [i]: a
             }),
-                (h = {
-                    ...h,
+                (p = {
+                    ...p,
                     [i]: 1
                 });
             let s = Date.now();
-            p = {
-                ...p,
+            h = {
+                ...h,
                 [i]: s
             };
         },
         APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: function (e) {
             let { includesInactive: t } = e;
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [m({ includesInactive: t })]: 2
             };
         }

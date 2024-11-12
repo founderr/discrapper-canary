@@ -147,8 +147,8 @@ var r;
                 })
             );
         })()();
-        var h = (l = _.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(l, 'default') ? l.default : l,
-            p = function (e, n, r) {
+        var p = (l = _.exports) && l.__esModule && Object.prototype.hasOwnProperty.call(l, 'default') ? l.default : l,
+            h = function (e, n, r) {
                 var i = !!r,
                     a = t.useRef(r);
                 t.useEffect(
@@ -217,24 +217,24 @@ var r;
                       }, null)
                     : null;
             },
-            S = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
-            T = function (e) {
+            b = 'Invalid prop `stripe` supplied to `Elements`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.',
+            S = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
                 if (null === e || (g((t = e)) && 'function' == typeof t.elements && 'function' == typeof t.createToken && 'function' == typeof t.createPaymentMethod && 'function' == typeof t.confirmCardPayment)) return e;
                 throw Error(n);
             },
-            b = function (e) {
+            T = function (e) {
                 var t,
-                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S;
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
                 if (g((t = e)) && 'function' == typeof t.then)
                     return {
                         tag: 'async',
                         stripePromise: Promise.resolve(e).then(function (e) {
-                            return T(e, n);
+                            return S(e, n);
                         })
                     };
-                var r = T(e, n);
+                var r = S(e, n);
                 return null === r
                     ? { tag: 'empty' }
                     : {
@@ -266,7 +266,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return b(n);
+                            return T(n);
                         },
                         [n]
                     ),
@@ -335,8 +335,8 @@ var r;
                 );
             };
         C.propTypes = {
-            stripe: h.any,
-            options: h.object
+            stripe: p.any,
+            options: p.object
         };
         var R = function (e) {
                 return N(t.useContext(A), e);
@@ -344,7 +344,7 @@ var r;
             O = function (e) {
                 return (0, e.children)(R('mounts <ElementsConsumer>'));
             };
-        O.propTypes = { children: h.func.isRequired };
+        O.propTypes = { children: p.func.isRequired };
         var D = ['on', 'session'],
             L = t.createContext(null);
         L.displayName = 'CustomCheckoutSdkContext';
@@ -386,7 +386,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return b(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return T(n, 'Invalid prop `stripe` supplied to `CustomCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),
@@ -414,7 +414,7 @@ var r;
                                   };
                         });
                     },
-                    h = t.useRef(!1);
+                    p = t.useRef(!1);
                 t.useEffect(
                     function () {
                         var e = !0;
@@ -422,16 +422,16 @@ var r;
                             'async' !== a.tag || d.stripe
                                 ? 'sync' === a.tag &&
                                   a.stripe &&
-                                  !h.current &&
-                                  ((h.current = !0),
+                                  !p.current &&
+                                  ((p.current = !0),
                                   a.stripe.initCustomCheckout(r).then(function (e) {
                                       e && (_(a.stripe, e), e.on('change', u));
                                   }))
                                 : a.stripePromise.then(function (t) {
                                       t &&
                                           e &&
-                                          !h.current &&
-                                          ((h.current = !0),
+                                          !p.current &&
+                                          ((p.current = !0),
                                           t.initCustomCheckout(r).then(function (e) {
                                               e && (_(t, e), e.on('change', u));
                                           }));
@@ -443,12 +443,12 @@ var r;
                     },
                     [a, d, r, u]
                 );
-                var p = m(n);
+                var h = m(n);
                 t.useEffect(
                     function () {
-                        null !== p && p !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                        null !== h && h !== n && console.warn('Unsupported prop change on CustomCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                     },
-                    [p, n]
+                    [h, n]
                 );
                 var E = m(r);
                 t.useEffect(
@@ -479,10 +479,10 @@ var r;
                 return d.customCheckoutSdk ? t.createElement(L.Provider, { value: d }, t.createElement(w.Provider, { value: I }, i)) : null;
             };
         P.propTypes = {
-            stripe: h.any,
-            options: h.shape({
-                clientSecret: h.string.isRequired,
-                elementsOptions: h.object
+            stripe: p.any,
+            options: p.shape({
+                clientSecret: p.string.isRequired,
+                elementsOptions: p.object
             }).isRequired
         };
         var k = function (e) {
@@ -514,13 +514,13 @@ var r;
                                   d = n.onFocus,
                                   f = n.onReady,
                                   _ = n.onChange,
-                                  h = n.onEscape,
+                                  p = n.onEscape,
                                   g = n.onClick,
                                   E = n.onLoadError,
                                   v = n.onLoaderStart,
-                                  S = n.onNetworksChange,
-                                  T = n.onConfirm,
-                                  b = n.onCancel,
+                                  b = n.onNetworksChange,
+                                  S = n.onConfirm,
+                                  T = n.onCancel,
                                   y = n.onShippingAddressChange,
                                   A = n.onShippingRateChange,
                                   N = k('mounts <'.concat(i, '>')),
@@ -531,18 +531,18 @@ var r;
                                   L = O[1],
                                   x = t.useRef(null),
                                   w = t.useRef(null);
-                              p(D, 'blur', c),
-                                  p(D, 'focus', d),
-                                  p(D, 'escape', h),
-                                  p(D, 'click', g),
-                                  p(D, 'loaderror', E),
-                                  p(D, 'loaderstart', v),
-                                  p(D, 'networkschange', S),
-                                  p(D, 'confirm', T),
-                                  p(D, 'cancel', b),
-                                  p(D, 'shippingaddresschange', y),
-                                  p(D, 'shippingratechange', A),
-                                  p(D, 'change', _),
+                              h(D, 'blur', c),
+                                  h(D, 'focus', d),
+                                  h(D, 'escape', p),
+                                  h(D, 'click', g),
+                                  h(D, 'loaderror', E),
+                                  h(D, 'loaderstart', v),
+                                  h(D, 'networkschange', b),
+                                  h(D, 'confirm', S),
+                                  h(D, 'cancel', T),
+                                  h(D, 'shippingaddresschange', y),
+                                  h(D, 'shippingratechange', A),
+                                  h(D, 'change', _),
                                   f &&
                                       (r =
                                           'expressCheckout' === e
@@ -550,7 +550,7 @@ var r;
                                               : function () {
                                                     f(D);
                                                 }),
-                                  p(D, 'ready', r),
+                                  h(D, 'ready', r),
                                   t.useLayoutEffect(
                                       function () {
                                           if (null === x.current && null !== w.current && (C || R)) {
@@ -588,22 +588,22 @@ var r;
                           };
                 return (
                     (a.propTypes = {
-                        id: h.string,
-                        className: h.string,
-                        onChange: h.func,
-                        onBlur: h.func,
-                        onFocus: h.func,
-                        onReady: h.func,
-                        onEscape: h.func,
-                        onClick: h.func,
-                        onLoadError: h.func,
-                        onLoaderStart: h.func,
-                        onNetworksChange: h.func,
-                        onConfirm: h.func,
-                        onCancel: h.func,
-                        onShippingAddressChange: h.func,
-                        onShippingRateChange: h.func,
-                        options: h.object
+                        id: p.string,
+                        className: p.string,
+                        onChange: p.func,
+                        onBlur: p.func,
+                        onFocus: p.func,
+                        onReady: p.func,
+                        onEscape: p.func,
+                        onClick: p.func,
+                        onLoadError: p.func,
+                        onLoaderStart: p.func,
+                        onNetworksChange: p.func,
+                        onConfirm: p.func,
+                        onCancel: p.func,
+                        onShippingAddressChange: p.func,
+                        onShippingRateChange: p.func,
+                        options: p.object
                     }),
                     (a.displayName = i),
                     (a.__elementType = e),
@@ -695,7 +695,7 @@ var r;
                     i = e.children,
                     a = t.useMemo(
                         function () {
-                            return b(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
+                            return T(n, 'Invalid prop `stripe` supplied to `EmbeddedCheckoutProvider`. We recommend using the `loadStripe` utility from `@stripe/stripe-js`. See https://stripe.com/docs/stripe-js/react#elements-props-stripe for details.');
                         },
                         [n]
                     ),

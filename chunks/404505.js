@@ -99,7 +99,7 @@ var r = n(192379),
                     'bottom-right-triangle': 'bottom-right' === u
                 }
             ),
-            h = function (e, t) {
+            p = function (e, t) {
                 return i(
                     {
                         hex: e,
@@ -120,7 +120,7 @@ var r = n(192379),
                 return r.createElement(c.Z, {
                     color: e,
                     key: e,
-                    onClick: h,
+                    onClick: p,
                     onSwatchHover: a
                 });
             })

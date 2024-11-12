@@ -70,8 +70,8 @@ var _ = function (e, t, n, r, i, a, s, o) {
         throw ((l.framesToPop = 1), l);
     }
 };
-let h = /^#[0-9a-f]{3,8}$/i,
-    p = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
+let p = /^#[0-9a-f]{3,8}$/i,
+    h = /^((?:rgb|hsl)a?)\s*\(([^)]*)\)/i;
 class m {
     constructor(e, t, n, r) {
         (this.red = e), (this.green = t), (this.blue = n), (this.alpha = r);
@@ -83,13 +83,13 @@ class m {
         return '#' + (this.red > 15.5 ? e : '0' + e) + (this.green > 15.5 ? t : '0' + t) + (this.blue > 15.5 ? n : '0' + n);
     }
     static parseString(e) {
-        return e.match(p) ? this.parseColorFnString(e) : e.match(h) ? this.parseHexString(e) : void 0;
+        return e.match(h) ? this.parseColorFnString(e) : e.match(p) ? this.parseHexString(e) : void 0;
     }
     static parseRgbString(e) {
         return 'transparent' === e ? new m(0, 0, 0, 0) : this.parseColorFnString(e);
     }
     static parseHexString(e) {
-        if (!(!e.match(h) || [6, 8].includes(e.length))) {
+        if (!(!e.match(p) || [6, 8].includes(e.length))) {
             if ((e = e.replace('#', '')).length < 6) {
                 let [t, n, r, i] = e.split('');
                 (e = t + t + n + n + r + r), i && (e += i + i);
@@ -100,7 +100,7 @@ class m {
     }
     static parseColorFnString(e) {
         var t;
-        let [, n, r] = null != (t = e.match(p)) ? t : [];
+        let [, n, r] = null != (t = e.match(h)) ? t : [];
         if (!n || !r) return;
         let i = r
             .split(/\s*[,/\s]\s*/)
@@ -307,8 +307,8 @@ class v {
 }
 let I = new v();
 'u' > typeof window && I.setContainer(document.body);
-let S = o.createContext(I);
-var T = function (e, t, n, r) {
+let b = o.createContext(I);
+var S = function (e, t, n, r) {
     var i = n ? n.call(r, e, t) : void 0;
     if (void 0 !== i) return !!i;
     if (e === t) return !0;
@@ -325,13 +325,13 @@ var T = function (e, t, n, r) {
     }
     return !0;
 };
-let b = !1,
+let T = !1,
     y,
     A = {};
 function N() {
-    if (!b) return;
+    if (!T) return;
     let e = null == r ? void 0 : r.getStyle();
-    null == e || T(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
+    null == e || S(e, A) ? null != y && cancelAnimationFrame(y) : ((A = e), null == r || r.invalidate()), (y = requestAnimationFrame(N));
 }
 let C = !1,
     R = {
@@ -342,10 +342,10 @@ let C = !1,
             (C = e), null == r || r.invalidate();
         },
         enableAnimationTracking() {
-            (b = !0), (y = requestAnimationFrame(N));
+            (T = !0), (y = requestAnimationFrame(N));
         },
         disableAnimationTracking() {
-            (b = !1), null != y && cancelAnimationFrame(y);
+            (T = !1), null != y && cancelAnimationFrame(y);
         }
     };
 var O = { exports: {} },
@@ -390,14 +390,14 @@ function w(e) {
         o.useEffect(() => {
             i.current.setContainer(t.current), i.current.setThemeOptions(r);
         }, [t.current]),
-        x(S.Provider, {
+        x(b.Provider, {
             value: i.current,
             children: [n, L(M, {})]
         })
     );
 }
 function M() {
-    let e = o.useContext(S),
+    let e = o.useContext(b),
         [, t] = o.useState({});
     return (
         o.useEffect(
@@ -421,12 +421,12 @@ let P = 'u' > typeof window && (null == (s = window.document) ? void 0 : s.creat
 function k(e) {
     let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: a, ringTarget: s, ringClassName: l, focusClassName: u, focusWithinClassName: c, children: d } = e;
     null != a && _(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && _(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.');
-    let h = o.useRef(!1),
-        [p, m] = o.useState(!1),
-        g = o.useContext(S),
+    let p = o.useRef(!1),
+        [h, m] = o.useState(!1),
+        g = o.useContext(b),
         E = o.Children.only(d),
-        { onBlur: v, onFocus: I, ...T } = E.props,
-        b = o.useMemo(
+        { onBlur: v, onFocus: I, ...S } = E.props,
+        T = o.useMemo(
             () => ({
                 className: l,
                 offset: i
@@ -441,14 +441,14 @@ function k(e) {
         }, [n, g]),
         o.useEffect(
             () => () => {
-                h.current && g.hide();
+                p.current && g.hide();
             },
             [g]
         ),
         o.useEffect(() => {
             let e = null == s ? void 0 : s.current;
-            null == r || null == e || ((h.current = r), r ? g.showElement(e, b) : !1 === r && g.hide());
-        }, [r, b, g, s]),
+            null == r || null == e || ((p.current = r), r ? g.showElement(e, T) : !1 === r && g.hide());
+        }, [r, T, g, s]),
         P(() => {
             if (null != r) return;
             let e = null == a ? void 0 : a.current,
@@ -464,33 +464,33 @@ function k(e) {
             function i(e) {
                 if (null != n) {
                     if (e.currentTarget === e.target) {
-                        (h.current = !0), g.showElement(n, b);
+                        (p.current = !0), g.showElement(n, T);
                         return;
                     }
-                    m(!0), t && g.showElement(n, b);
+                    m(!0), t && g.showElement(n, T);
                 }
             }
             function o() {
-                g.hide(), (h.current = !1), m(!1);
+                g.hide(), (p.current = !1), m(!1);
             }
-        }, [t, b, r, g, a, s]);
+        }, [t, T, r, g, a, s]);
     let y = o.useCallback(
             (e) => {
-                g.hide(), (h.current = !1), m(!1), null == v || v(e);
+                g.hide(), (p.current = !1), m(!1), null == v || v(e);
             },
             [v, g]
         ),
         A = o.useCallback(
             (e) => {
                 let n = null == s ? void 0 : s.current;
-                e.currentTarget === e.target ? ((h.current = !0), g.showElement(null != n ? n : e.currentTarget, b)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, b)), null == I || I(e);
+                e.currentTarget === e.target ? ((p.current = !0), g.showElement(null != n ? n : e.currentTarget, T)) : (m(!0), t && g.showElement(null != n ? n : e.currentTarget, T)), null == I || I(e);
             },
-            [s, t, I, g, b]
+            [s, t, I, g, T]
         );
     return n && null == a && null == r
         ? o.cloneElement(E, {
-              ...T,
-              className: f(T.className, h.current ? u : void 0, p ? c : void 0),
+              ...S,
+              className: f(S.className, p.current ? u : void 0, h ? c : void 0),
               onBlur: y,
               onFocus: A
           })

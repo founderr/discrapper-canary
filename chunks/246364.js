@@ -10,7 +10,7 @@ n.d(t, {
         return r;
     },
     YG: function () {
-        return h;
+        return p;
     },
     hW: function () {
         return f;
@@ -27,7 +27,7 @@ let d = 25,
 function _(e) {
     return null != e && 'TERMS' === e.field_type;
 }
-function h(e) {
+function p(e) {
     return null != e && e.some((e) => !_(e));
 }
 ((o = r || (r = {})).TERMS = 'TERMS'), (o.TEXT_INPUT = 'TEXT_INPUT'), (o.PARAGRAPH = 'PARAGRAPH'), (o.MULTIPLE_CHOICE = 'MULTIPLE_CHOICE'), (o.VERIFICATION = 'VERIFICATION'), ((l = i || (i = {})).EMAIL = 'email'), (l.PHONE = 'phone'), ((u = a || (a = {})).TIMESTAMP_DESC = 'NEWEST'), (u.TIMESTAMP_ASC = 'OLDEST'), ((c = s || (s = {})).STARTED = 'STARTED'), (c.SUBMITTED = 'SUBMITTED'), (c.REJECTED = 'REJECTED'), (c.APPROVED = 'APPROVED');

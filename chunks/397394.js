@@ -33,23 +33,23 @@ var r = n(200651),
     d = n(922770),
     f = n(993365),
     _ = n(481060),
-    h = n(132871),
-    p = n(252618),
+    p = n(132871),
+    h = n(252618),
     m = n(703656),
     g = n(769654),
     E = n(592125),
     v = n(496675),
     I = n(944486),
-    S = n(626135),
-    T = n(585483),
-    b = n(787025),
+    b = n(626135),
+    S = n(585483),
+    T = n(787025),
     y = n(981631),
     A = n(388032),
     N = n(193310);
 function C(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: o } = e;
     return (
-        (0, p.Tt)({ location: A.intl.string(A.t['3S249/']) }),
+        (0, h.Tt)({ location: A.intl.string(A.t['3S249/']) }),
         (0, r.jsxs)('div', {
             className: N.wrapper,
             children: [
@@ -83,7 +83,7 @@ function O(e) {
     let { guild: t, application: n, ...a } = e,
         s = A.intl.string(A.t.se5gLi);
     i.useEffect(() => {
-        S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+        b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
     }, [null == n ? void 0 : n.id]);
     let o = i.useMemo(() => {
             if (null != n)
@@ -116,14 +116,14 @@ function D(e) {
             if ((null == t ? void 0 : t.id) != null)
                 (0, g.X)(null == t ? void 0 : t.id),
                     null == s || s(),
-                    S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                    b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                         application_id: null == n ? void 0 : n.id,
                         guild_id: null == t ? void 0 : t.id
                     });
         }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
-        l = (0, h.useApplicationDirectoryHistory)((e) => e.entrypoint),
+        l = (0, p.useApplicationDirectoryHistory)((e) => e.entrypoint),
         u = i.useCallback(() => {
-            null == s || s(), S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+            null == s || s(), b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
         }, [s, null == n ? void 0 : n.id]),
         d = window.location.pathname.startsWith(y.Z5c.APPLICATION_DIRECTORY),
         f = i.useCallback(() => {
@@ -132,13 +132,13 @@ function D(e) {
                 null == s || s(),
                     null != l && (0, m.uL)(null !== (e = l.pathname) && void 0 !== e ? e : ''),
                     setImmediate(() => {
-                        T.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), S.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                        S.S.dispatchToLastSubscribed(y.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), b.default.track(y.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
                     });
         }, [null == n ? void 0 : n.id, s, l]),
-        p = (0, c.e7)([I.Z, E.Z], () => E.Z.getChannel(I.Z.getChannelId())),
-        b = (0, c.e7)([v.Z], () => v.Z.can(y.Plq.SEND_MESSAGES, p)),
+        h = (0, c.e7)([I.Z, E.Z], () => E.Z.getChannel(I.Z.getChannelId())),
+        T = (0, c.e7)([v.Z], () => v.Z.can(y.Plq.SEND_MESSAGES, h)),
         C = null != t,
-        R = null == t && b && (!d || null != l);
+        R = null == t && T && (!d || null != l);
     return null != t || null != s
         ? (0, r.jsxs)('div', {
               className: N.buttonsContainer,
@@ -184,7 +184,7 @@ function L(e) {
 function x() {
     var e, t;
     let n = (0, l.TH)();
-    return (0, r.jsx)(b.G, {
+    return (0, r.jsx)(T.G, {
         children: (0, r.jsx)(O, {
             guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
             application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
@@ -202,7 +202,7 @@ function w(e) {
     }, [a]);
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : A.intl.string(A.t['mqn87+']);
-    return (0, r.jsx)(b.G, {
+    return (0, r.jsx)(T.G, {
         children: (0, r.jsx)(L, {
             message: l,
             showsCloseWindowText: !0

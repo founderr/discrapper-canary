@@ -14,13 +14,13 @@ var r = n(200651),
     d = n(624138),
     f = n(649766);
 function _(e) {
-    let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: _, animate: h } = e,
-        p = (0, o.e7)([u.Z], () => u.Z.isFocused()),
+    let { guildId: t, guildName: n, guildIcon: i, iconSize: a, className: _, animate: p } = e,
+        h = (0, o.e7)([u.Z], () => u.Z.isFocused()),
         m = c.ZP.getGuildIconURL({
             id: t,
             icon: i,
             size: a,
-            canAnimate: h && p
+            canAnimate: p && h
         });
     if (null == m) {
         let e = (0, d.Zg)(n);

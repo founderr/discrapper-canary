@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -15,20 +15,20 @@ var r = n(200651),
     d = n(970731),
     f = n(594174),
     _ = n(984173),
-    h = n(718107),
-    p = n(652853),
+    p = n(718107),
+    h = n(652853),
     m = n(228168),
     g = n(388032),
     E = n(671511),
     v = n(425637),
     I = n(895982),
-    S = n(685741),
-    T = n(20818);
-function b(e) {
-    var t, n, b;
+    b = n(685741),
+    S = n(20818);
+function T(e) {
+    var t, n, T;
     let { sourceType: y, children: A, user: N } = e,
-        { profileType: C } = (0, p.z)(),
-        { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, h.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        { profileType: C } = (0, h.z)(),
+        { avatarReactReplyEnabled: R, statusReactReplyEnabled: O } = (0, p.t)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         { activityReactReplyEnabled: D, allProfileReactReplyEnabled: L } = (0, _.F)({ location: 'UserProfilePopoutInteractionCoachmark' }),
         x = (0, a.e7)([f.default], () => {
             var e;
@@ -51,10 +51,10 @@ function b(e) {
             dismissibleContentType: W
         } = ((t = O),
         (n = R),
-        (b = D),
+        (T = D),
         L
             ? {
-                  asset: S,
+                  asset: b,
                   assetClassName: E.profileImage,
                   className: E.profileCoachmark,
                   content: g.intl.string(g.t.HEGlIC),
@@ -62,7 +62,7 @@ function b(e) {
                   spacing: 30,
                   dismissibleContentType: s.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
-            : b
+            : T
               ? {
                     asset: v,
                     assetClassName: void 0,
@@ -74,7 +74,7 @@ function b(e) {
                 }
               : t && n
                 ? {
-                      asset: S,
+                      asset: b,
                       assetClassName: E.profileImage,
                       className: E.profileCoachmark,
                       content: g.intl.string(g.t['yzj+dn']),
@@ -84,7 +84,7 @@ function b(e) {
                   }
                 : t
                   ? {
-                        asset: T,
+                        asset: S,
                         assetClassName: void 0,
                         className: E.statusCoachmark,
                         content: g.intl.string(g.t.MYYTWV),

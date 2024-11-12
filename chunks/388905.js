@@ -21,7 +21,7 @@ n.d(t, {
         return y;
     },
     Vj: function () {
-        return b;
+        return T;
     },
     gO: function () {
         return N;
@@ -33,13 +33,13 @@ n.d(t, {
         return D;
     },
     qE: function () {
-        return T;
+        return S;
     },
     v6: function () {
         return L;
     },
     zx: function () {
-        return S;
+        return b;
     }
 }),
     n(536091);
@@ -55,8 +55,8 @@ var i = n(120356),
     d = n(565138),
     f = n(361207),
     _ = n(63063),
-    h = n(981631),
-    p = n(388032),
+    p = n(981631),
+    h = n(388032),
     m = n(878145);
 let g = s.Avatar;
 null == g && (g = () => null);
@@ -87,7 +87,7 @@ let E = (e) => {
             className: a()(m.image, t)
         });
     },
-    S = (e) => {
+    b = (e) => {
         let { className: t, ...n } = e,
             i = n.look === s.Button.Looks.LINK;
         return (0, r.jsx)(s.Button, {
@@ -100,8 +100,8 @@ let E = (e) => {
             ...n
         });
     };
-(S.Looks = s.Button.Looks), (S.Colors = s.Button.Colors), (S.Sizes = s.Button.Sizes);
-let T = (e) => {
+(b.Looks = s.Button.Looks), (b.Colors = s.Button.Colors), (b.Sizes = s.Button.Sizes);
+let S = (e) => {
         let { className: t, src: n, size: i } = e;
         return (0, r.jsx)(g, {
             src: n,
@@ -110,7 +110,7 @@ let T = (e) => {
             'aria-hidden': !0
         });
     },
-    b = (e) => {
+    T = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
         return (0, r.jsx)(d.Z, {
             active: !0,
@@ -120,7 +120,7 @@ let T = (e) => {
             className: a
         });
     };
-b.Sizes = d.Z.Sizes;
+T.Sizes = d.Z.Sizes;
 let y = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(g, {
@@ -132,13 +132,13 @@ let y = (e) => {
 };
 y.Sizes = s.AvatarSizes;
 let A = (e) => {
-        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: h, autoFocus: p, maxLength: g, spellCheck: E, name: v, description: I, required: S, onFocus: T, onBlur: b } = e,
+        let { label: t, error: n, placeholder: i, value: o, className: l, inputClassName: u, setRef: d, type: f = 'text', onChange: _, autoComplete: p, autoFocus: h, maxLength: g, spellCheck: E, name: v, description: I, required: b, onFocus: S, onBlur: T } = e,
             y = (0, c.Dt)();
         return (0, r.jsxs)(s.FormItem, {
             title: t,
             error: n,
             className: l,
-            required: S,
+            required: b,
             tag: 'label',
             htmlFor: y,
             children: [
@@ -151,13 +151,13 @@ let A = (e) => {
                     inputClassName: a()(u, { [m.inputError]: null != n }),
                     'aria-label': t,
                     onChange: _,
-                    autoComplete: h,
-                    autoFocus: p,
+                    autoComplete: p,
+                    autoFocus: h,
                     maxLength: g,
                     spellCheck: E,
                     id: y,
-                    onFocus: T,
-                    onBlur: b
+                    onFocus: S,
+                    onBlur: T
                 }),
                 null != I
                     ? (0, r.jsx)(s.FormText, {
@@ -208,7 +208,7 @@ let A = (e) => {
                               tag: 'span',
                               className: a()(m.pillMessage, c),
                               variant: 'text-sm/normal',
-                              children: p.intl.format(p.t['LC+S+v'], { membersOnline: n })
+                              children: h.intl.format(h.t['LC+S+v'], { membersOnline: n })
                           })
                       ]
                   })),
@@ -225,7 +225,7 @@ let A = (e) => {
                                   tag: 'span',
                                   className: a()(m.pillMessage, c),
                                   variant: 'text-sm/normal',
-                                  children: p.intl.format(p.t.zRl6XV, { count: i })
+                                  children: h.intl.format(h.t.zRl6XV, { count: i })
                               })
                           ]
                       })
@@ -243,9 +243,9 @@ let A = (e) => {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'header-secondary',
-                          children: p.intl.string(p.t['/8WWvL'])
+                          children: h.intl.string(h.t['/8WWvL'])
                       }),
-                      (0, r.jsx)(T, {
+                      (0, r.jsx)(S, {
                           className: m.joiningAsAvatar,
                           src: t.getAvatarURL(void 0, 24),
                           size: s.AvatarSizes.SIZE_24,
@@ -266,19 +266,19 @@ let A = (e) => {
         return (0, r.jsxs)(N, {
             className: t,
             children: [
-                (0, r.jsx)(S, {
+                (0, r.jsx)(b, {
                     onClick: () => window.open((0, f.t3)()),
-                    children: p.intl.format(p.t.JoS1i4, { platform: (0, f.DW)() })
+                    children: h.intl.format(h.t.JoS1i4, { platform: (0, f.DW)() })
                 }),
                 (0, r.jsx)(C, {
                     className: m.downloadButtonSubtext,
-                    children: p.intl.format(p.t.wO1VBg, { supportedBrowserURL: _.Z.getArticleURL(h.BhN.SUPPORTED_BROWSERS) })
+                    children: h.intl.format(h.t.wO1VBg, { supportedBrowserURL: _.Z.getArticleURL(p.BhN.SUPPORTED_BROWSERS) })
                 })
             ]
         });
     };
 t.ZP = (e) => {
-    let { className: t, contentClassName: n, tag: i = 'section', onSubmit: o, children: l, expanded: u = !1, theme: c = h.BRd.DARK, style: d } = e;
+    let { className: t, contentClassName: n, tag: i = 'section', onSubmit: o, children: l, expanded: u = !1, theme: c = p.BRd.DARK, style: d } = e;
     return (0, r.jsx)(s.ThemeProvider, {
         theme: c,
         children: (e) =>

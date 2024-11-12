@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -40,8 +40,8 @@ function _(e) {
     let t = f.get(e);
     null != t && t.release() && ((0, l.zS)().removeDirectVideoOutputSink(e), f.delete(e));
 }
-function h(e, t) {
-    let { streamId: n, paused: a, onReady: o, onResize: u, className: h, ...p } = e,
+function p(e, t) {
+    let { streamId: n, paused: a, onReady: o, onResize: u, className: p, ...h } = e,
         m = i.useRef(null),
         g = i.useRef(null),
         E = i.useRef({
@@ -126,10 +126,10 @@ function h(e, t) {
             }
         }, [a, n]),
         (0, r.jsx)('div', {
-            className: s()('media-engine-video', h),
+            className: s()('media-engine-video', p),
             ref: m,
-            ...p
+            ...h
         })
     );
 }
-h.defaultProps = { paused: !1 };
+p.defaultProps = { paused: !1 };

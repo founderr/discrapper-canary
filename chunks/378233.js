@@ -21,7 +21,7 @@ n.d(t, {
         return D;
     },
     Zt: function () {
-        return b;
+        return T;
     },
     Zv: function () {
         return A;
@@ -57,12 +57,12 @@ var r = n(606301),
     d = n(373228),
     f = n(611480),
     _ = n(981631);
-let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
+let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     v = Object.values(d.og),
     I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
-    S = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(p, ')(').concat(I, ')'), 'ig'),
-    T = RegExp(''.concat(location.protocol).concat(h, '(').concat(I, ')'), 'ig'),
-    b = (e) => {
+    b = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(I, ')'), 'ig'),
+    S = RegExp(''.concat(location.protocol).concat(p, '(').concat(I, ')'), 'ig'),
+    T = (e) => {
         if (null != e.cover_sticker_id) {
             let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
             if (null != t) return t;
@@ -113,13 +113,13 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
                 a = Math.min(2, (0, i.x_)());
             return ''
                 .concat(location.protocol)
-                .concat(p)
+                .concat(h)
                 .concat(s, '?size=')
                 .concat((0, i.oO)(n * a))
                 .concat(r)
                 .concat(o);
         }
-        return ''.concat(location.protocol).concat(h).concat(s);
+        return ''.concat(location.protocol).concat(p).concat(s);
     },
     R = (e, t) => {
         let n;
@@ -132,13 +132,13 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
                     ? ''.concat(location.protocol, '//').concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(r, '.').concat(a)
                     : ''
                           .concat(location.protocol)
-                          .concat(h)
+                          .concat(p)
                           .concat(_.ANM.STORE_ASSET(f.Ks, r, a))),
             null != t && (n += '?size='.concat((0, i.oO)(t))),
             n
         );
     },
-    O = (e) => null != e.match('development' !== m ? S : T),
+    O = (e) => null != e.match('development' !== m ? b : S),
     D = (e) =>
         e.stickers.some((e) => {
             let { format_type: t } = e;
@@ -149,7 +149,7 @@ let { API_ENDPOINT: h, MEDIA_PROXY_ENDPOINT: p, PROJECT_ENV: m, ASSET_ENDPOINT: 
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: b(e)
+        previewSticker: T(e)
     }),
     x = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     w = (e, t, n, i) => {

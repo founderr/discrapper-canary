@@ -14,13 +14,13 @@ var r = n(200651),
     c = n(388032),
     d = n(449761);
 function f(e) {
-    let { src: t, size: n, constrain: a = 'height', className: f, alt: _, fallbackSrc: h, 'aria-hidden': p, showTooltip: m = !1 } = e,
+    let { src: t, size: n, constrain: a = 'height', className: f, alt: _, fallbackSrc: p, 'aria-hidden': h, showTooltip: m = !1 } = e,
         g = (0, u.ZP)(),
         E = ''.concat(n, 'px'),
         [v, I] = i.useState(!1),
-        [S, T] = i.useState(!1),
-        b = null == h || S;
-    if (null == t || (v && b))
+        [b, S] = i.useState(!1),
+        T = null == p || b;
+    if (null == t || (v && T))
         return (0, r.jsx)(l.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
@@ -50,10 +50,10 @@ function f(e) {
                     ...e,
                     style: y,
                     className: s()(d.contentImage, f),
-                    src: v && null != h ? h : t,
-                    'aria-hidden': p,
-                    alt: null != _ ? _ : p ? void 0 : c.intl.string(c.t['2B/phI']),
-                    onError: (e) => (v ? T(!0) : I(!0))
+                    src: v && null != p ? p : t,
+                    'aria-hidden': h,
+                    alt: null != _ ? _ : h ? void 0 : c.intl.string(c.t['2B/phI']),
+                    onError: (e) => (v ? S(!0) : I(!0))
                 })
         },
         'content-image'

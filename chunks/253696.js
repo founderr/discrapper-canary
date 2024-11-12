@@ -18,12 +18,12 @@ var r = n(192379),
     d = n(304852),
     f = n(199257),
     _ = n(981631),
-    h = n(185923),
-    p = n(957825);
+    p = n(185923),
+    h = n(957825);
 function m(e) {
     let t = r.useRef(e);
     r.useEffect(() => {
-        if (t.current.intention === h.Hz.REACTION) g(t.current);
+        if (t.current.intention === p.Hz.REACTION) g(t.current);
     }, []);
 }
 function g(e) {
@@ -31,16 +31,16 @@ function g(e) {
     let { intention: n, containerWidth: r, rowSize: m, isBurstReaction: g, analyticsObject: E } = e,
         v = l.Z.getChannel(u.Z.getChannelId()),
         I = null == v ? void 0 : v.getGuildId(),
-        { canSplitFrecencyList: S } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
-        T = (0, o.E2)({
+        { canSplitFrecencyList: b } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
+        S = (0, o.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         });
     o.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let b = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+    let T = (b || S) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
         y = null != v ? a.ZP.getDisambiguatedEmojiContext(v.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        A = (S || T) && n === h.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
-        N = b.slice(0, A),
+        A = (b || S) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+        N = T.slice(0, A),
         C = null != I ? a.ZP.getGuildEmoji(I) : [],
         R = Object.values(null !== (t = a.ZP.getDisambiguatedEmojiContext(null == v ? void 0 : v.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: O, newlyAddedEmojis: D } = (0, f._)({
@@ -52,9 +52,9 @@ function g(e) {
             newlyAddedEmojis: D,
             rowSize: m
         });
-    i.ZP.trackWithMetadata(n === h.Hz.REACTION ? _.rMx.REACTION_PICKER_OPENED : _.rMx.EXPRESSION_PICKER_OPENED, {
+    i.ZP.trackWithMetadata(n === p.Hz.REACTION ? _.rMx.REACTION_PICKER_OPENED : _.rMx.EXPRESSION_PICKER_OPENED, {
         width: r,
-        tab: p.X1.EMOJI,
+        tab: h.X1.EMOJI,
         badged: !1,
         num_expressions_favorites: y.length,
         num_animated_expressions_favorites: y.filter((e) => (null == e ? void 0 : e.animated)).length,
@@ -70,7 +70,7 @@ function g(e) {
         num_animated_expressions_top_server: L.filter((e) => e.animated).length,
         num_expressions_newly_added: x.length,
         num_animated_expressions_newly_added: x.filter((e) => e.animated).length,
-        ...(n === h.Hz.REACTION && { is_burst: g }),
+        ...(n === p.Hz.REACTION && { is_burst: g }),
         ...(null != E && { location_object: E })
     });
 }

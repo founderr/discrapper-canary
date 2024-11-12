@@ -14,7 +14,7 @@ var r,
     d = n(600164),
     f = n(981631),
     _ = n(163466);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function h(e, t, n) {
         e
     );
 }
-let p = {
+let h = {
     [f.AEg.NORMAL]: _.normal,
     [f.AEg.MINIMUM]: _.minimum,
     [f.AEg.NO_CHAT]: _.noChat,
@@ -95,7 +95,7 @@ class g extends (r = a.PureComponent) {
         let { top: e, center: t, bottom: n, layout: r, focused: a } = this.props,
             { idle: s } = this.state;
         return (0, i.jsx)(d.Z, {
-            className: o()(_.video, p[r], { [_.idle]: s }),
+            className: o()(_.video, h[r], { [_.idle]: s }),
             direction: d.Z.Direction.VERTICAL,
             justify: d.Z.Justify.CENTER,
             children: (0, i.jsxs)(d.Z, {
@@ -131,14 +131,14 @@ class g extends (r = a.PureComponent) {
     render() {
         let { layout: e, className: t, animated: n } = this.props;
         return (0, i.jsx)('div', {
-            className: o()(_.videoHeight, p[e], t, { [_.animated]: n }),
+            className: o()(_.videoHeight, h[e], t, { [_.animated]: n }),
             children: this.renderContents()
         });
     }
     constructor(e) {
         super(e),
-            h(this, '_timeout', new u.V7()),
-            h(this, 'handleMouseEvent', () => {
+            p(this, '_timeout', new u.V7()),
+            p(this, 'handleMouseEvent', () => {
                 let { layout: e } = this.props;
                 if (e === f.AEg.FULL_SCREEN || e === f.AEg.NO_CHAT) this._timeout.start(3000, () => this.setState({ idle: !0 })), this.state.idle && this.setState({ idle: !1 });
             }),
@@ -149,7 +149,7 @@ class g extends (r = a.PureComponent) {
             });
     }
 }
-h(g, 'defaultProps', {
+p(g, 'defaultProps', {
     layout: f.AEg.MINIMUM,
     animated: !0
 });

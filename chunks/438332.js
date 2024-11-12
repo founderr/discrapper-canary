@@ -23,7 +23,7 @@ let c = { lastSeenNewlyAddedEmojiIds: {} },
 function _() {
     for (let e in f) d.lastSeenNewlyAddedEmojiIds[e] = f[e];
 }
-class h extends (r = s.ZP.PersistedStore) {
+class p extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         d = null != e ? e : c;
     }
@@ -44,9 +44,9 @@ class h extends (r = s.ZP.PersistedStore) {
         }
     }
 }
-u(h, 'displayName', 'NewlyAddedEmojiStore'),
-    u(h, 'persistKey', 'NewlyAddedEmojiStore'),
-    u(h, 'migrations', [
+u(p, 'displayName', 'NewlyAddedEmojiStore'),
+    u(p, 'persistKey', 'NewlyAddedEmojiStore'),
+    u(p, 'migrations', [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
@@ -61,7 +61,7 @@ u(h, 'displayName', 'NewlyAddedEmojiStore'),
             return { lastSeenNewlyAddedEmojiIds: n };
         }
     ]),
-    (t.Z = new h(o.Z, {
+    (t.Z = new p(o.Z, {
         LOGOUT: function () {
             (d = c), (f = {});
         },

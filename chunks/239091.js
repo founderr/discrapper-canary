@@ -41,7 +41,7 @@ function c(e, t, n, r) {
             { left: n = 0, top: r = 0, width: i = 0, height: a = 0 } = null != t ? t : {};
         (f = n + i / 2), (_ = r + a / 2);
     }
-    let h = {
+    let p = {
         render: t,
         renderLazy: r,
         target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
@@ -53,9 +53,9 @@ function c(e, t, n, r) {
     };
     if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = (0, s.RD)(() => {
-            e(), l(h);
+            e(), l(p);
         });
-    } else e.preventDefault(), l(h);
+    } else e.preventDefault(), l(p);
 }
 function d(e, t, n) {
     c(e, void 0, n, t);

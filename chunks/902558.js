@@ -47,7 +47,7 @@ function _(e) {
     }
     o.ZP.setCrashInformation(a, n ? 1 : 0);
 }
-class h extends a.Z {
+class p extends a.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
@@ -68,4 +68,4 @@ class h extends a.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new h();
+t.Z = new p();

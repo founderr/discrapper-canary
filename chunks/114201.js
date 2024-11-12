@@ -15,34 +15,34 @@ var i = n(99815),
     d = n(496675),
     f = n(626135),
     _ = n(70956),
-    h = n(425128),
-    p = n(979192),
+    p = n(425128),
+    h = n(979192),
     m = n(703733),
     g = n(981631),
     E = n(388032),
     v = n(288984);
 function I(e) {
     let { guildId: t, leaderboardId: I } = e,
-        S = (0, a.e7)([l.default], () => l.default.getId()),
-        T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
-        b = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
-        { leaderboardsDisabled: y } = (0, p.O)(t, I),
+        b = (0, a.e7)([l.default], () => l.default.getId()),
+        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.RIOT_GAMES)),
+        T = (0, a.e7)([u.Z], () => u.Z.getAccount(null, g.ABu.LEAGUE_OF_LEGENDS)),
+        { leaderboardsDisabled: y } = (0, h.O)(t, I),
         A =
-            null != b && null != T
+            null != T && null != S
                 ? () => {
                       f.default.track(g.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
                           leaderboard_id: I,
                           guild_id: t
                       }),
-                          (0, h._7)({
-                              riotConnectionId: T.id,
-                              lolConnectionId: b.id
+                          (0, p._7)({
+                              riotConnectionId: S.id,
+                              lolConnectionId: T.id
                           });
                   }
                 : g.dG4,
-        N = null == T || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
+        N = null == S || y ? E.intl.string(E.t['0yRXHx']) : E.intl.string(E.t['KWpU6+']),
         { lastUpdateRequested: C, statisticLastUpdatedDate: R } = (0, m.Z)({
-            userId: S,
+            userId: b,
             guildId: t,
             leaderboardId: I,
             statisticId: i.E.LOL_TOTAL_KILLS
@@ -110,7 +110,7 @@ function I(e) {
                 children: (0, r.jsx)(r.Fragment, {
                     children: (0, r.jsxs)(s.MenuGroup, {
                         children: [
-                            null != T &&
+                            null != S &&
                                 (0, r.jsx)(s.MenuItem, {
                                     id: 'refresh-my-data',
                                     label: E.intl.string(E.t.iopWUV),

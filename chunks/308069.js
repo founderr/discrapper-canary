@@ -17,8 +17,8 @@ var o = n(200651),
     v = n(388032),
     j = n(404846);
 t.Z = (e) => {
-    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: E, onCtxMenuClose: b, useReducedMotion: N, isExpanded: S, isExpansionAnimationComplete: T } = e,
-        B = r.useCallback(() => {
+    let { quest: t, expansionSpring: s, onCtxMenuSelect: _, onCtxMenuOpen: b, onCtxMenuClose: E, useReducedMotion: N, isExpanded: B, isExpansionAnimationComplete: T } = e,
+        S = r.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
                 content: d.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE
@@ -30,7 +30,7 @@ t.Z = (e) => {
                 ctaContent: c.jZ.OPEN_GAME_LINK
             });
         }, [t]),
-        y = S && T,
+        y = B && T,
         R = (0, p.vI)(t, C.dr.QUESTS_BAR, !0),
         w = (0, o.jsx)(l.Clickable, {
             onClick: A,
@@ -170,7 +170,7 @@ t.Z = (e) => {
                 children: [
                     (0, o.jsxs)(l.Clickable, {
                         className: j.promotedBadge,
-                        onClick: B,
+                        onClick: S,
                         children: [
                             (0, o.jsx)(l.Text, {
                                 color: 'always-white',
@@ -184,8 +184,8 @@ t.Z = (e) => {
                         ]
                     }),
                     (0, o.jsx)(x.r, {
-                        onOpen: E,
-                        onClose: b,
+                        onOpen: b,
+                        onClose: E,
                         onSelect: _,
                         questContent: d.jn.QUEST_BAR_V2,
                         quest: t,

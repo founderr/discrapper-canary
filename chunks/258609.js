@@ -22,8 +22,8 @@ let u = null,
     d = new Set(),
     f = {},
     _ = {},
-    h = new Set(),
-    p = Object.freeze({});
+    p = new Set(),
+    h = Object.freeze({});
 class m extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(s.Z, o.Z);
@@ -33,7 +33,7 @@ class m extends (r = i.ZP.DeviceSettingsStore) {
     }
     getDevicesForPlatform(e) {
         var t;
-        return null !== (t = f[e]) && void 0 !== t ? t : p;
+        return null !== (t = f[e]) && void 0 !== t ? t : h;
     }
     getLastSelectedDeviceByPlatform(e) {
         return _[e];
@@ -43,7 +43,7 @@ class m extends (r = i.ZP.DeviceSettingsStore) {
         return null === (n = f[e]) || void 0 === n ? void 0 : n[t];
     }
     getFetchingDevices(e) {
-        return h.has(e);
+        return p.has(e);
     }
     getPendingDeviceCommands() {
         return d;
@@ -78,11 +78,11 @@ l(m, 'displayName', 'GameConsoleStore'),
         },
         GAME_CONSOLE_FETCH_DEVICES_START: function (e) {
             let { platform: t } = e;
-            h.add(t);
+            p.add(t);
         },
         GAME_CONSOLE_FETCH_DEVICES_SUCCESS: function (e) {
             let { platform: t, devices: n } = e;
-            h.delete(t);
+            p.delete(t);
             let r = (f[t] = {}),
                 i = {};
             for (let e of n) (r[e.id] = e), _[t] === e.id && (i[t] = e.id);
@@ -90,7 +90,7 @@ l(m, 'displayName', 'GameConsoleStore'),
         },
         GAME_CONSOLE_FETCH_DEVICES_FAIL: function (e) {
             let { platform: t } = e;
-            h.delete(t);
+            p.delete(t);
         },
         GAME_CONSOLE_SELECT_DEVICE: function (e) {
             let { platform: t, deviceId: n } = e;

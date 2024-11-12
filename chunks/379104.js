@@ -38,9 +38,9 @@ function l(e, t) {
                     var _ = c.right === u;
                     f === d.get_child(a) ? c.set_child(_, o(u, !a)) : c.set_child(_, l(u, !a));
                 }
-                var h = this._comparator(f.data, e);
-                if (0 === h) break;
-                (a = r), (r = h < 0), null !== u && (c = u), (u = d), (d = f), (f = f.get_child(r));
+                var p = this._comparator(f.data, e);
+                if (0 === p) break;
+                (a = r), (r = p < 0), null !== u && (c = u), (u = d), (d = f), (f = f.get_child(r));
             }
             this._root = n.right;
         }
@@ -60,14 +60,14 @@ function l(e, t) {
                     var _ = o(n, c);
                     r.set_child(d, _), (r = _);
                 } else if (!s(n.get_child(!c))) {
-                    var h = r.get_child(!d);
-                    if (null !== h) {
-                        if (s(h.get_child(!d)) || s(h.get_child(d))) {
-                            var p = a.right === r;
-                            s(h.get_child(d)) ? a.set_child(p, l(r, d)) : s(h.get_child(!d)) && a.set_child(p, o(r, d));
-                            var m = a.get_child(p);
+                    var p = r.get_child(!d);
+                    if (null !== p) {
+                        if (s(p.get_child(!d)) || s(p.get_child(d))) {
+                            var h = a.right === r;
+                            s(p.get_child(d)) ? a.set_child(h, l(r, d)) : s(p.get_child(!d)) && a.set_child(h, o(r, d));
+                            var m = a.get_child(h);
                             (m.red = !0), (n.red = !0), (m.left.red = !1), (m.right.red = !1);
-                        } else (r.red = !1), (h.red = !0), (n.red = !0);
+                        } else (r.red = !1), (p.red = !0), (n.red = !0);
                     }
                 }
             }

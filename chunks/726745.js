@@ -14,7 +14,7 @@ var a,
     d = n(990492),
     f = n(988965),
     _ = n(71509);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,28 +28,28 @@ function h(e, t, n) {
     );
 }
 ((o = a || (a = {}))[(o.INVALID = 0)] = 'INVALID'), (o[(o.VALIDATING = 1)] = 'VALIDATING'), (o[(o.VALID = 2)] = 'VALID');
-let p = [],
+let h = [],
     m = !1;
 function g(e) {
-    (p = p.filter((t) => {
+    (h = h.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
         l.removeToken(e);
 }
 function E(e, t) {
-    let n = p.slice(),
+    let n = h.slice(),
         r = n.find((t) => {
             let { id: n } = t;
             return n === e;
         });
-    null != r && ((r.tokenStatus = t), (p = n));
+    null != r && ((r.tokenStatus = t), (h = n));
 }
 class v extends (s = u.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
-            (p = null !== (t = e.users) && void 0 !== t ? t : []), (i = e.canUseMultiAccountMobile);
+            (h = null !== (t = e.users) && void 0 !== t ? t : []), (i = e.canUseMultiAccountMobile);
         }
     }
     getCanUseMultiAccountMobile() {
@@ -57,24 +57,24 @@ class v extends (s = u.ZP.PersistedStore) {
     }
     getState() {
         return {
-            users: p,
+            users: h,
             canUseMultiAccountMobile: i
         };
     }
     getUsers() {
-        return p;
+        return h;
     }
     getValidUsers() {
-        return p.filter((e) => {
+        return h.filter((e) => {
             let { tokenStatus: t } = e;
             return 0 !== t;
         });
     }
     getHasLoggedInAccounts() {
-        return p.length > 0;
+        return h.length > 0;
     }
     getIsValidatingUsers() {
-        return p.some((e) => {
+        return h.some((e) => {
             let { tokenStatus: t } = e;
             return 1 === t;
         });
@@ -86,9 +86,9 @@ class v extends (s = u.ZP.PersistedStore) {
         return m;
     }
 }
-h(v, 'displayName', 'MultiAccountStore'),
-    h(v, 'persistKey', 'MultiAccountStore'),
-    h(v, 'migrations', [
+p(v, 'displayName', 'MultiAccountStore'),
+    p(v, 'persistKey', 'MultiAccountStore'),
+    p(v, 'migrations', [
         (e) => {
             if (null != e) {
                 var t;
@@ -107,13 +107,13 @@ h(v, 'displayName', 'MultiAccountStore'),
         CONNECTION_OPEN: function (e) {
             let { user: t } = e;
             (r = t.id), (m = !1);
-            let n = p.slice(),
+            let n = h.slice(),
                 i = n.findIndex((e) => {
                     let { id: n } = e;
                     return n === t.id;
                 });
             i > -1
-                ? ((p[i].avatar = t.avatar), (p[i].username = t.username), (p[i].discriminator = t.discriminator), (p[i].tokenStatus = 2))
+                ? ((h[i].avatar = t.avatar), (h[i].username = t.username), (h[i].discriminator = t.discriminator), (h[i].tokenStatus = 2))
                 : n.push({
                       id: t.id,
                       avatar: t.avatar,
@@ -122,8 +122,8 @@ h(v, 'displayName', 'MultiAccountStore'),
                       tokenStatus: 2,
                       pushSyncToken: null
                   }),
-                (p = n).length > _.$H &&
-                    p.splice(_.$H).forEach((e) => {
+                (h = n).length > _.$H &&
+                    h.splice(_.$H).forEach((e) => {
                         let { id: t } = e;
                         g(t);
                     });
@@ -131,7 +131,7 @@ h(v, 'displayName', 'MultiAccountStore'),
         LOGOUT: function (e) {
             (m = !!e.isSwitchingAccount),
                 !e.isSwitchingAccount &&
-                    (p = p.filter((e) => {
+                    (h = h.filter((e) => {
                         let { id: t } = e;
                         return t !== r;
                     })),
@@ -143,16 +143,16 @@ h(v, 'displayName', 'MultiAccountStore'),
         MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => g(e.userId),
         MULTI_ACCOUNT_MOVE_ACCOUNT: function (e) {
             let { from: t, to: n } = e;
-            p = (0, d.aB)(p, t, n);
+            h = (0, d.aB)(h, t, n);
         },
         CURRENT_USER_UPDATE: function (e) {
             let { user: t } = e,
-                n = p.slice(),
+                n = h.slice(),
                 r = n.find((e) => {
                     let { id: n } = e;
                     return n === t.id;
                 });
-            null != r && ((r.avatar = t.avatar), (r.username = t.username), (r.discriminator = t.discriminator), (p = n));
+            null != r && ((r.avatar = t.avatar), (r.username = t.username), (r.discriminator = t.discriminator), (h = n));
         },
         MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: function (e) {
             let { multiAccountMobileExperimentEnabled: t } = e;
@@ -160,7 +160,7 @@ h(v, 'displayName', 'MultiAccountStore'),
         },
         MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: function (e) {
             let { userId: t, pushSyncToken: n } = e;
-            p = p.map((e) =>
+            h = h.map((e) =>
                 e.id === t
                     ? {
                           ...e,
@@ -171,7 +171,7 @@ h(v, 'displayName', 'MultiAccountStore'),
         },
         MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: function (e) {
             let { invalidPushSyncTokens: t } = e;
-            p = p.map((e) =>
+            h = h.map((e) =>
                 null != e.pushSyncToken && t.includes(e.pushSyncToken)
                     ? {
                           ...e,

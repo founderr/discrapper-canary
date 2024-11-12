@@ -28,26 +28,26 @@ var r,
     d = n(496675),
     f = n(979651),
     _ = n(934415),
-    h = n(981631),
-    p = n(388032);
+    p = n(981631),
+    h = n(388032);
 function m(e, t, n) {
     var r;
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
     let a = t.getGuild(e.getGuildId()),
         o = null !== (r = null == a ? void 0 : a.maxStageVideoChannelUsers) && void 0 !== r ? r : 0;
-    return (!e.isGuildStageVoice() || !(o <= 0)) && (!i || !!(0, s.Z)(e, n)) && !!n.can(h.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id && !0;
+    return (!e.isGuildStageVoice() || !(o <= 0)) && (!i || !!(0, s.Z)(e, n)) && !!n.can(p.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id && !0;
 }
 function g(e) {
     switch (e) {
         case 0:
-            return p.intl.string(p.t['1i3tSU']);
+            return h.intl.string(h.t['1i3tSU']);
         case 1:
-            return p.intl.string(p.t.elyVbm);
+            return h.intl.string(h.t.elyVbm);
         case 2:
-            return p.intl.string(p.t.pgUTZG);
+            return h.intl.string(h.t.pgUTZG);
         default:
-            return p.intl.string(p.t['7Xq/nZ']);
+            return h.intl.string(h.t['7Xq/nZ']);
     }
 }
 function E(e, t, n, r, i) {

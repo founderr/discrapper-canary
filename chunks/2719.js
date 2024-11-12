@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(295474),
     T = n(144114),
     C = n(918505),
-    _ = n(332473),
-    E = n(921801),
+    E = n(332473),
+    _ = n(921801),
     f = n(485341),
     I = n(687158),
     N = n(518950),
@@ -47,15 +47,15 @@ function U(e) {
     let { className: a, user: o } = e,
         c = s.useRef(null),
         m = (0, C.o9)(),
-        h = (0, _.b)(),
+        h = (0, E.b)(),
         g = (0, S.gS)(),
         p = null !== (r = null == g ? void 0 : null === (t = g.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : null,
         [x, T] = s.useState(!1);
     s.useEffect(() => {
         T(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
-    let E = !o.isClaimed(),
-        f = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || E,
+    let _ = !o.isClaimed(),
+        f = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || _,
         I = f ? M.intl.string(M.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(k.field, a),
@@ -514,25 +514,25 @@ function K() {
                     (0, i.jsxs)('div', {
                         className: k.fieldList,
                         children: [
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(_.F, {
                                 setting: B.s6.ACCOUNT_DISPLAY_NAME,
                                 children: (0, i.jsx)(V, {
                                     className: k.fieldSpacerBottom,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(_.F, {
                                 setting: B.s6.ACCOUNT_USERNAME,
                                 children: (0, i.jsx)(U, { user: t })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(_.F, {
                                 setting: B.s6.ACCOUNT_EMAIL,
                                 children: (0, i.jsx)(Y, {
                                     className: k.fieldSpacer,
                                     user: t
                                 })
                             }),
-                            (0, i.jsx)(E.F, {
+                            (0, i.jsx)(_.F, {
                                 setting: B.s6.ACCOUNT_PHONE_NUMBER,
                                 children: (0, i.jsx)(H, {
                                     className: k.fieldSpacer,

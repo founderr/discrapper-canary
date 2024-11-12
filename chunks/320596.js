@@ -9,8 +9,8 @@ var r = n(200651),
     c = n(113207);
 let d = (e) => {
     let {
-            data: { title: t, subtitle: n, placeholder: d, rows: f, character_limit: _, pattern: h },
-            onChange: p,
+            data: { title: t, subtitle: n, placeholder: d, rows: f, character_limit: _, pattern: p },
+            onChange: h,
             initialText: m,
             isRequired: g
         } = e,
@@ -21,29 +21,29 @@ let d = (e) => {
             })
         ),
         [v, I] = i.useState(''),
-        [S, T] = i.useState('');
+        [b, S] = i.useState('');
     i.useEffect(() => {
         var e;
         I(null !== (e = null == m ? void 0 : m.value) && void 0 !== e ? e : '');
     }, [m]);
-    let b = i.useCallback(
+    let T = i.useCallback(
         (e) => {
-            let t = null != h ? new RegExp(h) : null;
+            let t = null != p ? new RegExp(p) : null;
             null != t && null == t.exec(e)
-                ? (T(l.intl.string(l.t['24xrGR'])),
-                  p({
+                ? (S(l.intl.string(l.t['24xrGR'])),
+                  h({
                       value: e,
                       isValid: !1
                   }))
                 : null != e &&
-                  (T(''),
+                  (S(''),
                   I(e),
-                  p({
+                  h({
                       value: e,
                       isValid: !0
                   }));
         },
-        [p, h]
+        [h, p]
     );
     return (0, r.jsxs)('div', {
         className: c.marginBottom8,
@@ -65,9 +65,9 @@ let d = (e) => {
                 }),
             (0, r.jsx)(a.TextArea, {
                 maxLength: _,
-                onChange: b,
+                onChange: T,
                 value: v,
-                error: S,
+                error: b,
                 rows: f,
                 placeholder: d,
                 autoFocus: !0

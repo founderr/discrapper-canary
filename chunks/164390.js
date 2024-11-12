@@ -77,14 +77,14 @@ function u(e, s, u, d) {
                     if ((u.push(i), Array.isArray(i))) for (_ = 0; _ < i.length; _++) e(i[_], _, _, u, i, d, f);
                     else {
                         var _,
-                            h = {},
-                            p = Object.keys(i).sort(l);
-                        for (_ = 0; _ < p.length; _++) {
-                            var m = p[_];
-                            e(i[m], m, _, u, i, d, f), (h[m] = i[m]);
+                            p = {},
+                            h = Object.keys(i).sort(l);
+                        for (_ = 0; _ < h.length; _++) {
+                            var m = h[_];
+                            e(i[m], m, _, u, i, d, f), (p[m] = i[m]);
                         }
-                        if (void 0 === c) return h;
-                        r.push([c, a, i]), (c[a] = h);
+                        if (void 0 === c) return p;
+                        r.push([c, a, i]), (c[a] = p);
                     }
                     u.pop();
                 }
@@ -95,8 +95,8 @@ function u(e, s, u, d) {
         return JSON.stringify('[unable to serialize, circular reference is too complex to analyze]');
     } finally {
         for (; 0 !== r.length; ) {
-            var h = r.pop();
-            4 === h.length ? Object.defineProperty(h[0], h[1], h[3]) : (h[0][h[1]] = h[2]);
+            var p = r.pop();
+            4 === p.length ? Object.defineProperty(p[0], p[1], p[3]) : (p[0][p[1]] = p[2]);
         }
     }
     return f;

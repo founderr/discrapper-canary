@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -34,7 +34,7 @@ function _(e) {
         max: n
     };
 }
-let h = {
+let p = {
     [s().v3('guild_ids')]: (e) => {
         let t = [];
         for (let [n, r] of e) n === s().v3('guild_ids') && (t = r);

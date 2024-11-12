@@ -15,15 +15,15 @@ var i = n(442837),
     d = n(622724),
     f = n(785717),
     _ = n(621853),
-    h = n(475413),
-    p = n(388032);
+    p = n(475413),
+    h = n(388032);
 function m(e) {
     let { user: t, guildId: n, viewProfileItem: m } = e,
         { trackUserProfileAction: g } = (0, f.KZ)(),
         { analyticsLocations: E, newestAnalyticsLocation: v } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         I = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
-        S = null == I ? void 0 : I.application,
-        T = (0, u.Z)({
+        b = null == I ? void 0 : I.application,
+        S = (0, u.Z)({
             user: t,
             location: v,
             color: 'danger',
@@ -38,7 +38,7 @@ function m(e) {
                     analyticsLocations: E
                 })
         }),
-        b = (0, c.Z)({
+        T = (0, c.Z)({
             user: t,
             location: v,
             onIgnore: () =>
@@ -65,11 +65,11 @@ function m(e) {
         }),
         A = [
             [m],
-            [b, T, y],
+            [T, S, y],
             [
                 (0, l.Z)({
-                    id: null == S ? void 0 : S.id,
-                    label: p.intl.string(p.t['+NP/b2']),
+                    id: null == b ? void 0 : b.id,
+                    label: h.intl.string(h.t['+NP/b2']),
                     onSuccess: () =>
                         g({
                             action: 'COPY_APP_ID',
@@ -87,15 +87,15 @@ function m(e) {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
-                      'aria-label': p.intl.string(p.t.AXIHpa),
+                      'aria-label': h.intl.string(h.t.AXIHpa),
                       children: A.map((e, t) => (0, r.jsx)(a.MenuGroup, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(h.oY, {
+                  (0, r.jsx)(p.oY, {
                       action: 'PRESS_OPTIONS',
                       icon: a.MoreHorizontalIcon,
-                      tooltipText: p.intl.string(p.t.UKOtz8),
+                      tooltipText: h.intl.string(h.t.UKOtz8),
                       ...e
                   })
           });

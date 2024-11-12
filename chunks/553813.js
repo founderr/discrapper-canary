@@ -91,7 +91,7 @@ function _(e, t) {
         return r('SemVer.compare', this.version, this.options, e), !(e instanceof _) && (e = new _(e, this.options)), this.compareMain(e) || this.comparePre(e);
     }),
     (_.prototype.compareMain = function (e) {
-        return !(e instanceof _) && (e = new _(e, this.options)), p(this.major, e.major) || p(this.minor, e.minor) || p(this.patch, e.patch);
+        return !(e instanceof _) && (e = new _(e, this.options)), h(this.major, e.major) || h(this.minor, e.minor) || h(this.patch, e.patch);
     }),
     (_.prototype.comparePre = function (e) {
         if ((!(e instanceof _) && (e = new _(e, this.options)), this.prerelease.length && !e.prerelease.length)) return -1;
@@ -105,7 +105,7 @@ function _(e, t) {
             if (void 0 === i) return 1;
             else if (void 0 === n) return -1;
             else if (n === i) continue;
-            else return p(n, i);
+            else return h(n, i);
         } while (++t);
     }),
     (_.prototype.compareBuild = function (e) {
@@ -118,7 +118,7 @@ function _(e, t) {
             if (void 0 === i) return 1;
             else if (void 0 === n) return -1;
             else if (n === i) continue;
-            else return p(n, i);
+            else return h(n, i);
         } while (++t);
     }),
     (_.prototype.inc = function (e, t) {
@@ -177,15 +177,15 @@ t.diff = function (e, t) {
     for (var s in n) if (('major' === s || 'minor' === s || 'patch' === s) && n[s] !== r[s]) return i + s;
     return a;
 };
-t.compareIdentifiers = p;
-var h = /^[0-9]+$/;
-function p(e, t) {
-    var n = h.test(e),
-        r = h.test(t);
+t.compareIdentifiers = h;
+var p = /^[0-9]+$/;
+function h(e, t) {
+    var n = p.test(e),
+        r = p.test(t);
     return n && r && ((e = +e), (t = +t)), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1;
 }
 t.rcompareIdentifiers = function (e, t) {
-    return p(t, e);
+    return h(t, e);
 };
 t.major = function (e, t) {
     return new _(e, t).major;
@@ -233,13 +233,13 @@ function v(e, t, n) {
 function I(e, t, n) {
     return 0 !== m(e, t, n);
 }
-function S(e, t, n) {
+function b(e, t, n) {
     return m(e, t, n) >= 0;
 }
-function T(e, t, n) {
+function S(e, t, n) {
     return 0 >= m(e, t, n);
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     switch (t) {
         case '===':
             return 'object' == typeof e && (e = e.version), 'object' == typeof n && (n = n.version), e === n;
@@ -254,11 +254,11 @@ function b(e, t, n, r) {
         case '>':
             return g(e, n, r);
         case '>=':
-            return S(e, n, r);
+            return b(e, n, r);
         case '<':
             return E(e, n, r);
         case '<=':
-            return T(e, n, r);
+            return S(e, n, r);
         default:
             throw TypeError('Invalid operator: ' + t);
     }
@@ -278,7 +278,7 @@ function y(e, t) {
     if (!(this instanceof y)) return new y(e, t);
     r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === A ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = S), (t.lte = T), (t.cmp = b), (t.Comparator = y);
+(t.gt = g), (t.lt = E), (t.eq = v), (t.neq = I), (t.gte = b), (t.lte = S), (t.cmp = T), (t.Comparator = y);
 var A = {};
 function N(e, t) {
     if (
@@ -335,7 +335,7 @@ function C(e, t) {
             } catch (e) {
                 return !1;
             }
-        return b(e, this.operator, this.semver, this.options);
+        return T(e, this.operator, this.semver, this.options);
     }),
     (y.prototype.intersects = function (e, t) {
         if (!(e instanceof y)) throw TypeError('a Comparator is required');
@@ -354,8 +354,8 @@ function C(e, t) {
             i = ('<=' === this.operator || '<' === this.operator) && ('<=' === e.operator || '<' === e.operator),
             a = this.semver.version === e.semver.version,
             s = ('>=' === this.operator || '<=' === this.operator) && ('>=' === e.operator || '<=' === e.operator),
-            o = b(this.semver, '<', e.semver, t) && ('>=' === this.operator || '>' === this.operator) && ('<=' === e.operator || '<' === e.operator),
-            l = b(this.semver, '>', e.semver, t) && ('<=' === this.operator || '<' === this.operator) && ('>=' === e.operator || '>' === e.operator);
+            o = T(this.semver, '<', e.semver, t) && ('>=' === this.operator || '>' === this.operator) && ('<=' === e.operator || '<' === e.operator),
+            l = T(this.semver, '>', e.semver, t) && ('<=' === this.operator || '<' === this.operator) && ('>=' === e.operator || '>' === e.operator);
         return r || i || (a && s) || o || l;
     }),
     (t.Range = N),
@@ -604,10 +604,10 @@ t.gtr = function (e, t, n) {
 function L(e, t, n, r) {
     switch (((e = new _(e, r)), (t = new N(t, r)), n)) {
         case '>':
-            (i = g), (a = T), (s = E), (o = '>'), (l = '>=');
+            (i = g), (a = S), (s = E), (o = '>'), (l = '>=');
             break;
         case '<':
-            (i = E), (a = S), (s = g), (o = '<'), (l = '<=');
+            (i = E), (a = b), (s = g), (o = '<'), (l = '<=');
             break;
         default:
             throw TypeError('Must provide a hilo val of "<" or ">"');

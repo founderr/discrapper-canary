@@ -20,23 +20,23 @@ function o(e) {
         [, d] = (0, i.useState)(!1),
         f = (0, i.useRef)(null),
         _ = (0, i.useRef)(null),
-        [, h] = (0, i.useState)(null),
-        p = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
+        [, p] = (0, i.useState)(null),
+        h = (0, i.useMemo)(() => l(e.selectedKeys), [e.selectedKeys]),
         m = (0, i.useMemo)(() => l(e.defaultSelectedKeys, new s()), [e.defaultSelectedKeys]),
-        [g, E] = (0, r.zk)(p, m, e.onSelectionChange),
+        [g, E] = (0, r.zk)(h, m, e.onSelectionChange),
         v = (0, i.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
-        [I, S] = (0, i.useState)(o);
-    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && S('replace');
-    let T = (0, i.useRef)(o);
+        [I, b] = (0, i.useState)(o);
+    'replace' === o && 'toggle' === I && 'object' == typeof g && 0 === g.size && b('replace');
+    let S = (0, i.useRef)(o);
     return (
         (0, i.useEffect)(() => {
-            o !== T.current && (S(o), (T.current = o));
+            o !== S.current && (b(o), (S.current = o));
         }, [o]),
         {
             selectionMode: t,
             disallowEmptySelection: n,
             selectionBehavior: I,
-            setSelectionBehavior: S,
+            setSelectionBehavior: b,
             get isFocused() {
                 return c.current;
             },
@@ -50,7 +50,7 @@ function o(e) {
                 return _.current;
             },
             setFocusedKey(e, t = 'first') {
-                (f.current = e), (_.current = t), h(e);
+                (f.current = e), (_.current = t), p(e);
             },
             selectedKeys: g,
             setSelectedKeys(e) {

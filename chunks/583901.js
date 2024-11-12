@@ -22,8 +22,8 @@ var i = n(120356),
     d = n(210887),
     f = n(47760),
     _ = n(798728),
-    h = n(981631),
-    p = n(388032),
+    p = n(981631),
+    h = n(388032),
     m = n(405166);
 function g() {
     return (0, r.jsx)('div', {
@@ -55,7 +55,7 @@ function E(e) {
                         tabIndex: null != l ? l : _.tabIndex,
                         className: a()(m.themeSelection, { [m.selected]: o }, n),
                         style: i,
-                        onClick: o ? h.dG4 : s,
+                        onClick: o ? p.dG4 : s,
                         children: u
                     }),
                     o && (0, r.jsx)(g, {}),
@@ -83,23 +83,23 @@ function v(e) {
             .with(
                 {
                     theme: 'system',
-                    systemPrefersColorScheme: h.BRd.LIGHT
+                    systemPrefersColorScheme: p.BRd.LIGHT
                 },
                 () => m.lightIcon
             )
-            .with({ theme: h.BRd.LIGHT }, () => m.lightIcon)
-            .with({ theme: h.BRd.DARK }, () => m.darkIcon)
-            .with({ theme: h.BRd.DARKER }, () => m.darkerIcon)
-            .with({ theme: h.BRd.MIDNIGHT }, () => m.midnightIcon)
+            .with({ theme: p.BRd.LIGHT }, () => m.lightIcon)
+            .with({ theme: p.BRd.DARK }, () => m.darkIcon)
+            .with({ theme: p.BRd.DARKER }, () => m.darkerIcon)
+            .with({ theme: p.BRd.MIDNIGHT }, () => m.midnightIcon)
             .otherwise(() => m.darkIcon),
         I = (0, s.EQ)(t)
-            .with(h.BRd.LIGHT, () => p.intl.string(p.t.K2sFfn))
-            .with(h.BRd.DARK, () => p.intl.string(p.t.b8Cei4))
-            .with(h.BRd.DARKER, () => 'Darker')
-            .with(h.BRd.MIDNIGHT, () => p.intl.string(p.t.pQwSpa))
-            .with('system', () => p.intl.string(p.t['7rOU6u']))
+            .with(p.BRd.LIGHT, () => h.intl.string(h.t.K2sFfn))
+            .with(p.BRd.DARK, () => h.intl.string(h.t.b8Cei4))
+            .with(p.BRd.DARKER, () => 'Darker')
+            .with(p.BRd.MIDNIGHT, () => h.intl.string(h.t.pQwSpa))
+            .with('system', () => h.intl.string(h.t['7rOU6u']))
             .exhaustive(),
-        S = (0, c.useRedesignIconContext)().enabled;
+        b = (0, c.useRedesignIconContext)().enabled;
     return (0, r.jsx)(E, {
         onSelect: i,
         isSelected: n,
@@ -109,14 +109,14 @@ function v(e) {
             'system' === t &&
             (0, r.jsx)('div', {
                 className: m.iconWrapper,
-                children: S ? (0, r.jsx)(c.RefreshIcon, { color: g(f) }) : (0, r.jsx)(_.Z, { fill: g(f) })
+                children: b ? (0, r.jsx)(c.RefreshIcon, { color: g(f) }) : (0, r.jsx)(_.Z, { fill: g(f) })
             })
     });
 }
 function I(e) {
     let { preset: t, isSelected: n, disabled: i, tabIndex: s, onSelect: o, showBadge: l, showLockedBadge: c } = e,
-        { colors: d, angle: _, theme: h } = t,
-        p = (0, f.VK)({
+        { colors: d, angle: _, theme: p } = t,
+        h = (0, f.VK)({
             colors: d,
             angle: _
         });
@@ -124,8 +124,8 @@ function I(e) {
         onSelect: i ? void 0 : o,
         isSelected: n,
         name: t.getName(),
-        className: a()([i ? m.disabled : null, (0, u.wj)(h) ? m.darkOverlay : m.lightOverlay]),
-        style: { background: 'var(--bg-overlay), '.concat(p) },
+        className: a()([i ? m.disabled : null, (0, u.wj)(p) ? m.darkOverlay : m.lightOverlay]),
+        style: { background: 'var(--bg-overlay), '.concat(h) },
         tabIndex: s,
         showBadge: l,
         showLockedBadge: c

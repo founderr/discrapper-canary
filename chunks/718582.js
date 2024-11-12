@@ -6,7 +6,7 @@ n.d(t, {
         return eg;
     },
     DE: function () {
-        return eh;
+        return ep;
     },
     Es: function () {
         return el;
@@ -18,7 +18,7 @@ n.d(t, {
         return eu;
     },
     NZ: function () {
-        return ep;
+        return eh;
     },
     QO: function () {
         return er;
@@ -58,16 +58,16 @@ var r,
     d = n(317381),
     f = n(841784),
     _ = n(367907),
-    h = n(835473),
-    p = n(12498),
+    p = n(835473),
+    h = n(12498),
     m = n(557135),
     g = n(471445),
     E = n(66999),
     v = n(15274),
     I = n(924301),
-    S = n(230900),
-    T = n(703656),
-    b = n(881824),
+    b = n(230900),
+    S = n(703656),
+    T = n(881824),
     y = n(922482),
     A = n(565799),
     N = n(501655),
@@ -197,11 +197,11 @@ function ei(e) {
             [t],
             s.isEqual
         ),
-        h = _.map((e) => {
+        p = _.map((e) => {
             let { event: t } = e;
             return t.channel_id;
         }),
-        p = (0, l.Wu)([k.Z], () => k.Z.getBlockedOrIgnoredIDs()),
+        h = (0, l.Wu)([k.Z], () => k.Z.getBlockedOrIgnoredIDs()),
         m = (0, l.e7)([B.ZP], () => B.ZP.getVoiceStates(t), [t]),
         g = a.useMemo(() => {
             let t = Object.keys(m);
@@ -210,17 +210,17 @@ function ei(e) {
                 : t.filter((t) => {
                       let n = m[t].filter(F.lm);
                       return (
-                          !(0 === n.length || h.includes(t)) &&
+                          !(0 === n.length || p.includes(t)) &&
                           null ==
                               n.find((e) => {
                                   let { user: t } = e;
-                                  return p.includes(t.id);
+                                  return h.includes(t.id);
                               }) &&
                           t !== e.afkChannelId &&
                           c.includes(t)
                       );
                   });
-        }, [m, h, c, p, e.afkChannelId]),
+        }, [m, p, c, h, e.afkChannelId]),
         E = (0, l.e7)(
             [d.ZP, G.Z, O.Z, P.Z, D.Z],
             () =>
@@ -272,12 +272,12 @@ function ei(e) {
             s.isEqual
         ),
         v = (0, l.e7)([L.Z], () => L.Z.hasConsented(W.pjP.PERSONALIZATION)),
-        S = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
-        T = v && S.length > 0,
-        b = [...E, ..._];
+        b = (0, l.e7)([R.Z], () => R.Z.getUserAffinities()),
+        S = v && b.length > 0,
+        T = [...E, ..._];
     return (
-        i !== b.length &&
-            b.length > 0 &&
+        i !== T.length &&
+            T.length > 0 &&
             (r(
                 (function (e) {
                     let t = [...e],
@@ -374,10 +374,10 @@ function ei(e) {
                             ],
                             ['desc']
                         );
-                    })(b, T)
+                    })(T, S)
                 ).slice(0, 3)
             ),
-            u(b.length)),
+            u(T.length)),
         n
     );
 }
@@ -529,14 +529,14 @@ function ed(e, t, n) {
                 let { channelId: r } = e,
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, S.XU)(t, r) : ((0, S.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EMBEDDED_ACTIVITY:
             return () => {
                 let { channelId: r } = e.embeddedActivities[0],
                     i = D.Z.getChannel(r),
                     a = M.Z.can(W.Plq.CONNECT, i);
-                ec(e, t, n, 'card'), a ? (0, T.XU)(t, r) : ((0, T.XU)(t), c.Z.channelListScrollTo(t, r));
+                ec(e, t, n, 'card'), a ? (0, S.XU)(t, r) : ((0, S.XU)(t), c.Z.channelListScrollTo(t, r));
             };
         case Y.L.EVENT:
             return () => {
@@ -548,7 +548,7 @@ function ed(e, t, n) {
 }
 let ef = async (e, t) => {
         let n = await (0, y.AC)(e, t);
-        (0, b.R5)(n, null, !1);
+        (0, T.R5)(n, null, !1);
     },
     e_ = (e, t) => {
         m.Z.handleVoiceConnect({
@@ -557,9 +557,9 @@ let ef = async (e, t) => {
             needSubscriptionToAccess: (0, E.$)(t.id).needSubscriptionToAccess,
             locked: !1
         }),
-            (0, T.XU)(e, t.id);
+            (0, S.XU)(e, t.id);
     };
-function eh(e, t) {
+function ep(e, t) {
     let { category: n } = e;
     switch (n) {
         case Y.L.HANGOUT:
@@ -590,9 +590,9 @@ function eh(e, t) {
             return null;
     }
 }
-function ep(e) {
+function eh(e) {
     let t, n;
-    let r = (0, S.cS)(e),
+    let r = (0, b.cS)(e),
         i = null == r ? void 0 : r.replace(/[<#>]/g, ''),
         a = null != i ? D.Z.getChannel(i) : D.Z.getChannel(e.channel_id),
         s = M.Z.can(W.Plq.VIEW_CHANNEL, a);
@@ -608,10 +608,10 @@ function ep(e) {
 }
 function em(e) {
     let t = e.category === Y.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].applicationId : null;
-    return (0, h.q)(t);
+    return (0, p.q)(t);
 }
 function eg(e) {
-    let t = (0, l.e7)([p.Z], () => p.Z.getChannelStatus(e)),
+    let t = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(e)),
         n = null != t && t.trim().length > 0;
     return {
         channelStatus: t,

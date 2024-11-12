@@ -77,25 +77,25 @@ let o = 'currentColor',
     };
 function _(e) {
     var t;
-    let { width: n = 31, height: u = 22, referralsRemaining: _, isResending: h, hovered: p, shouldShowBirthdayUX: m, isLightTheme: g, ...E } = e,
+    let { width: n = 31, height: u = 22, referralsRemaining: _, isResending: p, hovered: h, shouldShowBirthdayUX: m, isLightTheme: g, ...E } = e,
         [v, I] = i.useState(o),
-        S = null !== (t = l.get(v)) && void 0 !== t ? t : null;
+        b = null !== (t = l.get(v)) && void 0 !== t ? t : null;
     return (
         i.useEffect(() => {
-            p ? I((e) => f(p, m, g, h, e)) : h && I(o);
-        }, [p, m, g, h]),
+            h ? I((e) => f(h, m, g, p, e)) : p && I(o);
+        }, [h, m, g, p]),
         (0, r.jsxs)('svg', {
             width: n,
             height: u,
             ...(0, s.Z)(E),
             xmlns: 'http://www.w3.org/2000/svg',
             children: [
-                h
+                p
                     ? (0, r.jsx)(d, { fillColor: v })
                     : (0, r.jsx)(c, {
                           referralsRemaining: _,
-                          fillColor: p ? v : o,
-                          secondaryFillColor: p ? S : null
+                          fillColor: h ? v : o,
+                          secondaryFillColor: h ? b : null
                       }),
                 (0, r.jsxs)('defs', {
                     children: [

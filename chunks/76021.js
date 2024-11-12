@@ -15,8 +15,8 @@ var i = n(481060),
     d = n(614011),
     f = n(592125),
     _ = n(430824),
-    h = n(131951),
-    p = n(594174),
+    p = n(131951),
+    h = n(594174),
     m = n(358085),
     g = n(981631),
     E = n(37113);
@@ -34,9 +34,9 @@ function v(e, t, v) {
         }),
             (0, c.F4)() && ((0, u.z)(), (0, d.O)());
     else {
-        var S;
+        var b;
         let n = f.Z.getChannel(t),
-            r = (0, s.Z)(E.tI.PRESET_CUSTOM, E.LY.RESOLUTION_1080, E.ws.FPS_30, p.default.getCurrentUser(), null === (S = _.Z.getGuild(e)) || void 0 === S ? void 0 : S.premiumTier, n)
+            r = (0, s.Z)(E.tI.PRESET_CUSTOM, E.LY.RESOLUTION_1080, E.ws.FPS_30, h.default.getCurrentUser(), null === (b = _.Z.getGuild(e)) || void 0 === b ? void 0 : b.premiumTier, n)
                 ? {
                       width: 1920,
                       height: 1080
@@ -45,7 +45,7 @@ function v(e, t, v) {
                       width: 1280,
                       height: 720
                   };
-        h.Z.getMediaEngine()
+        p.Z.getMediaEngine()
             .getDesktopSource(r, !0)
             .then((n) => {
                 (0, a.WH)(e, t, {

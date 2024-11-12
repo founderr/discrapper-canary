@@ -36,14 +36,14 @@ function s(e, t, n, s, o, l) {
     t.forEach(function (t) {
         (0, i.h)(e, t.options);
     });
-    var h = e._result;
-    switch (((0, a.DY)(h), e.method)) {
+    var p = e._result;
+    switch (((0, a.DY)(p), e.method)) {
         case 'all':
         case 'between':
-            return h;
+            return p;
         case 'before':
-            return (h.length && h[h.length - 1]) || null;
+            return (p.length && p[p.length - 1]) || null;
         default:
-            return (h.length && h[0]) || null;
+            return (p.length && p[0]) || null;
     }
 }

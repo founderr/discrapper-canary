@@ -17,8 +17,8 @@ function o(e) {
         .map((r) => {
             var a, o;
             let { index: u, timestamp: c, logs: d, nativeLogs: f, serverTrace: _ } = r,
-                h = 0 === u ? (null !== (o = null === (a = i().find(d, (e) => e.log.indexOf('Logger loaded') >= 0)) || void 0 === a ? void 0 : a.timestamp) && void 0 !== o ? o : e) : c,
-                p = (function (e, t) {
+                p = 0 === u ? (null !== (o = null === (a = i().find(d, (e) => e.log.indexOf('Logger loaded') >= 0)) || void 0 === a ? void 0 : a.timestamp) && void 0 !== o ? o : e) : c,
+                h = (function (e, t) {
                     var n, r;
                     let a = (function (e) {
                             let t = [];
@@ -92,12 +92,12 @@ function o(e) {
                         let o = !1;
                         return e.filter((e) => !(o && e.log.includes('\u21AA')) && !(o = (!r && '\uD83C\uDFA8' === e.emoji) || !1 === e.shouldKeep));
                     })(d, f, t, n),
-                    h
+                    p
                 ),
                 m = 'Trace #'
                     .concat(u + 1, ' started ')
                     .concat((0, s.Ye)(c), '\n')
-                    .concat(p);
+                    .concat(h);
             return null != _ && (m += '\n Server trace for trace #'.concat(u + 1).concat(_)), m;
         })
         .join('\n\n');

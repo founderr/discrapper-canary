@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(317381),
     f = n(638880),
     _ = n(255621),
-    h = n(452634),
-    p = n(620662),
+    p = n(452634),
+    h = n(620662),
     m = n(841784),
     g = n(275920),
     E = n(906732),
     v = n(835473),
     I = n(592745),
-    S = n(592125),
-    T = n(757266),
-    b = n(650774),
+    b = n(592125),
+    S = n(757266),
+    T = n(650774),
     y = n(430824),
     A = n(283595),
     N = n(496675),
@@ -46,14 +46,14 @@ function G(e) {
         H = (0, m.Z)(G),
         Y = null == G ? void 0 : G.application_id,
         W = null == G ? void 0 : G.session_id,
-        K = (0, h.Z)({
+        K = (0, p.Z)({
             activity: G,
             userId: t.id,
             channelId: void 0
         }),
         z =
             (0, a.e7)(
-                [A.Z, I.Z, L.Z, T.Z],
+                [A.Z, I.Z, L.Z, S.Z],
                 () =>
                     null != Y &&
                     (0, w.t)({
@@ -61,7 +61,7 @@ function G(e) {
                         LibraryApplicationStore: A.Z,
                         LaunchableGameStore: I.Z,
                         DispatchApplicationStore: L.Z,
-                        ConnectedAppsStore: T.Z
+                        ConnectedAppsStore: S.Z
                     })
             ) || H,
         q = (0, a.e7)([d.ZP], () =>
@@ -71,7 +71,7 @@ function G(e) {
             })
         ),
         Q = (0, a.e7)([D.Z], () => null != Y && D.Z.getState(Y, P.mFx.JOIN) === P.OcF.LOADING),
-        X = (0, a.e7)([S.Z, y.Z, b.Z, C.Z, R.Z, O.Z, N.Z], () =>
+        X = (0, a.e7)([b.Z, y.Z, T.Z, C.Z, R.Z, O.Z, N.Z], () =>
             (0, _.Z)({
                 user: t,
                 activity: G,
@@ -79,9 +79,9 @@ function G(e) {
                 channelId: K,
                 currentUser: n,
                 isEmbedded: H,
-                ChannelStore: S.Z,
+                ChannelStore: b.Z,
                 GuildStore: y.Z,
-                GuildMemberCountStore: b.Z,
+                GuildMemberCountStore: T.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: R.Z,
                 VoiceStateStore: O.Z,
@@ -90,7 +90,7 @@ function G(e) {
         ),
         [J, $] = i.useState(!1),
         ee = J || q || (x.isPlatformEmbedded && !z);
-    if (null == Y || !X || (!(0, p.Z)(G, P.xjy.JOIN) && !H)) return null;
+    if (null == Y || !X || (!(0, h.Z)(G, P.xjy.JOIN) && !H)) return null;
     let et = async () => {
             if (
                 H &&
@@ -110,7 +110,7 @@ function G(e) {
             if (X && null != Y && null != W) {
                 var e, n;
                 let r = R.Z.getVoiceChannelId(),
-                    i = S.Z.getChannel(r);
+                    i = b.Z.getChannel(r);
                 await l.Z.join({
                     userId: t.id,
                     sessionId: W,

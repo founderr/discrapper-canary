@@ -10,57 +10,57 @@ var r = n(392711),
     d = n(822179),
     f = n(580005),
     _ = n(70956),
-    h = n(675478),
-    p = n(581883),
+    p = n(675478),
+    h = n(581883),
     m = n(48481),
     g = n(526761),
     E = n(674563);
 let v = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     I = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
-    S = null,
-    T = !1;
-class b extends s.Z {
+    b = null,
+    S = !1;
+class T extends s.Z {
     _initialize() {
-        h.DZ.beforeSendCallbacks.push({
+        p.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
                 R(I, !1);
             }
         }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => d.Z.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!d.Z.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, m.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100)));
+                    if (!!d.Z.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, m.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100)));
                 }
             }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => u.ZP.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => u.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!u.ZP.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.emojiFrecency = a.PL.create()), (e.emojiReactionFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, m.tU)(u.ZP.emojiFrecencyWithoutFetchingLatest.usageHistory, 100)), (e.emojiReactionFrecency.emojis = (0, m.tU)(u.ZP.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100)));
+                    if (!!u.ZP.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.emojiFrecency = a.PL.create()), (e.emojiReactionFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, m.tU)(u.ZP.emojiFrecencyWithoutFetchingLatest.usageHistory, 100)), (e.emojiReactionFrecency.emojis = (0, m.tU)(u.ZP.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100)));
                 }
             }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => c.Z.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => c.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!c.Z.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && !i().isEmpty(c.Z.playedSoundHistory) && ((e.playedSoundFrecency = a.pL.create()), (e.playedSoundFrecency.playedSounds = (0, m.tU)(c.Z.playedSoundHistory, 100)));
+                    if (!!c.Z.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && !i().isEmpty(c.Z.playedSoundHistory) && ((e.playedSoundFrecency = a.pL.create()), (e.playedSoundFrecency.playedSounds = (0, m.tU)(c.Z.playedSoundHistory, 100)));
                 }
             }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => o.ZP.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => o.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!o.ZP.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, m.tU)(o.ZP.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500)));
+                    if (!!o.ZP.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, m.tU)(o.ZP.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500)));
                 }
             }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => l.Z.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => l.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!l.Z.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationFrecency = a.UY.create()), (e.applicationFrecency.applications = (0, m.tU)(l.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, E.yP)));
+                    if (!!l.Z.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationFrecency = a.UY.create()), (e.applicationFrecency.applications = (0, m.tU)(l.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, E.yP)));
                 }
             }),
-            h.DZ.beforeSendCallbacks.push({
-                hasChanges: () => f.Z.hasPendingUsage() && p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+            p.DZ.beforeSendCallbacks.push({
+                hasChanges: () => f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    if (!!f.Z.hasPendingUsage()) p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
+                    if (!!f.Z.hasPendingUsage()) h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
                 }
             });
     }
@@ -86,22 +86,22 @@ class b extends s.Z {
     }
 }
 function y() {
-    (T = !0), R(v, !0);
+    (S = !0), R(v, !0);
 }
 function A(e) {
-    T && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
+    S && 'active' !== e.state && (clearTimeout(b), (b = null), C(!1));
 }
 function N() {
-    T && (clearTimeout(S), (S = null), C(!1));
+    S && (clearTimeout(b), (b = null), C(!1));
 }
 async function C(e) {
     R(I, !1),
-        !p.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.ZP.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, h.T6)(), await h.DZ.loadIfNecessary()),
-        i().forEach(h.aj, (e) => {
+        !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || u.ZP.hasPendingUsage() || o.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
+        i().forEach(p.aj, (e) => {
             e.markDirtyIfHasPendingChange();
         });
 }
 function R(e, t) {
-    null != S && clearTimeout(S), (S = setTimeout(() => C(t), e));
+    null != b && clearTimeout(b), (b = setTimeout(() => C(t), e));
 }
-t.Z = new b();
+t.Z = new T();

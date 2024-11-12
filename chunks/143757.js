@@ -27,8 +27,8 @@ var i = n(200651),
     N = n(404295),
     T = n(728345),
     x = n(812206),
-    A = n(981631),
-    b = n(388032),
+    b = n(981631),
+    A = n(388032),
     Z = n(508042),
     y = n(156762);
 async function L(e, t, n) {
@@ -51,7 +51,7 @@ async function L(e, t, n) {
             t(void 0);
         }
         if (
-            (v.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
+            (v.default.track(b.rMx.APP_DMS_QUICK_LAUNCHER_CLICKED, {
                 application_id: e.id,
                 is_new_dm: l,
                 channel_id: r
@@ -90,7 +90,7 @@ function R(e) {
     return (0, i.jsx)(o.Clickable, {
         className: a()(Z.clickable, { [Z.disabledClickable]: f }),
         onClick: () => (m || f ? null : L(t, r, c)),
-        'aria-label': b.intl.formatToPlainString(b.t['zLhr9/'], {
+        'aria-label': A.intl.formatToPlainString(A.t['zLhr9/'], {
             applicationName: t.name,
             applicationDescription: t.description
         }),
@@ -164,7 +164,7 @@ function O() {
         );
     return (r.useLayoutEffect(() => {
         var e;
-        if (!c && !!o) d(!0), v.default.track(A.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
+        if (!c && !!o) d(!0), v.default.track(b.rMx.APP_DMS_QUICK_LAUNCHER_IMPRESSION, { apps_dm_quick_launcher_application_ids: null !== (e = u.map((e) => Number(e.id))) && void 0 !== e ? e : [] });
     }, [o, u, c]),
     o)
         ? (0, i.jsx)(E.Z, {
@@ -176,7 +176,7 @@ function O() {
                           className: Z.textContainer,
                           children: (0, i.jsx)('span', {
                               className: y.headerText,
-                              children: b.intl.string(b.t.SCViVl)
+                              children: A.intl.string(A.t.SCViVl)
                           })
                       }),
                       (0, i.jsx)(j, {

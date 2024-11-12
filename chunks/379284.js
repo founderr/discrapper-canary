@@ -9,15 +9,15 @@ var r = n(690244),
     d = n(828148),
     f = n(240919),
     _ = n(148309),
-    h = n(632384),
-    p = n(905125);
+    p = n(632384),
+    h = n(905125);
 e.exports = function (e, t, n) {
-    if ('Object' !== h(e)) throw new s('Assertion failed: O must be an Object');
+    if ('Object' !== p(e)) throw new s('Assertion failed: O must be an Object');
     if (!d(t)) throw new s('Assertion failed: P must be a Property Key');
     if (
         !o(
             {
-                Type: h,
+                Type: p,
                 IsDataDescriptor: u,
                 IsAccessorDescriptor: l
             },
@@ -35,5 +35,5 @@ e.exports = function (e, t, n) {
     var g = i(e, t),
         E = g && f(g),
         v = c(e);
-    return p(e, t, v, n, E);
+    return h(e, t, v, n, E);
 };

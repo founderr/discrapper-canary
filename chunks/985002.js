@@ -14,12 +14,12 @@ function o(e) {
         [o, c] = i.useState(!1),
         [d, u] = i.useState(!1),
         [g, m] = i.useState(!1),
-        [f, _] = i.useState(!1),
-        [p, h] = i.useState(!1),
+        [f, p] = i.useState(!1),
+        [_, h] = i.useState(!1),
         [E, b] = i.useState(!1),
         [x, C] = i.useState(!1),
-        [T, v] = i.useState(!1),
-        N = o || d || g || f || E || T,
+        [v, T] = i.useState(!1),
+        N = o || d || g || f || E || v,
         I = i.useCallback(
             async (e) => {
                 if (!N) {
@@ -71,21 +71,21 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!N) {
-                    _(!0);
+                    p(!0);
                     try {
                         await (0, a.fc)(e.id), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        _(!1);
+                        p(!1);
                     }
                 }
             },
             [N, t, n]
         ),
         j = i.useCallback(async () => {
-            if (!p) {
+            if (!_) {
                 h(!0);
                 try {
                     await (0, a.qd)(), null == n || n();
@@ -96,7 +96,7 @@ function o(e) {
                     h(!1);
                 }
             }
-        }, [p, t, n]),
+        }, [_, t, n]),
         P = i.useCallback(
             async (e) => {
                 if (!x) {
@@ -143,27 +143,27 @@ function o(e) {
                     i = n[n.length - 1],
                     l = s.Z.getStartId(),
                     o = s.Z.getSelectedTeenId();
-                if (!T && null != l && null != o) {
-                    v(!0);
+                if (!v && null != l && null != o) {
+                    T(!0);
                     try {
                         await a.ZP.fetchMoreTeenActivity(o, e, l, i.event_id);
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        v(!1);
+                        T(!1);
                     }
                 }
             },
-            [T, t]
+            [v, t]
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
         isDisconnectLoading: g,
         isCancelLoading: f,
-        isGetLinkCodeLoading: p,
+        isGetLinkCodeLoading: _,
         isSelectTeenUserLoading: x,
         isRequestingLink: E,
-        isMoreLoading: T
+        isMoreLoading: v
     };
 }

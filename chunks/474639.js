@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -15,19 +15,19 @@ var r = n(46973),
     d = n(19780),
     f = n(959457),
     _ = n(704806),
-    h = n(626135),
-    p = n(358085),
+    p = n(626135),
+    h = n(358085),
     m = n(924557),
     g = n(435064),
     E = n(894694),
     v = n(779618),
     I = n(356659),
-    S = n(981631),
-    T = n(70722);
-class b extends a.Z {
+    b = n(981631),
+    S = n(70722);
+class T extends a.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, m.ln)() || n !== S.hes.RTC_CONNECTED) return;
+        if (!(0, m.ln)() || n !== b.hes.RTC_CONNECTED) return;
         let a = u.default.getId();
         if (t === r.Yn.DEFAULT) return this.applyUserVoiceRecording(a);
         if (t === r.Yn.STREAM && null != i) {
@@ -47,7 +47,7 @@ class b extends a.Z {
         this.maybeShowClipsWarning(t), this.applyUserVoiceRecording(t);
         let i = f.Z.getRTCConnection(
             o.V9({
-                streamType: null != r ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != r ? S.lo.GUILD : S.lo.CALL,
                 ownerId: t,
                 channelId: n,
                 guildId: r
@@ -57,7 +57,7 @@ class b extends a.Z {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        h.default.track(S.rMx.CLIPS_INIT_FAILURE, {
+        p.default.track(b.rMx.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n
         });
@@ -92,7 +92,7 @@ class b extends a.Z {
         if (n !== r.Yn.STREAM || !(0, v.Z)(c.Z)) return;
         let s = f.Z.getRTCConnection(
             o.V9({
-                streamType: null != a ? T.lo.GUILD : T.lo.CALL,
+                streamType: null != a ? S.lo.GUILD : S.lo.CALL,
                 ownerId: t,
                 channelId: i,
                 guildId: a
@@ -125,7 +125,7 @@ class b extends a.Z {
                 }
             })();
             return (
-                h.default.track(S.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+                p.default.track(b.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
                     version: I.WM,
                     gpu_models: e
@@ -137,12 +137,12 @@ class b extends a.Z {
         }
     }
     classifyHardware(e) {
-        if ((0, p.isWindows)()) {
+        if ((0, h.isWindows)()) {
             let t = e.some((e) => I.mg.test(e)),
                 n = e.some((e) => I.nU.test(e));
             return t ? E.x.MEETS_AUTO_ENABLE : n ? E.x.MEETS_MINIMUM : E.x.BELOW_MINIMUM;
         }
-        if ((0, p.isMac)()) {
+        if ((0, h.isMac)()) {
             let e = s.Z.remoteApp.getAppArch();
             return 'arm64' === e ? E.x.MEETS_AUTO_ENABLE : E.x.MEETS_MINIMUM;
         }

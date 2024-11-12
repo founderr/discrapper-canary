@@ -11,11 +11,11 @@ var r = n(200651),
 t.Z = (e) => {
     let { guildId: t, reportId: n } = e,
         [f, _] = i.useState(!1),
-        h = u.Z.getGuild(t),
-        p = null != h;
+        p = u.Z.getGuild(t),
+        h = null != p;
     i.useEffect(() => {
-        _(!p);
-    }, [p]);
+        _(!h);
+    }, [h]);
     let m = i.useCallback(() => {
         _(!0),
             s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
@@ -24,25 +24,25 @@ t.Z = (e) => {
             }),
             o.Z.leaveGuild(t);
     }, [t, n]);
-    return null == h
+    return null == p
         ? null
         : (0, r.jsx)(l.Z, {
               title: d.intl.string(d.t.cU96io),
-              description: d.intl.formatToPlainString(d.t['26mR6+'], { guildName: null == h ? void 0 : h.name }),
+              description: d.intl.formatToPlainString(d.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
               buttonText: f ? d.intl.string(d.t['9Ak99v']) : d.intl.string(d.t.F3qExs),
               buttonDisabled: f,
               buttonColor: a.Button.Colors.RED,
               onButtonPress: () => {
                   (0, a.openModal)((e) =>
                       (0, r.jsx)(a.ConfirmModal, {
-                          header: d.intl.formatToPlainString(d.t['1GX6Pz'], { name: h.name }),
+                          header: d.intl.formatToPlainString(d.t['1GX6Pz'], { name: p.name }),
                           confirmText: d.intl.string(d.t.J2TBi4),
                           cancelText: d.intl.string(d.t['ETE/oK']),
                           onConfirm: m,
                           ...e,
                           children: (0, r.jsx)(a.Text, {
                               variant: 'text-md/normal',
-                              children: d.intl.format(d.t.ZEXC0t, { name: h.name })
+                              children: d.intl.format(d.t.ZEXC0t, { name: p.name })
                           })
                       })
                   );

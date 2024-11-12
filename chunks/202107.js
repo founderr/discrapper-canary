@@ -19,7 +19,7 @@ let l = null,
         let f = a.ZP.getMember(e, t),
             _ = s.default.getUser(t);
         if (null == f || null == _ || (0, o.b)(f)) return;
-        let h = {
+        let p = {
             ...f,
             guildId: e,
             nick: null !== (n = f.nick) && void 0 !== n ? n : _.username,
@@ -36,7 +36,7 @@ let l = null,
         };
         r.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE',
-            ...h
+            ...p
         });
     };
 class d extends i.Z {

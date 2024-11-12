@@ -14,8 +14,8 @@ var r = n(192379),
             d = e.width,
             f = e.triangle,
             _ = e.styles,
-            h = e.className,
-            p = 'transparent' === i,
+            p = e.className,
+            h = 'transparent' === i,
             m = function (e, n) {
                 l.FX(e) &&
                     t(
@@ -86,10 +86,10 @@ var r = n(192379),
             'div',
             {
                 style: g.card,
-                className: 'block-picker ' + (void 0 === h ? '' : h)
+                className: 'block-picker ' + (void 0 === p ? '' : p)
             },
             r.createElement('div', { style: g.triangle }),
-            r.createElement('div', { style: g.head }, p && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), r.createElement('div', { style: g.label }, i)),
+            r.createElement('div', { style: g.head }, h && r.createElement(u.QN, { borderRadius: '6px 6px 0 0' }), r.createElement('div', { style: g.label }, i)),
             r.createElement(
                 'div',
                 { style: g.body },

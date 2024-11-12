@@ -20,8 +20,8 @@ let u = (e) => {
     },
     c = (e) => {
         let { sourceType: t, expressionSourceApplication: n, isPremium: r, hasJoinedEmojiSourceGuild: i, isUnusableRoleSubscriptionEmoji: a, isDiscoverable: s, emojiComesFromCurrentGuild: u, userIsRoleSubscriber: c, isRoleSubscriptionEmoji: d, shouldHideRoleSubscriptionCTA: f, onOpenPremiumSettings: _ } = e,
-            h = null;
-        return (h = t === o.w6.APPLICATION && null != n ? l.intl.formatToPlainString(l.t.uERlTU, { appName: n.name }) : r ? (i ? (d ? (f && a ? l.intl.string(l.t.xFb68v) : a ? (c ? l.intl.string(l.t.vLklfH) : l.intl.string(l.t['g8i/bW'])) : l.intl.string(l.t.Eoynp6)) : u ? l.intl.string(l.t.hU4kIS) : l.intl.string(l.t.GM0xaW)) : s ? l.intl.string(l.t.xE9WGh) : l.intl.string(l.t['0LMpW1'])) : i ? (f && a ? l.intl.string(l.t.xFb68v) : a ? (c ? l.intl.string(l.t.vLklfH) : l.intl.string(l.t['g8i/bW'])) : u ? l.intl.string(l.t.ICPhqa) : l.intl.string(l.t.jQy3aG)) : s ? l.intl.string(l.t.FJ6Z09) : l.intl.format(l.t.U6vLcH, { openPremiumSettings: _ }));
+            p = null;
+        return (p = t === o.w6.APPLICATION && null != n ? l.intl.formatToPlainString(l.t.uERlTU, { appName: n.name }) : r ? (i ? (d ? (f && a ? l.intl.string(l.t.xFb68v) : a ? (c ? l.intl.string(l.t.vLklfH) : l.intl.string(l.t['g8i/bW'])) : l.intl.string(l.t.Eoynp6)) : u ? l.intl.string(l.t.hU4kIS) : l.intl.string(l.t.GM0xaW)) : s ? l.intl.string(l.t.xE9WGh) : l.intl.string(l.t['0LMpW1'])) : i ? (f && a ? l.intl.string(l.t.xFb68v) : a ? (c ? l.intl.string(l.t.vLklfH) : l.intl.string(l.t['g8i/bW'])) : u ? l.intl.string(l.t.ICPhqa) : l.intl.string(l.t.jQy3aG)) : s ? l.intl.string(l.t.FJ6Z09) : l.intl.format(l.t.U6vLcH, { openPremiumSettings: _ }));
     },
     d = (e) => {
         let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: r, isDiscoverable: i } = e,

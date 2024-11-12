@@ -10,35 +10,35 @@ var r = n(200651),
     d = n(171368),
     f = n(981631),
     _ = n(388032),
-    h = n(362187);
-let p = 57.75;
+    p = n(362187);
+let h = 57.75;
 t.Z = i.memo(function (e) {
     let { user: t, onClose: n, bio: a, hidePersonalInformation: m, viewFullBioDisabled: g = !1 } = e,
         { context: E } = (0, u.KZ)(),
         { analyticsLocations: v } = (0, l.ZP)(),
-        [I, S] = i.useState(!1),
-        [T, b] = i.useState(!1);
+        [I, b] = i.useState(!1),
+        [S, T] = i.useState(!1);
     return m || null == a || '' === a
         ? null
         : (0, r.jsxs)('div', {
               children: [
                   (0, r.jsx)('div', {
                       ref: (e) => {
-                          null != e && (S(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > p && b(!0));
+                          null != e && (b(!S && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > h && T(!0));
                       },
-                      className: s()(h.descriptionClamp, T && h.maxBioHeight),
+                      className: s()(p.descriptionClamp, S && p.maxBioHeight),
                       children: (0, r.jsx)(c.Z, {
                           userBio: a,
                           setLineClamp: !1,
                           textColor: 'header-primary'
                       })
                   }),
-                  (I || T) &&
+                  (I || S) &&
                       (0, r.jsx)(o.Button, {
                           look: o.Button.Looks.BLANK,
                           size: o.Button.Sizes.NONE,
-                          className: h.viewFullBio,
-                          color: s()(h.viewFullBioColor, g && h.viewFullBioDisabled),
+                          className: p.viewFullBio,
+                          color: s()(p.viewFullBioColor, g && p.viewFullBioDisabled),
                           onClick: () => {
                               null == n || n(),
                                   (0, d.openUserProfileModal)({

@@ -19,16 +19,16 @@ var r,
     d = n(481060),
     f = n(230711),
     _ = n(351773),
-    h = n(100527),
-    p = n(94795),
+    p = n(100527),
+    h = n(94795),
     m = n(327943),
     g = n(539873),
     E = n(207164),
     v = n(238302),
     I = n(514361),
-    S = n(572397),
-    T = n(705262),
-    b = n(436774),
+    b = n(572397),
+    S = n(705262),
+    T = n(436774),
     y = n(768762),
     A = n(197115),
     N = n(727939),
@@ -38,12 +38,12 @@ var r,
     D = n(388032),
     L = n(396088);
 function x() {
-    let e = (0, S.q)();
+    let e = (0, b.q)();
     return (
         s.useEffect(() => ((0, v.Kq)(), e(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(C.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, a.jsx)(T.ZP, {
-            type: T.yH.EDITOR,
-            children: (0, a.jsx)(T.ZP.BasicAndGradient, { isEditor: !0 })
+        (0, a.jsx)(S.ZP, {
+            type: S.yH.EDITOR,
+            children: (0, a.jsx)(S.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
@@ -51,7 +51,7 @@ function w() {
     let e = (0, E.Z)();
     return (
         s.useEffect(() => {
-            (0, p.nJ)(), e();
+            (0, h.nJ)(), e();
         }, [e]),
         (0, a.jsx)(g.Z, { isEditor: !0 })
     );
@@ -68,13 +68,13 @@ function M(e) {
             .with({ isCoachmark: !0 }, () => D.intl.string(D.t.cpT0Cg))
             .with({ isPreview: !0 }, () => D.intl.string(D.t['dqH+qq']))
             .otherwise(() => D.intl.string(D.t.Olc2Ky)),
-        p = s.useCallback(() => {
+        h = s.useCallback(() => {
             if (1 === t) {
                 (0, d.openModalLazy)(async () => {
                     let { default: e } = await n.e('69052').then(n.bind(n, 184250));
                     return (t) =>
                         (0, a.jsx)(e, {
-                            analyticsSource: h.Z.APP_ICON_EDITOR,
+                            analyticsSource: p.Z.APP_ICON_EDITOR,
                             analyticsLocation: { section: C.jXE.SETTINGS_APP_ICONS },
                             ...t
                         });
@@ -86,7 +86,7 @@ function M(e) {
                     let { default: e } = await n.e('68192').then(n.bind(n, 742234));
                     return (t) =>
                         (0, a.jsx)(e, {
-                            analyticsSource: h.Z.CLIENT_THEMES_EDITOR,
+                            analyticsSource: p.Z.CLIENT_THEMES_EDITOR,
                             analyticsLocation: { section: C.jXE.SETTINGS_CLIENT_THEMES },
                             ...t
                         });
@@ -104,12 +104,12 @@ function M(e) {
                         (0, a.jsx)(d.NitroWheelIcon, {
                             className: L.footerNitro,
                             size: 'xs',
-                            color: b.JX.PREMIUM_TIER_2
+                            color: T.JX.PREMIUM_TIER_2
                         }),
                         (0, a.jsx)(d.Text, {
                             className: L.footerText,
                             variant: 'text-sm/medium',
-                            children: D.intl.format(D.t.x2dQxM, { onClick: p })
+                            children: D.intl.format(D.t.x2dQxM, { onClick: h })
                         })
                     ]
                 }),
@@ -158,13 +158,13 @@ function P(e) {
         l = (0, c.e7)([I.Z], () => I.Z.isPreview),
         u = (0, c.e7)([m.Z], () => m.Z.isUpsellPreview),
         f = l || u,
-        h = (0, S.J)(),
+        p = (0, b.J)(),
         g = s.useCallback(() => {
-            l && h(), u && (0, p.O7)();
-        }, [l, u, h]),
+            l && p(), u && (0, h.O7)();
+        }, [l, u, p]),
         E = (0, _.Z)(null, f ? g : C.dG4),
-        T = s.useCallback(() => {
-            (0, p.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
+        S = s.useCallback(() => {
+            (0, h.G8)(), (0, v.Mo)(), g(), null == n || n(R.L.DISMISS);
         }, [g, n]);
     return (0, a.jsx)(N.Z, {
         className: L.draggableContainer,
@@ -186,7 +186,7 @@ function P(e) {
                                     className: L.closeContainer,
                                     innerClassName: L.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: T
+                                    onClick: S
                                 })
                             ]
                         }),
@@ -208,7 +208,7 @@ function P(e) {
                 (0, a.jsx)(M, {
                     tab: r,
                     isPreview: f,
-                    onClose: T,
+                    onClose: S,
                     isCoachmark: !1
                 })
             ]

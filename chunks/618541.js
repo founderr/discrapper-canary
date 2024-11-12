@@ -9,8 +9,8 @@ var a,
     d = n(570140),
     f = n(358085),
     _ = n(981631);
-let h = null,
-    p = null,
+let p = null,
+    h = null,
     m = null;
 (0, f.isDesktop)() &&
     (window.popupBridge = {
@@ -24,10 +24,10 @@ let h = null,
     });
 class g extends (a = u.ZP.Store) {
     getClient() {
-        return h;
+        return p;
     }
     getPayPalClient() {
-        return p;
+        return h;
     }
     getVenmoClient() {
         return m;
@@ -48,11 +48,11 @@ class g extends (a = u.ZP.Store) {
 let E = new g(d.Z, {
     BRAINTREE_CREATE_CLIENT_SUCCESS: function (e) {
         let { client: t } = e;
-        h = t;
+        p = t;
     },
     BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: function (e) {
         let { paypalClient: t } = e;
-        p = t;
+        h = t;
     },
     BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
         let { paymentSourceType: t, state: n, path: i, query: a } = e;
@@ -69,7 +69,7 @@ let E = new g(d.Z, {
         t === _.HeQ.PAYPAL && (r = n);
     },
     BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function () {
-        p = null;
+        h = null;
     },
     BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function (e) {
         let { venmoClient: t } = e;

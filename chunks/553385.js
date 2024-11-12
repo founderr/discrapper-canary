@@ -3,13 +3,13 @@ n.d(t, {
         return f;
     },
     XP: function () {
-        return h;
+        return p;
     },
     j8: function () {
         return _;
     },
     z$: function () {
-        return p;
+        return h;
     }
 });
 var r = n(544891),
@@ -34,7 +34,7 @@ function _(e) {
         body: { prompt_type: t }
     });
 }
-async function h(e, t, n) {
+async function p(e, t, n) {
     await r.tn.post({
         url: d.ANM.SEND_GAMING_STATS(t),
         body: {
@@ -47,7 +47,7 @@ async function h(e, t, n) {
     }),
         m(t);
 }
-async function p(e) {
+async function h(e) {
     let t = await r.tn.patch({ url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id) });
     if (null != t.text && '' !== t.text) {
         let n = o.Z.getChannel(e.channel_id);

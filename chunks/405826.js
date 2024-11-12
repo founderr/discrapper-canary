@@ -28,14 +28,14 @@ function _(e, t, n) {
         e
     );
 }
-let h = new l.Z('Spellchecker'),
-    p = null === o.Z || void 0 === o.Z ? void 0 : o.Z.spellCheck;
+let p = new l.Z('Spellchecker'),
+    h = null === o.Z || void 0 === o.Z ? void 0 : o.Z.spellCheck;
 function m(e) {
     var t;
     e = null !== (t = f.Z[e]) && void 0 !== t ? t : e;
     let n = (0, r.parse)(e.replace(/[_-]/g, '-'));
     if (null == n || null == n.langtag.language || null == n.langtag.region) {
-        h.error(''.concat(e, ' is not a valid locale.'));
+        p.error(''.concat(e, ' is not a valid locale.'));
         return;
     }
     let { language: i, region: a } = n.langtag;
@@ -49,14 +49,14 @@ class g {
         this._enabled = e;
     }
     setLearnedWords(e) {
-        p.setLearnedWords(e);
+        h.setLearnedWords(e);
     }
     setLocale(e) {
         var t;
-        null === (t = p.setLocale(e)) ||
+        null === (t = h.setLocale(e)) ||
             void 0 === t ||
             t.then((t) => {
-                h.info('Switching to '.concat(e), t ? '(available)' : '(unavailable)');
+                p.info('Switching to '.concat(e), t ? '(available)' : '(unavailable)');
             });
     }
     setAppLocale(e) {
@@ -83,7 +83,7 @@ class g {
         return this.isMisspelled(e, t) ? this.corrections : [];
     }
     replaceMisspelling(e) {
-        p.replaceMisspelling(e);
+        h.replaceMisspelling(e);
     }
     constructor(e) {
         _(this, 'languageDetector', void 0), _(this, 'regionPreference', void 0), _(this, '_enabled', !0), _(this, 'misspelledWord', ''), _(this, 'corrections', []);
@@ -99,7 +99,7 @@ class g {
                 null != e && this.setLocale(e);
             }
         })),
-            p.on('spellcheck-result', (e, t) => {
+            h.on('spellcheck-result', (e, t) => {
                 (this.misspelledWord = null != e ? e : ''), (this.corrections = null != t ? t : []);
             });
     }
@@ -112,6 +112,6 @@ let E = a().debounce((e, t) => {
 }, 250);
 async function v() {
     var e, t;
-    let n = new g((null !== (e = await p.getAvailableDictionaries()) && void 0 !== e ? e : []).map(m).filter(c.lm));
+    let n = new g((null !== (e = await h.getAvailableDictionaries()) && void 0 !== e ? e : []).map(m).filter(c.lm));
     return (t = n), null != document.body && document.body.addEventListener('beforeinput', (e) => E(t, e.target), !0), n;
 }

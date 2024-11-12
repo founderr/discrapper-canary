@@ -9,20 +9,20 @@ var r,
     d = n(695346),
     f = n(70956),
     _ = n(358085),
-    h = n(314897),
-    p = n(981631),
+    p = n(314897),
+    h = n(981631),
     m = n(65154);
 let g = Date.now(),
     E = !1,
     v = !1,
     I = !1,
-    S = !1,
-    T = !1;
-function b() {
-    return I || S || ((0, _.isAndroid)() && T);
+    b = !1,
+    S = !1;
+function T() {
+    return I || b || ((0, _.isAndroid)() && S);
 }
 function y() {
-    Date.now() - g > p.OSm || b()
+    Date.now() - g > h.OSm || T()
         ? E ||
           l.Z.dispatch({
               type: 'IDLE',
@@ -34,7 +34,7 @@ function y() {
               type: 'IDLE',
               idle: !1
           }),
-        Date.now() - g > Math.min(d.CM.getSetting() * f.Z.Millis.SECOND, p.OSm) || b()
+        Date.now() - g > Math.min(d.CM.getSetting() * f.Z.Millis.SECOND, h.OSm) || T()
             ? v ||
               l.Z.dispatch({
                   type: 'AFK',
@@ -65,12 +65,12 @@ function y() {
               (I = !0), A({}), u.default.disconnect();
           }),
           c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (S = !0), A({});
+              (b = !0), A({});
           }),
           c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (S = !1), A({});
+              (b = !1), A({});
           }))
-        : setInterval(y, 0.25 * p.OSm));
+        : setInterval(y, 0.25 * h.OSm));
 function A(e) {
     let { timestamp: t, type: n } = e,
         r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
@@ -115,11 +115,11 @@ class N extends (s = o.ZP.Store) {
         },
         SPEAKING: function (e) {
             let { userId: t, speakingFlags: n } = e;
-            return n !== m.Dg.NONE && t === h.default.getId() && A({}), !1;
+            return n !== m.Dg.NONE && t === p.default.getId() && A({}), !1;
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            return (T = t === p.$7l.BACKGROUND), (g = Date.now()), y(), !1;
+            return (S = t === h.$7l.BACKGROUND), (g = Date.now()), y(), !1;
         },
         OVERLAY_SET_NOT_IDLE: A,
         CHANNEL_SELECT: A,

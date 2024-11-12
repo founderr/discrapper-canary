@@ -9,13 +9,13 @@ n.d(t, {
         return g;
     },
     d5: function () {
-        return p;
+        return h;
     },
     i7: function () {
-        return S;
+        return b;
     },
     kI: function () {
-        return h;
+        return p;
     },
     re: function () {
         return v;
@@ -27,13 +27,13 @@ n.d(t, {
         return I;
     },
     uL: function () {
-        return T;
+        return S;
     },
     xU: function () {
         return E;
     },
     xt: function () {
-        return b;
+        return T;
     }
 }),
     n(411104),
@@ -53,10 +53,10 @@ let f = { readerFactory: (e) => new r.o(e, new TextDecoder('utf-8')) },
         [c.yP.PRELOADED_USER_SETTINGS]: l.o8,
         [c.yP.FRECENCY_AND_FAVORITES_SETTINGS]: o.ji
     };
-function h(e, t) {
-    return null != t && e in _ ? p(_[e], t) : null;
-}
 function p(e, t) {
+    return null != t && e in _ ? h(_[e], t) : null;
+}
+function h(e, t) {
     if (null == t) return null;
     let n = (0, i.c)(t);
     try {
@@ -66,7 +66,7 @@ function p(e, t) {
     }
 }
 function m(e) {
-    return p(l.o8, e);
+    return h(l.o8, e);
 }
 function g(e, t) {
     return E(_[e], t);
@@ -81,14 +81,14 @@ function v(e, t, n) {
 function I(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), !(t in e.guilds) && (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
-function S(e, t, n, r) {
+function b(e, t, n, r) {
     var i, a, s;
-    return (i = e), (a = t), (s = (e) => T(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
+    return (i = e), (a = t), (s = (e) => S(e, n, r)), null == i.guilds && (i.guilds = l.os.create()), I(i.guilds, a, s);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     return !(t in e.channels) && (e.channels[t] = l.p5.create()), n(e.channels[t]);
 }
-function b(e, t) {
+function T(e, t) {
     null == e.versions && (e.versions = u.L.create());
     let n = 0;
     for (let e of t) {

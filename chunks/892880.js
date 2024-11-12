@@ -10,8 +10,8 @@ var i = n(392711),
     d = n(70956),
     f = n(51144),
     _ = n(388032);
-let h = new (o())({ maxAge: 1 * d.Z.Millis.MINUTE });
-function p(e, t, n) {
+let p = new (o())({ maxAge: 1 * d.Z.Millis.MINUTE });
+function h(e, t, n) {
     null != r && clearTimeout(r),
         (r = setTimeout(() => {
             let r = [],
@@ -33,9 +33,9 @@ function p(e, t, n) {
 }
 function m(e, t) {
     let n = ''.concat(null != e ? e : '', ':').concat(t),
-        r = h.get(n);
+        r = p.get(n);
     if (null != r) return r;
-    h.set(n, !0);
+    p.set(n, !0);
 }
 t.Z = {
     getGuildNameSuggestion: function (e) {
@@ -53,6 +53,6 @@ t.Z = {
                   null == m(e, t) && i.push(e);
               })
             : null == m(e, t) && (a = !0),
-            i.length > 0 && r ? p(i, t, n) : a && p(e, t, n);
+            i.length > 0 && r ? h(i, t, n) : a && h(e, t, n);
     }
 };

@@ -43,11 +43,11 @@ function _(e) {
     let { channel: t } = e;
     return c(t);
 }
-function h(e) {
+function p(e) {
     let { channels: t } = e;
     for (let e of t) c(e);
 }
-function p(e) {
+function h(e) {
     let { channel: t } = e,
         n = !1;
     return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
@@ -87,8 +87,8 @@ class m extends i.Z {
             CONNECTION_OPEN_SUPPLEMENTAL: d,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             CHANNEL_CREATE: _,
-            CHANNEL_UPDATES: h,
-            CHANNEL_DELETE: p,
+            CHANNEL_UPDATES: p,
+            CHANNEL_DELETE: h,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
         });
     }

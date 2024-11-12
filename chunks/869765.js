@@ -16,8 +16,8 @@ var r,
     d = n(786761),
     f = n(592125),
     _ = n(375954),
-    h = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,7 +50,7 @@ class E {
         return this._cachedMessageIds;
     }
     constructor() {
-        p(
+        h(
             this,
             '_cachedMessages',
             new (o())({
@@ -58,7 +58,7 @@ class E {
                 dispose: (e, t) => this.handleCacheDisposed(e, t)
             })
         ),
-            p(this, '_cachedMessageIds', new Set());
+            h(this, '_cachedMessageIds', new Set());
     }
 }
 let v = new (class e {
@@ -102,12 +102,12 @@ let v = new (class e {
         this._channelCaches.clear();
     }
     constructor() {
-        p(this, '_channelCaches', new Map());
+        h(this, '_channelCaches', new Map());
     }
 })();
 function I(e) {
     let t = !1;
-    if ((v.updateExistingMessageIfCached(e) && (t = !0), h.OBS.has(e.type))) {
+    if ((v.updateExistingMessageIfCached(e) && (t = !0), p.OBS.has(e.type))) {
         let n = e.message_reference;
         if (null == n) return t;
         let r = n.message_id;
@@ -119,7 +119,7 @@ function I(e) {
                       state: 0,
                       message: (0, d.e5)(t)
                   }),
-                  e.type === h.uaV.THREAD_STARTER_MESSAGE && I(t))
+                  e.type === p.uaV.THREAD_STARTER_MESSAGE && I(t))
                 : v.set(e.channel_id, r, { state: 2 });
         } else {
             let e = _.Z.getMessage(n.channel_id, r);
@@ -134,18 +134,18 @@ function I(e) {
     }
     return t;
 }
-function S(e, t) {
+function b(e, t) {
     let n = !1;
     for (let r of e) n = !1 !== t(r) || n;
     return n;
 }
+function S(e) {
+    let { messages: t } = e;
+    return b(t, (e) => I(e));
+}
 function T(e) {
     let { messages: t } = e;
-    return S(t, (e) => I(e));
-}
-function b(e) {
-    let { messages: t } = e;
-    return S(t, (e) => S(e, (e) => I(e)));
+    return b(t, (e) => b(e, (e) => I(e)));
 }
 function y(e) {
     return v.deleteChannelCache(e.channel.id);
@@ -159,7 +159,7 @@ function N() {
 }
 function C(e) {
     let { firstMessages: t } = e;
-    return null != t && S(t, (e) => I(e));
+    return null != t && b(t, (e) => I(e));
 }
 class R extends (i = l.ZP.Store) {
     initialize() {
@@ -178,17 +178,17 @@ class R extends (i = l.ZP.Store) {
         return null != e && (t = v.getCachedMessageIdsForChannel(e)), null != t ? t : g;
     }
 }
-p(R, 'displayName', 'ReferencedMessageStore'),
+h(R, 'displayName', 'ReferencedMessageStore'),
     (t.Z = new R(u.Z, {
         CACHE_LOADED: function (e) {
             let { messages: t } = e;
-            return S(Object.values(t), (e) => S(Object.values(e), (e) => I(e)));
+            return b(Object.values(t), (e) => b(Object.values(e), (e) => I(e)));
         },
-        LOCAL_MESSAGES_LOADED: T,
-        LOAD_MESSAGES_SUCCESS: T,
-        LOAD_MESSAGES_AROUND_SUCCESS: T,
-        SEARCH_FINISH: b,
-        MOD_VIEW_SEARCH_FINISH: b,
+        LOCAL_MESSAGES_LOADED: S,
+        LOAD_MESSAGES_SUCCESS: S,
+        LOAD_MESSAGES_AROUND_SUCCESS: S,
+        SEARCH_FINISH: T,
+        MOD_VIEW_SEARCH_FINISH: T,
         LOAD_THREADS_SUCCESS: C,
         LOAD_ARCHIVED_THREADS_SUCCESS: C,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
@@ -203,7 +203,7 @@ p(R, 'displayName', 'ReferencedMessageStore'),
         },
         LOAD_FORUM_POSTS: function (e) {
             let { threads: t } = e;
-            return S(Object.values(t), (e) => {
+            return b(Object.values(t), (e) => {
                 let { first_message: t } = e;
                 return null != t && I(t);
             });
@@ -230,7 +230,7 @@ p(R, 'displayName', 'ReferencedMessageStore'),
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
-            return S(t, (e) => A(n, e));
+            return b(t, (e) => A(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
             let { message: t } = e;

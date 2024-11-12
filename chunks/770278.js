@@ -16,7 +16,7 @@ var r,
 ((r = i || (i = {})).SUBTLE = 'SUBTLE'), (r.DARK = 'DARK'), (r.BLUR = 'BLUR'), (r.IMMERSIVE = 'IMMERSIVE');
 let _ = s.forwardRef(function (e, t) {
     let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: i = 0, LayerComponent: s, isVisible: o, onClose: _ } = e,
-        h = (function () {
+        p = (function () {
             let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
                 t = (0, c.useToken)(c.tokens.colors.BG_BACKDROP).spring();
             return {
@@ -26,9 +26,9 @@ let _ = s.forwardRef(function (e, t) {
                 IMMERSIVE: (0, c.useToken)(c.tokens.colors.BG_BACKDROP_IMMERSIVE).spring()
             };
         })()[n],
-        p = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
+        h = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
         m = {
-            background: p,
+            background: h,
             backdropFilter: 'blur(0px)'
         },
         g = (0, d.Z)(r),
@@ -39,7 +39,7 @@ let _ = s.forwardRef(function (e, t) {
                 config: { duration: r || g ? 0 : 300 },
                 from: m,
                 enter: {
-                    background: h,
+                    background: p,
                     backdropFilter: 'blur('.concat('BLUR' === n ? 8 : 0, 'px)')
                 },
                 leave: m

@@ -16,16 +16,16 @@ var r = n(729594),
     d = n(132871),
     f = n(963202),
     _ = n(960904),
-    h = n(830121),
-    p = n(15274),
+    p = n(830121),
+    h = n(15274),
     m = n(924301),
     g = n(543842),
     E = n(754688),
     v = n(336197),
     I = n(977156),
-    S = n(341907),
-    T = n(540709),
-    b = n(881706),
+    b = n(341907),
+    S = n(540709),
+    T = n(881706),
     y = n(701190),
     A = n(944486),
     N = n(914010),
@@ -67,7 +67,7 @@ let k = {
 };
 function U(e) {
     let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : k,
-        o = (0, h.zO)(e);
+        o = (0, p.zO)(e);
     if (null != o && (o.type === _.g.INVITE || o.type === _.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), P(o), !0);
     if (null != o && o.type === _.g.APP_DIRECTORY_PROFILE)
         return (e) => {
@@ -202,7 +202,7 @@ function U(e) {
             let t = N.Z.getGuildId();
             null != Z.guildId && '' !== Z.guildId && Z.guildId !== t && (0, v.Z)(D.Z5c.CHANNEL(Z.guildId));
             let n = m.ZP.getGuildScheduledEvent(Z.guildEventId);
-            return null != n && (0, p.bO)({ eventId: n.id }), !0;
+            return null != n && (0, h.bO)({ eventId: n.id }), !0;
         };
     if (B && (null == y ? void 0 : y.startsWith('/settings/'))) {
         let { default: e } = n(357269),
@@ -218,5 +218,5 @@ function U(e) {
                 !0
             );
     }
-    return B && (null == y ? void 0 : y.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, S.navigateToQuestHome)(w.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, b.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), T.Z.show(e), !0);
+    return B && (null == y ? void 0 : y.startsWith('/discovery/quests')) ? (e) => (null == e || e.preventDefault(), (0, b.navigateToQuestHome)(w.dr.BADGE, a.j.QUEST_BADGE), !0) : t || null == (0, T.v)(e) ? void 0 : (t) => (null == t || t.preventDefault(), S.Z.show(e), !0);
 }

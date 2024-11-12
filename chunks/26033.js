@@ -6,10 +6,10 @@ n.d(t, {
         return c;
     },
     LP: function () {
-        return p;
+        return h;
     },
     Mq: function () {
-        return h;
+        return p;
     },
     Q0: function () {
         return s;
@@ -63,9 +63,9 @@ function _(e) {
     var t, n;
     return (!!o((t = e)) && t.extra.platform === i.z.XBOX) || (!!o((n = e)) && n.extra.platform === i.z.PLAYSTATION);
 }
-function h(e) {
+function p(e) {
     return (null == e ? void 0 : e.content_type) === r.s.LAUNCHED_ACTIVITY;
 }
-function p(e) {
+function h(e) {
     return o(e) || d(e) || f(e) || l(e);
 }

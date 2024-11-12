@@ -9,14 +9,14 @@ var i = n(120356),
     c = n(474936),
     d = n(716002);
 t.Z = function (e) {
-    let { subscriptionTier: t, interval: n = c.rV.MONTH, className: i, isGift: f = !1, variant: _, priceOptions: h, shouldUseTaglineXPCopy: p } = e;
+    let { subscriptionTier: t, interval: n = c.rV.MONTH, className: i, isGift: f = !1, variant: _, priceOptions: p, shouldUseTaglineXPCopy: h } = e;
     if (!(0, s.e7)([l.Z], () => l.Z.isLoadedForPremiumSKUs()))
         return (0, r.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS,
             className: d.priceSpinner
         });
     let m = l.Z.getForSkuAndInterval((0, u.Wz)(t), n),
-        g = null != m ? (0, u.gy)(m, h, !1, f) : null;
+        g = null != m ? (0, u.gy)(m, p, !1, f) : null;
     return (0, r.jsx)(o.Heading, {
         color: 'always-white',
         variant: null != _ ? _ : 'heading-md/medium',
@@ -24,7 +24,7 @@ t.Z = function (e) {
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('span', {
-                    className: p ? void 0 : d.price,
+                    className: h ? void 0 : d.price,
                     children: g
                 }),
                 ' / ',

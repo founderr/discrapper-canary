@@ -28,8 +28,8 @@ var r = n(544891),
     d = n(709054),
     f = n(563534),
     _ = n(734893),
-    h = n(846121),
-    p = n(981631);
+    p = n(846121),
+    h = n(981631);
 let m = async (e) => {
         i.Z.dispatch({
             type: 'GUILD_HOME_SETTINGS_FETCH_START',
@@ -37,7 +37,7 @@ let m = async (e) => {
         });
         try {
             let t = await r.tn.get({
-                    url: p.ANM.GUILD_HOME_SETTINGS(e),
+                    url: h.ANM.GUILD_HOME_SETTINGS(e),
                     oldFormErrors: !0
                 }),
                 n = (0, _.tB)(t.body);
@@ -64,7 +64,7 @@ let m = async (e) => {
             });
             try {
                 let t = await r.tn.get({
-                        url: p.ANM.GUILD_MEMBER_ACTIONS(e),
+                        url: h.ANM.GUILD_MEMBER_ACTIONS(e),
                         oldFormErrors: !0
                     }),
                     n = (0, _.rk)(t.body);
@@ -101,7 +101,7 @@ let m = async (e) => {
             !o.Z.isFullServerPreview(e) &&
             null != r &&
             null != _ &&
-            c.default.track(p.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
+            c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: r.id,
                 server_guide_channel_type: 'resource',
@@ -127,7 +127,7 @@ let m = async (e) => {
             !o.Z.isFullServerPreview(e) &&
             null != n &&
             null != r &&
-            c.default.track(p.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
+            c.default.track(h.rMx.SERVER_GUIDE_CHANNEL_SELECTED, {
                 guild_id: e,
                 channel_id: n.id,
                 server_guide_channel_type: 'member action',
@@ -149,14 +149,14 @@ let m = async (e) => {
             a = f.Z.getActionForChannel(e, t);
         if (null != n && null != a) {
             var s, l;
-            let t = d.default.keys(null !== (s = h.Z.getCompletedActions(e)) && void 0 !== s ? s : {}),
+            let t = d.default.keys(null !== (s = p.Z.getCompletedActions(e)) && void 0 !== s ? s : {}),
                 r = null !== (l = f.Z.getNewMemberActions(e)) && void 0 !== l ? l : [];
-            c.default.track(p.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
+            c.default.track(h.rMx.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,
                 channel_id: n.id,
                 channel_action_type: a.actionType,
                 has_completed_all: r.reduce((e, n) => e && t.includes(n.channelId), !0)
             });
         }
-        r.tn.post({ url: p.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t) });
+        r.tn.post({ url: h.ANM.GUILD_MEMBER_ACTION_UPDATE(e, t) });
     };

@@ -16,12 +16,12 @@ var r = n(481060),
 t.Z = (0, p.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: x, integrationType: A, pid: b } = e,
+        let { clientId: n, authorizations: d, scopes: u, parsedPermissions: h, responseType: p, redirectUri: _, codeChallenge: E, codeChallengeMethod: I, state: C, guildId: v, channelId: S, prompt: N, disableGuildSelect: T, disclosures: x, integrationType: b, pid: A } = e,
             Z = 'OAuth2Authorize_'.concat(n, '_').concat(v, '_').concat(S),
-            y = null != A ? (null == d ? void 0 : d.get(A)) : void 0,
+            y = null != b ? (null == d ? void 0 : d.get(b)) : void 0,
             L = null !== (t = null == y ? void 0 : y.application) && void 0 !== t ? t : s.Z.getApplication(n);
         return new Promise((e, t) => {
-            let s = (0, g.jU)(b),
+            let s = (0, g.jU)(A),
                 y = (i) => {
                     let { clientId: r, location: a } = i;
                     if (null == r || r === n) s.lock(), l.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', y), null != location ? e(a) : t(new m.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));
@@ -47,7 +47,7 @@ t.Z = (0, p.Z)(
                             channelId: S,
                             prompt: N,
                             disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                            integrationType: A
+                            integrationType: b
                         }
                     });
                 return;
@@ -71,7 +71,7 @@ t.Z = (0, p.Z)(
                         channelId: S,
                         prompt: N,
                         disableGuildSelect: 'boolean' == typeof T ? T : 'true' === T,
-                        integrationType: A
+                        integrationType: b
                     }),
                 {
                     modalKey: Z,

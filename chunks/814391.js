@@ -23,32 +23,32 @@ t.Z = function (e, t) {
         r = i()().diff(i()(e), 's'),
         d = null != t ? t() : void 0,
         _ = c(),
-        h = (e, t) => {
+        p = (e, t) => {
             let r = f(e, d, n ? _ : void 0);
             return null == r ? null : 'string' == typeof r ? r : a.intl.formatToPlainString(r, { count: t });
         };
     if (r < 60) {
-        let e = (null == d ? void 0 : d.seconds) != null ? h('seconds', r) : h('minutes', 1);
+        let e = (null == d ? void 0 : d.seconds) != null ? p('seconds', r) : p('minutes', 1);
         if (null != e) return e;
     }
     if (r < s) {
-        let e = h('minutes', Math.floor(r / 60));
+        let e = p('minutes', Math.floor(r / 60));
         if (null != e) return e;
     }
     if (r < o) {
-        let e = h('hours', Math.floor(r / s));
+        let e = p('hours', Math.floor(r / s));
         if (null != e) return e;
     }
     if (r < l) {
-        let e = h('days', Math.floor(r / o));
+        let e = p('days', Math.floor(r / o));
         if (null != e) return e;
     }
     if (r < u) {
-        let e = h('months', Math.floor(r / l));
+        let e = p('months', Math.floor(r / l));
         if (null != e) return e;
     }
     if (r >= u && (null == d ? void 0 : d.years) != null) {
-        let e = h('years', Math.floor(r / u));
+        let e = p('years', Math.floor(r / u));
         if (null != e) return e;
     }
     return i()(e).format('LL');

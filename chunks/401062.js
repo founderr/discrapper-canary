@@ -6,7 +6,7 @@ n.d(t, {
         return y;
     },
     vy: function () {
-        return b;
+        return T;
     },
     yX: function () {
         return i;
@@ -23,15 +23,15 @@ var r,
     d = n(697426),
     f = n(100986),
     _ = n(944486),
-    h = n(70956),
-    p = n(176354),
+    p = n(70956),
+    h = n(176354),
     m = n(696900),
     g = n(456631),
     E = n(963838),
     v = n(353368),
     I = n(981631),
-    S = n(710111);
-function T(e) {
+    b = n(710111);
+function S(e) {
     let t = new AbortController(),
         n = (0, a.throttle)((n) => {
             _.Z.getVoiceChannelId() !== e && t.abort();
@@ -41,9 +41,9 @@ function T(e) {
         onRequestProgress: n
     };
 }
-function b(e, t, n) {
+function T(e, t, n) {
     var r;
-    let { abortController: i, onRequestProgress: a } = T(e),
+    let { abortController: i, onRequestProgress: a } = S(e),
         o = null !== (r = m.Z.getState().animationType) && void 0 !== r ? r : v.q.BASIC,
         u = {
             animation_type: o,
@@ -64,13 +64,13 @@ function b(e, t, n) {
 function y(e, t, n, r) {
     var i, a;
     let o = c.ZP.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
-        { abortController: l, onRequestProgress: u } = T(e),
+        { abortController: l, onRequestProgress: u } = S(e),
         _ = {
             sound_id: t.soundId,
             emoji_id: t.emojiId,
             emoji_name: null !== (a = t.emojiName) && void 0 !== a ? a : null == o ? void 0 : o.name
         };
-    t.guildId !== S.X8 && (_.source_guild_id = t.guildId),
+    t.guildId !== b.X8 && (_.source_guild_id = t.guildId),
         s.tn
             .post({
                 url: I.ANM.SEND_SOUNDBOARD_SOUND(e),
@@ -111,7 +111,7 @@ let A = async (e) => {
                 o.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_SENT_LOCAL' });
         } catch (e) {
             if (429 === e.status && null != e.body.retry_after) {
-                let t = e.body.retry_after * h.Z.Millis.SECOND;
+                let t = e.body.retry_after * p.Z.Millis.SECOND;
                 o.Z.dispatch({
                     type: 'VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP',
                     cooldownEndsAtMs: t
@@ -124,7 +124,7 @@ let A = async (e) => {
         [v.q.PREMIUM]: 'Premium'
     },
     C = (e, t, n, r) => {
-        let { unicode: i, custom: a, customExternal: s, managed: o, managedExternal: l, animated: c } = (0, p.sp)([t], e.getGuildId()),
+        let { unicode: i, custom: a, customExternal: s, managed: o, managedExternal: l, animated: c } = (0, h.sp)([t], e.getGuildId()),
             d = N[r];
         u.ZP.trackWithMetadata(I.rMx.VOICE_CHANNEL_EFFECT_SENT, {
             channel_id: e.id,

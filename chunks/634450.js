@@ -24,6 +24,6 @@ t.Z = function (e, t) {
     }
     if (!u) for (; d--; d) s.unshift('..');
     u && '' !== s[0] && (!s[0] || !n(s[0])) && s.unshift('');
-    var h = s.join('/');
-    return i && '/' !== h.substr(-1) && (h += '/'), h;
+    var p = s.join('/');
+    return i && '/' !== p.substr(-1) && (p += '/'), p;
 };

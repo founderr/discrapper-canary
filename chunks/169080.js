@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651),
@@ -14,46 +14,46 @@ var r = n(200651),
     d = n(5192),
     f = n(709737),
     _ = n(388032),
-    h = n(553928);
-function p(e) {
+    p = n(553928);
+function h(e) {
     var t, n;
-    let { generateImageRef: a, leaderboard: p, userId: m, guildId: g } = e,
+    let { generateImageRef: a, leaderboard: h, userId: m, guildId: g } = e,
         E = (0, o.e7)([c.default], () => c.default.getUser(m)),
-        v = p.guild_settings.sort_by_statistic_id,
-        I = i.useMemo(() => p.users.findIndex((e) => e.user_id === m) + 1, [p, m]),
-        S = i.useMemo(() => p.users.find((e) => e.user_id === m), [p, m]);
-    s()(null != S, 'User row should not be null');
-    let T = d.ZP.getName(g, void 0, E),
-        b = null !== (n = null === (t = S.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
+        v = h.guild_settings.sort_by_statistic_id,
+        I = i.useMemo(() => h.users.findIndex((e) => e.user_id === m) + 1, [h, m]),
+        b = i.useMemo(() => h.users.find((e) => e.user_id === m), [h, m]);
+    s()(null != b, 'User row should not be null');
+    let S = d.ZP.getName(g, void 0, E),
+        T = null !== (n = null === (t = b.statistics[v]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
     return (0, r.jsxs)('div', {
         ref: a,
-        className: h.container,
+        className: p.container,
         children: [
             (0, r.jsx)(l.Avatar, {
                 src: null == E ? void 0 : E.getAvatarURL(g, 256),
                 size: l.AvatarSizes.SIZE_48,
                 'aria-label': 'avatar',
-                className: h.avatar
+                className: p.avatar
             }),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: h.gameTitleContainer,
+                        className: p.gameTitleContainer,
                         children: [
                             (0, r.jsx)(l.LeagueOfLegendsBrandIcon, { size: 'xs' }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: h.gameTitle,
+                                className: p.gameTitle,
                                 children: 'League of Legends'
                             })
                         ]
                     }),
                     (0, r.jsx)(l.Spacer, { size: 4 }),
                     (0, r.jsx)(l.Text, {
-                        className: h.title,
+                        className: p.title,
                         variant: 'text-md/semibold',
                         children: _.intl.format(_.t.tluICw, {
-                            username: T,
+                            username: S,
                             rank: I
                         })
                     }),
@@ -62,12 +62,12 @@ function p(e) {
                         location: u.Gt.EMBED,
                         children: [
                             (0, r.jsx)(f.DC, {
-                                value: b,
+                                value: T,
                                 statisticId: v
                             }),
                             (0, r.jsx)(f.Js, {
-                                intervalStart: p.interval_start,
-                                intervalEnd: p.interval_end
+                                intervalStart: h.interval_start,
+                                intervalEnd: h.interval_end
                             })
                         ]
                     })

@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     Ek: function () {
-        return b;
+        return T;
     },
     Gu: function () {
         return k;
@@ -30,7 +30,7 @@ n.d(t, {
         return P;
     },
     cD: function () {
-        return S;
+        return b;
     },
     ki: function () {
         return v;
@@ -59,8 +59,8 @@ var r = n(392711),
     d = n(314897),
     f = n(592125),
     _ = n(496675),
-    h = n(709054),
-    p = n(601070),
+    p = n(709054),
+    h = n(601070),
     m = n(981631);
 let g = (0, o.Z)({
     id: '2022-07_voice_in_threads',
@@ -76,7 +76,7 @@ let g = (0, o.Z)({
     ]
 });
 function E(e, t) {
-    return T(
+    return S(
         (0, s.e7)(
             [_.Z],
             () => {
@@ -91,22 +91,22 @@ function E(e, t) {
 }
 function v(e, t) {
     let n = e.isForumLikeChannel() ? m.Plq.SEND_MESSAGES : a.$e(m.Plq.CREATE_PUBLIC_THREADS, m.Plq.READ_MESSAGE_HISTORY);
-    return T(_.Z.can(n, e), e, t);
+    return S(_.Z.can(n, e), e, t);
 }
 function I(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.can(a.$e(m.Plq.CREATE_PRIVATE_THREADS), e), [e]);
-    return e.type === m.d4z.GUILD_TEXT && T(t, e);
+    return e.type === m.d4z.GUILD_TEXT && S(t, e);
 }
-function S(e) {
+function b(e) {
     let t = E(e),
         n = I(e);
     return t || n;
 }
-function T(e, t, n) {
+function S(e, t, n) {
     return !(__OVERLAY__ || !e || !c.uC.has(t.type) || (null != n && (n.hasFlag(m.iLy.HAS_THREAD) || (0, u.Z)(n)))) && !0;
 }
-function b(e) {
-    let t = (0, s.e7)([f.Z], () => f.Z.getChannel(h.default.castMessageIdAsChannelId(e.id)), [e]);
+function T(e) {
+    let t = (0, s.e7)([f.Z], () => f.Z.getChannel(p.default.castMessageIdAsChannelId(e.id)), [e]);
     return (function (e, t, n) {
         return (!!t.hasFlag(m.iLy.HAS_THREAD) && null != n && !!e) || !1;
     })(
@@ -116,10 +116,10 @@ function b(e) {
     );
 }
 function y(e) {
-    return (0, s.cj)([p.Z, _.Z], () => {
-        let t = p.Z.getActiveJoinedThreadsForParent(e.guild_id, e.id),
-            n = p.Z.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
-            r = p.Z.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
+    return (0, s.cj)([h.Z, _.Z], () => {
+        let t = h.Z.getActiveJoinedThreadsForParent(e.guild_id, e.id),
+            n = h.Z.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
+            r = h.Z.getActiveUnjoinedThreadsForParent(e.guild_id, e.id),
             a = i()(n).some((e) => _.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
             s = i()(t).some((e) => !(e.channel.id in n) && _.Z.can(m.Plq.VIEW_CHANNEL, e.channel)),
             o = i()(r).some((e) => _.Z.can(m.Plq.VIEW_CHANNEL, e));

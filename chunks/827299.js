@@ -109,26 +109,26 @@ function _(e, t) {
     let { dangerousAbortOnCleanup: n = !1, get: a, load: s, maxNumFetchErrors: o = 5, queryId: l, useStateHook: u } = t;
     return function () {
         for (var t = arguments.length, c = Array(t), _ = 0; _ < t; _++) c[_] = arguments[_];
-        let h = (0, r.useMemo)(() => l(...c), c),
-            p = u(Array.isArray(e) ? e : [e], () => a(...c), c),
-            m = d.getState(h),
+        let p = (0, r.useMemo)(() => l(...c), c),
+            h = u(Array.isArray(e) ? e : [e], () => a(...c), c),
+            m = d.getState(p),
             g = m.error,
             E = !0 === m.isLoading,
             v = (0, r.useRef)(c),
             I = (0, r.useCallback)(() => {
-                if (null == h || !0 === E) return;
+                if (null == p || !0 === E) return;
                 let e = !1;
-                u === i.Wu ? p.length > 0 && (e = !0) : null != p && (e = !0);
-                let t = d.doesDataNeedValidation(h),
+                u === i.Wu ? h.length > 0 && (e = !0) : null != h && (e = !0);
+                let t = d.doesDataNeedValidation(p),
                     r = null != g;
                 if ((e || r) && !t) return;
-                d.loadingStart(h);
+                d.loadingStart(p);
                 let a = new AbortController();
                 return (
                     s(a.signal, ...v.current)
-                        .then((e) => (d.loadingDone(h, !0), e))
+                        .then((e) => (d.loadingDone(p, !0), e))
                         .catch((e) => {
-                            if ((d.loadingDone(h), a.signal.aborted)) return;
+                            if ((d.loadingDone(p), a.signal.aborted)) return;
                             let t = (function (e) {
                                 if (e instanceof Error) return e;
                                 if ('object' == typeof e) {
@@ -145,26 +145,26 @@ function _(e, t) {
                                 }
                                 return Error(String(e));
                             })(e);
-                            if (!!(m.fetchFailCounter >= o) || !(t instanceof f) || (!(t.status >= 500) && 429 !== t.status)) d.setError(h, t);
+                            if (!!(m.fetchFailCounter >= o) || !(t instanceof f) || (!(t.status >= 500) && 429 !== t.status)) d.setError(p, t);
                         }),
                     () => {
                         n && a.abort();
                     }
                 );
-            }, [p, m.fetchFailCounter, g, h, E]);
+            }, [h, m.fetchFailCounter, g, p, E]);
         return (
             (0, r.useEffect)(
                 () => (
                     I(),
-                    d.subscribe(h, I),
+                    d.subscribe(p, I),
                     () => {
-                        d.subscribe(h, void 0);
+                        d.subscribe(p, void 0);
                     }
                 ),
-                [h, I]
+                [p, I]
             ),
             {
-                data: p,
+                data: h,
                 error: g,
                 isLoading: E
             }

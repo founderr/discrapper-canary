@@ -19,8 +19,8 @@ e.exports = function (e) {
                           d = !1,
                           f = window.getComputedStyle(s),
                           _ = s.offsetWidth,
-                          h = s.offsetHeight;
-                      function p() {
+                          p = s.offsetHeight;
+                      function h() {
                           function e() {
                               if ('static' === f.position) {
                                   s.style.setProperty('position', 'relative', a.important ? 'important' : '');
@@ -61,9 +61,9 @@ e.exports = function (e) {
                       }
                       (i(s).startSize = {
                           width: _,
-                          height: h
+                          height: p
                       }),
-                          n ? n.add(p) : p();
+                          n ? n.add(h) : h();
                   })(s, o);
         },
         addListener: function (e, t) {

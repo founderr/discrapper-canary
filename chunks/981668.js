@@ -10,10 +10,10 @@ var r = n(147913),
     d = n(885110),
     f = n(649739),
     _ = n(981631);
-async function h(e) {
+async function p(e) {
     await a.ZP.fetchApplications(e, !1);
 }
-async function p(e) {
+async function h(e) {
     if (null == e) return;
     let t = u.Z.getChannel(e),
         { enableHangStatus: n } = o.n.getCurrentConfig({ location: 'GameActivityManager' }, { autoTrackExposure: !1 });
@@ -21,7 +21,7 @@ async function p(e) {
     let r = d.Z.getActivities();
     if (0 === r.length) return;
     let a = [...r].filter((e) => e.type === _.IIU.PLAYING && e.application_id).map((e) => e.application_id);
-    await h([...a]);
+    await p([...a]);
     let c = s.Z.getApplication(a[0]);
     null != c &&
         i.ZP.trackWithMetadata(_.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_SET, {
@@ -33,11 +33,11 @@ async function p(e) {
 }
 class m extends r.Z {
     handleRunningGamesChange() {
-        p(c.Z.getVoiceChannelId());
+        h(c.Z.getVoiceChannelId());
     }
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
-        p(t);
+        h(t);
     }
     constructor(...e) {
         var t, n, r;

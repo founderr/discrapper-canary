@@ -174,9 +174,9 @@ function _(e, t) {
                       .join()
                 : ''),
         r = d.get(n);
-    return !r && ((r = new h(e, t)), d.set(n, r)), r;
+    return !r && ((r = new p(e, t)), d.set(n, r)), r;
 }
-class h {
+class p {
     parse(e) {
         let t = this.sanitize(e);
         if ((this.symbols.group && (t = g(t, this.symbols.group, '')), this.symbols.decimal && (t = t.replace(this.symbols.decimal, '.')), this.symbols.minusSign && (t = t.replace(this.symbols.minusSign, '-')), (t = t.replace(this.symbols.numeral, this.symbols.index)), 'percent' === this.options.style)) {
@@ -219,8 +219,8 @@ class h {
                     d = u.formatToParts(10000.111),
                     f = m.map((e) => u.formatToParts(e)),
                     _ = null !== (l = null === (i = c.find((e) => 'minusSign' === e.type)) || void 0 === i ? void 0 : i.value) && void 0 !== l ? l : '-',
-                    h = null === (a = d.find((e) => 'plusSign' === e.type)) || void 0 === a ? void 0 : a.value;
-                !h && ((null == r ? void 0 : r.signDisplay) === 'exceptZero' || (null == r ? void 0 : r.signDisplay) === 'always') && (h = '+');
+                    p = null === (a = d.find((e) => 'plusSign' === e.type)) || void 0 === a ? void 0 : a.value;
+                !p && ((null == r ? void 0 : r.signDisplay) === 'exceptZero' || (null == r ? void 0 : r.signDisplay) === 'always') && (p = '+');
                 let g =
                         null ===
                             (s = new Intl.NumberFormat(e, {
@@ -233,25 +233,25 @@ class h {
                             ? void 0
                             : s.value,
                     v = null === (o = c.find((e) => 'group' === e.type)) || void 0 === o ? void 0 : o.value,
-                    I = [...new Set([...c.filter((e) => !p.has(e.type)).map((e) => E(e.value)), ...f.flatMap((e) => e.filter((e) => !p.has(e.type)).map((e) => E(e.value)))])].sort((e, t) => t.length - e.length),
-                    S = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
-                    T = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
-                    b = new Map(T.map((e, t) => [e, t])),
-                    y = RegExp(`[${T.join('')}]`, 'g');
+                    I = [...new Set([...c.filter((e) => !h.has(e.type)).map((e) => E(e.value)), ...f.flatMap((e) => e.filter((e) => !h.has(e.type)).map((e) => E(e.value)))])].sort((e, t) => t.length - e.length),
+                    b = 0 === I.length ? RegExp('[\\p{White_Space}]', 'gu') : RegExp(`${I.join('|')}|[\\p{White_Space}]`, 'gu'),
+                    S = [...new Intl.NumberFormat(n.locale, { useGrouping: !1 }).format(9876543210)].reverse(),
+                    T = new Map(S.map((e, t) => [e, t])),
+                    y = RegExp(`[${S.join('')}]`, 'g');
                 return {
                     minusSign: _,
-                    plusSign: h,
+                    plusSign: p,
                     decimal: g,
                     group: v,
-                    literals: S,
+                    literals: b,
                     numeral: y,
-                    index: (e) => String(b.get(e))
+                    index: (e) => String(T.get(e))
                 };
             })(e, this.formatter, this.options, t)),
             'percent' === this.options.style && ((null !== (n = this.options.minimumFractionDigits) && void 0 !== n ? n : 0) > 18 || (null !== (r = this.options.maximumFractionDigits) && void 0 !== r ? r : 0) > 18) && console.warn('NumberParser cannot handle percentages with greater than 18 decimal places, please reduce the number in your options.');
     }
 }
-let p = new Set(['decimal', 'fraction', 'integer', 'minusSign', 'plusSign', 'group']),
+let h = new Set(['decimal', 'fraction', 'integer', 'minusSign', 'plusSign', 'group']),
     m = [0, 4, 2, 1, 11, 20, 3, 7, 100, 21, 0.1, 1.1];
 function g(e, t, n) {
     return e.replaceAll ? e.replaceAll(t, n) : e.split(t).join(n);

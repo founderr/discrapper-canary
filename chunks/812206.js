@@ -22,8 +22,8 @@ let l = [],
     d = {},
     f = {},
     _ = {},
-    h = { botUserIdToAppUsage: {} };
-function p(e) {
+    p = { botUserIdToAppUsage: {} };
+function h(e) {
     let t = u[e.id];
     f[e.id] = Date.now();
     let n = e;
@@ -31,33 +31,33 @@ function p(e) {
     delete _[e.id];
 }
 function m(e) {
-    p(s.Z.createFromServer(e));
+    h(s.Z.createFromServer(e));
 }
 function g(e) {
     let { userId: t, applicationId: n } = e,
-        r = h.botUserIdToAppUsage[t];
+        r = p.botUserIdToAppUsage[t];
     null == r
-        ? (h.botUserIdToAppUsage[t] = {
+        ? (p.botUserIdToAppUsage[t] = {
               applicationId: n,
               lastUsedMs: Date.now()
           })
-        : (h.botUserIdToAppUsage[t] = {
+        : (p.botUserIdToAppUsage[t] = {
               applicationId: n,
               lastUsedMs: r.lastUsedMs
           });
     let i = new Map();
-    for (let [e, t] of Object.entries(h.botUserIdToAppUsage)) i.set(e, t);
+    for (let [e, t] of Object.entries(p.botUserIdToAppUsage)) i.set(e, t);
     let a = Array.from(i.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
     for (let e = 0; e < a.length; e++)
         if (e >= 10) {
             let t = a[e][0];
-            delete h.botUserIdToAppUsage[t];
+            delete p.botUserIdToAppUsage[t];
         }
 }
 function E(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (p(s.Z.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(s.Z.createFromServer(e.application)), (n = !0));
     return n;
 }
 class v extends (r = i.ZP.PersistedStore) {
@@ -71,14 +71,14 @@ class v extends (r = i.ZP.PersistedStore) {
                     r.length > 0 &&
                     'number' == typeof i &&
                     i > 0 &&
-                    (h.botUserIdToAppUsage[t] = {
+                    (p.botUserIdToAppUsage[t] = {
                         applicationId: r,
                         lastUsedMs: i
                     });
             }
     }
     getState() {
-        return h;
+        return p;
     }
     _getAllApplications() {
         return Object.values(u);
@@ -117,7 +117,7 @@ class v extends (r = i.ZP.PersistedStore) {
     }
     getAppIdForBotUserId(e) {
         var t;
-        if (null != e) return null === (t = h.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
+        if (null != e) return null === (t = p.botUserIdToAppUsage[e]) || void 0 === t ? void 0 : t.applicationId;
     }
 }
 o(v, 'displayName', 'ApplicationStore'),
@@ -128,7 +128,7 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         OVERLAY_INITIALIZE: function (e) {
             let { applications: t } = e;
-            for (let e of t) p(new s.Z(e));
+            for (let e of t) h(new s.Z(e));
         },
         APPLICATION_FETCH: function (e) {
             let { applicationId: t } = e,
@@ -155,7 +155,7 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { applications: t } = e;
-            for (let e of t) p(s.Z.createFromServer(e));
+            for (let e of t) h(s.Z.createFromServer(e));
         },
         APPLICATIONS_FETCH_FAIL: function (e) {
             let { applicationIds: t } = e,
@@ -177,13 +177,13 @@ o(v, 'displayName', 'ApplicationStore'),
             let { integrations: t, guildId: n } = e,
                 r = !1,
                 i = [];
-            for (let { application: e } of t) null != e && (p(e), i.push(e.id), (r = !0));
+            for (let { application: e } of t) null != e && (h(e), i.push(e.id), (r = !0));
             return r && (c[n] = i), r;
         },
         GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { guildId: t, applications: n } = e,
                 r = [];
-            for (let e of n) r.push(e.id), p(s.Z.createFromServer(e));
+            for (let e of n) r.push(e.id), h(s.Z.createFromServer(e));
             c[t] = r;
         },
         BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
@@ -192,7 +192,7 @@ o(v, 'displayName', 'ApplicationStore'),
             for (let e of t) {
                 var r;
                 let t = null === (r = e.sku) || void 0 === r ? void 0 : r.application;
-                !(null == t || n.has(t.id)) && p(s.Z.createFromServer(t));
+                !(null == t || n.has(t.id)) && h(s.Z.createFromServer(t));
             }
             return n.size > 0;
         },
@@ -200,27 +200,27 @@ o(v, 'displayName', 'ApplicationStore'),
             var t;
             let { payment: n } = e;
             if ((null === (t = n.sku) || void 0 === t ? void 0 : t.application) == null) return !1;
-            p(s.Z.createFromServer(n.sku.application));
+            h(s.Z.createFromServer(n.sku.application));
         },
         INVITE_RESOLVE_SUCCESS: function (e) {
             let { invite: t } = e;
             if (null == t.target_application) return !1;
-            p(s.Z.createFromServer(t.target_application));
+            h(s.Z.createFromServer(t.target_application));
         },
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             var t;
             let { giftCode: n } = e;
             if ((null === (t = n.store_listing) || void 0 === t ? void 0 : t.sku.application) == null) return !1;
-            p(s.Z.createFromServer(n.store_listing.sku.application));
+            h(s.Z.createFromServer(n.store_listing.sku.application));
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) p(s.Z.createFromServer(e.application));
+            for (let e of t) h(s.Z.createFromServer(e.application));
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t } = e;
             if (null == t.sku.application) return !1;
-            p(s.Z.createFromServer(t.sku.application));
+            h(s.Z.createFromServer(t.sku.application));
         },
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { messages: t } = e;
@@ -230,7 +230,7 @@ o(v, 'displayName', 'ApplicationStore'),
                     null === (t = e.attachments) ||
                         void 0 === t ||
                         t.forEach((e) => {
-                            null != e.application && p(s.Z.createFromServer(e.application));
+                            null != e.application && h(s.Z.createFromServer(e.application));
                         });
                 })(e)
             );
@@ -239,7 +239,7 @@ o(v, 'displayName', 'ApplicationStore'),
             let { recommendations: t } = e;
             t.forEach((e) => {
                 e.items.forEach((e) => {
-                    p(s.Z.createFromServer(e.application));
+                    h(s.Z.createFromServer(e.application));
                 });
             });
         },
@@ -254,16 +254,16 @@ o(v, 'displayName', 'ApplicationStore'),
         },
         APP_DM_OPEN: function (e) {
             let { botUserId: t } = e,
-                n = h.botUserIdToAppUsage[t];
+                n = p.botUserIdToAppUsage[t];
             null != n &&
-                (h.botUserIdToAppUsage[t] = {
+                (p.botUserIdToAppUsage[t] = {
                     ...n,
                     lastUsedMs: Date.now()
                 });
         },
         USER_AUTHORIZED_APPS_UPDATE: function (e) {
             e.apps.forEach((e) => {
-                p(s.Z.createFromServer(e.application));
+                h(s.Z.createFromServer(e.application));
                 let t = e.application.bot;
                 null != t &&
                     g({

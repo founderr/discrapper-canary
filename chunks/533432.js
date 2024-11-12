@@ -10,12 +10,12 @@ var r = n(200651),
     d = n(28546),
     f = n(149203),
     _ = n(981631),
-    h = n(388032),
-    p = n(74353);
+    p = n(388032),
+    h = n(74353);
 let m = i.forwardRef(function (e, t) {
-    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: S } = e,
-        T = i.useRef(null),
-        b = (0, d.Iu)((e) => e.searchQuery),
+    let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: b } = e,
+        S = i.useRef(null),
+        T = (0, d.Iu)((e) => e.searchQuery),
         [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
         N = i.useCallback(
             (e) => {
@@ -31,15 +31,15 @@ let m = i.forwardRef(function (e, t) {
         i.useImperativeHandle(t, () => ({
             focus: () => {
                 var e;
-                return null === (e = T.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = S.current) || void 0 === e ? void 0 : e.focus();
             }
         })),
         (0, r.jsx)(u.ZP, {
             autoFocus: v,
-            query: b,
-            ref: T,
+            query: T,
+            ref: S,
             size: u.ZP.Sizes.MEDIUM,
-            placeholder: null != A ? A : S,
+            placeholder: null != A ? A : b,
             onClear: C,
             onKeyDown: (e) => {
                 switch (e.keyCode) {
@@ -53,11 +53,11 @@ let m = i.forwardRef(function (e, t) {
             },
             onFocus: E,
             onQueryChange: N,
-            className: s()(I, { [p.searchBarFullRow]: m }),
+            className: s()(I, { [h.searchBarFullRow]: m }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,
             inputProps: {
-                'aria-label': h.intl.string(h.t.tCauZW),
+                'aria-label': p.intl.string(p.t.tCauZW),
                 'aria-haspopup': 'grid',
                 'aria-controls': a,
                 'aria-expanded': !0,

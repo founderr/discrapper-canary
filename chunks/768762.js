@@ -14,23 +14,23 @@ let _ = {
         DOWN: 'down',
         LEFT: 'left'
     },
-    h = {
+    p = {
         [_.UP]: f.up,
         [_.RIGHT]: f.right,
         [_.DOWN]: f.down,
         [_.LEFT]: f.left
     };
-class p extends (s = l.PureComponent) {
+class h extends (s = l.PureComponent) {
     render() {
         let { direction: e, className: t } = this.props;
         return (0, o.jsx)(d.ArrowSmallUpIcon, {
             size: 'md',
             color: 'currentColor',
-            className: c()(f.__invalid_arrow, t, { [h[e]]: !0 })
+            className: c()(f.__invalid_arrow, t, { [p[e]]: !0 })
         });
     }
 }
-(r = p),
+(r = h),
     (i = 'Directions'),
     (a = _),
     i in r
@@ -41,4 +41,4 @@ class p extends (s = l.PureComponent) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = p);
+    (t.Z = h);

@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(221292),
     T = n(481046),
     x = n(816988),
-    A = n(687158),
-    b = n(899007),
+    b = n(687158),
+    A = n(899007),
     Z = n(648052),
     y = n(867176),
     L = n(438163),
@@ -168,7 +168,7 @@ function es(e) {
     var t;
     let { currentUser: z, onClose: q, setPopoutRef: es } = e,
         eo = __OVERLAY__,
-        ec = (0, A.ZP)(z.id),
+        ec = (0, b.ZP)(z.id),
         ed = (0, u.O)(),
         { analyticsLocations: eu } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
         eh = (0, S.ZB)({
@@ -303,7 +303,7 @@ function es(e) {
         { customStatusBubbleEditEnabled: eN } = (0, T.K)({ location: 'AccountProfilePopout' }),
         { dimissibleUpsellsEnabled: eT } = (0, x.u)({ location: 'AccountProfilePopout' }),
         ex = (0, W.I5)(z),
-        eA = (e) => {
+        eb = (e) => {
             null == q || q(),
                 (0, U.openUserProfileModal)({
                     sourceAnalyticsLocations: eu,
@@ -311,7 +311,7 @@ function es(e) {
                     ...e
                 });
         },
-        eb = () => {
+        eA = () => {
             (0, c.openModalLazy)(async () => {
                 let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                 return (t) =>
@@ -351,11 +351,11 @@ function es(e) {
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE
                                 }),
-                                (0, i.jsx)(b.Z, {
+                                (0, i.jsx)(A.Z, {
                                     user: z,
                                     displayProfile: ec,
                                     profileType: ee.y0.BITE_SIZE,
-                                    onOpenProfile: eo ? void 0 : eA
+                                    onOpenProfile: eo ? void 0 : eb
                                 }),
                                 (0, i.jsx)(L.Z, {
                                     user: z,
@@ -377,7 +377,7 @@ function es(e) {
                                     className: en.username,
                                     profileType: ee.y0.BITE_SIZE,
                                     nickname: Y.ZP.getName(null, null, z),
-                                    onOpenProfile: eo ? void 0 : eA,
+                                    onOpenProfile: eo ? void 0 : eb,
                                     pronouns: null == ec ? void 0 : ec.pronouns,
                                     tags: (0, i.jsx)(Z.Z, {
                                         displayProfile: ec,
@@ -496,7 +496,7 @@ function es(e) {
                                                                           label: et.intl.string(et.t.ezAcPz),
                                                                           icon: () => (0, i.jsx)('div', { className: en.customEmojiPlaceholder }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), eA();
                                                                           }
                                                                       })
                                                                     : (0, i.jsx)(Q.Mv, {
@@ -528,7 +528,7 @@ function es(e) {
                                                                               })
                                                                           }),
                                                                           onClick: () => {
-                                                                              q(), eb();
+                                                                              q(), eA();
                                                                           }
                                                                       })
                                                             ]

@@ -15,8 +15,8 @@ var i = n(120356),
     d = n(198620),
     f = n(746878),
     _ = n(981631),
-    h = n(940617),
-    p = n(578786);
+    p = n(940617),
+    h = n(578786);
 function m(e) {
     return {
         react(t, i, m) {
@@ -50,7 +50,7 @@ function m(e) {
                     children: [
                         (0, r.jsx)(s.AttachmentIcon, {
                             size: 'xs',
-                            className: a()(p.icon, h.icon),
+                            className: a()(h.icon, p.icon),
                             color: s.tokens.colors.MENTION_FOREGROUND
                         }),
                         (0, f.S)(t, i, m)

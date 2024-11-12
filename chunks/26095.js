@@ -46,18 +46,18 @@ var u = Object.defineProperty,
     d = Object.getOwnPropertySymbols,
     f = Object.getOwnPropertyDescriptor,
     _ = Object.getPrototypeOf,
-    h = Object.prototype;
+    p = Object.prototype;
 e.exports = function e(t, n, r) {
     if ('string' != typeof n) {
-        if (h) {
+        if (p) {
             var i = _(n);
-            i && i !== h && e(t, i, r);
+            i && i !== p && e(t, i, r);
         }
         var s = c(n);
         d && (s = s.concat(d(n)));
-        for (var o = l(t), p = l(n), m = 0; m < s.length; ++m) {
+        for (var o = l(t), h = l(n), m = 0; m < s.length; ++m) {
             var g = s[m];
-            if (!a[g] && !(r && r[g]) && !(p && p[g]) && !(o && o[g])) {
+            if (!a[g] && !(r && r[g]) && !(h && h[g]) && !(o && o[g])) {
                 var E = f(n, g);
                 try {
                     u(t, g, E);

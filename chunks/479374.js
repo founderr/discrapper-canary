@@ -9,8 +9,8 @@ var r = n(161581),
     d = n(992051),
     f = n(106295),
     _ = i && i.prototype,
-    h = l('species'),
-    p = !1,
+    p = l('species'),
+    h = !1,
     m = a(r.PromiseRejectionEvent),
     g = s('Promise', function () {
         var e = o(i),
@@ -26,12 +26,12 @@ var r = n(161581),
                         function () {}
                     );
                 };
-            if ((((n.constructor = {})[h] = r), !(p = n.then(function () {}) instanceof r))) return !0;
+            if ((((n.constructor = {})[p] = r), !(h = n.then(function () {}) instanceof r))) return !0;
         }
         return !t && (u || c) && !m;
     });
 e.exports = {
     CONSTRUCTOR: g,
     REJECTION_EVENT: m,
-    SUBCLASSING: p
+    SUBCLASSING: h
 };

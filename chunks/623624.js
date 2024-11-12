@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -19,11 +19,11 @@ let _ = (e) => {
         u = (0, s.e7)([d.default], () => d.default.getCurrentUser());
     a()(null != u, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
     let _ = (0, s.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        { analyticsLocations: h } = (0, l.ZP)(o.Z.BOOSTED_GUILD_PERKS_MODAL);
+        { analyticsLocations: p } = (0, l.ZP)(o.Z.BOOSTED_GUILD_PERKS_MODAL);
     return null == _
         ? null
         : (0, r.jsx)(l.Gt, {
-              value: h,
+              value: p,
               children: (0, r.jsx)(f.Z, {
                   analyticsLocation: i,
                   onClose: n,
@@ -31,7 +31,7 @@ let _ = (e) => {
               })
           });
 };
-function h(e) {
+function p(e) {
     let { guildId: t, location: n } = e;
     (0, u.q4)(
         (e) => {

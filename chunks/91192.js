@@ -15,7 +15,7 @@ n.d(t, {
         return v;
     },
     eg: function () {
-        return p;
+        return h;
     },
     f$: function () {
         return d;
@@ -24,7 +24,7 @@ n.d(t, {
         return g;
     },
     mh: function () {
-        return h;
+        return p;
     },
     qB: function () {
         return c;
@@ -77,11 +77,11 @@ function _(e) {
         role: 'treeitem'
     };
 }
-function h(e) {
+function p(e) {
     let { children: t, id: n } = e;
     return t(f(n));
 }
-function p() {
+function h() {
     return i.useContext(c).ref;
 }
 function m() {
@@ -127,7 +127,7 @@ function v(e) {
             }),
             [a, s]
         ),
-        h = i.useMemo(
+        p = i.useMemo(
             () => ({
                 onKeyDown: o,
                 orientation: f,
@@ -138,7 +138,7 @@ function v(e) {
             [o, f, l, a, d]
         );
     return (0, r.jsxs)(c.Provider, {
-        value: h,
+        value: p,
         children: [
             (0, r.jsx)(u.Provider, {
                 value: _,

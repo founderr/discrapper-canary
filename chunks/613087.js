@@ -55,13 +55,13 @@ let c = r.createContext({
             [m]
         );
         (0, i.P)(C, _);
-        let E = null === (n = h.get(d)) || void 0 === n ? void 0 : n.current,
-            b = null;
+        let b = null === (n = h.get(d)) || void 0 === n ? void 0 : n.current,
+            E = null;
         return (
-            null == E
-                ? (b = null)
+            null == b
+                ? (E = null)
                 : p && null != f
-                  ? (b = (0, o.jsxs)(o.Fragment, {
+                  ? (E = (0, o.jsxs)(o.Fragment, {
                         children: [
                             'collapsed' === u &&
                                 (0, s.createPortal)(
@@ -75,7 +75,7 @@ let c = r.createContext({
                                         },
                                         children: l(v)
                                     }),
-                                    E
+                                    b
                                 ),
                             'expanded' === u &&
                                 (0, s.createPortal)(
@@ -89,15 +89,15 @@ let c = r.createContext({
                                         },
                                         children: l(v)
                                     }),
-                                    E
+                                    b
                                 )
                         ]
                     }))
-                  : 'collapsed' === u && (b = (0, s.createPortal)(l(v), E)),
+                  : 'collapsed' === u && (E = (0, s.createPortal)(l(v), b)),
             (0, o.jsxs)('div', {
-                style: { opacity: (null == b && 'collapsed' === u) || null == E ? 1 : 0 },
+                style: { opacity: (null == E && 'collapsed' === u) || null == b ? 1 : 0 },
                 ref: t,
-                children: [l(C), b]
+                children: [l(C), E]
             })
         );
     }),

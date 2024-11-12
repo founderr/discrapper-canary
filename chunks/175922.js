@@ -17,14 +17,14 @@ function o(e, t, n) {
         d = !(0, s.Z)() && n,
         f = (o.left + (d && c ? c.offsetLeft : 0)) / l,
         _ = (o.top + (d && c ? c.offsetTop : 0)) / u,
-        h = o.width / l,
-        p = o.height / u;
+        p = o.width / l,
+        h = o.height / u;
     return {
-        width: h,
-        height: p,
+        width: p,
+        height: h,
         top: _,
-        right: f + h,
-        bottom: _ + p,
+        right: f + p,
+        bottom: _ + h,
         left: f,
         x: f,
         y: _

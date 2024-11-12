@@ -1,9 +1,9 @@
 n.d(t, {
     EM: function () {
-        return p;
+        return h;
     },
     cv: function () {
-        return h;
+        return p;
     }
 });
 var r = n(192379),
@@ -48,50 +48,50 @@ function _(e, t, n, a, s) {
         o && null != e ? e : null
     );
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let l = (0, i.e7)([a.Z], () => {
             var e;
             return null === (e = a.Z.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents;
         }),
         u = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
-        h = (0, d.i)(e),
-        p = null;
-    a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (p = h.find((e) => null == l || !(0, o.jl)(l, e))) : null != l && (p = h.find((e) => !(0, o.jl)(l, e)));
-    let m = _(p, u, t, n);
+        p = (0, d.i)(e),
+        h = null;
+    a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (h = p.find((e) => null == l || !(0, o.jl)(l, e))) : null != l && (h = p.find((e) => !(0, o.jl)(l, e)));
+    let m = _(h, u, t, n);
     return [
         m,
         r.useCallback(
             (e, n) => {
-                null != p &&
-                    (0, c.EW)(p, {
+                null != h &&
+                    (0, c.EW)(h, {
                         dismissAction: e,
                         groupName: t,
                         guildId: u,
                         forceTrack: n
                     });
             },
-            [p, t, u]
+            [h, t, u]
         )
     ];
 }
-function p(e, t, n, o) {
+function h(e, t, n, o) {
     let l = (0, i.e7)([a.Z], () => {
             var t, n, r;
             return null !== e ? (null === (r = a.Z.settings.userContent) || void 0 === r ? void 0 : null === (n = r.recurringDismissibleContentStates) || void 0 === n ? void 0 : null === (t = n[e]) || void 0 === t ? void 0 : t.lastDismissedVersion) : void 0;
         }),
         u = (0, i.e7)([s.Z], () => s.Z.getGuildId()),
-        h = null;
+        p = null;
     if (null != e) {
         let n = !(0, d.B)(e);
-        a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (h = n && (null == l || l < t) ? e : null) : null != l && (h = n && l < t ? e : null);
+        a.Z.hasLoaded(f.yP.PRELOADED_USER_SETTINGS) ? (p = n && (null == l || l < t) ? e : null) : null != l && (p = n && l < t ? e : null);
     }
-    let p = _(h, u, n, o, t);
+    let h = _(p, u, n, o, t);
     return [
-        p,
+        h,
         r.useCallback(
             (e, r) => {
-                null != h &&
-                    (0, c.wH)(h, t, {
+                null != p &&
+                    (0, c.wH)(p, t, {
                         dismissAction: e,
                         groupName: n,
                         guildId: u,
@@ -99,7 +99,7 @@ function p(e, t, n, o) {
                         version: t
                     });
             },
-            [h, n, u, t]
+            [p, n, u, t]
         )
     ];
 }

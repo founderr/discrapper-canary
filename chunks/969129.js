@@ -50,9 +50,9 @@ function u(e) {
         };
     }
     return (function (e) {
-        let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: _, validationBehavior: h = 'aria' } = e;
+        let { isInvalid: t, validationState: n, name: i, value: l, builtinValidation: u, validate: _, validationBehavior: p = 'aria' } = e;
         n && (t || (t = 'invalid' === n));
-        let p = t
+        let h = t
                 ? {
                       isInvalid: !0,
                       validationErrors: [],
@@ -76,9 +76,9 @@ function u(e) {
         let g = (0, r.useContext)(o),
             E = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => c(g[e])) : c(g[i])) : []), [g, i]),
             [v, I] = (0, r.useState)(g),
-            [S, T] = (0, r.useState)(!1);
-        g !== v && (I(g), T(!1));
-        let b = (0, r.useMemo)(() => d(S ? [] : E), [S, E]),
+            [b, S] = (0, r.useState)(!1);
+        g !== v && (I(g), S(!1));
+        let T = (0, r.useMemo)(() => d(b ? [] : E), [b, E]),
             y = (0, r.useRef)(s),
             [A, N] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
@@ -91,16 +91,16 @@ function u(e) {
                 !f(e, C.current) && ((C.current = e), N(e));
             }),
             {
-                realtimeValidation: p || b || m || u || s,
-                displayValidation: 'native' === h ? p || b || A : p || b || m || u || A,
+                realtimeValidation: h || T || m || u || s,
+                displayValidation: 'native' === p ? h || T || A : h || T || m || u || A,
                 updateValidation(e) {
-                    'aria' !== h || f(A, e) ? (y.current = e) : N(e);
+                    'aria' !== p || f(A, e) ? (y.current = e) : N(e);
                 },
                 resetValidation() {
-                    !f(s, C.current) && ((C.current = s), N(s)), 'native' === h && O(!1), T(!0);
+                    !f(s, C.current) && ((C.current = s), N(s)), 'native' === p && O(!1), S(!0);
                 },
                 commitValidation() {
-                    'native' === h && O(!0), T(!0);
+                    'native' === p && O(!0), S(!0);
                 }
             }
         );

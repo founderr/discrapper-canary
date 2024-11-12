@@ -107,14 +107,14 @@ function u(e) {
 function c(e) {
     var t, n;
     let r = Date.now(),
-        { guilds: i, merged_presences: a, merged_members: s, read_state: o, private_channels: l, user_guild_settings: u, user_settings: c, user_settings_proto: d, experiments: f, guild_experiments: _, relationships: h, users: p, ...m } = e,
+        { guilds: i, merged_presences: a, merged_members: s, read_state: o, private_channels: l, user_guild_settings: u, user_settings: c, user_settings_proto: d, experiments: f, guild_experiments: _, relationships: p, users: h, ...m } = e,
         g = [],
         E = [],
         v = [],
         I = [],
+        b = [],
         S = [],
         T = [],
-        b = [],
         y = [];
     return (
         i.forEach((e) => {
@@ -122,17 +122,17 @@ function c(e) {
             if (e.unavailable) return;
             let { features: n, ...r } = null !== (t = e.properties) && void 0 !== t ? t : {},
                 { threads: i, guild_scheduled_events: a, ...s } = e;
-            g.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), E.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), v.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), I.push(i), S.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), T.push(n), b.push(a), y.push(s, r);
+            g.push('partial' === e.data_mode ? e.partial_updates.channels : e.channels), E.push('partial' === e.data_mode ? e.partial_updates.roles : e.roles), v.push('partial' === e.data_mode ? e.partial_updates.emojis : e.emojis), I.push(i), b.push('partial' === e.data_mode ? e.partial_updates.stickers : e.stickers), S.push(n), T.push(a), y.push(s, r);
         }),
         {
             presences_size: JSON.stringify(null !== (t = null == a ? void 0 : a.friends) && void 0 !== t ? t : []).length,
-            users_size: JSON.stringify(p).length,
+            users_size: JSON.stringify(h).length,
             read_states_size: JSON.stringify(o).length,
             private_channels_size: JSON.stringify(l).length,
             user_settings_size: JSON.stringify(null != c ? c : '').length + (null != d ? d : '').length,
             experiments_size: JSON.stringify(null != f ? f : []).length + JSON.stringify(null != _ ? _ : []).length,
             user_guild_settings_size: JSON.stringify(u).length,
-            relationships_size: JSON.stringify(h).length,
+            relationships_size: JSON.stringify(p).length,
             remaining_data_size: JSON.stringify(null != m ? m : {}).length,
             guild_channels_size: JSON.stringify(g).length,
             guild_members_size: JSON.stringify(null != s ? s : []).length,
@@ -140,9 +140,9 @@ function c(e) {
             guild_roles_size: JSON.stringify(E).length,
             guild_emojis_size: JSON.stringify(v).length,
             guild_threads_size: JSON.stringify(I).length,
-            guild_stickers_size: JSON.stringify(S).length,
-            guild_events_size: JSON.stringify(b).length,
-            guild_features_size: JSON.stringify(T).length,
+            guild_stickers_size: JSON.stringify(b).length,
+            guild_events_size: JSON.stringify(T).length,
+            guild_features_size: JSON.stringify(S).length,
             guild_remaining_data_size: JSON.stringify(y).length,
             size_metrics_duration_ms: Date.now() - r
         }

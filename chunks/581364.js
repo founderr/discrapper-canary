@@ -1,9 +1,9 @@
 n.d(t, {
     $z: function () {
-        return b;
+        return T;
     },
     BH: function () {
-        return S;
+        return b;
     },
     BO: function () {
         return A;
@@ -12,7 +12,7 @@ n.d(t, {
         return R;
     },
     Dd: function () {
-        return T;
+        return S;
     },
     Ft: function () {
         return N;
@@ -61,8 +61,8 @@ var r = n(654861),
     f = n(399860);
 n(131704);
 var _ = n(703558),
-    h = n(895924),
-    p = n(531010),
+    p = n(895924),
+    h = n(531010),
     m = n(689079),
     g = n(981631),
     E = n(231338);
@@ -79,7 +79,7 @@ function v(e) {
                   i[e.id] = e;
               })));
     let _ = (null != l ? l : []).map((e) => e.name),
-        p = (null != l ? l : []).map((e) => e.displayName);
+        h = (null != l ? l : []).map((e) => e.displayName);
     return {
         version: a.version,
         guildId: a.guild_id,
@@ -88,7 +88,7 @@ function v(e) {
         serverLocalizedName: s.name_localized,
         applicationId: o,
         type: null !== (t = a.type) && void 0 !== t ? t : c.yU.CHAT,
-        inputType: h.iw.BOT,
+        inputType: p.iw.BOT,
         untranslatedDescription: s.description,
         options: (function e(t) {
             return null == t
@@ -138,7 +138,7 @@ function v(e) {
         defaultMemberPermissions: null == a.default_member_permissions ? void 0 : u.vB(a.default_member_permissions),
         dmPermission: a.dm_permission,
         permissions: i,
-        displayName: [null !== (n = a.name_localized) && void 0 !== n ? n : a.name, ...p].join(' '),
+        displayName: [null !== (n = a.name_localized) && void 0 !== n ? n : a.name, ...h].join(' '),
         displayDescription: null !== (r = s.description_localized) && void 0 !== r ? r : s.description,
         nsfw: a.nsfw,
         contexts: a.contexts,
@@ -236,10 +236,10 @@ function I(e, t) {
         )
     );
 }
-function S(e) {
+function b(e) {
     return g.Xyh.test(e.trim());
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     let i = [];
     return (
         l()(e).forEach((e) => {
@@ -248,7 +248,7 @@ function T(e, t, n, r) {
         i.slice(0, r)
     );
 }
-function b(e) {
+function T(e) {
     let t = e.type === c.jw.STRING,
         n = e.type === c.jw.CHANNEL,
         r = e.type === c.jw.USER || e.type === c.jw.MENTIONABLE,
@@ -279,45 +279,45 @@ function N(e) {
     return ('boolean' != typeof l || !!l) && (null == s || (!u.fS(s, A) && t.can(s, n)));
 }
 function C(e, t, n) {
-    let r = n[(0, f.rE)(e.userId, h.Kw.USER)];
+    let r = n[(0, f.rE)(e.userId, p.Kw.USER)];
     if (null != r) return r.permission;
     let i = !1;
     for (let t of e.roles) {
-        let e = n[(0, f.rE)(t, h.Kw.ROLE)];
+        let e = n[(0, f.rE)(t, p.Kw.ROLE)];
         if (null != e && ((i = !0), e.permission)) return !0;
     }
     if (i) return !1;
-    let a = n[(0, f.rE)(t, h.Kw.ROLE)];
+    let a = n[(0, f.rE)(t, p.Kw.ROLE)];
     return null != a ? a.permission : null;
 }
 function R(e) {
     switch (e) {
-        case h.bB.CHAT:
-        case h.bB.APPLICATION_LAUNCHER:
-        case h.bB.APP_LAUNCHER_APPLICATION_VIEW:
-        case h.bB.CONTEXT_MENU:
-        case h.bB.VOICE_UI:
-        case h.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-        case h.bB.MINI_SHELF:
-        case h.bB.USER_PROFILE:
-        case h.bB.NOW_PLAYING:
-        case h.bB.ACTIVITY_DETAILS:
-        case h.bB.ACTIVITIES_HOME:
-        case h.bB.ACTIVITY_INSTANCE_EMBED:
-        case h.bB.ACTIVITY_BOOKMARK_EMBED:
-        case h.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-        case h.bB.IMAGE_RECS_MENU:
-        case h.bB.IMAGE_RECS_SUBMENU:
+        case p.bB.CHAT:
+        case p.bB.APPLICATION_LAUNCHER:
+        case p.bB.APP_LAUNCHER_APPLICATION_VIEW:
+        case p.bB.CONTEXT_MENU:
+        case p.bB.VOICE_UI:
+        case p.bB.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+        case p.bB.MINI_SHELF:
+        case p.bB.USER_PROFILE:
+        case p.bB.NOW_PLAYING:
+        case p.bB.ACTIVITY_DETAILS:
+        case p.bB.ACTIVITIES_HOME:
+        case p.bB.ACTIVITY_INSTANCE_EMBED:
+        case p.bB.ACTIVITY_BOOKMARK_EMBED:
+        case p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+        case p.bB.IMAGE_RECS_MENU:
+        case p.bB.IMAGE_RECS_SUBMENU:
             return _.d.SlashCommand;
     }
 }
 function O(e) {
-    return null == e ? void 0 : e.id === m.bi.BUILT_IN ? h.ub.BUILT_IN : e.id === m.bi.FRECENCY ? h.ub.FRECENCY : h.ub.APP;
+    return null == e ? void 0 : e.id === m.bi.BUILT_IN ? p.ub.BUILT_IN : e.id === m.bi.FRECENCY ? p.ub.FRECENCY : p.ub.APP;
 }
 function D(e, t) {
     var n, r;
     return {
-        type: h.Qi.APPLICATION,
+        type: p.Qi.APPLICATION,
         id: e.id,
         name: null !== (r = null == e ? void 0 : null === (n = e.bot) || void 0 === n ? void 0 : n.username) && void 0 !== r ? r : e.name,
         icon: e.icon,
@@ -342,13 +342,13 @@ function L(e) {
 function x(e, t, n) {
     return (
         null == e ||
-        p.Z.getCurrentConfig(
+        h.Z.getCurrentConfig(
             {
                 guildId: e,
                 ...t
             },
             n
-        ).userAppsTreatment === p.e.ALLOWED
+        ).userAppsTreatment === h.e.ALLOWED
     );
 }
 function w(e) {

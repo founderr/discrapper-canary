@@ -14,10 +14,10 @@ var r = n(200651),
     l = n(793903);
 let u = i.createContext(void 0),
     c = i.forwardRef(function (e, t) {
-        let { children: n, impressionType: c, impression: d, disableTrack: f, returnRef: _, ...h } = e,
-            p = i.useRef(null);
+        let { children: n, impressionType: c, impression: d, disableTrack: f, returnRef: _, ...p } = e,
+            h = i.useRef(null);
         return (
-            (0, a.T)(p, { returnRef: _ }),
+            (0, a.T)(h, { returnRef: _ }),
             i.useContext(l.Z)(
                 {
                     type: c,
@@ -26,19 +26,19 @@ let u = i.createContext(void 0),
                 },
                 { disableTrack: f }
             ),
-            i.useImperativeHandle(t, () => p.current),
+            i.useImperativeHandle(t, () => h.current),
             (0, r.jsx)(u.Provider, {
                 value: !0,
                 children: (0, r.jsx)('div', {
-                    ...h,
-                    ref: p,
+                    ...p,
+                    ref: h,
                     role: 'dialog',
                     tabIndex: -1,
                     'aria-modal': !0,
                     children: (0, r.jsx)(o.HeadingLevel, {
                         forceLevel: 1,
                         children: (0, r.jsx)(s.J, {
-                            containerRef: p,
+                            containerRef: h,
                             children: n
                         })
                     })

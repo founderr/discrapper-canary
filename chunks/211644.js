@@ -1,15 +1,15 @@
 n.d(t, {
     Aq: function () {
-        return b;
+        return T;
     },
     ZP: function () {
         return A;
     },
     bn: function () {
-        return T;
+        return S;
     },
     cI: function () {
-        return S;
+        return b;
     },
     f0: function () {
         return v;
@@ -56,8 +56,8 @@ let s = new (n(499303).I)(),
     },
     f = (e, t) => (e.candidates.set(t.content, t), e),
     _ = (e, t) => (e.candidates.delete(t.content), e),
-    h = (e, t) => d(c(e, e.shownFatigableCandidate), t),
-    p = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
+    p = (e, t) => d(c(e, e.shownFatigableCandidate), t),
+    h = (e) => (null != e.prevFatigableCandidate ? e.candidates.get(e.prevFatigableCandidate.content) : void 0),
     m = (e) => {
         let t = [...e.candidates.keys()];
         return (
@@ -75,7 +75,7 @@ let s = new (n(499303).I)(),
     E = (e) => {
         if (0 === e.candidates.size) return e;
         let t = new Date().getTime() - e.lastWinnerTime > 300000;
-        if (g(e) && !t) return s.unschedule(), h(e, p(e));
+        if (g(e) && !t) return s.unschedule(), p(e, h(e));
         if ((null != e.shownFatigableCandidate && !t) || s.scheduled()) return e;
         let n = new Date().getTime();
         return null == e.shownFatigableCandidate && n - e.lastWinnerTime < 3600000
@@ -84,7 +84,7 @@ let s = new (n(499303).I)(),
                   (0, i.j)(() => {
                       l.setState((e) => {
                           let t = u(e);
-                          return h(t, m(t));
+                          return p(t, m(t));
                       });
                   });
               }, 250),
@@ -107,9 +107,9 @@ let s = new (n(499303).I)(),
             });
         });
     },
-    S = (e) => l.getState().currentlyShown.has(e),
-    T = (e) => l((t) => t.currentlyShown.has(e)),
-    b = () => {
+    b = (e) => l.getState().currentlyShown.has(e),
+    S = (e) => l((t) => t.currentlyShown.has(e)),
+    T = () => {
         let e = [...l.getState().currentlyShown].filter((e) => !a.O.has(e)).length;
         return [l.getState().currentlyShown.size, e];
     },

@@ -35,16 +35,16 @@ var r,
     d = n(166459),
     f = n(238349),
     _ = n(228392),
-    h = n(957730),
-    p = n(467798),
+    p = n(957730),
+    h = n(467798),
     m = n(592125),
     g = n(703558),
     E = n(375954),
     v = n(300429),
     I = n(70956),
-    S = n(630388),
-    T = n(709054),
-    b = n(968437),
+    b = n(630388),
+    S = n(709054),
+    T = n(968437),
     y = n(665906),
     A = n(456077),
     N = n(124368),
@@ -70,7 +70,7 @@ function x(e, t) {
     if ('' !== c) return L(c, 40);
     if ('' !== d) return L(d, 80);
     {
-        let t = h.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0),
+        let t = p.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0),
             n = (0, A.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let r = [];
@@ -94,23 +94,23 @@ function x(e, t) {
 function w(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: i, location: o, onThreadCreated: l, useDefaultThreadName: f, uploadHandler: _ } = e;
     return a.useCallback(
-        async (e, a, p) => {
+        async (e, a, h) => {
             var E;
             let v = null == n,
                 I = D(r, i),
-                S = null !== (E = r.name) && void 0 !== E ? E : '';
-            if ('' === S && f) {
+                b = null !== (E = r.name) && void 0 !== E ? E : '';
+            if ('' === b && f) {
                 let e = x(t, n);
-                S = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
+                b = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
             }
-            let y = (0, b.WD)(t),
-                A = m.Z.getChannel(T.default.castMessageIdAsChannelId(n)),
+            let y = (0, T.WD)(t),
+                A = m.Z.getChannel(S.default.castMessageIdAsChannelId(n)),
                 N = await k(t, () => {
                     let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                     return s.tn.post({
                         url: e,
                         body: {
-                            name: S,
+                            name: b,
                             type: I ? C.d4z.PRIVATE_THREAD : t.type === C.d4z.GUILD_ANNOUNCEMENT ? C.d4z.ANNOUNCEMENT_THREAD : C.d4z.PUBLIC_THREAD,
                             auto_archive_duration: y,
                             location: o
@@ -121,12 +121,12 @@ function w(e) {
                 (u.Z.clearDraft(t.id, g.d.ThreadSettings),
                 u.Z.clearDraft(t.id, g.d.FirstThreadMessage),
                 null == l || l(N),
-                (v || e.length > 0 || (null != a && a.length > 0) || (null != p && p.length > 0)) &&
+                (v || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
                     (function (e, t, n, r, i) {
                         if (null != i && null != r && r.length > 0) i(e, r, t, n);
                         else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
-                        else c.Z.sendMessage(e.id, h.ZP.parse(e, t));
-                    })(N, e, a, p, _)),
+                        else c.Z.sendMessage(e.id, p.ZP.parse(e, t));
+                    })(N, e, a, h, _)),
                 d.Z.clearAll(t.id, g.d.FirstThreadMessage);
         },
         [t, n, r, l, i, o, f, _]
@@ -150,9 +150,9 @@ function P(e) {
     return a.useCallback(
         async (e, a, l) => {
             let c = 0,
-                [f, h] = (0, p.Z)(e);
-            f && ((e = h), (c = (0, S.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
-            let m = (0, b.WD)(t, null),
+                [f, p] = (0, h.Z)(e);
+            f && ((e = p), (c = (0, b.pj)(c, C.iLy.SUPPRESS_NOTIFICATIONS)));
+            let m = (0, T.WD)(t, null),
                 E = C.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
                 v = {
                     name: n,
@@ -258,7 +258,7 @@ async function k(e, t) {
             });
         }
     }
-    let h = await new Promise((e, t) => {
+    let p = await new Promise((e, t) => {
         null == n.body && t(),
             m.Z.addConditionalChangeListener(() => {
                 let t = m.Z.getChannel(n.body.id);
@@ -273,9 +273,9 @@ async function k(e, t) {
     });
     try {
         await c.Z.fetchMessages({
-            channelId: h.id,
+            channelId: p.id,
             limit: C.AQB
         });
     } catch (e) {}
-    return h;
+    return p;
 }

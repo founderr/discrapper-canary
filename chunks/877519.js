@@ -22,8 +22,8 @@ function d(e, t, n) {
 }
 let f = i.Z.Millis.DAY,
     _ = 30 * i.Z.Millis.MINUTE,
-    h = 5 * i.Z.Millis.SECOND,
-    p = 5 * i.Z.Millis.MINUTE,
+    p = 5 * i.Z.Millis.SECOND,
+    h = 5 * i.Z.Millis.MINUTE,
     m = 12 * i.Z.Millis.HOUR;
 class g extends r.Z {
     _fetch() {
@@ -49,7 +49,7 @@ class g extends r.Z {
                         () => {
                             0 === s.Z.lastFetchedCurrentQuests && this._fetch();
                         },
-                        Math.floor(Math.random() * h)
+                        Math.floor(Math.random() * p)
                     ));
             }),
             d(this, 'handleRunningGamesChange', () => {
@@ -57,7 +57,7 @@ class g extends r.Z {
             }),
             d(this, 'handleUserSettingsProtoUpdate', (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;
-                if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= p)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
+                if (!(!('localization' in n.proto) || !t || r || Date.now() - this.lastFetchedQuestForLocaleChangeAt <= h)) (this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch();
             }),
             d(this, 'handleLogout', () => {
                 window.clearTimeout(this.initialFetchTimerId), window.clearTimeout(this.recurringFetchTimerId), (this.lastFetchAttemptedAt = 0), (this.lastFetchedQuestForLocaleChangeAt = 0);

@@ -11,15 +11,15 @@ var r,
     f = n(570140);
 ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCH_SUCCESS = 2)] = 'FETCH_SUCCESS');
 let _ = {},
-    h = {};
-function p(e) {
+    p = {};
+function h(e) {
     let { assets: t } = e,
         n = { ..._ };
     for (let e in t) {
         var r;
         let i = t[e];
         (n[e] = 2),
-            (h[e] = {
+            (p[e] = {
                 assets: null !== (r = c().keyBy(i, 'name')) && void 0 !== r ? r : {},
                 lastUpdated: Date.now()
             });
@@ -45,7 +45,7 @@ class m extends (i = d.ZP.Store) {
         ];
     }
     getApplicationAssets(e) {
-        return h[e];
+        return p[e];
     }
 }
 (l = 'ApplicationAssetsStore'),
@@ -76,12 +76,12 @@ class m extends (i = d.ZP.Store) {
             let { applicationId: t, assets: n } = e;
             if (null != n) {
                 var r;
-                h[t] = {
+                p[t] = {
                     assets: null !== (r = c().keyBy(n, 'name')) && void 0 !== r ? r : {},
                     lastUpdated: Date.now()
                 };
-            } else delete h[t];
+            } else delete p[t];
         },
-        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: p,
-        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: p
+        EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: h,
+        DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: h
     }));

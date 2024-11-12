@@ -14,17 +14,17 @@ function s(e) {
         _ = () => {
             f(!0);
         },
-        h = () => {
+        p = () => {
             f(!1);
         };
     return (0, r.jsxs)('div', {
         className: s,
         onMouseOver: _,
-        onMouseLeave: h,
+        onMouseLeave: p,
         onFocus: _,
         onBlur: (e) => {
             var t;
-            !(null === (t = c.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && h();
+            !(null === (t = c.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && p();
         },
         ref: c,
         children: [

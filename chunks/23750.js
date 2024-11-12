@@ -1,6 +1,6 @@
 n.d(t, {
     Hx: function () {
-        return h;
+        return p;
     },
     pi: function () {
         return _;
@@ -36,11 +36,11 @@ class _ extends i.Z {
         return (0, u.yE)(this.flags, e);
     }
     constructor(e) {
-        var t, n, r, i, a, s, o, l, u, c, _, h;
-        super(), f(this, 'type', void 0), f(this, 'content', void 0), f(this, 'attachments', void 0), f(this, 'embeds', void 0), f(this, 'timestamp', void 0), f(this, 'editedTimestamp', void 0), f(this, 'flags', void 0), f(this, 'components', void 0), f(this, 'codedLinks', void 0), f(this, 'stickers', void 0), f(this, 'stickerItems', void 0), (this.type = null !== (t = e.type) && void 0 !== t ? t : d.uaV.DEFAULT), (this.content = null !== (n = e.content) && void 0 !== n ? n : ''), (this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : []), (this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : []), (this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date()), (this.editedTimestamp = null !== (s = e.editedTimestamp) && void 0 !== s ? s : null), (this.flags = null !== (o = e.flags) && void 0 !== o ? o : 0), (this.components = null !== (l = e.components) && void 0 !== l ? l : []), (this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : []), (this.stickers = null !== (c = e.stickers) && void 0 !== c ? c : []), (this.stickerItems = null !== (h = null !== (_ = e.sticker_items) && void 0 !== _ ? _ : e.stickerItems) && void 0 !== h ? h : []);
+        var t, n, r, i, a, s, o, l, u, c, _, p;
+        super(), f(this, 'type', void 0), f(this, 'content', void 0), f(this, 'attachments', void 0), f(this, 'embeds', void 0), f(this, 'timestamp', void 0), f(this, 'editedTimestamp', void 0), f(this, 'flags', void 0), f(this, 'components', void 0), f(this, 'codedLinks', void 0), f(this, 'stickers', void 0), f(this, 'stickerItems', void 0), (this.type = null !== (t = e.type) && void 0 !== t ? t : d.uaV.DEFAULT), (this.content = null !== (n = e.content) && void 0 !== n ? n : ''), (this.attachments = null !== (r = e.attachments) && void 0 !== r ? r : []), (this.embeds = null !== (i = e.embeds) && void 0 !== i ? i : []), (this.timestamp = null !== (a = e.timestamp) && void 0 !== a ? a : new Date()), (this.editedTimestamp = null !== (s = e.editedTimestamp) && void 0 !== s ? s : null), (this.flags = null !== (o = e.flags) && void 0 !== o ? o : 0), (this.components = null !== (l = e.components) && void 0 !== l ? l : []), (this.codedLinks = null !== (u = e.codedLinks) && void 0 !== u ? u : []), (this.stickers = null !== (c = e.stickers) && void 0 !== c ? c : []), (this.stickerItems = null !== (p = null !== (_ = e.sticker_items) && void 0 !== _ ? _ : e.stickerItems) && void 0 !== p ? p : []);
     }
 }
-class h extends i.Z {
+class p extends i.Z {
     constructor(e) {
         super(), f(this, 'message', void 0), (this.message = new _(e.message));
     }
@@ -222,10 +222,10 @@ t.ZP = class e extends _ {
                 return t;
             }),
             { count: d, burst_count: f, count_details: _ } = null !== (t = c[u]) && void 0 !== t ? t : {},
-            h = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
-            p = null !== (r = null == _ ? void 0 : _.burst) && void 0 !== r ? r : 0,
+            p = null !== (n = null == _ ? void 0 : _.normal) && void 0 !== n ? n : 0,
+            h = null !== (r = null == _ ? void 0 : _.burst) && void 0 !== r ? r : 0,
             m = null !== (i = null == _ ? void 0 : _.vote) && void 0 !== i ? i : 0;
-        return -1 !== u && d <= 0 && f <= 0 && h <= 0 && p <= 0 && m <= 0 && c.splice(u, 1), this.set('reactions', c);
+        return -1 !== u && d <= 0 && f <= 0 && p <= 0 && h <= 0 && m <= 0 && c.splice(u, 1), this.set('reactions', c);
     }
     removeReactionsForEmoji(e) {
         return this.set(

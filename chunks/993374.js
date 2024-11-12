@@ -77,7 +77,7 @@ class _ {
         return this._searchState;
     }
     isMemberIncludedInSearchResults(e) {
-        let { query: t, requireUnusualDmActivity: n, requireCommunicationDisabled: r, requireUnusualAccountActivity: i, requireUsernameQuarantined: u, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: _, selectedSourceInviteCode: h, selectedJoinSourceType: p } = this._searchState;
+        let { query: t, requireUnusualDmActivity: n, requireCommunicationDisabled: r, requireUnusualAccountActivity: i, requireUsernameQuarantined: u, selectedRoleIds: c, selectedJoinDateOption: d, selectedAccountAgeOption: _, selectedSourceInviteCode: p, selectedJoinSourceType: h } = this._searchState;
         if (
             t.length > 0 &&
             !(function (e, t) {
@@ -97,7 +97,7 @@ class _ {
             var m, g;
             if (((m = e), !(0 !== (g = c).size && Array.from(g).every((e) => m.roles.includes(e))))) return !1;
         }
-        if ((null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != _.afterDate && o.default.extractTimestamp(e.userId) < _.afterDate) || (null != _.beforeDate && o.default.extractTimestamp(e.userId) > _.beforeDate) || (null != h && e.sourceInviteCode !== h) || (null != p && e.joinSourceType !== p)) return !1;
+        if ((null != d.afterDate && e.joinedAtTimestamp < d.afterDate) || (null != d.beforeDate && e.joinedAtTimestamp > d.beforeDate) || (null != _.afterDate && o.default.extractTimestamp(e.userId) < _.afterDate) || (null != _.beforeDate && o.default.extractTimestamp(e.userId) > _.beforeDate) || (null != p && e.sourceInviteCode !== p) || (null != h && e.joinSourceType !== h)) return !1;
         if (n || r || i || u) return !!((n && e.hasUnusualDmActivity) || (r && (0, s.b)(e)) || (i && e.hasUnusualAccountActivity) || (u && (0, a.EY)(e))) || !1;
         return !0;
     }

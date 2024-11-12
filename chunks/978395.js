@@ -15,16 +15,16 @@ var i = n(442837),
     d = n(816988),
     f = n(648052),
     _ = n(537006),
-    h = n(483424),
-    p = n(681837),
+    p = n(483424),
+    h = n(681837),
     m = n(91433),
     g = n(502762),
     E = n(530),
     v = n(827313),
     I = n(420654),
-    S = n(116854),
-    T = n(166584),
-    b = n(915014),
+    b = n(116854),
+    S = n(166584),
+    T = n(915014),
     y = n(228168),
     A = n(981631),
     N = n(451563);
@@ -46,7 +46,7 @@ function C(e) {
                 onOpenProfile: D,
                 usernameIcon:
                     t.hasAvatarForGuild(null == R ? void 0 : R.id) &&
-                    (0, r.jsx)(S.Z, {
+                    (0, r.jsx)(b.Z, {
                         user: t,
                         nickname: w
                     }),
@@ -59,7 +59,7 @@ function C(e) {
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(p.Z, { userId: t.id }),
+                        (0, r.jsx)(h.Z, { userId: t.id }),
                         !P &&
                             (0, r.jsx)(v.Z, {
                                 userId: t.id,
@@ -78,7 +78,7 @@ function C(e) {
                     })
                 }),
             !k &&
-                (0, r.jsx)(b.Z, {
+                (0, r.jsx)(T.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == D ? void 0 : D({ section: e }))
                 }),
@@ -97,14 +97,14 @@ function C(e) {
                     onInteraction: x,
                     className: N.upsell
                 }),
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(p.Z, {
                 user: t,
                 currentUser: n,
                 onClose: x,
                 className: N.activity
             }),
             null != R &&
-                (0, r.jsx)(T.Z, {
+                (0, r.jsx)(S.Z, {
                     user: t,
                     currentUser: n,
                     guild: R

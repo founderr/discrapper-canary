@@ -12,21 +12,21 @@ function a(e) {
             let e = (u - a) / 10;
             return Math.max((e = (0, r.N4)(e, 0, e + d, d)), d);
         }, [d, u, a]),
-        h = (0, i.useMemo)(() => o(e.value), [e.value]),
-        p = (0, i.useMemo)(() => (null !== (t = o(e.defaultValue)) && void 0 !== t ? t : [a]), [e.defaultValue, a]),
+        p = (0, i.useMemo)(() => o(e.value), [e.value]),
+        h = (0, i.useMemo)(() => (null !== (t = o(e.defaultValue)) && void 0 !== t ? t : [a]), [e.defaultValue, a]),
         m = l(e.value, e.defaultValue, e.onChange),
         g = l(e.value, e.defaultValue, e.onChangeEnd),
-        [E, v] = (0, r.zk)(h, p, m),
-        [I, S] = (0, i.useState)(Array(E.length).fill(!1)),
-        T = (0, i.useRef)(Array(E.length).fill(!0)),
-        [b, y] = (0, i.useState)(void 0),
+        [E, v] = (0, r.zk)(p, h, m),
+        [I, b] = (0, i.useState)(Array(E.length).fill(!1)),
+        S = (0, i.useRef)(Array(E.length).fill(!0)),
+        [T, y] = (0, i.useState)(void 0),
         A = (0, i.useRef)(E),
         N = (0, i.useRef)(I),
         C = (e) => {
             (A.current = e), v(e);
         },
         R = (e) => {
-            (N.current = e), S(e);
+            (N.current = e), b(e);
         };
     function O(e) {
         return (e - a) / (u - a);
@@ -38,7 +38,7 @@ function a(e) {
         return e === E.length - 1 ? u : E[e + 1];
     }
     function x(e) {
-        return T.current[e];
+        return S.current[e];
     }
     function w(e, t) {
         if (n || !x(e)) return;
@@ -66,7 +66,7 @@ function a(e) {
             let r = N.current[e];
             (N.current = s(N.current, e, t)), R(N.current), g && r && !N.current.some(Boolean) && g(A.current);
         },
-        focusedThumb: b,
+        focusedThumb: T,
         setFocusedThumb: y,
         getThumbPercent: (e) => O(E[e]),
         getValuePercent: O,
@@ -77,7 +77,7 @@ function a(e) {
         getPercentValue: P,
         isThumbEditable: x,
         setThumbEditable: function (e, t) {
-            T.current[e] = t;
+            S.current[e] = t;
         },
         incrementThumb: function (e, t = 1) {
             let n = Math.max(t, d);

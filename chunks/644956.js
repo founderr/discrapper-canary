@@ -15,16 +15,16 @@ var i = n(120356),
     d = n(239091),
     f = n(276264),
     _ = n(607070),
-    h = n(100527),
-    p = n(906732),
+    p = n(100527),
+    h = n(906732),
     m = n(600164),
     g = n(82295),
     E = n(818083),
     v = n(480608),
     I = n(124072),
-    S = n(184301),
-    T = n(347475),
-    b = n(592125),
+    b = n(184301),
+    S = n(347475),
+    T = n(592125),
     y = n(271383),
     A = n(430824),
     N = n(594174),
@@ -46,7 +46,7 @@ let D = (0, E.B)({
 });
 function L(e) {
     let { roleColor: t, roleId: i, channelId: s, roleName: E, guildId: L, children: x, inlinePreview: w = !1 } = e,
-        { analyticsLocations: M } = (0, p.ZP)(h.Z.ROLE_MENTION),
+        { analyticsLocations: M } = (0, h.ZP)(p.Z.ROLE_MENTION),
         P = (0, u.e7)([_.Z], () => _.Z.roleStyle),
         k = null != t && 0 !== t && !w,
         U = k && 'dot' === P,
@@ -68,18 +68,18 @@ function L(e) {
             }),
         { enabled: B } = D.getCurrentConfig({ location: '2ec235_1' }, { autoTrackExposure: !1 });
     return !B || w || null == s || null == L || (null == i && '@everyone' !== E)
-        ? (0, r.jsx)(p.Gt, {
+        ? (0, r.jsx)(h.Gt, {
               value: M,
               children: G()
           })
-        : (0, r.jsx)(p.Gt, {
+        : (0, r.jsx)(h.Gt, {
               value: M,
               children: (0, r.jsx)(c.Popout, {
                   preload: async () => {
                       null != i && (await (0, v.H)(L, i));
                   },
                   renderPopout: (e) => {
-                      let t = b.Z.getChannel(s),
+                      let t = T.Z.getChannel(s),
                           a = A.Z.getGuild(L),
                           l = y.ZP.getMembers(a.id),
                           u = A.Z.getRole(L, null != i ? i : a.getEveryoneRoleId()),
@@ -96,12 +96,12 @@ function L(e) {
                                       c.Popout,
                                       {
                                           preload: () =>
-                                              (0, S.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
+                                              (0, b.Z)(i.id, i.getAvatarURL(t.guild_id, 80), {
                                                   guildId: t.guild_id,
                                                   channelId: t.id
                                               }),
                                           renderPopout: (n) =>
-                                              (0, r.jsx)(T.Z, {
+                                              (0, r.jsx)(S.Z, {
                                                   ...n,
                                                   userId: e.userId,
                                                   guildId: a.id,

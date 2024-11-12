@@ -40,24 +40,24 @@ async function f(e) {
         }
         _ = _.parentElement;
     }
-    let h = (0, i.E)({
+    let p = (0, i.E)({
         getFocusableElements: () => Array.from(c.querySelectorAll('['.concat(o, '="').concat(null != d ? d : l, '"]'))),
         getActiveElement: () => c.activeElement
     });
     if ((null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
-        null === (n = h.getFirstFocusableElement()) || void 0 === n || n.focus();
+        null === (n = p.getFirstFocusableElement()) || void 0 === n || n.focus();
         return;
     }
     e.getModifierState('Shift')
         ? null ===
-              (r = await h.getPreviousFocusableElement({
+              (r = await p.getPreviousFocusableElement({
                   wrap: !0,
                   from: f
               })) ||
           void 0 === r ||
           r.focus()
         : null ===
-              (u = await h.getNextFocusableElement({
+              (u = await p.getNextFocusableElement({
                   wrap: !0,
                   from: f
               })) ||

@@ -15,8 +15,8 @@ var r,
     d = n(146282),
     f = n(26033),
     _ = n(180335),
-    h = n(561308),
-    p = n(981631);
+    p = n(561308),
+    h = n(981631);
 function m(e, t, n) {
     return (
         t in e
@@ -40,7 +40,7 @@ function I(e) {
         n = new Set();
     for (let r of e) {
         let e = (function (e) {
-            return (0, h.n2)(e) ? null : (0, h.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === p.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === p.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
+            return (0, p.n2)(e) ? null : (0, p.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
         })(r.content);
         if (void 0 !== e) {
             let i = v(r.content);
@@ -52,7 +52,7 @@ function I(e) {
         matchedKeys: n
     };
 }
-function S() {
+function b() {
     let e = !1,
         t = Array.from(E.keys()),
         n = new Set(),
@@ -66,19 +66,19 @@ function S() {
     for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
-class T extends (r = l.ZP.Store) {
+class S extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], S);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], b);
     }
     getMatchingActivity(e) {
-        return (0, h.n2)(e) ? null : E.get(v(e));
+        return (0, p.n2)(e) ? null : E.get(v(e));
     }
     constructor(...e) {
-        super(...e), m(this, 'canRenderContent', (e) => !(0, h.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
+        super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-m(T, 'displayName', 'ContentInventoryActivityStore'),
-    (t.Z = new T(u.Z, {
+m(S, 'displayName', 'ContentInventoryActivityStore'),
+    (t.Z = new S(u.Z, {
         CONNECTION_OPEN: function () {
             E.clear();
         },

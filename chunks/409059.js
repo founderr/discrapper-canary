@@ -21,10 +21,10 @@ function _(e, t) {
                   };
     t(r), (d = new Map(d)).set(e, r);
 }
-function h(e) {
-    p(e.guildTemplate);
-}
 function p(e) {
+    h(e.guildTemplate);
+}
+function h(e) {
     return _(e.code, (t) => {
         let n = (0, u.Z)(e);
         for (let e in n) t[e] = n[e];
@@ -43,7 +43,7 @@ class g extends (r = o.ZP.Store) {
         return d;
     }
     getForGuild(e) {
-        for (let t in d) {
+        for (let t of d.keys()) {
             let n = d.get(t);
             if (null != n && 'sourceGuildId' in n && n.sourceGuildId === e && n.state !== c.Rj.EXPIRED) return n;
         }
@@ -69,12 +69,12 @@ class g extends (r = o.ZP.Store) {
                 state: c.Rj.RESOLVING
             });
         },
-        GUILD_TEMPLATE_CREATE_SUCCESS: h,
-        GUILD_TEMPLATE_SYNC_SUCCESS: h,
-        GUILD_TEMPLATE_RESOLVE_SUCCESS: h,
+        GUILD_TEMPLATE_CREATE_SUCCESS: p,
+        GUILD_TEMPLATE_SYNC_SUCCESS: p,
+        GUILD_TEMPLATE_RESOLVE_SUCCESS: p,
         GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS: function (e) {
             let { guildTemplates: t } = e;
-            t.forEach((e) => p(e));
+            t.forEach((e) => h(e));
         },
         GUILD_TEMPLATE_RESOLVE_FAILURE: m,
         GUILD_TEMPLATE_DELETE_SUCCESS: m,

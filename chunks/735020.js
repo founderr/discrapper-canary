@@ -12,7 +12,7 @@ let f = {};
 function _(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function h(e) {
+function p(e) {
     return (
         !!(0, c.Kh)() &&
         null != e.messages &&
@@ -28,7 +28,7 @@ function h(e) {
         !0)
     );
 }
-function p() {
+function h() {
     f = {};
 }
 class m extends (r = o.ZP.Store) {
@@ -51,8 +51,8 @@ class m extends (r = o.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new m(l.Z, {
-        SEARCH_FINISH: h,
-        MOD_VIEW_SEARCH_FINISH: h,
+        SEARCH_FINISH: p,
+        MOD_VIEW_SEARCH_FINISH: p,
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e;
             if (!(0, c.Kh)() || null == t.id || null == t.channel_id) return !1;

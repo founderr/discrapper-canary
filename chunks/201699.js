@@ -32,7 +32,7 @@ var r = n(384111),
     _ = r.define('TBSCertificate', function () {
         this.seq().obj(this.key('version').explicit(0).int().optional(), this.key('serialNumber').int(), this.key('signature').use(s), this.key('issuer').use(c), this.key('validity').use(d), this.key('subject').use(c), this.key('subjectPublicKeyInfo').use(o), this.key('issuerUniqueID').implicit(1).bitstr().optional(), this.key('subjectUniqueID').implicit(2).bitstr().optional(), this.key('extensions').explicit(3).seqof(f).optional());
     }),
-    h = r.define('X509Certificate', function () {
+    p = r.define('X509Certificate', function () {
         this.seq().obj(this.key('tbsCertificate').use(_), this.key('signatureAlgorithm').use(s), this.key('signatureValue').bitstr());
     });
-e.exports = h;
+e.exports = p;

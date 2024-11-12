@@ -18,8 +18,8 @@ var r = n(392711),
     d = n(621923),
     f = n(199689),
     _ = n(460347),
-    h = n(981631),
-    p = n(176505);
+    p = n(981631),
+    h = n(176505);
 function m(e) {
     var t;
     let n = e.id,
@@ -32,7 +32,7 @@ function m(e) {
         ),
         i = (null !== (t = c.Z.getNewMemberActions(n)) && void 0 !== t ? t : []).length > 0,
         a = c.Z.getEnabled(n);
-    return r && i && e.hasFeature(h.oNc.COMMUNITY) && !(e.hasFeature(h.oNc.GUILD_ONBOARDING) && !a);
+    return r && i && e.hasFeature(p.oNc.COMMUNITY) && !(e.hasFeature(p.oNc.GUILD_ONBOARDING) && !a);
 }
 function g(e) {
     let { homeSettingsEnabled: t } = d.ZP.useExperiment(
@@ -48,12 +48,12 @@ function g(e) {
         [u.Z, o.Z],
         () => {
             let a = u.Z.getGuild(e);
-            if (__OVERLAY__ || e === h.ME || e === h.I_8 || null == a) return !1;
+            if (__OVERLAY__ || e === p.ME || e === p.I_8 || null == a) return !1;
             if (o.Z.isFullServerPreview(e)) return m(a);
             let l = (0, f.Z)(a),
-                c = t && (0, s.wC)(e) && a.hasFeature(h.oNc.GUILD_ONBOARDING) && a.hasFeature(h.oNc.GUILD_SERVER_GUIDE),
-                d = i().some(i().values(r), (e) => e.hasFlag(p.zZ.IS_GUILD_RESOURCE_CHANNEL));
-            return !(!n && !d) && ((l && a.hasFeature(h.oNc.GUILD_ONBOARDING) && a.hasFeature(h.oNc.GUILD_SERVER_GUIDE)) || c) && a.hasFeature(h.oNc.COMMUNITY);
+                c = t && (0, s.wC)(e) && a.hasFeature(p.oNc.GUILD_ONBOARDING) && a.hasFeature(p.oNc.GUILD_SERVER_GUIDE),
+                d = i().some(i().values(r), (e) => e.hasFlag(h.zZ.IS_GUILD_RESOURCE_CHANNEL));
+            return !(!n && !d) && ((l && a.hasFeature(p.oNc.GUILD_ONBOARDING) && a.hasFeature(p.oNc.GUILD_SERVER_GUIDE)) || c) && a.hasFeature(p.oNc.COMMUNITY);
         },
         [e, t, n, r]
     );
@@ -65,8 +65,8 @@ function E(e) {
             location: '61eef9_4'
         }),
         r = o.Z.isFullServerPreview(e);
-    if (null == t || __OVERLAY__ || e === h.ME || e === h.I_8) return !1;
+    if (null == t || __OVERLAY__ || e === p.ME || e === p.I_8) return !1;
     if (r) return m(t);
-    let i = n && (0, s.wC)(e) && t.hasFeature(h.oNc.GUILD_ONBOARDING) && t.hasFeature(h.oNc.GUILD_SERVER_GUIDE);
-    return ((t.hasFeature(h.oNc.GUILD_ONBOARDING) && t.hasFeature(h.oNc.GUILD_SERVER_GUIDE)) || i) && t.hasFeature(h.oNc.COMMUNITY);
+    let i = n && (0, s.wC)(e) && t.hasFeature(p.oNc.GUILD_ONBOARDING) && t.hasFeature(p.oNc.GUILD_SERVER_GUIDE);
+    return ((t.hasFeature(p.oNc.GUILD_ONBOARDING) && t.hasFeature(p.oNc.GUILD_SERVER_GUIDE)) || i) && t.hasFeature(p.oNc.COMMUNITY);
 }

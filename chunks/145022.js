@@ -55,8 +55,8 @@ function u(e, t, n) {
                 reason: l.intl.formatToPlainString(l.t.GOEF0N, { releaseChannel: d.join(', ') })
             };
     }
-    let h = null != u ? new Date(u).getTime() : null;
-    return null != h && h < Date.now()
+    let p = null != u ? new Date(u).getTime() : null;
+    return null != p && p < Date.now()
         ? {
               valid: !1,
               reason: l.intl.string(l.t['8eRE6e'])

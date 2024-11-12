@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(232567),
@@ -39,7 +39,7 @@ function _(e) {
         i = t === a.Z.getDMFromUserId(l.I);
     null != n && n.hasUrgentMessages() && i && ((d = !1), r.mB(u.xW$.HAS_UNREAD_URGENT_MESSAGES, !1));
 }
-class h extends i.Z {
+class p extends i.Z {
     constructor(e) {
         super(),
             c(this, 'handleShowUrgentMessageAlert', void 0),

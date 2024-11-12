@@ -25,8 +25,8 @@ var u = (t.Swatch = function (e) {
         d = void 0 === c ? t : c,
         f = e.children,
         _ = e.focus,
-        h = e.focusStyle,
-        p = 'transparent' === t,
+        p = e.focusStyle,
+        h = 'transparent' === t,
         m = (0, a.default)({
             default: {
                 swatch: r(
@@ -39,7 +39,7 @@ var u = (t.Swatch = function (e) {
                         outline: 'none'
                     },
                     n,
-                    _ ? (void 0 === h ? {} : h) : {}
+                    _ ? (void 0 === p ? {} : p) : {}
                 )
             }
         }),
@@ -66,7 +66,7 @@ var u = (t.Swatch = function (e) {
                 g
             ),
             f,
-            p &&
+            h &&
                 i.default.createElement(o.default, {
                     borderRadius: m.swatch.borderRadius,
                     boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'

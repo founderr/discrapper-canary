@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     UE: function () {
-        return p;
+        return h;
     },
     as: function () {
         return a;
@@ -18,7 +18,7 @@ n.d(t, {
         return s;
     },
     wz: function () {
-        return h;
+        return p;
     }
 });
 var r,
@@ -46,7 +46,7 @@ let f = () => (0, o.Z)(),
             t
         );
     },
-    h = (e) => {
+    p = (e) => {
         let { viewId: t, gameName: n, applicationId: r, playedFriendIds: i, playedFriendsData: a, similarGames: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
@@ -59,7 +59,7 @@ let f = () => (0, o.Z)(),
             official_guild_id: o
         });
     },
-    p = (e) => {
+    h = (e) => {
         let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: a, viewId: s, officialGuildId: o } = e;
         u.default.track(c.rMx.GAME_PROFILE_ACTION, {
             game_name: t,

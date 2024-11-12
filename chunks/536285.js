@@ -13,29 +13,29 @@ function f(e, t) {
     return ''.concat(e, ':').concat(t);
 }
 let _ = s.parse(location.search.slice(1)),
-    h = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : c.V6Z, 10),
-    p = null;
+    p = parseInt(null != _.rpc && '' !== _.rpc ? _.rpc : c.V6Z, 10),
+    h = null;
 class m extends r.EventEmitter {
     get port() {
-        return h;
+        return p;
     }
     get connected() {
-        return null != p && p.readyState === WebSocket.OPEN;
+        return null != h && h.readyState === WebSocket.OPEN;
     }
     connect() {
-        if (null == p) {
-            if (h > d) {
-                (h = c.V6Z), this.emit('disconnected');
+        if (null == h) {
+            if (p > d) {
+                (p = c.V6Z), this.emit('disconnected');
                 return;
             }
             try {
-                p = new WebSocket('ws://127.0.0.1:'.concat(this.port, '/?v=').concat(c.X6Q));
+                h = new WebSocket('ws://127.0.0.1:'.concat(this.port, '/?v=').concat(c.X6Q));
             } catch (e) {
                 this.disconnect({ code: c.$VG.CLOSE_ABNORMAL });
                 return;
             }
-            null != p &&
-                ((p.onmessage = (e) => {
+            null != h &&
+                ((h.onmessage = (e) => {
                     let t;
                     try {
                         if ('string' == typeof e.data) t = JSON.parse(e.data);
@@ -60,15 +60,15 @@ class m extends r.EventEmitter {
                     let s = null;
                     r === c.zMe.ERROR && ((s = new u.Z({ errorCode: a.code }, a.message)), (a = null)), this.emit(f(n, i), s, a);
                 }),
-                (p.onclose = p.onerror = (e) => this.disconnect(e)));
+                (h.onclose = h.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && 'code' in e && [c.$VG.CLOSE_ABNORMAL, c.$VG.INVALID_CLIENTID].includes(e.code)) {
-            h++, (p = null), this.connect();
+            p++, (h = null), this.connect();
             return;
         }
-        null != p && (this.emit('disconnected'), p.close(), (p = null));
+        null != h && (this.emit('disconnected'), h.close(), (h = null));
     }
     subscribe(e, t, n) {
         return this.on(f(c.Etm.DISPATCH, e), n), this.request(c.Etm.SUBSCRIBE, t, e);
@@ -95,7 +95,7 @@ class m extends r.EventEmitter {
                     evt: n,
                     nonce: a
                 });
-            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == p || p.send(s);
+            this.once(f(e, a), (e, t) => (null != e ? i(e) : r(t))), null == h || h.send(s);
         });
     }
     requestOnce(e, t, n) {

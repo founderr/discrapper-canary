@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     u: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -20,13 +20,13 @@ var r = n(149765),
 async function _(e, t) {
     return (
         null == e ||
-        (await h(e, t, {
+        (await p(e, t, {
             removingView: !0,
             removingChat: !0
         }))
     );
 }
-async function h(e, t, n) {
+async function p(e, t, n) {
     var r;
     let i = s.Z.getGuild(e);
     if (null == i) return !0;
@@ -34,13 +34,13 @@ async function h(e, t, n) {
     if (!a) return !0;
     a && l.Z.shouldFetchPrompts(e) && (await (0, o.eM)(e));
     let f = l.Z.getDefaultChannelIds(e),
-        [_, h] = (0, u.d9)(e, f);
+        [_, p] = (0, u.d9)(e, f);
     if (!f.includes(t)) return !0;
-    let p = n.removingView && h.length - 1 < c.md,
+    let h = n.removingView && p.length - 1 < c.md,
         m = (n.removingChat || n.removingView) && _.length - 1 < c.X;
-    return !p && !m;
+    return !h && !m;
 }
-async function p(e, t, n) {
+async function h(e, t, n) {
     let s = e.getGuildId();
     if (null == s) return !0;
     null != n && (t = r.hX(t, r.U_(n)));
@@ -53,7 +53,7 @@ async function p(e, t, n) {
     return (
         e.isForumLikeChannel() ? (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES_IN_THREADS) && !r.e$(l, d.Plq.SEND_MESSAGES_IN_THREADS)) : (u.removingChat = r.e$(t, d.Plq.SEND_MESSAGES) && !r.e$(l, d.Plq.SEND_MESSAGES)),
         (!u.removingChat && !u.removingView) ||
-            !!(await h(s, e.id, u)) ||
+            !!(await p(s, e.id, u)) ||
             (i.Z.show({
                 title: f.intl.string(f.t.ut7sq6),
                 body: f.intl.format(f.t['Zaz+ur'], {

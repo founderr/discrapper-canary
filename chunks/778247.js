@@ -12,10 +12,10 @@ e.exports = function (e, t) {
         var d = 'aes' + c[1],
             f = l.from(c[2], 'hex'),
             _ = l.from(c[3].replace(/[\r\n]/g, ''), 'base64'),
-            h = s(t, f.slice(0, 8), parseInt(c[1], 10)).key,
-            p = [],
-            m = o.createDecipheriv(d, h, f);
-        p.push(m.update(_)), p.push(m.final()), (n = l.concat(p));
+            p = s(t, f.slice(0, 8), parseInt(c[1], 10)).key,
+            h = [],
+            m = o.createDecipheriv(d, p, f);
+        h.push(m.update(_)), h.push(m.final()), (n = l.concat(h));
     } else {
         var g = u.match(a);
         n = l.from(g[2].replace(/[\r\n]/g, ''), 'base64');

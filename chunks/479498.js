@@ -1,6 +1,6 @@
 n.d(t, {
     k: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -101,7 +101,7 @@ f(_, 'defaultProps', {
     pauseWhileUnfocused: !0,
     pause: !1
 });
-let h = (e) => {
+let p = (e) => {
     let { componentRef: t, ignoreReducedMotion: n = !1, ...r } = e,
         a = (0, l.e7)([c.Z], () => c.Z.isFocused()),
         s = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);

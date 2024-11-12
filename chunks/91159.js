@@ -3,16 +3,16 @@ n.d(t, {
         return E;
     },
     Ok: function () {
-        return T;
+        return S;
     },
     U4: function () {
         return v;
     },
     Ye: function () {
-        return p.Z;
+        return h.Z;
     },
     ZJ: function () {
-        return S;
+        return b;
     },
     q: function () {
         return I;
@@ -30,8 +30,8 @@ var r = n(913527),
     d = n(630388),
     f = n(621600),
     _ = n(709054),
-    h = n(569471),
-    p = n(814391),
+    p = n(569471),
+    h = n(814391),
     m = n(124368),
     g = n(981631);
 function E() {
@@ -47,7 +47,7 @@ function v() {
 function I() {
     c.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
-function S(e, t) {
+function b(e, t) {
     var n, r;
     let i = (0, o.K)(e);
     if (null == i) return;
@@ -60,18 +60,18 @@ function S(e, t) {
             if ((0, d.yE)(e, m.iN.NO_MESSAGES)) return f.$R[g.bL.NO_MESSAGES];
             return f.$R[g.bL.NULL];
         },
-        p = null !== (n = h.Z.flags(e.id)) && void 0 !== n ? n : 0,
-        E = _(p),
-        v = h.Z.isMuted(e.id),
-        I = (0, f.sK)(h.Z.getMuteConfig(e.id)),
-        { can_send_message: S, ...T } = i,
-        b = {
-            ...T,
+        h = null !== (n = p.Z.flags(e.id)) && void 0 !== n ? n : 0,
+        E = _(h),
+        v = p.Z.isMuted(e.id),
+        I = (0, f.sK)(p.Z.getMuteConfig(e.id)),
+        { can_send_message: b, ...S } = i,
+        T = {
+            ...S,
             channel_id: e.id,
             guild_id: a,
             parent_id: s,
             channel_type: e.type,
-            has_interacted_with_thread: (p & m.iN.HAS_INTERACTED) != 0,
+            has_interacted_with_thread: (h & m.iN.HAS_INTERACTED) != 0,
             parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(a, s),
             old_thread_notification_setting: E,
             new_thread_notification_setting: null != t.flags ? _(t.flags) : E,
@@ -81,10 +81,10 @@ function S(e, t) {
             old_thread_muted_until: I,
             new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : I
         };
-    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, b);
+    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, T);
 }
 n(388032);
-let T = (e) => {
+let S = (e) => {
     var t, n;
     let r = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
         s = null != r ? _.default.extractTimestamp(r) : null,

@@ -28,12 +28,12 @@ let c = (e, t, n) => {
             { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, i.cj)([s.ZP, a.Z], () => c(s.ZP, a.Z, t)),
             f = null != o,
             _ = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
-            h = (!f || _) && null != t,
-            [p, m] = r.useState(h),
+            p = (!f || _) && null != t,
+            [h, m] = r.useState(p),
             [g, E] = r.useState(null),
             v = null != o ? l.JO.createFromGuildRecord(o) : null,
-            [I, S] = r.useState(v),
-            [T, b] = r.useState(null);
+            [I, b] = r.useState(v),
+            [S, T] = r.useState(null);
         return (
             r.useEffect(() => {
                 null == n || n();
@@ -42,27 +42,27 @@ let c = (e, t, n) => {
                     if (null != e)
                         switch ((E(e.type), e.type)) {
                             case l.w6.APPLICATION:
-                                b(e.application);
+                                T(e.application);
                                 break;
                             case l.w6.GUILD:
-                                S(e.guild);
+                                b(e.guild);
                         }
                     m(!1), null == n || n();
                 };
-                if (h) {
+                if (p) {
                     e();
                     return;
                 }
                 null == n || n();
-            }, [t, h]),
+            }, [t, p]),
             {
                 expressionSourceGuild: I,
-                expressionSourceApplication: T,
+                expressionSourceApplication: S,
                 sourceType: g,
                 joinedEmojiSourceGuildRecord: o,
                 hasJoinedEmojiSourceGuild: f,
                 emoji: d,
-                isFetching: p
+                isFetching: h
             }
         );
     };

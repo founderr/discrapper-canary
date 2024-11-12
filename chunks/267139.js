@@ -10,7 +10,7 @@ var n = Symbol.for('react.element'),
     d = Symbol.for('react.memo'),
     f = Symbol.for('react.lazy'),
     _ = Symbol.iterator,
-    h = {
+    p = {
         isMounted: function () {
             return !1;
         },
@@ -18,14 +18,14 @@ var n = Symbol.for('react.element'),
         enqueueReplaceState: function () {},
         enqueueSetState: function () {}
     },
-    p = Object.assign,
+    h = Object.assign,
     m = {};
 function g(e, t, n) {
-    (this.props = e), (this.context = t), (this.refs = m), (this.updater = n || h);
+    (this.props = e), (this.context = t), (this.refs = m), (this.updater = n || p);
 }
 function E() {}
 function v(e, t, n) {
-    (this.props = e), (this.context = t), (this.refs = m), (this.updater = n || h);
+    (this.props = e), (this.context = t), (this.refs = m), (this.updater = n || p);
 }
 (g.prototype.isReactComponent = {}),
     (g.prototype.setState = function (e, t) {
@@ -37,10 +37,10 @@ function v(e, t, n) {
     }),
     (E.prototype = g.prototype);
 var I = (v.prototype = new E());
-(I.constructor = v), p(I, g.prototype), (I.isPureReactComponent = !0);
-var S = Array.isArray,
-    T = Object.prototype.hasOwnProperty,
-    b = { current: null },
+(I.constructor = v), h(I, g.prototype), (I.isPureReactComponent = !0);
+var b = Array.isArray,
+    S = Object.prototype.hasOwnProperty,
+    T = { current: null },
     y = {
         key: !0,
         ref: !0,
@@ -52,7 +52,7 @@ function A(e, t, r) {
         a = {},
         s = null,
         o = null;
-    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) T.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) S.call(t, i) && !y.hasOwnProperty(i) && (a[i] = t[i]);
     var l = arguments.length - 2;
     if (1 === l) a.children = r;
     else if (1 < l) {
@@ -66,7 +66,7 @@ function A(e, t, r) {
         key: s,
         ref: o,
         props: a,
-        _owner: b.current
+        _owner: T.current
     };
 }
 function N(e) {
@@ -117,7 +117,7 @@ function O(e, t, i) {
                 return (
                     (o = o((f = t))),
                     (t = '' === s ? '.' + R(f, 0) : s),
-                    S(o)
+                    b(o)
                         ? ((a = ''),
                           null != t && (a = t.replace(C, '$&/') + '/'),
                           e(o, i, a, '', function (e) {
@@ -139,13 +139,13 @@ function O(e, t, i) {
                     1
                 );
             }
-            if (((f = 0), (s = '' === s ? '.' : s + ':'), S(t)))
-                for (var h = 0; h < t.length; h++) {
-                    var p = s + R((d = t[h]), h);
-                    f += e(d, i, a, p, o);
+            if (((f = 0), (s = '' === s ? '.' : s + ':'), b(t)))
+                for (var p = 0; p < t.length; p++) {
+                    var h = s + R((d = t[p]), p);
+                    f += e(d, i, a, h, o);
                 }
             else {
-                if ('function' == typeof (p = null === (c = t) || 'object' != typeof c ? null : 'function' == typeof (c = (_ && c[_]) || c['@@iterator']) ? c : null)) for (t = p.call(t), h = 0; !(d = t.next()).done; ) (p = s + R((d = d.value), h++)), (f += e(d, i, a, p, o));
+                if ('function' == typeof (h = null === (c = t) || 'object' != typeof c ? null : 'function' == typeof (c = (_ && c[_]) || c['@@iterator']) ? c : null)) for (t = h.call(t), p = 0; !(d = t.next()).done; ) (h = s + R((d = d.value), p++)), (f += e(d, i, a, h, o));
                 else if ('object' === d) throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (i = String(t)) ? 'object with keys {' + Object.keys(t).join(', ') + '}' : i) + '). If you meant to render a collection of children, use an array instead.');
             }
             return f;
@@ -217,18 +217,18 @@ function w() {
     (t.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = {
         ReactCurrentDispatcher: L,
         ReactCurrentBatchConfig: x,
-        ReactCurrentOwner: b
+        ReactCurrentOwner: T
     }),
     (t.act = w),
     (t.cloneElement = function (e, t, r) {
         if (null == e) throw Error('React.cloneElement(...): The argument must be a React element, but you passed ' + e + '.');
-        var i = p({}, e.props),
+        var i = h({}, e.props),
             a = e.key,
             s = e.ref,
             o = e._owner;
         if (null != t) {
-            if ((void 0 !== t.ref && ((s = t.ref), (o = b.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
-            for (u in t) T.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
+            if ((void 0 !== t.ref && ((s = t.ref), (o = T.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
+            for (u in t) S.call(t, u) && !y.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
         }
         var u = arguments.length - 2;
         if (1 === u) i.children = r;

@@ -20,8 +20,8 @@ function l(e) {
         d = r.getCurrentUser(),
         f = !1;
     if (null != d) {
-        var _, h;
-        f = null !== (h = null === (_ = l.getMember(e, d.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h;
+        var _, p;
+        f = null !== (p = null === (_ = l.getMember(e, d.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== p && p;
     }
     return (f || c) && !!(null == u ? void 0 : u.hasVerificationGate());
 }

@@ -21,8 +21,8 @@ var r,
     d = n(626135),
     f = n(358085),
     _ = n(998502),
-    h = n(789465),
-    p = n(981631);
+    p = n(789465),
+    h = n(981631);
 let m = {
     development: [0, 0, 0, 0],
     canary: [1, 0, 30, 10],
@@ -42,7 +42,7 @@ async function E() {
         (function (e) {
             if (null == e.setFlags) return;
             let t = 0,
-                n = h.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
+                n = p.Z.getCurrentConfig({ location: 'edd7d3_1' }, { autoTrackExposure: !1 });
             n.enableCrashReporting && (console.log('Hook: Enabling crash reporting.'), (t |= 1));
             let r = c.default.getCurrentUser();
             null != r && (r.isStaff() || n.enableCrashTrigger) && (console.log('Hook: Enabling crash trigger.'), (t |= 2)), e.setFlags(t);
@@ -59,7 +59,7 @@ function v(e, t) {
             f = null;
         return new Promise((r) => {
             let u = (e, n) => {
-                    d.default.track(p.rMx.HOOK_RESULT, {
+                    d.default.track(h.rMx.HOOK_RESULT, {
                         game_name: i,
                         game_id: null == c ? null : c.id,
                         success: n,
@@ -70,16 +70,16 @@ function v(e, t) {
                         n ? r() : r((e = null != e ? e : 'Unknown hook error'));
                 },
                 _ = l.ZP.getOverlayOptionsForPID(e),
-                h = {
+                p = {
                     ...o.r,
                     ..._,
                     elevate: l.ZP.shouldElevateProcessForPID(e)
                 };
-            null == h.allowHook || h.allowHook
+            null == p.allowHook || p.allowHook
                 ? ((f = setTimeout(() => {
                       n.cancelAttachToProcess(e), u('Timed out waiting for hook response', !1);
                   }, 120000)),
-                  n.attachToProcess(e, h, u),
+                  n.attachToProcess(e, p, u),
                   a.Z.wait(() => s.Z.clearElevatedProcess()))
                 : r('Hook is disabled for this game');
         });

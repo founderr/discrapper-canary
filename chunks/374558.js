@@ -27,7 +27,7 @@ let u = {
         SIZE_36: l.size36
     };
 function d(e) {
-    let { className: t, tooltip: n, color: i, size: u = c.SIZE_32, icon: d, onClick: f, disabled: _, focusProps: h } = e;
+    let { className: t, tooltip: n, color: i, size: u = c.SIZE_32, icon: d, onClick: f, disabled: _, focusProps: p } = e;
     return (0, r.jsx)(o.u, {
         text: n,
         shouldShow: !_,
@@ -41,7 +41,7 @@ function d(e) {
                 onClick: (e) => {
                     null == o || o(), f(e);
                 },
-                focusProps: h,
+                focusProps: p,
                 children: d
             });
         }

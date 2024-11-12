@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(47120);
@@ -32,12 +32,12 @@ let x = {
     friction: 60,
     clamp: !0
 };
-function A(e) {
+function b(e) {
     let { guildId: t, onClose: n } = e,
         l = (0, g.Wg)(),
         {
-            progress: A,
-            errors: b,
+            progress: b,
+            errors: A,
             submitting: Z
         } = (0, c.cj)([g.ZP], () => {
             var e, n, i, r;
@@ -47,9 +47,9 @@ function A(e) {
                 submitting: null === (i = g.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        y = r.useMemo(() => (0, f.D)(b), [b]),
+        y = r.useMemo(() => (0, f.D)(A), [A]),
         [L, R] = r.useState(window.innerWidth),
-        j = Number(A.currentStep) >= S.IS.THANK_YOU_END,
+        j = Number(b.currentStep) >= S.IS.THANK_YOU_END,
         [O, P] = r.useState(j ? 0 : 1),
         D = (0, _.f)(),
         M = (0, d.useSpring)(
@@ -71,24 +71,24 @@ function A(e) {
                 e === y.length - 1 ? (P(0), (0, p.Lp)(t, 'fake_door_end')) : 0 === O && P(1),
                     m._9(t, {
                         currentStep: e,
-                        furthestStep: Math.max(null !== (n = A.furthestStep) && void 0 !== n ? n : 0, e)
+                        furthestStep: Math.max(null !== (n = b.furthestStep) && void 0 !== n ? n : 0, e)
                     });
             },
-            [O, t, A.furthestStep, y]
+            [O, t, b.furthestStep, y]
         );
     r.useEffect(() => {
         (0, p.Gx)({
             guildId: t,
-            signupPage: (0, f.F)(A.currentStep),
+            signupPage: (0, f.F)(b.currentStep),
             actionType: p.eI.NAVIGATE_STEP
         });
-    }, [t, A.currentStep]),
+    }, [t, b.currentStep]),
         r.useEffect(() => {
             let e = (0, h.pP)((0, s.debounce)(() => R(window.innerWidth), 250));
             return (0, h.YP)(e, document.body), () => (0, h.UC)(e, document.body);
         }, [O, j]);
-    let U = r.useMemo(() => null != b && Object.values(b).some((e) => null != e), [b]),
-        G = r.useMemo(() => (null != b && Object.values(b).length > 0 ? (0, f.D)(b).find((e) => e.hasError) : null), [b]),
+    let U = r.useMemo(() => null != A && Object.values(A).some((e) => null != e), [A]),
+        G = r.useMemo(() => (null != A && Object.values(A).length > 0 ? (0, f.D)(A).find((e) => e.hasError) : null), [A]),
         B = r.useCallback(() => {
             P(1), m._9(t, { currentStep: null == G ? void 0 : G.index });
         }, [null == G ? void 0 : G.index, t]),
@@ -169,7 +169,7 @@ function A(e) {
                                     className: a()(T.navigationContainer, T.elevatedNavigationContainer),
                                     children: (0, i.jsx)(I.Z, {
                                         guildId: t,
-                                        progress: A,
+                                        progress: b,
                                         updateCurrentStep: k,
                                         animationClassName: a()({ [T.hidden]: j }),
                                         inSettings: !1
@@ -195,7 +195,7 @@ function A(e) {
                                 setSigned: void 0,
                                 sidebarWidth: j ? 0 : 380,
                                 windowWidth: L,
-                                brandPrimaryColor: A.brandPrimaryColor
+                                brandPrimaryColor: b.brandPrimaryColor
                             })
                         })
                     ]
@@ -216,7 +216,7 @@ function A(e) {
                                 children: (e) =>
                                     (0, i.jsx)(E.Z, {
                                         ...e,
-                                        themeColor: A.brandPrimaryColor,
+                                        themeColor: b.brandPrimaryColor,
                                         disabled: !j || U,
                                         submitting: Z,
                                         look: d.Button.Looks.FILLED,

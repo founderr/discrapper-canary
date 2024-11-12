@@ -15,10 +15,10 @@ var r = n(200651),
     d = n(857192),
     f = n(835225),
     _ = n(117795),
-    h = n(565384),
-    p = n(535504);
+    p = n(565384),
+    h = n(535504);
 function m() {
-    let { debugTrackedData: e, impressions: t } = (0, h.Xo)((e) => ({
+    let { debugTrackedData: e, impressions: t } = (0, p.Xo)((e) => ({
             debugTrackedData: e.debugTrackedData,
             impressions: e.impressions
         })),
@@ -30,50 +30,50 @@ function m() {
     return a && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
-                  className: s()(p.container, {
-                      [p.containerMinimized]: m,
-                      [p.notTracked]: !I
+                  className: s()(h.container, {
+                      [h.containerMinimized]: m,
+                      [h.notTracked]: !I
                   }),
                   children: [
                       (0, r.jsx)(l.Clickable, {
-                          className: p.minimizeButton,
+                          className: h.minimizeButton,
                           onClick: () => {
                               g(!m);
                           },
                           children: m ? (0, r.jsx)(f.Z, {}) : (0, r.jsx)(_.Z, {})
                       }),
                       (0, r.jsxs)('div', {
-                          className: s()(p.content, { [p.contentMinimized]: m }),
+                          className: s()(h.content, { [h.contentMinimized]: m }),
                           children: [
                               (0, r.jsxs)(l.Text, {
-                                  className: s()(p.label, { [p.notTracked]: !I }),
+                                  className: s()(h.label, { [h.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: [
                                       I
                                           ? (0, r.jsx)(l.CircleCheckIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: p.iconTracked
+                                                className: h.iconTracked
                                             })
                                           : (0, r.jsx)(l.CircleXIcon, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: p.iconNotTracked
+                                                className: h.iconNotTracked
                                             }),
                                       null != E ? E : '(untracked)'
                                   ]
                               }),
                               (0, r.jsx)('div', {
-                                  className: p.current,
+                                  className: h.current,
                                   children: JSON.stringify(v, void 0, 2)
                               }),
                               (0, r.jsx)(l.Text, {
-                                  className: s()(p.label, { [p.notTracked]: !I }),
+                                  className: s()(h.label, { [h.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),
                               (0, r.jsx)('div', {
-                                  className: p.stack,
+                                  className: h.stack,
                                   children: JSON.stringify(t, void 0, 2)
                               })
                           ]

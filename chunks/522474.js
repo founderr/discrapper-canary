@@ -10,8 +10,8 @@ var r,
     d = n(710845),
     f = n(358085),
     _ = n(998502),
-    h = n(228488),
-    p = n(248977),
+    p = n(228488),
+    h = n(248977),
     m = n(981631);
 function g(e, t, n) {
     return (
@@ -29,9 +29,9 @@ function g(e, t, n) {
 let E = {},
     v = {},
     I = {},
+    b = {},
     S = {},
-    T = {},
-    b = new Set(),
+    T = new Set(),
     y = () => x.emitChange(),
     A = o().debounce(y, 150);
 function N(e) {
@@ -66,8 +66,8 @@ function R(e) {
         !(function (e) {
             let t = I[e];
             a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', y), t.removeEventListener('blur', y), t.removeEventListener('resize', A);
-            let n = S[e];
-            a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete I[e], delete v[e], delete T[e], delete S[e];
+            let n = b[e];
+            a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete I[e], delete v[e], delete S[e], delete b[e];
         })(e),
         x.emitChange());
 }
@@ -82,16 +82,16 @@ function O(e) {
                 return (
                     (r = n.key),
                     void (
-                        b.has(r) &&
+                        T.has(r) &&
                         (!(function (e) {
                             let t = I[e],
-                                n = T[e];
+                                n = S[e];
                             if (null == t) {
                                 new d.Z('PopoutWindowStore').warn('Failed to open window', e);
                                 return;
                             }
                             let r = t.document;
-                            (0, h.uF)(r, y),
+                            (0, p.uF)(r, y),
                                 t.addEventListener('focus', y),
                                 t.addEventListener('blur', y),
                                 t.addEventListener('resize', A),
@@ -99,9 +99,9 @@ function O(e) {
                                     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) C(t, e.href, e.integrity);
                                 })(0, t);
                             let i = (0, l.createRoot)(r.getElementById('app-mount'));
-                            a()(null != i, 'No render target for popout!'), (S[e] = i), i.render(n(e));
+                            a()(null != i, 'No render target for popout!'), (b[e] = i), i.render(n(e));
                         })(r),
-                        b.delete(r),
+                        T.delete(r),
                         x.emitChange())
                     )
                 );
@@ -174,8 +174,8 @@ let x = new L(c.Z, {
                     ...u
                 });
         }
-        let h = window.open(m.Z5c.POPOUT_WINDOW, t, (0, p.Z)(u));
-        (h.windowKey = t), null == h || h.focus(), (I[t] = h), (T[t] = r), f.isPlatformEmbedded && (_.ZP.setAlwaysOnTop(t, c), (v[t] = c), _.ZP.isAlwaysOnTop(t).then((e) => (v[t] = e))), b.add(t);
+        let p = window.open(m.Z5c.POPOUT_WINDOW, t, (0, h.Z)(u));
+        (p.windowKey = t), null == p || p.focus(), (I[t] = p), (S[t] = r), f.isPlatformEmbedded && (_.ZP.setAlwaysOnTop(t, c), (v[t] = c), _.ZP.isAlwaysOnTop(t).then((e) => (v[t] = e))), T.add(t);
     },
     POPOUT_WINDOW_ADD_STYLESHEET: function (e) {
         let { url: t, integrity: n } = e;

@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     hM: function () {
-        return b;
+        return T;
     },
     iy: function () {
         return w;
@@ -24,7 +24,7 @@ n.d(t, {
         return C;
     },
     t1: function () {
-        return T;
+        return S;
     },
     uL: function () {
         return M;
@@ -48,15 +48,15 @@ var r = n(392711),
     d = n(706454),
     f = n(675478),
     _ = n(656733),
-    h = n(626135),
-    p = n(708406),
+    p = n(626135),
+    h = n(708406),
     m = n(591759),
     g = n(668781),
     E = n(981631),
     v = n(526761),
     I = n(388032);
-let S = /-/g;
-function T(e) {
+let b = /-/g;
+function S(e) {
     let t = null != e ? { [e]: 1 } : {};
     u.ZP.trackWithMetadata(E.rMx.SEARCH_STARTED, {
         search_type: E.aib.GIF,
@@ -65,14 +65,14 @@ function T(e) {
         modifiers: t
     });
 }
-function b(e, t) {
+function T(e, t) {
     let { startTime: n, ...r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         i = {
             offset: 0,
             limit: null,
             totalResults: e.length
         },
-        a = (0, p._)(_.Z.getAnalyticsID(), t, {
+        a = (0, h._)(_.Z.getAnalyticsID(), t, {
             ...i,
             ...r,
             results: e
@@ -85,7 +85,7 @@ function b(e, t) {
 }
 function y(e, t, n) {
     let r = Date.now();
-    T(t),
+    S(t),
         s.tn
             .get({
                 url: E.ANM.GIFS_SEARCH,
@@ -101,7 +101,7 @@ function y(e, t, n) {
             .then(
                 (i) => {
                     let a = i.body;
-                    b(a, t, {
+                    T(a, t, {
                         startTime: r,
                         limit: n
                     }),
@@ -160,7 +160,7 @@ function R() {
 }
 function O(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: o, query: l, gifId: c } = e,
-        d = (0, p._)(_.Z.getAnalyticsID(), t, {
+        d = (0, h._)(_.Z.getAnalyticsID(), t, {
             offset: r,
             limit: i,
             results: a,
@@ -183,7 +183,7 @@ function O(e) {
             });
 }
 function D() {
-    let e = (0, a.Z)().replace(S, '');
+    let e = (0, a.Z)().replace(b, '');
     u.ZP.trackWithMetadata(E.rMx.SEARCH_OPENED, {
         search_type: E.aib.GIF,
         load_id: e
@@ -218,7 +218,7 @@ function L() {
 }
 function x(e) {
     let t = Date.now();
-    T(E.wI2.TRENDING_GIFS),
+    S(E.wI2.TRENDING_GIFS),
         s.tn
             .get({
                 url: E.ANM.GIFS_TRENDING_GIFS,
@@ -233,7 +233,7 @@ function x(e) {
             .then(
                 (n) => {
                     let { body: r } = n;
-                    b(r, E.wI2.TRENDING_GIFS, {
+                    T(r, E.wI2.TRENDING_GIFS, {
                         startTime: t,
                         limit: e
                     }),
@@ -272,7 +272,7 @@ function M(e) {
                     !1
                 );
             let a = i().size(t.gifs);
-            a > 2 && (t.hideTooltip = !0), h.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: a });
+            a > 2 && (t.hideTooltip = !0), p.default.track(E.rMx.GIF_FAVORITED, { total_num_favorited: a });
         },
         v.fy.INFREQUENT_USER_ACTION
     );
@@ -281,7 +281,7 @@ function P(e) {
     f.DZ.updateAsync(
         'favoriteGifs',
         (t) => {
-            e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)], h.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
+            e in t.gifs ? delete t.gifs[e] : delete t.gifs[w(e)], p.default.track(E.rMx.GIF_UNFAVORITED, { total_num_favorited: i().size(t.gifs) });
         },
         v.fy.INFREQUENT_USER_ACTION
     );

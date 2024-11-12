@@ -1,6 +1,6 @@
 n.d(t, {
     S: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -40,16 +40,16 @@ let l = ['#be0351', '#ff2c52', '#f0f0f0'],
             tint: 1
         }
     ],
-    h = (e) => {
-        let { width: t = 24, height: n = 24, primaryTintColor: h, secondaryTintColor: p, ...m } = e,
+    p = (e) => {
+        let { width: t = 24, height: n = 24, primaryTintColor: p, secondaryTintColor: h, ...m } = e,
             g = i.useMemo(() => 'badge-force-gradient-'.concat((0, a.Z)()), []),
             { primaryColorsTransformed: E, secondaryColorsTransformed: v } = (0, o.s)({
                 primaryBaseColors: l,
-                primaryTintColor: h,
+                primaryTintColor: p,
                 primaryTintLuminances: c,
                 primaryLuminanceWeights: d,
                 secondaryBaseColors: u,
-                secondaryTintColor: p,
+                secondaryTintColor: h,
                 secondaryTintLuminances: f,
                 secondaryLuminanceWeights: _
             });

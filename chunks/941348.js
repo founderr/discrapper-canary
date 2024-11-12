@@ -11,8 +11,8 @@ t.Z = function (e) {
     var t;
     let { expandedContentRef: n, expansionSpring: p, isExpanded: m, isExpansionAnimationComplete: x, onCtxMenuOpened: g, onCtxMenuClosed: f, onCtxMenuSelection: h, quest: C, useReducedMotion: v, collapsedHeight: j } = e,
         _ = r.useRef(null),
-        E = r.useRef(null),
-        b = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        b = r.useRef(null),
+        E = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         N = (0, s.Rf)(C);
     return (0, o.jsxs)(i.p, {
         expandedContentRef: n,
@@ -36,7 +36,7 @@ t.Z = function (e) {
                 onCtxMenuOpen: g,
                 onCtxMenuClose: f,
                 onCtxMenuSelect: h,
-                overlayRef: E,
+                overlayRef: b,
                 isExpanded: m,
                 isExpansionAnimationComplete: x,
                 quest: C,
@@ -49,7 +49,7 @@ t.Z = function (e) {
                             expansionSpring: p,
                             isExpanded: m
                         }),
-                        !b &&
+                        !E &&
                             (0, o.jsx)(a.Z, {
                                 quest: C,
                                 expansionSpring: p,
@@ -64,7 +64,7 @@ t.Z = function (e) {
                 })
             }),
             (0, o.jsx)('div', {
-                ref: E,
+                ref: b,
                 className: u.overlay
             })
         ]

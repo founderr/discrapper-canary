@@ -1,9 +1,9 @@
 n.d(t, {
     D4: function () {
-        return h;
+        return p;
     },
     Eo: function () {
-        return p;
+        return h;
     },
     R4: function () {
         return m;
@@ -63,8 +63,8 @@ let u = [0, 4, 8, 16, 24],
         contextMenu: !1
     }),
     _ = 16,
-    h = 16,
-    p = 32,
+    p = 16,
+    h = 32,
     m = 64,
     g = '---new-messages-bar',
     E = 'SPOILER_';

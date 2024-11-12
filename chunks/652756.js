@@ -34,8 +34,8 @@ function o(e, t, n, s, o) {
         d,
         f,
         _,
-        h,
         p,
+        h,
         m,
         g = 'IMG' === (l = t).nodeName && ((0, r.v)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(l))),
         E = a(g ? e : t),
@@ -44,27 +44,27 @@ function o(e, t, n, s, o) {
             y: n.y - E.y
         },
         I = e.offsetWidth,
-        S = e.offsetHeight,
-        T = s.anchorX,
-        b = s.anchorY;
+        b = e.offsetHeight,
+        S = s.anchorX,
+        T = s.anchorY;
     var y =
             ((c = g),
             (d = t),
             (f = I),
-            (_ = S),
-            (h = c ? d.width : f),
-            (p = c ? d.height : _),
-            (0, r.G)() && c && ((p /= window.devicePixelRatio), (h /= window.devicePixelRatio)),
+            (_ = b),
+            (p = c ? d.width : f),
+            (h = c ? d.height : _),
+            (0, r.G)() && c && ((h /= window.devicePixelRatio), (p /= window.devicePixelRatio)),
             {
-                dragPreviewWidth: h,
-                dragPreviewHeight: p
+                dragPreviewWidth: p,
+                dragPreviewHeight: h
             }),
         A = y.dragPreviewWidth,
         N = y.dragPreviewHeight,
         C = o.offsetX,
         R = o.offsetY;
     return {
-        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [v.x, (v.x / I) * A, v.x + A - I]).interpolate(T),
-        y: 0 === R || R ? R : ((m = new i.I([0, 0.5, 1], [v.y, (v.y / S) * N, v.y + N - S]).interpolate(b)), (0, r.G)() && g && (m += (window.devicePixelRatio - 1) * N), m)
+        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [v.x, (v.x / I) * A, v.x + A - I]).interpolate(S),
+        y: 0 === R || R ? R : ((m = new i.I([0, 0.5, 1], [v.y, (v.y / b) * N, v.y + N - b]).interpolate(T)), (0, r.G)() && g && (m += (window.devicePixelRatio - 1) * N), m)
     };
 }

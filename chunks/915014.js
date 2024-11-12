@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651);
@@ -15,26 +15,26 @@ var i = n(481060),
     d = n(146078),
     f = n(228168),
     _ = n(182294),
-    h = n(352235);
-function p(e) {
+    p = n(352235);
+function h(e) {
     let { user: t, onOpenProfile: n } = e,
-        { mutualFriends: p } = (0, l.Z)(t.id),
+        { mutualFriends: h } = (0, l.Z)(t.id),
         { mutualGuilds: m } = (0, u.Z)(t.id),
-        g = null != p && p.length > 0,
+        g = null != h && h.length > 0,
         E = null != m && m.length > 0,
         v = g && E ? 'text-xs/normal' : 'text-sm/normal';
     return g || E
         ? (0, r.jsxs)('div', {
-              className: h.mutuals,
+              className: p.mutuals,
               children: [
                   g
                       ? (0, r.jsxs)(i.Clickable, {
-                            className: h.section,
+                            className: p.section,
                             onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_FRIENDS)),
                             children: [
                                 (0, r.jsx)(a.Z, {
                                     maxUsers: 3,
-                                    users: p.map((e) => {
+                                    users: h.map((e) => {
                                         let { user: t } = e;
                                         return t;
                                     }),
@@ -43,10 +43,10 @@ function p(e) {
                                     disableUsernameTooltip: !0
                                 }),
                                 (0, r.jsx)(i.Text, {
-                                    className: h.text,
+                                    className: p.text,
                                     variant: v,
                                     color: 'interactive-normal',
-                                    children: (0, c.Z)(p.length)
+                                    children: (0, c.Z)(h.length)
                                 })
                             ]
                         })
@@ -54,12 +54,12 @@ function p(e) {
                   g && E
                       ? (0, r.jsx)('div', {
                             'aria-hidden': 'true',
-                            className: h.spacer
+                            className: p.spacer
                         })
                       : null,
                   E
                       ? (0, r.jsxs)(i.Clickable, {
-                            className: h.section,
+                            className: p.section,
                             onClick: () => (null == n ? void 0 : n(f.oh.MUTUAL_GUILDS)),
                             children: [
                                 !g &&
@@ -74,7 +74,7 @@ function p(e) {
                                         disableGuildNameTooltip: !0
                                     }),
                                 (0, r.jsx)(i.Text, {
-                                    className: h.text,
+                                    className: p.text,
                                     variant: v,
                                     color: 'interactive-normal',
                                     children: (0, d.Z)(m.length)

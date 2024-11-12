@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     oT: function () {
-        return h;
+        return p;
     }
 }),
     n(47120),
@@ -24,7 +24,7 @@ var r,
     f = n(388032);
 ((i = r || (r = {})).PURCHASE = 'purchase'), (i.PREMIUM_PURCHASE = 'premium_purchase'), (i.PREVIEW = 'preview'), (i.PREMIUM_PREVIEW = 'premium_preview');
 let _ = { id: 'None' },
-    h = { id: 'Shop' };
+    p = { id: 'Shop' };
 t.ZP = () => {
     let e = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         t = d.ZP.canUseCollectibles(e),
@@ -47,7 +47,7 @@ t.ZP = () => {
         return [
             {
                 section: 'purchase',
-                items: [_, h, ...e.purchase],
+                items: [_, p, ...e.purchase],
                 height: 12,
                 header: f.intl.string(f.t.JEimX1)
             },

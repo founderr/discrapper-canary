@@ -16,6 +16,6 @@ var r = n(592125),
 function f(e, t) {
     var n, f;
     let _ = a.Z.getGuild(e),
-        h = r.Z.getChannel(t);
-    return null != _ && null != h && (0, u.Z)(_) && _.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (f = null === (n = i.ZP.getSelfMember(_.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== f ? f : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(_.id, h.id) && !l.Z.hasCompletedActionForChannel(_.id, h.id);
+        p = r.Z.getChannel(t);
+    return null != _ && null != p && (0, u.Z)(_) && _.hasFeature(c.oNc.GUILD_SERVER_GUIDE) && !s.yE(null !== (f = null === (n = i.ZP.getSelfMember(_.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== f ? f : 0, d.q.COMPLETED_HOME_ACTIONS) && o.Z.hasMemberAction(_.id, p.id) && !l.Z.hasCompletedActionForChannel(_.id, p.id);
 }

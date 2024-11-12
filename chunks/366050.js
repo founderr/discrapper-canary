@@ -21,21 +21,21 @@ function c(e, t, n) {
 let d = new Map(),
     f = {},
     _ = l.VD2.BOTTOM_RIGHT,
-    h = {
+    p = {
         [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
         [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
     };
-class p extends (a = s.ZP.PersistedStore) {
+class h extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
             (_ = l.VD2.BOTTOM_RIGHT),
-                (h = {
+                (p = {
                     [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
                     [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
                 });
             return;
         }
-        (_ = e.openPosition), (h = e.pipWidths);
+        (_ = e.openPosition), (p = e.pipWidths);
     }
     get pipWindow() {
         var e;
@@ -51,7 +51,7 @@ class p extends (a = s.ZP.PersistedStore) {
         return d;
     }
     pipWidth(e) {
-        return h[e];
+        return p[e];
     }
     isEmbeddedActivityHidden() {
         return null == i;
@@ -65,13 +65,13 @@ class p extends (a = s.ZP.PersistedStore) {
     getState() {
         return {
             openPosition: _,
-            pipWidths: h
+            pipWidths: p
         };
     }
 }
-c(p, 'displayName', 'PictureInPictureStore'),
-    c(p, 'persistKey', 'PictureInPictureStore'),
-    c(p, 'migrations', [
+c(h, 'displayName', 'PictureInPictureStore'),
+    c(h, 'persistKey', 'PictureInPictureStore'),
+    c(h, 'migrations', [
         (e) => {
             var t, n;
             return {
@@ -83,7 +83,7 @@ c(p, 'displayName', 'PictureInPictureStore'),
             };
         }
     ]),
-    (t.Z = new p(o.Z, {
+    (t.Z = new h(o.Z, {
         PICTURE_IN_PICTURE_OPEN: function (e) {
             var t, n;
             let { id: a, component: s, props: o } = e;
@@ -132,7 +132,7 @@ c(p, 'displayName', 'PictureInPictureStore'),
         },
         PICTURE_IN_PICTURE_RESIZE: function (e) {
             let { width: t, pipType: n } = e;
-            h[n] = t;
+            p[n] = t;
         },
         PICTURE_IN_PICTURE_HIDE: function (e) {
             let { id: t } = e;

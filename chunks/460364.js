@@ -11,14 +11,14 @@ var r = n(200651),
     l = n(667947);
 function u(e) {
     let { parentItem: t, isFocused: n, menuSubmenuProps: u, rows: c, rowHeight: d, onScroll: f, listClassName: _ } = e,
-        h = i.useRef(null),
         p = i.useRef(null),
+        h = i.useRef(null),
         m = i.useRef(null),
         g = i.useRef(null),
         { isUsingKeyboardNavigation: E, focusIndex: v, ...I } = u;
     i.useLayoutEffect(() => {
         var e;
-        n && ((0, s.F)(h), null === (e = m.current) || void 0 === e || e.focus());
+        n && ((0, s.F)(p), null === (e = m.current) || void 0 === e || e.focus());
     }, [n]),
         i.useEffect(() => {
             if (n && v >= 0 && E) {
@@ -26,16 +26,16 @@ function u(e) {
                 null === (e = g.current) || void 0 === e || e.scrollRowIntoView(v);
             }
         }, [n, E, v]);
-    let S = i.useCallback((e) => c[e], [c]);
+    let b = i.useCallback((e) => c[e], [c]);
     return (0, r.jsxs)('div', {
-        ref: h,
+        ref: p,
         className: l.__invalid_submenuContainer,
         children: [
-            (0, r.jsx)('div', { ref: p }),
+            (0, r.jsx)('div', { ref: h }),
             t,
             n
                 ? (0, r.jsx)(a.j, {
-                      targetRef: p,
+                      targetRef: h,
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
                       fixed: !0,
@@ -55,7 +55,7 @@ function u(e) {
                                       className: _,
                                       listPadding: [6, 0, 6, 8],
                                       onScroll: f,
-                                      renderRow: S,
+                                      renderRow: b,
                                       rowCount: c.length,
                                       rowHeight: d
                                   })

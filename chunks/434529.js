@@ -147,7 +147,7 @@ function _(e, t, n) {
         o(t, n)
     ];
 }
-function h(e, t) {
+function p(e, t) {
     let n = {
         top: void 0,
         bottom: void 0,
@@ -158,7 +158,7 @@ function h(e, t) {
 }
 n.d(t, {
     BL: function () {
-        return h;
+        return p;
     },
     KR: function () {
         return i;

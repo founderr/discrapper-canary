@@ -14,8 +14,8 @@ var r = n(192379),
             d = e.width,
             f = e.triangle,
             _ = e.styles,
-            h = e.className,
-            p = (0, s.default)(
+            p = e.className,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -127,33 +127,33 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: p.card,
-                className: 'twitter-picker ' + (void 0 === h ? '' : h)
+                style: h.card,
+                className: 'twitter-picker ' + (void 0 === p ? '' : p)
             },
-            r.createElement('div', { style: p.triangleShadow }),
-            r.createElement('div', { style: p.triangle }),
+            r.createElement('div', { style: h.triangleShadow }),
+            r.createElement('div', { style: h.triangle }),
             r.createElement(
                 'div',
-                { style: p.body },
+                { style: h.body },
                 (0, o.Z)(a, function (e, t) {
                     return r.createElement(c.m4, {
                         key: t,
                         color: e,
                         hex: e,
-                        style: p.swatch,
+                        style: h.swatch,
                         onClick: m,
                         onHover: n,
                         focusStyle: { boxShadow: '0 0 4px ' + e }
                     });
                 }),
-                r.createElement('div', { style: p.hash }, '#'),
+                r.createElement('div', { style: h.hash }, '#'),
                 r.createElement(c.Vm, {
                     label: null,
-                    style: { input: p.input },
+                    style: { input: h.input },
                     value: i.replace('#', ''),
                     onChange: m
                 }),
-                r.createElement('div', { style: p.clear })
+                r.createElement('div', { style: h.clear })
             )
         );
     };

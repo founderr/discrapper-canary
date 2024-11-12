@@ -11,7 +11,7 @@ var r = n(544891),
     _ = n(388032);
 t.Z = {
     call(e, t, n, i, a) {
-        let h = (n) => {
+        let p = (n) => {
             d.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
         };
         if (null != i) {
@@ -24,7 +24,7 @@ t.Z = {
                 })
                 .then(
                     (e) => {
-                        h(n && e.body.ringable);
+                        p(n && e.body.ringable);
                     },
                     () => {
                         l.default.track(f.rMx.OPEN_POPOUT, {
@@ -45,7 +45,7 @@ t.Z = {
                             });
                     }
                 );
-        } else h(n);
+        } else p(n);
     },
     ring(e, t) {
         let n = a.Z.getCall(e);

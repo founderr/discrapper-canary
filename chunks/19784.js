@@ -34,19 +34,19 @@ var i = function (e) {
                         console.error(e);
                     }
             },
-            h = function () {
+            p = function () {
                 t && ((t = !1), 0 == a && ((a = r.now()), e(_)));
             },
-            p = [];
+            h = [];
         this.setTimeout = function (e, t) {
             var n = r.now() + t,
                 i = function () {
-                    var e = p.findIndex(function (e) {
+                    var e = h.findIndex(function (e) {
                         return e.cancel == i;
                     });
-                    e >= 0 && p.splice(e, 1);
+                    e >= 0 && h.splice(e, 1);
                 },
-                a = s(p, function (e) {
+                a = s(h, function (e) {
                     return e.time > n;
                 }),
                 o = {
@@ -54,18 +54,18 @@ var i = function (e) {
                     handler: e,
                     cancel: i
                 };
-            return p.splice(a, 0, o), h(), o;
+            return h.splice(a, 0, o), p(), o;
         };
         var m = (this.advance = function () {
             var e = r.now();
             if (
                 (u.size && (u.forEach(f), u.clear()),
-                p.length &&
+                h.length &&
                     r.batchedUpdates(function () {
-                        var t = s(p, function (t) {
+                        var t = s(h, function (t) {
                             return t.time > e;
                         });
-                        p.splice(0, t).forEach(function (e) {
+                        h.splice(0, t).forEach(function (e) {
                             return e.handler();
                         });
                     }),
@@ -96,10 +96,10 @@ var i = function (e) {
             }
         });
         (this.start = function (e) {
-            l > e.priority ? u.add(e) : (f(e), h());
+            l > e.priority ? u.add(e) : (f(e), p());
         }),
             (this.onFrame = function (e) {
-                c.add(e), h();
+                c.add(e), p();
             }),
             (this.onWrite = function (e) {
                 n ? e(a) : d.add(e);

@@ -70,8 +70,8 @@ var _ = (function (e) {
         n,
         r,
         _,
-        h,
-        p =
+        p,
+        h =
             ((t = m),
             (n = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -98,7 +98,7 @@ var _ = (function (e) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
         })(this, m);
         for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        return f(c((e = p.call.apply(p, [this].concat(n)))), 'priority', 130), f(c(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
+        return f(c((e = h.call.apply(h, [this].concat(n)))), 'priority', 130), f(c(e), 'incompatibleTokens', ['y', 'R', 'u', 'Q', 'q', 'M', 'L', 'I', 'd', 'D', 'i', 't', 'T']), e;
     }
     return (
         (r = m),

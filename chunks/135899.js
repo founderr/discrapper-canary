@@ -21,7 +21,7 @@ n.d(t, {
         return f;
     },
     tA: function () {
-        return h;
+        return p;
     },
     zs: function () {
         return o;
@@ -39,5 +39,5 @@ let o = 'publicSuccessModalSeen',
     d = [s.Plq.ADMINISTRATOR, s.Plq.KICK_MEMBERS, s.Plq.BAN_MEMBERS, s.Plq.MANAGE_GUILD, s.Plq.MANAGE_CHANNELS, s.Plq.MANAGE_ROLES, s.Plq.MANAGE_MESSAGES, s.Plq.MANAGE_GUILD_EXPRESSIONS, s.Plq.CREATE_GUILD_EXPRESSIONS, s.Plq.MANAGE_EVENTS, s.Plq.CREATE_EVENTS, s.Plq.MODERATE_MEMBERS, s.Plq.MENTION_EVERYONE],
     f = a.$e(...d),
     _ = 1000,
-    h = 'Enable Community Modal';
+    p = 'Enable Community Modal';
 ((i = r || (r = {})).SAFETY_CHECK = 'safety_check'), (i.BASICS = 'basics'), (i.FINISH = 'finish');

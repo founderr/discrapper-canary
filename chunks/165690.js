@@ -14,8 +14,8 @@ var r = n(192379),
             a = e.rgb,
             f = e.hsl,
             _ = e.hsv,
-            h = e.hex,
-            p = e.renderers,
+            p = e.hex,
+            h = e.renderers,
             m = e.styles,
             g = e.className,
             E = e.defaultView,
@@ -111,7 +111,7 @@ var r = n(192379),
                         style: v.controls,
                         className: 'flexbox-fix'
                     },
-                    r.createElement('div', { style: v.color }, r.createElement('div', { style: v.swatch }, r.createElement('div', { style: v.active }), r.createElement(l.QN, { renderers: p }))),
+                    r.createElement('div', { style: v.color }, r.createElement('div', { style: v.swatch }, r.createElement('div', { style: v.active }), r.createElement(l.QN, { renderers: h }))),
                     r.createElement(
                         'div',
                         { style: v.toggles },
@@ -133,7 +133,7 @@ var r = n(192379),
                                 rgb: a,
                                 hsl: f,
                                 pointer: c.Z,
-                                renderers: p,
+                                renderers: h,
                                 onChange: n
                             })
                         )
@@ -142,7 +142,7 @@ var r = n(192379),
                 r.createElement(u.Z, {
                     rgb: a,
                     hsl: f,
-                    hex: h,
+                    hex: p,
                     view: E,
                     onChange: n,
                     disableAlpha: i

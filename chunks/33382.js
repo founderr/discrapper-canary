@@ -17,24 +17,24 @@ function a(e, t) {
             continue;
         }
         var _ = e[s],
-            h = n[2],
-            p = n[3],
+            p = n[2],
+            h = n[3],
             m = n[4],
             g = n[5],
             E = n[6],
             v = n[7];
         o && (r.push(o), (o = ''));
-        var I = null != h && null != _ && _ !== h,
-            S = '+' === E || '*' === E,
-            T = '?' === E || '*' === E,
-            b = n[2] || u,
+        var I = null != p && null != _ && _ !== p,
+            b = '+' === E || '*' === E,
+            S = '?' === E || '*' === E,
+            T = n[2] || u,
             y = m || g;
         r.push({
-            name: p || a++,
-            prefix: h || '',
-            delimiter: b,
-            optional: T,
-            repeat: S,
+            name: h || a++,
+            prefix: p || '',
+            delimiter: T,
+            optional: S,
+            repeat: b,
             partial: I,
             asterisk: !!v,
             pattern: y
@@ -43,7 +43,7 @@ function a(e, t) {
                   })(y)
                 : v
                   ? '.*'
-                  : '[^' + l(b) + ']+?'
+                  : '[^' + l(T) + ']+?'
         });
     }
     return s < e.length && (o += e.substr(s)), o && r.push(o), r;
@@ -113,13 +113,13 @@ function d(e, t, n) {
         if ('string' == typeof f) u += l(f);
         else {
             var _ = l(f.prefix),
-                h = '(?:' + f.pattern + ')';
-            t.push(f), f.repeat && (h += '(?:' + _ + h + ')*'), (u += h = f.optional ? (f.partial ? _ + '(' + h + ')?' : '(?:' + _ + '(' + h + '))?') : _ + '(' + h + ')');
+                p = '(?:' + f.pattern + ')';
+            t.push(f), f.repeat && (p += '(?:' + _ + p + ')*'), (u += p = f.optional ? (f.partial ? _ + '(' + p + ')?' : '(?:' + _ + '(' + p + '))?') : _ + '(' + p + ')');
         }
     }
-    var p = l(n.delimiter || '/'),
-        m = u.slice(-p.length) === p;
-    return !s && (u = (m ? u.slice(0, -p.length) : u) + '(?:' + p + '(?=$))?'), o ? (u += '$') : (u += s && m ? '' : '(?=' + p + '|$)'), (i = RegExp('^' + u, c(n))), (a = t), (i.keys = a), i;
+    var h = l(n.delimiter || '/'),
+        m = u.slice(-h.length) === h;
+    return !s && (u = (m ? u.slice(0, -h.length) : u) + '(?:' + h + '(?=$))?'), o ? (u += '$') : (u += s && m ? '' : '(?=' + h + '|$)'), (i = RegExp('^' + u, c(n))), (a = t), (i.keys = a), i;
 }
 function f(e, t, n) {
     var i, s, o;

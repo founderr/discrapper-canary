@@ -15,7 +15,7 @@ var r,
     d = n(481060),
     f = n(388032),
     _ = n(78277);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,13 +28,13 @@ function h(e, t, n) {
         e
     );
 }
-let p = Object.freeze({
+let h = Object.freeze({
         SMALL: _.small,
         MEDIUM: _.medium,
         LARGE: _.large
     }),
     m = (e) => {
-        let { hasContent: t, onClear: n, className: r, isLoading: s, size: u = p.SMALL } = e;
+        let { hasContent: t, onClear: n, className: r, isLoading: s, size: u = h.SMALL } = e;
         return (0, i.jsx)(l.P, {
             className: o()(r, _.iconLayout, u, { [_.pointer]: t }),
             onClick: (e) => {
@@ -71,7 +71,7 @@ let p = Object.freeze({
             })
         });
     };
-m.Sizes = p;
+m.Sizes = h;
 class g extends (r = a.PureComponent) {
     focus() {
         let { current: e } = this.inputRef;
@@ -82,19 +82,19 @@ class g extends (r = a.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = f.intl.string(f.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: h, size: p, disabled: g, onChange: E, onBlur: v, onFocus: I, autoComplete: S, inputProps: T, hideSearchIcon: b, 'aria-label': y = f.intl.string(f.t['5h0QOD']), ...A } = this.props;
+        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = f.intl.string(f.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: p, size: h, disabled: g, onChange: E, onBlur: v, onFocus: I, autoComplete: b, inputProps: S, hideSearchIcon: T, 'aria-label': y = f.intl.string(f.t['5h0QOD']), ...A } = this.props;
         return (0, i.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, i.jsx)('div', {
-                className: o()(r, _.container, p, { [_.disabled]: g }),
+                className: o()(r, _.container, h, { [_.disabled]: g }),
                 ref: this.containerRef,
                 ...A,
                 children: (0, i.jsxs)('div', {
                     className: _.inner,
                     children: [
                         (0, i.jsx)('input', {
-                            ...T,
+                            ...S,
                             onFocus: I,
                             onBlur: v,
                             className: _.input,
@@ -106,17 +106,17 @@ class g extends (r = a.PureComponent) {
                             placeholder: a,
                             disabled: g,
                             autoFocus: t,
-                            autoComplete: S,
+                            autoComplete: b,
                             'aria-label': y,
                             ref: this.inputRef
                         }),
-                        !b &&
+                        !T &&
                             (0, i.jsx)(m, {
-                                size: p,
+                                size: h,
                                 hasContent: e.length > 0,
                                 onClear: n,
                                 className: s,
-                                isLoading: h
+                                isLoading: p
                             })
                     ]
                 })
@@ -125,17 +125,17 @@ class g extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'inputRef', a.createRef()),
-            h(this, 'containerRef', a.createRef()),
-            h(this, 'handleOnChange', (e) => {
+            p(this, 'inputRef', a.createRef()),
+            p(this, 'containerRef', a.createRef()),
+            p(this, 'handleOnChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             });
     }
 }
-h(g, 'Sizes', p),
-    h(g, 'defaultProps', {
-        size: p.SMALL,
+p(g, 'Sizes', h),
+    p(g, 'defaultProps', {
+        size: h.SMALL,
         isLoading: !1,
         disabled: !1
     });

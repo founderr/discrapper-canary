@@ -1,9 +1,9 @@
 n.d(t, {
     KS: function () {
-        return h;
+        return p;
     },
     Th: function () {
-        return p;
+        return h;
     },
     bT: function () {
         return _;
@@ -66,16 +66,16 @@ function _(e, t, n, r) {
             return null;
     }
 }
-function h(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: f = !1, video: _ = !1, stream: h = !1, hasActiveThreads: p = !1, textFocused: m = !1 } = n;
+        { locked: f = !1, video: _ = !1, stream: p = !1, hasActiveThreads: h = !1, textFocused: m = !1 } = n;
     if (null == e) return null;
     null == t && (t = s.Z.getGuild(e.getGuildId()));
     let g = (0, i.n)(null == t ? void 0 : t.id, [s.Z, o.Z, l.default, a.ZP]);
     if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.BookCheckIcon;
     switch (e.type) {
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (p) {
+            if (h) {
                 if (e.isNSFW()) return r.AnnouncementsWarningIcon;
                 if ((0, u.Z)(e)) return r.AnnouncementsLockIcon;
                 else return r.AnnouncementsIcon;
@@ -96,7 +96,7 @@ function h(e, t) {
             if (e.isForumPost()) return r.ChatIcon;
             else return r.ThreadIcon;
         case d.d4z.GUILD_TEXT:
-            if (p) {
+            if (h) {
                 if (e.isNSFW()) return r.TextWarningIcon;
                 if ((0, u.Z)(e)) return r.TextLockIcon;
                 else return r.TextIcon;
@@ -122,7 +122,7 @@ function h(e, t) {
         case d.d4z.GUILD_VOICE:
             if (m) return r.ChatIcon;
             if (e.isNSFW()) return r.VoiceWarningIcon;
-            if (h) return r.ScreenArrowIcon;
+            if (p) return r.ScreenArrowIcon;
             if (g) {
                 if ((0, u.Z)(e)) return r.LockIcon;
                 return _ ? r.VideoLockIcon : r.VoiceLockIcon;
@@ -142,7 +142,7 @@ function h(e, t) {
             return null;
     }
 }
-function p(e) {
+function h(e) {
     switch (e) {
         case d.d4z.GUILD_ANNOUNCEMENT:
             return r.AnnouncementsIcon;

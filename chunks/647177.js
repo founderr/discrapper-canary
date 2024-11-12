@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     Bh: function () {
-        return p;
+        return h;
     },
     Gx: function () {
         return v;
@@ -12,7 +12,7 @@ n.d(t, {
         return _;
     },
     V$: function () {
-        return h;
+        return p;
     },
     g5: function () {
         return m;
@@ -46,7 +46,7 @@ function f(e) {
 function _(e) {
     return null != e ? 'Video Background' : 'None';
 }
-function h(e) {
+function p(e) {
     if (null == e) return 'None';
     if (c(e)) return 'Custom';
     if ('blur' === e) return 'Blur';
@@ -74,7 +74,7 @@ function h(e) {
             })(e)
         );
 }
-function p(e, t, n) {
+function h(e, t, n) {
     let o = a.Z.getGuildId(),
         l = a.Z.getChannelId(),
         c = i.Z.getChannel(l),
@@ -82,7 +82,7 @@ function p(e, t, n) {
     s.default.track(u.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
         effect_type: _(e),
-        effect_detail: h(e),
+        effect_detail: p(e),
         effect_state: n,
         channel_id: l,
         channel_type: null == c ? void 0 : c.type,

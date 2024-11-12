@@ -21,8 +21,8 @@ var r = n(192379),
             d = e.style,
             f = e.renderers,
             _ = e.pointer,
-            h = e.className,
-            p = (0, i.default)({
+            p = e.className,
+            h = (0, i.default)({
                 default: {
                     picker: {
                         position: 'relative',
@@ -38,12 +38,12 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: p.picker,
-                className: 'alpha-picker ' + (void 0 === h ? '' : h)
+                style: h.picker,
+                className: 'alpha-picker ' + (void 0 === p ? '' : p)
             },
             r.createElement(
                 a.xV,
-                o({}, p.alpha, {
+                o({}, h.alpha, {
                     rgb: t,
                     hsl: n,
                     pointer: _,

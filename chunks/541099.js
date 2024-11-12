@@ -46,10 +46,10 @@ class _ extends (r = o.ZP.Store) {
         return f;
     }
 }
-function h() {
+function p() {
     d({ closeReason: u.ti.DISMISSED });
 }
-function p() {
+function h() {
     d({ closeReason: u.ti.COMMAND });
 }
 (s = 'AppLauncherStore'),
@@ -67,11 +67,11 @@ t.Z = new _(l.Z, {
         return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), (c.initialState = r), !0;
     },
     APP_LAUNCHER_DISMISS: d,
-    CONNECTION_OPEN: h,
-    LOGOUT: h,
-    CHANNEL_SELECT: h,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: p,
+    CONNECTION_OPEN: p,
+    LOGOUT: p,
+    CHANNEL_SELECT: p,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: h,
     APP_LAUNCHER_ADD_FAILED_APP_DM_LOAD: function (e) {
         let { channelId: t } = e;
         f.add(t);

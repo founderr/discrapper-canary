@@ -11,74 +11,74 @@ var r = n(413135).Buffer,
 function _() {
     a.call(this, 64), (this._a = 1732584193), (this._b = 4023233417), (this._c = 2562383102), (this._d = 271733878), (this._e = 3285377520);
 }
-function h(e, t) {
+function p(e, t) {
     return (e << t) | (e >>> (32 - t));
 }
-function p(e, t, n, r, i, a, s, o) {
-    return (h((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
+function h(e, t, n, r, i, a, s, o) {
+    return (p((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
 }
 function m(e, t, n, r, i, a, s, o) {
-    return (h((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
+    return (p((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
 }
 function g(e, t, n, r, i, a, s, o) {
-    return (h((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
+    return (p((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
 }
 function E(e, t, n, r, i, a, s, o) {
-    return (h((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
+    return (p((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
 }
 function v(e, t, n, r, i, a, s, o) {
-    return (h((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
+    return (p((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
 }
 i(_, a),
     (_.prototype._update = function () {
         for (var e, t, n = 0; n < 16; ++n) s[n] = this._block.readInt32LE(4 * n);
-        for (var r = 0 | this._a, i = 0 | this._b, a = 0 | this._c, d = 0 | this._d, f = 0 | this._e, _ = 0 | this._a, p = 0 | this._b, m = 0 | this._c, g = 0 | this._d, E = 0 | this._e, v = 0; v < 80; v += 1)
+        for (var r = 0 | this._a, i = 0 | this._b, a = 0 | this._c, d = 0 | this._d, f = 0 | this._e, _ = 0 | this._a, h = 0 | this._b, m = 0 | this._c, g = 0 | this._d, E = 0 | this._e, v = 0; v < 80; v += 1)
             v < 16
                 ? ((e = (function (e, t, n, r, i, a, s, o) {
-                      return (h((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
+                      return (p((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
                   })(r, i, a, d, f, s[o[v]], 0, u[v])),
                   (t = (function (e, t, n, r, i, a, s, o) {
-                      return (h((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
-                  })(_, p, m, g, E, s[l[v]], 1352829926, c[v])))
+                      return (p((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
+                  })(_, h, m, g, E, s[l[v]], 1352829926, c[v])))
                 : v < 32
                   ? ((e = (function (e, t, n, r, i, a, s, o) {
-                        return (h((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
+                        return (p((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
                     })(r, i, a, d, f, s[o[v]], 1518500249, u[v])),
                     (t = (function (e, t, n, r, i, a, s, o) {
-                        return (h((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
-                    })(_, p, m, g, E, s[l[v]], 1548603684, c[v])))
+                        return (p((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
+                    })(_, h, m, g, E, s[l[v]], 1548603684, c[v])))
                   : v < 48
                     ? ((e = (function (e, t, n, r, i, a, s, o) {
-                          return (h((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
+                          return (p((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
                       })(r, i, a, d, f, s[o[v]], 1859775393, u[v])),
                       (t = (function (e, t, n, r, i, a, s, o) {
-                          return (h((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
-                      })(_, p, m, g, E, s[l[v]], 1836072691, c[v])))
+                          return (p((e + ((t | ~n) ^ r) + a + s) | 0, o) + i) | 0;
+                      })(_, h, m, g, E, s[l[v]], 1836072691, c[v])))
                     : v < 64
                       ? ((e = (function (e, t, n, r, i, a, s, o) {
-                            return (h((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
+                            return (p((e + ((t & r) | (n & ~r)) + a + s) | 0, o) + i) | 0;
                         })(r, i, a, d, f, s[o[v]], 2400959708, u[v])),
                         (t = (function (e, t, n, r, i, a, s, o) {
-                            return (h((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
-                        })(_, p, m, g, E, s[l[v]], 2053994217, c[v])))
+                            return (p((e + ((t & n) | (~t & r)) + a + s) | 0, o) + i) | 0;
+                        })(_, h, m, g, E, s[l[v]], 2053994217, c[v])))
                       : ((e = (function (e, t, n, r, i, a, s, o) {
-                            return (h((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
+                            return (p((e + (t ^ (n | ~r)) + a + s) | 0, o) + i) | 0;
                         })(r, i, a, d, f, s[o[v]], 2840853838, u[v])),
                         (t = (function (e, t, n, r, i, a, s, o) {
-                            return (h((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
-                        })(_, p, m, g, E, s[l[v]], 0, c[v]))),
+                            return (p((e + (t ^ n ^ r) + a + s) | 0, o) + i) | 0;
+                        })(_, h, m, g, E, s[l[v]], 0, c[v]))),
                 (r = f),
                 (f = d),
-                (d = h(a, 10)),
+                (d = p(a, 10)),
                 (a = i),
                 (i = e),
                 (_ = E),
                 (E = g),
-                (g = h(m, 10)),
-                (m = p),
-                (p = t);
+                (g = p(m, 10)),
+                (m = h),
+                (h = t);
         var I = (this._b + a + g) | 0;
-        (this._b = (this._c + d + E) | 0), (this._c = (this._d + f + _) | 0), (this._d = (this._e + r + p) | 0), (this._e = (this._a + i + m) | 0), (this._a = I);
+        (this._b = (this._c + d + E) | 0), (this._c = (this._d + f + _) | 0), (this._d = (this._e + r + h) | 0), (this._e = (this._a + i + m) | 0), (this._a = I);
     }),
     (_.prototype._digest = function () {
         (this._block[this._blockOffset++] = 128), this._blockOffset > 56 && (this._block.fill(0, this._blockOffset, 64), this._update(), (this._blockOffset = 0)), this._block.fill(0, this._blockOffset, 56), this._block.writeUInt32LE(this._length[0], 56), this._block.writeUInt32LE(this._length[1], 60), this._update();

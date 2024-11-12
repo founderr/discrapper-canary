@@ -1,12 +1,12 @@
 n.d(t, {
     B6: function () {
-        return T;
+        return S;
     },
     qc: function () {
-        return b;
+        return T;
     },
     sp: function () {
-        return S;
+        return b;
     }
 }),
     n(47120),
@@ -23,10 +23,10 @@ var r = n(738774),
     d = n(956664),
     f = n(74538),
     _ = n(981631),
-    h = n(185923);
-let p = new Set([h.Z5.PREMIUM_LOCKED, h.Z5.ROLE_SUBSCRIPTION_LOCKED]),
-    m = new Set([h.Z5.PREMIUM_LOCKED, h.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, h.Z5.ROLE_SUBSCRIPTION_LOCKED, h.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
-    g = new Set([h.Z5.DISALLOW_EXTERNAL, h.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, h.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
+    p = n(185923);
+let h = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.ROLE_SUBSCRIPTION_LOCKED]),
+    m = new Set([p.Z5.PREMIUM_LOCKED, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ROLE_SUBSCRIPTION_LOCKED, p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE]),
+    g = new Set([p.Z5.DISALLOW_EXTERNAL, p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE, p.Z5.ONLY_GUILD_EMOJIS_ALLOWED]);
 function E(e) {
     if (e.type === i.B.GUILD) return !0;
     return null != e.guildId;
@@ -38,21 +38,21 @@ function I(e) {
     let { emoji: t, channel: n, guildId: i = null == n ? void 0 : n.getGuildId(), intention: u, forceIncludeExternalGuilds: c } = e;
     if (!E(t)) return null;
     let d = null != n && (0, s.zi)(n.type),
-        p = null != n && (0, s.bw)(n.type),
+        h = null != n && (0, s.bw)(n.type),
         m = v(t, i),
         g = o.Z.can(_.Plq.USE_EXTERNAL_EMOJIS, n);
-    if (u === h.Hz.COMMUNITY_CONTENT) return m && null != t.guildId && t.available ? null : h.Z5.DISALLOW_EXTERNAL;
-    if ((!(0, h.Gt)(u) && !v(t, i) && !c) || ((d || p) && !m && !g)) return h.Z5.DISALLOW_EXTERNAL;
-    if (null != t.id && !t.available) return h.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
+    if (u === p.Hz.COMMUNITY_CONTENT) return m && null != t.guildId && t.available ? null : p.Z5.DISALLOW_EXTERNAL;
+    if ((!(0, p.Gt)(u) && !v(t, i) && !c) || ((d || h) && !m && !g)) return p.Z5.DISALLOW_EXTERNAL;
+    if (null != t.id && !t.available) return p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE;
     let I = l.default.getCurrentUser();
     if (!f.ZP.canUseEmojisEverywhere(I) && !m) {
-        if (u === h.Hz.STATUS) return h.Z5.PREMIUM_LOCKED;
-        if (!t.managed) return h.Z5.PREMIUM_LOCKED;
+        if (u === p.Hz.STATUS) return p.Z5.PREMIUM_LOCKED;
+        if (!t.managed) return p.Z5.PREMIUM_LOCKED;
     }
-    if ((0, a.Fv)(t, null != i ? i : void 0)) return (0, r.Ol)(t.guildId) ? h.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : h.Z5.ROLE_SUBSCRIPTION_LOCKED;
-    return !t.animated || f.ZP.canUseAnimatedEmojis(I) || (0, a.yH)(t) ? null : h.Z5.PREMIUM_LOCKED;
+    if ((0, a.Fv)(t, null != i ? i : void 0)) return (0, r.Ol)(t.guildId) ? p.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE : p.Z5.ROLE_SUBSCRIPTION_LOCKED;
+    return !t.animated || f.ZP.canUseAnimatedEmojis(I) || (0, a.yH)(t) ? null : p.Z5.PREMIUM_LOCKED;
 }
-function S(e, t) {
+function b(e, t) {
     let n = 0,
         r = 0,
         a = 0,
@@ -73,10 +73,10 @@ function S(e, t) {
         }
     );
 }
-async function T(e) {
+async function S(e) {
     return await c.Z.getEmojiColors(e);
 }
-function b(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
         { id: n, name: r, animated: i } = e;
     return null != n
@@ -89,7 +89,7 @@ function b(e) {
 }
 t.ZP = {
     sanitizeEmojiName(e) {
-        for (e = e.replace(h.sW, '').slice(0, h.Yc); e.length < 2; ) e += '_';
+        for (e = e.replace(p.sW, '').slice(0, p.Yc); e.length < 2; ) e += '_';
         return e;
     },
     filterUnsupportedEmojis: c.Z.filterUnsupportedEmojis,
@@ -111,7 +111,7 @@ t.ZP = {
                 guildId: r,
                 intention: i
             });
-            null != t ? (g.has(t) ? o++ : a && (null == l || l.push(e)), p.has(t) && (!c && t === h.Z5.PREMIUM_LOCKED && (c = !0), null != e.id && s.add(e.id), u++)) : a && (null == l || l.push(e));
+            null != t ? (g.has(t) ? o++ : a && (null == l || l.push(e)), h.has(t) && (!c && t === p.Z5.PREMIUM_LOCKED && (c = !0), null != e.id && s.add(e.id), u++)) : a && (null == l || l.push(e));
         }
         return {
             emojisDisabled: s,
@@ -127,7 +127,7 @@ t.ZP = {
     },
     isEmojiPremiumLocked(e) {
         let t = I(e);
-        return p.has(t);
+        return h.has(t);
     },
     isEmojiCategoryNitroLocked(e) {
         let { categoryEmojis: t, channel: n, guildId: r, intention: i } = e,
@@ -140,7 +140,7 @@ t.ZP = {
                 intention: i,
                 guildId: r
             });
-            t === h.Z5.PREMIUM_LOCKED ? ((a = !0), s++) : t === h.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE && s++;
+            t === p.Z5.PREMIUM_LOCKED ? ((a = !0), s++) : t === p.Z5.GUILD_SUBSCRIPTION_UNAVAILABLE && s++;
         }
         return a && s === t.length;
     },
@@ -152,5 +152,5 @@ t.ZP = {
         return m.has(t);
     },
     isFileTooBig: (e) => e.size > 2097152,
-    isDataTooBig: (e) => (0, d.QB)(e) > h.h_
+    isDataTooBig: (e) => (0, d.QB)(e) > p.h_
 };

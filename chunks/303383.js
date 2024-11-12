@@ -18,8 +18,8 @@ function _(e) {
     return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
 }
 ((r = o || (o = {}))[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.ERROR = 3)] = 'ERROR');
-let h = new (c())({ max: 20 }),
-    p = {};
+let p = new (c())({ max: 20 }),
+    h = {};
 class m extends (l = d.ZP.Store) {
     getSimilarApplications(e) {
         let { applicationId: t, guildId: n, page: r } = e;
@@ -29,12 +29,12 @@ class m extends (l = d.ZP.Store) {
             guildId: n,
             page: r
         });
-        return h.get(i);
+        return p.get(i);
     }
     getFetchState(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null != t)
-            return p[
+            return h[
                 _({
                     applicationId: t,
                     guildId: n,
@@ -60,8 +60,8 @@ class m extends (l = d.ZP.Store) {
                     guildId: n,
                     page: r
                 });
-            p = {
-                ...p,
+            h = {
+                ...h,
                 [i]: 1
             };
         },
@@ -72,15 +72,15 @@ class m extends (l = d.ZP.Store) {
                     guildId: n,
                     page: a
                 });
-            h.set(o, {
+            p.set(o, {
                 lastFetchTimeMs: Date.now(),
                 applications: r,
                 loadId: i,
                 page: a,
                 totalPages: s
             }),
-                (p = {
-                    ...p,
+                (h = {
+                    ...h,
                     [o]: 2
                 });
         },
@@ -91,8 +91,8 @@ class m extends (l = d.ZP.Store) {
                     guildId: n,
                     page: r
                 });
-            p = {
-                ...p,
+            h = {
+                ...h,
                 [i]: 3
             };
         }

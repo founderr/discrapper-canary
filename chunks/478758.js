@@ -39,8 +39,8 @@ t.Z = (e) => {
                 )
             )
             .value(),
-        h = d - f;
-    for (let e = 0; e < h && _.length < s; e++)
+        p = d - f;
+    for (let e = 0; e < p && _.length < s; e++)
         _.push(
             (0, r.jsx)(
                 c,
@@ -51,8 +51,8 @@ t.Z = (e) => {
                 'empty-member-'.concat(e)
             )
         );
-    let p = Math.max(Math.min(d - _.length, 99), 0);
-    if (1 === p) {
+    let h = Math.max(Math.min(d - _.length, 99), 0);
+    if (1 === h) {
         let e = n[s];
         _.push(
             (0, r.jsx)(
@@ -71,10 +71,10 @@ t.Z = (e) => {
             className: u.partyMembers,
             children: [
                 _,
-                p > 1
+                h > 1
                     ? (0, r.jsxs)('div', {
                           className: u.partyMemberOverflow,
-                          children: ['+', p]
+                          children: ['+', h]
                       })
                     : null
             ]

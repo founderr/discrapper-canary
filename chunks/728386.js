@@ -10,15 +10,15 @@ var r = n(200651),
     d = n(443603),
     f = n(957825),
     _ = n(388032),
-    h = n(703130);
+    p = n(703130);
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [p, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.X),
+            [h, m] = (0, c.Iu)((e) => [e.activeView, e.pickerId], o.X),
             g = i.useContext(u.ZP),
             [E, v] = i.useState(!1),
-            I = p === f.X1.STICKER,
-            S = i.useCallback(() => {
+            I = h === f.X1.STICKER,
+            b = i.useCallback(() => {
                 (0, c.RO)(f.X1.STICKER, a);
             }, [a]);
         i.useEffect(() => {
@@ -40,17 +40,17 @@ t.Z = i.memo(
                 }
             );
         }, [g]);
-        let { Component: T, events: b, play: y } = (0, l.z)();
+        let { Component: S, events: T, play: y } = (0, l.z)();
         return n
             ? null
             : (0, r.jsx)('div', {
-                  className: s()(f.CT, h.buttonContainer),
+                  className: s()(f.CT, p.buttonContainer),
                   ref: t,
                   children: (0, r.jsx)(d.Z, {
-                      innerClassName: s()(h.button, h.stickerButton, { [h.stickerButtonTilted]: E && !I }),
-                      ...b,
+                      innerClassName: s()(p.button, p.stickerButton, { [p.stickerButtonTilted]: E && !I }),
+                      ...T,
                       onClick: () => {
-                          S(), y();
+                          b(), y();
                       },
                       isActive: I,
                       'aria-label': _.intl.string(_.t.rZpidX),
@@ -59,7 +59,7 @@ t.Z = i.memo(
                       'aria-controls': m,
                       sparkle: !1,
                       notification: null,
-                      children: (0, r.jsx)(T, { color: 'currentColor' })
+                      children: (0, r.jsx)(S, { color: 'currentColor' })
                   })
               });
     })

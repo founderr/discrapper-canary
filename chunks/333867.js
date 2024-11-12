@@ -16,7 +16,7 @@ var a = t(772848),
     u = t(608579),
     f = t(981631);
 let p = 'payment-modal',
-    m = new Set([c.h8.REVIEW, c.h8.CONFIRM]);
+    m = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
 function _(e) {
     let n;
     let { skuId: t, isGift: c = !1, giftMessage: _, giftingOrigin: g, onClose: b, onComplete: h, analyticsLocations: x, analyticsObject: C, giftRecipient: v } = e,

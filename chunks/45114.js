@@ -1,6 +1,6 @@
 n.d(t, {
     CZ: function () {
-        return p;
+        return h;
     },
     FT: function () {
         return E;
@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     iV: function () {
-        return h;
+        return p;
     },
     jT: function () {
         return m;
@@ -87,13 +87,13 @@ function _(e, t) {
         onFinished: t
     });
 }
-function h(e) {
+function p(e) {
     r.Z.dispatch({
         type: 'CHANNEL_LOCAL_ACK',
         channelId: e
     });
 }
-function p(e, t) {
+function h(e, t) {
     r.Z.dispatch({
         type: 'ENABLE_AUTOMATIC_ACK',
         channelId: e,

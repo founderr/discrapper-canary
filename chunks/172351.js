@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -14,10 +14,10 @@ var r = n(200651),
     d = n(981631),
     f = n(388032),
     _ = n(987352);
-function h(e) {
-    let { applicationId: t, commandIds: n, guildId: h, channel: p, onClick: m } = e,
+function p(e) {
+    let { applicationId: t, commandIds: n, guildId: p, channel: h, onClick: m } = e,
         { trackUserProfileAction: g } = (0, u.KZ)(),
-        { commands: E } = s.Qm(p, t, n),
+        { commands: E } = s.Qm(h, t, n),
         v = i.useMemo(
             () =>
                 null == E
@@ -35,8 +35,8 @@ function h(e) {
             l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
                 application_id: t,
                 command_id: e,
-                guild_id: h,
-                ...(0, a.JS)(p.id)
+                guild_id: p,
+                ...(0, a.JS)(h.id)
             });
     };
     return (0, r.jsx)(c.Z, {
@@ -52,8 +52,8 @@ function h(e) {
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
                             onClick: I,
-                            guildId: h,
-                            channelId: p.id,
+                            guildId: p,
+                            channelId: h.id,
                             applicationId: e.applicationId
                         })
                     },

@@ -17,7 +17,7 @@ function u(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
 function c(e) {
-    let { onCTAClick: t, callToAction: n, header: i, description: u, size: c, className: d, artURL: f, noArt: _ = !1, selected: h = !1 } = e;
+    let { onCTAClick: t, callToAction: n, header: i, description: u, size: c, className: d, artURL: f, noArt: _ = !1, selected: p = !1 } = e;
     return (0, r.jsxs)(o.Z, {
         className: d,
         justify: o.Z.Justify.CENTER,
@@ -47,7 +47,7 @@ function c(e) {
                       children: u
                   })
                 : null,
-            h || null == n
+            p || null == n
                 ? null
                 : (0, r.jsx)(s.Button, {
                       className: l.outerButton,

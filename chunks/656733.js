@@ -17,7 +17,7 @@ let _ = {
         TINYWEBM: 'tinywebm',
         NANOWEBM: 'nanowebm'
     },
-    h = {
+    p = {
         FIXED_HEIGHT_MP4: 'fixed_height.mp4',
         FIXED_HEIGHT_SMALL_MP4: 'fixed_height_small.mp4',
         FIXED_WIDTH_MP4: 'fixed_width.mp4',
@@ -25,15 +25,15 @@ let _ = {
         DOWNSIZED_SMALL_MP4: 'downsized_small.mp4',
         ORIGINAL_MP4: 'original.mp4'
     },
-    p = _.MP4,
+    h = _.MP4,
     m = null,
     g = '',
     E = '',
     v = [],
     I = [],
-    S = [],
-    T = [];
-function b(e) {
+    b = [],
+    S = [];
+function T(e) {
     return e.replace(/^https?:/, '');
 }
 class y extends (r = o.ZP.Store) {
@@ -53,13 +53,13 @@ class y extends (r = o.ZP.Store) {
         return I;
     }
     getSelectedFormat() {
-        return p;
+        return h;
     }
     getSuggestions() {
-        return S;
+        return b;
     }
     getTrendingSearchTerms() {
-        return T;
+        return S;
     }
 }
 (s = 'GIFPickerViewStore'),
@@ -76,7 +76,7 @@ class y extends (r = o.ZP.Store) {
             m = e.analyticsID;
         },
         GIF_PICKER_QUERY: function (e) {
-            '' === (g = e.query) && ((E = ''), (v = []), (S = []));
+            '' === (g = e.query) && ((E = ''), (v = []), (b = []));
         },
         GIF_PICKER_QUERY_SUCCESS: function (e) {
             if (null != e.query && g === E) return !1;
@@ -86,18 +86,18 @@ class y extends (r = o.ZP.Store) {
                     return {
                         width: t,
                         height: n,
-                        src: b(r),
-                        gifSrc: b(i),
+                        src: T(r),
+                        gifSrc: T(i),
                         url: a,
                         id: s,
                         format: !(function (e) {
                             switch (e) {
-                                case h.FIXED_HEIGHT_MP4:
-                                case h.FIXED_HEIGHT_SMALL_MP4:
-                                case h.FIXED_WIDTH_MP4:
-                                case h.FIXED_WIDTH_SMALL_MP4:
-                                case h.DOWNSIZED_SMALL_MP4:
-                                case h.ORIGINAL_MP4:
+                                case p.FIXED_HEIGHT_MP4:
+                                case p.FIXED_HEIGHT_SMALL_MP4:
+                                case p.FIXED_WIDTH_MP4:
+                                case p.FIXED_WIDTH_SMALL_MP4:
+                                case p.DOWNSIZED_SMALL_MP4:
+                                case p.ORIGINAL_MP4:
                                 case _.MP4:
                                 case _.TINYMP4:
                                 case _.NANOMP4:
@@ -108,7 +108,7 @@ class y extends (r = o.ZP.Store) {
                                 default:
                                     return !1;
                             }
-                        })(p)
+                        })(h)
                             ? l.EO.IMAGE
                             : l.EO.VIDEO
                     };
@@ -128,14 +128,14 @@ class y extends (r = o.ZP.Store) {
                               type: d.wI2.TRENDING_GIFS,
                               icon: u.I,
                               name: f.intl.string(f.t.H6zNFx),
-                              src: b(e.trendingGIFPreview.src),
+                              src: T(e.trendingGIFPreview.src),
                               format: l.EO.IMAGE
                           }
                       ]
                     : []),
                 ...t.map((e) => ({
                     ...e,
-                    src: b(e.src),
+                    src: T(e.src),
                     type: d.wI2.TRENDING_CATEGORY,
                     format: l.EO.VIDEO
                 }))
@@ -143,10 +143,10 @@ class y extends (r = o.ZP.Store) {
         },
         GIF_PICKER_SUGGESTIONS_SUCCESS: function (e) {
             let { items: t } = e;
-            S = t;
+            b = t;
         },
         GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: function (e) {
             let { items: t } = e;
-            T = t;
+            S = t;
         }
     }));

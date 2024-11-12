@@ -52,13 +52,13 @@ function l(e) {
             },
             [c, d]
         ),
-        h = i.useCallback(() => {
+        p = i.useCallback(() => {
             if ((u(!1), 0 === c.current.size)) {
                 var e;
                 null === (e = d.current) || void 0 === e || e.delay();
             }
         }, [c, d, u]),
-        p = i.useCallback(() => {
+        h = i.useCallback(() => {
             var e;
             if (!(c.current.size > 0)) null === (e = d.current) || void 0 === e || e.cancel(), u(!0);
         }, [d, u]),
@@ -66,10 +66,10 @@ function l(e) {
             () => ({
                 onAllowIdle: _,
                 onPreventIdle: f,
-                onActive: h,
-                onForceIdle: p
+                onActive: p,
+                onForceIdle: h
             }),
-            [_, f, h, p]
+            [_, f, p, h]
         );
     return (0, r.jsx)(o.Provider, {
         value: l,

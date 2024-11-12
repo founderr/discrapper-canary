@@ -10,16 +10,16 @@ var c,
     d,
     f,
     _,
-    h = n(392711),
-    p = n.n(h),
+    p = n(392711),
+    h = n.n(p),
     m = n(442837),
     g = n(433517),
     E = n(570140),
     v = n(57132),
     I = n(703656),
-    S = n(131704),
-    T = n(823379),
-    b = n(314897),
+    b = n(131704),
+    S = n(823379),
+    T = n(314897),
     y = n(592125),
     A = n(984933),
     N = n(430824),
@@ -44,14 +44,14 @@ function U() {
             lastConnectedTime: l,
             selectedChannelIds: x,
             mostRecentSelectedTextChannelIds: M,
-            knownThreadIds: p()(x)
+            knownThreadIds: h()(x)
                 .values()
-                .concat(p().values(M))
-                .filter(T.lm)
+                .concat(h().values(M))
+                .filter(S.lm)
                 .uniq()
                 .filter((e) => {
                     let t = y.Z.getBasicChannel(e);
-                    return P.has(e) || (null != t && S.Ec.has(t.type));
+                    return P.has(e) || (null != t && b.Ec.has(t.type));
                 })
                 .value()
         });
@@ -65,26 +65,26 @@ function G(e) {
 function B(e, t) {
     if (null == e || null == t || M[e] === t) return !1;
     let n = y.Z.getChannel(t),
-        r = null != n && (0, S.zi)(n.type),
+        r = null != n && (0, b.zi)(n.type),
         i = (null == n ? void 0 : n.getGuildId()) === e;
     return !!r && !!i && ((M[e] = t), !0);
 }
 function Z(e) {
     let t = y.Z.getMutableBasicGuildChannelsForGuild(e),
-        n = p().find(t, (e) => e.type === O.d4z.GUILD_VOICE);
+        n = h().find(t, (e) => e.type === O.d4z.GUILD_VOICE);
     return null == n ? void 0 : n.id;
 }
 function F() {
     let e = !1,
         t = N.Z.getGuilds();
     return (
-        p().each(x, (t, n) => {
+        h().each(x, (t, n) => {
             (null == t || (!y.Z.hasChannel(t) && t !== a && !P.has(t) && !(0, D.ME)(t))) && (delete x[n], delete w[n], (e = !0));
         }),
-        p().each(M, (t, n) => {
+        h().each(M, (t, n) => {
             (null == t || (!y.Z.hasChannel(t) && !P.has(t))) && (delete M[n], (e = !0));
         }),
-        p().each(t, (e) => {
+        h().each(t, (e) => {
             let t = x[e.id];
             null == M[e.id] && B(e.id, t);
         }),
@@ -239,7 +239,7 @@ class H extends (c = m.ZP.Store) {
                             }, 60000)),
                         U();
                 } else {
-                    if (t.userId !== b.default.getId()) return e;
+                    if (t.userId !== T.default.getId()) return e;
                     clearInterval(u), (u = void 0), (l = 0);
                     let n = null === (i = y.Z.getChannel(o)) || void 0 === i ? void 0 : i.getGuildId(),
                         r = null === (a = y.Z.getChannel(t.channelId)) || void 0 === a ? void 0 : a.getGuildId();

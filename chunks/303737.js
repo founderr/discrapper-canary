@@ -1,6 +1,6 @@
 n.d(t, {
     GN: function () {
-        return S;
+        return b;
     },
     be: function () {
         return I;
@@ -12,13 +12,13 @@ n.d(t, {
         return g;
     },
     r4: function () {
-        return T;
+        return S;
     },
     sO: function () {
         return y;
     },
     yL: function () {
-        return b;
+        return T;
     }
 }),
     n(653041),
@@ -35,8 +35,8 @@ var r = n(991637),
     d = n(944537),
     f = n(144507),
     _ = n(853439),
-    h = n(981631),
-    p = n(176505);
+    p = n(981631),
+    h = n(176505);
 i().shim();
 let m = {};
 function g(e) {
@@ -92,14 +92,14 @@ function I(e) {
     let t = v(e);
     (m[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', p.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', h.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             s.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
         });
 }
-function S(e) {
+function b(e) {
     var t;
     (null !== (t = m[e]) && void 0 !== t ? t : v(e)).forEach((e) => {
         s.Z.dispatch({
@@ -108,7 +108,7 @@ function S(e) {
         });
     });
 }
-async function T(e, t) {
+async function S(e, t) {
     let n = [],
         r = [];
     if (
@@ -139,7 +139,7 @@ async function T(e, t) {
             }
         });
 }
-function b(e, t) {
+function T(e, t) {
     var n, r;
     let i = d.n.getState().listings[e],
         a = null == i ? void 0 : i.usedTemplate;
@@ -184,5 +184,5 @@ function b(e, t) {
     };
 }
 function y(e) {
-    return (0, f.H2)(e) && e.hasFeature(h.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.$F)() && (0, u.hQ)(e.id);
+    return (0, f.H2)(e) && e.hasFeature(p.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.$F)() && (0, u.hQ)(e.id);
 }

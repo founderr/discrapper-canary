@@ -18,16 +18,16 @@ var r = n(200651),
     d = n(74433),
     f = n(750881),
     _ = n(44315),
-    h = n(633302),
-    p = n(574176),
+    p = n(633302),
+    h = n(574176),
     m = n(106301),
     g = n(223135),
     E = n(695346),
     v = n(314897),
     I = n(592125),
-    S = n(496675),
-    T = n(699516),
-    b = n(979651),
+    b = n(496675),
+    S = n(699516),
+    T = n(979651),
     y = n(6074),
     A = n(626135),
     N = n(981631),
@@ -36,7 +36,7 @@ let R = '14px';
 function O(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
         c = E.Yk.useSetting(),
-        d = null != t.id ? ':'.concat(t.name, ':') : h.ZP.translateSurrogatesToInlineEmoji(t.name),
+        d = null != t.id ? ':'.concat(t.name, ':') : p.ZP.translateSurrogatesToInlineEmoji(t.name),
         f = {
             className: s()(C.emoji, n),
             emojiId: t.id,
@@ -92,15 +92,15 @@ let D = (e) => {
     );
 };
 t.ZP = (e) => {
-    let { activities: t, applicationStream: n, className: a, textClassName: s, emojiClassName: u, animate: h = !0, hideTooltip: E = !1, hideEmoji: L = !1, user: x, hasQuest: w } = e,
+    let { activities: t, applicationStream: n, className: a, textClassName: s, emojiClassName: u, animate: p = !0, hideTooltip: E = !1, hideEmoji: L = !1, user: x, hasQuest: w } = e,
         M = null != t ? t.find((e) => e.type === N.IIU.CUSTOM_STATUS) : null,
         P = (0, o.e7)([v.default], () => v.default.getId() === (null == x ? void 0 : x.id)),
         k = (0, o.e7)([m.Z], () => (P ? m.Z.getHangStatusActivity() : null != t ? t.find((e) => e.type === N.IIU.HANG_STATUS) : null)),
-        U = (0, o.e7)([b.Z, I.Z], () => {
+        U = (0, o.e7)([T.Z, I.Z], () => {
             var e;
-            return null != k && null != x ? I.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return null != k && null != x ? I.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(x.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        { enableHangStatus: G } = p.n.useExperiment(
+        { enableHangStatus: G } = h.n.useExperiment(
             {
                 guildId: null == U ? void 0 : U.guild_id,
                 location: 'ActivityStatus'
@@ -109,7 +109,7 @@ t.ZP = (e) => {
         ),
         B = (0, _.Sl)(N.Ilk.BRAND_345),
         Z = null,
-        F = G && null != k && S.Z.can(N.Plq.CONNECT, U);
+        F = G && null != k && b.Z.can(N.Plq.CONNECT, U);
     F
         ? (Z = (0, r.jsx)(g.Z, {
               className: u,
@@ -120,12 +120,12 @@ t.ZP = (e) => {
           !L &&
           (Z = (0, r.jsx)(O, {
               emoji: M.emoji,
-              animate: h,
+              animate: p,
               hideTooltip: E,
               className: u
           }));
     let { blockeeExperimentEnabled: V, blockerExperimentEnabled: j, analyticsEligible: H } = (0, f.NR)('activity-status-web'),
-        Y = (0, o.e7)([T.Z], () => (null != x ? T.Z.getRelationshipType(x.id) : N.OGo.NONE)),
+        Y = (0, o.e7)([S.Z], () => (null != x ? S.Z.getRelationshipType(x.id) : N.OGo.NONE)),
         W = (0, d.Z)(t, n, void 0, F, V),
         K = (0, d.Z)(t, n, void 0, F, !1);
     i.useEffect(() => {

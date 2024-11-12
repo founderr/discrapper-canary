@@ -19,8 +19,8 @@ function _(e, t) {
         end: t
     };
 }
-var h = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
-    p = !!String.fromCodePoint,
+var p = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
+    h = !!String.fromCodePoint,
     m = !!Object.fromEntries,
     g = !!String.prototype.codePointAt,
     E = !!String.prototype.trimStart,
@@ -30,21 +30,21 @@ var h = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
         : function (e) {
               return 'number' == typeof e && isFinite(e) && Math.floor(e) === e && 9007199254740991 >= Math.abs(e);
           },
-    S = !0;
+    b = !0;
 try {
-    var T = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
-    S = (null === (r = T.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
+    var S = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
+    b = (null === (r = S.exec('a')) || void 0 === r ? void 0 : r[0]) === 'a';
 } catch (e) {
-    S = !1;
+    b = !1;
 }
-var b = h
+var T = p
         ? function (e, t, n) {
               return e.startsWith(t, n);
           }
         : function (e, t, n) {
               return e.slice(n, n + t.length) === t;
           },
-    y = p
+    y = h
         ? String.fromCodePoint
         : function () {
               for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
@@ -94,7 +94,7 @@ var b = h
 function O(e, t) {
     return new RegExp(e, t);
 }
-if (S) {
+if (b) {
     var D = O('([^\\p{White_Space}\\p{Pattern_Syntax}]*)', 'yu');
     i = function (e, t) {
         var n;
@@ -594,26 +594,26 @@ var L = (function () {
                 case 'date':
                 case 'time':
                     this.bumpSpace();
-                    var h = null;
+                    var p = null;
                     if (this.bumpIf(',')) {
                         this.bumpSpace();
-                        var p = this.clonePosition(),
+                        var h = this.clonePosition(),
                             m = this.parseSimpleArgStyleIfPossible();
                         if (m.err) return m;
                         var g = R(m.val);
                         if (0 === g.length) return this.error(s.o.EXPECT_ARGUMENT_STYLE, _(this.clonePosition(), this.clonePosition()));
-                        h = {
+                        p = {
                             style: g,
-                            styleLocation: _(p, this.clonePosition())
+                            styleLocation: _(h, this.clonePosition())
                         };
                     }
                     var E = this.tryParseArgumentClose(r);
                     if (E.err) return E;
                     var v = _(r, this.clonePosition());
-                    if (h && b(null == h ? void 0 : h.style, '::', 0)) {
-                        var I = C(h.style.slice(2));
+                    if (p && T(null == p ? void 0 : p.style, '::', 0)) {
+                        var I = C(p.style.slice(2));
                         if ('number' === d) {
-                            var m = this.parseNumberSkeletonFromString(I, h.styleLocation);
+                            var m = this.parseNumberSkeletonFromString(I, p.styleLocation);
                             if (m.err) return m;
                             return {
                                 val: {
@@ -626,13 +626,13 @@ var L = (function () {
                             };
                         }
                         if (0 === I.length) return this.error(s.o.EXPECT_DATE_TIME_SKELETON, v);
-                        var S = I;
-                        this.locale && (S = (0, c.T)(I, this.locale));
+                        var b = I;
+                        this.locale && (b = (0, c.T)(I, this.locale));
                         var g = {
                             type: o.aV.dateTime,
-                            pattern: S,
-                            location: h.styleLocation,
-                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(S) : {}
+                            pattern: b,
+                            location: p.styleLocation,
+                            parsedOptions: this.shouldParseSkeletons ? (0, u.TE)(b) : {}
                         };
                         return {
                             val: {
@@ -649,15 +649,15 @@ var L = (function () {
                             type: 'number' === d ? o.wD.number : 'date' === d ? o.wD.date : o.wD.time,
                             value: n,
                             location: v,
-                            style: null !== (i = null == h ? void 0 : h.style) && void 0 !== i ? i : null
+                            style: null !== (i = null == p ? void 0 : p.style) && void 0 !== i ? i : null
                         },
                         err: null
                     };
                 case 'plural':
                 case 'selectordinal':
                 case 'select':
-                    var T = this.clonePosition();
-                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(T, (0, a.pi)({}, T)));
+                    var S = this.clonePosition();
+                    if ((this.bumpSpace(), !this.bumpIf(','))) return this.error(s.o.EXPECT_SELECT_ARGUMENT_OPTIONS, _(S, (0, a.pi)({}, S)));
                     this.bumpSpace();
                     var y = this.parseIdentifierIfPossible(),
                         N = 0;
@@ -764,17 +764,17 @@ var L = (function () {
                 }
                 if (l.has(u)) return this.error('select' === t ? s.o.DUPLICATE_SELECT_ARGUMENT_SELECTOR : s.o.DUPLICATE_PLURAL_ARGUMENT_SELECTOR, c);
                 'other' === u && (a = !0), this.bumpSpace();
-                var h = this.clonePosition();
+                var p = this.clonePosition();
                 if (!this.bumpIf('{')) return this.error('select' === t ? s.o.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT : s.o.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT, _(this.clonePosition(), this.clonePosition()));
-                var p = this.parseMessage(e + 1, t, n);
-                if (p.err) return p;
-                var m = this.tryParseArgumentClose(h);
+                var h = this.parseMessage(e + 1, t, n);
+                if (h.err) return h;
+                var m = this.tryParseArgumentClose(p);
                 if (m.err) return m;
                 o.push([
                     u,
                     {
-                        value: p.val,
-                        location: _(h, this.clonePosition())
+                        value: h.val,
+                        location: _(p, this.clonePosition())
                     }
                 ]),
                     l.add(u),
@@ -847,7 +847,7 @@ var L = (function () {
             }
         }),
         (e.prototype.bumpIf = function (e) {
-            if (b(this.message, e, this.offset())) {
+            if (T(this.message, e, this.offset())) {
                 for (var t = 0; t < e.length; t++) this.bump();
                 return !0;
             }

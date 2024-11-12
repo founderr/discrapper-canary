@@ -1,6 +1,6 @@
 n.d(t, {
     $d: function () {
-        return b;
+        return T;
     },
     AA: function () {
         return y;
@@ -9,7 +9,7 @@ n.d(t, {
         return L;
     },
     Dx: function () {
-        return T;
+        return S;
     },
     R: function () {
         return O;
@@ -24,7 +24,7 @@ n.d(t, {
         return N;
     },
     w: function () {
-        return S;
+        return b;
     },
     xR: function () {
         return R;
@@ -46,14 +46,14 @@ var r = n(392711),
     d = n(697426),
     f = n(174470),
     _ = n(710111),
-    h = n(981631),
-    p = n(526761),
+    p = n(981631),
+    h = n(526761),
     m = n(388032);
 let g = async (e) => {
         try {
             let t = (
                 await a.tn.get({
-                    url: h.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
+                    url: p.ANM.SOUNDBOARD_DEFAULT_SOUNDS,
                     query: { guild_ids: e }
                 })
             ).body.map((e) => (0, d.o3)(e, _.X8));
@@ -91,11 +91,11 @@ let g = async (e) => {
             t
         );
     },
-    S = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([v(), I()]));
-async function T(e) {
+    b = () => (__OVERLAY__ ? (s.Z.dispatch({ type: 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST' }), Promise.all([])) : Promise.all([v(), I()]));
+async function S(e) {
     let { guildId: t, name: n, sound: r, volume: i, emojiId: s, emojiName: o } = e,
         l = await a.tn.post({
-            url: h.ANM.GUILD_SOUNDBOARD_SOUNDS(t),
+            url: p.ANM.GUILD_SOUNDBOARD_SOUNDS(t),
             body: {
                 name: n,
                 sound: r,
@@ -106,10 +106,10 @@ async function T(e) {
         });
     return (0, d.o3)(l.body, t);
 }
-async function b(e) {
+async function T(e) {
     let { guildId: t, soundId: n, name: r, volume: i, emojiId: s, emojiName: o } = e,
         l = await a.tn.patch({
-            url: h.ANM.GUILD_SOUNDBOARD_SOUND(t, n),
+            url: p.ANM.GUILD_SOUNDBOARD_SOUND(t, n),
             body: {
                 name: r,
                 volume: i,
@@ -121,7 +121,7 @@ async function b(e) {
 }
 async function y(e, t) {
     await a.tn.del({
-        url: h.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
+        url: p.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
         oldFormErrors: !0
     });
 }
@@ -129,14 +129,14 @@ function A(e) {
     u.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) =>
-            i().size(t.soundIds) >= p.oX
+            i().size(t.soundIds) >= h.oX
                 ? (o.Z.show({
                       title: m.intl.string(m.t['+XYXtb']),
-                      body: m.intl.formatToPlainString(m.t.JaIyFh, { count: p.oX })
+                      body: m.intl.formatToPlainString(m.t.JaIyFh, { count: h.oX })
                   }),
                   !1)
                 : !t.soundIds.includes(e) && void t.soundIds.push(e),
-        p.fy.INFREQUENT_USER_ACTION
+        h.fy.INFREQUENT_USER_ACTION
     );
 }
 function N(e) {
@@ -145,7 +145,7 @@ function N(e) {
         (t) => {
             t.soundIds = t.soundIds.filter((t) => t !== e);
         },
-        p.fy.INFREQUENT_USER_ACTION
+        h.fy.INFREQUENT_USER_ACTION
     );
 }
 function C(e, t, n) {

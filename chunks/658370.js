@@ -11,12 +11,12 @@ var r = n(120356),
     g = n(743612),
     m = n(409100),
     f = n(474936),
-    _ = n(388032),
-    p = n(977341);
+    p = n(388032),
+    _ = n(977341);
 t.Z = (e) => {
     var t;
     let n;
-    let { title: r, titleClassName: h = '', buttonClassName: E = '', subtitle: b = '', description: x = '', descriptionCta: C = '', isPremiumGetCta: T, onCtaClick: v, cardVariant: N } = e,
+    let { title: r, titleClassName: h = '', buttonClassName: E = '', subtitle: b = '', description: x = '', descriptionCta: C = '', isPremiumGetCta: v, onCtaClick: T, cardVariant: N } = e,
         I = (0, d.N)(),
         S = null == I ? void 0 : I.subscription_trial,
         R = (0, c.Ng)(),
@@ -25,15 +25,15 @@ t.Z = (e) => {
             intervalCount: null == S ? void 0 : S.interval_count
         }),
         j = (0, o._)({
-            defaultResponse: _.intl.string(_.t['8x0jKS']),
-            onNonTier2Subscriber: _.intl.string(_.t.IJI7ys),
+            defaultResponse: p.intl.string(p.t['8x0jKS']),
+            onNonTier2Subscriber: p.intl.string(p.t.IJI7ys),
             onTier2TrialOffer: A,
             onTier0TrialOffer: A,
-            onDiscountOffer: _.intl.formatToPlainString(_.t.bkQ4bG, { percent: null == R ? void 0 : R.discount.amount })
+            onDiscountOffer: p.intl.formatToPlainString(p.t.bkQ4bG, { percent: null == R ? void 0 : R.discount.amount })
         }),
         P = (0, u._)(N);
     return (0, i.jsxs)('div', {
-        className: a()(p.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
+        className: a()(_.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [
             (0, i.jsx)(g.Z, {
                 title: r,
@@ -42,7 +42,7 @@ t.Z = (e) => {
                 subtitle: b,
                 description: x
             }),
-            T &&
+            v &&
                 (0, i.jsx)(m.Z, {
                     className: E,
                     subscriptionTier: f.Si.TIER_2,
@@ -52,10 +52,10 @@ t.Z = (e) => {
                 }),
             0 !== C.length &&
                 (null == (n = null == P ? void 0 : P.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
-                null != v &&
+                null != T &&
                 (0, i.jsx)(s.Button, {
                     className: E,
-                    onClick: v,
+                    onClick: T,
                     children: C
                 })
         ]

@@ -20,16 +20,16 @@ var r,
     d = n(570140),
     f = n(430198),
     _ = n(933557),
-    h = n(853856),
-    p = n(846787),
+    p = n(853856),
+    h = n(846787),
     m = n(131704),
     g = n(700785),
     E = n(314897),
     v = n(592125),
     I = n(271383),
-    S = n(430824),
-    T = n(496675),
-    b = n(699516),
+    b = n(430824),
+    S = n(496675),
+    T = n(699516),
     y = n(594174),
     A = n(981631);
 let N = 'SELECTABLE',
@@ -80,12 +80,12 @@ function F(e) {
                     if (e === A.I_8)
                         return (function () {
                             let e = {},
-                                t = h.Z.getFavoriteChannels();
+                                t = p.Z.getFavoriteChannels();
                             for (let n in t) {
                                 let r = v.Z.getChannel(n);
                                 if (null == r) continue;
                                 let i = t[n],
-                                    a = (0, p.r)(t, i, r);
+                                    a = (0, h.r)(t, i, r);
                                 e[n] = {
                                     channel: a,
                                     comparator: a.position
@@ -105,7 +105,7 @@ function F(e) {
             l().forEach(n, (n) => {
                 var r;
                 let i = n.channel;
-                if (((e.count += 1), m.zS.has(i.type) && !T.Z.can(A.Plq.VIEW_CHANNEL, i) && !f.Z.isChannelGated(i.guild_id, i.id) && i.id !== x)) return;
+                if (((e.count += 1), m.zS.has(i.type) && !S.Z.can(A.Plq.VIEW_CHANNEL, i) && !f.Z.isChannelGated(i.guild_id, i.id) && i.id !== x)) return;
                 let a = ((r = i.type), (0, m.r8)(r) ? N : (0, m.bw)(r) ? C : r);
                 i.type === A.d4z.GUILD_DIRECTORY && (null == w[t] && (w[t] = []), w[t].push(n)), null != e[a] && e[a].push(n);
             });
@@ -118,7 +118,7 @@ function F(e) {
                 n = {};
             e[N].forEach((e) => {
                 let { channel: r } = e,
-                    i = (0, _.F6)(r, y.default, b.Z),
+                    i = (0, _.F6)(r, y.default, T.Z),
                     a = Object.prototype.hasOwnProperty.call(n, i) ? n[i] : null;
                 null == a ? (n[i] = 1) : ((n[i] = a + 1), (i += '~'.concat(a))),
                     (t[r.id] = {
@@ -129,7 +129,7 @@ function F(e) {
         })(n),
         (function (e) {
             (function (e, t) {
-                let n = S.Z.getGuild(t);
+                let n = b.Z.getGuild(t);
                 if (null != n && Y(e, n)) return !0;
                 let r = O[t];
                 null == r && (r = F(t));
@@ -184,7 +184,7 @@ function K() {
 }
 class z extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, I.ZP, v.Z, T.Z, E.default, f.Z, h.Z), this.syncWith([h.Z], K);
+        this.waitFor(b.Z, I.ZP, v.Z, S.Z, E.default, f.Z, p.Z), this.syncWith([p.Z], K);
     }
     getAllGuilds() {
         return O;
@@ -206,12 +206,12 @@ class z extends (r = c.ZP.Store) {
     getDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : A.Plq.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => T.Z.can(n, e.channel), t);
+        return this.getFirstChannel(e, (e) => S.Z.can(n, e.channel), t);
     }
     getSFWDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : A.Plq.VIEW_CHANNEL;
-        return this.getFirstChannel(e, (e) => T.Z.can(n, e.channel) && !e.channel.nsfw, t);
+        return this.getFirstChannel(e, (e) => S.Z.can(n, e.channel) && !e.channel.nsfw, t);
     }
     getSelectableChannelIds(e) {
         return this.getChannels(e)[N].map((e) => {

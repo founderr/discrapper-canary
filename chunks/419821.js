@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return _;
+        return p;
     }
 });
 var i = n(200651),
@@ -15,10 +15,10 @@ var i = n(200651),
     g = n(292352),
     m = n(388032),
     f = n(279324);
-function _(e) {
+function p(e) {
     let { user: t } = e,
         a = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        _ = r.useCallback(() => {
+        p = r.useCallback(() => {
             s()(void 0 !== a, 'User must be logged in to accept a link request'),
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await n.e('50872').then(n.bind(n, 442673));
@@ -46,7 +46,7 @@ function _(e) {
                     icon: o.XSmallIcon,
                     className: f.__invalid_actionDeny,
                     tooltip: m.intl.string(m.t.l20ZZm),
-                    onClick: _
+                    onClick: p
                 })
             })
         ]

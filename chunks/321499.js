@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(726985),
     T = n(388032),
     C = n(113207);
-let _ = n(651714),
-    E = n(297166);
+let E = n(651714),
+    _ = n(297166);
 function f() {
     let { experimentalEncoders: e } = (0, a.cj)([h.Z], () => ({ experimentalEncoders: h.Z.getExperimentalEncoders() }));
     return (0, i.jsx)(m.F, {
@@ -55,7 +55,7 @@ function I() {
                             className: C.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, o.ap)(e) ? _ : E,
+                                src: (0, o.ap)(e) ? E : _,
                                 width: 70,
                                 height: 40
                             },

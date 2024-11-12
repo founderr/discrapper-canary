@@ -11,20 +11,20 @@ var r = n(200651),
     l = n(939350),
     u = n(667947);
 function c(e) {
-    let { color: t = 'default', label: n, control: a, disabled: c, isFocused: d, showDefaultFocus: f = !1, menuItemProps: _, onClose: h } = e,
-        p = i.useRef(null),
+    let { color: t = 'default', label: n, control: a, disabled: c, isFocused: d, showDefaultFocus: f = !1, menuItemProps: _, onClose: p } = e,
+        h = i.useRef(null),
         m = i.useRef(null);
     i.useLayoutEffect(() => {
         var e, t, n;
-        d ? ((0, o.F)(p), null === (e = m.current) || void 0 === e || e.focus()) : null === (n = m.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
+        d ? ((0, o.F)(h), null === (e = m.current) || void 0 === e || e.focus()) : null === (n = m.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
     }, [d]);
     let g = i.useCallback(() => {
             var e, t;
-            (null === (t = m.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && h();
-        }, [h]),
+            (null === (t = m.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && p();
+        }, [p]),
         E = a(
             {
-                onClose: h,
+                onClose: p,
                 disabled: c,
                 isFocused: d
             },

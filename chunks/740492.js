@@ -10,8 +10,8 @@ var r,
     f = n(570140);
 n(541049);
 var _ = n(874893),
-    h = n(981631),
-    p = n(957825);
+    p = n(981631),
+    h = n(957825);
 function m(e, t, n) {
     return (
         t in e
@@ -26,7 +26,7 @@ function m(e, t, n) {
     );
 }
 ((r = a || (a = {})).DATA_SAVER = 'data_saver'), (r.STANDARD = 'standard'), (r.BEST = 'best'), ((i = s || (s = {})).VERY_LOW = 'very_low'), (i.LOW = 'low'), (i.MEDIUM = 'medium'), (i.HIGH = 'high'), (i.VERY_HIGH = 'very_high');
-let g = (window.innerWidth - h.PrS) / 2,
+let g = (window.innerWidth - p.PrS) / 2,
     E = null,
     v = {};
 class I extends (o = c.ZP.DeviceSettingsStore) {
@@ -63,15 +63,15 @@ class I extends (o = c.ZP.DeviceSettingsStore) {
     }
     get expressionPickerWidth() {
         var e;
-        return null !== (e = v.expressionPickerWidth) && void 0 !== e ? e : p._j.MIN;
+        return null !== (e = v.expressionPickerWidth) && void 0 !== e ? e : h._j.MIN;
     }
     get messageRequestSidebarWidth() {
         var e;
-        return null !== (e = v.messageRequestSidebarWidth) && void 0 !== e ? e : h.R7I;
+        return null !== (e = v.messageRequestSidebarWidth) && void 0 !== e ? e : p.R7I;
     }
     get threadSidebarWidth() {
         var e;
-        return null !== (e = v.threadSidebarWidth) && void 0 !== e ? e : h.$Y6;
+        return null !== (e = v.threadSidebarWidth) && void 0 !== e ? e : p.$Y6;
     }
     get postSidebarWidth() {
         var e;
@@ -79,11 +79,11 @@ class I extends (o = c.ZP.DeviceSettingsStore) {
     }
     get callChatSidebarWidth() {
         var e;
-        return null !== (e = v.callChatSidebarWidth) && void 0 !== e ? e : h.$Y6;
+        return null !== (e = v.callChatSidebarWidth) && void 0 !== e ? e : p.$Y6;
     }
     get homeSidebarWidth() {
         var e;
-        return null !== (e = v.homeSidebarWidth) && void 0 !== e ? e : (null == E && (E = Math.max((window.innerWidth - h.PrS) * 0.4, h.$Y6)), E);
+        return null !== (e = v.homeSidebarWidth) && void 0 !== e ? e : (null == E && (E = Math.max((window.innerWidth - p.PrS) * 0.4, p.$Y6)), E);
     }
     get callHeaderHeight() {
         return v.callHeaderHeight;

@@ -10,8 +10,8 @@ var i,
     d = n(695346),
     f = n(581883),
     _ = n(314897),
-    h = n(592125),
-    p = n(885110),
+    p = n(592125),
+    h = n(885110),
     m = n(451478),
     g = n(981631);
 let E = {
@@ -20,20 +20,20 @@ let E = {
     },
     v = new Set(),
     I = [],
-    S = new Map(),
-    T = new Set(),
-    b = !1;
+    b = new Map(),
+    S = new Set(),
+    T = !1;
 function y(e) {
-    if (null == e || null == S.get(e)) return !1;
-    S.delete(e), (T = new Set(T)).delete(e);
+    if (null == e || null == b.get(e)) return !1;
+    b.delete(e), (S = new Set(S)).delete(e);
 }
 function A(e) {
     let { channelId: t, ringing: n } = e,
         i = n.includes(_.default.getId());
-    if (!T.has(t) && i) {
-        let e = h.Z.getChannel(t);
+    if (!S.has(t) && i) {
+        let e = p.Z.getChannel(t);
         if (null == e) return !1;
-        let n = 10 * T.size,
+        let n = 10 * S.size,
             { x: i, y: a } = (function () {
                 let e = m.Z.windowSize();
                 return null != r && r.x + E.width < e.width && r.y + E.height < e.height
@@ -44,35 +44,35 @@ function A(e) {
                       };
             })();
         return (
-            S.set(t, {
+            b.set(t, {
                 channel: e,
                 x: i + n,
                 y: a + n
             }),
-            (T = new Set(T)).add(t),
+            (S = new Set(S)).add(t),
             void 0
         );
     }
-    return !!T.has(t) && !i && y(t);
+    return !!S.has(t) && !i && y(t);
 }
 function N() {
-    b = p.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
+    T = h.Z.getStatus() === g.Skl.DND || d.QZ.getSetting();
 }
 class C extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, p.Z), this.syncWith([p.Z], N), this.syncWith([f.Z], N);
+        this.waitFor(p.Z, h.Z), this.syncWith([h.Z], N), this.syncWith([f.Z], N);
     }
     getIncomingCalls() {
-        return b ? I : Array.from(S.values());
+        return T ? I : Array.from(b.values());
     }
     getIncomingCallChannelIds() {
-        return b ? v : T;
+        return T ? v : S;
     }
     getFirstIncomingCallId() {
-        return b ? null : T.values().next().value;
+        return T ? null : S.values().next().value;
     }
     hasIncomingCalls() {
-        return !b && T.size > 0;
+        return !T && S.size > 0;
     }
 }
 (o = 'IncomingCallStore'),

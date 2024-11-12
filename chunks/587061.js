@@ -9,11 +9,11 @@ var r = n(192379),
     d = n(556296),
     f = n(5967),
     _ = n(13140),
-    h = n(981631),
-    p = n(420212);
+    p = n(981631),
+    h = n(420212);
 function m(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
-    e.key === p.mR.Tab && !t && !__OVERLAY__ && !(0, a.$s)() && c.Z.maybeShowKeyboardNavigationExplainerModal();
+    e.key === h.mR.Tab && !t && !__OVERLAY__ && !(0, a.$s)() && c.Z.maybeShowKeyboardNavigationExplainerModal();
 }
 function g() {
     (0, l.rf)();
@@ -26,19 +26,19 @@ t.Z = function (e, t) {
             !(function (e, t) {
                 var n, r;
                 let i = (0, f.VG)(null === (n = (0, f.uB)(e)) || void 0 === n ? void 0 : n.activeElement);
-                if ((i && e.key !== p.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== p.mR.Tab && e.shiftKey)) return;
+                if ((i && e.key !== h.mR.Tab) || e.ctrlKey || e.altKey || e.metaKey || (e.key !== h.mR.Tab && e.shiftKey)) return;
                 let a = (function (e) {
                     let t = _.C$('shift'),
                         n = _.C$('tab');
-                    if (e.key === p.mR.Tab && e.shiftKey && null != t && null != n)
+                    if (e.key === h.mR.Tab && e.shiftKey && null != t && null != n)
                         return [
-                            [h.MoX.KEYBOARD_KEY, t],
-                            [h.MoX.KEYBOARD_KEY, n]
+                            [p.MoX.KEYBOARD_KEY, t],
+                            [p.MoX.KEYBOARD_KEY, n]
                         ];
-                    let r = p.el.get(e.key);
+                    let r = h.el.get(e.key);
                     if (null != r) {
                         let e = _.C$(r);
-                        if (null != e) return [[h.MoX.KEYBOARD_KEY, e]];
+                        if (null != e) return [[p.MoX.KEYBOARD_KEY, e]];
                     }
                     return null;
                 })(e);

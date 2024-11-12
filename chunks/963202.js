@@ -27,7 +27,7 @@ n.d(t, {
         return L;
     },
     nk: function () {
-        return b;
+        return T;
     },
     r3: function () {
         return C;
@@ -84,7 +84,7 @@ function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return d.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enableM3Experience;
 }
-let h = (0, a.B)({
+let p = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_valorant_prepilot',
         label: 'Clans Valorant Prepilot',
@@ -103,7 +103,7 @@ let h = (0, a.B)({
             }
         ]
     }),
-    p = (0, a.B)({
+    h = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_genshin_prepilot',
         label: 'Clans Genshin Prepilot',
@@ -159,20 +159,20 @@ function g(e) {
                 );
             })(e, s)
         ),
-        h = d.length > 0 && r.enableClanCreation,
-        p = f.length > 0 && n.enableClanCreation,
+        p = d.length > 0 && r.enableClanCreation,
+        h = f.length > 0 && n.enableClanCreation,
         g = _.length > 0 && a.enableClanCreation,
         E = new Map();
     return (
-        h && d.forEach((e) => E.set(e.id, e)),
-        p && f.forEach((e) => E.set(e.id, e)),
+        p && d.forEach((e) => E.set(e.id, e)),
+        h && f.forEach((e) => E.set(e.id, e)),
         g && _.forEach((e) => E.set(e.id, e)),
         {
             guilds: [...E.values()],
-            enableClanCreation: h || p || g,
+            enableClanCreation: p || h || g,
             defaultGameId: m({
-                genshinConfig: h ? r : void 0,
-                valorantConfig: p ? n : void 0
+                genshinConfig: p ? r : void 0,
+                valorantConfig: h ? n : void 0
             })
         }
     );
@@ -180,8 +180,8 @@ function g(e) {
 function E(e) {
     let { location: t, includeConverted: n, autoTrackExposure: a = !0 } = e,
         o = (0, i.Wu)([s.Z], () => Object.values(s.Z.getGuilds())),
-        l = h.useExperiment({ location: t }, { autoTrackExposure: a }),
-        u = p.useExperiment({ location: t }, { autoTrackExposure: a }),
+        l = p.useExperiment({ location: t }, { autoTrackExposure: a }),
+        u = h.useExperiment({ location: t }, { autoTrackExposure: a }),
         d = r.useMemo(() => {
             let e = { enableClanCreation: !1 };
             return (
@@ -215,8 +215,8 @@ function E(e) {
 }
 function v(e) {
     let { guild: t, location: n, includeConverted: r, autoTrackExposure: i = !0 } = e,
-        a = h.useExperiment({ location: n }, { autoTrackExposure: i }),
-        s = p.useExperiment({ location: n }, { autoTrackExposure: i }),
+        a = p.useExperiment({ location: n }, { autoTrackExposure: i }),
+        s = h.useExperiment({ location: n }, { autoTrackExposure: i }),
         o = c.useExperiment(
             {
                 guildId: null == t ? void 0 : t.id,
@@ -234,13 +234,13 @@ function v(e) {
 }
 function I(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        r = h.useExperiment({ location: t }, { autoTrackExposure: n });
+        r = p.useExperiment({ location: t }, { autoTrackExposure: n });
     return m({
         valorantConfig: r,
-        genshinConfig: p.useExperiment({ location: t }, { autoTrackExposure: n })
+        genshinConfig: h.useExperiment({ location: t }, { autoTrackExposure: n })
     });
 }
-let S = (0, a.B)({
+let b = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_valorant_pilot',
         label: 'Clans Valorant Pilot',
@@ -259,7 +259,7 @@ let S = (0, a.B)({
             }
         ]
     }),
-    T = (0, a.B)({
+    S = (0, a.B)({
         kind: 'user',
         id: '2024-05_clans_genshin_pilot',
         label: 'Clans Genshin Pilot',
@@ -278,11 +278,11 @@ let S = (0, a.B)({
             }
         ]
     });
-function b(e) {
+function T(e) {
     var t, n;
     let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        i = S.useExperiment({ location: e }, { autoTrackExposure: r }),
-        a = T.useExperiment({ location: e }, { autoTrackExposure: r }),
+        i = b.useExperiment({ location: e }, { autoTrackExposure: r }),
+        a = S.useExperiment({ location: e }, { autoTrackExposure: r }),
         s = f(e, r);
     return {
         clanDiscoveryEnabled: i.clanDiscoveryEnabled || a.clanDiscoveryEnabled || s,

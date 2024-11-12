@@ -10,15 +10,15 @@ var r = n(200651),
     d = n(68405),
     f = n(600164),
     _ = n(28546),
-    h = n(656733),
-    p = n(985375),
+    p = n(656733),
+    h = n(985375),
     m = n(653235),
     g = n(215016),
     E = n(981631),
     v = n(149203),
     I = n(388032),
-    S = n(175705);
-function T(e, t, n) {
+    b = n(175705);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-let b = (e) => e.stopPropagation();
+let T = (e) => e.stopPropagation();
 class y extends i.PureComponent {
     componentDidMount() {
         d.gK(), document.addEventListener('keydown', this.backToFrontPage), '' !== this.props.query && this.search(this.props.query, E.wI2.SEARCH);
@@ -52,18 +52,18 @@ class y extends i.PureComponent {
             case E.wI2.FAVORITES:
                 return (0, r.jsx)(u.FormTitle, {
                     tag: 'h5',
-                    className: S.searchHeader,
+                    className: b.searchHeader,
                     children: I.intl.string(I.t.y3LQCA)
                 });
             case E.wI2.TRENDING_GIFS:
                 return (0, r.jsx)(u.FormTitle, {
                     tag: 'h5',
-                    className: S.searchHeader,
+                    className: b.searchHeader,
                     children: I.intl.string(I.t.H6zNFx)
                 });
             default:
                 return (0, r.jsx)(u.SearchBar, {
-                    className: S.searchBar,
+                    className: b.searchBar,
                     size: u.SearchBar.Sizes.MEDIUM,
                     query: e,
                     onChange: this.handleChangeQuery,
@@ -82,7 +82,7 @@ class y extends i.PureComponent {
             null != e &&
                 (t = (0, r.jsx)(u.Clickable, {
                     onClick: this.handleClearQuery,
-                    className: S.backButton,
+                    className: b.backButton,
                     'aria-label': I.intl.string(I.t['13/7kZ']),
                     children: (0, r.jsx)(u.ArrowSmallLeftIcon, {
                         size: 'md',
@@ -124,16 +124,16 @@ class y extends i.PureComponent {
             id: v.vO,
             role: 'tabpanel',
             'aria-labelledby': v._3,
-            className: s()(S.container, e),
-            onClick: b,
+            className: s()(b.container, e),
+            onClick: T,
             ref: t,
             children: [
                 (0, r.jsx)('div', {
-                    className: S.header,
+                    className: b.header,
                     children: this.renderHeader()
                 }),
                 (0, r.jsx)('div', {
-                    className: S.content,
+                    className: b.content,
                     children: this.renderContent()
                 })
             ]
@@ -141,26 +141,26 @@ class y extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', { resultType: null }),
-            T(this, 'backToFrontPage', (e) => {
+            S(this, 'state', { resultType: null }),
+            S(this, 'backToFrontPage', (e) => {
                 let { resultType: t } = this.state;
                 e.keyCode === E.yXg.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery());
             }),
-            T(this, 'handleChangeQuery', (e) => {
+            S(this, 'handleChangeQuery', (e) => {
                 (0, _.ql)(e), this.search(e, E.wI2.SEARCH);
             }),
-            T(this, 'handleSelectSuggestion', (e) => {
+            S(this, 'handleSelectSuggestion', (e) => {
                 (0, _.ql)(''), d.v2(), this.search(e, E.wI2.SEARCH_SUGGESTION, !0);
             }),
-            T(this, 'handleClearQuery', () => {
+            S(this, 'handleClearQuery', () => {
                 let { current: e } = this.props.searchBarRef;
                 (0, _.ql)(''), d.v2(), this.setState({ resultType: null }), null != e && e.focus();
             }),
-            T(this, 'handleSelectGIF', (e) => {
+            S(this, 'handleSelectGIF', (e) => {
                 let { onSelectGIF: t } = this.props;
                 null != t && t(e);
             }),
-            T(this, 'handleSelectItem', (e, t) => {
+            S(this, 'handleSelectItem', (e, t) => {
                 let { current: n } = this.props.searchBarRef;
                 switch (e) {
                     case E.wI2.TRENDING_CATEGORY:
@@ -180,11 +180,11 @@ t.Z = i.forwardRef((e, t) => {
             resultQuery: a,
             resultItems: s,
             suggestions: u
-        } = (0, l.cj)([h.Z], () => ({
-            query: h.Z.getQuery(),
-            resultQuery: h.Z.getResultQuery(),
-            resultItems: h.Z.getResultItems(),
-            suggestions: h.Z.getSuggestions()
+        } = (0, l.cj)([p.Z], () => ({
+            query: p.Z.getQuery(),
+            resultQuery: p.Z.getResultQuery(),
+            resultItems: p.Z.getResultItems(),
+            suggestions: p.Z.getSuggestions()
         })),
         { expressionPickerQuery: c, isSearchSuggestion: d } = (0, _.Iu)(
             (e) => ({
@@ -193,7 +193,7 @@ t.Z = i.forwardRef((e, t) => {
             }),
             o.X
         ),
-        f = (0, p.HI)(),
+        f = (0, h.HI)(),
         m = i.createRef();
     return (
         i.useLayoutEffect(() => {
@@ -211,7 +211,7 @@ t.Z = i.forwardRef((e, t) => {
             suggestions: u,
             favorites: f,
             searchOffset: 0,
-            searchTotalResults: h.Z.getResultItems().length,
+            searchTotalResults: p.Z.getResultItems().length,
             searchLimit: null,
             searchBarRef: m
         })

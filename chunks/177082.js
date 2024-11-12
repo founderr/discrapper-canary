@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-class h extends a.Z {
+class p extends a.Z {
     constructor(...e) {
         super(...e),
             _(this, 'actions', {
@@ -51,4 +51,4 @@ class h extends a.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new p();

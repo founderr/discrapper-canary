@@ -1,6 +1,6 @@
 n.d(t, {
     H: function () {
-        return S;
+        return b;
     }
 }),
     n(47120),
@@ -16,8 +16,8 @@ var r,
     d = n(302901),
     f = n(539907),
     _ = n(952265),
-    h = n(481060),
-    p = n(40851),
+    p = n(481060),
+    h = n(40851),
     m = n(314910),
     g = n(920676),
     E = n(981631);
@@ -35,7 +35,7 @@ function v(e, t, n) {
     );
 }
 let I = new Set(['Spacebar', ' ', 'Enter']);
-class S extends (r = a.Component) {
+class b extends (r = a.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -88,7 +88,7 @@ class S extends (r = a.Component) {
                         position: this.state.renderedPosition
                     }
                 ),
-                (0, i.jsx)(h.HeadingLevel, {
+                (0, i.jsx)(p.HeadingLevel, {
                     forceLevel: 2,
                     children: this.renderLayer()
                 })
@@ -98,8 +98,8 @@ class S extends (r = a.Component) {
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
         let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: a, autoInvert: s, fixed: o, positionKey: l, disablePointerEvents: u, layerContext: c } = this.props,
-            { resizeKey: _, isLoading: h, shouldShowLoadingState: p } = this.state;
-        return h && !p
+            { resizeKey: _, isLoading: p, shouldShowLoadingState: h } = this.state;
+        return p && !h
             ? null
             : (0, i.jsx)(d.mh, {
                   layerContext: null != c ? c : m.nz,
@@ -227,10 +227,10 @@ class S extends (r = a.Component) {
             });
     }
 }
-v(S, 'defaultProps', {
+v(b, 'defaultProps', {
     autoInvert: !1,
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     loadingComponent: (0, i.jsx)(g.x, {})
 }),
-    v(S, 'contextType', p.ZP);
+    v(b, 'contextType', h.ZP);

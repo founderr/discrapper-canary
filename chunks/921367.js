@@ -195,7 +195,7 @@ function _(e) {
         }
         var _ = d(i.stem);
         _ && (t = (0, r.pi)((0, r.pi)({}, t), _));
-        var h = (function (e) {
+        var p = (function (e) {
             var t;
             if (('E' === e[0] && 'E' === e[1] ? ((t = { notation: 'engineering' }), (e = e.slice(2))) : 'E' === e[0] && ((t = { notation: 'scientific' }), (e = e.slice(1))), t)) {
                 var n = e.slice(0, 2);
@@ -204,7 +204,7 @@ function _(e) {
             }
             return t;
         })(i.stem);
-        h && (t = (0, r.pi)((0, r.pi)({}, t), h));
+        p && (t = (0, r.pi)((0, r.pi)({}, t), p));
     }
     return t;
 }

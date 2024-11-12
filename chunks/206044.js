@@ -10,8 +10,8 @@ var i = n(200651),
     d = n(481060),
     m = n(393238),
     x = n(607070),
-    C = n(70097),
-    h = n(210887),
+    h = n(70097),
+    C = n(210887),
     g = n(572004),
     p = n(617136),
     E = n(113434),
@@ -28,7 +28,7 @@ var i = n(200651),
     b = n(388032),
     I = n(128175);
 let M = (0, o.animated)(d.ChevronSmallDownIcon),
-    Z = (0, o.animated)(C.Z),
+    Z = (0, o.animated)(h.Z),
     L = (e) => {
         let { quest: t, location: n, questContentPosition: l, ...r } = e,
             [o, a] = s.useState(!1),
@@ -68,23 +68,23 @@ let M = (0, o.animated)(d.ChevronSmallDownIcon),
     };
 t.Z = (e) => {
     var t, n;
-    let { isFocused: l, isQuestExpired: c, quest: C, location: g, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: U, contentPosition: D, toggleExpanded: w } = e,
-        { ref: O, height: Q } = (0, m.Z)(),
-        { ref: k, width: H, scrollWidth: z } = (0, m.Z)(),
-        G = (0, u.e7)([h.Z], () => h.Z.getState().theme),
+    let { isFocused: l, isQuestExpired: c, quest: h, location: g, size: T, expansionSpring: y, isAnimating: B, isExpanded: P, isInConcurrentQuestExperiment: D, contentPosition: U, toggleExpanded: w } = e,
+        { ref: Q, height: k } = (0, m.Z)(),
+        { ref: O, width: H, scrollWidth: z } = (0, m.Z)(),
+        G = (0, u.e7)([C.Z], () => C.Z.getState().theme),
         W = (0, u.e7)([x.Z], () => x.Z.useReducedMotion),
-        F = s.useMemo(() => (0, f.fh)(C, f.eC.HERO), [C]),
+        F = s.useMemo(() => (0, f.fh)(h, f.eC.HERO), [h]),
         V = s.useRef(null),
         X = (0, A.uq)(g),
         Y = g === j.jn.QUESTS_EMBED,
-        K = (0, E.t5)(C, R.dr.QUESTS_CARD, g),
-        J = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        $ = (0, E.B6)(C.config.expiresAt, {
+        K = (0, E.t5)(h, R.dr.QUESTS_CARD, g),
+        J = (null === (t = h.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
+        $ = (0, E.B6)(h.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        ee = (0, E.B6)(v.r.build(C.config).rewardsExpireAt, {
+        ee = (0, E.B6)(v.r.build(h.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -94,10 +94,10 @@ t.Z = (e) => {
                 e.currentTarget.blur(),
                 w(),
                 (0, p._3)({
-                    questId: C.id,
+                    questId: h.id,
                     questContent: g,
                     questContentCTA: P ? p.jZ.COLLAPSE : p.jZ.EXPAND,
-                    questContentPosition: D
+                    questContentPosition: U
                 });
         };
     return (
@@ -111,7 +111,7 @@ t.Z = (e) => {
                 [I.outerContainerXs]: 'xs' === T
             }),
             'aria-label': b.intl.string(b.t.dcl9MT),
-            style: { height: X ? Q : void 0 },
+            style: { height: X ? k : void 0 },
             children: [
                 (0, i.jsx)(Z, {
                     style: {
@@ -170,7 +170,7 @@ t.Z = (e) => {
                                                 (0, i.jsx)('div', {
                                                     className: I.headerCollapsedContentRewardWrapper,
                                                     children: (0, i.jsx)(q.Z, {
-                                                        quest: C,
+                                                        quest: h,
                                                         questContent: g,
                                                         className: I.headerCollapsedRewardTile,
                                                         location: R.dr.QUESTS_CARD
@@ -185,7 +185,7 @@ t.Z = (e) => {
                                                                 (0, i.jsx)(S.Z, {
                                                                     className: I.partnerBranding,
                                                                     gameTileSize: S.f.MEDIUM,
-                                                                    quest: C,
+                                                                    quest: h,
                                                                     theme: G
                                                                 }),
                                                                 (0, i.jsx)(N.Z, { color: 'always-white' })
@@ -202,7 +202,7 @@ t.Z = (e) => {
                                     }),
                                 (0, i.jsxs)(o.animated.div, {
                                     ref: (e) => {
-                                        O.current = e;
+                                        Q.current = e;
                                     },
                                     className: r()(I.headerExpandedContent, {
                                         [I.outerContainerGiftInventory]: X,
@@ -226,7 +226,7 @@ t.Z = (e) => {
                                                         (0, i.jsx)(S.Z, {
                                                             className: I.partnerBranding,
                                                             gameTileSize: S.f.MEDIUM,
-                                                            quest: C,
+                                                            quest: h,
                                                             theme: G
                                                         }),
                                                         Y ? null : (0, i.jsx)(N.Z, { color: 'always-white' })
@@ -236,15 +236,15 @@ t.Z = (e) => {
                                                     className: I.questInfo,
                                                     children: [
                                                         (0, i.jsx)(d.Tooltip, {
-                                                            text: C.config.messages.questName,
+                                                            text: h.config.messages.questName,
                                                             shouldShow: null != H && null != z && H < z,
                                                             children: (e) =>
                                                                 (0, i.jsx)(d.Heading, {
-                                                                    ref: k,
+                                                                    ref: O,
                                                                     variant: 'lg' === T ? 'heading-xxl/bold' : 'sm' === T ? 'heading-xl/bold' : 'heading-lg/bold',
                                                                     className: I.heading,
                                                                     ...e,
-                                                                    children: b.intl.format(b.t.EAYZAg, { questName: C.config.messages.questName })
+                                                                    children: b.intl.format(b.t.EAYZAg, { questName: h.config.messages.questName })
                                                                 })
                                                         }),
                                                         (0, i.jsx)(d.Text, {
@@ -258,9 +258,9 @@ t.Z = (e) => {
                                         !c &&
                                             X &&
                                             (0, i.jsx)(L, {
-                                                quest: C,
+                                                quest: h,
                                                 location: g,
-                                                questContentPosition: D
+                                                questContentPosition: U
                                             })
                                     ]
                                 })
@@ -279,8 +279,8 @@ t.Z = (e) => {
                             children: [
                                 (0, i.jsx)(_.r, {
                                     questContent: g,
-                                    quest: C,
-                                    questContentPosition: D,
+                                    quest: h,
+                                    questContentPosition: U,
                                     shouldShowDisclosure: !0,
                                     hideLearnMore: X,
                                     showShareLink: !c && Y,
@@ -302,7 +302,7 @@ t.Z = (e) => {
                                             })
                                         })
                                 }),
-                                U &&
+                                D &&
                                     !(0, A.W_)(g) &&
                                     (0, i.jsx)(d.Clickable, {
                                         onClick: et,

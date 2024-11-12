@@ -29,8 +29,8 @@ function _(e, t, n) {
         e
     );
 }
-let h = null === (r = a().name) || void 0 === r ? void 0 : r.toLowerCase().includes('firefox');
-function p(e, t) {
+let p = null === (r = a().name) || void 0 === r ? void 0 : r.toLowerCase().includes('firefox');
+function h(e, t) {
     e.sender.replaceTrack(t), (e.direction = null != t ? 'sendrecv' : 'recvonly');
 }
 class m extends l.Z {
@@ -44,7 +44,7 @@ class m extends l.Z {
     }
     setStream(e) {
         let t = 'closed' === this.iceConnectionState;
-        null != e && !t && (p(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported && p(this.videoTransceiver, e.getVideoTracks()[0])), this.logger.info('Renegotiating: Streams changed'), this.handleNegotiationNeeded();
+        null != e && !t && (h(this.audioTransceiver, e.getAudioTracks()[0]), this.videoSupported && h(this.videoTransceiver, e.getVideoTracks()[0])), this.logger.info('Renegotiating: Streams changed'), this.handleNegotiationNeeded();
     }
     createUser(e, t, n) {
         var r;
@@ -71,7 +71,7 @@ class m extends l.Z {
                 r = this.unassignedStreams.audio.length;
             this.addTransceivers('audio', 'recvonly', 10 + r - n);
         }
-        if (this.videoSupported && void 0 !== n && (!h || void 0 === a.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!p || void 0 === a.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (a.videoSSRC !== t) {

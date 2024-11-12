@@ -30,8 +30,8 @@ var i,
     N = n(301544),
     T = n(931515),
     x = n(286083),
-    A = n(207796),
-    b = n(777734),
+    b = n(207796),
+    A = n(777734),
     Z = n(976757),
     y = n(981631),
     L = n(388032),
@@ -39,7 +39,7 @@ var i,
     j = n(882008);
 function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
-    return e === A.v0.SAVED_GUILDS ? 'saved_guilds' : t;
+    return e === b.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
 function P(e) {
     var t;
@@ -78,8 +78,8 @@ t.ZP = o.memo(function (e) {
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [D]),
         { loaded: w, clans: k, searchResult: U, searchCriteria: G, hasError: B } = (0, T.ML)(M, 'saved_guilds' === y),
-        H = (0, A.GN)((e) => e.selectedTraits, u.X),
-        V = (0, A.GN)((e) => e.selectedGames, u.X),
+        H = (0, b.GN)((e) => e.selectedTraits, u.X),
+        V = (0, b.GN)((e) => e.selectedGames, u.X),
         F = (0, p.Z)(U),
         { currentPage: z, updatePage: Y, totalItems: W, pageSize: K } = (0, x.a)(),
         q = (0, h.e7)([E.default], () => E.default.getCurrentUser()),
@@ -226,7 +226,7 @@ t.ZP = o.memo(function (e) {
                     case 'top_picks':
                         return (0, s.jsx)('div', {
                             className: R.topPicksSection,
-                            children: (0, s.jsx)(b.Z, {
+                            children: (0, s.jsx)(A.Z, {
                                 title: t,
                                 subtitle: n
                             })
@@ -249,7 +249,7 @@ t.ZP = o.memo(function (e) {
                         return (0, s.jsx)('div', { className: R.headerSpacer });
                     default:
                         if (null == t) return null;
-                        return (0, s.jsx)(b.Z, {
+                        return (0, s.jsx)(A.Z, {
                             title: t,
                             subtitle: n
                         });

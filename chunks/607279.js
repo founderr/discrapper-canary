@@ -22,18 +22,18 @@ function d(e, t, n) {
 }
 class f extends (r = a.Component) {
     render() {
-        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: s, onChange: d, onFocus: f, onBlur: _, onKeyPress: h, autoComplete: p, forwardedRef: m, closeIconClassName: g, searchIconClassName: E, cta: v } = this.props,
+        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: s, onChange: d, onFocus: f, onBlur: _, onKeyPress: p, autoComplete: h, forwardedRef: m, closeIconClassName: g, searchIconClassName: E, cta: v } = this.props,
             I = null != r && r.length > 0,
-            S = null != m ? m : this._textInputRef;
+            b = null != m ? m : this._textInputRef;
         return (0, i.jsx)(l.FocusRing, {
-            focusTarget: S,
+            focusTarget: b,
             ringTarget: this._containerRef,
             children: (0, i.jsxs)('div', {
                 className: o()(c.searchBox, s),
                 ref: this._containerRef,
                 children: [
                     (0, i.jsx)(l.TextInput, {
-                        inputRef: S,
+                        inputRef: b,
                         focusProps: { enabled: !1 },
                         name: 'search',
                         maxLength: 100,
@@ -42,12 +42,12 @@ class f extends (r = a.Component) {
                         onChange: d,
                         onFocus: f,
                         onBlur: _,
-                        onKeyPress: h,
+                        onKeyPress: p,
                         value: I ? r : '',
                         placeholder: n,
                         autoFocus: e,
                         'aria-label': t,
-                        autoComplete: p ? 'on' : 'off'
+                        autoComplete: h ? 'on' : 'off'
                     }),
                     null != v
                         ? (0, i.jsx)(l.Text, {

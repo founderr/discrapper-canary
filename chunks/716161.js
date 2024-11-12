@@ -6,7 +6,7 @@ n.d(t, {
         return g;
     },
     KH: function () {
-        return h;
+        return p;
     },
     Nm: function () {
         return E;
@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     Up: function () {
-        return p;
+        return h;
     },
     XV: function () {
         return f;
@@ -61,16 +61,16 @@ async function _(e, t, n) {
         throw new c.Z(e);
     }
 }
-async function h(e) {
+async function p(e) {
     await r.tn.del(d.ANM.VIDEO_FILTER_ASSET(e.id));
     let t = (0, l.P)(o.default.getCurrentUser());
-    (0, u.rD)(t) && t.id === e.id && p(null),
+    (0, u.rD)(t) && t.id === e.id && h(null),
         i.Z.dispatch({
             type: 'VIDEO_FILTER_ASSET_DELETE_SUCCESS',
             videoFilterAsset: e
         });
 }
-async function p(e) {
+async function h(e) {
     if (
         (await a.hW.updateAsync(
             'voiceAndVideo',

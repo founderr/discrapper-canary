@@ -15,15 +15,15 @@ var r = n(192379),
     d = n(496675),
     f = n(246946),
     _ = n(594174),
-    h = n(106824),
-    p = n(691841),
+    p = n(106824),
+    h = n(691841),
     m = n(981631),
     g = n(377668),
     E = n(185923);
 function v(e, t, n) {
-    var v, I, S, T, b, y, A;
+    var v, I, b, S, T, y, A;
     let { channel: N, type: C } = e,
-        [R, O] = r.useState(() => (0, h.P)()),
+        [R, O] = r.useState(() => (0, p.P)()),
         D = (0, i.Z)(),
         L = (0, a.e7)([c.ZP], () => {
             if (null != e.guild) {
@@ -50,7 +50,7 @@ function v(e, t, n) {
             activeCommand: o.Z.getActiveCommand(N.id),
             activeCommandOption: o.Z.getActiveOption(N.id)
         })),
-        G = (0, p.Z)({
+        G = (0, h.Z)({
             navId: 'channel-autocomplete',
             scrollerRef: n,
             state: R,
@@ -62,7 +62,7 @@ function v(e, t, n) {
             navigator: G,
             activeCommand: k,
             activeCommandOption: U,
-            canMentionUsers: null !== (b = null === (I = C.users) || void 0 === I ? void 0 : I.allowMentioning) && void 0 !== b && b,
+            canMentionUsers: null !== (T = null === (I = C.users) || void 0 === I ? void 0 : I.allowMentioning) && void 0 !== T && T,
             canMentionEveryone: M,
             canMentionClyde: x,
             hidePersonalInformation: P,
@@ -70,9 +70,9 @@ function v(e, t, n) {
             emojiIntention: C === l.I.RULES_INPUT ? E.Hz.COMMUNITY_CONTENT : E.Hz.CHAT,
             currentWord: null !== (y = null == B ? void 0 : B.word) && void 0 !== y ? y : '',
             currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (S = e.editorRef.current) || void 0 === S ? void 0 : S.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
+            optionText: null != U ? (0, s.KF)({ [U.name]: null !== (A = null === (b = e.editorRef.current) || void 0 === b ? void 0 : b.getCurrentCommandOptionValue()) && void 0 !== A ? A : [] }, U.name) : ''
         },
-        [F] = r.useState(() => new h.Z(Z));
+        [F] = r.useState(() => new p.Z(Z));
     return (
         r.useEffect(() => {
             F.updateProps(Z);
@@ -98,7 +98,7 @@ function v(e, t, n) {
                     for (let n of t) n.removeChangeListener(e);
                 };
             }
-        }, [F, null === (T = R.query) || void 0 === T ? void 0 : T.typeInfo]),
+        }, [F, null === (S = R.query) || void 0 === S ? void 0 : S.typeInfo]),
         [R, F, G]
     );
 }

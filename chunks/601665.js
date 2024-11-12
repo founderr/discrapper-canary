@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(430824),
     f = n(785717),
     _ = n(221292),
-    h = n(687158),
-    p = n(899007),
+    p = n(687158),
+    h = n(899007),
     m = n(867176),
     g = n(438163),
     E = n(502762),
     v = n(952124),
     I = n(544989),
-    S = n(171368),
-    T = n(895697),
-    b = n(161572),
+    b = n(171368),
+    S = n(895697),
+    T = n(161572),
     y = n(228168),
     A = n(388032),
     N = n(451563);
@@ -39,7 +39,7 @@ function C(e) {
             messageId: O,
             roleId: D
         }),
-        U = (0, h.ZP)(t.id, C),
+        U = (0, p.ZP)(t.id, C),
         G = (0, a.e7)([d.Z], () => (null != C ? d.Z.getGuild(C) : null)),
         B = (0, a.e7)([c.ZP], () => (null != C ? c.ZP.getMember(C, t.id) : null)),
         Z = i.useRef(null),
@@ -49,7 +49,7 @@ function C(e) {
     }, [Z, x]);
     let V = (e) => {
         null == L || L(),
-            (0, S.openUserProfileModal)({
+            (0, b.openUserProfileModal)({
                 sourceAnalyticsLocations: P,
                 ...k,
                 ...e
@@ -98,7 +98,7 @@ function C(e) {
                                     guildId: C,
                                     profileType: y.y0.BITE_SIZE
                                 }),
-                                (0, r.jsx)(p.Z, {
+                                (0, r.jsx)(h.Z, {
                                     user: t,
                                     displayProfile: U,
                                     guildId: C,
@@ -113,7 +113,7 @@ function C(e) {
                                 })
                             ]
                         }),
-                        (0, r.jsx)(T.Z, {
+                        (0, r.jsx)(S.Z, {
                             user: t,
                             currentUser: n,
                             displayProfile: U,
@@ -123,7 +123,7 @@ function C(e) {
                             channelId: R,
                             onClose: L
                         }),
-                        (0, r.jsx)(b.Z, {
+                        (0, r.jsx)(T.Z, {
                             user: t,
                             guildId: C,
                             channelId: R,

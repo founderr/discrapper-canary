@@ -1,9 +1,9 @@
 n.d(t, {
     ZP: function () {
-        return h;
+        return p;
     },
     k$: function () {
-        return p;
+        return h;
     },
     n0: function () {
         return _;
@@ -70,15 +70,15 @@ function _(e, t, n) {
         content: a.Z.reactParserFor(s.Z.getDefaultRules(t))(e.content, !1, null != n ? { changeLog: n } : {})
     };
 }
-function h(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return (function (e, t, n) {
         var a;
-        let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: f = !1, postProcessor: _, shouldFilterKeywords: h, contentMessage: p } = n,
+        let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: f = !1, postProcessor: _, shouldFilterKeywords: p, contentMessage: h } = n,
             g = !1,
-            v = (null != p ? p : t).content,
+            v = (null != h ? h : t).content,
             I = e(
-                h
+                p
                     ? (0, i.N)(v, {
                           escapeReplacement: !0,
                           messageId: t.id,
@@ -96,7 +96,7 @@ function h(e) {
                             let n = e[0],
                                 r = t[0];
                             return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, o.dY)(r) ? [] : e;
-                        })(e, (null != p ? p : t).embeds)),
+                        })(e, (null != h ? h : t).embeds)),
                     !f &&
                         (e = (function (e, t) {
                             return t ? m(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = m(e[0].content)), e);
@@ -132,7 +132,7 @@ function h(e) {
         };
     })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
 }
-function p(e, t, n) {
+function h(e, t, n) {
     var r;
     return (
         (r = a.Z.parseAutoModerationSystemMessage),

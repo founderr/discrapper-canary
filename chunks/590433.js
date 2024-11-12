@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     GN: function () {
-        return h;
+        return p;
     },
     L9: function () {
         return l;
@@ -62,4 +62,4 @@ let u = () =>
     d = 'GuildCommunicationDisabledDismissedGuilds',
     f = 'Set Communication Disabled Modal',
     _ = 'Clear Communication Disabled Modal',
-    h = 512;
+    p = 512;

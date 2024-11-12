@@ -34,7 +34,7 @@ function _(e) {
     let { desktopType: t } = e;
     (d.desktopType = t), f(l.rMx.LOCAL_SETTINGS_UPDATED, { notifications_enabled: t === l.qrD.ALL });
 }
-class h extends (r = i.ZP.DeviceSettingsStore) {
+class p extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         d = {
             ...c,
@@ -69,15 +69,15 @@ class h extends (r = i.ZP.DeviceSettingsStore) {
         return d.disableAllSounds || -1 !== d.disabledSounds.indexOf(e);
     }
 }
-u(h, 'displayName', 'NotificationSettingsStore'),
-    u(h, 'persistKey', 'notifications'),
-    u(h, 'migrations', [
+u(p, 'displayName', 'NotificationSettingsStore'),
+    u(p, 'persistKey', 'notifications'),
+    u(p, 'migrations', [
         (e) => {
             let t = { ...e };
             return (t.disabledSounds = t.disabledSounds || []), (t.disableUnreadBadge = t.disableUnreadBadge || !1), (t.taskbarFlash = null == t.taskbarFlash || t.taskbarFlash), (t.ttsType = t.ttsType || l.PrB.NEVER), null == t.desktopType && (t.desktopType = o.isPlatformEmbedded ? l.qrD.ALL : l.qrD.NEVER), t;
         }
     ]),
-    (t.Z = new h(a.Z, {
+    (t.Z = new p(a.Z, {
         NOTIFICATIONS_SET_DESKTOP_TYPE: _,
         NOTIFICATIONS_SET_TTS_TYPE: function (e) {
             let { ttsType: t } = e;

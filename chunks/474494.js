@@ -17,15 +17,15 @@ var r = n(319147),
     g = n(64268),
     m = n(697720),
     f = n(578325),
-    _ = n(56790),
-    p = n(90718),
+    p = n(56790),
+    _ = n(90718),
     h = n(897482),
     E = n(4515),
     b = n(474472),
     x = n(156129),
     C = n(799303),
-    T = n(245630),
-    v = n(842272),
+    v = n(245630),
+    T = n(842272),
     N = n(486731),
     I = n(346943),
     S = n(55826),
@@ -34,9 +34,9 @@ var r = n(319147),
     j = n(297141),
     P = n(26517),
     Z = n(93125),
-    O = n(278583),
+    B = n(278583),
     M = n(814437);
-let B = new Map([
+let O = new Map([
     ['BG', s],
     ['CZ', c],
     ['HU', h],
@@ -48,12 +48,12 @@ let B = new Map([
     ['IE', E],
     ['LV', N],
     ['LI', C],
-    ['LT', T],
-    ['LU', v],
+    ['LT', v],
+    ['LU', T],
     ['MT', I],
     ['SK', M],
-    ['SI', O],
-    ['GR', _],
+    ['SI', B],
+    ['GR', p],
     ['FI', m],
     ['PT', j],
     ['NO', R],
@@ -66,12 +66,12 @@ let B = new Map([
     ['IT', x],
     ['NL', S],
     ['PL', A],
-    ['HR', p]
+    ['HR', _]
 ]);
 function w(e) {
     let { className: t, countryCode: n } = e;
-    if (null == n || !B.has(n)) return null;
-    let r = B.get(n);
+    if (null == n || !O.has(n)) return null;
+    let r = O.get(n);
     return (0, i.jsx)('img', {
         className: t,
         'aria-hidden': !0,

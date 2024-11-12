@@ -1,9 +1,9 @@
 n.d(t, {
     J2: function () {
-        return p;
+        return h;
     },
     V3: function () {
-        return h;
+        return p;
     },
     ZB: function () {
         return E;
@@ -80,10 +80,10 @@ function _(e) {
         [e, t]
     );
 }
-function h(e) {
+function p(e) {
     return null == e ? null : (0, a.Bd)(e) > 0.5 ? f.BRd.DARK : f.BRd.LIGHT;
 }
-function p(e, t, n) {
+function h(e, t, n) {
     let r = n / 100,
         i = 1 - r;
     return [Math.round(e[0] * i + t[0] * r), Math.round(e[1] * i + t[1] * r), Math.round(e[2] * i + t[2] * r)];

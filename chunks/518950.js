@@ -11,8 +11,8 @@ var r = n(192379),
 function l(e) {
     let { user: t, guildId: n, size: l, showPending: u = !1, showTryItOut: c = !1, animateOnHover: d = !1, avatarDecorationOverride: f, avatarOverride: _ } = e,
         {
-            avatarSrc: h,
-            isAvatarAnimating: p,
+            avatarSrc: p,
+            isAvatarAnimating: h,
             eventHandlers: m
         } = (0, o.Z)({
             user: t,
@@ -41,8 +41,8 @@ function l(e) {
     return {
         avatarPlaceholderSrc: g,
         avatarDecorationSrc: E,
-        avatarSrc: h,
-        isAnimating: p,
+        avatarSrc: p,
+        isAnimating: h,
         eventHandlers: {
             onMouseEnter: I,
             onMouseLeave: r.useCallback(() => {

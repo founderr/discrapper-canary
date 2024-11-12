@@ -19,7 +19,7 @@ var r = n(200651),
 function f(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: h, className: p, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: S, loading: T = !1, confirmButtonColor: b = o.zx.Colors.RED, focusCancel: y = !1 } = e,
+        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: b, loading: S = !1, confirmButtonColor: T = o.zx.Colors.RED, focusCancel: y = !1 } = e,
         A = i.useRef(null),
         N = (0, u.Q)('ConfirmModal');
     return (
@@ -31,27 +31,27 @@ function f(e) {
                 }, 0);
         }, [y]),
         i.useLayoutEffect(() => () => (null == v ? void 0 : v())),
-        null != h &&
+        null != p &&
             (t = (0, r.jsx)(o.zx, {
                 type: 'button',
                 look: N ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
                 color: o.zx.Colors.PRIMARY,
                 className: d.cancelButton,
                 size: o.zx.Sizes.MEDIUM,
-                disabled: T,
+                disabled: S,
                 onClick: () => {
                     null == g || g(), E();
                 },
                 autoFocus: y,
-                children: h
+                children: p
             })),
         null != _ &&
             (n = (0, r.jsx)(o.zx, {
                 buttonRef: A,
                 type: 'submit',
                 size: o.zx.Sizes.MEDIUM,
-                color: b,
-                submitting: T,
+                color: T,
+                submitting: S,
                 onClick: async () => {
                     try {
                         await (null == m ? void 0 : m()), E();
@@ -63,8 +63,8 @@ function f(e) {
                 children: _
             })),
         (0, r.jsxs)(c.Y0, {
-            className: p,
-            transitionState: S,
+            className: h,
+            transitionState: b,
             children: [
                 null != a
                     ? (0, r.jsx)(c.xB, {

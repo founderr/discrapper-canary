@@ -25,9 +25,9 @@ function d(e) {
 }
 function f(e) {
     let { user: t, entry: i, display: c, onAction: f, onClose: _ } = e,
-        h = (0, u.Z)({ onClose: _ }),
-        p = (0, a.e7)([l.default], () => l.default.getCurrentUser());
-    if (t.id !== (null == p ? void 0 : p.id) || 'live' === c || null == i || !(0, o.LP)(i)) return null;
+        p = (0, u.Z)({ onClose: _ }),
+        h = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+    if (t.id !== (null == h ? void 0 : h.id) || 'live' === c || null == i || !(0, o.LP)(i)) return null;
     let m = () => {
         (0, s.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('27421')]).then(n.bind(n, 81596));
@@ -36,7 +36,7 @@ function f(e) {
                     entry: i,
                     user: t,
                     onAction: f,
-                    onOpenGameSettings: h,
+                    onOpenGameSettings: p,
                     ...n
                 });
         });

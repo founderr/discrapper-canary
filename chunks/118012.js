@@ -30,15 +30,15 @@ let l = Object.freeze({
         SIZE_32: o.size32
     }),
     c = (e) => {
-        let { className: t, color: n = l.STANDARD, size: i = u.SIZE_14, tag: o = 'div', selectable: c = !1, strong: d = !1, children: f, style: _, 'aria-label': h, ...p } = e;
+        let { className: t, color: n = l.STANDARD, size: i = u.SIZE_14, tag: o = 'div', selectable: c = !1, strong: d = !1, children: f, style: _, 'aria-label': p, ...h } = e;
         return (0, r.jsx)(o, {
-            'aria-label': h,
+            'aria-label': p,
             className: a()(n, i, t, {
                 [s.selectable]: c,
                 [s.strong]: d
             }),
             style: _,
-            ...p,
+            ...h,
             children: f
         });
     };

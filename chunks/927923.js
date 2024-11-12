@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     Lc: function () {
-        return p;
+        return h;
     },
     Lw: function () {
         return E;
@@ -30,7 +30,7 @@ n.d(t, {
         return f;
     },
     uu: function () {
-        return h;
+        return p;
     },
     zM: function () {
         return d;
@@ -52,8 +52,8 @@ let u = 'xbox://communitylinking/donut/audio',
     d = 'https://login.live.com',
     f = [o.x.VOICE, o.x.DM_CHANNELS_READ, o.x.GUILDS, o.x.GUILDS_MEMBERS_READ, o.x.IDENTIFY, o.x.CONNECTIONS, o.x.ACTIVITIES_READ],
     _ = [o.x.VOICE, o.x.DM_CHANNELS_READ, o.x.GUILDS, o.x.GUILDS_MEMBERS_READ, o.x.IDENTIFY, o.x.CONNECTIONS],
-    h = 'https://my.account.sony.com',
-    p = (e) => {
+    p = 'https://my.account.sony.com',
+    h = (e) => {
         let { guildId: t, channelName: n, guildName: r, channelId: i, muted: a, deafened: s, nonce: o } = e,
             l = {
                 channelid: i,

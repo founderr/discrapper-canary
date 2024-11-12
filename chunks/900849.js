@@ -15,19 +15,19 @@ n.d(t, {
         return m;
     },
     c6: function () {
-        return b;
+        return T;
     },
     m9: function () {
-        return S;
+        return b;
     },
     mT: function () {
         return y;
     },
     rC: function () {
-        return T;
+        return S;
     },
     sq: function () {
-        return p;
+        return h;
     },
     tI: function () {
         return I;
@@ -45,17 +45,17 @@ var r,
     d = n(650774),
     f = n(430824),
     _ = n(626135),
-    h = n(981631);
+    p = n(981631);
 ((i = r || (r = {})).SEARCH = 'Search'), (i.RECOMMENDED = 'Recommended'), (i.POPULAR = 'Popular'), (i.RECOMMENDED_E3 = 'Recommended - E3'), (i.HEADER = 'Header'), (i.GLOBAL_DISCOVERY = 'Global Discovery'), (i.FORWARD_BREADCRUMB = 'Forward Breadcrumb');
-let p = '>200';
+let h = '>200';
 async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { channelId: r, onSuccess: i, joinSource: a, loadId: s, setsHistorySnapshot: d = !0, shouldNavigate: _ = !0 } = n,
-        h = (0, u.s1)();
-    d && l.Z.setHistorySnapshot({ ...h });
-    let p = f.Z.getGuild(e),
+        p = (0, u.s1)();
+    d && l.Z.setHistorySnapshot({ ...p });
+    let h = f.Z.getGuild(e),
         m = { state: { analyticsSource: t } };
-    null != p && null != p.joinedAt
+    null != h && null != h.joinedAt
         ? _ && (0, c.X)(e, m)
         : (await o.Z.joinGuild(e, {
               lurker: !0,
@@ -69,7 +69,7 @@ async function m(e, t) {
                   {
                       ...m,
                       welcomeModalChannelId: r,
-                      search: h.location.search
+                      search: p.location.search
                   },
                   r
               ))),
@@ -98,27 +98,27 @@ function g(e) {
 }
 function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    _.default.track(h.rMx.GUILD_DISCOVERY_EXITED, {
+    _.default.track(p.rMx.GUILD_DISCOVERY_EXITED, {
         load_id: e,
         guild_ids_viewed: t,
         recommendations_source: n
     });
 }
 function v(e) {
-    _.default.track(h.rMx.SEARCH_CLOSED, { load_id: e });
+    _.default.track(p.rMx.SEARCH_CLOSED, { load_id: e });
 }
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    _.default.track(h.rMx.SEARCH_STARTED, {
-        search_type: h.aib.GUILD_DISCOVERY,
+    _.default.track(p.rMx.SEARCH_STARTED, {
+        search_type: p.aib.GUILD_DISCOVERY,
         load_id: e,
         location: n.location,
         category_id: t
     });
 }
-function S(e) {
+function b(e) {
     let { categoryId: t, error: n, willRequestRetry: r, isRequestRetry: i } = e;
-    _.default.track(h.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
+    _.default.track(p.rMx.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
         request_status: n.status,
         request_error_code: n.code,
@@ -126,14 +126,14 @@ function S(e) {
         is_request_retry: i
     });
 }
-function T(e) {
+function S(e) {
     let { categoryId: t } = e;
-    _.default.track(h.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
+    _.default.track(p.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function b(e) {
+function T(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
-    _.default.track(h.rMx.SEARCH_RESULT_VIEWED, {
-        search_type: o ? h.aib.GUILD_DISCOVERY_TAG : h.aib.GUILD_DISCOVERY,
+    _.default.track(p.rMx.SEARCH_RESULT_VIEWED, {
+        search_type: o ? p.aib.GUILD_DISCOVERY_TAG : p.aib.GUILD_DISCOVERY,
         load_id: t,
         search_id: n,
         total_results: void 0 !== i ? i.length : null,
@@ -145,7 +145,7 @@ function b(e) {
 }
 function y(e) {
     let t = l.Z.getLoadId(e);
-    _.default.track(h.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
+    _.default.track(p.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
         load_id: t,
         guild_size: d.Z.getMemberCount(e)
@@ -155,7 +155,7 @@ async function A(e) {
     try {
         var t, n;
         let r = await s.tn.get({
-                url: h.ANM.GUILD_DISCOVERY,
+                url: p.ANM.GUILD_DISCOVERY,
                 query: a.stringify({ guild_ids: e }),
                 oldFormErrors: !0
             }),

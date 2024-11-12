@@ -37,7 +37,7 @@ var r = n(444675),
         n < i;
         o = r[++n]
     )
-        g(o) || !T(o) ? (s += ' ' + o) : (s += ' ' + u(o));
+        g(o) || !S(o) ? (s += ' ' + o) : (s += ' ' + u(o));
     return s;
 }),
     (t.deprecate = function (e, n) {
@@ -152,29 +152,29 @@ function f(e, n, r) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
-        if (S(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
-        if (b(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
+        if (b(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
+        if (T(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
         if (y(n)) return _(n);
     }
     var d = '',
-        T = !1,
+        S = !1,
         N = ['{', '}'];
-    if ((p(n) && ((T = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), b(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!T || 0 == n.length))) return N[0] + d + N[1];
-    if (r < 0) return S(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
+    if ((h(n) && ((S = !0), (N = ['[', ']'])), A(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), b(n) && (d = ' ' + RegExp.prototype.toString.call(n)), T(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), y(n) && (d = ' ' + _(n)), 0 === l.length && (!S || 0 == n.length))) return N[0] + d + N[1];
+    if (r < 0) return b(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
-        (a = T
+        (a = S
             ? (function (e, t, n, r, i) {
-                  for (var a = [], s = 0, o = t.length; s < o; ++s) O(t, String(s)) ? a.push(h(e, t, n, r, String(s), !0)) : a.push('');
+                  for (var a = [], s = 0, o = t.length; s < o; ++s) O(t, String(s)) ? a.push(p(e, t, n, r, String(s), !0)) : a.push('');
                   return (
                       i.forEach(function (i) {
-                          !i.match(/^\d+$/) && a.push(h(e, t, n, r, i, !0));
+                          !i.match(/^\d+$/) && a.push(p(e, t, n, r, i, !0));
                       }),
                       a
                   );
               })(e, n, r, u, l)
             : l.map(function (t) {
-                  return h(e, n, r, u, t, T);
+                  return p(e, n, r, u, t, S);
               })),
         e.seen.pop(),
         (function (e, t, n) {
@@ -190,7 +190,7 @@ function f(e, n, r) {
 function _(e) {
     return '[' + Error.prototype.toString.call(e) + ']';
 }
-function h(e, t, n, r, i, a) {
+function p(e, t, n, r, i, a) {
     var s, o, l;
     if (
         ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get ? (o = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special')) : l.set && (o = e.stylize('[Setter]', 'special')),
@@ -227,7 +227,7 @@ function h(e, t, n, r, i, a) {
     }
     return s + ': ' + o;
 }
-function p(e) {
+function h(e) {
     return Array.isArray(e);
 }
 function m(e) {
@@ -236,7 +236,7 @@ function m(e) {
 function g(e) {
     return null === e;
 }
-(t.types = n(842406)), (t.isArray = p), (t.isBoolean = m), (t.isNull = g);
+(t.types = n(842406)), (t.isArray = h), (t.isBoolean = m), (t.isNull = g);
 function E(e) {
     return 'number' == typeof e;
 }
@@ -251,17 +251,17 @@ function v(e) {
 function I(e) {
     return void 0 === e;
 }
-function S(e) {
-    return T(e) && '[object RegExp]' === N(e);
+function b(e) {
+    return S(e) && '[object RegExp]' === N(e);
 }
-function T(e) {
+function S(e) {
     return 'object' == typeof e && null !== e;
 }
-function b(e) {
-    return T(e) && '[object Date]' === N(e);
+function T(e) {
+    return S(e) && '[object Date]' === N(e);
 }
 function y(e) {
-    return T(e) && ('[object Error]' === N(e) || e instanceof Error);
+    return S(e) && ('[object Error]' === N(e) || e instanceof Error);
 }
 function A(e) {
     return 'function' == typeof e;
@@ -270,11 +270,11 @@ function A(e) {
     return 'symbol' == typeof e;
 }),
     (t.isUndefined = I),
-    (t.isRegExp = S),
-    (t.types.isRegExp = S),
-    (t.isObject = T),
-    (t.isDate = b),
-    (t.types.isDate = b),
+    (t.isRegExp = b),
+    (t.types.isRegExp = b),
+    (t.isObject = S),
+    (t.isDate = T),
+    (t.types.isDate = T),
     (t.isError = y),
     (t.types.isNativeError = y),
     (t.isFunction = A);
@@ -298,7 +298,7 @@ function O(e, t) {
 }),
     (t.inherits = n(689118)),
     (t._extend = function (e, t) {
-        if (!t || !T(t)) return e;
+        if (!t || !S(t)) return e;
         for (var n = Object.keys(t), r = n.length; r--; ) e[n[r]] = t[n[r]];
         return e;
     });

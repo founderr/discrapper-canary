@@ -21,7 +21,7 @@ function c(e, t) {
             },
             [e, n, t]
         ),
-        h = r.useCallback(() => {
+        p = r.useCallback(() => {
             let t = new Audio((0, l.Z)(e.soundId));
             null != n.current && n.current.pause(), (n.current = t), (t.currentTime = 0), (t.volume = (0, u.Z)(e.volume)), t.play(), d(!0), t.addEventListener('pause', () => d(!1), { once: !0 });
         }, [e, n]);
@@ -36,7 +36,7 @@ function c(e, t) {
         {
             playSoundboardSound: _,
             isPlayingSound: f,
-            previewSound: h,
+            previewSound: p,
             isPreviewingSound: c
         }
     );

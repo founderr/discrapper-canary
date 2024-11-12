@@ -10,21 +10,21 @@ var i,
     d = n(709054);
 let f = 14 * c.Z.Millis.DAY,
     _ = Object.freeze([]);
-let h = {},
-    p = {};
+let p = {},
+    h = {};
 function m() {
-    (h = {}), (p = {});
+    (p = {}), (h = {});
 }
 class g extends (i = l.ZP.Store) {
     getFpMessageInfo(e) {
-        return h[e];
+        return p[e];
     }
     getChannelFpInfo(e) {
         var t;
-        return null !== (t = p[e]) && void 0 !== t ? t : _;
+        return null !== (t = h[e]) && void 0 !== t ? t : _;
     }
     canSubmitFpReport(e) {
-        let t = h[e];
+        let t = p[e];
         return null != t && !t.reportSubmit && d.default.age(t.messageId) < f;
     }
     get validContentScanVersion() {
@@ -43,14 +43,14 @@ class g extends (i = l.ZP.Store) {
     (t.Z = new g(u.Z, {
         LOGOUT: function () {
             (function () {
-                (h = {}), (p = {});
+                (p = {}), (h = {});
             })();
         },
         CONNECTION_OPEN: function (e) {
             let { explicitContentScanVersion: t } = e;
             (r = t),
                 (function () {
-                    (h = {}), (p = {});
+                    (p = {}), (h = {});
                 })();
         },
         MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
@@ -62,14 +62,14 @@ class g extends (i = l.ZP.Store) {
                     attachments: i,
                     reportSubmit: !1
                 },
-                s = null !== (t = p[r]) && void 0 !== t ? t : _;
-            (p[r] = [...s, a]), (h[n] = a);
+                s = null !== (t = h[r]) && void 0 !== t ? t : _;
+            (h[r] = [...s, a]), (p[n] = a);
         },
         MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
             let { messageId: t, channelId: n } = e,
-                r = p[n];
+                r = h[n];
             null != r &&
-                ((p[n] = r.map((e) =>
+                ((h[n] = r.map((e) =>
                     e.messageId === t
                         ? {
                               ...e,
@@ -77,8 +77,8 @@ class g extends (i = l.ZP.Store) {
                           }
                         : e
                 )),
-                (h[t] = {
-                    ...h[t],
+                (p[t] = {
+                    ...p[t],
                     reportSubmit: !0
                 }));
         }

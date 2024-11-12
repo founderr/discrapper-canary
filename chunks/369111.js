@@ -15,8 +15,8 @@ var r = n(192379),
 function f(e) {
     let { isTryItOut: t, analyticsLocations: n, guildId: f } = e,
         _ = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        h = (0, i.e7)([l.ZP], () => (null != f && null != _ ? l.ZP.getMember(f, _.id) : null)),
-        p = null != h ? h.avatarDecoration : null == _ ? void 0 : _.avatarDecoration,
+        p = (0, i.e7)([l.ZP], () => (null != f && null != _ ? l.ZP.getMember(f, _.id) : null)),
+        h = null != p ? p.avatarDecoration : null == _ ? void 0 : _.avatarDecoration,
         m = (0, a.Z)(n),
         {
             pendingAvatar: g,
@@ -28,7 +28,7 @@ function f(e) {
             pendingErrors: null != f ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
         })),
         I = (0, r.useCallback)((e) => (0, o.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
-        S = (0, r.useCallback)(
+        b = (0, r.useCallback)(
             (e) => {
                 (0, o.PO)(f, e), null != e && m(e);
             },
@@ -38,8 +38,8 @@ function f(e) {
         pendingAvatar: g,
         pendingAvatarDecoration: E,
         setPendingAvatar: t ? d.c_ : I,
-        setPendingAvatarDecoration: t ? d.Xz : S,
-        savedAvatarDecoration: p,
+        setPendingAvatarDecoration: t ? d.Xz : b,
+        savedAvatarDecoration: h,
         pendingErrors: v
     };
 }

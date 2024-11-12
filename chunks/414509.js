@@ -17,8 +17,8 @@ var c = n(807031),
     f = n(451092);
 n(334431);
 let _ = 1 * o.Z.Millis.HOUR,
-    h = 3 * o.Z.Millis.DAY;
-function p(e) {
+    p = 3 * o.Z.Millis.DAY;
+function h(e) {
     let { channelId: t } = e;
     if (null == t) return;
     let n = i.Z.getChannel(t);
@@ -28,7 +28,7 @@ function p(e) {
             l.E.getCurrentConfig({ location: 'channel_select' }, { autoTrackExposure: !0 }).showAsModal &&
             !n.blockedUserWarningDismissed &&
             !(function (e) {
-                return (0, u.Iu)(e) > Date.now() - h;
+                return (0, u.Iu)(e) > Date.now() - p;
             })(t) &&
             (0, d.O)({
                 channelId: t,
@@ -53,7 +53,7 @@ class E extends r.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                CHANNEL_SELECT: p,
+                CHANNEL_SELECT: h,
                 APP_STATE_UPDATE: m
             }),
             n in t

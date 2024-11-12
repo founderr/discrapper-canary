@@ -38,18 +38,18 @@ var u = function () {
                   return e.__proto__;
               }
             : null),
-    h = {},
-    p = 'undefined' != typeof Uint8Array && _ ? _(Uint8Array) : r,
+    p = {},
+    h = 'undefined' != typeof Uint8Array && _ ? _(Uint8Array) : r,
     m = {
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
         '%ArrayBuffer%': 'undefined' == typeof ArrayBuffer ? r : ArrayBuffer,
         '%ArrayIteratorPrototype%': d && _ ? _([][Symbol.iterator]()) : r,
         '%AsyncFromSyncIteratorPrototype%': r,
-        '%AsyncFunction%': h,
-        '%AsyncGenerator%': h,
-        '%AsyncGeneratorFunction%': h,
-        '%AsyncIteratorPrototype%': h,
+        '%AsyncFunction%': p,
+        '%AsyncGenerator%': p,
+        '%AsyncGeneratorFunction%': p,
+        '%AsyncIteratorPrototype%': p,
         '%Atomics%': 'undefined' == typeof Atomics ? r : Atomics,
         '%BigInt%': 'undefined' == typeof BigInt ? r : BigInt,
         '%BigInt64Array%': 'undefined' == typeof BigInt64Array ? r : BigInt64Array,
@@ -68,7 +68,7 @@ var u = function () {
         '%Float64Array%': 'undefined' == typeof Float64Array ? r : Float64Array,
         '%FinalizationRegistry%': 'undefined' == typeof FinalizationRegistry ? r : FinalizationRegistry,
         '%Function%': a,
-        '%GeneratorFunction%': h,
+        '%GeneratorFunction%': p,
         '%Int8Array%': 'undefined' == typeof Int8Array ? r : Int8Array,
         '%Int16Array%': 'undefined' == typeof Int16Array ? r : Int16Array,
         '%Int32Array%': 'undefined' == typeof Int32Array ? r : Int32Array,
@@ -97,7 +97,7 @@ var u = function () {
         '%Symbol%': d ? Symbol : r,
         '%SyntaxError%': i,
         '%ThrowTypeError%': c,
-        '%TypedArray%': p,
+        '%TypedArray%': h,
         '%TypeError%': s,
         '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
         '%Uint8ClampedArray%': 'undefined' == typeof Uint8ClampedArray ? r : Uint8ClampedArray,
@@ -183,9 +183,9 @@ var E = function e(t) {
         '%WeakSetPrototype%': ['WeakSet', 'prototype']
     },
     I = n(390976),
-    S = n(706165),
-    T = I.call(Function.call, Array.prototype.concat),
-    b = I.call(Function.apply, Array.prototype.splice),
+    b = n(706165),
+    S = I.call(Function.call, Array.prototype.concat),
+    T = I.call(Function.apply, Array.prototype.splice),
     y = I.call(Function.call, String.prototype.replace),
     A = I.call(Function.call, String.prototype.slice),
     N = I.call(Function.call, RegExp.prototype.exec),
@@ -207,9 +207,9 @@ var E = function e(t) {
     D = function (e, t) {
         var n,
             r = e;
-        if ((S(v, r) && (r = '%' + (n = v[r])[0] + '%'), S(m, r))) {
+        if ((b(v, r) && (r = '%' + (n = v[r])[0] + '%'), b(m, r))) {
             var a = m[r];
-            if ((a === h && (a = E(r)), void 0 === a && !t)) throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((a === p && (a = E(r)), void 0 === a && !t)) throw new s('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,
@@ -229,22 +229,22 @@ e.exports = function (e, t) {
         u = a.value,
         c = !1,
         d = a.alias;
-    d && ((r = d[0]), b(n, T([0, 1], d)));
+    d && ((r = d[0]), T(n, S([0, 1], d)));
     for (var f = 1, _ = !0; f < n.length; f += 1) {
-        var h = n[f],
-            p = A(h, 0, 1),
-            g = A(h, -1);
-        if (('"' === p || "'" === p || '`' === p || '"' === g || "'" === g || '`' === g) && p !== g) throw new i('property names with quotes must have matching quotes');
-        if ((('constructor' === h || !_) && (c = !0), (r += '.' + h), S(m, (o = '%' + r + '%')))) u = m[o];
+        var p = n[f],
+            h = A(p, 0, 1),
+            g = A(p, -1);
+        if (('"' === h || "'" === h || '`' === h || '"' === g || "'" === g || '`' === g) && h !== g) throw new i('property names with quotes must have matching quotes');
+        if ((('constructor' === p || !_) && (c = !0), (r += '.' + p), b(m, (o = '%' + r + '%')))) u = m[o];
         else if (null != u) {
-            if (!(h in u)) {
+            if (!(p in u)) {
                 if (!t) throw new s('base intrinsic for ' + e + ' exists, but the property is not available.');
                 return;
             }
             if (l && f + 1 >= n.length) {
-                var E = l(u, h);
-                u = (_ = !!E) && 'get' in E && !('originalValue' in E.get) ? E.get : u[h];
-            } else (_ = S(u, h)), (u = u[h]);
+                var E = l(u, p);
+                u = (_ = !!E) && 'get' in E && !('originalValue' in E.get) ? E.get : u[p];
+            } else (_ = b(u, p)), (u = u[p]);
             _ && !c && (m[o] = u);
         }
     }

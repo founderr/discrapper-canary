@@ -10,16 +10,16 @@ var r,
     d = n(442837),
     f = n(570140),
     _ = n(503438),
-    h = n(768419),
-    p = n(695346),
+    p = n(768419),
+    h = n(695346),
     m = n(581883),
     g = n(780570),
     E = n(77498),
     v = n(517100),
     I = n(283595),
-    S = n(293273),
-    T = n(158776),
-    b = n(797258),
+    b = n(293273),
+    S = n(158776),
+    T = n(797258),
     y = n(981631);
 let A = !1,
     N = y.Skl.ONLINE,
@@ -36,7 +36,7 @@ function M(e) {
 function P(e) {
     switch (e.type) {
         case y.IIU.LISTENING:
-            if ((0, _.Z)(e)) return h.Z.shouldShowActivity();
+            if ((0, _.Z)(e)) return p.Z.shouldShowActivity();
             if (null != e.application_id) return M(e.application_id);
             return !1;
         case y.IIU.PLAYING:
@@ -44,7 +44,7 @@ function P(e) {
                 ? M(e.application_id)
                 : (function (e) {
                       let t = E.Z.getGameByName(e);
-                      return null != t ? M(t.id) : p.G6.getSetting();
+                      return null != t ? M(t.id) : h.G6.getSetting();
                   })(e.name);
         case y.IIU.STREAMING:
         case y.IIU.WATCHING:
@@ -57,14 +57,14 @@ function k() {
     if (((R = null !== (e = v.Z.getIdleSince()) && void 0 !== e ? e : 0), (D = v.Z.isAFK()), L)) N = C;
     else if (A) N = y.Skl.INVISIBLE;
     else {
-        let e = p.co.getSetting();
+        let e = h.co.getSetting();
         N = e !== y.Skl.UNKNOWN ? e : y.Skl.ONLINE;
     }
     N === y.Skl.ONLINE && R > 0 && (N = y.Skl.IDLE);
     let t = !1,
-        n = L || N === y.Skl.INVISIBLE ? [] : S.Z.getActivities().filter(P);
+        n = L || N === y.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(P);
     !l()(O, n) && ((O = n), (t = !0));
-    let r = b.Z.getRemoteActivities();
+    let r = T.Z.getRemoteActivities();
     if ((x !== r && ((x = r), (t = !0)), t)) {
         let e = O.find((e) => e.type === y.IIU.CUSTOM_STATUS);
         w =
@@ -82,11 +82,11 @@ function k() {
     }
 }
 function U() {
-    (L = !1), (C = y.Skl.UNKNOWN), k(), T.Z.setCurrentUserOnConnectionOpen(N, w);
+    (L = !1), (C = y.Skl.UNKNOWN), k(), S.Z.setCurrentUserOnConnectionOpen(N, w);
 }
 class G extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, m.Z, S.Z, b.Z, I.Z, E.Z), this.syncWith([S.Z], k);
+        this.waitFor(v.Z, m.Z, b.Z, T.Z, I.Z, E.Z), this.syncWith([b.Z], k);
     }
     getLocalPresence() {
         return {

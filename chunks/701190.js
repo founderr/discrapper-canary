@@ -10,7 +10,7 @@ var r,
 let d = new Map(),
     f = new Map(),
     _ = {};
-function h(e, t) {
+function p(e, t) {
     var n;
     e = null != e ? e : '';
     let r = (0, u.fU)(e),
@@ -33,8 +33,8 @@ function h(e, t) {
                 [a.guild.id]: e
             });
 }
-function p(e) {
-    return h(e.code, (t) => {
+function h(e) {
+    return p(e.code, (t) => {
         t.state = 'banned' in e && e.banned ? c.r2o.BANNED : c.r2o.EXPIRED;
     });
 }
@@ -71,38 +71,38 @@ class m extends (r = o.ZP.Store) {
             });
         },
         INVITE_RESOLVE_SUCCESS: function (e) {
-            return h(e.code, (t) => {
+            return p(e.code, (t) => {
                 var n, r;
                 (t.state = c.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null !== (n = e.invite.approximate_member_count) && void 0 !== n ? n : null), (t.approximate_presence_count = null !== (r = e.invite.approximate_presence_count) && void 0 !== r ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.expires_at = e.invite.expires_at), (t.stage_instance = e.invite.stage_instance), (t.friends_count = e.invite.friends_count), (t.is_contact = e.invite.is_contact), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type), (t.flags = e.invite.flags);
             });
         },
-        INVITE_RESOLVE_FAILURE: p,
-        INSTANT_INVITE_REVOKE_SUCCESS: p,
+        INVITE_RESOLVE_FAILURE: h,
+        INSTANT_INVITE_REVOKE_SUCCESS: h,
         FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-            return h(e.invite.code, (t) => {
+            return p(e.invite.code, (t) => {
                 (t.state = c.r2o.RESOLVED), (t.inviter = e.invite.inviter);
             });
         },
         FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
             e.invites.forEach((e) =>
-                h(e.code, (e) => {
+                p(e.code, (e) => {
                     e.state = c.r2o.EXPIRED;
                 })
             );
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-            return h(e.invite.code, (t) => {
+            return p(e.invite.code, (t) => {
                 var n, r;
                 (t.state = c.r2o.RESOLVED), (t.guild = e.invite.guild), (t.channel = e.invite.channel), (t.inviter = e.invite.inviter), (t.approximate_member_count = null !== (n = e.invite.approximate_member_count) && void 0 !== n ? n : null), (t.approximate_presence_count = null !== (r = e.invite.approximate_presence_count) && void 0 !== r ? r : null), (t.target_type = e.invite.target_type), (t.target_user = e.invite.target_user), (t.target_application = e.invite.target_application), (t.stage_instance = e.invite.stage_instance), (t.guild_scheduled_event = e.invite.guild_scheduled_event), (t.type = e.invite.type);
             });
         },
         INVITE_ACCEPT: function (e) {
-            return h(e.code, (e) => {
+            return p(e.code, (e) => {
                 e.state = c.r2o.ACCEPTING;
             });
         },
         INVITE_ACCEPT_SUCCESS: function (e) {
-            return h(e.code, (t) => {
+            return p(e.code, (t) => {
                 (t.state = c.r2o.ACCEPTED),
                     (t.guild = e.invite.guild),
                     (t.new_member = e.invite.new_member),
@@ -115,23 +115,23 @@ class m extends (r = o.ZP.Store) {
         INVITE_ACCEPT_FAILURE: function (e) {
             return (
                 f.set(e.code, e.error),
-                h(e.code, (e) => {
+                p(e.code, (e) => {
                     e.state = c.r2o.ERROR;
                 })
             );
         },
         INVITE_APP_OPENING: function (e) {
-            return h(e.code, (e) => {
+            return p(e.code, (e) => {
                 e.state = c.r2o.APP_OPENING;
             });
         },
         INVITE_APP_OPENED: function (e) {
-            return h(e.code, (e) => {
+            return p(e.code, (e) => {
                 e.state = c.r2o.APP_OPENED;
             });
         },
         INVITE_APP_NOT_OPENED: function (e) {
-            return h(e.code, (e) => {
+            return p(e.code, (e) => {
                 e.state = c.r2o.APP_NOT_OPENED;
             });
         }

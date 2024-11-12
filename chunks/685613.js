@@ -15,14 +15,14 @@ var r = n(120356),
     d = n(78826),
     m = n(46140),
     x = n(981631),
-    C = n(789935);
+    h = n(789935);
 ((i = s || (s = {}))[(i.SMALL = 24)] = 'SMALL'), (i[(i.MEDIUM = 32)] = 'MEDIUM');
 t.Z = function (e) {
     let { className: t, gameTileSize: n = 24, quest: i, theme: s = x.BRd.DARK, withGameTile: r = !0 } = e,
-        h = (0, a.wj)(s) ? x.BRd.DARK : x.BRd.LIGHT,
+        C = (0, a.wj)(s) ? x.BRd.DARK : x.BRd.LIGHT,
         g = (0, u.vI)(i, m.dr.QUESTS_BAR);
     return (0, l.jsxs)('div', {
-        className: o()(C.partnerBranding, t),
+        className: o()(h.partnerBranding, t),
         children: [
             r &&
                 (0, l.jsx)(d.Fl, {
@@ -30,9 +30,9 @@ t.Z = function (e) {
                     children: (e) =>
                         (0, l.jsx)('img', {
                             ref: e,
-                            className: C.partnerBrandingGameTile,
+                            className: h.partnerBrandingGameTile,
                             alt: '',
-                            src: (0, c.fh)(i, c.eC.GAME_TILE, h).url,
+                            src: (0, c.fh)(i, c.eC.GAME_TILE, C).url,
                             style: {
                                 borderRadius: (function (e) {
                                     switch (e) {
@@ -52,9 +52,9 @@ t.Z = function (e) {
                 children: (e) =>
                     (0, l.jsx)('img', {
                         ref: e,
-                        className: o()(C.partnerBrandingLogotype, { [C.rewardHighlightLogotype]: g }),
+                        className: o()(h.partnerBrandingLogotype, { [h.rewardHighlightLogotype]: g }),
                         alt: i.config.messages.gameTitle,
-                        src: (0, c.fh)(i, c.eC.LOGO_TYPE, h).url
+                        src: (0, c.fh)(i, c.eC.LOGO_TYPE, C).url
                     })
             })
         ]

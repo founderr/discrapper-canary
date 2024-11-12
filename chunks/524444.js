@@ -63,16 +63,16 @@ var r,
     d = n(374470),
     f = n(442837),
     _ = n(481060),
-    h = n(904245),
-    p = n(45114),
+    p = n(904245),
+    h = n(45114),
     m = n(431279),
     g = n(794295),
     E = n(593472),
     v = n(110924),
     I = n(858644),
-    S = n(249458),
-    T = n(313201),
-    b = n(688465),
+    b = n(249458),
+    S = n(313201),
+    T = n(688465),
     y = n(425886),
     A = n(80966),
     N = n(593545),
@@ -168,8 +168,8 @@ function Q(e) {
 function X(e) {
     let { alt: t, hiddenSpoilers: n, renderAdjacentContent: r, containerClassName: i, imageContainerClassName: o, disableAltTextDisplay: u = !1, mediaLayoutType: c, imageContainerStyle: d } = e,
         f = c === B.hV.MOSAIC,
-        h = !u && D.H1.getSetting() && null != t && '' !== t && !0 !== n,
-        p = (e) => {
+        p = !u && D.H1.getSetting() && null != t && '' !== t && !0 !== n,
+        h = (e) => {
             let { altText: t } = e;
             return (0, a.jsxs)(_.Dialog, {
                 'aria-label': j.intl.string(j.t.fSiQ3N),
@@ -203,12 +203,12 @@ function X(e) {
                 children: [(0, a.jsx)(m.Z, { ...e }), null != r && r()]
             }),
             f &&
-                h &&
+                p &&
                 (0, a.jsx)('div', {
                     className: H.mediaMosaicAltTextContainer,
                     children: (0, a.jsx)(_.Popout, {
                         animation: _.Popout.Animation.FADE,
-                        renderPopout: () => (0, a.jsx)(p, { altText: t }),
+                        renderPopout: () => (0, a.jsx)(h, { altText: t }),
                         children: (e) =>
                             (0, a.jsx)(_.FocusRing, {
                                 offset: 4,
@@ -224,7 +224,7 @@ function X(e) {
                     })
                 }),
             !f &&
-                h &&
+                p &&
                 (0, a.jsx)('span', {
                     className: H.altText,
                     children: t
@@ -247,7 +247,7 @@ function ee(e) {
 ((i = r || (r = {}))[(i.OLD_MESSAGES = 0)] = 'OLD_MESSAGES'), (i[(i.REPLY = 1)] = 'REPLY');
 let et = (e) => {
         let { type: t = 0, onClick: n } = e;
-        return (0, a.jsx)(S.G.Consumer, {
+        return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -305,7 +305,7 @@ let et = (e) => {
     },
     en = (e) => {
         let { onClick: t, loading: n } = e;
-        return (0, a.jsx)(S.G.Consumer, {
+        return (0, a.jsx)(b.G.Consumer, {
             children: (e) =>
                 e.disableInteractions
                     ? null
@@ -341,17 +341,17 @@ let et = (e) => {
     };
 function er(e) {
     let { content: t, channelId: n } = e,
-        [r] = s.useState(() => (0, T.hQ)('NewMessagesBarJumpToNewMessages_')),
+        [r] = s.useState(() => (0, S.hQ)('NewMessagesBarJumpToNewMessages_')),
         i = s.useCallback(() => {
             let e = x.ZP.ackMessageId(n);
             null != e
-                ? h.Z.jumpToMessage({
+                ? p.Z.jumpToMessage({
                       channelId: n,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : h.Z.jumpToMessage({
+                : p.Z.jumpToMessage({
                       channelId: n,
                       messageId: G.default.castChannelIdAsMessageId(n),
                       offset: 1,
@@ -359,9 +359,9 @@ function er(e) {
                   });
         }, [n]),
         o = s.useCallback(() => {
-            (0, p.In)(n);
+            (0, h.In)(n);
         }, [n]),
-        { disableInteractions: u } = s.useContext(S.G);
+        { disableInteractions: u } = s.useContext(b.G);
     return u
         ? null
         : (0, a.jsxs)('div', {
@@ -404,9 +404,9 @@ function er(e) {
 function ei(e) {
     var t, n, r;
     let { channel: i, content: o, scrollManager: u } = e,
-        { disableInteractions: m } = s.useContext(S.G),
+        { disableInteractions: m } = s.useContext(b.G),
         [g, I] = s.useState(null),
-        T = s.useRef(null),
+        S = s.useRef(null),
         [y, A] = s.useState(null),
         N = s.useRef(null),
         D = (0, f.Wu)(
@@ -520,7 +520,7 @@ function ei(e) {
                         channel_id: i.id,
                         channel_type: i.type
                     }),
-                    h.Z.jumpToMessage({
+                    p.Z.jumpToMessage({
                         channelId: i.id,
                         messageId: n.startId,
                         flash: !0,
@@ -546,7 +546,7 @@ function ei(e) {
     let $ = s.useCallback(
         (e) => {
             var t;
-            if (!((0, d.k)(e.target) && (null === (t = T.current) || void 0 === t ? void 0 : t.contains(e.target))))
+            if (!((0, d.k)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))))
                 z &&
                     P.default.track(Z.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
@@ -598,13 +598,13 @@ function ei(e) {
         et = s.useCallback(() => {
             let e = x.ZP.ackMessageId(i.id);
             null != e
-                ? h.Z.jumpToMessage({
+                ? p.Z.jumpToMessage({
                       channelId: i.id,
                       messageId: e,
                       offset: 1,
                       context: 'Mark As Read'
                   })
-                : h.Z.jumpToMessage({
+                : p.Z.jumpToMessage({
                       channelId: i.id,
                       messageId: G.default.castChannelIdAsMessageId(i.id),
                       offset: 1,
@@ -612,7 +612,7 @@ function ei(e) {
                   });
         }, [i.id]),
         en = s.useCallback(() => {
-            (0, p.In)(i.id);
+            (0, h.In)(i.id);
         }, [i.id]),
         er = j.intl.string(j.t['38qwgI']);
     return (
@@ -620,7 +620,7 @@ function ei(e) {
         m
             ? null
             : (0, a.jsxs)('div', {
-                  ref: T,
+                  ref: S,
                   className: l()(H.newTopicsBarContainer, H.containerMarginTop),
                   children: [
                       (0, a.jsx)('div', {
@@ -698,7 +698,7 @@ function ei(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(b.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {
@@ -737,10 +737,10 @@ function ea(e, t) {
 function es(e) {
     var t, n, r;
     let { channel: i, scrollManager: o } = e,
-        { disableInteractions: u } = s.useContext(S.G),
-        [p, m] = s.useState(null),
+        { disableInteractions: u } = s.useContext(b.G),
+        [h, m] = s.useState(null),
         g = s.useRef(null),
-        [I, T] = s.useState(null),
+        [I, S] = s.useState(null),
         y = s.useRef(null),
         A = (0, f.Wu)(
             [R.Z],
@@ -791,7 +791,7 @@ function es(e) {
         ),
         L = null !== (n = (0, f.e7)([R.Z], () => R.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
         x = null == A ? void 0 : null === (t = A[L]) || void 0 === t ? void 0 : t.topic;
-    null == x && null == p && (null == A ? void 0 : A.length) >= 1 && (x = null === (r = A[0]) || void 0 === r ? void 0 : r.topic);
+    null == x && null == h && (null == A ? void 0 : A.length) >= 1 && (x = null === (r = A[0]) || void 0 === r ? void 0 : r.topic);
     let U = s.useMemo(() => c().get(A, L - 1), [L, A]),
         G = s.useMemo(() => c().get(A, L + 1), [L, A]),
         B = s.useMemo(
@@ -855,7 +855,7 @@ function es(e) {
                         channel_id: i.id,
                         channel_type: i.type
                     }),
-                    h.Z.jumpToMessage({
+                    p.Z.jumpToMessage({
                         channelId: i.id,
                         messageId: n.startId,
                         flash: !0,
@@ -876,7 +876,7 @@ function es(e) {
             var t;
             K(e);
             let n = null === (t = y.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && T(n);
+            null != n && S(n);
         }, []);
     s.useEffect(() => {
         if (null != I && W) {
@@ -1028,7 +1028,7 @@ function es(e) {
                                                       lineClamp: 1,
                                                       children: j.intl.string(j.t.q21fUl)
                                                   }),
-                                                  (0, a.jsx)(b.Z, { className: H.summariesBetaTag })
+                                                  (0, a.jsx)(T.Z, { className: H.summariesBetaTag })
                                               ]
                                           }),
                                           (0, a.jsx)(_.Clickable, {

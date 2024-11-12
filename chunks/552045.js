@@ -11,7 +11,7 @@ var r = n(481060),
     g = n(724368),
     m = n(633488),
     f = n(361848);
-let _ = () => {
+let p = () => {
     let e = (0, o.mq)(d.ne.ACTIVE),
         t = (0, l.Z)(),
         { handleTabChange: n } = (0, s.Z)();
@@ -54,7 +54,7 @@ t.Z = () => {
                             ]
                         })
                     }),
-                    (0, i.jsx)(_, {})
+                    (0, i.jsx)(p, {})
                 ]
             }),
             (0, i.jsx)('div', {

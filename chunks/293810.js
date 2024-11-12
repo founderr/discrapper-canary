@@ -15,7 +15,7 @@ n.d(t, {
         return l;
     },
     Xy: function () {
-        return p;
+        return h;
     },
     e3: function () {
         return u;
@@ -24,7 +24,7 @@ n.d(t, {
         return _;
     },
     iP: function () {
-        return h;
+        return p;
     },
     iv: function () {
         return v;
@@ -41,8 +41,8 @@ var r,
     d = n(474936),
     f = n(231338);
 let _ = 3,
-    h = '(max-width: 485px)',
-    p = '(max-height: 450px)';
+    p = '(max-width: 485px)',
+    h = '(max-height: 450px)';
 ((r = o || (o = {})).GATING = 'GATING'), (r.GROUP = 'GROUP'), (r.DETAILS = 'DETAILS'), (r.BENEFITS = 'BENEFITS'), (r.CHANNEL_BENEFITS = 'CHANNEL_BENEFITS'), (r.INTANGIBLE_BENEFITS = 'INTANGIBLE_BENEFITS '), (r.DESIGN = 'DESIGN'), (r.CONFIRMATION = 'CONFIRMATION'), (r.MEMBERS = 'MEMBERS'), ((i = l || (l = {}))[(i.CHANNEL = 1)] = 'CHANNEL'), (i[(i.INTANGIBLE = 2)] = 'INTANGIBLE'), ((a = u || (u = {}))[(a.SOME_CHANNELS = 0)] = 'SOME_CHANNELS'), (a[(a.ALL_CHANNELS = 1)] = 'ALL_CHANNELS');
 let m = [
     {

@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(962100),
     T = n(981631),
     C = n(388032),
-    _ = n(592142),
-    E = n(113207);
+    E = n(592142),
+    _ = n(113207);
 let f = !x.isPlatformEmbedded,
     I = (0, g.hQ)();
 function N(e) {
@@ -36,16 +36,16 @@ function A(e) {
             x.isPlatformEmbedded || n !== T.pM4.PUSH_TO_TALK
                 ? (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, E.marginBottom8),
+                      className: l()(E.pttToolsMessage, _.marginBottom8),
                       children: C.intl.format(C.t.HVvn5e, { onClick: () => d.Z.setSection(T.oAB.KEYBINDS) })
                   })
                 : (0, i.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
-                      className: l()(_.pttToolsMessage, _.pttToolsWarning, E.marginBottom8),
+                      className: l()(E.pttToolsMessage, E.pttToolsWarning, _.marginBottom8),
                       children: C.intl.format(C.t.zvMPOT, { onDownloadClick: () => (0, S.y)('Help Text PTT') })
                   })),
         (0, i.jsxs)('div', {
-            className: _.pttTools,
+            className: E.pttTools,
             children: [
                 (0, i.jsxs)(h.Z, {
                     children: [
@@ -66,7 +66,7 @@ function A(e) {
                                     (0, i.jsx)(o.FormTitle, {
                                         id: I,
                                         tag: o.FormTitleTags.H5,
-                                        className: E.marginBottom8,
+                                        className: _.marginBottom8,
                                         children: C.intl.string(C.t.y0ShVl)
                                     }),
                                     (0, i.jsx)(o.Slider, {
@@ -124,7 +124,7 @@ function b() {
         children: [
             (0, i.jsx)(o.FormItem, {
                 title: C.intl.string(C.t['pS+K2N']),
-                className: E.marginBottom20,
+                className: _.marginBottom20,
                 children: (0, i.jsx)(o.RadioGroup, {
                     onChange: l,
                     options: r,

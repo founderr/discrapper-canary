@@ -24,12 +24,12 @@ var o,
     v = n(113434),
     j = n(497505),
     _ = n(918701),
-    E = n(475595),
-    b = n(720293),
+    b = n(475595),
+    E = n(720293),
     N = n(623249),
-    S = n(78826),
+    B = n(78826),
     T = n(670638),
-    B = n(341907),
+    S = n(341907),
     A = n(642145),
     y = n(981631),
     R = n(388032),
@@ -70,8 +70,8 @@ function I(e) {
             config: A.Y
         }),
         _ = 0 === f ? p.CircleWarningIcon : p.CircleInformationIcon,
-        E = (0, g.Lq)(y.Ilk.RED_345),
-        b = 0 === f ? E : i ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
+        b = (0, g.Lq)(y.Ilk.RED_345),
+        E = 0 === f ? b : i ? p.tokens.colors.TEXT_NORMAL : p.tokens.colors.WHITE;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: j,
@@ -84,7 +84,7 @@ function I(e) {
                         children: [
                             (0, s.jsx)(_, {
                                 size: 'xs',
-                                color: b
+                                color: E
                             }),
                             (0, s.jsx)(p.Text, {
                                 variant: 'text-xs/medium',
@@ -138,17 +138,17 @@ function q(e) {
     var t, n, o;
     let { quest: r, isHovering: i, errorHints: c, warningHints: m, onCtxMenuClose: g, onCtxMenuOpen: N, onCtxMenuSelect: A } = e,
         q = (0, _.cr)(r),
-        P = a.useMemo(() => (0, E.fh)(r, E.eC.HERO), [r]),
-        O = a.useMemo(() => (0, E.fh)(r, E.eC.LOGO_TYPE, 'dark'), [r]),
-        M = (0, x.ZP)(),
-        W = ((0, u.wj)(M) ? y.BRd.DARK : y.BRd.LIGHT) === y.BRd.DARK,
+        P = a.useMemo(() => (0, b.fh)(r, b.eC.HERO), [r]),
+        M = a.useMemo(() => (0, b.fh)(r, b.eC.LOGO_TYPE, 'dark'), [r]),
+        O = (0, x.ZP)(),
+        W = ((0, u.wj)(O) ? y.BRd.DARK : y.BRd.LIGHT) === y.BRd.DARK,
         L = a.useContext(d.S).reducedMotion.enabled,
         Q = (0, _.Mi)(r, j.jn.GIFT_INVENTORY_FOR_YOU),
         Z = (0, v.tP)(r),
         D = (null === (t = r.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        H = a.useRef(i),
-        U = a.useRef(null),
-        V = (0, v.B6)(r.config.expiresAt, {
+        V = a.useRef(i),
+        H = a.useRef(null),
+        U = (0, v.B6)(r.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -160,20 +160,20 @@ function q(e) {
                     questContent: j.jn.QUEST_HOME_DESKTOP,
                     questContentCTA: h.jZ.ACCEPT_QUEST
                 }),
-                    (0, B.openVideoQuestModal)(r);
+                    (0, S.openVideoQuestModal)(r);
         }, [q, r]);
     a.useEffect(() => {
-        if (P.isAnimated && null != U.current)
+        if (P.isAnimated && null != H.current)
             return (
-                H.current !== i && (i && !L ? U.current.play() : (U.current.pause(), (U.current.currentTime = 0))),
-                (H.current = i),
+                V.current !== i && (i && !L ? H.current.play() : (H.current.pause(), (H.current.currentTime = 0))),
+                (V.current = i),
                 () => {
                     var e;
-                    null === (e = U.current) || void 0 === e || e.pause();
+                    null === (e = H.current) || void 0 === e || e.pause();
                 }
             );
     }, [i, P, L]);
-    let K = a.useMemo(() => (0, b.z)(b.i.QUEST_HOME_VIDEO, r), [r]);
+    let Y = a.useMemo(() => (0, E.z)(E.i.QUEST_HOME_VIDEO, r), [r]);
     return (0, s.jsxs)('div', {
         className: w.container,
         children: [
@@ -181,12 +181,12 @@ function q(e) {
                 className: w.heroAssetWrapper,
                 children: [
                     P.isAnimated
-                        ? (0, s.jsx)(S.Fl, {
+                        ? (0, s.jsx)(B.Fl, {
                               id: 'QuestTileBanner_heroAnimated',
                               children: (e) => {
                                   var t;
                                   return (
-                                      null != e.current && (U.current = e.current),
+                                      null != e.current && (H.current = e.current),
                                       (0, s.jsx)(f.Z, {
                                           ref: e,
                                           autoPlay: !L && i,
@@ -203,7 +203,7 @@ function q(e) {
                                   );
                               }
                           })
-                        : (0, s.jsx)(S.Fl, {
+                        : (0, s.jsx)(B.Fl, {
                               id: 'QuestTileBanner',
                               children: (e) =>
                                   (0, s.jsx)('img', {
@@ -215,9 +215,9 @@ function q(e) {
                           }),
                     q &&
                         !L &&
-                        null != K &&
+                        null != Y &&
                         (0, s.jsx)(k, {
-                            asset: K,
+                            asset: Y,
                             reducedMotionEnabled: L,
                             visible: i
                         })
@@ -285,14 +285,14 @@ function q(e) {
                                     })
                                 ]
                             }),
-                            (0, s.jsx)(S.Fl, {
+                            (0, s.jsx)(B.Fl, {
                                 id: 'QuestPartnerBranding_gameLogotype',
                                 children: (e) =>
                                     (0, s.jsx)('img', {
                                         ref: e,
                                         className: w.partnerBranding,
                                         alt: r.config.messages.gameTitle,
-                                        src: O.url
+                                        src: M.url
                                     })
                             }),
                             (0, s.jsxs)('div', {
@@ -308,7 +308,7 @@ function q(e) {
                                         : (0, s.jsx)(p.Text, {
                                               variant: 'text-sm/medium',
                                               color: W ? 'text-muted' : 'always-white',
-                                              children: R.intl.format(R.t['7D8r4O'], { expiryDate: V })
+                                              children: R.intl.format(R.t['7D8r4O'], { expiryDate: U })
                                           })
                                 ]
                             })

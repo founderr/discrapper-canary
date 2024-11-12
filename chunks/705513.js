@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     LR: function () {
-        return h;
+        return p;
     },
     P_: function () {
         return v;
@@ -33,7 +33,7 @@ n.d(t, {
         return f;
     },
     er: function () {
-        return p;
+        return h;
     },
     f7: function () {
         return u;
@@ -230,7 +230,7 @@ var r = {
         a400: '#76ff03',
         a700: '#64dd17'
     },
-    h = {
+    p = {
         50: '#f9fbe7',
         100: '#f0f4c3',
         200: '#e6ee9c',
@@ -246,7 +246,7 @@ var r = {
         a400: '#c6ff00',
         a700: '#aeea00'
     },
-    p = {
+    h = {
         50: '#fffde7',
         100: '#fff9c4',
         200: '#fff59d',

@@ -73,7 +73,7 @@ let d = function (e, t) {
         }
         return String.fromCodePoint(...t);
     },
-    h = function (e) {
+    p = function (e) {
         let t = [],
             n = (e = c(e)).length,
             r = 128,
@@ -86,8 +86,8 @@ let d = function (e, t) {
             let n = 2147483647;
             for (let t of e) t >= r && t < n && (n = t);
             let c = _ + 1;
-            for (let h of (n - r > s((2147483647 - i) / c) && l('overflow'), (i += (n - r) * c), (r = n), e))
-                if ((h < r && ++i > 2147483647 && l('overflow'), h == r)) {
+            for (let p of (n - r > s((2147483647 - i) / c) && l('overflow'), (i += (n - r) * c), (r = n), e))
+                if ((p < r && ++i > 2147483647 && l('overflow'), p == r)) {
                     let e = i;
                     for (let n = 36; ; n += 36) {
                         let r = n <= a ? 1 : n >= a + 26 ? 26 : n - a;
@@ -109,10 +109,10 @@ e.exports = {
         encode: (e) => String.fromCodePoint(...e)
     },
     decode: _,
-    encode: h,
+    encode: p,
     toASCII: function (e) {
         return u(e, function (e) {
-            return n.test(e) ? 'xn--' + h(e) : e;
+            return n.test(e) ? 'xn--' + p(e) : e;
         });
     },
     toUnicode: function (e) {

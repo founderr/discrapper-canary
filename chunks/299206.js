@@ -14,11 +14,11 @@ function u(e) {
     let { id: t, label: n, onSuccess: i, shiftId: u, showIconFirst: c, showWithoutDeveloperMode: d, focusedClassName: f } = e,
         _ = o.Sb.useSetting();
     if (__OVERLAY__ || !(d || _) || !l.wS || null == t) return null;
-    let h = 'devmode-copy-id-'.concat(t);
+    let p = 'devmode-copy-id-'.concat(t);
     return (0, r.jsx)(
         s.MenuItem,
         {
-            id: h,
+            id: p,
             label: n,
             action: function (e) {
                 let n = null != u && e.shiftKey ? u : t;
@@ -28,6 +28,6 @@ function u(e) {
             iconLeft: c ? s.IdIcon : void 0,
             focusedClassName: f
         },
-        h
+        p
     );
 }

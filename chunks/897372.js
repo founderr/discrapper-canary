@@ -10,20 +10,20 @@ var r,
     d = n(4340),
     f = n(603528),
     _ = n(740362),
-    h = n(441390),
-    p = n(117901),
+    p = n(441390),
+    h = n(117901),
     m = n(175440),
     g = n(700312).codeAt,
     E = n(233591),
     v = n(714050),
     I = n(865312),
-    S = n(202934),
-    T = n(320273),
-    b = n(644659),
-    y = b.set,
-    A = b.getterFor('URL'),
-    N = T.URLSearchParams,
-    C = T.getState,
+    b = n(202934),
+    S = n(320273),
+    T = n(644659),
+    y = T.set,
+    A = T.getterFor('URL'),
+    N = S.URLSearchParams,
+    C = S.getState,
     R = o.URL,
     O = o.TypeError,
     D = o.parseInt,
@@ -158,20 +158,20 @@ var r,
         return e;
     },
     ec = {},
-    ed = h({}, ec, {
+    ed = p({}, ec, {
         ' ': 1,
         '"': 1,
         '<': 1,
         '>': 1,
         '`': 1
     }),
-    ef = h({}, ed, {
+    ef = p({}, ed, {
         '#': 1,
         '?': 1,
         '{': 1,
         '}': 1
     }),
-    e_ = h({}, ef, {
+    e_ = p({}, ef, {
         '/': 1,
         ':': 1,
         ';': 1,
@@ -183,11 +183,11 @@ var r,
         '^': 1,
         '|': 1
     }),
-    eh = function (e, t) {
+    ep = function (e, t) {
         var n = g(e, 0);
         return n > 32 && n < 127 && !_(t, e) ? e : encodeURIComponent(e);
     },
-    ep = {
+    eh = {
         ftp: 21,
         file: null,
         http: 80,
@@ -206,9 +206,9 @@ var r,
     eE = {},
     ev = {},
     eI = {},
+    eb = {},
     eS = {},
     eT = {},
-    eb = {},
     ey = {},
     eA = {},
     eN = {},
@@ -246,7 +246,7 @@ eB.prototype = {
             o = !1,
             l = !1,
             u = !1;
-        for (e = v(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ei, '$1'))), c = p((e = B(e, ea, ''))); a <= c.length; ) {
+        for (e = v(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ei, '$1'))), c = h((e = B(e, ea, ''))); a <= c.length; ) {
             switch (((d = c[a]), i)) {
                 case eE:
                     if (d && M(z, d)) (s += j(d)), (i = ev);
@@ -259,12 +259,12 @@ eB.prototype = {
                 case ev:
                     if (d && (M(q, d) || '+' === d || '-' === d || '.' === d)) s += j(d);
                     else if (':' === d) {
-                        if (t && (this.isSpecial() !== _(ep, s) || ('file' === s && (this.includesCredentials() || null !== this.port)) || ('file' === this.scheme && !this.host))) return;
+                        if (t && (this.isSpecial() !== _(eh, s) || ('file' === s && (this.includesCredentials() || null !== this.port)) || ('file' === this.scheme && !this.host))) return;
                         if (((this.scheme = s), t)) {
-                            this.isSpecial() && ep[this.scheme] === this.port && (this.port = null);
+                            this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eT), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
+                        (s = ''), 'file' === this.scheme ? (i = eL) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eb) : this.isSpecial() ? (i = eA) : '/' === c[a + 1] ? ((i = eS), a++) : ((this.cannotBeABaseURL = !0), G(this.path, ''), (i = ek));
                     } else {
                         if (t) return Y;
                         (s = ''), (i = eI), (a = 0);
@@ -277,23 +277,23 @@ eB.prototype = {
                         (this.scheme = n.scheme), (this.path = m(n.path)), (this.query = n.query), (this.fragment = ''), (this.cannotBeABaseURL = !0), (i = eG);
                         break;
                     }
-                    i = 'file' === n.scheme ? eL : eb;
+                    i = 'file' === n.scheme ? eL : eT;
                     continue;
-                case eS:
+                case eb:
                     if ('/' === d && '/' === c[a + 1]) (i = eN), a++;
                     else {
-                        i = eb;
+                        i = eT;
                         continue;
                     }
                     break;
-                case eT:
+                case eS:
                     if ('/' === d) {
                         i = eC;
                         break;
                     }
                     i = eP;
                     continue;
-                case eb:
+                case eT:
                     if (((this.scheme = n.scheme), d === r)) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = n.query);
                     else if ('/' === d || ('\\' === d && this.isSpecial())) i = ey;
                     else if ('?' === d) (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (this.path = m(n.path)), (this.query = ''), (i = eU);
@@ -323,20 +323,20 @@ eB.prototype = {
                     break;
                 case eC:
                     if ('@' === d) {
-                        o && (s = '%40' + s), (o = !0), (f = p(s));
-                        for (var c, d, f, h, g, E, I = 0; I < f.length; I++) {
-                            var S = f[I];
-                            if (':' === S && !u) {
+                        o && (s = '%40' + s), (o = !0), (f = h(s));
+                        for (var c, d, f, p, g, E, I = 0; I < f.length; I++) {
+                            var b = f[I];
+                            if (':' === b && !u) {
                                 u = !0;
                                 continue;
                             }
-                            var T = eh(S, e_);
-                            u ? (this.password += T) : (this.username += T);
+                            var S = ep(b, e_);
+                            u ? (this.password += S) : (this.username += S);
                         }
                         s = '';
                     } else if (d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) {
                         if (o && '' === s) return 'Invalid authority';
-                        (a -= p(s).length + 1), (s = ''), (i = eR);
+                        (a -= h(s).length + 1), (s = ''), (i = eR);
                     } else s += d;
                     break;
                 case eR:
@@ -349,13 +349,13 @@ eB.prototype = {
                         if (d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) {
                             if (this.isSpecial() && '' === s) return W;
                             if (t && '' === s && (this.includesCredentials() || null !== this.port)) return;
-                            if ((h = this.parseHost(s))) return h;
+                            if ((p = this.parseHost(s))) return p;
                             if (((s = ''), (i = eM), t)) return;
                             continue;
                         } else '[' === d ? (l = !0) : ']' === d && (l = !1), (s += d);
                     } else {
                         if ('' === s) return W;
-                        if ((h = this.parseHost(s))) return h;
+                        if ((p = this.parseHost(s))) return p;
                         if (((s = ''), (i = eD), t === eO)) return;
                     }
                     break;
@@ -364,9 +364,9 @@ eB.prototype = {
                     else {
                         if (!(d === r || '/' === d || '?' === d || '#' === d || ('\\' === d && this.isSpecial())) && !t) return K;
                         if ('' !== s) {
-                            var b = D(s, 10);
-                            if (b > 65535) return K;
-                            (this.port = this.isSpecial() && b === ep[this.scheme] ? null : b), (s = '');
+                            var T = D(s, 10);
+                            if (T > 65535) return K;
+                            (this.port = this.isSpecial() && T === eh[this.scheme] ? null : T), (s = '');
                         }
                         if (t) return;
                         i = eM;
@@ -409,7 +409,7 @@ eB.prototype = {
                             if (((this.host = ''), t)) return;
                             i = eM;
                         } else {
-                            if ((h = this.parseHost(s))) return h;
+                            if ((p = this.parseHost(s))) return p;
                             if (('localhost' === this.host && (this.host = ''), t)) return;
                             (s = ''), (i = eM);
                         }
@@ -435,16 +435,16 @@ eB.prototype = {
                         }
                         if (((s = ''), 'file' === this.scheme && (d === r || '?' === d || '#' === d))) for (; this.path.length > 1 && '' === this.path[0]; ) Z(this.path);
                         '?' === d ? ((this.query = ''), (i = eU)) : '#' === d && ((this.fragment = ''), (i = eG));
-                    } else s += eh(d, ef);
+                    } else s += ep(d, ef);
                     break;
                 case ek:
-                    '?' === d ? ((this.query = ''), (i = eU)) : '#' === d ? ((this.fragment = ''), (i = eG)) : d !== r && (this.path[0] += eh(d, ec));
+                    '?' === d ? ((this.query = ''), (i = eU)) : '#' === d ? ((this.fragment = ''), (i = eG)) : d !== r && (this.path[0] += ep(d, ec));
                     break;
                 case eU:
-                    t || '#' !== d ? d !== r && ("'" === d && this.isSpecial() ? (this.query += '%27') : '#' === d ? (this.query += '%23') : (this.query += eh(d, ec))) : ((this.fragment = ''), (i = eG));
+                    t || '#' !== d ? d !== r && ("'" === d && this.isSpecial() ? (this.query += '%27') : '#' === d ? (this.query += '%23') : (this.query += ep(d, ec))) : ((this.fragment = ''), (i = eG));
                     break;
                 case eG:
-                    d !== r && (this.fragment += eh(d, ed));
+                    d !== r && (this.fragment += ep(d, ed));
             }
             a++;
         }
@@ -459,7 +459,7 @@ eB.prototype = {
             this.host = t;
         } else {
             if (M(en, e)) return W;
-            for (r = 0, t = '', n = p(e); r < n.length; r++) t += eh(n[r], ec);
+            for (r = 0, t = '', n = h(e); r < n.length; r++) t += ep(n[r], ec);
             this.host = t;
         }
     },
@@ -470,7 +470,7 @@ eB.prototype = {
         return '' !== this.username || '' !== this.password;
     },
     isSpecial: function () {
-        return _(ep, this.scheme);
+        return _(eh, this.scheme);
     },
     shortenPath: function () {
         var e = this.path,
@@ -515,20 +515,20 @@ eB.prototype = {
         return this.username;
     },
     setUsername: function (e) {
-        var t = p(v(e));
+        var t = h(v(e));
         if (!this.cannotHaveUsernamePasswordPort()) {
             this.username = '';
-            for (var n = 0; n < t.length; n++) this.username += eh(t[n], e_);
+            for (var n = 0; n < t.length; n++) this.username += ep(t[n], e_);
         }
     },
     getPassword: function () {
         return this.password;
     },
     setPassword: function (e) {
-        var t = p(v(e));
+        var t = h(v(e));
         if (!this.cannotHaveUsernamePasswordPort()) {
             this.password = '';
-            for (var n = 0; n < t.length; n++) this.password += eh(t[n], e_);
+            for (var n = 0; n < t.length; n++) this.password += ep(t[n], e_);
         }
     },
     getHost: function () {
@@ -587,7 +587,7 @@ eB.prototype = {
 };
 var eZ = function (e) {
         var t = f(this, eF),
-            n = S(arguments.length, 1) > 1 ? arguments[1] : void 0,
+            n = b(arguments.length, 1) > 1 ? arguments[1] : void 0,
             r = y(t, new eB(e, !1, n));
         !a && ((t.href = r.serialize()), (t.origin = r.getOrigin()), (t.protocol = r.getProtocol()), (t.username = r.getUsername()), (t.password = r.getPassword()), (t.host = r.getHost()), (t.hostname = r.getHostname()), (t.port = r.getPort()), (t.pathname = r.getPathname()), (t.search = r.getSearch()), (t.searchParams = r.getSearchParams()), (t.hash = r.getHash()));
     },

@@ -20,16 +20,16 @@ var a = n(200651),
 n(51499), n(614277);
 var A = n(122289),
     E = n(70956),
-    f = n(981631),
-    N = n(388032),
+    N = n(981631),
+    f = n(388032),
     b = n(896769);
 let _ = new Set([h.h8.SKU_SELECT, h.h8.AWAITING_AUTHENTICATION, h.h8.AWAITING_PURCHASE_TOKEN_AUTH, h.h8.CONFIRM]);
 function y(e) {
-    let { steps: t, currentStep: n, body: i, paymentError: y, header: P, footer: g, isGift: C = !1, giftMessage: T = N.intl.string(N.t.DrgnS0), hideBreadcrumbs: I = !1, isLoading: S = !1, purchaseError: v, purchaseErrorBlockRef: x, planError: L, onScroll: R, scrollerClassName: O, hasCurrencies: M = !1 } = e,
-        w = null;
-    null != y && null == (0, h.ly)(y) ? (w = y) : null != v ? (w = v) : null != L && (w = L);
-    let D = null != w ? w.message : '';
-    null != w && w instanceof d.HF && (w.code === m.SM.CARD_DECLINED && M && (D += ' '.concat(N.intl.string(N.t.iWvwQU))), w.code === m.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (D = N.intl.string(N.t.ypuSd3)), w.code === f.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (D = N.intl.string(N.t.mXMmWF)));
+    let { steps: t, currentStep: n, body: i, paymentError: y, header: P, footer: g, isGift: C = !1, giftMessage: I = f.intl.string(f.t.DrgnS0), hideBreadcrumbs: T = !1, isLoading: S = !1, purchaseError: v, purchaseErrorBlockRef: x, planError: L, onScroll: R, scrollerClassName: O, hasCurrencies: M = !1 } = e,
+        D = null;
+    null != y && null == (0, h.ly)(y) ? (D = y) : null != v ? (D = v) : null != L && (D = L);
+    let w = null != D ? D.message : '';
+    null != D && D instanceof d.HF && (D.code === m.SM.CARD_DECLINED && M && (w += ' '.concat(f.intl.string(f.t.iWvwQU))), D.code === m.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (w = f.intl.string(f.t.ypuSd3)), D.code === N.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (w = f.intl.string(f.t.mXMmWF)));
     let { stripe: Z } = (0, p.usePaymentContext)();
     S = S || null == Z;
     let j = r.useRef(new o.V7());
@@ -49,7 +49,7 @@ function y(e) {
     }, [Z]);
     let k = t.includes(h.h8.PAYMENT_TYPE) ? h.h8.PAYMENT_TYPE : h.h8.ADD_PAYMENT_STEPS;
     return (0, a.jsxs)(l.Elements, {
-        options: f.OBo,
+        options: N.OBo,
         stripe: Z,
         children: [
             P,
@@ -61,11 +61,11 @@ function y(e) {
                               className: b.paymentNote,
                               iconSize: u.Z.Sizes.SMALL,
                               icon: c.GiftIcon,
-                              color: null == T ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
-                              children: T
+                              color: null == I ? u.Z.Colors.PRIMARY : u.Z.Colors.SECONDARY,
+                              children: I
                           })
                         : null,
-                    I
+                    T
                         ? null
                         : (0, a.jsx)('div', {
                               className: b.breadcrumbsWrapper,
@@ -82,13 +82,13 @@ function y(e) {
                     (0, a.jsxs)('div', {
                         className: b.bodyWrapper,
                         children: [
-                            null == w
+                            null == D
                                 ? null
                                 : (0, a.jsx)('div', {
                                       className: b.errorBlockWrapper,
                                       children: (0, a.jsx)(c.FormErrorBlock, {
                                           ref: x,
-                                          children: D
+                                          children: w
                                       })
                                   }),
                             S

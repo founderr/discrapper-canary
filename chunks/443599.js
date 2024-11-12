@@ -17,9 +17,9 @@ async function o(e, t, n, o) {
     try {
         let f,
             _ = u ? await (0, a.Nt)(e, t) : await (0, a.B0)(e, t),
-            h = [];
-        let p = (e) => {
-                h.push(e);
+            p = [];
+        let h = (e) => {
+                p.push(e);
             },
             m = (e) => {
                 (f = e), null == n || n();
@@ -30,14 +30,14 @@ async function o(e, t, n, o) {
                     menu: _,
                     reportType: e,
                     modalProps: t,
-                    onNavigate: p,
+                    onNavigate: h,
                     onSubmit: m,
                     isAuthenticated: u,
                     emailToken: c
                 }),
             {
                 onCloseCallback: () => {
-                    (0, a.k8)(e, h, f), null == o || o(), l && (0, a.X)(e, null != f ? f : null);
+                    (0, a.k8)(e, p, f), null == o || o(), l && (0, a.X)(e, null != f ? f : null);
                 }
             },
             d

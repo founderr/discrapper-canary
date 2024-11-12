@@ -11,8 +11,8 @@ var i = n(481060),
     d = n(592125),
     f = n(158776),
     _ = n(19780),
-    h = n(959457),
-    p = n(178635),
+    p = n(959457),
+    h = n(178635),
     m = n(531578),
     g = n(981631);
 function E(e, t, n) {
@@ -28,7 +28,7 @@ function E(e, t, n) {
         e
     );
 }
-class v extends p.Z {
+class v extends h.Z {
     _initialize() {
         l.Z.init();
     }
@@ -61,12 +61,12 @@ class v extends p.Z {
                 let { streamKey: a, canShowFeedback: l } = e,
                     u = (0, s.my)(a),
                     d = (0, o.L2)(u, f.Z),
-                    _ = null !== (t = h.Z.getVideoStats(a)) && void 0 !== t ? t : {},
-                    p = {
-                        media_session_id: h.Z.getMediaSessionId(a),
-                        rtc_connection_id: h.Z.getRtcConnectionId(a),
-                        stream_region: h.Z.getRegion(a),
-                        max_viewers: h.Z.getMaxViewers(a),
+                    _ = null !== (t = p.Z.getVideoStats(a)) && void 0 !== t ? t : {},
+                    h = {
+                        media_session_id: p.Z.getMediaSessionId(a),
+                        rtc_connection_id: p.Z.getRtcConnectionId(a),
+                        stream_region: p.Z.getRegion(a),
+                        max_viewers: p.Z.getMaxViewers(a),
                         ..._
                     };
                 l &&
@@ -79,7 +79,7 @@ class v extends p.Z {
                                     streamApplication: d,
                                     isStreamer: u.ownerId === c.default.getId(),
                                     ...t,
-                                    analyticsData: p
+                                    analyticsData: h
                                 });
                         });
                     });
@@ -105,7 +105,7 @@ class v extends p.Z {
                         rtc_connection_id: _.Z.getRTCConnectionId(),
                         media_session_id: _.Z.getMediaSessionId()
                     },
-                    h = u.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
+                    p = u.Z.getWindowOpen(g.KJ3.CHANNEL_CALL_POPOUT) ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT;
                 null != l &&
                     null != c &&
                     o &&
@@ -121,7 +121,7 @@ class v extends p.Z {
                                         analyticsData: f
                                     });
                             },
-                            { contextKey: h }
+                            { contextKey: p }
                         );
                     });
             }),

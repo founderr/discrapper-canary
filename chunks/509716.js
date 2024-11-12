@@ -13,7 +13,7 @@ function l(e) {
     let { option: t, content: n, guildId: l, channelId: u, allowEmptyValues: c, commandOrigin: d = i.bB.CHAT } = e,
         f = null != n ? (0, r.KF)({ content: n }, 'content').trim() : '',
         _ = t.required,
-        h = '' === f;
+        p = '' === f;
     if (!(null != n))
         return _
             ? {
@@ -21,7 +21,7 @@ function l(e) {
                   error: o.intl.string(o.t.JZJQLy)
               }
             : { success: !0 };
-    if (h)
+    if (p)
         return c
             ? { success: !0 }
             : _
@@ -33,13 +33,13 @@ function l(e) {
                     success: !1,
                     error: (0, s.al)(t)
                 };
-    let p =
+    let h =
             n.length > 1
                 ? {
                       type: 'text',
                       text: f
                   }
                 : n[0],
-        m = a.Z[t.type](p, t, u, l, d);
+        m = a.Z[t.type](h, t, u, l, d);
     return !m.success && null == m.error && (m.error = (0, s.al)(t)), m;
 }

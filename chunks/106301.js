@@ -19,17 +19,17 @@ function f(e, t, n) {
         e
     );
 }
-let _ = h();
-function h() {
+let _ = p();
+function p() {
     return {
         recentCustomStatuses: [],
         currentDefaultStatus: null
     };
 }
-class p extends (s = u.ZP.PersistedStore) {
+class h extends (s = u.ZP.PersistedStore) {
     initialize(e) {
         _ = {
-            ...h(),
+            ...p(),
             ...(null != e ? e : {})
         };
     }
@@ -52,11 +52,11 @@ class p extends (s = u.ZP.PersistedStore) {
         return null == r ? null : a;
     }
 }
-f(p, 'displayName', 'HangStatusStore'),
-    f(p, 'persistKey', 'HangStatusStore'),
-    (t.Z = new p(c.Z, {
+f(h, 'displayName', 'HangStatusStore'),
+    f(h, 'persistKey', 'HangStatusStore'),
+    (t.Z = new h(c.Z, {
         LOGOUT: function () {
-            _ = h();
+            _ = p();
         },
         UPDATE_HANG_STATUS: function (e) {
             let { status: t, saveAsDefault: n } = e;

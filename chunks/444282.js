@@ -15,17 +15,17 @@ var r = n(200651),
     d = n(703558),
     f = n(117530),
     _ = n(859235),
-    h = n(898463),
-    p = n(981631),
+    p = n(898463),
+    h = n(981631),
     m = n(52522),
     g = n(451328);
 function E(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         E = i.useRef(null),
         [v, I] = i.useState(!1),
-        S = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        T = i.useRef(null),
-        b = i.useCallback(() => {
+        b = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        S = i.useRef(null),
+        T = i.useCallback(() => {
             I(!0);
         }, []),
         y = i.useCallback(() => {
@@ -50,18 +50,18 @@ function E(e) {
             [t, n]
         );
     return (i.useEffect(() => {
-        let e = T.current;
+        let e = S.current;
         return (
-            null == S && (null == e || e.addEventListener('dragover', b, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == b && (null == e || e.addEventListener('dragover', T, !1), null == e || e.addEventListener('dragleave', y, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', b, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
+                null == e || e.removeEventListener('dragover', T, !1), null == e || e.removeEventListener('dragleave', y, !1), null == e || e.removeEventListener('drop', A, !1);
             }
         );
-    }, [S, b, y, A]),
-    null != S)
-        ? (0, r.jsx)(h.Z, {
+    }, [b, T, y, A]),
+    null != b)
+        ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: S,
+              upload: b,
               keyboardModeEnabled: a,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
@@ -75,7 +75,7 @@ function E(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: S.filename
+                          children: b.filename
                       })
                   ]
               }),
@@ -86,14 +86,14 @@ function E(e) {
               channelId: t,
               keyboardModeEnabled: a,
               onKeyDown: (e) => {
-                  if (e.which === p.yXg.ENTER) {
+                  if (e.which === h.yXg.ENTER) {
                       var t;
                       e.preventDefault(), null === (t = E.current) || void 0 === t || t.activateUploadDialogue();
                   }
               },
               className: s()(m.emptyOption, { [m.emptyOptionActive]: v }),
               draftType: d.d.SlashCommand,
-              ref: T,
+              ref: S,
               children: [
                   (0, r.jsx)('span', {
                       className: s()(m.optionName, { [m.optionNameActive]: v }),

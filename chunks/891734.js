@@ -17,18 +17,18 @@ function o(e, t) {
         d = n.flipVariations,
         f = n.allowedAutoPlacements,
         _ = void 0 === f ? i.Ct : f,
-        h = (0, r.Z)(o),
-        p = h
+        p = (0, r.Z)(o),
+        h = p
             ? d
                 ? i.bw
                 : i.bw.filter(function (e) {
-                      return (0, r.Z)(e) === h;
+                      return (0, r.Z)(e) === p;
                   })
             : i.mv,
-        m = p.filter(function (e) {
+        m = h.filter(function (e) {
             return _.indexOf(e) >= 0;
         });
-    0 === m.length && (m = p);
+    0 === m.length && (m = h);
     var g = m.reduce(function (t, n) {
         return (
             (t[n] = (0, a.Z)(e, {

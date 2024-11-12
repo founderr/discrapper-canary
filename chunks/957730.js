@@ -10,16 +10,16 @@ var r = n(392711),
     d = n(594199),
     f = n(11637),
     _ = n(467798),
-    h = n(601070),
-    p = n(695346),
+    p = n(601070),
+    h = n(695346),
     m = n(592125),
     g = n(984933),
     E = n(271383),
     v = n(430824),
     I = n(496675),
-    S = n(699516),
-    T = n(246946),
-    b = n(594174),
+    b = n(699516),
+    S = n(246946),
+    T = n(594174),
     y = n(483360),
     A = n(176354),
     N = n(51144),
@@ -161,7 +161,7 @@ let w = c.Z.RULES,
         },
         emoticon: {
             match(e, t, n) {
-                if (!p.ev.getSetting() || (0 !== n.length && !/\s$/.test(n))) return null;
+                if (!h.ev.getSetting() || (0 !== n.length && !/\s$/.test(n))) return null;
                 let r = u.ZP.EMOJI_SHORTCUT_RE.exec(e);
                 return null == r || (r[0].length !== e.length && ' ' !== e[r[0].length] && '\n' !== e[r[0].length]) ? null : r;
             },
@@ -231,9 +231,9 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(P),
             parse(e, t, n) {
                 let { isNotification: r } = n,
-                    i = b.default.getUser(e[1]);
+                    i = T.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = N.ZP.getUserTag(i, { identifiable: r && T.Z.enabled ? 'never' : 'always' });
+                let a = N.ZP.getUserTag(i, { identifiable: r && S.Z.enabled ? 'never' : 'always' });
                 if (!r) return { content: '@'.concat(a) };
                 {
                     let e = N.ZP.getGlobalName(i);
@@ -256,7 +256,7 @@ let w = c.Z.RULES,
             match: s().anyScopeRegex(U),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, o.F6)(t, b.default, S.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, o.F6)(t, T.default, b.Z, !0, !0) };
             }
         },
         emoji: {
@@ -358,7 +358,7 @@ function Y(e) {
     let s = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
-                    r = b.default.getUser(n);
+                    r = T.default.getUser(n);
                 return null == r
                     ? e
                     : (e.push({
@@ -400,13 +400,13 @@ function Y(e) {
                       )
                       .value()
                 : [],
-        d = h.Z.computeAllActiveJoinedThreads(n).map((e) => ({
+        d = p.Z.computeAllActiveJoinedThreads(n).map((e) => ({
             id: e.id,
             text: e.name
         })),
         f = l.ZP.getDisambiguatedEmojiContext(n),
         _ = f.getEscapedCustomEmoticonNames(),
-        p = f.getCustomEmoji(),
+        h = f.getCustomEmoji(),
         m = f.getCustomEmoticonRegex();
     return {
         inline: !0,
@@ -416,7 +416,7 @@ function Y(e) {
         channels: u.concat(c).concat(d),
         emojiContext: f,
         customEmoticonsRegex: m,
-        customEmoji: p,
+        customEmoji: h,
         textExclusions: _,
         disableErrorGuards: !0
     };

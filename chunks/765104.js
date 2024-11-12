@@ -7,16 +7,16 @@ var o,
     d,
     f,
     _ = n(392711),
-    h = n.n(_),
-    p = n(442837),
+    p = n.n(_),
+    h = n(442837),
     m = n(570140),
     g = n(902840),
     E = n(212819),
     v = n(353926),
     I = n(823385),
-    S = n(592125),
-    T = n(430824),
-    b = n(306680),
+    b = n(592125),
+    S = n(430824),
+    T = n(306680),
     y = n(944486),
     A = n(9156),
     N = n(594174),
@@ -42,13 +42,13 @@ function B() {
         .results.filter((e) => e.type === E.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
-class Z extends (l = p.ZP.PersistedStore) {
+class Z extends (l = h.ZP.PersistedStore) {
     getState() {
         return { shouldShowTopicsBar: r };
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, N.default, y.Z, T.Z, v.Z), this.syncWith([I.Z], B);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(b.Z, N.default, y.Z, S.Z, v.Z), this.syncWith([I.Z], B);
     }
     allSummaries() {
         return L;
@@ -86,7 +86,7 @@ class Z extends (l = p.ZP.PersistedStore) {
     shouldFetch(e, t) {
         var n, r;
         let i = x[e],
-            a = S.Z.getChannel(e);
+            a = b.Z.getChannel(e);
         if (!(0, g.Lp)(a)) return !1;
         if (null != t) {
             let e = null !== (n = null == i ? void 0 : i.summaryIdLastRequestedAt) && void 0 !== n ? n : 0,
@@ -116,11 +116,11 @@ class Z extends (l = p.ZP.PersistedStore) {
             n && (a = a.concat(M.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
-                    let t = S.Z.getChannel(e);
-                    return null != t && !A.ZP.isChannelMuted(t.guild_id, e) && b.ZP.hasUnread(e);
+                    let t = b.Z.getChannel(e);
+                    return null != t && !A.ZP.isChannelMuted(t.guild_id, e) && T.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
-                let t = S.Z.getChannel(e);
+                let t = b.Z.getChannel(e);
                 return (0, g.Lp)(t, !1, !1);
             })).slice(0, i)
         );
@@ -305,11 +305,11 @@ let F = new Z(m.Z, {
                 error: r,
                 requestArgs: { channelIds: i }
             } = e,
-            a = h()
+            a = p()
                 .toPairs(t)
                 .reduce((e, t) => {
                     let [n, r] = t,
-                        i = h()
+                        i = p()
                             .chain(r.map((e) => (0, O.b)(e, n)))
                             .sortBy((e) => R.default.extractTimestamp(e.startId))
                             .takeRight(75)
@@ -352,7 +352,7 @@ let F = new Z(m.Z, {
         var t, n, r;
         let { channel_id: i, summaries: a, guild_id: s } = e,
             o = Date.now(),
-            l = h()
+            l = p()
                 .chain(a)
                 .sortBy((e) => R.default.extractTimestamp(e.start_id))
                 .filter((e) => Object.keys(e).length > 0)
@@ -360,7 +360,7 @@ let F = new Z(m.Z, {
                 .reverse()
                 .value(),
             u = null !== (n = L[i]) && void 0 !== n ? n : [],
-            c = h()
+            c = p()
                 .chain(l)
                 .concat(u)
                 .sortBy((e) => R.default.extractTimestamp(e.startId))

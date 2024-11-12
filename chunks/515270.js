@@ -1,12 +1,12 @@
 n.d(t, {
     L6: function () {
-        return b;
+        return T;
     },
     ZP: function () {
         return E;
     },
     iF: function () {
-        return T;
+        return S;
     }
 }),
     n(47120),
@@ -24,18 +24,18 @@ var r = n(920478),
     d = n(887490),
     f = n(42530);
 let _ = new Set(['line']),
-    h = r.Z.listLanguages(),
-    p = new Map();
-for (let e of h) {
+    p = r.Z.listLanguages(),
+    h = new Map();
+for (let e of p) {
     e = e.toLowerCase();
     let t = r.Z.getLanguage(e);
     if (null == t) continue;
     let n = t.aliases;
-    if ((p.set(e, e), null != n)) for (let t of n) p.set(t.toLowerCase(), e);
+    if ((h.set(e, e), null != n)) for (let t of n) h.set(t.toLowerCase(), e);
 }
 let m = /^[a-z0-9_+\-.#]+$/,
     g = /^[a-z0-9_+\-.#]+$/i;
-for (let [e, t] of p) if (null == e.match(m)) throw Error('Language name does not match regex: '.concat(e));
+for (let [e, t] of h) if (null == e.match(m)) throw Error('Language name does not match regex: '.concat(e));
 function E(e) {
     let { onChange: t } = e,
         n = null;
@@ -84,15 +84,15 @@ function E(e) {
                                         }
                                         let c = n && null != o,
                                             f = n && 0 === s.length,
-                                            h = r && 0 === s.length,
+                                            p = r && 0 === s.length,
                                             m = (c ? s.slice(1) : s).length % 2 == 1,
                                             E = m && (null == u || '' === u || null != u.match(g)),
-                                            v = E && null != u && null !== (a = p.get(u.toLowerCase())) && void 0 !== a ? a : null;
+                                            v = E && null != u && null !== (a = h.get(u.toLowerCase())) && void 0 !== a ? a : null;
                                         return {
                                             blockEntry: t,
                                             wasInCodeBlock: n,
                                             isInCodeBlock: f,
-                                            isStyledCodeBlockLine: h,
+                                            isStyledCodeBlockLine: p,
                                             lang: m || c ? v : i,
                                             hljsTypes: null,
                                             closesCodeBlock: c,
@@ -114,12 +114,12 @@ function E(e) {
                                                 if (null != n && null != r.Z.getLanguage(n)) {
                                                     let r = (function (e, t) {
                                                         let n = ''.concat(e, '-').concat(t),
-                                                            r = S.get(n);
+                                                            r = b.get(n);
                                                         if (null != r) return r;
                                                         let i = o.default.highlight(t, e, !1);
                                                         if (null == i || i.illegal) return null;
                                                         let a = i.value.split('\n');
-                                                        return S.set(n, a), a;
+                                                        return b.set(n, a), a;
                                                     })(e, n);
                                                     if (null != r && r.length === t.length) {
                                                         let e = [];
@@ -200,8 +200,8 @@ let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
         maxAge: 1 * s.Z.Millis.MINUTE,
         updateAgeOnGet: !0
     },
-    S = new (a())(I);
-function T(e, t) {
+    b = new (a())(I);
+function S(e, t) {
     let n = 0;
     for (let i of d.bN.nodes(e, {
         at: {
@@ -222,8 +222,8 @@ function T(e, t) {
     }
     return n % 2 != 0;
 }
-function b(e) {
+function T(e) {
     if (null == e.selection) return !1;
     let t = d.M8.start(e.selection);
-    return T(e, t);
+    return S(e, t);
 }

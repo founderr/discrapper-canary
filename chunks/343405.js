@@ -49,11 +49,11 @@ e.exports = function (e) {
             begin: '\\(',
             end: '\\)'
         },
-        h = {
+        p = {
             endsWithParent: !0,
             relevance: 0
         },
-        p = [
+        h = [
             l,
             _,
             a,
@@ -84,7 +84,7 @@ e.exports = function (e) {
                     excludeEnd: !0,
                     endsParent: !0
                 }
-            ].concat(p)
+            ].concat(h)
         };
     return (
         (_.contains = [
@@ -97,12 +97,12 @@ e.exports = function (e) {
                 className: 'name',
                 begin: n,
                 relevance: 0,
-                starts: h
+                starts: p
             },
-            h
+            p
         ]),
-        (h.contains = p),
-        (d.contains = p),
+        (p.contains = h),
+        (d.contains = h),
         {
             name: 'Clojure',
             aliases: ['clj', 'edn'],

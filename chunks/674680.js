@@ -26,18 +26,18 @@ let g = {
 function f(e) {
     var t;
     let { achievementId: n, unlocked: d, size: f = a.AvatarSizes.SIZE_40 } = e,
-        _ = (0, s.ZP)(),
-        p = (0, c.oX)(n);
-    if (null == p) return null;
+        p = (0, s.ZP)(),
+        _ = (0, c.oX)(n);
+    if (null == _) return null;
     let h = (0, a.getAvatarSpecs)(f),
-        { name: E, rarity: b } = p,
+        { name: E, rarity: b } = _,
         { color: x } = (0, c.F7)(b),
-        C = (0, r.wj)(_) ? g : m,
-        T = (h.size - h.offset - 2 * h.stroke) * 0.8,
-        v = h.size - h.stroke,
+        C = (0, r.wj)(p) ? g : m,
+        v = (h.size - h.offset - 2 * h.stroke) * 0.8,
+        T = h.size - h.stroke,
         N = {
-            width: 0.4 * T,
-            height: 0.4 * T
+            width: 0.4 * v,
+            height: 0.4 * v
         },
         I = {
             width: N.width + 1,
@@ -49,8 +49,8 @@ function f(e) {
     return (0, i.jsxs)('div', {
         className: u.container,
         style: {
-            width: v,
-            height: v,
+            width: T,
+            height: T,
             padding: h.stroke
         },
         'aria-label': ''.concat(null !== (t = E()) && void 0 !== t ? t : ''),
@@ -60,8 +60,8 @@ function f(e) {
                 children: (0, i.jsx)(a.TrophyIcon, {
                     size: 'custom',
                     color: d ? x : (0, l.Lq)(C.trophy),
-                    width: T,
-                    height: T
+                    width: v,
+                    height: v
                 })
             }),
             !d &&

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     c: function () {
-        return p;
+        return h;
     }
 }),
     n(653041);
@@ -18,15 +18,15 @@ var r = n(200651),
     d = n(898188),
     f = n(541716),
     _ = n(407661),
-    h = n(703130);
-function p(e) {
-    let { channel: t, type: n, activeCommand: p, pendingReply: m } = e,
+    p = n(703130);
+function h(e) {
+    let { channel: t, type: n, activeCommand: h, pendingReply: m } = e,
         { activeCommandOption: g, activeCommandOptionStates: E } = (0, a.cj)([s.Z], () => ({
             activeCommandOption: s.Z.getActiveOption(t.id),
             activeCommandOptionStates: s.Z.getOptionStates(t.id)
         })),
         v = (0, c.e)(t),
-        I = (0, o.__)(p, t, { location: 'ChannelTextAreaBars' });
+        I = (0, o.__)(h, t, { location: 'ChannelTextAreaBars' });
     return i.useMemo(() => {
         let e = [],
             i = [];
@@ -37,14 +37,14 @@ function p(e) {
                     (0, r.jsx)(d.Z, {
                         guildId: t.guild_id,
                         channel: t,
-                        className: h.newMemberActionBar
+                        className: p.newMemberActionBar
                     })
                 ),
-            null != p &&
-                (I && e.push((0, r.jsx)(u.Z, { activeCommand: p })),
+            null != h &&
+                (I && e.push((0, r.jsx)(u.Z, { activeCommand: h })),
                 e.push(
                     (0, r.jsx)(l.Z, {
-                        activeCommand: p,
+                        activeCommand: h,
                         activeOption: null != g ? g : null,
                         optionStates: E,
                         channelId: t.id
@@ -63,7 +63,7 @@ function p(e) {
                 floating: i
             }
         );
-    }, [p, g, E, t, m, v, I, n]);
+    }, [h, g, E, t, m, v, I, n]);
 }
 function m(e) {
     let { bars: t } = e,
@@ -75,12 +75,12 @@ function m(e) {
               children: [
                   a.length > 0 &&
                       (0, r.jsx)('div', {
-                          className: h.floatingBars,
+                          className: p.floatingBars,
                           children: a
                       }),
                   n.length > 0 &&
                       (0, r.jsx)('div', {
-                          className: h.stackedBars,
+                          className: p.stackedBars,
                           children: n
                       })
               ]

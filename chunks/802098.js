@@ -10,39 +10,39 @@ var r,
     d = n(695346),
     f = n(581883),
     _ = n(596401);
-let h = {},
-    p = {},
+let p = {},
+    h = {},
     m = null,
     g = null,
     E = null,
     v = 'lastChangeLogDate',
     I = null,
-    S = null,
-    T = new Set();
-function b() {
+    b = null,
+    S = new Set();
+function T() {
     I = d.l4.getSetting();
 }
 class y extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.default, f.Z), this.syncWith([c.default], () => !0), this.syncWith([f.Z], b);
+        this.waitFor(c.default, f.Z), this.syncWith([c.default], () => !0), this.syncWith([f.Z], T);
         let e = l.K.get(v);
         if (null != e)
             try {
-                S = new Date(e);
+                b = new Date(e);
             } catch {
                 l.K.remove(v);
             }
     }
     getChangelog(e, t) {
         var n, r;
-        return null !== (r = null === (n = h[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : null;
+        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : null;
     }
     latestChangelogId() {
         return m;
     }
     getChangelogLoadStatus(e, t) {
         var n, r;
-        return null !== (r = null === (n = p[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : _.LU.NOT_LOADED;
+        return null !== (r = null === (n = h[e]) || void 0 === n ? void 0 : n[t]) && void 0 !== r ? r : _.LU.NOT_LOADED;
     }
     hasLoadedConfig() {
         return null != E;
@@ -57,18 +57,18 @@ class y extends (r = o.ZP.Store) {
         return I;
     }
     lastSeenChangelogDate() {
-        return S;
+        return b;
     }
     getStateForDebugging() {
         return {
             changelogConfig: E,
-            loadedChangelogs: p,
+            loadedChangelogs: h,
             lastSeenChangelogId: I,
-            lastSeenChangelogDate: S
+            lastSeenChangelogDate: b
         };
     }
     isLocked() {
-        return T.size > 0;
+        return S.size > 0;
     }
 }
 (s = 'ChangelogStore'),
@@ -83,13 +83,13 @@ class y extends (r = o.ZP.Store) {
     (t.Z = new y(u.Z, {
         CHANGE_LOG_LOCK: function (e) {
             let { key: t } = e;
-            if (T.has(t)) return !1;
-            (T = new Set(T)).add(t);
+            if (S.has(t)) return !1;
+            (S = new Set(S)).add(t);
         },
         CHANGE_LOG_UNLOCK: function (e) {
             let { key: t } = e;
-            if (!T.has(t)) return !1;
-            (T = new Set(T)).delete(t);
+            if (!S.has(t)) return !1;
+            (S = new Set(S)).delete(t);
         },
         CHANGE_LOG_SET_CONFIG: function (e) {
             let { config: t, latestChangelogId: n } = e;
@@ -97,8 +97,8 @@ class y extends (r = o.ZP.Store) {
         },
         CHANGE_LOG_FETCH_SUCCESS: function (e) {
             let { id: t, changelog: n } = e;
-            null == h[t] && (h[t] = {}),
-                (h[t][n.locale] = {
+            null == p[t] && (p[t] = {}),
+                (p[t][n.locale] = {
                     id: t,
                     date: n.date,
                     body: n.content,
@@ -106,13 +106,13 @@ class y extends (r = o.ZP.Store) {
                     locale: n.locale,
                     [n.asset_type === _.h3.YOUTUBE_VIDEO_ID ? 'youtube_video_id' : 'image']: n.asset
                 }),
-                null == p[t] && (p[t] = {}),
-                (p[t][n.locale] = _.LU.LOADED_SUCCESS);
+                null == h[t] && (h[t] = {}),
+                (h[t][n.locale] = _.LU.LOADED_SUCCESS);
         },
         CHANGE_LOG_FETCH_FAILED: function (e) {
             let { id: t, locale: n } = e;
-            if (null != h[t] && null != h[t][n]) return !1;
-            null == p[t] && (p[t] = {}), (p[t][n] = _.LU.LOADED_FAILURE);
+            if (null != p[t] && null != p[t][n]) return !1;
+            null == h[t] && (h[t] = {}), (h[t][n] = _.LU.LOADED_FAILURE);
         },
         CHANGE_LOG_SET_OVERRIDE: function (e) {
             let { id: t } = e;
@@ -120,6 +120,6 @@ class y extends (r = o.ZP.Store) {
         },
         CHANGE_LOG_MARK_SEEN: function (e) {
             let { changelogDate: t } = e;
-            (S = new Date(t)), l.K.set(v, t);
+            (b = new Date(t)), l.K.set(v, t);
         }
     }));

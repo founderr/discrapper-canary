@@ -15,16 +15,16 @@ var i = n(120356),
     d = n(388032),
     f = n(235677);
 function _(e) {
-    let { user: t, guildId: n, channelId: i, friendToken: _, className: h } = e,
-        p = u.ZP.getName(n, i, t),
+    let { user: t, guildId: n, channelId: i, friendToken: _, className: p } = e,
+        h = u.ZP.getName(n, i, t),
         { trackUserProfileAction: m } = (0, c.KZ)(),
         { newestAnalyticsLocation: g } = (0, l.ZP)();
     return (0, r.jsxs)('div', {
-        className: a()(f.container, h),
+        className: a()(f.container, p),
         children: [
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/normal',
-                children: d.intl.format(d.t.uIomX1, { username: p })
+                children: d.intl.format(d.t.uIomX1, { username: h })
             }),
             (0, r.jsxs)('div', {
                 className: f.buttonContainer,

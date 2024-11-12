@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(390547),
@@ -17,7 +17,7 @@ var r = n(392711),
     d = n(709054),
     f = n(981631),
     _ = n(490897);
-function h(e, t, n) {
+function p(e, t, n) {
     let r = i()
         .flatMap(e, (e) => {
             let t = l.ZP.getSelectableChannelIds(e),

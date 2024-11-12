@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     eH: function () {
-        return S;
+        return b;
     },
     wG: function () {
         return v;
@@ -30,8 +30,8 @@ var r = n(512722),
     d = n(647177),
     f = n(63985),
     _ = n(638457),
-    h = n(678916),
-    p = n(981631);
+    p = n(678916),
+    h = n(981631);
 async function m(e) {
     let t = await fetch(e),
         n = await t.blob();
@@ -52,7 +52,7 @@ async function E(e, t, n) {
     let l,
         c = !1;
     if (null == n) return g(e, t, a.zZ.NONE);
-    if (n === h.f7) return g(e, t, a.zZ.BACKGROUND_BLUR);
+    if (n === p.f7) return g(e, t, a.zZ.BACKGROUND_BLUR);
     if ('string' == typeof n || 'number' == typeof n) {
         let e = (0, f.Z)()[n];
         (c = null !== (r = e.isVideo) && void 0 !== r && r), (l = e.source);
@@ -63,7 +63,7 @@ async function E(e, t, n) {
                 userId: n.user_id,
                 assetId: n.id,
                 assetHash: e,
-                size: h.HE.width
+                size: p.HE.width
             }));
     }
     if (null != l)
@@ -76,12 +76,12 @@ async function E(e, t, n) {
                           (n.crossOrigin = 'anonymous'),
                               (n.onload = () => {
                                   let t = document.createElement('canvas');
-                                  (t.width = h.HE.width), (t.height = h.HE.height);
+                                  (t.width = p.HE.width), (t.height = p.HE.height);
                                   let r = t.getContext('2d');
                                   i()(null != r, 'Canvas context is missing');
                                   let a = n.height / n.width,
-                                      s = h.HE.height,
-                                      o = h.HE.height / a,
+                                      s = p.HE.height,
+                                      o = p.HE.height / a,
                                       l = (t.width - o) / 2,
                                       u = (t.height - s) / 2;
                                   r.drawImage(n, l, u, o, s);
@@ -119,9 +119,9 @@ async function I(e, t, n) {
         ),
         r && (0, d.Bh)(e, i, 'Preview');
 }
-function S() {
+function b() {
     let e = s.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.P)(e);
-    (0, _.Z)() && !c.Z.hasBeenApplied && null != t && v(t, { track: !1 }).catch(p.dG4);
+    (0, _.Z)() && !c.Z.hasBeenApplied && null != t && v(t, { track: !1 }).catch(h.dG4);
 }

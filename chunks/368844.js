@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     aU: function () {
-        return T;
+        return S;
     },
     cp: function () {
         return C;
@@ -18,7 +18,7 @@ n.d(t, {
         return A;
     },
     zy: function () {
-        return b;
+        return T;
     }
 }),
     n(789020),
@@ -35,8 +35,8 @@ var r,
     d = n(594174),
     f = n(630388),
     _ = n(823379),
-    h = n(709054),
-    p = n(591759),
+    p = n(709054),
+    h = n(591759),
     m = n(981631);
 function g(e) {
     if (null == e) return !1;
@@ -63,10 +63,10 @@ function I(e) {
                       let { proxy_url: n, url: r, description: i, spoiler: a, flags: o, width: l, height: u, filename: c, content_scan_version: d } = e;
                       if (null == l || null == u) return null;
                       let _ = (0, s.NU)(c),
-                          h = null != e.flags && (0, f.yE)(e.flags, m.J0y.IS_THUMBNAIL),
+                          p = null != e.flags && (0, f.yE)(e.flags, m.J0y.IS_THUMBNAIL),
                           g = null != n ? n : r;
                       if (_) {
-                          let e = p.Z.toURLSafe(n);
+                          let e = h.Z.toURLSafe(n);
                           if (null == e) return null;
                           e.searchParams.append('format', 'webp'), (g = e.toString());
                       }
@@ -79,7 +79,7 @@ function I(e) {
                           contentScanVersion: d,
                           alt: i,
                           isVideo: _,
-                          isThumbnail: h,
+                          isThumbnail: p,
                           type: 'attachment',
                           attachmentId: e.id,
                           mediaIndex: t
@@ -88,7 +88,7 @@ function I(e) {
                   .filter(_.lm);
     })(e, l.x4.useSetting());
 }
-function S(e, t) {
+function b(e, t) {
     let n = l.RS.useSetting(),
         r = l.NA.useSetting();
     if (null == e) return [];
@@ -117,9 +117,9 @@ function S(e, t) {
               .filter(_.lm)
         : [];
 }
-function T(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = b(e, n);
+        r = T(e, n);
     return a.useMemo(() => {
         if (null == t) return [];
         if (!t.isMediaChannel()) return r;
@@ -129,26 +129,26 @@ function T(e, t) {
         }
     }, [t, r]);
 }
-function b(e, t) {
+function T(e, t) {
     let n = I(e);
-    return [...n, ...S(e, t)];
+    return [...n, ...b(e, t)];
 }
 function y(e, t) {
     var n, r;
     let i = I(e),
-        a = S(e, t);
+        a = b(e, t);
     return null !== (r = null !== (n = i[0]) && void 0 !== n ? n : a[0]) && void 0 !== r ? r : null;
 }
 function A(e, t) {
     let n = I(e),
-        r = S(e, t);
+        r = b(e, t);
     return null == n[0] && null != r[0];
 }
 function N(e, t) {
     var n;
     let r = u.Z.getChannel(t);
     if (null == r) return !1;
-    let i = c.Z.getMessage(r.id, h.default.castChannelIdAsMessageId(r.id));
+    let i = c.Z.getMessage(r.id, p.default.castChannelIdAsMessageId(r.id));
     return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => g(e) || E(e)));
 }
 function C(e) {

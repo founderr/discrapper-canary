@@ -15,12 +15,12 @@ async function u(e, t) {
     if (c(u)) return u;
     let d = null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
         { activityConfigs: f, applications: _ } = await (0, o.w1)({ guildId: d }),
-        h = (0, l.Z)({
+        p = (0, l.Z)({
             applicationId: e,
             activityConfigs: f,
             applications: _
         });
-    if (c(null == h ? void 0 : h.application)) return null == h ? void 0 : h.application;
+    if (c(null == p ? void 0 : p.application)) return null == p ? void 0 : p.application;
     {
         let t = await (0, i.UM)(e);
         return a.Z.createFromServer(t);

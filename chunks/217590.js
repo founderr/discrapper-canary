@@ -1,9 +1,9 @@
 n.d(t, {
     Iw: function () {
-        return p;
+        return h;
     },
     On: function () {
-        return h;
+        return p;
     },
     Yk: function () {
         return _;
@@ -84,7 +84,7 @@ let u = (e) => {
                 query: t
             });
     },
-    h = (e) => {
+    p = (e) => {
         let t;
         let { sticker: n, category: i } = e;
         n.type === a.n0.GUILD && (t = n.guild_id),
@@ -98,7 +98,7 @@ let u = (e) => {
                 is_custom: (0, a.z)(n.type)
             });
     },
-    p = (e) => {
+    h = (e) => {
         if (null != e && '' !== e)
             r.ZP.trackWithMetadata(s.rMx.SEARCH_RESULT_EMPTY, {
                 query: e,

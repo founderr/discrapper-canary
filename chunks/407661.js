@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 });
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(623292),
     f = n(703656),
     _ = n(665906),
-    h = n(488131),
-    p = n(375954),
+    p = n(488131),
+    h = n(375954),
     m = n(962293),
     g = n(981631),
     E = n(388032),
@@ -33,7 +33,7 @@ function I(e) {
         }, [t]),
         (0, r.jsxs)(l.Clickable, {
             onClick: function () {
-                (0, d.A6)(t.id), (0, h.R6)(t, n, 'Reply Chain Nudge');
+                (0, d.A6)(t.id), (0, p.R6)(t, n, 'Reply Chain Nudge');
             },
             className: v.threadSuggestionBar,
             focusProps: {
@@ -59,19 +59,19 @@ function I(e) {
         })
     );
 }
-function S(e) {
+function b(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: a, shouldMention: u, showMentionToggle: h } = t,
-        { nick: S, colorString: T, colorRoleName: b } = (0, c.ZP)(a),
+        { channel: i, message: a, shouldMention: u, showMentionToggle: p } = t,
+        { nick: b, colorString: S, colorRoleName: T } = (0, c.ZP)(a),
         y = (function (e, t) {
             let n = e.id,
                 r = t.id;
             return (0, o.e7)(
-                [p.Z],
+                [h.Z],
                 () => {
                     let e = r;
                     for (let t = 0; t < 10; t++) {
-                        let r = p.Z.getMessage(n, e);
+                        let r = h.Z.getMessage(n, e);
                         if ((null == r ? void 0 : r.type) !== g.uaV.REPLY || null == r.messageReference) return t;
                         e = r.messageReference.message_id;
                     }
@@ -113,9 +113,9 @@ function S(e) {
                                             l.NameWithRole,
                                             {
                                                 className: v.name,
-                                                name: S,
-                                                color: T,
-                                                roleName: b
+                                                name: b,
+                                                color: S,
+                                                roleName: T
                                             },
                                             t
                                         )
@@ -125,7 +125,7 @@ function S(e) {
                         (0, r.jsxs)('div', {
                             className: v.actions,
                             children: [
-                                h &&
+                                p &&
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.Tooltip, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -49,9 +49,9 @@ function _(e) {
         ]
     });
 }
-function h(e) {
-    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: h = !1 } = e,
-        p = i.useCallback(
+function p(e) {
+    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: o = !1, hideTooltip: p = !1 } = e,
+        h = i.useCallback(
             (e) => {
                 let { className: t } = e;
                 return a
@@ -72,7 +72,7 @@ function h(e) {
         onClick: function () {
             l.Z.toggleParticipants(t, !a);
         },
-        iconComponent: p,
-        shouldShowTooltip: !h
+        iconComponent: h,
+        shouldShowTooltip: !p
     });
 }

@@ -10,17 +10,17 @@ var i = n(704215),
     d = n(542238),
     f = n(927923),
     _ = n(981631),
-    h = n(388032),
-    p = n(820611);
+    p = n(388032),
+    h = n(820611);
 let m = 'game_console_alert_modal',
     g = 'game_console_ptt_alert_modal';
 t.Z = {
     maybeShowPTTAlert(e) {
         if (u.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
         let t = {
-            [_.ABu.XBOX]: h.intl.string(h.t.bVZ7v7),
-            [_.ABu.PLAYSTATION]: h.intl.string(h.t['6iqUsb']),
-            [_.ABu.PLAYSTATION_STAGING]: h.intl.string(h.t['6iqUsb'])
+            [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
+            [_.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
+            [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
         }[e];
         return null == t
             ? Promise.resolve()
@@ -32,9 +32,9 @@ t.Z = {
                           (0, r.jsx)(s.default, {
                               ...e,
                               title: t,
-                              body: h.intl.string(h.t.bL21zs),
+                              body: p.intl.string(p.t.bL21zs),
                               onConfirm: n,
-                              titleClassName: p.title
+                              titleClassName: h.title
                           });
                   (0, a.nf)(g) ? (0, a.o)(g, o) : (0, a.h7)(o, { modalKey: g });
               });
@@ -46,7 +46,7 @@ t.Z = {
                 errorCodeMessage: i,
                 dismissCallback: () => (0, a.Mr)(m)
             });
-        function h() {
+        function p() {
             null != l &&
                 ((0, o.Z)({ platformType: l }),
                 c.default.track(_.rMx.ACCOUNT_LINK_STEP, {
@@ -55,13 +55,13 @@ t.Z = {
                     platform_type: l
                 }));
         }
-        let p = (e) =>
+        let h = (e) =>
             (0, r.jsx)(s.default, {
                 ...e,
                 title: t,
                 body: u,
-                onConfirm: h
+                onConfirm: p
             });
-        (0, a.nf)(m) ? (0, a.o)(m, p) : (0, a.h7)(p, { modalKey: m });
+        (0, a.nf)(m) ? (0, a.o)(m, h) : (0, a.h7)(h, { modalKey: m });
     }
 };

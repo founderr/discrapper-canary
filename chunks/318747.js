@@ -11,9 +11,9 @@ var r = n(120356),
     g = n(983712);
 t.Z = (e) => {
     let { className: t, forceWhite: n, giftMessage: r, subscriptionTier: m, ...f } = e,
-        _ = (0, o.ZP)(),
-        p = (0, s.wj)(_) || n,
-        h = p ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
+        p = (0, o.ZP)(),
+        _ = (0, s.wj)(p) || n,
+        h = _ ? l.ButtonColors.WHITE : l.ButtonColors.BRAND,
         E = m === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
     return (0, i.jsx)(c.Z, {
         isGift: !0,
@@ -21,7 +21,7 @@ t.Z = (e) => {
         look: l.ButtonLooks.OUTLINED,
         buttonText: E,
         giftMessage: r,
-        className: a()(t, g.giftButton, p ? g.buttonWhite : g.buttonBrand),
+        className: a()(t, g.giftButton, _ ? g.buttonWhite : g.buttonBrand),
         subscriptionTier: m,
         ...f
     });

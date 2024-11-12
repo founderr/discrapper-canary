@@ -157,11 +157,11 @@ let _ = {
             o = s.Z.getWidgetConfig(f.Odu.GUILDS_TEXT);
         if (0 === n.length || null == i || null == a || null == o) return;
         let _ = l.Z.windowSize(),
-            h = {
+            p = {
                 width: 0,
                 height: 0
             },
-            p = {
+            h = {
                 top: 0,
                 left: 0,
                 right: 0,
@@ -186,10 +186,10 @@ let _ = {
                 let { type: t, id: n, anchor: r, size: i } = e;
                 switch (t) {
                     case f.Odu.TEXT:
-                        (h = (0, u.w_)(i, _)), (0, d.E9)(n);
+                        (p = (0, u.w_)(i, _)), (0, d.E9)(n);
                         break;
                     case f.Odu.GUILDS:
-                        (p = (0, u.vS)(r, i, _)), (m = (0, u.w_)(i, _)), (0, d.E9)(n);
+                        (h = (0, u.vS)(r, i, _)), (m = (0, u.w_)(i, _)), (0, d.E9)(n);
                         break;
                     case f.Odu.GUILDS_TEXT:
                         (g = (0, u.vS)(r, i, _)), (E = (0, u.w_)(i, _)), (0, d.E9)(n);
@@ -219,20 +219,20 @@ let _ = {
                         y: 10
                     }
                 ),
-                h = s.Z.getWidgetDefaultSettings(f.Odu.TEXT);
-            if (null == h) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
+                p = s.Z.getWidgetDefaultSettings(f.Odu.TEXT);
+            if (null == p) throw Error('OverlayActionCreators.setPinChat: No config for TEXT exists');
             (0, d.A4)({
-                ...h,
+                ...p,
                 type: f.Odu.TEXT,
                 id: (0, r.Z)(),
                 size: c,
                 anchor: l,
                 layoutId: t
             });
-            let p = s.Z.getWidgetDefaultSettings(f.Odu.GUILDS);
-            if (null == p) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
+            let h = s.Z.getWidgetDefaultSettings(f.Odu.GUILDS);
+            if (null == h) throw Error('OverlayActionCreators.setPinChat: No config for GUILDS exists');
             (0, d.A4)({
-                ...p,
+                ...h,
                 type: f.Odu.GUILDS,
                 id: (0, r.Z)(),
                 size: a,
@@ -240,10 +240,10 @@ let _ = {
                 layoutId: t
             });
         } else {
-            let e = 'auto' === h.width ? a.minSize.width : h.width;
+            let e = 'auto' === p.width ? a.minSize.width : p.width;
             e += i.minSize.width;
             let [n, o] = (0, u.o4)(
-                    p,
+                    h,
                     {
                         height: m.height,
                         width: e

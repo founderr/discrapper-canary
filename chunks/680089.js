@@ -22,16 +22,16 @@ function d(e, t, n) {
 }
 let f = {},
     _ = 0;
-function h() {
+function p() {
     _ += 1;
 }
-function p(e) {
+function h(e) {
     if (null == f[e]) return !1;
     delete f[e];
 }
 class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(o.Z, l.Z), this.removeChangeListener(h), this.addChangeListener(h), (f = null != e ? e : {});
+        this.waitFor(o.Z, l.Z), this.removeChangeListener(p), this.addChangeListener(p), (f = null != e ? e : {});
     }
     getState() {
         return f;
@@ -68,7 +68,7 @@ d(m, 'displayName', 'CategoryCollapseStore'),
         },
         CATEGORY_EXPAND: function (e) {
             let { id: t } = e;
-            return p(t);
+            return h(t);
         },
         CATEGORY_COLLAPSE_ALL: function (e) {
             let { guildId: t } = e;
@@ -88,6 +88,6 @@ d(m, 'displayName', 'CategoryCollapseStore'),
             let {
                 channel: { id: t }
             } = e;
-            return p(t);
+            return h(t);
         }
     }));

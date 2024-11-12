@@ -1,6 +1,6 @@
 n.d(t, {
     O8: function () {
-        return h;
+        return p;
     },
     V: function () {
         return f;
@@ -60,7 +60,7 @@ let f = () => ({
         let t = e.state;
         return t === r.tNA.CUSTOM ? null : f()[t];
     },
-    h = (e) => {
+    p = (e) => {
         var t;
         return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null === (t = _(e)) || void 0 === t ? void 0 : t.title;
     };

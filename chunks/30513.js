@@ -52,12 +52,12 @@ let c = () => ({
         icon: i.GifIcon,
         description: u.intl.string(u.t.AU0zcX)
     }),
-    h = () => ({
+    p = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
         icon: i.ShieldUserIcon,
         description: u.intl.string(u.t.zZe94u)
     }),
-    p = function () {
+    h = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
         return {
             color: e,
@@ -107,12 +107,12 @@ let c = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_YELLOW.css,
         description: u.intl.string(u.t['3MpIx8'])
     }),
-    S = () => ({
+    b = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
         icon: i.ReactionIcon,
         description: u.intl.string(u.t.gAeHJS)
     }),
-    T = function () {
+    S = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.intl.string(u.t.SQV8g4);
         return {
             color: r.Z.unsafe_rawColors.PREMIUM_PERK_BLUE.css,
@@ -120,7 +120,7 @@ let c = () => ({
             description: e
         };
     },
-    b = () => ({
+    T = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
         icon: o.Z,
         description: u.intl.string(u.t.Tm40TU)
@@ -134,23 +134,23 @@ let c = () => ({
         };
     };
 function A() {
-    return [h(), f(), p(), T()];
+    return [p(), f(), h(), S()];
 }
 function N() {
-    return [h(), m(l.Eu4.TIER_2), y(), T()];
+    return [p(), m(l.Eu4.TIER_2), y(), S()];
 }
 function C() {
-    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), b(), g(), T()];
+    return [m(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), T(), g(), S()];
 }
 function R() {
-    return [g(), _(), m(l.Eu4.TIER_3), T()];
+    return [g(), _(), m(l.Eu4.TIER_3), S()];
 }
 function O() {
-    return [c(), p(), d(), T()];
+    return [c(), h(), d(), S()];
 }
 function D() {
-    return [p(), T()];
+    return [h(), S()];
 }
 function L() {
-    return [v(), I(), E(), S()];
+    return [v(), I(), E(), b()];
 }

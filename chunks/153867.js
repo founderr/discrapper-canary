@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     ZI: function () {
-        return p;
+        return h;
     }
 });
 var r = n(524437),
@@ -28,7 +28,7 @@ function _(e) {
         c.fy.FREQUENT_USER_ACTION
     );
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case d.BRd.DARK:
             return r.Q2.DARK;
@@ -42,7 +42,7 @@ function h(e) {
             return r.Q2.DARK;
     }
 }
-function p(e) {
+function h(e) {
     let { backgroundGradientPresetId: t, theme: n, useSystemTheme: r } = e,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.fy.INFREQUENT_USER_ACTION,
         l = 'system' === n ? f.K.ON : f.K.OFF;
@@ -68,7 +68,7 @@ function p(e) {
             'appearance',
             (e) => {
                 var r;
-                (e.theme = h(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
+                (e.theme = p(n)), (e.clientThemeSettings = { backgroundGradientPresetId: null != (r = { backgroundGradientPresetId: t }).backgroundGradientPresetId ? i.yC.create({ value: r.backgroundGradientPresetId }) : void 0 });
             },
             s
         );
@@ -155,7 +155,7 @@ t.ZP = {
                 c.hW.updateAsync(
                     'appearance',
                     (t) => {
-                        t.theme = h(e);
+                        t.theme = p(e);
                     },
                     c.fy.INFREQUENT_USER_ACTION
                 );

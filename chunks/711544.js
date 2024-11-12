@@ -36,16 +36,16 @@ t.Z = {
             d = a(u, r),
             f = a(c, o, l),
             _ = s(d),
-            h = s(f);
+            p = s(f);
         (t.modifiersData[n] = {
             referenceClippingOffsets: d,
             popperEscapeOffsets: f,
             isReferenceHidden: _,
-            hasPopperEscaped: h
+            hasPopperEscaped: p
         }),
             (t.attributes.popper = Object.assign({}, t.attributes.popper, {
                 'data-popper-reference-hidden': _,
-                'data-popper-escaped': h
+                'data-popper-escaped': p
             }));
     }
 };

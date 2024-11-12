@@ -11,22 +11,22 @@ e.exports = function (e, t, n, a, s, o) {
     }
     var _ = o.get(e);
     if (_ && o.get(t)) return _ == t;
-    var h = !0;
+    var p = !0;
     o.set(e, t), o.set(t, e);
-    for (var p = l; ++d < c; ) {
+    for (var h = l; ++d < c; ) {
         var m = e[(f = u[d])],
             g = t[f];
         if (a) var E = l ? a(g, m, f, t, e, o) : a(m, g, f, e, t, o);
         if (!(void 0 === E ? m === g || s(m, g, n, a, o) : E)) {
-            h = !1;
+            p = !1;
             break;
         }
-        p || (p = 'constructor' == f);
+        h || (h = 'constructor' == f);
     }
-    if (h && !p) {
+    if (p && !h) {
         var v = e.constructor,
             I = t.constructor;
-        v != I && 'constructor' in e && 'constructor' in t && !('function' == typeof v && v instanceof v && 'function' == typeof I && I instanceof I) && (h = !1);
+        v != I && 'constructor' in e && 'constructor' in t && !('function' == typeof v && v instanceof v && 'function' == typeof I && I instanceof I) && (p = !1);
     }
-    return o.delete(e), o.delete(t), h;
+    return o.delete(e), o.delete(t), p;
 };

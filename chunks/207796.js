@@ -3,13 +3,13 @@ n.d(t, {
         return v;
     },
     GN: function () {
-        return h;
+        return p;
     },
     PJ: function () {
         return m;
     },
     fH: function () {
-        return p;
+        return h;
     },
     hz: function () {
         return o;
@@ -36,7 +36,7 @@ var r,
     f = n(433517),
     _ = n(963202);
 ((r = s || (s = {})).ADMIN_UPSELL = 'admin_upsell'), (r.GET_STARTED = 'get_started'), (r.DISCOVERY = 'discovery'), (r.PLAYSTYLE = 'playstyle'), (r.TRAITS = 'traits'), (r.GAMES = 'games'), (r.SAVED_GUILDS = 'saved_guilds'), (r.PREFERENCES = 'preferences'), ((i = o || (o = {})).NONE = 'none'), (i.VALORANT = 'valorant'), (i.GENSHIN = 'genshin'), ((a = l || (l = {})).USER_UPSELL = 'user_upsell'), (a.USER_ONBOARDING = 'user_onboarding');
-let h = (0, c.F)()(
+let p = (0, c.F)()(
     (0, u.tJ)(
         (e) => ({
             mode: 'admin_upsell',
@@ -99,18 +99,18 @@ let h = (0, c.F)()(
         }
     )
 );
-function p(e, t) {
-    let n = h.getState().mode,
-        r = h.getState().completedNux;
+function h(e, t) {
+    let n = p.getState().mode,
+        r = p.getState().completedNux;
     if ('admin_upsell' === e) {
         let t = (0, _.rx)('setClanDiscoveryMode'),
-            n = h.getState().dismissedPilotAdminNux;
+            n = p.getState().dismissedPilotAdminNux;
         t && n && (e = 'discovery');
-        let r = h.getState().dismissedSignupAdmin;
+        let r = p.getState().dismissedSignupAdmin;
         t && r && (e = 'discovery');
     }
     (0, d.j)(() => {
-        h.setState({
+        p.setState({
             mode: e,
             previousMode: n,
             completedNux: null != t ? t : r
@@ -119,7 +119,7 @@ function p(e, t) {
 }
 function m() {
     (0, d.j)(() => {
-        h.setState({
+        p.setState({
             completedNux: !1,
             dismissedPilotAdminNux: !1,
             dismissedSignupAdmin: !1,
@@ -146,11 +146,11 @@ function g(e) {
 }
 function E() {
     (0, d.j)(() => {
-        h.setState({ dismissedSignupAdmin: !0 }), p('discovery');
+        p.setState({ dismissedSignupAdmin: !0 }), h('discovery');
     });
 }
 function v() {
     (0, d.j)(() => {
-        h.setState({ dismissedPilotAdminNux: !0 }), p('discovery');
+        p.setState({ dismissedPilotAdminNux: !0 }), h('discovery');
     });
 }

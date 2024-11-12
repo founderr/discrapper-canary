@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return T;
+        return S;
     }
 }),
     n(653041);
@@ -15,8 +15,8 @@ var r,
     d = n(766646),
     f = n(993365),
     _ = n(179240),
-    h = n(388032),
-    p = n(37823),
+    p = n(388032),
+    h = n(37823),
     m = n(803636),
     g = n(112864);
 function E(e, t, n) {
@@ -34,8 +34,8 @@ function E(e, t, n) {
 }
 let v = (0, l.Z)(),
     I = (0, l.Z)(),
-    S = (0, l.Z)();
-class T extends (r = a.Component) {
+    b = (0, l.Z)();
+class S extends (r = a.Component) {
     getPaddingRight() {
         let { maxLength: e, showCharacterCountFullPadding: t } = this.props;
         if (null == e) return 10;
@@ -59,7 +59,7 @@ class T extends (r = a.Component) {
             var e;
             let { value: t, maxLength: n } = this.props;
             return (0, i.jsxs)('div', {
-                className: o()(p.maxLength, { [p.errorOverflow]: this.hasError() }),
+                className: o()(h.maxLength, { [h.errorOverflow]: this.hasError() }),
                 'aria-hidden': 'true',
                 children: [null !== (e = null == t ? void 0 : t.length) && void 0 !== e ? e : 0, ' ', null != n && '/ '.concat(n)]
             });
@@ -72,7 +72,7 @@ class T extends (r = a.Component) {
         return null == e
             ? null
             : (0, i.jsx)('div', {
-                  className: o()(p.maxLength, { [p.errorOverflow]: e < 0 }),
+                  className: o()(h.maxLength, { [h.errorOverflow]: e < 0 }),
                   'aria-hidden': 'true',
                   children: e
               });
@@ -82,8 +82,8 @@ class T extends (r = a.Component) {
     }
     getErrorMessage() {
         let { error: e, maxLength: t, minLength: n } = this.props,
-            r = this.getIsOverflowing() ? h.intl.formatToPlainString(h.t.ICT5S0, { maxLength: t }) : null,
-            i = this.getIsUnderflowing() ? h.intl.formatToPlainString(h.t['62rk1N'], { minLength: n }) : null;
+            r = this.getIsOverflowing() ? p.intl.formatToPlainString(p.t.ICT5S0, { maxLength: t }) : null,
+            i = this.getIsUnderflowing() ? p.intl.formatToPlainString(p.t['62rk1N'], { minLength: n }) : null;
         return (null != e && '' === e) || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
     }
     renderErrorMessage() {
@@ -94,36 +94,36 @@ class T extends (r = a.Component) {
                   id: v,
                   variant: 'text-xs/normal',
                   color: 'text-danger',
-                  className: p.errorMessage,
+                  className: h.errorMessage,
                   children: e
               });
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: T, id: b, rows: y, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: f, spellCheck: E, resizeable: v, className: S, id: T, rows: y, flex: A, autosize: N, required: C, onInvalid: R, inputRef: O } = this.props,
             D = N ? _.l : 'textarea',
             L = this.hasError(),
             x = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
             w = this.getAriaDescribedBy();
         return (0, i.jsxs)('div', {
-            className: o()(m.inputWrapper, { [p.flex]: A }),
+            className: o()(m.inputWrapper, { [h.flex]: A }),
             children: [
                 (0, i.jsxs)('div', {
-                    className: o()(p.inputMaxLength, { [p.flex]: A }),
+                    className: o()(h.inputMaxLength, { [h.flex]: A }),
                     children: [
                         (0, i.jsx)(u.t, {
                             children: (0, i.jsx)(D, {
                                 type: 'text',
-                                className: o()(m.inputDefault, p.textArea, g.scrollbarDefault, T, {
+                                className: o()(m.inputDefault, h.textArea, g.scrollbarDefault, S, {
                                     [m.error]: L,
                                     [m.disabled]: n,
-                                    [p.resizeable]: v
+                                    [h.resizeable]: v
                                 }),
                                 'aria-labelledby': x,
                                 'aria-describedby': w,
                                 'aria-invalid': L,
                                 style: { paddingRight: this.getPaddingRight() },
-                                id: b,
+                                id: T,
                                 disabled: n,
                                 placeholder: a,
                                 value: r,
@@ -144,12 +144,12 @@ class T extends (r = a.Component) {
                         null != l &&
                             (0, i.jsx)(d.n, {
                                 id: I,
-                                children: h.intl.format(h.t['bmQU//'], { minLength: l })
+                                children: p.intl.format(p.t['bmQU//'], { minLength: l })
                             }),
                         null != c &&
                             (0, i.jsx)(d.n, {
-                                id: S,
-                                children: h.intl.format(h.t['+DFxLS'], { maxLength: c })
+                                id: b,
+                                children: p.intl.format(p.t['+DFxLS'], { maxLength: c })
                             }),
                         this.renderCharacterCount(),
                         this.renderMaxLength()
@@ -167,7 +167,7 @@ class T extends (r = a.Component) {
                 let { maxLength: t, minLength: n, error: r } = this.props,
                     i = [],
                     a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-                return null != a && i.push(a), null != r ? i.push(v) : (null != t && i.push(S), null != n && i.push(I)), i.length > 0 ? i.join(' ') : void 0;
+                return null != a && i.push(a), null != r ? i.push(v) : (null != t && i.push(b), null != n && i.push(I)), i.length > 0 ? i.join(' ') : void 0;
             }),
             E(this, 'onChange', (e) => {
                 let { onChange: t, name: n } = this.props;
@@ -188,8 +188,8 @@ class T extends (r = a.Component) {
             (this.state = { dirty: null !== (t = e.defaultDirty) && void 0 !== t && t });
     }
 }
-E(T, 'contextType', c.q3),
-    E(T, 'defaultProps', {
+E(S, 'contextType', c.q3),
+    E(S, 'defaultProps', {
         name: '',
         disabled: !1,
         placeholder: '',

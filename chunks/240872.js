@@ -5,7 +5,7 @@ var i = n(952265),
     s = n(388032);
 t.Z = {
     show(e) {
-        let { title: t, body: n, confirmColor: s, confirmText: o, cancelText: l, onConfirm: u, onCancel: c, onCloseCallback: d, secondaryConfirmText: f, onConfirmSecondary: _, className: h, titleClassName: p } = e;
+        let { title: t, body: n, confirmColor: s, confirmText: o, cancelText: l, onConfirm: u, onCancel: c, onCloseCallback: d, secondaryConfirmText: f, onConfirmSecondary: _, className: p, titleClassName: h } = e;
         (0, i.h7)(
             (e) =>
                 (0, r.jsx)(a.default, {
@@ -19,8 +19,8 @@ t.Z = {
                     onCancel: c,
                     secondaryConfirmText: f,
                     onConfirmSecondary: _,
-                    className: h,
-                    titleClassName: p
+                    className: p,
+                    titleClassName: h
                 }),
             { onCloseCallback: d }
         );

@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(336317),
     f = n(477690),
     _ = n(481060),
-    h = n(80932),
-    p = n(351773),
+    p = n(80932),
+    h = n(351773),
     m = n(209613),
     g = n(313201),
     E = n(633302),
     v = n(176354),
     I = n(624138),
-    S = n(981631),
-    T = n(388032),
-    b = n(541836);
+    b = n(981631),
+    S = n(388032),
+    T = n(541836);
 let y = (0, g.hQ)(),
     A = d.Z.convert.fromCodePoint('1f44f'),
     N = (0, I.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
@@ -41,25 +41,25 @@ let y = (0, g.hQ)(),
             role: 'option',
             'aria-selected': 0 === s,
             onClick: () => i(n),
-            className: b.diversityEmojiItem,
+            className: T.diversityEmojiItem,
             children: (0, r.jsx)(u.animated.div, {
                 'aria-label': (function (e) {
                     switch (d.Z.convert.toCodePoint(e)) {
                         case '1f3fb':
-                            return T.intl.string(T.t.BVK5b2);
+                            return S.intl.string(S.t.BVK5b2);
                         case '1f3fc':
-                            return T.intl.string(T.t.xJWOKy);
+                            return S.intl.string(S.t.xJWOKy);
                         case '1f3fd':
-                            return T.intl.string(T.t['MB+T5u']);
+                            return S.intl.string(S.t['MB+T5u']);
                         case '1f3fe':
-                            return T.intl.string(T.t.MODud3);
+                            return S.intl.string(S.t.MODud3);
                         case '1f3ff':
-                            return T.intl.string(T.t['0uzqsb']);
+                            return S.intl.string(S.t['0uzqsb']);
                         default:
-                            return T.intl.string(T.t.bGN1o6);
+                            return S.intl.string(S.t.bGN1o6);
                     }
                 })(n),
-                className: b.diversityEmojiItemImage,
+                className: T.diversityEmojiItemImage,
                 style: {
                     backgroundImage: 'url("'.concat(l, '")'),
                     ...f
@@ -78,10 +78,10 @@ let y = (0, g.hQ)(),
         i.useEffect(() => {
             d.focusFirstVisibleItem();
         }, [d]);
-        let h = ['', ...E.gw];
+        let p = ['', ...E.gw];
         return (
-            l().remove(h, (e) => e === n),
-            h.unshift(n),
+            l().remove(p, (e) => e === n),
+            p.unshift(n),
             (0, r.jsx)(c.bG, {
                 navigator: d,
                 children: (0, r.jsx)(c.SJ, {
@@ -91,10 +91,10 @@ let y = (0, g.hQ)(),
                             ...i,
                             id: t,
                             ref: n,
-                            className: s()(b.diversitySelectorOptions, { [b.diversitySelectorOptionsHasTabWrapper]: o }),
+                            className: s()(T.diversitySelectorOptions, { [T.diversitySelectorOptionsHasTabWrapper]: o }),
                             style: f,
                             role: 'listbox',
-                            children: h.map((e, t) =>
+                            children: p.map((e, t) =>
                                 (0, r.jsx)(
                                     R,
                                     {
@@ -117,7 +117,7 @@ t.Z = (e) => {
     let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: s } = e,
         o = v.ZP.getURL(A + n),
         [l, u] = i.useState(!1),
-        c = (0, p.Z)(null, () => u(!1)),
+        c = (0, h.Z)(null, () => u(!1)),
         d = i.useRef(null);
     return (0, r.jsxs)('div', {
         ref: c,
@@ -125,24 +125,24 @@ t.Z = (e) => {
         children: [
             (0, r.jsx)(_.Clickable, {
                 innerRef: d,
-                className: b.diversitySelectorButton,
+                className: T.diversitySelectorButton,
                 onClick: () => {
                     u(!0);
                 },
-                'aria-label': T.intl.string(T.t.pAVHxc),
+                'aria-label': S.intl.string(S.t.pAVHxc),
                 'aria-haspopup': !0,
                 'aria-expanded': l,
                 'aria-controls': y,
                 tabIndex: l ? -1 : 0,
                 children: (0, r.jsx)('div', {
-                    className: b.diversityEmojiItemImage,
+                    className: T.diversityEmojiItemImage,
                     style: { backgroundImage: 'url("'.concat(o, '")') }
                 })
             }),
             l
                 ? (0, r.jsx)('div', {
                       onKeyDown: (e) => {
-                          e.keyCode === S.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
+                          e.keyCode === b.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
                       },
                       children: (0, r.jsx)(O, {
                           id: y,
@@ -150,7 +150,7 @@ t.Z = (e) => {
                           selectedSurrogate: n,
                           onClick: (e) => {
                               var n;
-                              (0, h.t0)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus();
+                              (0, p.t0)(e), u(!1), null === (n = t.current) || void 0 === n || n.focus();
                           }
                       })
                   })

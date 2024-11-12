@@ -18,22 +18,22 @@ if (_)
     } catch (e) {
         _ = null;
     }
-var h = function () {
+var p = function () {
         throw new u();
     },
-    p = _
+    h = _
         ? (function () {
               try {
-                  return arguments.callee, h;
+                  return arguments.callee, p;
               } catch (e) {
                   try {
                       return _(arguments, 'callee').get;
                   } catch (e) {
-                      return h;
+                      return p;
                   }
               }
           })()
-        : h,
+        : p,
     m = n(322499)(),
     g = n(79536)(),
     E =
@@ -45,7 +45,7 @@ var h = function () {
             : null),
     v = {},
     I = 'undefined' != typeof Uint8Array && E ? E(Uint8Array) : r,
-    S = {
+    b = {
         __proto__: null,
         '%AggregateError%': 'undefined' == typeof AggregateError ? r : AggregateError,
         '%Array%': Array,
@@ -102,7 +102,7 @@ var h = function () {
         '%StringIteratorPrototype%': m && E ? E(''[Symbol.iterator]()) : r,
         '%Symbol%': m ? Symbol : r,
         '%SyntaxError%': l,
-        '%ThrowTypeError%': p,
+        '%ThrowTypeError%': h,
         '%TypedArray%': I,
         '%TypeError%': u,
         '%Uint8Array%': 'undefined' == typeof Uint8Array ? r : Uint8Array,
@@ -118,10 +118,10 @@ if (E)
     try {
         null.error;
     } catch (e) {
-        var T = E(E(e));
-        S['%Error.prototype%'] = T;
+        var S = E(E(e));
+        b['%Error.prototype%'] = S;
     }
-var b = function e(t) {
+var T = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = f('async function () {}');
         else if ('%GeneratorFunction%' === t) n = f('function* () {}');
@@ -133,7 +133,7 @@ var b = function e(t) {
             var i = e('%AsyncGenerator%');
             i && E && (n = E(i.prototype));
         }
-        return (S[t] = n), n;
+        return (b[t] = n), n;
     },
     y = {
         __proto__: null,
@@ -214,9 +214,9 @@ var b = function e(t) {
     P = function (e, t) {
         var n,
             r = e;
-        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(S, r))) {
-            var i = S[r];
-            if ((i === v && (i = b(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+        if ((N(y, r) && (r = '%' + (n = y[r])[0] + '%'), N(b, r))) {
+            var i = b[r];
+            if ((i === v && (i = T(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,
@@ -238,21 +238,21 @@ e.exports = function (e, t) {
         c = i.alias;
     c && ((r = c[0]), R(n, C([0, 1], c)));
     for (var d = 1, f = !0; d < n.length; d += 1) {
-        var h = n[d],
-            p = D(h, 0, 1),
-            m = D(h, -1);
-        if (('"' === p || "'" === p || '`' === p || '"' === m || "'" === m || '`' === m) && p !== m) throw new l('property names with quotes must have matching quotes');
-        if ((('constructor' === h || !f) && (o = !0), (r += '.' + h), N(S, (a = '%' + r + '%')))) s = S[a];
+        var p = n[d],
+            h = D(p, 0, 1),
+            m = D(p, -1);
+        if (('"' === h || "'" === h || '`' === h || '"' === m || "'" === m || '`' === m) && h !== m) throw new l('property names with quotes must have matching quotes');
+        if ((('constructor' === p || !f) && (o = !0), (r += '.' + p), N(b, (a = '%' + r + '%')))) s = b[a];
         else if (null != s) {
-            if (!(h in s)) {
+            if (!(p in s)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
                 return;
             }
             if (_ && d + 1 >= n.length) {
-                var g = _(s, h);
-                s = (f = !!g) && 'get' in g && !('originalValue' in g.get) ? g.get : s[h];
-            } else (f = N(s, h)), (s = s[h]);
-            f && !o && (S[a] = s);
+                var g = _(s, p);
+                s = (f = !!g) && 'get' in g && !('originalValue' in g.get) ? g.get : s[p];
+            } else (f = N(s, p)), (s = s[p]);
+            f && !o && (b[a] = s);
         }
     }
     return s;

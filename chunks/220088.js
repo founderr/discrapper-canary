@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(788307),
     f = n(607070),
     _ = n(100527),
-    h = n(906732),
-    p = n(8454),
+    p = n(906732),
+    h = n(8454),
     m = n(633302),
     g = n(314897),
     E = n(785717),
     v = n(481046),
     I = n(510659),
-    S = n(277085),
-    T = n(287954),
-    b = n(810097),
+    b = n(277085),
+    S = n(287954),
+    T = n(810097),
     y = n(64621),
     A = n(228168),
     N = n(388032),
@@ -33,8 +33,8 @@ let R = 'text-sm/medium',
     O = 36,
     D = 144;
 function L(e) {
-    let { statusActivity: t, user: a, guildId: p, channelId: g, profileType: v, hasEntered: L = !0, animate: x = !0, editEnabled: w, onCloseProfile: M } = e,
-        { analyticsLocations: P } = (0, h.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
+    let { statusActivity: t, user: a, guildId: h, channelId: g, profileType: v, hasEntered: L = !0, animate: x = !0, editEnabled: w, onCloseProfile: M } = e,
+        { analyticsLocations: P } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: k } = (0, E.KZ)(),
         U = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         [G] = i.useState(() => new u.V7()),
@@ -61,7 +61,7 @@ function L(e) {
         eu = w && et,
         [ec, ed] = i.useState(Q),
         [ef, e_] = i.useState(!Q),
-        [eh, ep] = i.useState(!1),
+        [ep, eh] = i.useState(!1),
         em = i.useRef(null);
     i.useLayoutEffect(() => {
         if (null == F.current || Q) return;
@@ -118,7 +118,7 @@ function L(e) {
                 });
             }
         },
-        eS = () =>
+        eb = () =>
             q
                 ? (0, r.jsx)(d.Iv, {
                       className: z ? C.statusEmojiInline : C.statusEmojiOnly,
@@ -128,7 +128,7 @@ function L(e) {
                       tooltipDelay: A.vB
                   })
                 : null,
-        eT = () =>
+        eS = () =>
             z
                 ? (0, r.jsx)(c.Text, {
                       variant: R,
@@ -136,7 +136,7 @@ function L(e) {
                       children: K
                   })
                 : null,
-        eb = () => {
+        eT = () => {
             let e = s()(C.content, {
                 [C.clamp]: B,
                 [C.unclamp]: !B,
@@ -145,20 +145,20 @@ function L(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eg,
                 className: e,
-                children: [eS(), eT()]
+                children: [eb(), eS()]
             });
         },
         ey = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.clamp, C.placeholderWidth, { [C.panel]: v === A.y0.PANEL }),
                 ref: j,
-                children: [eS(), eT()]
+                children: [eb(), eS()]
             }),
         eA = () =>
             (0, r.jsxs)('div', {
                 className: s()(C.content, C.unclamp, C.placeholderWidth, C.incorporeal, { [C.panel]: v === A.y0.PANEL }),
                 ref: F,
-                children: [eS(), eT()]
+                children: [eb(), eS()]
             }),
         eN = () => {
             k({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
@@ -204,36 +204,36 @@ function L(e) {
                     }),
                     tabIndex: 0,
                     onFocus: () => {
-                        ep(!0), eI(!0);
+                        eh(!0), eI(!0);
                     },
                     onBlur: (e) => {
                         var t;
-                        !(null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && !eo && (ep(!1), eI(!1));
+                        !(null === (t = em.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) && !eo && (eh(!1), eI(!1));
                     },
                     onMouseOver: () => {
-                        k({ action: 'HOVER_CUSTOM_STATUS' }), ep(!0), eI(!0);
+                        k({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eI(!0);
                     },
                     onMouseLeave: () => {
-                        !eo && (ep(!1), eI(!1));
+                        !eo && (eh(!1), eI(!1));
                     },
                     children: [
                         (0, r.jsx)('div', {
                             className: eL,
                             children: (0, r.jsx)('span', {
                                 className: ex,
-                                children: et && eb()
+                                children: et && eT()
                             })
                         }),
                         eu
-                            ? (0, r.jsx)(S.Z, {
-                                  isVisible: eh,
+                            ? (0, r.jsx)(b.Z, {
+                                  isVisible: ep,
                                   isExpandable: ef,
                                   onCloseProfile: M
                               })
-                            : (0, r.jsx)(b.ZP, {
+                            : (0, r.jsx)(T.ZP, {
                                   user: a,
                                   sourceType: A.n_.STATUS,
-                                  isVisible: eh && !eo,
+                                  isVisible: ep && !eo,
                                   isExpandable: ef
                               })
                     ]
@@ -290,9 +290,9 @@ function L(e) {
                               ]
                           });
                       })(),
-                      (0, r.jsx)(T.Z, {
+                      (0, r.jsx)(S.Z, {
                           user: a,
-                          guildId: p,
+                          guildId: h,
                           channelId: g,
                           profileType: v,
                           sourceDetails: (() => {
@@ -304,7 +304,7 @@ function L(e) {
                           })(),
                           sourceType: A.n_.STATUS,
                           onClose: () => {
-                              ep(!1), eI(!1);
+                              eh(!1), eI(!1);
                           },
                           children: () => ew()
                       })
@@ -315,10 +315,10 @@ function L(e) {
 function x(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([g.default], () => g.default.getId() === t.id),
-        a = (0, p.Z)(t.id),
-        { analyticsLocations: s } = (0, h.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
+        a = (0, h.Z)(t.id),
+        { analyticsLocations: s } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { customStatusBubbleEditEnabled: o } = (0, v.K)({ location: 'UserProfileCustomStatusBubbleWithInteractionToolbar' });
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(p.Gt, {
         value: s,
         children: (0, r.jsx)(L, {
             user: t,

@@ -14,16 +14,16 @@ var r = n(200651),
     d = n(607070),
     f = n(100527),
     _ = n(906732),
-    h = n(639119),
-    p = n(197115),
+    p = n(639119),
+    h = n(197115),
     m = n(587446),
     g = n(594174),
     E = n(626135),
     v = n(74538),
     I = n(94795),
-    S = n(327943),
-    T = n(539873),
-    b = n(981631),
+    b = n(327943),
+    S = n(539873),
+    T = n(981631),
     y = n(921944),
     A = n(474936),
     N = n(388032),
@@ -31,9 +31,9 @@ var r = n(200651),
 let R = () => {
         var e, t, n;
         let i = (0, o.e7)([g.default], () => v.ZP.isPremium(g.default.getCurrentUser())),
-            a = (0, h.N)(),
+            a = (0, p.N)(),
             s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === A.Si.TIER_2;
-        return (0, r.jsx)(p.Z, {
+        return (0, r.jsx)(h.Z, {
             size: l.Button.Sizes.MEDIUM,
             buttonText: i
                 ? N.intl.string(N.t.IJI7ys)
@@ -78,7 +78,7 @@ let R = () => {
     },
     D = (e) => {
         let { isCoachmark: t, markAsDismissed: n } = e,
-            i = (0, o.e7)([S.Z], () => S.Z.isUpsellPreview);
+            i = (0, o.e7)([b.Z], () => b.Z.isUpsellPreview);
         return (0, r.jsxs)('div', {
             className: C.editorFooter,
             children: [
@@ -100,25 +100,25 @@ function L(e) {
         { analyticsLocations: a } = (0, _.ZP)(f.Z.APP_ICON_EDITOR),
         u = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         {
-            isUpsellPreview: h,
-            isEditorOpen: p,
+            isUpsellPreview: p,
+            isEditorOpen: h,
             shouldEditorAnimate: m
-        } = (0, o.cj)([S.Z, d.Z], () => ({
-            isUpsellPreview: S.Z.isUpsellPreview,
-            isEditorOpen: S.Z.isEditorOpen,
+        } = (0, o.cj)([b.Z, d.Z], () => ({
+            isUpsellPreview: b.Z.isUpsellPreview,
+            isEditorOpen: b.Z.isEditorOpen,
             shouldEditorAnimate: t && !d.Z.useReducedMotion
         }));
     i.useEffect(() => {
-        if (!!h)
-            E.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
+        if (!!p)
+            E.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: A.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
-    }, [h, a]);
-    let v = (0, c.Z)(null, h ? I.O7 : b.dG4);
+    }, [p, a]);
+    let v = (0, c.Z)(null, p ? I.O7 : T.dG4);
     return (i.useEffect(() => {
-        if (!!h && !p) return I.O7;
-    }, [h, p]),
+        if (!!p && !h) return I.O7;
+    }, [p, h]),
     null == u)
         ? null
         : (0, r.jsx)(_.Gt, {
@@ -131,7 +131,7 @@ function L(e) {
                           (0, r.jsx)(O, { markAsDismissed: n }),
                           (0, r.jsx)(l.Scroller, {
                               className: C.editorBody,
-                              children: (0, r.jsx)(T.Z, {
+                              children: (0, r.jsx)(S.Z, {
                                   className: C.selectionGroup,
                                   isEditor: !0
                               })

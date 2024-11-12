@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(594190),
@@ -14,7 +14,7 @@ var r = n(594190),
     d = n(356659),
     f = n(981631),
     _ = n(388032);
-function h(e) {
+function p(e) {
     let { sourceName: t, sourceApplicationId: n } = (function (e) {
             var t, n;
             if (null != e) {
@@ -35,16 +35,16 @@ function h(e) {
                 sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == c ? void 0 : c.id
             };
         })(e),
-        h = l.Z.getChannelId(),
-        p = [s.default.getId()];
+        p = l.Z.getChannelId(),
+        h = [s.default.getId()];
     return (
-        null != h && (p = Object.keys(u.Z.getVoiceStatesForChannel(h))),
+        null != p && (h = Object.keys(u.Z.getVoiceStatesForChannel(p))),
         {
             id: c.default.fromTimestamp(Date.now()),
             version: d.Bg,
             applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
             applicationId: n,
-            users: p,
+            users: h,
             clipMethod: 'manual',
             length: 0,
             thumbnail: ''

@@ -16,9 +16,9 @@ function d(e, t, n) {
     var d,
         f,
         _,
-        h,
-        p = (0, s.Re)(t);
-    var m = (0, s.Re)(t) && ((f = (d = t).getBoundingClientRect()), (_ = (0, c.NM)(f.width) / d.offsetWidth || 1), (h = (0, c.NM)(f.height) / d.offsetHeight || 1), 1 !== _ || 1 !== h),
+        p,
+        h = (0, s.Re)(t);
+    var m = (0, s.Re)(t) && ((f = (d = t).getBoundingClientRect()), (_ = (0, c.NM)(f.width) / d.offsetWidth || 1), (p = (0, c.NM)(f.height) / d.offsetHeight || 1), 1 !== _ || 1 !== p),
         g = (0, l.Z)(t),
         E = (0, r.Z)(e, m, n),
         v = {
@@ -30,7 +30,7 @@ function d(e, t, n) {
             y: 0
         };
     return (
-        (p || (!p && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(g)) && (v = (0, i.Z)(t)), (0, s.Re)(t) ? ((I = (0, r.Z)(t, !0)), (I.x += t.clientLeft), (I.y += t.clientTop)) : g && (I.x = (0, o.Z)(g))),
+        (h || (!h && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(g)) && (v = (0, i.Z)(t)), (0, s.Re)(t) ? ((I = (0, r.Z)(t, !0)), (I.x += t.clientLeft), (I.y += t.clientTop)) : g && (I.x = (0, o.Z)(g))),
         {
             x: E.left + v.scrollLeft - I.x,
             y: E.top + v.scrollTop - I.y,

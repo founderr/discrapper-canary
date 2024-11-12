@@ -1,12 +1,12 @@
 n.d(t, {
     LA: function () {
-        return p;
+        return h;
     },
     MR: function () {
         return f;
     },
     Wb: function () {
-        return h;
+        return p;
     },
     Xs: function () {
         return m;
@@ -46,7 +46,7 @@ function f(e, t) {
 function _(e) {
     return null != e.redeemable_at && null != e.next_tenure_reward_id;
 }
-function h(e) {
+function p(e) {
     switch (e) {
         case s.EB.PENDING:
             return l.intl.string(l.t.jyYgZ2);
@@ -57,7 +57,7 @@ function h(e) {
             return null;
     }
 }
-function p() {
+function h() {
     var e;
     return null !== (e = i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_1_MONTH)) && void 0 !== e ? e : i.Z.getTenureRewardStatusForRewardId(s.Ft.FREE_GUILD_BOOST_3_MONTHS);
 }

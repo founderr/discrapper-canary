@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 }),
     n(627341);
@@ -16,9 +16,9 @@ var i = n(278074),
     d = n(699516),
     f = n(594174),
     _ = n(981631),
-    h = n(388032);
-function p(e) {
-    let { user: t, color: n, onBlock: p, onUnblock: m, location: g = 'ContextMenu' } = e,
+    p = n(388032);
+function h(e) {
+    let { user: t, color: n, onBlock: h, onUnblock: m, location: g = 'ContextMenu' } = e,
         { id: E } = t,
         v = (0, a.e7)(
             [f.default],
@@ -29,9 +29,9 @@ function p(e) {
             [E]
         ),
         I = (0, a.e7)([d.Z], () => d.Z.isBlocked(E), [E]),
-        S = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        T = (0, i.EQ)({
-            isStealthRemediationEnabled: S,
+        b = (0, c.Do)({ location: 'use-block-user-item-web' }),
+        S = (0, i.EQ)({
+            isStealthRemediationEnabled: b,
             isBlocked: I
         })
             .with(
@@ -53,8 +53,8 @@ function p(e) {
         ? null
         : (0, r.jsx)(s.MenuItem, {
               id: 'block',
-              color: null != T ? T : 'default',
-              label: I ? h.intl.string(h.t.XyHpKC) : h.intl.string(h.t.l4EmaW),
+              color: null != S ? S : 'default',
+              label: I ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW),
               action: I
                   ? () => {
                         null == m || m(), o.Z.unblockUser(E, { location: g });
@@ -62,11 +62,11 @@ function p(e) {
                   : () => {
                         (0, s.openModal)((e) =>
                             (0, r.jsx)(s.ConfirmModal, {
-                                header: h.intl.formatToPlainString(h.t.x5pOn5, { name: t.username }),
-                                confirmText: h.intl.string(h.t.l4EmaW),
-                                cancelText: h.intl.string(h.t['ETE/oK']),
+                                header: p.intl.formatToPlainString(p.t.x5pOn5, { name: t.username }),
+                                confirmText: p.intl.string(p.t.l4EmaW),
+                                cancelText: p.intl.string(p.t['ETE/oK']),
                                 onConfirm: () => {
-                                    null == p || p(),
+                                    null == h || h(),
                                         o.Z.addRelationship({
                                             userId: E,
                                             context: { location: g },
@@ -78,7 +78,7 @@ function p(e) {
                                     ? (0, r.jsx)(u.Z, {})
                                     : (0, r.jsx)(s.Text, {
                                           variant: 'text-md/normal',
-                                          children: h.intl.format(h.t.pegItL, { name: t.username })
+                                          children: p.intl.format(p.t.pegItL, { name: t.username })
                                       })
                             })
                         );

@@ -19,16 +19,16 @@ var r,
     d = n(524437),
     f = n(481060),
     _ = n(153867),
-    h = n(607070),
-    p = n(100527),
+    p = n(607070),
+    h = n(100527),
     m = n(906732),
     g = n(313201),
     E = n(540059),
     v = n(98278),
     I = n(639119),
-    S = n(311476),
-    T = n(165583),
-    b = n(587446),
+    b = n(311476),
+    S = n(165583),
+    T = n(587446),
     y = n(210887),
     A = n(740492),
     N = n(626135),
@@ -60,7 +60,7 @@ let G = Object.freeze({
     },
     F = (e) => {
         let { type: t, isPreview: n, isCoachmark: r } = e,
-            { enabled: i } = S.Z.useExperiment(
+            { enabled: i } = b.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -98,7 +98,7 @@ let G = Object.freeze({
                     variant: 'text-md/medium',
                     children: s
                 }),
-                (!i || 'EDITOR' === t) && (0, a.jsx)(b.Z, { className: U.premiumIcon })
+                (!i || 'EDITOR' === t) && (0, a.jsx)(T.Z, { className: U.premiumIcon })
             ]
         });
     },
@@ -106,7 +106,7 @@ let G = Object.freeze({
         var t, n;
         let { type: r, isPreview: i, isCoachmark: s } = e,
             o = (null === (n = (0, I.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === x.Si.TIER_2,
-            { enabled: l } = S.Z.useExperiment(
+            { enabled: l } = b.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
                 {
                     autoTrackExposure: !1,
@@ -175,7 +175,7 @@ let G = Object.freeze({
         return (0, a.jsx)(a.Fragment, {
             children:
                 'EDITOR' === i && o && u
-                    ? (0, a.jsx)(T.ZP, {
+                    ? (0, a.jsx)(S.ZP, {
                           type: x.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                           subscriptionTier: x.Si.TIER_2,
                           children: k.intl.format(k.t.G8yQXl, { onPremiumClick: () => v.z })
@@ -206,18 +206,18 @@ let G = Object.freeze({
     H = (e) => {
         let { disabled: t } = e,
             { type: r, delay: i } = s.useContext(B),
-            { analyticsLocations: o } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
+            { analyticsLocations: o } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [l, u] = (0, c.Wu)([R.Z], () => {
                 var e;
                 return [R.Z.isPreview, null === (e = R.Z.gradientPreset) || void 0 === e ? void 0 : e.id];
             }),
             [g, E] = s.useState(!1),
             [v, I] = s.useState(-1),
-            T = (0, c.e7)([h.Z], () => h.Z.useReducedMotion);
+            S = (0, c.e7)([p.Z], () => p.Z.useReducedMotion);
         s.useEffect(() => {
             ((v === D.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && E(!0);
         }, [v, r, u]);
-        let { enabled: b } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
+        let { enabled: T } = b.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
             y = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
@@ -226,14 +226,14 @@ let G = Object.freeze({
                         analyticsLocations: o,
                         themeName: d.Us[e.id]
                     }),
-                    l && 'SETTINGS' === r && b)
+                    l && 'SETTINGS' === r && T)
                 ) {
                     (0, f.openModalLazy)(
                         async () => {
                             let { default: e } = await n.e('68192').then(n.bind(n, 742234));
                             return (t) =>
                                 (0, a.jsx)(e, {
-                                    analyticsSource: p.Z.CLIENT_THEMES_THEME_SELECTOR,
+                                    analyticsSource: h.Z.CLIENT_THEMES_THEME_SELECTOR,
                                     analyticsLocation: {
                                         section: L.jXE.SETTINGS_APPEARANCE_THEME_PICKER,
                                         object: L.qAy.BUTTON_ICON
@@ -279,7 +279,7 @@ let G = Object.freeze({
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
-                            showLockedBadge: 'SETTINGS' === r && b && l
+                            showLockedBadge: 'SETTINGS' === r && T && l
                         },
                         e.id
                     )
@@ -302,7 +302,7 @@ let G = Object.freeze({
                             }),
                             (0, a.jsx)(f.LottieAnimation, {
                                 importData: t,
-                                shouldAnimate: !T,
+                                shouldAnimate: !S,
                                 className: U.sparkles
                             })
                         ]
@@ -314,7 +314,7 @@ let G = Object.freeze({
     Y = (e) => {
         let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
             { delay: r } = s.useContext(B),
-            { analyticsLocations: i } = (0, m.ZP)(p.Z.CLIENT_THEMES_THEME_SELECTOR),
+            { analyticsLocations: i } = (0, m.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
             [o, l, u] = (0, c.Wu)([y.Z, A.ZP, R.Z], () => [y.Z.theme, null == R.Z.gradientPreset, A.ZP.useSystemTheme === w.K.ON]),
             d = (e) => {
                 (0, C.xs)(),

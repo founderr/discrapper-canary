@@ -1,6 +1,6 @@
 n.d(t, {
     A3: function () {
-        return S;
+        return b;
     },
     FZ: function () {
         return I;
@@ -18,7 +18,7 @@ n.d(t, {
         return r;
     },
     U2: function () {
-        return b;
+        return T;
     },
     Vx: function () {
         return P;
@@ -48,7 +48,7 @@ n.d(t, {
         return O;
     },
     ig: function () {
-        return T;
+        return S;
     },
     nW: function () {
         return N;
@@ -88,8 +88,8 @@ var o = n(278074),
     d = n(78839),
     f = n(424218),
     _ = n(823379),
-    h = n(63063),
-    p = n(74538),
+    p = n(63063),
+    h = n(74538),
     m = n(981631),
     g = n(474936),
     E = n(388032);
@@ -110,9 +110,9 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
         var n;
         return e === m.Eu4.NONE ? m.Eu4.TIER_1 : null === (n = G(t).find((t) => t.tier === e)) || void 0 === n ? void 0 : n.nextTier;
     },
-    S = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
-    T = (e) => g.pH[e],
-    b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
+    b = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_STICKERS) && e === m.Eu4.TIER_3 ? l.D.MAX_STICKER_SLOTS : g.$8[e]),
+    S = (e) => g.pH[e],
+    T = (e, t) => (null != t && t.hasFeature(m.oNc.MORE_SOUNDBOARD) ? 96 : g._k[e]),
     y = (e) => {
         if (e === m.Eu4.NONE) return g._k[e];
         let t = v[v.indexOf(e) - 1];
@@ -133,8 +133,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_1),
-                        total: S(m.Eu4.TIER_1)
+                        adding: S(m.Eu4.TIER_1),
+                        total: b(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.JfsnDQ),
                     icon: 8
@@ -142,7 +142,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_1),
-                        totalSoundCount: b(m.Eu4.TIER_1)
+                        totalSoundCount: T(m.Eu4.TIER_1)
                     }),
                     description: E.intl.string(E.t.Oq7OVl),
                     icon: 13
@@ -183,8 +183,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_2),
-                        total: S(m.Eu4.TIER_2)
+                        adding: S(m.Eu4.TIER_2),
+                        total: b(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.t4TM29),
                     icon: 8
@@ -192,7 +192,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_2),
-                        totalSoundCount: b(m.Eu4.TIER_2)
+                        totalSoundCount: T(m.Eu4.TIER_2)
                     }),
                     description: E.intl.string(E.t.pEYlPT),
                     icon: 13
@@ -245,8 +245,8 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.formatToPlainString(E.t['/9p2/v'], {
-                        adding: T(m.Eu4.TIER_3),
-                        total: S(m.Eu4.TIER_3)
+                        adding: S(m.Eu4.TIER_3),
+                        total: b(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['+ZI4QU']),
                     icon: 8
@@ -254,7 +254,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 {
                     title: E.intl.formatToPlainString(E.t.NRuk5u, {
                         soundCount: y(m.Eu4.TIER_3),
-                        totalSoundCount: b(m.Eu4.TIER_3)
+                        totalSoundCount: T(m.Eu4.TIER_3)
                     }),
                     description: E.intl.string(E.t['8omJSU']),
                     icon: 13
@@ -266,7 +266,7 @@ let v = [m.Eu4.NONE, m.Eu4.TIER_1, m.Eu4.TIER_2, m.Eu4.TIER_3],
                 },
                 {
                     title: E.intl.string(E.t.C2w2cH),
-                    description: E.intl.format(E.t['3Reos7'], { helpdeskArticle: h.Z.getArticleURL(m.BhN.GUILD_VANITY_URL) }),
+                    description: E.intl.format(E.t['3Reos7'], { helpdeskArticle: p.Z.getArticleURL(m.BhN.GUILD_VANITY_URL) }),
                     icon: 6
                 },
                 {
@@ -360,14 +360,14 @@ function M(e) {
                     fractionalState: g.a$.FP_SUB,
                     canApplyBoosts: !1
                 },
-                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: h.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
             )
             .with(
                 {
                     isPausedOrPausePending: void 0,
                     fractionalState: g.a$.FP_ONLY
                 },
-                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: h.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                () => E.intl.format(E.t.kJ1AZG, { helpCenterLink: p.Z.getArticleURL(m.BhN.FRACTIONAL_PREMIUM_ABOUT) })
             )
             .with(
                 {
@@ -387,8 +387,8 @@ function M(e) {
     if (n.status === m.O0b.ACCOUNT_HOLD) return E.intl.string(E.t.JakNQ0);
     if (f > 0) return E.intl.string(E.t.x25mZW);
     if (null == n.renewalMutations) return null;
-    let _ = p.uV(n.renewalMutations.additionalPlans);
-    return p.uV(n.additionalPlans) > _ ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
+    let _ = h.uV(n.renewalMutations.additionalPlans);
+    return h.uV(n.additionalPlans) > _ ? E.intl.string(E.t.x25mZW) : E.intl.string(E.t['W/bb8f']);
 }
 function P(e, t) {
     return k(e, t) > 0;
@@ -431,16 +431,16 @@ function B(e, t) {
     return null;
 }
 function Z(e, t) {
-    let n = T(t),
+    let n = S(t),
         r = v.indexOf(t);
     if (-1 === r) return 0;
     let i = v[r - 1],
-        a = null != i ? S(i) : 0,
-        s = S(t);
+        a = null != i ? b(i) : 0,
+        s = b(t);
     return Math.max(0, n - e.slice(a, s).length);
 }
 function F(e, t, n) {
-    return -1 === v.indexOf(n) ? 0 : Math.max(0, b(n, e) - t.length);
+    return -1 === v.indexOf(n) ? 0 : Math.max(0, T(n, e) - t.length);
 }
 function V(e, t) {
     let n = e.premiumSubscriberCount;

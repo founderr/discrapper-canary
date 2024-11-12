@@ -10,8 +10,8 @@ var i = n(570140),
     d = n(926491),
     f = n(373228),
     _ = n(419922),
-    h = n(483360),
-    p = n(877565),
+    p = n(483360),
+    h = n(877565),
     m = n(590921),
     g = n(981631),
     E = n(388032);
@@ -28,7 +28,7 @@ function I(e, t) {
         size: 40
     });
 }
-let S = {
+let b = {
     stores: [d.Z],
     matches(e, t, n, r, i) {
         var a;
@@ -40,7 +40,7 @@ let S = {
         if (null == a) return v;
         let o = [];
         (0, c.$p)();
-        let l = h.ZP.queryStickers([n], !0, [e, (e, t) => t === u.eb.SENDABLE]);
+        let l = p.ZP.queryStickers([n], !0, [e, (e, t) => t === u.eb.SENDABLE]);
         return {
             results: {
                 command: a,
@@ -58,7 +58,7 @@ let S = {
             onClick: s
         } = e;
         return (0, r.jsx)(r.Fragment, {
-            children: (0, p.HI)({
+            children: (0, h.HI)({
                 query: i,
                 selectedIndex: n,
                 autocompletes: t,
@@ -92,45 +92,45 @@ let S = {
                 queryText: _
             } = e;
         if (null == n || l >= r.length) return { type: null };
-        let h = s.Z.getActiveCommand(c.id);
-        (null == h ? void 0 : h.inputType) === o.iw.BUILT_IN_INTEGRATION &&
+        let p = s.Z.getActiveCommand(c.id);
+        (null == p ? void 0 : p.inputType) === o.iw.BUILT_IN_INTEGRATION &&
             (i.Z.dispatch({
                 type: 'APPLICATION_COMMAND_USED',
                 context: {
                     channel: c,
                     guild: d
                 },
-                command: h,
+                command: p,
                 commandOrigin: o.bB.CHAT
             }),
             a.ZP.trackWithMetadata(g.rMx.APPLICATION_COMMAND_USED, {
-                command_id: h.id,
-                application_id: h.applicationId,
-                command_type: h.type,
+                command_id: p.id,
+                application_id: p.applicationId,
+                command_type: p.type,
                 source: s.Z.getSource(c.id)
             }));
-        let p = r[l];
+        let h = r[l];
         return (
-            u.sendSticker(p.sticker, f.V0.BUILT_IN_INTEGRATION),
-            p.sticker.type === f.n0.GUILD && (t = p.sticker.guild_id),
+            u.sendSticker(h.sticker, f.V0.BUILT_IN_INTEGRATION),
+            h.sticker.type === f.n0.GUILD && (t = h.sticker.guild_id),
             a.ZP.trackWithMetadata(g.rMx.SEARCH_RESULT_SELECTED, {
-                load_id: p.sticker.id,
+                load_id: h.sticker.id,
                 search_type: g.aib.STICKER,
                 source_object: '/'.concat(n),
                 total_results: r.length,
                 index_num: l,
                 expression_guild_id: t,
-                sticker_id: p.sticker.id,
+                sticker_id: h.sticker.id,
                 query: _
             }),
             {
                 type: m.z2.STICKER,
                 metadata: {
                     numStickerResults: r.length,
-                    stickerId: p.sticker.id
+                    stickerId: h.sticker.id
                 }
             }
         );
     }
 };
-t.Z = S;
+t.Z = b;

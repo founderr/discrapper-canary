@@ -32,9 +32,9 @@ function a(e, t, n, a, s) {
             case 'outbound-rtp':
                 _.push(t);
         }
-    let h = Object.values(c).find((e) => 'succeeded' === e.state);
-    if (void 0 === h) return null;
-    let p = [];
+    let p = Object.values(c).find((e) => 'succeeded' === e.state);
+    if (void 0 === p) return null;
+    let h = [];
     for (let e of _) {
         let t = d[e.codecId];
         if (null == t) continue;
@@ -49,7 +49,7 @@ function a(e, t, n, a, s) {
             packetsSent: e.packetsSent
         };
         if ('audio' === e.kind)
-            p.push({
+            h.push({
                 ...a,
                 type: 'audio'
             });
@@ -61,7 +61,7 @@ function a(e, t, n, a, s) {
                           height: e.frameHeight
                       }
                     : void 0;
-            p.push({
+            h.push({
                 ...a,
                 framesEncoded: e.framesEncoded,
                 keyFramesEncoded: e.keyFramesEncoded,
@@ -136,17 +136,17 @@ function a(e, t, n, a, s) {
             });
         }
     }
-    let g = (null !== (o = h.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
+    let g = (null !== (o = p.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
     return {
         transport: {
-            availableOutgoingBitrate: null !== (l = h.availableOutgoingBitrate) && void 0 !== l ? l : 0,
-            bytesReceived: h.bytesReceived,
-            bytesSent: h.bytesSent,
+            availableOutgoingBitrate: null !== (l = p.availableOutgoingBitrate) && void 0 !== l ? l : 0,
+            bytesReceived: p.bytesReceived,
+            bytesSent: p.bytesSent,
             ping: g
         },
         rtp: {
             inbound: m,
-            outbound: p
+            outbound: h
         }
     };
 }

@@ -34,7 +34,7 @@ class _ {
         d(this, 'users', void 0), d(this, 'fetched', void 0), (this.fetched = !1), (this.users = {});
     }
 }
-function h(e) {
+function p(e) {
     let { type: t, messageId: n, userId: r, emoji: i, reactionType: a } = e,
         s = _.ensure(n, i, a);
     if ('MESSAGE_REACTION_ADD' === t) {
@@ -42,7 +42,7 @@ function h(e) {
         null != e && (s.users[r] = e);
     } else delete s.users[r];
 }
-class p extends (r = i.ZP.Store) {
+class h extends (r = i.ZP.Store) {
     getReactions(e, t, n, r, i) {
         let a = _.ensure(t, n, i);
         if (!a.fetched) {
@@ -61,13 +61,13 @@ class p extends (r = i.ZP.Store) {
         return a.users;
     }
 }
-d(p, 'displayName', 'MessageReactionsStore'),
-    (t.Z = new p(a.Z, {
+d(h, 'displayName', 'MessageReactionsStore'),
+    (t.Z = new h(a.Z, {
         CONNECTION_OPEN: function () {
             f = {};
         },
-        MESSAGE_REACTION_ADD: h,
-        MESSAGE_REACTION_REMOVE: h,
+        MESSAGE_REACTION_ADD: p,
+        MESSAGE_REACTION_REMOVE: p,
         MESSAGE_REACTION_ADD_USERS: function (e) {
             let { messageId: t, users: n, emoji: r, reactionType: i } = e,
                 a = _.ensure(t, r, i);

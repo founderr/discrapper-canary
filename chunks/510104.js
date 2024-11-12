@@ -17,22 +17,22 @@ function f(e, t) {
     var n = t,
         f = n.placement,
         _ = void 0 === f ? e.placement : f,
-        h = n.strategy,
-        p = void 0 === h ? e.strategy : h,
+        p = n.strategy,
+        h = void 0 === p ? e.strategy : p,
         m = n.boundary,
         g = void 0 === m ? l.zV : m,
         E = n.rootBoundary,
         v = void 0 === E ? l.Pj : E,
         I = n.elementContext,
-        S = void 0 === I ? l.k5 : I,
-        T = n.altBoundary,
-        b = n.padding,
-        y = void 0 === b ? 0 : b,
+        b = void 0 === I ? l.k5 : I,
+        S = n.altBoundary,
+        T = n.padding,
+        y = void 0 === T ? 0 : T,
         A = (0, c.Z)('number' != typeof y ? y : (0, d.Z)(y, l.mv)),
-        N = S === l.k5 ? l.YP : l.k5,
+        N = b === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        R = e.elements[void 0 !== T && T ? N : S],
-        O = (0, r.Z)((0, u.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, v, p),
+        R = e.elements[void 0 !== S && S ? N : b],
+        O = (0, r.Z)((0, u.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, v, h),
         D = (0, a.Z)(e.elements.reference),
         L = (0, s.Z)({
             reference: D,
@@ -41,7 +41,7 @@ function f(e, t) {
             placement: _
         }),
         x = (0, o.Z)(Object.assign({}, C, L)),
-        w = S === l.k5 ? x : D,
+        w = b === l.k5 ? x : D,
         M = {
             top: O.top - w.top + A.top,
             bottom: w.bottom - O.bottom + A.bottom,
@@ -49,7 +49,7 @@ function f(e, t) {
             right: w.right - O.right + A.right
         },
         P = e.modifiersData.offset;
-    if (S === l.k5 && P) {
+    if (b === l.k5 && P) {
         var k = P[_];
         Object.keys(M).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     }
 }),
     n(47120),
@@ -16,15 +16,15 @@ var r = n(200651),
     d = n(959258),
     f = n(695346),
     _ = n(237997),
-    h = n(768581),
-    p = n(176354),
+    p = n(768581),
+    h = n(176354),
     m = n(506071),
     g = n(149203);
 n(13585);
 let E = __OVERLAY__ ? () => (0, o.e7)([_.Z], () => _.Z.isInstanceFocused()) : m.n;
 function v(e) {
     var t, n;
-    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: S = 'default', isInteracting: T = !1, shouldAnimate: b, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
+    let { src: a, alt: o, className: l, emojiId: d, emojiName: _, channelId: m, messageId: v, animated: I, size: b = 'default', isInteracting: S = !1, shouldAnimate: T, onMouseEnter: y, onMouseLeave: A, canSelect: N = !0, autoplay: C, registerAnimatedElementRef: R, ...O } = e,
         [D, L] = i.useState(!1),
         [x, w] = i.useState(void 0),
         M = i.useRef(),
@@ -32,21 +32,21 @@ function v(e) {
         k = f.Yk.useSetting(),
         U = E(),
         G = null == C ? k : C,
-        B = g.kV[S],
+        B = g.kV[b],
         Z = i.useRef(null),
         F = i.useMemo(() => {
             if (null != a) return a;
             if (null != d) {
-                let e = !0 === b && G;
-                return h.ZP.getEmojiURL({
+                let e = !0 === T && G;
+                return p.ZP.getEmojiURL({
                     id: d,
-                    animated: U && !0 === I && (e || D || !0 === T),
+                    animated: U && !0 === I && (e || D || !0 === S),
                     size: B
                 });
             }
-            if (null != _) return p.ZP.getURL(_);
+            if (null != _) return h.ZP.getURL(_);
             throw Error('Unknown Src for Emoji');
-        }, [I, G, d, _, B, U, D, T, b, a]),
+        }, [I, G, d, _, B, U, D, S, T, a]),
         V = i.useCallback(() => {
             null != F &&
                 (M.current = (0, c.po)(F, (e) => {
@@ -70,8 +70,8 @@ function v(e) {
             return {
                 ...O,
                 className: s()('emoji', l, {
-                    jumboable: 'jumbo' === S,
-                    reactionLarge: 'reactionLarge' === S
+                    jumboable: 'jumbo' === b,
+                    reactionLarge: 'reactionLarge' === b
                 }),
                 onError: V,
                 onMouseEnter: j,
@@ -79,7 +79,7 @@ function v(e) {
                 'data-type': 'emoji',
                 ...e
             };
-        }, [l, d, _, j, H, V, O, S]);
+        }, [l, d, _, j, H, V, O, b]);
     i.useEffect(
         () => () => {
             var e;
@@ -148,6 +148,6 @@ function I(e) {
         shouldAnimate: n && !s
     });
 }
-function S(e) {
+function b(e) {
     return null == e.emojiId && null == e.emojiName && null == e.src ? null : e.animated && void 0 === e.shouldAnimate ? (0, r.jsx)(I, { ...e }) : (0, r.jsx)(v, { ...e });
 }

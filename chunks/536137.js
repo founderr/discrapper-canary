@@ -9,7 +9,7 @@ var r = n(192379),
     d = n(278860),
     f = n(48254),
     _ = n(849818),
-    h = (function () {
+    p = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
@@ -20,7 +20,7 @@ var r = n(192379),
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })(),
-    p = (function (e) {
+    h = (function (e) {
         function t(e) {
             !(function (e, t) {
                 if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
@@ -44,7 +44,7 @@ var r = n(192379),
                 })),
                     t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
             })(t, e),
-            h(t, [
+            p(t, [
                 {
                     key: 'render',
                     value: function () {
@@ -187,12 +187,12 @@ var r = n(192379),
             t
         );
     })(r.Component);
-(p.propTypes = {
+(h.propTypes = {
     header: a().string,
     styles: a().object
 }),
-    (p.defaultProps = {
+    (h.defaultProps = {
         header: 'Color Picker',
         styles: {}
     }),
-    (0, l.t1)(p);
+    (0, l.t1)(h);

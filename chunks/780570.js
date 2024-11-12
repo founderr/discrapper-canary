@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     Je: function () {
-        return h;
+        return p;
     },
     KJ: function () {
         return f;
@@ -71,6 +71,6 @@ function _(e) {
         }
     );
 }
-function h(e) {
+function p(e) {
     return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
 }

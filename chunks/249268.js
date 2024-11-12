@@ -18,10 +18,10 @@ function _(e) {
     let { userId: t, leaderboard: n } = e,
         _ = (0, i.e7)([s.default], () => s.default.getUser(t));
     if (null == _) return null;
-    let h = (0, l.K)(n),
-        p = o.ZP.getName(n.guild_id, void 0, _);
+    let p = (0, l.K)(n),
+        h = o.ZP.getName(n.guild_id, void 0, _);
     return (0, r.jsx)(u.z, {
-        imageUrl: h,
+        imageUrl: p,
         children: (0, r.jsxs)('div', {
             className: f.userContainer,
             children: [
@@ -42,7 +42,7 @@ function _(e) {
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
                                     className: f.userName,
-                                    children: p
+                                    children: h
                                 }),
                                 (0, r.jsx)(a.Spacer, {
                                     size: 4,

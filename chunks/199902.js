@@ -7,16 +7,16 @@ var o,
     d = n(594190),
     f = n(569545),
     _ = n(102172),
-    h = n(139656),
-    p = n(855403),
+    p = n(139656),
+    h = n(855403),
     m = n(314897),
     g = n(592125),
     E = n(430824),
     v = n(131951),
     I = n(496675),
-    S = n(19780),
-    T = n(944486),
-    b = n(979651),
+    b = n(19780),
+    S = n(944486),
+    T = n(979651),
     y = n(981631),
     A = n(70722);
 function N(e, t, n) {
@@ -69,7 +69,7 @@ function M(e, t) {
 function P(e) {
     if (M(e.streamType, e.channelId)) return !0;
     let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, _.p9)(t, b.Z, E.Z, I.Z, c.Z)[0];
+    return null != t && (0, _.p9)(t, T.Z, E.Z, I.Z, c.Z)[0];
 }
 class k extends (o = l.ZP.PersistedStore) {
     initialize(e) {
@@ -84,26 +84,26 @@ class k extends (o = l.ZP.PersistedStore) {
     }
     getLastActiveStream() {
         var e;
-        return (0, h.Z)(v.Z) ? (null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null) : null;
+        return (0, p.Z)(v.Z) ? (null !== (e = Array.from(r.values()).pop()) && void 0 !== e ? e : null) : null;
     }
     getAllActiveStreams() {
-        return (0, h.Z)(v.Z) ? Array.from(r.values()) : [];
+        return (0, p.Z)(v.Z) ? Array.from(r.values()) : [];
     }
     getAllActiveStreamsForChannel(e) {
-        return (0, h.Z)(v.Z) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
+        return (0, p.Z)(v.Z) ? Array.from(r.values()).filter((t) => t.channelId === e) : [];
     }
     getActiveStreamForStreamKey(e) {
         var t;
-        return (0, h.Z)(v.Z) ? (null !== (t = r.get(e)) && void 0 !== t ? t : null) : null;
+        return (0, p.Z)(v.Z) ? (null !== (t = r.get(e)) && void 0 !== t ? t : null) : null;
     }
     getActiveStreamForApplicationStream(e) {
         var t;
-        if (!(0, h.Z)(v.Z) || null == e) return null;
+        if (!(0, p.Z)(v.Z) || null == e) return null;
         let n = (0, f.V9)(e);
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = T.Z.getVoiceChannelId(),
+        let e = S.Z.getVoiceChannelId(),
             t = g.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(m.default.getId(), t.getGuildId());
     }
@@ -114,7 +114,7 @@ class k extends (o = l.ZP.PersistedStore) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = T.Z.getVoiceChannelId(),
+        let t = S.Z.getVoiceChannelId(),
             n = g.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(m.default.getId(), n.getGuildId());
@@ -131,34 +131,34 @@ class k extends (o = l.ZP.PersistedStore) {
     }
     getAnyStreamForUser(e) {
         var t;
-        if (!(0, h.Z)(v.Z)) return null;
+        if (!(0, p.Z)(v.Z)) return null;
         let n = i[e];
         return null == n ? null : null !== (t = Object.values(n).find((e) => P(e))) && void 0 !== t ? t : null;
     }
     getAnyDiscoverableStreamForUser(e) {
         var t;
-        if (!(0, h.Z)(v.Z)) return null;
+        if (!(0, p.Z)(v.Z)) return null;
         let n = i[e];
         return null == n ? null : null !== (t = Object.values(n).find((e) => P(e) && !1 !== e.discoverable)) && void 0 !== t ? t : null;
     }
     getStreamForUser(e, t) {
         var n;
-        if (!(0, h.Z)(v.Z)) return null;
+        if (!(0, p.Z)(v.Z)) return null;
         let r = null === (n = i[e]) || void 0 === n ? void 0 : n[null != t ? t : y.kod];
         return null != r && P(r) ? r : null;
     }
     getRTCStream(e) {
         var t;
-        return (0, h.Z)(v.Z) ? (null !== (t = a[e]) && void 0 !== t ? t : null) : null;
+        return (0, p.Z)(v.Z) ? (null !== (t = a[e]) && void 0 !== t ? t : null) : null;
     }
     getAllApplicationStreams() {
-        return (0, h.Z)(v.Z) ? x().filter((e) => null != e && M(e.streamType, e.channelId)) : [];
+        return (0, p.Z)(v.Z) ? x().filter((e) => null != e && M(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, h.Z)(v.Z) ? x().filter((t) => null != t && t.channelId === e && M(t.streamType, t.channelId)) : [];
+        return (0, p.Z)(v.Z) ? x().filter((t) => null != t && t.channelId === e && M(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
-        if (!(0, h.Z)(v.Z)) return [];
+        if (!(0, p.Z)(v.Z)) return [];
         let t = null,
             n = null != (t = 'string' == typeof e ? e : (0, f.V9)(e)) ? a[t] : null;
         return null != n ? n.viewerIds : [];
@@ -167,7 +167,7 @@ class k extends (o = l.ZP.PersistedStore) {
         return O;
     }
     getStreamingState() {
-        return (0, h.Z)(v.Z)
+        return (0, p.Z)(v.Z)
             ? {
                   activeStreams: Array.from(r.entries()),
                   streamsByUserAndGuild: i,
@@ -212,7 +212,7 @@ N(k, 'displayName', 'ApplicationStreamingStore'),
                 }
                 {
                     let t = m.default.getSessionId();
-                    return n === m.default.getId() && s !== t && null != S.Z.getChannelId()
+                    return n === m.default.getId() && s !== t && null != b.Z.getChannelId()
                         ? e
                         : (function (e, t) {
                               var n;
@@ -241,9 +241,9 @@ N(k, 'displayName', 'ApplicationStreamingStore'),
                     channelId: a,
                     ownerId: m.default.getId()
                 }),
-                h = null !== (t = null != o ? d.ZP.getGameForPID(o) : null != u ? d.ZP.getRunningGames().find((e) => (0, p.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+                p = null !== (t = null != o ? d.ZP.getGameForPID(o) : null != u ? d.ZP.getRunningGames().find((e) => (0, h.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
             (s[_] = {
-                id: null == h ? void 0 : h.id,
+                id: null == p ? void 0 : p.id,
                 pid: o,
                 sourceName: l,
                 previewDisabled: c

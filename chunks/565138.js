@@ -9,8 +9,8 @@ var r,
     d = n(481060),
     f = n(891819),
     _ = n(372769),
-    h = n(451478),
-    p = n(956664),
+    p = n(451478),
+    h = n(956664),
     m = n(153066),
     g = n(230084);
 function E(e, t, n) {
@@ -46,7 +46,7 @@ let v = {
         [v.LARGER]: 64,
         [v.XLARGE]: 100
     },
-    S = {
+    b = {
         [v.SMOL]: [10, 10, 8, 6, 6, 4],
         [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
         [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -56,7 +56,7 @@ let v = {
         [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class T extends a.PureComponent {
+class S extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -80,16 +80,16 @@ class T extends a.PureComponent {
     }
     renderIcon() {
         var e, t;
-        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: h, to: p, badgeStrokeColor: E, animate: v, tabIndex: I, iconSrc: T, 'aria-hidden': b, ...y } = this.props,
-            A = S[l],
-            N = null != h ? d.Clickable : 'div';
+        let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: I, iconSrc: S, 'aria-hidden': T, ...y } = this.props,
+            A = b[l],
+            N = null != p ? d.Clickable : 'div';
         return (0, i.jsxs)(N, {
             className: o()(g.icon, r, (0, m.l)(g, 'iconSize', l), {
                 [null !== (e = (0, m.l)(g, 'iconActive', l)) && void 0 !== e ? e : '']: s,
                 [g.iconInactive]: !s,
                 [g.noIcon]: null == n.icon
             }),
-            'aria-hidden': b,
+            'aria-hidden': T,
             style:
                 null == n.icon
                     ? {
@@ -97,7 +97,7 @@ class T extends a.PureComponent {
                           ...u
                       }
                     : u,
-            onClick: null != p || null == h ? void 0 : h,
+            onClick: null != h || null == p ? void 0 : p,
             tabIndex: I,
             ...y,
             children: [this.renderAcronym(), this.renderBadge()]
@@ -130,18 +130,18 @@ class T extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let b = u.ZP.connectStores([h.Z], (e) => {
+let T = u.ZP.connectStores([p.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a } = e;
     return {
         style: {
             ...i,
-            backgroundImage: (0, p.rv)(null != r ? r : t.getIconURL(I[a], n && h.Z.isFocused()))
+            backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(I[a], n && p.Z.isFocused()))
         }
     };
-})((0, f.N)((e) => (0, i.jsx)(T, { ...e })));
+})((0, f.N)((e) => (0, i.jsx)(S, { ...e })));
 class y extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(b, { ...this.props });
+        return (0, i.jsx)(T, { ...this.props });
     }
 }
 E(y, 'Sizes', v),

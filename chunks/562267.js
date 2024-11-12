@@ -12,7 +12,7 @@ var r = n(200651),
 t.Z = i.memo(function (e) {
     var t;
     let { channelId: n, chatInputType: _ } = e,
-        [h, p] = i.useState(null),
+        [p, h] = i.useState(null),
         m = (0, a.e7)([l.Z], () => l.Z.getStickerPreview(n, _.drafts.type));
     return (null === (t = _.stickers) || void 0 === t ? void 0 : t.allowSending) && null != m && 0 !== m.length
         ? (0, r.jsxs)(r.Fragment, {
@@ -26,8 +26,8 @@ t.Z = i.memo(function (e) {
                                   className: f.stickerPreviewContainer,
                                   children: [
                                       (0, r.jsx)(s.Clickable, {
-                                          onFocus: () => p(e.id),
-                                          onBlur: () => p(null),
+                                          onFocus: () => h(e.id),
+                                          onBlur: () => h(null),
                                           className: f.closeButton,
                                           'aria-label': d.intl.formatToPlainString(d.t.BGAQRU, { name: e.name }),
                                           onClick: () => (0, u.qB)(n, _.drafts.type),
@@ -41,7 +41,7 @@ t.Z = i.memo(function (e) {
                                           })
                                       }),
                                       (0, r.jsx)(c.ZP, {
-                                          isInteracting: h === e.id,
+                                          isInteracting: p === e.id,
                                           className: f.stickerPreview,
                                           size: 48,
                                           sticker: e

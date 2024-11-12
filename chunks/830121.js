@@ -34,16 +34,16 @@ n(865427);
 var f = n(264229);
 n(413605);
 var _ = n(807675),
-    h = n(701190),
-    p = n(226951),
+    p = n(701190),
+    h = n(226951),
     m = n(591759),
     g = n(960904),
     E = n(981631);
 let v = /^\/([a-zA-Z0-9-]+)$/,
     I = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
-    S = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
-    T = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
-    b = /^\/application-directory\/([0-9-]+)\/?$/,
+    b = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?$/,
+    S = RegExp('^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?'),
+    T = /^\/application-directory\/([0-9-]+)\/?$/,
     y = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     A = /^\/activities\/([0-9-]+)\/?$/,
     N = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -59,7 +59,7 @@ let v = /^\/([a-zA-Z0-9-]+)$/,
     k = F('//ptb.'.concat(E.$R1)),
     U = F('discordapp.com'),
     G = F('discord.com'),
-    B = [p.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), p.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), p.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), p.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), p.Z.escape(null !== (l = G.host) && void 0 !== l ? l : '')].filter(Boolean),
+    B = [h.Z.escape(null !== (i = x.host) && void 0 !== i ? i : ''), h.Z.escape(null !== (a = w.host) && void 0 !== a ? a : ''), h.Z.escape(null !== (s = M.host) && void 0 !== s ? s : ''), h.Z.escape(null !== (o = U.host) && void 0 !== o ? o : ''), h.Z.escape(null !== (l = G.host) && void 0 !== l ? l : '')].filter(Boolean),
     Z = RegExp('((https?://[^ ]*)|^|[^/][^/.])('.concat(B.join('|'), ')'), 'g');
 function F(e) {
     if (null == e)
@@ -133,11 +133,11 @@ function Y(e) {
         };
         if ((null == i ? void 0 : i.match(v)) != null) {
             let e = (0, f.mb)(i.substring(1), r.search);
-            h.Z.getInvite(e);
+            p.Z.getInvite(e);
             l(g.g.INVITE, e);
         }
         (null == s ? void 0 : s.match(v)) != null && l(g.g.TEMPLATE, s.substring(1));
-        let u = null == o ? void 0 : o.match(S);
+        let u = null == o ? void 0 : o.match(b);
         if (null != u) {
             let e = u[1].toUpperCase();
             if (e === g.g.INVITE) {
@@ -146,9 +146,9 @@ function Y(e) {
             } else l(e, u[2]);
         }
         (null == o ? void 0 : o.match(I)) != null && l(g.g.CHANNEL_LINK, o.replace('/channels/', ''));
-        let p = (function (e) {
+        let h = (function (e) {
             if (null == e) return null;
-            let t = e.match(T);
+            let t = e.match(S);
             return null != t && t.length >= 4
                 ? {
                       guildId: t[1],
@@ -157,13 +157,13 @@ function Y(e) {
                   }
                 : null;
         })(r.pathname);
-        if ((null != p && l(g.g.EVENT, ''.concat(p.guildId, '-').concat(p.guildEventId) + (null != p.recurrenceId ? '-'.concat(p.recurrenceId) : '')), null != (null == o ? void 0 : o.match(D)) && null != r.query)) {
+        if ((null != h && l(g.g.EVENT, ''.concat(h.guildId, '-').concat(h.guildEventId) + (null != h.recurrenceId ? '-'.concat(h.recurrenceId) : '')), null != (null == o ? void 0 : o.match(D)) && null != r.query)) {
             var a;
             let e = (0, _.y)(r.query),
                 t = e.clientId;
             null != t && '' !== t && !(null === (a = e.scopes) || void 0 === a ? void 0 : a.some((e) => e !== c.x.APPLICATIONS_COMMANDS)) && l(g.g.APP_OAUTH2_LINK, t);
         }
-        let m = null == o ? void 0 : o.match(b);
+        let m = null == o ? void 0 : o.match(T);
         if (null != m) {
             let e = m[1];
             l(g.g.APP_DIRECTORY_PROFILE, e);

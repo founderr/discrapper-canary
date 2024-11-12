@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120),
@@ -23,7 +23,7 @@ function f(e) {
     return t;
 }
 let _ = new Map();
-function h(e, t, n) {
+function p(e, t, n) {
     if ((o.default.track(d.rMx.INVITE_OPENED, { invite_code: e }), _.has(e))) return _.get(e);
     let a = (0, u.fU)(e),
         c = {
@@ -32,7 +32,7 @@ function h(e, t, n) {
             with_expiration: !0,
             guild_scheduled_event_id: a.guildScheduledEventId
         },
-        h = l.Z.get({
+        p = l.Z.get({
             url: d.ANM.INVITE(a.baseCode),
             query: c,
             oldFormErrors: !0,
@@ -40,23 +40,23 @@ function h(e, t, n) {
                 event: r.NetworkActionNames.INVITE_RESOLVE,
                 properties: (e) => {
                     var r, o, l, u, c, _;
-                    let h = e.body,
-                        p = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.USER_BANNED;
+                    let p = e.body,
+                        h = (null === (r = e.body) || void 0 === r ? void 0 : r.code) === d.evJ.USER_BANNED;
                     return (0, i.iG)({
                         resolved: e.ok,
-                        guild_id: null == h ? void 0 : null === (o = h.guild) || void 0 === o ? void 0 : o.id,
-                        channel_id: null == h ? void 0 : null === (l = h.channel) || void 0 === l ? void 0 : l.id,
-                        channel_type: null == h ? void 0 : null === (u = h.channel) || void 0 === u ? void 0 : u.type,
-                        inviter_id: null == h ? void 0 : null === (c = h.inviter) || void 0 === c ? void 0 : c.id,
+                        guild_id: null == p ? void 0 : null === (o = p.guild) || void 0 === o ? void 0 : o.id,
+                        channel_id: null == p ? void 0 : null === (l = p.channel) || void 0 === l ? void 0 : l.id,
+                        channel_type: null == p ? void 0 : null === (u = p.channel) || void 0 === u ? void 0 : u.type,
+                        inviter_id: null == p ? void 0 : null === (c = p.inviter) || void 0 === c ? void 0 : c.id,
                         code: a.baseCode,
                         input_value: null == n ? void 0 : n.inputValue,
                         location: t,
                         authenticated: s.default.isAuthenticated(),
-                        size_total: null == h ? void 0 : h.approximate_member_count,
-                        size_online: null == h ? void 0 : h.approximate_presence_count,
-                        destination_user_id: null == h ? void 0 : null === (_ = h.target_user) || void 0 === _ ? void 0 : _.id,
-                        invite_type: f(h),
-                        user_banned: p
+                        size_total: null == p ? void 0 : p.approximate_member_count,
+                        size_online: null == p ? void 0 : p.approximate_presence_count,
+                        destination_user_id: null == p ? void 0 : null === (_ = p.target_user) || void 0 === _ ? void 0 : _.id,
+                        invite_type: f(p),
+                        user_banned: h
                     });
                 }
             }
@@ -120,5 +120,5 @@ function h(e, t, n) {
             .finally(() => {
                 _.delete(e);
             });
-    return _.set(e, h), h;
+    return _.set(e, p), p;
 }

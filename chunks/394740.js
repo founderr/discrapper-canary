@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(100527),
     f = n(906732),
     _ = n(98278),
-    h = n(197115),
-    p = n(626135),
+    p = n(197115),
+    h = n(626135),
     m = n(74538),
     g = n(706667),
     E = n(409673),
     v = n(981631),
     I = n(474936),
-    S = n(388032),
-    T = n(383052),
-    b = n(145834);
+    b = n(388032),
+    S = n(383052),
+    T = n(145834);
 function y(e) {
     var t;
     let { onClose: a, closePopout: y, sound: A, channel: N } = e,
@@ -47,7 +47,7 @@ function y(e) {
         }),
         P = (0, o.ap)(C) ? n(537381) : n(341048);
     i.useEffect(() => {
-        p.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+        h.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
             type: I.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
@@ -59,42 +59,42 @@ function y(e) {
         });
     }, [x, L]);
     let k = i.useCallback(() => {
-        p.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), y();
+        h.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), y();
     }, [y]);
     return (0, r.jsxs)('div', {
-        className: s()(b.premiumPromo, T.container),
+        className: s()(T.premiumPromo, S.container),
         children: [
             (0, r.jsx)(l.Clickable, {
-                className: b.premiumPromoClose,
+                className: T.premiumPromoClose,
                 onClick: a,
-                children: S.intl.string(S.t.cpT0Cg)
+                children: b.intl.string(b.t.cpT0Cg)
             }),
             (0, r.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: s()(b.premiumPromoImage, b.premiumPromoImageSmaller, T.image),
+                className: s()(T.premiumPromoImage, T.premiumPromoImageSmaller, S.image),
                 src: P
             }),
             (0, r.jsx)(l.Heading, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
-                className: b.premiumPromoTitle,
-                children: S.intl.string(S.t['/a5qY2'])
+                className: T.premiumPromoTitle,
+                children: b.intl.string(b.t['/a5qY2'])
             }),
             (0, r.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: b.premiumPromoDescription,
-                children: S.intl.format(S.t.lcSxhI, { onClick: k })
+                className: T.premiumPromoDescription,
+                children: b.intl.format(b.t.lcSxhI, { onClick: k })
             }),
             (0, r.jsxs)('div', {
-                className: T.buttonContainer,
+                className: S.buttonContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: T.previewButtonContainer,
+                        className: S.previewButtonContainer,
                         children: M
                     }),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(p.Z, {
                         subscriptionTier: I.Si.TIER_2,
                         submitting: R,
                         premiumModalAnalyticsLocation: {

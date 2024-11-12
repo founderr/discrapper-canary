@@ -10,16 +10,16 @@ var r,
     d = n(442837),
     f = n(570140),
     _ = n(122810),
-    h = n(106301),
-    p = n(709054),
+    p = n(106301),
+    h = n(709054),
     m = n(314897),
     g = n(594174),
     E = n(981631);
 let v = Object.freeze([]),
     I = {},
+    b = {},
     S = {},
     T = {},
-    b = {},
     y = {};
 function A(e, t) {
     let n = I[e];
@@ -45,15 +45,15 @@ function R(e, t) {
     return (n = e), N(t) - N(n) || ((r = e), C(t) - C(r)) || ((i = e), (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (s = i.created_at) && void 0 !== s ? s : 0));
 }
 function O(e) {
-    if ((delete S[e], delete T[e], delete b[e], null == I[e])) return;
+    if ((delete b[e], delete S[e], delete T[e], null == I[e])) return;
     let [t] = c().sortBy(I[e], (e) => -e.timestamp);
-    t.status !== E.Skl.OFFLINE ? ((S[e] = t.status), (T[e] = t.activities), null != t.clientStatus && (b[e] = t.clientStatus)) : c().every(I[e], (e) => e.status === E.Skl.OFFLINE) && delete I[e];
+    t.status !== E.Skl.OFFLINE ? ((b[e] = t.status), (S[e] = t.activities), null != t.clientStatus && (T[e] = t.clientStatus)) : c().every(I[e], (e) => e.status === E.Skl.OFFLINE) && delete I[e];
 }
 function D(e) {
     let t = I[e];
     if (null == t) return;
     let n = c().maxBy(Object.values(t), (e) => e.timestamp);
-    n.status !== E.Skl.OFFLINE && ((S[e] = n.status), (T[e] = n.activities), null != n.clientStatus && (b[e] = n.clientStatus));
+    n.status !== E.Skl.OFFLINE && ((b[e] = n.status), (S[e] = n.activities), null != n.clientStatus && (T[e] = n.clientStatus));
 }
 function L(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a } = e;
@@ -115,14 +115,14 @@ function w(e, t) {
     delete n[e], 0 === Object.keys(n).length && delete I[t], O(t);
 }
 function M(e) {
-    for (let t of p.default.keys(I)) w(e, t);
+    for (let t of h.default.keys(I)) w(e, t);
 }
 class P extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, h.Z);
+        this.waitFor(m.default, p.Z);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        (S[m.default.getId()] = e), (T[m.default.getId()] = t);
+        (b[m.default.getId()] = e), (S[m.default.getId()] = t);
     }
     getStatus(e) {
         var t, n;
@@ -130,7 +130,7 @@ class P extends (r = d.ZP.Store) {
             i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Skl.OFFLINE,
             a = g.default.getUser(e);
         if ((null != a && a.hasFlag(E.xW$.BOT_HTTP_INTERACTIONS) && (i = E.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return E.Skl.ONLINE;
-        if (null == r) return null !== (t = S[e]) && void 0 !== t ? t : i;
+        if (null == r) return null !== (t = b[e]) && void 0 !== t ? t : i;
         let s = A(e, r);
         return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : i;
     }
@@ -138,7 +138,7 @@ class P extends (r = d.ZP.Store) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
         if (null == t) {
             var n;
-            return null !== (n = T[e]) && void 0 !== n ? n : v;
+            return null !== (n = S[e]) && void 0 !== n ? n : v;
         }
         let r = A(e, t);
         return null == r || null == r.activities ? v : r.activities;
@@ -149,8 +149,8 @@ class P extends (r = d.ZP.Store) {
     }
     getAllApplicationActivities(e) {
         let t = [];
-        for (let n of p.default.keys(T))
-            for (let r of T[n])
+        for (let n of h.default.keys(S))
+            for (let r of S[n])
                 r.application_id === e &&
                     t.push({
                         userId: n,
@@ -170,22 +170,22 @@ class P extends (r = d.ZP.Store) {
         return y[e];
     }
     getUserIds() {
-        return p.default.keys(T);
+        return h.default.keys(S);
     }
     isMobileOnline(e) {
-        let t = b[e];
+        let t = T[e];
         return null != t && t[E.X5t.MOBILE] === E.Skl.ONLINE && t[E.X5t.DESKTOP] !== E.Skl.ONLINE;
     }
     getClientStatus(e) {
-        return b[e];
+        return T[e];
     }
     getState() {
         return {
             presencesForGuilds: I,
-            statuses: S,
-            activities: T,
+            statuses: b,
+            activities: S,
             activityMetadata: y,
-            clientStatuses: b
+            clientStatuses: T
         };
     }
 }
@@ -205,7 +205,7 @@ class P extends (r = d.ZP.Store) {
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t, presences: n } = e,
                 r = m.default.getId();
-            (I = {}), (y = {}), (S = { [r]: S[r] }), (T = { [r]: T[r] }), (b = { [r]: {} });
+            (I = {}), (y = {}), (b = { [r]: b[r] }), (S = { [r]: S[r] }), (T = { [r]: {} });
             let i = new Set(),
                 a = Date.now();
             t.forEach((e) => {
@@ -240,7 +240,7 @@ class P extends (r = d.ZP.Store) {
         },
         OVERLAY_INITIALIZE: function (e) {
             let { presences: t } = e;
-            (I = t.presencesForGuilds), (S = t.statuses), (T = t.activities), (y = t.activityMetadata);
+            (I = t.presencesForGuilds), (b = t.statuses), (S = t.activities), (y = t.activityMetadata);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -326,7 +326,7 @@ class P extends (r = d.ZP.Store) {
         },
         SELF_PRESENCE_STORE_UPDATE: function (e) {
             let t = m.default.getId();
-            if (S[t] === e.status && T[t] === e.activities) return !1;
-            (S[t] = e.status), (T[t] = e.activities), delete y[t];
+            if (b[t] === e.status && S[t] === e.activities) return !1;
+            (b[t] = e.status), (S[t] = e.activities), delete y[t];
         }
     }));

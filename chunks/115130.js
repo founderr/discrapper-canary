@@ -35,8 +35,8 @@ function f() {
 }
 let _ = f();
 ((a = r || (r = {})).INITIALIZED = 'INITIALIZED'), (a.LOADING = 'LOADING'), (a.LOADED = 'LOADED'), (a.ERROR = 'ERROR');
-let h = 'INITIALIZED',
-    p = [];
+let p = 'INITIALIZED',
+    h = [];
 class m extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         _ = {
@@ -48,7 +48,7 @@ class m extends (i = s.ZP.PersistedStore) {
         return _;
     }
     getIsEnabled() {
-        return l.Sb.getSetting() && p.length > 0;
+        return l.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
         return _.lastUsedObject;
@@ -60,16 +60,16 @@ class m extends (i = s.ZP.PersistedStore) {
         return this.getIsEnabled() ? _.activityUrlOverride : null;
     }
     getFetchState() {
-        return h;
+        return p;
     }
     getFilter() {
         return this.getIsEnabled() ? _.filter : '';
     }
     getDeveloperShelfItems() {
-        return this.getIsEnabled() ? p : [];
+        return this.getIsEnabled() ? h : [];
     }
     inDevModeForApplication(e) {
-        return this.getIsEnabled() && null != p.find((t) => t.id === e);
+        return this.getIsEnabled() && null != h.find((t) => t.id === e);
     }
 }
 d(m, 'displayName', 'DeveloperActivityShelfStore'),
@@ -77,7 +77,7 @@ d(m, 'displayName', 'DeveloperActivityShelfStore'),
     d(m, 'migrations', [(e) => (delete e.isEnabled, { ...e })]),
     (t.Z = new m(o.Z, {
         LOGOUT: function () {
-            (_ = f()), (h = 'INITIALIZED'), (p = []);
+            (_ = f()), (p = 'INITIALIZED'), (h = []);
         },
         DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function () {
             _.useActivityUrlOverride = !_.useActivityUrlOverride;
@@ -88,19 +88,19 @@ d(m, 'displayName', 'DeveloperActivityShelfStore'),
         },
         DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function (e) {
             let { applicationId: t, timestamp: n } = e;
-            if (null == p.find((e) => e.id === t)) return !1;
+            if (null == h.find((e) => e.id === t)) return !1;
             _.lastUsedObject[t] = n;
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
-            h = 'LOADING';
+            p = 'LOADING';
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function (e) {
             let { applications: t } = e;
-            (h = 'LOADED'), (p = t.filter((e) => null != e.flags && (0, u.yE)(e.flags, c.udG.EMBEDDED)));
+            (p = 'LOADED'), (h = t.filter((e) => null != e.flags && (0, u.yE)(e.flags, c.udG.EMBEDDED)));
         },
         DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function (e) {
             let { type: t } = e;
-            h = 'ERROR';
+            p = 'ERROR';
         },
         DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function (e) {
             let { filter: t } = e;

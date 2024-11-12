@@ -15,22 +15,22 @@ var r = n(200651),
     d = n(788307),
     f = n(607070),
     _ = n(100527),
-    h = n(906732),
-    p = n(8454),
+    p = n(906732),
+    h = n(8454),
     m = n(314897),
     g = n(785717),
     E = n(481046),
     v = n(277085),
     I = n(228168),
-    S = n(388032),
-    T = n(393480);
-let b = 'text-sm/medium',
+    b = n(388032),
+    S = n(393480);
+let T = 'text-sm/medium',
     y = 36,
     A = 144;
 function N(e) {
     var t;
-    let { statusActivity: a, profileType: p, editEnabled: m, hasEntered: E = !0, animate: N = !0, onCloseProfile: C } = e,
-        { analyticsLocations: R } = (0, h.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
+    let { statusActivity: a, profileType: h, editEnabled: m, hasEntered: E = !0, animate: N = !0, onCloseProfile: C } = e,
+        { analyticsLocations: R } = (0, p.ZP)(_.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: O } = (0, g.KZ)(),
         D = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         [L] = i.useState(() => new u.V7()),
@@ -105,7 +105,7 @@ function N(e) {
         eo = () =>
             V
                 ? (0, r.jsx)(d.Iv, {
-                      className: F ? T.statusEmojiInline : T.statusEmojiOnly,
+                      className: F ? S.statusEmojiInline : S.statusEmojiOnly,
                       emoji: G,
                       animate: N,
                       hideTooltip: !1,
@@ -115,16 +115,16 @@ function N(e) {
         el = () =>
             F
                 ? (0, r.jsx)(c.Text, {
-                      variant: b,
-                      className: T.statusText,
+                      variant: T,
+                      className: S.statusText,
                       children: Z
                   })
                 : null,
         eu = () => {
-            let e = s()(T.content, {
-                [T.clamp]: x,
-                [T.unclamp]: !x,
-                [T.singleLineAlign]: X
+            let e = s()(S.content, {
+                [S.clamp]: x,
+                [S.unclamp]: !x,
+                [S.singleLineAlign]: X
             });
             return (0, r.jsxs)(o.animated.div, {
                 style: ei,
@@ -134,13 +134,13 @@ function N(e) {
         },
         ec = () =>
             (0, r.jsxs)('div', {
-                className: s()(T.content, T.clamp, T.placeholderWidth, { [T.panel]: p === I.y0.PANEL }),
+                className: s()(S.content, S.clamp, S.placeholderWidth, { [S.panel]: h === I.y0.PANEL }),
                 ref: k,
                 children: [eo(), el()]
             }),
         ed = () =>
             (0, r.jsxs)('div', {
-                className: s()(T.content, T.unclamp, T.placeholderWidth, T.incorporeal, { [T.panel]: p === I.y0.PANEL }),
+                className: s()(S.content, S.unclamp, S.placeholderWidth, S.incorporeal, { [S.panel]: h === I.y0.PANEL }),
                 ref: M,
                 children: [eo(), el()]
             }),
@@ -157,46 +157,46 @@ function N(e) {
                 });
         },
         e_ = {
-            [T.biteSize]: p === I.y0.BITE_SIZE,
-            [T.fullSize]: p === I.y0.FULL_SIZE,
-            [T.panel]: p === I.y0.PANEL
+            [S.biteSize]: h === I.y0.BITE_SIZE,
+            [S.fullSize]: h === I.y0.FULL_SIZE,
+            [S.panel]: h === I.y0.PANEL
         },
-        eh = s()(T.background, { [T.editable]: Q }),
-        ep = s()({
-            [T.statusBubbleShape]: (!F && V) || !X,
-            [T.statusBubbleSingleLineWithTextShape]: (X && F) || q
+        ep = s()(S.background, { [S.editable]: Q }),
+        eh = s()({
+            [S.statusBubbleShape]: (!F && V) || !X,
+            [S.statusBubbleSingleLineWithTextShape]: (X && F) || q
         }),
-        em = s()(T.statusBubbleOuter, e_, ep, { [T.statusBubbleOuterAddStatusCursor]: q }),
-        eg = s()(T.statusBubble, ep, {
-            [T.statusBubbleEmojiOnlyPadding]: j,
-            [T.statusBubbleWithTextPadding]: F || q,
-            [T.statusBubbleWithTextMinWidth]: F,
-            [T.statusBubbleCopyStatusCursor]: z
+        em = s()(S.statusBubbleOuter, e_, eh, { [S.statusBubbleOuterAddStatusCursor]: q }),
+        eg = s()(S.statusBubble, eh, {
+            [S.statusBubbleEmojiOnlyPadding]: j,
+            [S.statusBubbleWithTextPadding]: F || q,
+            [S.statusBubbleWithTextMinWidth]: F,
+            [S.statusBubbleCopyStatusCursor]: z
         });
-    return (0, r.jsx)(h.Gt, {
+    return (0, r.jsx)(p.Gt, {
         value: R,
         children: (0, r.jsx)('div', {
             children: q
                 ? (0, r.jsx)(c.Clickable, {
-                      'aria-label': S.intl.string(S.t['zrpF/f']),
+                      'aria-label': b.intl.string(b.t['zrpF/f']),
                       onClick: ef,
-                      className: s()(T.addCustomStatusButtonBubble, e_, eh),
-                      focusProps: { ringClassName: ep },
+                      className: s()(S.addCustomStatusButtonBubble, e_, ep),
+                      focusProps: { ringClassName: eh },
                       children: (0, r.jsx)('div', {
                           className: em,
                           children: (0, r.jsx)('span', {
                               className: eg,
                               children: (0, r.jsxs)('div', {
-                                  className: T.content,
+                                  className: S.content,
                                   children: [
                                       (0, r.jsx)(c.CirclePlusIcon, {
-                                          className: T.addStatusIcon,
-                                          colorClass: T.addStatusIconColor
+                                          className: S.addStatusIcon,
+                                          colorClass: S.addStatusIconColor
                                       }),
                                       (0, r.jsx)(c.Text, {
-                                          variant: b,
-                                          className: T.addStatusPrompt,
-                                          children: S.intl.string(S.t.evw0o6)
+                                          variant: T,
+                                          className: S.addStatusPrompt,
+                                          children: b.intl.string(b.t.evw0o6)
                                       })
                                   ]
                               })
@@ -206,7 +206,7 @@ function N(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', {
-                              className: s()(T.invisibleContainer, e_),
+                              className: s()(S.invisibleContainer, e_),
                               children: (0, r.jsx)('div', {
                                   className: em,
                                   children: (0, r.jsxs)('span', {
@@ -216,12 +216,12 @@ function N(e) {
                               })
                           }),
                           (0, r.jsx)(c.FocusRing, {
-                              ringClassName: ep,
+                              ringClassName: eh,
                               children: (0, r.jsxs)('div', {
                                   ref: er,
-                                  className: s()(T.visibleContainer, e_, eh),
+                                  className: s()(S.visibleContainer, e_, ep),
                                   role: 'tooltip',
-                                  'aria-label': S.intl.formatToPlainString(S.t.UpF5QU, {
+                                  'aria-label': b.intl.formatToPlainString(b.t.UpF5QU, {
                                       emoji: null !== (t = null == G ? void 0 : G.name) && void 0 !== t ? t : '',
                                       status: B
                                   }),
@@ -264,7 +264,7 @@ function N(e) {
 function C(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([m.default], () => m.default.getId() === t.id),
-        a = (0, p.Z)(t.id),
+        a = (0, h.Z)(t.id),
         { customStatusBubbleEditEnabled: s } = (0, E.K)({ location: 'UserProfileCustomStatusBubble' });
     return (0, r.jsx)(N, {
         editEnabled: s && i,

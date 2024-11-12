@@ -93,11 +93,11 @@ var u = 0,
                     (function () {
                         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
                     })()),
-            h = _[0],
-            p = _[1];
+            p = _[0],
+            h = _[1];
         return (
             (0, i.useEffect)(function () {
-                if (p) {
+                if (h) {
                     var e = f();
                     return (
                         ++u,
@@ -107,7 +107,7 @@ var u = 0,
                     );
                 }
             }, []),
-            (0, r.jsx)(s.L.Provider, Object.assign({ value: h }, { children: d }), void 0)
+            (0, r.jsx)(s.L.Provider, Object.assign({ value: p }, { children: d }), void 0)
         );
     });
 function f() {

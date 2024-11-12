@@ -119,8 +119,8 @@ var f = (function () {
                                 var d = s.getCurrentSourcePreviewNodeOptions(),
                                     f = d.anchorX,
                                     _ = d.anchorY,
-                                    h = d.offsetX,
-                                    p = d.offsetY,
+                                    p = d.offsetX,
+                                    h = d.offsetY,
                                     m = (0, i.rK)(
                                         u,
                                         c,
@@ -130,8 +130,8 @@ var f = (function () {
                                             anchorY: _
                                         },
                                         {
-                                            offsetX: h,
-                                            offsetY: p
+                                            offsetX: p,
+                                            offsetY: h
                                         }
                                     );
                                 r.setDragImage(c, m.x, m.y);

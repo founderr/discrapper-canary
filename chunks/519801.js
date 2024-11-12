@@ -9,8 +9,8 @@ var i = t(200651),
     o = t(131388),
     a = t(607070),
     l = t(745510),
-    c = t(171246),
-    s = t(689011),
+    s = t(171246),
+    c = t(689011),
     d = t(931905),
     u = t(563132),
     p = t(409813),
@@ -24,16 +24,16 @@ function _(e) {
     var n, t;
     let _,
         v,
-        { showBenefits: C, handleClose: S, onSubscriptionConfirmation: k } = e,
-        { updatedSubscription: j, readySlideId: y, selectedSku: T, selectedStoreListing: P, application: B } = (0, u.usePaymentContext)(),
+        { showBenefits: C, handleClose: S, onSubscriptionConfirmation: j } = e,
+        { updatedSubscription: k, readySlideId: y, selectedSku: T, selectedStoreListing: P, application: B } = (0, u.usePaymentContext)(),
         N = (0, o.Z)(g.i),
         { createMultipleConfettiAt: O } = r.useContext(l.h),
         E = null !== (n = null == T ? void 0 : T.name) && void 0 !== n ? n : '',
         I = () => {
-            S(), null == k || k();
+            S(), null == j || j();
         },
-        A = y === p.h8.CONFIRM,
-        M = (0, c.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
+        M = y === p.h8.CONFIRM,
+        A = (0, s.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
         w = null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t['+IQQVF'], { benefitCount: P.benefits.length }) : null;
     return (
         C
@@ -46,13 +46,13 @@ function _(e) {
                   }))
                 : ((_ =
                       null != P && null != B
-                          ? (0, i.jsx)(s.Oc, {
+                          ? (0, i.jsx)(c.Oc, {
                                 icon: P.thumbnail,
                                 storeListingBenefits: P.benefits,
                                 application: B,
                                 title: x.intl.format(x.t['Q+qktb'], { tier: E }),
                                 subtitle: x.intl.string(x.t.ECKxXV),
-                                description: M ? x.intl.format(x.t.MAtQk5, { applicationName: null == B ? void 0 : B.name }) : x.intl.format(x.t.vHkMFx, { tier: E })
+                                description: A ? x.intl.format(x.t.MAtQk5, { applicationName: null == B ? void 0 : B.name }) : x.intl.format(x.t.vHkMFx, { tier: E })
                             })
                           : (0, i.jsx)(m.Z, {})),
                   (v = (0, i.jsx)(f.Z, {
@@ -64,16 +64,16 @@ function _(e) {
                   ? (0, i.jsx)(d.m, {
                         tierName: E,
                         onConfirm: I,
-                        subscription: j
+                        subscription: k
                     })
-                  : (0, i.jsx)(s.xe, {
+                  : (0, i.jsx)(c.xe, {
                         tierName: E,
                         onConfirm: I,
-                        subscription: j
+                        subscription: k
                     })),
         r.useEffect(() => {
-            a.Z.useReducedMotion && A && O(window.innerWidth / 2, window.innerHeight / 2);
-        }, [O, A]),
+            a.Z.useReducedMotion && M && O(window.innerWidth / 2, window.innerHeight / 2);
+        }, [O, M]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(b.C3, {

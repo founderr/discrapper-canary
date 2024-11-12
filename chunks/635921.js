@@ -11,15 +11,15 @@ var r = n(120356),
     g = n(140465),
     m = n(775412),
     f = n(650032),
-    _ = n(105759),
-    p = n(346497),
+    p = n(105759),
+    _ = n(346497),
     h = n(422034),
     E = n(206127),
     b = n(710220),
     x = n(318747),
     C = n(409100),
-    T = n(474936),
-    v = n(388032),
+    v = n(474936),
+    T = n(388032),
     N = n(679757);
 let I = (e) => {
         let { inOfferExperience: t, inTrial: n, subscriptionTier: r, buttonClassName: s } = e,
@@ -67,7 +67,7 @@ function R(e) {
         variant: t,
         color: 'always-white',
         className: a()(N.description, { [N.descriptionBottomMargin]: n }),
-        children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: r })
+        children: T.intl.format(T.t.kt9wxs, { cheapestMonthlyPrice: r })
     });
 }
 t.Z = (e) => {
@@ -75,11 +75,11 @@ t.Z = (e) => {
         { analyticsLocations: j } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, m._O)(),
         Z = (0, g.Nx)(),
-        O = (0, p.Vi)(),
+        B = (0, _.Vi)(),
         M = (0, s.e7)([u.Z], () => u.Z.affinities),
-        B = (0, _.Z)(),
+        O = (0, p.Z)(),
         { enabled: w } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        y = A === T.EZ.ApplicationStoreHome && null != B && w,
+        y = A === v.EZ.ApplicationStoreHome && null != O && w,
         k = M.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: j,
@@ -96,10 +96,10 @@ t.Z = (e) => {
                         (0, i.jsx)(l.Heading, {
                             variant: t ? 'display-lg' : 'display-md',
                             color: 'always-white',
-                            children: v.intl.string(v.t.YCZldH)
+                            children: T.intl.string(T.t.YCZldH)
                         }),
                         y
-                            ? (0, i.jsx)(b.Z, { referrer: B })
+                            ? (0, i.jsx)(b.Z, { referrer: O })
                             : k
                               ? (0, i.jsx)('div', {
                                     className: a()(N.affinityDescription),
@@ -109,7 +109,7 @@ t.Z = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(R, {}),
-                        O
+                        B
                             ? (0, i.jsx)('div', {
                                   className: N.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {

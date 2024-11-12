@@ -13,7 +13,7 @@ var r = n(192379),
     c = n(981631);
 let d = (e) => {
     let { emojiId: t, currentGuildId: n, popoutData: d, nonce: f, demoMode: _ } = e,
-        { current: h } = r.useRef({
+        { current: p } = r.useRef({
             guild_id: n,
             emoji_id: t,
             ...(0, i.v_)(a.Z.getChannel(s.Z.getChannelId(n)))
@@ -26,9 +26,9 @@ let d = (e) => {
                     o.default.track(c.rMx.OPEN_POPOUT, {
                         type: null !== (e = null == d ? void 0 : d.analyticsType) && void 0 !== e ? e : 'Standard Emoji Popout',
                         nonce: f,
-                        ...h
+                        ...p
                     });
         }, []),
-        h
+        p
     );
 };

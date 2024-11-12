@@ -20,13 +20,13 @@ function _(e) {
     let { instance: t } = e;
     f(t.guild_id, [t]);
 }
-function h(e, t) {
+function p(e, t) {
     var n;
     if ((delete d[t], null == e)) return;
     let r = { ...(null !== (n = c[e]) && void 0 !== n ? n : {}) };
     delete r[t], (c[e] = r);
 }
-class p extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     getStageInstanceByChannel(e) {
         if (null != e) return d[e];
     }
@@ -46,7 +46,7 @@ class p extends (s = o.ZP.Store) {
     }
 }
 (a = 'StageInstanceStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -54,7 +54,7 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(l.Z, {
+    (t.Z = new h(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
             (c = {}), (d = {}), t.forEach((e) => f(e.id, e.stage_instances));
@@ -76,11 +76,11 @@ class p extends (s = o.ZP.Store) {
         STAGE_INSTANCE_UPDATE: _,
         STAGE_INSTANCE_DELETE: function (e) {
             let { instance: t } = e;
-            h(t.guild_id, t.channel_id);
+            p(t.guild_id, t.channel_id);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            h(t.guild_id, t.id);
+            p(t.guild_id, t.id);
         },
         LOGOUT: function () {
             (d = {}), (c = {});

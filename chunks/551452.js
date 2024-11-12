@@ -15,8 +15,8 @@ var i = n(481060),
     d = n(692629),
     f = n(131704),
     _ = n(592125),
-    h = n(430824),
-    p = n(900849),
+    p = n(430824),
+    h = n(900849),
     m = n(746878),
     g = n(981631);
 async function E(e, t, n) {
@@ -29,10 +29,10 @@ async function E(e, t, n) {
         }),
         null != e)
     ) {
-        let n = h.Z.getGuild(e);
+        let n = p.Z.getGuild(e);
         if ((null == n ? void 0 : n.joinedAt) == null)
             try {
-                await p.Ub(e, {}, { channelId: t });
+                await h.Ub(e, {}, { channelId: t });
                 return;
             } catch {}
     }

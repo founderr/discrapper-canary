@@ -62,8 +62,8 @@ t.Z = s.memo(function (e) {
             },
             [T]
         ),
-        _ = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
-        E = s.useCallback((e) => e === a, [a]),
+        E = s.useCallback((e) => (0, d.nE)(e, !0, h.Sbl.USER_SETTINGS), []),
+        _ = s.useCallback((e) => e === a, [a]),
         f = s.useCallback((e) => e, []),
         I = s.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, i.jsxs)(o.Z, {
@@ -78,9 +78,9 @@ t.Z = s.memo(function (e) {
             (0, i.jsx)(l.Select, {
                 className: p.select,
                 optionClassName: p.selectPopout,
-                isSelected: E,
+                isSelected: _,
                 options: S,
-                select: _,
+                select: E,
                 renderOptionValue: C,
                 renderOptionLabel: T,
                 serialize: f,

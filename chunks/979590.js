@@ -215,7 +215,7 @@
             return (this._a = x(e)), (this._roundA = l(100 * this._a) / 100), this;
         },
         toHsv: function () {
-            var e = h(this._r, this._g, this._b);
+            var e = p(this._r, this._g, this._b);
             return {
                 h: 360 * e.h,
                 s: e.s,
@@ -224,7 +224,7 @@
             };
         },
         toHsvString: function () {
-            var e = h(this._r, this._g, this._b),
+            var e = p(this._r, this._g, this._b),
                 t = l(360 * e.h),
                 n = l(100 * e.s),
                 r = l(100 * e.v);
@@ -247,7 +247,7 @@
             return 1 == this._a ? 'hsl(' + t + ', ' + n + '%, ' + r + '%)' : 'hsla(' + t + ', ' + n + '%, ' + r + '%, ' + this._roundA + ')';
         },
         toHex: function (e) {
-            return p(this._r, this._g, this._b, e);
+            return h(this._r, this._g, this._b, e);
         },
         toHexString: function (e) {
             return '#' + this.toHex(e);
@@ -284,7 +284,7 @@
             return 1 == this._a ? 'rgb(' + l(100 * w(this._r, 255)) + '%, ' + l(100 * w(this._g, 255)) + '%, ' + l(100 * w(this._b, 255)) + '%)' : 'rgba(' + l(100 * w(this._r, 255)) + '%, ' + l(100 * w(this._g, 255)) + '%, ' + l(100 * w(this._b, 255)) + '%, ' + this._roundA + ')';
         },
         toName: function () {
-            return 0 === this._a ? 'transparent' : !(this._a < 1) && (L[p(this._r, this._g, this._b, !0)] || !1);
+            return 0 === this._a ? 'transparent' : !(this._a < 1) && (L[h(this._r, this._g, this._b, !0)] || !1);
         },
         toFilter: function (e) {
             var t = '#' + m(this._r, this._g, this._b, this._a),
@@ -315,10 +315,10 @@
             return this._applyModification(I, arguments);
         },
         brighten: function () {
-            return this._applyModification(S, arguments);
+            return this._applyModification(b, arguments);
         },
         darken: function () {
-            return this._applyModification(T, arguments);
+            return this._applyModification(S, arguments);
         },
         desaturate: function () {
             return this._applyModification(g, arguments);
@@ -330,7 +330,7 @@
             return this._applyModification(v, arguments);
         },
         spin: function () {
-            return this._applyModification(b, arguments);
+            return this._applyModification(T, arguments);
         },
         _applyCombination: function (e, t) {
             return e.apply(null, [this].concat([].slice.call(t)));
@@ -390,7 +390,7 @@
             l: o
         };
     }
-    function h(e, t, n) {
+    function p(e, t, n) {
         (e = w(e, 255)), (t = w(t, 255));
         var r,
             i,
@@ -417,7 +417,7 @@
             v: a
         };
     }
-    function p(e, t, n, r) {
+    function h(e, t, n, r) {
         var i = [k(l(e).toString(16)), k(l(t).toString(16)), k(l(n).toString(16))];
         return r && i[0].charAt(0) == i[0].charAt(1) && i[1].charAt(0) == i[1].charAt(1) && i[2].charAt(0) == i[2].charAt(1) ? i[0].charAt(0) + i[1].charAt(0) + i[2].charAt(0) : i.join('');
     }
@@ -442,17 +442,17 @@
         var n = f(e).toHsl();
         return (n.l += t / 100), (n.l = M(n.l)), f(n);
     }
-    function S(e, t) {
+    function b(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toRgb();
         return (n.r = c(0, u(255, n.r - l(-((t / 100) * 255))))), (n.g = c(0, u(255, n.g - l(-((t / 100) * 255))))), (n.b = c(0, u(255, n.b - l(-((t / 100) * 255))))), f(n);
     }
-    function T(e, t) {
+    function S(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = f(e).toHsl();
         return (n.l -= t / 100), (n.l = M(n.l)), f(n);
     }
-    function b(e, t) {
+    function T(e, t) {
         var n = f(e).toHsl(),
             r = (n.h + t) % 360;
         return (n.h = r < 0 ? 360 + r : r), f(n);

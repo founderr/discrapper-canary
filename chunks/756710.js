@@ -12,17 +12,17 @@ var r = n(200651),
     u = n(939350),
     c = n(667947);
 function d(e) {
-    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: h, dontCloseOnActionIfHoldingShiftKey: p, dontCloseOnAction: m, onClose: g } = e,
+    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: p, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: m, onClose: g } = e,
         E = i.useRef(null);
     i.useEffect(() => {
         a && (0, l.F)(E);
     }, [a]);
     let v = i.useCallback(
             (e) => {
-                if (null == h) return !1;
-                !(e.shiftKey && p) && !m && g(), e.persist(), requestAnimationFrame(() => h(e));
+                if (null == p) return !1;
+                !(e.shiftKey && h) && !m && g(), e.persist(), requestAnimationFrame(() => p(e));
             },
-            [h, g, p, m]
+            [p, g, h, m]
         ),
         I = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
     return (0, r.jsx)(o.P, {

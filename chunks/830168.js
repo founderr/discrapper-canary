@@ -9,14 +9,14 @@ var a = n(570140),
     d = n(358085),
     f = n(998502),
     _ = n(981631),
-    h = n(186901);
-let p = new o.Z('NativeDispatchUtils');
+    p = n(186901);
+let h = new o.Z('NativeDispatchUtils');
 function m() {
-    return null == i && p.warn('Tried getting Dispatch instance before instantiated'), i;
+    return null == i && h.warn('Tried getting Dispatch instance before instantiated'), i;
 }
 function g(e) {
     let t = JSON.parse(e);
-    return p.log('Native Dispatch error', t), new s.Z(t);
+    return h.log('Native Dispatch error', t), new s.Z(t);
 }
 function E(e, t) {
     '' !== e && g(e);
@@ -38,11 +38,11 @@ t.Z = {
                 var r;
                 let d = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: '343539'
+                        build_number: '343589'
                     },
                     f = l.default.getCurrentUser();
                 null != f && ((d.user_id = f.id), (d.user_name = f.tag), null != f.email && (d.email = f.email));
-                let h = {
+                let p = {
                     user_token: t,
                     user_id: n,
                     install_paths: a.map((e) => {
@@ -55,7 +55,7 @@ t.Z = {
                     platform: s
                 };
                 i = new e.Dispatch(
-                    JSON.stringify(h),
+                    JSON.stringify(p),
                     (e) => {
                         let t = JSON.parse(e);
                         o({
@@ -227,7 +227,7 @@ t.Z = {
                                   type: 'DISPATCH_APPLICATION_ERROR',
                                   error: t
                               }),
-                                  null != t.code && t.code === h.ff.POST_INSTALL_CANCELLED ? r(t) : n();
+                                  null != t.code && t.code === p.ff.POST_INSTALL_CANCELLED ? r(t) : n();
                               return;
                           }
                           if ('' !== t) {

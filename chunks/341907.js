@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
         maybeShowSurveyForQuest: function () {
-            return b;
-        },
-        navigateToQuestHome: function () {
             return T;
         },
-        openDisclosureModal: function () {
+        navigateToQuestHome: function () {
             return S;
+        },
+        openDisclosureModal: function () {
+            return b;
         },
         openQuestInGameRewardModal: function () {
             return I;
@@ -34,8 +34,8 @@ var i = n(481060),
     d = n(5881),
     f = n(842942),
     _ = n(61115),
-    h = n(150560),
-    p = n(46140),
+    p = n(150560),
+    h = n(46140),
     m = n(981631),
     g = n(49898);
 function E(e) {
@@ -74,7 +74,7 @@ function I(e, t) {
             });
     });
 }
-function S(e, t) {
+function b(e, t) {
     (0, o._3)({
         questId: e.id,
         questContent: t.content,
@@ -91,8 +91,8 @@ function S(e, t) {
                 });
         });
 }
-function T(e, t, n) {
-    let r = h.Z.getState().setUtmCurrentContext;
+function S(e, t, n) {
+    let r = p.Z.getState().setUtmCurrentContext;
     r({
         utmSourceCurrent: 'Discord Widget',
         utmMediumCurrent: 'in-app',
@@ -102,9 +102,9 @@ function T(e, t, n) {
     let i = null != n ? '#'.concat(n) : '';
     a.Z.setState({ selectedTab: g.F$.QUESTS }), (0, s.uL)(m.Z5c.QUEST_HOME + i);
 }
-function b(e) {
+function T(e) {
     let t = (0, d.T)({ quest: e }),
-        n = { location: p.dr.QUESTS_BAR };
+        n = { location: h.dr.QUESTS_BAR };
     if (!(0, c.j)(n)) return;
     let r = (0, u.il)(e),
         i = (0, f.Z)({ entityName: e.config.messages.gameTitle });

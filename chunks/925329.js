@@ -17,9 +17,9 @@ let f = {
     },
     _ = (e) => {
         let t,
-            { game: i, guild: _, skuId: h, pid: p, className: m, guildClassName: g, size: E = f.MEDIUM } = e;
+            { game: i, guild: _, skuId: p, pid: h, className: m, guildClassName: g, size: E = f.MEDIUM } = e;
         if (
-            (null != h &&
+            (null != p &&
                 (t = (function (e) {
                     if (null == e) return null;
                     switch (e) {
@@ -35,7 +35,7 @@ let f = {
                         default:
                             return null;
                     }
-                })(h)),
+                })(p)),
             null != i &&
                 null == t &&
                 (t = i.getIconURL(
@@ -56,7 +56,7 @@ let f = {
                         }
                     })(E)
                 )),
-            null == (t = (0, o.Z)(p, t)) && null != _)
+            null == (t = (0, o.Z)(h, t)) && null != _)
         ) {
             let e = (function (e) {
                 switch (e) {

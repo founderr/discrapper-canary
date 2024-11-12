@@ -9,22 +9,22 @@ var r = n(467360),
     d = '[object Promise]',
     f = '[object Set]',
     _ = '[object WeakMap]',
-    h = '[object DataView]',
-    p = (0, u.Z)(r.Z),
+    p = '[object DataView]',
+    h = (0, u.Z)(r.Z),
     m = (0, u.Z)(i.Z),
     g = (0, u.Z)(a.Z),
     E = (0, u.Z)(s.Z),
     v = (0, u.Z)(o.Z),
     I = l.Z;
-((r.Z && I(new r.Z(new ArrayBuffer(1))) != h) || (i.Z && I(new i.Z()) != c) || (a.Z && I(a.Z.resolve()) != d) || (s.Z && I(new s.Z()) != f) || (o.Z && I(new o.Z()) != _)) &&
+((r.Z && I(new r.Z(new ArrayBuffer(1))) != p) || (i.Z && I(new i.Z()) != c) || (a.Z && I(a.Z.resolve()) != d) || (s.Z && I(new s.Z()) != f) || (o.Z && I(new o.Z()) != _)) &&
     (I = function (e) {
         var t = (0, l.Z)(e),
             n = '[object Object]' == t ? e.constructor : void 0,
             r = n ? (0, u.Z)(n) : '';
         if (r)
             switch (r) {
-                case p:
-                    return h;
+                case h:
+                    return p;
                 case m:
                     return c;
                 case g:

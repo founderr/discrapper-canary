@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(300284),
     T = n(680295),
     x = n(703656),
-    A = n(785717),
-    b = n(221292),
+    b = n(785717),
+    A = n(221292),
     Z = n(481046),
     y = n(687158),
     L = n(899007),
@@ -173,7 +173,7 @@ function ec(e) {
         eu = (0, y.ZP)(W.id),
         eh = (0, u.O)(),
         { analyticsLocations: em } = (0, g.ZP)(p.Z.ACCOUNT_PROFILE_POPOUT),
-        ep = (0, A.ZB)({
+        ep = (0, b.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: W.id
         }),
@@ -303,8 +303,8 @@ function ec(e) {
         eN = (0, J.g)(Q),
         eT = (0, N.Z)({ analyticsLocations: em }),
         { customStatusBubbleEditEnabled: ex } = (0, Z.K)({ location: 'AccountProfilePopout' }),
-        eA = (0, q.I5)(W),
-        eb = (e) => {
+        eb = (0, q.I5)(W),
+        eA = (e) => {
             null == Q || Q(),
                 (0, B.openUserProfileModal)({
                     sourceAnalyticsLocations: em,
@@ -328,7 +328,7 @@ function ec(e) {
         };
     return (0, i.jsx)(g.Gt, {
         value: em,
-        children: (0, i.jsx)(A.Mt, {
+        children: (0, i.jsx)(b.Mt, {
             value: ep,
             children: (0, i.jsx)(c.Dialog, {
                 ref: eg,
@@ -359,7 +359,7 @@ function ec(e) {
                                     user: W,
                                     displayProfile: eu,
                                     profileType: en.y0.BITE_SIZE,
-                                    onOpenProfile: ed ? void 0 : eb
+                                    onOpenProfile: ed ? void 0 : eA
                                 }),
                                 (0, i.jsx)(O.Z, {
                                     user: W,
@@ -381,7 +381,7 @@ function ec(e) {
                                     className: er.username,
                                     profileType: en.y0.BITE_SIZE,
                                     nickname: K.ZP.getName(null, null, W),
-                                    onOpenProfile: ed ? void 0 : eb,
+                                    onOpenProfile: ed ? void 0 : eA,
                                     pronouns: null == eu ? void 0 : eu.pronouns,
                                     tags: (0, i.jsx)(R.Z, {
                                         displayProfile: eu,
@@ -447,7 +447,7 @@ function ec(e) {
                                                         }
                                                     }),
                                                     (0, i.jsx)('div', { className: er.menuDivider }),
-                                                    eA
+                                                    eb
                                                         ? (0, i.jsx)($.Mv, {
                                                               id: 'view-premium-perks',
                                                               action: en.yM.VIEW_PREMIUM_PERKS,
@@ -560,7 +560,7 @@ function ec(e) {
                                                                               className: er.clearCustomStatusHint,
                                                                               onClick: (e) => {
                                                                                   e.stopPropagation(),
-                                                                                      (0, b.pQ)({
+                                                                                      (0, A.pQ)({
                                                                                           action: 'PRESS_CLEAR_CUSTOM_STATUS',
                                                                                           analyticsLocations: em
                                                                                       }),

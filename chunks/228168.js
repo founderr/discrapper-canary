@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     Tb: function () {
-        return p;
+        return h;
     },
     cm: function () {
         return I;
@@ -12,10 +12,10 @@ n.d(t, {
         return C;
     },
     n_: function () {
-        return b;
+        return T;
     },
     oh: function () {
-        return h;
+        return p;
     },
     vB: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(t, {
         return m;
     },
     yM: function () {
-        return S;
+        return b;
     }
 });
 var r,
@@ -38,16 +38,16 @@ var r,
     d,
     f,
     _,
-    h,
     p,
+    h,
     m,
     g,
     E,
     v,
     I,
+    b,
     S,
     T,
-    b,
     y,
     A = n(981631);
 let N = 300;
@@ -55,13 +55,13 @@ function C(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(A.ANM.BADGE_ICON(e));
 }
-((r = h || (h = {})).USER_INFO = 'USER_INFO'),
+((r = p || (p = {})).USER_INFO = 'USER_INFO'),
     (r.BOT_INFO = 'BOT_INFO'),
     (r.ACTIVITY = 'ACTIVITY'),
     (r.MUTUAL_GUILDS = 'MUTUAL_GUILDS'),
     (r.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'),
     (r.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'),
-    ((i = p || (p = {})).ROLES = 'ROLES'),
+    ((i = h || (h = {})).ROLES = 'ROLES'),
     (i.CONNECTIONS = 'CONNECTIONS'),
     (i.NOTE = 'NOTE'),
     ((a = m || (m = {})).BITE_SIZE = 'BITE_SIZE'),
@@ -96,7 +96,7 @@ function C(e) {
     (u[(u.THEME = 7)] = 'THEME'),
     (u[(u.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'),
     (u[(u.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'),
-    ((c = S || (S = {})).VIEW = 'VIEW'),
+    ((c = b || (b = {})).VIEW = 'VIEW'),
     (c.SEND_MESSAGE = 'SEND_MESSAGE'),
     (c.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
     (c.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),
@@ -185,7 +185,7 @@ function C(e) {
     (c.VISIT_SHOP = 'VISIT_SHOP'),
     (c.GET_PREMIUM = 'GET_NITRO'),
     (c.VIEW_PREMIUM_PERKS = 'VIEW_NITRO_PERKS'),
-    ((d = T || (T = {})).VIEW = 'VIEW'),
+    ((d = S || (S = {})).VIEW = 'VIEW'),
     (d.PRESS_TEXT = 'PRESS_TEXT'),
     (d.PRESS_IMAGE = 'PRESS_IMAGE'),
     (d.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'),
@@ -219,7 +219,7 @@ function C(e) {
     (d.PRESS_CONNECT_SPOTIFY_MENU_ITEM = 'PRESS_CONNECT_SPOTIFY_MENU_ITEM'),
     (d.PRESS_VIEW_GAME_PROFILE_MENU_ITEM = 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM'),
     (d.PRESS_VIEW_ACTIVITY_MENU_ITEM = 'PRESS_VIEW_ACTIVITY_MENU_ITEM'),
-    ((f = b || (b = {})).ACTIVITY = 'ACTIVITY'),
+    ((f = T || (T = {})).ACTIVITY = 'ACTIVITY'),
     (f.AVATAR = 'AVATAR'),
     (f.STATUS = 'STATUS'),
     ((_ = y || (y = {})).REPLY = 'REPLY'),

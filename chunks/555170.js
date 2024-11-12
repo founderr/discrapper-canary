@@ -13,19 +13,19 @@ var u = function (e, t) {
     f = (void 0 !== n.g ? n.g : 'undefined' != typeof window ? window : 'undefined' != typeof self ? self : {}).Uint8Array || function () {},
     _ = n(260907);
 i = _ && _.debuglog ? _.debuglog('stream') : function () {};
-var h = n(443551),
-    p = n(887866),
+var p = n(443551),
+    h = n(887866),
     m = n(97703).getHighWaterMark,
     g = n(531478).codes,
     E = g.ERR_INVALID_ARG_TYPE,
     v = g.ERR_STREAM_PUSH_AFTER_EOF,
     I = g.ERR_METHOD_NOT_IMPLEMENTED,
-    S = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
+    b = g.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 n(689118)(A, c);
-var T = p.errorOrDestroy,
-    b = ['error', 'close', 'destroy', 'pause', 'resume'];
+var S = h.errorOrDestroy,
+    T = ['error', 'close', 'destroy', 'pause', 'resume'];
 function y(e, t, i) {
-    (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.readableObjectMode), (this.highWaterMark = m(this, e, 'readableHighWaterMark', i)), (this.buffer = new h()), (this.length = 0), (this.pipes = null), (this.pipesCount = 0), (this.flowing = null), (this.ended = !1), (this.endEmitted = !1), (this.reading = !1), (this.sync = !0), (this.needReadable = !1), (this.emittedReadable = !1), (this.readableListening = !1), (this.resumeScheduled = !1), (this.paused = !0), (this.emitClose = !1 !== e.emitClose), (this.autoDestroy = !!e.autoDestroy), (this.destroyed = !1), (this.defaultEncoding = e.defaultEncoding || 'utf8'), (this.awaitDrain = 0), (this.readingMore = !1), (this.decoder = null), (this.encoding = null), e.encoding && (!a && (a = n(2682).StringDecoder), (this.decoder = new a(e.encoding)), (this.encoding = e.encoding));
+    (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.readableObjectMode), (this.highWaterMark = m(this, e, 'readableHighWaterMark', i)), (this.buffer = new p()), (this.length = 0), (this.pipes = null), (this.pipesCount = 0), (this.flowing = null), (this.ended = !1), (this.endEmitted = !1), (this.reading = !1), (this.sync = !0), (this.needReadable = !1), (this.emittedReadable = !1), (this.readableListening = !1), (this.resumeScheduled = !1), (this.paused = !0), (this.emitClose = !1 !== e.emitClose), (this.autoDestroy = !!e.autoDestroy), (this.destroyed = !1), (this.defaultEncoding = e.defaultEncoding || 'utf8'), (this.awaitDrain = 0), (this.readingMore = !1), (this.decoder = null), (this.encoding = null), e.encoding && (!a && (a = n(2682).StringDecoder), (this.decoder = new a(e.encoding)), (this.encoding = e.encoding));
 }
 function A(e) {
     if (((r = r || n(827664)), !(this instanceof A))) return new A(e);
@@ -57,13 +57,13 @@ function N(e, t, n, r, a) {
             })(l, t)),
         o)
     )
-        T(e, o);
+        S(e, o);
     else if (l.objectMode || (t && t.length > 0)) {
         if ('string' != typeof t && !l.objectMode && Object.getPrototypeOf(t) !== d.prototype) {
             (s = t), (t = d.from(s));
         }
-        if (r) l.endEmitted ? T(e, new S()) : C(e, l, t, !0);
-        else if (l.ended) T(e, new v());
+        if (r) l.endEmitted ? S(e, new b()) : C(e, l, t, !0);
+        else if (l.ended) S(e, new v());
         else {
             if (l.destroyed) return !1;
             (l.reading = !1), l.decoder && !n ? ((t = l.decoder.write(t)), l.objectMode || 0 !== t.length ? C(e, l, t, !1) : L(e, l)) : C(e, l, t, !1);
@@ -83,8 +83,8 @@ Object.defineProperty(A.prototype, 'destroyed', {
         if (!!this._readableState) this._readableState.destroyed = e;
     }
 }),
-    (A.prototype.destroy = p.destroy),
-    (A.prototype._undestroy = p.undestroy),
+    (A.prototype.destroy = h.destroy),
+    (A.prototype._undestroy = h.undestroy),
     (A.prototype._destroy = function (e, t) {
         t(e);
     }),
@@ -145,7 +145,7 @@ function x(e, t) {
     t.readingMore = !1;
 }
 (A.prototype._read = function (e) {
-    T(this, new I('_read()'));
+    S(this, new I('_read()'));
 }),
     (A.prototype.pipe = function (e, t) {
         var n = this,
@@ -169,7 +169,7 @@ function x(e, t) {
                     !1 === a.hasUnpiped &&
                     ((a.hasUnpiped = !0),
                     (function () {
-                        i('cleanup'), e.removeListener('close', h), e.removeListener('finish', p), e.removeListener('drain', c), e.removeListener('error', _), e.removeListener('unpipe', s), n.removeListener('end', o), n.removeListener('end', m), n.removeListener('data', f), (d = !0), r.awaitDrain && (!e._writableState || e._writableState.needDrain) && c();
+                        i('cleanup'), e.removeListener('close', p), e.removeListener('finish', h), e.removeListener('drain', c), e.removeListener('error', _), e.removeListener('unpipe', s), n.removeListener('end', o), n.removeListener('end', m), n.removeListener('data', f), (d = !0), r.awaitDrain && (!e._writableState || e._writableState.needDrain) && c();
                     })());
         }
         function o() {
@@ -190,13 +190,13 @@ function x(e, t) {
             i('dest.write', a), !1 === a && (((1 === r.pipesCount && r.pipes === e) || (r.pipesCount > 1 && -1 !== Z(r.pipes, e))) && !d && (i('false write response, pause', r.awaitDrain), r.awaitDrain++), n.pause());
         }
         function _(t) {
-            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && T(e, t);
-        }
-        function h() {
-            e.removeListener('finish', p), m();
+            i('onerror', t), m(), e.removeListener('error', _), 0 === u(e, 'error') && S(e, t);
         }
         function p() {
-            i('onfinish'), e.removeListener('close', h), m();
+            e.removeListener('finish', h), m();
+        }
+        function h() {
+            i('onfinish'), e.removeListener('close', p), m();
         }
         function m() {
             i('unpipe'), n.unpipe(e);
@@ -207,8 +207,8 @@ function x(e, t) {
                 if ('function' == typeof e.prependListener) return e.prependListener(t, n);
                 e._events && e._events[t] ? (Array.isArray(e._events[t]) ? e._events[t].unshift(n) : (e._events[t] = [n, e._events[t]])) : e.on(t, n);
             })(e, 'error', _),
-            e.once('close', h),
-            e.once('finish', p),
+            e.once('close', p),
+            e.once('finish', h),
             e.emit('pipe', n),
             !r.flowing && (i('pipe resume'), n.resume()),
             e
@@ -314,7 +314,7 @@ function Z(e, t) {
                         return e[t].apply(e, arguments);
                     };
                 })(a));
-        for (var s = 0; s < b.length; s++) e.on(b[s], this.emit.bind(this, b[s]));
+        for (var s = 0; s < T.length; s++) e.on(T[s], this.emit.bind(this, T[s]));
         return (
             (this._read = function (t) {
                 i('wrapped _read', t), r && ((r = !1), e.resume());

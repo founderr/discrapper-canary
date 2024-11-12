@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     Rz: function () {
-        return h;
+        return p;
     },
     S1: function () {
         return _;
@@ -80,7 +80,7 @@ function _(e) {
         visible: 'visible' === n.visibilityState
     });
 }
-function h(e) {
+function p(e) {
     i.Z.dispatch({
         type: 'WINDOW_UNLOAD',
         windowId: (0, s.ZY)(e)

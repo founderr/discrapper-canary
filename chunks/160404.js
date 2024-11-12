@@ -10,48 +10,48 @@ var r,
     d = n(709054),
     f = n(225675),
     _ = n(981631),
-    h = n(526761);
-let p = {};
+    p = n(526761);
+let h = {};
 class m extends (r = o.ZP.Store) {
     hasViewingRoles() {
-        return Object.keys(p).length > 0;
+        return Object.keys(h).length > 0;
     }
     isViewingRoles(e) {
-        return null != e && null != p[e];
+        return null != e && null != h[e];
     }
     getViewingRoles(e) {
         var t;
-        return null === (t = p[e]) || void 0 === t ? void 0 : t.roles;
+        return null === (t = h[e]) || void 0 === t ? void 0 : t.roles;
     }
     getViewingRolesTimestamp(e) {
         var t;
-        return null != e ? (null === (t = p[e]) || void 0 === t ? void 0 : t.timestamp) : null;
+        return null != e ? (null === (t = h[e]) || void 0 === t ? void 0 : t.timestamp) : null;
     }
     getData(e) {
-        return p[e];
+        return h[e];
     }
     isFullServerPreview(e) {
         var t;
-        return (null === (t = p[e]) || void 0 === t ? void 0 : t.type) === f.z.NEW_MEMBER;
+        return (null === (t = h[e]) || void 0 === t ? void 0 : t.type) === f.z.NEW_MEMBER;
     }
     isOptInEnabled(e) {
-        let t = p[e];
+        let t = h[e];
         return null != t && t.type === f.z.NEW_MEMBER && t.optInEnabled;
     }
     isOnboardingEnabled(e) {
-        let t = p[e];
+        let t = h[e];
         return null != t && t.type === f.z.NEW_MEMBER && t.onboardingEnabled;
     }
     getViewingChannels(e) {
-        let t = p[e];
+        let t = h[e];
         return null == t || t.type !== f.z.NEW_MEMBER ? null : t.optInChannels;
     }
     getOnboardingResponses(e) {
-        let t = p[e];
+        let t = h[e];
         return null == t || t.type !== f.z.NEW_MEMBER ? null : t.onboardingResponses;
     }
     getMemberOptions(e) {
-        let t = p[e];
+        let t = h[e];
         return null == t || t.type !== f.z.NEW_MEMBER ? null : t.memberOptions;
     }
     isChannelOptedIn(e, t) {
@@ -60,16 +60,16 @@ class m extends (r = o.ZP.Store) {
     }
     isViewingServerShop(e) {
         var t;
-        return null != e && (null === (t = p[e]) || void 0 === t ? void 0 : t.type) === f.z.SERVER_SHOP;
+        return null != e && (null === (t = h[e]) || void 0 === t ? void 0 : t.type) === f.z.SERVER_SHOP;
     }
     getImpersonateType(e) {
         if (null == e) return null;
-        let t = p[e];
+        let t = h[e];
         return null == t ? null : t.type;
     }
     getBackNavigationSection(e) {
         if (null == e) return _.pNK.ROLES;
-        let t = p[e];
+        let t = h[e];
         if (null == t) return _.pNK.ROLES;
         switch (t.type) {
             case f.z.ROLES:
@@ -95,33 +95,33 @@ class m extends (r = o.ZP.Store) {
         IMPERSONATE_UPDATE: function (e) {
             let { guildId: t, data: n } = e;
             delete n.roles[d.default.castGuildIdAsEveryoneGuildRoleId(t)],
-                (p[t] = {
+                (h[t] = {
                     ...n,
                     timestamp: Date.now()
                 });
         },
         IMPERSONATE_STOP: function (e) {
             let { guildId: t } = e;
-            if (null == p[t]) return !1;
-            delete p[t];
+            if (null == h[t]) return !1;
+            delete h[t];
         },
         GUILD_ROLE_DELETE: function (e) {
             let { guildId: t, roleId: n } = e;
-            if (null == p[t]) return !1;
-            delete p[t].roles[n];
+            if (null == h[t]) return !1;
+            delete h[t].roles[n];
         },
         USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function (e) {
             var t;
             let { guildId: n, overrides: r } = e;
-            if (null == n || null == p[n]) return !1;
-            let i = p[n];
+            if (null == n || null == h[n]) return !1;
+            let i = h[n];
             if (null == i || i.type !== f.z.NEW_MEMBER) return !1;
             let a = null !== (t = i.optInChannels) && void 0 !== t ? t : new Set();
             return (
                 d.default.keys(r).forEach((e) => {
                     var t;
                     let n = r[e];
-                    c.yE(null !== (t = n.flags) && void 0 !== t ? t : 0, h.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
+                    c.yE(null !== (t = n.flags) && void 0 !== t ? t : 0, p.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
                 }),
                 (i.optInChannels = a),
                 !0
@@ -130,8 +130,8 @@ class m extends (r = o.ZP.Store) {
         GUILD_ONBOARDING_SELECT_OPTION: function (e) {
             var t;
             let { guildId: n, optionId: r, selected: i, removedOptionIds: a } = e;
-            if (null == n || null == p[n]) return !1;
-            let s = p[n];
+            if (null == n || null == h[n]) return !1;
+            let s = h[n];
             if (null == s || s.type !== f.z.NEW_MEMBER) return !1;
             let o = null !== (t = s.onboardingResponses) && void 0 !== t ? t : new Set();
             return null != a && a.length > 0 && a.forEach((e) => o.delete(e)), i ? o.add(r) : o.delete(r), (s.onboardingResponses = o), !0;
@@ -139,7 +139,7 @@ class m extends (r = o.ZP.Store) {
         GUILD_MEMBER_UPDATE_LOCAL: function (e) {
             let { guildId: t, roles: n, flags: r } = e;
             if (null == t) return !1;
-            let i = p[t];
+            let i = h[t];
             return (
                 null != i &&
                 (null != n &&

@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     ox: function () {
-        return p;
+        return h;
     },
     ub: function () {
         return g;
@@ -19,11 +19,11 @@ var r = n(200651),
     c = n(981631),
     d = n(530535),
     f = n(113207);
-let { Provider: _, Consumer: h } = i.createContext(c.BRd.DARK);
-class p extends i.PureComponent {
+let { Provider: _, Consumer: p } = i.createContext(c.BRd.DARK);
+class h extends i.PureComponent {
     render() {
         let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: a, offsetY: l, style: c } = this.props;
-        return (0, r.jsx)(h, {
+        return (0, r.jsx)(p, {
             children: (_) =>
                 (0, r.jsx)(u.Z.Child, {
                     grow: 0,

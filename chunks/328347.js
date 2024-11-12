@@ -11,7 +11,7 @@ let c = [],
     _ = (e) => {
         (d = c), (f = null);
     };
-class h extends (o = l.ZP.Store) {
+class p extends (o = l.ZP.Store) {
     get analyticsLocations() {
         return d;
     }
@@ -29,7 +29,7 @@ class h extends (o = l.ZP.Store) {
     }
 }
 (s = 'CollectiblesShopStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -37,7 +37,7 @@ class h extends (o = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(u.Z, {
+    (t.Z = new p(u.Z, {
         COLLECTIBLES_SHOP_OPEN: (e) => {
             var t, n;
             (d = null !== (t = e.analyticsLocations) && void 0 !== t ? t : c), (f = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (r = e.initialProductSkuId);

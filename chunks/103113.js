@@ -15,23 +15,23 @@ var r = n(200651),
     d = n(680295),
     f = n(5192),
     _ = n(785717),
-    h = n(221292),
-    p = n(687158),
+    p = n(221292),
+    h = n(687158),
     m = n(899007),
     g = n(648052),
     E = n(867176),
     v = n(280885),
     I = n(502762),
-    S = n(530),
-    T = n(679332),
-    b = n(544989),
+    b = n(530),
+    S = n(679332),
+    T = n(544989),
     y = n(171368),
     A = n(228168),
     N = n(388032),
     C = n(451563);
 function R(e) {
     let { user: t, guildId: n, channelId: R, messageId: O, roleId: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: w = __OVERLAY__, newAnalyticsLocations: M = [] } = e,
-        P = (0, p.ZP)(t.id, n),
+        P = (0, h.ZP)(t.id, n),
         { analyticsLocations: k } = (0, l.ZP)([...M, o.Z.BITE_SIZE_PROFILE_POPOUT]),
         U = (0, _.ZB)({
             layout: 'BITE_SIZE_POPOUT',
@@ -67,9 +67,9 @@ function R(e) {
                         displayProfile: P,
                         profileType: A.y0.BITE_SIZE,
                         children: [
-                            (0, r.jsx)(b.Z, {
+                            (0, r.jsx)(T.Z, {
                                 profileType: A.y0.BITE_SIZE,
-                                children: (0, r.jsx)(T.Z, {
+                                children: (0, r.jsx)(S.Z, {
                                     user: t,
                                     viewProfileItem: F
                                         ? (0, r.jsx)(a.MenuItem, {
@@ -77,7 +77,7 @@ function R(e) {
                                               label: N.intl.string(N.t['+Xp3ho']),
                                               action: () => {
                                                   Z(),
-                                                      (0, h.pQ)({
+                                                      (0, p.pQ)({
                                                           action: 'PRESS_VIEW_PROFILE',
                                                           analyticsLocations: k,
                                                           ...U
@@ -111,7 +111,7 @@ function R(e) {
                                 fade: !0,
                                 className: C.body,
                                 children: [
-                                    (0, r.jsx)(S.Z, {
+                                    (0, r.jsx)(b.Z, {
                                         user: t,
                                         profileType: A.y0.BITE_SIZE,
                                         nickname: f.ZP.getName(n, R, t),

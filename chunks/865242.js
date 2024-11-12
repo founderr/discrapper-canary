@@ -7,12 +7,12 @@ var r = n(239700),
     i = n(881085),
     a = n(192379);
 function s(e) {
-    let { minValue: t, maxValue: n, step: s, formatOptions: l, value: u, defaultValue: c, onChange: d, locale: f, isDisabled: _, isReadOnly: h } = e,
-        [p, m] = (0, r.zk)(u, isNaN(c) ? NaN : c, d),
-        [g, E] = (0, a.useState)(() => (isNaN(p) ? '' : new (0, i.e)(f, l).format(p))),
+    let { minValue: t, maxValue: n, step: s, formatOptions: l, value: u, defaultValue: c, onChange: d, locale: f, isDisabled: _, isReadOnly: p } = e,
+        [h, m] = (0, r.zk)(u, isNaN(c) ? NaN : c, d),
+        [g, E] = (0, a.useState)(() => (isNaN(h) ? '' : new (0, i.e)(f, l).format(h))),
         v = (0, a.useMemo)(() => new i.d(f, l), [f, l]),
         I = (0, a.useMemo)(() => v.getNumberingSystem(g), [v, g]),
-        S = (0, a.useMemo)(
+        b = (0, a.useMemo)(
             () =>
                 new i.e(f, {
                     ...l,
@@ -20,14 +20,14 @@ function s(e) {
                 }),
             [f, l, I]
         ),
-        T = (0, a.useMemo)(() => S.resolvedOptions(), [S]),
-        b = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : S.format(e)), [S]),
+        S = (0, a.useMemo)(() => b.resolvedOptions(), [b]),
+        T = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : b.format(e)), [b]),
         y = isNaN(s) ? 1 : s;
-    'percent' === T.style && isNaN(s) && (y = 0.01);
-    let [A, N] = (0, a.useState)(p),
+    'percent' === S.style && isNaN(s) && (y = 0.01);
+    let [A, N] = (0, a.useState)(h),
         [C, R] = (0, a.useState)(f),
         [O, D] = (0, a.useState)(l);
-    (!Object.is(p, A) || f !== C || l !== O) && (E(b(p)), N(p), R(f), D(l));
+    (!Object.is(h, A) || f !== C || l !== O) && (E(T(h)), N(h), R(f), D(l));
     let L = (0, a.useMemo)(() => v.parse(g), [v, g]),
         x = (e, i) => {
             if (isNaN(L)) {
@@ -39,20 +39,20 @@ function s(e) {
                 return ('+' === e && i > L) || ('-' === e && i < L) ? i : (0, r.N4)(o(e, L, y), t, n, y);
             }
         },
-        w = (0, a.useMemo)(() => !_ && !h && (isNaN(L) || isNaN(n) || (0, r.N4)(L, t, n, y) > L || o('+', L, y) <= n), [_, h, t, n, y, L]),
-        M = (0, a.useMemo)(() => !_ && !h && (isNaN(L) || isNaN(t) || (0, r.N4)(L, t, n, y) < L || o('-', L, y) >= t), [_, h, t, n, y, L]);
+        w = (0, a.useMemo)(() => !_ && !p && (isNaN(L) || isNaN(n) || (0, r.N4)(L, t, n, y) > L || o('+', L, y) <= n), [_, p, t, n, y, L]),
+        M = (0, a.useMemo)(() => !_ && !p && (isNaN(L) || isNaN(t) || (0, r.N4)(L, t, n, y) < L || o('-', L, y) >= t), [_, p, t, n, y, L]);
     return {
         validate: (e) => v.isValidPartialNumber(e, t, n),
         increment: () => {
             let e = x('+', t);
-            e === p && E(b(e)), m(e);
+            e === h && E(T(e)), m(e);
         },
         incrementToMax: () => {
             null != n && m((0, r.N4)(n, t, n, y));
         },
         decrement: () => {
             let e = x('-', n);
-            e === p && E(b(e)), m(e);
+            e === h && E(T(e)), m(e);
         },
         decrementToMin: () => {
             null != t && m(t);
@@ -68,14 +68,14 @@ function s(e) {
         commit: () => {
             let e;
             if (!g.length) {
-                m(NaN), E(void 0 === u ? '' : b(p));
+                m(NaN), E(void 0 === u ? '' : T(h));
                 return;
             }
             if (isNaN(L)) {
-                E(b(p));
+                E(T(h));
                 return;
             }
-            (e = isNaN(s) ? (0, r.uZ)(L, t, n) : (0, r.N4)(L, t, n, s)), m((e = v.parse(b(e)))), E(b(void 0 === u ? e : p));
+            (e = isNaN(s) ? (0, r.uZ)(L, t, n) : (0, r.N4)(L, t, n, s)), m((e = v.parse(T(e)))), E(T(void 0 === u ? e : h));
         }
     };
 }

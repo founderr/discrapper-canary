@@ -1,6 +1,6 @@
 n.d(t, {
     Ej: function () {
-        return h;
+        return p;
     },
     Jf: function () {
         return f;
@@ -55,7 +55,7 @@ function _(e, t) {
     }
     return null !== (r = null === (n = e.price) || void 0 === n ? void 0 : n.amount) && void 0 !== r ? r : 0;
 }
-function h(e, t, n) {
+function p(e, t, n) {
     return e.slice().sort((e, r) => {
         let i = t.get(e.skuId),
             a = null != i ? _(i, n) : 0,

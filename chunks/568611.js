@@ -40,9 +40,9 @@ var d = function (e, t) {
     _ = function (e) {
         return e;
     },
-    h = a.forwardRef;
-void 0 === h && (h = _);
-var p = h(function (e, t) {
+    p = a.forwardRef;
+void 0 === p && (p = _);
+var h = p(function (e, t) {
         var n = e.innerRef,
             r = e.navigate,
             i = e.onClick,
@@ -59,11 +59,11 @@ var p = h(function (e, t) {
                     if (!e.defaultPrevented && 0 === e.button && (!u || '_self' === u) && !((t = e).metaKey || t.altKey || t.ctrlKey || t.shiftKey)) e.preventDefault(), r();
                 }
             });
-        return _ !== h ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
+        return _ !== p ? (c.ref = t || n) : (c.ref = n), a.createElement('a', c);
     }),
-    m = h(function (e, t) {
+    m = p(function (e, t) {
         var n = e.component,
-            i = void 0 === n ? p : n,
+            i = void 0 === n ? h : n,
             s = e.replace,
             c = e.to,
             m = e.innerRef,
@@ -73,14 +73,14 @@ var p = h(function (e, t) {
             var n = e.history,
                 r = f(d(c, e.location), e.location),
                 l = r ? n.createHref(r) : '',
-                p = (0, o.Z)({}, g, {
+                h = (0, o.Z)({}, g, {
                     href: l,
                     navigate: function () {
                         var t = d(c, e.location);
                         (s ? n.replace : n.push)(t);
                     }
                 });
-            return _ !== h ? (p.ref = t || m) : (p.innerRef = m), a.createElement(i, p);
+            return _ !== p ? (h.ref = t || m) : (h.innerRef = m), a.createElement(i, h);
         });
     }),
     g = function (e) {
@@ -94,13 +94,13 @@ E(function (e, t) {
         s = e.activeClassName,
         c = void 0 === s ? 'active' : s,
         _ = e.activeStyle,
-        h = e.className,
-        p = e.exact,
+        p = e.className,
+        h = e.exact,
         v = e.isActive,
         I = e.location,
-        S = e.sensitive,
-        T = e.strict,
-        b = e.style,
+        b = e.sensitive,
+        S = e.strict,
+        T = e.style,
         y = e.to,
         A = e.innerRef,
         N = (0, l.Z)(e, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
@@ -113,9 +113,9 @@ E(function (e, t) {
             R = C
                 ? (0, r.LX)(n.pathname, {
                       path: C,
-                      exact: p,
-                      sensitive: S,
-                      strict: T
+                      exact: h,
+                      sensitive: b,
+                      strict: S
                   })
                 : null,
             O = !!(v ? v(R, n) : R),
@@ -127,9 +127,9 @@ E(function (e, t) {
                               return e;
                           })
                           .join(' ');
-                  })(h, c)
-                : h,
-            L = O ? (0, o.Z)({}, b, {}, _) : b,
+                  })(p, c)
+                : p,
+            L = O ? (0, o.Z)({}, T, {}, _) : T,
             x = (0, o.Z)(
                 {
                     'aria-current': (O && i) || null,

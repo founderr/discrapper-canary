@@ -167,29 +167,29 @@ class c {
     }
     getPeriodicStats() {
         let e = [];
-        for (let [p, m] of Object.entries(this.periodicInboundStats)) {
-            let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: I, numRateSamples: S } = m;
+        for (let [h, m] of Object.entries(this.periodicInboundStats)) {
+            let { previous: g, current: E, currentTimestampMs: v, previousTimestampMs: I, numRateSamples: b } = m;
             if (void 0 !== I && v > I) {
-                var t, n, r, i, a, s, o, l, u, c, d, f, _, h;
-                let T = v - I,
-                    b = {
-                        userId: p,
+                var t, n, r, i, a, s, o, l, u, c, d, f, _, p;
+                let S = v - I,
+                    T = {
+                        userId: h,
                         silent: null !== (n = E.silent) && void 0 !== n ? n : 0 - (null !== (t = g.silent) && void 0 !== t ? t : 0),
                         normal: null !== (i = E.normal) && void 0 !== i ? i : 0 - (null !== (r = g.normal) && void 0 !== r ? r : 0),
                         merged: null !== (s = E.merged) && void 0 !== s ? s : 0 - (null !== (a = g.merged) && void 0 !== a ? a : 0),
                         expanded: null !== (l = E.expanded) && void 0 !== l ? l : 0 - (null !== (o = g.expanded) && void 0 !== o ? o : 0),
                         accelerated: null !== (c = E.accelerated) && void 0 !== c ? c : 0 - (null !== (u = g.accelerated) && void 0 !== u ? u : 0),
                         preemptiveExpanded: null !== (f = E.preemptiveExpanded) && void 0 !== f ? f : 0 - (null !== (d = g.preemptiveExpanded) && void 0 !== d ? d : 0),
-                        cng: null !== (h = E.cng) && void 0 !== h ? h : 0 - (null !== (_ = g.cng) && void 0 !== _ ? _ : 0),
-                        accelerateRate: m.accelerateRateSum / S,
-                        expandRate: m.expandRateSum / S,
-                        preemptiveExpandRate: m.preemptiveExpandRateSum / S,
-                        speechExpandRate: m.speechExpandRateSum / S,
-                        durationMs: T
+                        cng: null !== (p = E.cng) && void 0 !== p ? p : 0 - (null !== (_ = g.cng) && void 0 !== _ ? _ : 0),
+                        accelerateRate: m.accelerateRateSum / b,
+                        expandRate: m.expandRateSum / b,
+                        preemptiveExpandRate: m.preemptiveExpandRateSum / b,
+                        speechExpandRate: m.speechExpandRateSum / b,
+                        durationMs: S
                     };
-                b.normal + b.merged + b.expanded + b.accelerated + b.preemptiveExpanded > 0 && e.push(b);
+                T.normal + T.merged + T.expanded + T.accelerated + T.preemptiveExpanded > 0 && e.push(T);
             }
-            (this.periodicInboundStats[p].accelerateRateSum = 0), (this.periodicInboundStats[p].expandRateSum = 0), (this.periodicInboundStats[p].preemptiveExpandRateSum = 0), (this.periodicInboundStats[p].speechExpandRateSum = 0), (this.periodicInboundStats[p].numRateSamples = 0), (this.periodicInboundStats[p].previous = E), (this.periodicInboundStats[p].previousTimestampMs = v);
+            (this.periodicInboundStats[h].accelerateRateSum = 0), (this.periodicInboundStats[h].expandRateSum = 0), (this.periodicInboundStats[h].preemptiveExpandRateSum = 0), (this.periodicInboundStats[h].speechExpandRateSum = 0), (this.periodicInboundStats[h].numRateSamples = 0), (this.periodicInboundStats[h].previous = E), (this.periodicInboundStats[h].previousTimestampMs = v);
         }
         return e;
     }
@@ -236,10 +236,10 @@ class c {
                     i().forEach(e.rtp.inbound, (t, n) => {
                         i().forEach(t, (t) => {
                             if ('audio' === t.type) {
-                                var r, a, s, o, l, u, c, d, f, _, h, p, m, g, E, v, I;
-                                let S = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
-                                    T = t.packetsReceived,
-                                    b = t.packetsLost,
+                                var r, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I;
+                                let b = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
+                                    S = t.packetsReceived,
+                                    T = t.packetsLost,
                                     y = t.bytesReceived,
                                     A = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
                                     N = null !== (s = t.fecPacketsDiscarded) && void 0 !== s ? s : 0,
@@ -268,15 +268,15 @@ class c {
                                         decryptAttempts: null !== (f = t.decryptAttempts) && void 0 !== f ? f : 0
                                     };
                                 if (null != this.inboundStats[n]) {
-                                    let e = T - this.inboundStats[n].packetsReceived,
-                                        r = b - this.inboundStats[n].packetsLost,
+                                    let e = S - this.inboundStats[n].packetsReceived,
+                                        r = T - this.inboundStats[n].packetsLost,
                                         a = 0,
                                         s = this.inboundStats[n].mosBuckets;
-                                    e > 0 && r >= 0 && ((a = this.calculateMos(S + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
+                                    e > 0 && r >= 0 && ((a = this.calculateMos(b + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
-                                            packetsReceived: T,
+                                            packetsReceived: S,
                                             bytesReceived: y,
-                                            packetsLost: b,
+                                            packetsLost: T,
                                             fecPacketsReceived: A,
                                             fecPacketsDiscarded: N,
                                             mos: a,
@@ -293,16 +293,16 @@ class c {
                                             currentTimestampMs: Date.now(),
                                             current: O,
                                             accelerateRateSum: this.periodicInboundStats[n].accelerateRateSum + (null !== (_ = t.accelerateRate) && void 0 !== _ ? _ : 0),
-                                            expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (h = t.expandRate) && void 0 !== h ? h : 0),
-                                            preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (p = t.preemptiveExpandRate) && void 0 !== p ? p : 0),
+                                            expandRateSum: this.periodicInboundStats[n].expandRateSum + (null !== (p = t.expandRate) && void 0 !== p ? p : 0),
+                                            preemptiveExpandRateSum: this.periodicInboundStats[n].preemptiveExpandRateSum + (null !== (h = t.preemptiveExpandRate) && void 0 !== h ? h : 0),
                                             speechExpandRateSum: this.periodicInboundStats[n].speechExpandRateSum + (null !== (m = t.speechExpandRate) && void 0 !== m ? m : 0),
                                             numRateSamples: this.periodicInboundStats[n].numRateSamples + 1
                                         });
                                 } else
                                     (this.inboundStats[n] = {
-                                        packetsReceived: T,
+                                        packetsReceived: S,
                                         bytesReceived: y,
-                                        packetsLost: b,
+                                        packetsLost: T,
                                         fecPacketsReceived: A,
                                         fecPacketsDiscarded: N,
                                         mos: 0,

@@ -1,6 +1,6 @@
 n.d(t, {
     Cf: function () {
-        return h;
+        return p;
     },
     Fq: function () {
         return l;
@@ -12,7 +12,7 @@ n.d(t, {
         return c;
     },
     ID: function () {
-        return p;
+        return h;
     },
     IO: function () {
         return E;
@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     b9: function () {
-        return S;
+        return b;
     },
     cV: function () {
         return d;
@@ -130,13 +130,13 @@ function _(e) {
         banner: e
     });
 }
-function h(e) {
+function p(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO',
         bio: e
     });
 }
-function p(e) {
+function h(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS',
         pronouns: e
@@ -163,6 +163,6 @@ function v() {
 function I() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING' });
 }
-function S() {
+function b() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS' });
 }

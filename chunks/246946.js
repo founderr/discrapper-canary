@@ -34,7 +34,7 @@ let d = {
     },
     f = {},
     _ = { ...d };
-class h extends (r = i.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         Object.assign(f, e),
             this.syncWith([o.default], () => {
@@ -72,15 +72,15 @@ class h extends (r = i.ZP.PersistedStore) {
         return this.enabled && _.enableContentProtection;
     }
 }
-u(h, 'displayName', 'StreamerModeStore'),
-    u(h, 'persistKey', 'StreamerModeStore'),
-    u(h, 'migrations', [
+u(p, 'displayName', 'StreamerModeStore'),
+    u(p, 'persistKey', 'StreamerModeStore'),
+    u(p, 'migrations', [
         (e) => {
             let t = o.default.getId();
             return null == e || null == t ? {} : { [t]: { ...e } };
         }
     ]),
-    (t.Z = new h(a.Z, {
+    (t.Z = new p(a.Z, {
         LOGOUT: function (e) {
             !e.isSwitchingAccount && (f = {});
         },

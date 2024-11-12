@@ -48,8 +48,8 @@ function u(e) {
                     d = parseInt(a.split('-')[1], 10) / 8,
                     f = o.pbkdf2Sync(t, n, r, d, 'sha1'),
                     _ = s.createDecipheriv(a, f, u),
-                    h = [];
-                return h.push(_.update(c)), h.push(_.final()), l.concat(h);
+                    p = [];
+                return p.push(_.update(c)), p.push(_.final()), l.concat(p);
             })((f = r.EncryptedPrivateKey.decode(f, 'der')), t);
         case 'PRIVATE KEY':
             switch ((n = (u = r.PrivateKey.decode(f, 'der')).algorithm.algorithm.join('.'))) {

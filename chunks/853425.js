@@ -22,24 +22,24 @@ t.Z = i.memo(function (e) {
     let { url: t } = e,
         n = (0, a.cj)([o.C], () => o.C.getCurrentBuildOverride()),
         s = (0, a.e7)([o.C], () => o.C.getBuildOverride(t)),
-        { payload: h, validatedURL: p } = s,
+        { payload: p, validatedURL: h } = s,
         m = n.state === o.Z.Resolving || s.state === o.Z.Resolving,
         g = i.useCallback(() => {
             if ((0, l.mG)(s.url) && null != s.override) {
                 var e;
                 return f(null === (e = s.override) || void 0 === e ? void 0 : e.targetBuildOverride);
             }
-            if (null == h) return Promise.reject(Error('Invalid override payload'));
-            return (0, c.Z)(s.override, h), d(h);
-        }, [h, s]);
-    return null != p
+            if (null == p) return Promise.reject(Error('Invalid override payload'));
+            return (0, c.Z)(s.override, p), d(p);
+        }, [p, s]);
+    return null != h
         ? (0, r.jsx)(u.Z, {
               loading: m,
               linkMeta: s.override,
               currentOverrides: n.overrides,
               applyBuildOverride: g,
               clearBuildOverride: _,
-              url: p
+              url: h
           })
         : null;
 });

@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return p;
+        return h;
     }
 }),
     n(47120),
@@ -30,8 +30,8 @@ function f(e, t, n) {
     );
 }
 let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
-    h = new o.Yd('Flux');
-class p {
+    p = new o.Yd('Flux');
+class h {
     isDispatching() {
         return null != this._currentDispatchActionType;
     }
@@ -57,7 +57,7 @@ class p {
                         var e;
                         let t = c.qC();
                         throw (
-                            (h.error('LastFewActions', t),
+                            (p.error('LastFewActions', t),
                             null === (e = this._sentryUtils) ||
                                 void 0 === e ||
                                 e.addBreadcrumb({
@@ -78,7 +78,7 @@ class p {
         this._dispatchWithLogging(e);
     }
     _dispatchWithLogging(e) {
-        a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && h.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), c.IH(e.type);
+        a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), c.IH(e.type);
         let t = this.actionLogger.log(e, (t) => {
             try {
                 (this._currentDispatchActionType = e.type), this._dispatch(e, t);
@@ -86,7 +86,7 @@ class p {
                 this._currentDispatchActionType = null;
             }
         });
-        t.totalTime > 100 && h.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
+        t.totalTime > 100 && p.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
         try {
             (0, l.L8)('DISPATCH['.concat(e.type, ']'), e.type);
         } catch (e) {}

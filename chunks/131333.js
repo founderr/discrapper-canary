@@ -16,8 +16,8 @@ var r,
     d = n(40851),
     f = n(745510),
     _ = n(633302),
-    h = n(549006),
-    p = n(146128),
+    p = n(549006),
+    h = n(146128),
     m = n(981631),
     g = n(675654),
     E = n(10257);
@@ -48,15 +48,15 @@ function I(e) {
     );
 }
 ((a = r || (r = {})).JACK_O_LANTERN = 'jack_o_lantern'), (a.NOSE = 'nose');
-let S = new Set(['jack_o_lantern', 'nose']),
-    T = {
+let b = new Set(['jack_o_lantern', 'nose']),
+    S = {
         jack_o_lantern: {
             sprites: I(['chocolate_bar', 'lollipop', 'candy'])
         },
         nose: { sprites: I(['foot']) }
     };
 ((s = i || (i = {})).ENTER = 'enter'), (s.CONFETTI = 'confetti'), (s.EXIT = 'exit');
-let b = {
+let T = {
     enter: {
         BEG: 0,
         END: 22
@@ -159,7 +159,7 @@ function N(e) {
                 if (!u) {
                     let t = (function (e) {
                         if (null == e) return null;
-                        for (let t of S) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
+                        for (let t of b) if (null != e.match(new RegExp(':'.concat(t, '(_tone[1-9])?')))) return t;
                         return null;
                     })(e);
                     null != t && ((_.current = t), f(!0), i(null));
@@ -189,12 +189,12 @@ function N(e) {
     }, [r]),
     g !== m.IlC.APP)
         ? (0, o.jsx)(o.Fragment, { children: t })
-        : (0, o.jsxs)(p.Rm.Provider, {
+        : (0, o.jsxs)(h.Rm.Provider, {
               value: I,
               children: [
                   t,
-                  Object.keys(T).map((e) => {
-                      let t = T[e];
+                  Object.keys(S).map((e) => {
+                      let t = S[e];
                       return (0, o.jsx)(
                           A,
                           {
@@ -207,14 +207,14 @@ function N(e) {
                       );
                   }),
                   u
-                      ? (0, o.jsx)(h.ZP, {
+                      ? (0, o.jsx)(p.ZP, {
                             children: (0, o.jsx)('div', {
                                 className: E.animationWrapper,
                                 children: (0, o.jsx)(c.SequencedLottieAnimation, {
                                     animationRef: R,
                                     className: E.lottieAnimation,
                                     nextScene: a,
-                                    sceneSegments: b,
+                                    sceneSegments: T,
                                     onScenePlay: N,
                                     onSceneComplete: C,
                                     importData: y,

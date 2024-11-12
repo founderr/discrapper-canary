@@ -15,9 +15,9 @@ var r = n(393655),
     d = n(951516),
     f = n(608297),
     _ = n(416778),
-    h = n(633605);
-function p(e) {
-    return (p =
+    p = n(633605);
+function h(e) {
+    return (h =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -93,14 +93,14 @@ function g(e, t) {
 var E = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
     v = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
     I = /^'([^]*?)'?$/,
-    S = /''/g,
-    T = /\S/,
-    b = /[a-zA-Z]/;
+    b = /''/g,
+    S = /\S/,
+    T = /[a-zA-Z]/;
 function y(e, t, n, g) {
     (0, d.Z)(3, arguments);
     var y = String(e),
         A = String(t),
-        N = (0, h.j)(),
+        N = (0, p.j)(),
         C = null !== (M = null !== (P = null == g ? void 0 : g.locale) && void 0 !== P ? P : N.locale) && void 0 !== M ? M : r.Z;
     if (!C.match) throw RangeError('locale must contain match property');
     var R = (0, c.Z)(null !== (k = null !== (U = null !== (G = null !== (B = null == g ? void 0 : g.firstWeekContainsDate) && void 0 !== B ? B : null == g ? void 0 : null === (Z = g.locale) || void 0 === Z ? void 0 : null === (F = Z.options) || void 0 === F ? void 0 : F.firstWeekContainsDate) && void 0 !== G ? G : N.firstWeekContainsDate) && void 0 !== U ? U : null === (V = N.locale) || void 0 === V ? void 0 : null === (j = V.options) || void 0 === j ? void 0 : j.firstWeekContainsDate) && void 0 !== k ? k : 1);
@@ -165,13 +165,13 @@ function y(e, t, n, g) {
                     if (!s) return { v: new Date(NaN) };
                     L.push(s.setter), (y = s.rest);
                 } else {
-                    if (n.match(b)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
+                    if (n.match(T)) throw RangeError('Format string contains an unescaped latin alphabet character `' + n + '`');
                     if (
                         ("''" === t
                             ? (t = "'")
                             : "'" === n &&
                               (t = (function (e) {
-                                  return e.match(I)[1].replace(S, "'");
+                                  return e.match(I)[1].replace(b, "'");
                               })(t)),
                         0 !== y.indexOf(t))
                     )
@@ -179,14 +179,14 @@ function y(e, t, n, g) {
                     y = y.slice(t.length);
                 }
             })();
-            if ('object' === p(ee)) return ee.v;
+            if ('object' === h(ee)) return ee.v;
         }
     } catch (e) {
         $.e(e);
     } finally {
         $.f();
     }
-    if (y.length > 0 && T.test(y)) return new Date(NaN);
+    if (y.length > 0 && S.test(y)) return new Date(NaN);
     var et = L.map(function (e) {
             return e.priority;
         })

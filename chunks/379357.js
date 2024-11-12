@@ -21,15 +21,15 @@ var r = n(726542),
     d = n(26033),
     f = n(561308),
     _ = n(981631),
-    h = n(701488),
-    p = n(388032);
+    p = n(701488),
+    h = n(388032);
 function m(e) {
-    let t = null == e ? void 0 : e.getIconURL(h.Si.LARGE),
+    let t = null == e ? void 0 : e.getIconURL(p.Si.LARGE),
         n = null == e ? void 0 : e.name;
     if (null != t)
         return {
             src: t,
-            alt: null == n ? p.intl.string(p.t['2B/phI']) : p.intl.formatToPlainString(p.t.tiKyYm, { applicationName: n })
+            alt: null == n ? h.intl.string(h.t['2B/phI']) : h.intl.formatToPlainString(h.t.tiKyYm, { applicationName: n })
         };
 }
 function g(e) {
@@ -37,29 +37,29 @@ function g(e) {
     let { entry: r, showCoverImage: i = !0 } = e,
         a = (0, c.wh)('useImageForContentEntry'),
         { activity: s, activityApplication: o, fallbackApplication: _ } = (0, f.qy)(r),
-        { largeImage: p, smallImage: m } = v(s, o),
+        { largeImage: h, smallImage: m } = v(s, o),
         { largeImage: g } = E(s, null != _ ? _ : o),
         { coverImageUrl: I } = (0, l.$)(null === (t = null != _ ? _ : o) || void 0 === t ? void 0 : t.id);
-    let S =
+    let b =
         ((n = r),
         (0, d.dU)(n) && n.extra.entries.length > 0
             ? { src: n.extra.entries[0].media.image_url }
             : (0, d.y0)(n)
               ? {
-                    src: (0, u.getAssetImage)(n.extra.application_id, n.extra.media_assets_large_image, h.Si.LARGE),
+                    src: (0, u.getAssetImage)(n.extra.application_id, n.extra.media_assets_large_image, p.Si.LARGE),
                     alt: n.extra.media_title
                 }
               : (0, d.KF)(n)
                 ? { src: n.extra.media.image_url }
                 : void 0);
-    return null != p && a
+    return null != h && a
         ? {
-              largeImage: p,
+              largeImage: h,
               smallImage: m
           }
-        : null != S
+        : null != b
           ? {
-                largeImage: S,
+                largeImage: b,
                 smallImage: void 0
             }
           : null != I && i
@@ -83,7 +83,7 @@ function E(e, t) {
         return {
             largeImage: {
                 src: r.Z.get(_.ABu.XBOX).icon.customPNG,
-                alt: p.intl.string(p.t['Nfvo7+'])
+                alt: h.intl.string(h.t['Nfvo7+'])
             },
             smallImage: void 0
         };
@@ -91,7 +91,7 @@ function E(e, t) {
         return {
             largeImage: {
                 src: r.Z.get(_.ABu.PLAYSTATION).icon.lightPNG,
-                alt: p.intl.string(p.t.fFl4jo)
+                alt: h.intl.string(h.t.fFl4jo)
             },
             smallImage: void 0
         };
@@ -118,15 +118,15 @@ function v(e, t) {
         _ =
             null != f
                 ? {
-                      src: (0, u.getAssetImage)(e.application_id, f, [h.Si.LARGE, h.Si.LARGE]),
+                      src: (0, u.getAssetImage)(e.application_id, f, [p.Si.LARGE, p.Si.LARGE]),
                       text: null === (a = e.assets) || void 0 === a ? void 0 : null === (r = a.large_text) || void 0 === r ? void 0 : r.trim()
                   }
                 : void 0,
-        p = (0, i.Z)(e) ? void 0 : null == e ? void 0 : null === (s = e.assets) || void 0 === s ? void 0 : s.small_image,
+        h = (0, i.Z)(e) ? void 0 : null == e ? void 0 : null === (s = e.assets) || void 0 === s ? void 0 : s.small_image,
         g =
-            null != p
+            null != h
                 ? {
-                      src: (0, u.getAssetImage)(e.application_id, p, [h.Si.LARGE, h.Si.LARGE]),
+                      src: (0, u.getAssetImage)(e.application_id, h, [p.Si.LARGE, p.Si.LARGE]),
                       text: null === (c = e.assets) || void 0 === c ? void 0 : null === (l = c.small_text) || void 0 === l ? void 0 : l.trim()
                   }
                 : void 0;

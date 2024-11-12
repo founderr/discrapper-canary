@@ -19,8 +19,8 @@ function f(e) {
                 data: { title: t, body: n, sms: a, is_localized: f }
             }
         } = e,
-        [_, h] = i.useState(!1),
-        p = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
+        [_, p] = i.useState(!1),
+        h = i.useRef(l.Z.reactParserFor(l.Z.defaultRules));
     return f
         ? (0, r.jsxs)('div', {
               className: d.container,
@@ -34,7 +34,7 @@ function f(e) {
                   (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
                       className: d.bodyText,
-                      children: p.current(n)
+                      children: h.current(n)
                   }),
                   (0, r.jsx)('div', {
                       className: d.__invalid_smsInfoContainer,
@@ -51,7 +51,7 @@ function f(e) {
                                   size: o.Button.Sizes.SMALL,
                                   className: d.__invalid_trailingButton,
                                   onClick: () => {
-                                      (0, u.JG)(a) && h(!0);
+                                      (0, u.JG)(a) && p(!0);
                                   },
                                   color: o.Button.Colors.PRIMARY,
                                   children: _ ? c.intl.string(c.t['t5VZ8/']) : c.intl.string(c.t.OpuAlJ)

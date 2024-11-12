@@ -56,25 +56,25 @@ var r = n(149765),
     d = n(984933),
     f = n(496675),
     _ = n(944486),
-    h = n(938475),
-    p = n(700785),
+    p = n(938475),
+    h = n(700785),
     m = n(709054),
     g = n(981631),
     E = n(474936),
     v = n(388032);
-let { GUILD_VOICE: I, GUILD_CATEGORY: S, GUILD_STAGE_VOICE: T } = g.d4z;
-function b(e, t) {
-    return e === t || e === S;
+let { GUILD_VOICE: I, GUILD_CATEGORY: b, GUILD_STAGE_VOICE: S } = g.d4z;
+function T(e, t) {
+    return e === t || e === b;
 }
 function y(e, t, n) {
-    let i = p.Hn;
+    let i = h.Hn;
     return (
-        ((0, u.r8)(t) || t === S) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        (b(t, I) || b(t, T)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        ((0, u.r8)(t) || t === b) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        (T(t, I) || T(t, S)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
-            deny: p.Hn,
+            deny: h.Hn,
             allow: i
         }
     );
@@ -89,13 +89,13 @@ function A(e, t, n) {
             ((o = e),
             (l = t),
             (c = i.BN.ROLE),
-            (n = p.Hn),
-            ((0, u.r8)(l) || l === S) && (n = r.IH(n, g.Plq.VIEW_CHANNEL)),
-            b(l, I) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
+            (n = h.Hn),
+            ((0, u.r8)(l) || l === b) && (n = r.IH(n, g.Plq.VIEW_CHANNEL)),
+            T(l, I) && ((n = r.IH(n, g.Plq.VIEW_CHANNEL)), (n = r.IH(n, g.Plq.CONNECT))),
             {
                 id: o,
                 type: c,
-                allow: p.Hn,
+                allow: h.Hn,
                 deny: n
             })
         );
@@ -119,7 +119,7 @@ function R(e) {
             id: e,
             type: i.BN.ROLE,
             deny: g.Plq.SEND_MESSAGES,
-            allow: p.Hn
+            allow: h.Hn
         }
     ];
 }
@@ -129,13 +129,13 @@ function O(e, t, n) {
         o = n.getGuild(a),
         l = null !== (r = null == o ? void 0 : o.maxVideoChannelUsers) && void 0 !== r ? r : -1,
         u = null !== (i = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== i ? i : -1,
-        c = h.ZP.countVoiceStatesForChannel(e.id),
-        d = h.ZP.getVoiceStatesForChannel(e),
+        c = p.ZP.countVoiceStatesForChannel(e.id),
+        d = p.ZP.getVoiceStatesForChannel(e),
         _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
-        p = !1;
-    p = e.type === T ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
+        h = !1;
+    h = e.type === S ? null != a && (t.hasVideo(e.id) || (0, s.a)(d)) && u > 0 && c >= u : null != a && t.hasVideo(e.id) && l > 0 && c >= l + (_ ? 1 : 0);
     let m = e.userLimit > 0 && c >= e.userLimit;
-    return p || (m && !_);
+    return h || (m && !_);
 }
 function D(e, t) {
     return t.isGuildStageVoice() ? g.epw : null == e ? g.eWB : Math.max(e.hasFeature(g.oNc.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB, E.HO[e.premiumTier].limits.bitrate);

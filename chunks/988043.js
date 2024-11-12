@@ -25,14 +25,14 @@ function C() {
         t = (0, u.c_)(),
         n = d.h2.useSetting().includes(e),
         C = d.iG.useSetting(),
-        _ = s.useCallback(
+        E = s.useCallback(
             (t) => {
                 let n = new Set((0, c.YK)());
                 t ? n.delete(e) : n.add(e), d.h2.updateSetting(Array.from(n));
             },
             [e]
         );
-    function E(e, t) {
+    function _(e, t) {
         a.default.track(S.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: t
@@ -46,10 +46,10 @@ function C() {
             cancelText: T.intl.string(T.t.p89ACg),
             confirmButtonColor: r.Button.Colors.BRAND,
             onConfirm: () => {
-                d.iG.updateSetting(e), E(e, !1);
+                d.iG.updateSetting(e), _(e, !1);
             },
             onCancel: () => {
-                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), E(e, !0);
+                d.iG.updateSetting(e), d.h2.updateSetting(e ? o.default.keys(l.Z.getGuilds()) : []), _(e, !0);
             }
         });
     };
@@ -69,7 +69,7 @@ function C() {
                       title: T.intl.string(T.t.RAQUSE),
                       note: t ? T.intl.string(T.t.V0ka0d) : T.intl.string(T.t.G7c3Xl),
                       value: !n,
-                      onChange: _
+                      onChange: E
                   })
     });
 }

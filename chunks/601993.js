@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     },
     RD: function () {
-        return p;
+        return h;
     },
     Rs: function () {
         return _;
@@ -12,7 +12,7 @@ n.d(t, {
         return f;
     },
     _2: function () {
-        return h;
+        return p;
     },
     f5: function () {
         return d;
@@ -57,11 +57,11 @@ async function _(e) {
     let t = await l;
     if (null != t) t.replaceMisspelling(e);
 }
-async function h(e) {
+async function p(e) {
     let t = await l;
     if (null != t) t.setAppLocale(e);
 }
-function p(e) {
+function h(e) {
     if (!s()) return () => {};
     let t = r.Z.spellCheck.on('spellcheck-result', e);
     return null != t ? t : () => {};

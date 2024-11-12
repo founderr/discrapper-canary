@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(180035),
     f = n(481060),
     _ = n(540059),
-    h = n(980492);
-let p = {
+    p = n(980492);
+let h = {
         mass: 1,
         tension: 250
     },
@@ -36,17 +36,17 @@ let p = {
     },
     g = function (e) {
         let { id: t, onChange: n, checked: a, disabled: g, className: E, focusProps: v, innerRef: I } = e,
-            { reducedMotion: S } = i.useContext(u.S),
-            T = i.useRef(null),
-            [b, y] = i.useState(!1),
+            { reducedMotion: b } = i.useContext(u.S),
+            S = i.useRef(null),
+            [T, y] = i.useState(!1),
             A = (0, _.Q)('Switch'),
             N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
             C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
             { state: R, opacity: O } = (0, f.useSpring)(
                 {
-                    config: p,
+                    config: h,
                     opacity: g ? (A ? 0.5 : 0.3) : 1,
-                    state: b ? (a ? 0.7 : 0.3) : a ? 1 : 0
+                    state: T ? (a ? 0.7 : 0.3) : a ? 1 : 0
                 },
                 'animate-always'
             );
@@ -55,9 +55,9 @@ let p = {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(h.container, E, {
-                    [h.checked]: a,
-                    [h.disabled]: g
+                className: s()(p.container, E, {
+                    [p.checked]: a,
+                    [p.disabled]: g
                 }),
                 onMouseDown: () => !g && y(!0),
                 onMouseUp: () => y(!1),
@@ -70,7 +70,7 @@ let p = {
                 },
                 children: [
                     (0, r.jsxs)(o.animated.svg, {
-                        className: h.slider,
+                        className: p.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
@@ -127,23 +127,23 @@ let p = {
                                         })
                                     ]
                                 });
-                            })(R, N, C, S.enabled)
+                            })(R, N, C, b.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
                         id: t,
                         type: 'checkbox',
                         ref: (e) => {
-                            (T.current = e), null != I && (I.current = e);
+                            (S.current = e), null != I && (I.current = e);
                         },
-                        className: h.input,
+                        className: p.input,
                         tabIndex: g ? -1 : 0,
                         onKeyDown: function (e) {
                             if (!g && !e.repeat) (' ' === e.key || 'Enter' === e.key) && y(!0);
                         },
                         onKeyUp: function (e) {
                             var t;
-                            if (!g && !!b && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = T.current) || void 0 === t || t.click());
+                            if (!g && !!T && !e.repeat) y(!1), 'Enter' === e.key && (null === (t = S.current) || void 0 === t || t.click());
                         },
                         onChange: function (e) {
                             y(!1), null == n || n(e.currentTarget.checked, e);

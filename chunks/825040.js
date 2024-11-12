@@ -36,7 +36,7 @@ function u(e) {
                 }
             );
         }, [n]);
-    let h = i.useCallback(() => {
+    let p = i.useCallback(() => {
         var e, t, n, r;
         let { width: i, height: a } = _.current,
             s = null !== (n = null === (e = f.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
@@ -51,9 +51,9 @@ function u(e) {
     }, [u]);
     i.useLayoutEffect(() => {
         let e = f.current;
-        if (null != e) return e.addEventListener('resize', h), () => e.removeEventListener('resize', h);
-    }, [h]);
-    let p = i.useCallback(() => {
+        if (null != e) return e.addEventListener('resize', p), () => e.removeEventListener('resize', p);
+    }, [p]);
+    let h = i.useCallback(() => {
             null == a || a();
         }, [a]),
         m = i.useCallback(
@@ -67,7 +67,7 @@ function u(e) {
         ref: f,
         autoPlay: !0,
         onPause: m,
-        onCanPlayThrough: p,
+        onCanPlayThrough: h,
         muted: !0,
         ...d
     });

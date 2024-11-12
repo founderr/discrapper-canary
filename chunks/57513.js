@@ -14,8 +14,8 @@ var r = n(544891),
     d = n(981631);
 let f = 10 * c.Z.Millis.MINUTE,
     _ = 10 * c.Z.Millis.MINUTE,
-    h = 1 * c.Z.Millis.MINUTE,
-    p = {};
+    p = 1 * c.Z.Millis.MINUTE,
+    h = {};
 async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         c = o.default.locale;
@@ -26,7 +26,7 @@ async function m(e, t) {
             branchId: t,
             locale: c
         }),
-        n && (await (0, i._v)(Math.random() * h)),
+        n && (await (0, i._v)(Math.random() * p)),
         r.tn
             .get({
                 url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
@@ -66,8 +66,8 @@ async function m(e, t) {
                     else {
                         var i, o;
                         (i = e),
-                            null == p[(o = t)] && (p[o] = new a.V7()),
-                            p[o].start(f + Math.random() * _, () => {
+                            null == h[(o = t)] && (h[o] = new a.V7()),
+                            h[o].start(f + Math.random() * _, () => {
                                 null != l.Z.getLibraryApplication(i, o) && m(i, o);
                             });
                     }

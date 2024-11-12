@@ -32,7 +32,7 @@ function _(e) {
         n = t % 60;
     return ''.concat((t - n) / 60, ':').concat(String(n).padStart(2, '0'));
 }
-class h extends (r = a.Component) {
+class p extends (r = a.Component) {
     componentDidMount() {
         let { previewWidth: e, animatedProgress: t } = this.state;
         (this._previewId = e.addListener(this.handlePreviewChange)), (this._progressId = t.addListener(this.handleAnimatedChange));
@@ -197,4 +197,4 @@ class h extends (r = a.Component) {
             });
     }
 }
-c(h, 'Types', f), c(h, 'defaultProps', { currentWindow: window }), (t.Z = h);
+c(p, 'Types', f), c(p, 'defaultProps', { currentWindow: window }), (t.Z = p);

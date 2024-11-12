@@ -10,16 +10,16 @@ var i,
     d = n(938078),
     f = n(220444),
     _ = n(601070),
-    h = n(210887),
-    p = n(314897),
+    p = n(210887),
+    h = n(314897),
     m = n(592125),
     g = n(703558),
     E = n(984933),
     v = n(271383),
     I = n(430824),
-    S = n(496675),
-    T = n(306680),
-    b = n(944486),
+    b = n(496675),
+    S = n(306680),
+    T = n(944486),
     y = n(914010),
     A = n(9156),
     N = n(483360),
@@ -61,7 +61,7 @@ function H(e) {
     var t;
     let { query: n, queryMode: i } = e,
         a = null !== (t = y.Z.getGuildId()) && void 0 !== t ? t : void 0,
-        s = new Set(['user:'.concat(p.default.getId())]);
+        s = new Set(['user:'.concat(h.default.getId())]);
     null != a && s.add('guild:'.concat(a)),
         (r =
             null != r
@@ -91,10 +91,10 @@ function Y(e, t) {
                     ? (function () {
                           var e, t;
                           let n = null !== (e = y.Z.getGuildId()) && void 0 !== e ? e : void 0,
-                              r = null !== (t = b.Z.getChannelId()) && void 0 !== t ? t : void 0;
+                              r = null !== (t = T.Z.getChannelId()) && void 0 !== t ? t : void 0;
                           switch (k) {
                               case c.h8.USER: {
-                                  let e = p.default.getId();
+                                  let e = h.default.getId();
                                   return N.ZP.getRecentlyTalked(r, 100).filter((t) => {
                                       let { record: n } = t;
                                       return n.id !== e;
@@ -133,7 +133,7 @@ function Y(e, t) {
                               a = [];
                           for (let e = 1; e < F.length; e += 1) {
                               let t = j(F[e]);
-                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || S.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
+                              if (null != t) ((t.type !== c.h8.TEXT_CHANNEL && t.type !== c.h8.VOICE_CHANNEL) || b.Z.can(R.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
                           }
                           a.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['80lOZ2'])), ...a);
                           let o = (function (e) {
@@ -149,7 +149,7 @@ function Y(e, t) {
                               );
                           })((e) => e === r || F.includes(e));
                           o.length > 0 && i.push((0, c.o6)(O.intl.string(O.t['4B63jY'])), ...o);
-                          let l = T.ZP.getMentionChannelIds()
+                          let l = S.ZP.getMentionChannelIds()
                               .filter((e) => e !== r && !F.includes(e))
                               .map((e) => j(e))
                               .filter(C.lm)
@@ -215,7 +215,7 @@ function W() {
 class K extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(v.ZP, I.Z, m.Z), this.syncWith([h.Z], () => !0), (M = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
+        this.waitFor(v.ZP, I.Z, m.Z), this.syncWith([p.Z], () => !0), (M = l.K.get(L) || !1), (F = null !== (t = null == e ? void 0 : e.channelHistory) && void 0 !== t ? t : []);
     }
     getState() {
         return { channelHistory: F };
@@ -241,7 +241,7 @@ class K extends (i = o.ZP.PersistedStore) {
     }
     getProps() {
         return {
-            theme: h.Z.theme,
+            theme: p.Z.theme,
             query: null != r ? r.query : '',
             queryMode: k,
             results: U,

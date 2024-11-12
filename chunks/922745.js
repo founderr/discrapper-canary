@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return b;
     },
     r: function () {
         return I;
@@ -18,18 +18,18 @@ var i = n(120356),
     d = n(528144),
     f = n(312956),
     _ = n(501967),
-    h = n(19780),
-    p = n(540028),
+    p = n(19780),
+    h = n(540028),
     m = n(507675),
     g = n(273716),
     E = n(388032),
     v = n(497041);
 function I(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
-        c = (0, s.e7)([h.Z], () => h.Z.getChannelId()),
+        c = (0, s.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
             null != c
-                ? (0, r.jsx)(p.Z, {
+                ? (0, r.jsx)(h.Z, {
                       voiceChannelId: c,
                       idle: a
                   })
@@ -68,8 +68,8 @@ function I(e) {
         ]
     });
 }
-function S(e) {
-    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: h, screenMessage: p, hideControls: g = !1, className: E, innerClassName: S, ...T } = e;
+function b(e) {
+    let { children: t, idle: n, onJumpToChannel: i, onHide: s, backgroundKey: o, onActive: u, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: b, ...S } = e;
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
@@ -81,16 +81,16 @@ function S(e) {
                 children: (0, r.jsx)(
                     _.B,
                     {
-                        className: S,
+                        className: b,
                         children: t
                     },
                     o
                 )
             }),
-            null != p
+            null != h
                 ? (0, r.jsx)(m.Z, {
                       size: 'small',
-                      ...p
+                      ...h
                   })
                 : null,
             !g &&
@@ -103,7 +103,7 @@ function S(e) {
                                 idle: n,
                                 onJumpToChannel: i,
                                 onHide: s,
-                                ...T
+                                ...S
                             })
                         }),
                         (0, r.jsxs)('div', {
@@ -123,7 +123,7 @@ function S(e) {
                                     justify: c.Z.Justify.END,
                                     basis: '50%',
                                     align: c.Z.Align.CENTER,
-                                    children: null == h ? void 0 : h()
+                                    children: null == p ? void 0 : p()
                                 })
                             ]
                         })

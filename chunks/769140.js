@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(110924),
     f = n(833664),
     _ = n(579630),
-    h = n(100527),
-    p = n(906732),
+    p = n(100527),
+    h = n(906732),
     m = n(750881),
     g = n(194082),
     E = n(318374),
     v = n(102172),
     I = n(359110),
-    S = n(769654),
-    T = n(922482),
-    b = n(543882),
+    b = n(769654),
+    S = n(922482),
+    T = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -57,7 +57,7 @@ function z(e) {
             [H.fullSize]: Q === F.y0.FULL_SIZE
         },
         { enabled: $, analyticsEligible: ee } = (0, m.R4)('user-profile-stream-activity-card-web'),
-        { analyticsLocations: et } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: et } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         en = (0, L.Z)({
             display: 'live',
             user: t,
@@ -84,12 +84,12 @@ function z(e) {
             url: ec,
             isLoading: ed,
             canSeePreview: ef
-        } = (0, o.cj)([N.Z, b.Z], () => {
+        } = (0, o.cj)([N.Z, T.Z], () => {
             let e = null != ea && N.Z.canBasicChannel(V.S7T.CONNECT, ea);
             return e
                 ? {
-                      url: b.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: b.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -111,20 +111,20 @@ function z(e) {
             });
         }
     }, [t, e_, $, ee, a]);
-    let eh = (0, d.Z)(ed ? null : ec),
-        ep = ed || null == ec ? eh : ec;
+    let ep = (0, d.Z)(ed ? null : ec),
+        eh = ed || null == ec ? ep : ec;
     if (null == ei || null == ea || ($ && !1 === a.discoverable)) return null;
     let em = () => {
             let e = s()(Y.preview, J),
                 t = () => {
                     en({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == q || q();
                 };
-            return null == ep && ed
+            return null == eh && ed
                 ? (0, r.jsx)('div', {
                       className: e,
                       children: (0, r.jsx)(l.Spinner, {})
                   })
-                : null == ep
+                : null == eh
                   ? (0, r.jsxs)(l.Clickable, {
                         className: s()(e, Y.overlay, { [Y.clickable]: el }),
                         onClick: el ? t : void 0,
@@ -156,7 +156,7 @@ function z(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: ep,
+                                src: eh,
                                 className: Y.image
                             }),
                             Q !== F.y0.FULL_SIZE &&
@@ -200,7 +200,7 @@ function z(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(H.clickable, H.inline),
                                         onClick: () => {
-                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
+                                            null == en || en({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(ea) : (u.default.selectVoiceChannel(ea.id), (0, I.Kh)(ea.id)), null == q || q();
                                         },
                                         children: ea.name
                                     })
@@ -210,7 +210,7 @@ function z(e) {
                                 variant: 'text-xs/normal',
                                 text: j.intl.formatToPlainString(j.t['hq/Qzc'], { guildName: ei.name }),
                                 onClick: () => {
-                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ei.id), null == q || q();
+                                    en({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ei.id), null == q || q();
                                 }
                             })
                         ]
@@ -254,7 +254,7 @@ function z(e) {
                           onClose: q
                       })
                   });
-    return (0, r.jsx)(p.Gt, {
+    return (0, r.jsx)(h.Gt, {
         value: et,
         children: (0, r.jsx)(G.Z, {
             user: t,

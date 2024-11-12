@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     sk: function () {
-        return p;
+        return h;
     }
 }),
     n(47120),
@@ -20,10 +20,10 @@ var r = n(512722),
     d = n(914010),
     f = n(594174),
     _ = n(51144),
-    h = n(887490);
-function p(e, t) {
+    p = n(887490);
+function h(e, t) {
     let { mode: n, ignoreTrailingEmptyNodes: r, preventEmojiSurrogates: i } = null != t ? t : {},
-        [a, s] = (null == t ? void 0 : t.range) != null ? h.M8.edges(t.range) : [void 0, void 0];
+        [a, s] = (null == t ? void 0 : t.range) != null ? p.M8.edges(t.range) : [void 0, void 0];
     return m(e, {
         mode: n,
         start: a,
@@ -35,31 +35,31 @@ function p(e, t) {
 function m(e, t) {
     var n, r;
     let { mode: i, start: a, end: s, separator: o, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: u, preventEmojiSurrogates: c } = null != t ? t : {},
-        d = e.length > 0 && !h.LC.isText(e[0]);
+        d = e.length > 0 && !p.LC.isText(e[0]);
     null == o && (o = d ? '\n' : '');
     let f = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
         _ = null !== (r = null == s ? void 0 : s.path[0]) && void 0 !== r ? r : e.length - 1;
     if (u)
         for (let t = _; t >= f; t--) {
             let n = e[t];
-            if (h.LC.isText(n)) {
+            if (p.LC.isText(n)) {
                 if (n.text.length > 0) {
                     _ = t;
                     break;
                 }
-            } else if (!h.q.isEmpty(n)) {
+            } else if (!p.q.isEmpty(n)) {
                 _ = t;
                 break;
             }
             if (t === f) return '';
         }
-    let p = f > 0 && h.aj.isType(e[f - 1], 'blockQuote'),
-        m = h.aj.isType(e[f], 'blockQuote'),
-        E = h.aj.isType(e[_], 'blockQuote'),
+    let h = f > 0 && p.aj.isType(e[f - 1], 'blockQuote'),
+        m = p.aj.isType(e[f], 'blockQuote'),
+        E = p.aj.isType(e[_], 'blockQuote'),
         v = [];
     for (let t = f; t <= _; t++) {
         let n = e[t];
-        if (l && h.LC.isText(n) && 0 === n.text.length) continue;
+        if (l && p.LC.isText(n) && 0 === n.text.length) continue;
         let r =
                 null != a && t === f
                     ? {
@@ -78,7 +78,7 @@ function m(e, t) {
                 mode: i,
                 start: r,
                 end: o,
-                allowBlockQuotePrefix: null == a || null == s || (!p && (!m || E)),
+                allowBlockQuotePrefix: null == a || null == s || (!h && (!m || E)),
                 preventEmojiSurrogates: c
             });
         (!l || u.length > 0) && v.push(u);
@@ -86,8 +86,8 @@ function m(e, t) {
     return v.join(o);
 }
 function g(e, t) {
-    let { mode: n, start: r, allowBlockQuotePrefix: p = !1, preventEmojiSurrogates: g = !1 } = null != t ? t : {};
-    if (h.LC.isText(e))
+    let { mode: n, start: r, allowBlockQuotePrefix: h = !1, preventEmojiSurrogates: g = !1 } = null != t ? t : {};
+    if (p.LC.isText(e))
         return (function (e, t) {
             var n, r;
             let { start: a, end: s } = null != t ? t : {};
@@ -102,7 +102,7 @@ function g(e, t) {
         case 'blockQuote': {
             let n = m(e.children, t),
                 i = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
-            if (p && (null == r || i)) return '> '.concat(n);
+            if (h && (null == r || i)) return '> '.concat(n);
             return n;
         }
         case 'emoji': {

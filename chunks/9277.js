@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(28546),
     f = n(581883),
     _ = n(459273),
-    h = n(443603),
-    p = n(981631),
+    p = n(443603),
+    h = n(981631),
     m = n(957825),
     g = n(388032),
     E = n(703130);
@@ -19,11 +19,11 @@ t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
             [v, I] = i.useState(!1),
-            S = (0, l.e7)([f.Z], () => {
+            b = (0, l.e7)([f.Z], () => {
                 var e, t;
                 return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [T, b, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
+            [S, T, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
             A = i.useRef(0),
             N = i.useCallback(() => {
                 I(!0),
@@ -33,7 +33,7 @@ t.Z = i.memo(
                     }, 2000));
             }, []);
         (0, _.yp)({
-            event: p.CkL.FAVORITE_GIF,
+            event: h.CkL.FAVORITE_GIF,
             handler: N
         });
         let C = i.useCallback(() => {
@@ -41,16 +41,16 @@ t.Z = i.memo(
             }, [a]),
             { Component: R, events: O, play: D } = (0, u.V)();
         if (n) return null;
-        let L = T === m.X1.GIF && b === a;
+        let L = S === m.X1.GIF && T === a;
         return (0, r.jsx)(c.Tooltip, {
-            text: S ? g.intl.string(g.t.mE2e8P) : null,
+            text: b ? g.intl.string(g.t.mE2e8P) : null,
             forceOpen: !0,
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: t,
                     className: s()(m.CT, E.buttonContainer),
                     ...e,
-                    children: (0, r.jsx)(h.Z, {
+                    children: (0, r.jsx)(p.Z, {
                         innerClassName: E.button,
                         onMouseEnter: O.onMouseEnter,
                         onMouseLeave: O.onMouseLeave,

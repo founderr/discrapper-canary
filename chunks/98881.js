@@ -14,16 +14,16 @@ var r = n(288377),
     d = n(394711),
     f = n(177679),
     _ = n(612617),
-    h = n(186207),
-    p = n(142197),
+    p = n(186207),
+    h = n(142197),
     m = n(55231),
     g = n(265839),
     E = n(175486),
     v = n(629053),
     I = n(890521),
-    S = n(891873),
-    T = n(695848),
-    b = n(261978),
+    b = n(891873),
+    S = n(695848),
+    T = n(261978),
     y = n(917322),
     A = n(108901),
     N = n(591840),
@@ -45,7 +45,7 @@ var r = n(288377),
 function V(e) {
     var t;
     let n = (0, G.useRef)(),
-        { value: r, textValue: i, minValue: a, maxValue: s, isDisabled: o, isReadOnly: l, isRequired: u, onIncrement: c, onIncrementPage: d, onDecrement: f, onDecrementPage: _, onDecrementToMin: h, onIncrementToMax: p } = e;
+        { value: r, textValue: i, minValue: a, maxValue: s, isDisabled: o, isReadOnly: l, isRequired: u, onIncrement: c, onIncrementPage: d, onDecrement: f, onDecrementPage: _, onDecrementToMin: p, onIncrementToMax: h } = e;
     let m = (0, Z.qb)((t = F) && t.__esModule ? t.default : t, '@react-aria/spinbutton'),
         g = () => clearTimeout(n.current);
     (0, G.useEffect)(() => () => g(), []);
@@ -60,21 +60,21 @@ function V(e) {
         (0, G.useEffect)(() => {
             E.current && ((0, U.gb)('assertive'), (0, U.xQ)(i, 'assertive'));
         }, [i]);
-    let S = (0, B.iW)((e) => {
+    let b = (0, B.iW)((e) => {
             g(),
                 c(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(s) || isNaN(r) || r < s) && S(60);
+                    (isNaN(s) || isNaN(r) || r < s) && b(60);
                 }, e));
         }),
-        T = (0, B.iW)((e) => {
+        S = (0, B.iW)((e) => {
             g(),
                 f(),
                 (n.current = window.setTimeout(() => {
-                    (isNaN(a) || isNaN(r) || r > a) && T(60);
+                    (isNaN(a) || isNaN(r) || r > a) && S(60);
                 }, e));
         }),
-        b = (e) => {
+        T = (e) => {
             e.preventDefault();
         },
         { addGlobalListener: y, removeAllGlobalListeners: A } = (0, B.xi)();
@@ -110,10 +110,10 @@ function V(e) {
                             f && (e.preventDefault(), f());
                             break;
                         case 'Home':
-                            h && (e.preventDefault(), h());
+                            p && (e.preventDefault(), p());
                             break;
                         case 'End':
-                            p && (e.preventDefault(), p());
+                            h && (e.preventDefault(), h());
                     }
             },
             onFocus: v,
@@ -121,7 +121,7 @@ function V(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                S(400), y(window, 'contextmenu', b);
+                b(400), y(window, 'contextmenu', T);
             },
             onPressEnd: () => {
                 g(), A();
@@ -131,7 +131,7 @@ function V(e) {
         },
         decrementButtonProps: {
             onPressStart: () => {
-                T(400), y(window, 'contextmenu', b);
+                S(400), y(window, 'contextmenu', T);
             },
             onPressEnd: () => {
                 g(), A();
@@ -153,16 +153,16 @@ F = {
     'et-EE': d.Z,
     'fi-FI': f.Z,
     'fr-FR': _.Z,
-    'he-IL': h.Z,
-    'hr-HR': p.Z,
+    'he-IL': p.Z,
+    'hr-HR': h.Z,
     'hu-HU': m.Z,
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': S.Z,
-    'nb-NO': T.Z,
-    'nl-NL': b.Z,
+    'lv-LV': b.Z,
+    'nb-NO': S.Z,
+    'nl-NL': T.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(243778),
     T = n(984370),
     x = n(797614),
-    A = n(359110),
-    b = n(6025),
+    b = n(359110),
+    A = n(6025),
     Z = n(897473),
     y = n(108427),
     L = n(970731),
@@ -255,7 +255,7 @@ let es = (0, p.Z)(function (e) {
         _ = (0, k.T)(g),
         E = (0, w.J)(g);
     r.useEffect(() => {
-        null != g && !_ && E && f && ((0, A.Kh)(g), b.Z.closeChannelSidebar(O.uZ));
+        null != g && !_ && E && f && ((0, b.Kh)(g), A.Z.closeChannelSidebar(O.uZ));
     }, [g, E, f, _]);
     let [I, C] = r.useState(q.pS.REQUESTS),
         S = (e) => {

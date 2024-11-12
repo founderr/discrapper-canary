@@ -10,8 +10,8 @@ var r = n(846519),
     d = n(938475),
     f = n(70956),
     _ = n(367907),
-    h = n(981631);
-function p(e, t, n) {
+    p = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ class g extends i.Z {
         if (this._currentUserSpeaking) {
             let e = l.Z.getChannelId(),
                 t = l.Z.getGuildId();
-            (0, _.yw)(h.rMx.START_SPEAKING, {
+            (0, _.yw)(p.rMx.START_SPEAKING, {
                 mode: o.Z.getMode(),
                 priority: c.Z.isCurrentUserPrioritySpeaking(),
                 channel: e,
@@ -55,7 +55,7 @@ class g extends i.Z {
         if (o.Z.isDeaf() || !this._anyoneElseSpeaking) return;
         let e = l.Z.getChannelId(),
             t = l.Z.getGuildId();
-        (0, _.yw)(h.rMx.START_LISTENING, {
+        (0, _.yw)(p.rMx.START_LISTENING, {
             mute: o.Z.isMute(),
             anyone_priority: c.Z.isAnyonePrioritySpeaking(),
             channel: e,
@@ -72,7 +72,7 @@ class g extends i.Z {
         this._reset(), c.Z.removeChangeListener(this._handleSpeakingStoreChanged), l.Z.removeChangeListener(this._handleRTCConnectionStoreChanged);
     }
     getGameMetadata() {
-        let e = u.Z.findActivity((e) => e.type === h.IIU.PLAYING),
+        let e = u.Z.findActivity((e) => e.type === p.IIU.PLAYING),
             t = s.ZP.getCurrentGameForAnalytics();
         return {
             game_platform: (0, a.Z)(e),
@@ -83,11 +83,11 @@ class g extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_currentUserSpeaking', !1),
-            p(this, '_anyoneElseSpeaking', !1),
-            p(this, '_voiceChannelId', void 0),
-            p(this, '_reportInterval', void 0),
-            p(this, '_handleRTCConnectionStoreChanged', () => {
+            h(this, '_currentUserSpeaking', !1),
+            h(this, '_anyoneElseSpeaking', !1),
+            h(this, '_voiceChannelId', void 0),
+            h(this, '_reportInterval', void 0),
+            h(this, '_handleRTCConnectionStoreChanged', () => {
                 let e = l.Z.getChannelId();
                 if (this._voiceChannelId !== e) {
                     if (((this._voiceChannelId = e), null == e)) {
@@ -101,7 +101,7 @@ class g extends i.Z {
                         }));
                 }
             }),
-            p(this, '_handleSpeakingStoreChanged', () => {
+            h(this, '_handleSpeakingStoreChanged', () => {
                 let e = c.Z.isCurrentUserSpeaking();
                 this._currentUserSpeaking !== e && ((this._currentUserSpeaking = e), this._trackStartSpeaking());
                 let t = c.Z.isAnyoneElseSpeaking();

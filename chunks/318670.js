@@ -9,16 +9,16 @@ t.Z = function (e, t, n, s, o, l) {
     var f = l.get(e),
         _ = l.get(t);
     if (f && _) return f == t && _ == e;
-    var h = -1,
-        p = !0,
+    var p = -1,
+        h = !0,
         m = 2 & n ? new r.Z() : void 0;
-    for (l.set(e, t), l.set(t, e); ++h < c; ) {
-        var g = e[h],
-            E = t[h];
-        if (s) var v = u ? s(E, g, h, t, e, l) : s(g, E, h, e, t, l);
+    for (l.set(e, t), l.set(t, e); ++p < c; ) {
+        var g = e[p],
+            E = t[p];
+        if (s) var v = u ? s(E, g, p, t, e, l) : s(g, E, p, e, t, l);
         if (void 0 !== v) {
             if (v) continue;
-            p = !1;
+            h = !1;
             break;
         }
         if (m) {
@@ -27,13 +27,13 @@ t.Z = function (e, t, n, s, o, l) {
                     if (!(0, a.Z)(m, t) && (g === e || o(g, e, n, s, l))) return m.push(t);
                 })
             ) {
-                p = !1;
+                h = !1;
                 break;
             }
         } else if (!(g === E || o(g, E, n, s, l))) {
-            p = !1;
+            h = !1;
             break;
         }
     }
-    return l.delete(e), l.delete(t), p;
+    return l.delete(e), l.delete(t), h;
 };

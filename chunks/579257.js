@@ -16,8 +16,8 @@ e.exports = function (e) {
                 },
                 f = '<>',
                 _ = '</>',
-                h = /<[A-Za-z0-9\\._:-]+/,
-                p = /\/[A-Za-z0-9\\._:-]+>|\/>/,
+                p = /<[A-Za-z0-9\\._:-]+/,
+                h = /\/[A-Za-z0-9\\._:-]+>|\/>/,
                 m = (e, t) => {
                     let n;
                     let r = e[0].length + e.index,
@@ -43,25 +43,25 @@ e.exports = function (e) {
                 E = '[0-9](_?[0-9])*',
                 v = `\\.(${E})`,
                 I = '0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*',
-                S = {
+                b = {
                     className: 'number',
                     variants: [{ begin: `(\\b(${I})((${v})|\\.)?|(${v}))[eE][+-]?(${E})\\b` }, { begin: `\\b(${I})\\b((${v})\\b|\\.)?|(${v})\\b` }, { begin: '\\b(0|[1-9](_?[0-9])*)n\\b' }, { begin: '\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b' }, { begin: '\\b0[bB][0-1](_?[0-1])*n?\\b' }, { begin: '\\b0[oO][0-7](_?[0-7])*n?\\b' }, { begin: '\\b0[0-7]+n?\\b' }],
                     relevance: 0
                 },
-                T = {
+                S = {
                     className: 'subst',
                     begin: '\\$\\{',
                     end: '\\}',
                     keywords: g,
                     contains: []
                 },
-                b = {
+                T = {
                     begin: 'html`',
                     end: '',
                     starts: {
                         end: '`',
                         returnEnd: !1,
-                        contains: [e.BACKSLASH_ESCAPE, T],
+                        contains: [e.BACKSLASH_ESCAPE, S],
                         subLanguage: 'xml'
                     }
                 },
@@ -71,7 +71,7 @@ e.exports = function (e) {
                     starts: {
                         end: '`',
                         returnEnd: !1,
-                        contains: [e.BACKSLASH_ESCAPE, T],
+                        contains: [e.BACKSLASH_ESCAPE, S],
                         subLanguage: 'css'
                     }
                 },
@@ -79,7 +79,7 @@ e.exports = function (e) {
                     className: 'string',
                     begin: '`',
                     end: '`',
-                    contains: [e.BACKSLASH_ESCAPE, T]
+                    contains: [e.BACKSLASH_ESCAPE, S]
                 },
                 N = {
                     className: 'comment',
@@ -121,14 +121,14 @@ e.exports = function (e) {
                         e.C_LINE_COMMENT_MODE
                     ]
                 },
-                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, b, y, A, { match: /\$\d+/ }, S];
-            T.contains = C.concat({
+                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, T, y, A, { match: /\$\d+/ }, b];
+            S.contains = C.concat({
                 begin: /\{/,
                 end: /\}/,
                 keywords: g,
                 contains: ['self'].concat(C)
             });
-            let R = [].concat(N, T.contains),
+            let R = [].concat(N, S.contains),
                 O = R.concat([
                     {
                         begin: /\(/,
@@ -220,12 +220,12 @@ e.exports = function (e) {
                     },
                     e.APOS_STRING_MODE,
                     e.QUOTE_STRING_MODE,
-                    b,
+                    T,
                     y,
                     A,
                     N,
                     { match: /\$\d+/ },
-                    S,
+                    b,
                     x,
                     {
                         className: 'attr',
@@ -286,16 +286,16 @@ e.exports = function (e) {
                                     },
                                     { match: /<[A-Za-z0-9\\._:-]+\s*\/>/ },
                                     {
-                                        begin: h,
+                                        begin: p,
                                         'on:begin': m,
-                                        end: p
+                                        end: h
                                     }
                                 ],
                                 subLanguage: 'xml',
                                 contains: [
                                     {
-                                        begin: h,
-                                        end: p,
+                                        begin: p,
+                                        end: h,
                                         skip: !0,
                                         contains: ['self']
                                     }
@@ -390,21 +390,21 @@ e.exports = function (e) {
             built_in: l.concat(c),
             'variable.language': o
         },
-        h = {
+        p = {
             className: 'meta',
             begin: '@' + t
         },
-        p = (e, t, n) => {
+        h = (e, t, n) => {
             let r = e.contains.findIndex((e) => e.label === t);
             if (-1 === r) throw Error('can not find mode to replace');
             e.contains.splice(r, 1, n);
         };
     return (
         Object.assign(u.keywords, _),
-        u.exports.PARAMS_CONTAINS.push(h),
-        (u.contains = u.contains.concat([h, d, f])),
-        p(u, 'shebang', e.SHEBANG()),
-        p(u, 'use_strict', {
+        u.exports.PARAMS_CONTAINS.push(p),
+        (u.contains = u.contains.concat([p, d, f])),
+        h(u, 'shebang', e.SHEBANG()),
+        h(u, 'use_strict', {
             className: 'meta',
             relevance: 10
         }),

@@ -7,19 +7,19 @@ var r = n(200651),
 let u = (e) => {
     let { externalRef: t, autoPlay: n, playOnHover: u, responsive: c, mediaLayoutType: d, ...f } = e,
         _ = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
-        h = i.useRef(null);
-    function p() {
+        p = i.useRef(null);
+    function h() {
         var e;
-        u && (null == h || null === (e = h.current) || void 0 === e || e.play());
+        u && (null == p || null === (e = p.current) || void 0 === e || e.play());
     }
     function m() {
         var e;
-        u && (null == h || null === (e = h.current) || void 0 === e || e.pause());
+        u && (null == p || null === (e = p.current) || void 0 === e || e.pause());
     }
     return (
         i.useLayoutEffect(
             () => () => {
-                let { current: e } = h;
+                let { current: e } = p;
                 null != e &&
                     (function (e) {
                         e.removeAttribute('src'),
@@ -35,19 +35,19 @@ let u = (e) => {
         ),
         i.useLayoutEffect(
             () => (
-                'function' == typeof t ? (t(null), t(h.current)) : null != t && (t.current = h.current),
+                'function' == typeof t ? (t(null), t(p.current)) : null != t && (t.current = p.current),
                 () => {
                     'function' == typeof t ? t(null) : null != t && (t.current = null);
                 }
             ),
-            [t, h]
+            [t, p]
         ),
         (0, r.jsx)('video', {
-            ref: h,
+            ref: p,
             autoPlay: !_ && !u && n,
-            onMouseEnter: p,
+            onMouseEnter: h,
             onMouseLeave: m,
-            onFocus: p,
+            onFocus: h,
             onBlur: m,
             style:
                 d === l.hV.MOSAIC

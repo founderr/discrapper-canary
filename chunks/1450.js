@@ -9,25 +9,25 @@ var r = n(200651),
     d = n(906732),
     f = n(28546),
     _ = n(26323),
-    h = n(434404),
-    p = n(357156),
+    p = n(434404),
+    h = n(357156),
     m = n(430824),
     g = n(267642),
     E = n(981631),
     v = n(30513),
     I = n(388032),
-    S = n(40847);
+    b = n(40847);
 t.Z = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: T, setTrackedUpsellViewed: b } = e,
+    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: S, setTrackedUpsellViewed: T } = e,
         { location: y } = (0, u.O)(),
         { analyticsLocations: A } = (0, d.ZP)(),
         N = (0, o.e7)([m.Z], () => m.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, p.XJ)(N),
+        { canManageAllExpressions: C } = (0, h.XJ)(N),
         R = null != N && 0 === (0, g.A3)(N.premiumTier) && !N.hasFeature(E.oNc.MORE_STICKERS);
     return (i.useEffect(() => {
         C &&
             R &&
-            T &&
+            S &&
             ((0, c.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: y,
                 guild_id: null == N ? void 0 : N.id,
@@ -35,21 +35,21 @@ t.Z = (e) => {
                 type: 'Expression Picker Inline Sticker Upsell',
                 location_stack: A
             }),
-            b(!0));
-    }, [R, N, a, y, T, b, A, C]),
+            T(!0));
+    }, [R, N, a, y, S, T, A, C]),
     null != N && C)
         ? R
             ? (0, r.jsxs)('div', {
-                  className: s()(S.upsell, t),
+                  className: s()(b.upsell, t),
                   children: [
                       (0, r.jsx)(l.BoostTier2SimpleIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: S.icon
+                          className: b.icon
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: S.body,
+                          className: b.body,
                           variant: 'text-sm/normal',
                           children: I.intl.format(I.t.AXWla2, { count: (0, g.A3)(E.Eu4.TIER_1) })
                       }),
@@ -69,18 +69,18 @@ t.Z = (e) => {
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: s()(S.upsell, t),
+                  className: s()(b.upsell, t),
                   children: [
                       (0, r.jsx)(l.StickerIcon, {
                           size: 'custom',
                           color: 'currentColor',
-                          className: S.icon,
+                          className: b.icon,
                           width: 20,
                           height: 20
                       }),
                       (0, r.jsx)(l.Text, {
                           color: 'interactive-normal',
-                          className: S.body,
+                          className: b.body,
                           variant: 'text-sm/normal',
                           children: I.intl.string(I.t.S83wgo)
                       }),
@@ -88,7 +88,7 @@ t.Z = (e) => {
                           look: l.Button.Looks.LINK,
                           color: l.Button.Colors.LINK,
                           onClick: () => {
-                              (0, f._Q)(), h.Z.open(n, E.pNK.STICKERS, y);
+                              (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, y);
                           },
                           children: I.intl.string(I.t.bwNjur)
                       })

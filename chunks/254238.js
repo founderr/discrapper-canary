@@ -3,13 +3,13 @@ n.d(t, {
         return A;
     },
     On: function () {
-        return b;
+        return T;
     },
     Vv: function () {
-        return S;
+        return b;
     },
     _: function () {
-        return T;
+        return S;
     },
     bp: function () {
         return N;
@@ -37,8 +37,8 @@ var r = n(434179),
     d = n(626135),
     f = n(960048),
     _ = n(607214),
-    h = n(258609),
-    p = n(893387),
+    p = n(258609),
+    h = n(893387),
     m = n(981631),
     g = n(388032);
 function E(e, t) {
@@ -49,7 +49,7 @@ function E(e, t) {
     });
 }
 async function v() {
-    let e = h.Z.getAwaitingRemoteSessionInfo(),
+    let e = p.Z.getAwaitingRemoteSessionInfo(),
         t = null == e ? void 0 : e.nonce;
     s.Z.dispatch({ type: 'REMOTE_SESSION_DISCONNECT' });
     let n = [];
@@ -75,7 +75,7 @@ function I(e) {
         sessionId: e
     });
 }
-function S(e, t) {
+function b(e, t) {
     let { selfMute: n, selfDeaf: r } = t;
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
@@ -88,7 +88,7 @@ function S(e, t) {
     }),
         E('VOICE_STATE_UPDATE', e);
 }
-function T(e) {
+function S(e) {
     s.Z.dispatch({
         type: 'REMOTE_COMMAND',
         sessionId: e,
@@ -97,7 +97,7 @@ function T(e) {
         E('DISCONNECT', e),
         v();
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     let i = (0, l.z)(n);
     null != i &&
         (s.Z.dispatch({
@@ -232,5 +232,5 @@ async function R(e, t, n) {
 async function O(e, t, n) {
     await _.Z.maybeShowPTTAlert(e), await v();
     let r = await y();
-    await C(e, t, n, r), (0, p.Z)(n.id, e);
+    await C(e, t, n, r), (0, h.Z)(n.id, e);
 }

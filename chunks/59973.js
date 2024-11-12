@@ -42,30 +42,30 @@ function l(e) {
             e.dispatch(o);
             return;
         }
-        var h = null;
+        var p = null;
         if (u) {
             if (!c) throw Error('getSourceClientOffset must be defined');
             (function (e) {
                 (0, r.k)('function' == typeof e, 'When clientOffset is provided, getSourceClientOffset must be a function.');
             })(c),
-                (h = c(_));
+                (p = c(_));
         }
-        e.dispatch((0, i.T)(u, h));
-        var p = f.getSource(_).beginDrag(d, _);
-        if (null != p) {
+        e.dispatch((0, i.T)(u, p));
+        var h = f.getSource(_).beginDrag(d, _);
+        if (null != h) {
             (function (e) {
                 (0, r.k)((0, a.Kn)(e), 'Item must be an object.');
-            })(p),
+            })(h),
                 f.pinSource(_);
             var m = f.getSourceType(_);
             return {
                 type: s.qu,
                 payload: {
                     itemType: m,
-                    item: p,
+                    item: h,
                     sourceId: _,
                     clientOffset: u || null,
-                    sourceClientOffset: h || null,
+                    sourceClientOffset: p || null,
                     isSourcePublic: !!(void 0 === l || l)
                 }
             };

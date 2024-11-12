@@ -11,7 +11,7 @@ function s(e, t) {
     (0, i.Z)(1, arguments);
     var n,
         s,
-        p,
+        h,
         m = (0, a.Z)(null !== (n = null == t ? void 0 : t.additionalDigits) && void 0 !== n ? n : 2);
     if (2 !== m && 1 !== m && 0 !== m) throw RangeError('additionalDigits must be 0, 1 or 2');
     if (!('string' == typeof e || '[object String]' === Object.prototype.toString.call(e))) return new Date(NaN);
@@ -65,10 +65,10 @@ function s(e, t) {
                       })(t, o, u);
             var c = new Date(0);
             return !(function (e, t, n) {
-                return t >= 0 && t <= 11 && n >= 1 && n <= (_[t] || (h(e) ? 29 : 28));
+                return t >= 0 && t <= 11 && n >= 1 && n <= (_[t] || (p(e) ? 29 : 28));
             })(t, a, s) ||
                 !(function (e, t) {
-                    return t >= 1 && t <= (h(e) ? 366 : 365);
+                    return t >= 1 && t <= (p(e) ? 366 : 365);
                 })(t, i)
                 ? new Date(NaN)
                 : (c.setUTCFullYear(t, a, Math.max(i, s)), c);
@@ -98,7 +98,7 @@ function s(e, t) {
     if (g.timezone) {
         if (
             isNaN(
-                (p = (function (e) {
+                (h = (function (e) {
                     if ('Z' === e) return 0;
                     var t = e.match(c);
                     if (!t) return 0;
@@ -115,11 +115,11 @@ function s(e, t) {
         )
             return new Date(NaN);
     } else {
-        var S = new Date(v + I),
-            T = new Date(0);
-        return T.setFullYear(S.getUTCFullYear(), S.getUTCMonth(), S.getUTCDate()), T.setHours(S.getUTCHours(), S.getUTCMinutes(), S.getUTCSeconds(), S.getUTCMilliseconds()), T;
+        var b = new Date(v + I),
+            S = new Date(0);
+        return S.setFullYear(b.getUTCFullYear(), b.getUTCMonth(), b.getUTCDate()), S.setHours(b.getUTCHours(), b.getUTCMinutes(), b.getUTCSeconds(), b.getUTCMilliseconds()), S;
     }
-    return new Date(v + I + p);
+    return new Date(v + I + h);
 }
 var o = {
         dateTimeDelimiter: /[T ]/,
@@ -136,6 +136,6 @@ function f(e) {
     return (e && parseFloat(e.replace(',', '.'))) || 0;
 }
 var _ = [31, null, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-function h(e) {
+function p(e) {
     return e % 400 == 0 || (e % 4 == 0 && e % 100 != 0);
 }

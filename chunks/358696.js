@@ -22,7 +22,7 @@ let _ = {
     crunchyroll: f.aspectRatioCrunchyroll
 };
 ((r = i || (i = {})).SIZE_60 = 'size-60'), (r.SIZE_72 = 'size-72');
-let h = {
+let p = {
     'size-60': {
         imageSize: 60,
         smallImageSize: 24,
@@ -34,7 +34,7 @@ let h = {
         mask: u.QS.CONTENT_IMAGE_72
     }
 };
-function p(e) {
+function h(e) {
     let { children: t, onClick: n } = e;
     return null == n
         ? (0, a.jsx)(a.Fragment, { children: t })
@@ -47,8 +47,8 @@ function p(e) {
 function m(e) {
     var t, n;
     let { image: r, smallImage: i, aspectRatio: s, onClick: m, size: g } = e,
-        { imageSize: E, smallImageSize: v, mask: I } = h[g],
-        S = (0, a.jsx)(c.f, {
+        { imageSize: E, smallImageSize: v, mask: I } = p[g],
+        b = (0, a.jsx)(c.f, {
             src: null == r ? void 0 : r.src,
             alt: null !== (n = null !== (t = null == r ? void 0 : r.alt) && void 0 !== t ? t : null == r ? void 0 : r.text) && void 0 !== n ? n : d.intl.string(d.t['2B/phI']),
             size: E,
@@ -56,14 +56,14 @@ function m(e) {
             constrain: 'width'
         });
     return null == r
-        ? S
+        ? b
         : (0, a.jsxs)('div', {
               className: o()(f.imagePosition, _[null != s ? s : 'default']),
               children: [
                   (0, a.jsx)(l.Tooltip, {
                       text: r.text,
                       children: (e) =>
-                          (0, a.jsx)(p, {
+                          (0, a.jsx)(h, {
                               onClick: m,
                               children:
                                   null != i
@@ -73,12 +73,12 @@ function m(e) {
                                             mask: I,
                                             width: E,
                                             height: E,
-                                            children: S
+                                            children: b
                                         })
                                       : (0, a.jsx)('div', {
                                             ...e,
                                             className: f.imageContainer,
-                                            children: S
+                                            children: b
                                         })
                           })
                   }),

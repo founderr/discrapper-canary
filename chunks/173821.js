@@ -83,13 +83,13 @@ var c = (function (e) {
                             f = this._tension * (this._toValue - n) - this._friction * r;
                         n = e + (d * l) / 2;
                         var _ = (r = t + (f * l) / 2),
-                            h = this._tension * (this._toValue - n) - this._friction * r;
+                            p = this._tension * (this._toValue - n) - this._friction * r;
                         n = e + (_ * l) / 2;
-                        var p = (r = t + (h * l) / 2),
+                        var h = (r = t + (p * l) / 2),
                             m = this._tension * (this._toValue - n) - this._friction * r;
-                        (n = e + (_ * l) / 2), (r = t + (h * l) / 2);
-                        var g = (c + 2 * (f + h) + m) / 6;
-                        (e += ((u + 2 * (d + _) + p) / 6) * l), (t += g * l);
+                        (n = e + (_ * l) / 2), (r = t + (p * l) / 2);
+                        var g = (c + 2 * (f + p) + m) / 6;
+                        (e += ((u + 2 * (d + _) + h) / 6) * l), (t += g * l);
                     }
                     if (((this._lastTime = i), (this._lastPosition = e), (this._lastVelocity = t), this._onUpdate(e), !!this.__active)) {
                         var E = !1;

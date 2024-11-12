@@ -9,10 +9,10 @@ n.d(t, {
         return _;
     },
     ZD: function () {
-        return p;
+        return h;
     },
     yY: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -67,10 +67,10 @@ function _(e) {
         );
     }, [...Object.values(e)]);
 }
-function h(e) {
+function p(e) {
     return _(e), null;
 }
-function p() {
+function h() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     r.useEffect(() => {
         function e() {

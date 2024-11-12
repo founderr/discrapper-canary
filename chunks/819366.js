@@ -14,22 +14,22 @@ var r = n(200651),
     d = n(100527),
     f = n(906732),
     _ = n(797610),
-    h = n(927723),
-    p = n(124072),
+    p = n(927723),
+    h = n(124072),
     m = n(184301),
     g = n(347475),
     E = n(592125),
     v = n(271383),
     I = n(430824),
-    S = n(699516),
-    T = n(594174),
-    b = n(5192),
+    b = n(699516),
+    S = n(594174),
+    T = n(5192),
     y = n(51144),
     A = n(377668);
 function N(e) {
     let { userId: t, className: a, children: s } = e,
         o = i.useCallback(() => {
-            (0, h.k)({ kind: 'user' });
+            (0, p.k)({ kind: 'user' });
         }, []),
         l = i.useCallback(
             (e) => {
@@ -45,7 +45,7 @@ function N(e) {
             },
             [t]
         );
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(h.Z, {
         className: a,
         onClick: o,
         onContextMenu: l,
@@ -53,9 +53,9 @@ function N(e) {
     });
 }
 function C(e) {
-    let { className: t, userId: i, channelId: a, parsedUserId: h, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
+    let { className: t, userId: i, channelId: a, parsedUserId: p, content: C, inlinePreview: R = !1, viewingChannelId: O } = e,
         { analyticsLocations: D } = (0, f.ZP)(d.Z.USER_MENTION),
-        L = (0, l.e7)([T.default], () => T.default.getUser(i)),
+        L = (0, l.e7)([S.default], () => S.default.getUser(i)),
         x = (0, l.e7)([E.Z], () => E.Z.getChannel(a)),
         w = null != x ? x.getGuildId() : null,
         M =
@@ -76,17 +76,17 @@ function C(e) {
                           });
                   },
         P = y.ZP.useName(L),
-        k = (0, l.e7)([E.Z, v.ZP, S.Z], () => b.ZP.getNickname(w, a, L)),
+        k = (0, l.e7)([E.Z, v.ZP, b.Z], () => T.ZP.getNickname(w, a, L)),
         U = I.Z.getGuild(w),
         G = (0, _.Ib)(U, x) && i === A.fL ? A.jM : null;
     if (null == L)
         return (0, r.jsx)(N, {
-            userId: h,
+            userId: p,
             className: t,
             children: C
         });
     let B = (e) =>
-        (0, r.jsx)(p.Z, {
+        (0, r.jsx)(h.Z, {
             className: t,
             onContextMenu: M,
             color: G,

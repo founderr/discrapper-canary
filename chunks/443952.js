@@ -23,8 +23,8 @@ var r = n(243814),
     N = n(591759),
     T = n(228488),
     x = n(996106),
-    A = n(914946),
-    b = n(452426),
+    b = n(914946),
+    A = n(452426),
     Z = n(561205),
     y = n(600027),
     L = n(852926),
@@ -33,7 +33,7 @@ var r = n(243814),
 async function O(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : '',
         l = E.Z.getApplicationActivity(t);
-    if (null == l || null == l.secrets || !(0, A.t9)(i, l.party, l.secrets)) throw new x.Z({ errorCode: j.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+    if (null == l || null == l.secrets || !(0, b.t9)(i, l.party, l.secrets)) throw new x.Z({ errorCode: j.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let a = (0, p.Z)(l, I.Z);
     if (a) {
         let { lock: t } = (0, L.jU)(e);
@@ -81,7 +81,7 @@ t.Z = {
             [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         validation: (e) =>
-            (0, b.Z)(e)
+            (0, A.Z)(e)
                 .required()
                 .keys({
                     user_id: e.string().required(),
@@ -104,7 +104,7 @@ t.Z = {
             [R.Gp.ANY]: [r.x.RPC, R.lH]
         },
         validation: (e) =>
-            (0, b.Z)(e)
+            (0, A.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([j.mFx.JOIN]),
@@ -218,7 +218,7 @@ t.Z = {
                 socket: n,
                 args: { mediaUrl: i }
             } = e;
-            (0, A.bu)(n.transport);
+            (0, b.bu)(n.transport);
             let r = n.application.id;
             if (null == r) throw new x.Z({ errorCode: j.lTL.INVALID_COMMAND }, 'No application.');
             if (!(0, v.yE)(null !== (t = n.application.flags) && void 0 !== t ? t : 0, j.udG.EMBEDDED)) throw new x.Z({ errorCode: j.lTL.INVALID_COMMAND }, 'This application cannot access this API');

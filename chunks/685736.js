@@ -22,7 +22,7 @@ function f(e, t, n) {
     );
 }
 let _ = new i.Z('Messages');
-class h {
+class p {
     static computeUsersAndMembers(e) {
         (0, d.Z)(e);
         let t = new Map(),
@@ -41,7 +41,7 @@ class h {
         if ((f(this, 'connectionId', null), f(this, 'users', []), f(this, 'members', []), f(this, 'messages', []), e.length > 0)) {
             var t;
             let n = null === (t = e[0]) || void 0 === t ? void 0 : t.connectionId,
-                [r, i] = h.computeUsersAndMembers(e);
+                [r, i] = p.computeUsersAndMembers(e);
             e.length > 0 && e.every((e) => e.connectionId === n) && (this.connectionId = n), (this.users = r), (this.members = i), (this.messages = e.map((e) => e.message));
         }
     }
@@ -49,14 +49,14 @@ class h {
 t.ZP = new (class e {
     async startupLoad(e, t, n, r) {
         let i = o.Z.messages(e);
-        return new h(await i.getLatest(t, n, r));
+        return new p(await i.getLatest(t, n, r));
     }
     async load(e, t, n) {
         let r = s.Z.getBasicChannel(t);
-        if (null == t || null == r || !(0, c.v)(r)) return new h([]);
+        if (null == t || null == r || !(0, c.v)(r)) return new p([]);
         {
             let i = o.Z.messages(e);
-            return new h(await i.getLatest(r.guild_id, t, n));
+            return new p(await i.getLatest(r.guild_id, t, n));
         }
     }
     handleMessageCreate(e, t) {

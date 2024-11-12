@@ -10,15 +10,15 @@ var i = n(200651),
     g = n(518950),
     m = n(598077),
     f = n(594174),
-    _ = n(626135),
-    p = n(63063),
+    p = n(626135),
+    _ = n(63063),
     h = n(281494),
     E = n(276444),
     b = n(520540),
     x = n(197115),
     C = n(119269),
-    T = n(938736),
-    v = n(981631),
+    v = n(938736),
+    T = n(981631),
     N = n(388032),
     I = n(837661),
     S = n(691766);
@@ -29,7 +29,7 @@ let R = (e) => {
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
             }),
-            c = (0, T.TW)('UserAvatarProgressBarUnit'),
+            c = (0, v.TW)('UserAvatarProgressBarUnit'),
             d = null != t,
             u = d
                 ? (0, i.jsx)(o.Avatar, {
@@ -121,13 +121,13 @@ t.Z = (e) => {
         { isInSettings: g = !1 } = e,
         R = (0, l.Wu)([E.Z], () => E.Z.getSentUserIds()),
         A = (0, l.e7)([E.Z], () => E.Z.getRecipientStatus()),
-        P = (0, T.uv)('ReferralProgramProgressBar'),
-        Z = (0, T.TW)('ReferralProgramProgressBar'),
-        O = (0, l.Wu)([f.default], () => R.map((e) => f.default.getUser(e)).filter((e) => null != e)),
-        M = r.useMemo(() => O.map((e) => new m.Z(e)), [O]),
-        B = (0, l.e7)([E.Z], () => E.Z.getRefreshAt()),
+        P = (0, v.uv)('ReferralProgramProgressBar'),
+        Z = (0, v.TW)('ReferralProgramProgressBar'),
+        B = (0, l.Wu)([f.default], () => R.map((e) => f.default.getUser(e)).filter((e) => null != e)),
+        M = r.useMemo(() => B.map((e) => new m.Z(e)), [B]),
+        O = (0, l.e7)([E.Z], () => E.Z.getRefreshAt()),
         { subscriberHomeVariant: w } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        y = P === v.g2L.UNAPPLIED || P === v.g2L.QUALIFIED,
+        y = P === T.g2L.UNAPPLIED || P === T.g2L.QUALIFIED,
         k = w === b.p.VARIANT_2;
     r.useEffect(() => {
         R.forEach((e) => {
@@ -142,13 +142,13 @@ t.Z = (e) => {
     A.forEach((e) => {
         e === h.Fe.REDEEMED && L.redeemed++, e === h.Fe.CONVERTED && (L.redeemed++, L.converted++);
     });
-    let U = L.sent === T.Q_,
-        D = p.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM),
+    let U = L.sent === v.Q_,
+        D = _.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM),
         { analyticsLocations: G } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
         H = r.useRef(null),
-        V = (L.sent / T.Q_) * 100,
+        V = (L.sent / v.Q_) * 100,
         F = !1;
-    Z && null != B && ((F = 0 < (t = Math.ceil((new Date(B).getTime() - new Date().getTime()) / 86400000)) && t < T.AV), (a = (100 * (T.AV - t)) / T.AV));
+    Z && null != O && ((F = 0 < (t = Math.ceil((new Date(O).getTime() - new Date().getTime()) / 86400000)) && t < v.AV), (a = (100 * (v.AV - t)) / v.AV));
     let W = F && null != t,
         z = (0, i.jsxs)('div', {
             className: I.referralInfoContent,
@@ -167,7 +167,7 @@ t.Z = (e) => {
                         (0, i.jsx)(o.Heading, {
                             variant: g ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                             className: I.expandedProgressBarHeader,
-                            children: (0, T.$s)({
+                            children: (0, v.$s)({
                                 referralIncentiveLifecycleState: P,
                                 hasSentAll: U,
                                 referralsStatuses: L
@@ -196,7 +196,7 @@ t.Z = (e) => {
                               }),
                         (0, i.jsx)(o.Text, {
                             variant: g ? 'text-sm/normal' : 'text-lg/medium',
-                            children: (0, T.Hg)({
+                            children: (0, v.Hg)({
                                 helpdeskArticle: D,
                                 referralIncentiveLifecycleState: P,
                                 referralsStatuses: L,
@@ -220,7 +220,7 @@ t.Z = (e) => {
                                         className: I.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            _.default.track(v.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: G }),
+                                            p.default.track(T.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: G }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
@@ -249,8 +249,8 @@ t.Z = (e) => {
                 })
             ]
         }),
-        Y = R.length === T.Q_,
-        K = L.redeemed === T.Q_;
+        Y = R.length === v.Q_,
+        K = L.redeemed === v.Q_;
     return (0, i.jsx)(u.Gt, {
         value: G,
         children: (0, i.jsx)('div', {
@@ -285,7 +285,7 @@ t.Z = (e) => {
                                 color: 'always-white',
                                 variant: 'heading-md/extrabold',
                                 children: N.intl.format(N.t['7GMtc3'], {
-                                    discountRate: T.Nq,
+                                    discountRate: v.Nq,
                                     subscriptionInterval: N.intl.string(N.t.FPybU1)
                                 })
                             })

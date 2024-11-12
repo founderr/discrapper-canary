@@ -10,8 +10,8 @@ var r,
     d = n(630388),
     f = n(358085),
     _ = n(894694),
-    h = n(356659),
-    p = n(981631),
+    p = n(356659),
+    h = n(981631),
     m = n(37113);
 function g(e, t, n) {
     return (
@@ -29,9 +29,9 @@ function g(e, t, n) {
 let E = 'default',
     v = [],
     I = [],
-    S = [],
-    T = 0,
-    b = null,
+    b = [],
+    S = 0,
+    T = null,
     y = null,
     A = {},
     N = null,
@@ -44,11 +44,11 @@ let E = 'default',
             resolution: m.LY.RESOLUTION_1080,
             frameRate: m.ws.FPS_30
         },
-        clipsLength: h.OT.SECONDS_30,
+        clipsLength: p.OT.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
         viewerClipsEnabled: !0,
-        viewerConnectivity: h.dJ.ALL
+        viewerConnectivity: p.dJ.ALL
     },
     D = {
         clipsSettings: O,
@@ -77,7 +77,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return I;
     }
     getPendingClips() {
-        return S;
+        return b;
     }
     getUserAgnosticState() {
         return D;
@@ -89,7 +89,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return y;
     }
     getClipsWarningShown(e) {
-        return b === e;
+        return T === e;
     }
     getActiveAnimation() {
         return C;
@@ -111,7 +111,7 @@ class x extends (r = i.ZP.DeviceSettingsStore) {
         return D.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return T >= h.Kw;
+        return S >= p.Kw;
     }
     getLastClipsError() {
         return N;
@@ -256,7 +256,7 @@ let w = new x(a.Z, {
     CLIPS_SAVE_CLIP: function (e) {
         var t, n;
         let { clip: r } = e;
-        (T = Math.max(T - 1, 0)),
+        (S = Math.max(S - 1, 0)),
             (y = {
                 applicationName: r.applicationName,
                 ended: !1,
@@ -267,7 +267,7 @@ let w = new x(a.Z, {
                 ...D,
                 newClipIds: [...(null !== (n = D.newClipIds) && void 0 !== n ? n : []), r.id]
             }),
-            (S = S.filter((e) => {
+            (b = b.filter((e) => {
                 let { id: t } = e;
                 return t !== r.id;
             })),
@@ -276,18 +276,18 @@ let w = new x(a.Z, {
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER: function (e) {
         let { clip: t } = e;
-        S = [t, ...S];
+        b = [t, ...b];
     },
     CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR: function (e) {
         let { clipId: t } = e;
-        S = S.filter((e) => {
+        b = b.filter((e) => {
             let { id: n } = e;
             return n !== t;
         });
     },
     CLIPS_SAVE_CLIP_START: function (e) {
         let { clipType: t, streamKey: n, thumbnail: r } = e;
-        if (((T += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === h.X9.DECOUPLED), null != n && null != r)) {
+        if (((S += 1), (D.hasTakenDecoupledClip = D.hasTakenDecoupledClip || t === p.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
             (C = null != C ? C : e),
@@ -301,7 +301,7 @@ let w = new x(a.Z, {
         }
     },
     CLIPS_SAVE_CLIP_ERROR: function () {
-        T = Math.max(T - 1, 0);
+        S = Math.max(S - 1, 0);
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;
@@ -361,23 +361,23 @@ let w = new x(a.Z, {
     },
     RTC_CONNECTION_FLAGS: function (e) {
         A[e.userId] = {
-            clipsEnabled: (0, d.yE)(e.flags, p.BVn.CLIPS_ENABLED),
-            allowVoiceRecording: (0, d.yE)(e.flags, p.BVn.ALLOW_VOICE_RECORDING),
-            allowAnyViewerClips: (0, d.yE)(e.flags, p.BVn.ALLOW_ANY_VIEWER_CLIPS)
+            clipsEnabled: (0, d.yE)(e.flags, h.BVn.CLIPS_ENABLED),
+            allowVoiceRecording: (0, d.yE)(e.flags, h.BVn.ALLOW_VOICE_RECORDING),
+            allowAnyViewerClips: (0, d.yE)(e.flags, h.BVn.ALLOW_ANY_VIEWER_CLIPS)
         };
     },
     CLIPS_SHOW_CALL_WARNING: function (e) {
         let { channelId: t } = e;
-        b = t;
+        T = t;
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        t !== b && (b = null);
+        t !== T && (T = null);
     },
     CLIPS_CLASSIFY_HARDWARE: function (e) {
         let { classification: t } = e,
             n = D.hardwareClassification;
-        (D.hardwareClassificationVersion = h.WM), (D.hardwareClassification = t), D.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (D.clipsSettings.clipsEnabled = !0);
+        (D.hardwareClassificationVersion = p.WM), (D.hardwareClassification = t), D.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (D.clipsSettings.clipsEnabled = !0);
         let r = D.hardwareClassificationForDecoupled;
         (D.hardwareClassificationForDecoupled = t), D.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && r !== _.x.MEETS_AUTO_ENABLE && D.clipsSettings.clipsEnabled && (D.clipsSettings.decoupledClipsEnabled = !0);
     },
@@ -397,11 +397,11 @@ let w = new x(a.Z, {
     CLIPS_DISMISS_EDUCATION: function (e) {
         let { educationType: t } = e;
         switch (t) {
-            case h.D5.Error:
+            case p.D5.Error:
                 N = null;
                 break;
-            case h.D5.Disabled:
-            case h.D5.Enabled:
+            case p.D5.Disabled:
+            case p.D5.Enabled:
                 (D.clipsEducationState.dismissedAt = Date.now()), (D.clipsEducationState.numberOfGamesLaunchedSinceDismissal = 0), (D.clipsEducationState.numberOfTimesDismissed += 1);
         }
     },

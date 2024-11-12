@@ -39,17 +39,17 @@ var i = n(442837),
     d = n(699450),
     f = n(303694),
     _ = n(124072),
-    h = n(692629);
+    p = n(692629);
 n(763296);
-var p = n(592125),
+var h = n(592125),
     m = n(430824),
     g = n(246946),
     E = n(594174),
     v = n(934415),
     I = n(5192),
-    S = n(51144),
-    T = n(377668),
-    b = n(388032),
+    b = n(51144),
+    S = n(377668),
+    T = n(388032),
     y = n(124158),
     A = n(554034);
 function N(e) {
@@ -85,8 +85,8 @@ function C(e) {
 function R(e) {
     let { text: t, channelId: n, guildId: i } = e,
         a = m.Z.getGuild(i),
-        s = p.Z.getChannel(n),
-        o = (0, u.Ib)(a, s) && '@Clyde' === t ? T.jM : null;
+        s = h.Z.getChannel(n),
+        o = (0, u.Ib)(a, s) && '@Clyde' === t ? S.jM : null;
     return (0, r.jsx)(_.Z, {
         color: o,
         children: t
@@ -110,7 +110,7 @@ function O(e) {
                         size: a.AvatarSizes.SIZE_16,
                         className: y.avatar
                     }),
-                    S.ZP.getUserTag(l, {
+                    b.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
@@ -122,7 +122,7 @@ function O(e) {
             }),
             delay: 750,
             position: 'top',
-            'aria-label': S.ZP.getUserTag(l, { decoration: 'never' }),
+            'aria-label': b.ZP.getUserTag(l, { decoration: 'never' }),
             children: (e) =>
                 (0, r.jsx)(a.Clickable, {
                     tag: 'span',
@@ -139,7 +139,7 @@ function D(e) {
         o = (0, i.e7)([l.Z], () => l.Z.roleStyle);
     if (null == s)
         return (0, r.jsxs)('span', {
-            children: ['@', b.intl.string(b.t['YV4F/v'])]
+            children: ['@', T.intl.string(T.t['YV4F/v'])]
         });
     let u = null != s.color && 0 !== s.color;
     return (0, r.jsxs)(_.Z, {
@@ -158,13 +158,13 @@ function D(e) {
 }
 function L(e) {
     let { id: t } = e,
-        n = (0, i.e7)([p.Z], () => p.Z.getChannel(t)),
-        a = b.intl.string(b.t.zLZPmp).toLowerCase(),
+        n = (0, i.e7)([h.Z], () => h.Z.getChannel(t)),
+        a = T.intl.string(T.t.zLZPmp).toLowerCase(),
         s = 'text',
         o = !0;
     if (null != n) {
         var l;
-        (a = (0, c.YO)(n) ? n.name : b.intl.string(b.t['/YzI6+'])), (s = (0, c.YO)(n) ? (null !== (l = (0, v.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
+        (a = (0, c.YO)(n) ? n.name : T.intl.string(T.t['/YzI6+'])), (s = (0, c.YO)(n) ? (null !== (l = (0, v.wl)(n)) && void 0 !== l ? l : 'text') : 'locked'), (o = (0, d.B)(n.type));
     }
     return o
         ? (0, r.jsx)(_.Z, {
@@ -179,7 +179,7 @@ function x(e) {
         s = (0, f.W)(t, n, i);
     return (0, r.jsxs)(_.Z, {
         iconType: t,
-        children: [a, null != s && (0, r.jsx)(h.Z, {}), s]
+        children: [a, null != s && (0, r.jsx)(p.Z, {}), s]
     });
 }
 function w(e) {

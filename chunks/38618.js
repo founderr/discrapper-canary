@@ -10,16 +10,16 @@ var r,
     d = n(287734),
     f = n(710845),
     _ = n(569545),
-    h = n(581883),
-    p = n(314897),
+    p = n(581883),
+    h = n(314897),
     m = n(523746),
     g = n(592125),
     E = n(131951),
     v = n(19780),
     I = n(936349),
-    S = n(944486),
-    T = n(885110),
-    b = n(959457),
+    b = n(944486),
+    S = n(885110),
+    T = n(959457),
     y = n(358085),
     A = n(138859),
     N = n(955132),
@@ -37,7 +37,7 @@ let x = new f.Z('ConnectionStore'),
 async function U(e) {
     (w = Date.now()), (M = e.sessionId), N.RR.handleConnectionOpen();
     let t = {},
-        n = S.Z.getVoiceChannelId();
+        n = b.Z.getVoiceChannelId();
     if (null != n) {
         var r, i, a, s, o, l, u, c;
         if ((null === (o = window) || void 0 === o ? void 0 : null === (s = o.performance) || void 0 === s ? void 0 : null === (a = s.getEntriesByType) || void 0 === a ? void 0 : null === (i = a.call(s, 'navigation')) || void 0 === i ? void 0 : null === (r = i[0]) || void 0 === r ? void 0 : r.type) === 'reload' || (null === (l = await (null == L ? void 0 : null === (c = L.processUtils) || void 0 === c ? void 0 : null === (u = c.getLastCrash) || void 0 === u ? void 0 : u.call(c))) || void 0 === l ? void 0 : l.rendererCrashReason) != null || !P) {
@@ -65,7 +65,7 @@ function F(e) {
 }
 class V extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(p.default, S.Z, g.Z, m.Z, h.Z), this.syncWith([E.Z], B), this.syncWith([T.Z], Z);
+        this.waitFor(h.default, b.Z, g.Z, m.Z, p.Z), this.syncWith([E.Z], B), this.syncWith([S.Z], Z);
     }
     getSocket() {
         return N.Wb;
@@ -128,7 +128,7 @@ class V extends (r = u.ZP.Store) {
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return t.reduce((e, t) => {
-                if (p.default.getId() !== t.userId) return e;
+                if (h.default.getId() !== t.userId) return e;
                 if (t.sessionId === M)
                     N.GC.setState({
                         guildId: t.guildId,
@@ -168,7 +168,7 @@ class V extends (r = u.ZP.Store) {
                 });
         },
         APP_STATE_UPDATE: function (e) {
-            return (0, y.isIOS)() ? (p.default.isAuthenticated() && (k === O.$7l.INACTIVE && e.state === O.$7l.BACKGROUND && null == N.GC.channelId ? N.Wb.close(!0) : k === O.$7l.BACKGROUND && e.state === O.$7l.ACTIVE && N.Wb.isClosed() && (C.Y(!1), N.Wb.connect())), (k = e.state)) : e.state === O.$7l.ACTIVE && (C.Y(!1), p.default.isAuthenticated() && N.Wb.resetBackoff('App state is active')), !1;
+            return (0, y.isIOS)() ? (h.default.isAuthenticated() && (k === O.$7l.INACTIVE && e.state === O.$7l.BACKGROUND && null == N.GC.channelId ? N.Wb.close(!0) : k === O.$7l.BACKGROUND && e.state === O.$7l.ACTIVE && N.Wb.isClosed() && (C.Y(!1), N.Wb.connect())), (k = e.state)) : e.state === O.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && N.Wb.resetBackoff('App state is active')), !1;
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             return (
@@ -233,9 +233,9 @@ class V extends (r = u.ZP.Store) {
                     (n ||
                         !(function () {
                             let e = (function () {
-                                return b.Z.getAllActiveStreamKeys().find((e) => (0, _.my)(e).ownerId === p.default.getId());
+                                return T.Z.getAllActiveStreamKeys().find((e) => (0, _.my)(e).ownerId === h.default.getId());
                             })();
-                            b.Z.getAllActiveStreamKeys()
+                            T.Z.getAllActiveStreamKeys()
                                 .filter((t) => t !== e)
                                 .forEach((e) => F(e));
                         })(),

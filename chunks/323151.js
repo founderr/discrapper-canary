@@ -9,29 +9,29 @@ var r = n(687249),
     d = '[object Arguments]',
     f = '[object Array]',
     _ = '[object Object]',
-    h = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, p, m, g) {
+    p = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, h, m, g) {
     var E = l(e),
         v = l(t),
         I = E ? f : o(e),
-        S = v ? f : o(t);
-    (I = I == d ? _ : I), (S = S == d ? _ : S);
-    var T = I == _,
-        b = S == _,
-        y = I == S;
+        b = v ? f : o(t);
+    (I = I == d ? _ : I), (b = b == d ? _ : b);
+    var S = I == _,
+        T = b == _,
+        y = I == b;
     if (y && u(e)) {
         if (!u(t)) return !1;
-        (E = !0), (T = !1);
+        (E = !0), (S = !1);
     }
-    if (y && !T) return g || (g = new r()), E || c(e) ? i(e, t, n, p, m, g) : a(e, t, I, n, p, m, g);
+    if (y && !S) return g || (g = new r()), E || c(e) ? i(e, t, n, h, m, g) : a(e, t, I, n, h, m, g);
     if (!(1 & n)) {
-        var A = T && h.call(e, '__wrapped__'),
-            N = b && h.call(t, '__wrapped__');
+        var A = S && p.call(e, '__wrapped__'),
+            N = T && p.call(t, '__wrapped__');
         if (A || N) {
             var C = A ? e.value() : e,
                 R = N ? t.value() : t;
-            return g || (g = new r()), m(C, R, n, p, g);
+            return g || (g = new r()), m(C, R, n, h, g);
         }
     }
-    return !!y && (g || (g = new r()), s(e, t, n, p, m, g));
+    return !!y && (g || (g = new r()), s(e, t, n, h, m, g));
 };

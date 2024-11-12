@@ -19,8 +19,8 @@ var r,
     d = n(565138),
     f = n(981631),
     _ = n(388032),
-    h = n(924908);
-function p(e, t, n) {
+    p = n(924908);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,9 +34,9 @@ function p(e, t, n) {
     );
 }
 let m = Object.freeze({
-    SMALL: h.small,
-    MEDIUM: h.medium,
-    LARGE: h.large
+    SMALL: p.small,
+    MEDIUM: p.medium,
+    LARGE: p.large
 });
 ((a = r || (r = {})).MEMBER = 'MEMBER'), (a.ROLE = 'ROLE'), (a.CHANNEL = 'CHANNEL'), (a.GUILD = 'GUILD'), (a.USER = 'USER');
 let g = (e) => {
@@ -45,7 +45,7 @@ let g = (e) => {
         theme: i,
         children: (e) =>
             (0, s.jsx)(c.Clickable, {
-                className: u()(r, h.iconLayout, a, e, { [h.clear]: t }),
+                className: u()(r, p.iconLayout, a, e, { [p.clear]: t }),
                 onClick: (e) => {
                     e.stopPropagation(), null != n && n(e);
                 },
@@ -57,22 +57,22 @@ let g = (e) => {
                 'aria-label': _.intl.string(_.t['78fJND']),
                 focusProps: { offset: 4 },
                 children: (0, s.jsxs)('div', {
-                    className: h.iconContainer,
+                    className: p.iconContainer,
                     children: [
                         (0, s.jsx)(c.MagnifyingGlassIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: u()({
-                                [h.icon]: !0,
-                                [h.visible]: !t
+                                [p.icon]: !0,
+                                [p.visible]: !t
                             })
                         }),
                         (0, s.jsx)(c.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
                             className: u()({
-                                [h.icon]: !0,
-                                [h.visible]: t
+                                [p.icon]: !0,
+                                [p.visible]: t
                             })
                         })
                     ]
@@ -142,28 +142,28 @@ class E extends (i = o.Component) {
             }
     }
     render() {
-        let { autoFocus: e, query: t, placeholder: n = _.intl.string(_.t.LzcpeX), themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: f, onActivate: p, className: m, inputProps: E, focusAfterReady: v } = this.props,
+        let { autoFocus: e, query: t, placeholder: n = _.intl.string(_.t.LzcpeX), themeOverride: r, disabled: i, onClear: a, size: o, maxHeight: l, tags: f, onActivate: h, className: m, inputProps: E, focusAfterReady: v } = this.props,
             I = null != t && t.length > 0,
-            S = !1,
-            T = [];
+            b = !1,
+            S = [];
         return (
             null != f &&
                 f.length > 0 &&
                 ('string' == typeof f[0]
                     ? f.forEach((e, t) =>
-                          T.push(
+                          S.push(
                               (0, s.jsxs)(
                                   c.Anchor,
                                   {
                                       focusProps: { offset: 4 },
-                                      className: h.tag,
+                                      className: p.tag,
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           e,
                                           (0, s.jsx)(c.XSmallIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: h.close,
+                                              className: p.close,
                                               'aria-label': _.intl.string(_.t.N86XcH)
                                           })
                                       ]
@@ -172,13 +172,13 @@ class E extends (i = o.Component) {
                               )
                           )
                       )
-                    : ((S = !0),
+                    : ((b = !0),
                       f.forEach((e, t) =>
-                          T.push(
+                          S.push(
                               (0, s.jsxs)(
                                   c.Anchor,
                                   {
-                                      className: u()(h.tag, h.richTag),
+                                      className: u()(p.tag, p.richTag),
                                       onClick: this.handleRemoveTag.bind(this, t),
                                       children: [
                                           ('MEMBER' === e.type || 'USER' === e.type) &&
@@ -191,7 +191,7 @@ class E extends (i = o.Component) {
                                           'ROLE' === e.type &&
                                               null != e.color &&
                                               (0, s.jsx)('span', {
-                                                  className: h.tagRoleColor,
+                                                  className: p.tagRoleColor,
                                                   style: { backgroundColor: e.color }
                                               }),
                                           'GUILD' === e.type &&
@@ -202,13 +202,13 @@ class E extends (i = o.Component) {
                                                   size: d.Z.Sizes.SMOL
                                               }),
                                           (0, s.jsx)('span', {
-                                              className: h.tagLabel,
+                                              className: p.tagLabel,
                                               children: e.label
                                           }),
                                           (0, s.jsx)(c.XSmallIcon, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: h.close,
+                                              className: p.close,
                                               'aria-label': _.intl.string(_.t.N86XcH)
                                           })
                                       ]
@@ -225,14 +225,14 @@ class E extends (i = o.Component) {
                     children: (d) =>
                         (0, s.jsx)('div', {
                             ref: this.containerRef,
-                            className: u()(m, h.container, o, d, { [h.disabled]: i }),
+                            className: u()(m, p.container, o, d, { [p.disabled]: i }),
                             children: (0, s.jsxs)(c.ScrollerThin, {
-                                className: h.inner,
+                                className: p.inner,
                                 style: { maxHeight: l },
                                 children: [
-                                    T,
+                                    S,
                                     (0, s.jsx)('input', {
-                                        className: u()(h.input, { [h.richTagInput]: S }),
+                                        className: u()(p.input, { [p.richTagInput]: b }),
                                         type: 'text',
                                         ref: this.ref,
                                         spellCheck: 'false',
@@ -244,7 +244,7 @@ class E extends (i = o.Component) {
                                         disabled: i,
                                         'aria-disabled': i,
                                         autoFocus: !v && e,
-                                        onMouseDown: p,
+                                        onMouseDown: h,
                                         ...this.defaultInputProps,
                                         ...E
                                     }),
@@ -265,14 +265,14 @@ class E extends (i = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'defaultInputProps', {
+            h(this, 'defaultInputProps', {
                 role: 'combobox',
                 'aria-haspopup': 'listbox',
                 'aria-autocomplete': 'list'
             }),
-            p(this, 'ref', o.createRef()),
-            p(this, 'containerRef', o.createRef()),
-            p(this, 'handleKeyDown', (e) => {
+            h(this, 'ref', o.createRef()),
+            h(this, 'containerRef', o.createRef()),
+            h(this, 'handleKeyDown', (e) => {
                 let { onActivate: t, onKeyDown: n, onQueryChange: r, useKeyboardNavigation: i } = this.props;
                 null != n && n(e);
                 let { current: a } = this.ref;
@@ -286,31 +286,31 @@ class E extends (i = o.Component) {
                 }
                 i && (this.props.gridResults ? this.handleKeyDownGrid(e) : this.handleKeyDownList(e));
             }),
-            p(this, 'handleChange', (e) => {
+            h(this, 'handleChange', (e) => {
                 let { onQueryChange: t } = this.props;
                 null != t && t(e.currentTarget.value);
             }),
-            p(this, 'handleFocus', (e) => {
+            h(this, 'handleFocus', (e) => {
                 let { onFocus: t } = this.props;
                 null != t && t(e);
             }),
-            p(this, 'handleClear', () => {
+            h(this, 'handleClear', () => {
                 let { onClear: e } = this.props,
                     { current: t } = this.ref;
                 null != e && e(), null != t && t.focus();
             }),
-            p(this, 'handleRemoveTag', (e) => {
+            h(this, 'handleRemoveTag', (e) => {
                 let { onRemoveTag: t } = this.props;
                 null == t || t(e);
             }),
-            p(this, 'focus', () => {
+            h(this, 'focus', () => {
                 let { current: e } = this.ref;
                 null != e && e.focus();
             });
     }
 }
-p(E, 'Sizes', m),
-    p(E, 'defaultProps', {
+h(E, 'Sizes', m),
+    h(E, 'defaultProps', {
         size: m.SMALL,
         query: '',
         sections: [],

@@ -14,7 +14,7 @@ var r = n(444675);
         if (((f = f && f.setTimeout ? f : e), '[object process]' === {}.toString.call(e.process)))
             o = function (e) {
                 r.nextTick(function () {
-                    h(e);
+                    p(e);
                 });
             };
         else if (
@@ -35,7 +35,7 @@ var r = n(444675);
         ) {
             (n = 'setImmediate$' + Math.random() + '$'),
                 (i = function (t) {
-                    t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && h(+t.data.slice(n.length));
+                    t.source === e && 'string' == typeof t.data && 0 === t.data.indexOf(n) && p(+t.data.slice(n.length));
                 }),
                 e.addEventListener ? e.addEventListener('message', i, !1) : e.attachEvent('onmessage', i),
                 (o = function (t) {
@@ -43,7 +43,7 @@ var r = n(444675);
                 });
         } else if (e.MessageChannel) {
             ((a = new MessageChannel()).port1.onmessage = function (e) {
-                h(e.data);
+                p(e.data);
             }),
                 (o = function (e) {
                     a.port2.postMessage(e);
@@ -53,13 +53,13 @@ var r = n(444675);
                 (o = function (e) {
                     var t = d.createElement('script');
                     (t.onreadystatechange = function () {
-                        h(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
+                        p(e), (t.onreadystatechange = null), s.removeChild(t), (t = null);
                     }),
                         s.appendChild(t);
                 });
         } else
             o = function (e) {
-                setTimeout(h, 0, e);
+                setTimeout(p, 0, e);
             };
         (f.setImmediate = function (e) {
             'function' != typeof e && (e = Function('' + e));
@@ -75,8 +75,8 @@ var r = n(444675);
     function _(e) {
         delete u[e];
     }
-    function h(e) {
-        if (c) setTimeout(h, 0, e);
+    function p(e) {
+        if (c) setTimeout(p, 0, e);
         else {
             var n = u[e];
             if (n) {

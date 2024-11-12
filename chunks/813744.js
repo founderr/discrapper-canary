@@ -23,11 +23,11 @@ function f() {
             return null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
         }),
         [f, _] = (0, i.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
-        h = [];
+        p = [];
     return (
-        !f && !_ && h.push('ACTIVE'),
-        f && h.push('IDLE'),
-        _ && h.push('AFK'),
+        !f && !_ && p.push('ACTIVE'),
+        f && p.push('IDLE'),
+        _ && p.push('AFK'),
         n && t
             ? (0, r.jsx)(s.ZP, {
                   children: (0, r.jsxs)('div', {
@@ -37,7 +37,7 @@ function f() {
                               className: d.status,
                               children: [
                                   (0, r.jsx)(a.Status, {
-                                      status: h.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
+                                      status: p.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
                                       className: d.statusIndicator
                                   }),
                                   (0, r.jsx)(a.Text, {
@@ -48,7 +48,7 @@ function f() {
                                       className: d.statusText,
                                       children: (0, r.jsx)(a.Text, {
                                           variant: 'text-md/bold',
-                                          children: h.join(' + ')
+                                          children: p.join(' + ')
                                       })
                                   })
                               ]

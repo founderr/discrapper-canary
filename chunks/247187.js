@@ -93,19 +93,19 @@ function u(e, t) {
         u = !1,
         c = void 0;
     try {
-        for (var _, h = a[Symbol.iterator](); !(l = (_ = h.next()).done); l = !0) {
-            var p = _.value,
-                m = p.endsWith('?') && p.length > 1;
-            m && (p = p.slice(0, -1));
-            var g = f(p),
+        for (var _, p = a[Symbol.iterator](); !(l = (_ = p.next()).done); l = !0) {
+            var h = _.value,
+                m = h.endsWith('?') && h.length > 1;
+            m && (h = h.slice(0, -1));
+            var g = f(h),
                 E = i[g];
-            (1 === s || !E) && (n ? (r.key = g) : (r.which = d(p))), E && (r[E] = !m || null);
+            (1 === s || !E) && (n ? (r.key = g) : (r.which = d(h))), E && (r[E] = !m || null);
         }
     } catch (e) {
         (u = !0), (c = e);
     } finally {
         try {
-            !l && h.return && h.return();
+            !l && p.return && p.return();
         } finally {
             if (u) throw c;
         }

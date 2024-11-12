@@ -19,16 +19,16 @@ var r,
     d = n(481060),
     f = n(607070),
     _ = n(895924),
-    h = n(237375),
-    p = n(342687),
+    p = n(237375),
+    h = n(342687),
     m = n(933557),
     g = n(471445),
     E = n(511618),
     v = n(926491),
     I = n(378233),
-    S = n(695346),
-    T = n(430824),
-    b = n(699516),
+    b = n(695346),
+    S = n(430824),
+    T = n(699516),
     y = n(594174),
     A = n(768581),
     N = n(51144),
@@ -195,7 +195,7 @@ x(
             renderContent() {
                 var e;
                 let { user: t, nick: n, status: r, hidePersonalInformation: a, guildId: s } = this.props,
-                    o = null == s ? b.Z.getNickname(t.id) : null;
+                    o = null == s ? T.Z.getNickname(t.id) : null;
                 return (0, i.jsxs)(C.RX, {
                     children: [
                         (0, i.jsx)(C.Tw, {
@@ -267,7 +267,7 @@ x(
                 let { channel: e, category: t } = this.props,
                     n = e.type === R.d4z.GUILD_CATEGORY ? d.FolderIcon : (0, g.KS)(e);
                 return (0, i.jsxs)(C.RX, {
-                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, m.F6)(e, y.default, b.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
+                    children: [null != n && (0, i.jsx)(C.Tw, { children: (0, i.jsx)(n, { className: L.icon }) }), (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: (0, m.F6)(e, y.default, T.Z) }) }), null != t ? (0, i.jsx)(C.dY, { children: t.name }) : null]
                 });
             }
         }
@@ -307,8 +307,8 @@ x(
                     { hovered: s } = this.state,
                     o = this.isSelectable();
                 return e.inputType === _.iw.PLACEHOLDER
-                    ? (0, i.jsx)(p.Z, {})
-                    : (0, i.jsx)(h.Z, {
+                    ? (0, i.jsx)(h.Z, {})
+                    : (0, i.jsx)(p.Z, {
                           command: e,
                           channel: t,
                           showImage: n,
@@ -325,7 +325,7 @@ x(
         class e extends k {
             renderContent() {
                 let { emoji: e, sentinel: t, guild: n } = this.props,
-                    r = S.Yk.getSetting(),
+                    r = b.Yk.getSetting(),
                     a =
                         null != e.id || '' !== e.url
                             ? (0, i.jsx)('img', {
@@ -390,7 +390,7 @@ x(
                 let { queryMatch: r, renderSticker: a, selected: s, sticker: o } = this.props,
                     { hovered: l } = this.state;
                 return (
-                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = T.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
+                    (0, I.jl)(o) ? (n = null === (e = v.Z.getStickerPack(o.pack_id)) || void 0 === e ? void 0 : e.name) : (0, I.J8)(o) && (n = null === (t = S.Z.getGuild(o.guild_id)) || void 0 === t ? void 0 : t.name),
                     (0, i.jsxs)(C.RX, {
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),

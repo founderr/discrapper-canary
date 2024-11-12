@@ -112,7 +112,7 @@ function u(e, t) {
         f = t.attachTo;
     void 0 === f && (f = document);
     var _ = t.disable,
-        h =
+        p =
             ((i = (0, r.useState)(function () {
                 return 'lock-' + o++;
             })[0]),
@@ -133,7 +133,7 @@ function u(e, t) {
             l);
     (0, r.useEffect)(
         function () {
-            _ && (h.current = !1);
+            _ && (p.current = !1);
         },
         [_]
     ),
@@ -141,7 +141,7 @@ function u(e, t) {
             function () {
                 var t = e.current;
                 function n(t) {
-                    if (h.current) {
+                    if (p.current) {
                         var n = e.current;
                         if (null != n) {
                             var r = t.target || document.body;
@@ -150,7 +150,7 @@ function u(e, t) {
                     }
                 }
                 function r(t) {
-                    if (h.current) {
+                    if (p.current) {
                         var n = e.current;
                         if (null != n) {
                             (null != t.relatedTarget && t.relatedTarget !== document.body) || (t.preventDefault(), n.focus());

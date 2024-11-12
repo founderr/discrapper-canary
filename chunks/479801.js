@@ -24,15 +24,15 @@ function c(e) {
     let n = (0, i.e7)([s.Z], () => s.Z.hasLoadedExperiments),
         c = null == e ? void 0 : e.includeBundles,
         d = (0, u.h)('useMaybeFetchCollectiblesCategoriesShared'),
-        [f, _, h, p, m, g] = (0, i.Wu)([l.Z], () => {
+        [f, _, p, h, m, g] = (0, i.Wu)([l.Z], () => {
             var e, t;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null !== (e = l.Z.lastErrorTimestamp) && void 0 !== e ? e : 0, null !== (t = l.Z.lastSuccessfulFetch) && void 0 !== t ? t : 0, l.Z.categories];
         });
     return (
         (0, r.useEffect)(() => {
             if (!n || f) return;
-            let t = Date.now() - p < 600000;
-            if (h && t) return;
+            let t = Date.now() - h < 600000;
+            if (p && t) return;
             let r = {
                     ...e,
                     includeBundles: c,
@@ -41,11 +41,11 @@ function c(e) {
                 i = !(0, o.oc)(_, r),
                 a = Date.now() - m < 600000;
             (i || !a) && (0, o.F$)(r);
-        }, [n, f, _, m, e, h, c, p, d]),
+        }, [n, f, _, m, e, p, c, h, d]),
         {
             isFetching: f,
             categories: g,
-            fetchCategoriesError: h,
+            fetchCategoriesError: p,
             refreshCategories: (0, r.useCallback)(() => {
                 let t = {
                     ...e,

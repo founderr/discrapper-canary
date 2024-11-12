@@ -11,9 +11,9 @@ function a(e, t, n, a, s, o) {
             d = void 0,
             f = e[u];
         f < 0 ? ((c = Math.floor(f / t.length)), (d = (0, i.Vy)(f, t.length))) : ((c = Math.floor((f - 1) / t.length)), (d = (0, i.Vy)(f - 1, t.length)));
-        for (var _ = [], h = n; h < a; h++) {
-            var p = o[h];
-            (0, i.EN)(p) && _.push(p);
+        for (var _ = [], p = n; p < a; p++) {
+            var h = o[p];
+            (0, i.EN)(h) && _.push(h);
         }
         var m = void 0;
         m = c < 0 ? _.slice(c)[0] : _[c];

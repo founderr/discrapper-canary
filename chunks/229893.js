@@ -22,15 +22,15 @@ function c(e, t, n) {
 let d = [],
     f = {},
     _ = !1,
-    h = !1,
-    p = null,
+    p = !1,
+    h = null,
     m = { status: 'unloaded' },
     g = {},
     E = new Set(),
     v = !1,
     I = [],
-    S = !1;
-function T(e) {
+    b = !1;
+function S(e) {
     return (
         E.has(e.id) && E.delete(e.id),
         (f[e.id] = {
@@ -40,7 +40,7 @@ function T(e) {
         !0
     );
 }
-class b extends (r = s.ZP.Store) {
+class T extends (r = s.ZP.Store) {
     getSearchResult(e) {
         let t = g[a().v3(JSON.stringify(e))];
         return null == t || t.loadedAt < Date.now() - l.Z.Millis.HOUR ? m : t;
@@ -52,7 +52,7 @@ class b extends (r = s.ZP.Store) {
         return d;
     }
     isLoading() {
-        return h;
+        return p;
     }
     hasError() {
         return v;
@@ -67,10 +67,10 @@ class b extends (r = s.ZP.Store) {
         return null !== (n = null === (t = f[e]) || void 0 === t ? void 0 : t.guild) && void 0 !== n ? n : null;
     }
     getCurrentRecommendationId() {
-        return p;
+        return h;
     }
     hasLoadedSavedGuilds() {
-        return S;
+        return b;
     }
     getSavedGuildIds() {
         return I;
@@ -85,21 +85,21 @@ class b extends (r = s.ZP.Store) {
         return I.includes(e);
     }
 }
-c(b, 'displayName', 'ClanDiscoveryStore'),
-    c(b, 'persistKey', 'ClanDiscoveryStore'),
-    (t.Z = new b(o.Z, {
+c(T, 'displayName', 'ClanDiscoveryStore'),
+    c(T, 'persistKey', 'ClanDiscoveryStore'),
+    (t.Z = new T(o.Z, {
         FETCH_STATIC_CLAN_LIST_START: function () {
-            (h = !0), (v = !1);
+            (p = !0), (v = !1);
         },
         FETCH_STATIC_CLAN_LIST_SUCCESS: function (e) {
-            (d = e.clans), (_ = !0), (h = !1), e.clans.forEach(T), (v = !1);
+            (d = e.clans), (_ = !0), (p = !1), e.clans.forEach(S), (v = !1);
         },
         FETCH_STATIC_CLAN_LIST_FAILURE: function () {
-            (h = !1), (v = !0);
+            (p = !1), (v = !0);
         },
         FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS: function (e) {
             let { searchResult: t, criteriaHash: n, recommendationId: r } = e;
-            return (v = !1), (g[n] = t), (p = r), t.items.forEach(T), (t.guildIds = t.guildIds.reduce((e, t) => (E.has(t) ? e : (e.push(t), e)), [])), !0;
+            return (v = !1), (g[n] = t), (h = r), t.items.forEach(S), (t.guildIds = t.guildIds.reduce((e, t) => (E.has(t) ? e : (e.push(t), e)), [])), !0;
         },
         FETCH_CLAN_DISCOVERY_SEARCH_RESULT_FAILURE: function () {
             v = !0;
@@ -108,7 +108,7 @@ c(b, 'displayName', 'ClanDiscoveryStore'),
             var t;
             let { guilds: n, failedGuildIds: r } = e;
             return (
-                n.forEach(T),
+                n.forEach(S),
                 (t = r).forEach((e) => {
                     delete f[e], E.add(e);
                 }),
@@ -127,7 +127,7 @@ c(b, 'displayName', 'ClanDiscoveryStore'),
         },
         FETCH_CLAN_DISCOVERY_SAVED_GUILDS_SUCCESS: function (e) {
             let { guilds: t } = e;
-            t.forEach(T), (I = t.map((e) => e.id)), (S = !0);
+            t.forEach(S), (I = t.map((e) => e.id)), (b = !0);
         },
         DISCOVERY_SAVED_GUILD_ADD: function (e) {
             let { guildId: t } = e;
@@ -146,6 +146,6 @@ c(b, 'displayName', 'ClanDiscoveryStore'),
             I = I.filter((e) => !t.includes(e));
         },
         LOGOUT: function () {
-            S = !1;
+            b = !1;
         }
     }));

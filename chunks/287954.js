@@ -13,11 +13,11 @@ var i = n(481060),
     u = n(228168);
 function c(e) {
     var t, n;
-    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: h, sourceDetails: p, sourceId: m, onClose: g, children: E } = e,
-        { interactionType: v, interactionSource: I, resetInteraction: S, interactionSourceId: T } = (0, a.Xo)(),
-        b = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
-        y = I === h && v === u.P.REACT,
-        A = I === h && v === u.P.REPLY;
+    let { user: c, guildId: d, channelId: f, profileType: _, sourceType: p, sourceDetails: h, sourceId: m, onClose: g, children: E } = e,
+        { interactionType: v, interactionSource: I, resetInteraction: b, interactionSourceId: S } = (0, a.Xo)(),
+        T = _ === u.y0.FULL_SIZE ? (0, l.z)(c.id, d) : void 0,
+        y = I === p && v === u.P.REACT,
+        A = I === p && v === u.P.REPLY;
     return (0, r.jsx)(i.Popout, {
         renderPopout: (e) => {
             let { setPopoutRef: t } = e,
@@ -27,17 +27,17 @@ function c(e) {
                 guildId: d,
                 channelId: f,
                 profileType: _,
-                sourceType: h,
-                sourceDetails: p,
+                sourceType: p,
+                sourceDetails: h,
                 onClose: g,
-                modalKey: b,
+                modalKey: T,
                 setPopoutRef: t
             });
         },
         onRequestClose: () => {
-            S(), null == g || g();
+            b(), null == g || g();
         },
-        shouldShow: (y || A) && T === m,
+        shouldShow: (y || A) && S === m,
         ...((t = v),
         (n = _),
         t === u.P.REACT

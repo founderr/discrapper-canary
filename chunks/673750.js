@@ -22,16 +22,16 @@ var r,
     d = n(367907),
     f = n(710845),
     _ = n(432877),
-    h = n(873741),
-    p = n(314897),
+    p = n(873741),
+    h = n(314897),
     m = n(866960),
     g = n(70956),
     E = n(403182),
     v = n(651655),
     I = n(861990),
-    S = n(141795),
-    T = n(981631),
-    b = n(959517);
+    b = n(141795),
+    S = n(981631),
+    T = n(959517);
 function y(e, t, n) {
     return (
         t in e
@@ -84,7 +84,7 @@ class D extends v.Z {
     startQueueMetricTimers(e) {
         let t = O.map((e) =>
             setTimeout(() => {
-                (0, d.yw)(T.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, d.yw)(S.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
         );
         this.analyticsTimeouts.set(e, t);
@@ -96,7 +96,7 @@ class D extends v.Z {
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            if (null != n.body && (n.body.code === T.evJ.SLOWMODE_RATE_LIMITED || n.body.code === T.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
+            if (null != n.body && (n.body.code === S.evJ.SLOWMODE_RATE_LIMITED || n.body.code === S.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
             else if (429 === n.status) {
                 let e = parseInt(n.headers['retry-after']);
                 isNaN(e) ? t(null, n) : t({ retryAfter: e * g.Z.Millis.SECOND });
@@ -106,7 +106,7 @@ class D extends v.Z {
     handleSend(e, t) {
         let n;
         let { channelId: r, ...i } = e,
-            a = (0, h.d)(),
+            a = (0, p.d)(),
             s = {
                 mobile_network_type: m.Z.getType(),
                 ...i,
@@ -124,17 +124,17 @@ class D extends v.Z {
                 });
             return;
         }
-        null != A && (A.isInstanceLocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceLocked() && (n = A.isPinned(T.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        null != A && (A.isInstanceLocked() ? (n = { location: 'overlay_locked_activated' }) : !A.isInstanceLocked() && (n = A.isPinned(S.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
         let o = this.createResponseHandler(e.nonce, t),
             l = new AbortController();
         this.startQueueMetricTimers(e.nonce),
             u.tn.post(
                 {
-                    url: T.ANM.MESSAGES(r),
+                    url: S.ANM.MESSAGES(r),
                     body: s,
                     context: n,
                     oldFormErrors: !0,
-                    ...b.hs,
+                    ...T.hs,
                     signal: l.signal,
                     onRequestCreated: () => {
                         null != e.nonce && this.requests.set(e.nonce, l);
@@ -148,7 +148,7 @@ class D extends v.Z {
             a = new AbortController();
         u.tn.patch(
             {
-                url: T.ANM.MESSAGE(n, r),
+                url: S.ANM.MESSAGE(n, r),
                 body: i,
                 retries: 1,
                 oldFormErrors: !0,
@@ -162,27 +162,27 @@ class D extends v.Z {
     }
     handleCommand(e, t) {
         let n,
-            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: d, maxSizeCallback: f, analytics_location: _, sectionName: h, source: m } = e,
+            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: d, maxSizeCallback: f, analytics_location: _, sectionName: p, source: m } = e,
             g = {
                 type: c.B8.APPLICATION_COMMAND,
                 application_id: r,
                 guild_id: i,
                 channel_id: a,
-                session_id: p.default.getSessionId(),
+                session_id: h.default.getSessionId(),
                 data: s,
                 nonce: o,
                 analytics_location: _,
-                section_name: h,
+                section_name: p,
                 source: m
             };
         if (null != d) {
             (g.data.attachments = []), (n = []);
-            g.data.attachments = d.map((e, t) => (l()(e.status === S.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, I.B)(e, t)));
+            g.data.attachments = d.map((e, t) => (l()(e.status === b.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, I.B)(e, t)));
         }
         let v = new AbortController();
         u.tn.post(
             {
-                url: T.ANM.INTERACTIONS,
+                url: S.ANM.INTERACTIONS,
                 fields: [
                     {
                         name: 'payload_json',

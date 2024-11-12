@@ -1,6 +1,6 @@
 n.d(t, {
     Fs: function () {
-        return h;
+        return p;
     },
     Xu: function () {
         return _;
@@ -9,7 +9,7 @@ n.d(t, {
         return f;
     },
     ms: function () {
-        return p;
+        return h;
     },
     sV: function () {
         return d;
@@ -54,7 +54,7 @@ function _(e, t) {
         }
     ).commands[0];
 }
-function h(e, t) {
+function p(e, t) {
     let { commands: n, loading: i } = (function (e, t) {
             return (0, u.v1)(
                 e,
@@ -82,9 +82,9 @@ function h(e, t) {
         s
     );
 }
-function p(e) {
+function h(e) {
     let { channel: t, applicationId: n, botUserId: r } = e,
-        o = h(t, n),
+        o = p(t, n),
         l = (0, s.bG)('useIsPrimaryAppCommandUsableInAppDM');
     if (null == o) return !1;
     let u = null != o.integration_types && o.integration_types.includes(i.Y.USER_INSTALL),

@@ -29,8 +29,8 @@ function _(e, t, n) {
         e
     );
 }
-let h = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
-    p = { pendingUsages: [] },
+let p = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
+    h = { pendingUsages: [] },
     m = new u.ZP({
         computeBonus: () => 1,
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
@@ -57,18 +57,18 @@ function v() {
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        p.pendingUsages
+        h.pendingUsages
     );
 }
 class I extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (p = e), this.syncWith([c.Z], v);
+        null != e && (h = e), this.syncWith([c.Z], v);
     }
     getState() {
-        return p;
+        return h;
     }
     hasPendingUsage() {
-        return p.pendingUsages.length > 0;
+        return h.pendingUsages.length > 0;
     }
     getCommandFrecencyWithoutLoadingLatest() {
         return m;
@@ -86,9 +86,9 @@ _(I, 'displayName', 'ApplicationCommandFrecencyStore'),
     (t.ZP = new I(o.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             let { command: t, context: n } = e;
-            if (!h.includes(t.type)) return !1;
+            if (!p.includes(t.type)) return !1;
             let r = E(n, t);
-            p.pendingUsages.push({
+            h.pendingUsages.push({
                 key: r,
                 timestamp: Date.now()
             }),
@@ -101,6 +101,6 @@ _(I, 'displayName', 'ApplicationCommandFrecencyStore'),
                 wasSaved: n
             } = e;
             if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-            p.pendingUsages = [];
+            h.pendingUsages = [];
         }
     }));

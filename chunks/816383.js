@@ -38,26 +38,26 @@ var a = (function () {
             return e[t] < e[n] ? -1 : 1;
         });
         for (var c = [], d = [], f = [], _ = 0; _ < o - 1; _++) (n = e[_ + 1] - e[_]), (r = t[_ + 1] - t[_]), d.push(n), c.push(r), f.push(r / n);
-        for (var h = [f[0]], p = 0; p < d.length - 1; p++) {
-            var m = f[p],
-                g = f[p + 1];
-            if (m * g <= 0) h.push(0);
+        for (var p = [f[0]], h = 0; h < d.length - 1; h++) {
+            var m = f[h],
+                g = f[h + 1];
+            if (m * g <= 0) p.push(0);
             else {
-                n = d[p];
-                var E = d[p + 1],
+                n = d[h];
+                var E = d[h + 1],
                     v = n + E;
-                h.push((3 * v) / ((v + E) / m + (v + n) / g));
+                p.push((3 * v) / ((v + E) / m + (v + n) / g));
             }
         }
-        h.push(f[f.length - 1]);
-        for (var I = [], S = [], T = 0; T < h.length - 1; T++) {
-            s = f[T];
-            var b = h[T],
-                y = 1 / d[T],
-                A = b + h[T + 1] - s - s;
-            I.push((s - b - A) * y), S.push(A * y * y);
+        p.push(f[f.length - 1]);
+        for (var I = [], b = [], S = 0; S < p.length - 1; S++) {
+            s = f[S];
+            var T = p[S],
+                y = 1 / d[S],
+                A = T + p[S + 1] - s - s;
+            I.push((s - T - A) * y), b.push(A * y * y);
         }
-        (this.xs = e), (this.ys = t), (this.c1s = h), (this.c2s = I), (this.c3s = S);
+        (this.xs = e), (this.ys = t), (this.c1s = p), (this.c2s = I), (this.c3s = b);
     }
     return (
         (e = a),

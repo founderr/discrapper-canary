@@ -20,7 +20,7 @@ var s = n(120356),
     x = n(388032),
     S = n(96923);
 function T(e) {
-    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: T, guildId: C, className: _, showPremiumIcon: E = !0, showResetThemeButton: f = !1, forcedDivider: I } = e,
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: T, guildId: C, className: E, showPremiumIcon: _ = !0, showResetThemeButton: f = !1, forcedDivider: I } = e,
         N = (0, u.ZP)(t.id, C),
         { primaryColor: A, secondaryColor: b } = (0, m.Z)({
             user: t,
@@ -39,8 +39,8 @@ function T(e) {
     return (0, i.jsx)(p.Z, {
         title: x.intl.string(x.t.DMeO2d),
         disabled: !v && !T,
-        className: r()(S.__invalid_profileThemesSection, _),
-        showPremiumIcon: E,
+        className: r()(S.__invalid_profileThemesSection, E),
+        showPremiumIcon: _,
         forcedDivider: I,
         children: (0, i.jsxs)('div', {
             className: S.sectionContainer,

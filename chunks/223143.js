@@ -50,18 +50,18 @@ function c(e) {
             autoTrackExposure: !1
         });
     let { isFetching: r, categories: i, fetchCategoriesError: s, refreshCategories: o } = (0, l.Z)({ paymentGateway: t }),
-        { isClaiming: c, fetchPurchasesError: d, claimError: f, isFetching: _, purchases: h, hasPreviouslyFetched: p } = u();
+        { isClaiming: c, fetchPurchasesError: d, claimError: f, isFetching: _, purchases: p, hasPreviouslyFetched: h } = u();
     return {
         isFetching: r || _,
         isFetchingCategories: r,
         isFetchingPurchases: _,
         isClaiming: c,
         categories: i,
-        purchases: h,
+        purchases: p,
         fetchCategoriesError: s,
         fetchPurchasesError: d,
         claimError: f,
         refreshCategories: o,
-        hasPreviouslyFetched: p
+        hasPreviouslyFetched: h
     };
 }

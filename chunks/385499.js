@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(936485);
 let d = (e) => {
     let t,
-        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: f, hideIcon: _ = !1, useRemSizes: h = !1, children: p = [] } = e,
+        { invertColor: n = !1, type: i = l.Hb.BOT, className: d, verified: f, hideIcon: _ = !1, useRemSizes: p = !1, children: h = [] } = e,
         m = null,
         g = u.intl.string(u.t.g76OcH);
     switch (i) {
@@ -52,16 +52,16 @@ let d = (e) => {
                 })
         })),
         (t = i === l.Hb.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular);
-    let S = (e) =>
+    let b = (e) =>
         (0, r.jsxs)('span', {
             ...e,
-            className: a()(d, t, h ? c.rem : c.px, {
+            className: a()(d, t, p ? c.rem : c.px, {
                 [c.botTagOP]: E,
                 [c.botTagRemix]: v
             }),
             children: [
                 _ ? null : I,
-                p,
+                h,
                 (0, r.jsx)('span', {
                     className: c.botText,
                     children: m
@@ -73,16 +73,16 @@ let d = (e) => {
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.xb0str),
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => b(e)
             });
         case l.Hb.ORIGINAL_POSTER:
             return (0, r.jsx)(s.u, {
                 text: u.intl.string(u.t.uN6Emp),
                 position: 'top',
-                children: (e) => S(e)
+                children: (e) => b(e)
             });
         default:
-            return S();
+            return b();
     }
 };
 (d.Types = l.Hb), (t.Z = d);

@@ -6,13 +6,13 @@ n.d(t, {
         return N;
     },
     Ux: function () {
-        return b;
+        return T;
     },
     Xe: function () {
         return A;
     },
     aQ: function () {
-        return S;
+        return b;
     },
     bU: function () {
         return g;
@@ -54,9 +54,9 @@ function f() {
     };
 }
 let _ = f(),
-    h = new Set();
-function p() {
-    for (let e of ((_ = f()), h)) e(_);
+    p = new Set();
+function h() {
+    for (let e of ((_ = f()), p)) e(_);
 }
 let m = r.createContext(null);
 function g() {
@@ -65,10 +65,10 @@ function g() {
             [t, n] = (0, r.useState)(_);
         return ((0, r.useEffect)(
             () => (
-                0 === h.size && window.addEventListener('languagechange', p),
-                h.add(n),
+                0 === p.size && window.addEventListener('languagechange', h),
+                p.add(n),
                 () => {
-                    h.delete(n), 0 === h.size && window.removeEventListener('languagechange', p);
+                    p.delete(n), 0 === p.size && window.removeEventListener('languagechange', h);
                 }
             ),
             []
@@ -93,12 +93,12 @@ function I(e, t) {
         i = v(e, t);
     return (0, r.useMemo)(() => new a.E(n, i), [n, i]);
 }
-function S(e) {
-    e = (0, o.vE)(null != e ? e : {}, T);
+function b(e) {
+    e = (0, o.vE)(null != e ? e : {}, S);
     let { locale: t } = g();
     return (0, r.useMemo)(() => new s.CN(t, e), [t, e]);
 }
-function T(e, t) {
+function S(e, t) {
     if (e === t) return !0;
     let n = Object.keys(e),
         r = Object.keys(t);
@@ -106,7 +106,7 @@ function T(e, t) {
     for (let r of n) if (t[r] !== e[r]) return !1;
     return !0;
 }
-function b(e = {}) {
+function T(e = {}) {
     let { locale: t } = g();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }

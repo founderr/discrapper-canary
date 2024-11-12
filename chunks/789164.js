@@ -11,7 +11,7 @@ var r = n(200651),
     l = n(276580);
 let u = i.forwardRef(function (e, t) {
     var n;
-    let { children: u, className: c, titleClassName: d, title: f, icon: _, disabled: h, htmlFor: p, tag: m = 'h5', ...g } = e,
+    let { children: u, className: c, titleClassName: d, title: f, icon: _, disabled: p, htmlFor: h, tag: m = 'h5', ...g } = e,
         E = i.useId(),
         v = null !== (n = g.titleId) && void 0 !== n ? n : E;
     return (0, r.jsx)('div', {
@@ -28,8 +28,8 @@ let u = i.forwardRef(function (e, t) {
                                   ? (0, r.jsx)(o.v, {
                                         tag: m,
                                         id: v,
-                                        htmlFor: p,
-                                        disabled: h,
+                                        htmlFor: h,
+                                        disabled: p,
                                         className: d,
                                         children: f
                                     })

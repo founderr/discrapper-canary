@@ -22,7 +22,7 @@ function d(e, t, n) {
 }
 let f = {},
     _ = (0, l.isWindows)() ? ''.concat(o.Z.process.env.LOCALAPPDATA, '\\DiscordGames') : (0, l.isMac)() ? '/Applications/DiscordGames' : '/tmp';
-function h(e, t) {
+function p(e, t) {
     var n;
     f = {
         ...f,
@@ -32,7 +32,7 @@ function h(e, t) {
         }
     };
 }
-function p(e) {
+function h(e) {
     let { applicationId: t, branchId: n, installationPath: i } = e;
     null == r.installations[t] && (r.installations[t] = {}),
         (r.installations[t][n] = { installationPath: i }),
@@ -49,7 +49,7 @@ function m(e) {
 }
 function g(e) {
     if (r.installationPaths.has(e.path)) return !1;
-    h(e.path, e.metadata);
+    p(e.path, e.metadata);
     let t = new Set(r.installationPaths);
     t.add(e.path), (r.installationPaths = t);
 }
@@ -103,7 +103,7 @@ class E extends (i = a.ZP.PersistedStore) {
 d(E, 'displayName', 'InstallationManagerStore'),
     d(E, 'persistKey', 'InstallationManagerStore'),
     (t.Z = new E(s.Z, {
-        DISPATCH_APPLICATION_INSTALL: p,
+        DISPATCH_APPLICATION_INSTALL: h,
         DISPATCH_APPLICATION_UNINSTALL: m,
         DISPATCH_APPLICATION_CANCEL: function (e) {
             let { applicationId: t, branchId: n } = e,
@@ -148,7 +148,7 @@ d(E, 'displayName', 'InstallationManagerStore'),
         },
         INSTALLATION_LOCATION_FETCH_METADATA: function (e) {
             let { metadataPayload: t } = e;
-            for (let e in t) h(e, t[e]);
+            for (let e in t) p(e, t[e]);
         },
-        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: p
+        DISPATCH_APPLICATION_ADD_TO_INSTALLATIONS: h
     }));

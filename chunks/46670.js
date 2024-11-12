@@ -55,29 +55,29 @@ function c(e, t, n) {
         onAction: e.onAction,
         linkBehavior: c
     });
-    let { labelProps: h, fieldProps: p } = (0, a.N)({
+    let { labelProps: p, fieldProps: h } = (0, a.N)({
         ...e,
         id: _,
         labelElementType: 'span'
     });
     return {
-        labelProps: h,
+        labelProps: p,
         listBoxProps: (0, r.dG)(o, f, 'multiple' === t.selectionManager.selectionMode ? { 'aria-multiselectable': 'true' } : {}, {
             role: 'listbox',
-            ...(0, r.dG)(p, d)
+            ...(0, r.dG)(h, d)
         })
     };
 }
 function d(e, t, n) {
-    var a, c, d, f, _, h, p;
+    var a, c, d, f, _, p, h;
     let { key: m } = e,
         g = l.get(t),
         E = null !== (c = e.isDisabled) && void 0 !== c ? c : t.disabledKeys.has(m),
         v = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(m),
         I = null !== (f = e.shouldSelectOnPressUp) && void 0 !== f ? f : null == g ? void 0 : g.shouldSelectOnPressUp,
-        S = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
-        T = null !== (h = e.shouldUseVirtualFocus) && void 0 !== h ? h : null == g ? void 0 : g.shouldUseVirtualFocus,
-        b = null !== (p = e.isVirtualized) && void 0 !== p ? p : null == g ? void 0 : g.isVirtualized,
+        b = null !== (_ = e.shouldFocusOnHover) && void 0 !== _ ? _ : null == g ? void 0 : g.shouldFocusOnHover,
+        S = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == g ? void 0 : g.shouldUseVirtualFocus,
+        T = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == g ? void 0 : g.isVirtualized,
         y = (0, r.mp)(),
         A = (0, r.mp)(),
         N = {
@@ -87,7 +87,7 @@ function d(e, t, n) {
         };
     !((0, r.V5)() && (0, r.Pf)()) && ((N['aria-label'] = e['aria-label']), (N['aria-labelledby'] = y), (N['aria-describedby'] = A));
     let C = t.collection.getItem(m);
-    if (b) {
+    if (T) {
         let e = Number(null == C ? void 0 : C.index);
         (N['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1), (N['aria-setsize'] = (0, o.is)(t.collection));
     }
@@ -102,9 +102,9 @@ function d(e, t, n) {
             key: m,
             ref: n,
             shouldSelectOnPressUp: I,
-            allowsDifferentPressOrigin: I && S,
-            isVirtualized: b,
-            shouldUseVirtualFocus: T,
+            allowsDifferentPressOrigin: I && b,
+            isVirtualized: T,
+            shouldUseVirtualFocus: S,
             isDisabled: E,
             onAction: (null == g ? void 0 : g.onAction)
                 ? () => {
@@ -115,7 +115,7 @@ function d(e, t, n) {
             linkBehavior: null == g ? void 0 : g.linkBehavior
         }),
         { hoverProps: w } = (0, i.XI)({
-            isDisabled: E || !S,
+            isDisabled: E || !b,
             onHoverStart() {
                 !(0, i.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(m));
             }

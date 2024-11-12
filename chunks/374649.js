@@ -27,7 +27,7 @@ var r = n(192379),
     d = n(981631);
 async function f(e) {
     let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: c, renewal: f, metadata: _ } = e,
-        h = {
+        p = {
             items: (t = (0, u.gB)(t)).map((e) => {
                 let { planId: t, ...n } = e;
                 return {
@@ -46,7 +46,7 @@ async function f(e) {
     try {
         let e = await s.tn.post({
             url: d.ANM.BILLING_SUBSCRIPTIONS_PREVIEW,
-            body: h,
+            body: p,
             oldFormErrors: !0
         });
         return l.Z.createInvoiceFromServer(e.body);
@@ -55,9 +55,9 @@ async function f(e) {
     }
 }
 async function _(e) {
-    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: c = !1, analyticsLocations: f, analyticsLocation: _, userDiscountOfferId: h } = e;
+    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: c = !1, analyticsLocations: f, analyticsLocation: _, userDiscountOfferId: p } = e;
     null != n && (n = (0, u.gB)(n));
-    let p = {
+    let h = {
         items:
             null == n
                 ? void 0
@@ -72,7 +72,7 @@ async function _(e) {
         renewal: i,
         apply_entitlements: c,
         currency: a,
-        user_discount_offer_id: h
+        user_discount_offer_id: p
     };
     try {
         let e = await s.tn.patch({
@@ -81,7 +81,7 @@ async function _(e) {
                 location: _,
                 location_stack: f
             },
-            body: p,
+            body: h,
             oldFormErrors: !0
         });
         return l.Z.createInvoiceFromServer(e.body);
@@ -89,7 +89,7 @@ async function _(e) {
         throw new o.HF(e);
     }
 }
-async function h(e) {
+async function p(e) {
     let { paymentSourceId: t, skuId: n, subscriptionPlanId: r, currency: i, loadId: s } = e;
     a()(n, 'SKU ID is missing for one time purchase gift invoice preview');
     try {
@@ -109,7 +109,7 @@ async function h(e) {
         throw new o.HF(e);
     }
 }
-async function p(e) {
+async function h(e) {
     let { subscriptionId: t, preventFetch: n } = e;
     if (n) return null;
     let r = await s.tn.get({
@@ -145,7 +145,7 @@ function m(e, t) {
     );
 }
 function g(e) {
-    let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
+    let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
     return m(e, t);
 }
 function E(e) {
@@ -157,7 +157,7 @@ function E(e) {
     return m(e, t);
 }
 function v(e) {
-    let t = (0, r.useCallback)(() => p(e), [JSON.stringify(e)]);
+    let t = (0, r.useCallback)(() => h(e), [JSON.stringify(e)]);
     return m(e, t);
 }
 function I(e) {

@@ -15,8 +15,8 @@ var r,
     d = n(689425),
     f = n(358085),
     _ = n(981631),
-    h = n(354459),
-    p = n(844233);
+    p = n(354459),
+    h = n(844233);
 function m(e, t, n) {
     return (
         t in e
@@ -34,22 +34,22 @@ let g = 80,
     E = 132,
     v = 80,
     I = {
-        [_.VD2.TOP_RIGHT]: p.resizeHandleTopRight,
-        [_.VD2.TOP_LEFT]: p.resizeHandleTopLeft,
-        [_.VD2.BOTTOM_LEFT]: p.resizeHandleBottomLeft,
-        [_.VD2.BOTTOM_RIGHT]: p.resizeHandleBottomRight
+        [_.VD2.TOP_RIGHT]: h.resizeHandleTopRight,
+        [_.VD2.TOP_LEFT]: h.resizeHandleTopLeft,
+        [_.VD2.BOTTOM_LEFT]: h.resizeHandleBottomLeft,
+        [_.VD2.BOTTOM_RIGHT]: h.resizeHandleBottomRight
     },
-    S = {
+    b = {
         [_.VD2.TOP_RIGHT]: c.y.HORIZONTAL_LEFT,
         [_.VD2.TOP_LEFT]: c.y.HORIZONTAL_RIGHT,
         [_.VD2.BOTTOM_LEFT]: c.y.HORIZONTAL_RIGHT,
         [_.VD2.BOTTOM_RIGHT]: c.y.HORIZONTAL_LEFT
     };
-function T(e, t) {
+function S(e, t) {
     let n = 40 * Math.round(e / 40);
     return (0, l.clamp)(n, t.minWidth, t.maxWidth);
 }
-function b(e) {
+function T(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r, resizeConfig: s, position: l } = e,
         u = (0, c.Z)({
             minDimension: s.minWidth,
@@ -57,7 +57,7 @@ function b(e) {
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
-            orientation: S[l],
+            orientation: b[l],
             usePointerEvents: !0
         }),
         d = a.useCallback(
@@ -68,7 +68,7 @@ function b(e) {
         );
     return (0, i.jsx)('div', {
         onMouseDown: d,
-        className: o()(p.resizeHandle, I[l])
+        className: o()(h.resizeHandle, I[l])
     });
 }
 class y extends (r = a.PureComponent) {
@@ -96,8 +96,8 @@ class y extends (r = a.PureComponent) {
         let { edgeOffsetTop: n, edgeOffsetLeft: r, edgeOffsetBottom: i, edgeOffsetRight: a, maxX: s, maxY: o, dockedRect: l } = this.props,
             c = Math.round(n),
             d = Math.round(o - i - this._boundHeight),
-            h = Math.round(r),
-            p = Math.round(s - a - this._boundWidth),
+            p = Math.round(r),
+            h = Math.round(s - a - this._boundWidth),
             m = (0, f.getPlatform)() !== f.PlatformTypes.WEB && this.inPopout ? 22 : 0;
         if (null != l) {
             var g, E;
@@ -110,22 +110,22 @@ class y extends (r = a.PureComponent) {
             case _.VD2.TOP_LEFT:
                 return {
                     y: c,
-                    x: h
+                    x: p
                 };
             case _.VD2.BOTTOM_LEFT:
                 return {
                     y: d,
-                    x: h
+                    x: p
                 };
             case _.VD2.TOP_RIGHT:
                 return {
                     y: c,
-                    x: p
+                    x: h
                 };
             default:
                 return {
                     y: d,
-                    x: p
+                    x: h
                 };
         }
     }
@@ -168,7 +168,7 @@ class y extends (r = a.PureComponent) {
     getWidth() {
         var e, t;
         let { width: n } = this.props;
-        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : h.l8[h.cL.VIDEO];
+        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : p.l8[p.cL.VIDEO];
     }
     get inPopout() {
         return this.props.appContext === _.IlC.POPOUT;
@@ -192,9 +192,9 @@ class y extends (r = a.PureComponent) {
             (0, i.jsxs)(d.Z, {
                 dragAnywhere: !0,
                 ref: this.handleSetDraggableRef,
-                className: o()(p.pictureInPictureWindow, s, {
-                    [p.hidden]: r,
-                    [p.borderRadius]: a
+                className: o()(h.pictureInPictureWindow, s, {
+                    [h.hidden]: r,
+                    [h.borderRadius]: a
                 }),
                 maxX: e,
                 maxY: t,
@@ -209,7 +209,7 @@ class y extends (r = a.PureComponent) {
                         children: this.props.children
                     }),
                     null != u
-                        ? (0, i.jsx)(b, {
+                        ? (0, i.jsx)(T, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
@@ -241,7 +241,7 @@ class y extends (r = a.PureComponent) {
             m(this, 'ensureWidth', () => {
                 let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, resizeConfig: i } = this.props;
                 if (null == i) return;
-                let a = T(r - (t + n), i);
+                let a = S(r - (t + n), i);
                 this.getWidth() > a && ((this._width = a), null == e || e(a));
             }),
             m(this, 'handleSetInnerDivRef', (e) => {
@@ -261,7 +261,7 @@ class y extends (r = a.PureComponent) {
             m(this, 'handleResizeEnd', (e) => {
                 let { onResize: t, resizeConfig: n } = this.props;
                 if (null == n) return;
-                let r = T(e, n);
+                let r = S(e, n);
                 (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
             }),
             m(this, 'handleDragStart', (e, t) => {
@@ -290,9 +290,9 @@ m(y, 'defaultProps', {
     roundCorners: !0
 });
 t.Z = a.memo((e) => {
-    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: a, maxY: s, onWindowMove: o, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: f, resizeConfig: h } = e;
+    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: a, maxY: s, onWindowMove: o, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: f, resizeConfig: p } = e;
     return (0, i.jsx)('div', {
-        className: p.pictureInPicture,
+        className: h.pictureInPicture,
         children: (() => {
             if (null == t) return null;
             let e = n.map((e) => {
@@ -307,7 +307,7 @@ t.Z = a.memo((e) => {
                         e.id
                     );
                 }),
-                p = n.some((e) => e.component === _.NYg.EMBED_IFRAME);
+                h = n.some((e) => e.component === _.NYg.EMBED_IFRAME);
             return (0, i.jsx)(y, {
                 appContext: d,
                 position: t.position,
@@ -324,7 +324,7 @@ t.Z = a.memo((e) => {
                 edgeOffsetLeft: v,
                 edgeOffsetRight: g,
                 roundCorners: f,
-                resizeConfig: p ? void 0 : h,
+                resizeConfig: h ? void 0 : p,
                 children: e
             });
         })()

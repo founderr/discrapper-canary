@@ -12,7 +12,7 @@ var r = n(200651),
     u = n(90043);
 function c(e) {
     let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
-        h = i.useMemo(
+        p = i.useMemo(
             () =>
                 null != t
                     ? o.ZP.getApplicationIconURL({
@@ -26,11 +26,11 @@ function c(e) {
                     : n,
             [t, n, c, d, f]
         );
-    if (null == h) return _ ? (0, r.jsx)('div', { className: s()(u.icon, u.placeholder, a) }) : null;
+    if (null == p) return _ ? (0, r.jsx)('div', { className: s()(u.icon, u.placeholder, a) }) : null;
     return (0, r.jsx)('img', {
         className: s()(u.icon, a),
         alt: l.intl.string(l.t.X4IxWF),
-        src: h,
+        src: p,
         'aria-hidden': !0,
         draggable: !1
     });

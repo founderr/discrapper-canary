@@ -12,8 +12,8 @@ function i(e, t, n, i) {
         d = e.getSyncingWith(),
         f = e.getActivity(),
         _ = null !== (o = null !== (s = null == c ? void 0 : c.id) && void 0 !== s ? s : null == f ? void 0 : f.sync_id) && void 0 !== o ? o : e.getLastPlayedTrackId(),
-        h = n.id === t.getId(),
-        p = l && !u,
+        p = n.id === t.getId(),
+        h = l && !u,
         m = null != _ && _ === (null == i ? void 0 : i.sync_id),
         g = (null == f ? void 0 : f.party) != null && (null == i ? void 0 : null === (a = i.party) || void 0 === a ? void 0 : a.id) === f.party.id,
         E = (null == d ? void 0 : d.userId) != null && (null == d ? void 0 : d.userId) === n.id;
@@ -22,13 +22,13 @@ function i(e, t, n, i) {
         activity: i,
         hasSpotifyAccount: l,
         canPlaySpotify: u,
-        notPlayable: p,
+        notPlayable: h,
         syncingWithParty: g,
         syncingWithUser: E,
-        isCurrentUser: h,
+        isCurrentUser: p,
         currentUserTrackId: _,
         playingSameTrack: m,
-        playDisabled: h || p || m,
-        syncDisabled: h || E || g
+        playDisabled: p || h || m,
+        syncDisabled: p || E || g
     };
 }

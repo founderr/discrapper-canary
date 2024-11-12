@@ -15,8 +15,8 @@ var i = n(481060),
     d = n(981631);
 let f = window.matchMedia('(prefers-reduced-motion: reduce)'),
     _ = window.matchMedia('(prefers-contrast: more)'),
-    h = window.matchMedia('(prefers-contrast: less)'),
-    p = window.matchMedia('(prefers-color-scheme: dark)'),
+    p = window.matchMedia('(prefers-contrast: less)'),
+    h = window.matchMedia('(prefers-color-scheme: dark)'),
     m = window.matchMedia('(prefers-color-scheme: light)'),
     g = window.matchMedia('(forced-colors: active)'),
     E = 5;
@@ -25,7 +25,7 @@ function v() {
 }
 t.Z = {
     initBasic() {
-        f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), g.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), _.addListener(this.handleSystemPrefersContrastChanged), h.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
+        f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), h.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), g.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), _.addListener(this.handleSystemPrefersContrastChanged), p.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged();
     },
     init() {
         this.initBasic(),
@@ -56,7 +56,7 @@ t.Z = {
     },
     handleSystemColorPreferencesChanged() {
         let e;
-        p.matches ? (e = d.BRd.DARK) : m.matches && (e = d.BRd.LIGHT);
+        h.matches ? (e = d.BRd.DARK) : m.matches && (e = d.BRd.LIGHT);
         let t = (!l.isPlatformEmbedded || v()) && g.matches ? 'active' : 'none';
         a.Z.wait(() => {
             u.Ej(e, t);
@@ -64,7 +64,7 @@ t.Z = {
     },
     handleSystemPrefersContrastChanged() {
         let e = 'no-preference';
-        _.matches ? (e = 'more') : h.matches && (e = 'less'),
+        _.matches ? (e = 'more') : p.matches && (e = 'less'),
             a.Z.wait(() => {
                 u.TX(e);
             });

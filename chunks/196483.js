@@ -23,7 +23,7 @@ function a(e, t) {
     }),
         (e.onChange = () => {
             let { history: t } = e;
-            0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (h = null), d();
+            0 === t.stack.length && ((t.stack = [s(e)]), (t.index = 0)), null != e.selection && (r.T.currentEntry(e).selection = e.selection), (p = null), d();
         }),
         (e.undo = () => {
             e.history.index > 0 && f(e.history.index - 1);
@@ -32,14 +32,14 @@ function a(e, t) {
             e.history.index < e.history.stack.length - 1 && f(e.history.index + 1);
         });
     let _ = null,
-        h = null,
-        p = null;
+        p = null,
+        h = null;
     return (
         (e.apply = (t) => {
             let { history: a } = e;
             n(t);
             let o = i.bN.richValue(e);
-            if (o !== p)
+            if (o !== h)
                 0 === a.stack.length && ((a.stack = [s(e)]), (a.index = 0)),
                     r.T.isSaving(e) &&
                         ((function (e, t, n) {
@@ -60,8 +60,8 @@ function a(e, t) {
                                 : r.T.insertEntry(e, i, l);
                         })(e, t, _),
                         (_ = t)),
-                    (h = t),
-                    (p = o);
+                    (p = t),
+                    (h = o);
         }),
         (e.deleteBackward = (t) => {
             r.T.withSingleEntry(e, () => a(t));
@@ -73,10 +73,10 @@ function a(e, t) {
             r.T.withSingleEntry(e, () => l(t));
         }),
         (e.insertText = (t) => {
-            1 === t.length && (null == h ? void 0 : h.type) === 'remove_text' ? r.T.withMergedEntry(e, () => c(t)) : null != e.selection && i.M8.isExpanded(e.selection) ? r.T.withSingleEntry(e, () => c(t)) : c(t);
+            1 === t.length && (null == p ? void 0 : p.type) === 'remove_text' ? r.T.withMergedEntry(e, () => c(t)) : null != e.selection && i.M8.isExpanded(e.selection) ? r.T.withSingleEntry(e, () => c(t)) : c(t);
         }),
         (e.insertData = (t) => {
-            (null == h ? void 0 : h.type) === 'remove_text' ? r.T.withMergedEntry(e, () => u(t)) : r.T.withSingleEntry(e, () => u(t));
+            (null == p ? void 0 : p.type) === 'remove_text' ? r.T.withMergedEntry(e, () => u(t)) : r.T.withSingleEntry(e, () => u(t));
         }),
         e
     );

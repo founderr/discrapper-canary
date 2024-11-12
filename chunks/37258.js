@@ -16,7 +16,7 @@ function d(e) {
     let { label: t, onAction: n, ...d } = e,
         { analyticsLocations: f } = (0, s.ZP)(),
         { context: _ } = (0, o.KZ)(),
-        h = (0, a.Aq)();
+        p = (0, a.Aq)();
     return (0, r.jsx)(i.MenuItem, {
         id: 'user-profile',
         label: null != t ? t : c.intl.string(c.t.LYju5O),
@@ -27,7 +27,7 @@ function d(e) {
                     ..._,
                     ...d
                 }),
-                h.dispatch(u.CkL.POPOUT_CLOSE);
+                p.dispatch(u.CkL.POPOUT_CLOSE);
         }
     });
 }

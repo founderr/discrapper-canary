@@ -26,7 +26,7 @@ let d = s.Z.Types,
 function _(e) {
     let t,
         n,
-        { type: i = s.Z.Types.DANGER, imageData: d, button: _, className: h, iconClassName: p, title: m, body: g, style: E, align: v = o.Z.Align.START } = e,
+        { type: i = s.Z.Types.DANGER, imageData: d, button: _, className: p, iconClassName: h, title: m, body: g, style: E, align: v = o.Z.Align.START } = e,
         I = o.Z.Direction.HORIZONTAL;
     if (null != d) {
         let { position: e, ...n } = d;
@@ -35,17 +35,17 @@ function _(e) {
             shrink: 0,
             children: (0, r.jsx)('img', {
                 alt: '',
-                className: a()(c.icon, p),
+                className: a()(c.icon, h),
                 ...n
             })
         })),
             e === f.RIGHT && (I = o.Z.Direction.HORIZONTAL_REVERSE);
     } else null != _ && (n = _);
-    let S = !0;
+    let b = !0;
     return (
-        i === s.Z.Types.PRIMARY && (S = !1),
+        i === s.Z.Types.PRIMARY && (b = !1),
         (0, r.jsx)(s.Z, {
-            className: a()(c.formNotice, h),
+            className: a()(c.formNotice, p),
             type: i,
             style: E,
             children: (0, r.jsxs)(o.Z, {
@@ -58,13 +58,13 @@ function _(e) {
                             null != m && '' !== m
                                 ? (0, r.jsx)(u.v, {
                                       tag: u.R.H5,
-                                      className: a()(c.formNoticeTitle, { [c.whiteText]: S }),
+                                      className: a()(c.formNoticeTitle, { [c.whiteText]: b }),
                                       faded: !0,
                                       children: m
                                   })
                                 : null,
                             (0, r.jsx)(l.R, {
-                                className: a()(c.formNoticeBody, { [c.whiteText]: S }),
+                                className: a()(c.formNoticeBody, { [c.whiteText]: b }),
                                 children: g
                             }),
                             n

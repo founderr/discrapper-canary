@@ -39,19 +39,19 @@ let s = (e) => {
                     })) && void 0 !== n
                     ? n
                     : c,
-            h = (0, i.k8)({
+            p = (0, i.k8)({
                 colors: [c, l],
                 ratio: 7,
                 saturationFactor: s
             }),
-            p = (0, i.k8)({
+            h = (0, i.k8)({
                 colors: [c, u],
                 ratio: 7,
                 saturationFactor: s
             });
         return {
             LIGHT: {
-                accentColor: null == h ? void 0 : h.toHexString(),
+                accentColor: null == p ? void 0 : p.toHexString(),
                 backgroundColor: (0, i.xj)({
                     colorRGB: f,
                     saturationFactor: s
@@ -60,7 +60,7 @@ let s = (e) => {
                 opacity: (null == d ? void 0 : d.saturation) < 0.1 ? 0.35 : 0.1
             },
             DARK: {
-                accentColor: null == p ? void 0 : p.toHexString(),
+                accentColor: null == h ? void 0 : h.toHexString(),
                 backgroundColor: (0, i.xj)({
                     colorRGB: _,
                     saturationFactor: s

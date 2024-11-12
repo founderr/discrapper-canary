@@ -10,8 +10,8 @@ let u = a().defaultRules.lheading,
     d = a().defaultRules.link,
     f = a().defaultRules.image,
     _ = a().defaultRules.list,
-    h = a().defaultRules.blockQuote,
-    p = a().defaultRules.paragraph,
+    p = a().defaultRules.blockQuote,
+    h = a().defaultRules.paragraph,
     m = /\{(.+?)}/,
     g = /^\$(\w+?)\$/;
 r = n(235375);
@@ -71,11 +71,11 @@ let E = (e) => {
             ...('function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading)
         },
         blockQuote: {
-            ...h,
+            ...p,
             ...('function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote)
         },
         paragraph: {
-            ...p,
+            ...h,
             ...('function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }
     }),
@@ -86,7 +86,7 @@ let E = (e) => {
             ...('function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading)
         }
     }),
-    S = (e) => ({
+    b = (e) => ({
         ...v(e),
         newline: { ...a().defaultRules.newline },
         text: l.ZP,
@@ -99,5 +99,5 @@ t.Z = {
         ...v(e),
         ...I(e)
     }),
-    getMessageRules: (e) => ({ ...S(e) })
+    getMessageRules: (e) => ({ ...b(e) })
 };

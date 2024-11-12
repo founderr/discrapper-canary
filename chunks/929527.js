@@ -12,7 +12,7 @@ var i = r(n(449686)),
     d = r(n(624482)),
     f = /^--/,
     _ = {},
-    h = {
+    p = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -55,16 +55,16 @@ var i = r(n(449686)),
         strokeOpacity: !0,
         strokeWidth: !0
     },
-    p = ['Webkit', 'Ms', 'Moz', 'O'];
-h = Object.keys(h).reduce(function (e, t) {
+    h = ['Webkit', 'Ms', 'Moz', 'O'];
+p = Object.keys(p).reduce(function (e, t) {
     return (
-        p.forEach(function (n) {
+        h.forEach(function (n) {
             var r;
             return (e[n + (r = t).charAt(0).toUpperCase() + r.substring(1)] = e[t]);
         }),
         e
     );
-}, h);
+}, p);
 var m = /^(matrix|translate|scale|rotate|skew)/,
     g = /^(translate)/,
     E = /^(rotate|skew)/,
@@ -80,7 +80,7 @@ var m = /^(matrix|translate|scale|rotate|skew)/,
               ? t === n
               : parseFloat(t) === n;
     },
-    S = (function (e) {
+    b = (function (e) {
         function t(t) {
             var n = t.x,
                 r = t.y,
@@ -138,13 +138,13 @@ var m = /^(matrix|translate|scale|rotate|skew)/,
                             );
                     }
                 }),
-                o.length && (s.transform = new T(o, l)),
+                o.length && (s.transform = new S(o, l)),
                 e.call(this, s) || this
             );
         }
         return d(t, e), t;
     })(u.AnimatedObject),
-    T = (function (e) {
+    S = (function (e) {
         function t(t, n) {
             var r;
             return ((r = e.call(this) || this).inputs = t), (r.transforms = n), (r._value = null), (r._children = new Set()), r;
@@ -206,7 +206,7 @@ a.Globals.assign({
     createStringInterpolator: o.createStringInterpolator,
     batchedUpdates: s.unstable_batchedUpdates
 });
-var b = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
+var T = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio', 'b', 'base', 'bdi', 'bdo', 'big', 'blockquote', 'body', 'br', 'button', 'canvas', 'caption', 'cite', 'code', 'col', 'colgroup', 'data', 'datalist', 'dd', 'del', 'details', 'dfn', 'dialog', 'div', 'dl', 'dt', 'em', 'embed', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'html', 'i', 'iframe', 'img', 'input', 'ins', 'kbd', 'keygen', 'label', 'legend', 'li', 'link', 'main', 'map', 'mark', 'menu', 'menuitem', 'meta', 'meter', 'nav', 'noscript', 'object', 'ol', 'optgroup', 'option', 'output', 'p', 'param', 'picture', 'pre', 'progress', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'script', 'section', 'select', 'small', 'source', 'span', 'strong', 'style', 'sub', 'summary', 'sup', 'table', 'tbody', 'td', 'textarea', 'tfoot', 'th', 'thead', 'time', 'title', 'tr', 'track', 'u', 'ul', 'var', 'video', 'wbr', 'circle', 'clipPath', 'defs', 'ellipse', 'foreignObject', 'g', 'image', 'line', 'linearGradient', 'mask', 'path', 'pattern', 'polygon', 'polyline', 'radialGradient', 'rect', 'stop', 'svg', 'text', 'tspan'], {
     applyAnimatedValues: function (e, t) {
         if (!e.nodeType || !e.setAttribute) return !1;
         var n = 'filter' === e.nodeName || (e.parentNode && 'filter' === e.parentNode.nodeName),
@@ -229,7 +229,7 @@ var b = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
                 if (r.hasOwnProperty(t)) {
                     var n,
                         i,
-                        l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || f.test(n) || (h.hasOwnProperty(n) && h[n]) ? ('' + i).trim() : i + 'px');
+                        l = ((n = t), null == (i = r[t]) || 'boolean' == typeof i || '' === i ? '' : 'number' != typeof i || 0 === i || f.test(n) || (p.hasOwnProperty(n) && p[n]) ? ('' + i).trim() : i + 'px');
                     'float' === t ? (t = 'cssFloat') : f.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                 }
             d.forEach(function (t, n) {
@@ -240,7 +240,7 @@ var b = u.createHost(['a', 'abbr', 'address', 'area', 'article', 'aside', 'audio
         });
     },
     createAnimatedStyle: function (e) {
-        return new S(e);
+        return new b(e);
     },
     getComponentProps: function (e) {
         return e.scrollTop, e.scrollLeft, i(e, ['scrollTop', 'scrollLeft']);
@@ -255,5 +255,5 @@ Object.keys(a).forEach(function (e) {
             }
         });
 }),
-    (t.a = b),
-    (t.animated = b);
+    (t.a = T),
+    (t.animated = T);

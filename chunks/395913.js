@@ -16,9 +16,9 @@ function o(e, t, n) {
         d,
         f,
         _,
-        h,
-        p = (0, s.j)(),
-        m = (0, a.Z)(null !== (o = null !== (l = null !== (u = null !== (c = null == n ? void 0 : n.weekStartsOn) && void 0 !== c ? c : null == n ? void 0 : null === (d = n.locale) || void 0 === d ? void 0 : null === (f = d.options) || void 0 === f ? void 0 : f.weekStartsOn) && void 0 !== u ? u : p.weekStartsOn) && void 0 !== l ? l : null === (_ = p.locale) || void 0 === _ ? void 0 : null === (h = _.options) || void 0 === h ? void 0 : h.weekStartsOn) && void 0 !== o ? o : 0);
+        p,
+        h = (0, s.j)(),
+        m = (0, a.Z)(null !== (o = null !== (l = null !== (u = null !== (c = null == n ? void 0 : n.weekStartsOn) && void 0 !== c ? c : null == n ? void 0 : null === (d = n.locale) || void 0 === d ? void 0 : null === (f = d.options) || void 0 === f ? void 0 : f.weekStartsOn) && void 0 !== u ? u : h.weekStartsOn) && void 0 !== l ? l : null === (_ = h.locale) || void 0 === _ ? void 0 : null === (p = _.options) || void 0 === p ? void 0 : p.weekStartsOn) && void 0 !== o ? o : 0);
     if (!(m >= 0 && m <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     var g = (0, r.default)(e),
         E = (0, a.Z)(t),

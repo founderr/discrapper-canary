@@ -15,7 +15,7 @@ n.d(t, {
         return S;
     },
     sf: function () {
-        return O;
+        return B;
     },
     x$: function () {
         return k;
@@ -35,15 +35,15 @@ var i = n(192379),
     g = n(594174),
     m = n(78839),
     f = n(111361),
-    _ = n(471309),
-    p = n(474936),
+    p = n(471309),
+    _ = n(474936),
     h = n(388032),
     E = n(888300),
     b = n(665321),
     x = n(256017),
     C = n(126807),
-    T = n(432119),
-    v = n(205119),
+    v = n(432119),
+    T = n(205119),
     N = n(145007),
     I = n(937264);
 let S = () => {
@@ -66,32 +66,32 @@ let S = () => {
     R = () => {
         let e = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
             t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
-        if (!(0, f.M5)(e, p.p9.TIER_2) || null == t || null == t.premiumSince) return null;
+        if (!(0, f.M5)(e, _.p9.TIER_2) || null == t || null == t.premiumSince) return null;
         let n = a()(),
             i = a()(t.premiumSince).add(1, 'day'),
             r = n.diff(i, 'months');
-        return Object.entries(p.eG).reduce((e, t) => {
+        return Object.entries(_.eG).reduce((e, t) => {
             let [n, i] = t;
             return r >= i ? n : e;
         }, null);
     },
     A = (e) => {
         switch (e) {
-            case p.VU.PREMIUM_TENURE_1_MONTH:
+            case _.VU.PREMIUM_TENURE_1_MONTH:
                 return E;
-            case p.VU.PREMIUM_TENURE_3_MONTH:
+            case _.VU.PREMIUM_TENURE_3_MONTH:
                 return I;
-            case p.VU.PREMIUM_TENURE_6_MONTH:
-                return T;
-            case p.VU.PREMIUM_TENURE_12_MONTH:
+            case _.VU.PREMIUM_TENURE_6_MONTH:
                 return v;
-            case p.VU.PREMIUM_TENURE_24_MONTH:
+            case _.VU.PREMIUM_TENURE_12_MONTH:
+                return T;
+            case _.VU.PREMIUM_TENURE_24_MONTH:
                 return b;
-            case p.VU.PREMIUM_TENURE_36_MONTH:
+            case _.VU.PREMIUM_TENURE_36_MONTH:
                 return x;
-            case p.VU.PREMIUM_TENURE_60_MONTH:
+            case _.VU.PREMIUM_TENURE_60_MONTH:
                 return N;
-            case p.VU.PREMIUM_TENURE_72_MONTH:
+            case _.VU.PREMIUM_TENURE_72_MONTH:
                 return C;
             default:
                 return;
@@ -100,46 +100,46 @@ let S = () => {
     j = () => A(S()),
     P = (e) => {
         switch (e) {
-            case p.VU.PREMIUM_TENURE_1_MONTH:
+            case _.VU.PREMIUM_TENURE_1_MONTH:
                 return h.intl.string(h.t.LR1C0d);
-            case p.VU.PREMIUM_TENURE_3_MONTH:
+            case _.VU.PREMIUM_TENURE_3_MONTH:
                 return h.intl.string(h.t['rI1/3N']);
-            case p.VU.PREMIUM_TENURE_6_MONTH:
+            case _.VU.PREMIUM_TENURE_6_MONTH:
                 return h.intl.string(h.t.VkhVKS);
-            case p.VU.PREMIUM_TENURE_12_MONTH:
+            case _.VU.PREMIUM_TENURE_12_MONTH:
                 return h.intl.string(h.t.gzUfNT);
-            case p.VU.PREMIUM_TENURE_24_MONTH:
+            case _.VU.PREMIUM_TENURE_24_MONTH:
                 return h.intl.string(h.t.fuwTPj);
-            case p.VU.PREMIUM_TENURE_36_MONTH:
+            case _.VU.PREMIUM_TENURE_36_MONTH:
                 return h.intl.string(h.t.qNhNk5);
-            case p.VU.PREMIUM_TENURE_60_MONTH:
+            case _.VU.PREMIUM_TENURE_60_MONTH:
                 return h.intl.string(h.t['wvX+eH']);
-            case p.VU.PREMIUM_TENURE_72_MONTH:
+            case _.VU.PREMIUM_TENURE_72_MONTH:
                 return h.intl.string(h.t.Wu9WJi);
             default:
                 return '';
         }
     },
     Z = () => P(S()),
-    O = (e) => {
+    B = (e) => {
         switch (e) {
-            case p.VU.PREMIUM_TENURE_1_MONTH:
-            case p.VU.PREMIUM_TENURE_3_MONTH:
-            case p.VU.PREMIUM_TENURE_6_MONTH:
-                return h.intl.formatToPlainString(h.t.erUSmJ, { months: p.eG[e] });
-            case p.VU.PREMIUM_TENURE_12_MONTH:
-            case p.VU.PREMIUM_TENURE_24_MONTH:
-            case p.VU.PREMIUM_TENURE_36_MONTH:
-            case p.VU.PREMIUM_TENURE_60_MONTH:
-                return h.intl.formatToPlainString(h.t.IfYQVF, { years: p.eG[e] / 12 });
-            case p.VU.PREMIUM_TENURE_72_MONTH:
+            case _.VU.PREMIUM_TENURE_1_MONTH:
+            case _.VU.PREMIUM_TENURE_3_MONTH:
+            case _.VU.PREMIUM_TENURE_6_MONTH:
+                return h.intl.formatToPlainString(h.t.erUSmJ, { months: _.eG[e] });
+            case _.VU.PREMIUM_TENURE_12_MONTH:
+            case _.VU.PREMIUM_TENURE_24_MONTH:
+            case _.VU.PREMIUM_TENURE_36_MONTH:
+            case _.VU.PREMIUM_TENURE_60_MONTH:
+                return h.intl.formatToPlainString(h.t.IfYQVF, { years: _.eG[e] / 12 });
+            case _.VU.PREMIUM_TENURE_72_MONTH:
                 return h.intl.formatToPlainString(h.t.IfYQVF, { years: '6+' });
             default:
                 return '';
         }
     },
-    M = () => O(S()),
-    B = () => {
+    M = () => B(S()),
+    O = () => {
         let e = S(),
             t = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, d.RZ)(e, t.premiumSince);
@@ -148,18 +148,18 @@ let S = () => {
         badge: S(),
         image: j(),
         name: Z(),
-        earnedOnDate: B(),
+        earnedOnDate: O(),
         tenureRequirement: M()
     }),
     y = () => {
         let e = R(),
-            { enabled: t } = (0, _.Z)(!0),
+            { enabled: t } = (0, p.Z)(!0),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
         return n === l.z.WHATS_NEW_TENURE_BADGE_REWARD ? h.intl.string(h.t.jyYgZ2).toLocaleUpperCase() : null;
     },
     k = () => {
         let e = R(),
-            { enabled: t } = (0, _.Z)(),
+            { enabled: t } = (0, p.Z)(),
             [n] = (0, c.US)(t && null != e ? [l.z.WHATS_NEW_TENURE_BADGE_REWARD] : []);
         return i.useCallback(() => {
             n === l.z.WHATS_NEW_TENURE_BADGE_REWARD && (0, o.EW)(n);

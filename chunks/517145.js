@@ -30,14 +30,14 @@ e.exports = function (e, t, n, u, c) {
                 f = c.r;
             l(d, a), l(f, a);
             var _ = i.mont(r),
-                h = d.invm(a);
+                p = d.invm(a);
             return (
                 0 ===
                 o
                     .toRed(_)
-                    .redPow(new i(t).mul(h).mod(a))
+                    .redPow(new i(t).mul(p).mod(a))
                     .fromRed()
-                    .mul(u.toRed(_).redPow(f.mul(h).mod(a)).fromRed())
+                    .mul(u.toRed(_).redPow(f.mul(p).mod(a)).fromRed())
                     .mod(r)
                     .mod(a)
                     .cmp(f)
@@ -46,13 +46,13 @@ e.exports = function (e, t, n, u, c) {
     }
     if ('rsa' !== u && 'ecdsa/rsa' !== u) throw Error('wrong public key type');
     t = r.concat([c, t]);
-    for (var f = d.modulus.byteLength(), _ = [1], h = 0; t.length + _.length + 2 < f; ) _.push(255), h++;
+    for (var f = d.modulus.byteLength(), _ = [1], p = 0; t.length + _.length + 2 < f; ) _.push(255), p++;
     _.push(0);
-    for (var p = -1; ++p < t.length; ) _.push(t[p]);
+    for (var h = -1; ++h < t.length; ) _.push(t[h]);
     _ = r.from(_);
     var m = i.mont(d.modulus);
     (e = (e = new i(e).toRed(m)).redPow(new i(d.publicExponent))), (e = r.from(e.fromRed().toArray()));
-    var g = h < 8 ? 1 : 0;
-    for (f = Math.min(e.length, _.length), e.length !== _.length && (g = 1), p = -1; ++p < f; ) g |= e[p] ^ _[p];
+    var g = p < 8 ? 1 : 0;
+    for (f = Math.min(e.length, _.length), e.length !== _.length && (g = 1), h = -1; ++h < f; ) g |= e[h] ^ _[h];
     return 0 === g;
 };

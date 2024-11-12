@@ -1,6 +1,6 @@
 n.d(t, {
     j0: function () {
-        return h;
+        return p;
     },
     mY: function () {
         return _;
@@ -35,7 +35,7 @@ function _(e) {
         { shouldHideGuildPurchaseEntryPoints: i } = (0, s.uP)(e);
     return !i && (n || t);
 }
-function h(e) {
+function p(e) {
     let t = _(e),
         n = (0, i.RF)(e, 'useShowRoleSubscriptionsInChannelList');
     return t && !n;

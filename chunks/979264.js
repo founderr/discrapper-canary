@@ -18,23 +18,23 @@ var r = n(200651),
     d = n(353093),
     f = n(954138),
     _ = n(426964),
-    h = n(308083),
-    p = n(388032),
+    p = n(308083),
+    h = n(388032),
     m = n(162685);
 let g = i.memo(function (e) {
-        let { src: t, tag: n, className: i, size: a = h.NC.SIZE_16 } = e;
+        let { src: t, tag: n, className: i, size: a = p.NC.SIZE_16 } = e;
         return null == t
             ? null
             : (0, r.jsx)('img', {
                   src: t,
-                  alt: p.intl.formatToPlainString(p.t.PShNVV, { tag: n }),
+                  alt: h.intl.formatToPlainString(h.t.PShNVV, { tag: n }),
                   className: s()(m.badge, i),
                   width: a,
                   height: a
               });
     }),
     E = i.memo(function (e) {
-        let { guildId: t, clanTag: n, clanBadge: i, className: a, textClassName: o, badgeClassName: u, onClick: c, onMouseEnter: _, textVariant: p = 'text-xs/semibold', textColor: E = 'text-normal', badgeSize: v = h.NC.SIZE_12, inline: I = !0 } = e;
+        let { guildId: t, clanTag: n, clanBadge: i, className: a, textClassName: o, badgeClassName: u, onClick: c, onMouseEnter: _, textVariant: h = 'text-xs/semibold', textColor: E = 'text-normal', badgeSize: v = p.NC.SIZE_12, inline: I = !0 } = e;
         return (0, f.Z)('base_clan_tag_chiplet')
             ? (0, r.jsx)(l.Clickable, {
                   tag: 'span',
@@ -43,7 +43,7 @@ let g = i.memo(function (e) {
                   onMouseEnter: _,
                   className: s()(m.chipletContainerInner, I && m.chipletContainerInline, null != c && m.clickable, a),
                   children: (0, r.jsxs)(l.Text, {
-                      variant: p,
+                      variant: h,
                       color: E,
                       tag: 'span',
                       className: s()(m.text, o),
@@ -67,11 +67,11 @@ let g = i.memo(function (e) {
     }),
     v = i.memo(function (e) {
         var t, n;
-        let { clan: a, userId: d, className: f, children: h, profileViewedAnalytics: p } = e,
+        let { clan: a, userId: d, className: f, children: p, profileViewedAnalytics: h } = e,
             g = (0, o.e7)([u.default], () => u.default.getUser(d), [d]),
             E = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : a,
             [v, I] = (0, c.L_)(null !== (n = null == E ? void 0 : E.identityGuildId) && void 0 !== n ? n : null),
-            S = i.useCallback(() => {
+            b = i.useCallback(() => {
                 I();
             }, [I]);
         return (0, r.jsx)(l.Popout, {
@@ -81,7 +81,7 @@ let g = i.memo(function (e) {
                     isLoading: v,
                     clan: E,
                     onClose: t,
-                    profileViewedAnalytics: p,
+                    profileViewedAnalytics: h,
                     userId: d
                 });
             },
@@ -99,43 +99,43 @@ let g = i.memo(function (e) {
                     },
                     onMouseEnter: () => {
                         var t;
-                        S(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        b(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
-                    children: h
+                    children: p
                 })
         });
     });
 t.ZP = i.memo(function (e) {
     var t;
-    let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: h, disableGuildProfile: p = !1, inline: g = !0, profileViewedAnalytics: I } = e,
-        S = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
-        T = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
-        { tag: b, badge: y, guildId: A } = (0, d.vh)(T);
+    let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: f, textColor: _, badgeSize: p, disableGuildProfile: h = !1, inline: g = !0, profileViewedAnalytics: I } = e,
+        b = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
+        S = null !== (t = null == b ? void 0 : b.clan) && void 0 !== t ? t : n,
+        { tag: T, badge: y, guildId: A } = (0, d.vh)(S);
     return (0, d.p0)(i, a) && null != A
-        ? p
+        ? h
             ? (0, r.jsx)(E, {
                   guildId: A,
-                  clanTag: b,
+                  clanTag: T,
                   clanBadge: y,
                   className: s()(m.noTooltip, l),
                   textVariant: f,
                   textColor: _,
-                  badgeSize: h,
+                  badgeSize: p,
                   inline: g
               })
             : (0, r.jsx)(v, {
-                  clan: T,
+                  clan: S,
                   userId: i,
                   profileViewedAnalytics: I,
                   className: c,
                   children: (0, r.jsx)(E, {
                       guildId: A,
-                      clanTag: b,
+                      clanTag: T,
                       clanBadge: y,
                       className: l,
                       textVariant: f,
                       textColor: _,
-                      badgeSize: h,
+                      badgeSize: p,
                       inline: g
                   })
               })

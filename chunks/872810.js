@@ -47,18 +47,18 @@ var r = n(512722),
     d = n(522474),
     f = n(199902),
     _ = n(314897),
-    h = n(592125),
-    p = n(430824),
+    p = n(592125),
+    h = n(430824),
     m = n(944486),
     g = n(979651),
     E = n(934415),
     v = n(70956),
     I = n(557457),
-    S = n(573261);
+    b = n(573261);
 n(26151), n(493683);
-var T = n(475179);
+var S = n(475179);
 n(287734);
-var b = n(981631),
+var T = n(981631),
     y = n(70722);
 function A(e, t, n) {
     o.Z.dispatch({
@@ -66,7 +66,7 @@ function A(e, t, n) {
         streamType: null != e ? y.lo.GUILD : y.lo.CALL,
         guildId: e,
         channelId: t,
-        appContext: __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP,
+        appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP,
         ...n
     });
 }
@@ -79,8 +79,8 @@ function N(e, t) {
     });
 }
 function C(e, t) {
-    let n = h.Z.getChannel(t);
-    return i()(null != n, 'Cannot join a null voice channel'), !g.Z.isInChannel(t) && (0, E.rY)(n, g.Z, p.Z);
+    let n = p.Z.getChannel(t);
+    return i()(null != n, 'Cannot join a null voice channel'), !g.Z.isInChannel(t) && (0, E.rY)(n, g.Z, h.Z);
 }
 function R(e, t) {
     if (null != l.Z.getRemoteSessionId()) return;
@@ -98,7 +98,7 @@ function R(e, t) {
         streamKey: i,
         allowMultiple: a
     }),
-        !a && (null == t || !t.noFocus) && T.Z.selectParticipant(e.channelId, i);
+        !a && (null == t || !t.noFocus) && S.Z.selectParticipant(e.channelId, i);
 }
 function O(e, t) {
     o.Z.dispatch({
@@ -111,7 +111,7 @@ function D(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && C(n, r)) return;
     R(e, t);
-    let i = d.Z.getWindowOpen(b.KJ3.CHANNEL_CALL_POPOUT),
+    let i = d.Z.getWindowOpen(T.KJ3.CHANNEL_CALL_POPOUT),
         a = m.Z.getVoiceChannelId();
     if (!i || a !== r) (0, c.Z)(e);
 }
@@ -121,7 +121,7 @@ function L(e) {
         o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
-            appContext: __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP
+            appContext: __OVERLAY__ ? T.IlC.OVERLAY : T.IlC.APP
         });
 }
 function x(e) {
@@ -145,7 +145,7 @@ async function w(e, t, n) {
     });
     try {
         let e = await s.tn.get({
-            url: b.ANM.STREAM_PREVIEW(r),
+            url: T.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0
         });
@@ -166,8 +166,8 @@ async function w(e, t, n) {
 }
 async function M(e) {
     try {
-        await S.Z.post({
-            url: b.ANM.STREAM_NOTIFY(e),
+        await b.Z.post({
+            url: T.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY }
         });
@@ -182,7 +182,7 @@ function P(e) {
 }
 function k(e, t) {
     s.tn.patch({
-        url: b.ANM.STREAM(e),
+        url: T.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0
     });

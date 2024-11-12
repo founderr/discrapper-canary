@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return b;
+            return E;
         },
         openConsoleConnectionErrorsModal: function () {
-            return S;
+            return B;
         }
     }),
     n(47120);
@@ -27,12 +27,12 @@ var o = n(200651),
     v = n(981631),
     j = n(388032),
     _ = n(24444),
-    E = n(708901);
-function b(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: b } = e,
-        S = (0, x.B4)(t);
-    null == S && b();
-    let [T, B] = (0, r.useState)(n),
+    b = n(708901);
+function E(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: E } = e,
+        B = (0, x.B4)(t);
+    null == B && E();
+    let [T, S] = (0, r.useState)(n),
         A = (0, x.KX)(),
         y = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, C.g2)({
@@ -40,21 +40,21 @@ function b(e) {
             className: _.colorTransition
         }),
         w = T.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        I = (0, f.Bz)(S),
+        I = (0, f.Bz)(B),
         k = (0, i.e7)([p.Z], () => p.Z.getState().theme),
         q = (0, l.wj)(k) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: P, startingConsoleQuest: O } = (0, x.GI)({
-            questId: S.id,
+        { startConsoleQuest: P, startingConsoleQuest: M } = (0, x.GI)({
+            questId: B.id,
             beforeRequest: () => {
                 R.startAnimation(),
                     (0, m._3)({
-                        questId: S.id,
+                        questId: B.id,
                         questContent: g.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), B(e);
+                R.stopAnimation(), S(e);
             }
         });
     return (0, o.jsxs)(c.ModalRoot, {
@@ -75,12 +75,12 @@ function b(e) {
                                 children: (0, o.jsx)('img', {
                                     className: _.icon,
                                     alt: '',
-                                    src: E
+                                    src: b
                                 })
                             }),
                             (0, o.jsx)(c.ModalCloseButton, {
                                 className: _.closeBtn,
-                                onClick: b
+                                onClick: E
                             })
                         ]
                     }),
@@ -108,7 +108,7 @@ function b(e) {
                                 children: j.intl.string(j.t['+/hZMz'])
                             }),
                             (0, o.jsxs)(c.Clickable, {
-                                className: a()(_.refreshWrapper, { [_.disabled]: O }),
+                                className: a()(_.refreshWrapper, { [_.disabled]: M }),
                                 onClick: P,
                                 children: [
                                     R.render(),
@@ -135,14 +135,14 @@ function b(e) {
                                 errors: I ? void 0 : w.map((e) => e.message),
                                 gameTile: I
                                     ? (0, o.jsx)(c.Tooltip, {
-                                          'aria-label': S.config.messages.gameTitle,
+                                          'aria-label': B.config.messages.gameTitle,
                                           text: () =>
                                               (0, o.jsxs)('div', {
                                                   className: _.tooltip,
                                                   children: [
                                                       (0, o.jsx)(c.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: S.config.messages.gameTitle
+                                                          children: B.config.messages.gameTitle
                                                       }),
                                                       (0, o.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
@@ -155,8 +155,8 @@ function b(e) {
                                               (0, o.jsx)('img', {
                                                   ...e,
                                                   className: _.gameTile,
-                                                  alt: S.config.messages.gameTitle,
-                                                  src: (0, h.fh)(S, h.eC.GAME_TILE, q).url
+                                                  alt: B.config.messages.gameTitle,
+                                                  src: (0, h.fh)(B, h.eC.GAME_TILE, q).url
                                               })
                                       })
                                     : null
@@ -170,7 +170,7 @@ function b(e) {
                 children: [
                     (0, o.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: b,
+                        onClick: E,
                         className: _.footerCloseButton,
                         children: j.intl.string(j.t.cpT0Cg)
                     }),
@@ -178,9 +178,9 @@ function b(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            b(),
+                            E(),
                                 (0, f.V$)(
-                                    { quest: S },
+                                    { quest: B },
                                     {
                                         content: g.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
@@ -258,7 +258,7 @@ function N(e) {
         ]
     });
 }
-function S(e) {
+function B(e) {
     (0, c.openModalLazy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return (n) =>

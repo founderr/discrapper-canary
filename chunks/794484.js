@@ -11,8 +11,8 @@ var i = n(200651),
     g = n(314684),
     m = n(565626),
     f = n(32173),
-    _ = n(976465),
-    p = n(391110),
+    p = n(976465),
+    _ = n(391110),
     h = n(75077),
     E = n(320319),
     b = n(821912);
@@ -48,30 +48,30 @@ let x = (e) => {
 };
 t.Z = (e) => {
     var t, n;
-    let { className: a, variant: C = p.R0.PERKS_DISCOVERABILITY, noBackground: T = !1, leftAlignHeaders: v = !1, showAllPerksButton: N, headerClassname: I, isFullScreen: S = !0 } = e,
+    let { className: a, variant: C = _.R0.PERKS_DISCOVERABILITY, noBackground: v = !1, leftAlignHeaders: T = !1, showAllPerksButton: N, headerClassname: I, isFullScreen: S = !0 } = e,
         R = r.useRef(null),
         A = (0, g.yQ)(),
         j = (0, m.Ag)(A),
         P = (0, d.ZP)('perks-discoverability');
     (0, m.I2)();
-    let Z = (0, u.HI)({ location: p.R0.PERKS_DISCOVERABILITY }),
-        O = C === p.R0.WHATS_NEW,
+    let Z = (0, u.HI)({ location: _.R0.PERKS_DISCOVERABILITY }),
+        B = C === _.R0.WHATS_NEW,
         M = (0, g.IY)(),
-        B = (0, _.x$)();
+        O = (0, p.x$)();
     r.useEffect(() => {
-        O && !j && (M(), B());
-    }, [M, B, O, j]),
+        B && !j && (M(), O());
+    }, [M, O, B, j]),
         r.useEffect(() => {
             let e = R.current;
-            if (null == e || !j || !O) return;
+            if (null == e || !j || !B) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), O && M();
+                e.scrollIntoView({ behavior: 'smooth' }), B && M();
             });
             return () => {
-                cancelAnimationFrame(t), O && M();
+                cancelAnimationFrame(t), B && M();
             };
-        }, [R, j, O, M]);
-    let w = (0, h.Op)(O),
+        }, [R, j, B, M]);
+    let w = (0, h.Op)(B),
         y = (0, f.Z)(),
         k = (0, h.mN)(),
         { fractionalState: L } = (0, c.Z)(),
@@ -101,15 +101,15 @@ t.Z = (e) => {
                 className: s()(
                     b.section,
                     {
-                        [b.centerAlignSection]: !v,
-                        [b.leftAlignSection]: v
+                        [b.centerAlignSection]: !T,
+                        [b.leftAlignSection]: T
                     },
                     a
                 ),
                 children: [
                     (0, i.jsx)(x, {
                         showAllPerksButton: N,
-                        leftAlignHeaders: v,
+                        leftAlignHeaders: T,
                         title: w.title,
                         headerClassname: I
                     }),
@@ -117,16 +117,16 @@ t.Z = (e) => {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: s()(b.subtitle, {
-                            [b.subtitle]: null == N || v,
-                            [b.subtitleWithButton]: null != N && !v,
-                            [b.fullWidth]: O || v,
+                            [b.subtitle]: null == N || T,
+                            [b.subtitleWithButton]: null != N && !T,
+                            [b.fullWidth]: B || T,
                             [b.moreSubtitleMargin]: D,
-                            [b.leftAlignSubtitle]: v,
-                            [b.centerAlignSubtitle]: !v
+                            [b.leftAlignSubtitle]: T,
+                            [b.centerAlignSubtitle]: !T
                         }),
                         children: w.subtitle
                     }),
-                    !v &&
+                    !T &&
                         null != N &&
                         (0, i.jsx)('div', {
                             className: s()(b.showAllPerksButtonCenter),
@@ -143,7 +143,7 @@ t.Z = (e) => {
                                 {
                                     confettiCanvas: e.name === f.u.FREE_BOOST || e.name === f.u.TENURE_REWARD_COLLECTIBLE ? G : void 0,
                                     ...e,
-                                    forceShadow: T
+                                    forceShadow: v
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

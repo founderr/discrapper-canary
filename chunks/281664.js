@@ -16,8 +16,8 @@ var r = n(192379),
             c = e.circleSize,
             f = e.styles,
             _ = e.circleSpacing,
-            h = e.className,
-            p = (0, s.default)(
+            p = e.className,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -45,8 +45,8 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: p.card,
-                className: 'circle-picker ' + (void 0 === h ? '' : h)
+                style: h.card,
+                className: 'circle-picker ' + (void 0 === p ? '' : p)
             },
             (0, o.Z)(a, function (e) {
                 return r.createElement(d.Z, {

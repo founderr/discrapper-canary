@@ -1,9 +1,9 @@
 n.d(t, {
     HH: function () {
-        return b;
+        return T;
     },
     O9: function () {
-        return p;
+        return h;
     },
     Vu: function () {
         return E;
@@ -15,7 +15,7 @@ n.d(t, {
         return _;
     },
     Z3: function () {
-        return h;
+        return p;
     },
     ZR: function () {
         return d;
@@ -51,13 +51,13 @@ n.d(t, {
         return y;
     },
     tB: function () {
-        return T;
+        return S;
     },
     uo: function () {
         return C;
     },
     vD: function () {
-        return S;
+        return b;
     },
     x3: function () {
         return v;
@@ -74,8 +74,8 @@ var r,
 let d = 7,
     f = 300,
     _ = 7,
-    h = 60,
-    p = 5,
+    p = 60,
+    h = 5,
     m = 1,
     g = 30,
     E = 200,
@@ -98,7 +98,7 @@ function I(e) {
         icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function S(e) {
+function b(e) {
     var t, n;
     return {
         channelId: e.channel_id,
@@ -115,7 +115,7 @@ function S(e) {
         icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function T(e) {
+function S(e) {
     if (null == e) return null;
     let { welcome_message: t, new_member_actions: n, resource_channels: r, enabled: i } = e,
         a = {
@@ -126,11 +126,11 @@ function T(e) {
     return {
         welcomeMessage: a,
         newMemberActions: s,
-        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(S),
+        resourceChannels: r.filter((e) => (0, l.lm)(o.Z.getChannel(e.channel_id))).map(b),
         enabled: i
     };
 }
-function b(e, t) {
+function T(e, t) {
     var n, r;
     if (null == t) return null;
     let { welcomeMessage: i, newMemberActions: a, resourceChannels: s, enabled: u } = t,

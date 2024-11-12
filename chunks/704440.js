@@ -16,16 +16,16 @@ var r = n(200651),
     d = n(37234),
     f = n(100527),
     _ = n(906732),
-    h = n(626135),
-    p = n(55935),
+    p = n(626135),
+    h = n(55935),
     m = n(63063),
     g = n(281494),
     E = n(790368),
     v = n(474936),
     I = n(981631),
-    S = n(388032),
-    T = n(776222),
-    b = n(751599),
+    b = n(388032),
+    S = n(776222),
+    T = n(751599),
     y = n(397293),
     A = n(352175),
     N = n(90351);
@@ -44,62 +44,62 @@ let C = async (e, t, n) => {
             [u, d] = i.useState(!1),
             f = n - 1;
         return (0, r.jsxs)('div', {
-            className: T.confirmationContainer,
+            className: S.confirmationContainer,
             children: [
                 (0, r.jsxs)('div', {
                     className: s()({
-                        [T.confirmationBody]: !l,
-                        [T.confirmationBirthdayBody]: l
+                        [S.confirmationBody]: !l,
+                        [S.confirmationBirthdayBody]: l
                     }),
                     children: [
                         (0, r.jsx)(c.ModalCloseButton, {
                             onClick: t,
-                            className: T.closeButton
+                            className: S.closeButton
                         }),
                         (0, r.jsx)('img', {
                             alt: '',
                             src: l ? y : A,
-                            className: T.confirmationImage
+                            className: S.confirmationImage
                         }),
                         (0, r.jsx)(c.Heading, {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
-                            className: T.confirmationHeading,
-                            children: S.intl.string(S.t.dF5azM)
+                            className: S.confirmationHeading,
+                            children: b.intl.string(b.t.dF5azM)
                         }),
                         (0, r.jsx)(c.Text, {
-                            className: T.confirmationBodyCopy,
+                            className: S.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: f > 0 ? S.intl.formatToPlainString(S.t['J/tYnp'], { count: f }) : S.intl.string(S.t.vVnRxc)
+                            children: f > 0 ? b.intl.formatToPlainString(b.t['J/tYnp'], { count: f }) : b.intl.string(b.t.vVnRxc)
                         }),
-                        (0, r.jsx)('hr', { className: T.confirmationBodySeparator })
+                        (0, r.jsx)('hr', { className: S.confirmationBodySeparator })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: T.confirmationButtonContainer,
+                    className: S.confirmationButtonContainer,
                     children: [
                         (0, r.jsx)(c.Button, {
-                            className: T.confirmationShareButton,
+                            className: S.confirmationShareButton,
                             submitting: u,
                             onClick: () => {
                                 C(a, t, d),
-                                    h.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                    p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
                                         location_stack: o,
                                         step: v.fz.FLOW_COMPLETED,
                                         other_user_id: Number(a)
                                     });
                             },
-                            children: S.intl.string(S.t['zxlx6+'])
+                            children: b.intl.string(b.t['zxlx6+'])
                         }),
                         (0, r.jsx)('div', {
-                            className: T.confirmationCancelButtonContainer,
+                            className: S.confirmationCancelButtonContainer,
                             children: (0, r.jsx)(c.Clickable, {
                                 onClick: t,
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    className: T.confirmationCancelCopy,
-                                    children: S.intl.string(S.t['ETE/oK'])
+                                    className: S.confirmationCancelCopy,
+                                    children: b.intl.string(b.t['ETE/oK'])
                                 })
                             })
                         })
@@ -127,43 +127,43 @@ function O(e) {
                 shouldShowBirthdayUX: L
             })
           : (0, r.jsxs)('div', {
-                className: T.generalContainer,
+                className: S.generalContainer,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: T.generalBodyContainer,
+                        className: S.generalBodyContainer,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: L ? y : N,
-                                className: T.generalBodyImage
+                                className: S.generalBodyImage
                             }),
                             (0, r.jsxs)('div', {
-                                className: T.innerContent,
+                                className: S.innerContent,
                                 children: [
                                     (0, r.jsx)(c.ModalCloseButton, {
                                         onClick: a,
-                                        className: T.closeButton
+                                        className: S.closeButton
                                     }),
                                     (0, r.jsx)(c.Heading, {
-                                        className: T.generalHeading,
+                                        className: S.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: o ? S.intl.string(S.t.yCN5Qk) : S.intl.string(S.t.c1wxcX)
+                                        children: o ? b.intl.string(b.t.yCN5Qk) : b.intl.string(b.t.c1wxcX)
                                     }),
                                     (0, r.jsxs)(c.Text, {
-                                        className: T.generalBodyCopy,
+                                        className: S.generalBodyCopy,
                                         variant: 'text-md/normal',
                                         children: [
                                             (0, r.jsx)(c.Anchor, {
-                                                className: s()(T.learnMore, { [T.learnMoreResendUnderlinedText]: o }),
+                                                className: s()(S.learnMore, { [S.learnMoreResendUnderlinedText]: o }),
                                                 href: m.Z.getArticleURL(I.BhN.SHARE_NITRO_FAQ),
-                                                children: o ? S.intl.string(S.t.yJfqPT) : S.intl.format(S.t['+Z4ey8'], { count: t })
+                                                children: o ? b.intl.string(b.t.yJfqPT) : b.intl.format(b.t['+Z4ey8'], { count: t })
                                             }),
                                             o
                                                 ? (0, r.jsx)('div', {
-                                                      className: T.shareNitroResendCopySuffix,
-                                                      children: S.intl.string(S.t['b0B69/'])
+                                                      className: S.shareNitroResendCopySuffix,
+                                                      children: b.intl.string(b.t['b0B69/'])
                                                   })
-                                                : (0, r.jsx)('div', { children: S.intl.format(S.t['58lPt7'], { date: (0, p.vc)(l()(x), 'LL') }) })
+                                                : (0, r.jsx)('div', { children: b.intl.format(b.t['58lPt7'], { date: (0, h.vc)(l()(x), 'LL') }) })
                                         ]
                                     })
                                 ]
@@ -171,27 +171,27 @@ function O(e) {
                             L &&
                                 (0, r.jsx)('img', {
                                     alt: '',
-                                    src: b,
-                                    className: T.birthdayBackgroundImage
+                                    src: T,
+                                    className: S.birthdayBackgroundImage
                                 })
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: T.generalButtonContainer,
+                        className: S.generalButtonContainer,
                         children: (0, r.jsx)(c.Button, {
-                            className: T.generalShareButton,
+                            className: S.generalShareButton,
                             submitting: g,
                             onClick: () => {
                                 o
                                     ? C(O, a, A)
                                     : (d(!0),
-                                      h.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                      p.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: D,
                                           step: v.fz.FLOW_STARTED,
                                           other_user_id: Number(O)
                                       }));
                             },
-                            children: o ? S.intl.string(S.t.awsERE) : S.intl.string(S.t.Ago7Zm)
+                            children: o ? b.intl.string(b.t.awsERE) : b.intl.string(b.t.Ago7Zm)
                         })
                     })
                 ]
@@ -217,7 +217,7 @@ function D(e) {
                   onRequestClose: () => void 0,
                   closeOnScroll: !1,
                   ignoreModalClicks: !0,
-                  children: () => (0, r.jsx)('div', { className: T.__invalid_popoutTarget })
+                  children: () => (0, r.jsx)('div', { className: S.__invalid_popoutTarget })
               })
           })
         : null;

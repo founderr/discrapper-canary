@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     cL: function () {
-        return p;
+        return h;
     },
     di: function () {
         return f;
@@ -18,7 +18,7 @@ n.d(t, {
         return d;
     },
     tK: function () {
-        return h;
+        return p;
     },
     wD: function () {
         return u;
@@ -32,7 +32,7 @@ var r = n(512722),
     o = n(625137),
     l = n(981631);
 function u(e, t) {
-    var n, r, o, u, c, d, f, _, h, p, m, g, E;
+    var n, r, o, u, c, d, f, _, p, h, m, g, E;
     let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
         I = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
     if (null == e.properties) {
@@ -46,7 +46,7 @@ function u(e, t) {
                   premiumSubscriberCount: I
               });
     }
-    let S = {
+    let b = {
         id: e.id,
         joinedAt: v,
         premiumSubscriberCount: I,
@@ -68,14 +68,14 @@ function u(e, t) {
         defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.bL.ALL_MESSAGES,
         mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.BpS.NONE,
         vanityURLCode: e.properties.vanity_url_code,
-        premiumTier: null !== (h = e.properties.premium_tier) && void 0 !== h ? h : l.Eu4.NONE,
+        premiumTier: null !== (p = e.properties.premium_tier) && void 0 !== p ? p : l.Eu4.NONE,
         premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
         systemChannelFlags: e.properties.system_channel_flags,
         discoverySplash: e.properties.discovery_splash,
         rulesChannelId: e.properties.rules_channel_id,
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
-        maxStageVideoChannelUsers: null !== (p = e.properties.max_stage_video_channel_users) && void 0 !== p ? p : -1,
+        maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
         maxVideoChannelUsers: null !== (m = e.properties.max_video_channel_users) && void 0 !== m ? m : -1,
         maxMembers: null !== (g = e.properties.max_members) && void 0 !== g ? g : -1,
         nsfwLevel: null !== (E = e.properties.nsfw_level) && void 0 !== E ? E : l.V_K.DEFAULT,
@@ -83,7 +83,7 @@ function u(e, t) {
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         clan: e.properties.clan
     };
-    return null == t ? (0, a.gh)(S, s.ZP) : t.merge(S);
+    return null == t ? (0, a.gh)(b, s.ZP) : t.merge(b);
 }
 function c(e, t) {
     return new s.Bg({
@@ -92,8 +92,8 @@ function c(e, t) {
     });
 }
 function d(e, t) {
-    var n, r, i, a, s, o, u, c, d, f, _, p, m;
-    let g = null !== (n = e.properties) && void 0 !== n ? n : h(t),
+    var n, r, i, a, s, o, u, c, d, f, _, h, m;
+    let g = null !== (n = e.properties) && void 0 !== n ? n : p(t),
         E = {
             id: e.id,
             name: null !== (r = g.name) && void 0 !== r ? r : '',
@@ -123,7 +123,7 @@ function d(e, t) {
             publicUpdatesChannelId: g.public_updates_channel_id,
             maxStageVideoChannelUsers: null !== (f = g.max_stage_video_channel_users) && void 0 !== f ? f : -1,
             maxVideoChannelUsers: null !== (_ = g.max_video_channel_users) && void 0 !== _ ? _ : -1,
-            maxMembers: null !== (p = g.max_members) && void 0 !== p ? p : -1,
+            maxMembers: null !== (h = g.max_members) && void 0 !== h ? h : -1,
             nsfwLevel: null !== (m = g.nsfw_level) && void 0 !== m ? m : l.V_K.DEFAULT,
             hubType: g.hub_type,
             latestOnboardingQuestionId: g.latest_onboarding_question_id,
@@ -189,7 +189,7 @@ function _(e) {
     };
     return new s.ZP(t);
 }
-function h(e) {
+function p(e) {
     return {
         id: e.id,
         name: e.name,
@@ -227,7 +227,7 @@ function h(e) {
         clan: e.clan
     };
 }
-function p(e) {
+function h(e) {
     var t;
     for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : [])), e.roles)) (0, o.cf)(e.roles[n]);
     return (0, a.gh)(e, s.ZP);

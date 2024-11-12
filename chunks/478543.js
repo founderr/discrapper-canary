@@ -10,8 +10,8 @@ var r = n(200651),
     d = n(572004),
     f = n(63063),
     _ = n(358085),
-    h = n(145022),
-    p = n(981631),
+    p = n(145022),
+    h = n(981631),
     m = n(388032),
     g = n(528370);
 function E(e) {
@@ -71,19 +71,19 @@ function v(e) {
 }
 t.Z = (e) => {
     var t, n, a;
-    let { loading: o = !1, currentOverrides: d, linkMeta: I, url: S, applyBuildOverride: T, clearBuildOverride: b } = e,
+    let { loading: o = !1, currentOverrides: d, linkMeta: I, url: b, applyBuildOverride: S, clearBuildOverride: T } = e,
         [y, A] = i.useState(!1),
         N = i.useCallback(() => {
-            if (!y) A(!0), T().catch(() => A(!1));
-        }, [T, y]),
+            if (!y) A(!0), S().catch(() => A(!1));
+        }, [S, y]),
         C = i.useCallback(() => {
-            if (!y) A(!0), b().catch(() => A(!1));
-        }, [b, y]);
+            if (!y) A(!0), T().catch(() => A(!1));
+        }, [T, y]);
     return (0, r.jsxs)('div', {
         className: g.wrapper,
         children: [
             ((t = I),
-            (n = S),
+            (n = b),
             (a = o),
             (0, r.jsxs)(u.Text, {
                 variant: 'text-xs/normal',
@@ -95,7 +95,7 @@ t.Z = (e) => {
                     }),
                     (0, r.jsx)(u.Anchor, {
                         className: g.infoLink,
-                        href: f.Z.getArticleURL(p.BhN.BUILD_OVERRIDE_EMBED),
+                        href: f.Z.getArticleURL(h.BhN.BUILD_OVERRIDE_EMBED),
                         target: '_blank',
                         children: (0, r.jsx)(u.CircleInformationIcon, {
                             size: 'xs',
@@ -126,9 +126,9 @@ t.Z = (e) => {
                                   i,
                                   a,
                                   { currentOverrides: s, linkMeta: o, applyBuildOverride: c, clearBuildOverride: d, submitting: f } = e,
-                                  p = ['discord_web'];
-                              !_.isPlatformEmbedded && p.push('discord_marketing', 'discord_developers');
-                              let g = (0, h.Z)(o, p);
+                                  h = ['discord_web'];
+                              !_.isPlatformEmbedded && h.push('discord_marketing', 'discord_developers');
+                              let g = (0, p.Z)(o, h);
                               if (!g.valid)
                                   return (function (e) {
                                       return v({
@@ -141,12 +141,12 @@ t.Z = (e) => {
                                   })(g.reason);
                               l()(null != o, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
                               let { discord_web: E, discord_developers: I } = o.targetBuildOverride,
-                                  S = null != E ? E : I;
-                              if ((l()(null != S, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = S), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = m.intl.string(m.t.nOunHB)), (r = c), (a = u.Button.Colors.GREEN);
+                                  b = null != E ? E : I;
+                              if ((l()(null != b, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), (t = b), null == (n = s) || null == n.discord_web ? 1 : t.id !== n.discord_web.id || t.type !== n.discord_web.type)) (i = m.intl.string(m.t.nOunHB)), (r = c), (a = u.Button.Colors.GREEN);
                               else (i = m.intl.string(m.t.tX4xrq)), (r = d), (a = u.Button.Colors.RED);
                               return v({
                                   subHead: m.intl.string(m.t.RCYGoq),
-                                  buildDetails: S.id,
+                                  buildDetails: b.id,
                                   buttonClick: r,
                                   buttonText: i,
                                   buttonColor: a,

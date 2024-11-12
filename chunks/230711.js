@@ -73,7 +73,7 @@ t.Z = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-        let { username: n, email: s, emailToken: c, password: h, avatar: p, newPassword: m, discriminator: g } = e,
+        let { username: n, email: s, emailToken: c, password: p, avatar: h, newPassword: m, discriminator: g } = e,
             { close: E } = t;
         return (0, u.Z)(
             (e) => {
@@ -81,8 +81,8 @@ t.Z = {
                         username: n,
                         email: s,
                         email_token: c,
-                        password: h,
-                        avatar: p,
+                        password: p,
+                        avatar: h,
                         new_password: m,
                         ...e,
                         discriminator: null != g && '' !== g ? g : void 0
@@ -133,7 +133,7 @@ t.Z = {
                             user: t,
                             newPassword: m
                         }),
-                    null != h &&
+                    null != p &&
                         null != m &&
                         a.Z.dispatch({
                             type: 'PASSWORD_UPDATED',

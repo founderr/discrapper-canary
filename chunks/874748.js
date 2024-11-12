@@ -1,6 +1,6 @@
 n.d(t, {
     BC: function () {
-        return h;
+        return p;
     },
     LR: function () {
         return _;
@@ -21,21 +21,21 @@ var r = n(830121),
     d = n(388032);
 function f(e) {
     var t, n, r, i, a;
-    let { mediaPostEmbedData: u, guild: f, parentChannel: _, postThread: h, user: p, selectedGuildId: m, canAccess: g = !1 } = e;
+    let { mediaPostEmbedData: u, guild: f, parentChannel: _, postThread: p, user: h, selectedGuildId: m, canAccess: g = !1 } = e;
     if (null == u) return null;
     let E = (0, l.EY)(u.thumbnail),
         v = !g && u.has_media_attachment,
         I = g ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
-        S = null != p ? o.ZP.getName(u.guild_id, u.channel_id, p) : void 0,
-        T = null == p ? void 0 : p.getAvatarURL(null == f ? void 0 : f.id, 40);
-    (null == T || m !== u.guild_id) &&
-        (T = s.ZP.getGuildIconURL({
+        b = null != h ? o.ZP.getName(u.guild_id, u.channel_id, h) : void 0,
+        S = null == h ? void 0 : h.getAvatarURL(null == f ? void 0 : f.id, 40);
+    (null == S || m !== u.guild_id) &&
+        (S = s.ZP.getGuildIconURL({
             id: u.guild_id,
             icon: u.guild_icon,
             size: 40,
             canAnimate: !1
         }));
-    let b =
+    let T =
             (function (e) {
                 if (null == e) return !1;
                 let { height: t, width: n } = e;
@@ -50,17 +50,17 @@ function f(e) {
         coverImageOverlayText: v ? d.intl.string(d.t.YonliY) : void 0,
         parentChannelId: u.parent_channel_id,
         threadId: u.channel_id,
-        postThread: h,
+        postThread: p,
         messageId: u.message_id,
         canAccess: g,
         guildId: u.guild_id,
         guildName: null !== (a = null == f ? void 0 : f.name) && void 0 !== a ? a : u.guild_name,
         authorId: null == u ? void 0 : u.author_id,
-        authorName: S,
+        authorName: b,
         channelName: null == _ ? void 0 : _.name,
-        avatarUrl: T,
+        avatarUrl: S,
         shouldShowBlurredThumbnailImage: v,
-        shouldContainMediaWithBackground: b,
+        shouldContainMediaWithBackground: T,
         shouldSpoiler: y,
         obscureAwaitingScan: !1,
         flags: u.flags,
@@ -74,7 +74,7 @@ function _(e) {
     let n = (0, r.Sq)(t);
     if (null != n) return (0, i.Qj)(n);
 }
-function h(e, t) {
+function p(e, t) {
     let n = a.Z.getGuild(e);
     if (null == n || null == t) return !1;
     let r = n.hasFeature(u.oNc.CREATOR_MONETIZABLE) || n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL);

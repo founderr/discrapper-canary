@@ -10,26 +10,26 @@ var r,
     d = n(442837),
     f = n(570140),
     _ = n(317381),
-    h = n(676035),
-    p = n(594190),
+    p = n(676035),
+    h = n(594190),
     m = n(106301),
     g = n(406066),
     E = n(768419),
     v = n(695346),
     I = n(581883),
-    S = n(199902),
-    T = n(272053),
-    b = n(77498),
+    b = n(199902),
+    S = n(272053),
+    T = n(77498),
     y = n(981631);
 let A = [],
     N = {};
 function C() {
     let e = [],
         t = v.Ok.getSetting();
-    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, h.I)(t));
+    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, p.I)(t));
     let n = g.Z.getActivities();
     e.push(...n);
-    let r = T.Z.getStream();
+    let r = S.Z.getStream();
     null != r &&
         e.push({
             type: y.IIU.STREAMING,
@@ -40,16 +40,16 @@ function C() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let a = p.ZP.getVisibleGame(),
+    let a = h.ZP.getVisibleGame(),
         s = null != a && null != a.name && i.has(a.name),
         o = null != a && a.isLauncher,
-        u = S.Z.getCurrentUserActiveStream();
+        u = b.Z.getCurrentUserActiveStream();
     if (null != a && null != a.name && !(s || (o && !(null != u)))) {
         var d, f;
         e.push({
             type: y.IIU.PLAYING,
             name: a.name,
-            application_id: null !== (f = a.id) && void 0 !== f ? f : null === (d = b.Z.getGameByName(a.name)) || void 0 === d ? void 0 : d.id,
+            application_id: null !== (f = a.id) && void 0 !== f ? f : null === (d = T.Z.getGameByName(a.name)) || void 0 === d ? void 0 : d.id,
             timestamps: { start: a.start }
         });
     }
@@ -74,7 +74,7 @@ function C() {
 }
 class R extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, _.ZP, T.Z, S.Z, E.Z, I.Z, m.Z, b.Z), this.syncWith([g.Z, m.Z], () => C());
+        this.waitFor(h.ZP, _.ZP, S.Z, b.Z, E.Z, I.Z, m.Z, T.Z), this.syncWith([g.Z, m.Z], () => C());
     }
     getActivities() {
         return A;

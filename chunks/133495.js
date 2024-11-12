@@ -24,16 +24,16 @@ e.exports = function e(t, n, a) {
         _ = function () {
             (c = !1), (f = !0), !u && a.call(t);
         },
-        h = t._readableState && t._readableState.endEmitted,
-        p = function () {
-            (u = !1), (h = !0), !c && a.call(t);
+        p = t._readableState && t._readableState.endEmitted,
+        h = function () {
+            (u = !1), (p = !0), !c && a.call(t);
         },
         m = function (e) {
             a.call(t, e);
         },
         g = function () {
             var e;
-            return u && !h ? ((!t._readableState || !t._readableState.ended) && (e = new r()), a.call(t, e)) : c && !f ? ((!t._writableState || !t._writableState.ended) && (e = new r()), a.call(t, e)) : void 0;
+            return u && !p ? ((!t._readableState || !t._readableState.ended) && (e = new r()), a.call(t, e)) : c && !f ? ((!t._writableState || !t._writableState.ended) && (e = new r()), a.call(t, e)) : void 0;
         },
         E = function () {
             t.req.on('finish', _);
@@ -41,12 +41,12 @@ e.exports = function e(t, n, a) {
     if ((l = t).setHeader && 'function' == typeof l.abort) t.on('complete', _), t.on('abort', g), t.req ? E() : t.on('request', E);
     else c && !t._writableState && (t.on('end', d), t.on('close', d));
     return (
-        t.on('end', p),
+        t.on('end', h),
         t.on('finish', _),
         !1 !== n.error && t.on('error', m),
         t.on('close', g),
         function () {
-            t.removeListener('complete', _), t.removeListener('abort', g), t.removeListener('request', E), t.req && t.req.removeListener('finish', _), t.removeListener('end', d), t.removeListener('close', d), t.removeListener('finish', _), t.removeListener('end', p), t.removeListener('error', m), t.removeListener('close', g);
+            t.removeListener('complete', _), t.removeListener('abort', g), t.removeListener('request', E), t.req && t.req.removeListener('finish', _), t.removeListener('end', d), t.removeListener('close', d), t.removeListener('finish', _), t.removeListener('end', h), t.removeListener('error', m), t.removeListener('close', g);
         }
     );
 };

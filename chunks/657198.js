@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(703558),
     f = n(117530),
     _ = n(91313),
-    h = n(436660),
-    p = n(887490),
+    p = n(436660),
+    h = n(887490),
     m = n(388032),
     g = n(896061);
 function E(e, t, n) {
@@ -58,8 +58,8 @@ let v = (e) => {
         { channelId: n, element: a, attributes: _, children: E } = e,
         v = (0, o.vt)(),
         I = (0, o.UE)(),
-        S = (0, o._7)(),
-        { optionType: T, errored: b } = (0, l.cj)(
+        b = (0, o._7)(),
+        { optionType: S, errored: T } = (0, l.cj)(
             [c.Z],
             () => {
                 var e, t, r;
@@ -72,17 +72,17 @@ let v = (e) => {
         ),
         y = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
         A = a.children[a.children.length - 1],
-        N = null != A && p.LC.isText(A) && A.text.endsWith('\n'),
+        N = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
         C = s()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: I && v,
-            [g.erroredPill]: (!I || !v) && b
+            [g.erroredPill]: (!I || !v) && T
         }),
         R = i.useCallback(() => {
-            !p.bN.isVoid(S, a) && h.Q.selectCommandOption(S, a.optionName, !0);
-        }, [S, a]);
+            !h.bN.isVoid(b, a) && p.Q.selectCommandOption(b, a.optionName, !0);
+        }, [b, a]);
     return (
         (t =
-            T === u.jw.ATTACHMENT
+            S === u.jw.ATTACHMENT
                 ? (null == y ? void 0 : y.filename) != null
                     ? (0, r.jsxs)('span', {
                           className: s()(g.optionPillValue, g.attachmentFilename),

@@ -9,16 +9,16 @@ var a,
     d = n(442837),
     f = n(570140),
     _ = n(189786),
-    h = n(981631),
-    p = n(354459);
+    p = n(981631),
+    h = n(354459);
 let m = 0,
     g = 0,
     E = {},
     v = new Set(),
     I = new Map(),
+    b = {},
     S = {},
     T = {},
-    b = {},
     y = {};
 function A(e, t) {
     return ''.concat(e, ':').concat(t);
@@ -29,42 +29,42 @@ function N(e, t) {
 }
 function C(e) {
     var t;
-    let n = null !== (t = E[h.ME]) && void 0 !== t ? t : {},
+    let n = null !== (t = E[p.ME]) && void 0 !== t ? t : {},
         r = {};
     c().each(n, (t, n) => {
         t.channelId !== e && (r[n] = t);
     }),
-        (E[h.ME] = r);
+        (E[p.ME] = r);
 }
 function R(e) {
     var t;
     return null !== (t = I.get(e)) && void 0 !== t ? t : new Set();
 }
 function O(e, t, n) {
-    let r = N(E, null != e ? e : h.ME),
+    let r = N(E, null != e ? e : p.ME),
         i = r[t],
         a = n(i);
     return i === a
         ? [!1, a, i]
         : (null != i &&
               (delete r[t],
-              null != i.channelId && (delete N(S, i.channelId)[t], delete N(T, i.channelId)[t]),
-              null != i.sessionId && delete N(b, t)[i.sessionId],
+              null != i.channelId && (delete N(b, i.channelId)[t], delete N(S, i.channelId)[t]),
+              null != i.sessionId && delete N(T, t)[i.sessionId],
               !(function (e, t) {
                   let n = R(e);
                   if (!!n.has(t)) (n = new Set(n)).delete(t), 0 === n.size ? I.delete(e) : I.set(e, n);
-              })(null != e ? e : h.ME, t)),
+              })(null != e ? e : p.ME, t)),
           null != a &&
               ((r[t] = a),
               null != a.channelId &&
-                  ((N(S, a.channelId)[t] = a),
+                  ((N(b, a.channelId)[t] = a),
                   a.selfVideo &&
-                      ((N(T, a.channelId)[t] = a),
+                      ((N(S, a.channelId)[t] = a),
                       !(function (e, t) {
                           let n = R(e);
                           if (!n.has(t)) (n = new Set(n)).add(t), I.set(e, n);
-                      })(null != e ? e : h.ME, t))),
-              null != a.sessionId && (N(b, t)[a.sessionId] = a)),
+                      })(null != e ? e : p.ME, t))),
+              null != a.sessionId && (N(T, t)[a.sessionId] = a)),
           [!0, a, i]);
 }
 function D(e, t) {
@@ -104,13 +104,13 @@ class x extends (a = d.ZP.Store) {
         return g;
     }
     getVoiceStates(e) {
-        return N(E, null != e ? e : h.ME);
+        return N(E, null != e ? e : p.ME);
     }
     getVoiceStatesForChannel(e) {
-        return N(S, e);
+        return N(b, e);
     }
     getVideoVoiceStatesForChannel(e) {
-        return N(T, e);
+        return N(S, e);
     }
     getVoiceState(e, t) {
         return this.getVoiceStates(e)[t];
@@ -122,17 +122,17 @@ class x extends (a = d.ZP.Store) {
     getVoiceStateForChannel(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
-        return null === (t = N(S, e)) || void 0 === t ? void 0 : t[n];
+        return null === (t = N(b, e)) || void 0 === t ? void 0 : t[n];
     }
     getVoiceStateForUser(e) {
-        return Object.values(N(b, e))[0];
+        return Object.values(N(T, e))[0];
     }
     getDiscoverableVoiceStateForUser(e) {
-        return Object.values(N(b, e)).find((e) => !1 !== e.discoverable);
+        return Object.values(N(T, e)).find((e) => !1 !== e.discoverable);
     }
     getVoiceStateForSession(e, t) {
         var n;
-        return null != t ? (null === (n = N(b, e)) || void 0 === n ? void 0 : n[t]) : null;
+        return null != t ? (null === (n = N(T, e)) || void 0 === n ? void 0 : n[t]) : null;
     }
     getUserVoiceChannelId(e, t) {
         var n;
@@ -148,7 +148,7 @@ class x extends (a = d.ZP.Store) {
     }
     isCurrentClientInVoiceChannel() {
         var e;
-        return null != i && (null === (e = b[r]) || void 0 === e ? void 0 : e[i]) != null;
+        return null != i && (null === (e = T[r]) || void 0 === e ? void 0 : e[i]) != null;
     }
     isInChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
@@ -157,12 +157,12 @@ class x extends (a = d.ZP.Store) {
         return null != n && (t !== r || (null != i && n.sessionId === i));
     }
     hasVideo(e) {
-        return Object.values(N(T, e)).length > 0;
+        return Object.values(N(S, e)).length > 0;
     }
     getVoicePlatformForChannel(e, t) {
         var n, a;
-        let s = null != i && (null === (a = b[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
-        return t === r && e === s ? p.wR.DESKTOP : y[A(t, e)];
+        let s = null != i && (null === (a = T[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
+        return t === r && e === s ? h.wR.DESKTOP : y[A(t, e)];
     }
     get userHasBeenMovedVersion() {
         return m;
@@ -181,14 +181,14 @@ class x extends (a = d.ZP.Store) {
         CONNECTION_OPEN: function (e) {
             let { user: t, sessionId: n } = e,
                 a = null != r && r !== t.id;
-            return a && ((E = {}), (S = {}), (b = {}), (T = {}), I.clear()), (r = t.id), (i = n), a;
+            return a && ((E = {}), (b = {}), (T = {}), (S = {}), I.clear()), (r = t.id), (i = n), a;
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function () {
-            (E = {}), (S = {}), (b = {}), (T = {}), I.clear();
+            (E = {}), (b = {}), (T = {}), (S = {}), I.clear();
         },
         OVERLAY_INITIALIZE: function (e) {
             let { voiceStates: t, user: n, sessionId: a } = e;
-            for (let [e, n] of ((E = {}), (S = {}), (b = {}), (T = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) O(e, t, () => new _.Z(r));
+            for (let [e, n] of ((E = {}), (b = {}), (T = {}), (S = {}), Object.entries(t))) for (let [t, r] of Object.entries(n)) O(e, t, () => new _.Z(r));
             (r = n.id), (i = a);
         },
         VOICE_CHANNEL_SELECT: function (e) {

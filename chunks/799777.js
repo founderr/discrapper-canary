@@ -9,8 +9,8 @@ var i,
     d = n(433517),
     f = n(570140),
     _ = n(981631);
-let h = 'GameLibraryViewStore',
-    p = _.sHY.ASCENDING,
+let p = 'GameLibraryViewStore',
+    h = _.sHY.ASCENDING,
     m = _.iEv.LAST_PLAYED,
     g = !1,
     E = u().debounce(() => {
@@ -19,11 +19,11 @@ let h = 'GameLibraryViewStore',
 class v extends (o = c.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = d.K.get(h)) && void 0 !== e ? e : {};
-        null != t.sortDirection && null != t.sortKey && ((p = t.sortDirection), (m = t.sortKey));
+        let t = null !== (e = d.K.get(p)) && void 0 !== e ? e : {};
+        null != t.sortDirection && null != t.sortKey && ((h = t.sortDirection), (m = t.sortKey));
     }
     get sortDirection() {
-        return p;
+        return h;
     }
     get sortKey() {
         return m;
@@ -47,10 +47,10 @@ class v extends (o = c.ZP.Store) {
 let I = new v(f.Z, {
     LIBRARY_TABLE_SORT_UPDATE: function (e) {
         let { direction: t, key: n } = e;
-        (p = t),
+        (h = t),
             (m = n),
-            d.K.set(h, {
-                sortDirection: p,
+            d.K.set(p, {
+                sortDirection: h,
                 sortKey: m
             });
     },

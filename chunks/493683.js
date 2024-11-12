@@ -10,14 +10,14 @@ var r = n(544891),
     d = n(703656),
     f = n(359110),
     _ = n(131704),
-    h = n(592125),
-    p = n(306680),
+    p = n(592125),
+    h = n(306680),
     m = n(626135),
     g = n(73346),
     E = n(26151),
     v = n(287734),
     I = n(981631),
-    S = n(388032);
+    b = n(388032);
 t.Z = {
     async openPrivateChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -50,8 +50,8 @@ t.Z = {
         }
     },
     _openCachedDMChannel(e, t) {
-        let n = h.Z.getDMFromUserId(e),
-            r = null != n ? h.Z.getChannel(n) : null;
+        let n = p.Z.getDMFromUserId(e),
+            r = null != n ? p.Z.getChannel(n) : null;
         return null == r ? null : (null == t || t(), null != (0, u.PP)() ? (0, f.Kh)(r.id, { navigationReplace: !0 }) : v.default.selectPrivateChannel(r.id), r);
     },
     async ensurePrivateChannel(e) {
@@ -71,7 +71,7 @@ t.Z = {
         );
     },
     async getOrEnsurePrivateChannel(e) {
-        let t = h.Z.getDMFromUserId(e);
+        let t = p.Z.getDMFromUserId(e);
         return null != t ? t : await this.ensurePrivateChannel(e);
     },
     async getDMChannel(e) {
@@ -104,7 +104,7 @@ t.Z = {
             (0, o.Z)(e) &&
                 m.default.track(I.rMx.CHANGE_LOG_DM_REMOVED, {
                     last_changelog_id: s.Z.latestChangelogId(),
-                    unread_count: p.ZP.getUnreadCount(e)
+                    unread_count: h.ZP.getUnreadCount(e)
                 }),
             a.Z.dispatch({
                 type: 'CHANNEL_DELETE',
@@ -123,10 +123,10 @@ t.Z = {
                     oldFormErrors: !0
                 })
                 .then(() => {
-                    i.uv.announce(S.intl.string(S.t.nRbucn));
+                    i.uv.announce(b.intl.string(b.t.nRbucn));
                 })
                 .catch(() => {
-                    i.uv.announce(S.intl.string(S.t.ndXVIy));
+                    i.uv.announce(b.intl.string(b.t.ndXVIy));
                 })
         );
     },
@@ -166,8 +166,8 @@ t.Z = {
                 context: { location: n },
                 oldFormErrors: !0
             })
-            .then((t) => ((i.uv.announce(S.intl.string(S.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
-            .catch(() => (i.uv.announce(S.intl.string(S.t['8GEden'])), e));
+            .then((t) => ((i.uv.announce(b.intl.string(b.t.cU0t1N)), null == a || a(), 201 === t.status) ? this._openPrivateChannel(t.body).id : e))
+            .catch(() => (i.uv.announce(b.intl.string(b.t['8GEden'])), e));
     },
     addRecipients(e, t, n, r) {
         return this.addRecipient(e, t[0], n, r).then((e) => Promise.all(t.slice(1).map((t) => this.addRecipient(e, t, n))).then(() => e));
@@ -184,7 +184,7 @@ t.Z = {
             oldFormErrors: !0
         }),
     async setName(e, t) {
-        let n = h.Z.getChannel(e),
+        let n = p.Z.getChannel(e),
             i = await r.tn.patch({
                 url: I.ANM.CHANNEL(e),
                 body: { name: t },
@@ -194,7 +194,7 @@ t.Z = {
         return null != a && !(null == n ? void 0 : n.isThread()) && l.Z.checkGuildTemplateDirty(a), i;
     },
     setIcon(e, t) {
-        let n = h.Z.getChannel(e);
+        let n = p.Z.getChannel(e);
         r.tn
             .patch({
                 url: I.ANM.CHANNEL(e),

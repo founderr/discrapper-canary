@@ -23,9 +23,9 @@ function s(e, t, n) {
 }
 class o extends a.Z {
     static fromServer(e) {
-        let { products: t, logo: n, hero_ranking: a, pdp_bg: s, mobile_bg: l, success_modal_bg: u, mobile_banner: c, hero_banner: d, featured_block: f, hero_logo: _, ...h } = e;
+        let { products: t, logo: n, hero_ranking: a, pdp_bg: s, mobile_bg: l, success_modal_bg: u, mobile_banner: c, hero_banner: d, featured_block: f, hero_logo: _, ...p } = e;
         return new o({
-            ...super.fromServer(h),
+            ...super.fromServer(p),
             products: t.reduce((e, t) => {
                 let n = i.Z.fromServer(t);
                 return 0 === (n.type !== r.Z.VARIANTS_GROUP && n.items.length) ? e : (e.push(n), e);

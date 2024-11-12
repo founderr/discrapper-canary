@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(702646),
     T = n(207796),
     x = n(782322),
-    A = n(895068),
-    b = n(308083),
+    b = n(895068),
+    A = n(308083),
     Z = n(388032),
     y = n(641388);
 function L(e) {
@@ -60,7 +60,7 @@ function L(e) {
                             guildId: a
                         });
                     },
-                    { layerKey: b.Pv }
+                    { layerKey: A.Pv }
                 );
         }, [a]),
         _ = r.useMemo(
@@ -127,8 +127,8 @@ function L(e) {
 }
 t.Z = r.memo(function (e) {
     let t,
-        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = A.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
-        { enabled: b } = (0, E.I7)(),
+        { width: n, paddingVertical: o = 16, paddingHorizontal: c = 32, variant: u = b.Bj.DEFAULT, onScroll: h, withAdminContent: I = !1 } = e,
+        { enabled: A } = (0, E.I7)(),
         R = r.useRef(null),
         j = r.useRef(null),
         O = (0, T.GN)((e) => e.completedNux, l.X),
@@ -137,19 +137,19 @@ t.Z = r.memo(function (e) {
         { backgroundImageUrl: w, gameName: k } = (0, S.kN)(P),
         U = r.useCallback(() => {
             var e, t, n;
-            if (!b) return;
+            if (!A) return;
             let i = null === (e = R.current) || void 0 === e ? void 0 : e.getBoundingClientRect().top,
                 r = null !== (n = null === (t = j.current) || void 0 === t ? void 0 : t.getScrollerState().scrollTop) && void 0 !== n ? n : 0;
             null != i && D !== i && M(i + r);
-        }, [D, b]);
+        }, [D, A]);
     r.useEffect(() => {
-        if (!b) return;
+        if (!A) return;
         let e = (0, C.pP)(U);
         return (0, C.YP)(e, document.body), () => (0, C.UC)(e, document.body);
-    }, [b, U]);
+    }, [A, U]);
     let G = r.useCallback(() => {
             var e, t;
-            b && null != D
+            A && null != D
                 ? null === (e = j.current) ||
                   void 0 === e ||
                   e.scrollTo({
@@ -157,7 +157,7 @@ t.Z = r.memo(function (e) {
                       animate: !1
                   })
                 : null === (t = j.current) || void 0 === t || t.scrollToTop();
-        }, [D, b]),
+        }, [D, A]),
         B = r.useMemo(
             () =>
                 (0, i.jsx)(L, {
@@ -216,7 +216,7 @@ t.Z = r.memo(function (e) {
                           (0, i.jsx)('div', { className: y.imageBackdrop })
                       ]
                   })
-                : b
+                : A
                   ? (0, i.jsx)(x.Z, {})
                   : (0, i.jsx)(p.Z, {
                         title: Z.intl.format(Z.t['l8D/Oz'], {}),
@@ -244,7 +244,7 @@ t.Z = r.memo(function (e) {
                                     F !== T.v0.SAVED_GUILDS && (0, i.jsx)(N.C, {})
                                 ]
                             }),
-                        (0, i.jsx)(A.ZP, {
+                        (0, i.jsx)(b.ZP, {
                             width: n,
                             onUpdatePage: G,
                             paddingHorizontal: c,

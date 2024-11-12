@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(704215),
     f = n(335854),
     _ = n(481060),
-    h = n(570140),
-    p = n(721037),
+    p = n(570140),
+    h = n(721037),
     m = n(490173),
     g = n(114250),
     E = n(735246),
     v = n(315263),
     I = n(40851),
-    S = n(607070),
-    T = n(899663),
-    b = n(793903),
+    b = n(607070),
+    S = n(899663),
+    T = n(793903),
     y = n(213609),
     A = n(613413),
     N = n(94795),
@@ -88,16 +88,16 @@ t.Z = function (e) {
         f = (0, q.getPlatform)(),
         v = u.tq || u.Em,
         z = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? er.BRd.DARK : void 0)),
-        X = (0, c.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
+        X = (0, c.e7)([b.Z], () => (b.Z.useForcedColors ? 'yes' : 'no')),
         [en, el, eu] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
         [ec, ed] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
         ef = (0, c.e7)([W.Z], () => W.Z.getLayers().includes(er.S9g.USER_SETTINGS)),
         e_ = (0, c.e7)([K.default], () => Q.ZP.canUseClientThemes(K.default.getCurrentUser())),
-        eh = en && !ef,
-        ep = [];
-    eh && el && !e_ && ep.push(d.z.CLIENT_THEMES_COACHMARK);
-    let [em, eg] = (0, U.US)(ep, ei.R.SIDEBAR, !0);
-    ep.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        ep = en && !ef,
+        eh = [];
+    ep && el && !e_ && eh.push(d.z.CLIENT_THEMES_COACHMARK);
+    let [em, eg] = (0, U.US)(eh, ei.R.SIDEBAR, !0);
+    eh.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     let eE = em === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
         ev = em === d.z.CLIENT_THEMES_COACHMARK;
     i.useEffect(() => {
@@ -110,26 +110,26 @@ t.Z = function (e) {
             eE &&
             !ev &&
             ((0, N.nJ)(),
-            h.Z.dispatch({
+            p.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
                 markAsDismissed: eg
             }));
     }, [eE, ev, eg, a]);
     let eI = i.useRef(document.body),
-        eS = (eh && !el) || ev,
-        eT = ec && !ef && !ev,
-        eb = eu || ed,
+        eb = (ep && !el) || ev,
+        eS = ec && !ef && !ev,
+        eT = eu || ed,
         { enabled: ey } = V.Z.useExperiment(
             { location: 'AppSkeleton' },
             {
-                autoTrackExposure: eb && (eS || eT),
-                disable: !eb
+                autoTrackExposure: eT && (eb || eS),
+                disable: !eT
             }
         );
     return (0, r.jsx)(
         j.Z,
         {
-            children: (0, r.jsx)(T.Z, {
+            children: (0, r.jsx)(S.Z, {
                 children: (0, r.jsxs)(_.RedesignIconContextProvider, {
                     children: [
                         (0, r.jsx)(J.Z, { skipsSettingDefaultPageTitle: n }),
@@ -170,7 +170,7 @@ t.Z = function (e) {
                                                                 'data-app-not-dev-tools': !0,
                                                                 children: (0, r.jsx)(M.m, {
                                                                     children: (0, r.jsx)(Z.OR, {
-                                                                        children: (0, r.jsx)(b.Z.Provider, {
+                                                                        children: (0, r.jsx)(T.Z.Provider, {
                                                                             value: y.Z,
                                                                             children: (0, r.jsxs)(w.p, {
                                                                                 children: [
@@ -196,18 +196,18 @@ t.Z = function (e) {
                                                                 })
                                                             }),
                                                             (0, r.jsx)(D.Z, {}),
-                                                            (0, r.jsx)(p.Z, {}),
-                                                            eS && !ey && (0, r.jsx)(x.Z, { markAsDismissed: eg }),
-                                                            eT &&
+                                                            (0, r.jsx)(h.Z, {}),
+                                                            eb && !ey && (0, r.jsx)(x.Z, { markAsDismissed: eg }),
+                                                            eS &&
                                                                 !ey &&
                                                                 (0, r.jsx)(R.Z, {
                                                                     isCoachmark: eE,
                                                                     markAsDismissed: eg
                                                                 }),
-                                                            (eS || eT) &&
+                                                            (eb || eS) &&
                                                                 ey &&
                                                                 (0, r.jsx)(Y.Z, {
-                                                                    initialTab: eT ? Y._.APP_ICONS : Y._.CLIENT_THEMES,
+                                                                    initialTab: eS ? Y._.APP_ICONS : Y._.CLIENT_THEMES,
                                                                     markAsDismissed: eg
                                                                 }),
                                                             (0, r.jsx)(k.Z, { mobile: v })

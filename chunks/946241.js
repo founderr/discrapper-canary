@@ -16,17 +16,17 @@ function d(e) {
     let { guild: t, message: n } = e,
         [d, f] = i.useState(!1),
         _ = i.useRef(!1),
-        h = (0, o.Z)({
+        p = (0, o.Z)({
             guildId: t.id,
             leaderboardId: u._,
             intervalOffset: 0
         });
     return i.useMemo(() => {
         var e;
-        if ((null == h ? void 0 : null === (e = h.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
-        let t = h.users[0];
+        if ((null == p ? void 0 : null === (e = p.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
+        let t = p.users[0];
         return n.author.id === (null == t ? void 0 : t.user_id);
-    }, [h, n])
+    }, [p, n])
         ? (0, r.jsx)('div', {
               className: c.badge,
               onMouseEnter: () => {

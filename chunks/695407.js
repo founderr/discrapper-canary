@@ -15,28 +15,28 @@ var r = n(200651),
     f = n(159769);
 let _ = i.forwardRef(function (e, t) {
     var n, a, _;
-    let { query: h, onChange: p, loading: m = !1, disabled: g = !1, placeholder: E = d.intl.string(d.t['5h0QOD']), 'aria-label': v } = e,
+    let { query: p, onChange: h, loading: m = !1, disabled: g = !1, placeholder: E = d.intl.string(d.t['5h0QOD']), 'aria-label': v } = e,
         I = i.useRef(null),
-        S = i.useRef(null);
+        b = i.useRef(null);
     i.useImperativeHandle(
         t,
         () => ({
             focus: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.focus();
+                return null === (e = b.current) || void 0 === e ? void 0 : e.focus();
             },
             blur: () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.blur();
+                return null === (e = b.current) || void 0 === e ? void 0 : e.blur();
             },
             activate: () => !1
         }),
         []
     );
-    let T =
-        ((n = h),
+    let S =
+        ((n = p),
         (a = m),
-        (_ = p),
+        (_ = h),
         a
             ? (0, r.jsx)('div', {
                   className: f.iconContainer,
@@ -84,7 +84,7 @@ let _ = i.forwardRef(function (e, t) {
                     })
                 }));
     return (0, r.jsx)(l.t, {
-        focusTarget: S,
+        focusTarget: b,
         ringTarget: I,
         offset: {
             top: 2,
@@ -99,15 +99,15 @@ let _ = i.forwardRef(function (e, t) {
                 (0, r.jsx)('input', {
                     role: 'searchbox',
                     'aria-busy': m,
-                    ref: S,
+                    ref: b,
                     className: f.input,
-                    value: h,
-                    onChange: (e) => p(e.currentTarget.value),
+                    value: p,
+                    onChange: (e) => h(e.currentTarget.value),
                     'aria-label': v,
                     placeholder: E,
                     disabled: g
                 }),
-                T
+                S
             ]
         })
     });

@@ -16,8 +16,8 @@ var r,
     f = n(762817);
 function _(e) {
     let { children: t, confettiTriggerRef: n, setConfettiCount: r, setShouldFireConfetti: i, tooltipProps: d } = e,
-        [_, h] = s.useState(0),
-        p = s.useRef(-1),
+        [_, p] = s.useState(0),
+        h = s.useRef(-1),
         m = s.useRef(!0),
         g = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { scaleFactor: E } = (0, u.useSpring)({
@@ -42,24 +42,24 @@ function _(e) {
               children: (0, a.jsx)(u.Clickable, {
                   className: f.confettiTrigger,
                   onMouseDown: () => {
-                      h(1),
+                      p(1),
                           i(!0),
                           r((e) => Math.min(e + 2, 200)),
-                          window.clearTimeout(p.current),
-                          (p.current = window.setTimeout(() => {
+                          window.clearTimeout(h.current),
+                          (h.current = window.setTimeout(() => {
                               m.current && r(0);
                           }, 200));
                   },
                   onMouseUp: () => {
-                      h(0), i(!1);
+                      p(0), i(!1);
                   },
                   onMouseEnter: () => {
                       var e;
-                      h(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d);
+                      p(2), null == d || null === (e = d.onMouseEnter) || void 0 === e || e.call(d);
                   },
                   onMouseLeave: () => {
                       var e;
-                      h(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d);
+                      p(0), null == d || null === (e = d.onMouseLeave) || void 0 === e || e.call(d);
                   },
                   innerRef: n,
                   children: t

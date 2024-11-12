@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     w: function () {
-        return p;
+        return h;
     }
 });
 var r,
@@ -30,7 +30,7 @@ function _(e, t, n) {
     );
 }
 ((r = i || (i = {})).WindowVisibilityChanged = 'window-visibility-changed'), (r.IncomingVideoEnabledChanged = 'incoming-video-enabled-changed');
-class h extends a.Z {
+class p extends a.Z {
     isIncomingVideoEnabled() {
         return this.incomingVideoEnabled;
     }
@@ -69,4 +69,4 @@ class h extends a.Z {
             u.Z.addOnPipModeChangedListener(this.handlePipModeChanged);
     }
 }
-let p = new h();
+let h = new p();

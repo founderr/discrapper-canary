@@ -7,7 +7,7 @@ n.d(t, {
         return l;
     },
     Ht: function () {
-        return p;
+        return h;
     },
     Js: function () {
         return d;
@@ -31,7 +31,7 @@ n.d(t, {
         return c;
     },
     tB: function () {
-        return h;
+        return p;
     },
     vR: function () {
         return g;
@@ -64,10 +64,10 @@ function _() {
     let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
     return isNaN(t) && (t = -1), (r = t);
 }
-function h(e) {
+function p(e) {
     v() && (r = e);
 }
-function p() {
+function h() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
 function m(e) {

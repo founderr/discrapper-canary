@@ -15,13 +15,13 @@ var i = n(442837),
     d = n(388032),
     f = n(534934);
 function _(e) {
-    let { user: t, guildId: n, fullWidth: _, onClose: h } = e,
-        p = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+    let { user: t, guildId: n, fullWidth: _, onClose: p } = e,
+        h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
         m = (0, i.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
         g = (0, s.Z)({ guild: m }),
         E = (0, s.Z)(),
         { trackUserProfileAction: v } = (0, u.KZ)();
-    return p
+    return h
         ? null == m
             ? (0, r.jsx)(c.tG, {
                   action: 'EDIT_PROFILE',
@@ -30,7 +30,7 @@ function _(e) {
                   autoFocus: !0,
                   fullWidth: _,
                   onClick: () => {
-                      null == h || h(), E();
+                      null == p || p(), E();
                   }
               })
             : (0, r.jsx)(a.Popout, {
@@ -41,7 +41,7 @@ function _(e) {
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              t(), null == h || h();
+                              t(), null == p || p();
                           },
                           'aria-label': d.intl.string(d.t.AXIHpa),
                           children: [

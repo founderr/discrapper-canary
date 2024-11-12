@@ -18,7 +18,7 @@ n.d(t, {
         return A;
     },
     ZD: function () {
-        return p;
+        return h;
     },
     fw: function () {
         return m;
@@ -33,7 +33,7 @@ n.d(t, {
         return y;
     },
     ox: function () {
-        return h;
+        return p;
     },
     qJ: function () {
         return v;
@@ -56,7 +56,7 @@ var r,
     d = n(981631);
 async function f(e, t) {
     var n;
-    let r = T(e),
+    let r = S(e),
         i = await s.tn.get({
             url: d.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0
@@ -65,19 +65,19 @@ async function f(e, t) {
 }
 async function _(e, t) {
     var n;
-    let r = S(e),
+    let r = b(e),
         i = await s.tn.get({
             url: d.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0
         });
     return null !== (n = i.body) && void 0 !== n ? n : JSON.parse(i.text);
 }
-async function h(e, t) {
-    let n = T(e),
+async function p(e, t) {
+    let n = S(e),
         r = await f(e, t);
     await s.tn.post({
         url: d.ANM.SUBMIT_REPORT_MENU(n),
-        body: b(r, e, [
+        body: T(r, e, [
             {
                 nodeRef: r.root_node_id,
                 destination: ['', r.success_node_id]
@@ -85,20 +85,20 @@ async function h(e, t) {
         ])
     });
 }
-function p(e, t, n) {
+function h(e, t, n) {
     return u.ZP.get('iar_skip_api_report_submit')
         ? Promise.resolve()
         : s.tn.post({
-              url: d.ANM.SUBMIT_REPORT_MENU(T(t)),
-              body: b(e, t, n)
+              url: d.ANM.SUBMIT_REPORT_MENU(S(t)),
+              body: T(e, t, n)
           });
 }
 function m(e, t, n, r) {
     if (u.ZP.get('iar_skip_api_report_submit')) return Promise.resolve();
-    let i = S(t);
+    let i = b(t);
     return s.tn.post({
         url: d.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
-        body: b(e, t, n, r)
+        body: T(e, t, n, r)
     });
 }
 function g(e, t) {
@@ -133,17 +133,17 @@ async function I(e) {
         })
     ).body;
 }
-function S(e) {
+function b(e) {
     let t = e.name;
     if (!Object.values(c.BM).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
 }
-function T(e) {
+function S(e) {
     let t = e.name;
     if (!Object.values(c.b).includes(t)) throw Error('Invalid report type '.concat(e.name));
     return t;
 }
-let b = (e, t, n, r) => {
+let T = (e, t, n, r) => {
     let { version: i, variant: a, language: s } = e,
         o = {
             channel_id: void 0,

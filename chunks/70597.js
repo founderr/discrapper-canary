@@ -26,9 +26,9 @@ function u(e, t) {
         d = t.days ? (0, o.Z)(t.days) : 0,
         f = t.hours ? (0, o.Z)(t.hours) : 0,
         _ = t.minutes ? (0, o.Z)(t.minutes) : 0,
-        h = t.seconds ? (0, o.Z)(t.seconds) : 0,
-        p = (0, a.default)(e),
-        m = u || n ? (0, i.default)(p, u + 12 * n) : p,
+        p = t.seconds ? (0, o.Z)(t.seconds) : 0,
+        h = (0, a.default)(e),
+        m = u || n ? (0, i.default)(h, u + 12 * n) : h,
         g = d || c ? (0, r.default)(m, d + 7 * c) : m;
-    return new Date(g.getTime() + 1000 * (h + 60 * (_ + 60 * f)));
+    return new Date(g.getTime() + 1000 * (p + 60 * (_ + 60 * f)));
 }

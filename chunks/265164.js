@@ -22,8 +22,8 @@ var i,
     N = n(70956),
     T = n(900849),
     x = n(761080),
-    A = n(584925),
-    b = n(207205),
+    b = n(584925),
+    A = n(207205),
     Z = n(981631),
     y = n(206583);
 function L(e, t, n) {
@@ -124,7 +124,7 @@ function es() {
         let i = [],
             r = [];
         t.forEach((e) => {
-            (B[e.id] = e), null != A.Z.getReadTimestamp(e.id) ? r.push(e) : i.push(e);
+            (B[e.id] = e), null != b.Z.getReadTimestamp(e.id) ? r.push(e) : i.push(e);
         }),
             (w = i),
             ($ = ea($, i, x.Rr.GUILD_EVENT, 7)),
@@ -160,7 +160,7 @@ function es() {
                             content_id: e.content.id
                         }
                     };
-                    n.add(e.content.id), (B[t.id] = t), null != A.Z.getReadTimestamp(t.id) ? a.push(t) : l.push(t);
+                    n.add(e.content.id), (B[t.id] = t), null != b.Z.getReadTimestamp(t.id) ? a.push(t) : l.push(t);
                 }),
                 (k = l),
                 ($ = ea($, l, x.Rr.ACTIVITY, 5)),
@@ -172,7 +172,7 @@ function eo() {
     if ((($ = $.filter((e) => e.type !== x.Rr.RECOMMENDED_GUILDS)), (ee = ee.filter((e) => e.type !== x.Rr.RECOMMENDED_GUILDS)), 0 === en.length)) return;
     let e = 'recommendedGuilds',
         t = Object.values(_.Z.getGuilds()).filter((e) => e.isCommunity()).length >= 5,
-        n = A.Z.getReadTimestamp(e);
+        n = b.Z.getReadTimestamp(e);
     if (t && null != n && Date.now() - ei > R && Date.now() - n < j) return;
     let i = {
         id: e,
@@ -205,7 +205,7 @@ function ec(e) {
             (P = null !== (t = G.load_id) && void 0 !== t ? t : null),
             (G = {});
     }
-    (et = 0), (0, b.em)([...$, ...ee], 0, x.xy);
+    (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
 }
 function ed(e) {
     let t = [],
@@ -213,17 +213,17 @@ function ed(e) {
         i = [];
     return (
         e.forEach((e) => {
-            let r = null != A.Z.getReadTimestamp(e.id);
-            e.type === x.Rr.MESSAGE ? (r = r || !(0, b.$U)(e.data.channel_id, e.data.message_id)) : e.type === x.Rr.SUMMARY && (r = r || !(0, b.$U)(e.data.channel_id, e.data.summary_id)), r ? t.push(e) : e.type === x.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
+            let r = null != b.Z.getReadTimestamp(e.id);
+            e.type === x.Rr.MESSAGE ? (r = r || !(0, A.$U)(e.data.channel_id, e.data.message_id)) : e.type === x.Rr.SUMMARY && (r = r || !(0, A.$U)(e.data.channel_id, e.data.summary_id)), r ? t.push(e) : e.type === x.Rr.MESSAGE && e.data.has_mention ? i.push(e) : n.push(e);
         }),
-        [[...i, ...n], t.sort((e, t) => (0, b.Rm)(e.id, t.id))]
+        [[...i, ...n], t.sort((e, t) => (0, A.Rm)(e.id, t.id))]
     );
 }
 function eu(e, t) {
     let n = [],
         i = new Set(O.map((e) => e.id));
     for (let r of e) {
-        if (!(r.type === x.Rr.RECOMMENDED_GUILDS || i.has(r.id)) && null == A.Z.getReadTimestamp(r.id) && (r.type !== x.Rr.MESSAGE || (!!(0, b.$U)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) && (r.type !== x.Rr.SUMMARY || (!!(0, b.$U)(r.data.channel_id, r.data.summary_id) && r.data.channel_id !== t))) n.push(r);
+        if (!(r.type === x.Rr.RECOMMENDED_GUILDS || i.has(r.id)) && null == b.Z.getReadTimestamp(r.id) && (r.type !== x.Rr.MESSAGE || (!!(0, A.$U)(r.data.channel_id, r.data.message_id) && r.data.channel_id !== t)) && (r.type !== x.Rr.SUMMARY || (!!(0, A.$U)(r.data.channel_id, r.data.summary_id) && r.data.channel_id !== t))) n.push(r);
     }
     return n;
 }
@@ -231,13 +231,13 @@ function eh(e, t) {
     return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.channel_id !== t);
 }
 function em(e, t) {
-    if ((0, b.jv)(t) === b.aL.MUTED) (O = eh(O, e)), ($ = eh($, e)), (ee = eh(ee, e)), (M = eh(M, e)), (U = eh(U, e));
+    if ((0, A.jv)(t) === A.aL.MUTED) (O = eh(O, e)), ($ = eh($, e)), (ee = eh(ee, e)), (M = eh(M, e)), (U = eh(U, e));
 }
 function ep(e, t) {
     return e.filter((e) => (e.type !== x.Rr.MESSAGE && e.type !== x.Rr.SUMMARY && e.type !== x.Rr.GUILD_EVENT) || e.data.guild_id !== t);
 }
 function eg(e, t) {
-    if ((0, b.jv)(t) === b.aL.MUTED) (O = ep(O, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
+    if ((0, A.jv)(t) === A.aL.MUTED) (O = ep(O, e)), ($ = ep($, e)), (ee = ep(ee, e)), (M = ep(M, e)), (U = ep(U, e));
 }
 function ef(e) {
     let { type: t, messageId: n, userId: i, emoji: r, reactionType: l } = e,
@@ -260,7 +260,7 @@ function e_(e) {
 }
 class eE extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(E.Z, g.Z, I.ZP, d.Z, v.ZP, p.default, A.Z, s.Z), null != e)) {
+        if ((this.waitFor(E.Z, g.Z, I.ZP, d.Z, v.ZP, p.default, b.Z, s.Z), null != e)) {
             var t, n, i, r, l, a;
             (O = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []).forEach((e) => {
                 B[e.id] = e;
@@ -312,7 +312,7 @@ class eE extends (i = l.ZP.PersistedStore) {
         return V;
     }
     getCustomChannelScore(e, t) {
-        return null == z[e] || null == z[e][t] ? b.aL.UNKNOWN : (0, b.jv)(z[e][t]);
+        return null == z[e] || null == z[e][t] ? A.aL.UNKNOWN : (0, A.jv)(z[e][t]);
     }
     getCustomGuildScore(e) {
         var t;
@@ -362,7 +362,7 @@ L(eE, 'displayName', 'GravityStore'),
         POST_CONNECTION_OPEN: function () {
             if (O.length > 0 && (!q || 0 === Y)) {
                 let [e, t] = ed(O);
-                ($ = e), (ee = t), es(), (et = 0), (0, b.em)([...$, ...ee], 0, x.xy);
+                ($ = e), (ee = t), es(), (et = 0), (0, A.em)([...$, ...ee], 0, x.xy);
             }
         },
         LOGOUT: function () {
@@ -403,7 +403,7 @@ L(eE, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         M.forEach((e) => {
-                            (B[e.id] = e), e.type === x.Rr.CUSTOM_STATUS && (C.Z.isBlockedOrIgnored(e.data.user_id) ? (V[e.id] = !0) : (H[e.id] = (0, b.mV)(e)));
+                            (B[e.id] = e), e.type === x.Rr.CUSTOM_STATUS && (C.Z.isBlockedOrIgnored(e.data.user_id) ? (V[e.id] = !0) : (H[e.id] = (0, A.mV)(e)));
                         });
                 })(),
                 (G = {
@@ -414,7 +414,7 @@ L(eE, 'displayName', 'GravityStore'),
             let [l, a] = ed(M);
             if (((U = eu(l)), q && 0 !== Y)) {
                 let e = U.length > x.Lb;
-                !r && (K = e), e && (0, b.em)([...l, ...a], 0, x.xy);
+                !r && (K = e), e && (0, A.em)([...l, ...a], 0, x.xy);
             } else
                 (Y = 0),
                     !q && el(l) && ((K = !0), (W = !0)),
@@ -472,7 +472,7 @@ L(eE, 'displayName', 'GravityStore'),
                     }
                     H[t.id] = {
                         ...n,
-                        summary: (0, b.wV)(t, n.data.guild_id)
+                        summary: (0, A.wV)(t, n.data.guild_id)
                     };
                 }),
                 a.forEach((e) => {

@@ -1,6 +1,6 @@
 n.d(t, {
     AH: function () {
-        return T;
+        return S;
     },
     Ag: function () {
         return x;
@@ -18,7 +18,7 @@ n.d(t, {
         return L;
     },
     QB: function () {
-        return b;
+        return T;
     },
     T0: function () {
         return O;
@@ -39,7 +39,7 @@ n.d(t, {
         return k;
     },
     m0: function () {
-        return S;
+        return b;
     },
     nE: function () {
         return N;
@@ -69,8 +69,8 @@ var r = n(990547),
     d = n(497505),
     f = n(918701),
     _ = n(184299),
-    h = n(720293),
-    p = n(566078),
+    p = n(720293),
+    h = n(566078),
     m = n(981631),
     g = n(388032);
 async function E(e) {
@@ -129,7 +129,7 @@ async function I() {
                 .map((e) => (0, f.WP)(e))
                 .filter((e) => {
                     var t;
-                    return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || p.r.build(e.config).rewardPlatforms.length > 0;
+                    return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || h.r.build(e.config).rewardPlatforms.length > 0;
                 });
             a.Z.dispatch({
                 type: 'QUESTS_FETCH_CURRENT_QUESTS_SUCCESS',
@@ -145,7 +145,7 @@ async function I() {
         }
     }
 }
-async function S(e) {
+async function b(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var l;
@@ -181,7 +181,7 @@ async function S(e) {
         });
     }
 }
-async function T(e, t) {
+async function S(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, l._3)({
@@ -214,7 +214,7 @@ async function T(e, t) {
         }
     }
 }
-async function b(e, t, n) {
+async function T(e, t, n) {
     if (!c.Z.isClaimingReward(e)) {
         a.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -434,7 +434,7 @@ async function P(e, t) {
     });
 }
 async function k(e) {
-    let t = (0, h.z)(h.i.VIDEO_PLAYER_TRANSCRIPT, e);
+    let t = (0, p.z)(p.i.VIDEO_PLAYER_TRANSCRIPT, e);
     if (null == t) {
         _.ZP.getState().setTranscriptAsset({
             questId: e.id,

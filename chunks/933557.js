@@ -3,7 +3,7 @@ n.d(t, {
         return d;
     },
     ZP: function () {
-        return h;
+        return p;
     },
     le: function () {
         return f;
@@ -35,14 +35,14 @@ function d(e, t, n) {
             return r ? '@'.concat(_) : _;
         case u.d4z.GROUP_DM:
             if ('' !== e.name) return e.name;
-            let h = e.recipients
+            let p = e.recipients
                 .map(t.getUser)
                 .filter(o.lm)
                 .map((e) => {
                     var t;
                     return null !== (t = n.getNickname(e.id)) && void 0 !== t ? t : l.ZP.getName(e);
                 });
-            if (h.length > 0) return h.join(', ');
+            if (p.length > 0) return p.join(', ');
             return c.intl.formatToPlainString(c.t['9Uk8PD'], { name: l.ZP.getName(t.getCurrentUser()) });
         case u.d4z.GUILD_ANNOUNCEMENT:
         case u.d4z.GUILD_TEXT:
@@ -69,7 +69,7 @@ function f(e) {
 function _(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, '\\');
 }
-function h(e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, r.e7)([s.default, i.Z, a.Z], () => (null == e ? null : d(e, s.default, a.Z, t)));
 }

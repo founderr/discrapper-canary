@@ -6,16 +6,16 @@ n.d(t, {
         return E;
     },
     JR: function () {
-        return T;
+        return S;
     },
     U$: function () {
-        return b;
+        return T;
     },
     e7: function () {
         return I;
     },
     wv: function () {
-        return S;
+        return b;
     },
     yK: function () {
         return v;
@@ -32,12 +32,12 @@ var r = n(192379),
     d = n(38618),
     f = n(592125),
     _ = n(70956),
-    h = n(765104),
-    p = n(981631);
+    p = n(765104),
+    h = n(981631);
 let m = 30 * _.Z.Millis.SECOND;
 async function g(e, t) {
     let n, r;
-    if (!h.Z.shouldFetch(e, t)) return;
+    if (!p.Z.shouldFetch(e, t)) return;
     let i = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_SUMMARY',
@@ -46,7 +46,7 @@ async function g(e, t) {
         requestedAt: i
     });
     try {
-        let n = await o.tn.get(p.Z5c.CHANNEL_SUMMARY(e, t));
+        let n = await o.tn.get(h.Z5c.CHANNEL_SUMMARY(e, t));
         r = null == n ? void 0 : n.body;
     } catch (e) {
         n = new u.Hx(e);
@@ -63,7 +63,7 @@ async function g(e, t) {
 async function E(e) {
     var t, n;
     let r, i;
-    if (!h.Z.shouldFetch(e)) return;
+    if (!p.Z.shouldFetch(e)) return;
     let s = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_SUMMARIES',
@@ -71,7 +71,7 @@ async function E(e) {
         requestedAt: s
     });
     try {
-        i = await o.tn.get(p.Z5c.CHANNEL_SUMMARIES(e));
+        i = await o.tn.get(h.Z5c.CHANNEL_SUMMARIES(e));
     } catch (e) {
         r = new u.Hx(e);
     }
@@ -96,7 +96,7 @@ function v(e, t) {
 function I() {
     l.Z.dispatch({ type: 'TOGGLE_TOPICS_BAR' });
 }
-function S(e, t) {
+function b(e, t) {
     null != e && null != t && g(e, t),
         l.Z.dispatch({
             type: 'SET_SELECTED_SUMMARY',
@@ -104,14 +104,14 @@ function S(e, t) {
             summaryId: null != t ? t : null
         });
 }
-function T(e, t) {
+function S(e, t) {
     l.Z.dispatch({
         type: 'UPDATE_VISIBLE_MESSAGES',
         topVisibleMessage: null != e ? e : null,
         bottomVisibleMessage: null != t ? t : null
     });
 }
-function b(e, t) {
+function T(e, t) {
     l.Z.dispatch({
         type: 'SET_SUMMARY_FEEDBACK',
         summary: e,
@@ -121,7 +121,7 @@ function b(e, t) {
 async function y() {
     var e;
     let t, n;
-    if (!h.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
+    if (!p.Z.shouldFetchChannelAffinities()) return Promise.resolve(null);
     let r = Date.now();
     l.Z.dispatch({
         type: 'REQUEST_CHANNEL_AFFINITIES',
@@ -151,7 +151,7 @@ async function A(e) {
         0 ===
         (e = e
             .concat(
-                h.Z.defaultChannelIds({
+                p.Z.defaultChannelIds({
                     withQuickSwitcher: r,
                     withChannelAffinities: i
                 })
@@ -162,7 +162,7 @@ async function A(e) {
             })
             .filter((e) => {
                 let t = Date.now(),
-                    n = h.Z.status(e);
+                    n = p.Z.status(e);
                 if (null == n ? void 0 : n.fetching) return !1;
                 let r = null == n ? void 0 : n.lastReceivedAt;
                 return null == r || t - r > m;
@@ -177,7 +177,7 @@ async function A(e) {
     });
     try {
         n = await o.tn.post({
-            url: p.Z5c.USER_SUMMARIES,
+            url: h.Z5c.USER_SUMMARIES,
             body: { channel_ids: e }
         });
     } catch (e) {
@@ -195,7 +195,7 @@ async function A(e) {
 }
 async function N(e) {
     try {
-        await o.tn.del(p.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
+        await o.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
             l.Z.dispatch({
                 type: 'DELETE_SUMMARY',
                 summary: e
@@ -205,9 +205,9 @@ async function N(e) {
     }
 }
 t.ZP = {
-    setSummaryFeedback: b,
-    updateVisibleMessages: T,
-    setSelectedSummary: S,
+    setSummaryFeedback: T,
+    updateVisibleMessages: S,
+    setSelectedSummary: b,
     setGravitySelectedSummary: function (e, t) {
         l.Z.dispatch({
             type: 'SET_GRAVITY_SELECTED_SUMMARY',
@@ -235,7 +235,7 @@ t.ZP = {
                     }
                 }, [n, t]);
             })(t),
-            (0, s.Wu)([h.Z], () => h.Z.topSummaries(), [])
+            (0, s.Wu)([p.Z], () => p.Z.topSummaries(), [])
         );
     },
     deleteSummary: N

@@ -49,13 +49,13 @@ function o(e) {
     }
     var _ = u ? (0, a.Z)(u) : null;
     if (null != _) {
-        var h = 'y' === _ ? 'height' : 'width';
+        var p = 'y' === _ ? 'height' : 'width';
         switch (c) {
             case s.BL:
-                t[_] = t[_] - (n[h] / 2 - o[h] / 2);
+                t[_] = t[_] - (n[p] / 2 - o[p] / 2);
                 break;
             case s.ut:
-                t[_] = t[_] + (n[h] / 2 - o[h] / 2);
+                t[_] = t[_] + (n[p] / 2 - o[p] / 2);
         }
     }
     return t;

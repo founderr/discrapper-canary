@@ -6,13 +6,13 @@ n.d(t, {
         return E;
     },
     Ft: function () {
-        return T;
-    },
-    W5: function () {
         return S;
     },
+    W5: function () {
+        return b;
+    },
     _T: function () {
-        return h;
+        return p;
     },
     oY: function () {
         return _;
@@ -51,14 +51,14 @@ function _(e) {
         r = f(e);
     return n && r.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (r = l(r)), r;
 }
-function h(e) {
+function p(e) {
     var t;
     let n = (0, r.e7)([i.Z], () => i.Z.hidePersonalInformation);
     if (null == e) return;
     let a = f(e);
     return n && a.toLocaleLowerCase() === (null === (t = e.username) || void 0 === t ? void 0 : t.toLocaleLowerCase()) && '0' === e.discriminator && (a = l(a)), a;
 }
-function p(e) {
+function h(e) {
     if (null != e) {
         if (d(e.globalName)) return e.globalName;
         else if (d(e.global_name)) return e.global_name;
@@ -111,7 +111,7 @@ function I(e, t, n) {
     let i = r ? l(e.username) : e.username;
     return 'never' !== t.decoration ? u(i) : i;
 }
-function S(e, t) {
+function b(e, t) {
     let n = {
             ...c,
             ...t
@@ -119,16 +119,16 @@ function S(e, t) {
         r = 'auto' !== n.identifiable || i.Z.hidePersonalInformation;
     return I(e, n, r);
 }
-function T(e) {
+function S(e) {
     return (0, r.e7)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
 }
 t.ZP = {
     getName: _,
-    useName: h,
+    useName: p,
     isNameConcealed: (e) => 4 === e.length && e.endsWith('...'),
-    getUserTag: S,
+    getUserTag: b,
     useUserTag: function (e, t) {
         let n = {
             ...c,
@@ -144,11 +144,11 @@ t.ZP = {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return '???';
-        let r = p(e),
-            i = n ? S(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
+        let r = h(e),
+            i = n ? b(e) : null !== (t = e.username) && void 0 !== t ? t : '???';
         return r === i ? r : null != r ? ''.concat(r, ' (').concat(i, ')') : i;
     },
-    getGlobalName: p,
+    getGlobalName: h,
     humanizeStatus: m,
-    useDirectMessageRecipient: T
+    useDirectMessageRecipient: S
 };

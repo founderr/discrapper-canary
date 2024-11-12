@@ -23,29 +23,29 @@ function f(e, t) {
 let _ = (e) => {
     let t,
         n,
-        { backgroundStyle: a = 'always', children: _, icon: h, name: p, ariaLabel: m, className: g, style: E, to: v, onClick: I, selected: S = !1, ...T } = e,
-        b = (0, o.k6)();
-    if (null == h && null != p) {
+        { backgroundStyle: a = 'always', children: _, icon: p, name: h, ariaLabel: m, className: g, style: E, to: v, onClick: I, selected: b = !1, ...S } = e,
+        T = (0, o.k6)();
+    if (null == p && null != h) {
         var y;
-        n = null !== (y = d[(t = (0, u.Zg)(p)).length - 1]) && void 0 !== y ? y : d[d.length - 1];
+        n = null !== (y = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== y ? y : d[d.length - 1];
     }
     let A = i.useCallback(
         (e) => {
             if (null == v);
-            else if ('string' == typeof v) b.push(v);
+            else if ('string' == typeof v) T.push(v);
             else {
                 let { pathname: e = '', state: t } = v;
-                b.push(e, t);
+                T.push(e, t);
             }
             null != I && I(e);
         },
-        [b, v, I]
+        [T, v, I]
     );
     return (0, r.jsxs)(l.Clickable, {
-        ...T,
+        ...S,
         onClick: A,
-        className: s()(g, c.wrapper, { [c.selected]: S }),
-        'aria-label': null != m && '' !== m ? m : null != p ? p : '',
+        className: s()(g, c.wrapper, { [c.selected]: b }),
+        'aria-label': null != m && '' !== m ? m : null != h ? h : '',
         style: {
             ...E,
             fontSize: n
@@ -59,10 +59,10 @@ let _ = (e) => {
                       children: t
                   })
                 : null,
-            null != h
+            null != p
                 ? (0, r.jsx)('img', {
                       className: c.icon,
-                      src: h,
+                      src: p,
                       alt: ' ',
                       width: 48,
                       height: 48,

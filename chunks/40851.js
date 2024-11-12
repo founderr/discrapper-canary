@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     GB: function () {
-        return h;
+        return p;
     },
     J5: function () {
         return f;
@@ -12,7 +12,7 @@ n.d(t, {
         return u;
     },
     Wu: function () {
-        return p;
+        return h;
     },
     bp: function () {
         return m;
@@ -46,7 +46,7 @@ function f(e) {
 function _(e) {
     return d.get(e);
 }
-function h() {
+function p() {
     let e = (function () {
         var e;
         let t = (0, o.GR)();
@@ -54,7 +54,7 @@ function h() {
     })();
     return null != e ? e.appContext : null;
 }
-function p(e) {
+function h(e) {
     let { appContext: t, renderWindow: n, children: i } = e,
         o = (function (e, t) {
             let n = (0, s.ZY)(t),

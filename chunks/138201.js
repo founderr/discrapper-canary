@@ -10,14 +10,14 @@ var i = n(120356),
     s = n(481060),
     o = n(9636);
 function l(e) {
-    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: h = s.Button.Sizes.SMALL, buttonDisabled: p, onButtonPress: m } = e,
+    let { icon: t, title: n, titleVariant: i = 'text-md/semibold', description: l, descriptionVariant: u = 'text-xs/medium', iconClassName: c, color: d, buttonText: f, buttonColor: _ = s.Button.Colors.PRIMARY, buttonSize: p = s.Button.Sizes.SMALL, buttonDisabled: h, onButtonPress: m } = e,
         g =
             null != f
                 ? (0, r.jsx)(s.Button, {
                       className: o.button,
-                      size: h,
+                      size: p,
                       color: _,
-                      disabled: p,
+                      disabled: h,
                       'aria-label': f,
                       onClick: m,
                       children: f

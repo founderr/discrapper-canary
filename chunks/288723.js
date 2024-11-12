@@ -18,27 +18,27 @@ t.Z = {
                 var d = n.mainAxis,
                     f = void 0 === d || d,
                     _ = n.altAxis,
-                    h = void 0 === _ || _,
-                    p = n.fallbackPlacements,
+                    p = void 0 === _ || _,
+                    h = n.fallbackPlacements,
                     m = n.padding,
                     g = n.boundary,
                     E = n.rootBoundary,
                     v = n.altBoundary,
                     I = n.flipVariations,
-                    S = void 0 === I || I,
-                    T = n.allowedAutoPlacements,
-                    b = t.options.placement,
-                    y = (0, i.Z)(b) === b,
+                    b = void 0 === I || I,
+                    S = n.allowedAutoPlacements,
+                    T = t.options.placement,
+                    y = (0, i.Z)(T) === T,
                     A =
-                        p ||
-                        (y || !S
-                            ? [(0, r.Z)(b)]
+                        h ||
+                        (y || !b
+                            ? [(0, r.Z)(T)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
-                              })(b)),
-                    N = [b].concat(A).reduce(function (e, n) {
+                              })(T)),
+                    N = [T].concat(A).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -46,8 +46,8 @@ t.Z = {
                                       boundary: g,
                                       rootBoundary: E,
                                       padding: m,
-                                      flipVariations: S,
-                                      allowedAutoPlacements: T
+                                      flipVariations: b,
+                                      allowedAutoPlacements: S
                                   })
                                 : n
                         );
@@ -79,7 +79,7 @@ t.Z = {
                     F = [];
                 if (
                     (f && F.push(G[M] <= 0),
-                    h && F.push(G[B] <= 0, G[Z] <= 0),
+                    p && F.push(G[B] <= 0, G[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))
@@ -91,7 +91,7 @@ t.Z = {
             }
             if (D) {
                 for (
-                    var V = S ? 3 : 1,
+                    var V = b ? 3 : 1,
                         j = function (e) {
                             var t = N.find(function (t) {
                                 var n = O.get(t);

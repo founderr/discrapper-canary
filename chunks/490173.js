@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(213609),
     f = n(314910),
     _ = n(210887),
-    h = n(574254),
-    p = n(585483),
+    p = n(574254),
+    h = n(585483),
     m = n(981631);
 function g(e, t, n) {
     return (
@@ -32,7 +32,7 @@ function g(e, t, n) {
     );
 }
 let E = (e) => {
-    let { children: t, close: n, onUnmount: o, target: u, rect: _, position: h, align: p, impressionName: g, impressionProperties: E } = e,
+    let { children: t, close: n, onUnmount: o, target: u, rect: _, position: p, align: h, impressionName: g, impressionProperties: E } = e,
         v = i.useRef(null),
         I = i.useMemo(() => ({ current: u }), [u]);
     i.useEffect(() => {
@@ -53,12 +53,12 @@ let E = (e) => {
             }
         );
     }, [n]);
-    let S = i.useRef(o);
-    i.useEffect(() => void (S.current = o)),
+    let b = i.useRef(o);
+    i.useEffect(() => void (b.current = o)),
         i.useEffect(
             () => () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
+                return null === (e = b.current) || void 0 === e ? void 0 : e.call(b);
             },
             []
         ),
@@ -71,20 +71,20 @@ let E = (e) => {
             name: g,
             properties: E
         });
-    let T = (0, c.Aq)(),
-        b = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_SHOW);
-        }, [T]),
+    let S = (0, c.Aq)(),
+        T = i.useCallback(() => {
+            S.dispatch(m.CkL.POPOUT_SHOW);
+        }, [S]),
         y = i.useCallback(() => {
-            T.dispatch(m.CkL.POPOUT_HIDE);
-        }, [T]);
+            S.dispatch(m.CkL.POPOUT_HIDE);
+        }, [S]);
     return (0, r.jsx)(f.W5, {
-        onMount: b,
+        onMount: T,
         onUnmount: y,
         targetRef: I,
         overrideTargetRect: _,
-        position: null != h ? h : 'right',
-        align: null != p ? p : 'top',
+        position: null != p ? p : 'right',
+        align: null != h ? h : 'top',
         autoInvert: !0,
         ref: v,
         nudgeAlignIntoViewport: !0,
@@ -94,7 +94,7 @@ let E = (e) => {
 class v extends i.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
-        if ((t.addEventListener('resize', this.closeResize, !0), p.S.subscribe(m.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
+        if ((t.addEventListener('resize', this.closeResize, !0), h.S.subscribe(m.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
             let t = setTimeout(() => {
                 this.setState({ render: () => (0, r.jsx)(l.MenuSpinner, {}) });
             }, 300);
@@ -112,7 +112,7 @@ class v extends i.PureComponent {
     }
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
-        e.removeEventListener('resize', this.closeResize, !0), p.S.unsubscribe(m.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+        e.removeEventListener('resize', this.closeResize, !0), h.S.unsubscribe(m.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     render() {
         var e;
@@ -160,10 +160,10 @@ function I() {
             contextMenu: e,
             version: t,
             isOpen: n
-        } = (0, o.cj)([h.Z], () => ({
-            contextMenu: h.Z.getContextMenu(),
-            version: h.Z.version,
-            isOpen: h.Z.isOpen()
+        } = (0, o.cj)([p.Z], () => ({
+            contextMenu: p.Z.getContextMenu(),
+            version: p.Z.version,
+            isOpen: p.Z.isOpen()
         })),
         a = (0, o.e7)([_.Z], () => _.Z.theme),
         { appContext: s, renderWindow: l } = i.useContext(c.ZP);

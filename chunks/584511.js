@@ -22,7 +22,7 @@ function _(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.OUTGOING = 0)] = 'OUTGOING'), (r[(r.INCOMING = 1)] = 'INCOMING');
-class h extends (a = o.PureComponent) {
+class p extends (a = o.PureComponent) {
     renderStatus() {
         let { muted: e, deafen: t } = this.props,
             n = t ? c.HeadphonesSlashIcon : c.MicrophoneSlashIcon;
@@ -53,13 +53,13 @@ class h extends (a = o.PureComponent) {
     }
     renderVoiceCallAvatar() {
         let { src: e, disabled: t, ringing: n, ringingType: r, avatarClassName: i, muted: a, deafen: o, size: l, renderIcon: _ } = this.props,
-            h = (0, c.getAvatarSize)(l),
-            p = (0, s.jsx)('img', {
+            p = (0, c.getAvatarSize)(l),
+            h = (0, s.jsx)('img', {
                 src: e,
                 alt: ' ',
                 className: u()(f.voiceAvatar, i, { [f.ringingOutgoing]: n && 0 === r })
             });
-        if (t) return p;
+        if (t) return h;
         let m = d.QS.AVATAR_DEFAULT;
         return (
             null != _ ? (m = l === c.AvatarSizes.SIZE_32 ? d.QS.AVATAR_CALL_ICON_32 : d.QS.AVATAR_CALL_ICON) : (a || o) && (m = d.QS.AVATAR_VOICE_CALL_80),
@@ -68,10 +68,10 @@ class h extends (a = o.PureComponent) {
                 children: [
                     (0, s.jsxs)(d.ZP, {
                         className: f.callAvatarMask,
-                        width: h,
-                        height: h,
+                        width: p,
+                        height: p,
                         mask: m,
-                        children: [null == _ ? void 0 : _(), p]
+                        children: [null == _ ? void 0 : _(), h]
                     }),
                     this.renderMask()
                 ]
@@ -103,7 +103,7 @@ class h extends (a = o.PureComponent) {
         });
     }
 }
-_(h, 'defaultProps', {
+_(p, 'defaultProps', {
     size: c.AvatarSizes.SIZE_80,
     ringingType: 0,
     speaking: !1,
@@ -116,5 +116,5 @@ _(h, 'defaultProps', {
     disabled: !1,
     paused: !1
 }),
-    _(h, 'RingingType', i),
-    (t.Z = h);
+    _(p, 'RingingType', i),
+    (t.Z = p);

@@ -16,8 +16,8 @@ function u(e) {
 let c = (e) => {
     let { value: t, onChange: n, className: a, minValue: c, maxValue: d } = e,
         [f, _] = i.useState(t),
-        h = u(f) || (null != c && f <= c),
-        p = u(f) || (null != d && f >= d),
+        p = u(f) || (null != c && f <= c),
+        h = u(f) || (null != d && f >= d),
         m = (e) => {
             n(u(e) ? (null != c ? c : 0) : e), _(e);
         };
@@ -28,14 +28,14 @@ let c = (e) => {
             children: [
                 (0, r.jsx)(o.Clickable, {
                     onClick: (e) => {
-                        if ((e.stopPropagation(), !h)) m(f - 1);
+                        if ((e.stopPropagation(), !p)) m(f - 1);
                     },
                     tabIndex: -1,
-                    className: s()(l.iconWrapper, l.__invalid_subtract, { [l.disabled]: h }),
+                    className: s()(l.iconWrapper, l.__invalid_subtract, { [l.disabled]: p }),
                     children: (0, r.jsx)(o.MinusIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(l.icon, { [l.disabled]: h })
+                        className: s()(l.icon, { [l.disabled]: p })
                     })
                 }),
                 (0, r.jsx)(o.TextInput, {
@@ -49,14 +49,14 @@ let c = (e) => {
                 }),
                 (0, r.jsx)(o.Clickable, {
                     onClick: (e) => {
-                        if ((e.stopPropagation(), !p)) m(f + 1);
+                        if ((e.stopPropagation(), !h)) m(f + 1);
                     },
                     tabIndex: -1,
-                    className: s()(l.iconWrapper, l.__invalid_add, { [l.disabled]: p }),
+                    className: s()(l.iconWrapper, l.__invalid_add, { [l.disabled]: h }),
                     children: (0, r.jsx)(o.PlusSmallIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()(l.icon, { [l.disabled]: p })
+                        className: s()(l.icon, { [l.disabled]: h })
                     })
                 })
             ]

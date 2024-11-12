@@ -30,26 +30,26 @@ function c(e) {
     };
 }
 function d(e) {
-    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: h, flags: p, nonce: m, poll: g, changelogId: E, giftingPrompt: v, state: I } = e,
-        S = [];
+    let { channelId: t, content: n, tts: r = !1, type: d = u.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: v, state: I } = e,
+        b = [];
     if (d === u.uaV.REPLY && (i()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
         let e = a.Z.getMessageByReference(f);
-        (null == e ? void 0 : e.state) === a.Y.LOADED && S.push(c(e.message.author));
+        (null == e ? void 0 : e.state) === a.Y.LOADED && b.push(c(e.message.author));
     }
     return (
-        null == h && (h = o.default.getCurrentUser()),
-        h instanceof s.Z && (h = c(h)),
-        i()(null != h, 'createMessage: author cannot be undefined'),
+        null == p && (p = o.default.getCurrentUser()),
+        p instanceof s.Z && (p = c(p)),
+        i()(null != p, 'createMessage: author cannot be undefined'),
         {
             id: null != m ? m : (0, l.r)(),
             type: d,
             content: n,
             channel_id: t,
-            author: h,
+            author: p,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: S,
+            mentions: b,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
@@ -58,7 +58,7 @@ function d(e) {
             tts: r,
             message_reference: f,
             message_snapshots: [],
-            flags: p,
+            flags: h,
             nonce: m,
             poll: g,
             changelog_id: E,

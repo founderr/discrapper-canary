@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 }),
     n(536091);
@@ -16,7 +16,7 @@ var i = n(120356),
     d = n(713938),
     f = n(388032),
     _ = n(341772);
-function h(e) {
+function p(e) {
     let { text: t, error: n, isFake: i } = e;
     return (0, r.jsxs)('div', {
         className: _.scope,
@@ -52,9 +52,9 @@ function h(e) {
         ]
     });
 }
-function p(e) {
+function h(e) {
     var t;
-    let { application: n, accountScopes: i, requestedScopes: a, integrationType: u, errors: p, isTrustedName: m = !1 } = e,
+    let { application: n, accountScopes: i, requestedScopes: a, integrationType: u, errors: h, isTrustedName: m = !1 } = e,
         g = (0, s.Z)(() => d.ZW[Math.floor(Math.random() * d.ZW.length)]);
     if (0 === i.length) return null;
     let E = g(),
@@ -73,18 +73,18 @@ function p(e) {
                     (0, d.CI)(e, i).map((t, n) => {
                         var i;
                         return (0, r.jsx)(
-                            h,
+                            p,
                             {
                                 text: t,
-                                error: 0 === n ? (null == p ? void 0 : null === (i = p[e]) || void 0 === i ? void 0 : i[0]) : void 0
+                                error: 0 === n ? (null == h ? void 0 : null === (i = h[e]) || void 0 === i ? void 0 : i[0]) : void 0
                             },
                             ''.concat(e, '-').concat(n)
                         );
                     })
                 )
                 .flat(),
-            I && (0, r.jsx)(h, { text: f.intl.string(f.t.Ls2XRk) }),
-            (0, r.jsx)(h, {
+            I && (0, r.jsx)(p, { text: f.intl.string(f.t.Ls2XRk) }),
+            (0, r.jsx)(p, {
                 text: E,
                 isFake: !0
             })

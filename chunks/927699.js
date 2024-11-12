@@ -23,9 +23,9 @@ let v = (0, m.kt)({
     type: x.d4z.DM
 });
 function g(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: E, disabled: j = !1, disableThemedBackground: I = !1 } = e,
-        [y, P] = l.useState(null != m ? m : g),
-        [T, N] = l.useState((0, o.JM)(y)),
+    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: m, placeholder: x, currentText: g, className: S, innerClassName: j, disabled: E = !1, disableThemedBackground: y = !1 } = e,
+        [I, P] = l.useState(null != m ? m : g),
+        [T, N] = l.useState((0, o.JM)(I)),
         b = l.useRef(!1);
     return (
         l.useEffect(() => {
@@ -42,18 +42,18 @@ function g(e) {
             children: (0, i.jsxs)(d.Z, {
                 title: n,
                 errors: t,
-                disabled: j,
+                disabled: E,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, E),
+                        innerClassName: s()(f.textArea, j),
                         editorClassName: f.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: function (e, n, t) {
-                            n !== y && (P(n), N(t), r(n));
+                            n !== I && (P(n), N(t), r(n));
                         },
                         placeholder: x,
                         channel: v,
-                        textValue: y,
+                        textValue: I,
                         richValue: T,
                         type: c.I.CUSTOM_GIFT,
                         onBlur: () => {
@@ -71,7 +71,7 @@ function g(e) {
                                 });
                             });
                         },
-                        disableThemedBackground: I
+                        disableThemedBackground: y
                     }),
                     (0, i.jsx)(a.HiddenVisually, { children: h.intl.format(h.t['+DFxLS'], { maxLength: p.$n }) })
                 ]

@@ -18,17 +18,17 @@ var i = n(442837),
     d = n(579630),
     f = n(26033),
     _ = n(594174),
-    h = n(324745),
-    p = n(981631),
+    p = n(324745),
+    h = n(981631),
     m = n(388032);
-let g = () => s.Z.open(p.oAB.CONNECTIONS, null);
+let g = () => s.Z.open(h.oAB.CONNECTIONS, null);
 function E(e) {
     let { entry: t, onOpenGameSettings: n } = e;
     return (0, f.aA)(t) || (0, f.y0)(t) || (0, f.dU)(t) ? g : (0, f.dX)(t) ? n : null;
 }
 function v(e) {
-    let { user: t, activity: n, entry: s, onAction: f, onClose: p } = e,
-        v = (0, h.Z)({ onClose: p });
+    let { user: t, activity: n, entry: s, onAction: f, onClose: h } = e,
+        v = (0, p.Z)({ onClose: h });
     if (
         !(0, i.e7)([_.default], () => {
             var e;
@@ -63,7 +63,7 @@ function v(e) {
               id: 'manage-privacy',
               label: m.intl.string(m.t.anfNPT),
               action: () => {
-                  null == f || f({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), I(), null == p || p();
+                  null == f || f({ action: 'PRESS_MANAGE_PRIVACY_MENU_ITEM' }), I(), null == h || h();
               }
           });
 }

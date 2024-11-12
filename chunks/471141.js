@@ -14,33 +14,33 @@ var r = n(200651),
     d = n(534542),
     f = n(770347);
 function _(e) {
-    let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: _, onChange: h, className: p, style: m, note: g, children: E, disabledText: v } = e,
+    let { value: t, disabled: n = !1, hideBorder: a = !1, tooltipNote: _, onChange: p, className: h, style: m, note: g, children: E, disabledText: v } = e,
         I = i.useRef(null),
-        S = i.useRef(null),
-        T = i.useId(),
-        b = (0, r.jsx)(l.r, {
-            id: T,
+        b = i.useRef(null),
+        S = i.useId(),
+        T = (0, r.jsx)(l.r, {
+            id: S,
             checked: t,
-            onChange: h,
+            onChange: p,
             disabled: n,
             focusProps: { enabled: !1 },
             innerRef: I
         });
     return (0, r.jsxs)('div', {
         style: m,
-        className: s()(f.container, p, { [f.disabled]: n }),
+        className: s()(f.container, h, { [f.disabled]: n }),
         children: [
             (0, r.jsx)(o.t, {
                 within: !0,
                 offset: -4,
                 focusTarget: I,
-                ringTarget: S,
+                ringTarget: b,
                 children: (0, r.jsxs)('div', {
                     className: f.labelRow,
-                    ref: S,
+                    ref: b,
                     children: [
                         (0, r.jsx)('label', {
-                            htmlFor: T,
+                            htmlFor: S,
                             className: f.title,
                             children: E
                         }),
@@ -50,9 +50,9 @@ function _(e) {
                                 null != _
                                     ? (0, r.jsx)(u.DY, {
                                           text: _,
-                                          children: b
+                                          children: T
                                       })
-                                    : b
+                                    : T
                         })
                     ]
                 })

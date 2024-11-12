@@ -3,10 +3,10 @@ n.d(t, {
         return f;
     },
     DP: function () {
-        return p;
+        return h;
     },
     Ly: function () {
-        return h;
+        return p;
     },
     SG: function () {
         return _;
@@ -53,13 +53,13 @@ function _(e, t, n) {
         o = null === e;
     return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
 }
-function h(e) {
+function p(e) {
     var t;
     let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: a } = e,
         s = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick,
         l = '' === r ? i.username : r;
     return null !== (t = null != s ? s : l) && void 0 !== t ? t : o.ZP.getName(i);
 }
-function p(e) {
+function h(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;
 }

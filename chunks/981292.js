@@ -90,7 +90,7 @@ function u(e) {
         ),
         [_]
     );
-    let h = [];
-    for (let [, e] of _) h.push(e.children);
-    return (0, a.jsx)(a.Fragment, { children: h.length > 0 ? i(h, t) : null });
+    let p = [];
+    for (let [, e] of _) p.push(e.children);
+    return (0, a.jsx)(a.Fragment, { children: p.length > 0 ? i(p, t) : null });
 }

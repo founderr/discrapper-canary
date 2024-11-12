@@ -1,6 +1,6 @@
 n.d(t, {
     hY: function () {
-        return p;
+        return h;
     },
     og: function () {
         return g;
@@ -25,13 +25,13 @@ function f() {
     return d;
 }
 let _ = 'electron' === c.toLowerCase() ? parseInt(null !== (a = u().version) && void 0 !== a ? a : '', 10) : -1,
-    h = 'firefox' === c.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : '', 10) : -1;
-function p() {
-    return h;
+    p = 'firefox' === c.toLowerCase() ? parseInt(null !== (s = u().version) && void 0 !== s ? s : '', 10) : -1;
+function h() {
+    return p;
 }
 let m = 'edge' === c.toLowerCase() ? parseInt(null !== (o = u().version) && void 0 !== o ? o : '', 10) : -1;
 function g() {
-    return -1 !== d || -1 !== _ || -1 !== h || -1 !== m;
+    return -1 !== d || -1 !== _ || -1 !== p || -1 !== m;
 }
 function E() {
     var e;

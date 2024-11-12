@@ -15,8 +15,8 @@ t.Z = function (e) {
             childrenExecutedCommand: d,
             childrenHeader: f,
             childrenSystemMessage: _,
-            childrenButtons: h,
-            childrenMessageContent: p,
+            childrenButtons: p,
+            childrenMessageContent: h,
             childrenAccessories: m,
             messageRef: g,
             focusProps: E = {
@@ -27,10 +27,10 @@ t.Z = function (e) {
             },
             hasThread: v,
             isSystemMessage: I,
-            hasReply: S,
-            ...T
+            hasReply: b,
+            ...S
         } = e,
-        b = (0, r.jsx)(s.FocusRing, {
+        T = (0, r.jsx)(s.FocusRing, {
             ...E,
             children: (0, r.jsxs)('div', {
                 className: a()(t, {
@@ -41,27 +41,27 @@ t.Z = function (e) {
                     [o.zalgo]: l,
                     [o.hasThread]: v,
                     [o.isSystemMessage]: I,
-                    [o.hasReply]: S
+                    [o.hasReply]: b
                 }),
                 ref: g,
-                ...T,
+                ...S,
                 role: 'article',
                 children: [
                     c,
                     d,
                     (0, r.jsxs)('div', {
                         className: o.contents,
-                        children: [_, f, null == _ && p]
+                        children: [_, f, null == _ && h]
                     }),
                     m,
-                    null != h
+                    null != p
                         ? (0, r.jsx)('div', {
                               className: o.buttonContainer,
-                              children: h
+                              children: p
                           })
                         : null
                 ]
             })
         });
-    return u ? (0, r.jsx)(s.FocusBlock, { children: b }) : b;
+    return u ? (0, r.jsx)(s.FocusBlock, { children: T }) : T;
 };

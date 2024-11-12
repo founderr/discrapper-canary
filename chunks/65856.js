@@ -18,7 +18,7 @@ var r = n(512722),
     d = n(34954),
     f = n(186901),
     _ = n(981631);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function h(e, t, n) {
         e
     );
 }
-let p = 'RPC_STORE_WAIT',
+let h = 'RPC_STORE_WAIT',
     m = [];
 class g {
     registerTransport(e) {
@@ -192,18 +192,18 @@ class g {
         let r = t();
         if (r || 0 === n) return Promise.resolve(r);
         let i = s().uniqueId(),
-            a = () => this.removeSubscription(e, p, { uniqueId: i });
+            a = () => this.removeSubscription(e, h, { uniqueId: i });
         return new Promise((r, s) => {
             let o = setTimeout(() => {
                 a(), s(Error('timeout'));
             }, n * l.Z.Millis.SECOND);
-            this.addSubscription(e, p, { uniqueId: i }, () => {
+            this.addSubscription(e, h, { uniqueId: i }, () => {
                 let e = t();
                 e && (clearTimeout(o), r(e));
             });
         }).then((e) => (a(), e));
     }
     constructor(e) {
-        h(this, 'getCurrentUser', () => null), h(this, 'onConnect', () => {}), h(this, 'onDisconnect', () => {}), h(this, 'getJoi', void 0), h(this, 'events', {}), h(this, 'commands', {}), h(this, 'sockets', new Set()), h(this, 'subscriptions', []), h(this, 'abortControllers', new Map()), (this.getJoi = e);
+        p(this, 'getCurrentUser', () => null), p(this, 'onConnect', () => {}), p(this, 'onDisconnect', () => {}), p(this, 'getJoi', void 0), p(this, 'events', {}), p(this, 'commands', {}), p(this, 'sockets', new Set()), p(this, 'subscriptions', []), p(this, 'abortControllers', new Map()), (this.getJoi = e);
     }
 }

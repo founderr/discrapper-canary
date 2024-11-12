@@ -10,8 +10,8 @@ var r,
     d = n(591759),
     f = n(902676),
     _ = n(616922);
-let h = 'MaskedLinkStore',
-    p = new Set(),
+let p = 'MaskedLinkStore',
+    h = new Set(),
     m = new Set(),
     g = null === (r = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === r ? void 0 : r.replace('//', '');
 function E(e) {
@@ -25,7 +25,7 @@ function E(e) {
         case location.hostname:
             return !0;
         default:
-            return _.SD.includes(t) || d.Z.isDiscordHostname(t) || p.has(t);
+            return _.SD.includes(t) || d.Z.isDiscordHostname(t) || h.has(t);
     }
 }
 function v(e) {
@@ -35,11 +35,11 @@ function v(e) {
 class I extends (i = l.ZP.Store) {
     initialize() {
         var e;
-        let t = null !== (e = u.K.get(h)) && void 0 !== e ? e : {};
-        if (Array.isArray(t)) (p = new Set(null != t ? Array.from(t) : null)), (m = new Set());
+        let t = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
+        if (Array.isArray(t)) (h = new Set(null != t ? Array.from(t) : null)), (m = new Set());
         else {
             let { trustedDomains: e, trustedProtocols: n } = t;
-            (p = new Set(null != e ? Array.from(e) : null)), (m = new Set(null != n ? Array.from(n) : null));
+            (h = new Set(null != e ? Array.from(e) : null)), (m = new Set(null != n ? Array.from(n) : null));
         }
     }
     isTrustedDomain(e) {
@@ -62,9 +62,9 @@ class I extends (i = l.ZP.Store) {
         MASKED_LINK_ADD_TRUSTED_DOMAIN: function (e) {
             let { url: t } = e;
             if (E(t)) return !1;
-            p.add((0, f.F)(t)),
-                u.K.set(h, {
-                    trustedDomains: p,
+            h.add((0, f.F)(t)),
+                u.K.set(p, {
+                    trustedDomains: h,
                     trustedProtocols: m
                 });
         },
@@ -72,8 +72,8 @@ class I extends (i = l.ZP.Store) {
             let { url: t } = e;
             if (v(t)) return !1;
             m.add((0, f.E)(t)),
-                u.K.set(h, {
-                    trustedDomains: p,
+                u.K.set(p, {
+                    trustedDomains: h,
                     trustedProtocols: m
                 });
         }

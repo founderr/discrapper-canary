@@ -1,6 +1,6 @@
 n.d(t, {
     dy: function () {
-        return b;
+        return T;
     },
     gw: function () {
         return E;
@@ -34,8 +34,8 @@ let u = null,
     d = {},
     f = {},
     _ = {},
-    h = [],
-    p = 0,
+    p = [],
+    h = 0,
     m = 0,
     g = {
         '1f3fb': 0,
@@ -47,13 +47,13 @@ let u = null,
     E = ['\uD83C\uDFFB', '\uD83C\uDFFC', '\uD83C\uDFFD', '\uD83C\uDFFE', '\uD83C\uDFFF'],
     v = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     I = n(523558),
-    S = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
-    T = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
+    b = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
+    S = /\ud83c[\udffb-\udfff](?=\ud83c[\udffb-\udfff])|(?:[^\ud800-\udfff][\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]?|[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\ud800-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?(?:\u200d(?:[^\ud800-\udfff]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff])[\ufe0e\ufe0f]?(?:[\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff]|\ud83c[\udffb-\udfff])?)*/g;
 for (let e = 0; e < E.length; e++) {
     let t = E[e];
     (f['skin-tone-'.concat(e + 1)] = t), (_[t] = 'skin-tone-'.concat(e + 1));
 }
-class b {
+class T {
     get names() {
         return this.emojiObject.names;
     }
@@ -118,7 +118,7 @@ class b {
             for (let t of e.diversityChildren)
                 if (null != t.diversity) {
                     let e = t.diversity.join('-');
-                    this.diversityChildren[e] = new b(t);
+                    this.diversityChildren[e] = new T(t);
                 }
         }
     }
@@ -126,10 +126,10 @@ class b {
 let y = n(5420);
 for (let e in y) {
     let t = y[e].map((e) => {
-        let t = new b(e),
+        let t = new T(e),
             n = t.surrogates,
             r = t.uniqueName;
-        if ((t.setSpriteSheetIndex(t.hasDiversity ? p++ : m++), (_[n] = r), 0 > n.indexOf('‍'))) {
+        if ((t.setSpriteSheetIndex(t.hasDiversity ? h++ : m++), (_[n] = r), 0 > n.indexOf('‍'))) {
             let e = n.replace('️', '');
             e !== n && (_[e] = r);
         }
@@ -148,7 +148,7 @@ for (let e in y) {
             }
             _[r] = n.uniqueName;
         }
-        return h.push(t), t;
+        return p.push(t), t;
     });
     c[e] = s.ZP.filterUnsupportedEmojis(t);
 }
@@ -173,7 +173,7 @@ let C = String.fromCodePoint(917631),
     O = /^[\u{E0061}-\u{E007A}]$/u;
 function D(e, t) {
     var n;
-    if (!0 !== t && !S.test(e))
+    if (!0 !== t && !b.test(e))
         return [
             {
                 type: 'text',
@@ -182,7 +182,7 @@ function D(e, t) {
         ];
     let r = '',
         i = [],
-        a = null !== (n = e.match(T)) && void 0 !== n ? n : [];
+        a = null !== (n = e.match(S)) && void 0 !== n ? n : [];
     for (let e = 0; e < a.length; e++) {
         let t = a[e];
         if (null != r && '' !== r) {
@@ -235,7 +235,7 @@ t.ZP = {
         return e.replace(v, (e, t) => L(t, e));
     },
     maybeTranslateSurrogatesToInlineEmoji: function (e) {
-        if (!S.test(e)) return null;
+        if (!b.test(e)) return null;
         let t = D(e, !0)
             .map((e) => ('text' === e.type ? e.text : e.emojiName))
             .join('');
@@ -263,9 +263,9 @@ t.ZP = {
             )
         );
     },
-    forEach: (e) => i().each(h, e),
-    all: () => h,
-    numDiversitySprites: p,
+    forEach: (e) => i().each(p, e),
+    all: () => p,
+    numDiversitySprites: h,
     numNonDiversitySprites: m,
     EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     EMOJI_NAME_AND_DIVERSITY_RE: v,

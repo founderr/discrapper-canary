@@ -11,15 +11,15 @@ var i = n(200651),
     g = n(906732),
     m = n(975298),
     f = n(410154),
-    _ = n(626135),
-    p = n(915296),
+    p = n(626135),
+    _ = n(915296),
     h = n(103433),
     E = n(166021),
     b = n(32173),
     x = n(391110),
     C = n(75077),
-    T = n(981631),
-    v = n(388032),
+    v = n(981631),
+    T = n(388032),
     N = n(170367),
     I = n(865215);
 t.Z = (e) => {
@@ -31,15 +31,15 @@ t.Z = (e) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
-        Z = (0, p.HI)({ location: x.MQ.SEE_ALL }),
-        { analyticsLocations: O } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [M, B] = r.useState(!1),
+        Z = (0, _.HI)({ location: x.MQ.SEE_ALL }),
+        { analyticsLocations: B } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [M, O] = r.useState(!1),
         w = (0, f.ZP)('perks-discoverability'),
         y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, C.mN)(),
         { fractionalState: L } = (0, m.Z)();
     return (
-        Z === p.mJ.DEFAULT ? ((t = v.intl.string(v.t['+vt7w8'])), (n = v.intl.string(v.t.LgHbnJ))) : ((t = v.intl.string(v.t.LgHbnJ)), (n = v.intl.string(v.t['+vt7w8']))),
+        Z === _.mJ.DEFAULT ? ((t = T.intl.string(T.t['+vt7w8'])), (n = T.intl.string(T.t.LgHbnJ))) : ((t = T.intl.string(T.t.LgHbnJ)), (n = T.intl.string(T.t['+vt7w8']))),
         (0, i.jsx)(c.AdvancedScrollerAuto, {
             className: s()(N.allPerksScroller, {
                 [N.open]: a,
@@ -49,13 +49,13 @@ t.Z = (e) => {
             children: (0, i.jsx)('div', {
                 className: N.container,
                 children: (0, i.jsxs)(g.Gt, {
-                    value: O,
+                    value: B,
                     children: [
                         (0, i.jsx)(h.Z, {
                             className: N.heroHeading,
                             onBackClick: () => {
                                 S(!1),
-                                    _.default.track(T.rMx.NITRO_HOME_NAVIGATION, {
+                                    p.default.track(v.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: x.MQ.SEE_ALL,
                                         next_component: R,
                                         interaction_component: 'Back Button'
@@ -107,7 +107,7 @@ t.Z = (e) => {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
                                     className: N.heading,
-                                    children: v.intl.string(v.t.LTaxu7)
+                                    children: T.intl.string(T.t.LTaxu7)
                                 }),
                                 (0, i.jsx)(E.Z, {
                                     className: N.cardCarousel,
@@ -127,7 +127,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', { className: N.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !M && (_.default.track(T.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: O }), B(!0));
+                                e && !M && (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: B }), O(!0));
                             },
                             children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                         }),
@@ -136,7 +136,7 @@ t.Z = (e) => {
                             className: N.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: v.intl.string(v.t.X4IxWF)
+                            alt: T.intl.string(T.t.X4IxWF)
                         })
                     ]
                 })

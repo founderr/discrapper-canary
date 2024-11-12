@@ -17,8 +17,8 @@ var r = n(200651),
     d = n(318713),
     f = n(981631),
     _ = n(388032),
-    h = n(825193),
-    p = n(554034);
+    p = n(825193),
+    h = n(554034);
 function m(e, t) {
     return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
@@ -33,23 +33,23 @@ t.ZP = i.memo(function (e) {
     let { className: n, message: a, children: o, content: u, onUpdate: g, contentRef: E } = e,
         v = a.isEdited(),
         I = a.state === f.yb.SEND_FAILED,
-        S = a.state === f.yb.SENDING,
-        T = a.isCommandType(),
-        b = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        b = a.state === f.yb.SENDING,
+        S = a.isCommandType(),
+        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
         y = i.useRef(!1);
     return (
         i.useLayoutEffect(() => {
             y.current ? null != g && g() : (y.current = !0);
-        }, [g, a.content, u, b, o]),
+        }, [g, a.content, u, T, o]),
         (0, r.jsxs)('div', {
             id: (0, c.ut)(a),
             ref: E,
-            className: s()(n, p.markup, {
-                [h.messageContent]: !0,
-                [h.isSending]: S && !T,
-                [h.markupRtl]: 'rtl' === l()(a.content),
-                [h.isFailed]: I,
-                [h.isUnsupported]: a.isUnsupported
+            className: s()(n, h.markup, {
+                [p.messageContent]: !0,
+                [p.isSending]: b && !S,
+                [p.markupRtl]: 'rtl' === l()(a.content),
+                [p.isFailed]: I,
+                [p.isUnsupported]: a.isUnsupported
             }),
             children: [
                 null != o ? o : m(a, u),
@@ -63,7 +63,7 @@ t.ZP = i.memo(function (e) {
                                 isEdited: !0,
                                 isInline: !1,
                                 children: (0, r.jsxs)('span', {
-                                    className: h.edited,
+                                    className: p.edited,
                                     children: ['(', _.intl.string(_.t.C8sXIC), ')']
                                 })
                             })

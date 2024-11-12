@@ -5,12 +5,12 @@ var i = n(119837),
     s = n(831748);
 t.Z = (e) => {
     var t, n, o, l;
-    let { layerConfig: u, animationType: c, ticking: d, time: f, accessibilityLabel: _, hasPlayedThrough: h, setHasPlayedThrough: p, urlQueryString: m, maxLoops: g, loopEnd: E, bannerAdjustment: v } = e,
+    let { layerConfig: u, animationType: c, ticking: d, time: f, accessibilityLabel: _, hasPlayedThrough: p, setHasPlayedThrough: h, urlQueryString: m, maxLoops: g, loopEnd: E, bannerAdjustment: v } = e,
         I = !0;
-    if ((!d && (I = !1), f < u.start && (I = !1), !u.loop && f > u.duration + u.start && (I = !1), c === a.Q.PERSISTENT && !h && null != g && f >= E && p(!0), u.loop && void 0 !== u.loopDelay && u.loopDelay > 0)) {
+    if ((!d && (I = !1), f < u.start && (I = !1), !u.loop && f > u.duration + u.start && (I = !1), c === a.Q.PERSISTENT && !p && null != g && f >= E && h(!0), u.loop && void 0 !== u.loopDelay && u.loopDelay > 0)) {
         let e = u.duration + u.loopDelay,
             t = Math.floor((f - u.start) / e);
-        f - u.start - t * e > u.duration && (c === a.Q.INTERMITTENT && !h && null != g && t >= g && p(!0), (I = !1));
+        f - u.start - t * e > u.duration && (c === a.Q.INTERMITTENT && !p && null != g && t >= g && h(!0), (I = !1));
     }
     return I
         ? (0, r.jsx)('img', {

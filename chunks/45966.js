@@ -10,15 +10,15 @@ var r,
     d = n(160404),
     f = n(592125),
     _ = n(70956),
-    h = n(709054),
-    p = n(977258),
+    p = n(709054),
+    h = n(977258),
     m = n(819553),
     g = n(290511);
 let E = {},
     v = {},
     I = {},
-    S = !1;
-function T(e, t, n) {
+    b = !1;
+function S(e, t, n) {
     return e.map((e) =>
         (function (e, t, n) {
             let r = !1,
@@ -41,16 +41,16 @@ function T(e, t, n) {
         })(e, t, n)
     );
 }
-function b(e) {
+function T(e) {
     var t, n, r, i, a, s, o, l, u;
     let { guildId: c, updates: d } = e,
         f = null !== (a = null !== (i = d.onboardingPromptsSeen) && void 0 !== i ? i : null === (t = E[c]) || void 0 === t ? void 0 : t.onboardingPromptsSeen) && void 0 !== a ? a : {},
         _ = null !== (o = null !== (s = d.onboardingResponsesSeen) && void 0 !== s ? s : null === (n = E[c]) || void 0 === n ? void 0 : n.onboardingResponsesSeen) && void 0 !== o ? o : {},
-        h = T(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
+        p = S(null !== (u = null !== (l = d.prompts) && void 0 !== l ? l : null === (r = E[c]) || void 0 === r ? void 0 : r.prompts) && void 0 !== u ? u : [], f, _);
     E[c] = {
         ...E[c],
         ...d,
-        prompts: h
+        prompts: p
     };
 }
 function y(e, t) {
@@ -126,11 +126,11 @@ class R extends (r = u.ZP.Store) {
             .find((t) => t.id === e);
     }
     isLoading() {
-        return S;
+        return b;
     }
     shouldFetchPrompts(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.Z.Millis.HOUR;
-        if (S) return !1;
+        if (b) return !1;
         let n = I[e];
         return null == n || Date.now() - n > t;
     }
@@ -143,9 +143,9 @@ class R extends (r = u.ZP.Store) {
         return (
             t.forEach((e) => {
                 e.options.forEach((e) => {
-                    h.default.compare(e.id, n) > 0 && (n = e.id);
+                    p.default.compare(e.id, n) > 0 && (n = e.id);
                 }),
-                    h.default.compare(e.id, n) > 0 && (n = e.id);
+                    p.default.compare(e.id, n) > 0 && (n = e.id);
             }),
             n
         );
@@ -169,23 +169,23 @@ class R extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function () {
-            (S = !1), (E = {});
+            (b = !1), (E = {});
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_START: function () {
-            S = !0;
+            b = !0;
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function (e) {
             let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: s, onboardingResponsesSeen: o, mode: l, belowRequirements: u } = e;
-            S = !1;
+            b = !1;
             let c = m.ZP.getOnboardingStatus(t) === m.uX.READY,
-                d = T(n, s, o);
+                d = S(n, s, o);
             (E[t] = {
                 enabled: i,
                 mode: l,
                 belowRequirements: u,
                 prompts: d,
                 onboardingPrompts: d.filter((e) => e.inOnboarding),
-                defaultChannelIds: r.filter((e) => (0, p.s)(t, e)),
+                defaultChannelIds: r.filter((e) => (0, h.s)(t, e)),
                 responses: c ? [] : a,
                 onboardingPromptsSeen: s,
                 onboardingResponsesSeen: o
@@ -194,7 +194,7 @@ class R extends (r = u.ZP.Store) {
                 (I[t] = Date.now());
         },
         GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
-            S = !1;
+            b = !1;
         },
         GUILD_ONBOARDING_SELECT_OPTION: function (e) {
             let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;
@@ -205,7 +205,7 @@ class R extends (r = u.ZP.Store) {
             y(t, n);
             let a = E[t];
             if (null == a) return !1;
-            let s = T(a.prompts, r, i);
+            let s = S(a.prompts, r, i);
             E[t] = {
                 ...a,
                 prompts: s,
@@ -214,8 +214,8 @@ class R extends (r = u.ZP.Store) {
                 onboardingResponsesSeen: i
             };
         },
-        GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: b,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: b,
+        GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: T,
+        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: T,
         GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: function (e) {
             let { guildId: t, channelIds: n } = e;
             E[t] = {

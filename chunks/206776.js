@@ -1,6 +1,6 @@
 n.d(t, {
     l: function () {
-        return h;
+        return p;
     }
 });
 var r,
@@ -96,6 +96,6 @@ class _ extends o.W {
             });
     }
 }
-function h() {
+function p() {
     return new _();
 }

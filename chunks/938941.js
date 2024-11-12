@@ -9,7 +9,7 @@ n.d(t, {
         return d;
     },
     iA: function () {
-        return h;
+        return p;
     },
     pj: function () {
         return u;
@@ -60,7 +60,7 @@ function _(e) {
         className: l.header
     });
 }
-function h(e) {
+function p(e) {
     let { title: t, header: n, footer: s, ...u } = e,
         c = i.useId();
     return (0, r.jsxs)('div', {

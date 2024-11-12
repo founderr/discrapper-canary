@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     Sr: function () {
-        return h;
+        return p;
     },
     WQ: function () {
         return f;
@@ -74,7 +74,7 @@ async function _() {
         challenge: t
     };
 }
-async function h(e, t, n) {
+async function p(e, t, n) {
     let i = await s.Z.post({
         url: o.ANM.MFA_WEBAUTHN_CREDENTIALS,
         body: {

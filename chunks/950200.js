@@ -154,16 +154,16 @@ var n = (function () {
                     d,
                     f,
                     _,
-                    h,
                     p,
+                    h,
                     m,
                     g,
                     E,
                     v,
                     I,
+                    b,
                     S,
                     T,
-                    b,
                     y =
                         ((l = s),
                         (f = Array(32768)),
@@ -177,17 +177,17 @@ var n = (function () {
                 });
                 var N =
                         ((_ = s),
-                        (h = y),
+                        (p = y),
                         (E = 1000000),
                         (v = 0),
                         (I = 1000000),
-                        (S = 0),
-                        (T = 1000000),
                         (b = 0),
+                        (S = 1000000),
+                        (T = 0),
                         _.forEach(function (t) {
-                            (p = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), p < E ? (E = p) : p > v && (v = p), m < I ? (I = m) : m > S && (S = m), g < T ? (T = g) : g > b && (b = g);
+                            (h = t[0] >> e), (m = t[1] >> e), (g = t[2] >> e), h < E ? (E = h) : h > v && (v = h), m < I ? (I = m) : m > b && (b = m), g < S ? (S = g) : g > T && (T = g);
                         }),
-                        new i(E, v, I, S, T, b, h)),
+                        new i(E, v, I, b, S, T, p)),
                     C = new r(function (e, n) {
                         return t.naturalOrder(e.count(), n.count());
                     });
@@ -210,26 +210,26 @@ var n = (function () {
                                         d,
                                         f,
                                         _ = 0,
-                                        h = [],
-                                        p = [];
+                                        p = [],
+                                        h = [];
                                     if (o == i)
                                         for (l = r.r1; l <= r.r2; l++) {
                                             for (d = 0, u = r.g1; u <= r.g2; u++) for (c = r.b1; c <= r.b2; c++) d += e[(f = n(l, u, c))] || 0;
-                                            (_ += d), (h[l] = _);
+                                            (_ += d), (p[l] = _);
                                         }
                                     else if (o == a)
                                         for (l = r.g1; l <= r.g2; l++) {
                                             for (d = 0, u = r.r1; u <= r.r2; u++) for (c = r.b1; c <= r.b2; c++) d += e[(f = n(u, l, c))] || 0;
-                                            (_ += d), (h[l] = _);
+                                            (_ += d), (p[l] = _);
                                         }
                                     else
                                         for (l = r.b1; l <= r.b2; l++) {
                                             for (d = 0, u = r.r1; u <= r.r2; u++) for (c = r.g1; c <= r.g2; c++) d += e[(f = n(u, c, l))] || 0;
-                                            (_ += d), (h[l] = _);
+                                            (_ += d), (p[l] = _);
                                         }
                                     return (
-                                        h.forEach(function (e, t) {
-                                            p[t] = _ - e;
+                                        p.forEach(function (e, t) {
+                                            h[t] = _ - e;
                                         }),
                                         m(o == i ? 'r' : o == a ? 'g' : 'b')
                                     );
@@ -244,9 +244,9 @@ var n = (function () {
                                         u = e + '2',
                                         c = 0;
                                     for (l = r[o]; l <= r[u]; l++)
-                                        if (h[l] > _ / 2) {
-                                            for (i = r.copy(), a = r.copy(), t = l - r[o], s = t <= (n = r[u] - l) ? Math.min(r[u] - 1, ~~(l + n / 2)) : Math.max(r[o], ~~(l - 1 - t / 2)); !h[s]; ) s++;
-                                            for (c = p[s]; !c && h[s - 1]; ) c = p[--s];
+                                        if (p[l] > _ / 2) {
+                                            for (i = r.copy(), a = r.copy(), t = l - r[o], s = t <= (n = r[u] - l) ? Math.min(r[u] - 1, ~~(l + n / 2)) : Math.max(r[o], ~~(l - 1 - t / 2)); !p[s]; ) s++;
+                                            for (c = h[s]; !c && p[s - 1]; ) c = h[--s];
                                             return (i[u] = s), (a[o] = i[u] + 1), [i, a];
                                         }
                                 }

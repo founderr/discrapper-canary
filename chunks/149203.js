@@ -28,7 +28,7 @@ n.d(t, {
         return _;
     },
     gV: function () {
-        return p;
+        return h;
     },
     kV: function () {
         return v;
@@ -37,7 +37,7 @@ n.d(t, {
         return a;
     },
     td: function () {
-        return h;
+        return p;
     },
     vO: function () {
         return g;
@@ -56,8 +56,8 @@ let d = 'emoji-picker-grid';
 let f = -1;
 ((c = s || (s = {}))[(c.MEDIUM = 40)] = 'MEDIUM'), (c[(c.LARGE = 48)] = 'LARGE');
 let _ = 'emoji-picker-tab-panel',
-    h = 'emoji-picker-tab',
-    p = 'soundboard-picker-tab-panel',
+    p = 'emoji-picker-tab',
+    h = 'soundboard-picker-tab-panel',
     m = 'soundboard-picker-tab',
     g = 'gif-picker-tab-panel',
     E = 'gif-picker-tab',

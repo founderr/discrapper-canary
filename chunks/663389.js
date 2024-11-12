@@ -9,16 +9,16 @@ var r,
     d = n(594174),
     f = n(981631);
 let _ = f.QZA.CLOSED,
-    h = null,
     p = null,
+    h = null,
     m = {},
     g = {},
     E = {},
     v = null,
     I = null,
+    b = !1,
     S = !1,
-    T = !1,
-    b = null,
+    T = null,
     y = null,
     A = null,
     N = [],
@@ -28,11 +28,11 @@ function O(e) {
     var t, n, r, i, a, s;
     let o = d.default.getCurrentUser();
     if (null == o) return D();
-    (p = null !== (t = e.section) && void 0 !== t ? t : p),
-        (C = null !== (n = e.section) && void 0 !== n ? n : p),
-        null != e.subsection && null != p && (m[p] = e.subsection),
-        null != e.scrollPosition && null != p && (g[p] = e.scrollPosition),
-        (T = !!e.openWithoutBackstack),
+    (h = null !== (t = e.section) && void 0 !== t ? t : h),
+        (C = null !== (n = e.section) && void 0 !== n ? n : h),
+        null != e.subsection && null != h && (m[h] = e.subsection),
+        null != e.scrollPosition && null != h && (g[h] = e.scrollPosition),
+        (S = !!e.openWithoutBackstack),
         (_ = f.QZA.OPEN),
         (E = {}),
         (I = {
@@ -55,7 +55,7 @@ function O(e) {
         (R = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function D() {
-    (_ = f.QZA.CLOSED), (S = !1), (v = null), (C = null), (I = null), (h = null), (p = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
+    (_ = f.QZA.CLOSED), (b = !1), (v = null), (C = null), (I = null), (p = null), (h = null), (m = {}), (g = {}), (y = null), (A = null), (N = []), (R = null);
 }
 function L() {
     (_ = f.QZA.OPEN), (E = {});
@@ -65,36 +65,36 @@ class x extends (s = u.ZP.Store) {
         this.waitFor(d.default);
     }
     hasChanges() {
-        return null != I && null != v && (!!this.isOpen() || b === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
+        return null != I && null != v && (!!this.isOpen() || T === f.cII.USER_SETTINGS) && !l().isEqual(I, v);
     }
     isOpen() {
-        return S;
+        return b;
     }
     getPreviousSection() {
-        return h;
-    }
-    getSection() {
         return p;
     }
+    getSection() {
+        return h;
+    }
     getSubsection() {
-        return null != p ? m[p] : null;
+        return null != h ? m[h] : null;
     }
     getScrollPosition() {
-        return null != p ? g[p] : null;
+        return null != h ? g[h] : null;
     }
     shouldOpenWithoutBackstack() {
-        return T;
+        return S;
     }
     getProps() {
         return {
             submitting: _ === f.QZA.SUBMITTING,
-            section: p,
-            subsection: null != p ? m[p] : null,
-            scrollPosition: null != p ? g[p] : null,
+            section: h,
+            subsection: null != h ? m[h] : null,
+            scrollPosition: null != h ? g[h] : null,
             settings: I,
             errors: E,
             hasChanges: this.hasChanges(),
-            openWithoutBackstack: T,
+            openWithoutBackstack: S,
             analyticsLocation: A,
             analyticsLocations: N,
             initialSection: C,
@@ -116,7 +116,7 @@ class x extends (s = u.ZP.Store) {
         : (r[i] = a),
     (t.Z = new x(c.Z, {
         USER_SETTINGS_MODAL_OPEN: function (e) {
-            (S = !0), O(e);
+            (b = !0), O(e);
         },
         USER_SETTINGS_MODAL_INIT: O,
         USER_SETTINGS_MODAL_CLOSE: D,
@@ -127,19 +127,19 @@ class x extends (s = u.ZP.Store) {
         USER_SETTINGS_MODAL_SUBMIT_FAILURE: function (e) {
             var t;
             if (_ !== f.QZA.SUBMITTING) return !1;
-            (_ = f.QZA.OPEN), (p = f.oAB.ACCOUNT), (E = null !== (t = e.errors) && void 0 !== t ? t : {});
+            (_ = f.QZA.OPEN), (h = f.oAB.ACCOUNT), (E = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_SETTINGS_MODAL_SET_SECTION: function (e) {
             var t;
-            (h = p), (p = e.section), (A = null), (N = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (m[p] = e.subsection);
+            (p = h), (h = e.section), (A = null), (N = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (m[h] = e.subsection);
         },
         USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function (e) {
             let { forSection: t } = e;
-            null != t ? delete m[t] : null != p && delete m[p];
+            null != t ? delete m[t] : null != h && delete m[h];
         },
         USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function (e) {
             let { forSection: t } = e;
-            null != t ? delete g[t] : null != p && delete g[p];
+            null != t ? delete g[t] : null != h && delete g[h];
         },
         USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function (e) {
             let { settings: t } = e;
@@ -172,9 +172,9 @@ class x extends (s = u.ZP.Store) {
         },
         DRAWER_SELECT_TAB: function (e) {
             return (
-                (b = e.tab),
-                null == p &&
-                    b === f.cII.USER_SETTINGS &&
+                (T = e.tab),
+                null == h &&
+                    T === f.cII.USER_SETTINGS &&
                     O({
                         type: 'USER_SETTINGS_MODAL_INIT',
                         section: null,

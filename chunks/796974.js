@@ -15,12 +15,12 @@ function _(e) {
         scrollTo: null
     };
 }
-function h(e) {
+function p(e) {
     if (null == c[e]) return;
     let { scrollTop: t, scrollHeight: n, offsetHeight: r } = c[e];
     return t === n - r;
 }
-class p extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     percentageScrolled(e) {
         if (null != c[e]) {
             let { scrollTop: t, scrollHeight: n } = c[e];
@@ -39,11 +39,11 @@ class p extends (s = o.ZP.Store) {
         return f;
     }
     isAtBottom(e) {
-        return h(e);
+        return p(e);
     }
 }
 (a = 'DimensionStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -51,7 +51,7 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(u.Z, {
+    (t.Z = new h(u.Z, {
         UPDATE_CHANNEL_DIMENSIONS: function (e) {
             let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
                 a = c[t];
@@ -81,6 +81,6 @@ class p extends (s = o.ZP.Store) {
         },
         CALL_CREATE: function (e) {
             let { channelId: t } = e;
-            h(t) && delete c[t];
+            p(t) && delete c[t];
         }
     }));

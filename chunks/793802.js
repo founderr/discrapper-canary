@@ -10,14 +10,14 @@ var n = 'function' == typeof Symbol && Symbol.for,
     d = n ? Symbol.for('react.concurrent_mode') : 60111,
     f = n ? Symbol.for('react.forward_ref') : 60112,
     _ = n ? Symbol.for('react.suspense') : 60113,
-    h = n ? Symbol.for('react.suspense_list') : 60120,
-    p = n ? Symbol.for('react.memo') : 60115,
+    p = n ? Symbol.for('react.suspense_list') : 60120,
+    h = n ? Symbol.for('react.memo') : 60115,
     m = n ? Symbol.for('react.lazy') : 60116,
     g = n ? Symbol.for('react.block') : 60121,
     E = n ? Symbol.for('react.fundamental') : 60117,
     v = n ? Symbol.for('react.responder') : 60118,
     I = n ? Symbol.for('react.scope') : 60119;
-function S(e) {
+function b(e) {
     if ('object' == typeof e && null !== e) {
         var t = e.$$typeof;
         switch (t) {
@@ -35,7 +35,7 @@ function S(e) {
                             case u:
                             case f:
                             case m:
-                            case p:
+                            case h:
                             case l:
                                 return e;
                             default:
@@ -47,8 +47,8 @@ function S(e) {
         }
     }
 }
-function T(e) {
-    return S(e) === d;
+function S(e) {
+    return b(e) === d;
 }
 (t.AsyncMode = c),
     (t.ConcurrentMode = d),
@@ -58,49 +58,49 @@ function T(e) {
     (t.ForwardRef = f),
     (t.Fragment = a),
     (t.Lazy = m),
-    (t.Memo = p),
+    (t.Memo = h),
     (t.Portal = i),
     (t.Profiler = o),
     (t.StrictMode = s),
     (t.Suspense = _),
     (t.isAsyncMode = function (e) {
-        return T(e) || S(e) === c;
+        return S(e) || b(e) === c;
     }),
-    (t.isConcurrentMode = T),
+    (t.isConcurrentMode = S),
     (t.isContextConsumer = function (e) {
-        return S(e) === u;
+        return b(e) === u;
     }),
     (t.isContextProvider = function (e) {
-        return S(e) === l;
+        return b(e) === l;
     }),
     (t.isElement = function (e) {
         return 'object' == typeof e && null !== e && e.$$typeof === r;
     }),
     (t.isForwardRef = function (e) {
-        return S(e) === f;
+        return b(e) === f;
     }),
     (t.isFragment = function (e) {
-        return S(e) === a;
+        return b(e) === a;
     }),
     (t.isLazy = function (e) {
-        return S(e) === m;
+        return b(e) === m;
     }),
     (t.isMemo = function (e) {
-        return S(e) === p;
+        return b(e) === h;
     }),
     (t.isPortal = function (e) {
-        return S(e) === i;
+        return b(e) === i;
     }),
     (t.isProfiler = function (e) {
-        return S(e) === o;
+        return b(e) === o;
     }),
     (t.isStrictMode = function (e) {
-        return S(e) === s;
+        return b(e) === s;
     }),
     (t.isSuspense = function (e) {
-        return S(e) === _;
+        return b(e) === _;
     }),
     (t.isValidElementType = function (e) {
-        return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === _ || e === h || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === p || e.$$typeof === l || e.$$typeof === u || e.$$typeof === f || e.$$typeof === E || e.$$typeof === v || e.$$typeof === I || e.$$typeof === g));
+        return 'string' == typeof e || 'function' == typeof e || e === a || e === d || e === o || e === s || e === _ || e === p || ('object' == typeof e && null !== e && (e.$$typeof === m || e.$$typeof === h || e.$$typeof === l || e.$$typeof === u || e.$$typeof === f || e.$$typeof === E || e.$$typeof === v || e.$$typeof === I || e.$$typeof === g));
     }),
-    (t.typeOf = S);
+    (t.typeOf = b);

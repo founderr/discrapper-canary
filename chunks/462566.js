@@ -18,17 +18,17 @@ t.Z = function (e) {
     var t;
     let { onCardInfoChange: n, error: a } = e,
         r = i.useRef(n),
-        [s, f] = i.useState(!1),
-        [N, b] = i.useState({}),
+        [s, N] = i.useState(!1),
+        [f, b] = i.useState({}),
         [_, y] = i.useState({
             name: '',
             country: '',
             postalCode: ''
         }),
         [P, g] = i.useState({}),
-        [C, T] = i.useState({});
-    function I(e, t) {
-        !!N[e] !== t &&
+        [C, I] = i.useState({});
+    function T(e, t) {
+        !!f[e] !== t &&
             b((n) => ({
                 ...n,
                 [e]: t
@@ -43,9 +43,9 @@ t.Z = function (e) {
         [P, _]
     );
     i.useEffect(() => {
-        let e = N.cardNumber && N.cardExpiry && N.cardCvc && 0 === Object.keys(S(!0)).length;
+        let e = f.cardNumber && f.cardExpiry && f.cardCvc && 0 === Object.keys(S(!0)).length;
         r.current({ name: _.name }, !!e);
-    }, [N, _, S]);
+    }, [f, _, S]);
     let v = {
             name: 'cardNumber',
             title: () => h.intl.string(h.t.cVyJ3t),
@@ -54,7 +54,7 @@ t.Z = function (e) {
                 (0, l.jsx)(p.Z, {
                     stripeType: 'cardNumber',
                     flipped: s,
-                    updateCompleted: (e) => I('cardNumber', e)
+                    updateCompleted: (e) => T('cardNumber', e)
                 })
         },
         x = {
@@ -64,7 +64,7 @@ t.Z = function (e) {
             renderInput: () =>
                 (0, l.jsx)(p.Z, {
                     stripeType: 'cardExpiry',
-                    updateCompleted: (e) => I('cardExpiry', e)
+                    updateCompleted: (e) => T('cardExpiry', e)
                 })
         },
         L = {
@@ -74,12 +74,12 @@ t.Z = function (e) {
             renderInput: () =>
                 (0, l.jsx)(p.Z, {
                     stripeType: 'cardCvc',
-                    updateCompleted: (e) => I('cardCvc', e),
+                    updateCompleted: (e) => T('cardCvc', e),
                     onFocus: () => {
-                        f(!0);
+                        N(!0);
                     },
                     onBlur: () => {
-                        f(!1);
+                        N(!1);
                     }
                 })
         },
@@ -119,10 +119,10 @@ t.Z = function (e) {
                     let n = { ..._ },
                         a = { ...P },
                         r = { name: C.name };
-                    !P[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], y(n), g(a), T(r);
+                    !P[t] && '' !== e && (a[t] = !0), (n[t] = e), a[t] && '' === e ? 'name' === t && (r.name = h.intl.string(h.t.lIkVsr)) : delete r[t], y(n), g(a), I(r);
                 },
                 onFieldBlur: function () {
-                    T(S());
+                    I(S());
                 }
             })
         ]

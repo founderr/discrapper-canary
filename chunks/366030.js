@@ -16,16 +16,16 @@ var r = n(200651),
     d = n(780384),
     f = n(481060),
     _ = n(749210),
-    h = n(99690),
-    p = n(410030),
+    p = n(99690),
+    h = n(410030),
     m = n(726542),
     g = n(367907),
     E = n(906732),
     v = n(385499),
     I = n(171368),
-    S = n(598077),
-    T = n(271383),
-    b = n(626135),
+    b = n(598077),
+    S = n(271383),
+    T = n(626135),
     y = n(275759),
     A = n(107484),
     N = n(977392),
@@ -84,7 +84,7 @@ function P(e) {
 }
 function k(e) {
     let { eligibilityStates: t } = e,
-        n = (0, p.ZP)(),
+        n = (0, h.ZP)(),
         i = (0, f.useToken)(c.Z.unsafe_rawColors.GREEN_330).hex(),
         a = l().groupBy(t, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : ''));
     return (0, r.jsx)(r.Fragment, {
@@ -94,9 +94,9 @@ function k(e) {
             let u = a[e],
                 c = u.filter((e) => null != e.operator),
                 _ = u.find((e) => null != e.application),
-                p = m.Z.get(e),
+                h = m.Z.get(e),
                 g = null == _ ? void 0 : _.application,
-                E = (null == g ? void 0 : g.bot) != null ? new S.Z(g.bot) : null;
+                E = (null == g ? void 0 : g.bot) != null ? new b.Z(g.bot) : null;
             return (
                 y.SJ.includes(null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : '')
                     ? (l = (0, r.jsx)(R.Z, {
@@ -117,15 +117,15 @@ function k(e) {
                             (0, r.jsxs)('div', {
                                 className: M.popoutCheckGroupName,
                                 children: [
-                                    null != p
+                                    null != h
                                         ? (0, r.jsx)('img', {
-                                              src: (0, d.wj)(n) ? p.icon.darkSVG : p.icon.lightSVG,
+                                              src: (0, d.wj)(n) ? h.icon.darkSVG : h.icon.lightSVG,
                                               alt: '',
                                               className: M.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
                                     null != E
-                                        ? (0, r.jsx)(h.Z, {
+                                        ? (0, r.jsx)(p.Z, {
                                               user: E,
                                               size: f.AvatarSizes.SIZE_20,
                                               className: M.popoutCheckGroupPlatformIcon
@@ -134,7 +134,7 @@ function k(e) {
                                     (0, r.jsx)(f.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'interactive-active',
-                                        children: null !== (o = null == p ? void 0 : p.name) && void 0 !== o ? o : null == g ? void 0 : g.name
+                                        children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == g ? void 0 : g.name
                                     }),
                                     l
                                 ]
@@ -170,7 +170,7 @@ function U(e) {
     let t,
         { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: s, userId: o, roleId: l, channelId: c, guildId: d } = e;
     i.useEffect(() => {
-        b.default.track(L.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
+        T.default.track(L.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
             other_user_id: o,
             role_id: l,
             ...(0, g.JS)(c),
@@ -178,10 +178,10 @@ function U(e) {
         });
     }, [o, l, c, d]);
     let _ = (0, u.e7)(
-        [T.ZP],
+        [S.ZP],
         () => {
             var e, t;
-            return null !== (t = null === (e = T.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
+            return null !== (t = null === (e = S.ZP.getSelfMember(d)) || void 0 === e ? void 0 : e.roles.includes(l)) && void 0 !== t && t;
         },
         [d, l]
     );
@@ -230,10 +230,10 @@ function G(e) {
         { analyticsLocations: l } = (0, E.ZP)(),
         c = (0, N.Z)(a, t, o.id, !0),
         d = (0, u.e7)([A.Z], () => A.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
-        [h, p] = i.useState(null == d);
+        [p, h] = i.useState(null == d);
     if (null == c) return null;
     async function m() {
-        if ((s()(null != c, 'visibleConnectionsRole is null'), !!h && null == d)) await _.Z.fetchGuildRoleConnectionsEligibility(a.id, c.id), p(!1);
+        if ((s()(null != c, 'visibleConnectionsRole is null'), !!p && null == d)) await _.Z.fetchGuildRoleConnectionsEligibility(a.id, c.id), h(!1);
     }
     return (0, r.jsx)(f.LazyPopout, {
         onRequestOpen: m,

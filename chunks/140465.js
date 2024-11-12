@@ -1,6 +1,6 @@
 n.d(t, {
     Nx: function () {
-        return p;
+        return h;
     },
     UV: function () {
         return I;
@@ -15,7 +15,7 @@ n.d(t, {
         return m;
     },
     x8: function () {
-        return S;
+        return b;
     }
 }),
     n(47120);
@@ -30,8 +30,8 @@ var r = n(192379),
     d = n(104494),
     f = n(639119),
     _ = n(474936),
-    h = n(981631);
-function p() {
+    p = n(981631);
+function h() {
     let e = (0, f.N)(),
         t = (0, u._O)(),
         n = (0, d.Ng)(),
@@ -89,7 +89,7 @@ let m = () => {
         let e = null;
         try {
             var t;
-            let n = await o.tn.post({ url: h.ANM.CHURN_USER_OFFER });
+            let n = await o.tn.post({ url: p.ANM.CHURN_USER_OFFER });
             e = null !== (t = n.body.offer) && void 0 !== t ? t : null;
         } catch (e) {}
         return e;
@@ -130,7 +130,7 @@ let m = () => {
             r = null != e && null != e.trialId;
         return n && !r && !t;
     },
-    S = (e) => {
+    b = (e) => {
         let t = (0, s.e7)([l.ZP], () => l.ZP.inReverseTrial()),
             n = (0, s.e7)([l.ZP], () => {
                 var e;

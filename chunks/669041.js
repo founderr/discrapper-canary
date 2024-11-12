@@ -4,7 +4,7 @@ n.r(t),
             return _;
         },
         openRewardModalUnverified: function () {
-            return h;
+            return p;
         }
     }),
     n(47120);
@@ -24,13 +24,13 @@ function _(e) {
             var e;
             return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
         }),
-        [h, p] = i.useState({ status: 'unknown' });
+        [p, h] = i.useState({ status: 'unknown' });
     i.useEffect(() => {
-        p({ status: 'loading' }),
+        h({ status: 'loading' }),
             o.Z.verifyResend().then(
-                () => p({ status: 'success' }),
+                () => h({ status: 'success' }),
                 (e) => {
-                    p({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    h({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
                 }
             );
     }, []);
@@ -68,12 +68,12 @@ function _(e) {
                     })
                 ]
             }),
-            'loading' === h.status &&
+            'loading' === p.status &&
                 (0, r.jsx)(s.ModalContent, {
                     className: d.content,
                     children: (0, r.jsx)(s.Spinner, {})
                 }),
-            'error' === h.status &&
+            'error' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.ModalContent, {
@@ -86,7 +86,7 @@ function _(e) {
                         m()
                     ]
                 }),
-            'success' === h.status &&
+            'success' === p.status &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.ModalContent, {
@@ -123,7 +123,7 @@ function _(e) {
         ]
     });
 }
-function h() {
+function p() {
     (0, s.openModalLazy)(async () => {
         let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
         return (t) => (0, r.jsx)(e, { ...t });

@@ -10,16 +10,16 @@ var r = n(392711),
     d = n(430824),
     f = n(594174),
     _ = n(5192),
-    h = n(51144),
-    p = n(298552),
+    p = n(51144),
+    h = n(298552),
     m = n(444758),
     g = n(723454),
     E = n(772096),
     v = n(800927),
     I = n(945884),
-    S = n(594199),
-    T = n(97734),
-    b = n(303694),
+    b = n(594199),
+    S = n(97734),
+    T = n(303694),
     y = n(660199),
     A = n(364458),
     N = n(981631),
@@ -128,7 +128,7 @@ let P = (e) => {
         em: s().defaultRules.em,
         u: s().defaultRules.u,
         br: s().defaultRules.br,
-        text: S.ZP,
+        text: b.ZP,
         inlineCode: {
             ...s().defaultRules.inlineCode,
             parse(e, t, n) {
@@ -142,7 +142,7 @@ let P = (e) => {
             }
         },
         emoticon: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['\xAF'],
             match: (e) => /^(¯\\_\(ツ\)_\/¯)/.exec(e),
             parse: (e) => ({
@@ -164,7 +164,7 @@ let P = (e) => {
             }
         },
         roleMention: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
@@ -200,7 +200,7 @@ let P = (e) => {
             }
         },
         mention: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['<', '@'],
             match(e, t) {
                 let n = /^<@!?(\d+)>|^(@(?:everyone|here|Clyde))/.exec(e);
@@ -222,12 +222,12 @@ let P = (e) => {
                     s = c.Z.getChannel(n.channelId);
                 if (null != a && ((i = a.id), (r = a.toString()), null != s)) {
                     var l;
-                    r = null !== (l = _.ZP.getNickname(s.getGuildId(), n.channelId, a)) && void 0 !== l ? l : h.ZP.getName(a);
+                    r = null !== (l = _.ZP.getNickname(s.getGuildId(), n.channelId, a)) && void 0 !== l ? l : p.ZP.getName(a);
                 }
                 null == a && '@Clyde' === e[0] && (0, o.gJ)(k(n), s) && (i = R.fL);
                 let u = e[1],
                     d = null != u && N.Xyh.test(u.trim()),
-                    p = d && n.unknownUserMentionPlaceholder ? '@'.concat(O.intl.string(O.t.sKdZ6e)) : e[0];
+                    h = d && n.unknownUserMentionPlaceholder ? '@'.concat(O.intl.string(O.t.sKdZ6e)) : e[0];
                 return {
                     userId: i,
                     channelId: n.channelId,
@@ -238,14 +238,14 @@ let P = (e) => {
                     content: [
                         {
                             type: 'text',
-                            content: null != r ? '@'.concat(r) : p
+                            content: null != r ? '@'.concat(r) : h
                         }
                     ]
                 };
             }
         },
         silentPrefix: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['@'],
             match: (e, t, n) => (null == n || '' === n ? /^(@silent(?![^\s]))/.exec(e) : null),
             parse: function (e) {
@@ -258,7 +258,7 @@ let P = (e) => {
         channelMention: m.Z.channelMention,
         channelOrMessageUrl: m.Z.channelOrMessageUrl,
         mediaPostLink: m.Z.mediaPostLink,
-        attachmentLink: p.Z.attachmentLink,
+        attachmentLink: h.Z.attachmentLink,
         commandMention: {
             order: s().defaultRules.text.order,
             requiredFirstCharacters: ['<'],
@@ -286,7 +286,7 @@ let P = (e) => {
             }
         },
         emoji: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: [':'],
             match(e) {
                 let t = l.ZP.EMOJI_NAME_RE.exec(e);
@@ -301,13 +301,13 @@ let P = (e) => {
             }
         },
         soundboard: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => u.hf.exec(e),
             parse: (e, t, n) => (0, u.ZP)(e, n)
         },
         customEmoji: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => /^<a?:(\w+):(\d+)>/.exec(e),
             parse: (e) => ({
@@ -316,7 +316,7 @@ let P = (e) => {
             })
         },
         timestamp: {
-            order: S.ZP.order - 1,
+            order: b.ZP.order - 1,
             requiredFirstCharacters: ['<'],
             match: (e) => y.Ay.exec(e),
             parse(e) {
@@ -337,7 +337,7 @@ let P = (e) => {
             parse: s().defaultRules.u.parse
         },
         spoiler: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['|'],
             match: (e) => N.$92.exec(e),
             parse: (e, t, n) => ({
@@ -346,14 +346,14 @@ let P = (e) => {
             })
         },
         staticRouteLink: {
-            order: S.ZP.order,
+            order: b.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => N.PEY.exec(e),
             parse(e, t, n) {
                 var r;
                 let [, i, a] = e,
-                    s = (0, b.l)(i),
-                    o = (0, b.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
+                    s = (0, T.l)(i),
+                    o = (0, T.W)(i, a, null === (r = k(n)) || void 0 === r ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -379,7 +379,7 @@ let P = (e) => {
         list: v.Z,
         subtext: I.Z
     },
-    G = (0, A.Z)([U, T.Z]),
+    G = (0, A.Z)([U, S.Z]),
     B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
     Z = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
     F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),

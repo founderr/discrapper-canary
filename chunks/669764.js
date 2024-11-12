@@ -60,7 +60,7 @@ class f extends (r = o.ZP.Store) {
                 c.delete(e), d.delete(e);
             }),
                 n.forEach((e) => {
-                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: h, developer_names: p } = e;
+                    let { application_id: t, name: n, summary: r, websites: i, themes: a, genres: s, platforms: o, artwork_urls: l, screenshot_urls: c, cover_image_url: d, first_release_date: f, summary_localized: _, publisher_names: p, developer_names: h } = e;
                     u.set(t, {
                         applicationId: t,
                         name: n,
@@ -74,8 +74,8 @@ class f extends (r = o.ZP.Store) {
                         screenshots: c,
                         coverImageUrl: d,
                         firstReleaseDate: f,
-                        publishers: null != h ? h : [],
-                        developers: null != p ? p : []
+                        publishers: null != p ? p : [],
+                        developers: null != h ? h : []
                     });
                 });
         },

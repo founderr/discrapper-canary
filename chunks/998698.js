@@ -12,7 +12,7 @@ let f = {};
 function _() {
     return (f = {}), !0;
 }
-function h(e) {
+function p(e) {
     return (
         !(e in f) &&
             (f[e] = {
@@ -27,12 +27,12 @@ function h(e) {
         f[e]
     );
 }
-function p(e) {
+function h(e) {
     var t;
-    let { channelId: n, command: r, section: i, initialValues: a, location: s, triggerSection: o, queryLength: l, sectionName: u, query: c, searchResultsPosition: f, source: _, commandOrigin: p } = e,
-        m = h(n);
+    let { channelId: n, command: r, section: i, initialValues: a, location: s, triggerSection: o, queryLength: l, sectionName: u, query: c, searchResultsPosition: f, source: _, commandOrigin: h } = e,
+        m = p(n);
     if ((null == r ? void 0 : r.id) === (null === (t = m.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
-    (m.activeCommand = r), (m.activeCommandSection = i), (m.activeOptionName = null), (m.preferredCommandId = null), (m.initialValues = null != a ? a : {}), (m.commandOrigin = null != p ? p : null), (m.source = _);
+    (m.activeCommand = r), (m.activeCommandSection = i), (m.activeOptionName = null), (m.preferredCommandId = null), (m.initialValues = null != a ? a : {}), (m.commandOrigin = null != h ? h : null), (m.source = _);
     let g = {};
     return (
         (null == r ? void 0 : r.options) != null &&
@@ -62,12 +62,12 @@ function p(e) {
 function m(e) {
     var t, n;
     let { channelId: r, commandId: i } = e,
-        a = h(r);
+        a = p(r);
     return i !== a.preferredCommandId && (null !== a.preferredCommandId || i !== (null !== (n = null === (t = a.activeCommand) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null)) && ((a.activeCommand = null), (a.activeOptionName = null), (a.preferredCommandId = i), (a.optionStates = {}), !0);
 }
 function g(e) {
     let { channelId: t, changedOptionStates: n } = e,
-        r = h(t),
+        r = p(t),
         i = { ...r.optionStates };
     for (let [e, t] of Object.entries(n)) {
         var a, s, o;
@@ -108,40 +108,40 @@ class E extends (r = o.ZP.Store) {
         });
     }
     getActiveCommand(e) {
-        return h(e).activeCommand;
+        return p(e).activeCommand;
     }
     getActiveCommandSection(e) {
-        return h(e).activeCommandSection;
+        return p(e).activeCommandSection;
     }
     getActiveOptionName(e) {
-        return h(e).activeOptionName;
+        return p(e).activeOptionName;
     }
     getActiveOption(e) {
         var t, n, r;
-        let i = h(e);
+        let i = p(e);
         return null !== (r = null === (n = i.activeCommand) || void 0 === n ? void 0 : null === (t = n.options) || void 0 === t ? void 0 : t.find((e) => e.name === i.activeOptionName)) && void 0 !== r ? r : null;
     }
     getPreferredCommandId(e) {
-        return h(e).preferredCommandId;
+        return p(e).preferredCommandId;
     }
     getOptionStates(e) {
-        return h(e).optionStates;
+        return p(e).optionStates;
     }
     getOptionState(e, t) {
-        return h(e).optionStates[t];
+        return p(e).optionStates[t];
     }
     getCommandOrigin(e) {
-        return h(e).commandOrigin;
+        return p(e).commandOrigin;
     }
     getSource(e) {
-        return h(e).source;
+        return p(e).source;
     }
     getOption(e, t) {
         var n, r;
-        return null === (r = h(e).activeCommand) || void 0 === r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t);
+        return null === (r = p(e).activeCommand) || void 0 === r ? void 0 : null === (n = r.options) || void 0 === n ? void 0 : n.find((e) => e.name === t);
     }
     getState(e) {
-        return { ...h(e) };
+        return { ...p(e) };
     }
 }
 (s = 'ApplicationCommandStore'),
@@ -157,12 +157,12 @@ let v = new E(l.Z, {
     CONNECTION_OPEN: _,
     CHANNEL_SELECT: _,
     LOGOUT: _,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: p,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: h,
     APPLICATION_COMMAND_SET_PREFERRED_COMMAND: m,
     APPLICATION_COMMAND_UPDATE_OPTIONS: g,
     APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
         let { channelId: t, preferredCommandId: n, command: r, section: i, location: a, changedOptionStates: s } = e,
-            o = p({
+            o = h({
                 type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
                 channelId: t,
                 command: r,

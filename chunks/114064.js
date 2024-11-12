@@ -9,16 +9,16 @@ var i,
     d = n(168232),
     f = n(933843),
     _ = n(746599),
-    h = n(1163);
-let p = {
+    p = n(1163);
+let h = {
         available: {},
         activated: {},
         lastFetched: null,
         overrides: {}
     },
-    m = p;
+    m = h;
 function g() {
-    r = h.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
+    r = p.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
 }
 class E extends (o = u.ZP.Store) {
     isAvailable(e) {
@@ -64,7 +64,7 @@ class E extends (o = u.ZP.Store) {
             (m.available = null != t ? t : {}), (m.activated = null != n ? n : {}), (m.lastFetched = Date.now());
         },
         PREMIUM_PERKS_DEMOS_FETCH_FAILURE: function () {
-            (m.available = p.available), (m.lastFetched = null);
+            (m.available = h.available), (m.lastFetched = null);
         },
         PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: function (e) {
             let { perkType: t, activatedDuration: n } = e;
@@ -79,7 +79,7 @@ class E extends (o = u.ZP.Store) {
             if (((m.available[t] = !1), (null == r ? void 0 : r.extendedDemoDuration) !== !0)) delete m.activated[t];
         },
         LOGOUT: function () {
-            m = p;
+            m = h;
         },
         PREMIUM_PERKS_DEMO_OVERRIDE: function (e) {
             let { user: t, perkType: n, available: r, activateSuccess: i, demoDuration: a } = e;

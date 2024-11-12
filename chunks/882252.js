@@ -9,10 +9,10 @@ n.d(t, {
         return d;
     },
     nU: function () {
-        return h;
+        return p;
     },
     yv: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -46,14 +46,14 @@ let f = () => ({
 function _(e, t) {
     if (t === o.R6.POSTED_DURATION_AGO && e === r.z.CREATION_DATE) return f;
 }
-function h(e, t) {
+function p(e, t) {
     let [n] = t,
         r = n.hasTrackedUnread(e),
         i = n.hasOpenedThread(e),
         a = null != n.getTrackedAckMessageId(e);
     return r && i && a;
 }
-function p(e) {
+function h(e) {
     var t;
     return (null === (t = i.Z.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(l.zZ.PINNED)) === !0;
 }

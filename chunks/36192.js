@@ -21,8 +21,8 @@ var i = n(200651),
     S = n(594174),
     T = n(460562),
     C = n(823379),
-    _ = n(981631),
-    E = n(921944),
+    E = n(981631),
+    _ = n(921944),
     f = n(388032),
     I = n(722177);
 function N() {
@@ -32,14 +32,14 @@ function N() {
         l = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         [u, T] = s.useState(!1);
     s.useEffect(() => {
-        (0, p.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: E.L.AUTO }), (0, h.fw)();
+        (0, p.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: _.L.AUTO }), (0, h.fw)();
         let e = setTimeout(() => T(!0), 500);
         return () => {
             clearTimeout(e), (0, h.$Z)();
         };
     }, []);
     let C = () => {
-            o.tn.post({ url: _.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
+            o.tn.post({ url: E.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
         [N, v] = s.useState(new Set());
     return r
@@ -171,7 +171,7 @@ function A(e) {
     let { session: o, current: c, setChecked: u, checked: m, useChecks: p } = e,
         x = null !== (a = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== a ? a : null === (n = o.client_info) || void 0 === n ? void 0 : n.ip,
         S = null === (s = o.client_info) || void 0 === s ? void 0 : s.platform,
-        { text: T, icon: _ } = (function (e) {
+        { text: T, icon: E } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
@@ -193,9 +193,9 @@ function A(e) {
                     };
             }
         })(null === (r = o.client_info) || void 0 === r ? void 0 : r.os),
-        E = c ? null : (0, g.p)(o.approx_last_used_time),
+        _ = c ? null : (0, g.p)(o.approx_last_used_time),
         N = [T, S].filter(C.lm),
-        A = [x, E].filter(C.lm);
+        A = [x, _].filter(C.lm);
     return (0, i.jsxs)(
         'div',
         {
@@ -203,7 +203,7 @@ function A(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: I.sessionIcon,
-                    children: (0, i.jsx)(_, {
+                    children: (0, i.jsx)(E, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -287,7 +287,7 @@ function b() {
                         variant: 'text-sm/medium',
                         className: I.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: f.intl.format(f.t['044+8v'], { onClick: () => u.Z.setSection(_.oAB.ACCOUNT) }) })
+                        children: (0, i.jsx)('span', { children: f.intl.format(f.t['044+8v'], { onClick: () => u.Z.setSection(E.oAB.ACCOUNT) }) })
                     })
                 ]
             })

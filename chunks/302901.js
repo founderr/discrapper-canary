@@ -1,12 +1,12 @@
 n.d(t, {
     Og: function () {
-        return h;
+        return p;
     },
     Xv: function () {
         return v;
     },
     li: function () {
-        return p;
+        return h;
     },
     mh: function () {
         return E;
@@ -42,8 +42,8 @@ function _(e, t, n) {
         e
     );
 }
-let h = f.layerContainer;
-class p extends i.Component {
+let p = f.layerContainer;
+class h extends i.Component {
     componentWillUnmount() {
         this.state.layerContainerElement = null;
     }
@@ -72,7 +72,7 @@ let m = (e) => {
     let { layerContext: t, className: n } = e,
         [, a] = i.useContext(t);
     return (0, r.jsx)('div', {
-        className: s()(h, n),
+        className: s()(p, n),
         ref: a
     });
 };
@@ -94,7 +94,7 @@ function v(e) {
     let t = i.createContext([null, () => {}]),
         n = {
             LayerProvider: (e) =>
-                (0, r.jsx)(p, {
+                (0, r.jsx)(h, {
                     layerContext: t,
                     ...e
                 }),

@@ -14,11 +14,11 @@ e.exports = function (e, t, n, r) {
             d,
             f,
             _,
-            h,
-            p = e[l].replace(a, '%20'),
-            m = p.indexOf(n);
-        if ((m >= 0 ? ((d = p.substr(0, m)), (f = p.substr(m + 1))) : ((d = p), (f = '')), (_ = decodeURIComponent(d)), (h = decodeURIComponent(f)), (u = i), (c = _), Object.prototype.hasOwnProperty.call(u, c))) Array.isArray(i[_]) ? i[_].push(h) : (i[_] = [i[_], h]);
-        else i[_] = h;
+            p,
+            h = e[l].replace(a, '%20'),
+            m = h.indexOf(n);
+        if ((m >= 0 ? ((d = h.substr(0, m)), (f = h.substr(m + 1))) : ((d = h), (f = '')), (_ = decodeURIComponent(d)), (p = decodeURIComponent(f)), (u = i), (c = _), Object.prototype.hasOwnProperty.call(u, c))) Array.isArray(i[_]) ? i[_].push(p) : (i[_] = [i[_], p]);
+        else i[_] = p;
     }
     return i;
 };

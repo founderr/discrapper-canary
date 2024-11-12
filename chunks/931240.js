@@ -3,16 +3,16 @@ n.d(t, {
         return v;
     },
     LX: function () {
-        return h;
+        return p;
     },
     WJ: function () {
         return f;
     },
     Zx: function () {
-        return S;
+        return b;
     },
     _9: function () {
-        return p;
+        return h;
     },
     aH: function () {
         return E;
@@ -110,10 +110,10 @@ async function _(e, t, n) {
         return;
     }
 }
-function h() {
+function p() {
     i.Z.dispatch({ type: 'CLAN_SETUP_RESET' });
 }
-function p(e, t) {
+function h(e, t) {
     i.Z.dispatch({
         type: 'CLAN_SETUP_UPDATE',
         guildId: e,
@@ -201,7 +201,7 @@ async function I(e) {
         throw e;
     }
 }
-async function S(e) {
+async function b(e) {
     try {
         await r.tn.post({ url: u.ANM.JOIN_WUMPUS_FEEDBACK_SQUAD(e) });
     } catch (e) {

@@ -24,8 +24,8 @@ var r = n(200651),
     b = n(302221),
     w = n(617136),
     x = n(569984),
-    I = n(497505),
-    T = n(918701),
+    T = n(497505),
+    I = n(918701),
     S = n(804127),
     v = n(566078),
     y = n(617889),
@@ -55,7 +55,7 @@ function A(e) {
                 l = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != i,
                 d = s ? '' : q.intl.string(q.t.UUKbio),
                 c = s
-                    ? (0, T.o9)({
+                    ? (0, I.o9)({
                           quest: o,
                           idx: null !== (r = null == i ? void 0 : i.tier) && void 0 !== r ? r : null === (n = o.userStatus) || void 0 === n ? void 0 : n.claimedTier
                       })
@@ -148,16 +148,16 @@ function L(e) {
         Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         U = (0, l.e7)([g.Z], () => g.Z.hidePersonalInformation),
         {
-            questStoreRewardCode: H,
-            isFetchingRewardCode: F,
+            questStoreRewardCode: F,
+            isFetchingRewardCode: H,
             isClaimingReward: G
         } = (0, l.cj)([x.Z], () => ({
             questStoreRewardCode: x.Z.getRewardCode(i.id),
             isFetchingRewardCode: x.Z.isFetchingRewardCode(i.id),
             isClaimingReward: x.Z.isClaimingReward(i.id)
         })),
-        X = (0, T.oo)({ quest: i }),
-        z = !0 === f ? (0, B.b)(i) : H,
+        X = (0, I.oo)({ quest: i }),
+        z = !0 === f ? (0, B.b)(i) : F,
         Q = R && (null === (t = i.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == z,
         {
             claimCode: V,
@@ -166,7 +166,7 @@ function L(e) {
             setHasError: $
         } = (0, S.u)({
             isClaimingReward: G,
-            isFetchingRewardCode: F,
+            isFetchingRewardCode: H,
             quest: i,
             questContent: d,
             requiresPlatformSelection: Q,
@@ -195,7 +195,7 @@ function L(e) {
                     className: W.bodyCopy,
                     children: i ? q.intl.format(q.t.m0btAQ, {}) : q.intl.format(q.t['ZUA/Ul'], { rewardName: s.defaultReward.messages.name })
                 });
-            let l = (0, T.C1)({
+            let l = (0, I.C1)({
                 quest: t,
                 rewardCode: o,
                 selectedPlatformType: n,
@@ -219,7 +219,7 @@ function L(e) {
         en = a.useMemo(
             () =>
                 y.map((e) => ({
-                    label: (0, T.t2)(e),
+                    label: (0, I.t2)(e),
                     value: e
                 })),
             [y]
@@ -236,21 +236,21 @@ function L(e) {
                         $(!1), L(e);
                     },
                     isSelected: (e) => e === P,
-                    serialize: (e) => (0, T.t2)(e),
+                    serialize: (e) => (0, I.t2)(e),
                     className: Y ? W.errorInput : '',
                     isDisabled: G,
                     renderOptionLabel: (e) => {
                         let t = (function (e) {
                             switch (e) {
-                                case I.y$.CROSS_PLATFORM:
+                                case T.y$.CROSS_PLATFORM:
                                     return (0, r.jsx)(u.ScienceIcon, { className: W.platformSelectionOptionIcon });
-                                case I.y$.PC:
+                                case T.y$.PC:
                                     return (0, r.jsx)(u.ScreenIcon, { className: W.platformSelectionOptionIcon });
-                                case I.y$.PLAYSTATION:
+                                case T.y$.PLAYSTATION:
                                     return (0, r.jsx)(u.PlaystationNeutralIcon, { className: W.platformSelectionOptionIcon });
-                                case I.y$.SWITCH:
+                                case T.y$.SWITCH:
                                     return (0, r.jsx)(u.NintendoSwitchNeutralIcon, { className: W.platformSelectionOptionIcon });
-                                case I.y$.XBOX:
+                                case T.y$.XBOX:
                                     return (0, r.jsx)(u.XboxNeutralIcon, { className: W.platformSelectionOptionIcon });
                             }
                         })(e.value);
@@ -263,7 +263,7 @@ function L(e) {
                 Y ? (0, r.jsx)(u.InputError, { error: q.intl.string(q.t.rbZBMT) }) : null
             ]
         }));
-    let ea = null == z && (F || G),
+    let ea = null == z && (H || G),
         eo = ea && !Q ? (0, r.jsx)(u.Spinner, {}) : null,
         ei = null;
     null != z

@@ -14,8 +14,8 @@ var r = n(264344),
     d = n(649318),
     f = n(199857),
     _ = n(65154),
-    h = n(436620);
-function p(e, t, n) {
+    p = n(436620);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -73,7 +73,7 @@ class g extends o.Z {
     }
     setVideoEncoderParameters(e) {}
     constructor(e, t, n, r) {
-        super(e, t, n, r), p(this, 'pc', void 0), p(this, 'fpc', void 0), p(this, 'codecs', []), p(this, 'logger', void 0), (this.logger = new a.Yd('Connection('.concat(e, ')')));
+        super(e, t, n, r), h(this, 'pc', void 0), h(this, 'fpc', void 0), h(this, 'codecs', []), h(this, 'logger', void 0), (this.logger = new a.Yd('Connection('.concat(e, ')')));
         let i = new l.Z();
         i.on('answer', (e) => this.pc.setRemoteDescription(e).catch((e) => this.logger.error('Failed to set remote description (answer): '.concat(e)))),
             i.on('offer', (e) => {
@@ -114,5 +114,5 @@ class g extends o.Z {
 function E(e, t, n, r) {
     let s = ''.concat(null != i().name && '' !== i().name ? i().name : 'unknown', ' ').concat(null != i().version && '' !== i().version ? i().version : 'unknown'),
         o = new a.Yd('Connection('.concat(e, ')'));
-    return h.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new f.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new g(e, t, n, r));
+    return p.WS ? (o.info('Using Unified Plan ('.concat(s, ')')), new f.Z(e, t, n, r)) : (o.info('Using Plan B ('.concat(s, ')')), new g(e, t, n, r));
 }

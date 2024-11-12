@@ -1,12 +1,12 @@
 n.d(t, {
     HZ: function () {
-        return p;
+        return h;
     },
     IB: function () {
         return E;
     },
     cr: function () {
-        return h;
+        return p;
     },
     cu: function () {
         return m;
@@ -21,7 +21,7 @@ n.d(t, {
         return I;
     },
     zb: function () {
-        return S;
+        return b;
     }
 }),
     n(653041),
@@ -37,11 +37,11 @@ var r = n(911969),
     d = n(887490),
     f = n(42530);
 let _ = /([\p{L}\p{N}\p{sc=Deva}\p{sc=Thai}_-]+):/gu;
-function h(e) {
+function p(e) {
     let t = d.bN.richValue(e)[0];
     return null == t || 'applicationCommand' !== t.type ? null : [t, f.YD];
 }
-function p(e) {
+function h(e) {
     var t, n;
     if (null == e.selection) return null;
     let r =
@@ -63,7 +63,7 @@ function p(e) {
           : null;
 }
 function m(e) {
-    let t = h(e),
+    let t = p(e),
         n = [],
         r = null == t ? void 0 : t[0].children;
     if (null != r) for (let e of r) d.aj.isType(e, 'applicationCommandOption') && n.push(e.optionName);
@@ -72,7 +72,7 @@ function m(e) {
 function g(e, t, n) {
     let r = {};
     if (null == t.options) return {};
-    let i = h(e),
+    let i = p(e),
         a = Object.fromEntries(t.options.map((e) => [e.name, e])),
         s = null == i ? void 0 : i[0].children;
     if (null != s) {
@@ -151,7 +151,7 @@ function I(e, t, n, r, o) {
         });
     return i.g7(n, { [u.optionName]: { lastValidationResult: _ } }), _;
 }
-function S(e, t) {
+function b(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
     let n = d.bN.richValue(e),
         r = [],
@@ -165,12 +165,12 @@ function S(e, t) {
         if ('line' === i.type || 'applicationCommand' === i.type)
             for (let u = 0; u < i.children.length; u++) {
                 let f;
-                let h = i.children[u],
-                    p = [t, u];
-                if (d.aj.isType(h, 'applicationCommandOption')) {
+                let p = i.children[u],
+                    h = [t, u];
+                if (d.aj.isType(p, 'applicationCommandOption')) {
                     if (null != o) {
                         var l;
-                        (o.valueRange.focus = null !== (l = d.bN.before(e, p)) && void 0 !== l ? l : d.bN.start(e, [])),
+                        (o.valueRange.focus = null !== (l = d.bN.before(e, h)) && void 0 !== l ? l : d.bN.start(e, [])),
                             (o.text = (0, c.sk)(n, {
                                 mode: 'raw',
                                 range: o.valueRange
@@ -180,24 +180,24 @@ function S(e, t) {
                     }
                     continue;
                 }
-                if (!!d.LC.isText(h))
-                    for (_.lastIndex = 0; null != (f = _.exec(h.text)); ) {
-                        if (0 !== f.index && null == h.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
+                if (!!d.LC.isText(p))
+                    for (_.lastIndex = 0; null != (f = _.exec(p.text)); ) {
+                        if (0 !== f.index && null == p.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
                         let e = f[1];
                         if (!s.has(e)) continue;
                         s.delete(e);
                         let t = a[e];
                         if (null == t) continue;
                         let i = {
-                                path: p,
+                                path: h,
                                 offset: f.index
                             },
                             l = {
-                                path: p,
+                                path: h,
                                 offset: i.offset + f[0].length
                             },
                             u = {
-                                path: p,
+                                path: h,
                                 offset: l.offset
                             },
                             d = {

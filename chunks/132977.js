@@ -3,7 +3,7 @@ n.d(t, {
         return I;
     },
     gt: function () {
-        return S;
+        return b;
     },
     rH: function () {
         return o;
@@ -20,8 +20,8 @@ var r,
     d = n(120356),
     f = n.n(d),
     _ = n(748780),
-    h = n(481060),
-    p = n(727637),
+    p = n(481060),
+    h = n(727637),
     m = n(600164),
     g = n(604547);
 ((r = o || (o = {})).DEFAULT = 'default'), (r.SMALL = 'small');
@@ -57,12 +57,12 @@ class I extends (l = c.PureComponent) {
               writable: !0
           })
         : (i[a] = s);
-let S = (e) => {
+let b = (e) => {
     let { children: t, className: n, disabled: r, submitting: i, pauseAnimation: a, shineSize: s = 'default', shinePaused: o, buttonShineClassName: l, onlyShineOnHover: d, ..._ } = e,
         m = c.createRef(),
-        E = (0, p.Z)(m),
+        E = (0, h.Z)(m),
         v = !r && !i && !0 !== a && (!d || E);
-    return (0, u.jsxs)(h.Button, {
+    return (0, u.jsxs)(p.Button, {
         buttonRef: m,
         ..._,
         className: f()(g.shinyButton, n),
@@ -80,4 +80,4 @@ let S = (e) => {
         ]
     });
 };
-S.ShineSizes = o;
+b.ShineSizes = o;

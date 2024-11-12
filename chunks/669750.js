@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-class h extends r.Z {
+class p extends r.Z {
     constructor(...e) {
         super(...e),
             _(this, 'previousVoiceChannelId', void 0),
@@ -84,4 +84,4 @@ class h extends r.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new p();

@@ -10,16 +10,16 @@ var r,
     d = n(570140),
     f = n(274616),
     _ = n(57513),
-    h = n(51025),
-    p = n(812206),
+    p = n(51025),
+    h = n(812206),
     m = n(283595),
     g = n(417363),
     E = n(391690),
     v = n(70956),
     I = n(780570),
-    S = n(804739);
-let T = new Set(),
-    b = {},
+    b = n(804739);
+let S = new Set(),
+    T = {},
     y = new Set(),
     A = {},
     N = new Set(),
@@ -32,7 +32,7 @@ function x(e) {
     L.start(e + Math.random() * R, f.o);
 }
 function w() {
-    if (!(0, S.Q)()) return !1;
+    if (!(0, b.Q)()) return !1;
     let e = m.Z.entitledBranchIds,
         t = [];
     for (let n of e) !C.hasOwnProperty(n) && ((C[n] = null), t.push(n));
@@ -40,16 +40,16 @@ function w() {
     d.Z.wait(() => f.o(t));
 }
 function M(e, t) {
-    if (null != b[t] && E.Z.shouldBeInstalled(e, t)) {
-        let n = b[t],
+    if (null != T[t] && E.Z.shouldBeInstalled(e, t)) {
+        let n = T[t],
             r = n.manifestIds,
             i = g.Z.getState(e, t);
         null != i &&
             i.shouldPatch &&
             (i.buildId !== n.id || !l().isEqual(i.manifestIds, r)) &&
             d.Z.wait(() => {
-                let i = p.Z.getApplication(e);
-                null != i ? (N.delete((0, I.Tu)(e, t)), (0, h.li)(i, t, n.id, r, !0)) : N.add((0, I.Tu)(e, t));
+                let i = h.Z.getApplication(e);
+                null != i ? (N.delete((0, I.Tu)(e, t)), (0, p.li)(i, t, n.id, r, !0)) : N.add((0, I.Tu)(e, t));
             });
     }
 }
@@ -58,19 +58,19 @@ function P() {
 }
 class k extends (r = u.ZP.Store) {
     initialize() {
-        this.syncWith([m.Z], w), this.waitFor(g.Z, m.Z, p.Z);
+        this.syncWith([m.Z], w), this.waitFor(g.Z, m.Z, h.Z);
     }
     getTargetBuildId(e, t) {
-        return null == b[t] ? null : b[t].id;
+        return null == T[t] ? null : T[t].id;
     }
     getTargetManifests(e, t) {
-        return null == b[t] ? null : b[t].manifestIds;
+        return null == T[t] ? null : T[t].manifestIds;
     }
     hasNoBuild(e, t) {
         return y.has(t);
     }
     isFetching(e, t) {
-        return T.has(t);
+        return S.has(t);
     }
     needsToFetchBuildSize(e) {
         return !A.hasOwnProperty(e);
@@ -93,26 +93,26 @@ class k extends (r = u.ZP.Store) {
             return x(O), w();
         },
         GAMES_DATABASE_UPDATE: function () {
-            if (!(0, S.Q)()) return !1;
+            if (!(0, b.Q)()) return !1;
             for (let e of N) {
                 let { applicationId: t, branchId: n } = (0, I.CP)(e);
-                null != p.Z.getApplication(t) && (N.delete(e), M(t, n));
+                null != h.Z.getApplication(t) && (N.delete(e), M(t, n));
             }
         },
         APPLICATION_BUILD_FETCH_START: function (e) {
             let { branchId: t } = e;
-            T.add(t);
+            S.add(t);
         },
         APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
             let { applicationId: t, branchId: n, locale: r, build: i } = e;
-            T.delete(n);
+            S.delete(n);
             let a = i.manifests.map((e) => {
                     let { id: t } = e;
                     return t;
                 }),
                 s = i.id;
             y.delete(n),
-                (b[n] = {
+                (T[n] = {
                     id: s,
                     applicationId: t,
                     branchId: n,
@@ -123,7 +123,7 @@ class k extends (r = u.ZP.Store) {
         },
         APPLICATION_BUILD_NOT_FOUND: function (e) {
             let { branchId: t } = e;
-            T.delete(t), y.add(t);
+            S.delete(t), y.add(t);
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
             let { buildId: t } = e;
@@ -161,7 +161,7 @@ class k extends (r = u.ZP.Store) {
         LOGOUT: P,
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            if (!(0, S.Q)()) return !1;
+            if (!(0, b.Q)()) return !1;
             let n = new Set();
             for (let e of t) n.add(e.application_id);
             for (let e in m.Z.libraryApplications) {

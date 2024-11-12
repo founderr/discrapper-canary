@@ -9,17 +9,17 @@ var r = n(512969),
     d = n(981631),
     f = n(176505);
 let _ = {},
-    h = !1;
-function p(e) {
+    p = !1;
+function h(e) {
     if (null == e || e === f.V || (0, f.AB)(e) || null != u.Z.getChannel(e)) return Promise.resolve();
     if (
-        (h ||
-            ((h = !0),
+        (p ||
+            ((p = !0),
             a.Z.subscribe('CONNECTION_OPEN', () => {
                 _ = {};
                 let e = c.Z.getChannelId(),
                     t = u.Z.getChannel(e);
-                null != e && null == t && p(e);
+                null != e && null == t && h(e);
             })),
         !s.Z.isConnected())
     )
@@ -63,4 +63,4 @@ function p(e) {
         m
     );
 }
-t.Z = { loadThread: p };
+t.Z = { loadThread: h };

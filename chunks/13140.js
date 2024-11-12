@@ -12,7 +12,7 @@ n.d(t, {
         return y;
     },
     d2: function () {
-        return b;
+        return T;
     },
     dU: function () {
         return m;
@@ -35,9 +35,9 @@ let d = (0, u.isLinux)() ? c.HsE : (0, u.isMac)() ? c.REU : (0, u.isWindows)() ?
     f = s().invert(c.HsE);
 (f['223'] = '`'), Object.freeze(f);
 let _ = Object.freeze(s().invert(c.REU)),
-    h = s().invert(c.iC$);
-(h['223'] = '`'), Object.freeze(h);
-let p = s().invert(null != d ? d : {});
+    p = s().invert(c.iC$);
+(p['223'] = '`'), Object.freeze(p);
+let h = s().invert(null != d ? d : {});
 function m() {
     if ((0, u.isLinux)()) return c.CgE.LINUX;
     if ((0, u.isMac)()) return c.CgE.MACOS;
@@ -52,11 +52,11 @@ function g(e) {
         case c.CgE.MACOS:
             return _['' + t];
         case c.CgE.WINDOWS:
-            return h['' + t];
+            return p['' + t];
         case c.CgE.BROWSER:
             return i()(t);
         default:
-            return p['' + t];
+            return h['' + t];
     }
 }
 function E(e) {
@@ -85,7 +85,7 @@ function E(e) {
             throw Error('Unrecognized DeviceType '.concat(n, '.'));
     }
 }
-!(0, u.isMac)() && (p['223'] = '`'), Object.freeze(p);
+!(0, u.isMac)() && (h['223'] = '`'), Object.freeze(h);
 let v = [
         ['META', '\u2318'],
         ['RIGHT META', 'RIGHT \u2318'],
@@ -114,12 +114,12 @@ let v = [
         for (let [t, n] of v) if (t === e.toUpperCase()) return n;
         return e;
     },
-    S = (e) => {
+    b = (e) => {
         for (let [t, n] of v) if (n === e.toUpperCase()) return t.toLowerCase();
         return e;
     },
-    T = /shift|meta|ctrl|alt$/;
-function b(e) {
+    S = /shift|meta|ctrl|alt$/;
+function T(e) {
     let t = {
         keyCode: 0,
         metaKey: !1,
@@ -140,7 +140,7 @@ function b(e) {
                       }),
                       e
                   );
-              if (T.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
+              if (S.test(r)) return (t[r + 'Key'] = !0), e.map((e) => ((e[r + 'Key'] = !0), e));
               {
                   let t = E(r, c.CgE.BROWSER);
                   return null != t && (i.keyCode = t), e.push(i), e;
@@ -157,7 +157,7 @@ function y(e) {
         .split('+')
         .map((e) => e.trim().replace('plus', '+'))
         .reduce((e, r) => {
-            let i = E(S(r), t, n);
+            let i = E(b(r), t, n);
             return null != i && e.push([n, i, t]), e;
         }, []);
 }

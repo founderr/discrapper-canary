@@ -33,16 +33,16 @@ var r = n(192379),
     d = n(181945),
     f = n(149071),
     _ = n(516373),
-    h = n(480294),
-    p = n(650774),
+    p = n(480294),
+    h = n(650774),
     m = n(888369),
     g = n(430824),
     E = n(771845),
     v = n(9156),
     I = n(626135),
-    S = n(630388),
-    T = n(823379),
-    b = n(960048),
+    b = n(630388),
+    S = n(823379),
+    T = n(960048),
     y = n(709054),
     A = n(223683),
     N = n(630114),
@@ -63,7 +63,7 @@ function M(e, t) {
             for (let i of u)
                 r[i.id] = (function (e, t, n, r, i) {
                     var a;
-                    let [s, o, l] = h.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
+                    let [s, o, l] = p.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
                         u = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
                         c = (0, N.Z)(e, null != i ? i : s, u, r, t);
                     return {
@@ -135,7 +135,7 @@ function M(e, t) {
 }
 function P(e, t) {
     return Object.values(g.Z.getGuilds()).some((n) => {
-        let [r] = h.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(n, O.nf, e, t, !1) : (0, C.A)(n, e);
+        let [r] = p.Z.hasConsented(D.pjP.PERSONALIZATION) ? (0, C.q)(n, O.nf, e, t, !1) : (0, C.A)(n, e);
         return r === O.AR.UseGreyDot;
     });
 }
@@ -145,7 +145,7 @@ function k() {
     for (let i of e) {
         var n, r;
         let e = null !== (r = (null !== (n = v.ZP.getAllSettings().userGuildSettings[i.id]) && void 0 !== n ? n : {}).flags) && void 0 !== r ? r : 0;
-        (e = (0, S.mB)(e, x.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, S.mB)(e, x.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
+        (e = (0, b.mB)(e, x.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, b.mB)(e, x.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
     B(t),
         I.default.track(D.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
@@ -192,7 +192,7 @@ async function G(e, t) {
                     var t;
                     return {
                         plan: e,
-                        memberCount: null !== (t = p.Z.getMemberCount(e.guildId)) && void 0 !== t ? t : 0
+                        memberCount: null !== (t = h.Z.getMemberCount(e.guildId)) && void 0 !== t ? t : 0
                     };
                 }),
             n = {
@@ -239,7 +239,7 @@ async function G(e, t) {
             });
         } else n();
     } catch (e) {
-        b.Z.captureException(e),
+        T.Z.captureException(e),
             u.Z.show({
                 title: w.intl.string(w.t.j2d6Ki),
                 body: w.intl.string(w.t.mCjLAQ),
@@ -309,20 +309,20 @@ function j(e) {
     return (null !== (r = e.channel_opens) && void 0 !== r ? r : [])
         .map((e) => {
             var t, n, r, a, o, l, u, c, d, f, _;
-            let h = null !== (t = i[e.channel_id]) && void 0 !== t ? t : {},
-                p = null !== (n = s[e.channel_id]) && void 0 !== n ? n : {};
+            let p = null !== (t = i[e.channel_id]) && void 0 !== t ? t : {},
+                h = null !== (n = s[e.channel_id]) && void 0 !== n ? n : {};
             return {
                 channel_id: e.channel_id,
                 num_year_opens: Number(null !== (r = e.year_opens) && void 0 !== r ? r : 0),
                 num_month_opens: Number(null !== (a = e.one_month_opens) && void 0 !== a ? a : 0),
                 num_three_month_opens: Number(null !== (o = e.three_month_opens) && void 0 !== o ? o : 0),
                 num_six_month_opens: Number(null !== (l = e.six_month_opens) && void 0 !== l ? l : 0),
-                num_messages: Number(null !== (u = null == p ? void 0 : p.num_messages) && void 0 !== u ? u : 0),
-                num_year_voice_joins: Number(null !== (c = null == h ? void 0 : h.year_opens) && void 0 !== c ? c : 0),
-                num_month_voice_joins: Number(null !== (d = null == h ? void 0 : h.one_month_opens) && void 0 !== d ? d : 0),
-                num_three_month_voice_joins: Number(null !== (f = null == h ? void 0 : h.three_month_opens) && void 0 !== f ? f : 0),
-                num_six_month_voice_joins: Number(null !== (_ = null == h ? void 0 : h.six_month_opens) && void 0 !== _ ? _ : 0)
+                num_messages: Number(null !== (u = null == h ? void 0 : h.num_messages) && void 0 !== u ? u : 0),
+                num_year_voice_joins: Number(null !== (c = null == p ? void 0 : p.year_opens) && void 0 !== c ? c : 0),
+                num_month_voice_joins: Number(null !== (d = null == p ? void 0 : p.one_month_opens) && void 0 !== d ? d : 0),
+                num_three_month_voice_joins: Number(null !== (f = null == p ? void 0 : p.three_month_opens) && void 0 !== f ? f : 0),
+                num_six_month_voice_joins: Number(null !== (_ = null == p ? void 0 : p.six_month_opens) && void 0 !== _ ? _ : 0)
             };
         })
-        .filter(T.lm);
+        .filter(S.lm);
 }

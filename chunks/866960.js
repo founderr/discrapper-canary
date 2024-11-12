@@ -9,13 +9,13 @@ var r,
 let d = c.IWh.UNKNOWN,
     f = c.IyS.UNKNOWN,
     _ = null;
-function h(e) {
+function p(e) {
     var t;
     (d = null != e.type ? e.type : c.IWh.UNKNOWN), (f = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : c.IyS.UNKNOWN), (_ = e.serviceProvider), m.emitChange();
 }
-class p extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     initialize() {
-        u.Z.getNetworkInformation().then(h), u.Z.addChangeCallback(h);
+        u.Z.getNetworkInformation().then(p), u.Z.addChangeCallback(p);
     }
     getType() {
         return d;
@@ -28,7 +28,7 @@ class p extends (s = o.ZP.Store) {
     }
 }
 (a = 'NetworkStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -36,5 +36,5 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a);
-let m = new p(l.Z, {});
+let m = new h(l.Z, {});
 t.Z = m;

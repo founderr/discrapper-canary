@@ -3,7 +3,7 @@ n.d(t, {
         return m;
     },
     XV: function () {
-        return h;
+        return p;
     },
     Z4: function () {
         return E;
@@ -15,16 +15,16 @@ n.d(t, {
         return v;
     },
     ky: function () {
-        return S;
-    },
-    p0: function () {
         return b;
     },
-    pY: function () {
+    p0: function () {
         return T;
     },
+    pY: function () {
+        return S;
+    },
     vh: function () {
-        return p;
+        return h;
     }
 });
 var r = n(108131),
@@ -39,7 +39,7 @@ var c = n(954138),
     d = n(308083),
     f = n(981631),
     _ = n(388032);
-function h(e, t) {
+function p(e, t) {
     let n = Array.from(e);
     return (
         n.sort((e, n) => {
@@ -49,7 +49,7 @@ function h(e, t) {
         n
     );
 }
-function p(e) {
+function h(e) {
     return null != e && e.identityEnabled
         ? {
               guildId: e.identityGuildId,
@@ -100,7 +100,7 @@ let v = (e, t) => {
         [d.NC.SIZE_32]: 32,
         [d.NC.SIZE_36]: 40
     };
-function S(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.NC.SIZE_12;
     if (null == t) return;
     let { CDN_HOST: r } = window.GLOBAL_ENV;
@@ -108,12 +108,12 @@ function S(e, t) {
     let i = I[n];
     return ''.concat(location.protocol, '//').concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function T(e, t) {
+function S(e, t) {
     if (null == t) return;
     let { CDN_HOST: n } = window.GLOBAL_ENV;
     if (null != n) return ''.concat(location.protocol, '//').concat(n, '/clan-banners/').concat(e, '/').concat(t, '.png?size=512');
 }
-function b(e, t) {
+function T(e, t) {
     let n = (0, a.e7)([s.Z], () => s.Z.hideTags),
         r = (0, a.e7)([u.default], () => u.default.getUser(e), [e]),
         i = (0, a.e7)(
@@ -125,7 +125,7 @@ function b(e, t) {
             },
             [t, e]
         ),
-        { tag: d, guildId: f } = p(null == r ? void 0 : r.clan),
+        { tag: d, guildId: f } = h(null == r ? void 0 : r.clan),
         _ = (0, c.Z)('clan_tag_chiplet');
     return !n && !!_ && null != f && null != d && !i && !0;
 }

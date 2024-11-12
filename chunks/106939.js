@@ -18,15 +18,15 @@ var i = n(200651),
     g = n(150063),
     m = n(758119),
     f = n(100527),
-    _ = n(906732),
-    p = n(252618),
+    p = n(906732),
+    _ = n(252618),
     h = n(313201),
     E = n(605236),
     b = n(984370),
     x = n(797614),
     C = n(108427),
-    T = n(210887),
-    v = n(695346),
+    v = n(210887),
+    T = n(695346),
     N = n(594174),
     I = n(626135),
     S = n(260722),
@@ -35,9 +35,9 @@ var i = n(200651),
     j = n(652262),
     P = n(880257),
     Z = n(631885),
-    O = n(830746),
+    B = n(830746),
     M = n(731934),
-    B = n(521450),
+    O = n(521450),
     w = n(292352),
     y = n(981631),
     k = n(723359),
@@ -46,12 +46,12 @@ var i = n(200651),
     D = n(379493);
 let G = {
         [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {}),
-        [w.dG.SETTINGS]: () => (0, i.jsx)(B.Z, {})
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {}),
+        [w.dG.SETTINGS]: () => (0, i.jsx)(O.Z, {})
     },
     H = {
         [w.dG.REQUESTS]: () => (0, i.jsx)(M.Z, {}),
-        [w.dG.ACTIVITY]: () => (0, i.jsx)(O.Z, {})
+        [w.dG.ACTIVITY]: () => (0, i.jsx)(B.Z, {})
     };
 function V(e) {
     let { section: t, handleItemSelect: n } = e,
@@ -156,10 +156,10 @@ function W() {
         a = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         l = (0, j.M)(),
         { selectedTab: g, handleTabChange: f } = (0, A.Z)(),
-        _ = (0, h.Dt)(),
+        p = (0, h.Dt)(),
         b = N.default.getCurrentUser(),
-        T = null != e,
-        v = a && null != b && !T;
+        v = null != e,
+        T = a && null != b && !v;
     return (r.useEffect(() => {
         (0, C.e)('family-center'),
             S.ZP.initialPageLoad(),
@@ -171,7 +171,7 @@ function W() {
     }, []),
     r.useEffect(() => {
         a &&
-            T &&
+            v &&
             (I.default.track(y.rMx.FAMILY_CENTER_VIEWED, {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
@@ -180,17 +180,17 @@ function W() {
                 source: w._6[w.Mu.SIDENAV]
             }),
             x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
-    }, [a, T]),
+    }, [a, v]),
     r.useEffect(() => {
-        v && (0, m.mN)(k.L0.FAMILY_CENTER);
-    }, [v]),
-    v)
+        T && (0, m.mN)(k.L0.FAMILY_CENTER);
+    }, [T]),
+    T)
         ? null
         : (0, i.jsxs)('main', {
               className: s()(D.container),
               'aria-label': U.intl.string(U.t.RZqaJi),
               children: [
-                  (0, i.jsx)(p.yY, { location: U.intl.string(U.t.RZqaJi) }),
+                  (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
                   (0, i.jsx)(V, {
                       section: g,
                       handleItemSelect: (e) => {
@@ -199,7 +199,7 @@ function W() {
                   }),
                   (0, i.jsx)(u.TabBar.Panel, {
                       id: g,
-                      'aria-labelledby': _,
+                      'aria-labelledby': p,
                       className: D.contentPanel,
                       children: (0, i.jsx)('div', { children: G[g]() })
                   })
@@ -207,14 +207,14 @@ function W() {
           });
 }
 function z() {
-    let { analyticsLocations: e } = (0, _.ZP)(f.Z.FAMILY_CENTER),
+    let { analyticsLocations: e } = (0, p.ZP)(f.Z.FAMILY_CENTER),
         t = (0, P.Z)(),
         n = (0, Z.M8)(),
         a = (0, E.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([R.Z], () => R.Z.getIsInitialized()),
         b = (0, j.M)(),
-        O = (0, c.e7)([T.Z], () => T.Z.theme),
-        { selectedTab: M, handleTabChange: B } = (0, A.Z)(),
+        B = (0, c.e7)([v.Z], () => v.Z.theme),
+        { selectedTab: M, handleTabChange: O } = (0, A.Z)(),
         G = (0, h.Dt)(),
         V = N.default.getCurrentUser(),
         W = null != t,
@@ -242,8 +242,8 @@ function z() {
                 x.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, W]),
         r.useEffect(() => {
-            let e = v.Ex.getSetting();
-            l && t && void 0 === e && v.Ex.updateSetting(!0);
+            let e = T.Ex.getSetting();
+            l && t && void 0 === e && T.Ex.updateSetting(!0);
         }, [l, t]),
         r.useEffect(() => {
             z && (0, m.mN)(k.L0.FAMILY_CENTER);
@@ -251,18 +251,18 @@ function z() {
     if (z) return null;
     let Y = M !== w.dG.SETTINGS ? M : w.dG.ACTIVITY,
         K = H[Y];
-    return (0, i.jsx)(_.Gt, {
+    return (0, i.jsx)(p.Gt, {
         value: e,
         children: (0, i.jsxs)('main', {
             className: s()(D.container, D.containerSidenav),
             'aria-label': U.intl.string(U.t.RZqaJi),
             children: [
-                (0, i.jsx)(p.yY, { location: U.intl.string(U.t.RZqaJi) }),
+                (0, i.jsx)(_.yY, { location: U.intl.string(U.t.RZqaJi) }),
                 (0, i.jsx)(F, {
-                    theme: O,
+                    theme: B,
                     section: Y,
                     handleItemSelect: (e) => {
-                        B(e);
+                        O(e);
                     }
                 }),
                 (0, i.jsx)(u.TabBar.Panel, {

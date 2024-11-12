@@ -9,7 +9,7 @@ var a = n(846519),
     d = n(425128),
     f = n(276344),
     _ = n(981631);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function h(e, t, n) {
         e
     );
 }
-let p = 10 * u.Z.Millis.SECOND,
+let h = 10 * u.Z.Millis.SECOND,
     m = 15 * u.Z.Millis.MINUTE,
     g = new a.V7(),
     E = !1;
@@ -39,7 +39,7 @@ function I() {
               lolConnection: t
           };
 }
-async function S(e) {
+async function b(e) {
     let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: r } = e;
     if (E) return;
     g.stop(), (E = !0);
@@ -59,7 +59,7 @@ async function S(e) {
         })
     );
 }
-function T() {
+function S() {
     return Object.values(l.Z.getGuilds()).some(
         (e) =>
             e.hasFeature(_.oNc.LEADERBOARD_ENABLED) &&
@@ -70,23 +70,23 @@ function T() {
             })
     );
 }
-class b extends s.Z {
+class T extends s.Z {
     handleRunningGameChange(e) {
         let { added: t, removed: n } = e,
             a = I();
-        if (null != a && !!T())
+        if (null != a && !!S())
             v(t) &&
                 (null != i && clearInterval(i),
                 (i = setInterval(async () => {
                     let e = await c.ZP.fetchRiotGamesLiveClientData('activeplayer');
                     null != e && 200 === e.status && (r = JSON.parse(e.body).riotId);
-                }, p)),
+                }, h)),
                 setTimeout(() => {
                     clearInterval(i);
                 }, m)),
                 v(n) &&
                     a.riotConnection.name === r &&
-                    S({
+                    b({
                         riotConnectionId: a.riotConnection.id,
                         lolConnectionId: a.lolConnection.id
                     });
@@ -94,19 +94,19 @@ class b extends s.Z {
     handleDependantStoreChanges() {
         let e = I(),
             t = null != e,
-            n = T() && t;
+            n = S() && t;
         g.isStarted() && !n
             ? g.stop()
             : !g.isStarted() &&
               n &&
-              S({
+              b({
                   riotConnectionId: e.riotConnection.id,
                   lolConnectionId: e.lolConnection.id,
                   onlyUpdateIfStale: !0
               });
     }
     constructor(...e) {
-        super(...e), h(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), h(this, 'stores', new Map().set(l.Z, this.handleDependantStoreChanges).set(o.Z, this.handleDependantStoreChanges));
+        super(...e), p(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), p(this, 'stores', new Map().set(l.Z, this.handleDependantStoreChanges).set(o.Z, this.handleDependantStoreChanges));
     }
 }
-t.Z = new b();
+t.Z = new T();

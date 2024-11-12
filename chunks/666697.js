@@ -24,11 +24,11 @@ t.Z = function (e) {
     let { applicationId: t, onSelectApplication: n, onScroll: i, onOpenCategorySearch: r, onCloseAppDetails: N } = e,
         T = a.useRef(null),
         x = (0, s.e7)([c.Z], () => c.Z.getApplication(t)),
-        A = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
+        b = (0, s.e7)([c.Z], () => c.Z.getApplicationFetchState(t));
     a.useEffect(() => {
         null != t && null == x && o.i6(t);
     }, [t, x]);
-    let b = null == x ? void 0 : x.storefront_available,
+    let A = null == x ? void 0 : x.storefront_available,
         [Z, y] = a.useState('about'),
         L = a.useCallback(
             (e) => {
@@ -69,7 +69,7 @@ t.Z = function (e) {
             [N, r]
         );
     if (null == x)
-        return A === c.M.FETCHING
+        return b === c.M.FETCHING
             ? (0, l.jsx)('div', {
                   className: S.centerContainer,
                   children: (0, l.jsx)(d.Z, { loading: !0 })
@@ -93,7 +93,7 @@ t.Z = function (e) {
                             (0, l.jsxs)('div', {
                                 className: S.contentTabsContainer,
                                 children: [
-                                    b &&
+                                    A &&
                                         (0, l.jsx)('div', {
                                             className: S.contentTabs,
                                             children: (0, l.jsx)(m.Z, {

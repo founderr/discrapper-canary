@@ -43,7 +43,7 @@ function _() {
         affinityUserIds: t
     };
 }
-class h extends (r = i.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(s.Z), null != e && ((d.userAffinities = e.userAffinities), (d.lastFetched = e.lastFetched), _()), this.syncWith([s.Z], _);
     }
@@ -69,10 +69,10 @@ class h extends (r = i.ZP.PersistedStore) {
         return f.affinityUserIds;
     }
 }
-o(h, 'displayName', 'UserAffinitiesStore'),
-    o(h, 'persistKey', 'UserAffinitiesStore'),
-    o(h, 'migrations', [(e) => null]),
-    (t.Z = new h(a.Z, {
+o(p, 'displayName', 'UserAffinitiesStore'),
+    o(p, 'persistKey', 'UserAffinitiesStore'),
+    o(p, 'migrations', [(e) => null]),
+    (t.Z = new p(a.Z, {
         LOAD_USER_AFFINITIES_SUCCESS: function (e) {
             var t;
             let { affinities: n } = e;

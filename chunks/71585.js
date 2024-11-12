@@ -25,7 +25,7 @@ let o = () => ({
     d = 0,
     f = !1,
     _ = !1;
-function h() {
+function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < d) return;
     l.itemImpressions.length > 1000 && (l.itemImpressions = []);
@@ -45,7 +45,7 @@ function h() {
     for (let [e, t] of l.itemImpressions) t < s ? i.add(e) : null == o && (o = t + r), a.add(e);
     (u = i), (c = a), (d = null != o ? o : 1 / 0), (f = !0);
 }
-class p extends (r = i.ZP.PersistedStore) {
+class h extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         l = {
             ...l,
@@ -56,7 +56,7 @@ class p extends (r = i.ZP.PersistedStore) {
         return l;
     }
     getImpressionCappedItemIds() {
-        return h(), u;
+        return p(), u;
     }
     getDebugFastImpressionCappingEnabled() {
         return _;
@@ -68,19 +68,19 @@ class p extends (r = i.ZP.PersistedStore) {
         l = o();
     }
 }
-s(p, 'displayName', 'ContentInventoryPersistedStore'),
-    s(p, 'persistKey', 'ContentInventoryPersistedStore'),
-    (t.Z = new p(a.Z, {
+s(h, 'displayName', 'ContentInventoryPersistedStore'),
+    s(h, 'persistKey', 'ContentInventoryPersistedStore'),
+    (t.Z = new h(a.Z, {
         CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function (e) {
             let { itemIds: t } = e;
-            !f && h();
+            !f && p();
             let n = Date.now(),
                 r = !1;
             for (let e of t) !c.has(e) && (l.itemImpressions.push([e, n]), (r = !0));
-            return h(r), r;
+            return p(r), r;
         },
         CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function () {
-            (l.itemImpressions = []), h(!0);
+            (l.itemImpressions = []), p(!0);
         },
         CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function () {
             return console.log('Item impressions:', l.itemImpressions), !1;

@@ -15,8 +15,8 @@ var r,
     d = n(331065),
     f = n(55563),
     _ = n(551428);
-let h = new Map(),
-    p = new Map();
+let p = new Map(),
+    h = new Map();
 ((a = r || (r = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED'), (a[(a.FAILED = 3)] = 'FAILED');
 let m = new d.Z({
     subscriptions: [],
@@ -27,15 +27,15 @@ class g extends (i = u.ZP.Store) {
         this.waitFor(f.Z, _.Z);
     }
     hasStorefront(e) {
-        return h.has(e);
+        return p.has(e);
     }
     getStoreLayout(e) {
         var t;
-        return null !== (t = h.get(e)) && void 0 !== t ? t : m;
+        return null !== (t = p.get(e)) && void 0 !== t ? t : m;
     }
     getFetchStatus(e) {
         var t;
-        return h.has(e) ? 2 : null !== (t = p.get(e)) && void 0 !== t ? t : 0;
+        return p.has(e) ? 2 : null !== (t = h.get(e)) && void 0 !== t ? t : 0;
     }
 }
 (l = 'ApplicationStoreDirectoryStore'),
@@ -50,14 +50,14 @@ class g extends (i = u.ZP.Store) {
     (t.Z = new g(c.Z, {
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS: function (e) {
             let { applicationId: t, layout: n } = e;
-            h.set(t, d.Z.createFromServer(n)), p.delete(t);
+            p.set(t, d.Z.createFromServer(n)), h.delete(t);
         },
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED: function (e) {
             let { applicationId: t } = e;
-            p.set(t, 3);
+            h.set(t, 3);
         },
         APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING: function (e) {
             let { applicationId: t } = e;
-            p.set(t, 1);
+            h.set(t, 1);
         }
     }));

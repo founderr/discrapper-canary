@@ -22,8 +22,8 @@ var l = n(120356),
     S = n(626135),
     T = n(63063),
     C = n(210887),
-    _ = n(726985),
-    E = n(981631),
+    E = n(726985),
+    _ = n(981631),
     f = n(388032),
     I = n(113207);
 let N = n(775322),
@@ -31,17 +31,17 @@ let N = n(775322),
     b = (0, h.hQ)();
 ((s = i || (i = {}))[(s.NONE = 0)] = 'NONE'), (s[(s.STANDARD = 1)] = 'STANDARD'), (s[(s.KRISP = 2)] = 'KRISP');
 let v = {
-    page: E.ZY5.USER_SETTINGS,
-    section: E.jXE.SETTINGS_VOICE_AND_VIDEO
+    page: _.ZY5.USER_SETTINGS,
+    section: _.jXE.SETTINGS_VOICE_AND_VIDEO
 };
 function j(e) {
     let t = e.currentTarget;
-    S.default.track(E.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
+    S.default.track(_.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
         href: t.href,
         location: {
-            page: E.ZY5.USER_SETTINGS,
-            section: E.jXE.SETTINGS_VOICE_AND_VIDEO
+            page: _.ZY5.USER_SETTINGS,
+            section: _.jXE.SETTINGS_VOICE_AND_VIDEO
         }
     });
 }
@@ -107,7 +107,7 @@ function O() {
                         },
                         align: m.Z.Align.CENTER,
                         body: (0, r.jsx)(d.Anchor, {
-                            href: T.Z.getArticleURL(E.BhN.NOISE_SUPPRESSION),
+                            href: T.Z.getArticleURL(_.BhN.NOISE_SUPPRESSION),
                             onClick: j,
                             children: f.intl.string(f.t.hvVgAQ)
                         })
@@ -147,7 +147,7 @@ function R() {
             [t]
         ),
         S = c || m || h,
-        T = e === E.pM4.VOICE_ACTIVITY && s;
+        T = e === _.pM4.VOICE_ACTIVITY && s;
     return (0, r.jsxs)(d.FormSection, {
         className: I.marginBottom20,
         title: f.intl.string(f.t['6I6GUl']),
@@ -159,25 +159,25 @@ function R() {
                     children: f.intl.string(f.t['/Whuzs'])
                 }),
             (0, r.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                 children: (0, r.jsx)(d.FormSwitch, {
                     className: a()(I.marginTop8, I.marginBottom20),
                     value: n,
                     onChange: (e) =>
                         u.Z.setEchoCancellation(e, {
-                            page: E.ZY5.USER_SETTINGS,
-                            section: E.jXE.SETTINGS_VOICE_AND_VIDEO
+                            page: _.ZY5.USER_SETTINGS,
+                            section: _.jXE.SETTINGS_VOICE_AND_VIDEO
                         }),
                     disabled: c,
                     children: f.intl.string(f.t.iWTwu7)
                 })
             }),
             (0, r.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
                 children: (0, r.jsx)(O, {})
             }),
             (0, r.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                 children: (0, r.jsx)(d.FormSwitch, {
                     value: l,
                     onChange: (t) => u.Z.setMode(e, { vadUseKrisp: t }),
@@ -187,14 +187,14 @@ function R() {
                 })
             }),
             (0, r.jsx)(g.F, {
-                setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_AUTOMATIC_GAIN_CONTROL,
                 children: (0, r.jsx)(d.FormSwitch, {
                     className: '',
                     value: i,
                     onChange: (e) =>
                         u.Z.setAutomaticGainControl(e, {
-                            page: E.ZY5.USER_SETTINGS,
-                            section: E.jXE.SETTINGS_VOICE_AND_VIDEO
+                            page: _.ZY5.USER_SETTINGS,
+                            section: _.jXE.SETTINGS_VOICE_AND_VIDEO
                         }),
                     note: f.intl.string(f.t['6EjbvL']),
                     disabled: h,

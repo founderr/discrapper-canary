@@ -11,7 +11,7 @@ e.exports = function (e, t, n) {
     f = e.padding ? e.padding : n ? 1 : 4;
     var f,
         _,
-        h = r(e);
+        p = r(e);
     if (4 === f)
         _ = (function (e, t) {
             var n = e.modulus.byteLength(),
@@ -21,12 +21,12 @@ e.exports = function (e, t, n) {
                 f = 2 * c;
             if (r > n - f - 2) throw Error('message too long');
             var _ = d.alloc(n - r - f - 2),
-                h = n - c - 1,
-                p = i(c),
-                m = o(d.concat([u, _, d.alloc(1, 1), t], h), s(p, h)),
-                g = o(p, s(m, c));
+                p = n - c - 1,
+                h = i(c),
+                m = o(d.concat([u, _, d.alloc(1, 1), t], p), s(h, p)),
+                g = o(h, s(m, c));
             return new l(d.concat([d.alloc(1), g, m], n));
-        })(h, t);
+        })(p, t);
     else if (1 === f)
         _ = (function (e, t, n) {
             var r,
@@ -42,9 +42,9 @@ e.exports = function (e, t, n) {
                       })(s - a - 3)),
                 new l(d.concat([d.from([0, n ? 1 : 2]), r, d.alloc(1), t], s))
             );
-        })(h, t, n);
+        })(p, t, n);
     else if (3 === f) {
-        if ((_ = new l(t)).cmp(h.modulus) >= 0) throw Error('data too long for modulus');
+        if ((_ = new l(t)).cmp(p.modulus) >= 0) throw Error('data too long for modulus');
     } else throw Error('unknown padding');
-    return n ? c(_, h) : u(_, h);
+    return n ? c(_, p) : u(_, p);
 };

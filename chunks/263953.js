@@ -15,8 +15,8 @@ var r,
     d = n(120356),
     f = n.n(d),
     _ = n(748780),
-    h = n(215569),
-    p = n(186325),
+    p = n(215569),
+    h = n(186325),
     m = n(753625);
 function g(e, t, n) {
     return (
@@ -189,7 +189,7 @@ class E extends (a = c.PureComponent) {
             g(this, '_measureRef', c.createRef());
     }
 }
-g(E, 'contextType', p.S), g(E, 'defaultProps', { duration: 300 });
+g(E, 'contextType', h.S), g(E, 'defaultProps', { duration: 300 });
 class v extends (s = c.Component) {
     componentDidMount() {
         this.setPrevSteps();
@@ -203,7 +203,7 @@ class v extends (s = c.Component) {
     }
     render() {
         let { step: e, className: t, innerClassName: n, animatedNodeClassName: r, staticClassName: i, sideMargin: a, verticalMargin: s, children: o, fillParent: l, animationMotionType: c } = this.props;
-        return (0, u.jsx)(h.W, {
+        return (0, u.jsx)(p.W, {
             component: 'div',
             className: f()(m.transitionGroup, t),
             children: (0, u.jsx)(

@@ -1,6 +1,6 @@
 n.d(t, {
     AZ: function () {
-        return h;
+        return p;
     },
     Bq: function () {
         return I;
@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     gr: function () {
-        return p;
+        return h;
     },
     pB: function () {
         return g;
@@ -33,14 +33,14 @@ var r = n(423875),
     d = n(981631),
     f = n(616922),
     _ = n(728151);
-function h(e) {
+function p(e) {
     if ((0, l.dU)(e)) {
         var t, n;
         return (null === (n = e.extra.entries[0]) || void 0 === n ? void 0 : null === (t = n.media) || void 0 === t ? void 0 : t.provider) === r.p.SPOTIFY;
     }
     return !!(0, l.KF)(e) && e.extra.media.provider === r.p.SPOTIFY;
 }
-function p(e) {
+function h(e) {
     return !!(0, l.y0)(e) && e.extra.application_id === _.sp;
 }
 function m(e, t) {
@@ -48,14 +48,14 @@ function m(e, t) {
     return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n ? t.name === n.game_name : 'activity_name' in n && t.name === n.activity_name));
 }
 function g(e, t) {
-    if (h(e)) {
+    if (p(e)) {
         var n;
         return (0, f.Ps)(null === (n = t.party) || void 0 === n ? void 0 : n.id);
     }
     return !1;
 }
 function E(e, t) {
-    return !!((0, a.Z)(t) && p(e)) && e.extra.media_title === t.details;
+    return !!((0, a.Z)(t) && h(e)) && e.extra.media_title === t.details;
 }
 function v(e, t) {
     let n = e.filter(u.kr);

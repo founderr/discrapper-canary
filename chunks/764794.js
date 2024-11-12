@@ -10,17 +10,17 @@ var r = n(200651),
     d = n(790368),
     f = n(704440),
     _ = n(632583),
-    h = n(626135),
-    p = n(443603),
+    p = n(626135),
+    h = n(443603),
     m = n(981631),
     g = n(474936),
     E = n(388032),
     v = n(703130);
 t.Z = i.memo(function (e) {
-    let { disabled: t, referralsRemaining: n, channel: I, isResending: S } = e,
-        { enabled: T } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
-        b = T ? E.intl.format(E.t.z5AIsr, {}) : S ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
-        y = T ? E.intl.string(E.t.nKUZur) : void 0,
+    let { disabled: t, referralsRemaining: n, channel: I, isResending: b } = e,
+        { enabled: S } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
+        T = S ? E.intl.format(E.t.z5AIsr, {}) : b ? E.intl.string(E.t.zzfBQk) : E.intl.string(E.t.ziPEBg),
+        y = S ? E.intl.string(E.t.nKUZur) : void 0,
         [A, N] = i.useState(!1),
         [C, R] = i.useState(!1),
         O = (0, o.Z)(null, () => R(!1)),
@@ -38,19 +38,19 @@ t.Z = i.memo(function (e) {
                       referralsRemaining: n,
                       channel: I,
                       onClose: () => R(!1),
-                      isResending: S
+                      isResending: b
                   }),
                   (0, r.jsx)(a.u, {
-                      text: b,
+                      text: T,
                       shouldShow: !C,
-                      'aria-label': null != y ? y : b.toString(),
+                      'aria-label': null != y ? y : T.toString(),
                       children: (e) =>
                           (0, r.jsx)('div', {
                               onMouseEnter: () => {
                                   !C &&
                                       !A &&
                                       (N(!0),
-                                      h.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                      p.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: D,
                                           step: g.fz.BADGE_TOOLTIP_VIEWED,
                                           other_user_id: Number(L)
@@ -59,15 +59,15 @@ t.Z = i.memo(function (e) {
                               onMouseLeave: () => {
                                   N(!1);
                               },
-                              children: (0, r.jsx)(p.Z, {
+                              children: (0, r.jsx)(h.Z, {
                                   ...e,
                                   innerClassName: v.button,
                                   isActive: C,
-                                  'aria-label': null != y ? y : b.toString(),
+                                  'aria-label': null != y ? y : T.toString(),
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
                                       R((e) => !e),
-                                          h.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          p.default.track(m.rMx.SHARE_NITRO_FLOW_STEPS, {
                                               location_stack: D,
                                               step: g.fz.BADGE_CLICKED,
                                               other_user_id: Number(L)
@@ -76,8 +76,8 @@ t.Z = i.memo(function (e) {
                                   children: (0, r.jsx)(_.Z, {
                                       referralsRemaining: n,
                                       hovered: A,
-                                      isResending: S,
-                                      shouldShowBirthdayUX: T,
+                                      isResending: b,
+                                      shouldShowBirthdayUX: S,
                                       isLightTheme: (0, s.ap)(x)
                                   })
                               })

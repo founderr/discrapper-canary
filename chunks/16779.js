@@ -1,6 +1,6 @@
 n.d(t, {
     Rg: function () {
-        return h;
+        return p;
     },
     Xh: function () {
         return _;
@@ -25,14 +25,14 @@ function f(e) {
     let { activity: f } = e,
         _ = null !== (u = null === (t = f.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== u ? u : f.created_at;
     if (null == _ || (0, c.Z)(f)) return null;
-    let h = (0, i.EQ)(f)
+    let p = (0, i.EQ)(f)
         .when(s.Z, () => a.ActivitiesIcon)
         .with({ type: d.IIU.LISTENING }, () => a.RecordPlayerIcon)
         .with({ type: d.IIU.WATCHING }, () => a.TvIcon)
         .otherwise(() => a.GameControllerIcon);
     return (0, r.jsxs)(o.m7, {
         children: [
-            (0, r.jsx)(h, {
+            (0, r.jsx)(p, {
                 size: 'xxs',
                 color: a.tokens.colors.TEXT_POSITIVE
             }),
@@ -58,7 +58,7 @@ function _(e) {
               text: n
           });
 }
-function h(e) {
+function p(e) {
     var t;
     let { activity: n } = e,
         i = (0, u.ap)(null === (t = n.assets) || void 0 === t ? void 0 : t.large_text);

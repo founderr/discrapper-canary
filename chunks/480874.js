@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 });
 var i = n(200651),
@@ -26,13 +26,13 @@ var i = n(200651),
     N = n(981631),
     T = n(388032),
     x = n(908120);
-function A() {
+function b() {
     let e = r.useRef(null),
         t = (0, E.Z)(),
         n = (0, I.w)(),
         l = (0, g.V)(),
-        A = (0, d.N)(),
-        b = (0, u.Z)('message-requests-spam-list'),
+        b = (0, d.N)(),
+        A = (0, u.Z)('message-requests-spam-list'),
         { channelId: Z } = (0, _._)(),
         y = r.useCallback(() => {
             (0, c.showToast)((0, c.createToast)(T.intl.string(T.t.EDYbS0), c.ToastType.FAILURE));
@@ -76,7 +76,7 @@ function A() {
                         className: x.sectionTitle,
                         children: [
                             T.intl.format(T.t.C79Edn, { count: n }),
-                            A && n > 0
+                            b && n > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(c.Text, {
@@ -102,12 +102,12 @@ function A() {
                     },
                     'message-requests-spam-title'
                 ),
-            [n, R, A]
+            [n, R, b]
         );
     return 0 === t.length
         ? (0, i.jsx)(C.Z, { section: S.pS.SPAM })
         : (0, i.jsx)(s.bG, {
-              navigator: b,
+              navigator: A,
               children: (0, i.jsx)(s.SJ, {
                   children: (n) => {
                       let { ref: r, role: l, ...a } = n;

@@ -3,7 +3,7 @@ n.d(t, {
         return v;
     },
     hQ: function () {
-        return b;
+        return T;
     },
     lo: function () {
         return A;
@@ -24,8 +24,8 @@ var r = n(200651),
     d = n(742746),
     f = n(326452),
     _ = n(993365),
-    h = n(481060),
-    p = n(388032),
+    p = n(481060),
+    h = n(388032),
     m = n(251887);
 let g = 'data-listbox-item-id',
     E = Object.freeze({
@@ -53,17 +53,17 @@ function I(e) {
         }, [])
     ];
 }
-function S(e) {
+function b(e) {
     return String(e);
 }
-let T = i.createContext({
+let S = i.createContext({
     activeDescendant: null,
     selected: new Set(),
     setSelected: () => null,
-    itemToString: S
+    itemToString: b
 });
-function b(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: b = !1, maxVisibleItems: y = 5, itemToString: A = S, showScrollbar: N = !1 } = e,
+function T(e) {
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: E, 'aria-label': v, multiSelect: I = !1, autoFocus: T = !1, maxVisibleItems: y = 5, itemToString: A = b, showScrollbar: N = !1 } = e,
         [C, R] = i.useState(''),
         [O] = i.useState(!0),
         [D, L] = i.useState(null),
@@ -131,7 +131,7 @@ function b(e) {
                     className: s()(m.combobox, c),
                     children: [
                         (0, r.jsx)(f.E, {
-                            autoFocus: b,
+                            autoFocus: T,
                             size: f.E.Sizes.MEDIUM,
                             placeholder: t,
                             query: C,
@@ -152,18 +152,18 @@ function b(e) {
                                     ? (0, r.jsxs)('div', {
                                           className: m.empty,
                                           children: [
-                                              (0, r.jsx)(h.Heading, {
+                                              (0, r.jsx)(p.Heading, {
                                                   variant: 'heading-md/semibold',
-                                                  children: p.intl.string(p.t['4o4z3d'])
+                                                  children: h.intl.string(h.t['4o4z3d'])
                                               }),
                                               (0, r.jsx)(_.x, {
                                                   color: 'text-muted',
                                                   variant: 'text-md/normal',
-                                                  children: p.intl.string(p.t.QwSXv7)
+                                                  children: h.intl.string(h.t.QwSXv7)
                                               })
                                           ]
                                       })
-                                    : (0, r.jsx)(T.Provider, {
+                                    : (0, r.jsx)(S.Provider, {
                                           value: {
                                               activeDescendant: D,
                                               selected: a,
@@ -198,24 +198,24 @@ let y = i.createContext(null);
 function A(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = E.STANDARD, ...d } = e,
-        { activeDescendant: f, selected: _, setSelected: h, itemToString: p } = i.useContext(T),
-        v = p(n),
+        { activeDescendant: f, selected: _, setSelected: p, itemToString: h } = i.useContext(S),
+        v = h(n),
         I = f === v,
-        S = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
-        b = (0, l.JA)(v);
+        b = null !== (t = null == d ? void 0 : d.selected) && void 0 !== t ? t : _.has(n),
+        T = (0, l.JA)(v);
     return (0, r.jsx)(c.P, {
         tag: 'li',
         id: v,
-        onClick: () => (o ? null : h(n)),
+        onClick: () => (o ? null : p(n)),
         [g]: n,
         className: s()(m.item, {
             [m.focused]: I,
-            [u]: S,
+            [u]: b,
             [m.disabled]: o
         }),
-        ...b,
+        ...T,
         role: 'option',
-        'aria-selected': S,
+        'aria-selected': b,
         'aria-disabled': o,
         children: (0, r.jsx)(y.Provider, {
             value: n,
@@ -240,7 +240,7 @@ function A(e) {
     }),
     (A.Checkbox = function (e) {
         let { checked: t } = e,
-            { selected: n } = i.useContext(T),
+            { selected: n } = i.useContext(S),
             a = i.useContext(y);
         return (0, r.jsx)('span', {
             className: m.itemCheckbox,
@@ -253,12 +253,12 @@ function A(e) {
         });
     }),
     (A.Checkmark = function () {
-        let { selected: e } = i.useContext(T),
+        let { selected: e } = i.useContext(S),
             t = i.useContext(y);
         return e.has(t)
             ? (0, r.jsx)('span', {
                   className: m.itemCheckbox,
-                  children: (0, r.jsx)(h.CircleCheckIcon, {
+                  children: (0, r.jsx)(p.CircleCheckIcon, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,

@@ -14,10 +14,10 @@ var r = n(200651),
 let d = n(340109);
 function f(e) {
     let { stream: t, width: n, noArt: f = !1, selected: _ = !1 } = e,
-        h = (0, a.e7)([l.Z], () => l.Z.getChannel(t.channelId));
+        p = (0, a.e7)([l.Z], () => l.Z.getChannel(t.channelId));
     return (
         i.useEffect(() => {
-            (null == h ? void 0 : h.isGuildStageVoice()) && (0, s.aP)((0, o.V9)(t), !1);
+            (null == p ? void 0 : p.isGuildStageVoice()) && (0, s.aP)((0, o.V9)(t), !1);
         }, []),
         (0, r.jsx)(u.Z, {
             artURL: d,

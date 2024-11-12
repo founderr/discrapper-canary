@@ -15,13 +15,13 @@ n.d(t, {
         return m;
     },
     G$: function () {
-        return h;
+        return p;
     },
     HW: function () {
-        return T;
+        return S;
     },
     Hp: function () {
-        return S;
+        return b;
     },
     JO: function () {
         return O;
@@ -48,7 +48,7 @@ n.d(t, {
         return u;
     },
     XH: function () {
-        return b;
+        return T;
     },
     _U: function () {
         return k;
@@ -63,7 +63,7 @@ n.d(t, {
         return M;
     },
     jF: function () {
-        return p;
+        return h;
     },
     ji: function () {
         return w;
@@ -102,16 +102,16 @@ var r,
     f = n(70956);
 ((r = o || (o = {}))[(r.SECONDS_30 = 30 * f.Z.Millis.SECOND)] = 'SECONDS_30'), (r[(r.MINUTES_1 = f.Z.Millis.MINUTE)] = 'MINUTES_1'), (r[(r.MINUTES_2 = 2 * f.Z.Millis.MINUTE)] = 'MINUTES_2'), ((i = l || (l = {}))[(i.ALL = 0)] = 'ALL'), (i[(i.FRIENDS = 1)] = 'FRIENDS'), ((a = u || (u = {})).DECOUPLED = 'decoupled'), (a.VIEWER = 'viewer'), (a.STREAMER = 'streamer'), ((s = c || (c = {}))[(s.Error = 0)] = 'Error'), (s[(s.Disabled = 1)] = 'Disabled'), (s[(s.Enabled = 2)] = 'Enabled');
 let _ = 'alt+c',
-    h = 6 * f.Z.Millis.SECOND,
-    p = new d.Z('Clips'),
+    p = 6 * f.Z.Millis.SECOND,
+    h = new d.Z('Clips'),
     m = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
     g = 3,
     E = 1,
     v = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
     I = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    S = 0.1,
-    T = 25,
-    b = 0,
+    b = 0.1,
+    S = 25,
+    T = 0,
     y = 200,
     A = 'clips-edit',
     N = 'clips-gallery',

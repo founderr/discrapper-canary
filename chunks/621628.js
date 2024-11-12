@@ -32,8 +32,8 @@ var i = n(200651),
     S = n(211644),
     T = n(804501),
     C = n(957436),
-    _ = n(113207);
-function E(e) {
+    E = n(113207);
+function _(e) {
     let { contents: t, content: n, onChange: s } = e,
         r = o.z[n],
         { isDismissed: l, handleToggleDismissState: a } = (0, T.x)(r, t);
@@ -45,7 +45,7 @@ function E(e) {
             },
             children: (0, i.jsx)(d.FormText, {
                 size: m.Z.Sizes.SIZE_16,
-                className: _.marginTop4,
+                className: E.marginTop4,
                 children: ''.concat(n.toLowerCase(), ' (').concat(o.z[n], ')')
             })
         })
@@ -58,7 +58,7 @@ function f(e) {
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    E,
+                    _,
                     {
                         contents: n,
                         content: e,
@@ -77,7 +77,7 @@ function I() {
             dailyCapOverridden: x.Z.dailyCapOverridden
         })),
         [m, T] = s.useState(''),
-        E =
+        _ =
             null !==
                 (e = (0, a.e7)([g.Z], () => {
                     var e;
@@ -117,11 +117,11 @@ function I() {
             (0, i.jsxs)(d.FormSection, {
                 title: 'Dismissible Content Fatigue',
                 tag: d.FormTitleTags.H1,
-                className: _.marginBottom60,
+                className: E.marginBottom60,
                 children: [
                     (0, i.jsx)(d.FormItem, {
                         children: (0, i.jsxs)(d.FormText, {
-                            className: _.marginBottom4,
+                            className: E.marginBottom4,
                             children: ['Daily Cap Reached: ', n ? 'Yes' : 'No']
                         })
                     }),
@@ -137,7 +137,7 @@ function I() {
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, i.jsx)(d.FormText, {
-                                className: _.marginTop4,
+                                className: E.marginTop4,
                                 children: 'This will reset the daily cap and content seen during session'
                             })
                         ]
@@ -149,7 +149,7 @@ function I() {
                 tag: d.FormTitleTags.H1,
                 children: [
                     (0, i.jsx)(d.SearchBar, {
-                        className: _.marginBottom20,
+                        className: E.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
                         query: m,
                         onChange: T,
@@ -170,15 +170,15 @@ function I() {
                     }),
                     t.length > 0
                         ? (0, i.jsxs)('div', {
-                              className: _.marginBottom20,
+                              className: E.marginBottom20,
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: _.marginBottom20,
+                                      className: E.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, i.jsx)(f, {
                                       items: b,
-                                      dismissedContents: E,
+                                      dismissedContents: _,
                                       handleChange: A
                                   })
                               ]
@@ -188,24 +188,24 @@ function I() {
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: _.marginBottom20,
+                                      className: E.marginBottom20,
                                       children: (0, i.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, i.jsx)(f, {
                                       items: v,
-                                      dismissedContents: E,
+                                      dismissedContents: _,
                                       handleChange: A
                                   })
                               ]
                           })
                         : null,
                     (0, i.jsx)(u.Z, {
-                        className: l()(_.marginBottom20, _.marginTop20),
+                        className: l()(E.marginBottom20, E.marginTop20),
                         children: (0, i.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, i.jsx)(f, {
                         items: j,
-                        dismissedContents: E,
+                        dismissedContents: _,
                         handleChange: A
                     })
                 ]

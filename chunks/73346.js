@@ -9,10 +9,10 @@ n.d(t, {
         return O;
     },
     ZI: function () {
-        return T;
+        return S;
     },
     _W: function () {
-        return b;
+        return T;
     },
     uF: function () {
         return A;
@@ -34,8 +34,8 @@ var r = n(392711),
     d = n(355467),
     f = n(134432),
     _ = n(351402),
-    h = n(853872),
-    p = n(78839),
+    p = n(853872),
+    h = n(78839),
     m = n(526167),
     g = n(630388),
     E = n(823379);
@@ -43,8 +43,8 @@ n(358085);
 var v = n(709054),
     I = n(981631);
 n(388032), l().shim();
-let S = !u.tq && !u.Em && -1 !== (0, m.vu)();
-function T(e, t) {
+let b = !u.tq && !u.Em && -1 !== (0, m.vu)();
+function S(e, t) {
     let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: s, guildId: o } = t;
     return {
         pathname: null != s && null != o ? I.Z5c.CHANNEL(o, s, e) : I.Z5c.APPLICATION_STORE_LISTING_SKU(e, a),
@@ -55,7 +55,7 @@ function T(e, t) {
         search: null != i ? '?store_listing_id='.concat(i) : ''
     };
 }
-function b(e, t, n, r) {
+function T(e, t, n, r) {
     var i;
     let a;
     let s = window.GLOBAL_ENV.CDN_HOST;
@@ -71,7 +71,7 @@ function b(e, t, n, r) {
             default:
                 r = 'webp';
         }
-    'webp' === r && !S && (r = 'png');
+    'webp' === r && !b && (r = 'png');
     let o = 'string' == typeof t ? t : t.id,
         l = ((i = 'https:'), 'https:');
     return (
@@ -91,11 +91,11 @@ async function y(e) {
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (a) {
         let e = [];
-        !h.Z.hasFetchedPaymentSources && e.push(null !== (n = _.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
+        !p.Z.hasFetchedPaymentSources && e.push(null !== (n = _.Z.paymentSourcesFetchRequest) && void 0 !== n ? n : (0, d.tZ)()),
             !_.Z.ipCountryCodeLoaded && e.push((0, d.GE)()),
             e.push(
                 new Promise(async (e) => {
-                    if (p.ZP.hasFetchedSubscriptions()) e();
+                    if (h.ZP.hasFetchedSubscriptions()) e();
                     else if (_.Z.isSubscriptionFetching) {
                         let t = () => {
                             _.Z.isSubscriptionFetching ? setTimeout(t, 50) : e();
@@ -106,9 +106,9 @@ async function y(e) {
             ),
             await Promise.allSettled(e);
     }
-    let s = h.Z.getDefaultBillingCountryCode(),
-        o = null !== (r = null === (t = h.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
-        l = p.ZP.getPremiumTypeSubscription();
+    let s = p.Z.getDefaultBillingCountryCode(),
+        o = null !== (r = null === (t = p.Z.defaultPaymentSource) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : null,
+        l = h.ZP.getPremiumTypeSubscription();
     null != l && null != l.paymentSourceId && (o = l.paymentSourceId), null === s && (s = null !== (i = _.Z.ipCountryCode) && void 0 !== i ? i : null);
     let u = {};
     if ((null != s && (u.country_code = s), null != o && (u.payment_source_id = o), null != s || null != o)) {

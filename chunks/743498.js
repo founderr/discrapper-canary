@@ -35,16 +35,16 @@ var r = n(889161),
     d = n(760346),
     f = n(224489),
     _ = n(908261),
-    h = n(853587),
-    p = n(256115),
+    p = n(853587),
+    h = n(256115),
     m = n(846407),
     g = n(414450),
     E = n(380726),
     v = n(829000),
     I = n(487093),
-    S = n(152401),
-    T = n(856851),
-    b = n(956728),
+    b = n(152401),
+    S = n(856851),
+    T = n(956728),
     y = n(624768),
     A = n(301205),
     N = n(948005),
@@ -95,16 +95,16 @@ X = {
     'et-EE': d.Z,
     'fi-FI': f.Z,
     'fr-FR': _.Z,
-    'he-IL': h.Z,
-    'hr-HR': p.Z,
+    'he-IL': p.Z,
+    'hr-HR': h.Z,
     'hu-HU': m.Z,
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': S.Z,
-    'nb-NO': T.Z,
-    'nl-NL': b.Z,
+    'lv-LV': b.Z,
+    'nb-NO': S.Z,
+    'nl-NL': T.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,
@@ -227,17 +227,17 @@ function $(e, t, n) {
     );
     i && (d['aria-rowcount'] = t.collection.size + t.collection.headerRows.length), (0, F.O)() && 'expandedKeys' in t && (d.role = 'treegrid');
     let { column: f, direction: _ } = t.sortDescriptor || {},
-        h = (0, V.qb)(W(X), '@react-aria/table'),
-        p = (0, Z.useMemo)(() => {
+        p = (0, V.qb)(W(X), '@react-aria/table'),
+        h = (0, Z.useMemo)(() => {
             var e;
             let n = null === (e = t.collection.columns.find((e) => e.key === f)) || void 0 === e ? void 0 : e.textValue;
-            return _ && f ? h.format(`${_}Sort`, { columnName: n }) : void 0;
+            return _ && f ? p.format(`${_}Sort`, { columnName: n }) : void 0;
         }, [_, f, t.collection.columns]),
-        m = (0, B.PK)(p);
+        m = (0, B.PK)(h);
     return (
         (0, B.rf)(() => {
-            (0, G.xQ)(p, 'assertive', 500);
-        }, [p]),
+            (0, G.xQ)(h, 'assertive', 500);
+        }, [h]),
         {
             gridProps: (0, B.dG)(d, m, {
                 'aria-describedby': [m['aria-describedby'], d['aria-describedby']].filter(Boolean).join(' ')
@@ -269,10 +269,10 @@ function ee(e, t, n) {
         { focusableProps: d } = (0, H.kc)({}, n),
         f = null,
         _ = (null === (r = t.sortDescriptor) || void 0 === r ? void 0 : r.column) === s.key,
-        h = null === (i = t.sortDescriptor) || void 0 === i ? void 0 : i.direction;
-    s.props.allowsSorting && !(0, B.Dt)() && (f = _ ? h : 'none');
-    let p = (0, V.qb)(W(X), '@react-aria/table');
-    o && ((a = `${p.format('sortable')}`), _ && h && (0, B.Dt)() && (a = `${a}, ${p.format(h)}`));
+        p = null === (i = t.sortDescriptor) || void 0 === i ? void 0 : i.direction;
+    s.props.allowsSorting && !(0, B.Dt)() && (f = _ ? p : 'none');
+    let h = (0, V.qb)(W(X), '@react-aria/table');
+    o && ((a = `${h.format('sortable')}`), _ && p && (0, B.Dt)() && (a = `${a}, ${h.format(p)}`));
     let m = (0, B.PK)(a),
         g = 0 === t.collection.size;
     return (

@@ -65,7 +65,7 @@ e.exports = function (e) {
             built_in: 'std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr'
         },
         _ = [u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
-        h = {
+        p = {
             variants: [
                 {
                     begin: /=/,
@@ -92,7 +92,7 @@ e.exports = function (e) {
             ]),
             relevance: 0
         },
-        p = {
+        h = {
             begin: '(' + a + '[\\*&\\s]+)+' + d,
             returnBegin: !0,
             end: /[{;=]/,
@@ -148,7 +148,7 @@ e.exports = function (e) {
         keywords: f,
         disableAutodetect: !0,
         illegal: '</',
-        contains: [].concat(h, p, _, [
+        contains: [].concat(p, h, _, [
             u,
             {
                 begin: e.IDENT_RE + '::',

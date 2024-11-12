@@ -21,8 +21,8 @@ var r = n(200651),
     d = n(197344),
     f = n(978636),
     _ = n(131333),
-    h = n(981631);
-function p(e) {
+    p = n(981631);
+function h(e) {
     if (null == e || null == c.Z.emojiAnimationTriggers) return !1;
     for (let t of c.Z.emojiAnimationTriggers) {
         let n = l.ZP.getByName(t);
@@ -46,7 +46,7 @@ function g(e) {
         o = i.useMemo(
             () => ({
                 triggerAnimation: (e) => {
-                    a === h.IlC.APP && p(e) && n(e);
+                    a === p.IlC.APP && h(e) && n(e);
                 }
             }),
             [a, n]
@@ -70,7 +70,7 @@ function v(e) {
         { triggerAnimation: l } = i.useContext(m);
     return (
         i.useEffect(() => {
-            if (!c.Z.triggerEmojiAnimationFromSentMessage || (null == o ? void 0 : o.state) !== h.yb.SENT || (0, f.JL)(r)) return;
+            if (!c.Z.triggerEmojiAnimationFromSentMessage || (null == o ? void 0 : o.state) !== p.yb.SENT || (0, f.JL)(r)) return;
             let { top: e, bottom: n } = t.getBoundingClientRect();
             if (!!(e >= 0 && n <= window.innerHeight)) l(s), (0, f.i9)(r);
         }, [s, t, null == o ? void 0 : o.state, r, l]),
@@ -82,7 +82,7 @@ function I(e) {
         c = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         f = d.Z.useIsEligible(),
         _ = (0, s.bp)();
-    return l || _ !== h.IlC.APP || !f || null == n || null == t || c || null == u || !p(i)
+    return l || _ !== p.IlC.APP || !f || null == n || null == t || c || null == u || !h(i)
         ? null
         : (0, r.jsx)(v, {
               emojiRef: u,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -15,14 +15,14 @@ var i = n(512722),
     d = n(737013),
     f = n(981631),
     _ = n(388032);
-function h(e) {
+function p(e) {
     let { onClose: t, onSelect: n } = e,
         i = (0, s.e7)([u.default], () => {
             let e = u.default.getCurrentUser();
             return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        h = (0, c.Z)(),
-        p = (0, d.Z)(i.id);
+        p = (0, c.Z)(),
+        h = (0, d.Z)(i.id);
     return (0, r.jsx)(l.Z, {
         object: f.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(o.Menu, {
@@ -33,9 +33,9 @@ function h(e) {
             children: [
                 (0, r.jsx)(o.MenuGroup, {
                     label: _.intl.string(_.t.F122Gx),
-                    children: h
+                    children: p
                 }),
-                (0, r.jsx)(o.MenuGroup, { children: p })
+                (0, r.jsx)(o.MenuGroup, { children: h })
             ]
         })
     });

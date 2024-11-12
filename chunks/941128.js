@@ -10,16 +10,16 @@ var r,
     d = n(392711),
     f = n.n(d),
     _ = n(442837),
-    h = n(433517),
-    p = n(570140),
+    p = n(433517),
+    h = n(570140),
     m = n(51025),
     g = n(594190),
     E = n(314897),
     v = n(173747),
     I = n(780570),
-    S = n(830168),
-    T = n(358085),
-    b = n(417363),
+    b = n(830168),
+    S = n(358085),
+    T = n(417363),
     y = n(981631),
     A = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
@@ -40,7 +40,7 @@ function U() {
         paused: D,
         userActions: Array.from(M)
     };
-    h.K.set(C, e);
+    p.K.set(C, e);
 }
 function G() {
     let e = R[0];
@@ -52,7 +52,7 @@ function G() {
             let e = E.default.getToken(),
                 t = E.default.getId();
             if (null == e) throw Error('missing user token');
-            P = !S.Z.setCurrentTask(a, s, i, t, e);
+            P = !b.Z.setCurrentTask(a, s, i, t, e);
         }
     }
 }
@@ -69,7 +69,7 @@ function Z(e, t, n, r) {
         s = O.indexOf(i);
     -1 !== s && O.splice(s, 1);
     let o = B(e, t);
-    0 !== o && (n ? -1 === o && (R.push(a), G()) : (o > 0 && R.splice(o, 1), R.unshift(a), G())), !n && D && S.Z.resume(), U();
+    0 !== o && (n ? -1 === o && (R.push(a), G()) : (o > 0 && R.splice(o, 1), R.unshift(a), G())), !n && D && b.Z.resume(), U();
 }
 function F(e, t) {
     let n = (0, I.Tu)(e, t),
@@ -91,7 +91,7 @@ function j(e) {
 function H() {
     let e = E.default.getToken(),
         t = E.default.getId();
-    if (null != e) S.Z.setCredentials(t, e);
+    if (null != e) b.Z.setCredentials(t, e);
 }
 function Y() {
     for (let e of g.ZP.getRunningDiscordApplicationIds()) m.al(e, e);
@@ -102,7 +102,7 @@ class W extends (a = _.ZP.Store) {
     initialize() {
         var e;
         let t =
-            null !== (e = h.K.get(C)) && void 0 !== e
+            null !== (e = p.K.get(C)) && void 0 !== e
                 ? e
                 : {
                       queue: null,
@@ -118,7 +118,7 @@ class W extends (a = _.ZP.Store) {
                       }
                     : e
             );
-        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(b.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(b.Z);
+        null != t.paused && (D = t.paused), null != t.userActions && (M = new Map(Array.from(t.userActions))), this.waitFor(T.Z, g.ZP), this.syncWith([g.ZP], Y), this.waitFor(T.Z);
     }
     get activeItems() {
         return R.map((e) => {
@@ -148,7 +148,7 @@ class W extends (a = _.ZP.Store) {
               writable: !0
           })
         : (l[u] = c),
-    (t.Z = new W(p.Z, {
+    (t.Z = new W(h.Z, {
         DISPATCH_APPLICATION_INSTALL: function (e) {
             let { applicationId: t, branchId: n } = e;
             M.set((0, I.Tu)(t, n), 'Install'), Z(t, n, !1, 'Patch');
@@ -169,19 +169,19 @@ class W extends (a = _.ZP.Store) {
             let { applicationId: t, branchId: n } = e,
                 r = B(t, n);
             if (r < 1) return !1;
-            R.splice(0, 0, R.splice(r, 1)[0]), G(), D && S.Z.resume(), U();
+            R.splice(0, 0, R.splice(r, 1)[0]), G(), D && b.Z.resume(), U();
         },
         DISPATCH_APPLICATION_REMOVE_FINISHED: j,
         DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
             let { state: t } = e;
-            !w && ((w = !0), G(), !D && S.Z.resume());
+            !w && ((w = !0), G(), !D && b.Z.resume());
             let n = D;
             (D = t.paused), (L = t.currentTask), (x = t.nextTask);
             let r = !1;
             (R = R.filter((e) => {
                 let { comboId: t } = e,
                     { applicationId: n, branchId: i } = (0, I.CP)(t),
-                    a = b.Z.getState(n, i),
+                    a = T.Z.getState(n, i),
                     s = v.Z.getTargetBuildId(n, i),
                     o = v.Z.getTargetManifests(n, i);
                 if (null != a && a.type === y.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && f().isEqual(a.manifestIds, a.targetManifestIds) && f().isEqual(a.manifestIds, o)) {
@@ -217,9 +217,9 @@ class W extends (a = _.ZP.Store) {
             }
         },
         CONNECTION_OPEN: function () {
-            (0, T.isDesktop)() && H();
+            (0, S.isDesktop)() && H();
         },
         LOGOUT: function () {
-            h.K.remove(C), (0, T.isDesktop)() && S.Z.pause();
+            p.K.remove(C), (0, S.isDesktop)() && b.Z.pause();
         }
     }));

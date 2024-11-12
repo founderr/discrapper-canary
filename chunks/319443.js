@@ -26,7 +26,7 @@ t.Z = function () {
         r.useEffect(() => {
             a.g5();
         }, []);
-    let { searchQuery: x, searchFetchedQuery: A, onSearchTextChange: b, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L, initialSearchCategoryId: R, onOpenCategorySearch: j } = (0, h.M)(),
+    let { searchQuery: x, searchFetchedQuery: b, onSearchTextChange: A, onClearSearch: Z, onSearchSubmit: y, hasSearchView: L, initialSearchCategoryId: R, onOpenCategorySearch: j } = (0, h.M)(),
         {
             searchBarState: O,
             onTabsAvailableWidthChange: P,
@@ -69,7 +69,7 @@ t.Z = function () {
                               variant: 'heading-lg/semibold',
                               color: 'header-primary',
                               className: v.alternateHeader,
-                              children: G ? C.intl.string(C.t['13/7kZ']) : C.intl.formatToPlainString(C.t.zHdzqa, { query: A })
+                              children: G ? C.intl.string(C.t['13/7kZ']) : C.intl.formatToPlainString(C.t.zHdzqa, { query: b })
                           })
                         : (0, i.jsx)(d.Z, {
                               tabs: S,
@@ -81,7 +81,7 @@ t.Z = function () {
                         (0, i.jsx)(u.Z, {
                             query: x,
                             placeholder: C.intl.string(C.t['7J5i+/']),
-                            onTextChange: b,
+                            onTextChange: A,
                             onClear: Z,
                             onSubmit: y,
                             onCollapsedClick: D,
@@ -100,7 +100,7 @@ t.Z = function () {
                   })
                 : B
                   ? (0, i.jsx)(E.Z, {
-                        query: A,
+                        query: b,
                         onSelectApplication: w,
                         initialCategoryId: R
                     })

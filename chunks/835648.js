@@ -14,15 +14,15 @@ var r = n(200651),
     d = n(806966),
     f = n(254494),
     _ = n(593618),
-    h = n(594174),
-    p = n(74538),
+    p = n(594174),
+    h = n(74538),
     m = n(697426),
     g = n(526617),
     E = n(474936),
     v = n(388032),
     I = n(199398);
-let S = [8, 8, 8, 8];
-function T(e) {
+let b = [8, 8, 8, 8];
+function S(e) {
     let { icon: t, isSelected: n, onClick: i, listItemProps: a, ...o } = e;
     return (0, r.jsx)(u.Clickable, {
         ...a,
@@ -35,7 +35,7 @@ function T(e) {
         })
     });
 }
-function b(e) {
+function T(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: s } = e,
         l = (0, o.JA)('soundboard_guild_'.concat(n));
     return (0, r.jsx)(u.Tooltip, {
@@ -76,7 +76,7 @@ function b(e) {
                 switch (e.categoryInfo.type) {
                     case m.bg.FAVORITES:
                         return (0, r.jsx)(
-                            T,
+                            S,
                             {
                                 ...i,
                                 icon: u.StarIcon,
@@ -88,7 +88,7 @@ function b(e) {
                         );
                     case m.bg.RECENTLY_HEARD:
                         return (0, r.jsx)(
-                            T,
+                            S,
                             {
                                 ...i,
                                 icon: u.ClockIcon,
@@ -100,7 +100,7 @@ function b(e) {
                         );
                     case m.bg.FREQUENTLY_USED:
                         return (0, r.jsx)(
-                            T,
+                            S,
                             {
                                 ...i,
                                 icon: u.AnalyticsIcon,
@@ -128,7 +128,7 @@ function b(e) {
                         );
                     case m.bg.DEFAULTS:
                         return (0, r.jsx)(
-                            T,
+                            S,
                             {
                                 ...i,
                                 icon: u.ClydeIcon,
@@ -145,14 +145,14 @@ function b(e) {
     });
 }
 function y(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = S, guildId: o, inExpressionPicker: u } = e,
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: s = b, guildId: o, inExpressionPicker: u } = e,
         c = i.useRef(null),
-        _ = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-        m = (0, p.I5)(_, E.p9.TIER_2),
+        _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
+        m = (0, h.I5)(_, E.p9.TIER_2),
         v = i.useCallback(
             (e, t, n, i) => {
                 let s = a && (0, g.O)(e.categoryInfo, m, o);
-                return (0, r.jsx)(b, {
+                return (0, r.jsx)(T, {
                     category: e,
                     categoryIndex: t,
                     onClick: n,

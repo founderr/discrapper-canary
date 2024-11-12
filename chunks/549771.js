@@ -17,13 +17,13 @@ function d(e, t) {
     let d = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
         f = null !== (n = null == e ? void 0 : e.guild_id) && void 0 !== n ? n : u.lds,
         _ = (0, i.e7)([s.ZP], () => s.ZP.getFlattenedGuildIds()),
-        h = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(c.Pl.USE_EXTERNAL_SOUNDS, e));
+        p = (0, i.e7)([a.Z], () => null == e || null == e.guild_id || a.Z.can(c.Pl.USE_EXTERNAL_SOUNDS, e));
     return r.useMemo(() => {
-        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && h) {
+        if ((l.ZP.canUseSoundboardEverywhere(d) || !t) && p) {
             let e = '' !== f,
                 t = e ? _.filter((e) => e !== f) : _;
             return e && t.unshift(f), t;
         }
         return [f];
-    }, [d, t, f, _, h]);
+    }, [d, t, f, _, p]);
 }

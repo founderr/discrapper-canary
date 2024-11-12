@@ -15,15 +15,15 @@ var r = n(192379),
     d = n(199902),
     f = n(158776),
     _ = n(699516),
-    h = n(626135),
-    p = n(981631);
+    p = n(626135),
+    h = n(981631);
 let m = [],
     g = [];
 function E(e) {
     let t = (0, a.e7)([f.Z], () => f.Z.getActivities(e)),
         n = (0, a.e7)([o.Z], () => o.Z.getUserOutbox(e)),
         { enabled: E, analyticsEligible: v } = (0, s.R4)('use-user-profile-activity'),
-        { stream: I, nonExperimentStream: S } = (0, a.cj)(
+        { stream: I, nonExperimentStream: b } = (0, a.cj)(
             [d.Z],
             () => {
                 let t = d.Z.getAnyStreamForUser(e);
@@ -39,24 +39,24 @@ function E(e) {
             },
             [E, e]
         ),
-        T = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(e));
+        S = (0, a.e7)([_.Z], () => _.Z.getRelationshipType(e));
     (0, r.useEffect)(() => {
-        if (v && null != S) {
+        if (v && null != b) {
             var t;
-            h.default.track(p.rMx.USER_VOICE_ACTIVITY_VIEWED, {
+            p.default.track(h.rMx.USER_VOICE_ACTIVITY_VIEWED, {
                 activity_user_id: e,
-                discoverable: null === (t = null == S ? void 0 : S.discoverable) || void 0 === t || t,
+                discoverable: null === (t = null == b ? void 0 : b.discoverable) || void 0 === t || t,
                 surface: 'user-profile-activity',
-                relationship_type: T,
-                treatment: E && (null == S ? void 0 : S.discoverable) === !1 ? s.h9.HIDE : s.h9.SHOW
+                relationship_type: S,
+                treatment: E && (null == b ? void 0 : b.discoverable) === !1 ? s.h9.HIDE : s.h9.SHOW
             });
         }
-    }, [S, E, v, e, T]);
-    let { live: b, recent: y } = (0, r.useMemo)(() => {
+    }, [b, E, v, e, S]);
+    let { live: T, recent: y } = (0, r.useMemo)(() => {
         let e = (0, i.uniqWith)(
                 t.filter((e) => {
                     let { type: t } = e;
-                    return t !== p.IIU.CUSTOM_STATUS;
+                    return t !== h.IIU.CUSTOM_STATUS;
                 }),
                 (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
             ),
@@ -67,7 +67,7 @@ function E(e) {
         };
     }, [t, null == n ? void 0 : n.entries]);
     return {
-        live: b,
+        live: T,
         recent: y,
         stream: I,
         outbox: n

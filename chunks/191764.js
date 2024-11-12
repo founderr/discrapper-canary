@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -15,8 +15,8 @@ var i = n(442837),
     d = n(475413),
     f = n(981631),
     _ = n(388032);
-function h(e) {
-    let { user: t, activity: n, onAction: h, onClose: p } = e,
+function p(e) {
+    let { user: t, activity: n, onAction: p, onClose: h } = e,
         { newestAnalyticsLocation: m } = (0, s.ZP)(),
         g = (0, i.e7)([u.Z, o.Z], () => {
             var e;
@@ -30,14 +30,14 @@ function h(e) {
               disabled: E,
               fullWidth: !0,
               onClick: () => {
-                  null == h || h({ action: 'PRESS_HANG_STATUS_BUTTON' }),
+                  null == p || p({ action: 'PRESS_HANG_STATUS_BUTTON' }),
                       a.default.selectVoiceChannel(g.id),
                       c.default.track(f.rMx.HANG_STATUS_CTA_CLICKED, {
                           channel_id: g.id,
                           guild_id: g.guild_id,
                           source: m
                       }),
-                      null == p || p();
+                      null == h || h();
               }
           });
 }

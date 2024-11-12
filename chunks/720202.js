@@ -10,18 +10,18 @@ var r,
     d = n(537986),
     f = n(592125),
     _ = n(271383);
-let h = new d.Z(_.ZP.isMember, (e, t) => {
+let p = new d.Z(_.ZP.isMember, (e, t) => {
     c.Z.dispatch({
         type: 'GUILD_MEMBERS_REQUEST',
         guildIds: [e],
         userIds: t
     });
 });
-function p() {
-    h.reset();
+function h() {
+    p.reset();
 }
 function m(e, t) {
-    return h.request(e, t), !1;
+    return p.request(e, t), !1;
 }
 function g(e, t) {
     return (
@@ -59,18 +59,18 @@ class I extends (r = u.ZP.Store) {
           })
         : (i[a] = s),
     (t.Z = new I(c.Z, {
-        CONNECTION_CLOSED: p,
-        CONNECTION_OPEN: p,
+        CONNECTION_CLOSED: h,
+        CONNECTION_OPEN: h,
         CONNECTION_RESUMED: function () {
-            return h.requestUnacknowledged(), !1;
+            return p.requestUnacknowledged(), !1;
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
             let { chunks: t } = e;
             for (let e of t)
                 e.members.forEach((t) => {
-                    h.acknowledge(e.guildId, t.user.id);
+                    p.acknowledge(e.guildId, t.user.id);
                 }),
-                    null != e.notFound && e.notFound.forEach((t) => h.acknowledge(e.guildId, t));
+                    null != e.notFound && e.notFound.forEach((t) => p.acknowledge(e.guildId, t));
             return !1;
         },
         SEARCH_FINISH: v,

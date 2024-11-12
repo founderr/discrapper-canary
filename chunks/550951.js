@@ -16,7 +16,7 @@ function c(e, t) {
         d = (0, a.wE)(i.z.SERVER_SHOP_PHANTOM_PREVIEW),
         f = (0, r.e7)([o.Z], () => null != e && o.Z.can(u.Plq.ADMINISTRATOR, e)),
         _ = null !== (n = null == e ? void 0 : e.hasFeature(u.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
-        h = (0, s.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
-        p = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((t) => (null == e ? void 0 : e.hasFeature(t)) === !0);
-    return null != e && f && !_ && p && c && h && !d;
+        p = (0, s.y)(null == e ? void 0 : e.id, 'useGuildShopPreviewVisible'),
+        h = [u.oNc.CREATOR_MONETIZABLE, u.oNc.CREATOR_MONETIZABLE_PROVISIONAL, u.oNc.ROLE_SUBSCRIPTIONS_ENABLED].some((t) => (null == e ? void 0 : e.hasFeature(t)) === !0);
+    return null != e && f && !_ && h && c && p && !d;
 }

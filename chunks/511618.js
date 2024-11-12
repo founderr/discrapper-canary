@@ -9,7 +9,7 @@ var r = n(200651),
     d = n(185923),
     f = n(474936),
     _ = n(388032),
-    h = n(916502);
+    p = n(916502);
 t.Z = (e) => {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, a.ZP)();
@@ -19,17 +19,17 @@ t.Z = (e) => {
             location_stack: n
         });
     }, [n]);
-    let p = (0, r.jsx)('div', {
-        className: h.emojis,
+    let h = (0, r.jsx)('div', {
+        className: p.emojis,
         children: t.slice(0, 3).map((e, t) => {
             if (null == e.id) return null;
             let n = (0, r.jsx)(
                 'div',
                 {
-                    className: h.emojiBackground,
+                    className: p.emojiBackground,
                     children: (0, r.jsx)('img', {
                         alt: e.name,
-                        className: h.emoji,
+                        className: p.emoji,
                         src: u.ZP.getEmojiURL({
                             id: e.id,
                             animated: e.animated,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                 : (0, r.jsx)(
                       o.ZP,
                       {
-                          className: h.emojiMask,
+                          className: p.emojiMask,
                           mask: o.ZP.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,
                           children: n
                       },
@@ -53,7 +53,7 @@ t.Z = (e) => {
         })
     });
     return (0, r.jsxs)(s.RX, {
-        className: h.upsell,
-        children: [(0, r.jsx)(s.z5, { children: (0, r.jsx)(s.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(s.dY, { children: p })]
+        className: p.upsell,
+        children: [(0, r.jsx)(s.z5, { children: (0, r.jsx)(s.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(s.dY, { children: h })]
     });
 };

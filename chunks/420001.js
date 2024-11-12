@@ -10,8 +10,8 @@ var r = n(911969),
     d = n(5192),
     f = n(417574),
     _ = n(877565),
-    h = n(590921),
-    p = n(126226),
+    p = n(590921),
+    h = n(126226),
     m = n(388032);
 function g(e) {
     let t = f.X.exec(e);
@@ -29,18 +29,18 @@ function g(e) {
     return null;
 }
 let E = {
-    ...p.Z,
+    ...h.Z,
     sentinel: void 0,
-    focusMode: h.QZ.MANUAL,
+    focusMode: p.QZ.MANUAL,
     matches(e, t, n, r, i) {
-        if (i.commands === h.L8.DISABLED || i.commands === h.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
+        if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
         let a = g(n);
         return null != a && a.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, s, l) {
-        if (!u.Xk.getSetting()) return p.K;
+        if (!u.Xk.getSetting()) return h.K;
         let c = g(n);
-        if (null == c) return p.K;
+        if (null == c) return h.K;
         let d = (0, o.hV)(e, c.cleanedQuery),
             { commands: f, sections: _ } = i.JT(
                 e,
@@ -49,13 +49,13 @@ let E = {
                     text: d.text
                 },
                 {
-                    limit: h.AQ,
-                    placeholderCount: h.YP,
+                    limit: p.AQ,
+                    placeholderCount: p.YP,
                     scoreMethod: a.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
             );
-        if (null == f) return p.K;
+        if (null == f) return h.K;
         let m = f.filter((e) => e.section.botId === c.user.id);
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
@@ -63,10 +63,10 @@ let E = {
             m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
         return 0 === m.length
-            ? p.K
+            ? h.K
             : {
                   results: {
-                      entries: m.slice(0, h.AQ).map((e) => ({
+                      entries: m.slice(0, p.AQ).map((e) => ({
                           command: e,
                           section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
                       }))
@@ -92,7 +92,7 @@ let E = {
             onClick: u,
             titleWithQuery: m.t.HFRoZW,
             titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
-            Component: s.commands === h.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            Component: s.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -115,7 +115,7 @@ let E = {
     },
     onSelect(e) {
         let { results: t, index: n, type: r, options: i, channel: a, guild: o } = e,
-            l = p.Z.onSelect({
+            l = h.Z.onSelect({
                 results: t,
                 index: n,
                 type: r,
@@ -128,7 +128,7 @@ let E = {
             ? null
             : {
                   ...l,
-                  type: h.z2.COMMAND_SUGGESTION
+                  type: p.z2.COMMAND_SUGGESTION
               };
     }
 };

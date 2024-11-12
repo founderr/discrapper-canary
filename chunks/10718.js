@@ -9,16 +9,16 @@ n.d(t, {
         return m;
     },
     Qm: function () {
-        return T;
+        return S;
     },
     VB: function () {
         return g;
     },
     Xq: function () {
-        return h;
+        return p;
     },
     YZ: function () {
-        return S;
+        return b;
     },
     wi: function () {
         return v;
@@ -38,7 +38,7 @@ var r = n(192379),
     d = n(581364),
     f = n(689079),
     _ = n(981631);
-function h(e, t, n) {
+function p(e, t, n) {
     var r, i, a, s;
     if (null == t)
         return {
@@ -54,7 +54,7 @@ function h(e, t, n) {
             return (null === (t = e.descriptor.application) || void 0 === t ? void 0 : t.id) === n;
         });
         if (null != e) {
-            let n = p(e, t);
+            let n = h(e, t);
             return {
                 application: e.descriptor.application,
                 command: n
@@ -62,7 +62,7 @@ function h(e, t, n) {
         }
     } else
         for (let e of c) {
-            let n = p(e, t);
+            let n = h(e, t);
             if (null != n)
                 return {
                     application: e.descriptor.application,
@@ -74,7 +74,7 @@ function h(e, t, n) {
         command: void 0
     };
 }
-function p(e, t) {
+function h(e, t) {
     var n, r, i;
     if (null == t) return;
     if (null != e.commands[t]) return e.commands[t];
@@ -98,9 +98,9 @@ function m(e, t, n) {
     var r, i, a, s, o, u, c, d;
     let f = l.ZP.getUserState(),
         _ = l.ZP.getContextState(e),
-        h = l.ZP.getApplicationState(n),
-        p = null !== (d = null !== (c = null === (i = f.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== c ? c : null === (s = _.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n]) && void 0 !== d ? d : null === (u = h.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
-    return null == p ? void 0 : p.descriptor;
+        p = l.ZP.getApplicationState(n),
+        h = null !== (d = null !== (c = null === (i = f.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== c ? c : null === (s = _.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n]) && void 0 !== d ? d : null === (u = p.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
+    return null == h ? void 0 : h.descriptor;
 }
 function g(e, t, n) {
     let r = l.ZP.query(
@@ -129,8 +129,8 @@ function v(e) {
         c = null == t ? void 0 : t.guild_id,
         d = (0, i.e7)([a.Z], () => a.Z.getGuild(c), [c]),
         {
-            descriptors: h,
-            commands: p,
+            descriptors: p,
+            commands: h,
             sectionedCommands: m,
             loading: g
         } = (0, l.JK)(t, d, n, {
@@ -140,20 +140,20 @@ function v(e) {
         [E, v] = r.useState(null),
         I = r.useRef(!1);
     I.current = g;
-    let S = r.useMemo(() => {
+    let b = r.useMemo(() => {
         var e;
         return y(null !== (e = s.placeholderCount) && void 0 !== e ? e : 0, n.commandTypes[0]);
     }, [n.commandTypes, s.placeholderCount]);
     return r.useMemo(() => {
         let e = {
             loading: I,
-            commands: p,
-            activeSections: h,
+            commands: h,
+            activeSections: p,
             commandsByActiveSection: m,
             filteredSectionId: E,
             hasMoreAfter: !1,
-            placeholders: g ? S : [],
-            sectionDescriptors: h,
+            placeholders: g ? b : [],
+            sectionDescriptors: p,
             filterSection: (e) => {
                 v(e);
             },
@@ -169,7 +169,7 @@ function v(e) {
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...S]
+                        data: [...t.data, ...b]
                     },
                     ...m.slice(1)
                 ];
@@ -179,14 +179,14 @@ function v(e) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: S
+                            data: b
                         }
                     ]);
             }
-            e.commands = [...p, ...S];
+            e.commands = [...h, ...b];
         }
         return e;
-    }, [p, h, E, m, g, S]);
+    }, [h, p, E, m, g, b]);
 }
 function I(e, t, n) {
     var r;
@@ -197,7 +197,7 @@ function I(e, t, n) {
         sections: s && 0 === i.length ? [o.Tm[f.bi.BUILT_IN]] : i
     };
 }
-function S(e, t) {
+function b(e, t) {
     let n = (0, l.PL)(!0, !0),
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -218,7 +218,7 @@ function S(e, t) {
         };
     }, [i.result, n.result, t]);
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let i = (0, l.PL)(!0, !0),
         a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
@@ -241,7 +241,7 @@ function T(e, t, n) {
         };
     }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }
-let b = {
+let T = {
     id: 'placeholder-section',
     type: c.Qi.APPLICATION,
     name: ''
@@ -260,7 +260,7 @@ function y(e, t) {
                     untranslatedDescription: '',
                     displayDescription: '',
                     applicationId: '',
-                    section: b
+                    section: T
                 };
             })(r, t)
         );

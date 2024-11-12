@@ -19,23 +19,23 @@ let o = Object.freeze({
     isSidebarVisible: !1
 });
 function l(e) {
-    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: f = 256, paddingTop: _ = 0, paddingBottom: h = 0, getScrollerState: p, getAnchorId: m } = e,
+    let { sections: t, sectionHeight: n, rowHeight: l, footerHeight: u, sidebarHeight: c, listHeaderHeight: d, chunkSize: f = 256, paddingTop: _ = 0, paddingBottom: p = 0, getScrollerState: h, getAnchorId: m } = e,
         g = (0, a.Z)(),
         E = (0, r.useRef)(o),
         [v] = (0, r.useState)(() => new i.Z()),
         {
             dirty: I,
-            chunkStart: S,
-            chunkEnd: T,
-            forceUpdateOnChunkChange: b
+            chunkStart: b,
+            chunkEnd: S,
+            forceUpdateOnChunkChange: T
         } = (0, s.Z)({
             chunkSize: f,
-            getScrollerState: p,
+            getScrollerState: h,
             forceUpdate: g
         }),
         { items: y } = E.current,
         A = null,
-        { scrollTop: N } = p();
+        { scrollTop: N } = h();
     for (let e of y) {
         if (0 === N) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
@@ -51,9 +51,9 @@ function l(e) {
         }
     }
     let C = (0, r.useMemo)(() => {
-            let e = Math.max(0, S * f);
+            let e = Math.max(0, b * f);
             return null != c && e < c;
-        }, [f, S, c]),
+        }, [f, b, c]),
         R = (0, r.useMemo)(
             () =>
                 I > 0
@@ -63,20 +63,20 @@ function l(e) {
                           rowHeight: l,
                           footerHeight: u,
                           listHeaderHeight: d,
-                          paddingBottom: h,
+                          paddingBottom: p,
                           paddingTop: _,
                           sections: t,
                           getAnchorId: m
                       }),
-                      v.compute(Math.max(0, S * f), T * f)),
-            [I, S, T, n, l, u, d, h, _, t, v, f, m]
+                      v.compute(Math.max(0, b * f), S * f)),
+            [I, b, S, n, l, u, d, p, _, t, v, f, m]
         );
     return (
         (0, r.useLayoutEffect)(() => void (E.current = R)),
         {
             ...R,
             listComputer: v,
-            forceUpdateOnChunkChange: b,
+            forceUpdateOnChunkChange: T,
             anchor: A,
             isSidebarVisible: C
         }

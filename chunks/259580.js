@@ -12,10 +12,10 @@ let u = {
         LEFT: l.directionLeft
     },
     c = (e) => {
-        let { direction: t = u.DOWN, width: n = 24, height: i = 24, color: c = 'currentColor', transition: d = l.transition, className: f, foreground: _, expanded: h, ...p } = e,
+        let { direction: t = u.DOWN, width: n = 24, height: i = 24, color: c = 'currentColor', transition: d = l.transition, className: f, foreground: _, expanded: p, ...h } = e,
             { enabled: m } = (0, s.useRedesignIconContext)(),
             g = t;
-        if ((!0 === h ? (g = u.DOWN) : !1 === h && (g = u.RIGHT), m)) {
+        if ((!0 === p ? (g = u.DOWN) : !1 === p && (g = u.RIGHT), m)) {
             let e = {
                 [u.UP]: s.ChevronSmallUpIcon,
                 [u.DOWN]: s.ChevronSmallDownIcon,
@@ -23,7 +23,7 @@ let u = {
                 [u.RIGHT]: s.ChevronSmallRightIcon
             }[g];
             return (0, r.jsx)(e, {
-                ...p,
+                ...h,
                 className: f,
                 size: 'custom',
                 width: n,
@@ -37,7 +37,7 @@ let u = {
             width: n,
             height: i,
             viewBox: '0 0 24 24',
-            ...(0, o.Z)(p),
+            ...(0, o.Z)(h),
             children: (0, r.jsx)('path', {
                 className: _,
                 fill: 'none',

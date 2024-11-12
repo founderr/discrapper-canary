@@ -24,7 +24,7 @@ function c(e) {
             })(c)]: n
         };
     null != f && (_[f] = n);
-    let h = i.useCallback((e) => a(t, e), [a, t]);
+    let p = i.useCallback((e) => a(t, e), [a, t]);
     return (0, r.jsx)(o.P, {
         className: s()(
             (function (e) {
@@ -39,7 +39,7 @@ function c(e) {
             d,
             _
         ),
-        onClick: h,
+        onClick: p,
         children: (0, r.jsx)(l.x, {
             variant: 'text-sm/medium',
             color: 'none',

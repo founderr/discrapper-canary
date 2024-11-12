@@ -11,8 +11,8 @@ e.exports = function (e, t) {
         d = !n && !c && s(e),
         f = !n && !c && !d && l(e),
         _ = n || c || d || f,
-        h = _ ? r(e.length, String) : [],
-        p = h.length;
-    for (var m in e) (t || u.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || o(m, p))) && h.push(m);
-    return h;
+        p = _ ? r(e.length, String) : [],
+        h = p.length;
+    for (var m in e) (t || u.call(e, m)) && !(_ && ('length' == m || (d && ('offset' == m || 'parent' == m)) || (f && ('buffer' == m || 'byteLength' == m || 'byteOffset' == m)) || o(m, h))) && p.push(m);
+    return p;
 };

@@ -8,8 +8,8 @@ var r = n(200651),
     u = n(779699),
     c = n(557092);
 t.Z = (e) => {
-    let { children: t, className: n, color: a, iconType: d, onMouseEnter: f, onMouseLeave: _, ...h } = e,
-        [p, m] = i.useState(!1),
+    let { children: t, className: n, color: a, iconType: d, onMouseEnter: f, onMouseLeave: _, ...p } = e,
+        [h, m] = i.useState(!1),
         g = i.useCallback(
             (e) => {
                 m(!0), null == f || f(e);
@@ -27,19 +27,19 @@ t.Z = (e) => {
         null != a &&
             (v = {
                 color: (0, o.Rf)(a),
-                backgroundColor: p ? (0, o.br)(a, 0.3) : (0, o.br)(a, 0.1)
+                backgroundColor: h ? (0, o.br)(a, 0.3) : (0, o.br)(a, 0.1)
             }),
         (0, r.jsx)(l.Clickable, {
-            ...h,
+            ...p,
             tag: 'span',
             className: s()(n, {
                 [c.wrapper]: !0,
-                interactive: h.onClick
+                interactive: p.onClick
             }),
             onMouseEnter: g,
             onMouseLeave: E,
             style: v,
-            tabIndex: null != h.onClick ? 0 : -1,
+            tabIndex: null != p.onClick ? 0 : -1,
             children:
                 null != d
                     ? (0, r.jsx)(u.Z, {

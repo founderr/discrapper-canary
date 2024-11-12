@@ -16,8 +16,8 @@ var i = n(200651),
     S = n(98278),
     T = n(314684),
     C = n(594174),
-    _ = n(78839),
-    E = n(267642),
+    E = n(78839),
+    _ = n(267642),
     f = n(63063),
     I = n(74538),
     N = n(283029),
@@ -31,7 +31,7 @@ var i = n(200651),
 function D(e) {
     let { guildBoostSlot: t, isCancellable: n, onCancel: r, onUncancel: l, premiumSubscription: a, useReducedMotion: o } = e,
         d = s.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        u = (0, E.tl)(t);
+        u = (0, _.tl)(t);
     return (0, i.jsxs)(
         'li',
         {
@@ -112,7 +112,7 @@ function B(e) {
 t.Z = function (e) {
     let t, n;
     let { guildBoostSlots: r } = e,
-        p = (0, o.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        p = (0, o.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
         x = (null == p ? void 0 : p.isPausedOrPausePending) === !0,
         { fractionalState: A } = (0, u.Z)(),
         b = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -135,7 +135,7 @@ t.Z = function (e) {
                 s = !0;
             return (
                 r.forEach((r) => {
-                    !(0, E.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
+                    !(0, _.tl)(r) && n++, r.isOnCooldown() ? (i = !0) : (s = !1), null != r.premiumGuildSubscription ? e.push(r) : t.push(r);
                 }),
                 {
                     appliedGuildBoostSlots: e,

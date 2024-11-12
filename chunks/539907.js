@@ -19,8 +19,8 @@ var r,
     d = n(801787),
     f = n(663002),
     _ = n(585483),
-    h = n(872801),
-    p = n(302901),
+    p = n(872801),
+    h = n(302901),
     m = n(981631),
     g = n(136753);
 function E(e, t, n) {
@@ -39,20 +39,20 @@ function E(e, t, n) {
 let v = new WeakMap();
 function I(e, t) {
     if (e.contains(t)) return !0;
-    let n = (0, h.Z)(t, g.layer);
+    let n = (0, p.Z)(t, g.layer);
     for (; null != n; ) {
         let t = v.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
-        n = (0, h.Z)(t, g.layer);
+        n = (0, p.Z)(t, g.layer);
     }
     return !1;
 }
-function S(e) {
+function b(e) {
     let { positionKey: t, position: n, align: r } = e;
     return null != t ? t : ''.concat(n, ':').concat(r);
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     switch (e) {
         case 'top':
             return u()(null != t.bottom, 'Missing bottom'), r.offsetHeight - (t.bottom + n.offsetHeight);
@@ -69,7 +69,7 @@ function T(e, t, n, r) {
             throw Error('Unexpected position: '.concat(e));
     }
 }
-function b(e, t, n) {
+function T(e, t, n) {
     if (null != e && e < 0 && ('top' === n.position || 'bottom' === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
         let t = 'top' === n.position ? 'bottom' : 'top',
             r = n.style[t];
@@ -234,11 +234,11 @@ class A extends (r = a.Component) {
         let { position: e, autoInvert: t } = this.props,
             n = this.elementRef.current;
         u()(null != n, 'Unexpected null element');
-        let r = (0, p.wL)(n),
+        let r = (0, h.wL)(n),
             { style: i, nudge: a } = this.calculatePositionStyle(e, n, r),
             s = null,
             o = null;
-        if (t && (s = T(e, i, n, r)) < 0) {
+        if (t && (s = S(e, i, n, r)) < 0) {
             let t = (function (e) {
                     switch (e) {
                         case 'top':
@@ -258,14 +258,14 @@ class A extends (r = a.Component) {
                     }
                 })(e),
                 { style: i, nudge: a } = this.calculatePositionStyle(t, n, r);
-            if ((o = T(t, i, n, r)) > s)
-                return b(o, n, {
+            if ((o = S(t, i, n, r)) > s)
+                return T(o, n, {
                     position: t,
                     nudge: a,
                     style: i
                 });
         }
-        return b(s, n, {
+        return T(s, n, {
             position: e,
             nudge: a,
             style: i
@@ -283,7 +283,7 @@ class A extends (r = a.Component) {
     }
     componentDidUpdate(e, t) {
         if (
-            ((S(e) !== S(this.props) ||
+            ((b(e) !== b(this.props) ||
                 !(function (e, t) {
                     let n = y(e),
                         r = y(t);
@@ -306,10 +306,10 @@ class A extends (r = a.Component) {
             { position: s, isPositioned: l, isSettingsLayerTransitioning: u, nudge: _ } = this.state;
         return (0, i.jsx)(d.C1, {
             children: (d) => {
-                let { theme: h } = d;
+                let { theme: p } = d;
                 return (0, i.jsx)('div', {
                     id: e,
-                    className: o()(t, (0, f.Qe)(h), g.layer, {
+                    className: o()(t, (0, f.Qe)(p), g.layer, {
                         [g.emptyError]: !1,
                         [g.layerHidden]: u,
                         [g.disabledPointerEvents]: a

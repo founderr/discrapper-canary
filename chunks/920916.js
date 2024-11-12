@@ -20,16 +20,16 @@ var r = n(200651),
     d = n(809206),
     f = n(607070),
     _ = n(235400),
-    h = n(204418),
-    p = n(583434),
+    p = n(204418),
+    h = n(583434),
     m = n(530618),
     g = n(70097),
     E = n(454585),
     v = n(164946),
     I = n(369111),
-    S = n(25990),
-    T = n(594174),
-    b = n(960048),
+    b = n(25990),
+    S = n(594174),
+    T = n(960048),
     y = n(272008),
     A = n(497505),
     N = n(918701),
@@ -41,18 +41,18 @@ var r = n(200651),
     x = n(388032),
     w = n(837053);
 function M() {
-    let e = S.Z.getAllPending(),
+    let e = b.Z.getAllPending(),
         t = (0, v.ED)(e);
     return (0, d.Mn)(t).finally(d.si);
 }
 function P(e) {
     var t;
-    let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: h, onUseNow: p, preview: g } = e,
+    let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: p, onUseNow: h, preview: g } = e,
         E = i.useRef(null),
         [v, I] = i.useState(null),
-        S = i.useRef(new o.qA()),
-        b = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
-        N = (0, u.e7)([T.default], () => T.default.getCurrentUser()),
+        b = i.useRef(new o.qA()),
+        T = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+        N = (0, u.e7)([S.default], () => S.default.getCurrentUser()),
         R = i.useMemo(() => (0, C.fh)(l, C.eC.HERO), [l]),
         D = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [x, M] = i.useState(!0 === g || D ? 'claimed' : 'loading');
@@ -63,13 +63,13 @@ function P(e) {
                 .then(() => M('claimed'))
                 .catch(() => M('error'));
     }, [l, d, D, g]);
-    let P = null == N || null == h || 'loading' === x;
+    let P = null == N || null == p || 'loading' === x;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.O_, {
                 ref: I,
                 className: w.confettiCanvas,
-                environment: S.current
+                environment: b.current
             }),
             (0, r.jsx)('div', {
                 ref: E,
@@ -85,18 +85,18 @@ function P(e) {
                           : (0, r.jsx)(U, {
                                 quest: l,
                                 user: N,
-                                decoration: h,
+                                decoration: p,
                                 decorationName: _.messages.name,
                                 backgroundUrl: R.url,
                                 isSaving: 'applying' === x,
                                 onClose: a,
                                 onConfirm: () => {
-                                    M('applying'), p().finally(a);
+                                    M('applying'), h().finally(a);
                                 }
                             })
                 })
             }),
-            !b &&
+            !T &&
                 !D &&
                 'claimed' === x &&
                 (0, r.jsx)(m.Z, {
@@ -158,7 +158,7 @@ function U(e) {
                         children: [
                             (0, r.jsx)('div', {
                                 className: w.previewContainer,
-                                children: (0, r.jsx)(h.Z, {
+                                children: (0, r.jsx)(p.Z, {
                                     user: n,
                                     guildId: null,
                                     avatarDecorationOverride: i
@@ -207,36 +207,36 @@ function G(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u, preview: c } = e,
         f = i.useMemo(() => (0, N.xn)(a.config), [a]),
-        [h, m] = (function (e) {
-            let { product: t, isFetching: n } = (0, p.T)(e),
+        [p, m] = (function (e) {
+            let { product: t, isFetching: n } = (0, h.T)(e),
                 {} = (0, I.Z)({}),
                 r = i.useMemo(() => {
                     if (null == t || n) return null;
                     let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
                     return null == e ? null : e;
                 }, [t, n]);
-            return [r, () => (null == r ? (b.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
+            return [r, () => (null == r ? (T.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), M()))];
         })(null !== (n = null == f ? void 0 : f.skuId) && void 0 !== n ? n : null);
-    if (null == f) return null;
-    let g = (0, N.zK)(a, D.S7.IN_HOUSE_CONSOLE_QUEST);
-    return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || g
-        ? (0, r.jsx)(P, {
-              onClose: o,
-              transitionState: u,
-              quest: a,
-              location: s,
-              reward: f,
-              decoration: h,
-              onUseNow: m,
-              preview: c
-          })
-        : (0, r.jsx)(_.default, {
-              transitionState: u,
-              onCloseModal: M,
-              onClose: o,
-              analyticsLocations: [],
-              initialSelectedDecoration: h
-          });
+    return null == f
+        ? null
+        : (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null
+          ? (0, r.jsx)(_.default, {
+                transitionState: u,
+                onCloseModal: M,
+                onClose: o,
+                analyticsLocations: [],
+                initialSelectedDecoration: p
+            })
+          : (0, r.jsx)(P, {
+                onClose: o,
+                transitionState: u,
+                quest: a,
+                location: s,
+                reward: f,
+                decoration: p,
+                onUseNow: m,
+                preview: c
+            });
 }
 function B(e, t, i) {
     (0, c.openModalLazy)(async () => {

@@ -9,44 +9,44 @@ var r = n(200651),
     d = n(197115),
     f = n(703656),
     _ = n(221292),
-    h = n(652853),
-    p = n(475413),
+    p = n(652853),
+    h = n(475413),
     m = n(228168),
     g = n(981631),
     E = n(921944),
     v = n(474936),
     I = n(388032),
-    S = n(458965);
-function T(e) {
+    b = n(458965);
+function S(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(o.Clickable, {
         'aria-label': I.intl.string(I.t.WAI6xs),
         onClick: t,
-        className: S.upsellCloseIconWrapper,
+        className: b.upsellCloseIconWrapper,
         children: (0, r.jsx)(o.XSmallIcon, {
             size: 'xs',
-            className: S.upsellCloseIcon,
+            className: b.upsellCloseIcon,
             color: 'currentColor'
         })
     });
 }
-function b(e) {
+function T(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: s } = (0, l.ZP)();
     return (0, r.jsxs)('div', {
-        className: S.upsellButtons,
+        className: b.upsellButtons,
         children: [
             (0, r.jsx)('div', {
-                className: S.upsellButtonWrapper,
+                className: b.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsxs)(o.ShinyButton, {
                           onlyShineOnHover: !0,
                           size: t ? o.Button.Sizes.TINY : o.Button.Sizes.SMALL,
                           look: o.Button.Looks.FILLED,
                           color: o.Button.Colors.PRIMARY,
-                          className: S.upsellButton,
-                          innerClassName: S.viewPremiumPerksButtonInner,
-                          buttonShineClassName: S.viewPremiumPerksButtonShine,
+                          className: b.upsellButton,
+                          innerClassName: b.viewPremiumPerksButtonInner,
+                          buttonShineClassName: b.viewPremiumPerksButtonShine,
                           onClick: () => {
                               (0, _.pQ)({ action: m.yM.VIEW_PREMIUM_PERKS }), (0, f.uL)(g.Z5c.APPLICATION_STORE), null == i || i();
                           },
@@ -65,22 +65,22 @@ function b(e) {
                           buttonText: I.intl.string(I.t.x6rkDg),
                           subscriptionTier: v.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: g.jXE.USER_PROFILE },
-                          className: S.upsellButton,
+                          className: b.upsellButton,
                           size: t ? o.Button.Sizes.TINY : o.Button.Sizes.SMALL,
                           onlyShineOnHover: !0,
                           showGradient: !0
                       })
             }),
             (0, r.jsx)('div', {
-                className: S.upsellButtonWrapper,
-                children: (0, r.jsx)(p.tG, {
+                className: b.upsellButtonWrapper,
+                children: (0, r.jsx)(h.tG, {
                     icon: o.ShopIcon,
                     action: m.yM.VISIT_SHOP,
                     text: I.intl.string(I.t.b2d0Nz),
                     color: o.Button.Colors.BRAND,
                     look: o.Button.Looks.FILLED,
                     size: t ? o.Button.Sizes.TINY : o.Button.Sizes.SMALL,
-                    className: S.upsellButton,
+                    className: b.upsellButton,
                     onClick: () => {
                         (0, u.mK)({
                             analyticsLocations: a,
@@ -96,7 +96,7 @@ function b(e) {
 }
 t.Z = function (e) {
     let { isPremiumUser: t, onInteraction: n, className: i } = e,
-        { profileType: l } = (0, h.z)(),
+        { profileType: l } = (0, p.z)(),
         u = l === m.y0.FULL_SIZE;
     return (0, r.jsx)(c.ZP, {
         contentTypes: [s.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS],
@@ -110,33 +110,33 @@ t.Z = function (e) {
                             children: I.intl.string(I.t.EIYbj4)
                         })
                     }),
-                    s = (0, r.jsx)(T, { onClose: () => c(E.L.USER_DISMISS) }),
-                    l = (0, r.jsx)(b, {
+                    s = (0, r.jsx)(S, { onClose: () => c(E.L.USER_DISMISS) }),
+                    l = (0, r.jsx)(T, {
                         isPremiumUser: t,
                         onInteraction: n,
                         tiny: u
                     });
                 return u
                     ? (0, r.jsx)('div', {
-                          className: a()(S.upsellContainer, i),
+                          className: a()(b.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: a()(S.upsellContent, S.upsellRowContent),
+                              className: a()(b.upsellContent, b.upsellRowContent),
                               children: [
                                   e,
                                   (0, r.jsxs)('div', {
-                                      className: S.upsellRowRight,
+                                      className: b.upsellRowRight,
                                       children: [(0, r.jsx)('div', { children: l }), (0, r.jsx)('div', { children: s })]
                                   })
                               ]
                           })
                       })
                     : (0, r.jsx)('div', {
-                          className: a()(S.upsellContainer, i),
+                          className: a()(b.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: a()(S.upsellContent, S.upsellDefaultContent),
+                              className: a()(b.upsellContent, b.upsellDefaultContent),
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: S.upsellHeader,
+                                      className: b.upsellHeader,
                                       children: [e, (0, r.jsx)('div', { children: s })]
                                   }),
                                   l

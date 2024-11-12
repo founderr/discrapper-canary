@@ -53,7 +53,7 @@ t.Z = function (e) {
                     ((s[2] = s[2].replace('%', '')),
                     (s[1] = s[1].replace('%', '')),
                     (s[0] = s[0].replace('\xB0', '')),
-                    1 == h[1] ? (h[1] = 0.01) : 1 == h[2] && (h[2] = 0.01),
+                    1 == p[1] ? (p[1] = 0.01) : 1 == p[2] && (p[2] = 0.01),
                     t(
                         {
                             h: Number(s[0]),
@@ -142,7 +142,7 @@ t.Z = function (e) {
         }),
         f = n.r + ', ' + n.g + ', ' + n.b,
         _ = Math.round(o.h) + '\xB0, ' + Math.round(100 * o.s) + '%, ' + Math.round(100 * o.l) + '%',
-        h = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
+        p = Math.round(u.h) + '\xB0, ' + Math.round(100 * u.s) + '%, ' + Math.round(100 * u.v) + '%';
     return r.createElement(
         'div',
         {
@@ -190,7 +190,7 @@ t.Z = function (e) {
                             label: d.label2
                         },
                         label: 'hsv',
-                        value: h,
+                        value: p,
                         onChange: c
                     })
                 ),

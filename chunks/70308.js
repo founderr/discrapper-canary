@@ -72,14 +72,14 @@ function _() {
     var e, t, n, c;
     let d = (0, l.Es)((e) => e.currentToast),
         _ = i.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
-        h = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
+        p = i.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
     i.useEffect(() => {
         if (null != d) {
             var e, t, n, r;
-            (_.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (h.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration);
+            (_.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (p.current = null !== (r = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== r ? r : u.si.duration);
         }
     }, [d]);
-    let p = i.useMemo(() => {
+    let h = i.useMemo(() => {
             var e, t;
             return f[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : _.current];
         }, [d]),
@@ -88,17 +88,17 @@ function _() {
                 var t;
                 return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
             },
-            ...p.transition
+            ...h.transition
         });
     return (
         i.useEffect(() => {
             null != d &&
                 setTimeout(() => {
                     (0, l.z5)();
-                }, h.current);
+                }, p.current);
         }, [d]),
         (0, r.jsx)('div', {
-            className: p.styles,
+            className: h.styles,
             children: m((e, t) =>
                 null === t
                     ? null

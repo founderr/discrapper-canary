@@ -6,7 +6,7 @@ n.d(t, {
         return f;
     },
     n2: function () {
-        return h;
+        return p;
     },
     nX: function () {
         return m;
@@ -15,7 +15,7 @@ n.d(t, {
         return E;
     },
     xC: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -56,11 +56,11 @@ let d = function (e) {
             n = d(e, t);
         return null != n && s.Z.can(c.Plq.MANAGE_GUILD, n.guild) && s.Z.can(c.Plq.BAN_MEMBERS, n.guild);
     };
-function h(e) {
+function p(e) {
     return (0, i.e7)([a.Z, o.default], () => f(e, [a.Z, o.default]), [e]);
 }
-function p(e) {
-    let t = h(e),
+function h(e) {
+    let t = p(e),
         n = (0, i.e7)([a.Z, o.default], () => _(e, [a.Z, o.default]), [e]);
     return t && n;
 }

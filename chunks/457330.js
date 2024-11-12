@@ -10,8 +10,8 @@ var r = n(990547),
     d = n(626135),
     f = n(573261),
     _ = n(981631);
-let h = new l.Z('ConnectedAccounts');
-function p(e, t) {
+let p = new l.Z('ConnectedAccounts');
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return i.tn.post({
         url: _.ANM.CONNECTIONS_CALLBACK(e),
@@ -51,23 +51,23 @@ t.Z = {
             platform_type: e,
             location: n
         });
-        let h = _.ANM.CONNECTIONS_AUTHORIZE(e),
-            p = new URLSearchParams();
-        null != a && p.append('two_way_user_code', a), null != f && p.append('success_redirect', f), null != r ? (p.append('two_way_link_type', r), p.append('two_way_link', 'true')) : null != l && p.append('two_way_link', String(l));
+        let p = _.ANM.CONNECTIONS_AUTHORIZE(e),
+            h = new URLSearchParams();
+        null != a && h.append('two_way_user_code', a), null != f && h.append('success_redirect', f), null != r ? (h.append('two_way_link_type', r), h.append('two_way_link', 'true')) : null != l && h.append('two_way_link', String(l));
         let { enabled: m } = o.g.getCurrentConfig({ location: 'ConnectedAcountsActionCreators.authorize' }, { autoTrackExposure: !0 });
         if (m) {
             let e = u.default.getSessionId();
-            null != e && p.append('session_id', e);
+            null != e && h.append('session_id', e);
         }
-        h = h + '?' + p.toString();
+        p = p + '?' + h.toString();
         let g = await i.tn.get({
-                url: h,
+                url: p,
                 oldFormErrors: !0
             }),
             { state: E } = (0, s.xp)(null !== (t = g.body.url) && void 0 !== t ? t : '');
         return null != E && !o.g.getCurrentConfig({ location: 'ConnectedAccountsActionCreators.authorize' }).enabled && c.Z.addPendingAuthorizedState(E), g;
     },
-    callback: p,
+    callback: h,
     connect(e, t, n, i, a) {
         var s;
         return f.Z.put({
@@ -184,18 +184,18 @@ t.Z = {
         }),
     async completeTwoWayLink(e, t, n, r, i) {
         if (null == t) {
-            h.error('Two-way link: missing authorize location');
+            p.error('Two-way link: missing authorize location');
             return;
         }
         let { code: a, error: o, errorDescription: l } = (0, s.xp)(t);
         if (null != o) {
-            h.error('Two-way link: missing authorize code', {
+            p.error('Two-way link: missing authorize code', {
                 error: o,
                 errorDescription: l
             });
             return;
         }
-        return await p(e, {
+        return await h(e, {
             code: n,
             state: r,
             two_way_link_code: a,

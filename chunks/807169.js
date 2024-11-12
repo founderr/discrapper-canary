@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     ny: function () {
-        return S;
+        return b;
     }
 });
 var r = n(192379),
@@ -23,23 +23,23 @@ var r = n(192379),
     d = n(592125),
     f = n(271383),
     _ = n(496675),
-    h = n(594174),
-    p = n(981631);
+    p = n(594174),
+    h = n(981631);
 function m(e, t) {
     var n, r, i, a, s;
     let _;
-    let p = null != (_ = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e) ? S(_) : void 0,
+    let h = null != (_ = e instanceof u.Sf && e.isThread() ? (null !== (i = d.Z.getChannel(e.parent_id)) && void 0 !== i ? i : e) : e) ? b(_) : void 0,
         m = l.xM.getSetting(),
         g = c.default.getId(),
-        I = null !== (a = null === (n = h.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
-        T = null != p && null !== (s = null === (r = f.ZP.getMember(p, g)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
-        b = o.Z.isViewingRoles(p),
+        I = null !== (a = null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
+        S = null != h && null !== (s = null === (r = f.ZP.getMember(h, g)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
+        T = o.Z.isViewingRoles(h),
         { computedPermissions: y, hasBaseAccessPermissions: A, hasSendMessagesPermission: N } = v(_, e instanceof u.Sf && e.isThread());
     return {
         context: _,
         userId: g,
-        roleIds: T,
-        isImpersonating: b,
+        roleIds: S,
+        isImpersonating: T,
         commandTypes: t,
         computedPermissions: y,
         hasBaseAccessPermissions: A,
@@ -55,12 +55,12 @@ function g(e, t) {
             }
             return e;
         }, [e]),
-        i = null != n ? S(n) : void 0,
+        i = null != n ? b(n) : void 0,
         s = l.xM.useSetting(),
         _ = (0, a.e7)([c.default], () => c.default.getId()),
-        p = (0, a.e7)([h.default], () => {
+        h = (0, a.e7)([p.default], () => {
             var e, t;
-            return null !== (t = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) && void 0 !== t && t;
+            return null !== (t = null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) && void 0 !== t && t;
         }),
         m = (0, a.Wu)([f.ZP], () => {
             var e, t;
@@ -78,9 +78,9 @@ function g(e, t) {
             computedPermissions: r,
             hasBaseAccessPermissions: i,
             hasSendMessagesPermission: a,
-            allowNsfw: E(n, p, s)
+            allowNsfw: E(n, h, s)
         };
-    }, [t, n, g, m, _, p, s, e]);
+    }, [t, n, g, m, _, h, s, e]);
 }
 function E(e, t, n) {
     return !!t && (!(e instanceof u.Sf) || (null != e.guild_id ? e.nsfw : n));
@@ -95,7 +95,7 @@ function v(e, t) {
         };
     let a = _.Z.computePermissions(e);
     return (
-        i.e$(a, p.Plq.ADMINISTRATOR) ? ((n = !0), (r = !0)) : e instanceof u.Sf ? ((n = i.e$(a, p.Plq.VIEW_CHANNEL) && i.e$(a, p.Plq.USE_APPLICATION_COMMANDS)), (r = t ? i.e$(a, p.Plq.SEND_MESSAGES_IN_THREADS) : i.e$(a, p.Plq.SEND_MESSAGES))) : ((n = i.e$(a, p.Plq.VIEW_CHANNEL)), (r = !0)),
+        i.e$(a, h.Plq.ADMINISTRATOR) ? ((n = !0), (r = !0)) : e instanceof u.Sf ? ((n = i.e$(a, h.Plq.VIEW_CHANNEL) && i.e$(a, h.Plq.USE_APPLICATION_COMMANDS)), (r = t ? i.e$(a, h.Plq.SEND_MESSAGES_IN_THREADS) : i.e$(a, h.Plq.SEND_MESSAGES))) : ((n = i.e$(a, h.Plq.VIEW_CHANNEL)), (r = !0)),
         {
             computedPermissions: a,
             hasBaseAccessPermissions: n,
@@ -104,8 +104,8 @@ function v(e, t) {
     );
 }
 function I(e, t) {
-    return e instanceof u.Sf && (null == e ? void 0 : e.guild_id) == null ? ((null == e ? void 0 : e.type) === p.d4z.DM && (null == e ? void 0 : e.getRecipientId()) === t ? s.D.BOT_DM : s.D.PRIVATE_CHANNEL) : s.D.GUILD;
+    return e instanceof u.Sf && (null == e ? void 0 : e.guild_id) == null ? ((null == e ? void 0 : e.type) === h.d4z.DM && (null == e ? void 0 : e.getRecipientId()) === t ? s.D.BOT_DM : s.D.PRIVATE_CHANNEL) : s.D.GUILD;
 }
-function S(e) {
+function b(e) {
     return e instanceof u.Sf ? e.guild_id : e.id;
 }

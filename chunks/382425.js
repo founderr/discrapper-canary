@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(110924),
     f = n(833664),
     _ = n(579630),
-    h = n(100527),
-    p = n(906732),
+    p = n(100527),
+    h = n(906732),
     m = n(750881),
     g = n(194082),
     E = n(318374),
     v = n(102172),
     I = n(359110),
-    S = n(769654),
-    T = n(922482),
-    b = n(543882),
+    b = n(769654),
+    S = n(922482),
+    T = n(543882),
     y = n(592125),
     A = n(430824),
     N = n(496675),
@@ -63,7 +63,7 @@ function $(e) {
             [q.fullSize]: en === Y.y0.FULL_SIZE
         },
         { enabled: eo, analyticsEligible: el } = (0, m.R4)('user-profile-stream-activity-card-web'),
-        { analyticsLocations: eu } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: eu } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         ec = (0, L.Z)({
             display: 'live',
             user: t,
@@ -76,7 +76,7 @@ function $(e) {
         }),
         ef = (0, o.e7)([A.Z], () => A.Z.getGuild(null == a ? void 0 : a.guildId)),
         e_ = (0, o.e7)([y.Z], () => y.Z.getChannel(null == a ? void 0 : a.channelId)),
-        eh = (0, o.Wu)([O.ZP], () =>
+        ep = (0, o.Wu)([O.ZP], () =>
             null != e_
                 ? O.ZP.getVoiceStatesForChannel(e_).map((e) => {
                       let { user: t } = e;
@@ -84,18 +84,18 @@ function $(e) {
                   })
                 : []
         ),
-        ep = (0, o.e7)([C.Z], () => C.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
+        eh = (0, o.e7)([C.Z], () => C.Z.findActivity(t.id, (e) => (0, f.Z)(e) && !(0, _.Z)(e))),
         [em, eg] = (0, v.wq)(e_),
         {
             url: eE,
             isLoading: ev,
             canSeePreview: eI
-        } = (0, o.cj)([N.Z, b.Z], () => {
+        } = (0, o.cj)([N.Z, T.Z], () => {
             let e = null != e_ && N.Z.canBasicChannel(W.S7T.CONNECT, e_);
             return e
                 ? {
-                      url: b.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
-                      isLoading: b.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
+                      url: T.Z.getPreviewURL(a.guildId, a.channelId, a.ownerId),
+                      isLoading: T.Z.getIsPreviewLoading(a.guildId, a.channelId, a.ownerId),
                       canSeePreview: e
                   }
                 : {
@@ -104,7 +104,7 @@ function $(e) {
                       canSeePreview: e
                   };
         }),
-        eS = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
+        eb = (0, o.e7)([R.Z], () => R.Z.getRelationshipType(t.id));
     i.useEffect(() => {
         if (el) {
             var e;
@@ -112,25 +112,25 @@ function $(e) {
                 activity_user_id: t.id,
                 discoverable: null === (e = a.discoverable) || void 0 === e || e,
                 surface: 'user-profile-stream-activity-card',
-                relationship_type: eS,
+                relationship_type: eb,
                 treatment: eo && !1 === a.discoverable ? m.h9.HIDE : m.h9.SHOW
             });
         }
-    }, [t, eS, eo, el, a]);
-    let eT = (0, d.Z)(ev ? null : eE),
-        eb = ev || null == eE ? eT : eE;
+    }, [t, eb, eo, el, a]);
+    let eS = (0, d.Z)(ev ? null : eE),
+        eT = ev || null == eE ? eS : eE;
     if (null == ef || null == e_ || (eo && !1 === a.discoverable) || null === en) return null;
     let ey = () => {
             let e = s()(Q.preview, es),
                 t = () => {
                     ec({ action: 'PRESS_IMAGE' }), u.default.selectVoiceChannel(a.channelId), (0, c.iV)(a), null == ee || ee();
                 };
-            return null == eb && ev
+            return null == eT && ev
                 ? (0, r.jsx)('div', {
                       className: e,
                       children: (0, r.jsx)(l.Spinner, {})
                   })
-                : null == eb
+                : null == eT
                   ? (0, r.jsxs)(l.Clickable, {
                         className: s()(e, Q.overlay, { [Q.clickable]: em }),
                         onClick: em ? t : void 0,
@@ -162,7 +162,7 @@ function $(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: eb,
+                                src: eT,
                                 className: Q.image
                             }),
                             en !== Y.y0.FULL_SIZE &&
@@ -206,7 +206,7 @@ function $(e) {
                                     (0, r.jsx)(l.Clickable, {
                                         className: s()(q.clickable, q.inline),
                                         onClick: () => {
-                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, T.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
+                                            null == ec || ec({ action: 'OPEN_VOICE_CHANNEL' }), e ? (0, S.Cq)(e_) : (u.default.selectVoiceChannel(e_.id), (0, I.Kh)(e_.id)), null == ee || ee();
                                         },
                                         children: e_.name
                                     })
@@ -216,13 +216,13 @@ function $(e) {
                                 variant: 'text-xs/normal',
                                 text: K.intl.formatToPlainString(K.t['hq/Qzc'], { guildName: ef.name }),
                                 onClick: () => {
-                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, S.X)(ef.id), null == ee || ee();
+                                    ec({ action: 'OPEN_VOICE_GUILD' }), (0, b.X)(ef.id), null == ee || ee();
                                 }
                             })
                         ]
                     }),
                     (0, r.jsx)(E.Z, {
-                        users: eh,
+                        users: ep,
                         guildId: ef.id,
                         channelId: e_.id,
                         maxUsers: F.W,
@@ -261,8 +261,8 @@ function $(e) {
                       })
                   }),
         eR = ei === Y.n_.ACTIVITY && ea === eE,
-        eO = null != ep ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: ep.name }) : K.intl.string(K.t['Jpkr/v']);
-    return (0, r.jsx)(p.Gt, {
+        eO = null != eh ? K.intl.formatToPlainString(K.t['4CQq9f'], { name: eh.name }) : K.intl.string(K.t['Jpkr/v']);
+    return (0, r.jsx)(h.Gt, {
         value: eu,
         children: (0, r.jsx)(G.Z, {
             sourceType: Y.n_.ACTIVITY,

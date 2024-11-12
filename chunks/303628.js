@@ -10,36 +10,36 @@ var r = n(200651),
     d = n(166459),
     f = n(911969),
     _ = n(607070),
-    h = n(209613),
-    p = n(998698),
+    p = n(209613),
+    h = n(998698),
     m = n(661824),
     g = n(703558),
     E = n(117530),
     v = n(459273),
     I = n(444282),
-    S = n(898463),
-    T = n(981631),
-    b = n(989796),
+    b = n(898463),
+    S = n(981631),
+    T = n(989796),
     y = n(112864);
 let A = [];
 function N(e) {
     let { channelId: t, type: n } = e,
         a = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        N = (0, h.Z)('attachments', l.hy.HORIZONTAL),
+        N = (0, p.Z)('attachments', l.hy.HORIZONTAL),
         C = (0, u.e7)([E.Z], () => E.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: R,
             commandOptions: O,
             commandOptionStates: D
-        } = (0, u.cj)([p.Z], () => {
-            let e = p.Z.getActiveCommand(t);
+        } = (0, u.cj)([h.Z], () => {
+            let e = h.Z.getActiveCommand(t);
             if (null == e)
                 return {
                     isApplicationCommand: !1,
                     commandOptions: A,
                     commandOptionStates: null
                 };
-            let n = p.Z.getOptionStates(t);
+            let n = h.Z.getOptionStates(t);
             return {
                 isApplicationCommand: !0,
                 commandOptions: e.options,
@@ -70,7 +70,7 @@ function N(e) {
         N.focusFirstVisibleItem();
     }, [N]);
     return ((0, v.yp)({
-        event: T.CkL.FOCUS_ATTACHMENT_AREA,
+        event: S.CkL.FOCUS_ATTACHMENT_AREA,
         handler: M
     }),
     i.useEffect(() => {
@@ -97,7 +97,7 @@ function N(e) {
                               return (0, r.jsx)('ul', {
                                   ref: i,
                                   ...o,
-                                  className: s()(b.channelAttachmentArea, y.scrollbarGhost),
+                                  className: s()(T.channelAttachmentArea, y.scrollbarGhost),
                                   children: R
                                       ? L.map((e) =>
                                             (0, r.jsx)(
@@ -112,7 +112,7 @@ function N(e) {
                                         )
                                       : C.map((e) =>
                                             (0, r.jsx)(
-                                                S.Z,
+                                                b.Z,
                                                 {
                                                     channelId: t,
                                                     draftType: n.drafts.type,

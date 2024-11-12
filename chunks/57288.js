@@ -16,11 +16,11 @@ var r = n(259630),
 function _(e, t) {
     var n = (0, i.ax)(t),
         _ = (0, r.pi)((0, r.pi)({}, i.Z0), e),
-        h = _.locale,
-        p = _.defaultLocale,
+        p = _.locale,
+        h = _.defaultLocale,
         m = _.onError;
     return (
-        h ? (!Intl.NumberFormat.supportedLocalesOf(h).length && m ? m(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.NumberFormat. Using default locale: "').concat(p, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(h).length && m && m(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.DateTimeFormat. Using default locale: "').concat(p, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (m && m(new a.OV('"locale" was not configured, using "'.concat(p, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (_.locale = _.defaultLocale || 'en')),
+        p ? (!Intl.NumberFormat.supportedLocalesOf(p).length && m ? m(new a.gb('Missing locale data for locale: "'.concat(p, '" in Intl.NumberFormat. Using default locale: "').concat(h, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(p).length && m && m(new a.gb('Missing locale data for locale: "'.concat(p, '" in Intl.DateTimeFormat. Using default locale: "').concat(h, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (m && m(new a.OV('"locale" was not configured, using "'.concat(h, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (_.locale = _.defaultLocale || 'en')),
         !(function (e) {
             var t;
             if (e.onWarn && e.defaultRichTextElements && 'string' == typeof ((t = e.messages || {}), t[Object.keys(t)[0]])) e.onWarn('[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution');

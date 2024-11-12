@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     Pq: function () {
-        return T;
+        return S;
     },
     RJ: function () {
         return D;
@@ -27,7 +27,7 @@ n.d(t, {
         return A;
     },
     t$: function () {
-        return b;
+        return T;
     }
 }),
     n(653041),
@@ -44,22 +44,22 @@ var r = n(192379),
     d = n(594174),
     f = n(267642),
     _ = n(700785),
-    h = n(285651),
-    p = n(268350),
+    p = n(285651),
+    h = n(268350),
     m = n(822179),
     g = n(926491),
     E = n(373228),
     v = n(378233),
     I = n(981631),
-    S = n(388032);
-let T = (e) => {
+    b = n(388032);
+let S = (e) => {
         N();
         let t = (0, i.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
         r.useEffect(() => {
-            t && null == g.Z.getStickerPack(e) && (0, p.FQ)(e);
+            t && null == g.Z.getStickerPack(e) && (0, h.FQ)(e);
         }, [e, t]);
     },
-    b = (e) => {
+    T = (e) => {
         let t = s.Wp.useSetting();
         return (0, v.WD)(t, e);
     },
@@ -69,8 +69,8 @@ let T = (e) => {
             let e = Math.floor((s - i + o) / (c + o)),
                 r = Math.floor(Math.max(o, (s - i - c * e) / (e - 1))),
                 _ = [],
-                h = [],
                 p = [],
+                h = [],
                 m = 0,
                 g = 0,
                 I = 0;
@@ -81,11 +81,11 @@ let T = (e) => {
                         { canCreateExpressions: s } = (0, a.Gw)(i),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
-                        T = d.findIndex((e) => e.type === E.Ih.RECENT),
-                        b = t.length;
-                    null != i && o === i.id && s && t.length < (0, f.A3)(i.premiumTier) && b++;
-                    let y = Math.ceil(b / e);
-                    h[g] = r ? 0 : y;
+                        S = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        T = t.length;
+                    null != i && o === i.id && s && t.length < (0, f.A3)(i.premiumTier) && T++;
+                    let y = Math.ceil(T / e);
+                    p[g] = r ? 0 : y;
                     for (let a = 0; a < y; a++) {
                         let s = a * e,
                             o = s + e,
@@ -99,31 +99,31 @@ let T = (e) => {
                                 visibleRowIndex: I,
                                 category: n
                             }));
-                        g > T &&
+                        g > S &&
                             g > c &&
                             null != i &&
-                            b > t.length &&
+                            T > t.length &&
                             l.push({
                                 type: E.al.CREATE_STICKER,
                                 guild_id: i.id,
-                                name: S.intl.string(S.t['UwF+Cw']),
+                                name: b.intl.string(b.t['UwF+Cw']),
                                 gridSectionIndex: g,
                                 rowIndex: m,
                                 columnIndex: l.length,
                                 visibleRowIndex: I
                             }),
-                            !r && (I++, p.push(l), _.push(l.length)),
+                            !r && (I++, h.push(l), _.push(l.length)),
                             m++;
                     }
                     g++;
                 };
-                if (null == n) for (let e of d) e.stickers.length > 0 ? (m++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === E.Ih.EMPTY_GUILD_UPSELL && ((h[g] = 0), g++);
+                if (null == n) for (let e of d) e.stickers.length > 0 ? (m++, r(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === E.Ih.EMPTY_GUILD_UPSELL && ((p[g] = 0), g++);
                 else n.sendable.length > 0 && r(n.sendable, E.Ih.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && r(n.sendableWithPremium, E.Ih.SEARCH_RESULTS);
             }
             return {
                 rowCount: m,
-                rowCountBySection: h,
-                stickersGrid: p,
+                rowCountBySection: p,
+                stickersGrid: h,
                 gutterWidth: r,
                 columnCounts: _
             };
@@ -134,7 +134,7 @@ let T = (e) => {
         return (0, i.e7)(
             [g.Z],
             () => {
-                for (let n of g.Z.getAllStickersIterator()) if ((0, h.kl)(n, t, e)) return !0;
+                for (let n of g.Z.getAllStickersIterator()) if ((0, p.kl)(n, t, e)) return !0;
                 return !1;
             },
             [t, e]
@@ -142,7 +142,7 @@ let T = (e) => {
     },
     N = () => {
         r.useEffect(() => {
-            (0, p.$p)();
+            (0, h.$p)();
         }, []);
     },
     C = (e) => {
@@ -237,7 +237,7 @@ let x = (e) => {
                 l = {
                     type: E.Ih.FAVORITE,
                     id: E.Ih.FAVORITE,
-                    name: S.intl.string(S.t.y3LQCA),
+                    name: b.intl.string(b.t.y3LQCA),
                     stickers: t
                 };
             return [
@@ -245,7 +245,7 @@ let x = (e) => {
                 {
                     type: E.Ih.RECENT,
                     id: E.Ih.RECENT,
-                    name: S.intl.string(S.t['6hjpXV']),
+                    name: b.intl.string(b.t['6hjpXV']),
                     stickers:
                         null !==
                             (r =
@@ -254,7 +254,7 @@ let x = (e) => {
                                     : a.filter((t) => {
                                           if ((0, v.J8)(t)) {
                                               var r, i;
-                                              return null !== (i = null === (r = g.Z.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some((e) => e.id === t.id)) && void 0 !== i && i && (0, h.cO)(t, s, e) !== h.eb.NONSENDABLE;
+                                              return null !== (i = null === (r = g.Z.getStickersByGuildId(t.guild_id)) || void 0 === r ? void 0 : r.some((e) => e.id === t.id)) && void 0 !== i && i && (0, p.cO)(t, s, e) !== p.eb.NONSENDABLE;
                                           }
                                           if ((0, v.jl)(t)) return n.some((e) => e.id === t.pack_id);
                                       })) && void 0 !== r
@@ -277,7 +277,7 @@ let x = (e) => {
                 if (t && !u && null == n && a && !o) {
                     s(!1);
                     try {
-                        await (0, p.Il)(e.id);
+                        await (0, h.Il)(e.id);
                     } catch {}
                     l(!0);
                 }

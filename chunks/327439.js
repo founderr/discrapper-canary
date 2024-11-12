@@ -51,8 +51,8 @@ var u = new WeakMap(),
     d = new WeakMap(),
     f = new WeakMap(),
     _ = new WeakMap(),
-    h = new WeakMap(),
     p = new WeakMap(),
+    h = new WeakMap(),
     m = new WeakMap(),
     g = new WeakMap(),
     E = new WeakMap(),
@@ -80,7 +80,7 @@ class I {
                 writable: !0,
                 value: void 0
             }),
-            i(this, h, {
+            i(this, p, {
                 writable: !0,
                 value: (e, t, n) => {
                     var r, i;
@@ -103,7 +103,7 @@ class I {
             a(this, 'setup', () => {
                 if ('undefined' != typeof window) {
                     if (I.isSetUp) throw Error('Cannot have two MultiBackends at the same time.');
-                    (I.isSetUp = !0), s(this, p).call(this, window), s(this, d)[s(this, u)].instance.setup();
+                    (I.isSetUp = !0), s(this, h).call(this, window), s(this, d)[s(this, u)].instance.setup();
                 }
             }),
             a(this, 'teardown', () => {
@@ -116,7 +116,7 @@ class I {
             a(this, 'previewEnabled', () => s(this, d)[s(this, u)].preview),
             a(this, 'previewsList', () => s(this, c)),
             a(this, 'backendsList', () => s(this, f)),
-            i(this, p, {
+            i(this, h, {
                 writable: !0,
                 value: (e) => {
                     s(this, f).forEach((t) => {
@@ -179,7 +179,7 @@ class I {
             o(this, d, {}),
             o(this, f, []),
             n.backends.forEach((n) => {
-                let r = s(this, h).call(this, e, t, n);
+                let r = s(this, p).call(this, e, t, n);
                 (s(this, d)[r.id] = r), s(this, f).push(r);
             }),
             o(this, u, s(this, f)[0].id),

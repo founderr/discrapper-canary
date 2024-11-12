@@ -27,9 +27,9 @@ var i = n(200651),
 function T() {
     let e = r.useRef((0, a.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: T } = (0, s.M)(),
-        { tabs: x, selectedTab: A, setSelectedTab: b } = (0, _.Y)(),
-        Z = (0, p.lg)(A),
-        y = !C.MU.has(A),
+        { tabs: x, selectedTab: b, setSelectedTab: A } = (0, _.Y)(),
+        Z = (0, p.lg)(b),
+        y = !C.MU.has(b),
         { searchQuery: L, onSearchTextChange: R, onClearSearch: j, onSearchSubmit: O, isSearchVisible: P } = (0, f.H)({ loadId: e.current }),
         {
             searchBarState: D,
@@ -44,9 +44,9 @@ function T() {
         G = h.Z.useField('fetchedQuery'),
         B = r.useCallback(
             (e) => {
-                b(e), P && j();
+                A(e), P && j();
             },
-            [P, j, b]
+            [P, j, A]
         ),
         H = r.useMemo(
             () =>
@@ -69,7 +69,7 @@ function T() {
         }, [Z]),
         r.useEffect(() => {
             T();
-        }, [A, T]),
+        }, [b, T]),
         r.useEffect(() => {
             !P && h.Z.setState({ scrollPosition: null });
         }, [P]),
@@ -88,7 +88,7 @@ function T() {
                             (0, i.jsx)(d.Z, {
                                 className: U,
                                 tabs: H,
-                                selectedTab: P ? null : A,
+                                selectedTab: P ? null : b,
                                 onTabSelect: B,
                                 onAvailableWidthChange: M
                             }),
@@ -119,7 +119,7 @@ function T() {
                           onGuildCardSeen: F
                       })
                     : (0, i.jsx)(E.Z, {
-                          selectedTab: A,
+                          selectedTab: b,
                           onScroll: t,
                           onGuildCardClick: z,
                           onGuildCardSeen: F

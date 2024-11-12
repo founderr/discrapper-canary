@@ -9,8 +9,8 @@ var a,
     d = n(442837),
     f = n(570140),
     _ = n(358221),
-    h = n(569545),
-    p = n(199902),
+    p = n(569545),
+    h = n(199902),
     m = n(314897),
     g = n(131951),
     E = n(606304),
@@ -22,9 +22,9 @@ function I() {
     else {
         var n, a, s, o, l;
         e = _.Z.getSelectedParticipantId(r);
-        let t = p.Z.getLastActiveStream(),
+        let t = h.Z.getLastActiveStream(),
             u = null != e ? _.Z.getParticipant(r, e) : null;
-        if ((((null == u ? void 0 : u.type) === v.fO.ACTIVITY || ((null == u ? void 0 : u.type) === v.fO.USER && !(null === (n = u.voiceState) || void 0 === n ? void 0 : n.selfVideo))) && (e = null), null != t && null == e && (e = null === (a = _.Z.getParticipant(r, (0, h.V9)(t))) || void 0 === a ? void 0 : a.id), null == e)) {
+        if ((((null == u ? void 0 : u.type) === v.fO.ACTIVITY || ((null == u ? void 0 : u.type) === v.fO.USER && !(null === (n = u.voiceState) || void 0 === n ? void 0 : n.selfVideo))) && (e = null), null != t && null == e && (e = null === (a = _.Z.getParticipant(r, (0, p.V9)(t))) || void 0 === a ? void 0 : a.id), null == e)) {
             let t = m.default.getId(),
                 n = c()(_.Z.getVideoParticipants(r)).filter((e) => e.type === v.fO.USER && e.user.id !== t && !g.Z.isLocalVideoDisabled(e.user.id)),
                 a = n.map((e) => e.user.id),
@@ -48,20 +48,20 @@ function I() {
     }
     i !== e && ((i = e), t && y.emitChange());
 }
-let S = c().debounce(I, 300);
-function T() {
-    return S(), !1;
+let b = c().debounce(I, 300);
+function S() {
+    return b(), !1;
 }
-class b extends (a = d.ZP.Store) {
+class T extends (a = d.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, m.default, E.Z, p.Z, g.Z), this.syncWith([_.Z, p.Z], T);
+        this.waitFor(_.Z, m.default, E.Z, h.Z, g.Z), this.syncWith([_.Z, h.Z], S);
     }
     getSpeaker(e) {
         return r !== e && ((r = e), I(!1)), null != i ? i : m.default.getId();
     }
 }
 (l = 'VideoSpeakerStore'),
-    (o = 'displayName') in (s = b)
+    (o = 'displayName') in (s = T)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -69,5 +69,5 @@ class b extends (a = d.ZP.Store) {
               writable: !0
           })
         : (s[o] = l);
-let y = new b(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: T });
+let y = new T(f.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: S });
 t.Z = y;

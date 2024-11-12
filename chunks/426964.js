@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(246364),
     f = n(937111),
     _ = n(741606),
-    h = n(703656),
-    p = n(698305),
+    p = n(703656),
+    h = n(698305),
     m = n(314897),
     g = n(271383),
     E = n(594174),
     v = n(51144),
     I = n(970606),
-    S = n(963202),
-    T = n(645896),
-    b = n(905362),
+    b = n(963202),
+    S = n(645896),
+    T = n(905362),
     y = n(353093),
     A = n(574410),
     N = n(954138),
@@ -38,7 +38,7 @@ t.Z = i.memo(function (e) {
     var t, n;
     let { clan: k, isLoading: U, onClose: G, profileViewedAnalytics: B, userId: Z } = e,
         F = null == k ? void 0 : k.identityGuildId,
-        V = (0, T.Cc)(null != F ? F : null),
+        V = (0, S.Cc)(null != F ? F : null),
         j = null == k ? void 0 : k.tag,
         H = (0, C.Z)('clan_guild_profile'),
         { enabled: Y } = (0, c.I7)(),
@@ -58,7 +58,7 @@ t.Z = i.memo(function (e) {
         ei = (null == ee ? void 0 : ee.joinedAt) != null,
         ea = (0, y.Z4)(F, null == er ? void 0 : er.clan),
         es = null != (0, _.Z)(F),
-        eo = (0, S.iN)('ClanGuildProfile');
+        eo = (0, b.iN)('ClanGuildProfile');
     i.useEffect(() => {
         null != F &&
             (0, I.u0)({
@@ -83,7 +83,7 @@ t.Z = i.memo(function (e) {
         ec = i.useCallback(async () => {
             if (null != X)
                 try {
-                    await (0, p.Z)({
+                    await (0, h.Z)({
                         userId: X.id,
                         content: q,
                         openChannel: !0,
@@ -93,7 +93,7 @@ t.Z = i.memo(function (e) {
         }, [X, q]),
         ed = i.useCallback(
             (e) => {
-                if (null != F) e.stopPropagation(), e.preventDefault(), null == G || G(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, b.SJ)(F);
+                if (null != F) e.stopPropagation(), e.preventDefault(), null == G || G(), (0, I.hM)(F, I.UE.TAG_ADOPTION), (0, T.SJ)(F);
             },
             [F, G]
         ),
@@ -102,7 +102,7 @@ t.Z = i.memo(function (e) {
                 if (null == V || null == F) return;
                 if ((e.stopPropagation(), e.preventDefault(), null == G || G(), !es))
                     (0, I.hM)(F, I.UE.APPLY_FLOW),
-                        (0, b.qF)(F, V, {
+                        (0, T.qF)(F, V, {
                             source: null == B ? void 0 : B.source,
                             messageId: null == B ? void 0 : B.messageId,
                             tagUserId: null == B ? void 0 : B.tagUserId,
@@ -112,12 +112,12 @@ t.Z = i.memo(function (e) {
             [V, F, es, G, B]
         ),
         e_ = i.useCallback(() => {
-            if (null != F) (0, I.hM)(F, I.UE.APPLICATION), (0, h.uL)(D.Z5c.GUILD_MEMBER_VERIFICATION(F));
+            if (null != F) (0, I.hM)(F, I.UE.APPLICATION), (0, p.uL)(D.Z5c.GUILD_MEMBER_VERIFICATION(F));
         }, [F]),
-        eh = i.useCallback(() => {
-            if (null != F) (0, I.hM)(F, I.UE.GUILD), (0, h.XU)(F);
+        ep = i.useCallback(() => {
+            if (null != F) (0, I.hM)(F, I.UE.GUILD), (0, p.XU)(F);
         }, [F]),
-        ep = i.useMemo(() => {
+        eh = i.useMemo(() => {
             var e, t;
             return {
                 color: a.Button.Colors.BRAND,
@@ -135,7 +135,7 @@ t.Z = i.memo(function (e) {
                 case !ei && es:
                     return (0, r.jsx)(R.Z, {
                         onClick: e_,
-                        ...ep,
+                        ...eh,
                         children: w.intl.string(w.t.dXvKgY)
                     });
                 case !ei && (null == V ? void 0 : null === (e = V.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(D.oNc.CLAN_DISCOVERY_DISABLED)):
@@ -143,25 +143,25 @@ t.Z = i.memo(function (e) {
                 case !ei && eo:
                     return (0, r.jsx)(R.Z, {
                         onClick: ef,
-                        ...ep,
+                        ...eh,
                         children: w.intl.string(w.t.YfkjGh)
                     });
                 case ei && !ea:
                     return (0, r.jsx)(R.Z, {
                         onClick: ed,
-                        ...ep,
+                        ...eh,
                         children: w.intl.string(w.t['1keBy8'])
                     });
                 case ei && ea:
                     return (0, r.jsx)(R.Z, {
-                        onClick: eh,
-                        ...ep,
+                        onClick: ep,
+                        ...eh,
                         children: w.intl.string(w.t.muzrLS)
                     });
                 default:
                     return null;
             }
-        }, [J, ei, es, null == V ? void 0 : V.discoveryProfileFeatures, eo, ea, e_, ep, ef, ed, eh]),
+        }, [J, ei, es, null == V ? void 0 : V.discoveryProfileFeatures, eo, ea, e_, eh, ef, ed, ep]),
         eg = i.useMemo(
             () => ({
                 className: M.container,
@@ -206,7 +206,7 @@ t.Z = i.memo(function (e) {
                                 eE &&
                                     (0, r.jsx)(R.Z, {
                                         onClick: eu,
-                                        ...ep,
+                                        ...eh,
                                         children: w.intl.string(w.t.HzLAb2)
                                     })
                             ]

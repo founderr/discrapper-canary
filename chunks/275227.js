@@ -31,8 +31,8 @@ function f(e, t, n) {
         l = 'sha512' === e || 'sha384' === e ? 128 : 64;
     t.length > l ? (t = o(t)) : t.length < l && (t = s.concat([t, c], l));
     for (var u = s.allocUnsafe(l + d[e]), f = s.allocUnsafe(l + d[e]), _ = 0; _ < l; _++) (u[_] = 54 ^ t[_]), (f[_] = 92 ^ t[_]);
-    var h = s.allocUnsafe(l + n + 4);
-    u.copy(h, 0, 0, l), (this.ipad1 = h), (this.ipad2 = u), (this.opad = f), (this.alg = e), (this.blocksize = l), (this.hash = o), (this.size = d[e]);
+    var p = s.allocUnsafe(l + n + 4);
+    u.copy(p, 0, 0, l), (this.ipad1 = p), (this.ipad2 = u), (this.opad = f), (this.alg = e), (this.blocksize = l), (this.hash = o), (this.size = d[e]);
 }
 f.prototype.run = function (e, t) {
     return e.copy(t, this.blocksize), this.hash(t).copy(this.opad, this.blocksize), this.hash(this.opad);
@@ -43,13 +43,13 @@ e.exports = function (e, t, n, r, i) {
         c = s.allocUnsafe(r),
         _ = s.allocUnsafe(t.length + 4);
     t.copy(_, 0, 0, t.length);
-    for (var h = 0, p = d[i], m = Math.ceil(r / p), g = 1; g <= m; g++) {
+    for (var p = 0, h = d[i], m = Math.ceil(r / h), g = 1; g <= m; g++) {
         _.writeUInt32BE(g, t.length);
         for (var E = a.run(_, a.ipad1), v = E, I = 1; I < n; I++) {
             v = a.run(v, a.ipad2);
-            for (var S = 0; S < p; S++) E[S] ^= v[S];
+            for (var b = 0; b < h; b++) E[b] ^= v[b];
         }
-        E.copy(c, h), (h += p);
+        E.copy(c, p), (p += h);
     }
     return c;
 };

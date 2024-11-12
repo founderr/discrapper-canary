@@ -10,23 +10,23 @@ var r = n(200651),
     d = n(975298),
     f = n(125529),
     _ = n(314884),
-    h = n(78839),
-    p = n(267642),
+    p = n(78839),
+    h = n(267642),
     m = n(879892),
     g = n(981631),
     E = n(474936),
     v = n(388032),
     I = n(459671);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: S, targetBoostedGuildTier: T, onClose: b = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: b, targetBoostedGuildTier: S, onClose: T = () => {}, closeLayer: y = () => {}, pauseAnimation: A = !1, applicationId: N, handleSubscribeModalClose: C, withHighlight: R = !1, ...O } = e,
         { analyticsLocations: D } = (0, c.ZP)(),
         L = (0, u.bp)() === g.IlC.POPOUT,
         [x, w] = i.useState(!1),
         { fractionalState: M } = (0, d.Z)();
     !_.Z.hasFetched && (0, l.X8)();
-    let P = (0, p.vx)(_.Z.boostSlots),
-        k = null != T ? Math.max((0, p.KK)(a, T), 1) : 1,
-        U = (0, p.aq)({ fractionalState: M }),
+    let P = (0, h.vx)(_.Z.boostSlots),
+        k = null != S ? Math.max((0, h.KK)(a, S), 1) : 1,
+        U = (0, h.aq)({ fractionalState: M }),
         G = async () => {
             w(!0),
                 await (0, m.u)({
@@ -35,7 +35,7 @@ t.Z = (e) => {
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: k,
-                    onClose: b,
+                    onClose: T,
                     closeLayer: y,
                     inPopout: L,
                     applicationId: N,
@@ -43,8 +43,8 @@ t.Z = (e) => {
                 }),
                 w(!1);
         },
-        B = h.ZP.getPremiumTypeSubscription(),
-        Z = (0, r.jsx)('span', { children: null != S ? S : v.intl.string(v.t.gKmQ1N) });
+        B = p.ZP.getPremiumTypeSubscription(),
+        Z = (0, r.jsx)('span', { children: null != b ? b : v.intl.string(v.t.gKmQ1N) });
     return ((null == B ? void 0 : B.isPausedOrPausePending) &&
         (M === E.a$.NONE || 0 === P.length) &&
         ((Z = (0, r.jsxs)('div', {

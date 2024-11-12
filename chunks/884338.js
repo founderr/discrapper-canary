@@ -16,8 +16,8 @@ var r,
     d = n(686546),
     f = n(184301),
     _ = n(347475),
-    h = n(598077),
-    p = n(594174),
+    p = n(598077),
+    h = n(594174),
     m = n(426563),
     g = n(621925);
 function E(e, t, n) {
@@ -40,10 +40,10 @@ let v = {
     SIZE_56: 56
 };
 function I(e, t) {
-    let n = e instanceof h.Z ? e : null != e ? e.user : null;
+    let n = e instanceof p.Z ? e : null != e ? e.user : null;
     return null != n ? n.id : 'user-'.concat(t);
 }
-class S extends (r = a.PureComponent) {
+class b extends (r = a.PureComponent) {
     renderUsers() {
         let { users: e, max: t, renderUser: n = this.defaultRenderUser, size: r, extraDetail: a } = this.props,
             s = [],
@@ -110,7 +110,7 @@ class S extends (r = a.PureComponent) {
         let { className: e, size: t, users: n, guildId: r, showUserPopout: a, useFallbackUserForPopout: s } = this.props,
             { popoutUserId: l } = this.state,
             d = n.find((e) => null != e && e.id === l),
-            h = s && null == p.default.getUser(l);
+            p = s && null == h.default.getUser(l);
         return (0, i.jsx)(c.Popout, {
             position: 'right',
             preload: null == d ? void 0 : () => (0, f.Z)(d.id, d.getAvatarURL(r, 80), { guildId: r }),
@@ -120,7 +120,7 @@ class S extends (r = a.PureComponent) {
                 u()(null != l, 'UserSummaryItem.render - renderPopout: popoutUserId cannot be null'),
                 (0, i.jsx)(_.Z, {
                     ...this.props,
-                    user: h && null != d ? d : void 0,
+                    user: p && null != d ? d : void 0,
                     ...e,
                     userId: l,
                     guildId: this.props.guildId
@@ -198,7 +198,7 @@ class S extends (r = a.PureComponent) {
             });
     }
 }
-E(S, 'defaultProps', {
+E(b, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e) {
         return (0, i.jsx)('div', {
@@ -210,4 +210,4 @@ E(S, 'defaultProps', {
     showDefaultAvatarsForNullUsers: !1,
     size: v.SIZE_24
 }),
-    (t.Z = S);
+    (t.Z = b);

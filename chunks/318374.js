@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(751688),
     f = n(51144),
     _ = n(711258);
-function h(e) {
-    let { users: t, maxUsers: a, guildId: o, channelId: h, className: p, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: S = 'interactive-normal', hideOverflowCount: T = !1, disableUsernameTooltip: b = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
+function p(e) {
+    let { users: t, maxUsers: a, guildId: o, channelId: p, className: h, avatarClassName: m, onClick: g, onFocus: E, size: v = u.AvatarSizes.SIZE_24, overflowCountVariant: I = 'text-xs/medium', overflowCountColor: b = 'interactive-normal', hideOverflowCount: S = !1, disableUsernameTooltip: T = !1, disableUserPopout: y = !1, onUserPopoutClosed: A } = e,
         [N, C] = i.useState(!1);
     function R() {
         return (0, r.jsx)(u.Dialog, {
@@ -29,7 +29,7 @@ function h(e) {
                         {
                             user: e,
                             guildId: o,
-                            channelId: h,
+                            channelId: p,
                             nick: f.ZP.getName(e),
                             disablePopout: 'function' == typeof y ? y(e.id) : y,
                             ignoreModalClicks: !0,
@@ -46,7 +46,7 @@ function h(e) {
                                                 ...n,
                                                 user: e,
                                                 guildId: o,
-                                                channelId: h
+                                                channelId: p
                                             });
                                     },
                                     { onClose: () => C(!1) }
@@ -61,13 +61,13 @@ function h(e) {
     return t.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: s()(p, _.avatars),
+              className: s()(h, _.avatars),
               children: (function () {
                   let e = l()(t)
                           .take(a)
                           .map((e) => {
                               let t = f.ZP.getName(e);
-                              return b
+                              return T
                                   ? (0, r.jsx)(
                                         'div',
                                         {
@@ -98,7 +98,7 @@ function h(e) {
                       n = t.length - a;
                   return (
                       n > 0 &&
-                          !T &&
+                          !S &&
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {
@@ -117,7 +117,7 @@ function h(e) {
                                           size: u.Button.Sizes.NONE,
                                           children: (0, r.jsxs)(u.Text, {
                                               variant: I,
-                                              color: S,
+                                              color: b,
                                               children: ['+', n + 1]
                                           })
                                       })

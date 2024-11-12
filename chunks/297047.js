@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     },
     q: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -19,7 +19,7 @@ var i = n(442837),
     d = n(51144),
     f = n(981631),
     _ = n(388032);
-function h(e, t) {
+function p(e, t) {
     let { id: n } = e,
         r = '@'.concat(d.ZP.getUserTag(e, { decoration: 'never' }));
     c.S.dispatchToLastSubscribed(f.CkL.INSERT_TEXT, {
@@ -28,7 +28,7 @@ function h(e, t) {
     }),
         null != t && s.Z.startTyping(t);
 }
-function p(e, t, n) {
+function h(e, t, n) {
     let [s, c] = (0, i.Wu)(
             [u.Z, o.Z, l.Z],
             () => {
@@ -45,7 +45,7 @@ function p(e, t, n) {
               id: 'mention',
               label: _.intl.string(_.t.P8tvKC),
               action: function () {
-                  h(e, s);
+                  p(e, s);
               }
           });
 }

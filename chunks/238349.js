@@ -15,16 +15,16 @@ var i,
     d = n(442837),
     f = n(570140),
     _ = n(344185),
-    h = n(144140),
-    p = n(314897),
+    p = n(144140),
+    h = n(314897),
     m = n(592125),
     g = n(306680),
     E = n(944486),
     v = n(823379),
     I = n(709054),
-    S = n(882252);
-let T = [],
-    b = null,
+    b = n(882252);
+let S = [],
+    T = null,
     y = null,
     A = new Set(),
     N = c.z.LATEST_ACTIVITY,
@@ -32,8 +32,8 @@ let T = [],
     R = [],
     O = !1,
     D = [],
-    L = u().chain(T),
-    x = u().chain(T),
+    L = u().chain(S),
+    x = u().chain(S),
     w = new Set(),
     M = new Set();
 function P(e) {
@@ -42,14 +42,14 @@ function P(e) {
 }
 function k(e) {
     return function (t, n) {
-        if ((0, S.yv)(t)) return -1;
-        if ((0, S.yv)(n)) return 1;
+        if ((0, b.yv)(t)) return -1;
+        if ((0, b.yv)(n)) return 1;
         if (e === c.z.LATEST_ACTIVITY) return I.default.compare(P(n), P(t));
         else return I.default.compare(n, t);
     };
 }
 function U() {
-    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(T)), (x = u().chain(T)), M.clear(), w.clear();
+    (R = []), (r = null), (y = null), (A = new Set()), (N = c.z.LATEST_ACTIVITY), (C = 0), (D = []), (L = u().chain(S)), (x = u().chain(S)), M.clear(), w.clear();
 }
 function G() {
     var e;
@@ -95,7 +95,7 @@ function Z(e) {
                   })
               )).find((e) =>
         (function (e) {
-            let t = h.Z.getCount(e);
+            let t = p.Z.getCount(e);
             return null === t || 0 === t;
         })(e)
     );
@@ -121,8 +121,8 @@ class F extends (i = d.ZP.Store) {
         return R;
     }
     getAndDeleteMostRecentUserCreatedThreadId() {
-        let e = b;
-        return (b = null), e;
+        let e = T;
+        return (T = null), e;
     }
     getFirstNoReplyThreadId() {
         return r;
@@ -156,12 +156,12 @@ class F extends (i = d.ZP.Store) {
         THREAD_CREATE: function (e) {
             let { channel: t, isNewlyCreated: n } = e;
             if (null == t.parent_id || t.parent_id !== y || !n) return !1;
-            t.ownerId !== p.default.getId() ? C++ : (b = t.id);
+            t.ownerId !== h.default.getId() ? C++ : (T = t.id);
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
             if (null == t.parent_id || t.parent_id !== y) return !1;
-            let n = (0, S.yv)(t.id),
+            let n = (0, b.yv)(t.id),
                 r = M.has(t.id);
             if (n && !r) M.add(t.id), Z({ sortThreadIds: !0 });
             else {

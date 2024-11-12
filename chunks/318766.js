@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -15,25 +15,25 @@ var r = n(200651),
     d = n(607070),
     f = n(243778),
     _ = n(130402),
-    h = n(140465),
-    p = n(626135),
+    p = n(140465),
+    h = n(626135),
     m = n(153066),
     g = n(981631),
     E = n(921944),
     v = n(185923),
     I = n(388032),
-    S = n(427522);
-let T = {
+    b = n(427522);
+let S = {
         tension: 800,
         friction: 24
     },
-    b = () => {
+    T = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, r.jsxs)('div', {
-            className: S.premiumTooltipContainer,
+            className: b.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(c.LottieAnimation, {
-                    className: s()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
+                    className: s()(b.premiumUnlockAnimation, { [b.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -41,7 +41,7 @@ let T = {
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
-                    className: S.premiumTooltipText,
+                    className: b.premiumTooltipText,
                     children: I.intl.format(I.t['/7R4q6'], {})
                 })
             ]
@@ -52,9 +52,9 @@ t.Z = function (e) {
     let { tabIndex: n, className: a, renderButtonContents: y, active: A, onClick: N, 'aria-controls': C, focusProps: R } = e,
         [O, D] = i.useState(!1),
         [L, x] = i.useState(50),
-        w = (0, h.x8)('EmojiButton'),
+        w = (0, p.x8)('EmojiButton'),
         M = O || A,
-        P = (0, m.l)(S, 'emojiButton', M ? 'Hovered' : 'Normal');
+        P = (0, m.l)(b, 'emojiButton', M ? 'Hovered' : 'Normal');
     let k =
             ((t = L),
             {
@@ -75,12 +75,12 @@ t.Z = function (e) {
         V = Z === u.z.TRIAL_FOR_ALL_EMOJI_BUTTON,
         j = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, r.jsx)(c.Tooltip, {
-        text: b(),
+        text: T(),
         'aria-label': I.intl.formatToMarkdownString(I.t['/7R4q6'], {}),
         position: 'top',
         shouldShow: w && !A && V,
-        tooltipClassName: S.premiumTooltip,
-        tooltipContentClassName: S.premiumTooltipContainer,
+        tooltipClassName: b.premiumTooltip,
+        tooltipContentClassName: b.premiumTooltipContainer,
         children: (e) =>
             (0, r.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,
@@ -89,7 +89,7 @@ t.Z = function (e) {
                 className: s()(P, a),
                 onMouseEnter: () => {
                     var t;
-                    U(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), p.default.track(g.rMx.EMOJI_PICKER_BUTTON_HOVERED);
+                    U(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e), h.default.track(g.rMx.EMOJI_PICKER_BUTTON_HOVERED);
                 },
                 onMouseOver: U,
                 onMouseLeave: () => {
@@ -111,17 +111,17 @@ t.Z = function (e) {
                     null != y
                         ? y()
                         : (0, r.jsx)(c.Spring, {
-                              config: T,
+                              config: S,
                               to: { value: M ? 1 : 0 },
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(o.animated.div, {
-                                      className: S.spriteContainer,
+                                      className: b.spriteContainer,
                                       style: {
                                           ...k,
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                       },
-                                      children: [(0, r.jsx)('div', { className: s()(S.sprite, S.spriteColored, M ? S.active : S.inactive) }), (0, r.jsx)('div', { className: s()(S.sprite, w && V ? S.spritePremiumColored : S.spriteGreyscale, M ? S.inactive : S.active, { [S.reducedMotion]: j }) })]
+                                      children: [(0, r.jsx)('div', { className: s()(b.sprite, b.spriteColored, M ? b.active : b.inactive) }), (0, r.jsx)('div', { className: s()(b.sprite, w && V ? b.spritePremiumColored : b.spriteGreyscale, M ? b.inactive : b.active, { [b.reducedMotion]: j }) })]
                                   });
                               }
                           })

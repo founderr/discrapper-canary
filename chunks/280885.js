@@ -14,7 +14,7 @@ var r = n(200651),
     d = n(240991),
     f = n(554034);
 function _(e) {
-    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: h = 6, setLineClamp: p = !0, textColor: m, userId: g } = e,
+    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: p = 6, setLineClamp: h = !0, textColor: m, userId: g } = e,
         E = i.useMemo(() => ((0, u.Z)(g) ? (0, r.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);
     return null == E
         ? null
@@ -22,7 +22,7 @@ function _(e) {
               className: s()(n, f.markup),
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/normal',
-                  lineClamp: p ? h : void 0,
+                  lineClamp: h ? p : void 0,
                   color: void 0 !== m ? m : void 0,
                   children: (0, r.jsx)(c.G.Provider, {
                       value: {

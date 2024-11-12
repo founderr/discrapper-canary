@@ -21,7 +21,7 @@ var r,
 function _() {
     return i ? i : (i = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout);
 }
-function h(e, t, n, r, i) {
+function p(e, t, n, r, i) {
     return c
         .importKey('raw', e, { name: 'PBKDF2' }, !1, ['deriveBits'])
         .then(function (e) {
@@ -40,14 +40,14 @@ function h(e, t, n, r, i) {
             return a.from(e);
         });
 }
-e.exports = function (e, t, i, p, m, g) {
+e.exports = function (e, t, i, h, m, g) {
     'function' == typeof m && ((g = m), (m = void 0));
     var E = d[(m = m || 'sha1').toLowerCase()];
     if (!E || 'function' != typeof n.g.Promise) {
         _()(function () {
             var n;
             try {
-                n = l(e, t, i, p, m);
+                n = l(e, t, i, h, m);
             } catch (e) {
                 return g(e);
             }
@@ -55,7 +55,7 @@ e.exports = function (e, t, i, p, m, g) {
         });
         return;
     }
-    if ((s(i, p), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof g)) throw Error('No callback provided to pbkdf2');
+    if ((s(i, h), (e = u(e, o, 'Password')), (t = u(t, o, 'Salt')), 'function' != typeof g)) throw Error('No callback provided to pbkdf2');
     !(function (e, t) {
         e.then(
             function (e) {
@@ -73,7 +73,7 @@ e.exports = function (e, t, i, p, m, g) {
         (function (e) {
             if ((n.g.process && !n.g.process.browser) || !c || !c.importKey || !c.deriveBits) return Promise.resolve(!1);
             if (void 0 !== f[e]) return f[e];
-            var t = h((r = r || a.alloc(8)), r, 10, 128, e)
+            var t = p((r = r || a.alloc(8)), r, 10, 128, e)
                 .then(function () {
                     return !0;
                 })
@@ -82,7 +82,7 @@ e.exports = function (e, t, i, p, m, g) {
                 });
             return (f[e] = t), t;
         })(E).then(function (n) {
-            return n ? h(e, t, i, p, E) : l(e, t, i, p, m);
+            return n ? p(e, t, i, h, E) : l(e, t, i, h, m);
         }),
         g
     );

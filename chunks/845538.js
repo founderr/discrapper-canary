@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     },
     i: function () {
         return f;
@@ -23,16 +23,16 @@ function _(e) {
     i.useEffect(() => {
         o.default.track(l.rMx.PREMIUM_GIFT_UPSELL_VIEWED, { type: 'holiday_gifting_tip' });
     }, []);
-    let h = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
-        p = _ || !(a.tq || a.Em),
-        m = p ? c.intl.string(c.t.IYHmjI) : c.intl.string(c.t.kgJi9P),
-        g = p ? c.intl.string(c.t.aKD15e) : c.intl.string(c.t.g2V4X1);
+    let p = i.useMemo(() => [() => n.e('36278').then(n.t.bind(n, 268147, 19)), () => n.e('66902').then(n.t.bind(n, 7171, 19)), () => n.e('99694').then(n.t.bind(n, 55562, 19))], []),
+        h = _ || !(a.tq || a.Em),
+        m = h ? c.intl.string(c.t.IYHmjI) : c.intl.string(c.t.kgJi9P),
+        g = h ? c.intl.string(c.t.aKD15e) : c.intl.string(c.t.g2V4X1);
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
             (0, r.jsx)(s.ChainedLottieAnimation, {
                 className: d.image,
-                animationData: h
+                animationData: p
             }),
             (0, r.jsxs)('div', {
                 className: d.body,
@@ -71,7 +71,7 @@ function _(e) {
         ]
     });
 }
-function h(e) {
+function p(e) {
     let { onComplete: t, onDMCheckItOutClick: n, markAsDismissed: i, isDM: a } = e;
     return (0, r.jsx)(s.Popout, {
         spacing: 0,

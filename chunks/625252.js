@@ -20,8 +20,8 @@ var i = n(200651),
     S = n(46140),
     T = n(981631),
     C = n(388032),
-    _ = n(936598),
-    E = n(66094);
+    E = n(936598),
+    _ = n(66094);
 function f() {
     let e = (0, o.wj)((0, u.ZP)()),
         t = s.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
@@ -39,20 +39,20 @@ function f() {
         }, []),
         (0, m.un)(a.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, i.jsxs)('div', {
-            className: l()(_.container),
+            className: l()(E.container),
             style: t,
             children: [
                 !1,
                 (0, i.jsxs)('div', {
-                    className: _.textContainer,
+                    className: E.textContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: _.headerContainer,
+                            className: E.headerContainer,
                             children: [
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: E,
-                                    className: _.icon
+                                    src: _,
+                                    className: E.icon
                                 }),
                                 (0, i.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
@@ -69,9 +69,9 @@ function f() {
                         (0, i.jsx)(c.Button, {
                             size: 'large',
                             color: e ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                            className: _.button,
+                            className: E.button,
                             onClick: n,
-                            innerClassName: _.innerButton,
+                            innerClassName: E.innerButton,
                             children: (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',

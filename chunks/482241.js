@@ -9,20 +9,20 @@ var r = n(544891),
     d = n(236373),
     f = n(124165),
     _ = n(765305),
-    h = n(981631);
+    p = n(981631);
 t.Z = {
     startEvent: (e, t) =>
         r.tn.patch({
-            url: h.ANM.GUILD_EVENT(t, e),
+            url: p.ANM.GUILD_EVENT(t, e),
             body: { status: _.p1.ACTIVE }
         }),
     endEvent: (e, t) =>
         r.tn.patch({
-            url: h.ANM.GUILD_EVENT(t, e),
+            url: p.ANM.GUILD_EVENT(t, e),
             body: { status: _.p1.COMPLETED }
         }),
     joinVoiceEvent(e, t) {
-        a.default.selectVoiceChannel(t), (0, s.uL)(h.Z5c.CHANNEL(e, t));
+        a.default.selectVoiceChannel(t), (0, s.uL)(p.Z5c.CHANNEL(e, t));
     },
     saveEvent(e, t, n, i) {
         let a = _.pg.has(t.entityType) ? t.channelId : null,
@@ -42,7 +42,7 @@ t.Z = {
                 recurrence_rule: (0, d.J1)(t.recurrenceRule)
             };
         return r.tn.patch({
-            url: h.ANM.GUILD_EVENT(n, e),
+            url: p.ANM.GUILD_EVENT(n, e),
             body: l
         });
     },
@@ -61,12 +61,12 @@ t.Z = {
             recurrence_rule: (0, d.J1)(e.recurrenceRule)
         };
         return r.tn.post({
-            url: h.ANM.GUILD_EVENTS_FOR_GUILD(t),
+            url: p.ANM.GUILD_EVENTS_FOR_GUILD(t),
             body: i
         });
     },
     async fetchGuildEvent(e, t) {
-        let { body: n } = await (0, u.Kb)(h.ANM.GUILD_EVENT(e, t));
+        let { body: n } = await (0, u.Kb)(p.ANM.GUILD_EVENT(e, t));
         return (
             i.Z.dispatch({
                 type: 'FETCH_GUILD_EVENT',
@@ -76,7 +76,7 @@ t.Z = {
         );
     },
     async fetchGuildEventsForGuild(e) {
-        let t = { url: h.ANM.GUILD_EVENTS_FOR_GUILD(e) },
+        let t = { url: p.ANM.GUILD_EVENTS_FOR_GUILD(e) },
             { body: n } = await (0, u.Kb)(t);
         return (
             i.Z.dispatch({
@@ -89,7 +89,7 @@ t.Z = {
     },
     async fetchGuildEventUserCounts(e, t, n) {
         let a = {
-                url: h.ANM.GUILD_EVENT_USER_COUNTS(e, t),
+                url: p.ANM.GUILD_EVENT_USER_COUNTS(e, t),
                 query: { guild_scheduled_event_exception_ids: n }
             },
             {
@@ -111,13 +111,13 @@ t.Z = {
     },
     cancelGuildEvent: (e, t) =>
         r.tn.patch({
-            url: h.ANM.GUILD_EVENT(t, e),
+            url: p.ANM.GUILD_EVENT(t, e),
             body: { status: _.p1.CANCELED }
         }),
-    deleteGuildEvent: (e, t) => r.tn.del({ url: h.ANM.GUILD_EVENT(t, e) }),
+    deleteGuildEvent: (e, t) => r.tn.del({ url: p.ANM.GUILD_EVENT(t, e) }),
     async getGuildEventsForCurrentUser(e) {
         let { body: t } = await r.tn.get({
-            url: h.ANM.USER_GUILD_EVENTS,
+            url: p.ANM.USER_GUILD_EVENTS,
             query: { guild_ids: [e] }
         });
         i.Z.dispatch({
@@ -139,7 +139,7 @@ t.Z = {
                     response: a
                 }),
                 await r.tn.put({
-                    url: h.ANM.USER_GUILD_EVENT(n, e, t),
+                    url: p.ANM.USER_GUILD_EVENT(n, e, t),
                     body: { response: a }
                 })
             );
@@ -171,7 +171,7 @@ t.Z = {
                         guildEventExceptionId: t,
                         response: s.response
                     }),
-                    await r.tn.del({ url: h.ANM.USER_GUILD_EVENT(n, e, t) })
+                    await r.tn.del({ url: p.ANM.USER_GUILD_EVENT(n, e, t) })
                 );
             } catch (r) {
                 throw (
@@ -205,7 +205,7 @@ t.Z = {
         let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : _.rC;
         if (null == e || null == n) return [];
         let s = await r.tn.get({
-            url: h.ANM.GUILD_EVENT_USERS(n, e, t),
+            url: p.ANM.GUILD_EVENT_USERS(n, e, t),
             query: {
                 limit: a,
                 with_member: !0,
@@ -226,7 +226,7 @@ t.Z = {
     createGuildEventException(e, t, n) {
         let { original_scheduled_start_time: i, scheduled_start_time: a, scheduled_end_time: s, is_canceled: o } = e;
         return r.tn.post({
-            url: h.ANM.GUILD_EVENT_EXCEPTIONS(t, n),
+            url: p.ANM.GUILD_EVENT_EXCEPTIONS(t, n),
             body: {
                 original_scheduled_start_time: i,
                 scheduled_start_time: a,
@@ -238,7 +238,7 @@ t.Z = {
     updateGuildEventException(e, t, n, i) {
         let { scheduled_start_time: a, scheduled_end_time: s, is_canceled: o } = e;
         return r.tn.patch({
-            url: h.ANM.GUILD_EVENT_EXCEPTION(t, n, i),
+            url: p.ANM.GUILD_EVENT_EXCEPTION(t, n, i),
             body: {
                 scheduled_start_time: a,
                 scheduled_end_time: s,
@@ -246,7 +246,7 @@ t.Z = {
             }
         });
     },
-    deleteGuildEventException: (e, t, n) => r.tn.del({ url: h.ANM.GUILD_EVENT_EXCEPTION(e, t, n) }),
+    deleteGuildEventException: (e, t, n) => r.tn.del({ url: p.ANM.GUILD_EVENT_EXCEPTION(e, t, n) }),
     deleteRecurrence(e, t, n, r) {
         if (null != r)
             this.updateGuildEventException(

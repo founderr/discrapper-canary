@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(442837),
@@ -14,7 +14,7 @@ var r = n(442837),
     d = n(979651),
     f = n(561308),
     _ = n(231338);
-function h(e) {
+function p(e) {
     let t = (0, r.e7)(
             [d.Z, l.Z, u.Z],
             () => {
@@ -27,7 +27,7 @@ function h(e) {
             [e]
         ),
         n = (0, r.e7)([c.Z], () => c.Z.getPrimaryActivity(e.author_id, null == t ? void 0 : t.guild_id), [t, e]),
-        { streamPreviewUrl: h, stream: p } = (0, r.cj)(
+        { streamPreviewUrl: p, stream: h } = (0, r.cj)(
             [o.Z, u.Z, s.Z],
             () => {
                 let n;
@@ -46,7 +46,7 @@ function h(e) {
     return {
         channel: t,
         activity: n,
-        streamPreviewUrl: h,
-        stream: p
+        streamPreviewUrl: p,
+        stream: h
     };
 }

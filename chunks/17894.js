@@ -8,8 +8,8 @@ var i = t(525654),
     o = t(39612),
     a = t(271579),
     l = t(756647),
-    c = t(232567),
-    s = t(703656),
+    s = t(232567),
+    c = t(703656),
     d = t(314897),
     u = t(896797),
     p = t(626135),
@@ -23,7 +23,7 @@ async function b(e) {
             i = (0, a.WS)();
         if (null == n && d.default.isAuthenticated())
             try {
-                await (0, c.k)(), (n = d.default.getId());
+                await (0, s.k)(), (n = d.default.getId());
             } catch {}
         return (0, a.ZP)((0, o.Gk)(), {
             utmSource: e,
@@ -43,6 +43,6 @@ async function h(e) {
             source: t.utmSource
         }),
         f.Z.launch(n, (e) => {
-            !e && (0, s.dL)(u.Z.fallbackRoute);
+            !e && (0, c.dL)(u.Z.fallbackRoute);
         });
 }

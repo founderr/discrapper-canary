@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     RS: function () {
-        return f;
+        return N;
     },
     by: function () {
         return h;
@@ -18,7 +18,7 @@ n.d(t, {
         return p;
     },
     gy: function () {
-        return N;
+        return f;
     },
     i0: function () {
         return b;
@@ -188,11 +188,11 @@ function A(e, t) {
 function E() {
     return A(l.Z.getPayPalClient(), { type: 'BRAINTREE_TEARDOWN_PAYPAL_CLIENT' });
 }
-function f() {
+function N() {
     return A(l.Z.getVenmoClient(), { type: 'BRAINTREE_TEARDOWN_VENMO_CLIENT' });
 }
-function N() {
-    return Promise.all([E(), f()]);
+function f() {
+    return Promise.all([E(), N()]);
 }
 function b() {
     let e = l.Z.getLastURL();

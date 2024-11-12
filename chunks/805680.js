@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(442837),
     f = n(952265),
     _ = n(481060),
-    h = n(153867),
-    p = n(410575),
+    p = n(153867),
+    h = n(410575),
     m = n(347469),
     g = n(40851),
     E = n(367907),
     v = n(907040),
     I = n(455708),
-    S = n(314910),
-    T = n(315744),
-    b = n(603074),
+    b = n(314910),
+    S = n(315744),
+    T = n(603074),
     y = n(453070),
     A = n(926491),
     N = n(457040),
@@ -73,11 +73,11 @@ let G = L.Om + w.Su.MEDIUM,
             _ = i.useCallback(
                 (e) => {
                     let t = e >= s ? L._j.MAX : e <= L.Om ? L._j.MIN : e;
-                    null == t && null != n.current && (n.current.style.width = ''), h.ZP.updatedUnsyncedSettings({ expressionPickerWidth: t }), c(t);
+                    null == t && null != n.current && (n.current.style.width = ''), p.ZP.updatedUnsyncedSettings({ expressionPickerWidth: t }), c(t);
                 },
                 [n, s]
             ),
-            p = (0, m.Z)({
+            h = (0, m.Z)({
                 initialElementDimension: f,
                 maxDimension: s,
                 minDimension: L.Om,
@@ -104,16 +104,16 @@ let G = L.Om + w.Su.MEDIUM,
                 drawerWidth: f,
                 handleDrawerResizeHandleMouseDown: i.useCallback(
                     (e) => {
-                        e.stopPropagation(), null != t.current && o(t.current.offsetWidth), p(e);
+                        e.stopPropagation(), null != t.current && o(t.current.offsetWidth), h(e);
                     },
-                    [t, p]
+                    [t, h]
                 )
             }
         );
     };
 t.Z = i.memo(function (e) {
     var t, n, a;
-    let { positionTargetRef: o, hideGifFavorites: l, includeCreateEmojiButton: h, onSelectGIF: C, onSelectEmoji: F, onSelectSticker: V, onSelectSound: j, channel: H, type: Y, position: W, align: K, positionLayerClassName: z, closeOnModalOuterClick: q = !1, parentModalKey: Q } = e,
+    let { positionTargetRef: o, hideGifFavorites: l, includeCreateEmojiButton: p, onSelectGIF: C, onSelectEmoji: F, onSelectSticker: V, onSelectSound: j, channel: H, type: Y, position: W, align: K, positionLayerClassName: z, closeOnModalOuterClick: q = !1, parentModalKey: Q } = e,
         X = i.useRef(null),
         J = i.useRef(!1),
         $ = i.useRef(),
@@ -127,7 +127,7 @@ t.Z = i.memo(function (e) {
         ei = (0, y.fQ)(H),
         { renderWindow: ea, windowDispatch: es } = i.useContext(g.ZP),
         eo = (0, d.e7)([A.Z], () => !A.Z.hasLoadedStickerPacks),
-        el = (0, T.P)('expression_picker'),
+        el = (0, S.P)('expression_picker'),
         eu = null != Q,
         ec = (0, f.Jw)(null != Q ? Q : ''),
         ed = i.useCallback(
@@ -186,13 +186,13 @@ t.Z = i.memo(function (e) {
             }
         });
     let e_ = (null === (t = Y.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.tq && null != C,
-        eh = (null === (n = Y.stickers) || void 0 === n ? void 0 : n.allowSending) && null != V,
-        ep = !(null === (a = Y.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (e_ || eh),
+        ep = (null === (n = Y.stickers) || void 0 === n ? void 0 : n.allowSending) && null != V,
+        eh = !(null === (a = Y.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (e_ || ep),
         em = 'left' === K ? 'right' : 'left',
         eg = null != z ? z : 'left' === K ? U.positionLayerDefaultAlignLeft : U.positionLayerDefaultAlignRight;
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(h.Z, {
         section: x.jXE.EXPRESSION_PICKER,
-        children: (0, r.jsx)(S.W5, {
+        children: (0, r.jsx)(b.W5, {
             className: s()(U.positionLayer, eg),
             targetRef: o,
             position: W,
@@ -202,7 +202,7 @@ t.Z = i.memo(function (e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, r.jsx)('section', {
-                    className: s()(U.positionContainer, { [U.positionContainerOnlyEmoji]: !ep }),
+                    className: s()(U.positionContainer, { [U.positionContainerOnlyEmoji]: !eh }),
                     ref: X,
                     role: 'dialog',
                     'aria-label': k.intl.string(k.t.Utlwvr),
@@ -223,7 +223,7 @@ t.Z = i.memo(function (e) {
                                   (0, r.jsxs)('div', {
                                       className: U.contentWrapper,
                                       children: [
-                                          ep
+                                          eh
                                               ? (0, r.jsx)('nav', {
                                                     className: U.nav,
                                                     children: (0, r.jsxs)('div', {
@@ -241,7 +241,7 @@ t.Z = i.memo(function (e) {
                                                                       children: k.intl.string(k.t['6gUTsb'])
                                                                   })
                                                                 : null,
-                                                            eh
+                                                            ep
                                                                 ? (0, r.jsx)(B, {
                                                                       id: P.ED,
                                                                       'aria-controls': P.nZ,
@@ -277,7 +277,7 @@ t.Z = i.memo(function (e) {
                                                     })
                                                 })
                                               : null,
-                                          er === L.X1.STICKER && eh
+                                          er === L.X1.STICKER && ep
                                               ? (0, r.jsx)(N.Z, {
                                                     isLoading: eo,
                                                     channel: H,
@@ -299,11 +299,11 @@ t.Z = i.memo(function (e) {
                                           er === L.X1.EMOJI
                                               ? (0, r.jsx)(v.Z, {
                                                     hasTabWrapper: !0,
-                                                    containerContext: ep ? v.v.TABS_EXPRESSION_PICKER : v.v.NO_TABS_EXPRESSION_PICKER,
+                                                    containerContext: eh ? v.v.TABS_EXPRESSION_PICKER : v.v.NO_TABS_EXPRESSION_PICKER,
                                                     persistSearch: !0,
                                                     channel: H,
                                                     containerWidth: et,
-                                                    includeCreateEmojiButton: h,
+                                                    includeCreateEmojiButton: p,
                                                     emojiSize: null != et && et < G ? w.Su.MEDIUM : w.Su.LARGE,
                                                     pickerIntention: M.Hz.CHAT,
                                                     closePopout: ef,
@@ -316,7 +316,7 @@ t.Z = i.memo(function (e) {
                                           er === L.X1.SOUNDBOARD
                                               ? (0, r.jsx)('div', {
                                                     className: U.soundboardContainer,
-                                                    children: (0, r.jsx)(b.Z, {
+                                                    children: (0, r.jsx)(T.Z, {
                                                         guildId: H.guild_id,
                                                         channel: H,
                                                         containerWidth: et,

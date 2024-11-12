@@ -1,13 +1,13 @@
 n.r(t),
     n.d(t, {
         UPLOAD_ERROR_MODAL_KEY: function () {
-            return h;
+            return p;
         },
         default: function () {
             return _;
         },
         openUploadError: function () {
-            return p;
+            return h;
         }
     });
 var r = n(200651);
@@ -22,14 +22,14 @@ var i = n(120356),
     d = n(731994),
     f = n(570486);
 function _(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: _, fileSize: h, onClose: p } = e,
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: s, icons: _, fileSize: p, onClose: h } = e,
         m = (0, l.Dt)(),
         g = null != _ ? _ : d.J6;
     return i
         ? (0, r.jsx)(u.Z, {
               transitionState: s,
-              onClose: p,
-              fileSize: h
+              onClose: h,
+              fileSize: p
           })
         : (0, r.jsx)(o.Y0, {
               size: o.Cg.DYNAMIC,
@@ -55,14 +55,14 @@ function _(e) {
               })
           });
 }
-let h = 'UPLOAD_ERROR_MODAL_KEY';
-function p(e) {
+let p = 'UPLOAD_ERROR_MODAL_KEY';
+function h(e) {
     (0, s.h7)(
         (t) =>
             (0, r.jsx)(_, {
                 ...t,
                 ...e
             }),
-        { modalKey: h }
+        { modalKey: p }
     );
 }

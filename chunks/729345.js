@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return h;
+        return p;
     }
 });
 var r = n(544891),
@@ -14,10 +14,10 @@ var r = n(544891),
     d = n(691895),
     f = n(981631);
 let _ = new l.Z('DebugUploadManager');
-async function h(e, t) {
-    await p(e), await (0, i.u)(14680064, t);
+async function p(e, t) {
+    await h(e), await (0, i.u)(14680064, t);
 }
-async function p(e) {
+async function h(e) {
     try {
         let t = o.Pz(),
             n = '',
@@ -28,7 +28,7 @@ async function p(e) {
             (t = t.slice(t.length - Math.floor(t.length * e))), (n = n.slice(n.length - Math.floor(n.length * e))), (i = i.slice(i.length - Math.floor(i.length * e)));
         }
         let _ = null,
-            h = '\n    '
+            p = '\n    '
                 .concat((0, d.Z)(_), '\n\n    ')
                 .concat((0, a.EA)(), '\n\n    Metadata:\n    ')
                 .concat(JSON.stringify((0, c.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ')
@@ -37,10 +37,10 @@ async function p(e) {
                 .concat(n, '\n\n    Push Notifications:\n    ')
                 .concat(i, '\n    ');
         o.ZH();
-        let p = f.ANM.DEBUG_LOG(e, 'discord_app_logs');
+        let h = f.ANM.DEBUG_LOG(e, 'discord_app_logs');
         await r.tn.post({
-            url: p,
-            body: h,
+            url: h,
+            body: p,
             retries: 3,
             headers: { 'Content-Type': 'text/plain' },
             oldFormErrors: !0

@@ -1,6 +1,6 @@
 n.d(t, {
     Hq: function () {
-        return h;
+        return p;
     },
     M9: function () {
         return m;
@@ -9,7 +9,7 @@ n.d(t, {
         return g;
     },
     cj: function () {
-        return p;
+        return h;
     },
     km: function () {
         return f;
@@ -88,7 +88,7 @@ function _(e) {
         });
     });
 }
-function h(e) {
+function p(e) {
     return (0, u.Kb)(c.ANM.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then((e) => {
         i.Z.dispatch({
             type: 'STORE_LISTING_FETCH_SUCCESS',
@@ -96,7 +96,7 @@ function h(e) {
         });
     });
 }
-function p() {
+function h() {
     i.Z.dispatch({ type: 'APPLICATION_STORE_MATURE_AGREE' });
 }
 function m() {

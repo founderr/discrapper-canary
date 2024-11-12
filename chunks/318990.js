@@ -22,7 +22,7 @@ function _() {
             animateOnHover: !0
         }),
         _ = (e) => (null != e.globalName ? e.globalName : e.username),
-        h = i.useMemo(() => (e.length >= 2 ? d.intl.formatToPlainString(d.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? d.intl.formatToPlainString(d.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
+        p = i.useMemo(() => (e.length >= 2 ? d.intl.formatToPlainString(d.t.c7ETJC, { username: _(e[0]) }) : 1 === e.length ? d.intl.formatToPlainString(d.t.dpjXPD, { username: _(e[0]) }) : ''), [e]);
     return 0 === e.length
         ? null
         : (0, r.jsxs)('div', {
@@ -39,7 +39,7 @@ function _() {
                       className: s()(f.text),
                       variant: 'text-sm/normal',
                       color: 'always-white',
-                      children: h
+                      children: p
                   })
               ]
           });

@@ -19,10 +19,10 @@ t.Z = () => {
     function t() {
         null !== e.current && ((0, s.closeModal)(e.current), (e.current = null));
     }
-    let [o, h] = (0, a.Wu)([c.Z], () => [c.Z.shouldShowWarning(), c.Z.isAFKChannel()], []),
-        p = i.useCallback(() => {
+    let [o, p] = (0, a.Wu)([c.Z], () => [c.Z.shouldShowWarning(), c.Z.isAFKChannel()], []),
+        h = i.useCallback(() => {
             let t, n;
-            h ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
+            p ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
                 (e.current = (0, s.openModal)((e) =>
                     (0, r.jsx)(l.default, {
                         title: t,
@@ -34,7 +34,7 @@ t.Z = () => {
                         ...e
                     })
                 ));
-        }, [h]),
+        }, [p]),
         m = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e('41281').then(n.bind(n, 669732));
@@ -50,12 +50,12 @@ t.Z = () => {
     return (
         i.useEffect(
             () => (
-                o && (0, u.p)() ? m() : o ? p() : t(),
+                o && (0, u.p)() ? m() : o ? h() : t(),
                 () => {
                     t();
                 }
             ),
-            [o, p, m]
+            [o, h, m]
         ),
         null
     );

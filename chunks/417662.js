@@ -24,14 +24,14 @@ function _(e) {
     return (
         (e.onKeyDown = (t) => {
             var n, r, a, _;
-            let h = e.isMac;
+            let p = e.isMac;
             switch (t.which) {
                 case d.yXg.B:
                     if (
                         !c.bN.isEditorEmpty(e) &&
                         f(t, {
-                            ctrl: !h,
-                            cmd: h
+                            ctrl: !p,
+                            cmd: p
                         })
                     )
                         return (0, l.py)(e, 'bold'), !0;
@@ -40,8 +40,8 @@ function _(e) {
                     if (
                         !c.bN.isEditorEmpty(e) &&
                         f(t, {
-                            ctrl: !h,
-                            cmd: h
+                            ctrl: !p,
+                            cmd: p
                         })
                     )
                         return (0, l.py)(e, 'italics'), !0;
@@ -50,8 +50,8 @@ function _(e) {
                     if (
                         !c.bN.isEditorEmpty(e) &&
                         f(t, {
-                            ctrl: !h,
-                            cmd: h
+                            ctrl: !p,
+                            cmd: p
                         })
                     )
                         return (0, l.py)(e, 'underline'), !0;
@@ -60,8 +60,8 @@ function _(e) {
                     if (
                         !c.bN.isEditorEmpty(e) &&
                         f(t, {
-                            ctrl: !h,
-                            cmd: h,
+                            ctrl: !p,
+                            cmd: p,
                             shift: !0
                         })
                     )
@@ -146,14 +146,14 @@ function _(e) {
                     if (f(t, { shift: null })) n = 'character';
                     else if (
                         f(t, {
-                            ctrl: !h,
-                            alt: h,
+                            ctrl: !p,
+                            alt: p,
                             shift: null
                         })
                     )
                         n = 'word';
                     else if (
-                        h &&
+                        p &&
                         f(t, {
                             cmd: !0,
                             shift: null
@@ -164,10 +164,10 @@ function _(e) {
                     t.shiftKey && (s = 'focus');
                     let o = e.children[null !== (_ = null === (a = e.selection) || void 0 === a ? void 0 : null === (r = a.focus) || void 0 === r ? void 0 : r.path[0]) && void 0 !== _ ? _ : 0],
                         l = 'rtl' === i()(c.aj.string(o)),
-                        p = (t.which === d.yXg.ARROW_LEFT) == !l;
+                        h = (t.which === d.yXg.ARROW_LEFT) == !l;
                     return (
                         u.Q.keyboardMove(e, {
-                            reverse: p,
+                            reverse: h,
                             unit: n,
                             edge: s
                         }),
@@ -175,7 +175,7 @@ function _(e) {
                     );
                 }
                 case d.yXg.A:
-                    if (h && f(t, { ctrl: !0 })) {
+                    if (p && f(t, { ctrl: !0 })) {
                         let t = c.bN.getCurrentBlock(e);
                         if (null != t) {
                             let [, n] = t,
@@ -194,7 +194,7 @@ function _(e) {
                     }
                     break;
                 case d.yXg.E:
-                    if (h && f(t, { ctrl: !0 })) {
+                    if (p && f(t, { ctrl: !0 })) {
                         let t = c.bN.getCurrentBlock(e);
                         if (null != t) {
                             let [n, r] = t,
@@ -217,21 +217,21 @@ function _(e) {
                 case d.yXg.BACKSPACE:
                 case d.yXg.DELETE:
                 case d.yXg.K:
-                    let p = t.which === d.yXg.BACKSPACE;
+                    let h = t.which === d.yXg.BACKSPACE;
                     if (
-                        ((!h &&
+                        ((!p &&
                             t.which !== d.yXg.K &&
                             f(t, {
                                 ctrl: !0,
                                 shift: !0
                             })) ||
-                            (h && t.which !== d.yXg.K && f(t, { cmd: !0 })) ||
-                            (h && t.which === d.yXg.K && f(t, { ctrl: !0 }))) &&
+                            (p && t.which !== d.yXg.K && f(t, { cmd: !0 })) ||
+                            (p && t.which === d.yXg.K && f(t, { ctrl: !0 }))) &&
                         null != e.selection
                     ) {
                         let [t, n] = c.M8.edges(e.selection),
-                            [r, i] = c.bN.node(e, [p ? t.path[0] : n.path[0]]);
-                        if ((s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (p && !c.Jz.isAtStart(t, [r, i])) || (!p && !c.Jz.isAtEnd(n, [r, i])))) return p ? e.deleteBackward('line') : e.deleteForward('line'), !0;
+                            [r, i] = c.bN.node(e, [h ? t.path[0] : n.path[0]]);
+                        if ((s()(c.q.isElement(r) && c.bN.isBlock(e, r), 'Top-most node of selection is not a block'), (h && !c.Jz.isAtStart(t, [r, i])) || (!h && !c.Jz.isAtEnd(n, [r, i])))) return h ? e.deleteBackward('line') : e.deleteForward('line'), !0;
                     }
             }
             return !1;

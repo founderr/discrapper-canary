@@ -13,7 +13,7 @@ var i = n(120356),
     u = n(565138),
     c = n(711258);
 function d(e) {
-    let { className: t, maxGuilds: n, guilds: i, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: h = !1 } = e;
+    let { className: t, maxGuilds: n, guilds: i, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: p = !1 } = e;
     return i.length <= 0
         ? null
         : (0, r.jsx)('div', {
@@ -23,7 +23,7 @@ function d(e) {
                           .take(n)
                           .map((e) => {
                               let t = e.name;
-                              return h
+                              return p
                                   ? (0, r.jsx)('div', {
                                         className: c.avatar,
                                         children: (0, r.jsx)(u.Z, {

@@ -156,8 +156,8 @@ class u {
     }
     getGoliveLQQuality() {
         var e, t, n, r, a, s, l, u, c, d, f, _;
-        let h = Math.min(i.ef, null !== (l = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.width) && void 0 !== l ? l : i.ef),
-            p = Math.min(i.ru, null !== (u = null === (t = this.goliveMaxQuality.encode) || void 0 === t ? void 0 : t.height) && void 0 !== u ? u : i.ru),
+        let p = Math.min(i.ef, null !== (l = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.width) && void 0 !== l ? l : i.ef),
+            h = Math.min(i.ru, null !== (u = null === (t = this.goliveMaxQuality.encode) || void 0 === t ? void 0 : t.height) && void 0 !== u ? u : i.ru),
             m = Math.min(i.R$, null !== (c = null === (n = this.goliveMaxQuality.encode) || void 0 === n ? void 0 : n.framerate) && void 0 !== c ? c : i.R$),
             g = Math.min(i.ef, null !== (d = null === (r = this.goliveMaxQuality.capture) || void 0 === r ? void 0 : r.width) && void 0 !== d ? d : i.ef),
             E = Math.min(i.ru, null !== (f = null === (a = this.goliveMaxQuality.capture) || void 0 === a ? void 0 : a.height) && void 0 !== f ? f : i.ru);
@@ -168,10 +168,10 @@ class u {
                 framerate: Math.min(i.R$, null !== (_ = null === (s = this.goliveMaxQuality.capture) || void 0 === s ? void 0 : s.framerate) && void 0 !== _ ? _ : i.R$)
             },
             encode: {
-                width: h,
-                height: p,
+                width: p,
+                height: h,
                 framerate: m,
-                pixelCount: h * p
+                pixelCount: p * h
             },
             bitrateMin: i.UC,
             bitrateMax: this.goliveSimulcastLQBitrateMax,

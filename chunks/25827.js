@@ -17,10 +17,10 @@ var r = n(200651),
     d = n(491957);
 function f(e) {
     let t = (0, u.X)(e),
-        { enabled: n, cameraUnavailable: a, onChange: s, onCameraUnavailable: c, hasPermission: d, children: f, channelLimitReached: _ = !1, join: h } = e,
-        p = (0, l.bp)(),
-        m = a ? () => c() : () => s(!e.enabled, p),
-        { Component: g, play: E, events: v } = (0, o.o)(h || n ? 'disable' : 'enable');
+        { enabled: n, cameraUnavailable: a, onChange: s, onCameraUnavailable: c, hasPermission: d, children: f, channelLimitReached: _ = !1, join: p } = e,
+        h = (0, l.bp)(),
+        m = a ? () => c() : () => s(!e.enabled, h),
+        { Component: g, play: E, events: v } = (0, o.o)(p || n ? 'disable' : 'enable');
     return (
         i.useEffect(() => () => E(), [n, E]),
         (0, r.jsx)(r.Fragment, {
@@ -31,14 +31,14 @@ function f(e) {
                 iconComponent: g,
                 label: t,
                 unavailable: a,
-                onMouseEnter: h ? void 0 : v.onMouseEnter,
-                onMouseLeave: h ? void 0 : v.onMouseLeave
+                onMouseEnter: p ? void 0 : v.onMouseEnter,
+                onMouseLeave: p ? void 0 : v.onMouseLeave
             })
         })
     );
 }
 function _(e) {
-    let { enabled: t, join: n, channel: i, onChange: a, onCameraUnavailable: o, cameraUnavailable: l, hasPermission: u, className: _, channelLimitReached: h, channelLimit: p, centerButton: m = !1, onPopoutClick: g, ...E } = e,
+    let { enabled: t, join: n, channel: i, onChange: a, onCameraUnavailable: o, cameraUnavailable: l, hasPermission: u, className: _, channelLimitReached: p, channelLimit: h, centerButton: m = !1, onPopoutClick: g, ...E } = e,
         v = m ? c.d : c.Z;
     return (0, r.jsx)(f, {
         enabled: t,
@@ -48,8 +48,8 @@ function _(e) {
         onCameraUnavailable: o,
         cameraUnavailable: l,
         hasPermission: u,
-        channelLimitReached: h,
-        channelLimit: p,
+        channelLimitReached: p,
+        channelLimit: h,
         children: (e) => {
             let { unavailable: n, onMouseEnter: i, onMouseLeave: a, ...o } = e;
             return (0, r.jsx)(v, {

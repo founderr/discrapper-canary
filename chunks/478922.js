@@ -23,8 +23,8 @@ function d(e, t, n) {
             });
         });
     return (0, i.forwardRef)(function (n, _) {
-        var h;
-        let { onScroll: p, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: S, chunkSize: T, renderSection: b, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
+        var p;
+        let { onScroll: h, dir: m = 'ltr', sections: g, columns: E, getItemKey: v, getItemHeight: I, getSectionHeight: b, chunkSize: S, renderSection: T, renderItem: y, getSectionProps: A, itemGutter: N, removeEdgeItemGutters: C, sectionGutter: R, padding: O, paddingVertical: D, paddingHorizontal: L, fade: x = !1, className: w, style: M, maxContentWidth: P, renderAccessory: k, onItemVisibilityChange: U, ...G } = n,
             B = i.useRef(null),
             Z = i.useRef(null),
             F = i.useRef({}),
@@ -50,8 +50,8 @@ function d(e, t, n) {
             columns: E,
             getItemKey: v,
             getItemHeight: I,
-            getSectionHeight: S,
-            chunkSize: T,
+            getSectionHeight: b,
+            chunkSize: S,
             itemGutter: N,
             removeEdgeItemGutters: C,
             sectionGutter: R,
@@ -101,9 +101,9 @@ function d(e, t, n) {
                     (B.current = setTimeout(() => {
                         (B.current = null), j(!1);
                     }, 200)),
-                    null != p && p(e);
+                    null != h && h(e);
             },
-            [p, ee]
+            [h, ee]
         );
         return (
             i.useLayoutEffect(() => {
@@ -120,7 +120,7 @@ function d(e, t, n) {
                 style: (0, u.uT)(M),
                 ...G,
                 children: [
-                    null !== (h = null == k ? void 0 : k(X)) && void 0 !== h ? h : null,
+                    null !== (p = null == k ? void 0 : k(X)) && void 0 !== p ? p : null,
                     (0, i.useMemo)(
                         () =>
                             (0, r.jsx)(l.J, {
@@ -146,7 +146,7 @@ function d(e, t, n) {
                                                           ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
                                                       },
                                                       children: [
-                                                          null != b && null != s && b(n, s, e),
+                                                          null != T && null != s && T(n, s, e),
                                                           a.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
@@ -160,7 +160,7 @@ function d(e, t, n) {
                                     })
                                 })
                             }),
-                        [Q, y, b, z, X, A, q]
+                        [Q, y, T, z, X, A, q]
                     )
                 ]
             })

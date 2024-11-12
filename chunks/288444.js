@@ -22,14 +22,14 @@ function f(e, t, n) {
     );
 }
 let _ = 180000;
-function h() {
+function p() {
     let e = u.Z.getCurrentClientVoiceChannelId(null);
     if (null == e) return !1;
     let t = l.Z.getChannel(e);
     return !(null == t || !t.isPrivate() || t.recipients.length > 1 || c.ZP.countVoiceStatesForChannel(e) > 1) && null == o.ZP.getSelfEmbeddedActivityForChannel(e) && !0;
 }
-function p() {
-    if (!h()) return;
+function h() {
+    if (!p()) return;
     let e = u.Z.getCurrentClientVoiceChannelId(null);
     if (null != e) i.Z.sendBotMessage(e, d.intl.formatToPlainString(d.t.XYof5O, { number: 3 })), a.default.selectVoiceChannel(null);
 }
@@ -41,14 +41,14 @@ class m extends s.Z {
                 this.idleTimeout.stop();
             }),
             f(this, 'handleEmbeddedActivityDisconnect', () => {
-                if (!!h()) this.idleTimeout.start(_, p, !0);
+                if (!!p()) this.idleTimeout.start(_, h, !0);
             }),
             f(this, 'handleVoiceStateUpdates', () => {
-                if (!h()) {
+                if (!p()) {
                     this.idleTimeout.stop();
                     return;
                 }
-                this.idleTimeout.start(_, p, !1);
+                this.idleTimeout.start(_, h, !1);
             }),
             f(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,

@@ -30,7 +30,7 @@ n.d(t, {
         return I;
     },
     lf: function () {
-        return b;
+        return T;
     },
     pF: function () {
         return L;
@@ -39,13 +39,13 @@ n.d(t, {
         return N;
     },
     vJ: function () {
-        return T;
+        return S;
     },
     yJ: function () {
         return y;
     },
     ye: function () {
-        return S;
+        return b;
     }
 }),
     n(789020),
@@ -64,12 +64,12 @@ var r = n(668781),
     d = n(630388),
     f = n(541099),
     _ = n(827498),
-    h = n(981631),
-    p = n(689079),
+    p = n(981631),
+    h = n(689079),
     m = n(388032);
-let g = { id: p.bi.BUILT_IN };
+let g = { id: h.bi.BUILT_IN };
 function E(e) {
-    return e.id !== p.bi.BUILT_IN;
+    return e.id !== h.bi.BUILT_IN;
 }
 function v(e) {
     return E(e) ? e.name : m.intl.string(m.t.UB2gGx);
@@ -77,25 +77,25 @@ function v(e) {
 function I(e) {
     return E(e) ? e.description : m.intl.string(m.t.X9fusr);
 }
+function b(e) {
+    var t;
+    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.EMBEDDED);
+}
 function S(e) {
     var t;
-    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.EMBEDDED);
+    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PARTNER);
 }
 function T(e) {
     var t;
-    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PARTNER);
-}
-function b(e) {
-    var t;
-    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PROMOTED);
+    return E(e) && (0, d.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, p.udG.PROMOTED);
 }
 function y(e) {
-    return E(e) && S(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return E(e) && b(e) ? (e instanceof u.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function A(e) {
     let { command: t, optionValues: n, context: a, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: _ = s.bB.APPLICATION_LAUNCHER } = e,
-        { channel: h } = a,
-        p = async () => {
+        { channel: p } = a,
+        h = async () => {
             try {
                 let r = await (0, o.Z)({
                     command: t,
@@ -109,7 +109,7 @@ function A(e) {
                 });
                 if (t.inputType === s.iw.BUILT_IN_TEXT && null != r) {
                     var e;
-                    let t = l.ZP.parse(h, r.content);
+                    let t = l.ZP.parse(p, r.content);
                     (t.tts = null !== (e = r.tts) && void 0 !== e && e), i.Z.sendMessage(a.channel.id, t);
                 }
             } catch (e) {
@@ -118,13 +118,13 @@ function A(e) {
                         title: m.intl.string(m.t['aHO//v']),
                         body: m.intl.string(m.t.kuzKHB),
                         confirmText: m.intl.string(m.t['5911LS']),
-                        onConfirm: () => p()
+                        onConfirm: () => h()
                     }),
                     e)
                 );
             }
         };
-    return p();
+    return h();
 }
 function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -165,7 +165,7 @@ function L(e) {
             var t;
             let n = e.application,
                 r = null !== (t = e.commands) && void 0 !== t ? t : [];
-            return S(n) && r.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
+            return b(n) && r.some((e) => e.type === a.yU.PRIMARY_ENTRY_POINT);
         });
         if (0 !== e.length)
             t.push({

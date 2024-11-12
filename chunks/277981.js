@@ -9,21 +9,21 @@ var r = n(200651),
     d = n(998698),
     f = n(895924),
     _ = n(588468),
-    h = n(600164),
-    p = n(718745),
+    p = n(600164),
+    h = n(718745),
     m = n(590921),
     g = n(665692),
     E = n(981631),
     v = n(388032),
     I = n(243450);
-let S = {
+let b = {
     results: {
         command: null,
         integrations: [],
         isLoading: !1
     }
 };
-function T(e, t, n) {
+function S(e, t, n) {
     var r, i;
     let a;
     return (
@@ -34,20 +34,20 @@ function T(e, t, n) {
         }
     );
 }
-let b = {
-    stores: [d.Z, p.Z],
+let T = {
+    stores: [d.Z, h.Z],
     matches(e, t, n, r, i) {
         var a;
         return i.commands !== m.L8.DISABLED && (i.commands === m.L8.OLD_BUILT_INS ? n.startsWith(g.GI + 'gif') || n.startsWith(g.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === E.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, r, i) {
-        let { command: a, query: o } = T(e, n, r);
-        if (null == a) return S;
+        let { command: a, query: o } = S(e, n, r);
+        if (null == a) return b;
         let l = s().findKey(E.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
-        let c = p.Z.getResults(l, o);
+        let c = h.Z.getResults(l, o);
         return null == c
-            ? S
+            ? b
             : {
                   results: {
                       command: a,
@@ -66,15 +66,15 @@ let b = {
                 onHover: c,
                 onClick: f
             } = e,
-            { command: p, query: g } = T(s, l, u);
-        if (null == p || 0 === g.length) return null;
+            { command: h, query: g } = S(s, l, u);
+        if (null == h || 0 === g.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
                 className: I.spinner,
                 type: o.Spinner.Type.SPINNING_CIRCLE
             });
         if (null != t) {
-            var S, b;
+            var b, T;
             let e = !1,
                 n = t.map((t, n) => {
                     if (t.type === E.q9n.GIF) {
@@ -99,7 +99,7 @@ let b = {
                         );
                     }
                 }),
-                o = u.commands === m.L8.OLD_BUILT_INS ? p : null !== (b = null === (S = d.Z.getActiveCommand(s.id)) || void 0 === S ? void 0 : S.integrationTitle) && void 0 !== b ? b : p,
+                o = u.commands === m.L8.OLD_BUILT_INS ? h : null !== (T = null === (b = d.Z.getActiveCommand(s.id)) || void 0 === b ? void 0 : b.integrationTitle) && void 0 !== T ? T : h,
                 l =
                     g.length > 0 && null != o
                         ? v.intl.format(v.t['3njXz8'], {
@@ -108,14 +108,14 @@ let b = {
                           })
                         : null != o
                           ? o
-                          : p;
+                          : h;
             return (0, r.jsxs)(
                 i.Fragment,
                 {
                     children: [
                         (0, r.jsx)(_.ZP.Title, { title: l }),
                         e
-                            ? (0, r.jsx)(h.Z, {
+                            ? (0, r.jsx)(p.Z, {
                                   className: I.horizontalAutocompletes,
                                   children: n
                               })
@@ -180,4 +180,4 @@ let b = {
 function y(e) {
     return e.meta.url;
 }
-t.Z = b;
+t.Z = T;

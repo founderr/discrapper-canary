@@ -14,8 +14,8 @@ var r = n(192379),
             a = e.hsl,
             f = e.hsv,
             _ = e.hex,
-            h = e.header,
-            p = e.styles,
+            p = e.header,
+            h = e.styles,
             m = e.className,
             g = (0, s.default)(
                 (0, o.Z)(
@@ -74,7 +74,7 @@ var r = n(192379),
                             Hue: { radius: '2px' }
                         }
                     },
-                    void 0 === p ? {} : p
+                    void 0 === h ? {} : h
                 )
             );
         return r.createElement(
@@ -83,7 +83,7 @@ var r = n(192379),
                 style: g.picker,
                 className: 'google-picker ' + (void 0 === m ? '' : m)
             },
-            r.createElement('div', { style: g.head }, h),
+            r.createElement('div', { style: g.head }, p),
             r.createElement('div', { style: g.swatch }),
             r.createElement(
                 'div',

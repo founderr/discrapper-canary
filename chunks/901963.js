@@ -10,18 +10,18 @@ var r = n(200651),
     d = n(230711),
     f = n(436774),
     _ = n(78839),
-    h = n(74538),
-    p = n(543241),
+    p = n(74538),
+    h = n(543241),
     m = n(981631),
     g = n(474936),
     E = n(388032),
     v = n(595499);
 let I = 'premiumRetentionEmojiPickerNotice',
-    S = l.K.get(I);
+    b = l.K.get(I);
 t.Z = (e) => {
     let { closePopout: t, channel: n } = e,
-        [a, T] = i.useState(!1),
-        { subscription: b, hasFetchedSubscriptions: y } = (0, o.cj)([_.ZP], () => ({
+        [a, S] = i.useState(!1),
+        { subscription: T, hasFetchedSubscriptions: y } = (0, o.cj)([_.ZP], () => ({
             subscription: _.ZP.getPremiumSubscription(),
             hasFetchedSubscriptions: _.ZP.hasFetchedSubscriptions()
         }));
@@ -29,13 +29,13 @@ t.Z = (e) => {
         (i.useEffect(() => {
             !y && (0, c.jg)();
         }, [y]),
-        null == b || !(0, h.zV)(b.status) || a)
+        null == T || !(0, p.zV)(T.status) || a)
     )
         return null;
-    let A = b.status === m.O0b.PAST_DUE ? (0, h.lY)(b).expiresDate : s()(b.currentPeriodStart).add(g.gh),
-        N = ''.concat(b.id, ':').concat(A.toISOString());
-    if (S === N) return null;
-    let C = h.ZP.getPremiumType(b.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : h.ZP.getPremiumType(b.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
+    let A = T.status === m.O0b.PAST_DUE ? (0, p.lY)(T).expiresDate : s()(T.currentPeriodStart).add(g.gh),
+        N = ''.concat(T.id, ':').concat(A.toISOString());
+    if (b === N) return null;
+    let C = p.ZP.getPremiumType(T.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(T.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
     return (0, r.jsxs)('div', {
         className: v.premiumRetentionNotice,
         children: [
@@ -50,14 +50,14 @@ t.Z = (e) => {
                     (0, r.jsx)(u.Text, {
                         variant: 'text-xs/normal',
                         children: E.intl.format(E.t.bTMjiI, {
-                            planName: h.ZP.getDisplayPremiumType(b.planId),
+                            planName: p.ZP.getDisplayPremiumType(T.planId),
                             endsAt: A.toDate()
                         })
                     }),
                     (0, r.jsx)('div', {
                         children: (0, r.jsx)(u.Anchor, {
                             onClick: () => {
-                                (0, p.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
+                                (0, h.A3)(n), t(), d.Z.open(m.oAB.PREMIUM);
                             },
                             children: E.intl.string(E.t.W3aavr)
                         })
@@ -66,7 +66,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(u.Clickable, {
                 onClick: () => {
-                    l.K.set(I, N), (S = N), T(!0);
+                    l.K.set(I, N), (b = N), S(!0);
                 },
                 children: (0, r.jsx)(u.XSmallIcon, {
                     size: 'md',

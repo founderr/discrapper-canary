@@ -11,13 +11,13 @@ var r = n(413135).Buffer,
 function _(e, t) {
     return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this._pub = new i(e)), this;
 }
-function h(e, t) {
+function p(e, t) {
     return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this._priv = new i(e)), this;
 }
 e.exports = m;
-var p = {};
+var h = {};
 function m(e, t, n) {
-    this.setGenerator(t), (this.__prime = new i(e)), (this._prime = i.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), n ? ((this.setPublicKey = _), (this.setPrivateKey = h)) : (this._primeCode = 8);
+    this.setGenerator(t), (this.__prime = new i(e)), (this._prime = i.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), n ? ((this.setPublicKey = _), (this.setPrivateKey = p)) : (this._primeCode = 8);
 }
 function g(e, t) {
     var n = new r(e.toArray());
@@ -32,9 +32,9 @@ Object.defineProperty(m.prototype, 'verifyError', {
                     var n,
                         r = t.toString('hex'),
                         i = [r, e.toString(16)].join('_');
-                    if (i in p) return p[i];
+                    if (i in h) return h[i];
                     var f = 0;
-                    if (e.isEven() || !d.simpleSieve || !d.fermatTest(e) || !a.test(e)) return (f += 1), '02' === r || '05' === r ? (f += 8) : (f += 4), (p[i] = f), f;
+                    if (e.isEven() || !d.simpleSieve || !d.fermatTest(e) || !a.test(e)) return (f += 1), '02' === r || '05' === r ? (f += 8) : (f += 4), (h[i] = f), f;
                     switch ((!a.test(e.shrn(1)) && (f += 2), r)) {
                         case '02':
                             e.mod(s).cmp(o) && (f += 8);
@@ -45,7 +45,7 @@ Object.defineProperty(m.prototype, 'verifyError', {
                         default:
                             f += 4;
                     }
-                    return (p[i] = f), f;
+                    return (h[i] = f), f;
                 })(this.__prime, this.__gen)),
             this._primeCode
         );

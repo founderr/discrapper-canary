@@ -10,8 +10,8 @@ var r = n(147913),
     d = n(45966),
     f = n(17181),
     _ = n(981631),
-    h = n(176505),
-    p = n(372897);
+    p = n(176505),
+    h = n(372897);
 function m(e, t, n) {
     return (
         t in e
@@ -53,13 +53,13 @@ class v extends r.Z {
             m(this, '_openOnboardingIfIncomplete', async (e, t) => {
                 var n, r;
                 if ((0, f.isOnboardingActiveForGuild)(e)) {
-                    (0, i.uL)(_.Z5c.CHANNEL(e, h.oC.GUILD_ONBOARDING));
+                    (0, i.uL)(_.Z5c.CHANNEL(e, p.oC.GUILD_ONBOARDING));
                     return;
                 }
                 let o = s.Z.getGuild(e);
                 if (null == o || !o.hasFeature(_.oNc.GUILD_ONBOARDING)) return;
                 let l = a.ZP.getSelfMember(e);
-                if (!(null == l || (0, u.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, p.q.COMPLETED_ONBOARDING)) && !!(0, u.yE)(null !== (r = l.flags) && void 0 !== r ? r : 0, p.q.STARTED_ONBOARDING)) await (0, f.default)({ guildId: e }), (0, i.uL)(_.Z5c.CHANNEL(e, t));
+                if (!(null == l || (0, u.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, h.q.COMPLETED_ONBOARDING)) && !!(0, u.yE)(null !== (r = l.flags) && void 0 !== r ? r : 0, h.q.STARTED_ONBOARDING)) await (0, f.default)({ guildId: e }), (0, i.uL)(_.Z5c.CHANNEL(e, t));
             });
     }
 }

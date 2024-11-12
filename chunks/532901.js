@@ -17,7 +17,7 @@ function d(e) {
             if (e.enableBuildOverrides && (0, o._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, d.key);
             let f = n(t.content, d),
                 _ = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
-                h = (null == e ? void 0 : e.mustConfirmExternalLink)
+                p = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
                           null == e || e.stopPropagation(),
                           null == e || e.preventDefault(),
@@ -49,7 +49,7 @@ function d(e) {
                           title: _,
                           href: t.target,
                           trusted: () => (0, c.r)(t),
-                          onClick: h,
+                          onClick: p,
                           messageId: d.messageId,
                           channelId: d.channelId,
                           children: f

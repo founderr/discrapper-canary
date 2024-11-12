@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651);
@@ -15,32 +15,32 @@ var i = n(974674),
     d = n(981631),
     f = n(182294),
     _ = n(388032),
-    h = n(178677);
-function p(e) {
-    let { id: t, user: n, application: p, bot: m, accountScopes: g, showLogout: E, location: v } = e,
+    p = n(178677);
+function h(e) {
+    let { id: t, user: n, application: h, bot: m, accountScopes: g, showLogout: E, location: v } = e,
         I = l.ZP.getApplicationIconURL({
-            id: p.id,
-            icon: p.icon
+            id: h.id,
+            icon: h.icon
         }),
-        S = l.ZP.getUserAvatarURL(n);
+        b = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
-        className: h.header,
+        className: p.header,
         children: [
             (0, r.jsxs)('div', {
-                className: h.headerIcons,
+                className: p.headerIcons,
                 children: [
                     (0, r.jsx)(i.qE, {
                         src: I,
                         size: f.EF.SIZE_56,
-                        'aria-label': p.name
+                        'aria-label': h.name
                     }),
                     (0, r.jsxs)('div', {
-                        className: h.ellipseGroup,
-                        children: [(0, r.jsx)('div', { className: h.ellipse }), (0, r.jsx)('div', { className: h.ellipse }), (0, r.jsx)('div', { className: h.ellipse })]
+                        className: p.ellipseGroup,
+                        children: [(0, r.jsx)('div', { className: p.ellipse }), (0, r.jsx)('div', { className: p.ellipse }), (0, r.jsx)('div', { className: p.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: S,
+                        src: b,
                         size: f.EF.SIZE_56,
                         'aria-label': n.username
                     })
@@ -50,10 +50,10 @@ function p(e) {
                 variant: 'text-lg/bold',
                 color: 'header-primary',
                 children: [
-                    p.name,
+                    h.name,
                     null != m
                         ? (0, r.jsx)(o.Z, {
-                              className: h.botTag,
+                              className: p.botTag,
                               verified: null != m.public_flags && (0, u.yE)(m.public_flags, d.xW$.VERIFIED_BOT)
                           })
                         : null
@@ -63,18 +63,18 @@ function p(e) {
                 ? (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: h.label,
+                      className: p.label,
                       children: _.intl.string(_.t.jFbDnJ)
                   })
                 : (0, r.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: h.label,
+                      className: p.label,
                       children: _.intl.string(_.t['X+Fdpq'])
                   }),
             E
                 ? (0, r.jsx)('div', {
-                      className: h.currentUser,
+                      className: p.currentUser,
                       children: (0, r.jsxs)(s.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
@@ -84,13 +84,13 @@ function p(e) {
                                       (0, r.jsxs)(
                                           s.x,
                                           {
-                                              className: h.currentUserTag,
+                                              className: p.currentUserTag,
                                               variant: 'text-sm/normal',
                                               children: [
                                                   n.username,
                                                   !n.isPomelo() &&
                                                       (0, r.jsx)(s.x, {
-                                                          className: h.currentUserDiscriminator,
+                                                          className: p.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
                                                           children: '#'.concat(n.discriminator)
                                                       })
@@ -101,7 +101,7 @@ function p(e) {
                               }),
                               (0, r.jsx)(a.P, {
                                   tag: 'a',
-                                  className: h.logoutLink,
+                                  className: p.logoutLink,
                                   onClick: () => (0, c.c$)(v),
                                   children: _.intl.string(_.t['yV/hjI'])
                               })

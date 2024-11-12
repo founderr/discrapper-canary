@@ -12,8 +12,8 @@ e.exports = function (e, t, n, a) {
         }
         if (d < u.length && a > 0) {
             var _ = l.length - a,
-                h = Math.min(a, u.length - d);
-            u.copy(l, _, d, d + h), (a -= h);
+                p = Math.min(a, u.length - d);
+            u.copy(l, _, d, d + p), (a -= p);
         }
     }
     return (

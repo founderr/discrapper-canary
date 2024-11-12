@@ -13,8 +13,8 @@ var a,
     h = n(971809),
     A = n(481060),
     E = n(313201),
-    f = n(823379),
-    N = n(754103),
+    N = n(823379),
+    f = n(754103),
     b = n(388032),
     _ = n(251316);
 function y(e, t, n) {
@@ -36,8 +36,8 @@ let P = ['AE', 'AG', 'AN', 'AO', 'AW', 'BF', 'BI', 'BJ', 'BM', 'BO', 'BQ', 'BS',
         label: e.name
     })).filter((e) => 'KP' !== e.value && 'SY' !== e.value),
     C = (0, E.hQ)(),
-    T = (0, E.hQ)(),
     I = (0, E.hQ)(),
+    T = (0, E.hQ)(),
     S = (0, E.hQ)(),
     v = (0, E.hQ)(),
     x = (0, E.hQ)(),
@@ -57,7 +57,7 @@ let R = {
     }),
     M = (e) => ({
         name: 'country',
-        id: T,
+        id: I,
         title: () => b.intl.string(b.t.eDdrAA),
         autoComplete: 'country',
         getClassNameForLayout: (e) => {
@@ -85,16 +85,16 @@ let R = {
             });
         }
     }),
-    w = (e) => ({
+    D = (e) => ({
         name: 'line1',
-        id: I,
+        id: T,
         title: () => b.intl.string(b.t.x0beVV),
         autoComplete: 'address-line1',
         placeholder: () => b.intl.string(b.t['ynII//']),
         getClassNameForLayout: (e) => (['modalUS', 'modalInternational', 'modalUSWithName', 'modalInternationalWithName', 'settingsUSMobile', 'settingsInternationalMobile', 'settingsInternationalWithoutNameMobile'].includes(e) ? _.width100 : _.width60),
         renderInput: (e) => (0, u.jsx)(A.TextInput, { ...e })
     }),
-    D = (e) => ({
+    w = (e) => ({
         name: 'line2',
         id: S,
         title: () => b.intl.string(b.t.i2Z0gI),
@@ -225,18 +225,18 @@ let R = {
         };
     },
     H = {
-        modalUS: [[M], [w], [D], [Z], [k, j]],
-        modalInternational: [[M], [w], [D], [Z], [k], [j]],
-        modalUSWithName: [[M], [O], [w], [D], [Z], [k, j]],
-        modalInternationalWithName: [[M], [O], [w], [D], [Z], [k], [j]],
-        settingsUS: [[O], [w, D], [Z, k, j], [M]],
-        settingsUSMobile: [[O], [w], [D], [Z], [k], [j], [M]],
-        settingsInternational: [[O], [w, D], [Z], [k, j], [M]],
-        settingsInternationalMobile: [[O], [w], [D], [Z], [k], [j], [M]],
-        settingsInternationalWithoutName: [[w, D], [Z], [k, j], [M]],
-        settingsInternationalWithoutNameMobile: [[w], [D], [Z], [k], [j], [M]]
+        modalUS: [[M], [D], [w], [Z], [k, j]],
+        modalInternational: [[M], [D], [w], [Z], [k], [j]],
+        modalUSWithName: [[M], [O], [D], [w], [Z], [k, j]],
+        modalInternationalWithName: [[M], [O], [D], [w], [Z], [k], [j]],
+        settingsUS: [[O], [D, w], [Z, k, j], [M]],
+        settingsUSMobile: [[O], [D], [w], [Z], [k], [j], [M]],
+        settingsInternational: [[O], [D, w], [Z], [k, j], [M]],
+        settingsInternationalMobile: [[O], [D], [w], [Z], [k], [j], [M]],
+        settingsInternationalWithoutName: [[D, w], [Z], [k, j], [M]],
+        settingsInternationalWithoutNameMobile: [[D], [w], [Z], [k], [j], [M]]
     };
-class Y extends (i = d.PureComponent) {
+class B extends (i = d.PureComponent) {
     componentDidMount() {
         this.handleInfoChange();
     }
@@ -280,11 +280,11 @@ class Y extends (i = d.PureComponent) {
         let s = t.country,
             o = i
                 .map((e) => {
-                    let t = e.map((e) => e(null != s ? s : '')).filter(f.lm);
+                    let t = e.map((e) => e(null != s ? s : '')).filter(N.lm);
                     return t.length > 0 ? { fields: t } : null;
                 })
-                .filter(f.lm);
-        return (0, u.jsx)(N.Z, {
+                .filter(N.lm);
+        return (0, u.jsx)(f.Z, {
             className: r,
             form: o,
             layout: n,
@@ -332,9 +332,9 @@ class Y extends (i = d.PureComponent) {
             });
     }
 }
-y(Y, 'Layouts', r),
-    y(Y, 'Modes', l),
-    y(Y, 'defaultProps', {
+y(B, 'Layouts', r),
+    y(B, 'Modes', l),
+    y(B, 'defaultProps', {
         name: '',
         country: '',
         line1: '',
@@ -346,4 +346,4 @@ y(Y, 'Layouts', r),
         mode: 'create',
         error: null
     }),
-    (t.ZP = Y);
+    (t.ZP = B);

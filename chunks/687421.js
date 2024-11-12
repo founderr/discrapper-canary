@@ -64,14 +64,14 @@ var f = (function (e) {
             }
         })),
             t && l(e, t);
-    })(p, e);
+    })(h, e);
     var t,
         n,
         i,
         f,
         _,
-        h =
-            ((t = p),
+        p =
+            ((t = h),
             (n = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
@@ -91,16 +91,16 @@ var f = (function (e) {
                     })(this, e)
                 );
             });
-    function p() {
+    function h() {
         var e;
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, p);
+        })(this, h);
         for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
-        return d(u((e = h.call.apply(h, [this].concat(n)))), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'L', 'w', 'I', 'D', 'i', 'e', 'c', 't', 'T']), d(u(e), 'priority', 110), e;
+        return d(u((e = p.call.apply(p, [this].concat(n)))), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'L', 'w', 'I', 'D', 'i', 'e', 'c', 't', 'T']), d(u(e), 'priority', 110), e;
     }
     return (
-        (i = p),
+        (i = h),
         (f = [
             {
                 key: 'parse',
@@ -163,6 +163,6 @@ var f = (function (e) {
             }
         ]),
         o(i.prototype, f),
-        p
+        h
     );
 })(i._);

@@ -14,7 +14,7 @@ var i = n(120356),
     c = n(474936),
     d = n(422455);
 function f(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: _, className: h, onSubscribeModalClose: p, showShadow: m = !0, position: g = 'floating' } = e,
+    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: _, className: p, onSubscribeModalClose: h, showShadow: m = !0, position: g = 'floating' } = e,
         E = (0, o.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
@@ -32,7 +32,7 @@ function f(e) {
                 [d.upsellContainerFloating]: 'floating' === g,
                 [d.upsellContainerInline]: 'inline' === g
             },
-            h
+            p
         ),
         children: [
             (0, r.jsx)(o.NitroWheelIcon, {
@@ -53,7 +53,7 @@ function f(e) {
                       buttonText: f,
                       premiumModalAnalyticsLocation: _,
                       tabIndex: t ? 0 : -1,
-                      onSubscribeModalClose: p
+                      onSubscribeModalClose: h
                   })
                 : f
         ]

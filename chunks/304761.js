@@ -15,8 +15,8 @@ var r,
 ((r = o || (o = {}))[(r.NotResolved = 0)] = 'NotResolved'), (r[(r.Resolving = 1)] = 'Resolving'), (r[(r.Resolved = 2)] = 'Resolved'), (r[(r.Invalid = 3)] = 'Invalid');
 let f = 0,
     _ = null,
-    h = {};
-class p extends (l = u.ZP.Store) {
+    p = {};
+class h extends (l = u.ZP.Store) {
     getCurrentBuildOverride() {
         return (
             0 === f &&
@@ -36,11 +36,11 @@ class p extends (l = u.ZP.Store) {
     getBuildOverride(e) {
         return (
             !(function (e) {
-                if (e in h) return;
+                if (e in p) return;
                 let t = (0, d.r4)(e);
                 if (null == t) {
-                    h = {
-                        ...h,
+                    p = {
+                        ...p,
                         [e]: {
                             url: e,
                             state: 3
@@ -48,8 +48,8 @@ class p extends (l = u.ZP.Store) {
                     };
                     return;
                 }
-                h = {
-                    ...h,
+                p = {
+                    ...p,
                     [e]: {
                         url: e,
                         validatedURL: t.url,
@@ -65,15 +65,15 @@ class p extends (l = u.ZP.Store) {
                     });
                 });
             })(e),
-            h[e]
+            p[e]
         );
     }
     getBuildOverrides() {
-        return h;
+        return p;
     }
 }
 (s = 'BuildOverrideStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -81,13 +81,13 @@ class p extends (l = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.C = new p(c.Z, {
+    (t.C = new h(c.Z, {
         BUILD_OVERRIDE_RESOLVED: function (e) {
             let { url: t, override: n } = e;
-            h = {
-                ...h,
+            p = {
+                ...p,
                 [t]: {
-                    ...h[t],
+                    ...p[t],
                     state: null == n ? 3 : 2,
                     override: n
                 }

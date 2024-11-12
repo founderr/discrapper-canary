@@ -9,16 +9,16 @@ var a,
     d = n(781391),
     f = n(210887),
     _ = n(740492),
-    h = n(695346),
-    p = n(581883),
+    p = n(695346),
+    h = n(581883),
     m = n(131704),
     g = n(592125),
     E = n(594174),
     v = n(74538),
     I = n(51144),
-    S = n(47760),
-    T = n(469115),
-    b = n(874893);
+    b = n(47760),
+    S = n(469115),
+    T = n(874893);
 function y(e, t, n) {
     return (
         t in e
@@ -45,29 +45,29 @@ let D = () => {
         N = !v.ZP.canUseClientThemes(E.default.getCurrentUser());
     },
     L = () => {
-        let e = h.L1.getSetting().backgroundGradientPresetId;
+        let e = p.L1.getSetting().backgroundGradientPresetId;
         if (c.Z.shouldSync('appearance')) {
             if (null == e) {
                 null != r && (r = void 0);
                 return;
             }
-            r = T.qt[e];
+            r = S.qt[e];
         }
     },
     x = () => {
         if (!c.Z.shouldSync('appearance')) return;
-        let e = h.L1.getSetting().backgroundGradientPresetId;
-        if ((_.ZP.useSystemTheme === b.K.ON && null != e && (0, d.hi)(b.K.OFF), null == e)) {
+        let e = p.L1.getSetting().backgroundGradientPresetId;
+        if ((_.ZP.useSystemTheme === T.K.ON && null != e && (0, d.hi)(T.K.OFF), null == e)) {
             null != r && (r = void 0);
             return;
         }
-        let t = T.qt[e],
+        let t = S.qt[e],
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         if (null != t && !n) r = t;
     };
 class w extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? T.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, c.Z, p.Z), this.syncWith([E.default], D), this.syncWith([c.Z], L), this.syncWith([p.Z], x);
+        null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? S.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, c.Z, h.Z), this.syncWith([E.default], D), this.syncWith([c.Z], L), this.syncWith([h.Z], x);
     }
     getState() {
         return N ? {} : { gradientPresetId: null == r ? void 0 : r.id };
@@ -76,7 +76,7 @@ class w extends (a = s.ZP.PersistedStore) {
         return r;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, S.VK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, b.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
         return A;
@@ -109,7 +109,7 @@ y(w, 'displayName', 'ClientThemesBackgroundStore'),
                 r = void 0;
                 return;
             }
-            r = T.qt[t];
+            r = S.qt[t];
         },
         UPDATE_MOBILE_PENDING_THEME_INDEX: (e) => {
             let { mobileThemesIndex: t } = e;

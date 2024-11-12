@@ -29,11 +29,11 @@ let l = {
     };
 function c(e) {
     let { type: t = l.DEFAULT, className: n, disabled: i, selectable: c, children: d, style: f, ..._ } = e,
-        h = u.DEFAULT;
+        p = u.DEFAULT;
     return (
-        i ? (h = u.DISABLED) : c && (h = u.SELECTABLE),
+        i ? (p = u.DISABLED) : c && (p = u.SELECTABLE),
         (0, r.jsx)(s.Z, {
-            className: a()(o[t], n, o[h]),
+            className: a()(o[t], n, o[p]),
             style: f,
             ..._,
             children: d

@@ -25,37 +25,37 @@ var i = n(200651),
     S = n(275909),
     T = n(300037),
     C = n(981631),
-    _ = n(474936),
-    E = n(388032),
+    E = n(474936),
+    _ = n(388032),
     f = n(210849);
 function I(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: l, isCanceled: o, premiumSubscription: c } = e,
         d = s.useMemo(() => {
-            if (o) return E.intl.format(E.t.Z4ULRE, { date: c.currentPeriodEnd });
+            if (o) return _.intl.format(_.t.Z4ULRE, { date: c.currentPeriodEnd });
             let e = null != n.premiumGuildSubscription ? p.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return E.intl.formatToPlainString(E.t.lY2Bur, { date: new Date(e) });
+            return _.intl.formatToPlainString(_.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c]),
         u = s.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === C.Eu4.NONE) return '';
                     let t = [
-                        E.intl.formatToPlainString(E.t.dLlKX1, { numEmojiSlots: _.HO[e].limits.emoji }),
-                        E.intl.formatToPlainString(E.t['+ANIfn'], { numStickerSlots: _.HO[e].limits.stickers }),
-                        E.intl.formatToPlainString(E.t['4gt60d'], { numSoundboardSlots: _.HO[e].limits.soundboardSounds }),
-                        E.intl.formatToPlainString(E.t.XahSjY, {
-                            resolution: _.HO[e].limits.screenShareQualityResolution,
-                            framerate: _.HO[e].limits.screenShareQualityFramerate
+                        _.intl.formatToPlainString(_.t.dLlKX1, { numEmojiSlots: E.HO[e].limits.emoji }),
+                        _.intl.formatToPlainString(_.t['+ANIfn'], { numStickerSlots: E.HO[e].limits.stickers }),
+                        _.intl.formatToPlainString(_.t['4gt60d'], { numSoundboardSlots: E.HO[e].limits.soundboardSounds }),
+                        _.intl.formatToPlainString(_.t.XahSjY, {
+                            resolution: E.HO[e].limits.screenShareQualityResolution,
+                            framerate: E.HO[e].limits.screenShareQualityFramerate
                         }),
-                        E.intl.formatToPlainString(E.t.NbNs7e, { bitrate: _.HO[e].limits.bitrate / 1000 }),
-                        E.intl.formatToPlainString(E.t.VVKcpq, { filesize: _.HO[e].limits.fileSize / 1024 / 1024 }),
-                        E.intl.formatToPlainString(E.t.TbpCvr, { numVideoStageSeats: _.HO[e].limits.stageVideoUsers }),
-                        E.intl.string(E.t.LDyX3t),
-                        E.intl.string(E.t.YtGlPT)
+                        _.intl.formatToPlainString(_.t.NbNs7e, { bitrate: E.HO[e].limits.bitrate / 1000 }),
+                        _.intl.formatToPlainString(_.t.VVKcpq, { filesize: E.HO[e].limits.fileSize / 1024 / 1024 }),
+                        _.intl.formatToPlainString(_.t.TbpCvr, { numVideoStageSeats: E.HO[e].limits.stageVideoUsers }),
+                        _.intl.string(_.t.LDyX3t),
+                        _.intl.string(_.t.YtGlPT)
                     ];
-                    e >= C.Eu4.TIER_2 && (t.push(E.intl.string(E.t.SztbtL)), t.push(E.intl.string(E.t['3GK91t']))), e >= C.Eu4.TIER_3 && t.push(E.intl.string(E.t.XUUJd3));
+                    e >= C.Eu4.TIER_2 && (t.push(_.intl.string(_.t.SztbtL)), t.push(_.intl.string(_.t['3GK91t']))), e >= C.Eu4.TIER_3 && t.push(_.intl.string(_.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return E.intl.format(E.t['/dOAmZ'], { perk: n });
+                    return _.intl.format(_.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -137,7 +137,7 @@ function N(e) {
                         children: (e) =>
                             (0, i.jsx)(a.Clickable, {
                                 ...e,
-                                'aria-label': E.intl.string(E.t.PdRCRk),
+                                'aria-label': _.intl.string(_.t.PdRCRk),
                                 className: f.boostSlotMenuIcon,
                                 children: (0, i.jsx)(a.MoreVerticalIcon, {
                                     size: 'md',

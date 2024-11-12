@@ -1,6 +1,6 @@
 n.d(t, {
     ku: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -15,14 +15,14 @@ var r = n(200651),
     d = n(801606),
     f = n(135869),
     _ = n(763296),
-    h = n(697426),
-    p = n(22382),
+    p = n(697426),
+    h = n(22382),
     m = n(747071),
     g = n(409673),
     E = n(592125),
     v = n(388032),
     I = n(42693);
-function S(e) {
+function b(e) {
     let { playSound: t } = e;
     return (0, r.jsxs)(l.Clickable, {
         title: 'Risky Click',
@@ -39,12 +39,12 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     let { soundId: t } = e,
         n = (0, o.e7)([_.Z], () => _.Z.getSoundById(t));
-    return null == n ? (0, r.jsx)(S, {}) : (0, r.jsx)(b, { sound: n });
+    return null == n ? (0, r.jsx)(b, {}) : (0, r.jsx)(T, { sound: n });
 }
-function b(e) {
+function T(e) {
     let { sound: t, playSound: n, isPlaying: i } = e,
         a = (null == t ? void 0 : t.emojiId) != null || (null == t ? void 0 : t.emojiName) != null,
         o = v.intl.formatToPlainString(v.t.tuMUJy, {
@@ -72,16 +72,16 @@ t.ZP = function (e) {
         { currentPreviewRef: l } = i.useContext(f.Z),
         u = i.useMemo(() => (0, d.Z)(t, n, a), [t, n, a]),
         _ = (0, o.e7)([E.Z], () => E.Z.getChannel(t)),
-        [v, T] = i.useState(!1),
+        [v, S] = i.useState(!1),
         y = (0, c.P)('soundmoji_chat_mention'),
         A = i.useCallback(() => {
             var e;
-            let t = new Audio((0, p.Z)(a));
-            null != l.current && l.current.pause(), (l.current = t), (t.currentTime = 0), (t.volume = (0, m.Z)(null !== (e = null == u ? void 0 : u.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => T(!0)), (t.onpause = () => T(!1)), (t.onended = () => T(!1));
-        }, [a, u, l, T]);
+            let t = new Audio((0, h.Z)(a));
+            null != l.current && l.current.pause(), (l.current = t), (t.currentTime = 0), (t.volume = (0, m.Z)(null !== (e = null == u ? void 0 : u.volume) && void 0 !== e ? e : 1)), t.play(), (t.onplay = () => S(!0)), (t.onpause = () => S(!1)), (t.onended = () => S(!1));
+        }, [a, u, l, S]);
     return y
         ? null == u
-            ? (0, r.jsx)(S, { playSound: A })
+            ? (0, r.jsx)(b, { playSound: A })
             : s
               ? (0, r.jsx)(
                     g.ZP,
@@ -95,11 +95,11 @@ t.ZP = function (e) {
                         isPlayingSoundOverride: v,
                         isAnimated: !1,
                         isSoundmoji: !0,
-                        buttonOverlay: h.Pb.SOUNDMOJI
+                        buttonOverlay: p.Pb.SOUNDMOJI
                     },
                     ''.concat(u.soundId)
                 )
-              : (0, r.jsx)(b, {
+              : (0, r.jsx)(T, {
                     sound: u,
                     playSound: A,
                     isPlaying: v

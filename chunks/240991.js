@@ -4,7 +4,7 @@ n.r(t),
             return g;
         },
         parseBioReact: function () {
-            return p;
+            return h;
         },
         parseBioReactWithCachedAST: function () {
             return E;
@@ -25,12 +25,12 @@ var r = n(392711),
 n(454585);
 var f = n(364458);
 let _ = (0, f.Z)([d.Z.PROFILE_BIO_RULES, (0, c.Z)({ enableBuildOverrides: !1 })]),
-    h = new (s())({ max: 2000 }),
-    p = u.w4(_),
+    p = new (s())({ max: 2000 }),
+    h = u.w4(_),
     m = void 0;
 function g(e) {
-    let t = h.get(e);
-    return null != t ? t : ((t = m(e, !0)), h.set(e, t), t);
+    let t = p.get(e);
+    return null != t ? t : ((t = m(e, !0)), p.set(e, t), t);
 }
 function E(e) {
     if (0 === e.trim().length) return null;

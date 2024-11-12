@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return k;
     }
 }),
     t(47120),
@@ -10,8 +10,8 @@ var i = t(200651),
     o = t(512722),
     a = t.n(o),
     l = t(442837),
-    c = t(481060),
-    s = t(330726),
+    s = t(481060),
+    c = t(330726),
     d = t(716534),
     u = t(664891),
     p = t(171246),
@@ -25,14 +25,14 @@ var i = t(200651),
     v = t(614277),
     C = t(698708),
     S = t(388032),
-    k = t(748605);
-function j(e) {
+    j = t(748605);
+function k(e) {
     var n, t;
-    let { backButtonEligible: o, prevStep: j, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
-        { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: H, paymentSources: R, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != W, 'Expected plan to be selected'), a()(null != M, 'Expected application');
+    let { backButtonEligible: o, prevStep: k, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
+        { activeSubscription: M, application: A, setUpdatedSubscription: w, contextMetadata: Z, currencies: H, paymentSources: R, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != W, 'Expected plan to be selected'), a()(null != A, 'Expected application');
     let X = r.useRef(null),
-        [J, $] = (0, s.Z)(!1, 500),
+        [J, $] = (0, c.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
         en = (0, l.e7)([f.Z], () => f.Z.getGuild(ee), [ee]),
         [et, ei] = r.useState(null),
@@ -51,42 +51,42 @@ function j(e) {
         ? (0, i.jsx)(_.Z, {})
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(g.Z, { className: k.breadcrumbs }),
+                  (0, i.jsx)(g.Z, { className: j.breadcrumbs }),
                   (0, i.jsxs)(v.C3, {
                       children: [
                           (0, i.jsx)(C.Z, {}),
                           er &&
                               (0, i.jsxs)('div', {
-                                  className: k.userSubscriptionDetailsContainer,
+                                  className: j.userSubscriptionDetailsContainer,
                                   children: [
-                                      (0, i.jsx)(c.Text, {
+                                      (0, i.jsx)(s.Text, {
                                           variant: 'eyebrow',
                                           color: 'header-secondary',
                                           children: S.intl.string(S.t.nf5LOT)
                                       }),
-                                      (0, i.jsx)(c.Text, {
+                                      (0, i.jsx)(s.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: S.intl.format(S.t.y4n0GR, { applicationName: M.name })
+                                          children: S.intl.format(S.t.y4n0GR, { applicationName: A.name })
                                       })
                                   ]
                               }),
                           !er &&
                               (0, i.jsxs)('div', {
-                                  className: k.guildPickerContainer,
+                                  className: j.guildPickerContainer,
                                   children: [
-                                      (0, i.jsx)(c.FormTitle, {
-                                          tag: c.FormTitleTags.H5,
+                                      (0, i.jsx)(s.FormTitle, {
+                                          tag: s.FormTitleTags.H5,
                                           children: S.intl.string(S.t['5qyruL'])
                                       }),
                                       (0, i.jsxs)('div', {
-                                          className: k.guildNameContainer,
+                                          className: j.guildNameContainer,
                                           children: [
-                                              (0, i.jsx)(c.Text, {
+                                              (0, i.jsx)(s.Text, {
                                                   variant: 'text-md/normal',
                                                   children: S.intl.string(S.t.dBih7e)
                                               }),
-                                              (0, i.jsx)(c.Text, {
+                                              (0, i.jsx)(s.Text, {
                                                   variant: 'text-md/normal',
                                                   lineClamp: 1,
                                                   children: null !== (t = null == en ? void 0 : en.name) && void 0 !== t ? t : S.intl.string(S.t.dtwqPT)
@@ -95,7 +95,7 @@ function j(e) {
                                       })
                                   ]
                               }),
-                          null == A
+                          null == M
                               ? (0, i.jsx)(d.Z, {
                                     selectedPlanId: W.id,
                                     paymentSources: R,
@@ -115,7 +115,7 @@ function j(e) {
                                     handleClose: I
                                 })
                               : (0, i.jsx)(u.Z, {
-                                    premiumSubscription: A,
+                                    premiumSubscription: M,
                                     paymentSources: R,
                                     priceOptions: L,
                                     onPaymentSourceChange: (e) => V(null != e ? e.id : null),
@@ -140,9 +140,9 @@ function j(e) {
                   }),
                   (0, i.jsx)(v.O3, {
                       children: (0, i.jsx)(x.Z, {
-                          premiumSubscription: null != A ? A : null,
+                          premiumSubscription: null != M ? M : null,
                           setPurchaseState: z,
-                          onBack: () => null != j && y(j),
+                          onBack: () => null != k && y(k),
                           onNext: eo,
                           onPurchaseError: (e) => Y(e),
                           legalTermsNodeRef: ea,

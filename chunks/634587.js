@@ -33,21 +33,21 @@ var s = n(133495),
     d = Symbol('lastPromise'),
     f = Symbol('handlePromise'),
     _ = Symbol('stream');
-function h(e, t) {
+function p(e, t) {
     return {
         value: e,
         done: t
     };
 }
-function p(e) {
+function h(e) {
     var t = e[o];
     if (null !== t) {
         var n = e[_].read();
-        null !== n && ((e[d] = null), (e[o] = null), (e[l] = null), t(h(n, !1)));
+        null !== n && ((e[d] = null), (e[o] = null), (e[l] = null), t(p(n, !1)));
     }
 }
 function m(e) {
-    i.nextTick(p, e);
+    i.nextTick(h, e);
 }
 var g = Object.getPrototypeOf(function () {}),
     E = Object.setPrototypeOf(
@@ -63,11 +63,11 @@ var g = Object.getPrototypeOf(function () {}),
                         r = this,
                         a = this[u];
                     if (null !== a) return Promise.reject(a);
-                    if (this[c]) return Promise.resolve(h(void 0, !0));
+                    if (this[c]) return Promise.resolve(p(void 0, !0));
                     if (this[_].destroyed)
                         return new Promise(function (e, t) {
                             i.nextTick(function () {
-                                r[u] ? t(r[u]) : e(h(void 0, !0));
+                                r[u] ? t(r[u]) : e(p(void 0, !0));
                             });
                         });
                     var s = this[d];
@@ -78,7 +78,7 @@ var g = Object.getPrototypeOf(function () {}),
                             function (n, r) {
                                 e.then(function () {
                                     if (t[c]) {
-                                        n(h(void 0, !0));
+                                        n(p(void 0, !0));
                                         return;
                                     }
                                     t[f](n, r);
@@ -87,7 +87,7 @@ var g = Object.getPrototypeOf(function () {}),
                         );
                     } else {
                         var o = this[_].read();
-                        if (null !== o) return Promise.resolve(h(o, !1));
+                        if (null !== o) return Promise.resolve(p(o, !1));
                         n = new Promise(this[f]);
                     }
                     return (this[d] = n), n;
@@ -106,7 +106,7 @@ var g = Object.getPrototypeOf(function () {}),
                         n(e);
                         return;
                     }
-                    t(h(void 0, !0));
+                    t(p(void 0, !0));
                 });
             });
         }),
@@ -140,7 +140,7 @@ e.exports = function (e) {
             a(t, f, {
                 value: function (e, t) {
                     var r = n[_].read();
-                    r ? ((n[d] = null), (n[o] = null), (n[l] = null), e(h(r, !1))) : ((n[o] = e), (n[l] = t));
+                    r ? ((n[d] = null), (n[o] = null), (n[l] = null), e(p(r, !1))) : ((n[o] = e), (n[l] = t));
                 },
                 writable: !0
             }),
@@ -155,7 +155,7 @@ e.exports = function (e) {
                 return;
             }
             var r = n[o];
-            null !== r && ((n[d] = null), (n[o] = null), (n[l] = null), r(h(void 0, !0))), (n[c] = !0);
+            null !== r && ((n[d] = null), (n[o] = null), (n[l] = null), r(p(void 0, !0))), (n[c] = !0);
         }),
         e.on('readable', m.bind(null, n)),
         n

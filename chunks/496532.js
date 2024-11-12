@@ -40,8 +40,8 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
         }
     ],
     f = (e) => {
-        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...h } = e,
-            { primaryColorsTransformed: p, secondaryColorsTransformed: m } = (0, a.s)({
+        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...p } = e,
+            { primaryColorsTransformed: h, secondaryColorsTransformed: m } = (0, a.s)({
                 primaryBaseColors: s,
                 primaryTintColor: f,
                 primaryTintLuminances: l,
@@ -52,7 +52,7 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 secondaryLuminanceWeights: d
             });
         return (0, r.jsxs)('svg', {
-            ...(0, i.Z)(h),
+            ...(0, i.Z)(p),
             width: t,
             height: n,
             viewBox: '0 0 16 16',
@@ -65,7 +65,7 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M10 12v1H9v2H7v-2H6v-1H5v-1h1v-1h1V9h2v1h1v1h1v1h-1Z',
-                    fill: p[1]
+                    fill: h[1]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 0v1h2V0H7Z',
@@ -93,7 +93,7 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 14v1h2v-1H7ZM7 12H6v1h1v-1ZM6 11H5v1h1v-1Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 10H6v1h1v-1Z',
@@ -101,7 +101,7 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M9 13h1v-1H9v1ZM10 12h1v-1h-1v1ZM9 11h1v-1H9v1Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M8 4H7v1h1V4Z',

@@ -11,14 +11,14 @@ var r = n(990547),
     f = n(526761);
 t.Z = {
     createChannel(e) {
-        let { guildId: t, type: n, name: _, permissionOverwrites: h = [], bitrate: p, userLimit: m, parentId: g, skuId: E, branchId: v } = e;
+        let { guildId: t, type: n, name: _, permissionOverwrites: p = [], bitrate: h, userLimit: m, parentId: g, skuId: E, branchId: v } = e;
         a.Z.dispatch({ type: 'CREATE_CHANNEL_MODAL_SUBMIT' });
         let I = {
             type: n,
             name: _,
-            permission_overwrites: h
+            permission_overwrites: p
         };
-        if ((null != p && p !== d.epw && (I.bitrate = p), null != m && m > 0 && (I.user_limit = m), null != g && (I.parent_id = g), n === d.d4z.GUILD_STORE)) {
+        if ((null != h && h !== d.epw && (I.bitrate = h), null != m && m > 0 && (I.user_limit = m), null != g && (I.parent_id = g), n === d.d4z.GUILD_STORE)) {
             if (null == E) throw Error('Unexpected missing SKU');
             (I.sku_id = E), (I.branch_id = v);
         }
@@ -31,7 +31,7 @@ t.Z = {
                 properties: (e) => {
                     var t, n;
                     return (0, i.iG)({
-                        is_private: h.length > 0,
+                        is_private: p.length > 0,
                         channel_id: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.id,
                         channel_type: null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.type
                     });

@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return h;
+        return p;
     }
 });
 var r = n(161578),
@@ -27,7 +27,7 @@ async function l(e, t) {
 async function u(e) {
     var t;
     try {
-        if (null === (t = null == e ? void 0 : e.contentDocument) || void 0 === t ? void 0 : t.body) return await h(e.contentDocument.body, {}, !0);
+        if (null === (t = null == e ? void 0 : e.contentDocument) || void 0 === t ? void 0 : t.body) return await p(e.contentDocument.body, {}, !0);
     } catch (e) {}
     return e.cloneNode(!1);
 }
@@ -43,7 +43,7 @@ async function f(e, t, n) {
         : (await s.reduce(
               (e, r) =>
                   e
-                      .then(() => h(r, n))
+                      .then(() => p(r, n))
                       .then((e) => {
                           e && t.appendChild(e);
                       }),
@@ -60,7 +60,7 @@ async function _(e, t) {
         if (a) {
             let n = e.querySelector(a),
                 i = document.querySelector(a);
-            !n && i && !r[a] && (r[a] = await h(i, t, !0));
+            !n && i && !r[a] && (r[a] = await p(i, t, !0));
         }
     }
     let i = Object.values(r);
@@ -75,7 +75,7 @@ async function _(e, t) {
     }
     return e;
 }
-async function h(e, t, n) {
+async function p(e, t, n) {
     return n || !t.filter || t.filter(e)
         ? Promise.resolve(e)
               .then((e) => c(e, t))

@@ -11,15 +11,15 @@ var i = n(200651),
     g = n(100527),
     m = n(906732),
     f = n(15640),
-    _ = n(594174),
-    p = n(78839),
+    p = n(594174),
+    _ = n(78839),
     h = n(74538),
     E = n(775412),
     b = n(104494),
     x = n(639119),
     C = n(230916),
-    T = n(346497),
-    v = n(823188),
+    v = n(346497),
+    T = n(823188),
     N = n(21023),
     I = n(318747),
     S = n(409100),
@@ -28,14 +28,14 @@ var i = n(200651),
     j = n(515846),
     P = n(102655),
     Z = n(768236),
-    O = n(314907),
+    B = n(314907),
     M = n(826701);
-let B = () => {
-        let e = (0, T.W1)();
-        return (0, i.jsx)(v.Cy, {
+let O = () => {
+        let e = (0, v.W1)();
+        return (0, i.jsx)(T.Cy, {
             text: e,
             className: j.bogoPillWithSparkles,
-            colorOptions: v.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+            colorOptions: T.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
     w = () =>
@@ -51,7 +51,7 @@ let B = () => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? O : M;
+        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? B : M;
         let a = (0, h.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -116,9 +116,9 @@ let B = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: O = !1, selectedPlanColumnClassName: M, selectedPlanTier: U = R.p9.TIER_2 } = e,
+        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: B = !1, selectedPlanColumnClassName: M, selectedPlanTier: U = R.p9.TIER_2 } = e,
         { analyticsLocations: D } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        G = (0, l.e7)([p.ZP], () => p.ZP.hasFetchedSubscriptions()),
+        G = (0, l.e7)([_.ZP], () => _.ZP.hasFetchedSubscriptions()),
         H = (0, f.V)(),
         V = 'PlanComparisonTable';
     (0, d.j)({
@@ -131,7 +131,7 @@ t.Z = (e) => {
         });
     let F = (0, u.ZP)(),
         W = (0, o.ap)(F),
-        z = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+        z = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         Y = (0, h.M5)(z, R.p9.TIER_2),
         K = (0, x.N)(),
         Q = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
@@ -143,7 +143,7 @@ t.Z = (e) => {
         et = (0, h.CY)(R.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, h.CY)(R.Xh.PREMIUM_MONTH_TIER_2),
         ei = (0, N.n)(et, en, X, ee),
-        er = (0, T.Vi)();
+        er = (0, v.Vi)();
     if (!G || !H) return null;
     let ea = {
         label: (0, i.jsx)(c.Heading, {
@@ -219,16 +219,16 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == Q
           }),
-        (n = O
+        (n = B
             ? null
             : null != Q || null != J
-              ? (0, i.jsx)(v.Cy, {
+              ? (0, i.jsx)(T.Cy, {
                     text: null != Q ? A.intl.string(A.t.IBYG5e) : A.intl.string(A.t.ce1v3d),
                     className: j.freeTrialPillWithSparkles,
-                    colorOptions: Q === R.Si.TIER_0 ? (W ? v.VE.PREMIUM_TIER_0_GRADIENT_FILL : v.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? v.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : v.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : v.VE.PREMIUM_TIER_2_WHITE_FILL
+                    colorOptions: Q === R.Si.TIER_0 ? (W ? T.VE.PREMIUM_TIER_0_GRADIENT_FILL : T.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? T.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : T.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : T.VE.PREMIUM_TIER_2_WHITE_FILL
                 })
               : er
-                ? (0, i.jsx)(B, {})
+                ? (0, i.jsx)(O, {})
                 : (0, i.jsx)(w, {}));
     let es = Q === R.Si.TIER_0 || J === R.p9.TIER_0 || U === R.p9.TIER_0;
     return (0, i.jsx)(m.Gt, {

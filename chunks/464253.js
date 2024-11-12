@@ -10,8 +10,8 @@ var r = n(570140),
     d = n(569545),
     f = n(803647),
     _ = n(981631),
-    h = n(65154);
-function p(e, t, n) {
+    p = n(65154);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -98,7 +98,7 @@ class m {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: h.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 } else {
                     var r;
@@ -112,7 +112,7 @@ class m {
                             resolution: n.resolution,
                             frameRate: n.fps
                         },
-                        context: h.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 }
                 break;
@@ -144,10 +144,10 @@ class m {
         }
     }
     constructor() {
-        p(this, 'director', void 0),
-            p(this, 'applications', void 0),
-            p(this, 'streamKey', void 0),
-            p(this, 'mode', void 0),
+        h(this, 'director', void 0),
+            h(this, 'applications', void 0),
+            h(this, 'streamKey', void 0),
+            h(this, 'mode', void 0),
             (this.mode = null),
             (this.applications = []),
             (this.director = new o.a((e) => this._onDirectorAction(e))),
@@ -176,11 +176,11 @@ class m {
             }),
             r.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t, context: n } = e;
-                n === h.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
+                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 let { settings: t } = e;
-                (null == t ? void 0 : t.context) === h.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
+                (null == t ? void 0 : t.context) === p.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
             });
     }
 }

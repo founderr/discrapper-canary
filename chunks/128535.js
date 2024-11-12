@@ -11,8 +11,8 @@ var s = n(120356),
     d = n(358085),
     m = n(617136),
     x = n(111382),
-    C = n(113434),
-    h = n(918701),
+    h = n(113434),
+    C = n(918701),
     g = n(566078),
     p = n(667105),
     E = n(388032),
@@ -28,18 +28,18 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
                 children: E.intl.format(E.t.GXqvCw, { gameTitle: l })
             });
         let x = [];
-        (0, h.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? E.intl.string(E.t['0UTkPz']) : E.intl.string(E.t.XGRUho));
-        let C = [
+        (0, C.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? E.intl.string(E.t['0UTkPz']) : E.intl.string(E.t.XGRUho));
+        let h = [
             ...x,
             ...s.map((e) => {
                 if (e.type !== r.K.EXPIRED_CREDENTIAL || !u) return e.message;
                 let i = c.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                    s = (0, h.C9)(e),
-                    l = (0, h._j)(e);
+                    s = (0, C.C9)(e),
+                    l = (0, C._j)(e);
                 return E.intl.format(s, {
                     account_name: null == i ? void 0 : i.name,
                     onClick: () => {
-                        (0, h.fY)(
+                        (0, C.fY)(
                             {
                                 quest: t,
                                 platformType: l
@@ -57,7 +57,7 @@ let T = (e) => (0 === e.length ? j.warning : j.danger),
         return (0, i.jsx)(a.Text, {
             variant: 'text-sm/medium',
             color: 'text-muted',
-            children: C.reduce((e, t) => [...e, t, ' '], [])
+            children: h.reduce((e, t) => [...e, t, ' '], [])
         });
     };
 t.Z = function (e) {
@@ -71,9 +71,9 @@ t.Z = function (e) {
         }),
         {
             errorHints: d,
-            startingConsoleQuest: h,
+            startingConsoleQuest: C,
             startConsoleQuest: S
-        } = (0, C.GI)({
+        } = (0, h.GI)({
             questId: e.quest.id,
             beforeRequest: () => {
                 c.startAnimation(),
@@ -86,7 +86,7 @@ t.Z = function (e) {
             afterRequest: c.stopAnimation
         });
     return (0, i.jsxs)('div', {
-        className: l()(j.container, { [j.inFlight]: h }),
+        className: l()(j.container, { [j.inFlight]: C }),
         children: [
             (0, i.jsxs)('div', {
                 className: j.info,
@@ -122,7 +122,7 @@ t.Z = function (e) {
                 children: (0, i.jsx)(a.Button, {
                     color: a.ButtonColors.PRIMARY,
                     onClick: S,
-                    disabled: h,
+                    disabled: C,
                     children: (0, i.jsxs)('div', {
                         className: j.ctaInner,
                         children: [c.render(), E.intl.string(E.t.nPThNT)]

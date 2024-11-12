@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(477690),
     f = n(481060),
     _ = n(2052),
-    h = n(607070),
-    p = n(806966),
+    p = n(607070),
+    h = n(806966),
     m = n(254494),
     g = n(593618),
     E = n(451478),
     v = n(626135),
     I = n(624138),
-    S = n(543241),
-    T = n(883661),
-    b = n(880949),
+    b = n(543241),
+    S = n(883661),
+    T = n(880949),
     y = n(784222),
     A = n(149203),
     N = n(981631),
@@ -40,13 +40,13 @@ let D = (0, I.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     F = x + w + 2 * M;
 function V(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: _ } = e,
-        h = (0, u.JA)('expression-guild-'.concat(n)),
-        p = l.type === A.En.GUILD ? null : l.id,
+        p = (0, u.JA)('expression-guild-'.concat(n)),
+        h = l.type === A.En.GUILD ? null : l.id,
         m = t === n,
         E = l.type === A.En.GUILD ? l.guild : null,
         I = (0, r.jsxs)(f.Clickable, {
-            ...h,
-            'aria-label': (0, S.Nf)(l, E),
+            ...p,
+            'aria-label': (0, b.Nf)(l, E),
             className: s()({
                 [O.categoryItemGuildCategory]: null != E,
                 [O.categoryItemDefaultCategory]: null == E,
@@ -64,16 +64,16 @@ function V(e) {
             },
             children: [
                 null != E
-                    ? (0, r.jsx)(b.Z, {
+                    ? (0, r.jsx)(T.Z, {
                           guild: E,
                           isSelected: m,
                           shouldAnimate: !_ && d,
                           isLocked: l.isNitroLocked
                       })
                     : null,
-                null == E && null != p
-                    ? (0, r.jsx)(T.Z, {
-                          categoryId: p,
+                null == E && null != h
+                    ? (0, r.jsx)(S.Z, {
+                          categoryId: h,
                           className: O.categoryIcon,
                           height: x,
                           width: x,
@@ -99,16 +99,16 @@ function V(e) {
 }
 t.Z = (e) => {
     let { className: t, emojiListRef: n, sectionDescriptors: a, intention: o, channel: u } = e,
-        d = p.kJ.useStore((e) => e.activeCategoryIndex),
+        d = h.kJ.useStore((e) => e.activeCategoryIndex),
         g = (0, y.Ni)({
             sectionDescriptors: a,
             emojiListRef: n
         }),
         v = (0, _.O)(),
-        I = (0, S.kI)(o, u),
-        T = i.useRef(null),
-        b = (0, c.e7)([E.Z], () => E.Z.isFocused()),
-        N = (0, c.e7)([h.Z], () => h.Z.useReducedMotion, []),
+        I = (0, b.kI)(o, u),
+        S = i.useRef(null),
+        T = (0, c.e7)([E.Z], () => E.Z.isFocused()),
+        N = (0, c.e7)([p.Z], () => p.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
                 l().memoize((e, t) => {
@@ -123,13 +123,13 @@ t.Z = (e) => {
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: g,
-                                isWindowFocused: b,
+                                isWindowFocused: T,
                                 useReducedMotion: N
                             },
                             t
                         );
                 }),
-            [d, v, I, g, b, N]
+            [d, v, I, g, T, N]
         ),
         D = i.useMemo(() => [8, 8, 0, 8], []),
         M = i.useCallback(
@@ -172,7 +172,7 @@ t.Z = (e) => {
     let q = i.useCallback(
             (e) => {
                 var t;
-                let n = null === (t = T.current) || void 0 === t ? void 0 : t.getListDimensions();
+                let n = null === (t = S.current) || void 0 === t ? void 0 : t.getListDimensions();
                 if (null != n) e + n.height - k >= Y ? z(!1) : z(!0);
             },
             [Y]
@@ -180,7 +180,7 @@ t.Z = (e) => {
         Q = i.useCallback(
             (e) => {
                 var t;
-                e(H), null === (t = T.current) || void 0 === t || t.scrollTo(Y);
+                e(H), null === (t = S.current) || void 0 === t || t.scrollTo(Y);
             },
             [Y, H]
         ),
@@ -207,10 +207,10 @@ t.Z = (e) => {
         ),
         $ = K ? 'shortcut' : 'hiddenshortcut';
     return (0, r.jsx)(m.Z, {
-        categoryListRef: T,
+        categoryListRef: S,
         expressionsListRef: n,
         className: t,
-        store: p.kJ,
+        store: h.kJ,
         categories: I,
         listPadding: D,
         onScroll: q,

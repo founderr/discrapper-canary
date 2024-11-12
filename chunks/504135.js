@@ -1,6 +1,6 @@
 n.d(t, {
     s: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -14,41 +14,41 @@ var r = n(200651),
     d = n(481060),
     f = n(939350),
     _ = n(667947);
-function h(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: p = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: S, menuItemProps: T, action: b, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
+function p(e) {
+    let { color: t = 'default', label: n, icon: a, iconLeft: p, iconLeftSize: h = 'md', hint: m, subtext: g, subtextLineClamp: E, hasSubmenu: v, disabled: I, isFocused: b, menuItemProps: S, action: T, onClose: y, onFocus: A, className: N, focusedClassName: C, subMenuIconClassName: R, dontCloseOnActionIfHoldingShiftKey: O, dontCloseOnAction: D, iconProps: L, sparkle: x } = e,
         w = i.useContext(u.r),
         M = i.useRef(null),
         P = i.useCallback(
             (e) => {
-                if (null == b) return !1;
-                !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => b(e));
+                if (null == T) return !1;
+                !(e.shiftKey && O) && !D && y(), e.persist(), null == w || w(), requestAnimationFrame(() => T(e));
             },
-            [b, y, w, O, D]
+            [T, y, w, O, D]
         );
     return (
         i.useEffect(() => {
-            S && ((0, c.F)(M), null == A || A());
-        }, [S, A]),
+            b && ((0, c.F)(M), null == A || A());
+        }, [b, A]),
         (0, r.jsxs)(o.P, {
             innerRef: M,
             className: s()(_.item, _.labelContainer, f._[t], N, {
                 [_.disabled]: I,
-                [_.focused]: S,
-                [null != C ? C : '']: S
+                [_.focused]: b,
+                [null != C ? C : '']: b
             }),
             onClick: I ? void 0 : P,
             'aria-disabled': I,
-            ...T,
+            ...S,
             'data-menu-item': 'true',
             children: [
-                null != h &&
+                null != p &&
                     (0, r.jsx)('div', {
-                        className: s()(_.iconContainerLeft, { [_.iconContainerLarge]: 'lg' === p }),
-                        children: (0, r.jsx)(h, {
+                        className: s()(_.iconContainerLeft, { [_.iconContainerLarge]: 'lg' === h }),
+                        children: (0, r.jsx)(p, {
                             color: 'currentColor',
                             ...L,
                             className: s()(_.icon, null == L ? void 0 : L.className),
-                            isFocused: S
+                            isFocused: b
                         })
                     }),
                 (0, r.jsxs)('div', {
@@ -76,7 +76,7 @@ function h(e) {
                             color: 'currentColor',
                             ...L,
                             className: s()(_.icon, null == L ? void 0 : L.className),
-                            isFocused: S
+                            isFocused: b
                         })
                     }),
                 v &&

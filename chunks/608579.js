@@ -32,8 +32,8 @@ function E(e) {
     var n;
     let { onClose: t, onComplete: r, onStepChange: E, transitionState: N, loadId: k, skuId: P, isGift: B = !1, giftRecipient: A, giftMessage: Z, giftingOrigin: O, analyticsLocations: w, returnRef: M } = e,
         { analyticsLocations: R } = (0, c.ZP)([...w, d.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        L = a.useRef(new l.qA()),
-        [G, D] = a.useState(null),
+        G = a.useRef(new l.qA()),
+        [L, D] = a.useState(null),
         [H, F] = a.useState(!1),
         W = a.useMemo(() => (0, S.UY)(P), [P]),
         U = (0, s.Wu)([u.Z], () => u.Z.recommendedGiftSkuIds, []),
@@ -61,7 +61,7 @@ function E(e) {
                     renderStep: (e) =>
                         (0, i.jsx)(x.x, {
                             ...e,
-                            confettiCanvas: G,
+                            confettiCanvas: L,
                             analyticsLocations: R,
                             hideConfetti: null != W
                         }),
@@ -71,7 +71,7 @@ function E(e) {
                     }
                 }
             ],
-            [R, G, W]
+            [R, L, W]
         );
     return (0, i.jsxs)(c.Gt, {
         value: R,
@@ -79,7 +79,7 @@ function E(e) {
             (0, i.jsx)(l.O_, {
                 ref: D,
                 className: y.confettiCanvas,
-                environment: L.current
+                environment: G.current
             }),
             null != W &&
                 (0, i.jsx)('img', {

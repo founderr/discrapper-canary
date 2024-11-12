@@ -18,10 +18,10 @@ var i = n(481060),
     d = n(626135),
     f = n(267642),
     _ = n(852679),
-    h = n(981631);
-let p = 'apply-guild-boost-modal';
+    p = n(981631);
+let h = 'apply-guild-boost-modal';
 async function m(e) {
-    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: I, onSubscriptionConfirmation: S, guild: T, handleSubscribeModalClose: b, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
+    let { analyticsLocations: t, analyticsLocation: m, analyticsSourceLocation: g, numberOfBoostsToAdd: E, onClose: v, closeLayer: I, onSubscriptionConfirmation: b, guild: S, handleSubscribeModalClose: T, disablePremiumUpsell: y, inPopout: A, applicationId: N } = e,
         C = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         R = l.default.getCurrentUser();
     if (null == R) return;
@@ -46,7 +46,7 @@ async function m(e) {
     let D = (0, f.vx)(u.Z.boostSlots),
         L = D.length,
         x = (e) => {
-            null == v || v(), null == b || b(e);
+            null == v || v(), null == T || T(e);
         };
     if (L > 0 && (null == E || L >= E)) {
         let e;
@@ -61,16 +61,16 @@ async function m(e) {
                             onClose: (e) => {
                                 i(), x(e);
                             },
-                            selectedGuild: T,
-                            locationSection: h.ZY5.PREMIUM_GUILD_USER_MODAL,
+                            selectedGuild: S,
+                            locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e
                         });
                     };
                 },
                 {
-                    modalKey: p,
+                    modalKey: h,
                     onCloseRequest: () => {
-                        (0, i.closeModal)(p), x(!1);
+                        (0, i.closeModal)(h), x(!1);
                     },
                     contextKey: C
                 }
@@ -80,19 +80,19 @@ async function m(e) {
             analyticsLocations: t,
             analyticsLocation: m,
             analyticsSourceLocation: g,
-            guildId: T.id,
+            guildId: S.id,
             closeLayer: () => {
                 null == v || v(),
                     null == I || I(),
-                    d.default.track(h.rMx.MODAL_DISMISSED, {
-                        type: h.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    d.default.track(p.rMx.MODAL_DISMISSED, {
+                        type: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_section: m.section
                     });
             },
             totalNumberOfSlotsToAssign: null != E ? E : 1,
             onCloseModal: x,
             disablePremiumUpsell: y,
-            onSubscriptionConfirmation: S,
+            onSubscriptionConfirmation: b,
             inPopout: A,
             applicationId: N
         });

@@ -11,8 +11,8 @@ var s = n(788983),
     d = n(131951),
     f = n(944486),
     _ = n(914010),
-    h = n(594174),
-    p = n(934415),
+    p = n(594174),
+    h = n(934415),
     m = n(604151),
     g = n(981631);
 t.default = {
@@ -37,7 +37,7 @@ t.default = {
             r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = u.Z.getChannel(e),
             a = null == i ? void 0 : i.getGuildId();
-        if ((null == i ? void 0 : i.isGuildVocal()) && (null == i ? void 0 : i.isNSFW()) && (!(null === (t = h.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !c.Z.didAgree(a))) {
+        if ((null == i ? void 0 : i.isGuildVocal()) && (null == i ? void 0 : i.isNSFW()) && (!(null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) || !c.Z.didAgree(a))) {
             (0, o.uL)(g.Z5c.CHANNEL(a, e));
             return;
         }
@@ -51,7 +51,7 @@ t.default = {
                 t = f.Z.getChannelId() === f.Z.getVoiceChannelId() && (null == e ? void 0 : e.isThread()) === !0;
             if ((this.selectVoiceChannel(null), s.xv(g.KJ3.CHANNEL_CALL_POPOUT), t)) {
                 let e = _.Z.getGuildId();
-                null != e && (0, o.uL)((0, p.LY)(e));
+                null != e && (0, o.uL)((0, h.LY)(e));
             }
         }
     }

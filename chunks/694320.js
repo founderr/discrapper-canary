@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 });
 var r = n(200651),
@@ -14,15 +14,15 @@ var r = n(200651),
     d = n(436774),
     f = n(104494),
     _ = n(639119),
-    h = n(165583),
-    p = n(592125),
+    p = n(165583),
+    h = n(592125),
     m = n(944486),
     g = n(626135),
     E = n(981631),
     v = n(474936),
     I = n(388032),
-    S = n(228095);
-function T() {
+    b = n(228095);
+function S() {
     (0, l.openModalLazy)(async () => {
         let { default: e } = await n.e('3289').then(n.bind(n, 682609));
         return (t) =>
@@ -32,11 +32,11 @@ function T() {
             });
     });
 }
-function b(e) {
+function T(e) {
     var t;
-    let { className: n, iconOnly: a, remaining: b } = e,
-        y = (0, o.e7)([m.Z, p.Z], () => {
-            let e = p.Z.getChannel(m.Z.getChannelId());
+    let { className: n, iconOnly: a, remaining: T } = e,
+        y = (0, o.e7)([m.Z, h.Z], () => {
+            let e = h.Z.getChannel(m.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? E.ZY5.DM_CHANNEL : E.ZY5.GUILD_CHANNEL;
         }),
         { analyticsLocations: A } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
@@ -54,19 +54,19 @@ function b(e) {
             location_stack: A
         });
     }, [y, A]),
-    (O || R) && b < 0)
-        ? (0, r.jsx)(h.ZP, {
+    (O || R) && T < 0)
+        ? (0, r.jsx)(p.ZP, {
               type: v.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
               subscriptionTier: v.Si.TIER_2,
-              context: b,
+              context: T,
               discountOffer: N,
               trialOffer: C,
-              children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
+              children: I.intl.format(I.t.BNAIBQ, { onLearnMore: S })
           })
         : a
           ? (0, r.jsx)(l.Clickable, {
-                className: S.iconOnly,
-                onClick: () => T(),
+                className: b.iconOnly,
+                onClick: () => S(),
                 children: (0, r.jsx)(l.Tooltip, {
                     text: I.intl.string(I.t['+eFIjY']),
                     position: 'top',
@@ -74,23 +74,23 @@ function b(e) {
                         (0, r.jsx)(l.NitroWheelIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: S.premium,
+                            className: b.premium,
                             ...e
                         })
                 })
             })
           : (0, r.jsxs)('div', {
-                className: s()(S.root, n),
+                className: s()(b.root, n),
                 children: [
                     (0, r.jsx)(l.NitroWheelIcon, {
                         size: 'md',
-                        className: S.premium,
+                        className: b.premium,
                         color: d.JX.PREMIUM_TIER_2
                     }),
                     (0, r.jsx)(l.Text, {
-                        className: S.text,
+                        className: b.text,
                         variant: 'text-sm/normal',
-                        children: I.intl.format(I.t.BNAIBQ, { onLearnMore: T })
+                        children: I.intl.format(I.t.BNAIBQ, { onLearnMore: S })
                     })
                 ]
             });

@@ -15,19 +15,19 @@ var r = n(200651),
     d = n(997945),
     f = n(630117),
     _ = n(441319),
-    h = n(981631),
-    p = n(388032),
+    p = n(981631),
+    h = n(388032),
     m = n(453251);
-let g = () => [p.intl.string(p.t.EgWTY2), p.intl.string(p.t.umBn5e), p.intl.string(p.t.dG1wDw), p.intl.string(p.t.SesI4e), p.intl.string(p.t.RnMLvr)],
+let g = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.string(h.t.dG1wDw), h.intl.string(h.t.SesI4e), h.intl.string(h.t.RnMLvr)],
     E = () => {
         var e;
-        return null !== (e = l().sample(g())) && void 0 !== e ? e : p.intl.string(p.t.EgWTY2);
+        return null !== (e = l().sample(g())) && void 0 !== e ? e : h.intl.string(h.t.EgWTY2);
     };
 function v(e) {
-    let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: p = !1 } = e,
+    let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: h = !1 } = e,
         [g, v] = i.useState((0, _.aW)(t).name),
         I = t === d.Ru.PIRATE,
-        S = (0, u.useRadioItem)({
+        b = (0, u.useRadioItem)({
             label: g,
             isSelected: o
         });
@@ -40,14 +40,14 @@ function v(e) {
                 children: [
                     (0, r.jsx)(u.Clickable, {
                         ...e,
-                        ...S,
-                        tabIndex: null != l ? l : S.tabIndex,
+                        ...b,
+                        tabIndex: null != l ? l : b.tabIndex,
                         className: s()(m.appIconSelection, { [m.selected]: o }, n),
-                        onClick: o ? h.dG4 : () => (null == a ? void 0 : a(t)),
+                        onClick: o ? p.dG4 : () => (null == a ? void 0 : a(t)),
                         children: f
                     }),
                     o && (0, r.jsx)(c.oK, {}),
-                    p &&
+                    h &&
                         (0, r.jsx)('div', {
                             className: m.lockedBadgeContainer,
                             children: (0, r.jsx)(u.LockIcon, {

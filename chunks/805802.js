@@ -27,8 +27,8 @@ function c(e, t) {
                 u,
                 c,
                 _,
-                h,
                 p,
+                h,
                 m,
                 g =
                     ((n = e),
@@ -37,8 +37,8 @@ function c(e, t) {
                     (u = []),
                     (c = []),
                     (_ = []),
-                    (p = (h = (0, l.o)(n)).dtstart),
-                    (m = h.tzid),
+                    (h = (p = (0, l.o)(n)).dtstart),
+                    (m = p.tzid),
                     (function (e, t) {
                         if ((void 0 === t && (t = !1), !(e = e && e.trim()))) throw Error('Invalid empty string');
                         if (!t) return e.split(/\s/);
@@ -100,7 +100,7 @@ function c(e, t) {
                         }
                     }),
                     {
-                        dtstart: p,
+                        dtstart: h,
                         tzid: m,
                         rrulevals: s,
                         rdatevals: u,
@@ -110,33 +110,33 @@ function c(e, t) {
                 E = g.rrulevals,
                 v = g.rdatevals,
                 I = g.exrulevals,
-                S = g.exdatevals,
-                T = g.dtstart,
-                b = g.tzid,
+                b = g.exdatevals,
+                S = g.dtstart,
+                T = g.tzid,
                 y = !1 === t.cache;
-            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || E.length > 1 || v.length || I.length || S.length)) {
+            if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || E.length > 1 || v.length || I.length || b.length)) {
                 var A = new a.p(y);
                 return (
-                    A.dtstart(T),
-                    A.tzid(b || void 0),
+                    A.dtstart(S),
+                    A.tzid(T || void 0),
                     E.forEach(function (e) {
-                        A.rrule(new i.Ci(d(e, T, b), y));
+                        A.rrule(new i.Ci(d(e, S, T), y));
                     }),
                     v.forEach(function (e) {
                         A.rdate(e);
                     }),
                     I.forEach(function (e) {
-                        A.exrule(new i.Ci(d(e, T, b), y));
+                        A.exrule(new i.Ci(d(e, S, T), y));
                     }),
-                    S.forEach(function (e) {
+                    b.forEach(function (e) {
                         A.exdate(e);
                     }),
-                    t.compatible && t.dtstart && A.rdate(T),
+                    t.compatible && t.dtstart && A.rdate(S),
                     A
                 );
             }
             var N = E[0] || {};
-            return new i.Ci(d(N, N.dtstart || t.dtstart || T, N.tzid || t.tzid || b), y);
+            return new i.Ci(d(N, N.dtstart || t.dtstart || S, N.tzid || t.tzid || T), y);
         })(
             e,
             (function (e) {

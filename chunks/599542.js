@@ -12,7 +12,7 @@ n.d(t, {
         return o;
     },
     gn: function () {
-        return b;
+        return T;
     },
     lq: function () {
         return l;
@@ -76,14 +76,14 @@ function f(e, t = {}) {
     return i;
 }
 let _ = new Map(),
-    h = new Set();
-function p() {
+    p = new Set();
+function h() {
     if ('undefined' == typeof window) return;
     let e = (t) => {
         let n = _.get(t.target);
         if (n && (n.delete(t.propertyName), 0 === n.size && (t.target.removeEventListener('transitioncancel', e), _.delete(t.target)), 0 === _.size)) {
-            for (let e of h) e();
-            h.clear();
+            for (let e of p) e();
+            p.clear();
         }
     };
     document.body.addEventListener('transitionrun', (t) => {
@@ -106,7 +106,7 @@ function m(e) {
         [e]
     );
 }
-'undefined' != typeof document && ('loading' !== document.readyState ? p() : document.addEventListener('DOMContentLoaded', p));
+'undefined' != typeof document && ('loading' !== document.readyState ? h() : document.addEventListener('DOMContentLoaded', h));
 function g(e) {
     let { ref: t, onResize: n } = e;
     (0, r.useEffect)(() => {
@@ -160,22 +160,22 @@ function I() {
         height: (null == E ? void 0 : E.height) || window.innerHeight
     };
 }
-function S(e) {
+function b(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && ((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.brands.some((t) => e.test(t.brand))) || e.test(window.navigator.userAgent));
 }
-function T(e) {
+function S(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
-function b() {
-    return T(/^iPhone/i) || T(/^iPad/i) || (T(/^Mac/i) && navigator.maxTouchPoints > 1);
+function T() {
+    return S(/^iPhone/i) || S(/^iPad/i) || (S(/^Mac/i) && navigator.maxTouchPoints > 1);
 }
 function y() {
     return (
-        S(/AppleWebKit/i) &&
+        b(/AppleWebKit/i) &&
         !(function () {
-            return S(/Chrome/i);
+            return b(/Chrome/i);
         })()
     );
 }

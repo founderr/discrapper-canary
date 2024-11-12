@@ -15,20 +15,20 @@ var i = n(620662),
     d = n(103479),
     f = n(191764),
     _ = n(238607),
-    h = n(414402),
-    p = n(934393),
+    p = n(414402),
+    h = n(934393),
     m = n(715547),
     g = n(981631);
 function E(e) {
     let { user: t, currentUser: n, activity: E, onAction: v, onClose: I } = e;
     return (0, o.Z)(E)
-        ? (0, r.jsx)(p.Z, {
+        ? (0, r.jsx)(h.Z, {
               platformType: g.ABu.XBOX,
               icon: () => (0, r.jsx)(c.Z, {}),
               onAction: v
           })
         : (0, s.Z)(E)
-          ? (0, r.jsx)(p.Z, {
+          ? (0, r.jsx)(h.Z, {
                 platformType: g.ABu.PLAYSTATION,
                 icon: () => (0, r.jsx)(u.Z, {}),
                 onAction: v
@@ -60,7 +60,7 @@ function E(e) {
                         onAction: v
                     })
                   : (0, i.Z)(E, g.xjy.INSTANCE)
-                    ? (0, r.jsx)(h.Z, {
+                    ? (0, r.jsx)(p.Z, {
                           user: t,
                           activity: E,
                           onAction: v

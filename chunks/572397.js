@@ -1,6 +1,6 @@
 n.d(t, {
     J: function () {
-        return p;
+        return h;
     },
     q: function () {
         return m;
@@ -18,10 +18,10 @@ var r = n(192379),
     d = n(514361),
     f = n(981631),
     _ = n(474936),
-    h = n(874893);
-let p = () => {
+    p = n(874893);
+let h = () => {
         let e = (0, i.e7)([d.Z], () => d.Z.gradientPreset),
-            t = (0, i.e7)([o.ZP], () => o.ZP.useSystemTheme === h.K.ON),
+            t = (0, i.e7)([o.ZP], () => o.ZP.useSystemTheme === p.K.ON),
             [n, a] = (0, r.useState)(t);
         return (
             (0, r.useEffect)(() => {
@@ -29,7 +29,7 @@ let p = () => {
             }, [e, t]),
             (0, r.useCallback)(() => {
                 if (null == e) return;
-                if (((0, c.kj)(), !!n)) (0, s.hi)(h.K.ON);
+                if (((0, c.kj)(), !!n)) (0, s.hi)(p.K.ON);
             }, [e, n])
         );
     },

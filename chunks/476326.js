@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: function () {
-        return p;
+        return h;
     },
     ow: function () {
         return a;
     },
     rG: function () {
-        return h;
+        return p;
     }
 });
 var r,
@@ -32,11 +32,11 @@ function _(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
 ((r = a || (a = {}))[(r.REACT_NATIVE = 0)] = 'REACT_NATIVE'), (r[(r.WEB = 1)] = 'WEB'), ((i = s || (s = {}))[(i.FILE_ATTACHMENT = 0)] = 'FILE_ATTACHMENT'), (i[(i.IMAGE_PICKER = 1)] = 'IMAGE_PICKER');
-class p extends o.EventEmitter {
+class h extends o.EventEmitter {
     cancel() {}
     resetState() {
         return this;

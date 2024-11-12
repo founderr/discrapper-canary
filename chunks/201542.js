@@ -10,14 +10,14 @@ var r = n(200651),
     d = n(640108),
     f = n(793148),
     _ = n(585483),
-    h = n(70956),
-    p = n(36703),
+    p = n(70956),
+    h = n(36703),
     m = n(347312),
     g = n(981631),
     E = n(388032),
     v = n(506574);
 let I = i.lazy(() => Promise.all([n.e('26460'), n.e('89792')]).then(n.bind(n, 711635)));
-function S(e) {
+function b(e) {
     let { played: t, duration: n, currentTime: i } = e,
         a = null == n ? '--:--' : t ? (0, d.yv)(Math.ceil(n - i)) : (0, d.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
@@ -28,7 +28,7 @@ function S(e) {
     });
 }
 t.Z = i.memo(function (e) {
-    var t, n, a, d, T, b;
+    var t, n, a, d, S, T;
     let y,
         { src: A, volume: N = 1, onVolumeChange: C, onMute: R, waveform: O, durationSecs: D, onVolumeShow: L, onVolumeHide: x, onPlay: w, onPause: M, onError: P } = e,
         k = i.useRef(null),
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
         }, [P]),
         es = i.useCallback(
             (e) => {
-                let t = (0, p.A)(e, 1);
+                let t = (0, h.A)(e, 1);
                 V(0 === t), J(t), null == C || C(t);
             },
             [C]
@@ -99,7 +99,7 @@ t.Z = i.memo(function (e) {
         if (K || j) {
             if (j) {
                 var e, t;
-                (ed.current = performance.now()), null == w || w(!1, U, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * h.Z.Millis.SECOND);
+                (ed.current = performance.now()), null == w || w(!1, U, (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.duration) && void 0 !== t ? t : 0) * p.Z.Millis.SECOND);
             } else {
                 let e = performance.now(),
                     t = ed.current;
@@ -124,10 +124,10 @@ t.Z = i.memo(function (e) {
             );
         }, [t, n, a]),
         (d = A),
-        (T = j),
-        (b = H),
+        (S = j),
+        (T = H),
         i.useEffect(() => {
-            if (!!T)
+            if (!!S)
                 return (
                     _.S.dispatch(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, { src: d }),
                     _.S.subscribe(g.CkL.VOICE_MESSAGE_PLAYBACK_STARTED, e),
@@ -137,9 +137,9 @@ t.Z = i.memo(function (e) {
                 );
             function e(e) {
                 let { src: t } = e;
-                if (d !== t) b(!1);
+                if (d !== t) T(!1);
             }
-        }, [d, T, b]);
+        }, [d, S, T]);
     let ef = j ? l.PauseIcon : l.PlayIcon,
         e_ = j ? E.intl.string(E.t.ZcgDJS) : E.intl.string(E.t.RscU7O);
     'Safari' === platform.name
@@ -170,22 +170,22 @@ t.Z = i.memo(function (e) {
               playing: j && !Y,
               children: (0, r.jsx)('source', { src: A })
           }));
-    let eh = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        { enabled: ep } = (0, l.useRedesignIconContext)();
+    let ep = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        { enabled: eh } = (0, l.useRedesignIconContext)();
     return (0, r.jsxs)('div', {
         className: s()(v.container, { [v.playing]: j }),
         onMouseEnter: et,
         children: [
             (0, r.jsx)('div', {
                 className: v.rippleContainer,
-                children: (0, r.jsx)('div', { className: s()(v.ripple, { [v.reducedMotion]: eh }) })
+                children: (0, r.jsx)('div', { className: s()(v.ripple, { [v.reducedMotion]: ep }) })
             }),
             (0, r.jsx)(l.Clickable, {
                 className: v.playButtonContainer,
                 onClick: ee,
                 'aria-label': e_,
                 children: (0, r.jsx)(ef, {
-                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !ep && !j }),
+                    className: s()(v.playIcon, { [v.oldPlayIconSpacing]: !eh && !j }),
                     size: 'custom',
                     color: 'currentColor',
                     width: 18,
@@ -203,7 +203,7 @@ t.Z = i.memo(function (e) {
                 onDragStart: el,
                 onDragEnd: eu
             }),
-            (0, r.jsx)(S, {
+            (0, r.jsx)(b, {
                 played: K,
                 currentTime: U,
                 duration: B
@@ -214,7 +214,7 @@ t.Z = i.memo(function (e) {
                 iconColor: 'currentColor',
                 sliderWrapperClassName: v.volumeSlider,
                 muted: F,
-                value: (0, p.P)(X, 1),
+                value: (0, h.P)(X, 1),
                 minValue: 0,
                 maxValue: 1,
                 currentWindow: window,

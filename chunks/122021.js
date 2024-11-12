@@ -21,8 +21,8 @@ var r = n(192379),
     d = n(70956),
     f = n(981631),
     _ = n(420212);
-let h = { [f.ABu.INSTAGRAM]: ['1036753656588017764'] },
-    p = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+let p = { [f.ABu.INSTAGRAM]: ['1036753656588017764'] },
+    h = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
     m = 30 * d.Z.Millis.DAY;
 function g(e) {
     let { forUserProfile: t } = e,
@@ -30,7 +30,7 @@ function g(e) {
         r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging;
     return (e) => {
         var i;
-        return e.type === f.ABu.PLAYSTATION_STAGING ? r : !!(void 0 !== n && (null === (i = h[e.type]) || void 0 === i ? void 0 : i.includes(n.id))) || !!t || e.enabled;
+        return e.type === f.ABu.PLAYSTATION_STAGING ? r : !!(void 0 !== n && (null === (i = p[e.type]) || void 0 === i ? void 0 : i.includes(n.id))) || !!t || e.enabled;
     };
 }
 function E() {
@@ -43,7 +43,7 @@ function E() {
     return a().sortBy(o.Z.filter(t), [
         (e) => {
             var t;
-            return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + m);
+            return !(h.has(e.type) && Date.now() < (null !== (t = h.get(e.type)) && void 0 !== t ? t : 0) + m);
         },
         (e) => n.has(e.type),
         (e) => e.hasMetadata,

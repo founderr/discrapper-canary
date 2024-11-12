@@ -21,7 +21,7 @@ n.d(t, {
         return _;
     },
     tB: function () {
-        return h;
+        return p;
     },
     yG: function () {
         return c;
@@ -40,4 +40,4 @@ let l = '>=19.0.0',
     f = '>=10.0.17763',
     _ = '>=10.0.22000';
 ((i = s || (s = {})).GUILD = 'guild'), (i.CALL = 'call');
-let h = o.T.StreamNotificationsGuildMaxSize;
+let p = o.T.StreamNotificationsGuildMaxSize;

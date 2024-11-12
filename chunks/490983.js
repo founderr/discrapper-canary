@@ -10,16 +10,16 @@ var r,
     d = n(913527),
     f = n.n(d),
     _ = n(442837),
-    h = n(570140),
-    p = n(812206),
+    p = n(570140),
+    h = n(812206),
     m = n(594190),
     g = n(592745),
     E = n(706454),
     v = n(757266),
     I = n(77498),
-    S = n(283595),
-    T = n(246946),
-    b = n(230307),
+    b = n(283595),
+    S = n(246946),
+    T = n(230307),
     y = n(799777),
     A = n(417363),
     N = n(941128),
@@ -60,7 +60,7 @@ let F = {
     }),
     W = (0, R.oH)((e) => e.filter((e) => null != e.libraryApplication && e.libraryApplication.isHidden()));
 function K(e, t) {
-    let n = b.Z.getCurrentUserStatisticsForApplication(e.id);
+    let n = T.Z.getCurrentUserStatisticsForApplication(e.id);
     if (null != n) return new Date(n.last_played_at).getTime();
     let r = t[e.id];
     return null != r ? r : 0;
@@ -73,12 +73,12 @@ function z() {
             let n = I.Z.getGameByGameData(e);
             return null != n ? ((t[n.id] = e.lastFocused * C.Z.Millis.SECOND), n.id) : null;
         }),
-        i = Object.values(S.Z.getAllLibraryApplications())
+        i = Object.values(b.Z.getAllLibraryApplications())
             .map((r) =>
                 (function (e, t, n, r, i) {
                     var a, s;
                     if (!i && t.has(e.id)) return null;
-                    let o = p.Z.getApplication(e.id);
+                    let o = h.Z.getApplication(e.id);
                     if (null == o) return null;
                     let l = K(o, n);
                     if ((t.add(e.id), !(0, D.Je)(e) && !A.Z.isInstalled(e.id, e.branchId))) return null;
@@ -92,15 +92,15 @@ function z() {
                         isLaunching: g.Z.launchingGames.has(e.id),
                         isRunning: r.has(e.id),
                         isLaunchable: (0, w.t)({
-                            LibraryApplicationStore: S.Z,
+                            LibraryApplicationStore: b.Z,
                             LaunchableGameStore: g.Z,
                             DispatchApplicationStore: A.Z,
                             ConnectedAppsStore: v.Z,
                             applicationId: e.id,
                             branchId: e.branchId
                         }),
-                        isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
-                        shouldShowInLibrary: (0, D.d0)(o, e, T.Z),
+                        isUpdatingFlags: b.Z.isUpdatingFlags(e.id, e.branchId),
+                        shouldShowInLibrary: (0, D.d0)(o, e, S.Z),
                         defaultAction: (0, M.i)(e, A.Z, N.Z)
                     };
                 })(r, n, t, e, !0)
@@ -110,7 +110,7 @@ function z() {
             ...r
                 .map((r) =>
                     (function (e, t, n, r) {
-                        let i = null != e ? p.Z.getApplication(e) : null;
+                        let i = null != e ? h.Z.getApplication(e) : null;
                         if (null == i || null == e || t.has(e)) return null;
                         let a = K(i, n);
                         return (
@@ -124,7 +124,7 @@ function z() {
                                 isLaunching: g.Z.launchingGames.has(e),
                                 isRunning: r.has(e),
                                 isLaunchable: (0, w.t)({
-                                    LibraryApplicationStore: S.Z,
+                                    LibraryApplicationStore: b.Z,
                                     LaunchableGameStore: g.Z,
                                     DispatchApplicationStore: A.Z,
                                     ConnectedAppsStore: v.Z,
@@ -143,7 +143,7 @@ function z() {
             ...i
         ].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
-        (B = null != I.Z.lastFetched && S.Z.fetched),
+        (B = null != I.Z.lastFetched && b.Z.fetched),
         !c().isEqual(a, U) &&
             ((U = a),
             L.isPlatformEmbedded &&
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = _.ZP.Store) {
     initialize() {
-        this.syncWith([p.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, S.Z, b.Z, T.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
+        this.syncWith([h.Z, I.Z, g.Z, m.ZP, A.Z, N.Z, b.Z, T.Z, S.Z, v.Z], z, 200), this.syncWith([y.Z, E.default], () => !0);
     }
     get applicationFilterQuery() {
         return G;
@@ -193,7 +193,7 @@ class q extends (r = _.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new q(h.Z, {
+    (t.Z = new q(p.Z, {
         LIBRARY_APPLICATION_FILTER_UPDATE: function (e) {
             let { query: t } = e;
             G = t;

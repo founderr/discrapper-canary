@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     Sg: function () {
-        return h;
+        return p;
     },
     VP: function () {
         return m;
@@ -15,7 +15,7 @@ n.d(t, {
         return g;
     },
     g7: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -30,7 +30,7 @@ var r = n(512722),
     d = n(895924),
     f = n(981631);
 function _(e) {
-    let { channelId: t, command: n, section: r, location: a, initialValues: o, triggerSection: l, queryLength: u, sectionName: c, query: f, searchResultsPosition: _, source: h, commandOrigin: p } = e;
+    let { channelId: t, command: n, section: r, location: a, initialValues: o, triggerSection: l, queryLength: u, sectionName: c, query: f, searchResultsPosition: _, source: p, commandOrigin: h } = e;
     null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
         s.Z.dispatch({
             type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
@@ -44,18 +44,18 @@ function _(e) {
             sectionName: c,
             query: f,
             searchResultsPosition: _,
-            source: h,
-            commandOrigin: p
+            source: p,
+            commandOrigin: h
         });
 }
-function h(e, t) {
+function p(e, t) {
     s.Z.dispatch({
         type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
         channelId: e,
         commandId: t
     });
 }
-function p(e, t) {
+function h(e, t) {
     s.Z.dispatch({
         type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
         channelId: e,
@@ -63,7 +63,7 @@ function p(e, t) {
     });
 }
 function m(e, t) {
-    p(
+    h(
         e,
         Object.fromEntries(
             Object.entries(t).map((e) => {
@@ -83,11 +83,11 @@ function E(e, t, n) {
     var r;
     i()(null != t.autocomplete, 'Missing autocomplete context');
     let { query: d, name: _ } = t.autocomplete,
-        h = u.default.fromTimestamp(Date.now());
+        p = u.default.fromTimestamp(Date.now());
     if (
         (s.Z.dispatch({
             type: 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',
-            nonce: h,
+            nonce: p,
             channelId: t.channel.id,
             query: d,
             name: _
@@ -104,14 +104,14 @@ function E(e, t, n) {
                     channel_id: t.channel.id,
                     session_id: l.default.getSessionId(),
                     data: n,
-                    nonce: h
+                    nonce: p
                 },
                 timeout: 3000
             })
             .catch(() => {
                 s.Z.dispatch({
                     type: 'INTERACTION_FAILURE',
-                    nonce: h
+                    nonce: p
                 });
             });
 }

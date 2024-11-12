@@ -25,10 +25,10 @@ function _() {
     let e = m();
     c = setInterval(() => d(e), 100);
 }
-function h() {
+function p() {
     f(o.pause.bind(o));
 }
-function p() {
+function h() {
     f(o.stop.bind(o));
 }
 function m() {
@@ -42,8 +42,8 @@ class g extends a.Z {
             (n = 'actions'),
             (r = {
                 VIBING_WUMPUS_PLAY_MUSIC: _,
-                VIBING_WUMPUS_STOP_MUSIC: p,
-                VIBING_WUMPUS_PAUSE_MUSIC: h
+                VIBING_WUMPUS_STOP_MUSIC: h,
+                VIBING_WUMPUS_PAUSE_MUSIC: p
             }),
             n in t
                 ? Object.defineProperty(t, n, {

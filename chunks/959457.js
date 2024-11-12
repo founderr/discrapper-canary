@@ -9,16 +9,16 @@ var a,
     d = n(392711),
     f = n.n(d),
     _ = n(442837),
-    h = n(46973),
-    p = n(570140),
+    p = n(46973),
+    h = n(570140),
     m = n(594190),
     g = n(444852),
     E = n(569545),
     v = n(687516),
     I = n(139656),
-    S = n(358085),
-    T = n(199902),
-    b = n(314897),
+    b = n(358085),
+    S = n(199902),
+    T = n(314897),
     y = n(131951),
     A = n(158776),
     N = n(19780),
@@ -47,7 +47,7 @@ function U(e) {
             })
             .forEach((e) => {
                 let { stats: t } = e;
-                p.Z.dispatch({
+                h.Z.dispatch({
                     type: 'STREAM_STATS_UPDATE',
                     stats: t
                 });
@@ -72,8 +72,8 @@ class B extends (a = _.ZP.Store) {
     getStatsHistory(e, t, n) {
         if (!(0, I.Z)(y.Z) || null == t) return null;
         if (n) {
-            let n = T.Z.getActiveStreamForUser(t, e);
-            if (null == n || 0 === T.Z.getViewerIds(n).length) return null;
+            let n = S.Z.getActiveStreamForUser(t, e);
+            if (null == n || 0 === S.Z.getViewerIds(n).length) return null;
         }
         return P.map((e) =>
             n
@@ -175,7 +175,7 @@ class B extends (a = _.ZP.Store) {
           })
         : (s[o] = l),
     (t.Z = new B(
-        p.Z,
+        h.Z,
         !y.Z.isSupported() || __OVERLAY__
             ? {}
             : {
@@ -198,7 +198,7 @@ class B extends (a = _.ZP.Store) {
                               streamType: t,
                               guildId: n,
                               channelId: r,
-                              ownerId: b.default.getId()
+                              ownerId: T.default.getId()
                           });
                       if (
                           ((O[o] = i),
@@ -245,7 +245,7 @@ class B extends (a = _.ZP.Store) {
                               streamSourceType: (function (e) {
                                   var t, n, r;
                                   if (null == e) return 'unknown';
-                                  if (S.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
+                                  if (b.isPlatformEmbedded || (null === (t = platform) || void 0 === t ? void 0 : t.name) === 'Chrome') {
                                       if (e.startsWith('web-contents-media-stream:')) return 'tab';
                                       if (e.startsWith('window:')) return 'window';
                                       else if (e.startsWith('screen:')) return 'screen';
@@ -271,7 +271,7 @@ class B extends (a = _.ZP.Store) {
                               })),
                               (M[t] = o);
                       }
-                      (P = []), y.Z.getMediaEngine().on(h.aB.ConnectionStats, U);
+                      (P = []), y.Z.getMediaEngine().on(p.aB.ConnectionStats, U);
                   },
                   STREAM_SERVER_UPDATE: function (e) {
                       let t = M[e.streamKey];
@@ -288,7 +288,7 @@ class B extends (a = _.ZP.Store) {
                       let { streamKey: t } = e,
                           n = M[t];
                       if (null == n) return !1;
-                      t === i && ((i = null), y.Z.getMediaEngine().off(h.aB.ConnectionStats, U)), n.destroy('stream-end'), delete M[t];
+                      t === i && ((i = null), y.Z.getMediaEngine().off(p.aB.ConnectionStats, U)), n.destroy('stream-end'), delete M[t];
                   },
                   STREAM_STATS_UPDATE: function (e) {
                       let { stats: t } = e;

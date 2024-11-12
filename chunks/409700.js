@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(710111),
     f = n(388032),
     _ = n(629152),
-    h = n(423298);
-function p() {
+    p = n(423298);
+function h() {
     var e, t;
     let n = null !== (t = null === (e = u.kU.useSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== t ? t : 100;
     return (0, r.jsxs)(s.Clickable, {
@@ -49,7 +49,7 @@ function m(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.Popout, {
-                renderPopout: () => (0, r.jsx)(p, {}),
+                renderPopout: () => (0, r.jsx)(h, {}),
                 position: 'top',
                 shouldShow: n,
                 onRequestClose: () => o(!1),
@@ -65,11 +65,11 @@ function m(e) {
                                 ...e,
                                 'aria-label': f.intl.string(f.t['19lt29']),
                                 onClick: u,
-                                className: h.secondaryButtonRefresh,
+                                className: p.secondaryButtonRefresh,
                                 children: (0, r.jsx)(s.VoiceNormalIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: h.secondaryIcon
+                                    className: p.secondaryIcon
                                 })
                             })
                     })

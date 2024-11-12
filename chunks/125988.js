@@ -10,22 +10,22 @@ var r = n(192379),
     d = n(660097);
 t.Z = (e) => {
     var t;
-    let { user: n, guildId: f, size: _, onlyAnimateOnHover: h = !1, showPending: p = !1, showTryItOut: m = !1, avatarDecorationOverride: g } = e,
+    let { user: n, guildId: f, size: _, onlyAnimateOnHover: p = !1, showPending: h = !1, showTryItOut: m = !1, avatarDecorationOverride: g } = e,
         [E, v] = r.useState(!1),
-        { canAnimate: I } = (0, a.j)(E, h),
-        S = (0, i.e7)([o.ZP], () => (null != f && null != n ? o.ZP.getMember(f, n.id) : null)),
-        [T, b] = (0, i.Wu)([l.default], () => {
+        { canAnimate: I } = (0, a.j)(E, p),
+        b = (0, i.e7)([o.ZP], () => (null != f && null != n ? o.ZP.getMember(f, n.id) : null)),
+        [S, T] = (0, i.Wu)([l.default], () => {
             var e;
             return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)];
         }),
-        y = null == S ? (null == b ? void 0 : b.avatarDecoration) : null === S.avatarDecoration ? null : null !== (t = S.avatarDecoration) && void 0 !== t ? t : null == b ? void 0 : b.avatarDecoration,
+        y = null == b ? (null == T ? void 0 : T.avatarDecoration) : null === b.avatarDecoration ? null : null !== (t = b.avatarDecoration) && void 0 !== t ? t : null == T ? void 0 : T.avatarDecoration,
         { pendingAvatarDecoration: A } = (0, s.Z)({
             isTryItOut: m,
             guildId: f
         }),
-        N = p && void 0 !== A && void 0 !== T && T === (null == n ? void 0 : n.id),
+        N = h && void 0 !== A && void 0 !== S && S === (null == n ? void 0 : n.id),
         C = null != f && null === A,
-        R = (0, c.Z)(N ? (C ? (null == b ? void 0 : b.avatarDecoration) : null != A ? A : y) : null != y ? y : null == b ? void 0 : b.avatarDecoration),
+        R = (0, c.Z)(N ? (C ? (null == T ? void 0 : T.avatarDecoration) : null != A ? A : y) : null != y ? y : null == T ? void 0 : T.avatarDecoration),
         O = r.useMemo(
             () =>
                 (0, u.NZ)({

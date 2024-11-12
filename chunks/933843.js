@@ -23,8 +23,8 @@ var r = n(314897),
     d = n(1163),
     f = n(474936),
     _ = n(981631),
-    h = n(37113);
-function p() {
+    p = n(37113);
+function h() {
     let e = s.default.getCurrentUser();
     return null != e && !(0, l.I5)(e, f.p9.TIER_1);
 }
@@ -39,14 +39,14 @@ function m() {
 }
 function g() {
     let { enabled: e } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return e && c.Z.shouldFetch() && p() && !m();
+    return e && c.Z.shouldFetch() && h() && !m();
 }
 function E(e) {
     let { enabled: t } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return t && c.Z.shouldActivate(e) && p() && !m();
+    return t && c.Z.shouldActivate(e) && h() && !m();
 }
 function v(e, t) {
-    return e === h.LY.RESOLUTION_720 && t !== h.ws.FPS_60;
+    return e === p.LY.RESOLUTION_720 && t !== p.ws.FPS_60;
 }
 function I(e) {
     let { activated: t } = (0, u.k)(e);

@@ -10,7 +10,7 @@ var r = n(704215),
     d = n(828312),
     f = n(994840),
     _ = n(981631);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,14 +23,14 @@ function h(e, t, n) {
         e
     );
 }
-class p extends a.Z {
+class h extends a.Z {
     constructor(...e) {
         super(...e),
-            h(this, 'actions', {
+            p(this, 'actions', {
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e)
             }),
-            h(this, 'handleConnectionOpen', (e) => {
+            p(this, 'handleConnectionOpen', (e) => {
                 let t = (0, f.jZ)('SignUpManager'),
                     n = (0, d.t)('SignUpManager', !1),
                     a = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
@@ -52,7 +52,7 @@ class p extends a.Z {
                     return;
                 }
             }),
-            h(this, 'handleChannelSelect', (e) => {
+            p(this, 'handleChannelSelect', (e) => {
                 let { guildId: t } = e;
                 if (null == t) return;
                 let n = (0, s.un)(r.z.GAME_ONE_USER_SIGNUPS),
@@ -61,9 +61,9 @@ class p extends a.Z {
                 let c = (0, d.t)('SignUpManager'),
                     f = (0, u.e)('SignUpManager');
                 if (!c && !f) return;
-                let h = o.Z.getGuild(t);
-                if (null != h) {
-                    if (h.hasFeature(_.oNc.VALORANT_L30) && l.Z.can(_.Plq.MANAGE_GUILD, h) && !n) {
+                let p = o.Z.getGuild(t);
+                if (null != p) {
+                    if (p.hasFeature(_.oNc.VALORANT_L30) && l.Z.can(_.Plq.MANAGE_GUILD, p) && !n) {
                         i.Z.dispatch({
                             type: 'ENABLE_GUILD_SIGN_UP',
                             key: 'valorant-admin',
@@ -71,7 +71,7 @@ class p extends a.Z {
                         });
                         return;
                     }
-                    if (h.hasFeature(_.oNc.GENSHIN_L30) && l.Z.can(_.Plq.MANAGE_GUILD, h) && !a) {
+                    if (p.hasFeature(_.oNc.GENSHIN_L30) && l.Z.can(_.Plq.MANAGE_GUILD, p) && !a) {
                         i.Z.dispatch({
                             type: 'ENABLE_GUILD_SIGN_UP',
                             key: 'genshin-admin',
@@ -83,4 +83,4 @@ class p extends a.Z {
             });
     }
 }
-t.Z = new p();
+t.Z = new h();

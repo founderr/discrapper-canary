@@ -32,7 +32,7 @@ var l,
 let S = [
     {
         name: 'audio',
-        extensions: ['mp3', 'wav', 'ogg', 'x-wav', 'mp4']
+        extensions: ['mp3', 'wav', 'ogg', 'opus', 'x-wav', 'mp4']
     }
 ];
 function I(e) {

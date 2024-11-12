@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     },
     ZP: function () {
-        return p;
+        return h;
     },
     s5: function () {
         return m;
@@ -20,10 +20,10 @@ var r,
     d = n(934415),
     f = n(782769),
     _ = n(983695),
-    h = n(981631);
-function p(e) {
+    p = n(981631);
+function h(e) {
     var t, n, r;
-    let { userId: i, activity: a, application: s, channelId: o, currentUser: l, isActivitiesEnabledForCurrentPlatform: u, ChannelStore: c, VoiceStateStore: f, PermissionStore: p, GuildStore: m } = e;
+    let { userId: i, activity: a, application: s, channelId: o, currentUser: l, isActivitiesEnabledForCurrentPlatform: u, ChannelStore: c, VoiceStateStore: f, PermissionStore: h, GuildStore: m } = e;
     if (null == i) return 8;
     if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == s ? void 0 : null === (t = s.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
     if (!u) return 5;
@@ -39,8 +39,8 @@ function p(e) {
         if ((null == e ? void 0 : e.afkChannelId) === E.id) return 9;
         let t = f.getCurrentClientVoiceChannelId(E.getGuildId()) === g,
             n = (0, d.rY)(E, f, m),
-            r = p.can(h.Plq.CONNECT, E);
-        if (!p.can(h.Plq.USE_EMBEDDED_ACTIVITIES, E)) return 1;
+            r = h.can(p.Plq.CONNECT, E);
+        if (!h.can(p.Plq.USE_EMBEDDED_ACTIVITIES, E)) return 1;
         if (E.isVocal() && !t) {
             if (n) return 3;
             if (!r) return 2;
@@ -55,7 +55,7 @@ function m(e) {
     return (0, a.e7)(
         [s.Z, c.Z, l.Z, o.Z],
         () =>
-            p({
+            h({
                 userId: t,
                 activity: n,
                 application: i,

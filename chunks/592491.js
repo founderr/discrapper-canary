@@ -140,7 +140,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        h = {
+        p = {
             className: 'module-access',
             keywords: a,
             returnBegin: !0,
@@ -168,7 +168,7 @@ e.exports = function (e) {
             contains: c
         };
     return (
-        d.push(h),
+        d.push(p),
         {
             name: 'ReasonML',
             aliases: ['re'],
@@ -250,7 +250,7 @@ e.exports = function (e) {
                         }
                     ].concat(c)
                 },
-                h
+                p
             ]
         }
     );

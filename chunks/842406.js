@@ -11,8 +11,8 @@ var l = 'undefined' != typeof BigInt,
     d = o(Number.prototype.valueOf),
     f = o(String.prototype.valueOf),
     _ = o(Boolean.prototype.valueOf);
-if (l) var h = o(BigInt.prototype.valueOf);
-if (u) var p = o(Symbol.prototype.valueOf);
+if (l) var p = o(BigInt.prototype.valueOf);
+if (u) var h = o(Symbol.prototype.valueOf);
 function m(e, t) {
     if ('object' != typeof e) return !1;
     try {
@@ -86,24 +86,24 @@ function I(e) {
     return 'undefined' != typeof WeakMap && (v.working ? v(e) : e instanceof WeakMap);
 }),
     (I.working = 'undefined' != typeof WeakSet && I(new WeakSet()));
-function S(e) {
+function b(e) {
     return '[object ArrayBuffer]' === c(e);
 }
-function T(e) {
-    return 'undefined' != typeof ArrayBuffer && (S.working ? S(e) : e instanceof ArrayBuffer);
+function S(e) {
+    return 'undefined' != typeof ArrayBuffer && (b.working ? b(e) : e instanceof ArrayBuffer);
 }
-function b(e) {
+function T(e) {
     return '[object DataView]' === c(e);
 }
 function y(e) {
-    return 'undefined' != typeof DataView && (b.working ? b(e) : e instanceof DataView);
+    return 'undefined' != typeof DataView && (T.working ? T(e) : e instanceof DataView);
 }
 (t.isWeakSet = function (e) {
     return I(e);
 }),
-    (S.working = 'undefined' != typeof ArrayBuffer && S(new ArrayBuffer())),
-    (t.isArrayBuffer = T),
-    (b.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && b(new DataView(new ArrayBuffer(1), 0, 1))),
+    (b.working = 'undefined' != typeof ArrayBuffer && b(new ArrayBuffer())),
+    (t.isArrayBuffer = S),
+    (T.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && T(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = y);
 var A = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function N(e) {
@@ -135,10 +135,10 @@ function D(e) {
     return m(e, _);
 }
 function L(e) {
-    return l && m(e, h);
+    return l && m(e, p);
 }
 function x(e) {
-    return u && m(e, p);
+    return u && m(e, h);
 }
 (t.isWebAssemblyCompiledModule = function (e) {
     return '[object WebAssembly.Module]' === c(e);
@@ -152,7 +152,7 @@ t.isBoxedPrimitive = function (e) {
     return R(e) || O(e) || D(e) || L(e) || x(e);
 };
 (t.isAnyArrayBuffer = function (e) {
-    return 'undefined' != typeof Uint8Array && (T(e) || C(e));
+    return 'undefined' != typeof Uint8Array && (S(e) || C(e));
 }),
     ['isProxy', 'isExternal', 'isModuleNamespaceObject'].forEach(function (e) {
         Object.defineProperty(t, e, {

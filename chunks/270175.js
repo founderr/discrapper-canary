@@ -22,14 +22,14 @@ var r = n(192379),
             a = e.hsv,
             f = e.hsl,
             _ = e.onChange,
-            h = e.onSwatchHover,
-            p = e.disableAlpha,
+            p = e.onSwatchHover,
+            h = e.disableAlpha,
             m = e.presetColors,
             g = e.renderers,
             E = e.styles,
             v = void 0 === E ? {} : E,
             I = e.className,
-            S = (0, s.default)(
+            b = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: d(
@@ -101,19 +101,19 @@ var r = n(192379),
                     },
                     v
                 ),
-                { disableAlpha: p }
+                { disableAlpha: h }
             );
         return r.createElement(
             'div',
             {
-                style: S.picker,
+                style: b.picker,
                 className: 'sketch-picker ' + (void 0 === I ? '' : I)
             },
             r.createElement(
                 'div',
-                { style: S.saturation },
+                { style: b.saturation },
                 r.createElement(l.OQ, {
-                    style: S.Saturation,
+                    style: b.Saturation,
                     hsl: f,
                     hsv: a,
                     onChange: _
@@ -122,26 +122,26 @@ var r = n(192379),
             r.createElement(
                 'div',
                 {
-                    style: S.controls,
+                    style: b.controls,
                     className: 'flexbox-fix'
                 },
                 r.createElement(
                     'div',
-                    { style: S.sliders },
+                    { style: b.sliders },
                     r.createElement(
                         'div',
-                        { style: S.hue },
+                        { style: b.hue },
                         r.createElement(l.PS, {
-                            style: S.Hue,
+                            style: b.Hue,
                             hsl: f,
                             onChange: _
                         })
                     ),
                     r.createElement(
                         'div',
-                        { style: S.alpha },
+                        { style: b.alpha },
                         r.createElement(l.xV, {
-                            style: S.Alpha,
+                            style: b.Alpha,
                             rgb: n,
                             hsl: f,
                             renderers: g,
@@ -149,19 +149,19 @@ var r = n(192379),
                         })
                     )
                 ),
-                r.createElement('div', { style: S.color }, r.createElement(l.QN, null), r.createElement('div', { style: S.activeColor }))
+                r.createElement('div', { style: b.color }, r.createElement(l.QN, null), r.createElement('div', { style: b.activeColor }))
             ),
             r.createElement(u.Z, {
                 rgb: n,
                 hsl: f,
                 hex: i,
                 onChange: _,
-                disableAlpha: p
+                disableAlpha: h
             }),
             r.createElement(c.Z, {
                 colors: m,
                 onClick: _,
-                onSwatchHover: h
+                onSwatchHover: p
             })
         );
     };

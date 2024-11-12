@@ -17,8 +17,8 @@ function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         [n, f] = (0, a.Wu)([c.Z], () => [c.Z.getMutualFriends(e), c.Z.isFetchingProfile(e)]),
         _ = (0, l.Z)(),
-        [h, p] = (0, r.useState)(null),
-        m = t && null == h && !f && null == n;
+        [p, h] = (0, r.useState)(null),
+        m = t && null == p && !f && null == n;
     (0, r.useEffect)(() => {
         if (!!m)
             (async () => {
@@ -28,7 +28,7 @@ function f(e) {
                         abortSignal: _
                     });
                 } catch (e) {
-                    p(new s.Hx(e));
+                    h(new s.Hx(e));
                 }
             })();
     }, [m, e, _]);

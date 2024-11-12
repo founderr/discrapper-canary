@@ -6,7 +6,7 @@ n.d(t, {
         return v;
     },
     Il: function () {
-        return S;
+        return b;
     },
     Jf: function () {
         return A;
@@ -15,7 +15,7 @@ n.d(t, {
         return O;
     },
     Um: function () {
-        return b;
+        return T;
     },
     eu: function () {
         return N;
@@ -27,7 +27,7 @@ n.d(t, {
         return y;
     },
     pk: function () {
-        return T;
+        return S;
     },
     qB: function () {
         return C;
@@ -45,13 +45,13 @@ var r = n(392711),
     d = n(598077),
     f = n(486472),
     _ = n(594174),
-    h = n(73346),
-    p = n(926491),
+    p = n(73346),
+    h = n(926491),
     m = n(981631),
     g = n(526761),
     E = n(388032);
 let v = async (e, t) => {
-        let { body: n } = await (0, h.Kb)(m.ANM.STICKER_PACK(e));
+        let { body: n } = await (0, p.Kb)(m.ANM.STICKER_PACK(e));
         return (
             s.Z.dispatch({
                 type: 'STICKER_PACK_FETCH_SUCCESS',
@@ -64,7 +64,7 @@ let v = async (e, t) => {
     },
     I = async function () {
         let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (p.Z.isFetchingStickerPacks || p.Z.hasLoadedStickerPacks) return;
+        if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
         s.Z.wait(() => {
             s.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
         });
@@ -79,14 +79,14 @@ let v = async (e, t) => {
             packs: t
         });
     },
-    S = async (e) => {
+    b = async (e) => {
         let { body: t } = await a.tn.get({ url: m.ANM.STICKER(e) });
         s.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
             sticker: t
         });
     },
-    T = async (e) => {
+    S = async (e) => {
         let { body: t } = await a.tn.get({ url: m.ANM.GUILD_STICKER_PACKS(e) });
         s.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
@@ -101,7 +101,7 @@ let v = async (e, t) => {
             )
         });
     },
-    b = async (e) => {
+    T = async (e) => {
         await a.tn.del({ url: m.ANM.GUILD_STICKER(e.guild_id, e.id) });
     },
     y = async (e, t) => {
@@ -144,7 +144,7 @@ function C(e, t) {
     });
 }
 function R(e) {
-    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != p.Z.getStickerById(e));
+    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
 }
 function O(e) {
     c.DZ.updateAsync(

@@ -9,16 +9,16 @@ var r,
     d = n(740362),
     f = n(936940),
     _ = n(620623),
-    h = n(50754),
-    p = n(722063),
+    p = n(50754),
+    h = n(722063),
     m = n(202934),
     g = n(531460),
     E = n(391673),
     v = o.setImmediate,
     I = o.clearImmediate,
-    S = o.process,
-    T = o.Dispatch,
-    b = o.Function,
+    b = o.process,
+    S = o.Dispatch,
+    T = o.Function,
     y = o.MessageChannel,
     A = o.String,
     N = 0,
@@ -47,8 +47,8 @@ var O = function (e) {
 (!v || !I) &&
     ((v = function (e) {
         m(arguments.length, 1);
-        var t = c(e) ? e : b(e),
-            n = h(arguments, 1);
+        var t = c(e) ? e : T(e),
+            n = p(arguments, 1);
         return (
             (C[++N] = function () {
                 l(t, void 0, n);
@@ -62,20 +62,20 @@ var O = function (e) {
     }),
     E
         ? (i = function (e) {
-              S.nextTick(D(e));
+              b.nextTick(D(e));
           })
-        : T && T.now
+        : S && S.now
           ? (i = function (e) {
-                T.now(D(e));
+                S.now(D(e));
             })
           : y && !g
             ? ((s = (a = new y()).port2), (a.port1.onmessage = L), (i = u(s.postMessage, s)))
             : o.addEventListener && c(o.postMessage) && !o.importScripts && r && 'file:' !== r.protocol && !f(x)
               ? ((i = x), o.addEventListener('message', L, !1))
               : (i =
-                    R in p('script')
+                    R in h('script')
                         ? function (e) {
-                              _.appendChild(p('script'))[R] = function () {
+                              _.appendChild(h('script'))[R] = function () {
                                   _.removeChild(this), O(e);
                               };
                           }

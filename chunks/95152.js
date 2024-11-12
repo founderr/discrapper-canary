@@ -21,8 +21,8 @@ var r = n(200651),
     d = n(849522),
     f = n(703558),
     _ = n(626135),
-    h = n(358085),
-    p = n(998502),
+    p = n(358085),
+    h = n(998502),
     m = n(981631),
     g = n(388032),
     E = n(570486),
@@ -40,15 +40,15 @@ function I(e, t, n) {
         e
     );
 }
-function S(e) {
+function b(e) {
     var t, n, a, o;
     let { file: l } = e,
         [u, c] = i.useState(),
         [d, f] = i.useState(!1),
-        [_, h] = i.useState({}),
-        p = i.useRef(null);
+        [_, p] = i.useState({}),
+        h = i.useRef(null);
     i.useEffect(() => {
-        if ((null != p.current && f(!1), null == l)) return;
+        if ((null != h.current && f(!1), null == l)) return;
         let e = URL.createObjectURL(l);
         return (
             c(e),
@@ -58,30 +58,30 @@ function S(e) {
         );
     }, [l]),
         i.useLayoutEffect(() => {
-            let e = p.current;
+            let e = h.current;
             null != e &&
                 (e.onload = () => {
                     let t = Math.max(0.66, Math.min(e.naturalWidth / e.naturalHeight, 4));
                     1 === t
-                        ? h({
+                        ? p({
                               width: 104,
                               height: 104
                           })
                         : t > 1
-                          ? h({
+                          ? p({
                                 width: 104 * t,
                                 height: void 0
                             })
-                          : h({
+                          : p({
                                 width: void 0,
                                 height: 104 / t
                             }),
                         f(!0);
                 });
         }, []);
-    let m = Math.max(16, (120 - (null !== (n = null === (t = p.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
+    let m = Math.max(16, (120 - (null !== (n = null === (t = h.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
     return (0, r.jsx)('img', {
-        ref: p,
+        ref: h,
         src: u,
         className: s()(E.icon, { [E.image]: !d }),
         'aria-hidden': !0,
@@ -95,15 +95,15 @@ function S(e) {
         }
     });
 }
-class T extends i.Component {
+class S extends i.Component {
     render() {
         var e;
         if (this.props.upload.item.platform !== u.ow.WEB) return null;
-        if (this.props.upload.isImage) return (0, r.jsx)(S, { file: this.props.upload.item.file });
+        if (this.props.upload.isImage) return (0, r.jsx)(b, { file: this.props.upload.item.file });
         return (0, r.jsx)('div', { className: s()(E.icon, { [E[null !== (e = this.props.upload.classification) && void 0 !== e ? e : '']]: !0 }) });
     }
 }
-class b extends i.Component {
+class T extends i.Component {
     componentDidMount() {
         var e;
         (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) &&
@@ -112,7 +112,7 @@ class b extends i.Component {
                 type: 'Upload Large Message',
                 message_content_length: this.props.upload.item.file.size
             }),
-            h.isPlatformEmbedded && p.ZP.focus();
+            p.isPlatformEmbedded && h.ZP.focus();
     }
     shouldComponentUpdate(e) {
         return null != e.upload;
@@ -136,7 +136,7 @@ class b extends i.Component {
                         (0, r.jsxs)('div', {
                             className: s()(E.file, { [E.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(T, { upload: e }),
+                                (0, r.jsx)(S, { upload: e }),
                                 (0, r.jsxs)('div', {
                                     className: E.description,
                                     children: [
@@ -268,7 +268,7 @@ function y(e) {
     let t = (0, d.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null
-        : (0, r.jsx)(b, {
+        : (0, r.jsx)(T, {
               ...e,
               file: e.upload.item.file,
               messageMaxLength: t

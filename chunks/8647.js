@@ -11,18 +11,18 @@ var r = n(120356),
     g = n(74538),
     m = n(276800),
     f = n(346497),
-    _ = n(409100),
-    p = n(725727),
+    p = n(409100),
+    _ = n(725727),
     h = n(474936),
     E = n(981631),
     b = n(388032),
     x = n(44085);
 t.Z = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
-        { promotion: C } = (0, p.mq)(),
-        T = (0, s.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
+        { promotion: C } = (0, _.mq)(),
+        v = (0, s.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
     if (!(0, f.Vi)()) return null;
-    let v = new Date(C.endDate);
+    let T = new Date(C.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -44,12 +44,12 @@ t.Z = function (e) {
                                 (0, i.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == T || null == (0, g.he)(T) ? b.intl.string(b.t.xbzNJC) : b.intl.string(b.t['22WZ9P'])
+                                    children: null == v || null == (0, g.he)(v) ? b.intl.string(b.t.xbzNJC) : b.intl.string(b.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(l.Text, {
                                     className: x.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(m.Z, { endDate: v })
+                                    children: (0, i.jsx)(m.Z, { endDate: T })
                                 }),
                                 (0, i.jsx)(l.Text, {
                                     variant: 'text-sm/medium',
@@ -58,7 +58,7 @@ t.Z = function (e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(_.Z, {
+                        (0, i.jsx)(p.Z, {
                             buttonText: b.intl.string(b.t.J61px8),
                             buttonTextClassName: x.subscribeButtonText,
                             subscriptionTier: h.Si.TIER_2,

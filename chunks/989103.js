@@ -12,7 +12,7 @@ n.d(t, {
         return f;
     },
     is: function () {
-        return p;
+        return h;
     },
     l8: function () {
         return u;
@@ -201,13 +201,13 @@ function _(e, t) {
     for (; (null == t ? void 0 : t.parentKey) != null; ) (t = e.getItem(t.parentKey)), n.unshift(t);
     return n;
 }
-let h = new WeakMap();
-function p(e) {
-    let t = h.get(e);
+let p = new WeakMap();
+function h(e) {
+    let t = p.get(e);
     if (null != t) return t;
     t = 0;
     let n = (r) => {
         for (let i of r) 'section' === i.type ? n(l(i, e)) : t++;
     };
-    return n(e), h.set(e, t), t;
+    return n(e), p.set(e, t), t;
 }

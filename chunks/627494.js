@@ -9,15 +9,15 @@ var r = n(147018),
     d = n(995739),
     f = n(87046),
     _ = n(115726),
-    h = n(641236),
-    p = n(992051),
-    m = h('replace'),
+    p = n(641236),
+    h = n(992051),
+    m = p('replace'),
     g = TypeError,
     E = a(''.indexOf),
     v = a(''.replace),
     I = a(''.slice),
-    S = Math.max,
-    T = function (e, t, n) {
+    b = Math.max,
+    S = function (e, t, n) {
         return n > e.length ? -1 : '' === t ? n : E(e, t, n);
     };
 r(
@@ -30,8 +30,8 @@ r(
             var n,
                 r,
                 a,
-                h,
-                b,
+                p,
+                T,
                 y,
                 A,
                 N,
@@ -42,9 +42,9 @@ r(
             if (!l(e)) {
                 if ((n = u(e)) && !~E(c(s(f(e))), 'g')) throw g('`.replaceAll` does not allow non-global regexes');
                 if ((r = d(e, m))) return i(r, e, C, t);
-                if (p && n) return v(c(C), e, t);
+                if (h && n) return v(c(C), e, t);
             }
-            for (a = c(C), h = c(e), !(b = o(t)) && (t = c(t)), A = S(1, (y = h.length)), R = T(a, h, 0); -1 !== R; ) (N = b ? c(t(h, R, a)) : _(h, a, R, [], void 0, t)), (D += I(a, O, R) + N), (O = R + y), (R = T(a, h, R + A));
+            for (a = c(C), p = c(e), !(T = o(t)) && (t = c(t)), A = b(1, (y = p.length)), R = S(a, p, 0); -1 !== R; ) (N = T ? c(t(p, R, a)) : _(p, a, R, [], void 0, t)), (D += I(a, O, R) + N), (O = R + y), (R = S(a, p, R + A));
             return O < a.length && (D += I(a, O)), D;
         }
     }

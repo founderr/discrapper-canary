@@ -9,16 +9,16 @@ var r = n(990547),
     d = n(41776),
     f = n(6025),
     _ = n(314897),
-    h = n(271383),
-    p = n(430824),
+    p = n(271383),
+    h = n(430824),
     m = n(546796),
     g = n(573261),
     E = n(999382),
     v = n(981631),
     I = n(308083),
-    S = n(388032);
-let T = new o.Z('GuildSettingsActionCreators'),
-    b = {
+    b = n(388032);
+let S = new o.Z('GuildSettingsActionCreators'),
+    T = {
         init(e, t, n, r) {
             a.Z.dispatch({
                 type: 'GUILD_SETTINGS_INIT',
@@ -30,7 +30,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            await Promise.all([n.e('63288'), n.e('23755'), n.e('48835'), n.e('33053'), n.e('15669'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('33862'), n.e('42587'), n.e('44156'), n.e('44294'), n.e('60254'), n.e('85552'), n.e('58227'), n.e('1187'), n.e('28377'), n.e('93375'), n.e('64679'), n.e('92117'), n.e('90346'), n.e('81463')]).then(n.bind(n, 994763)), (null === (a = p.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(v.oNc.COMMUNITY)) && (t === v.pNK.GUILD_AUTOMOD && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_AUTOMOD)), t === v.pNK.MEMBER_VERIFICATION && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), b.init(e, t, r, i);
+            await Promise.all([n.e('63288'), n.e('23755'), n.e('48835'), n.e('33053'), n.e('15669'), n.e('65840'), n.e('7654'), n.e('90508'), n.e('33862'), n.e('42587'), n.e('44156'), n.e('44294'), n.e('60254'), n.e('85552'), n.e('58227'), n.e('1187'), n.e('28377'), n.e('93375'), n.e('64679'), n.e('92117'), n.e('90346'), n.e('81463')]).then(n.bind(n, 994763)), (null === (a = h.Z.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(v.oNc.COMMUNITY)) && (t === v.pNK.GUILD_AUTOMOD && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_AUTOMOD)), t === v.pNK.MEMBER_VERIFICATION && ((t = v.pNK.SAFETY), (i = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), T.init(e, t, r, i);
             f.Z.closeGuildSidebar(e), (0, s.jN)(v.S9g.GUILD_SETTINGS);
         },
         close() {
@@ -46,7 +46,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
             var n;
             let r = E.Z.getGuildId();
             null != r &&
-                ((null === (n = p.Z.getGuild(r)) || void 0 === n ? void 0 : n.hasFeature(v.oNc.COMMUNITY)) && (e === v.pNK.GUILD_AUTOMOD && ((e = v.pNK.SAFETY), (t = v.KsC.SAFETY_AUTOMOD)), e === v.pNK.MEMBER_VERIFICATION && ((e = v.pNK.SAFETY), (t = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
+                ((null === (n = h.Z.getGuild(r)) || void 0 === n ? void 0 : n.hasFeature(v.oNc.COMMUNITY)) && (e === v.pNK.GUILD_AUTOMOD && ((e = v.pNK.SAFETY), (t = v.KsC.SAFETY_AUTOMOD)), e === v.pNK.MEMBER_VERIFICATION && ((e = v.pNK.SAFETY), (t = v.KsC.SAFETY_DM_AND_SPAM_PROTECTION))),
                 a.Z.dispatch({
                     type: 'GUILD_SETTINGS_SET_SECTION',
                     section: e,
@@ -98,8 +98,8 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.intl.string(S.t.Wi9LER),
-                        actionText: r ? S.intl.string(S.t.MP0Ho6) : S.intl.string(S.t.yZcYGR)
+                        title: b.intl.string(b.t.Wi9LER),
+                        actionText: r ? b.intl.string(b.t.MP0Ho6) : b.intl.string(b.t.yZcYGR)
                     },
                     checkEnabled: !1
                 }
@@ -155,7 +155,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: h, defaultMessageNotifications: p, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: S, rulesChannelId: b, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
+            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: f, systemChannelId: _, verificationLevel: p, defaultMessageNotifications: h, explicitContentFilter: m, features: g, systemChannelFlags: E, preferredLocale: b, rulesChannelId: T, safetyAlertsChannelId: y, discoverySplash: A, publicUpdatesChannelId: N, premiumProgressBarEnabled: C, clan: R } = t,
                 O = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 D = {
                     name: n,
@@ -165,15 +165,15 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     banner: u,
                     home_header: c,
                     features: g,
-                    preferred_locale: S,
+                    preferred_locale: b,
                     afk_channel_id: d,
                     afk_timeout: f,
                     system_channel_id: _,
-                    verification_level: h,
-                    default_message_notifications: p,
+                    verification_level: p,
+                    default_message_notifications: h,
                     explicit_content_filter: m,
                     system_channel_flags: E,
-                    rules_channel_id: b,
+                    rules_channel_id: T,
                     discovery_splash: A,
                     public_updates_channel_id: N,
                     safety_alerts_channel_id: y,
@@ -203,7 +203,7 @@ let T = new o.Z('GuildSettingsActionCreators'),
                                     type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
                                     errors: e.body
                                 }),
-                                T.error('Failed to save guild settings', { errors: e.body }),
+                                S.error('Failed to save guild settings', { errors: e.body }),
                                 O.throwErr)
                             )
                                 throw e.body;
@@ -245,8 +245,8 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.intl.string(S.t.Z5s7PD),
-                        actionText: S.intl.string(S.t.Z5s7PD)
+                        title: b.intl.string(b.t.Z5s7PD),
+                        actionText: b.intl.string(b.t.Z5s7PD)
                     },
                     checkEnabled: !1
                 }
@@ -276,22 +276,22 @@ let T = new o.Z('GuildSettingsActionCreators'),
                     }),
                 {
                     modalProps: {
-                        title: S.intl.formatToPlainString(S.t.us7mCw, { name: t }),
-                        actionText: S.intl.string(S.t.l3hWPz),
+                        title: b.intl.formatToPlainString(b.t.us7mCw, { name: t }),
+                        actionText: b.intl.string(b.t.l3hWPz),
                         disallowBackupCodes: !0
                     },
                     checkEnabled: !1
                 }
             ).then(() => {
-                b.close();
+                T.close();
             }),
         async leaveGuild(e) {
             await i.tn.del({
                 url: v.ANM.GUILD_LEAVE(e),
-                body: { lurking: d.Z.isLurking(e) || h.ZP.isCurrentUserGuest(e) },
+                body: { lurking: d.Z.isLurking(e) || p.ZP.isCurrentUserGuest(e) },
                 oldFormErrors: !0
             }),
-                b.close();
+                T.close();
         },
         async updateMemberRoles(e, t, n, r, s) {
             if (c.Z.isFullServerPreview(e) && t === _.default.getId()) {
@@ -365,4 +365,4 @@ let T = new o.Z('GuildSettingsActionCreators'),
             });
         }
     };
-t.Z = b;
+t.Z = T;

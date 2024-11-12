@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -15,20 +15,20 @@ var r = n(200651),
     d = n(243778),
     f = n(970731),
     _ = n(594174),
-    h = n(785717),
-    p = n(652853),
+    p = n(785717),
+    h = n(652853),
     m = n(171368),
     g = n(228168),
     E = n(921944),
     v = n(388032),
     I = n(398813),
-    S = n(881828);
-let T = 32;
-function b(e) {
-    let { user: t, children: n, onClose: b } = e,
+    b = n(881828);
+let S = 32;
+function T(e) {
+    let { user: t, children: n, onClose: T } = e,
         { analyticsLocations: y } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
-        { context: A } = (0, h.KZ)(),
-        { profileType: N, primaryColor: C } = (0, p.z)(),
+        { context: A } = (0, p.KZ)(),
+        { profileType: N, primaryColor: C } = (0, h.z)(),
         R =
             (0, a.e7)([_.default], () => {
                 var e;
@@ -45,11 +45,11 @@ function b(e) {
                 sourceAnalyticsLocations: y,
                 ...A
             }),
-                null == b || b();
+                null == T || T();
         };
     return (0, r.jsx)(o.Popout, {
         shouldShow: null != x,
-        spacing: null != C ? T : 28,
+        spacing: null != C ? S : 28,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {
@@ -60,7 +60,7 @@ function b(e) {
                     className: I.tooltip,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: S,
+                        src: b,
                         className: I.asset
                     }),
                     buttonCTA: v.intl.string(v.t.RzWDqa),

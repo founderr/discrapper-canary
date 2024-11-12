@@ -12,13 +12,13 @@ let o = (e) => {
     var t, n;
     let { size: o = 'md', width: l, height: u, color: c = i.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
         _ = (0, s.m)(o),
-        h = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
-        p = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
+        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
+        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
     return (0, r.jsx)('svg', {
         ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: h,
-        height: p,
+        width: p,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, r.jsx)('path', {

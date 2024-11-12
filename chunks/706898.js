@@ -17,8 +17,8 @@ var r,
     d = n(372817),
     f = n(866442),
     _ = n(692547),
-    h = n(1561),
-    p = n(993365),
+    p = n(1561),
+    h = n(993365),
     m = n(981631),
     g = n(176892);
 function E(e, t, n) {
@@ -45,26 +45,26 @@ let v = {
             ...i,
             ref: t,
             role: 'tabpanel',
-            id: S(r),
+            id: b(r),
             tabIndex: -1,
             children: n
         });
     });
-function S(e) {
+function b(e) {
     return ''.concat(e.replace(/\s+/g, '-').toLowerCase(), '-tab');
 }
-function T(e, t) {
+function S(e, t) {
     if (null == e) return;
     let n = {};
     return 'Selected' === t ? ((n.backgroundColor = e), (n.color = _.Z.unsafe_rawColors.WHITE_500.css), n) : ('Hover' === t && (n.backgroundColor = (0, f.wK)(e, 0.1)), (n.color = e), n);
 }
 ((s = r || (r = {})).DEFAULT = 'Default'), (s.HOVER = 'Hover'), (s.SELECTED = 'Selected');
-class b extends (i = l.Component) {
+class T extends (i = l.Component) {
     getStyle() {
         let { color: e, id: t, selectedItem: n, itemType: r } = this.props,
             { hover: i, active: a } = this.state;
         if (null != e) {
-            if ('side' === r) return (null != t && n === t) || a ? T(e, 'Selected') : i ? T(e, 'Hover') : T(e);
+            if ('side' === r) return (null != t && n === t) || a ? S(e, 'Selected') : i ? S(e, 'Hover') : S(e);
             if ('top' === r)
                 return n === t
                     ? {
@@ -96,7 +96,7 @@ class b extends (i = l.Component) {
         let { children: e, className: t, id: n, selectedItem: r, color: i, disabled: a, onContextMenu: s, clickableRef: l, look: u, disableItemStyles: d } = this.props,
             f = this.props['aria-label'],
             _ = r === n;
-        return (0, o.jsx)(h.P, {
+        return (0, o.jsx)(p.P, {
             className: c()(t, {
                 [g.item]: !d,
                 [g.brand]: 'brand' === u,
@@ -107,7 +107,7 @@ class b extends (i = l.Component) {
             style: this.getStyle(),
             role: 'tab',
             'aria-selected': _,
-            'aria-controls': _ ? S(''.concat(n)) : void 0,
+            'aria-controls': _ ? b(''.concat(n)) : void 0,
             'aria-disabled': a,
             tabIndex: _ ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
@@ -149,7 +149,7 @@ class b extends (i = l.Component) {
             });
     }
 }
-E(b, 'defaultProps', {
+E(T, 'defaultProps', {
     disabled: !1,
     look: 'grey',
     disableItemStyles: !1
@@ -220,14 +220,14 @@ class y extends (a = l.Component) {
 }
 E(y, 'Header', function (e) {
     let { className: t, onClick: n, children: r, 'aria-expanded': i, 'aria-controls': a } = e;
-    return (0, o.jsx)(h.P, {
+    return (0, o.jsx)(p.P, {
         tabIndex: null == n ? -1 : 0,
         className: c()(g.header, t),
         onClick: n,
         'aria-expanded': i,
         'aria-controls': a,
         focusProps: { offset: { top: -6 } },
-        children: (0, o.jsx)(p.x, {
+        children: (0, o.jsx)(h.x, {
             variant: 'eyebrow',
             color: 'none',
             className: g.headerText,
@@ -235,7 +235,7 @@ E(y, 'Header', function (e) {
         })
     });
 }),
-    E(y, 'Item', b),
+    E(y, 'Item', T),
     E(y, 'Separator', function (e) {
         let { style: t } = e;
         return (0, o.jsx)('div', {

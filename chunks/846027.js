@@ -9,8 +9,8 @@ var r = n(570140),
     d = n(557177),
     f = n(557457),
     _ = n(981631),
-    h = n(65154);
-function p() {
+    p = n(65154);
+function h() {
     (0, d.GN)('mention3');
 }
 function m(e, t, n, r) {
@@ -19,10 +19,10 @@ function m(e, t, n, r) {
     let l = u.Z.getVoiceChannelId(),
         d = null != l ? o.Z.getChannel(l) : null,
         f = e[t],
-        h = e[n];
+        p = e[n];
     c.default.track(_.rMx.MEDIA_DEVICE_CHANGED, {
         device_from_name: s.Z.getCertifiedDeviceName(t, null != f ? f.name : ''),
-        device_to_name: s.Z.getCertifiedDeviceName(n, null != h ? h.name : ''),
+        device_to_name: s.Z.getCertifiedDeviceName(n, null != p ? p.name : ''),
         device_type: r,
         device_is_certified: s.Z.isCertified(n),
         location: i,
@@ -36,11 +36,11 @@ let g = {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: E, isNotSupported: v, trackToggleSelfMute: I, trackToggleSelfDeaf: S } = (g = n(929782));
+    { enable: E, isNotSupported: v, trackToggleSelfMute: I, trackToggleSelfDeaf: b } = (g = n(929782));
 t.Z = {
     enable: E,
     toggleSelfMute() {
-        let { context: e = h.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        let { context: e = p.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, playSoundEffect: i = !0, location: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         return v()
             ? Promise.resolve()
             : (I({
@@ -72,9 +72,9 @@ t.Z = {
             });
     },
     toggleSelfDeaf() {
-        let { context: e = h.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        let { context: e = p.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         !v() &&
-            (S({
+            (b({
                 usedKeybind: n,
                 location: i
             }),
@@ -85,7 +85,7 @@ t.Z = {
             }));
     },
     toggleLocalMute(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.Yn.DEFAULT;
         !v() &&
             r.Z.dispatch({
                 type: 'AUDIO_TOGGLE_LOCAL_MUTE',
@@ -94,7 +94,7 @@ t.Z = {
             });
     },
     toggleLocalSoundboardMute(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.Yn.DEFAULT;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.Yn.DEFAULT;
         r.Z.dispatch({
             type: 'AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE',
             context: t,
@@ -102,7 +102,7 @@ t.Z = {
         });
     },
     setDisableLocalVideo(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.Yn.DEFAULT,
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Yn.DEFAULT,
             i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
             a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         !v() &&
@@ -116,7 +116,7 @@ t.Z = {
             });
     },
     setLocalVolume(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.Yn.DEFAULT;
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Yn.DEFAULT;
         r.Z.dispatch({
             type: 'AUDIO_SET_LOCAL_VOLUME',
             context: n,
@@ -125,7 +125,7 @@ t.Z = {
         });
     },
     setLocalPan(e, t, n) {
-        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.Yn.DEFAULT;
+        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : p.Yn.DEFAULT;
         r.Z.dispatch({
             type: 'AUDIO_SET_LOCAL_PAN',
             context: i,
@@ -136,7 +136,7 @@ t.Z = {
     },
     setMode(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : h.Yn.DEFAULT,
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Yn.DEFAULT,
             { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
         if (v()) return;
         let a = e !== l.Z.getMode();
@@ -205,7 +205,7 @@ t.Z = {
                 type: 'AUDIO_SET_INPUT_DEVICE',
                 id: e
             }),
-                p();
+                h();
         }
     },
     setOutputDevice(e) {
@@ -222,7 +222,7 @@ t.Z = {
                 type: 'AUDIO_SET_OUTPUT_DEVICE',
                 id: e
             }),
-                p();
+                h();
         }
     },
     setVideoDevice(e) {

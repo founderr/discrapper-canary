@@ -15,16 +15,16 @@ var i = n(693789),
     d = n(367790),
     f = n(998698),
     _ = n(895924),
-    h = n(581364),
-    p = n(826298),
+    p = n(581364),
+    h = n(826298),
     m = n(588468),
     g = n(496675),
     E = n(226951),
     v = n(877565),
     I = n(590921),
-    S = n(665692),
-    T = n(689079),
-    b = n(388032),
+    b = n(665692),
+    S = n(689079),
+    T = n(388032),
     y = n(239114);
 let A = { results: { entries: [] } };
 function N() {
@@ -34,7 +34,7 @@ function N() {
     });
 }
 let C = {
-    sentinel: S.GI,
+    sentinel: b.GI,
     stores: [f.Z, u.ZP, g.Z],
     matches: (e, t, n, r, i) => i.commands !== I.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (r || i.commands !== I.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
@@ -42,7 +42,7 @@ let C = {
         if (r.commands === I.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
                 i = RegExp('^'.concat(E.Z.escape(n)), 'i'),
-                a = (0, h.Dd)(
+                a = (0, p.Dd)(
                     r,
                     i,
                     {
@@ -51,7 +51,7 @@ let C = {
                     },
                     I.AQ
                 ),
-                o = l.Tm[T.bi.BUILT_IN];
+                o = l.Tm[S.bi.BUILT_IN];
             return 0 === a.length
                 ? A
                 : {
@@ -63,7 +63,7 @@ let C = {
                       }
                   };
         }
-        let a = (0, p.hV)(e, n),
+        let a = (0, h.hV)(e, n),
             { commands: o, sections: u } = c.JT(
                 e,
                 {
@@ -105,7 +105,7 @@ let C = {
                 onHover: l,
                 onClick: u
             } = e,
-            c = (0, p.hV)(a, s),
+            c = (0, h.hV)(a, s),
             d = o.commands === I.L8.OLD_BUILT_INS;
         return (0, v.HI)({
             query: c.text,
@@ -113,9 +113,9 @@ let C = {
             autocompletes: t,
             onHover: l,
             onClick: u,
-            titleWithQuery: b.t.HFRoZW,
-            titleWithoutQuery: b.intl.string(b.t['0hKkS0']),
-            getQuery: (e) => ''.concat(S.GI).concat(e),
+            titleWithQuery: T.t.HFRoZW,
+            titleWithoutQuery: T.intl.string(T.t['0hKkS0']),
+            getQuery: (e) => ''.concat(b.GI).concat(e),
             Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
@@ -137,7 +137,7 @@ let C = {
                       color: i.zx.Colors.BRAND,
                       size: i.zx.Sizes.MIN,
                       onClick: N,
-                      children: b.intl.string(b.t['8a0P09'])
+                      children: T.intl.string(T.t['8a0P09'])
                   })
                 : null
         });
@@ -157,7 +157,7 @@ let C = {
         if (i.commands === I.L8.OLD_BUILT_INS)
             i.insertText(
                 (function (e) {
-                    return ''.concat(S.GI).concat(e.displayName);
+                    return ''.concat(b.GI).concat(e.displayName);
                 })(u)
             );
         else {

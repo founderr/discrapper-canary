@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -15,7 +15,7 @@ var r = n(192379),
     d = n(629935),
     f = n(168551),
     _ = n(168631);
-let h = Object.freeze({
+let p = Object.freeze({
     '--profile-gradient-primary-color': 'var(--background-secondary-alt)',
     '--profile-gradient-secondary-color': 'var(--background-secondary-alt)',
     '--profile-gradient-overlay-color': 'rgba(0, 0, 0, 0)',
@@ -30,22 +30,22 @@ let h = Object.freeze({
     '--profile-role-pill-background-color': 'var(--background-secondary-alt)',
     '--profile-role-pill-border-color': 'var(--interactive-normal)'
 });
-function p(e) {
+function h(e) {
     let { theme: t, primaryColor: n, secondaryColor: i } = e,
-        [p, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
+        [h, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
         g = (0, _.fq)(t),
         E = (0, _.wu)(t, n, m),
         v = (0, _.lM)(t, n),
         I = (0, _.e4)(t, i),
-        S = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
+        b = m ? (null == g ? void 0 : g.overlaySyncedWithUserTheme) : null == g ? void 0 : g.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == n || null == i || null == g || null == E || null == v || null == I || null == S) return h;
-            let e = (e, t) => (0, s.ho)(e, p, null, t);
+            if (null == n || null == i || null == g || null == E || null == v || null == I || null == b) return p;
+            let e = (e, t) => (0, s.ho)(e, h, null, t);
             return {
                 '--profile-gradient-primary-color': e(n),
                 '--profile-gradient-secondary-color': e(i),
-                '--profile-gradient-overlay-color': S,
+                '--profile-gradient-overlay-color': b,
                 '--profile-gradient-button-color': e((0, _.ZB)(n)),
                 '--profile-avatar-border-color': e(E),
                 '--profile-body-background-color': g.sectionBox,
@@ -64,7 +64,7 @@ function p(e) {
                     textMixAmount: 25
                 })
             };
-        }, [n, i, g, E, v, I, S, t, p]),
+        }, [n, i, g, E, v, I, b, t, h]),
         profileThemeClassName: a()((0, u.getThemeClass)(t), {
             [f.e3]: null != n,
             'custom-profile-theme': null != n

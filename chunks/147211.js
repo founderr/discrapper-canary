@@ -10,12 +10,12 @@ var i = n(692547),
     s = n(267843);
 let o = (e) => {
     var t, n;
-    let { size: o = 'md', width: l, height: u, secondaryColor: c = i.Z.colors.STATUS_DANGER, secondaryColorClass: d = '', color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '', ...h } = e,
-        p = (0, s.m)(o),
-        m = null !== (t = null == p ? void 0 : p.width) && void 0 !== t ? t : l,
-        g = null !== (n = null == p ? void 0 : p.height) && void 0 !== n ? n : u;
+    let { size: o = 'md', width: l, height: u, secondaryColor: c = i.Z.colors.STATUS_DANGER, secondaryColorClass: d = '', color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '', ...p } = e,
+        h = (0, s.m)(o),
+        m = null !== (t = null == h ? void 0 : h.width) && void 0 !== t ? t : l,
+        g = null !== (n = null == h ? void 0 : h.height) && void 0 !== n ? n : u;
     return (0, r.jsxs)('svg', {
-        ...(0, a.Z)(h),
+        ...(0, a.Z)(p),
         xmlns: 'http://www.w3.org/2000/svg',
         width: m,
         height: g,

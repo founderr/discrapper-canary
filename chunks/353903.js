@@ -1,6 +1,6 @@
 n.d(t, {
     G0: function () {
-        return p;
+        return h;
     },
     u$: function () {
         return m;
@@ -48,7 +48,7 @@ class _ extends a.PureComponent {
         super(...e), d(this, 'state', { backgroundColor: o().sample(f) });
     }
 }
-class h extends (r = a.Component) {
+class p extends (r = a.Component) {
     componentDidMount() {
         this.animateSlide();
     }
@@ -101,8 +101,8 @@ class h extends (r = a.Component) {
         };
     }
 }
-d(h, 'defaultProps', { direction: -1 });
-let p = (e) => {
+d(p, 'defaultProps', { direction: -1 });
+let h = (e) => {
     let { columns: t } = e;
     return (0, i.jsx)('div', {
         className: c.column,

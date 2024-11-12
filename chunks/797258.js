@@ -9,13 +9,13 @@ var r,
     d = n(314897);
 let f = Object.freeze([]),
     _ = {};
-function h(e) {
+function p(e) {
     (_ = {}),
         e.sessions.forEach((e) => {
             _[e.sessionId] = e;
         });
 }
-class p extends (s = u.ZP.Store) {
+class h extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(d.default);
     }
@@ -42,7 +42,7 @@ class p extends (s = u.ZP.Store) {
     }
 }
 (a = 'SessionsStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -50,7 +50,7 @@ class p extends (s = u.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(c.Z, {
-        CONNECTION_OPEN: h,
-        SESSIONS_REPLACE: h
+    (t.Z = new h(c.Z, {
+        CONNECTION_OPEN: p,
+        SESSIONS_REPLACE: p
     }));

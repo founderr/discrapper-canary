@@ -62,19 +62,19 @@ e.exports = function (e) {
             };
         },
         _ = f({ includeEqual: !0 }),
-        h = f({ includeEqual: !1 }),
-        p = function (t, n) {
+        p = f({ includeEqual: !1 }),
+        h = function (t, n) {
             return {
                 begin: i(t, r(i(/\s*/, a(/\w/, /'/, /\^/, /#/, /``/, /\(/, /{\|/)))),
                 beginScope: n,
                 end: r(a(/\n/, /=/)),
                 relevance: 0,
                 keywords: e.inherit(o, { type: s }),
-                contains: [l, d, e.inherit(u, { scope: null }), h]
+                contains: [l, d, e.inherit(u, { scope: null }), p]
             };
         },
-        m = p(/:/, 'operator'),
-        g = p(/\bof\b/, 'keyword'),
+        m = h(/:/, 'operator'),
+        g = h(/\bof\b/, 'keyword'),
         E = {
             begin: [/(^|\s+)/, /type/, /\s+/, /[a-zA-Z_](\w|')*/],
             beginScope: {
@@ -103,16 +103,16 @@ e.exports = function (e) {
             beginScope: { 2: 'meta' },
             end: r(/\s|$/)
         },
-        S = {
+        b = {
             variants: [e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]
         },
-        T = {
+        S = {
             scope: 'string',
             begin: /"/,
             end: /"/,
             contains: [e.BACKSLASH_ESCAPE]
         },
-        b = {
+        T = {
             scope: 'string',
             begin: /@"/,
             end: /"/,
@@ -147,7 +147,7 @@ e.exports = function (e) {
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (A.contains = [C, N, b, T, R, n, l, u, m, v, I, S, d, _]),
+        (A.contains = [C, N, T, S, R, n, l, u, m, v, I, b, d, _]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -168,8 +168,8 @@ e.exports = function (e) {
                         C,
                         N,
                         y,
-                        b,
                         T,
+                        S,
                         R
                     ]
                 },
@@ -181,13 +181,13 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [u, y, b, T, R, S]
+                    contains: [u, y, T, S, R, b]
                 },
                 g,
                 m,
                 v,
                 I,
-                S,
+                b,
                 d,
                 _
             ]

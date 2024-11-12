@@ -7,15 +7,15 @@ var r = n(200651),
 t.Z = (e) => {
     let t,
         { button: n, submitting: u, disableNext: c, onClick: d, canNavigateBack: f, onBackClicked: _ } = e,
-        h = i.useRef(null),
-        p = null != n && 'cancel' !== n.type,
+        p = i.useRef(null),
+        h = null != n && 'cancel' !== n.type,
         m = f && (null == n ? void 0 : n.type) !== 'done',
-        g = p || m;
+        g = h || m;
     if (
         (i.useEffect(() => {
             if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
                 var e;
-                null === (e = h.current) || void 0 === e || e.focus();
+                null === (e = p.current) || void 0 === e || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
         !g)
@@ -34,7 +34,7 @@ t.Z = (e) => {
                         disabled: u,
                         children: o.intl.string(o.t['13/7kZ'])
                     }),
-                p &&
+                h &&
                     (0, r.jsx)(a.Button, {
                         onClick: () => {
                             if (null != n) d(n);
@@ -42,7 +42,7 @@ t.Z = (e) => {
                         color: t,
                         className: l.actionButton,
                         disabled: u || c,
-                        buttonRef: h,
+                        buttonRef: p,
                         children: E
                     })
             ]

@@ -12,12 +12,12 @@ let s = (e) => {
     let { size: s = 'md', width: o, height: l, color: u = '#fff', colorClass: c = '', ...d } = e,
         f = (0, a.m)(s),
         _ = null !== (t = null == f ? void 0 : f.width) && void 0 !== t ? t : o,
-        h = null !== (n = null == f ? void 0 : f.height) && void 0 !== n ? n : l;
+        p = null !== (n = null == f ? void 0 : f.height) && void 0 !== n ? n : l;
     return (0, r.jsx)('svg', {
         ...(0, i.Z)(d),
         xmlns: 'http://www.w3.org/2000/svg',
         width: _,
-        height: h,
+        height: p,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, r.jsx)('path', {

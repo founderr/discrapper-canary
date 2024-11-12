@@ -45,7 +45,7 @@ function _(e) {
         a.default.getSessionId() === e.sessionId && d();
     });
 }
-class h extends i.Z {
+class p extends i.Z {
     constructor(...e) {
         var t, n, r;
         super(...e),
@@ -65,4 +65,4 @@ class h extends i.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new h();
+t.Z = new p();

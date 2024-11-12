@@ -10,26 +10,26 @@ var r,
     d = n(368111),
     f = n(601964),
     _ = n(981631);
-let h = new Set([_.ABu.CONTACTS]),
-    p = !0,
+let p = new Set([_.ABu.CONTACTS]),
+    h = !0,
     m = [],
     g = [],
     E = {},
     v = new Set(),
     I = {},
-    S = {},
-    T = (e) => {
-        (m = e.filter((e) => !h.has(e.type) && c.Z.isSupported(e.type))), (g = e.filter((e) => h.has(e.type))), (p = !1);
+    b = {},
+    S = (e) => {
+        (m = e.filter((e) => !p.has(e.type) && c.Z.isSupported(e.type))), (g = e.filter((e) => p.has(e.type))), (h = !1);
     };
-class b extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     isJoining(e) {
         return E[e] || !1;
     }
     joinErrorMessage(e) {
-        return S[e];
+        return b[e];
     }
     isFetching() {
-        return p;
+        return h;
     }
     getAccounts() {
         return m;
@@ -57,7 +57,7 @@ class b extends (r = o.ZP.Store) {
     }
 }
 (s = 'ConnectedAccountsStore'),
-    (a = 'displayName') in (i = b)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -65,13 +65,13 @@ class b extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new b(l.Z, {
+    (t.Z = new T(l.Z, {
         CONNECTION_OPEN: function (e) {
-            T(e.connectedAccounts.map((e) => new d.Z(e)));
+            S(e.connectedAccounts.map((e) => new d.Z(e)));
         },
         USER_CONNECTIONS_UPDATE: function (e) {
             e.local && null != e.accounts
-                ? T(
+                ? S(
                       e.accounts.map(
                           (e) =>
                               new d.Z({
@@ -95,7 +95,7 @@ class b extends (r = o.ZP.Store) {
             null != r && (a.revoked = r), null != i && (a.accessToken = i);
         },
         USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-            S[e.integrationId] = void 0 !== e.error ? e.error : '';
+            b[e.integrationId] = void 0 !== e.error ? e.error : '';
         },
         USER_CONNECTIONS_CALLBACK: function (e) {
             let { code: t, state: n, openid_params: r, provider: i } = e;

@@ -13,16 +13,16 @@ var a,
     h = n(219929),
     A = n(388032),
     E = n(743736),
-    f = n(803636);
+    N = n(803636);
 ((l = a || (a = {})).CardNumber = 'cardNumber'), (l.CardExpiry = 'cardExpiry'), (l.CardCvc = 'cardCvc'), ((i = r || (r = {})).Change = 'change'), (i.Focus = 'focus'), (i.Blur = 'blur');
 t.Z = function (e) {
     let t = o.useRef(null),
         { stripeType: n, flipped: a, updateCompleted: r, onFocus: l, onBlur: i } = e,
-        [u, N] = o.useState(h.Qy.UNKNOWN),
+        [u, f] = o.useState(h.Qy.UNKNOWN),
         [b, _] = o.useState(!1),
         [y, P] = o.useState(!1),
         [g, C] = o.useState(null),
-        [T, I] = o.useState({}),
+        [I, T] = o.useState({}),
         S = (0, c.useElements)(),
         { theme: v } = (0, p.useThemeContext)(),
         x = o.useCallback(() => {
@@ -66,7 +66,7 @@ t.Z = function (e) {
                         let e = S.getElement(c.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            u !== e.brand && N(e.brand), e.empty && y ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), L(e);
+                            u !== e.brand && f(e.brand), e.empty && y ? C(A.intl.string(A.t.eOIfu7)) : null != e.error ? C(A.intl.string(A.t.x4pWtL)) : C(null), L(e);
                         }),
                             e.on('focus', R),
                             e.on('blur', O);
@@ -93,7 +93,7 @@ t.Z = function (e) {
                     }
                 }
         }, [O, L, R, u, S, y, n]);
-    function w() {
+    function D() {
         return d()(E.cardInput, {
             [E.cardInputError]: null !== g,
             [E.cardInputFocused]: b,
@@ -121,7 +121,7 @@ t.Z = function (e) {
                     theme: v,
                     saturation: 1
                 }).hex();
-            I({
+            T({
                 base: {
                     fontFamily: r,
                     fontWeight: l,
@@ -137,7 +137,7 @@ t.Z = function (e) {
             children: [
                 (0, s.jsx)('div', {
                     ref: t,
-                    className: d()(E.hiddenDiv, f.input)
+                    className: d()(E.hiddenDiv, N.input)
                 }),
                 (function () {
                     switch (n) {
@@ -151,29 +151,29 @@ t.Z = function (e) {
                                     }),
                                     (0, s.jsx)(c.CardNumberElement, {
                                         options: {
-                                            style: T,
+                                            style: I,
                                             placeholder: A.intl.string(A.t.gPRHf3),
                                             disableLink: !1
                                         },
-                                        className: w()
+                                        className: D()
                                     })
                                 ]
                             });
                         case 'cardExpiry':
                             return (0, s.jsx)(c.CardExpiryElement, {
                                 options: {
-                                    style: T,
+                                    style: I,
                                     placeholder: A.intl.string(A.t.xeEWQ0)
                                 },
-                                className: w()
+                                className: D()
                             });
                         case 'cardCvc':
                             return (0, s.jsx)(c.CardCvcElement, {
                                 options: {
-                                    style: T,
+                                    style: I,
                                     placeholder: A.intl.string(A.t.wZz04O)
                                 },
-                                className: w()
+                                className: D()
                             });
                     }
                 })(),

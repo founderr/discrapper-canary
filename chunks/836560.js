@@ -33,10 +33,10 @@ function a() {
             function a() {
                 'function' == typeof e.removeListener && e.removeListener('error', i), n([].slice.call(arguments));
             }
-            p(e, t, a, { once: !0 }),
+            h(e, t, a, { once: !0 }),
                 'error' !== t &&
                     (function (e, t, n) {
-                        'function' == typeof e.on && p(e, 'error', t, n);
+                        'function' == typeof e.on && h(e, 'error', t, n);
                     })(e, i, { once: !0 });
         });
     }),
@@ -93,7 +93,7 @@ function f(e, t, n) {
                   for (var t = Array(e.length), n = 0; n < t.length; ++n) t[n] = e[n].listener || e[n];
                   return t;
               })(i)
-            : h(i, i.length);
+            : p(i, i.length);
 }
 function _(e) {
     var t = this._events;
@@ -104,7 +104,7 @@ function _(e) {
     }
     return 0;
 }
-function h(e, t) {
+function p(e, t) {
     for (var n = Array(t), r = 0; r < t; ++r) n[r] = e[r];
     return n;
 }
@@ -144,7 +144,7 @@ Object.defineProperty(a, 'defaultMaxListeners', {
         if (void 0 === l) return !1;
         if ('function' == typeof l) r(l, this, t);
         else {
-            for (var u = l.length, c = h(l, u), n = 0; n < u; ++n) r(c[n], this, t);
+            for (var u = l.length, c = p(l, u), n = 0; n < u; ++n) r(c[n], this, t);
         }
         return !0;
     }),
@@ -211,7 +211,7 @@ Object.defineProperty(a, 'defaultMaxListeners', {
     (a.prototype.eventNames = function () {
         return this._eventsCount > 0 ? t(this._events) : [];
     });
-function p(e, t, n, r) {
+function h(e, t, n, r) {
     if ('function' == typeof e.on) r.once ? e.once(t, n) : e.on(t, n);
     else if ('function' == typeof e.addEventListener)
         e.addEventListener(t, function i(a) {

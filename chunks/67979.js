@@ -15,14 +15,14 @@ var i = n(120356),
     d = n(890780),
     f = n(803636);
 function _(e) {
-    let { value: t, onSelect: n, dateFormat: i = 'MMM D, YYYY', minDate: _, maxDate: h, disabled: p = !1 } = e;
+    let { value: t, onSelect: n, dateFormat: i = 'MMM D, YYYY', minDate: _, maxDate: p, disabled: h = !1 } = e;
     return (0, r.jsx)(u.y, {
         renderPopout: function (e) {
             let { closePopout: i } = e;
             return (0, r.jsx)(l.V, {
                 children: (0, r.jsx)(s.CalendarPicker, {
                     minDate: _,
-                    maxDate: h,
+                    maxDate: p,
                     value: t,
                     onSelect: (e) => {
                         n(e), i();
@@ -39,11 +39,11 @@ function _(e) {
             return (0, r.jsx)(o.P, {
                 ...s,
                 className: a()(f.inputDefault, d.container, {
-                    [f.disabled]: p,
-                    [d.disabled]: p
+                    [f.disabled]: h,
+                    [d.disabled]: h
                 }),
-                onClick: p ? void 0 : n,
-                'aria-disabled': p,
+                onClick: h ? void 0 : n,
+                'aria-disabled': h,
                 children: (0, r.jsxs)('div', {
                     className: d.content,
                     children: [

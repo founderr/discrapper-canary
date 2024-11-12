@@ -13,10 +13,10 @@ n.r(t),
             return c.Z;
         },
         intl: function () {
-            return h;
+            return p;
         },
         t: function () {
-            return p;
+            return h;
         }
     }),
     n(47120);
@@ -33,7 +33,7 @@ function f(e) {
     return [Array.isArray(navigator.languages) ? navigator.languages[0] : null, navigator.language, navigator.browserLanguage, navigator.userLanguage, e].find((e) => null != e && '' !== e);
 }
 let _ = (0, l.YI)(f('en-US'), 'en-US'),
-    h = new a.IntlManager({
+    p = new a.IntlManager({
         initialLocale: _,
         defaultLocale: 'en-US'
     }).withFormatters({
@@ -74,7 +74,7 @@ let _ = (0, l.YI)(f('en-US'), 'en-US'),
         formatToMarkdownString: a.markdownFormatter,
         formatToParts: a.astFormatter
     }),
-    p = {
+    h = {
         ...u.Z,
         ...d.Z
     };

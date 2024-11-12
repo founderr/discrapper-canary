@@ -14,12 +14,12 @@ var r = n(200651),
     d = n(369711),
     f = n(649754);
 function _(e) {
-    let { streamId: t, paused: n, onReady: a, onResize: o, className: _, ...h } = e,
-        p = i.useRef(null),
+    let { streamId: t, paused: n, onReady: a, onResize: o, className: _, ...p } = e,
+        h = i.useRef(null),
         { current: m } = i.useRef(l()('media-engine-video-'));
     return (
         i.useEffect(() => {
-            let e = p.current;
+            let e = h.current;
             if (!n && null != e) {
                 let n = !1,
                     r = (t, r) => {
@@ -49,11 +49,11 @@ function _(e) {
                     })(e);
                     if (null == n) return;
                     return (
-                        f.Z.addSink(t, p, (e) => {
+                        f.Z.addSink(t, h, (e) => {
                             r(e.width, e.height), n.render(e);
                         }),
                         () => {
-                            f.Z.removeSink(t, p);
+                            f.Z.removeSink(t, h);
                         }
                     );
                 }
@@ -62,8 +62,8 @@ function _(e) {
         (0, r.jsx)('canvas', {
             id: m,
             className: s()('media-engine-video', _),
-            ref: p,
-            ...h
+            ref: h,
+            ...p
         })
     );
 }

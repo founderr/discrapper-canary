@@ -21,8 +21,8 @@ t.Z = (0, a.I)(function (e) {
         d = void 0 === c ? t : c,
         f = e.children,
         _ = e.focus,
-        h = e.focusStyle,
-        p = 'transparent' === t,
+        p = e.focusStyle,
+        h = 'transparent' === t,
         m = (0, i.default)({
             default: {
                 swatch: o(
@@ -35,7 +35,7 @@ t.Z = (0, a.I)(function (e) {
                         outline: 'none'
                     },
                     n,
-                    _ ? (void 0 === h ? {} : h) : {}
+                    _ ? (void 0 === p ? {} : p) : {}
                 )
             }
         }),
@@ -62,7 +62,7 @@ t.Z = (0, a.I)(function (e) {
                 g
             ),
             f,
-            p &&
+            h &&
                 r.createElement(s.Z, {
                     borderRadius: m.swatch.borderRadius,
                     boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.1)'

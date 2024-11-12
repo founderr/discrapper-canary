@@ -1,6 +1,6 @@
 n.d(t, {
     Mt: function () {
-        return h;
+        return p;
     },
     Sh: function () {
         return u.S;
@@ -48,7 +48,7 @@ function _() {
     var e;
     return null !== (e = [d.AS.NATIVE, d.AS.WEBRTC].find((e) => f(e).supported())) && void 0 !== e ? e : d.AS.DUMMY;
 }
-function h(e) {
+function p(e) {
     return new (f(e))();
 }
 ((r = s || (s = {})).INPUT_DEVICE = 'input_device'), (r.STREAM = 'stream'), ((i = o || (o = {})).NONE = ''), (i.BACKGROUND_BLUR = 'background_blur'), (i.BACKGROUND_REPLACEMENT = 'background_replacement'), ((a = l || (l = {})).CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (a.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');

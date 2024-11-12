@@ -9,10 +9,10 @@ var r,
     d = n(131704),
     f = n(981631);
 let _ = {},
-    h = !1;
-function p() {
+    p = !1;
+function h() {
     var e, t, n;
-    (h = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (_ = {});
+    (p = null !== (n = null === (e = c.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (_ = {});
     let r = null === (t = c.Z.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
     if (null == r) return !1;
     for (let e in r) {
@@ -28,13 +28,13 @@ function p() {
 }
 class m extends (s = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z), p(), this.syncWith([c.Z], p);
+        this.waitFor(c.Z), h(), this.syncWith([c.Z], h);
     }
     getFavoriteChannels() {
         return _;
     }
     get favoriteServerMuted() {
-        return h;
+        return p;
     }
     isFavorite(e) {
         return null != e && null != _[e];

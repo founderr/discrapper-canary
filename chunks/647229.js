@@ -50,15 +50,15 @@ function u(e, t, n) {
         d,
         f = r.length / 4 - 2,
         _ = 4,
-        h = [0, 0, 0, 0];
+        p = [0, 0, 0, 0];
     e = (o = e.s[n])[0];
-    var p = o[1],
+    var h = o[1],
         m = o[2],
         g = o[3],
         E = o[4];
-    for (d = 0; d < f; d++) (o = e[i >>> 24] ^ p[(a >> 16) & 255] ^ m[(s >> 8) & 255] ^ g[255 & t] ^ r[_]), (u = e[a >>> 24] ^ p[(s >> 16) & 255] ^ m[(t >> 8) & 255] ^ g[255 & i] ^ r[_ + 1]), (c = e[s >>> 24] ^ p[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ g[255 & a] ^ r[_ + 2]), (t = e[t >>> 24] ^ p[(i >> 16) & 255] ^ m[(a >> 8) & 255] ^ g[255 & s] ^ r[_ + 3]), (_ += 4), (i = o), (a = u), (s = c);
-    for (d = 0; 4 > d; d++) (h[n ? 3 & -d : d] = (E[i >>> 24] << 24) ^ (E[(a >> 16) & 255] << 16) ^ (E[(s >> 8) & 255] << 8) ^ E[255 & t] ^ r[_++]), (o = i), (i = a), (a = s), (s = t), (t = o);
-    return h;
+    for (d = 0; d < f; d++) (o = e[i >>> 24] ^ h[(a >> 16) & 255] ^ m[(s >> 8) & 255] ^ g[255 & t] ^ r[_]), (u = e[a >>> 24] ^ h[(s >> 16) & 255] ^ m[(t >> 8) & 255] ^ g[255 & i] ^ r[_ + 1]), (c = e[s >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ g[255 & a] ^ r[_ + 2]), (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(a >> 8) & 255] ^ g[255 & s] ^ r[_ + 3]), (_ += 4), (i = o), (a = u), (s = c);
+    for (d = 0; 4 > d; d++) (p[n ? 3 & -d : d] = (E[i >>> 24] << 24) ^ (E[(a >> 16) & 255] << 16) ^ (E[(s >> 8) & 255] << 8) ^ E[255 & t] ^ r[_++]), (o = i), (i = a), (a = s), (s = t), (t = o);
+    return p;
 }
 function c(e, t) {
     var n,
@@ -73,9 +73,9 @@ function c(e, t) {
         d = a[4],
         f = a[5],
         _ = a[6],
-        h = a[7];
-    for (n = 0; 64 > n; n++) 16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + h + ((d >>> 6) ^ (d >>> 11) ^ (d >>> 25) ^ (d << 26) ^ (d << 21) ^ (d << 7)) + (_ ^ (d & (f ^ _))) + s[n]), (h = _), (_ = f), (f = d), (d = (c + r) | 0), (c = u), (u = l), (o = (r + (((l = o) & u) ^ (c & (l ^ u))) + ((l >>> 2) ^ (l >>> 13) ^ (l >>> 22) ^ (l << 30) ^ (l << 19) ^ (l << 10))) | 0);
-    (a[0] = (a[0] + o) | 0), (a[1] = (a[1] + l) | 0), (a[2] = (a[2] + u) | 0), (a[3] = (a[3] + c) | 0), (a[4] = (a[4] + d) | 0), (a[5] = (a[5] + f) | 0), (a[6] = (a[6] + _) | 0), (a[7] = (a[7] + h) | 0);
+        p = a[7];
+    for (n = 0; 64 > n; n++) 16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + p + ((d >>> 6) ^ (d >>> 11) ^ (d >>> 25) ^ (d << 26) ^ (d << 21) ^ (d << 7)) + (_ ^ (d & (f ^ _))) + s[n]), (p = _), (_ = f), (f = d), (d = (c + r) | 0), (c = u), (u = l), (o = (r + (((l = o) & u) ^ (c & (l ^ u))) + ((l >>> 2) ^ (l >>> 13) ^ (l >>> 22) ^ (l << 30) ^ (l << 19) ^ (l << 10))) | 0);
+    (a[0] = (a[0] + o) | 0), (a[1] = (a[1] + l) | 0), (a[2] = (a[2] + u) | 0), (a[3] = (a[3] + c) | 0), (a[4] = (a[4] + d) | 0), (a[5] = (a[5] + f) | 0), (a[6] = (a[6] + _) | 0), (a[7] = (a[7] + p) | 0);
 }
 function d(e, t) {
     var n,
@@ -88,13 +88,13 @@ function f(e, t) {
     'undefined' != typeof window && window.performance && 'function' == typeof window.performance.now ? e.addEntropy(window.performance.now(), t, 'loadtime') : e.addEntropy(new Date().valueOf(), t, 'loadtime');
 }
 function _(e) {
-    (e.b = h(e).concat(h(e))), (e.L = new l.cipher.aes(e.b));
+    (e.b = p(e).concat(p(e))), (e.L = new l.cipher.aes(e.b));
 }
-function h(e) {
+function p(e) {
     for (var t = 0; 4 > t && ((e.h[t] = (e.h[t] + 1) | 0), !e.h[t]); t++);
     return e.L.encrypt(e.h);
 }
-function p(e, t) {
+function h(e, t) {
     return function () {
         t.apply(e, arguments);
     };
@@ -467,11 +467,11 @@ function p(e, t) {
                 d = c.i,
                 f = [0, 0, 0, 0],
                 _ = u(e.encrypt(n)),
-                h = l.bitArray.bitLength(t) - i,
-                p = [];
-            for (n = 0, r = r || []; n + 4 < h / 32; n += 4) (s = d(_, e.decrypt(d(_, t.slice(n, n + 4))))), (f = d(f, s)), (p = p.concat(s)), (_ = u(_));
-            if (((o = h - 32 * n), (s = e.encrypt(d(_, [0, 0, 0, o]))), (s = d(s, c.clamp(t.slice(n), o).concat([0, 0, 0]))), (f = d(f, s)), (f = e.encrypt(d(f, d(_, u(_))))), r.length && (f = d(f, a ? r : l.mode.ocb2.pmac(e, r))), !c.equal(c.clamp(f, i), c.bitSlice(t, h)))) throw new l.exception.corrupt("ocb: tag doesn't match");
-            return p.concat(c.clamp(s, o));
+                p = l.bitArray.bitLength(t) - i,
+                h = [];
+            for (n = 0, r = r || []; n + 4 < p / 32; n += 4) (s = d(_, e.decrypt(d(_, t.slice(n, n + 4))))), (f = d(f, s)), (h = h.concat(s)), (_ = u(_));
+            if (((o = p - 32 * n), (s = e.encrypt(d(_, [0, 0, 0, o]))), (s = d(s, c.clamp(t.slice(n), o).concat([0, 0, 0]))), (f = d(f, s)), (f = e.encrypt(d(f, d(_, u(_))))), r.length && (f = d(f, a ? r : l.mode.ocb2.pmac(e, r))), !c.equal(c.clamp(f, i), c.bitSlice(t, p)))) throw new l.exception.corrupt("ocb: tag doesn't match");
+            return h.concat(c.clamp(s, o));
         },
         pmac: function (e, t) {
             var n,
@@ -528,13 +528,13 @@ function p(e, t) {
                 d,
                 f,
                 _,
-                h,
-                p = l.bitArray;
-            for (f = n.length, _ = p.bitLength(n), h = p.bitLength(r), o = p.bitLength(i), s = t.encrypt([0, 0, 0, 0]), 96 === o ? ((i = i.slice(0)), (i = p.concat(i, [1]))) : ((i = l.mode.gcm.j(s, [0, 0, 0, 0], i)), (i = l.mode.gcm.j(s, i, [0, 0, Math.floor(o / 4294967296), 4294967295 & o]))), o = l.mode.gcm.j(s, [0, 0, 0, 0], r), d = i.slice(0), r = o.slice(0), e || (r = l.mode.gcm.j(s, o, n)), c = 0; c < f; c += 4) d[3]++, (u = t.encrypt(d)), (n[c] ^= u[0]), (n[c + 1] ^= u[1]), (n[c + 2] ^= u[2]), (n[c + 3] ^= u[3]);
+                p,
+                h = l.bitArray;
+            for (f = n.length, _ = h.bitLength(n), p = h.bitLength(r), o = h.bitLength(i), s = t.encrypt([0, 0, 0, 0]), 96 === o ? ((i = i.slice(0)), (i = h.concat(i, [1]))) : ((i = l.mode.gcm.j(s, [0, 0, 0, 0], i)), (i = l.mode.gcm.j(s, i, [0, 0, Math.floor(o / 4294967296), 4294967295 & o]))), o = l.mode.gcm.j(s, [0, 0, 0, 0], r), d = i.slice(0), r = o.slice(0), e || (r = l.mode.gcm.j(s, o, n)), c = 0; c < f; c += 4) d[3]++, (u = t.encrypt(d)), (n[c] ^= u[0]), (n[c + 1] ^= u[1]), (n[c + 2] ^= u[2]), (n[c + 3] ^= u[3]);
             return (
-                (n = p.clamp(n, _)),
+                (n = h.clamp(n, _)),
                 e && (r = l.mode.gcm.j(s, o, n)),
-                (e = [Math.floor(h / 4294967296), 4294967295 & h, Math.floor(_ / 4294967296), 4294967295 & _]),
+                (e = [Math.floor(p / 4294967296), 4294967295 & p, Math.floor(_ / 4294967296), 4294967295 & _]),
                 (r = l.mode.gcm.j(s, r, e)),
                 (u = t.encrypt(i)),
                 (r[0] ^= u[0]),
@@ -542,7 +542,7 @@ function p(e, t) {
                 (r[2] ^= u[2]),
                 (r[3] ^= u[3]),
                 {
-                    tag: p.bitSlice(r, 0, a),
+                    tag: h.bitSlice(r, 0, a),
                     data: n
                 }
             );
@@ -626,7 +626,7 @@ function p(e, t) {
                 for (a = 0; a < this.c.length && ((i = i.concat(this.c[a].finalize())), (s += this.m[a]), (this.m[a] = 0), n || !(this.P & (1 << a))); a++);
                 for (this.P >= 1 << this.c.length && (this.c.push(new l.hash.sha256()), this.m.push(0)), this.f -= s, s > this.o && (this.o = s), this.P++, this.b = l.hash.sha256.hash(this.b.concat(i)), this.L = new l.cipher.aes(this.b), n = 0; 4 > n && ((this.h[n] = (this.h[n] + 1) | 0), !this.h[n]); n++);
             }
-            for (n = 0; n < e; n += 4) 0 == (n + 1) % this.ca && _(this), r.push((i = h(this))[0], i[1], i[2], i[3]);
+            for (n = 0; n < e; n += 4) 0 == (n + 1) % this.ca && _(this), r.push((i = p(this))[0], i[1], i[2], i[3]);
             return _(this), r.slice(0, e);
         },
         setDefaultParanoia: function (e, t) {
@@ -674,11 +674,11 @@ function p(e, t) {
             if (!this.D) {
                 if (
                     ((this.a = {
-                        loadTimeCollector: p(this, this.ma),
-                        mouseCollector: p(this, this.oa),
-                        keyboardCollector: p(this, this.la),
-                        accelerometerCollector: p(this, this.ea),
-                        touchCollector: p(this, this.qa)
+                        loadTimeCollector: h(this, this.ma),
+                        mouseCollector: h(this, this.oa),
+                        keyboardCollector: h(this, this.la),
+                        accelerometerCollector: h(this, this.ea),
+                        touchCollector: h(this, this.qa)
                     }),
                     window.addEventListener)
                 )

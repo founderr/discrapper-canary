@@ -15,8 +15,8 @@ var r,
     d = n(442837),
     f = n(759174),
     _ = n(570140),
-    h = n(308636);
-function p(e) {
+    p = n(308636);
+function h(e) {
     return 'guild:'.concat(e);
 }
 function m(e) {
@@ -30,22 +30,22 @@ function E(e) {
 }
 ((a = r || (r = {}))[(a.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (a[(a.FETCHING = 1)] = 'FETCHING'), (a[(a.FETCHED = 2)] = 'FETCHED');
 let v = new f.h(
-        (e) => [p(e.guild_id), ...e.subscription_listings_ids.map(m)],
+        (e) => [h(e.guild_id), ...e.subscription_listings_ids.map(m)],
         (e) => e.id
     ),
     I = new f.h(
         (e) => [g(e.application_id), E(e.subscription_plans[0].id)],
         (e) => e.id
     ),
-    S = {},
-    T = new Set(),
     b = {},
+    S = new Set(),
+    T = {},
     y = {},
     A = {},
     N = {},
     C = new Map();
 function R(e) {
-    return v.values(p(e));
+    return v.values(h(e));
 }
 function O(e) {
     var t;
@@ -58,10 +58,10 @@ let L = [];
 class x extends (i = d.ZP.Store) {
     getSubscriptionGroupListingsForGuildFetchState(e) {
         var t;
-        return null !== (t = S[e]) && void 0 !== t ? t : 0;
+        return null !== (t = b[e]) && void 0 !== t ? t : 0;
     }
     getDidFetchListingForSubscriptionPlanId(e) {
-        return T.has(e);
+        return S.has(e);
     }
     getSubscriptionGroupListing(e) {
         return v.get(e);
@@ -86,7 +86,7 @@ class x extends (i = d.ZP.Store) {
         return c()(t.length <= 1, 'Found multiple listings for plan'), t[0];
     }
     getSubscriptionSettings(e) {
-        return b[e];
+        return T[e];
     }
     getSubscriptionTrial(e) {
         return y[e];
@@ -113,24 +113,24 @@ class x extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new x(_.Z, {
         CONNECTION_OPEN: function () {
-            v.clear(), I.clear(), (S = {}), T.clear(), (b = {}), (y = {}), (A = {}), (N = {}), C.clear();
+            v.clear(), I.clear(), (b = {}), S.clear(), (T = {}), (y = {}), (A = {}), (N = {}), C.clear();
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
             let { settings: t } = e;
-            b[t.guild_id] = t;
+            T[t.guild_id] = t;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { guildId: t } = e;
-            for (let e of ((S[t] = 1), R(t))) for (let t of (v.delete(e.id), e.subscription_listings_ids)) I.delete(t);
+            for (let e of ((b[t] = 1), R(t))) for (let t of (v.delete(e.id), e.subscription_listings_ids)) I.delete(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { guildId: t, groupListings: n, settings: r, subscriptionTrials: i } = e;
-            for (let e of ((S[t] = 2), n)) O(e);
-            for (let e of ((b[t] = r), i)) y[e.id] = e;
+            for (let e of ((b[t] = 2), n)) O(e);
+            for (let e of ((T[t] = r), i)) y[e.id] = e;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { guildId: t } = e;
-            S[t] = 2;
+            b[t] = 2;
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING: function (e) {
             let { listing: t } = e;
@@ -142,7 +142,7 @@ class x extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN: function (e) {
             let { planId: t } = e;
-            T.add(t);
+            S.add(t);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;
@@ -174,7 +174,7 @@ class x extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
             let { guildId: t } = e;
-            (N[t] = 2), (A[t] = h.m);
+            (N[t] = 2), (A[t] = p.m);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function (e) {
             let { guildId: t } = e;

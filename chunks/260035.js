@@ -16,15 +16,15 @@ function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
         [f, _] = i.useState(null),
-        h = i.useRef(new Set()),
-        [p, m] = i.useState(!1),
+        p = i.useRef(new Set()),
+        [h, m] = i.useState(!1),
         g = (0, s.e7)([o.Z], () => o.Z.getCurrentlySelectedChannelId()),
         E = i.useCallback((e) => {
-            h.current.delete(e), m(h.current.size > 0);
+            p.current.delete(e), m(p.current.size > 0);
         }, []),
-        v = i.useCallback((e) => (h.current.add(e), m(!0), () => E(e)), [E]),
+        v = i.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
         I = i.useCallback((e, t) => {
-            for (let n of h.current) n(e, t);
+            for (let n of p.current) n(e, t);
         }, []);
     return (
         i.useEffect(() => {
@@ -44,7 +44,7 @@ function d(e) {
                     ref: _,
                     className: c.canvas,
                     environment: u.rq,
-                    onClick: p ? I : void 0
+                    onClick: h ? I : void 0
                 }),
                 (0, r.jsx)(a.Ji, {
                     ref: d,

@@ -16,11 +16,11 @@ var i = n(120356),
     d = n(427788);
 function f(e) {
     let t,
-        { color: n, size: i, forcedIconColor: f, className: _, iconClassName: h } = e,
-        [p, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
+        { color: n, size: i, forcedIconColor: f, className: _, iconClassName: p } = e,
+        [h, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
         g = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
         E = (0, s._i)(null != n ? n : g),
-        v = (0, s.ho)(E, !1, p ? m : null);
+        v = (0, s.ho)(E, !1, h ? m : null);
     t = null != f ? f : 0.3 > (0, s.Bd)(E) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
     let I = i / 8;
     return (0, r.jsx)('div', {
@@ -35,7 +35,7 @@ function f(e) {
         children: (0, r.jsx)(u.LinkIcon, {
             size: 'custom',
             color: t,
-            className: a()(d.linkIcon, h),
+            className: a()(d.linkIcon, p),
             width: i - 2 * I,
             height: i - 2 * I,
             style: { margin: I }

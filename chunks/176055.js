@@ -34,7 +34,7 @@ function x(e, t, n) {
         e
     );
 }
-class A extends r.PureComponent {
+class b extends r.PureComponent {
     renderMemberInfo() {
         let { approximateMemberCount: e, approximatePresenceCount: t } = this.props.guild;
         return null == e || null == t
@@ -155,5 +155,5 @@ t.Z = (0, h.Z)(
             isInGuild: null != C.Z.getGuild(t.id) && !n,
             isLurking: n
         };
-    })(A)
+    })(b)
 );

@@ -25,8 +25,8 @@ function d(e) {
     try {
         _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
     } catch (e) {}
-    let h = f.channel_id,
-        p = null !== (u = null !== (i = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(h)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
+    let p = f.channel_id,
+        h = null !== (u = null !== (i = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(p)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== i ? i : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
     return {
         clientId: null !== (c = f.client_id) && void 0 !== c ? c : '',
         scopes: (null !== (d = f.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),
@@ -36,8 +36,8 @@ function d(e) {
         codeChallengeMethod: f.code_challenge_method,
         state: f.state,
         permissions: _,
-        channelId: h,
-        guildId: p,
+        channelId: p,
+        guildId: h,
         prompt: f.prompt,
         disableGuildSelect: 'true' === f.disable_guild_select,
         integrationType: null == f.integration_type ? void 0 : Number(f.integration_type),

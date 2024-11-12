@@ -10,18 +10,18 @@ var i,
     d = n(601964),
     f = n(411198),
     _ = n(625137),
-    h = n(709054),
-    p = n(314897),
+    p = n(709054),
+    h = n(314897),
     m = n(981631),
     g = n(647086);
 let E = {},
     v = {},
     I = !1,
-    S = [];
-function T(e) {
+    b = [];
+function S(e) {
     for (let t of ((v = {}), (E = {}), (r = 0), e)) r++, (v[t.id] = f.cL(t)), (E[t.id] = t.roles);
 }
-function b(e) {
+function T(e) {
     let { guildId: t, role: n } = e,
         r = E[t],
         i = _.CL(n),
@@ -43,7 +43,7 @@ class A extends (i = l.ZP.Store) {
         return v;
     }
     getGuildIds() {
-        return h.default.keys(v);
+        return p.default.keys(v);
     }
     getGuildCount() {
         return r;
@@ -52,7 +52,7 @@ class A extends (i = l.ZP.Store) {
         return I;
     }
     getGeoRestrictedGuilds() {
-        return S;
+        return b;
     }
     getAllGuildsRoles() {
         return E;
@@ -95,14 +95,14 @@ class A extends (i = l.ZP.Store) {
                     r++, (v[e.id] = f.wD(e, t[e.id])), (E[e.id] = e.roles instanceof Array ? _.C5(e.id, e.roles) : e.roles);
                 });
             let n = !1;
-            if (S.length !== e.geoRestrictedGuilds.length) n = !0;
+            if (b.length !== e.geoRestrictedGuilds.length) n = !0;
             else
                 for (let t = 0; t < e.geoRestrictedGuilds.length; t++)
-                    if (!(0, u.Z)(S[t], e.geoRestrictedGuilds[t])) {
+                    if (!(0, u.Z)(b[t], e.geoRestrictedGuilds[t])) {
                         n = !0;
                         break;
                     }
-            n && (S = e.geoRestrictedGuilds);
+            n && (b = e.geoRestrictedGuilds);
         },
         OVERLAY_INITIALIZE: function (e) {
             var t;
@@ -117,11 +117,11 @@ class A extends (i = l.ZP.Store) {
                 (E = e.allGuildsRoles);
         },
         CACHE_LOADED: function (e) {
-            T(e.guilds);
+            S(e.guilds);
         },
         CACHE_LOADED_LAZY: function (e) {
             if (0 === e.guilds.length) return !1;
-            T(e.guilds);
+            S(e.guilds);
         },
         GUILD_CREATE: function (e) {
             let t = f.wD(e.guild, v[e.guild.id]);
@@ -143,16 +143,16 @@ class A extends (i = l.ZP.Store) {
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e,
-                n = S.findIndex((e) => e.id === t.id);
+                n = b.findIndex((e) => e.id === t.id);
             if (-1 !== n) {
-                S.splice(n, 1), (S = [...S]);
+                b.splice(n, 1), (b = [...b]);
                 return;
             }
             if (null == v[t.id] || t.unavailable) return !1;
             (v = { ...v }), delete v[t.id], (E[t.id] = void 0), r--;
         },
-        GUILD_ROLE_CREATE: b,
-        GUILD_ROLE_UPDATE: b,
+        GUILD_ROLE_CREATE: T,
+        GUILD_ROLE_UPDATE: T,
         GUILD_ROLE_DELETE: function (e) {
             let { guildId: t, roleId: n } = e,
                 r = E[t];
@@ -161,7 +161,7 @@ class A extends (i = l.ZP.Store) {
         },
         GUILD_MEMBER_ADD: function (e) {
             let { guildId: t, joinedAt: n, user: r } = e,
-                i = p.default.getId(),
+                i = h.default.getId(),
                 a = v[t];
             if (i !== r.id || null == a) return !1;
             let s = 'string' == typeof n ? new Date(n) : n;
@@ -175,8 +175,8 @@ class A extends (i = l.ZP.Store) {
             return !0;
         },
         GUILD_GEO_RESTRICTED: function (e) {
-            S = [
-                ...S,
+            b = [
+                ...b,
                 {
                     id: e.guildId,
                     name: e.name,

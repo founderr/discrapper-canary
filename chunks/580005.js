@@ -15,8 +15,8 @@ var r,
     d = n(430824),
     f = n(944486),
     _ = n(914010),
-    h = n(981631),
-    p = n(526761);
+    p = n(981631),
+    h = n(526761);
 function m(e, t, n) {
     return (
         t in e
@@ -47,34 +47,34 @@ let g = 100,
     }),
     v = null,
     I = null;
-function S(e) {
+function b(e) {
     let { guildId: t, channelId: n } = e,
         r = !1;
     return (
         n !== v &&
             ((v = null != n ? n : null),
             null != n &&
-                h.Xyh.test(n) &&
+                p.Xyh.test(n) &&
                 ((r = !0),
                 E.track(n),
-                b.pendingUsages.push({
+                T.pendingUsages.push({
                     key: n,
                     timestamp: Date.now()
                 }))),
         t !== I &&
             ((I = null != t ? t : null),
             null != t &&
-                h.Xyh.test(t) &&
+                p.Xyh.test(t) &&
                 ((r = !0),
                 E.track(t),
-                b.pendingUsages.push({
+                T.pendingUsages.push({
                     key: t,
                     timestamp: Date.now()
                 }))),
         r
     );
 }
-function T() {
+function S() {
     var e;
     let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
@@ -83,19 +83,19 @@ function T() {
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        b.pendingUsages
+        T.pendingUsages
     );
 }
-let b = { pendingUsages: [] };
+let T = { pendingUsages: [] };
 class y extends (r = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && h.Xyh.test(e.key))), (b = e)), this.syncWith([u.Z], T);
+        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (T = e)), this.syncWith([u.Z], S);
     }
     getState() {
-        return b;
+        return T;
     }
     hasPendingUsage() {
-        return b.pendingUsages.length > 0;
+        return T.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
         return E;
@@ -121,13 +121,13 @@ class y extends (r = s.ZP.PersistedStore) {
 m(y, 'displayName', 'FrecencyStore'),
     m(y, 'persistKey', 'FrecencyStore'),
     (t.Z = new y(o.Z, {
-        CHANNEL_SELECT: S,
-        VOICE_CHANNEL_SELECT: S,
+        CHANNEL_SELECT: b,
+        VOICE_CHANNEL_SELECT: b,
         USER_SETTINGS_PROTO_UPDATE: function (e) {
             let {
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            return t === p.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((b.pendingUsages = []), !0);
+            return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
         }
     }));

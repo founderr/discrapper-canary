@@ -14,16 +14,16 @@ var r = n(200651),
     d = n(438332),
     f = n(664437),
     _ = n(806966),
-    h = n(65029),
-    p = n(210887),
+    p = n(65029),
+    h = n(210887),
     m = n(695346),
     g = n(430824),
     E = n(451478),
     v = n(768581),
     I = n(111846),
-    S = n(392552),
-    T = n(543241),
-    b = n(199257),
+    b = n(392552),
+    S = n(543241),
+    T = n(199257),
     y = n(880949),
     A = n(784222),
     N = n(149203),
@@ -42,7 +42,7 @@ let D = (e) => {
             L,
             x,
             { className: w, emojiGrid: M, guildId: P, pickerIntention: k, channel: U } = e,
-            { enabled: G } = S.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
+            { enabled: G } = b.Z.useExperiment({ location: 'EmojiPicker' }, { autoTrackExposure: !1 }),
             B = _.kJ.useStore((e) => e.inspectedExpressionPosition),
             Z = i.useMemo(() => {
                 var e;
@@ -73,9 +73,9 @@ let D = (e) => {
             j = (0, a.e7)([E.Z], () => E.Z.isFocused()),
             H = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
             Y = m.Yk.useSetting(),
-            W = (0, T.C1)(P, O(t) ? t : null),
+            W = (0, S.C1)(P, O(t) ? t : null),
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
-            { newlyAddedEmojis: z } = (0, b.Z)(P, k),
+            { newlyAddedEmojis: z } = (0, T.Z)(P, k),
             q = t.id,
             Q = (null == Z ? void 0 : Z.type) === A.ld.EMOJI ? Z.subCategory : N.t0.NONE;
         if (
@@ -87,7 +87,7 @@ let D = (e) => {
                         Q !== N.t0.NONE &&
                         (Q === N.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, f.Zg)(t.guildId, z[0].id),
                         null != B.source &&
-                            (0, T.Gn)({
+                            (0, S.Gn)({
                                 emoji: t,
                                 subCategory: Q,
                                 position: Z.columnIndex + 1,
@@ -98,7 +98,7 @@ let D = (e) => {
             null == t)
         )
             return null;
-        let X = p.Z.theme;
+        let X = h.Z.theme;
         if (O(t)) {
             var J;
             let e =
@@ -164,7 +164,7 @@ let D = (e) => {
                       intention: k,
                       guild: F
                   });
-        return (0, r.jsx)(h.Z, {
+        return (0, r.jsx)(p.Z, {
             className: w,
             graphicPrimary: L,
             graphicSecondary: $,

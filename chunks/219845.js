@@ -3,10 +3,10 @@ n.d(t, {
         return o;
     },
     Y9: function () {
-        return p;
+        return h;
     },
     uP: function () {
-        return h;
+        return p;
     }
 });
 var r = n(644387),
@@ -37,29 +37,29 @@ var r = n(644387),
         contentBoxSize: f(),
         contentRect: new i.N(0, 0, 0, 0)
     }),
-    h = function (e) {
+    p = function (e) {
         if (o.has(e)) return o.get(e);
         if ((0, a.xj)(e)) return o.set(e, _), _;
         var t = getComputedStyle(e),
             n = (0, a.zd)(e) && e.ownerSVGElement && e.getBBox(),
             r = !c && 'border-box' === t.boxSizing,
             s = u.test(t.writingMode || ''),
-            h = !n && l.test(t.overflowY || ''),
-            p = !n && l.test(t.overflowX || ''),
+            p = !n && l.test(t.overflowY || ''),
+            h = !n && l.test(t.overflowX || ''),
             m = n ? 0 : d(t.paddingTop),
             g = n ? 0 : d(t.paddingRight),
             E = n ? 0 : d(t.paddingBottom),
             v = n ? 0 : d(t.paddingLeft),
             I = n ? 0 : d(t.borderTopWidth),
-            S = n ? 0 : d(t.borderRightWidth),
-            T = n ? 0 : d(t.borderBottomWidth),
-            b = n ? 0 : d(t.borderLeftWidth),
+            b = n ? 0 : d(t.borderRightWidth),
+            S = n ? 0 : d(t.borderBottomWidth),
+            T = n ? 0 : d(t.borderLeftWidth),
             y = v + g,
             A = m + E,
-            N = b + S,
-            C = I + T,
-            R = p ? e.offsetHeight - C - e.clientHeight : 0,
-            O = h ? e.offsetWidth - N - e.clientWidth : 0,
+            N = T + b,
+            C = I + S,
+            R = h ? e.offsetHeight - C - e.clientHeight : 0,
+            O = p ? e.offsetWidth - N - e.clientWidth : 0,
             D = n ? n.width : d(t.width) - (r ? y + N : 0) - O,
             L = n ? n.height : d(t.height) - (r ? A + C : 0) - R,
             x = D + y + O + N,
@@ -72,8 +72,8 @@ var r = n(644387),
             });
         return o.set(e, M), M;
     },
-    p = function (e, t) {
-        var n = h(e),
+    h = function (e, t) {
+        var n = p(e),
             i = n.borderBoxSize,
             a = n.contentBoxSize,
             s = n.devicePixelContentBoxSize;

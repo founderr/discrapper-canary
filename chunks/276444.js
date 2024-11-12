@@ -10,16 +10,16 @@ var r,
     d = n(281494),
     f = n(981631);
 let _ = null,
-    h = {},
-    p = [],
+    p = {},
+    h = [],
     m = new Map(),
     g = new Set(),
     E = !1,
     v = new Set(),
     I = new Set(),
-    S = {},
-    T = 0,
-    b = null,
+    b = {},
+    S = 0,
+    T = null,
     y = [],
     A = !1,
     N = 0,
@@ -50,13 +50,13 @@ class U extends (r = l.ZP.Store) {
         this.waitFor(c.default), this.syncWith([c.default], w);
     }
     checkAndFetchReferralsRemaining() {
-        null == _ && !E && T < 5 && (null == b || b < Date.now()) && (0, d.C$)();
+        null == _ && !E && S < 5 && (null == T || T < Date.now()) && (0, d.C$)();
     }
     getReferralsRemaining() {
         return this.checkAndFetchReferralsRemaining(), _;
     }
     getSentUserIds() {
-        return this.checkAndFetchReferralsRemaining(), null == p ? [] : p;
+        return this.checkAndFetchReferralsRemaining(), null == h ? [] : h;
     }
     isFetchingReferralsRemaining() {
         return E;
@@ -65,10 +65,10 @@ class U extends (r = l.ZP.Store) {
         return g.has(e);
     }
     getRecipientEligibility(e) {
-        return void 0 === h[e] && !g.has(e) && (0, d.Ve)(e), h[e];
+        return void 0 === p[e] && !g.has(e) && (0, d.Ve)(e), p[e];
     }
     getRelevantUserTrialOffer(e) {
-        return S[e];
+        return b[e];
     }
     isResolving(e) {
         return v.has(e);
@@ -89,7 +89,7 @@ class U extends (r = l.ZP.Store) {
         return R;
     }
     getRelevantReferralTrialOffers() {
-        return S;
+        return b;
     }
     getRecipientStatus() {
         return m;
@@ -130,11 +130,11 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
             let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
-            (C = null == r && a), (E = !1), (_ = t), (p = n), (R = r), (m = i), (O = s && (a || m.size > 0)), (D = o), (x = l);
+            (C = null == r && a), (E = !1), (_ = t), (h = n), (R = r), (m = i), (O = s && (a || m.size > 0)), (D = o), (x = l);
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
-            (C = !1), (R = null), (E = !1), (T += 1), (b = Date.now() + 1000 * Math.pow(2, T));
+            (C = !1), (R = null), (E = !1), (S += 1), (T = Date.now() + 1000 * Math.pow(2, S));
         },
         BILLING_CREATE_REFERRAL_PREVIEW_START: function (e) {
             let { recipientId: t } = e;
@@ -152,23 +152,23 @@ class U extends (r = l.ZP.Store) {
         },
         BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function (e) {
             let { recipientId: t, is_eligible: n } = e;
-            (h[t] = n), g.delete(t);
+            (p[t] = n), g.delete(t);
         },
         BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function (e) {
             let { recipientId: t } = e;
-            (h[t] = !1), g.delete(t);
+            (p[t] = !1), g.delete(t);
         },
         BILLING_CREATE_REFERRAL_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            (0, d.C$)(), (S[t.id] = t), (p = [...p, t.user_id]);
+            (0, d.C$)(), (b[t.id] = t), (h = [...h, t.user_id]);
         },
         CREATE_REFERRALS_SUCCESS: function (e) {
             let { userTrialOffers: t } = e;
-            for (let e of ((0, d.C$)(), t)) (S[e.id] = e), (p = [...p, e.user_id]);
+            for (let e of ((0, d.C$)(), t)) (b[e.id] = e), (h = [...h, e.user_id]);
         },
         BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
             let { userTrialOffer: t } = e;
-            null != t && (v.delete(t.id), I.add(t.id), (S[t.id] = t));
+            null != t && (v.delete(t.id), I.add(t.id), (b[t.id] = t));
         },
         BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
             let { userTrialOfferId: t } = e;
@@ -191,6 +191,6 @@ class U extends (r = l.ZP.Store) {
         },
         LOAD_MESSAGES_AROUND_SUCCESS: P,
         LOGOUT: function () {
-            (_ = null), (h = {}), (p = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (S = {}), (T = 0), (b = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
+            (_ = null), (p = {}), (h = []), (g = new Set()), (E = !1), (v = new Set()), (I = new Set()), (b = {}), (S = 0), (T = null), (y = []), (A = !1), (N = 0), (C = !1), (R = null), (m = new Map()), (O = !1), (D = !1), (L = !1), (x = f.g2L.NOT_ELIGIBLE);
         }
     }));

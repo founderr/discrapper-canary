@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -16,9 +16,9 @@ var i = n(481060),
     d = n(981631),
     f = n(388032);
 let _ = 'guild-boost-purchase-modal';
-async function h(e) {
-    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: p, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: v = 1, disablePremiumUpsell: I, onSubscriptionConfirmation: S, inPopout: T, applicationId: b } = e,
-        y = T ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
+async function p(e) {
+    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: v = 1, disablePremiumUpsell: I, onSubscriptionConfirmation: b, inPopout: S, applicationId: T } = e,
+        y = S ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
         A = l.ZP.getPremiumTypeSubscription();
     if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
         null != g && g(),
@@ -43,14 +43,14 @@ async function h(e) {
                         a(), null == E || E(e);
                     },
                     analyticsLocations: t,
-                    analyticsLocation: h,
-                    analyticsSourceLocation: null != p ? p : h,
+                    analyticsLocation: p,
+                    analyticsSourceLocation: null != h ? h : p,
                     guildId: m,
                     totalNumberOfSlotsToAssign: v,
                     closeGuildPerksModal: g,
                     disablePremiumUpsell: I,
-                    onSubscriptionConfirmation: S,
-                    applicationId: b
+                    onSubscriptionConfirmation: b,
+                    applicationId: T
                 });
             };
         },
@@ -59,7 +59,7 @@ async function h(e) {
             onCloseCallback: () => {
                 u.default.track(d.rMx.MODAL_DISMISSED, {
                     type: d.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
-                    location: h
+                    location: p
                 });
             },
             onCloseRequest: () => {

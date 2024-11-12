@@ -79,10 +79,10 @@ function l(e) {
                                 let f = u.children[0];
                                 if (!a.LC.isText(f)) continue;
                                 let _ = f.text.match(/^\s*>>> /),
-                                    h = f.text.match(/^\s*> /);
-                                if ((null != h || null != _ || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
+                                    p = f.text.match(/^\s*> /);
+                                if ((null != p || null != _ || t) && (i.Q.setNodes(e, { type: 'blockQuote' }, { at: c }), !t)) {
                                     var n, r;
-                                    let s = null !== (r = null !== (n = null == h ? void 0 : h[0].length) && void 0 !== n ? n : null == _ ? void 0 : _[0].length) && void 0 !== r ? r : 0,
+                                    let s = null !== (r = null !== (n = null == p ? void 0 : p[0].length) && void 0 !== n ? n : null == _ ? void 0 : _[0].length) && void 0 !== r ? r : 0,
                                         o = a.C0.child(c, 0);
                                     i.Q.delete(e, {
                                         at: {

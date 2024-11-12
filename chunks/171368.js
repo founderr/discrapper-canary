@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         closeUserProfileModal: function () {
-            return p;
+            return h;
         },
         openUserProfileModal: function () {
-            return h;
+            return p;
         }
     });
 var r = n(259443),
@@ -25,8 +25,8 @@ let d = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
                 f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
             }
     };
-async function h(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: f, section: h, subsection: p, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v } = e,
+async function p(e) {
+    let { userId: t, guildId: n, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: f, section: p, subsection: h, friendToken: m, showGuildProfile: g, analyticsLocation: E, sourceAnalyticsLocations: v } = e,
         I = u.default.getUser(t);
     _(t),
         null == I
@@ -52,14 +52,14 @@ async function h(e) {
             messageId: null != i ? i : void 0,
             roleId: null != o ? o : void 0,
             sessionId: null != l ? l : void 0,
-            section: h,
-            subsection: p,
+            section: p,
+            subsection: h,
             friendToken: m,
             showGuildProfile: g,
             analyticsLocation: E,
             sourceAnalyticsLocations: v
         });
 }
-function p() {
+function h() {
     a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
 }

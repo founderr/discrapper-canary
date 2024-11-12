@@ -26,8 +26,8 @@ function v(e) {
     var t;
     let { query: n, initialCategoryId: v, onSelectApplication: S } = e,
         [N, T] = r.useState(v),
-        [x, A] = r.useState(1),
-        { fetchState: b, searchResults: Z } = (0, s.cj)([h.Z], () => ({
+        [x, b] = r.useState(1),
+        { fetchState: A, searchResults: Z } = (0, s.cj)([h.Z], () => ({
             fetchState: h.Z.getFetchState({
                 query: n,
                 categoryId: N,
@@ -58,9 +58,9 @@ function v(e) {
                 : {};
         }),
         L = (0, c.Z)(Z),
-        R = r.useMemo(() => (b === u.M.FETCHING ? L : Z), [b, L, Z]);
+        R = r.useMemo(() => (A === u.M.FETCHING ? L : Z), [A, L, Z]);
     r.useEffect(() => {
-        A(1);
+        b(1);
     }, [n]);
     let j = r.useCallback(
             (e) => {
@@ -73,13 +73,13 @@ function v(e) {
                         categoryId: N
                     }
                 }),
-                    A(e);
+                    b(e);
             },
             [n, N]
         ),
         O = r.useCallback(
             (e) => {
-                A(1),
+                b(1),
                     T(e),
                     d.yC({
                         query: n,
@@ -109,7 +109,7 @@ function v(e) {
                                 })
                             }),
                             (0, i.jsx)(p.Z, {
-                                loading: b === u.M.FETCHING,
+                                loading: A === u.M.FETCHING,
                                 children: (0, i.jsx)('div', {
                                     className: C.content,
                                     children:

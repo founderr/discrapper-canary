@@ -9,9 +9,9 @@ var r = n(200651),
     d = n(611480),
     f = n(388032),
     _ = n(42241);
-let h = i.forwardRef(function (e, t) {
-    let { onKeyDown: n, stickersListRef: h, channel: p } = e,
-        m = (0, c.fQ)(p),
+let p = i.forwardRef(function (e, t) {
+    let { onKeyDown: n, stickersListRef: p, channel: h } = e,
+        m = (0, c.fQ)(h),
         g = i.useRef(null),
         { searchQuery: E, isSearchSuggestion: v } = (0, u.Iu)(
             (e) => ({
@@ -21,15 +21,15 @@ let h = i.forwardRef(function (e, t) {
             a.X
         ),
         I = l.ZN.useStore((e) => e.searchPlaceholder),
-        S = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
-        T = i.useCallback(
+        b = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
+        S = i.useCallback(
             (e) => {
                 var t;
-                l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = h.current) || void 0 === t || t.scrollTo(0);
+                l.ZN.setActiveCategoryIndex('' === e ? 0 : d.c), l.ZN.setInspectedExpressionPosition(0, 0), l.ZN.setSearchPlaceholder(null), (0, u.ql)(e), null === (t = p.current) || void 0 === t || t.scrollTo(0);
             },
-            [h]
+            [p]
         ),
-        b = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, u.ql)('');
         }, []);
     return (
@@ -54,9 +54,9 @@ let h = i.forwardRef(function (e, t) {
                 ref: g,
                 size: o.ZP.Sizes.MEDIUM,
                 placeholder: null != I ? I : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
-                onClear: b,
+                onClear: T,
                 onKeyDown: n,
-                onQueryChange: T,
+                onQueryChange: S,
                 className: _.__invalid_searchBar,
                 preventEscapePropagation: !1,
                 useKeyboardNavigation: !1,
@@ -64,10 +64,10 @@ let h = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, s.NE)(d.Vr, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, s.NE)(d.Vr, b.columnIndex, b.rowIndex)
                 }
             })
         })
     );
 });
-t.Z = h;
+t.Z = p;

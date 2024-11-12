@@ -160,12 +160,12 @@ let h = [
 function A(e) {
     let { onDetailsChange: t, onP24BankChange: n, error: a, billingAddressInfo: r, p24BankValue: s } = e,
         [A, E] = i.useState(s),
-        f = 'p24Bank',
-        N = [
+        N = 'p24Bank',
+        f = [
             {
                 fields: [
                     {
-                        name: f,
+                        name: N,
                         title: () => u.intl.string(u.t.De3b8v),
                         getClassNameForLayout: () => d.width100,
                         renderInput: (e) =>
@@ -193,10 +193,10 @@ function A(e) {
             }),
             (0, l.jsx)(c.Z, {
                 className: m.p24Form,
-                form: N,
+                form: f,
                 errors: {},
                 formError: a,
-                values: { [f]: A }
+                values: { [N]: A }
             })
         ]
     });

@@ -10,11 +10,11 @@ var r,
     d = n(872810),
     f = n(569545),
     _ = n(70722);
-let h = {},
-    p = {},
+let p = {},
+    h = {},
     m = new Set();
 function g() {
-    (h = {}), (p = {});
+    (p = {}), (h = {});
 }
 class E extends (r = u.ZP.Store) {
     getPreviewURL(e, t, n) {
@@ -24,7 +24,7 @@ class E extends (r = u.ZP.Store) {
                 channelId: t,
                 ownerId: n
             }),
-            i = h[r];
+            i = p[r];
         return null == i || Date.now() > i.expires
             ? (!m.has(r) &&
                   (m.add(r),
@@ -63,29 +63,29 @@ class E extends (r = u.ZP.Store) {
         STREAM_PREVIEW_FETCH_START: function (e) {
             var t;
             let { streamKey: n } = e;
-            (p[n] = (null !== (t = p[n]) && void 0 !== t ? t : 0) + 1), m.add(n);
+            (h[n] = (null !== (t = h[n]) && void 0 !== t ? t : 0) + 1), m.add(n);
         },
         STREAM_PREVIEW_FETCH_SUCCESS: function (e) {
             let { streamKey: t, previewURL: n } = e;
-            (h[t] = {
+            (p[t] = {
                 url: n,
                 expires: Date.now() + 120000
             }),
-                (p[t] = 0),
+                (h[t] = 0),
                 m.delete(t);
         },
         STREAM_PREVIEW_FETCH_FAIL: function (e) {
             let { streamKey: t, retryAfter: n } = e;
-            (h[t] = {
+            (p[t] = {
                 url: null,
-                expires: Date.now() + (null != n ? n : 10000 * p[t])
+                expires: Date.now() + (null != n ? n : 10000 * h[t])
             }),
                 m.delete(t);
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
             return (
-                !(l().isEmpty(h) && l().isEmpty(p)) &&
+                !(l().isEmpty(p) && l().isEmpty(h)) &&
                 t.reduce((e, t) => {
                     let { userId: n, guildId: r, channelId: i, selfStream: a } = t;
                     if (a) return e;
@@ -95,7 +95,7 @@ class E extends (r = u.ZP.Store) {
                         channelId: i,
                         ownerId: n
                     });
-                    return delete h[s], delete p[s], !0;
+                    return delete p[s], delete h[s], !0;
                 }, !1)
             );
         }

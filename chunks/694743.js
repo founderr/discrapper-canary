@@ -15,30 +15,30 @@ var r,
 let d = 'indeterminate';
 function f(e) {
     let t,
-        { className: n, percent: r, size: i = 'small', foregroundColor: o = u.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: f = 'var(--background-modifier-active)', foregroundGradientColor: _, animate: h = !0 } = e,
-        p = null != r ? r : 0;
+        { className: n, percent: r, size: i = 'small', foregroundColor: o = u.Z.unsafe_rawColors.BRAND_500.css, backgroundColor: f = 'var(--background-modifier-active)', foregroundGradientColor: _, animate: p = !0 } = e,
+        h = null != r ? r : 0;
     return (
         (t = null != _ ? { background: 'linear-gradient(to right, '.concat(_[0], ', ').concat(_[1], ')') } : { backgroundColor: o }),
         (0, a.jsx)('div', {
             className: l()(n, c.progress, c[i]),
             style: { backgroundColor: f },
             children:
-                p !== d && 'number' == typeof p
+                h !== d && 'number' == typeof h
                     ? (0, a.jsx)('div', {
-                          className: l()(c.progressBar, c[i], { [c.animating]: h }),
+                          className: l()(c.progressBar, c[i], { [c.animating]: p }),
                           style: {
-                              transform: 'translate3d('.concat(Math.min(Math.max(0, p), 100) - 100, '%, 0, 0)'),
+                              transform: 'translate3d('.concat(Math.min(Math.max(0, h), 100) - 100, '%, 0, 0)'),
                               ...t
                           }
                       })
                     : (0, a.jsxs)(s.Fragment, {
                           children: [
                               (0, a.jsx)('div', {
-                                  className: l()(c.indeterminateBar1, c[i], { [c.animating]: h }),
+                                  className: l()(c.indeterminateBar1, c[i], { [c.animating]: p }),
                                   style: t
                               }),
                               (0, a.jsx)('div', {
-                                  className: l()(c.indeterminateBar2, c[i], { [c.animating]: h }),
+                                  className: l()(c.indeterminateBar2, c[i], { [c.animating]: p }),
                                   style: t
                               })
                           ]

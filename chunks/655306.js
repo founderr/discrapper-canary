@@ -1,6 +1,6 @@
 n.d(t, {
     Yy: function () {
-        return S;
+        return b;
     },
     ZP: function () {
         return A;
@@ -22,8 +22,8 @@ var r,
     d = n(846519),
     f = n(621012),
     _ = n(314897),
-    h = n(526167),
-    p = n(70956),
+    p = n(526167),
+    h = n(70956),
     m = n(709054),
     g = n(798681),
     E = n(981631),
@@ -41,10 +41,10 @@ function I(e, t, n) {
         e
     );
 }
-let S = { any: 100 },
-    T = 30 * p.Z.Millis.SECOND,
-    b = 120 * p.Z.Millis.SECOND,
-    y = -1 !== (0, h.hY)();
+let b = { any: 100 },
+    S = 30 * h.Z.Millis.SECOND,
+    T = 120 * h.Z.Millis.SECOND,
+    y = -1 !== (0, p.hY)();
 ((i = r || (r = {})).UserSSRCUpdate = 'user-ssrc-update'), (i.Update = 'update');
 class A extends o.Z {
     getWantsLevel() {
@@ -107,7 +107,7 @@ class A extends o.Z {
         return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamPixelCounts[this.streamIds[e]], delete this.streamIds[e], this.update(Array.from(this.participants));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = S), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
+        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.streamPixelCounts = {}), (this.latestWants = b), g.w.off(g.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -147,7 +147,7 @@ class A extends o.Z {
         return e;
     }
     getOffscreenTimeoutMs() {
-        return this.isStageChannel ? b : T;
+        return this.isStageChannel ? T : S;
     }
     getSimulcastOverrideQuality(e) {
         return this.simulcastDebugOverrides.has(e) ? this.simulcastDebugOverrides.get(e) : v.Z.NO_OVERRIDE;
@@ -198,7 +198,7 @@ class A extends o.Z {
             (this.offscreenUsers = {}),
             (this.offscreenDisabledUsers = {}),
             (this.streamPixelCounts = {}),
-            (this.latestWants = S),
+            (this.latestWants = b),
             (this.participants = new Set()),
             (this.selectedParticipantId = null),
             (this.pipOpen = !1),
@@ -260,8 +260,8 @@ class A extends o.Z {
                             if (i.supportsSeamless && !i.framesReceived[_]) for (let e of ((u = !0), (o = [_]), s)) e.ssrc !== _ && i.framesReceived[e.ssrc] && (100 === e.quality ? (a[e.ssrc] = 100) : (a[e.ssrc] = l ? f : r), o.push(e.ssrc));
                         } else e ? (a[_] = 100) : l && (a[_] = f);
                     } else for (let e of s) a[e.ssrc] = 0;
-                    let h = i.getSimulcastOverrideQuality(t);
-                    for (let e of (h === v.Z.HIGH ? (a[_] = 100) : h === v.Z.LOW && (a[_] = 50), (!i.supportsSeamless || !u) && (o = [_]), s)) !o.includes(e.ssrc) && delete i.framesReceived[e.ssrc];
+                    let p = i.getSimulcastOverrideQuality(t);
+                    for (let e of (p === v.Z.HIGH ? (a[_] = 100) : p === v.Z.LOW && (a[_] = 50), (!i.supportsSeamless || !u) && (o = [_]), s)) !o.includes(e.ssrc) && delete i.framesReceived[e.ssrc];
                     (n.includes(t) || (void 0 !== i.remoteVideoSsrcs[t] && !(0, c.Z)(i.remoteVideoSsrcs[t], o))) && ((i.remoteVideoSsrcs[t] = [...o]), i.emit('user-ssrc-update', t, i.audioSsrcs[t], o));
                 }
                 for (let [e, n] of Object.entries(i.audioSsrcs)) (null === (t = i.connection) || void 0 === t ? void 0 : t.getLocalMute(e)) && (a[n] = 0);

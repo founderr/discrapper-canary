@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     G2: function () {
-        return h;
+        return p;
     },
     IG: function () {
         return f;
@@ -15,7 +15,7 @@ n.d(t, {
         return u;
     },
     fW: function () {
-        return p;
+        return h;
     },
     lB: function () {
         return _;
@@ -43,7 +43,7 @@ function c(e) {
     return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
 let d = (e) => {
-        let { count: t, color: n = s.Z.STATUS_DANGER, disableColor: i = !1, shape: d = l.ROUND, className: f, style: _, ...h } = e;
+        let { count: t, color: n = s.Z.STATUS_DANGER, disableColor: i = !1, shape: d = l.ROUND, className: f, style: _, ...p } = e;
         return (0, r.jsx)('div', {
             className: a()(f, o.numberBadge, d),
             style: {
@@ -61,7 +61,7 @@ let d = (e) => {
                 })(t),
                 ..._
             },
-            ...h,
+            ...p,
             children: c(t)
         });
     },
@@ -85,7 +85,7 @@ let d = (e) => {
             ...i
         });
     },
-    h = (e) => {
+    p = (e) => {
         let { icon: t, className: n, color: i = s.Z.STATUS_DANGER, shape: u = l.ROUND, disableColor: c = !1, style: d } = e;
         return (0, r.jsx)('div', {
             className: a()(n, o.iconBadge, u),
@@ -99,7 +99,7 @@ let d = (e) => {
             })
         });
     },
-    p = (e) => {
+    h = (e) => {
         let { className: t, color: n = s.Z.INTERACTIVE_ACTIVE, shape: i = l.ROUND, disableColor: u = !1, style: c, ...d } = e;
         return (0, r.jsx)('div', {
             className: a()(t, o.circleBadge, i),

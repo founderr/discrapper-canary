@@ -39,18 +39,18 @@ function d() {
             });
         }, [u]),
         [d, f] = i.useState(!1),
-        [_, h] = i.useState(null),
-        [p] = i.useState(new o.V7()),
+        [_, p] = i.useState(null),
+        [h] = i.useState(new o.V7()),
         m = i.useCallback(
             (e) => {
-                h(e), f(!0), null === e ? p.stop() : p.start(l._1, () => f(!1));
+                p(e), f(!0), null === e ? h.stop() : h.start(l._1, () => f(!1));
             },
-            [p]
+            [h]
         );
     return (
         i.useEffect(() => {
-            p.stop();
-        }, [p]),
+            h.stop();
+        }, [h]),
         i.useMemo(
             () => ({
                 interactionType: e,

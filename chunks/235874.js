@@ -1,9 +1,9 @@
 n.d(t, {
     K: function () {
-        return p;
+        return h;
     },
     y: function () {
-        return h;
+        return p;
     }
 }),
     n(411104),
@@ -36,12 +36,12 @@ let _ = Object.freeze({
     3: c.l.Types.SCALE,
     4: c.l.Types.FADE
 });
-class h extends (i = o.Component) {
+class p extends (i = o.Component) {
     render() {
-        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: i, align: a, autoInvert: o, fixed: l, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: h, preload: p, disablePointerEvents: m, ignoreModalClicks: g, closeOnScroll: E, useMouseEnter: v, renderPopout: I, layerContext: S } = this.props;
+        let { children: e, shouldShow: t, position: n, onRequestOpen: r, onRequestClose: i, align: a, autoInvert: o, fixed: l, nudgeAlignIntoViewport: c, useRawTargetDimensions: d, spacing: f, onShiftClick: _, positionKey: p, preload: h, disablePointerEvents: m, ignoreModalClicks: g, closeOnScroll: E, useMouseEnter: v, renderPopout: I, layerContext: b } = this.props;
         return (0, s.jsx)(u.H, {
             ref: this.ref,
-            preload: p,
+            preload: h,
             position: n,
             align:
                 null != a
@@ -70,12 +70,12 @@ class h extends (i = o.Component) {
             onRequestOpen: r,
             onRequestClose: i,
             onShiftClick: _,
-            positionKey: h,
+            positionKey: p,
             disablePointerEvents: m,
             ignoreModalClicks: g,
             closeOnScroll: E,
             useMouseEnter: v,
-            layerContext: S,
+            layerContext: b,
             children: e
         });
     }
@@ -100,7 +100,7 @@ class h extends (i = o.Component) {
             });
     }
 }
-function p(e) {
+function h(e) {
     let { renderPopout: t, ...n } = e,
         r = o.useRef(null),
         [i, a] = o.useState(0);
@@ -138,7 +138,7 @@ function p(e) {
             children: (0, s.jsx)(l.$, {})
         });
     }
-    let [p, m] = o.useState(() => u);
+    let [h, m] = o.useState(() => u);
     return (
         o.useEffect(() => {
             c.current
@@ -147,15 +147,15 @@ function p(e) {
                   })
                 : m(u);
         }, [t]),
-        (0, s.jsx)(h, {
+        (0, s.jsx)(p, {
             ref: r,
             ...n,
-            renderPopout: p
+            renderPopout: h
         })
     );
 }
-f(h, 'Animation', r),
-    f(h, 'defaultProps', {
+f(p, 'Animation', r),
+    f(p, 'defaultProps', {
         position: 'right',
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
@@ -163,4 +163,4 @@ f(h, 'Animation', r),
         animation: '2',
         positionKey: void 0
     }),
-    (p.Animation = r);
+    (h.Animation = r);

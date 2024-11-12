@@ -24,7 +24,7 @@ let f = 'production' === c.C.DEVELOPMENT || window.GLOBAL_ENV.RELEASE_CHANNEL ==
 function _() {
     f = (0, s.QI)(l.default.getCurrentUser());
 }
-class h extends (r = i.ZP.Store) {
+class p extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.default, o.Z),
             Object.defineProperties(this, {
@@ -52,8 +52,8 @@ class h extends (r = i.ZP.Store) {
         super(...e), d(this, 'isDeveloper', !1);
     }
 }
-d(h, 'displayName', 'DeveloperExperimentStore'),
-    (t.Z = new h(a.Z, {
+d(p, 'displayName', 'DeveloperExperimentStore'),
+    (t.Z = new p(a.Z, {
         CONNECTION_OPEN: _,
         OVERLAY_INITIALIZE: _,
         CURRENT_USER_UPDATE: _

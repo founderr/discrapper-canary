@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     },
     Ku: function () {
-        return b;
+        return T;
     },
     VF: function () {
         return D;
@@ -24,7 +24,7 @@ n.d(t, {
         return o;
     },
     gG: function () {
-        return S;
+        return b;
     },
     gv: function () {
         return u;
@@ -57,7 +57,7 @@ n.d(t, {
         return L;
     },
     zw: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -72,16 +72,16 @@ var r,
     d,
     f,
     _,
-    h,
     p,
+    h,
     m,
     g = n(70956),
     E = n(981631);
 let v = 100,
     I = 1000,
-    S = 100,
-    T = 'Guild Events Modal',
-    b = '-1';
+    b = 100,
+    S = 'Guild Events Modal',
+    T = '-1';
 ((c = r || (r = {}))[(c.SCHEDULED = 1)] = 'SCHEDULED'), (c[(c.ACTIVE = 2)] = 'ACTIVE'), (c[(c.COMPLETED = 3)] = 'COMPLETED'), (c[(c.CANCELED = 4)] = 'CANCELED');
 let y = new Set([3, 4]);
 ((d = i || (i = {}))[(d.NONE = 0)] = 'NONE'), (d[(d.STAGE_INSTANCE = 1)] = 'STAGE_INSTANCE'), (d[(d.VOICE = 2)] = 'VOICE'), (d[(d.EXTERNAL = 3)] = 'EXTERNAL'), (d[(d.PRIME_TIME = 4)] = 'PRIME_TIME'), ((f = a || (a = {}))[(f.EVENT_START = 1)] = 'EVENT_START'), ((_ = s || (s = {}))[(_.PUBLIC = 1)] = 'PUBLIC'), (_[(_.GUILD_ONLY = 2)] = 'GUILD_ONLY');
@@ -91,9 +91,9 @@ let A = {
     },
     N = new Set([3]),
     C = new Set([1, 2]);
-((h = o || (o = {}))[(h.EVENT_INFO = 0)] = 'EVENT_INFO'), (h[(h.RSVP_LIST = 1)] = 'RSVP_LIST');
+((p = o || (o = {}))[(p.EVENT_INFO = 0)] = 'EVENT_INFO'), (p[(p.RSVP_LIST = 1)] = 'RSVP_LIST');
 let R = 100,
     O = 2 * g.Z.Millis.DAY,
     D = 12 * g.Z.Millis.HOUR,
     L = 4;
-((p = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice'), (p.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), ((m = u || (u = {}))[(m.UNINTERESTED = 0)] = 'UNINTERESTED'), (m[(m.INTERESTED = 1)] = 'INTERESTED');
+((h = l || (l = {})).NEW_EVENT = 'Upcoming Event Notice'), (h.EVENT_STARTING_SOON = 'Event Starting Soon Notice'), ((m = u || (u = {}))[(m.UNINTERESTED = 0)] = 'UNINTERESTED'), (m[(m.INTERESTED = 1)] = 'INTERESTED');

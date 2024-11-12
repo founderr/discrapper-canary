@@ -15,15 +15,15 @@ var r = n(200651),
 function f(e) {
     var t;
     let { editorRef: n, options: f, channel: _ } = e,
-        h = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
-        p = i.useCallback(
+        p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(),
+        h = i.useCallback(
             (e, t) => {
                 let r = n.current;
                 null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
             },
             [n]
         );
-    return null == h
+    return null == p
         ? null
         : (0, r.jsxs)('div', {
               id: 'slate-toolbar',
@@ -46,7 +46,7 @@ function f(e) {
                               channel: _,
                               closePopout: t,
                               onSelectEmoji: (e, n) => {
-                                  p(e, n), n && t();
+                                  h(e, n), n && t();
                               },
                               pickerIntention: c.Hz.COMMUNITY_CONTENT
                           });

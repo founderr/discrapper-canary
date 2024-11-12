@@ -10,7 +10,7 @@ function _(e) {
 }
 n.d(t, {
     $i: function () {
-        return p;
+        return h;
     },
     I: function () {
         return _;
@@ -37,7 +37,7 @@ n.d(t, {
         return r;
     },
     l8: function () {
-        return h;
+        return p;
     },
     wR: function () {
         return a;
@@ -55,11 +55,11 @@ n.d(t, {
     (u[(u.PLAYSTATION = 3)] = 'PLAYSTATION'),
     ((c = s || (s = {}))[(c.VIDEO = 0)] = 'VIDEO'),
     (c[(c.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
-let h = {
+let p = {
         0: 320,
         1: 160
     },
-    p = {
+    h = {
         0: 960,
         1: 480
     },

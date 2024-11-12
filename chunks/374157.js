@@ -141,11 +141,11 @@ let l = r.ML.positions;
 function* u(e) {
     var t, n, r, i, s, o, u, c;
     let d = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { at: f = e.selection, unit: _ = 'offset', reverse: h = !1, voids: p = !1 } = null != d ? d : {};
+        { at: f = e.selection, unit: _ = 'offset', reverse: p = !1, voids: h = !1 } = null != d ? d : {};
     if ('word' !== _) {
         for (let t of l(e, {
             ...d,
-            voids: p || 'block' === _
+            voids: h || 'block' === _
         }))
             yield t;
         return;
@@ -154,23 +154,23 @@ function* u(e) {
     let m = a.bN.range(e, f),
         [g, E] = a.M8.edges(m),
         v = a.bN.richValue(e),
-        I = h ? -1 : 1,
-        S = null !== (r = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
-        T = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : v.length - 1,
-        b = h ? S : T,
-        y = h ? T : S;
+        I = p ? -1 : 1,
+        b = null !== (r = null === (t = g.path) || void 0 === t ? void 0 : t[0]) && void 0 !== r ? r : 0,
+        S = null !== (i = null === (n = E.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : v.length - 1,
+        T = p ? b : S,
+        y = p ? S : b;
     for (;;) {
         let t = v[y],
-            n = null !== (u = y === S ? (null === (s = g.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
-            r = null !== (c = y === T ? (null === (o = E.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
-            i = h ? r : n,
-            f = h ? n : r,
+            n = null !== (u = y === b ? (null === (s = g.path) || void 0 === s ? void 0 : s[1]) : null) && void 0 !== u ? u : 0,
+            r = null !== (c = y === S ? (null === (o = E.path) || void 0 === o ? void 0 : o[1]) : null) && void 0 !== c ? c : t.children.length - 1,
+            i = p ? r : n,
+            f = p ? n : r,
             _ = i;
         for (;;) {
             let n, r;
             let i = t.children[_],
                 s = [y, _];
-            if (((n = a.C0.equals(s, g.path) || a.C0.isAncestor(s, g.path) ? (!h && a.bN.isEnd(e, g, s) ? null : g) : a.bN.start(e, s)), (r = a.C0.equals(s, E.path) || a.C0.isAncestor(s, E.path) ? (h && a.bN.isStart(e, E, s) ? null : E) : a.bN.end(e, s)), null != n && null != r)) {
+            if (((n = a.C0.equals(s, g.path) || a.C0.isAncestor(s, g.path) ? (!p && a.bN.isEnd(e, g, s) ? null : g) : a.bN.start(e, s)), (r = a.C0.equals(s, E.path) || a.C0.isAncestor(s, E.path) ? (p && a.bN.isStart(e, E, s) ? null : E) : a.bN.end(e, s)), null != n && null != r)) {
                 if (a.LC.isText(i) && 0 === i.text.length) {
                     let e = {
                         path: s,
@@ -198,7 +198,7 @@ function* u(e) {
             if (_ === f) break;
             _ += I;
         }
-        if (y === b) break;
+        if (y === T) break;
         y += I;
     }
 }

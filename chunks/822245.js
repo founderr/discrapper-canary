@@ -10,7 +10,7 @@ var r,
     d = n(581883),
     f = n(674563),
     _ = n(526761);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-let p = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
+let h = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
     m = { pendingUsages: [] },
     g = new u.ZP({
         computeBonus: () => 100,
@@ -72,13 +72,13 @@ class I extends (r = s.ZP.PersistedStore) {
         return g.frequently;
     }
 }
-h(I, 'displayName', 'ApplicationFrecencyStore'),
-    h(I, 'persistKey', 'ApplicationFrecency'),
+p(I, 'displayName', 'ApplicationFrecencyStore'),
+    p(I, 'persistKey', 'ApplicationFrecency'),
     (t.Z = new I(o.Z, {
         APPLICATION_COMMAND_USED: function (e) {
             var t;
             let { command: n } = e;
-            if (!p.includes(n.type) || (null === (t = c.ZP.getLaunchState(n.applicationId)) || void 0 === t ? void 0 : t.isLaunching)) return !1;
+            if (!h.includes(n.type) || (null === (t = c.ZP.getLaunchState(n.applicationId)) || void 0 === t ? void 0 : t.isLaunching)) return !1;
             E(n.applicationId);
         },
         EMBEDDED_ACTIVITY_OPEN: function (e) {

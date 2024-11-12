@@ -18,8 +18,8 @@ var i = n(200651),
     h = n(787895);
 function g(e) {
     var t, n, g, p;
-    let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: C, noSkip: _ = !1 } = e,
-        [E, f] = s.useState(''),
+    let { transitionState: x, onSuccess: S, onClose: T, requirementsUpdated: C, noSkip: E = !1 } = e,
+        [_, f] = s.useState(''),
         [I, N] = s.useState(''),
         [A, b] = s.useState(''),
         [v, j] = s.useState(null),
@@ -32,7 +32,7 @@ function g(e) {
         let t = !1;
         if (('' === I ? (j(m.intl.string(m.t['/7/oPT'])), (t = !0)) : j(null), I !== A ? (R(m.intl.string(m.t.IEKYZ2)), (t = !0)) : R(null), t)) return;
         let n = await (0, a.Mn)({
-            password: E,
+            password: _,
             newPassword: I
         });
         if (null == n ? void 0 : n.ok) S();
@@ -67,7 +67,7 @@ function g(e) {
                             className: h.subtitle,
                             children: C ? m.intl.string(m.t['37iHbW']) : m.intl.string(m.t.iOurYm)
                         }),
-                        !0 !== _ &&
+                        !0 !== E &&
                             (0, i.jsx)(l.ModalCloseButton, {
                                 onClick: T,
                                 className: h.modalCloseButton
@@ -85,7 +85,7 @@ function g(e) {
                                     error: null == P ? void 0 : null === (t = P.password) || void 0 === t ? void 0 : t[0],
                                     children: (0, i.jsx)(l.TextInput, {
                                         type: 'password',
-                                        value: E,
+                                        value: _,
                                         onChange: f,
                                         inputRef: y
                                     })
@@ -121,7 +121,7 @@ function g(e) {
                                     submitting: D === u.QZA.SUBMITTING,
                                     children: m.intl.string(m.t.i4jeWV)
                                 }),
-                                !0 !== _ &&
+                                !0 !== E &&
                                     (0, i.jsx)(l.Button, {
                                         className: h.cancel,
                                         look: l.Button.Looks.LINK,

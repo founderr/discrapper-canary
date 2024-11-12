@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, {
     FC: function () {
-        return h;
+        return p;
     },
     _H: function () {
         return f;
@@ -85,7 +85,7 @@ function _(e) {
                 });
         })(u.j));
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return '';
     null == r && _(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
     let i = c.aT.test(e),

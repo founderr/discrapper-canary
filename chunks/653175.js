@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(570140),
@@ -22,7 +22,7 @@ let _ = (e, t) => ({
         media_session_id: c.Z.getMediaSessionId(),
         ...(0, i.kO)(c.Z.getGuildId(), c.Z.getChannelId(), t)
     }),
-    h = () => {
+    p = () => {
         var e;
         let t = (0, a.P)(f.default.getCurrentUser());
         return {
@@ -32,7 +32,7 @@ let _ = (e, t) => ({
             video_effect_detail: (0, o.V$)(t)
         };
     };
-function p(e, t, n, i) {
+function h(e, t, n, i) {
     let a = d.Z.getVoiceChannelId(),
         o = l.Z.getChannel(a);
     if (null == t && null != a && null != o) {
@@ -40,7 +40,7 @@ function p(e, t, n, i) {
         if ((e(), s.Z.hasUsedBackgroundInCall)) {
             let e = {
                 ...t,
-                ...h()
+                ...p()
             };
             r.Z.dispatch({
                 type: 'VIDEO_BACKGROUND_SHOW_FEEDBACK',

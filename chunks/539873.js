@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(313201),
     f = n(98278),
     _ = n(311476),
-    h = n(587446),
-    p = n(996073),
+    p = n(587446),
+    h = n(996073),
     m = n(327943),
     g = n(997945),
     E = n(401460),
     v = n(441319),
     I = n(981631),
-    S = n(526761),
-    T = n(388032),
-    b = n(243132);
+    b = n(526761),
+    S = n(388032),
+    T = n(243132);
 function y(e) {
     let { className: t, disabled: a, isEditor: y, renderCTAButtons: A } = e,
         [N, C] = (0, o.Wu)([m.Z], () => [m.Z.getCurrentDesktopIcon(), m.Z.isUpsellPreview]),
@@ -36,7 +36,7 @@ function y(e) {
             }
         ),
         O = i.useRef(null);
-    (0, p.Z)(O, S.h1.CUSTOM_APP_ICONS);
+    (0, h.Z)(O, b.h1.CUSTOM_APP_ICONS);
     let D = (0, d.Dt)(),
         L = (0, l.useRadioGroup)({
             orientation: 'horizontal',
@@ -67,41 +67,41 @@ function y(e) {
         ref: O,
         children: (0, r.jsx)('div', {
             ...L,
-            className: b.__invalid_container,
+            className: T.__invalid_container,
             children: (0, r.jsxs)('div', {
                 className: t,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: b.header,
+                        className: T.header,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: b.headings,
+                                className: T.headings,
                                 children: [
                                     !y &&
                                         (0, r.jsxs)('div', {
-                                            className: b.title,
+                                            className: T.title,
                                             children: [
                                                 (0, r.jsx)(l.Heading, {
                                                     variant: 'text-md/medium',
-                                                    children: T.intl.string(T.t.NThqT0)
+                                                    children: S.intl.string(S.t.NThqT0)
                                                 }),
-                                                !R && (0, r.jsx)(h.Z, { className: b.premiumIcon })
+                                                !R && (0, r.jsx)(p.Z, { className: T.premiumIcon })
                                             ]
                                         }),
                                     R
                                         ? y
                                             ? null
                                             : (0, r.jsxs)('div', {
-                                                  className: b.description,
+                                                  className: T.description,
                                                   children: [
                                                       (0, r.jsx)(l.NitroWheelIcon, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: b.nitroWheel
+                                                          className: T.nitroWheel
                                                       }),
                                                       (0, r.jsx)(l.Heading, {
                                                           variant: 'text-sm/normal',
-                                                          children: T.intl.format(T.t.x2dQxM, {
+                                                          children: S.intl.format(S.t.x2dQxM, {
                                                               onClick: () => {
                                                                   (0, f.$)();
                                                               }
@@ -111,7 +111,7 @@ function y(e) {
                                               })
                                         : (0, r.jsx)(l.Heading, {
                                               variant: 'text-sm/normal',
-                                              children: T.intl.string(T.t.IgENJi)
+                                              children: S.intl.string(S.t.IgENJi)
                                           })
                                 ]
                             }),
@@ -119,7 +119,7 @@ function y(e) {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: s()(b.presets, { [b.presetsJustified]: R && y }),
+                        className: s()(T.presets, { [T.presetsJustified]: R && y }),
                         children: (0, v.wu)()
                             .filter((e) => {
                                 let { isHidden: t } = e;

@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(367907),
     f = n(588468),
     _ = n(30465),
-    h = n(218867),
-    p = n(313201),
+    p = n(218867),
+    h = n(313201),
     m = n(806966),
     g = n(98528),
     E = n(551058),
     v = n(555573),
     I = n(10718),
-    S = n(367790),
-    T = n(895924),
-    b = n(581364),
+    b = n(367790),
+    S = n(895924),
+    T = n(581364),
     y = n(56801),
     A = n(342687),
     N = n(826298),
@@ -59,7 +59,7 @@ t.Z = i.forwardRef(function (e, t) {
             channel: n,
             filters: {
                 commandTypes: [c.yU.CHAT],
-                builtIns: a ? S.D.ONLY_TEXT : S.D.ALLOW,
+                builtIns: a ? b.D.ONLY_TEXT : b.D.ALLOW,
                 applicationCommands: !a
             },
             options: {
@@ -117,7 +117,7 @@ t.Z = i.forwardRef(function (e, t) {
                     channelId: n.id,
                     command: e,
                     section: t,
-                    location: T.Vh.DISCOVERY,
+                    location: S.Vh.DISCOVERY,
                     triggerSection: r
                 });
             },
@@ -135,7 +135,7 @@ t.Z = i.forwardRef(function (e, t) {
                     if (((t = n), P < (n += e.data.length))) {
                         let n = e.data[P - t],
                             r = F.find((e) => e.id === n.applicationId);
-                        ee(n, r, (0, b.tI)(e.section));
+                        ee(n, r, (0, T.tI)(e.section));
                         break;
                     }
                 return !0;
@@ -206,7 +206,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = j[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === T.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === S.iw.PLACEHOLDER) return (0, r.jsx)(A.Z, {}, o);
                 let l = F.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     f.ZP.NewCommand,
@@ -218,7 +218,7 @@ t.Z = i.forwardRef(function (e, t) {
                         selected: P === e,
                         showImage: a.section.id !== s.applicationId,
                         section: l,
-                        onClick: () => ee(s, l, (0, b.tI)(a.section)),
+                        onClick: () => ee(s, l, (0, T.tI)(a.section)),
                         onHover: () => {
                             k(null), B(!1);
                         }
@@ -228,7 +228,7 @@ t.Z = i.forwardRef(function (e, t) {
             },
             [n, j, ee, F, P]
         ),
-        ei = (0, p.Dt)();
+        ei = (0, h.Dt)();
     return (
         (0, _.KR)(ei, !0, (0, f.DJ)(P)),
         i.useEffect(
@@ -252,7 +252,7 @@ t.Z = i.forwardRef(function (e, t) {
                     onSectionClick: $,
                     applicationCommandListRef: U
                 }),
-                (0, r.jsx)(h.Z, {
+                (0, r.jsx)(p.Z, {
                     role: 'listbox',
                     className: D.list,
                     listPadding: x,

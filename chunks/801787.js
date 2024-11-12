@@ -6,7 +6,7 @@ n.d(t, {
         return l;
     },
     TC: function () {
-        return p;
+        return h;
     },
     bg: function () {
         return r;
@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     wR: function () {
-        return h;
+        return p;
     },
     ze: function () {
         return _;
@@ -52,8 +52,8 @@ let c = {
     },
     d = s.createContext(c);
 function f(e) {
-    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: f = 1, saturation: _ = 1, density: h = 'compact' } = e,
-        p = s.useMemo(
+    let { children: t, theme: n = o.BR.DARK, primaryColor: r = null, secondaryColor: i = null, gradient: l = null, flags: c = 0, contrast: f = 1, saturation: _ = 1, density: p = 'compact' } = e,
+        h = s.useMemo(
             () =>
                 u({
                     theme: n,
@@ -63,39 +63,39 @@ function f(e) {
                     flags: c,
                     contrast: f,
                     saturation: _,
-                    density: h
+                    density: p
                 }),
-            [n, r, i, l, c, f, _, h]
+            [n, r, i, l, c, f, _, p]
         );
     return (0, a.jsx)(d.Provider, {
-        value: p,
+        value: h,
         children: t
     });
 }
 function _(e) {
     let { children: t, theme: n, primaryColor: r, secondaryColor: i, gradient: o, flags: l, contrast: c, saturation: f, density: _ } = e,
-        h = s.useContext(d),
-        p = s.useMemo(
+        p = s.useContext(d),
+        h = s.useMemo(
             () =>
                 u({
-                    theme: null != n ? n : h.theme,
-                    primaryColor: null != r ? r : h.primaryColor,
-                    secondaryColor: null != i ? i : h.secondaryColor,
-                    gradient: null != o ? o : h.gradient,
-                    flags: null != l ? l : h.flags,
-                    contrast: null != c ? c : h.contrast,
-                    saturation: null != f ? f : h.saturation,
-                    density: null != _ ? _ : h.density
+                    theme: null != n ? n : p.theme,
+                    primaryColor: null != r ? r : p.primaryColor,
+                    secondaryColor: null != i ? i : p.secondaryColor,
+                    gradient: null != o ? o : p.gradient,
+                    flags: null != l ? l : p.flags,
+                    contrast: null != c ? c : p.contrast,
+                    saturation: null != f ? f : p.saturation,
+                    density: null != _ ? _ : p.density
                 }),
-            [n, h.theme, h.primaryColor, h.secondaryColor, h.gradient, h.flags, h.contrast, h.saturation, h.density, r, i, o, l, c, f, _]
+            [n, p.theme, p.primaryColor, p.secondaryColor, p.gradient, p.flags, p.contrast, p.saturation, p.density, r, i, o, l, c, f, _]
         );
     return (0, a.jsx)(d.Provider, {
-        value: p,
+        value: h,
         children: t
     });
 }
-function h(e) {
-    let t = p(),
+function p(e) {
+    let t = h(),
         n = s.useMemo(
             () =>
                 u({
@@ -110,13 +110,13 @@ function h(e) {
         children: e.children
     });
 }
-function p() {
+function h() {
     let e = s.useContext(d);
     if (null == e) throw Error('useThemeContext must be used within a ThemeContext.Provider');
     return e;
 }
 function m(e) {
     let { children: t } = e,
-        n = p();
+        n = h();
     return (0, a.jsx)(a.Fragment, { children: t(n) });
 }

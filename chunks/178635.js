@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return h;
+        return p;
     },
     Z: function () {
         return E;
@@ -33,7 +33,7 @@ let _ = {
         chance: 0.2,
         cooldown: 86400000
     },
-    h = {
+    p = {
         [d.nw.VOICE]: {
             ..._,
             hotspot: o.v6.VOICE_CALL_FEEDBACK,
@@ -79,7 +79,7 @@ let _ = {
             storageKey: 'blockUser'
         }
     };
-function p(e) {
+function h(e) {
     return l.Z.hasHotspot(e.hotspot);
 }
 function m(e) {
@@ -98,9 +98,9 @@ class E extends s.Z {
             !!(function (e) {
                 var t, n;
                 if (__OVERLAY__) return !1;
-                let r = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : h[e],
+                let r = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : p[e],
                     i = null !== (n = r.eligibilityChecks) && void 0 !== n ? n : [];
-                return [g, m, p].every((e) => e(r)) && i.every((e) => e(r));
+                return [g, m, h].every((e) => e(r)) && i.every((e) => e(r));
             })(e) &&
             (null == this.feedbackTypeToShow || !(d.b5[this.feedbackTypeToShow] < d.b5[e]))
         )
@@ -115,7 +115,7 @@ class E extends s.Z {
                 i().debounce((e) => {
                     null != this.feedbackTypeToShow &&
                         (!(function (e) {
-                            let t = h[e];
+                            let t = p[e];
                             null != t.storageKey && a.K.set(t.storageKey, Date.now());
                         })(this.feedbackTypeToShow),
                         (this.feedbackTypeToShow = null),

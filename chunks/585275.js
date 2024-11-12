@@ -10,16 +10,16 @@ var i = n(512722),
     d = n(376398),
     f = n(846519),
     _ = n(570140),
-    h = n(710845),
-    p = n(977059),
+    p = n(710845),
+    h = n(977059),
     m = n(695346),
     g = n(199902),
     E = n(314897),
     v = n(358085),
     I = n(998502),
-    S = n(569545),
-    T = n(70722),
-    b = n(981631),
+    b = n(569545),
+    S = n(70722),
+    T = n(981631),
     y = n(65154);
 let A = {},
     N = new f.V7(),
@@ -33,8 +33,8 @@ function D() {
 let L = o().debounce((e, t, n, r) => {
     x(
         e,
-        (0, S.V9)({
-            streamType: null != t ? T.lo.GUILD : T.lo.CALL,
+        (0, b.V9)({
+            streamType: null != t ? S.lo.GUILD : S.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r
@@ -43,7 +43,7 @@ let L = o().debounce((e, t, n, r) => {
 }, 500);
 async function x(e, t) {
     if (r !== e) return;
-    let { enabled: n } = (0, p.R)({ location: 'uploadStreamPreviews' }),
+    let { enabled: n } = (0, h.R)({ location: 'uploadStreamPreviews' }),
         i = ((0, v.isWeb)() && m.I0.getSetting()) || g.Z.getIsActiveStreamPreviewDisabled(t);
     if (n && i) return;
     let s = () => x(e, t);
@@ -130,7 +130,7 @@ async function x(e, t) {
                 let e = E.default.getToken();
                 a()(null != e, 'Auth token was null while sending screenshot.'),
                     await I.ZP.makeChunkedRequest(
-                        b.ANM.STREAM_PREVIEW(t),
+                        T.ANM.STREAM_PREVIEW(t),
                         { thumbnail: i },
                         {
                             method: 'POST',
@@ -139,12 +139,12 @@ async function x(e, t) {
                     );
             } else
                 await l.tn.post({
-                    url: b.ANM.STREAM_PREVIEW(t),
+                    url: T.ANM.STREAM_PREVIEW(t),
                     body: { thumbnail: i },
                     oldFormErrors: !0
                 });
         } catch (t) {
-            new h.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, s);
+            new p.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, s);
             return;
         }
     r === e && (C ? N.start(60000, s) : N.start(300000, s));
@@ -160,7 +160,7 @@ t.Z = {
             }),
             _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
-                C = t === b.FQ1.PAUSED || !1;
+                C = t === T.FQ1.PAUSED || !1;
             });
     }
 };

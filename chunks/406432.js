@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     X2: function () {
-        return h;
+        return p;
     },
     cb: function () {
         return f;
@@ -39,4 +39,4 @@ let i = (e, t) => {
 let d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
     f = (e) => i(e, d),
     _ = (e) => null != e && d.test(e),
-    h = (e) => a(e, 'video');
+    p = (e) => a(e, 'video');

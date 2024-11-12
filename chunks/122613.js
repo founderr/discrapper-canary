@@ -12,7 +12,7 @@ var r = n(592125),
     u = n(574952),
     c = n(981631);
 async function d(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: d, analyticsLocations: f, componentId: _, commandOrigin: h, sectionName: p, source: m, onExecutedCallback: g } = e,
+    let { targetApplicationId: t, locationObject: n, channelId: d, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g } = e,
         E = (0, u.Z)(),
         v = i.default.getCurrentUser();
     if (null == t) return !1;
@@ -29,8 +29,8 @@ async function d(e) {
                   isStart: !0,
                   embeddedActivitiesManager: E,
                   componentId: _,
-                  commandOrigin: h,
-                  sectionName: p,
+                  commandOrigin: p,
+                  sectionName: h,
                   locationObject: n,
                   analyticsLocations: f,
                   source: m,

@@ -55,12 +55,12 @@ e.exports = function (e) {
             starts: e.inherit(f, { end: /\)/ })
         });
     c.contains = [_];
-    let h = e.inherit(l, {
+    let p = e.inherit(l, {
             keywords: n,
             className: 'name',
             starts: e.inherit(f, { end: /\}\}/ })
         }),
-        p = e.inherit(l, {
+        h = e.inherit(l, {
             keywords: n,
             className: 'name'
         }),
@@ -89,7 +89,7 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{(?!\/)/,
                 end: /\}\}\}\}/,
-                contains: [h],
+                contains: [p],
                 starts: {
                     end: /\{\{\{\{\//,
                     returnEnd: !0,
@@ -100,13 +100,13 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\{\{\//,
                 end: /\}\}\}\}/,
-                contains: [p]
+                contains: [h]
             },
             {
                 className: 'template-tag',
                 begin: /\{\{#/,
                 end: /\}\}/,
-                contains: [h]
+                contains: [p]
             },
             {
                 className: 'template-tag',
@@ -124,7 +124,7 @@ e.exports = function (e) {
                 className: 'template-tag',
                 begin: /\{\{\//,
                 end: /\}\}/,
-                contains: [p]
+                contains: [h]
             },
             {
                 className: 'template-variable',

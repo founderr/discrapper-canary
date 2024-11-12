@@ -1,10 +1,10 @@
-let r, i, a, s, o, l, u, c, d, f, _, h, p, m, g, E;
+let r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E;
 n(47120);
 var v,
     I,
+    b,
     S,
-    T,
-    b = n(392711),
+    T = n(392711),
     y = n(754700),
     A = n(887003),
     N = n(442837),
@@ -16,7 +16,7 @@ var v,
     x = n(46140);
 let w = new Map();
 function M() {
-    (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (w = new Map()), (_ = new Map()), (h = new Map()), (p = new Map()), (m = null), (g = new Map()), (f = new Set()), (E = new Map());
+    (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (w = new Map()), (_ = new Map()), (p = new Map()), (h = new Map()), (m = null), (g = new Map()), (f = new Set()), (E = new Map());
 }
 M();
 function P(e, t) {
@@ -30,7 +30,7 @@ function P(e, t) {
             var n, r, i, a;
             if (null != t.userStatus)
                 for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
-                    if (!(0, b.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
+                    if (!(0, T.isNil)(s)) y.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? f.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && f.delete(e));
                 }
         })(e, t),
             a.set(e, r);
@@ -41,7 +41,7 @@ function k(e, t) {
     n.set(e, t), (_ = n);
 }
 function U(e) {
-    null != p.get(e) && (p = new Map(p)).delete(e);
+    null != h.get(e) && (h = new Map(h)).delete(e);
 }
 function G(e) {
     let t = new Set(l);
@@ -89,10 +89,10 @@ class Z extends (v = N.ZP.Store) {
         return _.get(e);
     }
     getRewards(e) {
-        return h.get(e);
+        return p.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return p.get(e);
+        return h.get(e);
     }
     getQuest(e) {
         return a.get(e);
@@ -109,15 +109,15 @@ class Z extends (v = N.ZP.Store) {
         return null === (n = w.get(e)) || void 0 === n ? void 0 : n.get(t);
     }
 }
-(T = 'QuestsStore'),
-    (S = 'displayName') in (I = Z)
-        ? Object.defineProperty(I, S, {
-              value: T,
+(S = 'QuestsStore'),
+    (b = 'displayName') in (I = Z)
+        ? Object.defineProperty(I, b, {
+              value: S,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (I[S] = T),
+        : (I[b] = S),
     (t.Z = new Z(C.Z, {
         LOGOUT: function () {
             M();
@@ -156,8 +156,8 @@ class Z extends (v = N.ZP.Store) {
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
-            null == p.get(n) &&
-                (p = new Map(p)).set(n, {
+            null == h.get(n) &&
+                (h = new Map(h)).set(n, {
                     questId: t,
                     streamKey: n,
                     firstFailedAt: Date.now()
@@ -216,8 +216,8 @@ class Z extends (v = N.ZP.Store) {
             r.delete(t),
                 (u = r),
                 !(function (e, t) {
-                    let n = new Map(h);
-                    n.set(e, t.items), (h = n);
+                    let n = new Map(p);
+                    n.set(e, t.items), (p = n);
                     let r = a.get(e),
                         i = null == r ? void 0 : r.userStatus;
                     if (null != i && null == i.claimedAt) {

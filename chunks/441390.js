@@ -9,7 +9,7 @@ var r = n(325008),
     d = n(470592),
     f = Object.assign,
     _ = Object.defineProperty,
-    h = i([].concat);
+    p = i([].concat);
 e.exports =
     !f ||
     s(function () {
@@ -47,7 +47,7 @@ e.exports =
     })
         ? function (e, t) {
               for (var n = c(e), i = arguments.length, s = 1, f = l.f, _ = u.f; i > s; ) {
-                  for (var p, m = d(arguments[s++]), g = f ? h(o(m), f(m)) : o(m), E = g.length, v = 0; E > v; ) (p = g[v++]), (!r || a(_, m, p)) && (n[p] = m[p]);
+                  for (var h, m = d(arguments[s++]), g = f ? p(o(m), f(m)) : o(m), E = g.length, v = 0; E > v; ) (h = g[v++]), (!r || a(_, m, h)) && (n[h] = m[h]);
               }
               return n;
           }

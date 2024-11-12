@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return p;
+        return h;
     },
     Z: function () {
         return m;
@@ -18,8 +18,8 @@ var i = n(442837),
     d = n(938475),
     f = n(652853),
     _ = n(228168),
-    h = n(676411);
-let p = 3;
+    p = n(676411);
+let h = 3;
 function m(e) {
     let { user: t, guild: n, channel: m, onAction: g, onClose: E } = e,
         { profileType: v } = (0, f.z)(),
@@ -29,35 +29,35 @@ function m(e) {
                 return t;
             })
         ),
-        S = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
-        T = v === _.y0.FULL_SIZE,
-        b = v === _.y0.PANEL;
+        b = m.isGuildStageVoice() ? a.StageIcon : a.VoiceNormalIcon,
+        S = v === _.y0.FULL_SIZE,
+        T = v === _.y0.PANEL;
     return (0, r.jsxs)('div', {
-        className: h.voiceChannel,
+        className: p.voiceChannel,
         children: [
             (0, r.jsx)(u.Z, {
                 showTooltip: !0,
                 guild: n,
                 size: u.Z.Sizes.SMOL,
-                className: h.guildIcon
+                className: p.guildIcon
             }),
             (0, r.jsx)(a.ChevronSmallRightIcon, {
                 size: 'xxs',
                 color: a.tokens.colors.INTERACTIVE_NORMAL
             }),
             (0, r.jsxs)('div', {
-                className: h.voiceChannelText,
+                className: p.voiceChannelText,
                 children: [
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(b, {
                         size: 'xxs',
                         color: a.tokens.colors.INTERACTIVE_NORMAL,
-                        className: h.voiceIcon
+                        className: p.voiceIcon
                     }),
                     (0, r.jsx)(a.Clickable, {
                         onClick: () => {
                             s.default.selectVoiceChannel(m.id), (0, c.X)(n.id), null == g || g({ action: 'OPEN_VOICE_CHANNEL' }), null == E || E();
                         },
-                        className: h.clickable,
+                        className: p.clickable,
                         children: (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'interactive-normal',
@@ -71,10 +71,10 @@ function m(e) {
                 users: I,
                 guildId: n.id,
                 channelId: m.id,
-                maxUsers: p,
+                maxUsers: h,
                 size: a.AvatarSizes.SIZE_16,
                 onClick: () => (null == g ? void 0 : g({ action: 'PRESS_VOICE_CHANNEL_AVATARS' })),
-                disableUserPopout: !!(!T && !b) || ((e) => e === t.id),
+                disableUserPopout: !!(!S && !T) || ((e) => e === t.id),
                 overflowCountVariant: 'text-xs/normal'
             })
         ]

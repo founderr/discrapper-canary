@@ -10,8 +10,8 @@ var i,
 let d = new Map(),
     f = new Map(),
     _ = new Map(),
-    h = !1;
-function p(e) {
+    p = !1;
+function h(e) {
     e(d), (d = new Map(d));
 }
 class m extends (i = l.ZP.Store) {
@@ -35,7 +35,7 @@ class m extends (i = l.ZP.Store) {
         return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id;
     }
     getDebugImpressionCappingDisabled() {
-        return h;
+        return p;
     }
     getMatchingInboxEntry(e) {
         let { activity: t, userId: n, feedId: r } = e,
@@ -60,7 +60,7 @@ class m extends (i = l.ZP.Store) {
         },
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t, feed: n } = e;
-            p((e) => e.set(t, n)), _.set(t, new Date());
+            h((e) => e.set(t, n)), _.set(t, new Date());
         },
         CONTENT_INVENTORY_SET_FEED_STATE: function (e) {
             let { feedId: t, state: n } = e;
@@ -73,9 +73,9 @@ class m extends (i = l.ZP.Store) {
         CONTENT_INVENTORY_CLEAR_FEED: function (e) {
             let { feedId: t } = e;
             if (!d.has(t)) return !1;
-            p((e) => e.delete(t));
+            h((e) => e.delete(t));
         },
         CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function () {
-            h = !h;
+            p = !p;
         }
     }));

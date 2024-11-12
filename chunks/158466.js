@@ -10,9 +10,9 @@ function i(e) {
     return e / 32768;
 }
 function a(e) {
-    var t, n, r, i, a, s, o, l, u, c, d, f, _, h, p, m, g, E, v, I, S;
-    let T = (null !== (c = null == e ? void 0 : e.headerBytes) && void 0 !== c ? c : 0) + (null !== (d = null == e ? void 0 : e.payloadBytes) && void 0 !== d ? d : 0) + (null !== (f = null == e ? void 0 : e.paddingBytes) && void 0 !== f ? f : 0);
-    return (null !== (_ = null == e ? void 0 : null === (t = e.fec) || void 0 === t ? void 0 : t.headerBytes) && void 0 !== _ ? _ : 0) + (null !== (h = null == e ? void 0 : null === (n = e.fec) || void 0 === n ? void 0 : n.payloadBytes) && void 0 !== h ? h : 0) + (null !== (p = null == e ? void 0 : null === (r = e.fec) || void 0 === r ? void 0 : r.paddingBytes) && void 0 !== p ? p : 0) + (null !== (m = null == e ? void 0 : null === (i = e.retransmitted) || void 0 === i ? void 0 : i.headerBytes) && void 0 !== m ? m : 0) + (null !== (g = null == e ? void 0 : null === (a = e.retransmitted) || void 0 === a ? void 0 : a.payloadBytes) && void 0 !== g ? g : 0) + (null !== (E = null == e ? void 0 : null === (s = e.retransmitted) || void 0 === s ? void 0 : s.paddingBytes) && void 0 !== E ? E : 0) + (null !== (v = null == e ? void 0 : null === (o = e.transmitted) || void 0 === o ? void 0 : o.headerBytes) && void 0 !== v ? v : 0) + (null !== (I = null == e ? void 0 : null === (l = e.transmitted) || void 0 === l ? void 0 : l.payloadBytes) && void 0 !== I ? I : 0) + (null !== (S = null == e ? void 0 : null === (u = e.transmitted) || void 0 === u ? void 0 : u.paddingBytes) && void 0 !== S ? S : 0) + T;
+    var t, n, r, i, a, s, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b;
+    let S = (null !== (c = null == e ? void 0 : e.headerBytes) && void 0 !== c ? c : 0) + (null !== (d = null == e ? void 0 : e.payloadBytes) && void 0 !== d ? d : 0) + (null !== (f = null == e ? void 0 : e.paddingBytes) && void 0 !== f ? f : 0);
+    return (null !== (_ = null == e ? void 0 : null === (t = e.fec) || void 0 === t ? void 0 : t.headerBytes) && void 0 !== _ ? _ : 0) + (null !== (p = null == e ? void 0 : null === (n = e.fec) || void 0 === n ? void 0 : n.payloadBytes) && void 0 !== p ? p : 0) + (null !== (h = null == e ? void 0 : null === (r = e.fec) || void 0 === r ? void 0 : r.paddingBytes) && void 0 !== h ? h : 0) + (null !== (m = null == e ? void 0 : null === (i = e.retransmitted) || void 0 === i ? void 0 : i.headerBytes) && void 0 !== m ? m : 0) + (null !== (g = null == e ? void 0 : null === (a = e.retransmitted) || void 0 === a ? void 0 : a.payloadBytes) && void 0 !== g ? g : 0) + (null !== (E = null == e ? void 0 : null === (s = e.retransmitted) || void 0 === s ? void 0 : s.paddingBytes) && void 0 !== E ? E : 0) + (null !== (v = null == e ? void 0 : null === (o = e.transmitted) || void 0 === o ? void 0 : o.headerBytes) && void 0 !== v ? v : 0) + (null !== (I = null == e ? void 0 : null === (l = e.transmitted) || void 0 === l ? void 0 : l.payloadBytes) && void 0 !== I ? I : 0) + (null !== (b = null == e ? void 0 : null === (u = e.transmitted) || void 0 === u ? void 0 : u.paddingBytes) && void 0 !== b ? b : 0) + S;
 }
 function s(e) {
     var t, n, r, i, a, s, o;
@@ -38,7 +38,7 @@ function o(e) {
     return t;
 }
 function l(e, t) {
-    var n, i, o, l, u, c, d, f, _, h, p, m, g, E, v, I, S, T, b, y, A, N, C, R, O, D, L;
+    var n, i, o, l, u, c, d, f, _, p, h, m, g, E, v, I, b, S, T, y, A, N, C, R, O, D, L;
     let x = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == x) return;
     let w = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0),
@@ -56,7 +56,7 @@ function l(e, t) {
         bytesSent: w,
         packetsSent: M,
         packetsLost: null !== (I = null === (n = x.rtcpStats) || void 0 === n ? void 0 : n.packetsLost) && void 0 !== I ? I : 0,
-        fractionLost: null !== (S = null === (i = x.rtcpStats) || void 0 === i ? void 0 : i.fractionLost) && void 0 !== S ? S : 0,
+        fractionLost: null !== (b = null === (i = x.rtcpStats) || void 0 === i ? void 0 : i.fractionLost) && void 0 !== b ? b : 0,
         bitrate: e.mediaBitrate,
         bitrateTarget: e.targetMediaBitrate,
         encoderImplementationName: e.encoderImplementationName,
@@ -71,8 +71,8 @@ function l(e, t) {
         framesEncoded: e.framesEncoded,
         frameRateInput: e.inputFrameRate,
         frameRateEncode: e.encodeFrameRate,
-        firCount: null !== (T = null === (o = x.rtcpStats) || void 0 === o ? void 0 : o.firPackets) && void 0 !== T ? T : 0,
-        nackCount: null !== (b = null === (l = x.rtcpStats) || void 0 === l ? void 0 : l.nackPackets) && void 0 !== b ? b : 0,
+        firCount: null !== (S = null === (o = x.rtcpStats) || void 0 === o ? void 0 : o.firPackets) && void 0 !== S ? S : 0,
+        nackCount: null !== (T = null === (l = x.rtcpStats) || void 0 === l ? void 0 : l.nackPackets) && void 0 !== T ? T : 0,
         pliCount: null !== (y = null === (u = x.rtcpStats) || void 0 === u ? void 0 : u.pliPackets) && void 0 !== y ? y : 0,
         qpSum: e.qpSum,
         bandwidthLimitedResolution: e.bwLimitedResolution,
@@ -85,8 +85,8 @@ function l(e, t) {
         encoderQualityPsnr: null !== (N = null === (d = x.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityWebrtcPsnrDb) && void 0 !== N ? N : void 0,
         qualityDecodeErrors: null !== (C = null === (f = x.encoderQualityStats) || void 0 === f ? void 0 : f.decodeErrors) && void 0 !== C ? C : void 0,
         qualityDecoderReboots: null !== (R = null === (_ = x.encoderQualityStats) || void 0 === _ ? void 0 : _.decoderReboots) && void 0 !== R ? R : void 0,
-        qualityScoreErrors: null !== (O = null === (h = x.encoderQualityStats) || void 0 === h ? void 0 : h.scoreErrors) && void 0 !== O ? O : void 0,
-        qualityFrameDrops: null !== (D = null === (p = x.encoderQualityStats) || void 0 === p ? void 0 : p.frameDrops) && void 0 !== D ? D : void 0,
+        qualityScoreErrors: null !== (O = null === (p = x.encoderQualityStats) || void 0 === p ? void 0 : p.scoreErrors) && void 0 !== O ? O : void 0,
+        qualityFrameDrops: null !== (D = null === (h = x.encoderQualityStats) || void 0 === h ? void 0 : h.frameDrops) && void 0 !== D ? D : void 0,
         qualitySizeMismatches: null !== (L = null === (m = x.encoderQualityStats) || void 0 === m ? void 0 : m.sizeMismatches) && void 0 !== L ? L : void 0,
         filter: e.filter,
         passthroughCount: e.passthroughCount,
@@ -169,14 +169,14 @@ function u(e, t, n, i) {
 }
 function c(e, t, n, i) {
     var s, c, d, f, _;
-    let h = null,
-        p = null,
+    let p = null,
+        h = null,
         m = 'string' == typeof t ? JSON.parse(t) : t,
         g = [];
     if (null != m.outbound) {
         let { audio: e, video: t, videos: i } = m.outbound;
         if (null != e)
-            (p = (null != p ? p : 0) + e.bytesSent),
+            (h = (null != h ? h : 0) + e.bytesSent),
                 g.push({
                     type: 'audio',
                     ssrc: e.ssrc,
@@ -207,11 +207,11 @@ function c(e, t, n, i) {
         if (null != i)
             i.forEach((e) => {
                 let t = l(e, n);
-                null != t && ((p = (null != p ? p : 0) + t.bytesSent), g.push(t));
+                null != t && ((h = (null != h ? h : 0) + t.bytesSent), g.push(t));
             });
         else if (null != t) {
             let e = l(t, n);
-            null != e && ((p = (null != p ? p : 0) + e.bytesSent), g.push(e));
+            null != e && ((h = (null != h ? h : 0) + e.bytesSent), g.push(e));
         }
     }
     let E = {};
@@ -219,7 +219,7 @@ function c(e, t, n, i) {
         m.inbound.forEach((e) => {
             let { id: t, audio: s, video: l, videos: c, playout: d } = e;
             if (((E[t] = []), null != s))
-                (h = (null != h ? h : 0) + s.bytesReceived),
+                (p = (null != p ? p : 0) + s.bytesReceived),
                     E[t].push({
                         type: 'audio',
                         ssrc: s.ssrc,
@@ -280,32 +280,32 @@ function c(e, t, n, i) {
                     let r = u(e, n, i, d);
                     if (null != r) {
                         let n = a(e.rtpStats);
-                        (h = (null != h ? h : 0) + n), E[t].push(r);
+                        (p = (null != p ? p : 0) + n), E[t].push(r);
                     }
                 });
             else if (null != l) {
                 let e = u(l, n, i, d);
                 if (null != e) {
                     let n = a(l.rtpStats);
-                    (h = (null != h ? h : 0) + n), E[t].push(e);
+                    (p = (null != p ? p : 0) + n), E[t].push(e);
                 }
             }
         });
     let { transport: v, clips: I } = m,
-        S = {};
-    null != v && ((S.availableOutgoingBitrate = v.sendBandwidth), (S.ping = v.rtt), (S.decryptionFailures = v.decryptionFailures), null != v.routingFailures && (S.routingFailures = v.routingFailures), (S.localAddress = v.localAddress), (S.pacerDelay = v.pacerDelay), null != v.receiverReports && (S.receiverReports = v.receiverReports), (S.receiverBitrateEstimate = v.receiverBitrateEstimate), (S.outboundBitrateEstimate = v.outboundBitrateEstimate), (S.inboundBitrateEstimate = null !== (s = v.inboundBitrateEstimate) && void 0 !== s ? s : 0), (S.packetsReceived = v.packetsReceived), (S.packetsSent = v.packetsSent), null != v.secureFramesProtocolVersion && (S.secureFramesProtocolVersion = v.secureFramesProtocolVersion)), ((null == v ? void 0 : v.bytesReceived) != null || (null != h && !Number.isNaN(h))) && (S.bytesReceived = null !== (d = null !== (c = null == v ? void 0 : v.bytesReceived) && void 0 !== c ? c : h) && void 0 !== d ? d : void 0), ((null == v ? void 0 : v.bytesSent) != null || (null != p && !Number.isNaN(p))) && (S.bytesSent = null !== (_ = null !== (f = null == v ? void 0 : v.bytesSent) && void 0 !== f ? f : p) && void 0 !== _ ? _ : void 0);
-    let { screenshare: T, camera: b } = m;
+        b = {};
+    null != v && ((b.availableOutgoingBitrate = v.sendBandwidth), (b.ping = v.rtt), (b.decryptionFailures = v.decryptionFailures), null != v.routingFailures && (b.routingFailures = v.routingFailures), (b.localAddress = v.localAddress), (b.pacerDelay = v.pacerDelay), null != v.receiverReports && (b.receiverReports = v.receiverReports), (b.receiverBitrateEstimate = v.receiverBitrateEstimate), (b.outboundBitrateEstimate = v.outboundBitrateEstimate), (b.inboundBitrateEstimate = null !== (s = v.inboundBitrateEstimate) && void 0 !== s ? s : 0), (b.packetsReceived = v.packetsReceived), (b.packetsSent = v.packetsSent), null != v.secureFramesProtocolVersion && (b.secureFramesProtocolVersion = v.secureFramesProtocolVersion)), ((null == v ? void 0 : v.bytesReceived) != null || (null != p && !Number.isNaN(p))) && (b.bytesReceived = null !== (d = null !== (c = null == v ? void 0 : v.bytesReceived) && void 0 !== c ? c : p) && void 0 !== d ? d : void 0), ((null == v ? void 0 : v.bytesSent) != null || (null != h && !Number.isNaN(h))) && (b.bytesSent = null !== (_ = null !== (f = null == v ? void 0 : v.bytesSent) && void 0 !== f ? f : h) && void 0 !== _ ? _ : void 0);
+    let { screenshare: S, camera: T } = m;
     return {
         mediaEngineConnectionId: e,
-        transport: S,
-        screenshare: T,
+        transport: b,
+        screenshare: S,
         camera:
-            null != b
+            null != T
                 ? {
-                      capturedFramesDropped: b.capturedFramesDropped,
-                      capturedFramesCount: b.capturedFramesCount,
-                      capturedFramesMean: b.capturedFramesMean,
-                      capturedFramesStdev: b.capturedFramesStdev
+                      capturedFramesDropped: T.capturedFramesDropped,
+                      capturedFramesCount: T.capturedFramesCount,
+                      capturedFramesMean: T.capturedFramesMean,
+                      capturedFramesStdev: T.capturedFramesStdev
                   }
                 : null,
         clips: I,

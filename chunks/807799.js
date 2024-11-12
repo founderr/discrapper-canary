@@ -26,9 +26,9 @@ function _(e, t) {
     return e >>> 0 < t >>> 0 ? 1 : 0;
 }
 (l.prototype._update = function (e) {
-    for (var t = this._w, n = 0 | this._ah, r = 0 | this._bh, i = 0 | this._ch, a = 0 | this._dh, o = 0 | this._eh, l = 0 | this._fh, u = 0 | this._gh, c = 0 | this._hh, h = 0 | this._al, p = 0 | this._bl, m = 0 | this._cl, g = 0 | this._dl, E = 0 | this._el, v = 0 | this._fl, I = 0 | this._gl, S = 0 | this._hl, T = 0; T < 32; T += 2) (t[T] = e.readInt32BE(4 * T)), (t[T + 1] = e.readInt32BE(4 * T + 4));
-    for (; T < 160; T += 2) {
-        var b,
+    for (var t = this._w, n = 0 | this._ah, r = 0 | this._bh, i = 0 | this._ch, a = 0 | this._dh, o = 0 | this._eh, l = 0 | this._fh, u = 0 | this._gh, c = 0 | this._hh, p = 0 | this._al, h = 0 | this._bl, m = 0 | this._cl, g = 0 | this._dl, E = 0 | this._el, v = 0 | this._fl, I = 0 | this._gl, b = 0 | this._hl, S = 0; S < 32; S += 2) (t[S] = e.readInt32BE(4 * S)), (t[S + 1] = e.readInt32BE(4 * S + 4));
+    for (; S < 160; S += 2) {
+        var T,
             y,
             A,
             N,
@@ -36,20 +36,20 @@ function _(e, t) {
             R,
             O,
             D,
-            L = t[T - 30],
-            x = t[T - 30 + 1];
-        var w = (((b = L) >>> 1) | ((y = x) << 31)) ^ ((b >>> 8) | (y << 24)) ^ (b >>> 7);
+            L = t[S - 30],
+            x = t[S - 30 + 1];
+        var w = (((T = L) >>> 1) | ((y = x) << 31)) ^ ((T >>> 8) | (y << 24)) ^ (T >>> 7);
         var M = (((A = x) >>> 1) | ((N = L) << 31)) ^ ((A >>> 8) | (N << 24)) ^ ((A >>> 7) | (N << 25));
-        (L = t[T - 4]), (x = t[T - 4 + 1]);
+        (L = t[S - 4]), (x = t[S - 4 + 1]);
         var P = (((C = L) >>> 19) | ((R = x) << 13)) ^ ((R >>> 29) | (C << 3)) ^ (C >>> 6);
         var k = (((O = x) >>> 19) | ((D = L) << 13)) ^ ((D >>> 29) | (O << 3)) ^ ((O >>> 6) | (D << 26)),
-            U = t[T - 14],
-            G = t[T - 14 + 1],
-            B = t[T - 32],
-            Z = t[T - 32 + 1],
+            U = t[S - 14],
+            G = t[S - 14 + 1],
+            B = t[S - 32],
+            Z = t[S - 32 + 1],
             F = (M + G) | 0,
             V = (w + U + _(F, M)) | 0;
-        (V = (V + P + _((F = (F + k) | 0), k)) | 0), (V = (V + B + _((F = (F + Z) | 0), Z)) | 0), (t[T] = V), (t[T + 1] = F);
+        (V = (V + P + _((F = (F + k) | 0), k)) | 0), (V = (V + B + _((F = (F + Z) | 0), Z)) | 0), (t[S] = V), (t[S + 1] = F);
     }
     for (var j = 0; j < 160; j += 2) {
         (V = t[j]), (F = t[j + 1]);
@@ -64,23 +64,23 @@ function _(e, t) {
             J,
             $,
             ee = ((H = n) & (Y = r)) | (i & (H | Y));
-        var et = ((W = h) & (K = p)) | (m & (W | K)),
-            en = d(n, h),
-            er = d(h, n),
+        var et = ((W = p) & (K = h)) | (m & (W | K)),
+            en = d(n, p),
+            er = d(p, n),
             ei = f(o, E),
             ea = f(E, o),
             es = s[j],
             eo = s[j + 1];
         var el = ((z = o), (q = l), (Q = u) ^ (z & (q ^ Q)));
         var eu = ((X = E), (J = v), ($ = I) ^ (X & (J ^ $))),
-            ec = (S + ea) | 0,
-            ed = (c + ei + _(ec, S)) | 0;
+            ec = (b + ea) | 0,
+            ed = (c + ei + _(ec, b)) | 0;
         (ed = (ed + el + _((ec = (ec + eu) | 0), eu)) | 0), (ed = (ed + es + _((ec = (ec + eo) | 0), eo)) | 0), (ed = (ed + V + _((ec = (ec + F) | 0), F)) | 0);
         var ef = (er + et) | 0,
             e_ = (en + ee + _(ef, er)) | 0;
-        (c = u), (S = I), (u = l), (I = v), (l = o), (v = E), (o = (a + ed + _((E = (g + ec) | 0), g)) | 0), (a = i), (g = m), (i = r), (m = p), (r = n), (p = h), (n = (ed + e_ + _((h = (ec + ef) | 0), ec)) | 0);
+        (c = u), (b = I), (u = l), (I = v), (l = o), (v = E), (o = (a + ed + _((E = (g + ec) | 0), g)) | 0), (a = i), (g = m), (i = r), (m = h), (r = n), (h = p), (n = (ed + e_ + _((p = (ec + ef) | 0), ec)) | 0);
     }
-    (this._al = (this._al + h) | 0), (this._bl = (this._bl + p) | 0), (this._cl = (this._cl + m) | 0), (this._dl = (this._dl + g) | 0), (this._el = (this._el + E) | 0), (this._fl = (this._fl + v) | 0), (this._gl = (this._gl + I) | 0), (this._hl = (this._hl + S) | 0), (this._ah = (this._ah + n + _(this._al, h)) | 0), (this._bh = (this._bh + r + _(this._bl, p)) | 0), (this._ch = (this._ch + i + _(this._cl, m)) | 0), (this._dh = (this._dh + a + _(this._dl, g)) | 0), (this._eh = (this._eh + o + _(this._el, E)) | 0), (this._fh = (this._fh + l + _(this._fl, v)) | 0), (this._gh = (this._gh + u + _(this._gl, I)) | 0), (this._hh = (this._hh + c + _(this._hl, S)) | 0);
+    (this._al = (this._al + p) | 0), (this._bl = (this._bl + h) | 0), (this._cl = (this._cl + m) | 0), (this._dl = (this._dl + g) | 0), (this._el = (this._el + E) | 0), (this._fl = (this._fl + v) | 0), (this._gl = (this._gl + I) | 0), (this._hl = (this._hl + b) | 0), (this._ah = (this._ah + n + _(this._al, p)) | 0), (this._bh = (this._bh + r + _(this._bl, h)) | 0), (this._ch = (this._ch + i + _(this._cl, m)) | 0), (this._dh = (this._dh + a + _(this._dl, g)) | 0), (this._eh = (this._eh + o + _(this._el, E)) | 0), (this._fh = (this._fh + l + _(this._fl, v)) | 0), (this._gh = (this._gh + u + _(this._gl, I)) | 0), (this._hh = (this._hh + c + _(this._hl, b)) | 0);
 }),
     (l.prototype._hash = function () {
         var e = a.allocUnsafe(64);

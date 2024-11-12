@@ -10,20 +10,20 @@ var r = n(879443),
     d = n(981631);
 let f = {},
     _ = [],
-    h = !1,
-    p = s()(new (i())(window)),
+    p = !1,
+    h = s()(new (i())(window)),
     m = (0, c.isMac)() || (0, c.isMacWeb)() ? 'cmd' : 'ctrl',
     g = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
     E = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
     v = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', m)),
     I = () => [],
-    S = [];
-function T(e) {
+    b = [];
+function S(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace('mod', m));
 }
-function b(e, t) {
+function T(e, t) {
     return (n, r) => (u.default.track(d.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
 }
 function y(e) {
@@ -33,23 +33,23 @@ function y(e) {
         !c.isPlatformEmbedded && (e = e.concat(v));
         let r = n.binds.filter((t) => ((t = t.replace('mod', m)), 0 > e.indexOf(t)));
         if (0 === r.length) continue;
-        let i = n.comboKeysBindGlobal ? p.bindGlobal : p.bind;
-        if ((null != n.action && i.call(p, r, b(t, n.action)), null != n.keyup && i.call(p, r, b(t, n.keyup), 'keyup'), null != n.keydown)) {
+        let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
+        if ((null != n.action && i.call(h, r, T(t, n.action)), null != n.keyup && i.call(h, r, T(t, n.keyup), 'keyup'), null != n.keydown)) {
             let e = r.indexOf('any-character');
             -1 !== e &&
                 (!(function (e, t) {
                     let n = (e) => t(e, e.key);
-                    document.addEventListener(e, n), S.push(() => document.removeEventListener(e, n));
+                    document.addEventListener(e, n), b.push(() => document.removeEventListener(e, n));
                 })('keydown', n.keydown),
                 r.splice(e, 1)),
-                r.length > 0 && i.call(p, r, b(t, n.keydown), 'keydown');
+                r.length > 0 && i.call(h, r, T(t, n.keydown), 'keydown');
         }
-        null != n.keypress && i.call(p, r, b(t, n.keypress), 'keypress');
+        null != n.keypress && i.call(h, r, T(t, n.keypress), 'keypress');
     }
 }
 (0, c.isDesktop)() && new (i())(document.documentElement).bind('backspace', (e) => e.preventDefault()),
     (t.Z = {
-        combokeys: p,
+        combokeys: h,
         modKey: m,
         altKey: g,
         returnKey: E,
@@ -59,30 +59,30 @@ function y(e) {
         checkDupes(e) {
             let t = new Set(),
                 n = [];
-            for (let r of T(e)) t.has(r) && n.push(r), t.add(r);
+            for (let r of S(e)) t.has(r) && n.push(r), t.add(r);
             n.length > 0 && new l.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
         },
         setLayout(e) {
             f = e;
         },
         enable() {
-            if (!h) (h = !0), this.checkDupes(f), y(f);
+            if (!p) (p = !0), this.checkDupes(f), y(f);
         },
         enableTemp(e) {
-            _.push(f), (f = e), y(e), (h = !0);
+            _.push(f), (f = e), y(e), (p = !0);
         },
         disableTemp() {
             let e = _.pop();
             null != e && (f = e), this.disable(), this.enable();
         },
         disable() {
-            if (!!h) (h = !1), S.forEach((e) => e()), (S = []), p.reset();
+            if (!!p) (p = !1), b.forEach((e) => e()), (b = []), h.reset();
         },
         validateKeybind(e) {
-            if (!!h && !!this.hasBind(e)) p.unbind(e);
+            if (!!p && !!this.hasBind(e)) h.unbind(e);
         },
         hasBind(e) {
-            let t = T(f);
+            let t = S(f);
             return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
         }
     });

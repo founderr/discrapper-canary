@@ -10,15 +10,15 @@ var r = n(348327),
     d = n(829750),
     f = n(189771),
     _ = n(67844),
-    h = n(173507),
-    p = n(592125),
+    p = n(173507),
+    h = n(592125),
     m = n(131951),
     g = n(944486),
     E = n(358085),
     v = n(998502),
     I = n(981631),
-    S = n(388032);
-function T(e, t, n) {
+    b = n(388032);
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function T(e, t, n) {
         e
     );
 }
-class b extends c.Z {
+class T extends c.Z {
     _initialize() {
         if (!!this.isSupported) o.Z.subscribe('AUDIO_SET_MODE', this.handleViewUpdate), o.Z.subscribe('VOICE_CHANNEL_SELECT', this.handleViewUpdate), o.Z.subscribe('START_SESSION', this.handleViewUpdate), o.Z.subscribe('CONNECTION_OPEN', this.handleViewUpdate), o.Z.subscribe('CONNECTION_CLOSED', this.handleViewUpdate), o.Z.subscribe('CALL_CREATE', this.handleViewUpdate), o.Z.subscribe('CALL_UPDATE', this.handleViewUpdate), o.Z.subscribe('CALL_DELETE', this.handleViewUpdate), o.Z.subscribe('CHANNEL_DELETE', this.handleViewUpdate), o.Z.subscribe('VOICE_STATE_UPDATES', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this.handleViewUpdate), o.Z.subscribe('AUDIO_TOGGLE_LOCAL_MUTE', this.handleViewUpdate), o.Z.subscribe('AUDIO_SET_LOCAL_VIDEO_DISABLED', this.handleViewUpdate), v.ZP.on('THUMBAR_BUTTONS_CLICKED', (e, t) => this.buttonClicked(t));
     }
@@ -43,24 +43,24 @@ class b extends c.Z {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'callbackActions', {
+            S(this, 'callbackActions', {
                 [v.tS.VIDEO]: () => {
-                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, h.Z)(() => l.Z.setVideoEnabled(!0), I.IlC.APP);
+                    m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), I.IlC.APP);
                 },
                 [v.tS.MUTE]: () => l.Z.toggleSelfMute({ location: 'Thumbar' }),
                 [v.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
                 [v.tS.DISCONNECT]: () => u.default.disconnect()
             }),
-            T(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
-            T(this, 'prevButtons', []),
-            T(this, 'buttonClicked', (e) => {
+            S(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
+            S(this, 'prevButtons', []),
+            S(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) {
                     console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
                     return;
                 }
                 this.callbackActions[e.buttonName]();
             }),
-            T(
+            S(
                 this,
                 'handleViewUpdate',
                 s().debounce(() => {
@@ -73,7 +73,7 @@ class b extends c.Z {
                         n = m.Z.isSelfDeaf(),
                         r = m.Z.isVideoEnabled(),
                         i = m.Z.isVideoAvailable(),
-                        a = p.Z.getChannel(e),
+                        a = h.Z.getChannel(e),
                         s = null == a || (0, f.y)(a),
                         { reachedLimit: o, limit: l } =
                             null != a
@@ -101,21 +101,21 @@ class b extends c.Z {
                         {
                             name: v.tS.MUTE,
                             active: t,
-                            tooltip: t ? S.intl.string(S.t.YqAjX1) : S.intl.string(S.t['w4m94+'])
+                            tooltip: t ? b.intl.string(b.t.YqAjX1) : b.intl.string(b.t['w4m94+'])
                         },
                         {
                             name: v.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? S.intl.string(S.t['2US87+']) : S.intl.string(S.t.wjcRFR)
+                            tooltip: n ? b.intl.string(b.t['2US87+']) : b.intl.string(b.t.wjcRFR)
                         },
                         {
                             name: v.tS.DISCONNECT,
                             active: !0,
-                            tooltip: S.intl.string(S.t['6vrfgo'])
+                            tooltip: b.intl.string(b.t['6vrfgo'])
                         }
                     ]);
                 }, 100)
             );
     }
 }
-t.Z = new b();
+t.Z = new T();

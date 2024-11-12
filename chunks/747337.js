@@ -48,31 +48,31 @@ function o(e, t) {
         );
     if ((0, a.cS)(t.byweekno)) return _;
     _.wnomask = (0, a.rx)(0, u + 7);
-    var h = (n = (0, a.Vy)(7 - f + t.wkst, 7));
-    h >= 4 ? ((h = 0), (o = _.yearlen + (0, a.Vy)(f - t.wkst, 7))) : (o = u - h);
-    for (var p = Math.floor(Math.floor(o / 7) + (0, a.Vy)(o, 7) / 4), m = 0; m < t.byweekno.length; m++) {
+    var p = (n = (0, a.Vy)(7 - f + t.wkst, 7));
+    p >= 4 ? ((p = 0), (o = _.yearlen + (0, a.Vy)(f - t.wkst, 7))) : (o = u - p);
+    for (var h = Math.floor(Math.floor(o / 7) + (0, a.Vy)(o, 7) / 4), m = 0; m < t.byweekno.length; m++) {
         var g = t.byweekno[m];
-        if ((g < 0 && (g += p + 1), !!(g > 0 && g <= p))) {
+        if ((g < 0 && (g += h + 1), !!(g > 0 && g <= h))) {
             var E = void 0;
-            g > 1 ? ((E = h + (g - 1) * 7), h !== n && (E -= 7 - n)) : (E = h);
+            g > 1 ? ((E = p + (g - 1) * 7), p !== n && (E -= 7 - n)) : (E = p);
             for (var v = 0; v < 7 && ((_.wnomask[E] = 1), E++, _.wdaymask[E] !== t.wkst); v++);
         }
     }
     if ((0, a.q9)(t.byweekno, 1)) {
-        var E = h + 7 * p;
-        if ((h !== n && (E -= 7 - n), E < u)) for (var m = 0; m < 7 && ((_.wnomask[E] = 1), (E += 1), _.wdaymask[E] !== t.wkst); m++);
+        var E = p + 7 * h;
+        if ((p !== n && (E -= 7 - n), E < u)) for (var m = 0; m < 7 && ((_.wnomask[E] = 1), (E += 1), _.wdaymask[E] !== t.wkst); m++);
     }
-    if (h) {
+    if (p) {
         var I = void 0;
         if ((0, a.q9)(t.byweekno, -1)) I = -1;
         else {
-            var S = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
-                T = (0, a.Vy)(7 - S.valueOf() + t.wkst, 7),
-                b = (0, i.Eg)(e - 1) ? 366 : 365,
+            var b = (0, i.FO)((0, i.t2)(e - 1, 1, 1)),
+                S = (0, a.Vy)(7 - b.valueOf() + t.wkst, 7),
+                T = (0, i.Eg)(e - 1) ? 366 : 365,
                 y = void 0;
-            T >= 4 ? ((T = 0), (y = b + (0, a.Vy)(S - t.wkst, 7))) : (y = u - h), (I = Math.floor(52 + (0, a.Vy)(y, 7) / 4));
+            S >= 4 ? ((S = 0), (y = T + (0, a.Vy)(b - t.wkst, 7))) : (y = u - p), (I = Math.floor(52 + (0, a.Vy)(y, 7) / 4));
         }
-        if ((0, a.q9)(t.byweekno, I)) for (var E = 0; E < h; E++) _.wnomask[E] = 1;
+        if ((0, a.q9)(t.byweekno, I)) for (var E = 0; E < p; E++) _.wnomask[E] = 1;
     }
     return _;
 }

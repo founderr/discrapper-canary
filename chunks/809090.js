@@ -14,19 +14,19 @@ var r = n(200651),
     c = n(696967),
     d = n(970952);
 function f(e) {
-    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: h = !1, isSquircle: p, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
-        [S, T] = i.useState(!1),
-        b = i.useCallback(() => {
-            T(!0), null == m || m();
+    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...I } = e,
+        [b, S] = i.useState(!1),
+        T = i.useCallback(() => {
+            S(!0), null == m || m();
         }, [m]),
         y = i.useCallback(() => {
-            T(!1), null == g || g();
+            S(!1), null == g || g();
         }, [g]),
         A = i.useCallback(() => {
-            T(!0), null == E || E();
+            S(!0), null == E || E();
         }, [E]),
         N = i.useCallback(() => {
-            T(!1), null == v || v();
+            S(!1), null == v || v();
         }, [v]),
         C = i.useMemo(() => {
             if (t.type === u.Qi.APPLICATION) {
@@ -44,16 +44,16 @@ function f(e) {
     return (0, r.jsx)('div', {
         ...I,
         className: s()(c.wrapper, _, {
-            [c.selectable]: h,
-            [c.selected]: h && n
+            [c.selectable]: p,
+            [c.selected]: p && n
         }),
-        onFocus: b,
+        onFocus: T,
         onBlur: y,
         onMouseOver: A,
         onMouseLeave: N,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
-            mask: p || (h && (n || S)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            mask: h || (p && (n || b)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
             width: a,
             height: f,
             children: (0, r.jsx)('img', {

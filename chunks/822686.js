@@ -11,9 +11,9 @@ var r = n(200651),
     f = n(388032);
 t.Z = (e) => {
     let { message: t, reportId: n } = e,
-        [_, h] = i.useState(!1),
-        p = i.useCallback(() => {
-            h(!0), o.ZP.trackWithMetadata(d.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), s.Z.deleteMessage(t.getChannelId(), t.id);
+        [_, p] = i.useState(!1),
+        h = i.useCallback(() => {
+            p(!0), o.ZP.trackWithMetadata(d.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), s.Z.deleteMessage(t.getChannelId(), t.id);
         }, [t, n]),
         m = i.useMemo(() => {
             let e = u.Z.getChannel(t.getChannelId());
@@ -26,7 +26,7 @@ t.Z = (e) => {
               buttonText: _ ? f.intl.string(f.t.f3pnLC) : f.intl.string(f.t.ch2xbm),
               buttonDisabled: _,
               buttonColor: a.Button.Colors.RED,
-              onButtonPress: p
+              onButtonPress: h
           })
         : null;
 };

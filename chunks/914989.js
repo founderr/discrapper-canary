@@ -15,8 +15,8 @@ var r = n(192379),
             u = e.colors,
             f = e.hex,
             _ = e.styles,
-            h = e.className,
-            p = (0, s.default)(
+            p = e.className,
+            h = (0, s.default)(
                 (0, l.Z)(
                     {
                         default: {
@@ -47,18 +47,18 @@ var r = n(192379),
         return r.createElement(
             'div',
             {
-                style: p.picker,
-                className: 'swatches-picker ' + (void 0 === h ? '' : h)
+                style: h.picker,
+                className: 'swatches-picker ' + (void 0 === p ? '' : p)
             },
             r.createElement(
                 c.xZ,
                 null,
                 r.createElement(
                     'div',
-                    { style: p.overflow },
+                    { style: h.overflow },
                     r.createElement(
                         'div',
-                        { style: p.body },
+                        { style: h.body },
                         (0, o.Z)(u, function (e) {
                             return r.createElement(d.Z, {
                                 key: e.toString(),
@@ -68,7 +68,7 @@ var r = n(192379),
                                 onSwatchHover: a
                             });
                         }),
-                        r.createElement('div', { style: p.clear })
+                        r.createElement('div', { style: h.clear })
                     )
                 )
             )

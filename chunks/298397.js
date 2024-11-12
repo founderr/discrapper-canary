@@ -14,17 +14,17 @@ var r = n(192379),
     l = n(464170),
     u = n(969129);
 function c(e, t) {
-    let { inputElementType: n = 'input', isDisabled: c = !1, isRequired: d = !1, isReadOnly: f = !1, type: _ = 'text', validationBehavior: h = 'aria' } = e,
-        [p, m] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange),
+    let { inputElementType: n = 'input', isDisabled: c = !1, isRequired: d = !1, isReadOnly: f = !1, type: _ = 'text', validationBehavior: p = 'aria' } = e,
+        [h, m] = (0, a.zk)(e.value, e.defaultValue || '', e.onChange),
         { focusableProps: g } = (0, o.kc)(e, t),
         E = (0, u.Q3)({
             ...e,
-            value: p
+            value: h
         }),
-        { isInvalid: v, validationErrors: I, validationDetails: S } = E.displayValidation,
+        { isInvalid: v, validationErrors: I, validationDetails: b } = E.displayValidation,
         {
-            labelProps: T,
-            fieldProps: b,
+            labelProps: S,
+            fieldProps: T,
             descriptionProps: y,
             errorMessageProps: A
         } = (0, s.U)({
@@ -38,7 +38,7 @@ function c(e, t) {
             pattern: e.pattern
         };
     return (
-        (0, i.y$)(t, p, m),
+        (0, i.y$)(t, h, m),
         (0, l.Q)(e, E, t),
         (0, r.useEffect)(() => {
             if (t.current instanceof (0, i.kR)(t.current).HTMLTextAreaElement) {
@@ -51,18 +51,18 @@ function c(e, t) {
             }
         }, [t]),
         {
-            labelProps: T,
+            labelProps: S,
             inputProps: (0, i.dG)(N, 'input' === n && C, {
                 disabled: c,
                 readOnly: f,
-                required: d && 'native' === h,
-                'aria-required': (d && 'aria' === h) || void 0,
+                required: d && 'native' === p,
+                'aria-required': (d && 'aria' === p) || void 0,
                 'aria-invalid': v || void 0,
                 'aria-errormessage': e['aria-errormessage'],
                 'aria-activedescendant': e['aria-activedescendant'],
                 'aria-autocomplete': e['aria-autocomplete'],
                 'aria-haspopup': e['aria-haspopup'],
-                value: p,
+                value: h,
                 onChange: (e) => m(e.target.value),
                 autoComplete: e.autoComplete,
                 autoCapitalize: e.autoCapitalize,
@@ -81,13 +81,13 @@ function c(e, t) {
                 onBeforeInput: e.onBeforeInput,
                 onInput: e.onInput,
                 ...g,
-                ...b
+                ...T
             }),
             descriptionProps: y,
             errorMessageProps: A,
             isInvalid: v,
             validationErrors: I,
-            validationDetails: S
+            validationDetails: b
         }
     );
 }
@@ -139,13 +139,13 @@ function f(e, t, n) {
                   !t.validate(n) && e.preventDefault();
               },
         { labelProps: o, inputProps: l, descriptionProps: u, errorMessageProps: f, ..._ } = c(e, n),
-        h = (0, r.useRef)(null);
+        p = (0, r.useRef)(null);
     return {
         inputProps: (0, i.dG)(l, {
             onBeforeInput: s,
             onCompositionStart() {
                 let { value: e, selectionStart: t, selectionEnd: r } = n.current;
-                h.current = {
+                p.current = {
                     value: e,
                     selectionStart: t,
                     selectionEnd: r
@@ -153,7 +153,7 @@ function f(e, t, n) {
             },
             onCompositionEnd() {
                 if (!t.validate(n.current.value)) {
-                    let { value: e, selectionStart: r, selectionEnd: i } = h.current;
+                    let { value: e, selectionStart: r, selectionEnd: i } = p.current;
                     (n.current.value = e), n.current.setSelectionRange(r, i), t.setInputValue(e);
                 }
             }

@@ -9,8 +9,8 @@ var r,
     d = n(695346),
     f = n(375954);
 let _ = {},
-    h = {};
-class p extends (s = o.ZP.Store) {
+    p = {};
+class h extends (s = o.ZP.Store) {
     isEditing(e, t) {
         var n;
         return (null === (n = _[e]) || void 0 === n ? void 0 : n.messageId) === t;
@@ -35,11 +35,11 @@ class p extends (s = o.ZP.Store) {
         return null != t && null != t.messageId ? f.Z.getMessage(e, t.messageId) : null;
     }
     getEditActionSource(e) {
-        return h[e];
+        return p[e];
     }
 }
 (a = 'EditMessageStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -47,7 +47,7 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(l.Z, {
+    (t.Z = new h(l.Z, {
         MESSAGE_START_EDIT: function (e) {
             let { channelId: t, messageId: n, content: r, source: i } = e,
                 a = d.dN.getSetting(),
@@ -58,7 +58,7 @@ class p extends (s = o.ZP.Store) {
                 textValue: s,
                 richValue: (0, u.JM)(a ? s : r)
             }),
-                (h[t] = i);
+                (p[t] = i);
         },
         MESSAGE_UPDATE_EDIT: function (e) {
             let { channelId: t, textValue: n, richValue: r } = e,
@@ -73,6 +73,6 @@ class p extends (s = o.ZP.Store) {
         MESSAGE_END_EDIT: function (e) {
             let { channelId: t } = e;
             if (null == t || null == _[t]) return !1;
-            delete _[t], delete h[t];
+            delete _[t], delete p[t];
         }
     }));

@@ -15,10 +15,10 @@ n.d(t, {
         return f;
     },
     YP: function () {
-        return h;
+        return p;
     },
     bw: function () {
-        return p;
+        return h;
     },
     d7: function () {
         return o;
@@ -56,8 +56,8 @@ var r = 'top',
     d = 'clippingParents',
     f = 'viewport',
     _ = 'popper',
-    h = 'reference',
-    p = l.reduce(function (e, t) {
+    p = 'reference',
+    h = l.reduce(function (e, t) {
         return e.concat([t + '-' + u, t + '-' + c]);
     }, []),
     m = [].concat(l, [o]).reduce(function (e, t) {

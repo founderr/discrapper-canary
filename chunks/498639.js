@@ -16,8 +16,8 @@ var i = n(200651),
     S = n(305342),
     T = n(333867),
     C = n(963249),
-    _ = n(87484),
-    E = n(197115),
+    E = n(87484),
+    _ = n(197115),
     f = n(911367),
     I = n(838588),
     N = n(430824),
@@ -106,7 +106,7 @@ t.Z = function () {
                             ],
                             onChange: (e) => t(e)
                         }),
-                        (0, i.jsx)(E.Z, {
+                        (0, i.jsx)(_.Z, {
                             subscriptionTier: e,
                             isGift: !0,
                             premiumModalAnalyticsLocation: {}
@@ -364,7 +364,7 @@ t.Z = function () {
                         }),
                         (0, i.jsx)(a.Button, {
                             onClick: () =>
-                                (0, _.Z)({
+                                (0, E.Z)({
                                     applicationId: X,
                                     skuId: $,
                                     analyticsLocations: U

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 });
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(594174),
     f = n(834348),
     _ = n(74538),
-    h = n(618158),
-    p = n(871499),
+    p = n(618158),
+    h = n(871499),
     m = n(981631),
     g = n(474936),
     E = n(388032),
@@ -28,7 +28,7 @@ function I(e) {
         className: t
     });
 }
-function S(e) {
+function b(e) {
     let { className: t } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
@@ -41,36 +41,36 @@ function S(e) {
         ]
     });
 }
-function T(e) {
+function S(e) {
     let { hideBadges: t = !1, stream: n, ...o } = e,
         f = (0, a.e7)([d.default], () => _.ZP.isPremium(d.default.getCurrentUser(), g.p9.TIER_1)),
         v = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
-        T = i.useMemo(() => (null != n ? [n] : []), [n]),
-        b = i.useCallback(() => {
+        S = i.useMemo(() => (null != n ? [n] : []), [n]),
+        T = i.useCallback(() => {
             null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
         }, [v]);
     if (null == n || null == v) return null;
     let y = I;
     return (
-        !t && !f && (y = S),
+        !t && !f && (y = b),
         (0, r.jsx)(s.Popout, {
             position: 'top',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(h.Z, {
+                return (0, r.jsx)(p.Z, {
                     children: (0, r.jsx)(l.Z, {
                         channel: v,
                         currentUser: d.default.getCurrentUser(),
-                        activeStreams: T,
+                        activeStreams: S,
                         onClose: t,
                         showReportOption: !0,
-                        handleGoLive: b
+                        handleGoLive: T
                     })
                 });
             },
             animation: s.Popout.Animation.FADE,
             children: (e) =>
-                (0, r.jsx)(p.Z, {
+                (0, r.jsx)(h.Z, {
                     ...e,
                     label: E.intl.string(E.t.tmiYpK),
                     iconComponent: y,

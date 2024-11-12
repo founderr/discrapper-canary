@@ -7,7 +7,7 @@ n.d(t, {
         return l;
     },
     EC: function () {
-        return h;
+        return p;
     },
     HY: function () {
         return i;
@@ -19,7 +19,7 @@ n.d(t, {
         return u;
     },
     V: function () {
-        return p;
+        return h;
     },
     Vg: function () {
         return o;
@@ -73,5 +73,5 @@ let d = Object.freeze({
     f = 1024,
     _ = 4096;
 ((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize'), (s.LINKED_ROLES = 'linked-roles');
-let h = new Set(Object.values(i)),
-    p = '131';
+let p = new Set(Object.values(i)),
+    h = '131';

@@ -27,7 +27,7 @@ function d(e) {
             height: t ? 40 : n ? 20 : 8,
             x: 0
         },
-        h = (0, o.useTransition)(
+        p = (0, o.useTransition)(
             t || n || i,
             {
                 config: u,
@@ -43,7 +43,7 @@ function d(e) {
     return (0, r.jsx)('div', {
         className: a()(f, l.wrapper),
         'aria-hidden': !0,
-        children: h(
+        children: p(
             (e, t) =>
                 t &&
                 (0, r.jsx)(s.animated.span, {

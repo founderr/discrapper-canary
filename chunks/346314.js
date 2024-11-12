@@ -36,7 +36,7 @@ function f(e) {
     let { name: t, color: n, roleName: i, dotAlignment: a, className: u, ...c } = e,
         f = (0, s.e7)([l.Z], () => l.Z.roleStyle),
         _ = 'username' === f,
-        h = (0, r.jsx)(d, {
+        p = (0, r.jsx)(d, {
             roleStyle: f,
             name: t,
             color: n,
@@ -44,11 +44,11 @@ function f(e) {
             dotAlignment: a,
             className: u
         }),
-        p = _ ? { color: n } : void 0;
+        h = _ ? { color: n } : void 0;
     return (0, r.jsx)(o.Anchor, {
         ...c,
-        children: h,
-        style: p
+        children: p,
+        style: h
     });
 }
 function _(e) {

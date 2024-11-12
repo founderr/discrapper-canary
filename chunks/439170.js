@@ -23,16 +23,16 @@ var r,
     d = n(442837),
     f = n(570140),
     _ = n(353926),
-    h = n(700785),
-    p = n(199902),
+    p = n(700785),
+    h = n(199902),
     m = n(314897),
     g = n(592125),
     E = n(650774),
     v = n(271383),
     I = n(430824),
-    S = n(158776),
-    T = n(885110),
-    b = n(594174),
+    b = n(158776),
+    S = n(885110),
+    T = n(594174),
     y = n(981631),
     A = n(388032);
 function N(e, t, n) {
@@ -87,11 +87,11 @@ function O(e, t, n, r) {
 }
 function D(e, t, n) {
     let r = n === m.default.getId(),
-        i = S.Z.isMobileOnline(n),
-        a = r ? T.Z.getStatus() : S.Z.getStatus(n, e),
-        s = r ? T.Z.getActivities() : S.Z.getActivities(n, e),
-        o = p.Z.getStreamForUser(n, e),
-        l = b.default.getUser(n);
+        i = b.Z.isMobileOnline(n),
+        a = r ? S.Z.getStatus() : b.Z.getStatus(n, e),
+        s = r ? S.Z.getActivities() : b.Z.getActivities(n, e),
+        o = h.Z.getStreamForUser(n, e),
+        l = T.default.getUser(n);
     return null == l
         ? null
         : {
@@ -111,7 +111,7 @@ function L(e) {
         ? C
         : null == t.memberListId
           ? (function (e) {
-                return h.oz(y.Plq.VIEW_CHANNEL, e)
+                return p.oz(y.Plq.VIEW_CHANNEL, e)
                     ? C
                     : u()
                           .v3(
@@ -132,7 +132,7 @@ class x {
     updateOwnerId() {
         let e = I.Z.getGuild(this.guildId);
         if (null == e) return !1;
-        let t = h.iJ(e);
+        let t = p.iJ(e);
         return this.ownerId !== t && ((this.ownerId = t), !0);
     }
     setGroups(e) {
@@ -240,7 +240,7 @@ function M() {
 }
 let P = [];
 function k() {
-    let e = p.Z.getAllApplicationStreams(),
+    let e = h.Z.getAllApplicationStreams(),
         t = P.concat(e);
     (P = e),
         t.forEach((e) => {
@@ -253,7 +253,7 @@ function U() {
 }
 class G extends (i = d.ZP.Store) {
     initialize() {
-        this.waitFor(b.default, I.Z, g.Z, v.ZP, S.Z, T.Z, m.default, E.Z, p.Z, _.Z), this.syncWith([T.Z], U), this.syncWith([p.Z], k);
+        this.waitFor(T.default, I.Z, g.Z, v.ZP, b.Z, S.Z, m.default, E.Z, h.Z, _.Z), this.syncWith([S.Z], U), this.syncWith([h.Z], k);
     }
     getProps(e, t) {
         let n = w.get(e, L(t));

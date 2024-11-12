@@ -1,6 +1,6 @@
 n.d(t, {
     eC: function () {
-        return h;
+        return p;
     },
     gX: function () {
         return _;
@@ -53,7 +53,7 @@ let d = (e) => {
             restrictionsLoading: a
         };
     },
-    h = (e) => {
+    p = (e) => {
         let { restrictions: t, restrictionsLoading: n } = d((0, i.e7)([l.Z], () => l.Z.getGuild(e), [e]));
         return {
             isMonetizationReapplicationDisabled: (0, u.m8)(t),

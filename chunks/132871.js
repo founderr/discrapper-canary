@@ -10,7 +10,7 @@ n.r(t),
             return m;
         },
         getPreviousView: function () {
-            return p;
+            return h;
         },
         resetApplicationDirectoryHistory: function () {
             return v;
@@ -25,7 +25,7 @@ n.r(t),
             return I;
         },
         useApplicationDirectoryHistory: function () {
-            return h;
+            return p;
         }
     });
 var r,
@@ -44,8 +44,8 @@ let _ = (0, l.Ue)(() => ({
         entrypoint: null,
         trackedOpenedFromExternalEntrypoint: !1
     })),
-    h = _;
-function p() {
+    p = _;
+function h() {
     let {
         location: { state: e }
     } = (0, c.s1)();

@@ -6,10 +6,10 @@ n.d(t, {
         return f;
     },
     bV: function () {
-        return h;
+        return p;
     },
     qt: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -509,7 +509,7 @@ let u = [
     ],
     _ = [d, ...c, ...u];
 ((i = r || (r = {}))[(i.DARK = 0)] = 'DARK'), (i[(i.LIGHT = 1)] = 'LIGHT'), (i[(i.SYSTEM = 2)] = 'SYSTEM');
-let h = [
+let p = [
         {
             theme: o.BR.DARKER,
             getName: () => l.intl.string(l.t.b8Cei4)
@@ -527,4 +527,4 @@ let h = [
             getName: () => l.intl.string(l.t.zlvNOj)
         }
     ],
-    p = (0, a.keyBy)(f, 'id');
+    h = (0, a.keyBy)(f, 'id');

@@ -10,7 +10,7 @@ var a = n(192379),
     d = 'entering',
     f = 'entered',
     _ = 'exiting',
-    h = (function (e) {
+    p = (function (e) {
         function t(t, n) {
             r = e.call(this, t, n) || this;
             var r,
@@ -143,26 +143,26 @@ var a = n(192379),
             t
         );
     })(a.Component);
-function p() {}
-(h.contextType = l.Z),
-    (h.propTypes = {}),
-    (h.defaultProps = {
+function h() {}
+(p.contextType = l.Z),
+    (p.propTypes = {}),
+    (p.defaultProps = {
         in: !1,
         mountOnEnter: !1,
         unmountOnExit: !1,
         appear: !1,
         enter: !0,
         exit: !0,
-        onEnter: p,
-        onEntering: p,
-        onEntered: p,
-        onExit: p,
-        onExiting: p,
-        onExited: p
+        onEnter: h,
+        onEntering: h,
+        onEntered: h,
+        onExit: h,
+        onExiting: h,
+        onExited: h
     }),
-    (h.UNMOUNTED = 0),
-    (h.EXITED = 1),
-    (h.ENTERING = 2),
-    (h.ENTERED = 3),
-    (h.EXITING = 4),
-    (t.ZP = h);
+    (p.UNMOUNTED = 0),
+    (p.EXITED = 1),
+    (p.ENTERING = 2),
+    (p.ENTERED = 3),
+    (p.EXITING = 4),
+    (t.ZP = p);

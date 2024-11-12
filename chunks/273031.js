@@ -16,12 +16,12 @@ function c(e) {
         text: a,
         hideOnClick: !0,
         children: (e) => {
-            let { onMouseEnter: o, onMouseLeave: _, onClick: h } = e;
+            let { onMouseEnter: o, onMouseLeave: _, onClick: p } = e;
             return (0, r.jsx)(l.zx, {
                 onMouseEnter: o,
                 onMouseLeave: _,
                 onClick: (e) => {
-                    e.stopPropagation(), null == h || h(), t(e);
+                    e.stopPropagation(), null == p || p(), t(e);
                 },
                 dangerous: c,
                 'aria-label': null != f ? f : a,

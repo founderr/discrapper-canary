@@ -15,7 +15,7 @@ var r = n(200651),
 function d(e) {
     var t;
     let { selectedGuildId: n, selectedChannelId: d, onChannelChange: f, error: _ } = e,
-        [h, p] = i.useState(null),
+        [p, h] = i.useState(null),
         m = i.useRef(!1);
     if (
         (i.useEffect(() => {
@@ -23,24 +23,24 @@ function d(e) {
                 let t = await (0, l.UR)(e);
                 n === e &&
                     (t.sort((e, t) => e.name.localeCompare(t.name)),
-                    p({
+                    h({
                         guildId: e,
                         channels: t
                     }),
                     (m.current = !0));
             }
-            p(null), null == n ? f(null) : e(n);
+            h(null), null == n ? f(null) : e(n);
         }, [f, n]),
         i.useEffect(() => {
-            if (!!m.current) null == h ? null != d && f(null) : !h.channels.some((e) => e.id === d) && f(null);
-        }, [h, f, d, n]),
+            if (!!m.current) null == p ? null != d && f(null) : !p.channels.some((e) => e.id === d) && f(null);
+        }, [p, f, d, n]),
         null == n)
     )
         return null;
     let g =
-        null == h || h.guildId !== n
+        null == p || p.guildId !== n
             ? []
-            : (null !== (t = null == h ? void 0 : h.channels) && void 0 !== t ? t : []).map((e) => ({
+            : (null !== (t = null == p ? void 0 : p.channels) && void 0 !== t ? t : []).map((e) => ({
                   value: e.id,
                   label: e.name
               }));

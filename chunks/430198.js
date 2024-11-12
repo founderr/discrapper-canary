@@ -10,27 +10,27 @@ var r,
     d = n(738774),
     f = n(644542),
     _ = n(923726),
-    h = n(973542),
-    p = n(790285),
+    p = n(973542),
+    h = n(790285),
     m = n(160404),
     g = n(131704),
     E = n(592125),
     v = n(271383),
     I = n(430824),
-    S = n(594174),
-    T = n(981631);
-let b = {},
+    b = n(594174),
+    S = n(981631);
+let T = {},
     y = new Set();
 function A(e) {
     let { guildId: t, role: n, isPreviewingRoles: r } = e;
     return (
-        !!(0, h.Z)(n) &&
+        !!(0, p.Z)(n) &&
         (!!(
             r ||
-            (0, h.h)(null != n ? n : void 0) ||
+            (0, p.h)(null != n ? n : void 0) ||
             (function (e, t) {
                 if (null == e) return !1;
-                let n = S.default.getCurrentUser();
+                let n = b.default.getCurrentUser();
                 if (null == n) return !1;
                 let r = v.ZP.getMember(t, n.id);
                 return null != r && r.roles.includes(e.id);
@@ -40,7 +40,7 @@ function A(e) {
     );
 }
 function N(e, t) {
-    if (!t.hasFeature(T.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(T.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
+    if (!t.hasFeature(S.oNc.CREATOR_MONETIZABLE) && !t.hasFeature(S.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
     let n = m.Z.isViewingServerShop(t.id);
     for (let r of Object.keys(e.permissionOverwrites)) {
         let i = I.Z.getRole(t.id, r);
@@ -53,11 +53,11 @@ function N(e, t) {
         )
             continue;
         let a = e.permissionOverwrites[r];
-        if ((0, p.TG)(e, a)) return !0;
+        if ((0, h.TG)(e, a)) return !0;
     }
     let r = I.Z.getRole(t.id, t.getEveryoneRoleId()),
-        i = null != r && !o.e$(r.permissions, T.Plq.VIEW_CHANNEL),
-        a = (0, p.wB)(e, e.permissionOverwrites[t.id]);
+        i = null != r && !o.e$(r.permissions, S.Plq.VIEW_CHANNEL),
+        a = (0, h.wB)(e, e.permissionOverwrites[t.id]);
     if (i && !a) {
         for (let e of Object.values(I.Z.getRoles(t.id)))
             if (
@@ -66,14 +66,14 @@ function N(e, t) {
                     role: e,
                     isPreviewingRoles: n
                 }) &&
-                (0, p.MT)(e)
+                (0, h.MT)(e)
             )
                 return !0;
     }
     return !1;
 }
 function C(e, t) {
-    let n = b[e];
+    let n = T[e];
     if (null == n) return !1;
     let r = E.Z.getChannel(t);
     if (null == r) return !1;
@@ -84,15 +84,15 @@ function C(e, t) {
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function R() {
-    (b = {}), y.clear();
+    (T = {}), y.clear();
 }
 function O(e) {
     let { guild: t } = e;
-    delete b[t.id];
+    delete T[t.id];
 }
 function D(e) {
     let { guildId: t } = e;
-    delete b[t];
+    delete T[t];
 }
 function L(e) {
     let { channel: t } = e;
@@ -104,21 +104,21 @@ class x extends (r = l.ZP.Store) {
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
-        let n = b[e];
+        let n = T[e];
         return (
             null == n &&
                 (!(function (e) {
                     let t = I.Z.getGuild(e);
                     if (null == t) return;
-                    let n = (b[e] = new Set());
-                    if (!t.hasFeature(T.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, _.kT)(e) && !(0, c.Rw)(t))) return;
+                    let n = (T[e] = new Set());
+                    if (!t.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_ENABLED) || (!(0, _.kT)(e) && !(0, c.Rw)(t))) return;
                     let r = E.Z.getMutableGuildChannelsForGuild(e);
                     for (let e in r) {
                         let i = r[e];
                         N(i, t) && n.add(i.id);
                     }
                 })(e),
-                (n = b[e])),
+                (n = T[e])),
             null != n && n.has(t)
         );
     }

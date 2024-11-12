@@ -18,16 +18,16 @@ var r = n(200651),
     d = n(130402),
     f = n(626135),
     _ = n(183023),
-    h = n(524444),
-    p = n(981631),
+    p = n(524444),
+    h = n(981631),
     m = n(185923),
     g = n(474936),
     E = n(659932);
 let v = (e) => {
         var t;
-        let { node: n, tooltipPosition: a = h.b_.position, enableClick: o = !0, channelId: c, messageId: d } = e,
+        let { node: n, tooltipPosition: a = p.b_.position, enableClick: o = !0, channelId: c, messageId: d } = e,
             f = null === (t = n.originalMatch) || void 0 === t ? void 0 : t[0],
-            p = null != f ? f : n.name,
+            h = null != f ? f : n.name,
             [m, g] = i.useState(!1),
             v = (e) =>
                 (0, r.jsx)(u.Z, {
@@ -42,14 +42,14 @@ let v = (e) => {
                 }),
             I = (e) =>
                 (0, r.jsx)(l.Tooltip, {
-                    text: (0, h.Y)(n.name, o),
-                    'aria-label': p,
-                    ...h.b_,
+                    text: (0, p.Y)(n.name, o),
+                    'aria-label': h,
+                    ...p.b_,
                     position: a,
                     shouldShow: !m,
                     onTooltipShow: () => {
                         o &&
-                            S({
+                            b({
                                 emojiNode: n,
                                 isCustomEmoji: !1
                             });
@@ -89,9 +89,9 @@ let v = (e) => {
             : I();
     },
     I = (e) => {
-        let { node: t, isInteracting: n, tooltipPosition: a = h.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
-            [I, T] = i.useState(String(Date.now())),
-            [b, y] = i.useState(!1),
+        let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: c = !0, channelId: g, messageId: v } = e,
+            [I, S] = i.useState(String(Date.now())),
+            [T, y] = i.useState(!1),
             [A, N] = i.useState(!1),
             C = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -109,15 +109,15 @@ let v = (e) => {
             R = (0, o.Z)(),
             O = (e) =>
                 (0, r.jsx)(l.Tooltip, {
-                    text: (0, h.Y)(t.name, c),
+                    text: (0, p.Y)(t.name, c),
                     'aria-label': t.name,
-                    ...h.b_,
+                    ...p.b_,
                     position: a,
                     shouldShow: !A,
                     onTooltipShow: () => {
                         y(!0),
                             c &&
-                                (S({
+                                (b({
                                     emojiNode: t,
                                     isCustomEmoji: !0,
                                     nonce: R
@@ -138,7 +138,7 @@ let v = (e) => {
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                b && (f.default.track(p.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
+                                T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), y(!1));
                             },
                             tag: 'span',
                             className: s()(E.emojiContainer, {
@@ -153,7 +153,7 @@ let v = (e) => {
                   animation: l.Popout.Animation.FADE,
                   align: 'center',
                   onRequestClose: () => {
-                      f.default.track(p.rMx.CLOSE_POPOUT, { nonce: R }), y(!1), N(!1);
+                      f.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), y(!1), N(!1);
                   },
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
@@ -162,7 +162,7 @@ let v = (e) => {
                       (0, r.jsx)(_.vk, {
                           ...e,
                           node: t,
-                          refreshPositionKey: () => T(String(Date.now())),
+                          refreshPositionKey: () => S(String(Date.now())),
                           nonce: R
                       }),
                   positionKey: I,
@@ -170,9 +170,9 @@ let v = (e) => {
               })
             : O();
     },
-    S = (e) => {
+    b = (e) => {
         let { emojiNode: t, isCustomEmoji: n, nonce: r } = e;
-        c.ZP.trackWithMetadata(p.rMx.EXPRESSION_TOOLTIP_VIEWED, {
+        c.ZP.trackWithMetadata(h.rMx.EXPRESSION_TOOLTIP_VIEWED, {
             type: g.cd.EMOJI_IN_MESSAGE_HOVER,
             expression_id: t.emojiId,
             expression_name: t.name,

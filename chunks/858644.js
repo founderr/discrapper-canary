@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -24,10 +24,10 @@ let _ = (e) => {
             title: i
         });
     },
-    h = (e) => {
-        let { className: t, filename: n, size: i, progress: a, onCancelUpload: o, onClick: c, onContextMenu: h } = e,
-            p = 100 === a,
-            m = !p && i > 0;
+    p = (e) => {
+        let { className: t, filename: n, size: i, progress: a, onCancelUpload: o, onClick: c, onContextMenu: p } = e,
+            h = 100 === a,
+            m = !h && i > 0;
         return (0, r.jsxs)('div', {
             className: s()(f.attachment, t),
             children: [
@@ -41,7 +41,7 @@ let _ = (e) => {
                                 (0, r.jsx)(u.Clickable, {
                                     className: f.filename,
                                     onClick: c,
-                                    onContextMenu: h,
+                                    onContextMenu: p,
                                     children: n
                                 }),
                                 m
@@ -54,7 +54,7 @@ let _ = (e) => {
                         }),
                         (0, r.jsx)('div', {
                             className: f.progressContainer,
-                            children: p
+                            children: h
                                 ? d.intl.string(d.t.jfKTen)
                                 : (0, r.jsx)(u.Progress, {
                                       className: f.progress,
@@ -63,7 +63,7 @@ let _ = (e) => {
                         })
                     ]
                 }),
-                p
+                h
                     ? null
                     : (0, r.jsx)(u.Clickable, {
                           onClick: o,
@@ -77,7 +77,7 @@ let _ = (e) => {
         });
     };
 t.Z = (e) => {
-    let { className: t, url: n, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: h } = e;
+    let { className: t, url: n, fileName: a, fileSize: o, onClick: c, onContextMenu: d, renderAdjacentContent: p } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -105,7 +105,7 @@ t.Z = (e) => {
                     })
                 ]
             }),
-            null != h && h()
+            null != p && p()
         ]
     });
 };

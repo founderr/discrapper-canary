@@ -1,9 +1,9 @@
 n.d(t, {
     Dk: function () {
-        return S;
+        return b;
     },
     P5: function () {
-        return b;
+        return T;
     },
     QF: function () {
         return E;
@@ -24,7 +24,7 @@ n.d(t, {
         return y;
     },
     vP: function () {
-        return T;
+        return S;
     },
     vj: function () {
         return m;
@@ -42,8 +42,8 @@ var r = n(200651),
     d = n(686546),
     f = n(981631),
     _ = n(182294),
-    h = n(454857);
-let p = {
+    p = n(454857);
+let h = {
     tension: 600,
     friction: 70
 };
@@ -85,7 +85,7 @@ function v(e, t, n, r) {
 function I(e, t, n) {
     return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
-function S(e) {
+function b(e) {
     let { size: t, status: n, isMobile: r, isTyping: i, topOffset: a = 0, leftOffset: s = 0 } = e,
         o = (a / 8) * t,
         l = (s / 8) * t;
@@ -221,9 +221,9 @@ function S(e) {
             };
     }
 }
-function T(e, t, n) {
+function S(e, t, n) {
     var i;
-    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: h, cutoutRadius: p, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
+    let { bgRadius: a, bgY: s, bgX: l, bgHeight: u, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: _, cutoutHeight: p, cutoutRadius: h, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: I } = e;
     return (0, r.jsxs)('mask', {
         id: n,
         children: [
@@ -240,9 +240,9 @@ function T(e, t, n) {
                 x: d,
                 y: f,
                 width: _,
-                height: h,
-                rx: p,
-                ry: p,
+                height: p,
+                rx: h,
+                ry: h,
                 fill: 'black'
             }),
             (0, r.jsx)(o.animated.polygon, {
@@ -267,13 +267,13 @@ function T(e, t, n) {
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { status: t, isMobile: n = !1, size: a = 8, color: l, className: c, style: d } = e,
         g = i.useId(),
         E = t === f.Skl.ONLINE && n,
         v = i.useMemo(
             () =>
-                S({
+                b({
                     size: a,
                     status: t,
                     isMobile: E
@@ -282,29 +282,29 @@ function b(e) {
         ),
         I = (0, u.useSpring)(
             {
-                config: p,
+                config: h,
                 to: v
             },
             'animate-always'
         ),
-        b = m(t, l),
+        T = m(t, l),
         [{ fill: y }] = (0, u.useSpring)(
             {
-                config: p,
-                fill: b
+                config: h,
+                fill: T
             },
             'animate-always',
-            [b]
+            [T]
         ),
         A = Math.ceil(a * _.EW);
     return (0, r.jsxs)('svg', {
         width: a,
         height: A,
         viewBox: '0 0 '.concat(a, ' ').concat(A),
-        className: s()(h.mask, c),
+        className: s()(p.mask, c),
         style: d,
         children: [
-            T(I, a, g),
+            S(I, a, g),
             (0, r.jsx)(o.animated.rect, {
                 x: 0,
                 y: 0,
@@ -354,12 +354,12 @@ function N(e) {
         c = m(t, l);
     return (0, r.jsx)(d.ZP, {
         mask: y(t, u),
-        className: s()(h.mask, a),
+        className: s()(p.mask, a),
         style: o,
         ...A(i, t, u),
         children: (0, r.jsx)('div', {
             style: { backgroundColor: c },
-            className: h.status
+            className: p.status
         })
     });
 }

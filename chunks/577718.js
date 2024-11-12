@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(921944),
     T = n(30513),
     x = n(474936),
-    A = n(388032),
-    b = n(541194),
+    b = n(388032),
+    A = n(541194),
     Z = n(592827),
     y = n(741160),
     L = n(829972),
@@ -94,15 +94,15 @@ t.Z = r.memo(function (e) {
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
                             onComponentMount: T,
-                            header: A.intl.string(A.t.nxtaFx),
+                            header: b.intl.string(b.t.nxtaFx),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: k,
                                 className: Z.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.ujItEh, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: b.intl.format(b.t.ujItEh, {}),
+                            buttonCTA: b.intl.string(b.t.UzVPra),
+                            secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
                             onSecondaryClick: () => O(),
                             onClick: () => O(r),
                             markAsDismissed: G
@@ -113,15 +113,15 @@ t.Z = r.memo(function (e) {
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
                             onComponentMount: T,
-                            header: A.intl.string(A.t.KAsfPT),
+                            header: b.intl.string(b.t.KAsfPT),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: k,
                                 className: Z.fullWidthImage
                             }),
-                            content: A.intl.format(A.t.zK1hpq, {}),
-                            buttonCTA: A.intl.string(A.t.UzVPra),
-                            secondaryButtonCTA: A.intl.string(A.t['KkK/aG']),
+                            content: b.intl.format(b.t.zK1hpq, {}),
+                            buttonCTA: b.intl.string(b.t.UzVPra),
+                            secondaryButtonCTA: b.intl.string(b.t['KkK/aG']),
                             onSecondaryClick: () => O(),
                             onClick: () => O(r),
                             markAsDismissed: G
@@ -154,12 +154,12 @@ t.Z = r.memo(function (e) {
                         renderGuildHeaderDropdownButton: s
                     });
                 case l.z.GUILD_HEADER_INVITE_SPLASH:
-                    let e = (0, v.f2)(r, S.Eu4.TIER_1) ? A.intl.format(A.t.DDzEVl, {}) : A.intl.formatToPlainString(A.t.pMftkJ, { boostCount: (0, v.KK)(r, S.Eu4.TIER_1) }),
-                        t = (0, v.f2)(r, S.Eu4.TIER_1) ? A.intl.string(A.t.rOFcBg) : A.intl.string(A.t.hvVgAQ);
+                    let e = (0, v.f2)(r, S.Eu4.TIER_1) ? b.intl.format(b.t.DDzEVl, {}) : b.intl.formatToPlainString(b.t.pMftkJ, { boostCount: (0, v.KK)(r, S.Eu4.TIER_1) }),
+                        t = (0, v.f2)(r, S.Eu4.TIER_1) ? b.intl.string(b.t.rOFcBg) : b.intl.string(b.t.hvVgAQ);
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
                             onComponentMount: w,
-                            header: A.intl.string(A.t['36wK8/']),
+                            header: b.intl.string(b.t['36wK8/']),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: y,
@@ -167,7 +167,7 @@ t.Z = r.memo(function (e) {
                             }),
                             content: e,
                             buttonCTA: t,
-                            secondaryButtonCTA: A.intl.string(A.t.hBIHLS),
+                            secondaryButtonCTA: b.intl.string(b.t.hBIHLS),
                             onSecondaryClick: () => D(h),
                             onClick: () => D(h, r),
                             markAsDismissed: G
@@ -182,10 +182,10 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            className: b.tooltipOverrideColor,
-                            header: A.intl.string(A.t.hLUL3t),
-                            content: A.intl.string(A.t.ahWaPT),
-                            buttonCTA: A.intl.string(A.t['NX+WJC']),
+                            className: A.tooltipOverrideColor,
+                            header: b.intl.string(b.t.hLUL3t),
+                            content: b.intl.string(b.t.ahWaPT),
+                            buttonCTA: b.intl.string(b.t['NX+WJC']),
                             onClick: () => G(N.L.UNKNOWN),
                             markAsDismissed: G
                         }),
@@ -194,17 +194,17 @@ t.Z = r.memo(function (e) {
                 case l.z.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                     return (0, i.jsx)(M, {
                         renderPopout: (0, i.jsx)(I.ZP, {
-                            header: A.intl.string(A.t.PZNQKC),
-                            content: A.intl.string(A.t.jQIyyM),
-                            buttonCTA: A.intl.string(A.t.RzWDqa),
-                            secondaryButtonCTA: A.intl.string(A.t.f3Pet7),
+                            header: b.intl.string(b.t.PZNQKC),
+                            content: b.intl.string(b.t.jQIyyM),
+                            buttonCTA: b.intl.string(b.t.RzWDqa),
+                            secondaryButtonCTA: b.intl.string(b.t.f3Pet7),
                             asset: (0, i.jsx)('img', {
                                 alt: '',
                                 src: j,
                                 className: Z.fullWidthImage
                             }),
                             onClick: () => {
-                                g.Z.open(r.id, S.pNK.ROLES), g.Z.selectRole(r.getEveryoneRoleId(), A.intl.string(A.t.Bco7ND));
+                                g.Z.open(r.id, S.pNK.ROLES), g.Z.selectRole(r.getEveryoneRoleId(), b.intl.string(b.t.Bco7ND));
                             },
                             markAsDismissed: G
                         }),

@@ -21,10 +21,10 @@ var i = t(200651),
     v = t(882712),
     g = t(855775),
     S = t(626135),
-    E = t(669079),
-    j = t(74538),
-    I = t(987209),
-    y = t(563132),
+    j = t(669079),
+    E = t(74538),
+    y = t(987209),
+    I = t(563132),
     P = t(632580),
     T = t(45572),
     N = t(919778),
@@ -32,21 +32,21 @@ var i = t(200651),
     _ = t(981631),
     C = t(38569);
 function A(e) {
-    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: O, flashLegalTerms: R, invoiceError: Z, planError: M, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: L, trialId: F, planGroup: k, analyticsLocation: B, purchaseTokenAuthState: U, openInvoiceId: G, metadata: H, backButtonEligible: W, disablePurchase: V, isTrial: Y = !1 } = e,
-        { selectedPlan: z, priceOptions: K, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: el, invoicePreview: er, inReverseTrial: es } = (0, y.usePaymentContext)(),
-        { isGift: ea, selectedGiftStyle: ec, customGiftMessage: eo, emojiConfetti: eu, soundEffect: ed, giftRecipient: em } = (0, I.wD)(),
-        ep = (0, E.MY)(em),
+    let { premiumSubscription: n, setPurchaseState: t, onBack: r, onNext: A, legalTermsNodeRef: O, flashLegalTerms: Z, invoiceError: R, planError: M, onPurchaseError: w, baseAnalyticsData: D, flowStartTime: F, trialId: L, planGroup: k, analyticsLocation: G, purchaseTokenAuthState: U, openInvoiceId: B, metadata: H, backButtonEligible: W, disablePurchase: V, isTrial: Y = !1 } = e,
+        { selectedPlan: z, priceOptions: K, setHasAcceptedTerms: X, setPurchaseError: q, purchaseType: J, paymentSourceId: Q, paymentSources: $, selectedSkuId: ee, skusById: en, skuPricePreviewsById: et, referralCode: ei, contextMetadata: el, invoicePreview: er, inReverseTrial: es } = (0, I.usePaymentContext)(),
+        { isGift: ea, selectedGiftStyle: ec, customGiftMessage: eo, emojiConfetti: eu, soundEffect: ed, giftRecipient: em } = (0, y.wD)(),
+        ep = (0, j.MY)(em),
         ex = {};
-    (ex.gift_style = ec), ep === E.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != em, 'Gift recipient must be set at purchase review step for these gift options.'), (ex.recipient_id = em.id), (ex.custom_message = eo), (ex.emoji_id = null == eu ? void 0 : eu.id), (ex.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (ex.sound_id = null == ed ? void 0 : ed.soundId));
+    (ex.gift_style = ec), ep === j.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (s()(null != em, 'Gift recipient must be set at purchase review step for these gift options.'), (ex.recipient_id = em.id), (ex.custom_message = eo), (ex.emoji_id = null == eu ? void 0 : eu.id), (ex.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (ex.sound_id = null == ed ? void 0 : ed.soundId));
     let eh = null == z ? void 0 : z.id,
-        ef = (0, N.sE)(F, K.paymentSourceId, eh),
+        ef = (0, N.sE)(L, K.paymentSourceId, eh),
         ev = (0, a.e7)([f.Z], () => f.Z.popupCallbackCalled),
         { analyticsLocations: eg } = (0, u.ZP)(),
         eS = null != Q ? $[Q] : null,
-        [eE, ej] = l.useState(ef),
-        [eI, ey] = l.useState(!1),
+        [ej, eE] = l.useState(ef),
+        [ey, eI] = l.useState(!1),
         { hasEntitlements: eP } = (0, x.H)(eh, ea),
-        eT = (0, j.Ap)(K.paymentSourceId),
+        eT = (0, E.Ap)(K.paymentSourceId),
         eN = eP || ef,
         eb = (0, m.U)(),
         e_ = null,
@@ -62,22 +62,22 @@ function A(e) {
         await (0, P.H)({
             setPurchaseState: t,
             setHasAcceptedTerms: X,
-            setIsSubmitting: ej,
+            setIsSubmitting: eE,
             setPurchaseError: q,
-            hasRedirectURL: eI,
-            setHasRedirectURL: ey,
+            hasRedirectURL: ey,
+            setHasRedirectURL: eI,
             isGift: ea,
             baseAnalyticsData: D,
-            analyticsLocation: B,
+            analyticsLocation: G,
             analyticsLocations: eg,
-            flowStartTime: L,
+            flowStartTime: F,
             subscriptionPlan: z,
             planGroup: k,
-            trialId: F,
+            trialId: L,
             priceOptions: K,
             paymentSource: eS,
             isPrepaidPaymentPastDue: eb,
-            openInvoiceId: G,
+            openInvoiceId: B,
             premiumSubscription: n,
             onNext: A,
             metadata: H,
@@ -104,10 +104,10 @@ function A(e) {
                             payment_error_code: null == e ? void 0 : e.code,
                             payment_source_id: Q,
                             payment_source_type: null == eS ? void 0 : eS.type,
-                            duration_ms: Date.now() - L
+                            duration_ms: Date.now() - F
                         });
                 } finally {
-                    ej(!1), (0, o.K2)();
+                    eE(!1), (0, o.K2)();
                 }
             else U === v.I.SUCCESS && (await eO());
         })();
@@ -115,7 +115,7 @@ function A(e) {
         l.useEffect(() => {
             ef && !ea && null == n && eO();
         }, [ef, ea, n]);
-    let eR = null != G || (J === _.GZQ.ONE_TIME && !ea);
+    let eZ = null != B || (J === _.GZQ.ONE_TIME && !ea);
     return ef
         ? null
         : (0, i.jsxs)(c.ModalFooter, {
@@ -123,11 +123,11 @@ function A(e) {
               children: [
                   (0, i.jsx)(h.Z, {
                       legalTermsNodeRef: O,
-                      invoiceError: Z,
+                      invoiceError: R,
                       planError: M,
                       disablePurchase: V,
-                      flashLegalTerms: R,
-                      isSubmitting: eE,
+                      flashLegalTerms: Z,
+                      isSubmitting: ej,
                       premiumSubscription: n,
                       isGift: ea,
                       planGroup: k,
@@ -139,7 +139,7 @@ function A(e) {
                       inReverseTrial: es
                   }),
                   (0, i.jsx)(b.Z, {}),
-                  W && !eR
+                  W && !eZ
                       ? (0, i.jsx)('div', {
                             className: C.back,
                             children: (0, i.jsx)(p.Z, { onClick: r })

@@ -26,10 +26,10 @@ e.exports = function (e, t, n, r, u, d, f) {
         case '[object Map]':
             var _ = o;
         case '[object Set]':
-            var h = 1 & r;
-            if ((_ || (_ = l), e.size != t.size && !h)) break;
-            var p = f.get(e);
-            if (p) return p == t;
+            var p = 1 & r;
+            if ((_ || (_ = l), e.size != t.size && !p)) break;
+            var h = f.get(e);
+            if (h) return h == t;
             (r |= 2), f.set(e, t);
             var m = s(_(e), _(t), r, u, d, f);
             return f.delete(e), m;

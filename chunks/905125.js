@@ -9,7 +9,7 @@ var r = n(690244)('%TypeError%'),
     d = n(828148),
     f = n(148309),
     _ = n(632384);
-e.exports = function (e, t, n, h, p) {
+e.exports = function (e, t, n, p, h) {
     var m,
         g,
         E = _(e);
@@ -23,33 +23,33 @@ e.exports = function (e, t, n, h, p) {
                 IsDataDescriptor: u,
                 IsAccessorDescriptor: l
             },
-            h
+            p
         )
     )
         throw new r('Assertion failed: Desc must be a Property Descriptor');
     if (
-        'Undefined' !== _(p) &&
+        'Undefined' !== _(h) &&
         !s(
             {
                 Type: _,
                 IsDataDescriptor: u,
                 IsAccessorDescriptor: l
             },
-            p
+            h
         )
     )
         throw new r('Assertion failed: current must be a Property Descriptor, or undefined');
-    if ('Undefined' === _(p))
+    if ('Undefined' === _(h))
         return (
             !!n &&
             ('Undefined' === E ||
-                (l(h)
-                    ? i(u, f, o, e, t, h)
+                (l(p)
+                    ? i(u, f, o, e, t, p)
                     : i(u, f, o, e, t, {
-                          '[[Configurable]]': !!h['[[Configurable]]'],
-                          '[[Enumerable]]': !!h['[[Enumerable]]'],
-                          '[[Value]]': h['[[Value]]'],
-                          '[[Writable]]': !!h['[[Writable]]']
+                          '[[Configurable]]': !!p['[[Configurable]]'],
+                          '[[Enumerable]]': !!p['[[Enumerable]]'],
+                          '[[Value]]': p['[[Value]]'],
+                          '[[Writable]]': !!p['[[Writable]]']
                       })))
         );
     if (
@@ -58,33 +58,33 @@ e.exports = function (e, t, n, h, p) {
                 IsAccessorDescriptor: l,
                 IsDataDescriptor: u
             },
-            p
+            h
         )
     )
         throw new r('`current`, when present, must be a fully populated and valid Property Descriptor');
-    if (!p['[[Configurable]]']) {
-        if (('[[Configurable]]' in h && h['[[Configurable]]']) || ('[[Enumerable]]' in h && !f(h['[[Enumerable]]'], p['[[Enumerable]]'])) || (!c(h) && !f(l(h), l(p)))) return !1;
-        if (l(p)) {
-            if (('[[Get]]' in h && !f(h['[[Get]]'], p['[[Get]]'])) || ('[[Set]]' in h && !f(h['[[Set]]'], p['[[Set]]']))) return !1;
-        } else if (!p['[[Writable]]'] && (('[[Writable]]' in h && h['[[Writable]]']) || ('[[Value]]' in h && !f(h['[[Value]]'], p['[[Value]]'])))) return !1;
+    if (!h['[[Configurable]]']) {
+        if (('[[Configurable]]' in p && p['[[Configurable]]']) || ('[[Enumerable]]' in p && !f(p['[[Enumerable]]'], h['[[Enumerable]]'])) || (!c(p) && !f(l(p), l(h)))) return !1;
+        if (l(h)) {
+            if (('[[Get]]' in p && !f(p['[[Get]]'], h['[[Get]]'])) || ('[[Set]]' in p && !f(p['[[Set]]'], h['[[Set]]']))) return !1;
+        } else if (!h['[[Writable]]'] && (('[[Writable]]' in p && p['[[Writable]]']) || ('[[Value]]' in p && !f(p['[[Value]]'], h['[[Value]]'])))) return !1;
     }
     if ('Undefined' !== E)
-        return u(p) && l(h)
-            ? ((m = ('[[Configurable]]' in h ? h : p)['[[Configurable]]']),
+        return u(h) && l(p)
+            ? ((m = ('[[Configurable]]' in p ? p : h)['[[Configurable]]']),
               i(u, f, o, e, t, {
                   '[[Configurable]]': !!m,
-                  '[[Enumerable]]': !!(g = ('[[Enumerable]]' in h ? h : p)['[[Enumerable]]']),
-                  '[[Get]]': ('[[Get]]' in h ? h : p)['[[Get]]'],
-                  '[[Set]]': ('[[Set]]' in h ? h : p)['[[Set]]']
+                  '[[Enumerable]]': !!(g = ('[[Enumerable]]' in p ? p : h)['[[Enumerable]]']),
+                  '[[Get]]': ('[[Get]]' in p ? p : h)['[[Get]]'],
+                  '[[Set]]': ('[[Set]]' in p ? p : h)['[[Set]]']
               }))
-            : l(p) && u(h)
-              ? ((m = ('[[Configurable]]' in h ? h : p)['[[Configurable]]']),
+            : l(h) && u(p)
+              ? ((m = ('[[Configurable]]' in p ? p : h)['[[Configurable]]']),
                 i(u, f, o, e, t, {
                     '[[Configurable]]': !!m,
-                    '[[Enumerable]]': !!(g = ('[[Enumerable]]' in h ? h : p)['[[Enumerable]]']),
-                    '[[Value]]': ('[[Value]]' in h ? h : p)['[[Value]]'],
-                    '[[Writable]]': !!('[[Writable]]' in h ? h : p)['[[Writable]]']
+                    '[[Enumerable]]': !!(g = ('[[Enumerable]]' in p ? p : h)['[[Enumerable]]']),
+                    '[[Value]]': ('[[Value]]' in p ? p : h)['[[Value]]'],
+                    '[[Writable]]': !!('[[Writable]]' in p ? p : h)['[[Writable]]']
                 }))
-              : i(u, f, o, e, t, h);
+              : i(u, f, o, e, t, p);
     return !0;
 };

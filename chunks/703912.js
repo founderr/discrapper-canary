@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return A;
+        return b;
     }
 }),
     n(789020),
@@ -38,7 +38,7 @@ async function T(e, t, n) {
         c,
         d,
         v,
-        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: A, code_challenge_method: b, state: Z, nonce: y, scope: L, permissions: R, guild_id: j, channel_id: O, prompt: P, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
+        { client_id: N, response_type: T = 'code', redirect_uri: x, code_challenge: b, code_challenge_method: A, state: Z, nonce: y, scope: L, permissions: R, guild_id: j, channel_id: O, prompt: P, disable_guild_select: D, integration_type: M, pid: w, signal: k } = e;
     if (null == k ? void 0 : k.aborted) throw new C.Z({ errorCode: S.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == N) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != x) throw new C.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -60,8 +60,8 @@ async function T(e, t, n) {
             scopes: U,
             responseType: T,
             redirectUri: x,
-            codeChallenge: A,
-            codeChallengeMethod: b,
+            codeChallenge: b,
+            codeChallengeMethod: A,
             state: Z,
             integrationType: o,
             signal: k
@@ -85,8 +85,8 @@ async function T(e, t, n) {
                     scopes: U,
                     responseType: T,
                     redirectUri: x,
-                    codeChallenge: A,
-                    codeChallengeMethod: b,
+                    codeChallenge: b,
+                    codeChallengeMethod: A,
                     state: Z,
                     nonce: y,
                     integrationType: o
@@ -110,8 +110,8 @@ async function T(e, t, n) {
             parsedPermissions: H,
             responseType: T,
             redirectUri: x,
-            codeChallenge: A,
-            codeChallengeMethod: b,
+            codeChallenge: b,
+            codeChallengeMethod: A,
             state: Z,
             guildId: j,
             channelId: O,
@@ -165,7 +165,7 @@ function x(e, t) {
             })
     );
 }
-function A(e, t) {
+function b(e, t) {
     return {
         [S.Etm.AUTHENTICATE]: (0, o.S)(S.Etm.AUTHENTICATE, {
             handler(n) {

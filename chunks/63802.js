@@ -3,7 +3,7 @@ n.d(t, {
         return f;
     },
     R9: function () {
-        return h;
+        return p;
     },
     l_: function () {
         return d;
@@ -38,17 +38,17 @@ function _(e) {
                                 [c.rimGlowVerticalTier2]: t === u.p9.TIER_2
                             })
                         }),
-                        (0, r.jsx)(h, { foreground: c.buttonSparkleStar1 })
+                        (0, r.jsx)(p, { foreground: c.buttonSparkleStar1 })
                     ]
                 }),
-            (0, r.jsx)(h, { foreground: c.buttonSparkleStar2 }),
-            (0, r.jsx)(h, { foreground: c.buttonSparkleStar3 }),
-            (0, r.jsx)(h, { foreground: c.buttonSparkleStar4 }),
-            (0, r.jsx)(h, { foreground: c.buttonSparkleStar5 })
+            (0, r.jsx)(p, { foreground: c.buttonSparkleStar2 }),
+            (0, r.jsx)(p, { foreground: c.buttonSparkleStar3 }),
+            (0, r.jsx)(p, { foreground: c.buttonSparkleStar4 }),
+            (0, r.jsx)(p, { foreground: c.buttonSparkleStar5 })
         ]
     });
 }
-function h(e) {
+function p(e) {
     let { width: t = 14, height: n = 13, color: i = 'white', foreground: a, ...s } = e;
     return (0, r.jsxs)('svg', {
         ...(0, l.Z)({ ...s }),

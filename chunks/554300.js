@@ -7,17 +7,17 @@ var r = n(200651),
     u = n(440718);
 let c = i.forwardRef(function (e, t) {
     var n;
-    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: h, muted: p, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: S, focusProps: T, ...b } = e;
-    (b.className = s()(b.className, u.container, {
-        [u.selected]: h,
-        [u.highlighted]: S,
-        [null != E ? E : '']: h,
-        [u.clickable]: !h && (null != m || null != _)
+    let { avatar: i, name: a, children: c, subText: d, decorators: f, onClick: _, selected: p, muted: h, to: m, avatarClassName: g, selectedClassName: E, innerClassName: v, wrapContent: I, highlighted: b, focusProps: S, ...T } = e;
+    (T.className = s()(T.className, u.container, {
+        [u.selected]: p,
+        [u.highlighted]: b,
+        [null != E ? E : '']: p,
+        [u.clickable]: !p && (null != m || null != _)
     })),
-        (b['aria-selected'] = null !== (n = b['aria-selected']) && void 0 !== n ? n : h);
+        (T['aria-selected'] = null !== (n = T['aria-selected']) && void 0 !== n ? n : p);
     let y = (0, r.jsxs)('div', {
         className: s()(v, u.layout, {
-            [u.muted]: !h && p,
+            [u.muted]: !p && h,
             [u.wrappedLayout]: I
         }),
         children: [
@@ -56,11 +56,11 @@ let c = i.forwardRef(function (e, t) {
     });
     return null != m
         ? (0, r.jsx)(l.FocusRing, {
-              ...T,
+              ...S,
               children: (0, r.jsx)(o.rU, {
                   to: m,
                   onClick: _,
-                  ...b,
+                  ...T,
                   role: 'listitem',
                   ref: t,
                   children: y
@@ -69,16 +69,16 @@ let c = i.forwardRef(function (e, t) {
         : null != _
           ? (0, r.jsx)(l.Clickable, {
                 onClick: _,
-                focusProps: T,
-                ...b,
+                focusProps: S,
+                ...T,
                 role: 'listitem',
                 innerRef: t,
                 children: y
             })
           : (0, r.jsx)(l.FocusRing, {
-                ...T,
+                ...S,
                 children: (0, r.jsx)('div', {
-                    ...b,
+                    ...T,
                     role: 'listitem',
                     ref: t,
                     children: y

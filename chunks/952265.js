@@ -1,6 +1,6 @@
 n.d(t, {
     $s: function () {
-        return S;
+        return b;
     },
     Ay: function () {
         return A;
@@ -18,7 +18,7 @@ n.d(t, {
         return I;
     },
     Jw: function () {
-        return b;
+        return T;
     },
     Mr: function () {
         return g;
@@ -27,10 +27,10 @@ n.d(t, {
         return _;
     },
     ZD: function () {
-        return p;
+        return h;
     },
     f9: function () {
-        return T;
+        return S;
     },
     h7: function () {
         return m;
@@ -45,7 +45,7 @@ n.d(t, {
         return y;
     },
     s9: function () {
-        return h;
+        return p;
     }
 }),
     n(411104),
@@ -68,11 +68,11 @@ function f() {
 function _(e) {
     return e === u.IlC.POPOUT ? l.u1 : l.z1;
 }
-let h = (0, a.Ue)((e) => ({
+let p = (0, a.Ue)((e) => ({
     [l.z1]: [],
     [l.u1]: []
 }));
-async function p(e) {
+async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { contextKey: n = f(), ...r } = t,
         a = null != t.modalKey ? t.modalKey : i()(),
@@ -111,7 +111,7 @@ function m(e) {
         d = null != r ? r : i()();
     return (
         (0, s.j)(() => {
-            h.setState((t) => {
+            p.setState((t) => {
                 let r = t[n];
                 return void 0 !== r &&
                     r.some((e) => {
@@ -141,7 +141,7 @@ function m(e) {
 }
 function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f(),
-        n = h.getState()[t],
+        n = p.getState()[t],
         r =
             null != n
                 ? n.find((t) => {
@@ -150,7 +150,7 @@ function g(e) {
                   })
                 : null;
     (0, s.j)(() => {
-        h.setState((n) =>
+        p.setState((n) =>
             void 0 === n[t]
                 ? n
                 : {
@@ -165,7 +165,7 @@ function g(e) {
         null != r && null != r.onCloseCallback && r.onCloseCallback();
 }
 function E(e) {
-    let t = h.getState(),
+    let t = p.getState(),
         n = d
             .map((e) => {
                 var n;
@@ -183,7 +183,7 @@ function E(e) {
             });
     if (!!n.some((e) => null != e))
         (0, s.j)(() => {
-            h.setState((t) => {
+            p.setState((t) => {
                 let n = { ...t };
                 return (
                     d.forEach((t) => {
@@ -208,7 +208,7 @@ function E(e) {
 function v(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : f();
     (0, s.j)(() => {
-        h.setState((a) =>
+        p.setState((a) =>
             void 0 === a[i]
                 ? a
                 : {
@@ -234,24 +234,24 @@ function I(e) {
     }
     return !1;
 }
+function b() {
+    return I(p.getState());
+}
 function S() {
-    return I(h.getState());
+    return I(p());
 }
-function T() {
-    return I(h());
-}
-function b(e) {
+function T(e) {
     var t, n;
-    let { default: r, popout: i } = h();
+    let { default: r, popout: i } = p();
     return i.length > 0 ? (null === (t = i.at(-1)) || void 0 === t ? void 0 : t.key) === e : (null === (n = r.at(-1)) || void 0 === n ? void 0 : n.key) === e;
 }
 function y() {
-    let e = h.getState();
+    let e = p.getState();
     for (let t in e) for (let n of e[t]) g(n.key, t);
 }
 function A() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : f(),
-        t = h.getState()[e];
+        t = p.getState()[e];
     if (null != t) for (let n of t) g(n.key, e);
 }
 function N(e, t) {
@@ -260,5 +260,5 @@ function N(e, t) {
     return null != r && r.some((e) => e.key === t);
 }
 function C(e, t) {
-    return N(h.getState(), e, t);
+    return N(p.getState(), e, t);
 }

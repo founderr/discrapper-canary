@@ -9,16 +9,16 @@ var r = n(200651),
     d = n(481060),
     f = n(239091),
     _ = n(607070),
-    h = n(134433),
-    p = n(111028),
+    p = n(134433),
+    h = n(111028),
     m = n(91218),
     g = n(518738),
     E = n(388032),
     v = n(962219);
 t.Z = i.forwardRef(function (e, t) {
-    var a, I, S;
-    let T;
-    let { canRemove: b, className: y, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
+    var a, I, b;
+    let S;
+    let { canRemove: T, className: y, role: A, onRemove: N, guildId: C, disableBorderColor: R, onMouseDown: O } = e,
         { tabIndex: D, ...L } = (0, o.JA)(A.id),
         x = (0, g.p9)({
             roleId: A.id,
@@ -43,14 +43,14 @@ t.Z = i.forwardRef(function (e, t) {
         ),
         k = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hsl(),
         U = null !== (I = A.colorString) && void 0 !== I ? I : k,
-        G = null !== (S = (0, l.wK)(U, 0.6)) && void 0 !== S ? S : void 0,
+        G = null !== (b = (0, l.wK)(U, 0.6)) && void 0 !== b ? b : void 0,
         B = c.Z.unsafe_rawColors.WHITE_500.css,
         Z = (0, l._i)(U);
     null != Z && 0.3 > (0, l.Bd)(Z) && (B = c.Z.unsafe_rawColors.PRIMARY_630.css),
-        (T = M
-            ? (0, r.jsx)(h.Z, {
+        (S = M
+            ? (0, r.jsx)(p.Z, {
                   className: v.roleFlowerStar,
-                  iconClassName: b ? v.roleVerifiedIcon : void 0,
+                  iconClassName: T ? v.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
@@ -83,7 +83,7 @@ t.Z = i.forwardRef(function (e, t) {
             tabIndex: D,
             ...L,
             children: [
-                b
+                T
                     ? (0, r.jsx)(d.TooltipContainer, {
                           text: E.intl.string(E.t.u3RVsL),
                           children: (0, r.jsxs)(d.Clickable, {
@@ -94,7 +94,7 @@ t.Z = i.forwardRef(function (e, t) {
                               'aria-hidden': !1,
                               'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
                               children: [
-                                  T,
+                                  S,
                                   (0, r.jsx)(d.XSmallIcon, {
                                       size: 'md',
                                       color: B,
@@ -110,7 +110,7 @@ t.Z = i.forwardRef(function (e, t) {
                           focusProps: { focusClassName: v.roleRemoveIconFocused },
                           'aria-hidden': !0,
                           'aria-label': E.intl.formatToPlainString(E.t.QrxwhY, { roleName: A.name }),
-                          children: T
+                          children: S
                       }),
                 null != x
                     ? (0, r.jsx)(m.Z, {
@@ -124,7 +124,7 @@ t.Z = i.forwardRef(function (e, t) {
                     className: v.roleName,
                     children: (0, r.jsx)(d.Text, {
                         variant: 'text-xs/medium',
-                        children: (0, r.jsx)(p.Z, { children: A.name })
+                        children: (0, r.jsx)(h.Z, { children: A.name })
                     })
                 })
             ]

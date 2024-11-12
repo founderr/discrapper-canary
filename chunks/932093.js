@@ -26,9 +26,9 @@
             d = c >> 1,
             f = 23 === i ? 5.960464477539062e-8 : 0,
             _ = r ? 0 : a - 1,
-            h = r ? 1 : -1,
-            p = t < 0 || (0 === t && 1 / t < 0) ? 1 : 0;
-        for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((o = isNaN(t) ? 1 : 0), (s = c)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (l = Math.pow(2, -s)) < 1 && (s--, (l *= 2)), s + d >= 1 ? (t += f / l) : (t += f * Math.pow(2, 1 - d)), t * l >= 2 && (s++, (l /= 2)), s + d >= c ? ((o = 0), (s = c)) : s + d >= 1 ? ((o = (t * l - 1) * Math.pow(2, i)), (s += d)) : ((o = t * Math.pow(2, d - 1) * Math.pow(2, i)), (s = 0))); i >= 8; e[n + _] = 255 & o, _ += h, o /= 256, i -= 8);
-        for (s = (s << i) | o, u += i; u > 0; e[n + _] = 255 & s, _ += h, s /= 256, u -= 8);
-        e[n + _ - h] |= 128 * p;
+            p = r ? 1 : -1,
+            h = t < 0 || (0 === t && 1 / t < 0) ? 1 : 0;
+        for (isNaN((t = Math.abs(t))) || t === 1 / 0 ? ((o = isNaN(t) ? 1 : 0), (s = c)) : ((s = Math.floor(Math.log(t) / Math.LN2)), t * (l = Math.pow(2, -s)) < 1 && (s--, (l *= 2)), s + d >= 1 ? (t += f / l) : (t += f * Math.pow(2, 1 - d)), t * l >= 2 && (s++, (l /= 2)), s + d >= c ? ((o = 0), (s = c)) : s + d >= 1 ? ((o = (t * l - 1) * Math.pow(2, i)), (s += d)) : ((o = t * Math.pow(2, d - 1) * Math.pow(2, i)), (s = 0))); i >= 8; e[n + _] = 255 & o, _ += p, o /= 256, i -= 8);
+        for (s = (s << i) | o, u += i; u > 0; e[n + _] = 255 & s, _ += p, s /= 256, u -= 8);
+        e[n + _ - p] |= 128 * h;
     });

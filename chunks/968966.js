@@ -147,18 +147,18 @@ e.exports = function (e) {
                 })
             ]
         },
-        h = e.inherit(_, {
+        p = e.inherit(_, {
             className: 'class',
             beginKeywords: 'defimpl defmodule defprotocol defrecord',
             end: /\bdo\b|$|;/
         }),
-        p = [
+        h = [
             f,
             d,
             c,
             u,
             e.HASH_COMMENT_MODE,
-            h,
+            p,
             _,
             { begin: '::' },
             {
@@ -188,12 +188,12 @@ e.exports = function (e) {
             }
         ];
     return (
-        (i.contains = p),
+        (i.contains = h),
         {
             name: 'Elixir',
             aliases: ['ex', 'exs'],
             keywords: r,
-            contains: p
+            contains: h
         }
     );
 };

@@ -10,14 +10,14 @@ var r = n(200651),
     d = n(727637),
     f = n(597688),
     _ = n(884697),
-    h = n(74538),
-    p = n(864106),
+    p = n(74538),
+    h = n(864106),
     m = n(439959),
     g = n(125988),
     E = n(388032),
     v = n(236676);
 let I = () => 80,
-    S = (e) => {
+    b = (e) => {
         let { children: t, className: n, onSelect: i, isSelected: a = !1, ...o } = e;
         return (0, r.jsx)(c.Clickable, {
             className: s()(v.decorationGridItem, a ? v.selected : void 0, n),
@@ -26,15 +26,15 @@ let I = () => 80,
             children: t
         });
     },
-    T = (e) => {
-        let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...p } = e,
+    S = (e) => {
+        let { user: t, avatarDecoration: n, innerRef: a, section: s, isSelected: o = !1, ...h } = e,
             I = (0, u.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
                 return (0, _.G1)(e);
             }),
-            T = (0, _.Yq)(n.skuId),
-            b = h.ZP.canUseCollectibles(t),
-            y = s === m.$0.PREMIUM_PURCHASE && !b,
+            S = (0, _.Yq)(n.skuId),
+            T = p.ZP.canUseCollectibles(t),
+            y = s === m.$0.PREMIUM_PURCHASE && !T,
             A = i.useRef(null),
             N = (0, d.Z)(null != a ? a : A),
             { avatarDecorationSrc: C } = (0, g.Z)({
@@ -43,20 +43,20 @@ let I = () => 80,
                 size: 80,
                 onlyAnimateOnHover: !N
             });
-        return (0, r.jsxs)(S, {
+        return (0, r.jsxs)(b, {
             className: y ? v.decorationGridItemChurned : void 0,
             innerRef: null != a ? a : A,
             isSelected: o,
-            ...p,
+            ...h,
             children: [
                 (0, r.jsx)('img', {
                     className: v.presetDecorationImg,
                     src: C,
                     alt: n.label
                 }),
-                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && b)
+                s === m.$0.PURCHASE || (s === m.$0.PREMIUM_PURCHASE && T)
                     ? null
-                    : T
+                    : S
                       ? (0, r.jsx)(c.PremiumBadge, {
                             className: v.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -110,11 +110,11 @@ t.Z = (e) => {
         paddingVertical: 0,
         removeEdgeItemGutters: !0,
         renderItem: (e, i, u, _) => {
-            let { section: h, items: g } = d[e];
+            let { section: p, items: g } = d[e];
             return (0, o.EQ)(g[i])
                 .with(m.Tm, () =>
                     (0, r.jsxs)(
-                        S,
+                        b,
                         {
                             style: { ...u },
                             isSelected: null === a,
@@ -128,7 +128,7 @@ t.Z = (e) => {
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-primary',
-                                    children: (0, p.ad)(t, n) ? E.intl.string(E.t['GsW4/v']) : E.intl.string(E.t.PoWNfX)
+                                    children: (0, h.ad)(t, n) ? E.intl.string(E.t['GsW4/v']) : E.intl.string(E.t.PoWNfX)
                                 })
                             ]
                         },
@@ -137,7 +137,7 @@ t.Z = (e) => {
                 )
                 .with(m.oT, () =>
                     (0, r.jsxs)(
-                        S,
+                        b,
                         {
                             style: u,
                             onSelect: f,
@@ -162,12 +162,12 @@ t.Z = (e) => {
                 .otherwise((e) => {
                     let n = (null == a ? void 0 : a.id) === e.id;
                     return (0, r.jsx)(
-                        T,
+                        S,
                         {
                             style: { ...u },
                             user: t,
                             avatarDecoration: e,
-                            section: h,
+                            section: p,
                             innerRef: n ? s : void 0,
                             isSelected: n,
                             onSelect: () => l(e)

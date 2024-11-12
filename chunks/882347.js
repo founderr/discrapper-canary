@@ -15,7 +15,7 @@ var r = n(570140),
     d = n(224189),
     f = n(574952),
     _ = n(981631);
-async function h(e, t, n) {
+async function p(e, t, n) {
     try {
         return await (0, d.Z)(e, t);
     } catch (a) {
@@ -29,7 +29,7 @@ async function h(e, t, n) {
         });
     }
 }
-async function p(e) {
+async function h(e) {
     let { currentEmbeddedApplication: t } = e;
     return (
         !!(
@@ -61,7 +61,7 @@ async function m(e) {
     let { application: t, applicationId: n, channel: r, user: i } = e;
     if (null == i.nsfwAllowed) {
         var a, s;
-        let e = null != t ? t : await h(n, r.id, r.getGuildId());
+        let e = null != t ? t : await p(n, r.id, r.getGuildId());
         if (
             null == e ||
             (null !== (s = null === (a = e.embeddedActivityConfig) || void 0 === a ? void 0 : a.requires_age_gate) &&
@@ -81,7 +81,7 @@ async function m(e) {
 }
 async function g(e) {
     let { application: t, applicationId: n, channel: r } = e,
-        i = null != t ? t : await h(n, r.id, r.getGuildId());
+        i = null != t ? t : await p(n, r.id, r.getGuildId());
     return (
         null != i &&
         (!!((0, s.yE)(i.flags, _.udG.EMBEDDED_RELEASED) || i.isVerified || o.ZP.hasActivityEverBeenLaunched(n)) ||
@@ -95,5 +95,5 @@ async function g(e) {
     );
 }
 async function E(e) {
-    return !!((await p({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await m(e)) && (await g(e))) || !1;
+    return !!((await h({ currentEmbeddedApplication: e.currentEmbeddedApplication })) && (await m(e)) && (await g(e))) || !1;
 }

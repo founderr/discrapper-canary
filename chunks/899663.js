@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(607070),
     f = n(446108),
     _ = n(981631),
-    h = n(388032);
-function p(e) {
+    p = n(388032);
+function h(e) {
     var t;
     if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== _.yXg.TAB || null == e.target) return;
     let { target: n } = e,
@@ -48,7 +48,7 @@ function m(e) {
             [n, s, u]
         );
     return (
-        i.useEffect(() => ((0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), h.intl.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', p), () => window.removeEventListener('keydown', p)), []),
+        i.useEffect(() => ((0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.intl.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
         (0, r.jsx)(l.AccessibilityPreferencesContext.Provider, {
             value: c,
             children: t

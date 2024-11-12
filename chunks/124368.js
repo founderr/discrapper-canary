@@ -18,7 +18,7 @@ n.d(t, {
         return g;
     },
     iN: function () {
-        return h;
+        return p;
     },
     on: function () {
         return r;
@@ -30,7 +30,7 @@ n.d(t, {
         return f;
     },
     zb: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -45,24 +45,24 @@ let u = 4320,
     d = 100000,
     f = 50,
     _ = 25,
-    h = {
+    p = {
         HAS_INTERACTED: 1,
         ALL_MESSAGES: 2,
         ONLY_MENTIONS: 4,
         NO_MESSAGES: 8
     };
-function p() {
+function h() {
     return [
         {
-            setting: h.ALL_MESSAGES,
+            setting: p.ALL_MESSAGES,
             label: l.intl.string(l.t['n/bTaW'])
         },
         {
-            setting: h.ONLY_MENTIONS,
+            setting: p.ONLY_MENTIONS,
             label: l.intl.format(l.t.L2hmY2, {})
         },
         {
-            setting: h.NO_MESSAGES,
+            setting: p.NO_MESSAGES,
             label: l.intl.string(l.t.CtVGyc)
         }
     ];

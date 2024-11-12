@@ -16,7 +16,7 @@ var s = n(120356),
     u = n(326460);
 function c(e) {
     let t,
-        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: f, errorId: _, ...h } = e;
+        { tag: n = 'h5', children: r, className: i, faded: s, disabled: c, required: d = !1, error: f, errorId: _, ...p } = e;
     switch (n) {
         case 'legend':
         case 'label':
@@ -32,7 +32,7 @@ function c(e) {
             [u.disabled]: c,
             [u.error]: null != f
         }),
-        ...h,
+        ...p,
         children: [
             r,
             d && null == f

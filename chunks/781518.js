@@ -1,6 +1,6 @@
 n.d(t, {
     Ai: function () {
-        return p;
+        return h;
     },
     PW: function () {
         return m;
@@ -18,7 +18,7 @@ n.d(t, {
         };
     },
     hP: function () {
-        return h;
+        return p;
     },
     hY: function () {
         return g;
@@ -56,7 +56,7 @@ function f(e, t, n, r) {
             let s = !0 !== r.onlyRetryOnAuthorizationErrors && 202 === n.status;
             return (401 === n.status || s) && a > 0
                 ? (202 === n.status ? (0, i.GR)(5000) : Promise.resolve())
-                      .then(() => h(t))
+                      .then(() => p(t))
                       .then((n) => {
                           let {
                               body: { access_token: i }
@@ -71,7 +71,7 @@ let _ = {
     get: f.bind(null, r.tn.get),
     put: f.bind(null, r.tn.put)
 };
-function h(e) {
+function p(e) {
     return r.tn
         .get({
             url: d.ANM.CONNECTION_ACCESS_TOKEN(d.ABu.SPOTIFY, e),
@@ -87,7 +87,7 @@ function h(e) {
             else if (429 === t.status) {
                 let n = t.headers['retry-after'] * s.Z.Millis.SECOND,
                     r = isNaN(n) || 0 === n ? 5000 : n;
-                return (0, i.GR)(r).then(() => h(e));
+                return (0, i.GR)(r).then(() => p(e));
             }
             return Promise.reject(t);
         })
@@ -103,7 +103,7 @@ function h(e) {
             );
         });
 }
-function p(e, t) {
+function h(e, t) {
     return _.get(e, t, { url: c.C7.PROFILE }).then(
         (t) => (
             a.Z.dispatch({

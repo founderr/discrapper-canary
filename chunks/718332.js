@@ -9,30 +9,30 @@ e.exports = function (e, t, n, s, o, l) {
     var f = l.get(e);
     if (f && l.get(t)) return f == t;
     var _ = -1,
-        h = !0,
-        p = 2 & n ? new r() : void 0;
+        p = !0,
+        h = 2 & n ? new r() : void 0;
     for (l.set(e, t), l.set(t, e); ++_ < c; ) {
         var m = e[_],
             g = t[_];
         if (s) var E = u ? s(g, m, _, t, e, l) : s(m, g, _, e, t, l);
         if (void 0 !== E) {
             if (E) continue;
-            h = !1;
+            p = !1;
             break;
         }
-        if (p) {
+        if (h) {
             if (
                 !i(t, function (e, t) {
-                    if (!a(p, t) && (m === e || o(m, e, n, s, l))) return p.push(t);
+                    if (!a(h, t) && (m === e || o(m, e, n, s, l))) return h.push(t);
                 })
             ) {
-                h = !1;
+                p = !1;
                 break;
             }
         } else if (!(m === g || o(m, g, n, s, l))) {
-            h = !1;
+            p = !1;
             break;
         }
     }
-    return l.delete(e), l.delete(t), h;
+    return l.delete(e), l.delete(t), p;
 };

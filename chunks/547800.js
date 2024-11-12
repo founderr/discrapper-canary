@@ -15,8 +15,8 @@ var r = n(200651),
 n(114923);
 var d = n(76674);
 function f(e) {
-    let { value: t = s()().local(), minDate: n, maxDate: a, onSelect: o, calendarClassName: f, autoFocus: _, onClickOutside: h } = e,
-        p = i.useCallback(
+    let { value: t = s()().local(), minDate: n, maxDate: a, onSelect: o, calendarClassName: f, autoFocus: _, onClickOutside: p } = e,
+        h = i.useCallback(
             (e, t) => {
                 null == o || o(s()(e), t);
             },
@@ -27,7 +27,7 @@ function f(e) {
         E = i.useMemo(() => (null == n ? void 0 : n.toDate()), [n]),
         v = (0, u.e7)([c.default], () => c.default.locale),
         I = i.useRef(null),
-        S = i.useCallback((e) => {
+        b = i.useCallback((e) => {
             let t = e.currentTarget;
             if (!!t.classList.contains('react-datepicker__day'))
                 setTimeout(() => {
@@ -43,15 +43,15 @@ function f(e) {
         children: (0, r.jsx)(l(), {
             calendarClassName: f,
             selected: m,
-            onChange: p,
+            onChange: h,
             autoFocus: _,
             fixedHeight: !0,
             inline: !0,
             locale: v,
             maxDate: g,
             minDate: E,
-            onKeyDown: S,
-            onClickOutside: h
+            onKeyDown: b,
+            onClickOutside: p
         })
     });
 }

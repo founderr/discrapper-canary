@@ -3,13 +3,13 @@ n.d(t, {
         return _;
     },
     ef: function () {
-        return h;
+        return p;
     },
     kF: function () {
         return d;
     },
     oY: function () {
-        return p;
+        return h;
     },
     tG: function () {
         return f;
@@ -33,7 +33,7 @@ let c = {
 };
 function d(e) {
     let { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: o, innerClassName: d, onClick: f, ..._ } = e,
-        { trackUserProfileAction: h } = (0, l.KZ)();
+        { trackUserProfileAction: p } = (0, l.KZ)();
     return (0, r.jsx)(s.zx, {
         className: a()(u.button, o),
         innerClassName: a()(u.buttonInner, d),
@@ -41,7 +41,7 @@ function d(e) {
         look: s.zx.Looks.FILLED,
         size: s.zx.Sizes.SMALL,
         onClick: (e) => {
-            null != t && h({ action: t }), null == f || f(e);
+            null != t && p({ action: t }), null == f || f(e);
         },
         ..._
     });
@@ -80,13 +80,13 @@ function _(e) {
         ]
     });
 }
-function h(e) {
-    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: f, innerClassName: _, shouldShowTooltip: h = !0, ...p } = e;
+function p(e) {
+    let { icon: t, tooltipText: n, tooltipDelay: i, tooltipClassName: l, tooltipContainerClassName: c, className: f, innerClassName: _, shouldShowTooltip: p = !0, ...h } = e;
     return (0, r.jsx)(o.TooltipContainer, {
         text: n,
         'aria-label': !1,
         delay: i,
-        shouldShow: h,
+        shouldShow: p,
         className: c,
         tooltipClassName: l,
         children: (0, r.jsx)(d, {
@@ -96,7 +96,7 @@ function h(e) {
             size: s.zx.Sizes.NONE,
             grow: !1,
             'aria-label': n,
-            ...p,
+            ...h,
             children: (0, r.jsx)(t, {
                 size: 'xs',
                 color: 'currentColor'
@@ -104,9 +104,9 @@ function h(e) {
         })
     });
 }
-function p(e) {
+function h(e) {
     let { className: t, innerClassName: n, ...i } = e;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(p, {
         className: a()(u.banner, t),
         innerClassName: a()(u.banner, n),
         color: u.bannerColor,
@@ -116,7 +116,7 @@ function p(e) {
 }
 function m(e) {
     let { isHovering: t, className: n, innerClassName: i, ...o } = e;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(p, {
         className: a()(u.hover, { [u.visible]: t }, n),
         innerClassName: a()(u.hover, i),
         color: u.hoverColor,

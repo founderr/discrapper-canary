@@ -18,7 +18,7 @@ function c(e, t, n) {
         f = e.isDisabled || t.isDisabled;
     !(null != l) && !(null != c || null != d) && console.warn('If you do not provide children, you must specify an aria-label for accessibility');
     let _ = t.selectedValue === o,
-        { pressProps: h, isPressed: p } = (0, s.r7)({ isDisabled: f }),
+        { pressProps: p, isPressed: h } = (0, s.r7)({ isDisabled: f }),
         { pressProps: m, isPressed: g } = (0, s.r7)({
             isDisabled: f,
             onPress() {
@@ -26,11 +26,11 @@ function c(e, t, n) {
             }
         }),
         { focusableProps: E } = (0, i.kc)((0, r.dG)(e, { onFocus: () => t.setLastFocusedValue(o) }), n),
-        v = (0, r.dG)(h, E),
+        v = (0, r.dG)(p, E),
         I = (0, r.zL)(e, { labelable: !0 }),
-        S = -1;
-    null != t.selectedValue ? t.selectedValue === o && (S = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (S = 0), f && (S = void 0);
-    let { name: T, descriptionId: b, errorMessageId: y, validationBehavior: A } = u.get(t);
+        b = -1;
+    null != t.selectedValue ? t.selectedValue === o && (b = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (b = 0), f && (b = void 0);
+    let { name: S, descriptionId: T, errorMessageId: y, validationBehavior: A } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
         (0, a.Q)({ validationBehavior: A }, t, n),
@@ -39,8 +39,8 @@ function c(e, t, n) {
             inputProps: (0, r.dG)(I, {
                 ...v,
                 type: 'radio',
-                name: T,
-                tabIndex: S,
+                name: S,
+                tabIndex: b,
                 disabled: f,
                 required: t.isRequired && 'native' === A,
                 checked: _,
@@ -48,31 +48,31 @@ function c(e, t, n) {
                 onChange: (e) => {
                     e.stopPropagation(), t.setSelectedValue(o);
                 },
-                'aria-describedby': [e['aria-describedby'], t.isInvalid ? y : null, b].filter(Boolean).join(' ') || void 0
+                'aria-describedby': [e['aria-describedby'], t.isInvalid ? y : null, T].filter(Boolean).join(' ') || void 0
             }),
             isDisabled: f,
             isSelected: _,
-            isPressed: p || g
+            isPressed: h || g
         }
     );
 }
 function d(e, t) {
     let { name: n, isReadOnly: a, isRequired: c, isDisabled: d, orientation: f = 'vertical', validationBehavior: _ = 'aria' } = e,
-        { direction: h } = (0, l.bU)(),
-        { isInvalid: p, validationErrors: m, validationDetails: g } = t.displayValidation,
+        { direction: p } = (0, l.bU)(),
+        { isInvalid: h, validationErrors: m, validationDetails: g } = t.displayValidation,
         {
             labelProps: E,
             fieldProps: v,
             descriptionProps: I,
-            errorMessageProps: S
+            errorMessageProps: b
         } = (0, o.U)({
             ...e,
             labelElementType: 'span',
             isInvalid: t.isInvalid,
             errorMessage: e.errorMessage || m
         }),
-        T = (0, r.zL)(e, { labelable: !0 }),
-        { focusWithinProps: b } = (0, s.L_)({
+        S = (0, r.zL)(e, { labelable: !0 }),
+        { focusWithinProps: T } = (0, s.L_)({
             onBlurWithin(n) {
                 var r;
                 null === (r = e.onBlur) || void 0 === r || r.call(e, n), !t.selectedValue && t.setLastFocusedValue(null);
@@ -85,20 +85,20 @@ function d(e, t) {
         u.set(t, {
             name: y,
             descriptionId: I.id,
-            errorMessageId: S.id,
+            errorMessageId: b.id,
             validationBehavior: _
         }),
         {
-            radioGroupProps: (0, r.dG)(T, {
+            radioGroupProps: (0, r.dG)(S, {
                 role: 'radiogroup',
                 onKeyDown: (e) => {
                     let n, r;
                     switch (e.key) {
                         case 'ArrowRight':
-                            n = 'rtl' === h && 'vertical' !== f ? 'prev' : 'next';
+                            n = 'rtl' === p && 'vertical' !== f ? 'prev' : 'next';
                             break;
                         case 'ArrowLeft':
-                            n = 'rtl' === h && 'vertical' !== f ? 'next' : 'prev';
+                            n = 'rtl' === p && 'vertical' !== f ? 'next' : 'prev';
                             break;
                         case 'ArrowDown':
                             n = 'next';
@@ -120,12 +120,12 @@ function d(e, t) {
                 'aria-disabled': d || void 0,
                 'aria-orientation': f,
                 ...v,
-                ...b
+                ...T
             }),
             labelProps: E,
             descriptionProps: I,
-            errorMessageProps: S,
-            isInvalid: p,
+            errorMessageProps: b,
+            isInvalid: h,
             validationErrors: m,
             validationDetails: g
         }

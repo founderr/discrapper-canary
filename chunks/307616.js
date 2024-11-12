@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     v: function () {
-        return T;
+        return S;
     }
 }),
     n(47120),
@@ -20,8 +20,8 @@ var r = n(200651),
     d = n(40851),
     f = n(314910),
     _ = n(429142),
-    h = n(585483),
-    p = n(952265),
+    p = n(585483),
+    h = n(952265),
     m = n(602091),
     g = n(981631),
     E = n(66904);
@@ -39,7 +39,7 @@ function v(e, t, n) {
     );
 }
 let I = [f.ZP, _.ZP];
-class S extends i.PureComponent {
+class b extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
             { transitionState: a } = this.state;
@@ -93,13 +93,13 @@ class S extends i.PureComponent {
             );
     }
 }
-function T() {
-    return (0, p.Vn)((0, d.bp)());
+function S() {
+    return (0, h.Vn)((0, d.bp)());
 }
-let b = [];
+let T = [];
 function y() {
-    let e = T(),
-        t = (0, p.s9)((t) => (void 0 !== t[e] ? t[e] : b)),
+    let e = S(),
+        t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : T)),
         n = i.useRef();
     i.useLayoutEffect(() => {
         n.current = t[t.length - 1];
@@ -112,9 +112,9 @@ function y() {
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         };
         return (
-            h.S.subscribe(g.CkL.MODAL_CLOSE, e),
+            p.S.subscribe(g.CkL.MODAL_CLOSE, e),
             () => {
-                h.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
+                p.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
             }
         );
     }, [a]);
@@ -124,7 +124,7 @@ function y() {
         }, []),
         o = i.useCallback(
             (t) => {
-                (0, p.Mr)(t, e);
+                (0, h.Mr)(t, e);
             },
             [e]
         ),
@@ -150,7 +150,7 @@ function y() {
             t.map((e, n) => {
                 let { key: i, Layer: a, render: s, instant: l } = e;
                 return (0, r.jsx)(
-                    S,
+                    b,
                     {
                         modalKey: i,
                         LayerComponent: null != a ? a : f.ZP,

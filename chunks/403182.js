@@ -6,7 +6,7 @@ n.d(t, {
         return y;
     },
     dg: function () {
-        return S;
+        return b;
     },
     dp: function () {
         return m;
@@ -15,16 +15,16 @@ n.d(t, {
         return E;
     },
     nA: function () {
-        return T;
+        return S;
     },
     qF: function () {
-        return p;
+        return h;
     },
     uV: function () {
         return v;
     },
     vY: function () {
-        return b;
+        return T;
     }
 }),
     n(47120);
@@ -39,12 +39,12 @@ var r = n(112456),
     d = n(380684),
     f = n(74538),
     _ = n(981631),
-    h = n(474936);
-function p(e, t) {
+    p = n(474936);
+function h(e, t) {
     return e instanceof File ? e : m(e.data, e.filename, t);
 }
 function m(e, t, r) {
-    let i = n(643907);
+    let i = n(230318);
     if (null == t && ((t = 'unknown'), 'type' in e)) {
         let n = i.extension(e.type);
         n && (t += '.'.concat(n));
@@ -121,20 +121,20 @@ function v(e, t) {
 function I(e) {
     return i().filesize(e);
 }
-function S(e) {
+function b(e) {
     let t = c.default.getCurrentUser();
     o.Z.trackExposure({ location: 'de18ec_1' }), l.Z.trackExposure({ location: 'de18ec_2' });
     let n = f.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = u.Z.getGuild(e),
-        i = null != r ? h.HO[r.premiumTier].limits.fileSize : _.mBz;
+        i = null != r ? p.HO[r.premiumTier].limits.fileSize : _.mBz;
     return (0, d.XS)() && null != r && r.premiumTier < 2 && n < i ? n : Math.max(i, n);
 }
-function T(e, t) {
-    let n = S(t);
+function S(e, t) {
+    let n = b(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function b(e) {
+function T(e) {
     return (
         (function (e) {
             let t = 0;

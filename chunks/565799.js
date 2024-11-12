@@ -10,16 +10,16 @@ var r,
     d = n(442837),
     f = n(759174),
     _ = n(570140),
-    h = n(569545),
-    p = n(199902),
+    p = n(569545),
+    h = n(199902),
     m = n(314897),
     g = n(592125),
     E = n(430824),
     v = n(496675),
     I = n(699516),
-    S = n(606304),
-    T = n(594174),
-    b = n(979651),
+    b = n(606304),
+    S = n(594174),
+    T = n(979651),
     y = n(938475),
     A = n(501655),
     N = n(88751),
@@ -109,13 +109,13 @@ function H(e) {
 }
 function Y(e) {
     let { streamKey: t } = e,
-        { channelId: n, guildId: r, ownerId: i } = (0, h.my)(t);
+        { channelId: n, guildId: r, ownerId: i } = (0, p.my)(t);
     return !!(null != r && D.has(r)) && G(i, [n]);
 }
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, T.default, g.Z, S.Z, b.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, p.Z);
+        this.waitFor(m.default, S.default, g.Z, b.Z, T.Z, v.Z, y.ZP, E.Z, N.ZP, I.Z, C.Z, h.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

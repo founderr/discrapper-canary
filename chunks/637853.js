@@ -1,12 +1,12 @@
 n.d(t, {
     Ee: function () {
-        return S;
+        return b;
     },
     L6: function () {
         return L;
     },
     V7: function () {
-        return b;
+        return T;
     },
     VF: function () {
         return D;
@@ -18,7 +18,7 @@ n.d(t, {
         return R;
     },
     dF: function () {
-        return T;
+        return S;
     },
     dX: function () {
         return x;
@@ -55,30 +55,30 @@ var r = n(442837),
     d = n(823379),
     f = n(700785),
     _ = n(977258),
-    h = n(981631),
-    p = n(372897);
+    p = n(981631),
+    h = n(372897);
 let m = new Date(1682488800000);
 function g(e) {
     return (0, r.e7)([l.Z, u.Z], () => {
         let t = l.Z.getGuild(e),
-            n = !!(null == t ? void 0 : t.hasFeature(h.oNc.COMMUNITY)),
-            r = u.Z.can(h.Plq.MANAGE_GUILD, t),
-            i = u.Z.can(h.Plq.MANAGE_ROLES, t);
+            n = !!(null == t ? void 0 : t.hasFeature(p.oNc.COMMUNITY)),
+            r = u.Z.can(p.Plq.MANAGE_GUILD, t),
+            i = u.Z.can(p.Plq.MANAGE_ROLES, t);
         return n && r && i;
     });
 }
 function E(e) {
     let t = l.Z.getGuild(e),
-        n = !!(null == t ? void 0 : t.hasFeature(h.oNc.COMMUNITY)),
-        r = u.Z.can(h.Plq.MANAGE_GUILD, t),
-        i = u.Z.can(h.Plq.MANAGE_ROLES, t);
+        n = !!(null == t ? void 0 : t.hasFeature(p.oNc.COMMUNITY)),
+        r = u.Z.can(p.Plq.MANAGE_GUILD, t),
+        i = u.Z.can(p.Plq.MANAGE_ROLES, t);
     return n && r && i;
 }
 function v(e, t) {
     var n;
-    if (null == e || !e.hasFeature(h.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < m) return !1;
+    if (null == e || !e.hasFeature(p.oNc.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < m) return !1;
     let r = null !== (n = t.flags) && void 0 !== n ? n : 0;
-    return c.yE(r, p.q.STARTED_ONBOARDING) && !c.yE(r, p.q.COMPLETED_ONBOARDING);
+    return c.yE(r, h.q.STARTED_ONBOARDING) && !c.yE(r, h.q.COMPLETED_ONBOARDING);
 }
 function I(e, t, n) {
     let r = new Set();
@@ -98,7 +98,7 @@ function I(e, t, n) {
         s = i.filter((e) => r.has(e.id) || (null != e.parent_id && r.has(e.parent_id)));
     return [s, i.filter((e) => !r.has(e.id) && !(null != e.parent_id && r.has(e.parent_id)))];
 }
-function S(e, t, n) {
+function b(e, t, n) {
     return I(
         t,
         n,
@@ -108,7 +108,7 @@ function S(e, t, n) {
         })
     );
 }
-function T(e, t, n) {
+function S(e, t, n) {
     return I(
         t,
         n,
@@ -118,11 +118,11 @@ function T(e, t, n) {
         })
     );
 }
-function b(e) {
+function T(e) {
     return y(s.Z.getChannel(e));
 }
 function y(e) {
-    return !!(null != e && (0, _.s)(e.guild_id, e.id)) && (e.isForumChannel() ? f.Uu(h.Plq.SEND_MESSAGES_IN_THREADS, e) : f.Uu(h.Plq.SEND_MESSAGES, e));
+    return !!(null != e && (0, _.s)(e.guild_id, e.id)) && (e.isForumChannel() ? f.Uu(p.Plq.SEND_MESSAGES_IN_THREADS, e) : f.Uu(p.Plq.SEND_MESSAGES, e));
 }
 function A(e) {
     return (0, r.e7)([s.Z], () => {

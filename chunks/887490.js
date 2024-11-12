@@ -1,12 +1,12 @@
 n.d(t, {
     C0: function () {
-        return h;
+        return p;
     },
     Ew: function () {
         return g;
     },
     Jz: function () {
-        return p;
+        return h;
     },
     LC: function () {
         return _;
@@ -21,7 +21,7 @@ n.d(t, {
         return c;
     },
     lP: function () {
-        return S;
+        return b;
     },
     q: function () {
         return f;
@@ -127,7 +127,7 @@ let c = {
                 let [n, r] = m.edges(e.selection),
                     i = c.after(e, n, { unit: 'offset' }),
                     a = c.before(e, r, { unit: 'offset' });
-                if (null == i || null == a || !p.equals(i, a)) return null;
+                if (null == i || null == a || !h.equals(i, a)) return null;
                 t = i;
             } else t = e.selection.anchor;
             return null == t ? null : c.getParentVoid(e, t);
@@ -156,8 +156,8 @@ let c = {
                 }),
                 a = '';
             for (let [e, t] of i) {
-                let i = h.equals(t, n.path) ? n.offset : 0,
-                    s = h.equals(t, r.path) ? r.offset : 0;
+                let i = p.equals(t, n.path) ? n.offset : 0,
+                    s = p.equals(t, r.path) ? r.offset : 0;
                 a += e.text.substring(i, s);
             }
             return a;
@@ -192,7 +192,7 @@ let c = {
                     anchor: null,
                     focus: null
                 };
-            if (h.isPath(t)) {
+            if (p.isPath(t)) {
                 let n = c.range(e, t),
                     [r] = c.node(e, t);
                 if (f.isElement(r)) {
@@ -208,8 +208,8 @@ let c = {
                 i = null,
                 a = null;
             return (
-                p.equals(e.selection.anchor, n) ? (i = 'start') : p.equals(e.selection.anchor, r) ? (i = 'end') : m.includes(t, e.selection.anchor) && (i = 'inside'),
-                p.equals(e.selection.focus, n) ? (a = 'start') : p.equals(e.selection.focus, r) ? (a = 'end') : m.includes(t, e.selection.focus) && (a = 'inside'),
+                h.equals(e.selection.anchor, n) ? (i = 'start') : h.equals(e.selection.anchor, r) ? (i = 'end') : m.includes(t, e.selection.anchor) && (i = 'inside'),
+                h.equals(e.selection.focus, n) ? (a = 'start') : h.equals(e.selection.focus, r) ? (a = 'end') : m.includes(t, e.selection.focus) && (a = 'inside'),
                 {
                     anchor: i,
                     focus: a
@@ -246,19 +246,19 @@ let c = {
         }
     },
     _ = { ...a.xv },
-    h = {
+    p = {
         ...a.y$,
-        isFirstEditorBlock: (e) => h.equals(e, l.YD),
-        isFirstEditorText: (e) => h.equals(e, l.u9),
-        isFirstChild: (e, t) => h.equals(t, h.child(e, 0)),
+        isFirstEditorBlock: (e) => p.equals(e, l.YD),
+        isFirstEditorText: (e) => p.equals(e, l.u9),
+        isFirstChild: (e, t) => p.equals(t, p.child(e, 0)),
         child: (e, t) => [...e, t]
     },
-    p = {
+    h = {
         ...a.E9,
         start(e) {
             let [, t] = e;
             return {
-                path: h.child(t, 0),
+                path: p.child(t, 0),
                 offset: 0
             };
         },
@@ -266,19 +266,19 @@ let c = {
             let [t, n] = e,
                 r = t.children[t.children.length - 1];
             return {
-                path: h.child(n, t.children.length - 1),
+                path: p.child(n, t.children.length - 1),
                 offset: _.isText(r) ? r.text.length : 0
             };
         },
         isAtStart(e, t) {
-            return p.equals(e, this.start(t));
+            return h.equals(e, this.start(t));
         },
         isAtEnd(e, t) {
-            return p.equals(e, this.end(t));
+            return h.equals(e, this.end(t));
         },
         clamp(e, t) {
             let [n, r] = m.edges(t);
-            return p.isBefore(e, n) && (e = n), p.isAfter(e, r) && (e = r), e;
+            return h.isBefore(e, n) && (e = n), h.isAfter(e, r) && (e = r), e;
         }
     },
     m = {
@@ -289,11 +289,11 @@ let c = {
                 r = t.children[t.children.length - 1];
             return {
                 anchor: {
-                    path: h.child(n, 0),
+                    path: p.child(n, 0),
                     offset: 0
                 },
                 focus: {
-                    path: h.child(n, t.children.length - 1),
+                    path: p.child(n, t.children.length - 1),
                     offset: _.isText(r) ? r.text.length : 0
                 }
             };
@@ -301,7 +301,7 @@ let c = {
         clamp(e, t) {
             let [n, r] = m.edges(e),
                 [i, a] = m.edges(t);
-            return (p.isBefore(n, i) && (n = i), p.isAfter(r, a) && (r = a), m.isForward(e))
+            return (h.isBefore(n, i) && (n = i), h.isAfter(r, a) && (r = a), m.isForward(e))
                 ? {
                       anchor: n,
                       focus: r
@@ -371,7 +371,7 @@ let c = {
             }
         return n[o];
     },
-    S = {
+    b = {
         getLineStart(e, t, n) {
             let r;
             let i = c.getParentElement(e, t);
@@ -387,7 +387,7 @@ let c = {
                 },
                 o = Array.from(c.positions(e, { at: s })),
                 l = I(e, t, o, !0);
-            if (n && p.equals(t, l) && !p.isAtEnd(t, i)) {
+            if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
                 let n = c.after(e, t);
                 if (null == n) return l;
                 l = I(e, n, o, !0);
@@ -409,7 +409,7 @@ let c = {
                 },
                 o = Array.from(c.positions(e, { at: s })),
                 l = I(e, t, o, !1);
-            if (n && p.equals(t, l) && !p.isAtEnd(t, i)) {
+            if (n && h.equals(t, l) && !h.isAtEnd(t, i)) {
                 let n = c.after(e, t);
                 if (null == n) return l;
                 l = I(e, n, o, !1);
@@ -420,7 +420,7 @@ let c = {
             let n = m.toPoint(e.selection);
             if (null == n) return null;
             if (t) {
-                let t = S.getLineStart(e, n, !1);
+                let t = b.getLineStart(e, n, !1);
                 return null == t
                     ? null
                     : {
@@ -429,7 +429,7 @@ let c = {
                       };
             }
             {
-                let t = S.getLineEnd(e, n, !0);
+                let t = b.getLineEnd(e, n, !0);
                 return null == t
                     ? null
                     : {

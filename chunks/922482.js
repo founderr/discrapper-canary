@@ -23,8 +23,8 @@ var r = n(749210),
     d = n(496675),
     f = n(944486),
     _ = n(881824),
-    h = n(107511),
-    p = n(146085),
+    p = n(107511),
+    h = n(146085),
     m = n(96150);
 function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -43,8 +43,8 @@ function E(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         s = f.Z.getVoiceChannelId();
-    if (!r && ((t = e), (n = s), !d.Z.can(p.gl, t) || (_.Zl(t.id) && n !== t.id && (_.vu(t, () => v(t, !0)), 1)))) return !1;
-    if ((h.Z.initialize(), i.default.selectVoiceChannel(e.id), (s = f.Z.getVoiceChannelId()) !== e.id)) return !1;
+    if (!r && ((t = e), (n = s), !d.Z.can(h.gl, t) || (_.Zl(t.id) && n !== t.id && (_.vu(t, () => v(t, !0)), 1)))) return !1;
+    if ((p.Z.initialize(), i.default.selectVoiceChannel(e.id), (s = f.Z.getVoiceChannelId()) !== e.id)) return !1;
     let o = l.Z.getAllApplicationStreamsForChannel(e.id);
     return o.length > 0 && (0, a.rn)(o[0], { noFocus: !1 }), !0;
 }

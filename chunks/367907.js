@@ -35,16 +35,16 @@ var r = n(392711),
     d = n(984933),
     f = n(650774),
     _ = n(271383),
-    h = n(430824),
-    p = n(131951),
+    p = n(430824),
+    h = n(131951),
     m = n(496675),
     g = n(158776),
     E = n(19780),
     v = n(306680),
     I = n(944486),
-    S = n(914010),
-    T = n(9156),
-    b = n(594174),
+    b = n(914010),
+    S = n(9156),
+    T = n(594174),
     y = n(979651),
     A = n(626135),
     N = n(70956),
@@ -60,9 +60,9 @@ function L(e) {
 function x(e) {
     var t;
     if (null == e) return null;
-    let n = h.Z.getGuild(e);
+    let n = p.Z.getGuild(e);
     if (null == n) return null;
-    let r = h.Z.getRoles(n.id),
+    let r = p.Z.getRoles(n.id),
         i = u.default.getId(),
         a = _.ZP.getMember(e, i),
         s = d.ZP.getChannels(e),
@@ -113,7 +113,7 @@ function P(e) {
     if (null == e) return null;
     let t = c.Z.getChannel(e);
     if (null == t) return null;
-    let n = p.Z.isVideoEnabled(),
+    let n = h.Z.isVideoEnabled(),
         r = E.Z.getMediaSessionId();
     return {
         channel_id: t.id,
@@ -130,11 +130,11 @@ function k(e) {
         o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (A.default.isThrottled(e)) return;
     let l = !('location' in s) || s.location !== O.Sbl.GUILD_CREATE_INVITE_SUGGESTION,
-        u = 'guild_id' in s ? s.guild_id : l ? S.Z.getGuildId() : null,
+        u = 'guild_id' in s ? s.guild_id : l ? b.Z.getGuildId() : null,
         d = 'channel_id' in s ? s.channel_id : l ? I.Z.getChannelId(u) : null,
         f = c.Z.getChannel(d);
     let _ = ((t = f), (n = u), null == t ? (null != n ? n : null) : t.isPrivate() ? null : null !== (i = null !== (r = t.getGuildId()) && void 0 !== r ? r : n) && void 0 !== i ? i : null);
-    let h = {
+    let p = {
         ...s,
         ...x(_),
         ...(null != u && null != d && (0, D.AB)(d)
@@ -145,16 +145,16 @@ function k(e) {
               })
             : M(f))
     };
-    A.default.track(e, h, { flush: o });
+    A.default.track(e, p, { flush: o });
 }
 function U(e) {
     let t = c.Z.getChannel(e);
     if (null == t) return { channel_id: e };
-    let n = h.Z.getGuild(t.guild_id);
+    let n = p.Z.getGuild(t.guild_id);
     if (null == n) {
         let n = !1;
         if (t.isDM()) {
-            let e = b.default.getUser(t.recipients[0]);
+            let e = T.default.getUser(t.recipients[0]);
             null != e && (n = e.bot);
         }
         return {
@@ -167,16 +167,16 @@ function U(e) {
         channel_id: e,
         channel_was_unread: r.unread,
         channel_mention_count: r.mentionCount,
-        channel_is_muted: T.ZP.isChannelMuted(t.guild_id, t.id),
+        channel_is_muted: S.ZP.isChannelMuted(t.guild_id, t.id),
         channel_is_nsfw: t.isNSFW(),
-        channel_resolved_unread_setting: T.ZP.resolveUnreadSetting(t),
-        channel_preset: (0, o.gs)(T.ZP.resolveUnreadSetting(t), T.ZP.resolvedMessageNotifications(t)),
+        channel_resolved_unread_setting: S.ZP.resolveUnreadSetting(t),
+        channel_preset: (0, o.gs)(S.ZP.resolveUnreadSetting(t), S.ZP.resolvedMessageNotifications(t)),
         guild_id: t.guild_id,
         guild_was_unread: r.guildUnread,
         guild_mention_count: r.guildMentionCount,
-        guild_is_muted: T.ZP.isMuted(t.guild_id),
-        guild_resolved_unread_setting: T.ZP.resolveGuildUnreadSetting(n),
-        guild_preset: (0, o.gs)(T.ZP.resolveGuildUnreadSetting(n), T.ZP.getMessageNotifications(t.guild_id)),
+        guild_is_muted: S.ZP.isMuted(t.guild_id),
+        guild_resolved_unread_setting: S.ZP.resolveGuildUnreadSetting(n),
+        guild_preset: (0, o.gs)(S.ZP.resolveGuildUnreadSetting(n), S.ZP.getMessageNotifications(t.guild_id)),
         parent_id: t.parent_id,
         parent_channel_type: t.parentChannelThreadType,
         has_pending_member_action: (0, s.P)(t.guild_id, e),

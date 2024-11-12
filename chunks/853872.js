@@ -17,7 +17,7 @@ function _(e) {
     }),
         (t.isDefault || 1 === Object.keys(c).length) && (d = t.id);
 }
-class h extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     get paymentSources() {
         return c;
     }
@@ -42,7 +42,7 @@ class h extends (r = o.ZP.Store) {
     }
 }
 (s = 'PaymentSourceStore'),
-    (a = 'displayName') in (i = h)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -50,7 +50,7 @@ class h extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: _,
         BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: _,
         BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: _,

@@ -40,8 +40,8 @@ function l(e) {
                         break;
                     default:
                         if ((0, i.kJ)(f)) {
-                            for (var h = [], p = 0; p < f.length; p++) h[p] = String(f[p]);
-                            _ = h.toString();
+                            for (var p = [], h = 0; h < f.length; h++) p[h] = String(f[h]);
+                            _ = p.toString();
                         } else _ = String(f);
                 }
                 _ && t.push([d, _]);

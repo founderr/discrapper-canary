@@ -5,24 +5,24 @@ var r = n(200651),
     o = n(481060),
     l = n(465729);
 let u = i.memo(function (e) {
-    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: h } = e,
-        p = i.useMemo(() => {
-            if (null != h) return () => h(t);
-        }, [h, t]);
+    let { text: t, variant: n = 'text-xs/medium', color: a = 'text-normal', icon: u, className: c, selected: d, onMouseEnter: f, onMouseLeave: _, onClick: p } = e,
+        h = i.useMemo(() => {
+            if (null != p) return () => p(t);
+        }, [p, t]);
     return (0, r.jsxs)(o.Clickable, {
-        tabIndex: null == h ? -1 : 0,
+        tabIndex: null == p ? -1 : 0,
         className: s()(
             l.trait,
             {
-                [l.selectable]: null != p && !d,
+                [l.selectable]: null != h && !d,
                 [l.selected]: d,
-                [l.clickable]: null != p
+                [l.clickable]: null != h
             },
             c
         ),
         onMouseEnter: f,
         onMouseLeave: _,
-        onClick: p,
+        onClick: h,
         children: [
             null != u &&
                 (0, r.jsx)(u, {

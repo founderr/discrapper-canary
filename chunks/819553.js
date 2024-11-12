@@ -20,8 +20,8 @@ function f(e) {
 }
 ((r = o || (o = {})).STARTED = 'started'), (r.READY = 'ready'), (r.COMPLETED = 'completed'), (r.NOT_APPLICABLE = 'not_applicable');
 let _ = {},
-    h = {};
-class p extends (l = u.ZP.Store) {
+    p = {};
+class h extends (l = u.ZP.Store) {
     shouldShowOnboarding(e) {
         return !!(e !== d.ME && e !== d.I_8 && f(_[e])) || !1;
     }
@@ -29,15 +29,15 @@ class p extends (l = u.ZP.Store) {
         return _[e];
     }
     resetOnboardingStatus(e) {
-        (_[e] = 'started'), (h[e] = 'cover');
+        (_[e] = 'started'), (p[e] = 'cover');
     }
     getCurrentOnboardingStep(e) {
         var t;
-        return null !== (t = h[e]) && void 0 !== t ? t : 'cover';
+        return null !== (t = p[e]) && void 0 !== t ? t : 'cover';
     }
 }
 (s = 'GuildOnboardingStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -45,13 +45,13 @@ class p extends (l = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.ZP = new p(c.Z, {
+    (t.ZP = new h(c.Z, {
         LOGOUT: function () {
-            (_ = {}), (h = {});
+            (_ = {}), (p = {});
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete _[t.id], delete h[t.id];
+            delete _[t.id], delete p[t.id];
         },
         GUILD_ONBOARDING_START: function (e) {
             let { guildId: t } = e;
@@ -72,9 +72,9 @@ class p extends (l = u.ZP.Store) {
         },
         GUILD_ONBOARDING_SET_STEP: function (e) {
             let { guildId: t, step: n } = e;
-            h[t] = n;
+            p[t] = n;
         },
         CONNECTION_OPEN: function () {
-            h = {};
+            p = {};
         }
     }));

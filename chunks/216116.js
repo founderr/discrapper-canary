@@ -28,8 +28,8 @@ _.delete('a', 1),
                     });
                 }),
                     s(n, 1);
-                for (var o = a(e), l = a(r), _ = 0, h = 0, p = !1, m = i.length; _ < m; ) (t = i[_++]), p || t.key === o ? ((p = !0), c(this, t.key)) : h++;
-                for (; h < m; ) !((t = i[h++]).key === o && t.value === l) && u(this, t.key, t.value);
+                for (var o = a(e), l = a(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; ) (t = i[_++]), h || t.key === o ? ((h = !0), c(this, t.key)) : p++;
+                for (; p < m; ) !((t = i[p++]).key === o && t.value === l) && u(this, t.key, t.value);
             },
             {
                 enumerable: !0,

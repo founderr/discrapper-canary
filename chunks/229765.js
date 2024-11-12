@@ -6,7 +6,7 @@ n.d(t, {
         return E;
     },
     EV: function () {
-        return S;
+        return b;
     },
     IS: function () {
         return I;
@@ -15,13 +15,13 @@ n.d(t, {
         return m;
     },
     SI: function () {
-        return T;
+        return S;
     },
     XB: function () {
-        return h;
+        return p;
     },
     jc: function () {
-        return p;
+        return h;
     }
 }),
     n(315314),
@@ -41,7 +41,7 @@ var r = n(192379),
     d = n(976757),
     f = n(981631);
 let _ = new Worker(new URL('/assets/' + n.u('59546'), n.b));
-function h() {
+function p() {
     return (
         o.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
         s.tn
@@ -64,7 +64,7 @@ function h() {
             })
     );
 }
-async function p(e) {
+async function h(e) {
     var t, n, r;
     if ('loaded' === u.Z.getSearchResult(e).status) return;
     let i = a().v3(JSON.stringify(e)),
@@ -193,7 +193,7 @@ async function I() {
         guilds: e
     });
 }
-async function S(e) {
+async function b(e) {
     o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_ADD',
         guildId: e
@@ -213,7 +213,7 @@ async function S(e) {
         );
     }
 }
-async function T(e) {
+async function S(e) {
     o.Z.dispatch({
         type: 'DISCOVERY_SAVED_GUILD_DELETE',
         guildId: e

@@ -37,7 +37,7 @@ let C = {
     DEFAULT: S.__invalid_default,
     RECORDING: S.recording
 };
-class _ extends l.PureComponent {
+class E extends l.PureComponent {
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -130,4 +130,4 @@ class _ extends l.PureComponent {
             });
     }
 }
-t.Z = _;
+t.Z = E;

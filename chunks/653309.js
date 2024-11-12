@@ -40,8 +40,8 @@ function d(e, t) {
     let n;
     let { attributes: i, children: u, leaf: d, text: f } = t,
         _ = !1,
-        [h] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, f)));
-    switch (s.bN.isEditor(h) ? 'editor' : h.type) {
+        [p] = s.bN.node(e, s.C0.parent(s.bN.findPath(e, f)));
+    switch (s.bN.isEditor(p) ? 'editor' : p.type) {
         case 'line':
         case 'blockQuote': {
             _ = void 0;

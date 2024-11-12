@@ -14,16 +14,16 @@ var r = n(200651),
     d = n(379357),
     f = n(358696),
     _ = n(180335),
-    h = n(952164),
-    p = n(960870),
+    p = n(952164),
+    h = n(960870),
     m = n(139793),
     g = n(994746),
     E = n(502762),
     v = n(652853),
     I = n(448980),
-    S = n(194811),
-    T = n(373826),
-    b = n(315324),
+    b = n(194811),
+    S = n(373826),
+    T = n(315324),
     y = n(582123),
     A = n(262210),
     N = n(666984),
@@ -41,7 +41,7 @@ function D(e) {
         U = (0, g.Z)(a),
         { largeImage: G } = (0, d.FO)(a),
         { analyticsLocations: B } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Z = (0, p.Z)({
+        Z = (0, h.Z)({
             display: 'live',
             user: t,
             activity: a,
@@ -59,11 +59,11 @@ function D(e) {
             return 0 === l.length
                 ? null
                 : null == a.sync_id
-                  ? (0, r.jsx)(T.Z, {
+                  ? (0, r.jsx)(S.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
                     })
-                  : (0, r.jsx)(T.Z, {
+                  : (0, r.jsx)(S.Z, {
                         variant: 'text-xs/normal',
                         text: l.map((e, n) =>
                             (0, r.jsxs)(
@@ -73,7 +73,7 @@ function D(e) {
                                         (0, r.jsx)(o.Clickable, {
                                             className: s()(O.clickable, O.inline),
                                             onClick: () => {
-                                                Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(a, t.id, n);
+                                                Z({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -102,7 +102,7 @@ function D(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: O.voiceChannelDivider }),
-                          (0, r.jsx)(b.Z, {
+                          (0, r.jsx)(T.Z, {
                               user: t,
                               guild: D,
                               channel: L,
@@ -133,7 +133,7 @@ function D(e) {
                     className: s()(O.card, x),
                     ref: F,
                     children: [
-                        (0, r.jsx)(S.Z, {
+                        (0, r.jsx)(b.Z, {
                             ...U,
                             contextMenu: (0, r.jsx)(C.Z, {
                                 display: 'live',
@@ -153,7 +153,7 @@ function D(e) {
                                         (0, r.jsx)(f.E, {
                                             image: G,
                                             onClick: () => {
-                                                Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id);
+                                                Z({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
                                             },
                                             size: f.J.SIZE_60
                                         }),
@@ -162,11 +162,11 @@ function D(e) {
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
-                                                        (0, r.jsx)(T.Z, {
+                                                        (0, r.jsx)(S.Z, {
                                                             variant: 'heading-sm/semibold',
                                                             text: a.details,
                                                             onClick: () => {
-                                                                Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(a);
+                                                                Z({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(a);
                                                             }
                                                         }),
                                                         V()

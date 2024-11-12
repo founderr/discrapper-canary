@@ -15,8 +15,8 @@ var r,
     d = n(709054),
     f = n(314897),
     _ = n(592125),
-    h = n(486472);
-function p(e, t, n) {
+    p = n(486472);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -61,13 +61,13 @@ function I(e, t) {
     if (null == i) return !1;
     delete i[t], o().isEmpty(i) && delete r[e];
 }
-function S() {
+function b() {
     let e = f.default.getId();
-    if (null == e || h.Z.totalUnavailableGuilds > 0) return;
+    if (null == e || p.Z.totalUnavailableGuilds > 0) return;
     let t = E(e);
     for (let e in t) null == _.Z.getChannel(e) && delete t[e];
 }
-function T(e) {
+function S(e) {
     let {
             channel: { id: t }
         } = e,
@@ -76,7 +76,7 @@ function T(e) {
     let r = E(n);
     return delete r[t], !1;
 }
-class b extends (i = l.ZP.PersistedStore) {
+class T extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         (g = null != e ? e : {}),
             !(function () {
@@ -86,7 +86,7 @@ class b extends (i = l.ZP.PersistedStore) {
                         null != t && ('' === t.draft || '' === t.draft.trim()) && I(n, 0, e);
                     }
             })(),
-            this.waitFor(f.default, _.Z, h.Z);
+            this.waitFor(f.default, _.Z, p.Z);
     }
     getState() {
         return g;
@@ -140,9 +140,9 @@ class b extends (i = l.ZP.PersistedStore) {
         return null == n ? null : n[1];
     }
 }
-p(b, 'displayName', 'DraftStore'),
-    p(b, 'persistKey', 'DraftStore'),
-    p(b, 'migrations', [
+h(T, 'displayName', 'DraftStore'),
+    h(T, 'persistKey', 'DraftStore'),
+    h(T, 'migrations', [
         (e) => {
             if (null == e) return {};
             for (let t in e) 'timestamp' in e[t] && (e[t] = { 0: e[t] });
@@ -157,10 +157,10 @@ p(b, 'displayName', 'DraftStore'),
             return n;
         }
     ]),
-    (t.Z = new b(u.Z, {
+    (t.Z = new T(u.Z, {
         CONNECTION_OPEN: function () {
             let e = f.default.getId();
-            return !(e in g) && (g[e] = {}), S(), !1;
+            return !(e in g) && (g[e] = {}), b(), !1;
         },
         LOGOUT: function (e) {
             !e.isSwitchingAccount && (g = {});
@@ -169,10 +169,10 @@ p(b, 'displayName', 'DraftStore'),
             e.userId in g && delete g[e.userId];
         },
         GUILD_DELETE: function () {
-            return S(), !1;
+            return b(), !1;
         },
-        CHANNEL_DELETE: T,
-        THREAD_DELETE: T,
+        CHANNEL_DELETE: S,
+        THREAD_DELETE: S,
         THREAD_CREATE: function (e) {
             let { channel: t } = e,
                 n = f.default.getId();

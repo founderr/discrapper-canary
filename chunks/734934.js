@@ -1,6 +1,6 @@
 n.d(t, {
     oW: function () {
-        return h;
+        return p;
     },
     p: function () {
         return _;
@@ -21,7 +21,7 @@ function _() {
         t = s.fv.useSetting();
     return e && ('0' === t || new Date(Number(t)).getTime() - new Date().getTime() > 0);
 }
-function h(e, t) {
+function p(e, t) {
     let n = s.QZ.getSetting();
     o.hW.updateAsync(
         'notifications',

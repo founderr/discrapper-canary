@@ -14,22 +14,22 @@ var r = n(200651),
     d = n(385499),
     f = n(954138),
     _ = n(979264),
-    h = n(228168),
-    p = n(388032),
+    p = n(228168),
+    h = n(388032),
     m = n(543337);
 function g(e) {
-    let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: I, className: S, isTryItOut: T, onOpenProfile: b, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
+    let { user: t, profileType: n, usernameIcon: a, tags: g, nickname: E, nicknameIcons: v, pronouns: I, className: b, isTryItOut: S, onOpenProfile: T, nicknameVariant: y = 'heading-lg/bold', pronounsVariant: A = 'text-sm/medium' } = e,
         { newestAnalyticsLocation: N } = (0, u.ZP)(),
         C = {
-            [m.biteSize]: n === h.y0.BITE_SIZE,
-            [m.fullSize]: n === h.y0.FULL_SIZE,
-            [m.panel]: n === h.y0.PANEL
+            [m.biteSize]: n === p.y0.BITE_SIZE,
+            [m.fullSize]: n === p.y0.FULL_SIZE,
+            [m.panel]: n === p.y0.PANEL
         },
         R = (e) =>
-            null == b
+            null == T
                 ? e
                 : (0, r.jsx)(o.Clickable, {
-                      onClick: b,
+                      onClick: T,
                       className: m.clickableUsername,
                       children: e
                   }),
@@ -44,7 +44,7 @@ function g(e) {
             [N, t.id]
         );
     return (0, r.jsxs)('div', {
-        className: s()(m.container, { [m.bot]: null != D }, S),
+        className: s()(m.container, { [m.bot]: null != D }, b),
         children: [
             (0, r.jsxs)('div', {
                 className: m.usernameRow,
@@ -79,7 +79,7 @@ function g(e) {
                             user: t,
                             usernameIcon: a,
                             forceUsername: !0,
-                            forcePomelo: T,
+                            forcePomelo: S,
                             className: m.userTag,
                             usernameClass: m.userTagUsername,
                             discriminatorClass: m.userTagDiscriminator,
@@ -95,8 +95,8 @@ function g(e) {
                                 }),
                                 (0, r.jsx)(o.TooltipContainer, {
                                     className: m.pronounsTooltip,
-                                    text: p.intl.string(p.t.GI2A8P),
-                                    delay: h.vB,
+                                    text: h.intl.string(h.t.GI2A8P),
+                                    delay: p.vB,
                                     children: (0, r.jsx)(o.Text, {
                                         variant: A,
                                         className: m.pronounsText,

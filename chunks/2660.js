@@ -10,8 +10,8 @@ var s = n(442837),
 let d = (e) => {
     let { questConfig: t, fallback: n, isFocused: d } = e,
         m = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-        { avatarDecoration: x, isFetching: C } = (0, a.DU)(t);
-    return C
+        { avatarDecoration: x, isFetching: h } = (0, a.DU)(t);
+    return h
         ? (0, i.jsx)('div', {
               className: c.questsCollectibleReward,
               children: (0, i.jsx)(l.Spinner, {})

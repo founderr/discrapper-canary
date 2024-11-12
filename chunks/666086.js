@@ -10,15 +10,15 @@ var r = n(392711),
     d = n(271383),
     f = n(430824),
     _ = n(375954),
-    h = n(944486),
-    p = n(626135),
+    p = n(944486),
+    h = n(626135),
     m = n(522558),
     g = n(581025),
     E = n(795448),
     v = n(441623),
     I = n(474936),
-    S = n(981631);
-class T extends s.Z {
+    b = n(981631);
+class S extends s.Z {
     isChannelEligible(e, t) {
         switch (e.type) {
             case i.d.DM:
@@ -34,7 +34,7 @@ class T extends s.Z {
     }
     maybeSendGiftingPromptSystemMessageDebounced(e, t, n, i) {
         (0, r.debounce)(() => {
-            let r = h.Z.getChannelId();
+            let r = p.Z.getChannelId();
             !v.Z.isGiftIntentMessageInCooldown(n) &&
                 e === r &&
                 _.Z.isReady(e) &&
@@ -58,7 +58,7 @@ class T extends s.Z {
                 this.maybeSendGiftingPromptSystemMessageDebounced(i.id, I.hX.FRIEND_ANNIVERSARY, e, a.length > 1 ? I.X2.VIEW_ALL : I.X2.SEND_MESSAGE);
             }
             n &&
-                p.default.track(S.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
+                h.default.track(b.rMx.FRIEND_ANNIVERSARIES_CHANNEL_VIEWED, {
                     friend_anniversaries_count: a.length,
                     ...(0, o.v_)(i)
                 });
@@ -69,7 +69,7 @@ class T extends s.Z {
         this.handleChannelSelect(t, n);
     }
     onPostConnectionOpen() {
-        let e = h.Z.getChannelId();
+        let e = p.Z.getChannelId();
         if (null != e) {
             let t = u.Z.getChannel(e);
             this.handleChannelSelect(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id);
@@ -94,4 +94,4 @@ class T extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new T();
+t.Z = new S();

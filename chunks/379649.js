@@ -1,6 +1,6 @@
 n.d(t, {
     A3: function () {
-        return h;
+        return p;
     },
     CI: function () {
         return g;
@@ -100,7 +100,7 @@ function _(e) {
         setTimeout(() => e(), t);
     });
 }
-function h(e, t) {
+function p(e, t) {
     switch (t) {
         case 'NONE':
             return 0;
@@ -121,7 +121,7 @@ function h(e, t) {
     }
 }
 ((i = r || (r = {})).NONE = 'NONE'), (i.SECONDS = 'SECONDS'), (i.MINUTES = 'MINUTES'), (i.HOURS = 'HOURS'), (i.DAYS = 'DAYS'), (i.WEEKS = 'WEEKS'), (i.MONTHS = 'MONTHS'), (i.YEARS = 'YEARS');
-let p = [
+let h = [
     {
         unit: 'NONE',
         max: 0
@@ -156,12 +156,12 @@ let p = [
     }
 ];
 function m(e, t) {
-    let n = p.findIndex((t) => {
+    let n = h.findIndex((t) => {
             let { max: n, unit: r } = t;
             return ('NONE' === r && e === n) || e < n;
         }),
         r = s()(
-            p,
+            h,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -169,7 +169,7 @@ function m(e, t) {
             n
         );
     if (null != r) return r.unit;
-    let i = p.find((e) => {
+    let i = h.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
@@ -182,7 +182,7 @@ function g(e, t) {
             time: 0
         };
     let n = m(e, (e) => t.includes(e)),
-        r = null != n ? h(e, n) : null;
+        r = null != n ? p(e, n) : null;
     return {
         unit: n,
         time: null != r ? Math.floor(r) : null

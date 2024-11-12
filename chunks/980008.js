@@ -236,7 +236,7 @@ function c(e) {
             (0, i.useCallback)((e) => new l(e, null, d), [d]),
             d
         ),
-        { disabledKeys: _, selectionManager: h } = (0, a.S)({
+        { disabledKeys: _, selectionManager: p } = (0, a.S)({
             ...e,
             collection: f,
             disabledBehavior: e.disabledBehavior || 'selection'
@@ -244,7 +244,7 @@ function c(e) {
     return {
         collection: f,
         disabledKeys: _,
-        selectionManager: h,
+        selectionManager: p,
         showSelectionCheckboxes: e.showSelectionCheckboxes || !1,
         sortDescriptor: e.sortDescriptor,
         isKeyboardNavigationDisabled: 0 === f.size || t,

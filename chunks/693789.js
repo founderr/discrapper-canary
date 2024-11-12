@@ -1,9 +1,9 @@
 n.d(t, {
     Ph: function () {
-        return p;
+        return h;
     },
     Tt: function () {
-        return h;
+        return p;
     },
     ZP: function () {
         return E;
@@ -34,7 +34,7 @@ let _ = {
         LINK: f.lookLink,
         BLANK: f.lookBlank
     },
-    h = {
+    p = {
         BRAND: f.colorBrand,
         BRAND_INVERTED: f.colorBrandInverted,
         RED: f.colorRed,
@@ -45,7 +45,7 @@ let _ = {
         TRANSPARENT: f.colorTransparent,
         CUSTOM: ''
     },
-    p = {
+    h = {
         NONE: '',
         TINY: f.sizeTiny,
         SMALL: f.sizeSmall,
@@ -56,7 +56,7 @@ let _ = {
         ICON: f.sizeIcon
     };
 function m() {
-    let { look: e = _.FILLED, color: t = h.BRAND, size: n = p.MEDIUM, fullWidth: r = !1, grow: i = !0, submitting: a = !1, disabled: o = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+    let { look: e = _.FILLED, color: t = p.BRAND, size: n = h.MEDIUM, fullWidth: r = !1, grow: i = !0, submitting: a = !1, disabled: o = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return s()(f.button, e, t, n, {
         [f.fullWidth]: r,
         [f.grow]: i,
@@ -64,7 +64,7 @@ function m() {
     });
 }
 function g(e) {
-    let { look: t = _.FILLED, color: n = h.BRAND, size: a = p.MEDIUM, fullWidth: o = !1, grow: g = !0, disabled: E = !1, submitting: v = !1, type: I = 'button', style: S, wrapperClassName: T, className: b, innerClassName: y, onClick: A, onDoubleClick: N, onMouseDown: C, onMouseUp: R, onMouseEnter: O, onMouseLeave: D, onKeyDown: L, children: x, rel: w, buttonRef: M, focusProps: P, 'aria-label': k, submittingStartedLabel: U, submittingFinishedLabel: G, ...B } = e,
+    let { look: t = _.FILLED, color: n = p.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: g = !0, disabled: E = !1, submitting: v = !1, type: I = 'button', style: b, wrapperClassName: S, className: T, innerClassName: y, onClick: A, onDoubleClick: N, onMouseDown: C, onMouseUp: R, onMouseEnter: O, onMouseLeave: D, onKeyDown: L, children: x, rel: w, buttonRef: M, focusProps: P, 'aria-label': k, submittingStartedLabel: U, submittingFinishedLabel: G, ...B } = e,
         Z = E || v,
         F = Z && (null != O || null != D),
         V = (function (e, t) {
@@ -101,10 +101,10 @@ function g(e) {
             onKeyDown: E ? void 0 : L,
             type: I,
             disabled: E,
-            style: S,
+            style: b,
             rel: w,
             className: s()(
-                b,
+                T,
                 m({
                     look: t,
                     color: n,
@@ -114,7 +114,7 @@ function g(e) {
                     submitting: v,
                     disabled: E
                 }),
-                F ? null : T
+                F ? null : S
             ),
             children: [
                 v && !E
@@ -133,7 +133,7 @@ function g(e) {
     });
     return F
         ? (0, r.jsxs)('span', {
-              className: s()(f.disabledButtonWrapper, T, a, {
+              className: s()(f.disabledButtonWrapper, S, a, {
                   [f.grow]: g,
                   [f.fullWidth]: o
               }),
@@ -149,15 +149,15 @@ function g(e) {
         : H;
 }
 function E(e) {
-    let { look: t = _.FILLED, color: n = h.BRAND, size: i = p.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: I, rel: S, ...T } = e;
+    let { look: t = _.FILLED, color: n = p.BRAND, size: i = h.MEDIUM, fullWidth: a = !1, grow: l = !0, style: u, className: c, innerClassName: d, to: m, onClick: g, onMouseDown: E, onMouseUp: v, children: I, rel: b, ...S } = e;
     return (0, r.jsx)(o.rU, {
-        ...T,
+        ...S,
         to: m,
         onClick: g,
         onMouseUp: v,
         onMouseDown: E,
         style: u,
-        rel: S,
+        rel: b,
         className: s()(c, f.button, t, n, i, {
             [f.fullWidth]: a,
             [f.grow]: l
@@ -168,4 +168,4 @@ function E(e) {
         })
     });
 }
-(g.Looks = _), (g.Colors = h), (g.Sizes = p), (g.Link = E);
+(g.Looks = _), (g.Colors = p), (g.Sizes = h), (g.Link = E);

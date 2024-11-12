@@ -15,7 +15,7 @@ var r = n(200651),
     d = n(852786),
     f = n(388032),
     _ = n(845024);
-function h(e) {
+function p(e) {
     let { games: t, gameActivity: n } = e;
     return (0, r.jsx)('div', {
         className: _.tooltipGames,
@@ -60,13 +60,13 @@ function h(e) {
         })
     });
 }
-function p(e) {
+function h(e) {
     var t;
     let { game: n, gameActivity: i, highlighted: a = !1 } = e,
         u = n.getIconURL(24);
     if (null == u) return null;
     let d = (null == i ? void 0 : null === (t = i[n.id]) || void 0 === t ? void 0 : t.level) === o.m.HIGH,
-        h = (0, r.jsxs)(l.Text, {
+        p = (0, r.jsxs)(l.Text, {
             variant: 'text-sm/semibold',
             color: 'interactive-active',
             className: _.tooltipText,
@@ -82,7 +82,7 @@ function p(e) {
             ]
         });
     return (0, r.jsx)(l.Tooltip, {
-        text: h,
+        text: p,
         position: 'bottom',
         'aria-label': n.name,
         children: (e) =>
@@ -148,7 +148,7 @@ t.Z = i.memo(function (e) {
             let n = t.getIconURL(24);
             if (null == n) return null;
             if (o.length <= 4)
-                return (0, r.jsx)(p, {
+                return (0, r.jsx)(h, {
                     game: t,
                     gameActivity: a
                 });
@@ -156,7 +156,7 @@ t.Z = i.memo(function (e) {
             return (0, r.jsx)(l.Tooltip, {
                 'aria-label': null !== (e = (0, u.f6)(i.map((e) => e.name))) && void 0 !== e ? e : '',
                 onTooltipShow: () => (null == s ? void 0 : s()),
-                text: (0, r.jsx)(h, {
+                text: (0, r.jsx)(p, {
                     games: i,
                     gameActivity: a
                 }),
@@ -187,7 +187,7 @@ t.Z = i.memo(function (e) {
         children: [
             c.map((e) =>
                 (0, r.jsx)(
-                    p,
+                    h,
                     {
                         game: e,
                         gameActivity: a,

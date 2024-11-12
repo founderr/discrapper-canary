@@ -12,10 +12,10 @@ n.d(t, {
         return m;
     },
     dG: function () {
-        return h;
+        return p;
     },
     pD: function () {
-        return p;
+        return h;
     },
     tH: function () {
         return d;
@@ -104,7 +104,7 @@ async function _(e, t) {
         );
     }
 }
-async function h(e, t) {
+async function p(e, t) {
     i.Z.dispatch({ type: 'GUILD_UNAPPLY_BOOST_START' });
     try {
         await r.tn.del({
@@ -127,7 +127,7 @@ async function h(e, t) {
         boostId: t
     });
 }
-async function p(e) {
+async function h(e) {
     let t = await r.tn.post({
             url: u.ANM.USER_GUILD_BOOST_SLOT_CANCEL(e),
             oldFormErrors: !0

@@ -1,6 +1,6 @@
 n.d(t, {
     L: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -15,19 +15,19 @@ var r = n(200651),
     d = n(679400),
     f = n(580747),
     _ = n(657375);
-let h = i.forwardRef(function (e, t) {
-    let { color: a, src: o, size: h = 'md', width: p, height: m, className: g, initialAnimation: E, markers: v } = e,
-        [I, S] = i.useState(null),
+let p = i.forwardRef(function (e, t) {
+    let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
+        [I, b] = i.useState(null),
+        S = i.useRef(null),
         T = i.useRef(null),
-        b = i.useRef(null),
         y = i.useRef(null),
         A =
-            'custom' === h
+            'custom' === p
                 ? {
-                      width: p,
+                      width: h,
                       height: m
                   }
-                : (0, c.m)(h),
+                : (0, c.m)(p),
         N = !(0, f.Z)('lottie_hover_multiple_loop'),
         C = i.useContext(u.S).reducedMotion.enabled,
         { enabled: R } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
@@ -39,7 +39,7 @@ let h = i.forwardRef(function (e, t) {
             () => ({
                 play: (e) => {
                     if (null != y.current) {
-                        if (((b.current = e), O)) {
+                        if (((T.current = e), O)) {
                             let t = v[e];
                             y.current.resetSegments(!0), y.current.setSegment(t.start + t.duration, t.start + t.duration), y.current.stop();
                         } else y.current.setLoop(!N && e.includes('hover')), y.current.resetSegments(!0), y.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
@@ -49,13 +49,13 @@ let h = i.forwardRef(function (e, t) {
                     if (null == y.current || O) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != y.current && !O && b.current === e && (y.current.resetSegments(!0), y.current.setSegment(v[e].start, v[e].start), y.current.stop());
+                    null != y.current && !O && T.current === e && (y.current.resetSegments(!0), y.current.setSegment(v[e].start, v[e].start), y.current.stop());
                 }
             }),
             [O, N, v]
         ),
         i.useEffect(() => {
-            null == I && o().then((e) => S(e.default));
+            null == I && o().then((e) => b(e.default));
         }, [I, o]),
         i.useEffect(
             () => (
@@ -66,14 +66,14 @@ let h = i.forwardRef(function (e, t) {
                         var t;
                         let n,
                             { default: r } = e,
-                            i = null !== (t = b.current) && void 0 !== t ? t : D.current;
+                            i = null !== (t = T.current) && void 0 !== t ? t : D.current;
                         if (null != i && null != v[i]) {
                             let e = v[i];
                             n = [e.start, e.start + e.duration];
                         }
-                        null != T.current &&
+                        null != S.current &&
                             (y.current = r.loadAnimation({
-                                container: T.current,
+                                container: S.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
@@ -95,7 +95,7 @@ let h = i.forwardRef(function (e, t) {
                 ...A
             },
             className: s()(_.lottieIcon, g),
-            ref: T
+            ref: S
         })
     );
 });

@@ -12,7 +12,7 @@ n.d(t, {
         return C;
     },
     T6: function () {
-        return T;
+        return S;
     },
     aj: function () {
         return N;
@@ -62,8 +62,8 @@ var r = n(512722),
     d = n(570140),
     f = n(70956),
     _ = n(915486),
-    h = n(262847),
-    p = n(581883),
+    p = n(262847),
+    h = n(581883),
     m = n(48481),
     g = n(526761),
     E = n(981631);
@@ -81,8 +81,8 @@ function v(e, t, n) {
     );
 }
 let I = 'UserSettingsProtoLastWriteTimes',
-    S = Date.now();
-function T() {}
+    b = Date.now();
+function S() {}
 d.Z.subscribe('CONNECTION_OPEN', () => {
     Date.now();
 }),
@@ -90,9 +90,9 @@ d.Z.subscribe('CONNECTION_OPEN', () => {
         Date.now();
     }),
     'undefined' != typeof document && (document.addEventListener('mousedown', () => {}), document.addEventListener('keydown', () => {}));
-class b {
+class T {
     getEditInfo() {
-        return p.Z.getFullState()[this.type];
+        return h.Z.getFullState()[this.type];
     }
     getCurrentValue() {
         return this.getEditInfo().proto;
@@ -164,7 +164,7 @@ class b {
         (t[this.type] = Date.now()), c.K.set(I, t);
     }
     loadIfUncached(e, t) {
-        (!p.Z.hasLoaded(e) || !0 === t) && this.loadIfNecessary(t);
+        (!h.Z.hasLoaded(e) || !0 === t) && this.loadIfNecessary(t);
     }
     async loadIfNecessary(e) {
         if (__OVERLAY__) {
@@ -189,7 +189,7 @@ class b {
                     });
                     return;
                 }
-                let r = h.Z[this.type],
+                let r = p.Z[this.type],
                     { proto: i, isDirty: a, cleanupFuncs: o } = (0, m.xt)(n, r);
                 return (
                     await d.Z.dispatch({
@@ -309,8 +309,8 @@ class b {
             (this.logger = new a.Yd(this.ProtoClass.typeName));
     }
 }
-let y = new b(u.o8, g.yP.PRELOADED_USER_SETTINGS),
-    A = new b(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let y = new T(u.o8, g.yP.PRELOADED_USER_SETTINGS),
+    A = new T(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     N = {
         [g.yP.PRELOADED_USER_SETTINGS]: y,
         [g.yP.FRECENCY_AND_FAVORITES_SETTINGS]: A

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(627341),
@@ -39,10 +39,10 @@ let f = (e) =>
                   return null != n && e.push(n), e;
               }, [])
             : [];
-class h extends l.Z {
+class p extends l.Z {
     static fromServer(e) {
         let { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l, ...u } = e;
-        return new h({
+        return new p({
             ...super.fromServer(u),
             type: t,
             premiumType: n === c.WND ? null : n,
@@ -50,7 +50,7 @@ class h extends l.Z {
             prices: (0, o.l)(i),
             items: _(u.items),
             bundledProducts: null == a ? void 0 : a.map(s.Z.fromServer),
-            variants: null == l ? void 0 : l.map(p.fromServer),
+            variants: null == l ? void 0 : l.map(h.fromServer),
             googleSkuIds: u.google_sku_ids
         });
     }
@@ -58,10 +58,10 @@ class h extends l.Z {
         super(e), d(this, 'prices', void 0), d(this, 'type', void 0), d(this, 'premiumType', void 0), d(this, 'items', void 0), d(this, 'categorySkuId', void 0), d(this, 'bundledProducts', void 0), d(this, 'variants', void 0), d(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants);
     }
 }
-class p extends h {
+class h extends p {
     static fromServer(e) {
         let { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i, ...a } = e;
-        return new p({
+        return new h({
             ...super.fromServer(a),
             baseVariantName: t,
             baseVariantSkuId: n,

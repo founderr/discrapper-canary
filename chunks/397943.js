@@ -14,7 +14,7 @@ function l(e) {
         c = i.useRef(null),
         d = i.useMemo(() => new s.tR(), []),
         [f, _] = i.useState('');
-    function h(e) {
+    function p(e) {
         null != t && n((0, s.rK)(t, d.selectValue(e)));
     }
     return (0, r.jsx)(a.V, {
@@ -22,7 +22,7 @@ function l(e) {
         className: o.select,
         options: d.getOptions(f),
         value: l ? void 0 : d.lookupByValue(t),
-        onChange: h,
+        onChange: p,
         isDisabled: u,
         onSearchChange: _,
         onKeyDown: function (e) {
@@ -30,7 +30,7 @@ function l(e) {
                 let e = (0, s.tj)(t, f);
                 if (null != e) {
                     var n;
-                    h(e), null === (n = c.current) || void 0 === n || n.close();
+                    p(e), null === (n = c.current) || void 0 === n || n.close();
                 }
             }
         }

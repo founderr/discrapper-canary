@@ -10,7 +10,7 @@ var r,
 let d = null,
     f = null,
     _ = {};
-function h(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         r = _[e];
     if (null == r) return;
@@ -20,7 +20,7 @@ function h(e, t) {
         _[e][null != t ? t : u.kod] = i;
     }
 }
-class p extends (r = o.ZP.Store) {
+class h extends (r = o.ZP.Store) {
     getStreamId(e, t) {
         var n, r, i;
         let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.Yn.DEFAULT;
@@ -33,7 +33,7 @@ class p extends (r = o.ZP.Store) {
     }
 }
 (s = 'VideoStreamStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -41,7 +41,7 @@ class p extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new p(l.Z, {
+    (t.Z = new h(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { user: t, sessionId: n } = e;
             (d = t.id), (f = n);
@@ -62,7 +62,7 @@ class p extends (r = o.ZP.Store) {
                           [r]: { streamId: n }
                       };
                   })(t, n, r, i)
-                : h(t, n, i);
+                : p(t, n, i);
         },
         VOICE_STATE_UPDATES: function (e) {
             let { voiceStates: t } = e;
@@ -74,7 +74,7 @@ class p extends (r = o.ZP.Store) {
                     _ = {};
                 } else {
                     if (null != a || (null === (n = _[r]) || void 0 === n ? void 0 : n[null != s ? s : u.kod]) == null) return e;
-                    h(r, s);
+                    p(r, s);
                 }
                 return !0;
             }, !1);

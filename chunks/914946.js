@@ -79,8 +79,8 @@ var i,
     N = n(70956),
     T = n(5192),
     x = n(226951),
-    A = n(996106),
-    b = n(863141),
+    b = n(996106),
+    A = n(863141),
     Z = n(186901),
     y = n(981631);
 let L = null !== (i = r.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
@@ -184,7 +184,7 @@ function G(e, t, n) {
             self_deaf: a,
             suppress: s
         },
-        user: (0, b.Z)(c)
+        user: (0, A.Z)(c)
     };
 }
 function B(e, t, n) {
@@ -192,7 +192,7 @@ function B(e, t, n) {
         a = v.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, b.Z)(a) : null,
+        user: null != a ? (0, A.Z)(a) : null,
         presence: {
             status: C.Z.getStatus(t),
             activity: null != r ? C.Z.getApplicationActivity(t, r) : C.Z.getPrimaryActivity(t)
@@ -252,8 +252,8 @@ function W(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === Z.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !w(n, [e])) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!w(n, r)) throw new A.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !w(n, [e])) throw new b.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!w(n, r)) throw new b.Z({ closeCode: y.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: l,
@@ -264,7 +264,7 @@ function W(e, t, n) {
                 };
             },
             () => {
-                throw new A.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new b.Z({ closeCode: y.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
@@ -327,9 +327,9 @@ function Q(e, t) {
     };
 }
 function J(e) {
-    if (e !== Z.He.POST_MESSAGE) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== Z.He.POST_MESSAGE) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new A.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new b.Z({ errorCode: y.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

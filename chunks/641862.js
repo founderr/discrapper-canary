@@ -19,18 +19,18 @@ var r = n(175730),
     _ = function (e) {
         return parseFloat(e || '0');
     },
-    h = function (e, t, n) {
+    p = function (e, t, n) {
         return void 0 === e && (e = 0), void 0 === t && (t = 0), void 0 === n && (n = !1), new i.D((n ? t : e) || 0, (n ? e : t) || 0);
     },
-    p = (0, o.v)({
-        devicePixelContentBoxSize: h(),
-        borderBoxSize: h(),
-        contentBoxSize: h(),
+    h = (0, o.v)({
+        devicePixelContentBoxSize: p(),
+        borderBoxSize: p(),
+        contentBoxSize: p(),
         contentRect: new a.N(0, 0, 0, 0)
     }),
     m = function (e, t) {
         if ((void 0 === t && (t = !1), u.has(e) && !t)) return u.get(e);
-        if ((0, s.xj)(e)) return u.set(e, p), p;
+        if ((0, s.xj)(e)) return u.set(e, h), h;
         var n = getComputedStyle(e),
             r = (0, s.zd)(e) && e.ownerSVGElement && e.getBBox(),
             i = !f && 'border-box' === n.boxSizing,
@@ -40,15 +40,15 @@ var r = n(175730),
             E = r ? 0 : _(n.paddingTop),
             v = r ? 0 : _(n.paddingRight),
             I = r ? 0 : _(n.paddingBottom),
-            S = r ? 0 : _(n.paddingLeft),
-            T = r ? 0 : _(n.borderTopWidth),
-            b = r ? 0 : _(n.borderRightWidth),
+            b = r ? 0 : _(n.paddingLeft),
+            S = r ? 0 : _(n.borderTopWidth),
+            T = r ? 0 : _(n.borderRightWidth),
             y = r ? 0 : _(n.borderBottomWidth),
             A = r ? 0 : _(n.borderLeftWidth),
-            N = S + v,
+            N = b + v,
             C = E + I,
-            R = A + b,
-            O = T + y,
+            R = A + T,
+            O = S + y,
             D = g ? e.offsetHeight - O - e.clientHeight : 0,
             L = m ? e.offsetWidth - R - e.clientWidth : 0,
             x = r ? r.width : _(n.width) - (i ? N + R : 0) - L,
@@ -56,10 +56,10 @@ var r = n(175730),
             M = x + N + L + R,
             P = w + C + D + O,
             k = (0, o.v)({
-                devicePixelContentBoxSize: h(Math.round(x * devicePixelRatio), Math.round(w * devicePixelRatio), l),
-                borderBoxSize: h(M, P, l),
-                contentBoxSize: h(x, w, l),
-                contentRect: new a.N(S, E, x, w)
+                devicePixelContentBoxSize: p(Math.round(x * devicePixelRatio), Math.round(w * devicePixelRatio), l),
+                borderBoxSize: p(M, P, l),
+                contentBoxSize: p(x, w, l),
+                contentRect: new a.N(b, E, x, w)
             });
         return u.set(e, k), k;
     },

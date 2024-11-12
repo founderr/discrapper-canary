@@ -12,10 +12,10 @@ function _(e) {
     let { error: t } = e;
     c = t;
 }
-function h() {
+function p() {
     c = null;
 }
-class p extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     get paymentError() {
         return c;
     }
@@ -24,7 +24,7 @@ class p extends (s = o.ZP.Store) {
     }
 }
 (a = 'PremiumPaymentModalStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -32,14 +32,14 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(l.Z, {
+    (t.Z = new h(l.Z, {
         PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
         PREMIUM_PAYMENT_UPDATE_FAIL: _,
         PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function () {
-            h();
+            p();
         },
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
-        PREMIUM_PAYMENT_ERROR_CLEAR: h,
+        PREMIUM_PAYMENT_UPDATE_SUCCESS: p,
+        PREMIUM_PAYMENT_ERROR_CLEAR: p,
         BRAINTREE_TOKENIZE_PAYPAL_FAIL: function (e) {
             let { message: t, code: n } = e;
             c = new u.HF(t, n);

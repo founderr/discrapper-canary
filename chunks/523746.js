@@ -9,8 +9,8 @@ var r,
     d = n(570140),
     f = n(592125),
     _ = n(944486),
-    h = n(914010),
-    p = n(981631);
+    p = n(914010),
+    h = n(981631);
 let m = {},
     g = {};
 function E() {
@@ -38,7 +38,7 @@ function E() {
 }
 class v extends (s = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, _.Z);
+        this.waitFor(p.Z, _.Z);
     }
     getCall(e) {
         return m[e];
@@ -114,7 +114,7 @@ class v extends (s = u.ZP.Store) {
                 delete g[t],
                     1 !== e.indexOf('all') && (e = null),
                     c.tn.post({
-                        url: p.ANM.CALL_RING(t),
+                        url: h.ANM.CALL_RING(t),
                         body: { recipients: e },
                         oldFormErrors: !0
                     });

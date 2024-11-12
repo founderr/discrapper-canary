@@ -15,15 +15,15 @@ var i = n(481060),
     d = n(594174),
     f = n(626135),
     _ = n(621853),
-    h = n(981631),
-    p = n(616922);
+    p = n(981631),
+    h = n(616922);
 let m = null;
 function g(e, t) {
     return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t ? '' : t);
 }
 async function E(e) {
     var t, a, s, E;
-    let { userId: v, section: I, subsection: S, guildId: T, channelId: b, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
+    let { userId: v, section: I, subsection: b, guildId: S, channelId: T, friendToken: y, analyticsLocation: A, showGuildProfile: N = !0, ...C } = e,
         R = d.default.getUser(v);
     if (null == R) return;
     let O = _.Z.getUserProfile(v),
@@ -32,30 +32,30 @@ async function E(e) {
         x = u.Z.isMobileOnline(v),
         { party: w, assets: M, application_id: P } = null != D ? D : {},
         k = null != P ? l.Z.getApplication(P) : null,
-        U = x ? h.j28.ONLINE_MOBILE : h.j28.ONLINE_DESKTOP,
-        G = L === h.Skl.ONLINE ? U : L;
+        U = x ? p.j28.ONLINE_MOBILE : p.j28.ONLINE_DESKTOP,
+        G = L === p.Skl.ONLINE ? U : L;
     (m = await (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e('89943'), n.e('62880'), n.e('82412'), n.e('8576')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
                     user: R,
-                    guildId: T,
+                    guildId: S,
                     friendToken: y,
                     initialSection: I,
-                    initialSubsection: S,
-                    channelId: b,
+                    initialSubsection: b,
+                    channelId: T,
                     showGuildProfile: N,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: g(v, N ? T : void 0) }
+        { modalKey: g(v, N ? S : void 0) }
     )),
-        f.default.track(h.rMx.OPEN_MODAL, {
+        f.default.track(p.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
-            guild_id: T,
-            channel_id: b,
+            guild_id: S,
+            channel_id: T,
             other_user_id: v,
             application_id: null !== (a = null == D ? void 0 : D.application_id) && void 0 !== a ? a : null,
             application_name: null == D ? void 0 : D.name,
@@ -64,7 +64,7 @@ async function E(e) {
             has_images: !!(null !== (E = null == M ? void 0 : M.large_image) && void 0 !== E ? E : null == M ? void 0 : M.small_image),
             party_max: null == w ? void 0 : null === (t = w.size) || void 0 === t ? void 0 : t[1],
             party_id: null == w ? void 0 : w.id,
-            party_platform: (0, p.Ps)(null == w ? void 0 : w.id) ? h.ABu.SPOTIFY : null,
+            party_platform: (0, h.Ps)(null == w ? void 0 : w.id) ? p.ABu.SPOTIFY : null,
             game_platform: (0, o.Z)(D),
             profile_user_status: G,
             profile_has_nitro_customization: (null == O ? void 0 : O.banner) != null,

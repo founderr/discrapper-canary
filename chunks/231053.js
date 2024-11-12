@@ -49,7 +49,7 @@ let f = async (e) => {
               })
             : (null == n ? void 0 : n.type) === 'APPLICATION' &&
               (t = {
-                  application: h.createFromServer(n.application),
+                  application: p.createFromServer(n.application),
                   type: n.type
               });
     } catch {}
@@ -136,9 +136,9 @@ class _ extends s.Z {
         super(), d(this, 'id', void 0), d(this, 'name', void 0), d(this, 'icon', void 0), d(this, 'description', void 0), d(this, 'features', void 0), d(this, 'premiumTier', void 0), d(this, 'premiumSubscriberCount', void 0), d(this, 'presenceCount', void 0), d(this, 'memberCount', void 0), d(this, 'emojis', void 0), (this.id = e.id), (this.name = e.name), (this.icon = e.icon), (this.description = e.description), (this.features = e.features), (this.premiumTier = e.premiumTier), (this.premiumSubscriberCount = e.premiumSubscriberCount), (this.presenceCount = e.presenceCount), (this.memberCount = e.memberCount), (this.emojis = e.emojis);
     }
 }
-class h extends s.Z {
+class p extends s.Z {
     static createFromServer(e) {
-        return new h({
+        return new p({
             id: e.id,
             name: e.name
         });

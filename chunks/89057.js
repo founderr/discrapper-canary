@@ -24,11 +24,11 @@ var r = n(120356),
     h = n(388032),
     A = n(943981),
     E = n(51125),
-    f = n(47268);
-function N(e) {
+    N = n(47268);
+function f(e) {
     let { className: t } = e,
         n = (0, c.ZP)(),
-        r = (0, s.wj)(n) ? E : f;
+        r = (0, s.wj)(n) ? E : N;
     return (0, a.jsxs)('div', {
         className: l()(A.container, t),
         children: [
@@ -52,7 +52,7 @@ function N(e) {
     });
 }
 function b() {
-    return (0, a.jsx)(N, { className: A.settings });
+    return (0, a.jsx)(f, { className: A.settings });
 }
 function _(e) {
     let { onClose: t } = e;
@@ -65,7 +65,7 @@ function _(e) {
             }),
             (0, a.jsx)(o.ModalContent, {
                 className: A.blockedPaymentsModalContent,
-                children: (0, a.jsx)(N, { className: A.modal })
+                children: (0, a.jsx)(f, { className: A.modal })
             })
         ]
     });

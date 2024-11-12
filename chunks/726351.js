@@ -9,10 +9,10 @@ var r = n(201694).forEach,
     d = n(656082),
     f = n(302366),
     _ = n(78687);
-function h(e) {
+function p(e) {
     return Array.isArray(e) || void 0 !== e.length;
 }
-function p(e) {
+function h(e) {
     if (Array.isArray(e)) return e;
     var t = [];
     return (
@@ -49,9 +49,9 @@ e.exports = function (e) {
     var v = g(e, 'batchProcessor', c({ reporter: E })),
         I = {};
     (I.callOnAdd = !!g(e, 'callOnAdd', !0)), (I.debug = !!g(e, 'debug', !1));
-    var S = a(t),
-        T = i({ stateHandler: d }),
-        b = g(e, 'strategy', 'object'),
+    var b = a(t),
+        S = i({ stateHandler: d }),
+        T = g(e, 'strategy', 'object'),
         y = g(e, 'important', !1),
         A = {
             reporter: E,
@@ -60,26 +60,26 @@ e.exports = function (e) {
             idHandler: t,
             important: y
         };
-    if (('scroll' === b && (u.isLegacyOpera() ? (E.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (b = 'object')) : u.isIE(9) && (E.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (b = 'object'))), 'scroll' === b)) n = _(A);
-    else if ('object' === b) n = f(A);
-    else throw Error('Invalid strategy name: ' + b);
+    if (('scroll' === T && (u.isLegacyOpera() ? (E.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (T = 'object')) : u.isIE(9) && (E.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (T = 'object'))), 'scroll' === T)) n = _(A);
+    else if ('object' === T) n = f(A);
+    else throw Error('Invalid strategy name: ' + T);
     var N = {};
     return {
         listenTo: function (e, i, a) {
             function s(e) {
-                r(S.get(e), function (t) {
+                r(b.get(e), function (t) {
                     t(e);
                 });
             }
             function o(e, t, n) {
-                S.add(t, n), e && n(t);
+                b.add(t, n), e && n(t);
             }
             if ((!a && ((a = i), (i = e), (e = {})), !i)) throw Error('At least one element required.');
             if (!a) throw Error('Listener required.');
             if (m(i)) i = [i];
             else {
-                if (!h(i)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
-                i = p(i);
+                if (!p(i)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+                i = h(i);
             }
             var l = 0,
                 u = g(e, 'callOnAdd', I.callOnAdd),
@@ -88,8 +88,8 @@ e.exports = function (e) {
             r(i, function (e) {
                 !d.getState(e) && (d.initState(e), t.set(e));
                 var _ = t.get(e);
-                if ((f && E.log('Attaching listener to element', _, e), !T.isDetectable(e))) {
-                    if ((f && E.log(_, 'Not detectable.'), T.isBusy(e))) {
+                if ((f && E.log('Attaching listener to element', _, e), !S.isDetectable(e))) {
+                    if ((f && E.log(_, 'Not detectable.'), S.isBusy(e))) {
                         f && E.log(_, 'System busy making it detectable'),
                             o(u, e, a),
                             (N[_] = N[_] || []),
@@ -100,7 +100,7 @@ e.exports = function (e) {
                     }
                     return (
                         f && E.log(_, 'Making detectable...'),
-                        T.markBusy(e, !0),
+                        S.markBusy(e, !0),
                         n.makeDetectable(
                             {
                                 debug: f,
@@ -109,12 +109,12 @@ e.exports = function (e) {
                             e,
                             function (e) {
                                 if ((f && E.log(_, 'onElementDetectable'), d.getState(e))) {
-                                    T.markAsDetectable(e), T.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
+                                    S.markAsDetectable(e), S.markBusy(e, !1), n.addListener(e, s), o(u, e, a);
                                     var t = d.getState(e);
                                     if (t && t.startSize) {
-                                        var h = e.offsetWidth,
-                                            p = e.offsetHeight;
-                                        (t.startSize.width !== h || t.startSize.height !== p) && s(e);
+                                        var p = e.offsetWidth,
+                                            h = e.offsetHeight;
+                                        (t.startSize.width !== p || t.startSize.height !== h) && s(e);
                                     }
                                     N[_] &&
                                         r(N[_], function (e) {
@@ -130,17 +130,17 @@ e.exports = function (e) {
             }),
                 l === i.length && c();
         },
-        removeListener: S.removeListener,
-        removeAllListeners: S.removeAllListeners,
+        removeListener: b.removeListener,
+        removeAllListeners: b.removeAllListeners,
         uninstall: function (e) {
             if (!e) return E.error('At least one element is required.');
             if (m(e)) e = [e];
             else {
-                if (!h(e)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
-                e = p(e);
+                if (!p(e)) return E.error('Invalid arguments. Must be a DOM element or a collection of DOM elements.');
+                e = h(e);
             }
             r(e, function (e) {
-                S.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
+                b.removeAllListeners(e), n.uninstall(e), d.cleanState(e);
             });
         },
         initDocument: function (e) {

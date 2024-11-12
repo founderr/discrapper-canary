@@ -152,7 +152,7 @@ e.exports = {
                 else if (f) i[a] = f;
                 else {
                     var _ = u && r.shorthandPropertyExpansions[a];
-                    if (_) for (var h in _) i[h] = '';
+                    if (_) for (var p in _) i[p] = '';
                     else i[a] = '';
                 }
             }

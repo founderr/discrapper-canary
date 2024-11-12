@@ -18,8 +18,8 @@ e.exports = function (e, t, r, i, a, s) {
         if (((l = this.callbacks[e][o]), (!!i || !l.seq || this.sequenceLevels[l.seq] === l.level) && f === l.action)) {
             if (((c = n(758686)), ('keypress' === f && !r.metaKey && !r.ctrlKey) || c(t, l.modifiers))) {
                 var _ = !i && l.combo === a,
-                    h = i && l.seq === i && l.level === s;
-                (_ || h) && this.callbacks[e].splice(o, 1), d.push(l);
+                    p = i && l.seq === i && l.level === s;
+                (_ || p) && this.callbacks[e].splice(o, 1), d.push(l);
             }
         }
     }

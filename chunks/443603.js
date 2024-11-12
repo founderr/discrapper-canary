@@ -14,8 +14,8 @@ var r,
     d = n(686546),
     f = n(540059),
     _ = n(855981),
-    h = n(55543),
-    p = n(364677);
+    p = n(55543),
+    h = n(364677);
 ((r = i || (i = {}))[(r.UPDATE = 0)] = 'UPDATE'), (r[(r.NEW = 1)] = 'NEW');
 let m = {
     config: {
@@ -41,7 +41,7 @@ let m = {
     }
 };
 t.Z = s.memo(function (e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: g, onClick: E, isActive: v, onMouseEnter: I, onMouseLeave: S, onFocus: T, onBlur: b, pulse: y, sparkle: A, notification: N, 'aria-label': C, 'aria-expanded': R, 'aria-haspopup': O, 'aria-controls': D } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: g, onClick: E, isActive: v, onMouseEnter: I, onMouseLeave: b, onFocus: S, onBlur: T, pulse: y, sparkle: A, notification: N, 'aria-label': C, 'aria-expanded': R, 'aria-haspopup': O, 'aria-controls': D } = e,
         L = (0, f.Q)('ChannelTextAreaButton'),
         x = (0, c.useTransition)(null != g, {
             ...m,
@@ -51,16 +51,16 @@ t.Z = s.memo(function (e) {
             let { component: t } = e;
             return null != N
                 ? (0, a.jsxs)('div', {
-                      className: p.buttonContent,
+                      className: h.buttonContent,
                       children: [
                           (0, a.jsx)(d.ZP, {
-                              className: p.iconMask,
+                              className: h.iconMask,
                               mask: d.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: L ? 20 : 24,
                               height: L ? 20 : 24,
                               children: t
                           }),
-                          (0, a.jsx)('span', { className: p.notificationDot })
+                          (0, a.jsx)('span', { className: h.notificationDot })
                       ]
                   })
                 : t;
@@ -73,13 +73,13 @@ t.Z = s.memo(function (e) {
         'aria-haspopup': O,
         'aria-controls': D,
         disabled: n,
-        className: l()(t, { [p.active]: v }),
-        innerClassName: l()(p.button, r, { [p.pulseButton]: y }),
+        className: l()(t, { [h.active]: v }),
+        innerClassName: l()(h.button, r, { [h.pulseButton]: y }),
         onClick: E,
         onMouseEnter: I,
-        onMouseLeave: S,
-        onFocus: T,
-        onBlur: b,
+        onMouseLeave: b,
+        onFocus: S,
+        onBlur: T,
         focusProps: {
             offset: {
                 top: 4,
@@ -94,7 +94,7 @@ t.Z = s.memo(function (e) {
                           u.animated.div,
                           {
                               style: e,
-                              className: l()(p.buttonWrapper, i),
+                              className: l()(h.buttonWrapper, i),
                               children: w({ component: g })
                           },
                           r
@@ -104,10 +104,10 @@ t.Z = s.memo(function (e) {
                             u.animated.div,
                             {
                                 style: e,
-                                className: l()(p.buttonWrapper, i),
+                                className: l()(h.buttonWrapper, i),
                                 children: w({
                                     component: (0, a.jsx)(o, {
-                                        className: l()(p.icon, s, { [p.pulseIcon]: y }),
+                                        className: l()(h.icon, s, { [h.pulseIcon]: y }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -118,8 +118,8 @@ t.Z = s.memo(function (e) {
             }),
             A &&
                 (0, a.jsxs)('div', {
-                    className: p.sparkleContainer,
-                    children: [(0, a.jsx)(h.Z, { className: p.sparkleStar }), (0, a.jsx)(_.Z, { className: p.sparklePlus })]
+                    className: h.sparkleContainer,
+                    children: [(0, a.jsx)(p.Z, { className: h.sparkleStar }), (0, a.jsx)(_.Z, { className: h.sparklePlus })]
                 })
         ]
     });

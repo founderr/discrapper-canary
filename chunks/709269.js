@@ -68,7 +68,7 @@ e.exports = function (e) {
     f.contains = [i, s, e.inherit(e.APOS_STRING_MODE, { className: '' }), f, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
     let _ = [i, s, f, o, e.QUOTE_STRING_MODE, a, l, u, c, d];
     (o.contains[1].contains = _), (l.contains = _), (d.contains[1].contains = _);
-    let h = {
+    let p = {
         className: 'params',
         begin: '\\(',
         end: '\\)',
@@ -86,7 +86,7 @@ e.exports = function (e) {
                 end: '->',
                 returnBegin: !0,
                 illegal: '\\(|#|//|/\\*|\\\\|:|;',
-                contains: [h, e.inherit(e.TITLE_MODE, { begin: t })],
+                contains: [p, e.inherit(e.TITLE_MODE, { begin: t })],
                 starts: {
                     end: ';|\\.',
                     keywords: r,
@@ -104,7 +104,7 @@ e.exports = function (e) {
                     $pattern: '-' + e.IDENT_RE,
                     keyword: ['-module', '-record', '-undef', '-export', '-ifdef', '-ifndef', '-author', '-copyright', '-doc', '-vsn', '-import', '-include', '-include_lib', '-compile', '-define', '-else', '-endif', '-file', '-behaviour', '-behavior', '-spec'].map((e) => `${e}|1.5`).join(' ')
                 },
-                contains: [h]
+                contains: [p]
             },
             a,
             e.QUOTE_STRING_MODE,

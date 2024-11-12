@@ -10,8 +10,8 @@ var r,
     d = n(570140),
     f = n(840877),
     _ = n(952537),
-    h = n(592125),
-    p = n(430824),
+    p = n(592125),
+    h = n(430824),
     m = n(981631);
 let g = {};
 function E(e) {
@@ -40,7 +40,7 @@ function E(e) {
     );
 }
 function v(e) {
-    return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != p.Z.getGuild(e) ? m.aib.GUILD : null != h.Z.getChannel(e) ? m.aib.CHANNEL : null;
+    return e === m.aib.DMS ? m.aib.DMS : e === m.I_8 ? m.aib.FAVORITES : null != h.Z.getGuild(e) ? m.aib.GUILD : null != p.Z.getChannel(e) ? m.aib.CHANNEL : null;
 }
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
@@ -48,17 +48,17 @@ function I(e, t) {
     let r = g[e];
     return null == r ? n : t(r);
 }
-let S = 'SearchStore',
-    T = !1,
-    b = {},
+let b = 'SearchStore',
+    S = !1,
+    T = {},
     y = null;
 function A(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
-    let i = (b[n] = null !== (t = b[n]) && void 0 !== t ? t : []),
+    let i = (T[n] = null !== (t = T[n]) && void 0 !== t ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(S, { history: b });
+    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), c.K.set(b, { history: T });
 }
 function N(e) {
     let { searchId: t } = e,
@@ -72,16 +72,16 @@ function C(e) {
 }
 class R extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, h.Z);
-        let e = c.K.get(S);
+        this.waitFor(h.Z, p.Z);
+        let e = c.K.get(b);
         if ((null == e ? void 0 : e.history) != null) {
             var t;
             Object.keys((t = e.history)).forEach((e) => {
                 Array.isArray(t[e]) && (t[e] = t[e].filter((e) => 'string' == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e];
             }),
-                (b = t);
+                (T = t);
         }
-        T = !!c.K.get('tokenized');
+        S = !!c.K.get('tokenized');
     }
     getCurrentSearchId() {
         return y;
@@ -91,7 +91,7 @@ class R extends (r = u.ZP.Store) {
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
-        return T;
+        return S;
     }
     getSearchType(e) {
         return I(null != e ? e : y, (e) => e.searchType);
@@ -131,7 +131,7 @@ class R extends (r = u.ZP.Store) {
         return I(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return b[e];
+        return T[e];
     }
     getOffset(e) {
         var t;
@@ -195,7 +195,7 @@ class R extends (r = u.ZP.Store) {
                     searchId: i,
                     query: r
                 });
-            let c = i === m.I_8 ? (null === (t = h.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === m.aib.GUILD ? i : null;
+            let c = i === m.I_8 ? (null === (t = p.Z.getChannel(i)) || void 0 === t ? void 0 : t.guild_id) : o === m.aib.GUILD ? i : null;
             u.fetch(
                 (e) => {
                     var t, n;
@@ -272,15 +272,15 @@ class R extends (r = u.ZP.Store) {
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null == t ? (c.K.remove(S), (b = {})) : (delete b[t], c.K.set(S, { history: b }));
+            null == t ? (c.K.remove(b), (T = {})) : (delete T[t], c.K.set(b, { history: T }));
         },
         SEARCH_REMOVE_HISTORY: function (e) {
             let { searchId: t, query: n } = e;
-            null != b[t] && ((b[t] = b[t].filter((e) => e !== n)), c.K.set(S, { history: b }));
+            null != T[t] && ((T[t] = T[t].filter((e) => e !== n)), c.K.set(b, { history: T }));
         },
         SEARCH_ADD_HISTORY: A,
         LOGOUT: function () {
-            c.K.remove(S), (b = {});
+            c.K.remove(b), (T = {});
         },
         CONNECTION_OPEN: function () {
             Object.keys(g).forEach((e) => {

@@ -11,14 +11,14 @@ var r = n(192379),
     l = n(221292);
 function u(e) {
     let { user: t, display: n, activity: u, entry: c, stream: d, analyticsLocations: f } = e,
-        { context: _, trackUserProfileAction: h } = (0, o.KZ)(),
-        { analyticsLocations: p } = (0, a.ZP)(),
-        m = null != f ? f : p,
+        { context: _, trackUserProfileAction: p } = (0, o.KZ)(),
+        { analyticsLocations: h } = (0, a.ZP)(),
+        m = null != f ? f : h,
         g = (0, i.e7)([s.Z], () => s.Z.getUserOutbox(t.id));
     return (0, r.useCallback)(
         (e) => {
             let { action: t } = e;
-            h({
+            p({
                 action: t,
                 analyticsLocations: m
             }),
@@ -33,6 +33,6 @@ function u(e) {
                     ..._
                 });
         },
-        [h, _, n, u, d, c, g, m]
+        [p, _, n, u, d, c, g, m]
     );
 }

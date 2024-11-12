@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -15,18 +15,18 @@ var r = n(200651),
     d = n(388032),
     f = n(517066),
     _ = n(554034),
-    h = n(413097);
-function p(e) {
+    p = n(413097);
+function h(e) {
     let { application: t, onSelect: n, onClose: u } = e,
         { iconURL: _ } = i.useMemo(
             () =>
                 (0, o.sl)(t, {
-                    fakeAppIconURL: h,
+                    fakeAppIconURL: p,
                     size: 84
                 }),
             [t]
         ),
-        p = i.useMemo(
+        h = i.useMemo(
             () =>
                 [
                     {
@@ -77,7 +77,7 @@ function p(e) {
             }),
             (0, r.jsx)('ul', {
                 className: f.rows,
-                children: p.map((e) =>
+                children: h.map((e) =>
                     (0, r.jsxs)(
                         s.Clickable,
                         {
@@ -173,8 +173,8 @@ function E(e) {
         }, [t]),
         {
             ref: c,
-            lineHeight: h,
-            lineCount: p
+            lineHeight: p,
+            lineCount: h
         } = (function () {
             let e = i.useRef(null),
                 [t, n] = i.useState(null),
@@ -194,14 +194,14 @@ function E(e) {
             );
         })(),
         m = i.useMemo(() => {
-            if (null == h || null == p) return { key: 0 };
-            let e = h * p;
+            if (null == p || null == h) return { key: 0 };
+            let e = p * h;
             return {
                 key: 1,
-                minHeightOverride: Math.min(e, 3 * h),
+                minHeightOverride: Math.min(e, 3 * p),
                 maxHeightOverride: e
             };
-        }, [p, h]),
+        }, [h, p]),
         {
             ref: g,
             isTransitioning: E,
@@ -227,7 +227,7 @@ function E(e) {
                     children: l
                 })
             }),
-            null != p && p > 3
+            null != h && h > 3
                 ? (0, r.jsxs)(s.Clickable, {
                       className: f.expandableDescriptionClickable,
                       onClick: () => o((e) => !e),

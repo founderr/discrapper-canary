@@ -22,13 +22,13 @@ var i = n(200651),
     N = n(666286),
     T = n(596957),
     x = n(981631),
-    A = n(723359),
-    b = n(388032),
+    b = n(723359),
+    A = n(388032),
     Z = n(692392);
 function y() {
     return (0, i.jsxs)('div', {
         className: Z.inviteToolbar,
-        children: [(0, i.jsx)(E.Z, { tooltip: b.intl.string(b.t.HfOgAw) }), (0, i.jsx)(_.Z.Divider, {})]
+        children: [(0, i.jsx)(E.Z, { tooltip: A.intl.string(A.t.HfOgAw) }), (0, i.jsx)(_.Z.Divider, {})]
     });
 }
 t.Z = function (e) {
@@ -39,7 +39,7 @@ t.Z = function (e) {
         'true' === new URLSearchParams(n.search).get('confirm-age') &&
             u.Z.dispatch({
                 type: 'AGE_GATE_MODAL_OPEN',
-                source: A.L0.DEEP_LINK_PROMPT
+                source: b.L0.DEEP_LINK_PROMPT
             }).then(() => {
                 l.replace(x.Z5c.ME);
             });
@@ -60,9 +60,9 @@ t.Z = function (e) {
         D = (0, g.Dt)();
     return (0, i.jsxs)('main', {
         className: Z.container,
-        'aria-label': b.intl.string(b.t.TdEu5e),
+        'aria-label': A.intl.string(A.t.TdEu5e),
         children: [
-            (0, i.jsx)(p.yY, { location: b.intl.string(b.t.TdEu5e) }),
+            (0, i.jsx)(p.yY, { location: A.intl.string(A.t.TdEu5e) }),
             (0, i.jsx)(d.ThemeProvider, {
                 theme: E,
                 children: (e) =>
@@ -79,11 +79,11 @@ t.Z = function (e) {
                             }),
                             (0, i.jsx)(_.Z.Title, {
                                 id: P,
-                                children: b.intl.string(b.t.TdEu5e)
+                                children: A.intl.string(A.t.TdEu5e)
                             }),
                             (0, i.jsx)(_.Z.Divider, {}),
                             (0, i.jsxs)(d.TabBar, {
-                                'aria-label': b.intl.string(b.t.TdEu5e),
+                                'aria-label': A.intl.string(A.t.TdEu5e),
                                 selectedItem: L,
                                 type: 'top-pill',
                                 onItemSelect: O,
@@ -92,19 +92,19 @@ t.Z = function (e) {
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: x.pJs.ONLINE,
                                         className: Z.item,
-                                        children: b.intl.string(b.t.b9w3bG)
+                                        children: A.intl.string(A.t.b9w3bG)
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: x.pJs.ALL,
                                         className: Z.item,
-                                        children: b.intl.string(b.t.PfjFjY)
+                                        children: A.intl.string(A.t.PfjFjY)
                                     }),
                                     (0, i.jsxs)(d.TabBar.Item, {
                                         id: x.pJs.PENDING,
                                         className: Z.item,
-                                        'aria-label': b.intl.string(b.t.p6IHGB),
+                                        'aria-label': A.intl.string(A.t.p6IHGB),
                                         children: [
-                                            b.intl.string(b.t.p6IHGB),
+                                            A.intl.string(A.t.p6IHGB),
                                             R > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
                                                       count: R,
@@ -117,9 +117,9 @@ t.Z = function (e) {
                                         ? (0, i.jsxs)(d.TabBar.Item, {
                                               id: x.pJs.SUGGESTIONS,
                                               className: Z.item,
-                                              'aria-label': b.intl.string(b.t['8rSi19']),
+                                              'aria-label': A.intl.string(A.t['8rSi19']),
                                               children: [
-                                                  b.intl.string(b.t['8rSi19']),
+                                                  A.intl.string(A.t['8rSi19']),
                                                   (0, i.jsx)(d.NumberBadge, {
                                                       count: j,
                                                       className: Z.badge
@@ -130,13 +130,13 @@ t.Z = function (e) {
                                     (0, i.jsx)(d.TabBar.Item, {
                                         id: x.pJs.BLOCKED,
                                         className: Z.item,
-                                        children: b.intl.string(b.t['4bDptL'])
+                                        children: A.intl.string(A.t['4bDptL'])
                                     }),
                                     (0, i.jsx)(d.TabBar.Item, {
-                                        'aria-label': b.intl.string(b.t.j0wbEx),
+                                        'aria-label': A.intl.string(A.t.j0wbEx),
                                         className: a()(Z.item, Z.addFriend),
                                         id: x.pJs.ADD_FRIEND,
-                                        children: (0, i.jsx)('span', { children: b.intl.string(b.t.j0wbEx) })
+                                        children: (0, i.jsx)('span', { children: A.intl.string(A.t.j0wbEx) })
                                     })
                                 ]
                             })

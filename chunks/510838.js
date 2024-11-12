@@ -63,41 +63,41 @@ function f(e, t, n) {
     return s;
 }
 (e.exports = function (e, t, n, i, _) {
-    var h = l(t);
-    if (h.curve) {
+    var p = l(t);
+    if (p.curve) {
         if ('ecdsa' !== i && 'ecdsa/rsa' !== i) throw Error('wrong private key type');
         return (function (e, t) {
             var n = u[t.curve.join('.')];
             if (!n) throw Error('unknown curve ' + t.curve.join('.'));
             var i = new s(n).keyFromPrivate(t.privateKey).sign(e);
             return r.from(i.toDER());
-        })(e, h);
+        })(e, p);
     }
-    if ('dsa' === h.type) {
+    if ('dsa' === p.type) {
         if ('dsa' !== i) throw Error('wrong private key type');
         return (function (e, t, n) {
-            for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, _ = new o(0), h = d(e, l).mod(l), p = !1, m = c(a, l, e, n); !1 === p; )
+            for (var i, a = t.params.priv_key, s = t.params.p, l = t.params.q, u = t.params.g, _ = new o(0), p = d(e, l).mod(l), h = !1, m = c(a, l, e, n); !1 === h; )
                 (_ = (function (e, t, n, r) {
                     return e.toRed(o.mont(n)).redPow(t).fromRed().mod(r);
                 })(u, (i = f(l, m, n)), s, l)),
                     0 ===
-                        (p = i
+                        (h = i
                             .invm(l)
-                            .imul(h.add(a.mul(_)))
-                            .mod(l)).cmpn(0) && ((p = !1), (_ = new o(0)));
+                            .imul(p.add(a.mul(_)))
+                            .mod(l)).cmpn(0) && ((h = !1), (_ = new o(0)));
             return (function (e, t) {
                 (e = e.toArray()), (t = t.toArray()), 128 & e[0] && (e = [0].concat(e)), 128 & t[0] && (t = [0].concat(t));
                 var n = [48, e.length + t.length + 4, 2, e.length];
                 return (n = n.concat(e, [2, t.length], t)), r.from(n);
-            })(_, p);
-        })(e, h, n);
+            })(_, h);
+        })(e, p, n);
     }
     if ('rsa' !== i && 'ecdsa/rsa' !== i) throw Error('wrong private key type');
     e = r.concat([_, e]);
-    for (var p = h.modulus.byteLength(), m = [0, 1]; e.length + m.length + 1 < p; ) m.push(255);
+    for (var h = p.modulus.byteLength(), m = [0, 1]; e.length + m.length + 1 < h; ) m.push(255);
     m.push(0);
     for (var g = -1; ++g < e.length; ) m.push(e[g]);
-    return a(m, h);
+    return a(m, p);
 }),
     (e.exports.getKey = c),
     (e.exports.makeKey = f);

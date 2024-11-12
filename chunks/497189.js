@@ -22,8 +22,8 @@ var i = n(200651),
     N = n(207796),
     T = n(273254),
     x = n(559469),
-    A = n(308083),
-    b = n(388032),
+    b = n(308083),
+    A = n(388032),
     Z = n(431476),
     y = n(345480),
     L = n(236613);
@@ -97,13 +97,13 @@ function P(e) {
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: b.intl.string(b.t['6RMihY'])
+                              children: A.intl.string(A.t['6RMihY'])
                           }),
                           (0, i.jsx)(c.Heading, {
                               className: Z.upsellSubtitle,
                               variant: 'heading-md/medium',
                               color: 'header-secondary',
-                              children: b.intl.string(b.t.xlIWLS)
+                              children: A.intl.string(A.t.xlIWLS)
                           })
                       ]
                   })
@@ -112,22 +112,22 @@ function P(e) {
                           (0, i.jsxs)(c.Heading, {
                               className: Z.upsellTitle,
                               variant: 'heading-xxl/semibold',
-                              children: [b.intl.string(b.t.Uw5KKC), (0, i.jsx)('br', {}), b.intl.string(b.t['jZvR+f'])]
+                              children: [A.intl.string(A.t.Uw5KKC), (0, i.jsx)('br', {}), A.intl.string(A.t['jZvR+f'])]
                           }),
                           (0, i.jsxs)('div', {
                               className: Z.upsellDetails,
                               children: [
                                   (0, i.jsx)(O, {
                                       icon: c.CompassIcon,
-                                      text: b.intl.string(b.t.v0ZdNj)
+                                      text: A.intl.string(A.t.v0ZdNj)
                                   }),
                                   (0, i.jsx)(O, {
                                       icon: c.CircleCheckIcon,
-                                      text: b.intl.string(b.t.L1fEc3)
+                                      text: A.intl.string(A.t.L1fEc3)
                                   }),
                                   (0, i.jsx)(O, {
                                       icon: c.GroupIcon,
-                                      text: b.intl.string(b.t.ChMjnp)
+                                      text: A.intl.string(A.t.ChMjnp)
                                   })
                               ]
                           })
@@ -171,7 +171,7 @@ function P(e) {
                                                 children: (0, i.jsx)(c.Text, {
                                                     variant: 'text-sm/medium',
                                                     color: 'header-primary',
-                                                    children: b.intl.string(b.t['0ZJsur'])
+                                                    children: A.intl.string(A.t['0ZJsur'])
                                                 })
                                             })
                                         ]
@@ -221,7 +221,7 @@ t.Z = r.memo(function (e) {
                                   guildId: y
                               });
                           },
-                          { layerKey: A.Pv }
+                          { layerKey: b.Pv }
                       )
                     : (0, C.q4)(
                           (e) => {
@@ -231,7 +231,7 @@ t.Z = r.memo(function (e) {
                                   guildId: y
                               });
                           },
-                          { layerKey: A.Pv }
+                          { layerKey: b.Pv }
                       ));
         }, [M, a, y]),
         k = r.useCallback(() => {
@@ -316,7 +316,7 @@ t.Z = r.memo(function (e) {
             },
             'animate-always'
         ),
-        Q = r.useMemo(() => (l ? b.intl.string(b.t.ZA9f19) : null == D ? b.intl.string(b.t.fLiOgI) : b.intl.string(b.t.GnIKBA)), [D, l]),
+        Q = r.useMemo(() => (l ? A.intl.string(A.t.ZA9f19) : null == D ? A.intl.string(A.t.fLiOgI) : A.intl.string(A.t.GnIKBA)), [D, l]),
         J = r.useCallback(async () => {
             await (0, m.Zx)(y), d.Z.transitionToGuildSync('936317138904440892');
         }, [y]),
@@ -326,7 +326,7 @@ t.Z = r.memo(function (e) {
                     tag: 'span',
                     className: Z.joinWFSLink,
                     onClick: J,
-                    'aria-label': b.intl.string(b.t['6PJMUF']),
+                    'aria-label': A.intl.string(A.t['6PJMUF']),
                     children: (0, i.jsx)(c.Text, {
                         tag: 'span',
                         variant: 'text-xs/medium',
@@ -426,7 +426,7 @@ t.Z = r.memo(function (e) {
                           children: (0, i.jsx)(c.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
-                              children: b.intl.format(b.t['5lqT9P'], { wfsHook: $ })
+                              children: A.intl.format(A.t['5lqT9P'], { wfsHook: $ })
                           })
                       })
                   })

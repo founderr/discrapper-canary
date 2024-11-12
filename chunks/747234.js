@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         IGNORE_CLASS_NAME: function () {
-            return h;
+            return p;
         }
     });
 var r,
@@ -39,8 +39,8 @@ var c =
     d = {},
     f = {},
     _ = ['touchstart', 'touchmove'],
-    h = 'ignore-react-onclickoutside';
-function p(e, t) {
+    p = 'ignore-react-onclickoutside';
+function h(e, t) {
     var n = {};
     return -1 !== _.indexOf(t) && i && (n.passive = !e.props.preventDefault), n;
 }
@@ -100,7 +100,7 @@ t.default = function (e, t) {
                                         }
                                     }),
                                     e.forEach(function (e) {
-                                        document.addEventListener(e, d[r._uid], p(l(r), e));
+                                        document.addEventListener(e, d[r._uid], h(l(r), e));
                                     });
                             }
                         }),
@@ -111,7 +111,7 @@ t.default = function (e, t) {
                                 var t = r.props.eventTypes;
                                 !t.forEach && (t = [t]),
                                     t.forEach(function (t) {
-                                        return document.removeEventListener(t, e, p(l(r), t));
+                                        return document.removeEventListener(t, e, h(l(r), t));
                                     }),
                                     delete d[r._uid];
                             }
@@ -123,8 +123,8 @@ t.default = function (e, t) {
                         r
                     );
                 }
-                (h = r), (m = n), (h.prototype = Object.create(m.prototype)), (h.prototype.constructor = h), o(h, m);
-                var h,
+                (p = r), (m = n), (p.prototype = Object.create(m.prototype)), (p.prototype.constructor = p), o(p, m);
+                var p,
                     m,
                     g = r.prototype;
                 return (
@@ -167,7 +167,7 @@ t.default = function (e, t) {
         (n.defaultProps = {
             eventTypes: ['mousedown', 'touchstart'],
             excludeScrollbar: (t && t.excludeScrollbar) || !1,
-            outsideClickIgnoreClass: h,
+            outsideClickIgnoreClass: p,
             preventDefault: !1,
             stopPropagation: !1
         }),

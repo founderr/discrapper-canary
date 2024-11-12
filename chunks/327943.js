@@ -21,19 +21,19 @@ function _(e, t, n) {
         e
     );
 }
-let h = {
+let p = {
         client: {
             desktop: u.aH.DEFAULT,
             coachmarkImpressions: 0
         }
     },
-    p = !1,
+    h = !1,
     m = !0,
     g = () => {
         m = !l.ZP.canUsePremiumAppIcons(s.default.getCurrentUser());
     },
     E = (e) => {
-        if (((h.client.desktop = e), !m)) {
+        if (((p.client.desktop = e), !m)) {
             var t;
             o.default.track(c.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
@@ -43,48 +43,48 @@ let h = {
         }
     };
 function v() {
-    I(), (p = !1);
+    I(), (h = !1);
 }
 function I() {
     m &&
-        (h.client = {
+        (p.client = {
             desktop: u.aH.DEFAULT,
             coachmarkImpressions: 2
         });
 }
-class S extends (r = i.ZP.PersistedStore) {
+class b extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e), this.waitFor(s.default), this.syncWith([s.default], g);
+        null != e && (p = e), this.waitFor(s.default), this.syncWith([s.default], g);
     }
     get isEditorOpen() {
-        return p;
+        return h;
     }
     get isUpsellPreview() {
         return m;
     }
     getState() {
-        return h;
+        return p;
     }
     getCurrentDesktopIcon() {
         var e;
-        return null == h ? void 0 : null === (e = h.client) || void 0 === e ? void 0 : e.desktop;
+        return null == p ? void 0 : null === (e = p.client) || void 0 === e ? void 0 : e.desktop;
     }
 }
-_(S, 'displayName', 'AppIconPersistedStoreState'),
-    _(S, 'persistKey', 'AppIconPersistedStoreState'),
-    (t.Z = new S(a.Z, {
+_(b, 'displayName', 'AppIconPersistedStoreState'),
+    _(b, 'persistKey', 'AppIconPersistedStoreState'),
+    (t.Z = new b(a.Z, {
         APP_ICON_UPDATED: function (e) {
             let { id: t } = e;
             null != t && E(t);
         },
         APP_ICON_EDITOR_OPEN: function () {
-            p = !0;
+            h = !0;
         },
         APP_ICON_EDITOR_CLOSE: v,
         APP_ICON_EDITOR_RESET: I,
         APP_ICON_TRACK_IMPRESSION: function (e) {
             let { markAsDismissed: t } = e;
-            (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= 2 && (null == t || t(d.L.UNKNOWN), v());
+            (p.client.coachmarkImpressions += 1), p.client.coachmarkImpressions >= 2 && (null == t || t(d.L.UNKNOWN), v());
         },
         LOGOUT: v
     }));

@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(872810),
     f = n(393238),
     _ = n(40851),
-    h = n(607070),
-    p = n(258609),
+    p = n(607070),
+    h = n(258609),
     m = n(102172),
     g = n(210887),
     E = n(592125),
     v = n(430824),
     I = n(496675),
-    S = n(979651),
-    T = n(617136),
-    b = n(113434),
+    b = n(979651),
+    S = n(617136),
+    T = n(113434),
     y = n(497505),
     A = n(475595),
     N = n(602667),
@@ -33,11 +33,11 @@ var r = n(200651),
     M = n(242468);
 let P = '11px';
 function k(e, t) {
-    return null != e && null != t && (0, m.p9)(t, S.Z, v.Z, I.Z, p.Z)[0];
+    return null != e && null != t && (0, m.p9)(t, b.Z, v.Z, I.Z, h.Z)[0];
 }
 t.Z = function (e) {
-    var t, n, p;
-    let { quest: m, memberListItemRef: v, applicationStream: I, position: S, closePopout: U, updatePosition: G } = e,
+    var t, n, h;
+    let { quest: m, memberListItemRef: v, applicationStream: I, position: b, closePopout: U, updatePosition: G } = e,
         B = (0, o.e7)([E.Z], () => {
             var e;
             return null !== (e = E.Z.getChannel(null == I ? void 0 : I.channelId)) && void 0 !== e ? e : null;
@@ -46,13 +46,13 @@ t.Z = function (e) {
             quest: m,
             location: y.jn.MEMBERS_LIST
         }),
-        F = (0, b.tP)(m),
+        F = (0, T.tP)(m),
         V = (null == m ? void 0 : null === (t = m.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         j = (null == m ? void 0 : null === (n = m.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
-        H = (null == m ? void 0 : null === (p = m.userStatus) || void 0 === p ? void 0 : p.completedAt) != null,
+        H = (null == m ? void 0 : null === (h = m.userStatus) || void 0 === h ? void 0 : h.completedAt) != null,
         Y = (0, o.e7)([g.Z], () => g.Z.getState().theme),
         W = (0, l.wj)(Y) ? x.BR.DARK : x.BR.LIGHT,
-        K = (0, o.e7)([h.Z], () => h.Z.useReducedMotion),
+        K = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
         { ref: z, height: q } = (0, f.Z)(),
         [Q, X] = i.useState(K),
         J = (0, _.Aq)(),
@@ -103,25 +103,25 @@ t.Z = function (e) {
         en = () => {
             J.dispatch(L.CkL.POPOUT_CLOSE);
         },
-        er = 'top' === S ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
+        er = 'top' === b ? ''.concat('4px', ' ').concat('4px', ' 0 0') : '0 0 '.concat('4px', ' ').concat('4px');
     if (null == m || F || (V && !k(I, B))) return null;
     let ei = () => {
-            (0, T._3)({
+            (0, S._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.OPEN_DISCLOSURE,
+                questContentCTA: S.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.openDisclosureModal)(m, {
                     content: y.jn.MEMBERS_LIST,
-                    ctaContent: T.jZ.OPEN_DISCLOSURE
+                    ctaContent: S.jZ.OPEN_DISCLOSURE
                 });
         },
         ea = () => {
-            (0, T._3)({
+            (0, S._3)({
                 questId: m.id,
                 questContent: y.jn.MEMBERS_LIST,
-                questContentCTA: T.jZ.LEARN_MORE,
+                questContentCTA: S.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, y.jn.MEMBERS_LIST, m.id);
@@ -132,10 +132,10 @@ t.Z = function (e) {
         eo = () => {
             if (k(I, B) && null != B)
                 return (
-                    (0, T._3)({
+                    (0, S._3)({
                         questId: m.id,
                         questContent: y.jn.MEMBERS_LIST,
-                        questContentCTA: T.jZ.WATCH_STREAM,
+                        questContentCTA: S.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     c.default.selectVoiceChannel(B.id),

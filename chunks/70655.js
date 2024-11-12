@@ -22,7 +22,7 @@ function c(e, t, n) {
 let d = 1 * l.Z.Millis.SECOND,
     f = 30 * l.Z.Millis.SECOND,
     _ = new a.Z('RTCLatencyTestManager');
-class h extends i.Z {
+class p extends i.Z {
     _terminate() {
         null != this.refetchTimeout && clearTimeout(this.refetchTimeout);
     }
@@ -55,4 +55,4 @@ class h extends i.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new p();

@@ -8,10 +8,10 @@ var r = n(200651),
     u = n(90837);
 t.Z = (e) => {
     let { className: t, guild: n, isSelected: a = !0, width: c = 32, height: d = 32, shouldAnimate: f = !0, isLocked: _ = !1 } = e,
-        [h, p] = i.useState(!1),
+        [p, h] = i.useState(!1),
         m = n.getIconURL(32, f && a),
-        g = () => p(!0),
-        E = () => p(!1);
+        g = () => h(!0),
+        E = () => h(!1);
     return (0, r.jsxs)('div', {
         onFocus: g,
         onBlur: E,
@@ -20,7 +20,7 @@ t.Z = (e) => {
         children: [
             (0, r.jsx)(l.ZP, {
                 className: s()(u.mask, t),
-                mask: a || h ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
+                mask: a || p ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: c,
                 height: d,
                 children:

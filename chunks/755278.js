@@ -15,8 +15,8 @@ var r = n(928801),
     d = n(592125),
     f = n(131951),
     _ = n(936349),
-    h = n(630388),
-    p = n(981631);
+    p = n(630388),
+    h = n(981631);
 class m extends r.Z {
     get guildId() {
         return this.getState().guildId;
@@ -28,15 +28,15 @@ class m extends r.Z {
         var e, t, n;
         let r = 0,
             d = u.tU.getSetting();
-        r = (0, h.mB)(r, p.BVn.ALLOW_VOICE_RECORDING, d);
+        r = (0, p.mB)(r, h.BVn.ALLOW_VOICE_RECORDING, d);
         let _ = (0, s.Z)(f.Z),
-            m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = c.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.jm8.ACTIVE || (null === (t = c.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.jm8.PAUSED),
+            m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = c.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === h.jm8.ACTIVE || (null === (t = c.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === h.jm8.PAUSED),
             g = a.Z.isDecoupledGameClippingEnabled(),
             E = _ && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && g;
-        r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, m || E);
+        r = (0, p.mB)(r, h.BVn.CLIPS_ENABLED, m || E);
         let { enableViewerClipping: v } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
             I = v && _ && a.Z.getSettings().viewerClipsEnabled;
-        return (r = (0, h.mB)(r, p.BVn.ALLOW_ANY_VIEWER_CLIPS, I));
+        return (r = (0, p.mB)(r, h.BVn.ALLOW_ANY_VIEWER_CLIPS, I));
     }
     getInitialState() {
         return {
@@ -71,7 +71,7 @@ class m extends r.Z {
     didCommit(e) {
         var t;
         let { guildId: n, channelId: r, selfMute: i, selfDeaf: a, selfVideo: s, preferredRegion: o, preferredRegions: l, videoStreamParameters: u, flags: c = 0 } = e;
-        s && (null === (t = d.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === p.d4z.GUILD_STAGE_VOICE
+        s && (null === (t = d.Z.getChannel(r)) || void 0 === t ? void 0 : t.type) === h.d4z.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
                   guildId: n,
                   channelId: r,

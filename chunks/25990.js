@@ -1,11 +1,11 @@
-let r, i, a, s, o, l, u, c, d, f, _, h, p, m;
+let r, i, a, s, o, l, u, c, d, f, _, p, h, m;
 var g,
     E,
     v,
     I,
-    S = n(979554),
-    T = n(442837),
-    b = n(570140),
+    b = n(979554),
+    S = n(442837),
+    T = n(570140),
     y = n(981631);
 let A = y.QZA.CLOSED,
     N = {};
@@ -25,9 +25,9 @@ function L() {
     (o = void 0), (l = void 0), (u = void 0), (c = void 0), (d = void 0), (s = void 0);
 }
 function x() {
-    (_ = void 0), (h = void 0), (p = void 0), (m = void 0), (f = void 0);
+    (_ = void 0), (p = void 0), (h = void 0), (m = void 0), (f = void 0);
 }
-class w extends (I = T.ZP.Store) {
+class w extends (I = S.ZP.Store) {
     getFormState() {
         return A;
     }
@@ -87,10 +87,10 @@ class w extends (I = T.ZP.Store) {
         return _;
     }
     getTryItOutAvatarDecoration() {
-        return h;
+        return p;
     }
     getTryItOutProfileEffectId() {
-        return p;
+        return h;
     }
     getTryItOutBanner() {
         return m;
@@ -99,8 +99,8 @@ class w extends (I = T.ZP.Store) {
         return {
             tryItOutThemeColors: f,
             tryItOutAvatar: _,
-            tryItOutAvatarDecoration: h,
-            tryItOutProfileEffectId: p,
+            tryItOutAvatarDecoration: p,
+            tryItOutProfileEffectId: h,
             tryItOutBanner: m
         };
     }
@@ -114,7 +114,7 @@ class w extends (I = T.ZP.Store) {
               writable: !0
           })
         : (g[E] = v),
-    (t.Z = new w(b.Z, {
+    (t.Z = new w(T.Z, {
         USER_SETTINGS_ACCOUNT_INIT: C,
         USER_SETTINGS_MODAL_INIT: C,
         USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
@@ -148,7 +148,7 @@ class w extends (I = T.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: function (e) {
             let { item: t } = e;
-            (null == t ? void 0 : t.type) === S.Z.PROFILE_EFFECT ? ((h = null), (p = null == t ? void 0 : t.id)) : ((p = null), (h = t));
+            (null == t ? void 0 : t.type) === b.Z.PROFILE_EFFECT ? ((p = null), (h = null == t ? void 0 : t.id)) : ((h = null), (p = t));
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;
@@ -180,11 +180,11 @@ class w extends (I = T.ZP.Store) {
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: function (e) {
             let { avatarDecoration: t } = e;
-            h = t;
+            p = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: function (e) {
             let { profileEffectId: t } = e;
-            p = t;
+            h = t;
         },
         USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: function (e) {
             let { banner: t } = e;
@@ -198,7 +198,7 @@ class w extends (I = T.ZP.Store) {
             let {
                 preset: { themeColors: t, bannerImage: n, avatarDecoration: r }
             } = e;
-            (f = t), (m = n), (h = r);
+            (f = t), (m = n), (p = r);
         },
         USER_SETTINGS_CLEAR_ERRORS: function () {
             N = {};

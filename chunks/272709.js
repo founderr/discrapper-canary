@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(812206),
     f = n(686546),
     _ = n(925329),
-    h = n(924301),
-    p = n(454585),
+    p = n(924301),
+    h = n(454585),
     m = n(565799),
     g = n(501655),
     E = n(427679),
     v = n(543882),
     I = n(592125),
-    S = n(496675),
-    T = n(594174),
-    b = n(979651),
+    b = n(496675),
+    S = n(594174),
+    T = n(979651),
     y = n(912787),
     A = n(623552),
     N = n(718582),
@@ -41,7 +41,7 @@ var r = n(200651),
 function U(e) {
     let t = (0, y.Z)(e),
         { category: n } = e;
-    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && b.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
+    return (null == t ? void 0 : t.isGuildStageVoice()) ? u.StageIcon : ((n === x.L.GAMING || n === x.L.EMBEDDED_ACTIVITY) && e.streamersCount > 0) || (n === x.L.HANGOUT && e.streamUserIds.length > 0) ? u.ScreenArrowIcon : n === x.L.EVENT && (null == t ? void 0 : t.isGuildVoice()) ? u.VoiceNormalIcon : null != t && T.Z.hasVideo(t.id) ? u.VideoIcon : u.VoiceNormalIcon;
 }
 function G(e) {
     let { users: t, othersCount: n, extraPill: i } = e;
@@ -99,7 +99,7 @@ function B(e) {
             let e = R === x.L.HANGOUT || R === x.L.GAMING ? a.channelId : R === x.L.EVENT ? a.event.channel_id : R === x.L.EMBEDDED_ACTIVITY ? a.embeddedActivities[0].channelId : null;
             return I.Z.getChannel(e);
         }),
-        H = (0, l.e7)([h.ZP], () => h.ZP.getActiveEventByChannel(null == j ? void 0 : j.id)),
+        H = (0, l.e7)([p.ZP], () => p.ZP.getActiveEventByChannel(null == j ? void 0 : j.id)),
         { usersToShow: Y, othersCount: W } = (0, N.QO)(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '', c),
         { usersToShow: K } = (0, N.Es)(j),
         z = (0, N.ni)(a),
@@ -110,14 +110,14 @@ function B(e) {
                 f = (0, l.e7)([v.Z], () => (a === x.L.HANGOUT ? v.Z.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null));
             switch (a) {
                 case x.L.GAMING:
-                    let { games: h } = e;
-                    if (null == h[0].application_id)
+                    let { games: p } = e;
+                    if (null == p[0].application_id)
                         return (0, r.jsx)(u.GameControllerIcon, {
                             size: 'md',
                             color: 'currentColor'
                         });
                     return (0, r.jsx)(_.Z, {
-                        game: d.Z.getApplication(h[0].application_id),
+                        game: d.Z.getApplication(p[0].application_id),
                         size: 'xl',
                         className: k.gameIcon
                     });
@@ -129,8 +129,8 @@ function B(e) {
                         });
                     return e.isStage ? (0, r.jsx)(O.Z, { className: k.imageIcon }) : (0, r.jsx)(C.Z, { className: k.imageIcon });
                 case x.L.EMBEDDED_ACTIVITY:
-                    let { embeddedActivities: p } = e;
-                    if (null == p[0].applicationId)
+                    let { embeddedActivities: h } = e;
+                    if (null == h[0].applicationId)
                         return (0, r.jsx)(u.ActivitiesIcon, {
                             size: 'md',
                             color: 'currentColor'
@@ -172,13 +172,13 @@ function B(e) {
                                     e(k.liveBadge)
                                 ]
                             });
-                        let a = i.map((e) => T.default.getUser(e)).filter((e) => null != e);
+                        let a = i.map((e) => S.default.getUser(e)).filter((e) => null != e);
                         return (0, r.jsx)(A.Z, {
                             guildId: t,
                             users: a
                         });
                     }
-                    let _ = a.map((e) => T.default.getUser(e)).filter((e) => null != e);
+                    let _ = a.map((e) => S.default.getUser(e)).filter((e) => null != e);
                     return (0, r.jsx)(A.Z, {
                         guildId: t,
                         users: _
@@ -200,7 +200,7 @@ function B(e) {
                 e.embeddedActivities.forEach((e) => {
                     _ = new Set([..._, ...e.userIds]);
                 });
-            let h = (0, N.FP)(n === x.L.EMBEDDED_ACTIVITY ? [..._] : []);
+            let p = (0, N.FP)(n === x.L.EMBEDDED_ACTIVITY ? [..._] : []);
             switch (n) {
                 case x.L.HANGOUT: {
                     if (c && 0 === a.length) {
@@ -227,15 +227,15 @@ function B(e) {
                     }
                     let n = (0, N.K6)(f.length > 0 ? f : a.length > 0 ? a : i, t);
                     if (e.isStage) {
-                        var p, m;
-                        return null !== (m = null === (p = E.Z.getStageInstanceByChannel(e.channelId)) || void 0 === p ? void 0 : p.topic) && void 0 !== m ? m : n;
+                        var h, m;
+                        return null !== (m = null === (h = E.Z.getStageInstanceByChannel(e.channelId)) || void 0 === h ? void 0 : h.topic) && void 0 !== m ? m : n;
                     }
                     return n;
                 }
                 case x.L.EVENT:
                     return e.event.name;
                 case x.L.EMBEDDED_ACTIVITY:
-                    return (0, N.K6)(h, t);
+                    return (0, N.K6)(p, t);
                 case x.L.GAMING:
                     return (0, N.K6)(o, t);
                 default:
@@ -251,7 +251,7 @@ function B(e) {
                 { channelStatus: f, hasChannelStatus: _ } = (0, N.CE)(l);
             switch (o) {
                 case x.L.GAMING:
-                    let { games: h, channelId: m } = e;
+                    let { games: p, channelId: m } = e;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(u.GameControllerIcon, {
@@ -263,7 +263,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: 1 === h.length ? h[0].name : P.intl.formatToPlainString(P.t.uIKPiI, { numGames: h.length })
+                                children: 1 === p.length ? p[0].name : P.intl.formatToPlainString(P.t.uIKPiI, { numGames: p.length })
                             }),
                             '\u2022',
                             null != c && (0, r.jsx)(c, { className: k.categoryIcon }),
@@ -279,8 +279,8 @@ function B(e) {
                     let { event: g } = e,
                         E = (0, N.NZ)(g),
                         v = null == E ? void 0 : E.IconComponent,
-                        S = null == E ? void 0 : E.locationName;
-                    if (null != v && null != S)
+                        b = null == E ? void 0 : E.locationName;
+                    if (null != v && null != b)
                         return (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(v, { className: k.categoryIcon }),
@@ -288,7 +288,7 @@ function B(e) {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: k.ellipsis,
-                                    children: S
+                                    children: b
                                 }),
                                 null != d &&
                                     d > 0 &&
@@ -311,7 +311,7 @@ function B(e) {
                         });
                     return null;
                 case x.L.EMBEDDED_ACTIVITY:
-                    let { embeddedActivities: T } = e;
+                    let { embeddedActivities: S } = e;
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(u.ActivitiesIcon, {
@@ -323,7 +323,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: 1 === T.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: T.length })
+                                children: 1 === S.length ? (null == t ? void 0 : t.name) : P.intl.formatToPlainString(P.t.LMOYUV, { numActivities: S.length })
                             }),
                             '\u2022',
                             null != c && (0, r.jsx)(c, { className: k.categoryIcon }),
@@ -331,7 +331,7 @@ function B(e) {
                                 variant: 'text-xs/medium',
                                 color: 'text-secondary',
                                 className: k.ellipsis,
-                                children: null === (a = I.Z.getChannel(T[0].channelId)) || void 0 === a ? void 0 : a.name
+                                children: null === (a = I.Z.getChannel(S[0].channelId)) || void 0 === a ? void 0 : a.name
                             })
                         ]
                     });
@@ -344,7 +344,7 @@ function B(e) {
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
                                   className: k.ellipsis,
-                                  children: p.Z.parseVoiceChannelStatus(f, !0, { channelId: t })
+                                  children: h.Z.parseVoiceChannelStatus(f, !0, { channelId: t })
                               })
                             : (0, r.jsxs)(r.Fragment, {
                                   children: [
@@ -364,7 +364,7 @@ function B(e) {
                                                       variant: 'text-xs/medium',
                                                       color: 'text-secondary',
                                                       className: k.ellipsis,
-                                                      children: p.Z.parseVoiceChannelStatus(f, !0, { channelId: t })
+                                                      children: h.Z.parseVoiceChannelStatus(f, !0, { channelId: t })
                                                   })
                                               ]
                                           }),
@@ -459,9 +459,9 @@ function B(e) {
                 s = null,
                 o = a === x.L.EVENT;
             if (null == (s = o ? e.event.channel_id : a === x.L.EMBEDDED_ACTIVITY ? e.embeddedActivities[0].channelId : e.channelId) && !o) return;
-            let l = null != s && b.Z.isInChannel(s),
+            let l = null != s && T.Z.isInChannel(s),
                 c = o && (e.event.entity_type === M.WX.EXTERNAL || e.event.entity_type === M.WX.NONE) ? P.intl.string(P.t['HO/oXl']) : l ? P.intl.string(P.t['/YuDAg']) : P.intl.string(P.t.VJlc0d),
-                d = (null === (i = I.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !S.Z.can(w.Plq.CONNECT, I.Z.getChannel(s)),
+                d = (null === (i = I.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !b.Z.can(w.Plq.CONNECT, I.Z.getChannel(s)),
                 f = (0, N.DE)(e, t),
                 _ = (0, r.jsxs)(u.Button, {
                     size: u.Button.Sizes.MIN,

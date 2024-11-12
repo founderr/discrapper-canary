@@ -55,7 +55,7 @@ e.exports = function (e) {
             }
         },
         _ = e.C_NUMBER_MODE,
-        h = e.COMMENT(/\/\*\*/, /\*\//, {
+        p = e.COMMENT(/\/\*\*/, /\*\//, {
             contains: [
                 {
                     match: /@[a-z]+/,
@@ -64,7 +64,7 @@ e.exports = function (e) {
                 'self'
             ]
         }),
-        p = {
+        h = {
             scope: 'subst',
             begin: /%\(/,
             end: /\)/,
@@ -75,14 +75,14 @@ e.exports = function (e) {
             begin: /"/,
             end: /"/,
             contains: [
-                p,
+                h,
                 {
                     scope: 'char.escape',
                     variants: [{ match: /\\\\|\\["0%abefnrtv]/ }, { match: /\\x[0-9A-F]{2}/ }, { match: /\\u[0-9A-F]{4}/ }, { match: /\\U[0-9A-F]{8}/ }]
                 }
             ]
         };
-    p.contains.push(m);
+    h.contains.push(m);
     let g = [...r, ...a, ...i],
         E = {
             relevance: 0,
@@ -121,7 +121,7 @@ e.exports = function (e) {
                 begin: /"""/,
                 end: /"""/
             },
-            h,
+            p,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             f,

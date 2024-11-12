@@ -23,7 +23,7 @@ function d(e, t, n) {
 class f extends (r = a.PureComponent) {
     render() {
         var e;
-        let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: f, transitionState: _, helpMessage: h, retryPrompt: p, retrySuccessMessage: m } = this.props,
+        let { title: t, actionText: n, children: r, error: s, isLoading: d, maxLength: f, transitionState: _, helpMessage: p, retryPrompt: h, retrySuccessMessage: m } = this.props,
             { code: g, errorMessage: E, retrySuccess: v } = this.state,
             I =
                 a.Children.count(r) > 0
@@ -36,8 +36,8 @@ class f extends (r = a.PureComponent) {
                           })
                       })
                     : null,
-            S =
-                null != p
+            b =
+                null != h
                     ? (0, i.jsxs)(l.Text, {
                           className: o()(c.__invalid_submitText, c.spacing),
                           variant: 'text-sm/normal',
@@ -46,12 +46,12 @@ class f extends (r = a.PureComponent) {
                               (0, i.jsx)(l.Clickable, {
                                   className: o()(c.spacing, c.__invalid_link),
                                   onClick: this.handleRetry,
-                                  children: (0, i.jsx)(l.Anchor, { children: p })
+                                  children: (0, i.jsx)(l.Anchor, { children: h })
                               })
                           ]
                       })
                     : null,
-            T = v
+            S = v
                 ? (0, i.jsx)(l.Card, {
                       type: l.Card.Types.SUCCESS,
                       className: c.card,
@@ -75,16 +75,16 @@ class f extends (r = a.PureComponent) {
                     }),
                     (0, i.jsxs)(l.ModalContent, {
                         children: [
-                            null != h
+                            null != p
                                 ? (0, i.jsx)(l.Text, {
                                       color: 'text-normal',
                                       variant: 'text-md/normal',
                                       className: c.spacing,
-                                      children: h
+                                      children: p
                                   })
                                 : null,
                             I,
-                            T,
+                            S,
                             (0, i.jsxs)(l.FormItem, {
                                 title: this.getLabelText(),
                                 className: c.spacing,
@@ -106,7 +106,7 @@ class f extends (r = a.PureComponent) {
                                               children: null != s ? s : E
                                           })
                                         : null,
-                                    S
+                                    b
                                 ]
                             })
                         ]

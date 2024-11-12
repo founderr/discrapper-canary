@@ -10,16 +10,16 @@ var r,
     d = n(86670),
     f = n(856472),
     _ = n(633302),
-    h = n(41776),
-    p = n(93093),
+    p = n(41776),
+    h = n(93093),
     m = n(430824),
     g = n(70956),
     E = n(373228),
     v = n(378233);
 let I = 2,
+    b = new Map(),
     S = new Map(),
-    T = new Map(),
-    b = null,
+    T = null,
     y = [],
     A = null,
     N = !1,
@@ -43,11 +43,11 @@ let I = 2,
     L = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        T.set(e.id, e), t && x(e, n);
+        S.set(e.id, e), t && x(e, n);
     },
     x = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null == b) return;
+        if (null == T) return;
         let { tags: n } = e,
             r = {
                 type: E.MO.STICKER_NAME,
@@ -67,7 +67,7 @@ let I = 2,
                     type: E.MO.PACK_NAME,
                     value: t.name
                 }),
-                b.set(e.id, i);
+                T.set(e.id, i);
         } else if ((0, v.J8)(e) && null != n) {
             let i = _.ZP.getByName(n),
                 a = [
@@ -87,7 +87,7 @@ let I = 2,
                     });
             }
             if (null == i) {
-                b.set(e.id, a);
+                T.set(e.id, a);
                 return;
             }
             a.push({
@@ -100,11 +100,11 @@ let I = 2,
                         value: e.surrogates
                     })
                 ),
-                b.set(e.id, a);
+                T.set(e.id, a);
         }
     },
     w = (e, t, n) => {
-        S.set(e.id, e);
+        b.set(e.id, e);
         let r = [...y];
         if (t) {
             let t = r.findIndex((t) => t.id === e.id);
@@ -127,7 +127,7 @@ function P(e) {
 }
 class k extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, p.Z, m.Z);
+        this.waitFor(c.Z, h.Z, m.Z);
     }
     get isLoaded() {
         return 0 !== I;
@@ -136,7 +136,7 @@ class k extends (r = l.ZP.Store) {
         return I;
     }
     get stickerMetadata() {
-        return D(), null == b && ((b = new Map()), M()), b;
+        return D(), null == T && ((T = new Map()), M()), T;
     }
     get hasLoadedStickerPacks() {
         return null != A && A + O > Date.now();
@@ -145,10 +145,10 @@ class k extends (r = l.ZP.Store) {
         return N;
     }
     getStickerById(e) {
-        return !T.has(e) && D(), T.get(e);
+        return !S.has(e) && D(), S.get(e);
     }
     getStickerPack(e) {
-        return S.get(e);
+        return b.get(e);
     }
     getPremiumPacks() {
         return y;
@@ -160,7 +160,7 @@ class k extends (r = l.ZP.Store) {
         return C;
     }
     getAllStickersIterator() {
-        return D(), T.values();
+        return D(), S.values();
     }
     getAllGuildStickers() {
         return D(), C;
@@ -180,27 +180,27 @@ class k extends (r = l.ZP.Store) {
         : (i[a] = s),
     (t.Z = new k(u.Z, {
         BACKGROUND_SYNC: () => {
-            (b = null), (T = new Map()), (C = new Map()), (I = 0);
+            (T = null), (S = new Map()), (C = new Map()), (I = 0);
         },
         CONNECTION_OPEN: (e) => {
             let { guilds: t } = e;
-            (b = null), (T = new Map()), (C = new Map()), t.forEach(P), (I = t.every((e) => null != e.stickers) ? 1 : 0);
+            (T = null), (S = new Map()), (C = new Map()), t.forEach(P), (I = t.every((e) => null != e.stickers) ? 1 : 0);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            if (!h.Z.isLurking(t.id)) P(t), 1 === I && null == t.stickers && null != t.stickerUpdates && (I = 0);
+            if (!p.Z.isLurking(t.id)) P(t), 1 === I && null == t.stickers && null != t.stickerUpdates && (I = 0);
         },
         GUILD_DELETE: function (e) {
             var t;
             let { guild: n } = e;
             (null !== (t = C.get(n.id)) && void 0 !== t ? t : []).forEach((e) => {
-                null != b && b.delete(e.id), T.delete(e.id);
+                null != T && T.delete(e.id), S.delete(e.id);
             }),
                 C.delete(n.id),
                 (C = new Map(C));
         },
         LOGOUT: () => {
-            (I = 0), (y = []), T.clear(), S.clear(), (b = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
+            (I = 0), (y = []), S.clear(), b.clear(), (T = null), C.clear(), (C = new Map(C)), (N = !1), (A = null);
         },
         STICKER_PACKS_FETCH_START: () => {
             N = !0;
@@ -232,7 +232,7 @@ class k extends (r = l.ZP.Store) {
             let { guildId: n, stickers: r } = e,
                 i = (e) => {
                     let t;
-                    let n = T.get(e.id);
+                    let n = S.get(e.id);
                     return (
                         null != n && (0, v.J8)(n) && (t = null != n.user ? n.user : void 0),
                         {
@@ -244,7 +244,7 @@ class k extends (r = l.ZP.Store) {
             (null !== (t = C.get(n)) && void 0 !== t ? t : [])
                 .filter((e) => null == r.find((t) => t.id === e.id))
                 .forEach((e) => {
-                    T.delete(e.id), null != b && b.delete(e.id);
+                    S.delete(e.id), null != T && T.delete(e.id);
                 });
             let a = r.map((e) => i(e));
             a.forEach((e) => L(e)), R(n, a);
@@ -252,7 +252,7 @@ class k extends (r = l.ZP.Store) {
         CACHED_STICKERS_LOADED: function (e) {
             let { stickers: t } = e;
             for (let [e, n] of t)
-                if (p.Z.isMember(e) && !C.has(e)) {
+                if (h.Z.isMember(e) && !C.has(e)) {
                     let t = m.Z.getGuild(e);
                     for (let e of n) L(e, !0, t);
                     R(e, n);

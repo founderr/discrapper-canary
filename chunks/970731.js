@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     ZP: function () {
-        return h;
+        return p;
     },
     _F: function () {
         return s;
@@ -20,7 +20,7 @@ var r,
     d = n(481060),
     f = n(921944),
     _ = n(592827);
-function h(e) {
+function p(e) {
     let {
         className: t,
         header: n,
@@ -29,8 +29,8 @@ function h(e) {
         contentClassName: a,
         buttonCTA: s,
         secondaryButtonCTA: u,
-        onClick: h,
-        onSecondaryClick: p,
+        onClick: p,
+        onSecondaryClick: h,
         buttonProps: m = {
             color: d.Button.Colors.BRAND,
             look: d.Button.Looks.FILLED
@@ -39,15 +39,15 @@ function h(e) {
         onComponentMount: E,
         asset: v,
         markAsDismissed: I,
-        caretPosition: S = 'caretTopCenter',
-        buttonLayout: T = 0
+        caretPosition: b = 'caretTopCenter',
+        buttonLayout: S = 0
     } = e;
     l.useEffect(() => {
         null == E || E();
     }, []);
-    let b = null != u;
+    let T = null != u;
     return (0, o.jsxs)('div', {
-        className: c()(t, _.upsellTooltipWrapper, _[S]),
+        className: c()(t, _.upsellTooltipWrapper, _[b]),
         children: [
             v,
             null == n
@@ -63,19 +63,19 @@ function h(e) {
                 variant: 'text-sm/normal',
                 children: i
             }),
-            null != s || b
+            null != s || T
                 ? (0, o.jsxs)('div', {
                       className: c()(_.upsellButtonsContainer, {
-                          [_.upsellButtonsAdjacent]: 0 === T,
-                          [_.upsellButtonsStacked]: 1 === T
+                          [_.upsellButtonsAdjacent]: 0 === S,
+                          [_.upsellButtonsStacked]: 1 === S
                       }),
                       children: [
-                          b
+                          T
                               ? (0, o.jsx)(d.Button, {
                                     ...g,
-                                    fullWidth: 1 === T,
+                                    fullWidth: 1 === S,
                                     onClick: () => {
-                                        null == p || p(), null == I || I(f.L.SECONDARY);
+                                        null == h || h(), null == I || I(f.L.SECONDARY);
                                     },
                                     children: u
                                 })
@@ -84,9 +84,9 @@ function h(e) {
                               ? null
                               : (0, o.jsx)(d.Button, {
                                     ...m,
-                                    fullWidth: !b || 1 === T,
+                                    fullWidth: !T || 1 === S,
                                     onClick: (e) => {
-                                        h(e), null == I || I(f.L.PRIMARY);
+                                        p(e), null == I || I(f.L.PRIMARY);
                                     },
                                     children: s
                                 })
@@ -96,4 +96,4 @@ function h(e) {
         ]
     });
 }
-((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'), (r.TOP_RIGHT = 'caretTopRight'), (r.TOP_LEFT = 'caretTopLeft'), (r.BOTTOM_CENTER = 'caretBottomCenter'), (r.BOTTOM_LEFT = 'caretBottomLeft'), (r.LEFT_CENTER = 'caretLeftCenter'), (r.LEFT_TOP = 'caretLeftTop'), (r.RIGHT_CENTER = 'caretRightCenter'), (r.RIGHT_TOP = 'caretRightTop'), ((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'), (i[(i.STACKED = 1)] = 'STACKED'), (h.CaretPosition = a), (h.ButtonLayout = s);
+((r = a || (a = {})).TOP_CENTER = 'caretTopCenter'), (r.TOP_RIGHT = 'caretTopRight'), (r.TOP_LEFT = 'caretTopLeft'), (r.BOTTOM_CENTER = 'caretBottomCenter'), (r.BOTTOM_LEFT = 'caretBottomLeft'), (r.LEFT_CENTER = 'caretLeftCenter'), (r.LEFT_TOP = 'caretLeftTop'), (r.RIGHT_CENTER = 'caretRightCenter'), (r.RIGHT_TOP = 'caretRightTop'), ((i = s || (s = {}))[(i.ADJACENT = 0)] = 'ADJACENT'), (i[(i.STACKED = 1)] = 'STACKED'), (p.CaretPosition = a), (p.ButtonLayout = s);

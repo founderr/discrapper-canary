@@ -15,7 +15,7 @@ var i = n(442837),
 function d(e) {
     let { user: t, onIgnore: n, onUnignore: d, location: f = 'ContextMenu' } = e,
         { id: _ } = t,
-        h = (0, i.e7)(
+        p = (0, i.e7)(
             [u.default],
             () => {
                 var e;
@@ -23,14 +23,14 @@ function d(e) {
             },
             [_]
         ),
-        p = (0, i.e7)([l.Z], () => l.Z.isIgnored(_), [_]);
-    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || h
+        h = (0, i.e7)([l.Z], () => l.Z.isIgnored(_), [_]);
+    return !(0, o.Do)({ location: 'use-block-user-item-web' }) || p
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'ignore',
               color: 'default',
-              label: p ? c.intl.string(c.t['8wXU9P']) : c.intl.string(c.t.ytCpKi),
-              action: p
+              label: h ? c.intl.string(c.t['8wXU9P']) : c.intl.string(c.t.ytCpKi),
+              action: h
                   ? () => {
                         null == d || d(), s.Z.unignoreUser(_, null != f ? f : 'use-ignore-user-item-web');
                     }

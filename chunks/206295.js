@@ -9,17 +9,17 @@ var s = n(442837),
     u = n(220082),
     c = n(981631);
 t.Z = (e) => {
-    var t, i, d, f, _, h;
-    let p;
-    p = n(481060).tokens;
+    var t, i, d, f, _, p;
+    let h;
+    h = n(481060).tokens;
     let m = (0, s.e7)([l.Z], () => l.Z.saturation),
         [g, E] = (0, u.Cf)(
             e,
             null !==
-                (h =
-                    null == p
+                (p =
+                    null == h
                         ? void 0
-                        : null === (_ = p.colors) || void 0 === _
+                        : null === (_ = h.colors) || void 0 === _
                           ? void 0
                           : null === (f = _.BACKGROUND_FLOATING) || void 0 === f
                             ? void 0
@@ -33,8 +33,8 @@ t.Z = (e) => {
                                 ? void 0
                                 : null === (t = i.hex) || void 0 === t
                                   ? void 0
-                                  : t.call(i)) && void 0 !== h
-                ? h
+                                  : t.call(i)) && void 0 !== p
+                ? p
                 : '#000'
         );
     return r.useMemo(() => {

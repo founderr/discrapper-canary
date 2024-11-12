@@ -115,13 +115,13 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 endsParent: !0
             }),
-        h = function (e) {
+        p = function (e) {
             return {
                 className: 'string',
                 end: '(?=\\\\end\\{' + e + '\\})'
             };
         },
-        p = (e = 'string') => ({
+        h = (e = 'string') => ({
             relevance: 0,
             begin: /\{/,
             starts: {
@@ -152,16 +152,16 @@ e.exports = function (e) {
             d(
                 'mintinline',
                 c(l, {
-                    contains: [p(), _()]
+                    contains: [h(), _()]
                 })
             ),
             d('url', {
-                contains: [p('link'), p('link')]
+                contains: [h('link'), h('link')]
             }),
-            d('hyperref', { contains: [p('link')] }),
-            d('href', c(u, { contains: [p('link')] })),
-            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, h('verbatim' + e)), f('filecontents' + e, c(l, h('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, c(u, h(t + 'Verbatim' + e))))])),
-            f('minted', c(u, c(l, h('minted')))),
+            d('hyperref', { contains: [h('link')] }),
+            d('href', c(u, { contains: [h('link')] })),
+            ...[].concat(...['', '\\*'].map((e) => [f('verbatim' + e, p('verbatim' + e)), f('filecontents' + e, c(l, p('filecontents' + e))), ...['', 'B', 'L'].map((t) => f(t + 'Verbatim' + e, c(u, p(t + 'Verbatim' + e))))])),
+            f('minted', c(u, c(l, p('minted')))),
             ...i
         ]
     };

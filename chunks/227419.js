@@ -11,20 +11,20 @@ var i = n(392711),
     d = n(699516),
     f = n(594174),
     _ = n(895924),
-    h = n(689079),
-    p = n(981631),
+    p = n(689079),
+    h = n(981631),
     m = n(388032);
 function g(e) {
     switch (e) {
-        case p.nkL.GIF.title:
-        case p.nkL.TENOR.title:
+        case h.nkL.GIF.title:
+        case h.nkL.TENOR.title:
             return m.intl.string(m.t['0vrCgI']);
         default:
             return '';
     }
 }
 let E = [
-    ...a()(p.nkL)
+    ...a()(h.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
@@ -32,7 +32,7 @@ let E = [
             displayName: e.command,
             type: u.yU.CHAT,
             inputType: _.iw.BUILT_IN_INTEGRATION,
-            applicationId: h.bi.BUILT_IN,
+            applicationId: p.bi.BUILT_IN,
             get untranslatedDescription() {
                 return g(e.title);
             },
@@ -40,7 +40,7 @@ let E = [
                 return g(e.title);
             },
             options:
-                e.type === p.q9n.GIF
+                e.type === h.q9n.GIF
                     ? [
                           {
                               name: 'query',
@@ -66,7 +66,7 @@ let E = [
         displayName: 'leave',
         type: u.yU.CHAT,
         inputType: _.iw.BUILT_IN,
-        applicationId: h.bi.BUILT_IN,
+        applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.intl.string(m.t['26C4oq']);
         },
@@ -96,16 +96,16 @@ let E = [
             let { channel: a } = t,
                 u = (0, c.F6)(a, f.default, d.Z),
                 _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: u }),
-                h = m.intl.format(m.t.SSIVOj, { name: u }),
-                p = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
+                p = m.intl.format(m.t.SSIVOj, { name: u }),
+                h = null !== (i = null === (n = e.find((e) => 'silent' === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== i && i;
             async function g() {
                 try {
-                    await o.Z.closePrivateChannel(a.id, void 0, p);
+                    await o.Z.closePrivateChannel(a.id, void 0, h);
                 } catch (e) {
                     l.Z.sendBotMessage(a.id, m.intl.string(m.t.YOsuT0));
                 }
             }
-            a.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: u })), (h = m.intl.format(m.t.IK1Qvr, { name: u }))),
+            a.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: u })), (p = m.intl.format(m.t.IK1Qvr, { name: u }))),
                 (0, s.openModal)((e) =>
                     (0, r.jsx)(s.ConfirmModal, {
                         header: _,
@@ -115,7 +115,7 @@ let E = [
                         ...e,
                         children: (0, r.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            children: h
+                            children: p
                         })
                     })
                 );
@@ -127,7 +127,7 @@ let E = [
         displayName: 'sticker',
         type: u.yU.CHAT,
         inputType: _.iw.BUILT_IN_INTEGRATION,
-        applicationId: h.bi.BUILT_IN,
+        applicationId: p.bi.BUILT_IN,
         get untranslatedDescription() {
             return m.intl.string(m.t.GUH9IC);
         },
@@ -148,7 +148,7 @@ let E = [
                 required: !0
             }
         ],
-        integrationType: p.q9n.STICKER,
+        integrationType: h.q9n.STICKER,
         integrationTitle: 'sticker'
     }
 ];

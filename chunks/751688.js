@@ -10,7 +10,7 @@ var r,
     d = n(184301),
     f = n(347475),
     _ = n(415457);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function h(e, t, n) {
         e
     );
 }
-class p extends (r = a.Component) {
+class h extends (r = a.Component) {
     render() {
         let { popoutOpen: e } = this.state,
             { user: t, disablePopout: n, ignoreModalClicks: r, guildId: a, channelId: s } = this.props;
@@ -49,17 +49,17 @@ class p extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'state', { popoutOpen: !1 }),
-            h(this, 'handleClickUser', () => {
+            p(this, 'state', { popoutOpen: !1 }),
+            p(this, 'handleClickUser', () => {
                 let { onPopoutOpen: e } = this.props;
                 this.setState({ popoutOpen: !this.state.popoutOpen }), null == e || e();
             }),
-            h(this, 'handleUserPopoutClose', () => {
+            p(this, 'handleUserPopoutClose', () => {
                 let { onPopoutClose: e } = this.props;
                 this.setState({ popoutOpen: !1 }), null == e || e();
             }),
-            h(this, 'renderUserPopout', (e) => {
-                let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: d, nick: f, guildId: h } = this.props;
+            p(this, 'renderUserPopout', (e) => {
+                let { className: t, disablePopout: n, onContextMenu: r, user: a, status: s, textClassName: d, nick: f, guildId: p } = this.props;
                 return (0, i.jsxs)(c.Z, {
                     align: c.Z.Align.CENTER,
                     className: o()(_.memberListItem, t, { [_.popoutDisabled]: n }),
@@ -69,7 +69,7 @@ class p extends (r = a.Component) {
                     onClick: this.handleClickUser,
                     children: [
                         (0, i.jsx)(l.Avatar, {
-                            src: a.getAvatarURL(h, 24),
+                            src: a.getAvatarURL(p, 24),
                             className: _.avatar,
                             'aria-label': a.username,
                             size: l.AvatarSizes.SIZE_24,
@@ -90,4 +90,4 @@ class p extends (r = a.Component) {
             });
     }
 }
-h(p, 'defaultProps', { disablePopout: !1 }), (t.Z = p);
+p(h, 'defaultProps', { disablePopout: !1 }), (t.Z = h);

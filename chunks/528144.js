@@ -15,11 +15,11 @@ let u = Object.freeze({
         SIZE_32: l.size32
     }),
     c = (e) => {
-        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: f, onClick: _, onContextMenu: h, style: p, title: m, uppercase: g } = e;
+        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: f, onClick: _, onContextMenu: p, style: h, title: m, uppercase: g } = e;
         return (0, r.jsx)(s.H, {
             role: null != _ ? 'button' : void 0,
             onClick: _,
-            onContextMenu: h,
+            onContextMenu: p,
             id: t,
             className: a()(i, {
                 [o.base]: !0,
@@ -32,10 +32,10 @@ let u = Object.freeze({
             style:
                 null != f
                     ? {
-                          ...p,
+                          ...h,
                           color: f
                       }
-                    : p,
+                    : h,
             children: d
         });
     };

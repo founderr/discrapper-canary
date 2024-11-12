@@ -7,15 +7,15 @@ e.exports = function (e, t, n, o) {
         u = null == e ? 0 : e.length;
     if (0 === u) return 0;
     for (var c = (t = n(t)) != t, d = null === t, f = r(t), _ = void 0 === t; l < u; ) {
-        var h = a((l + u) / 2),
-            p = n(e[h]),
-            m = void 0 !== p,
-            g = null === p,
-            E = p == p,
-            v = r(p);
+        var p = a((l + u) / 2),
+            h = n(e[p]),
+            m = void 0 !== h,
+            g = null === h,
+            E = h == h,
+            v = r(h);
         if (c) var I = o || E;
-        else I = _ ? E && (o || m) : d ? E && m && (o || !g) : f ? E && m && !g && (o || !v) : !g && !v && (o ? p <= t : p < t);
-        I ? (l = h + 1) : (u = h);
+        else I = _ ? E && (o || m) : d ? E && m && (o || !g) : f ? E && m && !g && (o || !v) : !g && !v && (o ? h <= t : h < t);
+        I ? (l = p + 1) : (u = p);
     }
     return s(u, i);
 };

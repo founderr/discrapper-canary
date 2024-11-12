@@ -10,16 +10,16 @@ var r,
     d = n(536895),
     f = n(468194),
     _ = n(477690),
-    h = n(481060),
-    p = n(100527),
+    p = n(481060),
+    h = n(100527),
     m = n(906732),
     g = n(570220),
     E = n(686546),
     v = n(28546),
     I = n(285651),
-    S = n(926491),
-    T = n(373228),
-    b = n(378233),
+    b = n(926491),
+    S = n(373228),
+    T = n(378233),
     y = n(419922),
     A = n(490095),
     N = n(652136),
@@ -37,7 +37,7 @@ let M = (0, f.Mg)(_.Z.EXPRESSION_SUGGESTIONS_CONTAINER_PADDING),
 function G(e) {
     let { isFocused: t, isHidden: n, sendability: r, listIndex: i, sticker: s, onMouseOver: o, onSelectSticker: c } = e,
         { tabIndex: d, ...f } = (0, u.JA)(''.concat(i));
-    return (0, a.jsxs)(h.Clickable, {
+    return (0, a.jsxs)(p.Clickable, {
         ...f,
         tabIndex: n ? -1 : d,
         className: l()(w.suggestedExpression, { [w.suggestedExpressionFocused]: t }),
@@ -77,7 +77,7 @@ t.Z = s.memo(function (e) {
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
         X = (0, O.Z)(j, M, r),
-        { analyticsLocations: J } = (0, m.ZP)(p.Z.EXPRESSION_SUGGESTIONS),
+        { analyticsLocations: J } = (0, m.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
         { handleTextChange: $, debouncedSetTextInputValue: ee } = (0, O.m)({
             setTextInputValue: H,
             setHasDismissed: P,
@@ -174,9 +174,9 @@ t.Z = s.memo(function (e) {
                     }),
                     t === I.eb.SENDABLE)
                 )
-                    P(!0), o(e, T.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
-                else if ((0, b.jl)(e)) {
-                    let t = S.Z.getStickerPack(e.pack_id);
+                    P(!0), o(e, S.V0.EXPRESSION_SUGGESTIONS), ee.cancel(), H('');
+                else if ((0, T.jl)(e)) {
+                    let t = b.Z.getStickerPack(e.pack_id);
                     null != t &&
                         (0, N.Z)({
                             stickerPack: t,
@@ -195,7 +195,7 @@ t.Z = s.memo(function (e) {
         ec = ei ? X : eo.current;
     return (0, a.jsx)(m.Gt, {
         value: J,
-        children: (0, a.jsxs)(h.Clickable, {
+        children: (0, a.jsxs)(p.Clickable, {
             tabIndex: eu ? -1 : 0,
             'aria-hidden': eu,
             className: l()(w.container, {
@@ -256,7 +256,7 @@ t.Z = s.memo(function (e) {
                                 (0, a.jsxs)('div', {
                                     className: w.bottomInformationLayout,
                                     children: [
-                                        (0, a.jsx)(h.Text, {
+                                        (0, a.jsx)(p.Text, {
                                             className: w.descriptionText,
                                             style: { maxWidth: k },
                                             variant: 'text-sm/normal',
@@ -266,7 +266,7 @@ t.Z = s.memo(function (e) {
                                                     : x.intl.format(x.t['8DjNnJ'], {
                                                           upHook: (e, t) =>
                                                               (0, a.jsx)(
-                                                                  h.KeyCombo,
+                                                                  p.KeyCombo,
                                                                   {
                                                                       shortcut: 'up',
                                                                       className: w.keybind
@@ -275,7 +275,7 @@ t.Z = s.memo(function (e) {
                                                               )
                                                       })
                                         }),
-                                        (0, a.jsx)(h.Clickable, {
+                                        (0, a.jsx)(p.Clickable, {
                                             onClick: () => {
                                                 R.default.track(L.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                                     enabled: !1,
@@ -283,10 +283,10 @@ t.Z = s.memo(function (e) {
                                                 }),
                                                     C.up.updateSetting(!1);
                                             },
-                                            children: (0, a.jsx)(h.Tooltip, {
+                                            children: (0, a.jsx)(p.Tooltip, {
                                                 text: x.intl.string(x.t.XNMs5u),
                                                 children: (e) =>
-                                                    (0, a.jsx)(h.XSmallIcon, {
+                                                    (0, a.jsx)(p.XSmallIcon, {
                                                         size: 'md',
                                                         color: 'currentColor',
                                                         ...e,

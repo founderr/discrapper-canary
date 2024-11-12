@@ -18,7 +18,7 @@ function d(e) {
 function f(e, t, n) {
     let i = (0, l.Z)(),
         [f, _] = r.useState(!1),
-        h = r.useMemo(
+        p = r.useMemo(
             () =>
                 a().debounce(
                     (e) => {
@@ -34,10 +34,10 @@ function f(e, t, n) {
         let r = u.ZP.getProps(t, n).groups;
         if (null != t && !d(r) && !f)
             return (
-                e.addListener('text-changed', h),
+                e.addListener('text-changed', p),
                 () => {
-                    e.removeListener('text-changed', h), h.cancel();
+                    e.removeListener('text-changed', p), p.cancel();
                 }
             );
-    }, [f, h, e, t, n]);
+    }, [f, p, e, t, n]);
 }

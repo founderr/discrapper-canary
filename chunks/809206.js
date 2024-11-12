@@ -1,9 +1,9 @@
 n.d(t, {
     FD: function () {
-        return p;
+        return h;
     },
     I5: function () {
-        return T;
+        return S;
     },
     Mn: function () {
         return v;
@@ -15,10 +15,10 @@ n.d(t, {
         return E;
     },
     UZ: function () {
-        return b;
+        return T;
     },
     V3: function () {
-        return S;
+        return b;
     },
     W3: function () {
         return R;
@@ -56,15 +56,15 @@ var r = n(544891),
     d = n(893776),
     f = n(981631),
     _ = n(792101),
-    h = n(388032);
-function p() {
+    p = n(388032);
+function h() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
 function m() {
     s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
 function g(e, t) {
-    let n = t ? h.intl.string(h.t['8lQ2ra']) : h.intl.string(h.t.jf5GGR),
+    let n = t ? p.intl.string(p.t['8lQ2ra']) : p.intl.string(p.t.jf5GGR),
         i = t ? f.ANM.DELETE_ACCOUNT : f.ANM.DISABLE_ACCOUNT;
     return (0, c.Z)(
         (t) =>
@@ -115,7 +115,7 @@ async function E(e) {
     );
 }
 function v(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: p, newPassword: m, globalName: g } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: o, avatar: d, avatarDecoration: h, newPassword: m, globalName: g } = e;
     return (
         s.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, c.Z)(
@@ -131,7 +131,7 @@ function v(e) {
                     new_password: m,
                     ...e
                 };
-                null === p && (s.avatar_decoration_id = null), null != p && ((s.avatar_decoration_id = p.id), (s.avatar_decoration_sku_id = p.skuId));
+                null === h && (s.avatar_decoration_id = null), null != h && ((s.avatar_decoration_id = h.id), (s.avatar_decoration_sku_id = h.skuId));
                 let l = i.K.get(f.JkL),
                     u = (0, _.xJ)();
                 null != u && null != l && ((s.push_provider = u), (s.push_token = l));
@@ -140,7 +140,7 @@ function v(e) {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: h.intl.string(h.t.clQc1d) },
+                modalProps: { title: p.intl.string(p.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         s.Z.dispatch({
@@ -170,21 +170,21 @@ function I() {
         oldFormErrors: !0
     });
 }
-function S(e) {
+function b(e) {
     return r.tn.post({
         url: f.ANM.USER_HARVEST,
         body: { backends: e },
         oldFormErrors: !0
     });
 }
-function T(e) {
+function S(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(h.intl.string(h.t['f1+oNj'])) : a.uv.announce(h.intl.string(h.t.NstziY));
+        null == e ? a.uv.announce(p.intl.string(p.t['f1+oNj'])) : a.uv.announce(p.intl.string(p.t.NstziY));
 }
-function b(e) {
+function T(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e

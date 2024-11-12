@@ -1,6 +1,6 @@
 n.d(t, {
     $0: function () {
-        return h;
+        return p;
     },
     j1: function () {
         return g;
@@ -27,7 +27,7 @@ var r = n(192379),
     d = n(564334),
     f = n(302221),
     _ = n(308083);
-function h(e) {
+function p(e) {
     let t = a()(e),
         n = t.get('rgb.r'),
         r = t.get('rgb.g'),
@@ -42,7 +42,7 @@ function h(e) {
               saturation: 1
           });
 }
-function p(e) {
+function h(e) {
     return new d.Z(e.get('rgb.r'), e.get('rgb.g'), e.get('rgb.b'), e.alpha());
 }
 function m(e, t) {
@@ -79,7 +79,7 @@ function m(e, t) {
         s = a()(i),
         u = a()(t),
         c = (0, f.k8)({
-            colors: [p(s), p(u)],
+            colors: [h(s), h(u)],
             ratio: r,
             saturationFactor: 1
         });
@@ -99,7 +99,7 @@ function g(e, t) {
         };
     })(e, t);
     if (null == n) return;
-    let r = { '--custom-clan-text': h(n['--custom-clan-bg']).hex() };
+    let r = { '--custom-clan-text': p(n['--custom-clan-bg']).hex() };
     return {
         ...n,
         ...r

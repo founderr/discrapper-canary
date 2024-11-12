@@ -17,8 +17,8 @@ var i = n(570140),
     d = n(19780),
     f = n(944486),
     _ = n(914010),
-    h = n(979651),
-    p = n(317381),
+    p = n(979651),
+    h = n(317381),
     m = n(719296),
     g = n(958185),
     E = n(981631);
@@ -30,9 +30,9 @@ function I(e) {
     let t = null != e ? e : r;
     null != t && c.Z.isOpen(t) && i.Z.wait(() => a.$Z(t));
 }
-function S() {
-    let e = p.ZP.getConnectedActivityChannelId(),
-        t = p.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : E.lds),
+function b() {
+    let e = h.ZP.getConnectedActivityChannelId(),
+        t = h.ZP.getSelfEmbeddedActivityForChannel(null != e ? e : E.lds),
         n = l.Z.getChannel(e);
     return null == e || null == n || null == t
         ? (function () {
@@ -48,7 +48,7 @@ function S() {
               i.Z.wait(() => a.bA(t, E.NYg.EMBED_IFRAME, { channel: e })), (r = t);
           })(n, (0, m.Z)(e, t.applicationId));
 }
-function T() {
+function S() {
     return (0, g.Z)({
         LayerStore: u.Z,
         PopoutWindowStore: o.Z
@@ -56,12 +56,12 @@ function T() {
         ? v()
         : I();
 }
-class b extends s.Z {
+class T extends s.Z {
     _initialize() {
-        f.Z.addChangeListener(S), _.Z.addChangeListener(S), d.Z.addChangeListener(S), h.Z.addChangeListener(S), o.Z.addChangeListener(S), p.ZP.addChangeListener(S), u.Z.addChangeListener(T);
+        f.Z.addChangeListener(b), _.Z.addChangeListener(b), d.Z.addChangeListener(b), p.Z.addChangeListener(b), o.Z.addChangeListener(b), h.ZP.addChangeListener(b), u.Z.addChangeListener(S);
     }
     _terminate() {
-        f.Z.removeChangeListener(S), _.Z.removeChangeListener(S), d.Z.removeChangeListener(S), h.Z.removeChangeListener(S), o.Z.removeChangeListener(S), p.ZP.removeChangeListener(S), u.Z.removeChangeListener(T);
+        f.Z.removeChangeListener(b), _.Z.removeChangeListener(b), d.Z.removeChangeListener(b), p.Z.removeChangeListener(b), o.Z.removeChangeListener(b), h.ZP.removeChangeListener(b), u.Z.removeChangeListener(S);
     }
 }
-t.ZP = new b();
+t.ZP = new T();

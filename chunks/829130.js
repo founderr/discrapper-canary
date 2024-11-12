@@ -78,8 +78,8 @@ e.exports = function (e) {
                     },
                     begin: t.concat(/\b/, /(?!decltype)/, /(?!if)/, /(?!for)/, /(?!switch)/, /(?!while)/, e.IDENT_RE, t.lookahead(/(<[^<>]+>|)\s*\(/))
                 },
-                h = [_, u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
-                p = {
+                p = [_, u, s, n, e.C_BLOCK_COMMENT_MODE, l, o],
+                h = {
                     variants: [
                         {
                             begin: /=/,
@@ -95,12 +95,12 @@ e.exports = function (e) {
                         }
                     ],
                     keywords: f,
-                    contains: h.concat([
+                    contains: p.concat([
                         {
                             begin: /\(/,
                             end: /\)/,
                             keywords: f,
-                            contains: h.concat(['self']),
+                            contains: p.concat(['self']),
                             relevance: 0
                         }
                     ]),
@@ -172,7 +172,7 @@ e.exports = function (e) {
                 keywords: f,
                 illegal: '</',
                 classNameAliases: { 'function.dispatch': 'built_in' },
-                contains: [].concat(p, m, _, h, [
+                contains: [].concat(h, m, _, p, [
                     u,
                     {
                         begin: '\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function)\\s*<(?!<)',

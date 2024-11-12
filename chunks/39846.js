@@ -10,30 +10,30 @@ var r = n(147913),
     d = n(19780),
     f = n(876506),
     _ = n(981631),
-    h = n(761274);
-let p = null;
+    p = n(761274);
+let h = null;
 function m() {
-    i.Z.requestPermission(h.Eu.AUDIO).then((e) => {
+    i.Z.requestPermission(p.Eu.AUDIO).then((e) => {
         if (!!e) (0, f.Z)(!0);
     }),
-        c.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(h.Eu.INPUT_MONITORING);
+        c.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(p.Eu.INPUT_MONITORING);
 }
 class g extends r.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
-        null == t && (p = null);
+        null == t && (h = null);
     }
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
             var t, n, r, i;
             let { userId: c, channelId: f } = e;
-            if (null != f && l.default.getId() === c && null != d.Z.getRTCConnectionId() && p !== f) {
+            if (null != f && l.default.getId() === c && null != d.Z.getRTCConnectionId() && h !== f) {
                 if (((t = c), (n = f), (null === (r = u.Z.getChannel(n)) || void 0 === r ? !void 0 : !r.isListenModeCapable()) || a.ZP.isSpeaker(t, n))) {
-                    (p = f), m();
+                    (h = f), m();
                     return;
                 }
-                (i = new o.Z(e)), (0, s.gf)(i) === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((p = f), m());
+                (i = new o.Z(e)), (0, s.gf)(i) === s.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK && ((h = f), m());
             }
         });
     }

@@ -70,8 +70,8 @@ function T(e) {
         C = s.useCallback(() => {
             h((e) => !e);
         }, []),
-        _ = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
-        E = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
+        E = (0, a.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(r)),
+        _ = (0, a.e7)([d.Z], () => d.Z.getLoadedUserExperiment(r)),
         f = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.USER, r), (e) => {
@@ -142,9 +142,9 @@ function T(e) {
                               children: [
                                   (0, i.jsxs)(o.FormText, {
                                       type: o.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (t = null == _ ? void 0 : _.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (t = null == E ? void 0 : E.bucket) && void 0 !== t ? t : g.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == E
+                                  null == _
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -163,7 +163,7 @@ function T(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
+                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -211,8 +211,8 @@ function C(e) {
         C = s.useCallback(() => {
             h((e) => !e);
         }, []),
-        _ = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
-        E = (0, a.Wu)([d.Z], () =>
+        E = (0, a.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(n)),
+        _ = (0, a.Wu)([d.Z], () =>
             l()
                 .sortBy(d.Z.getRecentExposures(g.xY.GUILD, n), (e) => {
                     let [t, n] = e;
@@ -302,7 +302,7 @@ function C(e) {
                                       type: o.FormTextTypes.DESCRIPTION,
                                       children: ['Current Assignments: ', I]
                                   }),
-                                  null == _
+                                  null == E
                                       ? (0, i.jsx)(o.FormText, {
                                             type: o.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -331,7 +331,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
+                                            children: null == E ? 'None' : JSON.stringify(E, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.FormTitle, {
                                             tag: 'h5',
@@ -351,7 +351,7 @@ function C(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: p.pre,
-                                            children: 0 === E.length ? 'None' : E.join('\n')
+                                            children: 0 === _.length ? 'None' : _.join('\n')
                                         })
                                     ]
                                 })

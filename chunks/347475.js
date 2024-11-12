@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -15,18 +15,18 @@ var r = n(200651),
     d = n(614417),
     f = n(601665),
     _ = n(103113),
-    h = n(738953);
-function p(e) {
+    p = n(738953);
+function h(e) {
     let { userId: t, user: n, ...a } = e,
-        p = (0, o.e7)([u.default], () => u.default.getUser(t), [t]),
-        m = null != n ? n : p;
+        h = (0, o.e7)([u.default], () => u.default.getUser(t), [t]),
+        m = null != n ? n : h;
     s()(null != m, 'UserProfilePopoutWrapper: user cannot be undefined');
     let g = (0, o.e7)([u.default], () => u.default.getCurrentUser());
     s()(null != g, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
     let E = (0, o.e7)([l.Z], () => l.Z.isBlocked(m.id)),
         [v, I] = i.useState(E),
-        S = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
-    return v && S
+        b = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
+    return v && b
         ? (0, r.jsx)(d.Z, {
               ...a,
               user: m,
@@ -45,7 +45,7 @@ function p(e) {
                   user: m,
                   currentUser: g
               })
-            : (0, r.jsx)(h.Z, {
+            : (0, r.jsx)(p.Z, {
                   ...a,
                   user: m,
                   currentUser: g

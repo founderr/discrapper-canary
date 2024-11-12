@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return T;
     },
     b: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -18,27 +18,27 @@ var r = n(200651),
     d = n(220082),
     f = n(583405),
     _ = n(313201),
-    h = n(279745),
-    p = n(695346),
+    p = n(279745),
+    h = n(695346),
     m = n(451478),
     g = n(768581),
     E = n(28660),
     v = n(462997),
     I = n(431405);
-let S = (e) => {
+let b = (e) => {
     let { size: t, stroke: n } = (0, c.getAvatarSpecs)(e);
     return t / 2 + n;
 };
-function T(e) {
+function S(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: v, pendingBanner: T, children: b, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
+    let { user: n, displayProfile: a, guildId: v, pendingBanner: S, children: T, className: y, avatarSize: A, avatarOffsetX: N, avatarOffsetY: C, bannerWidth: R, bannerHeight: O, themePadding: D, animateOnHover: L = !1 } = e,
         x = (0, _.Dt)(),
         [w, M] = i.useState(!1),
         P = (0, l.e7)([m.Z], () => m.Z.isFocused()),
-        k = p.QK.getSetting(),
+        k = h.QK.getSetting(),
         { bannerSrc: U, status: G } = (0, E.Z)({
             displayProfile: a,
-            pendingBanner: T,
+            pendingBanner: S,
             size: R,
             canAnimate: L || !k ? w : P
         }),
@@ -46,7 +46,7 @@ function T(e) {
         Z = n.getAvatarURL(v, (0, c.getAvatarSize)(A)),
         F = (0, o._i)((0, d.ZP)(Z, B, !1)),
         V = (0, f.Z)(null !== (t = null == a ? void 0 : a.primaryColor) && void 0 !== t ? t : F).hex,
-        j = S(A),
+        j = b(A),
         H = O - C - D;
     return (0, r.jsxs)('svg', {
         className: I.mask,
@@ -82,7 +82,7 @@ function T(e) {
                 overflow: 'visible',
                 mask: 'url(#'.concat(x, ')'),
                 children: [
-                    b,
+                    T,
                     (0, r.jsxs)('div', {
                         className: s()(I.banner, y),
                         onMouseMove: () => M(!0),
@@ -93,18 +93,18 @@ function T(e) {
                             backgroundImage: null != U ? 'url('.concat(U, ')') : void 0,
                             backgroundColor: 'COMPLETE' !== G ? u.Z.unsafe_rawColors.PRIMARY_800.css : V
                         },
-                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(h.Z, { className: I.gifTag }), b]
+                        children: [!k && (0, g.F8)(U) && (0, r.jsx)(p.Z, { className: I.gifTag }), T]
                     })
                 ]
             })
         ]
     });
 }
-function b(e) {
+function T(e) {
     let { profileType: t, displayProfile: n, canUsePremiumProfileCustomization: i = !1, ...a } = e,
         s = v.q[t],
         o = i || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1;
-    return (0, r.jsx)(T, {
+    return (0, r.jsx)(S, {
         ...a,
         ...s,
         displayProfile: n,

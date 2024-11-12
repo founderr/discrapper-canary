@@ -21,7 +21,7 @@ function g(e) {
         [h, C] = r.useState(!1),
         [v, j] = r.useState([]),
         _ = (0, l.qb)(t),
-        E = r.useCallback(() => {
+        b = r.useCallback(() => {
             C(!0),
                 (0, i.dA)({
                     questId: t.id,
@@ -29,7 +29,7 @@ function g(e) {
                     properties: (0, i.mH)(s)
                 });
         }, [C, s, t.id]),
-        b = r.useCallback(() => {
+        E = r.useCallback(() => {
             C(!1),
                 (0, i.dA)({
                     questId: t.id,
@@ -50,8 +50,8 @@ function g(e) {
                     e.current = t;
                 },
                 className: a()(x.container, n),
-                onMouseEnter: E,
-                onMouseLeave: b,
+                onMouseEnter: b,
+                onMouseLeave: E,
                 children: [
                     (0, o.jsx)(u.Z, {
                         quest: t,

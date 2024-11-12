@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(100527),
     f = n(906732),
     _ = n(605236),
-    h = n(243778),
-    p = n(963249),
+    p = n(243778),
+    h = n(963249),
     m = n(599659),
     g = n(282925),
     E = n(819640),
     v = n(594174),
     I = n(70956),
-    S = n(709054),
-    T = n(51144),
-    b = n(443603),
+    b = n(709054),
+    S = n(51144),
+    T = n(443603),
     y = n(981631),
     A = n(921944),
     N = n(388032),
@@ -62,17 +62,17 @@ t.Z = i.memo(function (e) {
         [s, c] = i.useState(!1),
         I = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         L = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-        x = null != L ? S.default.age(L.id) : 0,
+        x = null != L ? b.default.age(L.id) : 0,
         { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
         M = [];
     w && !t && I && x >= O && M.push(l.z.NITROWEEN_COACHMARKS);
-    let [P, k] = (0, h.US)(M),
+    let [P, k] = (0, p.US)(M),
         U = null != P,
-        G = (0, T.Ft)(n),
+        G = (0, S.Ft)(n),
         { Component: B, events: Z, play: F } = (0, u.$)();
     if (t) return null;
     let V = () => {
-        (0, p.Z)({
+        (0, h.Z)({
             isGift: !0,
             giftRecipient: null == G ? void 0 : G,
             giftMessage: N.intl.string(N.t['rX/m/f']),
@@ -101,7 +101,7 @@ t.Z = i.memo(function (e) {
                     onCheckItOutClick: V,
                     markAsDismissed: k
                 }),
-            (0, r.jsx)(b.Z, {
+            (0, r.jsx)(T.Z, {
                 innerClassName: R.button,
                 'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,

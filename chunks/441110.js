@@ -9,9 +9,9 @@ var r = n(200651),
     d = n(626135),
     f = n(981631),
     _ = n(388032),
-    h = n(762164);
+    p = n(762164);
 t.Z = function (e) {
-    let { guild: t, message: n, onClose: p } = e,
+    let { guild: t, message: n, onClose: h } = e,
         m = u.Z.getChannel(c.Z.getChannelId(t.id));
     return (i.useEffect(() => {
         d.default.track(f.rMx.OPEN_POPOUT, {
@@ -24,13 +24,13 @@ t.Z = function (e) {
         ? null
         : (0, r.jsx)(o.W_, {
               children: (0, r.jsxs)('div', {
-                  className: h.popoutContainer,
+                  className: p.popoutContainer,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: h.mainContent,
+                          className: p.mainContent,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: h.iconContainer,
+                                  className: p.iconContainer,
                                   children: (0, r.jsx)(a.NewUserIcon, {
                                       size: 'custom',
                                       color: 'currentColor',
@@ -42,7 +42,7 @@ t.Z = function (e) {
                                   children: [
                                       (0, r.jsx)(a.Heading, {
                                           variant: 'heading-md/semibold',
-                                          className: h.header,
+                                          className: p.header,
                                           children: _.intl.string(_.t['v/OYd3'])
                                       }),
                                       (0, r.jsx)(a.Text, {
@@ -56,11 +56,11 @@ t.Z = function (e) {
                       (0, r.jsx)(a.Button, {
                           size: a.Button.Sizes.SMALL,
                           color: a.Button.Colors.BRAND,
-                          className: h.ctaButton,
-                          innerClassName: h.ctaButtonContent,
+                          className: p.ctaButton,
+                          innerClassName: p.ctaButtonContent,
                           fullWidth: !0,
                           onClick: () => {
-                              s.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), p(), (0, l.q)(n.author, m.id);
+                              s.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id);
                           },
                           children: _.intl.format(_.t['+xsVS0'], { username: n.author.username })
                       })

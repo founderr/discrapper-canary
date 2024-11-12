@@ -21,16 +21,16 @@ n.d(t, {
         return I;
     },
     li: function () {
-        return S;
+        return b;
     },
     ob: function () {
         return E;
     },
     pC: function () {
-        return T;
+        return S;
     },
     v4: function () {
-        return b;
+        return T;
     },
     wO: function () {
         return y;
@@ -51,8 +51,8 @@ var r = n(544891),
     d = n(129542),
     f = n(877481),
     _ = n(830168),
-    h = n(57513),
-    p = n(981631),
+    p = n(57513),
+    h = n(981631),
     m = n(388032);
 function g(e, t) {
     _.Z.init({
@@ -94,7 +94,7 @@ function v(e) {
             branchId: n,
             installationPath: s
         }),
-        c.default.track(p.rMx.LIBRARY_INSTALL_INITIATED, {
+        c.default.track(h.rMx.LIBRARY_INSTALL_INITIATED, {
             application_id: t.id,
             application_name: t.name,
             sku_id: t.primarySkuId,
@@ -102,21 +102,21 @@ function v(e) {
         });
 }
 function I(e, t, n) {
-    (0, h.l)(e.id, t).then(() => {
+    (0, p.l)(e.id, t).then(() => {
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_REPAIR',
             applicationId: e.id,
             branchId: t
         });
     }),
-        c.default.track(p.rMx.LIBRARY_REPAIR_INITIATED, {
+        c.default.track(h.rMx.LIBRARY_REPAIR_INITIATED, {
             application_id: e.id,
             application_name: e.name,
             sku_id: e.primarySkuId,
             location: n
         });
 }
-function S(e, t, n, r) {
+function b(e, t, n, r) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !(function (e, t, n, r) {
         if (s.ZP.getRunningDiscordApplicationIds().includes(e.id)) return;
@@ -139,11 +139,11 @@ function S(e, t, n, r) {
             automatic: a
         });
 }
-function T(e, t, n) {
+function S(e, t, n) {
     let r = a.Z.getApplication(e);
     null != r &&
         (f.Z.removeShortcuts(r.name),
-        c.default.track(p.rMx.LIBRARY_UNINSTALL_INITIATED, {
+        c.default.track(h.rMx.LIBRARY_UNINSTALL_INITIATED, {
             application_id: r.id,
             application_name: r.name,
             sku_id: r.primarySkuId,
@@ -156,7 +156,7 @@ function T(e, t, n) {
             branchId: t
         });
 }
-function b() {
+function T() {
     _.Z.resume();
 }
 function y() {
@@ -191,7 +191,7 @@ function R(e, t) {
 function O(e, t) {
     let i = a.Z.getApplication(e);
     r.tn.post({
-        url: p.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
+        url: h.ANM.LIBRARY_APPLICATION_INSTALLED(e, e),
         oldFormErrors: !0
     }),
         null != i &&
@@ -206,7 +206,7 @@ function O(e, t) {
                         m.intl.formatToPlainString(m.t['89VAgY'], { name: i.name }),
                         { notif_type: 'Game Library Game Installed' },
                         {
-                            onClick: () => (0, o.uL)(p.Z5c.APPLICATION_LIBRARY),
+                            onClick: () => (0, o.uL)(h.Z5c.APPLICATION_LIBRARY),
                             omitViewTracking: !0
                         }
                     );

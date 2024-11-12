@@ -15,16 +15,16 @@ n.d(t, {
         return u;
     },
     XN: function () {
-        return p;
+        return h;
     },
     c0: function () {
-        return T;
+        return S;
     },
     fD: function () {
         return E;
     },
     kD: function () {
-        return S;
+        return b;
     },
     rn: function () {
         return f;
@@ -91,11 +91,11 @@ function f(e) {
 function _(e) {
     return null == e || '' === e ? 'none' : 'url('.concat(e, ')');
 }
-let h = [[0, 0, 0]];
-function p(e, t, n) {
+let p = [[0, 0, 0]];
+function h(e, t, n) {
     let r = document.createElement('canvas'),
         i = r.getContext('2d');
-    if (null == i) return h;
+    if (null == i) return p;
     let a = (r.width = 0 === e.width ? 128 : e.width),
         s = (r.height = 0 === e.height ? 128 : e.height);
     i.drawImage(e, 0, 0, a, s);
@@ -105,7 +105,7 @@ function p(e, t, n) {
             return r;
         })(i.getImageData(0, 0, a, s).data, a * s, n),
         u = l()(o, t);
-    return 'boolean' == typeof u ? h : u.palette();
+    return 'boolean' == typeof u ? p : u.palette();
 }
 let m = (e) => ('number' == typeof e ? null : g(e)),
     g = s().memoize(
@@ -117,7 +117,7 @@ let m = (e) => ('number' == typeof e ? null : g(e)),
                         n(e), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.onload = () => {
-                        t(p(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
+                        t(h(r, 5, 10)), (r.onerror = r.onload = null), (r = null);
                     }),
                     (r.src = e);
             })
@@ -137,10 +137,10 @@ function v(e) {
     return i()(2 === t.length, 'Input data is not a valid image.'), atob(t[1]).length;
 }
 async function I(e, t, n) {
-    let r = S(e);
+    let r = b(e);
     return new File([await r.arrayBuffer()], t, { type: n });
 }
-function S(e) {
+function b(e) {
     let t;
     t = e.split(',')[0].indexOf('base64') >= 0 ? atob(e.split(',')[1]) : btoa(e.split(',')[1]);
     let n = e.split(',')[0].split(':')[1].split(';')[0],
@@ -148,7 +148,7 @@ function S(e) {
     for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
     return new Blob([r], { type: n });
 }
-async function T(e) {
+async function S(e) {
     var t;
     if ('image/png' !== (null === (t = e.type) || void 0 === t ? void 0 : t.split(';')[0])) throw Error('File is not a PNG');
     let n = await e.text(),

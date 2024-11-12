@@ -1,9 +1,9 @@
 n.d(t, {
     O: function () {
-        return p;
+        return h;
     },
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -17,12 +17,12 @@ var r = n(200651),
     d = n(182294),
     f = n(388032),
     _ = n(314188);
-function h(e) {
+function p(e) {
     let { smallerText: t, className: n, textColor: a } = e,
         u = (0, o.e7)([c.Z], () => c.Z.affinities.slice(0, 3).reverse()),
-        h = u.map((e, t) =>
+        p = u.map((e, t) =>
             (0, r.jsx)(
-                p,
+                h,
                 {
                     affinity: e,
                     applyMask: t !== u.length - 1,
@@ -53,7 +53,7 @@ function h(e) {
               children: [
                   (0, r.jsx)('div', {
                       className: _.iconContainer,
-                      children: h
+                      children: p
                   }),
                   (0, r.jsx)('div', {
                       className: _.textContainer,
@@ -74,7 +74,7 @@ function h(e) {
               ]
           });
 }
-function p(e) {
+function h(e) {
     let { affinity: t, applyMask: n, size: i } = e,
         { avatarSrc: a, eventHandlers: o } = (0, u.Z)({
             user: t,

@@ -102,7 +102,7 @@ function _(e) {
     );
 }
 t.ZP = function (e) {
-    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: h, renderOverflow: p } = e,
+    let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: p, renderOverflow: h } = e,
         { ref: m, width: g } = (function () {
             let [e, t] = i.useState(0);
             return {
@@ -120,10 +120,10 @@ t.ZP = function (e) {
         } = d({
             items: n,
             itemGapPx: o,
-            maxLines: h,
+            maxLines: p,
             containerWidth: g
         }),
-        S = i.useCallback(
+        b = i.useCallback(
             (e) =>
                 (0, r.jsx)(f, {
                     items: e,
@@ -131,8 +131,8 @@ t.ZP = function (e) {
                 }),
             [a]
         ),
-        T = i.useMemo(() => n.slice(0, E + 1), [n, E]),
-        b = i.useMemo(() => n.slice(E + 1), [n, E]);
+        S = i.useMemo(() => n.slice(0, E + 1), [n, E]),
+        T = i.useMemo(() => n.slice(E + 1), [n, E]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
         ref: m,
@@ -162,8 +162,8 @@ t.ZP = function (e) {
                     })
                 ]
             }),
-            T.map(a),
-            b.length > 0 && (null != p ? p : S)(b)
+            S.map(a),
+            T.length > 0 && (null != h ? h : b)(T)
         ]
     });
 };

@@ -14,16 +14,16 @@ var r = n(513394),
     d = n(192722),
     f = n(740385),
     _ = n(462378),
-    h = n(768107),
-    p = n(224290),
+    p = n(768107),
+    h = n(224290),
     m = n(851902),
     g = n(551885),
     E = n(321531),
     v = n(685995),
     I = n(478638),
-    S = n(578163),
-    T = n(595048),
-    b = n(762120),
+    b = n(578163),
+    S = n(595048),
+    T = n(762120),
     y = n(670598),
     A = n(102315),
     N = n(948109),
@@ -53,7 +53,7 @@ function q(e, t) {
     var n, r, i;
     let { buttonRef: a, popoverRef: s, inputRef: o, listBoxRef: l, keyboardDelegate: u, shouldFocusWrap: c, isReadOnly: d, isDisabled: f } = e;
     let _ = (0, Y.qb)((i = z) && i.__esModule ? i.default : i, '@react-aria/combobox'),
-        { menuTriggerProps: h, menuProps: p } = (0, W.u4)(
+        { menuTriggerProps: p, menuProps: h } = (0, W.u4)(
             {
                 type: 'listbox',
                 isDisabled: f || d
@@ -61,7 +61,7 @@ function q(e, t) {
             t,
             a
         );
-    (0, B.Oj).set(t, { id: p.id });
+    (0, B.Oj).set(t, { id: h.id });
     let m = (0, F.useMemo)(() => u || new j.dp(t.collection, t.disabledKeys, l), [u, t.collection, t.disabledKeys, l]),
         { collectionProps: g } = (0, j.gq)({
             selectionManager: t.selectionManager,
@@ -73,10 +73,10 @@ function q(e, t) {
             isVirtualized: !0
         }),
         E = (0, Z.tv)(),
-        { isInvalid: v, validationErrors: I, validationDetails: S } = t.displayValidation,
+        { isInvalid: v, validationErrors: I, validationDetails: b } = t.displayValidation,
         {
-            labelProps: T,
-            inputProps: b,
+            labelProps: S,
+            inputProps: T,
             descriptionProps: y,
             errorMessageProps: A
         } = (0, K.E)(
@@ -130,14 +130,14 @@ function q(e, t) {
             o
         ),
         N = (0, Z.bE)({
-            id: h.id,
+            id: p.id,
             'aria-label': _.format('buttonLabel'),
-            'aria-labelledby': e['aria-labelledby'] || T.id
+            'aria-labelledby': e['aria-labelledby'] || S.id
         }),
         C = (0, Z.bE)({
-            id: p.id,
+            id: h.id,
             'aria-label': _.format('listboxLabel'),
-            'aria-labelledby': e['aria-labelledby'] || T.id
+            'aria-labelledby': e['aria-labelledby'] || S.id
         }),
         R = (0, F.useRef)(0),
         O = null != t.selectionManager.focusedKey && t.isOpen ? t.collection.getItem(t.selectionManager.focusedKey) : void 0,
@@ -186,9 +186,9 @@ function q(e, t) {
             if (t.isOpen) return (0, G.RP)([o.current, s.current]);
         }, [t.isOpen, o, s]),
         {
-            labelProps: T,
+            labelProps: S,
             buttonProps: {
-                ...h,
+                ...p,
                 ...N,
                 excludeFromTabOrder: !0,
                 onPress: (e) => {
@@ -199,10 +199,10 @@ function q(e, t) {
                 },
                 isDisabled: f || d
             },
-            inputProps: (0, Z.dG)(b, {
+            inputProps: (0, Z.dG)(T, {
                 role: 'combobox',
-                'aria-expanded': h['aria-expanded'],
-                'aria-controls': t.isOpen ? p.id : void 0,
+                'aria-expanded': p['aria-expanded'],
+                'aria-controls': t.isOpen ? h.id : void 0,
                 'aria-autocomplete': 'list',
                 'aria-activedescendant': O ? (0, B.x3)(t, O.key) : void 0,
                 onTouchEnd: (e) => {
@@ -220,7 +220,7 @@ function q(e, t) {
                 autoCorrect: 'off',
                 spellCheck: 'false'
             }),
-            listBoxProps: (0, Z.dG)(p, C, {
+            listBoxProps: (0, Z.dG)(h, C, {
                 autoFocus: t.focusStrategy,
                 shouldUseVirtualFocus: !0,
                 shouldSelectOnPressUp: !0,
@@ -231,7 +231,7 @@ function q(e, t) {
             errorMessageProps: A,
             isInvalid: v,
             validationErrors: I,
-            validationDetails: S
+            validationDetails: b
         }
     );
 }
@@ -247,16 +247,16 @@ z = {
     'et-EE': d.Z,
     'fi-FI': f.Z,
     'fr-FR': _.Z,
-    'he-IL': h.Z,
-    'hr-HR': p.Z,
+    'he-IL': p.Z,
+    'hr-HR': h.Z,
     'hu-HU': m.Z,
     'it-IT': g.Z,
     'ja-JP': E.Z,
     'ko-KR': v.Z,
     'lt-LT': I.Z,
-    'lv-LV': S.Z,
-    'nb-NO': T.Z,
-    'nl-NL': b.Z,
+    'lv-LV': b.Z,
+    'nb-NO': S.Z,
+    'nl-NL': T.Z,
     'pl-PL': y.Z,
     'pt-BR': A.Z,
     'pt-PT': N.Z,

@@ -6,7 +6,7 @@ var r = n(200651),
     l = n(981631),
     u = n(388032);
 t.Z = (e) => {
-    let { href: t, className: n, iconClassName: c, rel: d, target: f, mimeType: _, fileName: h, focusProps: p, onClick: m, ...g } = e,
+    let { href: t, className: n, iconClassName: c, rel: d, target: f, mimeType: _, fileName: p, focusProps: h, onClick: m, ...g } = e,
         E = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
         v = i.useCallback(
             (e) => {
@@ -19,7 +19,7 @@ t.Z = (e) => {
             },
             [E, _, m]
         );
-    return null != h
+    return null != p
         ? (0, r.jsx)(s.Anchor, {
               href: t,
               onClick: v,
@@ -27,9 +27,9 @@ t.Z = (e) => {
               rel: d,
               className: n,
               'aria-label': u.intl.string(u.t['1WjMbG']),
-              focusProps: p,
+              focusProps: h,
               ...g,
-              children: h
+              children: p
           })
         : (0, r.jsx)(s.Anchor, {
               href: t,
@@ -38,7 +38,7 @@ t.Z = (e) => {
               rel: d,
               className: n,
               'aria-label': u.intl.string(u.t['1WjMbG']),
-              focusProps: p,
+              focusProps: h,
               ...g,
               children: (0, r.jsx)(s.DownloadIcon, {
                   size: 'md',

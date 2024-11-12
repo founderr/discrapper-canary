@@ -12,14 +12,14 @@ var r = n(594190),
     u = n(981631),
     c = n(474936);
 function d(e, t, n, d) {
-    var f, _, h;
-    let p = i.Z.getChannel(s.Z.getVoiceChannelId()),
-        m = null == p ? void 0 : p.getGuildId(),
+    var f, _, p;
+    let h = i.Z.getChannel(s.Z.getVoiceChannelId()),
+        m = null == h ? void 0 : h.getGuildId(),
         g = a.Z.getMediaSessionId(),
         E = a.Z.getRTCConnectionId(),
         v = null === (f = r.ZP.getCurrentGameForAnalytics()) || void 0 === f ? void 0 : f.name,
         I = m !== n.guildId && n.guildId !== l.X8;
-    let S = ((_ = n), (h = I), _.guildId === l.X8 ? 'default' : h ? 'custom-external' : 'custom');
+    let b = ((_ = n), (p = I), _.guildId === l.X8 ? 'default' : p ? 'custom-external' : 'custom');
     o.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
         feature_name: c.QP.SOUNDBOARD_PLAY,
         feature_tier: I ? c.h1.PREMIUM_STANDARD : c.h1.FREE,
@@ -30,7 +30,7 @@ function d(e, t, n, d) {
         in_overlay: t,
         application_name: v,
         emoji_count: null != n.emojiId || null != n.emojiName ? 1 : 0,
-        feature_selection: S,
+        feature_selection: b,
         feature_selection_id: n.soundId,
         sound_type: d
     });

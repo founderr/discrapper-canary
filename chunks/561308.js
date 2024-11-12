@@ -15,10 +15,10 @@ n.d(t, {
         return C;
     },
     Ol: function () {
-        return b;
+        return T;
     },
     PJ: function () {
-        return S;
+        return b;
     },
     T_: function () {
         return g;
@@ -39,7 +39,7 @@ n.d(t, {
         return U;
     },
     kr: function () {
-        return T;
+        return S;
     },
     n2: function () {
         return y;
@@ -75,8 +75,8 @@ var r = n(164369),
     d = n(70956),
     f = n(709054),
     _ = n(719247),
-    h = n(388032);
-let p = (e) => {
+    p = n(388032);
+let h = (e) => {
         let { start: t, now: n } = e,
             r = Math.max(n - t, 0) / d.Z.Millis.SECOND,
             i = Math.floor(r) % d.Z.Seconds.MINUTE,
@@ -91,7 +91,7 @@ let p = (e) => {
     },
     m = (e, t) => {
         let n = 'id' in e ? f.default.extractTimestamp(e.id) : e.start;
-        return p({
+        return h({
             start: n,
             now: 'end' in e && null != e.end ? Math.min(e.end, t) : t
         });
@@ -101,19 +101,19 @@ let p = (e) => {
         function a(e) {
             return String(e).padStart(2, '0');
         }
-        return h.intl.formatToPlainString(h.t['l5PP//'], {
+        return p.intl.formatToPlainString(p.t['l5PP//'], {
             hours: i,
             minutes: i > 0 ? a(r) : r,
             seconds: a(n)
         });
     },
     E = {
-        secondsAgo: (e) => h.intl.formatToPlainString(h.t.EOrEJi, { count: e }),
-        minutesAgo: (e) => h.intl.formatToPlainString(h.t.LRNgHh, { count: e }),
-        hoursAgo: (e) => h.intl.formatToPlainString(h.t.raJpz8, { count: e }),
-        daysAgo: (e) => h.intl.formatToPlainString(h.t.KkvKho, { count: e }),
-        weeksAgo: (e) => h.intl.formatToPlainString(h.t.sDtO6O, { count: e }),
-        monthsAgo: (e) => h.intl.formatToPlainString(h.t.ITymoq, { count: e })
+        secondsAgo: (e) => p.intl.formatToPlainString(p.t.EOrEJi, { count: e }),
+        minutesAgo: (e) => p.intl.formatToPlainString(p.t.LRNgHh, { count: e }),
+        hoursAgo: (e) => p.intl.formatToPlainString(p.t.raJpz8, { count: e }),
+        daysAgo: (e) => p.intl.formatToPlainString(p.t.KkvKho, { count: e }),
+        weeksAgo: (e) => p.intl.formatToPlainString(p.t.sDtO6O, { count: e }),
+        monthsAgo: (e) => p.intl.formatToPlainString(p.t.ITymoq, { count: e })
     },
     v = function (e, t, n) {
         let { formatSet: r = E } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
@@ -141,39 +141,39 @@ let p = (e) => {
     I = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return T(e) ? g(e, n) : v(e, t, n, r);
+        return S(e) ? g(e, n) : v(e, t, n, r);
     };
-function S(e, t) {
+function b(e, t) {
     return e.traits.find((e) => e.type === t);
+}
+function S(e) {
+    var t, n;
+    return null !== (n = null === (t = b(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
 function T(e) {
     var t, n;
-    return null !== (n = null === (t = S(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
-}
-function b(e) {
-    var t, n;
-    return null !== (n = null === (t = S(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
+    return null !== (n = null === (t = b(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function y(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function A(e) {
-    return T(e) && !y(e);
+    return S(e) && !y(e);
 }
 function N(e) {
     var t;
-    return null === (t = S(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
+    return null === (t = b(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function C(e) {
     var t;
-    return null === (t = S(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
+    return null === (t = b(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function R(e) {
     var t;
-    return null === (t = S(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
+    return null === (t = b(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 function O(e) {
-    let t = S(e, s.N.RESURRECTED);
+    let t = b(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
 function D(e) {
@@ -185,7 +185,7 @@ function D(e) {
         start: e,
         end: new Date()
     });
-    return h.intl.formatToPlainString(h.t.NXBtjI, {
+    return p.intl.formatToPlainString(p.t.NXBtjI, {
         months: t,
         weeks: t > 0 ? 0 : n,
         days: t > 0 || n > 0 ? 0 : i
@@ -196,7 +196,7 @@ function L(e) {
     let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
     return null == t
         ? null
-        : h.intl.formatToPlainString(h.t['ijVm6+'], {
+        : p.intl.formatToPlainString(p.t['ijVm6+'], {
               seasonNum: t[1],
               episodeNum: t[2]
           });
@@ -207,7 +207,7 @@ function x(e, t) {
         o = null !== (a = null == t ? void 0 : null === (r = t.size) || void 0 === r ? void 0 : r[1]) && void 0 !== a ? a : void 0,
         l =
             null != s && null != o
-                ? h.intl.formatToPlainString(h.t.wmUSi4, {
+                ? p.intl.formatToPlainString(p.t.wmUSi4, {
                       count: s,
                       max: o
                   })
@@ -219,7 +219,7 @@ function w(e) {
 }
 function M(e) {
     var t;
-    return null === (t = S(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
+    return null === (t = b(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
 }
 function P(e) {
     let t = M(e);
@@ -241,13 +241,13 @@ function k(e) {
               tooltipText: null
           }
         : {
-              text: h.intl.formatToPlainString(h.t.vZaMen, { hours: n }),
-              tooltipText: h.intl.formatToPlainString(h.t['S5F48/'], { hours: n })
+              text: p.intl.formatToPlainString(p.t.vZaMen, { hours: n }),
+              tooltipText: p.intl.formatToPlainString(p.t['S5F48/'], { hours: n })
           };
 }
 function U(e) {
     var t;
-    return null === (t = S(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
+    return null === (t = b(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }
 function G(e) {
     let t = (0, o.e7)([_.Z], () => _.Z.getMatchingActivity(e)),

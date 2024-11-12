@@ -22,15 +22,15 @@ function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : window,
         i = (0, a.e7)([l.Z], () => l.Z.keyboardModeEnabled),
         f = (0, s.Z)(),
-        [_, h] = r.useState(!1),
-        p = (0, o.Aq)();
+        [_, p] = r.useState(!1),
+        h = (0, o.Aq)();
     return (
         r.useEffect(() => {
             if (t) return n.addEventListener('blur', e), () => n.removeEventListener('blur', e);
             function e() {
-                f && (p.dispatch(c.CkL.POPOUT_CLOSE), u.S.dispatch(c.CkL.CONTEXT_MENU_CLOSE));
+                f && (h.dispatch(c.CkL.POPOUT_CLOSE), u.S.dispatch(c.CkL.CONTEXT_MENU_CLOSE));
             }
-        }, [n, f, t, p]),
+        }, [n, f, t, h]),
         r.useEffect(() => {
             var r, a, s;
             if (i || !_ || !t) return;
@@ -50,6 +50,6 @@ function f(e, t) {
                 }
             );
         }, [t, _, i, e, n, f]),
-        h
+        p
     );
 }

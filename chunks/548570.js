@@ -22,16 +22,16 @@ var r = n(512722),
     d = n(570140),
     f = n(406966),
     _ = n(795513),
-    h = n(266750),
-    p = n(250407),
+    p = n(266750),
+    h = n(250407),
     m = n(710845),
     g = n(797614),
     E = n(218543),
     v = n(857192),
     I = n(626135),
-    S = n(12647),
-    T = n(70956),
-    b = n(358085),
+    b = n(12647),
+    S = n(70956),
+    T = n(358085),
     y = n(960048),
     A = n(138859),
     N = n(14639),
@@ -59,9 +59,9 @@ function P(e, t, n) {
 let k = new m.Z('GatewaySocket'),
     U = new R.Z();
 function G() {}
-let B = 30 * T.Z.Millis.SECOND,
-    Z = 3 * T.Z.Millis.MINUTE,
-    F = 1 * T.Z.Millis.MINUTE;
+let B = 30 * S.Z.Millis.SECOND,
+    Z = 3 * S.Z.Millis.MINUTE,
+    F = 1 * S.Z.Millis.MINUTE;
 function V(e) {
     return null == e ? 0 : 'string' == typeof e ? e.length : e.byteLength;
 }
@@ -216,7 +216,7 @@ class H extends L.Z {
                     this._sendHeartbeatIfDue();
                 }),
                 onError: () => {
-                    this.setResumeUrl(null), S.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
+                    this.setResumeUrl(null), b.Z.flushDNSCache(), this._handleClose(!1, 0, 'An error with the websocket occurred');
                 },
                 onClose: (e) => {
                     let { wasClean: t, code: n, reason: r } = e;
@@ -291,7 +291,7 @@ class H extends L.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, b.isIOS)() &&
+        (0, T.isIOS)() &&
             null != this.token &&
             1001 === e &&
             'Stream end encountered' === t &&
@@ -379,7 +379,7 @@ class H extends L.Z {
         this.connectionState = A.Z.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
-        let [n, r, i] = await Promise.all([(0, p.O)() ? f.Z.getCommittedVersions() : {}, (0, p.O)() ? h.Z.getCommittedVersions() : {}, !!(0, p.O)() && _.Z.canUseGuildVersions()]),
+        let [n, r, i] = await Promise.all([(0, h.O)() ? f.Z.getCommittedVersions() : {}, (0, h.O)() ? p.Z.getCommittedVersions() : {}, !!(0, h.O)() && _.Z.canUseGuildVersions()]),
             s = i
                 ? {
                       guild_versions: n,

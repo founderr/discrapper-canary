@@ -11,7 +11,7 @@ let d = null,
 function _() {
     d = null;
 }
-class h extends (s = o.ZP.Store) {
+class p extends (s = o.ZP.Store) {
     isOpen() {
         return null != d;
     }
@@ -26,7 +26,7 @@ class h extends (s = o.ZP.Store) {
     }
 }
 (a = 'ContextMenuStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -34,7 +34,7 @@ class h extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(l.Z, {
+    (t.Z = new p(l.Z, {
         CONTEXT_MENU_OPEN: function (e) {
             let { contextMenu: t } = e;
             f++, (d = t);

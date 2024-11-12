@@ -9,16 +9,16 @@ var r = n(690244),
     d = i('WeakMap.prototype.has', !0),
     f = i('Map.prototype.get', !0),
     _ = i('Map.prototype.set', !0),
-    h = i('Map.prototype.has', !0),
-    p = function (e, t) {
+    p = i('Map.prototype.has', !0),
+    h = function (e, t) {
         for (var n, r = e; null !== (n = r.next); r = n) if (n.key === t) return (r.next = n.next), (n.next = e.next), (e.next = n), n;
     },
     m = function (e, t) {
-        var n = p(e, t);
+        var n = h(e, t);
         return n && n.value;
     },
     g = function (e, t, n) {
-        var r = p(e, t);
+        var r = h(e, t);
         r
             ? (r.value = n)
             : (e.next = {
@@ -46,8 +46,8 @@ e.exports = function () {
                 if (o && r && ('object' == typeof r || 'function' == typeof r)) {
                     if (e) return d(e, r);
                 } else if (l) {
-                    if (t) return h(t, r);
-                } else if (n) return !!p(n, r);
+                    if (t) return p(t, r);
+                } else if (n) return !!h(n, r);
                 return !1;
             },
             set: function (r, i) {

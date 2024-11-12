@@ -60,16 +60,16 @@ function d(e) {
         else if (t.byweekday instanceof l.O) !t.byweekday.n || t.freq > s.Ci.MONTHLY ? ((t.byweekday = [t.byweekday.weekday]), (t.bynweekday = null)) : ((t.bynweekday = [[t.byweekday.weekday, t.byweekday.n]]), (t.byweekday = null));
         else {
             for (var f = [], _ = [], n = 0; n < t.byweekday.length; n++) {
-                var h = t.byweekday[n];
-                if ((0, a.hj)(h)) {
-                    f.push(h);
+                var p = t.byweekday[n];
+                if ((0, a.hj)(p)) {
+                    f.push(p);
                     continue;
                 }
-                if ((0, a.xs)(h)) {
-                    f.push(l.O.fromStr(h).weekday);
+                if ((0, a.xs)(p)) {
+                    f.push(l.O.fromStr(p).weekday);
                     continue;
                 }
-                !h.n || t.freq > s.Ci.MONTHLY ? f.push(h.weekday) : _.push([h.weekday, h.n]);
+                !p.n || t.freq > s.Ci.MONTHLY ? f.push(p.weekday) : _.push([p.weekday, p.n]);
             }
             (t.byweekday = (0, a.Dw)(f) ? f : null), (t.bynweekday = (0, a.Dw)(_) ? _ : null);
         }

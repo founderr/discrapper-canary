@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     Eo: function () {
-        return S;
+        return b;
     },
     Fe: function () {
         return r;
@@ -12,7 +12,7 @@ n.d(t, {
         return i;
     },
     IB: function () {
-        return T;
+        return S;
     },
     Ve: function () {
         return v;
@@ -40,7 +40,7 @@ var r,
     d = n(944486),
     f = n(960048),
     _ = n(981631);
-function h(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -54,7 +54,7 @@ function h(e, t, n) {
     );
 }
 ((a = r || (r = {}))[(a.REDEEMED = 1)] = 'REDEEMED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.CONVERTED = 3)] = 'CONVERTED'), ((s = i || (i = {}))[(s.SUCCESS = 1)] = 'SUCCESS'), (s[(s.FAIL = 2)] = 'FAIL');
-let p = new (class e {
+let h = new (class e {
         set(e, t) {
             this.cache.set(e, t);
         }
@@ -68,7 +68,7 @@ let p = new (class e {
             this.expiration < Date.now() && this.cache.clear();
         }
         constructor() {
-            h(this, 'cache', void 0), h(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
+            p(this, 'cache', void 0), p(this, 'expiration', void 0), (this.cache = new Map()), (this.expiration = Date.now() + 600000);
         }
     })(),
     m = () => (
@@ -95,7 +95,7 @@ async function g(e, t) {
         index: e,
         searchQuery: t
     });
-    if (p.has(n)) return p.get(n);
+    if (h.has(n)) return h.get(n);
     let { users: r, next_index: i } = (
             await o.tn.post({
                 url: _.ANM.GET_REFERRAL_ELIGIBLE_USERS,
@@ -111,7 +111,7 @@ async function g(e, t) {
             users: r.map((e) => new c.Z(e)),
             nextIndex: i
         };
-    return p.set(n, a), a;
+    return h.set(n, a), a;
 }
 let E = () => (
         l.Z.dispatch({ type: 'BILLING_REFERRALS_REMAINING_FETCH_START' }),
@@ -195,7 +195,7 @@ async function I(e) {
         n
     );
 }
-async function S(e) {
+async function b(e) {
     try {
         var t;
         let n = await o.tn.post({
@@ -217,7 +217,7 @@ async function S(e) {
         }
     }
 }
-async function T(e) {
+async function S(e) {
     try {
         var t;
         let n = await o.tn.get({

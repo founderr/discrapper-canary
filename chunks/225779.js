@@ -6,7 +6,7 @@ n.d(t, {
         return _;
     },
     No: function () {
-        return h;
+        return p;
     },
     Ry: function () {
         return m;
@@ -15,7 +15,7 @@ n.d(t, {
         return g;
     },
     u3: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651);
@@ -53,7 +53,7 @@ function _(e) {
         })
     });
 }
-function h(e) {
+function p(e) {
     let { children: t, noticeType: n, additionalTrackingProps: i, ...a } = e;
     return (0, r.jsx)(_, {
         ...a,
@@ -71,7 +71,7 @@ function h(e) {
         children: t
     });
 }
-function p(e) {
+function h(e) {
     let { children: t, href: n, ...i } = e;
     return (0, r.jsx)(o.Anchor, {
         ...i,

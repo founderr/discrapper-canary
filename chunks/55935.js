@@ -6,10 +6,10 @@ n.d(t, {
         return _;
     },
     QX: function () {
-        return b;
+        return T;
     },
     TD: function () {
-        return T;
+        return S;
     },
     Xf: function () {
         return g;
@@ -18,10 +18,10 @@ n.d(t, {
         return m;
     },
     _w: function () {
-        return h;
+        return p;
     },
     vc: function () {
-        return p;
+        return h;
     }
 });
 var r = n(913527),
@@ -43,10 +43,10 @@ function f(e, t) {
 function _(e, t) {
     return Math.abs(+e - +t) <= u && e.getDate() === t.getDate();
 }
-function h(e, t, n) {
+function p(e, t, n) {
     return Math.abs(e.valueOf() - t.valueOf()) < n;
 }
-function p(e, t) {
+function h(e, t) {
     let n = E(e).locale(),
         r = o.hg.getSetting(),
         i = ''.concat(n, ':').concat(t, ':').concat(r),
@@ -58,16 +58,16 @@ function m(e) {
     let n = i().localeData(),
         r = i()(),
         a = f(v(e), r.toDate());
-    return a < -1 ? p(e, 'L LT') : ((t = a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse'), p(e, n.calendar(t, E(e), r)));
+    return a < -1 ? h(e, 'L LT') : ((t = a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse'), h(e, n.calendar(t, E(e), r)));
 }
 function g(e) {
     let t = i().localeData(),
         n = i()(),
         r = f(v(e), n.toDate());
-    if (0 === r) return p(e, 'LT');
-    if (-1 === r) return p(e, t.calendar('lastDay', E(e), n));
-    if (r > -7) return p(e, 'dddd');
-    return p(e, 'L');
+    if (0 === r) return h(e, 'LT');
+    if (-1 === r) return h(e, t.calendar('lastDay', E(e), n));
+    if (r > -7) return h(e, 'dddd');
+    return h(e, 'L');
 }
 function E(e) {
     return i().isMoment(e) ? e : i()(e);
@@ -80,12 +80,12 @@ function I(e) {
     let n = i().localeData(),
         r = new Date(),
         a = f(e, r);
-    return 'sameElse' == (t = a < -1 ? 'sameElse' : a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse') ? p(e, 'LLL') : p(e, n.calendar(t, i()(e), i()(r)));
+    return 'sameElse' == (t = a < -1 ? 'sameElse' : a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse') ? h(e, 'LLL') : h(e, n.calendar(t, i()(e), i()(r)));
 }
 s.default.addChangeListener(() => {
     c = Object.create(null);
 });
-let S = [
+let b = [
     {
         key: 'days',
         millisecondsInUnit: 86400000
@@ -103,7 +103,7 @@ let S = [
         millisecondsInUnit: 1000
     }
 ];
-function T(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = {
             days: 0,
@@ -114,14 +114,14 @@ function T(e, t) {
     if (e > t || (n && Number(e) + 1200 > Number(t))) return r;
     let i = Number(t) - Number(e);
     return (
-        S.forEach((e) => {
+        b.forEach((e) => {
             let { key: t, millisecondsInUnit: n } = e;
             (r[t] = Math.floor(i / n)), (i -= r[t] * n);
         }),
         r
     );
 }
-function b(e, t) {
+function T(e, t) {
     return e.days > 0
         ? l.intl.formatToPlainString(t.days, {
               days: e.days,

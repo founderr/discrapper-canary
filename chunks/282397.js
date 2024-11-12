@@ -9,16 +9,16 @@ var a,
     d = n(904245),
     f = n(911969),
     _ = n(314897),
-    h = n(592125),
-    p = n(70956),
+    p = n(592125),
+    h = n(70956),
     m = n(622449);
-let g = 5 * p.Z.Millis.MINUTE,
-    E = 10 * p.Z.Millis.SECOND,
+let g = 5 * h.Z.Millis.MINUTE,
+    E = 10 * h.Z.Millis.SECOND,
     v = {},
     I = {},
-    S = {};
-let T = {};
-function b(e) {
+    b = {};
+let S = {};
+function T(e) {
     var t;
     if (null == e) return !1;
     let n = v[e];
@@ -26,16 +26,16 @@ function b(e) {
     null === (t = n.onSuccess) || void 0 === t || t.call(n), y(e);
 }
 function y(e) {
-    if (null != T[e]) {
-        delete T[e];
+    if (null != S[e]) {
+        delete S[e];
         return;
     }
     let t = v[e];
     delete v[e];
-    let n = S[e];
+    let n = b[e];
     null != n && delete I[n],
-        delete S[e],
-        (T[e] = {
+        delete b[e],
+        (S[e] = {
             insertedAt: Date.now(),
             nonce: e,
             messageId: n,
@@ -50,7 +50,7 @@ class A extends (a = u.ZP.Store) {
     getMessageInteractionStates() {
         let e = {};
         for (let [t, n] of Object.entries(v)) {
-            let r = S[t];
+            let r = b[t];
             null != r && (e[r] = n.state);
         }
         return e;
@@ -79,16 +79,16 @@ class A extends (a = u.ZP.Store) {
         LOGOUT: function () {
             (v = {}),
                 (I = {}),
+                (b = {}),
                 (S = {}),
-                (T = {}),
                 setInterval(() => {
                     let e = Date.now();
-                    for (let [t, n] of Object.entries(T)) e - n.insertedAt > E && delete T[t];
+                    for (let [t, n] of Object.entries(S)) e - n.insertedAt > E && delete S[t];
                 }, g);
         },
         INTERACTION_QUEUE: function (e) {
             let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: s, onFailure: o } = e;
-            null != n && ((I[n] = t), (S[t] = n)),
+            null != n && ((I[n] = t), (b[t] = n)),
                 (v[t] = {
                     state: m.F.QUEUED,
                     data: r,
@@ -108,7 +108,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_SUCCESS: function (e) {
             let { nonce: t } = e;
-            b(t);
+            T(t);
         },
         INTERACTION_FAILURE: function (e) {
             var t;
@@ -138,12 +138,12 @@ class A extends (a = u.ZP.Store) {
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            if (null == h.Z.getChannel(t)) return !1;
+            if (null == p.Z.getChannel(t)) return !1;
             for (let [e, t] of Object.entries(v)) t.state === m.F.FAILED && y(e);
         },
         INTERACTION_IFRAME_MODAL_CREATE: function (e) {
             let { application: t, nonce: n } = e;
-            (i = t.id), b(n);
+            (i = t.id), T(n);
         },
         INTERACTION_IFRAME_MODAL_CLOSE: function () {
             (r = void 0), (i = void 0);
@@ -154,7 +154,7 @@ class A extends (a = u.ZP.Store) {
         },
         INTERACTION_MODAL_CREATE: function (e) {
             let { nonce: t } = e;
-            b(t);
+            T(t);
         },
         EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
             let t,
@@ -164,7 +164,7 @@ class A extends (a = u.ZP.Store) {
                 a = _.default.getId(),
                 s = r.find((e) => e.user_id === a && e.session_id === i);
             if (null == s || null == s.nonce) return;
-            let o = T[s.nonce];
-            if ((null == o ? ((t = S[s.nonce]), (n = v[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) y(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
+            let o = S[s.nonce];
+            if ((null == o ? ((t = b[s.nonce]), (n = v[s.nonce])) : ((t = o.messageId), (n = o.interaction)), null != n && null != t)) y(s.nonce), null != t && 'channelId' in n.data && d.Z.deleteMessage(n.data.channelId, t, !0);
         }
     }));

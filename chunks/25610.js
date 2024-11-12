@@ -17,12 +17,12 @@ let c = (e, t) => {
         let n = (0, o.yh)(),
             { explicitContentGuilds: c, explicitContentFriendDm: d, explicitContentNonFriendDm: f } = (0, u.B)(),
             _ = (0, r.e7)([a.Z], () => a.Z.getFriendIDs().includes(t)),
-            h = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-            p = (0, r.e7)([i.Z], () => {
+            p = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
+            h = (0, r.e7)([i.Z], () => {
                 let t = i.Z.getChannel(e);
                 return null != t && t.isPrivate();
             });
-        return !!n && null != h && h.id !== t && (p && _ ? (0, l.vx)(d) : p ? (0, l.vx)(f) : (0, l.vx)(c));
+        return !!n && null != p && p.id !== t && (h && _ ? (0, l.vx)(d) : h ? (0, l.vx)(f) : (0, l.vx)(c));
     },
     d = () => {
         let e = (0, o.yh)(),

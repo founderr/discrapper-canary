@@ -6,10 +6,10 @@ n.d(t, {
         return m;
     },
     WN: function () {
-        return p;
+        return h;
     },
     hn: function () {
-        return h;
+        return p;
     }
 });
 var r = n(695170),
@@ -23,7 +23,7 @@ var r = n(695170),
     d = n(611510),
     f = n(713267),
     _ = n(150076),
-    h = {
+    p = {
         MO: new f.O(0),
         TU: new f.O(1),
         WE: new f.O(2),
@@ -32,11 +32,11 @@ var r = n(695170),
         SA: new f.O(5),
         SU: new f.O(6)
     },
-    p = {
+    h = {
         freq: o.D.YEARLY,
         dtstart: null,
         interval: 1,
-        wkst: h.MO,
+        wkst: p.MO,
         count: null,
         until: null,
         tzid: null,
@@ -53,7 +53,7 @@ var r = n(695170),
         bysecond: null,
         byeaster: null
     },
-    m = Object.keys(p),
+    m = Object.keys(h),
     g = (function () {
         function e(e, t) {
             void 0 === e && (e = {}), void 0 === t && (t = !1), (this._cache = t ? null : new d.C()), (this.origOptions = (0, l.Fx)(e));
@@ -136,13 +136,13 @@ var r = n(695170),
             (e.HOURLY = o.D.HOURLY),
             (e.MINUTELY = o.D.MINUTELY),
             (e.SECONDLY = o.D.SECONDLY),
-            (e.MO = h.MO),
-            (e.TU = h.TU),
-            (e.WE = h.WE),
-            (e.TH = h.TH),
-            (e.FR = h.FR),
-            (e.SA = h.SA),
-            (e.SU = h.SU),
+            (e.MO = p.MO),
+            (e.TU = p.TU),
+            (e.WE = p.WE),
+            (e.TH = p.TH),
+            (e.FR = p.FR),
+            (e.SA = p.SA),
+            (e.SU = p.SU),
             (e.parseString = u.B),
             (e.optionsToString = c.N),
             e

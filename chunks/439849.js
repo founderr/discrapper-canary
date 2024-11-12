@@ -4,7 +4,7 @@ n.d(t, {
         return _;
     },
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(757143),
@@ -32,7 +32,7 @@ function _(e) {
         ? (e = e.includes('dosbox.exe') ? e.split('/').slice(-3).join('/') : e.split('/').slice(-2).join('/'))
         : null;
 }
-async function h() {
+async function p() {
     if (null != r) return r;
     try {
         await u.ZP.ensureModule('discord_game_utils'), (r = await u.ZP.requireModule('discord_game_utils'));

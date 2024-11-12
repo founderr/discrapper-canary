@@ -18,7 +18,7 @@ let f = {
         formFields: []
     },
     _ = {};
-class h extends (s = u.ZP.Store) {
+class p extends (s = u.ZP.Store) {
     get(e) {
         if (null != e) return _[e];
     }
@@ -28,7 +28,7 @@ class h extends (s = u.ZP.Store) {
     }
 }
 (a = 'MemberVerificationFormStore'),
-    (i = 'displayName') in (r = h)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -36,7 +36,7 @@ class h extends (s = u.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new h(c.Z, {
+    (t.Z = new p(c.Z, {
         INVITE_ACCEPT_SUCCESS: function (e) {
             let { invite: t } = e,
                 { member_verification_form: n } = t,

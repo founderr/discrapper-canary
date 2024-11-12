@@ -17,8 +17,8 @@ function _(e) {
     var t;
     let a,
         _,
-        h,
-        { className: p, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
+        p,
+        { className: h, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
         I = i.useCallback(
             (e) => {
                 var t;
@@ -39,7 +39,7 @@ function _(e) {
             },
             [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        S = i.useCallback(() => {
+        b = i.useCallback(() => {
             u.Po({
                 channelId: v,
                 command: null,
@@ -49,10 +49,10 @@ function _(e) {
     if (null == m) return null;
     if (null != g) {
         let e = E[g.name].lastValidationResult;
-        (a = g.displayName), (_ = g.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (h = null);
+        (a = g.displayName), (_ = g.displayDescription), (p = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (p = null);
     return (0, r.jsxs)('div', {
-        className: s()(p, f.bar),
+        className: s()(h, f.bar),
         onContextMenu: I,
         children: [
             (0, r.jsxs)('div', {
@@ -62,10 +62,10 @@ function _(e) {
                         className: f.name,
                         children: a
                     }),
-                    null != h
+                    null != p
                         ? (0, r.jsx)('span', {
                               className: f.error,
-                              children: h
+                              children: p
                           })
                         : (0, r.jsx)('span', {
                               className: f.description,
@@ -75,7 +75,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 className: f.actions,
-                children: (0, r.jsx)(l.B, { onClick: S })
+                children: (0, r.jsx)(l.B, { onClick: b })
             })
         ]
     });

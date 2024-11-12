@@ -11,7 +11,7 @@ var r = n(200651),
     l = n(810462),
     u = n(425396);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: I, renderSectionFooter: S, renderInspector: T, renderEmptySearchState: b, renderCategoryList: y, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: M, renderHeader: P, renderUpsell: k, setShowUpsell: U } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: f, onSearchExpressions: _, hasSearchResults: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m, renderEmptyState: g, renderRow: E, renderSection: v, renderSectionHeader: I, renderSectionFooter: b, renderInspector: S, renderEmptySearchState: T, renderCategoryList: y, renderHeaderAccessories: A, rowHeight: N, sectionHeaderHeight: C, sectionFooterHeight: R, itemNodeWidth: O, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: w, gridNotice: M, renderHeader: P, renderUpsell: k, setShowUpsell: U } = e,
         G = i.useRef(null),
         B = i.useRef(null),
         Z = i.useRef(null),
@@ -70,11 +70,11 @@ function c(e) {
         ),
         en = i.useCallback((e) => (null == v ? void 0 : v(t[e])), [t, v]),
         er = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
-        ei = i.useCallback((e) => (null == S ? void 0 : S(t[e], e)), [t, S]),
+        ei = i.useCallback((e) => (null == b ? void 0 : b(t[e], e)), [t, b]),
         ea = i.useCallback(() => {
             var e;
-            return null == T ? void 0 : T(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
-        }, [Y, j.columnIndex, j.rowIndex, T]);
+            return null == S ? void 0 : S(null == Y ? void 0 : null === (e = Y[j.rowIndex]) || void 0 === e ? void 0 : e[j.columnIndex]);
+        }, [Y, j.columnIndex, j.rowIndex, S]);
     i.useEffect(() => {
         _(V);
     }, [_, V]),
@@ -96,7 +96,7 @@ function c(e) {
                 onKeyDown: $,
                 expressionsListRef: B,
                 gridNavigatorId: w,
-                defaultSearchPlaceholder: p,
+                defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: m
             }),
             null == A ? void 0 : A()
@@ -131,14 +131,14 @@ function c(e) {
                                             categories: t,
                                             ref: B,
                                             store: d,
-                                            hasSearchResults: h,
+                                            hasSearchResults: p,
                                             listPadding: x,
                                             renderRow: et,
                                             renderSection: null != v ? en : void 0,
                                             renderSectionHeader: null != I ? er : void 0,
-                                            renderSectionFooter: null != S ? ei : void 0,
-                                            renderInspector: null != T ? ea : void 0,
-                                            renderEmptySearchState: b,
+                                            renderSectionFooter: null != b ? ei : void 0,
+                                            renderInspector: null != S ? ea : void 0,
+                                            renderEmptySearchState: T,
                                             rowCount: W,
                                             rowCountBySection: K,
                                             rowHeight: N,

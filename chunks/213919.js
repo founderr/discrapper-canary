@@ -8,7 +8,7 @@ n.r(t),
             return I;
         },
         hideToken: function () {
-            return T;
+            return S;
         },
         init: function () {
             return v;
@@ -17,10 +17,10 @@ n.r(t),
             return y;
         },
         setToken: function () {
-            return S;
+            return b;
         },
         showToken: function () {
-            return b;
+            return T;
         }
     }),
     n(47120),
@@ -40,10 +40,10 @@ null != c && (u = c.safeStorage);
 let d = !1,
     f = {},
     _ = {},
-    h = !1,
-    p = !1;
+    p = !1,
+    h = !1;
 function m() {
-    if (h) {
+    if (p) {
         a.K.remove(s.B1), a.K.remove(s.XM);
         return;
     }
@@ -69,7 +69,7 @@ function E(e) {
     return (null == u ? void 0 : u.isEncryptionAvailable()) && !e.startsWith(o) ? ''.concat(o).concat(u.encryptString(e)) : e;
 }
 function v() {
-    if (p) return;
+    if (h) return;
     (i = a.K.get(s.B1)), (_ = a.K.get(s.XM) || {});
     let { decryptedToken: e, wasEncrypted: t } = g(i);
     (d = t),
@@ -86,23 +86,23 @@ function v() {
                     return null != n;
                 })
         )),
-        (p = !0);
+        (h = !0);
 }
 function I(e) {
     return (v(), null != e) ? f[e] : r;
 }
-function S(e, t) {
+function b(e, t) {
     if (null == e) {
         y(t);
         return;
     }
     (r = e), null != t && (f[t] = e), d ? A() : ((i = r), (_ = f), m());
 }
-function T() {
-    if (!h) (h = !0), m();
+function S() {
+    if (!p) (p = !0), m();
 }
-function b() {
-    if (!!h) (h = !1), m();
+function T() {
+    if (!!p) (p = !1), m();
 }
 function y(e) {
     let t = r;

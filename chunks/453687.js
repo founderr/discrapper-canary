@@ -50,17 +50,17 @@ function f(e, t, n) {
     let c = e.type === a.uaV.REPLY && null != e.messageReference,
         f = e.embeds.length > 0,
         _ = e.attachments.length > 0,
-        h = e.stickerItems.length > 0,
-        p = e.codedLinks.length > 0,
+        p = e.stickerItems.length > 0,
+        h = e.codedLinks.length > 0,
         m = e.hasFlag(a.iLy.HAS_THREAD),
-        g = f || _ || h || p || m || e.type === a.uaV.THREAD_CREATED,
+        g = f || _ || p || h || m || e.type === a.uaV.THREAD_CREATED,
         E = f && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
         v = e.type !== a.uaV.DEFAULT || (!E && '' !== e.content),
         I = (0, i.Z)(e),
-        S = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        T = l(e, t),
-        b = o(e),
-        y = I ? '' : ''.concat(c ? b : T, ' ').concat(r.Z0);
+        b = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        S = l(e, t),
+        T = o(e),
+        y = I ? '' : ''.concat(c ? T : S, ' ').concat(r.Z0);
     if (v) {
         let t = s(e);
         y += ' '.concat(t);
@@ -69,7 +69,7 @@ function f(e, t, n) {
         let t = d(e);
         y += ' '.concat(t);
     }
-    if (S) {
+    if (b) {
         let t = u(e);
         y += ' '.concat(r.fy, ' ').concat(t);
     }

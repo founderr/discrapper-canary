@@ -18,14 +18,14 @@ var r,
     d = n.n(c),
     f = n(512722),
     _ = n.n(f),
-    h = n(866442),
-    p = n(692547),
+    p = n(866442),
+    h = n(692547),
     m = n(84735),
     g = n(481060),
     E = n(540059),
     v = n(981631),
     I = n(766581);
-function S(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -39,19 +39,19 @@ function S(e, t, n) {
     );
 }
 ((s = r || (r = {})).DEFAULT = 'default'), (s.INVERTED = 'inverted'), (s.GHOST = 'ghost'), (s.ROW = 'row'), ((o = i || (i = {})).TOP = 'top'), (o.CENTER = 'center');
-let T = {
+let S = {
         BOX: I.box,
         ROUND: I.round,
         SMALL_BOX: I.smallBox
     },
-    b = {
+    T = {
         top: I.alignTop,
         center: I.alignCenter
     };
 class y extends (a = u.PureComponent) {
     render() {
         let { disabled: e, readOnly: t, value: n, align: r = 'center', className: i, innerClassName: a, children: s, size: o, reverse: u, displayOnly: c, type: f, onClick: _ } = this.props,
-            h =
+            p =
                 null != s
                     ? (0, l.jsx)('div', {
                           className: d()(I.label, e ? I.labelDisabled : I.labelClickable, u ? I.labelReversed : I.labelForward),
@@ -59,18 +59,18 @@ class y extends (a = u.PureComponent) {
                           children: s
                       })
                     : null,
-            p = this.props.disabled ? I.inputDisabled : this.props.readOnly ? I.inputReadonly : I.inputDefault;
+            h = this.props.disabled ? I.inputDisabled : this.props.readOnly ? I.inputReadonly : I.inputDefault;
         return (0, l.jsxs)(c ? 'span' : 'label', {
-            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, b[r], i, {
+            className: d()(e ? I.checkboxWrapperDisabled : I.checkboxWrapper, T[r], i, {
                 [I.row]: 'row' === f,
                 [I.checked]: n
             }),
             children: [
-                u ? h : null,
+                u ? p : null,
                 !c &&
                     (0, l.jsx)(m.t, {
                         children: (0, l.jsx)('input', {
-                            className: d()(a, p),
+                            className: d()(a, h),
                             type: 'checkbox',
                             onClick: _,
                             onChange: e || t ? v.dG4 : this.handleChange,
@@ -82,29 +82,29 @@ class y extends (a = u.PureComponent) {
                         })
                     }),
                 (0, l.jsx)(A, { ...this.props }),
-                u ? null : h
+                u ? null : p
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            S(this, 'handleChange', (e) => {
+            b(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e, e.currentTarget.checked);
             });
     }
 }
-S(y, 'Types', r),
-    S(y, 'Shapes', T),
-    S(y, 'Aligns', i),
-    S(y, 'defaultProps', {
+b(y, 'Types', r),
+    b(y, 'Shapes', S),
+    b(y, 'Aligns', i),
+    b(y, 'defaultProps', {
         size: 24,
         disabled: !1,
         readOnly: !1,
         displayOnly: !1,
         value: !1,
         type: 'default',
-        shape: T.BOX,
+        shape: S.BOX,
         align: 'center',
         onChange: v.dG4,
         reverse: !1
@@ -139,7 +139,7 @@ function A(e) {
                         if (a.startsWith('var(--')) {
                             let e = ''.concat(a.slice(0, -1), '-hsl)');
                             (s.borderColor = 'rgba('.concat(e, ', 0.15)')), (s.backgroundColor = 'rgba('.concat(e, ', 0.15)'));
-                        } else _()((0, h.FX)(a), 'Checkbox: '.concat(a, ' is not a valid hex color')), (s.borderColor = (0, h.wK)(a, 0.15)), (s.backgroundColor = (0, h.wK)(a, 0.15));
+                        } else _()((0, p.FX)(a), 'Checkbox: '.concat(a, ' is not a valid hex color')), (s.borderColor = (0, p.wK)(a, 0.15)), (s.backgroundColor = (0, p.wK)(a, 0.15));
                         break;
                     case 'row':
                     case 'inverted':
@@ -147,7 +147,7 @@ function A(e) {
                 }
             return s;
         })(e, t),
-        g = u.useMemo(() => (r ? (t ? p.Z.colors.WHITE.css : 'inverted' === o || 'row' === o ? p.Z.colors.WHITE.css : null != c ? c : p.Z.unsafe_rawColors.BRAND_500.css) : p.Z.unsafe_rawColors.TRANSPARENT.css), [r, o, c, t]);
+        g = u.useMemo(() => (r ? (t ? h.Z.colors.WHITE.css : 'inverted' === o || 'row' === o ? h.Z.colors.WHITE.css : null != c ? c : h.Z.unsafe_rawColors.BRAND_500.css) : h.Z.unsafe_rawColors.TRANSPARENT.css), [r, o, c, t]);
     return (0, l.jsx)('div', {
         className: d()(I.checkbox, a, n, {
             [I.checked]: r,

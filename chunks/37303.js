@@ -17,8 +17,8 @@ var a = n(497505),
     d = n(372113),
     m = n(206044),
     x = n(266843),
-    C = n(46140),
-    h = n(271074);
+    h = n(46140),
+    C = n(271074);
 function g(e) {
     let { quest: t, location: n, initiallyExpanded: g, contentPosition: p } = e,
         [E, j] = s.useState(!1),
@@ -26,7 +26,7 @@ function g(e) {
         f = s.useCallback(() => j(!1), []),
         v = (0, o.tP)(t),
         { containerRef: S, size: N, height: q } = (0, x.h)(),
-        _ = (0, r.q)({ location: C.dr.QUESTS_CARD }),
+        _ = (0, r.q)({ location: h.dr.QUESTS_CARD }),
         {
             expansionSpring: A,
             isAnimating: R,
@@ -59,7 +59,7 @@ function g(e) {
                                       output: [c.DJ, M]
                                   })
                     },
-                    className: h.questsCard,
+                    className: C.questsCard,
                     onFocus: T,
                     onMouseEnter: T,
                     onBlur: f,

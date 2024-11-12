@@ -16,10 +16,10 @@ var i = n(698091),
     _ = function (e, t) {
         return i.defineHidden(e, d, t);
     },
-    h = function (e) {
+    p = function (e) {
         return e && e[d] && e[d].getPayload();
     },
-    p = (function () {
+    h = (function () {
         function e() {
             (this.payload = void 0), _(this, this);
         }
@@ -56,7 +56,7 @@ var i = n(698091),
             }),
             t
         );
-    })(p),
+    })(h),
     g = (function (e) {
         function t(t, n) {
             var r;
@@ -140,7 +140,7 @@ var i = n(698091),
             (n._addToPayload = function (e) {
                 var t = this;
                 i.getFluidConfig(e) && E.current && E.current.dependencies.add(e);
-                var n = h(e);
+                var n = p(e);
                 n &&
                     i.each(n, function (e) {
                         return t.add(e);
@@ -148,7 +148,7 @@ var i = n(698091),
             }),
             t
         );
-    })(p),
+    })(h),
     I = (function (e) {
         function t(t, n) {
             var r;
@@ -186,7 +186,7 @@ var i = n(698091),
             t
         );
     })(v),
-    S = (function (e) {
+    b = (function (e) {
         function t(t) {
             var n;
             return ((n = e.call(this, null) || this).update = t), (n.dirty = !1), n;
@@ -216,12 +216,12 @@ var i = n(698091),
             t
         );
     })(v),
-    T = function (e, t) {
+    S = function (e, t) {
         return u.forwardRef(function (n, r) {
             var a = u.useRef(null),
                 s = !i.is.fun(e) || (e.prototype && e.prototype.isReactComponent),
                 l = i.useForceUpdate(),
-                d = new S(function () {
+                d = new b(function () {
                     var e = a.current;
                     if (!s || !!e) !1 === (!!e && t.applyAnimatedValues(e, d.getValue(!0))) && l();
                 }),
@@ -258,14 +258,14 @@ var i = n(698091),
             );
         });
     },
-    b = Symbol.for('AnimatedComponent'),
+    T = Symbol.for('AnimatedComponent'),
     y = function (e) {
         return i.is.str(e) ? e : e && i.is.str(e.displayName) ? e.displayName : (i.is.fun(e) && e.name) || null;
     };
-(t.Animated = p),
+(t.Animated = h),
     (t.AnimatedArray = I),
     (t.AnimatedObject = v),
-    (t.AnimatedProps = S),
+    (t.AnimatedProps = b),
     (t.AnimatedString = g),
     (t.AnimatedValue = m),
     (t.createHost = function (e, t) {
@@ -296,7 +296,7 @@ var i = n(698091),
             },
             u = function (e) {
                 var t = y(e) || 'Anonymous';
-                return ((e = i.is.str(e) ? T(e, l) : e[b] || (e[b] = T(e, l))).displayName = 'Animated(' + t + ')'), e;
+                return ((e = i.is.str(e) ? S(e, l) : e[T] || (e[T] = S(e, l))).displayName = 'Animated(' + t + ')'), e;
             };
         return (
             i.each(e, function (e, t) {
@@ -308,6 +308,6 @@ var i = n(698091),
     (t.getAnimated = function (e) {
         return e && e[d];
     }),
-    (t.getPayload = h),
+    (t.getPayload = p),
     (t.isAnimated = f),
     (t.setAnimated = _);

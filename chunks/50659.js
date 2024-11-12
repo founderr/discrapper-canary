@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     py: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -81,7 +81,7 @@ function d(e, t) {
     );
 }
 function f(e, t, n, r, i) {
-    let a = h(t, r);
+    let a = p(t, r);
     a >= 0 &&
         (e[i] = {
             chars: r,
@@ -90,7 +90,7 @@ function f(e, t, n, r, i) {
 }
 function _(e) {
     let { result: t, text: n, startIndex: r, syntax: i, type1: a, type2: s } = e,
-        o = h(n, i);
+        o = p(n, i);
     o >= 0 &&
         ((t[a] = {
             chars: i.substring(0, 1),
@@ -101,7 +101,7 @@ function _(e) {
             location: o + r + 1
         }));
 }
-function h(e, t) {
+function p(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
         let r = t.charAt(0);
@@ -109,7 +109,7 @@ function h(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     a.T.withSingleEntry(e, () => {
         o.bN.withoutNormalizing(e, () => {
             i()(null != e.selection, 'Editor has no selection');
@@ -120,7 +120,7 @@ function p(e, t) {
                 f = o.bN.node(e, n.path),
                 _ = o.bN.node(e, r.path);
             if (null == f || null == _ || !o.LC.isText(f[0]) || !o.LC.isText(_[0])) return;
-            let h = o.C0.equals(f[1], _[1]);
+            let p = o.C0.equals(f[1], _[1]);
             if (null != l && null != d) {
                 let t = {
                         path: n.path,
@@ -141,7 +141,7 @@ function p(e, t) {
                 let a = n.offset,
                     u = r.offset;
                 !o.Jz.isBefore(n, t) && (a -= l.chars.length),
-                    h && !o.Jz.isBefore(r, t) && (u -= l.chars.length),
+                    p && !o.Jz.isBefore(r, t) && (u -= l.chars.length),
                     o.Jz.isAfter(r, i) && (u -= d.chars.length),
                     s.Q.select(e, {
                         anchor: {
@@ -157,7 +157,7 @@ function p(e, t) {
                 let i = u[t];
                 s.Q.insertText(e, i, { at: r }), s.Q.insertText(e, i, { at: n });
                 let a = f[0].text.length + i.length,
-                    o = _[0].text.length + (h ? 2 * i.length : i.length);
+                    o = _[0].text.length + (p ? 2 * i.length : i.length);
                 s.Q.select(e, {
                     anchor: {
                         path: n.path,
@@ -165,7 +165,7 @@ function p(e, t) {
                     },
                     focus: {
                         path: r.path,
-                        offset: Math.min(o, r.offset + (h ? i.length : 0))
+                        offset: Math.min(o, r.offset + (p ? i.length : 0))
                     }
                 });
             }

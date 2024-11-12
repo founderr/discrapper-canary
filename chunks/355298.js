@@ -30,7 +30,7 @@ function _(e) {
     var t;
     if (null != e) c = null !== (t = (0, r.Zz)(e)) && void 0 !== t ? t : (0, r.K4)();
 }
-function h(e) {
+function p(e) {
     'CONNECTION_OPEN' === e.type && _(e.countryCode),
         o.clear(),
         l.clear(),
@@ -39,7 +39,7 @@ function h(e) {
         }),
         (u = !0);
 }
-function p(e) {
+function h(e) {
     let { channelId: t } = e;
     l.add(t);
 }
@@ -63,17 +63,17 @@ function I(e) {
     let { countryCode: t } = e;
     _(t);
 }
-class S extends a.Z {
+class b extends a.Z {
     initialize() {
         this.waitFor(i.Z);
     }
     loadCache() {
-        let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(b.LATEST_SNAPSHOT_VERSION);
         null != e && (o = new Set(e));
     }
     takeSnapshot() {
         return {
-            version: S.LATEST_SNAPSHOT_VERSION,
+            version: b.LATEST_SNAPSHOT_VERSION,
             data: Array.from(o)
         };
     }
@@ -97,16 +97,16 @@ class S extends a.Z {
     }
     constructor() {
         super({
-            CONNECTION_OPEN: h,
-            CONNECTION_OPEN_SUPPLEMENTAL: h,
+            CONNECTION_OPEN: p,
+            CONNECTION_OPEN_SUPPLEMENTAL: p,
             CACHE_LOADED_LAZY: () => this.loadCache(),
             OVERLAY_INITIALIZE: v,
             CHANNEL_CREATE: m,
             CHANNEL_UPDATES: g,
             CHANNEL_DELETE: E,
             SET_LOCATION_METADATA: I,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: p
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });
     }
 }
-s(S, 'displayName', 'MessageRequestStore'), s(S, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new S());
+s(b, 'displayName', 'MessageRequestStore'), s(b, 'LATEST_SNAPSHOT_VERSION', 1), (t.Z = new b());

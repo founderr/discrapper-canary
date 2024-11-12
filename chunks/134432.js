@@ -27,8 +27,8 @@ var r = n(392711),
     d = n(981631);
 let f = /\.webp($|\?|#)/i,
     _ = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    h = new (s())({ max: 1000 });
-function p(e) {
+    p = new (s())({ max: 1000 });
+function h(e) {
     let t = new Image();
     (t.onerror = (function (e, t) {
         null == e.backoff && (e.backoff = new l.Z());
@@ -37,7 +37,7 @@ function p(e) {
             await u.Z.isOnline(),
                 n.fails < 5
                     ? n.fail(() => {
-                          p(e);
+                          h(e);
                       })
                     : m(!0, e, t);
         };
@@ -50,7 +50,7 @@ function p(e) {
 }
 function m(e, t, n) {
     let { callbacks: r, url: i } = t;
-    if (e) h.del(i);
+    if (e) p.del(i);
     else {
         let { width: e, height: r } = n;
         (t = {
@@ -59,16 +59,16 @@ function m(e, t, n) {
             width: e,
             height: r
         }),
-            h.set(i, t);
+            p.set(i, t);
     }
     null != r && r.forEach((n) => n(e, t));
 }
 function g(e) {
-    let t = h.get(e);
+    let t = p.get(e);
     return null != t && t.loaded;
 }
 function E(e, t) {
-    let n = h.get(e);
+    let n = p.get(e);
     if (null != n && n.loaded)
         return (
             null != t &&
@@ -94,8 +94,8 @@ function E(e, t) {
                     url: e,
                     loaded: !1
                 }),
-                h.set(e, n),
-                p(n)),
+                p.set(e, n),
+                h(n)),
             null != t && ((r = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(r)),
             () => {
                 null != r && null != n && (null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
@@ -113,30 +113,30 @@ function v(e) {
     return null !== (t = _.find((t) => e <= t)) && void 0 !== t ? t : _[_.length - 1];
 }
 function I(e) {
-    let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null, animated: _ = !1, srcIsAnimated: h = !1 } = e,
-        p = n,
+    let { src: t, width: n, height: r, maxWidth: a, maxHeight: s, ratio: l = 1, format: u = null, quality: d = null, animated: _ = !1, srcIsAnimated: p = !1 } = e,
+        h = n,
         m = r;
-    l < 1 && ((p = Math.round(n * l)), (m = Math.round(r * l))), null != a && (p = Math.min(p, a)), null != s && (m = Math.min(m, s));
+    l < 1 && ((h = Math.round(n * l)), (m = Math.round(r * l))), null != a && (h = Math.min(h, a)), null != s && (m = Math.min(m, s));
     let g = (0, c.Z)();
     return (
-        (p *= g),
+        (h *= g),
         (function (e) {
             let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: s, format: l = null, quality: u = null, animated: c = !1, srcIsAnimated: d = !1 } = e,
-                [_, h] = (function (e) {
+                [_, p] = (function (e) {
                     let [t, n] = e.split('?');
                     return [t, o.parse(n)];
                 })(t);
-            return null != l && (h.format = l), null != u && (h.quality = u), c && d && f.test(t) && (h.animated = !0), (a !== n || s !== r) && ((h.width = 0 | a), (h.height = 0 | s)), !i().isEmpty(h) && (_ += '?' + o.stringify(h)), _;
+            return null != l && (p.format = l), null != u && (p.quality = u), c && d && f.test(t) && (p.animated = !0), (a !== n || s !== r) && ((p.width = 0 | a), (p.height = 0 | s)), !i().isEmpty(p) && (_ += '?' + o.stringify(p)), _;
         })({
             src: t,
             sourceWidth: n,
             sourceHeight: r,
-            targetWidth: p,
+            targetWidth: h,
             targetHeight: (m *= g),
             format: u,
             quality: d,
             animated: _,
-            srcIsAnimated: h
+            srcIsAnimated: p
         })
     );
 }

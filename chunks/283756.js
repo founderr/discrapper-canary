@@ -8,7 +8,7 @@ var i = n(120356),
     u = n(388032),
     c = n(351025);
 t.Z = (e) => {
-    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: h } = e;
+    let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
     return (0, r.jsx)(o.G.Consumer, {
         children: (e) =>
             (0, r.jsxs)('div', {
@@ -48,7 +48,7 @@ t.Z = (e) => {
                                   className: null != t ? c.iconExternalMargins : c.iconExternal
                               }),
                               messageId: _,
-                              channelId: h
+                              channelId: p
                           })
                         : null
                 ]

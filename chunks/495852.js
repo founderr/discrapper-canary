@@ -14,8 +14,8 @@ var r = n(36056),
     d = n(660284),
     f = n(838390),
     _ = n(284267),
-    h = n(973408),
-    p = n(647943);
+    p = n(973408),
+    h = n(647943);
 class m {
     constructor(e, t, n) {
         (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new a.C(this)), (this.refJsonWriter = new s.k(this)), (this.refBinReader = new o.I(this)), (this.refBinWriter = new l.R(this));
@@ -41,7 +41,7 @@ class m {
         (0, c.l)(this, e, t);
     }
     fromBinary(e, t) {
-        let n = (0, p.Z)(t);
+        let n = (0, h.Z)(t);
         return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n);
     }
     fromJson(e, t) {
@@ -59,7 +59,7 @@ class m {
         return JSON.stringify(this.toJson(e, t), null, null !== (n = null == t ? void 0 : t.prettySpaces) && void 0 !== n ? n : 0);
     }
     toBinary(e, t) {
-        let n = (0, h.X)(t);
+        let n = (0, p.X)(t);
         return this.internalBinaryWrite(e, n.writerFactory(), n).finish();
     }
     internalJsonRead(e, t, n) {

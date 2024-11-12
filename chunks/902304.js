@@ -10,16 +10,16 @@ var r = n(512722),
     d = n(131951),
     f = n(19780),
     _ = n(797258),
-    h = n(979651),
-    p = n(823379),
+    p = n(979651),
+    h = n(823379),
     m = n(254238),
     g = n(607214),
     E = n(258609),
     v = n(565473),
     I = n(444092),
-    S = n(927923),
-    T = n(65154),
-    b = n(388032);
+    b = n(927923),
+    S = n(65154),
+    T = n(388032);
 function y(e, t, n) {
     return (
         t in e
@@ -58,26 +58,26 @@ class C extends l.Z {
                 let t = (function (e) {
                     let t = E.Z.getAwaitingRemoteSessionInfo();
                     return e.find((e) => {
-                        let n = S.al.has(e.clientInfo.os),
-                            r = null != h.Z.getVoiceStateForSession(c.default.getId(), e.sessionId),
+                        let n = b.al.has(e.clientInfo.os),
+                            r = null != p.Z.getVoiceStateForSession(c.default.getId(), e.sessionId),
                             i = null == t || (0, v.y)(t.type) === e.clientInfo.os;
                         return n && i && r;
                     });
                 })(e);
                 if (null == t) return null;
                 this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId);
-                let n = h.Z.getVoiceStateForSession(c.default.getId(), t.sessionId);
+                let n = p.Z.getVoiceStateForSession(c.default.getId(), t.sessionId);
                 null != n && N(n);
             }),
             y(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
-                if (!t || n !== T.Yn.DEFAULT) return;
+                if (!t || n !== S.Yn.DEFAULT) return;
                 let r = d.Z.isSelfDeaf(),
                     i = d.Z.isSelfMute(),
                     a = c.default.getId(),
                     s = E.Z.getRemoteSessionId();
                 if (null == s) return;
-                let o = h.Z.getVoiceStateForSession(a, s);
+                let o = p.Z.getVoiceStateForSession(a, s);
                 if (null != o)
                     (o.selfDeaf !== r || o.selfMute !== i) &&
                         ((0, m.Vv)(s, {
@@ -97,7 +97,7 @@ class C extends l.Z {
                             let { sessionId: t } = e;
                             return null != t ? _.Z.getSessionById(t) : null;
                         })
-                        .filter(p.lm);
+                        .filter(h.lm);
                     return this.maybeConnect(e);
                 }
                 let r = t.find((e) => {
@@ -114,8 +114,8 @@ class C extends l.Z {
                 this.awaitRemoteTimeout.start(60000, () => {
                     (0, m.s6)(),
                         s.Z.show({
-                            title: b.intl.string(b.t.wGMxr6),
-                            body: b.intl.string(b.t.i5k8b2)
+                            title: T.intl.string(T.t.wGMxr6),
+                            body: T.intl.string(T.t.i5k8b2)
                         });
                 });
             }),
@@ -132,8 +132,8 @@ class C extends l.Z {
                             ? s
                             : {
                                   id: 'id',
-                                  platform: b.intl.string(b.t['UQMV/P']),
-                                  name: b.intl.string(b.t['UQMV/P'])
+                                  platform: T.intl.string(T.t['UQMV/P']),
+                                  name: T.intl.string(T.t['UQMV/P'])
                               },
                         r,
                         i
@@ -145,7 +145,7 @@ class C extends l.Z {
                         errorCodeMessage: o.errorCodeMessage,
                         reconnectPlatformType: o.isAccountLinkError ? a.type : void 0
                     }),
-                    S.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(180000, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
+                    b.e8.has(i.code) && this.awaitRemoteTimeout.isStarted() ? this.awaitRemoteTimeout.start(180000, () => (0, m.s6)(), !0) : 'failed' === r && (0, m.s6)();
             }),
             y(this, 'handleRemoteSessionDisconnect', () => {
                 this.awaitRemoteTimeout.stop();

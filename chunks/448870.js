@@ -104,7 +104,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        h = {
+        p = {
             className: 'params',
             variants: [
                 {
@@ -147,7 +147,7 @@ e.exports = function (e) {
                         1: 'keyword',
                         3: 'title.function'
                     },
-                    contains: [h]
+                    contains: [p]
                 },
                 {
                     variants: [
@@ -168,7 +168,7 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [f, h, l]
+                    contains: [f, p, l]
                 }
             ]
         }

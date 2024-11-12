@@ -97,26 +97,26 @@ function _(e) {
     }
     return Object.create(Object.getPrototypeOf(e), t);
 }
-function h(e, t) {
+function p(e, t) {
     return (
         void 0 === t && (t = !1),
         m(e) ||
             i(e) ||
             !a(e) ||
-            (o(e) > 1 && (e.set = e.add = e.clear = e.delete = p),
+            (o(e) > 1 && (e.set = e.add = e.clear = e.delete = h),
             Object.freeze(e),
             t &&
                 s(
                     e,
                     function (e, t) {
-                        return h(t, !0);
+                        return p(t, !0);
                     },
                     !0
                 )),
         e
     );
 }
-function p() {
+function h() {
     r(2);
 }
 function m(e) {
@@ -133,12 +133,12 @@ function v(e, t) {
     t && (g('Patches'), (e.u = []), (e.s = []), (e.v = t));
 }
 function I(e) {
-    S(e), e.p.forEach(b), (e.p = null);
+    b(e), e.p.forEach(T), (e.p = null);
 }
-function S(e) {
+function b(e) {
     e === P && (P = e.l);
 }
-function T(e) {
+function S(e) {
     return (P = {
         p: [],
         l: P,
@@ -147,7 +147,7 @@ function T(e) {
         _: 0
     });
 }
-function b(e) {
+function T(e) {
     var t = e[V];
     0 === t.i || 1 === t.i ? t.j() : (t.g = !0);
 }
@@ -199,7 +199,7 @@ function N(e, t, n, r, s, o, c) {
     }
 }
 function C(e, t, n) {
-    void 0 === n && (n = !1), !e.l && e.h.D && e.m && h(t, n);
+    void 0 === n && (n = !1), !e.l && e.h.D && e.m && p(t, n);
 }
 function R(e, t) {
     var n = e[V];
@@ -229,7 +229,7 @@ function x(e, t, n) {
         u,
         f,
         _,
-        h = c(t)
+        p = c(t)
             ? g('MapSet').F(t, n)
             : d(t)
               ? g('MapSet').T(t, n)
@@ -258,7 +258,7 @@ function x(e, t, n) {
                   (s.j = f),
                   _)
                 : g('ES5').J(t, n);
-    return (n ? n.A : P).p.push(h), h;
+    return (n ? n.A : P).p.push(p), p;
 }
 function w(e, t) {
     switch (t) {
@@ -392,13 +392,13 @@ var q = new ((function () {
                         );
                     }
                     if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
-                        var l = T(t),
+                        var l = S(t),
                             u = x(t, e, void 0),
                             c = !0;
                         try {
                             (s = n(u)), (c = !1);
                         } finally {
-                            c ? I(l) : S(l);
+                            c ? I(l) : b(l);
                         }
                         return 'undefined' != typeof Promise && s instanceof Promise
                             ? s.then(
@@ -412,7 +412,7 @@ var q = new ((function () {
                             : (v(l, i), y(s, l));
                     }
                     if (!e || 'object' != typeof e) {
-                        if ((void 0 === (s = n(e)) && (s = e), s === Z && (s = void 0), t.D && h(s, !0), i)) {
+                        if ((void 0 === (s = n(e)) && (s = e), s === Z && (s = void 0), t.D && p(s, !0), i)) {
                             var d = [],
                                 f = [];
                             g('Patches').M(e, s, d, f), i(d, f);
@@ -467,9 +467,9 @@ var q = new ((function () {
                             );
                         })(t)));
                 var t,
-                    n = T(this),
+                    n = S(this),
                     l = x(this, e, void 0);
-                return (l[V].C = !0), S(n), l;
+                return (l[V].C = !0), b(n), l;
             }),
             (t.finishDraft = function (e, t) {
                 var n = (e && e[V]).A;

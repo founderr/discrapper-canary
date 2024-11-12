@@ -10,8 +10,8 @@ var r = n(274616),
     d = n(830168),
     f = n(358085),
     _ = n(591759),
-    h = n(998502),
-    p = n(981631);
+    p = n(998502),
+    h = n(981631);
 let m = new i.Z('Games'),
     g = {},
     E = 0,
@@ -20,13 +20,13 @@ function I() {
     return null != v
         ? Promise.resolve(v)
         : (0, f.isDesktop)()
-          ? h.ZP.ensureModule('discord_game_utils').then(() => {
-                let e = h.ZP.getGameUtils();
+          ? p.ZP.ensureModule('discord_game_utils').then(() => {
+                let e = p.ZP.getGameUtils();
                 return null != e && null != e.findLaunchable ? ((v = e), e) : Promise.reject(Error('game utils not found'));
             })
           : Promise.reject(Error('not desktop client'));
 }
-function S(e) {
+function b(e) {
     let t = {
             id: e.id,
             name: e.name,
@@ -39,10 +39,10 @@ function S(e) {
         }));
     return [t, ...n];
 }
-function T(e) {
+function S(e) {
     return { id: e };
 }
-async function b(e) {
+async function T(e) {
     if (
         (!Array.isArray(e) && (e = [e]),
         !u.Z.isDeveloper &&
@@ -52,7 +52,7 @@ async function b(e) {
                     -1 ===
                         e.thirdPartySkus.findIndex((e) => {
                             let { distributor: t } = e;
-                            return t === p.GQo.BATTLENET;
+                            return t === h.GQo.BATTLENET;
                         })
             )),
         0 === e.length)
@@ -93,24 +93,24 @@ t.Z = {
         return new Promise(y.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        b(S(e))
+        T(b(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => b(S(e)).then(A),
+    launch: (e) => T(b(e)).then(A),
     launchDispatchApplication(e, t, n, i, s) {
-        let { launchOptions: l, defaultLaunchOptionId: u, installPath: f, applicationId: _, branchId: h, buildId: m, shouldPatch: g } = e;
+        let { launchOptions: l, defaultLaunchOptionId: u, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
         if (null == l || null == u || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
         null == s && (s = u);
         let E = l[s];
         if (null == E) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
-        return (0, r.o)([h])
+        return (0, r.o)([p])
             .then((e) => {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error('branch is null'));
                 let { liveBuildId: n } = t;
                 if (g && n !== m) return Promise.reject(Error('live build id changed'));
             })
-            .then(() => d.Z.runLaunchSetup(_, h))
+            .then(() => d.Z.runLaunchSetup(_, p))
             .then(() => {
                 let e = (0, a.Z)(f),
                     r = {
@@ -118,9 +118,9 @@ t.Z = {
                         DISCORD_ACCESS_TOKEN: null != t ? t : '',
                         DISCORD_CURRENT_LOCALE: n,
                         DISCORD_CURRENT_BRANCH: i,
-                        DISCORD_STORAGE_PATH: p.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
+                        DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return d.Z.launch(_, h, E.name, r);
+                return d.Z.launch(_, p, E.name, r);
             });
     },
     removeShortcuts: (e) =>
@@ -140,12 +140,12 @@ t.Z = {
         });
     },
     isGameLaunchable: (e) =>
-        b({ id: e })
+        T({ id: e })
             .then((e) => null != e)
             .catch(() => !1),
     launchGame(e) {
         if (l.Z.isConnected(e)) return Promise.resolve();
-        return b({ id: e }).then(A);
+        return T({ id: e }).then(A);
     },
     isProtocolRegistered: (e) =>
         I().then((t) => {

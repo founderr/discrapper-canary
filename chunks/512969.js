@@ -24,7 +24,7 @@ n.d(t, {
         return x;
     },
     l_: function () {
-        return b;
+        return T;
     },
     rs: function () {
         return O;
@@ -46,8 +46,8 @@ var o = n(539528),
     f = n.n(d);
 n(165566);
 var _ = n(226512),
-    h = n(26095),
-    p = n.n(h);
+    p = n(26095),
+    h = n.n(p);
 var m = (((r = (0, l.Z)()).displayName = 'Router-History'), r);
 var g = (((i = (0, l.Z)()).displayName = 'Router'), i),
     E = (function (e) {
@@ -125,8 +125,8 @@ var v = (function (e) {
         );
     })(s.Component),
     I = {},
-    S = 0;
-function T(e, t) {
+    b = 0;
+function S(e, t) {
     return (
         void 0 === e && (e = '/'),
         void 0 === t && (t = {}),
@@ -135,11 +135,11 @@ function T(e, t) {
             : (function (e) {
                   if (I[e]) return I[e];
                   var t = f().compile(e);
-                  return S < 10000 && ((I[e] = t), S++), t;
+                  return b < 10000 && ((I[e] = t), b++), t;
               })(e)(t, { pretty: !0 })
     );
 }
-function b(e) {
+function T(e) {
     var t = e.computedMatch,
         n = e.to,
         r = e.push,
@@ -149,7 +149,7 @@ function b(e) {
         var r = e.history,
             a = e.staticContext,
             l = i ? r.push : r.replace,
-            d = (0, o.ob)(t ? ('string' == typeof n ? T(n, t.params) : (0, c.Z)({}, n, { pathname: T(n.pathname, t.params) })) : n);
+            d = (0, o.ob)(t ? ('string' == typeof n ? S(n, t.params) : (0, c.Z)({}, n, { pathname: S(n.pathname, t.params) })) : n);
         return a
             ? (l(d), null)
             : s.createElement(v, {
@@ -285,7 +285,7 @@ function D(e) {
                 return t || (0, u.Z)(!1), s.createElement(e, (0, c.Z)({}, r, t, { ref: n }));
             });
         };
-    return (n.displayName = t), (n.WrappedComponent = e), p()(n, e);
+    return (n.displayName = t), (n.WrappedComponent = e), h()(n, e);
 }
 var L = s.useContext;
 function x() {

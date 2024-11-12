@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -15,14 +15,14 @@ var r,
     d = n(446108),
     f = n(956664),
     _ = n(921948),
-    h = n(823023),
-    p = n(981631),
+    p = n(823023),
+    h = n(981631),
     m = n(217702),
     g = n(388032),
     E = n(459127),
     v = n(167969),
     I = n(557256);
-function S(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,21 +35,21 @@ function S(e, t, n) {
         e
     );
 }
-class T extends (r = a.PureComponent) {
+class S extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: S = v, minWidth: T, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: b = v, minWidth: S, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
         let G = (0, f.Tj)({
                 width: _,
                 height: v,
                 maxWidth: I,
-                maxHeight: S,
-                minWidth: T,
+                maxHeight: b,
+                minWidth: S,
                 minHeight: A
             }),
             B = 0 !== G.width ? G.width / G.height : 1;
-        '' !== a && r !== p.zo9.ERROR
+        '' !== a && r !== h.zo9.ERROR
             ? (e = L({
                   src: a,
                   size: G,
@@ -57,13 +57,13 @@ class T extends (r = a.PureComponent) {
                   className: n,
                   mediaLayoutType: N
               }))
-            : r !== p.zo9.LOADING &&
-              (e = (0, i.jsx)(b, {
+            : r !== h.zo9.LOADING &&
+              (e = (0, i.jsx)(T, {
                   size: G,
                   mediaLayoutType: N,
                   alt: c
               })),
-            (e = (0, i.jsx)(h.N, {
+            (e = (0, i.jsx)(p.N, {
                 readyState: r,
                 aspectRatio: B,
                 placeholder: s,
@@ -82,7 +82,7 @@ class T extends (r = a.PureComponent) {
                         E.imageWrapper,
                         {
                             [E.imageZoom]: O,
-                            [E.imageWrapperBackground]: r !== p.zo9.READY,
+                            [E.imageWrapperBackground]: r !== h.zo9.READY,
                             [E.clickable]: null != w
                         },
                         t
@@ -141,10 +141,10 @@ class T extends (r = a.PureComponent) {
         );
     }
     constructor(...e) {
-        super(...e), S(this, '_containerRef', a.createRef()), S(this, '_clickableRef', a.createRef());
+        super(...e), b(this, '_containerRef', a.createRef()), b(this, '_clickableRef', a.createRef());
     }
 }
-function b(e) {
+function T(e) {
     let { size: t, mediaLayoutType: n, alt: r } = e,
         a = (0, c.ZP)();
     return (0, i.jsx)('div', {
@@ -175,8 +175,8 @@ function b(e) {
         })
     });
 }
-S(T, 'defaultProps', {
-    readyState: p.zo9.READY,
+b(S, 'defaultProps', {
+    readyState: h.zo9.READY,
     zoomable: !0,
     children: (e) => {
         let { src: t, size: n, alt: r, className: a, mediaLayoutType: s } = e;

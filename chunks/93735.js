@@ -66,10 +66,10 @@ function d(e) {
             embedIds: []
         };
     let _ = null !== (o = null == e ? void 0 : null === (r = e.attachments) || void 0 === r ? void 0 : r.filter(u)) && void 0 !== o ? o : [],
-        h = null !== (l = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(c)) && void 0 !== l ? l : [];
+        p = null !== (l = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(c)) && void 0 !== l ? l : [];
     return {
         attachmentIds: _.map((e) => e.id).filter(Boolean),
-        embedIds: h.map((e, t) => 'embed_'.concat(t)).filter(Boolean)
+        embedIds: p.map((e, t) => 'embed_'.concat(t)).filter(Boolean)
     };
 }
 function f(e) {

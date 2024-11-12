@@ -26,8 +26,8 @@ var i,
     S = n(100527),
     T = n(906732),
     C = n(211242),
-    _ = n(600164),
-    E = n(509545),
+    E = n(600164),
+    _ = n(509545),
     f = n(626135),
     I = n(122289),
     N = n(63063),
@@ -71,7 +71,7 @@ function H(e) {
         d = (0, C.Q)(),
         [u, m] = l.useState(!1),
         [p, S] = l.useState(!1),
-        E = (0, x.ZP)(),
+        _ = (0, x.ZP)(),
         { analyticsLocations: f } = (0, T.ZP)(),
         I = null;
     switch (n.status) {
@@ -141,7 +141,7 @@ function H(e) {
               }),
         j = (0, r.jsx)(g.Button, {
             look: g.Button.Looks.LINK,
-            color: (0, h.ap)(E) ? g.Button.Colors.PRIMARY : g.Button.Colors.WHITE,
+            color: (0, h.ap)(_) ? g.Button.Colors.PRIMARY : g.Button.Colors.WHITE,
             onClick: a,
             children: o ? V.intl.string(V.t.h9tkAA) : V.intl.string(V.t['ETE/oK'])
         });
@@ -177,7 +177,7 @@ function H(e) {
                 ]
             }),
             (0, r.jsxs)(g.ModalFooter, {
-                justify: _.Z.Justify.START,
+                justify: E.Z.Justify.START,
                 children: [v, j]
             })
         ]
@@ -194,7 +194,7 @@ function z(e) {
             analyticsLocations: s,
             analyticsLocation: S.Z.CANCEL_INVOICE_PREVIEW
         }),
-        a = (0, m.e7)([E.Z], () => E.Z.get(i.planId));
+        a = (0, m.e7)([_.Z], () => _.Z.get(i.planId));
     if (null == l || null == a) return (0, r.jsx)(g.Spinner, { className: G.loading });
     let { intervalType: o, intervalCount: c } = A.ZP.getIntervalForInvoice(l);
     return (0, r.jsxs)('div', {
@@ -253,8 +253,8 @@ function W(e) {
                 ]
             }),
             (0, r.jsxs)(g.ModalFooter, {
-                align: _.Z.Align.CENTER,
-                justify: _.Z.Justify.BETWEEN,
+                align: E.Z.Align.CENTER,
+                justify: E.Z.Justify.BETWEEN,
                 children: [
                     (0, r.jsx)(g.Button, {
                         color: g.Button.Colors.RED,
@@ -301,9 +301,9 @@ function Q(e) {
     let n,
         { premiumSubscription: i, transitionState: s, onClose: a, analyticsLocations: o, analyticsLocation: d, initialStep: m } = e,
         p = l.useRef(new c.qA()),
-        [C, _] = l.useState(null),
-        E = (0, O.yQ)(),
-        N = (null == E ? void 0 : E.showCard) === !0,
+        [C, E] = l.useState(null),
+        _ = (0, O.yQ)(),
+        N = (null == _ ? void 0 : _.showCard) === !0,
         b = null === (t = (0, A.Af)(i)) || void 0 === t ? void 0 : t.planId,
         v = null != b ? A.ZP.getPremiumType(b) : null;
     u()(null != v, 'Should not be cancelling Nitro without premiumType');
@@ -488,7 +488,7 @@ function Q(e) {
         value: Z,
         children: [
             (0, r.jsx)(c.O_, {
-                ref: _,
+                ref: E,
                 className: G.confettiCanvas,
                 environment: p.current
             }),

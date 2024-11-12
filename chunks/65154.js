@@ -72,7 +72,7 @@ n.d(t, {
         return V;
     },
     Yn: function () {
-        return S;
+        return b;
     },
     Z: function () {
         return C;
@@ -96,7 +96,7 @@ n.d(t, {
         return N;
     },
     h7: function () {
-        return T;
+        return S;
     },
     iA: function () {
         return D;
@@ -105,7 +105,7 @@ n.d(t, {
         return K;
     },
     kS: function () {
-        return eh;
+        return ep;
     },
     mC: function () {
         return ee;
@@ -117,7 +117,7 @@ n.d(t, {
         return em;
     },
     pM: function () {
-        return b;
+        return T;
     },
     pk: function () {
         return eu;
@@ -132,7 +132,7 @@ n.d(t, {
         return P;
     },
     ux: function () {
-        return ep;
+        return eh;
     },
     vA: function () {
         return Z.vA;
@@ -158,16 +158,16 @@ var r,
     d,
     f,
     _,
-    h,
     p,
+    h,
     m,
     g,
     E,
     v,
     I,
+    b,
     S,
     T,
-    b,
     y,
     A,
     N,
@@ -185,7 +185,7 @@ var r,
     G,
     B,
     Z = n(268146);
-((r = S || (S = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = T || (T = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = b || (b = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = y || (y = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = A || (A = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = N || (N = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
+((r = b || (b = {})).DEFAULT = 'default'), (r.STREAM = 'stream'), ((i = S || (S = {})).AUDIO_INPUT = 'audioinput'), (i.AUDIO_OUTPUT = 'audiooutput'), (i.VIDEO_INPUT = 'videoinput'), ((a = T || (T = {})).PUSH_TO_TALK = 'PUSH_TO_TALK'), (a.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), ((s = y || (y = {})).DISCONNECTED = 'DISCONNECTED'), (s.CONNECTING = 'CONNECTING'), (s.CONNECTED = 'CONNECTED'), (s.NO_ROUTE = 'NO_ROUTE'), (s.ICE_CHECKING = 'ICE_CHECKING'), (s.DTLS_CONNECTING = 'DTLS_CONNECTING'), ((o = A || (A = {}))[(o.TRANSPORT = 1)] = 'TRANSPORT'), (o[(o.OUTBOUND = 2)] = 'OUTBOUND'), (o[(o.INBOUND = 4)] = 'INBOUND'), (o[(o.ALL = 7)] = 'ALL'), ((l = N || (N = {})).MANUAL_DISABLE = 'video_manual_disable'), (l.MANUAL_ENABLE = 'video_manual_enable'), (l.MANUAL_REENABLE = 'video_manual_reenable'), (l.AUTO_DISABLE = 'video_auto_disable'), (l.AUTO_ENABLE = 'video_auto_enable'), (l.AUTO_DOWNGRADE = 'video_auto_downgrade'), (l.AUTO_UPGRADE = 'video_auto_upgrade,'), ((u = C || (C = {})).NO_OVERRIDE = 'no_override'), (u.HIGH = 'high'), (u.LOW = 'low');
 let F = 100,
     V = 18,
     j = 64000,
@@ -213,7 +213,7 @@ let F = 100,
     ed = 3500000,
     ef = 9000000,
     e_ = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    eh = {
+    ep = {
         videoBudget: {
             width: 1280,
             height: 720,
@@ -235,7 +235,7 @@ let F = 100,
         },
         videoBitrateFloor: 150000
     },
-    ep = 60000,
+    eh = 60000,
     em = '>=22.0.0';
 ((c = R || (R = {})).AUTO_ENABLE = 'AUTO_ENABLE'),
     (c.ATTENUATION = 'ATTENUATION'),
@@ -307,14 +307,14 @@ let F = 100,
     (_.H264 = 'H264'),
     (_.RTX = 'rtx'),
     (_.TEST = 'TEST'),
-    ((h = x || (x = {}))[(h.NONE = 0)] = 'NONE'),
-    (h[(h.VOICE = 1)] = 'VOICE'),
-    (h[(h.SOUNDSHARE = 2)] = 'SOUNDSHARE'),
-    (h[(h.PRIORITY = 4)] = 'PRIORITY'),
-    ((p = w || (w = {})).AUDIO = 'audio'),
-    (p.VIDEO = 'video'),
-    (p.SCREEN = 'screen'),
-    (p.TEST = 'test'),
+    ((p = x || (x = {}))[(p.NONE = 0)] = 'NONE'),
+    (p[(p.VOICE = 1)] = 'VOICE'),
+    (p[(p.SOUNDSHARE = 2)] = 'SOUNDSHARE'),
+    (p[(p.PRIORITY = 4)] = 'PRIORITY'),
+    ((h = w || (w = {})).AUDIO = 'audio'),
+    (h.VIDEO = 'video'),
+    (h.SCREEN = 'screen'),
+    (h.TEST = 'test'),
     ((m = M || (M = {})).PLAYING = 'playing'),
     (m.PAUSED = 'paused'),
     ((g = P || (P = {})).FIXED = 'fixed'),

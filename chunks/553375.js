@@ -54,20 +54,20 @@ function _(e) {
             entry: a,
             user: t
         }),
-        h = (0, o.Z)({
+        p = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
             source: s.m1.UserProfileCardContextMenu,
             trackEntryPointImpression: u,
             applicationId: f,
             sourceUserId: _
         });
-    return null == h
+    return null == p
         ? null
         : (0, r.jsx)(i.MenuItem, {
               id: 'game-profile',
               label: c.intl.string(c.t.ajHoOj),
               action: (e) => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), h(e);
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), p(e);
               }
           });
 }

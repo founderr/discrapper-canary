@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(411104);
@@ -27,7 +27,7 @@ function d(e, t, n) {
 }
 let f = new i.Yd('Output'),
     _ = new s.Z();
-class h extends r.EventEmitter {
+class p extends r.EventEmitter {
     destroy() {
         var e, t;
         this.removeAllListeners(), null === (e = this.cleanup) || void 0 === e || e.call(this), this.reset(), null != this.stream && (_.release(this.stream), (this.stream = void 0)), null === (t = this._audioFilter) || void 0 === t || t.dispose(), (this._audioFilter = void 0), (this.destroyed = !0);

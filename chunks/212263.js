@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(906732),
     f = n(28546),
     _ = n(357355),
-    h = n(98278),
-    p = n(48125),
+    p = n(98278),
+    h = n(48125),
     m = n(104494),
     g = n(639119),
     E = n(165583),
     v = n(197115),
     I = n(631771),
-    S = n(609218),
-    T = n(210887),
-    b = n(626135),
+    b = n(609218),
+    S = n(210887),
+    T = n(626135),
     y = n(176354),
     A = n(74538),
     N = n(543241),
@@ -33,10 +33,10 @@ t.Z = (e) => {
     var t, a;
     let w,
         { onLearnMore: M, onClose: P, channel: k, emojiDescriptor: U, pickerIntention: G, analyticsLocation: B, containerContext: Z } = e,
-        F = (0, o.e7)([T.Z], () => T.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
+        F = (0, o.e7)([S.Z], () => S.Z.theme) === R.BRd.LIGHT ? 'light' : 'dark',
         [V, j] = i.useState(!1),
         H = () => {
-            (0, N.A3)(k), (0, h.z)(), M();
+            (0, N.A3)(k), (0, p.z)(), M();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
         W = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
@@ -52,7 +52,7 @@ t.Z = (e) => {
                 disable: q
             }
         ),
-        $ = p.Z.useExperiment(
+        $ = h.Z.useExperiment(
             { location: 'EmojiPickerPremiumUpsell' },
             {
                 autoTrackExposure: null != K,
@@ -68,7 +68,7 @@ t.Z = (e) => {
         ea = null != en ? R.qAy.EMOJI : R.qAy.EMOJI_PICKER_FLOATING_UPSELL;
     i.useEffect(() => {
         !ee &&
-            b.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
+            T.default.track(R.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: w,
                 is_animated: er,
                 is_external: ei,
@@ -88,7 +88,7 @@ t.Z = (e) => {
     }, [eo]);
     let el = es.length > 1 && et;
     return ee
-        ? (0, r.jsx)(S.Z, {
+        ? (0, r.jsx)(b.Z, {
               containerContext: Z,
               image: {
                   url: W,

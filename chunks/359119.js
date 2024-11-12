@@ -19,7 +19,7 @@ let c = 5 * n(70956).Z.Millis.SECOND;
 let d = [],
     f = {},
     _ = new Set();
-function h(e) {
+function p(e) {
     let { safetyWarnings: t } = e;
     null != t &&
         ((f[e.id] = t),
@@ -37,10 +37,10 @@ function h(e) {
             : _.delete(e.id)),
         null == t && (null != f[e.id] && delete f[e.id], _.delete(e.id));
 }
-function p() {
+function h() {
     (f = {}),
         Object.values(u.Z.getMutablePrivateChannels()).forEach((e) => {
-            h(e);
+            p(e);
         });
 }
 class m extends o.ZP.Store {
@@ -61,7 +61,7 @@ class m extends o.ZP.Store {
 }
 t.ZP = new m(l.Z, {
     CHANNEL_CREATE: function (e) {
-        h(e.channel);
+        p(e.channel);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -69,11 +69,11 @@ t.ZP = new m(l.Z, {
     },
     CHANNEL_UPDATES: function (e) {
         e.channels.forEach((e) => {
-            h(e);
+            p(e);
         });
     },
-    CONNECTION_OPEN: p,
-    CONNECTION_OPEN_SUPPLEMENTAL: p,
+    CONNECTION_OPEN: h,
+    CONNECTION_OPEN_SUPPLEMENTAL: h,
     CHANNEL_SAFETY_WARNING_FEEDBACK: function (e) {
         let { channelId: t, warningId: n, feedbackType: r } = e,
             i = f[t];

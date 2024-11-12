@@ -24,15 +24,15 @@ function f(e, t, n, a) {
                 null === (t = f.get(n)) || void 0 === t || t(e);
             });
         });
-    return i.forwardRef(function (a, h) {
-        let { className: p, onScroll: m, onResize: g = null, onContentResize: E = null, dir: v = 'ltr', sections: I, sectionHeight: S, rowHeight: T, footerHeight: b = 0, sidebarHeight: y, listHeaderHeight: A = 0, renderSection: N, renderRow: C, renderFooter: R, renderSidebar: O, renderListHeader: D, stickyListHeader: L, wrapSection: x, getAnchorId: w, paddingTop: M, paddingBottom: P, fade: k = !1, customTheme: U = !1, chunkSize: G, style: B, innerId: Z, innerRole: F, innerAriaLabel: V, innerAriaMultiselectable: j, innerAriaOrientation: H, innerClassName: Y, innerTag: W = 'div', ...K } = a,
+    return i.forwardRef(function (a, p) {
+        let { className: h, onScroll: m, onResize: g = null, onContentResize: E = null, dir: v = 'ltr', sections: I, sectionHeight: b, rowHeight: S, footerHeight: T = 0, sidebarHeight: y, listHeaderHeight: A = 0, renderSection: N, renderRow: C, renderFooter: R, renderSidebar: O, renderListHeader: D, stickyListHeader: L, wrapSection: x, getAnchorId: w, paddingTop: M, paddingBottom: P, fade: k = !1, customTheme: U = !1, chunkSize: G, style: B, innerId: Z, innerRole: F, innerAriaLabel: V, innerAriaMultiselectable: j, innerAriaOrientation: H, innerClassName: Y, innerTag: W = 'div', ...K } = a,
             z = i.useRef(null),
             q = i.useRef(null),
             [Q, X] = i.useState(!1),
             { scrollerRef: J, scrollerState: $, getScrollerState: ee } = (0, c.T4)();
         (0, c.tT)({
             scrollerRef: J,
-            className: p,
+            className: h,
             specs: o,
             orientation: 'vertical',
             dir: v
@@ -47,9 +47,9 @@ function f(e, t, n, a) {
                 anchor: eo
             } = (0, c.aU)({
                 sections: I,
-                sectionHeight: S,
-                rowHeight: T,
-                footerHeight: b,
+                sectionHeight: b,
+                rowHeight: S,
+                footerHeight: T,
                 sidebarHeight: y,
                 listHeaderHeight: A,
                 paddingTop: M,
@@ -97,7 +97,7 @@ function f(e, t, n, a) {
                 let t = i.useRef(e);
                 return i.useEffect(() => void (t.current = e), [e]), i.useCallback(() => t.current, []);
             })(er),
-            eh = (function (e) {
+            ep = (function (e) {
                 let t = i.useRef(e);
                 return (
                     i.useEffect(() => void (t.current = e), [e]),
@@ -114,17 +114,17 @@ function f(e, t, n, a) {
                 );
             })(I);
         i.useImperativeHandle(
-            h,
+            p,
             () => ({
                 getScrollerNode: () => J.current,
                 getScrollerState: ee,
                 getItems: e_,
-                getSectionRowFromIndex: eh,
+                getSectionRowFromIndex: ep,
                 ...(0, c.rH)(J, ee, ea, el)
             }),
-            [J, ee, eh, e_, ea, el]
+            [J, ee, ep, e_, ea, el]
         );
-        let ep = i.useCallback(
+        let eh = i.useCallback(
             (e) => {
                 ed(1),
                     null == z.current ? X(!0) : clearTimeout(z.current),
@@ -149,8 +149,8 @@ function f(e, t, n, a) {
             }),
             (0, r.jsxs)('div', {
                 ref: J,
-                onScroll: ep,
-                className: s()(p, {
+                onScroll: eh,
+                className: s()(h, {
                     [e]: !0,
                     [t]: k,
                     [n]: U,
@@ -185,12 +185,12 @@ function f(e, t, n, a) {
                                                 )
                                             ],
                                             _ = [],
-                                            h = 0;
+                                            p = 0;
                                         if (
                                             (!0 === o && null != s && f.push((0, r.jsx)(i.Fragment, { children: s() }, '---sticky-header')),
                                             c.forEach((e) => {
                                                 var r;
-                                                switch ((e.section !== h && _.length > 0 && (f.push(null != u ? u(h, _) : _), (_ = [])), (h = null !== (r = e.section) && void 0 !== r ? r : 0), e.type)) {
+                                                switch ((e.section !== p && _.length > 0 && (f.push(null != u ? u(p, _) : _), (_ = [])), (p = null !== (r = e.section) && void 0 !== r ? r : 0), e.type)) {
                                                     case 'section':
                                                         null != t && _.push(t(e));
                                                         break;
@@ -206,8 +206,8 @@ function f(e, t, n, a) {
                                             }),
                                             _.length > 0)
                                         ) {
-                                            var p;
-                                            f.push(null !== (p = null == u ? void 0 : u(h, _)) && void 0 !== p ? p : _);
+                                            var h;
+                                            f.push(null !== (h = null == u ? void 0 : u(p, _)) && void 0 !== h ? h : _);
                                         }
                                         return l()(f);
                                     })({

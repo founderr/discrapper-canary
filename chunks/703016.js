@@ -22,8 +22,8 @@ var i = n(913527),
     N = n(594174),
     T = n(51144),
     x = n(196051),
-    A = n(441729),
-    b = n(653477),
+    b = n(441729),
+    A = n(653477),
     Z = n(981631),
     y = n(388032);
 let L = [],
@@ -114,8 +114,8 @@ function H(e) {
         _ = p.ZP.getCurrentSidebarChannelId(u),
         N = s === u || s === _,
         x = h.OW.getSetting() && o.tts && N,
-        A = I.Z.getTTSType(),
-        y = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (A === Z.PrB.ALL_CHANNELS || (A === Z.PrB.SELECTED_CHANNEL && N));
+        b = I.Z.getTTSType(),
+        y = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== m.default.getId() && (b === Z.PrB.ALL_CHANNELS || (b === Z.PrB.SELECTED_CHANNEL && N));
     if ((x || y) && !C.Z.isBlockedOrIgnoredForMessage(o)) {
         if (L.indexOf(o.id) >= 0) return !1;
         L.unshift(o.id) > 10 && L.pop();
@@ -124,13 +124,13 @@ function H(e) {
         let t = null !== (l = null !== (r = f.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : T.ZP.getName(o.author)) && void 0 !== l ? l : '',
             c = o.type === Z.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (a = f.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== a ? a : T.ZP.getName(c)) : null;
-        k(D(o.content, t, e, u), !1, d.id, o.id, b.f);
+        k(D(o.content, t, e, u), !1, d.id, o.id, A.f);
     }
     return !1;
 }
 function V(e) {
     let { id: t, channelId: n } = e,
-        i = A.Z.currentMessage;
+        i = b.Z.currentMessage;
     return null != i && t === i.messageId && n === i.channelId && ((0, x.NB)(), !0);
 }
 function F() {

@@ -6,10 +6,10 @@ n.d(t, {
         return g;
     },
     RS: function () {
-        return h;
+        return p;
     },
     Us: function () {
-        return p;
+        return h;
     },
     X2: function () {
         return l;
@@ -52,8 +52,8 @@ let a = new Set([i.QJ.TERMS]),
     d = 8,
     f = 150,
     _ = 150,
-    h = 1000,
-    p = 300,
+    p = 1000,
+    h = 300,
     m = 'Membership Gating',
     g = 'in-app-member-verification';
 (r || (r = {})).VERIFICATION_INFO = 'VERIFICATION_INFO';

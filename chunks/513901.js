@@ -20,7 +20,7 @@ var i = n(200651),
     S = n(388032),
     T = n(492004);
 function C(e) {
-    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: _ = !1, withTutorial: E = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
+    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: E = !1, withTutorial: _ = !1, showBorder: f = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: N } = e,
         A = (0, m.Kg)(t, n),
         b = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: v } = (0, o.ZP)(),
@@ -43,9 +43,9 @@ function C(e) {
     }, [b, v]);
     let P = null != n,
         D = I || void 0 !== j ? null != j : null != A,
-        y = E ? a.ShinyButton : a.Button;
+        y = _ ? a.ShinyButton : a.Button;
     return (0, i.jsx)(h.Z, {
-        forcedDivider: _,
+        forcedDivider: E,
         borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: C,
@@ -58,7 +58,7 @@ function C(e) {
                 (0, i.jsx)(y, {
                     size: a.Button.Sizes.SMALL,
                     onClick: R,
-                    className: l()({ [T.buttonHighlighted]: E }),
+                    className: l()({ [T.buttonHighlighted]: _ }),
                     children: S.intl.string(S.t['0nEVoK'])
                 }),
                 D &&

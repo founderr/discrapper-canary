@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(663993),
     f = n(95398),
     _ = n(339085),
-    h = n(779699),
-    p = n(359875),
+    p = n(779699),
+    h = n(359875),
     m = n(124072),
     g = n(692629),
     E = n(695503),
     v = n(628692),
     I = n(590956),
-    S = n(703656),
-    T = n(271383),
-    b = n(430824),
+    b = n(703656),
+    S = n(271383),
+    T = n(430824),
     y = n(572004),
     A = n(746878),
     N = n(285063),
@@ -171,10 +171,10 @@ let U = {
                           role: 'link',
                           onClick: () => {
                               !(function (e, t, n) {
-                                  let r = b.Z.getGuild(e);
+                                  let r = T.Z.getGuild(e);
                                   if (null == e || null == r) return;
                                   let i = (t) => {
-                                      r.hasFeature(x.oNc.COMMUNITY) && (0, S.uL)(x.Z5c.CHANNEL(e, t));
+                                      r.hasFeature(x.oNc.COMMUNITY) && (0, b.uL)(x.Z5c.CHANNEL(e, t));
                                   };
                                   switch (t) {
                                       case 'home':
@@ -189,9 +189,9 @@ let U = {
                                           break;
                                       case 'linked-roles':
                                           if (null != n) {
-                                              let t = T.ZP.getSelfMember(e);
+                                              let t = S.ZP.getSelfMember(e);
                                               if (null == t) return;
-                                              let r = b.Z.getRoles(e)[n];
+                                              let r = T.Z.getRoles(e)[n];
                                               null == r || t.roles.includes(r.id)
                                                   ? u.Z.dispatch({
                                                         type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
@@ -245,9 +245,9 @@ let U = {
     },
     guild: {
         react: (e, t, n) => {
-            let i = b.Z.getGuild(e.guildId);
+            let i = T.Z.getGuild(e.guildId);
             return (0, r.jsx)(
-                p.Z,
+                h.Z,
                 {
                     guild: i,
                     children: (0, A.S)(e, t, n)
@@ -259,7 +259,7 @@ let U = {
     channel: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                h.Z,
+                p.Z,
                 {
                     iconType: e.iconType,
                     children: (0, A.S)(e, t, n)

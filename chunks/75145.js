@@ -1,6 +1,6 @@
 n.d(t, {
     Kn: function () {
-        return p;
+        return h;
     },
     fi: function () {
         return m;
@@ -18,37 +18,37 @@ var r = n(200651),
     d = n(243778),
     f = n(921944),
     _ = n(388032),
-    h = n(154418);
-let p = 41;
+    p = n(154418);
+let h = 41;
 function m() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         [t, a] = (0, d.US)([l.z.TRIAL_FOR_ALL_EMOJI_PCIKER]),
-        p = t === l.z.TRIAL_FOR_ALL_EMOJI_PCIKER;
+        h = t === l.z.TRIAL_FOR_ALL_EMOJI_PCIKER;
     return (
         i.useEffect(
             () => () => {
-                p && a(f.L.TAKE_ACTION);
+                h && a(f.L.TAKE_ACTION);
             },
-            [p, a]
+            [h, a]
         ),
         (0, r.jsxs)('div', {
-            className: h.nitroTopDividerContainer,
+            className: p.nitroTopDividerContainer,
             children: [
-                (0, r.jsx)('div', { className: h.nitroTopDividerUpper }),
-                (0, r.jsx)('div', { className: s()(h.nitroTopDividerShadow, h.glow, { [h.reducedMotion]: e || !p }) }),
+                (0, r.jsx)('div', { className: p.nitroTopDividerUpper }),
+                (0, r.jsx)('div', { className: s()(p.nitroTopDividerShadow, p.glow, { [p.reducedMotion]: e || !h }) }),
                 (0, r.jsxs)('div', {
-                    className: s()(h.nitroTopDividerLockContainer),
+                    className: s()(p.nitroTopDividerLockContainer),
                     children: [
-                        (0, r.jsx)('div', { className: h.nitroTopDividerLockBorder }),
+                        (0, r.jsx)('div', { className: p.nitroTopDividerLockBorder }),
                         !e &&
-                            p &&
+                            h &&
                             (0, r.jsx)(u.LottieAnimation, {
-                                className: s()(h.premiumUnlockAnimation),
+                                className: s()(p.premiumUnlockAnimation),
                                 loop: !1,
                                 importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
                             }),
                         (0, r.jsxs)('div', {
-                            className: s()(h.premiumUnlockedWithNitroPillContainer, { [h.reducedMotion]: e || !p }),
+                            className: s()(p.premiumUnlockedWithNitroPillContainer, { [p.reducedMotion]: e || !h }),
                             children: [
                                 (0, r.jsx)(u.NitroWheelIcon, {
                                     size: 'xs',
@@ -62,10 +62,10 @@ function m() {
                                 })
                             ]
                         }),
-                        (0, r.jsx)('div', { className: h.nitroTopDividerLockBorderReversed })
+                        (0, r.jsx)('div', { className: p.nitroTopDividerLockBorderReversed })
                     ]
                 }),
-                (0, r.jsx)('div', { className: h.reverseTrialTopDividerLower })
+                (0, r.jsx)('div', { className: p.reverseTrialTopDividerLower })
             ]
         })
     );
@@ -73,30 +73,30 @@ function m() {
 t.ZP = function (e) {
     let { glowOpacity: t, className: n, colorOpacity: i = 0.2 } = e;
     return (0, r.jsxs)('div', {
-        className: s()(h.nitroTopDividerContainer, n),
+        className: s()(p.nitroTopDividerContainer, n),
         children: [
-            (0, r.jsx)('div', { className: h.nitroTopDividerUpper }),
+            (0, r.jsx)('div', { className: p.nitroTopDividerUpper }),
             (0, r.jsx)('div', {
                 style: { opacity: t },
-                className: h.nitroTopDividerShadow
+                className: p.nitroTopDividerShadow
             }),
             (0, r.jsxs)('div', {
-                className: s()(h.nitroTopDividerLockContainer),
+                className: s()(p.nitroTopDividerLockContainer),
                 children: [
-                    (0, r.jsx)('div', { className: h.nitroTopDividerLockBorder }),
+                    (0, r.jsx)('div', { className: p.nitroTopDividerLockBorder }),
                     (0, r.jsx)('div', {
-                        className: h.nitroTopDividerLockCircle,
+                        className: p.nitroTopDividerLockCircle,
                         children: (0, r.jsx)(u.LockIcon, {
                             size: 'xs',
                             color: 'white'
                         })
                     }),
-                    (0, r.jsx)('div', { className: h.nitroTopDividerLockBorderReversed })
+                    (0, r.jsx)('div', { className: p.nitroTopDividerLockBorderReversed })
                 ]
             }),
             (0, r.jsx)('div', {
                 style: { opacity: i },
-                className: h.nitroTopDividerLower
+                className: p.nitroTopDividerLower
             })
         ]
     });

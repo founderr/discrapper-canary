@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651),
@@ -14,14 +14,14 @@ var r = n(200651),
     d = n(689079),
     f = n(981631),
     _ = n(388032),
-    h = n(412825);
-function p(e) {
+    p = n(412825);
+function h(e) {
     var t;
-    let { className: a, activeCommand: p } = e,
+    let { className: a, activeCommand: h } = e,
         m = i.useCallback(
             (e) => {
                 var t;
-                let i = null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id;
+                let i = null == h ? void 0 : null === (t = h.rootCommand) || void 0 === t ? void 0 : t.id;
                 if (null == i) {
                     e.preventDefault();
                     return;
@@ -36,12 +36,12 @@ function p(e) {
                         });
                 });
             },
-            [null == p ? void 0 : null === (t = p.rootCommand) || void 0 === t ? void 0 : t.id]
+            [null == h ? void 0 : null === (t = h.rootCommand) || void 0 === t ? void 0 : t.id]
         );
-    return null == p
+    return null == h
         ? null
         : (0, r.jsxs)('div', {
-              className: s()(a, h.bar),
+              className: s()(a, p.bar),
               onContextMenu: m,
               children: [
                   (0, r.jsx)(u.Z, {}),

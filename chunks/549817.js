@@ -10,24 +10,24 @@ var r = n(392711),
     d = n(160404),
     f = n(152376),
     _ = n(592125),
-    h = n(271383),
-    p = n(594174),
+    p = n(271383),
+    h = n(594174),
     m = n(626135),
     g = n(630388),
     E = n(823379),
     v = n(960048),
     I = n(709054),
-    S = n(45966),
-    T = n(637853),
-    b = n(816436),
+    b = n(45966),
+    S = n(637853),
+    T = n(816436),
     y = n(981631),
     A = n(372897),
     N = n(490897);
 function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (d.Z.isFullServerPreview(e)) return;
-    let n = t ? S.Z.getOnboardingPromptsForOnboarding(e) : S.Z.getOnboardingPrompts(e),
-        r = S.Z.getOnboardingResponses(e),
+    let n = t ? b.Z.getOnboardingPromptsForOnboarding(e) : b.Z.getOnboardingPrompts(e),
+        r = b.Z.getOnboardingResponses(e),
         i = n.map((e) => e.options.filter((e) => r.includes(e.id))).flat(),
         o = {},
         l = {};
@@ -80,7 +80,7 @@ function C(e) {
 }
 t.Z = {
     selectOption(e, t, n, r) {
-        let a = S.Z.getOnboardingPrompt(t);
+        let a = b.Z.getOnboardingPrompt(t);
         if (null == a) return;
         let o = a.singleSelect ? i().without(i().map(a.options, 'id'), n) : [];
         s.Z.dispatch({
@@ -95,7 +95,7 @@ t.Z = {
     updateOnboardingResponses: i().debounce(C, 1000),
     updateRolesLocal: function (e, t, n) {
         var r, a;
-        let o = null !== (a = null === (r = h.ZP.getSelfMember(e)) || void 0 === r ? void 0 : r.roles) && void 0 !== a ? a : [];
+        let o = null !== (a = null === (r = p.ZP.getSelfMember(e)) || void 0 === r ? void 0 : r.roles) && void 0 !== a ? a : [];
         if (d.Z.isViewingRoles(e)) {
             (0, c.og)(e, i().difference(i().union(o, t), n));
             return;
@@ -111,14 +111,14 @@ t.Z = {
     },
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
-            r = S.Z.getSelectedOptions(e),
-            i = (0, T.L6)(r),
-            a = (0, T.dX)(r),
-            s = S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : [],
-            [u, f] = (0, T.Ee)(e, t, s),
+            r = b.Z.getSelectedOptions(e),
+            i = (0, S.L6)(r),
+            a = (0, S.dX)(r),
+            s = b.Z.getEnabled(e) ? b.Z.getDefaultChannelIds(e) : [],
+            [u, f] = (0, S.Ee)(e, t, s),
             v = [...a, ...s],
             R = v.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            O = (0, b.v)(e, new Set(v), R, !0).length,
+            O = (0, T.v)(e, new Set(v), R, !0).length,
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(y.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
@@ -139,17 +139,17 @@ t.Z = {
             d.Z.isFullServerPreview(e))
         ) {
             (0, c.zS)(e, v, []), (0, c.aq)(e, { optInEnabled: !0 }), (0, c.og)(e, Array.from(i));
-            let t = p.default.getCurrentUser();
+            let t = h.default.getCurrentUser();
             if (null != t) {
                 var L, x;
-                let n = null !== (x = null === (L = h.ZP.getMember(e, t.id)) || void 0 === L ? void 0 : L.flags) && void 0 !== x ? x : 0;
+                let n = null !== (x = null === (L = p.ZP.getMember(e, t.id)) || void 0 === L ? void 0 : L.flags) && void 0 !== x ? x : 0;
                 (0, c.aq)(e, { memberOptions: { flags: (0, g.mB)(n, A.q.COMPLETED_ONBOARDING, !0) } });
             }
         }
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        (S.Z.getEnabled(e) ? S.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: y.ZY5.GUILD_ONBOARDING });
+        (b.Z.getEnabled(e) ? b.Z.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)), n.size > 0 && (0, f.Mo)(e, Array.from(n), !0, { page: y.ZY5.GUILD_ONBOARDING });
     },
     finishOnboarding(e) {
         s.Z.dispatch({
@@ -165,10 +165,10 @@ t.Z = {
         });
     },
     async resetOnboarding(e) {
-        let t = p.default.getCurrentUser();
+        let t = h.default.getCurrentUser();
         if (null != t) {
             var n, r;
-            let i = null !== (r = null === (n = h.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
+            let i = null !== (r = null === (n = p.ZP.getMember(e, t.id)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0;
             await (0, u.e)(e, { flags: (0, g.mB)(i, A.q.COMPLETED_ONBOARDING, !1) });
         }
     }

@@ -18,7 +18,7 @@ n.d(t, {
         return m;
     },
     uk: function () {
-        return h;
+        return p;
     }
 });
 var r,
@@ -35,11 +35,11 @@ function _(e) {
     var t;
     return null !== (t = f.find((t) => u.jn[t] === e)) && void 0 !== t ? t : '';
 }
-function h(e) {
+function p(e) {
     var t, n, r;
     return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null ? 'COMPLETED_CLAIMED' : (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null ? 'COMPLETED' : (null === (r = e.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null ? 'ENROLLED' : 'NONE';
 }
-function p(e) {
+function h(e) {
     let t = c.r.build(e.config);
     return {
         quest_id: e.id,
@@ -63,7 +63,7 @@ function g(e) {
         if (
             (s.default.isLoggingAnalyticsEvents &&
                 console.info('[Quest] AnalyticsUtils.track', n, {
-                    ...p(u),
+                    ...h(u),
                     ...r
                 }),
             u.preview)
@@ -71,11 +71,11 @@ function g(e) {
             return;
         if (i)
             return a.ZP.trackWithMetadata(n, {
-                ...p(u),
+                ...h(u),
                 ...r
             });
         o.default.track(n, {
-            ...p(u),
+            ...h(u),
             ...r
         });
     }

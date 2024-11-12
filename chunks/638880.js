@@ -14,12 +14,12 @@ var r = n(812206),
     d = n(224189),
     f = n(574952),
     _ = n(917107),
-    h = n(89425),
-    p = n(197386),
+    p = n(89425),
+    h = n(197386),
     m = n(701488);
 async function g(e) {
     let t,
-        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: I, sectionName: S, source: T, partyId: b } = e,
+        { applicationId: n, activityChannelId: g, locationObject: E, analyticsLocations: v, componentId: I, sectionName: b, source: S, partyId: T } = e,
         y = (0, f.Z)(),
         A = i.Z.getChannel(g),
         N = null == A ? void 0 : A.getGuildId(),
@@ -27,7 +27,7 @@ async function g(e) {
         R = s.default.getCurrentUser();
     if (null == A || (C && !A.isPrivate()) || null == g || null == R) return Promise.resolve(!1);
     let O = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == O ? void 0 : O.applicationId) != null && (t = r.Z.getApplication(null == O ? void 0 : O.applicationId)), a.Z.getVoiceChannelId() === g && (null == O ? void 0 : O.applicationId) === n && (null == O ? void 0 : O.channelId) === a.Z.getVoiceChannelId())) return (0, p.Z)(N, g), Promise.resolve(!0);
+    if (((null == O ? void 0 : O.applicationId) != null && (t = r.Z.getApplication(null == O ? void 0 : O.applicationId)), a.Z.getVoiceChannelId() === g && (null == O ? void 0 : O.applicationId) === n && (null == O ? void 0 : O.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(N, g), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
@@ -43,7 +43,7 @@ async function g(e) {
         L = m.wP.includes(A.type);
     if (D) {
         if (
-            !(await (0, h.Z)({
+            !(await (0, p.Z)({
                 channelId: A.id,
                 bypassChangeModal: null != t
             }))
@@ -60,9 +60,9 @@ async function g(e) {
             analyticsLocations: v,
             locationObject: E,
             componentId: I,
-            sectionName: S,
-            source: T,
-            partyId: b
+            sectionName: b,
+            source: S,
+            partyId: T
         })
     );
 }

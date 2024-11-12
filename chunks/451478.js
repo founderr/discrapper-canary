@@ -10,7 +10,7 @@ var r,
     d = n(830917);
 let f = null,
     _ = new Map();
-function h(e) {
+function p(e) {
     let t = _.get(e);
     return null == t
         ? (console.warn('Window state not initialized', e),
@@ -25,14 +25,14 @@ function h(e) {
           })
         : t;
 }
-class p extends (r = u.ZP.Store) {
+class h extends (r = u.ZP.Store) {
     isFocused() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
-        return h(e).focused;
+        return p(e).focused;
     }
     isVisible() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
-        return h(e).visible;
+        return p(e).visible;
     }
     getFocusedWindowId() {
         let e = null;
@@ -48,15 +48,15 @@ class p extends (r = u.ZP.Store) {
     }
     isElementFullScreen() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
-        return h(e).isElementFullscreen;
+        return p(e).isElementFullscreen;
     }
     windowSize() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, d.UU)();
-        return h(e).windowSize;
+        return p(e).windowSize;
     }
 }
 (s = 'WindowStore'),
-    (a = 'displayName') in (i = p)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -64,7 +64,7 @@ class p extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s);
-let m = new p(c.Z, {
+let m = new h(c.Z, {
     WINDOW_INIT: function (e) {
         l()(!_.has(e.windowId), 'Window initialized multiple times');
         let { width: t, height: n, isElementFullscreen: r, focused: i, visible: a } = e;
@@ -83,7 +83,7 @@ let m = new p(c.Z, {
         );
     },
     WINDOW_FULLSCREEN_CHANGE: function (e) {
-        let t = h(e.windowId);
+        let t = p(e.windowId);
         return (
             t.isElementFullscreen !== e.isElementFullscreen &&
             (_.set(e.windowId, {
@@ -94,7 +94,7 @@ let m = new p(c.Z, {
         );
     },
     WINDOW_FOCUS: function (e) {
-        let t = h(e.windowId);
+        let t = p(e.windowId);
         return (
             t.focused !== e.focused &&
             (e.focused && (f = e.windowId),
@@ -106,7 +106,7 @@ let m = new p(c.Z, {
         );
     },
     WINDOW_RESIZED: function (e) {
-        let t = h(e.windowId);
+        let t = p(e.windowId);
         return (
             (t.windowSize.width !== e.width || t.windowSize.height !== e.height) &&
             (_.set(e.windowId, {
@@ -123,7 +123,7 @@ let m = new p(c.Z, {
         return _.delete(e.windowId), f === e.windowId && (f = null), !0;
     },
     WINDOW_VISIBILITY_CHANGE: function (e) {
-        let t = h(e.windowId);
+        let t = p(e.windowId);
         return (
             t.visible !== e.visible &&
             (_.set(e.windowId, {

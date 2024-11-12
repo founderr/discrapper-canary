@@ -13,15 +13,15 @@ var r;
         d = 7,
         f = 35,
         _ = 125,
-        h = 0,
         p = 0,
+        h = 0,
         m = 0,
         g = {
             get didTimeout() {
                 return !1;
             },
             timeRemaining: function () {
-                var e = d - (Date.now() - p);
+                var e = d - (Date.now() - h);
                 return e < 0 ? 0 : e;
             }
         },
@@ -39,27 +39,27 @@ var r;
             (d = 22), (_ = 66), (f = 0);
         });
     function v() {
-        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), T())), E();
+        125 != _ && ((d = 7), (_ = 125), (f = 35), c && (c && (i && o(i), r && clearTimeout(r), (c = !1)), S())), E();
     }
     function I() {
-        (i = null), (r = setTimeout(b, 0));
-    }
-    function S() {
-        (r = null), s(I);
-    }
-    function T() {
-        if (!c) (t = _ - (Date.now() - p)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(S, t)) : ((t = 0), S());
+        (i = null), (r = setTimeout(T, 0));
     }
     function b() {
+        (r = null), s(I);
+    }
+    function S() {
+        if (!c) (t = _ - (Date.now() - h)), (e = Date.now()), (c = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(b, t)) : ((t = 0), b());
+    }
+    function T() {
         var n,
             i,
             a,
             s = d > 9 ? 9 : 1;
-        if (((p = Date.now()), (c = !1), (r = null), u > 2 || p - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
-        l.length ? T() : (u = 0);
+        if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > s; i++) (n = l.shift()), m++, n && n(g);
+        l.length ? S() : (u = 0);
     }
     function y(e) {
-        return h++, l.push(e), T(), h;
+        return p++, l.push(e), S(), p;
     }
     function A(e) {
         var t = e - 1 - m;

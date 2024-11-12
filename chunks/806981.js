@@ -59,46 +59,46 @@ function u(e, t) {
             f = this._wnafT3,
             _ = 0;
         for (o = 0; o < r; o++) {
-            var h = (u = t[o])._getNAFPoints(e);
-            (c[o] = h.wnd), (d[o] = h.points);
+            var p = (u = t[o])._getNAFPoints(e);
+            (c[o] = p.wnd), (d[o] = p.points);
         }
         for (o = r - 1; o >= 1; o -= 2) {
-            var p = o - 1,
+            var h = o - 1,
                 m = o;
-            if (1 !== c[p] || 1 !== c[m]) {
-                (f[p] = a(n[p], c[p], this._bitLength)), (f[m] = a(n[m], c[m], this._bitLength)), (_ = Math.max(f[p].length, _)), (_ = Math.max(f[m].length, _));
+            if (1 !== c[h] || 1 !== c[m]) {
+                (f[h] = a(n[h], c[h], this._bitLength)), (f[m] = a(n[m], c[m], this._bitLength)), (_ = Math.max(f[h].length, _)), (_ = Math.max(f[m].length, _));
                 continue;
             }
-            var g = [t[p], null, null, t[m]];
-            0 === t[p].y.cmp(t[m].y) ? ((g[1] = t[p].add(t[m])), (g[2] = t[p].toJ().mixedAdd(t[m].neg()))) : 0 === t[p].y.cmp(t[m].y.redNeg()) ? ((g[1] = t[p].toJ().mixedAdd(t[m])), (g[2] = t[p].add(t[m].neg()))) : ((g[1] = t[p].toJ().mixedAdd(t[m])), (g[2] = t[p].toJ().mixedAdd(t[m].neg())));
+            var g = [t[h], null, null, t[m]];
+            0 === t[h].y.cmp(t[m].y) ? ((g[1] = t[h].add(t[m])), (g[2] = t[h].toJ().mixedAdd(t[m].neg()))) : 0 === t[h].y.cmp(t[m].y.redNeg()) ? ((g[1] = t[h].toJ().mixedAdd(t[m])), (g[2] = t[h].add(t[m].neg()))) : ((g[1] = t[h].toJ().mixedAdd(t[m])), (g[2] = t[h].toJ().mixedAdd(t[m].neg())));
             var E = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-                v = s(n[p], n[m]);
-            for (l = 0, _ = Math.max(v[0].length, _), f[p] = Array(_), f[m] = Array(_); l < _; l++) {
+                v = s(n[h], n[m]);
+            for (l = 0, _ = Math.max(v[0].length, _), f[h] = Array(_), f[m] = Array(_); l < _; l++) {
                 var I = 0 | v[0][l],
-                    S = 0 | v[1][l];
-                (f[p][l] = E[(I + 1) * 3 + (S + 1)]), (f[m][l] = 0), (d[p] = g);
+                    b = 0 | v[1][l];
+                (f[h][l] = E[(I + 1) * 3 + (b + 1)]), (f[m][l] = 0), (d[h] = g);
             }
         }
-        var T = this.jpoint(null, null, null),
-            b = this._wnafT4;
+        var S = this.jpoint(null, null, null),
+            T = this._wnafT4;
         for (o = _; o >= 0; o--) {
             for (var y = 0; o >= 0; ) {
                 var A = !0;
-                for (l = 0; l < r; l++) (b[l] = 0 | f[l][o]), 0 !== b[l] && (A = !1);
+                for (l = 0; l < r; l++) (T[l] = 0 | f[l][o]), 0 !== T[l] && (A = !1);
                 if (!A) break;
                 y++, o--;
             }
-            if ((o >= 0 && y++, (T = T.dblp(y)), o < 0)) break;
+            if ((o >= 0 && y++, (S = S.dblp(y)), o < 0)) break;
             for (l = 0; l < r; l++) {
-                var N = b[l];
+                var N = T[l];
                 if (0 !== N) {
                     N > 0 ? (u = d[l][(N - 1) >> 1]) : N < 0 && (u = d[l][(-N - 1) >> 1].neg());
-                    T = 'affine' === u.type ? T.mixedAdd(u) : T.add(u);
+                    S = 'affine' === u.type ? S.mixedAdd(u) : S.add(u);
                 }
             }
         }
         for (o = 0; o < r; o++) d[o] = null;
-        return i ? T : T.toP();
+        return i ? S : S.toP();
     }),
     (l.BasePoint = u),
     (u.prototype.eq = function () {

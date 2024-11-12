@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -15,11 +15,11 @@ var r = n(200651),
     d = n(889963),
     f = n(388032),
     _ = n(887603);
-function h(e) {
+function p(e) {
     let { page: t, totalPageCount: n, disabled: a, onPageChange: o } = e,
         [d, f] = i.useState(!1),
-        [h, p] = i.useState(null),
-        m = null != h && h >= 1 && h <= n;
+        [p, h] = i.useState(null),
+        m = null != p && p >= 1 && p <= n;
     return a
         ? (0, r.jsx)(
               c.Heading,
@@ -38,20 +38,20 @@ function h(e) {
                     autoFocus: !0,
                     className: _.jumpToPageInlineInput,
                     size: u.o.Sizes.MINI,
-                    value: null == h ? '' : ''.concat(h),
+                    value: null == p ? '' : ''.concat(p),
                     onChange: (e) => {
                         let t = parseInt(e);
                         if ('' === e || isNaN(t)) {
-                            p(null);
+                            h(null);
                             return;
                         }
-                        p(t);
+                        h(t);
                     },
                     onBlur: () => {
-                        f(!1), p(null);
+                        f(!1), h(null);
                     },
                     onKeyPress: (e) => {
-                        'Enter' === e.key && null != h && m && (o(h), f(!1), p(null));
+                        'Enter' === e.key && null != p && m && (o(p), f(!1), h(null));
                     },
                     disabled: a
                 },
@@ -71,8 +71,8 @@ function h(e) {
                 t.key
             );
 }
-function p(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: p, hideMaxPage: m = !1, className: g } = e,
+function h(e) {
+    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: h, hideMaxPage: m = !1, className: g } = e,
         E = Math.ceil(n / i);
     return (0, r.jsx)(d.W, {
         totalPageCount: E,
@@ -80,7 +80,7 @@ function p(e) {
         maxVisiblePages: a,
         hideMaxPage: m,
         onPageChange: function (e) {
-            null != p && p(e);
+            null != h && h(e);
         },
         children: function (e) {
             let { pages: t, hasMultiplePages: n } = e;
@@ -137,12 +137,12 @@ function p(e) {
                                       return (
                                           (n = e),
                                           (0, r.jsx)(
-                                              h,
+                                              p,
                                               {
                                                   page: n,
                                                   totalPageCount: E,
                                                   disabled: !!u,
-                                                  onPageChange: p
+                                                  onPageChange: h
                                               },
                                               n.key
                                           )

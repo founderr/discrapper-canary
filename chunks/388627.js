@@ -1,9 +1,9 @@
 n.d(t, {
     E6: function () {
-        return p;
+        return h;
     },
     HP: function () {
-        return h;
+        return p;
     },
     II: function () {
         return E;
@@ -42,13 +42,13 @@ async function _() {
             { outOfProcessOverlay: !0 }
         );
 }
-function h(e, t) {
+function p(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
     return !0;
 }
-function p(e, t) {
+function h(e, t) {
     if (e === t) return !0;
     if (e.length !== t.length) return !1;
     for (let n = 0; n < e.length; n++) if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked) return !1;

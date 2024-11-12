@@ -16,16 +16,16 @@ var r = n(990547),
     d = n(35225),
     f = n(703656),
     _ = n(314897),
-    h = n(664915),
-    p = n(984933),
+    p = n(664915),
+    h = n(984933),
     m = n(430824),
     g = n(944486),
     E = n(914010),
     v = n(594174),
     I = n(626135),
-    S = n(700785),
-    T = n(74538),
-    b = n(573261),
+    b = n(700785),
+    S = n(74538),
+    T = n(573261),
     y = n(668781),
     A = n(981631),
     N = n(388032);
@@ -50,17 +50,17 @@ let C = (e) => {
 async function D(e) {
     var t, r, i, o, l;
     let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { source: d, loadId: h, lurkLocation: p } = u,
+        { source: d, loadId: p, lurkLocation: h } = u,
         I = null !== (t = u.lurker) && void 0 !== t && t,
-        S = v.default.getCurrentUser();
-    if (null !== (r = null == S ? void 0 : S.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
+        b = v.default.getCurrentUser();
+    if (null !== (r = null == b ? void 0 : b.hasFlag(A.xW$.QUARANTINED)) && void 0 !== r && r) return (0, c.default)(), new Promise((e, t) => t(Error()));
     s.Z.wait(() =>
         s.Z.dispatch({
             type: 'GUILD_JOIN',
             guildId: e,
             lurker: I,
             source: d,
-            loadId: h
+            loadId: p
         })
     );
     try {
@@ -71,8 +71,8 @@ async function D(e) {
                 query: {
                     lurker: I,
                     session_id: I ? _.default.getSessionId() : null,
-                    recommendation_load_id: h,
-                    location: I && null != p ? p : null
+                    recommendation_load_id: p,
+                    location: I && null != h ? h : null
                 },
                 context: { source: d },
                 oldFormErrors: !0,
@@ -113,7 +113,7 @@ async function D(e) {
     } catch (t) {
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === A.evJ.TOO_MANY_USER_GUILDS) {
             let e = v.default.getCurrentUser();
-            T.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
+            S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? C(A.tHP) : C(A.DZw);
         }
         throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === A.evJ.GUILD_AT_CAPACITY && O(), I && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === A.evJ.UNKNOWN_GUILD && R(e), t);
     }
@@ -186,7 +186,7 @@ t.Z = {
         }),
     setCommunicationDisabledUntil(e) {
         let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: s, location: o } = e;
-        return b.Z.patch({
+        return T.Z.patch({
             url: A.ANM.GUILD_MEMBER(t, n),
             reason: s,
             body: { communication_disabled_until: i },
@@ -230,7 +230,7 @@ t.Z = {
         let r = {
             name: null != t && '' !== t ? t : N.intl.string(N.t.QBMHvL),
             color: null != n ? n : 0,
-            permissions: S.Hn
+            permissions: b.Hn
         };
         try {
             let t = await a.tn.post({
@@ -373,7 +373,7 @@ t.Z = {
         });
     },
     toggleGuildFolderExpand(e) {
-        let t = h.Z.isFolderExpanded(e);
+        let t = p.Z.isFolderExpanded(e);
         I.default.track(A.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
@@ -404,11 +404,11 @@ t.Z = {
             (0, f.uL)(A.Z5c.FRIENDS);
             return;
         }
-        let t = p.ZP.getDefaultChannel(e);
+        let t = h.ZP.getDefaultChannel(e);
         null == t || t.isNSFW() ? (0, f.uL)(A.Z5c.FRIENDS) : (0, f.uL)(A.Z5c.CHANNEL(e, t.id));
     },
     escapeToDefaultChannel(e) {
-        let t = p.ZP.getDefaultChannel(e);
+        let t = h.ZP.getDefaultChannel(e);
         null != t ? (0, f.uL)(A.Z5c.CHANNEL(e, t.id)) : (0, f.uL)(A.Z5c.FRIENDS);
     },
     async fetchApplications(e, t) {

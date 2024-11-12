@@ -15,20 +15,20 @@ var r = n(200651),
     d = n(802433),
     f = n(658312),
     _ = n(729436),
-    h = n(142145),
-    p = n(710867),
+    p = n(142145),
+    h = n(710867),
     m = n(312904),
     g = n(186917),
     E = n(831748);
 let v = (e) => {
-        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: p, urlQueryString: g, profileEffectConfig: v, noBorderRadius: I = !1, introDelay: S = c.lG } = e,
-            T = i.useRef(null),
-            [b, y] = i.useState([]);
+        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: g, profileEffectConfig: v, noBorderRadius: I = !1, introDelay: b = c.lG } = e,
+            S = i.useRef(null),
+            [T, y] = i.useState([]);
         (0, m.Z)(v);
         let [A, N] = i.useState(0),
             [C, R] = i.useState(0),
             { accessibilityLabel: O } = v,
-            [D, L] = i.useState(-S),
+            [D, L] = i.useState(-b),
             {
                 stop: x,
                 reset: w,
@@ -37,29 +37,29 @@ let v = (e) => {
                 L((t) => t + e);
             });
         i.useEffect(() => {
-            L(-S), y((0, _.H)(v.effects));
+            L(-b), y((0, _.H)(v.effects));
         }, [v]),
             i.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
-                b.forEach((n) => {
+                T.forEach((n) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
                     N(t),
                     R(e);
-            }, [R, b]);
+            }, [R, T]);
         let [P, k] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 !== u && !o && (x(), L(0)), !o && P && M.current && (x(), L(0)), a && o && !M.current && (w(), v.animationType === d.Q.PERSISTENT ? L(p === d.j.FromStart ? 0 : A) : L(0));
-            }, [o, P, A, a, x, w, M, v.animationType, u, p]),
+                !0 !== u && !o && (x(), L(0)), !o && P && M.current && (x(), L(0)), a && o && !M.current && (w(), v.animationType === d.Q.PERSISTENT ? L(h === d.j.FromStart ? 0 : A) : L(0));
+            }, [o, P, A, a, x, w, M, v.animationType, u, h]),
             (0, r.jsx)('div', {
-                ref: T,
+                ref: S,
                 className: s()(E.profileEffects, { [E.hovered]: o && l }),
                 children: (0, r.jsx)('div', {
                     className: I ? E.innerNoRadius : E.inner,
-                    children: b.map((e, i) => {
+                    children: T.map((e, i) => {
                         if (!M.current && v.animationType === d.Q.PERSISTENT && null != v.staticFrameSrc && 0 === i && !0 === u) {
                             var a, s, o, l;
                             let { staticFrameSrc: n } = v;
@@ -78,7 +78,7 @@ let v = (e) => {
                             );
                         }
                         return (0, r.jsx)(
-                            h.Z,
+                            p.Z,
                             {
                                 layerConfig: e,
                                 animationType: v.animationType,
@@ -136,7 +136,7 @@ t.Z = (e) => {
                     profileEffectConfig: f,
                     ...e
                 })
-              : (0, r.jsx)(p.Z, {
+              : (0, r.jsx)(h.Z, {
                     profileEffectConfig: f,
                     onReady: () => {
                         s(!0);

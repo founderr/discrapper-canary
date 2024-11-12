@@ -34,11 +34,11 @@ function o(e, t, n) {
     function _() {
         d === c && (d = c.slice());
     }
-    function h() {
+    function p() {
         if (f) throw Error(r(3));
         return u;
     }
-    function p(e) {
+    function h(e) {
         if ('function' != typeof e) throw Error(r(4));
         if (f) throw Error(r(5));
         var t = !0;
@@ -78,8 +78,8 @@ function o(e, t, n) {
         m({ type: s.INIT }),
         ((a = {
             dispatch: m,
-            subscribe: p,
-            getState: h,
+            subscribe: h,
+            getState: p,
             replaceReducer: function (e) {
                 if ('function' != typeof e) throw Error(r(10));
                 (l = e), m({ type: s.REPLACE });
@@ -91,9 +91,9 @@ function o(e, t, n) {
                     subscribe: function (e) {
                         if ('object' != typeof e || null === e) throw Error(r(11));
                         function t() {
-                            e.next && e.next(h());
+                            e.next && e.next(p());
                         }
-                        return t(), { unsubscribe: p(t) };
+                        return t(), { unsubscribe: h(t) };
                     }
                 })[i] = function () {
                     return this;

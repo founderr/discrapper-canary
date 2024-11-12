@@ -58,7 +58,7 @@ function c(e, t) {
             ? 0
             : 1,
         _ = null != r ? encodeURIComponent(r) : null,
-        h = null != a ? encodeURIComponent(a) : null,
-        p = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(f);
-    return null != _ && (p += '&afl='.concat(_)), null != h && (p += '&ifl='.concat(h)), p;
+        p = null != a ? encodeURIComponent(a) : null,
+        h = ''.concat(o, '/?link=').concat(c, '&utm_source=').concat(n, '&apn=').concat('com.discord', '&isi=').concat(985746746, '&ibi=').concat('com.hammerandchisel.discord', '&sd=').concat(d, '&efr=').concat(f);
+    return null != _ && (h += '&afl='.concat(_)), null != p && (h += '&ifl='.concat(p)), h;
 }

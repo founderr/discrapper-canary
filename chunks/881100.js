@@ -15,15 +15,15 @@ var i = n(399606),
     g = n(526761),
     m = n(388032),
     f = n(323780),
-    _ = n(101732),
-    p = n(450598),
+    p = n(101732),
+    _ = n(450598),
     h = n(633030),
     E = n(97942),
     b = n(269987),
     x = n(548629),
     C = n(507084),
-    T = n(680313),
-    v = n(926433),
+    v = n(680313),
+    T = n(926433),
     N = n(302036),
     I = n(994554),
     S = n(1549),
@@ -32,9 +32,9 @@ var i = n(399606),
     j = n(405991),
     P = n(24615),
     Z = n(193943),
-    O = n(334347),
+    B = n(334347),
     M = n(943734),
-    B = n(603076),
+    O = n(603076),
     w = n(472656),
     y = n(912429),
     k = n(772969),
@@ -52,13 +52,13 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badge: {
                 title: m.intl.string(m.t.SS87ra),
                 description: m.intl.string(m.t.oD6CRk),
-                imageSource: p,
+                imageSource: _,
                 imageClassName: t.badgeImage
             },
             badgeAlt: {
                 title: m.intl.string(m.t['5cYMu7']),
                 description: m.intl.string(m.t.vxk9vb),
-                imageSource: U(n, f, _),
+                imageSource: U(n, f, p),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
@@ -77,7 +77,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             emoji: {
                 title: m.intl.string(m.t['R2IV/f']),
                 description: m.intl.string(m.t.R5Xag4),
-                imageSource: O,
+                imageSource: B,
                 imageClassName: t.emojiImage
             },
             guildProfile: {
@@ -97,7 +97,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             longerMessages: {
                 title: m.intl.string(m.t.BUSciY),
                 description: m.intl.string(m.t.vN6Xpa),
-                imageSource: U(n, M, B),
+                imageSource: U(n, M, O),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {
@@ -109,7 +109,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: m.intl.string(m.t.Bv8Pfn),
                 description: m.intl.string(m.t.JMfaTU),
-                imageSource: U(n, C, T),
+                imageSource: U(n, C, v),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
@@ -122,7 +122,7 @@ let U = (e, t, n) => ((0, r.wj)(e) ? t : n),
             soundboard: {
                 title: m.intl.string(m.t['lGcW+f']),
                 description: m.intl.string(m.t['/fDyOz']),
-                imageSource: U(n, v, N),
+                imageSource: U(n, T, N),
                 imageClassName: t.soundboardImage
             },
             stickers: {

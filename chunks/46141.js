@@ -3,13 +3,13 @@ n.d(t, {
         return N;
     },
     D0: function () {
-        return p;
+        return h;
     },
     JC: function () {
-        return b;
+        return T;
     },
     Om: function () {
-        return T;
+        return S;
     },
     Sf: function () {
         return f;
@@ -18,10 +18,10 @@ n.d(t, {
         return y;
     },
     Vg: function () {
-        return h;
+        return p;
     },
     Xc: function () {
-        return S;
+        return b;
     },
     ZP: function () {
         return u;
@@ -111,7 +111,7 @@ class u extends r.Z {
                     email: e.email
                 });
             case o.HeQ.VENMO:
-                return new S({
+                return new b({
                     ...r,
                     username: e.username
                 });
@@ -124,13 +124,13 @@ class u extends r.Z {
             case o.HeQ.GIROPAY:
                 return new _({ ...r });
             case o.HeQ.PRZELEWY24:
-                return new h({
+                return new p({
                     ...r,
                     email: e.email,
                     bank: e.bank
                 });
             case o.HeQ.EPS:
-                return new p({
+                return new h({
                     ...r,
                     bank: e.bank
                 });
@@ -143,9 +143,9 @@ class u extends r.Z {
             case o.HeQ.MOMO_WALLET:
                 return new I({ ...r });
             case o.HeQ.KAKAOPAY:
-                return new T({ ...r });
+                return new S({ ...r });
             case o.HeQ.GOPAY_WALLET:
-                return new b({ ...r });
+                return new T({ ...r });
             case o.HeQ.BANCONTACT:
                 return new y({ ...r });
             case o.HeQ.IDEAL:
@@ -175,7 +175,7 @@ class u extends r.Z {
             case o.HeQ.GIROPAY:
                 return new _(e);
             case o.HeQ.PRZELEWY24:
-                return new h(e);
+                return new p(e);
             case o.HeQ.PAYSAFE_CARD:
                 return new g(e);
             case o.HeQ.GCASH:
@@ -185,15 +185,15 @@ class u extends r.Z {
             case o.HeQ.MOMO_WALLET:
                 return new I(e);
             case o.HeQ.VENMO:
-                return new S(e);
-            case o.HeQ.KAKAOPAY:
-                return new T(e);
-            case o.HeQ.GOPAY_WALLET:
                 return new b(e);
+            case o.HeQ.KAKAOPAY:
+                return new S(e);
+            case o.HeQ.GOPAY_WALLET:
+                return new T(e);
             case o.HeQ.BANCONTACT:
                 return new y(e);
             case o.HeQ.EPS:
-                return new p(e);
+                return new h(e);
             case o.HeQ.IDEAL:
                 return new m(e);
             case o.HeQ.CASH_APP:
@@ -242,13 +242,13 @@ class _ extends u {
         if ((super(e), e.type !== o.HeQ.GIROPAY)) throw Error('Cannot instantiate GiropaySourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GIROPAY));
     }
 }
-class h extends u {
+class p extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.PRZELEWY24)) throw Error('Cannot instantiate Przelewy24SourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.PRZELEWY24));
         (this.email = e.email || ''), (this.bank = e.bank);
     }
 }
-class p extends u {
+class h extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.EPS)) throw Error('Cannot instantiate EPSSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.EPS));
         this.bank = e.bank;
@@ -280,18 +280,18 @@ class I extends u {
         if ((super(e), e.type !== o.HeQ.MOMO_WALLET)) throw Error('Cannot instantiate MomoWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.MOMO_WALLET));
     }
 }
-class S extends u {
+class b extends u {
     constructor(e) {
         if ((super(e), l(this, 'username', void 0), e.type !== o.HeQ.VENMO)) throw Error('Cannot instantiate VenmoSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.VENMO));
         this.username = e.username || '';
     }
 }
-class T extends u {
+class S extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.KAKAOPAY)) throw Error('Cannot instantiate KaKaoPaySourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.KAKAOPAY));
     }
 }
-class b extends u {
+class T extends u {
     constructor(e) {
         if ((super(e), e.type !== o.HeQ.GOPAY_WALLET)) throw Error('Cannot instantiate GoPayWalletSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.GOPAY_WALLET));
     }

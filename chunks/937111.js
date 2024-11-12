@@ -14,8 +14,8 @@ var r,
     d = n(881952);
 let f = !1,
     _ = {},
-    h = !1,
-    p = {},
+    p = !1,
+    h = {},
     m = {};
 function g(e) {
     return {
@@ -51,10 +51,10 @@ class v extends (s = o.ZP.Store) {
             .filter((e) => null != e);
     }
     getJoinRequestGuild(e) {
-        return null != p[e] ? new u.ZP(p[e]) : null;
+        return null != h[e] ? new u.ZP(h[e]) : null;
     }
     get hasFetchedRequestToJoinGuilds() {
-        return h;
+        return p;
     }
     hasJoinRequestCoackmark() {
         return f;
@@ -75,8 +75,8 @@ class v extends (s = o.ZP.Store) {
     (t.Z = new v(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { guildJoinRequests: t } = e;
-            (h = !1),
-                (p = {}),
+            (p = !1),
+                (h = {}),
                 (_ = {}),
                 t.forEach((e) => {
                     let { guild_id: t } = e;
@@ -100,10 +100,10 @@ class v extends (s = o.ZP.Store) {
         },
         USER_JOIN_REQUEST_GUILDS_FETCH: function (e) {
             let { guilds: t } = e;
-            (h = !0),
+            (p = !0),
                 t.forEach((e) => {
                     let { id: t, name: n, features: r, icon: i } = e;
-                    p[t] = {
+                    h[t] = {
                         id: t,
                         name: n,
                         features: r,
@@ -115,7 +115,7 @@ class v extends (s = o.ZP.Store) {
             let { form: t, guildId: n } = e;
             if ((null == t ? void 0 : t.guild) != null) {
                 let { id: e, name: r, icon: i, features: a } = t.guild;
-                p[n] = {
+                h[n] = {
                     id: e,
                     name: r,
                     icon: i,
@@ -130,7 +130,7 @@ class v extends (s = o.ZP.Store) {
                 let { guild_id: e } = r;
                 _[e] = g(r);
                 let { id: t, name: i, icon: a, features: s } = n;
-                p[t] = {
+                h[t] = {
                     id: t,
                     name: i,
                     icon: a,

@@ -15,8 +15,8 @@ var r,
     d = n(626135),
     f = n(956664),
     _ = n(506071),
-    h = n(981631),
-    p = n(701865),
+    p = n(981631),
+    h = n(701865),
     m = n(167251);
 function g(e, t, n) {
     return (
@@ -50,14 +50,14 @@ class E extends (r = a.PureComponent) {
             }),
             g(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
             g(this, 'onCloseImage', () => {
-                (0, o.closeModal)(p.U, this.modalContext);
+                (0, o.closeModal)(h.U, this.modalContext);
             }),
             g(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: i, src: a, original: o, width: l, height: u, animated: f, srcIsAnimated: _, children: p, shouldHideMediaOptions: g = !1, sourceMetadata: E } = this.props;
+                let { alt: i, src: a, original: o, width: l, height: u, animated: f, srcIsAnimated: _, children: h, shouldHideMediaOptions: g = !1, sourceMetadata: E } = this.props;
                 (0, s.k)(e.currentTarget) && e.currentTarget.blur(),
-                    d.default.track(h.rMx.OPEN_MODAL, { type: 'Media Modal' }),
+                    d.default.track(p.rMx.OPEN_MODAL, { type: 'Media Modal' }),
                     (0, c.K)({
                         className: m.modal,
                         onClose: this.onCloseImage,
@@ -71,7 +71,7 @@ class E extends (r = a.PureComponent) {
                                 zoomThumbnailPlaceholder: n,
                                 animated: f,
                                 srcIsAnimated: _,
-                                children: p,
+                                children: h,
                                 trigger: r,
                                 sourceMetadata: E,
                                 original: null != o ? o : a

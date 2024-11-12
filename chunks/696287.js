@@ -22,7 +22,7 @@ function f(e, t, n) {
     );
 }
 let _ = 5 * l.Z.Millis.MINUTE;
-class h extends i.Z {
+class p extends i.Z {
     _terminate() {
         this.stopHeartbeat();
     }
@@ -80,4 +80,4 @@ class h extends i.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new p();

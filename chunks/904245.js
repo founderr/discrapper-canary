@@ -10,16 +10,16 @@ var r = n(278074),
     d = n(86670),
     f = n(685736),
     _ = n(849521),
-    h = n(421474),
-    p = n(970606),
+    p = n(421474),
+    h = n(970606),
     m = n(960904),
     g = n(830121),
     E = n(710845),
     v = n(247206),
     I = n(38618),
-    S = n(687516),
-    T = n(539573),
-    b = n(826581),
+    b = n(687516),
+    S = n(539573),
+    T = n(826581),
     y = n(409059),
     A = n(264229),
     N = n(366980),
@@ -67,8 +67,8 @@ var et = n(70956),
     ed = n(388032);
 let ef = new E.Z('MessageActionCreators'),
     e_ = new E.Z('MessageQueue'),
-    eh = !1;
-class ep {
+    ep = !1;
+class eh {
     markComplete() {
         this.completed = !0;
     }
@@ -102,7 +102,7 @@ function em(e) {
             let r = Y.Z.getLastActiveStream();
             if (null != r && r.channelId === t.id) {
                 (e = el.dAT.STREAM), (n.destination_user_id = r.ownerId);
-                let t = (0, S.L2)(r, X.Z);
+                let t = (0, b.L2)(r, X.Z);
                 n.application_id = null != t ? t.id : null;
             }
         }
@@ -373,8 +373,8 @@ let eg = {
         fetchMessages(e) {
             let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: f } = e,
                 _ = K.Z.getChannel(t),
-                h = I.Z.isConnectedOrOverlay(),
-                p = Date.now();
+                p = I.Z.isConnectedOrOverlay(),
+                h = Date.now();
             if (null != _ && _.type === el.d4z.GUILD_STORE) return !1;
             if (t === eu.V) return;
             if (
@@ -396,7 +396,7 @@ let eg = {
             let g = o.Z.getOrCreate(t).loadStart(m);
             o.Z.commit(g), s.Z.dispatch({ type: 'LOAD_MESSAGES' });
             let E = null == m ? void 0 : m.messageId,
-                v = new ep();
+                v = new eh();
             return (
                 !d && this.fetchLocalMessages(t, n, r, a, v),
                 i.tn
@@ -451,7 +451,7 @@ let eg = {
                                         hasMoreAfter: _,
                                         limit: a,
                                         jump: l,
-                                        isStale: !h || I.Z.lastTimeConnectedChanged() >= p,
+                                        isStale: !p || I.Z.lastTimeConnectedChanged() >= h,
                                         truncate: f
                                     });
                             }),
@@ -742,7 +742,7 @@ let eg = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: f, tts: E = !1 } = t,
-                { activityAction: v, location: I, suggestedInvite: S, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
+                { activityAction: v, location: I, suggestedInvite: b, stickerIds: A, messageReference: N, allowedMentions: C, poll: R, contentInventoryEntry: M } = n,
                 Z = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [j, H] = (0, V.Z)(c);
             j && ((c = H), (Z = (0, en.pj)(Z, el.iLy.SUPPRESS_NOTIFICATIONS)));
@@ -764,9 +764,9 @@ let eg = {
                 });
                 (0, P.EL)(e, t.id), null != A && (t.sticker_items = A.map((e) => F.Z.getStickerById(e)).filter((e) => null != e)), eE.receiveMessage(e, t, !0, n);
             }
-            if (!eh && null != d && d.length > 0) {
+            if (!ep && null != d && d.length > 0) {
                 let t, n;
-                eh = !0;
+                ep = !0;
                 let r = ee.default.getCurrentUser();
                 d.some((e) => e.animated) && !ea.ZP.canUseAnimatedEmojis(r) ? ((t = ed.intl.string(ed.t.msFJy8)), (n = 'INVALID_ANIMATED_EMOJI_BODY')) : Q.Z.canWithPartialContext(el.Plq.USE_EXTERNAL_EMOJIS, { channelId: e }) ? ((t = ed.intl.string(ed.t.FzugNj)), (n = 'INVALID_EXTERNAL_EMOJI_BODY_UPGRADE')) : ((t = ed.intl.string(ed.t.Q87rIy)), (n = 'INVALID_EXTERNAL_EMOJI_BODY')), eE.sendBotMessage(e, t, n);
             }
@@ -818,10 +818,10 @@ let eg = {
                                             poll: R
                                         });
                                     let r = es.default.cast(e),
-                                        i = b.Z.getRequest(r);
+                                        i = T.Z.getRequest(r);
                                     if (null != i) {
                                         let { guildId: t, userId: n, applicationStatus: r } = i;
-                                        (0, p.aC)({
+                                        (0, h.aC)({
                                             guildId: t,
                                             channelId: e,
                                             messageId: o.body.id,
@@ -879,7 +879,7 @@ let eg = {
                                                 else if (t === m.g.APP_DIRECTORY_PROFILE) (0, _.y)(o);
                                                 else if (t === m.g.APP_DIRECTORY_STOREFRONT) (0, _.y)(o, 'storefront');
                                                 else if (t === m.g.APP_DIRECTORY_STOREFRONT_SKU) {
-                                                    let e = (0, h.Q)(o);
+                                                    let e = (0, p.Q)(o);
                                                     null != e && (0, _.y)(e.applicationId, 'storefront_sku');
                                                 } else if (t === m.g.ACTIVITY_BOOKMARK);
                                                 else if (t === m.g.EMBEDDED_ACTIVITY_INVITE);
@@ -900,7 +900,7 @@ let eg = {
                                             channelId: e,
                                             messageId: o.body.id,
                                             location: null != I ? I : 'chat_input',
-                                            suggested: S
+                                            suggested: b
                                         }),
                                         !(function (e, t, n, r, i) {
                                             (0, er.Q_)(e).forEach((e) => {
@@ -940,7 +940,7 @@ let eg = {
                                                     cooldownMs: t * et.Z.Millis.SECOND
                                                 });
                                         } else
-                                            T.U8.has(o.body.code)
+                                            S.U8.has(o.body.code)
                                                 ? s.Z.dispatch({
                                                       type: 'MESSAGE_SEND_FAILED_AUTOMOD',
                                                       messageData: X,
@@ -1030,7 +1030,7 @@ let eg = {
                     message: o
                 },
                 (n) => {
-                    let r = !n.hasErr && T.U8.has(n.body.code);
+                    let r = !n.hasErr && S.U8.has(n.body.code);
                     if (r) {
                         let e = {
                             type: l.$V.EDIT,

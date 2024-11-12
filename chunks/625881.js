@@ -16,8 +16,8 @@ var i = n(200651),
     S = n(981631),
     T = n(388032),
     C = n(864678),
-    _ = n(982404),
-    E = n(299156);
+    E = n(982404),
+    _ = n(299156);
 t.Z = function (e) {
     let { premiumSubscription: t, premiumType: n, onClose: r, onConfirm: f, userDiscountOffer: I } = e,
         [N, A] = s.useState(!1),
@@ -37,7 +37,7 @@ t.Z = function (e) {
             v(!1);
         },
         O = (0, d.ZP)(),
-        R = (0, o.wj)(O) ? _ : E,
+        R = (0, o.wj)(O) ? E : _,
         P = (0, g._)(t, x.Xh.PREMIUM_MONTH_TIER_2, I),
         D = (0, m.aS)(x.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,

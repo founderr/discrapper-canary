@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(607070),
     f = n(243778),
     _ = n(594174),
-    h = n(74538),
-    p = n(921944),
+    p = n(74538),
+    h = n(921944),
     m = n(388032),
     g = n(489680);
 let E = {
@@ -58,16 +58,16 @@ function v(e) {
 function I(e) {
     let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         I = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        S = _.default.getCurrentUser(),
-        T = null == S || (0, h.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [b, y] = (0, f.US)(T),
+        b = _.default.getCurrentUser(),
+        S = null == b || (0, p.I5)(b) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
+        [T, y] = (0, f.US)(S),
         [A, N] = i.useState(!1),
         [C, R] = (0, c.useSpring)(() => ({})),
         O = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
-        let e = b === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (y(p.L.DISMISS), setTimeout(() => N(e), 200));
-    }, [b, y]);
+        let e = T === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
+        e && (y(h.L.DISMISS), setTimeout(() => N(e), 200));
+    }, [T, y]);
     let D = A ? m.intl.string(m.t['Osi/u7']) : t ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am),
         L = A ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {

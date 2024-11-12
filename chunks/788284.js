@@ -56,12 +56,12 @@ function h(e) {
             return f(i.id, n);
         }, [i]),
         _ = (null === (t = i.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        E = !l && g;
+        b = !l && g;
     r.useEffect(() => {
         var e, t, n, o;
-        g ? E && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
-    }, [E, g]);
-    let b = r.useCallback(() => {
+        g ? b && (null === (o = h.current) || void 0 === o || null === (n = o.animation) || void 0 === n || n.play()) : null === (t = h.current) || void 0 === t || null === (e = t.animation) || void 0 === e || e.goToAndStop(0, !0);
+    }, [b, g]);
+    let E = r.useCallback(() => {
         v(!0);
     }, []);
     return null == j || _
@@ -75,9 +75,9 @@ function h(e) {
                   d.LottieAnimation,
                   {
                       ref: h,
-                      onComplete: b,
+                      onComplete: E,
                       importData: () => j,
-                      shouldAnimate: !C && E,
+                      shouldAnimate: !C && b,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }

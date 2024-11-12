@@ -23,8 +23,8 @@ let N = r.memo(function (e) {
         { loaded: n, error: l, message: N } = (0, _.a)(t),
         T = (0, d.p)(),
         x = (0, s.e7)([f.Z], () => null != N && f.Z.isBlockedForMessage(N), [N]),
-        A = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
-        b = p.cC.useSetting(),
+        b = (0, s.e7)([g.Z], () => g.Z.can(E.Plq.MANAGE_MESSAGES, t)),
+        A = p.cC.useSetting(),
         { content: Z } = r.useMemo(
             () =>
                 (null == N ? void 0 : N.content) != null && '' !== N.content
@@ -82,7 +82,7 @@ let N = r.memo(function (e) {
             });
     } else y = null;
     return (0, i.jsx)(c.a.Provider, {
-        value: (0, u.Z)(b, A),
+        value: (0, u.Z)(A, b),
         children: (0, i.jsx)(o.FocusBlock, {
             className: v.messageFocusBlock,
             children: y

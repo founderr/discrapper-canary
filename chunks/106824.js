@@ -119,16 +119,16 @@ class d extends r.EventEmitter {
             return;
         }
         let { type: d, typeInfo: f, query: _ } = u,
-            h = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== _ || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f)),
-            p = s.fq.getSetting();
-        i.allowStickers = i.allowStickers ? p : i.allowStickers;
-        let { results: m, metadata: g } = f.queryResults(this.props.channel, this.props.guild, _, i, h),
+            p = r || (n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== _ || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f)),
+            h = s.fq.getSetting();
+        i.allowStickers = i.allowStickers ? h : i.allowStickers;
+        let { results: m, metadata: g } = f.queryResults(this.props.channel, this.props.guild, _, i, p),
             E = 0;
         for (let e of Object.values(m)) Array.isArray(e) && (E += e.length);
         let v = !0 === m.isLoading,
             I = this.shouldShow(E, v, f),
-            S = this.state.selectedIndex;
-        !I || v ? (S = null) : null != S && S >= E && (S = E - 1),
+            b = this.state.selectedIndex;
+        !I || v ? (b = null) : null != b && b >= E && (b = E - 1),
             I && !this.state.isVisible && (0, a.a7)(d, this.props.channel, g),
             this.setState({
                 query: {
@@ -141,7 +141,7 @@ class d extends r.EventEmitter {
                     isLoading: v
                 },
                 isVisible: I,
-                selectedIndex: S
+                selectedIndex: b
             });
     }
     shouldShow(e, t, n) {

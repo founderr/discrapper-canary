@@ -30,7 +30,7 @@ let f = {
         [u.BadgeShapes.ROUND_RIGHT]: d.liveShapeRoundRight,
         [u.BadgeShapes.SQUARE]: ''
     };
-function h(e) {
+function p(e) {
     let { className: t, style: n, shape: r = u.BadgeShapes.ROUND, look: i = 'RED', size: s = f.LARGE } = e;
     return 'RED' === i
         ? (0, a.jsx)(u.TextBadge, {
@@ -48,4 +48,4 @@ function h(e) {
               style: n
           });
 }
-(h.Looks = i), (h.Sizes = f), (t.ZP = h);
+(p.Looks = i), (p.Sizes = f), (t.ZP = p);

@@ -22,10 +22,10 @@ function _(e) {
     }),
         delete d[e];
 }
-function h() {
+function p() {
     (c = {}), (d = {}), (f = {});
 }
-class p extends (s = o.ZP.Store) {
+class h extends (s = o.ZP.Store) {
     initialize() {
         this.waitFor(u.Z);
     }
@@ -37,7 +37,7 @@ class p extends (s = o.ZP.Store) {
     }
 }
 (a = 'PendingReplyStore'),
-    (i = 'displayName') in (r = p)
+    (i = 'displayName') in (r = h)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -45,7 +45,7 @@ class p extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new p(l.Z, {
+    (t.Z = new h(l.Z, {
         CREATE_PENDING_REPLY: function (e) {
             let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
             (c[t.id] = {
@@ -82,8 +82,8 @@ class p extends (s = o.ZP.Store) {
             let { channelId: t } = e;
             delete c[t], delete d[t];
         },
-        CONNECTION_OPEN: h,
-        LOGOUT: h,
+        CONNECTION_OPEN: p,
+        LOGOUT: p,
         MESSAGE_DELETE: function (e) {
             var t, n, r;
             let { id: i, channelId: a } = e;

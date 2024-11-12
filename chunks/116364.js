@@ -10,8 +10,8 @@ var i = n(392711),
     d = n(588468),
     f = n(483360),
     _ = n(877565),
-    h = n(590921),
-    p = n(689079),
+    p = n(590921),
+    h = n(689079),
     m = n(388032),
     g = n(481476),
     E = n(239840);
@@ -22,18 +22,18 @@ let v = { results: { choices: [] } },
             isLoading: !0
         }
     },
-    S = Array.from({ length: 5 }, () => ({
+    b = Array.from({ length: 5 }, () => ({
         name: '',
         displayName: '',
         value: ''
     })),
-    T = {
+    S = {
         results: {
             choices: [],
             isError: !0
         }
     },
-    b = a().debounce(c.Z, p.Fu, {
+    T = a().debounce(c.Z, h.Fu, {
         leading: !0,
         trailing: !0
     }),
@@ -42,7 +42,7 @@ let v = { results: { choices: [] } },
         showEmpty: !0,
         matches(e, t, n, r, i) {
             let a = u.Z.getActiveOption(e.id);
-            return i.commands !== h.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || ((null == a ? void 0 : a.choices) != null && a.choices.length > 0));
+            return i.commands !== p.L8.DISABLED && null != a && (a.type === o.jw.BOOLEAN || !!(null == a ? void 0 : a.autocomplete) || ((null == a ? void 0 : a.choices) != null && a.choices.length > 0));
         },
         queryResults(e, t, n, r, i) {
             var a;
@@ -51,7 +51,7 @@ let v = { results: { choices: [] } },
             if (s.autocomplete) {
                 if (i) {
                     let i = u.Z.getActiveCommand(e.id);
-                    b({
+                    T({
                         command: i,
                         optionValues: r.getCommandOptionValues(),
                         context: {
@@ -64,14 +64,14 @@ let v = { results: { choices: [] } },
                         }
                     });
                 }
-                if (l.Z.getLastErrored(e.id)) return T;
+                if (l.Z.getLastErrored(e.id)) return S;
                 let a = l.Z.getAutocompleteChoices(e.id, s.name, n);
                 return null == a ? I : { results: { choices: a } };
             }
             return {
                 results: f.ZP.queryChoiceResults({
                     query: n,
-                    choices: s.type === o.jw.BOOLEAN ? p.ak : null !== (a = s.choices) && void 0 !== a ? a : []
+                    choices: s.type === o.jw.BOOLEAN ? h.ak : null !== (a = s.choices) && void 0 !== a ? a : []
                 })
             };
         },
@@ -93,7 +93,7 @@ let v = { results: { choices: [] } },
                   ? (0, _.HI)({
                         query: o,
                         selectedIndex: a,
-                        autocompletes: n ? S : t,
+                        autocompletes: n ? b : t,
                         onHover: l,
                         onClick: u,
                         titleWithQuery: m.t.pg0anJ,
@@ -125,7 +125,7 @@ let v = { results: { choices: [] } },
                         return e.displayName;
                     })(i)
                 ),
-                { type: h.z2.CHOICE }
+                { type: p.z2.CHOICE }
             );
         }
     };

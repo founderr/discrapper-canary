@@ -1,9 +1,9 @@
 t.d(n, {
     h: function () {
-        return c;
+        return s;
     },
     m: function () {
-        return s;
+        return c;
     }
 });
 var i = t(200651);
@@ -12,22 +12,22 @@ var r = t(481060),
     o = t(17894),
     a = t(388032),
     l = t(632354);
-let c = (e) => {
-    let { onConfirm: n, onCancel: t, title: c, subtitle: s, confirmCta: d, showOpenDiscord: u = !0 } = e;
+let s = (e) => {
+    let { onConfirm: n, onCancel: t, title: s, subtitle: c, confirmCta: d, showOpenDiscord: u = !0 } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
             (0, i.jsx)(r.Heading, {
                 className: l.confirmationHeader,
                 variant: 'heading-lg/extrabold',
-                children: c
+                children: s
             }),
-            null != s
+            null != c
                 ? (0, i.jsx)(r.Text, {
                       className: l.confirmationSubtitle,
                       variant: 'text-sm/normal',
                       color: 'header-secondary',
-                      children: s
+                      children: c
                   })
                 : null,
             (0, i.jsxs)('div', {
@@ -58,8 +58,8 @@ let c = (e) => {
         ]
     });
 };
-function s(e) {
-    let { onConfirm: n, tierName: t, subscription: c } = e;
+function c(e) {
+    let { onConfirm: n, tierName: t, subscription: s } = e;
     return (0, i.jsxs)('div', {
         className: l.confirmationContainer,
         children: [
@@ -72,7 +72,7 @@ function s(e) {
                 className: l.confirmationSubtitle,
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                children: a.intl.format(a.t.OsAK9v, { timestamp: null == c ? void 0 : c.currentPeriodEnd })
+                children: a.intl.format(a.t.OsAK9v, { timestamp: null == s ? void 0 : s.currentPeriodEnd })
             }),
             (0, i.jsxs)('div', {
                 className: l.buttonContainer,

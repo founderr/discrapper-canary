@@ -29,8 +29,8 @@ let u = null,
     d = null,
     f = null,
     _ = {},
-    h = {},
     p = {},
+    h = {},
     m = {};
 class g extends r.ZP.Store {
     getGlobalStats() {
@@ -50,9 +50,9 @@ class g extends r.ZP.Store {
             approx_seconds_since_last_role_mention: t(d),
             approx_seconds_since_last_everyone_mention: t(f),
             approx_seconds_since_last_guild_notification: null == e ? null : t(_[e]),
-            approx_seconds_since_last_guild_mention: null == e ? null : t(h[e]),
+            approx_seconds_since_last_guild_mention: null == e ? null : t(p[e]),
             approx_seconds_since_last_guild_role_mention: null == e ? null : t(m[e]),
-            approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(p[e])
+            approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e])
         };
     }
 }
@@ -60,13 +60,13 @@ t.Z = new g(i.Z, {
     CONNECTION_OPEN: function () {
         let e = (e) => null != e && Date.now() - e < 60000;
         for (let t in (!e(u) && (u = null), !e(c) && (c = null), !e(d) && (d = null), !e(f) && (f = null), _)) !e(_[t]) && delete _[t];
-        for (let t in h) !e(h[t]) && delete h[t];
-        for (let t in m) !e(m[t]) && delete m[t];
         for (let t in p) !e(p[t]) && delete p[t];
+        for (let t in m) !e(m[t]) && delete m[t];
+        for (let t in h) !e(h[t]) && delete h[t];
     },
     MESSAGE_NOTIFICATION_SHOWN: function (e) {
         let { guildId: t, mentioned: n, roleMentioned: r, everyoneMentioned: i } = e,
             a = Date.now();
-        (u = a), null != t && (_[t] = a), n && ((c = a), null != t && (h[t] = a)), r && ((d = a), null != t && (m[t] = a)), i && ((f = a), null != t && (p[t] = a));
+        (u = a), null != t && (_[t] = a), n && ((c = a), null != t && (p[t] = a)), r && ((d = a), null != t && (m[t] = a)), i && ((f = a), null != t && (h[t] = a));
     }
 });

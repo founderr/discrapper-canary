@@ -58,8 +58,8 @@ var l = (function () {
         ) {
             if (((this.message = t), !e.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
             var _ = l || {},
-                h = (_.formatters, (0, r._T)(_, ['formatters']));
-            this.ast = e.__parse(t, (0, r.pi)((0, r.pi)({}, h), { locale: this.resolvedLocale }));
+                p = (_.formatters, (0, r._T)(_, ['formatters']));
+            this.ast = e.__parse(t, (0, r.pi)((0, r.pi)({}, p), { locale: this.resolvedLocale }));
         } else this.ast = t;
         if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
         (this.formats =

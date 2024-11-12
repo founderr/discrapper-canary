@@ -38,7 +38,7 @@ let c = new Date(2023, 8, 25),
         }
     }),
     _ = f();
-class h extends (r = s.ZP.PersistedStore) {
+class p extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         null != e && (_ = e);
     }
@@ -54,9 +54,9 @@ class h extends (r = s.ZP.PersistedStore) {
         _ = f();
     }
 }
-u(h, 'displayName', 'CollectiblesPersistedStore'),
-    u(h, 'persistKey', 'CollectiblesPersistedStoreV2'),
-    new h(o.Z, {
+u(p, 'displayName', 'CollectiblesPersistedStore'),
+    u(p, 'persistKey', 'CollectiblesPersistedStoreV2'),
+    new p(o.Z, {
         COLLECTIBLES_CATEGORY_ITEMS_VIEWED: (e) => {
             let { categories: t, itemTypes: n } = e,
                 r = new Date();

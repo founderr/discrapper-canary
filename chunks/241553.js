@@ -16,16 +16,16 @@ var r = n(200651),
     d = n(410030),
     f = n(100527),
     _ = n(906732),
-    h = n(605236),
-    p = n(243778),
+    p = n(605236),
+    h = n(243778),
     m = n(963249),
     g = n(646476),
     E = n(819640),
     v = n(594174),
     I = n(965645),
-    S = n(362061),
-    T = n(70956),
-    b = n(709054),
+    b = n(362061),
+    S = n(70956),
+    T = n(709054),
     y = n(51144),
     A = n(443603),
     N = n(981631),
@@ -95,9 +95,9 @@ let x = [
         }
     ],
     M = 1 / 300,
-    P = T.Z.Millis.DAYS_30,
+    P = S.Z.Millis.DAYS_30,
     k = (0, a.animated)(I.Z),
-    U = (0, a.animated)(S.Z),
+    U = (0, a.animated)(b.Z),
     G = (0, a.animated)(u.GiftIcon);
 function B(e) {
     let {
@@ -137,8 +137,8 @@ function B(e) {
                 friction: 24
             }
         }),
-        h = a ? f : 0,
-        p = (0, l.wj)(null != t ? t : o) ? s.dark[h] : s.light[h];
+        p = a ? f : 0,
+        h = (0, l.wj)(null != t ? t : o) ? s.dark[p] : s.light[p];
     return !n && a
         ? (0, r.jsx)(G, {})
         : a && c
@@ -147,8 +147,8 @@ function B(e) {
                 style: _
             })
           : (0, r.jsx)(k, {
-                boxColor: p.box,
-                ribbonColor: p.ribbon,
+                boxColor: h.box,
+                ribbonColor: h.ribbon,
                 style: _
             });
 }
@@ -157,13 +157,13 @@ t.Z = i.memo(function (e) {
         { analyticsLocations: a } = (0, _.ZP)(f.Z.GIFT_BUTTON),
         [l, d] = i.useState(!1),
         I = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        S = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        T = null != S ? b.default.age(S.id) : 0,
-        x = !t && I && T >= P,
+        b = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
+        S = null != b ? T.default.age(b.id) : 0,
+        x = !t && I && S >= P,
         { enabled: w } = g.RO.useExperiment({ location: 'ChannelPremiumGiftButton' }, { autoTrackExposure: x }),
         M = [];
     w && x && M.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
-    let [k, U] = (0, p.US)(M),
+    let [k, U] = (0, h.US)(M),
         G = null != k,
         Z = (0, y.Ft)(n),
         F = null != Z;
@@ -204,7 +204,7 @@ t.Z = i.memo(function (e) {
                     'aria-label': O.intl.string(O.t.Z1RnTk),
                     isActive: !1,
                     onClick: () => {
-                        d(!1), (0, h.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: C.L.TAKE_ACTION }), V();
+                        d(!1), (0, p.EW)(o.z.SEASONAL_GIFTING_COACHMARK_2023, { dismissAction: C.L.TAKE_ACTION }), V();
                     },
                     children: (0, r.jsx)('div', {
                         className: D.noPointerEvents,

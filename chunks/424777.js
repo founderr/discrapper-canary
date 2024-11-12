@@ -64,14 +64,14 @@ function d(e) {
         ) {
             var _ = a.k ? a.k(f) : new r(u.generate(this.n.byteLength()));
             if (0 >= (_ = this._truncateToN(_, !0)).cmpn(1) || _.cmp(d) >= 0) continue;
-            var h = this.g.mul(_);
-            if (h.isInfinity()) continue;
-            var p = h.getX(),
-                m = p.umod(this.n);
+            var p = this.g.mul(_);
+            if (p.isInfinity()) continue;
+            var h = p.getX(),
+                m = h.umod(this.n);
             if (0 !== m.cmpn(0)) {
                 var g = _.invm(this.n).mul(m.mul(t.getPrivate()).iadd(e));
                 if (0 !== (g = g.umod(this.n)).cmpn(0)) {
-                    var E = (h.getY().isOdd() ? 1 : 0) | (0 !== p.cmp(m) ? 2 : 0);
+                    var E = (p.getY().isOdd() ? 1 : 0) | (0 !== h.cmp(m) ? 2 : 0);
                     return (
                         a.canonical && g.cmp(this.nh) > 0 && ((g = this.n.sub(g)), (E ^= 1)),
                         new c({
@@ -107,9 +107,9 @@ function d(e) {
         if (o.cmp(this.curve.p.umod(this.curve.n)) >= 0 && f) throw Error('Unable to find sencond key candinate');
         o = f ? this.curve.pointFromX(o.add(this.curve.n), d) : this.curve.pointFromX(o, d);
         var _ = t.r.invm(a),
-            h = a.sub(s).mul(_).umod(a),
-            p = u.mul(_).umod(a);
-        return this.g.mulAdd(h, o, p);
+            p = a.sub(s).mul(_).umod(a),
+            h = u.mul(_).umod(a);
+        return this.g.mulAdd(p, o, h);
     }),
     (d.prototype.getKeyRecoveryParam = function (e, t, n, r) {
         if (null !== (t = new c(t, r)).recoveryParam) return t.recoveryParam;

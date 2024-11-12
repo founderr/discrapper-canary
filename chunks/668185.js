@@ -13,14 +13,14 @@ var r = n(200651),
     c = n(388032),
     d = n(482145);
 function f(e) {
-    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: h } = e,
-        p = i.useMemo(() => a.U_(h.permissions), [h.permissions]);
+    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
+        h = i.useMemo(() => a.U_(p.permissions), [p.permissions]);
     i.useEffect(() => {
-        _(!1, a.hX(n, p));
-    }, [p, _, n]);
+        _(!1, a.hX(n, h));
+    }, [h, _, n]);
     let m = u.VY.filter((e) => a.e$(n, e)),
         g = m
-            .filter((e) => !a.e$(p, e))
+            .filter((e) => !a.e$(h, e))
             .map((e) => {
                 let t = (0, u.wt)(e),
                     n = !a.e$(f, e);
@@ -42,7 +42,7 @@ function f(e) {
                 );
             }),
         E = m
-            .filter((e) => a.e$(p, e))
+            .filter((e) => a.e$(h, e))
             .map((e) => {
                 let t = (0, u.wt)(e);
                 return (0, r.jsxs)(
@@ -78,7 +78,7 @@ function f(e) {
                               color: 'header-secondary',
                               children: c.intl.format(c.t.sOaT2t, {
                                   applicationName: t.name,
-                                  guildName: h.name
+                                  guildName: p.name
                               })
                           }),
                           (0, r.jsx)('ul', {

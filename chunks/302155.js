@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var a = n(213919),
@@ -25,7 +25,7 @@ function f(e, t, n) {
     );
 }
 let _ = !1;
-class h extends o.Z {
+class p extends o.Z {
     _initialize() {
         s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
     }

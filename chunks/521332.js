@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(592125),
     f = n(155647),
     _ = n(185625),
-    h = n(981631),
-    p = n(388032),
+    p = n(981631),
+    h = n(388032),
     m = n(460676);
 function g(e) {
     let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: s } = e,
@@ -28,7 +28,7 @@ function g(e) {
         (0, r.jsx)(u.Z, {
             title: t,
             description: n,
-            buttonText: o ? p.intl.string(p.t['h+WsPT']) : p.intl.string(p.t.A8t4NT),
+            buttonText: o ? h.intl.string(h.t['h+WsPT']) : h.intl.string(h.t.A8t4NT),
             buttonDisabled: o,
             onButtonPress: () => {
                 a(), l(!0), s(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
@@ -39,10 +39,10 @@ function g(e) {
 function E(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: E, reportSubType: v } = e,
         I = (0, a.e7)([d.Z], () => d.Z.getChannel(n)),
-        S = (0, f.jc)(t, null == I ? void 0 : I.type),
-        T = (0, _.i_)(E, v, u),
-        b = (0, c._p)({ location: 'settings-upsells-element' });
-    return 0 === S.length
+        b = (0, f.jc)(t, null == I ? void 0 : I.type),
+        S = (0, _.i_)(E, v, u),
+        T = (0, c._p)({ location: 'settings-upsells-element' });
+    return 0 === b.length
         ? null
         : (0, r.jsxs)('div', {
               className: m.container,
@@ -50,11 +50,11 @@ function E(e) {
                   (0, r.jsx)(s.Heading, {
                       variant: 'text-sm/semibold',
                       className: m.header,
-                      children: p.intl.string(p.t['1yxTIC'])
+                      children: h.intl.string(h.t['1yxTIC'])
                   }),
                   (0, r.jsx)('div', {
                       className: m.upsellsContainer,
-                      children: S.map((e, n) => {
+                      children: b.map((e, n) => {
                           let { getTitle: i, getDescription: a, onApply: s } = e;
                           return (0, r.jsx)(
                               g,
@@ -62,7 +62,7 @@ function E(e) {
                                   title: i(),
                                   description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: T(t[n])
+                                  trackSettingsUpsellsAction: S(t[n])
                               },
                               n
                           );
@@ -71,9 +71,9 @@ function E(e) {
                   (0, r.jsx)(s.Button, {
                       className: m.navLinkButton,
                       onClick: () => {
-                          b ? o.Z.open(h.oAB.CONTENT_AND_SOCIAL) : o.Z.open(h.oAB.PRIVACY_AND_SAFETY),
+                          T ? o.Z.open(p.oAB.CONTENT_AND_SOCIAL) : o.Z.open(p.oAB.PRIVACY_AND_SAFETY),
                               i(),
-                              l.ZP.trackWithMetadata(h.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+                              l.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: u,
                                   report_type: E.name,
                                   report_subtype: v,
@@ -83,7 +83,7 @@ function E(e) {
                       look: s.Button.Looks.LINK,
                       color: s.Button.Colors.LINK,
                       size: s.Button.Sizes.NONE,
-                      children: p.intl.string(p.t.olebGx)
+                      children: h.intl.string(h.t.olebGx)
                   })
               ]
           });

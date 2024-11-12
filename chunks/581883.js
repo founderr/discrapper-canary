@@ -9,8 +9,8 @@ var r,
     d = n(835913),
     f = n(570140),
     _ = n(262847),
-    h = n(48481),
-    p = n(526761);
+    p = n(48481),
+    h = n(526761);
 function m(e, t, n) {
     return (
         t in e
@@ -28,23 +28,23 @@ let g = {
         ProtoClass: c.o8,
         proto: c.o8.create(),
         lazyLoaded: !1,
-        editInfo: (0, p.JC)()
+        editInfo: (0, h.JC)()
     },
     E = {
         ProtoClass: u.ji,
         proto: u.ji.create(),
         lazyLoaded: !0,
-        editInfo: (0, p.JC)()
+        editInfo: (0, h.JC)()
     },
     v = {
-        [p.yP.PRELOADED_USER_SETTINGS]: g,
-        [p.yP.FRECENCY_AND_FAVORITES_SETTINGS]: E
+        [h.yP.PRELOADED_USER_SETTINGS]: g,
+        [h.yP.FRECENCY_AND_FAVORITES_SETTINGS]: E
     },
     I = !1;
-function S() {
-    T();
+function b() {
+    S();
 }
-function T() {
+function S() {
     Object.values(v).forEach((e) => {
         if (null != e.editInfo.timeout) {
             var t, n;
@@ -52,8 +52,8 @@ function T() {
         }
     });
 }
-function b(e) {
-    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, p.JC)());
+function T(e) {
+    null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, h.JC)());
 }
 function y(e) {
     let {
@@ -64,7 +64,7 @@ function y(e) {
     } = e;
     I = !s;
     let o = v[n];
-    i && b(o), r ? ((o.proto = (0, h.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
+    i && T(o), r ? ((o.proto = (0, p.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
 function A(e) {
     null != e &&
@@ -73,12 +73,12 @@ function A(e) {
             let s = e[Number(n)];
             if (null == s) return;
             let o = null !== (r = null == s ? void 0 : s.proto) && void 0 !== r ? r : '',
-                l = (0, h.d5)(t.ProtoClass, o);
+                l = (0, p.d5)(t.ProtoClass, o);
             if (null == l) return;
             (t.proto = l), a()('string' != typeof t.proto, 'UserSettingsProto cannot be a string');
             let u = null !== (i = null == s ? void 0 : s.protoToSave) && void 0 !== i ? i : null;
             if (null == u || null == s.offlineEditDataVersion) return;
-            let c = (0, h.d5)(t.ProtoClass, u);
+            let c = (0, p.d5)(t.ProtoClass, u);
             null != c && ((t.editInfo.protoToSave = c), (t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
         });
 }
@@ -91,8 +91,8 @@ class N extends (r = l.ZP.PersistedStore) {
     }
     computeState() {
         return o().mapValues(v, (e) => {
-            let t = { proto: (0, h.xU)(e.ProtoClass, e.proto) };
-            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((t.protoToSave = (0, h.xU)(e.ProtoClass, e.editInfo.protoToSave)), (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), t;
+            let t = { proto: (0, p.xU)(e.ProtoClass, e.proto) };
+            return null != e.editInfo.offlineEditDataVersion && null != e.editInfo.protoToSave && ((t.protoToSave = (0, p.xU)(e.ProtoClass, e.editInfo.protoToSave)), (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)), t;
         });
     }
     hasLoaded(e) {
@@ -168,8 +168,8 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
         CONNECTION_OPEN: function (e) {
             let { userSettingsProto: t } = e;
             null != t && ((g.proto = t), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'));
-            let { proto: n, isDirty: r, cleanupFuncs: i } = (0, h.xt)(g.proto, _.Z[p.yP.PRELOADED_USER_SETTINGS]);
-            r && b(g),
+            let { proto: n, isDirty: r, cleanupFuncs: i } = (0, p.xt)(g.proto, _.Z[h.yP.PRELOADED_USER_SETTINGS]);
+            r && T(g),
                 (g.proto = n),
                 a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string'),
                 (g.editInfo.triggeredMigrations = r),
@@ -178,18 +178,18 @@ m(N, 'displayName', 'UserSettingsProtoStore'),
                 Object.values(v).forEach((e) => {
                     e.lazyLoaded && ((e.editInfo.loaded = !1), (e.editInfo.loading = !1));
                 }),
-                T();
+                S();
         },
-        CONNECTION_CLOSED: S,
-        CONNECTION_RESUMED: S,
+        CONNECTION_CLOSED: b,
+        CONNECTION_RESUMED: b,
         OVERLAY_INITIALIZE: function (e) {
             let { userSettingsProto: t } = e;
-            (g.proto = (0, h.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');
+            (g.proto = (0, p.ac)(t)), a()('string' != typeof g.proto, 'UserSettingsProto cannot be a string');
         },
         LOGOUT: function () {
-            T(),
+            S(),
                 Object.values(v).forEach((e) => {
-                    (e.proto = e.ProtoClass.create()), (e.editInfo = (0, p.JC)());
+                    (e.proto = e.ProtoClass.create()), (e.editInfo = (0, h.JC)());
                 });
         }
     }));

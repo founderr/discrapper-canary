@@ -16,16 +16,16 @@ var r = n(200651),
     d = n(729594),
     f = n(873546),
     _ = n(430742),
-    h = n(166459),
-    p = n(911969),
+    p = n(166459),
+    h = n(911969),
     m = n(476326),
     g = n(998698),
     E = n(710845),
     v = n(117530),
     I = n(459273),
-    S = n(403182),
-    T = n(541716),
-    b = n(752305),
+    b = n(403182),
+    S = n(541716),
+    T = n(752305),
     y = n(30465),
     A = n(140963),
     N = n(4484),
@@ -67,7 +67,7 @@ class M extends i.Component {
         if ((this.fixFocus(e), this.props.useSlate !== e.useSlate)) {
             var t, n;
             let e;
-            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, b.JM)(e));
+            (e = this.props.useSlate ? this.props.textValue : (0, C.sk)(this.props.richValue, { mode: 'plain' })), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, T.JM)(e));
         } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled();
     }
     componentWillUnmount() {
@@ -162,7 +162,7 @@ class M extends i.Component {
     }
     render() {
         var e, t, n, i, a, o;
-        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: h, onSubmit: p, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: S, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
+        let { textValue: l, richValue: u, disabled: c, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: v, spellcheckEnabled: b, useNewSlashCommands: y, canOnlyUseTextCommands: C, className: O, id: L, required: x, maxCharacterCount: M, allowNewLines: P, 'aria-describedby': k, 'aria-labelledby': U, accessibilityLabel: G } = this.props,
             { submitting: B, popup: Z } = this.state,
             F = {
                 channel: m,
@@ -176,7 +176,7 @@ class M extends i.Component {
                 accessibilityLabel: G,
                 disabled: c || !1,
                 submitting: B,
-                isEdit: g === T.I.EDIT,
+                isEdit: g === S.I.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -187,17 +187,17 @@ class M extends i.Component {
                 hideAutocomplete: this.hideAutocomplete,
                 allowNewLines: P,
                 onChange: d,
-                onResize: h,
+                onResize: p,
                 onKeyDown: _,
-                onSubmit: p,
+                onSubmit: h,
                 textAreaPaddingClassName: s()(w[E], {
-                    [D.textAreaWithoutAttachmentButton]: g !== T.I.NORMAL && g !== T.I.OVERLAY && g !== T.I.THREAD_CREATION && g !== T.I.SIDEBAR,
-                    [D.textAreaForPostCreation]: g === T.I.CREATE_FORUM_POST,
-                    [D.textAreaCustomGift]: g === T.I.CUSTOM_GIFT,
-                    [D.textAreaForUserProfile]: g === T.I.USER_PROFILE,
-                    [D.textAreaForOverlayInlineReply]: g === T.I.OVERLAY_INLINE_REPLY
+                    [D.textAreaWithoutAttachmentButton]: g !== S.I.NORMAL && g !== S.I.OVERLAY && g !== S.I.THREAD_CREATION && g !== S.I.SIDEBAR,
+                    [D.textAreaForPostCreation]: g === S.I.CREATE_FORUM_POST,
+                    [D.textAreaCustomGift]: g === S.I.CUSTOM_GIFT,
+                    [D.textAreaForUserProfile]: g === S.I.USER_PROFILE,
+                    [D.textAreaForOverlayInlineReply]: g === S.I.OVERLAY_INLINE_REPLY
                 }),
-                spellcheckEnabled: S,
+                spellcheckEnabled: b,
                 useNewSlashCommands: y,
                 disableAutoFocus: f.tq || (null !== (n = g.disableAutoFocus) && void 0 !== n && n),
                 disableEnterToSubmit: null !== (i = null === (e = g.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
@@ -215,7 +215,7 @@ class M extends i.Component {
                       ref: this.ref,
                       ...F,
                       type: g,
-                      value: c ? (0, b.JM)('') : u,
+                      value: c ? (0, T.JM)('') : u,
                       canUseCommands: null === (t = g.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
@@ -294,7 +294,7 @@ class M extends i.Component {
             }),
             L(this, 'handleClearText', () => {
                 var e, t;
-                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, b.JM)(''));
+                null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, '', (0, T.JM)(''));
             }),
             L(this, 'handleInsertText', (e) => {
                 let { plainText: t, rawText: n, addSpace: r = !1 } = e;
@@ -344,7 +344,7 @@ class M extends i.Component {
                                         })(e.getData(a.type))) && void 0 !== s
                                         ? s
                                         : t.name;
-                            return { files: [(0, S.dp)(t, n, t.type)] };
+                            return { files: [(0, b.dp)(t, n, t.type)] };
                         }
                         return { files: r };
                     }
@@ -353,7 +353,7 @@ class M extends i.Component {
                         if (n.length > t) {
                             let e = new Blob([n], { type: 'text/plain' });
                             return {
-                                files: [(0, S.dp)(e, 'message.txt')],
+                                files: [(0, b.dp)(e, 'message.txt')],
                                 convertedStringToFile: !0
                             };
                         }
@@ -398,15 +398,15 @@ class M extends i.Component {
                             if (
                                 null !=
                                 (u =
-                                    (null == c ? void 0 : c.type) === p.jw.ATTACHMENT
+                                    (null == c ? void 0 : c.type) === h.jw.ATTACHMENT
                                         ? c
                                         : null === (a = o.options) || void 0 === a
                                           ? void 0
                                           : a.find((e) => {
-                                                if (e.type === p.jw.ATTACHMENT) return null == v.Z.getUpload(t.id, e.name, l);
+                                                if (e.type === h.jw.ATTACHMENT) return null == v.Z.getUpload(t.id, e.name, l);
                                             }))
                             )
-                                h.Z.setFile({
+                                p.Z.setFile({
                                     channelId: t.id,
                                     id: u.name,
                                     draftType: l,

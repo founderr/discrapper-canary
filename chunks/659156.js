@@ -51,7 +51,7 @@ e.exports = function (e) {
             contains: [{ beginKeywords: 'in out' }, n]
         },
         _ = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
-        h = {
+        p = {
             begin: '@' + e.IDENT_RE,
             relevance: 0
         };
@@ -162,7 +162,7 @@ e.exports = function (e) {
                     e.C_BLOCK_COMMENT_MODE
                 ]
             },
-            h
+            p
         ]
     };
 };

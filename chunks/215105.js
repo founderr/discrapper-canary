@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(893718),
     f = n(131704),
     _ = n(823379),
-    h = n(5192),
-    p = n(51144),
+    p = n(5192),
+    h = n(51144),
     m = n(785717),
     g = n(448197),
     E = n(698305),
     v = n(510659),
     I = n(810097),
-    S = n(652853),
-    T = n(228168),
-    b = n(420212),
+    b = n(652853),
+    S = n(228168),
+    T = n(420212),
     y = n(388032),
     A = n(639899);
 let N = (0, f.kt)({
@@ -34,14 +34,14 @@ let N = (0, f.kt)({
     C = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
-            case T.n_.ACTIVITY:
+            case S.n_.ACTIVITY:
                 let a = y.intl.formatToPlainString(y.t.WmvMCg, { username: n }),
                     s = '\n> '.concat(i);
                 return null != i ? ''.concat(I.jd).concat(a, '*').concat(s, '\n').concat(t) : ''.concat(I.jd).concat(a, '*\n').concat(t);
-            case T.n_.AVATAR:
+            case S.n_.AVATAR:
                 let o = y.intl.formatToPlainString(y.t.lpaBsL, { username: n });
                 return ''.concat(I.jd).concat(o, '*\n').concat(t);
-            case T.n_.STATUS:
+            case S.n_.STATUS:
                 let l = y.intl.formatToPlainString(y.t.lFXgFR, { username: n }),
                     u = '\n> '.concat(i);
                 return null != i ? ''.concat(I.jd).concat(l, '*').concat(u, '\n').concat(t) : ''.concat(I.jd).concat(l, '*\n').concat(t);
@@ -51,11 +51,11 @@ let N = (0, f.kt)({
     },
     R = (e) => {
         switch (e) {
-            case T.n_.ACTIVITY:
+            case S.n_.ACTIVITY:
                 return y.t.Qn081N;
-            case T.n_.AVATAR:
+            case S.n_.AVATAR:
                 return y.t.xGNPFB;
-            case T.n_.STATUS:
+            case S.n_.STATUS:
                 return y.t.g9BTCA;
             default:
                 (0, _.vE)(e);
@@ -66,14 +66,14 @@ function O(e) {
         { trackUserProfileAction: L } = (0, m.KZ)(),
         { sendReply: x } = (0, g.Q)(f),
         { resetInteraction: w, setInteractionToast: M } = (0, v.Xo)(),
-        { primaryColor: P } = (0, S.z)(),
+        { primaryColor: P } = (0, b.z)(),
         [k, U] = i.useState(''),
         [G, B] = i.useState((0, c.JM)(k)),
         Z = i.useRef(!1),
         F = i.useRef(null),
         V = i.useCallback(
             (e) => {
-                e.key === b.vn.ESCAPE && (e.stopPropagation(), w());
+                e.key === T.vn.ESCAPE && (e.stopPropagation(), w());
             },
             [w]
         );
@@ -85,7 +85,7 @@ function O(e) {
             L({ action: x });
             let n = C({
                 input: e,
-                username: p.ZP.getName(t),
+                username: h.ZP.getName(t),
                 sourceType: f,
                 sourceDetails: _
             });
@@ -99,17 +99,17 @@ function O(e) {
                     whenReady: !1
                 });
             } catch (e) {}
-            M(T.P.REPLY);
+            M(S.P.REPLY);
         },
         H = {
-            [A.biteSize]: o === T.y0.BITE_SIZE,
-            [A.panel]: o === T.y0.PANEL,
-            [A.fullSize]: o === T.y0.FULL_SIZE
+            [A.biteSize]: o === S.y0.BITE_SIZE,
+            [A.panel]: o === S.y0.PANEL,
+            [A.fullSize]: o === S.y0.FULL_SIZE
         },
         Y = {
-            [A.status]: f === T.n_.STATUS,
-            [A.avatar]: f === T.n_.AVATAR,
-            [A.activity]: f === T.n_.ACTIVITY
+            [A.status]: f === S.n_.STATUS,
+            [A.avatar]: f === S.n_.AVATAR,
+            [A.activity]: f === S.n_.ACTIVITY
         };
     return (0, r.jsx)(l.V, {
         ref: F,
@@ -122,7 +122,7 @@ function O(e) {
                 innerClassName: A.inner,
                 editorClassName: A.editor,
                 type: u.I.USER_PROFILE_REPLY,
-                placeholder: y.intl.formatToPlainString(R(f), { username: h.ZP.getName(n, a, t) }),
+                placeholder: y.intl.formatToPlainString(R(f), { username: p.ZP.getName(n, a, t) }),
                 channel: N,
                 textValue: k,
                 richValue: G,

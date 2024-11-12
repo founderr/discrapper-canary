@@ -1,12 +1,12 @@
 n.d(t, {
     KV: function () {
-        return h;
+        return p;
     },
     PY: function () {
         return _;
     },
     Wo: function () {
-        return p;
+        return h;
     },
     iy: function () {
         return E;
@@ -31,7 +31,7 @@ let f = 30 * s.Z.Millis.SECOND;
 function _(e) {
     return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered();
 }
-function h() {
+function p() {
     let e = u.Z.getActiveSocketAndDevice();
     if (null != e) return Promise.resolve(e);
     if (!l.Z.isProtocolRegistered()) return Promise.reject(Error('protocol is not registered'));
@@ -66,7 +66,7 @@ function h() {
         u.Z.addChangeListener(i), window.open(''.concat(c.M5, ':'));
     });
 }
-function p() {
+function h() {
     let e = u.Z.getActiveSocketAndDevice();
     if (null == e) return null;
     let { socket: t } = e;

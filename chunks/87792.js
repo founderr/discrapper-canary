@@ -11,15 +11,15 @@ var i = n(200651),
     g = n(546791),
     m = n(259756),
     f = n(785681),
-    _ = n(985002),
-    p = n(858719),
+    p = n(985002),
+    _ = n(858719),
     h = n(780985),
     E = n(880257),
     b = n(631885),
     x = n(240351),
     C = n(792258),
-    T = n(657825),
-    v = n(198952),
+    v = n(657825),
+    T = n(198952),
     N = n(329242),
     I = n(895328),
     S = n(292352),
@@ -51,12 +51,12 @@ function Z(e) {
             (0, o.showToast)((0, o.createToast)(A.intl.string(A.t.Wu8BKy), o.ToastType.FAILURE));
         }, []),
         a = (0, E.Z)(),
-        l = (0, p.ws)(t),
-        c = (0, p.C7)(t),
-        { loadMore: u, isMoreLoading: f } = (0, _.G)({ onError: n }),
+        l = (0, _.ws)(t),
+        c = (0, _.C7)(t),
+        { loadMore: u, isMoreLoading: f } = (0, p.G)({ onError: n }),
         h = S.tx.get(t),
         [b, x] = r.useState(S.iB),
-        v = (0, m.Xi)({ location: 'family_center_activity_section_web' }),
+        T = (0, m.Xi)({ location: 'family_center_activity_section_web' }),
         N = r.useCallback(() => {
             x((e) => e + S.iB), u(t);
         }, [t, u]);
@@ -68,7 +68,7 @@ function Z(e) {
                     n = l[t];
                 return (0, g.iB)(n)
                     ? (0, i.jsx)(
-                          T.Z,
+                          v.Z,
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
@@ -97,12 +97,12 @@ function Z(e) {
                                   className: j.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: h.sectionDescription(null != a && a, v)
+                                  children: h.sectionDescription(null != a && a, T)
                               })
                             : null
                     ]
                 }),
-            [I, h, a, v]
+            [I, h, a, T]
         );
     if (0 === l.length) return null;
     let Z = l.slice(0, b);
@@ -135,7 +135,7 @@ function Z(e) {
         ]
     });
 }
-let O = () => {
+let B = () => {
         let e = (0, E.Z)(),
             t = (0, b.mq)(S.ne.ACTIVE),
             n = (0, f.o)(A.intl.formatToPlainString(A.t['7hqFl5'], { activeLinks: t.length }), A.intl.string(A.t['Q/D/0d'])),
@@ -170,7 +170,7 @@ let O = () => {
             : (0, i.jsxs)('div', {
                   className: j.accountRow,
                   children: [
-                      (0, i.jsx)(v.r, {
+                      (0, i.jsx)(T.r, {
                           user: a,
                           avatarSize: r
                       }),
@@ -190,10 +190,10 @@ let O = () => {
                   ]
               });
     },
-    B = () => {
+    O = () => {
         let e = (0, b.mq)(S.ne.ACTIVE),
             t = (0, l.e7)([u.Z], () => u.Z.getSelectedTeenId()),
-            { selectTeenUser: n } = (0, _.G)({}),
+            { selectTeenUser: n } = (0, p.G)({}),
             a = e.map((e) => ({
                 label: e.id,
                 value: e.id
@@ -228,7 +228,7 @@ let O = () => {
             a = (0, g.Qr)(!!n),
             s = (0, b.Rd)(a);
         return n && 1 !== r.length
-            ? (0, i.jsx)(B, {})
+            ? (0, i.jsx)(O, {})
             : (0, i.jsx)(M, {
                   userId: t,
                   subText: s
@@ -237,7 +237,7 @@ let O = () => {
 t.Z = (e) => {
     let { user: t } = e,
         n = Array.from(S.tx.entries()),
-        r = (0, p.kE)(),
+        r = (0, _.kE)(),
         a = (0, g.t3)(),
         s = (0, b.Rd)(a);
     return (0, i.jsxs)('div', {
@@ -245,7 +245,7 @@ t.Z = (e) => {
         children: [
             (0, i.jsxs)('div', {
                 className: j.connectedCounter,
-                children: [(0, i.jsx)(O, {}), (0, i.jsx)(P, {})]
+                children: [(0, i.jsx)(B, {}), (0, i.jsx)(P, {})]
             }),
             (0, i.jsxs)('div', {
                 className: j.card,

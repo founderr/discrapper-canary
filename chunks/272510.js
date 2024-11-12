@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return h;
     }
 });
 var r = n(200651);
@@ -15,9 +15,9 @@ var i = n(481060),
     d = n(622724),
     f = n(785717),
     _ = n(475413),
-    h = n(388032);
-function p(e) {
-    let { user: t, guildId: n, viewProfileItem: p } = e,
+    p = n(388032);
+function h(e) {
+    let { user: t, guildId: n, viewProfileItem: h } = e,
         { trackUserProfileAction: m } = (0, f.KZ)(),
         { analyticsLocations: g, newestAnalyticsLocation: E } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
         v = (0, c.Z)({
@@ -44,7 +44,7 @@ function p(e) {
                     analyticsLocations: g
                 })
         }),
-        S = (0, u.Z)({
+        b = (0, u.Z)({
             user: t,
             location: E,
             onIgnore: () =>
@@ -58,7 +58,7 @@ function p(e) {
                     analyticsLocations: g
                 })
         }),
-        T = (0, d.Z)({
+        S = (0, d.Z)({
             user: t,
             guildId: n,
             location: E,
@@ -69,7 +69,7 @@ function p(e) {
                     analyticsLocations: g
                 })
         }),
-        b = (0, d.T)({
+        T = (0, d.T)({
             user: t,
             guildId: n,
             location: E,
@@ -81,12 +81,12 @@ function p(e) {
                 })
         }),
         y = [
-            [p, v],
-            [S, I, T, b],
+            [h, v],
+            [b, I, S, T],
             [
                 (0, o.Z)({
                     id: t.id,
-                    label: h.intl.string(h.t['/AXYnJ']),
+                    label: p.intl.string(p.t['/AXYnJ']),
                     onSuccess: () =>
                         m({
                             action: 'COPY_USER_ID',
@@ -106,7 +106,7 @@ function p(e) {
                           navId: 'user-profile-overflow-menu',
                           onSelect: void 0,
                           onClose: t,
-                          'aria-label': h.intl.string(h.t.AXIHpa),
+                          'aria-label': p.intl.string(p.t.AXIHpa),
                           children: y.map((e, t) => (0, r.jsx)(i.MenuGroup, { children: e.map((e) => e) }, t))
                       });
                   },
@@ -114,7 +114,7 @@ function p(e) {
                       (0, r.jsx)(_.oY, {
                           action: 'PRESS_OPTIONS',
                           icon: i.MoreHorizontalIcon,
-                          tooltipText: h.intl.string(h.t.UKOtz8),
+                          tooltipText: p.intl.string(p.t.UKOtz8),
                           ...e
                       })
               })

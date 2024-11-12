@@ -44,8 +44,8 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
         }
     ],
     f = (e) => {
-        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...h } = e,
-            { primaryColorsTransformed: p, secondaryColorsTransformed: m } = (0, a.s)({
+        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...p } = e,
+            { primaryColorsTransformed: h, secondaryColorsTransformed: m } = (0, a.s)({
                 primaryBaseColors: s,
                 primaryTintColor: f,
                 primaryTintLuminances: l,
@@ -56,7 +56,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 secondaryLuminanceWeights: d
             });
         return (0, r.jsxs)('svg', {
-            ...(0, i.Z)(h),
+            ...(0, i.Z)(p),
             width: t,
             height: n,
             viewBox: '0 0 16 16',
@@ -65,7 +65,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
             children: [
                 (0, r.jsx)('path', {
                     d: 'M14 4V3h-2V1H8v1H7v1H6V2H3v1H2v4H1v3h1V9h1V8h5V6h1V5h5v1h1V4h-1Z',
-                    fill: p[1]
+                    fill: h[1]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M9 6v1H8v2h1v2h2v1h3v-1h1V6H9Z',
@@ -89,7 +89,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M9 5H8v1h1V5Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M3 9H2v1h1V9ZM7 13H6v1h1v-1ZM6 12H5v1h1v-1Z',
@@ -101,7 +101,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M6 2H3v1h3V2ZM7 3H6v1h1V3ZM4 5H3v1h1V5ZM2 7H1v1h1V7ZM3 3H2v1h1V3Z',
-                    fill: p[2]
+                    fill: h[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M14 12h-3v1h3v-1ZM10 11V8H9v1H8v1h1v4h1v-2h1v-1h-1ZM15 11h-1v1h1v-1ZM2 3H1v4h1V3ZM1 7H0v3h1V7ZM4 11H3v3h1v-3ZM8 11H7v2h1v-2ZM1 11H0v4h1v-4ZM12 0H8v1h4V0Z',
@@ -109,7 +109,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M8 2H7v1h1V2ZM12 1H8v1h4V1Z',
-                    fill: p[2]
+                    fill: h[2]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M14 5H9v1h5V5Z',
@@ -117,7 +117,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M14 4V3h-1v1H9v1h5v1h1V4h-1Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M5 11H4v1h1v-1Z',
@@ -125,7 +125,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 6v1H3v1h5V6H7Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M7 7v1H3v1h5V7H7Z',
@@ -133,7 +133,7 @@ let s = ['#816bee', '#b79cf8', '#f0f0f0'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M3 8H2v1h1V8ZM2 9H1v1h1V9Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M3 9v1H2v1H1v4h1v-1h1v-3h1v-1h4V9H3Z',

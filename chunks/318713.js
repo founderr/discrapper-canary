@@ -36,29 +36,29 @@ function f(e) {
     });
 }
 t.Z = function (e) {
-    let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: h = !1, cozyAlt: p = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
+    let { children: t, className: n, compact: i = !1, timestamp: _, isVisibleOnlyOnHover: p = !1, cozyAlt: h = !1, isInline: m = !0, id: g, isEdited: E = !1, application: v } = e,
         I = (0, o.Hg)(_),
-        S = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
-        T = i ? (0, u.Z)(S) : null,
-        b = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: I }) : I;
+        b = i ? (0, o.vc)(_, 'LT') : (0, o.Y4)(_),
+        S = i ? (0, u.Z)(b) : null,
+        T = E ? c.intl.formatToPlainString(c.t.CDzOFR, { timeFormatted: I }) : I;
     return (0, r.jsx)('span', {
-        className: a()(n, T, {
+        className: a()(n, S, {
             [d.timestamp]: !0,
-            [d.timestampVisibleOnHover]: h,
+            [d.timestampVisibleOnHover]: p,
             [d.timestampInline]: m,
-            [d.alt]: p
+            [d.alt]: h
         }),
         children:
             null == v
                 ? (0, r.jsx)(s.Tooltip, {
                       text: (0, o.vc)(_, 'LLLL'),
-                      'aria-label': b,
+                      'aria-label': T,
                       tooltipClassName: d.timestampTooltip,
                       delay: 750,
                       children: (e) =>
                           (0, r.jsx)(f, {
                               tooltipProps: e,
-                              timeFormatted: S,
+                              timeFormatted: b,
                               timestamp: _,
                               id: g,
                               compact: i,
@@ -70,7 +70,7 @@ t.Z = function (e) {
                       timestamp: _,
                       compact: i,
                       children: (0, r.jsx)(f, {
-                          timeFormatted: S,
+                          timeFormatted: b,
                           timestamp: _,
                           id: g,
                           compact: i,

@@ -39,8 +39,8 @@ let _ = {
             {
                 results: { users: s, globals: o, roles: l },
                 selectedIndex: _,
-                channel: h,
-                query: p,
+                channel: p,
+                query: h,
                 options: m,
                 onHover: g,
                 onClick: E
@@ -49,7 +49,7 @@ let _ = {
                 (0, r.jsx)(
                     a.ZP.User,
                     {
-                        guildId: h.guild_id,
+                        guildId: p.guild_id,
                         onClick: E,
                         onHover: g,
                         selected: _ === t,
@@ -77,7 +77,7 @@ let _ = {
                     e.text
                 )
             ),
-            S = l.map((e, t) =>
+            b = l.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Role,
                     {
@@ -100,14 +100,14 @@ let _ = {
                         (0, u.gm)({
                             titleWithQuery: t,
                             titleWithoutQuery: n,
-                            query: p,
+                            query: h,
                             getQuery: (e) => ''.concat(d.ME).concat(e)
                         }),
                         v,
                         s.length > 0 && o.length > 0 ? (0, r.jsx)(a.ZP.Divider, {}) : null,
                         I,
                         (s.length > 0 && l.length > 0) || (o.length > 0 && l.length > 0) ? (0, r.jsx)(a.ZP.Divider, {}) : null,
-                        S
+                        b
                     ]
                 },
                 'mentions'

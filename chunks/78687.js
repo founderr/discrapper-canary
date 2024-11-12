@@ -71,7 +71,7 @@ e.exports = function (e) {
     }
     return {
         makeDetectable: function (e, l, d) {
-            var h, p, m;
+            var p, h, m;
             function g() {
                 if (e.debug) {
                     var n = Array.prototype.slice.call(arguments);
@@ -98,28 +98,28 @@ e.exports = function (e) {
                 var e = v();
                 i(l).style = e;
             }
-            function S(e, t, n) {
+            function b(e, t, n) {
                 (i(e).lastWidth = t), (i(e).lastHeight = n);
             }
-            function T() {
+            function S() {
                 return 2 * s.width + 1;
             }
-            function b() {
+            function T() {
                 return 2 * s.height + 1;
             }
             function y(e) {
-                return e + 10 + T();
+                return e + 10 + S();
             }
             function A(e) {
-                return e + 10 + b();
+                return e + 10 + T();
             }
             function N(e, t, n) {
                 var r = f(e),
                     i = _(e),
-                    a = t + 10 + T(),
-                    s = n + 10 + b(),
-                    o = 2 * t + T(),
-                    l = 2 * n + b();
+                    a = t + 10 + S(),
+                    s = n + 10 + T(),
+                    o = 2 * t + S(),
+                    l = 2 * n + T();
                 (r.scrollLeft = a), (r.scrollTop = s), (i.scrollLeft = o), (i.scrollTop = l);
             }
             function C() {
@@ -157,15 +157,15 @@ e.exports = function (e) {
                     f = i(l).container;
                 !f && (f = C());
                 var _ = s.width,
-                    h = s.height,
-                    p = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%', 'left: 0px', 'top: 0px']);
-                var m = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(((n = -(1 + _)), (r = -(1 + h)), (a = -h), ['left: ' + (n = n ? n + 'px' : '0'), 'top: ' + (r = r ? r + 'px' : '0'), 'right: ' + (d = (d = -_) ? d + 'px' : '0'), 'bottom: ' + (a = a ? a + 'px' : '0')]))),
+                    p = s.height,
+                    h = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%', 'left: 0px', 'top: 0px']);
+                var m = u(['position: absolute', 'flex: none', 'overflow: hidden', 'z-index: -1', 'visibility: hidden'].concat(((n = -(1 + _)), (r = -(1 + p)), (a = -p), ['left: ' + (n = n ? n + 'px' : '0'), 'top: ' + (r = r ? r + 'px' : '0'), 'right: ' + (d = (d = -_) ? d + 'px' : '0'), 'bottom: ' + (a = a ? a + 'px' : '0')]))),
                     E = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     v = u(['position: absolute', 'flex: none', 'overflow: scroll', 'z-index: -1', 'visibility: hidden', 'width: 100%', 'height: 100%']),
                     I = u(['position: absolute', 'left: 0', 'top: 0']),
-                    S = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                    b = u(['position: absolute', 'width: 200%', 'height: 200%']),
+                    S = document.createElement('div'),
                     T = document.createElement('div'),
-                    b = document.createElement('div'),
                     y = document.createElement('div'),
                     A = document.createElement('div'),
                     N = document.createElement('div'),
@@ -178,13 +178,13 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : g('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (T.dir = 'ltr'), (T.style.cssText = p), (T.className = o), (b.className = o), (b.style.cssText = m), (y.style.cssText = E), (A.style.cssText = I), (N.style.cssText = v), (R.style.cssText = S), y.appendChild(A), N.appendChild(R), b.appendChild(y), b.appendChild(N), T.appendChild(b), f.appendChild(T), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
+                (S.dir = 'ltr'), (S.style.cssText = h), (S.className = o), (T.className = o), (T.style.cssText = m), (y.style.cssText = E), (A.style.cssText = I), (N.style.cssText = v), (R.style.cssText = b), y.appendChild(A), N.appendChild(R), T.appendChild(y), T.appendChild(N), S.appendChild(T), f.appendChild(S), c(y, 'scroll', O), c(N, 'scroll', D), (i(l).onExpandScroll = O), (i(l).onShrinkScroll = D);
             }
             function O() {
                 function s(t, n, r) {
                     var i = f(t).childNodes[0],
-                        a = n + 10 + T(),
-                        s = r + 10 + b();
+                        a = n + 10 + S(),
+                        s = r + 10 + T();
                     i.style.setProperty('width', a + 'px', e.important ? 'important' : ''), i.style.setProperty('height', s + 'px', e.important ? 'important' : '');
                 }
                 function o(r) {
@@ -192,7 +192,7 @@ e.exports = function (e) {
                         c = l.offsetHeight,
                         d = o !== i(l).lastWidth || c !== i(l).lastHeight;
                     g('Storing current size', o, c),
-                        S(l, o, c),
+                        b(l, o, c),
                         n.add(0, function () {
                             if (!!d) {
                                 if (!i(l)) {
@@ -276,8 +276,8 @@ e.exports = function (e) {
                 }),
                     (i(l).onExpand = d),
                     (i(l).onShrink = d);
-                var h = i(l).style;
-                s(l, h.width, h.height);
+                var p = i(l).style;
+                s(l, p.width, p.height);
             }
             function D() {
                 if ((g('finalizeDomMutation invoked.'), !i(l))) {
@@ -285,7 +285,7 @@ e.exports = function (e) {
                     return;
                 }
                 var e = i(l).style;
-                S(l, e.width, e.height), N(l, e.width, e.height);
+                b(l, e.width, e.height), N(l, e.width, e.height);
             }
             function L() {
                 d(l);
@@ -306,7 +306,7 @@ e.exports = function (e) {
                     n.add(3, D),
                     n.add(4, L);
             }
-            if ((g('Making detectable...'), ((m = (p = h = l).getRootNode && p.getRootNode().contains(p)), (p === p.ownerDocument.body || p.ownerDocument.body.contains(p) || m) && null !== window.getComputedStyle(h)) ? 1 : 0)) x();
+            if ((g('Making detectable...'), ((m = (h = p = l).getRootNode && h.getRootNode().contains(h)), (h === h.ownerDocument.body || h.ownerDocument.body.contains(h) || m) && null !== window.getComputedStyle(p)) ? 1 : 0)) x();
             else
                 g('Element is detached'),
                     C(),

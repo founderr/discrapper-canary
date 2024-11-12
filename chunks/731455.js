@@ -1,12 +1,12 @@
 n.d(t, {
     Cf: function () {
-        return b;
+        return T;
     },
     Gj: function () {
         return o;
     },
     Hk: function () {
-        return p;
+        return h;
     },
     L3: function () {
         return v;
@@ -15,7 +15,7 @@ n.d(t, {
         return I;
     },
     Vb: function () {
-        return h;
+        return p;
     },
     b0: function () {
         return y;
@@ -27,7 +27,7 @@ n.d(t, {
         return m;
     },
     jb: function () {
-        return T;
+        return S;
     },
     lA: function () {
         return E;
@@ -56,11 +56,11 @@ var r,
     d = n(388032);
 let f = 0,
     _ = 13,
-    h = !0,
-    p = -1,
+    p = !0,
+    h = -1,
     m = -2,
     g = -3;
-((r = o || (o = {}))[(r.Quests = -4)] = 'Quests'), (r[(r.Clans = g)] = 'Clans'), (r[(r.Hub = m)] = 'Hub'), (r[(r.Communities = p)] = 'Communities'), (r[(r.Activity = 1)] = 'Activity'), (r[(r.Music = 2)] = 'Music'), (r[(r.Television = 3)] = 'Television'), (r[(r.Science = 5)] = 'Science'), (r[(r.Education = 6)] = 'Education');
+((r = o || (o = {}))[(r.Quests = -4)] = 'Quests'), (r[(r.Clans = g)] = 'Clans'), (r[(r.Hub = m)] = 'Hub'), (r[(r.Communities = h)] = 'Communities'), (r[(r.Activity = 1)] = 'Activity'), (r[(r.Music = 2)] = 'Music'), (r[(r.Television = 3)] = 'Television'), (r[(r.Science = 5)] = 'Science'), (r[(r.Education = 6)] = 'Education');
 let E = 1000,
     v = [1, 2, 3, 5, 6];
 ((i = l || (l = {}))[(i.GENERAL_CHATTING = 14)] = 'GENERAL_CHATTING'), (i[(i.GAMING = 1)] = 'GAMING'), (i[(i.MUSIC = 2)] = 'MUSIC'), (i[(i.ENTERTAINMENT = 3)] = 'ENTERTAINMENT'), (i[(i.CREATIVE_ARTS = 4)] = 'CREATIVE_ARTS'), (i[(i.SCIENCE_AND_TECH = 5)] = 'SCIENCE_AND_TECH'), (i[(i.EDUCATION = 6)] = 'EDUCATION'), (i[(i.SPORTS = 7)] = 'SPORTS'), (i[(i.FASHION_AND_BEAUTY = 8)] = 'FASHION_AND_BEAUTY'), (i[(i.RELATIONSHIPS_AND_IDENTITY = 9)] = 'RELATIONSHIPS_AND_IDENTITY'), (i[(i.TRAVEL_AND_FOOD = 10)] = 'TRAVEL_AND_FOOD'), (i[(i.FITNESS_AND_HEALTH = 11)] = 'FITNESS_AND_HEALTH'), (i[(i.FINANCE = 12)] = 'FINANCE'), (i[(i.OTHER = 13)] = 'OTHER'), (i[(i.EMOJI = 43)] = 'EMOJI'), (i[(i.BOTS = 49)] = 'BOTS');
@@ -82,8 +82,8 @@ let I = {
         43: [() => d.intl.string(d.t.dl70Ji), () => d.intl.string(d.t.R58PcH), () => d.intl.string(d.t.hDjtaG), () => d.intl.string(d.t.XuOAEB), () => d.intl.string(d.t['/Fgjen']), () => d.intl.string(d.t['FM0+HR']), () => d.intl.string(d.t['OGdz4+']), () => d.intl.string(d.t.ZtggfH), () => d.intl.string(d.t.QiafXV)],
         49: [() => d.intl.string(d.t.QYvZFh), () => d.intl.string(d.t.C2TrLi), () => d.intl.string(d.t['9AEkCw']), () => d.intl.string(d.t['FM0+HR']), () => d.intl.string(d.t['vwjf//']), () => d.intl.string(d.t['Exwe4+']), () => d.intl.string(d.t.QiafXV)]
     },
-    S = ['en-GB'];
-function T() {
+    b = ['en-GB'];
+function S() {
     return (0, d.getAvailableLocales)()
         .map((e) => {
             let t;
@@ -105,11 +105,11 @@ function T() {
                       image: t
                   };
         })
-        .filter((e) => !S.includes(e.value));
+        .filter((e) => !b.includes(e.value));
 }
-function b() {
+function T() {
     return (0, d.getLanguages)()
-        .filter((e) => !S.includes(e.code))
+        .filter((e) => !b.includes(e.code))
         .map((e) =>
             'en-US' === e.code
                 ? {

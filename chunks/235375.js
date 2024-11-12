@@ -4,7 +4,7 @@ n.r(t),
             return I;
         },
         customRules: function () {
-            return S;
+            return b;
         }
     }),
     n(47120);
@@ -19,11 +19,11 @@ var r = n(200651),
     d = n(230711),
     f = n(454585),
     _ = n(703656),
-    h = n(626135),
-    p = n(981631),
+    p = n(626135),
+    h = n(981631),
     m = n(596401);
 let g = l().defaultRules.link,
-    E = { section: p.jXE.SETTINGS_CHANGELOG },
+    E = { section: h.jXE.SETTINGS_CHANGELOG },
     v = (e) => {
         var t, n;
         let { level: r, children: a, className: o = null, styleSheet: l = {} } = e,
@@ -33,7 +33,7 @@ let g = l().defaultRules.link,
         return i.createElement('h'.concat(c + f - 1), { className: s()(...((t = l), null == (n = o) ? [] : n.split(' ').map((e) => t[e]))) }, a);
     },
     I = null != f.Z ? f.Z.defaultRules : null,
-    S = {
+    b = {
         link: {
             parse(e, t, n) {
                 let r;
@@ -45,18 +45,18 @@ let g = l().defaultRules.link,
                     (r =
                         a || s
                             ? (e) => {
-                                  h.default.track(p.rMx.PREMIUM_PROMOTION_OPENED, { location: E }), a ? d.Z.open(p.oAB.PREMIUM) : s && d.Z.open(p.oAB.HYPESQUAD_ONLINE), n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(m.Xd), e.preventDefault();
+                                  p.default.track(h.rMx.PREMIUM_PROMOTION_OPENED, { location: E }), a ? d.Z.open(h.oAB.PREMIUM) : s && d.Z.open(h.oAB.HYPESQUAD_ONLINE), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, u.closeModal)(m.Xd), e.preventDefault();
                               }
                             : o
                               ? (e) => {
-                                    (0, _.uL)(i), n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, { ...h.default.getCampaignParams(i) }), (0, c.Ou)(), (0, u.closeModal)(m.Xd), e.preventDefault();
+                                    (0, _.uL)(i), n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, { ...p.default.getCampaignParams(i) }), (0, c.Ou)(), (0, u.closeModal)(m.Xd), e.preventDefault();
                                 }
                               : () => {
                                     n && 'function' == typeof n.onLinkClick && n.onLinkClick(i),
-                                        n.changeLog.track(p.rMx.CHANGE_LOG_CTA_CLICKED, {
+                                        n.changeLog.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
                                             target: i,
                                             cta_type: 'inline_link',
-                                            ...h.default.getCampaignParams(i)
+                                            ...p.default.getCampaignParams(i)
                                         });
                                 }),
                     {

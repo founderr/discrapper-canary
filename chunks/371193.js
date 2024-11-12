@@ -18,8 +18,8 @@ var r =
     f = n(919924),
     _ = n(691181);
 n(328794);
-var h = n(549639),
-    p = n(466657),
+var p = n(549639),
+    h = n(466657),
     m = n(173821),
     g = function (e, t, n) {
         if (e instanceof o) {
@@ -39,7 +39,7 @@ var h = n(549639),
         return (
             g(t, n, e) || {
                 start: function (e) {
-                    t.stopTracking(), n.toValue instanceof a ? t.track(new f(t, n.toValue, h, n, e)) : t.animate(new h(n), e);
+                    t.stopTracking(), n.toValue instanceof a ? t.track(new f(t, n.toValue, p, n, e)) : t.animate(new p(n), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -95,7 +95,7 @@ var h = n(549639),
             };
         return a;
     },
-    S = function (e) {
+    b = function (e) {
         return E(new s(0), {
             toValue: 0,
             delay: e,
@@ -109,7 +109,7 @@ e.exports = {
         return (
             g(t, n, e) || {
                 start: function (e) {
-                    t.stopTracking(), t.animate(new p(n), e);
+                    t.stopTracking(), t.animate(new h(n), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -143,13 +143,13 @@ e.exports = {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
         return new d(e, n);
     },
-    delay: S,
+    delay: b,
     sequence: v,
     parallel: I,
     stagger: function (e, t) {
         return I(
             t.map(function (t, n) {
-                return v([S(e * n), t]);
+                return v([b(e * n), t]);
             })
         );
     },

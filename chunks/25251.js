@@ -8,15 +8,15 @@ var a,
     d = n(570140);
 let f = [],
     _ = [],
-    h = !1;
-let p = f,
+    p = !1;
+let h = f,
     m = {},
     g = null;
 let E = 0,
     v = (e) => {
-        p = (0, u.cloneDeep)(e);
+        h = (0, u.cloneDeep)(e);
         let t = {};
-        p.forEach((e) => {
+        h.forEach((e) => {
             if (((t[e.id] = e), _.length > 0)) {
                 var n;
                 t[e.id].config.effects = null !== (n = (0, u.sample)(_)) && void 0 !== n ? n : [];
@@ -25,17 +25,17 @@ let E = 0,
             (m = t);
     },
     I = () => {
-        v(f), (g = null), (i = void 0), (h = !1);
+        v(f), (g = null), (i = void 0), (p = !1);
     };
-class S extends (l = c.ZP.Store) {
+class b extends (l = c.ZP.Store) {
     get isFetching() {
-        return h;
+        return p;
     }
     get fetchError() {
         return r;
     }
     get profileEffects() {
-        return p;
+        return h;
     }
     get tryItOutId() {
         return g;
@@ -51,7 +51,7 @@ class S extends (l = c.ZP.Store) {
     }
 }
 (o = 'ProfileEffectStore'),
-    (s = 'displayName') in (a = S)
+    (s = 'displayName') in (a = b)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -59,17 +59,17 @@ class S extends (l = c.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new S(d.Z, {
+    (t.Z = new b(d.Z, {
         USER_PROFILE_EFFECTS_FETCH: () => {
-            h = !0;
+            p = !0;
         },
         USER_PROFILE_EFFECTS_FETCH_SUCCESS: (e) => {
             let { profileEffects: t } = e;
-            (r = void 0), (i = Date.now() + 300000), (E = 0), v(0 === t.length ? f : t), (h = !1);
+            (r = void 0), (i = Date.now() + 300000), (E = 0), v(0 === t.length ? f : t), (p = !1);
         },
         USER_PROFILE_EFFECTS_FETCH_FAILURE: (e) => {
             let { error: t } = e;
-            (r = t), (i = Date.now() + Math.min(60000 * 2 ** E, 3600000)), ++E, v(f), (h = !1);
+            (r = t), (i = Date.now() + Math.min(60000 * 2 ** E, 3600000)), ++E, v(f), (p = !1);
         },
         PROFILE_EFFECTS_SET_TRY_IT_OUT: (e) => {
             let { id: t } = e;

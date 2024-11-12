@@ -12,18 +12,18 @@ var r = n(200651),
     _ = n(388032);
 t.Z = (e) => {
     let { user: t, reportId: n } = e,
-        h = u.Z.getDMFromUserId(t.id),
-        p = (0, a.e7)([c.ZP], () => (null == h ? null : c.ZP.isChannelMuted(null, h))),
-        [m, g] = i.useState(null != p && p),
+        p = u.Z.getDMFromUserId(t.id),
+        h = (0, a.e7)([c.ZP], () => (null == p ? null : c.ZP.isChannelMuted(null, p))),
+        [m, g] = i.useState(null != h && h),
         E = i.useCallback(() => {
-            null != h &&
+            null != p &&
                 (g(!0),
                 o.ZP.trackWithMetadata(f.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
                     report_id: n
                 }),
-                s.Z.updateChannelOverrideSettings(null, h, { muted: !0 }, d.ZB.Muted));
-        }, [h, t, n]);
+                s.Z.updateChannelOverrideSettings(null, p, { muted: !0 }, d.ZB.Muted));
+        }, [p, t, n]);
     return (0, r.jsx)(l.Z, {
         title: _.intl.formatToPlainString(_.t.TRp5wc, { username: t.username }),
         description: _.intl.string(_.t['yM/+AA']),

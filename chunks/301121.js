@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return eE;
+        return e_;
     }
 }),
     n(47120),
@@ -23,8 +23,8 @@ var i,
     S = n(668781),
     T = n(924628),
     C = n(809206),
-    _ = n(230711),
-    E = n(241420),
+    E = n(230711),
+    _ = n(241420),
     f = n(600164),
     I = n(651530),
     N = n(247206),
@@ -110,9 +110,9 @@ function em() {
                       guildId: n.id,
                       onChange: i
                   }),
-                  (0, r.jsx)(E.ConnectedPrivacySettings, {
+                  (0, r.jsx)(_.ConnectedPrivacySettings, {
                       guild: n,
-                      ingress: E.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                      ingress: _.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
@@ -397,7 +397,7 @@ function eC(e) {
         body: t
     });
 }
-class e_ extends l.PureComponent {
+class eE extends l.PureComponent {
     componentDidMount() {
         (0, T.I)(),
             (0, C.ol)().then(
@@ -691,7 +691,7 @@ class e_ extends l.PureComponent {
                             className: ed.marginBottom20,
                             children: ea.intl.format(ea.t.R5N31N, {
                                 onClick: () => {
-                                    _.Z.setSection(er.oAB.ACCOUNT);
+                                    E.Z.setSection(er.oAB.ACCOUNT);
                                 }
                             })
                         }),
@@ -943,7 +943,7 @@ class e_ extends l.PureComponent {
         };
     }
 }
-function eE() {
+function e_() {
     let e = (0, h.e7)([V.default], () => {
             let e = V.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
@@ -961,7 +961,7 @@ function eE() {
         c = (0, O.p)(),
         u = (0, R.Z)(),
         { enabled: m } = (0, D.S)({ location: 'PrivacySafetySettings' });
-    return (0, r.jsx)(e_, {
+    return (0, r.jsx)(eE, {
         currentUser: e,
         defaultGuildsRestricted: q.iG.useSetting(),
         nonSpamRetrainingOptIn: q.kJ.useSetting(),

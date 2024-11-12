@@ -6,13 +6,13 @@ n.d(t, {
         return A;
     },
     Vn: function () {
-        return S;
+        return b;
     },
     cY: function () {
-        return T;
+        return S;
     },
     gz: function () {
-        return b;
+        return T;
     },
     nV: function () {
         return I;
@@ -36,8 +36,8 @@ var r = n(200651),
     d = n(235874),
     f = n(147479),
     _ = n(481060),
-    h = n(393238),
-    p = n(434650),
+    p = n(393238),
+    h = n(434650),
     m = n(98650),
     g = n(748585),
     E = n(388032),
@@ -51,7 +51,7 @@ function I(e) {
         serialize: r
     };
 }
-function S(e) {
+function b(e) {
     let { value: t, onChange: n, serialize: r = (e) => String(e) } = e;
     return {
         select: (e) => {
@@ -66,7 +66,7 @@ function S(e) {
         serialize: r
     };
 }
-function T(e) {
+function S(e) {
     let { value: t, onChange: n, onSelectInteraction: r, serialize: i = (e) => String(e) } = e;
     return {
         select: (e) => {
@@ -81,7 +81,7 @@ function T(e) {
         serialize: i
     };
 }
-function b(e, t) {
+function T(e, t) {
     let n = new Set(t);
     return (
         n.has(e) ? n.delete(e) : n.add(e),
@@ -120,14 +120,14 @@ function C(e) {
     return e.map((e) => N(e)).join(', ');
 }
 function R(e) {
-    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: I = g.q.FILLED, onClose: S, onOpen: T, renderOptionLabel: b = N, renderOptionValue: y = C, popoutClassName: A, popoutPosition: R = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: M, serialize: P, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
+    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: a, isDisabled: o = !1, maxVisibleItems: l = 7, autoFocus: c = !1, popoutWidth: f, clearable: m = !1, look: I = g.q.FILLED, onClose: b, onOpen: S, renderOptionLabel: T = N, renderOptionValue: y = C, popoutClassName: A, popoutPosition: R = 'bottom', popoutLayerContext: D, optionClassName: L, closeOnSelect: x, select: w, isSelected: M, serialize: P, clear: k, hideIcon: U = !1, 'aria-label': G, 'aria-labelledby': B } = e,
         [Z, F] = i.useState(!1),
-        { ref: V, width: j, height: H } = (0, h.Z)(),
+        { ref: V, width: j, height: H } = (0, p.Z)(),
         Y = i.useCallback(
             (e) => {
-                Z !== e && !o && (F(e), e ? null == T || T() : null == S || S());
+                Z !== e && !o && (F(e), e ? null == S || S() : null == b || b());
             },
-            [o, S, T, Z]
+            [o, b, S, Z]
         ),
         W = i.useCallback(
             (e) => {
@@ -135,7 +135,7 @@ function R(e) {
             },
             [Y, Z]
         ),
-        K = (0, p.O)(W),
+        K = (0, h.O)(W),
         z = i.useCallback(
             (e) => {
                 if ((w(e), x)) {
@@ -182,7 +182,7 @@ function R(e) {
                 onSelect: z,
                 options: t,
                 serialize: P,
-                renderOptionLabel: b,
+                renderOptionLabel: T,
                 optionClassName: L,
                 updatePosition: a,
                 popoutPosition: i
@@ -193,8 +193,8 @@ function R(e) {
         children: (e, t) => {
             let { onClick: i, onKeyDown: l, ...c } = e,
                 { isShown: d, position: f } = t,
-                h = d ? _.ChevronSmallUpIcon : _.ChevronSmallDownIcon,
-                p = X ? 18 : 24;
+                p = d ? _.ChevronSmallUpIcon : _.ChevronSmallDownIcon,
+                h = X ? 18 : 24;
             return (0, r.jsxs)(u.P, {
                 role: 'button',
                 'aria-disabled': o,
@@ -248,11 +248,11 @@ function R(e) {
                                 : null,
                             U
                                 ? null
-                                : (0, r.jsx)(h, {
+                                : (0, r.jsx)(p, {
                                       color: 'currentColor',
                                       size: 'custom',
-                                      width: p,
-                                      height: p
+                                      width: h,
+                                      height: h
                                   })
                         ]
                     })
@@ -262,7 +262,7 @@ function R(e) {
     });
 }
 function O(e) {
-    let { className: t, onSelect: n, closePopout: a, closeOnSelect: u = !0, isSelected: d, options: _, width: h, maxVisibleItems: p, renderOptionLabel: g, serialize: E, optionClassName: I, buttonHeight: S, updatePosition: T, popoutPosition: b } = e,
+    let { className: t, onSelect: n, closePopout: a, closeOnSelect: u = !0, isSelected: d, options: _, width: p, maxVisibleItems: h, renderOptionLabel: g, serialize: E, optionClassName: I, buttonHeight: b, updatePosition: S, popoutPosition: T } = e,
         [y, A] = i.useState(0),
         N = i.useRef(null),
         C = i.useId(),
@@ -280,17 +280,17 @@ function O(e) {
             null === (e = O.current) || void 0 === e || e.focus();
         }, []),
         i.useEffect(() => {
-            S > 0 && T();
-        }, [S, T]),
-        (0, m.Z)(T),
+            b > 0 && S();
+        }, [b, S]),
+        (0, m.Z)(S),
         i.useLayoutEffect(() => {
             var e, t;
             let n = null === (t = N.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
             null != n && A(n);
-        }, [p]),
+        }, [h]),
         i.useEffect(() => {
-            T();
-        }, [T, y]);
+            S();
+        }, [S, y]);
     let L = i.useCallback(
             (e) => {
                 n(e), u && a();
@@ -313,7 +313,7 @@ function O(e) {
                 null !== (n = e.key) && void 0 !== n ? n : t
             );
         }),
-        w = _.length <= p ? f.xV : f.h2;
+        w = _.length <= h ? f.xV : f.h2;
     return (0, r.jsx)(l.bG, {
         navigator: R,
         children: (0, r.jsx)(l.SJ, {
@@ -322,9 +322,9 @@ function O(e) {
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(w, {
-                            className: s()(v.popout, t, { [v.popoutPositionTop]: 'top' === b }),
+                            className: s()(v.popout, t, { [v.popoutPositionTop]: 'top' === T }),
                             style: {
-                                width: h,
+                                width: p,
                                 maxHeight: y
                             },
                             ref: (e) => {
@@ -340,7 +340,7 @@ function O(e) {
                             'aria-hidden': !0,
                             ref: N,
                             className: v.measurement,
-                            children: x.slice(0, p)
+                            children: x.slice(0, h)
                         })
                     ]
                 });

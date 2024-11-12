@@ -7,7 +7,7 @@ t.Z = function (e) {
     let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: o, sprites: l, colors: u } = e,
         [c, d] = i.useState(null),
         f = (0, a.uR)(n, c),
-        [_, h] = i.useState(!1);
+        [_, p] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e = Array(10).fill(0);
@@ -18,7 +18,7 @@ t.Z = function (e) {
                     (e = e.map((n, r) =>
                         setTimeout(() => {
                             var n, i;
-                            r === e.length - 1 && h(!0),
+                            r === e.length - 1 && p(!0),
                                 f.createMultipleConfetti(
                                     ((n = t.getBoundingClientRect()),
                                     (i = null != (i = o) ? i : 1),

@@ -10,13 +10,13 @@ var r,
     d = n(433517),
     f = n(570140),
     _ = n(179658),
-    h = n(70956),
-    p = n(960048),
+    p = n(70956),
+    h = n(960048),
     m = n(981631);
 let g = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
             t = null,
-            n = new o.Z(5 * h.Z.Millis.SECOND, 1 * h.Z.Millis.MINUTE, !0),
+            n = new o.Z(5 * p.Z.Millis.SECOND, 1 * p.Z.Millis.MINUTE, !0),
             r = () => {
                 c.tn
                     .put({
@@ -26,7 +26,7 @@ let g = (() => {
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((t = null), (0, _.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * h.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((t = null), (0, _.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(r, n.fail())) : (n.succeed(), (t = setTimeout(r, e.body.sourceMapCookieTTLSeconds * p.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
                             t = setTimeout(r, n.fail());
@@ -66,7 +66,7 @@ let g = (() => {
         isStreamInfoOverlayEnabled: !1
     },
     I = { ...v };
-function S(e) {
+function b(e) {
     (I = {
         ...v,
         ...I,
@@ -75,7 +75,7 @@ function S(e) {
         g.set(I.sourceMapsEnabled),
         d.K.set(E, I);
 }
-class T extends (r = u.ZP.Store) {
+class S extends (r = u.ZP.Store) {
     initialize() {
         let e = d.K.get(E);
         null != e &&
@@ -136,7 +136,7 @@ class T extends (r = u.ZP.Store) {
     }
 }
 (s = 'DeveloperOptionsStore'),
-    (a = 'displayName') in (i = T)
+    (a = 'displayName') in (i = S)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -144,18 +144,18 @@ class T extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.default = new T(f.Z, {
+    (t.default = new S(f.Z, {
         LOGOUT: function (e) {
-            S(v);
+            b(v);
         },
         CONNECTION_OPEN: function (e) {
             var t;
             let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & m.xW$.STAFF) === m.xW$.STAFF,
                 r = n || null != e.user.personal_connection_id;
-            n && g.set(I.sourceMapsEnabled), p.Z.setTags({ isStaff: r.toString() });
+            n && g.set(I.sourceMapsEnabled), h.Z.setTags({ isStaff: r.toString() });
         },
         DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
             let { settings: t } = e;
-            S(t);
+            b(t);
         }
     }));

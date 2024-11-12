@@ -31,8 +31,8 @@ var r,
     d = n(570140),
     f = n(314897),
     _ = n(271383),
-    h = n(709054),
-    p = n(765305);
+    p = n(709054),
+    h = n(765305);
 let m = {
     EVENT: 'event',
     EVENT_ACTIVE: 'active',
@@ -56,33 +56,33 @@ let E = new c.h((e) => {
     }, g),
     v = 0,
     I = [],
-    S = 'SERIES',
-    T = {},
-    b = {};
+    b = 'SERIES',
+    S = {},
+    T = {};
 function y(e) {
     E.set(e.id, e), (v += 1);
 }
 function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    E.delete(e), delete T[e], t && delete b[e], (v += 1);
+    E.delete(e), delete S[e], t && delete T[e], (v += 1);
 }
 function N(e) {
-    return null != e ? e : S;
+    return null != e ? e : b;
 }
 function C(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         r = e.guild_scheduled_event_id;
-    null == T[r] && (T[r] = {});
+    null == S[r] && (S[r] = {});
     let i = N(e.guild_scheduled_event_exception_id);
-    null == T[r][i] && (T[r][i] = {}),
-        (T[r][i][e.user_id] = e),
+    null == S[r][i] && (S[r][i] = {}),
+        (S[r][i][e.user_id] = e),
         t &&
             (function (e) {
                 var t, n;
                 let r = N(e.guild_scheduled_event_exception_id),
-                    i = null !== (n = null === (t = b[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
-                    a = (null != e.guild_scheduled_event_exception_id && e.response === p.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === p.gv.INTERESTED) ? 1 : -1;
+                    i = null !== (n = null === (t = T[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
+                    a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? 1 : -1;
                 O(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
             })(e),
         n && (v += 1);
@@ -91,22 +91,22 @@ function R(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         s = N(e.guild_scheduled_event_exception_id),
-        o = (null === (n = T[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t[e.user_id]) != null,
+        o = (null === (n = S[e.guild_scheduled_event_id]) || void 0 === n ? void 0 : null === (t = n[s]) || void 0 === t ? void 0 : t[e.user_id]) != null,
         l = e.user_id === f.default.getId();
     (o || !l) &&
-        (null === (i = T[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[s]) || void 0 === r || delete r[e.user_id],
+        (null === (i = S[e.guild_scheduled_event_id]) || void 0 === i || null === (r = i[s]) || void 0 === r || delete r[e.user_id],
         (function (e) {
             var t, n;
             let r = N(e.guild_scheduled_event_exception_id),
-                i = null !== (n = null === (t = b[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
-                a = (null != e.guild_scheduled_event_exception_id && e.response === p.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === p.gv.INTERESTED) ? -1 : 1;
+                i = null !== (n = null === (t = T[e.guild_scheduled_event_id]) || void 0 === t ? void 0 : t[r]) && void 0 !== n ? n : 0,
+                a = (null != e.guild_scheduled_event_exception_id && e.response === h.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === h.gv.INTERESTED) ? -1 : 1;
             O(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i + a);
         })(e),
         a && (v += 1));
 }
 function O(e, t, n) {
     let r = N(t);
-    null == b[e] && (b[e] = {}), (b[e][r] = n);
+    null == T[e] && (T[e] = {}), (T[e][r] = n);
 }
 function D(e, t) {
     E.values(m.GUILD_EVENT(e)).forEach((e) => A(e.id, t));
@@ -131,16 +131,16 @@ function x(e) {
     );
 }
 function w(e) {
-    return null != e && (null == e ? void 0 : e.status) === p.p1.ACTIVE;
+    return null != e && (null == e ? void 0 : e.status) === h.p1.ACTIVE;
 }
 function M(e) {
-    return !p.$I.has(e.status);
+    return !h.$I.has(e.status);
 }
 function P(e, t) {
     return new Date(e.scheduled_start_time).getTime() < Date.now() + 1000 * t;
 }
 function k(e) {
-    return null != e && p.$I.has(e.status);
+    return null != e && h.$I.has(e.status);
 }
 class U extends (r = u.ZP.Store) {
     getGuildScheduledEvent(e) {
@@ -163,27 +163,27 @@ class U extends (r = u.ZP.Store) {
         var r, i;
         if (null == e) return null;
         let a = N(t);
-        return null === (i = T[e]) || void 0 === i ? void 0 : null === (r = i[a]) || void 0 === r ? void 0 : r[n];
+        return null === (i = S[e]) || void 0 === i ? void 0 : null === (r = i[a]) || void 0 === r ? void 0 : r[n];
     }
     isInterestedInEventRecurrence(e, t) {
         let n = f.default.getId(),
             r = this.getRsvp(e, null, n),
             i = this.getRsvp(e, t, n),
-            a = (null == r ? void 0 : r.response) === p.gv.INTERESTED,
-            s = (null == i ? void 0 : i.response) === p.gv.INTERESTED,
-            o = (null == i ? void 0 : i.response) === p.gv.UNINTERESTED;
+            a = (null == r ? void 0 : r.response) === h.gv.INTERESTED,
+            s = (null == i ? void 0 : i.response) === h.gv.INTERESTED,
+            o = (null == i ? void 0 : i.response) === h.gv.UNINTERESTED;
         return (a && !o) || s;
     }
     getUserCount(e, t) {
         var n, r, i, a;
         if (null == e) return 0;
-        let s = null !== (i = null === (n = b[e]) || void 0 === n ? void 0 : n[S]) && void 0 !== i ? i : 0;
-        return null == t ? s : s - (null !== (a = null === (r = b[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
+        let s = null !== (i = null === (n = T[e]) || void 0 === n ? void 0 : n[b]) && void 0 !== i ? i : 0;
+        return null == t ? s : s - (null !== (a = null === (r = T[e]) || void 0 === r ? void 0 : r[t]) && void 0 !== a ? a : 0);
     }
     hasUserCount(e, t) {
         var n;
         let r = N(t);
-        return (null === (n = b[e]) || void 0 === n ? void 0 : n[r]) != null;
+        return (null === (n = T[e]) || void 0 === n ? void 0 : n[r]) != null;
     }
     isActive(e) {
         return null != e && w(E.get(e));
@@ -195,7 +195,7 @@ class U extends (r = u.ZP.Store) {
         var n, r;
         if (null == e) return {};
         let i = N(t);
-        return null !== (r = null === (n = T[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : {};
+        return null !== (r = null === (n = S[e]) || void 0 === n ? void 0 : n[i]) && void 0 !== r ? r : {};
     }
 }
 (s = 'GuildScheduledEventStore'),
@@ -210,7 +210,7 @@ class U extends (r = u.ZP.Store) {
     (t.ZP = new U(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
-            return E.clear(), (v = 0), (T = {}), (b = {}), I.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
+            return E.clear(), (v = 0), (S = {}), (T = {}), I.forEach(y), t.forEach((e) => e.guild_scheduled_events.forEach((e) => y(e))), !0;
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
@@ -247,7 +247,7 @@ class U extends (r = u.ZP.Store) {
             var t, n;
             let { userId: r, guildEventId: i, guildId: a, guildEventExceptionId: s, response: o } = e,
                 l = N(s),
-                u = null === (n = T[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
+                u = null === (n = S[i]) || void 0 === n ? void 0 : null === (t = n[l]) || void 0 === t ? void 0 : t[r];
             null != u && R(u, !1);
             let c = _.ZP.getMember(a, r);
             return (
@@ -281,7 +281,7 @@ class U extends (r = u.ZP.Store) {
         GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS: function (e) {
             let { eventId: t, counts: n } = e;
             O(t, null, n.eventCount),
-                h.default.forEachKey(n.recurrenceCounts, (e) => {
+                p.default.forEachKey(n.recurrenceCounts, (e) => {
                     O(t, e, n.eventCount - n.recurrenceCounts[e]);
                 });
         },

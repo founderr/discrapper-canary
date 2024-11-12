@@ -38,10 +38,10 @@ e.exports = function (e) {
             relevance: 0
         },
         _ = ['false', 'null', 'true'],
-        h = ['__CLASS__', '__DIR__', '__FILE__', '__FUNCTION__', '__COMPILER_HALT_OFFSET__', '__LINE__', '__METHOD__', '__NAMESPACE__', '__TRAIT__', 'die', 'echo', 'exit', 'include', 'include_once', 'print', 'require', 'require_once', 'array', 'abstract', 'and', 'as', 'binary', 'bool', 'boolean', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'do', 'double', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'enum', 'eval', 'extends', 'final', 'finally', 'float', 'for', 'foreach', 'from', 'global', 'goto', 'if', 'implements', 'instanceof', 'insteadof', 'int', 'integer', 'interface', 'isset', 'iterable', 'list', 'match|0', 'mixed', 'new', 'never', 'object', 'or', 'private', 'protected', 'public', 'readonly', 'real', 'return', 'string', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'void', 'while', 'xor', 'yield'],
-        p = ['Error|0', 'AppendIterator', 'ArgumentCountError', 'ArithmeticError', 'ArrayIterator', 'ArrayObject', 'AssertionError', 'BadFunctionCallException', 'BadMethodCallException', 'CachingIterator', 'CallbackFilterIterator', 'CompileError', 'Countable', 'DirectoryIterator', 'DivisionByZeroError', 'DomainException', 'EmptyIterator', 'ErrorException', 'Exception', 'FilesystemIterator', 'FilterIterator', 'GlobIterator', 'InfiniteIterator', 'InvalidArgumentException', 'IteratorIterator', 'LengthException', 'LimitIterator', 'LogicException', 'MultipleIterator', 'NoRewindIterator', 'OutOfBoundsException', 'OutOfRangeException', 'OuterIterator', 'OverflowException', 'ParentIterator', 'ParseError', 'RangeException', 'RecursiveArrayIterator', 'RecursiveCachingIterator', 'RecursiveCallbackFilterIterator', 'RecursiveDirectoryIterator', 'RecursiveFilterIterator', 'RecursiveIterator', 'RecursiveIteratorIterator', 'RecursiveRegexIterator', 'RecursiveTreeIterator', 'RegexIterator', 'RuntimeException', 'SeekableIterator', 'SplDoublyLinkedList', 'SplFileInfo', 'SplFileObject', 'SplFixedArray', 'SplHeap', 'SplMaxHeap', 'SplMinHeap', 'SplObjectStorage', 'SplObserver', 'SplPriorityQueue', 'SplQueue', 'SplStack', 'SplSubject', 'SplTempFileObject', 'TypeError', 'UnderflowException', 'UnexpectedValueException', 'UnhandledMatchError', 'ArrayAccess', 'BackedEnum', 'Closure', 'Fiber', 'Generator', 'Iterator', 'IteratorAggregate', 'Serializable', 'Stringable', 'Throwable', 'Traversable', 'UnitEnum', 'WeakReference', 'WeakMap', 'Directory', '__PHP_Incomplete_Class', 'parent', 'php_user_filter', 'self', 'static', 'stdClass'],
+        p = ['__CLASS__', '__DIR__', '__FILE__', '__FUNCTION__', '__COMPILER_HALT_OFFSET__', '__LINE__', '__METHOD__', '__NAMESPACE__', '__TRAIT__', 'die', 'echo', 'exit', 'include', 'include_once', 'print', 'require', 'require_once', 'array', 'abstract', 'and', 'as', 'binary', 'bool', 'boolean', 'break', 'callable', 'case', 'catch', 'class', 'clone', 'const', 'continue', 'declare', 'default', 'do', 'double', 'else', 'elseif', 'empty', 'enddeclare', 'endfor', 'endforeach', 'endif', 'endswitch', 'endwhile', 'enum', 'eval', 'extends', 'final', 'finally', 'float', 'for', 'foreach', 'from', 'global', 'goto', 'if', 'implements', 'instanceof', 'insteadof', 'int', 'integer', 'interface', 'isset', 'iterable', 'list', 'match|0', 'mixed', 'new', 'never', 'object', 'or', 'private', 'protected', 'public', 'readonly', 'real', 'return', 'string', 'switch', 'throw', 'trait', 'try', 'unset', 'use', 'var', 'void', 'while', 'xor', 'yield'],
+        h = ['Error|0', 'AppendIterator', 'ArgumentCountError', 'ArithmeticError', 'ArrayIterator', 'ArrayObject', 'AssertionError', 'BadFunctionCallException', 'BadMethodCallException', 'CachingIterator', 'CallbackFilterIterator', 'CompileError', 'Countable', 'DirectoryIterator', 'DivisionByZeroError', 'DomainException', 'EmptyIterator', 'ErrorException', 'Exception', 'FilesystemIterator', 'FilterIterator', 'GlobIterator', 'InfiniteIterator', 'InvalidArgumentException', 'IteratorIterator', 'LengthException', 'LimitIterator', 'LogicException', 'MultipleIterator', 'NoRewindIterator', 'OutOfBoundsException', 'OutOfRangeException', 'OuterIterator', 'OverflowException', 'ParentIterator', 'ParseError', 'RangeException', 'RecursiveArrayIterator', 'RecursiveCachingIterator', 'RecursiveCallbackFilterIterator', 'RecursiveDirectoryIterator', 'RecursiveFilterIterator', 'RecursiveIterator', 'RecursiveIteratorIterator', 'RecursiveRegexIterator', 'RecursiveTreeIterator', 'RegexIterator', 'RuntimeException', 'SeekableIterator', 'SplDoublyLinkedList', 'SplFileInfo', 'SplFileObject', 'SplFixedArray', 'SplHeap', 'SplMaxHeap', 'SplMinHeap', 'SplObjectStorage', 'SplObserver', 'SplPriorityQueue', 'SplQueue', 'SplStack', 'SplSubject', 'SplTempFileObject', 'TypeError', 'UnderflowException', 'UnexpectedValueException', 'UnhandledMatchError', 'ArrayAccess', 'BackedEnum', 'Closure', 'Fiber', 'Generator', 'Iterator', 'IteratorAggregate', 'Serializable', 'Stringable', 'Throwable', 'Traversable', 'UnitEnum', 'WeakReference', 'WeakMap', 'Directory', '__PHP_Incomplete_Class', 'parent', 'php_user_filter', 'self', 'static', 'stdClass'],
         m = {
-            keyword: h,
+            keyword: p,
             literal: ((e) => {
                 let t = [];
                 return (
@@ -51,13 +51,13 @@ e.exports = function (e) {
                     t
                 );
             })(_),
-            built_in: p
+            built_in: h
         },
         g = (e) => e.map((e) => e.replace(/\|\d+$/, '')),
         E = {
             variants: [
                 {
-                    match: [/new/, t.concat(c, '+'), t.concat('(?!', g(p).join('\\b|'), '\\b)'), i],
+                    match: [/new/, t.concat(c, '+'), t.concat('(?!', g(h).join('\\b|'), '\\b)'), i],
                     scope: {
                         1: 'keyword',
                         4: 'title.class'
@@ -96,25 +96,25 @@ e.exports = function (e) {
                 }
             ]
         },
-        S = {
+        b = {
             scope: 'attr',
             match: t.concat(r, t.lookahead(':'), t.lookahead(/(?!::)/))
         },
-        T = {
+        S = {
             relevance: 0,
             begin: /\(/,
             end: /\)/,
             keywords: m,
-            contains: [S, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
+            contains: [b, a, I, e.C_BLOCK_COMMENT_MODE, d, f, E]
         },
-        b = {
+        T = {
             relevance: 0,
-            match: [/\b/, t.concat('(?!fn\\b|function\\b|', g(h).join('\\b|'), '|', g(p).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
+            match: [/\b/, t.concat('(?!fn\\b|function\\b|', g(p).join('\\b|'), '|', g(h).join('\\b|'), '\\b)'), r, t.concat(c, '*'), t.lookahead(/(?=\()/)],
             scope: { 3: 'title.function.invoke' },
-            contains: [T]
+            contains: [S]
         };
-    T.contains.push(b);
-    let y = [S, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
+    S.contains.push(T);
+    let y = [b, I, e.C_BLOCK_COMMENT_MODE, d, f, E];
     return {
         case_insensitive: !1,
         keywords: m,
@@ -190,7 +190,7 @@ e.exports = function (e) {
                 match: /\$this\b/
             },
             a,
-            b,
+            T,
             I,
             {
                 match: [/const/, /\s/, r],

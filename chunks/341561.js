@@ -10,8 +10,8 @@ var i = n(952265),
     d = n(430824),
     f = n(483360),
     _ = n(877565),
-    h = n(590921),
-    p = n(665692),
+    p = n(590921),
+    h = n(665692),
     m = n(981631),
     g = n(388032),
     E = n(438993);
@@ -23,7 +23,7 @@ function v(e, t) {
     });
 }
 let I = {
-    sentinel: p.Iv,
+    sentinel: h.Iv,
     stores: [l.Z],
     matches: (e, t, n, r, i) => n.length > 1,
     queryResults(e, t, n, r, i) {
@@ -85,10 +85,10 @@ let I = {
                     getProps: (e) => ({
                         emoji: e,
                         key: e.id || e.uniqueName || e.name,
-                        sentinel: p.Iv,
+                        sentinel: h.Iv,
                         guild: null != e.guildId ? d.Z.getGuild(e.guildId) : null
                     }),
-                    getQuery: (e) => ''.concat(p.Iv).concat(e),
+                    getQuery: (e) => ''.concat(h.Iv).concat(e),
                     key: 'emoji'
                 }),
                 o.length > 0
@@ -113,7 +113,7 @@ let I = {
                                   emojis: t
                               };
                           },
-                          getQuery: (e) => ''.concat(p.Iv).concat(e),
+                          getQuery: (e) => ''.concat(h.Iv).concat(e),
                           key: 'emoji-upsell',
                           indexOffset: t.length
                       })
@@ -156,13 +156,13 @@ let I = {
             return (
                 a.insertText(
                     (function (e) {
-                        return ''.concat(p.Iv).concat(e.name).concat(p.Iv);
+                        return ''.concat(h.Iv).concat(e.name).concat(h.Iv);
                     })(e),
                     (function (e) {
                         var t;
                         let n = e.animated ? 'a' : '';
                         return e.managed || null == e.id
-                            ? ''.concat(p.Iv).concat(e.name).concat(p.Iv)
+                            ? ''.concat(h.Iv).concat(e.name).concat(h.Iv)
                             : '<'
                                   .concat(n, ':')
                                   .concat(null !== (t = e.originalName) && void 0 !== t ? t : e.name, ':')
@@ -170,7 +170,7 @@ let I = {
                     })(e)
                 ),
                 {
-                    type: h.z2.EMOJI,
+                    type: p.z2.EMOJI,
                     metadata: {
                         emojiId: e.id,
                         numEmojiResults: t.length,
@@ -189,7 +189,7 @@ let I = {
                 a.insertText(''),
                 a.sendSticker(e.sticker, u.V0.AUTOCOMPLETE),
                 {
-                    type: h.z2.STICKER,
+                    type: p.z2.STICKER,
                     metadata: {
                         numEmojiResults: t.length,
                         numStickerResults: r.length,

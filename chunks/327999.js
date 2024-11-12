@@ -1,6 +1,6 @@
 n.d(t, {
     MS: function () {
-        return b;
+        return T;
     },
     Ph: function () {
         return y;
@@ -9,13 +9,13 @@ n.d(t, {
         return N;
     },
     bE: function () {
-        return T;
+        return S;
     },
     gq: function () {
         return i;
     },
     nf: function () {
-        return S;
+        return b;
     }
 }),
     n(653041);
@@ -30,8 +30,8 @@ var r,
     d = n(410030),
     f = n(726542),
     _ = n(122021),
-    h = n(981631),
-    p = n(388032);
+    p = n(981631),
+    h = n(388032);
 let m = {};
 function g(e, t) {
     return e + t;
@@ -48,7 +48,7 @@ function I(e, t) {
         m[e] = t;
     });
 }
-function S(e, t) {
+function b(e, t) {
     t.forEach((t) =>
         (function (e, t, n) {
             m[e + t] = 3;
@@ -56,38 +56,38 @@ function S(e, t) {
     );
 }
 ((o = i || (i = {}))[(o.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (o[(o.BOT = 1)] = 'BOT'), (o[(o.INTEGRATION = 2)] = 'INTEGRATION'), (o[(o.DISCOVERY = 3)] = 'DISCOVERY'), (o[(o.HUB = 4)] = 'HUB'), (o[(o.INVITE = 5)] = 'INVITE'), (o[(o.VANITY_URL = 6)] = 'VANITY_URL'), (o[(o.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-let T = function (e) {
+let S = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     switch (e) {
         case 1:
-            return p.intl.string(p.t.HumZAg);
+            return h.intl.string(h.t.HumZAg);
         case 2:
-            return p.intl.string(p.t.gmCUFx);
+            return h.intl.string(h.t.gmCUFx);
         case 3:
-            return p.intl.string(p.t['Ql/e9f']);
+            return h.intl.string(h.t['Ql/e9f']);
         case 4:
-            return p.intl.string(p.t.Op8B3N);
+            return h.intl.string(h.t.Op8B3N);
         case 5:
-            return p.intl.string(p.t['/3vIRU']);
+            return h.intl.string(h.t['/3vIRU']);
         case 6:
-            if (null != t && !n) return p.intl.formatToPlainString(p.t.EIUjR0, { vanityUrl: t });
-            return p.intl.string(p.t.dGiD1N);
+            if (null != t && !n) return h.intl.formatToPlainString(h.t.EIUjR0, { vanityUrl: t });
+            return h.intl.string(h.t.dGiD1N);
         case 7:
-            return p.intl.string(p.t.vdu7oa);
+            return h.intl.string(h.t.vdu7oa);
         default:
-            return p.intl.string(p.t.DvMBkZ);
+            return h.intl.string(h.t.DvMBkZ);
     }
 };
 ((l = a || (a = {})).DISCORD = 'discord'), (l.TWITCH = 'twitch'), (l.YOUTUBE = 'youtube'), (l.GUILD_SUBSCRIPTION = 'guild_subscription');
-let b = (e) => {
+let T = (e) => {
         switch (e) {
             case 'twitch':
-                return p.intl.string(p.t.AVGAk5);
+                return h.intl.string(h.t.AVGAk5);
             case 'youtube':
-                return p.intl.string(p.t.PHSAsr);
+                return h.intl.string(h.t.PHSAsr);
             default:
-                return p.intl.string(p.t.gmCUFx);
+                return h.intl.string(h.t.gmCUFx);
         }
     },
     y = (e) => {
@@ -111,7 +111,7 @@ async function N(e, t) {
     I(n, 2);
     try {
         let t = await u.tn.post({
-            url: h.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: r }
         });
         if (!Array.isArray(t.body)) return I(n, 0), [];

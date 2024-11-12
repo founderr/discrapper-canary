@@ -1,6 +1,6 @@
 n.d(t, {
     R: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -69,7 +69,7 @@ class _ extends o.Z {
                 : (t[n] = r);
     }
 }
-async function h(e) {
+async function p(e) {
     let {
             body: { guild_noise: t, usage: a }
         } = await i.tn.get('/users/@me/notification-migration-data2'),

@@ -15,29 +15,29 @@ var i = n(496532),
     d = n(283107),
     f = n(907120),
     _ = n(533122),
-    h = n(874706),
-    p = n(137411),
+    p = n(874706),
+    h = n(137411),
     m = n(775101),
     g = n(933632),
     E = n(158188),
     v = n(66334),
     I = n(215635),
-    S = n(718572),
-    T = n(496223),
-    b = n(846262),
+    b = n(718572),
+    S = n(496223),
+    T = n(846262),
     y = n(926372),
     A = n(116175);
 let N = (e) => {
     let { badge: t, primaryTintColor: n, secondaryTintColor: N, ...C } = e;
     switch (t) {
         case A.ZD.SWORD:
-            return (0, r.jsx)(S.o, {
+            return (0, r.jsx)(b.o, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C
             });
         case A.ZD.WATER_DROP:
-            return (0, r.jsx)(b.l, {
+            return (0, r.jsx)(T.l, {
                 primaryTintColor: n,
                 ...C
             });
@@ -47,13 +47,13 @@ let N = (e) => {
                 ...C
             });
         case A.ZD.TOADSTOOL:
-            return (0, r.jsx)(T.j, {
+            return (0, r.jsx)(S.j, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C
             });
         case A.ZD.MOON:
-            return (0, r.jsx)(h.V, {
+            return (0, r.jsx)(p.V, {
                 primaryTintColor: n,
                 ...C
             });
@@ -114,7 +114,7 @@ let N = (e) => {
                 ...C
             });
         case A.ZD.PSYCHIC:
-            return (0, r.jsx)(p.y, {
+            return (0, r.jsx)(h.y, {
                 primaryTintColor: n,
                 secondaryTintColor: N,
                 ...C

@@ -3,10 +3,10 @@ n.d(t, {
         return L;
     },
     e5: function () {
-        return T;
+        return S;
     },
     gx: function () {
-        return b;
+        return T;
     },
     lp: function () {
         return D;
@@ -29,8 +29,8 @@ var s = n(292419),
     d = n(598077),
     f = n(314897),
     _ = n(699516),
-    h = n(594174),
-    p = n(408433),
+    p = n(594174),
+    h = n(408433),
     m = n(669079);
 n(358085), n(51144);
 var g = n(572804);
@@ -42,7 +42,7 @@ let I = new d.Z({
     id: '???',
     username: '???'
 });
-function S(e) {
+function b(e) {
     var t;
     return new c.pi({
         ...e,
@@ -54,15 +54,15 @@ function S(e) {
         codedLinks: e.type === v.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
     });
 }
-function T(e) {
-    var t, n, r, i, a, s, l, p, E, T;
-    let { reactions: b, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        A = S(e),
+function S(e) {
+    var t, n, r, i, a, s, l, h, E, S;
+    let { reactions: T, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        A = b(e),
         C = null !== (i = null === (t = e.mentions) || void 0 === t ? void 0 : t.map((e) => e.id)) && void 0 !== i ? i : [],
         D = null !== (a = e.mention_roles) && void 0 !== a ? a : [],
         L = null !== (s = e.mention_channels) && void 0 !== s ? s : [],
         x = e.message_reference;
-    let w = null == (p = e).author ? I : null != p.webhook_id ? new d.Z(p.author) : null !== (E = h.default.getUser(p.author.id)) && void 0 !== E ? E : new d.Z(p.author),
+    let w = null == (h = e).author ? I : null != h.webhook_id ? new d.Z(h.author) : null !== (E = p.default.getUser(h.author.id)) && void 0 !== E ? E : new d.Z(h.author),
         M = null == e ? void 0 : e.gift_info,
         P = e.gifting_prompt,
         k = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
@@ -71,7 +71,7 @@ function T(e) {
         B = e.content;
     return (
         e.type === v.uaV.PREMIUM_REFERRAL && (B = ''),
-        (T = 0),
+        (S = 0),
         new c.ZP({
             ...e,
             ...A.toJS(),
@@ -96,7 +96,7 @@ function T(e) {
             referralTrialOfferId: G,
             call: N(e.call, A.timestamp),
             messageSnapshots: O(e),
-            reactions: R(null != b ? b : e.reactions, e.poll),
+            reactions: R(null != T ? T : e.reactions, e.poll),
             interaction: k,
             interactionData: null != y ? y : e.interaction_data,
             interactionMetadata: e.interaction_metadata,
@@ -108,7 +108,7 @@ function T(e) {
         })
     );
 }
-function b(e, t) {
+function T(e, t) {
     return null != t.edited_timestamp
         ? {
               ...t,
@@ -122,7 +122,7 @@ function b(e, t) {
 }
 function y(e, t) {
     if (null != t.edited_timestamp)
-        return T(t, {
+        return S(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });
@@ -175,8 +175,8 @@ function N(e, t) {
 }
 function C(e) {
     if (null == e.embeds) return [];
-    let t = e.embeds.map((t) => (0, p.kC)(e.channel_id, e.id, t));
-    return (0, p.o3)(t);
+    let t = e.embeds.map((t) => (0, h.kC)(e.channel_id, e.id, t));
+    return (0, h.o3)(t);
 }
 function R(e, t) {
     var n;
@@ -213,7 +213,7 @@ function O(e) {
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t } = e;
-              return new c.Hx({ message: S(t) });
+              return new c.Hx({ message: b(t) });
           });
 }
 let D = (e) => 0 === (0, l.cv)(e).length || '' !== e.content;

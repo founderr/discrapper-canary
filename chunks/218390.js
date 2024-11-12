@@ -16,15 +16,15 @@ var i = n(200651),
     g = n(481060),
     m = n(570140),
     f = n(355467),
-    _ = n(37234),
-    p = n(821849),
+    p = n(37234),
+    _ = n(821849),
     h = n(230711),
     E = n(497321),
     b = n(634894),
     x = n(410030),
     C = n(100527),
-    T = n(906732),
-    v = n(211242),
+    v = n(906732),
+    T = n(211242),
     N = n(975298),
     I = n(15640),
     S = n(89057),
@@ -33,9 +33,9 @@ var i = n(200651),
     j = n(246946),
     P = n(78839),
     Z = n(483444),
-    O = n(626135),
+    B = n(626135),
     M = n(63063),
-    B = n(74538),
+    O = n(74538),
     w = n(140465),
     y = n(599659),
     k = n(91802),
@@ -62,7 +62,7 @@ function ee(e) {
         d = n || l,
         m = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
         f = W.GP[t.planIdFromItems],
-        _ = B.ZP.formatPriceString(B.ZP.getDefaultPrice(f.id), f.interval);
+        p = O.ZP.formatPriceString(O.ZP.getDefaultPrice(f.id), f.interval);
     return d
         ? (0, i.jsxs)(i.Fragment, {
               children: [
@@ -81,22 +81,22 @@ function ee(e) {
                           var e, n, i;
                           if (l) {
                               if (r) {
-                                  let e = B.ZP.getReverseTrialWeeks(t.trialId);
+                                  let e = O.ZP.getReverseTrialWeeks(t.trialId);
                                   return Y.intl.format(Y.t.jLglur, { weeks: e });
                               }
                               return Y.intl.format(Y.t['2CGBrq'], {
                                   remainingTime: m,
-                                  price: _
+                                  price: p
                               });
                           }
                           if (c)
                               return Y.intl.format(Y.t['+qqh6u'], {
                                   percent: null !== (e = null == a ? void 0 : a.percentage) && void 0 !== e ? e : W.Bo,
-                                  regularPrice: _
+                                  regularPrice: p
                               });
                           return Y.intl.formatToPlainString(Y.t['3Ziutb'], {
                               percent: null !== (n = null == a ? void 0 : a.percentage) && void 0 !== n ? n : W.M_,
-                              regularPrice: _,
+                              regularPrice: p,
                               numMonths: null !== (i = null == a ? void 0 : a.duration) && void 0 !== i ? i : W.rt
                           });
                       })()
@@ -158,11 +158,11 @@ function et() {
                         className: K.tierCardButton,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            O.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
-                                (0, _.xf)(),
+                                (0, p.xf)(),
                                 (0, A.uL)(z.Z5c.APPLICATION_STORE);
                         },
                         children: (0, i.jsx)(g.Text, {
@@ -176,7 +176,7 @@ function et() {
                         look: g.Button.Looks.OUTLINED,
                         color: g.Button.Colors.WHITE,
                         onClick: () => {
-                            O.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
@@ -236,7 +236,7 @@ function en(e) {
                         buttonTextClassName: K.giftButtonCTA,
                         color: g.Button.Colors.CUSTOM,
                         onClick: () => {
-                            O.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            B.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: X,
                                 target: $
                             });
@@ -280,7 +280,7 @@ function ei() {
                               buttonTextClassName: K.giftButtonCTA,
                               color: g.Button.Colors.CUSTOM,
                               onClick: () => {
-                                  O.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                  B.default.track(z.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                       cta_type: X,
                                       target: $
                                   });
@@ -292,15 +292,15 @@ function ei() {
           });
 }
 t.Z = function () {
-    let e = (0, v.Q)(),
-        { analyticsLocations: t } = (0, T.ZP)(C.Z.PREMIUM_SETTINGS),
+    let e = (0, T.Q)(),
+        { analyticsLocations: t } = (0, v.ZP)(C.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([P.ZP], () => P.ZP.getPremiumTypeSubscription()),
         a = (0, c.e7)([P.ZP], () => P.ZP.hasFetchedSubscriptions()),
         s = (0, I.V)(),
         [l, o] = r.useState(!0),
         { fractionalState: u } = (0, N.Z)(),
-        _ = (0, k.n)(),
-        h = null == _ ? void 0 : _.countryCode,
+        p = (0, k.n)(),
+        h = null == p ? void 0 : p.countryCode,
         x = (0, c.e7)([j.Z], () => j.Z.enabled),
         A = 'PremiumManagementSettings';
     (0, b.j)({
@@ -316,10 +316,10 @@ t.Z = function () {
         M = (0, V.pn)('PremiumManagementSettings');
     r.useEffect(() => {
         m.Z.wait(async () => {
-            !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, p.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
+            !x && !e && (await Promise.all([f.jg(), f.tZ(), (0, _.Y2)(h, null, z.JjL.DISCOVERY)])), o(!1);
         });
     }, [h, x, e]);
-    let [B, w] = r.useState(!1);
+    let [O, w] = r.useState(!1);
     if (x) return (0, i.jsx)(E.Z, {});
     if (e) return (0, i.jsx)(S.c8, {});
     let y = a && null !== n && s,
@@ -331,7 +331,7 @@ t.Z = function () {
         });
     if ((!y && !U) || l) return (0, i.jsx)(g.Spinner, {});
     let D = null !== n && null != n.trialId;
-    return (0, i.jsx)(T.Gt, {
+    return (0, i.jsx)(v.Gt, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
             children: [
@@ -353,7 +353,7 @@ t.Z = function () {
                 }),
                 (0, i.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !B && (O.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
+                        e && !O && (B.default.track(z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', { className: K.bottomOfPageVisibilitySensor })
                 })

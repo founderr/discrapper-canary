@@ -30,7 +30,7 @@ class d extends i.PureComponent {
                 let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
                     f = e.id === n,
                     _ = t === a.length - 1,
-                    h =
+                    p =
                         null != l
                             ? l(e, f)
                             : (0, r.jsx)('span', {
@@ -50,9 +50,9 @@ class d extends i.PureComponent {
                                       tag: 'span',
                                       onClick: () => this.handleClick(e),
                                       className: c.breadcrumbClickWrapper,
-                                      children: h
+                                      children: p
                                   })
-                                : h,
+                                : p,
                             _
                                 ? null
                                 : (0, r.jsx)(u.Z, {

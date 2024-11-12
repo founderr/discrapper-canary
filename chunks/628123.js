@@ -10,16 +10,16 @@ var r = n(200651),
     d = n(481060),
     f = n(386506),
     _ = n(304761),
-    h = n(865427),
-    p = n(406128),
+    p = n(865427),
+    h = n(406128),
     m = n(25779),
     g = n(797614),
     E = n(703656),
     v = n(626135),
     I = n(960048),
-    S = n(998502),
-    T = n(981631),
-    b = n(388032),
+    b = n(998502),
+    S = n(981631),
+    T = n(388032),
     y = n(584738);
 function A(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function N() {
         null ==
         (0, c.e7)([_.C], () => {
             var e;
-            return (0, h.fD)() ? (null === (e = _.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, p.fD)() ? (null === (e = _.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         })
     )
         return null;
@@ -56,7 +56,7 @@ function N() {
         onClick: n,
         submitting: e,
         className: y.clearOverrideButton,
-        children: b.intl.string(b.t['/Nz9ra'])
+        children: T.intl.string(T.t['/Nz9ra'])
     });
 }
 let C = s().throttle(
@@ -84,7 +84,7 @@ class R extends i.PureComponent {
         });
         let r = (0, m.e)(),
             i = I.Z.captureCrash(e, { extra: t });
-        v.default.track(T.rMx.APP_CRASHED, {
+        v.default.track(S.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -94,7 +94,7 @@ class R extends i.PureComponent {
             error_level: 'fatal'
         }),
             C(r),
-            S.ZP.cleanupDisplaySleep();
+            b.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -115,7 +115,7 @@ class R extends i.PureComponent {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
             let e = (0, r.jsxs)('div', {
-                    children: [(0, r.jsx)('p', { children: b.intl.string(b.t.tx8CkJ) }), (0, r.jsx)('p', { children: b.intl.string(b.t.CvQlAA) })]
+                    children: [(0, r.jsx)('p', { children: T.intl.string(T.t.tx8CkJ) }), (0, r.jsx)('p', { children: T.intl.string(T.t.CvQlAA) })]
                 }),
                 n = (0, r.jsxs)('div', {
                     className: y.buttons,
@@ -123,13 +123,13 @@ class R extends i.PureComponent {
                         (0, r.jsx)(d.Button, {
                             size: d.ButtonSizes.LARGE,
                             onClick: this._handleSubmitReport,
-                            children: b.intl.string(b.t['+hivLS'])
+                            children: T.intl.string(T.t['+hivLS'])
                         }),
                         (0, r.jsx)(N, {})
                     ]
                 });
-            return (0, r.jsx)(p.Z, {
-                title: b.intl.string(b.t['3h+n+/']),
+            return (0, r.jsx)(h.Z, {
+                title: T.intl.string(T.t['3h+n+/']),
                 note: null != t ? t() : e,
                 action: n,
                 className: y.errorPage

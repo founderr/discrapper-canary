@@ -11,11 +11,11 @@ e.exports = function (e, t, n) {
     var d,
         f,
         _ = r(e),
-        h = _.modulus.byteLength();
-    if (t.length > h || new s(t).cmp(_.modulus) >= 0) throw Error('decryption error');
+        p = _.modulus.byteLength();
+    if (t.length > p || new s(t).cmp(_.modulus) >= 0) throw Error('decryption error');
     f = n ? u(new s(t), _) : o(t, _);
-    var p = c.alloc(h - f.length);
-    if (((f = c.concat([p, f], h)), 4 === d))
+    var h = c.alloc(p - f.length);
+    if (((f = c.concat([h, f], p)), 4 === d))
         return (function (e, t) {
             var n = e.modulus.byteLength(),
                 r = l('sha1').update(c.alloc(0)).digest(),

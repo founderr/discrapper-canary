@@ -17,8 +17,8 @@ var r,
     d = n(481060),
     f = n(699682),
     _ = n(540059),
-    h = n(388032),
-    p = n(803636);
+    p = n(388032),
+    h = n(803636);
 function m(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ function m(e, t, n) {
     );
 }
 let g = {
-    DEFAULT: p.inputDefault,
-    MINI: p.inputMini
+    DEFAULT: h.inputDefault,
+    MINI: h.inputMini
 };
 function E(e) {
     let { error: t } = e,
@@ -78,7 +78,7 @@ function E(e) {
                           },
                           children: (0, i.jsxs)(l.animated.div, {
                               style: { transform: u },
-                              className: p.inputError,
+                              className: h.inputError,
                               children: [
                                   n
                                       ? (0, i.jsx)(d.CircleWarningIcon, {
@@ -113,15 +113,15 @@ class v extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: f, focusProps: _, ...h } = this.props,
-            m = null !== (t = h['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+        let { className: n, inputClassName: r, inputPrefix: a, disabled: s, size: l, editable: c, inputRef: d, prefixElement: f, focusProps: _, ...p } = this.props,
+            m = null !== (t = p['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
         return (0, i.jsxs)('div', {
-            className: o()(p.inputWrapper, n),
+            className: o()(h.inputWrapper, n),
             children: [
                 null != f && f,
                 null != a
                     ? (0, i.jsx)('span', {
-                          className: p.inputPrefix,
+                          className: h.inputPrefix,
                           children: a
                       })
                     : null,
@@ -129,13 +129,13 @@ class v extends (r = a.Component) {
                     ..._,
                     children: (0, i.jsx)('input', {
                         className: o()(l, r, {
-                            [p.error]: this.hasError(),
-                            [p.disabled]: s,
-                            [p.editable]: c
+                            [h.error]: this.hasError(),
+                            [h.disabled]: s,
+                            [h.editable]: c
                         }),
                         disabled: s,
                         readOnly: !1 === c || void 0,
-                        ...h,
+                        ...p,
                         'aria-labelledby': m,
                         onChange: this.onChange,
                         onBlur: this.onBlur,
@@ -153,8 +153,8 @@ class v extends (r = a.Component) {
             m(this, 'hasError', () => (null != this.props.error && !!(this.props.error.length > 0)) || (!1 !== this.state.dirty && (this.getIsUnderFlowing() || this.getIsOverFlowing()))),
             m(this, 'getError', () => {
                 let { error: e, minLength: t, maxLength: n } = this.props,
-                    r = this.getIsUnderFlowing() ? h.intl.formatToPlainString(h.t['62rk1N'], { minLength: t }) : null,
-                    i = this.getIsOverFlowing() ? h.intl.formatToPlainString(h.t.ICT5S0, { maxLength: n }) : null;
+                    r = this.getIsUnderFlowing() ? p.intl.formatToPlainString(p.t['62rk1N'], { minLength: t }) : null,
+                    i = this.getIsOverFlowing() ? p.intl.formatToPlainString(p.t.ICT5S0, { maxLength: n }) : null;
                 return (null != e && e.length < 1) || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != r ? r : i;
             }),
             m(this, 'getIsUnderFlowing', () => {

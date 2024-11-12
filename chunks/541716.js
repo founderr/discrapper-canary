@@ -177,7 +177,7 @@ let o = {
         hideAttachmentArea: !0,
         upsellLongMessages: { iconOnly: !0 }
     },
-    h = {
+    p = {
         analyticsName: 'create_forum_post',
         attachments: !0,
         drafts: { type: s.d.FirstThreadMessage },
@@ -193,7 +193,7 @@ let o = {
         hideAttachmentArea: !0,
         uploadLongMessages: !0
     },
-    p = {
+    h = {
         analyticsName: 'create_poll',
         attachments: !0,
         drafts: { type: s.d.ChannelMessage },
@@ -276,7 +276,7 @@ let o = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    S = {
+    b = {
         analyticsName: 'rules_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -286,7 +286,7 @@ let o = {
         },
         showCharacterCount: !0
     },
-    T = {
+    S = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -301,7 +301,7 @@ let o = {
         showCharacterCount: !0,
         toolbarType: 1
     },
-    b = {
+    T = {
         analyticsName: 'atomic_reator_reply_input',
         drafts: { type: s.d.ChannelMessage },
         permissions: { requireSendMessages: !0 },
@@ -326,11 +326,11 @@ let o = {
         USER_PROFILE_REPLY: E,
         PROFILE_BIO_INPUT: v,
         CUSTOM_GIFT: I,
-        RULES_INPUT: S,
-        CREATE_FORUM_POST: h,
-        CREATE_POLL: p,
-        FORUM_CHANNEL_GUIDELINES: T,
-        ATOMIC_REACTOR_REPLY_INPUT: b,
+        RULES_INPUT: b,
+        CREATE_FORUM_POST: p,
+        CREATE_POLL: h,
+        FORUM_CHANNEL_GUIDELINES: S,
+        ATOMIC_REACTOR_REPLY_INPUT: T,
         FORWARD_MESSAGE_INPUT: {
             analyticsName: 'forward_message_input',
             drafts: { type: s.d.ChannelMessage },

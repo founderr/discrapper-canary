@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return b;
     }
 });
 var o = n(200651),
@@ -22,13 +22,13 @@ var o = n(200651),
     v = n(388032),
     j = n(684688);
 let _ = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function E(e) {
+function b(e) {
     var t, n, s;
-    let { quest: E, questContent: b, isHovering: N, contentPosition: S, rowIndex: T, onReceiveErrorHints: B } = e,
-        A = m.r.build(E.config),
+    let { quest: b, questContent: E, isHovering: N, contentPosition: B, rowIndex: T, onReceiveErrorHints: S } = e,
+        A = m.r.build(b.config),
         y = A.defaultReward.messages.name,
         R = A.defaultReward.messages.nameWithArticle,
-        w = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        w = (null === (t = b.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: I, scrollHeight: k } = (0, d.Z)(),
         q = 104 !== k,
         { expansionSpring: P } = (0, c.useSpring)({
@@ -38,10 +38,10 @@ function E(e) {
                 clamp: !0
             }
         }),
-        O = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        M = (null === (s = E.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(E),
-        Q = (0, p.Bd)(E),
+        M = (null === (n = b.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        O = (null === (s = b.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: W, completedRatioDisplay: L } = (0, p.I)(b),
+        Q = (0, p.Bd)(b),
         Z = r.useCallback(
             (e) =>
                 (0, o.jsx)(c.Text, {
@@ -53,8 +53,8 @@ function E(e) {
                 }),
             []
         ),
-        D = r.useMemo(() => (M ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, M, Z]),
-        H = r.useMemo(() => {
+        D = r.useMemo(() => (O ? Z(y) : v.intl.format(v.t['0IUT4e'], { rewardWithArticleHook: () => Z(R) })), [y, R, O, Z]),
+        V = r.useMemo(() => {
             if (null != Q)
                 return (0, o.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -63,7 +63,7 @@ function E(e) {
                     children: Q
                 });
         }, [Q]),
-        U = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
+        H = (0, l.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, o.jsxs)('div', {
         className: a()(j.container),
         children: [
@@ -76,29 +76,29 @@ function E(e) {
                     (0, o.jsxs)('div', {
                         className: j.assetWrapper,
                         children: [
-                            !M && O && (0, o.jsx)('div', { className: j.completionAnimation }),
-                            w && !M
+                            !O && M && (0, o.jsx)('div', { className: j.completionAnimation }),
+                            w && !O
                                 ? (0, o.jsxs)('div', {
                                       className: j.progressWrapper,
                                       children: [
-                                          O &&
+                                          M &&
                                               (0, o.jsx)(c.LottieAnimation, {
                                                   importData: _,
                                                   className: j.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !U
+                                                  shouldAnimate: !H
                                               }),
                                           (0, o.jsx)(x.Z, {
-                                              quest: E,
+                                              quest: b,
                                               size: 76,
                                               percentComplete: W,
                                               percentCompleteText: N ? L : void 0,
                                               children: (0, o.jsx)('div', {
                                                   className: j.circularRewardTileWrapper,
                                                   children: (0, o.jsx)(g.Z, {
-                                                      quest: E,
-                                                      questContent: b,
+                                                      quest: b,
+                                                      questContent: E,
                                                       className: j.circularQuestRewardTileAsset,
                                                       location: h.dr.QUEST_HOME_DESKTOP
                                                   })
@@ -107,9 +107,9 @@ function E(e) {
                                       ]
                                   })
                                 : (0, o.jsx)(g.Z, {
-                                      quest: E,
+                                      quest: b,
                                       autoplay: N,
-                                      questContent: b,
+                                      questContent: E,
                                       className: j.questRewardTileAsset,
                                       location: h.dr.QUEST_HOME_DESKTOP
                                   })
@@ -123,7 +123,7 @@ function E(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: j.questName,
-                                children: v.intl.format(v.t.EAYZAg, { questName: E.config.messages.questName })
+                                children: v.intl.format(v.t.EAYZAg, { questName: b.config.messages.questName })
                             }),
                             (0, o.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -131,7 +131,7 @@ function E(e) {
                                 className: j.header,
                                 children: D
                             }),
-                            H
+                            V
                         ]
                     }),
                     q &&
@@ -144,11 +144,11 @@ function E(e) {
                 ]
             }),
             (0, o.jsx)(f.Z, {
-                quest: E,
-                location: b,
-                contentPosition: S,
+                quest: b,
+                location: E,
+                contentPosition: B,
                 rowIndex: T,
-                onReceiveErrorHints: B
+                onReceiveErrorHints: S
             })
         ]
     });

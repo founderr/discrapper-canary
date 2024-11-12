@@ -3,7 +3,7 @@ n.d(t, {
         return u;
     },
     YK: function () {
-        return p;
+        return h;
     },
     ap: function () {
         return m;
@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     iP: function () {
-        return h;
+        return p;
     },
     n0: function () {
         return c;
@@ -38,8 +38,8 @@ var r,
     d,
     f,
     _ = n(358085);
-let h = _.isPlatformEmbedded && ((0, _.isWindows)() || !1);
-function p(e) {
+let p = _.isPlatformEmbedded && ((0, _.isWindows)() || !1);
+function h(e) {
     switch (e) {
         case 'News Nudge':
         case 'Welcome Nudge':

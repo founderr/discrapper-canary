@@ -3,13 +3,13 @@ n.d(t, {
         return m;
     },
     GA: function () {
-        return S;
-    },
-    I: function () {
         return b;
     },
+    I: function () {
+        return T;
+    },
     UE: function () {
-        return p;
+        return h;
     },
     Wq: function () {
         return g;
@@ -21,7 +21,7 @@ n.d(t, {
         return I;
     },
     rU: function () {
-        return T;
+        return S;
     },
     sK: function () {
         return v;
@@ -44,9 +44,9 @@ var c = n(630388),
     d = n(981631),
     f = n(468788),
     _ = n(490897),
-    h = n(526761);
+    p = n(526761);
 ((i = r || (r = {})).ForumThreadsCreatedOn = 'enabled forum thread created notifs'), (i.ForumThreadsCreatedOff = 'disabled forum thread created notifs'), (i.SuppressEveryoneOn = 'enabled suppress everyone'), (i.SuppressEveryoneOff = 'disabled suppress everyone'), (i.SuppressRolesOn = 'enabled suppress roles'), (i.SuppressRolesOff = 'disabled suppress roles'), (i.HighlightsOn = 'enabled highlights'), (i.HighlightsOff = 'disabled highlights'), (i.MobilePushOn = 'enabled mobile push notifications'), (i.MobilePushOff = 'disabled mobile push notifications'), (i.UnreadsAll = 'unreads set to all messages'), (i.UnreadsMentions = 'unreads set to mentions'), (i.UnreadsDefault = 'unreads set to the default'), (i.NotificationsAll = 'notifications set to all messages'), (i.NotificationsMentions = 'notifications set to mentions'), (i.NotificationsNothing = 'notifications set to nothing'), (i.NotificationsDefault = 'notifications set to the default'), (i.PresetAll = 'notification preset set to all messages'), (i.PresetMentions = 'notification preset set to mentions'), (i.PresetNothing = 'notification preset set to nothing'), (i.PresetDefault = 'notification preset set to the default'), (i.OptedIn = 'opted in to entity'), (i.OptedOut = 'opted out from entity'), (i.Favorited = 'favorited'), (i.UnFavorited = 'unfavorited'), (i.Muted = 'muted'), (i.Unmuted = 'unmuted'), (i.MutedScheduledEvents = 'muted scheduled events'), (i.UnmutedScheduledEvents = 'unmuted scheduled events'), (i.OverrideCreated = 'channel override created'), (i.OverrideDeleted = 'channel override deleted');
-let p = {
+let h = {
         forumThreadsCreated: (e) => (e ? 'enabled forum thread created notifs' : 'disabled forum thread created notifs'),
         suppressEveryone: (e) => (e ? 'enabled suppress everyone' : 'disabled suppress everyone'),
         suppressRoles: (e) => (e ? 'enabled suppress roles' : 'disabled suppress roles'),
@@ -85,13 +85,13 @@ function g(e, t, n, r, i) {
             };
         },
         _ = u(n),
-        p = u(S(e), t),
-        g = E(_, p, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        h = u(b(e), t),
+        g = E(_, h, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         v = null !== (o = g('guild_flags')) && void 0 !== o ? o : 0,
-        I = (null !== (l = p.guild_flags) && void 0 !== l ? l : 0) ^ v,
-        T = 0 === (0, c.M1)(I, h.vc.OPT_IN_CHANNELS_OFF, h.vc.OPT_IN_CHANNELS_ON);
+        I = (null !== (l = h.guild_flags) && void 0 !== l ? l : 0) ^ v,
+        S = 0 === (0, c.M1)(I, p.vc.OPT_IN_CHANNELS_OFF, p.vc.OPT_IN_CHANNELS_ON);
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-        ...p,
+        ...h,
         ...s.Z.getStats(e),
         location: i,
         guild_id: e,
@@ -105,7 +105,7 @@ function g(e, t, n, r, i) {
         guild_receive_mobile_push_old: g('guild_receive_mobile_push'),
         guild_scheduled_events_muted_old: g('guild_scheduled_events_muted'),
         guild_message_notification_settings_old: g('guild_message_notification_settings'),
-        is_opt_in_only_change: T
+        is_opt_in_only_change: S
     });
 }
 function E(e, t, n) {
@@ -117,8 +117,8 @@ function v(e) {
     return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null;
 }
 function I(e, t, n, r, i, u) {
-    var _, p, g, I;
-    let S = function (t) {
+    var _, h, g, I;
+    let b = function (t) {
             var n, r;
             let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 a = null !== (n = i.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
@@ -132,13 +132,13 @@ function I(e, t, n, r, i, u) {
                 channel_muted_until: v(i.mute_config)
             };
         },
-        T = S(r),
-        y = S(b(e, t), n),
-        A = E(T, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        S = b(r),
+        y = b(T(e, t), n),
+        A = E(S, y, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         N = o.Z.getChannel(t),
-        C = null !== (p = A('channel_flags')) && void 0 !== p ? p : 0,
+        C = null !== (h = A('channel_flags')) && void 0 !== h ? h : 0,
         R = (null !== (g = y.channel_flags) && void 0 !== g ? g : 0) ^ C,
-        O = 0 === (0, c.M1)(R, h.ic.FAVORITED, h.ic.OPT_IN_ENABLED),
+        O = 0 === (0, c.M1)(R, p.ic.FAVORITED, p.ic.OPT_IN_ENABLED),
         D = null !== (I = null === (_ = l.Z.getLastMessage(t)) || void 0 === _ ? void 0 : _.type) && void 0 !== I ? I : null;
     a.ZP.trackWithMetadata(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
         ...y,
@@ -158,7 +158,7 @@ function I(e, t, n, r, i, u) {
         last_message_type: D
     });
 }
-function S(e) {
+function b(e) {
     let t = u.ZP.isMuted(e),
         n = u.ZP.getMuteConfig(e);
     return {
@@ -173,11 +173,11 @@ function S(e) {
         guild_flags: u.ZP.getGuildFlags(e)
     };
 }
-function T(e) {
+function S(e) {
     let t = new Map();
-    return e.forEach((e) => t.set(e, S(e))), t;
+    return e.forEach((e) => t.set(e, b(e))), t;
 }
-function b(e, t) {
+function T(e, t) {
     let n = u.ZP.isChannelMuted(e, t),
         r = u.ZP.getChannelMuteConfig(e, t);
     return {
@@ -189,5 +189,5 @@ function b(e, t) {
 }
 function y(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, b(e, t))), n;
+    return t.forEach((t) => n.set(t, T(e, t))), n;
 }

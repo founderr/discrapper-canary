@@ -23,7 +23,7 @@ let f = (e) => {
     });
 };
 t.Z = (e) => {
-    let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: o, titleSecondary: l, isFavorite: _ = !1, emojiSubCategory: h = u.t0.NONE } = e;
+    let { className: t, graphicPrimary: n, graphicSecondary: i, titlePrimary: o, titleSecondary: l, isFavorite: _ = !1, emojiSubCategory: p = u.t0.NONE } = e;
     return (0, r.jsxs)('div', {
         className: a()(d.inspector, t),
         children: [
@@ -60,14 +60,14 @@ t.Z = (e) => {
                         })
                 ]
             }),
-            h === u.t0.NONE
+            p === u.t0.NONE
                 ? null != i &&
                   (0, r.jsx)('div', {
                       className: d.graphicSecondary,
                       'aria-hidden': !0,
                       children: i
                   })
-                : (0, r.jsx)(f, { emojiSubCategory: h })
+                : (0, r.jsx)(f, { emojiSubCategory: p })
         ]
     });
 };

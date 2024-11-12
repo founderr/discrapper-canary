@@ -11,11 +11,11 @@ var r = n(200651),
     f = n(388032),
     _ = n(591745);
 t.Z = i.memo(function (e) {
-    let { width: t, height: n, src: a, url: h, format: p, className: m } = e,
+    let { width: t, height: n, src: a, url: p, format: h, className: m } = e,
         [g, E] = i.useState(!1),
-        v = (0, u.hb)((0, l.iy)(h)),
+        v = (0, u.hb)((0, l.iy)(p)),
         I = v ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
-        S = v ? o.StarIcon : o.StarOutlineIcon;
+        b = v ? o.StarIcon : o.StarOutlineIcon;
     i.useEffect(() => {
         if (!g) return;
         let e = setTimeout(() => {
@@ -23,18 +23,18 @@ t.Z = i.memo(function (e) {
         }, 500);
         return () => clearTimeout(e);
     }, [g]);
-    let T = (e) => {
+    let S = (e) => {
         e.preventDefault(),
             e.stopPropagation(),
             E(!0),
             v
-                ? (0, l.PF)(h)
+                ? (0, l.PF)(p)
                 : ((0, l.uL)({
-                      url: h,
+                      url: p,
                       src: a,
                       width: t,
                       height: n,
-                      format: p
+                      format: h
                   }),
                   c.S.dispatch(d.CkL.FAVORITE_GIF));
     };
@@ -48,9 +48,9 @@ t.Z = i.memo(function (e) {
                     [_.showPulse]: g
                 }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: T,
+                onClick: S,
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, r.jsx)(S, {
+                children: (0, r.jsx)(b, {
                     color: 'currentColor',
                     className: _.icon
                 })

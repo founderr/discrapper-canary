@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651),
@@ -14,8 +14,8 @@ var r = n(200651),
     d = n(826298),
     f = n(360557);
 let _ = [16, 12, 8, 12];
-function h(e) {
-    let { className: t, channel: n, sections: a, activeCategoryIndex: h, filteredSectionId: p, onSectionClick: m, applicationCommandListRef: g } = e,
+function p(e) {
+    let { className: t, channel: n, sections: a, activeCategoryIndex: p, filteredSectionId: h, onSectionClick: m, applicationCommandListRef: g } = e,
         E = i.useRef(null),
         v = i.useCallback(
             (e, t) => {
@@ -33,7 +33,7 @@ function h(e) {
             },
             [a]
         ),
-        S = i.useCallback(
+        b = i.useCallback(
             (e, t) => {
                 let i = a[t];
                 if (null == i) return;
@@ -43,7 +43,7 @@ function h(e) {
                     _ = (0, r.jsx)(s, {
                         channel: n,
                         section: i,
-                        isSelected: null != p ? i.id === p : h === t,
+                        isSelected: null != h ? i.id === h : p === t,
                         padding: l,
                         width: u,
                         height: u,
@@ -76,7 +76,7 @@ function h(e) {
                     i.id
                 );
             },
-            [h, n, m, a, p]
+            [p, n, m, a, h]
         );
     return 0 === a.length
         ? null
@@ -88,7 +88,7 @@ function h(e) {
                   store: l.Xn,
                   categories: a,
                   className: f.list,
-                  renderCategoryListItem: S,
+                  renderCategoryListItem: b,
                   rowCount: a.length,
                   categoryHeight: v,
                   listPadding: _,

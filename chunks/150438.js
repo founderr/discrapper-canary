@@ -29,16 +29,16 @@ var r = n(198453),
     d = n(366889),
     f = n(867824),
     _ = n(591361),
-    h = n(566022),
-    p = n(46670),
+    p = n(566022),
+    h = n(46670),
     m = n(766203),
     g = n(726983),
     E = n(311300),
     v = n(563947),
     I = n(738279),
-    S = n(92828),
-    T = n(184495),
-    b = n(918629),
+    b = n(92828),
+    S = n(184495),
+    T = n(918629),
     y = n(149901),
     A = n(508833),
     N = n(583620),
@@ -349,7 +349,7 @@ function ef(e) {
     });
 }
 let e_ = (0, k.createContext)(!1);
-function eh(e, t) {
+function ep(e, t) {
     let n = (0, k.useMemo)(() => new ec(t || new eu()), [t]),
         i = (0, k.useCallback)((e) => n.subscribe(e), [n]),
         a = (0, k.useCallback)(() => n.getCollection(), [n]),
@@ -361,7 +361,7 @@ function eh(e, t) {
         collection: s
     };
 }
-function ep(e, t, n) {
+function eh(e, t, n) {
     let r = (0, k.useContext)(e_);
     return ((n = em(t, n, t.children)), r) ? k.createElement(e, { ref: n }) : null;
 }
@@ -379,12 +379,12 @@ let eg = (0, k.forwardRef)(function (e, t) {
     eE = (0, k.createContext)(null),
     ev = (0, k.createContext)(null),
     eI = Symbol('callback'),
-    eS = Symbol('default');
-function eT({ values: e, children: t }) {
+    eb = Symbol('default');
+function eS({ values: e, children: t }) {
     for (let [n, r] of e) t = k.createElement(n.Provider, { value: r }, t);
     return t;
 }
-function eb(e) {
+function eT(e) {
     let { className: t, style: n, children: r, defaultClassName: i, defaultChildren: a, values: s } = e;
     return (0, k.useMemo)(() => {
         let e, o, l;
@@ -402,8 +402,8 @@ function eb(e) {
 function ey(e, t, n) {
     let r = (0, k.useContext)(n) || {};
     if ('slots' in r && r.slots) {
-        if (!e.slot && !r.slots[eS]) throw Error('A slot prop is required');
-        let t = e.slot || eS;
+        if (!e.slot && !r.slots[eb]) throw Error('A slot prop is required');
+        let t = e.slot || eb;
         if (!r.slots[t]) throw Error(`Invalid slot "${e.slot}". Valid slot names are ` + new Intl.ListFormat().format(Object.keys(r.slots).map((e) => `"${e}"`)) + '.');
         r = r.slots[t];
     }
@@ -497,7 +497,7 @@ function ew({ node: e, isCurrent: t, isDisabled: n }) {
             className: null !== (r = e.props.className) && void 0 !== r ? r : 'react-aria-Item'
         },
         k.createElement(
-            eT,
+            eS,
             {
                 values: [
                     [
@@ -589,7 +589,7 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     eX = (0, k.createContext)({}),
     eJ = (0, k.forwardRef)(function (e, t) {
         [e, t] = ey(e, t, eX);
-        let n = ep('header', e, t);
+        let n = eh('header', e, t);
         return n
             ? n
             : k.createElement(
@@ -608,11 +608,11 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
         let { elementType: n, orientation: r, style: i, className: a } = e,
             s = n || 'hr';
         'hr' === s && 'vertical' === r && (s = 'div');
-        let { separatorProps: o } = (0, h.z)({
+        let { separatorProps: o } = (0, p.z)({
                 elementType: n,
                 orientation: r
             }),
-            l = ep('separator', e, t);
+            l = eh('separator', e, t);
         return l
             ? l
             : k.createElement(s, {
@@ -627,7 +627,7 @@ let eM = new Set(['form', 'formAction', 'formEncType', 'formMethod', 'formNoVali
     e1 = (0, k.createContext)(null),
     e2 = (0, k.createContext)(null);
 function e3({ props: e, listBoxRef: t }) {
-    let { portal: n, collection: r } = eh(e);
+    let { portal: n, collection: r } = ep(e);
     e = {
         ...e,
         collection: r,
@@ -654,7 +654,7 @@ function e4({ state: e, props: t, listBoxRef: n }) {
         { collection: u, selectionManager: c } = e,
         d = !!(null == l ? void 0 : l.useDraggableCollectionState),
         f = !!(null == l ? void 0 : l.useDroppableCollectionState),
-        { listBoxProps: _ } = (0, p.co)(
+        { listBoxProps: _ } = (0, h.co)(
             {
                 ...t,
                 shouldSelectOnPressUp: d || t.shouldSelectOnPressUp
@@ -662,7 +662,7 @@ function e4({ state: e, props: t, listBoxRef: n }) {
             e,
             n
         ),
-        h = ed({
+        p = ed({
             items: u,
             children: (e) => {
                 switch (e.type) {
@@ -682,16 +682,16 @@ function e4({ state: e, props: t, listBoxRef: n }) {
     g.current !== d && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), E.current !== f && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
     let v = !1,
         I = null,
-        S = (0, k.useRef)(null);
+        b = (0, k.useRef)(null);
     if (d && l) {
         (r = l.useDraggableCollectionState({
             collection: u,
             selectionManager: c,
-            preview: l.renderDragPreview ? S : void 0
+            preview: l.renderDragPreview ? b : void 0
         })),
             l.useDraggableCollection({}, r, n);
         let e = l.DragPreview;
-        I = l.renderDragPreview ? k.createElement(e, { ref: S }, l.renderDragPreview) : null;
+        I = l.renderDragPreview ? k.createElement(e, { ref: b }, l.renderDragPreview) : null;
     }
     if (f && l) {
         i = l.useDroppableCollectionState({
@@ -710,15 +710,15 @@ function e4({ state: e, props: t, listBoxRef: n }) {
         )),
             (v = i.isDropTarget({ type: 'root' }));
     }
-    let { focusProps: T, isFocused: b, isFocusVisible: y } = (0, s.Fx)(),
-        A = eb({
+    let { focusProps: S, isFocused: T, isFocusVisible: y } = (0, s.Fx)(),
+        A = eT({
             className: t.className,
             style: t.style,
             defaultClassName: 'react-aria-ListBox',
             values: {
                 isDropTarget: v,
                 isEmpty: 0 === e.collection.size,
-                isFocused: b,
+                isFocused: T,
                 isFocusVisible: y
             }
         }),
@@ -741,17 +741,17 @@ function e4({ state: e, props: t, listBoxRef: n }) {
                 'div',
                 {
                     ...(0, P.zL)(t),
-                    ...(0, o.dG)(_, T, null == a ? void 0 : a.collectionProps),
+                    ...(0, o.dG)(_, S, null == a ? void 0 : a.collectionProps),
                     ...A,
                     ref: n,
                     slot: t.slot,
                     'data-drop-target': v || void 0,
                     'data-empty': 0 === e.collection.size || void 0,
-                    'data-focused': b || void 0,
+                    'data-focused': T || void 0,
                     'data-focus-visible': y || void 0
                 },
                 k.createElement(
-                    eT,
+                    eS,
                     {
                         values: [
                             [
@@ -768,7 +768,7 @@ function e4({ state: e, props: t, listBoxRef: n }) {
                             [eq, { render: e7 }]
                         ]
                     },
-                    h
+                    p
                 ),
                 N,
                 I
@@ -780,7 +780,7 @@ function e6({ section: e, className: t, style: n, ...r }) {
     var i, a, s;
     let { state: o } = (0, k.useContext)(e2),
         [l, u] = eA(),
-        { headingProps: c, groupProps: d } = (0, p.TV)({
+        { headingProps: c, groupProps: d } = (0, h.TV)({
             heading: u,
             'aria-label': null !== (s = e['aria-label']) && void 0 !== s ? s : void 0
         }),
@@ -822,9 +822,9 @@ function e6({ section: e, className: t, style: n, ...r }) {
 function e5({ item: e }) {
     let t = (0, P.B3)(e.props.ref),
         { state: n, shouldFocusOnHover: r, dragAndDropHooks: i, dragState: s, dropState: l } = (0, k.useContext)(e2),
-        { optionProps: u, labelProps: c, descriptionProps: d, ...f } = (0, p.Fv)({ key: e.key }, n, t),
-        { hoverProps: _, isHovered: h } = (0, a.XI)({ isDisabled: r || (!f.allowsSelection && !f.hasAction) });
-    r && ((_ = {}), (h = f.isFocused));
+        { optionProps: u, labelProps: c, descriptionProps: d, ...f } = (0, h.Fv)({ key: e.key }, n, t),
+        { hoverProps: _, isHovered: p } = (0, a.XI)({ isDisabled: r || (!f.allowsSelection && !f.hasAction) });
+    r && ((_ = {}), (p = f.isFocused));
     let m = null;
     s && i && (m = i.useDraggableItem({ key: e.key }, s));
     let g = null;
@@ -843,14 +843,14 @@ function e5({ item: e }) {
         ));
     let E = e.props,
         v = s && s.isDragging(e.key),
-        I = eb({
+        I = eT({
             ...E,
             id: void 0,
             children: e.rendered,
             defaultClassName: 'react-aria-Item',
             values: {
                 ...f,
-                isHovered: h,
+                isHovered: p,
                 selectionMode: n.selectionManager.selectionMode,
                 selectionBehavior: n.selectionManager.selectionBehavior,
                 allowsDragging: !!s,
@@ -858,7 +858,7 @@ function e5({ item: e }) {
                 isDropTarget: null == g ? void 0 : g.isDropTarget
             }
         }),
-        S = (null == i ? void 0 : i.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e }));
+        b = (null == i ? void 0 : i.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e }));
     return (
         (0, k.useEffect)(() => {
             !e.textValue && console.warn('A `textValue` prop is required for <Item> elements with non-plain text children in order to support accessibility features such as type to select.');
@@ -867,7 +867,7 @@ function e5({ item: e }) {
             k.Fragment,
             null,
             (null == i ? void 0 : i.useDropIndicator) &&
-                S({
+                b({
                     type: 'item',
                     key: e.key,
                     dropPosition: 'before'
@@ -878,7 +878,7 @@ function e5({ item: e }) {
                     ...(0, o.dG)((0, P.zL)(E), u, _, null == m ? void 0 : m.dragProps, null == g ? void 0 : g.dropProps),
                     ...I,
                     ref: t,
-                    'data-hovered': h || void 0,
+                    'data-hovered': p || void 0,
                     'data-focused': f.isFocused || void 0,
                     'data-focus-visible': f.isFocusVisible || void 0,
                     'data-pressed': f.isPressed || void 0,
@@ -886,7 +886,7 @@ function e5({ item: e }) {
                     'data-drop-target': (null == g ? void 0 : g.isDropTarget) || void 0
                 },
                 k.createElement(
-                    eT,
+                    eS,
                     {
                         values: [
                             [
@@ -905,7 +905,7 @@ function e5({ item: e }) {
             ),
             (null == i ? void 0 : i.useDropIndicator) &&
                 null == n.collection.getKeyAfter(e.key) &&
-                S({
+                b({
                     type: 'item',
                     key: e.key,
                     dropPosition: 'after'
@@ -928,7 +928,7 @@ function e7(e, t) {
 }
 let e8 = (0, k.forwardRef)(function (e, t) {
         let { dropIndicatorProps: n, isDropTarget: r, ...i } = e,
-            a = eb({
+            a = eT({
                 ...i,
                 defaultClassName: 'react-aria-DropIndicator',
                 values: { isDropTarget: r }
@@ -959,7 +959,7 @@ function tt({ state: e, isExiting: t, ...n }) {
         ),
         l = n.popoverRef,
         u = eN(l, !!o),
-        c = eb({
+        c = eT({
             ...n,
             defaultClassName: 'react-aria-Popover',
             values: {
@@ -1041,7 +1041,7 @@ function tc(e) {
         { state: n } = e,
         { modalProps: r, underlayProps: i } = (0, g.NE)(e, n, t),
         a = eN(e.overlayRef),
-        s = eb({
+        s = eT({
             ...e,
             defaultClassName: 'react-aria-ModalOverlay',
             values: {
@@ -1088,7 +1088,7 @@ function td(e) {
         s = (0, k.useMemo)(() => (0, P.lq)(e.modalRef, n), [e.modalRef, n]),
         o = (0, P.B3)(s),
         l = eN(o),
-        u = eb({
+        u = eT({
             ...e,
             defaultClassName: 'react-aria-Modal',
             values: {
@@ -1111,8 +1111,8 @@ function td(e) {
 }
 let tf = (0, k.createContext)(null),
     t_ = (0, k.createContext)({}),
-    th = (0, k.createContext)(null),
     tp = (0, k.createContext)(null),
+    th = (0, k.createContext)(null),
     tm = (0, k.createContext)(null),
     tg = (0, k.createContext)(null);
 function tE({ item: e }) {
@@ -1123,7 +1123,7 @@ function tE({ item: e }) {
             gridCellProps: c,
             descriptionProps: d,
             ..._
-        } = (0, S.Fb)(
+        } = (0, b.Fb)(
             {
                 node: e,
                 shouldSelectOnPressUp: !!r
@@ -1131,9 +1131,9 @@ function tE({ item: e }) {
             t,
             l
         ),
-        { hoverProps: h, isHovered: p } = (0, a.XI)({ isDisabled: !_.allowsSelection && !_.hasAction }),
+        { hoverProps: p, isHovered: h } = (0, a.XI)({ isDisabled: !_.allowsSelection && !_.hasAction }),
         { isFocusVisible: m, focusProps: g } = (0, s.Fx)(),
-        { checkboxProps: E } = (0, S.fQ)({ key: e.key }, t),
+        { checkboxProps: E } = (0, b.fQ)({ key: e.key }, t),
         v = null;
     r &&
         n &&
@@ -1145,8 +1145,8 @@ function tE({ item: e }) {
             r
         ));
     let I = null,
-        T = (0, k.useRef)(null),
-        { visuallyHiddenProps: b } = (0, f.S)();
+        S = (0, k.useRef)(null),
+        { visuallyHiddenProps: T } = (0, f.S)();
     i &&
         n &&
         (I = n.useDropIndicator(
@@ -1158,18 +1158,18 @@ function tE({ item: e }) {
                 }
             },
             i,
-            T
+            S
         ));
     let y = e.props,
         A = r && r.isDragging(e.key),
-        N = eb({
+        N = eT({
             ...y,
             id: void 0,
             children: e.rendered,
             defaultClassName: 'react-aria-Item',
             values: {
                 ..._,
-                isHovered: p,
+                isHovered: h,
                 isFocusVisible: m,
                 selectionMode: t.selectionManager.selectionMode,
                 selectionBehavior: t.selectionManager.selectionBehavior,
@@ -1209,19 +1209,19 @@ function tE({ item: e }) {
                         { role: 'gridcell' },
                         k.createElement('div', {
                             role: 'button',
-                            ...b,
+                            ...T,
                             ...(null == I ? void 0 : I.dropIndicatorProps),
-                            ref: T
+                            ref: S
                         })
                     )
                 ),
             k.createElement(
                 'div',
                 {
-                    ...(0, o.dG)((0, P.zL)(y), u, g, h, null == v ? void 0 : v.dragProps),
+                    ...(0, o.dG)((0, P.zL)(y), u, g, p, null == v ? void 0 : v.dragProps),
                     ...N,
                     ref: l,
-                    'data-hovered': p || void 0,
+                    'data-hovered': h || void 0,
                     'data-focused': _.isFocused || void 0,
                     'data-focus-visible': m || void 0,
                     'data-pressed': _.isPressed || void 0,
@@ -1232,7 +1232,7 @@ function tE({ item: e }) {
                     'div',
                     c,
                     k.createElement(
-                        eT,
+                        eS,
                         {
                             values: [
                                 [eK, E],
@@ -1240,7 +1240,7 @@ function tE({ item: e }) {
                                     eP,
                                     {
                                         slots: {
-                                            [eS]: {},
+                                            [eb]: {},
                                             drag: {
                                                 ...(null == v ? void 0 : v.dragButtonProps),
                                                 ref: R,
@@ -1284,7 +1284,7 @@ function tv(e, t) {
 let tI = (0, k.forwardRef)(function (e, t) {
     let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
         { visuallyHiddenProps: s } = (0, f.S)(),
-        o = eb({
+        o = eT({
             ...a,
             defaultClassName: 'react-aria-DropIndicator',
             values: { isDropTarget: r }
@@ -1309,7 +1309,7 @@ let tI = (0, k.forwardRef)(function (e, t) {
         )
     );
 });
-function tS() {
+function tb() {
     let { dragAndDropHooks: e, dropState: t } = (0, k.useContext)(tg),
         n = (0, k.useRef)(null),
         { dropIndicatorProps: r } = e.useDropIndicator({ target: { type: 'root' } }, t, n),
@@ -1336,8 +1336,8 @@ function tS() {
               )
           );
 }
-let tT = (0, k.createContext)({}),
-    tb = (0, k.createContext)(null),
+let tS = (0, k.createContext)({}),
+    tT = (0, k.createContext)(null),
     ty = (0, k.createContext)(null);
 function tA({ props: e, collection: t, menuRef: n }) {
     var r;
@@ -1346,7 +1346,7 @@ function tA({ props: e, collection: t, menuRef: n }) {
             collection: t,
             children: void 0
         }),
-        { menuProps: a } = (0, T.H9)(e, i, n),
+        { menuProps: a } = (0, S.H9)(e, i, n),
         s = ed({
             items: i.collection,
             children: (e) => {
@@ -1373,7 +1373,7 @@ function tA({ props: e, collection: t, menuRef: n }) {
             className: null !== (r = e.className) && void 0 !== r ? r : 'react-aria-Menu'
         },
         k.createElement(
-            eT,
+            eS,
             {
                 values: [
                     [ty, i],
@@ -1388,7 +1388,7 @@ function tN({ section: e, className: t, style: n, ...r }) {
     var i, a, s;
     let o = (0, k.useContext)(ty),
         [l, u] = eA(),
-        { headingProps: c, groupProps: d } = (0, T.x7)({
+        { headingProps: c, groupProps: d } = (0, S.x7)({
             heading: u,
             'aria-label': null !== (s = e['aria-label']) && void 0 !== s ? s : void 0
         }),
@@ -1430,10 +1430,10 @@ function tN({ section: e, className: t, style: n, ...r }) {
 function tC({ item: e }) {
     let t = (0, k.useContext)(ty),
         n = (0, P.B3)(e.props.ref),
-        { menuItemProps: r, labelProps: i, descriptionProps: a, keyboardShortcutProps: l, ...u } = (0, T.iX)({ key: e.key }, t, n),
+        { menuItemProps: r, labelProps: i, descriptionProps: a, keyboardShortcutProps: l, ...u } = (0, S.iX)({ key: e.key }, t, n),
         c = e.props,
         { isFocusVisible: d, focusProps: f } = (0, s.Fx)(),
-        _ = eb({
+        _ = eT({
             ...c,
             id: void 0,
             children: e.rendered,
@@ -1446,13 +1446,13 @@ function tC({ item: e }) {
                 selectionBehavior: t.selectionManager.selectionBehavior
             }
         }),
-        h = (0, P.zL)(c);
+        p = (0, P.zL)(c);
     return (
-        delete h.id,
+        delete p.id,
         k.createElement(
             'div',
             {
-                ...(0, o.dG)(h, r, f),
+                ...(0, o.dG)(p, r, f),
                 ..._,
                 ref: n,
                 'data-hovered': u.isFocused || void 0,
@@ -1461,7 +1461,7 @@ function tC({ item: e }) {
                 'data-pressed': u.isPressed || void 0
             },
             k.createElement(
-                eT,
+                eS,
                 {
                     values: [
                         [
@@ -1473,7 +1473,7 @@ function tC({ item: e }) {
                                 }
                             }
                         ],
-                        [tT, l]
+                        [tS, l]
                     ]
                 },
                 _.children
@@ -1575,7 +1575,7 @@ let tF = (0, k.createContext)(null),
     tj = (0, k.forwardRef)(function (e, t) {
         let n, r, i;
         [e, t] = ey(e, t, tF);
-        let { portal: a, collection: l } = eh(
+        let { portal: a, collection: l } = ep(
                 e,
                 (0, k.useMemo)(() => new tZ(), [])
             ),
@@ -1588,10 +1588,10 @@ let tF = (0, k.createContext)(null),
             { dragAndDropHooks: d } = e,
             f = u.selectionManager,
             _ = !!(null == d ? void 0 : d.useDraggableCollectionState),
-            h = !!(null == d ? void 0 : d.useDroppableCollectionState),
-            p = (0, k.useRef)(_),
-            g = (0, k.useRef)(h);
-        p.current !== _ && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), g.current !== h && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
+            p = !!(null == d ? void 0 : d.useDroppableCollectionState),
+            h = (0, k.useRef)(_),
+            g = (0, k.useRef)(p);
+        h.current !== _ && console.warn('Drag hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.'), g.current !== p && console.warn('Drop hooks were provided during one render, but not another. This should be avoided as it may produce unexpected behavior.');
         let E = !1,
             v = null,
             I = (0, k.useRef)(null);
@@ -1605,7 +1605,7 @@ let tF = (0, k.createContext)(null),
             let e = d.DragPreview;
             v = d.renderDragPreview ? k.createElement(e, { ref: I }, d.renderDragPreview) : null;
         }
-        if (h && d) {
+        if (p && d) {
             r = d.useDroppableCollectionState({
                 collection: l,
                 selectionManager: f
@@ -1622,15 +1622,15 @@ let tF = (0, k.createContext)(null),
             )),
                 (E = r.isDropTarget({ type: 'root' }));
         }
-        let { focusProps: S, isFocused: T, isFocusVisible: b } = (0, s.Fx)(),
-            y = eb({
+        let { focusProps: b, isFocused: S, isFocusVisible: T } = (0, s.Fx)(),
+            y = eT({
                 className: e.className,
                 style: e.style,
                 defaultClassName: 'react-aria-Table',
                 values: {
                     isDropTarget: E,
-                    isFocused: T,
-                    isFocusVisible: b
+                    isFocused: S,
+                    isFocusVisible: T
                 }
             }),
             { selectionBehavior: A, selectionMode: N, disallowEmptySelection: C } = u.selectionManager,
@@ -1647,7 +1647,7 @@ let tF = (0, k.createContext)(null),
             k.Fragment,
             null,
             k.createElement(
-                eT,
+                eS,
                 {
                     values: [
                         [
@@ -1670,17 +1670,17 @@ let tF = (0, k.createContext)(null),
                         {
                             ...(0, P.zL)(e),
                             ...y,
-                            ...(0, o.dG)(c, S, null == i ? void 0 : i.collectionProps),
+                            ...(0, o.dG)(c, b, null == i ? void 0 : i.collectionProps),
                             ref: t,
                             slot: e.slot,
                             'data-drop-target': E || void 0,
-                            'data-focused': T || void 0,
-                            'data-focus-visible': b || void 0
+                            'data-focused': S || void 0,
+                            'data-focus-visible': T || void 0
                         },
                         k.createElement(tQ, { collection: l }),
                         k.createElement(tX, {
                             collection: l,
-                            isDroppable: h
+                            isDroppable: p
                         })
                     )
                 ),
@@ -1756,7 +1756,7 @@ function tX({ collection: e, isDroppable: t }) {
             }, [])
         }),
         i = e.body.props,
-        a = eb({
+        a = eT({
             ...i,
             id: void 0,
             children: void 0,
@@ -1810,7 +1810,7 @@ function tJ({ item: e }) {
             ref: t
         },
         k.createElement(
-            eT,
+            eS,
             {
                 values: [[eK, { slots: { selection: i } }]]
             },
@@ -1825,7 +1825,7 @@ function t$({ column: e }) {
         { columnHeaderProps: i } = (0, L.WY)({ node: e }, r, n),
         { isFocused: a, isFocusVisible: l, focusProps: u } = (0, s.Fx)(),
         c = e.props,
-        d = eb({
+        d = eT({
             ...c,
             id: void 0,
             children: e.rendered,
@@ -1863,7 +1863,7 @@ function t0({ item: e }) {
             i,
             r
         ),
-        { isFocused: h, isFocusVisible: p, focusProps: m } = (0, s.Fx)(),
+        { isFocused: p, isFocusVisible: h, focusProps: m } = (0, s.Fx)(),
         { hoverProps: g, isHovered: E } = (0, a.XI)({ isDisabled: !_.allowsSelection && !_.hasAction }),
         { checkboxProps: v } = (0, L.M$)({ key: e.key }, i);
     u &&
@@ -1876,7 +1876,7 @@ function t0({ item: e }) {
             u
         ));
     let I = (0, k.useRef)(null),
-        { visuallyHiddenProps: S } = (0, f.S)();
+        { visuallyHiddenProps: b } = (0, f.S)();
     c &&
         l &&
         (n = l.useDropIndicator(
@@ -1890,22 +1890,22 @@ function t0({ item: e }) {
             c,
             I
         ));
-    let T = (null == l ? void 0 : l.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e })),
-        b = (0, k.useRef)(null);
+    let S = (null == l ? void 0 : l.renderDropIndicator) || ((e) => k.createElement(eQ, { target: e })),
+        T = (0, k.useRef)(null);
     (0, k.useEffect)(() => {
-        u && !b.current && console.warn('Draggable items in a Table must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.');
+        u && !T.current && console.warn('Draggable items in a Table must contain a <Button slot="drag"> element so that keyboard and screen reader users can drag them.');
     }, []);
     let y = e.props,
         A = u && u.isDragging(e.key),
-        N = eb({
+        N = eT({
             ...y,
             id: void 0,
             defaultClassName: 'react-aria-Row',
             values: {
                 ..._,
                 isHovered: E,
-                isFocused: h,
-                isFocusVisible: p,
+                isFocused: p,
+                isFocusVisible: h,
                 selectionMode: i.selectionManager.selectionMode,
                 selectionBehavior: i.selectionManager.selectionBehavior,
                 isDragging: A,
@@ -1923,7 +1923,7 @@ function t0({ item: e }) {
         k.Fragment,
         null,
         (null == l ? void 0 : l.useDropIndicator) &&
-            T({
+            S({
                 type: 'item',
                 key: e.key,
                 dropPosition: 'before'
@@ -1945,7 +1945,7 @@ function t0({ item: e }) {
                     },
                     k.createElement('div', {
                         role: 'button',
-                        ...S,
+                        ...b,
                         ...n.dropIndicatorProps,
                         ref: I
                     })
@@ -1959,13 +1959,13 @@ function t0({ item: e }) {
                 ref: r,
                 'data-hovered': E || void 0,
                 'data-focused': _.isFocused || void 0,
-                'data-focus-visible': p || void 0,
+                'data-focus-visible': h || void 0,
                 'data-pressed': _.isPressed || void 0,
                 'data-dragging': A || void 0,
                 'data-drop-target': (null == n ? void 0 : n.isDropTarget) || void 0
             },
             k.createElement(
-                eT,
+                eS,
                 {
                     values: [
                         [eK, { slots: { selection: v } }],
@@ -1973,10 +1973,10 @@ function t0({ item: e }) {
                             eP,
                             {
                                 slots: {
-                                    [eS]: {},
+                                    [eb]: {},
                                     drag: {
                                         ...(null == t ? void 0 : t.dragButtonProps),
-                                        ref: b,
+                                        ref: T,
                                         style: { pointerEvents: 'none' }
                                     }
                                 }
@@ -1989,7 +1989,7 @@ function t0({ item: e }) {
         ),
         (null == l ? void 0 : l.useDropIndicator) &&
             null == i.collection.getKeyAfter(e.key) &&
-            T({
+            S({
                 type: 'item',
                 key: e.key,
                 dropPosition: 'after'
@@ -2010,7 +2010,7 @@ function t1({ cell: e }) {
         ),
         { isFocused: l, isFocusVisible: u, focusProps: c } = (0, s.Fx)(),
         d = e.props,
-        f = eb({
+        f = eT({
             ...d,
             id: void 0,
             defaultClassName: 'react-aria-Cell',
@@ -2052,7 +2052,7 @@ let t3 = (0, k.forwardRef)(function (e, t) {
     let { dropIndicatorProps: n, isDropTarget: r, buttonRef: i, ...a } = e,
         { state: s } = (0, k.useContext)(tV),
         { visuallyHiddenProps: o } = (0, f.S)(),
-        l = eb({
+        l = eT({
             ...a,
             defaultClassName: 'react-aria-DropIndicator',
             values: { isDropTarget: r }
@@ -2120,8 +2120,8 @@ function t7({ item: e, state: t }) {
         r = (0, P.B3)(e.props.ref),
         { tabProps: i, isSelected: l, isDisabled: u, isPressed: c } = (0, x.xD)({ key: n }, t, r),
         { focusProps: d, isFocused: f, isFocusVisible: _ } = (0, s.Fx)(),
-        { hoverProps: h, isHovered: p } = (0, a.XI)({ isDisabled: u }),
-        m = eb({
+        { hoverProps: p, isHovered: h } = (0, a.XI)({ isDisabled: u }),
+        m = eT({
             ...e.props,
             children: e.rendered,
             defaultClassName: 'react-aria-Tab',
@@ -2131,18 +2131,18 @@ function t7({ item: e, state: t }) {
                 isFocused: f,
                 isFocusVisible: _,
                 isPressed: c,
-                isHovered: p
+                isHovered: h
             }
         }),
         g = (0, P.zL)(e.props);
     return (
         delete g.id,
         k.createElement('div', {
-            ...(0, o.dG)(g, i, d, h, m),
+            ...(0, o.dG)(g, i, d, p, m),
             ref: r,
             'data-focus-visible': _ || void 0,
             'data-pressed': c || void 0,
-            'data-hovered': p || void 0
+            'data-hovered': h || void 0
         })
     );
 }
@@ -2165,7 +2165,7 @@ function nt(e) {
             isOpen: t.isOpen
         }),
         u = eN(i, !!l),
-        c = eb({
+        c = eT({
             ...e,
             defaultClassName: 'react-aria-Tooltip',
             values: {

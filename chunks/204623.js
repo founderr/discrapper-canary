@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return T;
+        return S;
     }
 }),
     n(47120);
@@ -15,15 +15,15 @@ var r = n(200651),
     d = n(596454),
     f = n(406128),
     _ = n(451478),
-    h = n(176354),
-    p = n(63063),
+    p = n(176354),
+    h = n(63063),
     m = n(358085),
     g = n(998502),
     E = n(151851),
     v = n(981631),
     I = n(388032);
-let S = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
-class T extends i.PureComponent {
+let b = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+class S extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
@@ -46,7 +46,7 @@ class T extends i.PureComponent {
                         I.intl.string(I.t['4tRjHB']),
                         ' ',
                         (0, r.jsx)(d.Z, {
-                            src: h.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
+                            src: p.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
                         })
@@ -61,7 +61,7 @@ class T extends i.PureComponent {
         return (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(v.BRd.DARK) }) }),
-                (0, r.jsx)(S, { type: this.getPlatform() }),
+                (0, r.jsx)(b, { type: this.getPlatform() }),
                 (0, r.jsx)(f.Z, {
                     title: I.intl.string(I.t['3h+n+/']),
                     note: e,
@@ -76,7 +76,7 @@ class T extends i.PureComponent {
             (t = this),
             (n = 'handleDownload'),
             (r = () => {
-                window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? p.Z.getArticleURL(v.BhN.CORRUPT_INSTALLATION) : v.EYA.DOWNLOAD);
+                window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? h.Z.getArticleURL(v.BhN.CORRUPT_INSTALLATION) : v.EYA.DOWNLOAD);
             }),
             n in t
                 ? Object.defineProperty(t, n, {

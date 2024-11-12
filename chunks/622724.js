@@ -1,9 +1,9 @@
 n.d(t, {
     T: function () {
-        return p;
+        return h;
     },
     Z: function () {
-        return h;
+        return p;
     }
 });
 var r = n(200651);
@@ -18,11 +18,11 @@ var i = n(442837),
     d = n(594174),
     f = n(981631),
     _ = n(388032);
-function h(e) {
-    let { user: t, guildId: n, color: o, onAction: d, location: h = s.Z.CONTEXT_MENU } = e,
-        p = (0, u.oV)(h),
+function p(e) {
+    let { user: t, guildId: n, color: o, onAction: d, location: p = s.Z.CONTEXT_MENU } = e,
+        h = (0, u.oV)(p),
         m = (0, i.e7)([c.default], () => c.default.getId() === t.id);
-    return !p || m || t.isNonUserBot()
+    return !h || m || t.isNonUserBot()
         ? null
         : (0, r.jsx)(a.MenuItem, {
               id: 'report-user',
@@ -31,7 +31,7 @@ function h(e) {
               action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d)
           });
 }
-function p(e) {
+function h(e) {
     let { user: t, guildId: n, color: s, onAction: u } = e,
         c = (0, i.e7)([o.ZP], () => o.ZP.get('iar_testing')),
         _ = (0, i.e7)([d.default], () => d.default.getCurrentUser());

@@ -33,24 +33,24 @@ var r = n(505388),
         for (_ = 0; _ < c.length; ++_) {
             if (_ !== d) {
                 var _,
-                    h,
                     p,
+                    h,
                     m = c[_],
                     g = m.indexOf(']='),
                     E = -1 === g ? m.indexOf('=') : g + 1;
                 if (
                     (-1 === E
-                        ? ((h = t.decoder(m, s.decoder, f, 'key')), (p = t.strictNullHandling ? null : ''))
-                        : ((h = t.decoder(m.slice(0, E), s.decoder, f, 'key')),
-                          (p = r.maybeMap(o(m.slice(E + 1), t), function (e) {
+                        ? ((p = t.decoder(m, s.decoder, f, 'key')), (h = t.strictNullHandling ? null : ''))
+                        : ((p = t.decoder(m.slice(0, E), s.decoder, f, 'key')),
+                          (h = r.maybeMap(o(m.slice(E + 1), t), function (e) {
                               return t.decoder(e, s.decoder, f, 'value');
                           }))),
-                    p && t.interpretNumericEntities && 'iso-8859-1' === f)
+                    h && t.interpretNumericEntities && 'iso-8859-1' === f)
                 )
-                    p = p.replace(/&#(\d+);/g, function (e, t) {
+                    h = h.replace(/&#(\d+);/g, function (e, t) {
                         return String.fromCharCode(parseInt(t, 10));
                     });
-                m.indexOf('[]=') > -1 && (p = a(p) ? [p] : p), i.call(n, h) ? (n[h] = r.combine(n[h], p)) : (n[h] = p);
+                m.indexOf('[]=') > -1 && (h = a(h) ? [h] : h), i.call(n, p) ? (n[p] = r.combine(n[p], h)) : (n[p] = h);
             }
         }
         return n;

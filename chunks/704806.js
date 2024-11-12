@@ -42,10 +42,10 @@ async function _() {
             };
             o.default.track(n, t), ((d = { hashes: { ...d.hashes } }).hashes[n] = r);
         }
-        t.length > 0 && p.emitChange();
+        t.length > 0 && h.emitChange();
     } catch (e) {}
 }
-class h extends (r = i.ZP.PersistedStore) {
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (d = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.Z);
     }
@@ -60,12 +60,12 @@ class h extends (r = i.ZP.PersistedStore) {
         } catch (e) {}
     }
 }
-c(h, 'displayName', 'SystemAnalyticsStore'), c(h, 'persistKey', 'SystemAnalyticsStore');
-let p = new h(a.Z, {
+c(p, 'displayName', 'SystemAnalyticsStore'), c(p, 'persistKey', 'SystemAnalyticsStore');
+let h = new p(a.Z, {
     START_SESSION: function () {
         return _(), !1;
     }
 });
 function m() {
-    return p.info();
+    return h.info();
 }

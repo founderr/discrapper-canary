@@ -17,9 +17,9 @@ function l(e) {
             return e.length > 0 ? i.Z.get(e[0]) : null;
         }),
         _ = null == f ? [] : (0, a.DE)(f.id, c, d),
-        h = null !== (n = null !== (t = _.find((e) => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : _[0]) && void 0 !== n ? n : o.pK.USD;
+        p = null !== (n = null !== (t = _.find((e) => e === (null == l ? void 0 : l.currency))) && void 0 !== t ? t : _[0]) && void 0 !== n ? n : o.pK.USD;
     return {
-        ...(0, a.gr)(h, null == f ? void 0 : f.id, c, d, u),
+        ...(0, a.gr)(p, null == f ? void 0 : f.id, c, d, u),
         currencies: _
     };
 }

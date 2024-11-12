@@ -12,10 +12,10 @@ n.d(t, {
         return W;
     },
     Ev: function () {
-        return b;
+        return T;
     },
     Fr: function () {
-        return T;
+        return S;
     },
     Fu: function () {
         return Y;
@@ -75,7 +75,7 @@ n.d(t, {
         return c;
     },
     cc: function () {
-        return S;
+        return b;
     },
     eB: function () {
         return z;
@@ -129,16 +129,16 @@ var r,
     d,
     f,
     _,
-    h,
     p,
+    h,
     m,
     g,
     E,
     v = n(911969),
     I = n(981631);
-let S = 160,
-    T = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    b = '438122941302046720',
+let b = 160,
+    S = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+    T = '438122941302046720',
     y = '773336526917861400',
     A = '880218832743055411',
     N = '1050941315912835122',
@@ -168,7 +168,7 @@ let S = 160,
     },
     z = ['in_development', 'activities_team', 'employee_release'],
     q = [F, '235088799074484224', R, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'];
-((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((f = i || (i = {}))[(f.PLAY = 0)] = 'PLAY'), (f[(f.SPECTATE = 1)] = 'SPECTATE'), ((_ = a || (a = {})).DESKTOP = 'desktop'), (_.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((m = l || (l = {}))[(m.DIRECTORY = 0)] = 'DIRECTORY'), (m[(m.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (m[(m.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
+((d = r || (r = {})).ADS = 'ADS'), (d.FAILED_LOAD = 'FAILED_LOAD'), (d.LAGGING = 'LAGGING'), (d.CONFUSING = 'CONFUSING'), (d.NOT_FUN = 'NOT_FUN'), (d.OTHER = 'OTHER'), ((f = i || (i = {}))[(f.PLAY = 0)] = 'PLAY'), (f[(f.SPECTATE = 1)] = 'SPECTATE'), ((_ = a || (a = {})).DESKTOP = 'desktop'), (_.MOBILE = 'mobile'), ((p = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (p.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (p.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (p.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((h = o || (o = {}))[(h.UNLOCKED = 1)] = 'UNLOCKED'), (h[(h.PORTRAIT = 2)] = 'PORTRAIT'), (h[(h.LANDSCAPE = 3)] = 'LANDSCAPE'), ((m = l || (l = {}))[(m.DIRECTORY = 0)] = 'DIRECTORY'), (m[(m.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (m[(m.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let Q = 'activity-shelf',
     X = new Set(['755600276941176913', A, N, x]),
     J = new Set([A, N, x]);

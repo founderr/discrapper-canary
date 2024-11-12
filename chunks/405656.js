@@ -1,6 +1,6 @@
 n.d(t, {
     $G: function () {
-        return p;
+        return h;
     },
     BU: function () {
         return v;
@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     WU: function () {
-        return b;
+        return T;
     },
     cl: function () {
         return I;
@@ -27,10 +27,10 @@ n.d(t, {
         return m;
     },
     jW: function () {
-        return h;
+        return p;
     },
     kG: function () {
-        return T;
+        return S;
     },
     qc: function () {
         return g;
@@ -77,13 +77,13 @@ let _ = {
     [c.dCx.FILTER_AFTER]: !0,
     [c.dCx.FILTER_ON]: !0
 };
-function h(e, t) {
+function p(e, t) {
     if (o.Z.didAgree(t)) {
         let t = l.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function p(e) {
+function h(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
@@ -213,12 +213,12 @@ function v(e) {
 function I(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let S = new a.ZP();
-function T(e) {
-    return S.tokenize(e);
+let b = new a.ZP();
+function S(e) {
+    return b.tokenize(e);
 }
-function b() {
-    return S.clearCache();
+function T() {
+    return b.clearCache();
 }
 function y(e) {
     return null != e ? _[e] : null;
@@ -229,9 +229,9 @@ function A(e, t) {
 }
 function N() {
     (0, s.Pe)(),
-        S.reset(),
+        b.reset(),
         i()(s.ZP).forOwn((e, t) =>
-            S.addRule({
+            b.addRule({
                 type: t,
                 ...e
             })

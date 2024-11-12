@@ -12,7 +12,7 @@ let l = (e) => {
     }, [l]);
     let d = t.name,
         { title: f, options: _ } = t.data,
-        h = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 null != e && (c(e), n(e));
             },
@@ -40,7 +40,7 @@ let l = (e) => {
                     }),
                 (0, r.jsx)(a.SingleSelect, {
                     value: u,
-                    onChange: h,
+                    onChange: p,
                     options: _
                 })
             ]

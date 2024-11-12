@@ -3,10 +3,10 @@ n.d(t, {
         return v;
     },
     Gm: function () {
-        return S;
+        return b;
     },
     T4: function () {
-        return p;
+        return h;
     },
     r1: function () {
         return d;
@@ -235,7 +235,7 @@ class f extends o.C {
     }
 }
 let _ = new f();
-class h extends o.C {
+class p extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(5, e.value, 'value', !1, !0);
     }
@@ -284,7 +284,7 @@ class h extends o.C {
         ]);
     }
 }
-let p = new h();
+let h = new p();
 class m extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(13, e.value, 'value', !1, !0);
@@ -434,8 +434,8 @@ class I extends o.C {
         ]);
     }
 }
-let S = new I();
-class T extends o.C {
+let b = new I();
+class S extends o.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(12, e.value, 'value', !1, !0);
     }
@@ -484,4 +484,4 @@ class T extends o.C {
         ]);
     }
 }
-new T();
+new S();

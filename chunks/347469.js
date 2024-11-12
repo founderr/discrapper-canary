@@ -15,14 +15,14 @@ function u(e) {
 }
 ((a = r || (r = {}))[(a.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (a[(a.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (a[(a.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (a[(a.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT'), ((s = i || (i = {}))[(s.VERTICAL = 0)] = 'VERTICAL'), (s[(s.HORIZONTAL = 1)] = 'HORIZONTAL');
 t.Z = (e) => {
-    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: r, minDimension: i, onElementResize: a, onElementResizeStart: s, onElementResizeEnd: c, throttleDuration: d = 300, orientation: f, usePointerEvents: _ = !1, getClampedValue: h = l.clamp } = e,
-        [p, m] = o.useState(!1),
+    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: r, minDimension: i, onElementResize: a, onElementResizeStart: s, onElementResizeEnd: c, throttleDuration: d = 300, orientation: f, usePointerEvents: _ = !1, getClampedValue: p = l.clamp } = e,
+        [h, m] = o.useState(!1),
         g = o.useRef(0),
         E = o.useRef(!1),
         v = o.useRef(null == t ? 0 : t);
     return (
         o.useLayoutEffect(() => {
-            if (!p || null == n.current) return;
+            if (!h || null == n.current) return;
             function e(e) {
                 let t = 1 === u(f) ? e.screenX : e.screenY,
                     n = 0 === f || 2 === f,
@@ -30,7 +30,7 @@ t.Z = (e) => {
                 return v.current + r;
             }
             function t(e) {
-                return h(e, null != i ? i : 0, null != r ? r : e);
+                return p(e, null != i ? i : 0, null != r ? r : e);
             }
             let o = (0, l.throttle)(a, d),
                 I = (r) => {
@@ -40,23 +40,23 @@ t.Z = (e) => {
                         l = 1 === u(f) ? 'width' : 'height';
                     (n.current.style[l] = ''.concat(a, 'px')), !E.current && ((E.current = !0), null == s || s(a)), o(a, i);
                 },
-                S = (n) => {
+                b = (n) => {
                     m(!1);
                     let r = e(n),
                         i = t(r);
                     a(i, r), null == c || c(i), (E.current = !1);
                 },
-                T = _ ? 'pointerup' : 'mouseup',
-                b = _ ? 'pointermove' : 'mousemove',
+                S = _ ? 'pointerup' : 'mouseup',
+                T = _ ? 'pointermove' : 'mousemove',
                 y = n.current.ownerDocument;
             return (
-                y.addEventListener(T, S),
-                y.addEventListener(b, I),
+                y.addEventListener(S, b),
+                y.addEventListener(T, I),
                 () => {
-                    y.removeEventListener(T, S), y.removeEventListener(b, I), o.cancel();
+                    y.removeEventListener(S, b), y.removeEventListener(T, I), o.cancel();
                 }
             );
-        }, [p, a, i, r, f, n, d, c, _, h, s]),
+        }, [h, a, i, r, f, n, d, c, _, p, s]),
         o.useCallback(
             (e) => {
                 let t = 1 === u(f);

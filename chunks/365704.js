@@ -1,9 +1,9 @@
 n.d(t, {
     R: function () {
-        return h;
+        return p;
     },
     W: function () {
-        return p;
+        return h;
     }
 });
 var r = n(590921),
@@ -17,8 +17,8 @@ var r = n(590921),
     d = n(65090),
     f = n(591236),
     _ = n(233577);
-let h = [r.eq.CHOICES, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
-    p = {
+let p = [r.eq.CHOICES, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
+    h = {
         [r.eq.CHANNELS]: i.Z,
         [r.eq.COMMANDS]: a.Z,
         [r.eq.COMMAND_OPTIONS]: o.Z,

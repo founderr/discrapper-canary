@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return p;
     }
 }),
     n(47120);
@@ -15,34 +15,34 @@ var r = n(200651),
     d = n(848966),
     f = n(388032),
     _ = n(676411);
-function h(e) {
-    let { user: t, activity: n, entry: a, display: h, className: p, onSelect: m, onClose: g, onRequestOpen: E } = e,
+function p(e) {
+    let { user: t, activity: n, entry: a, display: p, className: h, onSelect: m, onClose: g, onRequestOpen: E } = e,
         [v, I] = i.useState(!1),
-        { analyticsLocations: S } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        T = (0, c.Z)({
-            display: h,
+        { analyticsLocations: b } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        S = (0, c.Z)({
+            display: p,
             user: t,
             activity: n,
             entry: a,
-            analyticsLocations: S
+            analyticsLocations: b
         }),
-        b = (0, d.Z)({
+        T = (0, d.Z)({
             entry: a,
             activity: n,
             user: t,
-            display: h,
+            display: p,
             onClose: g,
-            onAction: T,
+            onAction: S,
             isMenuOpen: v
         });
-    return 0 === b.length || t.bot
+    return 0 === T.length || t.bot
         ? null
         : (0, r.jsx)(o.Popout, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  T({ action: 'OPEN_MENU' }), I(!0), null == E || E();
+                  S({ action: 'OPEN_MENU' }), I(!0), null == E || E();
               },
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -53,7 +53,7 @@ function h(e) {
                       },
                       'aria-label': f.intl.string(f.t.PlAQz8),
                       onSelect: m,
-                      children: (0, r.jsx)(o.MenuGroup, { children: b })
+                      children: (0, r.jsx)(o.MenuGroup, { children: T })
                   });
               },
               children: (e) =>
@@ -62,7 +62,7 @@ function h(e) {
                       onContextMenu: (t) => {
                           t.preventDefault(), e.onClick(t);
                       },
-                      className: s()(_.contextMenu, p),
+                      className: s()(_.contextMenu, h),
                       children: (0, r.jsx)(o.MoreHorizontalIcon, {
                           color: o.tokens.colors.INTERACTIVE_NORMAL,
                           size: 'xs'

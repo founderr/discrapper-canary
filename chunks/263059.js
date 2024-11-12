@@ -14,16 +14,16 @@ var r = n(200651),
     d = n(379357),
     f = n(358696),
     _ = n(180335),
-    h = n(952164),
-    p = n(960870),
+    p = n(952164),
+    h = n(960870),
     m = n(139793),
     g = n(994746),
     E = n(273284),
     v = n(510659),
     I = n(287954),
-    S = n(660579),
-    T = n(502762),
-    b = n(652853),
+    b = n(660579),
+    S = n(502762),
+    T = n(652853),
     y = n(64621),
     A = n(448980),
     N = n(194811),
@@ -39,7 +39,7 @@ var r = n(200651),
 function k(e) {
     var t;
     let { user: n, currentUser: a, activity: k, guild: U, channel: G, className: B, onClose: Z, profileGuildId: F } = e,
-        { profileType: V } = (0, b.z)(),
+        { profileType: V } = (0, T.z)(),
         j = { [P.fullSize]: V === w.y0.FULL_SIZE },
         { interactionSource: H, interactionSourceId: Y } = (0, v.Xo)(),
         W = (0, _.Bq)({
@@ -49,7 +49,7 @@ function k(e) {
         K = (0, g.Z)(k),
         { largeImage: z } = (0, d.FO)(k),
         { analyticsLocations: q } = (0, c.ZP)(u.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        Q = (0, p.Z)({
+        Q = (0, h.Z)({
             display: 'live',
             user: n,
             activity: k,
@@ -81,7 +81,7 @@ function k(e) {
                                         (0, r.jsx)(o.Clickable, {
                                             className: s()(P.clickable, P.inline),
                                             onClick: () => {
-                                                Q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(k, n.id, t);
+                                                Q({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(k, n.id, t);
                                             },
                                             children: e
                                         }),
@@ -151,10 +151,10 @@ function k(e) {
                         sourceDetails: (0, E.Z)(k),
                         sourceType: w.n_.ACTIVITY,
                         children: () =>
-                            (0, r.jsx)(T.Z.Overlay, {
+                            (0, r.jsx)(S.Z.Overlay, {
                                 className: s()(P.card, B, { [P.hoisted]: er }),
                                 ref: X,
-                                children: (0, r.jsxs)(S.Z, {
+                                children: (0, r.jsxs)(b.Z, {
                                     user: n,
                                     className: P.body,
                                     sourceType: w.n_.ACTIVITY,
@@ -179,7 +179,7 @@ function k(e) {
                                                         (0, r.jsx)(f.E, {
                                                             image: z,
                                                             onClick: () => {
-                                                                Q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(k, n.id);
+                                                                Q({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(k, n.id);
                                                             },
                                                             size: f.J.SIZE_60
                                                         }),
@@ -192,7 +192,7 @@ function k(e) {
                                                                             variant: 'heading-sm/semibold',
                                                                             text: k.details,
                                                                             onClick: () => {
-                                                                                Q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, h.aG)(k);
+                                                                                Q({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(k);
                                                                             }
                                                                         }),
                                                                         J()

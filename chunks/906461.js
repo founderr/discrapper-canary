@@ -11,8 +11,8 @@ var r = n(120356),
     g = n(276800),
     m = n(474936),
     f = n(981631),
-    _ = n(388032),
-    p = n(222283);
+    p = n(388032),
+    _ = n(222283);
 t.Z = function (e) {
     let { isFullScreen: t } = e,
         r = (0, u.N)(),
@@ -23,27 +23,27 @@ t.Z = function (e) {
     return (0, i.jsx)(o.O, {
         newLocations: [l.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
-            className: a()(p.banner, { [p.bannerFullScreen]: t }),
+            className: a()(_.banner, { [_.bannerFullScreen]: t }),
             children: [
                 (0, i.jsx)('div', {
-                    className: p.bannerLeftImageContainer,
+                    className: _.bannerLeftImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(28517),
-                        className: p.image
+                        className: _.image
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: p.bannerContent,
+                    className: _.bannerContent,
                     children: (0, i.jsxs)('div', {
                         children: [
                             (0, i.jsx)(s.Heading, {
                                 variant: 'display-sm',
                                 color: 'always-white',
-                                children: _.intl.string(_.t.Kkcmj4)
+                                children: p.intl.string(p.t.Kkcmj4)
                             }),
                             (0, i.jsx)(s.Text, {
-                                className: p.countdown,
+                                className: _.countdown,
                                 variant: 'text-sm/bold',
                                 color: 'always-white',
                                 children: (0, i.jsx)(g.Z, { endDate: b })
@@ -52,11 +52,11 @@ t.Z = function (e) {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
                                 children: [
-                                    _.intl.string(_.t['2a1fz8']),
+                                    p.intl.string(p.t['2a1fz8']),
                                     '\xA0',
                                     (0, i.jsx)(s.Anchor, {
                                         href: c.Z.getArticleURL(f.BhN.PREMIUM_TRIAL_FOR_ALL),
-                                        children: _.intl.string(_.t['sBp+u7'])
+                                        children: p.intl.string(p.t['sBp+u7'])
                                     })
                                 ]
                             })
@@ -64,11 +64,11 @@ t.Z = function (e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: p.bannerRightImageContainer,
+                    className: _.bannerRightImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
                         src: n(557622),
-                        className: p.image
+                        className: _.image
                     })
                 })
             ]

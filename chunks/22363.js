@@ -10,17 +10,17 @@ var i = n(120356),
     d = n(185923),
     f = n(74353);
 t.Z = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: h, onFocus: p, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: I, onBurstReactionToggle: S, renderHeader: T } = e,
-        b = (0, r.jsxs)(r.Fragment, {
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: v, isBurstReaction: I, onBurstReactionToggle: b, renderHeader: S } = e,
+        T = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(u.Z, {
                     emojiListRef: _,
                     gridNavigatorId: c.Vr,
-                    onKeyDown: h,
+                    onKeyDown: p,
                     className: f.searchBar,
                     ref: g,
                     isFullRow: !1,
-                    onFocus: p,
+                    onFocus: h,
                     autoFocus: m,
                     defaultSearchPlaceholder: (0, o.nV)(n, I)
                 }),
@@ -29,7 +29,7 @@ t.Z = (e) => {
                           className: f.burstToggle,
                           children: (0, r.jsx)(s.Z, {
                               checked: I,
-                              onClick: S
+                              onClick: b
                           })
                       })
                     : null,
@@ -45,6 +45,6 @@ t.Z = (e) => {
         });
     return (0, r.jsx)('div', {
         className: a()(f.header, i),
-        children: null != T ? T(b) : b
+        children: null != S ? S(T) : T
     });
 };

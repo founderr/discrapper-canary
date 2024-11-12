@@ -32,8 +32,8 @@ let s = ['#be0351', '#ff2c52'],
         }
     ],
     f = (e) => {
-        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...h } = e,
-            { primaryColorsTransformed: p, secondaryColorsTransformed: m } = (0, a.s)({
+        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...p } = e,
+            { primaryColorsTransformed: h, secondaryColorsTransformed: m } = (0, a.s)({
                 primaryBaseColors: s,
                 primaryTintColor: f,
                 primaryTintLuminances: l,
@@ -44,7 +44,7 @@ let s = ['#be0351', '#ff2c52'],
                 secondaryLuminanceWeights: d
             });
         return (0, r.jsxs)('svg', {
-            ...(0, i.Z)(h),
+            ...(0, i.Z)(p),
             width: t,
             height: n,
             viewBox: '0 0 16 16',
@@ -57,7 +57,7 @@ let s = ['#be0351', '#ff2c52'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M14 3V2h-2V1H4v1H2v1H1v6h1v1h2V9h8v1h2V9h1V3h-1Z',
-                    fill: p[1]
+                    fill: h[1]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M12 0H4v1h8V0Z',
@@ -77,7 +77,7 @@ let s = ['#be0351', '#ff2c52'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M15 3h-1v6h1V3Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M15 6h-2v2h2V6ZM12 2h-2v2h2V2Z',
@@ -86,11 +86,11 @@ let s = ['#be0351', '#ff2c52'],
                 (0, r.jsx)('path', {
                     opacity: '.5',
                     d: 'M15 6h-1v2h1V6Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M10 7H6v1h4V7ZM12 8h-2v1h2V8ZM6 8H4v1h2V8Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M6 10H5v2h1v-2Z',
@@ -106,7 +106,7 @@ let s = ['#be0351', '#ff2c52'],
                 }),
                 (0, r.jsx)('path', {
                     d: 'M4 9H2v1h2V9ZM14 9h-2v1h2V9Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M8 6H6v2h2V6Z',
@@ -115,7 +115,7 @@ let s = ['#be0351', '#ff2c52'],
                 (0, r.jsx)('path', {
                     opacity: '.5',
                     d: 'M8 7H6v1h2V7Z',
-                    fill: p[0]
+                    fill: h[0]
                 }),
                 (0, r.jsx)('path', {
                     d: 'M10 8H6v1h4V8Z',

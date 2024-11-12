@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
     l: function () {
-        return h;
+        return p;
     }
 });
 var i,
@@ -26,7 +26,7 @@ function f(e, t, n) {
     );
 }
 let _ = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class h extends (i = s.PureComponent) {
+class p extends (i = s.PureComponent) {
     componentDidMount() {
         var e, t;
         null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -122,7 +122,7 @@ class h extends (i = s.PureComponent) {
             (this.state = { height: void 0 });
     }
 }
-f(h, 'defaultProps', {
+f(p, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

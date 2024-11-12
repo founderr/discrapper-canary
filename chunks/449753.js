@@ -10,8 +10,8 @@ var r = n(846519),
     d = n(959457),
     f = n(70956),
     _ = n(569545),
-    h = n(981631);
-let p = new r.V7(),
+    p = n(981631);
+let h = new r.V7(),
     m = new r.V7(),
     g = 5 * f.Z.Millis.SECOND,
     E = 12 * f.Z.Millis.SECOND,
@@ -25,7 +25,7 @@ function I(e, t) {
     let i = (0, _.V9)(r);
     return i !== v && ((v = i), (0, a.rn)(r, { noFocus: !0 }), !0);
 }
-function S(e, t) {
+function b(e, t) {
     let n = null != t ? t : u.Z.getPreferredRegion();
     null != n && n !== u.Z.getRegion(d.Z.getHostname(d.Z.getActiveStreamKey())) && (0, a.dV)(e, n);
 }
@@ -69,7 +69,7 @@ t.Z = {
                 m.stop();
             }),
             i.Z.subscribe('STREAM_CLOSE', () => {
-                p.stop(), m.stop();
+                h.stop(), m.stop();
             }),
             i.Z.subscribe('VOICE_CHANNEL_SELECT', (e) => {
                 let { channelId: t } = e;
@@ -88,8 +88,8 @@ t.Z = {
                     if (t !== o.default.getId() && null != n) {
                         if (i && I(n, t)) return;
                         let e = s.Z.getActiveStreamForUser(t, r);
-                        if (null != e && e.channelId === n && (!i && e.state !== h.jm8.ENDED && p.start(180000, () => (0, a.aP)((0, _.V9)(e), !1)), i && e.state === h.jm8.ENDED)) {
-                            p.stop();
+                        if (null != e && e.channelId === n && (!i && e.state !== p.jm8.ENDED && h.start(180000, () => (0, a.aP)((0, _.V9)(e), !1)), i && e.state === p.jm8.ENDED)) {
+                            h.stop();
                             let e = s.Z.getStreamForUser(t, r);
                             if (null == e) return;
                             (0, a.rn)(e);
@@ -100,12 +100,12 @@ t.Z = {
             i.Z.subscribe('CALL_UPDATE', (e) => {
                 let { channelId: t, region: n } = e,
                     r = s.Z.getCurrentUserActiveStream();
-                (null == r ? void 0 : r.channelId) === t && S((0, _.V9)(r), n);
+                (null == r ? void 0 : r.channelId) === t && b((0, _.V9)(r), n);
             }),
             i.Z.subscribe('CHANNEL_UPDATES', (e) => {
                 let { channels: t } = e,
                     n = s.Z.getCurrentUserActiveStream();
-                if (null != n) for (let e of t) n.channelId === e.id && S((0, _.V9)(n), e.rtcRegion);
+                if (null != n) for (let e of t) n.channelId === e.id && b((0, _.V9)(n), e.rtcRegion);
             });
     }
 };

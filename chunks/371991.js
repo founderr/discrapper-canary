@@ -18,8 +18,8 @@ var r = n(200651),
     d = n(706454),
     f = n(70956),
     _ = n(506071),
-    h = n(561308),
-    p = n(910136);
+    p = n(561308),
+    h = n(910136);
 function m(e) {
     let [t, n] = i.useState(Date.now()),
         r = (0, _.n)(),
@@ -41,16 +41,16 @@ function m(e) {
 let g = (e) => {
     let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
         d = m(o),
-        f = i.useMemo(() => (0, h.T_)(t, d), [t, d]),
+        f = i.useMemo(() => (0, p.T_)(t, d), [t, d]),
         _ = i.useRef(f);
     return (
         i.useEffect(() => {
             _.current = f;
         }, [t]),
         (0, r.jsx)(u.Text, {
-            className: s()(p.timestamp, {
-                [p.inlineTimestamp]: n,
-                [p.bold]: l
+            className: s()(h.timestamp, {
+                [h.inlineTimestamp]: n,
+                [h.bold]: l
             }),
             variant: 'text-xs/medium',
             tabularNumbers: !0,
@@ -63,7 +63,7 @@ let g = (e) => {
 };
 t.ZP = (e) => {
     let { entry: t, textColor: n, hovered: i = !1, bold: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        l = (0, h.Jg)(t),
+        l = (0, p.Jg)(t),
         c = (0, o.e7)([d.default], () => d.default.locale);
     return l
         ? (0, r.jsx)(g, {
@@ -78,6 +78,6 @@ t.ZP = (e) => {
               color: n,
               lineClamp: 1,
               scaleFontToUserSetting: s,
-              children: (0, h.GL)(t, c)
+              children: (0, p.GL)(t, c)
           });
 };

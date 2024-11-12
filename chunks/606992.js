@@ -26,23 +26,23 @@ function s(e) {
             let l = f.document.getSelection(),
                 _ = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
             if (null == _) return;
-            let h = _.startContainer,
-                p = _.startOffset;
-            for (; null != h; ) {
-                if (h.nodeType !== Node.TEXT_NODE || null == h.nodeValue) {
+            let p = _.startContainer,
+                h = _.startOffset;
+            for (; null != p; ) {
+                if (p.nodeType !== Node.TEXT_NODE || null == p.nodeValue) {
                     u(null);
                     return;
                 }
-                if ((null === (t = h.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
-                    p = null !== (i = null == (h = h.previousSibling) ? void 0 : null === (r = h.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
+                if ((null === (t = p.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
+                    h = null !== (i = null == (p = p.previousSibling) ? void 0 : null === (r = p.nodeValue) || void 0 === r ? void 0 : r.length) && void 0 !== i ? i : 0;
                     continue;
                 }
-                null != c && (p >= c.queryText.length ? (p -= c.queryText.length) : (p = 0));
+                null != c && (h >= c.queryText.length ? (h -= c.queryText.length) : (h = 0));
                 break;
             }
-            if (null == h) return;
+            if (null == p) return;
             let m = f.document.createRange();
-            m.setStart(h, p), m.setEnd(h, p);
+            m.setStart(p, h), m.setEnd(p, h);
             let g = m.getBoundingClientRect();
             if ((null == g ? void 0 : g.height) !== 0) u(null != g ? g : null);
         }, [o, f.document, s, d, c, n]);

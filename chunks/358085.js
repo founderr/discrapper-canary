@@ -8,7 +8,7 @@ n.r(t),
             return I;
         },
         getOS: function () {
-            return S;
+            return b;
         },
         getPlatform: function () {
             return E;
@@ -23,7 +23,7 @@ n.r(t),
             return _;
         },
         isAndroidWeb: function () {
-            return h;
+            return p;
         },
         isDesktop: function () {
             return d;
@@ -38,7 +38,7 @@ n.r(t),
             return u;
         },
         isMacWeb: function () {
-            return p;
+            return h;
         },
         isPlatformEmbedded: function () {
             return s;
@@ -75,11 +75,11 @@ function f() {
 function _() {
     return null != navigator.userAgent && null != navigator.userAgent.toLowerCase().match('(android ).+chrome/[.0-9]* mobile');
 }
-function h() {
+function p() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/android/i)) != null;
 }
-function p() {
+function h() {
     var e;
     return (null === (e = navigator.userAgent) || void 0 === e ? void 0 : e.match(/Macintosh/i)) != null;
 }
@@ -104,7 +104,7 @@ function I() {
             return 'web';
     }
 }
-function S() {
+function b() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? 'windows mobile' : 'windows';
     if (/(iPhone|iPad|iPod)/.test(e)) return 'ios';

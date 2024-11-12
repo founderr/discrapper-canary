@@ -1,6 +1,6 @@
 n.d(t, {
     Q: function () {
-        return E;
+        return b;
     }
 });
 var o = n(200651);
@@ -142,7 +142,7 @@ function _(e) {
           })
         : null;
 }
-function E(e) {
+function b(e) {
     let t = (0, m.P)({ location: x.dr.QUESTS_BAR });
     return (0, o.jsxs)(o.Fragment, {
         children: [

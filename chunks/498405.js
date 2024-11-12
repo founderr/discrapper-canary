@@ -19,17 +19,17 @@ function o(e) {
             focusPath: o,
             focusIndex: -1
         }),
-        h = r.useMemo(() => (0, s.P2)(_, 30), [_]);
+        p = r.useMemo(() => (0, s.P2)(_, 30), [_]);
     r.useEffect(() => {
         _({
             type: i.B.UPDATE_ITEMS,
             items: n
         });
     }, [n]);
-    let { focusPath: p } = f,
+    let { focusPath: h } = f,
         [m, g] = r.useState(!1),
         [E, v] = r.useState(!1),
-        [{ onItemFocusMemoizer: I, onItemMouseEnterMemoizer: S }] = r.useState(() => ({
+        [{ onItemFocusMemoizer: I, onItemMouseEnterMemoizer: b }] = r.useState(() => ({
             onItemFocusMemoizer: new s.$o((e) => () => {
                 g(!0),
                     _({
@@ -45,7 +45,7 @@ function o(e) {
                     });
             })
         })),
-        T = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 if (!d.current) return;
                 e.key === a.R8.ESCAPE && null != c && (e.stopPropagation(), e.preventDefault(), c());
@@ -69,23 +69,23 @@ function o(e) {
                     case a.Us.NAVIGATE_DOWN:
                     case a.Us.NAVIGATE_IN:
                     case a.Us.NAVIGATE_OUT:
-                        e.preventDefault(), e.stopPropagation(), v(!0), h({ type: n });
+                        e.preventDefault(), e.stopPropagation(), v(!0), p({ type: n });
                         return;
                     case a.Us.SELECT_FOCUSED_ITEM:
                         var r, i, o, u, f;
                         if (e.repeat) return;
                         if (e.target.tabIndex >= 0) return;
-                        if ((e.preventDefault(), e.stopPropagation(), v(!1), h({ type: n }), null != l)) {
-                            l(p);
+                        if ((e.preventDefault(), e.stopPropagation(), v(!1), p({ type: n }), null != l)) {
+                            l(h);
                             return;
                         }
-                        let _ = ((u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document), (f = ((i = t), null != (o = p) ? ''.concat((0, s.qR)(i, o.join('--'))) : i)), u.getElementById(f));
+                        let _ = ((u = null !== (r = e.target.ownerDocument) && void 0 !== r ? r : document), (f = ((i = t), null != (o = h) ? ''.concat((0, s.qR)(i, o.join('--'))) : i)), u.getElementById(f));
                         null == _ || _.click();
                 }
             },
-            [h, t, p, l, c]
+            [p, t, h, l, c]
         ),
-        b = r.useCallback(() => {
+        T = r.useCallback(() => {
             !m && g(!0);
         }, [m]),
         y = r.useCallback(
@@ -103,19 +103,19 @@ function o(e) {
             }),
                 g(!1);
         }, []),
-        N = r.useCallback((e) => e.every((e, t) => p[t] === e), [p]),
+        N = r.useCallback((e) => e.every((e, t) => h[t] === e), [h]),
         C = r.useCallback(
             () => ({
                 role: 'menu',
                 id: t,
                 tabIndex: -1,
-                onKeyDown: T,
-                onFocus: b,
+                onKeyDown: S,
+                onFocus: T,
                 onBlur: y,
                 onMouseLeave: A,
-                'aria-activedescendant': p.length > 0 ? (0, s.qR)(t, p.join('--')) : void 0
+                'aria-activedescendant': h.length > 0 ? (0, s.qR)(t, h.join('--')) : void 0
             }),
-            [t, T, b, y, A, p]
+            [t, S, T, y, A, h]
         ),
         R = r.useCallback(
             (e) => {
@@ -123,12 +123,12 @@ function o(e) {
                 return {
                     role: 'menu',
                     tabIndex: -1,
-                    'aria-activedescendant': N(n) ? (0, s.qR)(t, p.join('--')) : void 0,
+                    'aria-activedescendant': N(n) ? (0, s.qR)(t, h.join('--')) : void 0,
                     focusIndex: f.focusIndex,
                     isUsingKeyboardNavigation: E
                 };
             },
-            [t, p, N, f.focusIndex, E]
+            [t, h, N, f.focusIndex, E]
         ),
         O = r.useCallback(
             (e) => {
@@ -145,20 +145,20 @@ function o(e) {
                     id: (0, s.qR)(t, o),
                     tabIndex: -1,
                     onFocus: i ? I.get(o) : () => {},
-                    onMouseEnter: i ? S.get(o) : () => {}
+                    onMouseEnter: i ? b.get(o) : () => {}
                 };
             },
-            [t, N, I, S]
+            [t, N, I, b]
         );
     return r.useMemo(
         () => ({
-            dispatch: h,
+            dispatch: p,
             getContainerProps: C,
             getSubmenuProps: R,
             getItemProps: O,
             isFocused: N,
             isUsingKeyboardNavigation: E
         }),
-        [h, C, R, O, N, E]
+        [p, C, R, O, N, E]
     );
 }

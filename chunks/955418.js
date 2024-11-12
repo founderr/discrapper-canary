@@ -15,8 +15,8 @@ var r = n(200651),
     d = n(785717),
     f = n(698305),
     _ = n(981631),
-    h = n(388032),
-    p = n(687610);
+    p = n(388032),
+    h = n(687610);
 let m = (0, u.kt)({
     id: '1',
     type: _.d4z.DM
@@ -26,25 +26,25 @@ function g(e) {
         { newestAnalyticsLocation: g } = (0, a.ZP)(),
         { trackUserProfileAction: E } = (0, d.KZ)(),
         [v, I] = i.useState(''),
-        [S, T] = i.useState((0, o.JM)(v)),
-        b = i.useRef(!1);
+        [b, S] = i.useState((0, o.JM)(v)),
+        T = i.useRef(!1);
     return (0, r.jsx)(l.Z, {
-        innerClassName: p.inner,
-        editorClassName: p.editor,
+        innerClassName: h.inner,
+        editorClassName: h.editor,
         type: s.I.USER_PROFILE,
-        placeholder: h.intl.formatToPlainString(h.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
+        placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: c.ZP.getName(n, u, t) }),
         channel: m,
         textValue: v,
-        richValue: S,
+        richValue: b,
         onChange: (e, t, n) => {
-            if (t !== v) I(t), T(n);
+            if (t !== v) I(t), S(n);
         },
-        focused: b.current,
+        focused: T.current,
         onFocus: () => {
-            b.current = !0;
+            T.current = !0;
         },
         onBlur: () => {
-            b.current = !1;
+            T.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;

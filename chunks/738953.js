@@ -15,16 +15,16 @@ var r = n(200651),
     d = n(906732),
     f = n(680295),
     _ = n(271383),
-    h = n(430824),
-    p = n(785717),
+    p = n(430824),
+    h = n(785717),
     m = n(221292),
     g = n(687158),
     E = n(326094),
     v = n(510659),
     I = n(113557),
-    S = n(867176),
-    T = n(169979),
-    b = n(451834),
+    b = n(867176),
+    S = n(169979),
+    T = n(451834),
     y = n(502762),
     A = n(544989),
     N = n(481932),
@@ -45,7 +45,7 @@ function k(e) {
             currentUser: n,
             location: w.Sbl.BITE_SIZE_POPOUT
         }),
-        W = (0, p.ZB)({
+        W = (0, h.ZB)({
             layout: Y ? 'BITE_SIZE_POPOUT' : 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
             guildId: k,
@@ -53,7 +53,7 @@ function k(e) {
             messageId: G,
             roleId: B
         }),
-        K = (0, s.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
+        K = (0, s.e7)([p.Z], () => (null != k ? p.Z.getGuild(k) : null)),
         z = (0, s.e7)([_.ZP], () => (null != k ? _.ZP.getMember(k, t.id) : null)),
         q = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
     (0, u.$)(q);
@@ -78,7 +78,7 @@ function k(e) {
     };
     return (0, r.jsx)(d.Gt, {
         value: H,
-        children: (0, r.jsx)(p.Mt, {
+        children: (0, r.jsx)(h.Mt, {
             value: W,
             shouldTrackViewOnMount: null == z || null != z.fullProfileLoadedTimestamp,
             children: (0, r.jsx)(v.NJ, {
@@ -136,13 +136,13 @@ function k(e) {
                                 (0, r.jsxs)('header', {
                                     className: P.header,
                                     children: [
-                                        (0, r.jsx)(S.Z, {
+                                        (0, r.jsx)(b.Z, {
                                             user: t,
                                             displayProfile: X,
                                             guildId: k,
                                             profileType: x.y0.BITE_SIZE
                                         }),
-                                        (0, r.jsx)(b.Z, {
+                                        (0, r.jsx)(T.Z, {
                                             userId: t.id,
                                             className: P.toast,
                                             onClose: Z
@@ -156,7 +156,7 @@ function k(e) {
                                             profileType: x.y0.BITE_SIZE,
                                             onOpenProfile: V ? void 0 : et
                                         }),
-                                        (0, r.jsx)(T.Z, {
+                                        (0, r.jsx)(S.Z, {
                                             location: 'UserProfilePopout',
                                             user: t,
                                             guildId: k,

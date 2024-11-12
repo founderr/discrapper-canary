@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     ml: function () {
-        return p;
+        return h;
     },
     nG: function () {
         return _;
@@ -31,17 +31,17 @@ function f(e) {
     if (null == e) return;
     let t = e.maxResolution.type === c.uA.SOURCE ? l.LY.RESOLUTION_SOURCE : e.maxResolution.height,
         n = (0, l.aW)(t);
-    return (0, l.L9)(e.maxFrameRate) !== l.ws.FPS_5 && null == l.ND.find((e) => e.resolution === n && e.fps !== l.ws.FPS_5 && !h(e));
+    return (0, l.L9)(e.maxFrameRate) !== l.ws.FPS_5 && null == l.ND.find((e) => e.resolution === n && e.fps !== l.ws.FPS_5 && !p(e));
 }
 function _(e) {
     if (null == e) return;
     let t = (0, l.L9)(e.maxFrameRate);
-    return null == l.ND.find((e) => e.fps === t && !h(e));
-}
-function h(e) {
-    return null != e.quality || null != e.guildPremiumTier;
+    return null == l.ND.find((e) => e.fps === t && !p(e));
 }
 function p(e) {
+    return null != e.quality || null != e.guildPremiumTier;
+}
+function h(e) {
     return e.type === c.uA.SOURCE ? d.intl.string(d.t.XjXqzs) : d.intl.formatToPlainString(d.t.TEOC0N, { resolution: e.height });
 }
 function m(e) {
@@ -58,11 +58,11 @@ function g(e) {
 function E(e, t, n) {
     var c, d, f;
     let _ = ((c = e), (d = t), (f = n), l.ND.find((e) => (null == e.preset || e.preset === c) && e.resolution === d && e.fps === f)),
-        h = a.default.getCurrentUser(),
-        p = i.Z.getGuildId(),
-        m = null != p ? r.Z.getGuild(p) : null;
+        p = a.default.getCurrentUser(),
+        h = i.Z.getGuildId(),
+        m = null != h ? r.Z.getGuild(h) : null;
     s.default.track(o.rMx.STREAM_SETTINGS_UPDATE, {
-        user_premium_tier: null == h ? void 0 : h.premiumType,
+        user_premium_tier: null == p ? void 0 : p.premiumType,
         guild_premium_tier: null == m ? void 0 : m.premiumTier,
         stream_quality_user_premium_tier: (null == _ ? void 0 : _.quality) != null ? u.bg[_.quality] : null,
         stream_quality_guild_premium_tier: null == _ ? void 0 : _.guildPremiumTier,

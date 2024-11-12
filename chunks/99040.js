@@ -14,8 +14,8 @@ var r = n(192379),
             i = e.colors,
             a = e.hex,
             _ = e.rgb,
-            h = e.styles,
-            p = void 0 === h ? {} : h,
+            p = e.styles,
+            h = void 0 === p ? {} : p,
             m = e.className,
             g = (0, s.default)(
                 (0, l.Z)(
@@ -34,7 +34,7 @@ var r = n(192379),
                             clear: { clear: 'both' }
                         }
                     },
-                    p
+                    h
                 )
             ),
             E = function (e, n) {
@@ -53,7 +53,7 @@ var r = n(192379),
             c.xZ,
             {
                 style: g.Compact,
-                styles: p
+                styles: h
             },
             r.createElement(
                 'div',

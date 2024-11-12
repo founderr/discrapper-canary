@@ -20,7 +20,7 @@ var s = n(120356),
     x = n(414068),
     S = n(113207);
 function T() {
-    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: T, disableSounds: C, disableNotifications: _, enableContentProtection: E } = (0, l.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+    let { enabled: e, autoToggle: t, hideInstantInvites: s, hidePersonalInformation: T, disableSounds: C, disableNotifications: E, enableContentProtection: _ } = (0, l.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
         f = (e, t) => {
             o.Z.update({ [e]: t });
         };
@@ -105,7 +105,7 @@ function T() {
                     (0, i.jsx)(d.F, {
                         setting: h.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            value: _,
+                            value: E,
                             onChange: (e) => f('disableNotifications', e),
                             note: p.intl.string(p.t.ZAmpQ0),
                             children: p.intl.string(p.t.qmYiYW)
@@ -114,7 +114,7 @@ function T() {
                     (0, i.jsx)(d.F, {
                         setting: h.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.FormSwitch, {
-                            value: E,
+                            value: _,
                             onChange: (e) => f('enableContentProtection', e),
                             note: p.intl.string(p.t.P4vj0t),
                             children: p.intl.string(p.t['iA81+f'])

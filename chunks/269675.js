@@ -26,8 +26,8 @@ var i = n(200651),
     N = n(504762),
     T = n(807152),
     x = n(176505),
-    A = n(388032),
-    b = n(752335);
+    b = n(388032),
+    A = n(752335);
 function Z(e) {
     let { guildId: t } = e,
         n = (0, a.e7)([f.Z], () => f.Z.getGuild(t), [t]),
@@ -39,7 +39,7 @@ function Z(e) {
         { shouldHideGuildPurchaseEntryPoints: O, restrictionsLoading: P } = (0, m.uP)(t),
         D = null == n || !j || R || P;
     (0, d.Tt)({
-        subsection: A.intl.string(A.t['KzCF//']),
+        subsection: b.intl.string(b.t['KzCF//']),
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(l.tq ? 'role-subscriptions-overview' : void 0);
@@ -57,27 +57,27 @@ function Z(e) {
         return (0, i.jsx)(S.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: A.container,
         children: [
             (0, i.jsxs)(g.Z, {
                 toolbar: (0, i.jsx)(r.Fragment, {}),
-                className: b.headerBar,
+                className: A.headerBar,
                 children: [
                     (0, i.jsx)(g.Z.Icon, {
                         icon: (0, s.makeIconCompat)(C.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(g.Z.Title, { children: A.intl.string(A.t['KzCF//']) })
+                    (0, i.jsx)(g.Z.Title, { children: b.intl.string(b.t['KzCF//']) })
                 ]
             }),
             (0, i.jsx)('div', { id: T.v }),
             (0, i.jsx)('div', {
-                className: b.content,
+                className: A.content,
                 children: y
                     ? (0, i.jsx)(s.ScrollerNone, {
-                          className: b.scroller,
+                          className: A.scroller,
                           children: (0, i.jsx)('div', {
-                              className: b.scrollerContent,
+                              className: A.scrollerContent,
                               children: D ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)(v.Z, { guild: n })
                           })
                       })

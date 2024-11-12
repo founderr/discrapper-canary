@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return h;
+        return C;
     }
 });
 var i = n(200651);
@@ -15,7 +15,7 @@ var s = n(120356),
     d = n(388032),
     m = n(424621),
     x = n(87181);
-function C() {
+function h() {
     return (0, i.jsx)('div', {
         className: m.buttonContainer,
         children: (0, i.jsx)(r.Button, {
@@ -28,7 +28,7 @@ function C() {
         })
     });
 }
-function h() {
+function C() {
     let { containerRef: e, size: t } = (0, a.h)();
     return (0, i.jsxs)('div', {
         ref: (t) => (e.current = t),
@@ -51,7 +51,7 @@ function h() {
                         className: m.__invalid_mobileWebCopy,
                         children: d.intl.string(d.t.CTn0yc)
                     }),
-                    (0, i.jsx)(C, {})
+                    (0, i.jsx)(h, {})
                 ]
             }),
             (0, i.jsx)('div', {

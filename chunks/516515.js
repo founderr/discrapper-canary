@@ -22,7 +22,7 @@ function u(e, t, n) {
         { selectionManager: c, selectedKey: d } = t,
         f = s === d,
         _ = o || t.isDisabled || t.disabledKeys.has(s),
-        { itemProps: h, isPressed: p } = (0, i.Cs)({
+        { itemProps: p, isPressed: h } = (0, i.Cs)({
             selectionManager: c,
             key: s,
             ref: n,
@@ -32,7 +32,7 @@ function u(e, t, n) {
         }),
         m = l(t, s, 'tab'),
         g = l(t, s, 'tabpanel'),
-        { tabIndex: E } = h,
+        { tabIndex: E } = p,
         v = t.collection.getItem(s),
         I = (0, r.zL)(null == v ? void 0 : v.props, {
             isLink: !!(null == v ? void 0 : null === (a = v.props) || void 0 === a ? void 0 : a.href),
@@ -41,7 +41,7 @@ function u(e, t, n) {
     return (
         delete I.id,
         {
-            tabProps: (0, r.dG)(I, h, {
+            tabProps: (0, r.dG)(I, p, {
                 id: m,
                 'aria-selected': f,
                 'aria-disabled': _ || void 0,
@@ -51,7 +51,7 @@ function u(e, t, n) {
             }),
             isSelected: f,
             isDisabled: _,
-            isPressed: p
+            isPressed: h
         }
     );
 }
@@ -93,12 +93,12 @@ class c {
 function d(e, t, n) {
     let { orientation: l = 'horizontal', keyboardActivation: u = 'automatic' } = e,
         { collection: d, selectionManager: f, disabledKeys: _ } = t,
-        { direction: h } = (0, s.bU)(),
-        p = (0, a.useMemo)(() => new c(d, h, l, _), [d, _, l, h]),
+        { direction: p } = (0, s.bU)(),
+        h = (0, a.useMemo)(() => new c(d, p, l, _), [d, _, l, p]),
         { collectionProps: m } = (0, i.gq)({
             ref: n,
             selectionManager: f,
-            keyboardDelegate: p,
+            keyboardDelegate: h,
             selectOnFocus: 'automatic' === u,
             disallowEmptySelection: !0,
             scrollRef: n,

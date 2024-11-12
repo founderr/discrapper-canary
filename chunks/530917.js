@@ -21,10 +21,10 @@ function o(e, t) {
         d = u.toRed(i.mont(t.prime2)),
         f = t.coefficient,
         _ = t.prime1,
-        h = t.prime2,
-        p = c.redPow(t.exponent1).fromRed(),
+        p = t.prime2,
+        h = c.redPow(t.exponent1).fromRed(),
         m = d.redPow(t.exponent2).fromRed(),
-        g = p.isub(m).imul(f).umod(_).imul(h);
+        g = h.isub(m).imul(f).umod(_).imul(p);
     return m.iadd(g).imul(o.unblinder).umod(t.modulus).toArrayLike(r, 'be', l);
 }
 (o.getr = s), (e.exports = o);

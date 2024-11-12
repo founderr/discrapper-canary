@@ -18,9 +18,9 @@ let u = async (e) => {
             channel: null
         });
     if (!f) throw Error(_);
-    let h = c ? await r.Z.openPrivateChannel(t, !1, !1, u) : await r.Z.getOrEnsurePrivateChannel(t),
-        p = o.Z.getChannel(h);
-    if (null == p) throw Error('Failed to open private channel');
-    let m = s.ZP.parse(p, n);
-    return i.Z.sendMessage(p.id, m, d);
+    let p = c ? await r.Z.openPrivateChannel(t, !1, !1, u) : await r.Z.getOrEnsurePrivateChannel(t),
+        h = o.Z.getChannel(p);
+    if (null == h) throw Error('Failed to open private channel');
+    let m = s.ZP.parse(h, n);
+    return i.Z.sendMessage(h.id, m, d);
 };

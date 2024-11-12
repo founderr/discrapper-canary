@@ -32,7 +32,7 @@ var r = n(192379),
             }),
             f = d[0],
             _ = d[1],
-            h = r.useMemo(function () {
+            p = r.useMemo(function () {
                 return {
                     name: 'updateState',
                     enabled: !0,
@@ -58,14 +58,14 @@ var r = n(192379),
                     requires: ['computeStyles']
                 };
             }, []),
-            p = r.useMemo(
+            h = r.useMemo(
                 function () {
                     var e = {
                         onFirstUpdate: c.onFirstUpdate,
                         placement: c.placement,
                         strategy: c.strategy,
                         modifiers: [].concat(c.modifiers, [
-                            h,
+                            p,
                             {
                                 name: 'applyStyles',
                                 enabled: !1
@@ -74,20 +74,20 @@ var r = n(192379),
                     };
                     return o()(s.current, e) ? s.current || e : ((s.current = e), e);
                 },
-                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, h]
+                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, p]
             ),
             m = r.useRef();
         return (
             (0, l.LI)(
                 function () {
-                    m.current && m.current.setOptions(p);
+                    m.current && m.current.setOptions(h);
                 },
-                [p]
+                [h]
             ),
             (0, l.LI)(
                 function () {
                     if (null != e && null != t) {
-                        var r = (n.createPopper || a.fi)(e, t, p);
+                        var r = (n.createPopper || a.fi)(e, t, h);
                         return (
                             (m.current = r),
                             function () {

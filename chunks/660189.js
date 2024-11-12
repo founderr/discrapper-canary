@@ -10,7 +10,7 @@ var r,
     d = n(594174),
     f = n(709054);
 let _ = {};
-function h(e) {
+function p(e) {
     let { threads: t, firstMessages: n } = e;
     if (null == n) return !1;
     for (let e of t)
@@ -18,9 +18,9 @@ function h(e) {
             loaded: !0,
             firstMessage: null
         };
-    for (let e of n) p(e.channel_id, e);
+    for (let e of n) h(e.channel_id, e);
 }
-function p(e, t) {
+function h(e, t) {
     let n = null == t ? null : (0, u.e5)(t);
     _[e] = {
         loaded: !0,
@@ -70,7 +70,7 @@ class g extends (r = o.ZP.Store) {
         },
         MESSAGE_CREATE: function (e) {
             if (e.isPushNotification || e.message.id !== f.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
-            p(e.message.channel_id, e.message);
+            h(e.message.channel_id, e.message);
         },
         MESSAGE_UPDATE: function (e) {
             if (e.message.id !== e.message.channel_id) return !1;
@@ -128,10 +128,10 @@ class g extends (r = o.ZP.Store) {
         },
         LOAD_FORUM_POSTS: function (e) {
             let { threads: t } = e;
-            for (let e in t) p(e, t[e].first_message);
+            for (let e in t) h(e, t[e].first_message);
         },
-        LOAD_THREADS_SUCCESS: h,
-        LOAD_ARCHIVED_THREADS_SUCCESS: h,
+        LOAD_THREADS_SUCCESS: p,
+        LOAD_ARCHIVED_THREADS_SUCCESS: p,
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { channelId: t, messages: n } = e,
                 r = n[n.length - 1];

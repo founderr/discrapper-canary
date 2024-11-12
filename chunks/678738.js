@@ -13,19 +13,19 @@ var r = n(200651),
     c = n(830900);
 function d(e) {
     let { children: t, heading: n, subheading: a, className: d, scrollIntoView: f = !1, headingColor: _ = 'header-secondary' } = e,
-        h = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        p = i.useRef(null);
+        p = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        h = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = p.current;
+            let e = h.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: h ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: p ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [h]),
+        }, [p]),
         (0, r.jsxs)('section', {
-            ref: f ? p : void 0,
+            ref: f ? h : void 0,
             className: s()(c.section, d),
             children: [
                 null != n &&

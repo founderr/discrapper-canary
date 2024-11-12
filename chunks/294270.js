@@ -10,9 +10,9 @@ var r = n(392711),
     d = n(37091),
     f = n(721264);
 let _ = 15 * l.Z.Millis.SECOND,
-    h = 15 * l.Z.Millis.SECOND,
-    p = ['\uD83C\uDDE9', '\uD83C\uDDF4', '\uD83C\uDDF9', '\uD83C\uDDE6'],
-    m = p.length,
+    p = 15 * l.Z.Millis.SECOND,
+    h = ['\uD83C\uDDE9', '\uD83C\uDDF4', '\uD83C\uDDF9', '\uD83C\uDDE6'],
+    m = h.length,
     g = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return ''.concat(e, ':').concat(t, ':').concat(n);
@@ -20,9 +20,9 @@ let _ = 15 * l.Z.Millis.SECOND,
     E = new a.V7(),
     v = [],
     I = {},
-    S = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
-    T = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
-function b(e) {
+    b = (0, u.tu)('highfive_whistle', 'highfive_whistle', 0.6),
+    S = (0, u.tu)('highfive_clap', 'highfive_clap', 0.6);
+function T(e) {
     let { emoji: t, channelId: n, userId: r } = e,
         s = o.default.getId(),
         l = d.Z.getEnabled();
@@ -40,16 +40,16 @@ function b(e) {
                         })) && void 0 !== r
                         ? r
                         : [];
-                if (null != s && null != o) o.cancel(), T.play(), delete I[s], (0, c.Ym)(s.split(':')[0], t, n, e);
+                if (null != s && null != o) o.cancel(), S.play(), delete I[s], (0, c.Ym)(s.split(':')[0], t, n, e);
                 else {
-                    (0, c._g)(e, t, n), S.play();
-                    let r = new a.sW(h, () => {
+                    (0, c._g)(e, t, n), b.play();
+                    let r = new a.sW(p, () => {
                         delete I[t], (0, c.Gd)(t, n);
                     });
                     (I[t] = r), r.delay();
                 }
             })(t.name, r, n);
-        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, p) ? (S.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
+        r === s && ((v = [...v, t.name].slice(-1 * m)), i().isEqual(v, h) ? (b.play(), E.stop(), (v = []), (0, c.ME)(!l)) : E.start(_, () => (v = [])));
     }
 }
 function y(e) {
@@ -70,7 +70,7 @@ class A extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                VOICE_CHANNEL_EFFECT_SEND: b,
+                VOICE_CHANNEL_EFFECT_SEND: T,
                 HIGH_FIVE_COMPLETE: y
             }),
             n in t

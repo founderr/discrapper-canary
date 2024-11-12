@@ -34,8 +34,8 @@ function f(e, t, n) {
     );
 }
 let _ = y(d.Yn.DEFAULT, c._s_.TRANSPORT, 0),
-    h = _,
-    p = {},
+    p = _,
+    h = {},
     m = new Map(),
     g = {
         availableOutgoingBitrate: !0,
@@ -85,9 +85,9 @@ class I {
         f(this, 'state', void 0), (this.state = e);
     }
 }
-let S = I.empty(),
-    T = !1,
-    b = null;
+let b = I.empty(),
+    S = !1,
+    T = null;
 function y(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
 }
@@ -100,20 +100,20 @@ function A(e) {
 }
 function N() {
     Object.values(d.Yn).forEach((e) => {
-        p[e] = {};
+        h[e] = {};
     });
 }
 N();
 function C() {
-    null != b && (b.destroy(), (b = null));
+    null != T && (T.destroy(), (T = null));
 }
 class R extends (r = i.ZP.Store) {
     getSection() {
-        return h;
+        return p;
     }
     getStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
-        return p[e][0];
+        return h[e][0];
     }
     getInboundStats(e, t) {
         var n, r;
@@ -143,13 +143,13 @@ class R extends (r = i.ZP.Store) {
     }
     getAllStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
-        return Object.values(p[e]);
+        return Object.values(h[e]);
     }
     getVideoStreams() {
-        return S;
+        return b;
     }
     shouldRecordNextConnection() {
-        return T;
+        return S;
     }
     getSimulcastDebugOverride(e, t) {
         let n = v(e, t);
@@ -160,24 +160,24 @@ f(R, 'displayName', 'RTCDebugStore'),
     (t.ZP = new R(s.Z, {
         RTC_DEBUG_MODAL_OPEN: function (e) {
             var t;
-            h = null !== (t = e.section) && void 0 !== t ? t : _;
+            p = null !== (t = e.section) && void 0 !== t ? t : _;
         },
         RTC_DEBUG_MODAL_CLOSE: function () {
             C();
         },
         RTC_DEBUG_MODAL_SET_SECTION: function (e) {
-            h = e.section;
+            p = e.section;
         },
         RTC_DEBUG_MODAL_UPDATE: function (e) {
             let { context: t, stats: n, index: r } = e,
-                i = p[t];
+                i = h[t];
             if (null != n) {
-                let [e, a, s] = h.split(':');
+                let [e, a, s] = p.split(':');
                 if (e === t && parseInt(s) === r && null != u.default.getUser(a)) {
                     let {
                         rtp: { inbound: e }
                     } = n;
-                    !Object.keys(e).includes(a) && (h = _);
+                    !Object.keys(e).includes(a) && (p = _);
                 }
                 i[r] = (function e(t) {
                     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -220,7 +220,7 @@ f(R, 'displayName', 'RTCDebugStore'),
             if ((C(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
             let r = n.createReplayConnection(d.Yn.DEFAULT, t);
             null != r &&
-                ((b = r),
+                ((T = r),
                 r.on(a.Sh.Video, (e, t, n, i, a) => {
                     s.Z.dispatch({
                         type: 'RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT',
@@ -233,11 +233,11 @@ f(R, 'displayName', 'RTCDebugStore'),
                 s.Z.wait(() => o.bA()));
         },
         RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: function (e) {
-            S = S.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
+            b = b.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
         },
         RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
             let { value: t } = e;
-            T = t;
+            S = t;
         },
         RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
             let { userId: t, context: n, quality: r } = e;

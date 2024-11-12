@@ -18,11 +18,11 @@ let C = ['#51BC9D'];
 t.Z = (e) => {
     var t;
     let { expansionSpring: n, overlayRef: s, quest: v, progressBarRef: j, isExpanded: _ } = e,
-        { completionSpring: E, startCompletionAnimation: b } = (0, x.G)(),
+        { completionSpring: b, startCompletionAnimation: E } = (0, x.G)(),
         N = (null === (t = v.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        S = r.useRef(!1),
+        B = r.useRef(!1),
         T = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
-        B = r.useRef(null),
+        S = r.useRef(null),
         A = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
         y = (0, u.Z)(A),
         [R, w] = r.useState(null),
@@ -34,10 +34,10 @@ t.Z = (e) => {
             })
         ),
         P = (0, i.uR)(R, I),
-        O = r.useCallback(() => {
+        M = r.useCallback(() => {
             if (T) return;
             let e = j.current,
-                t = B.current;
+                t = S.current;
             if (null != t && null != e && P.isReady) {
                 var n, o, r, s;
                 let { x: a, y: i } = e.getBoundingClientRect(),
@@ -89,36 +89,36 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [j, B, P, T]),
-        M = (0, u.Z)(_);
+        }, [j, S, P, T]),
+        O = (0, u.Z)(_);
     return (r.useEffect(() => {
-        N && _ && !M && (b(), O());
-    }, [_, N, b, O, M]),
+        N && _ && !O && (E(), M());
+    }, [_, N, E, M, O]),
     r.useEffect(() => {
         N &&
             !A &&
             y &&
             setTimeout(() => {
-                b(), O();
+                E(), M();
             }, 200);
-    }, [N, y, A, b, O]),
+    }, [N, y, A, E, M]),
     r.useEffect(() => {
-        if (!!P.isReady) !S.current && N && (b(), O()), (S.current = N);
-    }, [N, S, O, b, P]),
+        if (!!P.isReady) !B.current && N && (E(), M()), (B.current = N);
+    }, [N, B, M, E, P]),
     T)
         ? null
         : (0, o.jsxs)('div', {
               className: f.wrapper,
               'aria-hidden': 'true',
-              ref: B,
+              ref: S,
               children: [
                   (0, o.jsx)(c.animated.div, {
                       className: f.background,
-                      style: { opacity: E }
+                      style: { opacity: b }
                   }),
                   (0, o.jsx)(c.animated.div, {
                       className: a()(f.borders, f.bordersTopLeft),
-                      style: { opacity: E }
+                      style: { opacity: b }
                   }),
                   (0, o.jsxs)(c.animated.div, {
                       className: f.confettiWrapper,
@@ -147,7 +147,7 @@ t.Z = (e) => {
                               (0, l.createPortal)(
                                   (0, o.jsx)(c.animated.div, {
                                       className: a()(f.borders, f.bordersBottom),
-                                      style: { opacity: E }
+                                      style: { opacity: b }
                                   }),
                                   s.current
                               )

@@ -26,7 +26,7 @@ let o = {
         }
         let [d, f] = a.M8.isRange(n) ? a.M8.edges(n) : a.bN.edges(e, n);
         if (null != i || null != s) {
-            var _, h, p;
+            var _, p, h;
             if (o) {
                 let t =
                     null !==
@@ -43,22 +43,22 @@ let o = {
                         null != r[r.length - 1].match(/[\u0E00-\u0E7F]/) &&
                         (t =
                             null !==
-                                (h = a.bN.before(e, d, {
+                                (p = a.bN.before(e, d, {
                                     distance: i,
                                     unit: 'offset'
-                                })) && void 0 !== h
-                                ? h
+                                })) && void 0 !== p
+                                ? p
                                 : a.bN.start(e, []));
                 }
                 d = t;
             } else
                 f =
                     null !==
-                        (p = a.bN.after(e, f, {
+                        (h = a.bN.after(e, f, {
                             distance: i,
                             unit: s
-                        })) && void 0 !== p
-                        ? p
+                        })) && void 0 !== h
+                        ? h
                         : a.bN.end(e, []);
         }
         if (null != u) {

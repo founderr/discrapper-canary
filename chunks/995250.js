@@ -15,8 +15,8 @@ var i = n(120356),
     d = n(228168),
     f = n(8621);
 function _(e) {
-    let { user: t, profileType: n, animateOnHover: i, onOpenProfile: _, ...h } = e,
-        p = d.n_.AVATAR,
+    let { user: t, profileType: n, animateOnHover: i, onOpenProfile: _, ...p } = e,
+        h = d.n_.AVATAR,
         { interactionSource: m } = (0, s.Xo)(),
         g = a()(f.avatar, {
             [f.hoisted]: m === d.n_.AVATAR || m === d.n_.STATUS,
@@ -31,20 +31,20 @@ function _(e) {
             user: t,
             className: g,
             profileType: n,
-            sourceType: p,
-            ...h,
+            sourceType: h,
+            ...p,
             children: () =>
                 (0, r.jsx)(u.Z, {
                     className: g,
                     user: t,
-                    sourceType: p,
+                    sourceType: h,
                     children: (0, r.jsx)(o.Z, {
                         user: t,
                         animateOnHover: i,
                         onOpenProfile: _,
                         profileType: n,
                         className: f.withReactReply,
-                        ...h
+                        ...p
                     })
                 })
         })

@@ -22,7 +22,7 @@ function c(e, t, n) {
 let d = new r.V7(),
     f = new r.V7(),
     _ = new r.V7();
-class h extends i.Z {
+class p extends i.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', {
@@ -73,4 +73,4 @@ class h extends i.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new p();

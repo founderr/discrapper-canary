@@ -10,8 +10,8 @@ var r,
     d = n(131951),
     f = n(944486),
     _ = n(594174),
-    h = n(647177);
-let p = !1,
+    p = n(647177);
+let h = !1,
     m = null,
     g = !1,
     E = {};
@@ -19,13 +19,13 @@ function v(e) {
     var t;
     let n = _.default.getCurrentUser();
     if (null == n) return !1;
-    let r = null != e ? e : (0, h.Gx)(null === (t = c.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
+    let r = null != e ? e : (0, p.Gx)(null === (t = c.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
     return null != f.Z.getVoiceChannelId() && d.Z.isVideoEnabled() && null != r;
 }
 function I() {
     m !== f.Z.getVoiceChannelId() && (g = !1), v() && (g = !0), (m = f.Z.getVoiceChannelId());
 }
-class S extends (r = o.ZP.Store) {
+class b extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, f.Z, d.Z), this.syncWith([f.Z, d.Z], I);
     }
@@ -33,14 +33,14 @@ class S extends (r = o.ZP.Store) {
         return E;
     }
     get hasBeenApplied() {
-        return p;
+        return h;
     }
     get hasUsedBackgroundInCall() {
         return g;
     }
 }
 (s = 'VideoBackgroundStore'),
-    (a = 'displayName') in (i = S)
+    (a = 'displayName') in (i = b)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -48,7 +48,7 @@ class S extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new S(u.Z, {
+    (t.Z = new b(u.Z, {
         VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
             let { assets: t } = e;
             E = t.reduce(
@@ -76,6 +76,6 @@ class S extends (r = o.ZP.Store) {
         },
         MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
             let { settings: t } = e;
-            l.TO.CAMERA_BACKGROUND_LIVE in t && (p = !0);
+            l.TO.CAMERA_BACKGROUND_LIVE in t && (h = !0);
         }
     }));

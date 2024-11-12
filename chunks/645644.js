@@ -10,16 +10,16 @@ var r,
     d = n(581567),
     f = n(594190),
     _ = n(449224),
-    h = n(808506),
-    p = n(237997),
+    p = n(808506),
+    h = n(237997),
     m = n(626135),
     g = n(998502),
     E = n(145597),
     v = n(830917),
     I = n(554174),
-    S = n(938038),
-    T = n(981631),
-    b = n(987650);
+    b = n(938038),
+    S = n(981631),
+    T = n(987650);
 function y(e, t, n) {
     return (
         t in e
@@ -40,8 +40,8 @@ class N {
         ++this.actions[e];
     }
     getAnalytics(e, t) {
-        let n = this.actions[b.bv.Viewed],
-            r = this.actions[b.bv.Clicked];
+        let n = this.actions[T.bv.Viewed],
+            r = this.actions[T.bv.Clicked];
         return 0 === n && 0 === r
             ? null
             : {
@@ -53,20 +53,20 @@ class N {
     }
     constructor() {
         y(this, 'actions', {
-            [b.bv.Viewed]: 0,
-            [b.bv.Clicked]: 0
+            [T.bv.Viewed]: 0,
+            [T.bv.Clicked]: 0
         });
     }
 }
 class C {
     static makeEmptyGroupAnalytics() {
         return {
-            [b.Vk.Nudge]: 0,
-            [b.Vk.TextChat]: 0,
-            [b.Vk.VoiceCall]: 0,
-            [b.Vk.Activity]: 0,
-            [b.Vk.Clips]: 0,
-            [b.Vk.Other]: 0
+            [T.Vk.Nudge]: 0,
+            [T.Vk.TextChat]: 0,
+            [T.Vk.VoiceCall]: 0,
+            [T.Vk.Activity]: 0,
+            [T.Vk.Clips]: 0,
+            [T.Vk.Other]: 0
         };
     }
     increment(e, t) {
@@ -75,7 +75,7 @@ class C {
             A.error('NotificationCounter: Unknown notification action: '.concat(t));
             return;
         }
-        let r = (0, b.YK)(e);
+        let r = (0, T.YK)(e);
         if (!(r in n)) {
             A.error('NotificationCounter: Unknown notification action: '.concat(e));
             return;
@@ -89,23 +89,23 @@ class C {
         i.increment(t);
     }
     getAnalytics() {
-        let e = this.groupCounters[b.bv.Viewed],
-            t = this.groupCounters[b.bv.Clicked];
+        let e = this.groupCounters[T.bv.Viewed],
+            t = this.groupCounters[T.bv.Clicked];
         return {
-            notices_viewed: this.actionCounters[b.bv.Viewed],
-            notices_clicked: this.actionCounters[b.bv.Clicked],
-            notice_nudge_viewed: e[b.Vk.Nudge],
-            notice_text_chat_viewed: e[b.Vk.TextChat],
-            notice_voice_call_viewed: e[b.Vk.VoiceCall],
-            notice_activity_viewed: e[b.Vk.Activity],
-            notice_clips_viewed: e[b.Vk.Clips],
-            notice_other_viewed: e[b.Vk.Other],
-            notice_nudge_clicked: t[b.Vk.Nudge],
-            notice_text_chat_clicked: t[b.Vk.TextChat],
-            notice_voice_call_clicked: t[b.Vk.VoiceCall],
-            notice_activity_clicked: t[b.Vk.Activity],
-            notice_clips_clicked: t[b.Vk.Clips],
-            notice_other_clicked: t[b.Vk.Other]
+            notices_viewed: this.actionCounters[T.bv.Viewed],
+            notices_clicked: this.actionCounters[T.bv.Clicked],
+            notice_nudge_viewed: e[T.Vk.Nudge],
+            notice_text_chat_viewed: e[T.Vk.TextChat],
+            notice_voice_call_viewed: e[T.Vk.VoiceCall],
+            notice_activity_viewed: e[T.Vk.Activity],
+            notice_clips_viewed: e[T.Vk.Clips],
+            notice_other_viewed: e[T.Vk.Other],
+            notice_nudge_clicked: t[T.Vk.Nudge],
+            notice_text_chat_clicked: t[T.Vk.TextChat],
+            notice_voice_call_clicked: t[T.Vk.VoiceCall],
+            notice_activity_clicked: t[T.Vk.Activity],
+            notice_clips_clicked: t[T.Vk.Clips],
+            notice_other_clicked: t[T.Vk.Other]
         };
     }
     getCounterAnalytics(e) {
@@ -118,27 +118,27 @@ class C {
     }
     constructor() {
         y(this, 'actionCounters', {
-            [b.bv.Viewed]: 0,
-            [b.bv.Clicked]: 0
+            [T.bv.Viewed]: 0,
+            [T.bv.Clicked]: 0
         }),
             y(this, 'groupCounters', {
-                [b.bv.Viewed]: C.makeEmptyGroupAnalytics(),
-                [b.bv.Clicked]: C.makeEmptyGroupAnalytics()
+                [T.bv.Viewed]: C.makeEmptyGroupAnalytics(),
+                [T.bv.Clicked]: C.makeEmptyGroupAnalytics()
             }),
             y(this, 'counters', {
-                [b.n0.NewsNudge]: new N(),
-                [b.n0.WelcomeNudge]: new N(),
-                [b.n0.TextChat]: new N(),
-                [b.n0.ActivityUserJoin]: new N(),
-                [b.n0.ActivityInvite]: new N(),
-                [b.n0.IncomingCall]: new N(),
-                [b.n0.GoLiveNudge]: new N(),
-                [b.n0.GoLiveNonVoiceNudge]: new N(),
-                [b.n0.OverlayCrashed]: new N(),
-                [b.n0.ClipsReminderNotification]: new N(),
-                [b.n0.ClipsNotification]: new N(),
-                [b.n0.KeybindIndicatorsNotification]: new N(),
-                [b.n0.SendGameInvitesNotification]: new N()
+                [T.n0.NewsNudge]: new N(),
+                [T.n0.WelcomeNudge]: new N(),
+                [T.n0.TextChat]: new N(),
+                [T.n0.ActivityUserJoin]: new N(),
+                [T.n0.ActivityInvite]: new N(),
+                [T.n0.IncomingCall]: new N(),
+                [T.n0.GoLiveNudge]: new N(),
+                [T.n0.GoLiveNonVoiceNudge]: new N(),
+                [T.n0.OverlayCrashed]: new N(),
+                [T.n0.ClipsReminderNotification]: new N(),
+                [T.n0.ClipsNotification]: new N(),
+                [T.n0.KeybindIndicatorsNotification]: new N(),
+                [T.n0.SendGameInvitesNotification]: new N()
             });
     }
 }
@@ -157,9 +157,9 @@ class R {
     }
     getByWidget(e) {
         switch (e) {
-            case T.Odu.VOICE:
+            case S.Odu.VOICE:
                 return this.getByType(0);
-            case T.Odu.TEXT:
+            case S.Odu.TEXT:
                 return this.getByType(1);
             default:
                 return null;
@@ -215,8 +215,8 @@ class O {
             a = parseInt(i[0], 10),
             s = isNaN(a) ? l.Jx.UNKNOWN : a;
         isNaN(a) && A.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
-        let o = S.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
-        S.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
+        let o = b.c.getGameDisplayMode(null !== (e = this.game.name) && void 0 !== e ? e : this.game.id);
+        b.c.setGameDisplayMode(null !== (t = this.game.name) && void 0 !== t ? t : this.game.id, s);
         let u = {
             screentype_unknown_duration: r[l.Jx.UNKNOWN],
             screentype_windowed_duration: r[l.Jx.WINDOWED],
@@ -294,7 +294,7 @@ class D {
         if (null != n) {
             n.screenAnalytics.destroy();
             let t = await n.getAnalytics();
-            for (let e of (m.default.track(T.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(T.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
+            for (let e of (m.default.track(S.rMx.OVERLAY_USAGE_STATS, t.usage), t.notifications)) m.default.track(S.rMx.OVERLAY_USAGE_NOTIFICATION_STATS, e);
             A.verbose('OVERLAY_USAGE_STATS: '.concat(e.name), t), delete D.gamesByPid[e.pid];
         }
         delete D.gamesByName[t];
@@ -302,13 +302,13 @@ class D {
     async getAnalytics() {
         var e, t, n, r, i, a, s;
         let o = {
-                setting_is_enabled: h.Z.enabled,
-                setting_method: null == this.overlayStatus ? null : b.gl[this.overlayStatus.overlayMethod],
-                setting_display_user: p.Z.getDisplayUserMode(),
-                setting_display_name: p.Z.getDisplayNameMode(),
-                setting_avatar_size: p.Z.getAvatarSizeMode(),
-                setting_notification_position: p.Z.getNotificationPositionMode(),
-                setting_chat_notification: p.Z.getTextChatNotificationMode()
+                setting_is_enabled: p.Z.enabled,
+                setting_method: null == this.overlayStatus ? null : T.gl[this.overlayStatus.overlayMethod],
+                setting_display_user: h.Z.getDisplayUserMode(),
+                setting_display_name: h.Z.getDisplayNameMode(),
+                setting_avatar_size: h.Z.getAvatarSizeMode(),
+                setting_notification_position: h.Z.getNotificationPositionMode(),
+                setting_chat_notification: h.Z.getTextChatNotificationMode()
             },
             l = (0, f.jk)(this.game),
             u = (0, d.G8)(this.game);
@@ -469,7 +469,7 @@ function G(e) {
     A.verbose('MESSAGE_ACKED', e), D.desktopMessageEvent('ack');
 }
 function B(e) {
-    e.message.state === T.yb.SENDING && D.desktopMessageEvent('created');
+    e.message.state === S.yb.SENDING && D.desktopMessageEvent('created');
 }
 function Z(e) {
     let t = (0, I.Z)();
@@ -505,10 +505,10 @@ class j {
         var t;
         let n = (null !== (t = e.channelId) && void 0 !== t ? t : 'unknown') + e.context;
         switch (e.state) {
-            case T.hes.RTC_CONNECTED:
+            case S.hes.RTC_CONNECTED:
                 j.connections.add(n);
                 break;
-            case T.hes.DISCONNECTED:
+            case S.hes.DISCONNECTED:
                 j.connections.delete(n);
         }
         let r = j.hasConnection();
@@ -532,7 +532,7 @@ class H {
         });
     }
     static handleMessageCreate(e) {
-        if (e.message.state !== T.yb.SENDING) return;
+        if (e.message.state !== S.yb.SENDING) return;
         A.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = _.Z.getGame();
         if (null == t) {

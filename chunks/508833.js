@@ -14,11 +14,11 @@ function o(e) {
             ...e,
             labelElementType: 'span'
         }),
-        h = ((t = (0, i.uZ)(t, n, o)) - n) / (o - n),
-        p = (0, s.Ux)(c);
+        p = ((t = (0, i.uZ)(t, n, o)) - n) / (o - n),
+        h = (0, s.Ux)(c);
     if (!u && !l) {
-        let e = 'percent' === c.style ? h : t;
-        l = p.format(e);
+        let e = 'percent' === c.style ? p : t;
+        l = h.format(e);
     }
     return {
         progressBarProps: (0, r.dG)(d, {

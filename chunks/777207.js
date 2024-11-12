@@ -15,7 +15,7 @@ var r = n(200651),
 let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     _ = i.forwardRef(function (e, t) {
         let n,
-            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: _, color: h, tabularNumbers: p = !1, scaleFontToUserSetting: m = !1, ...g } = e,
+            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: _, color: p, tabularNumbers: h = !1, scaleFontToUserSetting: m = !1, ...g } = e,
             E = '',
             v = {};
         if (
@@ -27,9 +27,9 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                           lineClamp: _,
                           WebkitLineClamp: _
                       }))),
-            void 0 !== h)
+            void 0 !== p)
         )
-            switch (h) {
+            switch (p) {
                 case 'currentColor':
                     n = 'currentColor';
                     break;
@@ -41,9 +41,9 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     break;
                 default:
                     var I;
-                    n = null === (I = u.Z.colors[f[h]]) || void 0 === I ? void 0 : I.css;
+                    n = null === (I = u.Z.colors[f[p]]) || void 0 === I ? void 0 : I.css;
             }
-        let S = {
+        let b = {
             color: n,
             ...v,
             ...g.style
@@ -52,9 +52,9 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
             ref: t,
             className: s()(
                 {
-                    [c.defaultColor]: void 0 === h,
+                    [c.defaultColor]: void 0 === p,
                     [c.selectable]: o,
-                    [c.tabularNumbers]: p,
+                    [c.tabularNumbers]: h,
                     [d.fontScaling]: m
                 },
                 E,
@@ -62,7 +62,7 @@ let f = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                 l
             ),
             ...g,
-            style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
+            style: Object.values(b).filter(Boolean).length > 0 ? b : void 0,
             'data-text-variant': i
         });
     });

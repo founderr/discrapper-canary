@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     uZ: function () {
-        return p;
+        return h;
     }
 }),
     n(47120);
@@ -46,7 +46,7 @@ let d = (e, t) => ({
             return null !== (s = null == t ? void 0 : t.interactionError) && void 0 !== s ? s : f(e);
         }
     },
-    h = (e) => {
+    p = (e) => {
         switch (e) {
             case r.re.ACTION_ROW:
             case r.re.BUTTON:
@@ -64,13 +64,13 @@ let d = (e, t) => ({
                 return (0, u.Io)('canShowComponent');
         }
     };
-function p(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return e
         .map((e, n) =>
             (function e(t, n, i) {
-                var s, u, f, _, p, g, E, v;
-                if (!h(t.type)) return null;
+                var s, u, f, _, h, g, E, v;
+                if (!p(t.type)) return null;
                 let { includeEmojiSrc: I } = n;
                 switch (t.type) {
                     case r.re.ACTION_ROW: {
@@ -162,7 +162,7 @@ function p(e) {
                             id: m(i),
                             customId: t.custom_id,
                             disabled: t.disabled,
-                            placeholder: null !== (p = t.placeholder) && void 0 !== p ? p : c.intl.string(c.t.Otr6W1),
+                            placeholder: null !== (h = t.placeholder) && void 0 !== h ? h : c.intl.string(c.t.Otr6W1),
                             minValues: t.min_values,
                             maxValues: t.max_values,
                             defaultValues: t.default_values

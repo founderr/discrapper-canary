@@ -25,13 +25,13 @@ function o(e) {
     );
 }
 function l(e) {
-    let { query: t, selectedIndex: n, autocompletes: a, onHover: s, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: f, getQuery: _, key: h, indexOffset: p = 0, headerClassName: m, headerTrailingContent: g, footer: E } = e;
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: s, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: f, getQuery: _, key: p, indexOffset: h = 0, headerClassName: m, headerTrailingContent: g, footer: E } = e;
     if (null == E && (null == a || 0 === a.length)) return null;
     let v =
         null == a
             ? void 0
             : a.map((e, t) => {
-                  let r = t + p,
+                  let r = t + h,
                       a = f(e, r);
                   return (0, i.createElement)(d, {
                       onClick: l,
@@ -60,6 +60,6 @@ function l(e) {
                 E
             ]
         },
-        h
+        p
     );
 }

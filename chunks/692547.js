@@ -10,19 +10,19 @@ var r = n(688619),
     d = n(196548),
     f = n(387117),
     _ = n(949180),
-    h = n(777910),
-    p = n(897710);
+    p = n(777910),
+    h = n(897710);
 let { Themes: m } = n(15202).V,
     { SemanticColors: g, RawColors: E } = c.V,
     { SemanticColorExperiments: v } = u.V,
-    { Shadows: I } = h.V,
-    { Spacing: S } = p.V,
-    { Modules: T } = f.V,
-    { Layout: b } = d.V,
+    { Shadows: I } = p.V,
+    { Spacing: b } = h.V,
+    { Modules: S } = f.V,
+    { Layout: T } = d.V,
     y = l()(E, (e) => i()(e)),
     A = {
         themes: m,
-        modules: T,
+        modules: S,
         colors: l()(g, (e, t) => ({
             css: O(t),
             resolve(n) {
@@ -58,8 +58,8 @@ let { Themes: m } = n(15202).V,
             })
         })),
         radii: _.w,
-        spacing: l()(S, (e) => ''.concat(e, 'px')),
-        layout: l()(b, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e))
+        spacing: l()(b, (e) => ''.concat(e, 'px')),
+        layout: l()(T, (e) => ('number' == typeof e ? ''.concat(e, 'px') : e))
     };
 function N(e, t) {
     return {

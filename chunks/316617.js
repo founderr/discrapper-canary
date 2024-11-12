@@ -9,21 +9,21 @@ var r = n(200651),
     d = n(464891),
     f = n(267128),
     _ = n(25015),
-    h = n(592125),
-    p = n(217702),
+    p = n(592125),
+    h = n(217702),
     m = n(388032),
     g = n(195474);
 t.Z = (e) => {
     let { message: t } = e,
         n = (0, l.ZP)(t),
-        E = (0, a.e7)([h.Z], () => h.Z.getChannel(t.channel_id)),
+        E = (0, a.e7)([p.Z], () => p.Z.getChannel(t.channel_id)),
         v = i.useMemo(() => (0, o.Z)(t), [t]),
         { content: I } = (0, _.Z)(v, { hideSimpleEmbedContent: !1 }),
-        S = i.useCallback(() => {
+        b = i.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, f.f)(t, I, !1, '', {
                 leadingIconClass: g.attachmentIcon,
                 trailingIconClass: g.attachmentIcon,
-                iconSize: p.WW
+                iconSize: h.WW
             });
             return (0, r.jsxs)('div', {
                 className: g.contentContainer,
@@ -50,7 +50,7 @@ t.Z = (e) => {
                   (0, r.jsx)(s.Scroller, {
                       className: g.messagePreviewContainer,
                       children: (0, r.jsx)(u.Z, {
-                          childrenMessageContent: S(),
+                          childrenMessageContent: b(),
                           childrenHeader: (0, r.jsx)(d.ZP, {
                               message: t,
                               channel: E,

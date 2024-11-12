@@ -24,10 +24,10 @@ let c = {},
 function _() {
     c = { ...a.Z.getCollapsedCategories() };
 }
-function h() {
+function p() {
     !__OVERLAY__ && (clearTimeout(d), (d = setTimeout(() => m({}), f)));
 }
-async function p(e, t) {
+async function h(e, t) {
     null == e || e === l.ME
         ? await r.tn.patch({
               url: l.ANM.USER_GUILD_SETTINGS(l.ME),
@@ -76,14 +76,14 @@ class E extends i.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', {
-                CATEGORY_COLLAPSE: h,
-                CATEGORY_EXPAND: h,
-                CATEGORY_COLLAPSE_ALL: h,
-                CATEGORY_EXPAND_ALL: h,
+                CATEGORY_COLLAPSE: p,
+                CATEGORY_EXPAND: p,
+                CATEGORY_COLLAPSE_ALL: p,
+                CATEGORY_EXPAND_ALL: p,
                 POST_CONNECTION_OPEN: _,
                 USER_GUILD_SETTINGS_FULL_UPDATE: g
             }),
-            u(this, 'saveUserGuildSettings', p),
+            u(this, 'saveUserGuildSettings', h),
             u(this, 'saveUserGuildSettingsBulk', m);
     }
 }

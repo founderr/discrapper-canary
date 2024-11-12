@@ -9,41 +9,41 @@ var r = n(200651),
     d = n(484459),
     f = n(695346),
     _ = n(981631),
-    h = n(67996);
+    p = n(67996);
 t.Z = function (e) {
-    let { style: t, src: n, backgroundSrc: p, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
-        I = null != p ? p : n,
-        S = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
-        T = (0, l.c)(!0, 'VideoBackground-web').enabled,
-        b = (0, c.ZP)(null != m ? m : _.lds),
+    let { style: t, src: n, backgroundSrc: h, userId: m, pulseSpeakingIndicator: g = !1, speaking: E = !1, ...v } = e,
+        I = null != h ? h : n,
+        b = (0, o.ZP)(I, a.Z.unsafe_rawColors.PRIMARY_800.css),
+        S = (0, l.c)(!0, 'VideoBackground-web').enabled,
+        T = (0, c.ZP)(null != m ? m : _.lds),
         y =
-            null == b
+            null == T
                 ? void 0
-                : b.getBannerURL({
+                : T.getBannerURL({
                       size: 1024,
                       canAnimate: f.QK.getSetting()
                   });
     if (
         (i.useEffect(() => {
-            null != m && T && (0, d.Z)(m, void 0, { dispatchWait: !0 });
-        }, [T, m]),
+            null != m && S && (0, d.Z)(m, void 0, { dispatchWait: !0 });
+        }, [S, m]),
         null == n)
     )
         return null;
     let A = (0, r.jsx)(s.Avatar, {
-            className: h.avatarWrapper,
+            className: p.avatarWrapper,
             src: n,
             ...v
         }),
         N = {
             ...t,
-            backgroundColor: S
+            backgroundColor: b
         };
     return (
-        null != y && E && T && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
+        null != y && E && S && ((N.backgroundImage = 'url('.concat(y, ')')), (N.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
             style: N,
-            className: h.background,
+            className: p.background,
             children: g
                 ? (0, r.jsx)(u.Z, {
                       shouldAnimate: E,

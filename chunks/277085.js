@@ -16,8 +16,8 @@ var i = n(120356),
     d = n(695346),
     f = n(785717),
     _ = n(388032),
-    h = n(332102);
-let p = (e) =>
+    p = n(332102);
+let h = (e) =>
     (0, o.openModalLazy)(async () => {
         let { default: t } = await n.e('51714').then(n.bind(n, 211065));
         return (n) =>
@@ -33,9 +33,9 @@ function m(e) {
         [E, v] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
         I = !n || E || v ? 0 : 300;
     return (0, r.jsxs)(c.ZP, {
-        className: a()(h.popover, {
-            [h.visible]: t,
-            [h.expandable]: n
+        className: a()(p.popover, {
+            [p.visible]: t,
+            [p.expandable]: n
         }),
         children: [
             (0, r.jsx)(o.TooltipContainer, {
@@ -43,15 +43,15 @@ function m(e) {
                 delay: I,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
-                    className: a()(h.button, h.left),
+                    className: a()(p.button, p.left),
                     'aria-label': _.intl.string(_.t.QdHxoq),
                     'aria-haspopup': 'dialog',
                     onClick: () => {
-                        g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), p(m), null == i || i();
+                        g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), h(m), null == i || i();
                     },
                     children: (0, r.jsx)(o.PencilIcon, {
                         size: 'xs',
-                        colorClass: h.icon
+                        colorClass: p.icon
                     })
                 })
             }),
@@ -60,14 +60,14 @@ function m(e) {
                 delay: I,
                 'aria-label': !1,
                 children: (0, r.jsx)(c.zx, {
-                    className: a()(h.button, h.right),
+                    className: a()(p.button, p.right),
                     'aria-label': _.intl.string(_.t.wfYTHR),
                     onClick: () => {
                         g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
                     },
                     children: (0, r.jsx)(o.TrashIcon, {
                         size: 'xs',
-                        colorClass: h.icon
+                        colorClass: p.icon
                     })
                 })
             })

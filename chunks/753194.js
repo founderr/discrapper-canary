@@ -15,7 +15,7 @@ var i = n(866442),
     c = n(388032);
 function d(e) {
     let t,
-        { color: n, size: d, forcedIconColor: f, className: _, iconClassName: h, tooltipText: p } = e,
+        { color: n, size: d, forcedIconColor: f, className: _, iconClassName: p, tooltipText: h } = e,
         [m, g] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
         E = (0, o.useToken)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
         v = (0, i._i)(null != n ? n : E),
@@ -23,7 +23,7 @@ function d(e) {
     return (
         (t = null != f ? f : 0.3 > (0, i.Bd)(v) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
         (0, r.jsx)(o.Tooltip, {
-            text: null != p ? p : c.intl.string(c.t.T3PvV1),
+            text: null != h ? h : c.intl.string(c.t.T3PvV1),
             children: (e) =>
                 (0, r.jsx)(u.Z, {
                     ...e,
@@ -35,7 +35,7 @@ function d(e) {
                         color: t,
                         height: d,
                         width: d,
-                        className: h
+                        className: p
                     })
                 })
         })

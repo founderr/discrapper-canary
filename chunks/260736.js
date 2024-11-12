@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = n(200651);
@@ -11,22 +11,22 @@ var r = n(481060),
     o = n(942951),
     s = n(834129),
     c = n(388032),
-    d = n(116264);
-function u(e) {
-    let { compact: t, message: u, channel: m } = e,
-        h = (0, a.ZP)(u),
+    u = n(116264);
+function d(e) {
+    let { compact: t, message: d, channel: m } = e,
+        h = (0, a.ZP)(d),
         f = (0, o.l)({
-            user: u.author,
-            channelId: u.channel_id,
+            user: d.author,
+            channelId: d.channel_id,
             guildId: m.guild_id,
-            messageId: u.id
+            messageId: d.id
         })(h);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: d.parentContainer,
+                className: u.parentContainer,
                 children: (0, i.jsx)(s.Z, {
-                    timestamp: u.timestamp,
+                    timestamp: d.timestamp,
                     compact: t,
                     children: c.intl.format(c.t['u0qJ4+'], {
                         actorName: h.nick,
@@ -48,19 +48,19 @@ function u(e) {
                         { modalKey: l.HD_STREAMING_POTION_MODAL_KEY }
                     );
                 },
-                className: d.embed,
+                className: u.embed,
                 children: [
                     (0, i.jsx)('img', {
                         src: 'https://cdn.discordapp.com/assets/content/002329228bcca963cd89792b8c6cb0a6586ddc3dfd8b331742a319057eabd2a7.png',
                         alt: c.intl.string(c.t.N6rchI)
                     }),
                     (0, i.jsxs)('div', {
-                        className: d.text,
+                        className: u.text,
                         children: [
                             (0, i.jsx)(r.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/semibold',
-                                className: d.title,
+                                className: u.title,
                                 children: c.intl.string(c.t['Fh/mk5'])
                             }),
                             (0, i.jsx)(r.Text, {

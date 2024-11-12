@@ -27,7 +27,7 @@ function c(e, t, n, u) {
     var f = (0, i.L6)(u, o);
     try {
         var _ = {},
-            h = n.map(function (e, t) {
+            p = n.map(function (e, t) {
                 if ('object' == typeof e) {
                     var n,
                         r = ((n = t), ''.concat(l, '_').concat(n, '_').concat(l));
@@ -36,7 +36,7 @@ function c(e, t, n, u) {
                 return String(e);
             });
         return t(c, f)
-            .formatToParts(h)
+            .formatToParts(p)
             .map(function (e) {
                 return 'literal' === e.type ? e : (0, r.pi)((0, r.pi)({}, e), { value: _[e.value] || e.value });
             });

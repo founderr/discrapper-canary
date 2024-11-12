@@ -9,18 +9,18 @@ var r,
     d = n(594174),
     f = n(823379),
     _ = n(709054);
-let h = {};
-function p(e) {
+let p = {};
+function h(e) {
     var t;
     let n = c.Z.getChannel(null == e ? void 0 : e.channel_id);
     if (null == n || !n.isForumPost()) return !1;
-    let r = h[n.id];
+    let r = p[n.id];
     return _.default.compare(null == e ? void 0 : e.id, null == r ? void 0 : null === (t = r.message) || void 0 === t ? void 0 : t.id) > -1;
 }
 function m(e, t) {
     let n = null == t ? null : (0, u.e5)(t);
     return (
-        (h[e] = {
+        (p[e] = {
             loaded: !0,
             message: n
         }),
@@ -28,11 +28,11 @@ function m(e, t) {
     );
 }
 function g(e) {
-    return h[e];
+    return p[e];
 }
 function E(e) {
     var t;
-    return null === (t = h[e]) || void 0 === t ? void 0 : t.message;
+    return null === (t = p[e]) || void 0 === t ? void 0 : t.message;
 }
 function v(e) {
     let { threads: t, mostRecentMessages: n } = e;
@@ -48,12 +48,12 @@ class I extends (s = o.ZP.Store) {
     }
     getMessageState(e) {
         return (
-            !(e in h) &&
-                (h[e] = {
+            !(e in p) &&
+                (p[e] = {
                     loaded: !1,
                     message: null
                 }),
-            h[e]
+            p[e]
         );
     }
 }
@@ -68,22 +68,22 @@ class I extends (s = o.ZP.Store) {
         : (r[i] = a),
     new I(l.Z, {
         CONNECTION_OPEN: function () {
-            h = {};
+            p = {};
         },
         MESSAGE_CREATE: function (e) {
-            if (e.isPushNotification || !p(e.message)) return !1;
+            if (e.isPushNotification || !h(e.message)) return !1;
             e.message.channel_id === _.default.castMessageIdAsChannelId(e.message.id) ? m(e.message.channel_id, null) : m(e.message.channel_id, e.message);
         },
         MESSAGE_UPDATE: function (e) {
-            if (!p(e.message) || e.message.channel_id === e.message.id) return !1;
+            if (!h(e.message) || e.message.channel_id === e.message.id) return !1;
             !(function (e, t) {
                 let n = (function (e) {
-                        return h[e];
+                        return p[e];
                     })(e),
                     r = E(e);
                 null != n &&
                     null != r &&
-                    (h[e] = {
+                    (p[e] = {
                         ...n,
                         message: (0, u.wi)(r, t)
                     });
@@ -92,7 +92,7 @@ class I extends (s = o.ZP.Store) {
         MESSAGE_DELETE: function (e) {
             return (function (e, t) {
                 let n = E(e);
-                return (null == n ? void 0 : n.id) === t && (delete h[e], !0);
+                return (null == n ? void 0 : n.id) === t && (delete p[e], !0);
             })(e.channelId, e.id);
         },
         LOAD_FORUM_POSTS: function (e) {
