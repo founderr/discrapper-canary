@@ -7,13 +7,12 @@ e.exports = {
     bodyColumnRight: 'bodyColumnRight_d439ef',
     bodyText: 'bodyText_d439ef',
     selectPlanDivider: 'selectPlanDivider_d439ef',
-    selectedGiftAnimation: 'selectedGiftAnimation_d439ef',
-    giftAnimationOptionsContainer: 'giftAnimationOptionsContainer_d439ef',
     selectPlanChooseTitle: 'selectPlanChooseTitle_d439ef',
     selectPlanTotalRow: 'selectPlanTotalRow_d439ef',
     planSelectSeparator: 'planSelectSeparator_d439ef',
     trialPlanSelectHeader: 'trialPlanSelectHeader_d439ef',
     legacyPricingNotice: 'legacyPricingNotice_d439ef',
+    customGiftMessageWrapper: 'customGiftMessageWrapper_d439ef',
     customGiftMessage: 'customGiftMessage_d439ef',
     selectGiftTitle: 'selectGiftTitle_d439ef'
 };

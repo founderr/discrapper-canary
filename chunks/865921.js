@@ -1,51 +1,48 @@
-t.d(n, {
+n.d(t, {
     v: function () {
-        return g;
+        return b;
     }
 }),
-    t(47120);
-var o = t(200651),
-    i = t(192379),
-    r = t(512722),
-    a = t.n(r),
-    c = t(399606),
-    d = t(89057),
-    l = t(597688),
-    s = t(987209),
-    u = t(563132),
-    f = t(409813),
-    p = t(48931),
-    b = t(456251),
-    _ = t(981631);
-function g(e) {
-    let { handleStepChange: n, handleClose: t } = e,
-        { blockedPayments: r, hasFetchedSkus: g, paymentSources: h, hasFetchedPaymentSources: x, application: m, skusById: v, selectedSkuId: C } = (0, u.usePaymentContext)(),
-        { isGift: k } = (0, s.wD)(),
-        [S, B] = i.useState(!0),
-        [O, y] = (0, c.Wu)([l.Z], () => [l.Z.isFetchingCategories, l.Z.error]);
+    n(47120);
+var o = n(200651),
+    i = n(192379),
+    r = n(399606),
+    a = n(89057),
+    c = n(597688),
+    d = n(987209),
+    l = n(563132),
+    s = n(409813),
+    u = n(48931),
+    f = n(456251),
+    p = n(981631);
+function b(e) {
+    let { handleStepChange: t, handleClose: n } = e,
+        { blockedPayments: b, hasFetchedSkus: _, paymentSources: g, hasFetchedPaymentSources: h, application: x, skusById: m, selectedSkuId: v } = (0, l.usePaymentContext)(),
+        { isGift: C } = (0, d.wD)(),
+        [k, S] = i.useState(!0),
+        [B, O] = (0, r.Wu)([c.Z], () => [c.Z.isFetchingCategories, c.Z.error]);
     if (
         (i.useEffect(() => {
-            let e = null != m;
-            if (!!g && !!x && !!e) B(O);
-        }, [g, x, m, O]),
+            let e = null != x;
+            if (!!_ && !!h && !!e) S(B);
+        }, [_, h, x, B]),
         i.useEffect(() => {
-            if (S || r || O || null != y) return;
-            a()(null != C, 'Expected selectedSkuId');
-            let e = v[C];
-            if (k && (null == e ? void 0 : e.productLine) === _.POd.COLLECTIBLES) {
-                n(f.h8.GIFT_CUSTOMIZATION);
+            if (k || b || null == v) return;
+            let e = m[v];
+            if (C && (null == e ? void 0 : e.productLine) === p.POd.COLLECTIBLES) {
+                t(s.h8.GIFT_CUSTOMIZATION);
                 return;
             }
-            if (0 === Object.keys(h).length) {
-                n(f.h8.ADD_PAYMENT_STEPS);
+            if (0 === Object.keys(g).length) {
+                t(s.h8.ADD_PAYMENT_STEPS);
                 return;
             }
-            n(f.h8.REVIEW);
-        }, [S, r, n, h, k, v, C, y, O]),
-        S)
+            t(s.h8.REVIEW);
+        }, [k, b, t, g, C, m, v]),
+        k)
     )
-        return (0, o.jsx)(b.Z, {});
-    if (r) return (0, o.jsx)(d.Vq, { onClose: t });
-    if (null != y) return (0, o.jsx)(p.Z, { onClose: t });
+        return (0, o.jsx)(f.Z, {});
+    if (b) return (0, o.jsx)(a.Vq, { onClose: n });
+    if (null != O) return (0, o.jsx)(u.Z, { onClose: n });
     return null;
 }
