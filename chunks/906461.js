@@ -29,7 +29,8 @@ t.Z = function (e) {
                     className: p.bannerLeftImageContainer,
                     children: (0, i.jsx)('img', {
                         alt: '',
-                        src: n(28517)
+                        src: n(28517),
+                        className: p.image
                     })
                 }),
                 (0, i.jsx)('div', {

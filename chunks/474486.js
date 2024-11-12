@@ -45,7 +45,7 @@ function T(e) {
     });
 }
 ((n = r || (r = {})).REFERRAL_PROGRAM = 'referral_program'), (n.TRIAL_FOR_ALL = 'trial_for_all');
-let b = () =>
+let I = () =>
         (0, i.jsxs)('div', {
             className: A.coachtipContent,
             children: [
@@ -59,7 +59,7 @@ let b = () =>
                 })
             ]
         }),
-    I = () =>
+    b = () =>
         (0, i.jsx)('svg', {
             width: '15',
             height: '15',
@@ -81,7 +81,7 @@ let b = () =>
                     artClassName: A.coachmarkArt,
                     dismissIconClassName: A.exitIcon,
                     onDismissIconClick: y,
-                    dismissIcon: (0, i.jsx)(I, {}),
+                    dismissIcon: (0, i.jsx)(b, {}),
                     headerClassName: A.incentiveCoachtipContent,
                     contentClassName: A.incentiveCoachtipContainer,
                     pointerClassName: A.incentiveTooltipPointer,
@@ -141,7 +141,7 @@ let b = () =>
                                   circleColor: 'url(#purple-gradient)'
                               })
                           }),
-                          (0, i.jsx)(b, {})
+                          (0, i.jsx)(I, {})
                       ]
                   })
                 : (0, i.jsxs)('div', {
@@ -182,9 +182,8 @@ let b = () =>
         (0, i.jsx)('div', {
             className: A.t4ACoachtipArtInnerContainer,
             children: (0, i.jsx)('img', {
-                src: 'https://cdn.discordapp.com/assets/content/31203751b575be7b77118bed309f633290def5b09b8466a5886fd98514fbabb2.png',
-                alt: '',
-                className: A.t4ACoachtipArt
+                src: 'https://cdn.discordapp.com/assets/content/49060ae409d6cf2fa9b58ad200d60c7f3f68b0927ef57df90b5b9c06c8d1bbe7.png',
+                alt: ''
             })
         }),
     R = (e) => {

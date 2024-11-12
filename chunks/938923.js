@@ -18,6 +18,5 @@ e.exports = {
     t4ACoachtipArtOuterContainer: 't4ACoachtipArtOuterContainer_b5369a',
     t4AMarketingBadgeTooltip: 't4AMarketingBadgeTooltip_b5369a',
     t4ACoachtipArtInnerContainer: 't4ACoachtipArtInnerContainer_b5369a',
-    t4ACoachtipArt: 't4ACoachtipArt_b5369a',
     t4aCoachtipContent: 't4aCoachtipContent_b5369a'
 };
