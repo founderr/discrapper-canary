@@ -1,31 +1,28 @@
 n.d(t, {
     Z: function () {
-        return l;
+        return s;
     }
 });
-var r = n(657305),
-    i = n(841784),
-    a = n(833858),
-    s = n(981631),
-    o = n(388032);
-function l(e) {
+var r = n(833858),
+    i = n(981631),
+    a = n(388032);
+function s(e) {
     switch (e.type) {
-        case s.IIU.STREAMING:
+        case i.IIU.STREAMING:
             let t = null != e.details && '' !== e.details ? e.details : e.name;
-            return o.intl.formatToPlainString(o.t['0wJXSk'], { name: t });
-        case s.IIU.LISTENING:
+            return null != t ? a.intl.formatToPlainString(a.t['0wJXSk'], { name: t }) : null;
+        case i.IIU.LISTENING:
             let n = null != e.details && '' !== e.details ? e.details : e.name;
-            return o.intl.formatToPlainString(o.t.Vnuxub, { name: n });
-        case s.IIU.WATCHING:
-            let l = null != e.details && '' !== e.details ? e.details : e.name;
-            return o.intl.formatToPlainString(o.t.pW3Ip6, { name: l });
-        case s.IIU.COMPETING:
-            return o.intl.formatToPlainString(o.t.QQ2wVF, { name: e.name });
-        case s.IIU.HANG_STATUS:
-            return (0, a.O8)(e);
-        case s.IIU.PLAYING:
+            return null != n ? a.intl.formatToPlainString(a.t.Vnuxub, { name: n }) : null;
+        case i.IIU.WATCHING:
+            let s = null != e.details && '' !== e.details ? e.details : e.name;
+            return null != s ? a.intl.formatToPlainString(a.t.pW3Ip6, { name: s }) : null;
+        case i.IIU.COMPETING:
+            return null != e.name ? a.intl.formatToPlainString(a.t.QQ2wVF, { name: e.name }) : null;
+        case i.IIU.HANG_STATUS:
+            return (0, r.O8)(e);
+        case i.IIU.PLAYING:
         default:
-            if ((0, i.Z)(e)) return (0, r.Z)(e.name);
-            return o.intl.formatToPlainString(o.t.lFApm5, { game: e.name });
+            return null != e.name ? a.intl.formatToPlainString(a.t.lFApm5, { game: e.name }) : null;
     }
 }
