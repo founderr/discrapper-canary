@@ -1,8 +1,8 @@
 t(47120);
 var r = t(200651),
     i = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(481060),
     s = t(346610),
     u = t(868643),
@@ -19,7 +19,7 @@ function C() {
     (0, o.closeModal)(g.U);
 }
 function S(e) {
-    let { onClick: n, tooltipText: t, children: i, selected: l, ...s } = e;
+    let { onClick: n, tooltipText: t, children: i, selected: a, ...s } = e;
     return (0, r.jsx)(o.Tooltip, {
         text: t,
         children: (e) => {
@@ -30,7 +30,7 @@ function S(e) {
                 look: o.ButtonLooks.BLANK,
                 size: o.ButtonSizes.ICON,
                 color: o.ButtonColors.CUSTOM,
-                className: a()(x.actionButton, { [x.selected]: l }),
+                className: l()(x.actionButton, { [x.selected]: a }),
                 ...s,
                 children: i
             });
@@ -47,16 +47,16 @@ function v() {
 }
 function E(e) {
     var n, t;
-    let { item: l } = e,
-        a = null === (n = l.sourceMetadata) || void 0 === n ? void 0 : n.message,
-        d = null === (t = l.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
+    let { item: a } = e,
+        l = null === (n = a.sourceMetadata) || void 0 === n ? void 0 : n.message,
+        d = null === (t = a.sourceMetadata) || void 0 === t ? void 0 : t.identifier,
         m = i.useCallback(() => {
-            if (null != a && null != d) {
+            if (null != l && null != d) {
                 if ('embed' === d.type) {
                     (0, c.l8)({
-                        messageId: a.id,
-                        channelId: a.channel_id,
-                        message: a,
+                        messageId: l.id,
+                        channelId: l.channel_id,
+                        message: l,
                         source: 'media-viewer',
                         forwardOptions: { onlyEmbedIndices: [d.embedIndex] },
                         onRequestSent: C
@@ -64,17 +64,17 @@ function E(e) {
                     return;
                 }
                 (0, c.l8)({
-                    messageId: a.id,
-                    channelId: a.channel_id,
-                    message: a,
+                    messageId: l.id,
+                    channelId: l.channel_id,
+                    message: l,
                     source: 'media-viewer',
                     forwardOptions: { onlyAttachmentIds: [d.attachmentId] },
                     onRequestSent: C
                 });
             }
-        }, [a, d]),
+        }, [l, d]),
         { canForwardMessages: h } = (0, s.yk)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return null != a && h && (0, u.h)(a)
+    return null != l && h && (0, u.h)(l)
         ? (0, r.jsx)(S, {
               onClick: m,
               tooltipText: _.intl.string(_.t.I3ltXF),
@@ -112,7 +112,7 @@ function y(e) {
     });
 }
 function I(e) {
-    let { item: n, canCopyImage: t, canCopyLink: i, onClose: l, onSelect: a } = e;
+    let { item: n, canCopyImage: t, canCopyLink: i, onClose: a, onSelect: l } = e;
     async function s() {
         let e = (0, d.s$)(n.url);
         try {
@@ -124,8 +124,8 @@ function I(e) {
     return (0, r.jsx)(o.Menu, {
         navId: 'image-menu',
         'aria-label': 'placeholder',
-        onClose: l,
-        onSelect: a,
+        onClose: a,
+        onSelect: l,
         children: (0, r.jsxs)(o.MenuGroup, {
             children: [
                 t &&
@@ -162,10 +162,10 @@ function I(e) {
 }
 function A(e) {
     let { item: n } = e,
-        [t, l] = i.useState(!1),
-        a = 'IMAGE' === n.type && h.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
+        [t, a] = i.useState(!1),
+        l = 'IMAGE' === n.type && h.isPlatformEmbedded && null == n.children && f.ZP.canCopyImage() && (0, d.Lz)(n.url),
         s = (0, d.Jj)(n.url);
-    return a || s
+    return l || s
         ? (0, r.jsx)(o.Popout, {
               shouldShow: t,
               align: 'left',
@@ -174,15 +174,15 @@ function A(e) {
               renderPopout: () =>
                   (0, r.jsx)(I, {
                       item: n,
-                      canCopyImage: a,
+                      canCopyImage: l,
                       canCopyLink: s,
-                      onClose: () => l(!1)
+                      onClose: () => a(!1)
                   }),
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, r.jsx)(S, {
                       tooltipText: _.intl.string(_.t.UKOtz8),
-                      onClick: () => l(!t),
+                      onClick: () => a(!t),
                       selected: t,
                       children: (0, r.jsx)(o.MoreHorizontalIcon, {})
                   });

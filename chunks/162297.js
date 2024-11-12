@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(399606),
     s = n(481060),
     c = n(434650),
-    u = n(778569),
-    d = n(182906),
+    d = n(778569),
+    u = n(182906),
     m = n(367907),
     h = n(213609),
     f = n(783097),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(240991),
     I = n(914010),
     x = n(768581),
-    N = n(585483),
-    v = n(135431),
+    v = n(585483),
+    N = n(135431),
     T = n(728345),
     S = n(812206),
     A = n(981631),
@@ -39,7 +39,7 @@ function L(e) {
         null == n && !l && !a && T.ZP.fetchApplication(t);
     }, [n, l, a, t]),
     null != n &&
-        (0, v.Eb)({
+        (0, N.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
@@ -48,7 +48,7 @@ function L(e) {
         : null;
 }
 function P(e) {
-    var t, n, u, d;
+    var t, n, d, u;
     let { application: E } = e,
         x = (0, o.e7)([I.Z], () => {
             var e;
@@ -80,8 +80,8 @@ function P(e) {
                 properties: { application_id: E.id }
             });
     }, [O, E]);
-    let B = E.id in (null !== (u = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== u ? u : {}),
-        U = E.id in (null !== (d = null === (n = (0, p.LD)(x, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== d ? d : {}),
+    let B = E.id in (null !== (d = null === (t = (0, p.PL)(!0, !1).result) || void 0 === t ? void 0 : t.sections) && void 0 !== d ? d : {}),
+        U = E.id in (null !== (u = null === (n = (0, p.LD)(x, !1).result) || void 0 === n ? void 0 : n.sections) && void 0 !== u ? u : {}),
         w = B || U,
         F = E.isVerified && E.isDiscoverable;
     return (0, i.jsxs)('div', {
@@ -129,7 +129,7 @@ function P(e) {
                                     onClick: () => {
                                         var e;
                                         a.Y.USER_INSTALL in (null !== (e = E.integrationTypesConfig) && void 0 !== e ? e : {}) || w
-                                            ? N.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: E.id })
+                                            ? v.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: E.id })
                                             : (0, g.goToAppDirectory)({
                                                   guildId: x,
                                                   view: _.ApplicationDirectoryViews.APPLICATION,
@@ -145,7 +145,7 @@ function P(e) {
                                 size: s.Button.Sizes.MEDIUM,
                                 onClick: () => {
                                     m.ZP.trackWithMetadata(A.rMx.APP_OAUTH2_LINK_EMBED_CTA_CLICKED, { application_id: E.id }),
-                                        (0, v.LO)({
+                                        (0, N.LO)({
                                             applicationId: E.id,
                                             customInstallUrl: E.customInstallUrl,
                                             installParams: E.installParams,
@@ -165,7 +165,7 @@ function P(e) {
 }
 function y(e) {
     let { application: t, iconUrl: n } = e,
-        r = (0, u.Z)({
+        r = (0, d.Z)({
             applicationId: t.id,
             size: 280,
             names: ['embedded_cover']
@@ -175,7 +175,7 @@ function y(e) {
         o = null,
         s = {};
     if ((0, f.ye)(t))
-        o = (0, i.jsx)(d.Z, {
+        o = (0, i.jsx)(u.Z, {
             imageBackground: r,
             applicationName: t.name,
             imageClassName: j.bannerImage,

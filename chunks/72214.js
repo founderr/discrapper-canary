@@ -56,23 +56,23 @@ function f(e) {
             b(null != f ? f : []);
     }, [E, A]),
         (0, s.D)();
-    let L = (0, i.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
-        N = (0, i.e7)([a.Z], () => a.Z.isConnected()),
-        x = '' !== I;
+    let x = (0, i.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
+        L = (0, i.e7)([a.Z], () => a.Z.isConnected()),
+        N = '' !== I;
     return l.useMemo(
         () =>
             (0, u.ZP)({
                 results: S,
-                hasQuery: x,
+                hasQuery: N,
                 queryMode: C,
                 targetDestination: n,
-                frequentChannels: L,
+                frequentChannels: x,
                 selectedDestinations: f,
                 pinnedDestinations: v,
                 originDestination: _,
                 includeMissingDMs: g,
-                isConnected: N
+                isConnected: L
             }),
-        [S, x, C, n, L, f, v, _, g, N]
+        [S, N, C, n, x, f, v, _, g, L]
     );
 }

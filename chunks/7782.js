@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(525541),
     E = n(981631),
     b = n(377668),
-    Z = n(228168),
-    N = n(388032),
+    N = n(228168),
+    Z = n(388032),
     S = n(995593);
 let T = (e) => {
         let { userId: t, channelId: n } = e,
@@ -73,7 +73,7 @@ let T = (e) => {
             ? (0, i.jsx)(s.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
-                  children: N.intl.string(N.t.zjVh8v)
+                  children: Z.intl.string(Z.t.zjVh8v)
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -86,14 +86,14 @@ let T = (e) => {
                               (0, g.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: Z.oh.MUTUAL_GUILDS,
+                                  section: N.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: E.jXE.DIRECT_MESSAGE }
                               });
                           },
                           children: (0, i.jsx)(s.Text, {
                               className: S.mutualGuilds,
                               variant: 'text-sm/normal',
-                              children: N.intl.format(N.t.eE3oen, { count: r.length })
+                              children: Z.intl.format(Z.t.eE3oen, { count: r.length })
                           })
                       })
                   ]
@@ -120,7 +120,7 @@ let T = (e) => {
                         type: E.OGo.BLOCKED
                     });
                 },
-                children: N.intl.string(N.t.l4EmaW)
+                children: Z.intl.string(Z.t.l4EmaW)
             });
         switch (n) {
             case E.OGo.NONE:
@@ -132,7 +132,7 @@ let T = (e) => {
                                 className: S.action,
                                 size: s.Button.Sizes.TINY,
                                 onClick: c,
-                                children: N.intl.string(N.t.w5uwoK)
+                                children: Z.intl.string(Z.t.w5uwoK)
                             }),
                         d
                     ]
@@ -147,7 +147,7 @@ let T = (e) => {
                                 o.Z.removeFriend(l, { location: E.ZY5.DM_CHANNEL });
                             },
                             color: s.Button.Colors.PRIMARY,
-                            children: N.intl.string(N.t.cvSt1N)
+                            children: Z.intl.string(Z.t.cvSt1N)
                         }),
                         d
                     ]
@@ -160,7 +160,7 @@ let T = (e) => {
                         o.Z.unblockUser(l, { location: E.ZY5.DM_CHANNEL });
                     },
                     color: s.Button.Colors.PRIMARY,
-                    children: N.intl.string(N.t.XyHpKC)
+                    children: Z.intl.string(Z.t.XyHpKC)
                 });
             case E.OGo.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
@@ -169,13 +169,13 @@ let T = (e) => {
                             className: S.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: N.intl.string(N.t.c2v5nJ)
+                            children: Z.intl.string(Z.t.c2v5nJ)
                         }),
                         (0, i.jsx)(s.Button, {
                             className: S.action,
                             size: s.Button.Sizes.TINY,
                             onClick: c,
-                            children: N.intl.string(N.t.ZcibdX)
+                            children: Z.intl.string(Z.t.ZcibdX)
                         }),
                         (0, i.jsx)(s.Button, {
                             className: S.action,
@@ -184,7 +184,7 @@ let T = (e) => {
                             onClick: () => {
                                 o.Z.cancelFriendRequest(l, { location: E.ZY5.DM_CHANNEL });
                             },
-                            children: N.intl.string(N.t.xuio0N)
+                            children: Z.intl.string(Z.t.xuio0N)
                         }),
                         d
                     ]
@@ -196,7 +196,7 @@ let T = (e) => {
                             className: S.action,
                             size: s.Button.Sizes.TINY,
                             disabled: !0,
-                            children: N.intl.string(N.t.xMH6vL)
+                            children: Z.intl.string(Z.t.xMH6vL)
                         }),
                         d
                     ]
@@ -208,7 +208,7 @@ let T = (e) => {
     A = (e) => {
         let { channelId: t, otherUserId: n } = e,
             r = l.useCallback(() => {
-                (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.a2j0ho), s.ToastType.FAILURE));
+                (0, s.showToast)((0, s.createToast)(Z.intl.string(Z.t.a2j0ho), s.ToastType.FAILURE));
             }, []),
             a = l.useCallback(() => {
                 m.Z.closeChannelSidebar(C.uZ);
@@ -238,7 +238,7 @@ let T = (e) => {
                     onClick: () => c(t),
                     disabled: x,
                     submitting: h,
-                    children: N.intl.string(N.t.Kz8Pws)
+                    children: Z.intl.string(Z.t.Kz8Pws)
                 }),
                 (0, i.jsx)(s.Button, {
                     className: S.action,
@@ -247,7 +247,7 @@ let T = (e) => {
                     color: s.Button.Colors.PRIMARY,
                     disabled: x,
                     submitting: p,
-                    children: N.intl.string(N.t.B2nygY)
+                    children: Z.intl.string(Z.t.B2nygY)
                 })
             ]
         });

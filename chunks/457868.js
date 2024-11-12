@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(623624),
     E = n(518738),
     b = n(965376),
-    Z = n(159299),
-    N = n(184301),
+    N = n(159299),
+    Z = n(184301),
     S = n(347475),
     T = n(199902),
     j = n(271383),
@@ -68,7 +68,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
             b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(a, t.guild_id))),
             L = (0, h.e7)([T.Z], () => T.Z.getAnyStreamForUser(a)),
             k = (0, c.JA)(a),
-            D = (0, h.e7)([Z.Z], () => Z.Z.canUserViewChannel(t.id, r, a)),
+            D = (0, h.e7)([N.Z], () => N.Z.canUserViewChannel(t.id, r, a)),
             B = (null == C ? void 0 : C.id) != null && C.id === s,
             F = l.useCallback(
                 (e) => {
@@ -113,7 +113,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
         let K = null == d ? void 0 : d.premiumSince;
         return (0, i.jsx)(p.Popout, {
             preload: () =>
-                (0, N.Z)(C, {
+                (0, Z.Z)(C, {
                     guildId: t.guild_id,
                     channelId: t.id
                 }),

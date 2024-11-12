@@ -26,16 +26,16 @@ var i = n(200651),
     Z = n(592125),
     C = n(430824),
     y = n(496675),
-    b = n(979651),
-    T = n(626135),
+    T = n(979651),
+    b = n(626135),
     A = n(153066),
     N = n(981631),
     w = n(388032),
-    j = n(247111);
-function P(e) {
+    P = n(247111);
+function j(e) {
     let { type: t, source: n, activity: l, applicationStream: a, user: r, guildId: s, channelId: c, onAction: d, isEmbedded: f = (0, u.Z)(l), actionColor: p } = e;
     return (0, i.jsx)(m.Z, {
-        className: (0, A.l)(j, 'actions', t),
+        className: (0, A.l)(P, 'actions', t),
         type: t,
         source: n,
         activity: l,
@@ -52,9 +52,9 @@ function P(e) {
 let R = d.Z.Types;
 t.Z = function (e) {
     let { activity: t, user: n, useStoreStream: a = !0, showActions: o = !0, hideHeader: u = !1, showChannelDetails: m = !1, analyticsParams: A, ...R } = e,
-        M = (0, s.e7)([b.Z, Z.Z], () => {
+        M = (0, s.e7)([T.Z, Z.Z], () => {
             var e;
-            return Z.Z.getChannel(null === (e = b.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
+            return Z.Z.getChannel(null === (e = T.Z.getVoiceStateForUser(n.id)) || void 0 === e ? void 0 : e.channelId);
         }),
         { enableHangStatus: O } = _.n.useExperiment(
             {
@@ -66,22 +66,22 @@ t.Z = function (e) {
         L = (0, s.e7)([E.Z], () => (a ? E.Z.getAnyStreamForUser(n.id) : null)),
         k = O && y.Z.can(N.Plq.CONNECT, M),
         D = (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS && k ? M : null,
-        U = (0, s.e7)([C.Z, b.Z, Z.Z], () => {
+        U = (0, s.e7)([C.Z, T.Z, Z.Z], () => {
             var e, i;
-            return (0, c.Z)(t, N.xjy.EMBEDDED) ? C.Z.getGuild(null === (e = Z.Z.getChannel(null === (i = b.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? C.Z.getGuild(D.getGuildId()) : null;
+            return (0, c.Z)(t, N.xjy.EMBEDDED) ? C.Z.getGuild(null === (e = Z.Z.getChannel(null === (i = T.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === i ? void 0 : i.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != D ? C.Z.getGuild(D.getGuildId()) : null;
         }),
         V = (0, s.e7)([C.Z], () => (null != L ? C.Z.getGuild(L.guildId) : null)),
         F = (0, s.e7)([f.Z], () => {
             if (null != t) return null != t.application_id ? f.Z.getApplication(t.application_id) : f.Z.getApplicationByName(t.name);
             return null;
         }),
-        W = (0, p.Z)(),
-        B = (0, I.Z)(n),
-        G = W && null != t && B;
+        G = (0, p.Z)(),
+        W = (0, I.Z)(n),
+        B = G && null != t && W;
     return (l.useEffect(() => {
         (null == t ? void 0 : t.type) === N.IIU.HANG_STATUS &&
             k &&
-            T.default.track(N.rMx.VIEW_HANG_STATUS, {
+            b.default.track(N.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
                 guild_id: null == D ? void 0 : D.guild_id,
                 channel_id: null == D ? void 0 : D.id
@@ -95,21 +95,21 @@ t.Z = function (e) {
               application: F,
               hideHeader: u,
               activityGuild: null != U ? U : V,
-              showReactions: G,
+              showReactions: B,
               showChannelDetails: m,
               channel: m ? M : void 0,
               renderActions: o
                   ? () =>
                         (0, i.jsxs)('div', {
-                            className: r()(G && j.actionsWrapper),
+                            className: r()(B && P.actionsWrapper),
                             children: [
-                                (0, i.jsx)(P, {
+                                (0, i.jsx)(j, {
                                     ...R,
                                     applicationStream: L,
                                     activity: t,
                                     user: n
                                 }),
-                                G &&
+                                B &&
                                     (0, i.jsx)(h.ZP, {
                                         showReact: !0,
                                         showReply: !0,
@@ -119,7 +119,7 @@ t.Z = function (e) {
                                         },
                                         onInteraction: (e) => {
                                             let { interactionType: i, emoji: l, reply: a } = e;
-                                            T.default.track(N.rMx.ACTIVITY_REACTOR_INTERACTED, {
+                                            b.default.track(N.rMx.ACTIVITY_REACTOR_INTERACTED, {
                                                 application_id: t.application_id,
                                                 interaction_type: i,
                                                 ...A

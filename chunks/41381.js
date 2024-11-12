@@ -1,5 +1,5 @@
 var i, r;
-t.d(n, {
+n.d(t, {
     f: function () {
         return i;
     }

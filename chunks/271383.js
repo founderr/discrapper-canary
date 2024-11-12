@@ -48,18 +48,18 @@ let A = new p.Z('GuildMemberStore'),
 function k(e, t) {
     if (null == t.communicationDisabledUntil || !(0, h.b)(t)) return U(e, t.userId);
     let n = Z(e, t.userId);
-    O[n] !== t.communicationDisabledUntil && (0, h.b)(t) && ((O[n] = t.communicationDisabledUntil), G(n));
+    O[n] !== t.communicationDisabledUntil && (0, h.b)(t) && ((O[n] = t.communicationDisabledUntil), B(n));
 }
 function U(e, t) {
     if (null != t) {
         let n = Z(e, t);
-        null != O[n] && G(n), B(Z(e, t));
-    } else for (let t in O) V(t) === e && (G(t), B(t));
-}
-function G(e) {
-    (L += 1), (w[e] = L);
+        null != O[n] && B(n), G(Z(e, t));
+    } else for (let t in O) V(t) === e && (B(t), G(t));
 }
 function B(e) {
+    (L += 1), (w[e] = L);
+}
+function G(e) {
     F(e) === b.default.getId() && (0, m.l)(V(e)), delete O[e];
 }
 function Z(e, t) {

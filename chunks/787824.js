@@ -1,24 +1,24 @@
-t.d(n, {
+n.d(t, {
     C: function () {
-        return function e(n) {
-            return null == n
-                ? n
-                : Object.keys(n).reduce((t, r) => {
+        return function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, r) => {
                       let l = (0, i.camelCase)(r);
-                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), t;
+                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])), n;
                   }, {});
         };
     },
     X: function () {
-        return function e(n) {
-            return null == n
-                ? n
-                : Object.keys(n).reduce((t, r) => {
+        return function e(t) {
+            return null == t
+                ? t
+                : Object.keys(t).reduce((n, r) => {
                       let l = (0, i.snakeCase)(r);
-                      return 'object' != typeof n[r] || Array.isArray(n[r]) ? (t[l] = n[r]) : (t[l] = e(n[r])), (t[l] = n[r]), t;
+                      return 'object' != typeof t[r] || Array.isArray(t[r]) ? (n[l] = t[r]) : (n[l] = e(t[r])), (n[l] = t[r]), n;
                   }, {});
         };
     }
 }),
-    t(724458);
-var i = t(392711);
+    n(724458);
+var i = n(392711);

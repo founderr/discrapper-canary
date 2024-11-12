@@ -32,8 +32,8 @@ function u(e) {
             focusedIndex: u,
             itemCount: n
         }),
-        { itemCount: b, focusedIndex: Z } = I,
-        [N] = i.useState(() => (0, a.P2)(E, 16));
+        { itemCount: b, focusedIndex: N } = I,
+        [Z] = i.useState(() => (0, a.P2)(E, 16));
     return (
         i.useEffect(() => {
             E({
@@ -46,11 +46,11 @@ function u(e) {
                 E = i.useRef(n),
                 b = i.useRef(I);
             (b.current = I), (E.current = n);
-            let Z = i.useRef();
+            let N = i.useRef();
             i.useEffect(() => {
-                Z.current = v;
+                N.current = v;
             }, [v]);
-            let [N, S] = i.useState(!1),
+            let [Z, S] = i.useState(!1),
                 [T] = i.useState(
                     () =>
                         new a.$o((e) => () => {
@@ -66,7 +66,7 @@ function u(e) {
             i.useEffect(() => () => T.clean(), [T]);
             let j = i.useCallback(
                     (e, t) => {
-                        Z.current && p(e, t);
+                        N.current && p(e, t);
                     },
                     [p]
                 ),
@@ -93,7 +93,7 @@ function u(e) {
                 ),
                 M = i.useCallback(
                     (e) => {
-                        if (!Z.current) return;
+                        if (!N.current) return;
                         if (s.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             e.preventDefault(), e.stopPropagation(), P();
                             return;
@@ -134,11 +134,11 @@ function u(e) {
                     [_, t, f, u, P, h]
                 ),
                 R = i.useCallback(() => {
-                    N || S(!0);
-                }, [N]),
+                    Z || S(!0);
+                }, [Z]),
                 L = i.useCallback(() => {
-                    if (!N) g ? j(_(t, u), u) : P(!0);
-                }, [_, t, j, g, N, u, P]),
+                    if (!Z) g ? j(_(t, u), u) : P(!0);
+                }, [_, t, j, g, Z, u, P]),
                 k = i.useCallback(
                     (e) => {
                         if (!e.currentTarget.contains(e.relatedTarget))
@@ -168,12 +168,12 @@ function u(e) {
             let D = i.useCallback(
                     () => ({
                         role: 'list',
-                        tabIndex: N && g ? -1 : 0,
+                        tabIndex: Z && g ? -1 : 0,
                         id: t,
                         onKeyDown: M,
                         ref: O
                     }),
-                    [t, N, M, g]
+                    [t, Z, M, g]
                 ),
                 w = i.useCallback(
                     (e) => {
@@ -200,8 +200,8 @@ function u(e) {
         })({
             navId: t,
             itemCount: b,
-            focusedIndex: Z,
-            dispatch: N,
+            focusedIndex: N,
+            dispatch: Z,
             onSelect: h,
             setFocus: p,
             getNewFocusIndex: m,

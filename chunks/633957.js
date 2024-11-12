@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(2052),
     s = n(317381),
     c = n(638880),
-    u = n(122613),
-    d = n(527805),
+    d = n(122613),
+    u = n(527805),
     m = n(884338),
     h = n(100527),
     f = n(906732),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(158776),
     I = n(594174),
     x = n(823379),
-    N = n(226378),
-    v = n(701488),
+    v = n(226378),
+    N = n(701488),
     T = n(388032),
     S = n(211655);
 function A(e) {
@@ -57,15 +57,15 @@ function A(e) {
         }),
         B = r.useMemo(() => {
             let e = new _.Z(n);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = v.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.wT), e;
         }, [n]),
-        U = (0, d.s5)({
+        U = (0, u.s5)({
             userId: P,
             channelId: A,
             application: B
         }),
         w = null == y,
-        F = (0, N.NL)({
+        F = (0, v.NL)({
             embeddedActivity: y,
             joinability: U,
             currentEmbeddedActivity: O,
@@ -75,7 +75,7 @@ function A(e) {
         V = null != M && M.isLaunching && M.componentId === G,
         H = async () => {
             w
-                ? await (0, u.Z)({
+                ? await (0, d.Z)({
                       targetApplicationId: n.id,
                       channelId: A,
                       locationObject: Z.location,

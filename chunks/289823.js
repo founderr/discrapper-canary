@@ -1,5 +1,5 @@
-var n = i(200651),
-    a = i(192379),
+var a = i(200651),
+    n = i(192379),
     l = i(120356),
     s = i.n(l),
     r = i(974674),
@@ -9,10 +9,10 @@ var n = i(200651),
     u = i(3682),
     A = i(300436);
 let I = {},
-    _ = 1 / 4;
-function S(e) {
+    S = 1 / 4;
+function _(e) {
     let { height: t, fillColor: i } = e;
-    return (0, n.jsx)('div', {
+    return (0, a.jsx)('div', {
         style: {
             display: 'flex',
             justifyContent: 'center',
@@ -22,31 +22,31 @@ function S(e) {
             height: t,
             width: t * u.jR
         },
-        children: (0, n.jsx)(c.b, {
+        children: (0, a.jsx)(c.b, {
             className: A.dots,
-            dotRadius: t * _
+            dotRadius: t * S
         })
     });
 }
 function E(e) {
-    let { isTyping: t, statusCoords: i, status: a } = e,
+    let { isTyping: t, statusCoords: i, status: n } = e,
         l = (0, d.useStatusFillColor)(d.StatusTypes.ONLINE);
     return t
-        ? (0, n.jsx)('div', {
+        ? (0, a.jsx)('div', {
               style: {
                   position: 'absolute',
                   top: i.y,
                   left: i.x
               },
-              children: (0, n.jsx)(S, {
+              children: (0, a.jsx)(_, {
                   height: i.height,
                   fillColor: l
               })
           })
-        : null != a
-          ? (0, n.jsx)(d.Status, {
+        : null != n
+          ? (0, a.jsx)(d.Status, {
                 size: i.height,
-                status: a,
+                status: n,
                 style: {
                     position: 'absolute',
                     top: i.y,
@@ -57,7 +57,7 @@ function E(e) {
 }
 function f(e) {
     let { src: t, size: i } = e;
-    return (0, n.jsx)('img', {
+    return (0, a.jsx)('img', {
         className: A.circularImage,
         src: t,
         alt: '',
@@ -114,35 +114,35 @@ let h = {
 };
 t.Z = function (e) {
     var t, i, l;
-    let { backSrc: c, frontSrc: _, size: S, isTyping: g, status: p, style: L, className: N, ...b } = e,
-        { size: x } = d.AvatarSizeSpecs[S],
+    let { backSrc: c, frontSrc: S, size: _, isTyping: g, status: p, style: L, className: N, ...b } = e,
+        { size: x } = d.AvatarSizeSpecs[_],
         {
-            statusCoords: T,
-            frontAvatarOffsetPx: m,
-            frontAvatarSizePx: y,
-            backAvatarSizePx: G
-        } = a.useMemo(() => {
+            statusCoords: m,
+            frontAvatarOffsetPx: T,
+            frontAvatarSizePx: v,
+            backAvatarSizePx: y
+        } = n.useMemo(() => {
             var e;
             let t = ''.concat(x, '-').concat(g);
             return null !== (e = I[t]) && void 0 !== e
                 ? e
                 : (function (e, t, i) {
-                      let n = d.AvatarSizeSpecs[e],
-                          a = n.size / (u.z3 + u.o),
-                          l = a * u.z3,
-                          s = a * u.o,
+                      let a = d.AvatarSizeSpecs[e],
+                          n = a.size / (u.z3 + u.o),
+                          l = n * u.z3,
+                          s = n * u.o,
                           c = {
-                              statusCoords: (0, r.Vq)(n, d.StatusTypes.ONLINE, !1, t),
+                              statusCoords: (0, r.Vq)(a, d.StatusTypes.ONLINE, !1, t),
                               frontAvatarSizePx: l,
-                              backAvatarSizePx: a,
+                              backAvatarSizePx: n,
                               frontAvatarOffsetPx: s,
                               frontAvatarCenter: s + l / 2
                           };
                       return (I[i] = c), c;
-                  })(S, g, t);
-        }, [x, g, S]);
-    let C = ((t = null != p), (i = g), (l = S), i ? h[l].typing : t ? h[l].status : h[l].default);
-    return (0, n.jsxs)('div', {
+                  })(_, g, t);
+        }, [x, g, _]);
+    let C = ((t = null != p), (i = g), (l = _), i ? h[l].typing : t ? h[l].status : h[l].default);
+    return (0, a.jsxs)('div', {
         style: {
             width: x,
             height: x,
@@ -152,34 +152,34 @@ t.Z = function (e) {
         'aria-hidden': b['aria-hidden'],
         className: s()(A.container, N),
         children: [
-            (0, n.jsxs)(o.ZP, {
+            (0, a.jsxs)(o.ZP, {
                 mask: C,
                 height: x,
                 width: x,
                 children: [
-                    (0, n.jsx)('img', {
+                    (0, a.jsx)('img', {
                         src: c,
                         alt: '',
-                        width: G,
-                        height: G
+                        width: y,
+                        height: y
                     }),
-                    (0, n.jsx)('div', {
+                    (0, a.jsx)('div', {
                         style: {
                             position: 'absolute',
-                            top: m,
-                            left: m
+                            top: T,
+                            left: T
                         },
-                        children: (0, n.jsx)(f, {
-                            src: _,
-                            size: y,
+                        children: (0, a.jsx)(f, {
+                            src: S,
+                            size: v,
                             isTyping: g,
                             status: p
                         })
                     })
                 ]
             }),
-            (0, n.jsx)(E, {
-                statusCoords: T,
+            (0, a.jsx)(E, {
+                statusCoords: m,
                 status: p,
                 isTyping: g
             })

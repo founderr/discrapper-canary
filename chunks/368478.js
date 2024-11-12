@@ -37,7 +37,7 @@ function g(e) {
         });
     return {
         isExecutingLaunchInteraction: s,
-        buttonText: E && x ? (v ? f.intl.string(f.t['Hi1/aW']) : null != C ? C : f.intl.string(f.t.zKX8Nj)) : f.intl.string(f.t['3xjX0d']),
+        buttonText: E && x ? (v ? f.intl.string(f.t['Hi1/aW']) : null != C ? C : f.intl.string(f.t.zKX8Nj)) : f.intl.string(f.t['0hKkS0']),
         hasActiveMatchingEmbeddedActivity: v,
         isEmbeddedApp: x,
         currentEmbeddedActivity: g,

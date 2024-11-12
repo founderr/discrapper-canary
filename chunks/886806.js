@@ -10,9 +10,9 @@ var i,
     d = n(388905),
     h = n(17894),
     g = n(108427),
-    f = n(314897),
-    m = n(626135),
-    p = n(981631),
+    m = n(314897),
+    p = n(626135),
+    f = n(981631),
     _ = n(388032),
     x = n(237810),
     E = n(113207);
@@ -108,19 +108,19 @@ class I extends (i = s.PureComponent) {
             }),
             v(this, 'handleLogin', () => {
                 let { transitionTo: e } = this.props;
-                e(p.Z5c.LOGIN);
+                e(f.Z5c.LOGIN);
             }),
             v(this, 'handleOpenApp', () => {
                 let { verifyingUserId: e } = this.props;
-                m.default.track(p.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
+                p.default.track(f.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: e }), (0, h.Z)('verify_email');
             });
     }
 }
 v(I, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) }),
-    (t.Z = o.ZP.connectStores([f.default], () => ({
-        verifyFailed: f.default.didVerifyFail(),
-        verifyErrors: f.default.getVerifyErrors(),
-        verifySucceeded: f.default.didVerifySucceed(),
-        fingerprint: f.default.getFingerprint(),
-        verifyingUserId: f.default.getVerifyingUserId()
+    (t.Z = o.ZP.connectStores([m.default], () => ({
+        verifyFailed: m.default.didVerifyFail(),
+        verifyErrors: m.default.getVerifyErrors(),
+        verifySucceeded: m.default.didVerifySucceed(),
+        fingerprint: m.default.getFingerprint(),
+        verifyingUserId: m.default.getVerifyingUserId()
     }))(I));

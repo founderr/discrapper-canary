@@ -1,6 +1,6 @@
 t.d(n, {
     Y: function () {
-        return l;
+        return a;
     },
     z: function () {
         return i;
@@ -11,6 +11,6 @@ let i = (0, r.createContext)({
     zoomed: !1,
     setZoomed: () => {}
 });
-function l() {
+function a() {
     return (0, r.useContext)(i);
 }

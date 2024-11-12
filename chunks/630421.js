@@ -57,8 +57,8 @@ function f(e) {
         P === (0, a.Z)(h) && ((P = (0, s.Z)(h)), 'static' !== (0, o.Z)(P).position && 'absolute' === I && ((k = 'scrollHeight'), (U = 'scrollWidth')));
         (g === r.we || ((g === r.t$ || g === r.F2) && E === r.ut)) && ((w = r.I), (R -= (y && P === M && M.visualViewport ? M.visualViewport.height : P[k]) - m.height), (R *= b ? 1 : -1)), (g === r.t$ || ((g === r.we || g === r.I) && E === r.ut)) && ((x = r.F2), (N -= (y && P === M && M.visualViewport ? M.visualViewport.width : P[U]) - m.width), (N *= b ? 1 : -1));
     }
-    var G = Object.assign({ position: I }, S && d);
-    var B =
+    var B = Object.assign({ position: I }, S && d);
+    var G =
         !0 === T
             ? ((t = {
                   x: N,
@@ -76,7 +76,7 @@ function f(e) {
                   x: N,
                   y: R
               };
-    return ((N = B.x), (R = B.y), b) ? Object.assign({}, G, (((p = {})[w] = L ? '0' : ''), (p[x] = D ? '0' : ''), (p.transform = 1 >= (M.devicePixelRatio || 1) ? 'translate(' + N + 'px, ' + R + 'px)' : 'translate3d(' + N + 'px, ' + R + 'px, 0)'), p)) : Object.assign({}, G, (((_ = {})[w] = L ? R + 'px' : ''), (_[x] = D ? N + 'px' : ''), (_.transform = ''), _));
+    return ((N = G.x), (R = G.y), b) ? Object.assign({}, B, (((p = {})[w] = L ? '0' : ''), (p[x] = D ? '0' : ''), (p.transform = 1 >= (M.devicePixelRatio || 1) ? 'translate(' + N + 'px, ' + R + 'px)' : 'translate3d(' + N + 'px, ' + R + 'px, 0)'), p)) : Object.assign({}, B, (((_ = {})[w] = L ? R + 'px' : ''), (_[x] = D ? N + 'px' : ''), (_.transform = ''), _));
 }
 t.Z = {
     name: 'computeStyles',

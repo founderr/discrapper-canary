@@ -1,58 +1,58 @@
 n.d(t, {
     W: function () {
-        return u;
+        return c;
     },
     _: function () {
-        return c;
+        return d;
     }
 });
-var i = n(544891),
-    r = n(570140),
-    o = n(480294),
+var r = n(544891),
+    o = n(570140),
+    i = n(480294),
     a = n(814443),
-    l = n(428598),
-    d = n(981631);
-function u() {
+    s = n(428598),
+    l = n(981631);
+function c() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return a.Z.needsRefresh()
-        ? (r.Z.dispatch({ type: 'LOAD_USER_AFFINITIES' }),
-          i.tn
+        ? (o.Z.dispatch({ type: 'LOAD_USER_AFFINITIES' }),
+          r.tn
               .get({
-                  url: d.ANM.USER_AFFINITIES,
+                  url: l.ANM.USER_AFFINITIES,
                   retries: e ? 3 : 0,
                   oldFormErrors: !0
               })
               .then(
                   (e) => {
                       let { body: t } = e;
-                      r.Z.dispatch({
+                      o.Z.dispatch({
                           type: 'LOAD_USER_AFFINITIES_SUCCESS',
                           affinities: t
                       });
                   },
                   () => {
-                      r.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_FAILURE' });
+                      o.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_FAILURE' });
                   }
               ))
         : Promise.resolve();
 }
-function c() {
+function d() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return l.Z.shouldFetch() && o.Z.hasConsented(d.pjP.PERSONALIZATION)
-        ? (r.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2' }),
-          i.tn
+    return s.Z.shouldFetch() && i.Z.hasConsented(l.pjP.PERSONALIZATION)
+        ? (o.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2' }),
+          r.tn
               .get({
-                  url: d.ANM.USER_AFFINITIES_V2,
+                  url: l.ANM.USER_AFFINITIES_V2,
                   retries: e ? 3 : 0,
                   oldFormErrors: !0
               })
               .then(
                   (e) => {
                       let { body: t } = e;
-                      r.Z.dispatch({
+                      o.Z.dispatch({
                           type: 'LOAD_USER_AFFINITIES_V2_SUCCESS',
                           affineUsers: t.user_affinities.map((e) => {
-                              var t, n, i, r, o, a, l, d;
+                              var t, n, r, o, i, a, s, l;
                               return {
                                   otherUserId: e.other_user_id,
                                   userSegment: e.user_segment,
@@ -60,18 +60,18 @@ function c() {
                                   isFriend: e.is_friend,
                                   dmProbability: null !== (t = e.dm_probability) && void 0 !== t ? t : 0,
                                   dmRank: null !== (n = e.dm_rank) && void 0 !== n ? n : 0,
-                                  vcProbability: null !== (i = e.vc_probability) && void 0 !== i ? i : 0,
-                                  vcRank: null !== (r = e.vc_rank) && void 0 !== r ? r : 0,
-                                  serverMessageProbability: null !== (o = e.server_message_probability) && void 0 !== o ? o : 0,
+                                  vcProbability: null !== (r = e.vc_probability) && void 0 !== r ? r : 0,
+                                  vcRank: null !== (o = e.vc_rank) && void 0 !== o ? o : 0,
+                                  serverMessageProbability: null !== (i = e.server_message_probability) && void 0 !== i ? i : 0,
                                   serverMessageRank: null !== (a = e.server_message_rank) && void 0 !== a ? a : 0,
-                                  communicationProbability: null !== (l = e.communication_probability) && void 0 !== l ? l : 0,
-                                  communicationRank: null !== (d = e.communication_rank) && void 0 !== d ? d : 0
+                                  communicationProbability: null !== (s = e.communication_probability) && void 0 !== s ? s : 0,
+                                  communicationRank: null !== (l = e.communication_rank) && void 0 !== l ? l : 0
                               };
                           })
                       });
                   },
                   () => {
-                      r.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2_FAILURE' });
+                      o.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2_FAILURE' });
                   }
               ))
         : Promise.resolve();

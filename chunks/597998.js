@@ -1,6 +1,6 @@
 n.d(t, {
     eJ: function () {
-        return T;
+        return b;
     },
     nm: function () {
         return N;
@@ -32,7 +32,7 @@ var i,
     Z = n(927923),
     C = n(388032),
     y = n(557369);
-function b(e, t, n) {
+function T(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function b(e, t, n) {
         e
     );
 }
-let T = (e) => {
+let b = (e) => {
         let { children: t, collapsed: n = !1, className: i } = e;
         return (0, l.jsx)('div', {
             className: s()(i, y.list, n ? y.listCollapse : y.listDefault),
@@ -79,11 +79,11 @@ let T = (e) => {
               );
     };
 function N(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: b, embeddedApplication: T, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: W } = e;
+    let { className: t, mute: n, localMute: i, localVideoDisabled: a, serverMute: r, deaf: c, serverDeaf: d, collapsed: f, video: p, isStreaming: h, disabled: g, isWatching: _, iconClassName: T, embeddedApplication: b, otherClientSessionType: N, voicePlatform: w, hangStatusActivity: R, showHangStatus: M, isSelf: O, application: L, guildId: k, channelId: D, user: U, handleHoverHangStatus: V, handleHoverIcons: F, disconnected: G } = e;
     if (f || g) return null;
-    let B = [],
-        G = (0, l.jsx)(P, {
-            iconClassName: b,
+    let W = [],
+        B = (0, l.jsx)(j, {
+            iconClassName: T,
             mute: n,
             localMute: i,
             serverMute: r,
@@ -92,7 +92,7 @@ function N(e) {
         });
     p &&
         (a
-            ? B.push(
+            ? W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -101,14 +101,14 @@ function N(e) {
                           children: (0, l.jsx)(o.VideoSlashIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, b),
+                              className: s()(y.icon, T),
                               colorClass: y.strikethrough
                           })
                       },
                       'video'
                   )
               )
-            : B.push(
+            : W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -117,67 +117,67 @@ function N(e) {
                           children: (0, l.jsx)(o.VideoIcon, {
                               size: 'md',
                               color: 'currentColor',
-                              className: s()(y.icon, b)
+                              className: s()(y.icon, T)
                           })
                       },
                       'video'
                   )
               )),
-        W &&
-            B.push(
+        G &&
+            W.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
                         className: y.iconSpacing,
                         text: C.intl.string(C.t.HFwRpq),
                         children: (0, l.jsx)(o.CircleWarningIcon, {
-                            className: s()(y.icon, b),
+                            className: s()(y.icon, T),
                             color: o.tokens.colors.STATUS_WARNING_BACKGROUND
                         })
                     },
                     'disconnected'
                 )
             ),
-        null != T &&
-            B.push(
+        null != b &&
+            W.push(
                 (0, l.jsx)(
                     o.TooltipContainer,
                     {
-                        text: (0, u.Z)(T.name),
+                        text: (0, u.Z)(b.name),
                         className: y.iconSpacing,
                         children: (0, l.jsx)(o.ActivitiesIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: s()(y.icon, b)
+                            className: s()(y.icon, T)
                         })
                     },
                     'activity'
                 )
             ),
         N === Z.YE.XBOX || w === E.wR.XBOX
-            ? B.push(
+            ? W.push(
                   (0, l.jsx)(
                       'div',
                       {
                           className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(S.Z, { className: s()(y.icon, b) })
+                          children: (0, l.jsx)(S.Z, { className: s()(y.icon, T) })
                       },
                       'xbox'
                   )
               )
             : (N === Z.YE.PLAYSTATION || w === E.wR.PLAYSTATION) &&
-              B.push(
+              W.push(
                   (0, l.jsx)(
                       'div',
                       {
                           className: s()(y.iconSpacing),
-                          children: (0, l.jsx)(v.Z, { className: s()(y.icon, b) })
+                          children: (0, l.jsx)(v.Z, { className: s()(y.icon, T) })
                       },
                       'playstation'
                   )
               ),
         h
-            ? B.push(
+            ? W.push(
                   (0, l.jsx)(
                       'div',
                       {
@@ -188,7 +188,7 @@ function N(e) {
                   )
               )
             : _ &&
-              B.push(
+              W.push(
                   (0, l.jsx)(
                       o.TooltipContainer,
                       {
@@ -197,7 +197,7 @@ function N(e) {
                           children: (0, l.jsx)(o.EyeIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()(y.icon, b)
+                              className: s()(y.icon, T)
                           })
                       },
                       'watch'
@@ -205,7 +205,7 @@ function N(e) {
               );
     let z = null != L && !(0, I.yE)(L.flags, x.udG.EMBEDDED),
         H = null == R && z;
-    return 0 !== B.length || null != G || M || H
+    return 0 !== W.length || null != B || M || H
         ? (0, l.jsxs)('div', {
               className: s()(y.icons, t),
               children: [
@@ -213,7 +213,7 @@ function N(e) {
                       className: y.iconGroup,
                       onMouseEnter: () => (null == F ? void 0 : F(!0)),
                       onMouseLeave: () => (null == F ? void 0 : F(!1)),
-                      children: [G, B]
+                      children: [B, W]
                   }),
                   M || H
                       ? (0, l.jsx)('div', {
@@ -222,10 +222,10 @@ function N(e) {
                             onMouseLeave: () => (null == V ? void 0 : V(!1)),
                             children: H
                                 ? (0, l.jsx)(
-                                      j,
+                                      P,
                                       {
                                           application: L,
-                                          iconClassName: b,
+                                          iconClassName: T,
                                           guildId: k,
                                           channelId: D,
                                           userId: U.id
@@ -234,7 +234,7 @@ function N(e) {
                                   )
                                 : (0, l.jsx)(A, {
                                       hangStatusActivity: R,
-                                      iconClassName: b,
+                                      iconClassName: T,
                                       isSelf: O
                                   })
                         })
@@ -338,33 +338,33 @@ class w extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'handleClick', (e) => {
+            T(this, 'handleClick', (e) => {
                 let { onClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            b(this, 'handleDoubleClick', (e) => {
+            T(this, 'handleDoubleClick', (e) => {
                 let { onDoubleClick: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            b(this, 'handleContextMenu', (e) => {
+            T(this, 'handleContextMenu', (e) => {
                 let { onContextMenu: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            b(this, 'handleMouseLeave', (e) => {
+            T(this, 'handleMouseLeave', (e) => {
                 let { onMouseLeave: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            b(this, 'handleMouseEnter', (e) => {
+            T(this, 'handleMouseEnter', (e) => {
                 let { onMouseEnter: t, user: n } = this.props;
                 null == t || t(e, n);
             }),
-            b(this, 'handleMouseDown', (e) => {
+            T(this, 'handleMouseDown', (e) => {
                 let { onMouseDown: t, user: n } = this.props;
                 null == t || t(e, n);
             });
     }
 }
-function j(e) {
+function P(e) {
     let { application: t, iconClassName: n, guildId: i, channelId: r, userId: u } = e,
         [m, f] = a.useState(!1),
         h = (0, c.O)((e) => f(e));
@@ -400,7 +400,7 @@ function j(e) {
         })
     );
 }
-function P(e) {
+function j(e) {
     let { iconClassName: t, mute: n, localMute: i, serverMute: a, deaf: r, serverDeaf: c } = e,
         u = (0, o.useRedesignIconContext)().enabled,
         d = [];
@@ -460,7 +460,7 @@ function P(e) {
     }
     return 0 === d.length ? null : (0, l.jsx)(l.Fragment, { children: d });
 }
-b(w, 'defaultProps', {
+T(w, 'defaultProps', {
     avatarContainerClass: y.avatarContainer,
     userNameClassName: y.usernameFont,
     size: x.ipw.SMALL,

@@ -18,11 +18,11 @@ var i = n(200651),
     o = n(481060),
     c = n(25912);
 function d(e) {
-    let { scrollPosition: t, minOpacity: n = 0 } = e;
+    let { scrollPosition: t } = e;
     return (0, i.jsx)(s.animated.div, {
         className: c.backdrop,
         style: {
-            opacity: null == t ? void 0 : t.to([0, 100], [n, 1])
+            opacity: null == t ? void 0 : t.to([0, 100], [0, 1])
         }
     });
 }

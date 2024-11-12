@@ -59,7 +59,7 @@ function x(e) {
         P = !1 === (null === (t = null == M ? void 0 : M.disabled) || void 0 === t || t),
         k = (0, c.Z)([a])[0],
         U = (0, p.Z)(i),
-        G = (e) => {
+        B = (e) => {
             l.Z.setVideoEnabled(e);
         };
     return (0, r.jsxs)('div', {
@@ -91,9 +91,9 @@ function x(e) {
                                 enabled: w,
                                 cameraUnavailable: !P,
                                 hasPermission: U,
-                                onChange: G,
+                                onChange: B,
                                 onCameraUnavailable: () => {
-                                    P ? G(!0) : (0, h.Z)();
+                                    P ? B(!0) : (0, h.Z)();
                                 }
                             }),
                             (0, r.jsx)(m.Z, {

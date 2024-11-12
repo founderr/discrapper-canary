@@ -10,8 +10,8 @@ var i = n(933557),
     o = n(496675),
     s = n(699516),
     c = n(594174),
-    u = n(768581),
-    d = n(55935),
+    d = n(768581),
+    u = n(55935),
     m = n(631184),
     h = n(346610);
 n(978003);
@@ -32,7 +32,7 @@ function p(e, t, n) {
 function _(e, t) {
     return {
         originLabel: e.name,
-        originIconUrl: u.ZP.getGuildIconURL({
+        originIconUrl: d.ZP.getGuildIconURL({
             id: e.id,
             size: 16,
             icon: e.icon,
@@ -47,46 +47,46 @@ function _(e, t) {
 }
 class g {
     getForwardInfo() {
-        var e, t, n, u;
+        var e, t, n, d;
         let p = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z,
             g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
             E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Z,
             C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             I = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             x = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : r.Z,
-            { snapshotIndex: N, parentMessage: v, messageSnapshot: T } = this,
+            { snapshotIndex: v, parentMessage: N, messageSnapshot: T } = this,
             { useOldIcon: S } = (0, h.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
             { showForwardBreadcrumb: A } = m.u.getCurrentConfig({ location: 'MessageForward' });
         if (!A)
             return {
-                snapshotIndex: N,
+                snapshotIndex: v,
                 useOldIcon: S
             };
-        let b = (0, d.Xf)(T.message.timestamp),
+        let b = (0, u.Xf)(T.message.timestamp),
             j = p.getChannel(this.parentMessage.channel_id);
-        if (null != j && j.guild_id === (null === (e = v.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
-            let e = p.getChannel(null === (n = v.messageReference) || void 0 === n ? void 0 : n.channel_id);
+        if (null != j && j.guild_id === (null === (e = N.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
+            let e = p.getChannel(null === (n = N.messageReference) || void 0 === n ? void 0 : n.channel_id);
             if (null == e) {
                 let e = I.getGuild(j.guild_id);
                 return null == e
                     ? {
-                          snapshotIndex: N,
+                          snapshotIndex: v,
                           useOldIcon: S
                       }
                     : {
-                          snapshotIndex: N,
+                          snapshotIndex: v,
                           footerInfo: _(e, b),
                           useOldIcon: S
                       };
             }
             if (!C.can(e.accessPermissions, e))
                 return {
-                    snapshotIndex: N,
+                    snapshotIndex: v,
                     useOldIcon: S
                 };
             let t = (0, i.F6)(e, g, E, !0);
             return {
-                snapshotIndex: N,
+                snapshotIndex: v,
                 footerInfo: {
                     originLabel: t,
                     timestampLabel: b,
@@ -98,20 +98,20 @@ class g {
                 useOldIcon: S
             };
         }
-        let Z = null === (t = v.messageReference) || void 0 === t ? void 0 : t.guild_id;
+        let Z = null === (t = N.messageReference) || void 0 === t ? void 0 : t.guild_id;
         if (null == Z)
             return {
-                snapshotIndex: N,
+                snapshotIndex: v,
                 useOldIcon: S
             };
-        let R = null !== (u = I.getGuild(Z)) && void 0 !== u ? u : x.getGuild(Z);
+        let R = null !== (d = I.getGuild(Z)) && void 0 !== d ? d : x.getGuild(Z);
         return null == R
             ? {
-                  snapshotIndex: N,
+                  snapshotIndex: v,
                   useOldIcon: S
               }
             : {
-                  snapshotIndex: N,
+                  snapshotIndex: v,
                   footerInfo: _(R, b),
                   useOldIcon: S
               };

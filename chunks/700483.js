@@ -20,8 +20,8 @@ var i = n(200651),
     I = n(923973),
     E = n(829750),
     b = n(189771),
-    Z = n(294629),
-    N = n(793319),
+    N = n(294629),
+    Z = n(793319),
     S = n(560688),
     T = n(390322),
     j = n(871499),
@@ -118,7 +118,7 @@ function el(e) {
         c = (0, s.e7)([G.Z], () => G.Z.getStageInstanceByChannel(t.id), [t.id]),
         u = (0, s.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == c ? void 0 : c.guild_scheduled_event_id)),
         h = (0, s.e7)([L.Z], () => L.Z.getVoiceChannelId() === t.id, [t.id]),
-        { suppress: p } = (0, Z.Z)(t),
+        { suppress: p } = (0, N.Z)(t),
         m = P.default.getId(),
         [f] = (0, X.Z)(t),
         g = H.ZP.isModerator(m, t.id),
@@ -301,7 +301,7 @@ function ea(e) {
 }
 let es = l.memo(function (e) {
     let { channel: t } = e,
-        { suppress: n, selfMute: l, mute: r } = (0, Z.Z)(t),
+        { suppress: n, selfMute: l, mute: r } = (0, N.Z)(t),
         c = (0, B.B)(t.id),
         d = (0, s.e7)([f.Z], () => null != f.Z.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: C, enabled: x } = (0, I.Z)(),
@@ -333,7 +333,7 @@ let es = l.memo(function (e) {
                         hasPermission: v,
                         enabled: x,
                         cameraUnavailable: C,
-                        onChange: N.r,
+                        onChange: Z.r,
                         onCameraUnavailable: S.Z,
                         channelLimitReached: j,
                         channelLimit: _,
@@ -342,7 +342,7 @@ let es = l.memo(function (e) {
                     });
                 }
             }),
-            (0, i.jsx)(N.NZ, {
+            (0, i.jsx)(Z.NZ, {
                 channel: t,
                 currentUser: P,
                 exitFullScreen: () => null,

@@ -27,8 +27,8 @@ var i = n(200651),
     I = n(576954),
     E = n(280006),
     b = n(347102),
-    Z = n(765104),
-    N = n(122707),
+    N = n(765104),
+    Z = n(122707),
     S = n(779836),
     T = n(23750),
     j = n(496675),
@@ -94,7 +94,7 @@ function et(e) {
         eh = (0, B.$)(s),
         ep = u.length > 0 && (null === (t = u.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(s)),
         em = (0, o.ts)(s),
-        ef = (0, r.e7)([Z.Z], () => Z.Z.shouldShowTopicsBar() && !ec),
+        ef = (0, r.e7)([N.Z], () => N.Z.shouldShowTopicsBar() && !ec),
         eg = (0, _.P)(s.id),
         eC = (0, x.z)(s.id, J.zr),
         ex = (0, w.Z)(),
@@ -120,7 +120,7 @@ function et(e) {
     (0, K.Z)();
     let eE = null,
         eb = [],
-        eZ = ei.map((e, t) => {
+        eN = ei.map((e, t) => {
             if (e.type === X.ys_.DIVIDER) {
                 var n, l;
                 let r = null != e.unreadId;
@@ -193,8 +193,8 @@ function et(e) {
                 e.content.id
             );
         });
-    eb.push(...eZ);
-    let eN = ei[ei.length - 1];
+    eb.push(...eN);
+    let eZ = ei[ei.length - 1];
     if (
         (null != ed &&
             el.forEach((e, t) => {
@@ -202,7 +202,7 @@ function et(e) {
                     0 === t &&
                     (0, D.J)(
                         s,
-                        eN,
+                        eZ,
                         new T.ZP({
                             type: X.uaV.DEFAULT,
                             author: ed
@@ -281,7 +281,7 @@ function et(e) {
             a = (0, M.KC)(new Date(), new Date(r));
         if ((A.ZP.isEstimated(s.id) ? ((e = a ? Q.t.wvtbbG : Q.t.tHqbtr), (t = Q.t.vaPWFR)) : ((e = a ? Q.t.BctFHx : Q.t['3wXb9P']), (t = Q.t['4H8ldH'])), em && (0, o.tW)(s) && ex.includes(Y.E.SUMMARIES))) {
             let l = A.ZP.ackMessageId(s.id),
-                a = (0, N.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
+                a = (0, Z.q)(s.id, A.ZP.getOldestUnreadMessageId(s.id));
             if (
                 ((0, d.yw)(X.rMx.SUMMARIES_UNREAD_BAR_VIEWED, {
                     num_unread_summaries: a,

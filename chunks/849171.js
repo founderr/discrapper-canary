@@ -30,13 +30,13 @@ var i,
     Z = n(100527),
     C = n(906732),
     y = n(890280),
-    b = n(835473),
-    T = n(522474),
+    T = n(835473),
+    b = n(522474),
     A = n(314897),
     N = n(819640),
     w = n(594174),
-    j = n(823379),
-    P = n(5192),
+    P = n(823379),
+    j = n(5192),
     R = n(388032),
     M = n(456608);
 ((l = i || (i = {}))[(l.SMALL = 0)] = 'SMALL'), (l[(l.MEDIUM = 1)] = 'MEDIUM'), (l[(l.LARGE = 2)] = 'LARGE');
@@ -52,7 +52,7 @@ function L(e) {
         max: 4,
         renderUser: (e) => {
             if (null == e) return null;
-            let t = P.ZP.getName(n, i, e);
+            let t = j.ZP.getName(n, i, e);
             return (0, a.jsx)(
                 u.TooltipContainer,
                 {
@@ -81,12 +81,12 @@ function k(e) {
         x = (0, c.Wu)([w.default, A.default], () =>
             Array.from(s)
                 .map((e) => ((0, p.J)(e, A.default) ? null : w.default.getUser(e.userId)))
-                .filter(j.lm)
+                .filter(P.lm)
         ),
         E = (0, c.e7)([m.ZP], () => m.ZP.getEmbeddedActivitiesForChannel(v.id).find((e) => e.applicationId === g.id)),
         { analyticsLocations: Z } = (0, C.ZP)(),
-        b = (0, d.O)(),
-        T = P.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
+        T = (0, d.O)(),
+        b = j.ZP.getName(v.getGuildId(), v.id, null == x ? void 0 : x[0]),
         N =
             (0, h.s5)({
                 userId: null === (t = w.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -120,10 +120,10 @@ function k(e) {
                 children:
                     x.length > 1
                         ? R.intl.formatToPlainString(R.t.cpe6CA, {
-                              username: T,
+                              username: b,
                               count: x.length - 1
                           })
-                        : R.intl.formatToPlainString(R.t['7Uuia2'], { username: T })
+                        : R.intl.formatToPlainString(R.t['7Uuia2'], { username: b })
             }),
             (0, a.jsx)(u.Text, {
                 className: o()(M.header, {
@@ -142,7 +142,7 @@ function k(e) {
                                   (0, f.Z)({
                                       applicationId: E.applicationId,
                                       activityChannelId: v.id,
-                                      locationObject: b.location,
+                                      locationObject: T.location,
                                       analyticsLocations: Z,
                                       componentId: k
                                   });
@@ -173,7 +173,7 @@ function D(e) {
         { id: u } = t,
         d = (0, g.Z)(),
         m = (null == d ? void 0 : d.channelId) === s.id && d.applicationId === u,
-        [f] = (0, b.Z)([u]),
+        [f] = (0, T.Z)([u]),
         { url: p } = (0, v.Z)({
             applicationId: u,
             names: O,
@@ -182,10 +182,10 @@ function D(e) {
         h = !i && m,
         _ = !m,
         y = !m && !i,
-        A = (0, c.e7)([N.Z, T.Z], () =>
+        A = (0, c.e7)([N.Z, b.Z], () =>
             (0, E.Z)({
                 LayerStore: N.Z,
-                PopoutWindowStore: T.Z
+                PopoutWindowStore: b.Z
             })
         );
     return (

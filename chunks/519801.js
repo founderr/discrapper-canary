@@ -32,8 +32,8 @@ function _(e) {
         I = () => {
             S(), null == j || j();
         },
-        M = y === p.h8.CONFIRM,
-        A = (0, s.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
+        A = y === p.h8.CONFIRM,
+        M = (0, s.KW)(null !== (t = null == T ? void 0 : T.flags) && void 0 !== t ? t : 0),
         w = null != P && P.benefits.length > 0 ? x.intl.formatToPlainString(x.t['+IQQVF'], { benefitCount: P.benefits.length }) : null;
     return (
         C
@@ -52,7 +52,7 @@ function _(e) {
                                 application: B,
                                 title: x.intl.format(x.t['Q+qktb'], { tier: E }),
                                 subtitle: x.intl.string(x.t.ECKxXV),
-                                description: A ? x.intl.format(x.t.MAtQk5, { applicationName: null == B ? void 0 : B.name }) : x.intl.format(x.t.vHkMFx, { tier: E })
+                                description: M ? x.intl.format(x.t.MAtQk5, { applicationName: null == B ? void 0 : B.name }) : x.intl.format(x.t.vHkMFx, { tier: E })
                             })
                           : (0, i.jsx)(m.Z, {})),
                   (v = (0, i.jsx)(f.Z, {
@@ -72,8 +72,8 @@ function _(e) {
                         subscription: k
                     })),
         r.useEffect(() => {
-            a.Z.useReducedMotion && M && O(window.innerWidth / 2, window.innerHeight / 2);
-        }, [O, M]),
+            a.Z.useReducedMotion && A && O(window.innerWidth / 2, window.innerHeight / 2);
+        }, [O, A]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(b.C3, {

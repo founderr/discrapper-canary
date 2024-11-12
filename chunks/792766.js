@@ -1,82 +1,82 @@
 n.d(t, {
     y: function () {
-        return f;
+        return S;
     }
 });
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    o = n(481060),
-    a = n(528144),
-    d = n(118012),
-    u = n(686546),
-    c = n(565138),
+var r = n(200651),
+    i = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    a = n(481060),
+    o = n(528144),
+    c = n(118012),
+    d = n(686546),
+    u = n(565138),
     _ = n(601964),
     E = n(598077),
     p = n(388032),
     h = n(325929);
-let m = (e) => {
+let f = (e) => {
         var t;
-        let { speaker: n, guildId: s, isEmbed: r } = e,
+        let { speaker: n, guildId: i, isEmbed: s } = e,
             l = new E.Z(n.user);
-        return (0, i.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: h.speaker,
             children: [
-                (0, i.jsx)(o.Avatar, {
-                    src: l.getAvatarURL(s, r ? 16 : 24),
-                    size: r ? o.AvatarSizes.SIZE_16 : o.AvatarSizes.SIZE_24,
+                (0, r.jsx)(a.Avatar, {
+                    src: l.getAvatarURL(i, s ? 16 : 24),
+                    size: s ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
                     'aria-label': ''.concat(n.nick, '-avatar'),
-                    className: r ? null : h.avatar
+                    className: s ? null : h.avatar
                 }),
-                (0, i.jsx)(d.Z, {
-                    size: r ? d.Z.Sizes.SIZE_12 : d.Z.Sizes.SIZE_14,
-                    color: d.Z.Colors.HEADER_SECONDARY,
+                (0, r.jsx)(c.Z, {
+                    size: s ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
+                    color: c.Z.Colors.HEADER_SECONDARY,
                     className: h.username,
                     children: null !== (t = n.nick) && void 0 !== t ? t : l.username
                 })
             ]
         });
     },
-    f = (e) => {
+    S = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
-        let s = new _.ZP(t),
-            { name: r, description: l } = s;
-        return (0, i.jsxs)('div', {
+        let i = new _.ZP(t),
+            { name: s, description: l } = i;
+        return (0, r.jsxs)('div', {
             children: [
-                (0, i.jsx)(a.Z, {
+                (0, r.jsx)(o.Z, {
                     muted: !0,
                     uppercase: !0,
                     className: h.alignStart,
                     children: p.intl.string(p.t.Eabu19)
                 }),
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: h.guild,
                     children: [
-                        (0, i.jsx)(u.ZP, {
-                            mask: u.ZP.Masks.SQUIRCLE,
+                        (0, r.jsx)(d.ZP, {
+                            mask: d.ZP.Masks.SQUIRCLE,
                             width: 40,
                             height: 40,
-                            children: (0, i.jsx)(c.Z, {
-                                guild: s,
-                                size: c.Z.Sizes.MEDIUM,
+                            children: (0, r.jsx)(u.Z, {
+                                guild: i,
+                                size: u.Z.Sizes.MEDIUM,
                                 active: !0
                             })
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: h.guildInfo,
                             children: [
-                                (0, i.jsx)(o.Heading, {
+                                (0, r.jsx)(a.Heading, {
                                     variant: 'heading-sm/semibold',
-                                    children: r
+                                    children: s
                                 }),
-                                (0, i.jsxs)('div', {
+                                (0, r.jsxs)('div', {
                                     className: h.speaker,
                                     children: [
-                                        (0, i.jsx)('div', { className: h.dot }),
+                                        (0, r.jsx)('div', { className: h.dot }),
                                         null != n && n > 0
-                                            ? (0, i.jsx)(o.Text, {
+                                            ? (0, r.jsx)(a.Text, {
                                                   variant: 'text-sm/normal',
                                                   children: p.intl.format(p.t['LC+S+v'], { membersOnline: n })
                                               })
@@ -89,7 +89,7 @@ let m = (e) => {
                 }),
                 null != l &&
                     '' !== l &&
-                    (0, i.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         color: 'header-secondary',
                         className: h.alignStart,
                         variant: 'text-sm/normal',
@@ -100,128 +100,128 @@ let m = (e) => {
     };
 t.Z = (e) => {
     var t;
-    let { stageInstance: n, guild: r, isCard: E = !1, isEmbed: f = !1, onClick: S } = e,
-        g = s.useMemo(() => (null == r ? null : r instanceof _.ZP ? r : new _.ZP(r)), [r]);
-    if (null == n || null == g) return null;
-    let { topic: I, speaker_count: C, participant_count: v } = n,
-        A = null !== (t = n.members) && void 0 !== t ? t : [],
-        y = f ? A.slice(0, 3) : A,
-        b = C - y.length;
+    let { stageInstance: n, guild: s, isCard: E = !1, isEmbed: S = !1, onClick: m } = e,
+        C = i.useMemo(() => (null == s ? null : s instanceof _.ZP ? s : new _.ZP(s)), [s]);
+    if (null == n || null == C) return null;
+    let { topic: g, speaker_count: I, participant_count: A } = n,
+        y = null !== (t = n.members) && void 0 !== t ? t : [],
+        R = S ? y.slice(0, 3) : y,
+        O = I - R.length;
     return (
-        f && (b += A.length - y.length),
-        (0, i.jsxs)('div', {
+        S && (O += y.length - R.length),
+        (0, r.jsxs)('div', {
             children: [
-                (0, i.jsxs)('div', {
+                (0, r.jsxs)('div', {
                     className: h.flex,
                     children: [
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: h.flex,
                             children: [
-                                (0, i.jsx)(o.StageIcon, {
+                                (0, r.jsx)(a.StageIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     height: 24,
                                     width: 24,
                                     className: h.live
                                 }),
-                                (0, i.jsx)(o.Heading, {
+                                (0, r.jsx)(a.Heading, {
                                     variant: 'eyebrow',
                                     className: l()(h.__invalid_label, h.live),
                                     children: p.intl.string(p.t['X2K3//'])
                                 })
                             ]
                         }),
-                        (0, i.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: h.background,
                             children: [
-                                (0, i.jsx)(o.HeadphonesIcon, {
+                                (0, r.jsx)(a.HeadphonesIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     height: 16,
                                     width: 16,
                                     className: h.listeners
                                 }),
-                                (0, i.jsx)(o.Heading, {
+                                (0, r.jsx)(a.Heading, {
                                     className: l()(h.__invalid_label, h.listeners),
                                     variant: 'heading-sm/semibold',
-                                    children: v
+                                    children: A
                                 })
                             ]
                         })
                     ]
                 }),
-                f &&
-                    (0, i.jsxs)('div', {
-                        className: l()(h.guild, { [h.embed]: f }),
+                S &&
+                    (0, r.jsxs)('div', {
+                        className: l()(h.guild, { [h.embed]: S }),
                         children: [
-                            (0, i.jsx)(u.ZP, {
-                                mask: u.ZP.Masks.SQUIRCLE,
+                            (0, r.jsx)(d.ZP, {
+                                mask: d.ZP.Masks.SQUIRCLE,
                                 width: 20,
                                 height: 20,
-                                children: (0, i.jsx)(c.Z, {
-                                    guild: g,
-                                    size: c.Z.Sizes.MINI,
+                                children: (0, r.jsx)(u.Z, {
+                                    guild: C,
+                                    size: u.Z.Sizes.MINI,
                                     active: !0
                                 })
                             }),
-                            (0, i.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 color: 'header-secondary',
                                 className: h.__invalid_label,
                                 variant: 'text-sm/normal',
-                                children: g.name
+                                children: C.name
                             })
                         ]
                     }),
-                (0, i.jsx)(a.Z, {
-                    size: E || f ? a.Z.Sizes.SIZE_16 : a.Z.Sizes.SIZE_20,
-                    className: l()(h.header, { [h.embed]: f }),
-                    children: I
+                (0, r.jsx)(o.Z, {
+                    size: E || S ? o.Z.Sizes.SIZE_16 : o.Z.Sizes.SIZE_20,
+                    className: l()(h.header, { [h.embed]: S }),
+                    children: g
                 }),
-                (0, i.jsxs)('div', {
-                    className: l()(h.members, { [h.embed]: f }),
+                (0, r.jsxs)('div', {
+                    className: l()(h.members, { [h.embed]: S }),
                     children: [
-                        y.length > 0 &&
-                            (0, i.jsxs)('div', {
+                        R.length > 0 &&
+                            (0, r.jsxs)('div', {
                                 className: h.speakers,
                                 children: [
-                                    y.map((e) =>
-                                        (0, i.jsx)(
-                                            m,
+                                    R.map((e) =>
+                                        (0, r.jsx)(
+                                            f,
                                             {
                                                 speaker: e,
-                                                guildId: g.id,
-                                                isEmbed: f
+                                                guildId: C.id,
+                                                isEmbed: S
                                             },
                                             e.user.id
                                         )
                                     ),
-                                    b > 0
-                                        ? (0, i.jsxs)('div', {
+                                    O > 0
+                                        ? (0, r.jsxs)('div', {
                                               className: h.speaker,
                                               children: [
-                                                  (0, i.jsx)('div', {
-                                                      className: l()(h.icon, { [h.embed]: f }),
-                                                      children: (0, i.jsx)(o.MicrophoneIcon, {
+                                                  (0, r.jsx)('div', {
+                                                      className: l()(h.icon, { [h.embed]: S }),
+                                                      children: (0, r.jsx)(a.MicrophoneIcon, {
                                                           size: 'custom',
                                                           color: 'currentColor',
-                                                          height: f ? 12 : 14,
+                                                          height: S ? 12 : 14,
                                                           className: h.listeners
                                                       })
                                                   }),
-                                                  (0, i.jsxs)(d.Z, {
-                                                      size: f ? d.Z.Sizes.SIZE_12 : d.Z.Sizes.SIZE_14,
-                                                      color: d.Z.Colors.HEADER_SECONDARY,
-                                                      children: ['+', p.intl.format(p.t.L1pCBQ, { count: b })]
+                                                  (0, r.jsxs)(c.Z, {
+                                                      size: S ? c.Z.Sizes.SIZE_12 : c.Z.Sizes.SIZE_14,
+                                                      color: c.Z.Colors.HEADER_SECONDARY,
+                                                      children: ['+', p.intl.format(p.t.L1pCBQ, { count: O })]
                                                   })
                                               ]
                                           })
                                         : null
                                 ]
                             }),
-                        f &&
-                            (0, i.jsx)(o.Button, {
-                                color: o.Button.Colors.GREEN,
-                                onClick: S,
+                        S &&
+                            (0, r.jsx)(a.Button, {
+                                color: a.Button.Colors.GREEN,
+                                onClick: m,
                                 className: h.joinButton,
                                 children: p.intl.string(p.t.ZYO5OD)
                             })

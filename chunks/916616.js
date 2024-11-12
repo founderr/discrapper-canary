@@ -40,7 +40,7 @@ class S extends (r = a.PureComponent) {
         let e;
         let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: _, height: v, maxWidth: I = _, maxHeight: b = v, minWidth: S, minHeight: A, mediaLayoutType: N, limitResponsiveWidth: C = !0, accessory: R, zoomable: O, original: D, children: L, renderAccessory: x, onClick: w, tabIndex: M, dataSafeSrc: P, useFullWidth: k = !1, ...U } = this.props;
         if (1 === _ && 1 === v) return null;
-        let G = (0, f.Tj)({
+        let B = (0, f.Tj)({
                 width: _,
                 height: v,
                 maxWidth: I,
@@ -48,27 +48,27 @@ class S extends (r = a.PureComponent) {
                 minWidth: S,
                 minHeight: A
             }),
-            B = 0 !== G.width ? G.width / G.height : 1;
+            G = 0 !== B.width ? B.width / B.height : 1;
         '' !== a && r !== h.zo9.ERROR
             ? (e = L({
                   src: a,
-                  size: G,
+                  size: B,
                   alt: c,
                   className: n,
                   mediaLayoutType: N
               }))
             : r !== h.zo9.LOADING &&
               (e = (0, i.jsx)(T, {
-                  size: G,
+                  size: B,
                   mediaLayoutType: N,
                   alt: c
               })),
             (e = (0, i.jsx)(p.N, {
                 readyState: r,
-                aspectRatio: B,
+                aspectRatio: G,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: y(G, N),
+                placeholderStyle: y(B, N),
                 children: e
             }));
         let Z = null != x ? x() : null;
@@ -103,7 +103,7 @@ class S extends (r = a.PureComponent) {
                                     aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
                                 }
                               : e;
-                    })(G, C, k, N),
+                    })(B, C, k, N),
                     ...U,
                     children: [
                         null != D &&

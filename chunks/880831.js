@@ -28,12 +28,12 @@ var i = n(200651),
     I = n(375954),
     E = n(699516),
     b = n(768581),
-    Z = n(70956),
-    N = n(823379),
+    N = n(70956),
+    Z = n(823379),
     S = n(981631),
     T = n(217702),
     j = n(837161);
-let A = 10 * Z.Z.Millis.SECOND;
+let A = 10 * N.Z.Millis.SECOND;
 function y(e) {
     var t;
     let { message: n } = e,
@@ -41,8 +41,8 @@ function y(e) {
         s = (0, C.Uj)(n),
         o = l.useContext(m.Z),
         [u, I] = l.useState(!1),
-        Z = (0, f.p)(),
-        N = l.useCallback(
+        N = (0, f.p)(),
+        Z = l.useCallback(
             (e) => {
                 if ('A' !== e.target.nodeName)
                     h.Z.updateChatOpen(n.channel_id, !0),
@@ -58,7 +58,7 @@ function y(e) {
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
                       isInteracting: u,
-                      shouldFilterKeywords: Z
+                      shouldFilterKeywords: N
                   }).content
                 : null,
         {
@@ -95,7 +95,7 @@ function y(e) {
         onMouseLeave: () => {
             I(!1);
         },
-        onClick: N,
+        onClick: Z,
         children: [
             (0, i.jsxs)('div', {
                 className: a()(j.messageContentWrapper, { [j.mentioned]: n.mentioned }),
@@ -158,7 +158,7 @@ function P(e) {
             let g = null !== (t = p.current) && void 0 !== t ? t : s;
             return {
                 toastsHidden: d,
-                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(N.lm)
+                toastMessages: (0, c.Wu)([I.Z], () => g.map((e) => I.Z.getMessage(n, e)), [n, g]).filter(Z.lm)
             };
         })({
             channelId: t,

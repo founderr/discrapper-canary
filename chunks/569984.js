@@ -43,11 +43,11 @@ function k(e, t) {
 function U(e) {
     null != h.get(e) && (h = new Map(h)).delete(e);
 }
-function G(e) {
+function B(e) {
     let t = new Set(l);
     t.delete(e), (l = t);
 }
-function B(e) {
+function G(e) {
     let t = new Set(d);
     t.delete(e), (d = t);
 }
@@ -170,11 +170,11 @@ class Z extends (v = N.ZP.Store) {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            P(t.questId, { userStatus: t }), G(t.questId);
+            P(t.questId, { userStatus: t }), B(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            G(t);
+            B(t);
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -251,11 +251,11 @@ class Z extends (v = N.ZP.Store) {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            P(t.questId, { userStatus: t }), B(t.questId);
+            P(t.questId, { userStatus: t }), G(t.questId);
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            B(t);
+            G(t);
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e,

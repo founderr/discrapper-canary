@@ -1,74 +1,74 @@
 t.d(n, {
     x: function () {
-        return C;
+        return j;
     }
 });
 var i = t(200651),
-    a = t(192379),
+    l = t(192379),
     r = t(512722),
-    o = t.n(r),
-    l = t(399606),
-    s = t(607070),
+    a = t.n(r),
+    s = t(399606),
+    o = t(607070),
     d = t(597688),
     c = t(624377),
     u = t(530618),
-    f = t(331042),
-    p = t(372654),
-    m = t(987209),
-    _ = t(563132),
-    g = t(179118),
-    b = t(614277),
-    h = t(698708);
-function x(e) {
-    let { handleClose: n, confettiCanvas: t, hideConfetti: a = !1, analyticsLocations: r } = e,
-        { skusById: s, selectedSkuId: c, application: u } = (0, _.usePaymentContext)(),
-        p = (0, l.e7)([d.Z], () => d.Z.getProduct(c));
-    o()(null != c, 'Expected selectedSkuId'), o()(null != u, 'Expected application');
-    let m = s[c];
-    return (o()(null != m, 'Expected sku'), null == p)
+    h = t(331042),
+    m = t(372654),
+    f = t(987209),
+    x = t(563132),
+    v = t(179118),
+    p = t(614277),
+    g = t(698708);
+function C(e) {
+    let { handleClose: n, confettiCanvas: t, hideConfetti: l = !1, analyticsLocations: r } = e,
+        { skusById: o, selectedSkuId: c, application: u } = (0, x.usePaymentContext)(),
+        m = (0, s.e7)([d.Z], () => d.Z.getProduct(c));
+    a()(null != c, 'Expected selectedSkuId'), a()(null != u, 'Expected application');
+    let f = o[c];
+    return (a()(null != f, 'Expected sku'), null == m)
         ? null
-        : (0, i.jsxs)(b.C3, {
+        : (0, i.jsxs)(p.C3, {
               children: [
-                  (0, i.jsx)(h.Z, {}),
-                  (0, i.jsx)(f.CollectiblesCollectedModalInner, {
-                      product: p,
+                  (0, i.jsx)(g.Z, {}),
+                  (0, i.jsx)(h.CollectiblesCollectedModalInner, {
+                      product: m,
                       onClose: n,
                       confettiCanvas: t,
                       analyticsLocations: r,
-                      hideConfetti: a
+                      hideConfetti: l
                   })
               ]
           });
 }
-function C(e) {
-    let { isGift: n, giftCode: t, selectedGiftStyle: r, hasSentMessage: o, giftRecipient: f, giftMessageError: b, isSendingMessage: h } = (0, m.wD)(),
-        C = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        v = a.useRef(null),
-        { selectedSkuId: I } = (0, _.usePaymentContext)(),
-        S = (0, l.e7)([d.Z], () => d.Z.getProduct(I)),
-        { confettiColors: T } = (0, c.Z)(null == S ? void 0 : S.styles);
+function j(e) {
+    let { isGift: n, giftCode: t, selectedGiftStyle: r, hasSentMessage: a, giftRecipient: h, giftMessageError: p, isSendingMessage: g } = (0, f.wD)(),
+        j = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
+        I = l.useRef(null),
+        { selectedSkuId: T } = (0, x.usePaymentContext)(),
+        E = (0, s.e7)([d.Z], () => d.Z.getProduct(T)),
+        { confettiColors: N } = (0, c.Z)(null == E ? void 0 : E.styles);
     return n
         ? (0, i.jsxs)('div', {
-              ref: v,
+              ref: I,
               children: [
-                  (0, i.jsx)(g.Z, {
+                  (0, i.jsx)(v.Z, {
                       giftCode: t,
                       onClose: e.handleClose,
                       selectedGiftStyle: r,
-                      hasSentMessage: o,
-                      giftRecipient: f,
-                      giftMessageError: b,
-                      isSendingMessage: h
+                      hasSentMessage: a,
+                      giftRecipient: h,
+                      giftMessageError: p,
+                      isSendingMessage: g
                   }),
                   !e.hideConfetti &&
-                      !C &&
+                      !j &&
                       (0, i.jsx)(u.Z, {
-                          confettiTarget: v.current,
+                          confettiTarget: I.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, p.vK)(null == S ? void 0 : S.categorySkuId),
-                          colors: null == T ? void 0 : T.map((e) => e.toHexString())
+                          sprites: (0, m.vK)(null == E ? void 0 : E.categorySkuId),
+                          colors: null == N ? void 0 : N.map((e) => e.toHexString())
                       })
               ]
           })
-        : (0, i.jsx)(x, { ...e });
+        : (0, i.jsx)(C, { ...e });
 }

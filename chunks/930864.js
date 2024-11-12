@@ -27,9 +27,9 @@ var l = n(200651),
     C = n(388275),
     v = n(912332),
     b = n(646746),
-    L = n(819727),
-    N = n(388032),
-    x = n(463061),
+    x = n(819727),
+    L = n(388032),
+    N = n(463061),
     T = n(621054);
 function P(e) {
     let { channelId: t, messageId: P, message: y, initialSelectedDestinations: Z, forwardOptions: w, onClose: R, onRequestSent: O, ...D } = e,
@@ -44,20 +44,20 @@ function P(e) {
             },
             [t, P, y]
         ),
-        Q = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
-        B = (0, E.ZF)(),
-        H = (0, E.mh)(),
-        z = i.useRef(0),
+        z = (0, r.e7)([h.Z], () => h.Z.getChannel(t), [t]),
+        Q = (0, E.ZF)(),
+        B = (0, E.mh)(),
+        H = i.useRef(0),
         V = i.useRef(0),
         [q, K] = i.useState(Z),
         Y = q.length,
-        X = Y >= L.G,
+        X = Y >= x.G,
         [J, $] = i.useState(''),
         ee = i.useCallback(
             (e) => {
-                $(e), (V.current += 1), '' !== e && H(t, P);
+                $(e), (V.current += 1), '' !== e && B(t, P);
             },
-            [t, P, H]
+            [t, P, B]
         ),
         et = (0, d.s)({
             searchText: J,
@@ -69,7 +69,7 @@ function P(e) {
             (0, E.sF)({
                 channelId: t,
                 messageId: P,
-                numDestinationChanges: z.current,
+                numDestinationChanges: H.current,
                 numQueryChanges: V.current
             }),
                 R();
@@ -78,7 +78,7 @@ function P(e) {
             var e;
             let n = null === (e = h.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
                 l = (0, _.wR)(n, t, P);
-            (0, s.showToast)((0, s.createToast)(N.intl.string(N.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, P);
+            (0, s.showToast)((0, s.createToast)(L.intl.string(L.t['L/PwZW']), s.ToastType.LINK)), (0, g.JG)(l), (0, E.xp)(t, P);
         }, [t, P]),
         ei = i.useCallback(() => {
             $('');
@@ -94,7 +94,7 @@ function P(e) {
             () =>
                 (0, a.throttle)(
                     () => {
-                        (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.kwmYkp), s.ToastType.FORWARD));
+                        (0, s.showToast)((0, s.createToast)(L.intl.string(L.t.kwmYkp), s.ToastType.FORWARD));
                     },
                     3000,
                     {
@@ -106,18 +106,18 @@ function P(e) {
         ),
         es = i.useCallback(
             (e) => {
-                B(t, P, '' !== J),
+                Q(t, P, '' !== J),
                     K((t) => {
                         let n = t.findIndex((t) => {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return X ? t : ($(''), (z.current += 1), [e, ...t]);
+                        if (-1 === n) return X ? t : ($(''), (H.current += 1), [e, ...t]);
                         let l = [...t];
-                        return l.splice(n, 1), (z.current += 1), l;
+                        return l.splice(n, 1), (H.current += 1), l;
                     });
             },
-            [t, X, P, J, B]
+            [t, X, P, J, Q]
         ),
         eo = i.useCallback(
             async function (e) {
@@ -125,7 +125,7 @@ function P(e) {
                 let { withMessage: a, transitionToDestination: r, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     _ = null !== (i = f.Z.getMessage(t, P)) && void 0 !== i ? i : y;
                 if (null == _) {
-                    (0, s.showToast)((0, s.createToast)(N.intl.string(N.t.R0RpRU), s.ToastType.FAILURE));
+                    (0, s.showToast)((0, s.createToast)(L.intl.string(L.t.R0RpRU), s.ToastType.FAILURE));
                     return;
                 }
                 U(!0);
@@ -168,7 +168,7 @@ function P(e) {
                         hasError: !1,
                         hasContextMessage: null != a && '' !== a,
                         numDestinations: g.length,
-                        numDestinationChanges: z.current,
+                        numDestinationChanges: H.current,
                         numQueryChanges: V.current,
                         anyDestinationHasSlowmode: A
                     }),
@@ -181,7 +181,7 @@ function P(e) {
                     hasError: !0,
                     hasContextMessage: null != a && '' !== a,
                     numDestinations: g.length,
-                    numDestinationChanges: z.current,
+                    numDestinationChanges: H.current,
                     numQueryChanges: V.current,
                     anyDestinationHasSlowmode: A
                 });
@@ -217,7 +217,7 @@ function P(e) {
             },
             [eo]
         );
-    if (null == W || null == Q) return null;
+    if (null == W || null == z) return null;
     let eh =
             et.length > 0
                 ? (0, l.jsx)(A.F, {
@@ -226,61 +226,61 @@ function P(e) {
                       rowData: et,
                       rowMode: j ? A.G.SEND : A.G.TOGGLE,
                       message: W,
-                      originChannel: Q,
+                      originChannel: z,
                       handleToggleDestination: j ? ed : es,
                       selectedDestinations: q,
                       disableSelection: X
                   })
                 : (0, l.jsxs)(s.ModalContent, {
-                      className: x.noResults,
+                      className: N.noResults,
                       children: [
                           (0, l.jsx)('img', {
-                              className: x.noResultsImg,
+                              className: N.noResultsImg,
                               src: T,
                               alt: ''
                           }),
                           (0, l.jsx)(s.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: N.intl.string(N.t.V6nAfH)
+                              children: L.intl.string(L.t.V6nAfH)
                           })
                       ]
                   }),
-        ef = Y <= 1 ? N.intl.string(N.t.TXNS7e) : N.intl.formatToPlainString(N.t.jWtYUl, { count: Y });
+        ef = Y <= 1 ? L.intl.string(L.t.TXNS7e) : L.intl.formatToPlainString(L.t.jWtYUl, { count: Y });
     return (0, l.jsxs)(s.ModalRoot, {
-        className: x.modal,
-        'aria-label': N.intl.string(N.t['+SkRRk']),
+        className: N.modal,
+        'aria-label': L.intl.string(L.t['+SkRRk']),
         ...D,
         children: [
             (0, l.jsxs)(s.ModalHeader, {
-                className: x.header,
+                className: N.header,
                 children: [
                     (0, l.jsxs)('div', {
-                        className: x.titleLine,
+                        className: N.titleLine,
                         children: [
                             (0, l.jsx)('div', {
-                                className: x.title,
+                                className: N.title,
                                 children: (0, l.jsx)(s.HeadingLevel, {
                                     component: (0, l.jsx)(s.Heading, {
                                         variant: 'heading-lg/semibold',
-                                        children: N.intl.string(N.t['+SkRRk'])
+                                        children: L.intl.string(L.t['+SkRRk'])
                                     }),
                                     children: X
                                         ? (0, l.jsx)(s.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'text-warning',
-                                              children: N.intl.format(N.t['3Fbkio'], { count: L.G })
+                                              children: L.intl.format(L.t['3Fbkio'], { count: x.G })
                                           })
                                         : (j || M) &&
                                           (0, l.jsx)(s.Heading, {
                                               variant: 'heading-sm/normal',
                                               color: 'header-muted',
-                                              children: N.intl.string(N.t['VA+btL'])
+                                              children: L.intl.string(L.t['VA+btL'])
                                           })
                                 })
                             }),
                             (0, l.jsx)(s.ModalCloseButton, {
-                                className: x.closeButton,
+                                className: N.closeButton,
                                 onClick: en
                             })
                         ]
@@ -288,7 +288,7 @@ function P(e) {
                     j &&
                         k &&
                         (0, l.jsx)('div', {
-                            className: x.forwardPreviewWrapperInset,
+                            className: N.forwardPreviewWrapperInset,
                             children: (0, l.jsx)(b.O, {
                                 message: W,
                                 forwardOptions: w
@@ -300,8 +300,8 @@ function P(e) {
                         query: J,
                         onChange: ee,
                         onClear: ei,
-                        placeholder: N.intl.string(N.t['5h0QOD']),
-                        'aria-label': N.intl.string(N.t['5h0QOD']),
+                        placeholder: L.intl.string(L.t['5h0QOD']),
+                        'aria-label': L.intl.string(L.t['5h0QOD']),
                         autoFocus: !0
                     })
                 ]
@@ -320,7 +320,7 @@ function P(e) {
                           showPreview: k
                       })
                     : (0, l.jsxs)(s.ModalFooter, {
-                          className: x.footer,
+                          className: N.footer,
                           children: [
                               (0, l.jsx)(s.Button, {
                                   submitting: G,
@@ -332,7 +332,7 @@ function P(e) {
                                   onClick: el,
                                   look: s.Button.Looks.OUTLINED,
                                   color: s.Button.Colors.PRIMARY,
-                                  children: N.intl.string(N.t.WqhZsr)
+                                  children: L.intl.string(L.t.WqhZsr)
                               })
                           ]
                       }))

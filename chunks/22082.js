@@ -20,8 +20,8 @@ var i,
     _ = n(981631);
 let y = new Set(),
     w = {},
-    m = {};
-function N(e, t) {
+    N = {};
+function m(e, t) {
     let n = w[e];
     if (null != n && null != t && n.has(t)) {
         var i;
@@ -43,7 +43,7 @@ function A(e) {
                 return null == v.ZP.getTrackedAckMessageId(t) && n > Date.now() - E.Z.Millis.WEEK && n > u.Z.getGuildRecentsDismissedAt(e) && n > s && !I.ZP.isChannelOrParentOptedIn(e, t);
             })
         )),
-            (m[e] = Date.now());
+            (N[e] = Date.now());
 }
 function L() {
     S.default.keys(w).forEach((e) => {
@@ -84,15 +84,15 @@ class R extends (i = a.ZP.Store) {
         CHANNEL_ACK: () => !0,
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
-            return null != t && (null == w[t] || m[t] < Date.now() - E.Z.Millis.HOUR ? (A(t), !0) : (null != n && N(t, n), !1));
+            return null != t && (null == w[t] || N[t] < Date.now() - E.Z.Millis.HOUR ? (A(t), !0) : (null != n && m(t, n), !1));
         },
         SIDEBAR_VIEW_CHANNEL: function (e) {
             let { guildId: t, channelId: n, sidebarType: i } = e;
-            return null != t && i === h.tI.VIEW_CHANNEL && (N(t, n), !1);
+            return null != t && i === h.tI.VIEW_CHANNEL && (m(t, n), !1);
         },
         SIDEBAR_VIEW_GUILD: function (e) {
             let { guildId: t, baseChannelId: n } = e;
-            return null != t && (N(t, n), !1);
+            return null != t && (m(t, n), !1);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;

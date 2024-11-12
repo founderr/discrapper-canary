@@ -42,11 +42,11 @@ let U = {
         width: 232,
         height: 315
     },
-    G = {
+    B = {
         width: 232,
         height: 267
     },
-    B = 475,
+    G = 475,
     Z = 267;
 function F(e) {
     let { header: t } = e,
@@ -70,7 +70,7 @@ function F(e) {
                     children: (0, r.jsx)(n, {
                         disabled: !1,
                         deviceId: a,
-                        width: B,
+                        width: G,
                         height: Z
                     })
                 }),
@@ -191,7 +191,7 @@ function j(e) {
                 })
             ]
         }),
-        j = C ? U : G,
+        j = C ? U : B,
         H = (0, l.e7)([R.Z], () => R.Z.windowSize());
     return (0, r.jsx)(_.Z, {
         className: P.wrapper,
@@ -211,9 +211,9 @@ function j(e) {
                     className: s()(P.root, k.elevationHigh, { [P.previewCamera]: m }, e),
                     style: {
                         ...t,
-                        width: A.value.interpolate([0, 1], [j.width, B]),
+                        width: A.value.interpolate([0, 1], [j.width, G]),
                         minHeight: A.value.interpolate([0, 1], [j.height, Z]),
-                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(B - j.width)) / 2])
+                        translateX: A.value.interpolate([0, 1], [0, (-1 * Math.abs(G - j.width)) / 2])
                     },
                     children: [
                         m

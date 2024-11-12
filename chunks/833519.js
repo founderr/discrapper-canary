@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return W;
+        return G;
     },
     _: function () {
         return F;
@@ -29,13 +29,13 @@ var i = n(200651),
     Z = n(592125),
     C = n(131951),
     y = n(451478),
-    b = n(685203),
-    T = n(112560),
+    T = n(685203),
+    b = n(112560),
     A = n(442168),
     N = n(822296),
     w = n(916771),
-    j = n(792517),
-    P = n(979425),
+    P = n(792517),
+    j = n(979425),
     R = n(651183),
     M = n(623825),
     O = n(981631),
@@ -64,23 +64,23 @@ function F(e) {
         ]
     });
 }
-function W(e) {
+function G(e) {
     let { participant: t, selected: n, onVideoResize: a, paused: m, fit: f, inPopout: v, width: R, focused: M } = e,
         F = C.Z.getVideoComponent(),
-        W = (0, s.e7)([E.default], () => E.default.getId()),
-        B = (0, p.Z)(),
-        { stream: G, user: z, streamId: H } = t,
-        Y = (0, s.e7)([Z.Z], () => Z.Z.getChannel(G.channelId)),
-        J = (0, s.e7)([x.Z], () => x.Z.getActiveStreamForUser(z.id, G.guildId), [z.id, G.guildId]),
+        G = (0, s.e7)([E.default], () => E.default.getId()),
+        W = (0, p.Z)(),
+        { stream: B, user: z, streamId: H } = t,
+        Y = (0, s.e7)([Z.Z], () => Z.Z.getChannel(B.channelId)),
+        J = (0, s.e7)([x.Z], () => x.Z.getActiveStreamForUser(z.id, B.guildId), [z.id, B.guildId]),
         q = (0, s.e7)([x.Z], () => x.Z.getAllActiveStreams().length > 0),
         X = (0, s.e7)([y.Z], () => y.Z.isFocused()),
-        K = (null == J ? void 0 : J.ownerId) === W,
+        K = (null == J ? void 0 : J.ownerId) === G,
         Q = K && !X && !v,
-        $ = null != J ? (0, h.Z)(J, z, z.id === W, Q) : null,
+        $ = null != J ? (0, h.Z)(J, z, z.id === G, Q) : null,
         ee = R < 195;
     if (
         (l.useEffect(() => {
-            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !K && ((0, u.rn)(G), c.Z.updateStageStreamSize(G.channelId, !1));
+            !q && (null == Y ? void 0 : Y.isGuildStageVoice()) && !K && ((0, u.rn)(B), c.Z.updateStageStreamSize(B.channelId, !1));
         }, []),
         l.useEffect(() => {
             V.info(
@@ -91,13 +91,13 @@ function W(e) {
                     .concat(C.Z.supports(k.AN.VIDEO))
             );
         }, [F, J, n]),
-        B)
+        W)
     )
-        return (0, i.jsx)(P.Z, {
+        return (0, i.jsx)(j.Z, {
             stream: t.stream,
             isSmall: ee,
             selected: n,
-            isSelfStream: z.id === W
+            isSelfStream: z.id === G
         });
     if ((null == J ? void 0 : J.state) === O.jm8.ENDED)
         return (0, i.jsx)(N.Z, {
@@ -112,7 +112,7 @@ function W(e) {
             width: R
         });
     else if (t.type === L.fO.HIDDEN_STREAM)
-        return (0, i.jsx)(j.Z, {
+        return (0, i.jsx)(P.Z, {
             selected: n,
             participant: t,
             width: R
@@ -127,7 +127,7 @@ function W(e) {
                           guildId: Y.guild_id,
                           streamerId: z.id,
                           hasScreenMessage: null != $,
-                          stream: G
+                          stream: B
                       })
                     : null,
                 (0, i.jsx)(
@@ -147,12 +147,12 @@ function W(e) {
                 ),
                 null != $
                     ? (0, i.jsx)(_.Z, {
-                          size: (0, T.L)(R),
+                          size: (0, b.L)(R),
                           ...$
                       })
                     : null,
                 (0, i.jsx)(A.Z, {
-                    stream: G,
+                    stream: B,
                     inPopout: v
                 })
             ]
@@ -170,7 +170,7 @@ function W(e) {
                     ? null
                     : (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)(b.a, {
+                              (0, i.jsx)(T.a, {
                                   isSmall: ee,
                                   children: (0, i.jsx)(o.Text, {
                                       variant: ee ? 'text-sm/semibold' : 'text-md/semibold',
@@ -179,11 +179,11 @@ function W(e) {
                                   })
                               }),
                               q
-                                  ? (0, i.jsx)(b.a, {
+                                  ? (0, i.jsx)(T.a, {
                                         className: U.addCTA,
                                         tooltip: D.intl.string(D.t.wCrzur),
                                         onClick: (e) => {
-                                            e.stopPropagation(), (0, u.rn)(G, { forceMultiple: !0 });
+                                            e.stopPropagation(), (0, u.rn)(B, { forceMultiple: !0 });
                                         },
                                         isSmall: ee,
                                         children: (0, i.jsx)(o.EyePlusIcon, {

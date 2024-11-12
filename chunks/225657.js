@@ -1,22 +1,22 @@
 var i = t(200651);
 t(192379);
-var a = t(442837),
+var l = t(442837),
     r = t(481060),
-    o = t(700582),
-    l = t(987209),
-    s = t(699516),
+    a = t(700582),
+    s = t(987209),
+    o = t(699516),
     d = t(594174),
     c = t(51144),
     u = t(388032);
 n.Z = (e) => {
-    let { selectedSkuId: n, validateSelectedGift: t, className: f } = e,
-        p = (0, a.Wu)([s.Z], () => s.Z.getFriendIDs()),
-        m = (0, a.Wu)([d.default], () => d.default.filter((e) => p.includes(e.id) && !e.bot), [p]),
-        { giftRecipient: _, setGiftRecipient: g } = (0, l.wD)();
+    let { selectedSkuId: n, validateSelectedGift: t, className: h } = e,
+        m = (0, l.Wu)([o.Z], () => o.Z.getFriendIDs()),
+        f = (0, l.Wu)([d.default], () => d.default.filter((e) => m.includes(e.id) && !e.bot), [m]),
+        { giftRecipient: x, setGiftRecipient: v } = (0, s.wD)();
     return null == n
         ? null
         : (0, i.jsxs)('div', {
-              className: f,
+              className: h,
               children: [
                   (0, i.jsx)(r.FormTitle, { children: u.intl.string(u.t.xFn72t) }),
                   (0, i.jsx)(r.SearchableSelect, {
@@ -24,15 +24,15 @@ n.Z = (e) => {
                       renderOptionPrefix: (e) =>
                           (null == e ? void 0 : e.value) == null
                               ? null
-                              : (0, i.jsx)(o.Z, {
+                              : (0, i.jsx)(a.Z, {
                                     user: e.value,
                                     size: r.AvatarSizes.SIZE_20
                                 }),
-                      value: _,
+                      value: x,
                       onChange: (e) => {
-                          t(e, n), g(e);
+                          t(e, n), v(e);
                       },
-                      options: m.map((e) => ({
+                      options: f.map((e) => ({
                           value: e,
                           label: ''.concat(c.ZP.getUserTag(e))
                       }))

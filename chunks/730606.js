@@ -7,8 +7,8 @@ t.d(n, {
     t(47120);
 var r = t(200651),
     i = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(299608),
     s = t.n(o),
     u = t(100621),
@@ -35,7 +35,7 @@ function A(e) {
     return null == n || 0 === n || null == t || 0 === t;
 }
 function R(e) {
-    let { children: n, isObscured: t, src: l } = e,
+    let { children: n, isObscured: t, src: a } = e,
         [o, s] = i.useState(!1),
         u = i.useCallback(() => {
             s((e) => !e);
@@ -54,21 +54,21 @@ function R(e) {
                       children: (e) =>
                           (0, r.jsx)(r.Fragment, {
                               children: (0, r.jsx)('div', {
-                                  className: a()(y.obscureWrapper, { [y.obscure]: e }),
+                                  className: l()(y.obscureWrapper, { [y.obscure]: e }),
                                   children: n(e)
                               })
                           })
                   },
-                  l
+                  a
               )
           })
         : (0, r.jsx)(r.Fragment, { children: n(!1) });
 }
 function M(e) {
     var n;
-    let { items: t, onIndexChange: l, startIndex: a = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
-        [_, I] = i.useState(a),
-        M = i.useRef(a),
+    let { items: t, onIndexChange: a, startIndex: l = 0, shouldRedactExplicitContent: o = !1, shouldHideMediaOptions: f = !1 } = e,
+        [_, I] = i.useState(l),
+        M = i.useRef(l),
         [j, b] = i.useState([]),
         { zoomed: O, setZoomed: T } = (0, C.Y)();
     i.useEffect(
@@ -91,9 +91,9 @@ function M(e) {
         (e) => {
             var n;
             let r = e - M.current;
-            I((e = ((e % (n = t.length)) + n) % n)), (M.current = e), b((e) => [...e, r]), null == l || l(e), T(!1);
+            I((e = ((e % (n = t.length)) + n) % n)), (M.current = e), b((e) => [...e, r]), null == a || a(e), T(!1);
         },
-        [l, t, T]
+        [a, t, T]
     );
     i.useEffect(() => {
         let e = s()(() => {
@@ -123,16 +123,16 @@ function M(e) {
                   e.stopPropagation(), e.preventDefault();
               }
             : void 0,
-        w = (function (e) {
+        Z = (function (e) {
             if (0 === e) return ['translateX(0)'];
             let n = ['translateX(100px)', 'translateX(-100px)'];
             return e > 0 ? n : n.toReversed();
         })(null !== (n = j[j.length - 1]) && void 0 !== n ? n : 0),
-        Z = (0, d.useTransition)(k, {
+        w = (0, d.useTransition)(k, {
             key: k.url,
             from: {
                 opacity: 0,
-                transform: w[0]
+                transform: Z[0]
             },
             enter: {
                 opacity: 1,
@@ -140,7 +140,7 @@ function M(e) {
             },
             leave: {
                 opacity: 0,
-                transform: w[w.length - 1]
+                transform: Z[Z.length - 1]
             },
             config: {
                 friction: 20,
@@ -165,7 +165,7 @@ function M(e) {
                         : null,
                     (0, r.jsx)('div', {
                         className: y.mediaContainer,
-                        children: Z((e, n) =>
+                        children: w((e, n) =>
                             (0, r.jsx)(r.Fragment, {
                                 children: (0, r.jsx)(
                                     u.animated.div,

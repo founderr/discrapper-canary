@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     Je: function () {
         return u;
     },
@@ -15,16 +15,16 @@ t.d(n, {
         return s;
     }
 });
-var i = t(544891),
-    r = t(881052),
-    l = t(73346),
-    o = t(981631);
-let u = async (e, n, t) => {
-        let { priceTier: l, imageName: u, createNewRole: a, unlinkRole: s, ...c } = t;
+var i = n(544891),
+    r = n(881052),
+    l = n(73346),
+    o = n(981631);
+let u = async (e, t, n) => {
+        let { priceTier: l, imageName: u, createNewRole: a, unlinkRole: s, ...c } = n;
         try {
             return (
                 await i.tn.patch({
-                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e, n),
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
                     body: {
                         ...c,
                         image_name: u,
@@ -38,9 +38,9 @@ let u = async (e, n, t) => {
             throw new r.Hx(e);
         }
     },
-    a = async (e, n) => {
+    a = async (e, t) => {
         try {
-            await i.tn.del({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, n) });
+            await i.tn.del({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t) });
         } catch (e) {
             throw new r.Hx(e);
         }
@@ -52,17 +52,17 @@ let u = async (e, n, t) => {
             throw new r.Hx(e);
         }
     },
-    c = async (e, n) => {
+    c = async (e, t) => {
         try {
-            return (await (0, l.Kb)({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, n) })).body;
+            return (await (0, l.Kb)({ url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t) })).body;
         } catch (e) {
             throw new r.Hx(e);
         }
     },
     d = async (e) => {
-        let { guildId: n, productId: t, attachmentId: l } = e;
+        let { guildId: t, productId: n, attachmentId: l } = e;
         try {
-            return (await i.tn.post({ url: o.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(n, t, l) })).body;
+            return (await i.tn.post({ url: o.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, l) })).body;
         } catch (e) {
             throw new r.Hx(e);
         }

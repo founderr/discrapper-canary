@@ -13,7 +13,7 @@ var i = n(200651),
     p = n(829409),
     g = n(131795);
 let f = 16 / 9,
-    _ = 17 / 6;
+    _ = 325 / 72;
 function E(e) {
     let { application: t, isHovered: n, botBannerUrl: l, botBannerUrlAnimated: s } = e,
         o = (0, d.Z)({

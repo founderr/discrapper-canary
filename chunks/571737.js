@@ -8,7 +8,7 @@ var i = n(200651),
     c = n(548514),
     d = n(388032),
     u = n(613909);
-let h = 64;
+let h = 52;
 t.Z = function (e) {
     let { application: t } = e,
         n = r.useMemo(
@@ -16,7 +16,7 @@ t.Z = function (e) {
                 s.ZP.getApplicationIconURL({
                     id: t.id,
                     icon: t.icon,
-                    size: 120
+                    size: 96
                 }),
             [t]
         ),
@@ -38,8 +38,8 @@ t.Z = function (e) {
                     src: n,
                     alt: '',
                     className: u.avatar,
-                    height: 120,
-                    width: 120,
+                    height: 96,
+                    width: 96,
                     style: {
                         borderWidth: 4,
                         marginLeft: 28

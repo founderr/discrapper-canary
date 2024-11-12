@@ -11,21 +11,21 @@ var i = n(904245),
     o = n(268350),
     s = n(926491),
     c = n(373228),
-    u = n(430824),
-    d = n(594174),
+    d = n(430824),
+    u = n(594174),
     m = n(176354),
     h = n(709054),
     f = n(981631),
     p = n(185923);
 function _(e) {
-    let t = u.Z.getGuild(e);
+    let t = d.Z.getGuild(e);
     return null != t && (t.nsfwLevel === f.V_K.DEFAULT || t.nsfwLevel === f.V_K.SAFE);
 }
 async function g(e, t) {
     var n, f, g;
     let E = t.getGuildId();
-    if (null == E || null == u.Z.getGuild(E)) return;
-    let C = d.default.getCurrentUser();
+    if (null == E || null == d.Z.getGuild(E)) return;
+    let C = u.default.getCurrentUser();
     if (null == C) return;
     await (0, o.$p)();
     let I = Array.from(s.Z.getAllStickersIterator()),
@@ -43,7 +43,7 @@ async function g(e, t) {
         });
         return;
     }
-    let N = u.Z.getGuildIds()
+    let v = d.Z.getGuildIds()
         .filter(_)
         .map((e) => r.ZP.getUsableGuildEmoji(e))
         .flat()
@@ -58,8 +58,8 @@ async function g(e, t) {
                 })
         )
         .sort((e, t) => -h.default.compare(e.id, t.id));
-    if (N.length > 10) {
-        let n = N[Math.floor(Math.pow(Math.random(), 2) * N.length)];
+    if (v.length > 10) {
+        let n = v[Math.floor(Math.pow(Math.random(), 2) * v.length)];
         i.Z.sendMessage(t.id, l.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
                 guild_id: null !== (f = t.getGuildId()) && void 0 !== f ? f : void 0,
@@ -69,8 +69,8 @@ async function g(e, t) {
         });
         return;
     }
-    let v = I.filter((e) => e.type === c.n0.STANDARD),
-        T = [v[Math.floor(Math.random() * v.length)].id];
+    let N = I.filter((e) => e.type === c.n0.STANDARD),
+        T = [N[Math.floor(Math.random() * N.length)].id];
     i.Z.sendStickers(t.id, T, '', {
         messageReference: {
             guild_id: null !== (g = t.getGuildId()) && void 0 !== g ? g : void 0,

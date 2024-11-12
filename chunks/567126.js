@@ -3,7 +3,7 @@ n.d(t, {
         return K;
     },
     oA: function () {
-        return W;
+        return H;
     },
     se: function () {
         return z;
@@ -39,8 +39,8 @@ var l = n(200651),
     x = n(224706),
     g = n(579806),
     p = n(600164),
-    v = n(152708),
-    j = n(594190),
+    j = n(152708),
+    v = n(594190),
     C = n(569984),
     S = n(918701),
     _ = n(977156),
@@ -48,15 +48,15 @@ var l = n(200651),
     I = n(131951),
     T = n(449224),
     N = n(358085),
-    w = n(463727),
-    b = n(855403),
+    b = n(463727),
+    w = n(855403),
     y = n(299570),
-    R = n(960861),
-    E = n(989941),
+    E = n(960861),
+    R = n(989941),
     M = n(958707),
     k = n(152165),
-    A = n(133179),
-    P = n(70722),
+    P = n(133179),
+    A = n(70722),
     B = n(46140),
     L = n(65154),
     G = n(388032),
@@ -120,7 +120,7 @@ async function O() {
     };
 }
 async function U() {
-    let e = j.ZP.getRunningGames();
+    let e = v.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -146,30 +146,30 @@ async function U() {
     ).filter((e) => null !== e);
 }
 function F(e) {
-    let t = (0, N.isWindows)() ? (0, E.Z)(j.ZP, T.Z) : null,
-        n = j.ZP.getRunningGames();
-    return null != t && (0, b.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, b.Z)(e.id, t.windowHandle)) ? 1 : 0;
+    let t = (0, N.isWindows)() ? (0, R.Z)(v.ZP, T.Z) : null,
+        n = v.ZP.getRunningGames();
+    return null != t && (0, w.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, w.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
-function W(e) {
+function H(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
-        { enableGoLiveCaptureCard: r } = w.Z.useExperiment({ location: 'GoLive_Source_Select' }),
+        { enableGoLiveCaptureCard: r } = b.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         a = I.Z.supports(L.AN.GO_LIVE_HARDWARE),
         [o, c] = i.useState(null),
         [f, x] = i.useState(null),
         [g, T] = i.useState(null),
         N = null != g && g.length > 0,
-        [y, R] = i.useState(d.vA.WINDOW),
-        [E, k] = i.useState(!1),
-        P = i.useRef(null),
+        [y, E] = i.useState(d.vA.WINDOW),
+        [R, k] = i.useState(!1),
+        A = i.useRef(null),
         U = i.useRef(new h.Xp()),
-        W = (0, u.e7)([j.ZP], () => j.ZP.getRunningGames()),
-        H = (function (e, t, n) {
+        H = (0, u.e7)([v.ZP], () => v.ZP.getRunningGames()),
+        W = (function (e, t, n) {
             let l = (0, _.Zy)({ location: B.dr.STREAM_SOURCE_SELECT });
             return i.useMemo(() => {
                 if (null == n || !l) return null;
                 for (let l of n) {
                     var i, r;
-                    let n = t.find((e) => (0, b.Z)(l.id, e.windowHandle));
+                    let n = t.find((e) => (0, w.Z)(l.id, e.windowHandle));
                     if ((null == n ? void 0 : n.id) == null) continue;
                     let s = (0, S.lQ)(e, n.id);
                     if (null != s && (null === (i = s.userStatus) || void 0 === i ? void 0 : i.enrolledAt) != null && (null === (r = s.userStatus) || void 0 === r ? void 0 : r.completedAt) == null)
@@ -182,10 +182,10 @@ function W(e) {
             }, [l, e, t, n]);
         })(
             (0, u.e7)([C.Z], () => C.Z.quests),
-            W,
+            H,
             f
         ),
-        V = i.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == H ? void 0 : H.source.id) === e.id ? -1 : (null == H ? void 0 : H.source.id) === t.id ? 1 : F(t) - F(e)))), [H, f]);
+        V = i.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : F(t) - F(e)))), [W, f]);
     i.useEffect(() => {
         let e = U.current;
         return (
@@ -203,7 +203,7 @@ function W(e) {
         );
     }, []);
     let z = i.useCallback((e) => {
-            null !== e && ((P.current = e), k(!e.isScrolledToTop()));
+            null !== e && ((A.current = e), k(!e.isScrolledToTop()));
         }, []),
         K = (function (e) {
             switch (e) {
@@ -231,7 +231,7 @@ function W(e) {
                 className: s()(D.tile, { [D.selected]: r }),
                 onClick: () => n(e, null),
                 children: (0, l.jsx)(
-                    A.Z,
+                    P.Z,
                     {
                         source: e,
                         selectedSource: t
@@ -243,7 +243,7 @@ function W(e) {
         );
     });
     function X() {
-        let e = P.current;
+        let e = A.current;
         null != e && k(!e.isScrolledToTop());
     }
     return (0, l.jsxs)(i.Fragment, {
@@ -251,7 +251,7 @@ function W(e) {
             (0, l.jsxs)('div', {
                 className: D.segmentContainer,
                 children: [
-                    (0, l.jsx)(M.Z, { separator: E }),
+                    (0, l.jsx)(M.Z, { separator: R }),
                     (0, l.jsx)(m.SegmentedControl, {
                         options: (function () {
                             let e = [
@@ -278,7 +278,7 @@ function W(e) {
                         value: y,
                         onChange: (e) => {
                             let { value: t } = e;
-                            return R(t);
+                            return E(t);
                         },
                         className: D.segmentControl,
                         optionClassName: D.segmentControlOption
@@ -292,8 +292,8 @@ function W(e) {
                           ref: z,
                           className: D.sourceScroller,
                           onScroll: X,
-                          children: (0, l.jsx)(v.Z, {
-                              layout: v.Z.Layout.WRAP,
+                          children: (0, l.jsx)(j.Z, {
+                              layout: j.Z.Layout.WRAP,
                               columns: 2,
                               className: D.sourceContainer,
                               children: Y
@@ -305,9 +305,9 @@ function W(e) {
                       className: D.sourceScroller,
                       onScroll: X,
                       children: [
-                          y === d.vA.WINDOW && null != H && (0, l.jsx)(Z.Z, { quest: H.quest }),
-                          (0, l.jsx)(v.Z, {
-                              layout: v.Z.Layout.WRAP,
+                          y === d.vA.WINDOW && null != W && (0, l.jsx)(Z.Z, { quest: W.quest }),
+                          (0, l.jsx)(j.Z, {
+                              layout: j.Z.Layout.WRAP,
                               columns: 2,
                               className: D.sourceContainer,
                               children: Y
@@ -317,7 +317,7 @@ function W(e) {
         ]
     });
 }
-function H(e) {
+function W(e) {
     let { onSelect: t } = e,
         n = i.useCallback(() => {
             t({
@@ -416,14 +416,14 @@ function z(e) {
             },
             [t, a]
         ),
-        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, P.jR),
+        f = (0, N.isMac)() && o().satisfies(null === g.Z || void 0 === g.Z ? void 0 : g.Z.os.release, A.jR),
         x = (0, N.isMac)(),
-        [p, v] = i.useState(!1),
-        j = i.useCallback(() => {
-            v(!p);
+        [p, j] = i.useState(!1),
+        v = i.useCallback(() => {
+            j(!p);
         }, [p]),
         C = f
-            ? (0, l.jsx)(H, { onSelect: t })
+            ? (0, l.jsx)(W, { onSelect: t })
             : (0, l.jsxs)('div', {
                   className: D.nativePickerTypes,
                   children: [
@@ -468,7 +468,7 @@ function z(e) {
                       className: s()(D.nativePickerCaptureSection, p ? null : D.nativePickerCollapsed),
                       children: [
                           (0, l.jsxs)(m.Clickable, {
-                              onClick: j,
+                              onClick: v,
                               className: s()(D.nativePickerLabel),
                               children: [
                                   (0, l.jsx)(m.Text, {
@@ -505,17 +505,17 @@ function z(e) {
 }
 function K(e) {
     let { onSourceSelect: t, onCancel: n, pickerType: r } = e,
-        { lastPickerAction: s, lastPickerError: a } = (0, u.e7)([R.ZP], () => R.ZP.getPickerState()),
+        { lastPickerAction: s, lastPickerError: a } = (0, u.e7)([E.ZP], () => E.ZP.getPickerState()),
         [o, c] = i.useState(!1);
     return (
-        (0, R.kE)(),
+        (0, E.kE)(),
         i.useEffect(() => {
             '' === r ? (0, y.T)(r) : (0, y.t)();
         }, [r]),
         i.useEffect(() => {
-            o ? (s === R.Uc.Update ? t() : s === R.Uc.Cancel && ((0, y.t)(), n())) : (null == s || s === R.Uc.Present) && c(!0);
+            o ? (s === E.Uc.Update ? t() : s === E.Uc.Cancel && ((0, y.t)(), n())) : (null == s || s === E.Uc.Present) && c(!0);
         }, [o, s, t, n]),
-        s === R.Uc.Error
+        s === E.Uc.Error
             ? (0, l.jsx)(m.Text, {
                   className: D.errorMessage,
                   variant: 'text-md/normal',

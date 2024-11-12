@@ -21,7 +21,7 @@ var i = n(120356),
     S = n(388032),
     T = n(186903);
 t.Z = function (e) {
-    let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: G, shinyButtonClassName: B, showGradient: Z = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: i, onClick: y, size: A, className: N, isTrialCTA: C, buttonText: R, buttonTextClassName: O, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: x, premiumModalAnalyticsLocation: w, showIcon: M = !0, disableShine: P, applicationId: k, giftMessage: U, overrideDisabledButtonText: B, shinyButtonClassName: G, showGradient: Z = !1, ...F } = e,
         V = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
         j = (0, s.e7)([g.Z], () => g.Z.isFocused()),
         H = (0, s.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
@@ -148,8 +148,8 @@ t.Z = function (e) {
     let ee = null != H && E.ZP.isSwitchingPlansDisabled(H, Y),
         et = (null != H && H.status !== b.O0b.ACCOUNT_HOLD && !(0, p.Q0)(H.planId) && !$) || ee,
         en = et
-            ? null != G
-                ? G
+            ? null != B
+                ? B
                 : (function (e) {
                       let { ctaSubscriptionSkuId: t, currentPremiumType: n, isSwitchingDisabled: r, subscription: i } = e,
                           a = null,
@@ -184,7 +184,7 @@ t.Z = function (e) {
             innerClassName: T.premiumSubscribeButton,
             color: i === I.Si.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
             size: A,
-            className: B,
+            className: G,
             wrapperClassName: a()(
                 {
                     [T.tier2Gradient]: Z && i === I.Si.TIER_2,

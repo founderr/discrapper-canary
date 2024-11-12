@@ -6,8 +6,8 @@ var i = n(200651),
     o = n(215569),
     s = n(481060),
     c = n(140710),
-    u = n(833803),
-    d = n(566006),
+    d = n(833803),
+    u = n(566006),
     m = n(60174),
     h = n(453687),
     f = n(434624),
@@ -22,7 +22,7 @@ let C = (e, t) => (null == e && null == t) || e === t,
         let n = I(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class N extends r.PureComponent {
+class v extends r.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -35,19 +35,19 @@ class N extends r.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: N, forceAddReactions: v, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: r, isGuest: l, isPendingMember: C, isForumToolbar: I, channel: x, className: v, forceAddReactions: N, reactionClassName: T, useChatFontScaling: S, forceHideReactionCreates: A, remainingReactions: b, combinedReactions: j, visibleReactionsCount: Z } = this.props,
             { disableTransitionAppear: R } = this.state,
             L = S ? E : g,
             P = Z > 0;
-        if (!P && !v) return null;
+        if (!P && !N) return null;
         let { enabled: y } = c.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
-            { canShowImprovedReactionButton: O } = u.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
+            { canShowImprovedReactionButton: O } = d.Z.getCurrentConfig({ location: 'message_reactions' }, { autoTrackExposure: !0 }),
             M = y && P,
-            k = (v && !P) || M,
+            k = (N && !P) || M,
             D = O && !I;
         return (0, i.jsxs)(o.W, {
             component: 'div',
-            className: a()(L.reactions, N, { [L.largeReactions]: D }),
+            className: a()(L.reactions, v, { [L.largeReactions]: D }),
             transitionAppear: !R,
             role: 'group',
             transitionLeave: !1,
@@ -84,14 +84,14 @@ class N extends r.PureComponent {
                     !A &&
                     (0, i.jsx)(m.X, {
                         tabIndex: k || this.state.isHovered ? 0 : -1,
-                        type: d.O.NORMAL,
+                        type: u.O.NORMAL,
                         message: e,
                         channel: x,
                         useChatFontScaling: S,
                         isHovered: this.state.isHovered,
                         className: a()({
                             [L.forceShow]: k,
-                            [L.forceShowLook]: v || M
+                            [L.forceShowLook]: N || M
                         })
                     })
             ]
@@ -134,12 +134,12 @@ t.Z = (e) => {
                     t.burst_count > 0 &&
                         e.push({
                             ...t,
-                            type: d.O.BURST
+                            type: u.O.BURST
                         }),
                         t.count > 0 &&
                             e.push({
                                 ...t,
-                                type: d.O.NORMAL
+                                type: u.O.NORMAL
                             }),
                         null != t.me_vote && --o;
                 }),
@@ -150,7 +150,7 @@ t.Z = (e) => {
                 }
             );
         }, [l, n, t.reactions]);
-    return (0, i.jsx)(N, {
+    return (0, i.jsx)(v, {
         ...e,
         visibleReactionsCount: s,
         combinedReactions: a,

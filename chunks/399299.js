@@ -18,8 +18,8 @@ var l = n(200651),
     x = n(565138),
     g = n(977059),
     p = n(695346),
-    v = n(494620),
-    j = n(592125),
+    j = n(494620),
+    v = n(592125),
     C = n(650774),
     S = n(430824),
     _ = n(131951),
@@ -27,15 +27,15 @@ var l = n(200651),
     I = n(594174),
     T = n(449224),
     N = n(626135),
-    w = n(823379),
-    b = n(63063),
+    b = n(823379),
+    w = n(63063),
     y = n(358085),
-    R = n(653255),
-    E = n(989941),
+    E = n(653255),
+    R = n(989941),
     M = n(618407),
     k = n(586290),
-    A = n(233037),
-    P = n(810013),
+    P = n(233037),
+    A = n(810013),
     B = n(537135),
     L = n(641115),
     G = n(143135),
@@ -43,14 +43,14 @@ var l = n(200651),
     O = n(981631),
     U = n(526761),
     F = n(388032),
-    W = n(264954),
-    H = n(410894);
+    H = n(264954),
+    W = n(410894);
 function V(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: i, onChangeSource: r } = e,
-        s = (0, a.e7)([h.ZP, T.Z], () => ((0, y.isWindows)() ? (0, E.Z)(h.ZP, T.Z) : null)),
+        s = (0, a.e7)([h.ZP, T.Z], () => ((0, y.isWindows)() ? (0, R.Z)(h.ZP, T.Z) : null)),
         c = (0, a.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         u = (0, a.e7)([h.ZP], () => h.ZP.getRunningGames()),
-        f = (0, a.Wu)([d.Z], () => u.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(w.lm), [u]),
+        f = (0, a.Wu)([d.Z], () => u.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(b.lm), [u]),
         x = null;
     if ((null != t ? (x = t.name) : null != s && (x = s.name), null == x)) return null;
     let g = (0, G.Z)(s, t, u),
@@ -60,27 +60,27 @@ function V(e) {
                   return t === (null == g ? void 0 : g.id);
               })
             : c,
-        v = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
+        j = null != t && t.id.startsWith('screen') ? o.ScreenIcon : o.BrowserIcon;
     return (0, l.jsx)(o.FormItem, {
         title: F.intl.string(F.t.TC7Ev7),
-        className: H.modalContent,
-        titleClassName: H.formItemTitleVerySlim,
+        className: W.modalContent,
+        titleClassName: W.formItemTitleVerySlim,
         children: (0, l.jsxs)(B.Z, {
             children: [
                 null != p
                     ? (0, l.jsx)(m.Z, {
                           game: p,
                           size: m.Z.Sizes.XSMALL,
-                          className: W.selectedIcon
+                          className: H.selectedIcon
                       })
-                    : (0, l.jsx)(v, { className: W.selectedIcon }),
+                    : (0, l.jsx)(j, { className: H.selectedIcon }),
                 (0, l.jsx)('span', {
-                    className: W.ellipsisText,
+                    className: H.ellipsisText,
                     children: x
                 }),
                 n
                     ? (0, l.jsx)(o.Button, {
-                          className: W.changeButton,
+                          className: H.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: r,
@@ -98,21 +98,21 @@ function z(e) {
         ? (t(), null)
         : (0, l.jsx)(o.FormItem, {
               title: F.intl.string(F.t.WC3u3t),
-              className: H.modalContent,
-              titleClassName: H.formItemTitle,
+              className: W.modalContent,
+              titleClassName: W.formItemTitle,
               children: (0, l.jsxs)(B.Z, {
                   children: [
                       (0, l.jsx)(x.Z, {
                           guild: i,
                           size: x.Z.Sizes.SMALLER,
-                          className: W.selectedIcon
+                          className: H.selectedIcon
                       }),
                       (0, l.jsx)('span', {
-                          className: W.ellipsisText,
+                          className: H.ellipsisText,
                           children: i.toString()
                       }),
                       (0, l.jsx)(o.Button, {
-                          className: W.changeButton,
+                          className: H.changeButton,
                           color: o.Button.Colors.PRIMARY,
                           size: o.Button.Sizes.SMALL,
                           onClick: t,
@@ -126,14 +126,14 @@ function K(e) {
     let { text: t } = e;
     return (0, l.jsxs)(f.Z, {
         align: f.Z.Align.CENTER,
-        className: W.warning,
+        className: H.warning,
         children: [
             (0, l.jsx)(o.CircleWarningIcon, {
                 size: 'custom',
                 width: 20,
                 height: 20,
                 color: 'currentColor',
-                className: W.warningIcon
+                className: H.warningIcon
             }),
             (0, l.jsx)(o.Text, {
                 color: 'none',
@@ -155,7 +155,7 @@ function Y(e) {
         }, []);
     return n >= 2 && n <= D.tB
         ? (0, l.jsx)(o.FormItem, {
-              className: s()(H.modalContent, W.checkboxRow),
+              className: s()(W.modalContent, H.checkboxRow),
               children: (0, l.jsx)(o.Checkbox, {
                   value: !!r,
                   type: o.Checkbox.Types.INVERTED,
@@ -177,7 +177,7 @@ function X(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: s()(H.modalContent, W.checkboxRow),
+        className: s()(W.modalContent, H.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
@@ -198,7 +198,7 @@ function J(e) {
             [n]
         );
     return (0, l.jsx)(o.FormItem, {
-        className: s()(H.modalContent, W.checkboxRow),
+        className: s()(W.modalContent, H.checkboxRow),
         children: (0, l.jsx)(o.Checkbox, {
             value: t,
             type: o.Checkbox.Types.INVERTED,
@@ -211,10 +211,10 @@ function J(e) {
     });
 }
 function q(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: w, onChangeSelectedChannelId: y, onChangeSource: E, onChangeAudioDevice: B, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: H } = e,
-        q = (0, a.e7)([Z.Z, j.Z], () => j.Z.getChannel(Z.Z.getVoiceChannelId())),
-        Q = (0, a.e7)([R.Z], () => R.Z.GPUDriversOutdated),
-        $ = (0, a.e7)([R.Z], () => R.Z.problematicGPUDriver),
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: r, selectedPreset: s, selectedResolution: o, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: h, selectSource: m, selectGuild: x, sound: p, previewDisabled: C, onClose: S, onChangeSelectedFPS: T, onChangeSelectedResolution: N, onChangeSelectedPreset: b, onChangeSelectedChannelId: y, onChangeSource: R, onChangeAudioDevice: B, onChangeGuild: G, onChangeSound: D, onChangePreviewDisabled: W } = e,
+        q = (0, a.e7)([Z.Z, v.Z], () => v.Z.getChannel(Z.Z.getVoiceChannelId())),
+        Q = (0, a.e7)([E.Z], () => E.Z.GPUDriversOutdated),
+        $ = (0, a.e7)([E.Z], () => E.Z.problematicGPUDriver),
         ee = (0, a.e7)([I.default], () => I.default.getCurrentUser()),
         et = (0, M.Z)();
     null != t && t.id.startsWith('screen') && !_.Z.supportsScreenSoundshare() && (et = F.intl.string(F.t['1b0Gm5']));
@@ -228,7 +228,7 @@ function q(e) {
             en
                 ? (0, l.jsx)(k.Z, {
                       selectedSource: t,
-                      onChangeVideoDeviceSource: E,
+                      onChangeVideoDeviceSource: R,
                       onChangeAudioDevice: B
                   })
                 : (0, l.jsxs)('div', {
@@ -236,7 +236,7 @@ function q(e) {
                           (0, l.jsx)(V, {
                               selectSource: m,
                               sourceChanged: d,
-                              onChangeSource: E,
+                              onChangeSource: R,
                               selectedSource: t
                           }),
                           null != et ? (0, l.jsx)(K, { text: et }) : null,
@@ -256,19 +256,19 @@ function q(e) {
                   })
                 : null,
             null != q
-                ? (0, l.jsx)(P.Z, { channel: q })
-                : (0, l.jsx)(A.Z, {
+                ? (0, l.jsx)(A.Z, { channel: q })
+                : (0, l.jsx)(P.Z, {
                       guildId: f,
                       selectedChannelId: r,
                       onChangeSelectedChannelId: y
                   }),
             null != f && el && ei ? (0, l.jsx)(Y, { guildId: f }) : null,
             Q ? (0, l.jsx)(K, { text: F.intl.string(F.t.q65tS0) }) : null,
-            $ ? (0, l.jsx)(K, { text: F.intl.format(F.t.RrLvub, { helpCenterLink: b.Z.getArticleURL(O.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            $ ? (0, l.jsx)(K, { text: F.intl.format(F.t.RrLvub, { helpCenterLink: w.Z.getArticleURL(O.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             er &&
-                (0, l.jsx)(v.Z, {
-                    look: v.z.WARNING,
-                    className: W.hardwareWarning,
+                (0, l.jsx)(j.Z, {
+                    look: j.z.WARNING,
+                    className: H.hardwareWarning,
                     children: F.intl.format(F.t.zCLXws, {
                         onClick: () => {
                             S(), c.Z.open(O.oAB.VOICE, null, { scrollPosition: U.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION });
@@ -283,13 +283,13 @@ function q(e) {
                 onClose: S,
                 onFPSChange: T,
                 onResolutionChange: N,
-                onPresetChange: w,
+                onPresetChange: b,
                 captureDeviceSelected: en
             }),
             es &&
                 (0, l.jsx)(J, {
                     enabled: C,
-                    onChange: H
+                    onChange: W
                 })
         ]
     });

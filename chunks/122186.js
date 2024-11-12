@@ -21,8 +21,8 @@ var l = n(200651),
     x = n(48125),
     g = n(639119),
     p = n(197115),
-    v = n(74538),
-    j = n(981631),
+    j = n(74538),
+    v = n(981631),
     C = n(474936),
     S = n(388032),
     _ = n(742769);
@@ -40,7 +40,7 @@ function Z(e) {
         d = i.useCallback(() => {
             if (o) {
                 var e;
-                return null !== (e = (0, v.fr)(r)) && void 0 !== e ? e : S.intl.string(S.t.Y2WKTk);
+                return null !== (e = (0, j.fr)(r)) && void 0 !== e ? e : S.intl.string(S.t.Y2WKTk);
             }
             return S.intl.string(S.t.Y2WKTk);
         }, [o, r]);
@@ -112,9 +112,9 @@ function T() {
 function N(e) {
     let { message: t, onClose: n, openStreamUpsellModal: i, glow: r = !1 } = e,
         o = {
-            section: j.jXE.STREAM_SETTINGS,
-            object: j.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: j.Qqv.BUY
+            section: v.jXE.STREAM_SETTINGS,
+            object: v.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: v.Qqv.BUY
         },
         d = (0, f.So)(a.q.STREAM_HIGH_QUALITY),
         m = h.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;

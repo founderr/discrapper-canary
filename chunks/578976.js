@@ -1,12 +1,12 @@
 n.d(t, {
     s: function () {
-        return r;
+        return a;
     }
 });
 var i = n(46973),
     l = n(37113);
-let r = (e, t, n) => {
-    let r = {
+let a = (e, t, n) => {
+    let a = {
         qualityOptions: {
             preset: l.tI.PRESET_CUSTOM,
             resolution: e,
@@ -17,15 +17,15 @@ let r = (e, t, n) => {
     return (
         null != n &&
             (null != n.desktopSource &&
-                (r.desktopSettings = {
+                (a.desktopSettings = {
                     sourceId: n.desktopSource.id,
                     sound: !0
                 }),
             null != n.cameraSource &&
-                (r.cameraSettings = {
+                (a.cameraSettings = {
                     videoDeviceGuid: n.cameraSource.videoDeviceGuid,
                     audioDeviceGuid: n.cameraSource.audioDeviceGuid
                 })),
-        r
+        a
     );
 };

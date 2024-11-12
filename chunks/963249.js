@@ -19,15 +19,15 @@ var i = n(97613),
     h = n(981631),
     m = n(474936);
 function g(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: g, onComplete: E, onSubscriptionConfirmation: v, analyticsLocations: I, analyticsObject: b, analyticsLocation: S, analyticsSourceLocation: T, isGift: y = !1, giftMessage: A, giftStyle: N, giftingOrigin: C, subscriptionTier: R, trialId: O, postSuccessGuild: D, openInvoiceId: L, applicationId: x, referralTrialOfferId: w, giftRecipient: M, returnRef: P, subscription: k, skipConfirm: U, repeatPurchase: G } = null != e ? e : {},
-        B = !1,
+    let { initialPlanId: t, followupSKUInfo: i, onClose: g, onComplete: E, onSubscriptionConfirmation: v, analyticsLocations: I, analyticsObject: b, analyticsLocation: S, analyticsSourceLocation: T, isGift: y = !1, giftMessage: A, giftStyle: N, giftingOrigin: C, subscriptionTier: R, trialId: O, postSuccessGuild: D, openInvoiceId: L, applicationId: x, referralTrialOfferId: w, giftRecipient: M, returnRef: P, subscription: k, skipConfirm: U, repeatPurchase: B } = null != e ? e : {},
+        G = !1,
         Z = (0, s.Z)(),
         F = d.default.getCurrentUser(),
         V = (0, p.M5)(F, m.p9.TIER_2),
         j = a()('payment-modal');
     return (0, o.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('8016'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('17938'), n.e('95900'), n.e('32776'), n.e('54433'), n.e('24488')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('8016'), n.e('17938'), n.e('60691'), n.e('54433'), n.e('12524')]).then(n.bind(n, 7305));
             return (n) => {
                 let { onClose: a, ...s } = n;
                 return (0, r.jsx)(e, {
@@ -46,7 +46,7 @@ function g(e) {
                         a(), null == g || g(e), e && (null == v || v(), !y && null != t && t === m.Si.TIER_2 && !V && _.S.dispatch(h.CkL.PREMIUM_SUBSCRIPTION_CREATED));
                     },
                     onComplete: () => {
-                        (B = !0), null == E || E(), !y && (0, c.H)(!0);
+                        (G = !0), null == E || E(), !y && (0, c.H)(!0);
                     },
                     onSubscriptionConfirmation: v,
                     analyticsLocations: I,
@@ -62,14 +62,14 @@ function g(e) {
                     returnRef: P,
                     subscription: k,
                     skipConfirm: !!U,
-                    repeatPurchase: G
+                    repeatPurchase: B
                 });
             };
         },
         {
             modalKey: j,
             onCloseCallback: () => {
-                !B &&
+                !G &&
                     f.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: Z,
                         payment_type: h.Zuq[h.GZQ.SUBSCRIPTION],
@@ -83,8 +83,8 @@ function g(e) {
                     }),
                     (0, l.fw)(),
                     (0, u.p)(),
-                    null == g || g(B),
-                    B && (null == v || v());
+                    null == g || g(G),
+                    G && (null == v || v());
             }
         }
     );

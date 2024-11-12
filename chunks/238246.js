@@ -22,13 +22,13 @@ var i,
     Z = n(597952),
     C = n(628123),
     y = n(686546),
-    b = n(80006),
-    T = n(151851),
+    T = n(80006),
+    b = n(151851),
     A = n(587061),
     N = n(392358),
     w = n(314910),
-    j = n(892254),
-    P = n(706454),
+    P = n(892254),
+    j = n(706454),
     R = n(210887),
     M = n(740492),
     O = n(451478),
@@ -38,8 +38,8 @@ var i,
     U = n(928518),
     V = n(981631),
     F = n(388032),
-    W = n(661795);
-function B(e, t, n) {
+    G = n(661795);
+function W(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ function B(e, t, n) {
         e
     );
 }
-class G extends (i = a.Component) {
+class B extends (i = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
@@ -123,7 +123,7 @@ class G extends (i = a.Component) {
             });
         return (0, l.jsx)(u.VK, {
             children: (0, l.jsx)(
-                j.Z,
+                P.Z,
                 {
                     children: (0, l.jsx)(f.ThemeProvider, {
                         theme: e,
@@ -145,10 +145,10 @@ class G extends (i = a.Component) {
                                                         children: (0, l.jsxs)(w.yP, {
                                                             children: [
                                                                 (0, l.jsxs)('div', {
-                                                                    className: W.popout,
+                                                                    className: G.popout,
                                                                     children: [
                                                                         m && null != x
-                                                                            ? (0, l.jsx)(T.Z, {
+                                                                            ? (0, l.jsx)(b.Z, {
                                                                                   focused: n,
                                                                                   type: x,
                                                                                   windowKey: r,
@@ -156,7 +156,7 @@ class G extends (i = a.Component) {
                                                                               })
                                                                             : null,
                                                                         (0, l.jsx)('div', {
-                                                                            className: s()(W.content, I),
+                                                                            className: s()(G.content, I),
                                                                             children: a
                                                                         })
                                                                     ]
@@ -181,9 +181,9 @@ class G extends (i = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            B(this, 'rootRef', a.createRef()),
-            B(this, '_cleanupWindowActionCreators', void 0),
-            B(this, 'warnPopoutClose', (e) => {
+            W(this, 'rootRef', a.createRef()),
+            W(this, '_cleanupWindowActionCreators', void 0),
+            W(this, 'warnPopoutClose', (e) => {
                 if (this.props.connectedToEmbeddedActivity && !M.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = F.intl.string(F.t['bST/Y2'])), !!L.isPlatformEmbedded))
                         (0, I.Z)(() => {
@@ -191,16 +191,16 @@ class G extends (i = a.Component) {
                         });
                 }
             }),
-            B(this, 'handleBlur', () => {
+            W(this, 'handleBlur', () => {
                 var e, t;
                 null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t);
             }),
-            B(this, 'handleContextMenu', (e) => {
+            W(this, 'handleContextMenu', (e) => {
                 e.preventDefault();
             });
     }
 }
-B(G, 'defaultProps', { withTitleBar: !0 });
+W(B, 'defaultProps', { withTitleBar: !0 });
 let z = a.forwardRef(function (e, t) {
     let { guestWindow: n, focused: i } = (0, m.cj)([U.Z], () => ({
         guestWindow: U.Z.getWindow(e.windowKey),
@@ -208,12 +208,12 @@ let z = a.forwardRef(function (e, t) {
     }));
     c()(null != n, 'Missing guestWindow reference');
     let a = (0, m.e7)([O.Z], () => O.Z.isFocused()),
-        { locale: r, theme: s } = (0, m.cj)([R.Z, P.default], () => ({
-            locale: P.default.locale,
+        { locale: r, theme: s } = (0, m.cj)([R.Z, j.default], () => ({
+            locale: j.default.locale,
             theme: R.Z.theme
         })),
         o = (0, m.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
-        { accessibilitySettings: u, appWrapperClassName: d } = (0, b.I)(),
+        { accessibilitySettings: u, appWrapperClassName: d } = (0, T.I)(),
         p = (0, m.e7)([S.ZP], () => null != e.channelId && null !== S.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, A.Z)(n, !1);
     let h = (0, N.Z)(n, i),
@@ -224,7 +224,7 @@ let z = a.forwardRef(function (e, t) {
         : (0, l.jsx)(f.DnDProvider, {
               children: (0, l.jsx)(x.Gt, {
                   value: v,
-                  children: (0, l.jsx)(G, {
+                  children: (0, l.jsx)(B, {
                       ref: t,
                       ...e,
                       guestWindow: n,

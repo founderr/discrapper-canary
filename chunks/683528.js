@@ -5,8 +5,8 @@ t.d(n, {
 });
 var r = t(200651),
     i = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(481060),
     s = t(607070),
     u = t(124347),
@@ -41,7 +41,7 @@ let p = i.memo(function (e) {
           });
 });
 function g(e) {
-    let { items: n, currentIndex: t, onGalleryItemClick: l } = e,
+    let { items: n, currentIndex: t, onGalleryItemClick: a } = e,
         u = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
@@ -67,12 +67,12 @@ function g(e) {
                         o.Clickable,
                         {
                             id: f(i),
-                            className: a()(h.galleryItem, { [h.selected]: s }),
+                            className: l()(h.galleryItem, { [h.selected]: s }),
                             'aria-label': m.intl.formatToPlainString(u, {
                                 pageNumber: i + 1,
                                 totalPages: n.length
                             }),
-                            onClick: () => l(i),
+                            onClick: () => a(i),
                             children: (0, r.jsx)(p, { item: e })
                         },
                         i

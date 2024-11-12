@@ -1,4 +1,4 @@
-n.exports = {
+c.exports = {
     content: 'content_dec63a',
     previewCard: 'previewCard_dec63a',
     inline: 'inline_dec63a',

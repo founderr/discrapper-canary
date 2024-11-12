@@ -15,15 +15,15 @@ var i = n(200651),
 function d(e) {
     let { transitionTo: t, token: n, width: d } = e,
         [h, g] = r.useState(u.n.START),
-        [f, m] = r.useState(null),
-        [p, _] = r.useState(''),
+        [m, p] = r.useState(null),
+        [f, _] = r.useState(''),
         x = { impression_group: s.ImpressionGroups.ACCOUNT_REVERT_FLOW };
     return (0, i.jsx)('div', {
         style: { margin: '8px' },
         children: (0, i.jsxs)(a.Slides, {
             activeSlide: h,
             width: d,
-            onSlideReady: m,
+            onSlideReady: p,
             children: [
                 (0, i.jsx)(a.Slide, {
                     id: u.n.START,
@@ -42,7 +42,7 @@ function d(e) {
                         setOriginalEmail: _,
                         setSlide: g,
                         transitionTo: t,
-                        ready: f === u.n.PASSWORD,
+                        ready: m === u.n.PASSWORD,
                         token: n
                     })
                 }),
@@ -50,7 +50,7 @@ function d(e) {
                     id: u.n.SUCCESS,
                     impressionProperties: x,
                     impressionName: s.ImpressionNames.ACCOUNT_REVERT_SUCCESS,
-                    children: (0, i.jsx)(c.Z, { email: p })
+                    children: (0, i.jsx)(c.Z, { email: f })
                 })
             ]
         })

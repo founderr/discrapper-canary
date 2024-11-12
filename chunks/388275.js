@@ -22,9 +22,9 @@ var l = n(200651),
     E = n(463061);
 function I(e) {
     let { message: t, forwardOptions: n, sendLabel: I, canSend: S, selectedDestinations: A, isSending: C, onSend: v, showPreview: b } = e,
-        L = (0, d.Z)(),
-        N = (0, f.nm)(A),
-        x = (0, f.y)(A),
+        x = (0, d.Z)(),
+        L = (0, f.nm)(A),
+        N = (0, f.y)(A),
         T = (0, _.Ad)(),
         P = (0, a.e7)([h.Z], () => h.Z.getDraft(t.channel_id, h.d.ForwardContextMessage)),
         [y, Z] = i.useState(() => (0, c.eK)(P)),
@@ -48,7 +48,7 @@ function I(e) {
         }, [t.channel_id, v, w]),
         G = i.useCallback(
             () =>
-                !S || w.length > L
+                !S || w.length > x
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
@@ -58,7 +58,7 @@ function I(e) {
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [F, w, L, S]
+            [F, w, x, S]
         );
     return (0, l.jsxs)(r.ModalFooter, {
         className: E.footerWithMessage,
@@ -69,7 +69,7 @@ function I(e) {
                     children: (0, l.jsx)(m.O, {
                         message: t,
                         forwardOptions: n,
-                        channel: N
+                        channel: L
                     })
                 }),
             (0, l.jsxs)('div', {
@@ -82,7 +82,7 @@ function I(e) {
                                 innerClassName: E.messageInput,
                                 onChange: k,
                                 placeholder: p.intl.string(p.t.ZroO3N),
-                                channel: N,
+                                channel: L,
                                 textValue: w,
                                 richValue: R,
                                 type: o.I.FORWARD_MESSAGE_INPUT,
@@ -98,20 +98,20 @@ function I(e) {
                             (0, l.jsx)(r.Button, {
                                 className: E.sendWithMessage,
                                 submitting: C,
-                                disabled: !S || w.length > L,
+                                disabled: !S || w.length > x,
                                 onClick: F,
                                 children: I
                             })
                         ]
                     }),
-                    x.length > 0 &&
+                    N.length > 0 &&
                         w.length > 0 &&
                         (0, l.jsx)(r.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-warning',
                             children: p.intl.format(p.t.xJFpio, {
-                                count: x.length,
-                                channelNames: x.join(', ')
+                                count: N.length,
+                                channelNames: N.join(', ')
                             })
                         })
                 ]

@@ -29,8 +29,8 @@ var i = t(200651),
 function k(e) {
     var n, t;
     let { backButtonEligible: o, prevStep: k, handleStepChange: y, trialFooterMessageOverride: T, reviewWarningMessage: P, planGroup: B, openInvoiceId: N, analyticsData: O, analyticsLocation: E, handleClose: I } = e,
-        { activeSubscription: M, application: A, setUpdatedSubscription: w, contextMetadata: Z, currencies: H, paymentSources: R, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
-    a()(null != W, 'Expected plan to be selected'), a()(null != A, 'Expected application');
+        { activeSubscription: A, application: M, setUpdatedSubscription: w, contextMetadata: Z, currencies: R, paymentSources: H, priceOptions: L, purchaseError: F, purchaseTokenAuthState: D, selectedPlan: W, selectedSku: G, setCurrency: K, setPaymentSourceId: V, setPurchaseState: z, setPurchaseError: Y, purchaseState: U, subscriptionMetadataRequest: Q, setHasAcceptedTerms: q } = (0, m.usePaymentContext)();
+    a()(null != W, 'Expected plan to be selected'), a()(null != M, 'Expected application');
     let X = r.useRef(null),
         [J, $] = (0, c.Z)(!1, 500),
         ee = null == Q ? void 0 : Q.guild_id,
@@ -67,7 +67,7 @@ function k(e) {
                                       (0, i.jsx)(s.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'interactive-normal',
-                                          children: S.intl.format(S.t.y4n0GR, { applicationName: A.name })
+                                          children: S.intl.format(S.t.y4n0GR, { applicationName: M.name })
                                       })
                                   ]
                               }),
@@ -95,13 +95,13 @@ function k(e) {
                                       })
                                   ]
                               }),
-                          null == M
+                          null == A
                               ? (0, i.jsx)(d.Z, {
                                     selectedPlanId: W.id,
-                                    paymentSources: R,
+                                    paymentSources: H,
                                     onPaymentSourceChange: (e) => V(null != e ? e.id : null),
                                     priceOptions: L,
-                                    currencies: H,
+                                    currencies: R,
                                     onCurrencyChange: (e) => K(e),
                                     handlePaymentSourceAdd: () => y(b.h8.ADD_PAYMENT_STEPS),
                                     setHasAcceptedTerms: q,
@@ -115,8 +115,8 @@ function k(e) {
                                     handleClose: I
                                 })
                               : (0, i.jsx)(u.Z, {
-                                    premiumSubscription: M,
-                                    paymentSources: R,
+                                    premiumSubscription: A,
+                                    paymentSources: H,
                                     priceOptions: L,
                                     onPaymentSourceChange: (e) => V(null != e ? e.id : null),
                                     onPaymentSourceAdd: () => {
@@ -130,7 +130,7 @@ function k(e) {
                                         ei(e);
                                     },
                                     planGroup: B,
-                                    currencies: H,
+                                    currencies: R,
                                     onCurrencyChange: (e) => K(e),
                                     hasOpenInvoice: null != N,
                                     purchaseState: U,
@@ -140,7 +140,7 @@ function k(e) {
                   }),
                   (0, i.jsx)(v.O3, {
                       children: (0, i.jsx)(x.Z, {
-                          premiumSubscription: null != M ? M : null,
+                          premiumSubscription: null != A ? A : null,
                           setPurchaseState: z,
                           onBack: () => null != k && y(k),
                           onNext: eo,

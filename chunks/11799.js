@@ -11,19 +11,19 @@ var i = n(192379),
     o = n(455199),
     s = n(833592),
     c = n(140155),
-    u = n(774807),
-    d = n(490897);
+    d = n(774807),
+    u = n(490897);
 let m = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: m, withMentions: h = !1, initialPageSize: f } = e,
-            p = (0, r.e7)([u.Z], () => u.Z.shouldReload()),
+            p = (0, r.e7)([d.Z], () => d.Z.shouldReload()),
             _ = i.useRef(!1),
             [g, E] = i.useState(!1),
             {
                 initialized: C,
                 loading: I,
                 items: x,
-                hasMore: N,
-                cursor: v,
+                hasMore: v,
+                cursor: N,
                 errored: T
             } = (0, r.cj)([c.Z], () => ({
                 initialized: c.Z.initialized,
@@ -39,7 +39,7 @@ let m = (e) => {
             }));
         i.useEffect(() => ((0, s.Vk)(!0), () => (0, s.Vk)(!1)), []),
             i.useEffect(() => {
-                C && t && (0, l.FT)(d.W.NOTIFICATION_CENTER);
+                C && t && (0, l.FT)(u.W.NOTIFICATION_CENTER);
             }, [t, C]);
         let b = (0, a.Z)();
         i.useEffect(
@@ -62,14 +62,14 @@ let m = (e) => {
             async (e) => {
                 !_.current &&
                     C &&
-                    N &&
-                    null != v &&
+                    v &&
+                    null != N &&
                     (e || !T) &&
                     ((_.current = !0),
                     E(!0),
                     await (0, s.jk)(
                         {
-                            after: v,
+                            after: N,
                             with_mentions: h,
                             roles_filter: S,
                             everyone_filter: A,
@@ -81,13 +81,13 @@ let m = (e) => {
                     ),
                     E(!1));
             },
-            [C, N, v, T, h, S, A]
+            [C, v, N, T, h, S, A]
         );
         return {
             initialized: C,
             loading: I,
             items: x,
-            hasMore: N,
+            hasMore: v,
             loadMore: j,
             loadingMore: g,
             setReadNotifItemToAcked: (e) => {

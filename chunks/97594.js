@@ -7,8 +7,8 @@ t.r(n),
     t(47120);
 var r = t(200651),
     i = t(192379),
-    l = t(120356),
-    a = t.n(l),
+    a = t(120356),
+    l = t.n(a),
     o = t(481060),
     s = t(585483),
     u = t(212459),
@@ -19,8 +19,8 @@ var r = t(200651),
     f = t(388032),
     p = t(619377);
 function g(e) {
-    let { onClose: n, items: t, startingIndex: l, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...S } = e,
-        [v, E] = i.useState(null != l ? l : 0),
+    let { onClose: n, items: t, startingIndex: a, onIndexChange: g, shouldRedactExplicitContent: _, shouldHideMediaOptions: x = !1, className: C, ...S } = e,
+        [v, E] = i.useState(null != a ? a : 0),
         [L, y] = i.useState(!1);
     i.useEffect(() => {
         if (null != n)
@@ -50,7 +50,7 @@ function g(e) {
         children: (e) =>
             (0, r.jsx)(o.ModalRoot, {
                 hideShadow: !0,
-                className: a()(p.carouselModal, e),
+                className: l()(p.carouselModal, e),
                 ...S,
                 size: o.ModalSize.DYNAMIC,
                 fullscreenOnMobile: !1,

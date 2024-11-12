@@ -25,18 +25,18 @@ function _(e) {
         I = (0, h.ZP)(t.id),
         E = (0, s.ZP)(),
         { analyticsLocations: b } = (0, c.ZP)(o.Z.BLOCKED_PROFILE_PANEL),
-        Z = (0, d.ZB)({
+        N = (0, d.ZB)({
             layout: 'BLOCKED_PROFILE_PANEL',
             userId: t.id,
             channelId: n.id
         }),
-        N = l.useRef(null);
+        Z = l.useRef(null);
     return (0, i.jsx)(c.Gt, {
         value: b,
         children: (0, i.jsx)(d.Mt, {
-            value: Z,
+            value: N,
             children: (0, i.jsx)(m.Z, {
-                ref: N,
+                ref: Z,
                 user: t,
                 displayProfile: I,
                 profileType: g.y0.PANEL,
@@ -82,7 +82,7 @@ function _(e) {
                                                 (0, u.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: b,
-                                                    ...Z
+                                                    ...N
                                                 });
                                         }
                                     })

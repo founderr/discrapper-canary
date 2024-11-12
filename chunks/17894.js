@@ -1,48 +1,48 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return h;
+        return f;
     }
 });
-var i = t(525654),
-    r = t.n(i),
-    o = t(39612),
-    a = t(271579),
-    l = t(756647),
-    s = t(232567),
-    c = t(703656),
-    d = t(314897),
-    u = t(896797),
-    p = t(626135),
-    f = t(954824),
-    m = t(981631);
-async function b(e) {
-    var n, t;
-    let i = null === (n = r().os) || void 0 === n ? void 0 : n.family;
-    if ('Android' === i || 'iOS' === i) {
-        let n = null !== (t = d.default.getFingerprint()) && void 0 !== t ? t : d.default.getId(),
-            i = (0, a.WS)();
-        if (null == n && d.default.isAuthenticated())
+var r = n(525654),
+    i = n.n(r),
+    s = n(39612),
+    l = n(271579),
+    a = n(756647),
+    o = n(232567),
+    c = n(703656),
+    d = n(314897),
+    u = n(896797),
+    _ = n(626135),
+    E = n(954824),
+    p = n(981631);
+async function h(e) {
+    var t, n;
+    let r = null === (t = i().os) || void 0 === t ? void 0 : t.family;
+    if ('Android' === r || 'iOS' === r) {
+        let t = null !== (n = d.default.getFingerprint()) && void 0 !== n ? n : d.default.getId(),
+            r = (0, l.WS)();
+        if (null == t && d.default.isAuthenticated())
             try {
-                await (0, s.k)(), (n = d.default.getId());
+                await (0, o.k)(), (t = d.default.getId());
             } catch {}
-        return (0, a.ZP)((0, o.Gk)(), {
+        return (0, l.ZP)((0, s.Gk)(), {
             utmSource: e,
-            fingerprint: n,
-            attemptId: i
+            fingerprint: t,
+            attemptId: r
         });
     }
     return 'discord://';
 }
-async function h(e) {
-    let n = await b(e),
-        t = (0, a.zS)(n);
-    null != t &&
-        p.default.track(m.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, l.K)(t.fingerprint),
-            attempt_id: t.attemptId,
-            source: t.utmSource
+async function f(e) {
+    let t = await h(e),
+        n = (0, l.zS)(t);
+    null != n &&
+        _.default.track(p.rMx.DEEP_LINK_CLICKED, {
+            fingerprint: (0, a.K)(n.fingerprint),
+            attempt_id: n.attemptId,
+            source: n.utmSource
         }),
-        f.Z.launch(n, (e) => {
+        E.Z.launch(t, (e) => {
             !e && (0, c.dL)(u.Z.fallbackRoute);
         });
 }

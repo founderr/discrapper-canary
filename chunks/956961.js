@@ -11,8 +11,8 @@ var i = n(200651),
     o = n(913527),
     s = n.n(o),
     c = n(442837),
-    u = n(524437),
-    d = n(481060),
+    d = n(524437),
+    u = n(481060),
     m = n(239091),
     h = n(294218),
     f = n(703656),
@@ -23,8 +23,8 @@ var i = n(200651),
     C = n(655354),
     I = n(324081),
     x = n(791914),
-    N = n(981631),
-    v = n(388032),
+    v = n(981631),
+    N = n(388032),
     T = n(816396),
     S = n(42967);
 let A = {
@@ -43,28 +43,28 @@ function b(e) {
         className: T.container,
         children: [
             (0, i.jsx)(x.Z, {
-                tab: u.X.TODOS,
+                tab: d.X.TODOS,
                 setTab: t,
                 closePopout: n
             }),
             (0, i.jsxs)('div', {
                 className: T.headerText,
                 children: [
-                    (0, i.jsx)(d.Heading, {
+                    (0, i.jsx)(u.Heading, {
                         variant: 'heading-lg/bold',
-                        children: a ? v.intl.string(v.t['0KeMAw']) : v.intl.string(v.t.j5ZHEB)
+                        children: a ? N.intl.string(N.t['0KeMAw']) : N.intl.string(N.t.j5ZHEB)
                     }),
-                    (0, i.jsx)(d.Anchor, {
+                    (0, i.jsx)(u.Anchor, {
                         onClick: () => o(!a),
-                        children: (0, i.jsx)(d.Text, {
+                        children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: a ? v.intl.formatToPlainString(v.t['/VlKx8'], { count: s.length }) : v.intl.formatToPlainString(v.t.QEO4Ii, { count: l.length })
+                            children: a ? N.intl.formatToPlainString(N.t['/VlKx8'], { count: s.length }) : N.intl.formatToPlainString(N.t.QEO4Ii, { count: l.length })
                         })
                     })
                 ]
             }),
-            0 === m.length ? (0, i.jsx)(Z, {}) : (0, i.jsx)(d.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
+            0 === m.length ? (0, i.jsx)(Z, {}) : (0, i.jsx)(u.AdvancedScrollerThin, { children: m.map((e) => (0, i.jsx)(j, { messageReminder: e }, e.saveData.messageId)) })
         ]
     });
 }
@@ -73,44 +73,44 @@ function j(e) {
         { messageReminder: r } = e,
         l = r.saveData,
         o = r.message,
-        u = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
+        d = (0, c.e7)([E.Z], () => E.Z.getChannel(l.channelId)),
         _ = () => {
-            (0, f.uL)(N.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
+            (0, f.uL)(v.Z5c.CHANNEL(null == d ? void 0 : d.getGuildId(), l.channelId, l.messageId));
         },
         x = null;
     return (null != l.dueAt &&
         (l.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (x = v.intl.formatToPlainString(v.t.H4gnX1, {
+              (x = N.intl.formatToPlainString(N.t.H4gnX1, {
                   duration: s()
                       .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (x = v.intl.formatToPlainString(v.t['Uq7Y+/'], {
+              (x = N.intl.formatToPlainString(N.t['Uq7Y+/'], {
                   duration: s()
                       .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
-    null == o || null == u)
+    null == o || null == d)
         ? null
         : (0, i.jsxs)('div', {
               className: S.container,
               children: [
                   (0, i.jsx)(I.Z, {
-                      channel: u,
+                      channel: d,
                       gotoChannel: _,
                       children: (0, i.jsxs)('div', {
                           className: T.reminderActions,
                           children: [
                               null != r.saveData.notes && r.saveData.notes.length > 0
-                                  ? (0, i.jsxs)(d.Text, {
+                                  ? (0, i.jsxs)(u.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
                                         className: T.notes,
                                         selectable: !0,
                                         children: [
-                                            (0, i.jsx)(d.FileIcon, {
+                                            (0, i.jsx)(u.FileIcon, {
                                                 size: 'xxs',
                                                 color: 'currentColor'
                                             }),
@@ -119,15 +119,15 @@ function j(e) {
                                     })
                                   : null,
                               null != x
-                                  ? (0, i.jsx)(d.Text, {
+                                  ? (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
                                         children: x
                                     })
                                   : null,
-                              (0, i.jsx)(d.TooltipContainer, {
-                                  text: v.intl.string(v.t.GtBCn5),
-                                  children: (0, i.jsx)(d.Clickable, {
+                              (0, i.jsx)(u.TooltipContainer, {
+                                  text: N.intl.string(N.t.GtBCn5),
+                                  children: (0, i.jsx)(u.Clickable, {
                                       onClick: (e) =>
                                           (0, m.jW)(e, async () => {
                                               let { default: e } = await n.e('6045').then(n.bind(n, 883150));
@@ -138,7 +138,7 @@ function j(e) {
                                                   });
                                           }),
                                       className: T.clock,
-                                      children: (0, i.jsx)(d.ClockIcon, {
+                                      children: (0, i.jsx)(u.ClockIcon, {
                                           size: 'custom',
                                           width: 20,
                                           height: 20,
@@ -146,12 +146,12 @@ function j(e) {
                                       })
                                   })
                               }),
-                              (0, i.jsx)(d.TooltipContainer, {
-                                  text: v.intl.string(v.t['1GzslZ']),
-                                  children: (0, i.jsx)(d.Clickable, {
+                              (0, i.jsx)(u.TooltipContainer, {
+                                  text: N.intl.string(N.t['1GzslZ']),
+                                  children: (0, i.jsx)(u.Clickable, {
                                       onClick: () => (0, p.x)(l),
                                       className: T.delete,
-                                      children: (0, i.jsx)(d.TrashIcon, {
+                                      children: (0, i.jsx)(u.TrashIcon, {
                                           size: 'custom',
                                           width: 20,
                                           height: 20,
@@ -173,7 +173,7 @@ function j(e) {
                               h.Z,
                               {
                                   message: o,
-                                  channel: u,
+                                  channel: d,
                                   className: S.message,
                                   compact: g.jU.getSetting(),
                                   animateAvatar: !1,

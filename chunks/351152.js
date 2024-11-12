@@ -20,8 +20,8 @@ var i = n(120356),
     x = n(259580),
     g = n(102172),
     p = n(148381),
-    v = n(388032),
-    j = n(410894),
+    j = n(388032),
+    v = n(410894),
     C = n(939525);
 function S(e) {
     let { guildId: t, onClick: n } = e,
@@ -59,8 +59,8 @@ function _(e) {
     let { onSelectGuild: t } = e,
         n = (0, o.e7)([m.ZP], () => m.ZP.getGuildFolders());
     return (0, l.jsx)(p.Z, {
-        title: v.intl.string(v.t.JsqeEh),
-        scrollerClassName: r()(C.guildScroller, j.marginBottom),
+        title: j.intl.string(j.t.JsqeEh),
+        scrollerClassName: r()(C.guildScroller, v.marginBottom),
         children: a().flatMap(n, (e) => {
             let { guildIds: n } = e;
             return n.map((e) =>

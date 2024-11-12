@@ -1,4 +1,4 @@
-t.d(n, {
+n.d(t, {
     g: function () {
         return o;
     },
@@ -8,7 +8,7 @@ t.d(n, {
 });
 var i,
     r,
-    l = t(818083);
+    l = n(818083);
 ((i = r || (r = {}))[(i.VARIANT_1 = 0)] = 'VARIANT_1'), (i[(i.VARIANT_2 = 1)] = 'VARIANT_2');
 let o = (0, l.B)({
     kind: 'user',

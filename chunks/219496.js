@@ -1,10 +1,10 @@
-var i, s;
+var r, i;
 n.d(t, {
     K: function () {
-        return i;
+        return r;
     }
 }),
-    ((s = i || (i = {})).AVAILABLE = 'AVAILABLE'),
-    (s.ERROR = 'ERROR'),
-    (s.RATE_LIMIT = 'RATE_LIMIT'),
-    (s.INTERNAL_ERROR = 'INTERNAL_ERROR');
+    ((i = r || (r = {})).AVAILABLE = 'AVAILABLE'),
+    (i.ERROR = 'ERROR'),
+    (i.RATE_LIMIT = 'RATE_LIMIT'),
+    (i.INTERNAL_ERROR = 'INTERNAL_ERROR');

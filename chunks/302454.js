@@ -171,8 +171,8 @@ var t, n;
             P = /^ (?= *`)|(` *) $/g,
             k = / *\n+$/,
             U = RegExp('^( *)(' + D + ') [\\s\\S]+?(?:\n{2,}(?! )(?!\\1' + D + ' )\\n*|\\s*\n*$)'),
-            G = /(?:^|\n)( *)$/;
-        var B =
+            B = /(?:^|\n)( *)$/;
+        var G =
                 ((e = /^ *\| *| *\| *$/g),
                 (t = / *$/),
                 (n = /^ *-+: *$/),
@@ -308,8 +308,8 @@ var t, n;
                 },
                 nptable: {
                     order: Y++,
-                    match: h(B.NPTABLE_REGEX),
-                    parse: B.parseNpTable,
+                    match: h(G.NPTABLE_REGEX),
+                    parse: G.parseNpTable,
                     react: null,
                     html: null
                 },
@@ -391,7 +391,7 @@ var t, n;
                     order: Y++,
                     match: function (e, t) {
                         var n = null == t.prevCapture ? '' : t.prevCapture[0],
-                            r = G.exec(n),
+                            r = B.exec(n),
                             i = t._list || !t.inline;
                         return r && i ? ((e = r[1] + e), U.exec(e)) : null;
                     },
@@ -471,8 +471,8 @@ var t, n;
                 },
                 table: {
                     order: Y++,
-                    match: h(B.TABLE_REGEX),
-                    parse: B.parseTable,
+                    match: h(G.TABLE_REGEX),
+                    parse: G.parseTable,
                     react: function (e, t, n) {
                         var r = function (t) {
                                 return null == e.align[t] ? {} : { textAlign: e.align[t] };

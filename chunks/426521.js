@@ -10,8 +10,8 @@ var i = n(200651),
     o = n(906732),
     s = n(336197),
     c = n(454585),
-    u = n(171368),
-    d = n(695346),
+    d = n(171368),
+    u = n(695346),
     m = n(598077),
     h = n(594174),
     f = n(626135),
@@ -22,8 +22,8 @@ var i = n(200651),
     C = n(178480),
     I = n(418316),
     x = n(526146),
-    N = n(400565),
-    v = n(148789),
+    v = n(400565),
+    N = n(148789),
     T = n(11825),
     S = n(981631),
     A = n(388032),
@@ -35,20 +35,20 @@ function R(e) {
     let { item: o } = e,
         s = null === (t = o.message) || void 0 === t ? void 0 : t.content;
     if (null == s) return (0, i.jsx)('div', {});
-    let u = null !== (r = h.default.getUser(null === (n = o.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : new m.Z(o.other_user),
-        d = c.Z.parse(s);
+    let d = null !== (r = h.default.getUser(null === (n = o.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : new m.Z(o.other_user),
+        u = c.Z.parse(s);
     return (0, i.jsxs)('div', {
         className: b.messagePreviewContainer,
         children: [
             (0, i.jsx)(a.Z, {
-                user: u,
+                user: d,
                 size: l.AvatarSizes.SIZE_24
             }),
             (0, i.jsx)(l.Text, {
                 className: b.messagePreviewText,
                 variant: 'text-sm/normal',
                 lineClamp: 2,
-                children: d
+                children: u
             })
         ]
     });
@@ -94,9 +94,9 @@ function P(e) {
 }
 let y = r.memo(function (e) {
         var t;
-        let { item: a, ackedBeforeId: d } = e,
+        let { item: a, ackedBeforeId: u } = e,
             { analyticsLocations: m } = (0, o.ZP)(),
-            h = (0, x.I)(a, d),
+            h = (0, x.I)(a, u),
             A = r.useCallback(async () => {
                 if ((!h && (0, g.wt)(a), null != a.item_enum && a.item_enum === E.AM.FIND_FRIENDS)) {
                     (0, l.openModalLazy)(async () => {
@@ -119,7 +119,7 @@ let y = r.memo(function (e) {
                         let t = i.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;
-                            (0, u.openUserProfileModal)({
+                            (0, d.openUserProfileModal)({
                                 userId: t[1],
                                 messageId: null === (e = a.message) || void 0 === e ? void 0 : e.id,
                                 sourceAnalyticsLocations: m,
@@ -136,7 +136,7 @@ let y = r.memo(function (e) {
                 }
             }, [a, h, m]),
             j = null;
-        a.type === E.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (j = (0, i.jsx)(v.Z, { userId: a.other_user.id }));
+        a.type === E.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (j = (0, i.jsx)(N.Z, { userId: a.other_user.id }));
         let Z = null != a.local_id,
             y = (0, I.Z)(a);
         return (0, i.jsxs)('div', {
@@ -149,7 +149,7 @@ let y = r.memo(function (e) {
                     onClick: A,
                     children: [
                         h ? null : (0, i.jsx)('div', { className: b.unread }),
-                        (0, i.jsx)(N.U, { item: a }),
+                        (0, i.jsx)(v.U, { item: a }),
                         (0, i.jsxs)('div', {
                             className: b.body,
                             children: [
@@ -177,7 +177,7 @@ let y = r.memo(function (e) {
     }),
     O = r.memo(function (e) {
         let { items: t } = e,
-            n = d.d$.useSetting();
+            n = u.d$.useSetting();
         return (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(

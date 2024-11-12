@@ -33,14 +33,14 @@ function S(e) {
         })),
         Z = (0, l.e7)([m.Z], () => m.Z.getChannel(null == I ? void 0 : I.channelId)),
         [C, y] = (0, u.wq)(Z),
-        b = (0, c.Aq)(),
-        T = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
+        T = (0, c.Aq)(),
+        b = null != x && null != I && x.state !== h.jm8.ENDED && x.ownerId === I.ownerId,
         A = (e) => {
-            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !T && (0, o.iV)(I, { forceMultiple: e }), b.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
+            if (null != I) null == _ || _(), s.default.selectVoiceChannel(I.channelId), !b && (0, o.iV)(I, { forceMultiple: e }), T.dispatch(h.CkL.POPOUT_CLOSE), f.S.dispatch(h.CkL.MODAL_CLOSE), r.Z.popAll();
         };
     if (null == I) return null;
     let N = (0, u.P9)(y);
-    t ? (N = g.intl.string(g.t.XvBdeX)) : T && (N = g.intl.string(g.t.JH1SJy));
+    t ? (N = g.intl.string(g.t.XvBdeX)) : b && (N = g.intl.string(g.t.JH1SJy));
     let w = {
         color: n,
         look: S
@@ -50,7 +50,7 @@ function S(e) {
             (0, i.jsxs)(
                 p.Z,
                 {
-                    disabled: t || T || !C,
+                    disabled: t || b || !C,
                     onClick: () => A(!1),
                     ...w,
                     fullWidth: !0,
@@ -65,7 +65,7 @@ function S(e) {
                 },
                 'play'
             ),
-            E && !T
+            E && !b
                 ? (0, i.jsx)(a.Tooltip, {
                       text: g.intl.string(g.t.wCrzur),
                       children: (e) =>

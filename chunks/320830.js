@@ -22,12 +22,12 @@ function g(e, t, n) {
         e
     );
 }
-let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    m = {
+let m = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    p = {
         START: 0,
         END: 1
     },
-    p = {
+    f = {
         friction: 10,
         tension: 130
     };
@@ -40,18 +40,18 @@ t.Z = function (e) {
             clearTimeout(this.timeout), window.removeEventListener('resize', this.handleResizeDebounced);
         }
         componentWillAppear(e) {
-            this.state.shouldAnimate ? this.animateTo(m.END, e) : e();
+            this.state.shouldAnimate ? this.animateTo(p.END, e) : e();
         }
         componentWillEnter(e) {
-            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(m.END, e), 40))) : e();
+            this.state.shouldAnimate ? (clearTimeout(this.timeout), (this.timeout = setTimeout(() => this.animateTo(p.END, e), 40))) : e();
         }
         componentWillLeave(e) {
-            this.state.shouldAnimate ? this.animateTo(m.START, e) : e();
+            this.state.shouldAnimate ? this.animateTo(p.START, e) : e();
         }
         animateTo(e, t) {
             l.Z.spring(this.anim, {
                 toValue: e,
-                ...p
+                ...f
             }).start(t);
         }
         getAnimatedStyle(e) {
@@ -95,11 +95,11 @@ t.Z = function (e) {
         constructor(...e) {
             super(...e),
                 g(this, 'timeout', void 0),
-                g(this, 'anim', new l.Z.Value(m.START)),
+                g(this, 'anim', new l.Z.Value(p.START)),
                 g(this, 'state', { shouldAnimate: !o.tq }),
                 g(this, 'handleResize', () => {
-                    let e = window.innerWidth > f;
-                    !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
+                    let e = window.innerWidth > m;
+                    !this.state.shouldAnimate && e && this.anim.setValue(p.END), this.setState({ shouldAnimate: e });
                 }),
                 g(this, 'handleResizeDebounced', a()(this.handleResize, 60));
         }

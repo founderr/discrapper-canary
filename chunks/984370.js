@@ -11,8 +11,8 @@ var r = n(120356),
     o = n(100527),
     s = n(906732),
     c = n(174556),
-    u = n(320007),
-    d = n(540059),
+    d = n(320007),
+    u = n(540059),
     m = n(141321),
     h = n(2818),
     f = n(954551),
@@ -23,8 +23,8 @@ var r = n(120356),
     C = n(300986),
     I = n(314451),
     x = n(35583),
-    N = n(981631),
-    v = n(176505),
+    v = n(981631),
+    N = n(176505),
     T = n(228856);
 async function S() {
     if ((0, _.isMac)() && _.isPlatformEmbedded) {
@@ -34,10 +34,10 @@ async function S() {
     }
 }
 function A(e) {
-    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': N, 'aria-labelledby': v, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
+    let { children: t, className: n, channelId: r, guildId: l, innerClassname: o, transparent: s = !1, toolbar: _, mobileToolbar: g, 'aria-label': v, 'aria-labelledby': N, scrollable: A, role: b, hideSearch: j, showDivider: Z } = e,
         { hasBugReporterAccess: R } = c.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 }),
         { enabled: L, inInbox: P } = h.Z.useExperiment({ location: 'HeaderBar' }),
-        y = (0, d.Q)('HeaderBar');
+        y = (0, u.Q)('HeaderBar');
     return (0, i.jsx)(E.ZP, {
         className: n,
         innerClassName: o,
@@ -47,13 +47,13 @@ function A(e) {
             return a.tq
                 ? g
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [_, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(u.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), L && !P ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
+                      children: [_, e ? (0, i.jsx)(p.Z, { className: T.search }, null != l ? l : r) : null, Z && (0, i.jsx)(E.ZP.Divider, {}), !y && (0, i.jsx)(x.Z, {}), (0, i.jsx)(d.Z, { canShowReminder: !0 }), !y && (0, i.jsx)(m.Z, {}), L && !P ? (0, i.jsx)(f.Z, {}) : null, !y && (R ? (0, i.jsx)(I.Z, {}) : (0, i.jsx)(C.Z, {}))]
                   });
         })(),
         transparent: s,
         onDoubleClick: S,
-        'aria-label': N,
-        'aria-labelledby': v,
+        'aria-label': v,
+        'aria-labelledby': N,
         role: b,
         scrollable: A,
         children: t
@@ -73,7 +73,7 @@ function b(e) {
 function j(e) {
     let { isAuthenticated: t = !0, ...n } = e,
         { analyticsLocations: r } = (0, s.ZP)(o.Z.HEADER_BAR),
-        a = l()(n.className, { [T.forumOrHome]: (null != n.channelType && N.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === v.oC.GUILD_HOME });
+        a = l()(n.className, { [T.forumOrHome]: (null != n.channelType && v.TPd.GUILD_THREADS_ONLY.has(n.channelType)) || n.channelId === N.oC.GUILD_HOME });
     return (0, i.jsx)(s.Gt, {
         value: r,
         children: t

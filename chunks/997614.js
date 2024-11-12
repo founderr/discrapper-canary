@@ -25,9 +25,9 @@ var i = n(200651),
 function I(e) {
     let { channel: t, themeable: I } = e,
         E = t.getGuildId(),
-        { mute: b, suppress: Z } = (0, p.Z)(t),
-        N = (0, r.e7)([g.Z], () => g.Z.isDeaf()),
-        S = b || Z || N,
+        { mute: b, suppress: N } = (0, p.Z)(t),
+        Z = (0, r.e7)([g.Z], () => g.Z.isDeaf()),
+        S = b || N || Z,
         T = (0, d.sR)({ isSoundboardButtonDisabled: S }),
         [j, A] = (0, c.cv)(T);
     function y(e) {
@@ -77,8 +77,8 @@ function I(e) {
                     themeable: I,
                     label: (function () {
                         if (b) return _.intl.string(_.t['Ox4/zc']);
-                        if (Z) return _.intl.string(_.t['+YBKYG']);
-                        if (N) return _.intl.string(_.t.X1lQlp);
+                        if (N) return _.intl.string(_.t['+YBKYG']);
+                        if (Z) return _.intl.string(_.t.X1lQlp);
                     })(),
                     iconComponent: s.SoundboardIcon,
                     disabled: S,

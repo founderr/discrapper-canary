@@ -42,7 +42,7 @@ function T(e) {
                 horizontal: !0
             }),
             (0, r.jsx)(s.Heading, {
-                variant: 'heading-sm/normal',
+                variant: 'text-xs/normal',
                 className: b.leaderboardTitle,
                 children: I.intl.format(I.t['MlT4+P'], {
                     leaderboardName: 'League of Legends',

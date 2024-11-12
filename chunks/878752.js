@@ -30,14 +30,14 @@ function b(e) {
             let e = p.default.getCurrentUser();
             return r()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
-        Z = (0, o.Z)(),
-        { isSharedCanvasEnabled: N } = d.Z.useExperiment({
+        N = (0, o.Z)(),
+        { isSharedCanvasEnabled: Z } = d.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
         { enableViewerClipping: S } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
         T = (0, s.Z)(h.Z);
-    if (null == t || null != Z) return null;
+    if (null == t || null != N) return null;
     let j = (0, u.Z)(t),
         A = m.BT({
             permission: I.Plq.ADD_REACTIONS,
@@ -54,9 +54,9 @@ function b(e) {
                 }),
             A && (0, i.jsx)(x.Z, { channel: t }),
             S && T && (0, i.jsx)(f.Z, { channel: t }),
-            N && n && (0, i.jsx)(g.Z, {}),
-            N && n && (0, i.jsx)(C.Z, { channel: t }),
-            N && n && (0, i.jsx)(_.Z, {})
+            Z && n && (0, i.jsx)(g.Z, {}),
+            Z && n && (0, i.jsx)(C.Z, { channel: t }),
+            Z && n && (0, i.jsx)(_.Z, {})
         ]
     });
 }

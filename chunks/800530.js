@@ -1,66 +1,66 @@
 n.d(t, {
     Cg: function () {
-        return O;
+        return x;
     },
     Cs: function () {
-        return A;
-    },
-    EY: function () {
-        return d;
-    },
-    I5: function () {
         return p;
     },
-    JQ: function () {
-        return G;
-    },
-    RY: function () {
-        return D;
-    },
-    SU: function () {
+    EY: function () {
         return S;
     },
-    Sv: function () {
-        return R;
+    I5: function () {
+        return v;
     },
-    ZW: function () {
-        return m;
+    JQ: function () {
+        return b;
     },
-    bK: function () {
-        return s;
-    },
-    n0: function () {
+    RY: function () {
         return N;
     },
-    qS: function () {
+    SU: function () {
+        return d;
+    },
+    Sv: function () {
         return T;
     },
-    s: function () {
-        return u;
+    ZW: function () {
+        return A;
     },
-    sQ: function () {
+    bK: function () {
         return f;
     },
+    n0: function () {
+        return m;
+    },
+    qS: function () {
+        return _;
+    },
+    s: function () {
+        return h;
+    },
+    sQ: function () {
+        return I;
+    },
     wo: function () {
-        return c;
+        return u;
     }
 });
 var i,
     r,
-    E,
-    _,
-    I,
-    o,
+    l,
     a,
-    S,
-    c,
-    N,
-    u,
+    o,
     s,
-    A,
-    T,
-    l = n(990547),
-    L = n(981631);
+    c,
+    d,
+    u,
+    m,
+    h,
+    f,
+    p,
+    _,
+    g = n(990547),
+    E = n(981631);
 function C(e, t, n) {
     return (
         t in e
@@ -74,50 +74,50 @@ function C(e, t, n) {
         e
     );
 }
-((i = S || (S = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
-class f {}
-C(f, 'TOS_LINK', 'https://discord.com/terms'), C(f, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(f, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(f, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(f, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(f, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
-class O {}
-C(O, 'CLASSIFICATION_ID', 'classification_id'), C(O, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = c || (c = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
-class p {}
-C(p, 'ICON_TYPE', 'icon_type'),
-    C(p, 'HEADER', 'header'),
-    C(p, 'BODY', 'body'),
-    C(p, 'CTAS', 'ctas'),
-    C(p, 'TIMESTAMP', 'timestamp'),
-    C(p, 'THEME', 'theme'),
-    C(p, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
-    C(p, 'LEARN_MORE_LINK', 'learn_more_link'),
-    C(p, 'CLASSIFICATION_ID', 'classification_id'),
-    ((E = N || (N = {}))[(E.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
-    (E[(E.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
-    (E[(E.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
-    (E[(E.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'),
-    (E[(E.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'),
-    (E[(E.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'),
-    (E[(E.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'),
-    (E[(E.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'),
-    ((_ = u || (u = {}))[(_.SystemDM = 0)] = 'SystemDM'),
-    (_[(_.StandingTab = 1)] = 'StandingTab'),
-    (_[(_.AppealIngestion = 2)] = 'AppealIngestion'),
+((i = d || (d = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION'), (i.CONTENT_AND_SOCIAL = 'CONTENT_AND_SOCIAL'), (i.DATA_PRIVACY = 'DATA_PRIVACY');
+class I {}
+C(I, 'TOS_LINK', 'https://discord.com/terms'), C(I, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), C(I, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), C(I, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), C(I, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
+class x {}
+C(x, 'CLASSIFICATION_ID', 'classification_id'), C(x, 'INCIDENT_TIMESTAMP', 'incident_time'), ((r = u || (u = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (r.LEARN_MORE_LINK = 'learn_more_link');
+class v {}
+C(v, 'ICON_TYPE', 'icon_type'),
+    C(v, 'HEADER', 'header'),
+    C(v, 'BODY', 'body'),
+    C(v, 'CTAS', 'ctas'),
+    C(v, 'TIMESTAMP', 'timestamp'),
+    C(v, 'THEME', 'theme'),
+    C(v, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
+    C(v, 'LEARN_MORE_LINK', 'learn_more_link'),
+    C(v, 'CLASSIFICATION_ID', 'classification_id'),
+    ((l = m || (m = {}))[(l.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
+    (l[(l.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
+    (l[(l.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
+    (l[(l.ClickAgeVerificationLink = 3)] = 'ClickAgeVerificationLink'),
+    (l[(l.ClickSpamWebformLink = 4)] = 'ClickSpamWebformLink'),
+    (l[(l.ClickLearnMoreLink = 5)] = 'ClickLearnMoreLink'),
+    (l[(l.ClickCommunityGuidelinesLink = 6)] = 'ClickCommunityGuidelinesLink'),
+    (l[(l.ClickWarningSystemHelpcenterLink = 7)] = 'ClickWarningSystemHelpcenterLink'),
+    ((a = h || (h = {}))[(a.SystemDM = 0)] = 'SystemDM'),
+    (a[(a.StandingTab = 1)] = 'StandingTab'),
+    (a[(a.AppealIngestion = 2)] = 'AppealIngestion'),
     Object.freeze({
-        SPEED_BUMP: L.jXE.APPEAL_INGESTION_SPEED_BUMP,
-        COLLECT_SIGNAL: L.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
-        CONFIRM_SUBMISSION: L.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-        REQUEST_SENT: L.jXE.APPEAL_INGESTION_REQUEST_SENT,
-        THANKS: L.jXE.APPEAL_INGESTION_THANKS,
-        SPAM: L.jXE.APPEAL_INGESTION_SPAM
+        SPEED_BUMP: E.jXE.APPEAL_INGESTION_SPEED_BUMP,
+        COLLECT_SIGNAL: E.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
+        CONFIRM_SUBMISSION: E.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+        REQUEST_SENT: E.jXE.APPEAL_INGESTION_REQUEST_SENT,
+        THANKS: E.jXE.APPEAL_INGESTION_THANKS,
+        SPAM: E.jXE.APPEAL_INGESTION_SPAM
     }),
-    ((I = s || (s = {}))[(I.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'),
-    (I[(I.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
-    (I[(I.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
-    (I[(I.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
-let D = [0, 1, 2, 3],
-    R = 372,
-    d = 279,
-    m = { impression_group: l.ImpressionGroups.APPEAL_INGESTION };
-((o = A || (A = {})).SPEED_BUMP = 'speed-bump'), (o.COLLECT_SIGNAL = 'collect-signal'), (o.CONFIRM_SUBMISSION = 'confirm-submission'), (o.REQUEST_SENT = 'request-sent'), (o.THANKS = 'thanks');
-let G = {
+    ((o = f || (f = {}))[(o.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'),
+    (o[(o.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),
+    (o[(o.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'),
+    (o[(o.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE');
+let N = [0, 1, 2, 3],
+    T = 372,
+    S = 279,
+    A = { impression_group: g.ImpressionGroups.APPEAL_INGESTION };
+((s = p || (p = {})).SPEED_BUMP = 'speed-bump'), (s.COLLECT_SIGNAL = 'collect-signal'), (s.CONFIRM_SUBMISSION = 'confirm-submission'), (s.REQUEST_SENT = 'request-sent'), (s.THANKS = 'thanks');
+let b = {
     'speed-bump': {
         next: 'collect-signal',
         prev: null
@@ -135,4 +135,4 @@ let G = {
         prev: null
     }
 };
-((a = T || (T = {}))[(a.USER = 1)] = 'USER'), (a[(a.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (a[(a.GUILD_MEMBER = 3)] = 'GUILD_MEMBER');
+((c = _ || (_ = {}))[(c.USER = 1)] = 'USER'), (c[(c.GUILD_OWNER = 2)] = 'GUILD_OWNER'), (c[(c.GUILD_MEMBER = 3)] = 'GUILD_MEMBER');

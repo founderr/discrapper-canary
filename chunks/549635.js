@@ -5,8 +5,8 @@ t.d(n, {
 });
 var r = t(200651),
     i = t(192379),
-    l = t(124347),
-    a = t(80966),
+    a = t(124347),
+    l = t(80966),
     o = t(524444),
     s = t(52824),
     u = t(956664),
@@ -30,8 +30,8 @@ n.Z = i.memo(function (e) {
         var A;
         let e = h(g);
         if (null == e) return null;
-        let l = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : o.iT;
-        return (0, r.jsx)(a.Z, {
+        let a = null !== (A = n.renderLinkComponent) && void 0 !== A ? A : o.iT;
+        return (0, r.jsx)(l.Z, {
             ...v,
             src: y,
             width: d,
@@ -46,7 +46,7 @@ n.Z = i.memo(function (e) {
             autoMute: c.rs,
             onVolumeChange: c.jA,
             onMute: c.Zj,
-            renderLinkComponent: l,
+            renderLinkComponent: a,
             autoPlay: !t,
             alt: _,
             onContextMenu: i
@@ -54,7 +54,7 @@ n.Z = i.memo(function (e) {
     }
     if ('IMAGE' === x)
         return I
-            ? (0, r.jsx)(l.ZP, {
+            ? (0, r.jsx)(a.ZP, {
                   ...v,
                   src: y,
                   width: d,

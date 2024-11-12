@@ -1,46 +1,46 @@
-t(47120);
-var i = t(200651),
-    r = t(192379),
-    l = t(120356),
-    o = t.n(l),
-    u = t(481060),
-    a = t(393238),
-    s = t(605236),
-    c = t(279745),
-    d = t(921944),
-    f = t(388032),
-    p = t(138592);
-n.Z = r.forwardRef(function (e, n) {
-    let { body: t, header: l, artClassName: _, headerClassName: m, contentClassName: g, tryItText: E, dismissText: h, onTryFeature: I, onClose: S, className: v, inlineArt: C = !1, isPremiumFeature: T = !1, shouldUseHorizontalButtons: N = !1, showGIFTag: b = !1, dismissibleContent: A, position: O = 'top', align: P = 'center', art: R, isPremiumEarlyAccess: x = !1, maxWidth: L = 280, hideDismissButton: y = !1, pointerClassName: M, dismissIconClassName: Z, dismissIcon: j, onDismissIconClick: D } = e,
-        U = N ? u.Button.Sizes.LARGE : u.Button.Sizes.MAX,
-        [w, F] = r.useState(!1),
+n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    o = n.n(l),
+    u = n(481060),
+    a = n(393238),
+    s = n(605236),
+    c = n(279745),
+    d = n(921944),
+    f = n(388032),
+    p = n(138592);
+t.Z = r.forwardRef(function (e, t) {
+    let { body: n, header: l, artClassName: _, headerClassName: E, contentClassName: g, tryItText: m, dismissText: h, onTryFeature: S, onClose: I, className: v, inlineArt: C = !1, isPremiumFeature: T = !1, shouldUseHorizontalButtons: N = !1, showGIFTag: b = !1, dismissibleContent: A, position: O = 'top', align: L = 'center', art: R, isPremiumEarlyAccess: P = !1, maxWidth: y = 280, hideDismissButton: M = !1, pointerClassName: x, dismissIconClassName: Z, dismissIcon: U, onDismissIconClick: D } = e,
+        j = N ? u.Button.Sizes.LARGE : u.Button.Sizes.MAX,
+        [F, w] = r.useState(!1),
         { ref: G, width: k } = (0, a.Z)();
     function H(e) {
         (0, s.EW)(A, { dismissAction: e });
     }
     return (
         r.useEffect(() => {
-            var e, n;
-            let t = (null !== (n = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== n ? n : 0) + 64;
-            !w && t > L && F(!0);
-        }, [w, k, G, L]),
+            var e, t;
+            let n = (null !== (t = null === (e = G.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+            !F && n > y && w(!0);
+        }, [F, k, G, y]),
         r.useEffect(() => {
             (0, s.kk)(A);
         }, [A]),
         (0, i.jsx)('div', {
             className: v,
-            ref: n,
+            ref: t,
             children: (0, i.jsxs)('div', {
                 className: o()(p.content, g, {
                     [p.contentNoArt]: null == _ || C,
-                    [p.contentPremium]: T || x
+                    [p.contentPremium]: T || P
                 }),
                 children: [
-                    null != j &&
+                    null != U &&
                         (0, i.jsx)(u.Clickable, {
                             onClick: D,
                             className: Z,
-                            children: j
+                            children: U
                         }),
                     (0, i.jsxs)('div', {
                         className: o()(_, C ? p.artInline : p.artAbsolute),
@@ -50,18 +50,18 @@ n.Z = r.forwardRef(function (e, n) {
                         className: p.body,
                         children: [
                             (0, i.jsxs)(u.Heading, {
-                                className: o()(T ? p.headerWithPremiumIcon : p.header, m),
+                                className: o()(T ? p.headerWithPremiumIcon : p.header, E),
                                 variant: 'heading-md/bold',
                                 color: 'always-white',
                                 children: [
-                                    T && !x
+                                    T && !P
                                         ? (0, i.jsx)(u.NitroWheelIcon, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: p.premiumIcon
                                           })
                                         : null,
-                                    x
+                                    P
                                         ? (0, i.jsxs)(u.Text, {
                                               color: 'always-white',
                                               variant: 'eyebrow',
@@ -82,42 +82,42 @@ n.Z = r.forwardRef(function (e, n) {
                                     l
                                 ]
                             }),
-                            null == t
+                            null == n
                                 ? null
-                                : 'string' == typeof t
+                                : 'string' == typeof n
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'always-white',
-                                        children: t
+                                        children: n
                                     })
-                                  : t
+                                  : n
                         ]
                     }),
                     (0, i.jsx)('div', {
                         ref: G,
-                        className: w || !N ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                        className: F || !N ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
-                            null != I
+                            null != S
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(u.Button, {
                                               className: p.button,
-                                              size: U,
+                                              size: j,
                                               onClick: (e) => {
-                                                  null == S || S(e), I(e), H(d.L.PRIMARY);
+                                                  null == I || I(e), S(e), H(d.L.PRIMARY);
                                               },
-                                              color: T || x ? u.Button.Colors.BRAND_INVERTED : u.Button.Colors.WHITE,
-                                              children: null != E ? E : f.intl.string(f.t.IHf1RE)
+                                              color: T || P ? u.Button.Colors.BRAND_INVERTED : u.Button.Colors.WHITE,
+                                              children: null != m ? m : f.intl.string(f.t.IHf1RE)
                                           }),
-                                          !y &&
+                                          !M &&
                                               (0, i.jsx)(u.Button, {
                                                   className: p.button,
-                                                  size: U,
+                                                  size: j,
                                                   onClick: (e) => {
-                                                      null == S || S(e), H(d.L.DISMISS);
+                                                      null == I || I(e), H(d.L.DISMISS);
                                                   },
-                                                  color: T || x ? u.Button.Colors.WHITE : u.Button.Colors.BRAND,
-                                                  look: T || x ? u.Button.Looks.LINK : u.Button.Looks.FILLED,
+                                                  color: T || P ? u.Button.Colors.WHITE : u.Button.Colors.BRAND,
+                                                  look: T || P ? u.Button.Looks.LINK : u.Button.Looks.FILLED,
                                                   children: null != h ? h : f.intl.string(f.t.om7Ovr)
                                               })
                                       ]
@@ -126,17 +126,17 @@ n.Z = r.forwardRef(function (e, n) {
                                       className: p.button,
                                       size: u.Button.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == S || S(e), H(d.L.PRIMARY);
+                                          null == I || I(e), H(d.L.PRIMARY);
                                       },
                                       color: u.Button.Colors.WHITE,
                                       children: f.intl.string(f.t.HU2IR0)
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: o()(p.pointer, M, {
+                        className: o()(p.pointer, x, {
                             [p.bottomPointer]: 'top' === O,
-                            [p.centerLeftPointer]: 'right' === O && 'center' === P,
-                            [p.topLeftPointer]: 'right' === O && 'top' === P
+                            [p.centerLeftPointer]: 'right' === O && 'center' === L,
+                            [p.topLeftPointer]: 'right' === O && 'top' === L
                         })
                     })
                 ]

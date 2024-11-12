@@ -10,8 +10,8 @@ var i = n(192379),
     o = n(314897),
     s = n(592125),
     c = n(271383),
-    u = n(430824),
-    d = n(914010),
+    d = n(430824),
+    u = n(914010),
     m = n(594174),
     h = n(158222),
     f = n(312146),
@@ -32,21 +32,21 @@ function E(e, t) {
         I = (0, r.e7)([l.Z], () => null != E && (null == E ? void 0 : E.channelId) != null && l.Z.isChannelGated(E.guildId, E.channelId), [E]),
         x = t.hasFlag(g.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: N,
-            guild: v,
+            rawMediaPostEmbedData: v,
+            guild: N,
             parentChannel: T,
             user: S,
             selectedGuildId: A,
             canAccess: b
         } = (0, r.cj)(
-            [p.Z, u.Z, s.Z, m.default, d.Z],
+            [p.Z, d.Z, s.Z, m.default, u.Z],
             () => {
                 var e;
                 let t = null === (e = p.Z.getMediaPostEmbed(null == E ? void 0 : E.threadId)) || void 0 === e ? void 0 : e.media,
-                    n = u.Z.getGuild(null == E ? void 0 : E.guildId),
+                    n = d.Z.getGuild(null == E ? void 0 : E.guildId),
                     i = s.Z.getChannel(null == E ? void 0 : E.channelId),
                     r = m.default.getUser(null == t ? void 0 : t.author_id),
-                    l = d.Z.getGuildId(),
+                    l = u.Z.getGuildId(),
                     o = null != i && (0, a.YO)(i);
                 return {
                     rawMediaPostEmbedData: t,
@@ -61,8 +61,8 @@ function E(e, t) {
         ),
         j = i.useMemo(() => {
             let e = (0, _.ku)({
-                mediaPostEmbedData: N,
-                guild: v,
+                mediaPostEmbedData: v,
+                guild: N,
                 parentChannel: T,
                 user: S,
                 selectedGuildId: A,
@@ -74,7 +74,7 @@ function E(e, t) {
                       ...e,
                       user: S
                   };
-        }, [N, v, T, S, A, b]);
+        }, [v, N, T, S, A, b]);
     return (
         i.useEffect(() => {
             if ((null == E ? void 0 : E.threadId) != null) {

@@ -1,152 +1,152 @@
 t(47120);
 var i = t(200651);
 t(192379);
-var a = t(120356),
-    r = t.n(a),
-    o = t(979554),
-    l = t(442837),
-    s = t(481060),
+var l = t(120356),
+    r = t.n(l),
+    a = t(979554),
+    s = t(442837),
+    o = t(481060),
     d = t(1585),
     c = t(125988),
     u = t(987209),
-    f = t(921813),
-    p = t(731896),
-    m = t(484459),
-    _ = t(594174),
-    g = t(937615),
-    b = t(583434),
-    h = t(388032),
-    x = t(696307),
-    C = t(223223);
-let v = (e) => {
+    h = t(921813),
+    m = t(731896),
+    f = t(484459),
+    x = t(594174),
+    v = t(937615),
+    p = t(583434),
+    g = t(388032),
+    C = t(696307),
+    j = t(223223);
+let I = (e) => {
         let { avatarDecoration: n } = e,
-            t = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-            { avatarDecorationSrc: a } = (0, c.Z)({
+            t = (0, s.e7)([x.default], () => x.default.getCurrentUser()),
+            { avatarDecorationSrc: l } = (0, c.Z)({
                 user: t,
                 avatarDecorationOverride: n,
-                size: (0, d.y9)(s.AvatarSizes.SIZE_40)
+                size: (0, d.y9)(o.AvatarSizes.SIZE_40)
             });
         return (0, i.jsx)('img', {
-            src: a,
+            src: l,
             alt: n.label,
-            className: x.avatarDecoration
+            className: C.avatarDecoration
         });
     },
-    I = (e) => {
+    T = (e) => {
         var n;
         let { profileEffect: t } = e,
-            a = (0, p.V)(t.id),
-            { accessibilityLabel: r, thumbnailPreviewSrc: o, title: l } = null !== (n = null == a ? void 0 : a.config) && void 0 !== n ? n : {};
+            l = (0, m.V)(t.id),
+            { accessibilityLabel: r, thumbnailPreviewSrc: a, title: s } = null !== (n = null == l ? void 0 : l.config) && void 0 !== n ? n : {};
         return (0, i.jsxs)('div', {
-            className: x.profileEffectContainer,
+            className: C.profileEffectContainer,
             children: [
                 (0, i.jsx)('img', {
-                    src: C,
+                    src: j,
                     alt: r,
-                    className: x.profileEffectBackground
+                    className: C.profileEffectBackground
                 }),
                 (0, i.jsx)('img', {
-                    className: x.profileEffect,
-                    src: o,
-                    alt: l
+                    className: C.profileEffect,
+                    src: a,
+                    alt: s
                 })
             ]
         });
     };
 n.Z = (e) => {
-    let { skuId: n, skuPricePreview: t, isSelected: a, onSelect: d, shouldDisplayHeader: c = !1, className: p } = e,
-        { product: C } = (0, b.T)(n),
-        { giftRecipient: S, giftRecipientError: T } = (0, u.wD)(),
-        j = (0, l.e7)([_.default], () => _.default.getCurrentUser());
-    if (null == C || null == t) return null;
-    let [y] = C.items,
-        E = null != S && S.id !== (null == j ? void 0 : j.id);
+    let { skuId: n, skuPricePreview: t, isSelected: l, onSelect: d, shouldDisplayHeader: c = !1, className: m } = e,
+        { product: j } = (0, p.T)(n),
+        { giftRecipient: E, giftRecipientError: N } = (0, u.wD)(),
+        S = (0, s.e7)([x.default], () => x.default.getCurrentUser());
+    if (null == j || null == t) return null;
+    let [Z] = j.items,
+        y = null != E && E.id !== (null == S ? void 0 : S.id);
     return (0, i.jsxs)('div', {
-        className: p,
+        className: m,
         children: [
             c &&
                 (0, i.jsxs)('div', {
-                    className: x.previewTitleContainer,
+                    className: C.previewTitleContainer,
                     children: [
-                        (0, i.jsx)(s.FormTitle, {
-                            className: x.previewTitle,
-                            children: h.intl.string(h.t.PpoJzs)
+                        (0, i.jsx)(o.FormTitle, {
+                            className: C.previewTitle,
+                            children: g.intl.string(g.t.PpoJzs)
                         }),
-                        E &&
+                        y &&
                             (0, i.jsx)(
-                                s.Popout,
+                                o.Popout,
                                 {
-                                    preload: () => (0, m.Z)(S.id, S.getAvatarURL(null, 80)),
+                                    preload: () => (0, f.Z)(E.id, E.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
-                                        (0, i.jsx)(f.Z, {
+                                        (0, i.jsx)(h.Z, {
                                             ...e,
-                                            user: S,
-                                            pendingAvatar: S.getAvatarURL(null, (0, s.getAvatarSize)(s.AvatarSizes.SIZE_80)),
-                                            pendingAvatarDecoration: y.type === o.Z.AVATAR_DECORATION ? y : null,
-                                            pendingProfileEffectId: y.type === o.Z.PROFILE_EFFECT ? y.id : null,
+                                            user: E,
+                                            pendingAvatar: E.getAvatarURL(null, (0, o.getAvatarSize)(o.AvatarSizes.SIZE_80)),
+                                            pendingAvatarDecoration: Z.type === a.Z.AVATAR_DECORATION ? Z : null,
+                                            pendingProfileEffectId: Z.type === a.Z.PROFILE_EFFECT ? Z.id : null,
                                             canUsePremiumCustomization: !0,
                                             disabledInputs: !0
                                         }),
                                     align: 'center',
                                     position: 'right',
                                     children: (e) =>
-                                        (0, i.jsx)(s.Clickable, {
+                                        (0, i.jsx)(o.Clickable, {
                                             ...e,
-                                            className: x.previewLink,
-                                            children: (0, i.jsx)(s.Text, {
+                                            className: C.previewLink,
+                                            children: (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-link',
-                                                children: h.intl.string(h.t['2GnJQE'])
+                                                children: g.intl.string(g.t['2GnJQE'])
                                             })
                                         })
                                 },
-                                S.id
+                                E.id
                             )
                     ]
                 }),
-            (0, i.jsxs)(s.Clickable, {
+            (0, i.jsxs)(o.Clickable, {
                 tag: 'div',
                 onClick: () => {
                     null != n && null != d && d(n);
                 },
-                className: r()(x.previewContainer, {
-                    [x.previewContainerSelected]: a && null == T,
-                    [x.previewContainerError]: a && null != T
+                className: r()(C.previewContainer, {
+                    [C.previewContainerSelected]: l && null == N,
+                    [C.previewContainerError]: l && null != N
                 }),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: x.giftInfoContainer,
+                        className: C.giftInfoContainer,
                         children: [
-                            y.type === o.Z.AVATAR_DECORATION && (0, i.jsx)(v, { avatarDecoration: y }),
-                            y.type === o.Z.PROFILE_EFFECT && (0, i.jsx)(I, { profileEffect: y }),
+                            Z.type === a.Z.AVATAR_DECORATION && (0, i.jsx)(I, { avatarDecoration: Z }),
+                            Z.type === a.Z.PROFILE_EFFECT && (0, i.jsx)(T, { profileEffect: Z }),
                             (0, i.jsxs)('div', {
-                                className: x.previewTextContainer,
+                                className: C.previewTextContainer,
                                 children: [
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(o.Text, {
                                         variant: 'text-md/semibold',
-                                        children: C.name
+                                        children: j.name
                                     }),
-                                    (0, i.jsx)(s.Heading, {
+                                    (0, i.jsx)(o.Heading, {
                                         variant: 'heading-sm/medium',
                                         color: 'header-secondary',
-                                        children: y.type === o.Z.AVATAR_DECORATION ? h.intl.string(h.t['7v0T9P']) : y.type === o.Z.PROFILE_EFFECT ? h.intl.string(h.t.wR5wOj) : null
+                                        children: Z.type === a.Z.AVATAR_DECORATION ? g.intl.string(g.t['7v0T9P']) : Z.type === a.Z.PROFILE_EFFECT ? g.intl.string(g.t.wR5wOj) : null
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-md/semibold',
-                                children: (0, g.T4)(t.amount, t.currency)
+                                children: (0, v.T4)(t.amount, t.currency)
                             })
                         ]
                     }),
-                    a &&
-                        null != T &&
+                    l &&
+                        null != N &&
                         (0, i.jsx)('div', {
-                            className: x.recipientError,
-                            children: (0, i.jsx)(s.Text, {
+                            className: C.recipientError,
+                            children: (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'status-danger-background',
-                                children: T
+                                children: N
                             })
                         })
                 ]

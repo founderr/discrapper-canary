@@ -21,7 +21,7 @@ let I = 424,
     E = 624,
     b = 824;
 ((l = i || (i = {}))[(l.SELECTED = 0)] = 'SELECTED'), (l[(l.SPEAKER = 1)] = 'SPEAKER'), (l[(l.AUDIENCE = 2)] = 'AUDIENCE');
-let Z = (e, t) => {
+let N = (e, t) => {
         let n = Math.floor(e / t - 8),
             i = Math.floor(n / x.Q);
         return {
@@ -29,7 +29,7 @@ let Z = (e, t) => {
             speakerTileHeight: i
         };
     },
-    N = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
+    Z = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
     S = (e) => Math.floor((e - 32) / 102);
 function T(e) {
     return e.type === h.Ui.VOICE;
@@ -57,7 +57,7 @@ t.Z = (0, o.Z)((e) => {
         M = P.filter(T),
         R = null != P.find((e) => e.type === h.Ui.STREAM),
         L = S(l),
-        k = N(l, b),
+        k = Z(l, b),
         O = {
             [h.pV.SPEAKER]: k,
             [h.pV.AUDIENCE]: L,
@@ -66,7 +66,7 @@ t.Z = (0, o.Z)((e) => {
         D = (0, p.Dx)(i.id),
         [w, B] = (0, p.aP)(i.id, O, D),
         U = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = Z(l, k),
+        { speakerTileWidth: H, speakerTileHeight: G } = N(l, k),
         F = E ? l - 32 : Math.min(l - 64, 3 * H + 8),
         V = (e) => e === w.length - 1 || (0 === A && 1 === e),
         [z, W] = a.useState(!1),

@@ -31,15 +31,15 @@ function b(e) {
     l.useEffect(() => {
         (0, d.FQ)('847199849233514549', !0);
     }, []);
-    let Z = (0, s.e7)(
+    let N = (0, s.e7)(
             [m.Z, p.default],
             () =>
                 !!a()(m.Z.getMessages(n.id).toArray())
                     .reverse()
                     .find((e) => e.author.id !== p.default.getId() && e.state === v.yb.SENT && !(0, x.Z)(e))
         ),
-        N = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        S = null !== (t = C.ZP.useName(N)) && void 0 !== t ? t : _.intl.string(_.t.y1Wu2d),
+        Z = (0, s.e7)([f.default], () => f.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        S = null !== (t = C.ZP.useName(Z)) && void 0 !== t ? t : _.intl.string(_.t.y1Wu2d),
         T = (0, s.e7)([u.Z], () => u.Z.getStickerById(E)),
         j = l.useCallback(async () => {
             if (null == r || '' === r)
@@ -65,7 +65,7 @@ function b(e) {
                       children: r
                   })
                 : null;
-    return Z
+    return N
         ? (0, i.jsxs)('div', {
               className: I.containerCompact,
               children: [

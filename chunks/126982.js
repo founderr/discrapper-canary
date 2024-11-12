@@ -5,34 +5,34 @@ t.d(n, {
 });
 var i = t(200651);
 t(192379);
-var a = t(481060),
+var l = t(481060),
     r = t(131388),
-    o = t(409813),
-    l = t(750143),
-    s = t(264499),
+    a = t(409813),
+    s = t(750143),
+    o = t(264499),
     d = t(60314);
 function c(e) {
     let { step: n, onClose: t } = e,
-        c = (0, r.Z)(l.X);
-    return n === o.h8.BENEFITS || n === o.h8.CONFIRM
+        c = (0, r.Z)(s.X);
+    return n === a.h8.BENEFITS || n === a.h8.CONFIRM
         ? null
         : (0, i.jsxs)('div', {
-              className: s.headerContainer,
+              className: o.headerContainer,
               children: [
                   !c &&
                       (0, i.jsx)('div', {
-                          className: s.headerImageContainer,
+                          className: o.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
                           children: (0, i.jsx)('img', {
                               src: d,
                               alt: '',
-                              className: s.headerImage
+                              className: o.headerImage
                           })
                       }),
-                  (0, i.jsx)(a.ModalCloseButton, {
+                  (0, i.jsx)(l.ModalCloseButton, {
                       withCircleBackground: !0,
-                      className: s.closeButton,
+                      className: o.closeButton,
                       onClick: t
                   })
               ]

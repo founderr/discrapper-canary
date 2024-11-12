@@ -121,10 +121,10 @@ A.prototype.read = function (e) {
     var t,
         n = this._readableState,
         r = e;
-    if ((0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended))) return i('read: emitReadable', n.length, n.ended), 0 === n.length && n.ended ? G(this) : O(this), null;
-    if (0 === (e = R(e, n)) && n.ended) return 0 === n.length && G(this), null;
+    if ((0 !== e && (n.emittedReadable = !1), 0 === e && n.needReadable && ((0 !== n.highWaterMark ? n.length >= n.highWaterMark : n.length > 0) || n.ended))) return i('read: emitReadable', n.length, n.ended), 0 === n.length && n.ended ? B(this) : O(this), null;
+    if (0 === (e = R(e, n)) && n.ended) return 0 === n.length && B(this), null;
     var a = n.needReadable;
-    return i('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && i('length less than watermark', (a = !0)), n.ended || n.reading ? i('reading or ended', (a = !1)) : a && (i('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), !n.reading && (e = R(r, n))), null === (t = e > 0 ? U(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (!n.ended && (n.needReadable = !0), r !== e && n.ended && G(this)), null !== t && this.emit('data', t), t;
+    return i('need readable', a), (0 === n.length || n.length - e < n.highWaterMark) && i('length less than watermark', (a = !0)), n.ended || n.reading ? i('reading or ended', (a = !1)) : a && (i('do read'), (n.reading = !0), (n.sync = !0), 0 === n.length && (n.needReadable = !0), this._read(n.highWaterMark), (n.sync = !1), !n.reading && (e = R(r, n))), null === (t = e > 0 ? U(e, n) : null) ? ((n.needReadable = n.length <= n.highWaterMark), (e = 0)) : ((n.length -= e), (n.awaitDrain = 0)), 0 === n.length && (!n.ended && (n.needReadable = !0), r !== e && n.ended && B(this)), null !== t && this.emit('data', t), t;
 };
 function O(e) {
     var t = e._readableState;
@@ -274,11 +274,11 @@ function U(e, t) {
     var n;
     return 0 === t.length ? null : (t.objectMode ? (n = t.buffer.shift()) : !e || e >= t.length ? ((n = t.decoder ? t.buffer.join('') : 1 === t.buffer.length ? t.buffer.first() : t.buffer.concat(t.length)), t.buffer.clear()) : (n = t.buffer.consume(e, t.decoder)), n);
 }
-function G(e) {
+function B(e) {
     var t = e._readableState;
-    i('endReadable', t.endEmitted), !t.endEmitted && ((t.ended = !0), l.nextTick(B, t, e));
+    i('endReadable', t.endEmitted), !t.endEmitted && ((t.ended = !0), l.nextTick(G, t, e));
 }
-function B(e, t) {
+function G(e, t) {
     if ((i('endReadableNT', e.endEmitted, e.length), !e.endEmitted && 0 === e.length && ((e.endEmitted = !0), (t.readable = !1), t.emit('end'), e.autoDestroy))) {
         var n = t._writableState;
         (!n || (n.autoDestroy && n.finished)) && t.destroy();

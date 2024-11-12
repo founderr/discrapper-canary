@@ -1,46 +1,46 @@
 n(47120);
-var r,
-    i,
-    a,
+var i,
     s,
-    o = n(106351),
-    l = n(442837),
-    u = n(570140),
-    c = n(38618);
-let d = new Set(),
-    f = {};
-function _() {
-    d.clear();
+    l,
+    r,
+    a = n(106351),
+    d = n(442837),
+    o = n(570140),
+    h = n(38618);
+let u = new Set(),
+    c = {};
+function C() {
+    u.clear();
 }
-function p(e) {
-    d.delete(e.guild.id);
+function g(e) {
+    u.delete(e.guild.id);
 }
-class h extends (r = l.ZP.Store) {
+class p extends (i = d.ZP.Store) {
     getChannelStatus(e) {
         var t;
         if (null != e && null != e.guild_id) {
-            if (e.type === o.d.GUILD_VOICE) return !d.has(e.guild_id) && (d.add(e.guild_id), c.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = f[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
+            if (e.type === a.d.GUILD_VOICE) return !u.has(e.guild_id) && (u.add(e.guild_id), h.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = c[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
         }
     }
 }
-(s = 'ChannelStatusStore'),
-    (a = 'displayName') in (i = h)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(r = 'ChannelStatusStore'),
+    (l = 'displayName') in (s = p)
+        ? Object.defineProperty(s, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new h(u.Z, {
-        GUILD_CREATE: p,
-        GUILD_DELETE: p,
-        CONNECTION_RESUMED: _,
-        CONNECTION_OPEN: _,
+        : (s[l] = r),
+    (t.Z = new p(o.Z, {
+        GUILD_CREATE: g,
+        GUILD_DELETE: g,
+        CONNECTION_RESUMED: C,
+        CONNECTION_OPEN: C,
         VOICE_CHANNEL_STATUS_UPDATE: function (e) {
-            null == f[e.guildId] && (f[e.guildId] = {}), (f[e.guildId][e.id] = e.status);
+            null == c[e.guildId] && (c[e.guildId] = {}), (c[e.guildId][e.id] = e.status);
         },
         CHANNEL_STATUSES: function (e) {
-            for (let { id: t, status: n } of ((f[e.guildId] = {}), e.channels)) f[e.guildId][t] = n;
+            for (let { id: t, status: n } of ((c[e.guildId] = {}), e.channels)) c[e.guildId][t] = n;
         }
     }));

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return Z;
     }
 }),
     n(47120);
@@ -25,10 +25,10 @@ var i = n(200651),
     I = n(37113),
     E = n(388032),
     b = n(277865),
-    Z = n(454120);
-function N(e) {
-    let { buttonRef: t, channel: r, userId: N, streaming: S, onClose: T } = e,
-        j = (0, o.e7)([g.default], () => g.default.getUser(N)),
+    N = n(454120);
+function Z(e) {
+    let { buttonRef: t, channel: r, userId: Z, streaming: S, onClose: T } = e,
+        j = (0, o.e7)([g.default], () => g.default.getUser(Z)),
         A = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         y = (0, o.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
         P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(r.id)),
@@ -125,7 +125,7 @@ function N(e) {
                                 }),
                                 (0, i.jsx)('img', {
                                     className: b.potion,
-                                    src: Z,
+                                    src: N,
                                     alt: ''
                                 })
                             ]

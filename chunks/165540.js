@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(605236),
     E = n(819640),
     b = n(291407),
-    Z = n(61356),
-    N = n(981631),
+    N = n(61356),
+    Z = n(981631),
     S = n(314734),
     T = n(921944),
     j = n(388032),
@@ -40,7 +40,7 @@ let P = l.forwardRef(function (e, t) {
         [C]
     );
     let v = l.useCallback(() => {
-        (0, u.yw)(N.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(f.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: T.L.TAKE_ACTION }), h.__(f._b.TEXT, n)), x();
+        (0, u.yw)(Z.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.yT(f.ti.DISMISSED) : ((0, I.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: T.L.TAKE_ACTION }), h.__(f._b.TEXT, n)), x();
     }, [p, n, x]);
     return (0, i.jsx)('div', {
         className: a()(A.buttonContainer, S.t4),
@@ -127,7 +127,7 @@ t.Z = l.memo(function (e) {
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? x.Z.getActiveCommand(t.id) : null };
         }),
         u = p.T.useExperiment({ location: 'chat_input' }, { autoTrackExposure: !0 }).enabled,
-        h = (0, Z.Z)({ type: n }),
+        h = (0, N.Z)({ type: n }),
         f = (0, _.h9)(t.id, 'ChannelAppLauncher'),
         g = (0, s.e7)([m.Z], () => m.Z.appDMChannelsWithFailedLoads().has(t.id));
     return u && null == d && c

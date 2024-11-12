@@ -3,16 +3,16 @@ n.d(i, {
         return g;
     },
     Ny: function () {
-        return A;
+        return o;
     },
     WV: function () {
         return P;
     },
     WW: function () {
-        return S;
+        return e;
     },
     _u: function () {
-        return M;
+        return a;
     },
     aW: function () {
         return N;
@@ -24,7 +24,7 @@ n.d(i, {
         return s;
     },
     uu: function () {
-        return a;
+        return M;
     },
     vq: function () {
         return _;
@@ -33,7 +33,7 @@ n.d(i, {
         return T;
     },
     zO: function () {
-        return o;
+        return A;
     }
 }),
     n(653041);
@@ -50,10 +50,10 @@ function r(t) {
         t
     );
 }
-function e(t, i) {
+function S(t, i) {
     return t.map((t) => i[t.toString()]);
 }
-function S(t) {
+function e(t) {
     var i, n;
     return {
         [E.Pl.VIEW_CHANNEL.toString()]: {
@@ -320,9 +320,9 @@ function S(t) {
     };
 }
 function s(t) {
-    var i, n, s, o, A, _, P;
+    var i, n, s, A, o, _, P;
     let N,
-        T = S(t);
+        T = e(t);
     let g = [
         (function (t, i) {
             let n = [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES, E.Pl.CREATE_GUILD_EXPRESSIONS, E.Pl.MANAGE_GUILD_EXPRESSIONS, E.Pl.VIEW_AUDIT_LOG, E.Pl.VIEW_GUILD_ANALYTICS];
@@ -332,7 +332,7 @@ function s(t) {
                 n.push(E.Pl.MANAGE_GUILD),
                 r({
                     title: l.intl.string(l.t['mYck+P']),
-                    permissions: e(n, t)
+                    permissions: S(n, t)
                 })
             );
         })(T, t),
@@ -340,7 +340,7 @@ function s(t) {
             let i = [E.Pl.CREATE_INSTANT_INVITE, E.Pl.CHANGE_NICKNAME, E.Pl.MANAGE_NICKNAMES, E.Pl.KICK_MEMBERS, E.Pl.BAN_MEMBERS, E.Pl.MODERATE_MEMBERS];
             return r({
                 title: l.intl.string(l.t.Ny49TE),
-                permissions: e(i, t)
+                permissions: S(i, t)
             });
         })(T),
         ((i = T),
@@ -350,44 +350,44 @@ function s(t) {
         !n.showClydeAIPermissions && (N = N.filter((t) => t !== E.Pl.USE_CLYDE_AI)),
         r({
             title: l.intl.string(l.t.cKobOz),
-            permissions: e(N, i)
+            permissions: S(N, i)
         })),
         (function (t, i) {
             let n = [E.Pl.CONNECT, E.Pl.SPEAK, E.Pl.STREAM, E.Pl.USE_SOUNDBOARD, E.Pl.USE_EXTERNAL_SOUNDS, E.Pl.USE_VAD, E.Pl.PRIORITY_SPEAKER, E.Pl.MUTE_MEMBERS, E.Pl.DEAFEN_MEMBERS, E.Pl.MOVE_MEMBERS, E.Pl.SET_VOICE_CHANNEL_STATUS];
             return r({
                 title: l.intl.string(l.t['46Ra1d']),
-                permissions: e(n, t)
+                permissions: S(n, t)
             });
         })(T, 0),
         (function (t) {
             let i = [E.Pl.USE_APPLICATION_COMMANDS, E.Pl.USE_EMBEDDED_ACTIVITIES, E.Pl.USE_EXTERNAL_APPS];
             return r({
                 title: l.intl.string(l.t['rrh/W1']),
-                permissions: e(i, t)
+                permissions: S(i, t)
             });
         })(T)
     ];
     if (t.showStageChannelPermissions) {
         g.push(
             ((s = T),
-            (o = t),
+            (A = t),
             r(
                 {
                     title: l.intl.string(l.t.yniaur),
-                    permissions: e([E.Pl.REQUEST_TO_SPEAK], s)
+                    permissions: S([E.Pl.REQUEST_TO_SPEAK], s)
                 },
-                o.showExperimental
+                A.showExperimental
             ))
         );
     }
     return (
         g.push(
-            ((A = T),
+            ((o = T),
             (_ = t),
             r(
                 {
                     title: l.intl.string(l.t.b8lplZ),
-                    permissions: e([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], A)
+                    permissions: S([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], o)
                 },
                 _.showExperimental
             ))
@@ -396,23 +396,23 @@ function s(t) {
             ((P = T),
             r({
                 title: l.intl.string(l.t['3uI5CQ']),
-                permissions: e([E.Pl.ADMINISTRATOR], P)
+                permissions: S([E.Pl.ADMINISTRATOR], P)
             }))
         ),
         g
     );
 }
-function o(t, i) {
+function A(t, i) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
     return {
         title: i,
-        permissions: e((null == n ? void 0 : n.showManageWebhooks) ? [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES, E.Pl.MANAGE_WEBHOOKS] : [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES], t)
+        permissions: S((null == n ? void 0 : n.showManageWebhooks) ? [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES, E.Pl.MANAGE_WEBHOOKS] : [E.Pl.VIEW_CHANNEL, E.Pl.MANAGE_CHANNELS, E.Pl.MANAGE_ROLES], t)
     };
 }
-function A(t, i) {
+function o(t, i) {
     return {
         title: i,
-        permissions: e([E.Pl.CREATE_INSTANT_INVITE], t)
+        permissions: S([E.Pl.CREATE_INSTANT_INVITE], t)
     };
 }
 function _(t, i, n) {
@@ -425,14 +425,14 @@ function _(t, i, n) {
         {
             title: i,
             description: n.sectionDescription,
-            permissions: e(l, t)
+            permissions: S(l, t)
         }
     );
 }
 function P(t, i) {
     return {
         title: i,
-        permissions: e([E.Pl.CONNECT, E.Pl.SPEAK, E.Pl.STREAM, E.Pl.USE_SOUNDBOARD, E.Pl.USE_EXTERNAL_SOUNDS, E.Pl.USE_VAD, E.Pl.PRIORITY_SPEAKER, E.Pl.MUTE_MEMBERS, E.Pl.DEAFEN_MEMBERS, E.Pl.MOVE_MEMBERS, E.Pl.SET_VOICE_CHANNEL_STATUS], t)
+        permissions: S([E.Pl.CONNECT, E.Pl.SPEAK, E.Pl.STREAM, E.Pl.USE_SOUNDBOARD, E.Pl.USE_EXTERNAL_SOUNDS, E.Pl.USE_VAD, E.Pl.PRIORITY_SPEAKER, E.Pl.MUTE_MEMBERS, E.Pl.DEAFEN_MEMBERS, E.Pl.MOVE_MEMBERS, E.Pl.SET_VOICE_CHANNEL_STATUS], t)
     };
 }
 function N(t, i, n) {
@@ -442,34 +442,34 @@ function N(t, i, n) {
         {
             title: i,
             description: n.sectionDescription,
-            permissions: e(l, t)
+            permissions: S(l, t)
         }
     );
 }
 function T(t, i) {
     return {
         title: i,
-        permissions: e([E.Pl.USE_APPLICATION_COMMANDS, E.Pl.USE_EMBEDDED_ACTIVITIES, E.Pl.USE_EXTERNAL_APPS], t)
+        permissions: S([E.Pl.USE_APPLICATION_COMMANDS, E.Pl.USE_EMBEDDED_ACTIVITIES, E.Pl.USE_EXTERNAL_APPS], t)
     };
 }
 function g(t, i, n) {
     return {
         title: i,
-        permissions: e(n ? [E.Pl.CONNECT, E.Pl.STREAM, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS] : [E.Pl.CONNECT, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS], t)
+        permissions: S(n ? [E.Pl.CONNECT, E.Pl.STREAM, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS] : [E.Pl.CONNECT, E.Pl.MUTE_MEMBERS, E.Pl.MOVE_MEMBERS], t)
     };
 }
 function I(t, i) {
     return {
         title: i,
-        permissions: e([E.Pl.REQUEST_TO_SPEAK, E.Pl.MENTION_EVERYONE], t)
+        permissions: S([E.Pl.REQUEST_TO_SPEAK, E.Pl.MENTION_EVERYONE], t)
     };
 }
-function a(t, i) {
+function M(t, i) {
     return {
         title: i,
-        permissions: e([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], t)
+        permissions: S([E.Pl.CREATE_EVENTS, E.Pl.MANAGE_EVENTS], t)
     };
 }
-function M(t) {
+function a(t) {
     return null == t ? t : 'string' == typeof t ? t.trim() : 'function' == typeof t ? l.intl.format(t, {}) : t;
 }

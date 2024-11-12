@@ -26,8 +26,8 @@ var i = n(200651),
     I = n(367907),
     E = n(906732),
     b = n(493324),
-    Z = n(611064),
-    N = n(677432),
+    N = n(611064),
+    Z = n(677432),
     S = n(178762),
     T = n(868671),
     j = n(82295),
@@ -335,8 +335,8 @@ class et extends l.Component {
                 let { section: t } = e,
                     { groups: n, channel: r } = this.props,
                     a = n[t];
-                return (0, Z.R)(a)
-                    ? (0, l.createElement)(Z.Z, {
+                return (0, N.R)(a)
+                    ? (0, l.createElement)(N.Z, {
                           ...a,
                           key: 'section-'.concat(t)
                       })
@@ -409,7 +409,7 @@ class et extends l.Component {
                             )
                         );
                     }
-                    if (a.type === O.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(N.Z, {}, 'content-inventory-hidden-entry');
+                    if (a.type === O.so.HIDDEN_CONTENT_INVENTORY) return (0, i.jsx)(Z.Z, {}, 'content-inventory-hidden-entry');
                 }
                 return (0, i.jsx)(ee, { index: l }, 'placeholder-'.concat(t, ':').concat(n));
             }),
@@ -428,7 +428,7 @@ class et extends l.Component {
             ),
             K(this, 'getContentFeedGroup', () => {
                 let e = this.props.groups[T.T];
-                if ((0, Z.R)(e)) return e;
+                if ((0, N.R)(e)) return e;
             }),
             K(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
             K(this, 'getRowHeightComputer', () => {

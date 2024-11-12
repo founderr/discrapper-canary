@@ -19,8 +19,8 @@ var i = n(200651),
     I = n(223135),
     E = n(625938),
     b = n(981631),
-    Z = n(388032),
-    N = n(470154);
+    N = n(388032),
+    Z = n(470154);
 t.Z = (e) => {
     let { hangStatusActivity: t, userId: r, channel: S, previewIsOpen: T } = e,
         { enableHangStatus: j } = x.n.useExperiment({
@@ -52,7 +52,7 @@ t.Z = (e) => {
     j && null != y)
         ? A === r
             ? (0, i.jsx)('div', {
-                  className: a()(N.popoutWrapper, { [N.mounted]: T }),
+                  className: a()(Z.popoutWrapper, { [Z.mounted]: T }),
                   children: (0, i.jsx)(E.y, {
                       currentStatus: t,
                       channel: S
@@ -61,46 +61,46 @@ t.Z = (e) => {
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: a()(N.popoutWrapper, { [N.mounted]: T }),
+                    className: a()(Z.popoutWrapper, { [Z.mounted]: T }),
                     children: (0, i.jsxs)('div', {
-                        className: N.popout,
+                        className: Z.popout,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: N.contentContainer,
+                                className: Z.contentContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: N.statusGroup,
+                                        className: Z.statusGroup,
                                         children: [
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
-                                                children: Z.intl.string(Z.t['74vS//'])
+                                                children: N.intl.string(N.t['74vS//'])
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
-                                                className: N.statusText,
+                                                className: Z.statusText,
                                                 children: (0, v.O8)(t)
                                             })
                                         ]
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: N.iconGroup,
+                                        className: Z.iconGroup,
                                         children: [
                                             (0, i.jsx)(I.Z, {
-                                                className: N.statusIcon,
+                                                className: Z.statusIcon,
                                                 hangStatusActivity: t
                                             }),
                                             (0, i.jsxs)('div', {
-                                                className: N.avatarWrapper,
+                                                className: Z.avatarWrapper,
                                                 children: [
                                                     (0, i.jsx)(o.Avatar, {
-                                                        className: N.avatar,
+                                                        className: Z.avatar,
                                                         size: o.AvatarSizes.SIZE_40,
                                                         src: k,
                                                         'aria-hidden': !0
                                                     }),
-                                                    (0, i.jsx)('div', { className: N.outline })
+                                                    (0, i.jsx)('div', { className: Z.outline })
                                                 ]
                                             })
                                         ]
@@ -109,7 +109,7 @@ t.Z = (e) => {
                             }),
                             !P && M
                                 ? (0, i.jsx)(o.Button, {
-                                      className: N.cta,
+                                      className: Z.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           !P &&
@@ -121,12 +121,12 @@ t.Z = (e) => {
                                                   channel_id: S.id
                                               }));
                                       },
-                                      children: Z.intl.string(Z.t['B/dHXF'])
+                                      children: N.intl.string(N.t['B/dHXF'])
                                   })
                                 : null,
                             P && R
                                 ? (0, i.jsx)(o.Button, {
-                                      className: N.cta,
+                                      className: Z.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
@@ -147,7 +147,7 @@ t.Z = (e) => {
                                                   media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },
-                                      children: Z.intl.string(Z.t.xcVcFR)
+                                      children: N.intl.string(N.t.xcVcFR)
                                   })
                                 : null
                         ]
