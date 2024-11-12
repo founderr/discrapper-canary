@@ -12,7 +12,7 @@ n.Z = (e) => {
     let { selectedSkuId: n, validateSelectedGift: t, className: f } = e,
         p = (0, a.Wu)([s.Z], () => s.Z.getFriendIDs()),
         m = (0, a.Wu)([d.default], () => d.default.filter((e) => p.includes(e.id) && !e.bot), [p]),
-        { giftRecipient: g, setGiftRecipient: _ } = (0, l.wD)();
+        { giftRecipient: _, setGiftRecipient: g } = (0, l.wD)();
     return null == n
         ? null
         : (0, i.jsxs)('div', {
@@ -28,9 +28,9 @@ n.Z = (e) => {
                                     user: e.value,
                                     size: r.AvatarSizes.SIZE_20
                                 }),
-                      value: g,
+                      value: _,
                       onChange: (e) => {
-                          t(e, n), _(e);
+                          t(e, n), g(e);
                       },
                       options: m.map((e) => ({
                           value: e,

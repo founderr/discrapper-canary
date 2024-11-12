@@ -15,13 +15,13 @@ var i = t(200651),
     f = t(331042),
     p = t(372654),
     m = t(987209),
-    g = t(563132),
-    _ = t(179118),
+    _ = t(563132),
+    g = t(179118),
     b = t(614277),
     h = t(698708);
 function x(e) {
     let { handleClose: n, confettiCanvas: t, hideConfetti: a = !1, analyticsLocations: r } = e,
-        { skusById: s, selectedSkuId: c, application: u } = (0, g.usePaymentContext)(),
+        { skusById: s, selectedSkuId: c, application: u } = (0, _.usePaymentContext)(),
         p = (0, l.e7)([d.Z], () => d.Z.getProduct(c));
     o()(null != c, 'Expected selectedSkuId'), o()(null != u, 'Expected application');
     let m = s[c];
@@ -44,14 +44,14 @@ function C(e) {
     let { isGift: n, giftCode: t, selectedGiftStyle: r, hasSentMessage: o, giftRecipient: f, giftMessageError: b, isSendingMessage: h } = (0, m.wD)(),
         C = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
         v = a.useRef(null),
-        { selectedSkuId: S } = (0, g.usePaymentContext)(),
-        I = (0, l.e7)([d.Z], () => d.Z.getProduct(S)),
-        { confettiColors: j } = (0, c.Z)(null == I ? void 0 : I.styles);
+        { selectedSkuId: I } = (0, _.usePaymentContext)(),
+        S = (0, l.e7)([d.Z], () => d.Z.getProduct(I)),
+        { confettiColors: T } = (0, c.Z)(null == S ? void 0 : S.styles);
     return n
         ? (0, i.jsxs)('div', {
               ref: v,
               children: [
-                  (0, i.jsx)(_.Z, {
+                  (0, i.jsx)(g.Z, {
                       giftCode: t,
                       onClose: e.handleClose,
                       selectedGiftStyle: r,
@@ -65,8 +65,8 @@ function C(e) {
                       (0, i.jsx)(u.Z, {
                           confettiTarget: v.current,
                           confettiCanvas: e.confettiCanvas,
-                          sprites: (0, p.vK)(null == I ? void 0 : I.categorySkuId),
-                          colors: null == j ? void 0 : j.map((e) => e.toHexString())
+                          sprites: (0, p.vK)(null == S ? void 0 : S.categorySkuId),
+                          colors: null == T ? void 0 : T.map((e) => e.toHexString())
                       })
               ]
           })

@@ -16,30 +16,30 @@ var i = t(200651),
     f = t(987209),
     p = t(563132),
     m = t(409813),
-    g = t(791785),
-    _ = t(961830),
+    _ = t(791785),
+    g = t(961830),
     b = t(742956),
     h = t(346790),
     x = t(49308),
     C = t(117652),
     v = t(126982),
-    S = t(981631),
-    I = t(302800),
-    j = t(215023),
-    T = t(231338),
+    I = t(981631),
+    S = t(302800),
+    T = t(215023),
+    j = t(231338),
     y = t(556709);
 function E(e) {
     var n;
-    let { onClose: t, onComplete: r, onStepChange: E, transitionState: N, loadId: k, skuId: P, isGift: B = !1, giftRecipient: A, giftMessage: Z, giftingOrigin: w, analyticsLocations: O, returnRef: M } = e,
-        { analyticsLocations: R } = (0, c.ZP)([...O, d.Z.COLLECTIBLES_PAYMENT_MODAL]),
-        G = a.useRef(new l.qA()),
-        [L, D] = a.useState(null),
+    let { onClose: t, onComplete: r, onStepChange: E, transitionState: N, loadId: k, skuId: P, isGift: B = !1, giftRecipient: A, giftMessage: Z, giftingOrigin: O, analyticsLocations: w, returnRef: M } = e,
+        { analyticsLocations: R } = (0, c.ZP)([...w, d.Z.COLLECTIBLES_PAYMENT_MODAL]),
+        L = a.useRef(new l.qA()),
+        [G, D] = a.useState(null),
         [H, F] = a.useState(!1),
-        W = a.useMemo(() => (0, I.UY)(P), [P]),
-        z = (0, s.Wu)([u.Z], () => u.Z.recommendedGiftSkuIds, []),
-        U = null != P ? [P] : z,
-        V = null !== (n = U[0]) && void 0 !== n ? n : null,
-        Y = null != P && j.Rm.has(P),
+        W = a.useMemo(() => (0, S.UY)(P), [P]),
+        U = (0, s.Wu)([u.Z], () => u.Z.recommendedGiftSkuIds, []),
+        z = null != P ? [P] : U,
+        V = null !== (n = z[0]) && void 0 !== n ? n : null,
+        Y = null != P && T.Rm.has(P),
         q = a.useCallback(() => {
             F(!0), null == r || r();
         }, [r]),
@@ -51,17 +51,17 @@ function E(e) {
         ),
         K = a.useMemo(
             () => [
-                _.WA,
+                g.WA,
                 C.Dd,
                 h.n,
-                ..._.yp,
-                _.wo,
+                ...g.yp,
+                g.wo,
                 {
                     key: m.h8.CONFIRM,
                     renderStep: (e) =>
                         (0, i.jsx)(x.x, {
                             ...e,
-                            confettiCanvas: L,
+                            confettiCanvas: G,
                             analyticsLocations: R,
                             hideConfetti: null != W
                         }),
@@ -71,7 +71,7 @@ function E(e) {
                     }
                 }
             ],
-            [R, L, W]
+            [R, G, W]
         );
     return (0, i.jsxs)(c.Gt, {
         value: R,
@@ -79,7 +79,7 @@ function E(e) {
             (0, i.jsx)(l.O_, {
                 ref: D,
                 className: y.confettiCanvas,
-                environment: G.current
+                environment: L.current
             }),
             null != W &&
                 (0, i.jsx)('img', {
@@ -92,20 +92,20 @@ function E(e) {
             (0, i.jsx)(p.PaymentContextProvider, {
                 loadId: k,
                 stepConfigs: K,
-                applicationId: S.XAJ,
-                skuIDs: U,
+                applicationId: I.XAJ,
+                skuIDs: z,
                 isGift: B,
                 activeSubscription: null,
-                purchaseType: T.GZ.ONE_TIME,
+                purchaseType: j.GZ.ONE_TIME,
                 children: (0, i.jsx)(f.KB, {
                     isGift: B,
                     giftRecipient: A,
                     giftMessage: Z,
-                    giftingOrigin: w,
-                    children: (0, i.jsx)(g.PaymentModal, {
+                    giftingOrigin: O,
+                    children: (0, i.jsx)(_.PaymentModal, {
                         onClose: J,
                         onComplete: q,
-                        applicationId: S.XAJ,
+                        applicationId: I.XAJ,
                         skuId: V,
                         initialPlanId: null,
                         analyticsLocations: R,
@@ -115,7 +115,7 @@ function E(e) {
                                 ? (0, i.jsx)(b.Z, {
                                       step: t,
                                       onClose: () => n(!1),
-                                      giftingOrigin: w
+                                      giftingOrigin: O
                                   })
                                 : (0, i.jsx)(v.Z, {
                                       step: t,

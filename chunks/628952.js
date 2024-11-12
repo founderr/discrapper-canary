@@ -12,15 +12,15 @@ var a = t(120356),
     f = t(921813),
     p = t(731896),
     m = t(484459),
-    g = t(594174),
-    _ = t(937615),
+    _ = t(594174),
+    g = t(937615),
     b = t(583434),
     h = t(388032),
     x = t(696307),
     C = t(223223);
 let v = (e) => {
         let { avatarDecoration: n } = e,
-            t = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+            t = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
             { avatarDecorationSrc: a } = (0, c.Z)({
                 user: t,
                 avatarDecorationOverride: n,
@@ -32,7 +32,7 @@ let v = (e) => {
             className: x.avatarDecoration
         });
     },
-    S = (e) => {
+    I = (e) => {
         var n;
         let { profileEffect: t } = e,
             a = (0, p.V)(t.id),
@@ -56,11 +56,11 @@ let v = (e) => {
 n.Z = (e) => {
     let { skuId: n, skuPricePreview: t, isSelected: a, onSelect: d, shouldDisplayHeader: c = !1, className: p } = e,
         { product: C } = (0, b.T)(n),
-        { giftRecipient: I, giftRecipientError: j } = (0, u.wD)(),
-        T = (0, l.e7)([g.default], () => g.default.getCurrentUser());
+        { giftRecipient: S, giftRecipientError: T } = (0, u.wD)(),
+        j = (0, l.e7)([_.default], () => _.default.getCurrentUser());
     if (null == C || null == t) return null;
     let [y] = C.items,
-        E = null != I && I.id !== (null == T ? void 0 : T.id);
+        E = null != S && S.id !== (null == j ? void 0 : j.id);
     return (0, i.jsxs)('div', {
         className: p,
         children: [
@@ -76,12 +76,12 @@ n.Z = (e) => {
                             (0, i.jsx)(
                                 s.Popout,
                                 {
-                                    preload: () => (0, m.Z)(I.id, I.getAvatarURL(null, 80)),
+                                    preload: () => (0, m.Z)(S.id, S.getAvatarURL(null, 80)),
                                     renderPopout: (e) =>
                                         (0, i.jsx)(f.Z, {
                                             ...e,
-                                            user: I,
-                                            pendingAvatar: I.getAvatarURL(null, (0, s.getAvatarSize)(s.AvatarSizes.SIZE_80)),
+                                            user: S,
+                                            pendingAvatar: S.getAvatarURL(null, (0, s.getAvatarSize)(s.AvatarSizes.SIZE_80)),
                                             pendingAvatarDecoration: y.type === o.Z.AVATAR_DECORATION ? y : null,
                                             pendingProfileEffectId: y.type === o.Z.PROFILE_EFFECT ? y.id : null,
                                             canUsePremiumCustomization: !0,
@@ -100,7 +100,7 @@ n.Z = (e) => {
                                             })
                                         })
                                 },
-                                I.id
+                                S.id
                             )
                     ]
                 }),
@@ -110,15 +110,15 @@ n.Z = (e) => {
                     null != n && null != d && d(n);
                 },
                 className: r()(x.previewContainer, {
-                    [x.previewContainerSelected]: a && null == j,
-                    [x.previewContainerError]: a && null != j
+                    [x.previewContainerSelected]: a && null == T,
+                    [x.previewContainerError]: a && null != T
                 }),
                 children: [
                     (0, i.jsxs)('div', {
                         className: x.giftInfoContainer,
                         children: [
                             y.type === o.Z.AVATAR_DECORATION && (0, i.jsx)(v, { avatarDecoration: y }),
-                            y.type === o.Z.PROFILE_EFFECT && (0, i.jsx)(S, { profileEffect: y }),
+                            y.type === o.Z.PROFILE_EFFECT && (0, i.jsx)(I, { profileEffect: y }),
                             (0, i.jsxs)('div', {
                                 className: x.previewTextContainer,
                                 children: [
@@ -135,18 +135,18 @@ n.Z = (e) => {
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-md/semibold',
-                                children: (0, _.T4)(t.amount, t.currency)
+                                children: (0, g.T4)(t.amount, t.currency)
                             })
                         ]
                     }),
                     a &&
-                        null != j &&
+                        null != T &&
                         (0, i.jsx)('div', {
                             className: x.recipientError,
                             children: (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'status-danger-background',
-                                children: j
+                                children: T
                             })
                         })
                 ]

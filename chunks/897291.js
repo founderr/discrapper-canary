@@ -24,14 +24,14 @@ t.Z = i.memo(function (e) {
             ? (0, s.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([n.e('63288'), n.e('77298'), n.e('23357'), n.e('29549'), n.e('12013'), n.e('52249'), n.e('99783'), n.e('31605'), n.e('26182'), n.e('95900'), n.e('32776'), n.e('87624'), n.e('3994'), n.e('69425')]).then(n.bind(n, 435626));
                   return (t) =>
-                      e({
-                          analyticsLocations: m,
+                      (0, r.jsx)(e, {
                           analyticsObject: {
                               page: _.ZY5.DM_CHANNEL,
                               section: _.jXE.CHANNEL_TEXT_AREA,
                               object: _.qAy.BUTTON_ICON,
                               objectType: _.Qqv.GIFT
                           },
+                          analyticsLocations: m,
                           giftRecipient: g,
                           ...t
                       });
