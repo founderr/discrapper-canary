@@ -72,4 +72,5 @@ n.d(t, {
     (p[(p.ADD_SOUND = 1)] = 'ADD_SOUND'),
     ((m = u || (u = {}))[(m.GIFT_CODE = 0)] = 'GIFT_CODE'),
     (m[(m.SOUNDBOARD = 1)] = 'SOUNDBOARD'),
-    (m[(m.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL');
+    (m[(m.JOINED_VOICE_CHANNEL = 2)] = 'JOINED_VOICE_CHANNEL'),
+    (m[(m.SOUNDMOJI = 3)] = 'SOUNDMOJI');
