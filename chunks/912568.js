@@ -8,5 +8,6 @@ e.exports = {
     footer: 'footer_beafbd',
     anomaly: 'anomaly_beafbd',
     error: 'error_beafbd',
-    spinner: 'spinner_beafbd'
+    spinner: 'spinner_beafbd',
+    buttonCopy: 'buttonCopy_beafbd'
 };
