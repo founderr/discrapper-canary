@@ -1,12 +1,12 @@
-i.d(t, {
+e.d(t, {
     O: function () {
-        return E;
+        return o;
     }
 });
-var o = i(585483),
-    r = i(981631);
-let E = {
+var i = e(585483),
+    l = e(981631);
+let o = {
     binds: ['mod+g'],
     comboKeysBindGlobal: !0,
-    action: () => (o.S.dispatchToLastSubscribed(r.CkL.TOGGLE_GIF_PICKER), !1)
+    action: () => (i.S.dispatchToLastSubscribed(l.CkL.TOGGLE_GIF_PICKER), !1)
 };

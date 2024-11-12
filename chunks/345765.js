@@ -131,7 +131,7 @@ class M extends a.Z {
                 CONTENT_INVENTORY_INBOX_STALE: L,
                 SPOTIFY_NEW_TRACK: x,
                 GAME_PROFILE_OPEN: w,
-                OVERLAY_INITIALIZE: w
+                OVERLAY_READY: w
             }),
             n in t
                 ? Object.defineProperty(t, n, {

@@ -26,7 +26,7 @@ var r,
     v = n(304680),
     I = n(547727),
     S = n(710845),
-    T = n(811660),
+    T = n(631053),
     b = n(42352),
     y = n(148959),
     A = n(926951),
@@ -352,7 +352,7 @@ class es extends _.Z {
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats('sender', this.userId),
                                 ...this._soundshareStats.getStats(),
-                                device_performance_class: (0, T.R)()
+                                device_performance_class: (0, T.Z)()
                             });
                     }),
                 e.getInboundParticipants().forEach((t) => {
@@ -420,7 +420,7 @@ class es extends _.Z {
                 input_device_count: Object.keys(M.Z.getInputDevices()).length,
                 output_device: this.getOutputDeviceName(),
                 output_device_count: Object.keys(M.Z.getOutputDevices()).length,
-                device_performance_class: (0, T.R)(),
+                device_performance_class: (0, T.Z)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
                 parent_media_session_id: this.parentMediaSessionId,
                 audio_subsystem: M.Z.getMediaEngine().getAudioSubsystem(),

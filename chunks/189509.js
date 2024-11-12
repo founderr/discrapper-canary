@@ -1,14 +1,14 @@
-t.d(n, {
+e.d(t, {
     z: function () {
-        return a;
+        return r;
     }
 });
-var l = t(607070),
-    i = t(585483),
-    o = t(981631);
-let a = {
+var i = e(607070),
+    l = e(585483),
+    o = e(981631);
+let r = {
     binds: ['return'],
     action() {
-        if (!l.Z.keyboardModeEnabled && i.S.hasSubscribers(o.CkL.MODAL_SUBMIT)) return i.S.dispatch(o.CkL.MODAL_SUBMIT), !1;
+        if (!i.Z.keyboardModeEnabled && l.S.hasSubscribers(o.CkL.MODAL_SUBMIT)) return l.S.dispatch(o.CkL.MODAL_SUBMIT), !1;
     }
 };

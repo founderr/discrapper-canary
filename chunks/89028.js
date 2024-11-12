@@ -1,16 +1,16 @@
-i.d(t, {
+e.d(t, {
     f: function () {
-        return e;
+        return r;
     }
 });
-var o = i(2818),
-    r = i(585483),
-    E = i(981631);
-let e = {
+var i = e(2818),
+    l = e(585483),
+    o = e(981631);
+let r = {
     binds: ['mod+l'],
     comboKeysBindGlobal: !0,
     action() {
-        let { enabled: n, inInbox: t } = o.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
-        if (n && !t) return r.S.dispatch(E.CkL.TOGGLE_FOR_LATER), !1;
+        let { enabled: n, inInbox: t } = i.Z.getCurrentConfig({ location: 'keybinds' }, { autoTrackExposure: !1 });
+        if (n && !t) return l.S.dispatch(o.CkL.TOGGLE_FOR_LATER), !1;
     }
 };

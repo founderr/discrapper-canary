@@ -1,7 +1,7 @@
-var o = i(585483),
-    r = i(981631);
+var i = e(585483),
+    l = e(981631);
 t.Z = {
     binds: ['mod+shift+b'],
     comboKeysBindGlobal: !0,
-    action: () => (o.S.dispatch(r.CkL.TOGGLE_SOUNDBOARD), !1)
+    action: () => (i.S.dispatch(l.CkL.TOGGLE_SOUNDBOARD), !1)
 };

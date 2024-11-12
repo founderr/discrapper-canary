@@ -21,7 +21,7 @@ var o,
     A = n(435064),
     N = n(779618),
     C = n(710845),
-    R = n(811660),
+    R = n(535911),
     O = n(353926),
     D = n(646047),
     L = n(594190),
@@ -537,7 +537,7 @@ class tA extends (l = g.ZP.Store) {
                 let { simulcastEnabled: t, lqStreamBitrate: n } = k.Z.getConfig();
                 e.configureGoLiveSimulcast(t, n);
             }
-            if (((0, q.isWindows)() ? ((null == e3 ? void 0 : e3.startsWith('NVIDIA')) ? e.setExperimentFlag(e_.V8.SIGNAL_AV1, !0) : (null == e3 ? void 0 : e3.startsWith('AMD')) && w.Z.getCurrentConfig({ location: 'setupMediaEngine' }, { autoTrackExposure: !0 }).signalAV1Support ? e.setExperimentFlag(e_.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(e_.V8.SIGNAL_AV1_DECODE, !0)) : ((0, q.isMac)() || (0, q.isLinux)()) && e.setExperimentFlag(e_.V8.SIGNAL_AV1_DECODE, !0), (0, q.isWindows)() && e.setExperimentFlag(e_.V8.SIGNAL_AV1_HARDWARE_DECODE, !0), eT.setHasFullbandPerformance((0, R.b)()), e.setRemoteAudioHistory(0), (0, N.Z)(r))) {
+            if (((0, q.isWindows)() ? ((null == e3 ? void 0 : e3.startsWith('NVIDIA')) ? e.setExperimentFlag(e_.V8.SIGNAL_AV1, !0) : (null == e3 ? void 0 : e3.startsWith('AMD')) && w.Z.getCurrentConfig({ location: 'setupMediaEngine' }, { autoTrackExposure: !0 }).signalAV1Support ? e.setExperimentFlag(e_.V8.SIGNAL_AV1, !0) : e.setExperimentFlag(e_.V8.SIGNAL_AV1_DECODE, !0)) : ((0, q.isMac)() || (0, q.isLinux)()) && e.setExperimentFlag(e_.V8.SIGNAL_AV1_DECODE, !0), (0, q.isWindows)() && e.setExperimentFlag(e_.V8.SIGNAL_AV1_HARDWARE_DECODE, !0), eT.setHasFullbandPerformance((0, R.Z)()), e.setRemoteAudioHistory(0), (0, N.Z)(r))) {
                 let t = A.Z.getSettings();
                 e.setExperimentFlag(e_.V8.STREAMER_CLIP, t.clipsEnabled);
                 let { enableViewerClipping: n } = F.Z.getCurrentConfig({ location: 'f627ab_15' }, { autoTrackExposure: !1 });

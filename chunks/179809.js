@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return T;
     }
 }),
     n(47120);
@@ -25,19 +25,19 @@ var i = n(200651),
     I = n(662146),
     b = n(388032),
     S = n(115376),
-    Z = n(767573);
+    E = n(767573);
 let N = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    E = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
+    Z = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     y = (0, f.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
-function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: j = 0, unread: T = !1, defaultFolderName: P, useCircleMask: A = !1, draggable: M = !1, sorting: w = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
-        { id: G, name: B, children: V } = t,
-        [H, F] = l.useState(!1),
+function T(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: f, mentionCount: T = 0, unread: j = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: M = !1, sorting: R = !1, onDragStart: L, onDragEnd: w, onExpandCollapse: D, onContextMenu: O, renderChildNode: k, folderIconContent: U } = e,
+        { id: G, name: B, children: H } = t,
+        [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = H || W;
+        Y = V || W;
     l.useEffect(() => {
-        w && F(!1);
-    }, [w]);
+        R && F(!1);
+    }, [R]);
     let [{ dragging: K }, q] = (0, o.c)({
             type: m.eD.FOLDER,
             item: () => (
@@ -48,7 +48,7 @@ function j(e) {
                 }
             ),
             end() {
-                null == R || R(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
+                null == w || w(), (0, h.V1)(p.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -61,10 +61,10 @@ function j(e) {
             },
             [D, u]
         ),
-        X = null != B && '' !== B ? B : null != P && '' !== P ? P : b.intl.string(b.t.xV9hVl),
+        X = null != B && '' !== B ? B : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
         $ = (0, c.Ie)(''.concat(G)),
         ee = 'folder-items-'.concat(G),
-        et = V.length * (E + y),
+        et = H.length * (Z + y),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -76,29 +76,29 @@ function j(e) {
             children: [
                 (0, i.jsx)(g.Z, {
                     disabled: K || u,
-                    hovered: H,
+                    hovered: V,
                     selected: r,
-                    unread: T,
-                    className: Z.pill
+                    unread: j,
+                    className: E.pill
                 }),
                 (0, i.jsx)(I.Z, {
                     text: X,
-                    disabled: w,
+                    disabled: R,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: M ? q : void 0,
-                        className: a()({ [Z.wobble]: !K && W && !u }),
+                        className: a()({ [E.wobble]: !K && W && !u }),
                         'data-dnd-name': X,
                         children: K
                             ? (0, i.jsx)(v.Z, {})
                             : (0, i.jsx)(C.Z, {
                                   folderNode: t,
                                   expanded: u,
-                                  forceCircular: A,
-                                  sorting: w,
+                                  forceCircular: P,
+                                  sorting: R,
                                   mediaState: f,
-                                  mentionCount: j,
+                                  mentionCount: T,
                                   tooltipName: X,
                                   folderGroupId: ee,
                                   onClick: D,
@@ -142,7 +142,7 @@ function j(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: S.__invalid_expandedGuilds,
                             role: 'group',
-                            children: V.map(k)
+                            children: H.map(k)
                         },
                         l
                     )

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(592125),
-    a = n(944486),
-    r = n(585483),
+    r = n(944486),
+    a = n(585483),
     s = n(917107),
     o = n(89425),
     c = n(197386),
@@ -17,17 +17,17 @@ function u(e) {
         async function e(e) {
             let { channelId: n } = e;
             if (!(0, s.Z)(n)) return;
-            a.Z.getVoiceChannelId() !== n && (await (0, o.Z)({ channelId: n }));
+            r.Z.getVoiceChannelId() !== n && (await (0, o.Z)({ channelId: n }));
             let i = l.Z.getChannel(n),
-                r = null == i ? void 0 : i.guild_id;
+                a = null == i ? void 0 : i.guild_id;
             setTimeout(() => {
-                (0, c.Z)(r, n), null == t || t();
+                (0, c.Z)(a, n), null == t || t();
             }, 0);
         }
         return (
-            r.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e),
+            a.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e),
             () => {
-                r.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
+                a.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
             }
         );
     }, [t]);

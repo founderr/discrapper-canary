@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return T;
     }
 }),
     n(47120),
@@ -28,7 +28,7 @@ var l = n(120356),
     I = n(981631),
     b = n(388032),
     S = n(516126),
-    Z = n(64056);
+    E = n(64056);
 function N(e, t) {
     return 0 === t.length
         ? null
@@ -47,7 +47,7 @@ function N(e, t) {
               ]
           });
 }
-function E() {
+function Z() {
     var e, t;
     let n = (0, s.Wu)([x.Z, m.Z], () =>
             v.default
@@ -69,7 +69,7 @@ function E() {
                 ),
             [r]
         ),
-        Z = (0, s.Wu)([h.Z], () =>
+        E = (0, s.Wu)([h.Z], () =>
             o().flatMap(a, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
@@ -79,7 +79,7 @@ function E() {
                     })
             )
         ),
-        E = (0, s.e7)([h.Z], () => {
+        Z = (0, s.e7)([h.Z], () => {
             let e = 0;
             for (let t of a) e += h.Z.getParticipantCount(t, p.pV.AUDIENCE);
             return e;
@@ -92,7 +92,7 @@ function E() {
                     .map((e) => e.ownerId),
             [l]
         ),
-        j = (0, s.Wu)(
+        T = (0, s.Wu)(
             [u.ZP],
             () => {
                 let e = u.ZP.getEmbeddedActivitiesByChannel(),
@@ -105,15 +105,15 @@ function E() {
             },
             [l]
         ),
-        T = (0, s.Wu)([g.default], () => j.map((e) => g.default.getUser(e)), [j]),
-        P = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
-        A = N(
+        j = (0, s.Wu)([g.default], () => T.map((e) => g.default.getUser(e)), [T]),
+        A = (0, s.Wu)([g.default], () => y.map((e) => g.default.getUser(e)), [y]),
+        P = N(
             c.VoiceNormalIcon,
-            b.filter((e) => !y.includes(e.id) && !j.includes(e.id))
+            b.filter((e) => !y.includes(e.id) && !T.includes(e.id))
         );
     let M =
-            ((e = Z),
-            (t = E),
+            ((e = E),
+            (t = Z),
             0 === e.length
                 ? null
                 : (0, i.jsxs)('div', {
@@ -146,13 +146,13 @@ function E() {
                           })
                       ]
                   })),
-        w = N(
+        R = N(
             c.ScreenArrowIcon,
-            P.filter((e) => null != e && !j.includes(e.id))
+            A.filter((e) => null != e && !T.includes(e.id))
         ),
-        L = N(c.ActivitiesIcon, T);
+        L = N(c.ActivitiesIcon, j);
     return (0, i.jsxs)(i.Fragment, {
-        children: [M, A, w, L]
+        children: [M, P, R, L]
     });
 }
 function y() {
@@ -165,11 +165,11 @@ function y() {
                     children: b.intl.string(b.t.wMWycn)
                 })
             }),
-            (0, i.jsx)(E, {})
+            (0, i.jsx)(Z, {})
         ]
     });
 }
-function j(e) {
+function T(e) {
     let { 'aria-label': t = !1, onShow: n, children: l } = e;
     return (0, i.jsx)(c.Tooltip, {
         hideOnClick: !0,
@@ -177,7 +177,7 @@ function j(e) {
         position: 'right',
         text: (0, i.jsx)(y, {}),
         'aria-label': t,
-        tooltipClassName: Z.listItemTooltip,
+        tooltipClassName: E.listItemTooltip,
         onTooltipShow: n,
         children: (e) =>
             (0, i.jsx)('div', {

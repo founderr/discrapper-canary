@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(990547),
-    r = n(731965),
+    r = n(990547),
+    a = n(731965),
     s = n(442837),
     o = n(704215),
     c = n(40851),
@@ -25,24 +25,24 @@ var i = n(200651),
     I = n(27457),
     E = n(251564),
     b = n(695492),
-    N = n(981631),
-    Z = n(922300);
+    Z = n(981631),
+    N = n(922300);
 function S(e) {
     let { participants: t, onClick: n, onDoubleClick: S, onContextMenu: T, channel: j, className: A, inCall: y, totalNumberOfParticipants: P, paused: M = !1 } = e,
-        R = (0, c.bp)() === N.IlC.POPOUT,
+        R = (0, c.bp)() === Z.IlC.POPOUT,
         L = (0, s.e7)([x.Z], () => x.Z.getGuild(j.guild_id), [j.guild_id]),
         { dismissedActivityEntryPointTileChannel: k } = (0, E.d)(),
         O = (0, s.e7)([p.Z], () => p.Z.getUserParticipantCount(j.id), [j]),
         D = (0, C.bt)(j.id, t),
         w = l.useCallback(() => {
-            (0, r.j)(() => {
+            (0, a.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: j.id });
             });
         }, [j.id]);
     l.useEffect(() => {
         null != k &&
             j.id !== k &&
-            (0, r.j)(() => {
+            (0, a.j)(() => {
                 E.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [j.id, k]);
@@ -60,7 +60,7 @@ function S(e) {
                     {
                         participant: e,
                         channel: j,
-                        className: Z.tile,
+                        className: N.tile,
                         paused: M,
                         onClick: n,
                         onDoubleClick: S,
@@ -74,8 +74,8 @@ function S(e) {
         );
     (0, h.Z)(
         {
-            type: a.ImpressionTypes.VIEW,
-            name: a.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
+            type: r.ImpressionTypes.VIEW,
+            name: r.ImpressionNames.CHANNEL_CALL_VIDEO_GRID_VIEW,
             properties: {
                 total_participants: P,
                 can_invite: B,

@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return v;
     }
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    r = n(954955),
-    l = n.n(r),
-    s = n(772848),
-    a = n(902704),
+    r = n(192379),
+    l = n(954955),
+    o = n.n(l),
+    a = n(772848),
+    s = n(902704),
     u = n(13245),
     c = n(928518),
     d = n(358085),
@@ -37,7 +37,7 @@ function m(e, t) {
         bottom: Math.ceil(t.bottom)
     };
 }
-let v = o.createContext(
+let E = r.createContext(
     new (class e {
         observe(e) {
             var t;
@@ -55,7 +55,7 @@ let v = o.createContext(
             let i = e.getBoundingClientRect();
             this.zones.set(e, {
                 element: e,
-                zone: m(null !== (t = null == n ? void 0 : n.zone.name) && void 0 !== t ? t : (0, s.Z)(), i)
+                zone: m(null !== (t = null == n ? void 0 : n.zone.name) && void 0 !== t ? t : (0, a.Z)(), i)
             }),
                 this.elements.add(e),
                 this.resizeObserver.observe(e),
@@ -101,17 +101,17 @@ let v = o.createContext(
                 p(
                     this,
                     'globalUpdate',
-                    l()(
+                    o()(
                         () => {
                             let e = !1;
                             for (let [t, n] of this.zones) {
                                 let i = t.getBoundingClientRect(),
-                                    o = m(n.zone.name, i);
-                                if (!(0, a.Z)(o, n.zone))
+                                    r = m(n.zone.name, i);
+                                if (!(0, s.Z)(r, n.zone))
                                     (e = !0),
                                         (n = {
                                             element: n.element,
-                                            zone: o
+                                            zone: r
                                         }),
                                         this.zones.set(t, n);
                             }
@@ -128,29 +128,29 @@ let v = o.createContext(
         }
     })((0, h.i)())
 );
-function g(e) {
-    let { observe: t = !0, className: n, children: r } = e,
-        l = o.useContext(v),
-        [{ refHandler: s, setObserve: a }] = o.useState(() => {
+function v(e) {
+    let { observe: t = !0, className: n, children: l } = e,
+        o = r.useContext(E),
+        [{ refHandler: a, setObserve: s }] = r.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
-                    null != e && (t ? l.observe(e) : l.unobserve(e));
+                    null != e && (t ? o.observe(e) : o.unobserve(e));
                 },
                 refHandler(t) {
-                    null != e && l.unobserve(e), (e = t);
+                    null != e && o.unobserve(e), (e = t);
                 }
             };
         });
     return (
-        o.useLayoutEffect(() => {
-            a(t);
-        }, [t, a]),
+        r.useLayoutEffect(() => {
+            s(t);
+        }, [t, s]),
         (0, i.jsx)('div', {
-            ref: s,
+            ref: a,
             className: n,
             'data-click-zone': !0,
-            children: r
+            children: l
         })
     );
 }

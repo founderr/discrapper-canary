@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    a = n(481060),
-    r = n(665149),
+    r = n(481060),
+    a = n(665149),
     s = n(853856),
     o = n(117984),
     c = n(593214),
@@ -21,9 +21,9 @@ function p(e) {
         { notifyFavoriteAdded: m } = (0, c.up)(),
         f = (0, l.e7)([s.Z], () => s.Z.isFavorite(t.id));
     if (!n || p) return null;
-    let g = f ? a.StarIcon : a.StarOutlineIcon,
+    let g = f ? r.StarIcon : r.StarOutlineIcon,
         C = f ? h.intl.string(h.t.Bou7lZ) : h.intl.string(h.t['4wcdEx']);
-    return (0, i.jsx)(r.ZP.Icon, {
+    return (0, i.jsx)(a.ZP.Icon, {
         icon: g,
         tooltip: C,
         'aria-label': C,

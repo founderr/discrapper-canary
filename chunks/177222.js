@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(100621),
-    r = n(597312),
+    r = n(100621),
+    a = n(597312),
     s = n(481060),
     o = n(727637),
     c = n(410030),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(169979),
     E = n(451834),
     b = n(502762),
-    N = n(952124),
-    Z = n(544989),
+    Z = n(952124),
+    N = n(544989),
     S = n(481932),
     T = n(272510),
     j = n(171368),
@@ -79,20 +79,20 @@ function k(e) {
                     themeOverride: w,
                     children: [
                         null != V.interactionType &&
-                            (0, i.jsx)(a.animated.div, {
+                            (0, i.jsx)(r.animated.div, {
                                 style: z,
                                 className: L.backdrop
                             }),
-                        (0, i.jsxs)(r.u2, {
+                        (0, i.jsxs)(a.u2, {
                             children: [
-                                (0, i.jsxs)(Z.Z, {
+                                (0, i.jsxs)(N.Z, {
                                     profileType: P.y0.PANEL,
                                     children: [
                                         (0, i.jsx)(S.Z, {
                                             user: t,
                                             profileType: P.y0.PANEL
                                         }),
-                                        t.bot ? (0, i.jsx)(N.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
+                                        t.bot ? (0, i.jsx)(Z.Z, { user: t }) : (0, i.jsx)(T.Z, { user: t })
                                     ]
                                 }),
                                 (0, i.jsxs)('header', {

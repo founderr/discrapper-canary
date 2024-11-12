@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n(442837),
     c = n(475179),
@@ -42,48 +42,48 @@ function _(e) {
 }
 function I(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: l, mentionCount: a, isTyping: r, voiceChannelIsSelected: s } = _(n);
+        { unreadCount: l, mentionCount: r, isTyping: a, voiceChannelIsSelected: s } = _(n);
     return (0, i.jsx)(g.Z, {
         className: t,
         unreadCount: l,
-        mentionCount: a,
-        isTyping: r,
+        mentionCount: r,
+        isTyping: a,
         canBadge: s
     });
 }
 function E(e) {
     let t,
-        { channelId: n, className: a, showingClassName: s, onClick: u, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: g, ...E } = e,
+        { channelId: n, className: r, showingClassName: s, onClick: u, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: g, ...E } = e,
         { disabled: b } = E,
-        N = l.useRef(null),
-        Z = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
+        Z = l.useRef(null),
+        N = (0, o.e7)([d.Z], () => d.Z.getChatOpen(n), [n]),
         {
             isShowing: S,
             unreadCount: T,
             mentionCount: j
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: i } = _(e),
-                [a, r] = l.useState(!1);
+                [r, a] = l.useState(!1);
             return (
                 l.useEffect(() => {
-                    r(t > 0);
+                    a(t > 0);
                     let e = setTimeout(() => {
-                        r(!1);
+                        a(!1);
                     }, f.z);
                     return () => {
-                        clearTimeout(e), r(!1);
+                        clearTimeout(e), a(!1);
                     };
                 }, [t]),
                 {
-                    isShowing: a || n > 0 || i,
+                    isShowing: r || n > 0 || i,
                     unreadCount: t,
                     mentionCount: n
                 }
             );
         })(n),
         A = l.useCallback(() => {
-            null == u || u(), !Z && p && (null == g || g()), c.Z.updateChatOpen(n, !Z);
-        }, [n, Z, u, p, g]),
+            null == u || u(), !N && p && (null == g || g()), c.Z.updateChatOpen(n, !N);
+        }, [n, N, u, p, g]),
         y = l.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -96,7 +96,7 @@ function E(e) {
         ),
         P = l.useCallback(() => {
             var e;
-            null === (e = N.current) || void 0 === e || e.focus();
+            null === (e = Z.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
         event: x.CkL.FOCUS_CHAT_BUTTON,
@@ -122,18 +122,18 @@ function E(e) {
                 }
             );
         }, [M]);
-    let k = [(t = h && b ? v.intl.string(v.t.DPgc5u) : Z ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t['5KxXrK']))];
+    let k = [(t = h && b ? v.intl.string(v.t.DPgc5u) : N ? v.intl.string(v.t.nthdxM) : v.intl.string(v.t['5KxXrK']))];
     return (
         j > 0 && k.push(v.intl.formatToPlainString(v.t['3l1GOz'], { mentionCount: j })),
         T > 0 && k.push(v.intl.string(v.t.x5zAGR)),
         (0, i.jsx)(C.Z, {
-            buttonRef: N,
+            buttonRef: Z,
             onClick: A,
             label: t,
             'aria-label': k.join(', '),
             iconComponent: y,
             tooltipPosition: 'bottom',
-            wrapperClassName: r()(a, null != s && { [s]: S }),
+            wrapperClassName: a()(r, null != s && { [s]: S }),
             forceTooltipOpen: M,
             ...E
         })

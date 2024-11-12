@@ -20,26 +20,26 @@ var i = n(200651),
     I = n(963202),
     b = n(706590),
     S = n(940777),
-    Z = n(41776),
+    E = n(41776),
     N = n(905423),
-    E = n(802718),
+    Z = n(802718),
     y = n(796974),
-    j = n(271383),
-    T = n(430824),
-    P = n(771845),
-    A = n(358085),
+    T = n(271383),
+    j = n(430824),
+    A = n(771845),
+    P = n(358085),
     M = n(709054),
-    w = n(727258),
+    R = n(727258),
     L = n(605951),
-    R = n(474109),
+    w = n(474109),
     D = n(741616),
     O = n(187835),
     k = n(118122),
     U = n(193154),
     G = n(602147),
     B = n(773182),
-    V = n(222059),
-    H = n(751277),
+    H = n(222059),
+    V = n(751277),
     F = n(65721),
     W = n(843343),
     z = n(654142),
@@ -63,7 +63,7 @@ function $(e, t, n) {
     );
 }
 let ee = 56,
-    et = (0, A.isWindows)() ? 4 : (0, A.isMac)() ? 0 : 12,
+    et = (0, P.isWindows)() ? 4 : (0, P.isMac)() ? 0 : 12,
     en = ee - 16,
     ei = et + 10;
 class el {
@@ -165,17 +165,17 @@ class el {
     }
 }
 function er(e) {
-    let { disableAppDownload: t = A.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
-        [s] = (0, h.Wu)([P.ZP], () => {
-            let e = P.ZP.getGuildsTree();
+    let { disableAppDownload: t = P.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: o } = e,
+        [s] = (0, h.Wu)([A.ZP], () => {
+            let e = A.ZP.getGuildsTree();
             return [e, e.version];
         }),
-        d = (0, h.e7)([Z.Z], () => Z.Z.lurkingGuildIds()),
+        d = (0, h.e7)([E.Z], () => E.Z.lurkingGuildIds()),
         p = l.useMemo(() => (n ? [] : d), [d, n]),
-        g = (0, h.Wu)([T.Z, j.ZP], () => M.default.keys(T.Z.getGuilds()).filter((e) => j.ZP.isCurrentUserGuest(e))),
+        g = (0, h.Wu)([j.Z, T.ZP], () => M.default.keys(j.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
         C = p.concat(g),
         $ = (0, h.e7)([x.Z], () => x.Z.isFullscreenInContext()),
-        ee = (0, h.e7)([T.Z], () => T.Z.getGeoRestrictedGuilds()),
+        ee = (0, h.e7)([j.Z], () => j.Z.getGeoRestrictedGuilds()),
         [et, en] = l.useState(!1),
         ei = l.useCallback(() => en(!0), []),
         er = l.useCallback(() => en(!1), []),
@@ -239,9 +239,9 @@ function er(e) {
             animate: !1
         });
     }, [e_]);
-    function eZ(e) {
+    function eE(e) {
         switch (e.type) {
-            case w.eD.FOLDER:
+            case R.eD.FOLDER:
                 return (0, i.jsx)(
                     z.Z,
                     {
@@ -251,11 +251,11 @@ function er(e) {
                         sorting: et,
                         onDragStart: ei,
                         onDragEnd: er,
-                        renderChildNode: eZ
+                        renderChildNode: eE
                     },
                     e.id
                 );
-            case w.eD.GUILD:
+            case R.eD.GUILD:
                 return (0, i.jsx)(
                     Y.Z,
                     {
@@ -274,9 +274,9 @@ function er(e) {
     }
     (0, L.Z)(e_.scrollToGuild);
     let eN = s.getRoots(),
-        eE = (0, b.Z)(),
-        ey = (0, E.U)(),
-        ej = l.useCallback(
+        eZ = (0, b.Z)(),
+        ey = (0, Z.U)(),
+        eT = l.useCallback(
             (e) => {
                 let { onClick: t } = e;
                 return (0, i.jsx)(G.Z, {
@@ -288,7 +288,7 @@ function er(e) {
             },
             [eI, e_.guildDiscoveryRef]
         ),
-        eT = ee.map((e) =>
+        ej = ee.map((e) =>
             (0, i.jsx)(
                 U.Z,
                 {
@@ -314,7 +314,7 @@ function er(e) {
                         role: 'tree',
                         className: X.tree,
                         children: [
-                            (0, i.jsx)(R.Z, {
+                            (0, i.jsx)(w.Z, {
                                 ref: es,
                                 isVisible: e_.isItemVisible,
                                 onJumpTo: e_.handleJumpToGuild,
@@ -329,9 +329,9 @@ function er(e) {
                                 ref: e_.scrollerRef,
                                 onScroll: e_.handleScroll,
                                 children: [
-                                    (0, i.jsx)(V.u, {}),
-                                    eE ? (0, i.jsx)(S.Z, {}) : null,
-                                    (0, i.jsx)(H.Z, { isOnHubVerificationRoute: eb }),
+                                    (0, i.jsx)(H.u, {}),
+                                    eZ ? (0, i.jsx)(S.Z, {}) : null,
+                                    (0, i.jsx)(V.Z, { isOnHubVerificationRoute: eb }),
                                     (0, i.jsx)(D.Z, {}),
                                     ey,
                                     C.map((e) => (0, i.jsx)(q.Z, { guildId: e }, e)),
@@ -339,9 +339,9 @@ function er(e) {
                                     (0, i.jsx)(F.Z, {}),
                                     (0, i.jsx)('div', {
                                         'aria-label': J.intl.string(J.t['7hB4kp']),
-                                        children: eN.map(eZ)
+                                        children: eN.map(eE)
                                     }),
-                                    eT,
+                                    ej,
                                     n
                                         ? null
                                         : (0, i.jsx)(k.Z, {
@@ -359,15 +359,15 @@ function er(e) {
                             !n && eh
                                 ? (0, i.jsx)(B.LW, {
                                       hideGradient: eu,
-                                      children: (0, i.jsx)(B.KF, { children: ej })
+                                      children: (0, i.jsx)(B.KF, { children: eT })
                                   })
                                 : n
                                   ? null
                                   : (0, i.jsx)(B.LW, {
                                         hideGradient: eu,
-                                        children: ej({})
+                                        children: eT({})
                                     }),
-                            (0, i.jsx)(R.Z, {
+                            (0, i.jsx)(w.Z, {
                                 reverse: !0,
                                 ref: ec,
                                 isVisible: e_.isItemVisible,

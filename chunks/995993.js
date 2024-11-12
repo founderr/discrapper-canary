@@ -1,6 +1,6 @@
 n.d(t, {
     m: function () {
-        return Z;
+        return E;
     }
 });
 var i = n(200651),
@@ -24,21 +24,21 @@ var i = n(200651),
     I = n(490897),
     b = n(388032),
     S = n(718317);
-function Z(e) {
-    let { guild: t, selected: Z } = e,
+function E(e) {
+    let { guild: t, selected: E } = e,
         N = (0, h.Z)(t),
-        E = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        Z = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
         y = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        j = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
-        T = y.length > C.Cb,
-        P = (0, r.e7)([d.Z, m.ZP], () => {
+        T = (0, r.e7)([m.ZP], () => m.ZP.hasUnread(t.id, I.W.GUILD_ONBOARDING_QUESTION)),
+        j = y.length > C.Cb,
+        A = (0, r.e7)([d.Z, m.ZP], () => {
             let e = d.Z.lastFetchedAt(t.id),
                 n = m.ZP.lastMessageId(t.id, I.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = g.default.extractTimestamp(n);
             return null != e && e > i;
         }),
-        A = l.useCallback(() => {
+        P = l.useCallback(() => {
             (0, f.uL)(v.Z5c.CHANNEL(t.id, N ? x.oC.CUSTOMIZE_COMMUNITY : x.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         M = l.useCallback(
@@ -54,12 +54,12 @@ function Z(e) {
             },
             [t]
         ),
-        w = null;
+        R = null;
     return (
-        (!E || j || T) &&
-            !Z &&
-            !P &&
-            (w = (0, i.jsx)(s.TextBadge, {
+        (!Z || T || j) &&
+            !E &&
+            !A &&
+            (R = (0, i.jsx)(s.TextBadge, {
                 color: o.Z.colors.BADGE_BRAND_BG.css,
                 text: b.intl.string(b.t.y2b7CA),
                 className: S.newChannel
@@ -73,10 +73,10 @@ function Z(e) {
                     className: e
                 }),
             text: N ? b.intl.string(b.t.h9mGOD) : b.intl.string(b.t.et6wam),
-            selected: Z,
-            onClick: A,
+            selected: E,
+            onClick: P,
             onContextMenu: M,
-            trailing: w
+            trailing: R
         })
     );
 }

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(481060),
-    r = n(210975),
+    r = n(481060),
+    a = n(210975),
     s = n(158776),
     o = n(699516),
     c = n(594174),
@@ -23,21 +23,21 @@ function m(e) {
         g = (0, l.e7)([s.Z], () => s.Z.isMobileOnline(t)),
         C = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
         x = d.ZP.useUserTag(m),
-        v = (0, r.m$)({
+        v = (0, a.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.HiddenVisually, { children: h.intl.string(h.t.EJRzg4) }),
+            (0, i.jsx)(r.HiddenVisually, { children: h.intl.string(h.t.EJRzg4) }),
             null != m &&
                 !n &&
                 (0, i.jsx)('div', {
-                    children: (0, i.jsx)(a.Avatar, {
+                    children: (0, i.jsx)(r.Avatar, {
                         status: f,
                         isMobile: g,
                         className: p.avatar,
-                        size: a.AvatarSizes.SIZE_24,
+                        size: r.AvatarSizes.SIZE_24,
                         'aria-label': d.ZP.getName(m),
                         src: m.getAvatarURL(void 0, 24)
                     })
@@ -49,20 +49,20 @@ function m(e) {
                 className: null != e.handleClick ? p.cursorPointer : null,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(a.TooltipContainer, {
+                        (0, i.jsx)(r.TooltipContainer, {
                             text: x,
                             position: 'bottom',
                             children: null != C ? C : d.ZP.getName(m)
                         }),
                         v &&
-                            (0, i.jsx)(a.Tooltip, {
+                            (0, i.jsx)(r.Tooltip, {
                                 text: h.intl.string(h.t.QyZ4TU),
                                 children: (e) =>
-                                    (0, i.jsx)(a.ShieldLockIcon, {
+                                    (0, i.jsx)(r.ShieldLockIcon, {
                                         ...e,
                                         size: 'xs',
                                         'aria-label': h.intl.string(h.t.VHXh8f),
-                                        color: a.tokens.colors.INTERACTIVE_NORMAL,
+                                        color: r.tokens.colors.INTERACTIVE_NORMAL,
                                         className: p.secureFramesIcon
                                     })
                             })

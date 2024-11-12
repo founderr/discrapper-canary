@@ -140,7 +140,7 @@ class er extends (s = f.ZP.Store) {
                       $(t, n);
                   },
                   OVERLAY_MOUNTED: function (e) {
-                      let { nudge: t } = e,
+                      let { nudges: t } = e,
                           n = (function (e) {
                               switch (e.type) {
                                   case F.nc.GO_LIVE_VOICE:
@@ -152,7 +152,7 @@ class er extends (s = f.ZP.Store) {
                                   default:
                                       return (0, C.Z)(e);
                               }
-                          })(t);
+                          })(t[0]);
                       null != n &&
                           en(n, {
                               priority: 2,

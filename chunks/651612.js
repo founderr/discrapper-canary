@@ -6,8 +6,8 @@ n.d(t, {
     n(653041);
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n(442837),
+    r = n(392711),
+    a = n(442837),
     s = n(481060),
     o = n(481051),
     c = n(871499),
@@ -23,14 +23,14 @@ var i = n(200651),
 function v(e) {
     let { channelId: t, className: n, ...v } = e,
         _ = l.useRef(null),
-        I = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
+        I = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout() === f.MI.RESIZABLE),
         E = l.useCallback(() => {
             let e = I ? f.MI.NO_CHAT : f.MI.RESIZABLE;
             (0, p.gC)(e);
         }, [I]),
-        { unreadCount: b, mentionCount: N } = (function (e) {
-            let t = (0, r.e7)([u.Z], () => !(0, a.isEmpty)(u.Z.getTypingUsers(e)), [e]),
-                { unreadCount: n, mentionCount: i } = (0, r.cj)(
+        { unreadCount: b, mentionCount: Z } = (function (e) {
+            let t = (0, a.e7)([u.Z], () => !(0, r.isEmpty)(u.Z.getTypingUsers(e)), [e]),
+                { unreadCount: n, mentionCount: i } = (0, a.cj)(
                     [d.ZP],
                     () => ({
                         unreadCount: d.ZP.getUnreadCount(e),
@@ -44,19 +44,19 @@ function v(e) {
                 isTyping: t
             };
         })(t),
-        Z = l.useCallback(() => {
+        N = l.useCallback(() => {
             var e;
             null === (e = _.current) || void 0 === e || e.focus();
         }, []);
     (0, h.yp)({
         event: g.CkL.FOCUS_CHAT_BUTTON,
-        handler: Z
+        handler: N
     });
     let S = I ? C.intl.string(C.t['5MstTk']) : C.intl.string(C.t.kkKapK),
         T = [S];
-    N > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: N })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
-    let j = (0, r.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
-        A = N > 0 ? N : b,
+    Z > 0 && T.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: Z })), b > 0 && T.push(C.intl.string(C.t.x5zAGR));
+    let j = (0, a.e7)([m.ZP], () => m.ZP.getFocusedLayout()),
+        A = Z > 0 ? Z : b,
         y = A > 0;
     return (0, i.jsxs)('div', {
         className: x.wrapper,
@@ -74,7 +74,7 @@ function v(e) {
             }),
             y
                 ? (0, i.jsx)(o.Z, {
-                      hasMentions: N > 0,
+                      hasMentions: Z > 0,
                       truncatedCount: A > 99 ? '99+' : A,
                       className: x.badge
                   })

@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(100621),
     o = n(442837),
     c = n(481060),
@@ -25,13 +25,13 @@ var i = n(200651),
     I = n(37113),
     E = n(388032),
     b = n(277865),
-    N = n(454120);
-function Z(e) {
-    let { buttonRef: t, channel: a, userId: Z, streaming: S, onClose: T } = e,
-        j = (0, o.e7)([g.default], () => g.default.getUser(Z)),
+    Z = n(454120);
+function N(e) {
+    let { buttonRef: t, channel: r, userId: N, streaming: S, onClose: T } = e,
+        j = (0, o.e7)([g.default], () => g.default.getUser(N)),
         A = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         y = (0, o.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
-        P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(a.id)),
+        P = (0, o.e7)([u.Z], () => u.Z.getChatOpen(r.id)),
         M = S && null != y && y.resolution !== I.LY.RESOLUTION_1440 && y.frameRate !== I.ws.FPS_60,
         R = l.useContext(m.h9),
         L = l.useRef(0),
@@ -125,7 +125,7 @@ function Z(e) {
                                 }),
                                 (0, i.jsx)('img', {
                                     className: b.potion,
-                                    src: N,
+                                    src: Z,
                                     alt: ''
                                 })
                             ]
@@ -139,7 +139,7 @@ function Z(e) {
                             children: [
                                 (0, i.jsx)(c.Button, {
                                     onClick: V,
-                                    className: r()({ [b.actionButton]: !0 !== S }),
+                                    className: a()({ [b.actionButton]: !0 !== S }),
                                     children: F
                                 }),
                                 !G &&

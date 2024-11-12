@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(749210),
@@ -25,9 +25,9 @@ var i = n(200651),
     I = n(189357),
     E = n(718617),
     b = n(327250),
-    N = n(7340);
-function Z(e) {
-    let { userId: t, guildId: n, onClose: a, className: Z, infoPanelClassName: S, style: T } = e,
+    Z = n(7340);
+function N(e) {
+    let { userId: t, guildId: n, onClose: r, className: N, infoPanelClassName: S, style: T } = e,
         j = (0, I.ms)(n),
         A = (0, s.e7)([_.default], () => _.default.getUser(t), [t]),
         y = (0, s.e7)([v.ZP], () => v.ZP.getMember(n, t), [n, t]),
@@ -38,23 +38,23 @@ function Z(e) {
         O = (0, g.ZP)(t, n),
         D = (0, u.ZP)();
     return (l.useEffect(() => {
-        !j && a();
-    }, [j, a]),
+        !j && r();
+    }, [j, r]),
     l.useEffect(() => {
-        null != R && null == y && !P && a();
-    }, [P, y, a, R]),
+        null != R && null == y && !P && r();
+    }, [P, y, r, R]),
     l.useEffect(() => {
         null != A && null != y && M(!1);
     }, [A, y]),
     l.useEffect(() => {
         let e = null == y;
         return (
-            !P && e && (L.current = window.setTimeout(a, 500)),
+            !P && e && (L.current = window.setTimeout(r, 500)),
             () => {
                 null != L.current && window.clearTimeout(L.current);
             }
         );
-    }, [P, y, a]),
+    }, [P, y, r]),
     (0, h.$)({ [n]: [t] }),
     l.useEffect(() => {
         (async function e() {
@@ -72,7 +72,7 @@ function Z(e) {
     j)
         ? P || null == A || null == y
             ? (0, i.jsx)('div', {
-                  className: r()(N.sidebarContainer, N.loadingContainer, Z),
+                  className: a()(Z.sidebarContainer, Z.loadingContainer, N),
                   style: T,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,7 +82,7 @@ function Z(e) {
             : (0, i.jsx)(m.Gt, {
                   value: k,
                   children: (0, i.jsx)('div', {
-                      className: r()(N.sidebarContainer, Z),
+                      className: a()(Z.sidebarContainer, N),
                       style: T,
                       children: (0, i.jsx)(x.Z, {
                           user: A,
@@ -90,19 +90,19 @@ function Z(e) {
                           profileType: null,
                           themeOverride: D,
                           forceShowPremium: !0,
-                          className: N.profileThemedContainer,
+                          className: Z.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: N.innerContainer,
+                              className: Z.innerContainer,
                               children: [
                                   (0, i.jsx)(b.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a
+                                      onClose: r
                                   }),
                                   (0, i.jsx)(E.Z, {
                                       userId: t,
                                       guildId: n,
-                                      onClose: a,
+                                      onClose: r,
                                       className: S
                                   })
                               ]

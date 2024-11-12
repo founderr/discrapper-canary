@@ -5,13 +5,13 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(772848),
-    r = n(325767);
+    r = n(772848),
+    a = n(325767);
 function s(e) {
     let { width: t = 16, height: n = 16, color: s = 'currentColor', foreground: o, background: c, ...d } = e,
-        u = l.useRef((0, a.Z)());
+        u = l.useRef((0, r.Z)());
     return (0, i.jsxs)('svg', {
-        ...(0, r.Z)(d),
+        ...(0, a.Z)(d),
         width: t,
         height: n,
         viewBox: '0 0 24 24',

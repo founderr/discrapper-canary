@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(780384),
+    r = n(442837),
+    a = n(780384),
     s = n(481060),
     o = n(332148),
     c = n(198620),
@@ -18,7 +18,7 @@ var i = n(200651),
 let f = [];
 function g(e) {
     let { channel: t, onJump: g } = e,
-        { messages: C, loading: x } = (0, a.cj)([d.Z], () => {
+        { messages: C, loading: x } = (0, r.cj)([d.Z], () => {
             let e = d.Z.getPinnedMessages(t.id),
                 n = null != e ? e.messages : f;
             return {
@@ -26,7 +26,7 @@ function g(e) {
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        v = (0, a.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id));
+        v = (0, r.e7)([u.ZP], () => u.ZP.hasUnreadPins(t.id));
     return (
         l.useEffect(() => {
             C.some(c.k5) && o.Z.fetchPins(t.id, !0);
@@ -59,12 +59,12 @@ function g(e) {
                 renderEmptyState: function (e) {
                     let l = m.intl.string(m.t.fmyaWF);
                     t.isPrivate() && (l = m.intl.string(m.t.rhqcbG));
-                    let a = (0, r.ap)(e) ? n(306059) : n(281485);
+                    let r = (0, a.ap)(e) ? n(306059) : n(281485);
                     return (0, i.jsx)(
                         h.nH,
                         {
                             msg: l,
-                            image: a
+                            image: r
                         },
                         'emptystate'
                     );

@@ -27,32 +27,32 @@ var i = n(200651),
     I = n(979651),
     b = n(709054),
     S = n(853856),
-    Z = n(593214),
+    E = n(593214),
     N = n(919755),
-    E = n(110977),
+    Z = n(110977),
     y = n(603274),
-    j = n(981631),
-    T = n(388032),
-    P = n(599576);
-let A = {
+    T = n(981631),
+    j = n(388032),
+    A = n(599576);
+let P = {
     analyticsSource: {
-        page: j.ZY5.GUILD_CHANNEL,
-        section: j.jXE.CHANNEL_LIST,
-        object: j.qAy.CHANNEL
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL
     }
 };
 function M() {
     let e = (0, o.Ie)('favorites'),
-        { favoriteAdded: t, clearFavoriteAdded: r } = (0, Z.up)(),
-        [M, w] = l.useState(!1),
-        { favoriteServerMuted: L, favoriteChannels: R } = (0, s.cj)([S.Z], () => ({
+        { favoriteAdded: t, clearFavoriteAdded: r } = (0, E.up)(),
+        [M, R] = l.useState(!1),
+        { favoriteServerMuted: L, favoriteChannels: w } = (0, s.cj)([S.Z], () => ({
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
-        D = (0, s.e7)([x.Z], () => x.Z.getChannelId(j.I_8)),
+        D = (0, s.e7)([x.Z], () => x.Z.getChannelId(T.I_8)),
         O = (0, s.e7)([v.Z], () => v.Z.getChannel(D)),
-        k = (0, C.Z)((e) => e.guildId) === j.I_8,
-        { badge: U, unread: G } = (0, N.Z)(R),
+        k = (0, C.Z)((e) => e.guildId) === T.I_8,
+        { badge: U, unread: G } = (0, N.Z)(w),
         B = (function (e) {
             let t = (0, s.e7)([x.Z], () => x.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -86,9 +86,9 @@ function M() {
                     activity: f
                 })
             );
-        })(R),
-        V = U > 0 ? (0, g.N)(U) : null,
-        H = l.useCallback(() => {
+        })(w),
+        H = U > 0 ? (0, g.N)(U) : null,
+        V = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(f.H, {
@@ -97,28 +97,28 @@ function M() {
                 selected: k,
                 hovered: M,
                 unread: G && !L,
-                className: P.pill
+                className: A.pill
             }),
             (0, i.jsx)(y.Z, {
-                onShow: H,
-                children: (0, i.jsx)(E.S, {
+                onShow: V,
+                children: (0, i.jsx)(Z.S, {
                     children: (0, i.jsx)(c.BlobMask, {
                         selected: k || M,
                         upperBadge: B,
-                        lowerBadge: V,
+                        lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
-                            ariaLabel: T.intl.formatToPlainString(T.t['/uzRsr'], {
-                                guildName: T.intl.string(T.t.wMWycn),
+                            ariaLabel: j.intl.formatToPlainString(j.t['/uzRsr'], {
+                                guildName: j.intl.string(j.t.wMWycn),
                                 mentions: U
                             }),
                             to: {
-                                pathname: j.Z5c.CHANNEL(j.I_8, D),
-                                state: A
+                                pathname: T.Z5c.CHANNEL(T.I_8, D),
+                                state: P
                             },
                             selected: k || M,
-                            onMouseEnter: () => w(!0),
-                            onMouseLeave: () => w(!1),
+                            onMouseEnter: () => R(!0),
+                            onMouseLeave: () => R(!1),
                             onMouseDown: function () {
                                 if (null != O) u.Z.preload(O.guild_id, O.id);
                             },
@@ -129,11 +129,11 @@ function M() {
                                 });
                             },
                             children: (0, i.jsx)('div', {
-                                className: a()(P.ring, { [P.ringActive]: t }),
+                                className: a()(A.ring, { [A.ringActive]: t }),
                                 children: (0, i.jsx)(c.StarIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: P.favoriteIcon,
+                                    className: A.favoriteIcon,
                                     width: 20,
                                     height: 20
                                 })

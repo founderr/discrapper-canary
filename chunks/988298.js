@@ -1,9 +1,9 @@
-e.d(n, {
+n.d(t, {
     GG: function () {
         return o;
     },
     R2: function () {
-        return l;
+        return i;
     },
     h7: function () {
         return s;
@@ -12,35 +12,35 @@ e.d(n, {
         return r;
     }
 });
-var i = e(570140);
-function s(t, n, e) {
+var l = n(570140);
+function s(e, t, n) {
     return new Promise((s) => {
         setTimeout(() => {
-            i.Z.dispatch({
+            l.Z.dispatch({
                 type: 'ACTIVITY_INVITE_MODAL_OPEN',
-                activity: t,
-                isPrivate: n,
-                context: e,
+                activity: e,
+                isPrivate: t,
+                context: n,
                 resolve: s
             });
         }, 0);
     });
 }
-function r(t) {
-    i.Z.dispatch({
+function r(e) {
+    l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_QUERY',
-        query: t
+        query: e
     });
 }
-function o(t) {
-    i.Z.dispatch({
+function o(e) {
+    l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
-        channelId: t
+        channelId: e
     });
 }
-function l(t) {
-    i.Z.dispatch({
+function i(e) {
+    l.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
-        userId: t
+        userId: e
     });
 }

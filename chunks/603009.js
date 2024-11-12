@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(100621),
     o = n(704215),
     c = n(481060),
@@ -25,19 +25,19 @@ var i = n(200651),
     I = n(353093),
     E = n(940725),
     b = n(114487),
-    N = n(979264),
-    Z = n(981631),
+    Z = n(979264),
+    N = n(981631),
     S = n(921944),
     T = n(388032),
     j = n(882070);
 function A(e) {
     var t;
-    let { guild: n, showToast: a, onConfirm: o, onDismiss: p } = e,
+    let { guild: n, showToast: r, onConfirm: o, onDismiss: p } = e,
         [m, f] = l.useState(!1),
         C = l.useRef(null),
         v = (0, x.Cc)(n.id),
         E = (0, u.ZP)(),
-        Z = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
+        N = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         S = (0, _.nP)(null == v ? void 0 : null === (t = v.branding) || void 0 === t ? void 0 : t.primaryColor, [c.tokens.colors.BG_BRAND, 0.5]),
         A = c.tokens.colors.BG_SURFACE_OVERLAY.resolve({
             theme: E,
@@ -76,10 +76,10 @@ function A(e) {
             [o]
         ),
         L = (0, c.useTransition)(
-            a,
+            r,
             {
                 from: {
-                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
+                    transform: N ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -89,7 +89,7 @@ function A(e) {
                     pointerEvents: 'all'
                 },
                 leave: {
-                    transform: Z ? 'translateY(0)' : 'translateY(16px)',
+                    transform: N ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0,
                     pointerEvents: 'none'
                 },
@@ -108,13 +108,13 @@ function A(e) {
         D = k ? T.intl.string(T.t.eA1ymp) : T.intl.string(T.t.MF0Ntb),
         w = k ? T.intl.formatToPlainString(T.t['60PXOz'], { guildName: n.name }) : T.intl.formatToPlainString(T.t.i27ioq, { guildName: n.name });
     return L((e, t) => {
-        var l, a;
+        var l, r;
         return (
             t &&
             (0, i.jsx)(s.animated.div, {
                 onMouseEnter: () => f(!0),
                 onMouseLeave: () => f(!1),
-                className: r()(j.wrapper),
+                className: a()(j.wrapper),
                 style: {
                     ...e,
                     ...y
@@ -124,7 +124,7 @@ function A(e) {
                     'aria-label': w,
                     onClick: R,
                     children: (0, i.jsxs)('div', {
-                        className: r()(j.toastContainerInner, m ? j.hovered : null),
+                        className: a()(j.toastContainerInner, m ? j.hovered : null),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: j.guildIconContainer,
@@ -135,10 +135,10 @@ function A(e) {
                                     }),
                                     (0, i.jsx)('div', {
                                         className: j.guildTagContainer,
-                                        children: (0, i.jsx)(N.aG, {
+                                        children: (0, i.jsx)(Z.aG, {
                                             guildId: n.id,
                                             clanTag: null === (l = n.clan) || void 0 === l ? void 0 : l.tag,
-                                            clanBadge: null === (a = n.clan) || void 0 === a ? void 0 : a.badge,
+                                            clanBadge: null === (r = n.clan) || void 0 === r ? void 0 : r.badge,
                                             className: j.guildClanTag
                                         })
                                     })
@@ -184,17 +184,17 @@ function y(e) {
     let {} = e,
         t = (0, d.e7)([f.Z], () => f.Z.getGuildId()),
         n = (0, E.h)(t, 'clan_tag_upsell_toast'),
-        a = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
-        [r, s] = l.useState(!1),
+        r = (0, d.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        [a, s] = l.useState(!1),
         c = l.useRef(null);
     l.useEffect(
         () => (
             n &&
                 (c.current = window.setTimeout(() => {
                     s(!0),
-                        C.default.track(Z.rMx.DISMISSIBLE_CONTENT_SHOWN, {
+                        C.default.track(N.rMx.DISMISSIBLE_CONTENT_SHOWN, {
                             type: o.C[o.C.ADOPT_CLAN_IDENTITY_NOTICE],
-                            guild_id: null != t ? t : Z.lds
+                            guild_id: null != t ? t : N.lds
                         });
                 }, 2500)),
             () => {
@@ -207,14 +207,14 @@ function y(e) {
             if ((s(!1), null != t)) (0, v.SJ)(t);
         }, [, t]),
         h = l.useCallback(() => {
-            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : Z.lds, !0, S.L.DISMISS);
+            if ((s(!1), null != t)) (0, p.Qd)(o.C.ADOPT_CLAN_IDENTITY_NOTICE, null != t ? t : N.lds, !0, S.L.DISMISS);
         }, [t]);
-    return n && null != t && null != a
+    return n && null != t && null != r
         ? (0, i.jsx)(A, {
-              guild: a,
+              guild: r,
               onConfirm: u,
               onDismiss: h,
-              showToast: r
+              showToast: a
           })
         : null;
 }

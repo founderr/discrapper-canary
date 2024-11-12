@@ -1,18 +1,18 @@
-n.d(e, {
+n.d(t, {
     Z: function () {
-        return o;
+        return i;
     }
 });
-var i = n(200651);
+var a = n(200651);
 n(192379);
 var l = n(120356),
-    u = n.n(l),
-    a = n(481060),
-    r = n(507815);
-function o(t) {
-    let { className: e, color: n, ...l } = t;
-    return (0, i.jsx)(a.Text, {
-        className: u()({ [r.text]: null == n }, e),
+    o = n.n(l),
+    r = n(481060),
+    u = n(507815);
+function i(e) {
+    let { className: t, color: n, ...l } = e;
+    return (0, a.jsx)(r.Text, {
+        className: o()({ [u.text]: null == n }, t),
         color: n,
         ...l
     });

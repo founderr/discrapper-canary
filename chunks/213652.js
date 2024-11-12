@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(481060),
+    r = n(442837),
+    a = n(481060),
     s = n(435064),
     o = n(39604),
     c = n(441167),
@@ -19,20 +19,20 @@ var i = n(200651),
     g = n(285403);
 function C(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),
+        n = (0, r.e7)([p.Z], () => p.Z.getSelectedParticipant(t.id)),
         C = (null == n ? void 0 : n.type) === m.fO.STREAM,
-        x = (0, a.e7)([u.Z], () => (C ? u.Z.getActiveStreamForStreamKey(n.id) : null)),
+        x = (0, r.e7)([u.Z], () => (C ? u.Z.getActiveStreamForStreamKey(n.id) : null)),
         { ignoreSenderPreference: v } = c.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
-        { viewerClippingAllowed: _, isAtMaxSavingClipOperations: I } = (0, a.cj)([s.Z], () => ({
+        { viewerClippingAllowed: _, isAtMaxSavingClipOperations: I } = (0, r.cj)([s.Z], () => ({
             viewerClippingAllowed: null != x && (s.Z.isViewerClippingAllowedForUser(x.ownerId) || v),
             isAtMaxSavingClipOperations: s.Z.getIsAtMaxSaveClipOperations()
         })),
         E = s.Z.getSettings().clipsEnabled,
         b = (null == x ? void 0 : x.ownerId) === h.default.getId(),
-        N = !E || !(b || _) || I || null == n,
-        Z = l.useCallback(
+        Z = !E || !(b || _) || I || null == n,
+        N = l.useCallback(
             (e) =>
-                (0, i.jsx)(r.CameraIcon, {
+                (0, i.jsx)(a.CameraIcon, {
                     ...e,
                     color: 'currentColor'
                 }),
@@ -41,10 +41,10 @@ function C(e) {
     return (0, i.jsx)(d.Z, {
         className: g.actionBarButton,
         onClick: () => {
-            !N && (b ? (0, o.C1)() : (0, o.C1)(n.id));
+            !Z && (b ? (0, o.C1)() : (0, o.C1)(n.id));
         },
-        disabled: N,
-        iconComponent: Z,
+        disabled: Z,
+        iconComponent: N,
         label: null == x ? f.intl.string(f.t.eg5qtb) : b || _ ? (E ? (I ? void 0 : f.intl.string(f.t.U4URzM)) : f.intl.string(f.t.wSS1yM)) : f.intl.string(f.t.aRifJS),
         grow: !1
     });

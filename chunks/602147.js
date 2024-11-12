@@ -43,11 +43,11 @@ let b = l.forwardRef(function (e, t) {
     let { selected: n, className: r, onClick: h } = e,
         C = (0, s.Z)('discovery_button'),
         b = (0, p.Ws)({ location: _.dr.CONFLICT_CHECKS }),
-        [S, Z] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
+        [S, E] = (0, c.US)(C && b ? [a.z.RAPIDASH_MORE_GUILDS_UPSELL] : [], m.R.SIDEBAR, !0),
         N = S === a.z.RAPIDASH_MORE_GUILDS_UPSELL,
-        E = l.useCallback(() => {
-            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && Z(m.L.DISMISS);
-        }, [h, Z, N]),
+        Z = l.useCallback(() => {
+            null == h || h(), (0, u.k5)({ source: g.JU.GUILDS_BAR_ICON }), I(d.Z.getField('selectedTab')), N && E(m.L.DISMISS);
+        }, [h, E, N]),
         y = l.useMemo(
             () => ({
                 lowerBadgeSize: {
@@ -62,7 +62,7 @@ let b = l.forwardRef(function (e, t) {
         id: 'guild-discover-button',
         ref: t,
         className: r,
-        onClick: E,
+        onClick: Z,
         selected: n,
         tooltip: v.intl.string(v.t['4nEZLi']),
         icon: o.CompassIcon,

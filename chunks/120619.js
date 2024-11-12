@@ -1,10 +1,10 @@
 n(47120);
 var i,
-    o,
     r,
     l,
-    s = n(442837),
-    a = n(570140),
+    o,
+    a = n(442837),
+    s = n(570140),
     u = n(959546),
     c = n(215023);
 let d = new Map(),
@@ -12,9 +12,9 @@ let d = new Map(),
     f = new Set(),
     p = new Set(),
     m = new Map(),
-    v = !1,
-    g = null;
-class E extends (i = s.ZP.Store) {
+    E = !1,
+    v = null;
+class g extends (i = a.ZP.Store) {
     getPrice(e) {
         return d.get(e);
     }
@@ -34,22 +34,22 @@ class E extends (i = s.ZP.Store) {
         return f.has(e);
     }
     getPlayedAnimation() {
-        return v;
+        return E;
     }
     getPreviousGoLiveSettings() {
-        return g;
+        return v;
     }
 }
-(l = 'ConsumablesStore'),
-    (r = 'displayName') in (o = E)
-        ? Object.defineProperty(o, r, {
-              value: l,
+(o = 'ConsumablesStore'),
+    (l = 'displayName') in (r = g)
+        ? Object.defineProperty(r, l, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (o[r] = l),
-    (t.Z = new E(a.Z, {
+        : (r[l] = o),
+    (t.Z = new g(s.Z, {
         CONSUMABLES_PRICE_FETCH_STARTED: (e) => {
             h.add(e.skuId);
         },
@@ -71,10 +71,10 @@ class E extends (i = s.ZP.Store) {
             if (t.sku_id === c.FX) m.set(e.skuId, u.Z.createFromServer(t));
         },
         PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
-            v = !0;
+            E = !0;
         },
         RESET_PLAYED_HD_STREAMING_POTION_ANIMATION: (e) => {
-            v = !1;
+            E = !1;
         },
         CONSUMABLES_ENTITLEMENT_FETCH_FAILED: (e) => {
             p.add(e.skuId), f.delete(e.skuId);
@@ -83,6 +83,6 @@ class E extends (i = s.ZP.Store) {
             f.add(e.skuId);
         },
         SET_PREVIOUS_GO_LIVE_SETTINGS: (e) => {
-            g = e.previousGoLiveSettings;
+            v = e.previousGoLiveSettings;
         }
     }));

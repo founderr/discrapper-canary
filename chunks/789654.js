@@ -40,14 +40,14 @@ var r = n(200651),
     x = n(705262),
     f = n(374794),
     p = n(58755),
-    g = n(246992),
-    b = n(500949),
+    b = n(246992),
+    g = n(500949),
     v = n(806714);
-let { SemanticColors: _ } = d.V;
-function C(e) {
+let { SemanticColors: C } = d.V;
+function j(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
-function j(e) {
+function _(e) {
     return e.replaceAll(/_|-/g, '.').toLowerCase();
 }
 function T(e, t) {
@@ -64,23 +64,23 @@ function T(e, t) {
 }
 function S() {
     let e = (0, m.Fg)(),
-        [t, n, l, o, d, u] = (0, b.zn)(),
-        { semanticColorOverrides: g, rawColorOverrides: _, tab: j, scales: S } = t,
-        y = a.useMemo(() => {
-            let t = Object.entries(g).map((t) => {
+        [t, n, l, o, d, u] = (0, g.zn)(),
+        { semanticColorOverrides: b, rawColorOverrides: C, tab: _, scales: S } = t,
+        N = a.useMemo(() => {
+            let t = Object.entries(b).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
                         i = a[e];
                     if (null == i) return '';
-                    let o = C(n);
+                    let o = j(n);
                     if (l) return '--'.concat(o, ': magenta !important;');
-                    let c = C(i.color),
+                    let c = j(i.color),
                         s = i.opacity,
                         d = s < 1 ? 'hsl(var(--'.concat(c, '-hsl) / ').concat(s, ')') : 'var(--'.concat(c, ')');
                     return '--'.concat(o, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
                 }),
-                n = Object.keys(_).flatMap((e) => {
-                    let t = _[e],
+                n = Object.keys(C).flatMap((e) => {
+                    let t = C[e],
                         {
                             h: n,
                             s: r,
@@ -100,20 +100,20 @@ function S() {
                 }),
                 r = S.reduce((e, t) => {
                     let { name: n } = t,
-                        r = (0, b.XM)(t),
-                        a = (0, b.W6)(r, n);
+                        r = (0, g.XM)(t),
+                        a = (0, g.W6)(r, n);
                     return (
                         e +
                         Object.keys(a).reduce((e, t) => {
                             let n = a[t],
                                 l = r[t],
-                                i = (0, b.HI)(l);
+                                i = (0, g.HI)(l);
                             return ''.concat(e, '\n--').concat(n, ': ').concat(i, ';');
                         }, '')
                     );
                 }, '');
             return '\n      :root {\n        '.concat(r, '\n      }\n\n      .theme-').concat(e, ' {\n        ').concat(t.join('\n'), '\n      }\n\n      html {\n        ').concat(n.join('\n'), '\n      }\n    ');
-        }, [_, S, g, e]);
+        }, [C, S, b, e]);
     return (0, r.jsxs)('div', {
         className: v.panel,
         children: [
@@ -128,7 +128,7 @@ function S() {
                         className: v.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: j,
+                        selectedItem: _,
                         onItemSelect: (e) => {
                             n((t) => ({
                                 ...t,
@@ -137,11 +137,11 @@ function S() {
                         },
                         children: [
                             (0, r.jsx)(h.TabBar.Item, {
-                                id: b.H8.TOKENS,
+                                id: g.H8.TOKENS,
                                 children: 'Tokens'
                             }),
                             (0, r.jsx)(h.TabBar.Item, {
-                                id: b.H8.PALETTES,
+                                id: g.H8.PALETTES,
                                 children: 'Palettes'
                             })
                         ]
@@ -216,15 +216,15 @@ function S() {
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: j !== b.H8.TOKENS,
-                children: (0, r.jsx)(N, {
+                hidden: _ !== g.H8.TOKENS,
+                children: (0, r.jsx)(y, {
                     state: t,
                     setState: n
                 })
             }),
             (0, r.jsx)('div', {
                 className: v.tab,
-                hidden: j !== b.H8.PALETTES,
+                hidden: _ !== g.H8.PALETTES,
                 children: (0, r.jsx)(p.P, {
                     state: t,
                     setState: n
@@ -233,13 +233,13 @@ function S() {
             (0, r.jsx)(s.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
-                    children: y
+                    children: N
                 })
             })
         ]
     });
 }
-function N(e) {
+function y(e) {
     let { state: t, setState: n } = e,
         l = (0, m.Fg)(),
         { semanticColorOverrides: i, rawColorOverrides: o } = t,
@@ -262,7 +262,7 @@ function N(e) {
                 n((t) => {
                     var n;
                     let { semanticColorOverrides: r } = t,
-                        a = null !== (n = r[e]) && void 0 !== n ? n : (0, b.$R)(e);
+                        a = null !== (n = r[e]) && void 0 !== n ? n : (0, g.$R)(e);
                     return {
                         ...t,
                         semanticColorOverrides: {
@@ -318,7 +318,7 @@ function N(e) {
                     if (null == r) return t;
                     let a = { ...n };
                     return (
-                        (a[e] = (0, b.GU)(r)),
+                        (a[e] = (0, g.GU)(r)),
                         {
                             ...t,
                             semanticColorOverrides: a
@@ -328,9 +328,9 @@ function N(e) {
             },
             [n]
         ),
-        p = Object.keys(_).map((e) => ({
+        p = Object.keys(C).map((e) => ({
             value: e,
-            label: C(e)
+            label: j(e)
         })),
         T = Object.keys(u.b).map((e) => ({
             value: e,
@@ -355,7 +355,7 @@ function N(e) {
                               className: v.colorPreview,
                               style: { '--custom-color': 'var(--'.concat(e.label, ')') }
                           }),
-                popoutLayerContext: g.O$
+                popoutLayerContext: b.O$
             }),
             (0, r.jsx)('ul', {
                 className: v.overrides,
@@ -363,20 +363,20 @@ function N(e) {
                     let [t, a] = e,
                         i = a.colors[l];
                     if (null == i) return null;
-                    let o = j(i.color),
+                    let o = _(i.color),
                         s = i.opacity,
-                        d = b.jC[t][l];
+                        d = g.jC[t][l];
                     return (0, r.jsx)(
-                        y,
+                        N,
                         {
-                            title: C(t),
-                            subtitle: 1 === d.opacity ? j(d.raw) : ''.concat(j(d.raw), ' @ ').concat(100 * d.opacity, '%'),
+                            title: j(t),
+                            subtitle: 1 === d.opacity ? _(d.raw) : ''.concat(_(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: a.highlight,
                             onReset: () => {
                                 n((e) => {
                                     let { semanticColorOverrides: n } = e;
                                     if (null == n[t]) return e;
-                                    let r = (0, b.$R)(t);
+                                    let r = (0, g.$R)(t);
                                     return {
                                         ...e,
                                         semanticColorOverrides: {
@@ -401,7 +401,7 @@ function N(e) {
                                                 if (null == a) return n;
                                                 let i = a.colors[l];
                                                 if (null == i) return n;
-                                                let o = (0, b.lT)(a, t, e, i.opacity, l);
+                                                let o = (0, g.lT)(a, t, e, i.opacity, l);
                                                 return {
                                                     ...n,
                                                     semanticColorOverrides: {
@@ -420,7 +420,7 @@ function N(e) {
                                                 style: { '--custom-color': 'var(--'.concat(t, ')') }
                                             });
                                         },
-                                        popoutLayerContext: g.O$
+                                        popoutLayerContext: b.O$
                                     }),
                                     (0, r.jsx)(h.TextInput, {
                                         inputClassName: v.opacityInput,
@@ -438,7 +438,7 @@ function N(e) {
                                                     if (null == a) return e;
                                                     let i = a.colors[l];
                                                     if (null == i) return e;
-                                                    let o = (0, b.lT)(a, t, i.color, r, l);
+                                                    let o = (0, g.lT)(a, t, i.color, r, l);
                                                     return {
                                                         ...e,
                                                         semanticColorOverrides: {
@@ -475,14 +475,14 @@ function N(e) {
                         style: { '--custom-color': 'var(--'.concat(t, ')') }
                     });
                 },
-                popoutLayerContext: g.O$
+                popoutLayerContext: b.O$
             }),
             (0, r.jsx)('ul', {
                 className: v.rawOverrides,
                 children: Object.entries(o).map((e) => {
                     let [t, a] = e;
                     return (0, r.jsxs)(
-                        y,
+                        N,
                         {
                             title: t,
                             subtitle: u.b[t].hex,
@@ -570,7 +570,7 @@ function N(e) {
         ]
     });
 }
-function y(e) {
+function N(e) {
     let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: c } = e;
     return (0, r.jsxs)('li', {
         className: v.override,

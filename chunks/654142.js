@@ -18,7 +18,7 @@ t.Z = l.memo(function (e) {
         I = x.map((e) => e.id),
         b = (0, s.Z)((e) => e.guildId),
         S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(C)),
-        Z = (function (e) {
+        E = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -32,14 +32,14 @@ t.Z = l.memo(function (e) {
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
         N = (0, f.Z)(t),
-        { mentionCount: E, unread: y } = (0, r.cj)([u.default], () => ({
+        { mentionCount: Z, unread: y } = (0, r.cj)([u.default], () => ({
             mentionCount: I.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: I.some((e) => u.default.hasUnread(e))
         })),
-        j = l.useCallback(() => {
+        T = l.useCallback(() => {
             o.Z.toggleGuildFolderExpand(C);
         }, [C]),
-        T = l.useCallback(
+        j = l.useCallback(
             (e) => {
                 (0, a.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -49,22 +49,22 @@ t.Z = l.memo(function (e) {
                             folderId: C,
                             folderName: _,
                             folderColor: v,
-                            unread: y || E > 0
+                            unread: y || Z > 0
                         });
                 });
             },
-            [C, _, v, y, E]
+            [C, _, v, y, Z]
         );
     return (0, i.jsx)(p.Z, {
         ...g,
         folderNode: t,
         expanded: S,
         selected: null != b && I.includes(b),
-        mentionCount: E,
+        mentionCount: Z,
         unread: y,
         mediaState: N,
-        defaultFolderName: Z,
-        onExpandCollapse: j,
-        onContextMenu: T
+        defaultFolderName: E,
+        onExpandCollapse: T,
+        onContextMenu: j
     });
 });

@@ -1,32 +1,32 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(200651);
 n(192379);
-var o = n(120356),
-    r = n.n(o),
-    l = n(481060),
-    s = n(96685);
-function a(e) {
-    let { onClick: t, keybind: n, className: o, IconComponent: a } = e;
+var r = n(120356),
+    l = n.n(r),
+    o = n(481060),
+    a = n(96685);
+function s(e) {
+    let { onClick: t, keybind: n, className: r, IconComponent: s } = e;
     return (0, i.jsxs)('div', {
-        className: r()(s.buttonContainer, o),
+        className: l()(a.buttonContainer, r),
         children: [
-            (0, i.jsx)(l.Clickable, {
-                className: s.button,
+            (0, i.jsx)(o.Clickable, {
+                className: a.button,
                 onClick: t,
                 'aria-hidden': !0,
-                children: (0, i.jsx)(a, {
+                children: (0, i.jsx)(s, {
                     size: 'md',
                     color: 'currentColor',
                     'aria-hidden': !0
                 })
             }),
             null != n
-                ? (0, i.jsx)(l.Text, {
-                      className: r()(s.keybind),
+                ? (0, i.jsx)(o.Text, {
+                      className: l()(a.keybind),
                       'aria-hidden': !0,
                       variant: 'text-xxs/bold',
                       color: 'interactive-normal',

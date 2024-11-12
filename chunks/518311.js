@@ -8,9 +8,9 @@ n.d(t, {
     n(47120);
 var i,
     l = n(200651),
-    a = n(192379),
-    r = n(120356),
-    s = n.n(r),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(392711),
     c = n.n(o),
     d = n(913527),
@@ -27,8 +27,8 @@ var i,
     I = n(194359),
     E = n(425493),
     b = n(461745),
-    N = n(40851),
-    Z = n(367907),
+    Z = n(40851),
+    N = n(367907),
     S = n(43267),
     T = n(933557),
     j = n(600164),
@@ -74,8 +74,8 @@ function ei(e, t, n) {
     );
 }
 let el = (0, A.hQ)(),
-    ea = (0, A.hQ)();
-function er(e) {
+    er = (0, A.hQ)();
+function ea(e) {
     let { className: t, children: n } = e;
     return (0, l.jsxs)(j.Z, {
         align: j.Z.Align.CENTER,
@@ -88,8 +88,8 @@ function er(e) {
 let es = (e) => {
         var t;
         let { channel: n, onClose: i } = e,
-            a = null !== (t = (0, T.ZP)(n)) && void 0 !== t ? t : '',
-            r = (0, p.e7)([B.ZP], () => {
+            r = null !== (t = (0, T.ZP)(n)) && void 0 !== t ? t : '',
+            a = (0, p.e7)([B.ZP], () => {
                 var e;
                 return null !== (e = B.ZP.lastMessageId(n.id)) && void 0 !== e ? e : n.id;
             });
@@ -103,15 +103,15 @@ let es = (e) => {
                     (0, l.jsx)(m.Avatar, {
                         src: (0, S.x)(n),
                         size: m.AvatarSizes.SIZE_24,
-                        'aria-label': a
+                        'aria-label': r
                     }),
                     (0, l.jsx)('span', {
                         className: ee.confirmChannelName,
-                        children: a
+                        children: r
                     }),
                     (0, l.jsx)('span', {
                         className: ee.lastActiveTimestamp,
-                        children: u()(K.default.extractTimestamp(r)).fromNow()
+                        children: u()(K.default.extractTimestamp(a)).fromNow()
                     })
                 ]
             })
@@ -119,7 +119,7 @@ let es = (e) => {
     },
     eo = (e) => {
         let { onConfirm: t, channelIds: n, ...i } = e,
-            a = (0, p.Wu)([k.Z], () => Array.from(n).map(k.Z.getChannel), [n]);
+            r = (0, p.Wu)([k.Z], () => Array.from(n).map(k.Z.getChannel), [n]);
         return (0, l.jsxs)(m.ConfirmModal, {
             header: $.intl.string($.t.uFHxNT),
             confirmText: $.intl.string($.t.KCNNJi),
@@ -138,13 +138,13 @@ let es = (e) => {
                 }),
                 (0, l.jsx)(m.Scroller, {
                     className: ee.confirmInviteScroller,
-                    children: a
+                    children: r
                         .filter(W.lm)
                         .sort((e, t) => {
                             var n, i;
                             let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
-                                a = null !== (i = t.lastMessageId) && void 0 !== i ? i : t.id;
-                            return K.default.compare(a, l);
+                                r = null !== (i = t.lastMessageId) && void 0 !== i ? i : t.id;
+                            return K.default.compare(r, l);
                         })
                         .map((e) =>
                             (0, l.jsx)(
@@ -160,7 +160,7 @@ let es = (e) => {
             ]
         });
     };
-class ec extends (i = a.PureComponent) {
+class ec extends (i = r.PureComponent) {
     _getAnalyticsEntryPoint() {
         let { channel: e } = this.props,
             t = '',
@@ -176,7 +176,7 @@ class ec extends (i = a.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         f.Z.wait(() => _.Z.open(null == e ? void 0 : e.id));
-        let t = (0, Z.v_)(e);
+        let t = (0, N.v_)(e);
         F.default.track(Q.rMx.OPEN_POPOUT, {
             ...t,
             type: this._getAnalyticsEntryPoint().entryPointType,
@@ -220,12 +220,12 @@ class ec extends (i = a.PureComponent) {
         let { channel: e, selectedUsers: t } = this.props,
             n = this.getRemaining(),
             i = (null != e && 0 === t.size) || n < 0,
-            a = t.size > 1 ? $.intl.string($.t.ZGMNAw) : $.intl.string($.t['6Urw1t']);
+            r = t.size > 1 ? $.intl.string($.t.ZGMNAw) : $.intl.string($.t['6Urw1t']);
         return (0, l.jsx)(m.Button, {
             fullWidth: !0,
             disabled: i,
             onClick: this.handleInviteUsers,
-            children: a
+            children: r
         });
     }
     renderAddUsersButton() {
@@ -255,11 +255,11 @@ class ec extends (i = a.PureComponent) {
     }
     renderSearchBar() {
         var e;
-        let { query: t, hasFriends: n, results: i, selectedRow: a, selectedUsers: r } = this.props;
+        let { query: t, hasFriends: n, results: i, selectedRow: r, selectedUsers: a } = this.props;
         if (!n || this.isNotFriends()) return null;
         let o = [];
         return (
-            r.forEach((e) => {
+            a.forEach((e) => {
                 let t = G.default.getUser(e);
                 null != t && o.push(Y.ZP.getName(t));
             }),
@@ -270,11 +270,11 @@ class ec extends (i = a.PureComponent) {
                         ref: this.searchBarRef,
                         className: ee.searchBarComponent,
                         autoFocus: !0,
-                        placeholder: 0 === r.size ? $.intl.string($.t.Wxnb6u) : void 0,
+                        placeholder: 0 === a.size ? $.intl.string($.t.Wxnb6u) : void 0,
                         disabled: this.isPartyFull(),
                         size: b.ZP.Sizes.MEDIUM,
                         query: t,
-                        selectedRow: a,
+                        selectedRow: r,
                         sections: [null !== (e = null == i ? void 0 : i.length) && void 0 !== e ? e : 0],
                         tags: o,
                         onSelect: this.handleSelect,
@@ -283,9 +283,9 @@ class ec extends (i = a.PureComponent) {
                         onRemoveTag: this.handleRemoveUser,
                         inputProps: {
                             'aria-labelledby': el,
-                            'aria-controls': ea,
+                            'aria-controls': er,
                             'aria-expanded': !0,
-                            'aria-activedescendant': 'user-row-'.concat(a)
+                            'aria-activedescendant': 'user-row-'.concat(r)
                         }
                     }),
                     this.renderAddUsersButton()
@@ -320,29 +320,29 @@ class ec extends (i = a.PureComponent) {
             if (null == t) throw Error('no recipient in DM');
             let n = G.default.getUser(t),
                 i = null != n ? n.username : '',
-                a = null != n && U.Z.getRelationshipType(n.id) === Q.OGo.PENDING_OUTGOING;
-            return (0, l.jsxs)(er, {
+                r = null != n && U.Z.getRelationshipType(n.id) === Q.OGo.PENDING_OUTGOING;
+            return (0, l.jsxs)(ea, {
                 className: ee.notFriends,
                 children: [
                     (0, l.jsx)('div', { children: $.intl.format($.t['eg+R9/'], { username: i }) }),
                     (0, l.jsx)(m.Button, {
-                        disabled: a,
+                        disabled: r,
                         size: m.Button.Sizes.SMALL,
                         onClick: () => (null != n ? this.handleAddFriend(n) : null),
                         className: en.marginTop20,
-                        children: a ? $.intl.string($.t.xMH6vL) : $.intl.string($.t['PMsq/f'])
+                        children: r ? $.intl.string($.t.xMH6vL) : $.intl.string($.t['PMsq/f'])
                     })
                 ]
             });
         }
         return t
             ? this.isPartyFull()
-                ? (0, l.jsxs)(er, {
+                ? (0, l.jsxs)(ea, {
                       className: ee.partyFull,
                       children: [(0, l.jsx)('div', { children: $.intl.string($.t.OtTQDw) }), (0, l.jsx)('div', { children: $.intl.format($.t.xYr009, { number: this.getMaxParticipants() }) })]
                   })
                 : 0 === n.length
-                  ? (0, l.jsx)(er, {
+                  ? (0, l.jsx)(ea, {
                         className: s()(ee.noResults, en.marginBottom20),
                         children: (0, l.jsx)('div', { children: $.intl.string($.t.SV4DJy) })
                     })
@@ -360,11 +360,11 @@ class ec extends (i = a.PureComponent) {
                         fade: !0,
                         role: void 0,
                         innerRole: 'listbox',
-                        innerId: ea,
+                        innerId: er,
                         innerAriaMultiselectable: !0,
                         innerAriaOrientation: 'vertical'
                     })
-            : (0, l.jsxs)(er, {
+            : (0, l.jsxs)(ea, {
                   className: ee.noFriends,
                   children: [
                       (0, l.jsx)('div', { children: $.intl.string($.t['7orY6O']) }),
@@ -387,8 +387,8 @@ class ec extends (i = a.PureComponent) {
         let { channel: e, invite: t, hideInstantInvites: n } = this.props,
             { copied: i } = this.state;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
-        let r = null != t ? (0, y.Z)(t.code) : '';
-        return (0, l.jsxs)(a.Fragment, {
+        let a = null != t ? (0, y.Z)(t.code) : '';
+        return (0, l.jsxs)(r.Fragment, {
             children: [
                 (0, l.jsx)(m.FormTitle, {
                     tag: 'h5',
@@ -400,11 +400,11 @@ class ec extends (i = a.PureComponent) {
                     justify: j.Z.Justify.BETWEEN,
                     align: j.Z.Align.CENTER,
                     children: [
-                        r.length > 0
+                        a.length > 0
                             ? (0, l.jsx)(m.TextInput, {
                                   className: ee.copyInput,
                                   name: 'invite',
-                                  value: n ? $.intl.string($.t['6HzNgY']) : r,
+                                  value: n ? $.intl.string($.t['6HzNgY']) : a,
                                   editable: !1,
                                   inputClassName: ee.input,
                                   spellCheck: 'false',
@@ -413,23 +413,23 @@ class ec extends (i = a.PureComponent) {
                             : (0, l.jsx)(m.TextInput, {
                                   className: ee.copyInput,
                                   name: 'invite',
-                                  value: r,
+                                  value: a,
                                   placeholder: (0, y.Z)($.intl.string($.t.lPVBqK)),
                                   editable: !1,
                                   inputClassName: ee.input,
                                   spellCheck: 'false',
                                   onClick: () => this.createInvite()
                               }),
-                        V.wS && r.length > 0
+                        V.wS && a.length > 0
                             ? (0, l.jsx)(m.Button, {
                                   size: m.Button.Sizes.SMALL,
                                   color: i ? m.Button.Colors.GREEN : m.Button.Colors.BRAND,
                                   className: ee.copyButton,
-                                  onClick: () => this.handleCopyInvite(r),
+                                  onClick: () => this.handleCopyInvite(a),
                                   children: i ? $.intl.string($.t.q30c5u) : $.intl.string($.t.OpuAlJ)
                               })
                             : null,
-                        0 === r.length
+                        0 === a.length
                             ? (0, l.jsx)(m.Button, {
                                   size: m.Button.Sizes.SMALL,
                                   color: m.Button.Colors.BRAND,
@@ -440,7 +440,7 @@ class ec extends (i = a.PureComponent) {
                             : null
                     ]
                 }),
-                r.length > 0
+                a.length > 0
                     ? (0, l.jsx)(m.Text, {
                           variant: 'text-xs/normal',
                           className: s()(en.marginTop8, ee.footerText),
@@ -455,7 +455,7 @@ class ec extends (i = a.PureComponent) {
         if (this.isNotFriends() || !e || this.isPartyFull()) return null;
         let n = null == t || t.isDM() ? this.renderCreateGroupButton() : this.renderInviteLink();
         if (null != n)
-            return (0, l.jsxs)(a.Fragment, {
+            return (0, l.jsxs)(r.Fragment, {
                 children: [
                     (0, l.jsx)('div', { className: ee.footerSeparator }),
                     (0, l.jsx)(j.Z, {
@@ -497,9 +497,9 @@ class ec extends (i = a.PureComponent) {
                 copied: !1
             }),
             ei(this, 'copyTimeout', void 0),
-            ei(this, 'scrollerRef', a.createRef()),
-            ei(this, 'searchBarRef', a.createRef()),
-            ei(this, '_mobileCloseRef', a.createRef()),
+            ei(this, 'scrollerRef', r.createRef()),
+            ei(this, 'searchBarRef', r.createRef()),
+            ei(this, '_mobileCloseRef', r.createRef()),
             ei(this, '_searchCounter', 0),
             ei(this, '_existingTimeout', null),
             ei(this, 'scrollPageUp', () => {
@@ -534,11 +534,11 @@ class ec extends (i = a.PureComponent) {
             ei(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e;
                 if (t > 0) return null;
-                let { results: i, selectedUsers: a, selectedRow: r, hideDiscriminator: s } = this.props,
+                let { results: i, selectedUsers: r, selectedRow: a, hideDiscriminator: s } = this.props,
                     o = i[n];
                 if (null == o) return null;
                 let { user: c, comparator: d } = o,
-                    u = a.has(c.id);
+                    u = r.has(c.id);
                 return (0, l.jsx)(
                     J.Z,
                     {
@@ -547,7 +547,7 @@ class ec extends (i = a.PureComponent) {
                         hideDiscriminator: s,
                         comparator: d,
                         checked: u,
-                        selected: n === r,
+                        selected: n === a,
                         onClick: this.handleClick,
                         onMouseEnter: this.focusResult,
                         'aria-posinset': n + 1,
@@ -579,7 +579,7 @@ class ec extends (i = a.PureComponent) {
             }),
             ei(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
-                    n = (0, Z.v_)(t);
+                    n = (0, N.v_)(t);
                 _.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
@@ -610,7 +610,7 @@ class ec extends (i = a.PureComponent) {
             ei(this, 'createNewDM', (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    i = (0, Z.v_)(n),
+                    i = (0, N.v_)(n),
                     l = !0;
                 1 === e.length && (l = null == C.Z._openCachedDMChannel(e[0])),
                     F.default.track(Q.rMx.CREATE_DM_USER_LIST_CLICKED, {
@@ -626,7 +626,7 @@ class ec extends (i = a.PureComponent) {
             }),
             ei(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
-                    i = (0, Z.v_)(e),
+                    i = (0, N.v_)(e),
                     l = w.Z.getChannelId() === e.id;
                 C.Z.addRecipients(e.id, t, Q.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (!!l) {
@@ -721,10 +721,10 @@ function ed(e) {
 }
 function eu(e) {
     var t, n;
-    let { channel: i, iconClassName: r, icon: s, tooltip: o, tooltipPosition: c = 'bottom', popoutPosition: d = 'bottom', popoutAlign: u = 'right', subscribeToGlobalHotkey: h = !1 } = e,
-        [f, g] = a.useState(null != i && i.isGroupDM() && 0 === i.recipients.length),
-        C = a.useCallback(() => g((e) => !e), []);
-    a.useEffect(
+    let { channel: i, iconClassName: a, icon: s, tooltip: o, tooltipPosition: c = 'bottom', popoutPosition: d = 'bottom', popoutAlign: u = 'right', subscribeToGlobalHotkey: h = !1 } = e,
+        [f, g] = r.useState(null != i && i.isGroupDM() && 0 === i.recipients.length),
+        C = r.useCallback(() => g((e) => !e), []);
+    r.useEffect(
         () => (
             h && z.S.subscribe(Q.CkL.TOGGLE_DM_CREATE, C),
             () => {
@@ -734,7 +734,7 @@ function eu(e) {
         [h, C]
     );
     let x = (0, p.e7)([G.default], () => G.default.getUser(null == i ? void 0 : i.getRecipientId()));
-    return (a.useEffect(() => {
+    return (r.useEffect(() => {
         (0, M._)();
     }, []),
     (null !== (t = null == x ? void 0 : x.bot) && void 0 !== t && t) || (null !== (n = null == x ? void 0 : x.isProvisional) && void 0 !== n && n))
@@ -756,8 +756,8 @@ function eu(e) {
                       ...e,
                       onClick: C,
                       icon: null != s ? s : null == i ? m.ChatPlusIcon : m.GroupPlusIcon,
-                      className: r,
-                      iconClassName: r,
+                      className: a,
+                      iconClassName: a,
                       tooltip: o,
                       tooltipPosition: c
                   })
@@ -777,4 +777,4 @@ function eh(e) {
 function ep(e) {
     return JSON.stringify(e.sort());
 }
-ei(ec, 'contextType', N.ZP);
+ei(ec, 'contextType', Z.ZP);

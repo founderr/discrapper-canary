@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(91192),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(623624),
     E = n(518738),
     b = n(965376),
-    N = n(159299),
-    Z = n(184301),
+    Z = n(159299),
+    N = n(184301),
     S = n(347475),
     T = n(199902),
     j = n(271383),
@@ -49,9 +49,9 @@ var i = n(200651),
 let z = B.ZP.getEnableHardwareAcceleration(),
     W = 44 + U.x,
     K = l.memo(function (e) {
-        let { channel: t, sectionId: a, userId: r, guildOwnerId: s } = e,
-            o = (0, h.e7)([M.Z], () => M.Z.isTyping(t.id, r)),
-            d = (0, h.e7)([j.ZP], () => j.ZP.getMember(t.guild_id, r)),
+        let { channel: t, sectionId: r, userId: a, guildOwnerId: s } = e,
+            o = (0, h.e7)([M.Z], () => M.Z.isTyping(t.id, a)),
+            d = (0, h.e7)([j.ZP], () => j.ZP.getMember(t.guild_id, a)),
             g = (0, h.e7)(
                 [A.Z],
                 () => {
@@ -60,15 +60,15 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                 },
                 [t.guild_id, d]
             ),
-            C = (0, h.e7)([R.default], () => R.default.getUser(r)),
+            C = (0, h.e7)([R.default], () => R.default.getUser(a)),
             x = (0, h.e7)([R.default], () => R.default.getCurrentUser()),
             v = (null == C ? void 0 : C.id) === (null == x ? void 0 : x.id),
-            _ = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getStatus() : y.Z.getStatus(r, t.guild_id))),
-            E = (0, h.e7)([y.Z], () => y.Z.isMobileOnline(r)),
-            b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(r, t.guild_id))),
-            L = (0, h.e7)([T.Z], () => T.Z.getAnyStreamForUser(r)),
-            k = (0, c.JA)(r),
-            D = (0, h.e7)([N.Z], () => N.Z.canUserViewChannel(t.id, a, r)),
+            _ = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getStatus() : y.Z.getStatus(a, t.guild_id))),
+            E = (0, h.e7)([y.Z], () => y.Z.isMobileOnline(a)),
+            b = (0, h.e7)([y.Z, P.Z], () => (v ? P.Z.getActivities() : y.Z.getActivities(a, t.guild_id))),
+            L = (0, h.e7)([T.Z], () => T.Z.getAnyStreamForUser(a)),
+            k = (0, c.JA)(a),
+            D = (0, h.e7)([Z.Z], () => Z.Z.canUserViewChannel(t.id, r, a)),
             B = (null == C ? void 0 : C.id) != null && C.id === s,
             F = l.useCallback(
                 (e) => {
@@ -113,7 +113,7 @@ let z = B.ZP.getEnableHardwareAcceleration(),
         let K = null == d ? void 0 : d.premiumSince;
         return (0, i.jsx)(p.Popout, {
             preload: () =>
-                (0, Z.Z)(C, {
+                (0, N.Z)(C, {
                     guildId: t.guild_id,
                     channelId: t.id
                 }),
@@ -156,10 +156,10 @@ let z = B.ZP.getEnableHardwareAcceleration(),
         });
     }),
     Y = l.memo(function (e) {
-        let { id: t, label: n, count: l, guildId: a } = e,
-            r = (0, E.p9)({
+        let { id: t, label: n, count: l, guildId: r } = e,
+            a = (0, E.p9)({
                 roleId: t,
-                guildId: a,
+                guildId: r,
                 size: 16
             });
         return t === H.Skl.UNKNOWN
@@ -174,10 +174,10 @@ let z = B.ZP.getEnableHardwareAcceleration(),
                       count: l
                   }),
                   children: [
-                      null != r
+                      null != a
                           ? (0, i.jsx)(_.Z, {
                                 className: V.roleIcon,
-                                ...r
+                                ...a
                             })
                           : null,
                       (0, i.jsxs)('span', {
@@ -218,22 +218,22 @@ let z = B.ZP.getEnableHardwareAcceleration(),
     });
 function X(e) {
     let { channel: t, guild: n } = e,
-        a = 'members-'.concat(t.id),
+        r = 'members-'.concat(t.id),
         { analyticsLocations: s } = (0, x.ZP)(C.Z.MEMBER_LIST),
         u = (0, b.D)(t.id, n),
         m = u.filter((e) => e.userIds.length > 0).reverse()[0],
         { navigator: f, listRef: v } = (function (e, t) {
             let n = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled),
                 i = l.useRef(null),
-                a = l.useCallback(
+                r = l.useCallback(
                     (e, n) => {
                         let l = i.current;
                         if (null == l) return;
-                        let a = parseInt(n, 10),
-                            [r, s] = l.getSectionRowFromIndex(a),
-                            o = 0 === r && 0 === s ? t : 0;
+                        let r = parseInt(n, 10),
+                            [a, s] = l.getSectionRowFromIndex(r),
+                            o = 0 === a && 0 === s ? t : 0;
                         l.scrollToIndex({
-                            section: r,
+                            section: a,
                             row: s,
                             padding: o,
                             callback: () => {
@@ -246,7 +246,7 @@ function X(e) {
                     },
                     [t]
                 ),
-                r = l.useCallback(
+                a = l.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = i.current;
@@ -271,14 +271,14 @@ function X(e) {
             return {
                 navigator: (0, d.ZP)({
                     id: e,
-                    setFocus: a,
+                    setFocus: r,
                     isEnabled: n,
-                    scrollToStart: r,
+                    scrollToStart: a,
                     scrollToEnd: s
                 }),
                 listRef: i
             };
-        })(a, W),
+        })(r, W),
         _ = 0 === u.length || u.every((e) => 0 === e.userIds.length);
     if (
         (l.useEffect(() => {
@@ -300,7 +300,7 @@ function X(e) {
             children: (0, i.jsx)(p.FocusJumpSection, {
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        className: r()(V.membersWrap, V.hiddenMembers),
+                        className: a()(V.membersWrap, V.hiddenMembers),
                         children: (0, i.jsx)(
                             p.List,
                             {
@@ -325,16 +325,16 @@ function X(e) {
                                 rowHeight: W,
                                 renderRow: (e) => {
                                     let { section: n, row: l } = e,
-                                        { userIds: a, id: r } = u[n];
+                                        { userIds: r, id: a } = u[n];
                                     return (0, i.jsx)(
                                         K,
                                         {
                                             channel: t,
-                                            sectionId: r,
-                                            userId: a[l],
+                                            sectionId: a,
+                                            userId: r[l],
                                             guildOwnerId: E
                                         },
-                                        a[l]
+                                        r[l]
                                     );
                                 },
                                 footerHeight: (e) => (u[e] === m && t.type === H.d4z.PRIVATE_THREAD ? 80 : 0),
@@ -346,7 +346,7 @@ function X(e) {
                                 ...I,
                                 ...e
                             },
-                            a
+                            r
                         )
                     })
             })
@@ -356,7 +356,7 @@ function X(e) {
 function J(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
-        className: r()(V.membersWrap, V.hiddenMembers, V.members, F.emptyState),
+        className: a()(V.membersWrap, V.hiddenMembers, V.members, F.emptyState),
         children: [
             (0, i.jsx)(p.Text, {
                 className: F.emptyStateHeader,

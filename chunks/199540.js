@@ -47,10 +47,10 @@ function b(e) {
         f = h.map((e) => e.id),
         [m, C] = l.useState(!1),
         [b, S] = l.useState(c),
-        Z = c ? 0 : -x,
+        E = c ? 0 : -x,
         N = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(E, 'px, 0)'),
                 config: { duration: v },
                 onStart() {
                     C(!0), S(c);
@@ -61,11 +61,11 @@ function b(e) {
             },
             'animate-always'
         ),
-        E = m ? N : void 0;
+        Z = m ? N : void 0;
     return (
         (m || b) &&
             (t = (0, i.jsx)(o.animated.div, {
-                style: E,
+                style: Z,
                 className: _.expandedFolderIconWrapper,
                 children: (0, i.jsx)(d.FolderIcon, {
                     size: 'md',
@@ -75,7 +75,7 @@ function b(e) {
             })),
         (m || !b) &&
             (n = (0, i.jsx)(o.animated.div, {
-                style: E,
+                style: Z,
                 className: _.closedFolderIconWrapper,
                 children: f.slice(0, 4).map((e) =>
                     (0, i.jsx)(
@@ -113,25 +113,25 @@ function S(e) {
             onKeyDown: x,
             treeItemProps: { onFocus: I, ...S }
         } = e,
-        [Z, N] = l.useState(!1),
-        E = l.useCallback(() => {
+        [E, N] = l.useState(!1),
+        Z = l.useCallback(() => {
             o || N(!0), null == v || v(!0);
         }, [o, v]),
         y = l.useCallback(() => {
             o || N(!1), null == v || v(!1);
         }, [o, v]),
-        j = r || null == s ? null : (0, m.Or)(s),
-        T = !r && c > 0 ? (0, m.Ne)(c) : null;
+        T = r || null == s ? null : (0, m.Or)(s),
+        j = !r && c > 0 ? (0, m.Ne)(c) : null;
     return (0, i.jsx)(d.BlobMask, {
         selected: !n,
-        upperBadge: j,
-        lowerBadge: T,
+        upperBadge: T,
+        lowerBadge: j,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(_.folder, { [_.hover]: Z }),
+            className: a()(_.folder, { [_.hover]: E }),
             onClick: f,
             onContextMenu: g,
-            onMouseEnter: E,
+            onMouseEnter: Z,
             onMouseLeave: y,
             onKeyDown: x,
             onFocus: I,
@@ -152,7 +152,7 @@ function S(e) {
                       })
                     : (0, i.jsx)(b, {
                           folderNode: t,
-                          hovered: Z,
+                          hovered: E,
                           expanded: r
                       })
         })

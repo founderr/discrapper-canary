@@ -1,8 +1,8 @@
 n(47120);
 var i,
     l,
-    a = n(200651),
-    r = n(192379),
+    r = n(200651),
+    a = n(192379),
     s = n(442837),
     o = n(112724),
     c = n(358221),
@@ -21,7 +21,7 @@ let I = 424,
     E = 624,
     b = 824;
 ((l = i || (i = {}))[(l.SELECTED = 0)] = 'SELECTED'), (l[(l.SPEAKER = 1)] = 'SPEAKER'), (l[(l.AUDIENCE = 2)] = 'AUDIENCE');
-let N = (e, t) => {
+let Z = (e, t) => {
         let n = Math.floor(e / t - 8),
             i = Math.floor(n / x.Q);
         return {
@@ -29,7 +29,7 @@ let N = (e, t) => {
             speakerTileHeight: i
         };
     },
-    Z = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
+    N = (e, t) => (e < I ? 1 : e < E ? 2 : e < b ? 3 : t ? 3 : 4),
     S = (e) => Math.floor((e - 32) / 102);
 function T(e) {
     return e.type === h.Ui.VOICE;
@@ -57,7 +57,7 @@ t.Z = (0, o.Z)((e) => {
         M = P.filter(T),
         R = null != P.find((e) => e.type === h.Ui.STREAM),
         L = S(l),
-        k = Z(l, b),
+        k = N(l, b),
         O = {
             [h.pV.SPEAKER]: k,
             [h.pV.AUDIENCE]: L,
@@ -66,19 +66,19 @@ t.Z = (0, o.Z)((e) => {
         D = (0, p.Dx)(i.id),
         [w, B] = (0, p.aP)(i.id, O, D),
         U = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]],
-        { speakerTileWidth: H, speakerTileHeight: G } = N(l, k),
+        { speakerTileWidth: H, speakerTileHeight: G } = Z(l, k),
         F = E ? l - 32 : Math.min(l - 64, 3 * H + 8),
         V = (e) => e === w.length - 1 || (0 === A && 1 === e),
-        [z, W] = r.useState(!1),
-        [K, Y] = r.useState(!1);
-    return (0, a.jsx)(f.Z, {
+        [z, W] = a.useState(!1),
+        [K, Y] = a.useState(!1);
+    return (0, r.jsx)(f.Z, {
         sections: U,
         renderSection: (e) => {
             let { section: t } = e;
             if (1 === t)
                 return 0 === j
                     ? null
-                    : (0, a.jsx)(
+                    : (0, r.jsx)(
                           C.Z,
                           {
                               participantCount: j,
@@ -95,7 +95,7 @@ t.Z = (0, o.Z)((e) => {
             if (2 === t)
                 return 0 === A
                     ? null
-                    : (0, a.jsx)(
+                    : (0, r.jsx)(
                           C.Z,
                           {
                               participantCount: A,
@@ -117,11 +117,11 @@ t.Z = (0, o.Z)((e) => {
             switch (t) {
                 case 0:
                     if (0 === l.length || null == l[0]) return null;
-                    return (0, a.jsx)(
+                    return (0, r.jsx)(
                         'div',
                         {
                             className: _.focusedRow,
-                            children: (0, a.jsx)(x.Z, {
+                            children: (0, r.jsx)(x.Z, {
                                 channel: i,
                                 participant: l[0],
                                 width: F
@@ -131,10 +131,10 @@ t.Z = (0, o.Z)((e) => {
                     );
                 case 1:
                     if (z) return null;
-                    return (0, a.jsx)(
-                        r.Fragment,
+                    return (0, r.jsx)(
+                        a.Fragment,
                         {
-                            children: (0, a.jsx)(g.Z, {
+                            children: (0, r.jsx)(g.Z, {
                                 tileWidth: H,
                                 channel: i,
                                 participants: l,
@@ -145,7 +145,7 @@ t.Z = (0, o.Z)((e) => {
                     );
                 case 2:
                     if (K) return null;
-                    return (0, a.jsx)(
+                    return (0, r.jsx)(
                         m.Z,
                         {
                             channel: i,
@@ -161,7 +161,7 @@ t.Z = (0, o.Z)((e) => {
         rowHeight: (e) => (null == B[e][0] ? 0 : 0 === e ? F / x.Q + 8 : 1 === e ? (z ? 0 : G) : K ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
-            return V(t) ? (0, a.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
+            return V(t) ? (0, r.jsx)('div', { className: _.spacer }, 'bottom-spacer') : null;
         },
         footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : V(e) ? 88 : 0),
         className: _.scroller,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return Z;
     }
 }),
     n(47120);
@@ -128,7 +128,7 @@ function S(e) {
               children: s
           });
 }
-function Z(e) {
+function E(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
@@ -152,13 +152,13 @@ function N(e) {
         singleLine: !0
     });
 }
-function E(e) {
+function Z(e) {
     let { activity: t, embeddedApp: n, user: r, channel: a, sortedVoiceStates: u, onOpenSpotifyTrack: h, onOpenSpotifyArtist: p, onOpenSpotifyAlbum: m } = e,
         g = [];
     null != n ? (g = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (g = u.map((e) => e.user.id));
-    let E = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
+    let Z = (0, o.Wu)([f.default], () => g.map((e) => f.default.getUser(e)).filter(C.lm)),
         y = null != n || (0, c.Z)(t),
-        j = l.useMemo(() => {
+        T = l.useMemo(() => {
             let e = new Map();
             return (
                 y &&
@@ -196,18 +196,18 @@ function E(e) {
                                       user: r,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, i.jsx)(Z, { activity: t }),
+                                  (0, i.jsx)(E, { activity: t }),
                                   g.length > 0 &&
                                       (0, i.jsx)(d.Z, {
                                           className: v.usersSummary,
                                           guildId: a.guild_id,
-                                          users: E,
+                                          users: Z,
                                           size: x,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = j.get(e.id),
+                                              let n = T.get(e.id),
                                                   l = null !== (t = null == n ? void 0 : n.nick) && void 0 !== t ? t : _.ZP.getName(e);
                                               return (0, i.jsx)(
                                                   s.TooltipContainer,

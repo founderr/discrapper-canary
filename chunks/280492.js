@@ -1,17 +1,17 @@
-t.d(n, {
+e.d(t, {
     iN: function () {
-        return i;
+        return l;
     },
     oV: function () {
         return o;
     }
 });
-var l = t(846027);
-let i = {
+var i = e(846027);
+let l = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,
         action: () => (
-            l.Z.toggleSelfMute({
+            i.Z.toggleSelfMute({
                 usedKeybind: !0,
                 location: 'Default Keybind'
             }),
@@ -22,7 +22,7 @@ let i = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (
-            l.Z.toggleSelfDeaf({
+            i.Z.toggleSelfDeaf({
                 usedKeybind: !0,
                 location: 'Default Keybind'
             }),

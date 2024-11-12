@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120);
@@ -37,8 +37,8 @@ function p(e) {
             timeSinceLastDrop: u,
             onResetFrameData: m,
             droppedFramesRef: p,
-            renderedFrameCount: g,
-            bufferFramecountRef: b,
+            renderedFrameCount: b,
+            bufferFramecountRef: g,
             frameCheckerEffect: v
         } = (function (e, t) {
             let n = a.useRef(Array(f).fill(0)),
@@ -80,7 +80,7 @@ function p(e) {
                 onResetFrameData: u
             };
         })(n, l),
-        [_, C, j] = (function (e) {
+        [C, j, _] = (function (e) {
             let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
@@ -132,9 +132,9 @@ function p(e) {
                 }, [i, o]),
                 i
             ];
-        })(_, v),
-        N = performance.now() - i.current < 5000,
-        y = C(s, b.current);
+        })(C, v),
+        y = performance.now() - i.current < 5000,
+        N = j(s, g.current);
     a.useEffect(
         () => (
             T(),
@@ -145,8 +145,8 @@ function p(e) {
         []
     );
     let I = a.useCallback(() => {
-        m(), j(), T();
-    }, [m, j, T]);
+        m(), _(), T();
+    }, [m, _, T]);
     return (0, r.jsxs)('div', {
         className: d.panelGroup,
         children: [
@@ -181,9 +181,9 @@ function p(e) {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: d.secondaryInfoText,
-                        children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
+                        children: ['(Dropped: ', ((p.current / b.current) * 100).toFixed(4), '%)']
                     }),
-                    N &&
+                    y &&
                         (0, r.jsx)(c.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -211,7 +211,7 @@ function p(e) {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
-                        children: g.current.toFixed(0)
+                        children: b.current.toFixed(0)
                     })
                 ]
             }),
@@ -244,10 +244,10 @@ function p(e) {
                                 (0, r.jsxs)(c.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: y > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [y.toFixed(2), 'ms']
+                                    color: N > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [N.toFixed(2), 'ms']
                                 }),
-                                N &&
+                                y &&
                                     (0, r.jsx)(c.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -278,7 +278,7 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function b(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         s = a.useRef(null);
@@ -336,7 +336,7 @@ function g(e) {
         ]
     });
 }
-function b(e) {
+function g(e) {
     let { socket: t } = e,
         n = t.dispatcher.getDispatchTimings(),
         [l, o] = a.useState(!1);
@@ -508,7 +508,7 @@ function v(e) {
         ]
     });
 }
-function _() {
+function C() {
     let e = (0, o.e7)([s.Z], () => s.Z.getSocket()),
         [t, n] = a.useState(!1);
     return (
@@ -532,12 +532,12 @@ function _() {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(b, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: n
                     }),
-                    (0, r.jsx)(b, { socket: e }),
+                    (0, r.jsx)(g, { socket: e }),
                     (0, r.jsx)(v, { socket: e })
                 ]
             })

@@ -1,84 +1,84 @@
-e(47120);
-var i = e(200651),
-    s = e(192379),
-    r = e(120356),
-    o = e.n(r),
-    l = e(481060),
-    a = e(72416),
-    c = e(476221),
-    u = e(873596),
-    E = e(423516),
-    d = e(981631),
-    N = e(700883);
-let C = {
-        [d.IE4.UNKNOWN]: l.Tooltip.Colors.BLACK,
-        [d.IE4.BAD]: l.Tooltip.Colors.RED,
-        [d.IE4.AVERAGE]: l.Tooltip.Colors.YELLOW,
-        [d.IE4.FINE]: l.Tooltip.Colors.GREEN
+n(47120);
+var l = n(200651),
+    s = n(192379),
+    r = n(120356),
+    o = n.n(r),
+    i = n(481060),
+    a = n(72416),
+    c = n(476221),
+    u = n(873596),
+    d = n(423516),
+    h = n(981631),
+    x = n(700883);
+let g = {
+        [h.IE4.UNKNOWN]: i.Tooltip.Colors.BLACK,
+        [h.IE4.BAD]: i.Tooltip.Colors.RED,
+        [h.IE4.AVERAGE]: i.Tooltip.Colors.YELLOW,
+        [h.IE4.FINE]: i.Tooltip.Colors.GREEN
     },
-    T = {
-        [d.QKv.CONNECTED]: N.rtcConnectionStatusConnected,
-        [d.QKv.CONNECTING]: N.rtcConnectionStatusConnecting,
-        [d.QKv.ERROR]: N.rtcConnectionStatusError
+    N = {
+        [h.QKv.CONNECTED]: x.rtcConnectionStatusConnected,
+        [h.QKv.CONNECTING]: x.rtcConnectionStatusConnecting,
+        [h.QKv.ERROR]: x.rtcConnectionStatusError
     },
-    g = {
-        [d.IE4.FINE]: N.rtcConnectionQualityFine,
-        [d.IE4.AVERAGE]: N.rtcConnectionQualityAverage,
-        [d.IE4.BAD]: N.rtcConnectionQualityBad,
-        [d.IE4.UNKNOWN]: null
+    C = {
+        [h.IE4.FINE]: x.rtcConnectionQualityFine,
+        [h.IE4.AVERAGE]: x.rtcConnectionQualityAverage,
+        [h.IE4.BAD]: x.rtcConnectionQualityBad,
+        [h.IE4.UNKNOWN]: null
     };
-class h extends s.PureComponent {
-    renderPopoutTarget(t) {
-        let n = this.props.channelId;
-        return null == n
-            ? t({})
-            : (0, i.jsx)(l.Popout, {
-                  renderPopout: this.renderPopout(n),
+class f extends s.PureComponent {
+    renderPopoutTarget(e) {
+        let t = this.props.channelId;
+        return null == t
+            ? e({})
+            : (0, l.jsx)(i.Popout, {
+                  renderPopout: this.renderPopout(t),
                   position: 'top',
-                  children: t
+                  children: e
               });
     }
     renderStatus() {
-        let { hasVideo: t, state: n, channelId: e } = this.props,
-            { connectionStatus: s, connectionStatusText: r } = c.Z.getStatus(n, t);
-        return this.renderPopoutTarget((t) => {
-            let { onClick: n } = t;
-            return (0, i.jsx)(l.Button, {
-                look: l.Button.Looks.BLANK,
-                size: l.Button.Sizes.NONE,
-                onClick: n,
-                children: (0, i.jsx)(E.Z, {
+        let { hasVideo: e, state: t, channelId: n } = this.props,
+            { connectionStatus: s, connectionStatusText: r } = c.Z.getStatus(t, e);
+        return this.renderPopoutTarget((e) => {
+            let { onClick: t } = e;
+            return (0, l.jsx)(i.Button, {
+                look: i.Button.Looks.BLANK,
+                size: i.Button.Sizes.NONE,
+                onClick: t,
+                children: (0, l.jsx)(d.Z, {
                     text: r,
                     hasVideo: this.props.hasVideo,
-                    className: T[s],
-                    hasConnectedChannel: null != e
+                    className: N[s],
+                    hasConnectedChannel: null != n
                 })
             });
         });
     }
     render() {
-        let t;
-        let { quality: n, smallPing: e, lastPing: s, state: r, className: a, children: c } = this.props;
+        let e;
+        let { quality: t, smallPing: n, lastPing: s, state: r, className: a, children: c } = this.props;
         return (
-            r === d.hes.RTC_CONNECTED &&
-                (t = (0, i.jsx)(l.Tooltip, {
-                    text: n !== d.IE4.UNKNOWN && null != s ? ''.concat(s.toFixed(0), ' ms') : null,
-                    color: C[n],
-                    children: (t) =>
-                        (0, i.jsx)(I, {
-                            quality: n,
-                            smallPing: e,
-                            ...t
+            r === h.hes.RTC_CONNECTED &&
+                (e = (0, l.jsx)(i.Tooltip, {
+                    text: t !== h.IE4.UNKNOWN && null != s ? ''.concat(s.toFixed(0), ' ms') : null,
+                    color: g[t],
+                    children: (e) =>
+                        (0, l.jsx)(p, {
+                            quality: t,
+                            smallPing: n,
+                            ...e
                         })
                 })),
-            (0, i.jsxs)('div', {
+            (0, l.jsxs)('div', {
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: o()(N.rtcConnectionStatus, g[n], a),
+                    (0, l.jsxs)('div', {
+                        className: o()(x.rtcConnectionStatus, C[t], a),
                         children: [
-                            t,
-                            (0, i.jsx)('div', {
-                                className: N.labelWrapper,
+                            e,
+                            (0, l.jsx)('div', {
+                                className: x.labelWrapper,
                                 children: this.renderStatus()
                             })
                         ]
@@ -88,44 +88,44 @@ class h extends s.PureComponent {
             })
         );
     }
-    constructor(...t) {
-        var n, e, s;
-        super(...t),
-            (n = this),
-            (e = 'renderPopout'),
-            (s = (t) => (n) =>
-                (0, i.jsx)(u.Z, {
-                    ...n,
-                    channelId: t
+    constructor(...e) {
+        var t, n, s;
+        super(...e),
+            (t = this),
+            (n = 'renderPopout'),
+            (s = (e) => (t) =>
+                (0, l.jsx)(u.Z, {
+                    ...t,
+                    channelId: e
                 })),
-            e in n
-                ? Object.defineProperty(n, e, {
+            n in t
+                ? Object.defineProperty(t, n, {
                       value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (n[e] = s);
+                : (t[n] = s);
     }
 }
-function I(t) {
-    let { quality: n, smallPing: e, ...s } = t;
-    if (!(0, l.useRedesignIconContext)().enabled)
-        return (0, i.jsx)(a.Z, {
-            className: o()(N.ping, { [N.smallPing]: e }),
-            foreground: N.pingForeground
+function p(e) {
+    let { quality: t, smallPing: n, ...s } = e;
+    if (!(0, i.useRedesignIconContext)().enabled)
+        return (0, l.jsx)(a.Z, {
+            className: o()(x.ping, { [x.smallPing]: n }),
+            foreground: x.pingForeground
         });
     {
-        let t = {
-            [d.IE4.FINE]: l.ConnectionFineIcon,
-            [d.IE4.AVERAGE]: l.ConnectionAverageIcon,
-            [d.IE4.BAD]: l.ConnectionBadIcon,
-            [d.IE4.UNKNOWN]: l.ConnectionUnknownIcon
-        }[n];
-        return (0, i.jsx)(t, {
-            className: o()(N.ping, { [N.smallPing]: e }),
+        let e = {
+            [h.IE4.FINE]: i.ConnectionFineIcon,
+            [h.IE4.AVERAGE]: i.ConnectionAverageIcon,
+            [h.IE4.BAD]: i.ConnectionBadIcon,
+            [h.IE4.UNKNOWN]: i.ConnectionUnknownIcon
+        }[t];
+        return (0, l.jsx)(e, {
+            className: o()(x.ping, { [x.smallPing]: n }),
             ...s
         });
     }
 }
-n.Z = h;
+t.Z = f;

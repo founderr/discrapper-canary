@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120);
@@ -59,7 +59,7 @@ let p = [
         value: 'pm_card_pl'
     }
 ];
-function g() {
+function b() {
     let [e, t] = a.useState('pm_card_us'),
         n = Object.values((0, o.e7)([h.Z], () => h.Z.paymentSources)),
         l = async () => {
@@ -74,7 +74,7 @@ function g() {
         u = async () => {
             await c.tn.del('/debug/payment-source'), await (0, d.tZ)();
         },
-        g = async () => {
+        b = async () => {
             await c.tn.del('/debug/rate-limits'), window.location.reload();
         };
     return (
@@ -118,7 +118,7 @@ function g() {
                                 }),
                             (0, r.jsx)(s.Button, {
                                 size: s.Button.Sizes.SMALL,
-                                onClick: g,
+                                onClick: b,
                                 children: 'Reset API Rate limits and reload app'
                             })
                         ]
@@ -131,13 +131,13 @@ function g() {
                         variant: 'text-md/normal',
                         children: 'Existing Payment Sources'
                     }),
-                    n.map((e) => (0, r.jsx)(b, { paymentSource: e }, e.id))
+                    n.map((e) => (0, r.jsx)(g, { paymentSource: e }, e.id))
                 ]
             })
         })
     );
 }
-function b(e) {
+function g(e) {
     let { paymentSource: t } = e;
     return (0, r.jsxs)('div', {
         className: f.inputRow,
@@ -158,13 +158,13 @@ function b(e) {
                     marginRight: 5,
                     height: 25
                 },
-                src: _(t.country)
+                src: C(t.country)
             })
         ]
     });
 }
 let v = ['AN', 'MI', 'TP'],
-    _ = (e) => {
+    C = (e) => {
         if (null == e) return '';
         if (v.includes(e)) return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f30e.svg';
         let t = e

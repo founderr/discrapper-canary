@@ -18,7 +18,7 @@ var r = n(200651),
     x = n(474936),
     f = n(121978),
     p = n(423705);
-let g = {
+let b = {
         [m.O0b.UNPAID]: 'Unpaid',
         [m.O0b.ACTIVE]: 'Active',
         [m.O0b.PAST_DUE]: 'Past Due',
@@ -29,7 +29,7 @@ let g = {
         [m.O0b.PAUSED]: 'Paused',
         [m.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    b = [
+    g = [
         {
             label: 'Unpaid',
             value: m.O0b.UNPAID
@@ -69,11 +69,11 @@ let g = {
     ];
 function v(e) {
     var t, n, l;
-    let { subscription: v, onUpdated: _ } = e,
-        [C, j] = a.useState(!1),
+    let { subscription: v, onUpdated: C } = e,
+        [j, _] = a.useState(!1),
         [T, S] = a.useState(!1),
-        N = (e) => ((null == e && (e = v.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
-        y = (e) => {
+        y = (e) => ((null == e && (e = v.status), e in b) ? b[e] : 'Unknown status '.concat(e)),
+        N = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
@@ -81,14 +81,14 @@ function v(e) {
             let { status: t = v.status, premiumStreakStart: n, endedAt: r } = e,
                 a = {
                     subscription_status: t,
-                    ...(null != n ? { premium_streak_started_at: y(n) } : null),
-                    ...(null != r ? { ended_at: y(r) } : null)
+                    ...(null != n ? { premium_streak_started_at: N(n) } : null),
+                    ...(null != r ? { ended_at: N(r) } : null)
                 };
             await o.tn.patch({
                 url: '/debug/subscriptions/'.concat(v.id),
                 body: a
             }),
-                _();
+                C();
         },
         k = (null === (t = x.GP[v.planIdFromItems]) || void 0 === t ? void 0 : t.premiumType) === x.p9.TIER_0,
         w = null === (n = v.metadata) || void 0 === n ? void 0 : n.ended_at,
@@ -120,7 +120,7 @@ function v(e) {
                 (0, r.jsxs)(c.Text, {
                     style: { marginBottom: '15px' },
                     variant: 'text-md/normal',
-                    children: ['Status: ', N()]
+                    children: ['Status: ', y()]
                 }),
                 null != v.metadata &&
                     (0, r.jsxs)('div', {
@@ -128,7 +128,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)(c.Clickable, {
                                 onClick: () => {
-                                    j(!C);
+                                    _(!j);
                                 },
                                 className: f.collapsablePaneHeader,
                                 children: [
@@ -138,10 +138,10 @@ function v(e) {
                                             children: 'Metadata'
                                         })
                                     }),
-                                    (0, r.jsx)(s.Z, { direction: C ? s.Z.Directions.UP : s.Z.Directions.DOWN })
+                                    (0, r.jsx)(s.Z, { direction: j ? s.Z.Directions.UP : s.Z.Directions.DOWN })
                                 ]
                             }),
-                            C &&
+                            j &&
                                 (0, r.jsx)('ul', {
                                     style: { marginBottom: '15px' },
                                     children: Object.entries(v.metadata).map((e) => {
@@ -193,9 +193,9 @@ function v(e) {
                                         tag: c.FormTitleTags.H3,
                                         className: f.formSection,
                                         children: (0, r.jsx)(c.Select, {
-                                            serialize: (e) => N(e),
+                                            serialize: (e) => y(e),
                                             isSelected: (e) => e === v.status,
-                                            options: b,
+                                            options: g,
                                             select: (e) => I({ status: e }),
                                             popoutLayerContext: h.O$
                                         })

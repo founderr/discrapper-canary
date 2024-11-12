@@ -43,12 +43,12 @@ function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         o = (0, r.e7)([p.Z], () => p.Z.getGuilds()),
         S = l.useMemo(() => Object.values(o), [o]),
-        Z = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        N = l.useMemo(() => S.some((e) => e.isOwner(Z)), [S, Z]),
-        E = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
+        E = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
+        N = l.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
+        Z = (0, a.useModalsStore)((e) => (0, a.hasModalOpenSelector)(e, _.PU)),
         { analyticsLocations: y } = (0, s.ZP)(),
-        j = (0, a.useRedesignIconContext)().enabled,
-        T = (0, i.jsx)(g.Z, {
+        T = (0, a.useRedesignIconContext)().enabled,
+        j = (0, i.jsx)(g.Z, {
             showPill: !1,
             id: 'create-join-button',
             onClick: () => {
@@ -63,13 +63,13 @@ function S(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: E,
+            selected: Z,
             onContextMenu: b,
             tooltip: v.intl.string(v.t.l5WIbW),
-            icon: j ? a.PlusMediumIcon : a.PlusSmallIcon
+            icon: T ? a.PlusMediumIcon : a.PlusSmallIcon
         });
     return t
-        ? T
+        ? j
         : (0, i.jsx)('div', {
               className: x.tutorialContainer,
               children: (0, i.jsxs)(h.Z, {
@@ -77,7 +77,7 @@ function S(e) {
                   inlineSpecs: I,
                   position: 'right',
                   children: [
-                      T,
+                      j,
                       null != n &&
                           (0, i.jsx)(m.ZP, {
                               name: v.intl.string(v.t['45xjMz']),

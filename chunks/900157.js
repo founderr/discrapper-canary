@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(570140),
     c = n(239091),
@@ -24,18 +24,18 @@ var i = n(200651),
     I = n(703558),
     E = n(430824),
     b = n(979651),
-    N = n(664342),
-    Z = n(124368),
+    Z = n(664342),
+    N = n(124368),
     S = n(981631),
     T = n(388032),
     j = n(972270);
 function A(e) {
-    let { channelId: t, baseChannelId: a, channelViewSource: A = 'Split View' } = e,
+    let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
         y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
         P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
         M = (0, m.ZP)(y);
     (function (e) {
-        let t = (0, s.e7)([b.Z], () => null != e && !r().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
         l.useEffect(() => {
             t &&
                 null != e &&
@@ -43,7 +43,7 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, v.ad)(e, { source: Z.on.VOICE_AUTO_OPEN }));
+                (0, v.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
     let R = l.useRef(!1);
@@ -62,9 +62,9 @@ function A(e) {
         null == y || null == P)
     )
         return null;
-    let L = (0, i.jsx)(N.Z, {
+    let L = (0, i.jsx)(Z.Z, {
         channel: y,
-        baseChannelId: a
+        baseChannelId: r
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [

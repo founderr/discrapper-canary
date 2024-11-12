@@ -9,7 +9,7 @@ n.d(t, {
         return m;
     },
     ac: function () {
-        return g;
+        return b;
     },
     bL: function () {
         return f;
@@ -24,7 +24,7 @@ n.d(t, {
         return x;
     },
     xH: function () {
-        return b;
+        return g;
     }
 });
 var r,
@@ -69,12 +69,12 @@ function p(e, t) {
     return !t.verified || (null != e && d > Date.now() - new Date(e.created_at).getTime());
 }
 ((r = a || (a = {}))[(r.UNDECIDED = 0)] = 'UNDECIDED'), (r[(r.OPTIN = 1)] = 'OPTIN'), (r[(r.OPTOUT = 2)] = 'OPTOUT');
-let g = {
+let b = {
     0: void 0,
     1: !0,
     2: !1
 };
-function b() {
+function g() {
     return [
         {
             name: s.intl.string(s.t['/yLMRU']),

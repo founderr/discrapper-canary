@@ -11,7 +11,7 @@ var i = n(200651),
     p = n(599293);
 let f = (0, o.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: r, image: o, type: m, imageStyles: g, imageMarginX: C, imageMarginTop: _, trackingSource: v, undismissable: x, onDismissed: I, onClick: b, cta: S, ctaColor: Z, centerText: N, className: E } = e;
+    let { guild: t, title: n, message: r, image: o, type: m, imageStyles: g, imageMarginX: C, imageMarginTop: _, trackingSource: v, undismissable: x, onDismissed: I, onClick: b, cta: S, ctaColor: E, centerText: N, className: Z } = e;
     l.useEffect(() => {
         f(d.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: m,
@@ -35,32 +35,32 @@ t.Z = function (e) {
                       null == b || b();
               },
               fullWidth: !0,
-              color: Z,
+              color: E,
               children: S
           }));
-    let j = null;
+    let T = null;
     'function' == typeof n
-        ? (j = n())
+        ? (T = n())
         : null != n &&
-          (j = (0, i.jsx)(s.Text, {
+          (T = (0, i.jsx)(s.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
               className: a()(p.title, { [p.noImageTitle]: null == o }, { [p.center]: N }),
               children: n
           }));
-    let T = null;
+    let j = null;
     'function' == typeof r
-        ? (T = r())
+        ? (j = r())
         : null != r &&
-          (T = (0, i.jsx)(s.Text, {
+          (j = (0, i.jsx)(s.Text, {
               className: a()({ [p.center]: N }),
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: r
           }));
-    let P = null != C ? ''.concat(C, 'px') : '16px';
+    let A = null != C ? ''.concat(C, 'px') : '16px';
     return (0, i.jsxs)('div', {
-        className: a()(p.container, E),
+        className: a()(p.container, Z),
         children: [
             !0 === x
                 ? null
@@ -81,8 +81,8 @@ t.Z = function (e) {
                     className: p.imageContainer,
                     style: {
                         marginTop: ''.concat(_, 'px'),
-                        marginLeft: P,
-                        marginRight: P
+                        marginLeft: A,
+                        marginRight: A
                     },
                     children: (0, i.jsx)('img', {
                         className: p.image,
@@ -93,7 +93,7 @@ t.Z = function (e) {
                 }),
             (0, i.jsxs)('div', {
                 className: p.message,
-                children: [j, T, y]
+                children: [T, j, y]
             })
         ]
     });

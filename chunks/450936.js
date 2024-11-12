@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(192379),
     l = n(442837),
-    a = n(570140),
-    r = n(911969),
+    r = n(570140),
+    a = n(911969),
     s = n(110924),
     o = n(213459),
     c = n(404295),
@@ -36,44 +36,44 @@ function C(e) {
             var e;
             return null !== v ? (null === (e = h.Z.getUserProfile(null == v ? void 0 : v.id)) || void 0 === e ? void 0 : e.application) : void 0;
         }),
-        N = null != E ? E : null == b ? void 0 : b.id;
+        Z = null != E ? E : null == b ? void 0 : b.id;
     i.useEffect(() => {
-        if (null == N && x) {
+        if (null == Z && x) {
             var e;
             (0, p.Z)(null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : g.lds);
         }
-    }, [v, N, x]),
+    }, [v, Z, x]),
         i.useEffect(() => {
             (null == v ? void 0 : v.id) != null &&
-                a.Z.dispatch({
+                r.Z.dispatch({
                     type: 'APP_DM_OPEN',
                     botUserId: v.id
                 });
         }, [null == v ? void 0 : v.id]);
-    let Z = (0, o.v1)(
+    let N = (0, o.v1)(
             C,
             {
-                commandTypes: [r.yU.PRIMARY_ENTRY_POINT, r.yU.CHAT, r.yU.MESSAGE, r.yU.USER]
+                commandTypes: [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER]
             },
             {
-                applicationId: N,
+                applicationId: Z,
                 allowFetch: x && (null == v ? void 0 : v.id) != null,
                 allowApplicationState: !0
             }
         ),
-        S = Z.commands.filter((e) => e.type === r.yU.PRIMARY_ENTRY_POINT && e.applicationId === N)[0],
-        T = Z.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
-        j = Z.loading,
+        S = N.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
+        T = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        j = N.loading,
         A =
             null ===
-                (t = Z.descriptors.find((e) => {
+                (t = N.descriptors.find((e) => {
                     var t;
-                    return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === N;
+                    return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === Z;
                 })) || void 0 === t
                 ? void 0
                 : t.application,
         y = i.useMemo(() => (null != A ? m.Z.createFromServer(A) : void 0), [A]),
-        P = (0, u.q)(null == y && x ? N : void 0),
+        P = (0, u.q)(null == y && x ? Z : void 0),
         M = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
         R = null == M || (j && 0 === T.length);
     return {
@@ -82,7 +82,7 @@ function C(e) {
         primaryEntryPointCommand: S,
         isProfileFetching: _,
         wasProfileFetching: I,
-        applicationId: N,
+        applicationId: Z,
         channelId: C.id,
         commands: T
     };

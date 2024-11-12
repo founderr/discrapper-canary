@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(442837),
-    r = n(570140),
+    r = n(442837),
+    a = n(570140),
     s = n(475179),
     o = n(367907),
     c = n(358221),
@@ -20,13 +20,13 @@ var i = n(200651),
     C = n(981631),
     x = n(336496);
 let v = () => {
-    r.Z.wait(() => d.xv(C.KJ3.CHANNEL_CALL_POPOUT));
+    a.Z.wait(() => d.xv(C.KJ3.CHANNEL_CALL_POPOUT));
 };
 function _(e) {
-    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: d, currentWindow: _ } = e,
+    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: d, currentWindow: _ } = e,
         I = n === C.IlC.POPOUT,
         E = l.useRef(null),
-        { currentLayout: b, mode: N } = (0, a.cj)(
+        { currentLayout: b, mode: Z } = (0, r.cj)(
             [c.Z],
             () => {
                 let e = c.Z.getMode(t.id),
@@ -43,9 +43,9 @@ function _(e) {
             },
             [t, n]
         ),
-        Z = (0, a.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
+        N = (0, r.e7)([h.Z], () => h.Z.getVoiceChannelId() === t.id, [t.id]);
     l.useEffect(() => {
-        E.current = N;
+        E.current = Z;
     });
     let S = l.useRef(b),
         { currentDocument: T, rootNode: j } = l.useMemo(() => {
@@ -57,8 +57,8 @@ function _(e) {
                 rootNode: t
             };
         }, [d, I, _]),
-        A = r && !I,
-        y = N === C.WtW.VIDEO && Z && !A,
+        A = a && !I,
+        y = Z === C.WtW.VIDEO && N && !A,
         P = l.useCallback(
             (e, i) => {
                 i !== e && (s.Z.updateLayout(t.id, i, n), i === C.AEg.FULL_SCREEN && t.isPrivate() && m.S.dispatch(C.CkL.TEXTAREA_BLUR));
@@ -106,11 +106,11 @@ function _(e) {
         [b, I]
     ),
     l.useEffect(() => {
-        null != j && E.current === C.WtW.VIDEO && N === C.WtW.VOICE && (0, g.Pr)(j, T);
-    }, [T, N, E, j]),
+        null != j && E.current === C.WtW.VIDEO && Z === C.WtW.VOICE && (0, g.Pr)(j, T);
+    }, [T, Z, E, j]),
     l.useEffect(() => {
-        !Z && I && v();
-    }, [Z, I]),
+        !N && I && v();
+    }, [N, I]),
     y)
         ? (0, i.jsx)(u.Z, {
               themeable: !1,

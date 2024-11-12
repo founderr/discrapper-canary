@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(597312),
-    r = n(481060),
+    r = n(597312),
+    a = n(481060),
     s = n(727637),
     o = n(410030),
     c = n(100527),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(280885),
     E = n(900927),
     b = n(678738),
-    N = n(502762),
-    Z = n(530),
+    Z = n(502762),
+    N = n(530),
     S = n(679332),
     T = n(544989),
     j = n(171368),
@@ -57,14 +57,14 @@ function R(e) {
         value: O,
         children: (0, i.jsx)(f.Mt, {
             value: D,
-            children: (0, i.jsxs)(N.Z, {
+            children: (0, i.jsxs)(Z.Z, {
                 ref: w,
                 user: t,
                 displayProfile: L,
                 profileType: A.y0.PANEL,
                 themeOverride: k,
                 children: [
-                    (0, i.jsxs)(a.u2, {
+                    (0, i.jsxs)(r.u2, {
                         children: [
                             (0, i.jsx)(T.Z, {
                                 profileType: A.y0.PANEL,
@@ -92,7 +92,7 @@ function R(e) {
                             (0, i.jsxs)('div', {
                                 className: M.body,
                                 children: [
-                                    (0, i.jsx)(Z.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         user: t,
                                         profileType: A.y0.PANEL,
                                         nickname: m.ZP.getName(null, n.id, t),
@@ -103,7 +103,7 @@ function R(e) {
                                             profileType: A.y0.PANEL
                                         })
                                     }),
-                                    (0, i.jsxs)(N.Z.Overlay, {
+                                    (0, i.jsxs)(Z.Z.Overlay, {
                                         className: M.overlay,
                                         children: [
                                             (0, i.jsx)(b.Z, {
@@ -130,10 +130,10 @@ function R(e) {
                     !R &&
                         (0, i.jsx)('footer', {
                             className: P.footer,
-                            children: (0, i.jsx)(r.Button, {
+                            children: (0, i.jsx)(a.Button, {
                                 fullWidth: !0,
-                                size: r.Button.Sizes.LARGE,
-                                look: r.Button.Looks.BLANK,
+                                size: a.Button.Sizes.LARGE,
+                                look: a.Button.Looks.BLANK,
                                 color: P.footerButtonColor,
                                 onClick: () => {
                                     U(),

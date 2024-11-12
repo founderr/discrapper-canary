@@ -29,7 +29,7 @@ function l(e, n, l) {
           })
         : l.isDM()
           ? (0, r.jW)(e, async () => {
-                let { default: e } = await Promise.all([t.e('50506'), t.e('79695'), t.e('51269'), t.e('13351'), t.e('33862'), t.e('70348'), t.e('92453'), t.e('70205'), t.e('56826'), t.e('41271')]).then(t.bind(t, 131404));
+                let { default: e } = await Promise.all([t.e('50506'), t.e('79695'), t.e('51269'), t.e('13351'), t.e('33862'), t.e('92453'), t.e('70205'), t.e('56826'), t.e('71427')]).then(t.bind(t, 131404));
                 return (t) =>
                     (0, i.jsx)(e, {
                         ...t,

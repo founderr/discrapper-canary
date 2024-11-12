@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    a = n(442837),
     s = n(481060),
     o = n(239091),
     c = n(100527),
@@ -26,8 +26,8 @@ function I(e) {
     var t, l;
     let { userId: u, channel: C } = e,
         { analyticsLocations: x } = (0, d.ZP)(c.Z.USERNAME),
-        v = (0, r.e7)([f.default], () => f.default.getUser(u)),
-        I = (0, r.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
+        v = (0, a.e7)([f.default], () => f.default.getUser(u)),
+        I = (0, a.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
     function E(e) {
         if (null == v) return null;
         (0, o.jW)(e, async () => {
@@ -42,10 +42,10 @@ function I(e) {
         });
     }
     let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
-        N = null == I ? void 0 : I.colorString;
+        Z = null == I ? void 0 : I.colorString;
     return null == v
         ? (0, i.jsx)('span', {
-              className: a()(_.threadCreatorName, _.unknownCreatorName),
+              className: r()(_.threadCreatorName, _.unknownCreatorName),
               children: b
           })
         : (0, i.jsx)(d.Gt, {
@@ -73,7 +73,7 @@ function I(e) {
                           onContextMenu: E,
                           children: (0, i.jsx)(s.NameWithRole, {
                               name: b,
-                              color: null != N ? N : void 0
+                              color: null != Z ? Z : void 0
                           })
                       })
               })

@@ -31,18 +31,18 @@ var i = n(200651),
     I = n(749681),
     b = n(863249),
     S = n(937111),
-    Z = n(667105),
+    E = n(667105),
     N = n(451478),
-    E = n(602147),
+    Z = n(602147),
     y = n(981631),
-    j = n(308083),
-    T = n(921944),
-    P = n(49898),
-    A = n(128449),
+    T = n(308083),
+    j = n(921944),
+    A = n(49898),
+    P = n(128449),
     M = n(46140),
-    w = n(388032),
+    R = n(388032),
     L = n(877861);
-function R(e) {
+function w(e) {
     let { color: t } = e;
     return (0, i.jsxs)('svg', {
         className: L.doubleIcon,
@@ -104,13 +104,13 @@ let D = l.memo(function (e) {
     let { children: t } = e,
         n = (0, o.TH)(),
         { games: r, treatment: p, hasFetchedGames: b } = (0, _.I9)(),
-        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], T.R.SIDEBAR, !0),
-        O = (0, Z.Ws)({ location: M.dr.CONFLICT_CHECKS }),
+        [S, D] = (0, v.US)([u.z.RAPIDASH_MORE_GUILDS_UPSELL], j.R.SIDEBAR, !0),
+        O = (0, E.Ws)({ location: M.dr.CONFLICT_CHECKS }),
         k = S !== u.z.RAPIDASH_MORE_GUILDS_UPSELL,
         U = (0, h.Z)(),
         G = n.pathname === y.Z5c.GUILD_DISCOVERY || n.pathname.startsWith(y.Z5c.GLOBAL_DISCOVERY),
         B = O && !U && !k && !G,
-        [V, H] = l.useState(0),
+        [H, V] = l.useState(0),
         F = (0, f.ZP)(),
         W = l.useMemo(() => r.map((e) => e.id), [r]),
         z = (0, c.e7)([N.Z], () => N.Z.isFocused());
@@ -125,13 +125,13 @@ let D = l.memo(function (e) {
         l.useEffect(() => {
             if (!B || !z) return;
             let e = setInterval(() => {
-                null != W && 0 !== W.length && H((e) => ((isNaN(e) ? 0 : e) + 1) % W.length);
+                null != W && 0 !== W.length && V((e) => ((isNaN(e) ? 0 : e) + 1) % W.length);
             }, 2500);
             return () => clearInterval(e);
-        }, [H, W, B, z]);
+        }, [V, W, B, z]);
     let Y = l.useCallback(() => {
             if (
-                (O && D(T.L.TAKE_ACTION),
+                (O && D(j.L.TAKE_ACTION),
                 (0, g.GS)({
                     location: m.Z.GUILDS_LIST,
                     treatment: p,
@@ -140,22 +140,22 @@ let D = l.memo(function (e) {
                 B)
             )
                 (0, I.transitionToGlobalDiscovery)({
-                    tab: P.F$.SERVERS,
-                    selectedServersTab: A.vf.GUILDS,
-                    entrypoint: A.Qq.GUILDS_BAR
+                    tab: A.F$.SERVERS,
+                    selectedServersTab: P.vf.GUILDS,
+                    entrypoint: P.Qq.GUILDS_BAR
                 });
             else {
                 let e = x.Z.getField('selectedTab');
-                (0, E.o)(e);
+                (0, Z.o)(e);
             }
         }, [O, p, W, B, D]),
         K = l.useCallback(
             (e) => {
-                e(), D(T.L.USER_DISMISS);
+                e(), D(j.L.USER_DISMISS);
             },
             [D]
         ),
-        q = (0, d.useTransition)(V, {
+        q = (0, d.useTransition)(H, {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -164,7 +164,7 @@ let D = l.memo(function (e) {
         }),
         Q = l.useCallback((e) => (null != e ? { backgroundImage: 'url('.concat(e, ')') } : {}), []),
         J = l.useMemo(() => t({ onClick: Y }), [t, Y]);
-    return p !== j.O7.GAME_SPECIFIC || b
+    return p !== T.O7.GAME_SPECIFIC || b
         ? (0, i.jsxs)('div', {
               className: L.container,
               children: [
@@ -198,7 +198,7 @@ let D = l.memo(function (e) {
                                                           className: L.radialGradient,
                                                           style: { background: l.toHexString() }
                                                       }),
-                                                      (0, i.jsx)(R, { color: l.toHexString() }, r[t].id)
+                                                      (0, i.jsx)(w, { color: l.toHexString() }, r[t].id)
                                                   ]
                                               },
                                               r[t].id
@@ -215,7 +215,7 @@ let D = l.memo(function (e) {
                                   }),
                                   (0, i.jsxs)('div', {
                                       className: a()(L.popoutContent),
-                                      children: [(0, i.jsx)(C.aF, { title: w.intl.string(w.t.B2wKJi) }), (0, i.jsx)(C.To, { message: w.intl.string(w.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
+                                      children: [(0, i.jsx)(C.aF, { title: R.intl.string(R.t.B2wKJi) }), (0, i.jsx)(C.To, { message: R.intl.string(R.t.Cs2Bio) }), (0, i.jsx)(C.Xu, { onClick: Y })]
                                   }),
                                   (0, i.jsx)('div', { className: L.popoutCaret })
                               ]
@@ -269,12 +269,12 @@ function O(e) {
                                             children: [
                                                 (0, i.jsx)(d.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: w.intl.string(w.t.fRUGzs)
+                                                    children: R.intl.string(R.t.fRUGzs)
                                                 }),
                                                 (0, i.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: w.intl.string(w.t.ja0Tg4)
+                                                    children: R.intl.string(R.t.ja0Tg4)
                                                 })
                                             ]
                                         }),
@@ -283,7 +283,7 @@ function O(e) {
                                             size: d.ButtonSizes.SMALL,
                                             color: d.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: w.intl.string(w.t.E0MgHh)
+                                            children: R.intl.string(R.t.E0MgHh)
                                         })
                                     ]
                                 }),

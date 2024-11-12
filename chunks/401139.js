@@ -1,16 +1,16 @@
 var i = n(200651),
     l = n(192379),
-    a = n(450369),
-    r = n(962824);
+    r = n(450369),
+    a = n(962824);
 t.Z = l.memo(function (e) {
     let { channel: t, participants: n, tileWidth: l, selectedParticipant: s } = e;
     return (0, i.jsx)('div', {
-        className: r.rowContainer,
+        className: a.rowContainer,
         children: n.map((e) =>
             e.id === (null == s ? void 0 : s.id)
                 ? null
                 : (0, i.jsx)(
-                      a.Z,
+                      r.Z,
                       {
                           channel: t,
                           participant: e,

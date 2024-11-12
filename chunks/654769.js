@@ -25,21 +25,21 @@ function p(e, t, n) {
         e
     );
 }
-let g = h.isPlatformEmbedded && (0, h.isWindows)(),
-    b = g && 10 > parseFloat(c.Z.os.release),
+let b = h.isPlatformEmbedded && (0, h.isWindows)(),
+    g = b && 10 > parseFloat(c.Z.os.release),
     v = !0;
-if (g && !b) {
+if (b && !g) {
     let [e, , t] = c.Z.os.release.split('.');
     v = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let _ = (g && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
-    C = l().throttle(m.GN, 1000, { leading: !0 });
-function j() {
+let C = (b && v) || ('Chrome' === o().name && 47 > parseFloat(o().version)) || ('Firefox' === o().name && 52 > parseFloat(o().version)),
+    j = l().throttle(m.GN, 1000, { leading: !0 });
+function _() {
     x.ZP.flashFrame(!1);
 }
-g && (window.addEventListener('focus', j), x.ZP.on('MAIN_WINDOW_FOCUS', j));
+b && (window.addEventListener('focus', _), x.ZP.on('MAIN_WINDOW_FOCUS', _));
 let T = window.Notification;
-b &&
+g &&
     (x.ZP.on('NOTIFICATION_CLICK', (e, t) => {
         let n = null[t];
         null != n && (n.onclick(), n.close());
@@ -79,12 +79,12 @@ b &&
 function S() {
     return null != T && 'granted' === T.permission;
 }
-function N(e) {
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    e.includes('message') ? C(e, t, void 0, n) : (0, m.GN)(e, t);
+    e.includes('message') ? j(e, t, void 0, n) : (0, m.GN)(e, t);
 }
-function y(e) {
+function N(e) {
     return (d.Z.disableNotifications && null == e.overrideStreamerMode) || !S() || (h.isPlatformEmbedded && !x.ZP.shouldDisplayNotifications());
 }
 t.Z = {
@@ -98,22 +98,22 @@ t.Z = {
     showNotification: function (e, t, n, r, a) {
         var i, o, c, d;
         let m;
-        if (y(a)) {
-            null != a.sound && !1 !== a.playSoundIfDisabled && N(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
+        if (N(a)) {
+            null != a.sound && !1 !== a.playSoundIfDisabled && y(a.sound, null !== (o = a.volume) && void 0 !== o ? o : 1, a.soundpack);
             return;
         }
-        null != a.sound && N(a.sound, null !== (c = a.volume) && void 0 !== c ? c : 1, a.soundpack);
+        null != a.sound && y(a.sound, null !== (c = a.volume) && void 0 !== c ? c : 1, a.soundpack);
         let p = null !== (d = null == a ? void 0 : a.tag) && void 0 !== d ? d : null;
         (0, h.isLinux)() && (n = l().escape(n));
-        let b = {
+        let g = {
             icon: e,
             body: n,
             tag: p,
             silent: !0
         };
-        g && s.Z.taskbarFlash && x.ZP.flashFrame(!0);
+        b && s.Z.taskbarFlash && x.ZP.flashFrame(!0);
         try {
-            m = new T(t, b);
+            m = new T(t, g);
         } catch (e) {
             return null;
         }
@@ -123,7 +123,7 @@ t.Z = {
             var e;
             h.isPlatformEmbedded ? x.ZP.focus() : (window.focus(), m.close()), !a.omitClickTracking && u.default.track(f.rMx.NOTIFICATION_CLICKED, r), null === (e = a.onClick) || void 0 === e || e.call(a);
         }),
-        _ && setTimeout(() => m.close(), 5000),
+        C && setTimeout(() => m.close(), 5000),
         v)
             ? m
             : {
@@ -133,5 +133,5 @@ t.Z = {
                   }
               };
     },
-    disabled: y
+    disabled: N
 };

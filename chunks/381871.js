@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n(442837),
+    r = n(392711),
+    a = n(442837),
     s = n(704215),
     o = n(481060),
     c = n(570140),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(401062),
     E = n(696900),
     b = n(456631),
-    N = n(963838),
-    Z = n(535879),
+    Z = n(963838),
+    N = n(535879),
     S = n(310892),
     T = n(12168),
     j = n(353368),
@@ -46,13 +46,13 @@ let O = P.Hz.CHAT,
 function B(e) {
     var t;
     let { channel: n, closePopout: f, onFocus: v } = e,
-        P = (0, r.e7)([u.Z], () => u.Z.useReducedMotion),
-        B = (0, r.e7)([C.default], () => C.default.getCurrentUser()),
+        P = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        B = (0, a.e7)([C.default], () => C.default.getCurrentUser()),
         U = _.ZP.canUseFancyVoiceChannelReactions(B),
-        H = (0, r.e7)([E.Z], () => E.Z.getState().animationType),
+        H = (0, a.e7)([E.Z], () => E.Z.getState().animationType),
         G = l.useRef(!1),
         F = (0, m.wC)(n.guild_id),
-        V = (0, a.uniqBy)([...F, ...w], 'name')
+        V = (0, r.uniqBy)([...F, ...w], 'name')
             .filter(
                 (e) =>
                     !x.ZP.isEmojiFilteredOrLocked({
@@ -64,7 +64,7 @@ function B(e) {
             .slice(0, y.e5),
         z = (null !== (t = b.Z.recentlyUsedEmojis) && void 0 !== t ? t : []).filter((e) => !V.slice(0, y.e5 - 1).some((t) => t.name === e.name));
     z.length > 0 && V.splice(V.length - 1, 1, z[0]);
-    let W = (0, N.Iu)(H),
+    let W = (0, Z.Iu)(H),
         K = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
@@ -109,11 +109,11 @@ function B(e) {
         contentTypes: Q,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: l } = e,
-                a = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
+                r = P && t === s.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, i.jsx)(o.Popout, {
                 position: 'left',
                 'aria-label': L.intl.string(L.t.RLHsHx),
-                shouldShow: a,
+                shouldShow: r,
                 renderPopout: () =>
                     (0, i.jsx)('div', {
                         onMouseEnter: v,
@@ -141,7 +141,7 @@ function B(e) {
                         onExpandedToggle: q,
                         analyticsOverride: D,
                         emojiSearchProps: {
-                            accessory: (0, i.jsx)(Z.Z, {
+                            accessory: (0, i.jsx)(N.Z, {
                                 labelText: L.intl.string(L.t['ktEv/v']),
                                 value: $,
                                 onChange: () => {

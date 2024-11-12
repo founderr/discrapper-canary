@@ -17,8 +17,8 @@ var i = n(200651),
     p = n(27457),
     m = n(796638),
     E = n(592125),
-    g = n(944486),
-    v = n(906037),
+    v = n(944486),
+    g = n(906037),
     _ = n(501787),
     C = n(65154),
     S = n(253653);
@@ -36,20 +36,20 @@ function I(e) {
                     });
             });
         },
-        g = l.length > 0 && null != t && null != c && (!a || u.pinned);
+        v = l.length > 0 && null != t && null != c && (!a || u.pinned);
     r.useEffect(() => {
-        (0, v.m3)(
+        (0, g.m3)(
             {
                 locked: a,
                 pinned: u.pinned,
                 widget: u.type,
                 isPreviewingInGame: !1
             },
-            g
+            v
         );
-    }, [a, u, g]);
+    }, [a, u, v]);
     let _ = 'boolean' != typeof u.meta.horizontal || u.meta.horizontal;
-    return g
+    return v
         ? (0, i.jsx)('div', {
               ref: m,
               className: o()({
@@ -86,12 +86,12 @@ function I(e) {
         : null;
 }
 function Z(e) {
-    let t = (0, a.e7)([g.Z, E.Z], () => E.Z.getChannel(g.Z.getVoiceChannelId())),
+    let t = (0, a.e7)([v.Z, E.Z], () => E.Z.getChannel(v.Z.getVoiceChannelId())),
         n = (0, h.ZP)(t),
         l = (0, a.Wu)([d.Z], () => (null != t ? d.Z.getVideoParticipants(t.id) : [])),
         o = (0, a.e7)([d.Z], () => (null != t ? d.Z.getParticipantsVersion(t.id) : 0)),
         s = 'boolean' != typeof e.widget.meta.horizontal || e.widget.meta.horizontal,
-        { width: f, height: p, ref: v } = (0, c.Z)(),
+        { width: f, height: p, ref: g } = (0, c.Z)(),
         { visibleParticipants: C, participantTileWidth: S } = (0, m.ZB)(s ? (null != f ? f : e.width) : null != p ? p : e.height, l, {
             tileWidth: _.vZ,
             tileMinWidth: _.mo,
@@ -129,7 +129,7 @@ function Z(e) {
             participantsVersion: o,
             width: s ? S : null != f ? f : e.width,
             height: s ? (null != p ? p : e.height) : S,
-            containerRef: v
+            containerRef: g
         })
     );
 }

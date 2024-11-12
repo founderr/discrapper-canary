@@ -15,7 +15,7 @@ var r = n(392711),
     l = n(437263),
     u = n(924557),
     c = n(435064),
-    d = n(811660),
+    d = n(631053),
     f = n(581567),
     _ = n(594190),
     h = n(314897),
@@ -284,7 +284,7 @@ class O extends o.Z {
                     max_viewers: this.analyticsContext.maxViewers,
                     hostname: this.hostname,
                     hardware_enabled: m.Z.getHardwareEncoding(),
-                    device_performance_class: this.isOwner ? (0, d.R)() : null
+                    device_performance_class: this.isOwner ? (0, d.Z)() : null
                 });
         }),
             s.getInboundParticipants().forEach((t) => {
@@ -305,7 +305,7 @@ class O extends o.Z {
                         max_viewers: this.analyticsContext.maxViewers,
                         hostname: this.hostname,
                         hardware_enabled: m.Z.getHardwareEncoding(),
-                        device_performance_class: this.isOwner ? (0, d.R)() : null
+                        device_performance_class: this.isOwner ? (0, d.Z)() : null
                     });
             });
     }

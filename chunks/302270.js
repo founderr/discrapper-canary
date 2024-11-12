@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(692547),
     c = n(481060),
@@ -24,8 +24,8 @@ var i = n(200651),
     I = n(390322),
     E = n(616286),
     b = n(961048),
-    N = n(430824),
-    Z = n(496675),
+    Z = n(430824),
+    N = n(496675),
     S = n(626135),
     T = n(431328),
     j = n(501655),
@@ -40,12 +40,12 @@ var i = n(200651),
     D = n(388032),
     w = n(219912);
 function B(e) {
-    let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: o } = e,
+    let { inPopout: t, channel: n, toggleRequestToSpeakSidebar: r, showRequestToSpeakSidebar: o } = e,
         p = (0, u.bp)(),
         g = (0, s.e7)([h.Z], () => h.Z.getChatOpen(n.id)),
         C = (0, A.B)(n.id),
         x = (0, T.Rk)(n.id, j.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: N, allowIdle: Z } = (0, _.Y)('popup');
+        { preventIdle: Z, allowIdle: N } = (0, _.Y)('popup');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(f.Z, { channelId: n.id }, 'clips-enabled-indicator'),
@@ -81,8 +81,8 @@ function B(e) {
             (0, i.jsx)(
                 v.Z,
                 {
-                    onOpen: N,
-                    onClose: Z,
+                    onOpen: Z,
+                    onClose: N,
                     className: w.button
                 },
                 'recents'
@@ -92,7 +92,7 @@ function B(e) {
                       className: w.button,
                       children: (0, i.jsx)(M.Z, {
                           toggleRequestToSpeakSidebar: () => {
-                              g && d.Z.updateChatOpen(n.id, !1), a();
+                              g && d.Z.updateChatOpen(n.id, !1), r();
                           },
                           showRequestToSpeakSidebar: o,
                           numRequestToSpeak: x
@@ -101,11 +101,11 @@ function B(e) {
                 : null,
             !g &&
                 (0, i.jsx)('div', {
-                    className: r()(w.button, { [w.sidebarOpen]: o }),
+                    className: a()(w.button, { [w.sidebarOpen]: o }),
                     children: (0, i.jsx)(E.T, {
                         channelId: n.id,
                         showRequestToSpeakSidebar: o,
-                        toggleRequestToSpeakSidebar: a,
+                        toggleRequestToSpeakSidebar: r,
                         iconClassName: w.buttonIcon
                     })
                 })
@@ -114,20 +114,20 @@ function B(e) {
 }
 function U(e) {
     var t;
-    let { inPopout: n, channel: a, toggleRequestToSpeakSidebar: u, showRequestToSpeakSidebar: h } = e,
-        m = (0, p.ZP)(a),
-        f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(a.id)),
-        v = (0, T.Io)(a.id),
-        _ = (0, T.Rk)(a.id, j.pV.AUDIENCE),
-        I = (0, s.e7)([N.Z], () => N.Z.getGuild(a.guild_id), [a.guild_id]),
+    let { inPopout: n, channel: r, toggleRequestToSpeakSidebar: u, showRequestToSpeakSidebar: h } = e,
+        m = (0, p.ZP)(r),
+        f = (0, s.e7)([P.Z], () => P.Z.getStageInstanceByChannel(r.id)),
+        v = (0, T.Io)(r.id),
+        _ = (0, T.Rk)(r.id, j.pV.AUDIENCE),
+        I = (0, s.e7)([Z.Z], () => Z.Z.getGuild(r.guild_id), [r.guild_id]),
         E = null !== (t = null == I ? void 0 : I.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
         b = (null == I ? void 0 : I.isCommunity()) ? E < k.TU7 : (null == I ? void 0 : I.premiumTier) !== k.Eu4.TIER_3 && E <= k.eez,
-        A = (0, L.Z)(a),
-        M = (0, s.e7)([Z.Z], () => Z.Z.can(y.yP, a)),
+        A = (0, L.Z)(r),
+        M = (0, s.e7)([N.Z], () => N.Z.can(y.yP, r)),
         R = () => {
-            d.Z.updateStageVideoLimitBoostUpsellDismissed(a.id, !0),
+            d.Z.updateStageVideoLimitBoostUpsellDismissed(r.id, !0),
                 S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
-                    guild_id: a.guild_id,
+                    guild_id: r.guild_id,
                     type: O.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: M,
                     action: O.T7.DISMISS
@@ -136,7 +136,7 @@ function U(e) {
     l.useEffect(() => {
         A &&
             S.default.track(k.rMx.BOOSTING_UPSELL_VIEWED, {
-                guild_id: a.guild_id,
+                guild_id: r.guild_id,
                 type: O.cd.VIDEO_STAGE_LIMIT,
                 is_moderator: M,
                 listener_count: v + _
@@ -151,11 +151,11 @@ function U(e) {
                     inPopout: n,
                     toggleRequestToSpeakSidebar: u,
                     showRequestToSpeakSidebar: h,
-                    channel: a
+                    channel: r
                 }),
                 onDoubleClick: x.O,
                 transparent: !0,
-                className: r()(e, w.participants),
+                className: a()(e, w.participants),
                 children: [
                     (0, i.jsx)(C.ZP.Icon, {
                         icon: c.StageIcon,
@@ -237,11 +237,11 @@ function U(e) {
                                                 size: c.Button.Sizes.SMALL,
                                                 onClick: () => {
                                                     (0, g.f)({
-                                                        guildId: a.guild_id,
+                                                        guildId: r.guild_id,
                                                         location: { section: k.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
                                                         S.default.track(k.rMx.BOOSTING_UPSELL_CLICKED, {
-                                                            guild_id: a.guild_id,
+                                                            guild_id: r.guild_id,
                                                             type: O.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: M,
                                                             action: O.T7.BOOST

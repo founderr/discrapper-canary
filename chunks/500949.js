@@ -1,6 +1,6 @@
 n.d(t, {
     $R: function () {
-        return Y;
+        return K;
     },
     A0: function () {
         return ee;
@@ -48,10 +48,10 @@ n.d(t, {
         return z;
     },
     jQ: function () {
-        return U;
+        return G;
     },
     lT: function () {
-        return K;
+        return Y;
     },
     rd: function () {
         return ec;
@@ -83,16 +83,16 @@ var r,
     x = n(385787),
     f = n(566162),
     p = n(567027),
-    g = n(461195),
-    b = n(857702),
+    b = n(461195),
+    g = n(857702),
     v = n(20450),
-    _ = n(312976),
-    C = n(147591),
-    j = n(135164),
+    C = n(312976),
+    j = n(147591),
+    _ = n(135164),
     T = n(940172),
     S = n(81011),
-    N = n(981613),
-    y = n(762399),
+    y = n(981613),
+    N = n(762399),
     I = n(232112),
     k = n(53796),
     w = n(723757),
@@ -104,9 +104,9 @@ var r,
     B = n(394900),
     P = n(661105),
     L = n(525169),
-    M = n(433517),
+    F = n(433517),
     D = n(190558),
-    F = n(231338);
+    M = n(231338);
 let H = {
         sRGB: c.Z,
         A98RGB: s.Z,
@@ -117,16 +117,16 @@ let H = {
         HSLuv: x.Z,
         HSV: f.Z,
         HWB: p.Z,
-        ICTCP: g.Z,
-        JzCzHz: b.Z,
+        ICTCP: b.Z,
+        JzCzHz: g.Z,
         Jzazbz: v.Z,
-        LCH: _.Z,
-        LCHuv: C.Z,
-        Lab: j.Z,
+        LCH: C.Z,
+        LCHuv: j.Z,
+        Lab: _.Z,
         Lab_D65: T.Z,
         Luv: S.Z,
-        OKLCH: N.Z,
-        OKLab: y.Z,
+        OKLCH: y.Z,
+        OKLab: N.Z,
         P3: I.Z,
         ProPhoto: k.Z,
         REC_2020: w.Z,
@@ -135,29 +135,29 @@ let H = {
         XYZ_D50: R.Z,
         XYZ_D65: O.Z
     },
-    U = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
+    G = Object.fromEntries(Object.keys(H).map((e) => [e, e]));
 Object.values(H).forEach((e) => A.Z.register(e));
-let { SemanticColors: G } = D.V,
-    z = G,
+let { SemanticColors: U } = D.V,
+    z = U,
     V = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [n, r] = o.useState(() => {
-        let n = M.K.get(e);
+        let n = F.K.get(e);
         return null != n ? n : t;
     });
     return (
         o.useEffect(() => {
-            M.K.set(e, n);
+            F.K.set(e, n);
         }, [e, n]),
         [n, r]
     );
 }
-function Y(e) {
+function K(e) {
     let t = z[e];
     return {
         name: e,
         colors: Object.fromEntries(
-            Object.values(F.BR).map((e) => [
+            Object.values(M.BR).map((e) => [
                 e,
                 {
                     color: t[e].raw,
@@ -168,7 +168,7 @@ function Y(e) {
         highlight: !1
     };
 }
-function K(e, t, n, r, a) {
+function Y(e, t, n, r, a) {
     return {
         name: t,
         colors: {

@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(481060),
-    r = n(275759),
+    r = n(481060),
+    a = n(275759),
     s = n(565138),
     o = n(706454),
     c = n(271383),
@@ -20,10 +20,10 @@ function m(e) {
         g = (0, l.e7)([o.default], () => o.default.locale),
         C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getGuild(n) : null)),
         x = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        v = (0, r.FI)(u.default.extractTimestamp(t), g),
-        _ = (0, r.FI)(null == x ? void 0 : x.joinedAt, g);
+        v = (0, a.FI)(u.default.extractTimestamp(t), g),
+        _ = (0, a.FI)(null == x ? void 0 : x.joinedAt, g);
     return null == C || null == x
-        ? (0, i.jsx)(a.Text, {
+        ? (0, i.jsx)(r.Text, {
               variant: 'text-sm/normal',
               className: m,
               children: v
@@ -34,11 +34,11 @@ function m(e) {
                   (0, i.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
+                          (0, i.jsx)(r.Tooltip, {
                               text: h.intl.string(h.t.uvGmCw),
                               delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(a.ClydeIcon, {
+                                  (0, i.jsx)(r.ClydeIcon, {
                                       size: 'custom',
                                       width: 28,
                                       height: 28,
@@ -47,7 +47,7 @@ function m(e) {
                                       className: p.discordIcon
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
                               className: m,
                               children: v
@@ -58,7 +58,7 @@ function m(e) {
                   (0, i.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, i.jsx)(a.Tooltip, {
+                          (0, i.jsx)(r.Tooltip, {
                               text: C.name,
                               delay: f,
                               children: (e) =>
@@ -68,7 +68,7 @@ function m(e) {
                                       size: s.Z.Sizes.SMOL
                                   })
                           }),
-                          (0, i.jsx)(a.Text, {
+                          (0, i.jsx)(r.Text, {
                               variant: 'text-sm/normal',
                               className: m,
                               children: _

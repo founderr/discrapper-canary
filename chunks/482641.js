@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(195898),
-    a = n(192029),
-    r = n(527119);
+    r = n(192029),
+    a = n(527119);
 function s() {
     return (0, i.jsx)('div', {
         className: l.container,
@@ -146,7 +146,7 @@ function s() {
                                 y: '0',
                                 height: '44',
                                 width: '44',
-                                href: a
+                                href: r
                             })
                         }),
                         (0, i.jsx)('pattern', {
@@ -161,7 +161,7 @@ function s() {
                                 y: '0',
                                 height: '44',
                                 width: '44',
-                                href: r
+                                href: a
                             })
                         })
                     ]

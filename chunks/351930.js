@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return b;
+        return g;
     }
 }),
     n(47120);
@@ -27,7 +27,7 @@ let p = async () =>
                 }
             })
         ).body.map((e) => s.Z.createFromServer(e)),
-    g = [
+    b = [
         {
             label: 'Nitro Monthly',
             value: m.Xh.PREMIUM_MONTH_TIER_2
@@ -61,7 +61,7 @@ let p = async () =>
             value: m.xT
         }
     ];
-function b() {
+function g() {
     let [e, t] = a.useState('511651880837840896'),
         [n, l] = a.useState([]),
         s = async () => {
@@ -71,7 +71,7 @@ function b() {
         s();
     }, []);
     let m = a.useMemo(() => n.find((e) => e.status === h.O0b.ACTIVE), [n]),
-        b = a.useMemo(() => n.filter((e) => e.status !== h.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
+        g = a.useMemo(() => n.filter((e) => e.status !== h.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [n]),
         v = async () => {
             await o.tn.post({
                 url: '/debug/subscription',
@@ -79,7 +79,7 @@ function b() {
             }),
                 await s();
         },
-        _ = async () => {
+        C = async () => {
             await o.tn.del('/debug/subscription'), await s();
         };
     return (0, r.jsx)(c.ScrollerThin, {
@@ -105,7 +105,7 @@ function b() {
                                     (0, r.jsx)(c.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: g,
+                                        options: b,
                                         select: t,
                                         popoutLayerContext: d.O$
                                     }),
@@ -118,7 +118,7 @@ function b() {
                             }),
                         (0, r.jsx)(c.Button, {
                             size: c.Button.Sizes.SMALL,
-                            onClick: _,
+                            onClick: C,
                             children: 'Delete Subscription'
                         })
                     ]
@@ -137,7 +137,7 @@ function b() {
                             })
                         ]
                     }),
-                b.length > 0 &&
+                g.length > 0 &&
                     (0, r.jsxs)('div', {
                         style: { marginTop: '8px' },
                         children: [
@@ -146,7 +146,7 @@ function b() {
                                 variant: 'text-md/normal',
                                 children: 'Previous subscriptions'
                             }),
-                            b.map((e) =>
+                            g.map((e) =>
                                 (0, r.jsx)(
                                     u.Z,
                                     {

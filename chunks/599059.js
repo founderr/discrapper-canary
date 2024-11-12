@@ -6,8 +6,8 @@ n.d(t, {
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(981631),
     o = n(89448);
 function c(e, t, n) {
@@ -33,7 +33,7 @@ class d extends l.Component {
     }
     render() {
         let e;
-        let { className: t, name: n, autoComplete: l, maxLen: a } = this.props,
+        let { className: t, name: n, autoComplete: l, maxLen: r } = this.props,
             s = {
                 position: 'absolute',
                 left: 0,
@@ -48,7 +48,7 @@ class d extends l.Component {
                   })
                 : (s.opacity = 0),
             (0, i.jsx)('div', {
-                className: r()(o.outer, t),
+                className: a()(o.outer, t),
                 children: (0, i.jsxs)('div', {
                     className: o.container,
                     children: [
@@ -59,7 +59,7 @@ class d extends l.Component {
                             style: s,
                             value: this.state.value,
                             name: n,
-                            maxLength: a,
+                            maxLength: r,
                             autoComplete: l,
                             onKeyPress: this.handleKeyPress,
                             onChange: this.handleChange,

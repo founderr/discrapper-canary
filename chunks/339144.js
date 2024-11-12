@@ -1,9 +1,9 @@
 n.d(t, {
     J: function () {
-        return A;
+        return P;
     },
     y: function () {
-        return T;
+        return j;
     }
 }),
     n(47120);
@@ -28,19 +28,19 @@ var i = n(200651),
     I = n(626135),
     b = n(870569),
     S = n(981631),
-    Z = n(921944),
+    E = n(921944),
     N = n(49898),
-    E = n(128449),
+    Z = n(128449),
     y = n(388032),
-    j = n(900087);
-function T(e, t, n) {
+    T = n(900087);
+function j(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === S.IIU.PLAYING && (0, u.Z)(t, S.xjy.JOIN));
 }
-function P(e) {
+function A(e) {
     let { badged: t } = e;
     return t
         ? (0, i.jsxs)('div', {
-              className: j.badgedGuildIcon,
+              className: T.badgedGuildIcon,
               children: [
                   (0, i.jsx)(f.ZP, {
                       mask: f.ZP.Masks.BADGED_GUILD_ICON,
@@ -52,7 +52,7 @@ function P(e) {
                           color: 'currentColor'
                       })
                   }),
-                  (0, i.jsx)('div', { className: j.badge })
+                  (0, i.jsx)('div', { className: T.badge })
               ]
           })
         : (0, i.jsx)(h.Z, {
@@ -61,16 +61,16 @@ function P(e) {
               color: 'currentColor'
           });
 }
-let A = l.memo(function (e) {
+let P = l.memo(function (e) {
     let t,
         r,
         u,
         h,
-        { stream: f, canGoLive: A, guildId: M, isStreaming: w, channel: L, canStream: R, runningGame: D, embeddedActivity: O, activity: k, application: U, analyticsContext: G } = e,
-        B = T(U, k, O),
-        { enabled: V } = (0, _.I7)(),
-        [H, F] = (0, g.US)(V ? [o.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
-        W = H === o.z.RAPIDASH_RTC_BROWSE_GUILDS,
+        { stream: f, canGoLive: P, guildId: M, isStreaming: R, channel: L, canStream: w, runningGame: D, embeddedActivity: O, activity: k, application: U, analyticsContext: G } = e,
+        B = j(U, k, O),
+        { enabled: H } = (0, _.I7)(),
+        [V, F] = (0, g.US)(H ? [o.z.RAPIDASH_RTC_BROWSE_GUILDS] : [], void 0, !0),
+        W = V === o.z.RAPIDASH_RTC_BROWSE_GUILDS,
         z = l.useCallback(() => {
             a()(null != k, 'Received null activity'),
                 I.default.track(S.rMx.OPEN_MODAL, {
@@ -109,18 +109,18 @@ let A = l.memo(function (e) {
         }, [L, M]),
         Q = l.useCallback(() => {
             (null == D ? void 0 : D.id) != null && m.GN.getState().setSelectedGames([D.id]),
-                F(Z.L.PRIMARY),
+                F(E.L.PRIMARY),
                 (0, C.transitionToGlobalDiscovery)({
                     tab: N.F$.SERVERS,
-                    selectedServersTab: E.vf.GUILDS,
-                    entrypoint: E.Qq.RTC_PANEL
+                    selectedServersTab: Z.vf.GUILDS,
+                    entrypoint: Z.Qq.RTC_PANEL
                 });
         }, [D, F]);
     let J =
-            (null != D || null == O) && (w || (A && null != D))
-                ? (w ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : R ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, x.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
+            (null != D || null == O) && (R || (P && null != D))
+                ? (R ? ((t = !1), (r = K), (u = s.ScreenXIcon), (h = y.intl.string(y.t.S5anIS))) : w ? ((t = !1), (r = q), (u = s.ScreenArrowIcon), (h = null != D ? y.intl.formatToPlainString(y.t.AB5gT0, { game: D.name }) : y.intl.string(y.t.FeUKeH))) : ((t = !0), (r = null), (u = s.ScreenArrowIcon), (h = null != L && (0, x.vd)(L.type) ? y.intl.string(y.t.uQn9Bw) : null != M ? y.intl.string(y.t.fBXEoK) : y.intl.string(y.t.n3feND))),
                   (0, i.jsx)('div', {
-                      className: j.panelButtonContainer,
+                      className: T.panelButtonContainer,
                       children: (0, i.jsx)(b.Z, {
                           tooltipText: h,
                           disabled: t,
@@ -146,19 +146,19 @@ let A = l.memo(function (e) {
                       icon: s.DoorExitIcon
                   }),
         ee = null == f ? null : (0, i.jsx)(p.Z, {}),
-        et = V && !w && null == O && null != D;
+        et = H && !R && null == O && null != D;
     return null == J && null == X && null == $
         ? null
         : (0, i.jsxs)('div', {
-              className: j.actions,
+              className: T.actions,
               children: [
                   et
                       ? (0, i.jsx)(b.Z, {
                             'aria-label': y.intl.formatToPlainString(y.t.iz7mkp, { gameName: null == D ? void 0 : D.name }),
                             tooltipText: y.intl.format(y.t['NN+Y8P'], { gameName: null == D ? void 0 : D.name }),
-                            tooltipContentClassName: j.centeredTooltip,
+                            tooltipContentClassName: T.centeredTooltip,
                             onClick: Q,
-                            icon: (0, i.jsx)(P, { badged: W })
+                            icon: (0, i.jsx)(A, { badged: W })
                         })
                       : null,
                   J,

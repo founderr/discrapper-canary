@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return N;
     }
 });
 var i = n(200651);
 n(192379);
 var l = n(512722),
-    a = n.n(l),
-    r = n(442837),
+    r = n.n(l),
+    a = n(442837),
     s = n(779618),
     o = n(215339),
     c = n(446226),
@@ -25,12 +25,12 @@ var l = n(512722),
     I = n(997614),
     E = n(159909),
     b = n(981631),
-    N = n(307410);
-function Z(e) {
+    Z = n(307410);
+function N(e) {
     let { channel: t, hasActiveStream: n, themeable: l = !1 } = e,
-        Z = (0, r.e7)([m.default], () => {
+        N = (0, a.e7)([m.default], () => {
             let e = m.default.getCurrentUser();
-            return a()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
+            return r()(null != e, 'CenterControlTray: currentUser cannot be undefined'), e;
         }),
         S = (0, o.j)('VoiceEffectsActionBar'),
         T = (0, c.Z)(),
@@ -44,11 +44,11 @@ function Z(e) {
     let P = (0, h.Z)(t),
         M = f.BT({
             permission: b.Plq.ADD_REACTIONS,
-            user: Z,
+            user: N,
             context: t
         });
     return (0, i.jsxs)('div', {
-        className: N.voiceEffectsActionBar,
+        className: Z.voiceEffectsActionBar,
         children: [
             P &&
                 (0, i.jsx)(I.Z, {

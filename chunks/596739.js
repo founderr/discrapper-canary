@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(481060),
-    r = n(388032),
+    r = n(481060),
+    a = n(388032),
     s = n(649763),
     o = n(560580);
 function c(e) {
@@ -27,12 +27,12 @@ function c(e) {
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(a.Heading, {
+                            (0, i.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, i.jsx)(a.Text, {
+                            (0, i.jsx)(r.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -49,9 +49,9 @@ function c(e) {
                         : d.map((e, t) => {
                               var n;
                               return (0, i.jsx)(
-                                  a.Button,
+                                  r.Button,
                                   {
-                                      size: null !== (n = e.size) && void 0 !== n ? n : a.Button.Sizes.SMALL,
+                                      size: null !== (n = e.size) && void 0 !== n ? n : r.Button.Sizes.SMALL,
                                       color: e.color,
                                       'aria-label': e.text,
                                       onClick: e.onclick,
@@ -63,12 +63,12 @@ function c(e) {
                           })
             }),
             u
-                ? (0, i.jsx)(a.Clickable, {
+                ? (0, i.jsx)(r.Clickable, {
                       className: s.closeButton,
                       onClick: h,
                       role: 'button',
-                      'aria-label': r.intl.string(r.t.WAI6xs),
-                      children: (0, i.jsx)(a.XSmallIcon, {
+                      'aria-label': a.intl.string(a.t.WAI6xs),
+                      children: (0, i.jsx)(r.XSmallIcon, {
                           size: 'md',
                           color: 'currentColor',
                           className: s.closeButton

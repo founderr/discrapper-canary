@@ -73,15 +73,15 @@ function x(e) {
         { bottomBar: h, topBar: f } = (0, s.cj)([m.Z], () => m.Z.getUnreadStateForGuildId(n.id)),
         x = (0, s.e7)([p.Z], () => p.Z.isFocused()),
         { mode: I, mentionCount: b, targetChannelId: S } = 'bottom' === t ? h : f,
-        Z = I === m.x.HIDDEN,
+        E = I === m.x.HIDDEN,
         N = (0, u.useSpring)(
             {
-                to: { transform: Z ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: E ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: _
             },
             x ? 'respect-motion-settings' : 'animate-never'
         ),
-        E = l.useCallback(
+        Z = l.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), null != S && d(S);
             },
@@ -95,14 +95,14 @@ function x(e) {
         children: (0, i.jsx)(o.animated.div, {
             className: C.containerPadding,
             style: N,
-            'aria-hidden': Z,
+            'aria-hidden': E,
             children:
                 I === m.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(C.bar, C.emptyBar) })
                     : I === m.x.UNREAD
                       ? (0, i.jsxs)(u.Clickable, {
                             className: C.bar,
-                            onClick: E,
+                            onClick: Z,
                             children: [
                                 'bottom' === t
                                     ? (0, i.jsx)(u.ChevronSmallDownIcon, {
@@ -130,7 +130,7 @@ function x(e) {
                       : I === m.x.MENTIONS
                         ? (0, i.jsx)(u.Clickable, {
                               className: a()(C.bar, C.mentionsBar),
-                              onClick: E,
+                              onClick: Z,
                               children: (0, i.jsx)(u.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

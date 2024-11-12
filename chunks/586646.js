@@ -1,82 +1,82 @@
-e.d(n, {
+n.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 });
-var i = e(200651),
-    s = e(192379),
-    r = e(442837),
-    o = e(481060),
-    l = e(19780),
-    a = e(571826),
-    c = e(630759),
-    u = e(301107),
-    E = e(785792),
-    d = e(190054),
-    N = e(760373),
-    C = e(388032),
-    T = e(64570);
-function g(t) {
-    let { channelId: n } = t,
-        e = (0, r.e7)([l.Z], () => {
-            var t;
-            return null === (t = l.Z.getSecureFramesState()) || void 0 === t ? void 0 : t.epochAuthenticator;
+var l = n(200651),
+    s = n(192379),
+    r = n(442837),
+    o = n(481060),
+    i = n(19780),
+    a = n(571826),
+    c = n(630759),
+    u = n(301107),
+    d = n(785792),
+    h = n(190054),
+    x = n(760373),
+    g = n(388032),
+    N = n(64570);
+function C(e) {
+    let { channelId: t } = e,
+        n = (0, r.e7)([i.Z], () => {
+            var e;
+            return null === (e = i.Z.getSecureFramesState()) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
-        g = (0, u.W)({
-            fingerprintBase64: e,
-            chunkSize: N.y6,
-            desiredLength: N.YP
+        C = (0, u.W)({
+            fingerprintBase64: n,
+            chunkSize: x.y6,
+            desiredLength: x.YP
         }),
-        h = s.useCallback(() => {
-            (0, a.PM)({ channelId: n });
-        }, [n]);
-    return (0, i.jsxs)('div', {
-        className: T.container,
+        f = s.useCallback(() => {
+            (0, a.PM)({ channelId: t });
+        }, [t]);
+    return (0, l.jsxs)('div', {
+        className: N.container,
         children: [
-            (0, i.jsxs)('div', {
-                className: T.tag,
+            (0, l.jsxs)('div', {
+                className: N.tag,
                 children: [
-                    (0, i.jsx)(o.LockIcon, {
+                    (0, l.jsx)(o.LockIcon, {
                         size: 'xxs',
                         color: o.tokens.colors.TEXT_POSITIVE
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: 'text-xs/medium',
                         color: 'text-positive',
-                        children: C.intl.string(C.t['3BogKS'])
+                        children: g.intl.string(g.t['3BogKS'])
                     })
                 ]
             }),
-            (0, i.jsx)(o.Text, {
+            (0, l.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: C.intl.string(C.t.B9JNsr)
+                children: g.intl.string(g.t.B9JNsr)
             }),
-            (0, i.jsxs)('div', {
-                className: T.header,
+            (0, l.jsxs)('div', {
+                className: N.header,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, l.jsx)(o.Heading, {
                         variant: 'text-sm/bold',
                         color: 'header-primary',
-                        children: C.intl.string(C.t.cTQI5u)
+                        children: g.intl.string(g.t.cTQI5u)
                     }),
-                    null != g &&
-                        (0, i.jsx)(d.H, {
-                            chunks: g,
+                    null != C &&
+                        (0, l.jsx)(h.H, {
+                            chunks: C,
                             color: o.tokens.colors.INTERACTIVE_NORMAL.css,
-                            onCopy: h
+                            onCopy: f
                         })
                 ]
             }),
-            (0, i.jsx)(E.b, {
-                className: T.code,
-                chunks: g,
-                columns: N.WK
+            (0, l.jsx)(d.b, {
+                className: N.code,
+                chunks: C,
+                columns: x.WK
             }),
-            (0, i.jsx)(o.Text, {
+            (0, l.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                children: C.intl.format(C.t.wKxADQ, { helpArticle: (0, c.uV)() })
+                children: g.intl.format(g.t.wKxADQ, { helpArticle: (0, c.uV)() })
             })
         ]
     });

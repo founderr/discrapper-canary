@@ -6,39 +6,39 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    a = n(388032),
-    r = n(541584);
+    r = n(388032),
+    a = n(541584);
 function s(e) {
     let { onClose: t, guildName: n } = e;
     return (0, i.jsxs)('div', {
-        className: r.container,
+        className: a.container,
         children: [
             (0, i.jsx)('div', {
-                className: r.iconContainer,
+                className: a.iconContainer,
                 children: (0, i.jsx)(l.ClockWarningIcon, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: r.icon,
+                    className: a.icon,
                     width: 20,
                     height: 20
                 })
             }),
             (0, i.jsxs)('div', {
-                className: r.header,
+                className: a.header,
                 children: [
                     (0, i.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        className: r.headerText,
-                        children: a.intl.string(a.t.LIIyeH)
+                        className: a.headerText,
+                        children: r.intl.string(r.t.LIIyeH)
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: a.intl.format(a.t['4/6vQk'], { guildName: n })
+                        children: r.intl.format(r.t['4/6vQk'], { guildName: n })
                     }),
                     (0, i.jsx)(l.Button, {
                         onClick: t,
-                        className: r.button,
-                        children: a.intl.string(a.t.BddRzc)
+                        className: a.button,
+                        children: r.intl.string(r.t.BddRzc)
                     })
                 ]
             })

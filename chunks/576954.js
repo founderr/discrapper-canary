@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    a = n(286379),
-    r = n(481060),
+    r = n(286379),
+    a = n(481060),
     s = n(194359),
     o = n(797614),
     c = n(378298),
@@ -29,7 +29,7 @@ function g(e) {
                     type: m.OGo.BLOCKED
                 }),
                     x(),
-                    (0, r.showToast)((0, r.createToast)(f.intl.string(f.t.YVFRoK), r.ToastType.SUCCESS)),
+                    (0, a.showToast)((0, a.createToast)(f.intl.string(f.t.YVFRoK), a.ToastType.SUCCESS)),
                     (0, u.qc)({
                         channelId: t,
                         warningId: g,
@@ -47,16 +47,16 @@ function g(e) {
             senderId: C,
             warningType: d.pj.STRANGER_DANGER
         }),
-            o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
+            o.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
     }, [t, g, C]);
     let _ = () => {
-            (0, r.openModalLazy)(async () => {
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('95226').then(n.bind(n, 816960));
                 return (n) => {
-                    let { transitionState: l, onClose: a } = n;
+                    let { transitionState: l, onClose: r } = n;
                     return (0, i.jsx)(e, {
                         transitionState: l,
-                        onClose: a,
+                        onClose: r,
                         channelId: t,
                         warningId: g,
                         senderId: C,
@@ -67,16 +67,16 @@ function g(e) {
                 };
             });
         },
-        I = (e, l, a) => {
-            (0, r.openModalLazy)(async () => {
-                let { default: r } = await n.e('68747').then(n.bind(n, 744373));
+        I = (e, l, r) => {
+            (0, a.openModalLazy)(async () => {
+                let { default: a } = await n.e('68747').then(n.bind(n, 744373));
                 return (n) =>
-                    (0, i.jsx)(r, {
+                    (0, i.jsx)(a, {
                         ...n,
                         userId: C,
                         confirmBlock: v(e),
                         onCancel: () => {
-                            null == a || a(),
+                            null == r || r(),
                                 (0, u.qc)({
                                     channelId: t,
                                     warningId: g,
@@ -99,7 +99,7 @@ function g(e) {
         buttons: [
             {
                 text: f.intl.string(f.t['Qk/c4+']),
-                color: r.Button.Colors.BRAND,
+                color: a.Button.Colors.BRAND,
                 onclick: () => {
                     _(),
                         (0, u.qc)({
@@ -113,7 +113,7 @@ function g(e) {
             },
             {
                 text: f.intl.string(f.t.ie0QdH),
-                color: r.Button.Colors.RED,
+                color: a.Button.Colors.RED,
                 onclick: () => I(u.NM.USER_BANNER_BLOCK_CONFIRM, u.NM.USER_BANNER_BLOCK_CANCEL)
             }
         ]

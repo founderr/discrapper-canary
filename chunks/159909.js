@@ -6,8 +6,8 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    a = n(481060),
-    r = n(125268),
+    r = n(481060),
+    a = n(125268),
     s = n(673125),
     o = n(871499),
     c = n(304388),
@@ -22,8 +22,8 @@ function u() {
                 ...n,
                 label: d.intl.string(d.t.Cuo44O),
                 isActive: e,
-                iconComponent: a.EyeIcon,
-                onClick: r.LT
+                iconComponent: r.EyeIcon,
+                onClick: a.LT
             });
         }
     });

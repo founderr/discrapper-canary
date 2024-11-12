@@ -28,10 +28,10 @@ function C(e) {
         I = (0, u.Z)(e.id),
         b = (0, s.PE)(e.id),
         S = (0, a.n2)(e.id),
-        Z = [],
+        E = [],
         N = e.hasFeature(g.oNc.HUB),
-        E = e.hasFeature(g.oNc.COMMUNITY),
+        Z = e.hasFeature(g.oNc.COMMUNITY),
         y = (0, f.lN)(!(0, p.r1)(e.id)),
-        j = e.hasFeature(g.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
-    return N && Z.push(m.z.GUILD_HUB_HEADER_OPTIONS), !b && v && I && null != x && x.length > 0 ? Z.push(m.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && Z.push(m.z.GUILD_PREMIUM_PROGRESS_BAR), !N && v && Z.push(m.z.GUILD_HOME), t && Z.push(m.z.GUILD_SCHEDULED_EVENTS), !N && E && y && Z.push(m.z.CHANNELS_AND_ROLES), C && Z.push(m.z.GUILD_ROLE_SUBSCRIPTIONS), _ && Z.push(m.z.GUILD_SHOP), n && Z.push(m.z.GUILD_MEMBER_APPLICATIONS), S && (E || j) && Z.push(m.z.GUILD_MOD_DASH_MEMBER_SAFETY), Z;
+        T = e.hasFeature(g.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
+    return N && E.push(m.z.GUILD_HUB_HEADER_OPTIONS), !b && v && I && null != x && x.length > 0 ? E.push(m.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && E.push(m.z.GUILD_PREMIUM_PROGRESS_BAR), !N && v && E.push(m.z.GUILD_HOME), t && E.push(m.z.GUILD_SCHEDULED_EVENTS), !N && Z && y && E.push(m.z.CHANNELS_AND_ROLES), C && E.push(m.z.GUILD_ROLE_SUBSCRIPTIONS), _ && E.push(m.z.GUILD_SHOP), n && E.push(m.z.GUILD_MEMBER_APPLICATIONS), S && (Z || T) && E.push(m.z.GUILD_MOD_DASH_MEMBER_SAFETY), E;
 }

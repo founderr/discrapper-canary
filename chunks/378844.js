@@ -24,10 +24,10 @@ t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         _ = (0, u.Dt)(),
         { notClaimed: v, notEmailVerified: x, notPhoneVerified: I, newAccount: b, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        Z = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
+        E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         N = null,
-        E = null;
-    return (0 === t && (v ? ((N = g.intl.string(g.t.IRxUlJ)), (E = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (E = g.intl.string(g.t['50gfOj']))) : x ? ((N = g.intl.string(g.t.vdSOp6)), (E = g.intl.string(g.t.lm1UKi))) : S ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (E = g.intl.string(g.t.BddRzc))) : b && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (E = g.intl.string(g.t.BddRzc)))), null == Z || null == N)
+        Z = null;
+    return (0 === t && (v ? ((N = g.intl.string(g.t.IRxUlJ)), (Z = g.intl.string(g.t.fiNVio))) : I ? ((N = g.intl.string(g.t.vW8iUF)), (Z = g.intl.string(g.t['50gfOj']))) : x ? ((N = g.intl.string(g.t.vdSOp6)), (Z = g.intl.string(g.t.lm1UKi))) : S ? ((N = g.intl.formatToPlainString(g.t.v1ktYW, { min: f.YeM.MEMBER_AGE })), (Z = g.intl.string(g.t.BddRzc))) : b && ((N = g.intl.formatToPlainString(g.t['sncw4+'], { min: f.YeM.ACCOUNT_AGE })), (Z = g.intl.string(g.t.BddRzc)))), null == E || null == N)
         ? null
         : (0, r.jsxs)(o.Dialog, {
               className: C.container,
@@ -44,7 +44,7 @@ t.Z = (e) => {
                           (0, r.jsx)(o.Heading, {
                               variant: 'heading-md/semibold',
                               id: _,
-                              children: Z
+                              children: E
                           }),
                           (0, r.jsx)(o.Text, {
                               color: 'header-secondary',
@@ -54,7 +54,7 @@ t.Z = (e) => {
                           (0, r.jsxs)('div', {
                               className: C.buttonContainer,
                               children: [
-                                  null != E
+                                  null != Z
                                       ? (0, r.jsx)(o.Button, {
                                             onClick: () => {
                                                 v
@@ -89,7 +89,7 @@ t.Z = (e) => {
                                                     l();
                                             },
                                             className: C.primaryButton,
-                                            children: E
+                                            children: Z
                                         })
                                       : null,
                                   v || I || x

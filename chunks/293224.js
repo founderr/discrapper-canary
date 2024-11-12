@@ -35,8 +35,8 @@ var i = n(200651),
     p = n(481060),
     m = n(846027),
     E = n(239091),
-    g = n(287734),
-    v = n(40851),
+    v = n(287734),
+    g = n(40851),
     _ = n(100527),
     C = n(906732),
     S = n(571250),
@@ -91,9 +91,9 @@ function en(e) {
         text: a,
         'aria-label': !1,
         children: (e) => {
-            let { onMouseEnter: a, onMouseLeave: E, ...g } = e;
+            let { onMouseEnter: a, onMouseLeave: E, ...v } = e;
             return (0, i.jsxs)(p.Button, {
-                ...g,
+                ...v,
                 onClick: c,
                 size: p.Button.Sizes.SMALL,
                 color: t ? u : s,
@@ -230,9 +230,9 @@ function el(e) {
         E = () => {
             c ? h(!0) : (0, U.Z)();
         },
-        g = u ? () => E() : () => h(!o),
+        v = u ? () => E() : () => h(!o),
         {
-            Component: v,
+            Component: g,
             play: _,
             events: { onMouseEnter: C, onMouseLeave: S }
         } = (0, f.o)(o ? 'disable' : 'enable'),
@@ -260,12 +260,12 @@ function el(e) {
             let { onClick: n } = e,
                 { isShown: r } = t;
             return (0, i.jsx)(en, {
-                icon: (0, i.jsx)(v, {
+                icon: (0, i.jsx)(g, {
                     color: 'currentColor',
                     size: 'sm'
                 }),
                 tooltip: I,
-                onClick: g,
+                onClick: v,
                 isToggled: o,
                 onCutoutClick: n,
                 onContextMenu: n,
@@ -295,9 +295,9 @@ function eo(e) {
         c = (0, P.Z)(l),
         h = (0, a.cj)([B.Z], () => (0, y.Z)(B.Z)),
         f = (0, a.e7)([V.Z], () => V.Z.getCurrentUserActiveStream()),
-        m = (0, v.bp)(),
+        m = (0, g.bp)(),
         E = null == l ? void 0 : l.getGuildId(),
-        g = r.useCallback(() => {
+        v = r.useCallback(() => {
             h &&
                 null != s &&
                 (0, p.openModalLazy)(async () => {
@@ -319,7 +319,7 @@ function eo(e) {
     }
     let C = () => {
             if (_) return (0, b.Z)(f, !1);
-            g();
+            v();
         },
         {
             Component: S,
@@ -336,7 +336,7 @@ function eo(e) {
                       channel: l,
                       currentUser: u,
                       activeStreams: null != f ? [f] : [],
-                      handleGoLive: g,
+                      handleGoLive: v,
                       onClose: x(t),
                       appContext: m,
                       disableChangeWindows: !0
@@ -398,7 +398,7 @@ function ea(e) {
     }
     let {
             Component: m,
-            events: { onClick: g, onMouseEnter: v, onMouseLeave: _ }
+            events: { onClick: v, onMouseEnter: g, onMouseLeave: _ }
         } = (0, h.j)(),
         C = et(l);
     return (0, i.jsx)(p.Popout, {
@@ -430,10 +430,10 @@ function ea(e) {
                     if (c) return $.intl.string($.t.X1lQlp);
                 })(),
                 onClick: (e) => {
-                    g(), n(e);
+                    v(), n(e);
                 },
                 onContextMenu: f,
-                onMouseEnter: v,
+                onMouseEnter: g,
                 onMouseLeave: _,
                 isToggled: r,
                 disabled: d
@@ -451,10 +451,10 @@ function es(e) {
                 .filter((e) => e.isVocal())
         ),
         o = () => {
-            r && g.default.disconnect();
+            r && v.default.disconnect();
         },
         u = (e) => {
-            g.default.selectVoiceChannel(e.id);
+            v.default.selectVoiceChannel(e.id);
         },
         {
             Component: c,

@@ -3,7 +3,7 @@ n.d(t, {
         return l;
     },
     g: function () {
-        return a;
+        return r;
     }
 });
 var i = n(570140);
@@ -14,7 +14,7 @@ function l(e, t) {
         type: 'UNREAD_SETTING_NOTICE_CHANNEL_VISIT'
     });
 }
-function a(e, t) {
+function r(e, t) {
     i.Z.dispatch({
         guildId: e,
         channelId: t,

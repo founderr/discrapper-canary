@@ -12,15 +12,15 @@ n.d(t, {
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    a = n.n(l),
-    r = n(481060),
+    r = n.n(l),
+    a = n(481060),
     s = n(722029);
 let o = 16;
 function c(e) {
     let { description: t, name: n, icon: l, onNavigate: c, className: d, missingNavIcon: u } = e;
-    return (0, i.jsxs)(r.Clickable, {
+    return (0, i.jsxs)(a.Clickable, {
         onClick: c,
-        className: a()(s.modInfoItem, null != c && s.modInfoAction, d),
+        className: r()(s.modInfoItem, null != c && s.modInfoAction, d),
         children: [
             null != l &&
                 (0, i.jsx)('div', {
@@ -39,7 +39,7 @@ function c(e) {
             null != c &&
                 (0, i.jsx)('div', {
                     className: s.modInfoItemActionIcon,
-                    children: (0, i.jsx)(r.ChevronLargeRightIcon, {
+                    children: (0, i.jsx)(a.ChevronLargeRightIcon, {
                         size: 'custom',
                         width: o,
                         height: o

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return v;
     }
 });
 var i = n(200651),
@@ -17,13 +17,13 @@ var i = n(200651),
     p = n(981631),
     m = n(388032),
     E = n(549584);
-function g(e) {
-    let { recentVoiceChannels: t, currentVoiceChannel: n, onClose: g, onSelect: v } = e,
+function v(e) {
+    let { recentVoiceChannels: t, currentVoiceChannel: n, onClose: v, onSelect: g } = e,
         _ = r.useCallback(
             (e) => {
-                v(e), g();
+                g(e), v();
             },
-            [v, g]
+            [g, v]
         ),
         C = (0, l.e7)([d.Z], () => d.Z.getQuality()),
         S = {
@@ -35,9 +35,9 @@ function g(e) {
     return (0, i.jsx)(a.Z, {
         section: p.jXE.CONTEXT_MENU,
         children: (0, i.jsx)(o.Menu, {
-            onSelect: g,
+            onSelect: v,
             navId: 'manage-streams',
-            onClose: g,
+            onClose: v,
             'aria-label': m.intl.string(m.t['+9QSnp']),
             children: (0, i.jsx)(o.MenuGroup, {
                 children: t.map((e) => {

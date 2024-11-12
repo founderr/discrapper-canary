@@ -18,16 +18,16 @@ var r = n(200651),
     x = n(301801),
     f = n(594174),
     p = n(55935),
-    g = n(120816),
-    b = n(31336),
+    b = n(120816),
+    g = n(31336),
     v = n(257785),
-    _ = n(484036),
-    C = n(681619),
-    j = n(621060),
+    C = n(484036),
+    j = n(681619),
+    _ = n(621060),
     T = n(388032),
     S = n(574001),
-    N = n(219299);
-let y = [
+    y = n(219299);
+let N = [
     {
         key: 'event',
         cellClassName: S.eventColumn,
@@ -81,14 +81,14 @@ let w = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(m.ZP, {
-                            className: i()(N.headerBar, S.subPanelHeaderBar),
+                            className: i()(y.headerBar, S.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(m.ZP.Icon, {
                                     icon: u.AnalyticsIcon,
                                     tooltip: t
                                 }),
                                 (0, r.jsx)(m.ZP.Title, {
-                                    wrapperClassName: N.headerTitle,
+                                    wrapperClassName: y.headerTitle,
                                     children: t
                                 }),
                                 (0, r.jsx)(m.ZP.Icon, {
@@ -175,7 +175,7 @@ let w = [
 function Z() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
-        l = (0, d.e7)([g.Z], () => g.Z.loggedEvents),
+        l = (0, d.e7)([b.Z], () => b.Z.loggedEvents),
         [c, s] = a.useState(Object.keys(E)),
         [h, m] = a.useState(l),
         f = a.useRef(null),
@@ -216,10 +216,10 @@ function Z() {
     }, [t, p, l]);
     let [I, k] = a.useState(void 0),
         Z = v.find((e) => e.key === I),
-        { TabBar: R, renderSelectedTab: O } = (0, j.Z)({ tabs: w }, []);
+        { TabBar: R, renderSelectedTab: O } = (0, _.Z)({ tabs: w }, []);
     return (0, r.jsxs)('div', {
         ref: e,
-        className: i()(N.panel, S.panel),
+        className: i()(y.panel, S.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: S.toolbar,
@@ -228,7 +228,7 @@ function Z() {
                         className: S.toolbarButton,
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.ICON,
-                        onClick: b.Zw,
+                        onClick: g.Zw,
                         children: (0, r.jsx)('span', {
                             title: T.intl.string(T.t.VkKicX),
                             children: (0, r.jsx)(u.TrashIcon, {
@@ -269,14 +269,14 @@ function Z() {
                     placeholder: 'Search by event name'
                 })
             }),
-            (0, r.jsx)(C.Z, {
-                columns: y,
+            (0, r.jsx)(j.Z, {
+                columns: N,
                 data: v,
                 selectedRowKey: I,
                 onClickRow: (e) => k(e.key)
             }),
             null != Z &&
-                (0, r.jsxs)(_.Z, {
+                (0, r.jsxs)(C.Z, {
                     className: S.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,

@@ -12,8 +12,8 @@ var r,
     x = n(428595),
     f = n(532901),
     p = n(207533),
-    g = n(112864);
-function b(e, t, n) {
+    b = n(112864);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,10 +27,10 @@ function b(e, t, n) {
     );
 }
 let v = new RegExp('https?://'.concat(null !== (r = window.GLOBAL_ENV.CDN_HOST) && void 0 !== r ? r : ''));
-function _(e) {
+function C(e) {
     return 'string' == typeof e.content ? e.content : T(e.content);
 }
-let C = {
+let j = {
         ...d().defaultRules,
         heading: {
             ...d().defaultRules.heading,
@@ -86,7 +86,7 @@ let C = {
                     'blockquote',
                     {
                         className: p.blockquote,
-                        children: _(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -113,7 +113,7 @@ let C = {
                     'code',
                     {
                         className: p.codeInline,
-                        children: _(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -126,8 +126,8 @@ let C = {
                         'pre',
                         {
                             children: (0, l.jsx)('code', {
-                                className: c()(g.scrollbarGhostHairline, 'hljs'),
-                                children: _(e)
+                                className: c()(b.scrollbarGhostHairline, 'hljs'),
+                                children: C(e)
                             })
                         },
                         r.key
@@ -148,7 +148,7 @@ let C = {
                                           'pre',
                                           {
                                               children: (0, l.jsx)('code', {
-                                                  className: c()(g.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: c()(b.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -162,8 +162,8 @@ let C = {
             }
         }
     },
-    j = d().parserFor(C),
-    T = d().reactFor(d().ruleOutput(C, 'react'));
+    _ = d().parserFor(j),
+    T = d().reactFor(d().ruleOutput(j, 'react'));
 class S extends (a = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: a } = this.props,
@@ -179,9 +179,9 @@ class S extends (a = i.PureComponent) {
         });
     }
 }
-b(S, 'rules', C),
-    b(S, 'defaultProps', {
-        parser: j,
+g(S, 'rules', j),
+    g(S, 'defaultProps', {
+        parser: _,
         output: T
     }),
     (t.Z = S);

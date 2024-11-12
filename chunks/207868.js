@@ -1,7 +1,7 @@
 var i = n(200651),
     l = n(192379),
-    a = n(392711),
-    r = n.n(a),
+    r = n(392711),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(557135),
@@ -17,19 +17,19 @@ var i = n(200651),
 t.Z = l.memo(function (e) {
     let { channel: t } = e,
         n = (0, d.Z)(),
-        a = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
-        v = (0, s.e7)([m.Z], () => !r().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
+        r = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
+        v = (0, s.e7)([m.Z], () => !a().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
         _ = (0, s.e7)([p.Z], () => p.Z.can(C.Plq.CONNECT, t)),
         { needSubscriptionToAccess: I } = (0, u.Z)(t.id),
         E = (0, h.$R)(t),
         b = l.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
-                connected: a,
+                connected: r,
                 needSubscriptionToAccess: I,
                 locked: !1
             });
-        }, [t, a, I]);
+        }, [t, r, I]);
     return (l.useEffect(
         () => (
             f.S.subscribe(C.CkL.CALL_START, b),
@@ -47,7 +47,7 @@ t.Z = l.memo(function (e) {
         { autoTrackExposure: !1 }
     ).enabled &&
         !n &&
-        !a &&
+        !r &&
         _ &&
         E &&
         t.isVocalThread())

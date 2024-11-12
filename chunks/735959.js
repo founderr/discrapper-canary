@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return b;
     }
 }),
     n(47120);
@@ -18,11 +18,11 @@ var r = n(200651),
     x = n(428530),
     f = n(257785),
     p = n(388032);
-function g() {
+function b() {
     let e = (0, s.e7)([m.default], () => m.default.locale),
         [t, n] = a.useState(),
         i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        g = a.useMemo(() => p.t[i], [i]);
+        b = a.useMemo(() => p.t[i], [i]);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)(h.ZP, {
@@ -83,11 +83,11 @@ function g() {
                     }),
                     (0, r.jsx)(f.Z9, {
                         name: 'Exists?',
-                        children: null != g ? 'yes' : 'no'
+                        children: null != b ? 'yes' : 'no'
                     })
                 ]
             }),
-            (0, r.jsx)(x.Z, { data: null == g ? void 0 : g(e) })
+            (0, r.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
         ]
     });
 }

@@ -1,17 +1,17 @@
-e(724458);
-var i,
+n(724458);
+var l,
     s,
     r,
     o,
-    l = e(442837),
-    a = e(570140),
-    c = e(981631);
+    i = n(442837),
+    a = n(570140),
+    c = n(981631);
 let u = {};
-function E(t) {
-    let n = u[(t = null != t ? t : 'null')];
+function d(e) {
+    let t = u[(e = null != e ? e : 'null')];
     return (
-        null == n &&
-            (n = u[t] =
+        null == t &&
+            (t = u[e] =
                 {
                     state: c.hes.DISCONNECTED,
                     quality: c.IE4.UNKNOWN,
@@ -19,77 +19,77 @@ function E(t) {
                     hostname: null,
                     lossRate: null
                 }),
-        n
+        t
     );
 }
-function d(t, n, e) {
-    let i = u[(t = null != t ? t : 'null')];
-    return null != i ? n(i) : e;
+function h(e, t, n) {
+    let l = u[(e = null != e ? e : 'null')];
+    return null != l ? t(l) : n;
 }
-class N extends (i = l.ZP.Store) {
-    getConnectionState(t) {
-        return d(
-            t,
-            (t) => {
-                let { state: n } = t;
-                return n;
+class x extends (l = i.ZP.Store) {
+    getConnectionState(e) {
+        return h(
+            e,
+            (e) => {
+                let { state: t } = e;
+                return t;
             },
             c.hes.DISCONNECTED
         );
     }
-    getQuality(t) {
-        return d(
-            t,
-            (t) => {
-                let { quality: n } = t;
-                return n;
+    getQuality(e) {
+        return h(
+            e,
+            (e) => {
+                let { quality: t } = e;
+                return t;
             },
             c.IE4.UNKNOWN
         );
     }
-    getHostname(t) {
-        return d(
-            t,
-            (t) => {
-                let { hostname: n } = t;
-                return n;
+    getHostname(e) {
+        return h(
+            e,
+            (e) => {
+                let { hostname: t } = e;
+                return t;
             },
             null
         );
     }
-    getPings(t) {
-        return d(
-            t,
-            (t) => {
-                let { pings: n } = t;
-                return n;
+    getPings(e) {
+        return h(
+            e,
+            (e) => {
+                let { pings: t } = e;
+                return t;
             },
             []
         );
     }
-    getAveragePing(t) {
-        let n = this.getPings(t);
-        return 0 === n.length ? 0 : n.reduce((t, n) => t + n.value, 0) / n.length;
+    getAveragePing(e) {
+        let t = this.getPings(e);
+        return 0 === t.length ? 0 : t.reduce((e, t) => e + t.value, 0) / t.length;
     }
-    getLastPing(t) {
-        var n;
-        let e = this.getPings(t);
-        if (0 === e.length) return 0;
-        return null === (n = e[e.length - 1]) || void 0 === n ? void 0 : n.value;
+    getLastPing(e) {
+        var t;
+        let n = this.getPings(e);
+        if (0 === n.length) return 0;
+        return null === (t = n[n.length - 1]) || void 0 === t ? void 0 : t.value;
     }
-    getOutboundLossRate(t) {
-        return d(
-            t,
-            (t) => {
-                let { lossRate: n } = t;
-                return n;
+    getOutboundLossRate(e) {
+        return h(
+            e,
+            (e) => {
+                let { lossRate: t } = e;
+                return t;
             },
             null
         );
     }
 }
 (o = 'OverlayRTCConnectionStore'),
-    (r = 'displayName') in (s = N)
+    (r = 'displayName') in (s = x)
         ? Object.defineProperty(s, r, {
               value: o,
               enumerable: !0,
@@ -97,20 +97,20 @@ class N extends (i = l.ZP.Store) {
               writable: !0
           })
         : (s[r] = o),
-    (n.Z = new N(a.Z, {
-        OVERLAY_INITIALIZE: function (t) {
-            u = t.rtcConnectionStates;
+    (t.Z = new x(a.Z, {
+        OVERLAY_INITIALIZE: function (e) {
+            u = e.rtcConnectionStates;
         },
-        RTC_CONNECTION_STATE: function (t) {
-            if (null != t.streamKey) return !1;
-            let n = E(t.lobbyId);
-            (n.state = t.state), (n.hostname = t.hostname);
+        RTC_CONNECTION_STATE: function (e) {
+            if (null != e.streamKey) return !1;
+            let t = d(e.lobbyId);
+            (t.state = e.state), (t.hostname = e.hostname);
         },
-        RTC_CONNECTION_PING: function (t) {
-            let n = E(t.lobbyId);
-            (n.pings = t.pings), (n.quality = t.quality);
+        RTC_CONNECTION_PING: function (e) {
+            let t = d(e.lobbyId);
+            (t.pings = e.pings), (t.quality = e.quality);
         },
-        RTC_CONNECTION_LOSS_RATE: function (t) {
-            E(t.lobbyId).lossRate = t.lossRate;
+        RTC_CONNECTION_LOSS_RATE: function (e) {
+            d(e.lobbyId).lossRate = e.lossRate;
         }
     }));

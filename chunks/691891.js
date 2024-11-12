@@ -1,22 +1,22 @@
 var i = n(200651);
 n(192379);
-var o = n(120356),
-    r = n.n(o),
-    l = n(481060),
-    s = n(629769);
-let a = (e) => {
-    let { className: t, onDismiss: n, 'aria-label': o } = e;
-    return (0, i.jsx)(l.Button, {
-        look: l.Button.Looks.BLANK,
-        size: l.Button.Sizes.NONE,
+var r = n(120356),
+    l = n.n(r),
+    o = n(481060),
+    a = n(629769);
+let s = (e) => {
+    let { className: t, onDismiss: n, 'aria-label': r } = e;
+    return (0, i.jsx)(o.Button, {
+        look: o.Button.Looks.BLANK,
+        size: o.Button.Sizes.NONE,
         onClick: n,
-        className: r()(s.dismissButton, t),
-        'aria-label': o,
-        children: (0, i.jsx)(l.XSmallIcon, {
+        className: l()(a.dismissButton, t),
+        'aria-label': r,
+        children: (0, i.jsx)(o.XSmallIcon, {
             size: 'xs',
             color: 'currentColor',
-            colorClass: s.dismissIcon
+            colorClass: a.dismissIcon
         })
     });
 };
-(a.displayName = 'DismissButton'), (t.Z = a);
+(s.displayName = 'DismissButton'), (t.Z = s);

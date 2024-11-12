@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return er;
+        return ea;
     }
 }),
     n(47120);
 var i = n(200651),
     l = n(192379),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n(442837),
     c = n(433517),
@@ -25,8 +25,8 @@ var i = n(200651),
     I = n(928518),
     E = n(703656),
     b = n(493754),
-    N = n(880831),
-    Z = n(73563),
+    Z = n(880831),
+    N = n(73563),
     S = n(800965),
     T = n(107169),
     j = n(891551),
@@ -66,7 +66,7 @@ let $ = 'HasBeenInStageChannel',
         _.hY(q.KJ3.CHANNEL_CALL_POPOUT, e);
     };
 function ei(e) {
-    let { channel: t, appContext: n, popoutOpen: a, popoutWindow: r, popoutWindowAlwaysOnTop: s, selectedParticipant: c } = e,
+    let { channel: t, appContext: n, popoutOpen: r, popoutWindow: a, popoutWindowAlwaysOnTop: s, selectedParticipant: c } = e,
         d = t.getGuildId(),
         u = (0, o.e7)([R.Z], () => R.Z.getMostRecentSelectedTextChannelId(d), [d]),
         h = A.default.getId(),
@@ -74,13 +74,13 @@ function ei(e) {
         m = null != c && c.type !== X.fO.ACTIVITY && c.user.id !== h,
         f = l.useMemo(() => {
             var e;
-            return null !== (e = null == r ? void 0 : r.window) && void 0 !== e ? e : window;
-        }, [r]),
+            return null !== (e = null == a ? void 0 : a.window) && void 0 !== e ? e : window;
+        }, [a]),
         x = (0, K.Z)({
             channel: t,
             appContext: n,
-            popoutOpen: a,
-            popoutWindow: r,
+            popoutOpen: r,
+            popoutWindow: a,
             currentWindow: f
         }),
         v = n === q.IlC.POPOUT && L.isPlatformEmbedded && k.ZP.supportsFeature(q.eRX.POPOUT_WINDOWS);
@@ -104,7 +104,7 @@ function ei(e) {
             p
                 ? (0, i.jsx)(S.Z, {
                       className: Q.rightTrayIcon,
-                      popoutOpen: a,
+                      popoutOpen: r,
                       onOpenPopout: ee(t, u),
                       onClosePopout: et
                   })
@@ -117,10 +117,10 @@ function el(e) {
     let { channel: t } = e,
         n = (0, p.bp)(),
         l = (0, o.e7)([M.Z], () => M.Z.can(q.Plq.CREATE_INSTANT_INVITE, t)),
-        a = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id)),
-        r = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)),
-        s = l || (null == r ? void 0 : r.invite_code) != null;
-    return null != a && s
+        r = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id)),
+        a = (0, o.e7)([B.Z], () => B.Z.getStageInstanceByChannel(t.id)),
+        s = l || (null == a ? void 0 : a.invite_code) != null;
+    return null != r && s
         ? (0, i.jsx)(b.Z, {
               channel: t,
               appContext: n,
@@ -129,9 +129,9 @@ function el(e) {
           })
         : null;
 }
-function ea(e) {
+function er(e) {
     let t,
-        { channel: n, toggleRequestToSpeakSidebar: a, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: u, popoutOpen: h, chatOpen: m } = e,
+        { channel: n, toggleRequestToSpeakSidebar: r, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: u, popoutOpen: h, chatOpen: m } = e,
         f = (0, p.bp)(),
         C = (0, o.e7)([R.Z], () => R.Z.getVoiceChannelId() === n.id, [n.id]),
         v = (0, o.e7)([M.Z], () => M.Z.can(q.Plq.CONNECT, n)),
@@ -164,12 +164,12 @@ function ea(e) {
                     channel: n,
                     hasConnectPermission: v
                 })),
-        (0, i.jsx)(Z.Z, {
+        (0, i.jsx)(N.Z, {
             style: {
                 height: 'calc(100% - '.concat(A, ')'),
                 paddingTop: A
             },
-            disableGradients: 0 === b && Z.e.TOP,
+            disableGradients: 0 === b && N.e.TOP,
             renderBottomLeft: () => (0, i.jsx)(el, { channel: n }),
             renderBottomCenter: () =>
                 C
@@ -192,7 +192,7 @@ function ea(e) {
             renderHeader: () =>
                 (0, i.jsx)(F.Z, {
                     inPopout: f === q.IlC.POPOUT,
-                    toggleRequestToSpeakSidebar: a,
+                    toggleRequestToSpeakSidebar: r,
                     showRequestToSpeakSidebar: c,
                     channel: n
                 }),
@@ -200,8 +200,8 @@ function ea(e) {
                 !j || m || E
                     ? null
                     : (0, i.jsx)(x.ZP, {
-                          children: (0, i.jsx)(N.Z, {
-                              className: r()(Q.chatToasts, { [Q.rtsSidebarOpen]: c }),
+                          children: (0, i.jsx)(Z.Z, {
+                              className: a()(Q.chatToasts, { [Q.rtsSidebarOpen]: c }),
                               channelId: n.id
                           })
                       }),
@@ -215,20 +215,20 @@ function ea(e) {
         })
     );
 }
-function er(e) {
+function ea(e) {
     let { channel: t } = e,
-        [a, s] = l.useState(!1),
+        [r, s] = l.useState(!1),
         u = l.useCallback(() => {
-            s(!a);
-        }, [a, s]),
+            s(!r);
+        }, [r, s]),
         { popoutWindow: C, popoutWindowAlwaysOnTop: _ } = (0, o.cj)([I.Z], () => ({
             popoutWindow: I.Z.getWindow(q.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: I.Z.getIsAlwaysOnTop(q.KJ3.CHANNEL_CALL_POPOUT)
         })),
         E = null != C && !C.closed,
         { analyticsLocations: b } = (0, f.ZP)(m.Z.STAGE_CHANNEL_CALL),
-        N = (0, p.bp)(),
-        Z = (0, o.e7)([g.Z], () => g.Z.getChatOpen(t.id), [t.id]),
+        Z = (0, p.bp)(),
+        N = (0, o.e7)([g.Z], () => g.Z.getChatOpen(t.id), [t.id]),
         S = (0, o.e7)([P.Z], () => P.Z.getGuild(t.guild_id), [t.guild_id]);
     l.useEffect(() => {
         null == c.K.get($) &&
@@ -251,33 +251,33 @@ function er(e) {
                             theme: q.BRd.DARK,
                             children: (e) =>
                                 (0, i.jsx)('div', {
-                                    className: r()(Q.callContainer, e, {
-                                        [Q.sidebarVisible]: a,
-                                        [Q.sidebarOrChatVisible]: a || Z
+                                    className: a()(Q.callContainer, e, {
+                                        [Q.sidebarVisible]: r,
+                                        [Q.sidebarOrChatVisible]: r || N
                                     }),
-                                    children: (0, i.jsx)(ea, {
+                                    children: (0, i.jsx)(er, {
                                         channel: t,
                                         toggleRequestToSpeakSidebar: u,
-                                        showRequestToSpeakSidebar: a,
+                                        showRequestToSpeakSidebar: r,
                                         popoutWindow: C,
                                         popoutWindowAlwaysOnTop: _,
                                         popoutOpen: E,
-                                        chatOpen: Z
+                                        chatOpen: N
                                     })
                                 })
                         }),
-                        a
+                        r
                             ? (0, i.jsx)(H.Z, {
                                   channel: t,
                                   toggleRequestToSpeakSidebar: u,
-                                  chatOpen: Z
+                                  chatOpen: N
                               })
                             : null,
                         (0, i.jsx)('div', {
                             className: Q.channelChatWrapper,
                             children:
-                                Z &&
-                                (!E || (E && N === q.IlC.POPOUT)) &&
+                                N &&
+                                (!E || (E && Z === q.IlC.POPOUT)) &&
                                 (0, i.jsx)(v.Z, {
                                     channel: t,
                                     guild: S,

@@ -1,15 +1,15 @@
 n.d(t, {
     P: function () {
-        return E;
+        return Z;
     },
     Qo: function () {
         return y;
     },
     kw: function () {
-        return T;
+        return j;
     },
     rj: function () {
-        return j;
+        return T;
     }
 });
 var i = n(200651),
@@ -33,20 +33,20 @@ var i = n(200651),
     I = n(981631),
     b = n(388032),
     S = n(134743);
-function Z(e) {
+function E(e) {
     e.stopPropagation();
 }
 let N = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: N, sortingPosition: E, hideIcon: y, children: j } = e,
-        T = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        P = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
-        A = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
-    t = null != E ? (N > E ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: x, position: N, sortingPosition: Z, hideIcon: y, children: T } = e,
+        j = (0, s.e7)([_.ZP], () => _.ZP.isChannelMuted(r.getGuildId(), r.id)),
+        A = (0, s.e7)([m.Z], () => m.Z.isCollapsed(r.id)),
+        P = (0, s.e7)([C.Z], () => C.Z.can(I.Plq.MANAGE_CHANNELS, r));
+    t = null != Z ? (N > Z ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let M = l.useCallback(() => {
-            P ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
-        }, [r.id, P]),
-        w = l.useCallback(
+            A ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
+        }, [r.id, A]),
+        R = l.useCallback(
             (e) => {
                 if ('null' !== r.id) {
                     let t = g.Z.getGuild(r.getGuildId());
@@ -79,7 +79,7 @@ let N = l.memo(function (e) {
                         });
                 });
         }, [r]),
-        { role: R, tabIndex: D, ...O } = (0, o.JA)(r.id),
+        { role: w, tabIndex: D, ...O } = (0, o.JA)(r.id),
         k = l.useRef(null),
         U = l.useRef(null),
         G = (0, i.jsxs)('li', {
@@ -96,11 +96,11 @@ let N = l.memo(function (e) {
                     children: (0, i.jsxs)('div', {
                         ref: U,
                         className: a()(S.iconVisibility, S.wrapper, {
-                            [S.collapsed]: P,
-                            [S.muted]: T,
+                            [S.collapsed]: A,
+                            [S.muted]: j,
                             [S.clickable]: !0
                         }),
-                        onContextMenu: w,
+                        onContextMenu: R,
                         children: [
                             (0, i.jsxs)(c.Clickable, {
                                 innerRef: k,
@@ -109,7 +109,7 @@ let N = l.memo(function (e) {
                                 ...O,
                                 onClick: M,
                                 'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
-                                'aria-expanded': !P,
+                                'aria-expanded': !A,
                                 focusProps: { enabled: !1 },
                                 children: [
                                     y
@@ -126,10 +126,10 @@ let N = l.memo(function (e) {
                                 ]
                             }),
                             (0, i.jsx)('div', {
-                                onClick: Z,
+                                onClick: E,
                                 className: S.children,
                                 children:
-                                    A && !x
+                                    P && !x
                                         ? (0, i.jsx)(c.Tooltip, {
                                               text: b.intl.string(b.t['fUYU+v']),
                                               children: (e) => {
@@ -164,13 +164,13 @@ let N = l.memo(function (e) {
                         ]
                     })
                 }),
-                j
+                T
             ]
         });
     return null != v && null != h ? v(h(G)) : G;
 });
 t.ZP = (0, h.B)(N);
-let E = l.memo(function (e) {
+let Z = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
             className: a()(l, S.containerDefault),
@@ -241,7 +241,7 @@ let E = l.memo(function (e) {
                   ]
               });
     }),
-    j = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { category: t, channel: n } = e,
             l = (0, s.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id));
         return l || null == n || n.record.type === I.d4z.GUILD_CATEGORY
@@ -259,7 +259,7 @@ let E = l.memo(function (e) {
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    T = l.memo(function (e) {
+    j = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),

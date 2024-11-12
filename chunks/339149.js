@@ -39,7 +39,7 @@ function S(e, t, n) {
         e
     );
 }
-let Z = {
+let E = {
     [x.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => I.intl.formatToPlainString(I.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
@@ -121,7 +121,7 @@ class N extends r.PureComponent {
                 if (null == r || null == a || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = Z[o],
+                    u = E[o],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -132,7 +132,7 @@ class N extends r.PureComponent {
             });
     }
 }
-class E extends (i = r.PureComponent) {
+class Z extends (i = r.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -193,7 +193,7 @@ class E extends (i = r.PureComponent) {
             });
     }
 }
-S(E, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
+S(Z, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
 function y(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
@@ -216,7 +216,7 @@ t.Z = c.ZP.connectStores([C.Z, g.Z, p.Z], () => {
     return t
         ? (0, l.jsx)(d.W, {
               component: r.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(E, { ...n }) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(Z, { ...n }) : null
           })
-        : (0, l.jsx)(E, { ...n });
+        : (0, l.jsx)(Z, { ...n });
 });

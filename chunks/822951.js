@@ -1,9 +1,9 @@
 n(47120);
 var i,
     l = n(200651),
-    a = n(192379),
-    r = n(120356),
-    s = n.n(r),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
     o = n(481060),
     c = n(600164),
     d = n(210080);
@@ -20,10 +20,10 @@ function u(e, t, n) {
         e
     );
 }
-class h extends (i = a.PureComponent) {
+class h extends (i = r.PureComponent) {
     render() {
         let e;
-        let { renderFooter: t, selectable: n, renderHeader: i, className: a, onClose: r, children: u } = this.props;
+        let { renderFooter: t, selectable: n, renderHeader: i, className: r, onClose: a, children: u } = this.props;
         return (
             null != t &&
                 (e = (0, l.jsx)(o.ModalFooter, {
@@ -31,7 +31,7 @@ class h extends (i = a.PureComponent) {
                     children: t()
                 })),
             (0, l.jsx)(o.Modal, {
-                onCloseRequest: r,
+                onCloseRequest: a,
                 renderModal: (t) => {
                     let { onClose: h, ...p } = t;
                     return (0, l.jsxs)(o.ModalRoot, {
@@ -47,14 +47,14 @@ class h extends (i = a.PureComponent) {
                                         grow: 0,
                                         children: (0, l.jsx)(o.ModalCloseButton, {
                                             onClick: () => {
-                                                null != r && r(), h();
+                                                null != a && a(), h();
                                             }
                                         })
                                     })
                                 ]
                             }),
                             (0, l.jsx)(o.ModalContent, {
-                                className: s()(a, d.content, { selectable: n }),
+                                className: s()(r, d.content, { selectable: n }),
                                 scrollerRef: this.scrollerRef,
                                 onScroll: this.handleScroll,
                                 children: u
@@ -68,7 +68,7 @@ class h extends (i = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'scrollerRef', a.createRef()),
+            u(this, 'scrollerRef', r.createRef()),
             u(this, 'handleScroll', () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {

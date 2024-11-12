@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return E;
     }
 }),
     n(47120);
 var i = n(200651),
-    o = n(192379),
-    r = n(904245),
-    l = n(13245),
-    s = n(655687),
-    a = n(541716),
+    r = n(192379),
+    l = n(904245),
+    o = n(13245),
+    a = n(655687),
+    s = n(541716),
     u = n(752305),
     c = n(893718),
     d = n(957730),
@@ -17,51 +17,51 @@ var i = n(200651),
     f = n(145597),
     p = n(981631),
     m = n(561990);
-function v(e) {
-    let { id: t, channel: n, onSend: v } = e,
-        g = (0, h.Z)(),
-        { placeholder: E, accessibilityLabel: _ } = (0, s.Z)(n),
-        [C, S] = o.useState(() => (0, u.H2)()),
-        { textValue: I, richValue: x } = C,
-        [Z, y] = o.useState(!1),
-        N = o.useCallback(() => y(!0), []),
-        b = o.useCallback(() => y(!1), []),
-        O = o.useCallback((e, t, n) => {
+function E(e) {
+    let { id: t, channel: n, onSend: E } = e,
+        v = (0, h.Z)(),
+        { placeholder: g, accessibilityLabel: _ } = (0, a.Z)(n),
+        [C, S] = r.useState(() => (0, u.H2)()),
+        { textValue: I, richValue: Z } = C,
+        [N, x] = r.useState(!1),
+        O = r.useCallback(() => x(!0), []),
+        T = r.useCallback(() => x(!1), []),
+        A = r.useCallback((e, t, n) => {
             S({
                 textValue: t,
                 richValue: n
             });
         }, []),
-        T = o.useCallback(
+        y = r.useCallback(
             () =>
-                I.length > g
+                I.length > v
                     ? Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })
-                    : (r.Z.sendMessage(n.id, d.ZP.parse(n, I), !1),
-                      l.Z.setInputLocked(!0, (0, f.QF)()),
-                      l.Z.updateNotificationStatus(t, p._1z.DISMISSED),
-                      null == v || v(I),
+                    : (l.Z.sendMessage(n.id, d.ZP.parse(n, I), !1),
+                      o.Z.setInputLocked(!0, (0, f.QF)()),
+                      o.Z.updateNotificationStatus(t, p._1z.DISMISSED),
+                      null == E || E(I),
                       Promise.resolve({
                           shouldClear: !1,
                           shouldRefocus: !0
                       })),
-            [I, g, n, t, v]
+            [I, v, n, t, E]
         );
     return (0, i.jsx)(c.Z, {
         innerClassName: m.textArea,
-        onChange: O,
-        placeholder: E,
+        onChange: A,
+        placeholder: g,
         accessibilityLabel: _,
         channel: n,
         textValue: I,
-        richValue: x,
-        type: a.I.OVERLAY_INLINE_REPLY,
-        onBlur: b,
-        onFocus: N,
-        focused: Z,
-        onSubmit: T,
+        richValue: Z,
+        type: s.I.OVERLAY_INLINE_REPLY,
+        onBlur: T,
+        onFocus: O,
+        focused: N,
+        onSubmit: y,
         autoCompletePosition: 'bottom',
         disableThemedBackground: !0
     });
