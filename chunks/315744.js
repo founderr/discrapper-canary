@@ -1,5 +1,5 @@
 n.d(t, {
-    P: function () {
+    Pr: function () {
         return i;
     }
 });
@@ -17,6 +17,5 @@ let r = (0, n(818083).B)({
     ]
 });
 function i(e) {
-    let { enabled: t } = r.useExperiment({ location: e }, { autoTrackExposure: !0 });
-    return t;
+    return r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
