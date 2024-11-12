@@ -1,146 +1,164 @@
 i.r(t),
     i.d(t, {
         default: function () {
-            return E;
+            return A;
         }
     });
 var n,
     r,
-    s = i(200651);
-i(192379);
-var o = i(120356),
-    a = i.n(o),
-    l = i(481060),
-    c = i(1585),
-    u = i(821982),
-    d = i(125988),
-    p = i(267097),
-    h = i(109213),
-    b = i(626135),
-    g = i(333867),
-    v = i(963249),
-    m = i(981631),
-    _ = i(217702),
-    f = i(474936),
-    I = i(388032),
-    x = i(601674),
-    S = i(476945),
+    s = i(200651),
+    o = i(192379),
+    a = i(120356),
+    l = i.n(a),
+    c = i(481060),
+    u = i(100527),
+    d = i(906732),
+    p = i(1585),
+    h = i(821982),
+    _ = i(125988),
+    b = i(267097),
+    g = i(109213),
+    v = i(626135),
+    f = i(333867),
+    m = i(963249),
+    I = i(981631),
+    x = i(217702),
+    S = i(474936),
+    E = i(388032),
+    C = i(601674),
+    T = i(476945),
     y = i(945182);
-function E(e) {
-    let { analyticsLocations: t, transitionState: i, onClose: n, giftRecipient: r, analyticsObject: o } = e;
-    return (0, s.jsxs)(s.Fragment, {
-        children: [
-            (0, s.jsx)(C, {}),
-            (0, s.jsxs)(l.ModalRoot, {
-                size: l.ModalSize.SMALL,
-                transitionState: i,
-                children: [
-                    (0, s.jsxs)(l.ModalHeader, {
-                        className: x.header,
-                        separator: !1,
-                        children: [
-                            (0, s.jsx)(l.FormTitle, {
-                                tag: l.FormTitleTags.H4,
-                                children: I.intl.string(I.t.YBGjsr)
-                            }),
-                            (0, s.jsx)(l.ModalCloseButton, {
-                                onClick: () => {
-                                    b.default.track(m.rMx.MODAL_DISMISSED, {
-                                        type: m.jXE.GIFT_CATEGORY_SELECT_MODAL,
-                                        location_object: m.qAy.BUTTON_CTA
-                                    }),
-                                        n();
-                                },
-                                className: x.cursorPointer
+function A(e) {
+    let { analyticsLocations: t, transitionState: i, onClose: n, giftRecipient: r, analyticsObject: a } = e;
+    return (
+        o.useEffect(() => {
+            v.default.track(I.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
+                ...a,
+                location_stack: t
+            });
+        }, []),
+        (0, s.jsxs)(s.Fragment, {
+            children: [
+                (0, s.jsx)(O, {}),
+                (0, s.jsxs)(c.ModalRoot, {
+                    size: c.ModalSize.SMALL,
+                    transitionState: i,
+                    children: [
+                        (0, s.jsxs)(c.ModalHeader, {
+                            className: C.header,
+                            separator: !1,
+                            children: [
+                                (0, s.jsx)(c.FormTitle, {
+                                    tag: c.FormTitleTags.H4,
+                                    children: E.intl.string(E.t.YBGjsr)
+                                }),
+                                (0, s.jsx)(c.ModalCloseButton, {
+                                    onClick: () => {
+                                        v.default.track(I.rMx.MODAL_DISMISSED, {
+                                            type: I.jXE.GIFT_CATEGORY_SELECT_MODAL,
+                                            location_object: I.qAy.BUTTON_CTA
+                                        }),
+                                            n();
+                                    },
+                                    className: C.cursorPointer
+                                })
+                            ]
+                        }),
+                        (0, s.jsx)(c.ModalContent, {
+                            className: C.modalContent,
+                            children: (0, s.jsx)(R, {
+                                analyticsLocations: t,
+                                giftRecipient: r,
+                                analyticsObject: a,
+                                onClose: n
                             })
-                        ]
-                    }),
-                    (0, s.jsx)(l.ModalContent, {
-                        className: x.modalContent,
-                        children: (0, s.jsx)(A, {
-                            analyticsLocations: t,
-                            giftRecipient: r,
-                            analyticsObject: o,
-                            onClose: n
                         })
-                    })
-                ]
-            })
-        ]
-    });
+                    ]
+                })
+            ]
+        })
+    );
 }
 ((n = r || (r = {}))[(n.NITRO = 0)] = 'NITRO'), (n[(n.NITRO_BASIC = 1)] = 'NITRO_BASIC'), (n[(n.SHOP = 2)] = 'SHOP');
-let C = () => ((0, p.Z)(), null);
-function A(e) {
-    let { analyticsLocations: t, giftRecipient: i, analyticsObject: n, onClose: r } = e,
-        { showBothNitroSkusInCategorySelect: o } = h.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        c = (e) => {
-            e && r();
+let O = () => ((0, b.Z)(), null);
+function R(e) {
+    let { giftRecipient: t, analyticsObject: i, onClose: n } = e,
+        { showBothNitroSkusInCategorySelect: r } = g.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        { analyticsLocations: o } = (0, d.ZP)(u.Z.GIFT_CATEGORY_SELECT_MODAL),
+        a = (e) => {
+            e && n();
         },
-        u = (e) => {
-            (0, v.Z)({
-                isGift: !0,
-                giftRecipient: i,
-                giftingOrigin: f.Wt.DM_CHANNEL,
-                initialPlanId: null,
-                analyticsLocations: t,
-                subscriptionTier: e,
-                analyticsObject: n,
-                onClose: c
-            });
+        p = (e) => {
+            let n = I.Qqv.NITRO_SKU_SELECTION;
+            e === S.Si.TIER_2 ? (n = I.Qqv.NITRO_STANDARD) : e === S.Si.TIER_0 && (n = I.Qqv.NITRO_BASIC),
+                (0, m.Z)({
+                    isGift: !0,
+                    giftRecipient: t,
+                    giftingOrigin: S.Wt.DM_CHANNEL,
+                    initialPlanId: null,
+                    analyticsLocations: o,
+                    subscriptionTier: e,
+                    analyticsObject: {
+                        ...i,
+                        section: I.jXE.GIFT_CATEGORY_SELECT_MODAL,
+                        object: I.qAy.GIFT_CATEGORY_OPTION,
+                        objectType: n
+                    },
+                    onClose: a
+                });
         };
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(l.Clickable, {
-                onClick: () => u(o ? f.Si.TIER_2 : void 0),
+            (0, s.jsx)(c.Clickable, {
+                onClick: () => p(r ? S.Si.TIER_2 : void 0),
                 children: (0, s.jsxs)('div', {
-                    className: a()(x.categoryButton, x.nitroButton),
+                    className: l()(C.categoryButton, C.nitroButton),
                     children: [
-                        (0, s.jsx)(l.Text, {
+                        (0, s.jsx)(c.Text, {
                             variant: 'display-md',
                             color: 'always-white',
-                            className: x.buttonText,
-                            children: I.intl.string(I.t['lG6a5+'])
+                            className: C.buttonText,
+                            children: E.intl.string(E.t['lG6a5+'])
                         }),
                         (0, s.jsx)(k, { imageType: 0 })
                     ]
                 })
             }),
-            o &&
-                (0, s.jsx)(l.Clickable, {
-                    onClick: () => u(f.Si.TIER_0),
+            r &&
+                (0, s.jsx)(c.Clickable, {
+                    onClick: () => p(S.Si.TIER_0),
                     children: (0, s.jsxs)('div', {
-                        className: a()(x.nitroBasicButton, x.categoryButton),
+                        className: l()(C.nitroBasicButton, C.categoryButton),
                         children: [
-                            (0, s.jsx)(l.Text, {
+                            (0, s.jsx)(c.Text, {
                                 variant: 'display-md',
                                 color: 'always-white',
-                                className: x.buttonText,
-                                children: I.intl.string(I.t['t9uG/v'])
+                                className: C.buttonText,
+                                children: E.intl.string(E.t['t9uG/v'])
                             }),
                             (0, s.jsx)(k, { imageType: 1 })
                         ]
                     })
                 }),
-            (0, s.jsx)(l.Clickable, {
+            (0, s.jsx)(c.Clickable, {
                 onClick: () => {
-                    (0, g.Z)({
+                    (0, f.Z)({
                         isGift: !0,
-                        giftingOrigin: f.Wt.DM_CHANNEL,
-                        analyticsLocations: t,
-                        analyticsObject: n,
-                        giftRecipient: i,
-                        onClose: c
+                        giftingOrigin: S.Wt.DM_CHANNEL,
+                        analyticsLocations: o,
+                        analyticsObject: i,
+                        giftRecipient: t,
+                        onClose: a
                     });
                 },
                 children: (0, s.jsxs)('div', {
-                    className: a()(x.shopButton, x.categoryButton),
+                    className: l()(C.shopButton, C.categoryButton),
                     children: [
-                        (0, s.jsx)(l.Text, {
+                        (0, s.jsx)(c.Text, {
                             variant: 'display-md',
                             color: 'always-white',
-                            className: x.buttonText,
-                            children: I.intl.string(I.t.gFlB9f)
+                            className: C.buttonText,
+                            children: E.intl.string(E.t.gFlB9f)
                         }),
                         (0, s.jsx)(k, { imageType: 2 })
                     ]
@@ -151,14 +169,14 @@ function A(e) {
 }
 function k(e) {
     let { imageType: t } = e,
-        { avatarPlaceholderSrc: i } = (0, d.Z)({ size: (0, c.y9)(l.AvatarSizes.SIZE_80) }),
-        n = (0, u.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', l.AvatarSizes.SIZE_80, !1);
+        { avatarPlaceholderSrc: i } = (0, _.Z)({ size: (0, p.y9)(c.AvatarSizes.SIZE_80) }),
+        n = (0, h.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', c.AvatarSizes.SIZE_80, !1);
     return 0 === t || 1 === t
         ? (0, s.jsx)('div', {
-              className: x.wumpusImageContainer,
-              children: (0, s.jsx)(l.Image, {
-                  src: 1 === t ? S : y,
-                  mediaLayoutType: _.hV.RESPONSIVE,
+              className: C.wumpusImageContainer,
+              children: (0, s.jsx)(c.Image, {
+                  src: 1 === t ? T : y,
+                  mediaLayoutType: x.hV.RESPONSIVE,
                   width: 270,
                   height: 242,
                   zoomable: !1
@@ -166,11 +184,11 @@ function k(e) {
           })
         : 2 === t
           ? (0, s.jsx)('div', {
-                className: a()(x.wumpusImageContainer, x.shopImageContainer),
-                children: (0, s.jsx)(l.Avatar, {
+                className: l()(C.wumpusImageContainer, C.shopImageContainer),
+                children: (0, s.jsx)(c.Avatar, {
                     src: i,
                     avatarDecoration: n,
-                    size: l.AvatarSizes.SIZE_80,
+                    size: c.AvatarSizes.SIZE_80,
                     'aria-hidden': !0
                 })
             })
