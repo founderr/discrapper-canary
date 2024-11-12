@@ -1,38 +1,40 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     n(627341);
 var r = n(200651);
 n(192379);
 var i = n(278074),
-    a = n(442837),
-    s = n(481060),
-    o = n(194359),
-    l = n(843931),
-    u = n(1596),
-    c = n(922611),
-    d = n(699516),
-    f = n(594174),
-    _ = n(981631),
-    p = n(388032);
-function h(e) {
-    let { user: t, color: n, onBlock: h, onUnblock: m, location: g = 'ContextMenu' } = e,
-        { id: E } = t,
-        v = (0, a.e7)(
-            [f.default],
+    a = n(990547),
+    s = n(442837),
+    o = n(481060),
+    l = n(194359),
+    u = n(843931),
+    c = n(1596),
+    d = n(922611),
+    f = n(699516),
+    _ = n(594174),
+    p = n(626135),
+    h = n(981631),
+    m = n(388032);
+function g(e) {
+    let { user: t, color: n, onBlock: g, onUnblock: E, location: v = 'ContextMenu' } = e,
+        { id: I } = t,
+        b = (0, s.e7)(
+            [_.default],
             () => {
                 var e;
-                return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === E;
+                return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === I;
             },
-            [E]
+            [I]
         ),
-        I = (0, a.e7)([d.Z], () => d.Z.isBlocked(E), [E]),
-        b = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        S = (0, i.EQ)({
-            isStealthRemediationEnabled: b,
-            isBlocked: I
+        S = (0, s.e7)([f.Z], () => f.Z.isBlocked(I), [I]),
+        T = (0, d.Do)({ location: 'use-block-user-item-web' }),
+        y = (0, i.EQ)({
+            isStealthRemediationEnabled: T,
+            isBlocked: S
         })
             .with(
                 {
@@ -49,36 +51,38 @@ function h(e) {
                 () => 'danger'
             )
             .otherwise(() => n);
-    return v
+    return b
         ? null
-        : (0, r.jsx)(s.MenuItem, {
+        : (0, r.jsx)(o.MenuItem, {
               id: 'block',
-              color: null != S ? S : 'default',
-              label: I ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW),
-              action: I
+              color: null != y ? y : 'default',
+              label: S ? m.intl.string(m.t.XyHpKC) : m.intl.string(m.t.l4EmaW),
+              action: S
                   ? () => {
-                        null == m || m(), o.Z.unblockUser(E, { location: g });
+                        null == E || E(), l.Z.unblockUser(I, { location: v });
                     }
                   : () => {
-                        (0, s.openModal)((e) =>
-                            (0, r.jsx)(s.ConfirmModal, {
-                                header: p.intl.formatToPlainString(p.t.x5pOn5, { name: t.username }),
-                                confirmText: p.intl.string(p.t.l4EmaW),
-                                cancelText: p.intl.string(p.t['ETE/oK']),
+                        (0, o.openModal)((e) =>
+                            (0, r.jsx)(o.ConfirmModal, {
+                                header: m.intl.formatToPlainString(m.t.x5pOn5, { name: t.username }),
+                                confirmText: m.intl.string(m.t.l4EmaW),
+                                cancelText: m.intl.string(m.t['ETE/oK']),
                                 onConfirm: () => {
-                                    null == h || h(),
-                                        o.Z.addRelationship({
-                                            userId: E,
-                                            context: { location: g },
-                                            type: _.OGo.BLOCKED
-                                        });
+                                    null == g || g(),
+                                        l.Z.addRelationship({
+                                            userId: I,
+                                            context: { location: v },
+                                            type: h.OGo.BLOCKED
+                                        }),
+                                        p.default.track(h.rMx.BLOCK_USER_CONFIRMED);
                                 },
+                                impression: { impressionName: a.ImpressionNames.BLOCK_USER_CONFIRMATION },
                                 ...e,
-                                children: (0, l.c)({ location: 'confirm_block_modal' })
-                                    ? (0, r.jsx)(u.Z, {})
-                                    : (0, r.jsx)(s.Text, {
+                                children: (0, u.c)({ location: 'confirm_block_modal' })
+                                    ? (0, r.jsx)(c.Z, {})
+                                    : (0, r.jsx)(o.Text, {
                                           variant: 'text-md/normal',
-                                          children: p.intl.format(p.t.pegItL, { name: t.username })
+                                          children: m.intl.format(m.t.pegItL, { name: t.username })
                                       })
                             })
                         );

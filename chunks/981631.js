@@ -5023,6 +5023,7 @@ let ot = Object.freeze({
     (nO.MY_ACCOUNT_PAGE_TAB_NAVIGATE = 'my_account_page_tab_navigate'),
     (nO.USER_VOICE_ACTIVITY_VIEWED = 'user_voice_activity_viewed'),
     (nO.PARTY_VOICE_ACTIVITY_VIEWED = 'party_voice_activity_viewed'),
+    (nO.BLOCK_USER_CONFIRMED = 'block_user_confirmed'),
     ((np = eF || (eF = {})).CANARY = 'canary'),
     (np.PTB = 'ptb'),
     (np.STABLE = 'stable'),

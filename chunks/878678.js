@@ -19,22 +19,22 @@ var r = n(200651),
 function f(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: b, loading: S = !1, confirmButtonColor: T = o.zx.Colors.RED, focusCancel: y = !1 } = e,
-        A = i.useRef(null),
-        N = (0, u.Q)('ConfirmModal');
+        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: I, transitionState: b, loading: S = !1, confirmButtonColor: T = o.zx.Colors.RED, focusCancel: y = !1, impression: A } = e,
+        N = i.useRef(null),
+        C = (0, u.Q)('ConfirmModal');
     return (
         i.useEffect(() => {
             !y &&
                 setTimeout(() => {
                     var e;
-                    return null === (e = A.current) || void 0 === e ? void 0 : e.focus();
+                    return null === (e = N.current) || void 0 === e ? void 0 : e.focus();
                 }, 0);
         }, [y]),
         i.useLayoutEffect(() => () => (null == v ? void 0 : v())),
         null != p &&
             (t = (0, r.jsx)(o.zx, {
                 type: 'button',
-                look: N ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
+                look: C ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
                 color: o.zx.Colors.PRIMARY,
                 className: d.cancelButton,
                 size: o.zx.Sizes.MEDIUM,
@@ -47,7 +47,7 @@ function f(e) {
             })),
         null != _ &&
             (n = (0, r.jsx)(o.zx, {
-                buttonRef: A,
+                buttonRef: N,
                 type: 'submit',
                 size: o.zx.Sizes.MEDIUM,
                 color: T,
@@ -65,6 +65,7 @@ function f(e) {
         (0, r.jsxs)(c.Y0, {
             className: h,
             transitionState: b,
+            impression: A,
             children: [
                 null != a
                     ? (0, r.jsx)(c.xB, {

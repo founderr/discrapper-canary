@@ -35,6 +35,7 @@ n.d(t, {
     (a.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL = 'impression_april_premium_marketing_deco_claimed_modal'),
     (a.AUDIO_DEVICE_MENU = 'impression_audio_device_menu'),
     (a.AVATAR_UPLOAD = 'impression_avatar_upload'),
+    (a.BLOCK_USER_CONFIRMATION = 'impression_block_user_confirmation'),
     (a.CHANNEL_ADD_INFO = 'impression_channel_add_info'),
     (a.CHANNEL_ADD_MEMBERS = 'impression_channel_add_members'),
     (a.CHANNEL_CALL_VIDEO_GRID = 'impression_channel_call_video_grid'),
