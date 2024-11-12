@@ -1,5 +1,6 @@
 e.exports = {
     container: 'container_cf8a7d',
+    table: 'table_cf8a7d',
     rows: 'rows_cf8a7d',
     headerRow: 'headerRow_cf8a7d',
     headerRank: 'headerRank_cf8a7d',

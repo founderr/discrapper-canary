@@ -73,6 +73,7 @@ function R(e) {
                 ? null
                 : (0, r.jsx)(r.Fragment, {
                       children: (0, r.jsxs)('div', {
+                          className: C.table,
                           children: [
                               (0, r.jsxs)('div', {
                                   className: C.headerRow,
