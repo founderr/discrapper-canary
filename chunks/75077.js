@@ -163,7 +163,7 @@ let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
             { enabled: f } = u.r.getCurrentConfig({ location: R }, { autoTrackExposure: !1 }),
             { enabled: p } = d.C.getCurrentConfig({ location: R }, { autoTrackExposure: !1 }),
             _ = g && !f && !p,
-            h = B();
+            h = M();
         return null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), null != n.freeBoost && !0 === r && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), i && h ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !h && (_ || null != n.shyProject ? _ && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     j = (e) => {
@@ -275,7 +275,7 @@ let S = (e, t, n) => ((0, a.wj)(e) ? t : n),
         let e = (0, r.e7)([l.default], () => l.default.getCurrentUser());
         return (0, c.I5)(e);
     },
-    B = () => {
+    M = () => {
         let e = l.default.getCurrentUser();
         return (0, c.M5)(e, p.p9.TIER_2);
     };

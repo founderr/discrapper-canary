@@ -6,13 +6,13 @@ n.d(t, {
         return w;
     },
     IB: function () {
-        return B;
-    },
-    IY: function () {
         return M;
     },
-    JR: function () {
+    IY: function () {
         return O;
+    },
+    JR: function () {
+        return B;
     },
     Vp: function () {
         return j;
@@ -158,14 +158,14 @@ let P = (e) => {
         let [a] = (0, g.US)(r ? t : []);
         return r ? (null != e && !0 === e.showNotification && (a === l.z.TENURE_REWARD_REDEEMABLE || a === l.z.TENURE_REWARD_PENDING) ? (0, v.Wb)(e.nitroTenureStatus) : null) : null;
     },
-    B = () => {
+    M = () => {
         var e;
         let t = null === (e = S()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, b.cG)({ location: 'Home' }) && null != t && t === N.EB.REDEEMABLE,
             [i] = (0, g.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && i === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
-    M = () => {
+    O = () => {
         let e = S(),
             t = i.useMemo(() => P(e), [e]),
             [n] = (0, u.cv)(t),
@@ -186,7 +186,7 @@ let P = (e) => {
                     (r.current = !0)));
         }, [e, n]);
     };
-function O() {
+function B() {
     let { hasFetchedPremiumApplicationEntitlements: e, isFetchingPremiumApplicationEntitlements: t } = (0, s.cj)([p.Z], () => ({
             hasFetchedPremiumApplicationEntitlements: p.Z.isFetchedForApplication(T.CL),
             isFetchingPremiumApplicationEntitlements: p.Z.isFetchingForApplication(T.CL)
@@ -202,7 +202,7 @@ function O() {
 }
 function w() {
     var e;
-    O();
+    B();
     let t = S(),
         n = null !== (e = null == t ? void 0 : t.showCard) && void 0 !== e && e;
     i.useEffect(() => {

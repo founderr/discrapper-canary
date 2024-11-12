@@ -73,7 +73,7 @@ t.ZP = function (e) {
         u = i.useMemo(() => (0, d.Z)(t, n, a), [t, n, a]),
         _ = (0, o.e7)([E.Z], () => E.Z.getChannel(t)),
         [v, S] = i.useState(!1),
-        y = (0, c.P)('soundmoji_chat_mention'),
+        y = (0, c.Pr)('soundmoji_chat_mention'),
         A = i.useCallback(() => {
             var e;
             let t = new Audio((0, h.Z)(a));

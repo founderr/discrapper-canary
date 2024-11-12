@@ -55,23 +55,23 @@ t.Z = (e) => {
         P = (0, d.ZP)('perks-discoverability');
     (0, m.I2)();
     let Z = (0, u.HI)({ location: _.R0.PERKS_DISCOVERABILITY }),
-        B = C === _.R0.WHATS_NEW,
-        M = (0, g.IY)(),
-        O = (0, p.x$)();
+        M = C === _.R0.WHATS_NEW,
+        O = (0, g.IY)(),
+        B = (0, p.x$)();
     r.useEffect(() => {
-        B && !j && (M(), O());
-    }, [M, O, B, j]),
+        M && !j && (O(), B());
+    }, [O, B, M, j]),
         r.useEffect(() => {
             let e = R.current;
-            if (null == e || !j || !B) return;
+            if (null == e || !j || !M) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: 'smooth' }), B && M();
+                e.scrollIntoView({ behavior: 'smooth' }), M && O();
             });
             return () => {
-                cancelAnimationFrame(t), B && M();
+                cancelAnimationFrame(t), M && O();
             };
-        }, [R, j, B, M]);
-    let w = (0, h.Op)(B),
+        }, [R, j, M, O]);
+    let w = (0, h.Op)(M),
         y = (0, f.Z)(),
         k = (0, h.mN)(),
         { fractionalState: L } = (0, c.Z)(),
@@ -119,7 +119,7 @@ t.Z = (e) => {
                         className: s()(b.subtitle, {
                             [b.subtitle]: null == N || T,
                             [b.subtitleWithButton]: null != N && !T,
-                            [b.fullWidth]: B || T,
+                            [b.fullWidth]: M || T,
                             [b.moreSubtitleMargin]: D,
                             [b.leftAlignSubtitle]: T,
                             [b.centerAlignSubtitle]: !T

@@ -32,8 +32,8 @@ t.Z = (e) => {
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
         Z = (0, _.HI)({ location: x.MQ.SEE_ALL }),
-        { analyticsLocations: B } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [M, O] = r.useState(!1),
+        { analyticsLocations: M } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [O, B] = r.useState(!1),
         w = (0, f.ZP)('perks-discoverability'),
         y = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         k = (0, C.mN)(),
@@ -49,7 +49,7 @@ t.Z = (e) => {
             children: (0, i.jsx)('div', {
                 className: N.container,
                 children: (0, i.jsxs)(g.Gt, {
-                    value: B,
+                    value: M,
                     children: [
                         (0, i.jsx)(h.Z, {
                             className: N.heroHeading,
@@ -127,7 +127,7 @@ t.Z = (e) => {
                         (0, i.jsx)('div', { className: N.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !M && (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: B }), O(!0));
+                                e && !O && (p.default.track(v.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: M }), B(!0));
                             },
                             children: (0, i.jsx)('div', { className: N.bottomOfPageVisibilitySensor })
                         }),

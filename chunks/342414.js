@@ -146,17 +146,17 @@ t.Z = (e) => {
         C = (0, i.jsx)(R, { className: t }),
         I = T.intl.string(T.t.ifwQZW),
         S = !1,
-        { fractionalState: Z, endsAt: B } = (0, u.Z)(),
-        M = (0, d.Z)(B, d.a.ENDS_IN);
+        { fractionalState: Z, endsAt: M } = (0, u.Z)(),
+        O = (0, d.Z)(M, d.a.ENDS_IN);
     l ? ((I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(j, {}))) : (h || b) && ((p = T.intl.string(T.t.qYKftb)), (I = T.intl.string(T.t.ifwQZW)), (C = (0, i.jsx)(A, { location: n })));
-    let O = null;
+    let B = null;
     Z !== v.a$.NONE &&
         ((m = !0),
         (p = T.intl.string(T.t.vaqFvb)),
         (S = !0),
-        (O = (0, i.jsx)(_.Z, {
+        (B = (0, i.jsx)(_.Z, {
             className: N.fpCountdownPill,
-            countdownText: M
+            countdownText: O
         })));
     let w = {
             className: a()(N.trialPill, { [N.hidden]: !m }),
@@ -175,7 +175,7 @@ t.Z = (e) => {
             value: {
                 headingText: I,
                 headingTop: y,
-                headingBottom: O
+                headingBottom: B
             },
             children: C
         })

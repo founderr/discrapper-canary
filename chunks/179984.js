@@ -28,9 +28,9 @@ var i = n(200651),
     j = n(515846),
     P = n(102655),
     Z = n(768236),
-    B = n(314907),
-    M = n(826701);
-let O = () => {
+    M = n(314907),
+    O = n(826701);
+let B = () => {
         let e = (0, v.W1)();
         return (0, i.jsx)(T.Cy, {
             text: e,
@@ -51,7 +51,7 @@ let O = () => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
-        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? B : M;
+        t = n === R.p9.TIER_0 ? ((0, o.wj)(r) ? P : Z) : (0, o.wj)(r) ? M : O;
         let a = (0, h.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
@@ -116,7 +116,7 @@ let O = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: B = !1, selectedPlanColumnClassName: M, selectedPlanTier: U = R.p9.TIER_2 } = e,
+        { className: a, hideCTAs: P = !1, headingOverride: Z, hidePill: M = !1, selectedPlanColumnClassName: O, selectedPlanTier: U = R.p9.TIER_2 } = e,
         { analyticsLocations: D } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         G = (0, l.e7)([_.ZP], () => _.ZP.hasFetchedSubscriptions()),
         H = (0, f.V)(),
@@ -219,7 +219,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == Q
           }),
-        (n = B
+        (n = M
             ? null
             : null != Q || null != J
               ? (0, i.jsx)(T.Cy, {
@@ -228,7 +228,7 @@ t.Z = (e) => {
                     colorOptions: Q === R.Si.TIER_0 ? (W ? T.VE.PREMIUM_TIER_0_GRADIENT_FILL : T.VE.PREMIUM_TIER_0_WHITE_FILL) : W ? (Y ? T.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : T.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : T.VE.PREMIUM_TIER_2_WHITE_FILL
                 })
               : er
-                ? (0, i.jsx)(O, {})
+                ? (0, i.jsx)(B, {})
                 : (0, i.jsx)(w, {}));
     let es = Q === R.Si.TIER_0 || J === R.p9.TIER_0 || U === R.p9.TIER_0;
     return (0, i.jsx)(m.Gt, {
@@ -246,7 +246,7 @@ t.Z = (e) => {
                     className: j.tableWrapper,
                     children: [
                         (0, i.jsx)('div', {
-                            className: s()(M, {
+                            className: s()(O, {
                                 [j.tier0ColumnOuter]: es,
                                 [j.tier2ColumnOuter]: !es
                             }),

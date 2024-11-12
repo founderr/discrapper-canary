@@ -54,7 +54,7 @@ let E = (e) => {
         Z = () => {
             null != I.current && (R(I.current.currentTime), I.current.pause());
         },
-        B = () =>
+        M = () =>
             (0, i.jsxs)('div', {
                 className: s()({
                     [h.whatsNewTextBoxOuter]: !C,
@@ -95,7 +95,7 @@ let E = (e) => {
                               }))
                 ]
             }),
-        M = (e) => {
+        O = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: s()({
@@ -131,7 +131,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(B, {}), (0, i.jsx)(M, { isLeft: !1 })]
+              children: [(0, i.jsx)(M, {}), (0, i.jsx)(O, { isLeft: !1 })]
           })
         : (0, i.jsxs)('div', {
               className: s()(A, {
@@ -143,7 +143,7 @@ let E = (e) => {
               onFocus: P,
               onBlur: Z,
               onMouseLeave: Z,
-              children: [(0, i.jsx)(M, { isLeft: !0 }), (0, i.jsx)(B, {})]
+              children: [(0, i.jsx)(O, { isLeft: !0 }), (0, i.jsx)(M, {})]
           });
 };
 t.Z = r.memo(function (e) {

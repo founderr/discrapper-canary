@@ -75,12 +75,12 @@ t.Z = (e) => {
         { analyticsLocations: j } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, m._O)(),
         Z = (0, g.Nx)(),
-        B = (0, _.Vi)(),
-        M = (0, s.e7)([u.Z], () => u.Z.affinities),
-        O = (0, p.Z)(),
+        M = (0, _.Vi)(),
+        O = (0, s.e7)([u.Z], () => u.Z.affinities),
+        B = (0, p.Z)(),
         { enabled: w } = f._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
-        y = A === v.EZ.ApplicationStoreHome && null != O && w,
-        k = M.length > 0;
+        y = A === v.EZ.ApplicationStoreHome && null != B && w,
+        k = O.length > 0;
     return (0, i.jsx)(c.Gt, {
         value: j,
         children: (0, i.jsxs)('div', {
@@ -99,7 +99,7 @@ t.Z = (e) => {
                             children: T.intl.string(T.t.YCZldH)
                         }),
                         y
-                            ? (0, i.jsx)(b.Z, { referrer: O })
+                            ? (0, i.jsx)(b.Z, { referrer: B })
                             : k
                               ? (0, i.jsx)('div', {
                                     className: a()(N.affinityDescription),
@@ -109,7 +109,7 @@ t.Z = (e) => {
                                     })
                                 })
                               : (0, i.jsx)(R, {}),
-                        B
+                        M
                             ? (0, i.jsx)('div', {
                                   className: N.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {

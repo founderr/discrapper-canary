@@ -28,9 +28,9 @@ var i = n(200651),
     j = n(605289),
     P = n(346497),
     Z = n(218390),
-    B = n(823188),
-    M = n(241158),
-    O = n(135785),
+    M = n(823188),
+    O = n(241158),
+    B = n(135785),
     w = n(498765),
     y = n(635921),
     k = n(177839),
@@ -103,14 +103,14 @@ let $ = (e) => {
                               onChange: (e) => d(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, i.jsx)(M.Z, { shouldLoadVideo: f })
+                              children: (0, i.jsx)(O.Z, { shouldLoadVideo: f })
                           }),
                       c &&
                           (0, i.jsx)(o.$, {
                               onChange: (e) => u(e),
                               threshold: 0,
                               active: !0,
-                              children: (0, i.jsx)(M.Z, {
+                              children: (0, i.jsx)(O.Z, {
                                   isBestOfNitro: !0,
                                   shouldLoadVideo: f
                               })
@@ -145,7 +145,7 @@ t.Z = (e) => {
     var t;
     let { isFullscreen: n, entrypoint: a } = e;
     (0, f.z)(m.X);
-    let M = (0, v.z7)('PremiumMarketingHome'),
+    let O = (0, v.z7)('PremiumMarketingHome'),
         w = (0, x.g)('PremiumMarketingHome'),
         k = (0, b.tY)('PremiumMarketingHome'),
         L = r.useRef(null),
@@ -190,8 +190,8 @@ t.Z = (e) => {
                 onChange: (e) => ei(e),
                 threshold: 0.1,
                 active: !0,
-                children: (0, i.jsx)(B.ZP, {
-                    variant: k ? (n ? B.NN.TAGLINE_XP_COPY_HOME : B.NN.TAGLINE_XP_COPY_SETTINGS) : B.NN.DEFAULT,
+                children: (0, i.jsx)(M.ZP, {
+                    variant: k ? (n ? M.NN.TAGLINE_XP_COPY_HOME : M.NN.TAGLINE_XP_COPY_SETTINGS) : M.NN.DEFAULT,
                     showWumpus: !k,
                     tier0CTAButton:
                         ev === z.Si.TIER_2 || eN || null != ex
@@ -238,7 +238,7 @@ t.Z = (e) => {
             className: s()(Q.container, { [Q.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
-                (0, i.jsx)(O.Z, {
+                (0, i.jsx)(B.Z, {
                     premiumSubscription: eg,
                     className: s()(n ? Q.fullscreenExistingSubscriberSpacing : Q.existingSubscriberSpacing, { [Q.zIndex1]: eT }),
                     isFullscreen: n
@@ -280,7 +280,7 @@ t.Z = (e) => {
                     isFullscreen: n,
                     inOfferExperience: eT,
                     setIsAllPerksVisible: eb,
-                    whatsNewV2Enabled: M,
+                    whatsNewV2Enabled: O,
                     BestOfNitroV2Enabled: w,
                     setIsWhatsNewBoxVisible: ea,
                     setIsBestOfNitroVisible: el,
@@ -288,7 +288,7 @@ t.Z = (e) => {
                     isBestOfNitroVisible: es,
                     hasRenderedOnce: ed
                 }),
-                !M && !w && (0, i.jsx)($, { isFullscreen: n }),
+                !O && !w && (0, i.jsx)($, { isFullscreen: n }),
                 (0, i.jsxs)('div', {
                     className: Q.planComparisonTableContainer,
                     children: [

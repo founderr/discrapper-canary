@@ -1,6 +1,6 @@
 n.d(t, {
     __: function () {
-        return O;
+        return B;
     },
     dm: function () {
         return r;
@@ -35,10 +35,10 @@ var i,
     j = n(220046),
     P = n(385874),
     Z = n(371000),
-    B = n(377679),
-    M = n(825087);
+    M = n(377679),
+    O = n(825087);
 ((i = r || (r = {})).NEW_APP_STYLES = 'newAppStyles'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.SERVER_PROFILES = 'serverProfiles'), (i.SHOW_YOUR_STYLE = 'showYourStyle'), (i.YOUR_SPACE = 'yourSpace'), (i.EMOJIS = 'emojis'), (i.NO_LIMITS = 'noLimits');
-let O = () => {
+let B = () => {
     let e = (0, c.rO)();
     return {
         emojis: {
@@ -114,7 +114,7 @@ t.ZP = (e) => {
                         analyticsLocations: t
                     });
                 },
-                videoUrl: i ? B.Z : M.Z
+                videoUrl: i ? M.Z : O.Z
             }
         };
     return e ? m : r;
