@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return T;
     }
 }),
     n(789020);
@@ -13,29 +13,39 @@ var s = n(442837),
     o = n(824856),
     c = n(565138),
     d = n(430824),
-    u = n(171246),
-    m = n(696906),
-    h = n(981631),
-    g = n(388032),
-    p = n(438578);
-function x(e) {
+    u = n(55563),
+    m = n(171246),
+    h = n(696906),
+    g = n(63487),
+    p = n(981631),
+    x = n(388032),
+    S = n(438578);
+function T(e) {
     var t;
-    let { app: n, currentSubscription: m, currentListing: h, alternativeListings: x, bundleSku: T, navigateToHome: C } = e,
-        _ = (0, l.y)(n, 100),
-        E = (0, u.KK)(T.flags),
-        f = E ? r.ServerIcon : r.UserIcon,
-        I = E ? g.intl.string(g.t['46YF2N']) : g.intl.string(g.t.fFyGiI),
-        N = null === (t = m.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
-        A = (0, s.e7)([d.Z], () => (E && null != N ? d.Z.getGuild(N) : void 0), [N, E]);
+    let { app: n, currentSubscription: h, currentListing: p, alternativeListings: T, navigateToHome: _, subscriptionGroup: E, renewalSkuId: f } = e,
+        I = (0, l.y)(n, 100),
+        N = (0, m.KK)(E.flags),
+        A = N ? r.ServerIcon : r.UserIcon,
+        b = N ? x.intl.string(x.t['46YF2N']) : x.intl.string(x.t.fFyGiI),
+        v = null === (t = h.metadata) || void 0 === t ? void 0 : t.application_subscription_guild_id,
+        j = (0, s.e7)([d.Z], () => (N && null != v ? d.Z.getGuild(v) : void 0), [v, N]),
+        O = (0, s.e7)(
+            [u.Z],
+            () => {
+                if (null != f) return u.Z.get(f);
+            },
+            [f]
+        ),
+        R = (0, g.p)(h.currentPeriodEnd);
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsxs)('div', {
-                className: p.header,
+                className: S.header,
                 children: [
-                    null != _ &&
+                    null != I &&
                         (0, i.jsx)(r.Image, {
-                            src: _.href,
-                            imageClassName: p.appIcon,
+                            src: I.href,
+                            imageClassName: S.appIcon,
                             width: 48,
                             height: 48
                         }),
@@ -46,21 +56,21 @@ function x(e) {
                                 children: n.name
                             }),
                             (0, i.jsxs)('div', {
-                                className: p.subInfo,
+                                className: S.subInfo,
                                 children: [
                                     (0, i.jsxs)(r.Heading, {
                                         variant: 'heading-md/normal',
-                                        className: p.subInfoType,
+                                        className: S.subInfoType,
                                         children: [
-                                            (0, i.jsx)(f, {
+                                            (0, i.jsx)(A, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
                                             ' ',
-                                            I
+                                            b
                                         ]
                                     }),
-                                    null != A &&
+                                    null != j &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(r.Text, {
@@ -68,16 +78,16 @@ function x(e) {
                                                     children: '\u2022'
                                                 }),
                                                 (0, i.jsxs)('span', {
-                                                    className: p.guildSubscription,
+                                                    className: S.guildSubscription,
                                                     children: [
                                                         (0, i.jsx)(c.Z, {
-                                                            guild: A,
+                                                            guild: j,
                                                             size: c.Z.Sizes.SMOL
                                                         }),
                                                         (0, i.jsx)(r.Heading, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'text-muted',
-                                                            children: g.intl.format(g.t['7ZD8p6'], { guildName: A.name })
+                                                            children: x.intl.format(x.t['7ZD8p6'], { guildName: j.name })
                                                         })
                                                     ]
                                                 })
@@ -92,61 +102,85 @@ function x(e) {
             (0, i.jsx)(a.Z, {
                 children: (e) =>
                     (0, i.jsxs)('div', {
-                        className: p.planNotice,
+                        className: S.planNotice,
                         children: [
                             (0, i.jsx)(r.Text, {
                                 variant: 'text-md/normal',
-                                children: g.intl.string(g.t['goe+ho'])
+                                children: x.intl.string(x.t['goe+ho'])
                             }),
                             e &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-md/normal',
-                                            children: g.intl.format(g.t['Q8qJ+/'], {})
+                                            children: x.intl.format(x.t['Q8qJ+/'], {})
                                         }),
                                         (0, i.jsx)(r.Text, {
                                             variant: 'text-md/normal',
-                                            children: g.intl.format(g.t.sqowY2, {})
+                                            children: x.intl.format(x.t.sqowY2, {})
                                         })
                                     ]
                                 }),
-                            (0, i.jsx)(a.Z.Toggle, { text: e ? g.intl.string(g.t['1Rkq/P']) : g.intl.string(g.t.WsTHkZ) })
+                            (0, i.jsx)(a.Z.Toggle, { text: e ? x.intl.string(x.t['1Rkq/P']) : x.intl.string(x.t.WsTHkZ) })
                         ]
                     })
             }),
             (0, i.jsxs)('div', {
-                className: p.subscriptions,
+                className: S.subscriptions,
                 children: [
                     (0, i.jsx)(o.Z, {
-                        storeListing: h,
-                        className: p.activeSubscriptionCard,
-                        cta: (0, i.jsx)(r.Text, {
-                            variant: 'eyebrow',
-                            color: 'text-brand',
-                            children: g.intl.string(g.t.fHIpOT)
+                        storeListing: p,
+                        className: S.activeSubscriptionCard,
+                        cta: (0, i.jsxs)('div', {
+                            className: S.activeSubscriptionCTA,
+                            children: [
+                                (0, i.jsx)(r.Text, {
+                                    variant: 'eyebrow',
+                                    color: 'text-brand',
+                                    children: x.intl.string(x.t.fHIpOT)
+                                }),
+                                null != O &&
+                                    (0, i.jsx)(r.Text, {
+                                        variant: 'text-sm/semibold',
+                                        color: 'text-secondary',
+                                        children: x.intl.format(x.t['OQk+jo'], { endDate: R })
+                                    })
+                            ]
                         })
                     }),
-                    x.map((e) =>
-                        (0, i.jsx)(
-                            S,
-                            {
-                                storeListing: e,
-                                guildId: N,
-                                navigateToHome: C
-                            },
-                            e.id
-                        )
+                    T.map((e) =>
+                        e.skuId === f
+                            ? (0, i.jsx)(
+                                  o.Z,
+                                  {
+                                      storeListing: e,
+                                      cta: (0, i.jsx)(r.Text, {
+                                          variant: 'text-sm/semibold',
+                                          color: 'text-secondary',
+                                          children: x.intl.format(x.t.nn88hI, { startDate: R })
+                                      })
+                                  },
+                                  e.id
+                              )
+                            : (0, i.jsx)(
+                                  C,
+                                  {
+                                      storeListing: e,
+                                      guildId: v,
+                                      navigateToHome: _
+                                  },
+                                  e.id
+                              )
                     )
                 ]
             })
         ]
     });
 }
-function S(e) {
+function C(e) {
     let { storeListing: t, guildId: n, navigateToHome: s } = e,
-        { openModal: l } = (0, m.ZP)({
-            analyticsLocation: h.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
+        { openModal: l } = (0, h.ZP)({
+            analyticsLocation: p.Sbl.APP_SUBSCRIPTIONS_MANAGEMENT,
             skuId: t.skuId,
             subscribeForGuild: n,
             disableGuildSelector: !0,
@@ -157,7 +191,7 @@ function S(e) {
         cta: (0, i.jsx)(r.Button, {
             size: r.Button.Sizes.SMALL,
             onClick: l,
-            children: g.intl.string(g.t['+KwmBg'])
+            children: x.intl.string(x.t['+KwmBg'])
         })
     });
 }
