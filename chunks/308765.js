@@ -304,6 +304,10 @@ let i = {
         actions: ['POST_CONNECTION_OPEN'],
         inlineRequire: () => n(392888).Z
     },
+    UnreadSettingsManager: {
+        actions: ['GUILD_CREATE', 'POST_CONNECTION_OPEN'],
+        inlineRequire: () => n(109610).Z
+    },
     AnnouncementViewTrackingManager: {
         actions: ['CHANNEL_SELECT'],
         inlineRequire: () => n(529726).Z,

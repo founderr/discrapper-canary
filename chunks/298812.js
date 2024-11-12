@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120);
+n(47120);
 var i = n(200651),
     s = n(192379),
     l = n(120356),
@@ -34,108 +29,6 @@ var i = n(200651),
     I = n(388032),
     M = n(805747);
 function A(e) {
-    let { guildId: t, requestScrollToBottom: n } = e,
-        s = (0, a.Wu)([S.Z, N.ZP], () =>
-            (0, E.OD)(N.ZP.getChannelOverrides(t), {
-                ignoreMute: !0,
-                ignoreUnreadSetting: !1,
-                ignoreNotificationSetting: !1
-            })
-                .map((e) => S.Z.getChannel(e))
-                .filter(C.lm)
-        );
-    (0, Z.Z)(s, () => n());
-    let l = (0, a.e7)([p.Z], () => p.Z.getCategories(t)),
-        r = s.map((e, t) =>
-            (0, i.jsxs)(
-                'div',
-                {
-                    className: M.channelRow,
-                    children: [
-                        (0, i.jsx)(
-                            P,
-                            {
-                                channel: e,
-                                categories: l
-                            },
-                            e.id
-                        ),
-                        t < s.length - 1 && (0, i.jsx)('div', { className: M.separator })
-                    ]
-                },
-                e.id
-            )
-        );
-    return (0, i.jsxs)('div', {
-        children: [
-            (0, i.jsx)(O.Z, {
-                guildId: t,
-                onSelected: (e) => {
-                    if (null != s.find((t) => t.id === e)) return;
-                    let n = S.Z.getChannel(e);
-                    null != n &&
-                        u.Z.updateChannelOverrideSettings(
-                            t,
-                            e,
-                            {
-                                muted: !1,
-                                message_notifications: N.ZP.resolvedMessageNotifications(n),
-                                flags: (0, _.pq)(N.ZP.getChannelIdFlags(n.guild_id, n.id), N.ZP.resolveUnreadSetting(n))
-                            },
-                            f.ZB.OverrideCreated
-                        );
-                }
-            }),
-            r.length > 0 &&
-                (0, i.jsxs)('div', {
-                    className: M.table,
-                    children: [
-                        (0, i.jsxs)('div', {
-                            className: M.row,
-                            children: [
-                                (0, i.jsx)(d.Text, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
-                                    className: M.rowName,
-                                    children: I.intl.string(I.t.uShwWl)
-                                }),
-                                (0, i.jsx)(d.Text, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
-                                    className: M.rowOption,
-                                    children: I.intl.string(I.t.hZrr6u)
-                                }),
-                                (0, i.jsx)(d.Text, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
-                                    className: M.rowOption,
-                                    children: I.intl.string(I.t.y59NJi)
-                                }),
-                                (0, i.jsx)(d.Text, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
-                                    className: M.rowOption,
-                                    children: I.intl.string(I.t['pGn/bG'])
-                                }),
-                                (0, i.jsx)(d.Text, {
-                                    variant: 'text-xs/bold',
-                                    color: 'text-muted',
-                                    className: M.rowOption,
-                                    children: I.intl.string(I.t['32yow8'])
-                                })
-                            ]
-                        }),
-                        r.length > 0 &&
-                            (0, i.jsx)('div', {
-                                className: M.channels,
-                                children: r
-                            })
-                    ]
-                })
-        ]
-    });
-}
-function P(e) {
     let { channel: t, categories: n } = e,
         l = (0, d.useToken)(o.Z.unsafe_rawColors.GREEN_360).hex(),
         u = (0, a.e7)([S.Z], () => S.Z.getChannel(null == t ? void 0 : t.parent_id)),
@@ -245,3 +138,106 @@ function P(e) {
         })
     });
 }
+t.Z = s.forwardRef(function (e, t) {
+    let { guildId: n, requestScrollToBottom: s } = e,
+        l = (0, a.Wu)([S.Z, N.ZP], () =>
+            (0, E.OD)(N.ZP.getChannelOverrides(n), {
+                ignoreMute: !0,
+                ignoreUnreadSetting: !1,
+                ignoreNotificationSetting: !1
+            })
+                .map((e) => S.Z.getChannel(e))
+                .filter(C.lm)
+        );
+    (0, Z.Z)(l, () => s());
+    let r = (0, a.e7)([p.Z], () => p.Z.getCategories(n)),
+        o = l.map((e, t) =>
+            (0, i.jsxs)(
+                'div',
+                {
+                    className: M.channelRow,
+                    children: [
+                        (0, i.jsx)(
+                            A,
+                            {
+                                channel: e,
+                                categories: r
+                            },
+                            e.id
+                        ),
+                        t < l.length - 1 && (0, i.jsx)('div', { className: M.separator })
+                    ]
+                },
+                e.id
+            )
+        );
+    return (0, i.jsxs)('div', {
+        ref: t,
+        children: [
+            (0, i.jsx)(O.Z, {
+                guildId: n,
+                onSelected: (e) => {
+                    if (null != l.find((t) => t.id === e)) return;
+                    let t = S.Z.getChannel(e);
+                    null != t &&
+                        u.Z.updateChannelOverrideSettings(
+                            n,
+                            e,
+                            {
+                                muted: !1,
+                                message_notifications: N.ZP.resolvedMessageNotifications(t),
+                                flags: (0, _.pq)(N.ZP.getChannelIdFlags(t.guild_id, t.id), N.ZP.resolveUnreadSetting(t))
+                            },
+                            f.ZB.OverrideCreated
+                        );
+                }
+            }),
+            o.length > 0 &&
+                (0, i.jsxs)('div', {
+                    className: M.table,
+                    children: [
+                        (0, i.jsxs)('div', {
+                            className: M.row,
+                            children: [
+                                (0, i.jsx)(d.Text, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: M.rowName,
+                                    children: I.intl.string(I.t.uShwWl)
+                                }),
+                                (0, i.jsx)(d.Text, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: M.rowOption,
+                                    children: I.intl.string(I.t.hZrr6u)
+                                }),
+                                (0, i.jsx)(d.Text, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: M.rowOption,
+                                    children: I.intl.string(I.t.y59NJi)
+                                }),
+                                (0, i.jsx)(d.Text, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: M.rowOption,
+                                    children: I.intl.string(I.t['pGn/bG'])
+                                }),
+                                (0, i.jsx)(d.Text, {
+                                    variant: 'text-xs/bold',
+                                    color: 'text-muted',
+                                    className: M.rowOption,
+                                    children: I.intl.string(I.t['32yow8'])
+                                })
+                            ]
+                        }),
+                        o.length > 0 &&
+                            (0, i.jsx)('div', {
+                                className: M.channels,
+                                children: o
+                            })
+                    ]
+                })
+        ]
+    });
+});

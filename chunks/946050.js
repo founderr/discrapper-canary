@@ -1,71 +1,56 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return o;
     }
 });
-var i = n(200651),
-    l = n(192379),
-    r = n(481060),
+var i = n(200651);
+n(192379);
+var l = n(481060),
     a = n(670044),
-    s = n(28391),
-    o = n(526761),
-    c = n(388032),
-    d = n(915383);
-function u(e) {
-    return (
-        l.useEffect(() => e.onChannelChange(), [e.channel.id]),
-        (0, i.jsxs)('div', {
-            className: d.notice,
-            children: [
-                (0, i.jsx)(a.Z, { id: e.channel.id }),
-                (0, i.jsx)('div', {
-                    className: d.info,
-                    children: (0, i.jsx)(r.Text, {
-                        variant: 'text-sm/medium',
-                        children: c.intl.string(c.t.abvB5O)
-                    })
-                }),
-                (0, i.jsxs)('div', {
-                    className: d.buttons,
+    r = n(388032),
+    s = n(915383);
+function o(e) {
+    let { channel: t } = e;
+    return (0, i.jsxs)('div', {
+        className: s.notice,
+        children: [
+            (0, i.jsx)(a.Z, { id: t.id }),
+            (0, i.jsx)('div', {
+                className: s.info,
+                children: (0, i.jsx)(l.Text, {
+                    variant: 'text-sm/medium',
+                    children: r.intl.string(r.t.P6Y2Nz)
+                })
+            }),
+            (0, i.jsx)('div', {
+                className: s.buttons,
+                children: (0, i.jsxs)(l.Button, {
+                    size: l.Button.Sizes.TINY,
+                    look: l.Button.Looks.FILLED,
+                    color: l.Button.Colors.PRIMARY,
+                    className: s.button,
+                    innerClassName: s.buttonInner,
+                    onClick: () => {
+                        (0, l.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e('70205'), n.e('5863'), n.e('72332')]).then(n.bind(n, 751212));
+                            return (n) =>
+                                (0, i.jsx)(e, {
+                                    ...n,
+                                    guildId: t.guild_id,
+                                    scrollToChannels: !0
+                                });
+                        });
+                    },
                     children: [
-                        (0, i.jsxs)(r.Button, {
-                            size: r.Button.Sizes.TINY,
-                            look: r.Button.Looks.FILLED,
-                            color: r.Button.Colors.PRIMARY,
-                            className: d.button,
-                            innerClassName: d.buttonInner,
-                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ALL_MESSAGES),
-                            children: [
-                                (0, i.jsx)(r.CheckmarkLargeIcon, {
-                                    size: 'xs',
-                                    color: 'currentColor',
-                                    style: { marginRight: 4 }
-                                }),
-                                c.intl.string(c.t.p89ACg)
-                            ]
-                        }),
-                        (0, i.jsx)(r.Button, {
-                            style: { marginLeft: 8 },
-                            size: r.Button.Sizes.TINY,
-                            look: r.Button.Looks.FILLED,
-                            color: r.Button.Colors.PRIMARY,
-                            className: d.button,
-                            innerClassName: d.buttonInner,
-                            onClick: () => (0, s.Z)(e.channel.guild_id, e.channel.id, o.ic.UNREADS_ONLY_MENTIONS),
-                            children: (0, i.jsxs)(i.Fragment, {
-                                children: [
-                                    (0, i.jsx)(r.XSmallIcon, {
-                                        size: 'xs',
-                                        color: 'currentColor',
-                                        style: { marginRight: 4 }
-                                    }),
-                                    c.intl.string(c.t.gm1Ven)
-                                ]
-                            })
+                        r.intl.string(r.t.h850Sk),
+                        (0, i.jsx)(l.LinkExternalSmallIcon, {
+                            size: 'xs',
+                            color: 'currentColor',
+                            style: { marginLeft: 4 }
                         })
                     ]
                 })
-            ]
-        })
-    );
+            })
+        ]
+    });
 }

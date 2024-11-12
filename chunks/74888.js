@@ -63,44 +63,61 @@ function v(e) {
 }
 function N(e) {
     let t = s.useRef(null),
-        n = o.Y.useExperiment({ location: 'notification_settings_modal_redesign' }, { autoTrackExposure: !0 }).enabled;
-    return (0, i.jsxs)(a.ModalRoot, {
-        size: a.ModalSize.MEDIUM,
-        transitionState: e.transitionState,
-        'aria-label': g.intl.string(g.t.h850Sk),
-        children: [
-            (0, i.jsx)(v, { onClose: e.onClose }),
-            (0, i.jsxs)(a.ModalContent, {
-                className: x.content,
-                scrollerRef: t,
-                children: [
-                    (0, i.jsx)(p, { children: (0, i.jsx)(h.Z, { guildId: e.guildId }) }),
-                    (0, i.jsx)(p, {
-                        title: g.intl.string(g.t['R9Ej9/']),
-                        noPadding: !0,
-                        children: (0, i.jsx)(m.Z, { guildId: e.guildId })
-                    }),
-                    n &&
+        n = o.Y.useExperiment({ location: 'notification_settings_modal_redesign' }, { autoTrackExposure: !0 }).enabled,
+        l = s.useRef(null);
+    return (
+        s.useLayoutEffect(() => {
+            let n = setTimeout(() => {
+                e.scrollToChannels &&
+                    null != t.current &&
+                    null != l.current &&
+                    t.current.scrollIntoViewNode({
+                        node: l.current,
+                        shouldScrollToStart: !0,
+                        padding: 40
+                    });
+            }, 1000);
+            return () => clearTimeout(n);
+        }, []),
+        (0, i.jsxs)(a.ModalRoot, {
+            size: a.ModalSize.MEDIUM,
+            transitionState: e.transitionState,
+            'aria-label': g.intl.string(g.t.h850Sk),
+            children: [
+                (0, i.jsx)(v, { onClose: e.onClose }),
+                (0, i.jsxs)(a.ModalContent, {
+                    className: x.content,
+                    scrollerRef: t,
+                    children: [
+                        (0, i.jsx)(p, { children: (0, i.jsx)(h.Z, { guildId: e.guildId }) }),
                         (0, i.jsx)(p, {
-                            children: (0, i.jsx)(d.Z, {
-                                onClose: e.onClose,
-                                guildId: e.guildId,
-                                isRedesign: !0
-                            })
+                            title: g.intl.string(g.t['R9Ej9/']),
+                            noPadding: !0,
+                            children: (0, i.jsx)(m.Z, { guildId: e.guildId })
                         }),
-                    (0, i.jsx)(p, {
-                        title: g.intl.string(g.t['31DySk']),
-                        children: (0, i.jsx)(c.Z, { guildId: e.guildId })
-                    }),
-                    (0, i.jsx)(S, { title: g.intl.string(g.t.JrySi4) }),
-                    (0, i.jsx)(u.Z, {
-                        guildId: e.guildId,
-                        requestScrollToBottom: () => {
-                            null != t && null != t.current && t.current.scrollToBottom({ animate: !0 });
-                        }
-                    })
-                ]
-            })
-        ]
-    });
+                        n &&
+                            (0, i.jsx)(p, {
+                                children: (0, i.jsx)(d.Z, {
+                                    onClose: e.onClose,
+                                    guildId: e.guildId,
+                                    isRedesign: !0
+                                })
+                            }),
+                        (0, i.jsx)(p, {
+                            title: g.intl.string(g.t['31DySk']),
+                            children: (0, i.jsx)(c.Z, { guildId: e.guildId })
+                        }),
+                        (0, i.jsx)(S, { title: g.intl.string(g.t.JrySi4) }),
+                        (0, i.jsx)(u.Z, {
+                            guildId: e.guildId,
+                            requestScrollToBottom: () => {
+                                null != t && null != t.current && t.current.scrollToBottom({ animate: !0 });
+                            },
+                            ref: l
+                        })
+                    ]
+                })
+            ]
+        })
+    );
 }

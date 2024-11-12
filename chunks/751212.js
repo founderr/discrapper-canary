@@ -36,13 +36,13 @@ var i,
     I = n(324067),
     M = n(650774),
     A = n(430824),
-    P = n(699516),
-    R = n(9156),
+    R = n(699516),
+    P = n(9156),
     G = n(594174),
     U = n(823379),
     k = n(63063),
-    y = n(621600),
-    w = n(981631),
+    w = n(621600),
+    y = n(981631),
     D = n(969943),
     F = n(388032),
     B = n(736475);
@@ -148,7 +148,7 @@ class Y extends r.PureComponent {
                       (0, l.jsx)(x.FormSwitch, {
                           hideBorder: !0,
                           value: t,
-                          onChange: (e) => this.handleCheckboxChange('muted', e, y.UE.muted(e)),
+                          onChange: (e) => this.handleCheckboxChange('muted', e, w.UE.muted(e)),
                           note: F.intl.string(F.t['8wbTQ0']),
                           children: F.intl.format(F.t['J+7D9P'], { name: i.name })
                       }),
@@ -197,22 +197,22 @@ class Y extends r.PureComponent {
                     children: (0, l.jsx)(x.RadioGroup, {
                         disabled: n,
                         value: t,
-                        onChange: (e) => this.handleRadioChange('message_notifications', e, y.UE.notifications(e.value)),
+                        onChange: (e) => this.handleRadioChange('message_notifications', e, w.UE.notifications(e.value)),
                         options:
                             ((e = i),
                             [
                                 {
                                     name: F.intl.string(F.t['n/bTaW']),
-                                    value: w.bL.ALL_MESSAGES,
-                                    desc: null != e && e >= w.qWG ? F.intl.string(F.t.Dh5p5u) : null
+                                    value: y.bL.ALL_MESSAGES,
+                                    desc: null != e && e >= y.qWG ? F.intl.string(F.t.Dh5p5u) : null
                                 },
                                 {
                                     name: F.intl.format(F.t.L2hmY2, {}),
-                                    value: w.bL.ONLY_MENTIONS
+                                    value: y.bL.ONLY_MENTIONS
                                 },
                                 {
                                     name: F.intl.string(F.t.CtVGyc),
-                                    value: w.bL.NO_MESSAGES
+                                    value: y.bL.NO_MESSAGES
                                 }
                             ])
                     })
@@ -227,20 +227,20 @@ class Y extends r.PureComponent {
             className: B.largeSpacing,
             children: [
                 (0, l.jsx)(x.FormSwitch, {
-                    onChange: (e) => this.handleCheckboxChange('suppress_everyone', e, y.UE.suppressEveryone(e)),
+                    onChange: (e) => this.handleCheckboxChange('suppress_everyone', e, w.UE.suppressEveryone(e)),
                     value: e,
                     children: F.intl.format(F.t.OWiWAg, {})
                 }),
                 (0, l.jsx)(x.FormSwitch, {
-                    onChange: (e) => this.handleCheckboxChange('suppress_roles', e, y.UE.suppressRoles(e)),
+                    onChange: (e) => this.handleCheckboxChange('suppress_roles', e, w.UE.suppressRoles(e)),
                     value: t,
                     children: F.intl.string(F.t['O/QdoK'])
                 }),
                 (0, l.jsx)(x.FormSwitch, {
                     onChange: (e) => {
-                        S.Z.updateGuildNotificationSettings(a, { notify_highlights: e ? w.gLR.DISABLED : w.gLR.ENABLED }, y.UE.highlights(!e));
+                        S.Z.updateGuildNotificationSettings(a, { notify_highlights: e ? y.gLR.DISABLED : y.gLR.ENABLED }, w.UE.highlights(!e));
                     },
-                    value: i || r === w.gLR.DISABLED,
+                    value: i || r === y.gLR.DISABLED,
                     disabled: i,
                     note: (0, l.jsxs)(l.Fragment, {
                         children: [
@@ -251,7 +251,7 @@ class Y extends r.PureComponent {
                             (0, l.jsx)('div', {
                                 className: B.highlightsLink,
                                 children: (0, l.jsx)(x.Anchor, {
-                                    href: k.Z.getArticleURL(w.BhN.HIGHLIGHTS),
+                                    href: k.Z.getArticleURL(y.BhN.HIGHLIGHTS),
                                     children: F.intl.string(F.t.PRBn9P)
                                 })
                             })
@@ -261,13 +261,13 @@ class Y extends r.PureComponent {
                 }),
                 (0, l.jsx)(x.FormSwitch, {
                     value: s,
-                    onChange: (e) => this.handleCheckboxChange('mute_scheduled_events', e, y.UE.mutedEvents(e)),
+                    onChange: (e) => this.handleCheckboxChange('mute_scheduled_events', e, w.UE.mutedEvents(e)),
                     children: F.intl.string(F.t.ONG3Y2)
                 }),
                 (0, l.jsx)(x.FormSwitch, {
                     value: !i && n,
                     disabled: i,
-                    onChange: (e) => this.handleCheckboxChange('mobile_push', e, y.UE.mobilePush(e)),
+                    onChange: (e) => this.handleCheckboxChange('mobile_push', e, w.UE.mobilePush(e)),
                     children: F.intl.string(F.t['h1DL6+'])
                 })
             ]
@@ -291,13 +291,13 @@ class Y extends r.PureComponent {
             n = o()(e)
                 .filter((e) => {
                     let { channel: n } = e;
-                    return n.type !== w.d4z.GUILD_CATEGORY || (null != t[n.id] && t[n.id].length > 0);
+                    return n.type !== y.d4z.GUILD_CATEGORY || (null != t[n.id] && t[n.id].length > 0);
                 })
                 .map((e) => {
                     let { channel: t } = e;
                     return {
                         value: t.id,
-                        label: (0, N.F6)(t, G.default, P.Z)
+                        label: (0, N.F6)(t, G.default, R.Z)
                     };
                 })
                 .value();
@@ -311,7 +311,7 @@ class Y extends r.PureComponent {
                     children: F.intl.string(F.t['2Y9ZfH'])
                 }),
                 (0, l.jsx)(x.SearchableSelect, {
-                    value: w.lds,
+                    value: y.lds,
                     placeholder: F.intl.string(F.t['Z+oF8v']),
                     renderOptionLabel: this.renderOptionLabel,
                     options: n,
@@ -454,7 +454,7 @@ class Y extends r.PureComponent {
                             end_time: t
                         }
                     },
-                    y.ZB.Muted
+                    w.ZB.Muted
                 );
             }),
             H(this, 'handleDeleteOverride', (e) => {
@@ -476,28 +476,28 @@ class Y extends r.PureComponent {
 }
 function W(e) {
     let { guildId: t, ...n } = e,
-        i = (0, m.cj)([I.Z, A.Z, M.Z, R.ZP], () => {
+        i = (0, m.cj)([I.Z, A.Z, M.Z, P.ZP], () => {
             let e = I.Z.getCategories(t);
             return {
                 guildId: t,
                 categories: e,
                 guild: A.Z.getGuild(t),
                 memberCount: M.Z.getMemberCount(t),
-                suppressEveryone: R.ZP.isSuppressEveryoneEnabled(t),
-                suppressRoles: R.ZP.isSuppressRolesEnabled(t),
-                muteEvents: R.ZP.isMuteScheduledEventsEnabled(t),
-                mobilePush: R.ZP.isMobilePushEnabled(t),
-                muted: R.ZP.isMuted(t),
-                muteConfig: R.ZP.getMuteConfig(t),
-                messageNotifications: R.ZP.getMessageNotifications(t),
-                channelOverrides: R.ZP.getChannelOverrides(t),
+                suppressEveryone: P.ZP.isSuppressEveryoneEnabled(t),
+                suppressRoles: P.ZP.isSuppressRolesEnabled(t),
+                muteEvents: P.ZP.isMuteScheduledEventsEnabled(t),
+                mobilePush: P.ZP.isMobilePushEnabled(t),
+                muted: P.ZP.isMuted(t),
+                muteConfig: P.ZP.getMuteConfig(t),
+                messageNotifications: P.ZP.getMessageNotifications(t),
+                channelOverrides: P.ZP.getChannelOverrides(t),
                 channels: (0, v.Z)(e._categories, e, (e) => {
                     let {
                         channel: { type: t }
                     } = e;
-                    return (0, O.r8)(t) || t === w.d4z.GUILD_CATEGORY;
+                    return (0, O.r8)(t) || t === y.d4z.GUILD_CATEGORY;
                 }),
-                notifyHighlights: R.ZP.getNotifyHighlights(t)
+                notifyHighlights: P.ZP.getNotifyHighlights(t)
             };
         }),
         s = _.Y.useExperiment({ location: 'connected_notification_settings' }, { autoTrackExposure: !0 }).enabled,
@@ -510,6 +510,11 @@ function W(e) {
     });
 }
 function z(e) {
-    let t = (0, f.Mn)('NotificationSettingsModal') ? E.Z : W;
-    return (0, l.jsx)(t, { ...e });
+    let { scrollToChannels: t, ...n } = e;
+    return (0, f.Mn)('NotificationSettingsModal')
+        ? (0, l.jsx)(E.Z, {
+              ...n,
+              scrollToChannels: t
+          })
+        : (0, l.jsx)(W, { ...n });
 }
