@@ -8,8 +8,8 @@ n.d(t, {
 }),
     n(653041),
     n(47120);
-var r = n(903797),
-    i = n(60071),
+var r = n(905837),
+    i = n(280836),
     a = n(731965),
     s = n(433517),
     o = n(229893);
@@ -26,7 +26,7 @@ function c(e, t) {
         i = Math.min((t + r) * n, e.length);
     return e.slice(t * n, i).filter((e) => o.Z.shouldFetchGuild(e));
 }
-let d = (0, r.Z)(
+let d = (0, r.Ue)()(
     (0, i.tJ)(
         (e) => ({
             currentPage: 1,
@@ -112,14 +112,14 @@ let d = (0, r.Z)(
         }),
         {
             name: 'clan-discovery-pagination',
-            getStorage: () => ({
+            storage: (0, i.FL)(() => ({
                 getItem: (e) => {
                     var t;
                     return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
                 },
                 setItem: (e, t) => s.K.set(e, t),
                 removeItem: (e) => s.K.remove(e)
-            }),
+            })),
             partialize: (e) => ({ currentPage: e.currentPage })
         }
     )

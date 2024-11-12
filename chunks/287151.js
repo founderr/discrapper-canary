@@ -38,8 +38,8 @@ var i,
     E = n(944386),
     j = n(305325),
     R = n(33154),
-    Z = n(692147),
-    N = n(197115),
+    N = n(692147),
+    Z = n(197115),
     y = n(659215),
     A = n(222677),
     O = n(995774),
@@ -124,7 +124,7 @@ class el extends (i = a.PureComponent) {
     render() {
         let e, t;
         let { count: n, burst_count: i, colors: a, isBurstReaction: s, hideCount: r, emoji: u, readOnly: h, isLurking: f, isGuest: g, isPendingMember: b, className: T, useChatFontScaling: _, message: S, hideEmoji: C, animationStartPosition: I, emojiSize: E } = this.props,
-            { shouldShowTooltip: j, tooltipTextAria: R, reactionRef: N, tooltipPositionKey: y } = this.state,
+            { shouldShowTooltip: j, tooltipTextAria: R, reactionRef: Z, tooltipPositionKey: y } = this.state,
             A = _ ? et : ee,
             M = {
                 transform: [{ scale: this.scale }],
@@ -137,7 +137,7 @@ class el extends (i = a.PureComponent) {
                 s = null !== (P = (0, d.wK)(null != i ? i : '', o)) && void 0 !== P ? P : '';
             this.isMe() && (M.borderColor = i), (M.background = s), (e = n), (t = n);
         }
-        let L = null == N ? void 0 : N.getBoundingClientRect(),
+        let L = null == Z ? void 0 : Z.getBoundingClientRect(),
             k = null != I && null != L,
             U = null == I;
         return (0, o.jsx)(o.Fragment, {
@@ -219,9 +219,9 @@ class el extends (i = a.PureComponent) {
                                                       color: e,
                                                       digitWidth: eo
                                                   }),
-                                            (0, o.jsx)(Z.Z, {
+                                            (0, o.jsx)(N.Z, {
                                                 count: w,
-                                                reactionRef: N
+                                                reactionRef: Z
                                             })
                                         ]
                                     })
@@ -458,7 +458,7 @@ class el extends (i = a.PureComponent) {
                                                       'aria-label': 'super reaction tooltip upsell',
                                                       children: $.intl.string($.t.W1bMkp)
                                                   }),
-                                                  (0, o.jsx)(N.Z, {
+                                                  (0, o.jsx)(Z.Z, {
                                                       subscriptionTier: q.Si.TIER_2,
                                                       buttonText: $.intl.string($.t.mr4K7O),
                                                       className: en.burstReactionTooltipUpsellCta,
@@ -623,16 +623,16 @@ let er = a.memo((e) => {
             [x, C] = a.useState(!1),
             [E, j] = a.useState(!1),
             R = null != c,
-            Z = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t,
-            N = k.Z.getGuildId(),
-            y = null != N && (N === (null == d ? void 0 : d.id) || N === (null == c ? void 0 : c.id)),
+            N = null !== (t = null == d ? void 0 : d.isDiscoverable()) && void 0 !== t && t,
+            Z = k.Z.getGuildId(),
+            y = null != Z && (Z === (null == d ? void 0 : d.id) || Z === (null == c ? void 0 : c.id)),
             A = U.default.getCurrentUser(),
             O = (0, G.a)({
                 sourceType: g,
                 expressionSourceApplication: null != p ? p : null,
                 isPremium: F.ZP.isPremium(A),
                 hasJoinedEmojiSourceGuild: R,
-                isDiscoverable: Z,
+                isDiscoverable: N,
                 emojiComesFromCurrentGuild: y,
                 isUnusableRoleSubscriptionEmoji: !1,
                 userIsRoleSubscriber: !1,
@@ -705,7 +705,7 @@ let er = a.memo((e) => {
                           hasJoinedExpressionSourceGuild: R,
                           onClose: s,
                           popoutData: O,
-                          currentGuildId: N,
+                          currentGuildId: Z,
                           nonce: r
                       })
             ]

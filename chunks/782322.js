@@ -4,7 +4,7 @@ var i = n(200651),
     l = n(120356),
     a = n.n(l),
     s = n(100621),
-    o = n(782690),
+    o = n(976649),
     c = n(442837),
     d = n(481060),
     u = n(607070),
@@ -18,7 +18,7 @@ var i = n(200651),
 let I = 70,
     C = () => {
         let [e, t] = r.useState(!1),
-            n = (0, g.GN)((e) => e.selectedGames, o.Z),
+            n = (0, g.GN)((e) => e.selectedGames, o.X),
             { options: l, matchSorterOptions: s } = (0, h.P)(),
             c = r.useCallback((e) => {
                 g.GN.getState().setSelectedGames(e), (0, m.Og)();

@@ -4,11 +4,11 @@ t.d(n, {
     }
 }),
     t(47120);
-var r = t(903797),
+var r = t(905837),
     a = t(731965),
     i = t(520623);
 let o = new Map(),
-    s = (0, r.Z)((e, n) => ({
+    s = (0, r.Ue)((e, n) => ({
         topGames: new Map(),
         tryFetchTopGames: async (t) => {
             let r = n().topGames,

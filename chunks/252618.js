@@ -17,7 +17,7 @@ n.d(t, {
 }),
     n(47120);
 var r = n(192379),
-    i = n(903797),
+    i = n(905837),
     a = n(731965);
 let s = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
     o = 0,
@@ -26,7 +26,7 @@ let s = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    u = (0, i.Z)(() => ({
+    u = (0, i.Ue)(() => ({
         titles: [s],
         notificationCount: void 0,
         flashQueue: []

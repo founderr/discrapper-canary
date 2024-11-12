@@ -8,7 +8,7 @@ n.d(t, {
 });
 var r = n(392711),
     i = n.n(r),
-    l = n(903797),
+    l = n(905837),
     u = n(731965),
     a = n(881052),
     o = n(823379),
@@ -26,7 +26,7 @@ let _ = Object.freeze({
         isLoading: !1,
         errorMessage: null
     }),
-    R = (0, l.Z)((e, t) => ({
+    R = (0, l.Ue)((e, t) => ({
         editingRule: null,
         hasChanges: !1,
         setEditingRule: (n) => {

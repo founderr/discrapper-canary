@@ -13,8 +13,8 @@ n.d(t, {
     }
 }),
     n(47120);
-var i = n(903797),
-    o = n(905642),
+var i = n(588744),
+    o = n(454000),
     a = n(731965),
     s = n(430742),
     l = n(752305),
@@ -190,7 +190,7 @@ class m {
         (this.name = null !== (o = f.name) && void 0 !== o ? o : ''), (m = new Set(f.appliedTags)), (this.appliedTags = void 0 !== m ? m : new Set()), (this.formOpen = this.name.length > 0), (this.textAreaState = b);
     }
 }
-let { Provider: p, useStore: f, useStoreApi: g } = (0, o.Z)();
+let { Provider: p, useStore: f, useStoreApi: g } = (0, i.Z)();
 function v(e) {
-    return (0, i.Z)((t, n) => new m(e.id, t, n));
+    return (0, o.F)((t, n) => new m(e.id, t, n));
 }

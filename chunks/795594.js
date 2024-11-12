@@ -11,7 +11,7 @@ var r = t(200651),
     s = t.n(l),
     a = t(658722),
     o = t.n(a),
-    c = t(903797),
+    c = t(905837),
     u = t(243814),
     d = t(442837),
     m = t(921072),
@@ -32,8 +32,8 @@ var r = t(200651),
     v = t(585483),
     P = t(49012),
     L = t(709054),
-    Z = t(706454),
-    O = t(210887),
+    O = t(706454),
+    Z = t(210887),
     y = t(436267),
     D = t(149418),
     F = t(494620),
@@ -41,7 +41,7 @@ var r = t(200651),
     w = t(388032),
     R = t(822352),
     H = t(113207);
-let b = d.ZP.connectStores([O.Z], () => ({ theme: O.Z.theme }))(h.EmptyState);
+let b = d.ZP.connectStores([Z.Z], () => ({ theme: Z.Z.theme }))(h.EmptyState);
 function U(e) {
     let { application: n } = e;
     return (0, r.jsxs)('div', {
@@ -284,11 +284,11 @@ let G = (e) => {
             })
         });
     },
-    B = (0, c.Z)(() => ({ searchQuery: '' }));
+    B = (0, c.Ue)(() => ({ searchQuery: '' }));
 n.Z = () => {
     let e = (0, d.e7)([S.Z], () => S.Z.hidePersonalInformation),
         n = (0, d.e7)([C.Z], () => C.Z.getApps()),
-        l = (0, d.e7)([Z.default], () => Z.default.locale),
+        l = (0, d.e7)([O.default], () => O.default.locale),
         s = (0, d.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities());
     i.useEffect(() => {
         p.Z.fetch();

@@ -30,14 +30,14 @@ var r,
     s,
     o,
     l,
-    u = n(903797),
-    c = n(60071),
+    u = n(280836),
+    c = n(454000),
     d = n(731965),
     f = n(433517),
     _ = n(963202);
 ((r = s || (s = {})).ADMIN_UPSELL = 'admin_upsell'), (r.GET_STARTED = 'get_started'), (r.DISCOVERY = 'discovery'), (r.PLAYSTYLE = 'playstyle'), (r.TRAITS = 'traits'), (r.GAMES = 'games'), (r.SAVED_GUILDS = 'saved_guilds'), (r.PREFERENCES = 'preferences'), ((i = o || (o = {})).NONE = 'none'), (i.VALORANT = 'valorant'), (i.GENSHIN = 'genshin'), ((a = l || (l = {})).USER_UPSELL = 'user_upsell'), (a.USER_ONBOARDING = 'user_onboarding');
-let h = (0, u.Z)(
-    (0, c.tJ)(
+let h = (0, c.F)()(
+    (0, u.tJ)(
         (e) => ({
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
@@ -78,14 +78,14 @@ let h = (0, u.Z)(
         }),
         {
             name: 'clan-discovery',
-            getStorage: () => ({
+            storage: (0, u.FL)(() => ({
                 getItem: (e) => {
                     var t;
                     return null !== (t = f.K.get(e)) && void 0 !== t ? t : null;
                 },
                 setItem: (e, t) => f.K.set(e, t),
                 removeItem: (e) => f.K.remove(e)
-            }),
+            })),
             partialize: (e) => ({
                 mode: e.mode,
                 game: e.game,

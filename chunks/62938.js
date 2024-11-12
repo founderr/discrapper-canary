@@ -1,7 +1,7 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(782690),
+    l = n(976649),
     a = n(481060),
     s = n(393238),
     o = n(963202),
@@ -60,7 +60,7 @@ function C(e) {
 }
 function v(e) {
     let { onScroll: t, withAdminContent: n } = e,
-        r = (0, h.GN)((e) => e.mode, l.Z),
+        r = (0, h.GN)((e) => e.mode, l.X),
         { ref: a, width: o } = (0, s.Z)();
     return (0, i.jsxs)('section', {
         ref: a,

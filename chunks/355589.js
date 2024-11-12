@@ -158,12 +158,12 @@ let D = (e) => {
         let t = I.default.extractTimestamp(e);
         return o()().isBefore(o()(t).add(o().duration(15, 'days')));
     },
-    K = (e, t, n) => {
+    X = (e, t, n) => {
         i.useEffect(() => {
             !e && n(!t);
         }, [e, n, t]);
     },
-    X = (e, t, n, a) => {
+    K = (e, t, n, a) => {
         let r = i.useRef(0);
         i.useEffect(
             () => (
@@ -309,7 +309,7 @@ let D = (e) => {
             })(t, r, l, c),
             C = x.isAllDone();
         return (
-            X(C, d || g || !q(r.id), o, s),
+            K(C, d || g || !q(r.id), o, s),
             {
                 onboardingSteps: x,
                 isHidden: g,
@@ -391,7 +391,7 @@ t.Z = (e) => {
         guildId: null == o ? void 0 : o.id,
         channel: n
     }),
-    K(I, T, x),
+    X(I, T, x),
     i.useEffect(() => {
         (!t || !S) && k(!0);
     }, []),

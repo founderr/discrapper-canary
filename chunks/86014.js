@@ -1,7 +1,7 @@
 n(47120);
 var i = n(200651),
     r = n(192379),
-    l = n(782690),
+    l = n(976649),
     a = n(442837),
     s = n(481060),
     o = n(100527),
@@ -131,8 +131,8 @@ t.Z = r.memo(function (e) {
         { enabled: b } = (0, E.I7)(),
         R = r.useRef(null),
         j = r.useRef(null),
-        O = (0, T.GN)((e) => e.completedNux, l.Z),
-        P = (0, T.GN)((e) => e.entrypointGameId, l.Z),
+        O = (0, T.GN)((e) => e.completedNux, l.X),
+        P = (0, T.GN)((e) => e.entrypointGameId, l.X),
         [D, M] = r.useState(null),
         { backgroundImageUrl: w, gameName: k } = (0, S.kN)(P),
         U = r.useCallback(() => {
@@ -181,7 +181,7 @@ t.Z = r.memo(function (e) {
             ],
             [H]
         ),
-        F = (0, T.GN)((e) => e.mode, l.Z),
+        F = (0, T.GN)((e) => e.mode, l.X),
         { enableClanCreation: z } = (0, d.C3)({
             location: 'ClanDiscoveryContent',
             includeConverted: !0

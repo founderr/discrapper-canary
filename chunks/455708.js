@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(782690),
+    o = n(976649),
     l = n(442837),
     u = n(481060),
     c = n(570140),
@@ -191,7 +191,7 @@ t.Z = i.forwardRef((e, t) => {
                 expressionPickerQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            o.Z
+            o.X
         ),
         f = (0, p.HI)(),
         m = i.createRef();

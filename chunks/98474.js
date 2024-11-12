@@ -26,7 +26,7 @@ function b(e) {
         [I, E] = o.useState(null),
         { confettiCanvas: j } = o.useContext(d.h),
         R = (0, a.uR)(j, I),
-        Z = o.useMemo(
+        N = o.useMemo(
             () => [
                 {
                     src:
@@ -42,7 +42,7 @@ function b(e) {
             ],
             [n.name, n.id]
         ),
-        N = T.x - (T.width / 2) * 0.5,
+        Z = T.x - (T.width / 2) * 0.5,
         y = T.y - (T.height / 2) * 0.5,
         A = (0, r.useSpring)({
             from: { y: b.y },
@@ -63,7 +63,7 @@ function b(e) {
                 opacity: 1
             },
             to: {
-                x: N,
+                x: Z,
                 scale: 0.5,
                 opacity: 0.4
             },
@@ -98,7 +98,7 @@ function b(e) {
             children: [
                 (0, i.jsx)(a.Ji, {
                     ref: E,
-                    sprites: Z,
+                    sprites: N,
                     colors: v,
                     spriteWidth: f.Ko,
                     spriteHeight: f.Ko

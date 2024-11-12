@@ -154,20 +154,20 @@ function B(e) {
                                     className: A.contentFooter,
                                     children: [
                                         (0, r.jsx)(c.Button, {
+                                            onClick: i,
                                             color: c.Button.Colors.PRIMARY,
-                                            onClick: H,
                                             size: c.Button.Sizes.MEDIUM,
-                                            className: A.copyLinkBtn,
-                                            children: V
+                                            children: y.intl.string(y.t.cpT0Cg)
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: A.contentFooterButtonCont,
                                             children: [
                                                 (0, r.jsx)(c.Button, {
-                                                    onClick: i,
                                                     color: c.Button.Colors.PRIMARY,
+                                                    onClick: H,
                                                     size: c.Button.Sizes.MEDIUM,
-                                                    children: y.intl.string(y.t.cpT0Cg)
+                                                    className: A.copyLinkBtn,
+                                                    children: V
                                                 }),
                                                 (0, r.jsx)(h.i0, {
                                                     className: A.claimBtn,

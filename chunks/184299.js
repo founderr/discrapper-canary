@@ -13,12 +13,12 @@ var r,
     i,
     a,
     s,
-    o = n(903797),
-    l = n(60071),
+    o = n(905837),
+    l = n(280836),
     u = n(731965),
     c = n(433517);
 ((r = a || (a = {})).UNKNOWN = 'UNKNOWN'), (r.NOT_STARTED = 'NOT_STARTED'), (r.IN_PROGRESS = 'IN_PROGRESS'), (r.COMPLETED = 'COMPLETED'), ((i = s || (s = {})).NONE = 'NONE'), (i.FETCHING = 'FETCHING'), (i.SUCCESS = 'SUCCESS'), (i.FAILURE = 'FAILURE');
-let d = (0, o.Z)(
+let d = (0, o.Ue)()(
     (0, l.tJ)(
         (e, t) => ({
             volume: 0.3,
@@ -77,14 +77,14 @@ let d = (0, o.Z)(
         }),
         {
             name: 'videoQuestUIState',
-            getStorage: () => ({
+            storage: (0, l.FL)(() => ({
                 getItem: (e) => {
                     var t;
                     return null !== (t = c.K.get(e)) && void 0 !== t ? t : null;
                 },
                 setItem: (e, t) => c.K.set(e, t),
                 removeItem: (e) => c.K.remove(e)
-            }),
+            })),
             partialize: (e) => ({
                 volume: e.volume,
                 muted: e.muted,

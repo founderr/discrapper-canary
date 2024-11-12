@@ -11,7 +11,7 @@ var a = n(200651),
     l = n.n(r),
     s = n(196434),
     o = n.n(s),
-    c = n(782690),
+    c = n(976649),
     d = n(91192),
     u = n(924826),
     m = n(536895),
@@ -50,8 +50,8 @@ var a = n(200651),
     G = n(985518),
     W = n(228392),
     q = n(355589),
-    K = n(542581),
-    X = n(639184),
+    X = n(542581),
+    K = n(639184),
     J = n(404616),
     Y = n(470623),
     Q = n(749913),
@@ -159,7 +159,7 @@ function ev(e) {
                 formOpen: i,
                 cardHeightVersion: r
             };
-        }, c.Z),
+        }, c.X),
         {
             activeThreadIds: m,
             archivedThreadIds: x,
@@ -205,9 +205,9 @@ function ev(e) {
         F = m.length > 0,
         O = F || x.length > 0,
         H = (0, N.Z)(t),
-        { tagFilter: K } = (0, D.H)(t.id);
-    (0, U.ku)(t, K, u);
-    let X = (0, U.jR)(t),
+        { tagFilter: X } = (0, D.H)(t.id);
+    (0, U.ku)(t, X, u);
+    let K = (0, U.jR)(t),
         Q = (0, U.eZ)(t),
         ee = i.useRef(null),
         { observePostVisibilityAnalytics: et } = (function (e) {
@@ -287,22 +287,22 @@ function ev(e) {
         }, [eI, eN, A, eu]),
         eR = i.useMemo(() => {
             if (ea) {
-                if (!X && eu) return [1, 0];
+                if (!K && eu) return [1, 0];
                 if (!Q) return [1, m.length + ew, 0];
                 else if (eu) return [1, C.length + eE, 0];
                 else return [1, m.length + ew, x.length + ey];
             }
-            if (!X && eu) return [1, 1];
+            if (!K && eu) return [1, 1];
             if (!Q) return [1, m.length, 1];
             else if (eu) return [1, C.length, 0, eS];
             else return [1, m.length, x.length, eS];
-        }, [ea, eu, m.length, x.length, X, Q, eS, C, ew, ey, eE]),
+        }, [ea, eu, m.length, x.length, K, Q, eS, C, ew, ey, eE]),
         eP = i.useMemo(() => {
-            if (!X && eu) return [[], []];
+            if (!K && eu) return [[], []];
             if (!Q) return [[], m, []];
             if (eu) return [[], C, [], []];
             else return [[], m, x, []];
-        }, [eu, X, Q, C, m, x]),
+        }, [eu, K, Q, C, m, x]),
         eM = i.useCallback(
             (e, n) => {
                 (0, W.B5)({
@@ -345,7 +345,7 @@ function ev(e) {
                           'forum-channel-header'
                       )
                     : 2 !== e || Q
-                      ? 1 === e && eu && !X
+                      ? 1 === e && eu && !K
                           ? (0, a.jsx)(
                                 ej,
                                 {
@@ -363,7 +363,7 @@ function ev(e) {
                             },
                             'archived-missing-reading-history-perm'
                         ),
-            [eu, Q, C, X, t, F, A, R, O]
+            [eu, Q, C, K, t, F, A, R, O]
         ),
         eL = (0, g.e7)([B.Z], () => B.Z.hasHidden(t.id));
     i.useEffect(() => {
@@ -464,8 +464,8 @@ function ev(e) {
             renderGridSection: eG,
             renderGridItem: eW,
             getGridSectionHeight: eq,
-            getSectionProps: eK,
-            handleGridFocus: eX
+            getSectionProps: eX,
+            handleGridFocus: eK
         } = (function (e) {
             let { masonryListScrollerRef: t, threadIdsBySection: n, goToThread: r, renderSectionOrItem: s, hasActiveThreads: o, isShowingSearchResult: c, canSearchForumPosts: d, canViewArchivedPosts: u, observePostVisibilityAnalytics: m, focusedThreadId: h, headerHeight: g } = e,
                 x = i.useRef(null),
@@ -594,7 +594,7 @@ function ev(e) {
             renderSectionOrItem: eA,
             hasActiveThreads: F,
             isShowingSearchResult: eu,
-            canSearchForumPosts: X,
+            canSearchForumPosts: K,
             canViewArchivedPosts: Q,
             observePostVisibilityAnalytics: et,
             focusedThreadId: ex,
@@ -651,7 +651,7 @@ function ev(e) {
         eQ = (0, er.ZP)({
             id: 'forum-grid-view',
             isEnabled: ea && eY,
-            setFocus: eX
+            setFocus: eK
         }),
         e$ = (0, el.Z)({
             listRef: ee,
@@ -704,7 +704,7 @@ function ev(e) {
                                           getItemHeight: eg,
                                           renderSection: eG,
                                           renderItem: eW,
-                                          getSectionProps: eK,
+                                          getSectionProps: eX,
                                           onScroll: b ? eJ : void 0,
                                           chunkSize: 350,
                                           ...e1,
@@ -814,7 +814,7 @@ function eT(e) {
                 onboardingExpanded: l,
                 setEditorAdditionRowHeight: s
             };
-        }, c.Z),
+        }, c.X),
         { tagFilter: V, layoutType: G } = (0, D.H)(s.id),
         q = (0, Y.AF)(),
         J = (0, D.v)(),
@@ -1034,7 +1034,7 @@ function eT(e) {
                                     : null
                             ]
                         }),
-                    (0, a.jsx)(K.Z, {
+                    (0, a.jsx)(X.Z, {
                         channel: s,
                         onChange: eg
                     }),
@@ -1161,7 +1161,7 @@ function eT(e) {
                             contentTypes: [x.z.FORUM_CHANNEL_HELPER_CARD],
                             children: (e) => {
                                 let { visibleContent: t, markAsDismissed: n } = e;
-                                return t === x.z.FORUM_CHANNEL_HELPER_CARD ? (0, a.jsx)(X.Z, { onDismiss: n }) : null;
+                                return t === x.z.FORUM_CHANNEL_HELPER_CARD ? (0, a.jsx)(K.Z, { onDismiss: n }) : null;
                             }
                         })
                 ]

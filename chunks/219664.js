@@ -48,9 +48,9 @@ function O(e) {
         }),
         { messageCountText: G } = (0, I.nP)(n),
         { isNew: W, hasUnreads: q } = (0, I.J$)(n),
-        K = i.useRef(null),
-        { handleLeftClick: X, handleRightClick: J } = (0, k.Z)({
-            facepileRef: K,
+        X = i.useRef(null),
+        { handleLeftClick: K, handleRightClick: J } = (0, k.Z)({
+            facepileRef: X,
             goToThread: r,
             channel: n
         });
@@ -76,14 +76,14 @@ function O(e) {
         ec = n.isMediaPost();
     return (0, a.jsxs)('li', {
         ref: E,
-        onClick: X,
+        onClick: K,
         onFocus: es,
         onContextMenu: J,
         className: l()(F.container, m, { [F.isOpen]: O }),
         style: { ...h },
         children: [
             (0, a.jsx)(d.Clickable, {
-                onClick: X,
+                onClick: K,
                 focusProps: { ringTarget: E },
                 onContextMenu: J,
                 'aria-label': L.intl.formatToPlainString(L.t.pgYN6e, {
@@ -172,7 +172,7 @@ function O(e) {
                     children: (0, a.jsx)(B, {
                         channel: n,
                         firstMessage: z,
-                        facepileRef: K
+                        facepileRef: X
                     })
                 })
             })

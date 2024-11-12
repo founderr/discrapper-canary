@@ -47,8 +47,8 @@ var i = n(200651),
     E = n(937889),
     j = n(443877),
     R = n(524444),
-    Z = n(287151),
-    N = n(267128),
+    N = n(287151),
+    Z = n(267128),
     y = n(695346),
     A = n(433355),
     O = n(592125),
@@ -118,8 +118,8 @@ t.ZP = o.memo(function (e) {
             goToThread: n,
             channel: m
         }),
-        { role: R, onFocus: Z, ...N } = (0, u.JA)(t),
-        { isFocused: y, handleFocus: M, handleBlur: w } = (0, z.Z)(Z);
+        { role: R, onFocus: N, ...Z } = (0, u.JA)(t),
+        { isFocused: y, handleFocus: M, handleBlur: w } = (0, z.Z)(N);
     return (0, i.jsxs)('div', {
         ref: _,
         'data-item-id': t,
@@ -138,7 +138,7 @@ t.ZP = o.memo(function (e) {
                 className: $.focusTarget,
                 onFocus: M,
                 onBlur: w,
-                ...N
+                ...Z
             }),
             (0, i.jsxs)('div', {
                 className: $.left,
@@ -266,7 +266,7 @@ let eo = o.memo(function (e) {
                       contentPlaceholder: null,
                       renderedContent: null
                   }
-                : (0, N.f)(t, o, r, s()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
+                : (0, Z.f)(t, o, r, s()($.messageContent, Q.inlineFormat, Q.__invalid_smallFontSize), {
                       leadingIconClass: $.messageContentLeadingIcon,
                       trailingIconClass: $.messageContentTrailingIcon,
                       iconSize: Y.WW
@@ -402,7 +402,7 @@ function el(e) {
         { disableReactionCreates: s, isLurking: l, isPendingMember: r } = (0, j.Z)(n);
     return null == a || s
         ? null
-        : (0, i.jsx)(Z.le, {
+        : (0, i.jsx)(N.le, {
               className: $.updateReactionButton,
               message: t,
               readOnly: n.isArchivedLockedThread(),
@@ -428,7 +428,7 @@ function er(e) {
     return null == a
         ? null
         : (0, i.jsx)(
-              Z.le,
+              N.le,
               {
                   className: $.updateReactionButton,
                   message: n,

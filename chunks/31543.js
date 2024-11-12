@@ -1,6 +1,6 @@
 var r = n(200651),
     i = n(192379),
-    a = n(782690),
+    a = n(976649),
     s = n(260866),
     o = n(461745),
     l = n(806966),
@@ -18,10 +18,10 @@ let h = i.forwardRef(function (e, t) {
                 searchQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            a.Z
+            a.X
         ),
         I = l.ZN.useStore((e) => e.searchPlaceholder),
-        S = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.Z),
+        S = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
         T = i.useCallback(
             (e) => {
                 var t;

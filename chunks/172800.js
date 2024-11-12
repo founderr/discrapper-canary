@@ -42,9 +42,9 @@ t.Z = (e) => {
         es = i.useRef(null);
     i.useEffect(
         () =>
-            h.kJ.useStore.subscribe(
-                (e) => er(e),
-                (e) => e.inspectedExpressionPosition
+            h.kJ.subscribe(
+                (e) => e.inspectedExpressionPosition,
+                (e) => er(e)
             ),
         []
     ),

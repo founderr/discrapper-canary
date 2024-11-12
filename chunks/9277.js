@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(782690),
+    o = n(976649),
     l = n(442837),
     u = n(114101),
     c = n(481060),
@@ -23,7 +23,7 @@ t.Z = i.memo(
                 var e, t;
                 return v && Object.values(null !== (t = null === (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
-            [T, b, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
+            [T, b, y] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
             A = i.useRef(0),
             N = i.useCallback(() => {
                 I(!0),

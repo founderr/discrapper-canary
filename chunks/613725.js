@@ -5,7 +5,7 @@ n.d(t, {
 });
 var i = n(200651);
 n(192379);
-var l = n(782690),
+var l = n(976649),
     r = n(442837),
     a = n(481060),
     s = n(43267),
@@ -23,7 +23,7 @@ function f() {
                 guildId: t,
                 channelId: n
             };
-        }, l.Z),
+        }, l.X),
         n = (0, r.e7)([u.Z], () => u.Z.getGuild(e)),
         f = (0, r.e7)([d.Z], () => (null == n ? d.Z.getChannel(t) : null)),
         g = (0, r.e7)([h.default], () => h.default.getCurrentUser()),

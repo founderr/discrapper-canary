@@ -3,7 +3,7 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(782690),
+    s = n(976649),
     o = n(622535),
     c = n(970606),
     d = n(945124),
@@ -17,7 +17,7 @@ var i = n(200651),
 t.Z = r.memo(function (e) {
     let { title: t, subtitle: n, className: l } = e,
         { loaded: E, clans: I, searchResult: C, searchCriteria: v } = (0, h.Qc)(20),
-        S = (0, m.GN)((e) => e.selectedTraits, s.Z),
+        S = (0, m.GN)((e) => e.selectedTraits, s.X),
         N = r.useMemo(() => new Set(v.games), [v.games]),
         T = r.useCallback(
             (e) => {

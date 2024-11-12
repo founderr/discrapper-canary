@@ -11,7 +11,7 @@ var a = n(200651),
     l = n.n(r),
     s = n(512722),
     o = n.n(s),
-    c = n(782690),
+    c = n(976649),
     d = n(924826),
     u = n(91192),
     m = n(536895),
@@ -50,8 +50,8 @@ var a = n(200651),
     G = n(228392),
     W = n(259637),
     q = n(76451),
-    K = n(470623),
-    X = n(479099),
+    X = n(470623),
+    K = n(479099),
     J = n(399894),
     Y = n(81490),
     Q = n(710352),
@@ -66,14 +66,14 @@ function ei(e) {
             textAreaState: d,
             formOpen: u,
             previewing: m
-        } = (0, K.xH)((e) => {
+        } = (0, X.xH)((e) => {
             let { textAreaState: t, formOpen: n, previewing: a } = e;
             return {
                 textAreaState: t,
                 formOpen: n,
                 previewing: a
             };
-        }, c.Z),
+        }, c.X),
         [x, f] = i.useState(null),
         p = i.useContext(O.oo),
         C = i.useCallback(() => {
@@ -84,7 +84,7 @@ function ei(e) {
         j = u && v && s,
         N = (null == t ? void 0 : t.isMediaChannel()) === !0,
         S = (function (e, t) {
-            let n = (0, K.AF)(),
+            let n = (0, X.AF)(),
                 a = (0, V.ql)(e);
             return i.useCallback(() => {
                 let { formOpen: i, setFormOpenFromUserAction: r, name: l, textAreaState: s, hasClickedForm: o } = n.getState();
@@ -99,11 +99,11 @@ function ei(e) {
             }, [n, e.id, a, t]);
         })(t, o),
         E = (function (e) {
-            let { formOpen: t } = (0, K.xH)((e) => {
+            let { formOpen: t } = (0, X.xH)((e) => {
                     let { formOpen: t } = e;
                     return { formOpen: t };
-                }, c.Z),
-                n = (0, K.AF)(),
+                }, c.X),
+                n = (0, X.AF)(),
                 a = (0, P.r)({ parentChannel: e });
             i.useEffect(() => {
                 let { setNameError: e, setMessageError: t } = n.getState();
@@ -277,7 +277,7 @@ let er = i.memo(function (e) {
                 textAreaState: o,
                 hasClickedForm: d,
                 submitting: u
-            } = (0, K.xH)((e) => {
+            } = (0, X.xH)((e) => {
                 let { formOpen: t, nameError: n, name: a, previewing: i, textAreaState: r, hasClickedForm: l, submitting: s } = e;
                 return {
                     formOpen: t,
@@ -288,8 +288,8 @@ let er = i.memo(function (e) {
                     hasClickedForm: l,
                     submitting: s
                 };
-            }, c.Z),
-            m = (0, K.AF)(),
+            }, c.X),
+            m = (0, X.AF)(),
             h = (0, V.ql)(t),
             p = i.useCallback(() => {
                 var e;
@@ -356,7 +356,7 @@ let er = i.memo(function (e) {
                 name: u,
                 textAreaState: m,
                 previewing: x
-            } = (0, K.xH)((e) => {
+            } = (0, X.xH)((e) => {
                 let { formOpen: t, nameError: n, name: a, previewing: i, textAreaState: r, hasClickedForm: l, submitting: s } = e;
                 return {
                     formOpen: t,
@@ -367,8 +367,8 @@ let er = i.memo(function (e) {
                     hasClickedForm: l,
                     submitting: s
                 };
-            }, c.Z),
-            f = (0, K.AF)(),
+            }, c.X),
+            f = (0, X.AF)(),
             p = null != t.topic && 0 !== t.topic.length,
             C = U.Z.hasSeen(t.id),
             v = (0, V.ql)(t),
@@ -472,11 +472,11 @@ let er = i.memo(function (e) {
     });
 function es(e) {
     let { parentChannel: t } = e,
-        { guidelinesOpen: n } = (0, K.xH)((e) => {
+        { guidelinesOpen: n } = (0, X.xH)((e) => {
             let { guidelinesOpen: t } = e;
             return { guidelinesOpen: t };
         }),
-        i = (0, K.AF)(),
+        i = (0, X.AF)(),
         r = null != t.topic && 0 !== t.topic.length,
         s = () => {
             i.getState().setGuidelinesOpen(!n);
@@ -535,7 +535,7 @@ let eo = i.memo(function (e) {
                 textAreaState: f,
                 bodyFocused: p,
                 formOpen: C
-            } = (0, K.xH)((e) => {
+            } = (0, X.xH)((e) => {
                 let { messageError: t, textAreaState: n, previewing: a, bodyFocused: i, formOpen: r } = e;
                 return {
                     messageError: t,
@@ -544,8 +544,8 @@ let eo = i.memo(function (e) {
                     bodyFocused: i,
                     formOpen: r
                 };
-            }, c.Z),
-            b = (0, K.AF)();
+            }, c.X),
+            b = (0, X.AF)();
         i.useEffect(
             () => () =>
                 (0, G.Vn)({
@@ -641,11 +641,11 @@ function ed() {
     });
 }
 function eu() {
-    let { previewing: e } = (0, K.xH)((e) => {
+    let { previewing: e } = (0, X.xH)((e) => {
             let { previewing: t } = e;
             return { previewing: t };
         }),
-        t = (0, K.AF)(),
+        t = (0, X.AF)(),
         n = i.useCallback(() => {
             t.getState().setPreviewing(!e), (0, G.nE)();
         }, [e, t]);
@@ -676,7 +676,7 @@ let em = i.memo(function (e) {
             textAreaState: l,
             appliedTags: s,
             name: o
-        } = (0, K.xH)((e) => {
+        } = (0, X.xH)((e) => {
             let { textAreaState: t, appliedTags: n, name: a } = e;
             return {
                 textAreaState: t,
@@ -689,7 +689,7 @@ let em = i.memo(function (e) {
         u = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
         m = (0, h.e7)([Z.Z], () => Z.Z.can($.Plq.MANAGE_THREADS, t) || Z.Z.can($.Plq.MANAGE_CHANNELS, t)),
         x = t.hasFlag(ee.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && l.textValue.length > 0,
-        f = (0, K.AF)(),
+        f = (0, X.AF)(),
         p = i.useCallback(() => {
             f.getState().setBodyFocused(!1);
         }, [f]),
@@ -765,7 +765,7 @@ function eh(e) {
             name: o,
             appliedTags: c,
             formOpen: d
-        } = (0, K.xH)((e) => {
+        } = (0, X.xH)((e) => {
             let { submitting: t, textAreaState: n, name: a, appliedTags: i, formOpen: r } = e;
             return {
                 submitting: t,
@@ -820,14 +820,14 @@ function ex(e) {
             appliedTags: n,
             toggleAppliedTag: r,
             setPopoutOpen: s
-        } = (0, K.xH)((e) => {
+        } = (0, X.xH)((e) => {
             let { appliedTags: t, toggleAppliedTag: n, setPopoutOpen: a } = e;
             return {
                 appliedTags: t,
                 toggleAppliedTag: n,
                 setPopoutOpen: a
             };
-        }, c.Z),
+        }, c.X),
         o = n.size >= Q.Cn,
         h = (0, d.ZP)({
             id: ''.concat(t.id, '-post-form-tags-navigator'),
@@ -884,14 +884,14 @@ function ex(e) {
                                           ...i,
                                           children: b.map((e) =>
                                               (0, a.jsx)(
-                                                  X.Z,
+                                                  K.Z,
                                                   {
                                                       ariaLabel: et.intl.formatToPlainString(et.t.FSZVIS, { tagName: e.name }),
                                                       tag: e,
                                                       onClick: o && !n.has(e.id) ? void 0 : () => r(e.id),
                                                       disabled: !n.has(e.id) && n.size >= Q.Cn,
                                                       selected: n.has(e.id),
-                                                      size: X.Z.Sizes.SMALL
+                                                      size: K.Z.Sizes.SMALL
                                                   },
                                                   e.id
                                               )

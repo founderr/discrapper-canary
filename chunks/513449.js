@@ -7,14 +7,14 @@ n.d(t, {
     }
 });
 var r = n(192379),
-    i = n(903797),
+    i = n(905837),
     a = n(731965),
     s = n(442837),
     o = n(496675),
     l = n(944486),
     u = n(146085),
     c = n(643632);
-let d = (0, i.Z)((e) => ({ isOnStartStageScreen: !0 }));
+let d = (0, i.Ue)((e) => ({ isOnStartStageScreen: !0 }));
 function f(e) {
     (0, a.j)(() => d.setState({ isOnStartStageScreen: e }));
 }

@@ -8,7 +8,7 @@ n.d(t, {
 });
 var i = n(200651),
     l = n(192379),
-    r = n(782690),
+    r = n(976649),
     a = n(481060),
     s = n(570140),
     o = n(668781),
@@ -52,7 +52,7 @@ function _(e) {
                 name: t,
                 appliedTags: n
             };
-        }, r.Z);
+        }, r.X);
     return (0, g.Wj)({
         parentChannel: t,
         name: l,

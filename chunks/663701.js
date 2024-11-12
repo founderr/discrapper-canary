@@ -8,7 +8,7 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(782690),
+    s = n(976649),
     o = n(990547),
     c = n(91192),
     d = n(873546),
@@ -225,7 +225,7 @@ let es = (e) => {
         [o, c] = (0, P.Z)((e) => {
             let { channelId: t, path: n } = e;
             return [t, n];
-        }, s.Z);
+        }, s.X);
     return (0, i.jsxs)('nav', {
         className: J.privateChannels,
         'aria-label': Q.intl.string(Q.t.ZH9aPz),

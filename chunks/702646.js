@@ -8,7 +8,7 @@ var i = n(200651),
     r = n(192379),
     l = n(120356),
     a = n.n(l),
-    s = n(782690),
+    s = n(976649),
     o = n(481060),
     c = n(377171),
     d = n(207796),
@@ -93,7 +93,7 @@ function m(e) {
           });
 }
 function p() {
-    let e = (0, d.GN)((e) => e.mode, s.Z),
+    let e = (0, d.GN)((e) => e.mode, s.X),
         {
             selectedGames: t,
             selectedPlaystyle: n,

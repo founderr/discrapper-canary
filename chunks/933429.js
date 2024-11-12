@@ -526,7 +526,7 @@ let eF = [eA.kVF.QUARANTINED, eA.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eA.kVF.VI
             }
         },
         [eA.kVF.BLOCK_USER_FEEDBACK_NAGBAR]: {
-            predicate: () => V.S(),
+            predicate: () => !ew(eA.kVF.BLOCK_USER_FEEDBACK_NAGBAR) && V.S(),
             metadata: () => ({ dismissUntil: s()().add(180, 'days').toDate() })
         }
     };

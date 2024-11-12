@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(782690),
+    o = n(976649),
     l = n(260866),
     u = n(461745),
     c = n(806966),
@@ -16,7 +16,7 @@ let m = i.forwardRef(function (e, t) {
     let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: v, className: I, defaultSearchPlaceholder: S } = e,
         T = i.useRef(null),
         b = (0, d.Iu)((e) => e.searchQuery),
-        [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
+        [y, A] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.X),
         N = i.useCallback(
             (e) => {
                 var t;

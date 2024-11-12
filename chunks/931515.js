@@ -27,7 +27,7 @@ var i = n(192379),
     l = n.n(r),
     a = n(664751);
 if (12633 == n.j) var o = n(512969);
-if (12633 == n.j) var s = n(782690);
+if (12633 == n.j) var s = n(976649);
 var c = n(731965),
     d = n(442837),
     u = n(224706),
@@ -65,9 +65,9 @@ function B() {
     return null != n && (null === (e = i.games) || void 0 === e ? void 0 : e.length) === 0 && (i.games = [n]), i;
 }
 function U() {
-    let e = (0, y.GN)((e) => e.setGame, s.Z),
-        t = (0, y.GN)((e) => e.setSelectedGames, s.Z),
-        n = (0, y.GN)((e) => e.selectedGames, s.Z),
+    let e = (0, y.GN)((e) => e.setGame, s.X),
+        t = (0, y.GN)((e) => e.setSelectedGames, s.X),
+        n = (0, y.GN)((e) => e.selectedGames, s.X),
         r = B(),
         l = (0, _.An)({ location: 'clan_discovery' }),
         a = (0, _.iN)('clan_discovery'),
@@ -142,7 +142,7 @@ function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, currentColumnCount: r, pageSize: a, chunkedPages: o, currentPage: c, fetchableGuildIds: u } = (0, P.a)(),
         h = c - 1,
-        f = (0, y.GN)((e) => e.loadingGameApplication, s.Z),
+        f = (0, y.GN)((e) => e.loadingGameApplication, s.X),
         p = (0, d.e7)([R.Z], () => R.Z.getSavedGuildIds()),
         _ = B(),
         { searchResult: g, hasError: E } = (0, d.cj)(

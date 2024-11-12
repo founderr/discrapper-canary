@@ -64,7 +64,7 @@ function O(e) {
         [W, O] = r.useState(I),
         D = null != m && null == m.proxyURL,
         G = r.useCallback(() => O(!1), [O]),
-        Z = (e) => {
+        U = (e) => {
             e.preventDefault(), e.stopPropagation(), null == w || w(!1), O(!0), D && (T.S.dispatch(H.CkL.VIDEO_EMBED_PLAYBACK_STARTED), T.S.subscribeOnce(H.CkL.VIDEO_EMBED_PLAYBACK_STARTED, G));
         };
     r.useEffect(
@@ -73,15 +73,15 @@ function O(e) {
         },
         [D, G]
     );
-    let { width: U, height: q } = u;
-    null != m && ((U = m.width), (q = m.height));
+    let { width: Z, height: q } = u;
+    null != m && ((Z = m.width), (q = m.height));
     let z = (0, A.Tj)({
-        width: U,
+        width: Z,
         height: q,
         maxWidth: o,
         maxHeight: d
     });
-    (U = Math.max(z.width, 150)), (q = Math.max(z.height, 144));
+    (Z = Math.max(z.width, 150)), (q = Math.max(z.height, 144));
     let X = (0, C.q)(u);
     if (null != m && null != m.proxyURL)
         return (0, i.jsx)('div', {
@@ -91,7 +91,7 @@ function O(e) {
                 src: m.proxyURL,
                 placeholder: B,
                 placeholderVersion: R,
-                width: U,
+                width: Z,
                 height: q,
                 responsive: p,
                 autoPlay: I,
@@ -114,15 +114,15 @@ function O(e) {
         let e;
         let l = !0 === _ || ('function' == typeof _ && _()),
             t = {
-                width: U,
+                width: Z,
                 height: q
             },
             r = {
-                width: U,
+                width: Z,
                 height: q
             };
         if (p) {
-            let l = 0 !== U ? q / U : 1;
+            let l = 0 !== Z ? q / Z : 1;
             (t = {
                 maxWidth: o,
                 maxHeight: d,
@@ -131,13 +131,13 @@ function O(e) {
             }),
                 (r = {
                     paddingBottom: ''.concat(100 * l, '%'),
-                    maxWidth: U
+                    maxWidth: Z
                 }),
                 (e = {
                     position: 'absolute',
                     top: 0,
                     left: 0,
-                    maxWidth: U,
+                    maxWidth: Z,
                     maxHeight: q
                 });
         }
@@ -151,7 +151,7 @@ function O(e) {
                     provider: h,
                     src: m.url,
                     style: e,
-                    width: U,
+                    width: Z,
                     height: q,
                     allowFullScreen: c,
                     autoMute: l
@@ -162,24 +162,24 @@ function O(e) {
     return (0, i.jsxs)('div', {
         className: s()(V.embedVideo, n),
         style: p
-            ? { maxWidth: U }
+            ? { maxWidth: Z }
             : {
-                  width: U,
+                  width: Z,
                   height: q
               },
         children: [
             b({
                 src: X,
-                width: U,
+                width: Z,
                 height: q,
-                maxWidth: U,
+                maxWidth: Z,
                 maxHeight: q,
                 responsive: p,
                 containerClassName: V.embedVideoImageComponent,
                 imageClassName: V.embedVideoImageComponentInner,
                 placeholder: B,
                 placeholderVersion: R,
-                onClick: x && null != m ? Z : null,
+                onClick: x && null != m ? U : null,
                 sourceMetadata: P
             }),
             (0, i.jsx)('div', {
@@ -188,7 +188,7 @@ function O(e) {
                     className: V.centerContent,
                     children: x
                         ? (0, i.jsx)(f.Z, {
-                              onPlay: null != m ? Z : null,
+                              onPlay: null != m ? U : null,
                               externalURL: L,
                               renderLinkComponent: v,
                               messageId: null == P ? void 0 : null === (l = P.message) || void 0 === l ? void 0 : l.id,

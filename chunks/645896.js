@@ -10,13 +10,13 @@ n.d(t, {
     }
 });
 var r = n(192379),
-    i = n(903797),
-    a = n(782690),
+    i = n(976649),
+    a = n(454000),
     s = n(731965),
     o = n(881052),
     l = n(931240);
 let u = {},
-    c = (0, i.Z)((e, t) => ({
+    c = (0, a.F)((e, t) => ({
         clans: {},
         isFetchingGuild: (e) => null != t().fetchPromises[e],
         error: null,
@@ -90,7 +90,7 @@ function f(e) {
     return c((t) => null != e && t.isFetchingGuild(e));
 }
 function _(e) {
-    let t = c((e) => e.fetchClanInfo, a.Z),
+    let t = c((e) => e.fetchClanInfo, i.X),
         n = f(e);
     return [
         n,

@@ -3,7 +3,7 @@ n.d(t, {
         return i;
     }
 });
-let i = (0, n(903797).Z)((e) => ({
+let i = (0, n(905837).Ue)((e) => ({
     clipsButtonRef: null,
     setClipsButtonRef: (t) => e({ clipsButtonRef: t })
 }));

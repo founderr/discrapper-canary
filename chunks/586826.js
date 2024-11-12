@@ -3,11 +3,11 @@ t.d(n, {
         return u;
     }
 });
-var l = t(903797),
-    a = t(782690),
+var l = t(976649),
+    a = t(454000),
     i = t(731965),
     r = t(174727);
-let s = (0, l.Z)((e) => ({
+let s = (0, a.F)((e) => ({
     audio: null,
     file: null,
     loading: !1,
@@ -47,6 +47,6 @@ function u() {
             maxVolume: e.maxVolume,
             setMaxVolume: e.setMaxVolume
         }),
-        a.Z
+        l.X
     );
 }

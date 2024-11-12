@@ -16,8 +16,8 @@ n.d(t, {
     n(47120),
     n(724458);
 var r = n(192379),
-    i = n(903797),
-    l = n(782690),
+    i = n(976649),
+    l = n(454000),
     u = n(731965),
     a = n(881052),
     o = n(36459),
@@ -43,7 +43,7 @@ let E = {},
             t
         );
     },
-    g = (0, i.Z)((e, t) => ({
+    g = (0, l.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
@@ -126,17 +126,17 @@ let E = {},
     };
 function A(e) {
     let [t, n] = r.useState(!1),
-        [i, u] = g((e) => [e.syncRules, e.fetching], l.Z);
+        [l, u] = g((e) => [e.syncRules, e.fetching], i.X);
     return [
         t,
         r.useCallback(async () => {
             if (!u && null != e)
                 try {
-                    n(!0), await i(e);
+                    n(!0), await l(e);
                 } finally {
                     n(!1);
                 }
-        }, [e, u, i])
+        }, [e, u, l])
     ];
 }
 function _(e) {

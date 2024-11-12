@@ -1,7 +1,7 @@
 n(47120);
 var r = n(200651),
     i = n(192379),
-    a = n(782690),
+    a = n(976649),
     s = n(260866),
     o = n(461745),
     l = n(806966),
@@ -10,9 +10,9 @@ var r = n(200651),
 let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: h, defaultSearchPlaceholder: p, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
-        [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.Z),
+        [E, v] = (0, u.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
         I = n.useStore((e) => e.searchPlaceholder),
-        S = n.useStore((e) => e.inspectedExpressionPosition, a.Z),
+        S = n.useStore((e) => e.inspectedExpressionPosition, a.X),
         T = i.useCallback(
             (e) => {
                 var t;

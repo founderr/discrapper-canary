@@ -3,7 +3,7 @@ var r = n(200651),
     i = n(192379),
     a = n(120356),
     s = n.n(a),
-    o = n(782690),
+    o = n(976649),
     l = n(318766),
     u = n(28546),
     c = n(957825),
@@ -11,7 +11,7 @@ var r = n(200651),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: a } = e,
-            [f, _, h] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
+            [f, _, h] = (0, u.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.X),
             p = i.useCallback(() => {
                 (0, u.RO)(c.X1.EMOJI, a);
             }, [a]);
