@@ -1,10 +1,10 @@
 n.r(t),
     n.d(t, {
         HD_STREAMING_POTION_MODAL_KEY: function () {
-            return R;
+            return Z;
         },
         default: function () {
-            return Z;
+            return j;
         }
     }),
     n(47120);
@@ -15,227 +15,193 @@ var i = n(200651),
     o = n(481060),
     s = n(100527),
     c = n(906732),
-    u = n(335131),
-    d = n(120619),
+    d = n(335131),
+    u = n(120619),
     m = n(688465),
     h = n(569545),
     f = n(690221),
     p = n(333867),
-    _ = n(422034),
-    g = n(199902),
-    E = n(430824),
-    C = n(959457),
-    I = n(594174),
-    x = n(938475),
-    N = n(937615),
+    _ = n(199902),
+    g = n(430824),
+    E = n(959457),
+    C = n(594174),
+    I = n(937615),
+    x = n(82950),
     v = n(981631),
-    T = n(215023),
-    S = n(388032),
-    A = n(912568),
-    b = n(99713);
-let j = new l.Yd('HDStreamingConsumableModal');
-function Z(e) {
+    N = n(215023),
+    T = n(388032),
+    S = n(912568),
+    A = n(99713);
+let b = new l.Yd('HDStreamingConsumableModal');
+function j(e) {
     let { transitionState: t, channel: n } = e;
     return (0, i.jsx)(o.ModalRoot, {
         size: o.ModalSize.DYNAMIC,
         transitionState: t,
-        children: (0, i.jsx)(L, { channel: n })
+        children: (0, i.jsx)(R, { channel: n })
     });
 }
-let R = 'HD_STREAMING_POTION_MODAL_KEY';
-function L(e) {
+let Z = 'HD_STREAMING_POTION_MODAL_KEY';
+function R(e) {
     let { channel: t } = e,
-        n = (0, a.e7)([E.Z], () => E.Z.getGuild(t.guild_id)),
-        l = (0, a.e7)([I.default], () => {
+        n = (0, a.e7)([g.Z], () => g.Z.getGuild(t.guild_id)),
+        l = (0, a.e7)([C.default], () => {
             var e;
-            return null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+            return null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
         }),
-        Z = (0, a.e7)([g.Z], () => g.Z.getAllActiveStreamsForChannel(t.id).filter((e) => e.ownerId !== l)),
-        [L, P] = r.useState(null),
-        [y, O] = r.useState([]);
+        j = (0, a.e7)([_.Z], () => _.Z.getAllActiveStreamsForChannel(t.id).filter((e) => e.ownerId !== l)),
+        [R, L] = r.useState(null),
+        [P, y] = r.useState([]);
     (0, a.e7)(
-        [C.Z],
+        [E.Z],
         () => {
-            if (null == L || Date.now() - L > 10000) {
-                let e = Z.map((e) => {
+            if (null == R || Date.now() - R > 10000) {
+                let e = j.map((e) => {
                     var t;
                     let n = (0, h.V9)(e),
-                        i = C.Z.getRTCConnection(n);
+                        i = E.Z.getRTCConnection(n);
                     return null == i ? void 0 : null === (t = i.getVideoStats()) || void 0 === t ? void 0 : t.inbound_bitrate_estimate_percentile99;
                 });
-                j.info('Setting bitrates', e), O(e), P(Date.now());
+                b.info('Setting bitrates', e), y(e), L(Date.now());
             }
         },
-        [L, Z]
+        [R, j]
     );
-    let M = r.useMemo(() => {
-            if (0 === y.length) return !0;
-            if (y.some((e) => null == e)) return !1;
-            for (let e of y) if (null == e || e < 3500000) return !1;
+    let O = r.useMemo(() => {
+            if (0 === P.length) return !0;
+            if (P.some((e) => null == e)) return !1;
+            for (let e of P) if (null == e || e < 3500000) return !1;
             return !0;
-        }, [y]),
-        k = null != n && 0 === n.premiumTier && M,
-        D = x.ZP.getVoiceStatesForChannel(t).slice(0, 6),
-        [B, U, w, F, G, V] = (0, a.Wu)([d.Z], () => [d.Z.isFetchingPrice(T.FX), d.Z.isEntitlementFetched(T.FX), d.Z.isEntitlementFetching(T.FX), d.Z.getPrice(T.FX), d.Z.getErrored(T.FX), d.Z.getEntitlement(T.FX)]),
-        { analyticsLocations: H } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        z = null != V && !V.consumed && V.type === v.qc2.DEVELOPER_GIFT;
+        }, [P]),
+        M = null != n && 0 === n.premiumTier && O,
+        [k, D, B, U, w, F] = (0, a.Wu)([u.Z], () => [u.Z.isFetchingPrice(N.FX), u.Z.isEntitlementFetched(N.FX), u.Z.isEntitlementFetching(N.FX), u.Z.getPrice(N.FX), u.Z.getErrored(N.FX), u.Z.getEntitlement(N.FX)]),
+        { analyticsLocations: G } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
+        V = null != F && !F.consumed && F.type === v.qc2.DEVELOPER_GIFT;
     r.useEffect(() => {
-        null != V && !1 === V.consumed && V.type !== v.qc2.DEVELOPER_GIFT && (0, u.Zu)(t.id);
-    }, [V, t]),
+        null != F && !1 === F.consumed && F.type !== v.qc2.DEVELOPER_GIFT && (0, d.Zu)(t.id);
+    }, [F, t]),
         r.useEffect(
             () => () => {
-                (0, u.SN)(T.FX);
+                (0, d.SN)(N.FX);
             },
             []
         ),
         r.useEffect(() => {
-            !B && null == F && !G && (0, u.Gq)(T.FX);
-        }, [B, F, G]),
+            !k && null == U && !w && (0, d.Gq)(N.FX);
+        }, [k, U, w]),
         r.useEffect(() => {
-            !U && !w && (0, u.gA)(T.FX);
-        }, [U, w]);
-    let W = () => {
-            (0, o.closeModal)(R);
-        },
-        K = D.map((e, t) => {
-            let { user: n } = e;
-            return (0, i.jsx)(
-                _.O,
-                {
-                    affinity: n,
-                    applyMask: t !== D.length - 1,
-                    size: o.AvatarSizes.SIZE_20
-                },
-                n.id
-            );
-        });
-    return G
+            !D && !B && (0, d.gA)(N.FX);
+        }, [D, B]);
+    let H = () => (0, o.closeAllModals)();
+    return w
         ? (0, i.jsx)('div', {
-              className: A.anomaly,
+              className: S.anomaly,
               children: (0, i.jsxs)('div', {
-                  className: A.error,
+                  className: S.error,
                   children: [
                       (0, i.jsx)(o.Image, {
-                          src: b,
+                          src: A,
                           width: 178,
                           height: 190
                       }),
                       (0, i.jsx)(o.Text, {
                           variant: 'text-md/normal',
-                          children: S.intl.string(S.t.sIA0OD)
+                          children: T.intl.string(T.t.sIA0OD)
                       })
                   ]
               })
           })
-        : null == F
+        : null == U
           ? (0, i.jsx)('div', {
-                className: A.anomaly,
+                className: S.anomaly,
                 children: (0, i.jsx)('div', {
-                    className: A.spinner,
+                    className: S.spinner,
                     children: (0, i.jsx)(o.Spinner, {})
                 })
             })
           : (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)('div', {
-                        className: A.modal,
+                        className: S.modal,
                         children: [
                             (0, i.jsx)('img', {
-                                className: A.image,
+                                className: S.image,
                                 src: 'https://cdn.discordapp.com/assets/content/f7cb08dc1c9ca86a0c705f26d6e9af2ba2cc1acd4fd51e039417b2936069bc5b.png',
-                                alt: S.intl.string(S.t.DdigcX)
+                                alt: T.intl.string(T.t.DdigcX)
                             }),
                             (0, i.jsxs)('div', {
-                                className: A.body,
+                                className: S.body,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: A.heading,
+                                        className: S.heading,
                                         children: [
                                             (0, i.jsx)(o.Heading, {
                                                 variant: 'heading-lg/bold',
-                                                children: S.intl.string(S.t.K04rOD)
+                                                children: T.intl.string(T.t.K04rOD)
                                             }),
                                             (0, i.jsx)(m.Z, {})
                                         ]
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-sm/normal',
-                                        children: S.intl.string(S.t.lq40Pz)
+                                        children: T.intl.string(T.t.lq40Pz)
                                     }),
                                     (0, i.jsx)(f.Z, {
                                         onClick: () => {},
                                         children: (0, i.jsx)(o.Text, {
                                             color: 'text-link',
                                             variant: 'text-sm/normal',
-                                            children: S.intl.string(S.t['1wV4qq'])
+                                            children: T.intl.string(T.t['1wV4qq'])
                                         })
                                     }),
                                     (0, i.jsx)(o.Text, {
                                         color: 'text-muted',
                                         variant: 'text-xs/medium',
-                                        children: S.intl.string(S.t.qk07Mj)
+                                        children: T.intl.string(T.t.qk07Mj)
                                     })
                                 ]
                             }),
-                            (0, i.jsx)('div', { className: A.divider }),
+                            (0, i.jsx)('div', { className: S.divider }),
                             (0, i.jsxs)('div', {
-                                className: A.applyingTo,
+                                className: S.applyingTo,
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: 'eyebrow',
-                                        children: S.intl.string(S.t.tZyXg4)
+                                        children: T.intl.string(T.t.tZyXg4)
                                     }),
-                                    (0, i.jsxs)('div', {
-                                        className: A.channel,
-                                        children: [
-                                            (0, i.jsxs)('div', {
-                                                className: A.channelLeft,
-                                                children: [
-                                                    (0, i.jsx)(o.VoiceNormalIcon, {}),
-                                                    (0, i.jsx)(o.Text, {
-                                                        variant: 'text-md/normal',
-                                                        children: t.name
-                                                    })
-                                                ]
-                                            }),
-                                            (0, i.jsx)('div', {
-                                                className: A.avatars,
-                                                children: K
-                                            })
-                                        ]
-                                    })
+                                    (0, i.jsx)(x.Z, { channel: t })
                                 ]
                             })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: A.footer,
+                        className: S.footer,
                         children: [
                             (0, i.jsx)(o.Button, {
                                 onClick: () => {
-                                    (0, o.closeModal)(R);
+                                    (0, o.closeModal)(Z);
                                 },
                                 color: o.Button.Colors.PRIMARY,
-                                children: S.intl.string(S.t.Avt5KS)
+                                children: T.intl.string(T.t.Avt5KS)
                             }),
-                            k
+                            M
                                 ? (0, i.jsx)(o.Button, {
                                       onClick: () => {
-                                          if (z) {
-                                              (0, u.Zu)(t.id), (0, o.closeModal)(R);
+                                          if (V) {
+                                              (0, d.Zu)(t.id), (0, o.closeAllModals)();
                                               return;
                                           }
                                           (0, p.Z)({
-                                              skuId: T.FX,
-                                              analyticsLocations: H,
-                                              onComplete: W
+                                              skuId: N.FX,
+                                              analyticsLocations: G,
+                                              onComplete: H
                                           });
                                       },
-                                      disabled: !k,
-                                      children: z ? S.intl.string(S.t.sl6Tcn) : S.intl.formatToPlainString(S.t.S9LAdX, { price: (0, N.T4)(F.amount, F.currency) })
+                                      disabled: !M,
+                                      children: V ? T.intl.string(T.t.sl6Tcn) : T.intl.formatToPlainString(T.t.S9LAdX, { price: (0, I.T4)(U.amount, U.currency) })
                                   })
                                 : (0, i.jsx)(o.Tooltip, {
-                                      text: S.intl.string(S.t.Qrh2BQ),
+                                      text: T.intl.string(T.t.Qrh2BQ),
                                       children: (e) => {
                                           let { onClick: t, onMouseEnter: n, onMouseLeave: r, ...l } = e;
                                           return (0, i.jsx)(o.Button, {
@@ -244,7 +210,7 @@ function L(e) {
                                               onClick: t,
                                               onMouseEnter: n,
                                               onMouseLeave: r,
-                                              children: S.intl.formatToPlainString(S.t.S9LAdX, { price: (0, N.T4)(F.amount, F.currency) })
+                                              children: T.intl.formatToPlainString(T.t.S9LAdX, { price: (0, I.T4)(U.amount, U.currency) })
                                           });
                                       }
                                   })
