@@ -1,16 +1,26 @@
 n.d(t, {
     f: function () {
-        return s;
+        return u;
     }
 });
 var r = n(200651);
 n(192379);
-var i = n(801787),
-    a = n(663002);
-function s(e) {
-    let { theme: t, children: n } = e;
-    return (0, r.jsx)(i.ze, {
-        theme: t,
-        children: n((0, a.Qe)(t))
+var i = n(120356),
+    a = n.n(i),
+    s = n(801787),
+    o = n(663002),
+    l = n(168551);
+function u(e) {
+    var t;
+    let { theme: n, gradient: i, disableColorMixing: u, children: c } = e;
+    return (0, r.jsx)(s.ze, {
+        theme: n,
+        gradient: i,
+        children: c(
+            a()((0, o.Qe)(null !== (t = null == i ? void 0 : i.theme) && void 0 !== t ? t : n), {
+                [l.e3]: null != i,
+                'disable-adaptive-theme': u
+            })
+        )
     });
 }

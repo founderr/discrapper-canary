@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return x;
     }
 }),
     n(47120),
@@ -10,25 +10,28 @@ var i = n(200651),
     r = n(120356),
     l = n.n(r),
     a = n(971809),
-    o = n(481060),
-    c = n(303431);
-let d = Object.keys(o.Button.Colors).filter((e) => 'CUSTOM' !== e),
-    u = Object.keys(o.Button.Looks).filter((e) => 'BLANK' !== e),
-    m = Object.keys(o.Button.Sizes).filter((e) => 'NONE' !== e);
-function h() {
+    o = n(442837),
+    c = n(481060),
+    d = n(514361),
+    u = n(231338),
+    m = n(303431);
+let h = Object.keys(c.Button.Colors).filter((e) => 'CUSTOM' !== e),
+    g = Object.keys(c.Button.Looks).filter((e) => 'BLANK' !== e),
+    p = Object.keys(c.Button.Sizes).filter((e) => 'NONE' !== e);
+function x() {
     return (0, i.jsxs)('div', {
-        children: [(0, i.jsx)(g, {}), (0, i.jsx)(E, {}), (0, i.jsx)(_, {}), (0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(x, {}), (0, i.jsx)(p, {})]
+        children: [(0, i.jsx)(S, {}), (0, i.jsx)(I, {}), (0, i.jsx)(N, {}), (0, i.jsx)(_, {}), (0, i.jsx)(E, {}), (0, i.jsx)(C, {}), (0, i.jsx)(T, {}), (0, i.jsx)(A, {})]
     });
 }
-function g() {
+function S() {
     let [e, t] = s.useState(!1),
-        n = d.flatMap((e) => [
-            ...u.map((t) =>
+        n = h.flatMap((e) => [
+            ...g.map((t) =>
                 (0, i.jsxs)(
-                    o.Button,
+                    c.Button,
                     {
-                        color: o.Button.Colors[e],
-                        look: o.Button.Looks[t],
+                        color: c.Button.Colors[e],
+                        look: c.Button.Looks[t],
                         fullWidth: !0,
                         style: { textTransform: 'capitalize' },
                         children: [e.toLowerCase(), ' - ', t.toLowerCase()]
@@ -36,196 +39,212 @@ function g() {
                     e + t
                 )
             ),
-            (0, i.jsx)('hr', { className: c.sectionDivider }, e + 'divider')
+            (0, i.jsx)('hr', { className: m.sectionDivider }, e + 'divider')
         ]),
-        r = m.flatMap((e) =>
-            (0, i.jsx)(o.Button, {
-                color: o.Button.Colors.BRAND,
-                look: o.Button.Looks.FILLED,
-                size: o.Button.Sizes[e],
+        r = p.flatMap((e) =>
+            (0, i.jsx)(c.Button, {
+                color: c.Button.Colors.BRAND,
+                look: c.Button.Looks.FILLED,
+                size: c.Button.Sizes[e],
                 fullWidth: !0,
                 style: { textTransform: 'capitalize' },
                 children: e.toLowerCase()
             })
         );
     return (0, i.jsxs)('div', {
-        className: c.section,
+        className: m.section,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'Buttons'
             }),
-            (0, i.jsx)(o.Checkbox, {
+            (0, i.jsx)(c.Checkbox, {
                 value: e,
                 onChange: (e, n) => t(n),
-                children: (0, i.jsx)(o.Text, {
+                children: (0, i.jsx)(c.Text, {
                     variant: 'text-md/medium',
                     children: 'Show all buttons (WIP)'
                 })
             }),
             e
                 ? (0, i.jsxs)('div', {
-                      className: c.buttons,
+                      className: m.buttons,
                       children: [
-                          (0, i.jsx)('div', {
-                              className: l()('theme-darker', c.section),
-                              children: n
+                          (0, i.jsx)(c.ThemeProvider, {
+                              theme: u.BR.DARKER,
+                              children: (e) =>
+                                  (0, i.jsx)('div', {
+                                      className: l()(e, m.section),
+                                      children: n
+                                  })
                           }),
-                          (0, i.jsx)('div', {
-                              className: l()('theme-light', c.section),
-                              children: n
+                          (0, i.jsx)(c.ThemeProvider, {
+                              theme: u.BR.LIGHT,
+                              children: (e) =>
+                                  (0, i.jsx)('div', {
+                                      className: l()(e, m.section),
+                                      children: n
+                                  })
                           }),
-                          (0, i.jsxs)('div', {
-                              className: l()('theme-darker', c.section),
-                              children: [
-                                  (0, i.jsx)(o.Button, {
-                                      color: o.Button.Colors.BRAND,
-                                      look: o.Button.Looks.FILLED,
-                                      disabled: !0,
-                                      children: 'Disabled'
-                                  }),
-                                  r
-                              ]
+                          (0, i.jsx)(c.ThemeProvider, {
+                              theme: u.BR.DARKER,
+                              children: (e) =>
+                                  (0, i.jsxs)('div', {
+                                      className: l()(e, m.section),
+                                      children: [
+                                          (0, i.jsx)(c.Button, {
+                                              color: c.Button.Colors.BRAND,
+                                              look: c.Button.Looks.FILLED,
+                                              disabled: !0,
+                                              children: 'Disabled'
+                                          }),
+                                          r
+                                      ]
+                                  })
                           }),
-                          (0, i.jsxs)('div', {
-                              className: l()('theme-light', c.section),
-                              children: [
-                                  (0, i.jsx)(o.Button, {
-                                      color: o.Button.Colors.BRAND,
-                                      look: o.Button.Looks.FILLED,
-                                      disabled: !0,
-                                      children: 'Disabled'
-                                  }),
-                                  r
-                              ]
+                          (0, i.jsx)(c.ThemeProvider, {
+                              theme: u.BR.LIGHT,
+                              children: (e) =>
+                                  (0, i.jsxs)('div', {
+                                      className: l()(e, m.section),
+                                      children: [
+                                          (0, i.jsx)(c.Button, {
+                                              color: c.Button.Colors.BRAND,
+                                              look: c.Button.Looks.FILLED,
+                                              disabled: !0,
+                                              children: 'Disabled'
+                                          }),
+                                          r
+                                      ]
+                                  })
                           })
                       ]
                   })
                 : null,
             (0, i.jsx)('div', {
                 style: { display: 'flex' },
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    look: o.Button.Looks.FILLED,
-                    size: o.Button.Sizes.TINY,
+                children: (0, i.jsx)(c.Button, {
+                    color: c.Button.Colors.BRAND,
+                    look: c.Button.Looks.FILLED,
+                    size: c.Button.Sizes.TINY,
                     children: 'Tiny'
                 })
             }),
             (0, i.jsx)('div', {
                 style: { display: 'flex' },
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    look: o.Button.Looks.FILLED,
-                    size: o.Button.Sizes.SMALL,
+                children: (0, i.jsx)(c.Button, {
+                    color: c.Button.Colors.BRAND,
+                    look: c.Button.Looks.FILLED,
+                    size: c.Button.Sizes.SMALL,
                     children: 'Small'
                 })
             }),
             (0, i.jsx)('div', {
                 style: { display: 'flex' },
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    look: o.Button.Looks.FILLED,
-                    size: o.Button.Sizes.MEDIUM,
+                children: (0, i.jsx)(c.Button, {
+                    color: c.Button.Colors.BRAND,
+                    look: c.Button.Looks.FILLED,
+                    size: c.Button.Sizes.MEDIUM,
                     children: 'Medium'
                 })
             }),
             (0, i.jsx)('div', {
                 style: { display: 'flex' },
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.BRAND,
-                    look: o.Button.Looks.FILLED,
-                    size: o.Button.Sizes.LARGE,
+                children: (0, i.jsx)(c.Button, {
+                    color: c.Button.Colors.BRAND,
+                    look: c.Button.Looks.FILLED,
+                    size: c.Button.Sizes.LARGE,
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(C, {})
+            (0, i.jsx)(f, {})
         ]
     });
 }
-function p() {
+function T() {
     let [e, t] = s.useState('1');
     return (0, i.jsxs)('div', {
-        className: c.section,
+        className: m.section,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'TabBar'
             }),
-            (0, i.jsxs)(o.TabBar, {
+            (0, i.jsxs)(c.TabBar, {
                 type: 'top',
                 look: 'brand',
                 selectedItem: e,
                 onItemSelect: (e) => t(e),
-                className: c.tabBar,
+                className: m.tabBar,
                 children: [
-                    (0, i.jsx)(o.TabBar.Item, {
+                    (0, i.jsx)(c.TabBar.Item, {
                         id: '1',
                         children: 'Tab 1'
                     }),
-                    (0, i.jsx)(o.TabBar.Item, {
+                    (0, i.jsx)(c.TabBar.Item, {
                         id: '2',
                         children: 'Tab 2'
                     }),
-                    (0, i.jsx)(o.TabBar.Item, {
+                    (0, i.jsx)(c.TabBar.Item, {
                         id: '3',
                         children: 'Tab 3'
                     })
                 ]
             }),
-            (0, i.jsxs)(o.Text, {
+            (0, i.jsxs)(c.Text, {
                 variant: 'text-md/medium',
                 children: ['Selected tab: ', e]
             })
         ]
     });
 }
-function x() {
+function C() {
     let [e, t] = s.useState(1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState(5),
-        [d, u] = s.useState(!1);
+        [o, d] = s.useState(!1);
     return (0, i.jsxs)('div', {
-        className: c.section,
+        className: m.section,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'Context Menus'
             }),
             (0, i.jsx)('span', {
-                children: (0, i.jsx)(o.Popout, {
-                    shouldShow: d,
+                children: (0, i.jsx)(c.Popout, {
+                    shouldShow: o,
                     renderPopout: () =>
-                        (0, i.jsxs)(o.Menu, {
+                        (0, i.jsxs)(c.Menu, {
                             navId: 'demo',
                             'aria-label': 'Demo Actions',
                             onClose: () => null,
                             onSelect: () => null,
                             children: [
-                                (0, i.jsxs)(o.MenuGroup, {
+                                (0, i.jsxs)(c.MenuGroup, {
                                     label: 'Basic items',
                                     children: [
-                                        (0, i.jsx)(o.MenuItem, {
+                                        (0, i.jsx)(c.MenuItem, {
                                             id: 'first',
                                             label: 'An option'
                                         }),
-                                        (0, i.jsx)(o.MenuItem, {
+                                        (0, i.jsx)(c.MenuItem, {
                                             id: 'second',
                                             label: 'An option with an icon',
-                                            icon: o.ChatIcon
+                                            icon: c.ChatIcon
                                         }),
-                                        (0, i.jsxs)(o.MenuItem, {
+                                        (0, i.jsxs)(c.MenuItem, {
                                             id: 'item-with-submenu',
                                             label: 'Item with submenu',
                                             children: [
-                                                (0, i.jsx)(o.MenuItem, {
+                                                (0, i.jsx)(c.MenuItem, {
                                                     id: 'subitem-1',
                                                     label: 'Subitem 1'
                                                 }),
-                                                (0, i.jsx)(o.MenuItem, {
+                                                (0, i.jsx)(c.MenuItem, {
                                                     id: 'subitem-2',
                                                     label: 'Subitem 2'
                                                 }),
-                                                (0, i.jsx)(o.MenuItem, {
+                                                (0, i.jsx)(c.MenuItem, {
                                                     id: 'subitem-3',
                                                     label: 'Subitem 3'
                                                 })
@@ -233,41 +252,41 @@ function x() {
                                         })
                                     ]
                                 }),
-                                (0, i.jsxs)(o.MenuGroup, {
+                                (0, i.jsxs)(c.MenuGroup, {
                                     label: 'Inputs',
                                     children: [
-                                        (0, i.jsx)(o.MenuCheckboxItem, {
+                                        (0, i.jsx)(c.MenuCheckboxItem, {
                                             id: 'checkable',
                                             label: 'Checkbox',
                                             checked: n,
                                             action: () => r(!n)
                                         }),
-                                        (0, i.jsx)(o.MenuRadioItem, {
+                                        (0, i.jsx)(c.MenuRadioItem, {
                                             id: 'radio-one',
                                             group: 'a-group',
                                             label: 'Radio 1',
                                             action: () => t(1),
                                             checked: 1 === e
                                         }),
-                                        (0, i.jsx)(o.MenuRadioItem, {
+                                        (0, i.jsx)(c.MenuRadioItem, {
                                             id: 'radio-two',
                                             group: 'a-group',
                                             label: 'Radio 2',
                                             action: () => t(2),
                                             checked: 2 === e
                                         }),
-                                        (0, i.jsx)(o.MenuRadioItem, {
+                                        (0, i.jsx)(c.MenuRadioItem, {
                                             id: 'radio-three',
                                             group: 'a-group',
                                             label: 'Radio 3',
                                             action: () => t(3),
                                             checked: 3 === e
                                         }),
-                                        (0, i.jsx)(o.MenuControlItem, {
+                                        (0, i.jsx)(c.MenuControlItem, {
                                             id: 'slider',
                                             label: 'Slider',
                                             control: (e, t) =>
-                                                (0, i.jsx)(o.MenuSliderControl, {
+                                                (0, i.jsx)(c.MenuSliderControl, {
                                                     ref: t,
                                                     value: l,
                                                     minValue: 0,
@@ -278,18 +297,18 @@ function x() {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(o.MenuSeparator, {}),
-                                (0, i.jsx)(o.MenuItem, {
+                                (0, i.jsx)(c.MenuSeparator, {}),
+                                (0, i.jsx)(c.MenuItem, {
                                     id: 'danger',
                                     label: 'A destructive option',
                                     color: 'danger',
-                                    icon: o.TrashIcon
+                                    icon: c.TrashIcon
                                 })
                             ]
                         }),
                     children: () =>
-                        (0, i.jsx)(o.Button, {
-                            onClick: () => u(!d),
+                        (0, i.jsx)(c.Button, {
+                            onClick: () => d(!o),
                             children: 'Toggle context menu'
                         })
                 })
@@ -297,11 +316,11 @@ function x() {
         ]
     });
 }
-function S() {
+function E() {
     return (0, i.jsxs)('div', {
-        className: c.section,
+        className: m.section,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'Tooltips'
             }),
@@ -312,38 +331,38 @@ function S() {
                     flexWrap: 'wrap'
                 },
                 children: [
-                    (0, i.jsx)(o.Tooltip, {
+                    (0, i.jsx)(c.Tooltip, {
                         text: "Here's top aligned tooltip text!",
                         position: 'top',
                         children: (e) =>
-                            (0, i.jsx)(o.Button, {
+                            (0, i.jsx)(c.Button, {
                                 ...e,
                                 children: 'Tooltip on the top'
                             })
                     }),
-                    (0, i.jsx)(o.Tooltip, {
+                    (0, i.jsx)(c.Tooltip, {
                         text: "Here's right aligned tooltip text!",
                         position: 'left',
                         children: (e) =>
-                            (0, i.jsx)(o.Button, {
+                            (0, i.jsx)(c.Button, {
                                 ...e,
                                 children: 'Tooltip on the left'
                             })
                     }),
-                    (0, i.jsx)(o.Tooltip, {
+                    (0, i.jsx)(c.Tooltip, {
                         text: "Here's bottom aligned tooltip text!",
                         position: 'bottom',
                         children: (e) =>
-                            (0, i.jsx)(o.Button, {
+                            (0, i.jsx)(c.Button, {
                                 ...e,
                                 children: 'Tooltip on the bottom'
                             })
                     }),
-                    (0, i.jsx)(o.Tooltip, {
+                    (0, i.jsx)(c.Tooltip, {
                         text: "Here's right aligned tooltip text!",
                         position: 'right',
                         children: (e) =>
-                            (0, i.jsx)(o.Button, {
+                            (0, i.jsx)(c.Button, {
                                 ...e,
                                 children: 'Tooltip on the right'
                             })
@@ -354,50 +373,50 @@ function S() {
         ]
     });
 }
-function T() {
+function _() {
     let [e, t] = s.useState(!1),
         [n, r] = s.useState(!1),
         [l, a] = s.useState('auto');
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: c.section,
+                className: m.section,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         children: 'Checkboxes'
                     }),
-                    (0, i.jsx)(o.Checkbox, {
+                    (0, i.jsx)(c.Checkbox, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        children: (0, i.jsx)(o.Text, {
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             children: 'Checkbox input'
                         })
                     }),
-                    (0, i.jsx)(o.Checkbox, {
+                    (0, i.jsx)(c.Checkbox, {
                         value: e,
                         onChange: (e, n) => t(n),
                         disabled: !0,
-                        children: (0, i.jsx)(o.Text, {
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             children: 'Disabled checkbox'
                         })
                     }),
-                    (0, i.jsx)(o.Checkbox, {
+                    (0, i.jsx)(c.Checkbox, {
                         value: e,
                         onChange: (e, n) => t(n),
                         readOnly: !0,
-                        children: (0, i.jsx)(o.Text, {
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             children: 'Read-only checkbox'
                         })
                     }),
-                    (0, i.jsx)(o.Checkbox, {
+                    (0, i.jsx)(c.Checkbox, {
                         value: e,
                         onChange: (e, n) => t(n),
-                        type: o.Checkbox.Types.ROW,
-                        children: (0, i.jsx)(o.Text, {
+                        type: c.Checkbox.Types.ROW,
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             children: 'Checkbox row'
                         })
@@ -405,13 +424,13 @@ function T() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: c.section,
+                className: m.section,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         children: 'Switches'
                     }),
-                    (0, i.jsx)(o.FormSwitch, {
+                    (0, i.jsx)(c.FormSwitch, {
                         hideBorder: !0,
                         value: n,
                         onChange: (e) => r(e),
@@ -420,14 +439,14 @@ function T() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: c.section,
+                className: m.section,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         children: 'Radio Buttons'
                     }),
-                    (0, i.jsx)(o.FormItem, {
-                        children: (0, i.jsx)(o.RadioGroup, {
+                    (0, i.jsx)(c.FormItem, {
+                        children: (0, i.jsx)(c.RadioGroup, {
                             onChange: (e) => {
                                 let { value: t } = e;
                                 return a(t);
@@ -452,20 +471,20 @@ function T() {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: c.section,
+                className: m.section,
                 children: [
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
                         children: 'Slider'
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'Standard slider'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -475,13 +494,13 @@ function T() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'Sticky markers'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -491,13 +510,13 @@ function T() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'Non-uniform markers'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -507,13 +526,13 @@ function T() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'Non-uniform equidistant markers'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50,
@@ -523,13 +542,13 @@ function T() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'No markers'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 minValue: 0,
                                 maxValue: 100,
                                 initialValue: 50
@@ -537,13 +556,13 @@ function T() {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: c.slider,
+                        className: m.slider,
                         children: [
-                            (0, i.jsx)(o.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 children: 'Mini slider'
                             }),
-                            (0, i.jsx)(o.Slider, {
+                            (0, i.jsx)(c.Slider, {
                                 mini: !0,
                                 minValue: 0,
                                 maxValue: 100,
@@ -556,19 +575,19 @@ function T() {
         ]
     });
 }
-function C() {
+function f() {
     return (0, i.jsxs)('div', {
-        className: c.shinyButtonExamples,
+        className: m.shinyButtonExamples,
         children: [
-            (0, i.jsx)(o.ShinyButton, {
-                size: o.Button.Sizes.MEDIUM,
-                shineSize: o.ShinyButton.ShineSizes.SMALL,
+            (0, i.jsx)(c.ShinyButton, {
+                size: c.Button.Sizes.MEDIUM,
+                shineSize: c.ShinyButton.ShineSizes.SMALL,
                 onClick: () => {},
                 children: 'Shiny Button'
             }),
-            (0, i.jsx)(o.ShinyButton, {
-                size: o.Button.Sizes.MEDIUM,
-                shineSize: o.ShinyButton.ShineSizes.SMALL,
+            (0, i.jsx)(c.ShinyButton, {
+                size: c.Button.Sizes.MEDIUM,
+                shineSize: c.ShinyButton.ShineSizes.SMALL,
                 onlyShineOnHover: !0,
                 onClick: () => {},
                 children: 'Shine on Hover'
@@ -576,40 +595,40 @@ function C() {
         ]
     });
 }
-function E() {
+function I() {
     let [e, t] = s.useState(null),
         [n, r] = s.useState(null),
-        [l, d] = s.useState([]),
-        [u, m] = s.useState([]),
+        [l, o] = s.useState([]),
+        [d, u] = s.useState([]),
         [h, g] = s.useState([]);
     return (0, i.jsxs)('div', {
-        className: c.searchableSelectExamples,
+        className: m.searchableSelectExamples,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'SearchableSelect'
             }),
-            (0, i.jsx)(o.SearchableSelect, {
+            (0, i.jsx)(c.SearchableSelect, {
                 placeholder: 'Single select',
                 value: e,
                 onChange: (e) => t(e),
                 options: a.G
             }),
-            (0, i.jsx)(o.SearchableSelect, {
+            (0, i.jsx)(c.SearchableSelect, {
                 placeholder: 'Single select (clearable)',
                 clearable: !0,
                 value: n,
                 onChange: (e) => r(e),
                 options: a.G
             }),
-            (0, i.jsx)(o.SearchableSelect, {
+            (0, i.jsx)(c.SearchableSelect, {
                 placeholder: 'Multi select',
                 multi: !0,
                 value: l,
-                onChange: (e) => d(e),
+                onChange: (e) => o(e),
                 options: a.G
             }),
-            (0, i.jsx)(o.SearchableSelect, {
+            (0, i.jsx)(c.SearchableSelect, {
                 placeholder: 'Multi select (clearable)',
                 multi: !0,
                 clearable: !0,
@@ -617,14 +636,14 @@ function E() {
                 onChange: (e) => g(e),
                 options: a.G
             }),
-            (0, i.jsx)(o.SearchableSelect, {
+            (0, i.jsx)(c.SearchableSelect, {
                 placeholder: 'Multi select (custom pills)',
                 multi: !0,
-                value: u,
-                onChange: (e) => m(e),
+                value: d,
+                onChange: (e) => u(e),
                 options: a.G,
                 hidePills: !0,
-                customPillContainerClassName: c.customPillContainer,
+                customPillContainerClassName: m.customPillContainer,
                 renderCustomPill: (e) =>
                     (0, i.jsx)('div', {
                         style: {
@@ -632,7 +651,7 @@ function E() {
                             border: '1px solid var(--bg-brand)',
                             borderRadius: 8
                         },
-                        children: (0, i.jsx)(o.Text, {
+                        children: (0, i.jsx)(c.Text, {
                             variant: 'text-md/bold',
                             children: e.label
                         })
@@ -641,66 +660,66 @@ function E() {
         ]
     });
 }
-function _() {
+function N() {
     let [e, t] = s.useState(''),
         [n, r] = s.useState(''),
         [l, a] = s.useState('');
     return (0, i.jsxs)('div', {
-        className: c.section,
+        className: m.section,
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(c.Heading, {
                 variant: 'heading-xl/semibold',
                 children: 'TextInput'
             }),
-            (0, i.jsx)(o.FormItem, {
-                children: (0, i.jsx)(o.SearchBar, {
-                    size: o.SearchBar.Sizes.MEDIUM,
+            (0, i.jsx)(c.FormItem, {
+                children: (0, i.jsx)(c.SearchBar, {
+                    size: c.SearchBar.Sizes.MEDIUM,
                     placeholder: 'Search...',
                     onChange: (e) => a(e),
                     query: l,
                     onClear: () => a('')
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Disabled',
                 disabled: !0,
-                children: (0, i.jsx)(o.TextInput, {
+                children: (0, i.jsx)(c.TextInput, {
                     placeholder: 'Disabled',
                     disabled: !0
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Error',
-                children: (0, i.jsx)(o.TextInput, {
+                children: (0, i.jsx)(c.TextInput, {
                     required: !0,
                     error: 'This must have a value'
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Error',
-                children: (0, i.jsx)(o.TextInput, {
+                children: (0, i.jsx)(c.TextInput, {
                     defaultValue: 'Not a valid value',
                     error: 'This has an error.'
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Read only',
-                children: (0, i.jsx)(o.TextInput, {
+                children: (0, i.jsx)(c.TextInput, {
                     value: 'Read-only, not-editable field',
                     editable: !1
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Input with a label',
-                children: (0, i.jsx)(o.TextInput, {
+                children: (0, i.jsx)(c.TextInput, {
                     placeholder: 'Real placeholder',
                     value: e,
                     onChange: t
                 })
             }),
-            (0, i.jsx)(o.FormItem, {
+            (0, i.jsx)(c.FormItem, {
                 title: 'Text area',
-                children: (0, i.jsx)(o.TextArea, {
+                children: (0, i.jsx)(c.TextArea, {
                     placeholder: 'Text area placeholder',
                     showCharacterCount: !0,
                     value: n,
@@ -708,5 +727,65 @@ function _() {
                 })
             })
         ]
+    });
+}
+function A() {
+    let e = (0, o.e7)([d.Z], () => d.Z.gradientPreset);
+    return (0, i.jsx)(c.ThemeProvider, {
+        theme: u.BR.DARKER,
+        disableColorMixing: !0,
+        children: (t) =>
+            (0, i.jsxs)('div', {
+                className: l()(t, m.section),
+                children: [
+                    (0, i.jsx)(c.Button, {
+                        color: c.Button.Colors.PRIMARY,
+                        look: c.Button.Looks.FILLED,
+                        fullWidth: !0,
+                        children: 'Button'
+                    }),
+                    (0, i.jsx)(c.ThemeProvider, {
+                        theme: u.BR.LIGHT,
+                        children: (t) =>
+                            (0, i.jsxs)('div', {
+                                className: l()(t, m.section),
+                                children: [
+                                    (0, i.jsx)(c.Button, {
+                                        color: c.Button.Colors.PRIMARY,
+                                        look: c.Button.Looks.FILLED,
+                                        fullWidth: !0,
+                                        children: 'Button'
+                                    }),
+                                    (0, i.jsx)(c.ThemeProvider, {
+                                        theme: u.BR.DARKER,
+                                        children: (e) =>
+                                            (0, i.jsx)('div', {
+                                                className: l()(e, m.section),
+                                                children: (0, i.jsx)(c.Button, {
+                                                    color: c.Button.Colors.PRIMARY,
+                                                    look: c.Button.Looks.FILLED,
+                                                    fullWidth: !0,
+                                                    children: 'Button'
+                                                })
+                                            })
+                                    }),
+                                    (0, i.jsx)(c.ThemeProvider, {
+                                        gradient: e,
+                                        children: (e) =>
+                                            (0, i.jsx)('div', {
+                                                className: l()(e, m.section),
+                                                children: (0, i.jsx)(c.Button, {
+                                                    color: c.Button.Colors.PRIMARY,
+                                                    look: c.Button.Looks.FILLED,
+                                                    fullWidth: !0,
+                                                    children: 'Button'
+                                                })
+                                            })
+                                    })
+                                ]
+                            })
+                    })
+                ]
+            })
     });
 }
