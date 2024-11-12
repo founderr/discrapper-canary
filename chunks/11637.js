@@ -1,44 +1,46 @@
 n.d(t, {
     ZP: function () {
-        return o;
+        return l;
     },
     hf: function () {
-        return s;
+        return o;
     }
 });
 var r = n(763296),
     i = n(768581),
-    a = n(801606);
-let s = /^<sound:(\d+):(\d+)>/;
-function o(e, t) {
+    a = n(722932),
+    s = n(801606);
+let o = /^<sound:(\d+):(\d+)>/;
+function l(e, t) {
     var n;
-    let s = e[1],
-        o = e[2],
-        { messageId: l, channelId: u } = t,
-        c = (function (e, t, n) {
+    let o = e[1],
+        l = e[2],
+        { messageId: u, channelId: c } = t,
+        d = (function (e, t, n) {
+            if (!a.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
             let i = r.Z.getSoundById(n);
             if (null != i) return i;
-            if (null != t && null != e) return (0, a.Z)(e, t, n);
-        })(u, l, o);
-    if (null == c)
+            if (null != t && null != e) return (0, s.Z)(e, t, n);
+        })(c, u, l);
+    if (null == d)
         return {
             type: 'text',
-            content: '<sound:'.concat(s, ':').concat(o, '>')
+            content: '<sound:'.concat(o, ':').concat(l, '>')
         };
-    let d = null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : o;
+    let f = null !== (n = null == d ? void 0 : d.name) && void 0 !== n ? n : l;
     return {
         type: 'soundboard',
-        soundId: o,
-        guildId: s,
+        soundId: l,
+        guildId: o,
         messageId: t.messageId,
         channelId: t.channelId,
-        content: d,
-        emojiId: null == c ? void 0 : c.emojiId,
-        emojiName: null == c ? void 0 : c.emojiName,
+        content: f,
+        emojiId: null == d ? void 0 : d.emojiId,
+        emojiName: null == d ? void 0 : d.emojiName,
         emojiSrc:
-            (null == c ? void 0 : c.emojiId) != null
+            (null == d ? void 0 : d.emojiId) != null
                 ? (0, i.gT)({
-                      id: null == c ? void 0 : c.emojiId,
+                      id: null == d ? void 0 : d.emojiId,
                       animated: !1,
                       size: 16
                   })

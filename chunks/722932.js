@@ -1,13 +1,22 @@
-n.d(i, {
-    u: function () {
-        return l;
+n.d(t, {
+    X0: function () {
+        return o;
+    },
+    uH: function () {
+        return s;
+    },
+    zv: function () {
+        return a;
     }
 });
-let E = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
     id: '2024-11_soundmoji_rendering',
     label: 'Render soundmojis',
     kind: 'user',
     defaultConfig: { enabled: !1 },
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -16,7 +25,11 @@ let E = (0, n(818083).B)({
         }
     ]
 });
-function l(t) {
-    let { location: i } = t;
-    return E.getCurrentConfig({ location: i }, { autoTrackExposure: !1 }).enabled;
+function s(e) {
+    let { location: t } = e;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
