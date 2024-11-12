@@ -1,74 +1,88 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return m;
     }
 });
-var i = n(200651);
-n(192379);
-var s = n(481060),
-    r = n(230711),
-    l = n(267642),
-    a = n(981631),
-    o = n(388032),
-    c = n(802261);
-function d(e) {
-    let { guildBoostSlot: t, onClose: d, hasCancelableGuildBoostSlot: u, premiumSubscription: m, onSelect: h } = e,
-        g = {
+var i = n(200651),
+    s = n(192379),
+    r = n(481060),
+    l = n(230711),
+    a = n(267642),
+    o = n(981631),
+    c = n(474936),
+    d = n(388032),
+    u = n(802261);
+function m(e) {
+    let { guildBoostSlot: t, onClose: m, hasCancelableGuildBoostSlot: h, premiumSubscription: g, onSelect: p, fractionalState: x } = e,
+        S = {
             transfer: {
-                label: null != t.premiumGuildSubscription ? o.intl.string(o.t['PR0n//']) : o.intl.string(o.t['+fmEYG']),
-                subtext: t.isOnCooldown() ? o.intl.string(o.t.XnB8Mz) : null,
+                label: null != t.premiumGuildSubscription ? d.intl.string(d.t['PR0n//']) : d.intl.string(d.t['+fmEYG']),
+                subtext: t.isOnCooldown() ? d.intl.string(d.t.XnB8Mz) : null,
                 disabled: t.isOnCooldown()
             },
             cancel: {
-                label: o.intl.string(o.t.twFU3d),
-                subtext: u ? null : o.intl.string(o.t.oQ9lOj),
-                disabled: !u
+                label: d.intl.string(d.t.twFU3d),
+                subtext: h ? null : d.intl.string(d.t.oQ9lOj),
+                disabled: !h
             },
             uncancel: {
-                label: o.intl.string(o.t['2glQNj']),
+                label: d.intl.string(d.t['2glQNj']),
                 subtext: null,
                 disabled: !1
             }
         };
-    switch (m.status) {
-        case a.O0b.PAST_DUE:
-            (g.cancel.disabled = !0), (g.cancel.subtext = o.intl.string(o.t.WnL6DQ)), (g.uncancel.disabled = !0);
+    switch (g.status) {
+        case o.O0b.PAST_DUE:
+            (S.cancel.disabled = !0), (S.cancel.subtext = d.intl.string(d.t.WnL6DQ)), (S.uncancel.disabled = !0);
             break;
-        case a.O0b.PAUSE_PENDING:
-        case a.O0b.PAUSED:
-            (g.transfer.disabled = !0), (g.transfer.subtext = o.intl.string(o.t.LiLRRU)), (g.cancel.disabled = !0), (g.cancel.subtext = o.intl.string(o.t['1ywaWF'])), (g.uncancel.disabled = !0);
+        case o.O0b.PAUSE_PENDING:
+        case o.O0b.PAUSED:
+            x === c.a$.FP_SUB ? (S.cancel.subtext = d.intl.string(d.t['07lzz8'])) : ((S.transfer.disabled = !0), (S.transfer.subtext = d.intl.string(d.t.LiLRRU)), (S.cancel.subtext = d.intl.string(d.t['1ywaWF']))), (S.cancel.disabled = !0), (S.uncancel.disabled = !0);
     }
-    return (0, i.jsxs)(s.Menu, {
-        onSelect: h,
+    let T = s.useMemo(
+        () =>
+            g.isPausedOrPausePending && x === c.a$.NONE
+                ? (0, i.jsx)(r.MenuItem, {
+                      id: 'manage-subscription',
+                      label: d.intl.string(d.t.obRG6e),
+                      action: () => l.Z.open(o.oAB.SUBSCRIPTIONS),
+                      iconLeft: r.LightbulbIcon,
+                      className: u.manageSubscription
+                  })
+                : null,
+        [x, g]
+    );
+    return (0, i.jsxs)(r.Menu, {
+        onSelect: p,
         navId: 'subscription-context',
         variant: 'fixed',
-        'aria-label': o.intl.string(o.t.ogxXGh),
-        onClose: d,
+        'aria-label': d.intl.string(d.t.ogxXGh),
+        onClose: m,
         children: [
-            (0, i.jsx)(s.MenuItem, {
+            (0, i.jsx)(r.MenuItem, {
                 id: 'apply',
-                label: g.transfer.label,
-                subtext: g.transfer.subtext,
+                label: S.transfer.label,
+                subtext: S.transfer.subtext,
                 action: function () {
-                    (0, s.openModalLazy)(async () => {
+                    (0, r.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
                                 guildBoostSlots: [t],
-                                locationSection: a.jXE.SETTINGS_PREMIUM
+                                locationSection: o.jXE.SETTINGS_PREMIUM
                             });
                     });
                 },
-                disabled: g.transfer.disabled
+                disabled: S.transfer.disabled
             }),
-            (0, l.tl)(t)
-                ? (0, i.jsx)(s.MenuItem, {
+            (0, a.tl)(t)
+                ? (0, i.jsx)(r.MenuItem, {
                       id: 'uncancel',
-                      label: g.uncancel.label,
-                      subtext: g.uncancel.subtext,
+                      label: S.uncancel.label,
+                      subtext: S.uncancel.subtext,
                       action: function () {
-                          (0, s.openModalLazy)(async () => {
+                          (0, r.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -77,14 +91,14 @@ function d(e) {
                                   });
                           });
                       },
-                      disabled: g.uncancel.disabled
+                      disabled: S.uncancel.disabled
                   })
-                : (0, i.jsx)(s.MenuItem, {
+                : (0, i.jsx)(r.MenuItem, {
                       id: 'cancel',
-                      label: g.cancel.label,
-                      subtext: g.cancel.subtext,
+                      label: S.cancel.label,
+                      subtext: S.cancel.subtext,
                       action: function () {
-                          (0, s.openModalLazy)(async () => {
+                          (0, r.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
                               return (n) =>
                                   (0, i.jsx)(e, {
@@ -93,18 +107,10 @@ function d(e) {
                                   });
                           });
                       },
-                      disabled: g.cancel.disabled,
+                      disabled: S.cancel.disabled,
                       color: 'danger'
                   }),
-            m.isPausedOrPausePending
-                ? (0, i.jsx)(s.MenuItem, {
-                      id: 'manage-subscription',
-                      label: o.intl.string(o.t.obRG6e),
-                      action: () => r.Z.open(a.oAB.SUBSCRIPTIONS),
-                      iconLeft: s.LightbulbIcon,
-                      className: c.manageSubscription
-                  })
-                : null
+            T
         ]
     });
 }
