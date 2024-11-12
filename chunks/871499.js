@@ -12,7 +12,7 @@ var i = n(120356),
     a = n.n(i),
     s = n(481060),
     o = n(131388),
-    l = n(686546),
+    l = n(70097),
     u = n(259580),
     c = n(618158),
     d = n(362267),
@@ -98,12 +98,23 @@ function m(e) {
         : (0, r.jsxs)('div', {
               className: a()(i, _.contextMenuContainer),
               children: [
-                  (0, r.jsx)(l.ZP, {
-                      className: a()(_.buttonMask, { [_.buttonPremiumGlow]: v }),
-                      mask: null == g ? null : l.QS.CHANNEL_CALL_CONTROL_BUTTON,
-                      width: 56,
-                      height: 56,
-                      children: T
+                  (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          T,
+                          v &&
+                              (0, r.jsx)('div', {
+                                  className: _.glow,
+                                  children: (0, r.jsx)(l.Z, {
+                                      loop: !0,
+                                      autoPlay: !0,
+                                      className: _.glowVideo,
+                                      children: (0, r.jsx)('source', {
+                                          src: 'https://cdn.discordapp.com/assets/content/3988d11030317ce331a0b327cac18a9c02a693041f9a7695bb13b3d4cb486e11.webm',
+                                          type: 'video/webm'
+                                      })
+                                  })
+                              })
+                      ]
                   }),
                   null != g
                       ? (0, r.jsx)(c.Z, {
