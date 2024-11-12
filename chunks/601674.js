@@ -1,5 +1,6 @@
 e.exports = {
     categoryButton: 'categoryButton_ce8be8',
+    modalRoot: 'modalRoot_ce8be8',
     modalContent: 'modalContent_ce8be8',
     header: 'header_ce8be8',
     wumpusImageContainer: 'wumpusImageContainer_ce8be8',

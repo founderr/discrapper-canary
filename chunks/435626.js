@@ -1,76 +1,77 @@
-i.r(t),
-    i.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return A;
+            return w;
         }
     });
-var n,
-    r,
-    s = i(200651),
-    o = i(192379),
-    a = i(120356),
-    l = i.n(a),
-    c = i(481060),
-    u = i(100527),
-    d = i(906732),
-    p = i(1585),
-    h = i(821982),
-    _ = i(125988),
-    b = i(267097),
-    g = i(109213),
-    v = i(626135),
-    f = i(333867),
-    m = i(963249),
-    I = i(981631),
-    x = i(217702),
-    S = i(474936),
-    E = i(388032),
-    C = i(601674),
-    T = i(476945),
-    y = i(945182);
-function A(e) {
-    let { analyticsLocations: t, transitionState: i, onClose: n, giftRecipient: r, analyticsObject: a } = e;
+var r,
+    o,
+    i = n(200651),
+    a = n(192379),
+    s = n(120356),
+    l = n.n(s),
+    c = n(481060),
+    d = n(100527),
+    u = n(906732),
+    f = n(1585),
+    p = n(821982),
+    h = n(125988),
+    _ = n(267097),
+    v = n(109213),
+    b = n(626135),
+    g = n(333867),
+    m = n(963249),
+    C = n(981631),
+    x = n(217702),
+    I = n(474936),
+    S = n(388032),
+    E = n(601674),
+    T = n(476945),
+    y = n(945182);
+function w(e) {
+    let { analyticsLocations: t, transitionState: n, onClose: r, giftRecipient: o, analyticsObject: s } = e;
     return (
-        o.useEffect(() => {
-            v.default.track(I.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
-                ...a,
+        a.useEffect(() => {
+            b.default.track(C.rMx.GIFT_CATEGORY_SELECT_MODAL_OPENED, {
+                ...s,
                 location_stack: t
             });
         }, []),
-        (0, s.jsxs)(s.Fragment, {
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, s.jsx)(O, {}),
-                (0, s.jsxs)(c.ModalRoot, {
-                    size: c.ModalSize.SMALL,
-                    transitionState: i,
+                (0, i.jsx)(A, {}),
+                (0, i.jsxs)(c.ModalRoot, {
+                    size: c.ModalSize.DYNAMIC,
+                    transitionState: n,
+                    className: E.modalRoot,
                     children: [
-                        (0, s.jsxs)(c.ModalHeader, {
-                            className: C.header,
+                        (0, i.jsxs)(c.ModalHeader, {
+                            className: E.header,
                             separator: !1,
                             children: [
-                                (0, s.jsx)(c.FormTitle, {
+                                (0, i.jsx)(c.FormTitle, {
                                     tag: c.FormTitleTags.H4,
-                                    children: E.intl.string(E.t.YBGjsr)
+                                    children: S.intl.string(S.t.YBGjsr)
                                 }),
-                                (0, s.jsx)(c.ModalCloseButton, {
+                                (0, i.jsx)(c.ModalCloseButton, {
                                     onClick: () => {
-                                        v.default.track(I.rMx.MODAL_DISMISSED, {
-                                            type: I.jXE.GIFT_CATEGORY_SELECT_MODAL,
-                                            location_object: I.qAy.BUTTON_CTA
+                                        b.default.track(C.rMx.MODAL_DISMISSED, {
+                                            type: C.jXE.GIFT_CATEGORY_SELECT_MODAL,
+                                            location_object: C.qAy.BUTTON_CTA
                                         }),
-                                            n();
+                                            r();
                                     },
-                                    className: C.cursorPointer
+                                    className: E.cursorPointer
                                 })
                             ]
                         }),
-                        (0, s.jsx)(c.ModalContent, {
-                            className: C.modalContent,
-                            children: (0, s.jsx)(R, {
+                        (0, i.jsx)(c.ModalContent, {
+                            className: E.modalContent,
+                            children: (0, i.jsx)(O, {
                                 analyticsLocations: t,
-                                giftRecipient: r,
-                                analyticsObject: a,
-                                onClose: n
+                                giftRecipient: o,
+                                analyticsObject: s,
+                                onClose: r
                             })
                         })
                     ]
@@ -79,102 +80,102 @@ function A(e) {
         })
     );
 }
-((n = r || (r = {}))[(n.NITRO = 0)] = 'NITRO'), (n[(n.NITRO_BASIC = 1)] = 'NITRO_BASIC'), (n[(n.SHOP = 2)] = 'SHOP');
-let O = () => ((0, b.Z)(), null);
-function R(e) {
-    let { giftRecipient: t, analyticsObject: i, onClose: n } = e,
-        { showBothNitroSkusInCategorySelect: r } = g.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        { analyticsLocations: o } = (0, d.ZP)(u.Z.GIFT_CATEGORY_SELECT_MODAL),
-        a = (e) => {
-            e && n();
+((r = o || (o = {}))[(r.NITRO = 0)] = 'NITRO'), (r[(r.NITRO_BASIC = 1)] = 'NITRO_BASIC'), (r[(r.SHOP = 2)] = 'SHOP');
+let A = () => ((0, _.Z)(), null);
+function O(e) {
+    let { giftRecipient: t, analyticsObject: n, onClose: r } = e,
+        { showBothNitroSkusInCategorySelect: o } = v.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        { analyticsLocations: a } = (0, u.ZP)(d.Z.GIFT_CATEGORY_SELECT_MODAL),
+        s = (e) => {
+            e && r();
         },
-        p = (e) => {
-            let n = I.Qqv.NITRO_SKU_SELECTION;
-            e === S.Si.TIER_2 ? (n = I.Qqv.NITRO_STANDARD) : e === S.Si.TIER_0 && (n = I.Qqv.NITRO_BASIC),
+        f = (e) => {
+            let r = C.Qqv.NITRO_SKU_SELECTION;
+            e === I.Si.TIER_2 ? (r = C.Qqv.NITRO_STANDARD) : e === I.Si.TIER_0 && (r = C.Qqv.NITRO_BASIC),
                 (0, m.Z)({
                     isGift: !0,
                     giftRecipient: t,
-                    giftingOrigin: S.Wt.DM_CHANNEL,
+                    giftingOrigin: I.Wt.DM_CHANNEL,
                     initialPlanId: null,
-                    analyticsLocations: o,
+                    analyticsLocations: a,
                     subscriptionTier: e,
                     analyticsObject: {
-                        ...i,
-                        section: I.jXE.GIFT_CATEGORY_SELECT_MODAL,
-                        object: I.qAy.GIFT_CATEGORY_OPTION,
-                        objectType: n
+                        ...n,
+                        section: C.jXE.GIFT_CATEGORY_SELECT_MODAL,
+                        object: C.qAy.GIFT_CATEGORY_OPTION,
+                        objectType: r
                     },
-                    onClose: a
+                    onClose: s
                 });
         };
-    return (0, s.jsxs)(s.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, s.jsx)(c.Clickable, {
-                onClick: () => p(r ? S.Si.TIER_2 : void 0),
-                children: (0, s.jsxs)('div', {
-                    className: l()(C.categoryButton, C.nitroButton),
+            (0, i.jsx)(c.Clickable, {
+                onClick: () => f(o ? I.Si.TIER_2 : void 0),
+                children: (0, i.jsxs)('div', {
+                    className: l()(E.categoryButton, E.nitroButton),
                     children: [
-                        (0, s.jsx)(c.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: 'display-sm',
                             color: 'always-white',
-                            className: C.buttonText,
-                            children: E.intl.string(E.t['lG6a5+'])
+                            className: E.buttonText,
+                            children: S.intl.string(S.t['lG6a5+'])
                         }),
-                        (0, s.jsx)(k, { imageType: 0 })
+                        (0, i.jsx)(R, { imageType: 0 })
                     ]
                 })
             }),
-            r &&
-                (0, s.jsx)(c.Clickable, {
-                    onClick: () => p(S.Si.TIER_0),
-                    children: (0, s.jsxs)('div', {
-                        className: l()(C.nitroBasicButton, C.categoryButton),
+            o &&
+                (0, i.jsx)(c.Clickable, {
+                    onClick: () => f(I.Si.TIER_0),
+                    children: (0, i.jsxs)('div', {
+                        className: l()(E.nitroBasicButton, E.categoryButton),
                         children: [
-                            (0, s.jsx)(c.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'display-sm',
                                 color: 'always-white',
-                                className: C.buttonText,
-                                children: E.intl.string(E.t['t9uG/v'])
+                                className: E.buttonText,
+                                children: S.intl.string(S.t['t9uG/v'])
                             }),
-                            (0, s.jsx)(k, { imageType: 1 })
+                            (0, i.jsx)(R, { imageType: 1 })
                         ]
                     })
                 }),
-            (0, s.jsx)(c.Clickable, {
+            (0, i.jsx)(c.Clickable, {
                 onClick: () => {
-                    (0, f.Z)({
+                    (0, g.Z)({
                         isGift: !0,
-                        giftingOrigin: S.Wt.DM_CHANNEL,
-                        analyticsLocations: o,
-                        analyticsObject: i,
+                        giftingOrigin: I.Wt.DM_CHANNEL,
+                        analyticsLocations: a,
+                        analyticsObject: n,
                         giftRecipient: t,
-                        onClose: a
+                        onClose: s
                     });
                 },
-                children: (0, s.jsxs)('div', {
-                    className: l()(C.shopButton, C.categoryButton),
+                children: (0, i.jsxs)('div', {
+                    className: l()(E.shopButton, E.categoryButton),
                     children: [
-                        (0, s.jsx)(c.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: 'display-sm',
                             color: 'always-white',
-                            className: C.buttonText,
-                            children: E.intl.string(E.t.gFlB9f)
+                            className: E.buttonText,
+                            children: S.intl.string(S.t.gFlB9f)
                         }),
-                        (0, s.jsx)(k, { imageType: 2 })
+                        (0, i.jsx)(R, { imageType: 2 })
                     ]
                 })
             })
         ]
     });
 }
-function k(e) {
+function R(e) {
     let { imageType: t } = e,
-        { avatarPlaceholderSrc: i } = (0, _.Z)({ size: (0, p.y9)(c.AvatarSizes.SIZE_80) }),
-        n = (0, h.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', c.AvatarSizes.SIZE_80, !1);
+        { avatarPlaceholderSrc: n } = (0, h.Z)({ size: (0, f.y9)(c.AvatarSizes.SIZE_80) }),
+        r = (0, p.Z)('a_c3cffc19e9784f7d0b005eecdf1b566e', c.AvatarSizes.SIZE_80, !1);
     return 0 === t || 1 === t
-        ? (0, s.jsx)('div', {
-              className: C.wumpusImageContainer,
-              children: (0, s.jsx)(c.Image, {
+        ? (0, i.jsx)('div', {
+              className: E.wumpusImageContainer,
+              children: (0, i.jsx)(c.Image, {
                   src: 1 === t ? T : y,
                   mediaLayoutType: x.hV.RESPONSIVE,
                   width: 122,
@@ -183,11 +184,11 @@ function k(e) {
               })
           })
         : 2 === t
-          ? (0, s.jsx)('div', {
-                className: C.shopImageContainer,
-                children: (0, s.jsx)(c.Avatar, {
-                    src: i,
-                    avatarDecoration: n,
+          ? (0, i.jsx)('div', {
+                className: E.shopImageContainer,
+                children: (0, i.jsx)(c.Avatar, {
+                    src: n,
+                    avatarDecoration: r,
                     size: c.AvatarSizes.SIZE_80,
                     'aria-hidden': !0
                 })
