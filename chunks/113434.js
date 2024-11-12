@@ -550,6 +550,7 @@ function es(e, t) {
                     .with({ percentComplete: 0 }, () => null)
                     .with({ taskType: d.X.PLAY_ON_DESKTOP }, () => x.cd.DESKTOP)
                     .with({ taskType: d.X.PLAY_ON_DESKTOP_V2 }, () => x.cd.DESKTOP)
+                    .with({ taskType: d.X.PLAY_ACTIVITY }, () => x.cd.DESKTOP)
                     .with({ taskType: d.X.WATCH_VIDEO }, () => x.cd.DESKTOP)
                     .with({ taskType: d.X.STREAM_ON_DESKTOP }, () => x.cd.DESKTOP)
                     .with({ taskType: d.X.PLAY_ON_XBOX }, () => x.cd.CONSOLE)
