@@ -51,15 +51,7 @@ t.Z = function () {
             (0, i.jsxs)(c.ZP, {
                 className: B ? v.search : void 0,
                 children: [
-                    !B &&
-                        (0, i.jsx)(
-                            c.z6,
-                            {
-                                scrollPosition: t,
-                                minOpacity: G ? 0.4 : 0
-                            },
-                            G ? 'apps' : ''
-                        ),
+                    !B && (0, i.jsx)(c.z6, { scrollPosition: t }),
                     (0, i.jsx)(c.aV, {
                         icon: B || G ? l.ArrowLargeLeftIcon : l.AppsIcon,
                         onClick: G ? k : B ? Z : void 0
