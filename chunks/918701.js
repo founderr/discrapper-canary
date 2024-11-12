@@ -535,10 +535,14 @@ let em = (e, t) => {
         return (0, i.floor)(l / h.Z.Millis.SECOND, 2);
     },
     eI = (e, t) => {
-        var n, r, i, a, s, o;
-        let l = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : n[t.eventName],
-            u = null !== (s = null !== (a = null == l ? void 0 : l.value) && void 0 !== a ? a : null === (i = e.userStatus) || void 0 === i ? void 0 : i.streamProgressSeconds) && void 0 !== s ? s : 0;
-        return eD(e) ? (null !== (o = b.Z.getOptimisticProgress(e.id, t.eventName)) && void 0 !== o ? o : u) : u + ev(e, t);
+        var n, r, i, a, s;
+        let o = null === (r = e.userStatus) || void 0 === r ? void 0 : null === (n = r.progress) || void 0 === n ? void 0 : n[t.eventName],
+            l = null !== (s = null !== (a = null == o ? void 0 : o.value) && void 0 !== a ? a : null === (i = e.userStatus) || void 0 === i ? void 0 : i.streamProgressSeconds) && void 0 !== s ? s : 0;
+        if (eD(e)) {
+            let n = b.Z.getOptimisticProgress(e.id, t.eventName);
+            return null == n || n < l ? l : n;
+        }
+        return l + ev(e, t);
     },
     eb = (e, t) => {
         var n;
